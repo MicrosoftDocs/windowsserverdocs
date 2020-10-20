@@ -1,53 +1,53 @@
 ---
-title: Packet Monitor (PacketMon) Vibranium Builds
+title: Pktmon command syntax and formatting
 description: Use this page to understand pktmon syntax, commands, formatting, and output for Windows Vibranium builds.
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 10/8/2020
+ms.date: 10/20/2020
 ---
 
-# Packet Monitor \(PacketMon\) - Vibranium builds
+# Pktmon command syntax and formatting
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-Packet Monitor (PacketMon) is an in-box cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, since it provides visibility within the networking stack. PacketMon is available in-box via pktmon.exe command on Vibranium OS (build 19041). You can use this topic to learn how to understand pktmon syntax, commands, formatting, and output.
+Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack. Packet Monitor is available in-box via pktmon.exe command on Vibranium OS (build 19041). You can use this topic to learn how to understand pktmon syntax, commands formatting, and output.
 
-## Get started
+## Quick start
 
 Use the following steps to get started in generic scenarios:
 
-Identify the type of packets needed for the capture, i.e. specific IP addresses, ports, or protocols associated with the packet. Then, check the syntax to apply capture filters, and apply the filters for the packets identified in the previous step.
+1. Identify the type of packets needed for the capture, i.e. specific IP addresses, ports, or protocols associated with the packet. Then, check the syntax to apply capture filters, and apply the filters for the packets identified in the previous step.
 
 ```PowerShell
 C:\Test> pktmon filter add help
 C:\Test> pktmon filter add <filters>
 ```
 
-Start the capture and enable packet logging.
+2. Start the capture and enable packet logging.
 
 ```PowerShell
 C:\Test> pktmon start --etw
 ```
 
-Reproduce the issue being diagnosed. Query counters to confirm the presence of expected traffic, and to get a high level view of how the traffic flowed in the machine.
+3. Reproduce the issue being diagnosed. Query counters to confirm the presence of expected traffic, and to get a high level view of how the traffic flowed in the machine.
 
 ```PowerShell
 C:\Test> pktmon counters
 ```
 
-Stop the capture and retrieve the logs in txt format for analysis.
+4. Stop the capture and retrieve the logs in txt format for analysis.
 
 ```PowerShell
 C:\Test> pktmon stop
 C:\Test> pktmon format <etl file>
 ```
 
-See Analyze PacketMon TXT output (below) for analyzing output.
+See [Analyze Packet Monitor output](#Analyze-packet-monitor-output) for instructions on analyzing txt output.
 
 ## Capture filters
 
-It's highly recommended to apply filters before starting any packet capture since troubleshooting connectivity to a particular destination is easier by focusing on a single stream of packets. On the other hand, capturing all the networking traffic can make the output too noisy to analyze. For a packet to be reported, it must match all conditions specified in at least one filter. Up to 32 filters are supported at once.
+It's highly recommended to apply filters before starting any packet capture, because troubleshooting connectivity to a particular destination is easier when you focus on a single stream of packets. Capturing *all* the networking traffic can make the output too noisy to analyze. For a packet to be reported, it must match all conditions specified in at least one filter. Up to 32 filters are supported at once.
 
 For example, the following set of filters will capture any ICMP traffic from or to the IP address 10.0.0.10 as well as any traffic on port 53.
 
@@ -58,7 +58,11 @@ C:\Test> pktmon filter add -p 53
 
 ### Filtering capability
 
-PacketMon supports filtering by MAC Addresses, IP Addresses, Ports, EtherType, Transport Protocol, and VLAN Id. PacketMon will not distinguish between source or destination when it comes to MAC address, IP address, or port filters. To further filter TCP packets, an optional list of TCP flags to match can be provided. Supported flags are FIN, SYN, RST, PSH, ACK, URG, ECE, and CWR.
+Packet Monitor supports filtering by MAC addresses, IP addresses, ports, EtherType, transport protocol, and VLAN Id. 
+
+Packet Monitor will not distinguish between source or destination when it comes to MAC address, IP address, or port filters. 
+
+To further filter TCP packets, an optional list of TCP flags to match can be provided. Supported flags are FIN, SYN, RST, PSH, ACK, URG, ECE, and CWR.
 
 For example, the following filter will capture all the SYN packets sent or received by the IP address 10.0.0.10:
 
@@ -66,7 +70,7 @@ For example, the following filter will capture all the SYN packets sent or recei
 C:\Test> pktmon filter add -i 10.0.0.10 -t tcp syn
 ```
 
-PacketMon can apply a filter to encapsulated inner packets, in addition to the outer packet if the [-e] flag was added to any filter. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP. Custom VXLAN port is optional, and defaults to 4789.
+Packet Monitor can apply a filter to encapsulated inner packets, in addition to the outer packet if the [-e] flag was added to any filter. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP. Custom VXLAN port is optional, and defaults to 4789.
 
 ### Pktmon filters syntax
 
@@ -141,7 +145,7 @@ Example 3: Subnet filter
 
 ## Packet capture and logging
 
-PacketMon can capture networking traffic with or without packet logging. For more information about capturing traffic without packet logging, please check the Packet Counters section below. To capture and log packets, add the **[--etw]** parameter to the start command.
+Packet Monitor can capture networking traffic with or without packet logging. For more information about capturing traffic without packet logging, please check the Packet Counters section below. To capture and log packets, add the **[--etw]** parameter to the start command.
 
 Select components to monitor through the **[-c]** parameter. It can be all components, NICs only, or a list of component ids. The defaults is to capture traffic at all components. Monitor dropped packets only with [-d] parameter. The default is to capture flowing and dropped packets.
 
@@ -159,7 +163,7 @@ C:\Test> pktmon start --etw -c 4,5 -d
 
 ### Packet logging capability
 
-PacketMon supports multiple logging modes:
+Packet Monitor supports multiple logging modes:
 
 - Circular: new packets overwrite the oldest ones when the maximum file size is reached. This is the default logging mode.
 - Multi-file: new log file is created when the maximum file size is reached. Log files are sequentially numbered: PktMon1.etl, PktMon2.etl, etc. Apply this logging mode to keep all the log, but be wary of storage utilization. Note: use the file creation timestamp of each log file as an indication to a specific time frame in the capture.
@@ -240,7 +244,7 @@ Example: pktmon start --etw -l real-time
 
 ## Packet analysis and formatting
 
-PacketMon generates log files in ETL format. There are multiple ways to format the etl file for analysis:
+Packet Monitor generates log files in ETL format. There are multiple ways to format the etl file for analysis:
 
 - Convert the log to text format (the default option), and analyze it with text editor tool like TextAnalysisTool.NET. Packet data will be displayed in TCPDump format. Follow the guide below to learn how to analyze the output in the text file.
 - Convert the log to PCAPNG format to analyze it using [Wireshark](https://osgwiki.com/wiki/PacketMon%27s_WireShark_(Pcapng_Format)_Support)*
@@ -298,29 +302,43 @@ pktmon pcapng log.etl [-o log.pcapng]
 Example: pktmon pcapng C:\tmp\PktMon.etl -d -c nics
 ```
 
-### Analyze PacketMon TXT output
+### Analyze Packet Monitor output
 
-PacketMon captures a snapshot of the packet by each component of the networking stack. Accordingly,there will be multiple snapshots of each packet (represented in the image below by the lines the blue box).
+Packet Monitor captures a snapshot of the packet by each component of the networking stack. Accordingly, there will be multiple snapshots of each packet (represented in the image below by the lines the blue box).
 Each of these packet snapshots is represented by a couple of lines (red and green boxes). There is at least one line that includes some data about the packet instance starting with the timestamp. Right after, there is at least one line (bolded in the image below) to show the parsed raw packet in text format (without a timestamp); it could be multiple lines if the packet is encapsulated, like the packet in the green box.
 
 For correlating all snapshots of the same packets, monitor the PktGroupId and PktNumber values (highlighted in yellow); all snapshots of the same packet should have these 2 values in common. The Appearance value (highlighted in blue) acts as a counter for each subsequent snapshot of the same packet. For example, the first snapshot of the packet (where the packet first appeared in the networking stack) has the value 1 for appearance, the next snapshot has the value 2, and so on.
 
+<center>
+
 :::image type="content" source="media/pktmon-log-example.png" alt-text="Example of PacketMon's txt log output" border="false":::
+
+</center>
 
 Each packet snapshot has a component id (underlined in the image above) denoting the component associated with the snapshot. To resolve the component name, and parameters, search for this component id in the components list at the bottom of the log file. A portion of the components table is shown in the image below highlighting "Component 1" in yellow (this was the component where the last snapshot above was captured).
 Components with 2 edges will report 2 snapshots at each edge (like the snapshots with the Appearance 3 and Appearance 4 for example in the image above).
 
 At the bottom of each log file, the filters list is presented as shown in the image below (highlighted in blue). Each filter displays the parameter(s) specified (Protocol ICMP in the example below), and zeros for the rest of the parameters.
 
+<center>
+
 :::image type="content" source="media/pktmon-log-example-components.png" alt-text="Example of PacketMon's txt log output components":::
 
-For dropped packets, the word "drop" appears before any of the lines representing the snapshot where the packet got dropped. Each dropped packet also provides dropReason and dropLocation values. This dropReason parameter provides a short description of the packet drop reason; for example, MTU Mismatch, Filtered VLAN, etc., while the dropLocation parameter is represented by a code. This code can be used for locating the source code line responsible for the packet drop decision.
+</center>
+
+At the bottom of each log file, the filters list is presented as shown in the image below (highlighted in blue). Each filter displays the parameter(s) specified (Protocol ICMP in the example below), and zeros for the rest of the parameters.
+
+<center>
 
 :::image type="content" source="media/dropped-packet-log-example.png" alt-text="Example of a dropped packet log":::
 
+</center>
+
+For dropped packets, the word "drop" appears before any of the lines representing the snapshot where the packet got dropped. Each dropped packet also provides dropReason and dropLocation values. This dropReason parameter provides a short description of the packet drop reason; for example, MTU Mismatch, Filtered VLAN, etc., while the dropLocation parameter is represented by a code. This code can be used for locating the source code line responsible for the packet drop decision.
+
 ## Packet counters
 
-PacketMon counters provide a high level view of the networking traffic throughout the networking stack without the need to analyze a log, which can be an expensive process. Examine traffic patterns by querying packet counters with **pktmon counters** after starting the PacketMon capture. Reset counters to zero using **pktmon reset** or stop monitoring all together using **pktmon stop**.
+Packet Monitor counters provide a high level view of the networking traffic throughout the networking stack without the need to analyze a log, which can be an expensive process. Examine traffic patterns by querying packet counters with **pktmon counters** after starting the PacketMon capture. Reset counters to zero using **pktmon reset** or stop monitoring all together using **pktmon stop**.
 
 - Counters are arranged by binding stacks with network adapters on the top and protocols on the bottom.
 - Tx/Rx: Counters are separated into two columns for Send (Tx) and Receive (Rx) directions.  
@@ -329,11 +347,19 @@ PacketMon counters provide a high level view of the networking traffic throughou
 
 In the following example, a new capture was started, then **pktmon counters** command was used to query the counters before the capture was stopped. The counters show a single packet making it out of the networking stack, starting from the protocol layer all the way to the physical network adapter, and its response coming back in the other direction. If the ping or the response was missing, it's easy to detect this through the counters.
 
+<center>
+
 :::image type="content" source="media/pktmon-counters-with-perfect-flow.png" alt-text="Example of a packet counter with perfect flow" border="false":::
+
+</center>
 
 In the next example, drops are reported under the "Counter" column. Retrieve the Last Drop Reason for each component by requesting counters data in JSON format using **pktmon counters --json** or analyze the output log to get more detailed information.
 
+<center>
+
 :::image type="content" source="media/pktmon-counters-drop-example.png" alt-text="Example of a packet counter with a dropped packet" border="false":::
+
+</center>
 
 As shown through these examples, the counters could provide a lot of information through a diagram that can be analyzed by just a quick look.
 
