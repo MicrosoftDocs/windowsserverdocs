@@ -6,20 +6,20 @@ ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
 author: HeidiLohr
 manager: lizross
 ms.author: helohr
-ms.date: 10/12/2020
+ms.date: 10/22/2020
 ms.localizationpriority: medium
 ---
 # Remote Desktop clients
 
 >Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-You can control a remote PC by using a Microsoft Remote Desktop client on your mobile smartphone. The client gives you the same powers you would have if you could reach the PC's keyboard. Through the client, you can:
+You can control a remote PC by using a Microsoft Remote Desktop client. The client can run on almost any device, including on your mobile smartphone. The client gives you the same powers you would have if you could reach the PC's keyboard. Through the client, you can:
 
 - Operate the apps that are installed on the PC.
 - Access the files and network resources of the PC.
 - Leave the apps open when you end the client.
 
-Before you start, see the [supported configuration](remote-desktop-supported-config.md) article. The article discusses the PCs that you can connect to by using the Remote Desktop clients. Also see the [client FAQ](remote-desktop-client-faq.md) article.
+Before you start, see the [supported configuration](remote-desktop-supported-config.md) article. The article discusses the PC configurations that the Remote Desktop clients can connect to. Also see the [client FAQ](remote-desktop-client-faq.md) article.
 
 The following client apps are available:
 
