@@ -16,7 +16,7 @@ Displays information about a driver package, including the drivers and files it 
 ## Syntax
 
 ```
-WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia64 | x64}] [/Show:{Drivers | Files | All}]
+wdsutil /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia64 | x64}] [/Show:{Drivers | Files | All}]
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia
 
 To view information about a driver file, type:
 ```
-WDSUTIL /Get-DriverPackageFile /InfFile:C:\temp\1394.inf /Architecture:x86
+wdsutil /Get-DriverPackageFile /InfFile:C:\temp\1394.inf /Architecture:x86
 ```
 
 ## Additional References

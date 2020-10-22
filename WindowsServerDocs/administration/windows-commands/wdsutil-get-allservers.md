@@ -19,7 +19,7 @@ Retrieves information about all Windows Deployment Services servers.
 ## Syntax
 
 ```
-WDSUTIL [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Forest:{Yes | No}]
+wdsutil [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Forest:{Yes | No}]
 ```
 
 ### Parameters
@@ -34,11 +34,11 @@ WDSUTIL [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Fo
 
 To view information about all servers, type:
 ```
-WDSUTIL /Get-AllServers /Show:Config
+wdsutil /Get-AllServers /Show:Config
 ```
 To view detailed information about all servers, type:
 ```
-WDSUTIL /Verbose /Get-AllServers /Show:All /Detailed /Forest:Yes
+wdsutil /Verbose /Get-AllServers /Show:All /Detailed /Forest:Yes
 ```
 
 ## Additional References

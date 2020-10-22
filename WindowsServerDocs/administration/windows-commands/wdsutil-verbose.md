@@ -11,12 +11,12 @@ ms.date: 10/16/2017
 
 # Using the verbose command
 
-Displays verbose output for a specified command. You can use **/verbose** with any other WDSUTIL commands that you run. Note that you must specify **/verbose** and **/progress** directly after **WDSUTIL**.
+Displays verbose output for a specified command. You can use **/verbose** with any other wdsutil commands that you run. Note that you must specify **/verbose** and **/progress** directly after **wdsutil**.
 
 ## Syntax
 
 ```
-WDSUTIL /verbose <commands>
+wdsutil /verbose <commands>
 ```
 
 ## Examples
@@ -24,5 +24,5 @@ WDSUTIL /verbose <commands>
 To delete approved computers from the Auto-Add database and show verbose output, type:
 
 ```
-WDSUTIL /Verbose /progress /Delete-AutoAddDevices /Server:MyWDSServer /DeviceType:ApprovedDevices
+wdsutil /Verbose /progress /Delete-AutoAddDevices /Server:MyWDSServer /DeviceType:ApprovedDevices
 ```

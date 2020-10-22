@@ -16,7 +16,7 @@ Adds a driver package to the server.
 ## Syntax
 
 ```
-WDSUTIL /Add-DriverPackage /InfFile:<Inf File path> [/Server:<Server name>] [/Architecture:{x86 | ia64 | x64}] [/DriverGroup:<Group Name>] [/Name:<Friendly Name>]
+wdsutil /Add-DriverPackage /InfFile:<Inf File path> [/Server:<Server name>] [/Architecture:{x86 | ia64 | x64}] [/DriverGroup:<Group Name>] [/Name:<Friendly Name>]
 ```
 
 ### Parameters
@@ -33,10 +33,10 @@ WDSUTIL /Add-DriverPackage /InfFile:<Inf File path> [/Server:<Server name>] [/Ar
 
 To add a driver package, type one of the following:
 ```
-WDSUTIL /verbose /Add-DriverPackage /InfFile:C:\Temp\Display.inf
+wdsutil /verbose /Add-DriverPackage /InfFile:C:\Temp\Display.inf
 ```
 ```
-WDSUTIL /Add-DriverPackage /Server:MyWDSServer /InfFile:C:\Temp\Display.inf /Architecture:x86 /DriverGroup:x86Drivers /Name:Display Driver
+wdsutil /Add-DriverPackage /Server:MyWDSServer /InfFile:C:\Temp\Display.inf /Architecture:x86 /DriverGroup:x86Drivers /Name:Display Driver
 ```
 
 ## Additional References

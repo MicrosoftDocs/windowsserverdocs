@@ -34,7 +34,7 @@ wbadmin start systemstaterecovery -version:<VersionIdentifier> -showsummary [-ba
 | -backupTarget | Specifies the storage location that contains the backup(s) you want to recover. This parameter is useful when the storage location is different from where backups of this computer are usually stored. |
 | -machine | Specifies the name of the computer that you want to recover the backup for. This parameter must be used when the **-backupTarget** parameter is specified. The **-machine** parameter is useful when multiple computers have been backed up to the same location. |
 | -recoveryTarget | Specifies the directory to restore to. This parameter is useful if the backup is restored to an alternate location. |
-| -authsysvol | Performs an authoritative restore of SYSVOL (the System Volume shared directory). |
+| -authsysvol | Performs an authoritative restore of the System Volume (sysvol) shared directory. |
 | -autoReboot | Specifies to restart the system at the end of the system state recovery operation. This parameter is valid only for a recovery to the original location. We don't recommend you use this parameter if you need to perform steps after the recovery operation. |
 | -quiet | Runs the command without prompts to the user. |
 
