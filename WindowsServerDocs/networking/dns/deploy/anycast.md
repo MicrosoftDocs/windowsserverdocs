@@ -1,9 +1,6 @@
 ---
 title: Anycast DNS overview
 description: This topic provides a brief overview of Anycast DNS
-manager: laurawi
-ms.prod: windows-server
-ms.technology: networking-dns
 ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: greglin
@@ -19,11 +16,11 @@ This topic provides information about how Anycast DNS works.
 
 Anycast is a technology that provides multiple routing paths to a group of endpoints that are each assigned the same IP address. Each device in the group advertises the same address on a network, and routing protocols are used to choose which is the best destination.
 
-Anycast enables you to scale a stateless service, such as DNS or HTTP, by placing several nodes behind the same IP address and using equal-cost multi-path (ECMP) routing to direct traffic between these nodes. Anycast is different from unicast, in which each endpoint has its own, separate IP address. 
+Anycast enables you to scale a stateless service, such as DNS or HTTP, by placing several nodes behind the same IP address and using equal-cost multi-path (ECMP) routing to direct traffic between these nodes. Anycast is different from unicast, in which each endpoint has its own, separate IP address.
 
 ## Why use Anycast with DNS?
 
-With Anycast DNS, you can enable a DNS server, or a group of servers, to respond to DNS queries based on the geographical location of a DNS client. This can enhance DNS response time and simplify DNS client settings. Anycast DNS also provides an extra layer of redundancy and can help protect against DNS denial of service attacks. 
+With Anycast DNS, you can enable a DNS server, or a group of servers, to respond to DNS queries based on the geographical location of a DNS client. This can enhance DNS response time and simplify DNS client settings. Anycast DNS also provides an extra layer of redundancy and can help protect against DNS denial of service attacks.
 
 ### How Anycast DNS works
 
@@ -31,15 +28,15 @@ Anycast DNS works by using routing protocols such as Border Gateway Protocol (BG
 
 With Anycast, servers that exist in multiple geographical locations each advertise a single, identical IP address to their local gateway (router). When a DNS client initiates a query to the Anycast address, the available routes are evaluated, and the DNS query is sent to the preferred location. In general, this is the closest location based on network topology. See the following example.
 
-![Anycast DNS](../../media/Anycast/anycast.png)
+![Four DNS servers, located at different sites, announce the same Anycast IP address to the network](../../media/Anycast/anycast.png)
 
-**Figure 1**: Four DNS servers located at different sites on a network each announce the same Anycast IP address (black arrows) to the network. A DNS client device sends out a request to the Anycast IP address. Network devices analyze the available routes and send the client’s DNS query to the nearest location (blue arrow). 
+**Figure 1**: Four DNS servers located at different sites on a network each announce the same Anycast IP address (black arrows) to the network. A DNS client device sends out a request to the Anycast IP address. Network devices analyze the available routes and send the client’s DNS query to the nearest location (blue arrow).
 
 Anycast DNS is used commonly today to route DNS traffic for many global DNS services. For example, the root DNS server system depends heavily on Anycast DNS. Anycast also works with a variety of routing protocols and can be used exclusively on intranets.
 
 ## Windows Server native BGP Anycast demo
 
-The following procedure demonstrates how native BGP on Windows Server can be used with Anycast DNS.  
+The following procedure demonstrates how native BGP on Windows Server can be used with Anycast DNS.
 
 ### Requirements
 
@@ -103,7 +100,7 @@ Use Server Manager and the DNS management console or Windows PowerShell to insta
 
 ### Configure loopback adapters
 
-Enter the following commands at an elevated Windows PowerShell prompt on DC001 and DC002 to configure loopback adapters. 
+Enter the following commands at an elevated Windows PowerShell prompt on DC001 and DC002 to configure loopback adapters.
 
 > [!NOTE]
 > The **Install-Module** command requires Internet access. This can be done by temporarily assigning the VM to an external network in Hyper-V.
@@ -162,7 +159,7 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 
 ### Summary diagram
 
-![Anycast DNS](../../media/Anycast/anycast-lab.png)
+![Lab setup for native BGP Anycast DNS demo](../../media/Anycast/anycast-lab.png)
 
 **Figure 2**: Lab setup for native BGP Anycast DNS demo
 
@@ -244,15 +241,15 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 
 Q: Is Anycast DNS a good solution to use in an on-premises DNS environment?<br>
 A: Anycast DNS works seamlessly with an on-premises DNS service. However, Anycast is not *required* for the DNS service to scale.
- 
+
 Q: What is the impact of implementing Anycast DNS in an environment with a large number (ex: >50) of domain controllers? <br>
 A: There is no direct impact on functionality. If a load balancer is used then no additional configuration on domain controllers is required.
- 
+
 Q: Is an Anycast DNS configuration supported by Microsoft customer service?<br>
-A: If you use a non-Microsoft load balancer to forward DNS queries, Microsoft will support issues related to the DNS Server service. Consult the load balancer vendor for issues related to DNS forwarding. 
- 
+A: If you use a non-Microsoft load balancer to forward DNS queries, Microsoft will support issues related to the DNS Server service. Consult the load balancer vendor for issues related to DNS forwarding.
+
 Q: What is the best practice for Anycast DNS with a large number (ex: >50) of domain controllers?<br>
-A: The best practice is to use a load balancer at each geographical location. Load balancers are typically provided by an external vendor. 
+A: The best practice is to use a load balancer at each geographical location. Load balancers are typically provided by an external vendor.
 
 Q: Do Anycast DNS and Azure DNS have similar functionality?<br>
-A: Azure DNS uses Anycast. To use Anycast with Azure DNS, configure your load balancer to forward requests to the Azure DNS server. 
+A: Azure DNS uses Anycast. To use Anycast with Azure DNS, configure your load balancer to forward requests to the Azure DNS server.

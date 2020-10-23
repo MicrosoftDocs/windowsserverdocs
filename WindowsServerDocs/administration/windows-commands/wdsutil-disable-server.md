@@ -16,7 +16,7 @@ Disables all services for a Windows Deployment Services server.
 ## Syntax
 
 ```
-WDSUTIL [Options] /Disable-Server [/Server:<Server name>]
+wdsutil [Options] /Disable-Server [/Server:<Server name>]
 ```
 
 ### Parameters
@@ -29,8 +29,8 @@ WDSUTIL [Options] /Disable-Server [/Server:<Server name>]
 
 To disable the server, run one of the following:
 ```
-WDSUTIL /Disable-Server
-WDSUTIL /Verbose /Disable-Server /Server:MyWDSServer
+wdsutil /Disable-Server
+wdsutil /Verbose /Disable-Server /Server:MyWDSServer
 ```
 
 ## Additional References

@@ -16,7 +16,7 @@ Creates a new capture image from an existing boot image. Capture images are boot
 ## Syntax
 
 ```
-WDSUTIL [Options] /New-CaptureImage [/Server:<Server name>]
+wdsutil [Options] /New-CaptureImage [/Server:<Server name>]
      /Image:<Image name>
      /Architecture:{x86 | ia64 | x64}
      [/Filename:<File name>]
@@ -42,11 +42,11 @@ WDSUTIL [Options] /New-CaptureImage [/Server:<Server name>]
 
 To create a capture image and name it WinPECapture.wim, type:
 ```
-WDSUTIL /New-CaptureImage /Image:WinPE boot image /Architecture:x86 /DestinationImage /FilePath:C:\Temp\WinPECapture.wim
+wdsutil /New-CaptureImage /Image:WinPE boot image /Architecture:x86 /DestinationImage /FilePath:C:\Temp\WinPECapture.wim
 ```
 To create a capture image and apply the specified settings, type:
 ```
-WDSUTIL /Verbose /Progress /New-CaptureImage /Server:MyWDSServer /Image:WinPE boot image /Architecture:x64 /Filename:boot.wim
+wdsutil /Verbose /Progress /New-CaptureImage /Server:MyWDSServer /Image:WinPE boot image /Architecture:x64 /Filename:boot.wim
 /DestinationImage /FilePath:\\Server\Share\WinPECapture.wim /Name:New WinPE image /Description:WinPE image with capture utility /Overwrite:No /UnattendFilePath:\\Server\Share\WDSCapture.inf
 ```
 
