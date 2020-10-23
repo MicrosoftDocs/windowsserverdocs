@@ -30,23 +30,23 @@ wbadmin start systemstaterecovery -version:<VersionIdentifier> -showsummary [-ba
 | Parameter | Description |
 |--|--|
 | -version | Specifies the version identifier of the backup to recover in MM/DD/YYYY-HH:MM format. If you don't know the version identifier, run the [wbadmin get versions command](wbadmin-get-versions.md). |
-| -showsummary | Reports the summary of the last system state recovery (after the restart required to complete the operation). This parameter can't be accompanied by any other parameters. |
-| -backupTarget | Specifies the storage location that contains the backup(s) you want to recover. This parameter is useful when the storage location is different from where backups of this computer are usually stored. |
-| -machine | Specifies the name of the computer that you want to recover the backup for. This parameter must be used when the **-backupTarget** parameter is specified. The **-machine** parameter is useful when multiple computers have been backed up to the same location. |
-| -recoveryTarget | Specifies the directory to restore to. This parameter is useful if the backup is restored to an alternate location. |
+| -showsummary | Reports the summary of the last system state recovery (after the restart required to finish the operation). This parameter can't be accompanied by any other parameters. |
+| -backupTarget | Specifies the storage location with the backup(s) you want to recover. This parameter is useful when the storage location is different from where backups are usually stored. |
+| -machine | Specifies the name of the computer to recover the backup for. This parameter must be used when the **-backupTarget** parameter is specified. The **-machine** parameter is useful when multiple computers have been backed up to the same location. |
+| -recoveryTarget | Specifies what directory to restore to. This parameter is useful if the backup is restored to an alternate location. |
 | -authsysvol | Performs an authoritative restore of the System Volume (sysvol) shared directory. |
 | -autoReboot | Specifies to restart the system at the end of the system state recovery operation. This parameter is valid only for a recovery to the original location. We don't recommend you use this parameter if you need to perform steps after the recovery operation. |
 | -quiet | Runs the command without prompts to the user. |
 
 ## Examples
 
-To perform a system state recovery of the backup from 03/31/2020 at 9:00 A.M., type:
+To start a system state recovery of the backup from 03/31/2020 at 9:00 A.M., type:
 
 ```
 wbadmin start systemstaterecovery -version:03/31/2020-09:00
 ```
 
-To perform a system state recovery of the backup from 04/30/2020 at 9:00 A.M. that is stored on the shared resource `\\servername\share` for server01, type:
+To start a system state recovery of the backup from 04/30/2020 at 9:00 A.M. that is stored on the shared resource `\\servername\share` for server01, type:
 
 ```
 wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
