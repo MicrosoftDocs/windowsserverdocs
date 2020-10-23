@@ -13,7 +13,7 @@ ms.date: 10/16/2017
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Configures a Windows Deployment Services server for initial use after the server role has been installed. After you run this command, you should use the [wdsutiladd-Image command](wdsutil-add-image.md) command to add images to the server.
+Configures a Windows Deployment Services server for initial use after the server role has been installed. After you run this command, you should use the [wdsutil add-Image command](wdsutil-add-image.md) command to add images to the server.
 ## Syntax
 ```
 wdsutil /Initialize-Server [/Server:<Server name>] /remInst:<Full path> [/Authorize]

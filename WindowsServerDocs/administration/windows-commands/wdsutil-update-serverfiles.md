@@ -16,7 +16,7 @@ Updates files in the REMINST shared folder by using the latest files that are st
 ## Syntax
 
 ```
-WDSUTIL [Options] /Update-ServerFiles [/Server:<Server name>]
+wdsutil [Options] /Update-ServerFiles [/Server:<Server name>]
 ```
 
 ### Parameters
@@ -29,8 +29,8 @@ WDSUTIL [Options] /Update-ServerFiles [/Server:<Server name>]
 
 To update the files, type one of the following:
 ```
-WDSUTIL /Update-ServerFiles
-WDSUTIL /Verbose /Progress /Update-ServerFiles /Server:MyWDSServer
+wdsutil /Update-ServerFiles
+wdsutil /Verbose /Progress /Update-ServerFiles /Server:MyWDSServer
 ```
 
 ## Additional References

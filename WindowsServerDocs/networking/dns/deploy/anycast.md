@@ -1,13 +1,11 @@
 ---
 title: Anycast DNS overview
 description: This topic provides a brief overview of Anycast DNS
-manager: laurawi
 ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: greglin
 author: greg-lindsay
 ---
-
 # Anycast DNS overview
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2019
@@ -30,7 +28,7 @@ Anycast DNS works by using routing protocols such as Border Gateway Protocol (BG
 
 With Anycast, servers that exist in multiple geographical locations each advertise a single, identical IP address to their local gateway (router). When a DNS client initiates a query to the Anycast address, the available routes are evaluated, and the DNS query is sent to the preferred location. In general, this is the closest location based on network topology. See the following example.
 
-![Anycast DNS](../../media/Anycast/anycast.png)
+![Four DNS servers, located at different sites, announce the same Anycast IP address to the network](../../media/Anycast/anycast.png)
 
 **Figure 1**: Four DNS servers located at different sites on a network each announce the same Anycast IP address (black arrows) to the network. A DNS client device sends out a request to the Anycast IP address. Network devices analyze the available routes and send the client’s DNS query to the nearest location (blue arrow).
 
@@ -79,10 +77,14 @@ Configure network settings on virtual machines with the following settings:
   - NIC1: 10.10.10.1
   - Subnet: 255.255.255.0
   - DNS: 10.10.10.1
+  - Gateway: 10.10.10.254
 4.	DC002 (Windows Server)
   - NIC1: 10.10.10.2
   - Subnet 255.255.255.0
-  - DNS: 10.10.10.2
+  - DNS: 10.10.10.2*
+  - Gateway: 10.10.10.254
+
+   *Use 10.10.10.1 for DNS initially when performing domain join for DC002 so that you can locate the Active Directory domain on DC001.
 
 ### Configure DNS
 
@@ -131,12 +133,15 @@ Use the following Windows PowerShell commands on VMs to configure routing.
 
 1.	Gateway
 ```PowerShell
+Install-WindowsFeature RemoteAccess -IncludeManagementTools
 Install-RemoteAccess -VpnType RoutingOnly
 Add-BgpRouter -BgpIdentifier “10.10.10.254” -LocalASN 8075
+Add-BgpPeer -Name "DC001" -LocalIPAddress 10.10.10.254 -PeerIPAddress 10.10.10.1 -PeerASN 65511 –LocalASN 8075
 ```
 
 2.	DC001
 ```PowerShell
+Install-WindowsFeature RemoteAccess -IncludeManagementTools
 Install-RemoteAccess -VpnType RoutingOnly
 Add-BgpRouter -BgpIdentifier “10.10.10.1” -LocalASN 65511
 Add-BgpPeer -Name "Labgw" -LocalIPAddress 10.10.10.1 -PeerIPAddress 10.10.10.254 -PeerASN 8075 –LocalASN 65511
@@ -145,6 +150,7 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 
 3.	DC002
 ```PowerShell
+Install-WindowsFeature RemoteAccess -IncludeManagementTools
 Install-RemoteAccess -VpnType RoutingOnly
 Add-BgpRouter -BgpIdentifier "10.10.10.2" -LocalASN 65511
 Add-BgpPeer -Name "Labgw" -LocalIPAddress 10.10.10.2 -PeerIPAddress 10.10.10.254 -PeerASN 8075 –LocalASN 65511
@@ -153,7 +159,7 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
 
 ### Summary diagram
 
-![Anycast DNS](../../media/Anycast/anycast-lab.png)
+![Lab setup for native BGP Anycast DNS demo](../../media/Anycast/anycast-lab.png)
 
 **Figure 2**: Lab setup for native BGP Anycast DNS demo
 
@@ -183,6 +189,9 @@ Add-BgpCustomRoute -Network 51.51.51.0/24
     Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),<br>
     Approximate round trip times in milli-seconds:<br>
     Minimum = 0ms, Maximum = 0ms, Average = 0ms
+
+    > [!NOTE]
+    > If ping fails, also check there are no firewall rules blocking ICMP.
 
 3.	On client1 and client2, use nslookup or dig to query the TXT record. Examples of both are shown below.
 
