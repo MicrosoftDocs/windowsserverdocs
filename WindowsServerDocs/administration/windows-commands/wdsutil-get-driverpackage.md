@@ -16,7 +16,7 @@ Displays information about a driver package on the server.
 ## Syntax
 
 ```
-WDSUTIL /Get-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package Name> | /PackageId:<ID>} [/Show:{Drivers | Files | All}]
+wdsutil /Get-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package Name> | /PackageId:<ID>} [/Show:{Drivers | Files | All}]
 ```
 
 ### Parameters
@@ -32,10 +32,10 @@ WDSUTIL /Get-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package Name
 
 To view information about a driver package, type one of the following:
 ```
-WDSUTIL /Get-DriverPackage /PackageId:{4D36E972-E325-11CE-BFC1-08002BE10318}
+wdsutil /Get-DriverPackage /PackageId:{4D36E972-E325-11CE-BFC1-08002BE10318}
 ```
 ```
-WDSUTIL /Get-DriverPackage /DriverPackage:MyDriverPackage /Show:All
+wdsutil /Get-DriverPackage /DriverPackage:MyDriverPackage /Show:All
 ```
 
 ## Additional References
