@@ -31,7 +31,7 @@ wdsutil /Add-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server name>]
 
 ## Examples
 
-To add a filter to a driver group, type:
+To add a filter to a driver group, type either:
 
 ```
 wdsutil /Add-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufacturer /Policy:Include /Value:Name1 /Value:Name2
@@ -45,10 +45,10 @@ wdsutil /Add-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufactu
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [wdsutiladd-drivergrouppackage command](wdsutil-add-drivergrouppackage.md)
+- [wdsutil add-drivergrouppackage command](wdsutil-add-drivergrouppackage.md)
 
-- [wdsutiladd-drivergrouppackages command](wdsutil-add-drivergrouppackages.md)
+- [wdsutil add-drivergrouppackages command](wdsutil-add-drivergrouppackages.md)
 
-- [wdsutiladd-drivergroup command](wdsutil-add-drivergroup.md)
+- [wdsutil add-drivergroup command](wdsutil-add-drivergroup.md)
 
 - [Windows Deployment Services cmdlets](/powershell/module/wds)

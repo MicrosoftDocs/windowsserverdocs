@@ -25,12 +25,12 @@ wdsutil /Add-AllDriverPackages /FolderPath:<folderpath> [/Server:<servername>] [
 |--|--|
 | /FolderPath:`<folderpath>` | Specifies the full path to the folder that contains the .inf files for the driver packages. |
 | [/Server:`<servername>`] | Specifies the name of the server. This can be the NetBIOS name or the FQDN. If no server name is specified, the local server is used. |
-| [/Architecture:`{x86 | ia64 | x64}` | Specifies the architecture type for the driver package. |
+| [/Architecture:`{x86|ia64|x64}`] | Specifies the architecture type for the driver package. |
 | [/DriverGroup:`<groupname>`] | Specifies the name of the driver group to which the packages should be added. |
 
 ## Examples
 
-To add driver packages, type:
+To add driver packages, type either:
 
 ```
 wdsutil /verbose /Add-AllDriverPackages /FolderPath:C:\Temp\Drivers /Architecture:x86
