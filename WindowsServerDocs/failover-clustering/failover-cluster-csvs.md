@@ -75,7 +75,7 @@ The server uses one of the following I/O redirection modes, depending on the sit
 In Windows Server 2012 R2, you can view the state of a CSV volume on a per node basis. For example, you can see whether I/O is direct or redirected, or whether the CSV volume is unavailable. If a CSV volume is in I/O redirected mode, you can also view the reason. Use the Windows PowerShell cmdlet **Get-ClusterSharedVolumeState** to view this information.
 
 > [!IMPORTANT]
-> * Please understand, that CSV's that are pre-formatted with **ReFS, used on top of SAN's will NOT use Direct I/O**, no matter if all other requirements for Direct I/O are met.
+> * Please note that CSVs pre-formatted with **ReFS used on top of SANs will NOT use Direct I/O**, regardless of all other requirements for Direct I/O being met.
 > * If you plan to use CSV in junction with SAN(-FrontEnd) attached disks, format drives with NTFS before converting them to a CSV to leverage the performance benefits of Direct I/O.
 > * This behaviour is by design. Please consult links in chapter "More information".
 
