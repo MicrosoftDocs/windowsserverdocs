@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 07/29/2020
+ms.date: 10/23/2020
 ms.topic: article
 ---
 # Storage Migration Service known issues
@@ -416,9 +416,15 @@ There are two solutions for this issue:
 
 ## Slower than expected re-transfer performance
 
-After completing a transfer, then running a subsequent re-transfer of the same data, you may not see much improvement in transfer time even when little data has changed in the meantime on the source server.
+After completing a transfer, then running a subsequent re-transfer of the same data, you may not see much improvement in transfer time even when little data has changed in the meantime on the source server. 
 
-This is expected behavior when transferring a very large number of files and nested folders. The size of the data isn't relevant. We first made improvements to this behavior in [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) and are continuing to optimize transfer performance. To tune performance further, review [Optimizing Inventory and Transfer Performance](./faq.md#optimizing-inventory-and-transfer-performance).
+This issue is resolved by [kb4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390). To tune performance further, review [Optimizing Inventory and Transfer Performance](./faq.md#optimizing-inventory-and-transfer-performance).
+
+## Slower than expected inventory performance
+
+While inventorying a source server, you find the file inventory taking a very long time when there are many files or nested folders. Millions of files and folders may lead to inventories taking many hours even on fast storage configurations. 
+
+This issue is resolved by [kb4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390).
 
 ## Data does not transfer, user renamed when migrating to or from a domain controller
 
