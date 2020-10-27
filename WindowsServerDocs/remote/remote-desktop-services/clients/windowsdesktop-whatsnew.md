@@ -37,7 +37,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 
 *Date published: 09/22/2020*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMK), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4G1t9), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMI)
 
 - Fixed an issue where single sign-on (SSO) didn't work on Windows 7.
 - Fixed the connection failure that happened when calling or joining a Teams call while another app has an audio stream opened in exclusive mode and when media optimization for Teams is enabled.
@@ -48,8 +48,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.1275
 
 *Date published: 08/25/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FpYR), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FpYS), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Fg3H)
 
 - Added functionality to auto-detect sovereign clouds from the user’s identity.
 - Added functionality to enable custom URL subscriptions for all users.
