@@ -27,7 +27,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
-- Added auto-update functionality.
+- Added the auto-update feature, which allows the client to install the latest updates automatically.
 - The client now distinguishes between different feeds in the Connection Center.
 - Fixed an issue where the subscription account doesn't match the account the user signed in with.
 - Fixed an issue where some users couldn't access remote apps through a downloaded file.
