@@ -7,10 +7,9 @@ ms.topic: how-to
 ms.author: delhan
 ms.date: 10/29/2020
 ---
-
 # How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows
 
-## Summary
+>Applies to: Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This article describes how to enable and disable Server Message Block (SMB) version 1 (SMBv1), SMB version 2 (SMBv2), and SMB version 3 (SMBv3) on the SMB client and server components.
 
