@@ -327,15 +327,13 @@ At the bottom of each log file, the filters list is presented as shown in the im
 
 </center>
 
-At the bottom of each log file, the filters list is presented as shown in the image below (highlighted in blue). Each filter displays the parameter(s) specified (Protocol ICMP in the example below), and zeros for the rest of the parameters.
+For dropped packets, the word "drop" appears before any of the lines representing the snapshot where the packet got dropped. Each dropped packet also provides a dropReason value. This dropReason parameter provides a short description of the packet drop reason; for example, MTU Mismatch, Filtered VLAN, etc.
 
 <center>
 
 :::image type="content" source="media/dropped-packet-log-example.png" alt-text="Example of a dropped packet log":::
 
 </center>
-
-For dropped packets, the word "drop" appears before any of the lines representing the snapshot where the packet got dropped. Each dropped packet also provides dropReason and dropLocation values. This dropReason parameter provides a short description of the packet drop reason; for example, MTU Mismatch, Filtered VLAN, etc., while the dropLocation parameter is represented by a code. This code can be used for locating the source code line responsible for the packet drop decision.
 
 ## Packet counters
 
