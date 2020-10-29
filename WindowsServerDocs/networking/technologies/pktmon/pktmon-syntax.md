@@ -4,7 +4,7 @@ description: Use this page to understand pktmon syntax, commands, formatting, an
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 10/20/2020
+ms.date: 10/29/2020
 ---
 
 # Pktmon command syntax and formatting
@@ -58,19 +58,19 @@ C:\Test> pktmon filter add -p 53
 
 ### Filtering capability
 
-Packet Monitor supports filtering by MAC addresses, IP addresses, ports, EtherType, transport protocol, and VLAN Id. 
+- Packet Monitor supports filtering by MAC addresses, IP addresses, ports, EtherType, transport protocol, and VLAN Id. 
 
-Packet Monitor will not distinguish between source or destination when it comes to MAC address, IP address, or port filters. 
+- Packet Monitor will not distinguish between source or destination when it comes to MAC address, IP address, or port filters. 
 
-To further filter TCP packets, an optional list of TCP flags to match can be provided. Supported flags are FIN, SYN, RST, PSH, ACK, URG, ECE, and CWR.
+- To further filter TCP packets, an optional list of TCP flags to match can be provided. Supported flags are FIN, SYN, RST, PSH, ACK, URG, ECE, and CWR.
 
-For example, the following filter will capture all the SYN packets sent or received by the IP address 10.0.0.10:
+  - For example, the following filter will capture all the SYN packets sent or received by the IP address 10.0.0.10:
 
 ```PowerShell
 C:\Test> pktmon filter add -i 10.0.0.10 -t tcp syn
 ```
 
-Packet Monitor can apply a filter to encapsulated inner packets, in addition to the outer packet if the [-e] flag was added to any filter. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP. Custom VXLAN port is optional, and defaults to 4789.
+- Packet Monitor can apply a filter to encapsulated inner packets, in addition to the outer packet if the [-e] flag was added to any filter. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP. Custom VXLAN port is optional, and defaults to 4789.
 
 ### Pktmon filters syntax
 
@@ -163,16 +163,16 @@ C:\Test> pktmon start --etw -c 4,5 -d
 
 ### Packet logging capability
 
-Packet Monitor supports multiple logging modes:
+- Packet Monitor supports multiple logging modes:
 
-- Circular: New packets overwrite the oldest ones when the maximum file size is reached. This is the default logging mode.
-- Multi-file: A new log file is created when the maximum file size is reached. Log files are sequentially numbered: PktMon1.etl, PktMon2.etl, etc. Apply this logging mode to keep all the log, but be wary of storage utilization. Note: use the file creation timestamp of each log file as an indication to a specific time frame in the capture.
-- Real-time: Packets are displayed on screen at real time. No log file is created. Use Ctrl+C to stop monitoring.
-- Memory: Events are written to a circular memory buffer. Buffer size is specified through the **[-s]** parameter. Buffer contents are written to a log file after stopping the capture. Use this logging mode for very noisy scenarios to capture a huge amount of traffic in very short amount of time in the memory buffer. Using any other logging modes, some traffic might get lost.
+  - Circular: New packets overwrite the oldest ones when the maximum file size is reached. This is the default logging mode.
+  - Multi-file: A new log file is created when the maximum file size is reached. Log files are sequentially numbered: PktMon1.etl, PktMon2.etl, etc. Apply this logging mode to keep all the log, but be wary of storage utilization. Note: use the file creation timestamp of each log file as an indication to a specific time frame in the capture.
+  - Real-time: Packets are displayed on screen at real time. No log file is created. Use Ctrl+C to stop monitoring.
+  - Memory: Events are written to a circular memory buffer. Buffer size is specified through the **[-s]** parameter. Buffer contents are written to a log file after stopping the capture. Use this logging mode for very noisy scenarios to capture a huge amount of traffic in very short amount of time in the memory buffer. Using any other logging modes, some traffic might get lost.
 
-Specify how much of the packet to log through the **[-p]** parameter. Log the whole packet of every packet no matter its size by setting that parameter to 0. The default is 128 bytes which should include the headers of most packets.
+- Specify how much of the packet to log through the **[-p]** parameter. Log the whole packet of every packet no matter its size by setting that parameter to 0. The default is 128 bytes which should include the headers of most packets.
 
-Specify the size of the log file through the **[-s]** parameter. This will be the maximum size of the file in a circular logging mode before Packet Monitor starts overwriting the older packets with the newer ones. This will also be the maximum size of each file in the multi-file logging mode before Packet Monitor creates a new file to log the next packets. You can also use this parameter to set the buffer size for the memory logging mode.
+- Specify the size of the log file through the **[-s]** parameter. This will be the maximum size of the file in a circular logging mode before Packet Monitor starts overwriting the older packets with the newer ones. This will also be the maximum size of each file in the multi-file logging mode before Packet Monitor creates a new file to log the next packets. You can also use this parameter to set the buffer size for the memory logging mode.
 
 ### Pktmon start syntax
 
@@ -250,7 +250,8 @@ Packet Monitor generates log files in ETL format. There are multiple ways to for
 - Convert the log to PCAPNG format to analyze it using [Wireshark](https://osgwiki.com/wiki/PacketMon%27s_WireShark_(Pcapng_Format)_Support)*
 - Open the ETL file with [Network Monitor](https://osgwiki.com/wiki/PacketMon%27s_Microsoft_Network_Monitor_(Netmon)_Support)*
 
-*Use the hyperlinks above to learn how to parse and analyze Packet Monitor's logs in Wireshark and Network Monitor.
+>[!NOTE]
+>*Use the hyperlinks above to learn how to parse and analyze Packet Monitor logs in **Wireshark** and **Network Monitor**.
 
 ### Pktmon format syntax
 
