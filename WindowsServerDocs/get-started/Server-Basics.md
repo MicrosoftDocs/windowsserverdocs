@@ -4,8 +4,8 @@ description: Basics for Server 2016 - System requirements, release notes, upgrad
 manager: dongill
 ms.date: 03/16/2018
 ms.topic: article
-author: jaimeo
-ms.author: jaimeo
+author: JasonGerend
+ms.author: jgerend
 ms.localizationpriority: medium
 ---
 # Get Started with Windows Server 2016
