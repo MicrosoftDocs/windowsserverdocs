@@ -360,7 +360,7 @@ This disables the SMBv1 Server components. This Group Policy must be applied to
 
 To disable the SMBv1 client, the services registry key needs to be updated to disable the start of **MRxSMB10** and then the dependency on **MRxSMB10** needs to be removed from the entry for **LanmanWorkstation** so that it can start normally without requiring **MRxSMB10** to first start.
 
-This will update and replace the default values in the following 2 items in the registry: 
+This will update and replace the default values in the following two items in the registry: 
 
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\mrxsmb10** 
 
