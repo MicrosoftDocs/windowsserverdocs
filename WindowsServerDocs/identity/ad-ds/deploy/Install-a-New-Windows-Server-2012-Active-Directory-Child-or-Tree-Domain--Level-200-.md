@@ -2,7 +2,7 @@
 ms.assetid: e3d55565-ad45-4504-ad73-8103d1a92170
 title: Install a New Windows Server 2012 Active Directory Child or Tree Domain (Level 200)
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

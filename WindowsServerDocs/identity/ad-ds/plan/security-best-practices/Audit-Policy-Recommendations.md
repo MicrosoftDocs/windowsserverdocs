@@ -2,7 +2,7 @@
 ms.assetid: 0abe0976-4b49-45d6-a7b3-81d28bdb8210
 title: Audit Policy Recommendations
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

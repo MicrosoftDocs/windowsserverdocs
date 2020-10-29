@@ -2,7 +2,7 @@
 ms.assetid: 70c99703-ff0d-4278-9629-b8493b43c833
 title: Guidance about how to configure protected accounts
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
