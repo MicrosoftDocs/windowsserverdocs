@@ -2,7 +2,7 @@
 ms.assetid: b11f7a65-ec7b-4c11-8dc4-d7cabb54cd94
 title: Troubleshooting Active Directory Replication Problems
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

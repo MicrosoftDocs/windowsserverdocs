@@ -2,7 +2,7 @@
 ms.assetid: c7f49a65-c3eb-4383-99d3-756aa8c79fc0
 title: Forest Design Models
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
