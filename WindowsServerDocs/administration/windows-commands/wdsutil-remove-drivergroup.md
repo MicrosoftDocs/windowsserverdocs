@@ -16,7 +16,7 @@ Removes a driver group from a server.
 ## Syntax
 
 ```
-WDSUTIL /Remove-DriverGroup /DriverGroup:<Group Name> [/Server:<Server name>]
+wdsutil /Remove-DriverGroup /DriverGroup:<Group Name> [/Server:<Server name>]
 ```
 
 ### Parameters
@@ -30,10 +30,10 @@ WDSUTIL /Remove-DriverGroup /DriverGroup:<Group Name> [/Server:<Server name>]
 
 To remove a driver group, type one of the following:
 ```
-WDSUTIL /Remove-DriverGroup /DriverGroup:PrinterDrivers
+wdsutil /Remove-DriverGroup /DriverGroup:PrinterDrivers
 ```
 ```
-WDSUTIL /Remove-DriverGroup /DriverGroup:PrinterDrivers /Server:MyWdsServer
+wdsutil /Remove-DriverGroup /DriverGroup:PrinterDrivers /Server:MyWdsServer
 ```
 
 ## Additional References

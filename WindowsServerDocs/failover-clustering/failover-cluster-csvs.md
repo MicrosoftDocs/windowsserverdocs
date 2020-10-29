@@ -74,6 +74,14 @@ The server uses one of the following I/O redirection modes, depending on the sit
 
 In Windows Server 2012 R2, you can view the state of a CSV volume on a per node basis. For example, you can see whether I/O is direct or redirected, or whether the CSV volume is unavailable. If a CSV volume is in I/O redirected mode, you can also view the reason. Use the Windows PowerShell cmdlet **Get-ClusterSharedVolumeState** to view this information.
 
+> [!IMPORTANT]
+> * Please note that CSVs pre-formatted with **ReFS used on top of SANs will NOT use Direct I/O**, regardless of all other requirements for Direct I/O being met.
+> * If you plan to use CSV in junction with SAN(-FrontEnd) attached disks, format drives with NTFS before converting them to a CSV to leverage the performance benefits of Direct I/O.
+> * This behaviour is by design. Please consult the pages linked in the section **More information** below.
+
+> * Because of the integration of CSV with SMB 3.0 features such as SMB Multichannel and SMB Direct, redirected I/O traffic can stream across multiple cluster networks.
+> * You should plan your cluster networks to allow for the potential increase in network traffic to the coordinator node during I/O redirection.
+
 > [!NOTE]
 > * In Windows Server 2012, because of improvements in CSV design, CSV perform more operations in direct I/O mode than occurred in Windows Server 2008 R2.
 > * Because of the integration of CSV with SMB 3.0 features such as SMB Multichannel and SMB Direct, redirected I/O traffic can stream across multiple cluster networks.
@@ -252,3 +260,5 @@ You should consider the following factors when you select a backup application a
 
 - [Failover Clustering](./failover-clustering-overview.md)
 - [Deploy Clustered Storage Spaces](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>)
+- [Understanding the state of your Cluster Shared Volumes](https://techcommunity.microsoft.com/t5/failover-clustering/understanding-the-state-of-your-cluster-shared-volumes/ba-p/371889)
+- [Cluster Shared Volume Diagnostics](https://techcommunity.microsoft.com/t5/failover-clustering/cluster-shared-volume-diagnostics/ba-p/371908)

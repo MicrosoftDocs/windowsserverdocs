@@ -16,7 +16,7 @@ Creates a new discover image from an existing boot image. Discover images are bo
 ## Syntax
 
 ```
-WDSUTIL [Options] /New-DiscoverImage [/Server:<Server name>]
+wdsutil [Options] /New-DiscoverImage [/Server:<Server name>]
      /Image:<Image name>
      /Architecture:{x86 | ia64 | x64}
      [/Filename:<File name>]
@@ -42,11 +42,11 @@ WDSUTIL [Options] /New-DiscoverImage [/Server:<Server name>]
 
 To create a discover image out of boot image, and name it WinPEDiscover.wim, type:
 ```
-WDSUTIL /New-DiscoverImage /Image:WinPE boot image /Architecture:x86 /DestinationImage /FilePath:C:\Temp\WinPEDiscover.wim
+wdsutil /New-DiscoverImage /Image:WinPE boot image /Architecture:x86 /DestinationImage /FilePath:C:\Temp\WinPEDiscover.wim
 ```
 To create a discover image out of boot image, and name it WinPEDiscover.wim with the specified settings, type:
 ```
-WDSUTIL /Verbose /Progress /New-DiscoverImage /Server:MyWDSServer
+wdsutil /Verbose /Progress /New-DiscoverImage /Server:MyWDSServer
 /Image:WinPE boot image /Architecture:x64 /Filename:boot.wim /DestinationImage /FilePath:\\Server\Share\WinPEDiscover.wim
 /Name:New WinPE image /Description:WinPE image for WDS Client discovery /Overwrite:No
 ```

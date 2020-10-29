@@ -16,7 +16,7 @@ Retrieves information about the images contained in a Windows Image (.wim) file.
 ## Syntax
 
 ```
-WDSUTIL [Options] /Get-ImageFile /ImageFile:<wim file path> [/Detailed]
+wdsutil [Options] /Get-ImageFile /ImageFile:<wim file path> [/Detailed]
 ```
 
 ### Parameters
@@ -30,11 +30,11 @@ WDSUTIL [Options] /Get-ImageFile /ImageFile:<wim file path> [/Detailed]
 
 To view information about an image, type:
 ```
-WDSUTIL /Get-ImageFile /ImageFile:C:\temp\install.wim
+wdsutil /Get-ImageFile /ImageFile:C:\temp\install.wim
 ```
 To view detailed information, type:
 ```
-WDSUTIL /Verbose /Get-ImageFile /ImageFile:\\Server\Share\My Folder \install.wim /Detailed
+wdsutil /Verbose /Get-ImageFile /ImageFile:\\Server\Share\My Folder \install.wim /Detailed
 ```
 
 ## Additional References
