@@ -6,6 +6,7 @@ manager: dcscontentpm
 ms.topic: how-to
 ms.author: delhan
 ms.date: 10/29/2020
+ms.custom: contperfq1
 ---
 # How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows
 
@@ -48,7 +49,9 @@ The SMBv2 protocol was introduced in Windows Vista and Windows Server 2008, whil
 
 [What's New in SMB](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff625695(v=ws.10))  
 
-## How to gracefully remove SMB v1 in Windows 8.1, Windows 10, Windows 2012 R2, Windows Server 2016, and Windows Server 2019
+## How to remove SMB v1
+
+Here's how to remove SMBv1 in Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, and Windows 2012 R2.
 
 #### PowerShell methods
 
