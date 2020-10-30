@@ -2,7 +2,7 @@
 ms.assetid: ac6604b0-7459-4ff3-af1c-4936897f5d14
 title: Delegating Administration of Default Containers and OUs
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
