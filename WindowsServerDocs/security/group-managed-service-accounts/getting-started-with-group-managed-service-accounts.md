@@ -133,7 +133,7 @@ When deploying a new server farm, the service administrator will need to determi
 ### <a name="BKMK_Step1"></a>Step 1: Provisioning group Managed Service Accounts
 You can create a gMSA only if the forest schema has been updated to  Windows Server 2012 , the master root key for Active Directory has been deployed, and there is at least one Windows Server 2012 DC in the domain in which the gMSA will be created.
 
-Membership in **Domain Admins**, **Account Operators** or ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures.
+Membership in **Domain Admins** or the  ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures.
 
 > [!NOTE]
 > A value for the -Name parameter is always required (whether you specify -Name or not), with -DNSHostName, -RestrictToSingleComputer, and -RestrictToOutboundAuthentication being secondary requirements for the three deployment scenarios.
