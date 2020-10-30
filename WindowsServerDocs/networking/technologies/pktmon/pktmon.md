@@ -74,7 +74,7 @@ The following resources are available to help you get started using Packet Monit
 
 Packet Monitor is available in-box via pktmon.exe command on Vibranium OS (build 19041). You can [use this topic](pktmon-syntax.md) to learn how to understand pktmon syntax, commands, formatting, and output.
 
-### Packet Monitoring extension in Windows Admin Center
+### Pktmon extension in Windows Admin Center
 
 The Packet Monitoring extension allows you to operate and consume Packet Monitor through Windows Admin Center. The extension helps you diagnose your network by capturing and displaying network traffic through the networking stack in a log that is easy to follow and manipulate. You can use this topic to learn how to operate the tool and understand its output.
 
@@ -86,7 +86,7 @@ SDN Data Path Diagnostics is a tool within the SDN monitoring extension of Windo
 
 Packet Monitor generates logs in ETL format. These logs can be analyzed using Microsoft Network Monitor (Netmon) by using special parsers. This topic explains how to analyze Packet Monitor-generated ETL files within Netmon.
 
-### WireShark (pcapng Format) support
+### WireShark (pcapng format) support
 
 Packet Monitor can convert logs to pcapng format. These logs can be analyzed using WireShark (or any pcapng analyzer). This topic explains the expected output and how to take advantage of it.
 
