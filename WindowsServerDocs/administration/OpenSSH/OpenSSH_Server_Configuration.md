@@ -103,7 +103,7 @@ Not applicable in Windows. To prevent administrator login, use Administrators wi
 ### SyslogFacility
 
 If you need file based logging, use LOCAL0. Logs are generated under %programdata%\ssh\logs.
-Any other value, including the default value AUTH directs logging to ETW. For more info see Logging Facilities in Windows.
+Any other value, including the default value AUTH directs logging to ETW. For more info see [Logging Facilities in Windows](https://github.com/PowerShell/Win32-OpenSSH/wiki/Logging-Facilities).
 
 ### Not supported
 
