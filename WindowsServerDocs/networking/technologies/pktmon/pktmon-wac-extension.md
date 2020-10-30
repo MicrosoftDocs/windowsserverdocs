@@ -1,6 +1,6 @@
 ---
 title: Pktmon Windows Admin Center Extension
-description: Use this page to understand pktmon syntax, commands, formatting, and output for Windows Vibranium builds.
+description: Use this page to operate and consume Packet Monitor (pktmon) through Windows Admin Center.
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
