@@ -2,7 +2,7 @@
 ms.assetid: eafdddc3-40d7-4a75-8f4f-a45294aabfc8
 title: Implementing Secure Administrative Hosts
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

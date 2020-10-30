@@ -1,6 +1,6 @@
 ---
 title: AD Forest Recovery - Raising RID pools
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018

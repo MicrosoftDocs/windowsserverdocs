@@ -1,7 +1,7 @@
 ---
 ms.assetid: 133474ee-316d-4b1c-acc6-ad5434a064d5
 title: Reviewing DNS Concepts
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018

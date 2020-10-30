@@ -3,7 +3,7 @@ ms.assetid: 2a5d5271-6ac6-4c1b-b4ef-9b568932a55a
 title: Active Directory domain-wide schema updates
 description: Domain-wide schema updates performed by adprep /domainprep when promoting a Domain Controller
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 10/29/2018
 ms.topic: article
