@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/19/2020
+ms.date: 11/02/2020
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -13,6 +13,23 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+
+## Updates for version 10.4.1
+
+*Date published: 11/02/2020*
+
+We've put together some bug fixes and small feature updates for this 10.4.1 release. Here's what's new:
+
+• Addressed several reliability issues identified through crash reporting.
+• Addressed keyboard and VoiceOver-related accessibility bugs.
+• Fixed an issue where the client would hang on reconnect when resuming from sleep.
+• Fixed an audio artifact that was heard when playing back the first chunk of a redirected audio stream.
+• Addressed an issue where the client would report a 0x5000007 error message when connecting using an RD Gateway server.
+• Corrected the aspect ratio of PC thumbnails displayed in the Connection Center.
+• Improved smart card redirection heuristics to better handle nested transactions.
+• Fixed a bug that prevented bookmark export if the friendly contained the "/" character.
+• Resolved a bug that was causing a 0xD06 protocol error when running Outlook as a remote app.
+• Added support for a new integer RDP file property (ForceHiDpiOptimizations) to enable Retina display optimization.
 
 ## Updates for version 10.4.0
 
