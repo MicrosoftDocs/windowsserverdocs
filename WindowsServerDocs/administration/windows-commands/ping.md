@@ -29,23 +29,23 @@ ping [/t] [/a] [/n <count>] [/l <size>] [/f] [/I <TTL>] [/v <TOS>] [/r <count>] 
 ### Parameters
 
 | Parameter | Description |
-|--|--|
-| /t | Specifies that ping continues sending echo Request messages to the destination until interrupted. To interrupt and display statistics, press CTRL+ENTER. To interrupt and quit this command, press CTRL+C. |
-| /a | Specifies reverse name resolution to be performed on the destination IP address. If this is successful, ping displays the corresponding host name. |
-| /n `<count>` | Specifies the number of echo Request messages to be sent. The default is 4. |
-| /l `<size>` | Specifies the length, in bytes, of the **Data** field in the echo Request messages to be sent. The default is 32. The maximum size is 65,527. |
+|:--:|---|
+| /t | Specifies ping continue sending echo Request messages to the destination until interrupted. To interrupt and display statistics, press CTRL+ENTER. To interrupt and quit this command, press CTRL+C. |
+| /a | Specifies reverse name resolution be performed on the destination IP address. If this is successful, ping displays the corresponding host name. |
+| /n `<count>` | Specifies the number of echo Request messages be sent. The default is 4. |
+| /l `<size>` | Specifies the length, in bytes, of the **Data** field in the echo Request messages. The default is 32. The maximum size is 65,527. |
 | /f | Specifies that echo Request messages are sent with the **Do not Fragment** flag in the IP header set to 1 (available on IPv4 only). The echo Request message can't be fragmented by routers in the path to the destination. This parameter is useful for troubleshooting path Maximum Transmission Unit (PMTU) problems. |
 | /I `<TTL>` | Specifies the value of the Time To Live (TTL) field in the IP header for echo Request messages sent. The default is the default TTL value for the host. The maximum *TTL* is 255. |
 | /v `<TOS>` | Specifies the value of the Type Of Service (TOS) field in the IP header for echo Request messages sent (available on IPv4 only). The default is 0. *TOS* is specified as a decimal value from 0 through 255. |
-| /r `<count>` | Specifies that the **Record Route** option in the IP header is used to record the path taken by the echo Request message and corresponding echo Reply message (available on IPv4 only). Each hop in the path uses an entry in the **Record Route** option. If possible, specify a *count* equal to or greater than the number of hops between the source and destination. The *count* must be a minimum of 1 and a maximum of 9. |
+| /r `<count>` | Specifies the **Record Route** option in the IP header is used to record the path taken by the echo Request message and corresponding echo Reply message (available on IPv4 only). Each hop in the path uses an entry in the **Record Route** option. If possible, specify a *count* equal to or greater than the number of hops between the source and destination. The *count* must be a minimum of 1 and a maximum of 9. |
 | /s `<count>` | Specifies that the **Internet timestamp** option in the IP header is used to record the time of arrival for the echo Request message and corresponding echo Reply message for each hop. The *count* must be a minimum of 1 and a maximum of 4. This is required for link-local destination addresses. |
-| /j `<hostlist>` | Specifies that the echo Request message uses the **Loose Source Route** option in the IP header with the set of intermediate destinations specified in *hostlist* (available on IPv4 only). With loose source routing, successive intermediate destinations can be separated by one or multiple routers. The maximum number of addresses or names in the host list is 9. The host list is a series of IP addresses (in dotted decimal notation) separated by spaces. |
-| /k `<hostlist>` | Specifies that the echo Request message uses the **Strict Source Route** option in the IP header with the set of intermediate destinations specified in *hostlist* (available on IPv4 only). With strict source routing, the next intermediate destination must be directly reachable (it must be a neighbor on an interface of the router). The maximum number of addresses or names in the host list is 9. The host list is a series of IP addresses (in dotted decimal notation) separated by spaces. |
-| /w `<timeout>` | Specifies the amount of time, in milliseconds, to wait for the echo Reply message corresponding to a given echo Request message to be received. If the echo Reply message is not received within the time-out, the "Request timed out" error message is displayed. The default time-out is 4000 (4 seconds). |
-| /R | Specifies that the round-trip path is traced (available on IPv6 only). |
+| /j `<hostlist>` | Specifies the echo Request message uses the **Loose Source Route** option in the IP header with the set of intermediate destinations specified in *hostlist* (available on IPv4 only). With loose source routing, successive intermediate destinations can be separated by one or multiple routers. The maximum number of addresses or names in the host list is 9. The host list is a series of IP addresses (in dotted decimal notation) separated by spaces. |
+| /k `<hostlist>` | Specifies the echo Request message uses the **Strict Source Route** option in the IP header with the set of intermediate destinations specified in *hostlist* (available on IPv4 only). With strict source routing, the next intermediate destination must be directly reachable (it must be a neighbor on an interface of the router). The maximum number of addresses or names in the host list is 9. The host list is a series of IP addresses (in dotted decimal notation) separated by spaces. |
+| /w `<timeout>` | Specifies the amount of time, in milliseconds, to wait for the echo Reply message corresponding to a given echo Request message. If the echo Reply message is not received within the time-out, the "Request timed out" error message is displayed. The default time-out is 4000 (4 seconds). |
+| /R | Specifies the round-trip path is traced (available on IPv6 only). |
 | /S `<Srcaddr>` | Specifies the source address to use (available on IPv6 only). |
-| /4 | Specifies IPv4 to be used to ping. This parameter is not required to identify the target host with an IPv4 address. It is only required to identify the target host by name. |
-| /6 | Specifies IPv6 to be used to ping. This parameter is not required to identify the target host with an IPv6 address. It is only required to identify the target host by name. |
+| /4 | Specifies IPv4 used to ping. This parameter is not required to identify the target host with an IPv4 address. It is only required to identify the target host by name. |
+| /6 | Specifies IPv6 used to ping. This parameter is not required to identify the target host with an IPv6 address. It is only required to identify the target host by name. |
 | `<targetname>` | Specifies the host name or IP address of the destination. |
 | /? | Displays help at the command prompt. |
 
