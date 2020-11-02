@@ -37,7 +37,7 @@ In this version, we addressed some compatibility issues with iOS and iPadOS 14. 
 We've put together some bug fixes and small feature updates for this 10.1.4 release. Here's what's new:
 
 - Addressed an issue where the client would report a 0x5000007 error message when trying to connect to an RD Gateway server.
-- User account passwords updated in the credential UI are now saved after sucessfully signing in.
+- User account passwords updated in the credential UI are now saved after successfully signing in.
 - Addressed an issue where range and multi-select with the mouse or trackpad (Shift+click and Ctrl+click) didn't work consistently.
 - Addressed a bug where apps displayed in the in-session switcher UI were out of sync with the remote session.
 - Made some cosmetic changes to the layout of Connection Center workspace headers.
@@ -105,7 +105,7 @@ Here's what's new for this version:
 - Fixed an issue where the SwiftPoint middle mouse button didn't work in iPadOS version 13.3.1 or earlier and iOS.
 - Fixed some bugs that prevented the client from recognizing the "rdp:" URI.
 - Addressed an issue where the in-session Immersive Switcher UI showed outdated app entries if a disconnect was server-initiated.
-- Te client now supports the Azure Resource Manager-integrated verison of Windows Virtual Desktop.
+- The client now supports the Azure Resource Manager-integrated version of Windows Virtual Desktop.
 
 ## Updates for version 10.0.7
 
