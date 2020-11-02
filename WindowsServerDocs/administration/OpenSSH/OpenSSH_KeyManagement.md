@@ -49,6 +49,9 @@ To make key authentication easy with an SSH server, run the following commands f
 # Install the OpenSSHUtils module to the server. This will be valuable when deploying user keys.
 Install-Module -Force OpenSSHUtils -Scope AllUsers
 
+# By default the ssh-agent service is disabled. Allow it to be manually started for the next step to work.
+Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+
 # Start the ssh-agent service to preserve the server keys
 Start-Service ssh-agent
 
