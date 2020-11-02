@@ -4,7 +4,7 @@ description: Use this page to operate and consume Packet Monitor (pktmon) throug
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 10/30/2020
+ms.date: 11/2/2020
 ---
 
 # Pktmon Windows Admin Center Extension
@@ -56,15 +56,13 @@ It's highly recommended to apply filters before starting any packet capture sinc
 
 3. Filtering by packet flow status
 
-   Packet Monitor will capture flowing and dropped packets by default.
+   Packet Monitor will capture flowing and dropped packets by default. To capture only on dropped packets, select Dropped Packets.
 
    :::image type="content" source="media/filtering-by-packet-flow-status.png" alt-text="Example of filtering by packet flow status" border="true":::
 
-   To capture only on dropped packets, select Dropped Packets.
+   Afterwards, a summary of all the selected filter conditions are displayed for review. You will be able to retrieve that view after starting the capture through the **Capture Conditions** button.
 
    :::image type="content" source="media/filters-review.png" alt-text="How to capture only dropped packets" border="true":::
-
-Afterwards, a summary of all the selected filter conditions are displayed for review. You will be able to retrieve that view after starting the capture through the **Capture Conditions** button.
 
 ### Capture log
 
