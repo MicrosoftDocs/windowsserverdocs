@@ -5,7 +5,7 @@ description: Frequently asked questions for AD FS
 author: billmath
 ms.author:  billmath
 manager: mtillman
-ms.date: 04/29/2020
+ms.date: 11/02/2020
 ms.topic: article
 ---
 
@@ -82,6 +82,7 @@ Yes, third party proxies can be placed in front of AD FS, but any third party pr
 Below is a list of third party providers we are aware of.  There may always be providers available that we do not know about and we will update the list as we learn about them.
 
 - [F5 Access Policy Manager](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-third-party-integration-13-1-0/12.html#guid-1ee8fbb3-1b33-4982-8bb3-05ae6868d9ee)
+- [Citrix Application Delivery Controller (ADC)](https://docs.citrix.com/en-u/citrix-adc/current-release/aaa-tm/adfs-proxy-wsfed.html)
 
 
 ### Where is the capacity planning sizing spreadsheet for AD FS 2016?
