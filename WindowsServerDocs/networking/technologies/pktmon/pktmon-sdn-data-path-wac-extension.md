@@ -4,14 +4,14 @@ description: Use this topic to automate PacketMon-based packet captures with the
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/2/2020
+ms.date: 11/3/2020
 ---
 
 # SDN Data Path Diagnostics Extension in Windows Admin Center
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-SDN Data Path Diagnostics is a tool within SDN monitoring extension of Windows Admin Center that automates PacketMon-based packet captures according to various SDN scenarios and presents the output in a single view that is easy to follow and manipulate.​
+SDN Data Path Diagnostics is a tool within the SDN monitoring extension of Windows Admin Center that automates Packet Monitor-based packet captures according to various SDN scenarios, and presents the output in a single view that is easy to follow and manipulate.​
 
 ## What is Packet Monitor (Pktmon)?
 Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering, and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack.
@@ -23,12 +23,12 @@ Windows Admin Center is a locally-deployed, browser-based management tool that l
 - To use the tool, the target server needs to be running Windows Server 2019 version 1903 (19H1) and above.
 - [Install Windows Admin Center](/windows-server/manage/windows-admin-center/deploy/install).
 - Add a cluster to Windows Admin Center:
-  1. Click + Add under All Connections.
+  1. Click **+ Add** under **All Connections**.
   2. Choose to add a Hyper-Converged Cluster Connection.
   3. Type the name of the cluster and, if prompted, the credentials to use.
-  4. Check Configure the Network Controller to continue.
-  5. Enter the Network Controller URI and click Validate.
-  6. Click Add to finish.
+  4. Check **Configure the Network Controller** to continue.
+  5. Enter the Network Controller URI and click **Validate**.
+  6. Click **Add** to finish.
 
 The cluster will be added to the connections list. Click it to launch the Dashboard.
 
@@ -40,7 +40,7 @@ The cluster will be added to the connections list. Click it to launch the Dashbo
 
 ## Getting started
 
-To get to the tool, navigate to the Hyper-Converged Cluster that you created in the previous step, then to the "SDN monitoring" extension, then to the "Data Path Diagnostics" tab.
+To get to the tool, navigate to the cluster that you created in the previous step, then to the "SDN monitoring" extension, then to the "Data Path Diagnostics" tab.
 
 ## Selecting scenarios
 
@@ -54,7 +54,7 @@ The first page lists all the SDN scenarios classified as Workload scenarios and 
 
 ## Scenario parameters
 
-After choosing the scenario, fill a list of mandatory and optional parameters to start the capture. These basic parameters will just point the tool to the connection that needs to be diagnosed. The tool then will use these parameters for queries to run a successful capture, without any intervention from the user to figure out the expected packet flow, the machines involved in the scenario, their location in the cluster, or the capture filters to apply on each machine. The mandatory parameters enable the capture to run, and the optional ones help filter out some noise.
+After choosing the scenario, fill out a list of mandatory and optional parameters to start the capture. These basic parameters will point the tool to the connection that needs to be diagnosed. The tool then will use these parameters for queries to run a successful capture, without any intervention from the user to figure out the expected packet flow, the machines involved in the scenario, their location in the cluster, or the capture filters to apply on each machine. The mandatory parameters enable the capture to run, and the optional parameters help filter out some noise.
 
 <center>
 
@@ -64,7 +64,7 @@ After choosing the scenario, fill a list of mandatory and optional parameters to
 
 ## Capture log
 
-After starting the capture, the extension will show a list of the machines where the capture is starting. You might get prompted to sign in these machines if your credentials were not saved. You can start reproducing the ping or issue that you are trying to diagnose capture the relative packets. After packets are captured, the extension will show marks next to the machines where packets were captured.
+After starting the capture, the extension will show a list of the machines where the capture is starting. You might get prompted to sign in to these machines if your credentials were not saved. You can start reproducing the ping or issue that you are trying to diagnose by capturing the relative packets. After packets are captured, the extension will show marks next to the machines where packets were captured.
 
 <center>
 
@@ -72,7 +72,7 @@ After starting the capture, the extension will show a list of the machines where
 
 </center>
 
-After stopping the capture, the logs of all the machines will be shown in a single page, divided by the machine title. Each title will include the machine name, its role in the scenario, and its host in the case of VMs.
+After stopping the capture, the logs of all the machines will be shown in a single page, divided by the machine title. Each title will include the machine name, its role in the scenario, and its host in the case of virtual machines (VMs).
 
 <center>
 
@@ -80,19 +80,19 @@ After stopping the capture, the logs of all the machines will be shown in a sing
 
 </center>
 
-The result is displayed in a table that shows the main parameters of the captured packets: Timestamp, Sources IP Address, Source Port, Destination IP Address, Destination Port, Ethertype, Protocol, TCP Flags, whether the packet was dropped, and the drop reason.
+The results are displayed in a table that shows the main parameters of the captured packets: Timestamp, Sources IP Address, Source Port, Destination IP Address, Destination Port, Ethertype, Protocol, TCP Flags, whether the packet was dropped, and the drop reason.
 
    - The timestamp for each of these packets is also a hyperlink that will redirect you to a different page where you can find more information about the selected packet. See the Details Page section below.
    - All dropped packets have a “True” value in the **Dropped** tab, a drop reason, and is displayed in red text to make it easier to pinpoint.
-   - All the tabs could be sorted ascending and descending.
-   - You can search for a value in any column in the whole log through the search bar
-   - You can restart the capture with same chosen filters using the **Restart** button.
+   - All the tabs can be sorted ascending and descending.
+   - You can search for a value in any column in the log by using the search bar.
+   - You can restart the capture with the same chosen filters using the **Restart** button.
 
 ## Details page
 
-The information in this page is particularly valuable if you have incorrect packet propagation issues or misconfiguration issues. In this page, you will be able to investigate the flow of the packet through each component of the networking stack. For each packet hop, there are details that include the packet parameters and the raw packet.
+The information in this page is particularly valuable if you have incorrect packet propagation issues or misconfiguration issues, because you can investigate the flow of the packet through each component of the networking stack. For each packet hop, there are details that include the packet parameters as well as the raw packet details.
 
-- The hops are grouped together based on the components involved. Each adapter and the drivers on top of it will be grouped by the name of the adapter. This will make it easier to simply track the packet on a high level through these group titles.
+- The hops are grouped together based on the components involved. Each adapter and the drivers on top of it are grouped by the name of the adapter. This makes it easier to track the packet on a high level through these group titles.
 - All dropped packets will also be displayed in red text to make them easier to pinpoint.
 
 <center>
@@ -119,7 +119,7 @@ Scroll down to view raw packet details:
 
 ## Display filters
 
-The display filters allow you to filter your log after capturing the packets. For each filter, you can specify packet parameters like MAC Addresses, IP Addresses, Ports, Ethertype, and Transport Protocol.
+The display filters allow you to filter the log after capturing the packets. For each filter, you can specify packet parameters like MAC Addresses, IP Addresses, Ports, Ethertype, and Transport Protocol.
 
    - Display filters can distinguish between the source and the destination of IP Addresses, MAC Addresses, and Ports.
    - Display filters can be deleted and edited after applying them to change the view of the log.
@@ -133,12 +133,12 @@ The display filters allow you to filter your log after capturing the packets. Fo
 
 ## Save
 
-The save button allows you to save the log on your local machine for further analysis through other tools. Display filters will be reversed in the saved log. Logs can be saved it in various formats:
+The save button allows you to save the log on your local machine for further analysis through other tools. Display filters will be reversed in the saved log. Logs can be saved in various formats:
 
-   - Etl format which can be analyzed using Microsoft Network Monitor. Note: Check this page for more information.
+   - Etl format which can be analyzed using Microsoft Network Monitor. Note: [Check this page](https://osgwiki.com/wiki/PacketMon%27s_Microsoft_Network_Monitor_(Netmon)_Support) for more information.
    - Text format which can be analyzed using any text editor like TextAnalysisTool.NET.
    - Pcapng fomat which can be analyzed using tools like WireShark.
-      - Most of the PacketMon metadata will be lost during this conversion. Note: [Check this page](https://osgwiki.com/wiki/PacketMon%27s_Microsoft_Network_Monitor_(Netmon)_Support) for more information.
+      - Most of the Packet Monitor metadata will be lost during this conversion. Note: [Check this page](https://osgwiki.com/wiki/PacketMon%27s_WireShark_(Pcapng_Format)_Support) for more information.
 
 <center>
 
