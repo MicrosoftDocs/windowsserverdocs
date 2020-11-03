@@ -96,7 +96,7 @@ These tables contain the Windows default setting, the baseline recommendations, 
 | Audit IPsec Extended Mode |  |  |  |
 | Audit IPsec Main Mode |  |  | `IF  \|  IF` |
 | Audit IPsec Quick Mode |  |  |  |
-| Audit Logoff | Yes   No | `Yes  \|  No` | `Yes  \|  No` |
+| Audit Logoff | `Yes  \|  No` | `Yes  \|  No` | `Yes  \|  No` |
 | Audit Logon <sup>1</sup> | `Yes  \|  Yes` | `Yes  \|  Yes` | `Yes  \|  Yes` |
 | Audit Network Policy Server | `Yes  \|  Yes` |  |  |
 | Audit Other Logon/Logoff Events |  |  |  |
