@@ -4,7 +4,7 @@ description: Use this page to understand pktmon syntax, commands, formatting, an
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 10/29/2020
+ms.date: 11/3/2020
 ---
 
 # Pktmon command syntax and formatting
@@ -244,11 +244,11 @@ Example: pktmon start --etw -l real-time
 
 ## Packet analysis and formatting
 
-Packet Monitor generates log files in ETL format. There are multiple ways to format the etl file for analysis:
+Packet Monitor generates log files in ETL format. There are multiple ways to format the ETL file for analysis:
 
 - Convert the log to text format (the default option), and analyze it with text editor tool like TextAnalysisTool.NET. Packet data will be displayed in TCPDump format. Follow the guide below to learn how to analyze the output in the text file.
-- Convert the log to PCAPNG format to analyze it using [Wireshark](https://osgwiki.com/wiki/PacketMon%27s_WireShark_(Pcapng_Format)_Support)*
-- Open the ETL file with [Network Monitor](https://osgwiki.com/wiki/PacketMon%27s_Microsoft_Network_Monitor_(Netmon)_Support)*
+- Convert the log to pcapng format to analyze it using [Wireshark](pktmon-pcapng-support.md)*
+- Open the ETL file with [Network Monitor](pktmon-netmon-support.md)*
 
 >[!NOTE]
 >*Use the hyperlinks above to learn how to parse and analyze Packet Monitor logs in **Wireshark** and **Network Monitor**.

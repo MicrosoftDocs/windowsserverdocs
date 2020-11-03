@@ -1,6 +1,6 @@
 ---
 title: SDN Data Path Diagnostics Extension in Windows Admin Center
-description: Use this topic to automate PacketMon-based packet captures with the SDN Data Path Diagnostics Extension in Windows Admin Center
+description: Use this topic to automate Packet Monitor-based packet captures with the SDN Data Path Diagnostics Extension in Windows Admin Center
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
@@ -135,10 +135,10 @@ The display filters allow you to filter the log after capturing the packets. For
 
 The save button allows you to save the log on your local machine for further analysis through other tools. Display filters will be reversed in the saved log. Logs can be saved in various formats:
 
-   - Etl format which can be analyzed using Microsoft Network Monitor. Note: [Check this page](https://osgwiki.com/wiki/PacketMon%27s_Microsoft_Network_Monitor_(Netmon)_Support) for more information.
+   - ETL format which can be analyzed using Microsoft Network Monitor. Note: [Check this page](pktmon-netmon-support.md) for more information.
    - Text format which can be analyzed using any text editor like TextAnalysisTool.NET.
-   - Pcapng fomat which can be analyzed using tools like WireShark.
-      - Most of the Packet Monitor metadata will be lost during this conversion. Note: [Check this page](https://osgwiki.com/wiki/PacketMon%27s_WireShark_(Pcapng_Format)_Support) for more information.
+   - Pcapng fomat which can be analyzed using tools like Wireshark.
+      - Most of the Packet Monitor metadata will be lost during this conversion. Note: [Check this page](pktmon-pcapng-support.md) for more information.
 
 <center>
 
