@@ -3,7 +3,7 @@ title: OpenSSH key management for Windows
 description: OpenSSH Server key management for Windows using the Windows tools or PowerShell.
 ms.date: 09/09/2020
 ms.topic: conceptual
-contributor: maertendMSFT
+ms.author: damaerte
 author: maertendmsft
 ---
 
@@ -11,9 +11,9 @@ author: maertendmsft
 
 Most authentication in Windows environments is done with a username-password pair.
 This works well for systems that share a common domain.
-When working across domains, such as between on-premise and cloud-hosted systems, it becomes more difficult.
+When working across domains, such as between on-premise and cloud-hosted systems, it becomes vulnerable to brute force intrusions.
 
-By comparison, Linux environments commonly use public-key/private-key pairs to drive authentication.
+By comparison, Linux environments commonly use public-key/private-key pairs to drive authentication which doesn't require the use of guessable passwords.
 OpenSSH includes tools to help support this, specifically:
 
 * __ssh-keygen__ for generating secure keys
@@ -68,6 +68,14 @@ Verify that the newly generated key has the correct information.
 PS C:\ProgramData\ssh> ssh-keygen.exe -l -f .\ssh_host_ecdsa_key
 521 SHA256:Cq+HsQY4B9wobPsQeIf+Lnqd92HJuP4TAw5aYJmQNio username@server (ECDSA)
 ```
+
+By default the ssh-agent service is disabled. Allow it to be manually started for the next step to work.
+
+`Get-Service -Name ssh-agent | Set-Service -StartupType Manual`
+
+Start the ssh-agent service to preserve the server keys.
+
+`Start-Service ssh-agent`
 
 ## User key generation
 

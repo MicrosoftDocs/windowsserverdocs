@@ -3,9 +3,9 @@ title: erase
 description: Reference article for the erase command, which deletes one or more files.
 ms.topic: reference
 ms.assetid: 024a4d0f-8679-4e06-b46f-61fdaf5464bc
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -15,7 +15,6 @@ Deletes one or more files. If you use **erase** to delete a file from your disk,
 
 > [!NOTE]
 > This command is the same as the [del command](del.md).
-
 
 ## Syntax
 

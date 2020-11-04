@@ -3,9 +3,9 @@ title: retain
 description: Reference article for the retain command, which prepares an existing dynamic volume for use as a boot or system volume.
 ms.topic: reference
 ms.assetid: eeab0aef-2ba5-441a-a10d-bbef6f0d7e3e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

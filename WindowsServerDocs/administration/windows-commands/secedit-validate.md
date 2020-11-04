@@ -1,56 +1,48 @@
 ---
-title: secedit:validate
-description: Reference article for **** -
-
-
-
-
+title: secedit validate
+description: Reference article for the secedit validate command, which validates the security settings stored in a security template.
 ms.topic: reference
 ms.assetid: 9fb06354-f55a-4ca4-9fbc-9a872eb9b9cf
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# secedit:validate
+# secedit /validate
 
-
-
-Validates the security settings stored in a security template (.inf file).
+Validates the security settings stored in a security template (.inf file). Validating security templates can help you determine if one is corrupted or inappropriately set. Corrupted or inappropriately set security templates aren't applied.
 
 ## Syntax
 
 ```
-Secedit /validate <configuration file name>
-
+secedit /validate <configuration file name>
 ```
 
-#### Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Configuration file name|Required.</br>Specifies the path and file name for the security template that will be validated.|
-
-## Remarks
-
-Validating security templates can help you if one is corrupted or inappropriately set.
-
-An invalid security template will not be applied.
-
-The log file will not be updated.
-
-In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
+| Parameter | Description |
+|--|--|
+| `<configuration file name>` | Required. Specifies the path and file name for the security template that will be validated. Log files aren't updated by this command. |
 
 ## Examples
 
-After a rollback is performed on a security template, you want to verify that the rollback inf file, secRBKcontoso.inf, is valid.
+To verify that the rollback .inf file, *secRBKcontoso.inf*, is still valid after rollback, type:
+
 ```
-Secedit /validate secRBKcontoso.inf
+secedit /validate secRBKcontoso.inf
 ```
 
 ## Additional References
 
--   [Secedit:generaterollback](secedit-generaterollback.md)
--   [Secedit](secedit.md)
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [secedit /analyze](secedit-analyze.md)
+
+- [secedit /configure](secedit-configure.md)
+
+- [secedit /export](secedit-export.md)
+
+- [secedit /generaterollback](secedit-generaterollback.md)
+
+- [secedit /import](secedit-import.md)

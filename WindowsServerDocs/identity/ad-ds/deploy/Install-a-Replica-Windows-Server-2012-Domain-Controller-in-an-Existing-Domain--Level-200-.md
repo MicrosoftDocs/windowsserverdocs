@@ -2,7 +2,7 @@
 ms.assetid: e6da5984-d99d-4c34-9c11-4a18cd413f06
 title: Install a Replica Windows Server 2012 Domain Controller in an Existing Domain (Level 200)
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

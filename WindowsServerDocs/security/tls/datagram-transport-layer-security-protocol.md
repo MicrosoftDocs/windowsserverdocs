@@ -3,9 +3,9 @@ title: Datagram Transport Layer Security protocol
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 57b8873a-ad9c-4f2c-93e0-a2af352c6965
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 05/16/2018
 ---
 # Datagram Transport Layer Security protocol

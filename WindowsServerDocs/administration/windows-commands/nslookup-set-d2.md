@@ -3,9 +3,9 @@ title: nslookup set d2
 description: Reference article for the nslookup set d2 command, which turns the verbose debugging mode on or off.
 ms.topic: reference
 ms.assetid: 19e8325c-632f-4287-b4cc-10f5d59e4074
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

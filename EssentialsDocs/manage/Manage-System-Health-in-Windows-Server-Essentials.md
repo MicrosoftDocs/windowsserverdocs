@@ -5,8 +5,8 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 3043f83b-389c-4f37-a1ff-85afe99314fa
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Manage System Health in Windows Server Essentials
@@ -216,17 +216,17 @@ manager: dongill
 
 -   License Error: Active Directory Domain Services.
 
--   Your Office 365 subscription has expired.
+-   Your Microsoft 365 subscription has expired.
 
--   Office 365 authentication did not succeed.
+-   Microsoft 365 authentication did not succeed.
 
 -   The password policy is not correct.
 
--   The Password Sync Service cannot synchronize a user password with Office 365.
+-   The Password Sync Service cannot synchronize a user password with Microsoft 365.
 
 -   Change your Windows password.
 
--   Your Office 365 password is not the same as your Windows password.
+-   Your Microsoft 365 password is not the same as your Windows password.
 
 -   Cannot connect to Exchange Server.
 
@@ -359,7 +359,7 @@ manager: dongill
 |The **File History** agent on the server is not properly configured to run on this computer.|File History backups cannot be created.|
 |One or more services are not running.||
 |Change your Windows password.||
-|Your Microsoft Office 365 password is not the same as your Windows password.||
+|Your Microsoft Microsoft 365 password is not the same as your Windows password.||
 
 ###  <a name="BKMK_Protect"></a> To protect your computer
 

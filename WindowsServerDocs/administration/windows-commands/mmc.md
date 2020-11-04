@@ -3,9 +3,9 @@ title: mmc
 description: Reference article for the mmc command, which lets you open a specific mmc console, open mmc in author mode, or specify to open the 32-bit or 64-bit version of mmc.
 ms.topic: reference
 ms.assetid: 7bfa4030-ce42-40fb-922f-2f5145a80872
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

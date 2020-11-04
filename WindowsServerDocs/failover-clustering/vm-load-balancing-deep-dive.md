@@ -2,9 +2,9 @@
 ms.assetid: 5b5bab7a-727b-47ce-8efa-1d37a9639cba
 title: Virtual Machine Load Balancing deep-dive
 ms.topic: article
-author: bhattacharyaz
 manager: eldenc
-ms.author: subhatt
+ms.author: johnmar
+author: JasonGerend
 ms.date: 09/19/2016
 ---
 # Virtual Machine Load Balancing deep-dive

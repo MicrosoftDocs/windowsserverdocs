@@ -3,9 +3,9 @@ title: rpcping
 description: Reference article for the rpcping command, which confirms the RPC connectivity between the computer running Microsoft Exchange Server and any of the supported Microsoft Exchange Client workstations on the network.
 ms.topic: reference
 ms.assetid: 7382aa0d-90fc-47c0-84b3-15f52dd656d0
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

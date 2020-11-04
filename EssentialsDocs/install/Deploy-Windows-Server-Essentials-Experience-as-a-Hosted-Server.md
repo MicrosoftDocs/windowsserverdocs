@@ -5,8 +5,8 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: a455c6b4-b29f-4f76-8c6b-1578b6537717
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Deploy Windows Server Essentials Experience as a Hosted Server
@@ -46,9 +46,9 @@ This document includes information that is specific to hosters who intend to dep
 
 -   **Data storage and protection** You can store the customer „¢s data in a centralized location and protect server and client data by backing up the server and client computers (less than 75) within the network.
 
--   **User management** You can manage the users and groups through the simplified server dashboard. In addition, integration with  Microsoft Azure Active Directory (Azure AD) enables easy data access for Microsoft online services (for example, Office 365, Exchange Online, and SharePoint Online) for users by using their domain credentials.
+-   **User management** You can manage the users and groups through the simplified server dashboard. In addition, integration with  Microsoft Azure Active Directory (Azure AD) enables easy data access for Microsoft online services (for example, Microsoft 365, Exchange Online, and SharePoint Online) for users by using their domain credentials.
 
--   **Service integration** You can integrate the server with Microsoft online services (such as Office 365, SharePoint Online, and  Microsoft Azure Backup). You can also integrate the server with your services or services provided by third-party providers.
+-   **Service integration** You can integrate the server with Microsoft online services (such as Microsoft 365, SharePoint Online, and  Microsoft Azure Backup). You can also integrate the server with your services or services provided by third-party providers.
 
 -   **Anywhere Access** The customer can access the server, network computers, and data from virtually anywhere they have an Internet connection and by using almost any device. Remote Web Access enables them to access applications and data with a streamlined, touch-friendly browser experience. The My Server app enables them to access data from a Windows Phone or a Microsoft Store app.
 
@@ -226,7 +226,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
  This command will add a server folder named MyTestFolder at the specified location.
 
 ##  <a name="BKMK_EmailIntegration"></a> Email integration with Windows Server Essentials
- You can integrate  Windows Server Essentials Experience with Office 365 or hosted Exchange Server. If you want your  customer to use your hosted email, you need to develop an add-in to integrate Windows Server Essentials Experience with your hosted email solution. For more information, see [Windows Server Essentials SDK](/previous-versions/windows/server-essentials/gg513877(v=msdn.10)).
+ You can integrate  Windows Server Essentials Experience with Microsoft 365 or hosted Exchange Server. If you want your  customer to use your hosted email, you need to develop an add-in to integrate Windows Server Essentials Experience with your hosted email solution. For more information, see [Windows Server Essentials SDK](/previous-versions/windows/server-essentials/gg513877(v=msdn.10)).
 
 ##  <a name="BKMK_Monitoring"></a> Monitor and manage by using native tools
  This section discusses the native tools that are available in  Windows Server 2012 R2 to monitor and manage the server.
@@ -327,7 +327,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
 -   (If applicable) Configure and manage Storage Spaces.
 
--   (If applicable) Configure email solution integration (Office 365 and hosted Exchange Server).
+-   (If applicable) Configure email solution integration (Microsoft 365 and hosted Exchange Server).
 
 -   (If applicable) Configure integration with other Microsoft online services.
 

@@ -1,11 +1,9 @@
 ---
 title: Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role
 description: Recommended settings and configuration to minimize overhead for Windows 10 1803) desktops used as VDI images
-ms.reviewer: robsmi
-ms.author: jaimeo, robsmi
+ms.author: robsmi
 ms.topic: article
 author: jaimeo
-manager: dougkim
 ---
 
 # Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role
@@ -594,7 +592,7 @@ This is especially important in environments where the VDI or physical computer 
 
 Note that some settings in this section are *registry-based only* and should be incorporated in the base image before the image is deployed for production use.
 
-The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](/windows-server/administration/performance-tuning/)
+The following settings are documented in the [Windows Server 2016 Performance Tuning Guideline](../../administration/performance-tuning/index.md)
 information, published on Microsoft.com by the Windows Product Group.
 
 #### DisableBandwidthThrottling

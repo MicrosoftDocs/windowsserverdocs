@@ -60,6 +60,7 @@
 ## [Run and tune](rds-run-and-tune.md)
 ### [Manage personal desktop session collections](rds-manage-personal-collection.md)
 ### [Recommended configuration for VDI desktops](rds-vdi-recommendations.md)
+### [Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role](rds-vdi-recommendations-2004.md)
 ### [Optimizing Windows 10, version 1909, for a Virtual Desktop Infrastructure (VDI) role](rds_vdi-recommendations-1909.md)
 ### [Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role](rds-vdi-recommendations-1803.md)
 ### [Manage users in your RDS collection](rds-user-management.md)
@@ -72,6 +73,7 @@
 #### [Get started with the Windows Desktop client](clients/windowsdesktop.md)
 #### [Windows Desktop client for admins](clients/windowsdesktop-admin.md)
 #### [What's new in the Windows Desktop client](clients/windowsdesktop-whatsnew.md)
+#### [Shortcut keys](/windows/win32/termserv/terminal-services-shortcut-keys)
 ### Microsoft Store Client
 #### [Get started with the Microsoft Store Client](clients/windows.md)
 #### [What's new in the Microsoft Store Client](clients/windows-whatsnew.md)
@@ -107,5 +109,6 @@
 #### [Remote Desktop client disconnects and can't reconnect to the same session](troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md)
 #### [Remote laptop disconnects from wireless network](troubleshoot/remote-laptop-disconnects-wireless-network.md)
 #### [Poor performance or application problems during remote desktop connection](troubleshoot/poor-performance-or-application-problems.md)
+#### [Input method editor issue in RemoteApp scenarios](troubleshoot/input-method-editor-error.md)
 
 ## [Additional resources](rds-get-support.md)

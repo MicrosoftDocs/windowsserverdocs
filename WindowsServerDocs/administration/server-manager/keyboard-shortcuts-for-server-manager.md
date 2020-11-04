@@ -3,9 +3,9 @@ title: Keyboard Shortcuts for Server Manager
 description: Server Manager
 ms.topic: article
 ms.assetid: 96a2a8be-cbeb-4799-9034-284ea057915c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Keyboard Shortcuts for Server Manager

@@ -1,7 +1,7 @@
 ---
 ms.assetid: f964d056-11bf-4d9b-b5ab-dceaad8bfbc3
 title: Windows Server 2016 Functional Levels
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/25/2020
@@ -19,7 +19,7 @@ When you deploy AD DS, set the domain and forest functional levels to the highes
 
 With the end of life of Windows Server 2003, 2008, and 2008 R2, these domain controllers (DCs) need to be updated to Windows Server 2012, 2012 R2, 2016, or 2019. As a result, any domain controller that runs Windows Server 2008 R2 and older should be removed from the domain.
 
-At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](https://technet.microsoft.com/library/dd640019(v=WS.10).aspx) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx). Windows Server 2016 RS1 is the last Windows Server release that includes FRS.
+At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](../../storage/dfs-replication/migrate-sysvol-to-dfsr.md) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx). Windows Server 2016 RS1 is the last Windows Server release that includes FRS.
 
 ## Windows Server 2019
 

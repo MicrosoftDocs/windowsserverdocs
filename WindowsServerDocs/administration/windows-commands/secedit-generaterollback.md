@@ -1,58 +1,54 @@
 ---
-title: secedit:generaterollback
-description: Reference article for **** -
-
-
-
-
+title: secedit generaterollback
+description: Reference article for the secedit generaterollback command, which allows you to generate a rollback template for a specified configuration template.
 ms.topic: reference
 ms.assetid: 385a6799-51a7-4fe3-bd73-10c7998b6680
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# secedit:generaterollback
+# secedit /generaterollback
 
+Allows you to generate a rollback template for a specified configuration template. If an existing rollback template exists, running this command again will overwrite the existing information.
 
-
-Allows you to generate a rollback template for a specified configuration template.
+Successfully running this command logs the mismatches between the specified security template the security policy configuration into the scesrv.log file.
 
 ## Syntax
 
 ```
-Secedit /generaterollback /db <database file name> /cfg <configuration file name> /rbk <rollback template file name> [/log <log file name>] [/quiet]
+secedit /generaterollback /db <database file name> /cfg <configuration file name> /rbk <rollback template file name> [/log <log file name>] [/quiet]
 ```
 
-#### Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|db|Required.</br>Specifies the path and file name of a database that contains the stored configuration against which the analysis will be performed.</br>If file name specifies a database that has not had a security template (as represented by the configuration file) associated with it, the `/cfg \<configuration file name>` command-line option must also be specified.|
-|cfg|Required.</br>Specifies the path and file name for the security template that will be imported into the database for analysis.</br>This /cfg option is only valid when used with the `/db \<database file name>` parameter. If this is not specified, the analysis is performed against any configuration already stored in the database.|
-|rbk|Required.</br>Specifies a security template into which the rollback information is written. Security templates are created using the Security Templates snap-in. Rollback files can be created with this command.|
-|log|Optional.</br>Specifies the path and file name of the log file for the process.|
-|quiet|Optional.</br>Suppresses screen and log output. You can still view analysis results by using the Security Configuration and Analysis snap-in to the Microsoft Management Console (MMC).|
-
-## Remarks
-
-If the path for the log file is not provided, the default log file, (*systemroot*\Users \*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>.log) is used.
-
-Beginning with Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
-
-The successful running of this command will state The task has completed successfully. and logs only the mismatches between the stated security template and security policy configuration. It lists these mismatches in the scesrv.log.
-
-If an existing rollback template is specified, this command will overwrite it. You can create a new rollback template with this command. No additional parameters are needed for either condition.
+| Parameter | Description |
+|--|--|
+| /db | Required. Specifies the path and file name of the database containing the stored configuration against which the analysis is performed. If the file name specifies a database that hasn't had a security template (as represented by the configuration file) associated with it, the `/cfg <configuration file name>` option must also be specified. |
+| /cfg | Required. Specifies the path and file name for the security template that will be imported into the database for analysis. This option is only valid when used with the `/db <database file name>` parameter. If this parameter isn't also specified, the analysis is performed against any configuration already stored in the database. |
+| /rbk | Required. Specifies a security template into which the rollback information is written. Security templates are created using the Security Templates snap-in. Rollback files can be created with this command. |
+| /log | Specifies the path and file name of the log file to be used in the process. If you don't specify a file location, the default log file, `<systemroot>\Documents and Settings\<UserAccount>\My Documents\Security\Logs\<databasename>.log` is used. |
+| /quiet | Suppresses screen and log output. You can still view analysis results by using the Security Configuration and Analysis snap-in to the Microsoft Management Console (MMC). |
 
 ## Examples
 
-After creating the security template using the Security Configuration and Analysis snap-in, SecTmplContoso.inf, create the rollback configuration file to save the original settings. Write out the action to the FY11 log file.
+To create the rollback configuration file, for the previously created *SecTmplContoso.inf* file, while saving the original settings, and then write out the action to the *SecAnalysisContosoFY11* log file, type:
+
 ```
-Secedit /generaterollback /db C:\Security\FY11\SecDbContoso.sdb /cfg sectmplcontoso.inf /rbk sectmplcontosoRBK.inf /log C:\Security\FY11\SecAnalysisContosoFY11.log
+secedit /generaterollback /db C:\Security\FY11\SecDbContoso.sdb /cfg sectmplcontoso.inf /rbk sectmplcontosoRBK.inf /log C:\Security\FY11\SecAnalysisContosoFY11.log
 ```
 
 ## Additional References
 
--   [Secedit](secedit.md)
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [secedit /analyze](secedit-analyze.md)
+
+- [secedit /configure](secedit-configure.md)
+
+- [secedit /export](secedit-export.md)
+
+- [secedit /import](secedit-import.md)
+
+- [secedit /validate](secedit-validate.md)

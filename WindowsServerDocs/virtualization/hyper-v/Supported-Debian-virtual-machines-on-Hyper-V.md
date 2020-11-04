@@ -1,11 +1,10 @@
 ---
 title: Supported Debian virtual machines on Hyper-V
 description: Lists the Linux integration services and features included in each version
-manager: dongill
 ms.topic: article
 ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
-author: shirgall
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 04/07/2020
 ---
 # Supported Debian virtual machines on Hyper-V
@@ -72,11 +71,11 @@ The following feature distribution map indicates the features that are present i
    ```Powershell
    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
    ```
-4. The latest upstream kernel capabilities are only available by using the kernel included [Debian backports](https://wiki.debian.org/Backports).
+4. The latest upstream kernel capabilities are only available by using the kernels available in the [Debian Backports repository](https://wiki.debian.org/Backports).
 
 5. While Debian 7.x is out of support and uses an older kernel, the kernel included in Debian backports for Debian 7.x has improved Hyper-V capabilities.
 
-See Also
+## See Also
 
 * [Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

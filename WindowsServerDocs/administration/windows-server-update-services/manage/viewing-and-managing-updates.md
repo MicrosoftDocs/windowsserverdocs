@@ -3,9 +3,9 @@ title: Viewing and Managing Updates
 description: Windows Server Update Service (WSUS) topic - How to view and manage updates in the WSUS console
 ms.topic: article
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Viewing and Managing Updates

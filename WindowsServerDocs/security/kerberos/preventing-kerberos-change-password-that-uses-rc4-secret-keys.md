@@ -2,8 +2,8 @@
 title: Preventing Kerberos change password that use RC4 secret keys
 ms.topic: article
 ms.assetid: de207d55-aa3d-4c16-bd3b-496db43663a4
-manager: alanth
 author: justinha
+ms.author: Justinha
 ms.date: 11/09/2016
 ---
 

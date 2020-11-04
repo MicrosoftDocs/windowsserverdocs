@@ -4,8 +4,8 @@ description: "Describes how to use Windows Server Essentials"
 ms.topic: article
 ms.assetid: 2d0eb084-09dd-4d85-a41a-5d449cc3b504
 author: nnamuhcs
-ms.author: coreyp
-manager: jasgro
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Get started with Windows Server Essentials

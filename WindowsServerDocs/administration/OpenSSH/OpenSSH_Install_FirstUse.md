@@ -3,7 +3,7 @@ title:  Installation of OpenSSH For Windows Server
 description: Installing the OpenSSH client and server for Windows Server using the Windows Settings options or Windows PowerShell.
 ms.date: 09/27/2019
 ms.topic: conceptual
-contributor: maertendMSFT
+ms.author: damaerte
 author: maertendmsft
 ---
 

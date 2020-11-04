@@ -1,6 +1,6 @@
 ---
 title: AD Forest Recovery - Perform initial recovery
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018

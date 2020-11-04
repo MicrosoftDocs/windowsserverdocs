@@ -56,8 +56,8 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /mir | Mirrors a directory tree (equivalent to **/e** plus **/purge**). Using this option with the **/e** option and a destination directory, overwrites the destination directory security settings. |
 | /mov | Moves files, and deletes them from the source after they are copied. |
 | /move | Moves files and directories, and deletes them from the source after they are copied. |
-| /a+:[RASHCNET] | Adds the specified attributes to copied files. |
-| /a-:[RASHCNET] | Removes the specified attributes from copied files. |
+| /a+:[RASHCNET] | Adds the specified attributes to copied files.  The valid values for this option are: <ul><li>**R** - Read only</li><li>**A** - Archive</li><li>**S** - System</li><li>**H** - Hidden</li><li>**C** - Compressed</li><li>**N** - Not content indexed</li><li>**E** - Encrypted</li><li>**T** - Temporary</li></ul> |
+| /a-:[RASHCNET] | Removes the specified attributes from copied files. The valid values for this option are: <ul><li>**R** - Read only</li><li>**A** - Archive</li><li>**S** - System</li><li>**H** - Hidden</li><li>**C** - Compressed</li><li>**N** - Not content indexed</li><li>**E** - Encrypted</li><li>**T** - Temporary</li></ul> |
 | /create | Creates a directory tree and zero-length files only. |
 | /fat | Creates destination files by using 8.3 character-length FAT file names only. |
 | /256 | Turns off support for paths longer than 256 characters. |
@@ -84,8 +84,8 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 |--|--|
 | /a | Copies only files for which the **Archive** attribute is set. |
 | /m | Copies only files for which the **Archive** attribute is set, and resets the **Archive** attribute. |
-| /ia:`[RASHCNETO]` | Includes only files for which any of the specified attributes are set. |
-| /xa:`[RASHCNETO]` | Excludes files for which any of the specified attributes are set. |
+| /ia:`[RASHCNETO]` | Includes only files for which any of the specified attributes are set.  The valid values for this option are: <ul><li>**R** - Read only</li><li>**A** - Archive</li><li>**S** - System</li><li>**H** - Hidden</li><li>**C** - Compressed</li><li>**N** - Not content indexed</li><li>**E** - Encrypted</li><li>**T** - Temporary</li><li>**O** - Offline</li></ul> |
+| /xa:`[RASHCNETO]` | Excludes files for which any of the specified attributes are set. The valid values for this option are: <ul><li>**R** - Read only</li><li>**A** - Archive</li><li>**S** - System</li><li>**H** - Hidden</li><li>**C** - Compressed</li><li>**N** - Not content indexed</li><li>**E** - Encrypted</li><li>**T** - Temporary</li><li>**O** - Offline</li></ul> |
 | /xf `<filename>[ ...]` | Excludes files that match the specified names or paths. Wildcard characters (**&#42;** and **?**) are supported. |
 | /xd `<directory>[ ...]` | Excludes directories that match the specified names and paths. |
 | /xc | Excludes changed files. |

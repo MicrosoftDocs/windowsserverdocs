@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 11/15/2019
+ms.date: 09/02/2020
 ms.localizationpriority: medium
 ---
 # What's new in the web client
@@ -14,6 +14,20 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 > [!NOTE]
 > We've changed the versioning system for the web client. Starting with version 1.0.18.0, all web client release versions will contain numbers (in the format of "W.X.Y.Z"). Release numbers for the Remote Desktop web client will always end with a 0 (for example, W.X.Y.0). Each Windows Virtual Desktop web client release will change the last digit until the next Remote Desktop web client release (for example, 1.0.18.1).
+
+## Updates for 1.0.22.0
+*Date published: 9/2/2020*
+
+> [!IMPORTANT]
+> In version 1.0.22.0, we introduced a regression that impacts some Chromebook operating systems. Users on impacted operating systems won't be able to connect to a remote session using the web client. We're currently investigating this issue and will release a new version of the web client as soon as we fix this regression. In the meantime, you can avoid this problem by reverting to version 1.0.21.0. 
+
+- Users can now move the minimized menu.
+- Improved support for 4K and ultra-wide monitors and fixed an issue where copying large amounts of data caused sessions to crash.
+- Improved support for using an Input Method Editor in the remote session. To learn more about using an Input Method Editor with the web client, check out [Connect to Windows Virtual Desktop with the web client](/azure-docs/articles/virtual-desktop/connect-web.md).
+- Changed the **All Resources** page UI.
+- Fixed several connection sequence failures where web client returned a *General Protocol Error*.
+- Fixed keyboard input issues where specific key sequences were not handled appropriately.
+- Accessibility improvements.
 
 ## Updates for version 1.0.21.0
 *Date published: 11/15/2019*

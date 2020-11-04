@@ -2,7 +2,7 @@
 ms.assetid: 19feca0e-a6d0-4d27-93b0-cb44f8c26484
 title: Delegating Administration of Account OUs and Resource OUs
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

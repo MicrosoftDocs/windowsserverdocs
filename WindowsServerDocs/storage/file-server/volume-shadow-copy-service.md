@@ -26,7 +26,7 @@ VSS coordinates the actions that are required to create a consistent shadow copy
 
   - You are performing disk-to-disk backups.
 
-  - You need a fast recovery from data loss by restoring data to the original LUN or to an entirely new LUN that replaces an original LUN that failed.
+  - You need a fast recovery from data loss by restoring data to the original Logical Unit Number (LUN) or to an entirely new LUN that replaces an original LUN that failed.
 
 
 Windows features and applications that use VSS include the following:
@@ -367,7 +367,7 @@ To exclude specific files from shadow copies, use the following registry key: **
 > <UL>
 > <LI>It cannot delete files from a shadow copy that was created on a Windows Server by using the Previous Versions feature.<BR><BR>
 > <LI>It cannot delete files from shadow copies for shared folders.<BR><BR>
-> <LI>It can delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](../../administration/windows-commands/diskshadow.md)">Diskshadow</a> utility, but it cannot delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](../../administration/windows-commands/vssadmin.md)">Vssadmin</a> utility.<BR><BR>
+> <LI>It can delete files from a shadow copy that was created by using the <a href="/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](../../administration/windows-commands/diskshadow.md)">Diskshadow</a> utility, but it cannot delete files from a shadow copy that was created by using the <a href="/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](../../administration/windows-commands/vssadmin.md)">Vssadmin</a> utility.<BR><BR>
 > <LI>Files are deleted from a shadow copy on a best-effort basis. This means that they are not guaranteed to be deleted.<BR><BR></LI></UL>
 
 

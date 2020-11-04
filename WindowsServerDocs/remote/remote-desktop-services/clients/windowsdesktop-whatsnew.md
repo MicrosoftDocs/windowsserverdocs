@@ -5,39 +5,60 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/25/2020
+ms.date: 10/27/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
 
 You can find more detailed information about the Windows Desktop client at [Get started with the Windows Desktop client](windowsdesktop.md). You'll find the latest updates to client in this article.
 
-## Latest client versions
+## Supported client versions
 
 The client can be configured for different [user groups](windowsdesktop-admin.md#configure-user-groups). The following table lists the current versions available for each user group:
 
-|User group |Version  |
-|-----------|---------|
-|Public     |1.2.1272 |
-|Insider    |1.2.1272 |
+|User group |Latest version  |Minimum supported version |
+|-----------|----------------|--------------------------|
+|Public     |1.2.1446        |1.2.945                   |
+|Insider    |1.2.1446        |1.2.945                   |
 
-## Updates for version 1.2.1272
+## Updates for version 1.2.1446
+
+*Date published: 10/27/2020*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Added the auto-update feature, which allows the client to install the latest updates automatically.
+- The client now distinguishes between different feeds in the Connection Center.
+- Fixed an issue where the subscription account doesn't match the account the user signed in with.
+- Fixed an issue where some users couldn't access remote apps through a downloaded file.
+- Fixed an issue with Smartcard redirection.
+
+## Updates for version 1.2.1364
+
+*Date published: 09/22/2020*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMK), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4G1t9), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMI)
+
+- Fixed an issue where single sign-on (SSO) didn't work on Windows 7.
+- Fixed the connection failure that happened when calling or joining a Teams call while another app has an audio stream opened in exclusive mode and when media optimization for Teams is enabled.
+- Fixed a failure to enumerate audio or video devices in Teams when media optimization for Teams is enabled.
+- Added a "Need help with settings?" link to the desktop settings page.
+- Fixed an issue with the "Subscribe" button that happened when using high-contrast dark themes.
+
+## Updates for version 1.2.1275
 
 *Date published: 08/25/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D7LK), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4D5aF), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Dan3)
 
 - Added functionality to auto-detect sovereign clouds from the user’s identity.
 - Added functionality to enable custom URL subscriptions for all users.
 - Fixed an issue with app pinning on the feed taskbar.
 - Fixed a crash when subscribing with URL.
 - Improved experience when dragging remote app windows with touch or pen.
+- Fixed an issue with localization.
 
 ## Updates for version 1.2.1186
 
 *Date published: 07/28/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qy), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Ciex), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qx)
 
 - You can now be subscribed to Workspaces with multiple user accounts, using the overflow menu (**...**) option on the command bar at the top of the client. To differentiate Workspaces, the Workspace titles now include the username, as do all app shortcuts titles.
 - Added additional information to subscription error messages to improve troubleshooting.
@@ -48,8 +69,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.1104
 
 *Date published: 06/23/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHS), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zrAd), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHR)
 
 - Updated the automatic discovery logic for the **Subscribe** option to support the Azure Resource Manager-integrated version of Windows Virtual Desktop. Customers with only Windows Virtual Desktop resources should no longer need to provide consent for Windows Virtual Desktop (classic).
 - Improved support for high-DPI devices with scale factor up to 400%.
@@ -62,8 +81,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 *Date published: 05/27/2020*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xsGB), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xd8P), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4xq7m)
-
 - When subscribing, you can now choose your account instead of typing your email address.
 - Added a new **Subscribe with URL** option that allows you to specify the URL of the Workspace you are subscribing to or leverage [email discovery](../rds-email-discovery.md) when available in cases where we can't automatically find your resources. This is similar to the subscription process in the other Remote Desktop clients. This can be used to subscribe directly to Windows Virtual Desktop workspaces.
 - Added support to subscribe to a Workspace using a new [URI scheme](remote-desktop-uri.md) that can be sent in an email to users or added to a support website.
@@ -72,7 +89,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 - The Unsubscribe prompt now displays a warning icon and shows the workspace names as a bulleted list.
 - Added the details section to additional error dialogs to help diagnose issues.
 - Added a timestamp to the details section of error dialogs.
-- Fixed an issue where the RDP file setting **desktop size id** didn't work properly.
+- Fixed an issue where the RDP file setting **desktop size ID** didn't work properly.
 - Fixed an issue where the **Update the resolution on resize** display setting didn't apply after launching the session.
 - Fixed localization issues in the desktop settings panel.
 - Fixed the size of the focus box when tabbing through controls on the desktop settings panel.
@@ -82,8 +99,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.945
 
 *Date published: 04/28/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vhNM), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vhNO), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4vuSV)
 
 - Added new display settings options for desktop connections available when right-clicking a desktop icon on the Connection Center.
   - There are now three display configuration options: **All displays**, **Single display** and **Select displays**.

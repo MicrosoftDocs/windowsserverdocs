@@ -5,8 +5,8 @@ ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Hosted Windows Server Essentials
@@ -24,7 +24,7 @@ This document includes information that is specific to hosters who intend to dep
 
  **Anywhere Access:** Remote Web Access provides a streamlined, touch-friendly browser experience for accessing applications and data from virtually anywhere you have an Internet connection and using almost any device. Windows Server Essentials also provides an updated Windows Phone app and a new app for Windows 8.1 client computers, allowing users to intuitively connect to, search across, and access files and folders on the server. Files are also automatically cached for offline access and synchronized when a connection to the server becomes available. Windows Server Essentials turns setting up virtual private networking (VPN) into a painless, wizard-driven process of just a few clicks, and simplifies the management of VPN access for users. Client computers can leverage a VPN connection to remotely join the Windows SBS environment without the need to commute to the office.
 
- **Workload Flexibility:** Windows Server Essentials has been designed to allow customers the flexibility to choose which applications and services run on premises and which run in the cloud. In previous versions, Windows Small Business Server Standard included Exchange Server as a component product, which added expense and complexity for customers who wished to leverage cloud-based messaging and collaboration services. With Windows Server Essentials, customers can take advantage of the same type of integrated management experience whether they choose to run an on-premises copy of Exchange Server, subscribe to a hosted Exchange service, or subscribe to Microsoft Office 365.
+ **Workload Flexibility:** Windows Server Essentials has been designed to allow customers the flexibility to choose which applications and services run on premises and which run in the cloud. In previous versions, Windows Small Business Server Standard included Exchange Server as a component product, which added expense and complexity for customers who wished to leverage cloud-based messaging and collaboration services. With Windows Server Essentials, customers can take advantage of the same type of integrated management experience whether they choose to run an on-premises copy of Exchange Server, subscribe to a hosted Exchange service, or subscribe to Microsoft 365.
 
  **Health Monitoring:** Windows Server Essentials monitors its own health status and the status of client computers running Windows 8.1, Windows 7, and Mac OS X version 10.5 and later. Health status notifies you of issues or problems related to computer backups, server storage, low disk space, and more.
 
@@ -246,7 +246,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
  Because Windows Server Essentials is a domain controller, you can join a second server to the domain in the standard fashion.
 
 ## Which email solutions can be integrated?
- Windows Server Essentials supports integration with two email solutions out of the box: Office 365 and on-premises Exchange. If you are running your own hosted email solution, you will need to develop an add-in to integrate Windows Server Essentials with your hosted email solution.
+ Windows Server Essentials supports integration with two email solutions out of the box: Microsoft 365 and on-premises Exchange. If you are running your own hosted email solution, you will need to develop an add-in to integrate Windows Server Essentials with your hosted email solution.
 
 ## How do I migrate on-premises Windows SBS (2011/2008/2003) to the hosted Windows Server Essentials?
  Migration guides are available for on-premises Windows Small Business Server (Windows SBS) to Windows Server Essentials migrations. Some of the steps may not apply exactly the same to your hosted environment. However, the general tasks and the workloads to be migrated should be the same. We recommend that you refer to the [migration guides](https://go.microsoft.com/fwlink/p/?LinkID=254292) and make necessary customizations based on your hosting environment.
@@ -358,7 +358,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 
 - (If applicable) Configure and manage Storage Spaces.
 
-- (If applicable) Configure email solution integration (Office 365, hosted Exchange, and so on).
+- (If applicable) Configure email solution integration (Microsoft 365, hosted Exchange, and so on).
 
 - (If applicable) Configure Media Server.
 

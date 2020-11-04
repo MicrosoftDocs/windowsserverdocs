@@ -1,11 +1,10 @@
 ---
 title: What's new in Hyper-V on Windows Server 2016
 description: Gives a summary of the new features in Hyper-V
-manager: dongill
 ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 09/21/2017
 ---
 # What's new in Hyper-V on Windows Server
@@ -157,7 +156,7 @@ After you update the cluster functional level:
 
 -   You can enable new Hyper-V features.
 
--   To make new virtual machine features available, use the Update-VmConfigurationVersion cmdlet to manually update the virtual machine configuration level. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
+-   To make new virtual machine features available, use the `Update-vmVersion` cmdlet to manually update the virtual machine configuration level. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
 -   You can't add a node to the Hyper-V Cluster that runs Windows Server 2012 R2.
 
 > [!NOTE]

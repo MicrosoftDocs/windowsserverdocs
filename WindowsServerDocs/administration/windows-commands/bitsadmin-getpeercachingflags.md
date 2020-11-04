@@ -3,9 +3,9 @@ title: bitsadmin getpeercachingflags
 description: Reference article for the bitsadmin getpeercachingflags command, which retrieves flags that determine if the files of the job can be cached and served to peers, and if BITS can download content for the job from peers.
 ms.topic: reference
 ms.assetid: 3c3c9f28-4c04-4c49-a23a-dee5bbcc8981
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # bitsadmin getpeercachingflags
