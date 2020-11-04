@@ -1,7 +1,7 @@
 ---
 title: OpenSSH key management for Windows
 description: OpenSSH Server key management for Windows using the Windows tools or PowerShell.
-ms.date: 09/09/2020
+ms.date: 11/04/2020
 ms.topic: conceptual
 ms.author: damaerte
 author: maertendmsft
