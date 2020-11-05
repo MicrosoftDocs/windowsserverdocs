@@ -4,7 +4,7 @@ description: Use this page to analyze Packet Monitor-generated ETL files within 
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/3/2020
+ms.date: 11/5/2020
 ---
 
 # Pktmon support for Microsoft Network Monitor (Netmon)
@@ -27,7 +27,7 @@ Follow these steps to install and configure Netmon to parse Packet Monitor-gener
 
 ## Generate Network Monitor parser from ETW manifest
 
-   1. Use ETLConvertor.exe from here on your ETW manifest file.
+   1. Use ETLConvertor.exe from [here](https://github.com/microsoft/ETLConverter) on your ETW manifest file.
    1. Follow instructions in README.md
    1. Replace BLOB data types in generated NPL file. Use [DataFieldByteOrder = BigEndian] field specification where necessary.
    1. Copy generated NPLs to "%PROGRAMDATA%\Microsoft\Network Monitor 3\NPL\NetworkMonitor Parsers\Windows"

@@ -4,7 +4,7 @@ description: This topic provides an overview of the Packet Monitor (Pktmon) netw
 ms.topic: overview
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/3/2020
+ms.date: 11/5/2020
 ---
 
 # Packet Monitor \(Pktmon\)
@@ -70,23 +70,23 @@ Below are some of Packet Monitor's most significant limitations.
 
 The following resources are available to help you get started using Packet Monitor.
 
-### Pktmon command syntax and formatting
+### [Pktmon command syntax and formatting](pktmon-syntax.md)
 
 Packet Monitor is available in-box via pktmon.exe command on Vibranium OS (build 19041). You can [use this topic](pktmon-syntax.md) to learn how to understand pktmon syntax, commands, formatting, and output.
 
-### Pktmon extension in Windows Admin Center
+### [Packet Monitoring Extension in Windows Admin Center](pktmon-wac-extension.md)
 
 The Packet Monitoring extension allows you to operate and consume Packet Monitor through Windows Admin Center. The extension helps you diagnose your network by capturing and displaying network traffic through the networking stack in a log that is easy to follow and manipulate. You can [use this topic](pktmon-wac-extension.md) to learn how to operate the tool and understand its output.
 
-### SDN data path diagnostics extension in Windows Admin Center
+### [SDN Data Path Diagnostics extension in Windows Admin Center](pktmon-sdn-data-path-wac-extension.md)
 
 SDN Data Path Diagnostics is a tool within the SDN monitoring extension of Windows Admin Center. The tool automates Packet Monitor-based packet captures according to various SDN scenarios, and presents the output in a single view that is easy to follow and manipulate. You can [use this topic](pktmon-sdn-data-path-wac-extension.md) to learn how to operate the tool and understand its output.
 
-### Microsoft Network Monitor (Netmon) support
+### [Microsoft Network Monitor (Netmon) support](pktmon-netmon-support.md)
 
 Packet Monitor generates logs in ETL format. These logs can be analyzed using Microsoft Network Monitor (Netmon) by using special parsers. [This topic](pktmon-netmon-support.md) explains how to analyze Packet Monitor-generated ETL files within Netmon.
 
-### Wireshark (pcapng format) support
+### [Wireshark (pcapng format) support](pktmon-pcapng-support.md)
 
 Packet Monitor can convert logs to pcapng format. These logs can be analyzed using Wireshark (or any pcapng analyzer). [This topic](pktmon-pcapng-support.md) explains the expected output and how to take advantage of it.
 

@@ -1,17 +1,17 @@
 ---
-title: Pktmon Windows Admin Center Extension
+title: Packet Monitoring Extension in Windows Admin Center
 description: Use this page to operate and consume Packet Monitor (Pktmon) through Windows Admin Center.
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/3/2020
+ms.date: 11/5/2020
 ---
 
-# Pktmon Windows Admin Center Extension
+# Packet Monitoring Extension in Windows Admin Center
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-The Packet monitoring extension allows you to operate and consume Packet Monitor through Windows Admin Center. The extension helps you diagnose your network by capturing and displaying network traffic through the networking stack in a log that is easy to follow and manipulate.
+The Packet Monitoring extension allows you to operate and consume Packet Monitor through Windows Admin Center. The extension helps you diagnose your network by capturing and displaying network traffic through the networking stack in a log that is easy to follow and manipulate.
 
 ## What is Packet Monitor (Pktmon)?
 Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack.
