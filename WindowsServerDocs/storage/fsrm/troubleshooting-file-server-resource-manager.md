@@ -2,8 +2,6 @@
 title: Troubleshooting File Server Resource Manager
 description: This article describes how to troubleshoot common issues when using file server resource manager
 ms.date: 7/7/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -44,7 +42,7 @@ This section lists common issues that you might encounter when using File Server
     -   The auditing database is not configured to record file screening activity.
     -   The auditing database is empty (that is, no file screening activity has been recorded).
     -   The parameters for the File Screening Audit report are not selecting data from the auditing database.
-    
+
 -   **Solution**: On the **File Screen Audit** tab, in the **File Server Resource Manager Options** dialog box, verify that the **Record file screening activity in the auditing database** check box is selected.
     -   For more information about recording file screening activity, see [Configure File Screen Audit](configure-file-screen-audit.md).
     -   To configure default parameters for the File Screening Audit report, see [Configure Storage Reports](configure-storage-reports.md).

@@ -1,14 +1,8 @@
 ---
 title: Manage a personal desktop session collection in RDS
 description: Learn how to add and RDSH and RemoteApp programs to your RDS deployment.
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 11/08/2016
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
@@ -23,7 +17,7 @@ Use the **Set-RDPersonalSessionDesktopAssignment** cmdlet to manually assign a u
 
 -CollectionName \<string\>
 
--ConnectionBroker \<string\> 
+-ConnectionBroker \<string\>
 
 -User \<string\>
 
@@ -43,7 +37,7 @@ The **Import-RDPersonalSessionDesktopAssignment** cmdlet imports associations be
 -Path \<string>
 
 **–Path** specifies the path and file name of a file to import.
- 
+
 ## Removing a User Assignment from a Personal Session Host
 Use the **Remove-RDPersonalSessionDesktopAssignment** cmdlet to remove the association between a personal session desktop and a user. The cmdlet supports the following parameters:
 
@@ -70,7 +64,7 @@ Use the **Get-RDPersonalSessionDesktopAssignment** cmdlet to get a list of perso
 
 -Name \<string\>
 
-You can run the cmdlet to query by collection name, user name, or by session desktop name. If you specify only the **–CollectionName** parameter, the cmdlet returns a list of session hosts and associated users. If you also specify the **–User** parameter, the session host associated with that user is returned. If you provide the **–Name** parameter, the user associated with that session host is returned. 
+You can run the cmdlet to query by collection name, user name, or by session desktop name. If you specify only the **–CollectionName** parameter, the cmdlet returns a list of session hosts and associated users. If you also specify the **–User** parameter, the session host associated with that user is returned. If you provide the **–Name** parameter, the user associated with that session host is returned.
 
 
 The **Export-RDPersonalPersonalDesktopAssignment** cmdlet exports the current associations between users and personal virtual desktops to a text file. The cmdlet supports the following parameters:

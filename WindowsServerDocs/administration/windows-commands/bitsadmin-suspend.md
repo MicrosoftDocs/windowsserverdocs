@@ -1,50 +1,44 @@
 ---
 title: bitsadmin suspend
-description: "Windows Commands topic for **bitsadmin suspend** - 
-Suspends the specified job."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin suspend command, which suspends the specified job.
+ms.topic: reference
 ms.assetid: f9d42500-7bea-4aa8-a9f0-c22f6ed3e73b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # bitsadmin suspend
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Suspends the specified job.
+Suspends the specified job. If you suspended your job by mistake, you can use the [bitsadmin resume](bitsadmin-resume.md) switch to restart the job.
 
 ## Syntax
 
 ```
-bitsadmin /Suspend <Job>
+bitsadmin /suspend <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|-------|--------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| --------- | ---------- |
+| job | The job's display name or GUID. |
 
-## Remarks
+## Example
 
-To restart the job, use the [bitsadmin resume](bitsadmin-resume.md) switch.
+To suspend the job named *myDownloadJob*:
 
-## <a name="BKMK_examples"></a>Examples
-
-The following example suspends the job named *myDownloadJob*.
 
 ```
-C:\>bitsadmin /Suspend myDownloadJob
+bitsadmin /suspend myDownloadJob
 ```
 
-#### additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin resume command](bitsadmin-resume.md)
+
+- [bitsadmin command](bitsadmin.md)

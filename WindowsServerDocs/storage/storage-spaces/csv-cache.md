@@ -1,16 +1,15 @@
 ---
 title: Storage Spaces Direct in-memory read cache
-ms.prod: windows-server
 ms.author: eldenc
-ms.manager: siroy
-ms.technology: storage-spaces
+manager: siroy
 ms.topic: article
 author: eldenchristensen
-ms.date: 02/20/2019
+ms.date: 09/21/2020
 ms.localizationpriority: medium
 ---
 # Using Storage Spaces Direct with the CSV in-memory read cache
-> Applies To: Windows Server 2016, Windows Server 2019
+
+> Applies To: Windows Server 2019, Windows Server 2016
 
 This topic describes how to use system memory to boost the performance of [Storage Spaces Direct](storage-spaces-direct-overview.md).
 
@@ -28,16 +27,18 @@ You can use up to 80% of total physical memory for the CSV in-memory read cache.
   > For hyper-converged deployments, where compute and storage run on the same servers, be careful to leave enough memory for your virtual machines. For converged Scale-Out File Server (SoFS) deployments, with less contention for memory, this doesn't apply.
 
   > [!NOTE]
-  > Certain microbenchmarking tools like DISKSPD and [VM Fleet](https://github.com/Microsoft/diskspd/tree/master/Frameworks/VMFleet) may produce worse results with the CSV in-memory read cache enabled than without it. By default VM Fleet creates one 10 GiB VHDX per virtual machine – approximately 1 TiB total for 100 VMs – and then performs *uniformly random* reads and writes to them. Unlike real workloads, the reads don't follow any predictable or repetitive pattern, so the in-memory cache is not effective and just incurs overhead.
+  > Certain microbenchmarking tools like DISKSPD and [VM Fleet](https://github.com/Microsoft/diskspd/tree/master/Frameworks/VMFleet) may produce worse results with the CSV in-memory read cache enabled than without it. By default VM Fleet creates one 10 gibibyte (GiB) VHDX per virtual machine – approximately 1 TiB total for 100 VMs – and then performs *uniformly random* reads and writes to them. Unlike real workloads, the reads don't follow any predictable or repetitive pattern, so the in-memory cache is not effective and just incurs overhead.
 
 ## Configuring the in-memory read cache
 
-The CSV in-memory read cache is available in both Windows Server 2016 and Windows Server 2019 with the same functionality. In Windows Server 2016, it's off by default. In Windows Server 2019, it's on by default with 1 GB allocated.
+The CSV in-memory read cache is available in Windows Server 2019 and Windows Server 2016 with the same functionality. In Windows Server 2019, it's on by default with 1 GiB allocated. In Windows Server 2016, it's off by default.
 
-| OS version          | Default CSV cache size |
-|---------------------|------------------------|
-| Windows Server 2016 | 0 (disabled)           |
-| Windows Server 2019 | 1 GiB                   |
+| OS version             | Default CSV cache size           |
+|------------------------|----------------------------------|
+| Windows Server 2019    | 1 GiB                            |
+| Windows Server 2016    | 0 (disabled)                     |
+| Windows Server 2012 R2 | enabled - user must specify size |
+| Windows Server 2012    | 0 (disabled)                     |
 
 To see how much memory is allocated using PowerShell, run:
 
@@ -63,6 +64,6 @@ Get-ClusterSharedVolume | ForEach {
 }
 ```
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)

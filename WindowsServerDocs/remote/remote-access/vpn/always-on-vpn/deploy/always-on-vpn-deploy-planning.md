@@ -1,13 +1,11 @@
 ---
 title: Plan the Always On VPN Deployment
 description: This topic provides planning instructions for deploying Always On VPN in Windows Server 2016.
-ms.prod: windows-server
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 3c9de3ec-4bbd-4db0-b47a-03507a315383
-ms.localizationpriority: medium 
-ms.author: lizross
-author: eross-msft
+ms.localizationpriority: medium
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.date: 11/05/2018
 ---
 # Step 1. Plan the Always On VPN deployment
@@ -39,11 +37,11 @@ You must do the following on the computer used as a VPN server:
 IKEv2 is a VPN tunneling protocol described in [Internet Engineering Task Force Request for Comments 7296](https://datatracker.ietf.org/doc/rfc7296/). The primary advantage of IKEv2 is that it tolerates interruptions in the underlying network connection. For example, if a temporary loss in connection or if a user moves a client computer from one network to another, when reestablishing the network connection IKEv2 restores the VPN connection automatically — without user intervention.
 
 >[!TIP]
->You can configure the Remote Access VPN server to support IKEv2 connections while also disabling unused protocols, which reduces the server's security footprint. 
+>You can configure the Remote Access VPN server to support IKEv2 connections while also disabling unused protocols, which reduces the server's security footprint.
 
 ## Plan IP Addresses for Remote Clients
 
-You can configure the VPN server to assign addresses to VPN clients from a static address pool that you configure or IP addresses from a DHCP server. 
+You can configure the VPN server to assign addresses to VPN clients from a static address pool that you configure or IP addresses from a DHCP server.
 
 ## Prepare the Environment
 
@@ -51,11 +49,11 @@ You can configure the VPN server to assign addresses to VPN clients from a stati
 
 - **Choose a range of static IP addresses for VPN clients**. Determine the maximum number of simultaneous VPN clients that you want to support. Also, plan a range of static IP addresses on the internal perimeter network to meet that requirement, namely the *static address pool*. If you use DHCP to supply IP addresses on the internal DMZ, you might also need to create an exclusion for those static IP addresses in DHCP.
 
-- **Make sure that you can edit your public DNS zone**. Add DNS records to your public DNS domain to support the VPN infrastructure. 
+- **Make sure that you can edit your public DNS zone**. Add DNS records to your public DNS domain to support the VPN infrastructure.
 
 - **Make sure that all VPN users have user accounts in Active Directory User (AD DS)**. Before users can connect to the network with VPN connections, they must have user accounts in AD DS.
 
-## Prepare Routing and Firewall 
+## Prepare Routing and Firewall
 
 Install the VPN server inside the perimeter network, which partitions the perimeter network into internal and external perimeter networks. Depending on your network environment, you might need to make several routing modifications.
 

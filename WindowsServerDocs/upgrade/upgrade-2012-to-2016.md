@@ -1,8 +1,6 @@
 ---
 title: Upgrade Windows Server 2012 to Windows Server 2016 | Microsoft Docs
-description: Learn how to perform an in-place upgrade to go from Windows Server 2012 to Windows Server 2016. 
-ms.prod: windows server
-ms.technology: server-general
+description: Learn how to perform an in-place upgrade to go from Windows Server 2012 to Windows Server 2016.
 ms.topic: upgrade
 author: RobHindman
 ms.author: robhind
@@ -101,4 +99,4 @@ You can perform one more upgrade to go from Windows Server 2016 to Windows Serve
 
 ## Related articles
 
-- For more details and information about Windows Server 2016, see [Get Started with Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics).
+- For more details and information about Windows Server 2016, see [Get Started with Windows Server 2016](../get-started/server-basics.md).

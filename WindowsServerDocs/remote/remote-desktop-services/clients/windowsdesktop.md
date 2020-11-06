@@ -1,17 +1,11 @@
 ---
 title: Get started with the Windows Desktop client
 description: Basic information about the Windows Desktop client.
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/04/2020
+ms.date: 09/05/2020
 ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
@@ -45,23 +39,37 @@ You can also manually search for new updates for the client:
 
 1. From the Connection Center, tap the overflow menu (**...**) on the command bar at the top of the client.
 2. Select **About** from the drop-down menu.
-3. Tap **Check for updates**.
+3. The client automatically searches for updates.
 4. If there's an update available, tap **Install update** to update the client.
 
-## Feeds
+## Workspaces
 
-Get the list of managed resources you can access, such as apps and desktops, by subscribing to the feed your admin provided you. When you subscribe, the resources become available on your local PC. The Windows Desktop client currently supports resources published from Windows Virtual Desktop.
+Get the list of managed resources you can access, such as apps and desktops, by subscribing to the Workspace your admin provided you. When you subscribe, the resources become available on your local PC. The Windows Desktop client currently supports resources published from Windows Virtual Desktop.
 
-### Subscribe to a feed
+### Subscribe to a Workspace
 
-1. From the main page of the client, also known as the Connection Center, tap **Subscribe**.
-2. Sign in with your user account when prompted.
-3. The resources will appear in the Connection Center grouped by Workspace.
-
-You can launch resources with one of the following methods:
+There are two ways you can subscribe to a Workspace. The client can try to discover the resources available to you from your work or school account or you can directly specify the URL where your resources are for cases where the client is unable to find them. Once you've subscribed to a Workspace, you can launch resources with one of the following methods:
 
 - Go to the Connection Center and double-click a resource to launch it.
 - You can also go to the Start menu and look for a folder with the Workspace name or enter the resource name in the search bar.
+
+#### Subscribe with a user account
+
+1. From the main page of the client, tap **Subscribe**.
+2. Sign in with your user account when prompted.
+3. The resources will appear in the Connection Center grouped by Workspace.
+
+#### Subscribe with URL
+
+1. From the main page of the client, tap **Subscribe with URL**.
+2. Enter the Workspace URL or your email address:
+   - If you use the **Workspace URL**, use the one your admin gave you. If accessing resources from Windows Virtual Desktop, you can use one of the following URLs:
+     - Windows Virtual Desktop (classic): `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`
+     - Windows Virtual Desktop: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`
+   - To use **email**, enter your email address. This tells the client to search for a URL associated with your email address if your admin has setup [email discovery](../rds-email-discovery.md).
+3. Tap **Next**.
+4. Sign in with your user account when prompted.
+5. The resources will appear in the Connection Center grouped by Workspace.
 
 ### Workspace details
 
@@ -70,8 +78,8 @@ After subscribing, you can view additional information about a Workspace on the 
 - The name of the Workspace
 - The URL and username used to subscribe
 - The number of apps and desktops
-- The date/time of the last update
-- The status of the last update
+- The date/time of the last refresh
+- The status of the last refresh
 
 Accessing the Details panel:
 
@@ -79,13 +87,17 @@ Accessing the Details panel:
 2. Select **Details** from the drop-down menu.
 3. The Details panel appears on the right side of the client.
 
-After you've subscribed, the Workspace will update automatically on a regular basis. Resources may be added, changed, or removed based on changes made by your admin.
+After you've subscribed, the Workspace will refresh automatically on a regular basis. Resources may be added, changed, or removed based on changes made by your admin.
 
-You can also manually look for updates to the resources when needed by selecting **Update now** from the Details panel.
+You can also manually look for updates to the resources when needed by selecting **Refresh** from the Details panel.
 
-### Unsubscribe from a feed
+### Refreshing a Workspace
 
-This section will teach you how to unsubscribe from a feed. You can unsubscribe to either subscribe again with a different account or remove your resources from the system.
+You can manually refresh a Workspace by selecting **Refresh** from the overflow menu (**...**) next to the Workspace.
+
+### Unsubscribe from a Workspace
+
+This section will teach you how to unsubscribe from a Workspace. You can unsubscribe to either subscribe again with a different account or remove your resources from the system.
 
 1. From the Connection Center, tap the overflow menu (**...**) next to the Workspace.
 2. Select **Unsubscribe** from the drop-down menu.
@@ -101,26 +113,30 @@ You can configure some of the settings for desktop resources to ensure the exper
 
 The client will use the settings configured by your admin unless you turn off the **Use default settings** option. Doing so allows you to configure the following options:
 
-- **Use multiple displays** switches the desktop session between using a single or multiple displays.
-- **Select the displays to use for the session** specifies which local displays to use for the session. All selected displays must be adjacent to each other. This setting is automatically disabled when you use a single display.
-- **Start in full screen** determines whether the session will launch in full-screen or windowed mode. This setting is automatically enabled when you use multiple displays.
-- **Update the resolution on resize** makes the Remote Desktop resolution automatically update when you resize the session in windowed mode. When disabled, the session always remains at whichever resolution you specify in **Resolution**. This setting is automatically enabled when you use multiple displays.
-- **Resolution** lets you specify the resolution of the remote desktop. The session will retain this resolution for its entire duration. This setting is automatically disabled if the resolution is set to update on resize.
-- **Change the size of the text and apps** specifies the size of the content of the session. This setting only applies when connecting to Windows 8.1 and later or Windows Server 2012 R2 and later. This setting is automatically disabled if the resolution is set to update on resize.
-- **Fit session to window** determines how the session is displayed when the resolution of the remote desktop differs from the size of the local window. When enabled, the session content will be resized to fit inside the window while preserving the aspect ratio of the session. When disabled, scrollbars or black areas will be shown when the resolution and window size don't match.
+- **Display configuration** selects which displays to use for the desktop session and impacts which additional settings are available.
+  - **All displays** ensures the session always uses all your local displays even when some of them are added or removed later.
+  - **Single display** ensures the session always uses a single display and allows you to configure its properties.
+  - **Select displays** allows you to choose which displays to use for the session and provides an option to dynamically change the list of displays during the session.
+- **Select the displays to use for the session** specifies which local displays to use for the session. All selected displays must be adjacent to each other. This setting is only available in **Select display** mode.
+- **Maximize to current displays** determines which displays the sessions will use when going full screen. When enabled, the session goes full screen on the displays touched by the session window. This allows you to change displays during the session. When disabled, the session goes full screen on the same displays it was on the last time it was full screen. This setting is only available in **Select display** mode and is disabled otherwise.
+- **Single display when windowed** determines which displays are available in the session when exiting full screen. When enabled, the session switches to a single display in windowed mode. When disabled, the session retains the same displays in windowed mode as in full screen. This setting is only available in **All displays** and **Select display** modes and is disabled otherwise.
+- **Start in full screen** determines whether the session will launch in full-screen or windowed mode. This setting is only available in **Single display** mode and is enabled otherwise.
+- **Fit session to window** determines how the session is displayed when the resolution of the remote desktop differs from the size of the local window. When enabled, the session content will be resized to fit inside the window while preserving the aspect ratio of the session. When disabled, scrollbars or black areas will be shown when the resolution and window size don't match. This setting is available in all modes.
+- **Update the resolution on resize** makes the remote desktop resolution automatically update when you resize the session in windowed mode. When disabled, the session always remains at whichever resolution you specify in **Resolution**. This setting is only available in **Single display** mode and is enabled otherwise.
+- **Resolution** lets you specify the resolution of the remote desktop. The session will retain this resolution for its entire duration. This setting is only available in **Single display** mode and when **Update the resolution on resize** is disabled.
+- **Change the size of the text and apps** specifies the size of the content of the session. This setting only applies when connecting to Windows 8.1 and later or Windows Server 2012 R2 and later. This setting is only available in **Single display** mode and when **Update the resolution on resize** is disabled.
 
-## Provide feedback
+## Give us feedback
 
-Have a feature suggestion or want to report a problem? Tell us using the [Feedback Hub](feedback-hub://?tabid=2&contextid=883). You can also access the Feedback Hub through the client:
+Have a feature suggestion or want to report a problem? Tell us with the [Feedback Hub](https://aka.ms/rddesktopfeedback).
 
-1. From the Connection Center, tap the **Send feedback** option on the command bar at the top of the client to open the Feedback Hub app.
-2. Enter the required information in the **Summary** and **Details** fields. When you're done, tap **Next**.
-3. Select whether it's a **Problem** or **Suggestion**.
-4. Check to see if the category is in **Apps** > **Remote Desktop**. If it is, tap **Next**.
-5. Review the existing feedback topics to see if someone else has reported the same problem. If not, select **Make a new bug**, then tap **Next**.
-6. On the next page, you can give us more information so we can help you solve the problem. You can write more detailed information, submit screenshots, and even create a recording of the problem to show us what happened. To make a recording, select **Start recording**, then do what you did up to the point where the problem happened. When you're done, return to the Feedback Hub and select **Stop recording**.
-7. When you're satisfied with the information, tap **Submit**.
-8. On the "Thank you for your feedback!" page, tap **Share my feedback** to generate a link to your feedback that you can share with others as needed.
+You can also give us feedback by selecting the button that looks like a smiley face emoticon in the client app, as shown in the following image:
+
+> [!div class="mx-imgBorder"]
+> ![A screenshot of the smiley face icon that takes you to the feedback hub.](../media/smiley-face-icon.png)
+
+>[!NOTE]
+>To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/at-home/feedback#add-new-feedback).
 
 ### Access client logs
 

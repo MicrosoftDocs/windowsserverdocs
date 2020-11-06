@@ -1,57 +1,51 @@
 ---
 title: bitsadmin setnotifycmdline
-description: "Windows Commands topic for **** - bitsadmin setnotifycmdlineSets the command-line command that will run when the job finishes transferring data or when a job enters a state."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin setnotifycmdline command, which sets the command-line command that will run when the job finishes transferring data, or when a job enters a state.
+ms.topic: reference
 ms.assetid: 415ae6ef-8549-48b2-9693-2368a6e24075
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin setnotifycmdline
 
-Sets the command-line command that will run when the job finishes transferring data or when a job enters a state.
+Sets the command-line command that runs after the job finishes transferring data or after a job enters a specified state.
 
-**BITS 1.2 and earlier**: Not supported.
+> [!NOTE]
+> This command isn't supported by BITS 1.2 and earlier.
 
 ## Syntax
 
 ```
-bitsadmin /SetNotifyCmdLine <Job> <ProgramName> [ProgramParameters]
+bitsadmin /setnotifycmdline <job> <program_name> [program_parameters]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|ProgramName|Name of the command to run when the job completes.|
-|ProgramParameters|Parameters that you want to pass to *ProgramName*.|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| program_name | Name of the command to run when the job completes. You can set this value as NULL, but if you do, *program_parameters* must also be set to NULL. |
+| program_parameters | Parameters that you want to pass to *program_name*. You can set this value as NULL. If *program_parameters* isn't set to NULL, then the first parameter in *program_parameters* must match the *program_name*. |
 
-## Remarks
+## Examples
 
-You can specify NULL for *ProgramName* and *ProgramParameters*. If *ProgramName* is NULL, *ProgramParameters* must be NULL.
+To run Notepad.exe at the completion of the job named *myDownloadJob*:
 
-> [!IMPORTANT]
-> If *ProgramParameters* is not NULL, then the first parameter in *ProgramParameters* must match *ProgramName*.
-
-## <a name="BKMK_examples"></a>Examples
-
-The following example sets the command-line command used by the service to run notepad when the job named *myDownloadJob* completes.
 ```
-C:\>bitsadmin /SetNotifyCmdLine myDownloadJob c:\winnt\system32\notepad.exe NULL
-```
-```
-C:\>bitsadmin /SetNotifyCmdLine myDownloadJob c:\winnt\system32\notepad.exe "notepad c:\eula.txt"
+bitsadmin /setnotifycmdline myDownloadJob c:\winnt\system32\notepad.exe NULL
 ```
 
-#### Additional references
+To show the EULA text in Notepad.exe, at the completion of the job named myDownloadJob:
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+```
+bitsadmin /setnotifycmdline myDownloadJob c:\winnt\system32\notepad.exe notepad c:\eula.txt
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

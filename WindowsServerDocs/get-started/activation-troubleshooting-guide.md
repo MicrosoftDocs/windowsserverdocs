@@ -3,7 +3,6 @@ title: Troubleshooting Windows volume activation
 description: Lists resources that provide information about best practices for volume activation, and information about troubleshooting activation issues
 ms.topic: troubleshooting
 ms.date: 09/24/2019
-ms.technology: server-general
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm
@@ -24,30 +23,30 @@ The following articles provide technical information and best practices for Micr
 
 ### Key Management Service (KMS)
 
-- [Plan for volume activation](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)
-- [Understanding KMS](https://docs.microsoft.com/previous-versions/tn-archive/ff793434(v=technet.10))
-- [Deploying KMS Activation](https://docs.microsoft.com/previous-versions/tn-archive/ff793409%28v=technet.10%29)
-- [Configuring KMS Hosts](https://docs.microsoft.com/previous-versions/tn-archive/ff793407%28v%3dtechnet.10%29)
-- [Configuring DNS](https://docs.microsoft.com/previous-versions/tn-archive/ff793405%28v%3dtechnet.10%29)
-- [Activate using Key Management Service](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt)
+- [Plan for volume activation](/windows/deployment/volume-activation/plan-for-volume-activation-client)
+- [Understanding KMS](/previous-versions/tn-archive/ff793434(v=technet.10))
+- [Deploying KMS Activation](/previous-versions/tn-archive/ff793409%28v=technet.10%29)
+- [Configuring KMS Hosts](/previous-versions/tn-archive/ff793407%28v%3dtechnet.10%29)
+- [Configuring DNS](/previous-versions/tn-archive/ff793405%28v%3dtechnet.10%29)
+- [Activate using Key Management Service](/windows/deployment/volume-activation/activate-using-key-management-service-vamt)
 
 ### Active Directory-based activation (ADBA)
 
-- [Deploy Active-Directory-based Activation](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn502534%28v%3Dws.11%29)
-- [Activate using Active Directory-based activation](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-active-directory-based-activation-client)
-- [Active Directory-Based Activation overview](https://docs.microsoft.com/windows/deployment/volume-activation/active-directory-based-activation-overview)
+- [Deploy Active-Directory-based Activation](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn502534%28v%3dws.11%29)
+- [Activate using Active Directory-based activation](/windows/deployment/volume-activation/activate-using-active-directory-based-activation-client)
+- [Active Directory-Based Activation overview](/windows/deployment/volume-activation/active-directory-based-activation-overview)
 
 ### Multiple Activation Key (MAK) activation
 
-- [Using MAK Activation](https://docs.microsoft.com/previous-versions/tn-archive/ff793438%28v=technet.10%29)
-- [Understanding MAK Activation](https://docs.microsoft.com/previous-versions/tn-archive/ff793435%28v%3dtechnet.10%29)
-- [Activating MAK Clients](https://docs.microsoft.com/previous-versions/tn-archive/ff793398%28v%3dtechnet.10%29)
+- [Using MAK Activation](/previous-versions/tn-archive/ff793438%28v=technet.10%29)
+- [Understanding MAK Activation](/previous-versions/tn-archive/ff793435%28v%3dtechnet.10%29)
+- [Activating MAK Clients](/previous-versions/tn-archive/ff793398%28v%3dtechnet.10%29)
 
 ### Subscription activation
 
-- [Windows 10 Subscription Activation](https://docs.microsoft.com/windows/deployment/windows-10-subscription-activation)
-- [Deploy Windows 10 Enterprise licenses](https://docs.microsoft.com/windows/deployment/deploy-enterprise-licenses)
-- [Windows 10 Enterprise E3 in CSP](https://docs.microsoft.com/windows/deployment/windows-10-enterprise-e3-overview)
+- [Windows 10 Subscription Activation](/windows/deployment/windows-10-subscription-activation)
+- [Deploy Windows 10 Enterprise licenses](/windows/deployment/deploy-enterprise-licenses)
+- [Windows 10 Enterprise E3 in CSP](/windows/deployment/windows-10-enterprise-e3-overview)
 
 ## Resources for troubleshooting activation issues
 

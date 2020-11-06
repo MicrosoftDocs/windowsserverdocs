@@ -1,17 +1,11 @@
 ---
 title: Authentication Policies and Authentication Policy Silos
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: security-credential-protection
-ms.tgt_pltfrm: na
+description: Windows Server Security
 ms.topic: article
 ms.assetid: 7eb0e640-033d-49b5-ab44-3959395ad567
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Authentication Policies and Authentication Policy Silos
@@ -28,7 +22,7 @@ Capabilities introduced in  Windows Server 2012 R2 , allow you to create authent
 
 With these capabilities, you can limit high-value account usage to high-value hosts. For example, you could create a new Forest Administrators silo that contains enterprise, schema, and domain administrators. Then you could configure the silo with an authentication policy so that password and smartcard-based authentication from systems other than domain controllers and domain administrator consoles would fail.
 
-For information about configuring authentication policy silos and authentication policies, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
+For information about configuring authentication policy silos and authentication policies, see [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md).
 
 ### About authentication policy silos
 An authentication policy silo controls which accounts can be restricted by the silo and defines the authentication policies to apply to the members. You can create the silo based on the requirements of your organization. The silos are Active Directory objects for users, computers, and services as defined by the schema in the following table.
@@ -39,12 +33,12 @@ An authentication policy silo controls which accounts can be restricted by the s
 |--------|--------|
 |Authentication Policy Silo|An instance of this class defines authentication policies and related behaviors for assigned users, computers, and services.|
 |Authentication Policy Silos|A container of this class can contain authentication policy silo objects.|
-|Authentication Policy Silo Enforced|Specifies whether the authentication policy silo is enforced.<br /><br />When not enforced, the policy by default is in audit mode. Events that indicate potential successes and failures are generated, but protections are not applied to the system.|
+|Authentication Policy Silo Enforced|Specifies whether the authentication policy silo is enforced.<p>When not enforced, the policy by default is in audit mode. Events that indicate potential successes and failures are generated, but protections are not applied to the system.|
 |Assigned Authentication Policy Silo Backlink|This attribute is the back link for msDS-AssignedAuthNPolicySilo.|
 |Authentication Policy Silo Members|Specifies which principals are assigned to the AuthNPolicySilo.|
 |Authentication Policy Silo Members Backlink|This attribute is the back link for msDS-AuthNPolicySiloMembers.|
 
-Authentication policy silos can be configured by using the Active Directory Administrative Console or Windows PowerShell. For more information, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
+Authentication policy silos can be configured by using the Active Directory Administrative Console or Windows PowerShell. For more information, see [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md).
 
 ### About authentication policies
 An authentication policy defines the Kerberos protocol ticket-granting ticket (TGT) lifetime properties and authentication access control conditions for an account type. The policy is built on and controls the AD DS container known as the authentication policy silo.
@@ -86,7 +80,7 @@ The policies for the Active Directory objects for users, computers, and services
 |----|--------|--------|
 |Policy|Authentication Policy|An instance of this class defines authentication policy behaviors for assigned principals.|
 |Policy|Authentication Policies|A container of this class can contain authentication policy objects.|
-|Policy|Authentication Policy Enforced|Specifies whether the authentication policy is enforced.<br /><br />When not enforced, the policy by default is in audit mode, and events that indicate potential successes and failures are generated, but protections are not applied to the system.|
+|Policy|Authentication Policy Enforced|Specifies whether the authentication policy is enforced.<p>When not enforced, the policy by default is in audit mode, and events that indicate potential successes and failures are generated, but protections are not applied to the system.|
 |Policy|Assigned Authentication Policy Backlink|This attribute is the back link for msDS-AssignedAuthNPolicy.|
 |Policy|Assigned Authentication Policy|Specifies which AuthNPolicy should be applied to this principal.|
 |User|User Authentication Policy|Specifies which AuthNPolicy should be applied to users who are assigned to this silo object.|
@@ -104,7 +98,7 @@ The policies for the Active Directory objects for users, computers, and services
 |Service|ms-DS-Service-Allowed-To-Authenticate-From|This attribute is used to determine the set of devices to which a service account has permission to sign in.|
 |Service|Service TGT Lifetime|Specifies the maximum age of a Kerberos TGT that is issued to a service (expressed in seconds).|
 
-Authentication policies can be configured for each silo by using the Active Directory Administrative Console or Windows PowerShell. For more information, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
+Authentication policies can be configured for each silo by using the Active Directory Administrative Console or Windows PowerShell. For more information, see [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md).
 
 ## How it works
 This section describes how authentication policy silos and authentication policies work in conjunction with the Protected Users security group and implementation of the Kerberos protocol in Windows.
@@ -133,9 +127,9 @@ For more information about this security group, see [How the Protected Users gro
 
 Authentication policy silos and authentication policies leverage the existing Windows authentication infrastructure. The use of the NTLM protocol is rejected, and the Kerberos protocol with newer encryption types is used. Authentication policies complement the Protected Users security group by providing a way to apply configurable restrictions to accounts, in addition to providing restrictions for accounts for services and computers. Authentication policies are enforced during the Kerberos protocol authentication service (AS) or ticket-granting service (TGS) exchange. For more information about how Windows uses the Kerberos protocol, and what changes have been made to support authentication policy silos and authentication policies, see:
 
--   [How the Kerberos Version 5 Authentication Protocol Works](https://technet.microsoft.com/library/cc772815(v=ws.10).aspx)
+-   [How the Kerberos Version 5 Authentication Protocol Works](/previous-versions/windows/it-pro/windows-server-2003/cc772815(v=ws.10))
 
--   [Changes in Kerberos Authentication](https://technet.microsoft.com/library/dd560670(v=ws.10).aspx) (Windows Server 2008 R2 and Windows 7)
+-   [Changes in Kerberos Authentication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560670(v=ws.10)) (Windows Server 2008 R2 and Windows 7)
 
 ### <a name="BKMK_HowKerbUsed"></a>How the Kerberos protocol is used with authentication policy silos and policies
 When a domain account is linked to an authentication policy silo, and the user signs in, the Security Accounts Manager adds the claim type of Authentication Policy Silo that includes the silo as the value. This claim on the account provides the access to the targeted silo.
@@ -162,7 +156,7 @@ When an authentication policy is in audit mode and a ticket-granting service req
 
 You can use a single authentication policy for all members of a silo, or you can use separate policies for users, computers, and managed service accounts.
 
-Authentication policies can be configured for each silo by using the Active Directory Administrative Console or Windows PowerShell. For more information, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
+Authentication policies can be configured for each silo by using the Active Directory Administrative Console or Windows PowerShell. For more information, see [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md).
 
 ### <a name="BKMK_HowRestrictingSignOn"></a>How restricting a user sign-in works
 Because these authentication policies are applied to an account, it also applies to accounts that are used by services. If you want to limit the usage of a password for a service to specific hosts, this setting is useful. For example, group managed service accounts are configured where the hosts are allowed to retrieve the password from Active Directory Domain Services. However, that password can be used from any host for initial authentication. By applying an access control condition, an additional layer of protection can be achieved by limiting the password to only the set of hosts that can retrieve the password.
@@ -224,21 +218,19 @@ The following table describes the events that are associated with Protected User
 
 The events are recorded in the Applications and Services Logs at **Microsoft\Windows\Authentication**.
 
-For troubleshooting steps that use these events, see [Troubleshoot Authentication Policies](how-to-configure-protected-accounts.md#troubleshoot-authentication-policies) and [Troubleshoot events related to Protected Users](how-to-configure-protected-accounts.md#troubleshoot-events-related-to-protected-users).
+For troubleshooting steps that use these events, see [Troubleshoot Authentication Policies](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_CreateAuthNPolicies) and [Troubleshoot events related to Protected Users](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md#BKMK_TrubleshootingEvents).
 
 |Event ID and Log|Description|
 |----------|--------|
-|101<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: An NTLM sign-in failure occurs because the authentication policy is configured.<br /><br />An event is logged in the domain controller to indicate that NTLM authentication failed because access control restrictions are required, and those restrictions cannot be applied to NTLM.<br /><br />Displays the account, device, policy, and silo names.|
-|105<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure occurs because the authentication from a particular device was not permitted.<br /><br />An event is logged in the domain controller to indicate that a Kerberos TGT was denied because the device did not meet the enforced access control restrictions.<br /><br />Displays the account, device, policy, silo names, and TGT lifetime.|
-|305<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: A potential Kerberos restriction failure might occur because the authentication from a particular device was not permitted.<br /><br />In audit mode, an informational event is logged in the domain controller to determine if a Kerberos TGT will be denied because the device did not meet the access control restrictions.<br /><br />Displays the account, device, policy, silo names, and TGT lifetime.|
-|106<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure occurs because the user or device was not allowed to authenticate to the server.<br /><br />An event is logged in the domain controller to indicate that a Kerberos service ticket was denied because the user, device, or both do not meet the enforced access control restrictions.<br /><br />Displays the device, policy, and silo names.|
-|306<br /><br />**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure might occur because the user or device was not allowed to authenticate to the server.<br /><br />In audit mode, an informational event is logged on the domain controller to indicate that a Kerberos service ticket will be denied because the user, device, or both do not meet the access control restrictions.<br /><br />Displays the device, policy, and silo names.|
+|101<p>**AuthenticationPolicyFailures-DomainController**|Reason: An NTLM sign-in failure occurs because the authentication policy is configured.<p>An event is logged in the domain controller to indicate that NTLM authentication failed because access control restrictions are required, and those restrictions cannot be applied to NTLM.<p>Displays the account, device, policy, and silo names.|
+|105<p>**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure occurs because the authentication from a particular device was not permitted.<p>An event is logged in the domain controller to indicate that a Kerberos TGT was denied because the device did not meet the enforced access control restrictions.<p>Displays the account, device, policy, silo names, and TGT lifetime.|
+|305<p>**AuthenticationPolicyFailures-DomainController**|Reason: A potential Kerberos restriction failure might occur because the authentication from a particular device was not permitted.<p>In audit mode, an informational event is logged in the domain controller to determine if a Kerberos TGT will be denied because the device did not meet the access control restrictions.<p>Displays the account, device, policy, silo names, and TGT lifetime.|
+|106<p>**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure occurs because the user or device was not allowed to authenticate to the server.<p>An event is logged in the domain controller to indicate that a Kerberos service ticket was denied because the user, device, or both do not meet the enforced access control restrictions.<p>Displays the device, policy, and silo names.|
+|306<p>**AuthenticationPolicyFailures-DomainController**|Reason: A Kerberos restriction failure might occur because the user or device was not allowed to authenticate to the server.<p>In audit mode, an informational event is logged on the domain controller to indicate that a Kerberos service ticket will be denied because the user, device, or both do not meet the access control restrictions.<p>Displays the device, policy, and silo names.|
 
-## See also
-[How to Configure Protected Accounts](how-to-configure-protected-accounts.md)
+## Additional References
+[How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md)
 
 [Credentials Protection and Management](credentials-protection-and-management.md)
 
 [Protected Users Security Group](protected-users-security-group.md)
-
-

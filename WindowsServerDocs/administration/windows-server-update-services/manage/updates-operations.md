@@ -1,16 +1,11 @@
 ---
 title: Updates Operations
-description: "Windows Server Update Service (WSUS) topic - How to manage updates, including the approval process"
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-wsus
-ms.tgt_pltfrm: na
+description: Windows Server Update Service (WSUS) topic - How to manage updates, including the approval process
 ms.topic: article
 ms.assetid: 4cb7ff54-3014-4e91-842a-a7b831ea59ff
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Updates Operations
@@ -32,9 +27,9 @@ You can approve the installation of updates for all the computers in your WSUS n
 
 There are two IMPORTANT considerations that you should keep in mind:
 
--   First, you cannot set a deadline for automatic installation for an update if user input is required (for example, specifying a setting relevant to the update). To determine whether an update will require user input, look at the **May request user input** field in the update properties for an update displayed on the **Updates** page. Also check for a message in the **Approve Updates** box that says, "**The selected update requires user input and does not support an installation deadline**."
+-   First, you cannot set a deadline for automatic installation for an update if user input is required (for example, specifying a setting relevant to the update). To determine whether an update will require user input, look at the **May request user input** field in the update properties for an update displayed on the **Updates** page. Also check for a message in the **Approve Updates** box that says, **The selected update requires user input and does not support an installation deadline**.
 
--   If there are updates to the WSUS server component, you cannot approve other updates to client systems until the WSUS update is approved. You will see this warning message in the Approve Updates dialog: "There are WSUS updates that have not been approved. You should approve the WSUS updates before approving this update." In this case, you should click the WSUS Updates node and make sure that all of the updates in that view have been approved before returning to the general updates.
+-   If there are updates to the WSUS server component, you cannot approve other updates to client systems until the WSUS update is approved. You will see this warning message in the Approve Updates dialog: There are WSUS updates that have not been approved. You should approve the WSUS updates before approving this update. In this case, you should click the WSUS Updates node and make sure that all of the updates in that view have been approved before returning to the general updates.
 
 #### To approve updates
 
@@ -95,7 +90,7 @@ After an update has been declined, you can still reinstate it.
 
 3.  In the list of updates, select one or more declined updates that you want to reinstate.
 
-4.  To reinstate a particular update, right click on the update and select **Approve**. In the **Approve Updates** dialog, click **OK** to re-apply the default "Not Approved" approval status. The update will show in the list as **Not approved** instead of Declined.
+4.  To reinstate a particular update, right click on the update and select **Approve**. In the **Approve Updates** dialog, click **OK** to re-apply the default Not Approved approval status. The update will show in the list as **Not approved** instead of Declined.
 
 After a declined update has been cleaned up by using the WSUS Server cleanup Wizard, it will be deleted from the WSUS server and will no longer appear in the All Updates view. You can re-import Declined, cleaned-up updates from the Microsoft Update Catalog. For additional information, see [WSUS and the Catalog Site](wsus-and-the-catalog-site.md).
 
@@ -168,9 +163,9 @@ The Automatic Approvals section of the Options pane contains a default option to
     > Keeping the default values for these options allows you maintain good performance on your WSUS network. If you do not want expired updates to be declined automatically, you should make sure to decline them manually on a periodic basis.
 
 ## Automatically Declining Superseded Updates
-When you approve a new update that supersedes an existing update which is automatically approved, the superseded update becomes "Not Applicable" to a computer or device once the newer update has been installed. You can verify in the WSUS console that an update is Not Applicable for all computers. When that is the case, the update can be safely Declined. additionally, the update may be automatically declined when you run the WSUS Server cleanup Wizard.
+When you approve a new update that supersedes an existing update which is automatically approved, the superseded update becomes Not Applicable to a computer or device once the newer update has been installed. You can verify in the WSUS console that an update is Not Applicable for all computers. When that is the case, the update can be safely Declined. additionally, the update may be automatically declined when you run the WSUS Server cleanup Wizard.
 
-To search for superseded updates, you can select the "Superseded" flag column in the All Updates view, and sort on that column. There will be four groups:
+To search for superseded updates, you can select the Superseded flag column in the All Updates view, and sort on that column. There will be four groups:
 
 -   Updates which have never been superseded (a blank icon).
 
@@ -180,7 +175,7 @@ To search for superseded updates, you can select the "Superseded" flag column in
 
 -   Updates which have superseded another update (an icon with a blue square at the top).
 
-There is no feature in Windows Server Update Services that automatically declines superseded updates upon approval of a newer update. It is recommended to first set the approval to "Not Approved," and then use the Server cleanup Wizard to automatically decline the update when all relevant conditions have been satisfied. For more information, see: [The Server cleanup Wizard](the-server-cleanup-wizard.md).
+There is no feature in Windows Server Update Services that automatically declines superseded updates upon approval of a newer update. It is recommended to first set the approval to Not Approved, and then use the Server cleanup Wizard to automatically decline the update when all relevant conditions have been satisfied. For more information, see: [The Server cleanup Wizard](the-server-cleanup-wizard.md).
 
 ## Approving Superseding or Superseded Updates
 Typically, an update that supersedes other updates does one or more of the following:

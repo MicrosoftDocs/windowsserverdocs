@@ -1,12 +1,10 @@
 ---
 title: Performance history for Storage Spaces Direct
 ms.author: cosdar
-ms.manager: eldenc
-ms.technology: storage-spaces
+manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 09/07/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 # Performance history for Storage Spaces Direct
@@ -22,7 +20,7 @@ Performance history is a new feature that gives [Storage Spaces Direct](storage-
 
 Performance history is collected by default with Storage Spaces Direct in Windows Server 2019. You do not need to install, configure, or start anything. An Internet connection is not required, System Center is not required, and an external database is not required.
 
-To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md):
+To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/overview.md):
 
 ![Performance history in Windows Admin Center](media/performance-history/perf-history-in-wac.png)
 
@@ -205,7 +203,7 @@ An error message like "*The term 'Get-ClusterPerf' is not recognized as the name
    > [!NOTE]
    > This feature is not available on Windows Server 2016 or earlier.
 
-### No data available 
+### No data available
 
 If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
@@ -221,6 +219,6 @@ If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
 5. If the command in the previous step returns nothing, you can try restarting the Health Service (which collects performance history) by running `Stop-ClusterResource Health ; Start-ClusterResource Health` in PowerShell.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)

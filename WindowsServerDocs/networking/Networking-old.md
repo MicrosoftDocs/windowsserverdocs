@@ -1,26 +1,24 @@
 ---
 title: Networking
 description: This topic provides an overview of the Software Defined Networking and Network Platform technologies that are available in Windows Server 2016.
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.date: 05/08/2018
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
 manager: dougkim
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.localizationpriority: medium
 ---
 # Networking
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-       [!TIP]
-        Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
+> [!TIP]
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
 
 <img src="../media/landing-icons/network.png" style='float:left; padding:.5em;' alt="Icon depicting two networked computers"> Networking is a foundational part of the Software Defined Datacenter \(SDDC\) platform, and Windows Server 2016 provides new and improved Software Defined Networking \(SDN\) technologies to help you move to a fully realized SDDC solution for your organization.
 
-When you manage networks as a software defined resource, you can describe an application's infrastructure requirements one time, and then choose where the application runs - on premises or in the cloud. 
+When you manage networks as a software defined resource, you can describe an application's infrastructure requirements one time, and then choose where the application runs - on premises or in the cloud.
 
 This consistency means that your applications are now easier to scale, and you can seamlessly run applications - anywhere - with equal confidence about security, performance, quality of service, and availability.
 
@@ -59,7 +57,7 @@ Cloud Service Providers \(CSPs\) and Enterprises that are deploying Software Def
 
 ### [RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
 
-RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol \(BGP\) capable router in Windows Server 2016, is designed for Cloud Service Providers \(CSPs\) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization. 
+RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol \(BGP\) capable router in Windows Server 2016, is designed for Cloud Service Providers \(CSPs\) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.
 
 ### [Network Function Virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md)
 
@@ -87,9 +85,9 @@ Learn how to deploy a Windows Server network with the Core Network Guide, as wel
 
 ### [DirectAccess](../remote/remote-access/directaccess/DirectAccess.md)
 
-DirectAccess allows connectivity for remote users to organization network resources. 
+DirectAccess allows connectivity for remote users to organization network resources.
 
-DirectAccess documentation is now located in the [Remote access and server management](https://docs.microsoft.com/windows-server/remote/) section of the Windows Server 2016 table of contents, under [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access). For more information, see [DirectAccess](../remote/remote-access/directaccess/DirectAccess.md).
+DirectAccess documentation is now located in the [Remote access and server management](../remote/index.yml) section of the Windows Server 2016 table of contents, under [Remote Access](../remote/remote-access/remote-access.md). For more information, see [DirectAccess](../remote/remote-access/directaccess/DirectAccess.md).
 
 ### [Domain Name System &#40;DNS&#41;](dns/dns-top.md)
 
@@ -105,7 +103,7 @@ Hyper-V Network Virtualization \(HNV\) enables virtualization of customer networ
 
 ### [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
 
-The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager when you install the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels. 
+The Hyper-V Virtual Switch is a software-based layer-2 Ethernet network switch that is available in Hyper-V Manager when you install the Hyper-V server role. The switch includes programmatically managed and extensible capabilities to connect virtual machines to both virtual networks and the physical network. In addition, Hyper-V Virtual Switch provides policy enforcement for security, isolation, and service levels.
 
 Hyper-V Virtual Switch documentation is now located in the **Virtualization** section of the Windows Server 2016 table of contents. For more information, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
@@ -152,9 +150,9 @@ You can use QoS Policy as a central point of network bandwidth management across
 
 You can use Remote Access technologies, such as DirectAccess and Virtual Private Networking \(VPN\) to provide remote workers with connectivity to internal network resources. In addition, you can use Remote Access for local area network \(LAN\) routing, and for Web Application Proxy. which provides reverse proxy functionality for web applications inside your corporate network to allow users on any device to access them from outside the corporate network.
 
-Remote Access documentation is now located in the [Remote access and server management](https://docs.microsoft.com/windows-server/remote/) section of the Windows Server 2016 table of contents. For more information, see [Remote Access](../remote/remote-access/remote-access.md).
+Remote Access documentation is now located in the [Remote access and server management](../remote/index.yml) section of the Windows Server 2016 table of contents. For more information, see [Remote Access](../remote/remote-access/remote-access.md).
 
-For more information about Web Application Proxy, which is a role service of the Remote Access server role, see [Web Application Proxy in Windows Server 2016](https://docs.microsoft.com/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server).
+For more information about Web Application Proxy, which is a role service of the Remote Access server role, see [Web Application Proxy in Windows Server 2016](../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md).
 
 ### [Virtual Private Networking (VPN)](../remote/remote-access/vpn/vpn-top.md)
 
@@ -164,14 +162,14 @@ When you install Remote Access as a VPN server, you can use Virtual Private Netw
 
 With Windows Server 2016 Remote Access VPN - and Windows 10 client computers - you can now deploy Always On VPN. Always On VPN gives you the ability to manage remote VPN clients that are always connected, while also providing convenience for remote workers, who no longer need to manually connect to and disconnect from VPN to your organization network.
 
-For more information, see [Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy).
+For more information, see [Remote Access Always On VPN Deployment Guide for Windows Server 2016 and Windows 10](../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md).
 
 >[!NOTE]
->VPN documentation is now located in the [Remote access and server management](https://docs.microsoft.com/windows-server/remote/) section of the Windows Server 2016 table of contents, under [Remote Access](https://docs.microsoft.com/windows-server/remote/remote-access/remote-access).
+>VPN documentation is now located in the [Remote access and server management](../remote/index.yml) section of the Windows Server 2016 table of contents, under [Remote Access](../remote/remote-access/remote-access.md).
 
-For more information about VPN, see [Virtual Private Networking (VPN)](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-top).
+For more information about VPN, see [Virtual Private Networking (VPN)](../remote/remote-access/vpn/vpn-top.md).
 
-### [Windows Container Networking](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking)
+### [Windows Container Networking](/virtualization/windowscontainers/manage-containers/container-networking)
 
 Windows Container Networking allows you to create and manage networks for connecting container endpoints on both Windows 10 and Windows Server hosts by using standard industry tools and workflows. Windows container networks support multiple topologies, including private, flat-L2, and routed-L3.
 
@@ -185,6 +183,6 @@ Windows Internet Name Service (WINS) is a legacy computer name registration and 
 
 Networking resources for operating systems earlier than Windows Server 2016 are available at the following locations.
 
-- Windows Server 2012 and Windows Server 2012 R2 [Networking Overview](https://technet.microsoft.com/library/hh831357.aspx)
-- Windows Server 2008 and Windows Server 2008 R2 [Networking](https://technet.microsoft.com/library/cc753940)
+- Windows Server 2012 and Windows Server 2012 R2 [Networking Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831357(v=ws.11))
+- Windows Server 2008 and Windows Server 2008 R2 [Networking](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753940(v=ws.10))
 - Windows Server 2003 [Windows Server 2003/2003 R2 Retired Content](https://www.microsoft.com/download/details.aspx?id=53314)

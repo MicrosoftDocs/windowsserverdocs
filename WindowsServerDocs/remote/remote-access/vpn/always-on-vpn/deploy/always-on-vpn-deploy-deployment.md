@@ -1,14 +1,12 @@
 ---
 title: Deploy Always On VPN
 description: This topic provides detailed instructions for deploying Always On VPN in Windows Server 2016.
-ms.prod: windows-server
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ms.date: 11/05/2018
-ms.author: lizross
-author: eross-msft
+ms.author: v-tea
+author: Teresa-MOTIV
 ---
 
 # Deploy Always On VPN
@@ -18,7 +16,7 @@ author: eross-msft
 - [**Previous:** Learn about the Always On VPN advanced features](always-on-vpn-adv-options.md)
 - [**Next:** Step 1. Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md)
 
-In this section, you learn about the workflow for deploying Always On VPN connections for remote domain-joined Windows 10 client computers. If you want to **configure conditional access** to fine-tune how VPN users access your resources, see [Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md). To learn more about conditional access for VPN connectivity using Azure AD, see [Conditional access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). 
+In this section, you learn about the workflow for deploying Always On VPN connections for remote domain-joined Windows 10 client computers. If you want to **configure conditional access** to fine-tune how VPN users access your resources, see [Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md). To learn more about conditional access for VPN connectivity using Azure AD, see [Conditional access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 The following diagram illustrates the workflow process for the different scenarios when deploying Always On VPN:
 
@@ -64,7 +62,7 @@ To configure NPS, you must perform the following tasks:
 
 ## [Step 5. Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md)
 
-In this step, you configure DNS and Firewall settings. When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations. 
+In this step, you configure DNS and Firewall settings. When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations.
 
 ## [Step 6. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)
 
@@ -72,8 +70,8 @@ In this step, you configure the Windows 10 client computers to communicate with
 
 ## [Step 7. (Optional) Configure conditional access for VPN connectivity](../../ad-ca-vpn-connectivity-windows10.md)
 
-In this optional step, you can fine-tune how authorized VPN users access your resources. With Azure AD conditional access for VPN connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure AD connected application. For more information, see [Azure Active Directory (Azure AD) conditional access](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
+In this optional step, you can fine-tune how authorized VPN users access your resources. With Azure AD conditional access for VPN connectivity, you can help protect the VPN connections. Conditional Access is a policy-based evaluation engine that lets you create access rules for any Azure AD connected application. For more information, see [Azure Active Directory (Azure AD) conditional access](/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 ## Next step
 
-[Step 1. Plan the Always On VPN deployment](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.  
+[Step 1. Plan the Always On VPN deployment](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.

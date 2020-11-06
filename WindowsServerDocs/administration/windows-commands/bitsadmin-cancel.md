@@ -1,18 +1,11 @@
 ---
 title: bitsadmin cancel
-description: "Windows Commands topic for **bitsadmin cancel** - 
-removes the job from the transfer queue and deletes all temporary files associated with the job."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin cancel command, which removes the job from the transfer queue and deletes all temporary files associated with the job.
+ms.topic: reference
 ms.assetid: 7374b544-6a16-4d3e-872c-dcf4c02ad89d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -23,22 +16,25 @@ Removes the job from the transfer queue and deletes all temporary files associat
 ## Syntax
 
 ```
-bitsadmin /cancel <Job>
+bitsadmin /cancel <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example removes the *myDownloadJob* job from the transfer queue.
+To remove the *myDownloadJob* job from the transfer queue:
+
 ```
-C:\>bitsadmin /cancel myDownloadJob
+bitsadmin /cancel myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

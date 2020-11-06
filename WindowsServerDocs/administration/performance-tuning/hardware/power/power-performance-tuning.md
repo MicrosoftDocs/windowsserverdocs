@@ -1,10 +1,8 @@
 ---
-title: Power and performance Tuning
-description: Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
-ms.topic: article
-ms.author:  Qizha;TristanB
+title: Overview about power and performance tuning for the Windows Server
+description: Overview about Processor Power Management (PPM) tuning for the Windows Server.
+ms.topic: conceptual
+ms.author: qizha
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -60,7 +58,7 @@ You need to thoroughly understand your workload requirements to choose an optima
 
 Shortened timer tick rates, drivers that lack power management support, and excessive CPU utilization are a few of the behavioral issues that are detected by the **powercfg /energy** command. This tool provides a simple way to identify and fix power management issues, potentially resulting in significant cost savings in a large datacenter.
 
-For more info about PowerCfg.exe, see [Using PowerCfg to Evaluate System Energy Efficiency](https://msdn.microsoft.com/windows/hardware/gg463250.aspx).
+For more info about PowerCfg.exe, see [Using PowerCfg to Evaluate System Energy Efficiency](/previous-versions/windows/hardware/download/dn550976(v=vs.85)).
 
 ## Using power plans in Windows Server
 
@@ -75,7 +73,7 @@ Windows Server 2016 has three built-in power plans designed to meet different s
 
 These power plans exist in Windows for alternating current (AC) and direct current (DC) powered systems, but we will assume that servers are always using an AC power source.
 
-For more info on power plans and power policy configurations, see [Power Policy Configuration and Deployment in Windows](https://msdn.microsoft.com/windows/hardware/gg463243.aspx).
+For more info on power plans and power policy configurations, see [Power Policy Configuration and Deployment in Windows](/previous-versions/windows/hardware/design/dn642106(v=vs.85)).
 
 > [!Note]
 > Some server manufactures have their own power management options available through the BIOS settings. If the operating system does not have control over the power management, changing the power plans in Windows will not affect system power and performance.
@@ -84,7 +82,7 @@ For more info on power plans and power policy configurations, see [Power Policy 
 
 Each power plan represents a combination of numerous underlying power management parameters. The built-in plans are three collections of recommended settings that cover a wide variety of workloads and scenarios. However, we recognize that these plans will not meet every customer's needs.
 
-The following sections describe ways to tune some specific processor power management parameters to meet goals not addressed by the three built-in plans. If you need to understand a wider array of power parameters, see [Power Policy Configuration and Deployment in Windows](https://msdn.microsoft.com/windows/hardware/gg463243.aspx).
+The following sections describe ways to tune some specific processor power management parameters to meet goals not addressed by the three built-in plans. If you need to understand a wider array of power parameters, see [Power Policy Configuration and Deployment in Windows](/previous-versions/windows/hardware/design/dn642106(v=vs.85)).
 
 ## Processor performance boost mode
 
@@ -113,7 +111,7 @@ In Windows Server 2016, the default value for Boost Mode is 3.
 | 3 (Efficient Enabled) | Efficient | Efficient Enabled |
 | 4 (Efficient Aggressive) | Efficient | Aggressive |
 
- 
+
 The following commands enable Processor Performance Boost Mode on the current power plan (specify the policy by using a GUID alias):
 
 ``` syntax
@@ -215,7 +213,8 @@ Powercfg -setacvalueindex scheme_current sub_processor DISTRIBUTEUTIL 0
 Powercfg -setactive scheme_current
 ```
 
-## See Also
+## Additional References
+
 - [Server Hardware Performance Considerations](../index.md)
 - [Server Hardware Power Considerations](../power.md)
 - [Processor Power Management Tuning](processor-power-management-tuning.md)

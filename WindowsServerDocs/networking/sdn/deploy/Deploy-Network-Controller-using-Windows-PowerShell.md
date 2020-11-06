@@ -1,17 +1,11 @@
 ---
 title: Deploy Network Controller using Windows PowerShell
 description: This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines (VMs) that are running Windows Server 2016.
-manager: dougkim
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
+manager: grcusanz
 ms.date: 08/23/2018
 ---
 # Deploy Network Controller using Windows PowerShell
@@ -46,10 +40,10 @@ You can use this procedure to install the Network Controller server role on a vi
 >[!IMPORTANT]
 >Do not deploy the Network Controller server role on physical hosts. To deploy Network Controller, you must install the Network Controller server role on a Hyper-V virtual machine \(VM\) that is installed on a Hyper-V host. After you have installed Network Controller on VMs on three different Hyper\-V hosts, you must enable the Hyper\-V hosts for Software Defined Networking \(SDN\) by adding the hosts to Network Controller. By doing so, you are enabling the SDN Software Load Balancer to function.
 
-Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.  
+Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.
 
 >[!NOTE]
->If you want to use Server Manager instead of Windows PowerShell to install Network Controller, see [Install the Network Controller server role using Server Manager](https://technet.microsoft.com/library/mt403348.aspx)
+>If you want to use Server Manager instead of Windows PowerShell to install Network Controller, see [Install the Network Controller server role using Server Manager](../technologies/network-controller/install-the-network-controller-server-role-using-server-manager.md)
 
 To install Network Controller by using Windows PowerShell, type the following commands at a Windows PowerShell prompt, and then press ENTER.
 
@@ -72,7 +66,7 @@ You can create a Network Controller cluster by creating a node object and then c
 
 You need to create a node object for each VM that is a member of the Network Controller cluster.
 
-To create a node object,  type the following command at the Windows PowerShell command prompt, and then press ENTER. Ensure that you add values for each parameter that are appropriate for your deployment.  
+To create a node object,  type the following command at the Windows PowerShell command prompt, and then press ENTER. Ensure that you add values for each parameter that are appropriate for your deployment.
 
 ```
 New-NetworkControllerNodeObject -Name <string> -Server <String> -FaultDomain <string>-RestInterface <string> [-NodeCertificate <X509Certificate2>]
@@ -97,7 +91,7 @@ Install-NetworkControllerCluster -Node <NetworkControllerNode[]> -ClusterAuthent
 ```
 
 The following table provides descriptions for each parameter of the **Install-NetworkControllerCluster**  command.
-  
+
 |Parameter|Description|
 |-------------|---------------|
 |ClusterAuthentication|The **ClusterAuthentication** parameter specifies the authentication type that is used for securing the communication between nodes and is also used for encryption of traffic between Network Controller services. The supported values are **Kerberos**, **X509** and **None**. Kerberos authentication uses domain accounts and can only be used if the Network Controller nodes are domain joined. If you specify X509-based authentication, you must provide a certificate in the NetworkControllerNode object. In addition, you must manually provision the certificate before you run this command.|
@@ -161,7 +155,7 @@ If you are using Kerberos as the ClientAuthentication mechanism, membership in t
 3. To retrieve the credential that you added to Network Controller, type the following command, and then press ENTER. Ensure that you add values for each parameter that are appropriate for your deployment.
 
     ```
-    Get-NetworkControllerCredential -ConnectionUri https://networkcontroller -ResourceId cred1  
+    Get-NetworkControllerCredential -ConnectionUri https://networkcontroller -ResourceId cred1
     ```
 
 4. Review the command output, which should be similar to the following example output.
@@ -219,7 +213,7 @@ $c = New-NetworkControllerNodeObject -Name Node3 -Server NCNode3.contoso.com -Fa
 
 $cert= get-item Cert:\LocalMachine\My | get-ChildItem | where {$_.Subject -imatch "networkController.contoso.com" }
 
-Install-NetworkControllerCluster -Node @($a,$b,$c)  -ClusterAuthentication Kerberos -DiagnosticLogLocation \\share\Diagnostics - ManagementSecurityGroup Contoso\NCManagementAdmins -CredentialEncryptionCertificate $cert  
+Install-NetworkControllerCluster -Node @($a,$b,$c)  -ClusterAuthentication Kerberos -DiagnosticLogLocation \\share\Diagnostics - ManagementSecurityGroup Contoso\NCManagementAdmins -CredentialEncryptionCertificate $cert
 Install-NetworkController -Node @($a,$b,$c) -ClientAuthentication Kerberos -ClientSecurityGroup Contoso\NCRESTClients -ServerCertificate $cert -RestIpAddress 10.0.0.1/24
 ```
 
@@ -228,5 +222,3 @@ Install-NetworkController -Node @($a,$b,$c) -ClientAuthentication Kerberos -Clie
 If you are not using Kerberos with your Network Controller deployment, you must deploy certificates.
 
 For more information, see [Post-Deployment Steps for Network Controller](../technologies/network-controller/post-deploy-steps-nc.md).
-
-

@@ -1,10 +1,8 @@
 ---
 ms.assetid: 898d72f1-01e7-4b87-8eb3-a8e0e2e6e6da
 title: Adding servers or drives to Storage Spaces Direct
-ms.prod: windows-server
 ms.author: cosdar
-ms.manager: dongill
-ms.technology: storage-spaces
+manager: dongill
 ms.topic: article
 author: cosmosdarwin
 ms.date: 11/06/2017
@@ -25,7 +23,7 @@ Adding servers, often called scaling out, adds storage capacity and can improve 
 
 Typical deployments are simple to scale out by adding servers. There are just two steps:
 
-1. Run the [cluster validation wizard](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) using the Failover Cluster snap-in or with the **Test-Cluster** cmdlet in PowerShell (run as Administrator). Include the new server *\<NewNode>* you wish to add.
+1. Run the [cluster validation wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)) using the Failover Cluster snap-in or with the **Test-Cluster** cmdlet in PowerShell (run as Administrator). Include the new server *\<NewNode>* you wish to add.
 
    ```PowerShell
    Test-Cluster -Node <Node>, <Node>, <Node>, <NewNode> -Include "Storage Spaces Direct", Inventory, Network, "System Configuration"
@@ -39,7 +37,7 @@ Typical deployments are simple to scale out by adding servers. There are just tw
 2. Run the following cmdlet on the cluster to finish adding the server:
 
 ```
-Add-ClusterNode -Name NewNode 
+Add-ClusterNode -Name NewNode
 ```
 
    >[!NOTE]
@@ -53,7 +51,7 @@ With two servers, you can only create two-way mirrored volumes (compare with dis
 
 Two-way mirrored volumes cannot be upgraded in-place to three-way mirroring. Instead, you can create a new volume and migrate (copy, such as by using [Storage Replica](../storage-replica/server-to-server-storage-replication.md)) your data to it, and then remove the old volume.
 
-To begin creating three-way mirrored volumes, you have several good options. You can use whichever you prefer. 
+To begin creating three-way mirrored volumes, you have several good options. You can use whichever you prefer.
 
 #### Option 1
 
@@ -78,7 +76,7 @@ New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName 
 Set **PhysicalDiskRedundancy = 2** on the **StorageTier** template called *Capacity*, and then create volumes by referencing the tier.
 
 ```PowerShell
-Set-StorageTier -FriendlyName Capacity -PhysicalDiskRedundancy 2 
+Set-StorageTier -FriendlyName Capacity -PhysicalDiskRedundancy 2
 
 New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Capacity -StorageTierSizes <Size>
 ```
@@ -129,7 +127,7 @@ That's it! You are now ready to create mirror-accelerated parity volumes by refe
 #### Example
 
 ```PowerShell
-New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes <Size, Size> 
+New-Volume -FriendlyName "Sir-Mix-A-Lot" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes <Size, Size>
 ```
 
 ### Beyond 4 servers: greater parity efficiency
@@ -147,13 +145,13 @@ If your deployment uses chassis or rack fault tolerance, you must specify the ch
 1. Create a temporary fault domain for the node by opening an elevated PowerShell session and then using the following command, where *\<NewNode>* is the name of the new cluster node:
 
    ```PowerShell
-   New-ClusterFaultDomain -Type Node -Name <NewNode> 
+   New-ClusterFaultDomain -Type Node -Name <NewNode>
    ```
 
 2. Move this temporary fault-domain into the chassis or rack where the new server is located in the real world, as specified by *\<ParentName>*:
 
    ```PowerShell
-   Set-ClusterFaultDomain -Name <NewNode> -Parent <ParentName> 
+   Set-ClusterFaultDomain -Name <NewNode> -Parent <ParentName>
    ```
 
    For more information, see [Fault domain awareness in Windows Server 2016](../../failover-clustering/fault-domains.md).
@@ -175,7 +173,7 @@ To scale up, connect the drives and verify that Windows discovers them. They sho
 Get-PhysicalDisk | Select SerialNumber, CanPool, CannotPoolReason
 ```
 
-Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be [redistributed evenly across all the drives](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/). At this point, you're finished and ready to [extend your volumes](resize-volumes.md) or [create new ones](create-volumes.md).
+Within a short time, eligible drives will automatically be claimed by Storage Spaces Direct, added to the storage pool, and volumes will automatically be [redistributed evenly across all the drives](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deep-dive-the-storage-pool-in-storage-spaces-direct/ba-p/425959). At this point, you're finished and ready to [extend your volumes](resize-volumes.md) or [create new ones](create-volumes.md).
 
 If the drives don't appear, manually scan for hardware changes. This can be done using **Device Manager**, under the **Action** menu. If they contain old data or metadata, consider reformatting them. This can be done using **Disk Management** or with the **Reset-PhysicalDisk** cmdlet.
 
@@ -194,7 +192,7 @@ Optimization uses two jobs - one called *Optimize* and one called *Rebalance* - 
 Get-StorageJob
 ```
 
-You can manually optimize a storage pool with the [Optimize-StoragePool](https://docs.microsoft.com/powershell/module/storage/optimize-storagepool?view=win10-ps) cmdlet. Here's an example:
+You can manually optimize a storage pool with the [Optimize-StoragePool](/powershell/module/storage/optimize-storagepool?view=win10-ps) cmdlet. Here's an example:
 
 ```powershell
 Get-StoragePool <PoolName> | Optimize-StoragePool

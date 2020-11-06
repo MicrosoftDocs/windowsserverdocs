@@ -1,17 +1,11 @@
 ---
 title: Getting Started with Group Managed Service Accounts
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: security-gmsa
-ms.tgt_pltfrm: na
+description: Windows Server Security
 ms.topic: article
 ms.assetid: 7130ad73-9688-4f64-aca1-46a9187a46cf
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Getting Started with Group Managed Service Accounts
@@ -139,10 +133,10 @@ When deploying a new server farm, the service administrator will need to determi
 ### <a name="BKMK_Step1"></a>Step 1: Provisioning group Managed Service Accounts
 You can create a gMSA only if the forest schema has been updated to  Windows Server 2012 , the master root key for Active Directory has been deployed, and there is at least one Windows Server 2012 DC in the domain in which the gMSA will be created.
 
-Membership in **Domain Admins**, **Account Operators** or ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures.
+Membership in **Domain Admins** or the  ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures.
 
 > [!NOTE]
-> A value for the -Name parameter is always required (whether you specify -Name or not), with -DNSHostName, -RestrictToSingleComputer, and -RestrictToOutboundAuthentication being secondary requirements for the three deployment scenarios.    
+> A value for the -Name parameter is always required (whether you specify -Name or not), with -DNSHostName, -RestrictToSingleComputer, and -RestrictToOutboundAuthentication being secondary requirements for the three deployment scenarios.
 
 
 #### <a name="BKMK_CreateGMSA"></a>To create a gMSA using the New-ADServiceAccount cmdlet
@@ -165,7 +159,7 @@ Membership in **Domain Admins**, **Account Operators** or ability to create msDS
 
     > [!IMPORTANT]
     > The password change interval can only be set during creation. If you need to change the interval, you must create a new gMSA and set it at creation time.
-   
+
     **Example**
 
     Enter the command on a single line, even though they might appear word-wrapped across several lines here because of formatting constraints.
@@ -174,7 +168,7 @@ Membership in **Domain Admins**, **Account Operators** or ability to create msDS
     New-ADServiceAccount ITFarm1 -DNSHostName ITFarm1.contoso.com -PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$ -KerberosEncryptionType RC4, AES128, AES256 -ServicePrincipalNames http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso
     ```
 
-Membership in **Domain Admins**, **Account Operators**, or ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](https://technet.microsoft.com/library/dd728026(WS.10).aspx).
+Membership in **Domain Admins**, **Account Operators**, or ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ##### To create a gMSA for outbound authentication only using the New-ADServiceAccount cmdlet
 
@@ -192,7 +186,7 @@ Membership in **Domain Admins**, **Account Operators**, or ability to create msD
 
     > [!IMPORTANT]
     > The password change interval can only be set during creation. If you need to change the interval, you must create a new gMSA and set it at creation time.
-    
+
   **Example**
 
 ```PowerShell
@@ -204,15 +198,15 @@ To configure the services in  Windows Server 2012 , see the following feature do
 
 -   IIS application pool
 
-    For more information, see [Specify an Identity for an Application Pool (IIS 7)](https://technet.microsoft.com/library/cc771170(WS.10).aspx).
+    For more information, see [Specify an Identity for an Application Pool (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771170(v=ws.10)).
 
 -   Windows Services
 
-    For more information, see [Services](https://technet.microsoft.com/library/cc772408.aspx).
+    For more information, see [Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772408(v=ws.11)).
 
 -   Tasks
 
-    For more information, see the [Task Scheduler Overview](https://technet.microsoft.com/library/cc721871.aspx).
+    For more information, see the [Task Scheduler Overview](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc721871(v=ws.11)).
 
 Other services could support gMSA. See the appropriate product documentation for details on how to configure those services.
 
@@ -223,15 +217,15 @@ Membership in **Domain Admins**, or the ability to add members to the security g
 
 -   Method 1: Active Directory Users and Computers
 
-    For procedures how to use this method, see [Add a computer account to a group](https://technet.microsoft.com/library/cc733097.aspx) using the Windows interface, and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
+    For procedures how to use this method, see [Add a computer account to a group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733097(v=ws.11)) using the Windows interface, and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
 
 -   Method 2: dsmod
 
-    For procedures how to use this method, see [Add a computer account to a group](https://technet.microsoft.com/library/cc733097.aspx) using the command line.
+    For procedures how to use this method, see [Add a computer account to a group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc733097(v=ws.11)) using the command line.
 
 -   Method 3: Windows PowerShell Active Directory cmdlet Add-ADPrincipalGroupMembership
 
-    For procedures how to use this method, see [Add-ADPrincipalGroupMembership](https://technet.microsoft.com/library/ee617203.aspx).
+    For procedures how to use this method, see [Add-ADPrincipalGroupMembership](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617203(v=technet.10)).
 
 If using computer accounts, find the existing accounts and then add the new computer account.
 
@@ -243,11 +237,11 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 
 2.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Get-ADServiceAccount [-Name] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword**
+    **Get-ADServiceAccount [-Identity] &lt;string&gt; -Properties PrincipalsAllowedToRetrieveManagedPassword**
 
 3.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Set-ADServiceAccount [-Name] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
+    **Set-ADServiceAccount [-Identity] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
 
 |Parameter|String|Example|
 |-------|-----|------|
@@ -259,11 +253,11 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 For example, to add member hosts type the following commands, and then press ENTER.
 
 ```PowerShell
-Get-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
+Get-ADServiceAccount [-Identity] ITFarm1 -Properties PrincipalsAllowedToRetrieveManagedPassword
 ```
 
 ```PowerShell
-Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host2$,Host3$
+Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host2$,Host3$
 ```
 
 ## <a name="BKMK_Update_gMSA"></a>Updating the group Managed Service Account properties
@@ -271,7 +265,7 @@ Membership in **Domain Admins**, **Account Operators**, or the ability to write 
 
 Open the Active Directory Module for Windows PowerShell, and set any property by using the Set-ADServiceAccount cmdlet.
 
-For detailed information how to set these properties, see [Set-ADServiceAccount](https://technet.microsoft.com/library/ee617252.aspx) in the TechNet Library or by typing **Get-Help Set-ADServiceAccount** at the Active Directory module for Windows PowerShell command prompt and pressing ENTER.
+For detailed information how to set these properties, see [Set-ADServiceAccount](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617252(v=technet.10)) in the TechNet Library or by typing **Get-Help Set-ADServiceAccount** at the Active Directory module for Windows PowerShell command prompt and pressing ENTER.
 
 ## <a name="BKMK_DecommMemberHosts"></a>Decommissioning member hosts from an existing server farm
 Membership in **Domain Admins**, or ability to remove members from the security group object, is the minimum required to complete these procedures.
@@ -281,15 +275,15 @@ If using security groups for managing member hosts, remove the computer account 
 
 -   Method 1: Active Directory Users and Computers
 
-    For procedures how to use this method, see [Delete a Computer Account](https://technet.microsoft.com/library/cc754624.aspx) using the Windows interface, and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
+    For procedures how to use this method, see [Delete a Computer Account](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754624(v=ws.11)) using the Windows interface, and [Manage Different Domains in Active Directory Administrative Center](manage-different-domains-in-active-directory-administrative-center.md).
 
 -   Method 2: drsm
 
-    For procedures how to use this method, see [Delete a Computer Account](https://technet.microsoft.com/library/cc754624.aspx) using the command line.
+    For procedures how to use this method, see [Delete a Computer Account](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754624(v=ws.11)) using the command line.
 
 -   Method 3: Windows PowerShell Active Directory cmdlet Remove-ADPrincipalGroupMembership
 
-    For detailed information how to do this, see  [Remove-ADPrincipalGroupMembership](https://technet.microsoft.com/library/ee617243.aspx) in the TechNet Library or by typing **Get-Help Remove-ADPrincipalGroupMembership** at the Active Directory module for Windows PowerShell command prompt and pressing ENTER.
+    For detailed information how to do this, see  [Remove-ADPrincipalGroupMembership](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617243(v=technet.10)) in the TechNet Library or by typing **Get-Help Remove-ADPrincipalGroupMembership** at the Active Directory module for Windows PowerShell command prompt and pressing ENTER.
 
 If listing computer accounts, retrieve the existing accounts and then add all but the removed computer account.
 
@@ -301,11 +295,11 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 
 2.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Get-ADServiceAccount [-Name] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword**
+    **Get-ADServiceAccount [-Identity] &lt;string&gt; -Properties PrincipalsAllowedToRetrieveManagedPassword**
 
 3.  At the command prompt for the Windows PowerShell Active Directory module, type the following commands, and then press ENTER:
 
-    **Set-ADServiceAccount [-Name] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
+    **Set-ADServiceAccount [-Identity] &lt;string&gt; -PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal[]>**
 
 |Parameter|String|Example|
 |-------|-----|------|
@@ -317,11 +311,11 @@ Membership in **Domain Admins**, **Account Operators**, or ability to manage msD
 For example, to remove member hosts type the following commands, and then press ENTER.
 
 ```PowerShell
-Get-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
+Get-ADServiceAccount [-Identity] ITFarm1 -Properties PrincipalsAllowedToRetrieveManagedPassword
 ```
 
 ```PowerShell
-Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host3$
+Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host3$
 ```
 
 ### <a name="BKMK_RemoveGMSA"></a>Step 2: Removing a group Managed Service Account from the system
@@ -345,7 +339,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
     Uninstall-ADServiceAccount ITFarm1
     ```
 
-For more information about the Uninstall-ADServiceAccount cmdlet, at the Active Directory module for Windows PowerShell command prompt, type **Get-Help Uninstall-ADServiceAccount**, and then press ENTER, or see the information on the TechNet web at [Uninstall-ADServiceAccount](https://technet.microsoft.com/library/ee617202.aspx).
+For more information about the Uninstall-ADServiceAccount cmdlet, at the Active Directory module for Windows PowerShell command prompt, type **Get-Help Uninstall-ADServiceAccount**, and then press ENTER, or see the information on the TechNet web at [Uninstall-ADServiceAccount](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617202(v=technet.10)).
 
 
 

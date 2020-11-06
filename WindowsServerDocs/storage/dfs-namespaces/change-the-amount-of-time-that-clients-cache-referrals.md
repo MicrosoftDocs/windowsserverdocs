@@ -1,9 +1,7 @@
 ---
 title: Change the Amount of Time that Clients Cache Referrals
-description: This article describes how to change the amount of time that clients cache referrals 
+description: This article describes how to change the amount of time that clients cache referrals
 ms.date: 6/5/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -24,7 +22,7 @@ A referral is an ordered list of targets that a client computer receives from a 
 3.  On the **Referrals** tab, in the **Cache duration (in seconds)** text box, type the amount of time (in seconds) that clients cache namespace root referrals. The default setting is 300 seconds (five minutes).
 
 > [!TIP]
-> To change the amount of time that clients cache namespace root referrals by using Windows PowerShell, use the [Set-DfsnRoot TimeToLiveSec](https://technet.microsoft.com/library/jj884281.aspx)
+> To change the amount of time that clients cache namespace root referrals by using Windows PowerShell, use the [Set-DfsnRoot TimeToLiveSec](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753448(v=ws.11))
 cmdlet. These cmdlets were introduced in Windows Server 2012.
 
 ## To change the amount of time that clients cache folder referrals
@@ -35,9 +33,7 @@ cmdlet. These cmdlets were introduced in Windows Server 2012.
 
 3.  On the **Referrals** tab, in the **Cache duration (in seconds)** text box, type the amount of time (in seconds) that clients cache folder referrals. The default setting is 1800 seconds (30 minutes).
 
-## See also
+## Additional References
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
-
-

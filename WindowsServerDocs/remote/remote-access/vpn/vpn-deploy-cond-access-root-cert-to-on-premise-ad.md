@@ -1,15 +1,10 @@
 ---
 title: Deploy Conditional Access root certificates to on-premises AD
-description: ''
-services: active-directory
-ms.prod: windows-server
-ms.technology: networking-ras
-ms.workload: identity
 ms.topic: article
 ms.date: 06/28/2019
-ms.author: lizross
-author: eross-msft
-ms.localizationpriority: medium 
+ms.author: v-tea
+author: Teresa-MOTIV
+ms.localizationpriority: medium
 ms.reviewer: deverette
 ---
 # Step 7.4. Deploy conditional access root certificates to on-premises AD
@@ -53,4 +48,4 @@ In this step, you deploy the conditional access root certificate as trusted root
 
 ## Next steps
 
-[Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md): In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy. If you want to use Microsoft Endpoint Configuration Manager or PowerShell Script to create VPNv2 profiles, see [VPNv2 CSP settings](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) for more details.
+[Step 7.5. Create OMA-DM based VPNv2 Profiles to Windows 10 devices](vpn-create-oma-dm-based-vpnv2-profiles.md): In this step, you can create OMA-DM based VPNv2 profiles using Intune to deploy a VPN Device Configuration policy. If you want to use Microsoft Endpoint Configuration Manager or PowerShell Script to create VPNv2 profiles, see [VPNv2 CSP settings](/windows/client-management/mdm/vpnv2-csp) for more details.

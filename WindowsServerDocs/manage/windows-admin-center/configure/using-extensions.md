@@ -1,12 +1,10 @@
 ---
 title: Install and Manage Extensions
 description: Install and Manage Extensions in Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Install and Manage Extensions
 
@@ -18,7 +16,7 @@ Windows Admin Center is built as an extensible platform where each connection ty
 
 Windows Admin Center will show extensions available from the specified NuGet feed. By default, Windows Admin Center points to the Microsoft official NuGet feed which hosts extensions published by Microsoft and other developers.
 
-1. Click the **Settings** button in the top-right > In the left pane, click **Extensions**. 
+1. Click the **Settings** button in the top-right > In the left pane, click **Extensions**.
 2. The **Available Extensions** tab will list the extensions on the feed that are available for installation.
 3. Click on an extension to view the extension description, version, publisher and other information in the **Details** pane.
 4. Click **Install** to install an extension. If the gateway must run in elevated mode to make this change, you will be presented with a UAC elevation prompt. After installation is complete, your browser will automatically be refreshed and Windows Admin Center will be reloaded with the new extension installed. If the extension you are trying to install is an update to a previously installed extension, you can click the **Update to latest** button to install the update. You can also go to the **Installed Extensions** tab to view installed extensions and see if an update is available in the **Status** column.
@@ -30,7 +28,7 @@ Windows Admin Center supports multiple feeds and you can view and manage package
 1. Click the **Settings** button in the top-right > In the left pane, click **Extensions**.
 2. On the right pane, click the **Feeds** tab.
 3. Click the **Add** button to add another feed. For a NuGet feed, enter the NuGet V2 feed URL. The NuGet feed provider or administrator should be able to provide the URL information. For a file share, enter the full path of the file share in which the extension package files (.nupkg) are stored.
-4. Click **Add**. If the gateway must run in elevated mode to make this change, you will be presented with a UAC elevation prompt.
+4. Click **Add**. If the gateway must run in elevated mode to make this change, you will be presented with a UAC elevation prompt. This prompt will only be presented if you are running Windows Admin Center in desktop mode.
 
 The **Available Extensions** list will show extensions from all registered feeds. You can check which feed each extension is from using the **Package Feed** column.
 
@@ -38,7 +36,7 @@ The **Available Extensions** list will show extensions from all registered feeds
 
 You can uninstall any extensions you have previously installed, or even uninstall any tools that were pre-installed as part of the Windows Admin Center installation.
 
-1. Click the **Settings** button in the top-right > In the left pane, click **Extensions**. 
+1. Click the **Settings** button in the top-right > In the left pane, click **Extensions**.
 2. Click the **Installed Extensions** tab to view all installed extensions.
 3. Choose an extension to uninstall, then click **Uninstall**.
 
@@ -50,12 +48,12 @@ If Windows Admin Center is installed on a computer that isn't connected to the i
 
 ### Manually downloading extension packages
 
-1. On another computer that has internet connectivity, open a web browser and navigate to the following URL: [https://msft-sme.myget.org/gallery/windows-admin-center-feed](https://msft-sme.myget.org/gallery/windows-admin-center-feed) 
+1. On another computer that has internet connectivity, open a web browser and navigate to the following URL: [https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_packaging?_a=feed&feed=WAC](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_packaging?_a=feed&feed=WAC)
 
-   * You may need to create an account on msft-sme.myget.org and login to view the extension packages.
+   * You may need to create a Microsoft account and login to view the extension packages.
 
 2. Click on the name of the package you want to install to view the package details page.
-3. Click on the **Download** link in the right-side pane of the package details page and download the .nupkg file for the extension.
+3. Click on the **Download** link in the top navigation bar of the package details page and download the .nupkg file for the extension.
 4. Repeat steps 2 and 3 for all the packages you want to download.
 5. Copy the package files to a file share that can be accessed from the computer Windows Admin Center is installed on, or to the local disk of the computer.
 6. [Follow the instructions to install extensions from a different feed](#installing-extensions-from-a-different-feed).

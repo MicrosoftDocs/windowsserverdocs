@@ -1,25 +1,24 @@
 ---
 title: Windows Admin Center Overview
 description: Learn how to manage Windows Server using Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 01/07/2020
 ms.localizationpriority: high
-ms.prod: windows-server
 ---
+
 # Windows Admin Center
 
 > Applies to: Windows Admin Center, Windows Admin Center Preview
 
-Windows Admin Center is a locally deployed, browser-based app for managing Windows servers, clusters, hyper-converged infrastructure, as well as Windows 10 PCs. It comes at no additional cost beyond Windows and is ready to use in production.
+Windows Admin Center is a locally deployed, browser-based app for managing Windows servers, clusters, hyper-converged infrastructure, as well as Windows 10 PCs. It is a free product and is ready to use in production.
 
 To find out what's new, see [Release history](support/release-history.md).
 
 ## Download now
 
-**Download [Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center)** from the Microsoft Evaluation Center. Even though it says “Start your evaluation”, this is the generally available version for production use, included as part of your Windows or Windows Server license.
+**Download [Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center)** from the Microsoft Evaluation Center. Even though it says “Start your evaluation”, this is the generally available version for production use.
 
 For help installing, see [Install](deploy/install.md). For tips on getting started with Windows Admin Center, see [Get started](use/get-started.md).
 
@@ -29,19 +28,18 @@ You can update non-preview versions of Windows Admin Center by using Microsoft U
 
 Here are a few things you can use Windows Admin Center for:
 
-|     |     |
-| --- | --- |
-| ![](media/simple-icon.png)| **Simplify server management** <br/> Manage your servers and clusters with modernized versions of familiar tools such as Server Manager. Install in under five minutes and manage servers in your environment immediately, no additional configuration required. For details, see [What is Windows Admin Center?](understand/what-is.md). |
-| ![](media/future-icon.png)| **Work with hybrid solutions** <br/> Integration with Azure helps you optionally connect your on-premises servers with relevant cloud services. For details, see [Azure hybrid services](azure/index.md) |
-| ![](media/secure-icon.png)| **Streamline hyperconverged management** <br/> Streamline management of Azure Stack HCI or Windows Server hyperconverged clusters. Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking and more. For details, see [Manage Hyper-Converged Infrastructure with Windows Admin Center](use/manage-hyper-converged.md)|
+- **Simplify server management** Manage your servers and clusters with modernized versions of familiar tools such as Server Manager. Install in under five minutes and manage servers in your environment immediately, no additional configuration required. For details, see [What is Windows Admin Center?](understand/what-is.md).
+
+- **Work with hybrid solutions** Integration with Azure helps you optionally connect your on-premises servers with relevant cloud services. For details, see [Azure hybrid services](azure/index.md)
+
+- **Streamline hyperconverged management** Streamline management of Azure Stack HCI or Windows Server hyperconverged clusters. Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking and more. For details, see [Manage Hyper-Converged Infrastructure with Windows Admin Center](use/manage-hyper-converged.md)
 
 Here's a video to give you an overview, followed by a poster giving more details:
->[!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
+> [!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
 
 [![Windows Admin Center poster](media/WAC1910Poster_thumb_small.PNG)](media/WAC1910Poster_thumb.png)
 
 [Download the PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
-
 
 ## Contents at a glance
 
@@ -103,7 +101,7 @@ Here's a video to give you an overview, followed by a poster giving more details
             <h3>Connect to Azure</h3>
             <ul>
             <li><a href="azure/index.md">Azure hybrid services</a></li>
-            <li><a href="azure/azure-integration.md">Connect Windows 
+            <li><a href="azure/azure-integration.md">Connect Windows
 Admin Center to Azure</a></li>
             <li><a href="azure/deploy-wac-in-azure.md">Deploy Windows Admin Center in Azure</a></li>
             <li><a href="azure/manage-azure-vms.md">Manage Azure VMs with Windows Admin Center</a></li>
@@ -147,7 +145,7 @@ Here are some videos from Microsoft Ignite 2019 sessions:
 - [How to use Microsoft Azure hybrid services together with Windows Admin Center and Windows Server](https://aka.ms/WAC-THR2073)
 - [Live Q&A: Manage your hybrid server environment with Windows Admin Center](https://aka.ms/WAC-MLS1055)
 - [Learning Path: Hybrid management technologies](https://aka.ms/WAC-HybridMgmtTech)
-- [Hands on Lab: Windows Admin Center and Hybrid](https://aka.ms/WAC-HOL2019)
+- [Hands on Lab: Windows Admin Center and Hybrid](/learn/?WT.mc_id=sitertzn_homepage_learn-redirect-handsonlabs)
 
 Here are some videos from Windows Server Summit 2019 sessions:
 
@@ -179,6 +177,6 @@ Windows Admin Center is designed for managing a single server or cluster. It com
 
 ## Stay updated
 
-![](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR)[Follow us on Twitter](https://twitter.com/servermgmt)
+[Follow us on Twitter](https://twitter.com/servermgmt)
 
-![](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw)[Read our Blogs](https://blogs.technet.microsoft.com/servermanagement/)
+[Read our Blogs](https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog)

@@ -1,16 +1,11 @@
 ---
 title: Viewing and Managing Updates
-description: "Windows Server Update Service (WSUS) topic - How to view and manage updates in the WSUS console"
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-wsus
-ms.tgt_pltfrm: na
+description: Windows Server Update Service (WSUS) topic - How to view and manage updates in the WSUS console
 ms.topic: article
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Viewing and Managing Updates
@@ -165,33 +160,33 @@ Update classifications represent the type of update. For any given product or pr
 |Updates|Broadly released fixes for specific problems addressing non-critical, non-security related bugs.|
 
 ## Icons used for updates in Windows Server Update Services
- Updates in WSUS are represented by one of the following icons.  
+ Updates in WSUS are represented by one of the following icons.
  To view these icons, you have to enable the Supersedence column in the Update Services console.
- 
+
 ### No Icon
  The update has no supersedence relationship with any other update.
 
- **Operational Concerns:**  
+ **Operational Concerns:**
 
- There are no operational concerns.  
- 
+ There are no operational concerns.
+
 ### Superseding Icon
  ![icon](../../media/wsus/wsus-superseding.png) This update supersedes other updates.
 
- **Operational Concerns:**  
+ **Operational Concerns:**
 
- There are no operational concerns.  
+ There are no operational concerns.
 
 ### Superseded & Superseding Icon
  ![icon](../../media/wsus/wsus-superseded.png) This update is superseded by another update, and supersedes other updates.
 
- **Operational Concerns:**  
+ **Operational Concerns:**
 
  Replace these updates with the superseding updates when possible.
- 
+
 ### Superseded Icon
  ![icon](../../media/wsus/wsus-superseded-leaf.png) This update is superseded by another update.
 
- **Operational Concerns:**  
+ **Operational Concerns:**
 
  Replace these updates with the superseding updates when possible.

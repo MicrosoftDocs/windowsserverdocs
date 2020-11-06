@@ -1,17 +1,11 @@
 ---
 title: winsat mem
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for winsat mem, which tests system memory bandwidth in a manner reflective of large memory to memory buffer copies, as are used in multimedia processing.
+winms.topic: reference
 ms.assetid: cda017bf-6193-43c1-b71f-e379c23e1152
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -21,7 +15,7 @@ ms.date: 10/16/2017
 
 Tests system memory bandwidth in a manner reflective of large memory to memory buffer copies, as are used in multimedia processing.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
@@ -29,7 +23,7 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 winsat mem <parameters>
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -44,13 +38,13 @@ winsat mem <parameters>
 |-xml \<file name>|Save the output of the assessment as the specified XML file. If the specified file exists, it will be overwritten.|
 |-idiskinfo|Save information about physical volumes and logical disks as part of the **\<SystemConfig>** section in the XML output.|
 |-iguid|Create a globally unique identifier (GUID) in the XML output file.|
-|-note "note text"|Add the note text to the **\<note>** section in the XML output file.|
+|-note note text|Add the note text to the **\<note>** section in the XML output file.|
 |-icn|Include the local computer name in the XML output file.|
 |-eef|Enumerate extra system information in the XML output file.|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-- The following example runs the assessment for a minimum of 4 seconds and no longer than 12 seconds, using a 32MB buffer size and saving the results in XML format to the file **memtest.xml**.  
+- To runs the assessment for a minimum of 4 seconds and no longer than 12 seconds, using a 32MB buffer size and saving the results in XML format to the file **memtest.xml**.
   ```
   winsat mem -mint 4.0 -maxt 12.0 -buffersize 32MB -xml memtest.xml
   ```
@@ -60,5 +54,5 @@ winsat mem <parameters>
 -   Membership in the local Administrators group, or equivalent, is the minimum required to use **winsat**. The command must be executed from an elevated command prompt window.
 -   To open an elevated command prompt window, click **Start**, click **Accessories**, right-click **Command Prompt**, and click **Run as administrator**.
 
-#### Additional references
+## Additional References
 

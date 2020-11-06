@@ -3,9 +3,6 @@ title: KMS activation known issues
 description: Describes common issues that may occur during the KMS activation process, and provides resolutions and guidance
 ms.topic: troubleshooting
 ms.date: 10/3/2019
-ms.technology: server-general
-ms.topic: article
-ms.assetid: 
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm
@@ -31,7 +28,7 @@ On the KMS client computer, open the **System** control panel, and look for the 
 
 ## The KMS client computer does not activate
 
-Verify that the KMS activation threshold is met. On the KMS host computer, run Slmgr.vbs and use the **/dli** command-line option to determine the host’s current count. Until the KMS host has a count of 25, Windows 7 client computers cannot be activated. Windows Server 2008 R2 KMS clients require a KMS count of 5 for activation. For more information about KMS requirements, see the [Volume Activation Planning Guide](https://go.microsoft.com/fwlink/?linkid=155926). 
+Verify that the KMS activation threshold is met. On the KMS host computer, run Slmgr.vbs and use the **/dli** command-line option to determine the host’s current count. Until the KMS host has a count of 25, Windows 7 client computers cannot be activated. Windows Server 2008 R2 KMS clients require a KMS count of 5 for activation. For more information about KMS requirements, see the [Volume Activation Planning Guide](https://go.microsoft.com/fwlink/?linkid=155926).
 
 On the KMS client computer, look in the Application event log for event ID 12289. Check this event for the following information:
 

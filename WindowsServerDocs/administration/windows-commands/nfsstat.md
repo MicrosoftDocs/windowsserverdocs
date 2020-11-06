@@ -1,32 +1,71 @@
 ---
 title: nfsstat
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the nfsstat command, which displays statistical info about the Network File System (NFS) and Remote Procedure Call (RPC) calls.
+ms.topic: reference
 ms.assetid: da7a9768-44bd-404b-97ee-c388d00dc395
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # nfsstat
 
-
-
-You can use **nfsstat** to display or reset counts of calls made to Server for NFS.
+A command-line utility that displays statistical info about the Network File System (NFS) and Remote Procedure Call (RPC) calls. Used without parameters, this command displays all of the statistical data without resetting anything.
 
 ## Syntax
 
 ```
-nfsstat [-z]
+nfsstat [-c][-s][-n][-r][-z][-m]
 ```
 
-## Description
+### Parameters
 
-When used without the **-z** option, the **nfsstat** command-line utility displays the number of NFS V2, NFS V3, and Mount V3 calls made to the server since the counters were set to 0, either when the service started or when the counters were reset using **nfsstat -z**.
+| Parameter | Description |
+| --------- | ----------- |
+| -c | Displays only the client-side NFS and RPC and NFS calls sent and rejected by the client. To display NFS or RPC information only, combine this flag with the **-n** or **-r** parameter. |
+| -s | Displays only the server-side NFS and RPC and NFS calls sent and rejected by the server. To display NFS or RPC information only, combine this flag with the **-n** or **-r** parameter. |
+| -m | Displays information about mount flags set by mount options, mount flags internal to the system, and other mount information. |
+| -n | Displays NFS information for both the client and server. To display only the NFS client or server information, combine this flag with the **-c** or **-s** parameter. |
+| -r | Displays RPC information for both the client and server. To display only the RPC client or server information, combine this flag with the **-c** or **-s** parameter. |
+| -z | Resets the call statistics. This flag is only available to the root user and can be combined with any of the other parameters to reset particular sets of statistics after displaying them. |
+
+### Examples
+
+To display information about the number of RPC and NFS calls sent and rejected by the client, type:
+
+```
+nfsstat -c
+```
+
+To display and print the client NFS call-related information, type:
+
+```
+nfsstat -cn
+```
+
+To display RPC call-related information for both the client and server, type:
+
+```
+nfsstat -r
+```
+
+To display information about the number of RPC and NFS calls received and rejected by the server, type:
+
+```
+nfsstat -s
+```
+
+To reset all call-related information to zero on the client and server, type:
+
+```
+nfsstat -z
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Services for Network File System Command Reference](services-for-network-file-system-command-reference.md)
+
+- [NFS cmdlets reference](/powershell/module/nfs)

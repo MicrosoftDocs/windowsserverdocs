@@ -1,17 +1,11 @@
 ---
 title: Connect container endpoints to a tenant virtual network
 description: In this topic, we show you how to connect container endpoints to an existing tenant virtual network created through SDN. You use the l2bridge (and optionally l2tunnel) network driver available with the Windows libnetwork plugin for Docker to create a container network on the tenant VM.
-manager: ravirao
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: networking-sdn
-ms.tgt_pltfrm: na
+manager: grcusanz
 ms.topic: article
 ms.assetid: f7af1eb6-d035-4f74-a25b-d4b7e4ea9329
-ms.author: lizross 
-author: jmesser81
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/24/2018
 ---
 
@@ -21,11 +15,11 @@ ms.date: 08/24/2018
 
 In this topic, we show you how to connect container endpoints to an existing tenant virtual network created through SDN. You use the *l2bridge* (and optionally *l2tunnel*) network driver available with the Windows libnetwork plugin for Docker to create a container network on the tenant VM.
 
-In the [Container network drivers](https://docs.microsoft.com/virtualization/windowscontainers/container-networking/network-drivers-topologies) topic, we discussed the multiple network drivers are available through Docker on Windows. For SDN, use the *l2bridge* and *l2tunnel* drivers. For both drivers, each container endpoint is in the same virtual subnet as the container host (tenant) virtual machine. 
+In the [Container network drivers](/virtualization/windowscontainers/container-networking/network-drivers-topologies) topic, we discussed the multiple network drivers are available through Docker on Windows. For SDN, use the *l2bridge* and *l2tunnel* drivers. For both drivers, each container endpoint is in the same virtual subnet as the container host (tenant) virtual machine.
 
-The Host Networking Service (HNS), through the private cloud plugin, dynamically assigns the IP addresses for container endpoints. The container endpoints have unique IP addresses but share the same MAC address of the container host (tenant) virtual machine due to Layer-2 address translation. 
+The Host Networking Service (HNS), through the private cloud plugin, dynamically assigns the IP addresses for container endpoints. The container endpoints have unique IP addresses but share the same MAC address of the container host (tenant) virtual machine due to Layer-2 address translation.
 
-Network policy (ACLs, encapsulation, and QoS) for these container endpoints are enforced in the physical Hyper-V host as received by the Network Controller and defined in upper-layer management systems. 
+Network policy (ACLs, encapsulation, and QoS) for these container endpoints are enforced in the physical Hyper-V host as received by the Network Controller and defined in upper-layer management systems.
 
 The difference between the *l2bridge* and *l2tunnel* drivers are:
 
@@ -47,11 +41,11 @@ The difference between the *l2bridge* and *l2tunnel* drivers are:
 
    ```powershell
    # To install HyperV feature without checks for nested virtualization
-   dism /Online /Enable-Feature /FeatureName:Microsoft-Hyper-V /All 
+   dism /Online /Enable-Feature /FeatureName:Microsoft-Hyper-V /All
    ```
 
 >[!Note]
->[Nested virtualization](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/nesting) and exposing virtualization extensions is not required unless using Hyper-V Containers. 
+>[Nested virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization) and exposing virtualization extensions is not required unless using Hyper-V Containers.
 
 
 ## Workflow
@@ -88,7 +82,7 @@ foreach ($i in 1..10)
     $props = new-object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfigurationProperties
 
     $resourceid = "IP_192_168_1_1"
-    if ($i -eq 10) 
+    if ($i -eq 10)
     {
         $resourceid += "10"
         $ipstr = "192.168.1.110"
@@ -100,7 +94,7 @@ foreach ($i in 1..10)
     }
 
     $newipconfig.ResourceId = $resourceid
-    $props.PrivateIPAddress = $ipstr    
+    $props.PrivateIPAddress = $ipstr
 
     $props.PrivateIPAllocationMethod = "Static"
     $props.Subnet = new-object Microsoft.Windows.NetworkController.Subnet
@@ -116,7 +110,7 @@ New-NetworkControllerNetworkInterface -ResourceId $vmnic.ResourceId -Properties 
 ```
 
 ### 2. Enable the network proxy
-In this step, you enable the network proxy to allocate multiple IP addresses for the container host virtual machine. 
+In this step, you enable the network proxy to allocate multiple IP addresses for the container host virtual machine.
 
 To enable the network proxy, run the [ConfigureMCNP.ps1](https://github.com/Microsoft/SDN/blob/master/Containers/ConfigureMCNP.ps1) script on the **Hyper-V Host** hosting the container host (tenant) virtual machine.
 
@@ -135,13 +129,13 @@ PS C:\> InstallPrivateCloudPlugin.ps1
 ```
 
 ### 4. Create an *l2bridge* Container Network
-In this step, you use the `docker network create` command on the **container host (tenant) virtual machine** to create an l2bridge network. 
+In this step, you use the `docker network create` command on the **container host (tenant) virtual machine** to create an l2bridge network.
 
 ```powershell
 # Create the container network
 C:\> docker network create -d l2bridge --subnet="192.168.1.0/24" --gateway="192.168.1.1" MyContainerOverlayNetwork
 
-# Attach a container to the MyContainerOverlayNetwork 
+# Attach a container to the MyContainerOverlayNetwork
 C:\> docker run -it --network=MyContainerOverlayNetwork <image> <cmd>
 ```
 
@@ -149,5 +143,4 @@ C:\> docker run -it --network=MyContainerOverlayNetwork <image> <cmd>
 >Static IP assignment is not supported with *l2bridge* or *l2tunnel* container networks when used with the Microsoft SDN Stack.
 
 ## More information
-For more details about deploying an SDN infrastructure, see [Deploy a Software Defined Network Infrastructure](https://docs.microsoft.com/windows-server/networking/sdn/deploy/deploy-a-software-defined-network-infrastructure).
-
+For more details about deploying an SDN infrastructure, see [Deploy a Software Defined Network Infrastructure](../deploy/deploy-a-software-defined-network-infrastructure.md).

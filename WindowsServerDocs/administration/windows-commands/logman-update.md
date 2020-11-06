@@ -1,25 +1,17 @@
 ---
 title: logman update
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: c98af84f-64ba-40c3-826d-75b80dfb9b34 britw
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+description: Reference article for the logman update command, which updates an existing data collector.
+ms.topic: reference
+ms.assetid: c98af84f-64ba-40c3-826d-75b80dfb9b34
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # logman update
 
-
-
-Update an existing data collector.
+Updates an existing data collector.
 
 ## Syntax
 
@@ -27,16 +19,17 @@ Update an existing data collector.
 logman update <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|[logman update counter](logman-update-counter.md)|Update a counter data collector.|
-|[logman update trace](logman-update-trace.md)|Update a trace data collector.|
-|[logman update alert](logman-update-alert.md)|Update an alert data collector.|
-|[logman update cfg](logman-update-cfg.md)|Update a configuration data collector.|
-|[logman update api](logman-update-api.md)|Update an API tracing data collector.|
+| Parameter | Description |
+| ---------| ----------- |
+| [logman update counter](logman-update-counter.md) | Updates a counter data collector. |
+| [logman update alert](logman-update-alert.md) | Updates an alert data collector. |
+| [logman update cfg](logman-update-cfg.md) | Updates a configuration data collector. |
+| [logman update api](logman-update-api.md) | Updates an API tracing data collector. |
 
-#### Additional references
+## Additional References
 
-[Logman](logman.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [logman command](logman.md)

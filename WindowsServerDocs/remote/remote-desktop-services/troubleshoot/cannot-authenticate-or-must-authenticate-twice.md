@@ -1,13 +1,8 @@
 ---
 title: User can't authenticate or must authenticate twice
 description: Troubleshooting an issue in which user can't authenticate or must authenticate twice when starting a remote desktop connection.
-audience: itpro ​
-ms.custom: na
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.assetid: 
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
@@ -89,13 +84,13 @@ Be advised that all of these solutions require compromises in either performance
 
 ### User can't sign in to a Windows Server 2008 SP2 computer using a smart card
 
-This issue occurs when users sign in to a Windows Server 2008 SP2 computer that has been updated with KB4093227 (2018.4B). When users attempt to sign in using a smart card, they are denied access with messages such as “No valid certificates found. Check that the card is inserted correctly and fits tightly.” At the same time, the Windows Server computer records the Application event "An error occurred while retrieving a digital certificate from the inserted smart card. Invalid Signature."
+This issue occurs when users sign in to a Windows Server 2008 SP2 computer that has been updated with KB4093227 (2018.4B). When users attempt to sign in using a smart card, they are denied access with messages such as "No valid certificates found. Check that the card is inserted correctly and fits tightly." At the same time, the Windows Server computer records the Application event "An error occurred while retrieving a digital certificate from the inserted smart card. Invalid Signature."
 
 To resolve this issue, update the Windows Server computer with the 2018.06 B re-release of KB 4093227, [Description of the security update for the Windows Remote Desktop Protocol (RDP) denial of service vulnerability in Windows Server 2008: April 10, 2018](https://support.microsoft.com/help/4093227/security-update-for-vulnerabilities-in-windows-server-2008).
 
 ### Can't stay signed in with a smart card and Remote Desktop Services service hangs
 
-This issue occurs when users sign in to a Windows or Windows Server computer that has been updated with KB 4056446. At first, the user may be able to sign in to the system by using a smart card, but then receives a “SCARD\_E\_NO\_SERVICE” error message. The remote computer may become unresponsive.
+This issue occurs when users sign in to a Windows or Windows Server computer that has been updated with KB 4056446. At first, the user may be able to sign in to the system by using a smart card, but then receives a "SCARD\_E\_NO\_SERVICE" error message. The remote computer may become unresponsive.
 
 To work around this issue, restart the remote computer.
 
@@ -111,7 +106,7 @@ This issue may occur when a user attempts to connect to a remote desktop running
 
 To resolve this issue, update the Windows 10 version 1709 computer with KB 4343893, [August 30, 2018—KB4343893 (OS Build 16299.637)](https://support.microsoft.com/help/4343893/windows-10-update-kb4343893).
 
-## User can't sign in and receives “authentication error” and “CredSSP encryption oracle remediation” messages
+## User can't sign in and receives "authentication error" and "CredSSP encryption oracle remediation" messages
 
 When users try to sign in using any version of Windows from Windows Vista SP2 and later versions or Windows Server 2008 SP2 and later versions, they're denied access and recieve messages like these:
 
@@ -122,7 +117,7 @@ This could be due to CredSSP encryption oracle remediation
 ...
 ```
 
-“CredSSP encryption oracle remediation” refers to a set of security updates released in March, April, and May of 2018. CredSSP is an authentication provider that processes authentication requests for other applications. The March 13, 2018, "3B" and subsequent updates addressed an exploit in which an attacker could relay user credentials to execute code on the target system.
+"CredSSP encryption oracle remediation" refers to a set of security updates released in March, April, and May of 2018. CredSSP is an authentication provider that processes authentication requests for other applications. The March 13, 2018, "3B" and subsequent updates addressed an exploit in which an attacker could relay user credentials to execute code on the target system.
 
 The initial updates added support for a new Group Policy Object, Encryption Oracle Remediation, that has the following possible settings:
 
@@ -168,4 +163,4 @@ This issue occurs in high-availability deployments that use two or more Remote D
 
 This issue occurs because Remote Credential Guard uses Kerberos for authentication, and restricts NTLM. However, in a high-availability configuration with load balancing, the RD Connection Brokers can't support Kerberos operations.
 
-If you need to use a high-availability configuration with load-balanced RD Connection Brokers, you can work around this issue by disabling Remote Credential Guard. For more information about how to manage Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard#enable-windows-defender-remote-credential-guard).
+If you need to use a high-availability configuration with load-balanced RD Connection Brokers, you can work around this issue by disabling Remote Credential Guard. For more information about how to manage Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](/windows/security/identity-protection/remote-credential-guard#enable-windows-defender-remote-credential-guard).

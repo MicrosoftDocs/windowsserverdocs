@@ -1,13 +1,11 @@
 ---
 title: Extensions for Windows Admin Center
 description: Extensions for Windows Admin Center SDK (Project Honolulu)
-ms.technology: extend
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 09/17/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Extensions for Windows Admin Center
 
@@ -24,7 +22,7 @@ Here's the value you can bring to your product and customers by developing exten
 - **Integrate with Windows Admin Center tools:** Integrate your products and services with server and cluster management tools in Windows Admin Center and deliver unified and seamless, end-to-end monitoring, management, troubleshooting experiences to your customers.
 - **Leverage platform security, identity and management capabilities:** Enable Azure Active Directory (AAD) support, Multi-Factor Authentication, Role-Based Access Control (RBAC), logging, auditing for your product and services by leveraging Windows Admin Center platform capabilities to meet the complex requirements of today's IT organizations.
 - **Develop using the latest web technologies:** Quickly build stunning user experiences using modern web technologies including HTML5, CSS, Angular, TypeScript and jQuery, and rich, powerful UI controls included in the Windows Admin Center SDK.
-- **Extend product outreach:** Become a part of the new Windows Admin Center ecosystem with outreach to our quickly growing customer base and leverage the Windows Server 2019 launch momentum later this year.
+- **Extend product outreach:** Become a part of the Windows Admin Center ecosystem with outreach to our expanding customer base.
 
 ## Start developing with the Windows Admin Center SDK
 

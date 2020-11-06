@@ -1,13 +1,10 @@
 ---
 title: Egress metering in virtual network
 description: A fundamental aspect of cloud networking monetization is network bandwidth egress. For example - outbound Data transfers In Microsoft Azure business model. Outbound data is charged based on the total amount of data moving out of the Azure datacenters via the Internet in a given billing cycle.
-manager: dougkim
-ms.prod: windows-server
-ms.technology: networking-hv-switch
+manager: grcusanz
 ms.topic: get-started-article
-ms.assetid: 
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 10/02/2018
 ---
 
@@ -20,7 +17,7 @@ A fundamental aspect of cloud networking monetization is being able to bill by n
 
 Egress metering for SDN network traffic in Windows Server 2019 enables the ability to offer usage meters for outbound data transfers. Network traffic that leaves each virtual network, but remains within the data center can by tracked separately so it  can be excluded from billing calculations. Packets bound for destination IP addresses that are not included in one of the unbilled address ranges are tracked as billed outbound data transfers.
 
-## Virtual network unbilled address ranges (whitelist of IP ranges)
+## Virtual network unbilled address ranges (allowlist of IP ranges)
 
 You can find unbilled address ranges under the **UnbilledAddressRanges** property of an existing virtual Network. By default, there are no address ranges added.
 

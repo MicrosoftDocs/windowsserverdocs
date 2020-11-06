@@ -66,13 +66,11 @@
 #### [Use a custom gateway plugin in your tool extension](extend/guides/use-custom-gateway-plugin.md)
 #### [Create a connection provider](extend/guides/create-connection-provider.md)
 #### [Modify root navigation behavior](extend/guides/modify-root-navigation.md)
-#### [Cluster connection type changes in Windows Admin Center v1909](extend/guides/cluster-connection-change-wac-1909.md)
 #### [Control your tool's visibility](extend/guides/dynamic-tool-display.md)
 #### [Strings and localization](extend/guides/strings-localization.md)
 #### [UI text and design style guide](extend/guides/ui-text-style-guide.md)
 #### [Using PowerShell in your extension](extend/guides/powershell.md)
 #### [CSS icon guide](extend/guides/cssicons.md)
-#### [Migrate to the latest SDK](extend/guides/migration-guide-0_1-1_0.md)
 #### [Enable the extension discovery banner](extend/guides/extension-discovery-banner.md)
 ### [Publishing extensions](extend/publish-extensions.md)
 ### Case Studies

@@ -1,13 +1,11 @@
 ---
 title: Use a custom gateway plugin in your tool extension
 description: Develop a tool extension Windows Admin Center SDK (Project Honolulu) - use a custom gateway plugin in your tool extension
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Use a custom gateway plugin in your tool extension
@@ -22,7 +20,7 @@ If you haven't already, follow the directions in [develop a tool extension](../d
 
 ## Add a module to your project ##
 
-If you haven't already, add a new [empty module](add-module.md) to your project, which we will use in the next step.  
+If you haven't already, add a new [empty module](add-module.md) to your project, which we will use in the next step.
 
 ## Add integration to custom gateway plugin ##
 
@@ -43,7 +41,7 @@ import { AjaxResponse, Observable } from 'rxjs';
 export class PluginService {
     constructor(private appContextService: AppContextService, private http: Http) {
     }
-    
+
     public getGatewayRestResponse(): Observable<any> {
         let callUrl = this.appContextService.activeConnection.nodeName;
 
@@ -58,7 +56,7 @@ export class PluginService {
 
 Change references to ```Sample Uno``` and ```Sample%20Uno``` to your feature name as appropriate.
 
-[!WARNING]
+> [!WARNING]
 > It is recommended that the built in ```this.appContextService.node``` is used for calling any API that is defined in your custom gateway plugin. This will ensure that if credentials are required inside of your gateway plugin that they will be handled properly.
 
 ### Modify module.ts

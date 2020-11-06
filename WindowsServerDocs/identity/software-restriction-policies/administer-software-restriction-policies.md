@@ -1,17 +1,11 @@
 ---
 title: Administer Software Restriction Policies
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: security-software-restriction-policies
-ms.tgt_pltfrm: na
+description: Windows Server Security
 ms.topic: article
 ms.assetid: 8cc22093-67d1-47b6-9ddd-4569b6761ce9
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Administer Software Restriction Policies
@@ -147,7 +141,7 @@ For information about how to accomplish specific tasks using SRP, see the follow
 
 > [!WARNING]
 > -   Different administrative credentials are required to perform this procedure, depending on your environment:
-> 
+>
 >     -   If you create new software restriction policies for your local computer: Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure.
 >     -   If you create new software restriction policies for a computer that is joined to a domain, members of the Domain Admins group can perform this procedure.
 > -   If software restriction policies have already been created for a Group Policy Object (GPO), the **New Software Restriction Policies** command does not appear on the **Action** menu. To delete the software restriction policies that are applied to a GPO, in the console tree, right-click **Software Restriction Policies**, and then click **Delete Software Restriction Policies**. When you delete software restriction policies for a GPO, you also delete all software restriction policies rules for that GPO. After you delete software restriction policies, you can create new software restriction policies for that GPO.
@@ -166,7 +160,7 @@ For information about how to accomplish specific tasks using SRP, see the follow
 
 > [!NOTE]
 > -   Different administrative credentials are required to perform this procedure, depending on the environment in which you add or delete a designated file type:
-> 
+>
 >     -   If you add or delete a designated file type for your local computer: Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure.
 >     -   If you create new software restriction policies for a computer that is joined to a domain, members of the Domain Admins group can perform this procedure.
 > -   It may be necessary to create a new software restriction policy setting for the Group Policy Object (GPO) if you have not already done so.

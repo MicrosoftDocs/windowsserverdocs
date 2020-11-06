@@ -1,17 +1,11 @@
 ---
 title: Manage Multiple, remote Servers with Server Manager
-description: "Server Manager"
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
+description: Server Manager
 ms.topic: article
 ms.assetid: 3a17e686-e7f2-47e2-b7af-733777c38b5f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Manage Multiple, remote Servers with Server Manager
@@ -34,13 +28,13 @@ This topic and its subtopics provide information about how to use features in th
 
 -   [Export Server Manager settings to other computers](#BKMK_export)
 
-## <a name="BKMK_1.1"></a>Review initial considerations and system requirements
+## <a name=BKMK_1.1></a>Review initial considerations and system requirements
 The following sections list some initial considerations that you need to review, as well as hardware and software requirements for Server Manager.
 
 ### Hardware requirements
 Server Manager is installed by default with all editions of  Windows Server 2012 R2  and  Windows Server 2012 . No additional hardware requirements exist for Server Manager.
 
-### <a name="BKMK_softconfig"></a>Software and configuration requirements
+### <a name=BKMK_softconfig></a>Software and configuration requirements
 Server Manager is installed by default with all editions of  Windows Server 2012 . Although you can use Server Manager to manage [Server Core installation options](https://go.microsoft.com/fwlink/p/?LinkID=241573) of  Windows Server 2012  and  Windows Server 2008 R2  that are running on remote computers, Server Manager does not run directly on Server Core installation options.
 
 To fully manage remote servers that are running  Windows Server 2008  or  Windows Server 2008 R2 , install the following updates on the servers you want to manage, in the order shown.
@@ -88,7 +82,7 @@ for more information about running Remote Server Administration Tools for Window
 
 To perform management tasks on remote servers by using Server Manager, remote servers that you want to manage must be configured to allow remote management by using Server Manager and Windows PowerShell. If remote management has been disabled on  Windows Server 2012 R2  or  Windows Server 2012 , and you want to enable it again, perform the following steps.
 
-##### <a name="BKMK_windows"></a>To configure Server Manager remote management on  Windows Server 2012 R2  or  Windows Server 2012  by using the Windows interface
+##### <a name=BKMK_windows></a>To configure Server Manager remote management on  Windows Server 2012 R2  or  Windows Server 2012  by using the Windows interface
 
 1.  > [!NOTE]
     > The settings that are controlled by the **Configure remote Management** dialog box do not affect parts of Server Manager that use DCOM for remote communications.
@@ -107,7 +101,7 @@ To perform management tasks on remote servers by using Server Manager, remote se
 
     -   To let this computer be managed remotely by using Server Manager or Windows PowerShell, select **Enable remote management of this server from other computers**.
 
-##### <a name="BKMK_ps"></a>To enable Server Manager remote management on  Windows Server 2012 R2  or  Windows Server 2012  by using Windows PowerShell
+##### <a name=BKMK_ps></a>To enable Server Manager remote management on  Windows Server 2012 R2  or  Windows Server 2012  by using Windows PowerShell
 
 1.  Do one of the following.
 
@@ -132,9 +126,9 @@ To perform management tasks on remote servers by using Server Manager, remote se
 
     -   To enable remote management on servers that are running  Windows Server 2008 , see [Enable and Use remote Commands in Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=242565).
 
-    -   To enable remote management on servers that are running Windows Server 2003, enable WMI DCOM exceptions in Windows Firewall. For more information about how to do this on servers that are running Windows Server 2003, see [Connecting Through Windows Firewall](https://msdn.microsoft.com/library/aa389286.aspx) on MSDN.
+    -   To enable remote management on servers that are running Windows Server 2003, enable WMI DCOM exceptions in Windows Firewall. For more information about how to do this on servers that are running Windows Server 2003, see [Connecting Through Windows Firewall](/windows/win32/wmisdk/connecting-to-wmi-remotely-with-vbscript) on MSDN.
 
-## <a name="BKMK_tasks"></a>Tasks that you can perform in Server Manager
+## <a name=BKMK_tasks></a>Tasks that you can perform in Server Manager
 Server Manager makes server administration more efficient by allowing administrators to do tasks in the following table by using a single tool. In  Windows Server 2012 R2  and  Windows Server 2012 , both standard users of a server and members of the Administrators group can perform management tasks in Server Manager, but by default, standard users are prevented from performing some tasks, as shown in the following table.
 
 Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdlet module, [Enable-ServerManagerStandardUserremoting](https://technet.microsoft.com/library/jj205470.aspx) and [Disable-ServerManagerStandardUserremoting](https://technet.microsoft.com/library/jj205468.aspx), to further control standard user access to some additional data. The **Enable-ServerManagerStandardUserremoting** cmdlet can provide one or more standard, non-Administrator users access to event, service, performance counter, and role and feature inventory data.
@@ -160,7 +154,7 @@ Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdl
 > [!NOTE]
 > Server Manager can receive only online or offline status from servers that are running Windows Server 2003. Server Manager cannot be used to add roles and features to servers that are running  Windows Server 2008 R2 ,  Windows Server 2008 , or Windows Server 2003.
 
-## <a name="BKMK_start"></a>start Server Manager
+## <a name=BKMK_start></a>start Server Manager
 Server Manager starts automatically by default on servers that are running  Windows Server 2012  when a member of the Administrators group logs on to a server. If you close Server Manager, restart it in one of the following ways. This section also contains steps for changing the default behavior, and preventing Server Manager from starting automatically.
 
 #### To start Server Manager from the start screen
@@ -179,12 +173,12 @@ Server Manager starts automatically by default on servers that are running  Wind
 
 3.  Alternatively, you can prevent Server Manager from starting automatically by enabling the Group Policy setting, **Do not start Server Manager automatically at logon**. The path to this policy setting, in the Local Group Policy editor console, is computer Configuration\Administrative Templates\System\Server Manager.
 
-## <a name="BKMK_restart"></a>Restart remote servers
+## <a name=BKMK_restart></a>Restart remote servers
 You can restart a remote server from the **Servers** tile of a role or group page in Server Manager.
 
 > [!IMPORTANT]
 > Restarting a remote server forces the server to restart, even if users are still logged on to the remote server, and even if programs with unsaved data are still open. This behavior is different from shutting down or restarting the local computer, on which you would be prompted to save unsaved program data, and verify that you wanted to force logged-on users to log off. Be sure that you can force other users to log off of remote servers, and that you can discard unsaved data in programs that are running on the remote servers.
-> 
+>
 > if an automatic refresh occurs in Server Manager while a managed server is shutting down and restarting, refresh and manageability status errors can occur for the managed server, because Server Manager cannot connect to the remote server until it is finished restarting.
 
 #### To restart remote servers in Server Manager
@@ -195,7 +189,7 @@ You can restart a remote server from the **Servers** tile of a role or group pag
 
 3.  Right-click selected servers, and then click **Restart Server**.
 
-## <a name="BKMK_export"></a>Export Server Manager settings to other computers
+## <a name=BKMK_export></a>Export Server Manager settings to other computers
 In Server Manager, your list of managed servers, changes to Server Manager console settings, and custom groups that you have created are stored in the following two files. You can reuse these settings on other computers that are running the same release of Server Manager (not computers that are running the Server Core installation option) or Windows 8. Remote Server Administration Tools must be running on Windows client-based computers to export Server Manager settings to those computers.
 
 -   %*appdata*%\Microsoft\Windows\ServerManager\Serverlist.xml
@@ -237,5 +231,3 @@ You can export Server Manager settings, make Server Manager settings portable, o
     -   %*appdata*%\Microsoft\Windows\ServerManager\Serverlist.xml
 
     -   %*localappdata*%\Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
-
-

@@ -1,20 +1,18 @@
 ---
 title: Troubleshoot Always On VPN
 description: This topic provides instructions for verifying and troubleshooting Always On VPN deployment in Windows Server 2016.
-ms.prod: windows-server
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ms.date: 06/11/2018
-ms.author: lizross
-author: eross-msft
+ms.author: v-tea
+author: Teresa-MOTIV
 ---
-# Troubleshoot Always On VPN 
+# Troubleshoot Always On VPN
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-If your Always On VPN setup is failing to connect clients to your internal network, the cause is likely an invalid VPN certificate, incorrect NPS policies, or issues with the client deployment scripts or in Routing and Remote Access. The first step in troubleshooting and testing your VPN connection is understanding the core components of the Always On VPN infrastructure. 
+If your Always On VPN setup is failing to connect clients to your internal network, the cause is likely an invalid VPN certificate, incorrect NPS policies, or issues with the client deployment scripts or in Routing and Remote Access. The first step in troubleshooting and testing your VPN connection is understanding the core components of the Always On VPN infrastructure.
 
 You can troubleshoot connection issues in several ways. For client-side issues and general troubleshooting, the application logs on client computers are invaluable. For authentication-specific issues, the NPS log on the NPS server can help you determine the source of the problem.
 
@@ -30,7 +28,7 @@ You can troubleshoot connection issues in several ways. For client-side issues a
 
     - If you know which tunnel to use for your deployment, set the type of VPN to that particular tunnel type on the VPN client side.
 
-    - By making a VPN connection with a particular tunnel type, your connection will still fail, but it will result in a more tunnel-specific error (for example, “GRE blocked for PPTP”).
+    - By making a VPN connection with a particular tunnel type, your connection will still fail, but it will result in a more tunnel-specific error (for example, "GRE blocked for PPTP").
 
     - This error also occurs when the VPN server cannot be reached or the tunnel connection fails.
 
@@ -108,7 +106,7 @@ Generally, the VPN client machine is joined to the Active Directory–based doma
 
 The application logs on client computers record most of the higher-level details of VPN connection events.
 
-Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](https://msdn.microsoft.com/library/windows/desktop/bb530704.aspx).
+Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](/previous-versions/mt728163(v=technet.10)).
 
 ## NPS logs
 
@@ -122,7 +120,7 @@ ComputerName,ServiceName,Record-Date,Record-Time,Packet-Type,User-Name,Fully-Qua
 
 If you paste this heading row as the first line of the log file, then import the file into Microsoft Excel, the columns will be properly labeled.
 
-The NPS logs can be helpful in diagnosing policy-related issues. For more information about NPS logs, see [Interpret NPS Database Format Log Files](https://technet.microsoft.com/library/cc771748.aspx).
+The NPS logs can be helpful in diagnosing policy-related issues. For more information about NPS logs, see [Interpret NPS Database Format Log Files](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771748(v=ws.10)).
 
 ## VPN_Profile.ps1 script issues
 
@@ -164,15 +162,15 @@ A small misconfiguration can cause the client connection to fail and can be chal
 
   - The user has a valid client authentication certificate in their Personal Certificate store that was not issued by Azure AD.
 
-  - The VPN profile \<TLSExtensions\> section is either missing or does not contain the **\<EKUName\>AAD Conditional Access\</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>\<EKUName>AAD Conditional Access</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>** entries. The \<EKUName> and \<EKUOID> entries tell the VPN client which certificate to retrieve from the user's certificate store when passing the certificate to the VPN server. Without this, the VPN client uses whatever valid Client Authentication certificate is in the user's certificate store and authentication succeeds. 
+  - The VPN profile \<TLSExtensions\> section is either missing or does not contain the **\<EKUName\>AAD Conditional Access\</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>\<EKUName>AAD Conditional Access</EKUName\>\<EKUOID\>1.3.6.1.4.1.311.87</EKUOID\>** entries. The \<EKUName> and \<EKUOID> entries tell the VPN client which certificate to retrieve from the user's certificate store when passing the certificate to the VPN server. Without this, the VPN client uses whatever valid Client Authentication certificate is in the user's certificate store and authentication succeeds.
 
   - The RADIUS server (NPS) has not been configured to only accept client certificates that contain the **AAD Conditional Access** OID.
 
 - **Possible solution.** To escape this loop, do the following:
 
-  1. In Windows PowerShell, run the **Get-WmiObject** cmdlet to dump the VPN profile configuration. 
+  1. In Windows PowerShell, run the **Get-WmiObject** cmdlet to dump the VPN profile configuration.
   2. Verify that the **\<TLSExtensions>**, **\<EKUName>**, and **\<EKUOID>** sections exist and shows the correct name and OID.
-      
+
       ```powershell
       PS C:\> Get-WmiObject -Class MDM_VPNv2_01 -Namespace root\cimv2\mdm\dmmap
 
@@ -255,7 +253,7 @@ A small misconfiguration can cause the client connection to fail and can be chal
         Simple container name: te-User-c7bcc4bd-0498-4411-af44-da2257f54387
         Provider = Microsoft Enhanced Cryptographic Provider v1.0
       Encryption test passed
-        
+
       ================ Certificate 1 ================
       Serial Number: 367fbdd7e6e4103dec9b91f93959ac56
       Issuer: CN=Microsoft VPN root CA gen 1
@@ -274,7 +272,7 @@ A small misconfiguration can cause the client connection to fail and can be chal
      >If a certificate from Issuer **CN=Microsoft VPN root CA gen 1** is present in the user's Personal store, but the user gained access by selecting **X** to close the Oops message, collect CAPI2 event logs to verify the certificate used to authenticate was a valid Client Authentication certificate that was not issued from the Microsoft VPN root CA.
 
   4. If a valid Client Authentication certificate exists in the user's Personal store, the connection fails (as it should) after the user selects the **X** and  if the **\<TLSExtensions>**, **\<EKUName>**, and **\<EKUOID>** sections exist and contain the correct information.
-   
+
      An error message that says "A certificate could not be found that can be used with the Extensible Authenticate Protocol" appears.
 
 ### Unable to delete the certificate from the VPN connectivity blade

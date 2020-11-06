@@ -1,10 +1,8 @@
 ---
 title: Performance Tuning for Cache and Memory Manager Subsystems
 description: Performance Tuning for Cache and Memory Manager Subsystems
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: landing-page
-ms.author: Pavel; ATales
+ms.author: pavel
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -27,4 +25,4 @@ As depicted by the solid arrows in the preceding figure, a 256 KB region of data
 
 -   [Cache and Memory Manager Potential Performance Issues](troubleshoot.md)
 
--   [Cache and Memory Manager Improvements in Windows Server 2016](improvements-in-2016.md)
+-   [Cache and Memory Manager Improvements in Windows Server 2016](./improvements-in-windows-server.md)

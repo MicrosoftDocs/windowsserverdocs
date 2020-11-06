@@ -3,7 +3,6 @@ title: TCP three-way handshake failure during SMB connection
 description: Introduces the TCP three-way handshake failure during SMB connection.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
@@ -64,7 +63,7 @@ If Windows Firewall is enabled, enable firewall logging to determine whether it 
 Make sure that the appropriate "File and Printer Sharing (SMB-In)" rules are enabled in **Windows Firewall with Advanced Security** \> **Inbound Rules**.
 
 > [!NOTE]
-> Depending on how your computer is set up, “Windows Firewall” might be called “Windows Defender Firewall.”
+> Depending on how your computer is set up, "Windows Firewall" might be called "Windows Defender Firewall."
 
 ## Scenario 2
 

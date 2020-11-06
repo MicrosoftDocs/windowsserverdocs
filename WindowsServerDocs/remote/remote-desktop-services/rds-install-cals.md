@@ -1,12 +1,6 @@
 ---
 title: Install RDS client access licenses
 description: Learn how to install CALs for RD clients.
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 ms.author: elizapo

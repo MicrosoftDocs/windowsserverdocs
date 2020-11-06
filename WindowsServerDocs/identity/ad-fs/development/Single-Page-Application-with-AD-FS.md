@@ -6,9 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 06/13/2018
 ms.topic: article
-ms.prod: windows-server
-
-ms.technology: active-directory-federation-services
 ---
 
 # Build a single page web application using OAuth and ADAL.JS with AD FS 2016 or later
@@ -21,11 +18,10 @@ In this scenario, when the user signs in, the JavaScript front end uses [Active 
 >The example that you can build here is for educational purposes only. These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model. The example may not include all aspects of error handling and other relate functionality.
 
 >[!NOTE]
->This walkthrough is applicable **only** to AD FS Server 2016 and later 
+>This walkthrough is applicable **only** to AD FS Server 2016 and later
 
 ## Overview
 In this sample we will be creating an authentication flow where a single page application client will be authenticating against AD FS to secure access to the WebAPI resources on the backend. Below is the overall authentication flow
-
 
 ![AD FS Authorization](media/Single-Page-Application-with-AD-FS/authenticationflow.PNG)
 
@@ -34,14 +30,14 @@ When using a single page application, the user navigates to a starting location,
 If ADAL sees a trigger for authentication, it uses the information provided by the application and directs the authentication to your AD FS STS.  The single page application, which is registered as a public client in AD FS, is automatically configured for implicit grant flow. The authorization request results in an ID token that is returned back to the application via a #fragment. Further calls to the backend WebAPI will carry this ID token as the bearer token in the header to gain access to the WebAPI.
 
 ## Setting up the development box
-This walk-through uses Visual Studio 2015. The project uses ADAL JS library. To learn about ADAL please read [Active Directory Authentication Library .NET.](https://msdn.microsoft.com/library/azure/mt417579.aspx)
+This walk-through uses Visual Studio 2015. The project uses ADAL JS library. To learn about ADAL please read [Active Directory Authentication Library .NET.](/dotnet/api/microsoft.identitymodel.clients.activedirectory?view=azure-dotnet)
 
 ## Setting up the environment
 For this walkthrough we will be using a basic setup of:
 
-1.	DC: Domain controller for the domain in which AD FS will be hosted
-2.	AD FS Server: The AD FS Server for the domain
-3.	Development Machine: Machine where we have Visual Studio installed and will be developing our sample
+1.    DC: Domain controller for the domain in which AD FS will be hosted
+2.    AD FS Server: The AD FS Server for the domain
+3.    Development Machine: Machine where we have Visual Studio installed and will be developing our sample
 
 You can, if you want, use only two machines. One for DC/AD FS and the other for developing the sample.
 
@@ -50,14 +46,14 @@ How to setup the domain controller and AD FS is beyond the scope of this article
 - [AD DS Deployment](../../ad-ds/deploy/AD-DS-Deployment.md)
 - [AD FS Deployment](../AD-FS-Deployment.md)
 
-
-
 ## Clone or download this repository
 We will be using the sample application created for integrating Azure AD into an AngularJS single page app and modifying it to instead secure the backend resource by using AD FS.
 
 From your shell or command line:
 
-    git clone https://github.com/Azure-Samples/active-directory-angularjs-singlepageapp.git
+```
+git clone https://github.com/Azure-Samples/active-directory-angularjs-singlepageapp.git
+```
 
 ## About the Code
 The key files containing authentication logic are the following:
@@ -96,7 +92,8 @@ Configure ADAL JS
 
 Open the **app.js** file and change the **adalProvider.init** definition to:
 
-	adalProvider.init(
+```
+    adalProvider.init(
         {
             instance: 'https://fs.contoso.com/', // your STS URL
             tenant: 'adfs',                      // this should be adfs
@@ -104,7 +101,8 @@ Open the **app.js** file and change the **adalProvider.init** definition to:
             //cacheLocation: 'localStorage', // enable this for IE, as sessionStorage does not work for localhost.
         },
         $httpProvider
-        );
+    );
+```
 
 |Configuration|Description|
 |--------|--------|
@@ -115,30 +113,33 @@ Open the **app.js** file and change the **adalProvider.init** definition to:
 ## Configure WebAPI to use AD FS
 Open the **Startup.Auth.cs** file in the sample and add the following at the beginning:
 
-	using System.IdentityModel.Tokens;
+```
+    using System.IdentityModel.Tokens;
 
 remove:
 
-                app.UseWindowsAzureActiveDirectoryBearerAuthentication(
-    new WindowsAzureActiveDirectoryBearerAuthenticationOptions
-    {
-    Audience = ConfigurationManager.AppSettings["ida:Audience"],
-    Tenant = ConfigurationManager.AppSettings["ida:Tenant"]
-    });
+    app.UseWindowsAzureActiveDirectoryBearerAuthentication(
+        new WindowsAzureActiveDirectoryBearerAuthenticationOptions
+        {
+            Audience = ConfigurationManager.AppSettings["ida:Audience"],
+            Tenant = ConfigurationManager.AppSettings["ida:Tenant"]
+        }
+    );
 
 and add:
 
     app.UseActiveDirectoryFederationServicesBearerAuthentication(
-    new ActiveDirectoryFederationServicesBearerAuthenticationOptions
-    {
-    MetadataEndpoint = ConfigurationManager.AppSettings["ida:AdfsMetadataEndpoint"],
-    TokenValidationParameters = new TokenValidationParameters()
-    {
-    ValidAudience = ConfigurationManager.AppSettings["ida:Audience"],
-    ValidIssuer = ConfigurationManager.AppSettings["ida:Issuer"]
-    }
-    }
+        new ActiveDirectoryFederationServicesBearerAuthenticationOptions
+        {
+            MetadataEndpoint = ConfigurationManager.AppSettings["ida:AdfsMetadataEndpoint"],
+            TokenValidationParameters = new TokenValidationParameters()
+            {
+                ValidAudience = ConfigurationManager.AppSettings["ida:Audience"],
+                ValidIssuer = ConfigurationManager.AppSettings["ida:Issuer"]
+            }
+        }
     );
+```
 
 |Parameter|Description|
 |--------|--------|
@@ -149,11 +150,13 @@ and add:
 ## Add application configuration for AD FS
 Change the appsettings as below:
 
-    <appSettings>
+```xml
+<appSettings>
     <add key="ida:Audience" value="https://localhost:44326/" />
     <add key="ida:AdfsMetadataEndpoint" value="https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml" />
     <add key="ida:Issuer" value="https://fs.contoso.com/adfs" />
-      </appSettings>
+</appSettings>
+```
 
 ## Running the solution
 Clean the solution, rebuild the solution and run it. If you want to see detailed traces, launch Fiddler and enable HTTPS decryption.
@@ -175,4 +178,4 @@ You will be able to now call the backend API to add ToDo List items for the logg
 ![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp6.PNG)
 
 ## Next Steps
-[AD FS Development](../../ad-fs/AD-FS-Development.md)  
+[AD FS Development](../../ad-fs/AD-FS-Development.md)

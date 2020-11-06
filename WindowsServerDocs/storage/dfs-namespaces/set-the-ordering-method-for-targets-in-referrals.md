@@ -2,8 +2,6 @@
 title: Set the Ordering Method for Targets in Referrals
 description: This article describes how to set the ordering method for targets in referrals.
 ms.date: 6/5/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -29,13 +27,13 @@ Use the following procedure to set the ordering method on the namespace root:
 3.  On the **Referrals** tab, select an ordering method.
 
 > [!NOTE]
-> To use Windows PowerShell to set the ordering method for targets in namespace root referrals, use the [Set-DfsnRoot](https://technet.microsoft.com/library/jj884281.aspx) cmdlet with one of the following parameters:
+> To use Windows PowerShell to set the ordering method for targets in namespace root referrals, use the [Set-DfsnRoot](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) cmdlet with one of the following parameters:
 >    -   **EnableSiteCosting** specifies the **Lowest cost ordering** method
 >    -   **EnableInsiteReferrals** specifies the **Exclude targets outside of the client's site** ordering method
->    -   Omitting either parameter specifies the **Random order** referral ordering method. 
+>    -   Omitting either parameter specifies the **Random order** referral ordering method.
 
 The DFSN Windows PowerShell module was introduced in Windows Server 2012.
-   
+
 ## To set the ordering method for targets in folder referrals
 
 Folders with targets inherit the ordering method from the namespace root. You can override the ordering method by using the following procedure:
@@ -47,7 +45,7 @@ Folders with targets inherit the ordering method from the namespace root. You ca
 3.  On the **Referrals** tab, select the **Exclude targets outside of the client's site** check box.
 
 > [!NOTE]
-> To use Windows PowerShell to exclude folder targets outside of the client's site, use the [Set-DfsnFolder –EnableInsiteReferrals](https://technet.microsoft.com/library/jj884283.aspx) cmdlet.
+> To use Windows PowerShell to exclude folder targets outside of the client's site, use the [Set-DfsnFolder –EnableInsiteReferrals](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) cmdlet.
 
 ## Target referral ordering methods
 
@@ -83,7 +81,7 @@ In this method, the referral contains only the targets that are in the same site
 > [!NOTE]
 > Targets that have target priority set to "First among all targets" or "Last among all targets" are still listed in the referral, even if the ordering method is set to **Exclude targets outside of the client's site**.
 
-## See also 
+## Additional References
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)

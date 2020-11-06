@@ -1,12 +1,10 @@
 ---
-title: Troubleshooting the Host Guardian Service
-ms.custom: na
-ms.prod: windows-server
+title: Troubleshooting Guarded Hosts
 ms.topic: article
 ms.assetid: 80ea38f4-4de6-4f85-8188-33a63bb1cf81
 manager: dongill
 author: rpsqrd
-ms.technology: security-guarded-fabric
+ms.author: ryanpu
 ms.date: 09/25/2019
 ---
 
@@ -57,20 +55,20 @@ The table below explains the possible values for AttestationSubStatus and tips o
 
 AttestationSubStatus       | What it means and what to do
 ---------------------------|-------------------------------
-BitLocker                  | The host's OS volume is not encrypted by BitLocker. To resolve this, [enable BitLocker](https://technet.microsoft.com/itpro/windows/keep-secure/bitlocker-basic-deployment) on the OS volume or [disable the BitLocker policy on HGS](guarded-fabric-manage-hgs.md#review-attestation-policies).
+BitLocker                  | The host's OS volume is not encrypted by BitLocker. To resolve this, [enable BitLocker](/windows/security/information-protection/bitlocker/bitlocker-basic-deployment) on the OS volume or [disable the BitLocker policy on HGS](guarded-fabric-manage-hgs.md#review-attestation-policies).
 CodeIntegrityPolicy        | The host is not configured to use a code integrity policy or is not using a policy trusted by the HGS server. Ensure a code integrity policy has been configured, that the host has been restarted, and the policy is registered with the HGS server. For more information, see [Create and apply a code integrity policy](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md#create-and-apply-a-code-integrity-policy).
 DumpsEnabled               | The host is configured to allow crash dumps or live memory dumps, which is not allowed by your HGS policies. To resolve this, disable dumps on the host.
-DumpEncryption             | The host is configured to allow crash dumps or live memory dumps but does not encrypt those dumps. Either disable dumps on the host or [configure dump encryption](https://technet.microsoft.com/windows-server-docs/virtualization/hyper-v/manage/about-dump-encryption).
-DumpEncryptionKey          | The host is configured to allow and encrypt dumps, but is not using a certificate known to HGS to encrypt them. To resolve this, [update the dump encryption key](https://technet.microsoft.com/windows-server-docs/virtualization/hyper-v/manage/about-dump-encryption) on the host or [register the key with HGS](guarded-fabric-manage-hgs.md#authorizing-new-guarded-hosts).
+DumpEncryption             | The host is configured to allow crash dumps or live memory dumps but does not encrypt those dumps. Either disable dumps on the host or [configure dump encryption](../../virtualization/hyper-v/manage/about-dump-encryption.md).
+DumpEncryptionKey          | The host is configured to allow and encrypt dumps, but is not using a certificate known to HGS to encrypt them. To resolve this, [update the dump encryption key](../../virtualization/hyper-v/manage/about-dump-encryption.md) on the host or [register the key with HGS](guarded-fabric-manage-hgs.md#authorizing-new-guarded-hosts).
 FullBoot                   | The host resumed from a sleep state or hibernation. Restart the host to allow for a clean, full boot.
-HibernationEnabled         | The host is configured to allow hibernation without encrypting the hibernation file, which is not allowed by your HGS policies. Disable hibernation and restart the host, or [configure dump encryption](https://technet.microsoft.com/windows-server-docs/virtualization/hyper-v/manage/about-dump-encryption).
+HibernationEnabled         | The host is configured to allow hibernation without encrypting the hibernation file, which is not allowed by your HGS policies. Disable hibernation and restart the host, or [configure dump encryption](../../virtualization/hyper-v/manage/about-dump-encryption.md).
 HypervisorEnforcedCodeIntegrityPolicy | The host is not configured to use a hypervisor-enforced code integrity policy. Verify that code integrity is enabled, configured, and enforced by the hypervisor. See the [Device Guard deployment guide](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-deploy-code-integrity-policies) for more information.
 Iommu                      | The host's Virtualization Based Security features are not configured to require an IOMMU device for protection against Direct Memory Access attacks, as required by your HGS policies. Verify the host has an IOMMU, that it is enabled, and that Device Guard is [configured to require DMA protections](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-enable-virtualization-based-security#enable-virtualization-based-security-vbs-and-device-guard) when launching VBS.
-PagefileEncryption         | Page file encryption is not enabled on the host. To resolve this, run `fsutil behavior set encryptpagingfile 1` to enable page file encryption. For more information, see [fsutil behavior](https://technet.microsoft.com/library/cc785435.aspx).
-SecureBoot                 | Secure Boot is either not enabled on this host or not using the Microsoft Secure Boot template. [Enable Secure Boot](https://msdn.microsoft.com/windows/hardware/commercialize/manufacture/desktop/disabling-secure-boot#enable_secure_boot) with the Microsoft Secure Boot template to resolve this issue.
+PagefileEncryption         | Page file encryption is not enabled on the host. To resolve this, run `fsutil behavior set encryptpagingfile 1` to enable page file encryption. For more information, see [fsutil behavior](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc785435(v=ws.11)).
+SecureBoot                 | Secure Boot is either not enabled on this host or not using the Microsoft Secure Boot template. [Enable Secure Boot](/windows-hardware/manufacture/desktop/disabling-secure-boot#enable_secure_boot) with the Microsoft Secure Boot template to resolve this issue.
 SecureBootSettings         | The TPM baseline on this host does not match any of those trusted by HGS. This can occur when your UEFI launch authorities, DBX variable, debug flag, or custom Secure Boot policies are changed by installing new hardware or software. If you trust the current hardware, firmware, and software configuration of this machine, you can [capture a new TPM baseline](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md#capture-the-tpm-baseline-for-each-unique-class-of-hardware) and [register it with HGS](guarded-fabric-manage-hgs.md#authorizing-new-guarded-hosts).
 TcgLogVerification         | The TCG log (TPM baseline) cannot be obtained or verified. This can indicate a problem with the host's firmware, the TPM, or other hardware components. If your host is configured to attempt PXE boot before booting Windows, an outdated Net Boot Program (NBP) can also cause this error. Ensure all NBPs are up to date when PXE boot is enabled.
-VirtualSecureMode          | Virtualization Based Security features are not running on the host. Ensure VBS is enabled and that your system meets the configured [platform security features](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-enable-virtualization-based-security#validate-enabled-device-guard-hardware-based-security-features). Consult the [Device Guard documentation](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide) for more information about VBS requirements.
+VirtualSecureMode          | Virtualization Based Security features are not running on the host. Ensure VBS is enabled and that your system meets the configured [platform security features](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-enable-virtualization-based-security#validate-enabled-device-guard-hardware-based-security-features). Consult the [Device Guard documentation](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) for more information about VBS requirements.
 
 ## Modern TLS
 
@@ -87,4 +85,4 @@ reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SystemDefaultTlsVers
 > [!WARNING]
 > The system default TLS versions setting will affect all .NET apps on your machine. Be sure to test the registry keys in an isolated environment before deploying them to your production machines.
 
-For more information about .NET 4.6 and TLS 1.0, see [Solving the TLS 1.0 Problem, 2nd Edition](https://docs.microsoft.com/security/solving-tls1-problem).
+For more information about .NET 4.6 and TLS 1.0, see [Solving the TLS 1.0 Problem, 2nd Edition](/security/solving-tls1-problem).

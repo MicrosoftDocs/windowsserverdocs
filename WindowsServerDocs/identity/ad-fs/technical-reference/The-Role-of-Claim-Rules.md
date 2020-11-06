@@ -1,15 +1,11 @@
 ---
 ms.assetid: 65e474b5-3076-4ba3-809d-a09160f7c2bd
 title: The Role of Claim Rules
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-
-ms.technology: identity-adfs
 ---
 
 
@@ -56,7 +52,7 @@ For more information about how to use the claim rule language syntax, see [The R
 ### How to create a claim rule
 Claim rules are created separately for each federated trust relationship within the Federation Service and are not shared across multiple trusts. You can either create a rule from a claim rule template, start from scratch by authoring the rule using the claim rule language or use Windows PowerShell to customize a rule.
 
-All of these options coexist to provide you with the flexibility of choosing the appropriate method for a given scenario. For more information about how to create a claim rule, see [Configuring Claim Rules](https://technet.microsoft.com/library/ee913571.aspx) in the AD FSDeployment Guide.
+All of these options coexist to provide you with the flexibility of choosing the appropriate method for a given scenario. For more information about how to create a claim rule, see [Configuring Claim Rules](../deployment/configuring-claim-rules.md) in the AD FSDeployment Guide.
 
 #### Using claim rule templates
 Claim rule templates are only used during the claim rule creation process. You can use any of the following templates to create a claim rule:
@@ -97,12 +93,10 @@ The following table describes the various types of claim rule sets and explains 
 
 |Claim rule set type|Description|Used on|
 |-----------------------|---------------|-----------|
-|Acceptance transform rule set|A set of claim rules that you use on a particular claims provider trust to specify the incoming claims that will be accepted from the claims provider organization and the outgoing claims that will be sent to the relying party trust.<br /><br />The incoming claims that will be used to source this rule set, will be the claims that are output by the issuance transform rule set as specified in the claims provider organization.<br /><br />By default, the claims provider trust node contains a claim provider trust named **Active Directory** which is used to represent the source attribute store for the acceptance transform rule set. This trust object is used to represent the connection from your Federation Service to an Active Directory database on your network. This default trust is what processes claims for users that have been authenticated by Active Directory and it cannot be deleted.|Claims provider trusts|
-|Issuance Transform Rule Set|A set of claim rules that you use on a relying party trust to specify the claims that will be issued to the relying party.<br /><br />The incoming claims that will be used to source this rule set, will initially be the claims that are output by the acceptance transform rules.|Relying party trusts|
-|Issuance Authorization Rule Set|A set of claim rules that you use on a relying party trust to specify the users that will be permitted to receive a token for the relying party.<br /><br />These rules determine whether a user can receive claims for a relying party and, therefore, access to the relying party.<br /><br />Unless you specify an issuance authorization rule, all users will be denied access by default.|Relying party trusts|
-|Delegation Authorization Rule Set|A set of claim rules that you use on a relying party trust to specify the users that will be permitted to act as delegates for other users to the relying party.<br /><br />These rules determine whether the requester is permitted to impersonate a user while still identifying the requester in the token that is sent to the relying party.<br /><br />Unless you specify a delegation authorization rule, no users can act as delegates by default.|Relying party trusts|
-|Impersonation Authorization Rule Set|A set of claim rules that you configure using Windows PowerShell to determine whether a user can fully impersonate another user to the relying party.<br /><br />These rules determine whether the requester is permitted to impersonate a user without identifying the requester in the token that is sent to the relying party.<br /><br />Impersonating another user in this way is a very powerful capability, because the relying party will not know that the user is being impersonated.|Relying party trust|
+|Acceptance transform rule set|A set of claim rules that you use on a particular claims provider trust to specify the incoming claims that will be accepted from the claims provider organization and the outgoing claims that will be sent to the relying party trust.<p>The incoming claims that will be used to source this rule set, will be the claims that are output by the issuance transform rule set as specified in the claims provider organization.<p>By default, the claims provider trust node contains a claim provider trust named **Active Directory** which is used to represent the source attribute store for the acceptance transform rule set. This trust object is used to represent the connection from your Federation Service to an Active Directory database on your network. This default trust is what processes claims for users that have been authenticated by Active Directory and it cannot be deleted.|Claims provider trusts|
+|Issuance Transform Rule Set|A set of claim rules that you use on a relying party trust to specify the claims that will be issued to the relying party.<p>The incoming claims that will be used to source this rule set, will initially be the claims that are output by the acceptance transform rules.|Relying party trusts|
+|Issuance Authorization Rule Set|A set of claim rules that you use on a relying party trust to specify the users that will be permitted to receive a token for the relying party.<p>These rules determine whether a user can receive claims for a relying party and, therefore, access to the relying party.<p>Unless you specify an issuance authorization rule, all users will be denied access by default.|Relying party trusts|
+|Delegation Authorization Rule Set|A set of claim rules that you use on a relying party trust to specify the users that will be permitted to act as delegates for other users to the relying party.<p>These rules determine whether the requester is permitted to impersonate a user while still identifying the requester in the token that is sent to the relying party.<p>Unless you specify a delegation authorization rule, no users can act as delegates by default.|Relying party trusts|
+|Impersonation Authorization Rule Set|A set of claim rules that you configure using Windows PowerShell to determine whether a user can fully impersonate another user to the relying party.<p>These rules determine whether the requester is permitted to impersonate a user without identifying the requester in the token that is sent to the relying party.<p>Impersonating another user in this way is a very powerful capability, because the relying party will not know that the user is being impersonated.|Relying party trust|
 
 For more information about select the appropriate claim rules to use in your organization, see [Determine the Type of Claim Rule Template to Use](Determine-the-Type-of-Claim-Rule-Template-to-Use.md).
-
-

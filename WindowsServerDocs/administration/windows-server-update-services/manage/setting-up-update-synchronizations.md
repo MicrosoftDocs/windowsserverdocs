@@ -1,22 +1,16 @@
 ---
 title: Setting up Update Synchronizations
-description: "Windows Server Update Service (WSUS) topic - How to setup and configure Update Synchronizations"
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-wsus
-ms.tgt_pltfrm: na
+description: Windows Server Update Service (WSUS) topic - How to setup and configure Update Synchronizations
 ms.topic: article
 ms.assetid: ddd5c395-451b-44a0-8e08-a05db26d2282
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Setting up Update Synchronizations
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 During synchronization, a WSUS server downloads updates (update metadata and files) from an update source. It also downloads new product classifications and categories, if any. When your WSUS server synchronizes for the first time, it will download all of the updates that you specified when you configured synchronization options. After the first synchronization, your WSUS server downloads only updates from the update source, as well as revisions in metadata for existing updates, and expirations to updates.
 
@@ -46,7 +40,7 @@ If a WSUS server is running in replica mode, you will not be able to perform thi
 
 > [!NOTE]
 > You can remove products or classifications in the same way. Your WSUS server will stop synchronizing new updates for the products you have cleared. However, updates that were synchronized for those products before you cleared them will remain on your WSUS server and will be listed as available.
-> 
+>
 > To remove those products,  Decline the update, as documented in [Updates Operations](updates-operations.md), and then use the [The Server cleanup Wizard](the-server-cleanup-wizard.md) to remove them.
 
 ### Synchronizing Updates by Language
@@ -83,7 +77,7 @@ Options for customizing how your WSUS server synchronizes with the update source
 
 -   You can specify a custom port for synchronization. For information about configuring ports, see [Step 3: Configure WSUS](../deploy/2-configure-wsus.md) in the WSUS deployment guide.
 
--   You can use Secure Socket Layers (SSL) to secure synchronization of update information between WSUS servers. For more information about using SSL, see section "3.5. Secure WSUS with the Secure Sockets Layer Protocol" of [Step 3: Configure WSUS](../deploy/2-configure-wsus.md) in the WSUS deployment guide.
+-   You can use Secure Socket Layers (SSL) to secure synchronization of update information between WSUS servers. For more information about using SSL, see section 3.5. Secure WSUS with the Secure Sockets Layer Protocol of [Step 3: Configure WSUS](../deploy/2-configure-wsus.md) in the WSUS deployment guide.
 
 ## Synchronizing Manually or Automatically
 You can either synchronize your WSUS server manually or specify a time for it to synchronize automatically.

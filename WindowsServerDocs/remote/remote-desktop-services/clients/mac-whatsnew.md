@@ -1,17 +1,11 @@
 ---
 title: What's new in the macOS client
 description: Learn about recent changes to the Remote Desktop client for Mac
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/06/2020
+ms.date: 08/19/2020
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -20,11 +14,85 @@ We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md)
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
 
+## Updates for version 10.4.0
+
+*Date published: 8/20/20*
+
+In this release, we've made substantial updates to the underlying code that powers the Remote Desktop experience across all our clients. We've also added some new features and addressed bugs and crashes that were showing up in error reporting. Here are some changes you may notice:
+
+- PC Quick Connect (Cmd+K) allows you to connect to a PC without creating a bookmark.
+- Auto-reconnect now recovers from transient network glitches for PC connections.
+- When resuming a suspended MacBook, you can use auto-reconnect to reconnect to any disconnected PC connections.
+- Added support for HTTP proxies when subscribing and connecting to Windows Virtual Desktop resources.
+- Implemented support for HTTP proxy automatic configuration with PAC files.
+- Integrated support for NETBIOS name resolution so you can connect to PCs on your local network more easily.
+- Fixed an issue where the system menu bar wouldn't respond while the app was in focus.
+- Fixed a client-side race condition that could cause decryption errors on the server.
+- Made improvements to monitor layout and geometry heuristics for multimon scenarios involving Retina-class monitors.
+- Multimon layout configurations are now maintained across session redirection scenarios.
+- Addressed an issue that prevented the menu bar from dropping in multimon scenarios.
+- User account UI that interacts with the macOS keychain will now surface keychain access errors.
+- Hitting cancel during workspace subscription will now result in nothing being added to the Connection Center.
+- Added key mappings for Cmd+Z and Cmd+F to map to Ctrl+Z and Ctrl+F respectively.
+- Fixed a bug that caused remote apps to open behind the Connection Center when launched.
+- Worked around an issue where AAC audio playback on macOS 10.15 would cause the client to stall.
+- Shift+left-click now works in Unicode mode.
+- Fixed a bug where using the Shift key triggered the Sticky Keys alert in Unicode mode.
+- Added a check for network availability before connection initiation.
+- Addressed pulsing of PC thumbnails that sometimes happened during the connection sequence.
+- Fixed a bug where the password field in the Add/Edit User Account sheet become multiline.
+- The "Collapse All" option is now greyed out if all workspaces are collapsed.
+- The "Expand All" option is now greyed out if all workspaces are expanded.
+- The first-run permissions UI is no longer shown on High Sierra.
+- Fixed an issue where users were unable to connect to Windows Virtual Desktop endpoints using saved credentials in the DOMAIN\USERNAME format.
+- The username field in the credential prompt is now always prepopulated for Windows Virtual Desktop connections.
+- Fixed a bug that clipped the Edit, Delete, and Refresh buttons for workspaces if the Connection Center wasn't wide enough.
+- The "email or workspace URL" field in the Add Workspace sheet is no longer case-sensitive.
+- Fixed a number of accessibility issues that impacted VoiceOver and keyboard navigation scenarios.
+- Lots of updates to improve interoperability with current and upcoming features in the Windows Virtual Desktop service.
+- You can now configure the AVC support level advertised by the client from a terminal prompt. Here are the support levels you can configure:
+  
+   - Don't advertise AVC support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel disabled`
+   - Advertise AVC420 support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel avc420`
+   - Advertise support for AVC444 support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel avc444`
+
+Thanks again to everyone who reported bugs and took the time to help us diagnose problems!
+
+## Updates for version 10.3.9
+
+*Date published: 4/6/20*
+
+In this release we've made some changes to improve interoperability with the [Windows Virtual Desktop service](https://azure.microsoft.com/services/virtual-desktop/). In addition, we've included the following updates:
+
+- Control+Option+Delete now triggers the Ctrl+Alt+Del sequence (previously required pressing the Fn key).
+- Fixed the keyboard mode notification color scheme for Light mode.
+- Addressed scenarios where connections initiated using the GatewayAccessToken RDP file property didn't work.
+
+>[!NOTE]
+>This is the last release that will be compatible with macOS 10.12.
+
+## Updates for version 10.3.8
+
+*Date published: 2/12/20*
+
+It's time for our first release of 2020!
+
+With this update, you can switch between Scancode (Ctrl+Command+K) and Unicode (Ctrl+Command+U) modes when entering keyboard input. Unicode mode allows extended characters to be typed using the Option key on a Mac keyboard. For example, on a US Mac keyboard, Option+2 will enter the trademark (&trade;) symbol. You can also enter accented characters in Unicode mode. For example, on a US Mac keyboard, entering Option+E and the "A" key at the same time will enter the character "á" on your remote session.
+
+Other updates in this release include:
+
+- Cleaned up the workspace refresh experience and UI.
+- Addressed a smart card redirection issue that caused the remote session to stop responding at the sign-in screen when the "Checking Status" message appeared.
+- Reduced time to create temporary files used for clipboard-based file copy and paste.
+- Temporary files used for clipboard file copy and paste are now deleted automatically when you exit the app, instead of relying on macOS to delete them.
+- PC bookmark actions are now rendered at the top-right corner of thumbnails.
+- Made fixes to address issues reported through crash telemetry.
+
 ## Updates for version 10.3.7
 
 *Date published: 1/6/20*
 
-In our final update of the year, we finetuned some code and fixed the following behaviors:
+In our final update of the year, we fine-tuned some code and fixed the following behaviors:
 
 - Copying things from the remote session to a network share or USB drive no longer creates empty files.
 - Specifying an empty password in a user account no longer causes a double certificate prompt.
@@ -253,7 +321,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 
 *Date published: 08/06/2018*
 
-- Enabled connectivity to Azure Active Directory (AAD) joined PCs. To connect to an AAD joined PC, your username must be in one of the following formats: “AzureAD\user” or “AzureAD\user@domain”.
+- Enabled connectivity to Azure Active Directory (AAD) joined PCs. To connect to an AAD joined PC, your username must be in one of the following formats: "AzureAD\user" or "AzureAD\user@domain".
 - Addressed some bugs affecting the usage of smart cards in a remote session.
 
 ## Updates for version 10.2.0
@@ -302,9 +370,9 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Addressed issues where RemoteApp windows appeared behind the Connection Center.
 - Fixed a problem that occurred when you edit local resources after importing from Remote Desktop 8.
 - You can now start a connection by pressing ENTER on a desktop tile.
-- When you're in full screen view, CMD+M now correctly maps to WIN+M.
-- The Connection Center, Preferences, and About windows now respond to CMD+M.
-- You can now start discovering feeds by pressing ENTER on the **Adding Remote Resources** page.
+- When you're in full screen view, Cmd+M now correctly maps to WIN+M.
+- The Connection Center, Preferences, and About windows now respond to Cmd+M.
+- You can now start discovering feeds by pressing ENTER on the **Adding Remote Resources*- page.
 - Fixed an issue where a new remote resources feed showed up empty in the Connection Center until after you refreshed.
 
 ## Updates for version 10.1.6

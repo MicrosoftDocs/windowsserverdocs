@@ -1,75 +1,75 @@
 ---
 title: assoc
-description: "Windows Commands topic for **assoc** - Displays or modifies file name extension associations."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the assoc command, which displays or modifies file name extension associations.
+ms.topic: reference
 ms.assetid: 237bedda-b24c-4fec-a39c-9b7eacf96417
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # assoc
 
-
-
 Displays or modifies file name extension associations. If used without parameters, **assoc** displays a list of all the current file name extension associations.
 
 > [!NOTE]
-> This command is only supported within CMD.EXE and is not available from PowerShell.
->
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
+> This command is only supported within cmd.exe and is not available from PowerShell.
+> Though you can use `cmd /c assoc` as a workaround.
 
 ## Syntax
 
 ```
-assoc [<.ext>[=[<FileType>]]]
+assoc [<.ext>[=[<filetype>]]]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|<.ext>|Specifies the file name extension.|
-|\<FileType>|Specifies the file type to associate with the specified file name extension.|
-|/?|Displays help at the command prompt.|
+| Parameter | Description |
+| --------- | ----------- |
+| `<.ext>` | Specifies the file name extension. |
+| `<filetype>` | Specifies the file type to associate with the specified file name extension. |
+| /? | Displays help at the command prompt. |
 
-## Remarks
+### Remarks
 
--   To remove the file type association for a file name extension, add a white space after the equal sign by pressing the SPACEBAR.
--   To view current file types that have open command strings defined, use the **ftype** command.
--   To redirect the output of **assoc** to a text file, use the **>** redirection operator.
+- To remove the file type association for a file name extension, add a white space after the equal sign by pressing the SPACEBAR.
 
-## <a name="BKMK_examples"></a>Examples
+- To view current file types that have open command strings defined, use the **ftype** command.
+
+- To redirect the output of **assoc** to a text file, use the `>` redirection operator.
+
+## Examples
 
 To view the current file type association for the file name extension .txt, type:
+
 ```
 assoc .txt
 ```
+
 To remove the file type association for the file name extension .bak, type:
+
 ```
-assoc .bak= 
+assoc .bak=
 ```
 
 > [!NOTE]
-> Be sure to add a space after the equal sign.
+> Make sure you add a space after the equal sign.
 
 To view the output of **assoc** one screen at a time, type:
+
 ```
 assoc | more
 ```
+
 To send the output of **assoc** to the file assoc.txt, type:
+
 ```
 assoc>assoc.txt
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [ftype command](ftype.md)

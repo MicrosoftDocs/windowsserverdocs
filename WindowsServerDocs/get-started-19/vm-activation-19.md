@@ -1,13 +1,7 @@
-﻿---
+---
 title: Automatic virtual machine activation
 TOCTitle: Automatic VM Activation
 description: How to activate VMs in Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 ms.author: elizapo
@@ -40,7 +34,7 @@ Service Provider License Agreement (SPLA) partners and other hosting providers d
 
 ## System requirements
 
-AVMA requires a Microsoft Virtualization Server running Windows Server 2019 Datacenter, Windows Server 2016 Datacenter, or Windows Server 2012 R2. 
+AVMA requires a Microsoft Virtualization Server running Windows Server 2019 Datacenter, Windows Server 2016 Datacenter, or Windows Server 2012 R2.
 
 Here are the guests that the different version hosts can activate:
 
@@ -61,9 +55,9 @@ This tool does not work with other Virtualization Server technologies.
 2.  [Create a virtual machine](../virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v.md) and install a supported server operating system on it.
 
 3.  Install the AVMA key in the virtual machine. From an elevated command prompt, run the following command:
-    
-    ``` 
-    slmgr /ipk <AVMA_key>  
+
+    ```
+    slmgr /ipk <AVMA_key>
     ```
 
 The virtual machine will automatically activate the license against the virtualization server.
@@ -77,18 +71,18 @@ The virtual machine will automatically activate the license against the virtuali
 
 The following AVMA keys can be used for Windows Server 2019.
 
-|Edition|	AVMA key|
+|Edition|    AVMA key|
 |-|-|
-|Datacenter|	H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
-|Standard|	TNK62-RXVTB-4P47B-2D623-4GF74|
-|Essentials|	2CTP7-NHT64-BP62M-FV6GG-HFV28|
- 
+|Datacenter|    H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
+|Standard|    TNK62-RXVTB-4P47B-2D623-4GF74|
+|Essentials|    2CTP7-NHT64-BP62M-FV6GG-HFV28|
+
 The following AVMA keys can be used for Windows Server, versions 1909, 1903, and 1809.
 
-|Edition|	AVMA key|
+|Edition|    AVMA key|
 |-|-|
-|Datacenter|	H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
-|Standard|	TNK62-RXVTB-4P47B-2D623-4GF74|
+|Datacenter|    H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
+|Standard|    TNK62-RXVTB-4P47B-2D623-4GF74|
 
 The following AVMA keys can be used for Windows Server, version 1803 and 1709.
 
@@ -129,7 +123,7 @@ The registry (KVP) on the virtualization server provides real-time tracking data
 
   - RDP addresses
 
-For more information about how to get this information, see [Hyper-V Script: Looking at KVP GuestIntrinsicExchangeItems](https://blogs.msdn.com/b/virtual_pc_guy/archive/2008/11/18/hyper-v-script-looking-at-kvp-guestintrinsicexchangeitems.aspx).
+For more information about how to get this information, see [Hyper-V Script: Looking at KVP GuestIntrinsicExchangeItems](/archive/blogs/virtual_pc_guy/hyper-v-script-looking-at-kvp-guestintrinsicexchangeitems).
 
 
 > [!NOTE]
@@ -151,4 +145,3 @@ Since the AVMA activation process is transparent, error messages are not display
 |Invalid Host|The virtualization server is unresponsive. This can happen when the server is not running a supported version of Windows.|
 |Invalid Data|This usually results from a failure in communication between the virtualization server and the virtual machine, often caused by corruption, encryption, or data mismatch.|
 |Activation Denied|The virtualization server could not activate the guest operating system because the AVMA ID did not match.|
-

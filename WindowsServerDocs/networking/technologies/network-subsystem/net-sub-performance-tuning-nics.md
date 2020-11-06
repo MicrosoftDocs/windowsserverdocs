@@ -2,15 +2,12 @@
 title: Performance Tuning Network Adapters
 description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
 audience: Admin
-ms.custom:
   - CI ID 111485
   - CSSTroubleshoot
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 0b9b0f80-415c-4f5e-8377-c09b51d9c5dd
 manager: dcscontentpm
-ms.author: lizross
+ms.author: v-tea
 author: Teresa-Motiv
 ms.date: 12/23/2019
 ---
@@ -23,12 +20,12 @@ Use the information in this topic to tune the performance network adapters for c
 
 The correct tuning settings for your network adapters depend on the following variables:
 
-- The network adapter and its feature set  
-- The type of workload that the server performs  
-- The server hardware and software resources  
-- Your performance goals for the server  
+- The network adapter and its feature set
+- The type of workload that the server performs
+- The server hardware and software resources
+- Your performance goals for the server
 
-The following sections describe some of your performance tuning options.  
+The following sections describe some of your performance tuning options.
 
 ##  <a name="bkmk_offload"></a> Enabling offload features
 
@@ -40,16 +37,16 @@ Turning on network adapter offload features is usually beneficial. However, the 
 For example, consider a network adapter that has limited hardware resources.
 In that case, enabling segmentation offload features might reduce the maximum sustainable throughput of the adapter. However, if the reduced throughput is acceptable, you should go ahead an enable the segmentation offload features.
 
-> [!NOTE]  
+> [!NOTE]
 > Some network adapters require you to enable offload features independently for the send and receive paths.
 
 ##  <a name="bkmk_rss_web"></a> Enabling receive-side scaling (RSS) for web servers
 
 RSS can improve web scalability and performance when there are fewer network adapters than logical processors on the server. When all the web traffic is going through the RSS-capable network adapters, the server can process incoming web requests from different connections simultaneously across different CPUs.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Avoid using both non-RSS network adapters and RSS-capable network adapters on the same server. Because of the load distribution logic in RSS and Hypertext Transfer Protocol (HTTP), performance might be severely degraded if a non-RSS-capable network adapter accepts web traffic on a server that has one or more RSS-capable network adapters. In this circumstance, you should use RSS-capable network adapters or disable RSS on the network adapter properties **Advanced Properties** tab.
->  
+>
 > To determine whether a network adapter is RSS-capable, you can view the RSS information on the network adapter properties **Advanced Properties** tab.
 
 ### RSS Profiles and RSS Queues
@@ -60,11 +57,11 @@ For example, if you open Task Manager and review the logical processors on your 
 
 ##  <a name="bkmk_resources"></a> Increasing network adapter resources
 
-For network adapters that allow you to manually configure resources such as receive and send buffers, you should increase the allocated resources.  
+For network adapters that allow you to manually configure resources such as receive and send buffers, you should increase the allocated resources.
 
 Some network adapters set their receive buffers low to conserve allocated memory from the host. The low value results in dropped packets and decreased performance. Therefore, for receive-intensive scenarios, we recommend that you increase the receive buffer value to the maximum.
 
-> [!NOTE]  
+> [!NOTE]
 > If a network adapter does not expose manual resource configuration, either it dynamically configures the resources, or the resources are set to a fixed value that cannot be changed.
 
 ### Enabling interrupt moderation
@@ -79,10 +76,10 @@ Many network adapters provide options to optimize operating system-induced laten
 
 Following are some performance tuning suggestions for microsecond-sensitive networks.
 
-- Set the computer BIOS to **High Performance**, with C-states disabled. However, note that this is system and BIOS dependent, and some systems will provide higher performance if the operating system controls power management. You can check and adjust your power management settings from **Settings** or by using the **powercfg** command. For more information, see [Powercfg Command-Line Options](https://docs.microsoft.com/windows-hardware/design/device-experiences/powercfg-command-line-options).
+- Set the computer BIOS to **High Performance**, with C-states disabled. However, note that this is system and BIOS dependent, and some systems will provide higher performance if the operating system controls power management. You can check and adjust your power management settings from **Settings** or by using the **powercfg** command. For more information, see [Powercfg Command-Line Options](/windows-hardware/design/device-experiences/powercfg-command-line-options).
 
-- Set the operating system power management profile to **High Performance System**.  
-   > [!NOTE]  
+- Set the operating system power management profile to **High Performance System**.
+   > [!NOTE]
    > This setting does not work properly if the system BIOS has been set to disable operating system control of power management.
 
 - Enable static offloads. For example, enable the UDP Checksums, TCP Checksums, and Send Large Offload (LSO) settings.
@@ -101,9 +98,9 @@ The SMI is the highest-priority interrupt on the system, and places the CPU in a
 
 Unfortunately, this behavior can result in latency spikes of 100 microseconds or more.
 
-If you need to achieve the lowest latency, you should request a BIOS version from your hardware provider that reduces SMIs to the lowest degree possible. These BIOS versions are frequently referred to as “low latency BIOS” or “SMI free BIOS.” In some cases, it is not possible for a hardware platform to eliminate SMI activity altogether because it is used to control essential functions (for example, cooling fans).
+If you need to achieve the lowest latency, you should request a BIOS version from your hardware provider that reduces SMIs to the lowest degree possible. These BIOS versions are frequently referred to as "low latency BIOS" or "SMI free BIOS." In some cases, it is not possible for a hardware platform to eliminate SMI activity altogether because it is used to control essential functions (for example, cooling fans).
 
-> [!NOTE]  
+> [!NOTE]
 > The operating system cannot control SMIs because the logical processor is running in a special maintenance mode, which prevents operating system intervention.
 
 ##  <a name="bkmk_tcp"></a> Performance tuning TCP
@@ -120,7 +117,7 @@ For a TCP receive window that has a particular size, you can use the following e
 
 > *Total achievable throughput in bytes* = *TCP receive window size in bytes* \* (1 / *connection latency in seconds*)
 
-For example, for a connection that has a latency of 10 ms, the total achievable throughput is only 51 Mbps. This value is reasonable for a large corporate network infrastructure. However, by using autotuning to adjust the receive window, the connection can achieve the full line rate of a 1-Gbps connection.  
+For example, for a connection that has a latency of 10 ms, the total achievable throughput is only 51 Mbps. This value is reasonable for a large corporate network infrastructure. However, by using autotuning to adjust the receive window, the connection can achieve the full line rate of a 1-Gbps connection.
 
 Some applications define the size of the TCP receive window. If the application does not define the receive window size, the link speed determines the size as follows:
 
@@ -133,17 +130,17 @@ For example, on a computer that has a 1-Gbps network adapter installed, the wind
 
 This feature also makes full use of other features to improve network performance. These features include the rest of the TCP options that are defined in [RFC 1323](https://tools.ietf.org/html/rfc1323). By using these features, Windows-based computers can negotiate TCP receive window sizes that are smaller but are scaled at a defined value, depending on the configuration. This behavior the sizes easier to handle for networking devices.
 
-> [!NOTE]  
-> You may experience an issue in which the network device is not compliant with the **TCP window scale option**, as defined in [RFC 1323](https://tools.ietf.org/html/rfc1323) and, therefore, doesn't support the scale factor. In such cases, refer to this [KB 934430, Network connectivity fails when you try to use Windows Vista behind a firewall device](https://support.microsoft.com/help/934430/network-connectivity-fails-when-you-try-to-use-windows-vista-behind-a) or contact the Support team for your network device vendor.  
+> [!NOTE]
+> You may experience an issue in which the network device is not compliant with the **TCP window scale option**, as defined in [RFC 1323](https://tools.ietf.org/html/rfc1323) and, therefore, doesn't support the scale factor. In such cases, refer to this [KB 934430, Network connectivity fails when you try to use Windows Vista behind a firewall device](https://support.microsoft.com/help/934430/network-connectivity-fails-when-you-try-to-use-windows-vista-behind-a) or contact the Support team for your network device vendor.
 
 #### Review and configure TCP receive window autotuning level
 
 You can use either netsh commands or Windows PowerShell cmdlets to review or modify the TCP receive window autotuning level.
 
-> [!NOTE]  
+> [!NOTE]
 > Unlike in versions of Windows that pre-date Windows 10 or Windows Server 2019, you can no longer use the registry to configure the TCP receive window size. For more information about the deprecated settings, see [Deprecated TCP parameters](#deprecated-tcp-parameters).
 
-> [!NOTE]  
+> [!NOTE]
 > For detailed information about the available autotuning levels, see [Autotuning levels](#autotuning-levels).
 
 **To use netsh to review or modify the autotuning level**
@@ -159,7 +156,7 @@ The output of this command should resemble the following:
 ```
 Querying active state...
 
-TCP Global Parameters  
+TCP Global Parameters
 -----
 Receive-Side Scaling State : enabled
 Chimney Offload State : disabled
@@ -182,10 +179,10 @@ To modify the setting, run the following command at the command prompt:
 netsh interface tcp set global autotuninglevel=<Value>
 ```
 
-> [!NOTE]  
+> [!NOTE]
 > In the preceding command, \<*Value*> represents the new value for the auto tuning level.
 
-For more information about this command, see [Netsh commands for Interface Transmission Control Protocol](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731258(v=ws.10)).
+For more information about this command, see [Netsh commands for Interface Transmission Control Protocol](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731258(v=ws.10)).
 
 **To use Powershell to review or modify the autotuning level**
 
@@ -214,13 +211,13 @@ To modify the setting, run the following cmdlet at the PowerShell command prompt
 Set-NetTCPSetting -AutoTuningLevelLocal <Value>
 ```
 
-> [!NOTE]  
+> [!NOTE]
 > In the preceding command, \<*Value*> represents the new value for the auto tuning level.
 
 For more information about these cmdlets, see the following articles:
 
-- [Get-NetTCPSetting](https://docs.microsoft.com/powershell/module/nettcpip/get-nettcpsetting?view=win10-ps)
-- [Set-NetTCPSetting](https://docs.microsoft.com/powershell/module/nettcpip/set-nettcpsetting?view=win10-ps)
+- [Get-NetTCPSetting](/powershell/module/nettcpip/get-nettcpsetting?view=win10-ps)
+- [Set-NetTCPSetting](/powershell/module/nettcpip/set-nettcpsetting?view=win10-ps)
 
 #### Autotuning levels
 
@@ -364,18 +361,18 @@ If you use an application to capture network packets, the application should rep
 The following registry settings from Windows Server 2003 are no longer supported, and are ignored in later versions.
 
 - **TcpWindowSize**
-- **NumTcbTablePartitions**  
-- **MaxHashTableSize**  
+- **NumTcbTablePartitions**
+- **MaxHashTableSize**
 
 All of these settings were located in the following registry subkey:
 
-> **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters**  
+> **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters**
 
 ###  <a name="bkmk_wfp"></a> Windows Filtering Platform
 
 Windows Vista and Windows Server 2008 introduced the Windows Filtering Platform (WFP). WFP provides APIs to non-Microsoft independent software vendors (ISVs) to create packet processing filters. Examples include firewall and antivirus software.
 
-> [!NOTE]  
-> A poorly-written WFP filter can significantly decrease a server's networking performance. For more information, see [Porting Packet-Processing Drivers and Apps to WFP](https://docs.microsoft.com/windows-hardware/drivers/network/porting-packet-processing-drivers-and-apps-to-wfp) in the Windows Dev Center.
+> [!NOTE]
+> A poorly-written WFP filter can significantly decrease a server's networking performance. For more information, see [Porting Packet-Processing Drivers and Apps to WFP](/windows-hardware/drivers/network/porting-packet-processing-drivers-and-apps-to-wfp) in the Windows Dev Center.
 
 For links to all topics in this guide, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).

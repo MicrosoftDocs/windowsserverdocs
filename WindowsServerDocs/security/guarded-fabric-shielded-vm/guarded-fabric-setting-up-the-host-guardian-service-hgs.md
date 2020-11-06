@@ -1,12 +1,10 @@
 ---
 title: Deploy the Host Guardian Service
-ms.custom: na
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 0bd96e2a-1612-4bbf-8c23-7602020f4eec
 manager: dongill
 author: rpsqrd
-ms.technology: security-guarded-fabric
+ms.author: ryanpu
 ms.date: 01/14/2020
 ---
 
@@ -23,7 +21,7 @@ To deploy the HGS, complete the following tasks:
 - [Configure Https (optional)](guarded-fabric-configure-hgs-https.md)
 - [Add nodes](guarded-fabric-configure-additional-hgs-nodes.md)
 
-## See also
+## Additional References
 
 - [Deploying the Host Guardian Service for guarded hosts and shielded VMs](guarded-fabric-deploying-hgs-overview.md)
 - [Configuration steps for Hyper-V hosts that will become guarded hosts](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)

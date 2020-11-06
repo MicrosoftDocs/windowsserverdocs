@@ -1,14 +1,12 @@
 ---
 title: Always On VPN Deployment for Windows Server and Windows 10
 description: You can use this deployment to deploy Always On Virtual Private Network (VPN) connections for remote employees by using Remote Access in Windows Server 2016 or later and Always On VPN profiles for Windows 10 client computers.
-ms.prod: windows-server
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ms.date: 12/20/2018
-ms.author: lizross
-author: eross-msft
+ms.author: v-tea
+author: Teresa-MOTIV
 ---
 
 # Always On VPN deployment for Windows Server and Windows 10
@@ -29,7 +27,7 @@ You most likely have the technologies deployed that you can use to deploy Always
 - Server, either virtual or physical, existing or new, to install Network Policy Server (NPS). If you already have NPS servers on your network, you can modify an existing NPS server configuration rather than add a new server.
 - Remote Access as a RAS Gateway VPN server with a small subset of features supporting IKEv2 VPN connections and LAN routing.
 - Perimeter network that includes two firewalls.  Ensure that your firewalls allow the traffic that is necessary for both VPN and RADIUS communications to function properly. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
-- Physical server or virtual machine (VM) on your perimeter network with two physical Ethernet network adapters to install Remote Access as a RAS Gateway VPN server. VMs require virtual LAN (VLAN) for the host. 
+- Physical server or virtual machine (VM) on your perimeter network with two physical Ethernet network adapters to install Remote Access as a RAS Gateway VPN server. VMs require virtual LAN (VLAN) for the host.
 - Membership in Administrators, or equivalent, is the minimum required.
 - Read the planning section of this guide to ensure that you are prepared for this deployment before you perform the deployment.
 - Review the design and deployment guides for each of the technologies used. These guides can help you determine whether the deployment scenarios provide the services and configuration that you need for your organization's network. For more information, see [Always On VPN Technology Overview](../always-on-vpn-technology-overview.md).
@@ -60,7 +58,7 @@ This deployment does not provide instructions for:
 - Dynamic Host Configuration Protocol (DHCP).
 - Network hardware, such as Ethernet cabling, firewalls, switches, and hubs.
 - Additional network resources, such as application and file servers, that remote users can access over an Always On VPN connection.
-- Internet connectivity or Conditional Access for Internet connectivity using Azure AD. For details, see [Conditional access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
+- Internet connectivity or Conditional Access for Internet connectivity using Azure AD. For details, see [Conditional access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 ## Next steps
 

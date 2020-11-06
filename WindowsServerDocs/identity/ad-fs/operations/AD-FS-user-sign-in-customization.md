@@ -1,15 +1,11 @@
 ---
 ms.assetid: 61b6c115-1082-45d5-b0b1-ed24d06fcdce
 title: AD FS user sign-in customization
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-
-ms.technology: identity-adfs
 ---
 # AD FS user sign-in customization
 
@@ -18,9 +14,9 @@ AD FS provides a number of options for administrators to customize and tailor th
 
 
 
-![AD FS customization](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png) 
-    
-  
+![AD FS customization](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
+
+
 
 
 
@@ -30,7 +26,7 @@ AD FS provides a number of options for administrators to customize and tailor th
 
 Topic|Description|
 -----|-----|
-[AD FS Customization in Windows Server 2016](AD-FS-Customization-in-Windows-Server-2016.md)|New customization options available for AD FS in Windows Server 2016|
+[AD FS Customization in Windows Server 2016](./ad-fs-customization-in-windows-server.md)|New customization options available for AD FS in Windows Server 2016|
 [Change the company name](Change-the-company-name-on-the-AD-FS-sign-in-page.md)|Steps for displaying your companies name on the sign-in page|
 [Change the company logo](Change-the-company-logo-on-the-AD-FS-sign-in-page.md)|Steps for changing the logo that appears on the sign-in-page|
 [Change the illustration](Change-the-illustration-on-the-AD-FS-sign-in-page.md)|Steps for changing the illustration that appears on the sign-in page|
@@ -47,7 +43,3 @@ Topic|Description|
 [Removing the Microsoft copyright](Remove-the-Microsoft-copyright.md)|Steps on removing the Microsoft copyright
 [Customizing the display names and descriptions for authentication methods](Customize-the-display-names-and-descriptions-for-authentication-methods.md)|Steps on customizing display names and descriptions for authentication methods
 [Advanced Customization](Advanced-Customization-of-AD-FS-Sign-in-Pages.md)|Advanced customization options using the onload.js file.
-
-
-
-

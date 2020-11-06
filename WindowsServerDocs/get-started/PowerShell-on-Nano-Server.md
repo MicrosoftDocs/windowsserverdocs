@@ -1,11 +1,7 @@
 ---
 title: PowerShell on Nano Server
-description: "Differences in the reduced set of PowerShell features on Nano Server"
-ms.prod: windows-server
-ms.service: na
+description: Differences in the reduced set of PowerShell features on Nano Server
 manager: DonGill
-ms.technology: server-nano
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b25b939-1e2c-4bed-a8d3-2a8e8e46b53d
 author: jaimeo
@@ -61,7 +57,7 @@ CompatiblePSEditions Property   System.Collections.Generic.IEnumerable[string] C
 ```
 When getting a list of available modules, you can filter the list by PowerShell edition.
 ```powershell
-Get-Module -ListAvailable | ? CompatiblePSEditions -Contains "Desktop"
+Get-Module -ListAvailable | ? CompatiblePSEditions -Contains Desktop
 
     Directory: C:\Program Files\WindowsPowerShell\Modules
 
@@ -70,21 +66,21 @@ ModuleType Version    Name                                ExportedCommands
 ---------- -------    ----                                ----------------
 Manifest   1.0        ModuleWithPSEditions
 
-Get-Module -ListAvailable | ? CompatiblePSEditions -Contains "Core" | % CompatiblePSEditions
+Get-Module -ListAvailable | ? CompatiblePSEditions -Contains Core | % CompatiblePSEditions
 Desktop
 Core
 
 ```
 Script authors can prevent a script from executing unless it is run on a compatible edition of PowerShell using the PSEdition parameter on a #requires statement.
 ```powershell
-Set-Content C:\script.ps1 -Value "#requires -PSEdition Core
-Get-Process -Name PowerShell"
+Set-Content C:\script.ps1 -Value #requires -PSEdition Core
+Get-Process -Name PowerShell
 Get-Content C:\script.ps1
 #requires -PSEdition Core
 Get-Process -Name PowerShell
 
 C:\script.ps1
-C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a "#requires" statement for PowerShell editions 'Core'. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.
+C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a #requires statement for PowerShell editions 'Core'. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.
 At line:1 char:1
 + C:\script.ps1
 + ~~~~~~~~~~~~~
@@ -98,9 +94,9 @@ Nano Server includes PowerShell Core by default in all Nano Server installations
 
 **Windows PowerShell features not available in Nano Server**
 * ADSI, ADO, and WMI type adapters
-* Enable-PSRemoting, Disable-PSRemoting (PowerShell remoting is enabled by default; see the "Using Windows PowerShell Remoting" section of [Install Nano Server](Getting-Started-with-Nano-Server.md)).
+* Enable-PSRemoting, Disable-PSRemoting (PowerShell remoting is enabled by default; see the Using Windows PowerShell Remoting section of [Install Nano Server](Getting-Started-with-Nano-Server.md)).
 * Scheduled jobs and PSScheduledJob module
-* Computer cmdlets for joining a domain { Add | Remove } (for different methods to join Nano Server to a domain, see the "Joining Nano Server to a domain" section of [Install Nano Server](Getting-Started-with-Nano-Server.md)).
+* Computer cmdlets for joining a domain { Add | Remove } (for different methods to join Nano Server to a domain, see the Joining Nano Server to a domain section of [Install Nano Server](Getting-Started-with-Nano-Server.md)).
 * Reset-ComputerMachinePassword, Test-ComputerSecureChannel
 * Profiles (you can add a startup script for incoming remote connections with `Set-PSSessionConfiguration`)
 * Clipboard cmdlets
@@ -123,5 +119,4 @@ Nano Server includes PowerShell Core by default in all Nano Server installations
 
 You can manage Nano Server as target nodes with Windows PowerShell Desired State Configuration (DSC). Currently, you can manage nodes running Nano Server with DSC in push mode only. Not all DSC features function with Nano Server.
 
-For full details, see [Using DSC on Nano Server](https://docs.microsoft.com/powershell/scripting/dsc/getting-started/nanodsc).
-
+For full details, see [Using DSC on Nano Server](/powershell/scripting/dsc/getting-started/nanodsc).

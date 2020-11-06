@@ -1,52 +1,43 @@
 ---
 title: bitsadmin reset
-description: "Windows Commands topic for **bitsadmin reset** - Cancels all jobs in the transfer queue that the current user owns."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin reset command, which cancels all jobs in the transfer queue owned by the current user.
+ms.topic: reference
 ms.assetid: 0e4f9d1d-072c-493f-8d7a-f6d713c3ef29
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin reset
 
-Cancels all jobs in the transfer queue that the current user owns.
+Cancels all jobs in the transfer queue owned by the current user. You can't reset jobs created by Local System. Instead, you must be an administrator and use the task scheduler to schedule this command as a task using the Local System credentials.
 
-**BITSAdmin 1.5 and earlier**: If you have administrator privileges, **Reset** cancels all jobs in the queue. The /AllUsers option is not supported.
+> [!NOTE]
+> If you have administrator privileges in BITSAdmin 1.5 and earlier, the /reset switch will cancel all the jobs in the queue. Additionally, the /allusers option isn't supported.
 
 ## Syntax
 
 ```
-bitsadmin /Reset [/AllUsers]
+bitsadmin /reset [/allusers]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|AllUsers|Optional— cancels all jobs in the queue.|
+| Parameter | Description |
+| -------------- | -------------- |
+| /allusers | Optional. Cancels all jobs in the queue owned by the current user. You must have administrator privileges to use this parameter. |
 
-## Remarks
+## Examples
 
-You must have administrator privileges to use the **AllUsers** parameter.
+To cancel all the jobs in the transfer queue for the current user.
 
-> [!NOTE]
-> Administrators cannot reset jobs created by Local System. Use the task scheduler to schedule this command as a task using the Local System credentials.
-
-## <a name="BKMK_examples"></a>Examples
-
-The following example cancels all the jobs in the transfer queue for the current user.
 ```
-C:\>bitsadmin /Reset
+bitsadmin /reset
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

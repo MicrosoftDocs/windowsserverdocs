@@ -1,40 +1,36 @@
 ---
 title: bitsadmin peers and list
-description: "Windows Commands topic for **bitsadmin peers and list** - 
-lists all peers."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin peers and list command, which lists all peers.
+ms.topic: reference
 ms.assetid: 18ec60c9-34d2-466e-982c-6165478ef224
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin peers and list
-
-
 
 Lists all peers.
 
 ## Syntax
 
 ```
-bitsadmin /Peers /List 
+bitsadmin /peers /list
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example lists all peers.
+To list all peers:
+
 ```
-C:\>bitsadmin /Peers /List
+bitsadmin /peers /list
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)
+
+- [bitsadmin peers command](bitsadmin-peers.md)

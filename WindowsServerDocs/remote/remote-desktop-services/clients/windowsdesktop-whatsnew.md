@@ -1,37 +1,124 @@
 ---
 title: What's new in the Windows Desktop client
 description: Learn about recent changes to the Remote Desktop client for Windows Desktop
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/24/2020
+ms.date: 10/27/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
 
-You can find more detailed information about the Windows Desktop client at [Get started with the Windows Desktop client](windowsdesktop.md). You'll find the latest updates to client below.
+You can find more detailed information about the Windows Desktop client at [Get started with the Windows Desktop client](windowsdesktop.md). You'll find the latest updates to client in this article.
 
-## Latest client versions
+## Supported client versions
 
 The client can be configured for different [user groups](windowsdesktop-admin.md#configure-user-groups). The following table lists the current versions available for each user group:
 
-|User group |Version  |
-|-----------|---------|
-|Public     |1.2.790  |
-|Insider    |1.2.790  |
+|User group |Latest version  |Minimum supported version |
+|-----------|----------------|--------------------------|
+|Public     |1.2.1446        |1.2.945                   |
+|Insider    |1.2.1446        |1.2.945                   |
+
+## Updates for version 1.2.1446
+
+*Date published: 10/27/2020*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Added the auto-update feature, which allows the client to install the latest updates automatically.
+- The client now distinguishes between different feeds in the Connection Center.
+- Fixed an issue where the subscription account doesn't match the account the user signed in with.
+- Fixed an issue where some users couldn't access remote apps through a downloaded file.
+- Fixed an issue with Smartcard redirection.
+
+## Updates for version 1.2.1364
+
+*Date published: 09/22/2020*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMK), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4G1t9), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMI)
+
+- Fixed an issue where single sign-on (SSO) didn't work on Windows 7.
+- Fixed the connection failure that happened when calling or joining a Teams call while another app has an audio stream opened in exclusive mode and when media optimization for Teams is enabled.
+- Fixed a failure to enumerate audio or video devices in Teams when media optimization for Teams is enabled.
+- Added a "Need help with settings?" link to the desktop settings page.
+- Fixed an issue with the "Subscribe" button that happened when using high-contrast dark themes.
+
+## Updates for version 1.2.1275
+
+*Date published: 08/25/2020*
+
+- Added functionality to auto-detect sovereign clouds from the user’s identity.
+- Added functionality to enable custom URL subscriptions for all users.
+- Fixed an issue with app pinning on the feed taskbar.
+- Fixed a crash when subscribing with URL.
+- Improved experience when dragging remote app windows with touch or pen.
+- Fixed an issue with localization.
+
+## Updates for version 1.2.1186
+
+*Date published: 07/28/2020*
+
+- You can now be subscribed to Workspaces with multiple user accounts, using the overflow menu (**...**) option on the command bar at the top of the client. To differentiate Workspaces, the Workspace titles now include the username, as do all app shortcuts titles.
+- Added additional information to subscription error messages to improve troubleshooting.
+- The collapsed/expanded state of Workspaces is now preserved during a refresh.
+- Added a **Send Diagnostics and Close** button to the **Connection information** dialog.
+- Fixed an issue with the CTRL + SHIFT keys in remote sessions.
+
+## Updates for version 1.2.1104
+
+*Date published: 06/23/2020*
+
+- Updated the automatic discovery logic for the **Subscribe** option to support the Azure Resource Manager-integrated version of Windows Virtual Desktop. Customers with only Windows Virtual Desktop resources should no longer need to provide consent for Windows Virtual Desktop (classic).
+- Improved support for high-DPI devices with scale factor up to 400%.
+- Fixed an issue where the disconnect dialog didn't appear.
+- Fixed an issue where command bar tooltips would remain visible longer than expected.
+- Fixed a crash when you tried to subscribe immediately after a refresh.
+- Fixed a crash from incorrect parsing of date and time in some languages.
+
+## Updates for version 1.2.1026
+
+*Date published: 05/27/2020*
+
+- When subscribing, you can now choose your account instead of typing your email address.
+- Added a new **Subscribe with URL** option that allows you to specify the URL of the Workspace you are subscribing to or leverage [email discovery](../rds-email-discovery.md) when available in cases where we can't automatically find your resources. This is similar to the subscription process in the other Remote Desktop clients. This can be used to subscribe directly to Windows Virtual Desktop workspaces.
+- Added support to subscribe to a Workspace using a new [URI scheme](remote-desktop-uri.md) that can be sent in an email to users or added to a support website.
+- Added a new **Connection information** dialog that provides client, network, and server details for desktop and app sessions. You can access the dialog from the connection bar in full screen mode or from the System menu when windowed.
+- Desktop sessions launched in windowed mode now always maximize instead of going full screen when maximizing the window. Use the **Full screen** option from the system menu to enter full screen.
+- The Unsubscribe prompt now displays a warning icon and shows the workspace names as a bulleted list.
+- Added the details section to additional error dialogs to help diagnose issues.
+- Added a timestamp to the details section of error dialogs.
+- Fixed an issue where the RDP file setting **desktop size ID** didn't work properly.
+- Fixed an issue where the **Update the resolution on resize** display setting didn't apply after launching the session.
+- Fixed localization issues in the desktop settings panel.
+- Fixed the size of the focus box when tabbing through controls on the desktop settings panel.
+- Fixed an issue causing the resource names to be difficult to read in high contrast mode.
+- Fixed an issue causing the update notification in the action center to be shown more than once a day.
+
+## Updates for version 1.2.945
+
+*Date published: 04/28/2020*
+
+- Added new display settings options for desktop connections available when right-clicking a desktop icon on the Connection Center.
+  - There are now three display configuration options: **All displays**, **Single display** and **Select displays**.
+  - We now only show available settings when a display configuration is selected.
+  - In Select display mode, a new **Maximize to current displays** option allows you to dynamically change the displays used for the session without reconnecting. When enabled, maximizing the session causes it to go full screen on all displays touched by the session window.
+  - We've added a new **Single display when windowed** option for all displays and select displays modes. This option switches your session automatically to a single display when you exit full screen mode, and automatically returns to multiple displays when you maximize the window.
+- We've added a new **Display settings** group to the system menu that appears when you right-click the title bar of a windowed desktop session. This will let you change some settings dynamically during a session. For example, you can change the new **Single display mode when windowed** and **Maximize to current displays** settings.
+- When you exit full screen, the session window will return to its original location when you first entered full screen.
+- The background refresh for Workspaces has been changed to every four hours instead of every hour. A refresh now happens automatically when launching the client.
+- Resetting your user data from the About page now redirects to the Connection Center when completed instead of closing the client.
+- The items in the system menu for desktop connections were reordered and the Help topic now points to the client documentation.
+- Addressed some accessibility issues with tab navigation and screen readers.
+- Fixed an issue where the Azure Active Directory authentication dialog appeared behind the session window.
+- Fixed a flickering and shrinking issue when dragging a desktop session window between displays of different scale factors.
+- Fixed an error that occurred when redirecting cameras.
+- Fixed multiple crashes to improve reliability.
 
 ## Updates for version 1.2.790
 
 *Date published: 03/24/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSh), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSi), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4sllb)
 
 - Renamed the "Update" action for Workspaces to "Refresh" for consistency with other Remote Desktop clients.
 - You can now refresh a Workspace directly from its context menu.
@@ -45,8 +132,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 *Date published: 02/25/2020*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qeak), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qm7h), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qm7g)
-
 - Connections to Windows Virtual Desktop are now blocked if the RDP file is missing the signature or one of the signscope properties has been modified.
 - When a Workspace is empty or has been removed, the Connection Center no longer appears to be empty.
 - Added the activity ID and error code on disconnect messages to improve troubleshooting. You can copy the dialog message with **Ctrl+C**.
@@ -57,8 +142,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.605
 
 *Date published: 01/29/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oHrD), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oJZs), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oXhD)
 
 - You can now select which displays to use for desktop connections. To change this setting, right-click the icon of the desktop connection and select **Settings**.
 - Fixed an issue where the connection settings didn't display the correct available scale factors.
@@ -71,8 +154,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 *Date published: 12/04/2019*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jH), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jL), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k27O)
-
 - You can now access information about updates directly from the more options button on the command bar at the top of the client.
 - You can now report feedback from the command bar of the client.
 - The Feedback option is now only shown if the Feedback Hub is available.
@@ -83,8 +164,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.431
 
 *Date published: 11/12/2019*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48kow), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48koA), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48zYj)
 
 - The 32-bit and ARM64 versions of the client are now available!
 - The client now saves any changes you make to the connection bar (such as its position, size, and pinned state) and applies those changes across sessions.
@@ -103,8 +182,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.247
 
 *Date published: 09/17/2019*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3LkSa)
 
 - Improved the fallback languages for localized version. (For example, FR-CA will properly display in French instead of English.)
 - When removing a subscription, the client now properly removes the saved credentials from Credential Manager.

@@ -1,49 +1,51 @@
 ---
 title: bitsadmin gettype
-description: "Windows Commands topic for **bitsadmin gettype** - Retrieves the job type of the specified job."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin gettype command, which retrieves the job type of the specified job.
+ms.topic: reference
 ms.assetid: bec16f04-3e95-4587-889e-3de6ad03c9c8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin gettype
-
-
 
 Retrieves the job type of the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /GetType <Job>
+bitsadmin /gettype <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## Remarks
+#### Output
 
-The type can be DOWNLOAD, UPLOAD, UPLOAD-REPLY, or UNKNOWN.
+The returned output values can be:
 
-## <a name="BKMK_examples"></a>Examples
+| Type | Description |
+| --------------- | ----------- |
+| Download | The job is a download. |
+| Upload | The job is an upload. |
+| Upload-Reply | The job is an upload-reply. |
+| Unknown | The job has an unknown type. |
 
-The following example retrieves the job type for the job named *myDownloadJob*.
+## Examples
+
+To retrieve the job type for the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin /GetType myDownloadJob
+bitsadmin /gettype myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)
