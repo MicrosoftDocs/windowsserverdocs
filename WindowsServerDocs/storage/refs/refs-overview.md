@@ -76,7 +76,8 @@ Deploying ReFS on Storage Spaces Direct is recommended for virtualized workloads
 - Deploying ReFS on Storage Spaces with shared SAS enclosures is suitable for hosting archival data and storing user documents.
 
 > [!NOTE]
-> Storage Spaces supports local non-removable direct-attached via BusTypes SATA, SAS, NVME, or attached via HBA (aka RAID controller in pass-through mode).
+> Storage Spaces **supports** *local non-removable direct-attached* via BusTypes SATA, SAS, NVME, or attached via HBA (aka RAID controller in pass-through mode).
+> Please consider **limitations** on Cluster Shared Volumes in general, or CSVs used on Storage Spaces or Storage Spaces Direct (S2D). Refer chapter functionality.
 
 ### Basic disks
 
@@ -85,7 +86,7 @@ Deploying ReFS on basic disks is best suited for applications that implement the
 
 > [!IMPORTANT]
 > If you plan to use ReFS for CSV (Cluster Shared Volumes), please consider the limitations to pre-format your later CSV volumes with ReFS.
-> For CSV: NTFS should be used for traditional SANs. ReFS should be used on top of S2D.
+> For CSV: NTFS should be used for traditional SANs. ReFS should be used on top of S2D. Refer chapter functionality.
 
 > [!NOTE]
 > Basic disks include local non-removable direct-attached via BusTypes SATA, SAS, NVME, or RAID. Basic disks do not include Storage Spaces.
@@ -97,6 +98,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 
 > [!NOTE]
 > Backup targets include the above supported configurations. Please contact application and storage array vendors for support details on Fiber Channel and iSCSI SANs. For SANs, if features such as thin provisioning, TRIM/UNMAP, or Offloaded Data Transfer (ODX) are required, NTFS must be used.
+
 
 ## Feature comparison
 
@@ -162,9 +164,12 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Bootable | No | Yes |
 | Page file support | No | Yes |
 | Supported on removable media | No | Yes |
-1. This feature becomes available on **newly formatted ReFS 3.5 volumes only, with Windows 10 Enterprise / Windows 10 for Workstations or Windows Server vNext, starting from build 19536 or later.
-Any in-place upgrade to this version will upgrade ReFS attached volumes to the latest version, but will unlock the use of hardlinks. 
+1. This feature becomes available on **newly formatted ReFS 3.5 volumes only**
+Prerequisites: Windows 10 Enterprise / Windows 10 for Workstations or Windows Server vNext, starting from build 19536 or later.
+Disclaimer: Any in-place upgrade to this version will upgrade ReFS attached volumes to the latest version, but will unlock the use of hardlinks. 
 Please refer to additional References, ReFS Version History for an unofficial ReFS upgrade and versioning matrix.
+Windows 10 pro can only read and write ReFS volumes unrestricted, but not [format](https://support.microsoft.com/en-us/help/4034825) ReFS.
+
 
 ## Additional References
 
