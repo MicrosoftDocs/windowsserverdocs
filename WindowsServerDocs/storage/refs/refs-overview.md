@@ -108,14 +108,12 @@ Based on real world applications this also applies for other containered data st
 
 Con:
 While **supported**, there exist scenarios where ReFS performance might not meet expectations compared to NTFS formatted volumes.
-This mostly applies to Basic Disks and volumes using ReFS without Storage Spaces / S2D, where volumes contain a high number of **small files and fast changing files**.
-This is by design and caused by the needed metadata handling and scrubbing. The performance in these scenarios *can* cause slow application responsiveness or timeouts time responsive sensitive applications. Example: Lotus Notes ini. Other results can be unexpected low read and write speeds for random IOs.
+This mostly applies to Basic Disks and volumes using ReFS without Storage Spaces / S2D, where volumes, which contain a high number of **small files and fast changing files**.
+This is by design and is caused by the needed metadata handling and scrubbing. The performance in these scenarios *can* cause slow application responsiveness or even timeouts time sensitive applications. Example: Lotus Notes ini. Other results can be unexpected low read and write speeds for random IOs compared to NTFS in the same software and hardware configuration.
 
-A typical scenario that could apply, based on the underlying hardware configuration, are typically Windows User Profiles, Temporary Folders of browsers in high-density or multiuser enviroments, such as Microsoft Remote Desktop Host (RDSH), Windows Virtual Desktop (WVD), or 3rd party applications like Citrix User Profile Management (UPM).
+A typical scenario that might apply, based on the underlying hardware configuration, are typically Windows User Profiles, Temporary Folders of browsers in high-density or multi-user enviroments, such as Microsoft Remote Desktop Host (RDSH), Windows Virtual Desktop (WVD), or 3rd party applications like Citrix User Profile Management (UPM).
 
 In such scenarios, please plan and test your workloads when considering usage of ReFS on Basic Disks or volumes or alternatively rely on NTFS, which due to the non existent scrubbing and less metadata overhead is not prone for such possible impacts. As per design in such scenarios VM or Host RAM usage can be higher compared to NTFS.
-
-
 
 ## Feature comparison
 
