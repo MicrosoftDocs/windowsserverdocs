@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 11/02/2020
+ms.date: 11/06/2020
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -16,7 +16,7 @@ If you encounter any issues, you can always contact us by navigating to **Help**
 
 ## Updates for version 10.4.1
 
-*Date published: 11/02/2020*
+*Date published: 11/06/2020*
 
 We've put together some bug fixes and small feature updates for this 10.4.1 release. Here's what's new:
 
