@@ -25,7 +25,7 @@ To check and change the status of the RDP protocol on a local computer, see [How
 ### Check the status of the RDP protocol on a remote computer
 
 > [!IMPORTANT]  
-> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you starty modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so you can restore it in case something goes wrong.
+> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you start modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so you can restore it in case something goes wrong.
 
 To check and change the status of the RDP protocol on a remote computer, use a network registry connection:
 
