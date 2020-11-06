@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 11/02/2020
+ms.date: 11/06/2020
 ms.localizationpriority: medium
 ---
 # What's new in the iOS client
@@ -18,7 +18,7 @@ We're committed to making the Remote Desktop client for iOS the best it can be, 
 
 ## Updates for version 10.2.0
 
-*Date published: 11/02/2020*
+*Date published: 11/06/2020*
 
 In this version, we addressed some compatibility issues with iOS and iPadOS 14. In addition, we made the following fixes and feature updates:
 
@@ -32,7 +32,7 @@ In this version, we addressed some compatibility issues with iOS and iPadOS 14. 
 
 ## Updates for version 10.1.4
 
-*Date published: 11/02/2020*
+*Date published: 11/06/2020*
 
 We've put together some bug fixes and small feature updates for this 10.1.4 release. Here's what's new:
 
@@ -46,7 +46,7 @@ We've put together some bug fixes and small feature updates for this 10.1.4 rele
 
 ## Updates for version 10.1.3
 
-*Date published: 11/02/2020*
+*Date published: 11/06/2020*
 
 We've put together some bug fixes and feature updates for the 10.1.3 release. Here's what's new:
 
@@ -71,7 +71,7 @@ In this update, we've addressed issues that were reported in the version 10.1.1 
 
 ## Updates for version 10.1.1
 
-*Date published: 11/02/2020*
+*Date published: 11/06/2020*
 
 Here’s what we've included in this release:
 
@@ -89,7 +89,7 @@ Here’s what we've included in this release:
 
 ## Updates for version 10.1.0
 
-*Date published: 11/02/2020*
+*Date published: 11/06/2020*
 
 Here's what's new for this version:
 
