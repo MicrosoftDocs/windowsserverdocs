@@ -99,6 +99,18 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 > [!NOTE]
 > Backup targets include the above supported configurations. Please contact application and storage array vendors for support details on Fiber Channel and iSCSI SANs. For SANs, if features such as thin provisioning, TRIM/UNMAP, or Offloaded Data Transfer (ODX) are required, NTFS must be used.
 
+### Performance considerations
+
+Pro:
+ReFS is an advanced filesystem over NTFS in many ways. It can greatly improve the performance in read / write operations scenarios, especially comparing operations like Hyper-V snapshots and merging them. This is not limited to Hyper-V though. Based on real world applications this also applies for containered data structures that are similar to the technology of VHDX, Storage Spaces, especially when mirrored, or S2D which uses mirroring as per concept, such as FSLogix or Citrix PVS, to name a 3rd party application scenario. 
+
+Con:
+While supported, there exist scenarios where ReFS performance is not meeting expectations as compared to NTFS. This applies mostly to Basic Disks and volumes using ReFS without Storage Spaces / S2D, where volumes contain a high number of **small files and fast changing files**. This is by design and caused by the needed metadata handling and scrubbing. The performance in these scenarios *can* cause slow application responsiveness or timeouts, unexpected low read and write speeds for random IOs.
+A typical scenario that could apply, based on the underlying hardware configuration, as typically Windows user profiles, temporary folders for browsers in high user density enviroments, such as Microsoft Remote Desktop Host, Windows Virtual Desktop (WVD), or 3rd party applications like Citrix User Profile Management (UPM).
+
+In such scenarios, please plan and test your workloads when using ReFS on basic disks or volumes or alternatively rely on NTFS, which due to the non existent scrubbing is not prone for such possible impacts.
+
+
 
 ## Feature comparison
 
