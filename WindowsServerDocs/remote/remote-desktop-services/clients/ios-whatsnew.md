@@ -247,7 +247,3 @@ It's been well over a year since we last updated the Remote Desktop Client for i
 *Date published: 03/28/2018*
 
 - Updates to address CredSSP encryption oracle remediation described in CVE-2018-0886.
-
-## How to report issues
-
-We're committed to making this app the best it can be and value your feedback. You can report issues to us by navigating to **Settings** > **Report an Issue** in the client.
