@@ -89,7 +89,7 @@ Additional guidance for operating an environment with LAPS and PAWs can be found
 
 ### 3. Administrative workstations
 
-As an initial security measure for those users with Azure Active Directory and traditional on-premises Active Directory administrative privileges, ensure they are using Windows 10 devices configured with the [Standards for a highly secure Windows 10 device](/windows-hardware/design/device-experiences/oem-highly-secure). Privileged administrator accounts should not be a members of the local administrator group of the administrative workstations.  Privilege elevation via User Access Control (UAC) can be utilized when configuration changes to the workstations is required.  Additionally, the Windows 10 Security Baseline should be applied to the workstations to further harden the device.
+As an initial security measure for those users with Azure Active Directory and traditional on-premises Active Directory administrative privileges, ensure they are using Windows 10 devices configured with the [Standards for a highly secure Windows 10 device](/windows-hardware/design/device-experiences/oem-highly-secure). Privileged administrator accounts should not be members of the local administrator group of the administrative workstations.  Privilege elevation via User Access Control (UAC) can be utilized when configuration changes to the workstations is required.  Additionally, the Windows 10 Security Baseline should be applied to the workstations to further harden the device.
 
 ### 4. Identity attack detection
 
