@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/17/2020
+ms.date: 11/06/2020
 ms.localizationpriority: medium
 ---
 # What's new in the iOS client
@@ -16,6 +16,50 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Help** > **Report an Issue**.
 
+## Updates for version 10.2.0
+
+*Date published: 11/06/2020*
+
+In this version, we addressed some compatibility issues with iOS and iPadOS 14. In addition, we made the following fixes and feature updates:
+
+- Addressed crashes on iOS and iPadOS 14 that happened when entering input on keyboard.
+- Added the Cmd+S and Cmd+N shortcuts to access the "Add Workspace" and "Add PC" processes, respectively.
+- Added the Cmd+F shortcut to invoke Search UI in the Connection Center.
+- Added the "Expand All" and "Collapse All" commands to the Workspaces tab.
+- Resolved a bug that caused a 0xD06 protocol error to happen while running Outlook as a remote app.
+- The on-screen keyboard will now disappear when you scroll through search results in the Connection Center.
+- Updated the animation used when hovering over workspace icons with a mouse or trackpad pointer on iPadOS 14.
+
+## Updates for version 10.1.4
+
+*Date published: 11/06/2020*
+
+We've put together some bug fixes and small feature updates for this 10.1.4 release. Here's what's new:
+
+- Addressed an issue where the client would report a 0x5000007 error message when trying to connect to an RD Gateway server.
+- User account passwords updated in the credential UI are now saved after successfully signing in.
+- Addressed an issue where range and multi-select with the mouse or trackpad (Shift+click and Ctrl+click) didn't work consistently.
+- Addressed a bug where apps displayed in the in-session switcher UI were out of sync with the remote session.
+- Made some cosmetic changes to the layout of Connection Center workspace headers.
+- Improved visibility of the on-screen keyboard buttons for dark backdrops.
+- Fixed a localization bug in the disconnect dialog.
+
+## Updates for version 10.1.3
+
+*Date published: 11/06/2020*
+
+We've put together some bug fixes and feature updates for the 10.1.3 release. Here's what's new:
+
+- The input mode (Mouse Pointer or Touch mode) is now global across all active PC and remote app connections.
+- Fixed an issue that prevented microphone redirection from working consistently.
+- Fixed a bug that caused audio output to play from the iPhone earpiece instead of the internal speaker.
+- The client now supports automatically switching audio output between the iPhone or iPad internal speakers, bluetooth speakers, and Airpods.
+- Audio now continues to play in the background when switching away from the client or locking the device.
+- The input mode automatically switches to Touch mode when using a SwiftPoint mouse on iPhones or iPads (not running iPadOS, version 13.4 or later).
+- Addressed graphics output issues that occurred when the server was configured to use AVC444 full screen mode.
+- Fixed some VoiceOver bugs.
+- Panning around a zoomed in session works when using an external mouse or trackpad now works differently. To pan in a zoomed-in session with an external mouse or trackpad, select the pan knob, then drag your mouse cursor away while still holding the mouse button. To pan around in Touch mode, press on the pan knob, then move your finger. The session will stick to your finger and follow it around. In Mouse Pointer mode, push the virtual mouse cursor against the sides of the screen.
+
 ## Updates for version 10.1.2
 
 *Date published 8/17/2020*
@@ -24,6 +68,44 @@ In this update, we've addressed issues that were reported in the version 10.1.1 
 
 - Fixed a crash that occurred for some users when subscribing to a Windows Virtual Desktop feed using non-brokered authentication.
 - Fixed the layout of workspace icons on the iPhone X, iPhone XS, and iPhone 11 Pro.
+
+## Updates for version 10.1.1
+
+*Date published: 11/06/2020*
+
+Here’s what we've included in this release:
+
+- Fixed a bug that prevented typing in Korean.
+- Added support for F1 through F12, Home, End, PgUp and PgDn keys on hardware keyboards.
+- Resolved a bug that made it difficult to move the mouse cursor to the top of the screen in letterboxed mode on iPadOS devices.
+- Addressed an issue where pressing backspace after space deleted two characters.
+- Fixed a bug that caused the iPadOS mouse cursor to appear on top of the Remote Desktop client mouse cursor in "Tap to Click" mode.
+- Resolved an issue that prevented connections to some RD Gateway servers (error code 0x30000064).
+- Fixed a bug that caused the mouse cursor to be shown in the in-session switcher UI on iOS devices when using a SwiftPoint mouse.
+- Resized the RD client mouse cursor to be consistent with the current client scale factor.
+- The client now checks for network connectivity before launching a workspace resource or PC connection.
+- Hitting the remapped Escape button or Cmd+. now cancels out of any credential prompt.
+- We've added some animations and polish that appear when you move the mouse cursor around on iPads running iPadOS 13.4 or later.
+
+## Updates for version 10.1.0
+
+*Date published: 11/06/2020*
+
+Here's what's new for this version:
+
+- If you're using iPadOS 13.4 or later, can now control the remote session with a mouse or trackpad.
+- The client now supports the following Apple Magic Mouse 2 and Apple Magic Trackpad 2 gestures: left-click, left-drag, right-click, right-drag, horizontal and vertical scrolling, and local zooming.
+- For external mice, the client now supports left-click, left-drag, right-click, right-drag, middle-click, and vertical scrolling.
+- The client now supports keyboard shortcuts that use Ctrl, Alt, or Shift keys with the mouse or trackpad, including multi-select and range-select.
+- The client now supports the "Tap-to-Click" feature for the trackpad.
+- We've updated the Mouse Pointer mode's right-click gesture to press-and-hold (not press-and-hold-and-release). On the iPhone client we've thrown in some taptic feedback when we detect the right-click gesture.
+- Added an option to disable NLA enforcement under **iOS Settings** > **RD Client**.
+- Mapped Control+Shift+Escape to Ctrl+Shift+Esc, where Escape is generated using a remapped key on iPadOS or Command+.
+- Mapped Command+F to Ctrl+F.
+- Fixed an issue where the SwiftPoint middle mouse button didn't work in iPadOS version 13.3.1 or earlier and iOS.
+- Fixed some bugs that prevented the client from recognizing the "rdp:" URI.
+- Addressed an issue where the in-session Immersive Switcher UI showed outdated app entries if a disconnect was server-initiated.
+- The client now supports the Azure Resource Manager-integrated version of Windows Virtual Desktop.
 
 ## Updates for version 10.0.7
 
@@ -165,7 +247,3 @@ It's been well over a year since we last updated the Remote Desktop Client for i
 *Date published: 03/28/2018*
 
 - Updates to address CredSSP encryption oracle remediation described in CVE-2018-0886.
-
-## How to report issues
-
-We're committed to making this app the best it can be and value your feedback. You can report issues to us by navigating to **Settings** > **Report an Issue** in the client.
