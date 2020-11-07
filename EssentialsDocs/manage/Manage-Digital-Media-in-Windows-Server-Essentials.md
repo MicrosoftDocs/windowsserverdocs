@@ -2,12 +2,11 @@
 title: "Manage Digital Media in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 9378bffa-487c-43ca-9ec3-7e7864d2dd9a
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Manage Digital Media in Windows Server Essentials
@@ -126,7 +125,7 @@ The following topics discuss the media streaming features of your server, and ex
  The server administrator can add digital media to shared folders in the media library by accessing the server directly, or by using the  Remote Web Access site to sign in to the Dashboard. Other users can add media files to the server by using the **Shared Folders** connection on the Launchpad, by using the  Remote Web Access site, or by using the My Server app for Windows Phone. For information about playing media, see [Play Digital Media](../use/Play-Digital-Media-in-Windows-Server-Essentials.md).
 
 > [!NOTE]
->  You can also upload media files to the server by using the My Server app for Windows Phone. You can download the My Server app from the [Windows Phone store](https://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a). For more information about the My Server app for Windows phone, see the blog post [My Server phone app for Windows Server Essentials](https://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx).
+>  You can also upload media files to the server by using the My Server app for Windows Phone. You can download the My Server app from the [Windows Phone store](https://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a). For more information about the My Server app for Windows phone, see the blog post [My Server phone app for Windows Server Essentials](/archive/blogs/sbs/my-server-phone-app-for-windows-server-2012-essentials).
 
 #### To add digital media files to shared folders on the server
 

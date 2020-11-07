@@ -1,13 +1,11 @@
 ---
 title: winsat mem
 description: Reference article for winsat mem, which tests system memory bandwidth in a manner reflective of large memory to memory buffer copies, as are used in multimedia processing.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-winms.topic: article
+winms.topic: reference
 ms.assetid: cda017bf-6193-43c1-b71f-e379c23e1152
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

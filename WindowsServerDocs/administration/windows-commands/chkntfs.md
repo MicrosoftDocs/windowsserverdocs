@@ -1,13 +1,11 @@
 ---
 title: chkntfs
 description: Reference article for the chkntfs command, which displays or modifies automatic disk checking when the computer is started.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 93eca810-8699-4716-8e9d-aecd54f704be
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

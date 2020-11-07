@@ -1,13 +1,11 @@
 ---
 title: autoconv
 description: Reference article for the autoconv command, which converts file allocation table (Fat) and Fat32 volumes to the NTFS file system.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 17281e54-0b18-4e84-94ac-24586c82df4e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -1,13 +1,11 @@
 ---
 title: bitsadmin transfer
 description: Reference article for the bitsadmin transfer command, which transfers one or more files.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: fe302141-b33a-4a05-835e-dc4fc4db7d5a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -34,7 +32,7 @@ bitsadmin /transfer <name> [<type>] [/priority <job_priority>] [/ACLflags <flags
 | type | Optional. Sets the type of job, including:<ul><li>**/DOWNLOAD.** The default value. Choose this type for download jobs.</li><li>**/UPLOAD.** Choose this type for upload jobs.</li></ul> |
 | priority | Optional. Sets the priority of the job, including:<ul><li>FOREGROUND</li><li>HIGH</li><li>NORMAL</li><li>LOW</li></ul> |
 | ACLflags | Optional. Indicates that you want to maintain the owner and ACL information with the file being downloaded. Specify one or more of the values, including:<ul><li>**o** - Copy owner information with file.</li><li>**g** - Copy group information with file.</li><li>**d** - Copy discretionary access control list (DACL) information with file.</li><li>**s** - Copy system access control list (SACL) information with file.</li></ul> |
-| /DYNAMIC | Configures the job using [**BITS_JOB_PROPERTY_DYNAMIC_CONTENT**](https://docs.microsoft.com/windows/win32/api/bits5_0/ne-bits5_0-bits_job_property_id), which relaxes the server-side requirements. |
+| /DYNAMIC | Configures the job using [**BITS_JOB_PROPERTY_DYNAMIC_CONTENT**](/windows/win32/api/bits5_0/ne-bits5_0-bits_job_property_id), which relaxes the server-side requirements. |
 | remotefilename | The name of the file after it's transferred to the server. |
 | localfilename | The name of the file that resides locally. |
 

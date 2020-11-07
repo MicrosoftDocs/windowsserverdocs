@@ -1,13 +1,11 @@
 ---
 title: popd
 description: Reference article for the pnputil command, which changes the current directory to the directory that was most recently stored by the pushd command.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 8a4c52d5-9fd1-4eac-9c0c-5767b25728ed
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 07/11/2018
 ---
 

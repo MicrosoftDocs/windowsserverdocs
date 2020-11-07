@@ -1,13 +1,11 @@
 ---
 ms.assetid: b8df1828-5ead-4c90-b0fe-95c675116b7c
 title: Creating an Organizational Unit Design
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # Creating an Organizational Unit Design
@@ -16,7 +14,7 @@ ms.technology: identity-adds
 
 Forest owners are responsible for creating organizational unit (OU) designs for their domains. Creating an OU design involves designing the OU structure, assigning the OU owner role, and creating account and resource OUs.
 
-Initially, design your OU structure to enable delegation of administration. When the OU design is complete, you can create additional OU structures for the application of Group Policy to the users and computers and to limit the visibility of objects. For more information, see [Designing a Group Policy Infrastructure](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786524(v=ws.10)).
+Initially, design your OU structure to enable delegation of administration. When the OU design is complete, you can create additional OU structures for the application of Group Policy to the users and computers and to limit the visibility of objects. For more information, see [Designing a Group Policy Infrastructure](/previous-versions/windows/it-pro/windows-server-2003/cc786524(v=ws.10)).
 
 ## OU owner role
 The forest owner designates an OU owner for each OU that you design for the domain. OU owners are data managers who control a subtree of objects in Active Directory Domain Services (AD DS). OU owners can control how administration is delegated and how policy is applied to objects within their OU. They can also create new subtrees and delegate administration of OUs within those subtrees.

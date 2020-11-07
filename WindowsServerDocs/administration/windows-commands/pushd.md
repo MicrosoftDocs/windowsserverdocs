@@ -1,13 +1,11 @@
 ---
 title: pushd
 description: Reference article for the pushd command, which stores the current directory for use by the popd command, and then changes to the specified directory.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 396bc545-0f41-473e-b0ac-76fbbb74d390
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

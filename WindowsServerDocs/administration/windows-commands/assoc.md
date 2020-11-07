@@ -1,13 +1,11 @@
 ---
 title: assoc
 description: Reference article for the assoc command, which displays or modifies file name extension associations.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 237bedda-b24c-4fec-a39c-9b7eacf96417
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -17,6 +15,7 @@ Displays or modifies file name extension associations. If used without parameter
 
 > [!NOTE]
 > This command is only supported within cmd.exe and is not available from PowerShell.
+> Though you can use `cmd /c assoc` as a workaround.
 
 ## Syntax
 

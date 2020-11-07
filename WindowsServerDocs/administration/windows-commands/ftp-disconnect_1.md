@@ -1,13 +1,11 @@
 ---
 title: ftp disconnect
 description: Reference article for the ftp disconnect command, which disconnects from the remote computer and retains the ftp prompt.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: f91ac304-f126-49df-9ab9-b8fa2ea515fd
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -35,4 +33,4 @@ disconnect
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

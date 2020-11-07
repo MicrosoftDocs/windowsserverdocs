@@ -13,44 +13,31 @@ At the top of every article, there is specific metadata that must be included fo
 It should look like this, including the three hyphens (---) at the top and bottom:
 
 ```markdown
-
 ---
-title: The title of the article should go here. This is used in SEO and search results.
-
-description: A description for the article should go here. This is used in search results, to provide users with information about whether the article has the information they're looking for.
-
-ms.prod: Use this specific text, windows-server-threshold
-
-ms.reviewer: The Microsoft alias for the primary PM for the feature/functionality
-
-author: Your GitHub alias
-
-ms.author: Your Microsoft alias
-
-manager: Your manager's Microsoft alias
-
-ms.topic: Type of article, including article, landing-page, get-started-article, or reference
-
+title: Required. The title of the article should go here. This is used in SEO and search results.
+description: Required. A description for the article should go here. This is used in search results, to provide users with information about whether the article has the information they're looking for.
+author: Required. Your GitHub alias
+ms.author: Required. Your Microsoft alias
+manager: Optional. Your manager's Microsoft alias
+ms.reviewer: Optional. The Microsoft alias for the primary PM for the feature/functionality
+ms.topic: Type of article, including conceptual, how-to, hub-page, overview, quickstart, reference, sample, troubleshooting, or tutorial
 ms.date: Date of change (MM/DD/YYYY)
 
 ---
-
 ```
 
 ## Example
 
 ```markdown
-
 ---
 title: What is Windows Admin Center?
 description: Learn about the Windows Admin Center, a locally-deployed, browser-based management tool set that lets you manage your Windows Servers with no Azure or cloud dependency.
-ms.prod: windows-server
-ms.reviewer: alainch
 author: danielle-github
 ms.author: danielle
 manager: alainch
-ms.topic: article
+ms.reviewer: alainch
+ms.topic: overview
 ms.date: 07/06/2019
----
 
+---
 ```

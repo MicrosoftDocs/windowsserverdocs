@@ -1,8 +1,6 @@
 ---
 title: Managing capabilities
 description: System Insights exposes a variety of settings that can be configured for each capability, and these settings can be tuned to address the specific needs of your deployment. This topic describes how to manage the various settings for each capability through Windows Admin Center or PowerShell, providing basic PowerShell examples and Windows Admin Center screenshots to demonstrate how to adjust these settings.
-ms.prod: windows-server
-ms.technology: system-insights
 ms.topic: article
 author: gawatu
 ms.author: gawatu
@@ -18,7 +16,7 @@ In Windows Server 2019, System Insights exposes a variety of settings that can b
 >[!TIP]
 >You can also use these short videos to help you get started and confidently manage System Insights: [Getting started with System Insights in 10 minutes](https://blogs.technet.microsoft.com/filecab/2018/07/24/getting-started-with-system-insights-in-10-minutes/)
 
-Though this section provides PowerShell examples, you can use the [System Insights PowerShell documentation](https://aka.ms/systeminsightspowershell) to see all of the cmdlets, parameters, and parameter sets within System Insights.
+Though this section provides PowerShell examples, you can use the [System Insights PowerShell documentation](/powershell/module/systeminsights/) to see all of the cmdlets, parameters, and parameter sets within System Insights.
 
 ## Viewing capabilities
 
@@ -82,7 +80,7 @@ System Insights logs an event each time a capability finishes a prediction. Thes
 | None | 132 |
 
 >[!TIP]
->Use [Azure Monitor](https://azure.microsoft.com/services/monitor/) or [System Center Operations Manager](https://docs.microsoft.com/system-center/scom/welcome?view=sc-om-1807) to aggregate these events and see prediction results across a group of machines.
+>Use [Azure Monitor](https://azure.microsoft.com/services/monitor/) or [System Center Operations Manager](/system-center/scom/welcome?view=sc-om-1807) to aggregate these events and see prediction results across a group of machines.
 
 
 ## Setting a capability schedule

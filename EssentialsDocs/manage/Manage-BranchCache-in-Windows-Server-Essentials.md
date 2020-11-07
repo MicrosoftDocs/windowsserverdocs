@@ -2,12 +2,11 @@
 title: "Manage BranchCache in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: f6e05aec-d07c-4e0b-94ab-f20279e9ffd1
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Manage BranchCache in Windows Server Essentials
@@ -96,6 +95,6 @@ BranchCache can help you optimize Internet usage, improve performance of network
 
 ## Additional References
 
--   [BranchCache Overview](https://technet.microsoft.com/library/hh831696.aspx)
+-   [BranchCache Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11))
 
 -   [Manage Windows Server Essentials](Manage-Windows-Server-Essentials.md)

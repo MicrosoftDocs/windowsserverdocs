@@ -1,7 +1,6 @@
 ---
 title: Securing Privileged Access Reference Material
-description: Operational security controls for Windows Server Active Directory Domains 
-ms.prod: windows-server
+description: Operational security controls for Windows Server Active Directory Domains
 ms.topic: article
 ms.assetid: 22ee9a77-4872-4c54-82d9-98fc73a378c0
 ms.date: 02/14/2019
@@ -128,13 +127,13 @@ As an example, its acceptable for Active Directory to control a standard user de
 
 The control relationship can be introduced through many means including security Access Control Lists (ACLs) on objects like filesystems, membership in the local administrators group on a computer, or agents installed on a computer running as System (with the ability to run arbitrary code and scripts).
 
-A frequently overlooked example is exposure through logon, which creates a control relationship by exposing administrative credentials of a system to another system. This is the underlying reason why credential theft attacks like pass the hash are so powerful. When an administrator logs in to a standard user desktop with Tier 0 credentials, they are exposing those credentials to that desktop, putting it in control of AD, and creating an escalation of privilege path to AD. For more information on these attacks, see [this page](https://technet.microsoft.com/security/dn785092).
+A frequently overlooked example is exposure through logon, which creates a control relationship by exposing administrative credentials of a system to another system. This is the underlying reason why credential theft attacks like pass the hash are so powerful. When an administrator logs in to a standard user desktop with Tier 0 credentials, they are exposing those credentials to that desktop, putting it in control of AD, and creating an escalation of privilege path to AD. For more information on these attacks, see [this page](/previous-versions/dn785092(v=msdn.10)).
 
 Because of the large number of assets that depend on identity systems like Active Directory, you should minimize the number of systems your Active Directory and Domain Controllers depend on.
 
 ![Diagram showing that you should minimize the number of systems your Active Directory and Domain Controllers depend on](../media/securing-privileged-access-reference-material/PAW_RM_Fig010.JPG)
 
-For more information on hardening the top risks of active directory, see [this page](https://aka.ms/hardenAD).
+For more information on hardening the top risks of active directory, see [this page](../ad-ds/plan/security-best-practices/reducing-the-active-directory-attack-surface.md).
 
 ## Operational standards based on clean source principle
 
@@ -309,7 +308,7 @@ Administrators can only sign in to admin workstations with their administrative 
 > [!NOTE]
 > This is required because logging onto a host interactively grants control of the credentials to that host.
 >
-> See the [Administrative Tools and Logon Types](https://aka.ms/admintoolsecurity) for details about logon types, common management tools, and credential exposure.
+> See the [Administrative Tools and Logon Types]() for details about logon types, common management tools, and credential exposure.
 
 ##### Use of approved support technology and methods
 
@@ -325,7 +324,7 @@ Administrators who support remote systems and users must follow these guidelines
 Ensure that the following practices are applied for this scenario:
 
 - **Remote server support** - When remotely accessing a server, Tier 0 administrators must follow these guidelines:
-  - **Primary (tool)** - Remote tools that use network logons (type 3). For more information, see [Administrative Tools and Logon Types](https://aka.ms/admintoolsecurity).
+  - **Primary (tool)** - Remote tools that use network logons (type 3). For more information, see [Administrative Tools and Logon Types]().
   - **Primary (interactive)** - Use RDP RestrictedAdmin or a Standard RDP Session from an admin workstation with a domain account
 
     > [!NOTE]
@@ -459,7 +458,7 @@ While this approach does add a forest to an Active Directory environment, the co
 > [!NOTE]
 > This approach works well for administering Active Directory, but many applications aren't compatible with being administered by accounts from an external forest using a standard trust.
 
-This figure depicts an ESAE forest used for administration of Tier 0 Assets and a PRIV forest configured for use with Microsoft Identity Manager's Privileged Access Management capability. For more information on deploying a MIM PAM instance, see [Privileged Identity Management for Active Directory Domain Services (AD DS)](https://technet.microsoft.com/library/mt150258.aspx) article.
+This figure depicts an ESAE forest used for administration of Tier 0 Assets and a PRIV forest configured for use with Microsoft Identity Manager's Privileged Access Management capability. For more information on deploying a MIM PAM instance, see [Privileged Identity Management for Active Directory Domain Services (AD DS)](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) article.
 
 ![Figure showing an ESAE forest used for administration of Tier 0 Assets and a PRIV forest configured for use with Microsoft Identity Manager's Privileged Access Management capability](../media/securing-privileged-access-reference-material/PAW_RM_Fig14.JPG)
 
@@ -484,7 +483,7 @@ An administrative forest design should include the following considerations:
 
 - **Workstation Hardening** - Build the administrative workstations using the [Privileged Access Workstations](../securing-privileged-access/privileged-access-workstations.md) (through Phase 3), but change the domain membership to the administrative forest instead of the production environment.
 - **Server and DC hardening** - For all domain controllers and servers in the administrative forest:
-   - Ensure all media is validated using the guidance in [Clean Source for installation media](https://aka.ms/cleansource)
+   - Ensure all media is validated using the guidance in [Clean Source for installation media]()
    - Ensure the administrative forest servers should have the latest operating systems installed, even if this is not feasible in production.
    - Admin forest hosts should be automatically updated with security updates.
 
@@ -504,12 +503,12 @@ An administrative forest design should include the following considerations:
    - Full volume encryption to mitigate against physical loss of computers, such as administrative laptops used remotely.
 
       > [!NOTE]
-      > See [BitLocker](https://technet.microsoft.com/library/dn641993.aspx) for more information.
+      > See [BitLocker](/previous-versions/windows/it-pro/windows-8.1-and-8/dn641993(v=ws.11)) for more information.
 
    - USB restrictions to protect against physical infection vectors.
 
       > [!NOTE]
-      > See [Control Read or Write Access to Removable Devices or Media](https://technet.microsoft.com/library/cc730808(v=ws.10).aspx) for more information.
+      > See [Control Read or Write Access to Removable Devices or Media](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730808(v=ws.10)) for more information.
 
    - Network isolation to protect against network attacks and inadvertent admin actions. Host firewalls should block all incoming connections except those explicitly required and block all outbound Internet access.
 
@@ -603,7 +602,7 @@ The symbols in this table defined as follows:
 - (-) denotes when credentials are not exposed.
 - (v) denotes when credentials are exposed.
 
-For management applications that are not in this table, you can determine the logon type from the logon type field in the audit logon events. For more information, see [Audit logon events](https://technet.microsoft.com/library/cc787567(v=ws.10).aspx).
+For management applications that are not in this table, you can determine the logon type from the logon type field in the audit logon events. For more information, see [Audit logon events](/previous-versions/windows/it-pro/windows-server-2003/cc787567(v=ws.10)).
 
 In Windows-based computers, all authentications are processed as one of several logon types, regardless of which authentication protocol or authenticator is used. This table includes most common logon types and their attributes relative to credential theft:
 
@@ -626,4 +625,4 @@ Column definitions:
 - **Examples** list common scenarios in which the logon type is used.
 
 > [!NOTE]
-> For more information about Logon Types, see [SECURITY_LOGON_TYPE enumeration](https://technet.microsoft.com/library/aa380129(VS.85).aspx).
+> For more information about Logon Types, see [SECURITY_LOGON_TYPE enumeration](/windows/win32/api/ntsecapi/ne-ntsecapi-security_logon_type).

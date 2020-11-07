@@ -1,13 +1,11 @@
 ---
 title: ftp
 description: Reference article for the ftp command, which transfers files to and from a computer running a File Transfer Protocol (ftp) server service.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 758335e1-fd8d-448c-a654-993126239dd9
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -70,8 +68,8 @@ ftp -s:resync.txt ftp.example.microsoft.com
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
 
-- [IP version 6](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738636(v=ws.10))
+- [IP version 6](/previous-versions/windows/it-pro/windows-server-2003/cc738636(v=ws.10))
 
-- [IPv6 applications](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782509(v=ws.10))
+- [IPv6 applications](/previous-versions/windows/it-pro/windows-server-2003/cc782509(v=ws.10))

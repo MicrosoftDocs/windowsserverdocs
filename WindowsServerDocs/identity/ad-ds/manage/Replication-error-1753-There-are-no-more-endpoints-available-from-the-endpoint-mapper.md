@@ -1,13 +1,11 @@
 ---
 ms.assetid: 0f21951c-b1bf-43bb-a329-bbb40c58c876
 title: Replication error 1753 There are no more endpoints available from the endpoint mapper
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 # Replication error 1753 There are no more endpoints available from the endpoint mapper
 
@@ -65,7 +63,7 @@ Sample output from "REPADMIN /SHOWREPS" depicting inbound replication from CONTO
 
 ```
 Default-First-Site-NameCONTOSO-DC1
-DSA Options: IS_GC 
+DSA Options: IS_GC
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01
@@ -218,13 +216,13 @@ In the portqry output, note the port numbers dynamically registered by the "MS N
 
 ```
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_np:CONTOSO-DC01[\pipe\lsass] 
+ncacn_np:CONTOSO-DC01[\pipe\lsass]
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_np:CONTOSO-DC01[\PIPE\protected_storage] 
+ncacn_np:CONTOSO-DC01[\PIPE\protected_storage]
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_ip_tcp:CONTOSO-DC01[49156] 
+ncacn_ip_tcp:CONTOSO-DC01[49156]
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_http:CONTOSO-DC01[49157] 
+ncacn_http:CONTOSO-DC01[49157]
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
 ncacn_http:CONTOSO-DC01[6004]
 ```
@@ -300,13 +298,13 @@ Summary: This example failed because an invalid host-to-IP mapping (in the HOST 
 * [KB article 832017 Service overview and network port requirements for the Windows Server system](https://support.microsoft.com/kb/832017/)
 * [KB article 224196 Restricting Active Directory replication traffic and client RPC traffic to a specific port](https://support.microsoft.com/kb/224196/)
 * [KB article 154596 How to configure RPC dynamic port allocation to work with firewalls](https://support.microsoft.com/kb/154596)
-* [How RPC Works](https://msdn.microsoft.com/library/aa373935(VS.85).aspx)
-* [How the Server Prepares for a Connection](https://msdn.microsoft.com/library/aa373938(VS.85).aspx)
-* [How the Client Establishes a Connection](https://msdn.microsoft.com/library/aa373937(VS.85).aspx)
-* [Registering the Interface](https://msdn.microsoft.com/library/aa375357(VS.85).aspx)
-* [Making the Server Available on the Network](https://msdn.microsoft.com/library/aa373974(VS.85).aspx)
-* [Registering Endpoints](https://msdn.microsoft.com/library/aa375255(VS.85).aspx)
-* [Listening for Client Calls](https://msdn.microsoft.com/library/aa373966(VS.85).aspx)
-* [How the Client Establishes a Connection](https://msdn.microsoft.com/library/aa373937(VS.85).aspx)
+* [How RPC Works](/windows/win32/rpc/how-rpc-works)
+* [How the Server Prepares for a Connection](/windows/win32/rpc/how-the-server-prepares-for-a-connection)
+* [How the Client Establishes a Connection](/windows/win32/rpc/how-the-client-establishes-a-connection)
+* [Registering the Interface](/windows/win32/rpc/registering-the-interface)
+* [Making the Server Available on the Network](/windows/win32/rpc/making-the-server-available-on-the-network)
+* [Registering Endpoints](/windows/win32/rpc/registering-endpoints)
+* [Listening for Client Calls](/windows/win32/rpc/listening-for-client-calls)
+* [How the Client Establishes a Connection](/windows/win32/rpc/how-the-client-establishes-a-connection)
 * [Restricting Active Directory replication traffic and client RPC traffic to a specific port](https://support.microsoft.com/kb/224196)
-* [SPN for a Target DC in AD DS](https://msdn.microsoft.com/library/dd207688(PROT.13).aspx)
+* [SPN for a Target DC in AD DS](/openspecs/windows_protocols/ms-drsr/41efc56e-0007-4e88-bafe-d7af61efd91f)

@@ -1,23 +1,17 @@
 ---
-title: Scwcmd view
-description: Reference article for **** -
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
+title: scwcmd view
+description: Reference article for the scwcmd view command, which renders an .xml file by using a specified .xsl transform.
+ms.topic: reference
 ms.assetid: 7995959a-d93e-4865-a6a0-2ab18c2bb47f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# Scwcmd: view
+# scwcmd view
 
-> Applies to: Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2012 R2 and Windows Server 2012
 
 Renders an .xml file by using a specified .xsl transform. This command can be useful for displaying Security Configuration Wizard (SCW) .xml files by using different views.
 
@@ -27,21 +21,18 @@ Renders an .xml file by using a specified .xsl transform. This command can be us
 scwcmd view /x:<Xmlfile.xml> [/s:<Xslfile.xsl>]
 ```
 
-#### Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/x:\<Xmlfile.xml>|Specifies the .xml file to be viewed. This parameter must be specified.|
-|/s:\<Xslfile.xsl>|Specifies the .xsl transform to apply to the .xml file as part of the rendering process. This parameter is optional for SCW .xml files. When the **view** command is used to render an SCW .xml file, it will automatically try to load the correct default transform for the specified .xml file. If an .xsl transform is specified, the transform must be written under the assumption that the .xml file is in the same directory as the .xsl transform.|
-|/?|Displays help at the command prompt.|
+| Parameter | Description |
+|--|--|
+| /x:`<Xmlfile.xml>` | Specifies the .xml file to be viewed. This parameter must be specified. |
+| /s:`<Xslfile.xsl>` | Specifies the .xsl transform to apply to the .xml file as part of the rendering process. This parameter is optional for SCW .xml files. When the **view** command is used to render a SCW .xml file, it will automatically try to load the correct default transform for the specified .xml file. If an .xsl transform is specified, the transform must be written under the assumption that the .xml file is in the same directory as the .xsl transform. |
+| /? | Displays help at the command prompt. |
 
-## Remarks
+## Example
 
-Scwcmd.exe is only available on computers running Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
+To view *Policyfile.xml* by using the *Policyview.xsl* transform, type:
 
-## Examples
-
-To view Policyfile.xml by using the Policyview.xsl transform, type:
 ```
 scwcmd view /x:C:\policies\Policyfile.xml /s:C:\viewers\Policyview.xsl
 ```
@@ -49,3 +40,13 @@ scwcmd view /x:C:\policies\Policyfile.xml /s:C:\viewers\Policyview.xsl
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [scwcmd analyze command](scwcmd-analyze.md)
+
+- [scwcmd configure command](scwcmd-configure.md)
+
+- [scwcmd register command](scwcmd-register.md)
+
+- [scwcmd rollback command](scwcmd-rollback.md)
+
+- [scwcmd transform command](scwcmd-transform.md)

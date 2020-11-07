@@ -2,11 +2,9 @@
 title: Configure Certificate Templates for PEAP and EAP Requirements
 description: This topic provides information about using certificates with Network Policy Server and Remote Access in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 2af0a1df-5c44-496b-ab11-5bc340dc96f0
-ms.author: lizross 
+ms.author: lizross
 author: eross-msft
 ---
 # Configure Certificate Templates for PEAP and EAP Requirements
@@ -20,9 +18,9 @@ All certificates that are used for network access authentication with Extensible
 
 ## Minimum server certificate requirements
 
-With PEAP\-MS\-CHAP v2, PEAP\-TLS, or EAP\-TLS as the authentication method, the NPS must use a server certificate that meets the minimum server certificate requirements. 
+With PEAP\-MS\-CHAP v2, PEAP\-TLS, or EAP\-TLS as the authentication method, the NPS must use a server certificate that meets the minimum server certificate requirements.
 
-Client computers can be configured to validate server certificates by using the **Validate server certificate** option on the client computer or in Group Policy. 
+Client computers can be configured to validate server certificates by using the **Validate server certificate** option on the client computer or in Group Policy.
 
 The client computer accepts the authentication attempt of the server when the server certificate meets the following requirements:
 
@@ -49,7 +47,7 @@ The client computer accepts the authentication attempt of the server when the se
        - **Hash Algorithm:** SHA2
     4. Click **Next**.
 
-- The Subject Alternative Name (SubjectAltName) extension, if used, must contain the DNS name of the server. To configure the certificate template with the Domain Name System (DNS) name of the enrolling server: 
+- The Subject Alternative Name (SubjectAltName) extension, if used, must contain the DNS name of the server. To configure the certificate template with the Domain Name System (DNS) name of the enrolling server:
 
 	1. Open Certificate Templates.
 	2. In the details pane, right-click the certificate template that you want to change, and then click **Properties** .
@@ -64,7 +62,7 @@ When using PEAP and EAP-TLS, NPSs display a list of all installed certificates i
 
 - Registry-based and smart card-logon certificates are not displayed.
 
-For more information, see [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments).
+For more information, see [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](../../core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments.md).
 
 ## Minimum client certificate requirements
 
@@ -92,9 +90,9 @@ With EAP-TLS or PEAP-TLS, the server accepts the client authentication attempt w
 
 With PEAP\-TLS and EAP\-TLS, clients display a list of all installed certificates in the Certificates snap-in, with the following exceptions:
 
-- Wireless clients do not display registry-based and smart card-logon certificates. 
+- Wireless clients do not display registry-based and smart card-logon certificates.
 
-- Wireless clients and VPN clients do not display password-protected certificates. 
+- Wireless clients and VPN clients do not display password-protected certificates.
 
 - Certificates that do not contain the Client Authentication purpose in EKU extensions are not displayed.
 

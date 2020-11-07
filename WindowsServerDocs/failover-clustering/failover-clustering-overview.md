@@ -1,12 +1,10 @@
 ---
 ms.assetid: c9844427-27cf-4d76-b5bb-e06368b092f7
-title: Failover Clustering  
-ms.prod: windows-server
+title: Failover Clustering
 ms.topic: landing-page
 manager: lizross
 author: JasonGerend
-ms.author: jgerend  
-ms.technology: storage-failover-clustering
+ms.author: jgerend
 ms.date: 06/06/2019
 ms.localizationpriority: high
 ---
@@ -34,11 +32,11 @@ Failover Clustering has many practical applications, including:
 | [Cluster sets](../storage/storage-spaces/cluster-sets.md)                  |                             |[Deploy a file share witness](file-share-witness.md) |
 | [Cluster affinity](cluster-affinity.md)                                     |                            | [Cluster operating system rolling upgrades](cluster-operating-system-rolling-upgrade.md) |
 |                                                                             |                            | [Upgrading a failover cluster on the same hardware](upgrade-option-same-hardware.md) |
-|                                                                            |                             | [Deploy an Active Directory Detached Cluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\))
+|                                                                            |                             | [Deploy an Active Directory Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\))
 
 |**Manage**  |  **Tools and settings**  |  **Community resources**       |
 | ------------- |  -------------- | --------------------- |
-| [Cluster-Aware Updating](cluster-aware-updating.md)    |   [Failover Clustering PowerShell Cmdlets](https://docs.microsoft.com/powershell/module/failoverclusters/?view=win10-ps)      |  [High Availability (Clustering) Forum](https://go.microsoft.com/fwlink/p/?LinkId=230641)       |
-|  [Health Service](health-service-overview.md)   |   [Cluster Aware Updating PowerShell Cmdlets](https://docs.microsoft.com/powershell/module/clusterawareupdating/?view=win10-ps)      | [Failover Clustering and Network Load Balancing Team Blog](https://blogs.msdn.com/b/clustering/)        |
+| [Cluster-Aware Updating](cluster-aware-updating.md)    |   [Failover Clustering PowerShell Cmdlets](/powershell/module/failoverclusters/?view=win10-ps)      |  [High Availability (Clustering) Forum](https://go.microsoft.com/fwlink/p/?LinkId=230641)       |
+|  [Health Service](health-service-overview.md)   |   [Cluster Aware Updating PowerShell Cmdlets](/powershell/module/clusterawareupdating/?view=win10-ps)      | [Failover Clustering and Network Load Balancing Team Blog](https://blogs.msdn.com/b/clustering/)        |
 |  [Cluster-domain migration](cluster-domain-migration.md)   |         |         |
 |  [Troubleshooting using Windows Error Reporting](troubleshooting-using-wer-reports.md)   |         |         |

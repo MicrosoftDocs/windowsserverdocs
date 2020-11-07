@@ -1,11 +1,9 @@
-﻿---
+---
 title: Use Robocopy to pre-seed files for DFS Replication
 description: How to use Robocopy.exe to pre-seed files for DFS Replication.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage 
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
 ms.date: 05/18/2018
 ms.localizationpriority: medium
 ---
@@ -13,7 +11,7 @@ ms.localizationpriority: medium
 
 >Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-This topic explains how to use the command-line tool, **Robocopy.exe**, to pre-seed files when setting up replication for Distributed File System (DFS) Replication (also known as DFSR or DFS-R) in Windows Server. By pre-seeding files before you set up DFS Replication, add a new replication partner, or replace a server, you can speed up initial synchronization and enable cloning of the DFS Replication database in Windows Server 2012 R2. The Robocopy method is one of several pre-seeding methods; for an overview, see [Step 1: pre-seed files for DFS Replication](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn495046(v%3dws.11)>).
+This topic explains how to use the command-line tool, **Robocopy.exe**, to pre-seed files when setting up replication for Distributed File System (DFS) Replication (also known as DFSR or DFS-R) in Windows Server. By pre-seeding files before you set up DFS Replication, add a new replication partner, or replace a server, you can speed up initial synchronization and enable cloning of the DFS Replication database in Windows Server 2012 R2. The Robocopy method is one of several pre-seeding methods; for an overview, see [Step 1: pre-seed files for DFS Replication](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn495046(v%3dws.11)>).
 
 The Robocopy (Robust File Copy) command-line utility is included with Windows Server. The utility provides extensive options that include copying security, backup API support, retry capabilities, and logging. Later versions include multi-threading and un-buffered I/O support.
 
@@ -35,11 +33,11 @@ Because pre-seeding does not directly involve DFS Replication, you only need to
 - Install the most recent version of Robocopy on the server that you will use to copy the files—either the source server or the destination server; you will need to install the most recent version for the operating system version. For instructions, see [Step 2: Stabilize files that will be replicated](#step-2-stabilize-files-that-will-be-replicated). Unless you are pre-seeding files from a server running Windows Server 2003 R2, you can run Robocopy on either the source or destination server. The destination server, which typically has the more recent operating system version, gives you access to the most recent version of Robocopy.
 
 - Ensure that sufficient storage space is available on the destination drive. Do not create a folder on the path that you plan to copy to: Robocopy must create the root folder.
-    
-    >[!NOTE]
-    >When you decide how much space to allocate for the pre-seeded files, consider expected data growth over time and storage requirements for DFS Replication. For planning help, see [Edit the Quota Size of the Staging Folder and Conflict and Deleted Folder](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754229(v=ws.11)) in [Managing DFS Replication](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754771(v=ws.11)>).
 
-- On the source server, optionally install Process Monitor or Process Explorer, which you can use to check for applications that are locking files. For download information, see [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) and [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer).
+    >[!NOTE]
+    >When you decide how much space to allocate for the pre-seeded files, consider expected data growth over time and storage requirements for DFS Replication. For planning help, see [Edit the Quota Size of the Staging Folder and Conflict and Deleted Folder](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc754229(v=ws.11)) in [Managing DFS Replication](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754771(v=ws.11)>).
+
+- On the source server, optionally install Process Monitor or Process Explorer, which you can use to check for applications that are locking files. For download information, see [Process Monitor](/sysinternals/downloads/procmon) and [Process Explorer](/sysinternals/downloads/process-explorer).
 
 ## Step 1: Download and install the latest version of Robocopy
 
@@ -54,9 +52,9 @@ Alternatively, you can locate and install the latest hotfix for an operating sys
 1. In a web browser, open [https://support.microsoft.com](https://support.microsoft.com/).
 
 2. In **Search Support**, enter the following string, replacing `<operating system version>` with the appropriate operating system, then press the Enter key:
-    
+
     ```robocopy.exe kbqfe "<operating system version>"```
-    
+
     For example, enter **robocopy.exe kbqfe "Windows Server 2008 R2"**.
 
 3. Locate and download the hotfix with the highest ID number (that is, the latest version).
@@ -70,7 +68,7 @@ After you install the latest version of Robocopy on the server, you should preve
 |Source of the lock|Explanation|Mitigation|
 |---|---|---|
 |Users remotely open files on shares.|Employees connect to a standard file server and edit documents, multimedia content, or other files. Sometimes referred to as the traditional home folder or shared data workloads.|Only perform Robocopy operations during off-peak, non-business hours. This minimizes the number of files that Robocopy must skip during pre-seeding.<br><br>Consider temporarily setting Read-only access on the file shares that will be replicated by using the Windows PowerShell **Grant-SmbShareAccess** and **Close-SmbSession** cmdlets. If you set permissions for a common group such as Everyone or Authenticated Users to READ, standard users might be less likely to open files with exclusive locks (if their applications detect the Read-only access when files are opened).<br><br>You might also consider setting a temporary firewall rule for SMB port 445 inbound to that server to block access to files or use the **Block-SmbShareAccess** cmdlet. However, both of these methods are very disruptive to user operations.|
-|Applications open files local.|Application workloads running on a file server sometimes lock files.|Temporarily disable or uninstall the applications that are locking files. You can use Process Monitor or Process Explorer to determine which applications are locking files. To download Process Monitor or Process Explorer, visit the [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) and [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) pages.|
+|Applications open files local.|Application workloads running on a file server sometimes lock files.|Temporarily disable or uninstall the applications that are locking files. You can use Process Monitor or Process Explorer to determine which applications are locking files. To download Process Monitor or Process Explorer, visit the [Process Monitor](/sysinternals/downloads/procmon) and [Process Explorer](/sysinternals/downloads/process-explorer) pages.|
 
 ## Step 3: Copy the replicated files to the destination server
 
@@ -86,13 +84,13 @@ After you minimize locks on the files that will be replicated, you can pre-seed 
 2. Open an elevated command prompt.
 
 3. To pre-seed the files from the source to destination server, run the following command, substituting your own source, destination, and log file paths for the bracketed values:
-    
+
     ```PowerShell
     robocopy "<source replicated folder path>" "<destination replicated folder path>" /e /b /copyall /r:6 /w:5 /MT:64 /xd DfsrPrivate /tee /log:<log file path> /v
     ```
-    
+
     This command copies all contents of the source folder to the destination folder, with the following parameters:
-    
+
     |Parameter|Description|
     |---|---|
     |"\<source replicated folder path\>"|Specifies the source folder to pre-seed on the destination server.|
@@ -107,15 +105,15 @@ After you minimize locks on the files that will be replicated, you can pre-seed 
     |/tee|Writes status output to the console window, as well as to the log file.|
     |/log \<log file path>|Specifies the log file to write. Overwrites the file's existing contents. (To append the entries to the existing log file, use `/log+ <log file path>`.)|
     |/v|Produces verbose output that includes skipped files.|
-    
+
     For example, the following command replicates files from the source replicated folder, E:\\RF01, to data drive D on the destination server:
-    
+
     ```PowerShell
     robocopy.exe "\\srv01\e$\rf01" "d:\rf01" /e /b /copyall /r:6 /w:5 /MT:64 /xd DfsrPrivate /tee /log:c:\temp\pre-seedsrv02.log
     ```
-    
+
     >[!NOTE]
-    >We recommend that you use the parameters described above when you use Robocopy to pre-seed files for DFS Replication. However, you can change some of their values or add additional parameters. For example, you might find out through testing that you have the capacity to set a higher value (thread count) for the */MT* parameter. Also, if you'll primarily replicate larger files, you might be able to increase copy performance by adding the **/j** option for unbuffered I/O. For more information about Robocopy parameters, see the [Robocopy](https://docs.microsoft.com/windows-server/administration/windows-commands/robocopy) command-line reference.
+    >We recommend that you use the parameters described above when you use Robocopy to pre-seed files for DFS Replication. However, you can change some of their values or add additional parameters. For example, you might find out through testing that you have the capacity to set a higher value (thread count) for the */MT* parameter. Also, if you'll primarily replicate larger files, you might be able to increase copy performance by adding the **/j** option for unbuffered I/O. For more information about Robocopy parameters, see the [Robocopy](../../administration/windows-commands/robocopy.md) command-line reference.
 
     >[!WARNING]
     >To avoid potential data loss when you use Robocopy to pre-seed files for DFS Replication, do not make the following changes to the recommended parameters:
@@ -126,4 +124,4 @@ After you minimize locks on the files that will be replicated, you can pre-seed 
 
 ## Next step
 
-After you complete the initial copy, and use Robocopy to resolve issues with as many skipped files as possible, you will use the **Get-DfsrFileHash** cmdlet in Windows PowerShell or the **Dfsrdiag** command to validate the pre-seeded files by comparing file hashes on the source and destination servers. For detailed instructions, see [Step 2: Validate pre-seeded Files for DFS Replication](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn495042(v%3dws.11)>).
+After you complete the initial copy, and use Robocopy to resolve issues with as many skipped files as possible, you will use the **Get-DfsrFileHash** cmdlet in Windows PowerShell or the **Dfsrdiag** command to validate the pre-seeded files by comparing file hashes on the source and destination servers. For detailed instructions, see [Step 2: Validate pre-seeded Files for DFS Replication](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn495042(v%3dws.11)>).

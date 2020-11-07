@@ -1,13 +1,11 @@
 ---
 title: Setting up Update Synchronizations
 description: Windows Server Update Service (WSUS) topic - How to setup and configure Update Synchronizations
-ms.prod: windows-server
-ms.technology: manage-wsus
 ms.topic: article
 ms.assetid: ddd5c395-451b-44a0-8e08-a05db26d2282
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Setting up Update Synchronizations
@@ -42,7 +40,7 @@ If a WSUS server is running in replica mode, you will not be able to perform thi
 
 > [!NOTE]
 > You can remove products or classifications in the same way. Your WSUS server will stop synchronizing new updates for the products you have cleared. However, updates that were synchronized for those products before you cleared them will remain on your WSUS server and will be listed as available.
-> 
+>
 > To remove those products,  Decline the update, as documented in [Updates Operations](updates-operations.md), and then use the [The Server cleanup Wizard](the-server-cleanup-wizard.md) to remove them.
 
 ### Synchronizing Updates by Language

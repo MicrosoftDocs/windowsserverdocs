@@ -1,9 +1,7 @@
 ---
 title: chkdsk
 description: Reference article for the chkdsk command, which checks the file system and file system metadata of a volume for logical and physical errors.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 62912a3c-d2cc-4ef6-9679-43709a286035
 author: jasongerend
 ms.author: jgerend

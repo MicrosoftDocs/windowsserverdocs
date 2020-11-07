@@ -1,13 +1,10 @@
 ---
 title: Supported SUSE virtual machines on Hyper-V
 description: Lists the Linux integration services and features included in each version
-ms.prod: windows-server
-manager: dongill
-ms.technology: compute-hyper-v
 ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
-author: shirgall
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 04/07/2020
 ---
 # Supported SUSE virtual machines on Hyper-V
@@ -97,7 +94,7 @@ SLES12+ is 64-bit only.
 
 ## See Also
 
-* [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx)
+* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
 
 * [Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

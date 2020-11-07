@@ -1,24 +1,17 @@
 ---
 title: rexec
-description: Reference article for **** -
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
+description: Reference article for the rexec command, which runs a specified command on a remote host. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
+ms.topic: reference
 ms.assetid: 7c637fb3-c92f-40bf-ad06-6330daaa3b5f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # rexec
 
+Runs a specified command on a remote host. The remote host must be running a rexecd service (or daemon) for rexec to connect to.
 
-
-Rexec is deprecated, and is not guaranteed to be supported in future releases of Windows.
-
-This tool is included in Windows Server 2003. For more information, see [Rexec](https://technet.microsoft.com/library/cc755410(v=ws.10).aspx).
+> [!IMPORTANT]
+> The **rexec** command has been deprecated, and isn't guaranteed to be supported in Windows.

@@ -1,17 +1,15 @@
 ---
 title: online volume
 description: Reference article for the online volume command, which takes the offline volume to the online state.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5da073fd-578d-4691-ad0f-605ba66e0c7e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# online disk
+# online volume
 
 Takes the offline volume to the online state. This command works on volumes that have failed, are failing, or are in failed redundancy state.
 

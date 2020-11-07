@@ -1,8 +1,6 @@
 ---
 title: Windows Desktop client for admins
 description: Information on the Windows Desktop client primarily useful to admins.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 author: heidilohr
 manager: lizross

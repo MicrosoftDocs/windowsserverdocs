@@ -1,20 +1,19 @@
 ---
 title: Troubleshooting the Host Guardian Service
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 424b8090-0692-49a6-9dc4-3c0e77d74b80
 manager: dongill
 author: rpsqrd
+description: Resolutions to common problems encountered when deploying or operating a Host Guardian Service (HGS) server in a guarded fabric.
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
-ms.date: 09/25/2019
+ms.date: 10/12/2020
 ---
 
 # Troubleshooting the Host Guardian Service
 
 > Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic describes resolutions to common problems encountered when deploying or operating a Host Guardian Service (HGS) server in a guarded fabric.
+This article describes resolutions to common problems encountered when deploying or operating a Host Guardian Service (HGS) server in a guarded fabric.
 If you are unsure of the nature of your problem, first try running the [guarded fabric diagnostics](guarded-fabric-troubleshoot-diagnostics.md) on your HGS servers and Hyper-V hosts to narrow down the potential causes.
 
 ## Certificates
@@ -41,11 +40,11 @@ If you are using a self-signed certificate or a certificate issued by a certific
 
 1. Open local certificate manager (certlm.msc)
 2. Expand **Personal > Certificates** and find the signing or encryption certificate that you want to update.
-3. Right click the certificate and select **All Tasks > Manage Private Keys**.
-4. Click **Add** to grant a new user access to the certiciate's private key.
-5. In the object picker, enter the gMSA account name for HGS found earlier, then click **OK**.
+3. Right-click the certificate and select **All Tasks > Manage Private Keys**.
+4. Select **Add** to grant a new user access to the certificate's private key.
+5. In the object picker, enter the gMSA account name for HGS found earlier, then select **OK**.
 6. Ensure the gMSA has **Read** access to the certificate.
-7. Click **OK** to close the permission window.
+7. Select **OK** to close the permission window.
 
 If you are running HGS on Server Core or are managing the server remotely, you will not be able to manage private keys using the local certificate manager.
 Instead, you will need to download the [Guarded Fabric Tools PowerShell module](https://www.powershellgallery.com/packages/GuardedFabricTools) which will allow you to manage the permissions in PowerShell.
@@ -115,7 +114,7 @@ Key Usage    | Encryption/Encrypt/DataEncipherment
 
 **Active Directory Certificate Services Templates**
 
-If you are using Active Directory Certificate Services (ADCS) certificate templates to create the certificates it is recommended you use a template with the following settings:
+If you are using Active Directory Certificate Services (ADCS) certificate templates to create the certificates, we recommended you use a template with the following settings:
 
 ADCS Template Property | Required Value
 -----------------------|---------------
@@ -134,7 +133,7 @@ The attestation signer certificate is created and renewed behind the scenes on H
 To refresh the attestation signer certificate, run the following command in an elevated PowerShell prompt.
 
 ```powershell
-Start-ScheduledTask -TaskPath \Microsoft\Windows\HGSServer -TaskName 
+Start-ScheduledTask -TaskPath \Microsoft\Windows\HGSServer -TaskName
 AttestationSignerCertRenewalTask
 ```
 
@@ -148,7 +147,7 @@ It is advised that you do not remove any policies allowing hosts from the previo
 
 **Known issue when switching from TPM to AD mode**
 
-If you intialized your HGS cluster in TPM mode and later switch to Active Directory mode, there is a known issue which will prevent other nodes in your HGS cluster from switching to the new attestation mode.
+If you initialized your HGS cluster in TPM mode and later switch to Active Directory mode, there is a known issue that prevents other nodes in your HGS cluster from switching to the new attestation mode.
 To ensure all HGS servers are enforcing the correct attestation mode, run `Set-HgsServer -TrustActiveDirectory` **on each node** of your HGS cluster.
 This issue does not apply if you are switching from TPM mode to AD mode *and* the cluster was originally set up in AD mode.
 
@@ -162,7 +161,7 @@ Ensure you update your Hyper-V hosts to the same cumulative update before activa
 
 ## Endorsement Key Certificate error messages
 
-When registering a host using the [Add-HgsAttestationTpmHost](https://docs.microsoft.com/powershell/module/hgsattestation/add-hgsattestationtpmhost) cmdlet, two TPM identifiers are extracted from the provided platform identifier file: the endorsement key certificate (EKcert) and the public endorsement key (EKpub).
+When registering a host using the [Add-HgsAttestationTpmHost](/powershell/module/hgsattestation/add-hgsattestationtpmhost) cmdlet, two TPM identifiers are extracted from the provided platform identifier file: the endorsement key certificate (EKcert) and the public endorsement key (EKpub).
 The EKcert identifies the manufacturer of the TPM, providing assurances that the TPM is authentic and manufactured through the normal supply chain.
 The EKpub uniquely identifies that specific TPM, and is one of the measures HGS uses to grant a host access to run shielded VMs.
 
@@ -172,7 +171,40 @@ You will receive an error when registering a TPM host if either of the two condi
 
 Certain TPM manufacturers do not include EKcerts in their TPMs.
 If you suspect that this is the case with your TPM, confirm with your OEM that your TPMs should not have an EKcert and use the `-Force` flag to manually register the host with HGS.
-If your TPM should have an EKcert but one was not found in the platform identifier file, ensure you are using an administrator (elevated) PowerShell console when running [Get-PlatformIdentifier](https://docs.microsoft.com/powershell/module/platformidentifier/get-platformidentifier) on the host.
+If your TPM should have an EKcert but one was not found in the platform identifier file, ensure you are using an administrator (elevated) PowerShell console when running [Get-PlatformIdentifier](/powershell/module/platformidentifier/get-platformidentifier) on the host.
 
 If you received the error that your EKcert is untrusted, ensure that you have [installed the trusted TPM root certificates package](guarded-fabric-install-trusted-tpm-root-certificates.md) on each HGS server and that the root certificate for your TPM vendor is present in the local machine's **TrustedTPM\_RootCA** store. Any applicable intermediate certificates also need to be installed in the **TrustedTPM\_IntermediateCA** store on the local machine.
 After installing the root and intermediate certificates, you should be able to run `Add-HgsAttestationTpmHost` successfully.
+
+## Group managed service account (gMSA) privileges
+
+HGS service account (gMSA used for Key Protection Service application pool in IIS) needs to be granted [Generate security audits](/windows/security/threat-protection/security-policy-settings/generate-security-audits) privilege, also known as `SeAuditPrivilege`. If this privilege is missing, initial HGS configuration succeeds and IIS starts, however the Key Protection Service is non-functional and returns HTTP error 500 _(“Server Error in /KeyProtection Application”)._ You may also observe the following warning messages in Application event log.
+```
+System.ComponentModel.Win32Exception (0x80004005): A required privilege is not held by the client
+at Microsoft.Windows.KpsServer.Common.Diagnostics.Auditing.NativeUtility.RegisterAuditSource(String pszSourceName, SafeAuditProviderHandle& phAuditProvider)
+at Microsoft.Windows.KpsServer.Common.Diagnostics.Auditing.SecurityLog.RegisterAuditSource(String sourceName)
+```
+or
+```
+Failed to register the security event source.
+   at System.Web.HttpApplicationFactory.EnsureAppStartCalledForIntegratedMode(HttpContext context, HttpApplication app)
+   at System.Web.HttpApplication.RegisterEventSubscriptionsWithIIS(IntPtr appContext, HttpContext context, MethodInfo[] handlers)
+   at System.Web.HttpApplication.InitSpecial(HttpApplicationState state, MethodInfo[] handlers, IntPtr appContext, HttpContext context)
+   at System.Web.HttpApplicationFactory.GetSpecialApplicationInstance(IntPtr appContext, HttpContext context)
+   at System.Web.Hosting.PipelineRuntime.InitializeApplication(IntPtr appContext)
+
+Failed to register the security event source.
+   at Microsoft.Windows.KpsServer.Common.Diagnostics.Auditing.SecurityLog.RegisterAuditSource(String sourceName)
+   at Microsoft.Windows.KpsServer.Common.Diagnostics.Auditing.SecurityLog.ReportAudit(EventLogEntryType eventType, UInt32 eventId, Object[] os)
+   at Microsoft.Windows.KpsServer.KpsServerHttpApplication.Application_Start()
+
+A required privilege is not held by the client
+   at Microsoft.Windows.KpsServer.Common.Diagnostics.Auditing.NativeUtility.RegisterAuditSource(String pszSourceName, SafeAuditProviderHandle& phAuditProvider)
+   at Microsoft.Windows.KpsServer.Common.Diagnostics.Auditing.SecurityLog.RegisterAuditSource(String sourceName)
+```
+Additionally, you may notice that none of the Key Protection Service cmdlets (e.g. [Get-HgsKeyProtectionCertificate](/powershell/module/hgskeyprotection/get-hgskeyprotectioncertificate)) work and instead return errors.
+
+To resolve this issue, you need to grant gMSA the “Generate security audits” (SeAuditPrivilege). To do that, you may use either Local security policy `SecPol.msc` on every node of the HGS cluster, or Group Policy. Alternatively, you could use [SecEdit.exe](/windows-server/administration/windows-commands/secedit) tool to export the current Security policy, make the necessary edits in the configuration file (which is a plain text) and then import it back.
+
+> [!NOTE]
+> When configuring this setting, the list of security principles defined for a privilege fully overrides the defaults (it does not concatenate). Hence, when defining this policy setting, be sure to include both default holders of this privilege (Network service and Local service) in addition to the gMSA that you are adding.

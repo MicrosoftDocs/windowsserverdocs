@@ -1,9 +1,7 @@
 ---
 title: What's New in Windows Server
 description: What are the new features in compute, identity, management, automation, networking, security, storage.
-ms.prod: windows-server
-ms.date: 08/22/2019
-ms.technology: server-general
+ms.date: 10/22/2020
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
@@ -22,6 +20,7 @@ Long-Term Servicing Channel (LTSC) releases:
 
 Semi-Annual Channel releases:
 
+- [What's New in Windows Server, versions 2004 and 20H2](whats-new-in-windows-server-2004.md)
 - [What's New in Windows Server, versions 1903 and 1909](../get-started-19/whats-new-in-windows-server-1903-1909.md)
 - [What's New in Windows Server, version 1809](whats-new-in-windows-server-1809.md)
 - [What's New in Windows Server, version 1803](whats-new-in-windows-server-1803.md) (Out of support as of November 12, 2019)

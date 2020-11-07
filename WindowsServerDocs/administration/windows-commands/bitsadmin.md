@@ -1,13 +1,11 @@
 ---
 title: bitsadmin
 description: Reference article for the bitsadmin command, which is a command-line tool used to create, download, or upload jobs and monitor their progress.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4853036e-1df8-45ad-8be6-cfb097b8dd27
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # bitsadmin
@@ -20,7 +18,7 @@ Most switches require a `<job>` parameter, which you set to the job's display na
 
 By default, you can access information about your own jobs. To access information for another user's jobs, you must have administrator privileges. If the job was created in an elevated state, then you must run **bitsadmin** from an elevated window; otherwise, you'll have read-only access to the job.
 
-Many of the switches correspond to methods in the [BITS interfaces](https://docs.microsoft.com/windows/win32/bits/bits-interfaces). For additional details that may be relevant to using a switch, see the corresponding method.
+Many of the switches correspond to methods in the [BITS interfaces](/windows/win32/bits/bits-interfaces). For additional details that may be relevant to using a switch, see the corresponding method.
 
 Use the following switches to create a job, set and retrieve the properties of a job, and monitor the status of a job. For examples that show how to use some of these switches to perform tasks, see [bitsadmin examples](bitsadmin-examples.md).
 

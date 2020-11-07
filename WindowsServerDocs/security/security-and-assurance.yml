@@ -5,11 +5,11 @@ summary: Windows Server Security provides layers of protection built into the op
 
 metadata:
   title: Windows Server Security documentation
-  description: An overview of Security in Windows Server. 
+  description: An overview of Security in Windows Server.
   ms.topic: landing-page # Required
-  author: coreyp-at-msft
-  ms.author: coreyp
-  ms.date: 5/19/2020 
+  author: eross-msft
+  ms.author: lizross
+  ms.date: 5/19/2020
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -24,17 +24,17 @@ landingContent:
           - text: Windows Server Security Blog Post
             url: https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/
           - text: Datacenter and Private Cloud Security Blog
-            url: https://blogs.technet.microsoft.com/datacentersecurity/
+            url: /archive/blogs/datacentersecurity/
           - text: Addressing emerging threats and landscape shifts
             url: https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be
           - text: Protecting Your Datacenter and Cloud from Emerging Threats blog post
             url: https://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx
           - text: Security and Assurance Overview session at Ignite
-            url: https://channel9.msdn.com/events/ignite/2015/brk2482 
-  
+            url: https://channel9.msdn.com/events/ignite/2015/brk2482
+
   # Card
   - title: Secure virtualization with Shielded VMs
-    linkLists:            
+    linkLists:
       - linkListType: video
         links:
           - text: Shielded VM in Channel 9
@@ -53,20 +53,20 @@ landingContent:
             url: guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md
           - text: Shielded VM and Guarded Fabric Troubleshooting Guide
             url: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md
-                              
+
   # Card
   - title: Hardening the OS and applications
     linkLists:
       - linkListType: overview
         links:
           - text: Windows Defender Application Control (WDAC) Deployment Guide
-            url: https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-contro
+            url: /windows/security/threat-protection/windows-defender-application-control/windows-defender-application-contro
           - text: Transport Layer Security Registry Settings
-            url: https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings
+            url: ./tls/tls-registry-settings.md
           - text: Control Flow Guard
-            url: https://docs.microsoft.com/windows/desktop/SecBP/control-flow-guard
+            url: /windows/desktop/SecBP/control-flow-guard
           - text: Windows Defender
-            url: https://technet.microsoft.com/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server
+            url: ./windows-defender/windows-defender-overview-windows-server.md
       - linkListType: video
         links:
           - text: Device Guard demo video
@@ -78,9 +78,9 @@ landingContent:
       - linkListType: overview
         links:
           - text: Securing Privileged Access
-            url: https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access
+            url: ../identity/securing-privileged-access/securing-privileged-access.md
           - text: Just in Time Administration with Microsoft Identity Manager
-            url: https://technet.microsoft.com/library/mt150258.aspx
+            url: /microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services
           - text: Just Enough Administration Article
             url: https://aka.ms/JEA
       - linkListType: video
@@ -90,15 +90,15 @@ landingContent:
           - text: Just Enough Administration demo video
             url: https://www.youtube.com/watch?v=xnBrbkY9P20
 
-  # Card 
+  # Card
   - title: Credential Protection
     linkLists:
       - linkListType: overview
         links:
           - text: Protect derived domain credentials with Credential Guard
-            url: https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard
+            url: /windows/security/identity-protection/credential-guard/credential-guard
           - text: Protect Remote Desktop credentials with Remote Credential Guard
-            url: https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard
+            url: /windows/security/identity-protection/remote-credential-guard
       - linkListType: video
         links:
           - text: Credential Guard demo video
@@ -126,9 +126,9 @@ landingContent:
       - linkListType: overview
         links:
           - text: Datacenter Firewall Overview
-            url: https://technet.microsoft.com/library/dn920240.aspx
+            url: /previous-versions/windows/server/dn920240(v=ws.12)
           - text: What's New in DNS in Windows Server
-            url: https://technet.microsoft.com/windows-server-docs/networking/dns/what-s-new-in-dns-server
+            url: ../networking/dns/what-s-new-in-dns-server.md
 
   # Card
   - title: Mapping security features to compliance regulations
@@ -152,6 +152,6 @@ landingContent:
       - linkListType: overview
         links:
           - text: Windows previous versions documentation
-            url: https://docs.microsoft.com/previous-versions/windows/
+            url: /previous-versions/windows/
           - text: Search for specific information
-            url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions
+            url: /search/?dataSource=previousVersions&search=Windows+Server

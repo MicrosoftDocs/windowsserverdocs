@@ -1,9 +1,7 @@
 ---
 title: SDN firewall auditing
-description: Firewall auditing is a new capability for the SDN firewall in Windows Server 2019. When you enable SDN firewall, any flow processed by SDN firewall rules (ACLs) that have logging enabled gets recorded. 
+description: Firewall auditing is a new capability for the SDN firewall in Windows Server 2019. When you enable SDN firewall, any flow processed by SDN firewall rules (ACLs) that have logging enabled gets recorded.
 manager: grcusanz
-ms.prod: windows-server
-ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
 ms.author: anpaul
@@ -15,7 +13,7 @@ ms.date: 08/22/2018
 
 >Applies to: Windows Server 2019
 
-Firewall auditing is a new capability for the SDN firewall in Windows Server 2019. When you enable SDN firewall, any flow processed by SDN firewall rules (ACLs) that have logging enabled gets recorded. The log files must be in a syntax that is consistent with the [Azure Network Watcher flow logs](https://docs.microsoft.com/azure/network-watcher/network-watcher-nsg-flow-logging-overview). These logs can be used for diagnostics or archived for later analysis. 
+Firewall auditing is a new capability for the SDN firewall in Windows Server 2019. When you enable SDN firewall, any flow processed by SDN firewall rules (ACLs) that have logging enabled gets recorded. The log files must be in a syntax that is consistent with the [Azure Network Watcher flow logs](/azure/network-watcher/network-watcher-nsg-flow-logging-overview). These logs can be used for diagnostics or archived for later analysis. 
 
 We will soon provide some examples of how to process these files using tools such as Power BI.
 
@@ -68,7 +66,7 @@ Mode                LastWriteTime         Length Name
 These files contain a sequence of flow events, for example:
 
 ```syntax
-{ 
+{
     "records": [
         {
             "properties":{
@@ -166,4 +164,3 @@ Note, logging takes place only for rules that have **Logging** set to **Enabled*
                    }
 }
 ```
-

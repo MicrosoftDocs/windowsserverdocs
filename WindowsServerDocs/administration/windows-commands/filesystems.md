@@ -1,13 +1,11 @@
 ---
 title: filesystems
 description: Reference article for the filesystems command, which displays information about the current file system of the volume with focus and lists the file systems that are supported for formatting the volume.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 3c4915a6-bd20-4af6-a94a-5fc7c20410bf
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

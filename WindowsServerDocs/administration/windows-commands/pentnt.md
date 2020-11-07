@@ -1,13 +1,11 @@
 ---
 title: pentnt
 description: Reference article for the pentnt command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4911e640-aa7f-4afb-abc2-5eefc7010204
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -18,7 +16,7 @@ ms.date: 10/16/2017
 >[!IMPORTANT]
 > This command has been deprecated.
 
-Detects floating point division error (if present) in the Pentium chip, disables floating point hardware, and turns on floating point emulation. For descriptions and usage information, see [pentnt](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc755868(v=ws.10)).
+Detects floating point division error (if present) in the Pentium chip, disables floating point hardware, and turns on floating point emulation. For descriptions and usage information, see [pentnt](/previous-versions/orphan-topics/ws.10/cc755868(v=ws.10)).
 
 ## Additional References
 

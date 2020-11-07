@@ -1,8 +1,6 @@
 ---
 title: Privacy settings for managed apps and desktops
 description: Information about privacy settings of the remote system when using managed apps and desktops.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 author: davidbel
 manager: daveba

@@ -2,11 +2,9 @@
 title: Connection Request Processing
 description: This topic provides an overview of Network Policy Server connection request processing in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 849d661a-42c1-4f93-b669-6009d52aad39
-ms.author: lizross 
+ms.author: lizross
 author: eross-msft
 ---
 
@@ -22,7 +20,7 @@ You can use this topic to learn about connection request processing in Network P
 > - [Realm Names](nps-crp-realm-names.md)
 > - [Remote RADIUS Server Groups](nps-crp-rrsg.md)
 
-You can use connection request processing to specify where the authentication of connection requests is performed - on the local computer or at a remote RADIUS server that is a member of a remote RADIUS server group. 
+You can use connection request processing to specify where the authentication of connection requests is performed - on the local computer or at a remote RADIUS server that is a member of a remote RADIUS server group.
 
 If you want the local server running Network Policy Server (NPS) to perform authentication for connection requests, you can use the default connection request policy without additional configuration. Based on the default policy, NPS authenticates users and computers that have an account in the local domain and in trusted domains.
 
@@ -47,23 +45,23 @@ To specify NPS or other RADIUS servers to which authentication requests are forw
 
 When you use NPS as a RADIUS server, RADIUS messages provide authentication, authorization, and accounting for network access connections in the following way:
 
-1. Access servers, such as dial-up network access servers, VPN servers, and wireless access points, receive connection requests from access clients. 
+1. Access servers, such as dial-up network access servers, VPN servers, and wireless access points, receive connection requests from access clients.
 
-2. The access server, configured to use RADIUS as the authentication, authorization, and accounting protocol, creates an Access-Request message and sends it to the NPS. 
+2. The access server, configured to use RADIUS as the authentication, authorization, and accounting protocol, creates an Access-Request message and sends it to the NPS.
 
-3. The NPS evaluates the Access-Request message. 
+3. The NPS evaluates the Access-Request message.
 
-4. If required, the NPS sends an Access-Challenge message to the access server. The access server processes the challenge and sends an updated Access-Request to the NPS. 
+4. If required, the NPS sends an Access-Challenge message to the access server. The access server processes the challenge and sends an updated Access-Request to the NPS.
 
-5. The user credentials are checked and the dial-in properties of the user account are obtained by using a secure connection to a domain controller. 
+5. The user credentials are checked and the dial-in properties of the user account are obtained by using a secure connection to a domain controller.
 
-6. The connection attempt is authorized with both the dial-in properties of the user account and network policies. 
+6. The connection attempt is authorized with both the dial-in properties of the user account and network policies.
 
-7. If the connection attempt is both authenticated and authorized, the NPS sends an Access-Accept message to the access server. If the connection attempt is either not authenticated or not authorized, the NPS sends an Access-Reject message to the access server. 
+7. If the connection attempt is both authenticated and authorized, the NPS sends an Access-Accept message to the access server. If the connection attempt is either not authenticated or not authorized, the NPS sends an Access-Reject message to the access server.
 
-8. The access server completes the connection process with the access client and sends an Accounting-Request message to the NPS, where the message is logged. 
+8. The access server completes the connection process with the access client and sends an Accounting-Request message to the NPS, where the message is logged.
 
-9. The NPS sends an Accounting-Response to the access server. 
+9. The NPS sends an Accounting-Response to the access server.
 
 >[!NOTE]
 >The access server also sends Accounting-Request messages during the time in which the connection is established, when the access client connection is closed, and when the access server is started and stopped.

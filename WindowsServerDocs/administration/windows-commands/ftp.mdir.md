@@ -1,13 +1,11 @@
 ---
 title: ftp mdir
 description: Reference article for the ftp mdir command, which displays a directory list of files and subdirectories in a remote directory.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 90eec45b-558b-4b8d-bbe4-b56d98e1ca70
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -48,4 +46,4 @@ mdir dir1 dir2 dirlist.txt
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

@@ -2,12 +2,11 @@
 title: "Configure DirectAccess in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: c959b6fc-c67e-46cd-a9cb-cee71a42fa4c
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Configure DirectAccess in Windows Server Essentials
@@ -19,7 +18,7 @@ This topic provides step-by-step instructions for configuring DirectAccess in  W
  In  Windows Server Essentials, if the domain contains more than one  Windows Server Essentials server, DirectAccess must be configured on the domain controller.
 
 > [!NOTE]
->  This topic provides instructions for configuring DirectAccess when your  Windows Server Essentials server is the domain controller. If the  Windows Server Essentials server is a domain member, follow the instructions to configure DirectAccess on a domain member in [Add DirectAccess to an Existing Remote Access (VPN) Deployment](https://technet.microsoft.com/library/jj574220.aspx) instead.
+>  This topic provides instructions for configuring DirectAccess when your  Windows Server Essentials server is the domain controller. If the  Windows Server Essentials server is a domain member, follow the instructions to configure DirectAccess on a domain member in [Add DirectAccess to an Existing Remote Access (VPN) Deployment](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574220(v=ws.11)) instead.
 
 ## Process overview
  To configure DirectAccess in  Windows Server Essentials, complete the following steps.
@@ -203,7 +202,7 @@ This topic provides step-by-step instructions for configuring DirectAccess in  W
 1. On the Server Manager Dashboard, click **Tools**, and then click **Active Directory Users and Computers**.
 
    > [!NOTE]
-   >  If you do not see **Active Directory Users and Computers** on the **Tools** menu, you need to install the feature. To install Active Directory Users and Groups, run the following Windows PowerShell cmdlet as an administrator: `Install-WindowsFeature RSAT-ADDS-Tools`. For more information, see [Installing or Removing the Remote Server Administration Tool Pack](https://technet.microsoft.com/library/cc730825.aspx).
+   >  If you do not see **Active Directory Users and Computers** on the **Tools** menu, you need to install the feature. To install Active Directory Users and Groups, run the following Windows PowerShell cmdlet as an administrator: `Install-WindowsFeature RSAT-ADDS-Tools`. For more information, see [Installing or Removing the Remote Server Administration Tool Pack](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730825(v=ws.11)).
 
 2. In the console tree, expand the server, right-click **Users**, click **New**, and then click **Group**.
 

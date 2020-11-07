@@ -2,12 +2,11 @@
 title: "Use Shared Folders in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: cb7f3d7d-4225-409a-9f6b-34a106e8dd24
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Use Shared Folders in Windows Server Essentials

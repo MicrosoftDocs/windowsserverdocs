@@ -1,9 +1,7 @@
 ---
 title: Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)
-description: This topic provides information on configuring Remote Direct Memory Access (RDMA) interfaces with Hyper-V in Windows Server 2016, in addition to information about Switch Embedded Teaming (SET). 
+description: This topic provides information on configuring Remote Direct Memory Access (RDMA) interfaces with Hyper-V in Windows Server 2016, in addition to information about Switch Embedded Teaming (SET).
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 68c35b64-4d24-42be-90c9-184f2b5f19be
 ms.author: lizross
@@ -13,13 +11,13 @@ author: eross-msft
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-This topic provides information on configuring Remote Direct Memory Access \(RDMA\) interfaces with Hyper-V in Windows Server 2016, in addition to information about Switch Embedded Teaming \(SET\).  
+This topic provides information on configuring Remote Direct Memory Access \(RDMA\) interfaces with Hyper-V in Windows Server 2016, in addition to information about Switch Embedded Teaming \(SET\).
 
 > [!NOTE]
-> In addition to this topic, the following Switch Embedded Teaming content is available. 
+> In addition to this topic, the following Switch Embedded Teaming content is available.
 > - TechNet Gallery Download: [Windows Server 2016 NIC and Switch Embedded Teaming User Guide](https://gallery.technet.microsoft.com/Windows-Server-2016-839cb607?redir=0)
 
-## <a name="bkmk_rdma"></a>Configuring RDMA Interfaces with Hyper-V  
+## <a name="bkmk_rdma"></a>Configuring RDMA Interfaces with Hyper-V
 
 In Windows Server 2012 R2, using both RDMA and Hyper-V on the same computer as  the network adapters that provide RDMA services can not be bound to a Hyper-V Virtual Switch. This increases the number of physical network adapters that are required to be installed in the Hyper-V host.
 
@@ -42,33 +40,47 @@ The following Windows PowerShell example commands demonstrate how to enable and 
 
 Turn on DCB
 
-    Install-WindowsFeature Data-Center-Bridging
+```powershell
+Install-WindowsFeature Data-Center-Bridging
+```
 
 Set a policy for SMB-Direct:
 
-    New-NetQosPolicy "SMB" -NetDirectPortMatchCondition 445 -PriorityValue8021Action 3
+```powershell
+New-NetQosPolicy "SMB" -NetDirectPortMatchCondition 445 -PriorityValue8021Action 3
+```
 
 Turn on Flow Control for SMB:
 
-    Enable-NetQosFlowControl  -Priority 3
+```powershell
+Enable-NetQosFlowControl  -Priority 3
+```
 
 Make sure flow control is off for other traffic:
 
-    Disable-NetQosFlowControl  -Priority 0,1,2,4,5,6,7
+```powershell
+Disable-NetQosFlowControl  -Priority 0,1,2,4,5,6,7
+```
 
 Apply policy to the target adapters:
 
-    Enable-NetAdapterQos  -Name "SLOT 2"
+```powershell
+Enable-NetAdapterQos  -Name "SLOT 2"
+```
 
 Give SMB Direct 30% of the bandwidth minimum:
 
-`New-NetQosTrafficClass "SMB"  -Priority 3  -BandwidthPercentage 30  -Algorithm ETS`  
+```powershell
+New-NetQosTrafficClass "SMB"  -Priority 3  -BandwidthPercentage 30  -Algorithm ETS
+```
 
 If you have a kernel debugger installed in the system, you must configure the debugger to allow QoS to be set by running the following command.
 
 Override the Debugger - by default the debugger blocks NetQos:
- 
-    Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 -Force
+
+```powershell
+Set-ItemProperty HKLM:"\SYSTEM\CurrentControlSet\Services\NDIS\Parameters" AllowFlowControlUnderDebugger -type DWORD -Value 1 -Force
+```
 
 ### Create a Hyper-V Virtual Switch with an RDMA vNIC
 
@@ -77,44 +89,57 @@ If SET is not required for your deployment, you can use the following Windows Po
 > [!NOTE]
 > Using SET teams with RDMA-capable physical NICs provides more RDMA resources for the vNICs to consume.
 
-    New-VMSwitch -Name RDMAswitch -NetAdapterName "SLOT 2"
+```powershell
+New-VMSwitch -Name RDMAswitch -NetAdapterName "SLOT 2"
+```
 
 Add host vNICs and make them RDMA capable:
 
-    Add-VMNetworkAdapter -SwitchName RDMAswitch -Name SMB_1
-    Enable-NetAdapterRDMA "vEthernet (SMB_1)" "SLOT 2"
-
+```powershell
+Add-VMNetworkAdapter -SwitchName RDMAswitch -Name SMB_1
+Enable-NetAdapterRDMA "vEthernet (SMB_1)" "SLOT 2"
+```
 Verify RDMA capabilities:
 
-    Get-NetAdapterRdma
+```powershell
+Get-NetAdapterRdma
+```
 
 ###  <a name="bkmk_set-rdma"></a>Create a Hyper-V Virtual Switch with SET and RDMA vNICs
 
 To make use of RDMA capabilies on Hyper-V host virtual network adapters \(vNICs\) on a Hyper-V Virtual Switch that supports RDMA teaming, you can use these example Windows PowerShell commands.
 
-    New-VMSwitch -Name SETswitch -NetAdapterName "SLOT 2","SLOT 3" -EnableEmbeddedTeaming $true
+```powershell
+New-VMSwitch -Name SETswitch -NetAdapterName "SLOT 2","SLOT 3" -EnableEmbeddedTeaming $true
+```
 
 Add host vNICs:
 
-    Add-VMNetworkAdapter -SwitchName SETswitch -Name SMB_1 -managementOS
-    Add-VMNetworkAdapter -SwitchName SETswitch -Name SMB_2 -managementOS
+```powershell
+Add-VMNetworkAdapter -SwitchName SETswitch -Name SMB_1 -managementOS
+Add-VMNetworkAdapter -SwitchName SETswitch -Name SMB_2 -managementOS
+```
 
 Many switches won't pass traffic class information on untagged VLAN traffic, so make sure that the host adapters for RDMA are on VLANs. This example assigns the two SMB_* host virtual adapters to VLAN 42.
-    
-    Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_1  -IsolationMode VLAN -DefaultIsolationID 42
-    Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_2  -IsolationMode VLAN -DefaultIsolationID 42
-    
+
+```powershell
+Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_1  -IsolationMode VLAN -DefaultIsolationID 42
+Set-VMNetworkAdapterIsolation -ManagementOS -VMNetworkAdapterName SMB_2  -IsolationMode VLAN -DefaultIsolationID 42
+```
 
 Enable RDMA on Host vNICs:
 
-    Enable-NetAdapterRDMA "vEthernet (SMB_1)","vEthernet (SMB_2)" "SLOT 2", "SLOT 3"
+```powershell
+Enable-NetAdapterRDMA "vEthernet (SMB_1)","vEthernet (SMB_2)" "SLOT 2", "SLOT 3"
+```
 
 Verify RDMA capabilities; ensure that the capabilities are non-zero:
 
-    Get-NetAdapterRdma | fl *
+```powershell
+Get-NetAdapterRdma | fl *
+```
 
-
-## Switch Embedded Teaming (SET)  
+## Switch Embedded Teaming (SET)
 
 This section provides an overview of Switch Embedded Teaming (SET) in  Windows Server 2016, and contains the following sections.
 
@@ -157,7 +182,7 @@ The following illustration depicts SET architecture.
 
 Because SET is integrated into the Hyper-V Virtual Switch, you cannot use SET inside of a virtual machine (VM). You can, however use NIC Teaming within VMs.
 
-For more information, see [NIC Teaming in Virtual Machines (VMs)](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/nict-vms).
+For more information, see [NIC Teaming in Virtual Machines (VMs)](../../networking/technologies/nic-teaming/nic-teaming.md).
 
 In addition, SET architecture does not expose team interfaces. Instead, you must configure Hyper-V Virtual Switch ports.
 
@@ -168,14 +193,14 @@ SET is available in all versions of Windows Server 2016 that include Hyper-V and
 ## <a name="bkmk_nics"></a>Supported NICs for SET
 
 You can use any Ethernet NIC that has passed the Windows Hardware Qualification and Logo \(WHQL\) test in a SET team in Windows Server 2016. SET requires that all network adapters that are members of a SET team must  be identical \(i.e., same manufacturer, same model, same firmware and driver\). SET supports between one and eight network adapters in a team.
-  
+
 ## <a name="bkmk_compat"></a>SET Compatibility with Windows Server Networking Technologies
 
 SET is compatible with the following networking technologies in Windows Server 2016.
 
 - Datacenter bridging \(DCB\)
-  
-- Hyper-V Network Virtualization - NV-GRE and VxLAN are both supported in Windows Server 2016.  
+
+- Hyper-V Network Virtualization - NV-GRE and VxLAN are both supported in Windows Server 2016.
 - Receive-side Checksum offloads \(IPv4, IPv6, TCP\) - These are supported if any of the SET team members support them.
 
 - Remote Direct Memory Access \(RDMA\)
@@ -191,7 +216,7 @@ SET is compatible with the following networking technologies in Windows Server 2
 SET is not compatible with the following networking technologies in Windows Server 2016.
 
 - 802.1X authentication. 802.1X Extensible Authentication Protocol \(EAP\) packets are automatically dropped by Hyper\-V Virtual Switch in SET scenarios.
- 
+
 - IPsec Task Offload \(IPsecTO\). This is a legacy technology that is not supported by most network adapters, and where it does exist, it is disabled by default.
 
 - Using QoS \(pacer.exe\) in host or native operating systems. These QoS scenarios are not Hyper\-V scenarios, so the technologies do not intersect. In addition, QoS is available but not enabled by default - you must intentionally enable QoS.
@@ -255,12 +280,12 @@ VMQ and SET work well together, and you should enable VMQ whenever you are using
 > SET always presents the total number of queues that are available across all SET team members. In NIC Teaming, this is called Sum-of-Queues mode.
 
 Most network adapters have queues that can be used for either Receive Side Scaling \(RSS\) or VMQ, but not both at the same time.
-  
+
 Some VMQ settings appear to be settings for RSS queues but are really settings on the generic queues that both RSS and VMQ use depending on which feature is presently in use. Each NIC has, in its advanced properties, values for `*RssBaseProcNumber` and `*MaxRssProcessors`.
 
 Following are a few VMQ settings that provide better system performance.
 
-- Ideally each NIC should have the `*RssBaseProcNumber` set to an even number greater than or equal to two (2). This is because the first physical processor, Core 0 \(logical processors 0 and 1\), typically does most of the system processing so the network processing should be steered away from this physical processor. 
+- Ideally each NIC should have the `*RssBaseProcNumber` set to an even number greater than or equal to two (2). This is because the first physical processor, Core 0 \(logical processors 0 and 1\), typically does most of the system processing so the network processing should be steered away from this physical processor.
 
 >[!NOTE]
 >Some machine architectures don't have two logical processors per physical processor, so for such machines the base processor should be greater than or equal to 1. If in doubt, assume your host is using a 2 logical processor per physical processor architecture.
@@ -270,14 +295,14 @@ Following are a few VMQ settings that provide better system performance.
 ## <a name="bkmk_hnv"></a>SET and Hyper-V Network Virtualization \(HNV\)
 
 SET is fully compatible with Hyper-V Network Virtualization in Windows Server 2016. The HNV management system provides information to the SET driver that allows SET to distribute the network traffic load in a manner that is optimized for the HNV traffic.
-  
+
 ## <a name="bkmk_live"></a>SET and Live Migration
 
 Live Migration is supported in Windows Server 2016.
 
 ## <a name="bkmk_mac"></a>MAC Address Use on Transmitted Packets
 
-When you configure a SET team with dynamic load distribution, the packets from a single source \(such as a single VM\) are simultaneously distributed across multiple team members. 
+When you configure a SET team with dynamic load distribution, the packets from a single source \(such as a single VM\) are simultaneously distributed across multiple team members.
 
 To prevent the switches from getting confused and to prevent MAC flapping alarms, SET replaces the source MAC address with a different MAC address on the frames that are transmitted on team members other than the affinitized team member. Because of this, each team member uses a different MAC address, and MAC address conflicts are prevented unless and until failure occurs.
 
@@ -290,82 +315,84 @@ Following are lists that describe SET teaming MAC address replacement behavior, 
 - In Switch Independent mode with Hyper-V Port distribution
 
     - Every vmSwitch port is affinitized to a team member
-  
-    - Every packet is sent on the team member to which the port is affinitized  
-  
-    - No source MAC replacement is done  
-  
+
+    - Every packet is sent on the team member to which the port is affinitized
+
+    - No source MAC replacement is done
+
 - In Switch Independent mode with Dynamic distribution
-  
-    - Every vmSwitch port is affinitized to a team member  
-  
-    - All ARP/NS packets are sent on the team member to which the port is affinitized  
-  
-    - Packets sent on the team member that is the affinitized team member have no source MAC address replacement done  
-  
-    - Packets sent on a team member other than the affinitized team member will have source MAC address replacement done  
-  
+
+    - Every vmSwitch port is affinitized to a team member
+
+    - All ARP/NS packets are sent on the team member to which the port is affinitized
+
+    - Packets sent on the team member that is the affinitized team member have no source MAC address replacement done
+
+    - Packets sent on a team member other than the affinitized team member will have source MAC address replacement done
+
 ## <a name="bkmk_manage"></a>Managing a SET team
 
 It is recommended that you use System Center Virtual Machine Manager \(VMM\) to manage SET teams, however you can also use Windows PowerShell to manage SET. The following sections provide the Windows PowerShell commands that you can use to manage SET.
 
-For information on how to create a SET team using VMM, see the section "Set up a logical switch" in the System Center VMM library topic [Create logical switches](https://docs.microsoft.com/system-center/vmm/network-switch).
-  
+For information on how to create a SET team using VMM, see the section "Set up a logical switch" in the System Center VMM library topic [Create logical switches](/system-center/vmm/network-switch).
+
 ### Create a SET team
 
 You must create a SET team at the same time that you create the Hyper-V Virtual Switch by using the **New-VMSwitch** Windows PowerShell command.
 
 When you create the Hyper-V Virtual Switch, you must include the new **EnableEmbeddedTeaming** parameter in your command syntax. In the following example, a Hyper-V switch named  **TeamedvSwitch** with embedded teaming and two initial team members is created.
-  
-```  
-New-VMSwitch -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 2" -EnableEmbeddedTeaming $true  
-```  
-  
+
+```
+New-VMSwitch -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 2" -EnableEmbeddedTeaming $true
+```
+
 The **EnableEmbeddedTeaming** parameter is assumed by Windows PowerShell when the argument to **NetAdapterName** is an array of NICs instead of a single NIC. As a result, you could revise the previous command in the following way.
 
-```  
-New-VMSwitch -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 2"  
-```  
+```
+New-VMSwitch -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 2"
+```
 
 If you want to create a SET-capable switch with a single team member so that you can add a team member at a later time,  then you must use the EnableEmbeddedTeaming parameter.
 
-```  
-New-VMSwitch -Name TeamedvSwitch -NetAdapterName "NIC 1" -EnableEmbeddedTeaming $true  
-```  
+```
+New-VMSwitch -Name TeamedvSwitch -NetAdapterName "NIC 1" -EnableEmbeddedTeaming $true
+```
 
 ### Adding or removing a SET team member
 
 The **Set-VMSwitchTeam** command includes the **NetAdapterName** option. To change the team members in a SET team, enter the desired list of team members after the **NetAdapterName** option. If **TeamedvSwitch** was originally created with NIC 1 and NIC 2, then the following example command deletes SET team member "NIC 2" and adds new SET team member "NIC 3".
-  
-```  
-Set-VMSwitchTeam -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 3"  
-```  
+
+```
+Set-VMSwitchTeam -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 3"
+```
 
 ### Removing a SET team
 
-You can remove a SET team only by removing the Hyper-V Virtual Switch that contains the SET team.  Use the topic [Remove-VMSwitch](https://technet.microsoft.com/itpro/powershell/windows/hyper-v/remove-vmswitch) for information on how to remove the Hyper-V Virtual Switch. The following example removes a Virtual Switch named **SETvSwitch**.
+You can remove a SET team only by removing the Hyper-V Virtual Switch that contains the SET team.  Use the topic [Remove-VMSwitch](/powershell/module/hyper-v/remove-vmswitch?view=win10-ps) for information on how to remove the Hyper-V Virtual Switch. The following example removes a Virtual Switch named **SETvSwitch**.
 
-```  
-Remove-VMSwitch "SETvSwitch"  
-```  
+```
+Remove-VMSwitch "SETvSwitch"
+```
 
 ### Changing the load distribution algorithm for a SET team
 
-The **Set-VMSwitchTeam** cmdlet has a **LoadBalancingAlgorithm** option. This option takes one of two possible values: **HyperVPort** or **Dynamic**. To set or change the load distribution algorithm for a switch-embedded team, use this option. 
+The **Set-VMSwitchTeam** cmdlet has a **LoadBalancingAlgorithm** option. This option takes one of two possible values: **HyperVPort** or **Dynamic**. To set or change the load distribution algorithm for a switch-embedded team, use this option.
 
-In the following example, the VMSwitchTeam named **TeamedvSwitch** uses the **Dynamic** load balancing algorithm.  
-```  
-Set-VMSwitchTeam -Name TeamedvSwitch -LoadBalancingAlgorithm Dynamic  
-```  
+In the following example, the VMSwitchTeam named **TeamedvSwitch** uses the **Dynamic** load balancing algorithm.
+```
+Set-VMSwitchTeam -Name TeamedvSwitch -LoadBalancingAlgorithm Dynamic
+```
 ### Affinitizing virtual interfaces to physical team members
 
-SET allows you to create an affinity between a virtual interface \(i.e., Hyper-V Virtual Switch port\) and one of the physical NICs in the team. 
+SET allows you to create an affinity between a virtual interface \(i.e., Hyper-V Virtual Switch port\) and one of the physical NICs in the team.
 
-For example, if you create two host vNICs for SMB\-Direct, as in the section [Create a Hyper-V Virtual Switch with SET and RDMA vNICs](#bkmk_set-rdma), you can ensure that the two vNICs use different team members. 
+For example, if you create two host vNICs for SMB\-Direct, as in the section [Create a Hyper-V Virtual Switch with SET and RDMA vNICs](#bkmk_set-rdma), you can ensure that the two vNICs use different team members.
 
 Adding to the script in that section, you can use the following Windows PowerShell commands.
 
-    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName SMB_1 –ManagementOS –PhysicalNetAdapterName “SLOT 2”
-    Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName SMB_2 –ManagementOS –PhysicalNetAdapterName “SLOT 3”
+```powershell
+Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName SMB_1 –ManagementOS –PhysicalNetAdapterName “SLOT 2”
+Set-VMNetworkAdapterTeamMapping -VMNetworkAdapterName SMB_2 –ManagementOS –PhysicalNetAdapterName “SLOT 3”
+```
 
 This topic is examined in more depth in section 4.2.5 of the [Windows Server 2016 NIC and Switch Embedded Teaming User Guide](https://gallery.technet.microsoft.com/Windows-Server-2016-839cb607?redir=0).

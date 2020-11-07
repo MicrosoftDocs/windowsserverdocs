@@ -1,13 +1,11 @@
 ---
 title: Enabling the extension discovery banner
 description: Enabling the extension discovery banner
-ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Enabling the extension discovery banner
 

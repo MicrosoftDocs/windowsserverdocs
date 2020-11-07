@@ -1,13 +1,11 @@
 ---
 title: convert mbr
 description: Reference article for the convert mbr command, which converts an empty basic disk with the GUID Partition Table (GPT) partition style into a basic disk with the master boot record (MBR) partition style.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: a635a4c0-af73-4330-b021-51d483424537
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -19,7 +17,7 @@ Converts an empty basic disk with the GUID Partition Table (GPT) partition style
 > The disk must be empty to convert it to a basic disk. Back up your data, and then delete all partitions or volumes before converting the disk.
 
 > [!NOTE]
-> For instructions regarding how to use this command, see [Change a GUID Partition Table Disk into a Master Boot Record Disk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725797(v=ws.11)).
+> For instructions regarding how to use this command, see [Change a GUID Partition Table Disk into a Master Boot Record Disk](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc725797(v=ws.11)).
 
 ## Syntax
 

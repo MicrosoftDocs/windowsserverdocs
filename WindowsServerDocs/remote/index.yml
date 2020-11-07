@@ -9,9 +9,9 @@ metadata:
   ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.prod: windows-server
   ms.technology: manage-rsat
-  author: coreyp-at-msft
-  ms.author: coreyp
-  manager: dougkim
+  author: eross-msft
+  ms.author: lizross
+  manager: mtillman
   ms.localizationpriority: high
   ms.topic: landing-page # Required
   ms.date: 06/29/2020 #Required; mm/dd/yyyy format.
@@ -27,13 +27,13 @@ landingContent:
       - linkListType: overview
         links:
           - text: Planning a MultiPoint Services Deployment
-            url: /windows-server/remote/multipoint-services/planning-a-multipoint-services-deployment
+            url: ./multipoint-services/planning-a-multipoint-services-deployment.md
           - text: MultiPoint Services migration
-            url: /windows-server/remote/multipoint-services/multipoint-services-migrate
+            url: ./multipoint-services/multipoint-services-migrate.md
           - text: Deploying MultiPoint Services
-            url: /windows-server/remote/multipoint-services/deploying-multipoint-services
+            url: ./multipoint-services/deploying-multipoint-services.md
           - text: Managing MultiPoint Services
-            url: /windows-server/remote/multipoint-services/managing-multipoint-services
+            url: ./multipoint-services/managing-multipoint-services.md
 
   # Card
   - title: Remote Desktop Services
@@ -41,17 +41,17 @@ landingContent:
       - linkListType: get-started
         links:
           - text: Get started
-            url: /windows-server/remote/remote-desktop-services/rds-get-started
+            url: ./remote-desktop-services/rds-get-started.md
       - linkListType: how-to-guide
         links:
           - text: Plan and design
-            url: /windows-server/remote/remote-desktop-services/rds-plan-and-design
+            url: ./remote-desktop-services/rds-plan-and-design.md
           - text: Build and deploy
-            url: /windows-server/remote/remote-desktop-services/rds-build-and-deploy
+            url: ./remote-desktop-services/rds-build-and-deploy.md
           - text: Run and tune
-            url: /windows-server/remote/remote-desktop-services/rds-run-and-tune
+            url: ./remote-desktop-services/rds-run-and-tune.md
           - text: Access your Remote Desktop resources
-            url: /windows-server/remote/remote-desktop-services/clients/remote-desktop-clients
+            url: ./remote-desktop-services/clients/remote-desktop-clients.md
 
   # Card (optional)
   - title: Remote Access
@@ -59,15 +59,15 @@ landingContent:
       - linkListType: overview
         links:
           - text: Always On VPN
-            url: /windows-server/remote/remote-access/vpn/always-on-vpn
+            url: ./remote-access/vpn/always-on-vpn/index.yml
           - text: Border Gateway Protocol (BGP)
-            url: /windows-server/remote/remote-access/bgp/border-gateway-protocol-bgp
+            url: ./remote-access/bgp/border-gateway-protocol-bgp.md
           - text: RAS Gateway
-            url: /windows-server/remote/remote-access/ras-gateway/ras-gateway
+            url: ./remote-access/ras-gateway/ras-gateway.md
           - text: Remote Access Server Role
-            url: /windows-server/remote/remote-access/ras/remote-access-server-role-documentation
+            url: ./remote-access/ras/remote-access-server-role-documentation.md
           - text: Virtual Private Networking (VPN)
-            url: /windows-server/remote/remote-access/vpn/vpn-top
+            url: ./remote-access/vpn/vpn-top.md
   
   # Card
   - title: Web Application Proxy
@@ -75,15 +75,15 @@ landingContent:
       - linkListType: overview
         links:
           - text: Web Application Proxy in Windows Server 2016
-            url: /windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server
+            url: ./remote-access/web-application-proxy/web-application-proxy-windows-server.md
       - linkListType: how-to-guide
         links:
           - text: Publishing Applications using AD FS Preauthentication
-            url: /windows-server/remote/remote-access/web-application-proxy/publishing-applications-using-ad-fs-preauthentication
+            url: ./remote-access/web-application-proxy/publishing-applications-using-ad-fs-preauthentication.md
           - text: Publishing Applications with SharePoint, Exchange and RDG
-            url: /windows-server/remote/remote-access/web-application-proxy/publishing-applications-with-sharepoint,-exchange-and-rdg
+            url: ./remote-access/web-application-proxy/publishing-applications-with-sharepoint,-exchange-and-rdg.md
           - text: Troubleshooting Web Application Proxy
-            url: /windows-server/remote/remote-access/web-application-proxy/troubleshooting-web-application-proxy
+            url: ./remote-access/web-application-proxy/troubleshooting-web-application-proxy.md
   
   # Card (optional)
   - title: Tools
@@ -91,6 +91,6 @@ landingContent:
       - linkListType: overview
         links:
           - text: Remote Server Administration Tools
-            url: /windows-server/remote/remote-server-administration-tools
+            url: ./remote-server-administration-tools.md
           - text: OpenSSH in Windows
-            url: /windows-server/administration/openssh/openssh_overview
+            url: ../administration/openssh/openssh_overview.md

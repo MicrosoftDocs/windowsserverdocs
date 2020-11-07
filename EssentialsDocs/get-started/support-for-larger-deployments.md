@@ -2,19 +2,18 @@
 title: "Support for larger deployments"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 07d0c4c6-3e92-4969-82b8-105e46ab8d97
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Support for larger deployments
 
 >Applies To: Windows Server 2016 Essentials
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The features described in this topic only work on Windows Server 2016 with the Essentials Experience role enabled, and not with the Windows Server 2016 Essentials SKU.
 
 
@@ -31,7 +30,7 @@ Windows server 2012 R2 Essentials supports only one domain per server, which is 
 
 ## Support for multiple domain controllers
 
- Windows Server Essentials 2012 R2 blocks any services that leverage Azure Active Directory, such as Office 365, where more than one domain controller is deployed. The reason is that account and password synchronization between the local domain controllers and Azure Active Directory can lead to account credentials with passwords that are out of sync. This limitation has been removed in Windows Server 2016 Essentials.
+ Windows Server Essentials 2012 R2 blocks any services that leverage Azure Active Directory, such as Microsoft 365, where more than one domain controller is deployed. The reason is that account and password synchronization between the local domain controllers and Azure Active Directory can lead to account credentials with passwords that are out of sync. This limitation has been removed in Windows Server 2016 Essentials.
 
 ## Ability to specify a designated domain controller
 
@@ -52,7 +51,7 @@ Windows Server 2016 Essentials supports 500 users and 500  devices. Making this 
 
 A screenshot showing the use of the Search feature of the Windows Server Essentials dashboard to search for the string "d5c". The results of this search include two files and folders and two users.
 
-> [!NOTE]  
+> [!NOTE]
 > While the supported user and device limit has increased for Windows Server Essentials Server role, the supported limit for client back-up remains at 75.
 
 See also

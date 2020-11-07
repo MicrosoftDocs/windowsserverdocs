@@ -1,13 +1,11 @@
 ---
 title: cacls
 description: Reference article for the cacls command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: b5bdbaaa-4557-48b8-80df-e75ee0d2f27d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -1,12 +1,10 @@
 ---
 title: About dump encryption
 description: Describes how to encrypt dump files and troubleshoot encryption.
-ms.prod: windows-server
-manager: dongill
 ms.topic: article
-author: larsiwer
+ms.author: benarm
+author: BenjaminArmstrong
 ms.asset: b78ab493-e7c3-41f5-ab36-29397f086f32
-ms.author: kathydav
 ms.date: 11/03/2016
 ---
 
@@ -21,7 +19,7 @@ To turn on dump encryption using the registry, configure the following registry 
 | Value Name | Type | Value |
 | ---------- | ---- | ----- |
 | DumpEncryptionEnabled | DWORD | 1 to enable dump encryption, 0 to disable dump encryption |
-| EncryptionCertificates\Certificate.1::PublicKey | Binary | Public key (RSA, 2048 Bit) that should be used for encrypting dumps. This has to be formatted as [BCRYPT_RSAKEY_BLOB](https://msdn.microsoft.com/library/windows/desktop/aa375531(v=vs.85).aspx). |
+| EncryptionCertificates\Certificate.1::PublicKey | Binary | Public key (RSA, 2048 Bit) that should be used for encrypting dumps. This has to be formatted as [BCRYPT_RSAKEY_BLOB](/windows/win32/api/bcrypt/ns-bcrypt-bcrypt_rsakey_blob). |
 | EncryptionCertificates\Certificate.1::Thumbprint | String | Certificate thumbprint to allow automatic lookup of private key in the local certificate store when decrypting a crash dump. |
 
 
@@ -30,7 +28,7 @@ To simplify configuration, a [sample script](https://github.com/Microsoft/Virtua
 
 1. In a trusted environment: Create a certificate with a 2048 Bit RSA key and export the public certificate
 2. On target hosts: Import the public certificate to the local certificate store
-3. Run the sample configuration script 
+3. Run the sample configuration script
     ```
     .\Set-DumpEncryptionConfiguration.ps1 -Certificate (Cert:\CurrentUser\My\093568AB328DF385544FAFD57EE53D73EFAAF519) -Force
     ```
@@ -50,7 +48,7 @@ If dump encryption is enabled on a system but no dumps are being generated, plea
 | Detailed error message | Steps to mitigate |
 | ---------------------- | ----------------- |
 | Public Key or Thumbprint registry missing | Check if both registry values exist in the expected location |
-| Invalid Public Key | Make sure that the public key stored in the PublicKey registry value is stored as [BCRYPT_RSAKEY_BLOB](https://msdn.microsoft.com/library/windows/desktop/aa375531(v=vs.85).aspx). |
+| Invalid Public Key | Make sure that the public key stored in the PublicKey registry value is stored as [BCRYPT_RSAKEY_BLOB](/windows/win32/api/bcrypt/ns-bcrypt-bcrypt_rsakey_blob). |
 | Unsupported Public Key Size | Currently, only 2048 Bit RSA keys are supported. Configure a key that matches this requirement |
 
 Also check if the value `GuardedHost` under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl\ForceDumpsDisabled` is set to a value other than 0. This disables crash dumps completely. If this is the case, set it to 0.

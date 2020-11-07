@@ -1,10 +1,8 @@
 ---
 title: Set up email discovery to subscribe to your RDS feed
-description: Learn how to integrate Azure AD Domain Services into your RDS deployment.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
+description: Learn how to set up email discovery in your RDS deployment.
 ms.author: chrimo
-ms.date: 3/27/2018
+ms.date: 8/28/2020
 ms.localizationpriority: medium
 ms.topic: article
 author: christianmontoya
@@ -13,15 +11,18 @@ author: christianmontoya
 
 Have you ever had trouble getting your end users connected to their published RDS feed, either because of a single missing character in the feed URL or because they lost the email with the URL? Nearly all Remote Desktop client applications support finding your subscription by entering your email address, making it easier than ever to get your users connected to their RemoteApps and desktops.
 
->[!IMPORTANT]
->The Microsoft Remote Desktop app in the Microsoft Store does not support email address subscription at this time.
-
 Before you set up email discovery, do the following:
 
 - Make sure you have permission to add a TXT record to the domain associated with your email (for example, if your users have @contoso.com email addresses, you would need permissions for the contoso.com domain)
 - Create an RD Web feed URL (https://\<rdweb-dns-name\>.domain/RDWeb/Feed/webfeed.aspx, such as https://rdweb.contoso.com/RDWeb/Feed/webfeed.aspx)
 
-Now, use these steps to set up email discovery:
+>[!NOTE]
+>If you're using Windows Virtual Desktop instead of Remote Desktop, you'll want to use these URLs instead:
+>
+>- If you're using Windows Virtual Desktop (classic): <https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfedddiscovery.aspx>
+>- If you're using Windows Virtual Desktop: <https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery>
+
+Now, follow these steps to set up email discovery:
 
 1. In your browser, connect to the website of the domain name registrar where your domain is registered.
 2. Navigate to the appropriate page for your registered domain where you can view, add, and edit DNS records.

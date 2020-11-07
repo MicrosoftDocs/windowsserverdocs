@@ -1,10 +1,8 @@
 ---
 title: Performance Tuning Web Servers
 description: Performance tuning recommendations for Web Servers on Windows Server 16
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: landing-page
-ms.author: davso; ericam; yashi
+ms.author: ericam
 author: phstee
 ms.date: 10/16/2017
 ---

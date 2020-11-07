@@ -1,12 +1,10 @@
 ---
 title: What type of installation is right for you
-description: This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins. 
-ms.technology: manage
+description: This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins.
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
-ms.prod: windows-server
 ms.date: 12/02/2019
 ---
 # What type of installation is right for you?
@@ -38,7 +36,7 @@ To operating Windows Admin Center:
 - **In other scenarios:** Connect to the Windows Admin Center gateway on a different machine from a client browser via its URL, e.g., `https://servername.contoso.com`
 
 > [!WARNING]
-> Installing Windows Admin Center on a Domain controller is not supported. [Read more about domain controller security best practices](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack).
+> Installing Windows Admin Center on a Domain controller is not supported. [Read more about domain controller security best practices](../../../identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack.md).
 
 ## Installation: Supported web browsers
 
@@ -61,10 +59,10 @@ You can **manage** the following Windows operating systems using Windows Admin C
 
 > [!NOTE]
 > Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
-> 
+>
 > Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
-> and that the version is 5.1 or higher. 
-> 
+> and that the version is 5.1 or higher.
+>
 > If WMF is not installed, you can [download WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
 
 ## High availability
@@ -74,4 +72,4 @@ You can enable high availability of the gateway service by deploying Windows Adm
 [Learn how to deploy Windows Admin Center with high availability.](../deploy/high-availability.md)
 
 > [!Tip]
-> Ready to install Windows Admin Center? [Download now](https://aka.ms/windowsadmincenter)
+> Ready to install Windows Admin Center? [Download now](../overview.md)

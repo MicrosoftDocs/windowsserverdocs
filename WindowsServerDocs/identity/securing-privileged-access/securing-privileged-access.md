@@ -1,7 +1,6 @@
 ---
 title: Securing privileged access
 description: Phased approach to securing privileged access
-ms.prod: windows-server
 ms.topic: conceptual
 ms.assetid: f5dec0c2-06fe-4c91-9bdc-67cc6a3ede60
 ms.date: 02/25/2019
@@ -56,14 +55,14 @@ The roadmap is designed to maximize the use of Microsoft technologies that you a
 
 The roadmap of Microsoft recommendations is broken into 3 phases:
 
-* [Phase 1: First 30 days](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-1-quick-wins-with-minimal-operational-complexity)
+* [Phase 1: First 30 days](#phase-1-quick-wins-with-minimal-operational-complexity)
    * Quick wins with meaningful positive impact.
-* [Phase 2: 90 days](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-2-significant-incremental-improvements)
+* [Phase 2: 90 days](#phase-2-significant-incremental-improvements)
    * Significant incremental improvements.
-* [Phase 3: Ongoing](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-3-security-improvement-and-sustainment)
+* [Phase 3: Ongoing](#phase-3-security-improvement-and-sustainment)
    * Security improvement and sustainment.
 
-The roadmap is prioritized to schedule the most effective and the quickest implementations first based on our experiences with these attacks and solution implementation. 
+The roadmap is prioritized to schedule the most effective and the quickest implementations first based on our experiences with these attacks and solution implementation.
 
 Microsoft recommends you follow this roadmap to secure privileged access against determined adversaries. You may adjust this roadmap to accommodate your existing capabilities and specific requirements in your organizations.
 
@@ -90,7 +89,7 @@ Additional guidance for operating an environment with LAPS and PAWs can be found
 
 ### 3. Administrative workstations
 
-As an initial security measure for those users with Azure Active Directory and traditional on-premises Active Directory administrative privileges, ensure they are using Windows 10 devices configured with the [Standards for a highly secure Windows 10 device](/windows-hardware/design/device-experiences/oem-highly-secure). Privileged administrator accounts should not be a members of the local administrator group of the administrative workstations.  Privilege elevation via User Access Control (UAC) can be utilized when configuration changes to the workstations is required.  Additionally, the Windows 10 Security Baseline should be applied to the workstations to further harden the device.
+As an initial security measure for those users with Azure Active Directory and traditional on-premises Active Directory administrative privileges, ensure they are using Windows 10 devices configured with the [Standards for a highly secure Windows 10 device](/windows-hardware/design/device-experiences/oem-highly-secure). Privileged administrator accounts should not be members of the local administrator group of the administrative workstations.  Privilege elevation via User Access Control (UAC) can be utilized when configuration changes to the workstations is required.  Additionally, the Windows 10 Security Baseline should be applied to the workstations to further harden the device.
 
 ### 4. Identity attack detection
 

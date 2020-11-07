@@ -1,20 +1,19 @@
 ---
-title: OpenSSH Server Configuration for Windows
-description: Configuring the OpenSSH Server for Windows using the Windows tools or PowerShell.
+title: OpenSSH key management for Windows
+description: OpenSSH Server key management for Windows using the Windows tools or PowerShell.
 ms.date: 09/27/2018
 ms.topic: conceptual
-contributor: maertendMSFT
+ms.author: damaerte
 author: maertendmsft
-ms.product: windows-server
 ---
 
-# OpenSSH Key Management
+# OpenSSH key management
 
 Most authentication in Windows environments is done with a username-password pair.
 This works well for systems that share a common domain.
-When working across domains, such as between on-premise and cloud-hosted systems, it becomes more difficult.
+When working across domains, such as between on-premise and cloud-hosted systems, it becomes vulnerable to brute force intrusions.
 
-By comparison, Linux environments commonly use public-key/private-key pairs to drive authentication.
+By comparison, Linux environments commonly use public-key/private-key pairs to drive authentication which doesn't require the use of guessable passwords.
 OpenSSH includes tools to help support this, specifically:
 
 * __ssh-keygen__ for generating secure keys
@@ -49,6 +48,9 @@ To make key authentication easy with an SSH server, run the following commands f
 
 # Install the OpenSSHUtils module to the server. This will be valuable when deploying user keys.
 Install-Module -Force OpenSSHUtils -Scope AllUsers
+
+# By default the ssh-agent service is disabled. Allow it to be manually started for the next step to work.
+Get-Service -Name ssh-agent | Set-Service -StartupType Manual
 
 # Start the ssh-agent service to preserve the server keys
 Start-Service ssh-agent

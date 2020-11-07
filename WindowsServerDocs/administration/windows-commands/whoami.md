@@ -1,13 +1,11 @@
 ---
 title: whoami
 description: Reference article for whoami, which displays user, group and privileges information for the user who is currently logged on to the local system.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 6e3f4d5c-f1f5-4429-b602-afad2b3488bf
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

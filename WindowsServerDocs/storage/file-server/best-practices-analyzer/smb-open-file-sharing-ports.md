@@ -1,8 +1,6 @@
-﻿---
+---
 title: SMB - File and printer sharing ports should be open
 ms.date: 07/02/2012
-ms.prod: windows-server
-ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
@@ -69,5 +67,4 @@ Membership in the **Administrators** group, or equivalent, is the minimum requir
 
 ## Additional references
 
-[Understanding Shared Folders and the Windows Firewall](https://technet.microsoft.com/library/cc731402.aspx)(https://technet.microsoft.com/library/cc731402.aspx)
-
+[Understanding Shared Folders and the Windows Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731402(v=ws.11))(https://technet.microsoft.com/library/cc731402.aspx)

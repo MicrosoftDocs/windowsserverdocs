@@ -2,12 +2,11 @@
 title: "Integrate an On-Premises Exchange Server with Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Integrate an On-Premises Exchange Server with Windows Server Essentials
@@ -266,9 +265,9 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
  You must configure an SMTP Send connector and an SMTP Receive connector for outbound/inbound transmission of email messages.
 
- To create an SMTP Send connector, follow the instructions in the Exchange Server article [Create an SMTP Send Connector](https://technet.microsoft.com/library/aa997285.aspx).
+ To create an SMTP Send connector, follow the instructions in the Exchange Server article [Create an SMTP Send Connector](/previous-versions/office/exchange-server-2010/aa997285(v=exchg.141)).
 
- To create an SMTP Receive connector, follow the instructions in the Exchange Server article [Create an SMTP Receive Connector](https://technet.microsoft.com/library/bb125159.aspx).
+ To create an SMTP Receive connector, follow the instructions in the Exchange Server article [Create an SMTP Receive Connector](/previous-versions/office/exchange-server-2010/bb125159(v=exchg.141)).
 
  As an option, you can refer to the script earlier in this document for creating the send and receive connectors by using Exchange PowerShell cmdlets.
 
@@ -343,7 +342,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 6. Copy the SSL certificate file for Exchange Server to the server that is running Windows Server Essentials. The certificate file must contain the private key, and it must be in the PFX file format.
 
    > [!NOTE]
-   >  If you are using a self-issued certificate, follow the instruction in the Exchange Server article [Export an Exchange Certificate](https://technet.microsoft.com/library/dd351274.aspx) to export the certificate.
+   >  If you are using a self-issued certificate, follow the instruction in the Exchange Server article [Export an Exchange Certificate](/previous-versions/office/exchange-server-2010/dd351274(v=exchg.141)) to export the certificate.
 
 7. Depending on which version of Windows Server Essentials you are running, do one of the following:
 
@@ -422,7 +421,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
  If you disable integration with an on-premises Exchange Server, you will no longer be able to use the Windows Server Essentials Dashboard to view, create, or manage Exchange Server mailboxes.
 
 ### What do I need to know about email accounts?
- A hosted email solution is configured on your server. A solution from a hosted email provider, such as Microsoft  Office 365, can provide individual email accounts for network users. When you run the Add a User Account Wizard in Windows Server Essentials to create a user account, the wizard attempts to add the user account to the available hosted email solution. At the same time, the wizard assigns an email name (alias) to the user, and sets the maximum size of the mailbox (quota). The maximum size of the mailbox varies depending on the email provider that you use. After adding the user account, you can continue to manage the mailbox alias and quota information from the properties page for the user. For full management of your user accounts and hosted email provider, use the management console of your hosted provider. Depending on your provider, you can access their management console either from a web-based portal, or from a tab in the server Dashboard.
+ A hosted email solution is configured on your server. A solution from a hosted email provider, such as Microsoft 365, can provide individual email accounts for network users. When you run the Add a User Account Wizard in Windows Server Essentials to create a user account, the wizard attempts to add the user account to the available hosted email solution. At the same time, the wizard assigns an email name (alias) to the user, and sets the maximum size of the mailbox (quota). The maximum size of the mailbox varies depending on the email provider that you use. After adding the user account, you can continue to manage the mailbox alias and quota information from the properties page for the user. For full management of your user accounts and hosted email provider, use the management console of your hosted provider. Depending on your provider, you can access their management console either from a web-based portal, or from a tab in the server Dashboard.
 
  The alias that you provide when you run the Add a User Account Wizard is sent to the hosted email provider as the suggested name for the user alias. For example, if the user alias is *FrankM*, the user's email address might be <em>FrankM@Contoso.com</em>.
 

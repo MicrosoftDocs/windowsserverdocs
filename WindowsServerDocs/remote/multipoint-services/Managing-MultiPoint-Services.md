@@ -1,8 +1,6 @@
 ---
 title: Managing MultiPoint Services
 description: Overview of articles about managing MultiPoint Services
-ms.prod: windows-server
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 81135740-e9ce-4b4c-a770-760d741f20b1
 author: lizap
@@ -28,4 +26,4 @@ Use the following information to learn about the tasks that you can perform in M
 
 ## Additional References
 
--   [MultiPoint Services Forum](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)
+- [MultiPoint Services](./introducing-multipoint-services.md)

@@ -1,8 +1,6 @@
 ---
 ms.assetid: a6343f1c-e9dd-4a02-91ad-39bd519d66cd
 title: Simplified SMB Multichannel and Multi-NIC Cluster Networks
-ms.prod: windows-server
-ms.technology: storage-failover-clustering
 ms.topic: article
 author: RobHindman
 ms.author: robhind
@@ -52,7 +50,7 @@ When using more than one private (cluster only) network, check the IPv6 routing 
 **Figure 4: Automatic IPv6 Link Local (fe80) Address resource configuration**
 
 ## Throughput and Fault Tolerance
-Windows Server 2019 and Windows Server 2016 automatically detect NIC capabilities and will attempt to use each NIC in the fastest possible configuration. NICs that are teamed, NICs using RSS, and NICs with RDMA capability can all be used. The table below summarizes the trade-offs when using these technologies. Maximum throughput is achieved when using multiple RDMA capable NICs. For more information, see [The basics of SMB Mutlichannel](https://blogs.technet.microsoft.com/josebda/2012/06/28/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0/).
+Windows Server 2019 and Windows Server 2016 automatically detect NIC capabilities and will attempt to use each NIC in the fastest possible configuration. NICs that are teamed, NICs using RSS, and NICs with RDMA capability can all be used. The table below summarizes the trade-offs when using these technologies. Maximum throughput is achieved when using multiple RDMA capable NICs. For more information, see [The basics of SMB Mutlichannel](/archive/blogs/josebda/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0).
 
 ![An illustration of throughput and fault tolerance for various NIC configurations](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig5.png)
 **Figure 5: Throughput and fault tolerance for various NIC conifigurations**

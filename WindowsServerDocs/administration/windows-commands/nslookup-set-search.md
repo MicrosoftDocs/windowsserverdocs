@@ -1,13 +1,11 @@
 ---
 title: nslookup set search
 description: Reference article for the nslookup set search command, which appends the Domain Name System (DNS) domain names in the DNS domain search list to the request until an answer is received.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 064ac660-8b04-4af9-8b2c-e4e0549771b8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

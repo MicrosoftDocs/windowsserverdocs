@@ -1,13 +1,11 @@
 ---
 title: cipher
 description: Reference article for the cipher command, which displays or alters the encryption of directories and files on NTFS volumes.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 78ef795e-0f87-4acd-8d15-192c972c0f41
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

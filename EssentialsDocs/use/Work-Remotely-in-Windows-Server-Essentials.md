@@ -2,12 +2,11 @@
 title: "Work Remotely in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Work Remotely in Windows Server Essentials
@@ -27,7 +26,7 @@ manager: dongill
 
 -   [Use the My Server app for Windows Phone](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_2)
 
--   [Use Microsoft Office 365 with Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_O365)
+-   [Use Microsoft 365 with Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_O365)
 
 > [!NOTE]
 >  For information about configuring Anywhere Access on your server, see [Manage Anywhere Access](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md).
@@ -53,7 +52,7 @@ manager: dongill
 ##  <a name="BKMK_App"></a> Use the My Server app to connect to Windows Server Essentials
  The My Server app lets you connect to resources and perform light administrative tasks on your  Windows Server Essentials server from your Windows-based PC, laptop, or Surface device. If your server is running  Windows Server 2012, download the original My Server app from [Apps for Windows](https://windows.microsoft.com/windows-8/apps). If your server is running  Windows Server Essentials, you must download the My Server 2012 R2 app instead.
 
- With the expanded My Server 2012 R2 app, you can connect to the server or client computers by using Remote Desktop. If your  Windows Server Essentials server is integrated with  Office 365, and your subscription includes SharePoint Online, you also can work with documents in your SharePoint Online libraries and open your SharePoint team sites from My Server 2012 R2.
+ With the expanded My Server 2012 R2 app, you can connect to the server or client computers by using Remote Desktop. If your  Windows Server Essentials server is integrated with  Microsoft 365, and your subscription includes SharePoint Online, you also can work with documents in your SharePoint Online libraries and open your SharePoint team sites from My Server 2012 R2.
 
 
  For information about installing and using these apps, see [Use the My Server App](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).
@@ -70,11 +69,11 @@ manager: dongill
 
 - [Install My Server 2012 R2 for Windows Phone](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)
 
-  For more information about the My Server phone app, see the blog entry [My Server phone app for Windows Server Essentials](https://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx). For more information about the My Server 2012 R2 phone app, see the blog entry [My Server 2012 R2 Windows and Windows Phone apps](https://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx).
+  For more information about the My Server phone app, see the blog entry [My Server phone app for Windows Server Essentials](/archive/blogs/sbs/my-server-phone-app-for-windows-server-2012-essentials). For more information about the My Server 2012 R2 phone app, see the blog entry [My Server 2012 R2 Windows and Windows Phone apps](/archive/blogs/sbs/my-server-2012-r2-windows-and-windows-phone-apps).
 
-##  <a name="BKMK_O365"></a> Use Microsoft Office 365 with Windows Server Essentials
+##  <a name="BKMK_O365"></a> Use Microsoft 365 with Windows Server Essentials
 
- Office 365 is an easy-to-use set of web-enabled tools that let you access your email, important documents, contacts, and calendar from almost anywhere and any device. For more information, see the [Quick Start Guide to Using Microsoft Office 365](Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md).
+ Microsoft 365 is an easy-to-use set of web-enabled tools that let you access your email, important documents, contacts, and calendar from almost anywhere and any device. For more information, see the [Quick Start Guide to Using Microsoft 365](Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md).
 
 
 ## See also
@@ -86,4 +85,3 @@ manager: dongill
 -   [Use Shared Folders](Use-Shared-Folders-in-Windows-Server-Essentials.md)
 
 -   [Play Digital Media](Play-Digital-Media-in-Windows-Server-Essentials.md)
-

@@ -1,13 +1,10 @@
 ---
 title: Manage Hyper-V Integration Services
 description: Describes how to turn integration services on and off and install them if needed
-ms.technology: compute-hyper-v
-author: kbdazure
-ms.author: kathydav
-manager: dongill
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 12/20/2016
 ms.topic: article
-ms.prod: windows-server
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
 ---
 
@@ -17,7 +14,7 @@ ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
 
 Hyper-V Integration Services enhance virtual machine performance and provide convenience features by leveraging two-way communication with the Hyper-V host. Many of these services are conveniences, such as guest file copy, while others are important to the virtual machine's functionality, such as synthetic device drivers. This set of services and drivers are sometimes referred to as "integration components". You can control whether or not individual convenience services operate for any given virtual machine. The driver components are not intended to be serviced manually.
 
-For details about each integration service, see [Hyper-V Integration Services](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/integration-services).
+For details about each integration service, see [Hyper-V Integration Services](/virtualization/hyper-v-on-windows/reference/integration-services).
 
 > [!IMPORTANT]
 > Each service you want to use must be enabled in both the host and guest in order to function. All integration services except "Hyper-V Guest Service Interface" are on by default on Windows guest operating systems. The services can be turned on and off individually. The next sections show you how.
@@ -32,7 +29,7 @@ The Integration Services pane lists all integration services available on the Hy
 
 ### Turn an integration service on or off using PowerShell
 
-To do this in PowerShell, use [Enable-VMIntegrationService](https://technet.microsoft.com/library/hh848500.aspx) and [Disable-VMIntegrationService](https://technet.microsoft.com/library/hh848488.aspx).
+To do this in PowerShell, use [Enable-VMIntegrationService](/powershell/module/hyper-v/enable-vmintegrationservice?view=win10-ps) and [Disable-VMIntegrationService](/powershell/module/hyper-v/disable-vmintegrationservice?view=win10-ps).
 
 The following examples demonstrate turning the guest file copy integration service on and off for a virtual machine named "demovm".
 
@@ -123,7 +120,7 @@ In order for an integration service to be fully functional, its corresponding se
     Running  vmicvss            Hyper-V Volume Shadow Copy Requestor
     ```
 
-1. Run either [Start-Service](https://technet.microsoft.com/library/hh849825.aspx) or [Stop-Service](https://technet.microsoft.com/library/hh849790.aspx). For example, to turn off Windows PowerShell Direct, run:
+1. Run either [Start-Service](/powershell/module/microsoft.powershell.management/start-service?view=powershell-7) or [Stop-Service](/powershell/module/microsoft.powershell.management/stop-service?view=powershell-7). For example, to turn off Windows PowerShell Direct, run:
 
     ```
     Stop-Service -Name vmicvmsession
@@ -183,7 +180,7 @@ Linux integration services are generally provided through the Linux kernel. The 
     hv_fcopy_daemon
     ```
 
-   Integration service daemons that might be listed include the following. If any are missing, they might not be supported on your system or they might not be installed. Find details, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/library/dn531030.aspx).
+   Integration service daemons that might be listed include the following. If any are missing, they might not be supported on your system or they might not be installed. Find details, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md).
    - **hv_vss_daemon**: This daemon is required to create live Linux virtual machine backups.
    - **hv_kvp_daemon**: This daemon allows setting and querying intrinsic and extrinsic key value pairs.
    - **hv_fcopy_daemon**: This daemon implements a file copying service between the host and guest.
@@ -292,7 +289,7 @@ We recommend that you keep integration services up to date to get the best perfo
 | - | | |
 | Linux guests | package manager | Integration services for Linux are built into the distro but there may be optional updates available. ** |
 
-For more details about Linux guests, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://technet.microsoft.com/windows-server-docs/virtualization/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows).
+For more details about Linux guests, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md).
 
 ## Install or update integration services
 
@@ -311,5 +308,5 @@ Procedure to manually Install or update the integration services:
 
 > [!NOTE]
 > These steps **can't be automated** or done within a Windows PowerShell session for **online** virtual machines.
-> You can apply them to **offline** VHDX images; see [How to install integration services when the virtual machine is not running](https://docs.microsoft.com/virtualization/community/team-blog/2013/20130418-how-to-install-integration-services-when-the-virtual-machine-is-not-running).
-> You can also automate the deploy of the integration services through **Configuration Manager** with the VMs **Online**, but you need to restart the VMs at the end of the installation; see [Deploying Hyper-V Integration Services to VMs using Config Manager and DISM](https://docs.microsoft.com/archive/blogs/manageabilityguys/deploying-hyper-v-integration-services-to-vms-using-config-manager-and-dism)
+> You can apply them to **offline** VHDX images; see [How to install integration services when the virtual machine is not running](/virtualization/community/team-blog/2013/20130418-how-to-install-integration-services-when-the-virtual-machine-is-not-running).
+> You can also automate the deploy of the integration services through **Configuration Manager** with the VMs **Online**, but you need to restart the VMs at the end of the installation; see [Deploying Hyper-V Integration Services to VMs using Config Manager and DISM](/archive/blogs/manageabilityguys/deploying-hyper-v-integration-services-to-vms-using-config-manager-and-dism)

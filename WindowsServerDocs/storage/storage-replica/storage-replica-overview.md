@@ -1,9 +1,7 @@
 ---
 title: Storage Replica Overview
-ms.prod: windows-server
 manager: siroy
 ms.author: nedpyle
-ms.technology: storage-replica
 ms.topic: get-started-article
 author: nedpyle
 ms.date: 4/26/2019

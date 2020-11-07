@@ -2,8 +2,6 @@
 title: Choose a Namespace Type
 description: This article describes how to choose a namespace type.
 ms.date: 6/5/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -24,7 +22,7 @@ Choose a stand-alone namespace if any of the following conditions apply to your 
 -   You need to create a single namespace with more than 5,000 DFS folders in a domain that does not meet the requirements for a domain-based namespace (Windows Server 2008 mode) as described later in this topic.
 
 > [!NOTE]
-> To check the size of a namespace, right-click the namespace in the DFS Management console tree, click **Properties**, and then view the namespace size in the **Namespace Properties** dialog box. For more information about DFS Namespace scalability, see the Microsoft website [File Services](https://technet.microsoft.com/library/cc771548.aspx).
+> To check the size of a namespace, right-click the namespace in the DFS Management console tree, click **Properties**, and then view the namespace size in the **Namespace Properties** dialog box. For more information about DFS Namespace scalability, see the Microsoft website [File Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771548(v=ws.10)).
 
 Choose a domain-based namespace if any of the following conditions apply to your environment:
 
@@ -67,5 +65,3 @@ The characteristics of each namespace type and mode are described in the followi
 
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
 -   [Migrate a Domain-based Namespace to Windows Server 2008 Mode](migrate-a-domain-based-namespace-to-windows-server-2008-mode.md)
-
-

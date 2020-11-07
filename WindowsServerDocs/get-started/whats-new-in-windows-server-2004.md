@@ -1,8 +1,6 @@
 ---
-title: What's New in Windows Server, version 2004
-description: New features in Windows Server, version 2004
-ms.prod: windows-server
-ms.technology: server-general
+title: What's New in Windows Server, versions 2004 20H2
+description: New features in Windows Server, version 2004 and 20H2.
 ms.topic: article
 author: Heidilohr
 ms.author: helohr
@@ -10,11 +8,13 @@ ms.date: 05/27/2020
 ms.localizationpriority: high
 ---
 
-# What's new in Windows Server, version 2004
+# What's new in Windows Server, version 2004 and 20H2
 
 >Applies to: Windows Server (Semi-Annual Channel)
 
-To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). This topic describes some of the new features in Windows Server, version 2004.
+To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). This topic describes some of the new features in Windows Server, version 2004 and 20H2.
+
+Windows Server, version 20H2 is the next Semi-Annual Channel release of Windows Server, version 2004. This version focuses on reliability, performance, and other general improvements, but has no new features. Like other Semi-Annual Channel releases, it’s supported for 18 months after its release. To learn more about the support dates for Semi-Annual Channel releases, see [Windows Server release info](windows-server-release-info.md).
 
 ## Server Core container improvements
 

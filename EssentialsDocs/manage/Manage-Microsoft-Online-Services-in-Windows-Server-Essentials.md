@@ -2,12 +2,11 @@
 title: "Manage Microsoft Online Services in Windows Server Essentials"
 description: "Describes how to use Windows Server Essentials"
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 7e50886e-08b8-4c97-95cf-456ba3800ebf
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Manage Microsoft Online Services in Windows Server Essentials
@@ -16,7 +15,7 @@ manager: dongill
 
 The following topics provide information about methods that you can use to manage online services for your organization:
 
--   [Manage Office 365](Manage-Office-365-in-Windows-Server-Essentials.md)
+-   [Manage Microsoft 365](Manage-Office-365-in-Windows-Server-Essentials.md)
 
 -   [Manage Online Backup](Manage-Online-Backup-in-Windows-Server-Essentials.md)
 

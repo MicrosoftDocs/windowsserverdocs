@@ -1,13 +1,11 @@
 ---
 title: ksetup mapuser
 description: Reference article for the ksetup mapuser command, which maps the name of a Kerberos principal to an account.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 84113e6e-89ff-488a-9cd0-f14bbf23b543
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

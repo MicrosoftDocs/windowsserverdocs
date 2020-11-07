@@ -1,13 +1,11 @@
 ---
 title: gpt
 description: Reference article for the gpt command, which assigns the gpt attribute(s) to the partition with focus.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1d6f9029-807f-4420-a336-36669b5361bc
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -32,7 +30,7 @@ gpt attributes=<n>
 
 | Parameter | Description |
 | --------- | ----------- |
-| attributes=`<n>` | Specifies the value for the attribute that you want to apply to the partition with focus. The gpt attribute field is a 64-bit field that contains two subfields. The higher field is interpreted only in the context of the partition ID, while the lower field is common to all partition IDs. Accepted values include:<ul><li>**0x0000000000000001** - Specifies that the partition is required by the computer to function properly.</li><li>**0x8000000000000000** - Specifies that the partition won't receive a drive letter by default when the disk is moved to another computer, or when the disk is seen for the first time by a computer.</li><li>**0x4000000000000000** - Hides a partition's volume so it's not detected by the mount manager.</li><li>**0x2000000000000000** - Specifies that the partition is a shadow copy of another partition.</li><li>**0x1000000000000000** - Specifies that the partition is read-only. This attribute prevents the volume from being written to.</li></ul><p>For more information about these attributes, see the attributes section at [create_PARTITION_PARAMETERS Structure](https://docs.microsoft.com/windows/win32/api/vds/ns-vds-create_partition_parameters). |
+| attributes=`<n>` | Specifies the value for the attribute that you want to apply to the partition with focus. The gpt attribute field is a 64-bit field that contains two subfields. The higher field is interpreted only in the context of the partition ID, while the lower field is common to all partition IDs. Accepted values include:<ul><li>**0x0000000000000001** - Specifies that the partition is required by the computer to function properly.</li><li>**0x8000000000000000** - Specifies that the partition won't receive a drive letter by default when the disk is moved to another computer, or when the disk is seen for the first time by a computer.</li><li>**0x4000000000000000** - Hides a partition's volume so it's not detected by the mount manager.</li><li>**0x2000000000000000** - Specifies that the partition is a shadow copy of another partition.</li><li>**0x1000000000000000** - Specifies that the partition is read-only. This attribute prevents the volume from being written to.</li></ul><p>For more information about these attributes, see the attributes section at [create_PARTITION_PARAMETERS Structure](/windows/win32/api/vds/ns-vds-create_partition_parameters). |
 
 #### Remarks
 
@@ -52,4 +50,4 @@ gpt attributes=0x8000000000000000
 
 - [select partition command](select-partition.md)
 
-- [create_PARTITION_PARAMETERS Structure](https://docs.microsoft.com/windows/win32/api/vds/ns-vds-create_partition_parameters)
+- [create_PARTITION_PARAMETERS Structure](/windows/win32/api/vds/ns-vds-create_partition_parameters)

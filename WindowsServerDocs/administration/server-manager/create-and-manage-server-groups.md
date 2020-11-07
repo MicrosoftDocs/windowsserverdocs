@@ -1,17 +1,11 @@
 ---
-title: create and Manage Server Groups
+title: Create and Manage Server Groups
 description: Server Manager
-
-ms.prod: windows-server
-
-
-ms.technology: manage-server-manager
-
 ms.topic: article
 ms.assetid: 9d5b1be8-49fd-4ff7-9580-e4ff21fe4b17
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # create and Manage Server Groups

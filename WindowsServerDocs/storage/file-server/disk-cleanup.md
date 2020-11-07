@@ -1,12 +1,10 @@
 ---
 title: Using Disk Cleanup on Windows Server
 description: Learn how to use command-line options to configure the Disk Cleanup tool (Cleanmgr.exe) to automatically clean up certain files.
-ms.prod: windows-server
 ms.reviewer: cosmosdarwin
 author: iangpgh
 ms.author: jgerend
 manager: daveba
-ms.technology: storage-spaces
 ms.date: 06/20/2019
 ---
 
@@ -58,7 +56,7 @@ To use cleanmgr.exe, install the Desktop Experience as described earlier, or cop
 
 | Operating System  | Architecture  | File Location  |
 | ----------------- | -------------- | --------------- |
-| Windows Server 2008 R2 | 64-bit | C:\Windows\winsxs\amd64_microsoft-windows-cleanmgr_31bf3856ad364e35_6.1.7600.16385_none_c9392808773cd7da\cleanmgr.exe 
+| Windows Server 2008 R2 | 64-bit | C:\Windows\winsxs\amd64_microsoft-windows-cleanmgr_31bf3856ad364e35_6.1.7600.16385_none_c9392808773cd7da\cleanmgr.exe
 | Windows Server 2008 R2 | 64-bit | C:\Windows\winsxs\amd64_microsoft-windows-cleanmgr.resources_31bf3856ad364e35_6.1.7600.16385_en-us_b9cb6194b257cc63\cleanmgr.exe.mui |
 
 Locate cleanmgr.exe and move the file to **%systemroot%\System32**.

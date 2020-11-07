@@ -1,14 +1,11 @@
 ---
 title: wecutil
 description: Reference article for wecutil, which lets you create and manage subscriptions to events that are forwarded from remote computers.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0c82a6cb-d652-429c-9c3d-0f568c78d54b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dansimps
-
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ---
 
 # wecutil

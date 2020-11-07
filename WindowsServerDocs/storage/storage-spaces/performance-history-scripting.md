@@ -2,7 +2,6 @@
 title: Scripting with Storage Spaces Direct performance history
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 05/15/2018
@@ -484,6 +483,6 @@ That's it! Hopefully these samples inspire you and help you get started. With St
 
 ## Additional References
 
-- [Getting started with Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/getting-started-with-windows-powershell)
+- [Getting started with Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell)
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Performance history](performance-history.md)

@@ -1,13 +1,11 @@
 ---
 title: winnt32
 description: Reference article for winnt32, which performs an installation of, or upgrade to, a product in Windows Server 2003.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5a0a6fb3-ba4e-4ace-8984-7f6d3875560e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # winnt32
@@ -56,14 +54,13 @@ winnt32 [/checkupgradeonly] [/cmd: <CommandLine>] [/cmdcons] [/copydir:{i386|ia6
 |        /?         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Displays help at the command prompt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 ## Remarks
-If you are deploying Windows XP on client computers, you can use the version of winnt32.exe that comes with Windows XP. Another way to deploy Windows XP is to use winnt32.msi, which works through Windows Installer, part of the IntelliMirror set of technologies. For more information about client deployments, see the Windows Server 2003 Deployment Kit, which is described in [Using the Windows Deployment and Resource Kits](https://technet.microsoft.com/library/cc779317(v=ws.10).aspx).
+If you are deploying Windows XP on client computers, you can use the version of winnt32.exe that comes with Windows XP. Another way to deploy Windows XP is to use winnt32.msi, which works through Windows Installer, part of the IntelliMirror set of technologies. For more information about client deployments, see the Windows Server 2003 Deployment Kit, which is described in [Using the Windows Deployment and Resource Kits](/previous-versions/windows/it-pro/windows-server-2003/cc779317(v=ws.10)).
 
 On an Itanium-based computer, **winnt32** can be run from the Extensible Firmware Interface (EFI) or from Windows Server 2003 Enterprise, Windows Server 2003 R2 Enterprise, Windows Server 2003 R2 Datacenter, or Windows Server 2003 Datacenter. Also, on an Itanium architecture-based computer, **/cmdcons** and **/syspart** are not available, and options relating to upgrades are not available.
-for more information about hardware compatibility, see [Hardware compatibility](https://technet.microsoft.com/library/cc757927(v=ws.10).aspx).
-for more detailed information about using Dynamic Update and installing multiple clients, see the Windows Server 2003 Deployment Kit, which is described in [Using the Windows Deployment and Resource Kits](https://technet.microsoft.com/library/cc779317(v=ws.10).aspx).
-for information about modifying boot settings, see the Windows Deployment and Resource Kits for Windows Server 2003. For more information, see [Using the Windows Deployment and Resource Kits](https://technet.microsoft.com/library/cc779317(v=ws.10).aspx).
+for more information about hardware compatibility, see [Hardware compatibility](/previous-versions/windows/it-pro/windows-server-2003/cc757927(v=ws.10)).
+for more detailed information about using Dynamic Update and installing multiple clients, see the Windows Server 2003 Deployment Kit, which is described in [Using the Windows Deployment and Resource Kits](/previous-versions/windows/it-pro/windows-server-2003/cc779317(v=ws.10)).
+for information about modifying boot settings, see the Windows Deployment and Resource Kits for Windows Server 2003. For more information, see [Using the Windows Deployment and Resource Kits](/previous-versions/windows/it-pro/windows-server-2003/cc779317(v=ws.10)).
 Using the **/unattend** command-line option to automate setup affirms that you have read and accepted the Microsoft License Agreement for Windows Server 2003. Before using this command-line option to install Windows Server 2003 on behalf of an organization other than your own, you must confirm that the end user (whether an individual, or a single entity) has received, read, and accepted the terms of the Microsoft License Agreement for that product.  OEMs may not specify this key on machines being sold to end users.
 
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-

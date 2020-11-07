@@ -1,13 +1,11 @@
 ---
 title: mode
 description: Reference article for the mode command, which displays system status, changes system settings, or reconfigures ports or devices.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: b59b04f2-b41d-42df-b5be-19c3721445b1
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

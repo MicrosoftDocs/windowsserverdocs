@@ -1,14 +1,13 @@
 ---
 title: Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 2016
 description: Use this article to understand what GDPR is and about the products Microsoft provides to help you get started towards compliance.
-ms.technology: techgroup-security
 ms.topic: article
 ms.date: 09/25/2017
 ms.author: nirb
 author: nirb-ms
 ---
 
-# Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 
+# Beginning your General Data Protection Regulation (GDPR) journey for Windows Server
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
 
@@ -65,11 +64,11 @@ This list provides examples of several types of info that will be regulated thro
 ## Getting started on the journey towards GDPR compliance
 Given how much is involved to become GDPR-compliant, we strongly recommend that you don't wait to prepare until enforcement begins. You should review your privacy and data management practices now. We recommend that you begin your journey to GDPR compliance by focusing on four key steps:
 
--   **Discover.** Identify what personal data you have and where it resides. 
+-   **Discover.** Identify what personal data you have and where it resides.
 
 -   **Manage.** Govern how personal data is used and accessed.
 
--   **Protect.** Establish security controls to prevent, detect, and respond to vulnerabilities and data breaches.  
+-   **Protect.** Establish security controls to prevent, detect, and respond to vulnerabilities and data breaches.
 
 -   **Report.** Act on data requests, report data breaches, and keep required documentation.
 
@@ -100,7 +99,7 @@ Two key principles have guided and continue to guide the development of Windows:
 
 - **Privacy.** Users should be in control of how their data is used. Policies for information use should be clear to the user. Users should be in control of when and if they receive information to make best use of their time. It should be easy for users to specify appropriate use of their information including controlling the use of email they send.
 
-Microsoft has remained steadfast against these principles as recently noted by Microsoft's CEO, Satya Nadella, 
+Microsoft has remained steadfast against these principles as recently noted by Microsoft's CEO, Satya Nadella,
 
 > “_As the world continues to change and business requirements evolve, some things are consistent: a customer's demand for security and privacy._”
 
@@ -145,11 +144,11 @@ Key features within Windows Server can help you to efficiently and effectively i
 
 The server operating system sits at a strategic layer in an organization's infrastructure, affording new opportunities to create layers of protection from attacks that could steal data and interrupt your business. Key aspects of the GDPR such as Privacy by Design, Data Protection, and Access Control need to be addressed within your IT infrastructure at the server level.
 
-Working to help protect the identity, operating system, and virtualization layers, Windows Server 2016 helps block the common attack vectors used to gain illicit access to your systems: stolen credentials, malware, and a compromised virtualization fabric. In addition to reducing business risk, the security components built into Windows Server 2016 help address compliance requirements for key government and industry security regulations. 
+Working to help protect the identity, operating system, and virtualization layers, Windows Server 2016 helps block the common attack vectors used to gain illicit access to your systems: stolen credentials, malware, and a compromised virtualization fabric. In addition to reducing business risk, the security components built into Windows Server 2016 help address compliance requirements for key government and industry security regulations.
 
 These identity, operating system, and virtualization protections enable you to better protect your datacenter running Windows Server as a VM in any cloud, and limit the ability of attackers to compromise credentials, launch malware, and remain undetected in your network. Likewise, when deployed as a Hyper-V host, Windows Server 2016 offers security assurance for your virtualization environments through Shielded Virtual Machines and distributed firewall capabilities. With Windows Server 2016, the server operating system becomes an active participant in your datacenter security.
 
-### Protect your credentials and limit administrator privileges 
+### Protect your credentials and limit administrator privileges
 Control over access to personal data, and the systems that process that data, is an area with the GDPR that has specific requirements including access by administrators. Privileged identities are any accounts that have elevated privileges, such as user accounts that are members of the Domain Administrators, Enterprise Administrators, local Administrators, or even Power Users groups. Such identities can also include accounts that have been granted privileges directly, such as performing backups, shutting down the system, or other rights listed in the User Rights Assignment node in the Local Security Policy console.
 
 As a general access control principle and in-line with the GDPR, you need to protect these privileged identities from compromise by potential attackers. First, it's important to understand how identities are compromised; then you can plan to prevent attackers from gaining access to these privileged identities.
@@ -161,9 +160,9 @@ Privileged identities can get compromised when organizations don't have guidelin
 
 - **Constantly signed in with elevated privileges.** Another common issue is that users with elevated privileges can use it for an unlimited time. This is very common with IT pros who sign in to a desktop computer using a privileged account, stay signed in, and use the privileged account to browse the web and use email (typical IT work job functions). Unlimited duration of privileged accounts makes the account more susceptible to attack and increases the odds that the account will be compromised.
 
-- **Social engineering research.** Most credential threats start out by researching the organization and then conducted through social engineering. For example, an attacker may perform an email phishing attack to compromise legitimate accounts (but not necessarily elevated accounts) that have access to an organization's network. The attacker then uses these valid accounts to perform additional research on your network and to identify privileged accounts that can perform administrative tasks. 
+- **Social engineering research.** Most credential threats start out by researching the organization and then conducted through social engineering. For example, an attacker may perform an email phishing attack to compromise legitimate accounts (but not necessarily elevated accounts) that have access to an organization's network. The attacker then uses these valid accounts to perform additional research on your network and to identify privileged accounts that can perform administrative tasks.
 
-- **Leverage accounts with elevated privileges.** Even with a normal, non-elevated user account in the network, attackers can gain access to accounts with elevated permissions. One of the more common methods of doing so is by using the Pass-the-Hash or Pass-the-Token attacks. For more information on the Pass-the-Hash and other credential theft techniques, see the resources on the [Pass-the-Hash (PtH) page](https://technet.microsoft.com/dn785092.aspx).
+- **Leverage accounts with elevated privileges.** Even with a normal, non-elevated user account in the network, attackers can gain access to accounts with elevated permissions. One of the more common methods of doing so is by using the Pass-the-Hash or Pass-the-Token attacks. For more information on the Pass-the-Hash and other credential theft techniques, see the resources on the [Pass-the-Hash (PtH) page](/previous-versions/dn785092(v=msdn.10)).
 
 There are of course other methods that attackers can use to identify and compromise privileged identities (with new methods being created every day). It is therefore important that you establish practices for users to log on with least-privileged accounts to reduce the ability of attackers to gain access to privileged identities. The sections below outline functionality where Windows Server can mitigate these risks.
 
@@ -182,7 +181,7 @@ Imagine this scenario if the DNS admin's credentials were stolen. First, since t
 
 In addition, many organizations use the free [Local Administrator Password Solution (LAPS)](https://aka.ms/laps) as a simple yet powerful JIT administration mechanism for their server and client systems. The LAPS capability provides management of local account passwords of domain joined computers. Passwords are stored in Active Directory (AD) and protected by and Access Control List (ACL) so only eligible users can read it or request its reset.
 
-As noted in the [Windows Credential Theft Mitigation Guide](https://www.microsoft.com/download/confirmation.aspx?id=54095), 
+As noted in the [Windows Credential Theft Mitigation Guide](https://www.microsoft.com/download/confirmation.aspx?id=54095),
 
 > “_the tools and techniques criminals use to carry out credential theft and reuse attacks improve, malicious attackers are finding it easier to achieve their goals. Credential theft often relies on operational practices or user credential exposure, so effective mitigations require a holistic approach that addresses people, processes, and technology. In addition, these attacks rely on the attacker stealing credentials after compromising a system to expand or persist access, so organizations must contain breaches rapidly by implementing strategies that prevent attackers from moving freely and undetected in a compromised network._”
 
@@ -207,7 +206,7 @@ Windows Defender Credential Guard uses:
 
 - TPM 2.0 either discrete or firmware (preferred - provides binding to hardware)
 
-You can use Windows Defender Credential Guard to help protect privileged identities by protecting the credentials and credential derivatives on Windows Server 2016. For more information on Windows Defender Credential Guard requirements, see [Protect derived domain credentials with Windows Defender Credential Guard](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard).
+You can use Windows Defender Credential Guard to help protect privileged identities by protecting the credentials and credential derivatives on Windows Server 2016. For more information on Windows Defender Credential Guard requirements, see [Protect derived domain credentials with Windows Defender Credential Guard](/windows/access-protection/credential-guard/credential-guard).
 
 #### Windows Defender Remote Credential Guard
 Windows Defender Remote Credential Guard on Windows Server 2016 and Windows 10 Anniversary Update also helps protect credentials for users with remote desktop connections. Previously, anyone using Remote Desktop Services would have to log on to their local machine and then be required to log on again when they performed a remote connection to their target machine. This second login would pass credentials to the target machine, exposing them to Pass-the-Hash or Pass-the-Ticket attacks.
@@ -218,11 +217,11 @@ With Windows Defender Remote Credential Guard, Windows Server 2016 implements si
 
 - Must use Kerberos authentication.
 
-- Must be running at least Windows 10 version 1607 or Windows Server 2016.	
+- Must be running at least Windows 10 version 1607 or Windows Server 2016.
 
 - The Remote Desktop classic Windows app is required. The Remote Desktop Universal Windows Platform app doesn't support Windows Defender Remote Credential Guard.
 
-You can enable Windows Defender Remote Credential Guard by using a registry setting on the Remote Desktop server and Group Policy or a Remote Desktop Connection parameter on the Remote Desktop client. For more information on enabling Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](https://docs.microsoft.com/windows/access-protection/remote-credential-guard). As with Windows Defender Credential Guard, you can use Windows Defender Remote Credential Guard to help protect privileged identities on Windows Server 2016.
+You can enable Windows Defender Remote Credential Guard by using a registry setting on the Remote Desktop server and Group Policy or a Remote Desktop Connection parameter on the Remote Desktop client. For more information on enabling Windows Defender Remote Credential Guard, see [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](/windows/access-protection/remote-credential-guard). As with Windows Defender Credential Guard, you can use Windows Defender Remote Credential Guard to help protect privileged identities on Windows Server 2016.
 
 ### Secure the operating system to run your apps and infrastructure
 Preventing cyber threats also requires finding and blocking malware and attacks that seek to gain control by subverting the standard operating practices of your infrastructure. If attackers can get an operating system or application to run in a non-predetermined, non-viable way, they are likely using that system to take malicious actions. Windows Server 2016 provides layers of protection that block external attackers running malicious software or exploiting vulnerabilities. The operating system takes an active role in protecting infrastructure and applications by alerting administrators to activity that indicates a system has been breached.
@@ -232,7 +231,7 @@ Windows Server 2016 includes Windows Defender Device Guard to ensure that only t
 
 Windows Defender Device Guard is also integrated with PowerShell so that you can authorize which scripts can run on your system. In earlier versions of Windows Server, administrators could bypass code integrity enforcement by simply deleting the policy from the code file. With Windows Server 2016, you can configure a policy that is signed by your organization so that only a person with access to the certificate that signed the policy can change the policy.
 
-#### Control Flow Guard 
+#### Control Flow Guard
 Windows Server 2016 also includes built-in protection against some classes of memory corruption attacks. Patching your servers is important, but there is always a chance that malware could be developed for a vulnerability that has not yet been identified. Some of the most common methods for exploiting these vulnerabilities are to provide unusual or extreme data to a running program. For example, an attacker can exploit a buffer overflow vulnerability by providing more input to a program than expected and overrun the area reserved by the program to hold a response. This can corrupt adjacent memory that might hold a function pointer.
 
 When the program calls through this function, it can then jump to an unintended location specified by the attacker. These attacks are also known as jump-oriented programming (JOP) attacks. Control Flow Guard prevents JOP attacks by placing tight restrictions on what application code can be executed – especially indirect call instructions. It adds lightweight security checks to identify the set of functions in the application that are valid targets for indirect calls. When an application runs, it verifies that these indirect call targets are valid.
@@ -250,7 +249,7 @@ Windows Defender AV is a built-in antimalware solution that provides security an
 
 - **Cloud-delivered protection** helps detect and block new malware within seconds, even if the malware has never been seen before.
 
-- **Rich local context** improves how malware is identified. Windows Server informs Windows Defender AV not only about content like files and processes but also where the content came from, where it has been stored, and more. 
+- **Rich local context** improves how malware is identified. Windows Server informs Windows Defender AV not only about content like files and processes but also where the content came from, where it has been stored, and more.
 
 - **Extensive global sensors** help keep Windows Defender AV current and aware of even the newest malware. This is accomplished in two ways: by collecting the rich local context data from end points and by centrally analyzing that data.
 
@@ -258,13 +257,13 @@ Windows Defender AV is a built-in antimalware solution that provides security an
 
 - **Enterprise-level features** give IT pros the tools and configuration options necessary to make Windows Defender AV an enterprise-class antimalware solution.
 
-#### Enhanced security auditing 
+#### Enhanced security auditing
 Windows Server 2016 actively alerts administrators to potential breach attempts with enhanced security auditing that provides more detailed information, which can be used for faster attack detection and forensic analysis. It logs events from Control Flow Guard, Windows Defender Device Guard, and other security features in one location, making it easier for administrators to determine what systems may be at risk.
 
 New event categories include:
 
-- **Audit Group Membership.** Allows you to audit the group membership information in a user's login token. Events are generated when group memberships are enumerated or queried on the PC where the login session was created. 
- 
+- **Audit Group Membership.** Allows you to audit the group membership information in a user's login token. Events are generated when group memberships are enumerated or queried on the PC where the login session was created.
+
 - **Audit PnP Activity.** Allows you to audit when plug and play detects an external device – which could contain malware. PnP events can be used to track down changes in system hardware. A list of hardware vendor IDs is included in the event.
 
 Windows Server 2016 integrates easily with security incident event management (SIEM) systems, such as Microsoft Operations Management Suite (OMS), which can incorporate the information into intelligence reports on potential breaches. The depth of information provided by the enhanced auditing enables security teams to identify and respond to potential breaches more quickly and effectively.
@@ -299,7 +298,7 @@ One way to improve protection in virtualized environments is to segment the netw
 ### Other GDPR considerations for servers
 The GDPR includes explicit requirements for breach notification where a personal data breach means, “_a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed._”  Obviously, you can't begin to move forward to meet the stringent GDPR notification requirements within 72 hours if you cannot detect the breach in the first place.
 
-As noted in the Windows Security Center white paper, [Post Breach: Dealing with Advanced Threats](http://wincom.blob.core.windows.net/documents/Post_Breach_Dealing_with_Advanced_Threats_Whitepaper.pdf)
+As noted in the Windows Security Center white paper, [Post Breach: Dealing with Advanced Threats](https://wincom.blob.core.windows.net/documents/Post_Breach_Dealing_with_Advanced_Threats_Whitepaper.pdf)
 
 > “_Unlike pre-breach, post-breach assumes a breach has already occurred – acting as a flight recorder and Crime Scene Investigator (CSI). Post-breach provides security teams the information and toolset needed to identify, investigate, and respond to attacks that otherwise will stay undetected and below the radar._”
 
@@ -323,7 +322,7 @@ Among the key benefits of Windows Defender ATP are the following:
 
 - **Detecting the undetectable.** Sensors built deep into the operating system kernel, Windows security experts, and unique optics from over 1 billion machines and signals across all Microsoft services.
 
-- **Built in, not bolted on.** Agentless, with high performance and minimal impact, cloud-powered; easy management with no deployment. 
+- **Built in, not bolted on.** Agentless, with high performance and minimal impact, cloud-powered; easy management with no deployment.
 
 - **Single pane of glass for Windows security.** Explore 6 months of rich, machine-timeline, unifying security events from Windows Defender ATP, Windows Defender Antivirus and Windows Defender Device Guard.
 
@@ -336,11 +335,11 @@ ATA is an on-premises product that helps detect identity compromise in an organi
 
 |Attack type |Description |
 |---------|---------|
-|Malicious attacks |These attacks are detected by looking for attacks from a known list of attack types, including:<ul><li>Pass-the-Ticket (PtT)</li><li>Pass-the-Hash (PtH)</li><li>Overpass-the-Hash</li><li>Forged PAC (MS14-068)</li><li>Golden Ticket</li><li>Malicious replications</li><li>Reconnaissance</li><li>Brute force</li><li>Remote execution</li></ul>For a complete list of malicious attacks that can be detected and their description, see [What Suspicious Activities Can ATA detect?](https://docs.microsoft.com/advanced-threat-analytics/understand-explore/ata-threats).|
+|Malicious attacks |These attacks are detected by looking for attacks from a known list of attack types, including:<ul><li>Pass-the-Ticket (PtT)</li><li>Pass-the-Hash (PtH)</li><li>Overpass-the-Hash</li><li>Forged PAC (MS14-068)</li><li>Golden Ticket</li><li>Malicious replications</li><li>Reconnaissance</li><li>Brute force</li><li>Remote execution</li></ul>For a complete list of malicious attacks that can be detected and their description, see [What Suspicious Activities Can ATA detect?](/advanced-threat-analytics/understand-explore/ata-threats).|
 |Abnormal behavior |These attacks are detected by using behavioral analysis and use machine learning to identify questionable activities, including:<ul><li>Anomalous logins</li><li>Unknown threats</li><li>Password sharing</li><li>Lateral movement</li></ul>|
 |Security issues and risks |These attacks are detected by looking at current network and system configuration, including:<ul><li>Broken trust</li><li>Weak protocols</li><li>Known protocol vulnerabilities</li></ul>|
 
-You can use ATA to help detect attackers attempting to compromise privileged identities. For more information on deploying ATA, see the Plan, Design, and Deploy topics in the [Advanced Threat Analytics documentation](https://docs.microsoft.com/advanced-threat-analytics/).
+You can use ATA to help detect attackers attempting to compromise privileged identities. For more information on deploying ATA, see the Plan, Design, and Deploy topics in the [Advanced Threat Analytics documentation](/advanced-threat-analytics/).
 
 ## Related content for associated Windows Server 2016 solutions
 
@@ -363,10 +362,8 @@ As a result, this article is provided for informational purposes only and should
 
 MICROSOFT MAKES NO WARRANTIES, EXPRESS, IMPLIED, OR STATUTORY, AS TO THE INFORMATION IN THIS ARTICLE. This article is provided “as-is.” Information and views expressed in this article, including URL and other Internet website references, may change without notice.
 
-This article does not provide you with any legal rights to any intellectual property in any Microsoft product.  You may copy and use this article for your internal, reference purposes only.  
+This article does not provide you with any legal rights to any intellectual property in any Microsoft product.  You may copy and use this article for your internal, reference purposes only.
 
 Published September 2017<br>
 Version 1.0<br>
 © 2017 Microsoft. All rights reserved.
-
-

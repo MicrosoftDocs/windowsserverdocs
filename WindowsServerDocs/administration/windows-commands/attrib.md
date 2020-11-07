@@ -1,13 +1,11 @@
 ---
 title: attrib
 description: Reference article for the attrib command, which displays, sets, or removes attributes assigned to files or directories.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5e763ca5-21a2-45d2-b26d-a9c44c99091a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -1,13 +1,11 @@
 ---
 title: nslookup set retry
 description: Reference article for the nslookup set retry command, which sets the number of tries to get information from a specified server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 615fdfa2-fa29-47a8-8c9e-a6c5b45b3b71
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: Dynamic Host Configuration Protocol (DHCP)
-description: This topic provides a brief overview of Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016. 
+description: This topic provides a brief overview of Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking-dhcp
 ms.topic: article
 ms.assetid: 0ff29ef3-c458-4432-9065-e50a7de5b4b9
 ms.author: lizross
@@ -43,8 +41,8 @@ The network administrator establishes DHCP servers that maintain TCP/IP configur
 
 A DHCP-enabled client, upon accepting a lease offer, receives:
 
-- A valid IP address for the subnet to which it is connecting.  
-  
+- A valid IP address for the subnet to which it is connecting.
+
 - Requested DHCP options, which are additional parameters that a DHCP server is configured to assign to clients. Some examples of DHCP options are Router (default gateway), DNS Servers, and DNS Domain Name.
 
 ## Benefits of DHCP

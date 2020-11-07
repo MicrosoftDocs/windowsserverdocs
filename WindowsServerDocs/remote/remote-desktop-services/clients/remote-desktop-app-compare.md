@@ -1,14 +1,12 @@
 ---
 title: Remote Desktop - compare the client apps
 description: Learn how the different RD apps compare when it comes to supported features and functions.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/06/2020
+ms.date: 10/07/2020
 ms.localizationpriority: medium
 ---
 
@@ -26,18 +24,18 @@ If you remote into your personal desktop, there are additional redirections that
 
 ### Input redirection
 
-| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS | macOS | Web client    |
+| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS | macOS | Web client    |
 |-------------|---------------------------|-----------------------------|---------------|---------|-----|-------|---------------|
 | Keyboard    | X                         | X                           | X             | X       | X   | X     | X             |
 | Mouse       | X                         | X                           | X             | X       | X\* | X     | X             |
 | Touch       | X                         | X                           | X             | X       | X   |       | X (except IE) |
-| Pen         | X                         | X                           |               |         |     |       |               |
+| Pen         | X                         | X                           |               | X (as touch) |  X (as touch)  |       |               |
 
 *View the [list of supported input devices for the Remote Desktop iOS client](remote-desktop-ios.md#supported-input-devices).
 
 ### Port redirection
 
-| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS | macOS | Web client |
+| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS | macOS | Web client |
 |-------------|---------------------------|-----------------------------|---------------|---------|-----|-------|------------|
 | Serial port | X                         | X                           |               |         |     |       |            |
 | USB         | X                         | X                           |               |         |     |       |            |
@@ -46,9 +44,9 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 
 ### Other redirection (devices, etc.)
 
-| Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS         | macOS                           | Web client    |
+| Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS         | macOS                           | Web client    |
 |---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
-| Cameras             | X                         | X                           |               |         |   X         | X                               |               |
+| Cameras             | X                         | X                           |               |     X    |   X         | X                               |               |
 | Clipboard           | X                         | X                           | X             | Text    | Text, images | X                               | text          |
 | Local drive/storage | X                         | X                           |               | X       |   X        | X                               |               |
 | Location            | X                         | X                           |               |         |             |                                 |               |

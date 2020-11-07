@@ -3,8 +3,7 @@ title: OpenSSH Server Configuration for Windows
 description: Configuration information about OpenSSH Server for Windows 10 1809 and Server 2019.
 ms.date: 09/27/2018
 ms.topic: conceptual
-contributor: maertendMSFT
-ms.product: windows-server
+ms.author: damaerte
 author: maertendmsft
 ---
 
@@ -59,7 +58,7 @@ For that reason, * is added to cover FQDNs.
 Also, this approach uses "?", instead of @, to avoid conflicts with the username@host format.
 
 Work group users/groups and internet-connected accounts are always resolved to their local account name (no domain part, similar to standard Unix names).
-Domain users and groups are strictly resolved to [NameSamCompatible](https://docs.microsoft.com/windows/desktop/api/secext/ne-secext-extended_name_format) format - domain_short_name\user_name.
+Domain users and groups are strictly resolved to [NameSamCompatible](/windows/desktop/api/secext/ne-secext-extended_name_format) format - domain_short_name\user_name.
 All user/group based configuration rules need to adhere to this format.
 
 Examples for domain users and groups
@@ -104,7 +103,7 @@ Not applicable in Windows. To prevent administrator login, use Administrators wi
 ### SyslogFacility
 
 If you need file based logging, use LOCAL0. Logs are generated under %programdata%\ssh\logs.
-Any other value, including the default value AUTH directs logging to ETW. For more info see Logging Facilities in Windows.
+For any other value, including the default value, AUTH directs logging to ETW. For more info, see [Logging Facilities in Windows](https://github.com/PowerShell/Win32-OpenSSH/wiki/Logging-Facilities).
 
 ### Not supported
 
@@ -144,4 +143,3 @@ The following configuration options are not available in the OpenSSH version tha
 * X11Forwarding
 * X11UseLocalhost
 * XAuthLocation
-

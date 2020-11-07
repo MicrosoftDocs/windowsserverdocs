@@ -1,10 +1,10 @@
 ---
 title: Roles, Role Services, and Features included in Windows Server - Server Core
 description: What roles and features are included in the Server Core installation option of Windows Server?
-ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: lizap
+author: pronichkin
+ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 02/23/2018
 ---

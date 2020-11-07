@@ -1,9 +1,7 @@
 ---
 title: Cluster to cluster Storage Replication
-ms.prod: windows-server
 manager: siroy
 ms.author: nedpyle
-ms.technology: storage-replica
 ms.topic: get-started-article
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle
@@ -167,11 +165,11 @@ You will now create two normal failover clusters. After configuration, validatio
     > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.
 
     > [!WARNING]
-    > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage Quorum](../../failover-clustering/manage-cluster-quorum.md). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum).
+    > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage Quorum](../../failover-clustering/manage-cluster-quorum.md). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
 
 5.  Add one disk in the **Redmond** site to the cluster CSV. To do so, right click a source disk in the **Disks** node of the **Storage** section, and then click **Add to Cluster Shared Volumes**.
 
-6.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](https://technet.microsoft.com/library/hh831718.aspx)
+6.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831718(v=ws.11))
 
 ### Windows PowerShell method
 
@@ -199,9 +197,9 @@ You will now create two normal failover clusters. After configuration, validatio
     > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.
 
     > [!WARNING]
-    > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage Quorum](../../failover-clustering/manage-cluster-quorum.md). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum).
+    > For more information about quorum configuration, see the **Witness Configuration** section in [Configure and Manage Quorum](../../failover-clustering/manage-cluster-quorum.md). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
 
-4.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](https://technet.microsoft.com/library/hh831718.aspx)
+4.  Create the clustered Scale-Out File Servers on both clusters using the instructions in [Configure Scale-Out File Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831718(v=ws.11))
 
 ## Step 3: Set up Cluster to Cluster Replication using Windows PowerShell
 Now you will set up cluster-to-cluster replication using Windows PowerShell. You can perform all of the steps below on the nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools
@@ -350,7 +348,7 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
 
     -   \Storage Replica Statistics(*)\Number of Messages Sent
 
-    For more information on performance counters in Windows PowerShell, see [Get-Counter](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-Counter).
+    For more information on performance counters in Windows PowerShell, see [Get-Counter](/powershell/module/microsoft.powershell.diagnostics/get-counter).
 
 3.  To move the replication direction from one site, use the **Set-SRPartnership** cmdlet.
 

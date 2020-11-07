@@ -1,10 +1,9 @@
 ---
 title: Netsh Commands for Mobile Broadband Network (MBN)
 description: Use netsh mbn to query and configure mobile broadband settings and parameters.
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 author: apdutta
+ms.author: apdutta
 ms.date: 02/20/2020
 ---
 
@@ -14,7 +13,7 @@ ms.date: 02/20/2020
 Use **netsh mbn** to query and configure mobile broadband settings and parameters.
 
 > [!TIP]
-> You can get help on the netsh mbn command by using 
+> You can get help on the netsh mbn command by using
 >
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netsh mbn /?
 
@@ -29,6 +28,7 @@ The available netsh mbn commands are:
 - [help](#help)
 - [set](#set)
 - [show](#show)
+- [test](#test)
 
 ## add
 
@@ -222,7 +222,7 @@ disconnect interface="Cellular"
 
 ## dump
 
-Displays a configuration script. 
+Displays a configuration script.
 
 Creates a script that contains the current configuration.  If saved to a file, this script can be used to restore altered configuration settings.
 
@@ -495,16 +495,16 @@ set tracing mode=yes
 
 Displays mobile broadband network information.
 
-The available netsh mbn set commands are:
+The available netsh mbn show commands are:
 
-- [acstate](#acstate)
+- [acstate](#acstate-1)
 - [capability](#capability)
 - [connection](#connection)
-- [dataenablement](#dataenablement)
-- [dataroamcontrol](#dataroamcontrol)
+- [dataenablement](#dataenablement-1)
+- [dataroamcontrol](#dataroamcontrol-1)
 - [dmprofiles](#dmprofiles)
-- [enterpriseapnparams](#enterpriseapnparams)
-- [highestconncategory](#highestconncategory)
+- [enterpriseapnparams](#enterpriseapnparams-1)
+- [highestconncategory](#highestconncategory-1)
 - [homeprovider](#homeprovider)
 - [interfaces](#interfaces)
 - [netlteattachinfo](#netlteattachinfo)
@@ -518,13 +518,13 @@ The available netsh mbn set commands are:
 - [radio](#radio)
 - [readyinfo](#readyinfo)
 - [signal](#signal)
-- [slotmapping](#slotmapping)
+- [slotmapping](#slotmapping-1)
 - [slotstatus](#slotstatus)
 - [smsconfig](#smsconfig)
-- [tracing](#tracing)
+- [tracing](#tracing-1)
 - [visibleproviders](#visibleproviders)
 
-### acstate  
+### acstate
 
 Shows the Mobile Broadband data auto connect state for the given interface.
 
@@ -662,7 +662,7 @@ show dmprofiles [[name=]<string>] [[interface=]<string>]
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Optional |
 
 **Remarks**
-    
+
 Shows the profile data or lists the profiles on the system.
 
 If profile name is given then the content of the profile will be displayed. Otherwise profiles will be listed for the interface.
@@ -784,7 +784,7 @@ show netlteattachinfo [interface=]<string>
 show netlteattachinfo interface="Cellular"
 ```
 
-### pin      
+### pin
 
 Shows the pin information for the given interface.
 
@@ -808,7 +808,7 @@ show pin interface="Cellular"
 ```
 
 
-### pinlist  
+### pinlist
 
 Shows the pin list information for the given interface.
 
@@ -856,7 +856,7 @@ show preferredproviders interface="Cellular"
 ```
 
 
-### profiles 
+### profiles
 
 Shows a list of profiles configured on the system.
 
@@ -881,7 +881,7 @@ If profile name is given then the content of the profile will be displayed. Othe
 If interface name is given, only the specified profile on the given interface will be listed. Otherwise, first matched profile will be displayed.
 
 If the purpose is provided, only profiles with the matching purpose GUID will be displayed.  Otherwise, profiles will not be filtered by purpose.  The string can either be a GUID with curly brackets or one of the following strings: internet, supl, mms, ims, or allhost.
-	
+
 **Example**
 
 ```powershell
@@ -938,7 +938,7 @@ show provisionedcontexts interface="Cellular"
 ```
 
 
-### purpose  
+### purpose
 
 Shows the purpose group GUIDs that can be used to filter profiles on the device. There are no parameters for this command.
 
@@ -949,7 +949,7 @@ show purpose
 ```
 
 
-### radio    
+### radio
 
 Shows the radio state information for the given interface.
 
@@ -997,7 +997,7 @@ show readyinfo interface="Cellular"
 ```
 
 
-### signal   
+### signal
 
 Shows the signal information for the given interface.
 
@@ -1093,14 +1093,14 @@ show smsconfig interface="Cellular"
 ```
 
 
-### tracing  
+### tracing
 
 Shows whether Mobile Broadband tracing is enabled or disabled.
 
 **Syntax**
 
 ```powershell
-show tracing 
+show tracing
 ```
 
 
@@ -1125,4 +1125,49 @@ show visibleproviders [interface=]<string>
 
 ```powershell
 show visibleproviders interface="Cellular"
+```
+
+## test
+
+Runs tests for a specific feature area, while collecting logs.
+
+**Syntax**
+```
+test [feature=<feature area>] [testPath=<path>] [taefPath=<path>] [param=<test input params>]
+```
+
+**Parameters**
+
+| Tag | Value | Optional? |
+|---|---|---|
+| **feature** | A feature area out of the supported feature areas listed below | Required |
+| **testpath** | Path containing the test binaries | Optional if HLK Server is installed |
+| **taefpath** | Path containing the TAEF binaries | Optional if HLK Server is installed |
+| **param** | Comma separated parameters, to be used for the tests | Required for certain feature areas, optional for others |
+
+**Remarks**
+
+Supported feature areas are:
+- connectivity
+- power
+- radio
+- esim
+- sms
+- dssa
+- lte
+- bringup
+
+Some tests require additional test parameters that need to be provided in the `param` field.
+The required parameters for the features are listed below.
+- **connectivity**: AccessString, UserName (If applicable), Password (If applicable)
+- **radio**: AccessString, UserName (If applicable), Password (If applicable)
+- **esim**: ActivationCode
+- **bringup**: AccessString, UserName (If applicable), Password (If applicable)
+
+**Examples**
+
+```
+test feature=connectivity param="AccessString=internet"
+test feature=lte testpath="C:\\data\\test\\bin" taefpath="C:\\data\\test\\bin"
+test feature=lte
 ```
