@@ -107,9 +107,9 @@ ReFS is an advanced filesystem over NTFS in many ways. It can greatly improve th
 Based on real world applications, this also applies for other containered data structures that are similar to the technology of VHDX, such as Storage Spaces, especially when mirrored, or S2D which uses mirroring as per concept, as well as FSLogix containers. This also applies to Citrix PVS images, to name a 3rd party application scenario.
 
 Con:
-While **supported**, there exist scenarios where ReFS performance might not meet expectations compared to NTFS formatted volumes.
-This mostly applies to Basic Disks and volumes using ReFS without Storage Spaces / S2D, where volumes, which contain a high number of **small files and fast changing files**.
-This is by design and is caused by the needed metadata handling and scrubbing. The performance in these scenarios *can* cause slow application responsiveness or even timeouts time sensitive applications. Example: Lotus Notes ini. Other results can be unexpected low read and write speeds for random IOs compared to NTFS in the same software and hardware configuration.
+While **supported**, there exist scenarios where ReFS performance may not meet the expectations, compared to NTFS formatted volumes.
+This mostly applies to Basic Disks and volumes using ReFS without Storage Spaces / S2D, where volumes contain a high number of **small files and fast changing files**.
+This is by design and is caused by the need for metadata handling and scrubbing. The performance in these scenarios *can* cause slow application responsiveness or even timeouts from time sensitive applications. Example: Lotus Notes .ini file(s). Other results may be unexpected low read and write speeds for random I/Os compared to NTFS in the same software and hardware configuration.
 
 A typical scenario that may apply, based on the underlying hardware configuration, are typically Windows User Profiles, Temporary Folders of browsers in high-density or multi-user enviroments, such as Microsoft Remote Desktop Host (RDSH), Windows Virtual Desktop (WVD), or 3rd party applications like Citrix User Profile Management (UPM).
 
