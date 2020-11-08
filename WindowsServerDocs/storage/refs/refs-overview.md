@@ -113,7 +113,7 @@ This is by design and is caused by the needed metadata handling and scrubbing. T
 
 A typical scenario that might apply, based on the underlying hardware configuration, are typically Windows User Profiles, Temporary Folders of browsers in high-density or multi-user enviroments, such as Microsoft Remote Desktop Host (RDSH), Windows Virtual Desktop (WVD), or 3rd party applications like Citrix User Profile Management (UPM).
 
-In such scenarios, please plan and test your workloads when considering usage of ReFS on Basic Disks or volumes or alternatively rely on NTFS, which due to the non existent scrubbing and less metadata overhead is not prone for such possible impacts. As per design in such scenarios VM or Host RAM usage can be higher compared to NTFS.
+In such scenarios, please plan and test your workloads when considering usage of ReFS on Basic Disks or volumes or alternatively rely on NTFS, which, due to the non-existent scrubbing and less metadata overhead, is not prone for such possible impacts. As per design, in such scenarios, the VM or Host RAM usage can be higher compared to NTFS.
 
 ## Feature comparison
 
