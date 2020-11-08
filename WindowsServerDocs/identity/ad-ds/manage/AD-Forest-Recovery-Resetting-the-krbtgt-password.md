@@ -28,7 +28,11 @@ Use the following procedure to reset the krbtgt password for the domain. The fol
 5. In **New password**, type a new password, retype the password in **Confirm password**, and then click **OK**. The password that you specify is not significant because the system will generate a strong password automatically independent of the password that you specify.
 
 > [!NOTE]
-> You should perform this operation twice. The password history of the krbtgt account is two, meaning it includes the two most recent passwords. By resetting the password twice you effectively clear any old passwords from the history, so there is no way another DC will replicate with this DC by using an old password.
+> You should perform this operation twice. 
+> [!IMPORTANT]
+> If you intent to reset the krbtgt password twice. You must wait 10 hours between the password resets.
+> [!NOTE]
+> The password history of the krbtgt account is two, meaning it includes the two most recent passwords. By resetting the password twice you effectively clear any old passwords from the history, so there is no way another DC will replicate with this DC by using an old password.
 
 ## Next Steps
 
