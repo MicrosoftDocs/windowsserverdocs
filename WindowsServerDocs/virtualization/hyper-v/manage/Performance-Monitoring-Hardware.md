@@ -41,8 +41,8 @@ Set-VMProcessor MyVMName -Perfmon @("pmu")
 ```
 
 ``` Powershell
-# Enable IPT
-Set-VMProcessor MyVMName -Perfmon @("ipt")
+# Enable IPT, which implies PMU
+Set-VMProcessor MyVMName -Perfmon @("pmu", "ipt")
 ```
 
 ``` Powershell
