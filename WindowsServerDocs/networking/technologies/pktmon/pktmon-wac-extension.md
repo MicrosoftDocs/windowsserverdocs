@@ -4,7 +4,7 @@ description: Use this page to operate and consume Packet Monitor (Pktmon) throug
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/5/2020
+ms.date: 11/10/2020
 ---
 
 # Packet Monitoring Extension in Windows Admin Center

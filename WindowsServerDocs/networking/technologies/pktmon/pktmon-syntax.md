@@ -4,7 +4,7 @@ description: Use this page to understand pktmon syntax, commands, formatting, an
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/3/2020
+ms.date: 11/10/2020
 ---
 
 # Pktmon command syntax and formatting
