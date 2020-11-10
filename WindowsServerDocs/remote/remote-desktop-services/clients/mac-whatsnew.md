@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 08/19/2020
+ms.date: 11/06/2020
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -13,6 +13,23 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+
+## Updates for version 10.4.1
+
+*Date published: 11/06/2020*
+
+We've put together some bug fixes and small feature updates for this 10.4.1 release. Here's what's new:
+
+- Addressed several reliability issues identified through crash reporting.
+- Addressed keyboard and VoiceOver-related accessibility bugs.
+- Fixed an issue where the client would hang on reconnect when resuming from sleep.
+- Fixed an audio artifact heard when playing back the first chunk of a redirected audio stream.
+- Addressed an issue where the client would report a 0x5000007 error message when connecting using an RD Gateway server.
+- Corrected the aspect ratio of PC thumbnails displayed in the Connection Center.
+- Improved smart card redirection heuristics to better handle nested transactions.
+- Fixed a bug that prevented bookmark export if the bookmark's display name contained the "/" character.
+- Resolved a bug that caused a 0xD06 protocol error when running Outlook as a remote app.
+- Added support for a new integer RDP file property (ForceHiDpiOptimizations) to enable Retina display optimization.
 
 ## Updates for version 10.4.0
 
@@ -309,19 +326,19 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Fixed a bug that caused thumbnails to consume too much disk storage on macOS 10.14.
 - Added support for enforcing RD Gateway device redirection policies.
 - Fixed an issue that prevented session windows from closing when disconnecting from a connection using RD Gateway.
-- If Network Level Authentication (NLA) is not enforced by the server, you will now be routed to the login screen if your password has expired.
+- If Network Level Authentication (NLA) is not enforced by the server, you will now be routed to the sign in screen if your password has expired.
 - Fixed performance issues that surfaced when lots of data was being transferred over the network.
 - Smart card redirection fixes.
 - Support for all possible values of the "EnableCredSspSupport" and "Authentication Level" RDP file settings if the ClientSettings.EnforceCredSSPSupport user default key (in the com.microsoft.rdc.macos domain) is set to 0.
 - Support for the "Prompt for Credentials on Client" RDP file setting when NLA is not negotiated.
-- Support for smart card-based login via smart card redirection at the Winlogon prompt when NLA is not negotiated.
+- Support for smart card-based sign in using smart card redirection at the Winlogon prompt when NLA is not negotiated.
 - Fixed an issue that prevented downloading feed resources that have spaces in the URL.
 
 ## Updates for version 10.2.1
 
 *Date published: 08/06/2018*
 
-- Enabled connectivity to Azure Active Directory (AAD) joined PCs. To connect to an AAD joined PC, your username must be in one of the following formats: "AzureAD\user" or "AzureAD\user@domain".
+- Enabled connectivity to Azure Active Directory (Azure AD) joined PCs. To connect to an Azure AD joined PC, your username must be in one of the following formats: "AzureAD\user" or "AzureAD\user@domain".
 - Addressed some bugs affecting the usage of smart cards in a remote session.
 
 ## Updates for version 10.2.0
@@ -341,7 +358,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - The mouse cursor shape now updates correctly when moving out of a session or RemoteApp window.
 - Fixed a folder redirection bug that was causing data loss when copy and pasting folders.
 - Fixed a folder redirection issue that caused incorrect reporting of folder sizes.
-- Fixed a regression that was preventing logging into an AAD-joined machine using a local account.
+- Fixed a regression that was preventing logging into an Azure AD-joined machine using a local account.
 - Fixed bugs that were causing the session window contents to be clipped.
 - Added support for RD endpoint certificates that contain elliptic-curve asymmetric keys.
 - Fixed a bug that was preventing the download of managed resources in some scenarios.
