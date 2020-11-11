@@ -102,7 +102,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 ### Performance considerations
 
 Pro:
-ReFS is a superior filesystem to NTFS in many ways. It can greatly improve the performance in read / write operation scenarios. This is especially the case when comparing operations like creating Hyper-V virtual disks, snapshots or merging them. These performance benefits are not limited to Hyper-V though. 
+ReFS is an advanced file system, superior to NTFS in many ways. It can greatly improve the performance in read / write operation scenarios. This is especially the case when comparing operations like creating Hyper-V virtual disks, taking snapshots, or merging disks. These performance benefits are not limited to Hyper-V, though.
 
 Based on real world applications, this also applies for other containered data structures that are similar to the technology of VHDX, such as Storage Spaces, especially when mirrored, or S2D which uses mirroring as per concept, as well as FSLogix containers. This also applies to Citrix PVS images, to name a 3rd party application scenario.
 
