@@ -1,17 +1,11 @@
 ---
 title: How User Account Control Works
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: security-tpm
-ms.tgt_pltfrm: na
+description: Windows Server Security
 ms.topic: article
 ms.assetid: da83ddb2-6182-417c-aa8e-0b47b2e17d13
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # How User Account Control Works
@@ -110,8 +104,8 @@ To better understand each component, review the table below:
 |**System**||
 |Application Information service|A system service that helps start applications that require one or more elevated privileges or user rights to run, such as local administrative tasks, and applications that require higher integrity levels. The Application Information service helps start such applications by creating a new process for the application with an administrative user's full access token when elevation is required and (depending on Group Policy) consent is given by the user to do so.|
 |Elevating an ActiveX install|If ActiveX is not installed, the system checks the UAC slider level. If ActiveX is installed, the **User Account Control: Switch to the secure desktop when prompting for elevation** Group Policy setting is checked.|
-|Check UAC slider level|UAC now has four levels of notification to choose from and a slider to use to select the notification level:<br /><br /><ul><li>High<br /><br />    If the slider is set to **Always notify**, the system checks whether the secure desktop is enabled.</li><li>Medium<br /><br />    If the slider is set to **Default-Notify me only when programs try to make changes to my computer**, the **User Account Control: Only elevate executable files that are signed and validated** policy setting is checked:<br /><br /><ul><li>If the policy setting is enabled, the public key infrastructure (PKI) certification path validation is enforced for a given executable file before it is permitted to run.</li><li>If the policy setting is not enabled (default), the PKI certification path validation is not enforced before a given executable file is permitted to run. The **User Account Control: Switch to the secure desktop when prompting for elevation** Group Policy setting is checked.</li></ul></li><li>Low<br /><br />    If the slider is set to **Notify me only when programs try to make changes to my computer (do not dim by desktop)**, the CreateProcess is called.</li><li>Never Notify<br /><br />    If the slider is set to **Never notify me when**, UAC prompt will never notify when a program is trying to install or trying to make any change on the computer. **Important:**     This setting is not recommended. This setting is the same as setting the **User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode** policy setting to **Elevate without prompting**.</li></ul>|
-|Secure desktop enabled|The **User Account Control: Switch to the secure desktop when prompting for elevation** policy setting is checked:<br /><br />-   If the secure desktop is enabled, all elevation requests go to the secure desktop regardless of prompt behavior policy settings for administrators and standard users.<br />-   If the secure desktop is not enabled, all elevation requests go to the interactive user's desktop, and the per-user settings for administrators and standard users are used.|
+|Check UAC slider level|UAC now has four levels of notification to choose from and a slider to use to select the notification level:<p><ul><li>High<p>    If the slider is set to **Always notify**, the system checks whether the secure desktop is enabled.</li><li>Medium<p>    If the slider is set to **Default-Notify me only when programs try to make changes to my computer**, the **User Account Control: Only elevate executable files that are signed and validated** policy setting is checked:<p><ul><li>If the policy setting is enabled, the public key infrastructure (PKI) certification path validation is enforced for a given executable file before it is permitted to run.</li><li>If the policy setting is not enabled (default), the PKI certification path validation is not enforced before a given executable file is permitted to run. The **User Account Control: Switch to the secure desktop when prompting for elevation** Group Policy setting is checked.</li></ul></li><li>Low<p>    If the slider is set to **Notify me only when programs try to make changes to my computer (do not dim by desktop)**, the CreateProcess is called.</li><li>Never Notify<p>    If the slider is set to **Never notify me when**, UAC prompt will never notify when a program is trying to install or trying to make any change on the computer. **Important:**     This setting is not recommended. This setting is the same as setting the **User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode** policy setting to **Elevate without prompting**.</li></ul>|
+|Secure desktop enabled|The **User Account Control: Switch to the secure desktop when prompting for elevation** policy setting is checked:<p>-   If the secure desktop is enabled, all elevation requests go to the secure desktop regardless of prompt behavior policy settings for administrators and standard users.<br />-   If the secure desktop is not enabled, all elevation requests go to the interactive user's desktop, and the per-user settings for administrators and standard users are used.|
 |CreateProcess|CreateProcess calls AppCompat, Fusion, and Installer detection to assess if the application requires elevation. The executable file is then inspected to determine its requested execution level, which is stored in the application manifest for the executable file. CreateProcess fails if the requested execution level specified in the manifest does not match the access token and returns an error (ERROR_ELEVATION_REQUIRED) to ShellExecute. |
 |AppCompat|The AppCompat database stores information in the application compatibility fix entries for an application.|
 |Fusion|The Fusion database stores information from application manifests that describe the applications. The manifest schema is updated to add a new requested execution level field.|

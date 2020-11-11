@@ -1,11 +1,9 @@
 ---
 title: Initialize the HGS cluster using TPM mode in a bastion forest
-ms.custom: na
-ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
-ms.technology: security-guarded-fabric
+ms.author: ryanpu
 ms.date: 08/29/2018
 ---
 

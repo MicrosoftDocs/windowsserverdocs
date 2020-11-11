@@ -1,23 +1,15 @@
 ---
 title: delete
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the delete command, which deletes a partition or a volume.
+ms.topic: reference
 ms.assetid: 021799a3-11a2-4e7f-8fdc-fba24ca2ba21
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # delete
-
-
 
 Deletes a partition or a volume. It also deletes a dynamic disk from the list of disks.
 
@@ -26,16 +18,19 @@ Deletes a partition or a volume. It also deletes a dynamic disk from the list of
 ```
 delete disk
 delete partition
+delete shadows
 delete volume
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|[Delete disk](delete-disk.md)|Deletes a missing dynamic disk from the list of disks.|
-|[Delete partition](delete-partition.md)|Deletes a partition.|
-|[Delete volume](delete-volume.md)|Deletes a volume.|
+| Parameter | Description |
+|---------- | ----------- |
+| [Delete disk](delete-disk.md) | Deletes a missing dynamic disk from the list of disks. |
+| [Delete partition](delete-partition.md) | Deletes a partition. |
+| [Delete shadows](delete-shadows.md) | Deletes shadow copies. |
+| [Delete volume](delete-volume.md) | Deletes a volume. |
 
-#### Additional references
+## Additional References
 
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,38 +1,31 @@
 ---
-title: nslookup exit Command
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+title: nslookup exit
+description: Reference article for the nslookup exit command, which exits the nslookup command-line tool.
+ms.topic: reference
 ms.assetid: 970ece99-fc5e-4103-9f97-ca080af1f212
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# nslookup exit Command
+# nslookup /exit
 
-
-
-Exits **nslookup**.
+Exits the nslookup command-line tool.
 
 ## Syntax
 
 ```
-Nslookup /exit
+nslookup /exit
 ```
 
-## Parameters
+### Parameters
 
 | Parameter | Description |
-|-----------|-------------|
-|   {help   |     ?}      |
+| --------- | ----------- |
+| /? | Displays help at the command prompt. |
+| /help | Displays help at the command prompt. |
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

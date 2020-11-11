@@ -1,15 +1,13 @@
 ---
-title: Install HGS in an existing bastion forest 
-ms.custom: na
-ms.prod: windows-server
+title: Install HGS in an existing bastion forest
 ms.topic: article
 manager: dongill
 author: rpsqrd
-ms.technology: security-guarded-fabric
+ms.author: ryanpu
 ms.date: 08/29/2018
 ---
 
-# Install HGS in an existing bastion forest 
+# Install HGS in an existing bastion forest
 
 >Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
@@ -22,7 +20,7 @@ In an existing bastion forest, HGS must be added to the root domain. Use Server 
 
 Run all commands in this topic in an elevated PowerShell session.
 
-[!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)] 
+[!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)]
 
 If your datacenter has a secure bastion forest where you want to join HGS nodes, follow these steps.
 You can also use these steps to configure 2 or more independent HGS clusters that are joined to the same domain.
@@ -38,7 +36,7 @@ You can also pre-stage the cluster objects if the account you are initializing H
 
 ## Group managed service account
 
-The group managed service account (gMSA) is the identity used by HGS to retrieve and use its certificates. Use [New-ADServiceAccount](https://technet.microsoft.com/itpro/powershell/windows/addsadministration/new-adserviceaccount) to create a gMSA.
+The group managed service account (gMSA) is the identity used by HGS to retrieve and use its certificates. Use [New-ADServiceAccount](/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps) to create a gMSA.
 If this is the first gMSA in the domain, you will need to add a Key Distribution Service root key.
 
 Each HGS node will need to be permitted to access the gMSA password.
@@ -65,20 +63,20 @@ New-ADServiceAccount -Name 'HGSgMSA' -DnsHostName 'HGSgMSA.yourdomain.com' -Prin
 ```
 
 The gMSA will require the right to generate events in the security log on each HGS server.
-If you use Group Policy to configure User Rights Assignment, ensure that the gMSA account is granted the [generate audit events privilege](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn221956%28v=ws.11%29) on your HGS servers.
+If you use Group Policy to configure User Rights Assignment, ensure that the gMSA account is granted the [generate audit events privilege](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn221956%28v=ws.11%29) on your HGS servers.
 
 > [!NOTE]
 > Group managed service accounts are available beginning with the Windows Server 2012 Active Directory schema.
-> For more information, see [group managed service account requirements](https://technet.microsoft.com/library/jj128431.aspx).
+> For more information, see [group managed service account requirements](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj128431(v=ws.11)).
 
 ## JEA security groups
 
-When you set up HGS, a [Just Enough Administration (JEA)](https://aka.ms/JEAdocs) PowerShell endpoint is configured to allow admins to manage HGS without needing full local administrator privileges.
+When you set up HGS, a [Just Enough Administration (JEA)](/powershell/scripting/learn/remoting/jea/overview) PowerShell endpoint is configured to allow admins to manage HGS without needing full local administrator privileges.
 You are not required to use JEA to manage HGS, but it still must be configured when running Initialize-HgsServer.
 The configuration of the JEA endpoint consists of designating 2 security groups that contain your HGS admins and HGS reviewers.
 Users who belong to the admin group can add, change, or remove policies on HGS; reviewers can only view the current configuration.
 
-Create 2 security groups for these JEA groups using Active Directory admin tools or [New-ADGroup](https://technet.microsoft.com/itpro/powershell/windows/addsadministration/new-adgroup).
+Create 2 security groups for these JEA groups using Active Directory admin tools or [New-ADGroup](/powershell/module/addsadministration/new-adgroup?view=win10-ps).
 
 ```powershell
 New-ADGroup -Name 'HgsJeaReviewers' -GroupScope DomainLocal
@@ -88,7 +86,7 @@ New-ADGroup -Name 'HgsJeaAdmins' -GroupScope DomainLocal
 ## Cluster objects
 
 If the account you are using to set up HGS does not have permission to create new computer objects in the domain, you will need to pre-stage the cluster objects.
-These steps are explained in [Prestage Cluster Computer Objects in Active Directory Domain Services](https://technet.microsoft.com/library/dn466519(v=ws.11).aspx).
+These steps are explained in [Prestage Cluster Computer Objects in Active Directory Domain Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466519(v=ws.11)).
 
 To set up your first HGS node, you will need to create one Cluster Name Object (CNO) and one Virtual Computer Object (VCO).
 The CNO represents the name of the cluster, and is primarily used internally by Failover Clustering.
@@ -137,7 +135,7 @@ Check your Group Policy objects for the following settings and follow the guidan
 
 **Policy Name:** Network Security: Configure encryption types allowed for Kerberos
 
-**Action**: If this policy is configured, you must update the gMSA account with [Set-ADServiceAccount](https://docs.microsoft.com/powershell/module/addsadministration/set-adserviceaccount?view=win10-ps) to use only the supported encryption types in this policy. For instance, if your policy only allows AES128\_HMAC\_SHA1 and AES256\_HMAC\_SHA1, you should run `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256`.
+**Action**: If this policy is configured, you must update the gMSA account with [Set-ADServiceAccount](/powershell/module/addsadministration/set-adserviceaccount?view=win10-ps) to use only the supported encryption types in this policy. For instance, if your policy only allows AES128\_HMAC\_SHA1 and AES256\_HMAC\_SHA1, you should run `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256`.
 
 
 
@@ -146,4 +144,3 @@ Check your Group Policy objects for the following settings and follow the guidan
 - For the next steps to set up TPM-based attestation, see [Initialize the HGS cluster using TPM mode in an existing bastion forest](guarded-fabric-initialize-hgs-tpm-mode-bastion.md).
 - For the next steps to set up host key attestation, see [Initialize the HGS cluster using key mode in an existing bastion forest](guarded-fabric-initialize-hgs-key-mode-bastion.md).
 - For the next steps to set up Admin-based attestation (deprecated in Windows Server 2019), see [Initialize the HGS cluster using AD mode in an existing bastion forest](guarded-fabric-initialize-hgs-ad-mode-bastion.md).
-

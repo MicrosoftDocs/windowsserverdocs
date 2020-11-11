@@ -3,7 +3,6 @@ title: Negotiate, Session Setup, and Tree Connect Failures
 description: Introduces how to troubleshoot the Negotiate, Session Setup, and Tree Connect Failures.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
@@ -25,7 +24,7 @@ If you are using Windows Server 2008 R2, there are hotfixes for this problem. Ma
 
 The SMB server receives an SMB SESSION\_SETUP request from a SMB client but failed to response.
 
-If the fully qualified domain name (FQDN) or Network Basic Input/Output System (NetBIOS) name of the server is used in the Universal Naming Convention (UNC) path, Windows will use Kerberos for authentication.
+If the fully qualified domain name (FQDN) or Network Basic Input/Output System (NetBIOS) name of the server is 'sed in the Universal Naming Convention (UNC) path, Windows will use Kerberos for authentication.
 
 After the Negotiate response, there will be an attempt to get a Kerberos ticket for the Common Internet File System (CIFS) service principal name (SPN) of the server. Look at the Kerberos traffic on TCP port 88 to make sure that there are no Kerberos errors when the SMB client is gaining the token.
 
@@ -46,7 +45,7 @@ Additionally, make the following checks:
 
 Make sure that the user account credentials have both share and NT file system (NTFS) permissions to the folder.
 
-The cause of common Tree Connect errors can be found in [3.3.5.7 Receiving an SMB2 TREE\_CONNECT Request](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/652e0c14-5014-4470-999d-b174d7b2da87). The following are the solutions for two common status codes.
+The cause of common Tree Connect errors can be found in [3.3.5.7 Receiving an SMB2 TREE\_CONNECT Request](/openspecs/windows_protocols/ms-smb2/652e0c14-5014-4470-999d-b174d7b2da87). The following are the solutions for two common status codes.
 
 \[STATUS\_BAD\_NETWORK\_NAME\]
 
@@ -88,10 +87,10 @@ Follow these guidelines as you troubleshoot:
 For more information, see the following articles.
 
 [3.3.5.4 Receiving an SMB2 NEGOTIATE
-Request](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/b39f253e-4963-40df-8dff-2f9040ebbeb1)
+Request](/openspecs/windows_protocols/ms-smb2/b39f253e-4963-40df-8dff-2f9040ebbeb1)
 
 [3.3.5.5 Receiving an SMB2 SESSION\_SETUP
-Request](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/e545352b-9f2b-4c5e-9350-db46e4f6755e)
+Request](/openspecs/windows_protocols/ms-smb2/e545352b-9f2b-4c5e-9350-db46e4f6755e)
 
 [3.3.5.7 Receiving an SMB2 TREE\_CONNECT
-Request](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/652e0c14-5014-4470-999d-b174d7b2da87?redirectedfrom=MSDN)
+Request](/openspecs/windows_protocols/ms-smb2/652e0c14-5014-4470-999d-b174d7b2da87)

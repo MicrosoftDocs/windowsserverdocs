@@ -1,17 +1,11 @@
 ---
 title: bitsadmin getnotifyinterface
-description: "Windows Commands topic for **bitsadmin getnotifyinterface** - Determines if another program has registered a COM callback interface for the specified job."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin getnotifyinterface command, which determines if another program has registered a COM callback interface for the specified job.
+ms.topic: reference
 ms.assetid: 40bf9dd8-b167-406a-80a6-a5a6f1b8cf7f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -22,29 +16,32 @@ Determines whether another program has registered a COM callback interface (the 
 ## Syntax
 
 ```
-bitsadmin /GetNotifyInterface <Job>
+bitsadmin /getnotifyinterface <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## Remarks
+#### Output
 
-Displays REGISTERED or UNREGISTERED.
+The output for this command displays either, **Registered** or **Unregistered**.
 
 > [!NOTE]
-> It is not possible to determine the program that registered the callback interface.
+> It's not possible to determine the program that registered the callback interface.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example retrieves the notify interface for the job named *myDownloadJob*.
+To retrieve the notify interface for the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin /GetNotifyInterface myDownloadJob
+bitsadmin /getnotifyinterface myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

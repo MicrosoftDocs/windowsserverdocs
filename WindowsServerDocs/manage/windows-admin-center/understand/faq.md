@@ -1,14 +1,13 @@
 ---
 title: Windows Admin Center Frequently Asked Questions
 description: Get answers about Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 12/02/2019
-ms.prod: windows-server
 ---
+
 # Windows Admin Center Frequently Asked Questions
 
 > Applies to: Windows Admin Center, Windows Admin Center Preview
@@ -80,7 +79,7 @@ Yes! the [Showscript feature](../use/get-started.md#view-powershell-scripts-used
 
 ## Are there any plans for Windows Admin Center to manage Windows Server 2008 R2 or earlier?
 
-Windows Admin Center now supports **limited** functionality to manage Windows Server 2008 R2. Windows Admin Center relies on PowerShell capabilities and platform technologies that don't exist in Windows Server 2008 R2 and earlier, making full support infeasible. Windows Server 2008/2008 R2 are approaching end of support in January 2020 so Microsoft recommends customers [move to Azure or upgrade to the latest version of Windows Server](https://www.microsoft.com/cloud-platform/windows-server-2008).
+Windows Admin Center **no longer supports** functionality to manage Windows Server 2008 R2. Windows Admin Center relies on PowerShell capabilities and platform technologies that don't exist in Windows Server 2008 R2 and earlier, making full support infeasible. If you have not yet, Microsoft recommends [moving to Azure or upgrading to the latest version of Windows Server](https://www.microsoft.com/cloud-platform/windows-server-2008).
 
 ## Are there any plans for Windows Admin Center to manage Linux connections?
 
@@ -98,14 +97,12 @@ Traffic from the browser to the Windows Admin Center gateway uses HTTPS. Traffic
 
 Yes, in a few cases Windows Admin Center requires CredSSP. This is required to pass your credentials for authentication to machines beyond the specific server you are targeting for management. For example, if you are managing virtual machines on **server B**, but want to store the vhdx files for those virtual machines on a file share hosted by **server C**, Windows Admin Center must use CredSSP to authenticate with **server C** to access the file share.
 
-Windows Admin Center handles the configuration of CredSSP automatically after prompting for consent from you. Before configuring CredSSP, Windows Admin Center will check to make sure that the system has the recent CredSSP [updates](https://support.microsoft.com/help/4093492/credssp-updates-for-cve-2018-0886-march-13-2018). While CredSSP is enabled, there will be a badge on the Server Overview, and an option to disable it -
-
-![CredSSP on server overview](../media/CredSSP-overview.png)
+Windows Admin Center handles the configuration of CredSSP automatically after prompting for consent from you. Before configuring CredSSP, Windows Admin Center will check to make sure that the system has the recent CredSSP [updates](https://support.microsoft.com/help/4093492/credssp-updates-for-cve-2018-0886-march-13-2018).
 
 CredSSP is currently used in the following areas:
 
 - Using disaggregated SMB storage in the virtual machines tool (the example above.)
-- Using the Updates tool in either the Failover or Hyper-Converged cluster management solutions, which performs [Cluster-Aware Updating](https://docs.microsoft.com/windows-server/failover-clustering/cluster-aware-updating) 
+- Using the Updates tool in either the Failover or Hyper-Converged cluster management solutions, which performs [Cluster-Aware Updating](../../../failover-clustering/cluster-aware-updating.md)
 
 ## Are there any cloud dependencies?
 
@@ -144,7 +141,7 @@ There are two versions of Windows Admin Center available for download:
 ### Windows Admin Center Preview
 
 * For IT admins who want the latest and greatest features on a regular cadence, this version is for you. Our intent is to provide subsequent update releases every month or so. The core platform continues to be production-ready and the license provides production use rights. However, note that you will see the introduction of new tools and capabilities which are clearly marked as PREVIEW and are suitable for evaluation and testing.
-* To get the latest Insider Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://www.microsoft.com/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal.
+* To get the latest Insider Preview release, registered Insiders may download Windows Admin Center Preview directly from the [Windows Server Insider Preview download page](https://microsoft.com/en-us/software-download/windowsinsiderpreviewserver), under the Additional Downloads dropdown. If you have not yet registered as an Insider, see [Getting Started with Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) on the Windows Insiders for Business portal.
 
 ## Why was "Windows Admin Center" chosen as the final name for "Project Honolulu"?
 
@@ -152,7 +149,7 @@ Windows Admin Center is the official product name for "Project Honolulu" and rei
 
 ## Where can I learn more about Windows Admin Center, or get more details on the topics above?
 
-Our [launch page](https://aka.ms/WindowsAdminCenter) is the best starting point and has links to our newly categorized documentation content, download location, how to provide feedback, reference information, and other resources.
+Our [launch page](../overview.md) is the best starting point and has links to our newly categorized documentation content, download location, how to provide feedback, reference information, and other resources.
 
 ## What is the version history of Windows Admin Center?
 
@@ -160,4 +157,4 @@ Our [launch page](https://aka.ms/WindowsAdminCenter) is the best starting point 
 
 ## I'm having an issue with Windows Admin Center, where can I get help?
 
-See our [troubleshooting guide](../use/troubleshooting.md) and our list of [known issues](../use/known-issues.md).
+See our [troubleshooting guide](../support/troubleshooting.md) and our list of [known issues](../support/known-issues.md).

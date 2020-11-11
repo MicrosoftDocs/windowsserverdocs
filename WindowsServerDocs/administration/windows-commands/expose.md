@@ -1,54 +1,43 @@
 ---
 title: expose
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the expose command, which exposes a persistent shadow copy as a drive letter, share, or mount point.
+ms.topic: reference
 ms.assetid: 9b0a21cf-3bef-4ade-b8f1-ac42f9203947
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # expose
 
-
-
 Exposes a persistent shadow copy as a drive letter, share, or mount point.
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-expose <ShadowID> {<Drive:> | <Share> | <MountPoint>}
+expose <shadowID> {<drive:> | <share> | <mountpoint>}
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|ShadowID|Specifies the shadow ID of the shadow copy you want to expose.|
-|\<Drive:>|Exposes the specified shadow copy as a drive letter (for example, P:).|
-|\<Share>|Exposes the specified shadow copy at a share (for example, \\\\*MachineName*\).|
-|\<MountPoint>|Exposes the specified shadow copy to a mount point (for example, C:\shadowcopy\).|
+| Parameter | Description |
+| --------- | ----------- |
+| shadowID | Specifies the shadow ID of the shadow copy you want to expose. You can also use an existing alias or an environment variable in place of *shadowID*. Use **add** without parameters to see existing aliases. |
+| `<drive:>` | Exposes the specified shadow copy as a drive letter (for example, `p:`). |
+| `<share>` | Exposes the specified shadow copy at a share (for example, `\\machinename`).   |
+| `<mountpoint>` | Exposes the specified shadow copy to a mount point (for example, `C:\shadowcopy`). |
 
-## Remarks
-
--   You can use an existing alias or an environment variable in place of *ShadowID*. Use **add** without parameters to see existing aliases.
-
-## <a name="BKMK_examples"></a>Examples
+### Examples
 
 To expose the persistent shadow copy associated with the VSS_SHADOW_1 environment variable as drive X, type:
+
 ```
 expose %vss_shadow_1% x:
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [diskshadow command](diskshadow.md)

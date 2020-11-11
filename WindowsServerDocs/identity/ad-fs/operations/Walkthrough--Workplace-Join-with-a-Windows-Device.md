@@ -1,15 +1,11 @@
 ---
 ms.assetid: c17d143b-86b4-47c0-b76e-1862dda8f0bd
 title: Walkthrough - Workplace Join with a Windows Device
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-
-ms.technology: identity-adfs
 ---
 
 # Walkthrough: Workplace Join with a Windows Device
@@ -39,7 +35,7 @@ In this walkthrough, you access a company web application before you join your d
 
 > [!IMPORTANT]
 > For Workplace Join to succeed, the client computer (Client1) must trust the SSL certificate that was used to configure Active Directory Federation Services (AD FS) in [Step 2: Configure the Federation Server with Device Registration Service (ADFS1)](../deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4). It must also be able to validate revocation information for the certificate. If you have any issues with Workplace Join, you can view the event log on Client1.
-> 
+>
 > To see the event log, open Event Viewer, expand **Applications and Services Logs**, expand **Microsoft**, expand **Windows**, and then click **Workplace Join**.
 
 #### To join your device with Workplace Join

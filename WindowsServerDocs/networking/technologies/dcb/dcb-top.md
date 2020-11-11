@@ -1,13 +1,11 @@
 ---
 title: Data Center Bridging (DCB)
 description: You can use this topic for introductory information about Data Center Bridging in Windows Server 2016.
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: da58f312-bd3b-4bb6-98ca-6177869dd6ad
 manager: brianlic
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Data Center Bridging \(DCB\)
@@ -32,11 +30,11 @@ Priority\-based flow control is essential if the upper layer protocol, such as F
 
 ## DCB Protocols and Management Options
 
-DCB consists of the following set of protocols. 
+DCB consists of the following set of protocols.
 
 - Enhanced Transmission Service \(ETS\) – IEEE 802.1Qaz, which builds on the 802.1P and 802.1Q
 standards
-- Priority Flow Control \(PFS\), IEEE 802.1Qbb 
+- Priority Flow Control \(PFC\), IEEE 802.1Qbb
 - DCB Exchange Protocol \(DCBX\), IEEE 802.1AB, as extended in the 802.1Qaz standard.
 
 The DCBX protocol allows you to configure DCB on a switch, which can then automatically configure an end device, such as a computer running Windows Server 2016.
@@ -62,8 +60,8 @@ Following is a list that summarizes the functionality that is provided by DCB.
 4. Enables server administrators or network administrators to assign an application to a particular traffic class or priority based on well-known protocols, well-known TCP/UDP port, or NetworkDirect port used by that application.
 
 5. Provides DCB management through Windows Server 2016 Windows Management Instrumentation \(WMI\) and Windows PowerShell. For more information, see the section [Windows PowerShell Commands for DCB](#bkmk_wps) later in this topic, in addition to the following topics.
-	- [System-Provided DCB Components](https://msdn.microsoft.com/windows/hardware/drivers/network/system-provided-dcb-components)
-	- [NDIS QoS Requirements for Data Center Bridging](https://msdn.microsoft.com/windows/hardware/drivers/network/ndis-qos-requirements-for-data-center-bridging)
+	- [System-Provided DCB Components](/windows-hardware/drivers/network/system-provided-dcb-components)
+	- [NDIS QoS Requirements for Data Center Bridging](/windows-hardware/drivers/network/ndis-qos-requirements-for-data-center-bridging)
 
 6. Provides DCB management through Windows Server 2016 Group Policy.
 
@@ -88,7 +86,7 @@ For hosters who have already adopted, or who plan to adopt, iSCSI as their stora
 
 A Windows Server 2016\-based implementation of DCB alleviates many of the issues that can occur when converged fabric solutions are provided by multiple original equipment manufacturers \(OEMs\).
 
-Implementations of proprietary solutions provided by multiple OEMs might not interoperate with one another, might be difficult to manage, and will typically have different software maintenance schedules. 
+Implementations of proprietary solutions provided by multiple OEMs might not interoperate with one another, might be difficult to manage, and will typically have different software maintenance schedules.
 
 By contrast, Windows Server 2016 DCB is standards\-based, and you can deploy and manage DCB in a heterogeneous network.
 
@@ -100,10 +98,10 @@ There are DCB Windows PowerShell commands for both Windows Server 2016 and Windo
 
 The following topic for Windows Server 2016 provides Windows PowerShell cmdlet descriptions and syntax for all Data Center Bridging \(DCB\) Quality of Service \(QoS\)\-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-- [DcbQoS Module](https://technet.microsoft.com/itpro/powershell/windows/dcbqos/dcbqos)
+- [DcbQoS Module](/powershell/module/dcbqos/?view=win10-ps)
 
 ### Windows Server 2012 R2 Windows PowerShell Commands for DCB
 
 The following topic for Windows Server 2012 R2 provides Windows PowerShell cmdlet descriptions and syntax for all Data Center Bridging \(DCB\) Quality of Service \(QoS\)\-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-- [Data Center Bridging (DCB) Quality of Service (QoS) Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/hh967440.aspx)
+- [Data Center Bridging (DCB) Quality of Service (QoS) Cmdlets in Windows PowerShell](/powershell/module/dcbqos/?view=win10-ps&viewFallbackFrom=winserverr2-ps)

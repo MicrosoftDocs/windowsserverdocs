@@ -2,8 +2,6 @@
 title: Create a Classification Property
 description: This article describes classification properties, used to assign values to files within a specified folder or volume.
 ms.date: 7/7/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -43,7 +41,7 @@ The following procedure guides you through the process of creating a classificat
 
 6.  Click **OK**.
 
-## See also
+## Additional References
 
 -   [Create an Automatic Classification Rule](create-automatic-classification-rule.md)
 -   [Classification Management](classification-management.md)

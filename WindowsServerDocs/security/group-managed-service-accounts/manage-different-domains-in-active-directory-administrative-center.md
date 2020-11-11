@@ -1,15 +1,10 @@
 ---
 title: Manage Different Domains in Active Directory Administrative Center
-ms.prod: windows-server
-description: "Windows Server Security"
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description: Windows Server Security
 ms.assetid: 166351c3-4076-48be-aa8f-797adf1e9d68
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Manage Different Domains in Active Directory Administrative Center
@@ -86,5 +81,5 @@ ms.date: 10/12/2016
 
 2.  When Active Directory Administrative Center is open, browse through the navigation pane to view or manage your Active Directory domain.
 
-  
+
 

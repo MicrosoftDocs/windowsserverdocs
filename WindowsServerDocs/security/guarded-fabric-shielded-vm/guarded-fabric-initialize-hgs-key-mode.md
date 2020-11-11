@@ -1,11 +1,9 @@
 ---
 title: Initialize HGS using host key attestation
-ms.custom: na
-ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
-ms.technology: security-guarded-fabric
+ms.author: ryanpu
 ms.date: 08/29/2018
 ---
 

@@ -1,19 +1,17 @@
 ---
 title: Deploy Windows Admin Center with High Availability
 description: Deploy Windows Admin Center with High Availability (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Deploy Windows Admin Center with high availability
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
-You can deploy Windows Admin Center in a failover cluster to provide high availability for your Windows Admin Center gateway service. The solution provided is an active-passive solution, where only one instance of Windows Admin Center is active. If one of the nodes in the cluster fails, Windows Admin Center gracefully fails over to another node, letting you continue managing the servers in your environment seamlessly. 
+You can deploy Windows Admin Center in a failover cluster to provide high availability for your Windows Admin Center gateway service. The solution provided is an active-passive solution, where only one instance of Windows Admin Center is active. If one of the nodes in the cluster fails, Windows Admin Center gracefully fails over to another node, letting you continue managing the servers in your environment seamlessly.
 
 [Learn about other Windows Admin Center deployment options.](../plan/installation-options.md)
 
@@ -30,7 +28,7 @@ You can deploy Windows Admin Center in a failover cluster to provide high availa
 2. Connect to the node via RDP and run the ```Install-WindowsAdminCenterHA.ps1``` script from that node with the following parameters:
     - `-clusterStorage`: the local path of the Cluster Shared Volume to store Windows Admin Center data.
     - `-clientAccessPoint`: choose a name that you will use to access Windows Admin Center. For example, if you run the script with the parameter `-clientAccessPoint contosoWindowsAdminCenter`, you will access the Windows Admin Center service by visiting `https://contosoWindowsAdminCenter.<domain>.com`
-    - `-staticAddress`: Optional. One or more static addresses for the cluster generic service. 
+    - `-staticAddress`: Optional. One or more static addresses for the cluster generic service.
     - `-msiPath`: The path for the Windows Admin Center .msi file.
     - `-certPath`: Optional. The path for a certificate .pfx file.
     - `-certPassword`: Optional. A SecureString password for the certificate .pfx provided in `-certPath`
@@ -81,7 +79,7 @@ You may also update the certificate at the same time you update the Windows Admi
 ```powershell
 $certPassword = Read-Host -AsSecureString
 .\Install-WindowsAdminCenterHA.ps1 -msiPath ".\WindowsAdminCenter.msi" -certPath "cert.pfx" -certPassword $certPassword -Verbose
-``` 
+```
 
 ## Uninstall
 

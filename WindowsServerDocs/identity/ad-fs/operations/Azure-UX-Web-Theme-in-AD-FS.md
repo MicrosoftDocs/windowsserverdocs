@@ -6,8 +6,6 @@ ms.author: billmath
 manager: femila
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # Using an Azure AD UX Web Theme in Active Directory Federation Services
@@ -52,6 +50,6 @@ Description | Constraints | Recommendations
 This option appears in the background of the sign-in page, is anchored to the center of the viewable space, and scales and crops to fill the browser window.    <br>On narrow screens such as mobile phones, this image is not shown.<br>A black mask with 0.55 opacity is applied over this image when the page is loaded. | JPG or PNG<br>Image dimensions: 1920x1080 px<br>File size: &lt; 300 KB | <br>Use images where there isn't a strong subject focus. The opaque sign-in form appears over the center of this image and can cover any part of the image, depending on the size of the browser window.<br>Keep the file size small to ensure quick load times.
 
 ## Next Steps
-- [AD FS Customization in Windows Server 2016](AD-FS-Customization-in-Windows-Server-2016.md)
+- [AD FS Customization in Windows Server 2016](./ad-fs-customization-in-windows-server.md)
 - [Advanced Customization](Advanced-Customization-of-AD-FS-Sign-in-Pages.md)
 - [Custom web themes](Custom-Web-Themes-in-AD-FS.md)

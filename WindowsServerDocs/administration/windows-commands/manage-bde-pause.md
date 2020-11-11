@@ -1,50 +1,50 @@
 ---
 title: manage-bde pause
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the manage-bde pause command, which pauses BitLocker encryption or decryption.
+ms.topic: reference
 ms.assetid: efda0e08-b9ff-4e71-83d8-bb666b3032bd
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# manage-bde: pause
+# manage-bde pause
 
-
-
-Pauses BitLocker encryption or decryption. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+Pauses BitLocker encryption or decryption.
 
 ## Syntax
 
 ```
-manage-bde -pause <Volume> [-computername <Name>] [{-?|/?}] [{-help|-h}]
+manage-bde -pause [<volume>] [-computername <name>] [{-?|/?}] [{-help|-h}]
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<Volume>|A drive letter followed by a colon, a volume GUID path, or a mounted volume.|
-|-computername|Specifies that Manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command.|
-|\<Name>|Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address.|
-|-? or /?|Displays brief Help at the command prompt.|
-|-help or -h|Displays complete Help at the command prompt.|
+| Parameter | Description |
+| --------- | ----------- |
+| `<volume>` | Specifies a drive letter followed by a colon, a volume GUID path, or a mounted volume. |
+| -computername | Specifies that manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command. |
+| `<name>` | Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address. |
+| -? or /? | Displays brief Help at the command prompt. |
+| -help or -h | Displays complete Help at the command prompt. |
 
-## <a name="BKMK_Examples"></a>Examples
+### Examples
 
-The following example illustrates using the **-pause** command to pause BitLocker encryption on drive C.
+To pause BitLocker encryption on drive C, type:
+
 ```
-manage-bde –pause C:
+manage-bde pause C:
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Manage-bde](manage-bde.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [manage-bde on command](manage-bde-on.md)
+
+- [manage-bde off command](manage-bde-off.md)
+
+- [manage-bde resume command](manage-bde-resume.md)
+
+- [manage-bde command](manage-bde.md)

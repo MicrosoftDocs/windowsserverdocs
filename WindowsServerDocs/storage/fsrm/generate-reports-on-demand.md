@@ -2,8 +2,6 @@
 title: Generate Reports on Demand
 description: This article describes how to generate reports on demand to analyze disk usage on the server
 ms.date: 7/7/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -42,14 +40,14 @@ When you generate reports on demand, the reports are saved in a default location
    -   Click the report label, and then click **Edit Parameters**.
    -   In the **Report Parameters** dialog box, edit the parameters as needed, and then click **OK**.
    -  To see a list of parameters for all the selected reports, click **Review Selected Reports** and then click **Close**.
- 
+
 5. To specify the formats for saving the reports:
 
    -  Under **Report formats**, select one or more formats for the scheduled reports. By default, reports are generated in Dynamic HTML (DHTML). You can also select HTML, XML, CSV, and text formats. The reports are saved to the default location for on-demand reports.
 
 6. To deliver copies of the reports to administrators by e-mail:
 
-   - On the **Delivery** tab, select the **Send reports to the following administrators** check box, and then enter the names of the administrative accounts that will receive reports. 
+   - On the **Delivery** tab, select the **Send reports to the following administrators** check box, and then enter the names of the administrative accounts that will receive reports.
    - Use the format <em>account@domain</em>, and use semicolons to separate multiple accounts.
 
 7. To gather the data and generate the reports, click **OK**. This opens the **Generate Storage Reports** dialog box.
@@ -61,7 +59,7 @@ When you generate reports on demand, the reports are saved in a default location
 
    Both options save the reports, and if you enabled delivery by e-mail, send the reports to administrators in the formats that you selected.
 
-## See also
+## Additional References
 
 -   [Storage Reports Management](storage-reports-management.md)
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)

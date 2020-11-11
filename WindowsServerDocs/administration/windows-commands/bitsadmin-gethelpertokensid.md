@@ -1,37 +1,42 @@
 ---
 title: bitsadmin gethelpertokensid
-description: "Windows Commands topic for **bitsadmin gethelpertokensid** - Returns the SID of a BITS transfer job's helper token, if one is set."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+description: Reference article for the bitsadmin gethelpertokensid command, which returns the SID of a BITS transfer job's helper token, if one is set.
+ms.topic: reference
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 03/01/2019
 ---
 
 # bitsadmin gethelpertokensid
 
-Returns the SID of a BITS transfer job's [helper token](/windows/desktop/bits/helper-tokens-for-bits-transfer-jobs), if one is set.
+Returns the SID of a BITS transfer job's [helper token](/windows/win32/bits/helper-tokens-for-bits-transfer-jobs), if one is set.
 
-**BITS 3.0 and earlier**: Not supported.
+> [!NOTE]
+> This command isn't supported by BITS 3.0 and earlier.
 
 ## Syntax
 
 ```
-bitsadmin /GetHelperTokensID <Job>
+bitsadmin /gethelpertokensid <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-#### Additional references
+## Examples
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+To retrieve the SID of a BITS transfer job named *myDownloadJob*:
+
+```
+bitsadmin /gethelpertokensid myDownloadJob
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

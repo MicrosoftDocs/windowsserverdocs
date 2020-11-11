@@ -1,17 +1,11 @@
 ---
 title: bitsadmin setnoprogresstimeout
-description: "Windows Commands topic for **bitsadmin setnoprogresstimeout** - Sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin setnoprogresstimeout command, which sets the length of time, in seconds, that the service tries to transfer the file after a transient error occurs.
+ms.topic: reference
 ms.assetid: 7fac50d9-cc6b-46a4-a96f-fab751ee1756
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -22,29 +16,34 @@ Sets the length of time, in seconds, that BITS tries to transfer the file after 
 ## Syntax
 
 ```
-bitsadmin /SetNoProgressTimeout <Job> <TimeOutvalue>
+bitsadmin /setnoprogresstimeout <job> <timeoutvalue>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|TimeOutvalue|A number represented in seconds.|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| timeoutvalue | The length of time that BITS waits to transfer a file after the first error, in seconds. |
 
-## Remarks
+### Remarks
 
--   The no progress timeout interval begins when the job encounters a transient error.
--   The timeout interval stops or resets when a byte of data is successfully transferred.
--   If no progress timeout interval exceeds the *TimeOutvalue*, then the job is placed in a fatal error state.
+- The "no progress" timeout interval begins when the job encounters its first transient error.
 
-## <a name="BKMK_examples"></a>Examples
+- The timeout interval stops or resets when a byte of data is successfully transferred.
 
-The following example sets the no progress time out value for the job named *myDownloadJob* to 20 seconds
+- If the "no progress" timeout interval exceeds the *timeoutvalue*, then the job is placed in a fatal error state.
+
+## Examples
+
+To set the "no progress" timeout value to 20 seconds, for the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin /SetNoProgressTimeout myDownloadJob 20
+bitsadmin /setnoprogresstimeout myDownloadJob 20
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

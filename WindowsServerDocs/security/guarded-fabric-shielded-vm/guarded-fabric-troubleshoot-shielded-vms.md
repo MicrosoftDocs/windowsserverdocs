@@ -1,11 +1,9 @@
 ---
-title: Troubleshoot Shielded VMs 
-ms.custom: na
-ms.prod: windows-server
+title: Troubleshoot Shielded VMs
 ms.topic: article
 manager: dongill
 author: rpsqrd
-ms.technology: security-guarded-fabric
+ms.author: ryanpu
 ms.date: 10/3/2018
 ---
 

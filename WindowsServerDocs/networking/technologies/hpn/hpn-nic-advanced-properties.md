@@ -1,20 +1,18 @@
 ---
 title: NIC advanced properties
 description: You can manage NICs and all the features via Windows PowerShell or the Network Control Panel.
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
-ms.author: pashort 
-author: shortpatti
-ms.date: 09/20/2018 
+ms.author: lizross
+author: eross-msft
+ms.date: 09/20/2018
 ---
 
 
 # NIC advanced properties
 
-You can manage NICs and all the features via Windows PowerShell using the [NetAdapter](https://docs.microsoft.com/powershell/module/netadapter/?view=win10-ps&viewFallbackFrom=winserverr2-ps) cmdlet.  You can also manage NICs and all the features using Network Control Panel (ncpa.cpl). 
+You can manage NICs and all the features via Windows PowerShell using the [NetAdapter](/powershell/module/netadapter/?view=win10-ps&viewFallbackFrom=winserverr2-ps) cmdlet.  You can also manage NICs and all the features using Network Control Panel (ncpa.cpl).
 
 1. In **Windows PowerShell**, run the `Get‑NetAdapterAdvancedProperties` cmdlet against two different make/model of NICs.
 

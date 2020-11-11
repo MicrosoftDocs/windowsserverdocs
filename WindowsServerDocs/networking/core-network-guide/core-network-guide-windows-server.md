@@ -2,24 +2,21 @@
 title: Core network guidance for Windows Server
 description: This topic provides an overview of the Core Network Guide, which allows you to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest with Windows Server 2016
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
-ms.date: 
 ms.assetid: 9b3ef3eb-4246-4e0e-8bf1-53224ca5f2f9
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 # Core network guidance for Windows Server
 
 >Applies to: Windows Server, Windows Server 2016
 
-This topic provides an overview of the Core network guidance for Windows Server&reg; 2016, and contains the following sections.  
-  
--   [Introduction to the Windows Server Core Network](#bkmk_intro)  
-  
--   [Core Network Guide for Windows Server](#bkmk_core)  
-  
+This topic provides an overview of the Core network guidance for Windows Server&reg; 2016, and contains the following sections.
+
+-   [Introduction to the Windows Server Core Network](#bkmk_intro)
+
+-   [Core Network Guide for Windows Server](#bkmk_core)
+
 ## <a name="bkmk_intro"></a>Introduction to the Windows Server Core Network
 
 A core network is a collection of network hardware, devices, and software that provides the fundamental services for your organization's information technology (IT) needs.
@@ -59,6 +56,6 @@ The Windows Server 2016 Core Network Guide provides instructions on how to plan 
 This guide is available at the following location.
 
 - The [Core Network Guide](../core-network-guide/Core-Network-Guide.md) in the Windows Server 2016 Technical Library.
-  
+
 
 

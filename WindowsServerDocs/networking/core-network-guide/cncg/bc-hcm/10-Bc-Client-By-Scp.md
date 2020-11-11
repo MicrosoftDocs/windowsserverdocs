@@ -2,12 +2,10 @@
 title: Configure Client Automatic Hosted Cache Discovery by Service Connection Point
 description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking-bc
 ms.topic: article
 ms.assetid: ea1c34fd-5a33-4228-9437-9bb3d44230eb
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 #  Configure Client Automatic Hosted Cache Discovery by Service Connection Point
@@ -21,8 +19,8 @@ With this procedure you can use Group Policy to enable and configure BranchCache
 - Windows 8.1 Enterprise
 - Windows 8 Enterprise
 
-> [!NOTE]  
-> To configure domain-joined computers that are running Windows Server 2008 R2 or Windows 7, see the Windows Server 2008 R2 [BranchCache Deployment Guide](https://technet.microsoft.com/library/ee649232.aspx).
+> [!NOTE]
+> To configure domain-joined computers that are running Windows Server 2008 R2 or Windows 7, see the Windows Server 2008 R2 [BranchCache Deployment Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee649232(v=ws.10)).
 
 Membership in **Domain Admins**, or equivalent is the minimum required to perform this procedure.
 
@@ -39,19 +37,19 @@ Membership in **Domain Admins**, or equivalent is the minimum required to perfor
 5. In the Group Policy Management Editor console, expand the following path: **Computer Configuration**, **Policies**, **Administrative Templates: Policy definitions \(ADMX files\) retrieved from the local computer**, **Network**, **BranchCache**.
 
 6. Click **BranchCache**, and then in the details pane, double\-click **Turn on BranchCache**. The **Turn on BranchCache** dialog box opens.
-  
+
 7.  In the **Turn on BranchCache** dialog box, click **Enabled**, and then click **OK**.
 
 8. In the Group Policy Management Editor console, ensure that **BranchCache** is still selected, and then in the details pane double\-click **Enable Automatic Hosted Cache Discovery by Service Connection Point**. The policy setting dialog box opens.
 
 9. In the **Enable Automatic Hosted Cache Discovery by Service Connection Point** dialog box, click **Enabled**, and then click **OK**.
 
-10. To enable client computers to download and cache content from BranchCache file server\-based content servers: In the Group Policy Management Editor console, ensure that **BranchCache** is still selected, and then in the details pane double\-click **BranchCache for network files**. The **Configure BranchCache for network files** dialog box opens. 
+10. To enable client computers to download and cache content from BranchCache file server\-based content servers: In the Group Policy Management Editor console, ensure that **BranchCache** is still selected, and then in the details pane double\-click **BranchCache for network files**. The **Configure BranchCache for network files** dialog box opens.
 11. In the **Configure BranchCache for network files** dialog box, click **Enabled**. In **Options**, type a numeric value, in milliseconds, for the maximum round trip network latency time, and then click **OK**.
-  
+
     > [!NOTE]
     > By default, client computers cache content from file servers if the round trip network latency is longer than 80 milliseconds.
-  
+
 12. To configure the amount of hard disk space allocated on each client computer for the BranchCache cache: In the Group Policy Management Editor console, ensure that **BranchCache** is still selected, and then in the details pane double\-click **Set percentage of disk space used for client computer cache**. The **Set percentage of disk space used for client computer cache** dialog box opens. Click **Enabled**, and then in **Options** type a numeric value that represents the percentage of hard disk space used on each client computer for the BranchCache cache. Click **OK**.
 
 13. To specify the default age, in days, for which segments are valid in the BranchCache data cache on client computers: In the Group Policy Management Editor console, ensure that **BranchCache** is still selected, and then in the details pane double\-click **Set age for segments in the data cache**. The **Set age for segments in the data cache** dialog box opens. Click **Enabled**, and then in the details pane type the number of days that you prefer. Click **OK**.

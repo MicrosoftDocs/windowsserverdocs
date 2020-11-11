@@ -1,12 +1,10 @@
 ---
 title: Performance history for servers
 ms.author: cosdar
-ms.manager: eldenc
-ms.technology: storage-spaces
+manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/05/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 # Performance history for servers
@@ -81,12 +79,12 @@ The `memory.*` series are (COMING SOON).
 
 ## Usage in PowerShell
 
-Use the [Get-ClusterNode](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusternode) cmdlet:
+Use the [Get-ClusterNode](/powershell/module/failoverclusters/get-clusternode) cmdlet:
 
 ```PowerShell
 Get-ClusterNode <Name> | Get-ClusterPerf
 ```
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

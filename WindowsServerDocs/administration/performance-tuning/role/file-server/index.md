@@ -1,15 +1,10 @@
 ---
 title: Performance tuning for file servers
 description: Performance tuning for file servers running Windows Server
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 author: phstee
-ms.author: NedPyle; Danlo; DKruse; v-tea
+ms.author: nedpyle
 ms.date: 12/12/2019
-ms.custom:
-  - CI ID 111495
-  - CSSTroubleshoot
 manager: dcscontentpm
 audience: Admin
 ---
@@ -92,24 +87,24 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
     The default is 10 seconds. This is the directory cache timeout.
 
-    > [!NOTE]  
+    > [!NOTE]
     > This parameter controls caching of directory metadata in the absence of directory leases.
-     
-     > [!NOTE]  
+
+     > [!NOTE]
      > A known issue in Windows 10, version 1803, affects the ability of Windows 10 to cache large directories. After you upgrade a computer to Windows 10, version 1803, you access a network share that contains thousands of files and folders, and you open a document that is located on that share. During both of these operations, you experience significant delays.
-     >  
+     >
      > To resolve this issue, install Windows 10, version 1809 or a later version.
-     >  
+     >
      > To work around this issue, set **DirectoryCacheLifetime** to **0**.
-     >  
-     > This issue affects the following editions of Windows 10:  
+     >
+     > This issue affects the following editions of Windows 10:
      > - Windows 10 Enterprise, version 1803
      > - Windows 10 Pro for Workstations, version 1803
      > - Windows 10 Pro Education, version 1803
      > - Windows 10 Professional, version 1803
      > - Windows 10 Education, version 1803
      > - Windows 10 Home, version 1803
-   
+
 -   **DirectoryCacheEntrySizeMax**
 
     ```
@@ -168,9 +163,9 @@ The following REG\_DWORD registry settings can affect the performance of client 
 
     Applies to Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
-    The default is 0, disabling SMB Signing. Changing this value to 1 enables SMB signing for all SMB communication, preventing SMB communication with computers where SMB signing is disabled. SMB signing can increase CPU cost and network round trips, but helps block man-in-the-middle attacks. If SMB signing is not required, ensure that this registry value is 0 on all clients and servers. 
-    
-    For more info, see [The Basics of SMB Signing](https://blogs.technet.microsoft.com/josebda/2010/12/01/the-basics-of-smb-signing-covering-both-smb1-and-smb2/).
+    The default is 0, disabling SMB Signing. Changing this value to 1 enables SMB signing for all SMB communication, preventing SMB communication with computers where SMB signing is disabled. SMB signing can increase CPU cost and network round trips, but helps block man-in-the-middle attacks. If SMB signing is not required, ensure that this registry value is 0 on all clients and servers.
+
+    For more info, see [The Basics of SMB Signing](/archive/blogs/josebda/the-basics-of-smb-signing-covering-both-smb1-and-smb2).
 
 -   **FileInfoCacheEntriesMax**
 
@@ -234,7 +229,7 @@ The general tuning parameters for client computers can optimize a computer for a
 | FileNotFoundCacheEntriesMax | 32768 | 128     |
 | MaxCmds                     | 32768 | 15      |
 
- 
+
 
 Starting in Windows 8, you can configure many of these SMB settings by using the **Set-SmbClientConfiguration** and **Set-SmbServerConfiguration** Windows PowerShell cmdlets. Registry-only settings can be configured by using Windows PowerShell as well.
 

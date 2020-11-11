@@ -1,10 +1,8 @@
 ---
 title: PowerShell scripting performance considerations
 description: Scripting for Performance in PowerShell
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: JasonSh
+ms.author: jasonsh
 author: lzybkr
 ms.date: 10/16/2017
 ---
@@ -13,7 +11,7 @@ ms.date: 10/16/2017
 
 PowerShell scripts that leverage .NET directly and avoid the pipeline tend to be faster than idiomatic PowerShell. Idiomatic PowerShell typically uses cmdlets and PowerShell functions heavily, often leveraging the pipeline, and dropping down into .NET only when necessary.
 
->[!Note] 
+>[!Note]
 > Many of the techniques described here are not idiomatic PowerShell and may reduce the readability of a PowerShell script. Script authors are advised to use idiomatic PowerShell unless performance dictates otherwise.
 
 ## Suppressing Output

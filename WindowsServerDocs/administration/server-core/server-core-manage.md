@@ -1,10 +1,10 @@
 ---
 title: Manage Server Core
 description: Learn how to manage a Server Core installation of Windows Server
-ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: lizap
+author: pronichkin
+ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 07/23/2019
 ---
@@ -46,13 +46,13 @@ To enable your local server to be managed by Server Manager running on a remote 
 
 You can use many snap-ins for Microsoft Management Console (MMC) remotely to manage your Server Core server.
 
-To use an MMC snap-in to manage a Server Core server that is a domain member: 
+To use an MMC snap-in to manage a Server Core server that is a domain member:
 
 1. Start an MMC snap-in, such as Computer Management.
 2. Right-click the snap-in, and then click **Connect to another computer**.
 2. Type the computer name of the Server Core server, and then click **OK**. You can now use the MMC snap-in to manage the Server Core server as you would any other PC or server.
 
-To use an MMC snap-in to manage a Server Core server that is *not* a domain member: 
+To use an MMC snap-in to manage a Server Core server that is *not* a domain member:
 
 1. Establish alternate credentials to use to connect to the Server Core computer by typing the following command at a command prompt on the remote computer:
 
@@ -93,8 +93,8 @@ Where *rulegroup* is one of the following, depending on which snap-in you want t
 | Windows Firewall and Advanced Security | Windows Firewall Remote Management                    |
 
 
-> [!NOTE] 
-> Some MMC snap-ins don't have a corresponding rule group that allows them to connect through the firewall. However, enabling the rule groups for Event Viewer, Services, or Shared Folders will allow most other snap-ins to connect. 
+> [!NOTE]
+> Some MMC snap-ins don't have a corresponding rule group that allows them to connect through the firewall. However, enabling the rule groups for Event Viewer, Services, or Shared Folders will allow most other snap-ins to connect.
 >
 > Additionally, certain snap-ins require further configuration before they can connect through Windows Firewall:
 >
@@ -106,7 +106,7 @@ Where *rulegroup* is one of the following, depending on which snap-in you want t
 
 You can use [Remote Desktop](../../remote/remote-desktop-services/welcome-to-rds.md) to manage a Server Core server from remote computers.
 
-Before you can access Server Core, you'll need to run the following command: 
+Before you can access Server Core, you'll need to run the following command:
 
 ```
 cscript C:\Windows\System32\Scregedit.wsf /ar 0
@@ -116,7 +116,7 @@ This enables the Remote Desktop for Administration mode to accept connections.
 
 ## Add hardware and manage drivers locally
 
-To add hardware to a Server Core server, follow the instructions provided by the hardware vendor for installing new hardware. 
+To add hardware to a Server Core server, follow the instructions provided by the hardware vendor for installing new hardware.
 
 If the hardware is not plug and play, you'll need to manually install the driver. To do that, copy the driver files to a temporary location on the server, and then run the following command:
 
@@ -128,13 +128,13 @@ Where *driverinf* is the file name of the .inf file for the driver.
 
 If prompted, restart the computer.
 
-To see what drivers are installed, run the following command: 
+To see what drivers are installed, run the following command:
 
 ```
 sc query type= driver
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > You must include the space after the equal sign for the command to complete successfully.
 
 To disable a device driver, run the following:

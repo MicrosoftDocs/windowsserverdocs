@@ -1,45 +1,40 @@
 ---
-title: bitsadmin cache and deleteurl
-description: "Windows Commands topic for **bitsadmin cache and deleteurl** - deletes all cache entries for the given URL."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+title: bitsadmin cache and deleteURL
+description: Reference article for the bitsadmin cache and deleteURL command, which deletes all cache entries for the given URL.
+ms.topic: reference
 ms.assetid: e108b76b-fae9-4c16-bf4c-d74c9f025953
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# bitsadmin cache and deleteurl
-
-
+# bitsadmin cache and deleteURL
 
 Deletes all cache entries for the given URL.
 
 ## Syntax
 
 ```
-bitsadmin /DeleteURL url
+bitsadmin /deleteURL URL
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|url|The Uniform Resource Locator that identifies a remote file.|
+| Parameter | Description |
+| -------------- | -------------- |
+| URL | The Uniform Resource Locator that identifies a remote file. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example deletes all cache entries for https://www.microsoft.com/en/us/default.aspx
+To delete all cache entries for `https://www.contoso.com/en/us/default.aspx`:
+
 ```
-C:\>bitsadmin /DeleteURL https://www.microsoft.com/en/us/default.aspx 
+bitsadmin /deleteURL https://www.contoso.com/en/us/default.aspx
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin cache command](bitsadmin-cache.md)

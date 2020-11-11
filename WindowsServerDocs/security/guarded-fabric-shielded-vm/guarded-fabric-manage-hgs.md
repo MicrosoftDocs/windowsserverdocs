@@ -1,12 +1,10 @@
 ---
 title: Managing the Host Guardian Service
-ms.custom: na
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
 manager: dongill
 author: rpsqrd
-ms.technology: security-guarded-fabric
+ms.author: ryanpu
 ---
 
 # Managing the Host Guardian Service
@@ -36,7 +34,7 @@ This also means that the domain and enterprise admins for the two Active Directo
 Anyone who can grant themselves access to more resources poses a security risk.
 
 ### Using Just Enough Administration
-HGS comes with [Just Enough Administration](https://aka.ms/JEAdocs) (JEA) roles built in to help you manage it more securely.
+HGS comes with [Just Enough Administration](/powershell/scripting/learn/remoting/jea/overview) (JEA) roles built in to help you manage it more securely.
 JEA helps by allowing you to delegate admin tasks to non-admin users, meaning the people who manage HGS policies need not actually be admins of the entire machine or domain.
 JEA works by limiting what commands a user can run in a PowerShell session and using a temporary local account behind the scenes (unique for each user session) to run the commands which normally require elevation.
 
@@ -80,7 +78,7 @@ Get-Command
 Get-HgsAttestationPolicy
 ```
 
-Type the command `Exit-PSSession` or its alias, `exit`, when you are done working with the JEA session. 
+Type the command `Exit-PSSession` or its alias, `exit`, when you are done working with the JEA session.
 
 **Add a new policy to HGS using the administrator role**
 
@@ -115,7 +113,7 @@ Events from HGS will show up in the Windows event log under 2 sources:
 You can view these events by opening Event Viewer and navigating to Microsoft-Windows-HostGuardianService-Attestation and Microsoft-Windows-HostGuardianService-KeyProtection.
 
 In a large environment, it is often preferable to forward events to a central Windows Event Collector to make analyzation of the events easier.
-For more information, check out the [Windows Event Forwarding documentation](https://msdn.microsoft.com/library/windows/desktop/bb427443.aspx).
+For more information, check out the [Windows Event Forwarding documentation](/windows/win32/wec/windows-event-collector).
 
 ### Using System Center Operations Manager
 You can also use System Center 2016 - Operations Manager to monitor HGS and your guarded hosts.
@@ -486,7 +484,7 @@ Add-HgsAttestationDumpPolicy -Name 'DumpEncryptionKey02' -PublicKeyHash '<paste 
 Be sure to add each unique dump encryption key to HGS if you choose to use different keys across your guarded fabric.
 Hosts that are encrypting memory dumps with a key not known to HGS will not pass attestation.
 
-Consult the Hyper-V documentation for more information about [configuring dump encryption on hosts](https://technet.microsoft.com/windows-server-docs/virtualization/hyper-v/manage/about-dump-encryption).
+Consult the Hyper-V documentation for more information about [configuring dump encryption on hosts](../../virtualization/hyper-v/manage/about-dump-encryption.md).
 
 #### Check if the system passed attestation
 After registering the necessary information with HGS, you should check if the host passes attestation.
@@ -538,7 +536,7 @@ Once you've added all of your policies to HGS, the next step is to run a synthet
 This does not affect the current operational state of HGS.
 The commands below must be run on a machine that has access to all of the hosts in the environment and at least one HGS node.
 If your firewall or other security policies prevent this, you can skip this step.
-When possible, we recommend running the synthetic attestation to give you a good indication of whether "flipping" to TPM mode will cause downtime for your VMs. 
+When possible, we recommend running the synthetic attestation to give you a good indication of whether "flipping" to TPM mode will cause downtime for your VMs.
 
 ```powershell
 # Get information for each host in your environment
@@ -551,7 +549,7 @@ $hgsCredential = Get-Credential -Message 'Enter an admin credential for HGS'
 $targets += New-HgsTraceTarget -Credential $hgsCredential -Role HostGuardianService -HostName 'HGS01.bastion.local'
 
 # Initiate the synthetic attestation attempt
-Get-HgsTrace -RunDiagnostics -Target $targets -Diagnostic GuardedFabricTpmMode 
+Get-HgsTrace -RunDiagnostics -Target $targets -Diagnostic GuardedFabricTpmMode
 ```
 
 After the diagnostics complete, review the outputted information to determine if any hosts would have failed attestation in TPM mode.
@@ -668,14 +666,18 @@ Proper planning for changing HGS keys is required to minimize service disruption
 
 On an HGS node, perform the following steps to register a new pair of encryption and signing certificates.
 See the section on [adding new keys](#adding-new-keys) for detailed information the various ways to add new keys to HGS.
+
 1. Create a new pair of encryption and signing certificates for your HGS server. Ideally, these will be created in a hardware security module.
+
 2. Register the new encryption and signing certificates with **Add-HgsKeyProtectionCertificate**
 
     ```powershell
     Add-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint>
     Add-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint>
     ```
+
 3. If you used thumbprints, you'll need to go to each node in the cluster to install the private key and grant the HGS gMSA access to the key.
+
 4. Make the new certificates the default certificates in HGS
 
     ```powershell
@@ -684,14 +686,20 @@ See the section on [adding new keys](#adding-new-keys) for detailed information 
     ```
 
 At this point, shielding data created with metadata obtained from the HGS node will use the new certificates, but existing VMs will continue to work because the older certificates are still there.
+
 In order to ensure all existing VMs will work with the new keys, you will need to update the key protector on each VM.
-This is an action that requires the VM owner (person or entity in possession of the "owner" guardian) to be involved.
-For each shielded VM, perform the following steps:
-5. Shut down the VM. The VM cannot be turned back on until the remaining steps are complete or else you will need to start the process over again.
-6. Save the current key protector to a file: `Get-VMKeyProtector -VMName 'VM001' | Out-File '.\VM001.kp'`
-7. Transfer the KP to the VM owner
-8. Have the owner download the updated guardian info from HGS and import it on their local system
-9. Read the current KP into memory, grant the new guardian access to the KP, and save it to a new file by running the following commands:
+
+This is an action that requires the VM owner (person or entity in possession of the "owner" guardian) to be involved. For each shielded VM, perform the following steps:
+
+1. Shut down the VM. The VM cannot be turned back on until the remaining steps are complete or else you will need to start the process over again.
+
+2. Save the current key protector to a file: `Get-VMKeyProtector -VMName 'VM001' | Out-File '.\VM001.kp'`
+
+3. Transfer the KP to the VM owner
+
+4. Have the owner download the updated guardian info from HGS and import it on their local system
+
+5. Read the current KP into memory, grant the new guardian access to the KP, and save it to a new file by running the following commands:
 
     ```powershell
     $kpraw = Get-Content -Path .\VM001.kp
@@ -700,36 +708,39 @@ For each shielded VM, perform the following steps:
     $updatedKP = Grant-HgsKeyProtectorAccess -KeyProtector $kp -Guardian $newGuardian
     $updatedKP.RawData | Out-File .\updatedVM001.kp
     ```
-10. Copy the updated KP back to the hosting fabric
-11. Apply the KP to the original VM:
+
+6. Copy the updated KP back to the hosting fabric.
+
+7. Apply the KP to the original VM:
 
    ```powershell
    $updatedKP = Get-Content -Path .\updatedVM001.kp
    Set-VMKeyProtector -VMName VM001 -KeyProtector $updatedKP
    ```
-12.	Finally, start the VM and ensure it runs successfully.
 
-> [!NOTE]
-> If the VM owner sets an incorrect key protector on the VM and does not authorize your fabric to run the VM, you will be unable to start up the shielded VM.
-> To return to the last known good key protector, run `Set-VMKeyProtector -RestoreLastKnownGoodKeyProtector`
+8. Finally, start the VM and ensure it runs successfully.
 
-Once all VMs have been updated to authorize the new guardian keys, you can disable and remove the old keys.
+    > [!NOTE]
+    > If the VM owner sets an incorrect key protector on the VM and does not authorize your fabric to run the VM, you will be unable to start up the shielded VM.
+    > To return to the last known good key protector, run `Set-VMKeyProtector -RestoreLastKnownGoodKeyProtector`
 
-13. Get the thumbprints of the old certificates from `Get-HgsKeyProtectionCertificate -IsPrimary $false`
+    Once all VMs have been updated to authorize the new guardian keys, you can disable and remove the old keys.
 
-14. Disable each certificate by running the following commands:  
+9.  Get the thumbprints of the old certificates from `Get-HgsKeyProtectionCertificate -IsPrimary $false`
 
-   ```powershell
-   Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsEnabled $false
-   Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint> -IsEnabled $false
-   ```
+10. Disable each certificate by running the following commands:
 
-15. After ensuring VMs are still able to start with the certificates disabled, remove the certificates from HGS by running the following commands:
+    ```powershell
+    Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsEnabled $false
+    Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint> -IsEnabled $false
+    ```
 
-   ```powershell
-   Remove-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint>`
-   Remove-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint>`
-   ```
+11. After ensuring VMs are still able to start with the certificates disabled, remove the certificates from HGS by running the following commands:
+
+    ```powershell
+    Remove-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint>`
+    Remove-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint>`
+    ```
 
 > [!IMPORTANT]
 > VM backups will contain old key protector information that allow the old certificates to be used to start up the VM.

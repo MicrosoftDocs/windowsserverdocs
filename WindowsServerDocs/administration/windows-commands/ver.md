@@ -1,30 +1,17 @@
 ---
 title: ver
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the ver command, which displays the operating system version number.
+ms.topic: reference
 ms.assetid: 5a9c6cd4-b67d-4b30-8c56-5f9798eafd2a
-
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ver
 
-
-
-Displays the operating system version number.
-
-This command is supported in the Windows Command prompt (Cmd.exe), but not in PowerShell.
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Displays the operating system version number. This command is supported in the Windows Command prompt (Cmd.exe), but not in PowerShell.
 
 ## Syntax
 
@@ -32,13 +19,13 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 ver
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/?|Displays help at the command prompt.|
+| Parameter | Description |
+|--|--|
+| /? | Displays help at the command prompt. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To obtain the version number of the operating system from the Command shell (cmd.exe), type:
 
@@ -46,13 +33,12 @@ To obtain the version number of the operating system from the Command shell (cmd
 ver
 ```
 
-The ver command does not work in PowerShell. To obtain the OS version from PowerShell, type:
+The **ver** command doesn't work in PowerShell. If you want to get the operating system version number through PowerShell, type:
 
 ```powershell
 $PSVersionTable.BuildVersion
-````
+```
 
+## Additional References
 
-#### Additional references
-
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

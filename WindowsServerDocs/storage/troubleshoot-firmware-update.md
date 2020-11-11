@@ -1,10 +1,8 @@
 ---
 ms.assetid: 13210461-1e92-48a1-91a2-c251957ba256
-title: Troubleshooting drive firmware updates	
-ms.prod: windows-server
+title: Troubleshooting drive firmware updates
 ms.author: toklima
-ms.manager: masriniv
-ms.technology: storage
+manager: masriniv
 ms.topic: article
 author: toklima
 ms.date: 04/18/2017
@@ -91,14 +89,14 @@ At line:1 char:47
 + CategoryInfo          : NotSpecified: (:) [Update-StorageFirmware], CimException
 + FullyQualifiedErrorId : StorageWMI 4,Microsoft.Management.Infrastructure.CimCmdlets.InvokeCimMethodCommand,Update-StorageFirmware
 ```
-	
+
 PowerShell will throw an error and has received the information that the function called (i.e. Kernel API) was incorrect. This could mean that either the API was not implemented by the 3rd party SAS mini-port driver (true in this case), or that the API was failed for another reason, such as a misalignment of download segments.
 
 ```
 EventData
 DeviceGUID	{132EDB55-6BAC-A3A0-C2D5-203C7551D700}
 DeviceNumber	1
-Vendor	ATA 
+Vendor	ATA
 Model	TOSHIBA THNSNJ12
 FirmwareVersion	6101
 SerialNumber	44GS103UT5EW
@@ -138,7 +136,7 @@ To gather these advanced log entries, enable the log, reproduce the firmware upd
 
 Here is an example of a firmware update on a SATA device failing, because the image to be downloaded was invalid (Event ID: 258):
 
-```	
+```
 EventData
 MiniportName	storahci
 MiniportEventId	19

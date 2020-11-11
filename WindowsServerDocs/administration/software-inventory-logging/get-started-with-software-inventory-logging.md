@@ -1,17 +1,11 @@
 ---
 title: Get Started with Software Inventory Logging
 description: Describes how to install and start using Software Inventory Logging
-ms.custom: na
-ms.prod: windows-server
-ms.technology: manage-software-inventory-logging
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed51c13c-7cbf-4144-a675-011fd29379d4
 author: brentfor
-ms.author: coreyp
-manager: dongill
+ms.author: brentf
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Get Started with Software Inventory Logging
@@ -39,9 +33,8 @@ Software Inventory Logging can assist server administrators in performing the fo
 -   Aggregating software and server inventory information for a wide variety of software asset management scenarios by enabling each server's Software Inventory Logging feature and choosing a web server target URI, and certificate thumbprint for authentication.
 
 ## See Also
-[Software Inventory Logging Aggregator](https://technet.microsoft.com/library/mt572043.aspx)<br>
+[Software Inventory Logging Aggregator](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/mt572043(v=ws.11))<br>
 [Manage Software Inventory Logging](manage-software-inventory-logging.md)<br>
-[Software Inventory Logging Cmdlets in Windows PowerShell](https://technet.microsoft.com/library/dn283390.aspx)<br>
+[Software Inventory Logging Cmdlets in Windows PowerShell](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)<br>
 [Microsoft Assessment and Planning Toolkit](https://www.microsoft.com/download/en/details.aspx?id=7826)
 [Volume Activation Management Tool](https://blogs.technet.com/b/volume-licensing/)
-

@@ -2,8 +2,6 @@
 title: Using Inherited Permissions with Access-based Enumeration
 description: This article describes how to use inherited permissions with access-based enumeration
 ms.date: 6/5/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -52,6 +50,6 @@ To limit which users can view a DFS folder, you must perform one of the followin
 
 4.  To change the inherited permissions for folders or namespace roots in a DFS namespace, use Windows Explorer or the **ICacls** command.
 
-## See also
+## Additional References
 
 -   [Create a DFS Namespace](create-a-dfs-namespace.md)

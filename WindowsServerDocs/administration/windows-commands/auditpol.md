@@ -1,59 +1,52 @@
 ---
 title: auditpol
-description: "Windows Commands topic for **auditpol** - Displays information about and performs functions to manipulate audit policies."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the auditpol command, which displays information about and performs functions to manipulate audit policies.
+ms.topic: reference
 ms.assetid: a02cfb9d-732f-4e77-aeba-f18265daa3af
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # auditpol
 
+Displays information about and performs functions to manipulate audit policies, including:
 
+- Setting and querying a system audit policy.
 
-Displays information about and performs functions to manipulate audit policies.
+- Setting and querying a per-user audit policy.
 
-For examples of how this command can be used, see the Examples section in each topic.
+- Setting and querying auditing options.
+
+- Setting and querying the security descriptor used to delegate access to an audit policy.
+
+- Reporting or backing up an audit policy to a comma-separated value (CSV) text file.
+
+- Loading an audit policy from a CSV text file.
+
+- Configuring global resource SACLs.
 
 ## Syntax
 
 ```
-Auditpol command [<sub-command><options>]
+auditpol command [<sub-command><options>]
 ```
 
-## Parameters
+### Parameters
 
-|Sub-command|Description|
-|-----------|-----------|
-|/get|Displays the current audit policy.</br>See [Auditpol get](auditpol-get.md) for syntax and options.|
-|/set|Sets the audit policy.</br>See [Auditpol set](auditpol-set.md) for syntax and options.|
-|/list|Displays selectable policy elements.</br>See [Auditpol list](auditpol-list.md) for syntax and options.|
-|/backup|Saves the audit policy to a file.</br>See [Auditpol backup](auditpol-backup.md) for syntax and options.|
-|/restore|Restores the audit policy from a file that was previously created by using auditpol /backup.</br>See [Auditpol restore](auditpol-restore.md) for syntax and options.|
-|/clear|Clears the audit policy.</br>See [Auditpol clear](auditpol-clear.md) for syntax and options.|
-|/remove|Removes all per-user audit policy settings and disables all system audit policy settings.</br>See [Auditpol remove](auditpol-remove.md) for syntax and options.|
-|/resourceSACL|Configures global resource system access control lists (SACLs).</br>Note: Applies only to Windows 7 and Windows Server 2008 R2.</br>See [Auditpol resourceSACL](auditpol-resourcesacl.md).|
-|/?|Displays help at the command prompt.|
+| Sub-command | Description |
+| ----------- | ----------- |
+| /get | Displays the current audit policy. For more information, see [auditpol get](auditpol-get.md) for syntax and options. |
+| /set | Sets the audit policy. For more information, see [auditpol set](auditpol-set.md) for syntax and options. |
+| /list | Displays selectable policy elements. For more information, see [auditpol list](auditpol-list.md) for syntax and options. |
+| /backup | Saves the audit policy to a file. For more information, see [auditpol backup](auditpol-backup.md) for syntax and options. |
+| /restore | Restores the audit policy from a file that was previously created by using auditpol /backup. For more information, see [auditpol restore](auditpol-restore.md) for syntax and options. |
+| /clear | Clears the audit policy. For more information, see [auditpol clear](auditpol-clear.md) for syntax and options. |
+| /remove | Removes all per-user audit policy settings and disables all system audit policy settings. For more information, see [auditpol remove](auditpol-remove.md) for syntax and options. |
+| /resourceSACL | Configures global resource system access control lists (SACLs). **Note:** Applies only to Windows 7 and Windows Server 2008 R2. For more information, see [auditpol resourceSACL](auditpol-resourcesacl.md). |
+| /?| Displays help at the command prompt. |
 
-## Remarks
+## Additional References
 
-The audit policy command-line tool can be used to:
--   Set and query a system audit policy.
--   Set and query a per-user audit policy.
--   Set and query auditing options.
--   Set and query the security descriptor used to delegate access to an audit policy.
--   Report or back up an audit policy to a comma-separated value (CSV) text file.
--   Load an audit policy from a CSV text file.
--   Configure global resource SACLs.
-
-#### Additional references
-
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,13 +1,9 @@
 ---
 title: Gateway bandwidth allocation
-description: 
-manager: dougkim
-ms.prod: windows-server
-ms.technology: networking-hv-switch
+manager: grcusanz
 ms.topic: get-started-article
-ms.assetid: 
-ms.author: pashort
-author: shortpatti
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/22/2018
 ---
 
@@ -58,12 +54,12 @@ Remaining available capacity on the gateway = Total capacity of the gateway – 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25–5*2 = 15 Gbps
 
-Remaining IPsec throughput that you can allocate on the gateway 
+Remaining IPsec throughput that you can allocate on the gateway
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5-2 = 3 Gbps
 
 Remaining GRE throughput that you can allocate on the gateway = Remaining
-capacity of gateway/GRE throughput ratio 
+capacity of gateway/GRE throughput ratio
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15*3/5 = 9 Gbps
 

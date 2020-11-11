@@ -1,11 +1,9 @@
 ---
 title: Install trusted TPM root certificates
-ms.custom: na
-ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
-ms.technology: security-guarded-fabric
+ms.author: ryanpu
 ms.date: 06/27/2019
 ---
 
@@ -37,12 +35,12 @@ Repeat the following steps on **every HGS server**:
     ```powershell
     Get-AuthenticodeSignature .\TrustedTpm.cab
     ```
-    
+
     Here's some example output:
-    
+
     ```
     Directory: C:\Users\Administrator\Downloads
-        
+
     SignerCertificate                         Status                                 Path
     -----------------                         ------                                 ----
     0DD6D4D4F46C0C7C2671962C4D361D607E370940  Valid                                  TrustedTpm.cab

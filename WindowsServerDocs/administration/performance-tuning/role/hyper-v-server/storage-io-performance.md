@@ -1,10 +1,8 @@
 ---
 title: Hyper-V Storage I/O Performance
 description: Storage i/o performance considerations in Hyper-V performance tuning
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Asmahi; SandySp; JoPoulso
+ms.author: asmahi
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -227,7 +225,7 @@ Some of the limitations are as follows:
 
 -   Shared VHDX is not supported
 
-For more info on Storage Quality of Service, see [Storage Quality of Service for Hyper-V](https://technet.microsoft.com/library/dn282281.aspx).
+For more info on Storage Quality of Service, see [Storage Quality of Service for Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn282281(v=ws.11)).
 
 ### NUMA I/O
 
@@ -265,7 +263,7 @@ Only Hyper-V-specific SCSI, enlightened IDE, and Virtual Fibre Channel controlle
 
 For these reasons, we recommend that you use VHDX files attached to a SCSI controller when not using Virtual Fibre Channel disks.
 
-## See also
+## Additional References
 
 -   [Hyper-V terminology](terminology.md)
 

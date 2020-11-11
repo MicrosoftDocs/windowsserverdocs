@@ -1,45 +1,45 @@
 ---
 title: lpq
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: bb6abcc4-310a-4fa4-927b-4084b62ca02e vhorne
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+description: Reference article for the lpq command, which displays the status of a print queue on a computer running Line printer Daemon (LPD).
+ms.topic: reference
+ms.assetid: bb6abcc4-310a-4fa4-927b-4084b62ca02e
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
+
 # lpq
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays the status of a print queue on a computer running Line printer Daemon (LPD).  
+Displays the status of a print queue on a computer running Line printer Daemon (LPD).
 
-## Syntax  
-```  
-lpq -S <ServerName> -P <printerName> [-l]  
-```  
-## Parameters  
+## Syntax
 
-|    Parameter     |                                                                        Description                                                                        |
-|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| -S <ServerName>  | Specifies (by name or IP address) the computer or printer sharing device that hosts the LPD print queue with a status that you want to display. Required. |
-| -P <printerName> |                           Specifies (by name) the printer for the print queue with a status that you want to display. Required.                           |
-|        -l        |                                      Specifies that you want to display details about the status of the print queue.                                      |
-|        /?        |                                                           Displays help at the command prompt.                                                            |
+```
+lpq -S <servername> -P <printername> [-l]
+```
 
-## Remarks  
-The **-S** and **-P** parameters are case sensitive and must be typed in upper-case letters.  
-## <a name="BKMK_examples"></a>Examples  
-This example shows how to display the status of the Laserprinter1 printer queue on an LPD host at 10.0.0.45:  
-```  
-lpq -S 10.0.0.45 -P Laserprinter1  
-```  
-#### additional references  
-[Command-Line Syntax Key](command-line-syntax-key.md)  
-[print Command Reference](print-command-reference.md)  
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| -S `<servername>` | Specifies (by name or IP address) the computer or printer sharing device that hosts the LPD print queue with a status that you want to display. This parameter is required and must be capitalized. |
+| -P `<Printername>` | Specifies (by name) the printer for the print queue with a status that you want to display. This parameter is required and must be capitalized. |
+| -l | Specifies that you want to display details about the status of the print queue. |
+| /? | Displays help at the command prompt. |
+
+### Examples
+
+To display the status of the *Laserprinter1* printer queue on an LPD host at *10.0.0.45*, type:
+
+```
+lpq -S 10.0.0.45 -P Laserprinter1
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Print Command Reference](print-command-reference.md)

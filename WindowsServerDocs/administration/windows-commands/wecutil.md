@@ -1,41 +1,34 @@
 ---
 title: wecutil
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for wecutil, which lets you create and manage subscriptions to events that are forwarded from remote computers.
+ms.topic: reference
 ms.assetid: 0c82a6cb-d652-429c-9c3d-0f568c78d54b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dansimps
-
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ---
 
 # wecutil
 
 
 
-Enables you to create and manage subscriptions to events that are forwarded from remote computers. The remote computer must support the WS-Management protocol. For examples of how to use this command, see [Examples](#BKMK_examples).
+Enables you to create and manage subscriptions to events that are forwarded from remote computers. The remote computer must support the WS-Management protocol.
 
 
 ## Syntax
 
 ```
-wecutil  [{es | enum-subscription}] 
-[{gs | get-subscription} <Subid> [/f:<Format>] [/uni:<Unicode>]] 
-[{gr | get-subscriptionruntimestatus} <Subid> [<Eventsource> …]] 
-[{ss | set-subscription} [<Subid> [/e:[<Subenabled>]] [/esa:<Address>] [/ese:[<Srcenabled>]] [/aes] [/res] [/un:<Username>] [/up:<Password>] [/d:<Desc>] [/uri:<Uri>] [/cm:<Configmode>] [/ex:<Expires>] [/q:<Query>] [/dia:<Dialect>] [/tn:<Transportname>] [/tp:<Transportport>] [/dm:<Deliverymode>] [/dmi:<Deliverymax>] [/dmlt:<Deliverytime>] [/hi:<Heartbeat>] [/cf:<Content>] [/l:<Locale>] [/ree:[<Readexist>]] [/lf:<Logfile>] [/pn:<Publishername>] [/essp:<Enableport>] [/hn:<Hostname>] [/ct:<Type>]] [/c:<Configfile> [/cun:<Username> /cup:<Password>]]] 
-[{cs | create-subscription} <Configfile> [/cun:<Username> /cup:<Password>]] 
-[{ds | delete-subscription} <Subid>] 
-[{rs | retry-subscription} <Subid> [<Eventsource>…]] 
+wecutil  [{es | enum-subscription}]
+[{gs | get-subscription} <Subid> [/f:<Format>] [/uni:<Unicode>]]
+[{gr | get-subscriptionruntimestatus} <Subid> [<Eventsource> …]]
+[{ss | set-subscription} [<Subid> [/e:[<Subenabled>]] [/esa:<Address>] [/ese:[<Srcenabled>]] [/aes] [/res] [/un:<Username>] [/up:<Password>] [/d:<Desc>] [/uri:<Uri>] [/cm:<Configmode>] [/ex:<Expires>] [/q:<Query>] [/dia:<Dialect>] [/tn:<Transportname>] [/tp:<Transportport>] [/dm:<Deliverymode>] [/dmi:<Deliverymax>] [/dmlt:<Deliverytime>] [/hi:<Heartbeat>] [/cf:<Content>] [/l:<Locale>] [/ree:[<Readexist>]] [/lf:<Logfile>] [/pn:<Publishername>] [/essp:<Enableport>] [/hn:<Hostname>] [/ct:<Type>]] [/c:<Configfile> [/cun:<Username> /cup:<Password>]]]
+[{cs | create-subscription} <Configfile> [/cun:<Username> /cup:<Password>]]
+[{ds | delete-subscription} <Subid>]
+[{rs | retry-subscription} <Subid> [<Eventsource>…]]
 [{qc | quick-config} [/q:[<Quiet>]]].
 ```
 
-## Parameters
+### Parameters
 
 |Parameter|Description|
 |---------|-----------|
@@ -74,7 +67,7 @@ wecutil  [{es | enum-subscription}]
 |/dmlt:\<Deliverytime>|Sets the maximum latency in delivering a batch of events. \<Deliverytime> is the number of milliseconds. This option is only valid if **/cm** is set to Custom.|
 |/hi:\<Heartbeat>|Defines the heartbeat interval. \<Heartbeat> is the number of milliseconds. This option is only valid if **/cm** is set to Custom.|
 |/cf:\<Content>|Specifies the format of the events that are returned. \<Content> can be Events or RenderedText. When the value is RenderedText, the events are returned with the localized strings (such as event description) attached to the event. The default value is RenderedText.|
-|/l:\<Locale>|Specifies the locale for delivery of the localized strings in RenderedText format. \<Locale> is a language and country/region identifier, for example, "EN-us". This option is only valid if the **/cf** option is set to RenderedText.|
+|/l:\<Locale>|Specifies the locale for delivery of the localized strings in RenderedText format. \<Locale> is a language and country/region identifier, for example, EN-us. This option is only valid if the **/cf** option is set to RenderedText.|
 |/ree:[\<Readexist>]|Identifies the events that are delivered for the subscription. \<Readexist> can true or false. When the <Readexist> is true, all existing events are read from the subscription event sources. When the <Readexist> is false, only future (arriving) events are delivered. The default value is true for a **/ree** option without a value. If no **/ree** option is specified, the default value is false.|
 |/lf:\<Logfile>|Specifies the local event log that is used to store events received from the event sources.|
 |/pn:\<Publishername>|Specifies the publisher name. It must be a publisher that owns or imports the log specified by the **/lf** option.|
@@ -90,9 +83,9 @@ wecutil  [{es | enum-subscription}]
 > [!IMPORTANT]
 > If you receive the message, “The RPC server is unavailable? when you try to run wecutil, you need to start the Windows Event Collector service (wecsvc). To start wecsvc, at an elevated command prompt type net start wecsvc.
 
-- The following example shows the contents of a configuration file:  
+- To shows the contents of a configuration file:
   ```
-  <Subscription xmlns="https://schemas.microsoft.com/2006/03/windows/events/subscription">
+  <Subscription xmlns=https://schemas.microsoft.com/2006/03/windows/events/subscription>
   <Uri>https://schemas.microsoft.com/wbem/wsman/1/windows/EventLog</Uri>
   <!-- Use Normal (default), Custom, MinLatency, MinBandwidth -->
   <ConfigurationMode>Normal</ConfigurationMode>
@@ -100,24 +93,24 @@ wecutil  [{es | enum-subscription}]
   <SubscriptionId>SampleSubscription</SubscriptionId>
   <Query><![CDATA[
   <QueryList>
-  <Query Path="Application">
+  <Query Path=Application>
   <Select>*</Select>
   </Query>
   </QueryList>
   ]]></Query>
   <EventSources>
-  <EventSource Enabled="true">
+  <EventSource Enabled=true>
   <Address>mySource.myDomain.com</Address>
   <UserName>myUserName</UserName>
   <Password>*</Password>
   </EventSource>
   </EventSources>
   <CredentialsType>Default</CredentialsType>
-  <Locale Language="EN-US"></Locale>
+  <Locale Language=EN-US></Locale>
   </Subscription>
   ```
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 Output configuration information for a subscription named sub1:
 ```
@@ -160,6 +153,6 @@ Delete a subscription named sub1:
 wecutil ds sub1
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

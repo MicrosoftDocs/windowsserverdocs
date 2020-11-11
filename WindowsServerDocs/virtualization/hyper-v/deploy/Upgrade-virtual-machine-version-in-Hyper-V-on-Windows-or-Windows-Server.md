@@ -1,11 +1,6 @@
 ---
 title: Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server
-description: "Gives instructions and considerations for upgrading the version of a virtual machine"
-ms.prod: windows-server
-ms.service: na
-manager: dongill
-ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
+description: Gives instructions and considerations for upgrading the version of a virtual machine
 ms.topic: article
 ms.assetid: 897f2454-5aee-445c-a63e-f386f514a0f6
 author: jasongerend
@@ -22,13 +17,13 @@ Make the latest Hyper-V features available on your virtual machines by upgrading
 - You upgrade the cluster functional level.
 - You're sure that you won't need to move the virtual machine back to a Hyper-V host that runs a previous version of Windows or Windows Server.
 
-For more information, see [Cluster Operating System Rolling Upgrade](../../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) and [Perform a rolling upgrade of a Hyper-V host cluster in VMM](https://docs.microsoft.com/system-center/vmm/hyper-v-rolling-upgrade).
+For more information, see [Cluster Operating System Rolling Upgrade](../../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md) and [Perform a rolling upgrade of a Hyper-V host cluster in VMM](/system-center/vmm/hyper-v-rolling-upgrade).
 
 ## Step 1: Check the virtual machine configuration versions
 
 1. On the Windows desktop, click the Start button and type any part of the name **Windows PowerShell**.
 2. Right-click Windows PowerShell and select **Run as Administrator**.
-3. Use the [Get-VM](https://docs.microsoft.com/powershell/module/hyper-v/get-vm)cmdlet. Run the following command to get the versions of your virtual machines.
+3. Use the [Get-VM](/powershell/module/hyper-v/get-vm)cmdlet. Run the following command to get the versions of your virtual machines.
 
 ```PowerShell
 Get-VM * | Format-Table Name, Version
@@ -41,7 +36,7 @@ You can also see the configuration version in Hyper-V Manager by selecting the v
 1. Shut down the virtual machine in Hyper-V Manager.
 2. Select Action > Upgrade Configuration Version. If this option isn't available for the virtual machine, then it's already at the highest configuration version supported by the Hyper-V host.
 
-To upgrade the virtual machine configuration version by using Windows PowerShell, use the [Update-VMVersion](https://docs.microsoft.com/powershell/module/hyper-v/update-vmversion) cmdlet. Run the following command where vmname is the name of the virtual machine.
+To upgrade the virtual machine configuration version by using Windows PowerShell, use the [Update-VMVersion](/powershell/module/hyper-v/update-vmversion) cmdlet. Run the following command where vmname is the name of the virtual machine.
 
 ```PowerShell
 Update-VMVersion <vmname>
@@ -49,13 +44,13 @@ Update-VMVersion <vmname>
 
 ## Supported virtual machine configuration versions
 
-Run the PowerShell cmdlet [Get-VMHostSupportedVersion](https://docs.microsoft.com/powershell/module/hyper-v/get-vmhostsupportedversion) to see what virtual machine configuration versions your Hyper-V Host supports. When you create a virtual machine, it's created with the default configuration version. To see what the default is, run the following command.
+Run the PowerShell cmdlet [Get-VMHostSupportedVersion](/powershell/module/hyper-v/get-vmhostsupportedversion) to see what virtual machine configuration versions your Hyper-V Host supports. When you create a virtual machine, it's created with the default configuration version. To see what the default is, run the following command.
 
 ```PowerShell
 Get-VMHostSupportedVersion -Default
 ```
 
-If you need to create a virtual machine that you can move to a Hyper-V Host that runs an older version of Windows, use the [New-VM](https://docs.microsoft.com/powershell/module/hyper-v/new-vm) cmdlet with the -version parameter. For example, to create a virtual machine that you can move to a Hyper-V host that runs Windows Server 2012 R2 , run the following command. This command will create a virtual machine named "WindowsCV5" with a configuration version 5.0.
+If you need to create a virtual machine that you can move to a Hyper-V Host that runs an older version of Windows, use the [New-VM](/powershell/module/hyper-v/new-vm) cmdlet with the -version parameter. For example, to create a virtual machine that you can move to a Hyper-V host that runs Windows Server 2012 R2 , run the following command. This command will create a virtual machine named "WindowsCV5" with a configuration version 5.0.
 
 ```PowerShell
 New-VM -Name "WindowsCV5" -Version 5.0
@@ -80,7 +75,7 @@ The following table lists the VM configuration versions that are supported on ho
 
 ### Supported VM configuration versions for semi-annual channel hosts
 
-The following table lists the VM configuration versions for hosts running a currently supported semi-annual channel version of Windows. To get more information on semi-annual channel versions of Windows, visit the following pages for [Windows Server](../../../get-started-19/servicing-channels-19.md) and [Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-overview#servicing-channels)
+The following table lists the VM configuration versions for hosts running a currently supported semi-annual channel version of Windows. To get more information on semi-annual channel versions of Windows, visit the following pages for [Windows Server](../../../get-started-19/servicing-channels-19.md) and [Windows 10](/windows/deployment/update/waas-overview#servicing-channels)
 
 | Hyper-V host Windows version | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
 | --- |---|---|---|---|---|---|---|---|---|---|
@@ -114,7 +109,7 @@ The following table lists descriptions, file name extensions, and default locati
 
 If you have virtual machines that you created with an earlier version of Hyper-V, some features that are available on the newer host OS may not work with those virtual machines until you update the configuration version.
 
-As a general guidance, we recommend updating the configuration version once you have successfully upgraded the virtualization hosts to a newer version of Windows and feel confident that you do not need to roll back. When you are using the [cluster OS rolling upgrade](https://docs.microsoft.com/windows-server/failover-clustering/Cluster-Operating-System-Rolling-Upgrade) feature, this would typically be after updating the cluster functional level. This way, you will benefit from new features and internal changes and optimizations as well.
+As a general guidance, we recommend updating the configuration version once you have successfully upgraded the virtualization hosts to a newer version of Windows and feel confident that you do not need to roll back. When you are using the [cluster OS rolling upgrade](../../../failover-clustering/cluster-operating-system-rolling-upgrade.md) feature, this would typically be after updating the cluster functional level. This way, you will benefit from new features and internal changes and optimizations as well.
 
 >[!NOTE]
 >Once the VM configuration version is updated, the VM won't be able to start on hosts that do not support the updated configuration version.
@@ -138,8 +133,7 @@ The following table shows the minimum virtual machine configuration version requ
 |Large memory VMs|8.0|
 |Increase the default maximum number for virtual devices to 64 per device (e.g. networking and assigned devices)|8.3|
 |Allow additional processor features for Perfmon|9.0|
-|Automatically expose [simultaneous multithreading](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/manage-hyper-v-scheduler-types#background) configuration for VMs running on hosts using the [Core Scheduler](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/manage-hyper-v-scheduler-types#windows-server-2019-hyper-v-defaults-to-using-the-core-scheduler)|9.0|
+|Automatically expose [simultaneous multithreading](../manage/manage-hyper-v-scheduler-types.md#background) configuration for VMs running on hosts using the [Core Scheduler](../manage/manage-hyper-v-scheduler-types.md#windows-server-2019-hyper-v-defaults-to-using-the-core-scheduler)|9.0|
 |Hibernation support|9.0|
 
 For more information about these features, see [What's new in Hyper-V on Windows Server](../What-s-new-in-Hyper-V-on-Windows.md).
-

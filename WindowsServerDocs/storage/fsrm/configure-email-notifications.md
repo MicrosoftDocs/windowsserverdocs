@@ -2,8 +2,6 @@
 title: Configure E-Mail Notifications
 description: This article describes how to configure e-mail notifications
 ms.date: 7/7/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -34,6 +32,6 @@ To send these notifications and storage reports, you must specify the SMTP serve
 6. Click **OK**.
 
 
-## See also
+## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)

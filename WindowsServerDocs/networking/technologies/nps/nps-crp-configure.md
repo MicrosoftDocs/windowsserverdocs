@@ -2,12 +2,10 @@
 title: Configure Connection Request Policies
 description: This topic provides information on how to configure Connection Request Policies in Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: f62c6a67-4dda-47f8-8bdf-9b76c37953e6
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Configure Connection Request Policies
@@ -32,9 +30,9 @@ If you want the NPS to act as both a RADIUS server, processing connection reques
 
 Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure.
 
-### To add a new connection request policy 
+### To add a new connection request policy
 
-1. In Server Manager, click **Tools**, and then click **Network Policy Server** to open the NPS console. 
+1. In Server Manager, click **Tools**, and then click **Network Policy Server** to open the NPS console.
 2. In the console tree, double-click **Policies**.
 3. Right-click **Connection Request Policies**, and then click **New Connection Request Policy**.
 4. Use the New Connection Request Policy Wizard to configure your connection request policy and, if not previously configured, a remote RADIUS server group.

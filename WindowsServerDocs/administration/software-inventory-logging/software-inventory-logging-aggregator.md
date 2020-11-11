@@ -1,24 +1,20 @@
 ---
 title: Software Inventory Logging Aggregator
-description: Describes how to install and manage Software Inventory Logging Aggregator
-ms.custom: na
-ms.prod: windows-server
-ms.technology: manage-software-inventory-logging
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
+description: Describes how to install and manage Software Inventory Logging Aggregator-software-inventory-logging
 ms.topic: article
 ms.assetid: e4230a75-6bcd-47d9-ba92-a052a90a6abc
 author: brentfor
-ms.author: coreyp
-manager: dongill
+ms.author: brentf
+manager: mtillman
 ms.date: 10/16/2017
 ---
+
 # Software Inventory Logging Aggregator
 
->Applies To: Windows Server 2012 R2
+> Applies To: Windows Server 2012 R2
 
 ## What is Software Inventory Logging Aggregator?
+
 Software Inventory Logging Aggregator (SILA) receives, aggregates, and produces basic reports of the number and types of Microsoft enterprise software installed on Windows Servers in a data center.
 
 SILA is software that you install on Windows Server, but is not included in the Windows Server installation. To install the software, first download it for free from the Windows Download Center: [Software Inventory Logging Aggregator 1.0 for Windows Server](https://www.microsoft.com/download/details.aspx?id=49046)
@@ -29,6 +25,7 @@ The Software Inventory Logging framework is intended to reduce the operational c
 > No Data is sent to Microsoft with the use of this software.
 
 ### Data SIL Collects Over Time
+
 Once deployed correctly, the following data can be viewed at the SIL Aggregator:
 
 -   Unique Windows Server installs in your data center
@@ -55,7 +52,7 @@ Once deployed correctly, the following data can be viewed at the SIL Aggregator:
 
 -   Count and location of SQL Server installations over time \(only SKUs and editions that require a license\)
 
--   Lists of software installed in Add\/Remove Programs
+-   Lists of software installed in Add/Remove Programs
 
 ### Who will use SIL?
 
@@ -101,7 +98,7 @@ When adding credentials to the SIL Aggregator to enable polling operations, you 
 
 On a Windows Server host that you want to set up for polling by the SIL Aggregator, and to avoid using a user in the administrators group, follow these steps to give just enough access to a user account:
 
-##### To setup a polling account
+#### To setup a polling account
 
 1.  On the Windows Server Hyper-V host you want to poll from your SIL Aggregator, create a local user account using **Computer Management** in Windows (be sure to uncheck the box that forces a password change at first logon).
 
@@ -160,7 +157,7 @@ There are some things you need to make sure of before installing SIL Aggregator 
 
     If SQL Authentication is desired, **you have the password for an account that has SQL administrative privileges**.
 
-##### To install Software Inventory Logging Aggregator
+#### To install Software Inventory Logging Aggregator
 
 1.  Double-click **Setup.exe** to start the installation.
 
@@ -176,7 +173,7 @@ There are some things you need to make sure of before installing SIL Aggregator 
 
 6.  In **Choose an Account Type**, select either **local user** or **gMSA**, depending on your preference.
 
-    Choosing the local user account option will create a local user with an auto generated strong password. This account will be used for all SIL Aggregator services and task operations on the local server.  Using Group Managed Service Accounts (gMSA) is recommended if the Aggregator is part of an Active Directory domain (Windows Server 2012 and above). For more information on gMSA, see: [Group Managed Service Accounts Overview](https://technet.microsoft.com/library/hh831782.aspx)
+    Choosing the local user account option will create a local user with an auto generated strong password. This account will be used for all SIL Aggregator services and task operations on the local server.  Using Group Managed Service Accounts (gMSA) is recommended if the Aggregator is part of an Active Directory domain (Windows Server 2012 and above). For more information on gMSA, see: [Group Managed Service Accounts Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831782(v=ws.11))
 
     -   The gMSA account option must be used if you plan to run the SQL Server database on a separate server from the SIL Aggregator.
 
@@ -196,7 +193,7 @@ There are some things you need to make sure of before installing SIL Aggregator 
 
 ### Uninstalling SIL Aggregator
 
-##### To uninstall Software Inventory Logging Aggregator
+#### To uninstall Software Inventory Logging Aggregator
 
 1.  Open **PowerShell** as an administrator and then type `Stop-SilAggregator`. When the prompt returns, SIL Aggregator has stopped.
 
@@ -280,7 +277,7 @@ Once you have followed these steps to add physical hosts running virtual Windows
 ## Architectural Overview
 SIL works in both push and pull modes and consists of two components working in parallel: The Software Inventory Logging (SIL) feature in Windows Server, and the Software Inventory Logging Aggregator (SILA) downloadable MSI. The servers to be inventoried push software inventory data over HTTPS, using SIL, to the SIL Aggregator (every hour at random points within each hour). The Aggregator in turn, polls, or queries, the physical hypervisor hosts to pull hardware inventory data each hour. Both push and pull need to be configured properly to enable full functionality of SIL. These can be configured in any order. However, cube processing on the Aggregator occurs once a day, so data captured at the aggregator, via either push or pull, will not appear in reports until the following day.
 
-![](../media/software-inventory-logging/SILA_Architecture.png)
+![Software Inventory Logging Aggregator diagram](../media/software-inventory-logging/SILA_Architecture.png)
 
 > [!IMPORTANT]
 > No data is sent to Microsoft with the use of this software.
@@ -316,7 +313,7 @@ You will need a valid client SSL certificate in .pfx format to use these steps. 
 
 -   `Set-sillogging –targeturi "https://`**<machinename of your SIL Aggregator>** `–certificatethumbprint`
 
-> [!NOTE] 
+> [!NOTE]
 > Use the Certificate thumbprint from your client pfx file and added to your SIL Aggregator using the **Set-SilAggregator `-AddCertificateThumbprint** cmdlet.
 
 -   `Start-sillogging`
@@ -326,7 +323,7 @@ Whenever a SIL Aggregator cannot be reached, SIL inventory data will cache local
 Add `Publish-SilData` to the above list if pushing SIL data to a new SIL Aggregator after successful pushes to an old aggregator (this will send a complete complement of SIL data, which the new aggregator will need for this machine).
 
 ## Software Inventory Logging Aggregator Reports
-![](../media/software-inventory-logging/SILA_Report.png)
+![Image of the Software Inventory Logging Aggregator report](../media/software-inventory-logging/SILA_Report.png)
 
 ### Cube Processing
 On a Software Inventory Logging Aggregator, the SQL Server Analysis Services cube will be processed once a day at 3:00:00 AM local system time. Reports will reflect all data up until that time, but nothing after that time on the same day.
@@ -379,23 +376,23 @@ Following are descriptions of each column on the **Windows Server Detail** tab o
 |Column Header|Description|
 |-----------------|---------------|
 |Calendar Month|Data in reports is grouped by month, most recent first. Data within the month is not listed in a specific order.|
-|Host Name|Network name, or FQDN, of the physical host the SIL Aggregator is successfully polling.<br /><br />Use the Get-SilVMHost cmdlet to find hosts that have been added but are not, or no longer, being polled successfully. The last successful poll will be displayed.|
+|Host Name|Network name, or FQDN, of the physical host the SIL Aggregator is successfully polling.<p>Use the Get-SilVMHost cmdlet to find hosts that have been added but are not, or no longer, being polled successfully. The last successful poll will be displayed.|
 |Host Type|Operating System manufacturer on the physical host.|
 |Hypervisor Type|Hypervisor manufacturer on the physical host.|
 |Processor Manufacturer|Processor manufacturer of the processors on the physical host.|
 |Processor Model|Processor model of the processors on the physical host.|
 |Is Hyper Threading Enabled?|Displays as either True or False depending on if hyper threading is enabled on the processors of the physical host.|
 |VM Name|The network name, or FQDN, of the Windows Server virtual machine. If the Aggregator has not received data from this machine over HTTPS, the friendly name of the VM in the hypervisor is listed.|
-|Simultaneously Running Windows Server VMs by host|Count of simultaneously running Windows Server VMs on the host. The highest number in the month for that host is the high-water mark count listed and captured at that point in time.<br /><br />See **High-Water Mark** section of this documentation.<br /><br />Physical hosts with Windows Server installed, or with Windows Server installed and no known Windows Server VMs running, will always have a count of one. If at least one known Windows Server VM is running on the host, and Windows Server is running on the host itself, the host OS is not part of the count.|
+|Simultaneously Running Windows Server VMs by host|Count of simultaneously running Windows Server VMs on the host. The highest number in the month for that host is the high-water mark count listed and captured at that point in time.<p>See **High-Water Mark** section of this documentation.<p>Physical hosts with Windows Server installed, or with Windows Server installed and no known Windows Server VMs running, will always have a count of one. If at least one known Windows Server VM is running on the host, and Windows Server is running on the host itself, the host OS is not part of the count.|
 |Physical Processor Count|Number of physical processors installed on the physical host.|
 |Physical Core Count|Number of physical processor cores installed on the physical host.|
 |Virtual Processor Count|Number of virtual processors that Windows recognizes within the VM. This value only comes from data forwarded over HTTPS using SIL in a Windows Server.|
-|Poll Date Time|Date and time of the latest high-water mark point of Windows Server VMs simultaneously running on that physical host.<br /><br />See **Poll Date Time** section of this documentation.|
+|Poll Date Time|Date and time of the latest high-water mark point of Windows Server VMs simultaneously running on that physical host.<p>See **Poll Date Time** section of this documentation.|
 |VM Last Seen Date Time|Date and time when the Aggregator last received data inventory over HTTPS from this Windows Server VM.|
-|Host Last Seen Date Time|Date and time when the Aggregator last received data inventory over HTTPS from this Windows Server physical host.<br /><br />It is supported to have physical hosts, running Windows Server and HyperV, to enable SIL and forward inventory data over HTTPS to a SIL Aggregator.|
+|Host Last Seen Date Time|Date and time when the Aggregator last received data inventory over HTTPS from this Windows Server physical host.<p>It is supported to have physical hosts, running Windows Server and HyperV, to enable SIL and forward inventory data over HTTPS to a SIL Aggregator.|
 
 ## SIL Aggregator Cmdlets Detail
-Following are details of the SIL Aggregator cmdlets. For the full cmdlet documentation, see: [SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/library/mt548455.aspx)
+Following are details of the SIL Aggregator cmdlets. For the full cmdlet documentation, see: [SIL Aggregator PowerShell cmdlets](/previous-versions/windows/powershell-scripting/mt548455(v=wps.640))
 
 ### Publish-SilReport
 
@@ -474,7 +471,7 @@ With the `Set-SilAggregator` cmdlet you can:
 
 -   Note that the `–StartTime` and `–Endtime` parameters will show report data from the first of the month of start date and the last of the month of the end date.
 
-![](../media/software-inventory-logging/SILA_Get-SILAggregator.png)
+![Image of the completed Get-AggregatorData cmdlet](../media/software-inventory-logging/SILA_Get-SILAggregator.png)
 
 ### Get-SilVMHost
 
@@ -589,8 +586,7 @@ When you want to start inventorying servers in your environment with a different
 
 ## See Also
 [Software Inventory Logging Aggregator 1.0 for Windows Server](https://www.microsoft.com/download/details.aspx?id=49046)<br>
-[SIL Aggregator PowerShell cmdlets](https://technet.microsoft.com/library/mt548455.aspx)<br>
-[SIL PowerShell cmdlets](https://technet.microsoft.com/library/dn283390.aspx)<br>
-[An Overview of SIL](https://technet.microsoft.com/library/dn268301.aspx)<br>
-[Managing SIL](https://technet.microsoft.com/library/dn383584.aspx)
-
+[SIL Aggregator PowerShell cmdlets](/previous-versions/windows/powershell-scripting/mt548455(v=wps.640))<br>
+[SIL PowerShell cmdlets](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)<br>
+[An Overview of SIL](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn268301(v=ws.11))<br>
+[Managing SIL](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383584(v=ws.11))

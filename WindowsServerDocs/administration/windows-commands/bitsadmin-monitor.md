@@ -1,53 +1,41 @@
 ---
 title: bitsadmin monitor
-description: "Windows Commands topic for **bitsadmin monitor** - 
-Monitors jobs in the transfer queue that the current user owns."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin monitor command, which monitors jobs in the transfer queue that are owned by the current user.
+ms.topic: reference
 ms.assetid: 2c424d27-e011-49c2-b579-a2c235467c39
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin monitor
 
-
-
-Monitors jobs in the transfer queue that the current user owns.
+Monitors jobs in the transfer queue that are owned by the current user.
 
 ## Syntax
 
 ```
-bitsadmin /Monitor [/allusers] [/refresh <Seconds>]
+bitsadmin /monitor [/allusers] [/refresh <seconds>]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Allusers|Optional—monitors jobs for all users.|
-|Refresh|Optional—refreshes the data at an interval specified by *Seconds*. The default refresh interval is five seconds.|
+| Parameter | Description |
+| -------------- | -------------- |
+| /allusers | Optional. Monitors jobs for all users. You must have administrator privileges to use this parameter. |
+| /refresh | Optional. Refreshes the data at an interval specified by `<seconds>`. The default refresh interval is five seconds. To stop the refresh, press CTRL+C. |
 
-## Remarks
+## Examples
 
-You must have administrator privileges to use the **Allusers** parameter.
+To monitor the transfer queue for jobs owned by the current user and refreshes the information every 60 seconds.
 
-Use CTRL+C to stop the refresh.
-
-## <a name="BKMK_examples"></a>Examples
-
-The following example monitors the transfer queue for jobs owned by the current user and refreshes the information every 60 seconds.
 ```
-C:\>bitsadmin /Monitor /refesh 60
+bitsadmin /monitor /refresh 60
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

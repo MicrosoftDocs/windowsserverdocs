@@ -1,13 +1,11 @@
 ---
 ms.assetid: f0d4cecc-5a03-448c-bef9-86c4730b4eb0
 title: Virtual Machine Load Balancing overview
-ms.prod: windows-server
-ms.technology: storage-failover-clustering
 ms.topic: article
-author: bhattacharyaz
-manager: eldenc 
-ms.author: subhatt 
-ms.date: 09/19/2016 
+manager: eldenc
+ms.author: johnmar
+author: JasonGerend
+ms.date: 09/19/2016
 ---
 # Virtual Machine Load Balancing overview
 

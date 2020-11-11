@@ -1,14 +1,10 @@
 ---
 ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
-title: Windows Time Service
-description:
-author: shortpatti
-ms.author: pashort
-manager: dougkim
+title: Windows Time Service (W32Time)
+author: dahavey
+ms.author: dahavey
 ms.date: 05/08/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: networking
 ---
 
 # Windows Time Service (W32Time)
@@ -28,9 +24,9 @@ In the Windows Time Service (W32Time) topic, the following content is available:
 
 
 ## Related Topics
-For more information about the domain hierarchy and scoring system, see the [“What is Windows Time Service?”](https://blogs.msdn.microsoft.com/w32time/2007/07/07/what-is-windows-time-service/) blog post.
+For more information about the domain hierarchy and scoring system, see the ["What is Windows Time Service?"](/archive/blogs/w32time/what-is-windows-time-service) blog post.
 
-The windows time provider plugin model is [documented on TechNet](https://msdn.microsoft.com/library/windows/desktop/ms725475%28v=vs.85%29.aspx).
+The windows time provider plugin model is [documented on TechNet](/windows/win32/sysinfo/time-provider).
 
 An addendum referenced by the Windows 2016 Accurate Time article can be downloaded [here](https://windocs.blob.core.windows.net/windocs/WindowsTimeSyncAccuracy_Addendum.pdf)
 

@@ -1,49 +1,43 @@
 ---
 title: bitsadmin getreplyprogress
-description: "Windows Commands topic for **bitsadmin getreplyprogress** - Retrieves the size and progress of the server reply."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin getreplyprogress command, which retrieves the size and progress of the server upload-reply.
+ms.topic: reference
 ms.assetid: 7f7cb0b4-ad95-44fd-a35d-0ddf5fc0b0d0
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin getreplyprogress
 
-Retrieves the size and progress of the server reply.
+Retrieves the size and progress of the server upload-reply.
 
-**BITS 1.2 and earlier**: Not supported.
+> [!NOTE]
+> This command isn't supported by BITS 1.2 and earlier.
 
 ## Syntax
 
 ```
-bitsadmin /GetReplyProgress <Job>
+bitsadmin /getreplyprogress <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## Remarks
+## Examples
 
-Valid only for upload-reply jobs.
+To retrieve the upload-reply progress for the job named *myDownloadJob*:
 
-## <a name="BKMK_examples"></a>Examples
-
-The following example retrieves the reply progress for the job named *myDownloadJob*.
 ```
-C:\>bitsadmin /GetReplyProgress myDownloadJob
+bitsadmin /getreplyprogress myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

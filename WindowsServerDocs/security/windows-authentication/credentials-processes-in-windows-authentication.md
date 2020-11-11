@@ -1,17 +1,11 @@
 ---
 title: Credentials Processes in Windows Authentication
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: security-windows-auth
-ms.tgt_pltfrm: na
+description: Windows Server Security
 ms.topic: article
 ms.assetid: 48c60816-fb8b-447c-9c8e-800c2e05b14f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Credentials Processes in Windows Authentication
@@ -37,11 +31,11 @@ The following table describes each component that manages credentials in the aut
 |Component|Description|
 |-------|--------|
 |User logon|Winlogon.exe is the executable file responsible for managing secure user interactions. The Winlogon service initiates the logon process for Windows operating systems by passing the credentials collected by user action on the secure desktop (Logon UI) to the Local Security Authority (LSA) through Secur32.dll.|
-|Application logon|Application or service logons that do not require interactive logon. Most processes initiated by the user run in user mode by using Secur32.dll whereas processes initiated at startup, such as services, run in kernel mode by using Ksecdd.sys.<br /><br />For more information about user mode and kernel mode, see Applications and User Mode or Services and Kernel Mode in this topic.|
+|Application logon|Application or service logons that do not require interactive logon. Most processes initiated by the user run in user mode by using Secur32.dll whereas processes initiated at startup, such as services, run in kernel mode by using Ksecdd.sys.<p>For more information about user mode and kernel mode, see Applications and User Mode or Services and Kernel Mode in this topic.|
 |Secur32.dll|The multiple authentication providers that form the foundation of the authentication process.|
 |Lsasrv.dll|The LSA Server service, which both enforces security policies and acts as the security package manager for the LSA. The LSA contains the Negotiate function, which selects either the NTLM or Kerberos protocol after determining which protocol is to be successful.|
 |Security Support Providers|A set of providers that can individually invoke one or more authentication protocols. The default set of providers can change with each version of the Windows operating system, and custom providers can be written.|
-|Netlogon.dll|The services that the Net Logon service performs are as follows:<br /><br />-   Maintains the computer's secure channel (not to be confused with Schannel) to a domain controller.<br />-   Passes the user's credentials through a secure channel to the domain controller and returns the domain security identifiers (SIDs) and user rights for the user.<br />-   Publishes service resource records in the Domain Name System (DNS) and uses DNS to resolve names to the Internet Protocol (IP) addresses of domain controllers.<br />-   Implements the replication protocol based on remote procedure call (RPC) for synchronizing primary domain controllers (PDCs) and backup domain controllers (BDCs).|
+|Netlogon.dll|The services that the Net Logon service performs are as follows:<p>-   Maintains the computer's secure channel (not to be confused with Schannel) to a domain controller.<br />-   Passes the user's credentials through a secure channel to the domain controller and returns the domain security identifiers (SIDs) and user rights for the user.<br />-   Publishes service resource records in the Domain Name System (DNS) and uses DNS to resolve names to the Internet Protocol (IP) addresses of domain controllers.<br />-   Implements the replication protocol based on remote procedure call (RPC) for synchronizing primary domain controllers (PDCs) and backup domain controllers (BDCs).|
 |Samsrv.dll|The Security Accounts Manager (SAM), which stores local security accounts, enforces locally stored policies and supports APIs.|
 |Registry|The Registry contains a copy of the SAM database, local security policy settings, default security values, and account information that is only accessible to the system.|
 
@@ -159,7 +153,7 @@ Applications can run in user mode where the application can run as any principal
 
 SSPI is available through the Secur32.dll module, which is an API used for obtaining integrated security services for authentication, message integrity, and message privacy. It provides an abstraction layer between application-level protocols and security protocols. Because different applications require different ways of identifying or authenticating users and different ways of encrypting data as it travels across a network, SSPI provides a way to access dynamic-link libraries (DLLs) that contain different authentication and cryptographic functions. These DLLs are called Security Support Providers (SSPs).
 
-Managed service accounts and virtual accounts were introduced in  Windows Server 2008 R2  and  Windows 7  to provide crucial applications, such as Microsoft SQL Server and Internet Information Services (IIS), with the isolation of their own domain accounts, while eliminating the need for an administrator to manually administer the service principal name (SPN) and credentials for these accounts. For more information about these features and their role in authentication, see [Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](https://technet.microsoft.com/library/ff641731(v=ws.10).aspx) and [Group Managed Service Accounts Overview](../group-managed-service-accounts/group-managed-service-accounts-overview.md).
+Managed service accounts and virtual accounts were introduced in  Windows Server 2008 R2  and  Windows 7  to provide crucial applications, such as Microsoft SQL Server and Internet Information Services (IIS), with the isolation of their own domain accounts, while eliminating the need for an administrator to manually administer the service principal name (SPN) and credentials for these accounts. For more information about these features and their role in authentication, see [Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff641731(v=ws.10)) and [Group Managed Service Accounts Overview](../group-managed-service-accounts/group-managed-service-accounts-overview.md).
 
 **Services and kernel mode**
 
@@ -286,7 +280,7 @@ When a trust exists between two domains, the authentication mechanisms for each 
 
 How a specific trust passes authentication requests depends on how it is configured. Trust relationships can be one-way, by providing access from the trusted domain to resources in the trusting domain, or two-way, by providing access from each domain to resources in the other domain. Trusts are also either nontransitive, in which case a trust exists only between the two trust partner domains, or transitive, in which case a trust automatically extends to any other domains that either of the partners trusts.
 
-For information about domain and forest trust relationships regarding authentication, see [Delegated Authentication and Trust Relationships](https://technet.microsoft.com/library/dn169022.aspx).
+For information about domain and forest trust relationships regarding authentication, see [Delegated Authentication and Trust Relationships](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dn169022(v=ws.10)).
 
 ## <a name="BKMK_CertificatesInWindowsAuthentication"></a>Certificates in Windows authentication
 A public key infrastructure (PKI) is the combination of software, encryption technologies, processes, and services that enable an organization to secure its communications and business transactions. The ability of a PKI to secure communications and business transactions is based on the exchange of digital certificates between authenticated users and trusted resources.
@@ -308,7 +302,7 @@ To produce a certificate, authentication data passes through hash algorithms, su
 
 Smart card technology is an example of certificate-based authentication. Logging on to a network with a smart card provides a strong form of authentication because it uses cryptography-based identification and proof of possession when authenticating a user to a domain. Active Directory Certificate Services (AD CS) provides the cryptographic-based identification through the issuance of a logon certificate for each smart card.
 
-For information about smart card authentication, see the [Windows Smart Card Technical Reference](https://technet.microsoft.com/library/ff404297.aspx).
+For information about smart card authentication, see the [Windows Smart Card Technical Reference](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff404297(v=ws.10)).
 
 Virtual smart card technology was introduced in Windows 8. It stores the smart card's certificate in the PC, and then protects it by using the device's tamper-proof Trusted Platform Module (TPM) security chip. In this way, the PC actually becomes the smart card which must receive the user's PIN in order to be authenticated.
 
@@ -316,9 +310,7 @@ Virtual smart card technology was introduced in Windows 8. It stores the smart c
 
 Remote and wireless network authentication is another technology that uses certificates for authentication. The Internet Authentication Service (IAS) and virtual private network servers use Extensible Authentication Protocol-Transport Level Security (EAP-TLS), Protected Extensible Authentication Protocol (PEAP), or Internet Protocol security (IPsec) to perform certificate-based authentication for many types of network access, including virtual private network (VPN) and wireless connections.
 
-For information about certificate-based authentication in networking, see [Network access authentication and certificates](https://technet.microsoft.com/library/cc759575(WS.10).aspx).
+For information about certificate-based authentication in networking, see [Network access authentication and certificates](/previous-versions/windows/it-pro/windows-server-2003/cc759575(v=ws.10)).
 
 ## <a name="BKMK_SeeAlso"></a>See also
-[Windows Authentication Concepts](https://docs.microsoft.com/windows-server/security/windows-authentication/windows-authentication-concepts)
-
-
+[Windows Authentication Concepts](./windows-authentication-concepts.md)

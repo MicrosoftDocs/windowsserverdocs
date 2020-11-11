@@ -1,13 +1,10 @@
 ---
 title: Install and Configure the NPS Server
-description: NPS server processing of connection requests that are sent by the VPN server verifies that the user has permission to connect, the user's identity, and logs the aspects of the connection request that you chose when you configured RADIUS accounting in NPS. 
-ms.prod: windows-server
-ms.technology: networking-ras
+description: NPS server processing of connection requests that are sent by the VPN server verifies that the user has permission to connect, the user's identity, and logs the aspects of the connection request that you chose when you configured RADIUS accounting in NPS.
 ms.topic: article
-ms.assetid: 
-ms.localizationpriority: medium 
-ms.author: pashort
-author: shortpatti
+ms.localizationpriority: medium
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.date: 08/30/2018
 ---
 
@@ -58,7 +55,7 @@ Install-WindowsFeature NPAS -IncludeManagementTools
 
 2.  In Before You Begin, select **Next**.
 
-    >[!NOTE] 
+    >[!NOTE]
     >The **Before You Begin** page of the Add Roles and Features Wizard is not displayed if you had previously selected **Skip this page by default** when the Add Roles and Features Wizard ran.
 
 3.  In Select Installation Type, ensure that **Role-Based or feature-based installation** is selected, and select **Next**.
@@ -80,7 +77,7 @@ Install-WindowsFeature NPAS -IncludeManagementTools
 11. In Confirm installation selections, select **Restart the destination server automatically if required**.
 
 12. Select **Yes** to confirm the selected, and then select **Install**.
-    
+
     The Installation progress page displays the status during the installation process. When the process completes, the message "Installation succeeded on *ComputerName*" is displayed, where *ComputerName* is the name of the computer upon which you installed Network Policy Server.
 
 13. Select **Close**.
@@ -98,7 +95,7 @@ In this procedure, you register the server in Active Directory so that it has pe
 1.  In Server Manager, select **Tools**, and then select **Network Policy Server**. The NPS console opens.
 
 2.  In the NPS console, right-click **NPS (Local)**, then select **Register server in Active Directory**.
-   
+
      The Network Policy Server dialog box opens.
 
 3.  In the Network Policy Server dialog box, select **OK** twice.
@@ -123,7 +120,7 @@ In the [Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
 
 In this procedure, you use the same shared secret text string to configure the VPN server as a RADIUS client in NPS. Use the same text string that you used on the VPN server, or communication between the NPS server and VPN server fails.
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 >When you add a new network access server (VPN server, wireless access point, authenticating switch, or dial-up server) to your network, you must add the server as a RADIUS client in NPS so that NPS is aware of and can communicate with the network access server.
 
 **Procedure:**
@@ -137,7 +134,7 @@ In this procedure, you use the same shared secret text string to configure the V
 4. In **Friendly name**, enter a display name for the VPN server.
 
 5. In **Address (IP or DNS)**, enter the NAS IP address or FQDN.
-     
+
      If you enter the FQDN, select **Verify** if you want to verify that the name is correct and maps to a valid IP address.
 
 6. In **Shared secret**, do:
@@ -159,7 +156,7 @@ In this procedure, you configure NPS as a RADIUS server on your organization net
 1. In the NPS console, in Standard Configuration, ensure that **RADIUS server for Dial-Up or VPN Connections** is selected.
 
 2. Select **Configure VPN or Dial-Up**.
-        
+
     The Configure VPN or Dial-Up wizard opens.
 
 3. Select **Virtual Private Network (VPN) Connections**, and select **Next**.
@@ -175,7 +172,7 @@ In this procedure, you configure NPS as a RADIUS server on your organization net
     2. Select the **Extensible Authentication Protocol** check box to select it.
 
     3. In Type (based on the method of access and network configuration), select **Microsoft: Protected EAP (PEAP)**, then select **Configure**.
-      
+
         The Edit Protected EAP Properties dialog box opens.
 
     4. Select **Remove** to remove the Secured Password (EAP-MSCHAP v2) EAP type.
@@ -210,7 +207,7 @@ In this procedure, you configure NPS as a RADIUS server on your organization net
 
 In this procedure, you refresh Group Policy on the local NPS server manually. When Group Policy refreshes, if certificate autoenrollment is configured and functioning correctly, the local computer is auto-enrolled a certificate by the certification authority (CA).
 
->[!NOTE]  
+>[!NOTE]
 >Group Policy refreshed automatically when you restart the domain member computer, or when a user logs on to a domain member computer. Also, Group Policy periodically refreshes. By default, this periodic refresh happens every 90 minutes with a randomized offset of up to 30 minutes.
 
 Membership in **Administrators**, or equivalent, is the minimum required to complete this procedure.

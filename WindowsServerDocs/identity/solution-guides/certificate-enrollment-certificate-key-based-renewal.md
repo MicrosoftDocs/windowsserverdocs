@@ -1,12 +1,10 @@
 ---
 title: Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port
-description:
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 ms.date: 11/12/2019
 ms.topic: article
-ms.prod: windows-server
 ---
 
 # Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port
@@ -43,11 +41,11 @@ For this example, the instructions are based on an environment that uses the fol
 
 ## Configuration instructions
 
-### Overview 
+### Overview
 
 1. Configure the template for key-based renewal.
 
-2. As a prerequisite, configure a CEP and CES server for username and password authentication.   
+2. As a prerequisite, configure a CEP and CES server for username and password authentication.
    In this environment, we refer to the instance as "CEPCES01".
 
 3.	Configure another CEP and CES instance by using PowerShell for certificate-based authentication on the same server. The CES instance will use a service account.
@@ -70,10 +68,10 @@ As a prerequisite, you must configure CEP and CES on a server by using username 
 You can duplicate an existing computer template, and configure the following settings of the template:
 
 1. On the Subject Name tab of the certificate template, make sure that the **Supply in the Request** and **Use subject information from existing certificates for autoenrollment renewal requests** options are selected.
-   ![New Templates](media/certificate-enrollment-certificate-key-based-renewal-2.png) 
+   ![New Templates](media/certificate-enrollment-certificate-key-based-renewal-2.png)
 
 2. Switch to the **Issuance Requirements** tab, and then select the **CA certificate manager approval** check box.
-   ![Issuance Requirements](media/certificate-enrollment-certificate-key-based-renewal-3.png) 
+   ![Issuance Requirements](media/certificate-enrollment-certificate-key-based-renewal-3.png)
 
 3. Assign the **Read** and **Enroll** permission to the **cepcessvc** service account for this template.
 
@@ -94,9 +92,9 @@ To install the CEPCES01 instance, use either of the following methods.
 
 See the following articles for step-by-step guidance to enable CEP and CES for username and password authentication:
 
-[Certificate Enrollment Policy Web Service Guidance](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11))
+[Certificate Enrollment Policy Web Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11))
 
-[Certificate Enrollment Web Service Guidance](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)#configure-a-ca-for-the-certificate-enrollment-web-service)
+[Certificate Enrollment Web Service Guidance](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)#configure-a-ca-for-the-certificate-enrollment-web-service)
 
 > [!Note]
 > Make sure that you do not select the “Enable Key-Based Renewal” option if you configure both CEP and CES instances of username and password authentication.
@@ -115,7 +113,7 @@ Add-WindowsFeature Adcs-Enroll-Web-Svc
 Install-AdcsEnrollmentPolicyWebService -AuthenticationType Username -SSLCertThumbprint "sslCertThumbPrint"
 ```
 
-This command installs the Certificate Enrollment Policy Web Service (CEP) by specifying that a username and password is used for authentication. 
+This command installs the Certificate Enrollment Policy Web Service (CEP) by specifying that a username and password is used for authentication.
 
 > [!Note]
 > In this command, \<**SSLCertThumbPrint**\> is the thumbprint of the certificate that will be used to bind IIS.
@@ -129,7 +127,7 @@ This command installs the Certificate Enrollment Web Service (CES) to use the ce
 ##### Step 2 Check the Internet Information Services (IIS) Manager console
 
 After a successful installation, you expect to see the following display in the Internet Information Services (IIS) Manager console.
-![IIS manager](media/certificate-enrollment-certificate-key-based-renewal-4.png) 
+![IIS manager](media/certificate-enrollment-certificate-key-based-renewal-4.png)
 
 Under **Default Web Site**, select **ADPolicyProvider_CEP_UsernamePassword**, and then open **Application Settings**. Note the **ID** and the **URI**.
 
@@ -137,7 +135,7 @@ You can add a **Friendly Name** for management.
 
 #### Configure the CEPCES02 instance
 
-##### Step 1: Install the CEP and CES for key-based renewal on the same server. 
+##### Step 1: Install the CEP and CES for key-based renewal on the same server.
 
 Run the following command in PowerShell:
 
@@ -145,10 +143,10 @@ Run the following command in PowerShell:
 Install-AdcsEnrollmentPolicyWebService -AuthenticationType Certificate -SSLCertThumbprint "sslCertThumbPrint" -KeyBasedRenewal
 ```
 
-This command installs the Certificate Enrollment Policy Web Service (CEP) and specifies that a certificate is used for authentication. 
+This command installs the Certificate Enrollment Policy Web Service (CEP) and specifies that a certificate is used for authentication.
 
 > [!Note]
-> In this command, \<SSLCertThumbPrint\> is the thumbprint of the certificate that will be used to bind IIS. 
+> In this command, \<SSLCertThumbPrint\> is the thumbprint of the certificate that will be used to bind IIS.
 
 Key-based renewal lets certificate clients renew their certificates by using the key of their existing certificate for authentication. When in key-based renewal mode, the service will return only certificate templates that are set for key-based renewal.
 
@@ -156,7 +154,7 @@ Key-based renewal lets certificate clients renew their certificates by using the
 Install-AdcsEnrollmentWebService -CAConfig "CA1.contoso.com\contoso-CA1-CA" -SSLCertThumbprint "sslCertThumbPrint" -AuthenticationType Certificate -ServiceAccountName "Contoso\cepcessvc" -ServiceAccountPassword (read-host "Set user password" -assecurestring) -RenewalOnly -AllowKeyBasedRenewal
 ```
 
-This command installs the Certificate Enrollment Web Service (CES) to use the certification authority for a computer name of **CA1.contoso.com** and a CA common name of **contoso-CA1-CA**. 
+This command installs the Certificate Enrollment Web Service (CES) to use the certification authority for a computer name of **CA1.contoso.com** and a CA common name of **contoso-CA1-CA**.
 
 In this command, the identity of the Certificate Enrollment Web Service is specified as the **cepcessvc** service account. The authentication type is **certificate**. **SSLCertThumbPrint** is the thumbprint of the certificate that will be used to bind IIS.
 
@@ -168,7 +166,7 @@ The **RenewalOnly** cmdlet lets CES run in renewal only mode. The **AllowKeyBase
 ##### Step 2 Check the IIS Manager console
 
 After a successful installation, you expect to see the following display in the IIS Manager console.
-![IIS manager](media/certificate-enrollment-certificate-key-based-renewal-5.png) 
+![IIS manager](media/certificate-enrollment-certificate-key-based-renewal-5.png)
 
 Select **KeyBasedRenewal_ADPolicyProvider_CEP_Certificate** under **Default Web Site** and open **Application Settings**. Take a note of the **ID** and the **URI**. You can add a **Friendly Name** for management.
 
@@ -186,8 +184,8 @@ This account will be used for authentication towards key-based renewal and the �
 > [!Note]
 > You do not have to domain join the client machine. This account comes into picture while doing certificate based authentication in KBR for dsmapper service.
 
-![New Object](media/certificate-enrollment-certificate-key-based-renewal-6.png) 
- 
+![New Object](media/certificate-enrollment-certificate-key-based-renewal-6.png)
+
 ##### Step 2: Configure the service account for Constrained Delegation (S4U2Self)
 
 Run the following PowerShell command to enable constrained delegation (S4U2Self or any authentication protocol):
@@ -207,27 +205,27 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 
 1. In the IIS Manager console, select Default Web Site.
 
-2. In the action pane, select Edit Site Binding. 
+2. In the action pane, select Edit Site Binding.
 
 3. Change the default port setting from 443 to your custom port. The example screenshot shows a port setting of 49999.
-   ![Change port](media/certificate-enrollment-certificate-key-based-renewal-7.png) 
+   ![Change port](media/certificate-enrollment-certificate-key-based-renewal-7.png)
 
 ##### Step 4: Edit the CA enrollment services Object on Active Directory
 
 1. On a domain controller, open adsiedit.msc.
 
-2. [Connect to the Configuration partition](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/ff730188(v=ws.10)), and navigate to your CA enrollment services object:
-   
+2. [Connect to the Configuration partition](/previous-versions/windows/it-pro/windows-server-2003/ff730188(v=ws.10)), and navigate to your CA enrollment services object:
+
    CN=ENTCA,CN=Enrollment Services,CN=Public Key Services,CN=Services,CN=Configuration,DC=contoso,DC=com
 
 3. Right click and edit the CA Object. Change the **msPKI-Enrollment-Servers** attribute by using the custom port with your CEP and CES server URIs that were found in the application settings. For example:
 
    ```
-   140https://cepces.contoso.com:49999/ENTCA_CES_UsernamePassword/service.svc/CES0   
+   140https://cepces.contoso.com:49999/ENTCA_CES_UsernamePassword/service.svc/CES0
    181https://cepces.contoso.com:49999/ENTCA_CES_Certificate/service.svc/CES1
    ```
-   
-   ![ADSI Edit](media/certificate-enrollment-certificate-key-based-renewal-8.png) 
+
+   ![ADSI Edit](media/certificate-enrollment-certificate-key-based-renewal-8.png)
 
 #### Configure the client computer
 
@@ -239,13 +237,13 @@ On the client computer, set up the Enrollment policies and Auto-Enrollment polic
 
 3. Enable the **Certificate Services Client - Auto-Enrollment policy** to match the settings in the following screenshot.
    ![Certificate group policy](media/certificate-enrollment-certificate-key-based-renewal-9.png)
- 
+
 4. Enable **Certificate Services Client - Certificate Enrollment Policy**.
 
    a. Click **Add** to add enrollment policy and enter the CEP URI with **UsernamePassword** that we edited in ADSI.
-   
+
    b. For **Authentication type**, select **Username/password**.
-   
+
    c. Set a priority of **10**, and  then validate the policy server.
       ![Enrollment Policy](media/certificate-enrollment-certificate-key-based-renewal-10.png)
 
@@ -260,11 +258,11 @@ On the client computer, set up the Enrollment policies and Auto-Enrollment polic
 
 6. Open **gpedit.msc** again. Edit the **Certificate Services Client – Certificate Enrollment Policy**, and then add the key-based renewal enrollment policy:
 
-   a. Click **Add**, enter the CEP URI with **Certificate** that we edited in ADSI. 
-   
+   a. Click **Add**, enter the CEP URI with **Certificate** that we edited in ADSI.
+
    b. Set a priority of **1**, and then validate the policy server. You will be prompted to authenticate and choose the certificate we enrolled initially.
 
-   ![Enrollment Policy](media/certificate-enrollment-certificate-key-based-renewal-13.png) 
+   ![Enrollment Policy](media/certificate-enrollment-certificate-key-based-renewal-13.png)
 
 > [!Note]
 > Make sure that the priority value of the key-based renewal enrollment policy is lower than the priority of the Username Password enrollment policy priority. The first preference is given to the lowest priority.
@@ -275,7 +273,7 @@ To make sure that Auto-Renewal is working, verify that manual renewal works by r
 
 Open the computer personal certificate store, and add the “archived certificates” view. To do this, add the local computer account snap-in to mmc.exe, highlight **Certificates (Local Computer)** by clicking on it, click **view** from the **action tab** at the right or the top of mmc, click **view options**, select **Archived certificates**, and then click **OK**.
 
-### Method 1 
+### Method 1
 
 Run the following command:
 
@@ -294,7 +292,7 @@ For example, the certificate template has a 2-day validity setting and an 8-hour
 Therefore, if you advance the time to 8:10 P.M. on the 19th since our renewal window was set to 8-hour on the template, running Certutil -pulse (to trigger the AE engine) enrolls the certificate for you.
 
 ![command](media/certificate-enrollment-certificate-key-based-renewal-15.png)
- 
+
 After the test finishes, revert the time setting to the original value, and then restart the client computer.
 
 > [!Note]
@@ -302,13 +300,13 @@ After the test finishes, revert the time setting to the original value, and then
 
 ## References
 
-[Test Lab Guide: Demonstrating Certificate Key-Based Renewal](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj590165(v%3Dws.11))
+[Test Lab Guide: Demonstrating Certificate Key-Based Renewal](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj590165(v%3dws.11))
 
 [Certificate Enrollment Web Services](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/Certificate-Enrollment-Web-Services/ba-p/397385)
 
-[Install-AdcsEnrollmentPolicyWebService](https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcsenrollmentpolicywebservice?view=win10-ps)
+[Install-AdcsEnrollmentPolicyWebService](/powershell/module/adcsdeployment/install-adcsenrollmentpolicywebservice?view=win10-ps)
 
-[Install-AdcsEnrollmentWebService](https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcsenrollmentwebservice?view=win10-ps)
+[Install-AdcsEnrollmentWebService](/powershell/module/adcsdeployment/install-adcsenrollmentwebservice?view=win10-ps)
 
 See also
 
@@ -316,8 +314,8 @@ See also
 
 [Active Directory Certificate Services (AD CS) Public Key Infrastructure (PKI) Frequently Asked Questions (FAQ)](https://aka.ms/adcsfaq)
 
-[Windows PKI Documentation Reference and Library](https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx)
+[Windows PKI Documentation Reference and Library](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/windows-pki-documentation-reference/ba-p/1128393)
 
-[Windows PKI Blog](https://blogs.technet.com/b/pki/)
+[Windows PKI Blog](/archive/blogs/pki/)
 
 [How to configure Kerberos Constrained Delegation (S4U2Proxy or Kerberos Only) on a custom service account for Web Enrollment proxy pages](https://support.microsoft.com/help/4494313/configuring-web-enrollment-proxy-for-s4u2proxy-constrained-delegation)

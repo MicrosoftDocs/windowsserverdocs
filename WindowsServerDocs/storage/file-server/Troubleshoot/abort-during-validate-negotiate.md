@@ -3,7 +3,7 @@ title: TCP connection is aborted during Validate Negotiate
 description: Introduces how to troubleshoot the SMB issue when the TCP connection is aborted during Validate Negotiate.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
+
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
@@ -50,6 +50,6 @@ If either the client or server cannot support the Validate Negotiate command, yo
 
 For more information, see the following articles:
 
-[3.3.5.15.12 Handling a Validate Negotiate Info Request](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/0b7803eb-d561-48a4-8654-327803f59ec6)
+[3.3.5.15.12 Handling a Validate Negotiate Info Request](/openspecs/windows_protocols/ms-smb2/0b7803eb-d561-48a4-8654-327803f59ec6)
 
-[3.2.5.14.12 Handling a Validate Negotiate Info Response](https://docs.microsoft.com/openspecs/windows_protocols/ms-smb2/6a5bc90d-3c08-4498-905b-e7dab30b2e0e)
+[3.2.5.14.12 Handling a Validate Negotiate Info Response](/openspecs/windows_protocols/ms-smb2/6a5bc90d-3c08-4498-905b-e7dab30b2e0e)

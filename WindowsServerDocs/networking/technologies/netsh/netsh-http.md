@@ -1,19 +1,16 @@
 ---
 title: Netsh Commands for Hypertext Transfer Protocol (HTTP)
 description: Use netsh http to query and configure HTTP.sys settings and parameters.
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
-ms.assetid: 
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Netsh http commands
 
 
-Use **netsh http** to query and configure HTTP.sys settings and parameters.  
+Use **netsh http** to query and configure HTTP.sys settings and parameters.
 
 >[!TIP]
 >If you are using Windows PowerShell on a computer running Windows Server 2016 or Windows 10, type **netsh** and press Enter. At the netsh prompt, type **http** and press Enter to get the netsh http prompt.
@@ -112,7 +109,7 @@ appid={00112233-4455-6677-8899- AABBCCDDEEFF}
 
 Adds a global timeout to the service.
 
-**Syntax** 
+**Syntax**
 
 ```powershell
 add timeout [ timeouttype= ] IdleConnectionTimeout | HeaderWaitTimeout [ value=] U-Short

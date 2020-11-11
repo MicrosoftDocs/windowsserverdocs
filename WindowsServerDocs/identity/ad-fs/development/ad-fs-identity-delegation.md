@@ -6,15 +6,12 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: windows-server
-
-ms.technology: identity-adfs
 ---
 
 # Identity delegation scenario with AD FS
 
 
-[Starting with the .NET Framework 4.5, Windows Identity Foundation (WIF) has been fully integrated into the .NET Framework. The version of WIF addressed by this topic, WIF 3.5, is deprecated and should only be used when developing against the .NET Framework 3.5 SP1 or the .NET Framework 4. For more information about WIF in the .NET Framework 4.5, also known as WIF 4.5, see the Windows Identity Foundation documentation in the .NET Framework 4.5 Development Guide.] 
+[Starting with the .NET Framework 4.5, Windows Identity Foundation (WIF) has been fully integrated into the .NET Framework. The version of WIF addressed by this topic, WIF 3.5, is deprecated and should only be used when developing against the .NET Framework 3.5 SP1 or the .NET Framework 4. For more information about WIF in the .NET Framework 4.5, also known as WIF 4.5, see the Windows Identity Foundation documentation in the .NET Framework 4.5 Development Guide.]
 
 This scenario describes an application that needs to access back-end resources that require the identity delegation chain to perform access control checks. A simple identity delegation chain usually consists of the information on the initial caller and the identity of the immediate caller.
 
@@ -37,8 +34,8 @@ The components involved in this scenario are:
 - sts1: An STS that is in the role of claims provider, and emits claims that are expected by the application (web1). It has established trust with Fabrikam.com and also with the application.
 - sts2: An STS that is in the role of identity provider for Fabrikam.com and provides an end point that the Fabrikam employee uses to authenticate. It has established trust with Contoso.com so that Fabrikam employees are allowed to access resources on Contoso.com.
 
->[!NOTE] 
->The term “ActAs token”, which is used often in this scenario, refers to a token that is issued by an STS and contains the user's identity. The Actor property contains the STS's identity.
+>[!NOTE]
+>The term "ActAs token", which is used often in this scenario, refers to a token that is issued by an STS and contains the user's identity. The Actor property contains the STS's identity.
 
 As shown in the previous diagram, the flow in this scenario is:
 
@@ -53,7 +50,7 @@ As shown in the previous diagram, the flow in this scenario is:
 There are three options available for the Fabrikam.com administrator, Frank:
 
 
-1. Purchase and install an STS product such as Active Directory® Federation Services (AD FS).
+1. Purchase and install an STS product such as Active Directory&reg; Federation Services (AD FS).
 2. Subscribe to a cloud STS product such as LiveID STS.
 3. Build a custom STS using WIF.
 
@@ -95,9 +92,9 @@ if ( claimsPrincipal != null )
     bootstrapToken = claimsIdentity.BootstrapToken;
 }
 ```
-WIF provides a method, [CreateChannelActingAs](https://msdn.microsoft.com/library/ee733863.aspx), that creates a channel of the specified type that augments token issuance requests with the specified security token as an ActAs element. You can pass the bootstrap token to this method and then call the necessary service method on the returned channel. In this sample scenario, Frank's identity has the [Actor](https://msdn.microsoft.com/library/microsoft.identitymodel.claims.iclaimsidentity.actor.aspx) property set to web1's identity.
+WIF provides a method, [CreateChannelActingAs](/previous-versions/windows-identity-foundation/ee733863(v=msdn.10)), that creates a channel of the specified type that augments token issuance requests with the specified security token as an ActAs element. You can pass the bootstrap token to this method and then call the necessary service method on the returned channel. In this sample scenario, Frank's identity has the [Actor](/previous-versions/windows-identity-foundation/ee766706(v=msdn.10)) property set to web1's identity.
 
-The following code snippet shows how to call to the Web service with [CreateChannelActingAs](https://msdn.microsoft.com/library/ee733863.aspx) and then call one of the service's methods, ComputeResponse, on the returned channel:
+The following code snippet shows how to call to the Web service with [CreateChannelActingAs](/previous-versions/windows-identity-foundation/ee733863(v=msdn.10)) and then call one of the service's methods, ComputeResponse, on the returned channel:
 
 ```
 // Get the channel factory to the backend service from the application state
@@ -107,7 +104,7 @@ ChannelFactory<IService2Channel> factory = (ChannelFactory<IService2Channel>)App
 IService2Channel channel;
 lock (factory)
 {
-// Setup the ActAs to point to the caller's token so that we perform a 
+// Setup the ActAs to point to the caller's token so that we perform a
 // delegated call to the backend service
 // on behalf of the original caller.
     channel = factory.CreateChannelActingAs<IService2Channel>(callerToken);
@@ -132,7 +129,7 @@ try
 ```
 ## Web Service-Specific Changes
 
-Since the Web service is built with WCF and enabled for WIF, once the binding is configured with IssuedSecurityTokenParameters with the proper Issuer address, the validation of the ActAs is automatically handled by WIF. 
+Since the Web service is built with WCF and enabled for WIF, once the binding is configured with IssuedSecurityTokenParameters with the proper Issuer address, the validation of the ActAs is automatically handled by WIF.
 
 The Web service exposes the specific methods needed by the application. There are no specific code changes needed on the service. The following code sample shows the configuration of the Web service with IssuedSecurityTokenParameters:
 
@@ -179,4 +176,4 @@ using ( ServiceHost host = new ServiceHost( typeof( Service2 ), new Uri( "http:/
 ```
 
 ## Next Steps
-[AD FS Development](../../ad-fs/AD-FS-Development.md)  
+[AD FS Development](../../ad-fs/AD-FS-Development.md)

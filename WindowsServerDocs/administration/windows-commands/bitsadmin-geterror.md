@@ -1,45 +1,40 @@
 ---
 title: bitsadmin geterror
-description: "Windows Commands topic for **bitsadmin geterror** - Retrieves detailed error information for the specified job."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin geterror command, which retrieves detailed error information for the specified job.
+ms.topic: reference
 ms.assetid: cbe5bca1-d2dd-4ce6-903f-f85de4a2ec6a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin geterror
-
-
 
 Retrieves detailed error information for the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /GetError <Job>
+bitsadmin /geterror <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example retrieves the error information for the job named *myDownloadJob*.
+To retrieve the error information for the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin /GetError myDownloadJob
+bitsadmin /geterror myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

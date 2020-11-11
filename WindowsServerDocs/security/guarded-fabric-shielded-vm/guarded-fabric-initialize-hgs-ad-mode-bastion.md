@@ -1,11 +1,9 @@
 ---
-title: Initialize the HGS cluster using AD mode in a bastion forest 
-ms.custom: na
-ms.prod: windows-server
+title: Initialize the HGS cluster using AD mode in a bastion forest
 ms.topic: article
 manager: dongill
 author: rpsqrd
-ms.technology: security-guarded-fabric
+ms.author: ryanpu
 ms.date: 08/29/2018
 ---
 
@@ -15,11 +13,11 @@ ms.date: 08/29/2018
 
 
 >[!IMPORTANT]
->Admin-trusted attestation (AD mode) is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode-bastion.md). Host key attestation provides similar assurance to AD mode and is simpler to set up. 
+>Admin-trusted attestation (AD mode) is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode-bastion.md). Host key attestation provides similar assurance to AD mode and is simpler to set up.
 
 Active Directory Domain Services will be installed on the machine, but should remain unconfigured.
 
-[!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)] 
+[!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]
 
 Before you continue, ensure that you have prestaged your cluster objects for the Host Guardian Service and granted the logged in user **Full Control** over the VCO and CNO objects in Active Directory.
 The virtual computer object name needs to be passed to the `-HgsServiceName` parameter, and the cluster name to the `-ClusterName` parameter.

@@ -2,12 +2,10 @@
 title: Configure Network Policies
 description: This topic provides an overview of network policy configuration for Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: fe77655a-e2be-4949-92e1-aaaa215d86ea
-ms.author: pashort 
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Configure Network Policies
@@ -32,18 +30,18 @@ If the dial-in properties of the user account are set to deny access, the connec
 
 ### Key settings
 
-When you use the New Network Policy wizard to create a network policy, the value that you specify in **Network connection method** is used to automatically configure the **Policy Type** condition: 
+When you use the New Network Policy wizard to create a network policy, the value that you specify in **Network connection method** is used to automatically configure the **Policy Type** condition:
 
 - If you keep the default value of Unspecified , the network policy that you create is evaluated by NPS for all network connection types that are using any kind of network access server (NAS).
 - If you specify a network connection method, NPS evaluates the network policy only if the connection request originates from the type of network access server that you specify.
 
-On the **Access Permission** page, you must select **Access granted** if you want the policy to allow users to connect to your network. If you want the policy to prevent users from connecting to your network, select **Access denied**. 
+On the **Access Permission** page, you must select **Access granted** if you want the policy to allow users to connect to your network. If you want the policy to prevent users from connecting to your network, select **Access denied**.
 
 If you want access permission to be determined by user account dial-in properties in Active Directory&reg; Domain Services \(AD DS\), you can select the **Access is determined by User Dial-in properties** check box.
 
 Membership in **Domain Admins**, or equivalent, is the minimum required to complete this procedure.
 
-### To add a network policy 
+### To add a network policy
 
 1. Open the NPS console, and then double-click **Policies**.
 
@@ -100,7 +98,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 
 ### To create policies for 802.1X wired or wireless with a wizard
 
-1. On the NPS, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens. 
+1. On the NPS, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
 
 2. If it is not already selected, click **NPS \(Local\)**. If you want to create policies on a remote NPS, select the server.
 
@@ -112,7 +110,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 
 ## Configure NPS to Ignore User Account Dial-in Properties
 
-Use this procedure to configure an NPS network policy to ignore the dial-in properties of user accounts in Active Directory during the authorization process. User accounts in Active Directory Users and Computers have dial-in properties that NPS evaluates during the authorization process unless the **Network Access Permission** property of the user account is set to **Control access through NPS Network Policy**. 
+Use this procedure to configure an NPS network policy to ignore the dial-in properties of user accounts in Active Directory during the authorization process. User accounts in Active Directory Users and Computers have dial-in properties that NPS evaluates during the authorization process unless the **Network Access Permission** property of the user account is set to **Control access through NPS Network Policy**.
 
 There are two circumstances where you might want to configure NPS to ignore the dial-in properties of user accounts in Active Directory:
 
@@ -136,7 +134,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 ## Configure NPS for VLANs
 
-By using VLAN-aware network access servers and NPS in Windows Server 2016, you can provide groups of users with access only to the network resources that are appropriate for their security permissions. For example, you can provide visitors with wireless access to the Internet without allowing them access to your organization network. 
+By using VLAN-aware network access servers and NPS in Windows Server 2016, you can provide groups of users with access only to the network resources that are appropriate for their security permissions. For example, you can provide visitors with wireless access to the Internet without allowing them access to your organization network.
 
 In addition, VLANs allow you to logically group network resources that exist in different physical locations or on different physical subnets. For example, members of your sales department and their network resources, such as client computers, servers, and printers, might be located in several different buildings at your organization, but you can place all of these resources on one VLAN that uses the same IP address range. The VLAN then functions, from the end-user perspective, as a single subnet.
 
@@ -146,7 +144,7 @@ You can also use VLANs when you want to segregate a network between different gr
 
 You can use this procedure to configure a network policy that assigns users to a VLAN. When you use VLAN-aware network hardware, such as routers, switches, and access controllers, you can configure network policy to instruct the access servers to place members of specific Active Directory groups on specific VLANs. This ability to group network resources logically with VLANs provides flexibility when designing and implementing network solutions.
 
-When you configure the settings of an NPS network policy for use with VLANs, you must configure the attributes **Tunnel-Medium-Type**, **Tunnel-Pvt-Group-ID**, **Tunnel-Type**, and **Tunnel-Tag**. 
+When you configure the settings of an NPS network policy for use with VLANs, you must configure the attributes **Tunnel-Medium-Type**, **Tunnel-Pvt-Group-ID**, **Tunnel-Type**, and **Tunnel-Tag**.
 
 This procedure is provided as a guideline; your network configuration might require different settings than those described below.
 
@@ -168,20 +166,20 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 	- **Tunnel-Medium-Type**. Select a value appropriate to the previous selections you have made for the policy. For example, if the network policy you are configuring is a wireless policy, select **Value: 802 (Includes all 802 media plus Ethernet canonical format)**.
 
-	- **Tunnel-Pvt-Group-ID**. Enter the integer that represents the VLAN number to which group members will be assigned. 
+	- **Tunnel-Pvt-Group-ID**. Enter the integer that represents the VLAN number to which group members will be assigned.
 
 	- **Tunnel-Type**. Select **Virtual LANs (VLAN)**.
 
 
-7. In **Add Standard RADIUS Attribute**, click **Close**. 
+7. In **Add Standard RADIUS Attribute**, click **Close**.
 
 8. If your network access server (NAS) requires use of the **Tunnel-Tag** attribute, use the following steps to add the **Tunnel-Tag** attribute to the network policy. If your NAS documentation does not mention this attribute, do not add it to the policy. If required, add the attributes as follows:
 
-	- In policy **Properties**, in **Settings**, in **RADIUS Attributes**, click **Vendor Specific**. 
+	- In policy **Properties**, in **Settings**, in **RADIUS Attributes**, click **Vendor Specific**.
 
 	- In the details pane, click **Add**. The **Add Vendor Specific Attribute** dialog box opens.
 
-	- In **Attributes**, scroll down to and select **Tunnel-Tag**, and then click **Add**. The **Attribute Information** dialog box opens. 
+	- In **Attributes**, scroll down to and select **Tunnel-Tag**, and then click **Add**. The **Attribute Information** dialog box opens.
 
 	- In **Attribute value**, type the value that you obtained from your hardware documentation.
 
@@ -189,7 +187,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 In some cases, routers or firewalls drop packets because they are configured to discard packets that require fragmentation.
 
-When you deploy NPS with network policies that use the Extensible Authentication Protocol \(EAP\) with Transport Layer Security \(TLS\), or EAP-TLS, as an authentication method, the default maximum transmission unit \(MTU\) that NPS uses for EAP payloads is 1500 bytes. 
+When you deploy NPS with network policies that use the Extensible Authentication Protocol \(EAP\) with Transport Layer Security \(TLS\), or EAP-TLS, as an authentication method, the default maximum transmission unit \(MTU\) that NPS uses for EAP payloads is 1500 bytes.
 
 This maximum size for the EAP payload can create RADIUS messages that require fragmentation by a router or firewall between the NPS and a RADIUS client. If this is the case, a router or firewall positioned between the RADIUS client and the NPS might silently discard some fragments, resulting in authentication failure and the inability of the access client to connect to the network.
 
@@ -200,7 +198,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 ### To configure the Framed-MTU attribute
 
 1. On the NPS, in Server Manager, click **Tools**, and then click **Network Policy Server**. The NPS console opens.
- 
+
 2. Double-click **Policies**, click **Network Policies**, and then in the details pane double-click the policy that you want to configure.
 
 3. In the policy **Properties** dialog box, click the **Settings** tab.

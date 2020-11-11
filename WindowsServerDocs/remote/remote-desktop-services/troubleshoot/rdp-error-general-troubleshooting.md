@@ -1,13 +1,8 @@
 ---
 title: General Remote Desktop connection troubleshooting
 description: Troubleshooting "Class not registered" error with Remote Desktop connection.
-audience: itpro ​
-ms.custom: na
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.assetid: 
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
@@ -22,7 +17,7 @@ Use these steps when a Remote Desktop client can't connect to a remote desktop b
 
 ### Check the status of the RDP protocol on a local computer
 
-To check and change the status of the RDP protocol on a local computer, see [How to enable Remote Desktop](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#how-to-enable-remote-desktop).
+To check and change the status of the RDP protocol on a local computer, see [How to enable Remote Desktop](../clients/remote-desktop-allow-access.md#how-to-enable-remote-desktop).
 
 > [!NOTE]  
 > If the remote desktop options are not available, see [Check whether a Group Policy Object is blocking RDP](#check-whether-a-group-policy-object-gpo-is-blocking-rdp-on-a-local-computer).
@@ -30,7 +25,7 @@ To check and change the status of the RDP protocol on a local computer, see [How
 ### Check the status of the RDP protocol on a remote computer
 
 > [!IMPORTANT]  
-> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you starty modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so you can restore it in case something goes wrong.
+> Follow this section's instructions carefully. Serious problems can occur if the registry is modified incorrectly. Before you start modifying the registry, [back up the registry](https://support.microsoft.com/help/322756) so you can restore it in case something goes wrong.
 
 To check and change the status of the RDP protocol on a remote computer, use a network registry connection:
 
@@ -73,7 +68,7 @@ The file that this command produces (**gpresult-\<computer name\>.html**) uses t
 
 ### Modifying a blocking GPO
 
-You can modify these settings in the Group Policy Object Editor (GPE) and Group Policy Management Console (GPM). For more information about how to use Group Policy, see [Advanced Group Policy Management](https://docs.microsoft.com/microsoft-desktop-optimization-pack/agpm/).
+You can modify these settings in the Group Policy Object Editor (GPE) and Group Policy Management Console (GPM). For more information about how to use Group Policy, see [Advanced Group Policy Management](/microsoft-desktop-optimization-pack/agpm/).
 
 To modify the blocking policy, use one of the following methods:
 

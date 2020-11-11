@@ -1,13 +1,8 @@
 ---
 title: Remote Desktop client disconnects and can't reconnect to the same session
 description: Troubleshooting an issue in which remote desktop client disconnects and can't reconnect to the same session.
-audience: itpro ​
-ms.custom: na
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.assetid: 
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
@@ -35,10 +30,10 @@ This issue can also be fixed by reconfiguring your authentication and configurat
 
 > [!NOTE]  
 >  - When communications between clients and RD Session Host servers require the highest level of encryption, use FIPS-compliant encryption.
->  - Any encryption level settings you configure in Group Policy override the settings you configured using the Remote Desktop Services Configuration tool. Also, if you enable the [System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) policy, this setting overrides the **Set client connection encryption level** policy. The system cryptography policy is in the **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options** folder.
+>  - Any encryption level settings you configure in Group Policy override the settings you configured using the Remote Desktop Services Configuration tool. Also, if you enable the [System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing](/windows/security/threat-protection/security-policy-settings/system-cryptography-use-fips-compliant-algorithms-for-encryption-hashing-and-signing) policy, this setting overrides the **Set client connection encryption level** policy. The system cryptography policy is in the **Computer Configuration\\Windows Settings\\Security Settings\\Local Policies\\Security Options** folder.
 >  - When you change the encryption level, the new encryption level takes effect the next time a user signs in. If you require multiple levels of encryption on one server, install multiple network adapters and configure each adapter separately.
 >  - To verify your certificate has a corresponding private key, go to Remote Desktop Services Configuration, right-click the connection that you want to view the certificate for, select **General**, then select **Edit**. After that, select **View certificate**. When you go to the **General** tab, you should see the statement, "You have a private key that corresponds to this certificate" if there's a key. You can also view this information with the Certificates snap-in.
->  - FIPS-compliant encryption (the **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing** policy or the **FIPS Compliant** setting in Remote Desktop Server Configuration) encrypts and decrypts data sent between the server and client with the Federal Information Processing Standard (FIPS) 140-1 encryption algorithms that use Microsoft cryptographic modules. For more information, see [FIPS 140 Validation](https://docs.microsoft.com/windows/security/threat-protection/fips-140-validation).
+>  - FIPS-compliant encryption (the **System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing** policy or the **FIPS Compliant** setting in Remote Desktop Server Configuration) encrypts and decrypts data sent between the server and client with the Federal Information Processing Standard (FIPS) 140-1 encryption algorithms that use Microsoft cryptographic modules. For more information, see [FIPS 140 Validation](/windows/security/threat-protection/fips-140-validation).
 >  - The **High** setting encrypts data sent between the server and client by using strong 128-bit encryption.
 >  - The **Client Compatible** setting encrypts data sent between the client and the server at the maximum key strength supported by the client.
 >  - The **Low** setting encrypts data sent from the client to the server using 56-bit encryption.

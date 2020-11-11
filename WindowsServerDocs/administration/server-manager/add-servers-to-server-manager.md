@@ -1,20 +1,15 @@
 ---
 title: Add Servers to Server Manager
-description: "Server Manager"
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
+description: Server Manager
 ms.topic: article
 ms.assetid: aab895f2-fe4d-4408-b66b-cdeadbd8969e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.localizationpriority: medium
 ms.date: 02/01/2018
 ---
+
 # Add Servers to Server Manager
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
@@ -25,9 +20,9 @@ This topic describes how to add servers to the Server Manager server pool.
 
 > [!NOTE]
 > In our tests, Server Manager in  Windows Server 2012 and later releases of Windows Server can be used to manage up to 100 servers that are configured with a typical workload. The number of servers that you can manage by using a single Server Manager console can vary depending on the amount of data that you request from managed servers, and hardware and network resources available to the computer running Server Manager. As the amount of data you want to display approaches that computer's resource capacity, you can experience slow responses from Server Manager, and delays in the completion of refreshes. To help increase the number of servers that you can manage by using Server Manager, we recommend limiting the event data that Server Manager gets from your managed servers, by using settings in the **Configure Event Data** dialog box. Configure Event Data can be opened from the **Tasks** menu in the **Events** tile. If you need to manage an enterprise-level number of servers in your organization, we recommend evaluating products in the [Microsoft System Center suite](https://go.microsoft.com/fwlink/p/?LinkId=239437).
-> 
+>
 > Server Manager can receive only online or offline status from servers that are running Windows Server 2003. Although you can use Server Manager to perform management tasks on servers that are running  Windows Server 2008 R2  or  Windows Server 2008 , you cannot add roles and features to servers that are running  Windows Server 2008 R2 ,  Windows Server 2008  or Windows Server 2003.
-> 
+>
 > Server Manager cannot be used to manage a newer release of the Windows Server operating system. Server Manager running on Windows Server 2012 R2, Windows Server 2012, Windows 8.1, or Windows 8 cannot be used to manage servers that are running Windows Server 2016.
 
 This topic contains the following sections.
@@ -36,7 +31,7 @@ This topic contains the following sections.
 
 -   [Provide credentials with the Manage As command](#BKMK_creds)
 
-## <a name="BKMK_creds"></a>Provide credentials with the Manage As command
+## <a name=BKMK_creds></a>Provide credentials with the Manage As command
 As you add remote servers to Server Manager, some of the servers that you add might require different user account credentials to access or manage them. To specify credentials for a managed server that are different from those you use to log on to the computer on which you are running Server Manager, use the **Manage As** command after you add a server to Server Manager, which is accessible by right-clicking the entry for a managed server in the **Servers** tile of a role or group home page. Clicking **Manage As** opens the **Windows Security** dialog box, in which you can provide a user name that has access rights on the managed server, in one of the following formats.
 
 -   *User name*
@@ -58,7 +53,7 @@ After you add servers to manage by following procedures in this topic, but befor
 > [!NOTE]
 > Roles and features that do not support the **Manage As** command include Remote Desktop Services (RDS) and IP address Management (IPAM) Server. If you cannot manage the remote RDS or IPAM server by using the same credentials you are using on the computer on which you are running Server Manager, try adding the account you typically use to manage these remote servers to the Administrators group on the computer that is running Server Manager. Then, log on to the computer that is running Server Manager with the account you use to manage the remote server that is running rdS or IPAM.
 
-## <a name="BKMK_add"></a>Add servers to manage
+## <a name=BKMK_add></a>Add servers to manage
 You can add servers to Server Manager to manage by using any of three methods in the **add Servers** dialog box.
 
 -   **Active Directory Domain Services** add servers to manage that active directory finds in the same domain as the local computer.
@@ -157,7 +152,7 @@ These or similar errors can occur in the following conditions.
 
 5.  Log off of the computer on which you are running Server Manager, and then log on again by using the built-in Administrator account. Repeat the preceding step, to verify that Server Manager is able to connect to and collect data from the remote server.
 
-if you have followed the procedures in this section, and you continue to have problems managing workgroup computers, or managing other computers from workgroup computers, see [about_remote_Troubleshooting](https://technet.microsoft.com/library/dd347642.aspx) on the Microsoft website.
+if you have followed the procedures in this section, and you continue to have problems managing workgroup computers, or managing other computers from workgroup computers, see [about_remote_Troubleshooting](/previous-versions/dd347642(v=technet.10)) on the Microsoft website.
 
 ### Add and manage servers in clusters
 You can use Server Manager to manage servers that are in failover clusters (also called server clusters or MSCS). Servers that are in failover clusters (whether the cluster nodes are physical or virtual) have some unique behaviors and management limitations in Server Manager.

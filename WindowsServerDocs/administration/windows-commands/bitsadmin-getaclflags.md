@@ -1,51 +1,52 @@
 ---
 title: bitsadmin getaclflags
-description: "Windows Commands topic for **bitsadmin getaclflags** - Retrieves the access control list propagations flags."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin getaclflags command, which retrieves the access control list (ACL) propagations flags.
+ms.topic: reference
 ms.assetid: 99266def-7479-4430-a61c-98ec433fa88b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin getaclflags
 
-Retrieves the access control list (ACL) propagations flags.
+Retrieves the access control list (ACL) propagations flags, reflecting whether items are inherited by child objects.
 
 ## Syntax
 
 ```
-bitsadmin /GetAclFlags <Job>
+bitsadmin /getaclflags <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
 
-## Remarks
+### Remarks
 
-Displays one or more of the following flag values:
--   O: Copy owner information with file.
--   G: Copy group information with file.
--   D: Copy DACL information with file.
--   S: Copy SACL information with file.
+Returns one or more of the following flag values:
 
-## <a name="BKMK_examples"></a>Examples
+- **o** - Copy owner information with file.
 
-The following example retrieves the access control list propagation flags for the job named *myDownloadJob*.
+- **g** - Copy group information with file.
+
+- **d** - Copy discretionary access control list (DACL) information with file.
+
+- **s** - Copy system access control list (SACL) information with file.
+
+## Examples
+
+To retrieve the access control list propagation flags for the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin /getaclflags myDownloadJob
+bitsadmin /getaclflags myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

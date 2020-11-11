@@ -1,13 +1,11 @@
 ---
 title: Network Controller High Availability
 description: You can use this topic to learn about Network Controller high availability for Software Defined Networking (SDN) in Windows Server 2016.
-manager: brianlic
-ms.prod: windows-server
-ms.technology: networking-sdn
+manager: grcusanz
 ms.topic: get-started-article
 ms.assetid: 334b090d-bec4-4e67-8307-13831dbdd1d8
-ms.author: pashort
-author: shortpatti
+ms.author: anpaul
+author: AnirbanPaul
 ---
 
 # Network Controller High Availability
@@ -32,11 +30,11 @@ To achieve high availability and scalability, Network Controller relies on Servi
 As a platform, Service Fabric provides functionality that is required for building a scalable distributed system. It provides service hosting on multiple operating system instances, synchronizing state information between instances, electing a leader, failure detection, load balancing, and more.
 
 >[!NOTE]
->For information about Service Fabric in Azure, see [Overview of Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview).
+>For information about Service Fabric in Azure, see [Overview of Azure Service Fabric](/azure/service-fabric/service-fabric-overview).
 
 When you deploy Network Controller on multiple machines, Network Controller runs as a single Service Fabric application on a Service Fabric cluster. You can form a Service Fabric cluster  by connecting a set of operating system instances.
 
-The Network Controller application is comprised of multiple stateful Service Fabric services. Each service is responsible for a network function, such as physical network management, virtual network management, firewall management, or gateway management. 
+The Network Controller application is comprised of multiple stateful Service Fabric services. Each service is responsible for a network function, such as physical network management, virtual network management, firewall management, or gateway management.
 
 Each Service Fabric service has one primary replica and two secondary replicas. The primary service replica processes requests, while the two secondary service replicas provide high availability in circumstances where the primary replica is disabled or unavailable for some reason.
 
@@ -50,10 +48,10 @@ Following are the primary advantages for using Service Fabric for Network Contro
 
 ### High Availability and Scalability
 
-Because Network Controller is the core of a datacenter network, it must both be resilient to failure and be scalable enough to allow agile changes in datacenter networks over time. The following features provide these abilities: 
+Because Network Controller is the core of a datacenter network, it must both be resilient to failure and be scalable enough to allow agile changes in datacenter networks over time. The following features provide these abilities:
 
-- **Fast failover**. Service Fabric provides extremely fast failover. Multiple hot secondary service replicas are always available. If an operating system instance becomes unavailable due to hardware failure, one of the secondary replicas is immediately promoted to primary replica. 
-- **Agility of scale**. You can easily and quickly scale these reliable services from a few instances up to thousands of instances and then back down to a few instances, depending on your resource needs. 
+- **Fast failover**. Service Fabric provides extremely fast failover. Multiple hot secondary service replicas are always available. If an operating system instance becomes unavailable due to hardware failure, one of the secondary replicas is immediately promoted to primary replica.
+- **Agility of scale**. You can easily and quickly scale these reliable services from a few instances up to thousands of instances and then back down to a few instances, depending on your resource needs.
 
 ### Persistent storage
 
@@ -61,7 +59,7 @@ The Network Controller application has large storage requirements for its config
 
 ### Modularity
 
-Network Controller is designed with a modular architecture, with each of the network services, such as the virtual networks service and firewall service, built\-in as individual services. 
+Network Controller is designed with a modular architecture, with each of the network services, such as the virtual networks service and firewall service, built\-in as individual services.
 
 This application architecture provides the following benefits.
 
@@ -75,7 +73,7 @@ Service Fabric modularity uses service model schemas to maximize the ease of dev
 
 ## Network Controller Deployment Options
 
-To deploy Network Controller by using System Center Virtual Machine Manager \(VMM\), see [Set up an SDN network controller in the VMM fabric](https://technet.microsoft.com/system-center-docs/vmm/scenario/sdn-network-controller).
+To deploy Network Controller by using System Center Virtual Machine Manager \(VMM\), see [Set up an SDN network controller in the VMM fabric](/system-center/vmm/sdn-controller?view=sc-vmm-2019).
 
 To deploy Network Controller using scripts, see [Deploy a Software Defined Network Infrastructure Using Scripts](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md).
 

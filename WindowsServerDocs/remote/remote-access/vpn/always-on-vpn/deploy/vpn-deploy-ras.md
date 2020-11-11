@@ -1,13 +1,10 @@
 ---
 title: Configure the Remote Access Server for Always On VPN
-description: RRAS is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features. 
-ms.prod: windows-server
-ms.technology: networking-ras
+description: RRAS is designed to perform well as both a router and a remote access server; therefore, it supports a wide array of features.
 ms.topic: article
-ms.assetid: 
-ms.localizationpriority: medium 
-ms.author: pashort
-author: shortpatti
+ms.localizationpriority: medium
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.date: 08/30/2018
 ms.reviewer: deverette
 ---
@@ -61,7 +58,7 @@ In this procedure, you install the Remote Access role as a single tenant RAS Gat
 You can use the following procedure to install the Remote Access role using Server Manager.
 
 1. On the VPN server, in Server Manager, select **Manage** and select **Add Roles and Features**.
-   
+
    The Add Roles and Features Wizard opens.
 
 2. On the Before you begin page, select **Next**.
@@ -140,7 +137,7 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
        The Add RADIUS Server dialog box opens.
 
     d. In **Server name**, enter the Fully Qualified Domain Name (FQDN) of the NPS server on your Organization/Corporate network.
-    
+
        For example, if the NetBIOS name of your NPS server is NPS1 and your domain name is corp.contoso.com, enter **NPS1.corp.contoso.com**.
 
     e. In **Shared secret**, select **Change**.
@@ -189,7 +186,7 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
 16. (Optional) *If you are configuring conditional access for VPN connectivity*, from the **Certificate** drop-down list, under **SSL Certificate Binding**, select the VPN server authentication.
 
-17. (Optional) *If you are configuring conditional access for VPN connectivity*, in the NPS MMC, expand **Policies\\Network Policies** and do: 
+17. (Optional) *If you are configuring conditional access for VPN connectivity*, in the NPS MMC, expand **Policies\\Network Policies** and do:
 
     a. Right-the **Connections to Microsoft Routing and Remote Access Server** network policy and select **Properties**.
 
@@ -197,8 +194,8 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
     c. Under Type of network access server, select **Remote Access Server (VPN-Dial up)** from the drop-down.
 
-18. In the Routing and Remote Access MMC, right-click **Ports,** and then select **Properties**. 
-    
+18. In the Routing and Remote Access MMC, right-click **Ports,** and then select **Properties**.
+
     The Ports Properties dialog box opens.
 
 19. Select **WAN Miniport (SSTP)** and select **Configure**. The Configure Device - WAN Miniport (SSTP) dialog box opens.

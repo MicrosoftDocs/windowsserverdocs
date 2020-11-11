@@ -1,45 +1,42 @@
 ---
 title: bitsadmin peercaching and getconfigurationflags
-description: "Windows Commands topic for **bitsadmin peercaching and getconfigurationflags** - Gets the configuration flags that determine if the computer serves content to peers and can download content from peers."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin peercaching and getconfigurationflags command, which gets the configuration flags that determine if the computer serves content to peers and if it can download content from peers.
+ms.topic: reference
 ms.assetid: 124ddc15-3444-4bd5-96e5-c6bfabe4f9c2
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin peercaching and getconfigurationflags
 
-
-
-Gets the configuration flags that determine if the computer serves content to peers and can download content from peers.
+Gets the configuration flags that determine if the computer serves content to peers and if it can download content from peers.
 
 ## Syntax
 
 ```
-bitsadmin /PeerCaching /GetConfigurationFlags <Job> 
+bitsadmin /peercaching /getconfigurationflags <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example gets the configuration flags for the job named *myJob*.
+To get the configuration flags for the job named *myDownloadJob*:
+
 ```
-C:\> Bitsadmin /PeerCaching /GetConfigurationFlags myJob
+bitsadmin /peercaching /getconfigurationflags myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)
+
+- [bitsadmin peercaching command](bitsadmin-peercaching.md)

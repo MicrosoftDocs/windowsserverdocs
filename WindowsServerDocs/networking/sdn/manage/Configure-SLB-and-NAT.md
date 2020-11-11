@@ -1,17 +1,11 @@
 ---
 title: Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)
 description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
-manager: dougkim
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: networking-sdn
-ms.tgt_pltfrm: na
+manager: grcusanz
 ms.topic: article
 ms.assetid: 73bff8ba-939d-40d8-b1e5-3ba3ed5439c3
-ms.author: pashort
-author: shortpatti
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/23/2018
 ---
 # Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)
@@ -27,7 +21,7 @@ The SDN Software Load Balancer \(SLB\) delivers high availability and network pe
 Configure SLB to do the following:
 
 - Load balance incoming traffic external to a virtual network to virtual machines \(VMs\), also called public VIP load balancing.
-- Load balance incoming traffic between VMs in a virtual network, between VMs in cloud services, or between on-premises computers and VMs in a cross-premises virtual network. 
+- Load balance incoming traffic between VMs in a virtual network, between VMs in cloud services, or between on-premises computers and VMs in a cross-premises virtual network.
 - Forward VM network traffic from the virtual network to external destinations using network address translation (NAT), also called outbound NAT.
 - Forward external traffic to a specific VM, also called inbound NAT.
 
@@ -50,12 +44,12 @@ In this example, you create a load balancer object with a public VIP and two VMs
     $LoadBalancerProperties = new-object Microsoft.Windows.NetworkController.LoadBalancerProperties
    ```
 
-2. Assign a front-end IP address, commonly referred to as a Virtual IP (VIP).<p>The VIP must be from an unused IP in one of the logical network IP pools given to the load balancer manager. 
+2. Assign a front-end IP address, commonly referred to as a Virtual IP (VIP).<p>The VIP must be from an unused IP in one of the logical network IP pools given to the load balancer manager.
 
    ```PowerShell
     $VIPIP = "10.127.134.5"
     $VIPLogicalNetwork = get-networkcontrollerlogicalnetwork -ConnectionUri $uri -resourceid "PublicVIP" -PassInnerException
-    
+
     $FrontEndIPConfig = new-object Microsoft.Windows.NetworkController.LoadBalancerFrontendIpConfiguration
     $FrontEndIPConfig.ResourceId = "FE1"
     $FrontEndIPConfig.ResourceRef = "/loadBalancers/$LBResourceId/frontendIPConfigurations/$($FrontEndIPConfig.ResourceId)"
@@ -65,13 +59,13 @@ In this example, you create a load balancer object with a public VIP and two VMs
     $FrontEndIPConfig.Properties.Subnet.ResourceRef = $VIPLogicalNetwork.Properties.Subnets[0].ResourceRef
     $FrontEndIPConfig.Properties.PrivateIPAddress = $VIPIP
     $FrontEndIPConfig.Properties.PrivateIPAllocationMethod = "Static"
-      
+
     $LoadBalancerProperties.FrontEndIPConfigurations += $FrontEndIPConfig
    ```
 
-3. Allocate a back-end address pool, which contains the Dynamic IPs (DIPs) that make up the members of the load-balanced set of VMs. 
+3. Allocate a back-end address pool, which contains the Dynamic IPs (DIPs) that make up the members of the load-balanced set of VMs.
 
-   ```PowerShell 
+   ```PowerShell
     $BackEndAddressPool = new-object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPool
     $BackEndAddressPool.ResourceId = "BE1"
     $BackEndAddressPool.ResourceRef = "/loadBalancers/$LBResourceId/backendAddressPools/$($BackEndAddressPool.ResourceId)"
@@ -111,7 +105,7 @@ In this example, you create a load balancer object with a public VIP and two VMs
 
    $Rule.Properties = new-object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
    $Rule.Properties.FrontEndIPConfigurations += $FrontEndIPConfig
-   $Rule.Properties.backendaddresspool = $BackEndAddressPool 
+   $Rule.Properties.backendaddresspool = $BackEndAddressPool
    $Rule.Properties.protocol = "TCP"
    $Rule.Properties.FrontEndPort = 80
    $Rule.Properties.BackEndPort = 80
@@ -132,7 +126,7 @@ In this example, you create a load balancer object with a public VIP and two VMs
 
 ## Example: Use SLB for outbound NAT
 
-In this example, you configure SLB with a back-end pool for providing outbound NAT capability for a VM on a virtual network's private address space to reach outbound to the internet. 
+In this example, you configure SLB with a back-end pool for providing outbound NAT capability for a VM on a virtual network's private address space to reach outbound to the internet.
 
 1. Create the load balancer properties, front-end IP, and back-end pool.
 
@@ -172,7 +166,7 @@ In this example, you configure SLB with a back-end pool for providing outbound N
    ```PowerShell
     $OutboundNAT = new-object Microsoft.Windows.NetworkController.LoadBalancerOutboundNatRule
     $OutboundNAT.ResourceId = "onat1"
-    
+
     $OutboundNAT.properties = new-object Microsoft.Windows.NetworkController.LoadBalancerOutboundNatRuleProperties
     $OutboundNAT.properties.frontendipconfigurations += $FrontEndIPConfig
     $OutboundNAT.properties.backendaddresspool = $BackEndAddressPool
@@ -190,10 +184,10 @@ In this example, you configure SLB with a back-end pool for providing outbound N
 4. Follow the next example to add the network interfaces to which you want to provide internet access.
 
 ## Example: Add network interfaces to the back-end pool
-In this example, you add network interfaces to the back-end pool.  You must repeat this step for each network interface that can process requests made to the VIP. 
+In this example, you add network interfaces to the back-end pool.  You must repeat this step for each network interface that can process requests made to the VIP.
 
 You can also repeat this process on a single network interface to add it to multiple load balancer objects. For example, if you have a load balancer object for a web server VIP and a separate load balancer object to provide outbound NAT.
-    
+
 1. Get the load balancer object containing the back-end pool to add a network interface.
 
    ```PowerShell
@@ -206,13 +200,13 @@ You can also repeat this process on a single network interface to add it to mult
    ```PowerShell
    $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid 6daca142-7d94-0000-1111-c38c0141be06 -PassInnerException
    $nic.properties.IpConfigurations[0].properties.LoadBalancerBackendAddressPools += $lb.properties.backendaddresspools[0]
-   ```  
+   ```
 
-3. Put the network interface to apply the change. 
+3. Put the network interface to apply the change.
 
    ```PowerShell
    new-networkcontrollernetworkinterface  -connectionuri $uri -resourceid 6daca142-7d94-0000-1111-c38c0141be06 -properties $nic.properties -force -PassInnerException
-   ``` 
+   ```
 
 
 ## Example: Use the Software Load Balancer for forwarding traffic
@@ -243,7 +237,7 @@ If you defined the VIP and DIP as the same subnet, then this is equivalent to pe
    ```
 
 ## Example: Use the Software Load Balancer for forwarding traffic with a dynamically allocated VIP
-This example repeats the same action as the previous example, but it automatically allocates the VIP from the available pool of VIPs in the load balancer instead of specifying a specific IP Address. 
+This example repeats the same action as the previous example, but it automatically allocates the VIP from the available pool of VIPs in the load balancer instead of specifying a specific IP Address.
 
 1. Create a public IP object to contain the VIP.
 
@@ -273,7 +267,7 @@ This example repeats the same action as the previous example, but it automatical
     IpConfiguration          :
     PreviousIpConfiguration  :
    ```
- 
+
 3. Assign the PublicIPAddress to a network interface.
 
    ```PowerShell
@@ -282,7 +276,7 @@ This example repeats the same action as the previous example, but it automatical
    New-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId $nic.ResourceId -Properties $nic.properties -PassInnerException
    ```
    ## Example: Remove a PublicIP address that is being used for forwarding traffic and return it to the VIP pool
-   This example removes the PublicIPAddress resource that was created by the previous examples.  Once the PublicIPAddress is removed, the reference to the PublicIPAddress will automatically be removed from the network interface, the traffic will stop being forwarded, and the IP address will be returned to the Public VIP pool for re-use.  
+   This example removes the PublicIPAddress resource that was created by the previous examples.  Once the PublicIPAddress is removed, the reference to the PublicIPAddress will automatically be removed from the network interface, the traffic will stop being forwarded, and the IP address will be returned to the Public VIP pool for re-use.
 
 4. Remove the PublicIP
 
@@ -293,4 +287,3 @@ This example repeats the same action as the previous example, but it automatical
 ---
 
 
- 

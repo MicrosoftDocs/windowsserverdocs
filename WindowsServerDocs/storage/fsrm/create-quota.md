@@ -2,8 +2,6 @@
 title: Create a Quota
 description: This article describes how to create a quota based on a template
 ms.date: 7/7/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -43,7 +41,7 @@ When you create a quota, you choose a quota path, which is a volume or folder th
 
 7.  Click **Create**.
 
-## See also
+## Additional References
 
 -   [Quota Management](quota-management.md)
 -   [Create an Auto Apply Quota](create-auto-apply-quota.md)

@@ -1,15 +1,13 @@
 ---
 title: Virtual Receive Side Scaling (vRSS)
 description: Learn about Virtual Receive Side Scaling (vRSS) in Windows Server and how to configure a virtual network adapter to load balance incoming network traffic across multiple logical processor cores in a VM. You can also configure mulitple physical cores for a host virtual Network Interface Card (vNIC).
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 9be477b3-f81d-4e84-a6b0-ac4c1ea97715
 ms.date: 09/05/2018
 ms.localizationpriority: medium
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Virtual Receive Side Scaling \(vRSS\)
@@ -42,12 +40,12 @@ Multiprocessor or multicore VMs that are running the following Microsoft operati
 - Windows Server 2012 with the Windows Server 2012 R2 integration components installed.
 - Windows 8 with the Windows Server 2012 R2 integration components installed.
 
-For information about vRSS support for VMs running FreeBSD or Linux as a guest operating system on Hyper-V, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](https://docs.microsoft.com/windows-server/virtualization/hyper-v/Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows).
-  
+For information about vRSS support for VMs running FreeBSD or Linux as a guest operating system on Hyper-V, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../../../virtualization/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md).
+
 ## Hardware requirements
 
 Following are the hardware requirements for vRSS.
- 
+
 - Physical network adapters must support Virtual Machine Queue \(VMQ\). If VMQ is disabled or not supported, then vRSS is disabled for the Hyper\-V host and any VMs configured on the host.
 - Network adapters must have a link speed of 10 Gbps or more.
 - Hyper\-V hosts must be configured with multiple processors or at least one multi\-core processor to use vRSS.
@@ -59,7 +57,7 @@ Following are the hardware requirements for vRSS.
 The following two use case scenarios depict common usage of vRSS for processor load balancing and software load balancing.
 
 ### Processor load balancing
-  
+
 Anthony, a network administrator, is setting up a new Hyper-V host with two network adapter that supports Single Root Input-Output Virtualization \(SR\-IOV\). He deploys Windows Server 2016 to host a VM file server.
 
 After installing the hardware and software, Anthony configures a VM to use eight virtual processors and 4096 MB of memory. Unfortunately, Anthony does not have the option of turning on SR\-IOV because his VMs rely on policy enforcement through the virtual switch he created with Hyper\-V Virtual Switch manager. Because of this, Anthony decides to use vRSS instead of SR\-IOV.

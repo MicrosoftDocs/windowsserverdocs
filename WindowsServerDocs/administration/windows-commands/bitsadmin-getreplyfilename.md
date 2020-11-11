@@ -1,49 +1,43 @@
 ---
 title: bitsadmin getreplyfilename
-description: "Windows Commands topic for **bitsadmin getreplyfilename** - Gets the path of the file that contains the server reply."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin getreplyfilename command, which gets the path of the file that contains the server upload-reply for the job.
+ms.topic: reference
 ms.assetid: 85447184-1732-4816-a365-2e3599551bf8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin getreplyfilename
 
-Gets the path of the file that contains the server reply.
+Gets the path of the file that contains the server upload-reply for the job.
 
-**BITS 1.2 and earlier**: Not supported.
+> [!NOTE]
+> This command isn't supported by BITS 1.2 and earlier.
 
 ## Syntax
 
 ```
-bitsadmin /GetReplyFileName <Job>
+bitsadmin /getreplyfilename <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## Remarks
+## Examples
 
-Valid only for upload-reply jobs.
+To retrieve the upload-reply filename for the job named *myDownloadJob*:
 
-## <a name="BKMK_examples"></a>Examples
-
-The following example retrieves the reply filename for the job named *myDownloadJob*.
 ```
-C:\>bitsadmin /GetReplyFileName myDownloadJob
+bitsadmin /getreplyfilename myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

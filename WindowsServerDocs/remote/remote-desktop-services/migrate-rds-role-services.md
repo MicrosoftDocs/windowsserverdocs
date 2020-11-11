@@ -1,14 +1,8 @@
 ---
 title: Migrate your Remote Desktop Services deployment to Windows Server 2016
 description: This article describes how to migrate your Remote Desktop Services deployment to new Windows Server 2016 servers.
-ms.custom: na
-ms.prod: windows-server
-msreviewer:
-nams.suite:
-nams.technology: remote-desktop-services
 ms.author: chrimo
 ms.date: 11/01/2016
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b1fa833-4325-48a8-bf34-46265f40c001
 author: christianmontoya
@@ -20,7 +14,7 @@ If you are currently running Remote Desktop Services in Windows Server 2012 R2, 
 
 Migration for a Remote Desktop Services deployment is supported from source servers running Windows Server 2016 to destination servers running Windows Server 2016. In other words, there is no direct in-place migration from RDS in Windows Server 2012 R2 to Windows Server 2016. Instead, for most of the RDS components, you first upgrade to Windows Server 2016 and then migrate data and licenses. The only components with a direct migration are RD Web, RD Gateway, and the licensing server.
 
-For more information on the upgrade process and requirements, see [upgrading your Remote Desktop Services deployments to Windows Server 2016](upgrade-to-rds-2016.md).
+For more information on the upgrade process and requirements, see [upgrading your Remote Desktop Services deployments to Windows Server 2016](./upgrade-to-rds.md).
 
 Use the following steps to migrate your Remote Desktop Services deployment:
 
@@ -43,16 +37,16 @@ Use the following steps to migrate your Remote Desktop Services deployment:
 This is the first and most important step for migrating: migrating your RD Connection Brokers to destination servers running Windows Server 2016.
 
 > [!IMPORTANT]
-> The Remote Desktop Connection Broker (RD Connection Broker) source servers must be configured for high availability to support migration. For more information, see [Deploy a Remote Desktop Connection Broker cluster](Deploy-a-Remote-Desktop-Connection-Broker-cluster.md).
+> The Remote Desktop Connection Broker (RD Connection Broker) source servers must be configured for high availability to support migration. For more information, see [Deploy a Remote Desktop Connection Broker cluster](./rds-connection-broker-cluster.md).
 
 1. If you have more than one RD Connection Broker server in the high availability setup, remove all the RD Connection Broker servers except the one that is currently active.
 
-2. [Upgrade](upgrade-to-rds-2016.md) the remaining RD Connection Broker server in the deployment to Windows Server 2016.
+2. [Upgrade](./upgrade-to-rds.md) the remaining RD Connection Broker server in the deployment to Windows Server 2016.
 
 3. Add Windows Server 2016 RD Connection Broker servers into the high availability deployment.
 
-> [!NOTE] 
-> A mixed high availability configuration with Windows Server 2016 and Windows Server 2012 R2 is not supported for RD Connection Broker servers. 
+> [!NOTE]
+> A mixed high availability configuration with Windows Server 2016 and Windows Server 2012 R2 is not supported for RD Connection Broker servers.
 > An RD Connection Broker running Windows Server 2016 can serve session collections with RD Session Host servers running Windows Server 2012 R2, and it can serve virtual desktop collections with RD Virtualization Host servers running Windows Server 2012 R2.
 
 ## Migrate session collections
@@ -62,7 +56,7 @@ Follow these steps to migrate a session collection in Windows Server 2012 R2 to 
 > [!IMPORTANT]
 > Migrate session collections only after successfully completing the previous step, [Migrate RD Connection Broker servers](#migrate-rdconnection-broker-servers).
 
-1. [Upgrade the session collection](Upgrade-to-RDSH-2016.md) from Windows Server 2012 R2 to Windows Server 2016.
+1. [Upgrade the session collection](./upgrade-to-rdsh.md) from Windows Server 2012 R2 to Windows Server 2016.
 
 2. Add the new RD Session Host server running Windows Server 2016 to the session collection.
 
@@ -80,7 +74,7 @@ Follow these steps to migrate a virtual desktop collection from a source server 
 > [!IMPORTANT]
 > Migrate virtual desktop collections only after successfully completing the previous step, [Migrate RD Connection Broker servers](#migrate-rdconnection-broker-servers).
 
-1. [Upgrade the virtual desktop collection](Upgrade-to-RDVH-2016.md) from the server running Windows Server 2012 R2 to Windows Server 2016.
+1. [Upgrade the virtual desktop collection](./upgrade-to-rdvh.md) from the server running Windows Server 2012 R2 to Windows Server 2016.
 
 2. Add the new Windows Server 2016 RD Virtualization Host servers to the virtual desktop collection.
 

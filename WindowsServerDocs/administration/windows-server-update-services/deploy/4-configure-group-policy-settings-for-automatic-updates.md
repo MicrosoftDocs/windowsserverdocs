@@ -1,16 +1,11 @@
 ---
 title: Step 4 - Configure Group Policy Settings for Automatic Updates
-description: "Windows Server Update Service (WSUS) topic - Configure Group Policy Settings for Automatic Updates is step four in a four step process for deploying WSUS"
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-wsus
-ms.tgt_pltfrm: na
+description: Windows Server Update Service (WSUS) topic - Configure Group Policy Settings for Automatic Updates is step four in a four step process for deploying WSUS
 ms.topic: article
 ms.assetid: 62177d05-d832-4ea8-bca4-47a8cd34a19c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Step 4: Configure Group Policy Settings for Automatic Updates
@@ -58,9 +53,9 @@ This section provides details about the following computer-based policy settings
 
 -   [Delay restart for scheduled installations](#delay-restart-for-scheduled-installations)
 
--   [Do not adjust default option to "Install Updates and Shut Down" in Shut Down Windows dialog](#do-not-adjust-default-option-to-install-updates-and-shut-down-in-shut-down-windows-dialog)
+-   [Do not adjust default option to Install Updates and Shut Down in Shut Down Windows dialog](#do-not-adjust-default-option-to-install-updates-and-shut-down-in-shut-down-windows-dialog)
 
--   [Do not display "Install updates and Shut Down" option in Shut Down Windows dialog](#do-not-display-install-updates-and-shut-down-option-in-shut-down-windows-dialog)
+-   [Do not display Install updates and Shut Down option in Shut Down Windows dialog](#do-not-display-install-updates-and-shut-down-option-in-shut-down-windows-dialog)
 
 -   [Enable client-side targeting](#enable-client-side-targeting)
 
@@ -91,7 +86,7 @@ Specifies whether Automatic Updates will automatically install updates that do n
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|null|
 
 > [!NOTE]
-> if the "Configure Automatic Updates" policy setting is set to **Disabled**, this policy has no effect.
+> if the Configure Automatic Updates policy setting is set to **Disabled**, this policy has no effect.
 
 |||
 |-|-|
@@ -110,7 +105,7 @@ Specifies whether non-administrative users will receive update notifications bas
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|See details in the table below.|
 
 > [!NOTE]
-> if the "Configure Automatic Updates" policy setting is disabled or is not configured, this policy setting has no effect.
+> if the Configure Automatic Updates policy setting is disabled or is not configured, this policy setting has no effect.
 
 > [!IMPORTANT]
 > starting in Windows 8 and Windows RT, this policy setting is enabled by default. In all prior versions of Windows, it is disabled by default.
@@ -119,7 +114,7 @@ Specifies whether non-administrative users will receive update notifications bas
 |-|-|
 |**Policy setting state**|**Behavior**|
 |**Not Configured**|Specifies that users will always see an Account Control window and require elevated permissions to do these tasks. A local administrator can change this setting by using the Local Group Policy editor.|
-|**Enabled**|Specifies that Windows Automatic Update and Microsoft Update will include non-administrators when determining which signed-in user will receive update notifications. Non-administrative users will be able to install all optional, recommended, and IMPORTANT update content for which they received a notification. Users will not see a User Account Control window, and they do not need elevated permissions to install these updates, except in the case of updates that contain User Interface, End User License Agreement, or Windows Update setting changes.<br /><br />There are two situations where the effect of this setting depends on the operating computer:<br /><br />1.  **Hide** or **Restore** updates<br />2.  **Cancel** an update installation<br /><br />In Windows Vista or Windows XP, if this policy setting is enabled, users will not see a User Account Control window, and they do not need elevated permissions to hide, restore, or cancel updates.<br /><br />In Windows Vista, if this policy setting is enabled, users will not see a User Account Control window, and they do not need elevated permissions to hide, restore, or cancel updates. If this policy setting is not enabled, users will always see an Account Control window, and they require elevated permissions to hide, restore, or cancel updates.<br /><br />In  Windows 7 , this policy setting has no effect. Users will always see an Account Control window, and they require elevated permissions to do these tasks.<br /><br />In Windows 8 and Windows RT, this policy setting has no effect.|
+|**Enabled**|Specifies that Windows Automatic Update and Microsoft Update will include non-administrators when determining which signed-in user will receive update notifications. Non-administrative users will be able to install all optional, recommended, and IMPORTANT update content for which they received a notification. Users will not see a User Account Control window, and they do not need elevated permissions to install these updates, except in the case of updates that contain User Interface, End User License Agreement, or Windows Update setting changes.<p>There are two situations where the effect of this setting depends on the operating computer:<p>1.  **Hide** or **Restore** updates<br />2.  **Cancel** an update installation<p>In Windows Vista or Windows XP, if this policy setting is enabled, users will not see a User Account Control window, and they do not need elevated permissions to hide, restore, or cancel updates.<p>In Windows Vista, if this policy setting is enabled, users will not see a User Account Control window, and they do not need elevated permissions to hide, restore, or cancel updates. If this policy setting is not enabled, users will always see an Account Control window, and they require elevated permissions to hide, restore, or cancel updates.<p>In  Windows 7 , this policy setting has no effect. Users will always see an Account Control window, and they require elevated permissions to do these tasks.<p>In Windows 8 and Windows RT, this policy setting has no effect.|
 |**Disabled**|Specifies that only logged-on administrators receive update notifications. **Note:** In Windows 8 and Windows RT, this policy setting is enabled by default. In all prior versions of Windows, it is disabled by default.|
 
 **Options:** There are no options for this setting.
@@ -143,7 +138,7 @@ Specifies whether Automatic Updates accepts updates that are signed by entities 
 |-|-|
 |**Policy setting state**|**Behavior**|
 |**Not Configured**|Specifies that updates from an intranet Microsoft update service location must be signed by Microsoft.|
-|**Enabled**|Specifies that Automatic Updates accepts updates received through an intranet Microsoft update service location if they are signed by a certificate found in the local computer's "Trusted Publishers" certificate store.|
+|**Enabled**|Specifies that Automatic Updates accepts updates received through an intranet Microsoft update service location if they are signed by a certificate found in the local computer's Trusted Publishers certificate store.|
 |**Disabled**|Specifies that updates from an intranet Microsoft update service location must be signed by Microsoft.|
 
 **Options:** There are no options for this setting.
@@ -156,13 +151,13 @@ Specifies whether a restart timer will always begin immediately after Windows Up
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|null|
 
 > [!NOTE]
-> if the "No auto-restart with logged on users for scheduled automatic updates installations" policy setting is enabled, this policy has no effect.
+> if the No auto-restart with logged on users for scheduled automatic updates installations policy setting is enabled, this policy has no effect.
 
 |||
 |-|-|
 |**Policy setting state**|**Behavior**|
 |**Not Configured**|Specifies that Windows Update will not alter the computer's restart behavior.|
-|**Enabled**|Specifies that a restart timer will always begin immediately after Windows Update installs IMPORTANT updates, instead of first notifying users on the sign-in screen for at least two days.<br /><br />The restart timer can be configured to start with any value from 15 to 180 minutes. When the timer runs out, the restart will proceed even if the computer has signed-in users.|
+|**Enabled**|Specifies that a restart timer will always begin immediately after Windows Update installs IMPORTANT updates, instead of first notifying users on the sign-in screen for at least two days.<p>The restart timer can be configured to start with any value from 15 to 180 minutes. When the timer runs out, the restart will proceed even if the computer has signed-in users.|
 |**Disabled**|Specifies that Windows Update will not alter the computer's restart behavior.|
 
 **Options:** if this setting is enabled, you can specify the amount of time that will elapse after updates are installed before a forced computer restart occurs.
@@ -175,9 +170,9 @@ Specifies the hours that Windows will use to determine how long to wait before c
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|Windows RT|
 
 > [!NOTE]
-> The "Specify intranet Microsoft update service location" setting must be enabled for this policy to have effect.
+> The Specify intranet Microsoft update service location setting must be enabled for this policy to have effect.
 >
-> if "Configure Automatic Updates" policy setting is disabled, this policy has no effect.
+> if Configure Automatic Updates policy setting is disabled, this policy has no effect.
 
 > [!NOTE]
 > This policy is not supported on Windows RT. Enabling this policy will not have any effect on computers running Windows RT.
@@ -206,7 +201,7 @@ To use this setting, select **Enabled**, and then in **Options** under **Configu
 |-|-|
 |**Policy setting state**|**Behavior**|
 |**Not Configured**|Specifies that the use of automatic updates is not specified at the Group Policy level. However, a computer administrator can still configure automatic updates in the Control Panel.|
-|**Enabled**|Specifies that Windows recognizes when the computer is online and uses its Internet connection to search Windows Update for available updates.<br /><br />When enabled, local administrators will be allowed to use the Windows Update control panel to select a configuration option of their choice. However, local administrators will not be allowed to disable the configuration for Automatic Updates.<br /><br />-   **2 - Notify for download and notify for install**<br />    When Windows Update finds updates that apply to the computer, users will be notified that updates are ready for download. Users can then run Windows Update to download and install any available updates.<br />-   **3 - Auto download and notify for install** (default setting)<br />    Windows Update finds applicable updates and downloads them in the background; the user is not notified or interrupted during the process. When the downloads are complete, users are notified that there are updates ready to install. Users can then run Windows Update to install the downloaded updates.<br />-   **4 - Auto download and schedule the install**<br />    You can specify the schedule by using the options in this Group Policy setting. If no schedule is specified, the default schedule for all installations will be every day at 3:00 A.M. If any updates require a restart to complete the installation, Windows will restart the computer automatically. (if a user is signed in to the computer when Windows is ready to restart, the user will be notified and given the option to delay the restart.) **Note:**     starting Windows 8, you can set updates to install during automatic maintenance instead of using a specific schedule tied to Windows Update. Automatic maintenance will install updates when the computer is not in use, and avoid installing updates when the computer is running on battery power. If automatic maintenance is unable to install updates within days, Windows Update will install updates right away. Users will then be notified about a pending restart. A pending restart will only take place if there is no potential for accidental data loss.    You can specify schedule options in the GPME Maintenance Scheduler settings, which are located in the path, *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Maintenance Scheduler** > **Automatic Maintenance Activation Boundary**. See the section of this reference titled: [Maintenance Scheduler settings](#computer-configuration--maintenance-scheduler-policy-settings), for setting details.    **5 - Allow local admin to choose setting**<br />-   Specifies whether local administrators are allowed to use the Automatic Updates control panel to select a configuration option of their choice for example, whether local administrators can choose a scheduled installation time.<br />    Local administrators will not be allowed to disable the configuration for Automatic Updates.|
+|**Enabled**|Specifies that Windows recognizes when the computer is online and uses its Internet connection to search Windows Update for available updates.<p>When enabled, local administrators will be allowed to use the Windows Update control panel to select a configuration option of their choice. However, local administrators will not be allowed to disable the configuration for Automatic Updates.<p>-   **2 - Notify for download and notify for install**<br />    When Windows Update finds updates that apply to the computer, users will be notified that updates are ready for download. Users can then run Windows Update to download and install any available updates.<br />-   **3 - Auto download and notify for install** (default setting)<br />    Windows Update finds applicable updates and downloads them in the background; the user is not notified or interrupted during the process. When the downloads are complete, users are notified that there are updates ready to install. Users can then run Windows Update to install the downloaded updates.<br />-   **4 - Auto download and schedule the install**<br />    You can specify the schedule by using the options in this Group Policy setting. If no schedule is specified, the default schedule for all installations will be every day at 3:00 A.M. If any updates require a restart to complete the installation, Windows will restart the computer automatically. (if a user is signed in to the computer when Windows is ready to restart, the user will be notified and given the option to delay the restart.) **Note:**     starting Windows 8, you can set updates to install during automatic maintenance instead of using a specific schedule tied to Windows Update. Automatic maintenance will install updates when the computer is not in use, and avoid installing updates when the computer is running on battery power. If automatic maintenance is unable to install updates within days, Windows Update will install updates right away. Users will then be notified about a pending restart. A pending restart will only take place if there is no potential for accidental data loss.    You can specify schedule options in the GPME Maintenance Scheduler settings, which are located in the path, *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Maintenance Scheduler** > **Automatic Maintenance Activation Boundary**. See the section of this reference titled: [Maintenance Scheduler settings](#computer-configuration--maintenance-scheduler-policy-settings), for setting details.    **5 - Allow local admin to choose setting**<br />-   Specifies whether local administrators are allowed to use the Automatic Updates control panel to select a configuration option of their choice for example, whether local administrators can choose a scheduled installation time.<br />    Local administrators will not be allowed to disable the configuration for Automatic Updates.|
 |**Disabled**|Specifies that any client updates that are available from the public Windows Update service must be manually downloaded from the Internet and installed.|
 
 #### Delay restart for scheduled installations
@@ -217,7 +212,7 @@ Specifies the amount of time Automatic Updates will wait before proceeding with 
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|null|
 
 > [!NOTE]
-> This policy applies only when Automatic Updates is configured to perform scheduled installations of updates. If the "Configure Automatic Updates" policy setting is disabled, this policy has no effect.
+> This policy applies only when Automatic Updates is configured to perform scheduled installations of updates. If the Configure Automatic Updates policy setting is disabled, this policy has no effect.
 
 |||
 |-|-|
@@ -236,7 +231,7 @@ This policy setting enables you to specify whether the **Install Updates and Shu
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|null|
 
 > [!NOTE]
-> This policy setting has no impact if the *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Windows Update** > **Do not display "Install Updates and Shut Down" option in Shut Down Windows dialog** policy setting is enabled.
+> This policy setting has no impact if the *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Windows Update** > **Do not display Install Updates and Shut Down option in Shut Down Windows dialog** policy setting is enabled.
 
 |||
 |-|-|
@@ -257,7 +252,7 @@ Enabling this policy will disable the functionality to periodically retrieve inf
 |starting with  Windows Server 2012 R2 , Windows 8.1 or Windows RT 8.1, Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|null|
 
 > [!NOTE]
-> This policy applies only when the computer is configured to connect to an intranet update service by using the "Specify intranet Microsoft update service location" policy setting.
+> This policy applies only when the computer is configured to connect to an intranet update service by using the Specify intranet Microsoft update service location policy setting.
 
 |||
 |-|-|
@@ -292,7 +287,7 @@ Specifies the target group name or names that are configured in the WSUS console
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|Windows RT|
 
 > [!NOTE]
-> This policy applies only when this computer is configured to support the specified target group names in WSUS. If the target group name doesn't exist in WSUS, it will be ignored until it is created. If the "Specify intranet Microsoft update service location" policy setting is disabled or not configured, this policy has no effect.
+> This policy applies only when this computer is configured to support the specified target group names in WSUS. If the target group name doesn't exist in WSUS, it will be ignored until it is created. If the Specify intranet Microsoft update service location policy setting is disabled or not configured, this policy has no effect.
 
 > [!NOTE]
 > This policy is not supported on Windows RT. Enabling this policy will not have any effect on computers running Windows RT.
@@ -334,7 +329,7 @@ Specifies that to complete a scheduled installation, Automatic Updates will wait
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|null|
 
 > [!NOTE]
-> This policy applies only when Automatic Updates is configured to perform scheduled installations of updates. If the "Configure Automatic Updates" policy setting is disabled, this policy has no effect.
+> This policy applies only when Automatic Updates is configured to perform scheduled installations of updates. If the Configure Automatic Updates policy setting is disabled, this policy has no effect.
 
 |||
 |-|-|
@@ -353,7 +348,7 @@ Specifies the amount of time for Automatic Updates to wait before prompting agai
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|Windows RT|
 
 > [!IMPORTANT]
-> This policy applies only when Automatic Updates is configured to perform scheduled installations of updates. If the "Configure Automatic Updates" policy setting is disabled, this policy has no effect.
+> This policy applies only when Automatic Updates is configured to perform scheduled installations of updates. If the Configure Automatic Updates policy setting is disabled, this policy has no effect.
 
 > [!NOTE]
 > This policy has no effect on computers running Windows RT.
@@ -377,7 +372,7 @@ if the status is set to **Not Configured**, a missed scheduled installation will
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|null|
 
 > [!NOTE]
-> This policy applies only when Automatic Updates is configured to perform scheduled installations of updates. If the "Configure Automatic Updates" policy setting is disabled, this policy has no effect.
+> This policy applies only when Automatic Updates is configured to perform scheduled installations of updates. If the Configure Automatic Updates policy setting is disabled, this policy has no effect.
 
 |||
 |-|-|
@@ -400,7 +395,7 @@ This setting enables you to specify a WSUS server on your network that will func
 To use this setting, you must set two server name values: the server from which the client detects and downloads updates, and the server to which updated workstations upload statistics. The values need not be different if both services are configured on the same server.
 
 > [!NOTE]
-> if the "Configure Automatic Updates" policy setting is disabled, this policy has no effect.
+> if the Configure Automatic Updates policy setting is disabled, this policy has no effect.
 
 > [!NOTE]
 > This policy is not supported on Windows RT. Enabling this policy will not have any effect on computers running Windows RT.
@@ -439,9 +434,9 @@ Specifies whether Automatic Updates will deliver IMPORTANT and recommended updat
 #### Turn on Software Notifications
 This policy setting enables you to control whether users see detailed enhanced notification messages about featured software from the Microsoft Update service. Enhanced notification messages convey the value and promote the installation and use of optional software. This policy setting is intended for use in loosely managed environments in which you allow the end user access to the Microsoft Update service.
 
-if you are not using the Microsoft Update service, the "Software Notifications" policy setting has no effect.
+if you are not using the Microsoft Update service, the Software Notifications policy setting has no effect.
 
-if the "Configure Automatic Updates" policy setting is disabled or is not configured, the "Software Notifications" policy setting has no effect.
+if the Configure Automatic Updates policy setting is disabled or is not configured, the Software Notifications policy setting has no effect.
 
 |Supported on:|Excluding:|
 |---------|-------|
@@ -454,13 +449,13 @@ if the "Configure Automatic Updates" policy setting is disabled or is not config
 |-|-|
 |**Policy setting state**|**Behavior**|
 |**Not Configured**|Users on computers that are running  Windows 7  are not offered messages for optional applications. Users on computers that are running Windows Vista are not offered messages for optional applications or updates. A local administrator can change this setting by using Control Panel or a local policy.|
-|**Enabled**|if you enable this policy setting, a notification message will appear on the user's computer when featured software is available. The user can click the notification to open Windows Update and get more information about the software or install it. The user can also click **Close this message** or **Show me later** to defer the notification as appropriate.<br /><br />In  Windows 7 , this policy setting will only control detailed notifications for optional applications. In Windows Vista, this policy setting controls detailed notifications for optional applications and updates.|
+|**Enabled**|if you enable this policy setting, a notification message will appear on the user's computer when featured software is available. The user can click the notification to open Windows Update and get more information about the software or install it. The user can also click **Close this message** or **Show me later** to defer the notification as appropriate.<p>In  Windows 7 , this policy setting will only control detailed notifications for optional applications. In Windows Vista, this policy setting controls detailed notifications for optional applications and updates.|
 |**Disabled**|Specifies that users running  Windows 7  will not be offered detailed notification messages for optional applications, and users running Windows Vista will not be offered detailed notification messages for optional applications or optional updates.|
 
 **Options:** There are no options for this setting.
 
 ### Computer Configuration > Maintenance Scheduler policy settings
-In the Configure Automatic Updates setting, you selected the option **4 - Auto download and schedule the install**, you can specify schedule Maintenance Scheduler settings in the GPMC for computers running Windows 8 and Windows RT. If you did not select option 4 in the "Configure Automatic Updates" setting, you do not need to configure these settings for the purpose of automatic updates. Maintenance Scheduler settings are located in the path: *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Maintenance Scheduler**. The Maintenance Scheduler extension of Group Policy contains the following settings:
+In the Configure Automatic Updates setting, you selected the option **4 - Auto download and schedule the install**, you can specify schedule Maintenance Scheduler settings in the GPMC for computers running Windows 8 and Windows RT. If you did not select option 4 in the Configure Automatic Updates setting, you do not need to configure these settings for the purpose of automatic updates. Maintenance Scheduler settings are located in the path: *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Maintenance Scheduler**. The Maintenance Scheduler extension of Group Policy contains the following settings:
 
 -   [Automatic Maintenance Activation Boundary](#automatic-maintenance-activation-boundary)
 
@@ -469,7 +464,7 @@ In the Configure Automatic Updates setting, you selected the option **4 - Auto d
 -   [Automatic WakeUp Policy](#automatic-wakeup-policy)
 
 #### Automatic Maintenance Activation Boundary
-This policy enables you to configure the "Automatic Maintenance activation boundary" setting.
+This policy enables you to configure the Automatic Maintenance activation boundary setting.
 
 The maintenance activation boundary is the daily scheduled time at which Automatic Maintenance starts.
 
@@ -533,9 +528,9 @@ The maintenance wake-up policy specifies whether Automatic Maintenance should ma
 ### User Configuration > Windows Update policy settings
 This section provides details about the following user-based policy settings:
 
--   [Do not display "Install Updates and Shut Down" option in Shut Down Windows dialog box](#do-not-display-install-updates-and-shut-down-option-in-shut-down-windows-dialog)
+-   [Do not display Install Updates and Shut Down option in Shut Down Windows dialog box](#do-not-display-install-updates-and-shut-down-option-in-shut-down-windows-dialog)
 
--   [Do not adjust default option to "Install Updates and Shut Down" in Shut Down Windows dialog box](#do-not-adjust-default-option-to-install-updates-and-shut-down-in-shut-down-windows-dialog)
+-   [Do not adjust default option to Install Updates and Shut Down in Shut Down Windows dialog box](#do-not-adjust-default-option-to-install-updates-and-shut-down-in-shut-down-windows-dialog)
 
 -   [remove access to use all Windows Update features](#remove-access-to-use-all-windows-update-features)
 
@@ -563,7 +558,7 @@ Specifies whether the **Install Updates and Shut Down** option is displayed in t
 
 **Options:** There are no options for this setting.
 
-#### Do not adjust default option to "Install Updates and Shut Down" in Shut Down Windows dialog box
+#### Do not adjust default option to Install Updates and Shut Down in Shut Down Windows dialog box
 Specifies whether the **Install Updates and Shut Down** option is allowed as the default choice in the **Shut Down Windows** dialog box.
 
 |Supported on:|Excluding:|
@@ -571,7 +566,7 @@ Specifies whether the **Install Updates and Shut Down** option is allowed as the
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|null|
 
 > [!NOTE]
-> This policy setting has no impact if the *PolicyName* > **User Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Windows Update** > **Do not display "Install Updates and Shut Down" option in Shut Down Windows dialog box** is enabled.
+> This policy setting has no impact if the *PolicyName* > **User Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Windows Update** > **Do not display Install Updates and Shut Down option in Shut Down Windows dialog box** is enabled.
 
 |||
 |-|-|
@@ -593,7 +588,7 @@ This setting enables you to remove WSUS client access to Windows Update.
 |-|-|
 |**Policy setting state**|**Behavior**|
 |**Not Configured**|Users are able to connect to the Windows Update website.|
-|**Enabled**|**IMPORTANT:** if enable, all Windows Update features are removed. This includes blocking access to the Windows Update website at https://windowsupdate.microsoft.com, from the Windows Update hyperlink on the start menu or start screen, and also on the **Tools** menu in Internet Explorer. Windows automatic updating is also disabled; the user will neither be notified about nor receive critical updates from Windows Update. This setting also prevents Device Manager from automatically installing driver updates from the Windows Update website.<br /><br />When enabled, you can configure one of the following notification options:<br /><br />-   **0 - Do not show any notifications**<br />    This setting will remove all access to Windows Update features and no notifications will be shown.<br />-   **1 - Show restart required notifications**<br />    This setting will show notifications about restarts that are required to complete an installation. **Note:** On computers running Windows 8 and Windows RT, if this policy is enabled, only notifications related to restarts and the inability to detect updates will be shown. The notification options are not supported. Notifications on the sign-in screen are always displayed.|
+|**Enabled**|**IMPORTANT:** if enable, all Windows Update features are removed. This includes blocking access to the Windows Update website at https://windowsupdate.microsoft.com, from the Windows Update hyperlink on the start menu or start screen, and also on the **Tools** menu in Internet Explorer. Windows automatic updating is also disabled; the user will neither be notified about nor receive critical updates from Windows Update. This setting also prevents Device Manager from automatically installing driver updates from the Windows Update website.<p>When enabled, you can configure one of the following notification options:<p>-   **0 - Do not show any notifications**<br />    This setting will remove all access to Windows Update features and no notifications will be shown.<br />-   **1 - Show restart required notifications**<br />    This setting will show notifications about restarts that are required to complete an installation. **Note:** On computers running Windows 8 and Windows RT, if this policy is enabled, only notifications related to restarts and the inability to detect updates will be shown. The notification options are not supported. Notifications on the sign-in screen are always displayed.|
 |**Disabled**|Users are able to connect to the Windows Update website.|
 
 **Options:** See **Enabled** in the table for this setting.
@@ -636,7 +631,7 @@ The procedure that follows describes how to open the GPMC on your domain control
 
     -   **Open the computer Configuration > Maintenance Scheduler extension of Group Policy**. In GPOE, navigate to *PolicyName* > **computer Configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Maintenance Scheduler**.
 
-For more information about the Group Policy, see [Group Policy Overview](https://technet.microsoft.com/library/hh831791.aspx(v=ws.12)).
+For more information about the Group Policy, see [Group Policy Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831791(v=ws.11)).
 
 > [!TIP]
 > After you have opened the extension of Group Policy you want, you can use the following steps to enable, disable, or navigate between settings:
@@ -676,10 +671,10 @@ Following is a list of terms used in this guide.
 
 |Term|Definition|
 |----|-------|
-|Automatic Updates|**A service that runs on Windows computers** (Automatic Updates): Refers to the client computer component built into the Microsoft Windows Vista, Windows Server 2003, Windows XP, and Windows 2000 with SP3 operating systems to get updates from Microsoft Update or Windows Update.<br /><br />**Casual reference** (automatic updates): The term used to describe when the Windows Update Agent automatically schedules and downloads updates.|
+|Automatic Updates|**A service that runs on Windows computers** (Automatic Updates): Refers to the client computer component built into the Microsoft Windows Vista, Windows Server 2003, Windows XP, and Windows 2000 with SP3 operating systems to get updates from Microsoft Update or Windows Update.<p>**Casual reference** (automatic updates): The term used to describe when the Windows Update Agent automatically schedules and downloads updates.|
 |autonomous server|Use to refer to a downstream Windows Server Update Services (WSUS) server on which administrators can manage WSUS components.|
 |downstream server|Use to refer to a Windows Server Update Services (WSUS) server that gets updates from another WSUS server rather than from Microsoft Update or Windows Update.|
-|Group Policy extension (and: extension of Group Policy|A collection of settings in Group Policy that are used to control how users and computers (to whom the policies apply) can configure and use various Windows services and features. Administrators can use WSUS with Group Policy for client-side configuration of the Automatic Updates client, to help ensure that end-users can't disable or circumvent corporate update policies.<br /><br />WSUS does not require the use of active directory or Group Policy. Client configuration can also be applied by using local group policy or by modifying the Windows registry.|
+|Group Policy extension (and: extension of Group Policy|A collection of settings in Group Policy that are used to control how users and computers (to whom the policies apply) can configure and use various Windows services and features. Administrators can use WSUS with Group Policy for client-side configuration of the Automatic Updates client, to help ensure that end-users can't disable or circumvent corporate update policies.<p>WSUS does not require the use of active directory or Group Policy. Client configuration can also be applied by using local group policy or by modifying the Windows registry.|
 |internal update service|A casual reference to a network infrastructure that uses one or more WSUS servers to distribute updates.|
 |replica server|Use to refer to a downstream Windows Server Update Services (WSUS) server that mirrors the approvals and settings on the upstream server to which it is connected. You cannot manage WSUS on a replica server.|
 |Microsoft Update|**An Internet-based Microsoft download site:** A Microsoft Internet site that stores and distributes updates for Windows computers (device drivers), Windows operating systems and other Microsoft software products.|
@@ -689,6 +684,6 @@ Following is a list of terms used in this guide.
 |update information (also known as update metadata)|The information about an update, as opposed to the update binary files in an update package. For example, metadata supplies information for the properties of an update, thus enabling you to find out for what the update is useful. Metadata also includes Microsoft Software License Terms. The metadata package downloaded for an update is typically much smaller than the actual update file package.|
 |update source|The location to which a Windows Server Update Services (WSUS) server synchronizes to get update files. This location can be either Microsoft Update or an upstream WSUS server.|
 |upstream server|A Windows Server Update Services (WSUS) server that provides update files to another WSUS server, which in turn is referred to as a downstream server.|
-|Windows Server Update Services (WSUS)|A Server Role program that runs on one or more Windows Server computers on a corporate network. A WSUS infrastructure enables you to manage updates for computers on your network to install.<br /><br />You can use WSUS to approve or decline updates before release, to force updates to install by a given date, and to obtain extensive reports on what updates each computer on your network requires. You can configure WSUS to approve certain classes of updates automatically (critical updates, security updates, service packs, drivers, etc.). WSUS also enables you to approve updates for "detection" only, so that you can see what computers will require a given update without having to install the updates.<br /><br />In a WSUS implementation, at least one WSUS server in the network must be able to connect to Microsoft Update to get available updates. Based on network security and configuration, the administrator can determine how many other servers connect directly to Microsoft Update.<br /><br />You can configure a WSUS server to get updates over the Internet from such places as:<br /><br />-   the public Microsoft Update<br />-   the public Windows Update<br />-   Microsoft Store|
-|Windows Update|**An Internet-based Microsoft download site:** A Microsoft Internet site that stores and distributes updates for Windows computers (device drivers), and Windows operating systems.<br /><br />**computer service:** The name of the Windows Update service that runs on computers. Windows Update detects, downloads, and installs updates on Windows computers.<br /><br />Depending on computer and policy configurations, the Windows Update Agent can download updates from:<br /><br />-   Microsoft Update<br />-   Windows Update<br />-   Microsoft Store<br />-   An Internet (network) update service (WSUS)<br /><br />computers that are not managed in a WSUS-based environment will typically use Windows Update to connect directly - over the Internet - to Windows Update, Microsoft Update, or  Microsoft Store to obtain updates.|
-|WSUS Client|A computer that receives updates from a WSUS intranet update service.<br /><br />In the case of Group Policy settings that control end-user interaction with Automatic Updates: a user of a computer in a WSUS environment.|
+|Windows Server Update Services (WSUS)|A Server Role program that runs on one or more Windows Server computers on a corporate network. A WSUS infrastructure enables you to manage updates for computers on your network to install.<p>You can use WSUS to approve or decline updates before release, to force updates to install by a given date, and to obtain extensive reports on what updates each computer on your network requires. You can configure WSUS to approve certain classes of updates automatically (critical updates, security updates, service packs, drivers, etc.). WSUS also enables you to approve updates for detection only, so that you can see what computers will require a given update without having to install the updates.<p>In a WSUS implementation, at least one WSUS server in the network must be able to connect to Microsoft Update to get available updates. Based on network security and configuration, the administrator can determine how many other servers connect directly to Microsoft Update.<p>You can configure a WSUS server to get updates over the Internet from such places as:<p>-   the public Microsoft Update<br />-   the public Windows Update<br />-   Microsoft Store|
+|Windows Update|**An Internet-based Microsoft download site:** A Microsoft Internet site that stores and distributes updates for Windows computers (device drivers), and Windows operating systems.<p>**computer service:** The name of the Windows Update service that runs on computers. Windows Update detects, downloads, and installs updates on Windows computers.<p>Depending on computer and policy configurations, the Windows Update Agent can download updates from:<p>-   Microsoft Update<br />-   Windows Update<br />-   Microsoft Store<br />-   An Internet (network) update service (WSUS)<p>computers that are not managed in a WSUS-based environment will typically use Windows Update to connect directly - over the Internet - to Windows Update, Microsoft Update, or  Microsoft Store to obtain updates.|
+|WSUS Client|A computer that receives updates from a WSUS intranet update service.<p>In the case of Group Policy settings that control end-user interaction with Automatic Updates: a user of a computer in a WSUS environment.|

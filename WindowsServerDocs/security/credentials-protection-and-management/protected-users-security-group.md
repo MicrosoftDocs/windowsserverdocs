@@ -1,17 +1,11 @@
 ---
 title: Protected Users Security Group
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: security-credential-protection
-ms.tgt_pltfrm: na
+description: Windows Server Security
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f296
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Protected Users Security Group
@@ -37,7 +31,7 @@ Requirements to provide device protections for members of the Protected Users gr
 
 - The Protected Users global security group is replicated to all domain controllers in the account domain.
 
-- Windows 8.1 and Windows Server 2012 R2 added support by default. [Microsoft Security Advisory 2871997](https://technet.microsoft.com/library/security/2871997) adds support to Windows 7, Windows Server 2008 R2 and Windows Server 2012.
+- Windows 8.1 and Windows Server 2012 R2 added support by default. [Microsoft Security Advisory 2871997](/security-updates/SecurityAdvisories/2016/2871997) adds support to Windows 7, Windows Server 2008 R2 and Windows Server 2012.
 
 Requirements to provide domain controller protection for members of the Protected Users group include:
 
@@ -45,12 +39,12 @@ Requirements to provide domain controller protection for members of the Protecte
 
 ### Adding Protected User global security group to down-level domains
 
-Domain controllers that run an operating system earlier than Windows Server 2012 R2 can support adding members to the new Protected User security group. This allows the users to benefit from device protections before the domain is upgraded. 
+Domain controllers that run an operating system earlier than Windows Server 2012 R2 can support adding members to the new Protected User security group. This allows the users to benefit from device protections before the domain is upgraded.
 
 > [!Note]
-> The domain controllers will not support domain protections. 
+> The domain controllers will not support domain protections.
 
-Protected Users group can be created by [transferring the primary domain controller (PDC) emulator role](https://technet.microsoft.com/library/cc816944(v=ws.10).aspx) to a domain controller that runs Windows Server 2012 R2. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
+Protected Users group can be created by [transferring the primary domain controller (PDC) emulator role](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816944(v=ws.10)) to a domain controller that runs Windows Server 2012 R2. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
 
 ### <a name="BKMK_ADgroup"></a>Protected Users group AD properties
 
@@ -83,7 +77,7 @@ When the signed in user is a member of the Protected Users group the following p
 - Beginning with Windows 8.1 and Windows Server 2012 R2, Windows Digest will not cache the user's plain text credentials even when Windows Digest is enabled.
 
 > [!Note]
-> After installing [Microsoft Security Advisory 2871997](https://technet.microsoft.com/library/security/2871997) Windows Digest will continue to cache credentials until the registry key is configured. See [Microsoft Security Advisory: Update to improve credentials protection and management: May 13, 2014](https://support.microsoft.com/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a) for instructions.
+> After installing [Microsoft Security Advisory 2871997](/security-updates/SecurityAdvisories/2016/2871997) Windows Digest will continue to cache credentials until the registry key is configured. See [Microsoft Security Advisory: Update to improve credentials protection and management: May 13, 2014](https://support.microsoft.com/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a) for instructions.
 
 - NTLM will not cache the user's plain text credentials or NT one-way function (NTOWF).
 
@@ -106,18 +100,18 @@ Accounts that are members of the Protected Users group that authenticate to a  W
 
 Non-configurable settings to the TGTs expiration are established for every account in the Protected Users group. Normally, the domain controller sets the TGTs lifetime and renewal, based on the domain policies, **Maximum lifetime for user ticket** and **Maximum lifetime for user ticket renewal**. For the Protected Users group, 600 minutes is set for these domain policies.
 
-For more information, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
+For more information, see [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md).
 
 ## Troubleshooting
 Two operational administrative logs are available to help troubleshoot events that are related to Protected Users. These new logs are located in Event Viewer and are disabled by default, and are located under **Applications and Services Logs\Microsoft\Windows\Authentication**.
 
 |Event ID and Log|Description|
 |----------|--------|
-|104<br /><br />**ProtectedUser-Client**|Reason: The security package on the client does not contain the credentials.<br /><br />The error is logged in the client computer when the account is a member of the Protected Users security group. This event indicates that the security package does not cache the credentials that are needed to authenticate to the server.<br /><br />Displays the package name, user name, domain name, and server name.|
-|304<br /><br />**ProtectedUser-Client**|Reason: The security package does not store the Protected User's credentials.<br /><br />An informational event is logged in the client to indicate that the security package does not cache the user's sign-in credentials. It is expected that Digest (WDigest), Credential Delegation (CredSSP), and NTLM fail to have sign-on credentials for Protected Users. Applications can still succeed if they prompt for credentials.<br /><br />Displays the package name, user name, and domain name.|
-|100<br /><br />**ProtectedUserFailures-DomainController**|Reason: An NTLM sign-in failure occurs for an account that is in the Protected Users security group.<br /><br />An error is logged in the domain controller to indicate that NTLM authentication failed because the account was a member of the Protected Users security group.<br /><br />Displays the account name and device name.|
-|104<br /><br />**ProtectedUserFailures-DomainController**|Reason: DES or RC4 encryption types are used for Kerberos authentication and a sign-in failure occurs for a user in the Protected User security group.<br /><br />Kerberos preauthentication failed because DES and RC4 encryption types cannot be used when the account is a member of the Protected Users security group.<br /><br />(AES is acceptable.)|
-|303<br /><br />**ProtectedUserSuccesses-DomainController**|Reason: A Kerberos ticket-granting-ticket (TGT) was successfully issued for a member of the Protected User group.|
+|104<p>**ProtectedUser-Client**|Reason: The security package on the client does not contain the credentials.<p>The error is logged in the client computer when the account is a member of the Protected Users security group. This event indicates that the security package does not cache the credentials that are needed to authenticate to the server.<p>Displays the package name, user name, domain name, and server name.|
+|304<p>**ProtectedUser-Client**|Reason: The security package does not store the Protected User's credentials.<p>An informational event is logged in the client to indicate that the security package does not cache the user's sign-in credentials. It is expected that Digest (WDigest), Credential Delegation (CredSSP), and NTLM fail to have sign-on credentials for Protected Users. Applications can still succeed if they prompt for credentials.<p>Displays the package name, user name, and domain name.|
+|100<p>**ProtectedUserFailures-DomainController**|Reason: An NTLM sign-in failure occurs for an account that is in the Protected Users security group.<p>An error is logged in the domain controller to indicate that NTLM authentication failed because the account was a member of the Protected Users security group.<p>Displays the account name and device name.|
+|104<p>**ProtectedUserFailures-DomainController**|Reason: DES or RC4 encryption types are used for Kerberos authentication and a sign-in failure occurs for a user in the Protected User security group.<p>Kerberos preauthentication failed because DES and RC4 encryption types cannot be used when the account is a member of the Protected Users security group.<p>(AES is acceptable.)|
+|303<p>**ProtectedUserSuccesses-DomainController**|Reason: A Kerberos ticket-granting-ticket (TGT) was successfully issued for a member of the Protected User group.|
 
 
 ## Additional resources
@@ -126,4 +120,4 @@ Two operational administrative logs are available to help troubleshoot events th
 
 - [Authentication Policies and Authentication Policy Silos](authentication-policies-and-authentication-policy-silos.md)
 
-- [How to Configure Protected Accounts](how-to-configure-protected-accounts.md)
+- [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md)

@@ -2,13 +2,10 @@
 title: RAS Gateway GRE Tunnel Throughput and Performance
 description: This topic, which is intended for Information Technology (IT) professionals, provides throughput performance information about RAS Gateway Generic Routing Encapsulation (GRE) tunnels.
 manager: brianlic
-ms.prod: windows-server
-ms.date: 
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: c051b2ec-de0f-49d1-82b9-5742b259cd7c
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # RAS Gateway GRE Tunnel Throughput and Performance
@@ -29,7 +26,7 @@ Single tenant mode allows organizations of any size to deploy the gateway as an 
 
 GRE is a lightweight tunneling protocol that can encapsulate a wide variety of network layer protocols inside virtual point\-to\-point links over an Internet Protocol internetwork. The Microsoft GRE implementation encapsulates both IPv4 and IPv6.
 
-For more information, see the section **RAS Gateway Deployment Scenarios** in the topic [RAS Gateway](https://docs.microsoft.com/windows-server/remote/remote-access/ras-gateway/ras-gateway#bkmk_deploy). 
+For more information, see the section **RAS Gateway Deployment Scenarios** in the topic [RAS Gateway](./ras-gateway.md#bkmk_deploy).
 
 In this test scenario, which is depicted in the following illustration, the traffic flow that is measured moves from the Organization Intranet 2 out to the Organization Intranet 1. Tenant Workload VMs send network traffic from Intranet 2 to Intranet 1 by using RAS Gateway.
 
@@ -43,17 +40,17 @@ In the test environment, RAS Gateway VMs are deployed on Hyper\-V hosts in a fai
 
 ### Hyper\-V Host Configuration
 
-Two Hyper\-V hosts are configured to support the test scenario in the following manner. 
+Two Hyper\-V hosts are configured to support the test scenario in the following manner.
 
 - Two dual\-homed physical computers are configured with Windows Server, version 1709
 - The two physical network adapters in each of the two servers are connected to different subnetworks - both of which represent subnets of an Organization Intranet. Both networks and supporting hardware have a capacity of 10 GBps.
 - Hyperthreading on the physical servers is disabled. This provides the maximum throughput from the physical NICs.
 - The Hyper\-V server role is installed on both servers and configured with two External Hyper\-V Virtual Switches, one for each physical network adapter.
 - Because both servers are connected to the same intranet, the servers can communicate with each other.
-- The Hyper\-V hosts are configured in a failover cluster over the intranet network. 
+- The Hyper\-V hosts are configured in a failover cluster over the intranet network.
 
 >[!NOTE]
->For more information, see [Hyper-V Virtual Switch](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch).
+>For more information, see [Hyper-V Virtual Switch](../../../virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch.md).
 
 ### VM Configuration
 
@@ -111,4 +108,4 @@ The following illustration depicts Ethernet network throughput on the RAS Gatewa
 
 ![Gateway VM Ethernet network throughput in Task Manager](../../media/GRE-Tunnel-Perf/Gre-Tunnel-04.jpg)
 
-For more information about RAS Gateway performance, see [HNV Gateway Performance Tuning in Software Defined Networks](https://docs.microsoft.com/windows-server/administration/performance-tuning/subsystem/software-defined-networking/hnv-gateway-performance).
+For more information about RAS Gateway performance, see [HNV Gateway Performance Tuning in Software Defined Networks](../../../administration/performance-tuning/subsystem/software-defined-networking/hnv-gateway-performance.md).

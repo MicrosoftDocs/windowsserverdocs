@@ -1,16 +1,11 @@
 ---
 title: Best Practices for running Linux on Hyper-V
-description: "Provides recommendations for running Linux on a virtual machine"
-ms.prod: windows-server
-ms.service: na
-manager: dongill
-ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
+description: Provides recommendations for running Linux on a virtual machine
 ms.topic: article
 ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
-author: shirgall
-ms.author: kathydav
-ms.date: 3/1/2019
+ms.author: benarm
+author: BenjaminArmstrong
+ms.date: 04/15/2020
 ---
 # Best Practices for running Linux on Hyper-V
 
@@ -70,9 +65,11 @@ Linux virtual machines that will be deployed using failover clustering should be
 
 Configure and use the virtual Ethernet adapter, which is a Hyper-V-specific network card with enhanced performance. If both legacy and Hyper-V-specific network adapters are attached to a virtual machine, the network names in the output of **ifconfig -a** might show random values such as **_tmp12000801310**. To avoid this issue, remove all legacy network adapters when using Hyper-V-specific network adapters in a Linux virtual machine.
 
-## Use I/O scheduler NOOP for better disk I/O performance
+## Use I/O scheduler noop/none for better disk I/O performance
 
-The Linux kernel has four different I/O schedulers to reorder requests with different algorithms. NOOP is a first-in first-out queue that passes the schedule decision to be made by the hypervisor. It is recommended to use NOOP as the scheduler when running Linux virtual machine on Hyper-V. To change the scheduler for a specific device, in the boot loader's configuration (/etc/grub.conf, for example), add **elevator=noop** to the kernel parameters, and then restart.
+The Linux kernel offers two sets of disk I/O schedulers to reorder requests.  One set is for the older ‘blk’ subsystem and one set is for the newer ‘blk-mq’ subsystem. In either case, with today’s solid state disks it is recommended to use a scheduler that passes the scheduling decisions to the underlying Hyper-V hypervisor. For Linux kernels using the ‘blk’ subsystem, this is the “noop” scheduler. For Linux kernels using the ‘blk-mq’ subsystem, this is the “none” scheduler.
+
+For a particular disk, the available schedulers can be seen at this file system location: /sys/class/block/`<diskname>`/queue/scheduler, with the currently selected scheduler in square brackets. You can change the scheduler by writing to this file system location. The change must be added to an initialization script in order to persist across reboots. Consult your Linux distro documentation for details.
 
 ## NUMA
 
@@ -88,14 +85,14 @@ Hyper-V allows shrinking virtual disk (VHDX) files without regard for any partit
 
 After resizing a VHD or VHDX, administrators should use a utility like fdisk or parted to update the partition, volume, and file system structures to reflect the change in the size of the disk. Shrinking or expanding the size of a VHD or VHDX that has a GUID Partition Table (GPT) will cause a warning when a partition management tool is used to check the partition layout, and the administrator will be warned to fix the first and secondary GPT headers. This manual step is safe to perform without data loss.
 
-## See also
+## Additional References
 
 * [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 
 * [Best practices for running FreeBSD on Hyper-V](Best-practices-for-running-FreeBSD-on-Hyper-V.md)
 
-* [Deploy a Hyper-V Cluster](https://technet.microsoft.com/library/jj863389.aspx)
+* [Deploy a Hyper-V Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj863389(v=ws.11))
 
-* [Create Linux Images for Azure](https://docs.microsoft.com/azure/virtual-machines/linux/create-upload-generic)
+* [Create Linux Images for Azure](/azure/virtual-machines/linux/create-upload-generic)
 
-* [Optimize your Linux VM on Azure](https://docs.microsoft.com/azure/virtual-machines/linux/optimization)
+* [Optimize your Linux VM on Azure](/azure/virtual-machines/linux/optimization)

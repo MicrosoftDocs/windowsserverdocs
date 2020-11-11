@@ -1,25 +1,23 @@
 ---
 title: Prestage cluster computer objects in Active Directory Domain Services
 description: How to prestage cluster computer objects in Active Directory Domain Services.
-ms.prod: windows-server 
-ms.topic: article 
-author: JasonGerend 
+ms.topic: article
+author: JasonGerend
 ms.author: jgerend
-ms.manager: daveba
-ms.technology: storage-failover-clustering 
+manager: lizross
 ms.date: 05/09/2019
 ms.localizationpriority: medium
 ---
 # Prestage cluster computer objects in Active Directory Domain Services
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic shows how to prestage cluster computer objects in Active Directory Domain Services (AD DS). You can use this procedure to enable a user or group to create a failover cluster when they do not have permissions to create computer objects in AD DS.
 
 When you create a failover cluster by using the Create Cluster Wizard or by using Windows PowerShell, you must specify a name for the cluster. If you have sufficient permissions when you create the cluster, the cluster creation process automatically creates a computer object in AD DS that matches the cluster name. This object is called the *cluster name object* or CNO. Through the CNO, virtual computer objects (VCOs) are automatically created when you configure clustered roles that use client access points. For example, if you create a highly available file server with a client access point that is named *FileServer1*, the CNO will create a corresponding VCO in AD DS.
 
 >[!NOTE]
->There is the option to create an Active Directory-detached cluster, where no CNO or VCOs are created in AD DS. This is targeted for specific types of cluster deployments. For more information, see [Deploy an Active Directory-Detached Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v%3dws.11)>).
+>There is the option to create an Active Directory-detached cluster, where no CNO or VCOs are created in AD DS. This is targeted for specific types of cluster deployments. For more information, see [Deploy an Active Directory-Detached Cluster](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v%3dws.11)>).
 
 To create the CNO automatically, the user who creates the failover cluster must have the **Create Computer objects** permission to the organizational unit (OU) or the container where the servers that will form the cluster reside. To enable a user or group to create a cluster without having this permission, a user with appropriate permissions in AD DS (typically a domain administrator) can prestage the CNO in AD DS. This also provides the domain administrator more control over the naming convention that is used for the cluster, and control over which OU the cluster objects are created in.
 
@@ -68,9 +66,9 @@ Here's how to grant the user permissions to create the cluster:
 3. On the **Security** tab, select **Add**.
 4. In the **Select Users, Computers, or Groups** dialog box, specify the user account or group that you want to grant permissions to, and then select **OK**.
 5. Select the user account or group that you just added, and then next to **Full control**, select the **Allow** check box.
-  
+
    ![Granting Full Control to the user or group that will create the cluster](media/prestage-cluster-adds/granting-full-control-to-the-user-create-the-cluster.png)
-  
+
    **Figure 2. Granting Full Control to the user or group that will create the cluster**
 6. Select **OK**.
 
@@ -132,5 +130,5 @@ An administrator on the failover cluster can now create the clustered role with 
 
 ## More information
 
-- [Failover Clustering](failover-clustering.md)
+- [Failover Clustering](./failover-clustering-overview.md)
 - [Configuring cluster accounts in Active Directory](configure-ad-accounts.md)

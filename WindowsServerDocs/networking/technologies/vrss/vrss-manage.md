@@ -1,15 +1,13 @@
 ---
 title: Manage vRSS
 description: In this topic, you use the Windows PowerShell commands to manage vRSS in virtual machines (VMs) and on Hyper-V hosts.
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 0fe5bfc3-591f-4a19-b98a-0668d4c9f93a
 ms.localizationpriority: medium
 manager: dougkim
 ms.date: 09/05/2018
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ---
 
 # Manage vRSS
@@ -23,13 +21,13 @@ In this topic, you use the Windows PowerShell commands to manage vRSS in virtual
 
 On the Hyper-V host, you must use the keywords that control the VMQ processors.
 
-**View the current settings:** 
+**View the current settings:**
 
 ```PowerShell
 Get-NetAdapterVmq
 ```
 
-**Configure the VMQ settings:** 
+**Configure the VMQ settings:**
 
 ```PowerShell
 Set-NetAdapterVmq
@@ -47,12 +45,12 @@ Get-VMNetworkAdapter <vm-name> | fl
 
 Get-VMNetworkAdapter -ManagementOS | fl
 ```
-    
-Both of the following settings should be **True**. 
+
+Both of the following settings should be **True**.
 
 - VrssEnabledRequested: True
 - VrssEnabled: True
-    
+
 >[!IMPORTANT]
 >Under some resource limitation conditions, a Hyper\-V Virtual Switch port might be unable to have this feature enabled. This is a temporary condition, and the feature may become available at a subsequent time.
 >
@@ -62,13 +60,13 @@ Both of the following settings should be **True**.
 
 ```PowerShell
 Set-VMNetworkAdapter <vm-name> -VrssEnabled $TRUE
-    
+
 Set-VMNetworkAdapter -ManagementOS -VrssEnabled $TRUE
 ```
 
 ## vRSS in VMs and host vNICs
 
-You can use the same commands used for native RSS to configure vRSS settings in VMs and host vNICs, which is also the way to enable RSS on host vNICs.  
+You can use the same commands used for native RSS to configure vRSS settings in VMs and host vNICs, which is also the way to enable RSS on host vNICs.
 
 **View the current settings:**
 

@@ -1,17 +1,11 @@
 ---
 title: Group Managed Service Accounts Overview
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: security-gmsa
-ms.tgt_pltfrm: na
+description: Windows Server Security
 ms.topic: article
 ms.assetid: cef0693c-f861-48a7-a1c0-8d1bc06143ce
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Group Managed Service Accounts Overview
@@ -42,7 +36,7 @@ A 64\-bit architecture is required to run the Windows PowerShell commands which 
 A managed service account is dependent upon Kerberos supported encryption types.When a client computer authenticates to a server using Kerberos the DC creates a Kerberos service ticket protected with encryption both the DC and server supports. The DC uses the account's msDS\-SupportedEncryptionTypes attribute to determine what encryption the server supports and, if there is no attribute, it assumes the client computer does not support stronger encryption types. If the host is configured to not support RC4, then authentication will always fail. For this reason, AES should always be explicitly configured for MSAs.
 
 > [!NOTE]
-> Beginning with Windows Server 2008 R2, DES is disabled by default. For more information about supported encryption types, see [Changes in Kerberos Authentication](https://technet.microsoft.com/library/dd560670(WS.10).aspx).
+> Beginning with Windows Server 2008 R2, DES is disabled by default. For more information about supported encryption types, see [Changes in Kerberos Authentication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560670(v=ws.10)).
 
 gMSAs are not applicable to Windows operating systems prior to Windows Server 2012.
 
@@ -54,14 +48,12 @@ The following table provides links to additional resources related to Managed Se
 
 |Content type|References|
 |--------|-------|
-|**Product evaluation**|[What's New for Managed Service Accounts](what-s-new-for-managed-service-accounts.md)<br /><br />[Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](https://technet.microsoft.com/library/ff641731(v=ws.10).aspx)<br /><br />[Service Accounts Step\-by\-Step Guide](https://technet.microsoft.com/library/dd548356(v=ws.10).aspx)|
+|**Product evaluation**|[What's New for Managed Service Accounts](what-s-new-for-managed-service-accounts.md)<p>[Managed Service Accounts Documentation for Windows 7 and Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff641731(v=ws.10))<p>[Service Accounts Step\-by\-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd548356(v=ws.10))|
 |**Planning**|Not yet available|
 |**Deployment**|Not yet available|
-|**Operations**|[Managed Service Accounts in Active Directory](https://technet.microsoft.com/library/dd378925(v=ws.10).aspx)|
+|**Operations**|[Managed Service Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378925(v=ws.10))|
 |**Troubleshooting**|Not yet available|
 |**Evaluation**|[Getting Started with Group Managed Service Accounts](getting-started-with-group-managed-service-accounts.md)|
-|**Tools and settings**|[Managed Service Accounts in Active Directory Domain Services](https://technet.microsoft.com/library/dd378925(v=WS.10).aspx)|
-|**Community resources**|[Managed Service Accounts: Understanding, Implementing, Best Practices, and Troubleshooting](https://blogs.technet.com/b/askds/archive/2009/09/10/managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)|
+|**Tools and settings**|[Managed Service Accounts in Active Directory Domain Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378925(v=ws.10))|
+|**Community resources**|[Managed Service Accounts: Understanding, Implementing, Best Practices, and Troubleshooting](/archive/blogs/askds/managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting)|
 |**Related technologies**|[Active Directory Domain Services Overview](active-directory-domain-services-overview.md)|
-
-

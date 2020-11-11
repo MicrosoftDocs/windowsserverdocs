@@ -1,16 +1,10 @@
 ---
 title: bitsadmin sethttpmethod
-description: "Windows Commands topic for **bitsadmin sethttpmethod** - Sets the HTTP verb to use."
-ms.custom: na
-ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+description: Reference article for the bitsadmin sethttpmethod command, which sets the HTTP verb to use.
+ms.topic: reference
+ms.author: lizross
+author: eross-msft
+manager: mtillman
 ms.date: 03/01/2019
 ---
 
@@ -21,16 +15,18 @@ Sets the HTTP verb to use.
 ## Syntax
 
 ```
-bitsadmin /GetHttpMethod <Job> <HTTPMethod>
+bitsadmin /sethttpmethod <job> <httpmethod>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|HTTPMethod|The HTTP verb to use|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| httpmethod | The HTTP verb to use. For information about available verbs, see [Method Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html). |
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

@@ -1,8 +1,6 @@
 ---
 title: Get started with the web client
 description: Describes how to sign in to the Remote Desktop web client.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 08/27/2019
 ms.topic: article
@@ -55,7 +53,7 @@ The web client currently supports copying and pasting text only. Files can't be 
 
 ## Use an Input Method Editor (IME) in the remote session
 
-To use an Input Method Editor to enter complex characters in the remote session, select the gear icon in the navigation bar to open the **Settings** side panel and set the **Enable Input Method Editor** switch to **On**. You must have an Input Method Editor installed and enabled in the remote session. 
+To use an Input Method Editor to enter complex characters in the remote session, select the gear icon in the navigation bar to open the **Settings** side panel and set the **Enable Input Method Editor** switch to **On**. You must have an Input Method Editor installed and enabled in the remote session.
 
 ## Get help with the web client
 

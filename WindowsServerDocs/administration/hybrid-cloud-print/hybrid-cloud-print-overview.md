@@ -1,13 +1,9 @@
 ---
 title: Windows Server Hybrid Cloud Print overview
-description: Hybrid Cloud Print allows IT Pros to support print requirements for BYOD or domain joined devices.  
-ms.prod: w10
-ms.mktglfcycl: manage
-ms.sitesec: library
-ms.pagetype: store
-ms.technology: server-general
-author: TrudyHa
-ms.author: TrudyHa
+description: Hybrid Cloud Print allows IT Pros to support print requirements for BYOD or domain joined devices.
+ms.topic: conceptual
+author: trudyha
+ms.author: trudyha
 ms.date: 10/16/2017
 ---
 
@@ -24,7 +20,7 @@ For IT Admins, **Hybrid Cloud Print** provides secure user access to on-premises
 **Hybrid Cloud Print** allows people in your organization to print from the devices they use to complete their work - even when they are away from their desk or workplace.
 
 **Hybrid Cloud Print** is supported in Windows 10 Creators Update and Windows 10 S.
- 
+
 ## Feature summary
 **Hybrid Cloud Print** consists of two main server-side components: **Discovery** service, and **Windows Print** service.
 - **Discovery** service endpoint running on an IIS service supporting Mopria Alliance industry standard for printer discovery in the cloud.
@@ -38,11 +34,11 @@ For IT Admins, **Hybrid Cloud Print** provides secure user access to on-premises
 *Hybrid Cloud Print solution diagram*
 
 The diagram shows:
-- **Hybrid Cloud Print** using Azure Active Directory as the user identity provider. 
-- **Windows Print** service and **Discovery** service endpoints are registered with Azure Active Directory to enable the client device to retrieve the required user authentication token to use against these services. 
+- **Hybrid Cloud Print** using Azure Active Directory as the user identity provider.
+- **Windows Print** service and **Discovery** service endpoints are registered with Azure Active Directory to enable the client device to retrieve the required user authentication token to use against these services.
 - An MDM service, such as **Microsoft Intune**, provisions the client device with policies needed to connect Azure Active Directory to **Windows Print** service and **Discovery** service.
 
-This table has more info on the elements in the diagram.  
+This table has more info on the elements in the diagram.
 
 | Element | Description |
 | ------- | ----------- |
@@ -55,11 +51,11 @@ This table has more info on the elements in the diagram.
 | BYOD device / Windows Print Server Spooler / Printer | These are as-is. No change in functionality in the deployment. |
 
 There are two ways to install **Hybrid Cloud Print**:
-- **Features on Demand** - See [Configure Features on Demand in Windows Server](https://docs.microsoft.com/windows-server/administration/server-manager/configure-features-on-demand-in-windows-server) to learn more about adding and removing role and feature files. 
-- **Windows Server 2016 Settings** - Administrators can go to **Settings** -> **Apps** -> **Manage optional features** -> **Add a feature** and search for the Features on Demand package 
+- **Features on Demand, which See [Configure Features on Demand in Windows Server](../server-manager/configure-features-on-demand-in-windows-server.md) to learn more about adding and removing role and feature files.
+- **Windows Server 2016 Settings, which Administrators can go to **Settings** -> **Apps** -> **Manage optional features** -> **Add a feature** and search for the Features on Demand package
 - PowerShell commands - In a PowerShell administrator window, run these commands:
 
 ```PowerShell
     Install-Module -Name PublishCloudPrinter
     Import-Module PublishCloudPrinter
-    ```
+```
