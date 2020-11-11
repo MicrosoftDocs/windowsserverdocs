@@ -46,7 +46,7 @@ You can greatly enchance your Server Core compatibility by applying a FoD packag
 
 *Download locations*
 
-Later Windows Server (SAC) FoD, can be obtained in your specific [MS Licensing Center](https://businessaccount.microsoft.com/), if you have active Software Assurance.
+Later Windows Server (SAC) FoD can be obtained from your specific [MS Licensing Center](https://businessaccount.microsoft.com/), if you have got active Software Assurance.
 You'll need a Microsoft Work or School Account enrolled to VLSC or Business Center, to access the FoD download.
 
 Alternatively, you might have access to a [Visual Studio Subscription](https://my.visualstudio.com/).
