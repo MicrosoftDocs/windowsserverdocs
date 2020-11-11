@@ -52,7 +52,7 @@ You'll need a Microsoft Work or School Account enrolled to VLSC or Business Cent
 Alternatively, you might have access to a [Visual Studio Subscription](https://my.visualstudio.com/).
 You'll need a Microsoft Home, Work or School account, enrolled to an active Visual Studio subscription, to access the FoD download.
 
-Latest Server Insider FoD. This is downloadable at [Server Insider webpage](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver). 
+Latest Server Insider FoD. This is downloadable at the [Server Insider webpage](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver). 
 You'll need a Microsoft Home, Work or School account, enrolled to the Insider Program, to access the FoD download.
 
 ### Feature on Demand - available features in Feature on Demand Package 1809
