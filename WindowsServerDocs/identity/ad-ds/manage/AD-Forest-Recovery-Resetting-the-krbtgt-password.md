@@ -29,6 +29,7 @@ Use the following procedure to reset the krbtgt password for the domain. The fol
 
 > [!NOTE]
 > You should perform this operation twice. 
+
 > [!IMPORTANT]
 > If you intent to reset the Key Distribution Center Service Account password twice. You must wait 10 hours between the password resets.
 > [!NOTE]
