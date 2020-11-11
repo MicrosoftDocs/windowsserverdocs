@@ -18,9 +18,6 @@
 # Version 1803
 ## [Known issues and notifications](status-windows-10-1803.md)
 ## [Resolved issues](resolved-issues-windows-10-1803.md)
-# Version 1709
-## [Known issues and notifications](status-windows-10-1709.md)
-## [Resolved issues](resolved-issues-windows-10-1709.md)
 # Version 1607 and Windows Server 2016
 ## [Known issues and notifications](status-windows-10-1607-and-windows-server-2016.md)
 ## [Resolved issues](resolved-issues-windows-10-1607.md)
