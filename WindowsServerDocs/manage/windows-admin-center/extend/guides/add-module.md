@@ -29,7 +29,7 @@ If you are new to Angular, it is highly recommended that you read the documentat
 Open a command prompt, change directory to \src\app in your project, then run the following commands, replacing ```{!ModuleName}``` with your module name (spaces removed):
 
 ```
-cd \src\app
+cd .\src\app
 ng generate module {!ModuleName}
 ng generate component {!ModuleName}
 ```
@@ -40,7 +40,7 @@ ng generate component {!ModuleName}
 
 Example usage:
 ```
-cd \src\app
+cd .\src\app
 ng generate module ManageFooWorksPortal
 ng generate component ManageFooWorksPortal
 ```
