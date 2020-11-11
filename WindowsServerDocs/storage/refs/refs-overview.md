@@ -107,7 +107,7 @@ ReFS is a superior filesystem to NTFS in many ways. It can greatly improve the p
 Based on real world applications, this also applies for other containered data structures that are similar to the technology of VHDX, such as Storage Spaces, especially when mirrored, or S2D which uses mirroring as per concept, as well as FSLogix containers. This also applies to Citrix PVS images, to name a 3rd party application scenario.
 
 Con:
-While **supported**, there exist scenarios where ReFS performance may not meet the expectations, compared to NTFS formatted volumes.
+While **supported**, scenarios exist where ReFS performance may not meet the expectations, compared to NTFS formatted volumes.
 This mostly applies to Basic Disks and volumes using ReFS without Storage Spaces / S2D, where volumes contain a high number of **small files and fast changing files**.
 This is by design and is caused by the need for metadata handling and scrubbing. The performance in these scenarios *can* cause slow application responsiveness or even timeouts from time sensitive applications. Example: Lotus Notes .ini file(s). Other results may be unexpected low read and write speeds for random I/Os compared to NTFS in the same software and hardware configuration.
 
