@@ -77,7 +77,7 @@ Deploying ReFS on Storage Spaces Direct is recommended for virtualized workloads
 
 > [!NOTE]
 > Storage Spaces **supports** *local non-removable direct-attached* via BusTypes SATA, SAS, NVME, or attached via HBA (aka RAID controller in pass-through mode).
-> Please consider **limitations** on Cluster Shared Volumes in general, or CSVs used on Storage Spaces or Storage Spaces Direct (S2D). Refer chapter functionality.
+> Please consider **limitations** on Cluster Shared Volumes in general, or CSVs used on Storage Spaces or Storage Spaces Direct (S2D). Refer to the functionality chapter.
 
 ### Basic disks
 
