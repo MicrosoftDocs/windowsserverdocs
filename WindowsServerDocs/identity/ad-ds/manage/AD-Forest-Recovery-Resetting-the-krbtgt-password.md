@@ -30,6 +30,9 @@ Use the following procedure to reset the krbtgt password for the domain. The fol
 > [!NOTE]
 > You should perform this operation twice. The password history of the krbtgt account is two, meaning it includes the two most recent passwords. By resetting the password twice you effectively clear any old passwords from the history, so there is no way another DC will replicate with this DC by using an old password.
 
+> [!NOTE]
+> When resetting the Key Distribution Center Service Account password twice, a 10 hour waiting period is required between resets.
+
 ## Next Steps
 
 - [AD Forest Recovery Guide](AD-Forest-Recovery-Guide.md)
