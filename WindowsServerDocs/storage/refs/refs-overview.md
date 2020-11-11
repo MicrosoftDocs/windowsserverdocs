@@ -111,7 +111,7 @@ While **supported**, scenarios exist where ReFS performance may not meet the exp
 This mostly applies to Basic Disks and volumes using ReFS without Storage Spaces / S2D, where volumes contain a high number of **small files and fast changing files**.
 This is by design and is caused by the need for metadata handling and scrubbing. The performance in these scenarios *can* cause slow application responsiveness or even timeouts from time sensitive applications. Example: Lotus Notes .ini file(s). Other results may be unexpected low read and write speeds for random I/Os compared to NTFS in the same software and hardware configuration.
 
-A typical scenario that may apply, based on the underlying hardware configuration, are typically Windows User Profiles, Temporary Folders of browsers in high-density or multi-user enviroments, such as Microsoft Remote Desktop Host (RDSH), Windows Virtual Desktop (WVD), or 3rd party applications like Citrix User Profile Management (UPM).
+Typical scenarios that may apply, based on the underlying hardware configuration, are typically Windows User Profiles, Temporary Folders of browsers in high-density or multi-user environments, such as Microsoft Remote Desktop Host (RDSH), Windows Virtual Desktop (WVD), or 3rd party applications like Citrix User Profile Management (UPM).
 
 In such scenarios, please plan and test your workloads when considering usage of ReFS on Basic Disks or volumes or alternatively rely on NTFS, which, due to the non-existent scrubbing and less metadata overhead, is not prone for such possible impacts. As per design, in such scenarios, the VM or Host RAM usage can be higher compared to NTFS.
 
