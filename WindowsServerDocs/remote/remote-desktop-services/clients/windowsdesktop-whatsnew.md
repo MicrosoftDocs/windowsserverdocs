@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 10/27/2020
+ms.date: 11/10/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -19,7 +19,16 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.1446        |1.2.945                   |
-|Insider    |1.2.1446        |1.2.945                   |
+|Insider    |1.2.1520        |1.2.945                   |
+
+## Updates for version 1.2.1520 (Insider)
+
+*Date published: 11/10/2020*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Created a list view for remote apps so that longer app names are readable.
+- Changed the icon that appears when an update for the client is available.
 
 ## Updates for version 1.2.1446
 
