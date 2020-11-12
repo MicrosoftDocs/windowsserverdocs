@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 10/23/2020
+ms.date: 11/12/2020
 ms.topic: article
 ---
 # Storage Migration Service known issues
@@ -655,9 +655,10 @@ After installing the Windows Server 2019 November cumulative update [KB4586793](
 Error HRESULT E_FAIL has been returned from a call to a COM component
 ```
 
-It does not necessarily happen for all source computers. We are working to diagnose this issue. As a workaround, look for an update to the Storage Migration Service tool in Windows Admin Center soon. The update should automatically appear in the Windows Admin Center feed and prompt for installation, and will allow you to ignore this error and proceed.
+It doesn't necessarily happen for all source computers. We are working to diagnose this issue. As a workaround, look for an update to the Storage Migration Service tool in Windows Admin Center soon. The update should automatically appear in the Windows Admin Center feed and prompt for installation, and will allow you to ignore this error and proceed.
 
-Important: Do not uninstall [KB4586793](https://support.microsoft.com/office/november-10-2020%E2%80%94kb4586793-os-build-17763-1577-e6a24f90-5659-8b80-5a50-8752de3d90b7). This update upgrades the SMS database and removing the update will require you to delete your database.
+> [!IMPORTANT]
+> Don't uninstall [KB4586793](https://support.microsoft.com/office/november-10-2020%E2%80%94kb4586793-os-build-17763-1577-e6a24f90-5659-8b80-5a50-8752de3d90b7). This update upgrades the Storage Migration Service database and removing the update will require you to delete your database.
 
 ## See also
 
