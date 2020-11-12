@@ -42,8 +42,6 @@ You can find the following documentation about Active Directory Domain Services 
 
 - For more information about how to use the Active Directory Sites and Services snap-in to disable the **Bridge all site links** setting, see [Enable or disable site link bridges](/previous-versions/windows/it-pro/windows-server-2003/cc738789(v=ws.10)).
 
-- For information about managing replication through firewalls, see [Active Directory in Networks Segmented by Firewalls](https://microsoft.com/download/details.aspx?familyid=c2ef3846-43f0-4caf-9767-a9166368434e).
-
 - For more information about read-only domain controller (RODC) features, see [AD DS: Read-Only Domain Controllers](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732801(v=ws.10)).
 
 - For information about how to deploy an RODC, see the [Read-Only Domain Controllers Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772234(v=ws.10)).

@@ -16,7 +16,7 @@ Enables you to shut down or restart local or remote computers, one at a time.
 ## Syntax
 
 ```
-shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<computername>] [/t <XXX>] [/d [p|u:]<XX>:<YY> [/c "comment"]]
+shutdown [/i | /l | /s | /sg | /r | /g | /a | /p | /h | /e | /o] [/hybrid] [/fw] [/f] [/m \\computer][/t xxx][/d [p|u:]xx:yy [/c "comment"]]
 ```
 
 ### Parameters
@@ -26,15 +26,20 @@ shutdown [/i | /l | /s | /r | /a | /p | /h | /e] [/f] [/m \\<computername>] [/t 
 | /i | Displays the **Remote Shutdown** box. The **/i** option must be the first parameter following the command. If **/i** is specified, all other options are ignored. |
 | /l | Logs off the current user immediately, with no time-out period. You cannot use **/l** with **/m** or **/t**. |
 | /s | Shuts down the computer. |
+| /sg | Shuts down the computer. On the next boot, if **Automatic Restart Sign-On** is enabled, the device automatically signs in and locks based on the last interactive user. After sign in, it restarts any registered applications. |
 | /r | Restarts the computer after shutdown. |
+| /g | Shuts down the computer. On the next restart, if **Automatic Restart Sign-On** is enabled, the device automatically signs in and locks based on the last interactive user. After sign in, it restarts any registered applications. |
 | /a | Aborts a system shutdown. Effective only during the time-out period. To use **/a**, you must also use the **/m** option. |
 | /p | Turns off the local computer only (not a remote computer)—with no time-out period or warning. You can use **/p** only with **/d** or **/f**. If your computer doesn't support power-off functionality, it will shut down when you use **/p**, but the power to the computer will remain on. |
 | /h | Puts the local computer into hibernation, if hibernation is enabled. You can use **/h** only with **/f**. |
+| hybrid | Shuts down the device and prepares it for fast startup. This option must be used with the **/s** option. |
+| /fw | Combining this option with a shutdown option causes the next restart to go to the firmware user interface. |
 | /e | Enables you to document the reason for the unexpected shutdown on the target computer. |
+| /o | Goes to the **Advanced boot options** menu and restarts the device. This option must be used with the **/r** option. |
 | /f | Forces running applications to close without warning users.<br>**Caution:** Using the **/f** option might result in loss of unsaved data. |
 | /m `\\<computername>` | Specifies the target computer. Can't be used with the **/l** option. |
-| /t `<n>` | Sets the time-out period or delay to *n* seconds before a restart or shutdown. This causes a warning to display on the local console. You can specify 0-600 seconds. If you don't use **/t**, the time-out period is 30 seconds, by default. |
-| /d `[p | u:]<XX>:<YY>` | Lists the reason for the system restart or shutdown. The supported parameter values are:<ul><li>**p** - Indicates that the restart or shutdown is planned.</li><li>**u** - Indicates that the reason is user-defined.<p>**NOTE**<br>If **p** or **u** aren't specified, the restart or shutdown is unplanned.</li><li>*XX* - Specifies the major reason number (a positive integer, less than 256).</li><li>*YY* Specifies the minor reason number (a positive integer, less than 65536).</li></ul> |
+| /t `<xxx>` | Sets the time-out period before shutdown to *xxx* seconds. The valid range is 0-315360000 (10 years), with a default of 30. If the timeout period is greater than 0, the **/f** parameter is implied. |
+| /d `[p | u:]<XX>:<YY>` | Lists the reason for the system restart or shutdown. The supported parameter values are:<ul><li>**p** - Indicates that the restart or shutdown is planned.</li><li>**u** - Indicates that the reason is user-defined.<p>**NOTE**<br>If **p** or **u** aren't specified, the restart or shutdown is unplanned.</li><li>*xx* - Specifies the major reason number (a positive integer, less than 256).</li><li>*yy* Specifies the minor reason number (a positive integer, less than 65536).</li></ul> |
 | /c `<comment>` | Enables you to comment in detail about the reason for the shutdown. You must first provide a reason by using the **/d** option and you must enclose your comments in quotation marks. You can use a maximum of 511 characters. |
 | /? | Displays help at the command prompt, including a list of the major and minor reasons that are defined on your local computer. |
 
