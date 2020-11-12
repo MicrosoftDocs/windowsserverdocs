@@ -4,7 +4,7 @@ description: Use this topic to analyze Packet Monitor-generated pcapng logs with
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/10/2020
+ms.date: 11/12/2020
 ---
 
 # Pktmon support for Wireshark (pcapng)

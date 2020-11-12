@@ -4,7 +4,7 @@ description: Use this page to analyze Packet Monitor-generated ETL files within 
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/10/2020
+ms.date: 11/12/2020
 ---
 
 # Pktmon support for Microsoft Network Monitor (Netmon)

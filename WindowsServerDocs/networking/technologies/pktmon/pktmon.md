@@ -4,7 +4,7 @@ description: This topic provides an overview of the Packet Monitor (Pktmon) netw
 ms.topic: overview
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/10/2020
+ms.date: 11/12/2020
 ---
 
 # Packet Monitor \(Pktmon\)
