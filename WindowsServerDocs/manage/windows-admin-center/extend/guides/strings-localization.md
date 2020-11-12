@@ -33,7 +33,7 @@ MsftSme.resourcesStrings<Strings>().HelloWorld.cim.title;
 
 ## Add Other Languages for Localization ##
 
-For localization to other languages, a strings.resjson file needs to be created for each language. These files need to be places in ```\loc\output\{!ExtensionName}\{!LanguageFolder}\strings.resjson```. The available languages with corresponding folders are:
+For localization to other languages, a strings.resjson file needs to be created for each language. These files need to be placed in ```\loc\output\{!ExtensionName}\{!LanguageFolder}\strings.resjson```. The available languages with corresponding folders are:
 
 | Language      | Folder      |
 | ------------- |-------------|
