@@ -181,7 +181,7 @@ In such scenarios, please plan and test your workloads when considering usage of
 | Supported on removable media | No | Yes |
 1. This feature becomes available on **newly formatted ReFS 3.5 volumes only**
 Prerequisites: Windows 10 Enterprise / Windows 10 for Workstations or Windows Server vNext, starting from build 19536 or later.
-Disclaimer: Any in-place upgrade to this version will upgrade ReFS attached volumes to the latest version, but will unlock the use of hardlinks. 
+Disclaimer: Any in-place upgrade to this version will upgrade ReFS attached volumes to the latest ReFS version, but will **not** make the hardlinks feature available.
 Please refer to additional References, ReFS Version History for an unofficial ReFS upgrade and versioning matrix.
 Windows 10 pro can only read and write ReFS volumes unrestricted, but not [format](https://support.microsoft.com/en-us/help/4034825) ReFS.
 
