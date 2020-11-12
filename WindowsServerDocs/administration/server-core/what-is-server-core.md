@@ -44,7 +44,7 @@ The following table shows which applications are available *locally* on Server C
 The list below reflects the FoD level as of Version 1809 (Server 2019 LTSC). 
 You can greatly enchance your Server Core compatibility by applying a FoD package, newer than 1809.
 
-*Download locations*
+#### Download locations
 
 Later Windows Server (SAC) FoD can be obtained from your specific [MS Licensing Center](https://businessaccount.microsoft.com/), if you have got active Software Assurance.
 You'll need a Microsoft Work or School Account enrolled to VLSC or Business Center to access the FoD download.
