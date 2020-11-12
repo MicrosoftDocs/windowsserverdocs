@@ -31,7 +31,7 @@ Cyber-attackers focus on privileged access to systems like Active Directory (AD)
 * Organizations are hosting data and resources outside the traditional network boundary on mobile enterprise PCs, devices like mobile phones and tablets, cloud services, and bring your own devices (BYOD).
 * Adversaries have demonstrated a consistent and ongoing ability to obtain access on workstations inside the network boundary through phishing and other web and email attacks.
 
-These factors necessitate building a modern security perimeter out of authentication and authorization identity controls, in addition to the traditional network perimeter strategy. A security perimeter here is defined as a consistent set of controls between assets and the threats to them. Privileged accounts are effectively in control of this new security perimeter, so it is critical to protect privileged access.
+These factors necessitate building a modern security perimeter out of authentication and authorization identity controls, in addition to the traditional network perimeter strategy. A security perimeter here is defined as a consistent set of controls between assets and the threats to them. Privileged accounts are effectively in control of this new security perimeter, so it's critical to protect privileged access.
 
 ![Diagram showing an organization's identity layer](../media/securing-privileged-access/PAW_LP_Fig2.JPG)
 
