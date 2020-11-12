@@ -53,7 +53,7 @@ The Server Manager console is included with [Remote Server Administration Tools]
 |Server Manager Source Operating System|Targeted at Windows Server 2016|Targeted at  Windows Server 2012 R2 |Targeted at  Windows Server 2012 |Targeted at  Windows Server 2008 R2  or  Windows Server 2008 |Targeted at Windows Server 2003|Targeted at Windows 10 Multi-Session on Windows Virtual Desktop (WVD)|
 |-------------------------------|--------------------------------------------|---------------------------------------|------------------------------------|-----------------------------------------------------------------------|------------------|------------------------------------|
 |Windows 10 or Windows Server 2016|Full support|Full support|Full support|After [Software and configuration requirements](#software-and-configuration-requirements) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation|Not supported|Not supported — VM with Win10 E multi session OS is considered a server OS and RSAT only works on client OS|
-|Windows 8.1 or  Windows Server 2012 R2 |Not supported|Full support|Full support|After [Software and configuration requirements](#software-and-configuration-requirements) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation|Limited support; online and offline status only|Not supported -VM with Win10 E multi session OS is considered a server OS and RSAT only works on client OS|
+|Windows 8.1 or  Windows Server 2012 R2 |Not supported|Full support|Full support|After [Software and configuration requirements](#software-and-configuration-requirements) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation|Limited support; online and offline status only|Not supported — VM with Win10 E multi session OS is considered a server OS and RSAT only works on client OS|
 |Windows 8 or  Windows Server 2012 |Not supported|Not supported|Full support|After [Software and configuration requirements](#software-and-configuration-requirements) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation|Limited support; online and offline status only|Not supported — VM with Win10 E multi session OS is considered a server OS and RSAT only works on client OS|
 
 ###### To start Server Manager on a client computer
@@ -220,4 +220,3 @@ You can export Server Manager settings, make Server Manager settings portable, o
     -   %*appdata*%\Microsoft\Windows\ServerManager\Serverlist.xml
 
     -   %*localappdata*%\Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
-
