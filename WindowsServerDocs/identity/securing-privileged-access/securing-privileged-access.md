@@ -94,7 +94,7 @@ As an initial security measure for those users with Azure Active Directory and t
 
 ### 4. Identity attack detection
 
-[Azure Advanced Threat Protection (ATP)](/azure-advanced-threat-protection/what-is-atp) is a cloud-based security solution that identifies, detects, and helps you investigate advanced threats, compromised identities, and malicious insider actions directed at your on-premises Active Directory environment.
+[Microsoft Defender for Identity](https://docs.microsoft.com/en-us/defender-for-identity/what-is) is a cloud-based security solution that identifies, detects, and helps you investigate advanced threats, compromised identities, and malicious insider actions directed at your on-premises Active Directory environment.
 
 ## Phase 2: Significant incremental improvements
 
@@ -129,9 +129,9 @@ Enabling Credential Guard helps to protect NTLM password hashes, Kerberos Ticket
 
 Enable Microsoft Azure AD Identity Protection to report on users with leaked credentials to let you remediate them. [Azure AD Identity Protection](/azure/active-directory/identity-protection/index) can be leveraged to help your organization protect cloud and hybrid environments from threats.
 
-### 6. Azure ATP Lateral Movement Paths
+### 6. Microsoft Defender for Identity Lateral Movement Paths
 
-Ensure that privileged access account holders are using their PAW for administration only, thereby minimizing the risk of compromised non-privileged accounts gaining access to a privileged account via credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. [Azure ATP Lateral Movement Paths (LMPs)](/azure-advanced-threat-protection/use-case-lateral-movement-path) provide easy-to-understand reporting to identify where privileged accounts may be open to compromise.
+Ensure that privileged access account holders are using their PAW for administration only, thereby minimizing the risk of compromised non-privileged accounts gaining access to a privileged account via credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. [Microsoft Defender for Identity Lateral Movement Paths (LMPs)](https://docs.microsoft.com/en-us/defender-for-identity/use-case-lateral-movement-path) provide easy-to-understand reporting to identify where privileged accounts may be open to compromise.
 
 ## Phase 3: Security improvement and sustainment
 
@@ -153,7 +153,7 @@ Harden your identity workloads including Domains, Domain Controllers, ADFS, and 
 
 Integrating logging into a centralized SIEM tool can help your organization to analyze, detect, and respond to security events. The articles [Monitoring Active Directory for Signs of Compromise](../ad-ds/plan/security-best-practices/monitoring-active-directory-for-signs-of-compromise.md) and [Appendix L: Events to Monitor](../ad-ds/plan/appendix-l--events-to-monitor.md) provide guidance on events that should be monitored in your environment.
 
-This is part of the beyond plan, because aggregating, creating, and tuning alerts in a security information and event management (SIEM) requires skilled analysts (unlike Azure ATP in the 30 day plan, which includes out of the box alerting).
+This is part of the beyond plan, because aggregating, creating, and tuning alerts in a security information and event management (SIEM) requires skilled analysts (unlike Microsoft Defender for Identity in the 30 day plan, which includes out of the box alerting).
 
 ### 4. Leaked credentials - Force password reset
 
