@@ -225,6 +225,13 @@
 ### [Create a New NIC Team on a host computer or VM](technologies/nic-teaming/create-a-New-NIC-Team-on-a-Host-computer-or-VM.md)
 ### [Troubleshooting NIC Teaming](technologies/nic-teaming/Troubleshooting-NIC-Teaming.md)
 
+## [Packet Monitor (Pktmon)](technologies/pktmon/pktmon.md)
+### [Pktmon command syntax and formatting](technologies/pktmon/pktmon-syntax.md)
+### [Packet Monitoring Extension in Windows Admin Center](technologies/pktmon/pktmon-wac-extension.md)
+### [SDN Data Path Diagnostics Extension in Windows Admin Center](technologies/pktmon/pktmon-sdn-data-path-wac-extension.md)
+### [Microsoft Network Monitor (Netmon) support](technologies/pktmon/pktmon-netmon-support.md)
+### [Wireshark (pcapng format) support](technologies/pktmon/pktmon-pcapng-support.md)
+
 ## [Quality of Service (QoS) policy](technologies/qos/qos-policy-top.md)
 ### [Getting started with QoS policy](technologies/qos/qos-policy-get-started.md)
 #### [How QoS policy works](technologies/qos/qos-policy-works.md)
