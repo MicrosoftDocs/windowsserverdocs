@@ -26,7 +26,7 @@ If you are new to Angular, it is highly recommended that you read the documentat
 * More information about generating a new component in Angular CLI: https://github.com/angular/angular-cli/wiki/generate-component
 
 
-Open a command prompt, change directory to \src\app in your project, then run the following commands, replacing ```{!ModuleName}``` with your module name (spaces removed):
+Open a command prompt, change directory to .\src\app in your project, then run the following commands, replacing ```{!ModuleName}``` with your module name (spaces removed):
 
 ```
 cd .\src\app
