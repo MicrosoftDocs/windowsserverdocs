@@ -21,8 +21,8 @@ If you are a software vendor partner looking for more information on Windows Ser
 |--|--|--|--|--|
 | Exchange Server 2019 | Yes | Yes | Yes | [Exchange Server system requirements](/exchange/plan-and-deploy/system-requirements?view=exchserver-2019) |
 | Host Integration Server 2016, CU3 | Yes | Yes | Yes | [Host Integration Server system requirements](/host-integration-server/install-and-config-guides/system-requirements) |
-| Visual Studio Team Foundation Server 2017 | Yes* | Yes | Yes | [Team Foundation Server 2017](/tfs/server/requirements?view=vsts) |
-| Visual Studio Team Foundation Server 2018 | Yes* | Yes | Yes | [Team Foundation Server 2018](/tfs/server/requirements?view=vsts) |
+| Azure DevOps Server 2019 | Yes* | Yes | Yes | [Azure DevOps Server 2019](/azure/devops/server/requirements?view=azure-devops-2019) |
+| Azure DevOps Server 2020 | Yes* | Yes | Yes | [Azure DevOps Server 2020](/azure/devops/server/requirements?view=azure-devops-2020) |
 | Microsoft SQL Server 2014 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2014](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2014) |
 | Microsoft SQL Server 2016 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2016](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2016) |
 | Microsoft SQL Server 2017 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2017](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2017) |
