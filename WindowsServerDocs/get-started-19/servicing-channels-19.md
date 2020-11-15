@@ -100,7 +100,7 @@ Microsoft depends on receiving feedback throughout the development process so th
 - If you've obtained this release from the Volume Licensing Service Center or Visual Studio Subscriptions, you can activate it by using your Windows Server 2019 CSVLK with your Key Management System (KMS) environment. For more info, see [KMS client setup keys](../get-started/kmsclientkeys.md).
 
 > [!Note]
-> For easier maintenance and management of activation you can use ADBA (Active Directory based activation) for Servers 2012 or later, including Windows Server SAC.
+> For easier maintenance and management of activation, you can use ADBA (Active Directory-based activation) for Server 2012 or later, including Windows Server SAC.
 > In addition you can manage your licenses using VAMT 3.x (Volume Activation Management Tool) which is part of the latest ADK.
 
 Semi-Annual Channel releases that were released before Windows Server 2019 use the Windows Server 2016 CSVLK.
