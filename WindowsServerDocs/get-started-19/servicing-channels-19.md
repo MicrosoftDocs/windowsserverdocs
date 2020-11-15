@@ -101,7 +101,7 @@ Microsoft depends on receiving feedback throughout the development process so th
 
 > [!Note]
 > For easier maintenance and management of activation, you can use ADBA (Active Directory-based activation) for Server 2012 or later, including Windows Server SAC.
-> In addition you can manage your licenses using VAMT 3.x (Volume Activation Management Tool) which is part of the latest ADK.
+> In addition, you can manage your licenses using VAMT 3.x (Volume Activation Management Tool), which is part of the latest ADK.
 
 Semi-Annual Channel releases that were released before Windows Server 2019 use the Windows Server 2016 CSVLK.
 
