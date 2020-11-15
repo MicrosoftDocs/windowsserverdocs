@@ -61,7 +61,7 @@ The following table summarizes the key differences between the channels:
 
 > [!IMPORTANT]
 > Please understand that the set of roles and features in Windows Server SAC, only available as Server Core installation option, differs from Windows Server LTSC, installed with Server Core installation option.
-> For example you cannot use Windows Server SAC as foundation for services like S2D (Storage Spaces Direct).
+> For example: You cannot use Windows Server SAC as a foundation for services like S2D (Storage Spaces Direct).
 
 ## Device compatibility
 
