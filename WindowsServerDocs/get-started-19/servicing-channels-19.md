@@ -60,7 +60,7 @@ The following table summarizes the key differences between the channels:
 | Installation options | Server Core and Server with Desktop Experience | Server Core for container host and image and Nano Server container image |
 
 > [!IMPORTANT]
-> Please understand that the set of roles and features in Windows Server SAC, only available as Server Core installation option, differs from Windows Server LTSC, installed with Server Core installation option.
+> Please understand that the set of roles and features in Windows Server SAC, only available as Server Core installation option, differs from Windows Server LTSC installed with the Server Core installation option.
 > For example: You cannot use Windows Server SAC as a foundation for services like S2D (Storage Spaces Direct).
 
 ## Device compatibility
