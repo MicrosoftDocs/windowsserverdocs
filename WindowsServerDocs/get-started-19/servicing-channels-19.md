@@ -38,7 +38,7 @@ The Semi-Annual Channel is available to volume-licensed customers with [Software
 > In-place upgrades from one Semi-Annual Channel release to a later Semi-Annual Channel release are possible. This makes it easier to keep up with the relatively short release cadence.
 
 In this model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Fresh releases of Windows Server in the Semi-Annual Channel will occur twice each year. The support lifecycle for each release is 18 months.
-Starting with fall 2020 (20H2) releases, we changed the identifcation. Instead of a month, we will name the release based on the release cycle. For example: **version 20H2**, for a release in second half of the year 2020, or **version 21H1**, for a release in the first half of the year 2021.
+Starting with fall 2020 (20H2) releases, we changed the identification. Instead of a month, we will name the release based on the release cycle. For example: **version 20H2**, for a release in the second half of the year 2020, or **version 21H1**, for a release in the first half of the year 2021.
 
 ## Should you keep servers on the LTSC or move them to the Semi-Annual Channel?
 
