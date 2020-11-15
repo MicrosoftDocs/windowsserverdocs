@@ -83,7 +83,7 @@ You've likely already chosen to use at least one of these options based on your 
 
 ## Where to obtain Semi-Annual Channel releases
 
-Semi-Annual Channel releases should be installed as a clean installation. It is possible to use In-place upgrade via ISO from one SAC to a later version.
+Semi-Annual Channel releases should be installed as a clean installation. It is possible to use in-place upgrade via ISO from one SAC to a later version.
 
 - Volume Licensing Service Center (VLSC): Volume-licensed customers with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) and clicking **Sign In**. Then click **Downloads and Keys** and search for this release.
 
