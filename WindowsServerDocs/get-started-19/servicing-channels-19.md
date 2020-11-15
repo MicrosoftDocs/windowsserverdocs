@@ -32,7 +32,7 @@ Most of the features introduced in the Semi-Annual Channel will be rolled up int
 The Semi-Annual Channel is available to volume-licensed customers with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx), as well as via the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as Visual Studio Subscriptions.
 
 > [!Note]
-> **The current Semi-Annual Channel release is Windows Server, version 2004**. If you want to put servers in this channel, you should install Windows Server, version 2004, which can be installed in Server Core mode or as Nano Server run in a container. In-place upgrades from a long-term servicing channel release aren't supported because they are in **different release channels**. This applies vice versa. You cannot upgrade or change from Semi-Annual Channel to a LTSC channel, without a clean installation.
+> **The current Semi-Annual Channel release is Windows Server, version 2004**. If you want to put servers in this channel, you should install Windows Server, version 2004, which can be installed in Server Core mode or as Nano Server run in a container. In-place upgrades from a long-term servicing channel release aren't supported because they are in **different release channels**. This applies vice versa. You cannot upgrade or change from Semi-Annual Channel to an LTSC channel without a clean installation.
 >
 > A Semi-Annual Channel release isn't an update – it's the next Windows Server release in the Semi-Annual Channel.
 > In-place upgrades from one Semi-Annual Channel release to a later Semi-Annual Channel release are possible. This makes it easier to keep up with the relatively short release cadence.
