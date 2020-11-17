@@ -11,7 +11,7 @@ ms.assetid: 3bd6c1d0-d316-4b03-b7b4-557d4537635c
 
 # AD Forest Recovery - Resetting the krbtgt password
 
-> Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+> Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 Use the following procedure to reset the krbtgt password for the domain. The following procedure applies writeable DCs, but not read-only domain controllers (RODCs).
 
@@ -35,7 +35,7 @@ Use the following procedure to reset the krbtgt password for the domain. The fol
 5. In **New password**, type a new password, retype the password in **Confirm password**, and then click **OK**. The password that you specify is not significant because the system will generate a strong password automatically independent of the password that you specify.
 
 > [!IMPORTANT]
-> You should perform this operation twice. When resetting the Key Distribution Center Service Account password twice, a 10 hour waiting period is required between resets.
+> You should perform this operation twice. When resetting the Key Distribution Center Service Account password twice, a 10 hour waiting period is required between resets. 10 hours are the default **Maximum lifetime for user ticket** and **Maximum lifetime for service ticket** policy settings, hence in a case where the Maximum lifetime period has been altered, the minimum waiting period between resets should be greater than the configured value.  
 
 > [!NOTE]
 > The password history value for the krbtgt account is 2, meaning it includes the 2 most recent passwords. By resetting the password twice you effectively clear any old passwords from the history, so there is no way another DC will replicate with this DC by using an old password.
