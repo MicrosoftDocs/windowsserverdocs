@@ -1,7 +1,7 @@
 ---
 ms.assetid: 155abe09-6360-4913-8dd9-7392d71ea4e6
 title: Configuring a Computer for Troubleshooting
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018

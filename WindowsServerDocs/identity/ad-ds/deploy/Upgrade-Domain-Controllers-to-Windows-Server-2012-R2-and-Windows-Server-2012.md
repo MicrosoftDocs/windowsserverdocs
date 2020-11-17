@@ -1,19 +1,21 @@
 ---
 ms.assetid: e4c31187-f15f-410b-bb79-8d63e2f2b421
 title: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ---
+
 # Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides background information about Active Directory Domain Services in  Windows Server 2012 R2  and  Windows Server 2012  and explains the process for upgrading domain controllers from Windows Server 2008 or Windows Server 2008 R2.
 
 ## <a name="BKMK_UpgradeWorkflow"></a>Domain controller upgrade steps
+
 The recommended way to upgrade a domain is to promote domain controllers that run newer versions of Windows Server and demote older domain controllers as needed. That method is preferable to upgrading the operating system of an existing domain controller. This list covers general steps to follow before you promote a domain controller that runs a newer version of Windows Server:
 
 1. Verify the target server meets [system requirements](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303418(v=ws.11)).
@@ -120,7 +122,7 @@ The following table lists some examples of how to configure these settings to pr
 |**WSUS managed**<p>-   Stagger installs across different hours/days|Set target groups for different groups of machines that should be updated together<p>Use above steps for previous scenario<p>Set different deadlines for different target groups|
 |**Not WSUS-managed - no support for deadlines**<p>-   Stagger installs at different times|**Policy**: Configure Automatic Updates (Enabled)<p>Configure automatic updating: 4 - Auto download and schedule the install<p>**Registry key:** Enable the registry key discussed in Microsoft KB article [2835627](https://support.microsoft.com/kb/2835627)<p>**Policy:** Automatic Maintenance Random Delay (Enabled)<p>Set **Regular maintenance random delay** to PT6H for 6-hour random delay to provide the following behavior:<p>-   Updates will install at the configured maintenance time plus a random delay<p>-   Restart for each machine will take place exactly 3 days later<p>Alternatively, set a different maintenance time for each group of machines|
 
-For more information about why the Windows engineering team implemented these changes, see [Minimizing restarts after automatic updating in Windows Update](https://blogs.msdn.com/b/b8/archive/2011/11/14/minimizing-restarts-after-automatic-updating-in-windows-update.aspx).
+For more information about why the Windows engineering team implemented these changes, see [How to reduce your chances of being prompted to restart your computer](https://docs.microsoft.com/troubleshoot/windows-server/deployment/why-prompted-restart-computer#how-to-reduce-your-chances-of-being-prompted-to-restart-your-computer).
 
 ## <a name="BKMK_InstallationChanges"></a>AD DS server role installation changes
 
@@ -142,9 +144,9 @@ There are some changes related to AD DS:
 - **Deprecation of Dcpromo.exe**
    - Dcpromo is deprecated although in  Windows Server 2012  only it can still be run with an answer file or command line parameters to give organizations time to transition existing automation to the new Windows PowerShell installation options.
 - **LMHash is disabled on user accounts**
-  - Secure defaults in Security templates on Windows Server 2008, Windows Server 2008 R2 and Windows Server 2012 enable the NoLMHash policy which is disabled in the security templates of Windows 2000 and Windows Server 2003 domain controllers. Disable the NoLMHash policy for LMHash-dependent clients as required, using the steps in KB article [946405](https://support.microsoft.com/kb/946405).
+  - Secure defaults in Security templates on Windows Server 2008, Windows Server 2008 R2 and Windows Server 2012 enable the NoLMHash policy which is disabled in the security templates of Windows 2000 and Windows Server 2003 domain controllers. Disable the NoLMHash policy for LMHash-dependent clients as required, using the steps described in the page [How to prevent Windows from storing a LAN manager hash of your password in Active Directory and local SAM databases](https://docs.microsoft.com/troubleshoot/windows-server/windows-security/prevent-windows-store-lm-hash-password).
 
-Beginning with  Windows Server 2008 , domain controllers also have the following secure default settings, compared to domain controllers that run Windows Server 2003 or Windows 2000.
+Beginning with  Windows Server 2008 , domain controllers also have the following secure default settings, compared to domain controllers that run Windows Server 2003 or Windows 2000:
 
 | Encryption type or policy | Windows Server 2008 default | Windows Server 2012 and Windows Server 2008 R2 default | Comment |
 |--|--|--|--|
@@ -158,7 +160,7 @@ Beginning with  Windows Server 2008 , domain controllers also have the following
 The minimum system requirements for  Windows Server 2012  are listed in the following table. For more information about system requirements and pre-installation information, see [Installing Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)). There are no additional system requirements to install a new Active Directory forest, but you should add sufficient memory to cache the contents of Active Directory database in order to improve performance for domain controllers, LDAP client requests, and Active Directory-enabled applications. If you are upgrading an existing domain controller or adding a new domain controller to an existing forest, review the next section to ensure the server meets disk space requirements.
 
 | Requirement | Value |
-|--|--|
+| ---------- | ----- |
 | Processor | 1.4 Ghz 64-bit processor |
 | RAM | 512 MB |
 | Free disk space requirements | 32 GB |
@@ -289,7 +291,7 @@ The following table covers common Active Directory-integrated Microsoft applicat
 
 ## <a name="BKMK_KnownIssues"></a>Known issues
 
-The following table lists known issues related to AD DS installation.
+The following table lists known issues related to AD DS installation:
 
 | KB article number and title | Technology area impacted | Issue/description |
 |--|--|--|

@@ -2,7 +2,7 @@
 title: Clean up AD DS server metadata
 description: Use built-in tools to clean up metadata from removed domain controllers
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 11/14/2018
 ms.topic: article

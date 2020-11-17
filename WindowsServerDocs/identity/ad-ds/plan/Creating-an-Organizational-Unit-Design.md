@@ -2,7 +2,7 @@
 ms.assetid: b8df1828-5ead-4c90-b0fe-95c675116b7c
 title: Creating an Organizational Unit Design
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

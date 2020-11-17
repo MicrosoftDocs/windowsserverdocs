@@ -1,7 +1,7 @@
 ---
 ms.assetid: 7dd905ea-4235-4519-8400-31b4fa0ed1bf
 title: Enabling Clients to Locate the Next Closest Domain Controller
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018

@@ -1,8 +1,9 @@
 ---
 ms.assetid: ac727bd1-a892-47ed-a7ba-439b34187d4e
 title: AD DS Installation and Removal Wizard Page Descriptions
+description: Provides descriptions for the controls on the following wizard pages that comprise the AD DS server role installation and removal in Server Manager.
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
