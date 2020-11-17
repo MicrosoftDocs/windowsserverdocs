@@ -655,10 +655,10 @@ After installing the Windows Server 2019 November cumulative update [KB4586793](
 Error HRESULT E_FAIL has been returned from a call to a COM component
 ```
 
-It doesn't necessarily happen for all source computers. We are working to diagnose this issue. As a workaround, install the 1.115 or later Storage Migration Service tool in Windows Admin Center. The update should automatically appear in the Windows Admin Center feed and prompt for installation, and will allow you to ignore this error. To workarond it:
+It doesn't necessarily happen for all source computers. We are working to diagnose this issue. As a workaround, install the 1.115 or later Storage Migration Service tool in Windows Admin Center. The update should automatically appear in the Windows Admin Center feed and prompt for installation, and will allow you to ignore this error. To work around it:
 
-1. Navigate to the "Adjust Settings" step of the Transfer phase. 
-2. Enable "Override Transfer Validation"
+1. Navigate to the "Adjust Settings" step of the Transfer phase.
+2. Enable "Override Transfer Validation".
 3. Proceed with your transfer, either without running "Validate" or running it and ignoring the E_FAIL error.
 
 > [!IMPORTANT]
