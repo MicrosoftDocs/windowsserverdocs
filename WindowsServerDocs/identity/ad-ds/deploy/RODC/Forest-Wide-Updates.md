@@ -2,7 +2,7 @@
 ms.assetid: 3647b7e3-54a4-46c6-ab68-82fcf3bfacda
 title: Active Directory Forest-Wide Updates
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 10/29/2018
 ms.topic: article

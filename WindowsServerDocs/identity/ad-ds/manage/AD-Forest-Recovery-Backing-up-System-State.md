@@ -1,6 +1,6 @@
 ---
 title: AD Forest Recovery - Backing up the System State data
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018

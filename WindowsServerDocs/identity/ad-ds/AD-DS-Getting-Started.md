@@ -1,7 +1,7 @@
 ---
 ms.assetid: 533ce45c-67cc-4fbf-bb19-f364874e52c1
 title: AD DS Getting Started
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018

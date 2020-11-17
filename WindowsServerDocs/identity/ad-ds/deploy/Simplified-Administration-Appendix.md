@@ -2,7 +2,7 @@
 ms.assetid: c911d6c6-98c6-4532-b1db-5724e1ceb96c
 title: Simplified Administration Appendix
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

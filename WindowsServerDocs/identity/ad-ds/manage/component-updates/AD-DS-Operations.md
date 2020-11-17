@@ -1,7 +1,7 @@
 ---
 ms.assetid: 560dfa18-0398-4186-ba91-da03ab72c2d5
 title: AD DS Operations
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018

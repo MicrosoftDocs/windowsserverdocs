@@ -3,7 +3,7 @@ ms.assetid: b432980c-601f-492b-924e-7427419c8457
 title: Changes Made by Adprep.exe
 description: Describes the changes that Adprep.exe makes in Windows Server 2012 R2 and Windows Server 2012
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

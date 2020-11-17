@@ -2,7 +2,7 @@
 ms.assetid: 119881f6-637f-43de-8577-5f5eaf3281df
 title: Appendices
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

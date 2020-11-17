@@ -26,7 +26,7 @@ VSS coordinates the actions that are required to create a consistent shadow copy
 
   - You are performing disk-to-disk backups.
 
-  - You need a fast recovery from data loss by restoring data to the original LUN or to an entirely new LUN that replaces an original LUN that failed.
+  - You need a fast recovery from data loss by restoring data to the original Logical Unit Number (LUN) or to an entirely new LUN that replaces an original LUN that failed.
 
 
 Windows features and applications that use VSS include the following:

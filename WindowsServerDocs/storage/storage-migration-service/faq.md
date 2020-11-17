@@ -85,6 +85,8 @@ The Storage Migration Service contains a multi-threaded read and copy engine cal
 
 - **Use Windows Server 2019 for the destination operating system.** Windows Server 2019 contains the Storage Migration Service Proxy service. When you install this feature and migrate to Windows Server 2019 destinations, all transfers operate as direct line of sight between source and destination. This service runs on the orchestrator during transfer if the destination computers are Windows Server 2012 R2 or Windows Server 2016, which means the transfers double-hop and will be much slower. If there are multiple jobs running with Windows Server 2012 R2 or Windows Server 2016 destinations, the orchestrator will become a bottleneck.
 
+- **Install latest monthly Cumulative Update.** We have improved the Storage Migration Service Proxy service in several updates for better transfer and re-transfer performance, as well as Inventory performance. Install [KB4580390 October 2020 Cumulative Update](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390) or later to gain significant speed improvements.
+
 - **Alter default transfer threads.** The Storage Migration Service Proxy service copies 8 files simultaneously in a given job. You can increase the number of simultaneous copy threads by adjusting the following registry REG_DWORD value name in decimal on every node running the Storage Migration Service Proxy:
 
     HKEY_Local_Machine\Software\Microsoft\SMSProxy
