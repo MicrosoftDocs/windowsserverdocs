@@ -84,8 +84,10 @@ From PowerShell or cmd, use ssh-keygen to generate some key files.
 
 ```powershell
 cd ~\.ssh\
-ssh-keygen
+ssh-keygen [options]
 ```
+
+Where the recommended `[options]` are `-t ed25519 -a 100` or `-t rsa -b 4096 -a 100`.
 
 This should display something like the following (where "username" is replaced by your user name)
 
