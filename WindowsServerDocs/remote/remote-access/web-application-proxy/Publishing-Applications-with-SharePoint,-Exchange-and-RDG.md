@@ -10,7 +10,7 @@ ms.topic: article
 
 # Publishing Applications with SharePoint, Exchange and RDG
 
-> Applies To: Windows Server 2016
+> Applies To: Windows Server 2016, Windows Server 2019
 
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](/azure/active-directory/manage-apps/application-proxy).**
 
@@ -18,6 +18,16 @@ This topic describes the tasks necessary to publish SharePoint Server, Exchange 
 
 > [!NOTE]
 > This information is provided as-is.  Remote Desktop Services supports and recommends using [Azure App Proxy to provide secure remote access to on-premises applications](/azure/active-directory/active-directory-application-proxy-get-started).
+
+> [!IMPORTANT]
+> If you are installing the Web Application Proxy service on Windows Server 2019, you must disable HTTP2 protocol support in the WinHttp component. This is disabled by default in earlier versions of supported operating systems. Adding the following registry key and restarting the server disables it on Windows Server 2019. Note that this is a machine-wide registry key.
+>
+> ```
+> Windows Registry Editor Version 5.00
+> 
+> [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp] "EnableDefaultHttp2"=dword:00000000
+> ```
+>
 
 ## <a name="BKMK_6.1"></a>Publish SharePoint Server
 You can publish a SharePoint site through Web Application Proxy when the SharePoint site is configured for claims-based authentication or Integrated Windows authentication. If you want to use Active Directory Federation Services (AD FS) for pre-authentication, you must configure a relying party using one of the wizards.
@@ -75,7 +85,7 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
 
 #### How to publish an application in RDG using Web Application Proxy with pre-authentication
 
-1.  Web Application Proxy pre-authentication  with RDG works by passing the pre-authentication cookie obtained by Internet Explorer being passed into the Remote Desktop Connection client (mstsc.exe). This is then used by the Remote Desktop Connection client (mstsc.exe). This is then used by Remote Desktop Connection client as proof of authentication.
+1.  Web Application Proxy pre-authentication  with RDG works by passing the pre-authentication cookie obtained by Internet Explorer 11 or [Edge Chromium IE mode](/deployedge/edge-ie-mode) being passed into the Remote Desktop Connection client (mstsc.exe). This is then used by the Remote Desktop Connection client (mstsc.exe). This is then used by Remote Desktop Connection client as proof of authentication.
 
     The following procedure tells the Collection server to include the necessary custom RDP properties in the Remote App RDP files that are sent to clients. These tell the client that pre-authentication is required and to pass the cookies for the pre-authentication server address to Remote Desktop Connection client (mstsc.exe) . In conjunction with disabling the HttpOnly feature on the Web Application Proxy application, this  allows the  Remote Desktop Connection client (mstsc.exe) to utilize the Web Application Proxy cookie obtained through the browser.
 
