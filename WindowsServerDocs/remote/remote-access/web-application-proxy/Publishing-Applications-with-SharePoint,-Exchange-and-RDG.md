@@ -27,7 +27,6 @@ This topic describes the tasks necessary to publish SharePoint Server, Exchange 
 > 
 > [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp] "EnableDefaultHttp2"=dword:00000000
 > ```
->
 
 ## <a name="BKMK_6.1"></a>Publish SharePoint Server
 You can publish a SharePoint site through Web Application Proxy when the SharePoint site is configured for claims-based authentication or Integrated Windows authentication. If you want to use Active Directory Federation Services (AD FS) for pre-authentication, you must configure a relying party using one of the wizards.
