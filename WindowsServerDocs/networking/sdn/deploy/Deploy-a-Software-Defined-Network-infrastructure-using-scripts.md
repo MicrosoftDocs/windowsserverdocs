@@ -11,7 +11,7 @@ ms.date: 08/23/2018
 # Deploy a Software Defined Network infrastructure using scripts
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
-'
+
 In this topic, you deploy a Microsoft Software Defined Network (SDN) infrastructure using scripts. The infrastructure includes a highly available (HA) network controller, an HA Software Load Balancer (SLB)/MUX, virtual networks, and associated Access Control Lists (ACLs). Additionally, another script deploys a tenant workload for you to validate your SDN infrastructure.
 
 If you want your tenant workloads to communicate outside their virtual networks, you can setup SLB NAT rules, Site-to-Site Gateway tunnels, or Layer-3 Forwarding to route between virtual and physical workloads.
