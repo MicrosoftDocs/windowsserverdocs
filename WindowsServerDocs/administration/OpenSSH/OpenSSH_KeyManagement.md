@@ -69,18 +69,19 @@ PS C:\ProgramData\ssh> ssh-keygen.exe -l -f .\ssh_host_ecdsa_key
 521 SHA256:Cq+HsQY4B9wobPsQeIf+Lnqd92HJuP4TAw5aYJmQNio username@server (ECDSA)
 ```
 
+## User key generation
+
+To use key-based authentication, you first need to generate some public/private key pairs for your client.
+
 By default the ssh-agent service is disabled. Allow it to be manually started for the next step to work.
 
 `Get-Service -Name ssh-agent | Set-Service -StartupType Manual`
 
-Start the ssh-agent service to preserve the server keys.
+Start the ssh-agent service to preserve the keys.
 
 `Start-Service ssh-agent`
 
-## User key generation
-
-To use key-based authentication, you first need to generate some public/private key pairs for your client.
-From PowerShell or cmd, use ssh-keygen to generate some key files.
+From PowerShell or cmd, use `ssh-keygen` to generate client key files.
 
 ```powershell
 cd ~\.ssh\
@@ -89,7 +90,7 @@ ssh-keygen [options]
 
 Where the recommended `[options]` are `-t ed25519 -a 100` or `-t rsa -b 4096 -a 100`.
 
-This should display something like the following (where "username" is replaced by your user name)
+This should display something like the following (where `username` is replaced by your user name)
 
 ```
 Generating public/private ed25519 key pair.
