@@ -84,7 +84,7 @@ If you want to restrict access to your Remote Access Gateway and add pre-authent
 
 #### How to publish an application in RDG using Web Application Proxy with pre-authentication
 
-1.  Web Application Proxy pre-authentication  with RDG works by passing the pre-authentication cookie obtained by Internet Explorer 11 or [Edge Chromium IE mode](/deployedge/edge-ie-mode) being passed into the Remote Desktop Connection client (mstsc.exe). This is then used by the Remote Desktop Connection client (mstsc.exe). This is then used by Remote Desktop Connection client as proof of authentication.
+1.  Web Application Proxy pre-authentication with RDG works by passing the pre-authentication cookie obtained by Internet Explorer 11 or [Edge Chromium IE mode](/deployedge/edge-ie-mode) being passed into the Remote Desktop Connection client (mstsc.exe). This is then used by the Remote Desktop Connection client (mstsc.exe). This is then used by Remote Desktop Connection client as proof of authentication.
 
     The following procedure tells the Collection server to include the necessary custom RDP properties in the Remote App RDP files that are sent to clients. These tell the client that pre-authentication is required and to pass the cookies for the pre-authentication server address to Remote Desktop Connection client (mstsc.exe) . In conjunction with disabling the HttpOnly feature on the Web Application Proxy application, this  allows the  Remote Desktop Connection client (mstsc.exe) to utilize the Web Application Proxy cookie obtained through the browser.
 
