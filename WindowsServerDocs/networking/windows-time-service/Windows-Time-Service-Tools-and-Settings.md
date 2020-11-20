@@ -2,8 +2,9 @@
 ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Windows Time service tools and settings
 author: Teresa-Motiv
+description: Describes the settings that are available for Windows Time Service (W32Time) and the tools that you can use to configure those settings
 ms.author: v-tea
-ms.date: 02/24/2020
+ms.date: 11/20/2020
 ms.topic: article
 ---
 
