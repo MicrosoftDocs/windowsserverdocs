@@ -11,11 +11,11 @@ ms.localizationpriority: medium
 ---
 # Get started with the macOS client
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+> Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
 You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.md) if you have questions.
 
->[!NOTE]
+> [!NOTE]
 > - Curious about the new releases for the macOS client? Check out [What's new for Remote Desktop on Mac?](mac-whatsnew.md)
 > - The Mac client runs on computers running macOS 10.10 and newer.
 > - The information in this article applies primarily to the full version of the Mac client - the version available in the Mac AppStore. Test-drive new features by downloading our preview app here:  [beta client release notes](https://go.microsoft.com/fwlink/?LinkID=619698&clcid=0x409).
@@ -153,7 +153,7 @@ Windows Server 2012 R2 introduced support for a new authentication method, Remot
 > [!IMPORTANT]
 > Custom authentication and authorization models before Windows 8.1 aren't supported, although the article above discusses them.
 
-To learn more about this feature, check out [https://aka.ms/paa-sample](/samples/browse/?redirectedfrom=MSDN-samples).
+To learn more about this feature, check out [**Browse code samples**](https://docs.microsoft.com/samples/browse/).
 
 > [!TIP]
 > Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](/answers/topics/windows-remote-desktop-client.html) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
