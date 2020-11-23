@@ -10,6 +10,7 @@ ms.localizationpriority: medium
 # Change the listening port for Remote Desktop on your computer
 
 >Applies to: Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2
+, Windows Server 2019
 
 When you connect to a computer (either a Windows client or Windows Server) through the Remote Desktop client, the Remote Desktop feature on your computer "hears" the connection request through a defined listening port (3389 by default). You can change that listening port on Windows computers by modifying the registry.
 
@@ -22,3 +23,25 @@ When you connect to a computer (either a Windows client or Windows Server) throu
 6. Close the registry editor, and restart your computer.
 
 The next time you connect to this computer by using the Remote Desktop connection, you must type the new port. If you're using a firewall, make sure to configure your firewall to permit connections to the new port number.
+
+
+You can always check the current port through PowerShell too with below commands:
+
+  ```powershell-interactive
+Get-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "PortNumber"
+Example:
+PortNumber : 3389
+PSPath : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal
+Server\WinStations\RDP-Tcp
+PSParentPath : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal
+Server\WinStations
+PSChildName : RDP-Tcp
+PSDrive : HKLM
+PSProvider : Microsoft.PowerShell.Core\Registry
+  ```
+You can change RDP port by executing PowerShell commands too as example shown below by adding new RDP port as 3390
+Add New RDP Port in Registry:
+  ```powershell-interactive
+Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "PortNumber" -Value 3390
+New-NetFirewallRule -DisplayName 'RDPPORTLatest' -Profile 'Public' -Direction Inbound -Action Allow -Protocol TCP -LocalPort 3390
+  ```
