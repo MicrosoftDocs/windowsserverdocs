@@ -9,8 +9,10 @@ ms.topic: article
 ---
 
 
+
+
 # The Role of the AD FS Configuration Database
-The AD FS configuration database stores all the configuration data that represents a single instance of Active Directory Federation Services \(AD FS\) \(that is, the Federation Service\). The AD FS configuration database defines the set of parameters that a Federation Service requires to identify partners, certificates, attribute stores, claims, and various data about these associated entities. You can store this configuration data in either a Microsoft SQL Server&reg; database or the Windows Internal Database \(WID\) feature that is included with Windows Server&reg; 2008, Windows Server 2008 R2 and Windows Server&reg; 2012.
+The AD FS configuration database stores all the configuration data that represents a single instance of Active Directory Federation Services \(AD FS\) \(that is, the Federation Service\). The AD FS configuration database defines the set of parameters that a Federation Service requires to identify partners, certificates, attribute stores, claims, and various data about these associated entities. You can store this configuration data in either a Microsoft SQL Server&reg; database or the Windows Internal Database \(WID\) feature that is included with Windows Server 2012 or higher 
 
 > [!NOTE]
 > The entire contents of the AD FS configuration database can be stored either in an instance of WID or in an instance of the SQL database, but not both. This means that you cannot have some federation servers using WID and others using a SQL Server database for the same instance of the AD FS configuration database.
@@ -41,13 +43,11 @@ If you select the add a federation server option, WID is configured to replicate
 This section describes important concepts that describe how the WID federation server farm replicates data between a primary federation server and secondary federation servers. .
 
 #### Primary federation server
-A primary federation server is a computer running Windows Server 2008, Windows Server 2008 R2 or Windows Server&reg; 2012 that has been configured in the federation server role with the AD FS Federation Server Configuration Wizard and that has a read/write copy of the AD FS configuration database. The primary federation server is always created when you use the AD FS Federation Server Configuration Wizard and select the option to create a new Federation Service and make that computer the first federation server in the farm. All other federation servers in this farm, also known as secondary federation servers, must synchronize changes that are made on the primary federation server to a copy of the AD FS configuration database that is stored locally.
+A primary federation server is a computer running Windows Server 2012 or higher that has been configured with the federation server role with the AD FS Federation Server Configuration Wizard and that has a read/write copy of the AD FS configuration database. The primary federation server is always created when you use the AD FS Federation Server Configuration Wizard and select the option to create a new Federation Service and make that computer the first federation server in the farm. All other federation servers in this farm, also known as secondary federation servers, must synchronize changes that are made on the primary federation server to a copy of the AD FS configuration database that is stored locally.
 
 #### Secondary federation servers
 Secondary federation servers store a copy of the AD FS configuration database from the primary federation server, but these copies are read\-only. Secondary federation servers connect to and synchronize the data with the primary federation server in the farm by polling it at regular intervals to check whether data has changed. The secondary federation servers exist to provide fault tolerance for the primary federation server while acting to load\-balance access requests that are made in different sites throughout your network environment.
 
-> [!NOTE]
-> If a primary federation server crashes and is offline, all secondary federation servers continue to process requests as normal. However, no new changes can be made to the Federation Service until the primary federation server has been brought back online. You can also nominate a secondary federation server to become the primary federation server by using Windows PowerShell. For more information, see the [AD FS Administration with Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=179634).
 
 #### How the AD FS configuration database is synchronized
 Because of the important role that the AD FS configuration database plays, it is made available on all the federation servers in the network to provide fault tolerance and load\-balancing capabilities when processing requests \(when network load\-balancers are used\). However, for secondary federation servers to serve in this capacity, the AD FS configuration database that is stored on the primary federation server must be synchronized.
@@ -62,6 +62,49 @@ The WID synchronization process also supports incremental transfers for more eff
 
 > [!NOTE]
 > The migration of an AD FS configuration database from WID to an instance of SQL Server is supported. For more information about how to do this, see [AD FS: Migrate Your AD FS Configuration Database to SQL Server](https://go.microsoft.com/fwlink/?LinkId=192232) on the TechNet Wiki site.
+
+### How to managed the AD FS synchronization properties
+This Section describes how to view and edit the AD FS configuration database synchronization proerties.
+.
+
+The **Get-ADFSSyncProperties** cmdlet gets the synchronization properties for the configuration database of Active Directory Federation Services (AD FS).
+
+```
+PS C:\> Get-ADFSSyncProperties
+```
+On the Primary AD FS Server this cmdlet will only show that the Role is the Primary Computer. On a Secondary member it will show the rest of the configuration including Fully Quallified Domain Name of the Last Sync from the Primary Computer, Last Sync Status and Time, Poll duration, the currently configured Primary computername, the Primary Computer Port and the Role of the Secondary Computer. 
+
+The **Set-ADFSSyncProperties** cmdlet modifies the frequency of synchronization for the Active Directory Federation Services (AD FS) configuration database.
+The cmdlet also specifies which federation server is the primary server in the federation server farm. 
+
+> [!NOTE]
+> If a primary federation server crashes and is offline, all secondary federation servers continue to process requests as normal. However, no new changes can be made to the Federation Service until the primary federation server has been brought back online. You can also nominate a secondary federation server to become the primary federation server by using Windows PowerShell. If nominate a new primary server the remain servers must be modified to reflect the new primary server. Having 2 primaries with a WID farm will impact the stableness of the farm and has the passibility of losing data.
+
+#### Modify the poll duration for a farm
+```
+PS C:\> Set-AdfsSyncProperties -PollDuration 3600 -PrimaryComputerName "FederationServerPrimary"
+```
+
+This command modifies the database synchronization to 3600 seconds.
+The command makes the change to the primary federation server.
+
+####  Change a server from secondary to primary
+```
+PS C:\> Set-AdfsSyncProperties -Role "PrimaryComputer"
+```
+
+This command changes an AD FS server in a WID farm from secondary to primary.
+
+#### Change a primary server to a secondary server
+```
+PS C:\> Set-AdfsSyncProperties -Role "SecondaryComputer" -PrimaryComputerName "<FQDN of primary server>"
+```
+
+This command changes a primary AD FS server in a WID farm to a secondary server. You must specify the fully qualified domain name of the primary so server. Not doing so may not all the secondary AD FS server to sync properly. 
+Note: The primary server must be accessible via HTTP on port 80 from the secondary server.
+
+For more information see: [Set-AdfsSyncProperties](https://docs.microsoft.com/en-us/powershell/module/adfs/set-adfssyncproperties?view=win10-ps)
+
 
 ## Using SQL Server to store the AD FS configuration database
 You can create the AD FS configuration database using a single SQL Server database instance as the store by using the Fsconfig.exe command\-line tool. Using a SQL Server database as the AD FS configuration database provides the following benefits over WID:
