@@ -27,21 +27,22 @@ The next time you connect to this computer by using the Remote Desktop connectio
 
 You can always check the current port through PowerShell too with below commands:
 
-  ```powershell-interactive
+~~~powershell
 Get-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "PortNumber"
+~~~
 Example:
-PortNumber : 3389
-PSPath : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal
-Server\WinStations\RDP-Tcp
-PSParentPath : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal
-Server\WinStations
-PSChildName : RDP-Tcp
-PSDrive : HKLM
-PSProvider : Microsoft.PowerShell.Core\Registry
-  ```
-You can change RDP port by executing PowerShell commands too as example shown below by adding new RDP port as 3390
+~~~powershell
+PortNumber   : 3389
+PSPath       : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp
+PSParentPath : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations
+PSChildName  : RDP-Tcp
+PSDrive      : HKLM
+PSProvider   : Microsoft.PowerShell.Core\Registry
+~~~
+You can change the RDP port by executing PowerShell commands too, as in the example shown below, by adding the new RDP port as 3390.
+
 Add New RDP Port in Registry:
-  ```powershell-interactive
+~~~powershell
 Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "PortNumber" -Value 3390
 New-NetFirewallRule -DisplayName 'RDPPORTLatest' -Profile 'Public' -Direction Inbound -Action Allow -Protocol TCP -LocalPort 3390
-  ```
+~~~
