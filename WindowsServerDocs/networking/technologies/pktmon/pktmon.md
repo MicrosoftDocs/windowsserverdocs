@@ -43,10 +43,10 @@ Packet Monitor intercepts packets at multiple locations throughout the networkin
 
 Use these best practices for streamlining your network analysis.
 
--Check command-line help for arguments and capabilities (e.g. pktmon start help).
--Configure packet filters matching your scenario (pktmon filter add).
--Check packet counters during the experiment for high level view (pktmon counters).
--Look into the log for detailed analysis (pktmon format pktmon.etl).
+- Check command-line help for arguments and capabilities (e.g. pktmon start help).
+- Configure packet filters matching your scenario (pktmon filter add).
+- Check packet counters during the experiment for high level view (pktmon counters).
+- Look into the log for detailed analysis (pktmon format pktmon.etl).
 
 ## Functionality
 
