@@ -71,7 +71,7 @@ Packet Monitor's functionality has evolved through Windows releases. The table b
 
 Below are some of Packet Monitor's most significant limitations.
 
-- Ethernet traffic only is supported for now. Wireless traffic support will be added in later releases.
+- Only Ethernet traffic is supported for now. Wireless traffic support will be added in later releases.
 - Packet drops from Windows Firewall are not visible through Packet Monitor yet. 
 
 ## Get started with Packet Monitor
