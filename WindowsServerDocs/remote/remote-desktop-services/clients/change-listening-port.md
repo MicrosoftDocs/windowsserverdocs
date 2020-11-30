@@ -26,7 +26,7 @@ The next time you connect to this computer by using the Remote Desktop connectio
 
 You can check the current port by running the following PowerShell command:
 
-~~~powershell
+```powershell
 Get-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "PortNumber"
 ~~~
 
