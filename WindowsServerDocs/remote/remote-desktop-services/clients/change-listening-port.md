@@ -38,7 +38,9 @@ PSChildName  : RDP-Tcp
 PSDrive      : HKLM
 PSProvider   : Microsoft.PowerShell.Core\Registry
 ~~~
-You can change the RDP port by executing PowerShell commands too, as in the example shown below, by adding the new RDP port as 3390.
+
+You can also change the RDP port by running the following PowerShell command. In this command, we'll specify the new RDP port as **3390**.
+
 
 Add New RDP Port in Registry:
 ~~~powershell
