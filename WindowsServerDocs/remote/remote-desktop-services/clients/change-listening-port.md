@@ -24,7 +24,7 @@ When you connect to a computer (either a Windows client or Windows Server) throu
 The next time you connect to this computer by using the Remote Desktop connection, you must type the new port. If you're using a firewall, make sure to configure your firewall to permit connections to the new port number.
 
 
-You can always check the current port through PowerShell too with below commands:
+You can check the current port by running the following PowerShell command:
 
 ~~~powershell
 Get-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "PortNumber"
