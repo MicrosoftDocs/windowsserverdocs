@@ -88,7 +88,7 @@ Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}
 
 ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)
 
-Once that completes run `adprep/domainprep`
+Once that completes run `adprep /domainprep`
 
 > [!NOTE]
 > Prior to running the next step, ensure Windows Server is current by running Windows Update from Settings. Continue this process until no further updates are needed.
