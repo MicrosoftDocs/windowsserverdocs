@@ -44,7 +44,8 @@ PSProvider   : Microsoft.PowerShell.Core\Registry
 You can also change the RDP port by running the following PowerShell command. In this command, we'll specify the new RDP port as **3390**.
 
 
-Add New RDP Port in Registry:
+To add a new RDP Port to the registry:
+
 ```powershell
 Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "PortNumber" -Value 3390
 New-NetFirewallRule -DisplayName 'RDPPORTLatest' -Profile 'Public' -Direction Inbound -Action Allow -Protocol TCP -LocalPort 3390
