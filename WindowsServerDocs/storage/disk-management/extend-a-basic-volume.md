@@ -51,7 +51,7 @@ Here's how to extend a volume into empty space immediately after the volume on t
    Resize-Partition -DriveLetter $drive_letter -Size $size.SizeMax
    ```
 
-## See slso
+## See also
 
 - [Resize-Partition](/powershell/module/storage/resize-partition)
 - [Diskpart extend](../../administration/windows-commands/extend.md)
