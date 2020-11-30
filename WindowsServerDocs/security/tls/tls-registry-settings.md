@@ -5,7 +5,7 @@ ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic
-ms.date: 11/11/2020
+ms.date: 11/30/2020
 ---
 
 # Transport Layer Security (TLS) registry settings
