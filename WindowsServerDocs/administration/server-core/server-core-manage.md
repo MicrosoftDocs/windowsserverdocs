@@ -72,7 +72,7 @@ To use an MMC snap-in to manage a Server Core server that is *not* a domain memb
 To allow all MMC snap-ins to connect, run the following command:
 
 ```PowerShell
-Enable-NetFirewallRule -DisplayGroup "Remote Administration"
+Enable-NetFirewallRule -DisplayGroup "Windows Remote Management"
 ```
 
 To allow only specific MMC snap-ins to connect, run the following:
@@ -99,7 +99,7 @@ Where *rulegroup* is one of the following, depending on which snap-in you want t
 > Additionally, certain snap-ins require further configuration before they can connect through Windows Firewall:
 >
 > - Disk Management. You must first start the Virtual Disk Service (VDS) on the Server Core computer. You must also configure the Disk Management rules appropriately on the computer that is running the MMC snap-in.
-> - IP Security Monitor. You must first enable remote management of this snap-in. To do this, at a command prompt, type **Cscript \windows\system32\scregedit.wsf /im 1**
+> - IP Security Monitor. You must first enable remote management of this snap-in. To do this, at a command prompt, type **cscript c:\windows\system32\scregedit.wsf /im 1**
 > - Reliability and Performance. The snap-in does not require any further configuration, but when you use it to monitor a Server Core computer, you can only monitor performance data. Reliability data is not available.
 
 ## Managing with Remote Desktop Services
