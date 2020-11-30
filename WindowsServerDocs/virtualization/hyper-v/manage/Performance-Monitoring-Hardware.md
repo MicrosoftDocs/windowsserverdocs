@@ -6,7 +6,7 @@ author: ifeomaufondu-ms
 ms.author: ifufondu
 manager: chhuybre
 ms.topic: article
-ms.date: 11/11/2020
+ms.date: 11/30/2020
 ---
 
 # Enable Intel Performance Monitoring Hardware in a Hyper-V virtual machine
