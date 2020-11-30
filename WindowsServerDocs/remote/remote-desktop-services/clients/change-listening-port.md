@@ -28,7 +28,6 @@ You can check the current port by running the following PowerShell command:
 
 ```powershell
 Get-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "PortNumber"
-~~~
 
 For example:
 
