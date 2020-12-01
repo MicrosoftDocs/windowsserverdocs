@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 11/10/2020
+ms.date: 12/01/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -18,23 +18,23 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.1446        |1.2.945                   |
-|Insider    |1.2.1520        |1.2.945                   |
+|Public     |1.2.1521        |1.2.945                   |
+|Insider    |1.2.1521        |1.2.945                   |
 
-## Updates for version 1.2.1520 (Insider)
+## Updates for version 1.2.1521
 
-*Date published: 11/10/2020*
+*Date published: 12/01/2020*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
-- Created a list view for remote apps so that longer app names are readable.
-- Changed the icon that appears when an update for the client is available.
+- Added List view for remote resources so that longer app names are readable.
+- Added a notification icon that appears when an update for the client is available.
 
 ## Updates for version 1.2.1446
 
 *Date published: 10/27/2020*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Hq7C), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4HvgF), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Ho64)
 
 - Added the auto-update feature, which allows the client to install the latest updates automatically.
 - The client now distinguishes between different feeds in the Connection Center.
@@ -45,8 +45,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.1364
 
 *Date published: 09/22/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMK), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4G1t9), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4FTMI)
 
 - Fixed an issue where single sign-on (SSO) didn't work on Windows 7.
 - Fixed the connection failure that happened when calling or joining a Teams call while another app has an audio stream opened in exclusive mode and when media optimization for Teams is enabled.
