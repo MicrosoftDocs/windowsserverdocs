@@ -10,12 +10,11 @@ ms.localizationpriority: high
 
 # Azure Hybrid Benefit for Windows Server
 
->Applies To: Windows Server
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 ## Benefit description, rules, and use cases
 
-The Azure Hybrid Benefit for Windows Server allows you to save up to 40% on Windows Server VMs in Azure by utilizing your on-premises Windows Server licenses with Software Assurance.  With this benefit, customers need to only pay for the infrastructure costs of the virtual machine because the licensing for Windows Server is covered by the Software Assurance benefit.  The benefit is applicable to both Standard and Datacenter editions of Windows Server for the 2008R2, 2012, 2012R2 and 2016 releases.  This benefit is available across all regions and sovereign clouds.
-
+The Azure Hybrid Benefit for Windows Server allows you to save up to 40% on Windows Server VMs in Azure by utilizing your on-premises Windows Server licenses with Software Assurance.  With this benefit, customers need to only pay for the infrastructure costs of the virtual machine because the licensing for Windows Server is covered by the Software Assurance benefit.  The benefit is applicable to both Standard and Datacenter editions of Windows Server for the Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019 releases. This benefit is available across all regions and sovereign clouds.
 
 ![image 1](media/ahb01.png)
 
