@@ -1,6 +1,6 @@
 ---
 title: wecutil
-description: Reference article for wecutil, which lets you create and manage subscriptions to events that are forwarded from remote computers.
+description: Reference article for the wecutil command, which lets you create and manage subscriptions to events that are forwarded from remote computers.
 ms.topic: reference
 ms.assetid: 0c82a6cb-d652-429c-9c3d-0f568c78d54b
 ms.author: lizross
@@ -10,22 +10,12 @@ manager: mtillman
 
 # wecutil
 
-
-
 Enables you to create and manage subscriptions to events that are forwarded from remote computers. The remote computer must support the WS-Management protocol.
-
 
 ## Syntax
 
 ```
-wecutil  [{es | enum-subscription}]
-[{gs | get-subscription} <Subid> [/f:<Format>] [/uni:<Unicode>]]
-[{gr | get-subscriptionruntimestatus} <Subid> [<Eventsource> …]]
-[{ss | set-subscription} [<Subid> [/e:[<Subenabled>]] [/esa:<Address>] [/ese:[<Srcenabled>]] [/aes] [/res] [/un:<Username>] [/up:<Password>] [/d:<Desc>] [/uri:<Uri>] [/cm:<Configmode>] [/ex:<Expires>] [/q:<Query>] [/dia:<Dialect>] [/tn:<Transportname>] [/tp:<Transportport>] [/dm:<Deliverymode>] [/dmi:<Deliverymax>] [/dmlt:<Deliverytime>] [/hi:<Heartbeat>] [/cf:<Content>] [/l:<Locale>] [/ree:[<Readexist>]] [/lf:<Logfile>] [/pn:<Publishername>] [/essp:<Enableport>] [/hn:<Hostname>] [/ct:<Type>]] [/c:<Configfile> [/cun:<Username> /cup:<Password>]]]
-[{cs | create-subscription} <Configfile> [/cun:<Username> /cup:<Password>]]
-[{ds | delete-subscription} <Subid>]
-[{rs | retry-subscription} <Subid> [<Eventsource>…]]
-[{qc | quick-config} [/q:[<Quiet>]]].
+wecutil  [{es | enum-subscription}] [{gs | get-subscription} <Subid> [/f:<Format>] [/uni:<Unicode>]] [{gr | get-subscriptionruntimestatus} <Subid> [<Eventsource> …]] [{ss | set-subscription} [<Subid> [/e:[<Subenabled>]] [/esa:<Address>] [/ese:[<Srcenabled>]] [/aes] [/res] [/un:<Username>] [/up:<Password>] [/d:<Desc>] [/uri:<Uri>] [/cm:<Configmode>] [/ex:<Expires>] [/q:<Query>] [/dia:<Dialect>] [/tn:<Transportname>] [/tp:<Transportport>] [/dm:<Deliverymode>] [/dmi:<Deliverymax>] [/dmlt:<Deliverytime>] [/hi:<Heartbeat>] [/cf:<Content>] [/l:<Locale>] [/ree:[<Readexist>]] [/lf:<Logfile>] [/pn:<Publishername>] [/essp:<Enableport>] [/hn:<Hostname>] [/ct:<Type>]] [/c:<Configfile> [/cun:<Username> /cup:<Password>]]] [{cs | create-subscription} <Configfile> [/cun:<Username> /cup:<Password>]] [{ds | delete-subscription} <Subid>] [{rs | retry-subscription} <Subid> [<Eventsource>…]] [{qc | quick-config} [/q:[<quiet>]]]
 ```
 
 ### Parameters
