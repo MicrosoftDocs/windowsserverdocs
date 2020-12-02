@@ -12,7 +12,7 @@ ms.topic: article
 
 
 # The Role of the AD FS Configuration Database
-The AD FS configuration database stores all the configuration data that represents a single instance of Active Directory Federation Services \(AD FS\) \(that is, the Federation Service\). The AD FS configuration database defines the set of parameters that a Federation Service requires to identify partners, certificates, attribute stores, claims, and various data about these associated entities. You can store this configuration data in either a Microsoft SQL Server&reg; database or the Windows Internal Database \(WID\) feature that is included with Windows Server 2012 or higher 
+The AD FS configuration database stores all the configuration data that represents a single instance of Active Directory Federation Services \(AD FS\) \(that is, the Federation Service\). The AD FS configuration database defines the set of parameters that a Federation Service requires to identify partners, certificates, attribute stores, claims, and various data about these associated entities. You can store this configuration data in either a Microsoft SQL Server&reg; database or the Windows Internal Database \(WID\) feature that is included with Windows Server 2012 or higher.
 
 > [!NOTE]
 > The entire contents of the AD FS configuration database can be stored either in an instance of WID or in an instance of the SQL database, but not both. This means that you cannot have some federation servers using WID and others using a SQL Server database for the same instance of the AD FS configuration database.
@@ -135,4 +135,3 @@ The term *token replay* refers to the act by which a browser client in an accoun
 AD FS provides a feature referred to as *token replay detection* by which multiple token requests using the same token can be detected and then discarded. When this feature is enabled, token replay detection protects the integrity of authentication requests in both the WS\-Federation passive profile and the SAML WebSSO profile by making sure that the same token is never used more than once. This feature should be enabled in situations where security is a very high concern such as when using kiosks.
 
 In the kiosk example, a user can log off of all Web sites and later a malicious user can attempt to use the browser history in order to resubmit the federated authentication page that was loaded by the previous user. This feature mitigates this concern by storing additional information about each successful authentication made by an account partner organization in order to detect subsequent replays of the token and prevent multiple authentication attempts from succeeding.
-
