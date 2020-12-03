@@ -15,7 +15,7 @@ We're often asked how the different Remote Desktop clients compare to each other
 
 ## Client features
 
-The following table compares the features each client has.
+The following table compares the features of each client.
 
 |Feature|Desktop|10X|Mac|iOS|Android|HTML5|Description|
 |---|---|---|---|---|---|---|---|
