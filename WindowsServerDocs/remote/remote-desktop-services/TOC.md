@@ -95,7 +95,8 @@
 #### [Grant access to your PC from outside your network](clients/remote-desktop-allow-outside-access.md)
 #### [Change the RD listening port on your PC](clients/change-listening-port.md)
 ### Advanced information
-#### [Compare the clients](clients/remote-desktop-app-compare.md)
+#### [Compare the clients: redirections](clients/remote-desktop-app-compare.md)
+#### [Compare the clients: features](clients/remote-desktop-features.md)
 #### [Supported Remote Desktop RDP file settings](clients/rdp-files.md)
 #### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
 #### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)

@@ -1,6 +1,6 @@
 ---
 title: Remote Desktop - feature comparison
-description: Compare the features of different Remote Desktop clients.
+description: earn how the different RD apps compare when it comes to features.
 ms.topic: article
 author: heidilohr
 manager: lizross
@@ -13,6 +13,10 @@ ms.localizationpriority: medium
 
 We're often asked how the different Remote Desktop clients compare to each other. The following table lists the features currently available in each of our clients.
 
+## Client features
+
+The following table compares the features each client has.
+
 |Feature|Desktop|10X|Mac|iOS|Android|HTML5|Description|
 |---|---|---|---|---|---|---|---|
 | Remote Desktop | X | X | X | X | X | X | Desktop of a remote computer presented in a full screen or windowed mode. |
@@ -24,6 +28,8 @@ We're often asked how the different Remote Desktop clients compare to each other
 | Multi-factor authentication | X | X | X | X | X | X | Supports multi-factor authentication for remote connections. |
 | SSO with ADFS | X ||||| X | Supports Single Sign-On (SSO) used with Active Directory Federeation Services (ADFS). |
 | Teams optimization for Windows Virtual Desktop | X |||||| Media optimizations for Microsoft Teams to provide high quality calls and screen sharing experiences. Learn more at [Use Microsoft Teams on Windows Virtual Desktop](/virtual-desktop/teams-on-wvd). |
+
+## Other resources
 
 If you're looking for information about device redirection, check out [Device redirection](remote-desktop-app-compare.md).
 
