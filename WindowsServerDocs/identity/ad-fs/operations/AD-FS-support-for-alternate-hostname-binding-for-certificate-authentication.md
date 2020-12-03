@@ -25,7 +25,7 @@ There are two ways that you can add the alternate host name binding for certific
 Likewise, once AD FS in Windows Server 2016 has been deployed you can use the PowerShell cmdlet: Set-AdfsAlternateTlsClientBinding.
 
 ```powershell
-Set-AdfsAlternateTlsClientBinding -Member DC1.contoso.com -Thumbprint '<thumbprint of cert>'
+Set-AdfsAlternateTlsClientBinding -Member ADFS1.contoso.com -Thumbprint '<thumbprint of cert>'
 ```
 
 When prompted, click Yes to confirm.  And that should  be it.
