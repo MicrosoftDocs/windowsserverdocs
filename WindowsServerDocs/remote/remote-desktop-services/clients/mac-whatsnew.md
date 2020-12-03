@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 11/06/2020
+ms.date: 12/02/2020
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -13,6 +13,24 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+
+## Updates for version 10.5.0
+
+*Date published: 12/02/2020*
+
+It's time for another update. Thanks to everyone who reported bugs and worked with us to diagnose and fix issues. In this version we made the following changes:
+
+- You can now edit the display, device, and folder redirection settings of published PC connections.
+- Remote app windows now shrink to the dock when minimized.
+- Added a Connection Information dialog that displays the current bandwidth and round-trip time.
+- Added support for RD Gateway consent and admin messages.
+- Fixed an issue where an RDP file specifying a gatewayusagemethod value of 0 or 4 was incorrectly imported.
+- The Edit Workspace sheet now shows the exact time at which the workspace was last updated.
+- Removed trace spew that was output when using the *--script* parameter.
+- Addressed an issue where the client would return a 0x30000066 error when connecting using an RD Gateway server.
+- Fixed an issue users would be repeatedly prompted for credentials if Extended Protection for Authentication was set on the server.
+- Addressed reliability issues that users identified through crash reporting.
+- Addressed keyboard and VoiceOver-related accessibility bugs.
 
 ## Updates for version 10.4.1
 
