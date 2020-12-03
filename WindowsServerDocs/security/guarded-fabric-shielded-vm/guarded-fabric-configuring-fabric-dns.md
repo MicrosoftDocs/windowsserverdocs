@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Configure the fabric DNS for guarded hosts"
 title: Configure the fabric DNS for guarded hosts
 ms.topic: article
 ms.assetid: 074b6d09-f16e-49bf-b88a-377139d35067

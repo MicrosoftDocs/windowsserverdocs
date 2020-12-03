@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Procedures"
 title: AD Forest Recovery - Procedures
 ms.author: daveba
 author: iainfoulds

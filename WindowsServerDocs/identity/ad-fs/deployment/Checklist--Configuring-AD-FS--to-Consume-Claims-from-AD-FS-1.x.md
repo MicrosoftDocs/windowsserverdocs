@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Checklist: Configuring AD FS  to Consume Claims from AD FS 1.x"
 ms.assetid: e7f9e518-2d5d-4a0d-9147-34e1304f42ac
 title: Checklist - Configuring Legacy AD FS  to Consume Claims from AD FS 1.x
 author: billmath

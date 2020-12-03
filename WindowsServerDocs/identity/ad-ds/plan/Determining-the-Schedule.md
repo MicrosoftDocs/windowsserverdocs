@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Determining the Schedule"
 ms.assetid: 28ecaf5c-9131-406c-b211-a230162e462e
 title: Determining the Schedule
 author: iainfoulds

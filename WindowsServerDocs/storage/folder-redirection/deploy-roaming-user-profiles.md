@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Deploying Roaming User Profiles"
 title: Deploying Roaming User Profiles
 TOCTitle: Deploying Roaming User Profiles
 ms.topic: article

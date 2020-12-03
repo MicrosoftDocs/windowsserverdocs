@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port"
 title: Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port
 author: Deland-Han
 ms.author: delhan

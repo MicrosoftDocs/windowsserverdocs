@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Legacy AD FS Federation Server Farm Using SQL Server"
 ms.assetid: e983d2ab-4153-41e7-b243-12cf7d71a552
 title: Federation Server Farm Using SQL Server
 author: billmath

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Scenario: Implement Retention of Information on File Servers"
 ms.assetid: 81c55015-82e5-4ba1-b15e-cc7b49af28fc
 title: Scenario Implement Retention of Information on File Servers
 author: billmath

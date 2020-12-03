@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Update password customization"
 ms.assetid: 7e804590-6d6c-4cca-ac14-02d4dff06cec
 title: Update password customization
 author: billmath

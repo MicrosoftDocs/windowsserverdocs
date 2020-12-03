@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Appendix A: Reviewing AD FS Requirements"
 ms.assetid: 39ecc468-77c5-4938-827e-48ce498a25ad
 title: Appendix A - Reviewing AD FS Requirements
 author: billmath

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Install trusted TPM root certificates"
 title: Install trusted TPM root certificates
 ms.topic: article
 manager: dongill

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Recovering a single domain in a multidomain forest"
 title: AD Forest Recovery - Recovering a single domain in a multidomain forest
 ms.author: daveba
 author: iainfoulds

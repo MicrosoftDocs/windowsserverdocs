@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Troubleshooting Using the Guarded Fabric Diagnostic Tool"
 title: Troubleshooting Using the Guarded Fabric Diagnostic Tool
 ms.topic: article
 ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22

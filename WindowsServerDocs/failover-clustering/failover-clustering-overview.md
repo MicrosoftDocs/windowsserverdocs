@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Failover Clustering in Windows Server"
 ms.assetid: c9844427-27cf-4d76-b5bb-e06368b092f7
 title: Failover Clustering
 ms.topic: landing-page

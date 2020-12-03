@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD FS support for alternate hostname binding for certificate authentication"
 ms.assetid: 4b71b212-7e5b-4fad-81ee-75b3d1f27869
 title: AD FS support for alternate hostname binding for certificate authentication
 author: billmath

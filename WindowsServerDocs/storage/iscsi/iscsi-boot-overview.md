@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: iSCSI target boot overview"
 ms.assetid: 134840f3-c416-4a10-ad73-ef7855b206f7
 title: iSCSI target boot overview
 ms.topic: article

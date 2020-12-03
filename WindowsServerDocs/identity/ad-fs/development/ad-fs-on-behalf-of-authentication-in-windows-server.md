@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016 or later"
 ms.assetid: 5052f13c-ff35-471d-bff5-00b5dd24f8aa
 title: Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016 or later
 author: billmath

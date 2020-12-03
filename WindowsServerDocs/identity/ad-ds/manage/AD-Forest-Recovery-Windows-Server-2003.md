@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Windows Server 2003 Recovery"
 title: AD Forest Recovery - Windows Server 2003 Recovery
 author: iainfoulds
 ms.author: daveba

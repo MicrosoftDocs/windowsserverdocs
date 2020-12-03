@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: iSCSI Target Server Scalability Limits"
 title: iSCSI Target Server Scalability Limits
 TOCTitle: iSCSI Target Server Scalability Limits
 ms.topic: article

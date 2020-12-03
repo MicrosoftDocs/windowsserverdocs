@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Resources to verify replication is working"
 title: AD Forest Recovery - Verify Replication
 ms.author: daveba
 author: iainfoulds

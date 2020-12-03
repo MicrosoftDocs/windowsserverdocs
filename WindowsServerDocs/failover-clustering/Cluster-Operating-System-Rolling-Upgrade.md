@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Cluster operating system rolling upgrade"
 title: Cluster Operating System Rolling Upgrade
 ms.topic: get-started-article
 ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5

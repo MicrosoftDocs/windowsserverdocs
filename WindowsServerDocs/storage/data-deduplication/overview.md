@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Data Deduplication Overview"
 ms.assetid: 4b844404-36ba-4154-aa5d-237a3dd644be
 title: Data Deduplication Overview
 ms.topic: article

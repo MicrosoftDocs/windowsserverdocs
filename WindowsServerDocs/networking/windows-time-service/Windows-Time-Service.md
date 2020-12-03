@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Windows Time Service"
 ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
 title: Windows Time Service
 author: dahavey

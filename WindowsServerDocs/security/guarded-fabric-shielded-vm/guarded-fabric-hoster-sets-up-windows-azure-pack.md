@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Shielded VMs - Hosting service provider sets up Windows Azure Pack"
 title: Shielded VMs - Hosting service provider sets up Windows Azure Pack
 ms.topic: article
 ms.assetid: d528c689-58b0-425c-9740-25e2553ed689

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Nested resiliency for Storage Spaces Direct"
 title: Nested resiliency for Storage Spaces Direct
 ms.author: jgerend
 manager: dansimpspaces

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Shielded VMs for tenants - Deploying a shielded VM by using Virtual Machine Manager"
 title: Shielded VMs for tenants - Deploying a shielded VM by using Virtual Machine Manager
 ms.topic: article
 ms.assetid: 39d5e29c-835d-490a-b74d-798a0dcb3f39

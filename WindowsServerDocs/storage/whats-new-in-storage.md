@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: What's new in Storage in Windows Server"
 ms.assetid: 0f2a7f7b-aca8-4e5d-ad67-4258e88bc52f
 title: What's new in storage in Windows Server
 ms.author: jgerend
