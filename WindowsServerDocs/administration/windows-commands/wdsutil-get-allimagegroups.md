@@ -1,6 +1,6 @@
 ---
 title: wdsutil get-allimagegroups
-description: Reference article for wdsutil get-allimagegroups, which retrieves information about all image groups on a server and all images in those image groups.
+description: Reference article for the wdsutil get-allimagegroups command, which retrieves information about all image groups on a server and all images in those image groups.
 ms.topic: reference
 ms.assetid: 2ca06533-bcf5-4590-ac8e-263d6c9874f8
 ms.author: lizross
@@ -16,23 +16,36 @@ ms.date: 10/16/2017
 Retrieves information about all image groups on a server and all images in those image groups.
 
 ## Syntax
+
 ```
-wdsutil [Options] /Get-AllImageGroups [/Server:<Server name>] [/detailed]
+wdsutil [options] /get-allimagegroups [/server:<servername>] [/detailed]
 ```
+
 ### Parameters
-|Parameter|Description|
-|-------|--------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
-|[/detailed]|Returns the image metadata from each image. If this parameter is not used, the default behavior is to return only the image name, description, and file name for each image.|
+
+| Parameter | Description |
+|--|--|
+| `[/server:<servername>]` | Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used. |
+| [/detailed] | Returns the image metadata from each image. If this parameter isn't used, the default behavior is to return only the image name, description, and file name for each image. |
+
 ## Examples
-To view information about the image groups, type one of the following:
+
+To view information about the image groups, type either:
+
 ```
-wdsutil /Get-AllImageGroups
-wdsutil /verbose /Get-AllImageGroups /Server:MyWDSServer /detailed
+wdsutil /get-allimagegroups
 ```
+
+```
+wdsutil /verbose /get-allimagegroups /server:MyWDSServer /detailed
+```
+
 ## Additional References
+
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
 - [wdsutil add-imagegroup command](wdsutil-add-imagegroup.md)
-- [wdsutil get-imagegroup command](wdsutil-get-imagegroup.md)
+
 - [wdsutil remove-imagegroup command](wdsutil-remove-imagegroup.md)
+
 - [wdsutil set-imagegroup command](wdsutil-set-imagegroup.md)

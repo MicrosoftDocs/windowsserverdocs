@@ -8,12 +8,12 @@ ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/10/2018
 ---
+
 # Requirements for Deploying Network Controller
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Prepare your datacenter for Network Controller deployment, which requires one or more computers or VMs and one computer or VM. Before you can deploy Network Controller, you must configure the security groups, log file locations (if needed), and dynamic DNS registration.
-
 
 ## Network Controller requirements
 
@@ -22,7 +22,6 @@ Network Controller deployment requires one or more computers or VMs that serve a
 - All VMs and computers planned as Network Controller nodes must be running Windows Server 2016 Datacenter edition.
 - Any computer or virtual machine (VM) upon which you install Network Controller must be running the Datacenter edition of Windows Server 2016.
 - The management client computer or VM for Network Controller must be running Windows 10.
-
 
 ## Configuration requirements
 
@@ -35,30 +34,26 @@ The first thing you want to do is create two security groups for Kerberos authen
 You create groups for users who have permission to:
 
 1. Configure Network Controller<p>You can name this group Network Controller Admins, for example.
-2.  Configure and manage the network by using Network Controller<p>You can name this group Network Controller Users, for example. Use Representational State Transfer (REST) to configure and manage Network Controller.
+2. Configure and manage the network by using Network Controller<p>You can name this group Network Controller Users, for example. Use Representational State Transfer (REST) to configure and manage Network Controller.
 
->[!NOTE]
->All of the users you add must be members of the Domain Users group in Active Directory Users and Computers.
+> [!NOTE]
+> All of the users you add must be members of the Domain Users group in Active Directory Users and Computers.
 
 ### Step 2. Configure log file locations if needed
 
 The next thing you want to do is configure the file locations to store Network Controller debug logs either on the Network Controller computer or VM or on a remote file share.
 
->[!NOTE]
->If you store the logs in a remote file share, ensure that the share is accessible from the Network Controller.
-
+> [!NOTE]
+> If you store the logs in a remote file share, ensure that the share is accessible from the Network Controller.
 
 ### Step 3. Configure dynamic DNS registration for Network Controller
 
 Finally, the next thing you want to do is deploy Network Controller cluster nodes on the same subnet or different subnets.
 
-
-|         If...         |                                                                                                                                                         Then...                                                                                                                                                         |
-|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  On the same subnet,  |                                                                                                                                You must provide the Network Controller REST IP address.                                                                                                                                 |
+| If... | Then... |
+|--|--|
+| On the same subnet, | You must provide the Network Controller REST IP address. |
 | On different subnets, | You must provide the Network Controller REST DNS name, which you create during the deployment process. You must also do the following:<ul><li>Configure DNS dynamic updates for the Network Controller DNS name on the DNS server.</li><li>Restrict the DNS dynamic updates to Network Controller nodes only.</li></ul> |
-
----
 
 > [!NOTE]
 > Membership in **Domain Admins**, or equivalent, is the minimum required to perform these procedures.
@@ -104,29 +99,33 @@ If Network Controller is using Kerberos-based authentication for communication w
 
 The setup is highly available with three Network Controller nodes  configured on virtual machines. Also shown is two tenants with Tenant 2's virtual network broken into two virtual subnets to simulate a web tier and a database tier.
 
-![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-NC-Planning.png)
+![Network Controller deployment](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-NC-Planning.png)
 
 ### Network controller and software load balancer deployment
 
-For high availablity, there are two or more SLB/MUX nodes.
+For high availability, there are two or more SLB/MUX nodes.
 
-![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-SLB-Deployment.png)
+![Network controller and software load balancer deployment](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-SLB-Deployment.png)
 
 ### Network Controller, Software Load Balancer, and RAS Gateway deployment
 
 There are three gateway virtual machines; two are active, and one is redundant.
 
-![SDN NC Planning](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-GW-Deployment.png)
+![Network Controller, Software Load Balancer, and RAS Gateway deployment](../../media/Plan-a-Software-Defined-Network-Infrastructure/SDN-GW-Deployment.png)
 
->[!IMPORTANT]
->If you deploy using VMM, ensure your infrastructure virtual machines (VMM Server, AD/DNS, SQL Server, etc.) are not hosted on any of the four hosts shown in the diagrams.
-
+> [!IMPORTANT]
+> If you deploy using VMM, ensure your infrastructure virtual machines (VMM Server, AD/DNS, SQL Server, etc.) are not hosted on any of the four hosts shown in the diagrams.
 
 ## Next steps
+
 [Plan a Software Defined Network Infrastructure](./plan-a-software-defined-network-infrastructure.md).
 
 ## Related topics
+
 - [Network Controller](../technologies/network-controller/Network-Controller.md)
+
 - [Network Controller High Availability](../technologies/network-controller/network-controller-high-availability.md)
+
 - [Deploy Network Controller using Windows PowerShell](../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)
+
 - [Install the Network Controller server role using Server Manager](../technologies/network-controller/Install-the-Network-Controller-server-role-using-Server-Manager.md)
