@@ -391,7 +391,9 @@ Where:
 
 Gets a certificate revocation list (CRL).
 
+```
 certutil [options] -getcrl outfile [index] [delta]
+```
 
 Where:
 
@@ -1584,7 +1586,9 @@ Where:
 
 Deletes a Policy Server application and application pool, if necessary. This command does not remove binaries or packages.
 
+```
 certutil [options] -deletePolicyServer kerberos | username | clientcertificate [keybasedrenewal]
+```
 
 Where:
 
