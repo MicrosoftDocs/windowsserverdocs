@@ -88,7 +88,7 @@ Here's how to remove SMBv1 in Windows 10, Windows 8.1, Windows Server 2019, Wind
 - Detect:
 
   ```PowerShell
-  Get-WindowsOptionalFeature –Online –FeatureName SMB1Protocol
+  Get-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
 
 - Disable:
@@ -114,13 +114,13 @@ Here's how to remove SMBv1 in Windows 10, Windows 8.1, Windows Server 2019, Wind
 - Disable:
 
   ```PowerShell
-  Set-SmbServerConfiguration –EnableSMB2Protocol $false
+  Set-SmbServerConfiguration -EnableSMB2Protocol $false
   ```
 
 - Enable:
 
   ```PowerShell
-  Set-SmbServerConfiguration –EnableSMB2Protocol $true
+  Set-SmbServerConfiguration -EnableSMB2Protocol $true
   ```
 
 #### Windows 8.1 and Windows 10: Add or Remove Programs method
@@ -200,13 +200,13 @@ Default configuration = Enabled (No registry key is created), so no SMB1 value w
 Disable:
 
 ```PowerShell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 0 –Force
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 0 -Force
 ```
 
 Enable:
 
 ```PowerShell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 1 –Force
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 1 -Force
 ```
 
 **Note** You must restart the computer after you make these changes.
@@ -222,13 +222,13 @@ Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
 Disable:
 
 ```PowerShell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 0 –Force
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 0 -Force
 ```
 
 Enable:
 
 ```PowerShell
-Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 1 –Force
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 1 -Force
 ```
 
 > [!NOTE]
@@ -428,13 +428,13 @@ To determine which clients are attempting to connect to an SMB server with SMBv1
 - Enable:
 
   ```PowerShell
-  Set-SmbServerConfiguration –AuditSmb1Access $true
+  Set-SmbServerConfiguration -AuditSmb1Access $true
   ```
 
 - Disable:
 
   ```PowerShell
-  Set-SmbServerConfiguration –AuditSmb1Access $false
+  Set-SmbServerConfiguration -AuditSmb1Access $false
   ```
 
 - Detect:
