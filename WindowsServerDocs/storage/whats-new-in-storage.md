@@ -75,7 +75,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Two-server clusters using a USB flash drive as a witness**
 
-    Use a low-cost USB flash drive plugged into your router to act as a witness in two-server clusters. If a server goes down and then back up, the USB drive cluster knows which server has the most up-to-date data. For more info, see the [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
+    Use a low-cost USB flash drive plugged into your router to act as a witness in two-server clusters. If a server goes down and then back up, the USB drive cluster knows which server has the most up-to-date data. For more info, see the [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/here-s-what-you-missed-8211-five-big-announcements-for-storage/ba-p/428257) and [documentation on how to deploy a file share witness](../failover-clustering/file-share-witness.md#creating-a-file-share-witness-on-a-router-with-a-usb-device).
 
 - **Windows Admin Center**
 
