@@ -22,7 +22,8 @@ The following table compares the features of each client.
 | Remote Desktop | X | X | X | X | X | X | Desktop of a remote computer presented in a full screen or windowed mode. |
 | Integrated remote apps (RAIL) | X || X |||| Individual remote apps integrated into the local desktop as if they are running locally. |
 | Immersive remote apps | X | X || X | X | X | Individual remote apps presented in a window or maximized to a full screen. |
-| Dynamic resolution | X | X | X ||| X | Lets the user run Remote Desktop or remote apps on all local monitors. |
+| Multimonitor | X | | X | | | | Lets the user run Remote Desktop or remote apps on all local monitors. |
+| Dynamic resolution | X | X | X ||| X | Resolution and orientation of local monitors is dynamically reflected in the remote session. If the client is running in windowed mode, the remote desktop is resized dynamically to the size of the client window. |
 | Smart sizing | X | X | X |||| Remote Desktop in Windowed mode is dynamically scaled to the window's size. |
 | Localization | X | X | X | X | English only. | X | User interface is available in multiple languages. |
 | Multi-factor authentication | X | X | X | X | X | X | Supports multi-factor authentication for remote connections. |
@@ -31,6 +32,6 @@ The following table compares the features of each client.
 
 ## Other resources
 
-If you're looking for information about device redirection, check out [Device redirection](remote-desktop-app-compare.md).
+If you're looking for information about device redirection, check out [Compare the clients: redirection](remote-desktop-app-compare.md).
 
 If you're looking for information about graphics and codec support, see [insert article here]().

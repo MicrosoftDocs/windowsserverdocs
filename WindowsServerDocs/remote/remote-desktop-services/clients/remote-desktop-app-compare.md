@@ -57,3 +57,7 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 | Speakers            | X                         | X                           | X             | X       | X           | X                               | X (except IE) |
 
 *For printer redirection - the macOS app supports the Publisher Imagesetter printer driver by default. They do not support redirecting native printer drivers.
+
+## Other resources
+
+If you're looking for feature comparisons, check out [Compare the clients: features](remote-desktop-features.md).
