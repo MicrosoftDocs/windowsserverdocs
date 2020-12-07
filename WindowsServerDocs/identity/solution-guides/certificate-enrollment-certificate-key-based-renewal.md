@@ -78,8 +78,7 @@ You can duplicate an existing computer template, and configure the following set
 4. Publish the new template on the CA.
 
 > [!Note]
-> Make sure the compatibility settings on the template is set to **Windows Server 2012 R2** as there is a known issue in which the templates are not visible if the compatibility is set to Windows Server 2016 or later version. For more informaiton, see [Cannot select Windows Server 2016 CA-compatible certificate templates from Windows Server 2016 or later-based CAs or CEP servers
-](https://support.microsoft.com/en-in/help/4508802/cannot-select-certificate-templates-in-windows-server-2016).
+> Make sure the compatibility settings on the template is set to **Windows Server 2012 R2** as there is a known issue in which the templates are not visible if the compatibility is set to Windows Server 2016 or later version. For more informaiton, see [Cannot select Windows Server 2016 CA-compatible certificate templates from Windows Server 2016 or later-based CAs or CEP servers](https://support.microsoft.com/en-in/help/4508802/cannot-select-certificate-templates-in-windows-server-2016).
 
 
 #### Configure the CEPCES01 instance
