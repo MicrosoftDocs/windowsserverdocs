@@ -94,7 +94,7 @@ As an initial security measure for those users with Azure Active Directory and t
 
 ### 4. Identity attack detection
 
-[Microsoft Defender for Identity](https://docs.microsoft.com/en-us/defender-for-identity/what-is) is a cloud-based security solution that identifies, detects, and helps you investigate advanced threats, compromised identities, and malicious insider actions directed at your on-premises Active Directory environment.
+[Microsoft Defender for Identity](https://docs.microsoft.com/defender-for-identity/what-is) is a cloud-based security solution that identifies, detects, and helps you investigate advanced threats, compromised identities, and malicious insider actions directed at your on-premises Active Directory environment.
 
 ## Phase 2: Significant incremental improvements
 
