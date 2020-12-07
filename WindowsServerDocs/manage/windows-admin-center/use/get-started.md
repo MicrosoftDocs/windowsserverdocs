@@ -37,7 +37,7 @@ In Microsoft Edge, when you are prompted with this dialog:
 
 3. Make sure **Always Allow Access** is selected and click **Allow**
 
-    !Credential required dialog box](../media/launch-cert-3.png)
+    ![Credential required dialog box](../media/launch-cert-3.png)
 
 ## Connecting to managed nodes and clusters
 

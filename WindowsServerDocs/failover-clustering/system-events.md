@@ -2036,5 +2036,4 @@ completing successfully.
 
 ## Additional References
 
--   [Detailed event info for Failover Clustering components in Windows Server
-    2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753362(v%3dws.10))
+-   [Detailed event info for Failover Clustering components in Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753362(v%3dws.10))

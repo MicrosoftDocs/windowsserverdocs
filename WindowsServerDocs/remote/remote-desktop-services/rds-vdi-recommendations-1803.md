@@ -202,8 +202,7 @@ Some decisions might be based on the specifics of the environment, for example:
 The following settings specifically do not counter or conflict with any setting that has anything to do with security. These settings were chosen to remove settings that might not be applicable to VDI environments.
 
 > [!NOTE]
-> In this table of group policy settings, items marked with an asterisk are from the [Windows Restricted Traffic Limited Functionality
-Baseline](https://go.microsoft.com/fwlink/?linkid=828887).
+> In this table of group policy settings, items marked with an asterisk are from the [Windows Restricted Traffic Limited Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887).
 
 | Policy Setting | Item | Sub-item | Possible setting and comments |
 |--|--|--|--|

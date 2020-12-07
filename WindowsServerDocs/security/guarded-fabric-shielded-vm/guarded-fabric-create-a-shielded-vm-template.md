@@ -133,8 +133,7 @@ After the template is created, tenants can use it to create new virtual machines
 
 ## Prepare and protect the VHDX using PowerShell
 
-As an alternative to running the Template Disk Wizard, you can copy your template disk and certificate to a computer running RSAT and run [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps
-) to initiate the signing process.
+As an alternative to running the Template Disk Wizard, you can copy your template disk and certificate to a computer running RSAT and run [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) to initiate the signing process.
 The following example uses the name and version information specified by the _TemplateName_ and _Version_ parameters.
 The VHDX you provide to the `-Path` parameter will be overwritten with the updated template disk, so be sure to make a copy before running the command.
 
