@@ -19,8 +19,7 @@ The process of moving to Windows Server 2016 might vary greatly depending on whi
 
 - **Installation** is the basic concept of getting the new operating system on your hardware. Specifically, a **clean installation** requires deleting the previous operating system. For information about installing Windows Server 2016, see [System Requirements and Installation Information for Windows Server 2016](./system-requirements.md). For information about installing other versions of Windows Server, see [Windows Server Installation and Upgrade](./installation-and-upgrade.md).
 
-- **Migration** means moving from your existing operating system to Windows Server 2016 by transferring to a different set of hardware or virtual machine. Migration, which might vary considerably depending on the server roles you have installed, is discussed in detail at [Windows Server Installation, Upgrade,
-and Migration](./installation-and-upgrade.md).
+- **Migration** means moving from your existing operating system to Windows Server 2016 by transferring to a different set of hardware or virtual machine. Migration, which might vary considerably depending on the server roles you have installed, is discussed in detail at [Windows Server Installation, Upgrade, and Migration](./installation-and-upgrade.md).
 
 - **Cluster OS Rolling Upgrade** is a new feature in Windows Server 2016 that enables an administrator to upgrade the operating system of the cluster nodes from Windows Server 2012 R2 to Windows Server 2016 without stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid downtime which could impact Service Level Agreements. This new feature is discussed in more detail at [Cluster operating system rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).
 

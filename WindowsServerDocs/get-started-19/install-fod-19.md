@@ -15,8 +15,7 @@ ms.date: 06/07/2019
 
 The **Server Core App Compatibility Feature on Demand** is an optional feature package that can be added to Windows Server 2019 Server Core installations, or Windows Server Semi-Annual Channel, at any time.
 
-For more information on Features on Demand (FOD), see [Features On
-Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
+For more information on Features on Demand (FOD), see [Features On Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
 
 ## Why install the App Compatibility FOD?
 
