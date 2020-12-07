@@ -131,7 +131,7 @@ Enable Microsoft Azure AD Identity Protection to report on users with leaked cre
 
 ### 6. Microsoft Defender for Identity Lateral Movement Paths
 
-Ensure that privileged access account holders are using their PAW for administration only, thereby minimizing the risk of compromised non-privileged accounts gaining access to a privileged account via credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. [Microsoft Defender for Identity Lateral Movement Paths (LMPs)](https://docs.microsoft.com/en-us/defender-for-identity/use-case-lateral-movement-path) provide easy-to-understand reporting to identify where privileged accounts may be open to compromise.
+Ensure that privileged access account holders are using their PAW for administration only, thereby minimizing the risk of compromised non-privileged accounts gaining access to a privileged account via credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. [Microsoft Defender for Identity Lateral Movement Paths (LMPs)](https://docs.microsoft.com/defender-for-identity/use-case-lateral-movement-path) provide easy-to-understand reporting to identify where privileged accounts may be open to compromise.
 
 ## Phase 3: Security improvement and sustainment
 
