@@ -46,4 +46,4 @@ Enable-VMSwitchExtension -VMSwitchName External -Name Microsoft Windows Filterin
 ```
 
 ## See Also
-[Enable-VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension?view=win10-ps)
+[Enable-VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension)

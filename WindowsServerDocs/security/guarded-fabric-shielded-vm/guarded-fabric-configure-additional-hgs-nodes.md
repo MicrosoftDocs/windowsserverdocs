@@ -110,7 +110,7 @@ If you want to secure HGS endpoints with an SSL certificate, you must configure 
 SSL certificates *are not* replicated by HGS and do not need to use the same keys for every node (i.e. you can have different SSL certs for each node).
 
 When requesting an SSL cert, ensure the cluster fully qualified domain name (as shown in the output of `Get-HgsServer`) is either the subject common name of the cert, or included as a subject alternative DNS name.
-When you've obtained a certificate from your certificate authority, you can configure HGS to use it with [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver?view=win10-ps).
+When you've obtained a certificate from your certificate authority, you can configure HGS to use it with [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver).
 
 ```powershell
 $sslPassword = Read-Host -AsSecureString -Prompt "SSL Certificate Password"

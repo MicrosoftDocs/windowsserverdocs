@@ -644,7 +644,7 @@ A data type name can be any valid string. Here's a list of allowed SQL data type
 
 * varchar
 
-For more info about these SQL data types, see [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver15).
+For more info about these SQL data types, see [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).
 
 ### <a href="" id="bkmk-ui-svg"></a>Single value groups
 

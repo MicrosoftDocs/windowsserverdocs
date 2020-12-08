@@ -139,8 +139,8 @@ The following new Windows PowerShell cmdlets and parameters are introduced in Wi
 
 For more information, see the following Windows Server 2016 Windows PowerShell command reference topics.
 
-- [DnsServer Module](/powershell/module/dnsserver/?view=win10-ps)
-- [DnsClient Module](/powershell/module/dnsclient/?view=win10-ps)
+- [DnsServer Module](/powershell/module/dnsserver/)
+- [DnsClient Module](/powershell/module/dnsclient/)
 
 ## Additional References
 

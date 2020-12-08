@@ -72,4 +72,4 @@ Set-VMSwitch -Name vSwitchName -EnableSoftwareRsc $false
 ```PowerShell
 Set-VMSwitch -Name vSwitchName -EnableSoftwareRsc $True
 ```
-For more information, see [Set-VMSwitch](/powershell/module/hyper-v/set-vmswitch?view=win10-ps).
+For more information, see [Set-VMSwitch](/powershell/module/hyper-v/set-vmswitch).

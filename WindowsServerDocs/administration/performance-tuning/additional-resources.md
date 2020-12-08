@@ -94,7 +94,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [How to: Map TCP/IP Ports to NUMA Nodes](https://go.microsoft.com/fwlink/?LinkId=98293)
 
--   [ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql?view=sql-server-ver15)
+-   [ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql)
 
 
 ## Server Tuning Tools

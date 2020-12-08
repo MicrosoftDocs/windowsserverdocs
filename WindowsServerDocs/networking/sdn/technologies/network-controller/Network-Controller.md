@@ -22,7 +22,7 @@ Using Network Controller, you can automate the configuration of network infrastr
 > - [Deploy Network Controller using Windows PowerShell](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)
 > - [Install the Network Controller server role using Server Manager](Install-the-Network-Controller-server-role-using-Server-Manager.md)
 > - [Post-Deployment Steps for Network Controller](post-deploy-steps-nc.md)
-> - [Network Controller Cmdlets](/powershell/module/networkcontroller/?view=win10-ps)
+> - [Network Controller Cmdlets](/powershell/module/networkcontroller/)
 
 ## <a name="bkmk_overview"></a>Network Controller Overview
 
@@ -120,7 +120,7 @@ For more information on the RAS Gateway, see [RAS Gateway for SDN](../../../sdn/
 
 ## Network Controller Deployment Options
 
-To deploy Network Controller by using System Center Virtual Machine Manager \(VMM\), see [Set up an SDN Network Controller in the VMM fabric](/system-center/vmm/sdn-controller?view=sc-vmm-2019).
+To deploy Network Controller by using System Center Virtual Machine Manager \(VMM\), see [Set up an SDN Network Controller in the VMM fabric](/system-center/vmm/sdn-controller).
 
 To deploy Network Controller using scripts, see [Deploy a Software Defined Network Infrastructure Using Scripts](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md).
 

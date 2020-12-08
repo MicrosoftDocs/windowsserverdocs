@@ -28,7 +28,7 @@ Hyper-V handles all aspects of managing the checkpoint chains and merging the sh
 
 ## Create a VHD Set file from Windows PowerShell
 
-Use the [New-VHD](/powershell/module/hyper-v/new-vhd?view=win10-ps) cmdlet, with the file type .VHDS in the file path. This example creates a VHD Set file named base.vhds that is 10 Gigabytes in size.
+Use the [New-VHD](/powershell/module/hyper-v/new-vhd) cmdlet, with the file type .VHDS in the file path. This example creates a VHD Set file named base.vhds that is 10 Gigabytes in size.
 
 ``` PowerShell
 PS c:\>New-VHD -Path c:\base.vhds -SizeBytes 10GB
