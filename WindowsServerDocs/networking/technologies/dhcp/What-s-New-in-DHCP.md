@@ -23,6 +23,10 @@ The DHCP client in Windows 10 has been updated in the 10 May 2020 Update (also r
 
 Additionally, the traditional Client Vendor Name has been updated for some Windows-based devices. This value used to be simply MSFT 5.0. Some devices will now show up as MSFT 5.0 XBOX.
 
+## New DHCP Client-side features in the Windows 10 April 2018 Update
+
+The DHCP client in Windows 10 has been updated in the Windows April 2018 Update (also referred to as Windows 10, version 1803) to read in and apply option 119, the Domain Search Option, from the DHCP server that your system connects to. The Domain Search Option provides DNS suffixes for DNS lookups of short names. DHCP option 119 is specified in [RFC 3397](https://tools.ietf.org/html/rfc3397).
+
 ## DHCP Subnet Selection Options
 
 DHCP now supports option 82 \(sub-option 5\). You can use this option to allow DHCP proxy clients and relay agents to request an IP address for a specific subnet.
