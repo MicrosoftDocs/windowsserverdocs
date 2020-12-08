@@ -339,7 +339,7 @@ if dynamic memory is needed after uninstallation.
 
 See Also
 
--   [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
+-   [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware)
 
 -   [Supported Debian virtual machines on
     Hyper-V](Supported-Debian-virtual-machines-on-Hyper-V.md)

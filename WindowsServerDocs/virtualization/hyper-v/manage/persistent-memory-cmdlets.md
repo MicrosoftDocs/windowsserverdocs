@@ -15,7 +15,7 @@ This article provides system administrators and IT Pros with information about c
 
 ## Create a persistent memory device for a VM
 
-Use the **[New-VHD](/powershell/module/hyper-v/new-vhd?view=win10-ps)** cmdlet to create a persistent memory device for a VM. The device must be created on an existing NTFS DAX volume.  The new filename extension (.vhdpmem) is used to specify that the device is a persistent memory device. Only the fixed VHD file format is supported.
+Use the **[New-VHD](/powershell/module/hyper-v/new-vhd)** cmdlet to create a persistent memory device for a VM. The device must be created on an existing NTFS DAX volume.  The new filename extension (.vhdpmem) is used to specify that the device is a persistent memory device. Only the fixed VHD file format is supported.
 
 **Example:** `New-VHD d:\VMPMEMDevice1.vhdpmem -Fixed -SizeBytes 4GB`
 
@@ -33,7 +33,7 @@ Add-VMPmemController ProductionVM1x
 
 ## Attach a persistent memory device to a VM
 
-Use **[Add-VMHardDiskDrive](/powershell/module/hyper-v/add-vmharddiskdrive?view=win10-ps)** to attach a persistent memory device to a VM
+Use **[Add-VMHardDiskDrive](/powershell/module/hyper-v/add-vmharddiskdrive)** to attach a persistent memory device to a VM
 
 **Example:** `Add-VMHardDiskDrive ProductionVM1 PMEM -ControllerLocation 1 -Path D:\VPMEMDevice1.vhdpmem`
 

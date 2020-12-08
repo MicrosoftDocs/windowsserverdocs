@@ -54,4 +54,4 @@ diskpart /s scriptname.txt > logfile.txt
 
 - [Sample: Configure BIOS/MBR-Based Hard Disk Partitions by Using Windows PE and DiskPart](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825677(v=win.10))
 
-- [Storage Cmdlets in Windows PowerShell](/powershell/module/storage/?view=win10-ps)
+- [Storage Cmdlets in Windows PowerShell](/powershell/module/storage/)

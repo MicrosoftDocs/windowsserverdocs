@@ -29,7 +29,7 @@ The Integration Services pane lists all integration services available on the Hy
 
 ### Turn an integration service on or off using PowerShell
 
-To do this in PowerShell, use [Enable-VMIntegrationService](/powershell/module/hyper-v/enable-vmintegrationservice?view=win10-ps) and [Disable-VMIntegrationService](/powershell/module/hyper-v/disable-vmintegrationservice?view=win10-ps).
+To do this in PowerShell, use [Enable-VMIntegrationService](/powershell/module/hyper-v/enable-vmintegrationservice) and [Disable-VMIntegrationService](/powershell/module/hyper-v/disable-vmintegrationservice).
 
 The following examples demonstrate turning the guest file copy integration service on and off for a virtual machine named "demovm".
 

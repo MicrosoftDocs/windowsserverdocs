@@ -51,7 +51,7 @@ The Windows 10 Policy CSP supports configuration of the TLS Cipher Suites. See [
 
 ### Configuring TLS Cipher Suite Order by using TLS PowerShell Cmdlets
 
-The TLS PowerShell module supports getting the ordered list of TLS cipher suites, disabling a cipher suite, and enabling a cipher suite. See [TLS Module](/powershell/module/tls/?view=win10-ps) for more information.
+The TLS PowerShell module supports getting the ordered list of TLS cipher suites, disabling a cipher suite, and enabling a cipher suite. See [TLS Module](/powershell/module/tls/) for more information.
 
 ## Configuring TLS ECC Curve Order
 

@@ -55,7 +55,7 @@ In the following example, the NPS configuration is exported to an XML file locat
 Export-NpsConfiguration –Path c:\config.xml
 ```
 
-For more information, see [Export-NpsConfiguration](/powershell/module/nps/export-npsconfiguration?view=win10-ps).
+For more information, see [Export-NpsConfiguration](/powershell/module/nps/export-npsconfiguration).
 
 After you have exported the NPS configuration, copy the XML file to the destination server.
 
@@ -73,7 +73,7 @@ The following command imports settings from the file named C:\Npsconfig.xml to N
 Import-NpsConfiguration -Path "C:\Npsconfig.xml"
 ```
 
-For more information, see [Import-NpsConfiguration](/powershell/module/nps/import-npsconfiguration?view=win10-ps).
+For more information, see [Import-NpsConfiguration](/powershell/module/nps/import-npsconfiguration).
 
 ## Export and Import the NPS configuration by using Netsh
 

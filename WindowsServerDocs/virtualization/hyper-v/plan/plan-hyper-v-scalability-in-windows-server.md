@@ -16,7 +16,7 @@ This article gives you details about the maximum configuration for components yo
 Maximums for memory and logical processors are the biggest increases from Windows Server 2012, in response to requests to support newer scenarios such as machine learning and data analytics. The Windows Server blog recently published the performance results of  a virtual machine with 5.5 terabytes of memory and 128 virtual processors running 4 TB in-memory database. Performance was greater than 95% of the performance of a physical server. For details, see [Windows Server 2016 Hyper-V large-scale VM performance for in-memory transaction processing](https://blogs.technet.microsoft.com/windowsserver/2016/09/28/windows-server-2016-hyper-v-large-scale-vm-performance-for-in-memory-transaction-processing/). Other numbers are similar to those that apply to Windows Server 2012. \(Maximums for Windows Server 2012 R2 were the same as Windows Server 2012.\)
 
 > [!NOTE]
-> For information about System Center Virtual Machine Manager (VMM), see [Virtual Machine Manager](/system-center/vmm/overview?view=sc-vmm-2019). VMM is a Microsoft product for managing a virtualized data center that is sold separately.
+> For information about System Center Virtual Machine Manager (VMM), see [Virtual Machine Manager](/system-center/vmm/overview). VMM is a Microsoft product for managing a virtualized data center that is sold separately.
 
 ## Maximums for virtual machines
 These maximums apply to each virtual machine. Not all components are available in both generations of virtual machines. For a comparison of the generations, see [Should I create a generation 1 or 2 virtual machine in Hyper-V?](should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md)

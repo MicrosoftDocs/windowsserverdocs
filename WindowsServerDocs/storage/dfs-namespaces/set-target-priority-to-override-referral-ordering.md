@@ -45,7 +45,7 @@ To set target priority on a folder target, use the following procedure:
 4.  On the **Advanced** tab, click **Override referral ordering**  and then click the priority that you want.
 
 > [!NOTE]
-> To set target priorities by using Windows PowerShell, use the  [Set-DfsnRootTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) and [Set-DfsnFolderTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) cmdlets with the **ReferralPriorityClass** and **ReferralPriorityRank** parameters. These cmdlets were introduced in Windows Server 2012.
+> To set target priorities by using Windows PowerShell, use the  [Set-DfsnRootTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad) and [Set-DfsnFolderTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad) cmdlets with the **ReferralPriorityClass** and **ReferralPriorityRank** parameters. These cmdlets were introduced in Windows Server 2012.
 
 ## Additional References
 

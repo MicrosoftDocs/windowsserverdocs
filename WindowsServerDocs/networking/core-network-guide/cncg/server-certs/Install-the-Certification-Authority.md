@@ -31,7 +31,7 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
 ### To install Active Directory Certificate Services
 
 > [!TIP]
-> If you want to use Windows PowerShell to install Active Directory Certificate Services, see [Install-AdcsCertificationAuthority](/powershell/module/adcsdeployment/install-adcscertificationauthority?view=win10-ps) for cmdlets and optional parameters.
+> If you want to use Windows PowerShell to install Active Directory Certificate Services, see [Install-AdcsCertificationAuthority](/powershell/module/adcsdeployment/install-adcscertificationauthority) for cmdlets and optional parameters.
 
 1.  Log on as a member of both the Enterprise Admins group and the root domain's Domain Admins group.
 

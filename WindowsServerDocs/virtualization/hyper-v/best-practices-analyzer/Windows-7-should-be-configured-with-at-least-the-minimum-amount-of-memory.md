@@ -62,4 +62,4 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ```
 
 ## See Also
-[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)
+[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory)
