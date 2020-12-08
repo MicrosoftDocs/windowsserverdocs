@@ -5,7 +5,7 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
-ms.date: 12/02/2019
+ms.date: 12/08/2019
 ---
 # What type of installation is right for you?
 
