@@ -23,4 +23,4 @@ mqtgsvc.exe
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [MSMQ Powershell Reference](/powershell/module/msmq/?view=win10-ps)
+- [MSMQ Powershell Reference](/powershell/module/msmq/)

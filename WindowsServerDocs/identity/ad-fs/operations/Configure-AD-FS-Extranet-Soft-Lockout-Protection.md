@@ -86,7 +86,7 @@ There is a known issue where the AD user account cannot authenticate with AD FS 
 ## Additional references
 - [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 - [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](delegate-ad-fs-pshell-access.md)
-- [Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties?view=win10-ps)
+- [Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties)
 
 [AD FS Operations](../ad-fs-operations.md)
 

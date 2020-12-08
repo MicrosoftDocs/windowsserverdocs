@@ -157,7 +157,7 @@ preferred method because it makes the overall process of creating or maintaining
 
 [Windows 10 1607: Keeping apps from coming back when deploying the feature update](/archive/blogs/mniehaus/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update)
 
-Then run the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) PowerShell command to remove UWP app payloads:
+Then run the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage) PowerShell command to remove UWP app payloads:
 
 ```powershell
 Remove-AppxProvisionedPackage -Online -PackageName

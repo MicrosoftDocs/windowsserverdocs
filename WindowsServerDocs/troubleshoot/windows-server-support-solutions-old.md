@@ -41,7 +41,7 @@ These are the top Microsoft Support solutions for the most common issues experie
 ## Solutions related to DCPromo and installing domain controllers
 - [Active Directory and Active Directory Domain Services Port Requirements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772723(v=ws.10))
 - [Active Directory Firewall Ports – Let's Try To Make This Simple](http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/)
-- [Exchange Server support for Windows Server 2016](/Exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019)
+- [Exchange Server support for Windows Server 2016](/Exchange/plan-and-deploy/supportability-matrix)
 - [Using Ntdsutil.exe to transfer or seize FSMO roles to a domain controller](https://support.microsoft.com/kb/255504)
 - [Troubleshooting Domain Controller Deployment](../identity/ad-ds/deploy/troubleshooting-domain-controller-deployment.md)
 - [Troubleshooting Active Directory Installation Wizard Problems](/previous-versions/windows/it-pro/windows-2000-server/bb727058(v=technet.10))

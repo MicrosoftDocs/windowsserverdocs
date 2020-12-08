@@ -29,7 +29,7 @@ AD DS can run on an Azure virtual machine (VM) in the same way it runs in many o
 
 ## Build the test environment
 
-We use the [Azure portal](https://portal.azure.com) and [Azure CLI](/cli/azure/overview?view=azure-cli-latest) for creating the environment.
+We use the [Azure portal](https://portal.azure.com) and [Azure CLI](/cli/azure/overview) for creating the environment.
 
 The Azure CLI is used to create and manage Azure resources from the command line or in scripts. This tutorial details using the Azure CLI to deploy virtual machines running Windows Server 2019. Once deployment is complete, we connect to the servers and install AD DS.
 
@@ -39,7 +39,7 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 
 The following script automates the process of building two Windows Server 2019 VMs, for the purpose of building domain controllers for a new Active Directory Forest in Azure. An administrator can modify the variables below to suit their needs, then complete, as one operation. The script creates the necessary resource group, network security group with a traffic rule for Remote Desktop, virtual network and subnet, and availability group. The VMs are each then built with a 20 GB data disk with caching disabled for AD DS to be installed to.
 
-The script below can be run directly from the Azure portal. If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.4 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0](/cli/azure/install-azure-cli?view=azure-cli-latest).
+The script below can be run directly from the Azure portal. If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.4 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0](/cli/azure/install-azure-cli).
 
 | Variable Name | Purpose |
 | :---: | :--- |

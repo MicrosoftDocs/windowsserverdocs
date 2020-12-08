@@ -22,9 +22,9 @@ You can use DFS Replication to keep the contents of folder targets in sync so th
 3.  Follow the instructions in the Replicate Folder Wizard.
 
 > [!NOTE]
-> Configuration changes are not applied immediately to all members except when using the [Suspend-DfsReplicationGroup](/powershell/module/dfsr/suspend-dfsreplicationgroup?view=win10-ps) and [Sync-DfsReplicationGroup](/powershell/module/dfsr/sync-dfsreplicationgroup?view=win10-ps) cmdlets. The new configuration must be replicated to all domain controllers, and each member in the replication group must poll its closest domain controller to obtain the changes. The amount of time this takes depends on the Active Directory Directory Services (AD DS) replication latency and the long polling interval (60 minutes) on each member. To poll immediately for configuration changes, open a Command Prompt window and then type the following command once for each member of the replication group: <br /> dfsrdiag.exe PollAD /Member:DOMAIN\Server1
+> Configuration changes are not applied immediately to all members except when using the [Suspend-DfsReplicationGroup](/powershell/module/dfsr/suspend-dfsreplicationgroup) and [Sync-DfsReplicationGroup](/powershell/module/dfsr/sync-dfsreplicationgroup) cmdlets. The new configuration must be replicated to all domain controllers, and each member in the replication group must poll its closest domain controller to obtain the changes. The amount of time this takes depends on the Active Directory Directory Services (AD DS) replication latency and the long polling interval (60 minutes) on each member. To poll immediately for configuration changes, open a Command Prompt window and then type the following command once for each member of the replication group: <br /> dfsrdiag.exe PollAD /Member:DOMAIN\Server1
 <br />
-To do so from a Windows PowerShell session, use the [Update-DfsrConfigurationFromAD](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) cmdlet, which was introduced in Windows Server 2012 R2.
+To do so from a Windows PowerShell session, use the [Update-DfsrConfigurationFromAD](/powershell/module/dfsr/update-dfsrconfigurationfromad) cmdlet, which was introduced in Windows Server 2012 R2.
 
 ## Additional References
 

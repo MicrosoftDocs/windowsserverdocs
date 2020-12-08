@@ -185,7 +185,7 @@ The VHDX you provide to the `-Path` parameter will be overwritten with the updat
 
 > [!IMPORTANT]
 > The Remote Server Administration Tools available on Windows Server 2016 or Windows 10 cannot be used to prepare a Linux shielded VM template disk.
-> Only use the [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) cmdlet available on Windows Server, version 1709 or the Remote Server Administration Tools available on Windows Server 2019 to prepare a Linux shielded VM template disk.
+> Only use the [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk) cmdlet available on Windows Server, version 1709 or the Remote Server Administration Tools available on Windows Server 2019 to prepare a Linux shielded VM template disk.
 
 ```powershell
 # Replace "THUMBPRINT" with the thumbprint of your template disk signing certificate in the line below

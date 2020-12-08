@@ -286,6 +286,6 @@ A: With ESL enabled, AD FS tracks the account activity and known locations for u
 ## Additional references
 [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
-[Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties?view=win10-ps)
+[Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties)
 
 [AD FS Operations](../ad-fs-operations.md)
