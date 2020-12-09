@@ -69,10 +69,10 @@ The **Get-ADFSSyncProperties** cmdlet gets the synchronization properties for th
 ```
 PS C:\> Get-ADFSSyncProperties
 ```
-On the Primary AD FS Server this cmdlet will only show that the Role is the Primary Computer. On a Secondary member it will show the rest of the configuration including Fully Quallified Domain Name of the Last Sync from the Primary Computer, Last Sync Status and Time, Poll duration, the currently configured Primary computername, the Primary Computer Port and the Role of the Secondary Computer. 
+On the Primary AD FS Server this cmdlet will only show that the Role is the Primary Computer. On a Secondary member it will show the rest of the configuration including Fully Quallified Domain Name of the Last Sync from the Primary Computer, Last Sync Status and Time, Poll duration, the currently configured Primary computername, the Primary Computer Port and the Role of the Secondary Computer.
 
 The **Set-ADFSSyncProperties** cmdlet modifies the frequency of synchronization for the Active Directory Federation Services (AD FS) configuration database.
-The cmdlet also specifies which federation server is the primary server in the federation server farm. 
+The cmdlet also specifies which federation server is the primary server in the federation server farm.
 
 > [!NOTE]
 > If a primary federation server crashes and is offline, all secondary federation servers continue to process requests as normal. However, no new changes can be made to the Federation Service until the primary federation server has been brought back online. You can also nominate a secondary federation server to become the primary federation server by using Windows PowerShell. If nominate a new primary server the remain servers must be modified to reflect the new primary server. Having 2 primaries with a WID farm will impact the stableness of the farm and has the passibility of losing data.
@@ -97,10 +97,10 @@ This command changes an AD FS server in a WID farm from secondary to primary.
 PS C:\> Set-AdfsSyncProperties -Role "SecondaryComputer" -PrimaryComputerName "<FQDN of primary server>"
 ```
 
-This command changes a primary AD FS server in a WID farm to a secondary server. You must specify the fully qualified domain name of the primary so server. Not doing so may not all the secondary AD FS server to sync properly. 
+This command changes a primary AD FS server in a WID farm to a secondary server. You must specify the fully qualified domain name of the primary so server. Not doing so may not all the secondary AD FS server to sync properly.
 Note: The primary server must be accessible via HTTP on port 80 from the secondary server.
 
-For more information see: [Set-AdfsSyncProperties](https://docs.microsoft.com/en-us/powershell/module/adfs/set-adfssyncproperties?view=win10-ps)
+For more information see: [Set-AdfsSyncProperties](https://docs.microsoft.com/powershell/module/adfs/set-adfssyncproperties?view=win10-ps)
 
 
 ## Using SQL Server to store the AD FS configuration database
