@@ -1,6 +1,6 @@
 ---
-description: "Learn more about: Shielded VMs - Hosting service provider sets up Windows Azure Pack"
 title: Shielded VMs - Hosting service provider sets up Windows Azure Pack
+description: "Learn more about: Shielded VMs - Hosting service provider sets up Windows Azure Pack"
 ms.topic: article
 ms.assetid: d528c689-58b0-425c-9740-25e2553ed689
 manager: dongill
@@ -21,7 +21,7 @@ You will complete the following tasks to set up Windows Azure Pack in your envir
 
 1. Complete configuration of System Center 2016 - Virtual Machine Manager (VMM) for your hosting fabric. This includes setting up VM templates and a VM cloud, which will be exposed through Windows Azure Pack:
 
-    [Scenario - Deploy guarded hosts and shielded virtual machines in VMM](/system-center/vmm/deploy-guarded-host-fabric?view=sc-vmm-2019)
+    [Scenario - Deploy guarded hosts and shielded virtual machines in VMM](/system-center/vmm/deploy-guarded-host-fabric)
 
 2. Install and configure System Center 2016 - Service Provider Foundation (SPF). This software enables Windows Azure Pack to communicate with your VMM servers:
 

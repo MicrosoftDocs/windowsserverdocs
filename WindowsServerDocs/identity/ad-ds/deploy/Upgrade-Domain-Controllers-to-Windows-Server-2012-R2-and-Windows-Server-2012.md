@@ -1,7 +1,7 @@
 ---
-description: "Learn more about: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012"
 ms.assetid: e4c31187-f15f-410b-bb79-8d63e2f2b421
 title: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
+description: "Learn more about: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012"
 ms.author: daveba
 author: iainfoulds
 manager: daveba
@@ -283,7 +283,7 @@ The following table covers common Active Directory-integrated Microsoft applicat
 |Forefront Threat Management Gateway (TMG)|TMG is supported to run only on Windows Server 2008 and Windows Server 2008 R2. For more information, see [System requirements for Forefront TMG](/previous-versions/tn-archive/dd896981(v=technet.10)).|
 |Windows Server Update Services|This release of WSUS already supports Windows 8-based computers or Windows Server 2012-based computers as clients.|
 |Windows Server Update Services 3.0|Update KB article [2734608](https://support.microsoft.com/kb/2734608) lets servers that are running Windows Server Update Services (WSUS) 3.0 SP2 provide updates to computers that are running Windows 8 or Windows Server 2012: **Note:** Customers with standalone WSUS 3.0 SP2 environments or Configuration Manager 2007 Service Pack 2 environments with WSUS 3.0 SP2 require [2734608](https://support.microsoft.com/kb/2734608) to properly manage Windows 8-based computers or Windows Server 2012-based computers as clients.|
-|[Exchange 2013](/Exchange/plan-and-deploy/prerequisites?view=exchserver-2019)|Windows Server 2012 Standard and Datacenter are supported for the following roles: schema master, global catalog server, domain controller, mailbox and client access server role<p>Forest Functional Level: Windows Server 2003 or higher<p>Source: Exchange 2013 System Requirements|
+|[Exchange 2013](/Exchange/plan-and-deploy/prerequisites)|Windows Server 2012 Standard and Datacenter are supported for the following roles: schema master, global catalog server, domain controller, mailbox and client access server role<p>Forest Functional Level: Windows Server 2003 or higher<p>Source: Exchange 2013 System Requirements|
 |Exchange 2010|[Source: Exchange 2010 Service Pack 3](https://techcommunity.microsoft.com/t5/exchange-team-blog/bg-p/Exchange)<p>Exchange 2010 with Service Pack 3 can be installed on Windows Server 2012 member servers.<p>[Exchange 2010 System Requirements](/previous-versions/office/exchange-server-2010/aa996719(v=exchg.141)) lists the latest supported schema master, global catalog and domain controller as Windows Server 2008 R2.<p>Forest Functional Level: Windows Server 2003 or higher|
 |SQL Server 2012|Source: KB [2681562](https://support.microsoft.com/kb/2681562)<p>SQL Server 2012 RTM is supported on Windows Server 2012.|
 |SQL Server 2008 R2|Source: KB [2681562](https://support.microsoft.com/kb/2681562)<p>Requires SQL Server 2008 R2 with Service Pack 1 or later to install on Windows Server 2012.|

@@ -66,7 +66,7 @@ Virtual machine networking can be a complex subject. And there are several new v
     Get-NetAdapter
     ```
 
-4.  Create a virtual switch by using the [New-VMSwitch](/powershell/module/hyper-v/new-vmswitch?view=win10-ps) cmdlet. For example, to create an external virtual switch named ExternalSwitch, using the ethernet network adapter, and with **Allow management operating system to share this network adapter** turned on, run the following command.
+4.  Create a virtual switch by using the [New-VMSwitch](/powershell/module/hyper-v/new-vmswitch) cmdlet. For example, to create an external virtual switch named ExternalSwitch, using the ethernet network adapter, and with **Allow management operating system to share this network adapter** turned on, run the following command.
 
     ```
     New-VMSwitch -name ExternalSwitch  -NetAdapterName Ethernet -AllowManagementOS $true

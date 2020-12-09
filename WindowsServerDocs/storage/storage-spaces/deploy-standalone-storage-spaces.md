@@ -16,7 +16,7 @@ This topic describes how to deploy Storage Spaces on a stand-alone server. For i
 
 To create a storage space, you must first create one or more storage pools. A storage pool is a collection of physical disks. A storage pool enables storage aggregation, elastic capacity expansion, and delegated administration.
 
-From a storage pool, you can create one or more virtual disks. These virtual disks are also referred to as *storage spaces*. A storage space appears to the Windows operating system as a regular disk from which you can create formatted volumes. When you create a virtual disk through the File and Storage Services user interface, you can configure the resiliency type (simple, mirror, or parity), the provisioning type (thin or fixed), and the size. Through Windows PowerShell, you can set additional parameters such as the number of columns, the interleave value, and which physical disks in the pool to use. For information about these additional parameters, see [New-VirtualDisk](/powershell/module/storage/new-virtualdisk?view=win10-ps) and the [Windows Server storage forum](/answers/topics/windows-server-storage.html).
+From a storage pool, you can create one or more virtual disks. These virtual disks are also referred to as *storage spaces*. A storage space appears to the Windows operating system as a regular disk from which you can create formatted volumes. When you create a virtual disk through the File and Storage Services user interface, you can configure the resiliency type (simple, mirror, or parity), the provisioning type (thin or fixed), and the size. Through Windows PowerShell, you can set additional parameters such as the number of columns, the interleave value, and which physical disks in the pool to use. For information about these additional parameters, see [New-VirtualDisk](/powershell/module/storage/new-virtualdisk) and the [Windows Server storage forum](/answers/topics/windows-server-storage.html).
 
 > [!NOTE]
 > You can't use a storage space to host the Windows operating system.
@@ -259,6 +259,6 @@ Get-VirtualDisk –FriendlyName VirtualDisk1 | Get-Disk | Initialize-Disk –Pas
 ## Additional information
 
 - [Storage Spaces](overview.md)
-- [Storage Cmdlets in Windows PowerShell](/powershell/module/storage/index?view=win10-ps)
+- [Storage Cmdlets in Windows PowerShell](/powershell/module/storage/index)
 - [Deploy Clustered Storage Spaces](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11))
 - [Windows Server storage forum](/answers/topics/windows-server-storage.html)

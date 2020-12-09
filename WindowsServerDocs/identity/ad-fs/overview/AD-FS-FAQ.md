@@ -96,7 +96,7 @@ In particular, you should verify that your AD FS and WAP servers support TLS 1.2
 
 You can enable and disable SSL 2.0 and 3.0 and TLS versions 1.0, 1.1, and 1.2 using [Manage SSL Protocols in AD FS](../operations/Manage-SSL-Protocols-in-AD-FS.md).
 
-To ensure your AD FS and WAP servers negotiate only TLS cipher suites that support ATP, you can disable all cipher suites that are not in the [list of ATP compliant cipher suites](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).  To do this, use the [Windows TLS PowerShell cmdlets](/powershell/module/tls/?view=win10-ps).
+To ensure your AD FS and WAP servers negotiate only TLS cipher suites that support ATP, you can disable all cipher suites that are not in the [list of ATP compliant cipher suites](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).  To do this, use the [Windows TLS PowerShell cmdlets](/powershell/module/tls/).
 
 ## Developer
 

@@ -1,7 +1,7 @@
 ---
-description: "Learn more about: Dynamic Access Control: Scenario Overview"
 ms.assetid: 7b22adfa-298d-413c-88d0-1231825b7d4d
 title: Dynamic Access Control Scenario Overview
+description: "Learn more about: Dynamic Access Control: Scenario Overview"
 author: billmath
 ms.author: billmath
 manager: femila
@@ -57,6 +57,6 @@ The following scenarios and guidance are included as part of this content set:
 |**Product evaluation**|- [Dynamic Access Control Reviewers Guide](/previous-versions/orphan-topics/ws.10/cc732148(v=ws.10))<br>- [Dynamic Access Control Developer Guidance](/previous-versions/windows/desktop/dacx/dynamic-access-control-developer-extensibility-roadmap)|
 |**Planning**|- [Planning a Central Access Policy Deployment](./scenario--central-access-policy.md)<br>- [Plan for File Access Auditing](Plan-for-File-Access-Auditing.md)|
 |**Deployment**|- [Active Directory Deployment](../ad-ds/deploy/ad-ds-deployment.md)<br>- [File and Storage Services Deployment](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831487(v=ws.11))|
-|**Operations**|[Dynamic Access Control PowerShell Reference](/powershell/module/addsadministration/?view=win10-ps)|
+|**Operations**|[Dynamic Access Control PowerShell Reference](/powershell/module/addsadministration/)|
 |**Tools and settings**|[Data Classification Toolkit](https://www.microsoft.com/download/details.aspx?id=27123)|
 |**Community resources**|[Directory Services Forum](/answers/topics/windows-active-directory.html)|

@@ -1,6 +1,6 @@
 ---
 title: wdsutil get-alldrivergroups
-description: Reference article for wdsutil get-alldrivergroups, which displays information about all the driver groups on a server.
+description: Reference article for the wdsutil get-alldrivergroups command, which displays information about all the driver groups on a server.
 ms.topic: reference
 ms.assetid: f245ba53-f150-41b1-8418-38dcf0410a05
 ms.author: lizross
@@ -16,22 +16,32 @@ ms.date: 10/16/2017
 Displays information about all the driver groups on a server.
 
 ## Syntax
+
 ```
-wdsutil /Get-AllDriverGroups [/Server:<Server name>] [/Show:{PackageMetaData | Filters | All}]
+wdsutil /get-alldrivergroups [/server:<servername>] [/show:{packagemetadata | filters | all}]
 ```
+
 ### Parameters
-|Parameter|Description|
-|-------|--------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the FQDN. If a server name is not specified, the local server is used.|
-|[/Show: {PackageMetaData &#124; Filters &#124; All}]|Displays the metadata for all the driver packages in the specified group. **PackageMetaData** displays information about all the filters for the driver group. **Filters** displays the metadata for all driver packages and filters for the group.|
+
+| Parameter | Description |
+|--|--|
+| `[/server:<servername>]` | Specifies the name of the server. This can be the NetBIOS name or the FQDN. If a server name is not specified, the local server is used. |
+| `/show:{packagemetadata | filters | all}]` | Displays the metadata for all the driver packages in the specified group. **PackageMetaData** displays information about all the filters for the driver group. **Filters** displays the metadata for all driver packages and filters for the group. |
+
 ## Examples
-To view information about a driver file, type:
+
+To view information about a driver file, type either:
+
 ```
-wdsutil /Get-AllDriverGroups /Server:MyWdsServer /Show:All
+wdsutil /get-alldrivergroups /server:MyWdsServer /show:All
 ```
+
 ```
-wdsutil /Get-AllDriverGroups [/Show:PackageMetaData]
+wdsutil /get-alldrivergroups [/show:packagemetadata]
 ```
+
 ## Additional References
+
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+-
 - [wdsutil get-drivergroup command](wdsutil-get-drivergroup.md)

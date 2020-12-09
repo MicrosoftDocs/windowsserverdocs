@@ -1,6 +1,6 @@
 ---
-description: "Learn more about: Troubleshooting Using the Guarded Fabric Diagnostic Tool"
 title: Troubleshooting Using the Guarded Fabric Diagnostic Tool
+description: "Learn more about: Troubleshooting Using the Guarded Fabric Diagnostic Tool"
 ms.topic: article
 ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22
 manager: dongill
@@ -15,7 +15,7 @@ ms.date: 01/14/2020
 
 This topic describes the use of the Guarded Fabric Diagnostic Tool to identify and remediate common failures in the deployment, configuration, and on-going operation of guarded fabric infrastructure. This includes the Host Guardian Service (HGS), all guarded hosts, and supporting services such as DNS and Active Directory. The diagnostic tool can be used to perform a first-pass at triaging a failing guarded fabric, providing administrators with a starting point for resolving outages and identifying misconfigured assets. The tool is not a replacement for a sound grasp of operating a guarded fabric and only serves to rapidly verify the most common issues encountered during day-to-day operations.
 
-Full documentation of the cmdlets used in this article can be found in the [HgsDiagnostics module reference](/powershell/module/hgsdiagnostics/?view=win10-ps).
+Full documentation of the cmdlets used in this article can be found in the [HgsDiagnostics module reference](/powershell/module/hgsdiagnostics/).
 
 [!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-diagnostics-tool.md)]
 

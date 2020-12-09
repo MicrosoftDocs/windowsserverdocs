@@ -542,8 +542,8 @@ You can use the following commands to install and configure AD DS and DNS. You m
 
 >[!NOTE]
 >For more information about these Windows PowerShell commands, see the following reference topics.
->- [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=win10-ps)
->- [Install-ADDSForest](/powershell/module/addsdeployment/install-addsforest?view=win10-ps)
+>- [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature)
+>- [Install-ADDSForest](/powershell/module/addsdeployment/install-addsforest)
 
 Membership in **Administrators** is the minimum required to perform this procedure.
 

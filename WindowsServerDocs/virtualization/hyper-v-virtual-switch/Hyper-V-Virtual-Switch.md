@@ -20,7 +20,7 @@ You can also connect to virtual networks on the server that is running Hyper\-V 
 >
 > - [Manage Hyper-V Virtual Switch](Manage-Hyper-V-Virtual-Switch.md)
 > - [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](RDMA-and-Switch-Embedded-Teaming.md)
-> - [Network Switch Team Cmdlets in Windows PowerShell](/powershell/module/netswitchteam/new-netswitchteam?view=win10-ps)
+> - [Network Switch Team Cmdlets in Windows PowerShell](/powershell/module/netswitchteam/new-netswitchteam)
 > - [What's New in VMM 2016](/system-center/vmm/whats-new#networking)
 > - [Set up the VMM networking fabric](/system-center/vmm/manage-networks)
 > - [Hyper-V forum](/answers/topics/windows-server-hyper-v.html)

@@ -1,6 +1,6 @@
 ---
-description: "Learn more about: Deploying the Host Guardian Service"
 title: Deploying the Host Guardian Service
+description: "Learn more about: Deploying the Host Guardian Service"
 ms.topic: article
 ms.assetid: 310b63d9-5ac7-4961-98ef-103af45d706a
 manager: dongill
@@ -33,13 +33,13 @@ The following table breaks down the tasks to deploy a guarded fabric and create 
 | 6 - [Create host key (Key)](guarded-fabric-create-host-key.md) and[Collect host information (TPM)](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md) | ![Step 6, create host key and collect host info](../media/Guarded-Fabric-Shielded-VM/guarded-host-collect-info-from-hosts.png) |
 | 7 - [Configure HGS with host information](guarded-fabric-add-host-information-to-hgs.md) | ![Step 7, add host info to HGS](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-hgs-with-host-info.png) |
 | 8 -  [Confirm hosts can attest](guarded-fabric-confirm-hosts-can-attest-successfully.md) | ![Step 8, confirm host can attest](../media/Guarded-Fabric-Shielded-VM/guarded-host-confirm-hosts-attest.png) |
-| 9 - [Configure VMM (optional)](/system-center/vmm/deploy-guarded-host-fabric?view=sc-vmm-2019) | ![Step 9, configure VMM (optional)](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-vmm.png) |
+| 9 - [Configure VMM (optional)](/system-center/vmm/deploy-guarded-host-fabric) | ![Step 9, configure VMM (optional)](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-vmm.png) |
 | 10 - [Create template disks](guarded-fabric-create-a-shielded-vm-template.md) | ![Step 10, create template disks](../media/Guarded-Fabric-Shielded-VM/guarded-host-create-template-disk.png) |
 | 11 - [Create a VM shielding helper disk for VMM (optional)](guarded-fabric-vm-shielding-helper-vhd.md) | ![Step 11, create a VM shielding help disk for VMM](../media/Guarded-Fabric-Shielded-VM/guarded-host-create-helper-disk.png) |
 | 12 - [Set up Windows Azure Pack (optional)](guarded-fabric-shielded-vm-windows-azure-pack.md) | ![Step 12, set up Windows Azure Pack (optional)](../media/Guarded-Fabric-Shielded-VM/guarded-host-windows-azure-pack.png) |
 | 13 - [Create shielding data file](guarded-fabric-tenant-creates-shielding-data.md) | ![Step 13, create a shielding data file](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielding-data-file.png) |
 | 14 - [Create shielded VMs using Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md) | ![Step 14, create shielded VMs using Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png) |
-| 15 - [Create shielded VMs using VMM](/system-center/vmm/guarded-deploy-vm?view=sc-vmm-2019) | ![Step 15, create shielded VMs using VMM](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png) |
+| 15 - [Create shielded VMs using VMM](/system-center/vmm/guarded-deploy-vm) | ![Step 15, create shielded VMs using VMM](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png) |
 
 ## Additional References
 
