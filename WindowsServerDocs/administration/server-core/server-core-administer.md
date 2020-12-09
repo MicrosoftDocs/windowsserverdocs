@@ -89,7 +89,7 @@ Run **slmgr.vbs –ipk\<productkey\>**. Then run **slmgr.vbs –ato**. If activa
 
 ### Configure Windows Firewall
 
-You can configure Windows Firewall locally on the Server Core computer using Windows PowerShell cmdlets and scripts. See [NetSecurity](/powershell/module/netsecurity/?view=win10-ps) for the cmdlets you can use to configure Windows Firewall.
+You can configure Windows Firewall locally on the Server Core computer using Windows PowerShell cmdlets and scripts. See [NetSecurity](/powershell/module/netsecurity/) for the cmdlets you can use to configure Windows Firewall.
 
 ### Enable Windows PowerShell remoting
 

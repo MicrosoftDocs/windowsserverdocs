@@ -216,8 +216,8 @@ Set-NetTCPSetting -AutoTuningLevelLocal <Value>
 
 For more information about these cmdlets, see the following articles:
 
-- [Get-NetTCPSetting](/powershell/module/nettcpip/get-nettcpsetting?view=win10-ps)
-- [Set-NetTCPSetting](/powershell/module/nettcpip/set-nettcpsetting?view=win10-ps)
+- [Get-NetTCPSetting](/powershell/module/nettcpip/get-nettcpsetting)
+- [Set-NetTCPSetting](/powershell/module/nettcpip/set-nettcpsetting)
 
 #### Autotuning levels
 

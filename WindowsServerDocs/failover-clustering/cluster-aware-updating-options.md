@@ -81,4 +81,4 @@ Invoke-CauRun –ClusterName CONTOSO-FC1 @MyRunProfile
 
 -   [Cluster-Aware Updating](cluster-aware-updating.md)
 
--   [Cluster-Aware Updating Cmdlets in Windows PowerShell](/powershell/module/clusterawareupdating/?view=win10-ps)
+-   [Cluster-Aware Updating Cmdlets in Windows PowerShell](/powershell/module/clusterawareupdating/)

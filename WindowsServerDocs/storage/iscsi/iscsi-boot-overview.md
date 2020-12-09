@@ -41,5 +41,5 @@ iSCSI Target Server can be installed as part of the File and iSCSI Services role
 
 ## Additional References
 * [iSCSI Target Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh848272(v=ws.11))
-* [iSCSI initiator cmdlets](/powershell/module/iscsi/?view=win10-ps)
-* [iSCSI Target Server cmdlets](/powershell/module/iscsi/?view=win10-ps)
+* [iSCSI initiator cmdlets](/powershell/module/iscsi/)
+* [iSCSI Target Server cmdlets](/powershell/module/iscsi/)

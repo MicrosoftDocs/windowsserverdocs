@@ -27,7 +27,7 @@ For customers and software vendor partners looking for more information on Windo
 |Configuration Manager (version 1606)|    Yes|    [What's new in version 1606 of Configuration Manager](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1606)|
 |SharePoint Server 2016|    Yes|    [Hardware and software requirements for SharePoint Server 2016](/SharePoint/install/hardware-and-software-requirements)|
 |Project Server 2016|    Yes|    [Software requirements for Project Server 2016](/project/software-requirements-for-project-server-2016)|
-|Exchange Server 2016|    Yes|    [Updates for Exchange 2016](/Exchange/new-features/updates?view=exchserver-2019)|
+|Exchange Server 2016|    Yes|    [Updates for Exchange 2016](/Exchange/new-features/updates)|
 |Biztalk Server 2016|    Yes|    [Microsoft BizTalk Server](https://www.microsoft.com/cloud-platform/biztalk)|
 |Host Integration Server 2016|    Yes|    [What's New in HIS 2016](/host-integration-server/install-and-config-guides/what-s-new-in-his-2016)|
 |Visual Studio Team Foundation Server 2017|    Yes|    [Team Foundation Server 2017](https://www.visualstudio.com/news/releasenotes/tfs2017-relnotes)|

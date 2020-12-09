@@ -27,7 +27,7 @@ Use the following procedure to set the ordering method on the namespace root:
 3.  On the **Referrals** tab, select an ordering method.
 
 > [!NOTE]
-> To use Windows PowerShell to set the ordering method for targets in namespace root referrals, use the [Set-DfsnRoot](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) cmdlet with one of the following parameters:
+> To use Windows PowerShell to set the ordering method for targets in namespace root referrals, use the [Set-DfsnRoot](/powershell/module/dfsr/update-dfsrconfigurationfromad) cmdlet with one of the following parameters:
 >    -   **EnableSiteCosting** specifies the **Lowest cost ordering** method
 >    -   **EnableInsiteReferrals** specifies the **Exclude targets outside of the client's site** ordering method
 >    -   Omitting either parameter specifies the **Random order** referral ordering method.
@@ -45,7 +45,7 @@ Folders with targets inherit the ordering method from the namespace root. You ca
 3.  On the **Referrals** tab, select the **Exclude targets outside of the client's site** check box.
 
 > [!NOTE]
-> To use Windows PowerShell to exclude folder targets outside of the client's site, use the [Set-DfsnFolder –EnableInsiteReferrals](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) cmdlet.
+> To use Windows PowerShell to exclude folder targets outside of the client's site, use the [Set-DfsnFolder –EnableInsiteReferrals](/powershell/module/dfsr/update-dfsrconfigurationfromad) cmdlet.
 
 ## Target referral ordering methods
 

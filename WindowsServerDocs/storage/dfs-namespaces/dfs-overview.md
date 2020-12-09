@@ -24,7 +24,7 @@ Here's a description of the elements that make up a DFS namespace:
 
 This topic discusses how to install DFS, what's new, and where to find evaluation and deployment information.
 
-You can administer namespaces by using DFS Management, the [DFS Namespace (DFSN) Cmdlets in Windows PowerShell](/powershell/module/dfsn/?view=win10-ps), the **DfsUtil** command, or scripts that call WMI.
+You can administer namespaces by using DFS Management, the [DFS Namespace (DFSN) Cmdlets in Windows PowerShell](/powershell/module/dfsn/), the **DfsUtil** command, or scripts that call WMI.
 
 ## Server requirements and limits
 

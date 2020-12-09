@@ -122,7 +122,7 @@ For more information about Netsh NPS commands, see [Netsh Commands for Network P
 
 You can use Windows PowerShell commands to manage NPSs. For more information, see the following Windows PowerShell command reference topics.
 
-- [Network Policy Server (NPS) Cmdlets in Windows PowerShell](/powershell/module/nps/?view=win10-ps&viewFallbackFrom=winserverr2-ps). You can use these netsh commands in Windows Server 2012 R2 or later operating systems.
-- [NPS Module](/powershell/module/nps/?view=win10-ps). You can use these netsh commands in Windows Server 2016.
+- [Network Policy Server (NPS) Cmdlets in Windows PowerShell](/powershell/module/nps/). You can use these netsh commands in Windows Server 2012 R2 or later operating systems.
+- [NPS Module](/powershell/module/nps/). You can use these netsh commands in Windows Server 2016.
 
 For more information about NPS administration, see [Manage Network Policy Server (NPS)](nps-manage-top.md).

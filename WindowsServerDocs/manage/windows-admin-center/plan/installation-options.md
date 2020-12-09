@@ -5,11 +5,13 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
-ms.date: 12/02/2019
+ms.date: 12/08/2019
 ---
 # What type of installation is right for you?
 
 This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins. To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
+
+We don’t recommend using Windows Admin Center for local management of the same server on which it’s installed. To manage a server, use Windows Admin Center to connect to the server remotely from a management PC or other server.
 
 ## Installation: Types
 
