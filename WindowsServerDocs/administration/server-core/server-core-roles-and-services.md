@@ -8,6 +8,7 @@ ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 02/23/2018
 ---
+
 # Roles, Role Services, and Features included in Windows Server - Server Core
 
 > Applies to: Windows Server 2019, Windows Server 2016, and Windows Server (Semi-Annual Channel)
@@ -73,9 +74,9 @@ The Server Core installation option includes the following role services.
 | Remote Access                         | DirectAccess and VPN (RAS)                                     | DirectAccess-VPN        | N                     |
 |                                       | Routing                                                        | Routing                 | N                     |
 |                                       | Web Application Proxy                                          | Web-Application-Proxy   | N                     |
-| Remote Desktop Services               | Remote Desktop Connection Broker                               | RDS-Connection-Broker   | N                     |
+| Remote Desktop Services               | Remote Desktop Connection Broker  <br/>(Removed in 2019 Core)\*| RDS-Connection-Broker   | N                     |
 |                                       | Remote Desktop Licensing                                       | RDS-Licensing           | N                     |
-|                                       | Remote Desktop Virtualization Host                             | RDS-Virtualization      | N                     |
+|                                       | Remote Desktop Virtualization Host<br/>(Removed in 2019 Core)\*| RDS-Virtualization      | N                     |
 | Web Server (IIS)                      | Web Server                                                     | Web-WebServer           | N                     |
 |                                       | Common HTTP Features                                           | Web-Common-Http         | N                     |
 |                                       | Default Document                                               | Web-Default-Doc         | N                     |
@@ -129,6 +130,9 @@ The Server Core installation option includes the following role services.
 | Windows Server Update Services        | WID Connectivity                                               | UpdateServices-WidDB    | N                     |
 |                                       | WSUS Services                                                  | UpdateServices-Services | N                     |
 |                                       | SQL Server Connectivity                                        | UpdateServices-DB       | N                     |
+
+> [!NOTE]
+> For **Remote Desktop Connection Broker and Remote Desktop Virtualization Host in a Server Core installation** on Windows Server 2019, see [Features we removed in this release](https://docs.microsoft.com/en-us/windows-server/get-started-19/removed-features-19#features-we-removed-in-this-release).
 
 ## Features included in Server Core
 The Server Core installation option includes the following features.
