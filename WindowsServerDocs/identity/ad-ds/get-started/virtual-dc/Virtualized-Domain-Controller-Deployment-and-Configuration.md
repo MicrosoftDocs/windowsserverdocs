@@ -117,7 +117,7 @@ There are several points in the procedure where you have choices for how to crea
 
 The following diagram illustrates the virtualized domain controller cloning process, where the domain already exists.
 
-![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_CloningProcessFlow.png)
+![Diagram that illustrates the virtualized domain controller cloning process, where the domain already exists.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_CloningProcessFlow.png)
 
 ### Step 1 - Validate the Hypervisor
 Ensure the source domain controller is running on a supported hypervisor by reviewing vendor documentation. Virtualized domain controllers are hypervisor-independent and do not require Hyper-V.
@@ -126,7 +126,7 @@ If the hypervisor is Microsoft Hyper-V, ensure it is running on  Windows Server 
 
 Open **Devmgmt.msc** and examine **System Devices** for installed Microsoft Hyper-V devices and drivers. The specific system device required for a virtualized domain controller is the **Microsoft Hyper-V Generation Counter** (driver: vmgencounter.sys).
 
-![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVVMGenIDCounter.png)
+![Screenshot that shows the details for the Microsoft Hyper-V Generation Counter.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_HyperVVMGenIDCounter.png)
 
 ### Step 2 - Verify the PDCE FSMO role
 Before you attempt to clone a DC, you must validate that the domain controller hosting the Primary Domain Controller Emulator FSMO runs Windows Server 2012. The PDC emulator (PDCE) is required for several reasons:
@@ -175,7 +175,7 @@ get-adcomputer(Get-ADDomainController -Discover -Service "PrimaryDC").name -prop
 
 This example below demonstrates specifying the domain name and filtering the returned properties before the Windows PowerShell pipeline:
 
-![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PDCOSInfo.png)
+![Screenshot of a terminal window that demonstrates specifying the domain name and filtering the returned properties before the Windows PowerShell pipeline.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PDCOSInfo.png)
 
 ### Step 3 - Authorize a Source DC
 The source domain controller must have the control access right (CAR) **Allow a DC to create a clone of itself** on the domain NC head. By default, the well-known group **Cloneable Domain Controllers** has this permission and contains no members. The PDCE creates this group when that FSMO role transfers to a Windows Server 2012 domain controller.
@@ -195,7 +195,7 @@ Get-adcomputer <dc name> | %{add-adgroupmember "cloneable domain controllers" $_
 
 For instance, this adds server DC1 to the group, without the need to specify the distinguished name of the group member:
 
-![Virtualized DC Deployment](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_AddDcToGroup.png)
+![Screenshot of a terminal window that shows the command for adding a server to a group ](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_AddDcToGroup.png)
 
 #### Rebuilding Default Permissions
 If you remove this permission from the domain head, cloning fails. You can recreate the permission using the Active Directory Administrative Center or Windows PowerShell.
