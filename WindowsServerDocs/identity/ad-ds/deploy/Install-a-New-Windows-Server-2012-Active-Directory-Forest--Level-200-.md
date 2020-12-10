@@ -548,9 +548,9 @@ You cannot bypass the **Prerequisite Check** when using Server Manager, but you 
 
 Note how, just like Server Manager, **Install-ADDSForest** reminds you that promotion will reboot the server automatically.
 
-![Install a new forest](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSReboot.png)
+![Screenshot of a terminal window that shows Install-ADDSForest reminding you that promotion will reboot the server automatically.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSReboot.png)
 
-![Install a new forest](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSInstallProgress.png)
+![Screenshot of a terminal window that shows the progress of the reboot process.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSInstallProgress.png)
 
 To accept the reboot prompt automatically, use the **-force** or **-confirm:$false** arguments with any ADDSDeployment Windows PowerShell cmdlet. To prevent the server from automatically rebooting at the end of promotion, use the **-norebootoncompletion** argument.
 
