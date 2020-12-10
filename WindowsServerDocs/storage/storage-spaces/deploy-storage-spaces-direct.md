@@ -5,7 +5,7 @@ ms.author: stevenek
 ms.topic: get-started-article
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
-ms.date: 09/09/2020
+ms.date: 12/09/2020
 description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyperconverged infrastructure or converged (also known as disaggregated) infrastructure.
 ms.localizationpriority: medium
 ---
@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
 
 > [!Tip]
-> Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Stack HCI solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Stack HCI, see the [Azure Stack HCI Catalog](https://azure.microsoft.com/products/azure-stack/hci/catalog/).
+> Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Stack HCI solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Stack HCI, see the [Azure Stack HCI Catalog](https://aka.ms/azurestackhcicatalog).
 
 > [!Tip]
 > You can use Hyper-V virtual machines, including in Microsoft Azure, to [evaluate Storage Spaces Direct without hardware](storage-spaces-direct-in-vm.md). You may also want to review the handy [Windows Server rapid lab deployment scripts](https://aka.ms/wslab), which we use for training purposes.
