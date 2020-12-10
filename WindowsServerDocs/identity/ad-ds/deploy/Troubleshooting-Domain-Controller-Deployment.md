@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Troubleshooting Domain Controller Deployment"
 ms.assetid: 5ab76733-804d-4f30-bee6-cb672ad5075a
 title: Troubleshooting Domain Controller Deployment
 author: iainfoulds

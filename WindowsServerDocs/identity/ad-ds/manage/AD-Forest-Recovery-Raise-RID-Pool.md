@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Raising the value of available RID pools"
 title: AD Forest Recovery - Raising RID pools
 ms.author: daveba
 author: iainfoulds

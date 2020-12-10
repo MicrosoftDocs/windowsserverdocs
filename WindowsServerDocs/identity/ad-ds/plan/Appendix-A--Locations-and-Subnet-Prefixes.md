@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Appendix A: Locations and Subnet Prefixes"
 ms.assetid: 28aad3ba-f129-46f2-ba94-c3da831c9811
 title: Appendix A - Locations and Subnet Prefixes
 author: iainfoulds

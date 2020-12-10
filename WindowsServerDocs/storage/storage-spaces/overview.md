@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Storage Spaces overview"
 title: Storage Spaces overview
 ms.author: jgerend
 manager: dougkim

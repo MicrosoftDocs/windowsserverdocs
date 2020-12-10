@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: TPM Key Attestation"
 ms.assetid: 16a344a9-f9a6-4ae2-9bea-c79a0075fd04
 title: TPM Key Attestation
 author: iainfoulds

@@ -1,5 +1,6 @@
 ---
 title: Shielded VMs for tenants - Creating shielding data to define a shielded VM
+description: "Learn more about: Shielded VMs for tenants - Creating shielding data to define a shielded VM"
 ms.topic: article
 ms.assetid: 49f4e84d-c1f7-45e5-9143-e7ebbb2ef052
 manager: dongill

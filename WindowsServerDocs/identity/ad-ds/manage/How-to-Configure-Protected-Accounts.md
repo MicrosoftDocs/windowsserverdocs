@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Guidance about how to configure protected accounts"
 ms.assetid: 70c99703-ff0d-4278-9629-b8493b43c833
 title: Guidance about how to configure protected accounts
 author: iainfoulds

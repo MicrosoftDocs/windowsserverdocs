@@ -1,5 +1,6 @@
 ---
 title: Install HGS in an existing bastion forest
+description: "Learn more about: Install HGS in an existing bastion forest"
 ms.topic: article
 manager: dongill
 author: rpsqrd

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Simplified Administration Appendix"
 ms.assetid: c911d6c6-98c6-4532-b1db-5724e1ceb96c
 title: Simplified Administration Appendix
 author: iainfoulds

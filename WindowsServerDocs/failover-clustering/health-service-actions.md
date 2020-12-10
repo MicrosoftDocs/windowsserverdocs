@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Health Service actions"
 title: Health Service actions
 manager: eldenc
 ms.author: cosdar
