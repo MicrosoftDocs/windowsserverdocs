@@ -132,7 +132,7 @@ The Server Core installation option includes the following role services.
 |                                       | SQL Server Connectivity                                        | UpdateServices-DB       | N                     |
 
 > [!NOTE]
-> For **Remote Desktop Connection Broker and Remote Desktop Virtualization Host in a Server Core installation** on Windows Server 2019, see [Features we removed in this release](https://docs.microsoft.com/en-us/windows-server/get-started-19/removed-features-19#features-we-removed-in-this-release).
+> For **Remote Desktop Connection Broker and Remote Desktop Virtualization Host in a Server Core installation** on Windows Server 2019, see [Features we removed in this release](https://docs.microsoft.com/windows-server/get-started-19/removed-features-19#features-we-removed-in-this-release).
 
 ## Features included in Server Core
 The Server Core installation option includes the following features.
