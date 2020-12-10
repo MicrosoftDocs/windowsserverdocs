@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Finding Additional Resources for Enabling Advanced Features"
 ms.assetid: 3eb89320-d8b0-463f-b9e9-5a5b6e96e0b8
 title: Finding Additional Resources for Enabling Advanced Features
 author: iainfoulds

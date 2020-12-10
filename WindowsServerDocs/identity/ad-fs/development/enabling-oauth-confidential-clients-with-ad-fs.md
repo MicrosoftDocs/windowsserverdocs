@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Build a server side application using OAuth confidential clients with AD FS 2016 or later"
 ms.assetid: 5a64e790-6725-4099-aa08-8067d57c3168
 title: Build a server side application using OAuth confidential clients with AD FS 2016 or later
 author: billmath

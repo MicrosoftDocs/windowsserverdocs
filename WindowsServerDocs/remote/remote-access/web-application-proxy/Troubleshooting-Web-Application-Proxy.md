@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Troubleshooting Web Application Proxy"
 title: Troubleshooting Web Application Proxy
 ms.author: kgremban
 author: eross-msft

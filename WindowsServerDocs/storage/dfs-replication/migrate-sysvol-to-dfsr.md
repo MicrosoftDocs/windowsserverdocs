@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Migrate SYSVOL replication to DFS Replication"
 title: Migrate SYSVOL replication to DFS Replication
 ms.date: 07/02/2012
 author: JasonGerend

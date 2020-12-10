@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Comparison of Standard and Datacenter editions of Windows Server 2019"
 title: "Comparison of Standard and Datacenter editions of Windows Server 2019"
 ms.topic: article
 ms.assetid: c5ca3bfe-7ced-49f6-2932-80cab33fe914

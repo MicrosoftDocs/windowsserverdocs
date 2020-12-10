@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Redeploy remaining DCs"
 title: AD Forest Recovery - Redeploy remaining DCs
 ms.author: daveba
 author: iainfoulds

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Publishing Applications using AD FS Preauthentication"
 ms.assetid: 5f733510-c96e-4d3a-85d2-4407de95926e
 title: Publishing Applications using AD FS Preauthentication
 ms.author: kgremban

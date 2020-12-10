@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Identifying Your Functional Level Upgrade"
 ms.assetid: 231158d8-5e81-4630-b8d5-93fee16e0cd3
 title: Identifying Your Functional Level Upgrade
 author: iainfoulds

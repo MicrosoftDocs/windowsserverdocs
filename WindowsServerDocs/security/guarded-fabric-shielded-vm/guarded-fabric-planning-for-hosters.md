@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Guarded Fabric and Shielded VM Planning Guide for Hosters"
 title: Guarded Fabric and Shielded VM Planning Guide for Hosters
 ms.topic: article
 ms.assetid: 854defc8-99f8-4573-82c0-f484e0785859

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Troubleshoot Shielded VMs"
 title: Troubleshoot Shielded VMs
 ms.topic: article
 manager: dongill

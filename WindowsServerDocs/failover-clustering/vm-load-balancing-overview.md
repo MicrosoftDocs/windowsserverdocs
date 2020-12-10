@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Virtual Machine Load Balancing overview"
 ms.assetid: f0d4cecc-5a03-448c-bef9-86c4730b4eb0
 title: Virtual Machine Load Balancing overview
 ms.topic: article

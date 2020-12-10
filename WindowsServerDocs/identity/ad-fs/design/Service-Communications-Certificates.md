@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Service Communications Certificates"
 ms.assetid: 95e82190-68c5-4e40-87b1-f1bd816ef4e9
 title: Service Communications Certificates
 author: billmath

@@ -1,5 +1,6 @@
 ---
 title: Configure AD FS Banned IP Addesses
+description: "Learn more about: AD FS and banned IP addresses"
 author: billmath
 ms.author: billmath
 manager: mtillman
