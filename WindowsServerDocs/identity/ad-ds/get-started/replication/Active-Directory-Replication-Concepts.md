@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Active Directory Replication Concepts"
 ms.assetid: 4cc9c16c-1928-4dce-a3a8-6229be28eb65
 title: Active Directory Replication Concepts
 author: iainfoulds

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Performance history for network adapters"
 title: Performance history for network adapters
 ms.author: cosdar
 manager: eldenc

@@ -15,8 +15,7 @@ ms.date: 06/07/2019
 
 The **Server Core App Compatibility Feature on Demand** is an optional feature package that can be added to Windows Server 2019 Server Core installations, or Windows Server Semi-Annual Channel, at any time.
 
-For more information on Features on Demand (FOD), see [Features On
-Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
+For more information on Features on Demand (FOD), see [Features On Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
 
 ## Why install the App Compatibility FOD?
 
@@ -137,7 +136,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 - If you choose to also install the Internet Explorer 11 optional package, note that double clicking to open locally saved .htm files is not supported. However, you can **right-click** and choose **Open with IE**, or you can open it directly from Internet Explorer **File** -> **Open**.
 
-- To further enhance the app compatibility of Server Core with the App Compatibility FOD, the IIS Management Console has been added to Server Core as an optional component.  However, it is absolutely necessary to first add the App Compatibility FOD to use the IIS Management Console. IIS Management Console relies on the Microsoft Management Console (mmc.exe), which is only available on Server Core with the addition of the App Compatibility FOD.  Use Powershell [**Install-WindowsFeature**](/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature?view=win10-ps) to add IIS Management Console.
+- To further enhance the app compatibility of Server Core with the App Compatibility FOD, the IIS Management Console has been added to Server Core as an optional component.  However, it is absolutely necessary to first add the App Compatibility FOD to use the IIS Management Console. IIS Management Console relies on the Microsoft Management Console (mmc.exe), which is only available on Server Core with the addition of the App Compatibility FOD.  Use Powershell [**Install-WindowsFeature**](/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) to add IIS Management Console.
 
 - As a general point of guidance, when installing apps on Server Core (with or without these optional packages) it is sometimes necessary to use silent install options and instructions.
 

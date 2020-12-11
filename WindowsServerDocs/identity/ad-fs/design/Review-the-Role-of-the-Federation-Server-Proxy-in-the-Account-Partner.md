@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Review the Role of the Federation Server Proxy in the Account Partner"
 ms.assetid: 1b3a03c0-5558-4177-9b2f-e9d6ce3271cd
 title: Review the Role of the Federation Server Proxy in the Account Partner
 author: billmath

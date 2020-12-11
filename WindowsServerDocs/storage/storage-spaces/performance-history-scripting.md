@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Scripting with PowerShell and Storage Spaces Direct performance history"
 title: Scripting with Storage Spaces Direct performance history
 ms.author: cosdar
 manager: eldenc

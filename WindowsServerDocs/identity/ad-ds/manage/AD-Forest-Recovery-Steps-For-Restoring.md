@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Steps for Restoring the forest"
 title: AD Forest Recovery - Steps for Restoring the forest
 ms.author: daveba
 author: iainfoulds

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Claims-Aware Web Agent"
 ms.assetid: 551c1a0d-8d30-41b4-9c4a-35a3337dd3bc
 title: Configuring AD FS to Send Claims to an AD FS 1.x Claims-Aware Web Agent
 author: billmath

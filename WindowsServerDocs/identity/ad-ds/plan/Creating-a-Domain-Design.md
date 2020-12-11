@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Creating a Domain Design"
 ms.assetid: 2a25bf86-a8ec-4b1a-9cbb-924d5b574481
 title: Creating a Domain Design
 author: iainfoulds

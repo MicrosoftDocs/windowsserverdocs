@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Identify the problem"
 title: AD Forest Recovery - Identify the Problem
 ms.author: daveba
 author: iainfoulds

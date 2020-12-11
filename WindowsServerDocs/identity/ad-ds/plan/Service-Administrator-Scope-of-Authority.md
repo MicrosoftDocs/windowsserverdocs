@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Service Administrator Scope of Authority"
 ms.assetid: da7b6dcf-53ec-4394-88c0-c087d92f3893
 title: Service Administrator Scope of Authority
 author: iainfoulds

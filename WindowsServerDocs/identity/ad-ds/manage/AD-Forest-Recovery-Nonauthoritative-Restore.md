@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Performing a nonauthoritative restore of Active Directory Domain Services"
 title: AD Forest Recovery - Nonauthoritative restore
 ms.author: daveba
 author: iainfoulds

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Scenario: File Access Auditing"
 ms.assetid: 7be1f2cb-02d5-4209-ba79-edf496a88f47
 title: Scenario File Access Auditing
 author: billmath

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Performing a full server recovery"
 title: AD Forest Recovery - Performing a full server recovery
 ms.author: daveba
 author: iainfoulds

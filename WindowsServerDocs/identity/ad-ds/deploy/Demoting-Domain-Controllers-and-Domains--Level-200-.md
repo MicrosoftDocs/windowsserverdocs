@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Demoting Domain Controllers and Domains"
 ms.assetid: 65ed5956-6140-4e06-8d99-8771553637d1
 title: Demoting Domain Controllers and Domains (Level 200)
 author: iainfoulds

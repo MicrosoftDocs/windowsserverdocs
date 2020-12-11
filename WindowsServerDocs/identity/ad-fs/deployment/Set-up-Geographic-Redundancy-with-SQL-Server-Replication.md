@@ -1,5 +1,6 @@
 ---
 title: Setup Geographic Redundancy with SQL Server Replication
+description: "Learn more about: Setup Geographic Redundancy with SQL Server Replication"
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -109,7 +110,7 @@ Make sure that you created the publisher settings on the initial SQL Server as d
    ![Set up Geographic Redundancy](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql26.png) </br>
 
 4. On the **Merge Agent Location** page, select **Run each agent at its Subscriber \(pull subscriptions\)** \(the default\) and click **Next**.
-   ![Set up Geographic Redundancy](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql27.png) </br> This, along with Subscription Type below, determines the conflict resolution logic. \(For more information, see [Detect and Resolve Merge Replication Conflicts](/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution?view=sql-server-ver15). </br>
+   ![Set up Geographic Redundancy](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql27.png) </br> This, along with Subscription Type below, determines the conflict resolution logic. \(For more information, see [Detect and Resolve Merge Replication Conflicts](/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution). </br>
 
 5. On the **Subscribers** page, select **AdfsConfigurationV3** as the subscriber database and click **Next**.
    ![Set up Geographic Redundancy](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql28.png) </br>
@@ -125,7 +126,7 @@ Make sure that you created the publisher settings on the initial SQL Server as d
 
 9. On **Subscription Type**, choose **Client** and click **Next**.
 
-   Implications of this are documented [here](/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution?view=sql-server-ver15) and [here](/sql/relational-databases/replication/subscribe-to-publications?view=sql-server-ver15).  Essentially, we take the simple "first to publisher wins" conflict resolution and we do not need to republish to other subscribers.
+   Implications of this are documented [here](/sql/relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution) and [here](/sql/relational-databases/replication/subscribe-to-publications).  Essentially, we take the simple "first to publisher wins" conflict resolution and we do not need to republish to other subscribers.
    ![Set up Geographic Redundancy](media/Set-up-Geographic-Redundancy-with-SQL-Server-Replication/sql33.png) </br>
 
 10. On the **Wizard Actions** page, ensure **Create the subscription** is checked and click **Next**.
@@ -153,7 +154,7 @@ Make sure that you created the publisher settings on the initial SQL Server as d
 
 1.  Create a new login on the primary and replica SQL Server called CONTOSO\\sqlagent \(the name of the new domain user created and configured on the **Agent Security** page in the procedures above.\)
 
-2.  In SQL Server, right\-click the login you created, and select Properties, then under the **User Mapping** tab, map this login to **AdfsConfiguration** and **AdfsArtifact** databases with public and db\_genevaservice roles. Also map this login to distribution database and add db\_owner role for both distribution and adfsconfiguration tables.  Do this as applicable on both primary and replica SQL server. For more information, see [Replication Agent Security Model](/sql/relational-databases/replication/security/replication-agent-security-model?view=sql-server-ver15).
+2.  In SQL Server, right\-click the login you created, and select Properties, then under the **User Mapping** tab, map this login to **AdfsConfiguration** and **AdfsArtifact** databases with public and db\_genevaservice roles. Also map this login to distribution database and add db\_owner role for both distribution and adfsconfiguration tables.  Do this as applicable on both primary and replica SQL server. For more information, see [Replication Agent Security Model](/sql/relational-databases/replication/security/replication-agent-security-model).
 
 3.  Give the corresponding domain account read and write permissions on the share configured as distributor.  Make sure that you set read and write permissions both on the share permissions and the local file permissions.
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Simplified SMB Multichannel and Multi-NIC Cluster Networks"
 ms.assetid: a6343f1c-e9dd-4a02-91ad-39bd519d66cd
 title: Simplified SMB Multichannel and Multi-NIC Cluster Networks
 ms.topic: article
