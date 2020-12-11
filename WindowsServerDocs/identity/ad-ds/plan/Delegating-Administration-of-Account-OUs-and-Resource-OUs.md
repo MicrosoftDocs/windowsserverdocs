@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Delegating Administration of Account OUs and Resource OUs"
 ms.assetid: 19feca0e-a6d0-4d27-93b0-cb44f8c26484
 title: Delegating Administration of Account OUs and Resource OUs
 author: iainfoulds

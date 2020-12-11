@@ -157,7 +157,7 @@ Watch the video below for a complete walk-through of the process.
 
 14. Run [cluster validation tests](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) before moving on to the next step
 
-15. Start Windows PowerShell and use the [Test-SRTopology](/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.
+15. Start Windows PowerShell and use the [Test-SRTopology](/powershell/module/storagereplica/test-srtopology) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.
 
 16. Configure cluster-to-cluster storage replica.
     Grant access from one cluster to another cluster in both directions:

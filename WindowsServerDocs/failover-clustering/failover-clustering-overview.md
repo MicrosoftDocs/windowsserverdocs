@@ -1,6 +1,7 @@
 ---
 ms.assetid: c9844427-27cf-4d76-b5bb-e06368b092f7
 title: Failover Clustering
+description: "Learn more about: Failover Clustering in Windows Server"
 ms.topic: landing-page
 manager: lizross
 author: JasonGerend
@@ -36,7 +37,7 @@ Failover Clustering has many practical applications, including:
 
 |**Manage**  |  **Tools and settings**  |  **Community resources**       |
 | ------------- |  -------------- | --------------------- |
-| [Cluster-Aware Updating](cluster-aware-updating.md)    |   [Failover Clustering PowerShell Cmdlets](/powershell/module/failoverclusters/?view=win10-ps)      |  [High Availability (Clustering) Forum](https://go.microsoft.com/fwlink/p/?LinkId=230641)       |
-|  [Health Service](health-service-overview.md)   |   [Cluster Aware Updating PowerShell Cmdlets](/powershell/module/clusterawareupdating/?view=win10-ps)      | [Failover Clustering and Network Load Balancing Team Blog](https://blogs.msdn.com/b/clustering/)        |
+| [Cluster-Aware Updating](cluster-aware-updating.md)    |   [Failover Clustering PowerShell Cmdlets](/powershell/module/failoverclusters/)      |  [High Availability (Clustering) Forum](https://go.microsoft.com/fwlink/p/?LinkId=230641)       |
+|  [Health Service](health-service-overview.md)   |   [Cluster Aware Updating PowerShell Cmdlets](/powershell/module/clusterawareupdating/)      | [Failover Clustering and Network Load Balancing Team Blog](https://blogs.msdn.com/b/clustering/)        |
 |  [Cluster-domain migration](cluster-domain-migration.md)   |         |         |
 |  [Troubleshooting using Windows Error Reporting](troubleshooting-using-wer-reports.md)   |         |         |

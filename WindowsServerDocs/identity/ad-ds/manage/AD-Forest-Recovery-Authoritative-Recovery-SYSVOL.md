@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL"
 title: AD Forest Recovery - Authoritative sync of SYSVOL
 ms.author: daveba
 author: iainfoulds

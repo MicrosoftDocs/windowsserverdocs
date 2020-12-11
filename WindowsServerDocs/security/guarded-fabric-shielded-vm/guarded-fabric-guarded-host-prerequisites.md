@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Prerequisites for guarded hosts"
 title: Guarded host prerequisites
 ms.topic: article
 manager: dongill

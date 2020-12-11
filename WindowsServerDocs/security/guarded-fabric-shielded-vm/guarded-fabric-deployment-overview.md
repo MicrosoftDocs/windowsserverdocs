@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Quick start for guarded fabric deployment"
 title: Quick start for guarded fabric deployment
 ms.topic: article
 ms.assetid: e060e052-39a0-4154-90bb-b97cc6dde68e

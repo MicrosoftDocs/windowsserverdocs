@@ -1,6 +1,7 @@
 ---
 ms.assetid: 5052f13c-ff35-471d-bff5-00b5dd24f8aa
 title: Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016 or later
+description: "Learn more about: Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016 or later"
 author: billmath
 ms.author: billmath
 manager: mtillman
@@ -43,7 +44,7 @@ WebAPIOBO | Backend web api that is used by ToDoService to perform the requisite
 
 ## Setting up the development box
 
-This walk-through uses Visual Studio 2015. The project heavily uses Active Directory Authentication Library (ADAL). To learn about ADAL please read [Active Directory Authentication Library .NET](/dotnet/api/microsoft.identitymodel.clients.activedirectory?view=azure-dotnet)
+This walk-through uses Visual Studio 2015. The project heavily uses Active Directory Authentication Library (ADAL). To learn about ADAL please read [Active Directory Authentication Library .NET](/dotnet/api/microsoft.identitymodel.clients.activedirectory)
 
 The sample also uses SQL LocalDB v11.0. Install the SQL LocalDB prior to working on the sample.
 

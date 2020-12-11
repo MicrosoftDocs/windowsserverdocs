@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Upgrading AD RMS to Windows Server 2016"
 ms.assetid: e6fa9069-ec9c-4615-b266-957194b49e11
 title: Upgrading AD RMS to Windows Server 2016
 author: msmbaldwin

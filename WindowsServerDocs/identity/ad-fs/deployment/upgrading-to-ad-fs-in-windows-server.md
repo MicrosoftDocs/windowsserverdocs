@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Upgrading to AD FS in Windows Server 2016 using a WID database"
 ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
 title: Upgrading to AD FS in Windows Server 2016
 author: billmath

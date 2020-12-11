@@ -8,7 +8,9 @@ manager: lizross
 ms.author: helohr
 ms.date: 12/11/2020
 ms.localizationpriority: medium
+ms.custom: contperf-fy21q1
 ---
+
 # Get started with the Android client
 
 >Applies to: Android 6.0 and later

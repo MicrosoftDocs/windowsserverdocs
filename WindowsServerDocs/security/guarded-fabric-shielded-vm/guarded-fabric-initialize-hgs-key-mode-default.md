@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Initialize the HGS cluster using key mode in a new dedicated forest (default)"
 title: Initialize the HGS cluster using key mode in a new dedicated forest (default)
 ms.topic: article
 manager: dongill

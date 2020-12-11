@@ -1,5 +1,6 @@
 ---
 title: Deploying Roaming User Profiles
+description: "Learn more about: Deploying Roaming User Profiles"
 TOCTitle: Deploying Roaming User Profiles
 ms.topic: article
 author: JasonGerend
@@ -234,7 +235,7 @@ To specify a Start layout, do the following:
 
 5. (Optional) Enable first-time logon optimizations to make signing in faster for users. To do so, see [Apply policies to improve sign-in time](/windows/client-management/mandatory-user-profile#apply-policies-to-improve-sign-in-time).
 6. (Optional) Further decrease sign-in times by removing unnecessary apps from the Windows 10 base image you use to deploy client PCs. Windows Server 2019 and Windows Server 2016 don't have any pre-provisioned apps, so you can skip this step on server images.
-    - To remove apps, use the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) cmdlet in Windows PowerShell to uninstall the following applications. If your PCs are already deployed you can script the removal of these apps using the [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage?view=win10-ps).
+    - To remove apps, use the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage) cmdlet in Windows PowerShell to uninstall the following applications. If your PCs are already deployed you can script the removal of these apps using the [Remove-AppxPackage](/powershell/module/appx/remove-appxpackage).
 
       - Microsoft.windowscommunicationsapps\_8wekyb3d8bbwe
       - Microsoft.BingWeather\_8wekyb3d8bbwe

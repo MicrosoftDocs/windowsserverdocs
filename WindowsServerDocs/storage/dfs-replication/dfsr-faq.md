@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: DFS Replication: Frequently Asked Questions (FAQ)"
 title: DFS Replication - Frequently Asked Questions (FAQ)
 ms.date: 06/18/2014
 author: JasonGerend

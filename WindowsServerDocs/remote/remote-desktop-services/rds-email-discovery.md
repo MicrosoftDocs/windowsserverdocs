@@ -29,7 +29,7 @@ Now, follow these steps to set up email discovery:
 3. Enter a new DNS record with the following properties:
    - **Host:** _msradc
    - **Text:** \<RD Web Feed URL\>
-   - **TTL:** 300
+   - **TTL:** 300 seconds
 
    The names of the DNS records fields vary by domain name registrar, but this process will result in a TXT record named _msradc.\<domain_name\> (such as _msradc.contoso.com) that has a value of the full RD Web feed.
 

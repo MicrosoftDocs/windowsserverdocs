@@ -80,7 +80,7 @@ You can use the following example command to partition the zone scope contoso.co
 
 `Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "internal"`
 
-For more information, see [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
+For more information, see [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope)
 
 ### <a name="bkmk_records"></a>Add Records to the Zone Scopes
 
@@ -97,7 +97,7 @@ Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4A
 Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4Address "10.0.0.39” -ZoneScope "internal"
 `
 
-For more information, see [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
+For more information, see [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord).
 
 ### <a name="bkmk_policies"></a>Create the DNS Policies
 
@@ -115,7 +115,7 @@ In the following example command, 10.0.0.56 is the IP address on the private net
 
 `Add-DnsServerQueryResolutionPolicy -Name "SplitBrainZonePolicy" -Action ALLOW -ServerInterface "eq,10.0.0.56" -ZoneScope "internal,1" -ZoneName contoso.com`
 
-For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
+For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy).
 
 ## <a name="bkmk_recursion"></a>Example of DNS Selective Recursion Control
 
@@ -177,7 +177,7 @@ Set-DnsServerRecursionScope -Name . -EnableRecursion $False
 Add-DnsServerRecursionScope -Name "InternalClients" -EnableRecursion $True
 ```
 
-For more information, see [Add-DnsServerRecursionScope](/powershell/module/dnsserver/add-dnsserverrecursionscope?view=win10-ps)
+For more information, see [Add-DnsServerRecursionScope](/powershell/module/dnsserver/add-dnsserverrecursionscope)
 
 #### <a name="bkmk_recpolicy"></a>Create DNS Recursion Policies
 
@@ -193,7 +193,7 @@ You can use the following example command to configure DNS recursion policies.
 Add-DnsServerQueryResolutionPolicy -Name "SplitBrainRecursionPolicy" -Action ALLOW -ApplyOnRecursion -RecursionScope "InternalClients" -ServerInterfaceIP "EQ,10.0.0.39"
 ```
 
-For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
+For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy).
 
 Now the DNS server is configured with the required DNS policies for either a split-brain name server or a DNS server with selective recursion control enabled for internal clients.
 

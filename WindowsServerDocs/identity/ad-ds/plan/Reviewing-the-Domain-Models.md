@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Reviewing the Domain Models"
 ms.assetid: e727a33d-133b-43c9-b6a4-7c00f9cb6000
 title: Reviewing the Domain Models
 ms.author: daveba

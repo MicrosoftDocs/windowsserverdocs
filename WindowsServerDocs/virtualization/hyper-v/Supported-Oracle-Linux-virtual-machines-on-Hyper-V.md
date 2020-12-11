@@ -1348,7 +1348,7 @@ This series only has 64-bit kernels.
 
 See Also
 
-* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
+* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware)
 
 * [Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

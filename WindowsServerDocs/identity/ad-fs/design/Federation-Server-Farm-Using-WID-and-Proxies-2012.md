@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Federation Server Farm Using WID and Proxies"
 ms.assetid: 8890ccc9-068d-4da2-bd51-8a2964173ff1
 title: AD FS Federation Server Farm Using WID and Proxies
 author: billmath

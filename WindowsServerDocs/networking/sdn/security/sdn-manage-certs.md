@@ -51,7 +51,7 @@ When you create self\-signed certificates, you can use the following guidelines.
 
 #### Multiple node
 
-You can use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps) Windows PowerShell command to create a self\-signed certificate.
+You can use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
 
 **Syntax**
 
@@ -67,7 +67,7 @@ New-SelfSignedCertificate -KeyUsageProperty All -Provider "Microsoft Strong Cryp
 
 #### Single node
 
-You can use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps) Windows PowerShell command to create a self\-signed certificate.
+You can use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
 
 **Syntax**
 
