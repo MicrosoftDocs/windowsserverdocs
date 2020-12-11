@@ -1,6 +1,6 @@
 ---
 title: What's New in Windows Server
-description: What are the new features in compute, identity, management, automation, networking, security, storage.
+description: What are the new features in compute, identity, management, automation, networking, security, and storage.
 ms.date: 10/22/2020
 ms.topic: article
 author: jasongerend
