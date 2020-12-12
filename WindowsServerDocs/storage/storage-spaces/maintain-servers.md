@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Taking a Storage Spaces Direct server offline for maintenance"
 title: Taking a Storage Spaces Direct server offline for maintenance
 ms.author: eldenc
 manager: eldenc

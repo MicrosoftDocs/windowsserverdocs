@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Initialize HGS using Admin-trusted attestation"
 title: Initialize HGS using Admin-trusted attestation
 ms.topic: article
 manager: dongill

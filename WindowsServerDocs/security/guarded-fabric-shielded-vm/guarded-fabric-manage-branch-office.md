@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Branch office considerations"
 title: Branch Office Considerations
 ms.topic: article
 manager: dongill

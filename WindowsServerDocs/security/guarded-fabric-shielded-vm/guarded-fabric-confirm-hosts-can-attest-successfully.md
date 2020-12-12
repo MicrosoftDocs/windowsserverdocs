@@ -1,5 +1,6 @@
 ---
 title: Confirm guarded hosts can attest
+description: "Learn more about: Confirm guarded hosts can attest"
 ms.topic: article
 ms.assetid: 7485796b-b840-4678-9b33-89e9710fbbc7
 manager: dongill

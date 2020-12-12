@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: SMB: File and printer sharing ports should be open"
 title: SMB - File and printer sharing ports should be open
 ms.date: 07/02/2012
 author: JasonGerend

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Frequently Asked Questions about Storage Replica"
 title: Frequently Asked Questions about Storage Replica
 manager: siroy
 ms.author: nedpyle

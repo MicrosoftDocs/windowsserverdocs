@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Executive Summary"
 ms.assetid: 85ca191c-0cc7-4453-a72c-42060ddf2ea2
 title: Executive Summary
 author: iainfoulds

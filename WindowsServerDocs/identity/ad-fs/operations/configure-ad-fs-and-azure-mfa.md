@@ -1,6 +1,7 @@
 ---
 ms.assetid: 24c4b9bb-928a-4118-acf1-5eb06c6b08e5
 title: Configure AD FS 2016 and Azure MFA
+description: "Learn more about: Configure Azure MFA as authentication provider with AD FS"
 ms.author: billmath
 author: billmath
 manager: mtillman

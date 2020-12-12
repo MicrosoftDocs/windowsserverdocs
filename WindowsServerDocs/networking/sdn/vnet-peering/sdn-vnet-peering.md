@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Virtual network peering"
 title: Virtual network peering
 manager: grcusanz
 ms.topic: get-started-article

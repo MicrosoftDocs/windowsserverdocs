@@ -15,7 +15,7 @@ By default, Windows Integrated Authentication (WIA) is enabled in Active Directo
 AD FS 2016 now has an improved default setting that enables the Edge browser to do WIA while not also (incorrectly) catching Windows Phone as well:
 
 ```
-=~Windows\s*NT.*Edge
+=~Windows\s*NT.*Edg.*
 ```
 
 The above means you no longer have to configure individual user agent strings to support common Edge scenarios, even though they are updated quite often.
