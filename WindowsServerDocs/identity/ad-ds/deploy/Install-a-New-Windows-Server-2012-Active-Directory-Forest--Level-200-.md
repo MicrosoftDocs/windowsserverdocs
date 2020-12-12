@@ -226,7 +226,7 @@ The following diagram illustrates the Active Directory Domain Services configura
 ![Diagram that illustrates the Active Directory Domain Services configuration process, in the case where you have previously installed the AD DS role and started the Active Directory Domain Services Configuration Wizard using Server Manager. ](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/adds_forestdeploy2.png)
 
 #### Deployment Configuration
-![Screenshot that shows the Deployment Configuration page in the Active Directory Domain Services Configuration Wizard.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_AddNewForest.png)
+![Screenshot that shows the Deployment Configuration.](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_AddNewForest.png)
 
 Server Manager begins every domain controller promotion with the **Deployment Configuration** page. The remaining options and required fields change on this page and subsequent pages, depending on which deployment operation you select.
 

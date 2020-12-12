@@ -21,15 +21,15 @@ Use the following steps to perform an authoritative synchronization of SYSVOL (i
 1. Open Active Directory Users and Computers.
 2. Click **View**, and then select **Users, Contacts, Groups, and Computers as containers** and **Advanced Features**.
 
-   ![SYSVOL](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol1.png)
+   ![Screenshot that shows the Advanced Features option and Users, Contacts, Groups, and Computers option selected.](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol1.png)
 
 3. In the tree-view, click **Domain Controllers**, the name of the DC you restored, **DFSR-LocalSettings**, and then **Domain System Volume**.
 
-   ![SYSVOL](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol2.png)
+   ![Screenshot that highlights the Domain System Volume folder.](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol2.png)
 
 4. In the Details pane, right-click **SYSVOL Subscription**, click **Properties**, and click **Attribute Editor**.
 
-   ![SYSVOL](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol3.png)
+   ![Screenshot that shows the Attribute Editor tab in the SYSVOL Subscriptions Properties dialog box.](media/AD-Forest-Recovery-Authoritative-Recovery-SYSVOL/sysvol3.png)
 
 5. Click **msDFSR-Options**, click **Edit**, type **1**, and click **OK**
 

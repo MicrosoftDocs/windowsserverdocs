@@ -52,7 +52,7 @@ For information about Adprep and previous operating system forest preparation, s
 
 ## Server Manager AD DS Integration
 
-![simplified administration](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_Dashboard.png)
+![Screenshot that shows the Server Manager Dashboard.](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_Dashboard.png)
 
 Server Manager acts as a hub for server management tasks. Its dashboard-style appearance periodically refreshes views of installed roles and remote server groups. Server Manager provides centralized management of local and remote servers, without the need for console access.
 
@@ -68,7 +68,7 @@ These views include:
 
 ## Active Directory Administrative Center Recycle Bin
 
-![simplified administration](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_ADAC.png)
+![Screenshot that shows the delete objects in the Active Directory Administrative Center Recycle Bin.](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_ADAC.png)
 
 Windows Server 2008 R2 introduced the Active Directory Recycle Bin, which recovers deleted Active Directory objects without restoring from backup, restarting the AD DS service, or rebooting domain controllers.
 
@@ -78,7 +78,7 @@ For information about the Active Directory [Recycle Bin, see Active Directory Re
 
 ## Active Directory Administrative Center Fine-Grained Password Policy
 
-![simplified administration](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_FGPP.png)
+![Screenshot that shows the Active Directory Administrative Center Fine-Grained Password Policy graphical interface.](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_FGPP.png)
 
 Windows Server 2008 introduced the Fine-Grained Password policy, which allows administrators to configure multiple password and account lockout policies per domain. This allows domains a flexible solution to enforce more or less restrictive password rules, based on users and groups. It had no managerial interface and required administrators to configure it using Ldp.exe or Adsiedit.msc. Windows Server 2008 R2 introduced the Active Directory module for Windows PowerShell, which granted administrators a command-line interface to FGPP.
 
@@ -88,7 +88,7 @@ For information about the Fine-Grained Password Policy, see [AD DS Fine-Grained 
 
 ## Active Directory Administrative Center Windows PowerShell History Viewer
 
-![simplified administration](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_HistoryViewer.png)
+![Screenshot that shows the Active Directory Administrative Center Windows PowerShell History Viewer.](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_HistoryViewer.png)
 
 Windows Server 2008 R2 introduced the Active Directory Administrative Center, which superseded the older Active Directory Users and Computers snap-in created in Windows 2000. The Active Directory Administrative Center creates a graphical administrative interface to the then-new Active Directory module for Windows PowerShell.
 
@@ -96,7 +96,7 @@ While the Active Directory module contains over a hundred cmdlets, the learning 
 
 ## AD Replication Windows PowerShell
 
-![simplified administration](media/AD-DS-Simplified-Administration/ADDS_PSNewADReplSite.png)
+![Screenshot that shows how to use AD Replication cmdlets.](media/AD-DS-Simplified-Administration/ADDS_PSNewADReplSite.png)
 
 Windows Server 2012 adds additional Active Directory replication cmdlets to the Active Directory Windows PowerShell module. These allow configuration of new or existing sites, subnets, connections, site links, and bridges. They also return Active Directory replication metadata, replication status, queuing, and up-to-dateness version vector information. The introduction of the replication cmdlets - combined with the deployment and other existing AD DS cmdlets - makes it possible to administer a forest using Windows PowerShell alone. This creates new opportunities for administrators wishing to provision and manage Windows Server 2012 without a graphical interface, which then reduces the operating system's attack surface and servicing requirements. This is especially important when deploying servers into high security networks such as Secret Internet Protocol Router (SIPR) and corporate DMZs.
 
@@ -160,7 +160,7 @@ Prerequisite checking ensures that certain conditions are true. These conditions
 
 The AD Preparation code formerly housed in ADprep.exe is refactored into adprep.dll. This allows both ADPrep.exe and the ADDSDeployment Windows PowerShell module to use the library for the same tasks and have the same capabilities. Adprep.exe is included with the installation media but automated processes do not call it directly - only an Administrator runs it manually. It can only run on Windows Server 2008 x64 and later operating systems. Ldifde.exe and csvde.exe also have refactored versions as DLLs that are loaded by the preparation process. Schema extension still uses the signature-verified LDF files, like in previous operating system versions.
 
-![simplified administration](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_AdprepDLLs.png)
+![Diagram that shows how ADprep.dll allows both ADPrep.exe and the ADDSDeployment Windows PowerShell module to use the library for the same tasks and have the same capabilities.](media/AD-DS-Simplified-Administration/ADDS_SMI_TR_AdprepDLLs.png)
 
 > [!IMPORTANT]
 > There is no 32-bit Adprep32.exe tool for Windows Server 2012. You must have at least one Windows Server 2008 x64, Windows Server 2008 R2, or Windows Server 2012 computer, running as a domain controller, member server, or in a workgroup, to prepare the forest and domain. Adprep.exe does not run on Windows Server 2003 x64.
