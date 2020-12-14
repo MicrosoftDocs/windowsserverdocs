@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 12/01/2020
+ms.date: 12/15/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -19,7 +19,15 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.1524        |1.2.945                   |
-|Insider    |1.2.1524        |1.2.945                   |
+|Insider    |1.2.1526        |1.2.945                   |
+
+## Updates for version 1.2.1526 (Insiders)
+
+*Date published: 12/15/2020*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Added support for the screen capture protection feature for Windows 10 endpoints. To learn more, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices).
 
 ## Updates for version 1.2.1524
 
