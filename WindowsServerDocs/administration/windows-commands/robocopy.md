@@ -31,7 +31,7 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 |--|--|
 | `<source>` | Specifies the path to the source directory. |
 | `<destination>` | Specifies the path to the destination directory. |
-| `<file>` | Specifies the file or files to be copied. Wildcard characters (**&#42;** or **?**) are supported. If you don't specify this parameter, `*.` is used as the default value. |
+| `<file>` | Specifies the file or files to be copied. Wildcard characters (**&#42;** or **?**) are supported. If you don't specify this parameter, `*.*` is used as the default value. |
 | `<options>` | Specifies the options to use with the **robocopy** command, including **copy**, **file**, **retry**, **logging**, and **job** options. |
 
 #### Copy options
