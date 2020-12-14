@@ -102,6 +102,7 @@
 #### [Privacy settings for managed apps and desktops](clients/remote-privacy-settings.md)
 ### Known issues
 #### [General Remote Desktop connection troubleshooting](troubleshoot/rdp-error-general-troubleshooting.md)
+#### [Credential limit per app](credential-limit.md)
 #### [Clients can't connect and get the "Class not registered" error](troubleshoot/rdp-error-class-not-registered.md)
 #### [Clients can't connect and see "No licenses available" error](troubleshoot/rdp-error-no-licenses-available.md)
 #### [User can't authenticate or must authenticate twice](troubleshoot/cannot-authenticate-or-must-authenticate-twice.md)
