@@ -146,7 +146,7 @@ Add-ADGroupMember -Identity group1 -Member test1
 #### To create an organizational unit
 
 1. Right click the Windows PowerShell icon, click **Run as Administrator** and type **dsac.exe** to open ADAC.
-2. Click **Manage**, click **Add Navigation Nodes** and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then click **OK
+2. Click **Manage**, click **Add Navigation Nodes** and select the appropriate target domain in the **Add Navigation Nodes** dialog box and then click **OK**.
 3. In the **Tasks** pane, click **New** and then click **Organizational Unit**.
 4. Enter the following information under **Organizational Unit** and then click **OK**:
 
