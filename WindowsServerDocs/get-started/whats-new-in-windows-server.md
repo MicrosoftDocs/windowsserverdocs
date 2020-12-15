@@ -21,7 +21,8 @@ Long-Term Servicing Channel (LTSC) releases:
 Semi-Annual Channel releases:
 
 - [What's New in Windows Server, versions 2004 and 20H2](whats-new-in-windows-server-2004.md)
-- [What's New in Windows Server, versions 1903 and 1909](../get-started-19/whats-new-in-windows-server-1903-1909.md) (Reached end of servicing as of December 8, 2020)
+- [What's New in Windows Server, version 1909](../get-started-19/whats-new-in-windows-server-1903-1909.md) 
+- [What's New in Windows Server, version 1903](../get-started-19/whats-new-in-windows-server-1903-1909.md) (Reached end of servicing as of December 8, 2020)
 - [What's New in Windows Server, version 1809](whats-new-in-windows-server-1809.md) (Reached end of servicing as of November 10, 2020)
 - [What's New in Windows Server, version 1803](whats-new-in-windows-server-1803.md) (Reached end of servicing as of November 12, 2019)
 - [What's New in Windows Server, version 1709](whats-new-in-windows-server-1709.md) (Reached end of servicing as of April 9, 2019)
