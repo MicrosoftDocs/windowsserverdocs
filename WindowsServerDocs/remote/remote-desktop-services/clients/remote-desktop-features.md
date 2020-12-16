@@ -1,6 +1,6 @@
 ---
-title: Remote Desktop - feature comparison
-description: earn how the different RD apps compare when it comes to features.
+title: Remote Desktop clients feature comparison
+description: Learn how the different Remote Desktop clients compare when it comes to features.
 ms.topic: article
 author: heidilohr
 manager: lizross
