@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 12/01/2020
+ms.date: 12/16/2020
 ms.localizationpriority: medium
 ---
 
@@ -32,6 +32,4 @@ The following table compares the features of each client.
 
 ## Other resources
 
-If you're looking for information about device redirection, check out [Compare the clients: redirection](remote-desktop-app-compare.md).
-
-If you're looking for information about graphics and codec support, see [insert article here]().
+If you're looking for information about device redirections, check out [Compare the clients: redirections](remote-desktop-app-compare.md).
