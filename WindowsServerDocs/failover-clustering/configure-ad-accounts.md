@@ -151,7 +151,7 @@ The minimum group membership required to complete the following procedure depend
 
    6.  In the **Permission Entry for***container* dialog box, locate the **Create Computer objects** and **Read All Properties** permissions, and make sure that the **Allow** check box is selected for each one.
 
-       ![Permission Entry dialog box](media/configure-ad-accounts/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
+       ![Screenshot that shows Create Computer objects option set to Allow. ](media/configure-ad-accounts/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
 
 ## Steps for prestaging the cluster name account
 
@@ -203,7 +203,7 @@ Membership in the **Domain Admins** group, or equivalent, is the minimum require
 
     5.  Make sure that the user account that you just added is selected, and then, next to **Full Control**, select the **Allow** check box.
 
-        ![Permission Entry dialog box](media/configure-ad-accounts/Cc731002.fffaafe2-a494-498b-974c-8f9d70f7103b(WS.10).gif)
+        ![Screenshot that shows the Security tab in the Cluster1 Properties dialog box.](media/configure-ad-accounts/Cc731002.fffaafe2-a494-498b-974c-8f9d70f7103b(WS.10).gif)
 
 ## Steps for prestaging an account for a clustered service or application
 
@@ -301,7 +301,7 @@ Membership in the **Domain Admins** group, or equivalent, is the minimum require
 
 9. For the cluster name account (also known as the cluster name object or CNO), ensure that **Allow** is selected for the **Create Computer objects** and **Read All Properties** permissions.
 
-   ![Permission Entry dialog box](media/configure-ad-accounts/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
+   ![Screenshot that shows the Permission Entry dialog box with the Create Computer objects option set to Allow.](media/configure-ad-accounts/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
 
 10. Click **OK** until you have returned to the **Active Directory Users and Computers** snap-in.
 
