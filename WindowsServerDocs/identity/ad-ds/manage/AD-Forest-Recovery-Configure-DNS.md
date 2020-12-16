@@ -31,13 +31,13 @@ Complete the installation and configuration steps below.
 5. On the **Server Roles** screen select **DNS Server**, if prompted click **Add Features** and click **Next**.
 6. On the **Features** screen click **Next**.
 7. Read the information on the **DNS Server** page, and then click **Next**.
-   ![DNS Server](media/AD-Forest-Recovery-Configure-DNS/dns1.png)
+   ![Screenshot that shows the DNS Server page.](media/AD-Forest-Recovery-Configure-DNS/dns1.png)
 8. On the **Confirmation** page, verify that the DNS Server role will be installed, and then click **Install**.
 
 ### To configure the DNS Server service
 
 1. Open Server Manager, click **Tools** and click **DNS**.
-   ![DNS Server](media/AD-Forest-Recovery-Configure-DNS/dns2.png)
+   ![Screenshot that shows the DNS object.](media/AD-Forest-Recovery-Configure-DNS/dns2.png)
 2. Create DNS zones for the same DNS domain names that were hosted on the DNS servers before the critical malfunction. For more information, see Add a Forward Lookup Zone ([https://go.microsoft.com/fwlink/?LinkId=74574](https://go.microsoft.com/fwlink/?LinkId=74574)).
 3. Configure the DNS data as it existed before the critical malfunction. For example:
 

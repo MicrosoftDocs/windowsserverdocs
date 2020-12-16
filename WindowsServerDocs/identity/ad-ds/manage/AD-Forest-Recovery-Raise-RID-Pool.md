@@ -31,15 +31,15 @@ When you increase the value of the large integer, you increase the value of the 
 
 1. Open Server Manager, click **Tools** and click **ADSI Edit**.
 2. Right-click, select **Connect to** and connect do the Default Naming Context and click **OK**.
-   ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi1.png)
+   ![Screenshot that shows how to connect to the Default Naming Context](media/AD-Forest-Recovery-Raise-RID-Pool/adsi1.png)
 3. Browse to the following distinguished name path: **CN=RID Manager$,CN=System,DC=<domain name>**.
-   ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi2.png)
+   ![Screenshot that shows how to browse to the distinguished name path.](media/AD-Forest-Recovery-Raise-RID-Pool/adsi2.png)
 3. Right-click and select the properties of CN=RID Manager$.
 4. Select the attribute **rIDAvailablePool**, click **Edit**, and then copy the large integer value to the clipboard.
-   ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi3.png)
+   ![Screenshot that shows the selected rIDAvailablePool attribute.](media/AD-Forest-Recovery-Raise-RID-Pool/adsi3.png)
 5. Start calculator, and from the **View** menu, select **Scientific Mode**.
 6. Add 100,000 to the current value.
-   ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi4.png)
+   ![Screenshot that shows where to add 100,000 to the current value.](media/AD-Forest-Recovery-Raise-RID-Pool/adsi4.png)
 7. Using ctrl-c, or the **Copy** command from the **Edit** menu, copy the value to the clipboard.
 8. In the edit dialog of adsiedit, paste this new value.
    ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi5.png)

@@ -46,22 +46,22 @@ To create a group to enable and disable management accounts, perform the followi
 
 1.  In the OU structure where you will be housing the management accounts, right-click the OU where you want to create the group, click **New** and click **Group**.
 
-    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_115.png)
+    ![Screenshot that shows how to select the Group menu option.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_115.png)
 
 2.  In the **New Object - Group** dialog box, enter a name for the group. If you plan to use this group to "activate" all management accounts in your forest, make it a universal security group. If you have a single-domain forest or if you plan to create a group in each domain, you can create a global security group. Click **OK** to create the group.
 
-    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_116.png)
+    ![Screenshot that shows where to enter the group name in the New Object - Group dialog box.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_116.png)
 
 3.  Right-click the group you just created, click **Properties**, and click the **Object** tab. In the group's **Object property** dialog box, select **Protect object from accidental deletion**, which will not only prevent otherwise-authorized users from deleting the group, but also from moving it to another OU unless the attribute is first deselected.
 
-    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_117.png)
+    ![Screenshot that shows the Objec tab.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_117.png)
 
     > [!NOTE]
     > If you have already configured permissions on the group's parent OUs to restrict administration to a limited set of users, you may not need to perform the following steps. They are provided here so that even if you have not yet implemented limited administrative control over the OU structure in which you've created this group, you can secure the group against modification by unauthorized users.
 
 4.  Click the **Members** tab, and add the accounts for members of your team who will be responsible for enabling management accounts or populating protected groups when necessary.
 
-    ![creating management accounts](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_118.png)
+    ![Screenshot that shows the accounts on the Members tab.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_118.png)
 
 5.  If you have not already done so, in the **Active Directory Users and Computers** console, click **View** and select **Advanced Features**. Right-click the group you just created, click **Properties**, and click the **Security** tab. On the **Security** tab, click **Advanced**.
 
