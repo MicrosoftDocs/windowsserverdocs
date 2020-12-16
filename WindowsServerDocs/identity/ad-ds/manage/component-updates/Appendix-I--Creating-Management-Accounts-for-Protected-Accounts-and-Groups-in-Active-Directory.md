@@ -202,7 +202,7 @@ To create the management accounts, perform the following steps:
 
 27. Click **OK**, **OK** again in the **Advanced Security Settings** dialog box.
 
-    ![Screenshot that shows the Advanced Security Settings dialog box.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_133.png)
+    ![Screenshot that shows the OK button in the Advanced Security Settings dialog box.](media/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory/SAD_133.png)
 
     > [!NOTE]
     > The **userAccountControl** attribute controls multiple account configuration options. You cannot grant permission to change only some of the configuration options when you grant write permission to the attribute.
