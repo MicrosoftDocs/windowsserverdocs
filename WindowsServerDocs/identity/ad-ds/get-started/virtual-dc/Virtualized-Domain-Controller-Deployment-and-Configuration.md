@@ -622,7 +622,7 @@ Rename-VM
 
 For example, here the exported VM DC2-CLONED is imported using its automatically determined XML file, then renamed immediately to its new VM name DC5-CLONEDFROMDC2:
 
-![Screenshot that shows ](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSImportVM.png)
+![Screenshot of a terminal window that shows the renamed file.](media/Virtualized-Domain-Controller-Deployment-and-Configuration/ADDS_VDC_PSImportVM.png)
 
 Remember to remove any imported snapshots, using the following cmdlets:
 

@@ -94,7 +94,7 @@ For a deeper explanation of the recycle bin's architecture and processing rules,
 
 The Active Directory Administrative Center artificially limits the default number of objects returned from a container to 20,000 objects. You can raise this limit as high as 100,000 objects by clicking the **Manage** menu, then **Management List Options**.
 
-![Screenshot that shows how to raise the limit of the number of objects returned from a container by selecting the Manage > Management List Options menu option.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_MgmtList.png)
+![Screenshot that shows how to raise the limit of the number of objects returned from a container by selecting the Management List Options menu option.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_MgmtList.png)
 
 #### Restoration
 
@@ -254,7 +254,7 @@ Fine-Grained Password Policy cmdlet functionality did not change between the Win
 
 The Active Directory Administrative Center also enables you to locate the resultant set of applied FGPP for a specific user. Right click any user and click **View resultant password settings...** to open the *Password Settings* page that applies to that user through implicit or explicit assignment:
 
-![Screenshot that highlights the View resultant password settings... menu option.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RSOP.png)
+![Screenshot that highlights the View resultant password settings menu option.](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RSOP.png)
 
 Examining the **Properties** of any user or group shows the **Directly Associated Password Settings**, which are the explicitly assigned FGPPs:
 
