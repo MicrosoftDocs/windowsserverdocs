@@ -1,5 +1,5 @@
 ---
-title: Administrative tools and logon types reference
+title: Administrative tools and logon types reference - Windows Server
 description: Identify the risk of credential exposure associated with different administrative tools
 
 ms.topic: reference
@@ -82,3 +82,7 @@ Column definitions:
 
 > [!NOTE]
 > For more information about Logon Types, see [SECURITY_LOGON_TYPE enumeration](/windows/win32/api/ntsecapi/ne-ntsecapi-security_logon_type).
+
+Next steps
+
+[AD DS Design and Planning](../ad-ds/plan/AD-DS-Design-and-Planning.md)
