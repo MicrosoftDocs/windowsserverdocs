@@ -144,7 +144,7 @@ You can create a new federation server farm by using either a new or existing gM
 4.  On the **Specify Farm** page, provide the name of the primary federation server in a farm that uses WID or specify the database host name and the database instance name of an existing federation server farm that uses SQL Server.
 
     > [!WARNING]
-    > In Windows Server&reg; 2012 R2, there is a workaround to specify the default instance of SQL Server. The workaround is to not use the user interface. Instead, use the steps in [To configure the first federation server in a new federation server farm via Windows PowerShell](#to-configure-the-first-federation-server-in-a-new-federation-server-farm-via-windows-powerShell).
+    > In Windows Server&reg; 2012 R2, there is a workaround to specify the default instance of SQL Server. The workaround is to not use the user interface. Instead, use the steps in [To configure the first federation server in a new federation server farm via Windows PowerShell](#to-configure-the-first-federation-server-in-a-new-federation-server-farm-via-windows-powershell).
 
     > [!IMPORTANT]
     > If you want to create an AD FS farm and use SQL Server to store your configuration data, you can use SQL Server 2008 and newer versions, including SQL Server 2012.
