@@ -1,6 +1,6 @@
 ---
 title: "Use Remote Web Access in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how Remote Web Access enables you to access file/folders and computers on your network via a web browser from anywhere with Internet connectivity.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47ea21a0-5e05-4b4b-8fa4-338c82601276

@@ -100,6 +100,9 @@ dnscmd [<servername>] /config <parameter>
 
 #### Parameters
 
+> [!NOTE]
+> This article contains references to the term slave, a term that Microsoft no longer uses. When the term is removed from the software, we’ll remove it from this article.
+
 | Parameters | Description |
 | ---------- | ----------- |
 | `<servername>` | Specifies the DNS server that you are planning to manage, represented by local computer syntax, IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |

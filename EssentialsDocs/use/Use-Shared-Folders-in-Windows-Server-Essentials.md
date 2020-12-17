@@ -1,6 +1,6 @@
 ---
 title: "Use Shared Folders in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about your shared folders that are located on your server and how they provide a central location for all of your data and files.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: cb7f3d7d-4225-409a-9f6b-34a106e8dd24
