@@ -83,6 +83,6 @@ Column definitions:
 > [!NOTE]
 > For more information about Logon Types, see [SECURITY_LOGON_TYPE enumeration](/windows/win32/api/ntsecapi/ne-ntsecapi-security_logon_type).
 
-Next steps
+**Next steps**
 
 [AD DS Design and Planning](../ad-ds/plan/AD-DS-Design-and-Planning.md)
