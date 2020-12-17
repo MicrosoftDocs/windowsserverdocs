@@ -7153,7 +7153,7 @@
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/manage/wsus-tools.md",
       "redirect_url": "/windows-server/administration/windows-server-update-services/manage/wsus-tools",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/plan/plan-your-wsus-deployment.md",
