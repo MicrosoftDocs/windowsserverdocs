@@ -16,17 +16,12 @@ manager: mtillman
 The following guides provide information about how to migrate to Windows Server Essentials from an existing installation of Windows Small Business Server or Windows Server Essentials, and include information about how to prepare and plan for specific Windows Server Essentials migration scenarios.
 
 ## Migrate to Windows Server Essentials
- To avoid problems while migrating your existing server to  Windows Server Essentials, read the migration guide before you begin the migration.
 
+To avoid problems while migrating your existing server to  Windows Server Essentials, read the migration guide that applies to your business scenario before you begin the migration.
 
 -   [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)
 
 -   [Transition to Windows Server 2012 R2 Standard](Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)
-
-
-## Migrate to Windows Server Essentials
- To avoid problems while migrating your existing server to  Windows Server Essentials, read the migration guide that applies to your business scenario before you begin the migration.
-
 
 -   [Transition to Windows Server 2012 Standard](Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)
 

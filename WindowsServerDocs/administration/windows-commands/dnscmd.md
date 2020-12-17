@@ -169,7 +169,7 @@ dnscmd /config <parameters>
 | /forwardertimeout `<zonename>` | Determines how many seconds a DNS zone waits for a forwarder to respond before trying another forwarder. This value overrides the value that is set at the server level. |
 | /norefreshinterval `<zonename>` | Sets a time interval for a zone during which no refreshes can dynamically update DNS records in a specified zone. |
 | /refreshinterval `<zonename>` | Sets a time interval for a zone during which refreshes can dynamically update DNS records in a specified zone. |
-| /securesecondaries `<zonename>` | Determines which secondary servers can receive zone updates from the master server for this zone. |
+| /securesecondaries `<zonename>` | Determines which secondary servers can receive zone updates from the primary server for this zone. |
 
 ## dnscmd /createbuiltindirectorypartitions command
 
@@ -387,7 +387,7 @@ dnscmd [<servername>] /info [<settings>]
 
 ## dnscmd /ipvalidate command
 
-Tests whether an IP address identifies a functioning DNS server or whether the DNS server can act as a forwarder, a root hint server, or a master server for a specific zone.
+Tests whether an IP address identifies a functioning DNS server or whether the DNS server can act as a forwarder, a root hint server, or a primary server for a specific zone.
 
 ### Syntax
 
@@ -400,7 +400,7 @@ dnscmd [<servername>] /ipvalidate <context> [<zonename>] [[<IPaddress>]]
 | Parameters | Description |
 | ---------- | ----------- |
 | `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
-| `<context>` | Specifies the type of test to perform. You can specify any of the following tests:<ul><li>**/dnsservers** - Tests that the computers with the addresses that you specify are functioning DNS servers.</li><li>**/forwarders** - Tests that the addresses that you specify identify DNS servers that can act as forwarders.</li><li>**/roothints** - Tests that the addresses that you specify identify DNS servers that can act as root hint name servers.</li><li>**/zonemasters** - Tests that the addresses that you specify identify DNS servers that are master servers for *zonename*. |
+| `<context>` | Specifies the type of test to perform. You can specify any of the following tests:<ul><li>**/dnsservers** - Tests that the computers with the addresses that you specify are functioning DNS servers.</li><li>**/forwarders** - Tests that the addresses that you specify identify DNS servers that can act as forwarders.</li><li>**/roothints** - Tests that the addresses that you specify identify DNS servers that can act as root hint name servers.</li><li>**/zonemasters** - Tests that the addresses that you specify identify DNS servers that are primary servers for *zonename*. |
 | `<zonename>` | Identifies the zone. Use this parameter with the **/zonemasters** parameter. |
 | `<IPaddress>` | Specifies the IP addresses that the command tests. |
 
@@ -853,7 +853,7 @@ dnscmd [<servername>] /zonerefresh <zonename>
 
 ##### Remarks
 
-- The **zonerefresh** command forces a check of the version number in the master server s start of authority (SOA) resource record. If the version number on the master server is higher than the secondary server's version number, a zone transfer is initiated that updates the secondary server. If the version number is the same, no zone transfer occurs.
+- The **zonerefresh** command forces a check of the version number in the primary server s start of authority (SOA) resource record. If the version number on the primary server is higher than the secondary server's version number, a zone transfer is initiated that updates the secondary server. If the version number is the same, no zone transfer occurs.
 
 - The forced check occurs by default every 15 minutes. To change the default, use the `dnscmd config refreshinterval` command.
 
@@ -894,7 +894,7 @@ dnscmd dnssvr1.contoso.com /zonereload test.contoso.com
 
 ## dnscmd /zoneresetmasters command
 
-Resets the IP addresses of the master server that provides zone transfer information to a secondary zone.
+Resets the IP addresses of the primary server that provides zone transfer information to a secondary zone.
 
 ### Syntax
 
@@ -909,7 +909,7 @@ dnscmd [<servername>] /zoneresetmasters <zonename> [/local] [<IPaddress> [<IPadd
 | `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
 | `<zonename>` | Specifies the name of the zone to be reset. |
 | /local | Sets a local master list. This parameter is used for active directory integrated zones. |
-| `<IPaddress>` | The IP addresses of the master servers of the secondary zone. |
+| `<IPaddress>` | The IP addresses of the primary servers of the secondary zone. |
 
 ##### Remarks
 
@@ -957,7 +957,7 @@ dnscmd dnssvr1.contoso.com /zoneresetscavengeservers test.contoso.com 10.0.0.1 1
 
 ## dnscmd /zoneresetsecondaries command
 
-Specifies a list of IP addresses of secondary servers to which a master server responds when it is asked for a zone transfer.
+Specifies a list of IP addresses of secondary servers to which a primary server responds when it is asked for a zone transfer.
 
 ### Syntax
 
@@ -975,16 +975,16 @@ dnscmd [<servername>] /zoneresetsecondaries <zonename> {/noxfr | /nonsecure | /s
 | /noxfr | Specifies that no zone transfers are allowed. |
 | /nonsecure | Specifies that all zone transfer requests are granted. |
 | /securens | Specifies that only the server that is listed in the name server (NS) resource record for the zone is granted a transfer. |
-| /securelist | Specifies that zone transfers are granted only to the list of servers. This parameter must be followed by an IP address or addresses that the master server uses. |
-| `<securityIPaddresses>` | Lists the IP addresses that receive zone transfers from the master server. This parameter is used only with the **/securelist** parameter. |
+| /securelist | Specifies that zone transfers are granted only to the list of servers. This parameter must be followed by an IP address or addresses that the primary server uses. |
+| `<securityIPaddresses>` | Lists the IP addresses that receive zone transfers from the primary server. This parameter is used only with the **/securelist** parameter. |
 | /nonotify | Specifies that no change notifications are sent to secondary servers. |
 | /notify | Specifies that change notifications are sent to all secondary servers. |
-| /notifylist | Specifies that change notifications are sent to only the list of servers. This command must be followed by an IP address or addresses that the master server uses. |
+| /notifylist | Specifies that change notifications are sent to only the list of servers. This command must be followed by an IP address or addresses that the primary server uses. |
 | `<notifyIPaddresses>` | Specifies the IP address or addresses of the secondary server or servers to which change notifications are sent. This list is used only with the **/notifylist** parameter. |
 
 ##### Remarks
 
-- Use the **zoneresetsecondaries** command on the master server to specify how it responds to zone transfer requests from secondary servers.
+- Use the **zoneresetsecondaries** command on the primary server to specify how it responds to zone transfer requests from secondary servers.
 
 #### Examples
 

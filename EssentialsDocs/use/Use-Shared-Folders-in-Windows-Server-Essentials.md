@@ -37,10 +37,6 @@ manager: mtillman
 
 -   [Using My Server app for Windows 8](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_App)
 
-##  <a name="BKMK_UsingLaunchpad"></a> Using the Windows Server Essentials Launchpad
- You can use the Launchpad from any computer that is connected to the server by using the Connect My Computer to the Server Wizard. For more information about connecting your computer to the server, see [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).
-
-
  After you connect your computer to the server, a Launchpad shortcut is added to the notification area of your desktop. Double-click the Launchpad icon and enter your network credentials to access shared folders by using the Launchpad. Using the shared folders link on the Launchpad, you can upload or download files to any of the shared folders that are listed by dragging and dropping files between the local computer and the shared folders. Shared folders enable you to stream music and videos, play slideshows, or record TV programs on any computer that is connected to the server, or you can play a slide show to view pictures.
 
  For more information about the Launchpad, see [Launchpad Overview](../manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials.md).

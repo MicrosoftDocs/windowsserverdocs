@@ -37,13 +37,6 @@ manager: mtillman
 
 -   [Connect from a mobile device](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ConnectMobile)
 
-##  <a name="BKMK_Connect"></a> Connect to Remote Web Access
-
--   [Log on to Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1)
-
--   [Remotely access your computer](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1.5)
-
-
 ###  <a name="BKMK_1"></a> Log on to Remote Web Access
  When you log on to  Remote Web Access from a local or remote computer, you can access resources on your server running Windows Server Essentials and computers on your network.
 

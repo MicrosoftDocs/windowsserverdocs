@@ -1,6 +1,6 @@
 ---
 title: "Get started with Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about Windows Server Essentials edition which is a cloud-connected first server designed for small businesses with up to 25 users and 50 devices.
 ms.topic: article
 ms.assetid: 2d0eb084-09dd-4d85-a41a-5d449cc3b504
 author: nnamuhcs
