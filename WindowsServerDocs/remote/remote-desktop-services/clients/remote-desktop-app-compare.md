@@ -1,16 +1,16 @@
 ---
-title: Remote Desktop - compare the client apps
-description: Learn how the different RD apps compare when it comes to supported features and functions.
+title: Remote Desktop - compare the client apps redirections
+description: Learn how the different RD apps compare when it comes to redirections.
 ms.topic: article
 ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 10/07/2020
+ms.date: 12/16/2020
 ms.localizationpriority: medium
 ---
 
-# Compare the clients
+# Compare the clients: redirections
 
 >Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
@@ -57,3 +57,7 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 | Speakers            | X                         | X                           | X             | X       | X           | X                               | X (except IE) |
 
 *For printer redirection - the macOS app supports the Publisher Imagesetter printer driver by default. They do not support redirecting native printer drivers.
+
+## Other resources
+
+If you're looking for feature comparisons, check out [Compare the clients: features](remote-desktop-features.md).
