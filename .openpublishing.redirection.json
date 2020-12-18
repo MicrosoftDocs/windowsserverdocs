@@ -61,6 +61,21 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/identity/securing-privileged-access/securing-privileged-access-reference-material.md",
+      "redirect_url": "/security/compass/privileged-access-access-model",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/securing-privileged-access/securing-privileged-access.md",
+      "redirect_url": "/security/compass/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/identity/securing-privileged-access/privileged-access-workstations.md",
+      "redirect_url": "/security/compass/concept-azure-managed-workstation",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/windows-insider/index.md",
       "redirect_url": "/windows-insider/at-work/",
       "redirect_document_id": false
@@ -4091,6 +4106,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "WindowsServerDocs/get-started/windows-server-technology-template.md",
+      "redirect_url": "/windows-server/get-started/server-basics",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/management/windows-commands/ftp--delete.md",
       "redirect_url": "/windows-server/administration/windows-commands/ftp--delete",
       "redirect_document_id": true
@@ -7148,7 +7168,7 @@
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/manage/wsus-tools.md",
       "redirect_url": "/windows-server/administration/windows-server-update-services/manage/wsus-tools",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/management/windows-server-update-services/plan/plan-your-wsus-deployment.md",
