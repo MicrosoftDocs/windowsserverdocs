@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Performance history for virtual machines"
 title: Performance history for virtual machines
 ms.author: cosdar
 manager: eldenc

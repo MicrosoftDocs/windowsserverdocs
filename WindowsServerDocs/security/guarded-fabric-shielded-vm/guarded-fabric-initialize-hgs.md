@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Initialize the Host Guardian Service (HGS)"
 title: Initialize HGS
 ms.topic: article
 manager: dongill

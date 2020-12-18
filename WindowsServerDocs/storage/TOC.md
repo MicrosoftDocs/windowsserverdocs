@@ -109,6 +109,7 @@
 ## Storage Migration Service
 ### [Overview](storage-migration-service/overview.md)
 ### [Migrate a server](storage-migration-service/migrate-data.md)
+### [How cutover works](storage-migration-service/cutover.md)
 ### [Frequently asked questions (FAQ)](storage-migration-service/faq.md)
 ### [Known issues](storage-migration-service/known-issues.md)
 

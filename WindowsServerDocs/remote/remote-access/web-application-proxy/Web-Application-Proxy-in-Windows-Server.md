@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Web Application Proxy in Windows Server"
 ms.assetid: 0b3587b2-219f-43d8-88b4-1254eaa8b910
 title: Web Application Proxy in Windows Server
 ms.topic: article

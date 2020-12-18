@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Setting Site Link Properties"
 ms.assetid: de054ac2-a386-43ec-a537-c0de21549741
 title: Setting Site Link Properties
 author: iainfoulds

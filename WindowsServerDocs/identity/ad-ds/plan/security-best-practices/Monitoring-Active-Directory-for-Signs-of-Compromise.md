@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Monitoring Active Directory for Signs of Compromise"
 ms.assetid: a7ef2fba-b05c-4be2-93b2-b9456244c3ad
 title: Monitoring Active Directory for Signs of Compromise
 author: iainfoulds

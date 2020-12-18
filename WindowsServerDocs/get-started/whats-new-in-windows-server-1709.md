@@ -139,7 +139,7 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
 
   - **ISATAP and 6to4**: As a step towards future deprecation, the Creators Update will have these technologies disabled by default.
 - **Dead Gateway Detection (DGD)**: The DGD algorithm automatically transitions connections over to another gateway when the current gateway is unreachable. In this release, the algorithm is improved to periodically re-probe the network environment.
-- [Test-NetConnection](/powershell/module/nettcpip/test-netconnection?view=win10-ps) is a built-in cmdlet in Windows PowerShell that performs a variety of network diagnostics.  In this release we have enhanced the cmdlet to provide detailed information about both route selection as well as source address selection.
+- [Test-NetConnection](/powershell/module/nettcpip/test-netconnection) is a built-in cmdlet in Windows PowerShell that performs a variety of network diagnostics.  In this release we have enhanced the cmdlet to provide detailed information about both route selection as well as source address selection.
 
 **Software Defined Networking**
 

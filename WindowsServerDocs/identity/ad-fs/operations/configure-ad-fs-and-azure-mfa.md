@@ -1,6 +1,7 @@
 ---
 ms.assetid: 24c4b9bb-928a-4118-acf1-5eb06c6b08e5
 title: Configure AD FS 2016 and Azure MFA
+description: "Learn more about: Configure Azure MFA as authentication provider with AD FS"
 ms.author: billmath
 author: billmath
 manager: mtillman
@@ -69,7 +70,7 @@ The following pre-requisites are required when using Azure MFA for authenticatio
       - https://adnotifications.windowsazure.com
       - https://login.microsoftonline.com
 - Your on-premises environment is [federated with Azure AD.](/azure/active-directory/hybrid/how-to-connect-install-custom#configuring-federation-with-ad-fs)
-- [Windows Azure Active Directory Module for Windows PowerShell](/powershell/module/azuread/?view=azureadps-2.0).
+- [Windows Azure Active Directory Module for Windows PowerShell](/powershell/module/azuread/).
 - Global administrator permissions on your instance of Azure AD to configure it using Azure AD PowerShell.
 - Enterprise administrator credentials to configure the AD FS farm for Azure MFA.
 

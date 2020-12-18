@@ -135,7 +135,7 @@ Install-WindowsFeature NLB -IncludeManagementTools
 
 After installation is complete, no restart of the computer is required.
 
-For more information, see [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=win10-ps).
+For more information, see [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature).
 
 ### Network Load Balancing Manager
 To open Network Load Balancing Manager in Server Manager, click **Tools**, and then click **Network Load Balancing Manager**.

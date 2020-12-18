@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Taking a Storage Spaces Direct server offline for maintenance"
 title: Taking a Storage Spaces Direct server offline for maintenance
 ms.author: eldenc
 manager: eldenc
@@ -160,7 +161,7 @@ MyVolume3    Mirror                OK                Healthy      True          
 It's now safe to pause and restart other servers in the cluster.
 
 ## How to update Storage Spaces Direct nodes offline
-Use the following steps to path your Storage Spaces Direct system quickly. It involves scheduling a maintenance window and taking the system down for patching. If there is a critical security update that you need applied quickly or maybe you need to ensure patching completes in your maintenance window, this method may be for you. This process brings down the Storage Spaces Direct cluster, patches it, and brings it all up again. The trade-off is downtime to the hosted resources.
+Use the following steps to update your Storage Spaces Direct system quickly. It involves scheduling a maintenance window and taking the system down for updating. If there is a critical security update that you need applied quickly or maybe you need to ensure updating completes in your maintenance window, this method may be for you. This process brings down the Storage Spaces Direct cluster, updates it, and brings it all up again. The trade-off is downtime to the hosted resources.
 
 1. Plan your maintenance window.
 2. Take the virtual disks offline.

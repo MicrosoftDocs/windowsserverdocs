@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Drive symmetry considerations for Storage Spaces Direct"
 title: Drive symmetry considerations for Storage Spaces Direct
 ms.author: cosdar
 manager: eldenc

@@ -35,16 +35,16 @@ Learn how to create a virtual machine by using Hyper-V Manager and Windows Power
 
 2. Right-click **Windows PowerShell** and select **Run as administrator**.
 
-3. Get the name of the virtual switch that you want the virtual machine to use by using [Get-VMSwitch](/powershell/module/hyper-v/get-vmswitch?view=win10-ps).  For example,
+3. Get the name of the virtual switch that you want the virtual machine to use by using [Get-VMSwitch](/powershell/module/hyper-v/get-vmswitch).  For example,
 
    ```
    Get-VMSwitch  * | Format-Table Name
    ```
 
-4. Use the [New-VM](/powershell/module/hyper-v/new-vm?view=win10-ps) cmdlet to create the  virtual machine.  See the following examples.
+4. Use the [New-VM](/powershell/module/hyper-v/new-vm) cmdlet to create the  virtual machine.  See the following examples.
 
    > [!NOTE]
-   > If you may move this virtual machine to a Hyper-V host that runs Windows Server 2012 R2, use the -Version parameter with  [New-VM](/powershell/module/hyper-v/new-vm?view=win10-ps) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for Windows Server 2016 isn't supported by  Windows Server 2012 R2  or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#supported-virtual-machine-configuration-versions).
+   > If you may move this virtual machine to a Hyper-V host that runs Windows Server 2012 R2, use the -Version parameter with  [New-VM](/powershell/module/hyper-v/new-vm) to set the virtual machine configuration  version to 5. The default virtual machine configuration version for Windows Server 2016 isn't supported by  Windows Server 2012 R2  or earlier versions. You can't change the virtual machine configuration version after the virtual machine is created. For more information, see [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#supported-virtual-machine-configuration-versions).
 
    - **Existing virtual hard disk** - To create a virtual machine with an existing virtual hard disk, you can use the following command where,
      - **-Name** is the name that you provide for the virtual machine that you're creating.
@@ -75,7 +75,7 @@ Learn how to create a virtual machine by using Hyper-V Manager and Windows Power
 
    - **New virtual hard disk that boots to operating system image** - To create a virtual machine with a new virtual disk that boots to an operating system image, see the PowerShell example in [Create virtual machine walkthrough for Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/create-virtual-machine).
 
-5. Start the virtual machine by using the [Start-VM](/powershell/module/hyper-v/start-vm?view=win10-ps) cmdlet. Run the following cmdlet where Name is the name of the  virtual machine you created.
+5. Start the virtual machine by using the [Start-VM](/powershell/module/hyper-v/start-vm) cmdlet. Run the following cmdlet where Name is the name of the  virtual machine you created.
 
    ```
    Start-VM -Name <Name>
@@ -108,7 +108,7 @@ The following table lists the options you can pick when you create a virtual mac
 
 ## Additional References
 
-- [New-VM](/powershell/module/hyper-v/new-vm?view=win10-ps)
+- [New-VM](/powershell/module/hyper-v/new-vm)
 
 - [Supported virtual machine configuration versions](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md#supported-virtual-machine-configuration-versions)
 

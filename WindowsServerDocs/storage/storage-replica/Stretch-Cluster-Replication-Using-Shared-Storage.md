@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Stretch Cluster Replication Using Shared Storage"
 title: Stretch Cluster Replication Using Shared Storage
 manager: eldenc
 ms.author: nedpyle

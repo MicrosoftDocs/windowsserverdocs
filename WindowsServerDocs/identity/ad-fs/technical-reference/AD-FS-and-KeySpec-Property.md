@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD FS and certificate KeySpec property Information"
 title: Active Directory Federation Services and certificate Key Specification property Information
 author: billmath
 manager: femila

@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 11/06/2020
+ms.date: 12/02/2020
 ms.localizationpriority: medium
 ---
 # What's new in the iOS client
@@ -15,6 +15,21 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 ## How to report issues
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Help** > **Report an Issue**.
+
+## Updates for version 10.2.2
+
+*Date published: 11/23/2020*
+
+In this release we've addressed some bugs affecting users running iOS 14 and iPadOS 14.
+
+## Updates for version 10.2.1
+
+*Date published: 11/11/2020*
+
+It's time for a quick update. In this version we made the following fixes:
+
+- Added support for newly released iPhone and iPad devices.
+- Addressed an issue where the client would return a 0x30000066 error when connecting using an RD Gateway server.
 
 ## Updates for version 10.2.0
 

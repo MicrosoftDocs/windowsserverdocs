@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Determine how to recover the forest"
 title: AD Forest Recovery - Determine how to recover the forest
 ms.author: daveba
 author: iainfoulds
