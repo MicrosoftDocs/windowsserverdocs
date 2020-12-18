@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Backing up the System State data"
 title: AD Forest Recovery - Backing up the System State data
 ms.author: daveba
 author: iainfoulds
@@ -19,20 +20,20 @@ Use the following procedure to perform a system state backup on a DC by using Wi
 1. Open **Server Manager**, click **Tools**, and then click **Windows Server Backup**.
    - In Windows Server 2008 R2 and Windows Server 2008, click **Start**, point to **Administrative Tools**, and then click **Windows Server Backup**.
 
-   ![Install Backup](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup1.png)
+   ![Screenshot that highlights the Windows Server Backup menu option.](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup1.png)
 
 2. If you are prompted, in the **User Account Control** dialog box, provide Backup Operator credentials, and then click **OK**.
 3. Click **Local Backup**.
 4. On the **Action** menu, click **Backup once**.
 5. In the Backup Once Wizard, on the **Backup options** page, click **Different options**, and then click **Next**.
 
-   ![Install Backup](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup3.png)
+   ![Screenshot that shows the Backup Options page with the Different Options option selected.](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup3.png)
 
 6. On the **Select backup configuration** page, click **Custom)**, and then click **Next**.
 7. On the **Select Items for Backup** screen, click **Add Items** and select **System State** and click **Ok**.
    - In Windows Server 2008 R2 and Windows Server 2008, select the volumes to include in the backup. If you select the **Enable system recovery** check box, all critical volumes are selected.
 
-   ![Install Backup](media/AD-Forest-Recovery-Backing-up-System-State/systemstatebackup.png)
+   ![Screenshot that shows the System State check box selected. ](media/AD-Forest-Recovery-Backing-up-System-State/systemstatebackup.png)
 
 8. On the **Specify destination type** page, click **Local drives** or **Remote shared folder**, and then click **Next**.  If you are backing up to a remote shared folder, do the following:
    - Type the path to the shared folder.

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: The Role of the Claim Rule Language"
 title: The Role of the Claim Rule Language
 author: billmath
 ms.author: billmath

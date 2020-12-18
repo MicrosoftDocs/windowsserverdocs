@@ -25,7 +25,7 @@ By default, AD FS in Windows 2016 does not have the sign on page enabled.  In or
 ## Test authentication
 Use the following procedure to test AD FS authentication with the Idp-Initiated Sign on page.
 
-1.  Open a web browser and navigate to the Idp sign on page.  Example:  https://sts.contoso.com/adfs/ls/idpinitiatedsignon.htm
+1.  Open a web browser and navigate to the Idp sign on page.  Example:  https://sts.contoso.com/adfs/ls/idpinitiatedsignon.aspx
 2.  You should be prompted to sign-in.  Enter your credentials.
 ![Sign-on](media/ad-fs-tshoot-initiatedsignon/idp5.png)
 3.  If this was successful you should be signed in.
@@ -41,7 +41,7 @@ You can test the seamless logon experience by making sure that the URL for your 
 2.  Enter your url and click Add.  Click close.
 ![Add url](media/ad-fs-tshoot-initiatedsignon/idp9.png)
 1.  Click Ok.  Click Ok.  This should close the internet options.
-2.  Open a web browser and navigate to the Idp sign on page.  Example:  https://sts.contoso.com/adfs/ls/idpinitiatedsignon.htm
+2.  Open a web browser and navigate to the Idp sign on page.  Example:  https://sts.contoso.com/adfs/ls/idpinitiatedsignon.aspx
 3.  Click the sign in button.  You should automatically sign in and not be prompted for credentials.
 ![Seamless](media/ad-fs-tshoot-initiatedsignon/idp6.png)
 

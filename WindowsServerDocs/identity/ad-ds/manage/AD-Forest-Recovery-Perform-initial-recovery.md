@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Perform initial recovery"
 title: AD Forest Recovery - Perform initial recovery
 ms.author: daveba
 author: iainfoulds

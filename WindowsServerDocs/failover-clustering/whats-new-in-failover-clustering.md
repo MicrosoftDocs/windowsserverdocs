@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: What's new in Failover Clustering"
 ms.assetid: 350aa5a3-5938-4921-93dc-289660f26bad
 title: What's new in Failover Clustering in Windows Server
 ms.topic: get-started-article

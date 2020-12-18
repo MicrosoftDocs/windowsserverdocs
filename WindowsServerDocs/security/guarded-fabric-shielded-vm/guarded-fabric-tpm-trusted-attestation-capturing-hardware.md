@@ -1,5 +1,6 @@
 ---
 title: Capture TPM-mode information required by HGS
+description: "Learn more about: Authorize guarded hosts using TPM-based attestation"
 ms.topic: article
 ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
@@ -75,7 +76,7 @@ Starting with Windows Server version 1709, sample code integrity policies are in
 
 It is recommended that you first create the CI policy in audit (logging) mode to see if it's missing anything, then enforce the policy for host production workloads.
 
-If you use the [New-CIPolicy](/powershell/module/configci/new-cipolicy?view=win10-ps) cmdlet to generate your own code integrity policy, you will need to decide the rule levels to use.
+If you use the [New-CIPolicy](/powershell/module/configci/new-cipolicy) cmdlet to generate your own code integrity policy, you will need to decide the rule levels to use.
 We recommend a primary level of **Publisher** with fallback to **Hash**, which allows most digitally signed software to be updated without changing the CI policy.
 New software written by the same publisher can also be installed on the server without changing the CI policy.
 Executables that are not digitally signed will be hashed -- updates to these files will require you to create a new CI policy.
@@ -96,7 +97,7 @@ For more information about the available CI policy rule levels, see [Deploy code
 
 3.  Apply the CI policy to your reference host:
 
-    1.  Run the following command to configure the machine to use your CI policy. You can also deploy the CI policy with [Group Policy](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) or [System Center Virtual Machine Manager](/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#manage-and-deploy-code-integrity-policies-with-vmm).
+    1.  Run the following command to configure the machine to use your CI policy. You can also deploy the CI policy with [Group Policy](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) or [System Center Virtual Machine Manager](/system-center/vmm/guarded-deploy-host#manage-and-deploy-code-integrity-policies-with-vmm).
 
         ```powershell
         Invoke-CimMethod -Namespace root/Microsoft/Windows/CI -ClassName PS_UpdateAndCompareCIPolicy -MethodName Update -Arguments @{ FilePath = "C:\temp\HW1CodeIntegrity.p7b" }

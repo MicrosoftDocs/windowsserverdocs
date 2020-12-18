@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Name Resolution Requirements for Federation Servers"
 ms.assetid: 74ef34c8-e13f-499b-b2bb-952ad7036622
 title: Name Resolution Requirements for Federation Servers
 author: billmath

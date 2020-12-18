@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)"
 ms.assetid: ee008835-7d3b-4977-adcb-7084c40e5918
 title: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
 author: billmath

@@ -30,7 +30,7 @@ When using a single page application, the user navigates to a starting location,
 If ADAL sees a trigger for authentication, it uses the information provided by the application and directs the authentication to your AD FS STS.  The single page application, which is registered as a public client in AD FS, is automatically configured for implicit grant flow. The authorization request results in an ID token that is returned back to the application via a #fragment. Further calls to the backend WebAPI will carry this ID token as the bearer token in the header to gain access to the WebAPI.
 
 ## Setting up the development box
-This walk-through uses Visual Studio 2015. The project uses ADAL JS library. To learn about ADAL please read [Active Directory Authentication Library .NET.](/dotnet/api/microsoft.identitymodel.clients.activedirectory?view=azure-dotnet)
+This walk-through uses Visual Studio 2015. The project uses ADAL JS library. To learn about ADAL please read [Active Directory Authentication Library .NET.](/dotnet/api/microsoft.identitymodel.clients.activedirectory)
 
 ## Setting up the environment
 For this walkthrough we will be using a basic setup of:

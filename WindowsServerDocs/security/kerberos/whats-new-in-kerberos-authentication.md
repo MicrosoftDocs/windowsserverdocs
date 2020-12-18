@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: What's New in Kerberos Authentication"
 title: What's New in Kerberos Authentication
 ms.topic: article
 ms.assetid: 7bd17803-6e42-4a3b-803f-e47c74725813

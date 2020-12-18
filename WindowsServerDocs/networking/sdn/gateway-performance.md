@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Windows Server 2019 Gateway Performance"
 title: Windows Server 2019 Gateway Performance
 manager: grcusanz
 ms.topic: get-started-article

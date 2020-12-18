@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Configuring Claim Rules"
 ms.assetid: 46dce9d4-7293-4b1c-9710-78b04f2e347a
 title: Configuring Claim Rules
 author: billmath

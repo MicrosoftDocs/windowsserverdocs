@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Storage Quality of Service"
 title: Storage Quality of Service
 manager: dongill
 ms.author: JGerend

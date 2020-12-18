@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Cleanup"
 title: AD Forest Recovery - Cleanup
 ms.author: daveba
 author: iainfoulds

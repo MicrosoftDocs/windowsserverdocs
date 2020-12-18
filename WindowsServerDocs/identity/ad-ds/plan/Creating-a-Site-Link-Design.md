@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Creating a Site Link Design"
 ms.assetid: 206b8072-1d0c-4a0b-ba8a-35a868d67b4c
 title: Creating a Site Link Design
 ms.author: daveba

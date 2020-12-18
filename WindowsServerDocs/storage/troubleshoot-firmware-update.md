@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Troubleshooting drive firmware updates"
 ms.assetid: 13210461-1e92-48a1-91a2-c251957ba256
 title: Troubleshooting drive firmware updates
 ms.author: toklima

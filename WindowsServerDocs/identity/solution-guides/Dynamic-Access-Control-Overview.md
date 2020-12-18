@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Dynamic Access Control Overview"
 ms.assetid: 9ee8a6cb-7550-46e2-9c11-78d0545c3a97
 title: Dynamic Access Control Overview
 author: billmath

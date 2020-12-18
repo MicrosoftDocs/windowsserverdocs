@@ -70,8 +70,8 @@ $policies |  Add-DnsServerQueryResolutionPolicy -ZoneName "contoso.com" -Compute
 
 For more information, see the following Windows PowerShell reference topics.
 
-- [Get-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/get-dnsserverqueryresolutionpolicy?view=win10-ps)
-- [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps)
+- [Get-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/get-dnsserverqueryresolutionpolicy)
+- [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy)
 
 ## How to Configure DNS Policy for Split\-Brain DNS in Active Directory
 
@@ -85,7 +85,7 @@ You can use the following example command to add the Active Directory integrated
 Add-DnsServerPrimaryZone -Name "contoso.com" -ReplicationScope "Domain" -PassThru
 ```
 
-For more information, see [Add-DnsServerPrimaryZone](/powershell/module/dnsserver/add-dnsserverprimaryzone?view=win10-ps).
+For more information, see [Add-DnsServerPrimaryZone](/powershell/module/dnsserver/add-dnsserverprimaryzone).
 
 ### Create the Scopes of the Zone
 
@@ -103,7 +103,7 @@ You can use the following example command to create the zone scope on the DNS se
 Add-DnsServerZoneScope -ZoneName "contoso.com" -Name "external"
 ```
 
-For more information, see [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps).
+For more information, see [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope).
 
 ### Add Records to the Zone Scopes
 
@@ -123,7 +123,7 @@ Add-DnsServerResourceRecord -ZoneName "contoso.com" -A -Name "www.career" -IPv4A
 > [!NOTE]
 > The **–ZoneScope** parameter is not included when the record is added to the default zone scope. This action is same as adding records to a normal zone.
 
-For more information, see [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
+For more information, see [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord).
 
 ### Create the DNS Policies
 
@@ -144,7 +144,7 @@ Add-DnsServerQueryResolutionPolicy -Name "SplitBrainZonePolicy" -Action ALLOW -S
 > [!NOTE]
 > 208.84.0.53 is the IP address on the public network interface.
 
-For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
+For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy).
 
 Now the DNS server is configured with the required DNS policies for a split-brain name server with an Active Directory integrated DNS zone.
 

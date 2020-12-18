@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Configure On-Premises Conditional Access using registered devices"
 ms.assetid: 35de490f-c506-4b73-840c-b239b72decc2
 title: Configure Device-based Conditional Access on-Premises
 author: billmath

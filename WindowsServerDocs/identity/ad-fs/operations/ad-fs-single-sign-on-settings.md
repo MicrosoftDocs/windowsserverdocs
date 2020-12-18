@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD FS Single Sign-On Settings"
 ms.assetid: 1a443181-7ded-4912-8e40-5aa447faf00c
 title: AD FS 2016 Single Sign On Settings
 author: billmath

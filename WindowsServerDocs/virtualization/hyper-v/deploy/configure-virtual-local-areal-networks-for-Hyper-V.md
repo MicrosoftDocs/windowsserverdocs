@@ -43,7 +43,7 @@ If the virtual machine needs to use more VLANs, do one of the following:
 
 - Connect more virtual network adapters to appropriate virtual switches and assign the VLAN IDs. Make sure to configure the IP addresses correctly and that the traffic you want to route through the VLAN also uses the correct IP address.
 
-- Configure the virtual network adapter in trunk mode using the [Set\-VMNetworkAdapterVlan](/powershell/module/hyper-v/set-vmnetworkadaptervlan?view=win10-ps) cmdlet.
+- Configure the virtual network adapter in trunk mode using the [Set\-VMNetworkAdapterVlan](/powershell/module/hyper-v/set-vmnetworkadaptervlan) cmdlet.
 
 ## See Also
 

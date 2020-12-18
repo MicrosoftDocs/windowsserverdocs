@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Set-up Clients"
 title: Deploy Work Folders with AD FS and Web Application Proxy - Step 5, Set Up Clients
 ms.topic: article
 manager: klaasl

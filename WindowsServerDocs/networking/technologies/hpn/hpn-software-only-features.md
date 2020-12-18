@@ -15,15 +15,15 @@ Software only features are implemented as part of the OS and are independent of 
 
 ## Access Control Lists (ACLs)
 
-A Hyper-V and SDNv1 feature for managing security for a VM. This feature applies to the non-virtualized Hyper-V stack and the HVNv1 stack. You can manage Hyper-V switch ACLs through [Add-VMNetworkAdapterAcl](/powershell/module/hyper-v/add-vmnetworkadapteracl?view=win10-ps)
-and [Remove-VMNetworkAdapterAcl](/powershell/module/hyper-v/remove-vmnetworkadapteracl?view=win10-ps)
+A Hyper-V and SDNv1 feature for managing security for a VM. This feature applies to the non-virtualized Hyper-V stack and the HVNv1 stack. You can manage Hyper-V switch ACLs through [Add-VMNetworkAdapterAcl](/powershell/module/hyper-v/add-vmnetworkadapteracl)
+and [Remove-VMNetworkAdapterAcl](/powershell/module/hyper-v/remove-vmnetworkadapteracl)
 PowerShell cmdlets.
 
 ## Extended ACLs
 
 Hyper-V Virtual Switch extended ACLs enable you to configure the Hyper-V Virtual Switch Extended Port ACLs to provide firewall protection and enforce security policies for the tenant VMs in datacenters. Because the port ACLs are configured on the Hyper-V Virtual Switch rather than within the VMs, the administrator can manage security policies for all tenants in a multitenant environment.
 
-You can manage Hyper-V switch extended ACLs through the [Add-VMNetworkAdapterExtendedAcl](/powershell/module/hyper-v/add-vmnetworkadapterextendedacl?view=win10-ps) and [Remove-VMNetworkAdapterExtendedAcl](/powershell/module/hyper-v/remove-vmnetworkadapteracl?view=win10-ps) PowerShell cmdlets.
+You can manage Hyper-V switch extended ACLs through the [Add-VMNetworkAdapterExtendedAcl](/powershell/module/hyper-v/add-vmnetworkadapterextendedacl) and [Remove-VMNetworkAdapterExtendedAcl](/powershell/module/hyper-v/remove-vmnetworkadapteracl) PowerShell cmdlets.
 
 >[!TIP]
 >This feature applies to the HNVv1 stack. For ACLs in the SDN stack, refer to Software Defined Networking SDN) ACLs below.

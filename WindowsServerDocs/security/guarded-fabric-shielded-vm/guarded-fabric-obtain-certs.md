@@ -1,5 +1,6 @@
 ---
 title: Obtain certificates for HGS
+description: "Learn more about: Obtain certificates for HGS"
 ms.topic: article
 ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
@@ -76,17 +77,17 @@ Remove-Item -Path "Cert:\LocalMachine\CA\$($encCert.Thumbprint)"
 ## Request an SSL certificate
 
 All keys and sensitive information transmitted between Hyper-V hosts and HGS are encrypted at the message level -- that is, the information is encrypted with keys known either to HGS or Hyper-V, preventing someone from sniffing your network traffic and stealing keys to your VMs.
-However, if you have compliance reqiurements or simply prefer to encrypt all communications between Hyper-V and HGS, you can configure HGS with an SSL certificate which will encrypt all data at the transport level.
+However, if you have compliance requirements or simply prefer to encrypt all communications between Hyper-V and HGS, you can configure HGS with an SSL certificate which will encrypt all data at the transport level.
 
 Both the Hyper-V hosts and HGS nodes will need to trust the SSL certificate you provide, so it is recommended that you request the SSL certificate from your enterprise certificate authority. When requesting the certificate, be sure to specify the following:
 
 SSL Certificate Property | Required value
 -------------------------|---------------
-Subject name             | Address that HGS clients (that is, Guraded hosts) will be using to access the HGS server. This is typically the DNS address of your HGS cluster, known as the distributed network name or virtual computer object (VCO). This will be the concatenation of your HGS service name provided to `Initialize-HgsServer` and your HGS domain name.
+Subject name             | Address that HGS clients (that is, Guarded hosts) will be using to access the HGS server. This is typically the DNS address of your HGS cluster, known as the distributed network name or virtual computer object (VCO). This will be the concatenation of your HGS service name provided to `Initialize-HgsServer` and your HGS domain name.
 Subject alternative name | If you will be using a different DNS name to reach your HGS cluster (e.g. if it is behind a load balancer, or you are using different addresses for a subset of nodes in complex topology), be sure to include those DNS names in the SAN field of your certificate request. Note that if SAN extension is populated, the Subject name is ignored, and hence SAN should include all values, including the one you would normally put in Subject name.
 
 The options for specifying this certificate when initializing the HGS server are covered in [Configure the first HGS node](guarded-fabric-initialize-hgs.md).
-You can also add or change the SSL certificate at a later time using the [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver?view=win10-ps) cmdlet.
+You can also add or change the SSL certificate at a later time using the [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) cmdlet.
 
 ## Next step
 

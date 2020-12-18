@@ -75,7 +75,7 @@ In Windows Server 2012, as an advanced quorum configuration option, you can choo
 
 With dynamic quorum management, it is also possible for a cluster to run on the last surviving cluster node. By dynamically adjusting the quorum majority requirement, the cluster can sustain sequential node shutdowns to a single node.
 
-The cluster-assigned dynamic vote of a node can be verified with the **DynamicWeight** common property of the cluster node by using the [Get-ClusterNode](/powershell/module/failoverclusters/get-clusternode?view=win10-ps) Windows PowerShell cmdlet. A value of 0 indicates that the node does not have a quorum vote. A value of 1 indicates that the node has a quorum vote.
+The cluster-assigned dynamic vote of a node can be verified with the **DynamicWeight** common property of the cluster node by using the [Get-ClusterNode](/powershell/module/failoverclusters/get-clusternode) Windows PowerShell cmdlet. A value of 0 indicates that the node does not have a quorum vote. A value of 1 indicates that the node has a quorum vote.
 
 The vote assignment for all cluster nodes can be verified by using the **Validate Cluster Quorum** validation test.
 
@@ -88,7 +88,7 @@ The vote assignment for all cluster nodes can be verified by using the **Validat
 
 ## General recommendations for quorum configuration
 
-The cluster software automatically configures the quorum for a new cluster, based on the number of nodes configured and the availability of shared storage. This is usually the most appropriate quorum configuration for that cluster. However, it is a good idea to review the quorum configuration after the cluster is created, before placing the cluster into production. To view the detailed cluster quorum configuration, you can you use the Validate a Configuration Wizard, or the [Test-Cluster](/powershell/module/failoverclusters/test-cluster?view=win10-ps) Windows PowerShell cmdlet, to run the **Validate Quorum Configuration** test. In Failover Cluster Manager, the basic quorum configuration is displayed in the summary information for the selected cluster, or you can review the information about quorum resources that returns when you run the [Get-ClusterQuorum](/powershell/module/failoverclusters/get-clusterquorum?view=win10-ps) Windows PowerShell cmdlet.
+The cluster software automatically configures the quorum for a new cluster, based on the number of nodes configured and the availability of shared storage. This is usually the most appropriate quorum configuration for that cluster. However, it is a good idea to review the quorum configuration after the cluster is created, before placing the cluster into production. To view the detailed cluster quorum configuration, you can you use the Validate a Configuration Wizard, or the [Test-Cluster](/powershell/module/failoverclusters/test-cluster) Windows PowerShell cmdlet, to run the **Validate Quorum Configuration** test. In Failover Cluster Manager, the basic quorum configuration is displayed in the summary information for the selected cluster, or you can review the information about quorum resources that returns when you run the [Get-ClusterQuorum](/powershell/module/failoverclusters/get-clusterquorum) Windows PowerShell cmdlet.
 
 At any time, you can run the **Validate Quorum Configuration** test to validate that the quorum configuration is optimal for your cluster. The test output indicates if a change to the quorum configuration is recommended and the settings that are optimal. If a change is recommended, you can use the Configure Cluster Quorum Wizard to apply the recommended settings.
 
@@ -166,7 +166,7 @@ After the wizard runs and the **Summary** page appears, if you want to view a re
 
 ### Windows PowerShell equivalent commands
 
-The following examples show how to use the [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum?view=win10-ps) cmdlet and other Windows PowerShell cmdlets to configure the cluster quorum.
+The following examples show how to use the [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum) cmdlet and other Windows PowerShell cmdlets to configure the cluster quorum.
 
 The following example changes the quorum configuration on cluster *CONTOSO-FC1* to a simple node majority configuration with no quorum witness.
 
@@ -315,5 +315,5 @@ The following table summarizes considerations and recommendations for this confi
 ## More information
 
 * [Failover Clustering](./failover-clustering-overview.md)
-* [Failover Clusters Windows PowerShell cmdlets](/powershell/module/failoverclusters/?view=win10-ps)
+* [Failover Clusters Windows PowerShell cmdlets](/powershell/module/failoverclusters/)
 * [Understanding Cluster and Pool Quorum](../storage/storage-spaces/understand-quorum.md)

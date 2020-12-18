@@ -48,18 +48,13 @@ This optional feature on demand is available on a separate ISO and can be added 
 
 ATP's deep platform sensors and response actions expose memory and kernel level attacks and respond by suppressing malicious files and terminating malicious processes.
 
--   For more information about Windows Defender ATP, see [Overview of Windows
-    Defender ATP
-    capabilities](/windows/security/threat-protection/windows-defender-atp/overview).
+-   For more information about Windows Defender ATP, see [Overview of Windows Defender ATP capabilities](/windows/security/threat-protection/windows-defender-atp/overview).
 
--   For more information on onboarding servers, see [Onboard servers to Windows
-    Defender ATP
-    service](/windows/security/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection).
+-   For more information on onboarding servers, see [Onboard servers to Windows Defender ATP service](/windows/security/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection).
 
 **Windows Defender ATP Exploit Guard** is a new set of host-intrusion prevention capabilities. The four components of Windows Defender Exploit Guard are designed to lock down the device against a wide variety of attack vectors and block behaviors commonly used in malware attacks, while enabling you to balance security risk and productivity requirements.
 
--   [Attack Surface
-    Reduction(ASR)](/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc) is set of controls that enterprises can enable to prevent malware from
+-   [Attack Surface Reduction(ASR)](/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc) is set of controls that enterprises can enable to prevent malware from
     getting on the machine by blocking suspicious malicious files (for example,
     Office files), scripts, lateral movement, ransomware behavior, and
     email-based threats.
@@ -69,17 +64,14 @@ ATP's deep platform sensors and response actions expose memory and kernel level 
     process on the device to untrusted hosts/IP addresses through Windows
     Defender SmartScreen.
 
--   [Controlled folder
-    access](https://cloudblogs.microsoft.com/microsoftsecure/2017/10/23/stopping-ransomware-where-it-counts-protecting-your-data-with-controlled-folder-access/?ocid=cx-blog-mmpc?source=mmpc)
+-   [Controlled folder access](https://cloudblogs.microsoft.com/microsoftsecure/2017/10/23/stopping-ransomware-where-it-counts-protecting-your-data-with-controlled-folder-access/?ocid=cx-blog-mmpc?source=mmpc)
     protects sensitive data from ransomware by blocking untrusted processes from
     accessing your protected folders.
 
--   [Exploit
-    protection](/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET)that can
+-   [Exploit protection](/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET)that can
     be easily configured to protect your system and applications.
 
-[Windows Defender Application
-Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also
+[Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also
 known as Code Integrity (CI) policy) was released in Windows Server 2016.
 Customer feedback has suggested that it is a great concept, but hard to deploy.
 To address this, we have built default CI policies, which allows all Windows

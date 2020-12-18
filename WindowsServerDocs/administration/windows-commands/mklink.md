@@ -32,7 +32,7 @@ mklink [[/d] | [/h] | [/j]] <link> <target>
 
 ### Examples
 
-To create and remove a symbolic link named, MyFolder and Myfile.file, from the root directory to the \Users\User1\Documents directory and a example.file located within the directory, type:
+To create and remove a symbolic link named MyFolder from the root directory to the \Users\User1\Documents directory, and a hard link named Myfile.file to the example.file file located within the directory, type:
 
 ```
 mklink /d \MyFolder \Users\User1\Documents

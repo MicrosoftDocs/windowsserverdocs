@@ -368,7 +368,7 @@ Set-VMSwitchTeam -Name TeamedvSwitch -NetAdapterName "NIC 1","NIC 3"
 
 ### Removing a SET team
 
-You can remove a SET team only by removing the Hyper-V Virtual Switch that contains the SET team.  Use the topic [Remove-VMSwitch](/powershell/module/hyper-v/remove-vmswitch?view=win10-ps) for information on how to remove the Hyper-V Virtual Switch. The following example removes a Virtual Switch named **SETvSwitch**.
+You can remove a SET team only by removing the Hyper-V Virtual Switch that contains the SET team.  Use the topic [Remove-VMSwitch](/powershell/module/hyper-v/remove-vmswitch) for information on how to remove the Hyper-V Virtual Switch. The following example removes a Virtual Switch named **SETvSwitch**.
 
 ```
 Remove-VMSwitch "SETvSwitch"

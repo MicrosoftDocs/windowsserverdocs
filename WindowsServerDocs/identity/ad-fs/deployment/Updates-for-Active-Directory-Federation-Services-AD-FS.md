@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Required Updates for Active Directory Federation Services (AD FS) and Web Application Proxy (WAP)"
 ms.assetid: ed3206b4-bbfc-4bc7-a43c-981b0544a50d
 title: Required Updates for Active Directory Federation Services (AD FS)
 author: billmath
