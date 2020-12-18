@@ -28,14 +28,14 @@ In the organizational forest model, user accounts and resources are contained in
 
 If users in an organizational forest need to access resources in other forests (or the reverse), trust relationships can be established between one organizational forest and the other forests. This makes it possible for administrators to grant access to resources in the other forest. The following illustration shows the organizational forest model.
 
-![forest design models](media/Forest-Design-Models/b1ddb47e-78a5-49c7-bb21-d7421b7b84b8.gif)
+![Illustration that shows the organizational forest model.](media/Forest-Design-Models/b1ddb47e-78a5-49c7-bb21-d7421b7b84b8.gif)
 
 Every Active Directory design includes at least one organizational forest.
 
 ## Resource forest model
 In the resource forest model, a separate forest is used to manage resources. Resource forests do not contain user accounts other than those required for service administration and those required to provide alternate access to the resources in that forest, if the user accounts in the organizational forest become unavailable. Forest trusts are established so that users from other forests can access the resources contained in the resource forest. The following illustration shows the resource forest model.
 
-![forest design models](media/Forest-Design-Models/c0b348a6-958c-4fc5-9035-e2d2a54d5573.gif)
+![Illustration that shows the resource forest model.](media/Forest-Design-Models/c0b348a6-958c-4fc5-9035-e2d2a54d5573.gif)
 
 Resource forests provide service isolation that is used to protect areas of the network that need to maintain a state of high availability. For example, if your company includes a manufacturing facility that needs to continue to operate when there are problems on the rest of the network, you can create a separate resource forest for the manufacturing group.
 

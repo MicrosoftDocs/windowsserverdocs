@@ -72,27 +72,27 @@ You can force SDProp to run by using Ldp.exe or by running an LDAP modification 
 1. Launch **Ldp.exe**.
 2. Click **Connection** on the Ldp dialog box, and click **Connect**.
 
-   ![protected accounts and groups](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_9.gif)
+   ![Screenshot that shows the Connect menu option.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_9.gif)
 
 3. In the **Connect** dialog box, type the name of the domain controller for the domain that holds the PDC Emulator (PDCE) role and click **OK**.
 
-   ![protected accounts and groups](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_10.png)
+   ![Screenshot that shows where to type the name of the domain controller for the domain that holds the PDC Emulator (PDCE) role.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_10.png)
 
 4. Verify that you have connected successfully, as indicated by **Dn: (RootDSE)** in the following screenshot, click **Connection** and click **Bind**.
 
-   ![protected accounts and groups](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_11.png)
+   ![Screenshot that shows where to select Connection and then select Bind to verify that you have connected successfully.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_11.png)
 
 5. In the **Bind** dialog box, type the credentials of a user account that has permission to modify the rootDSE object. (If you are logged on as that user, you can select **Bind as** currently logged on user.) Click **OK**.
 
-   ![protected accounts and groups](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_12.png)
+   ![Screenshot that shows the Bind dialog box.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_12.png)
 
 6. After you have completed the bind operation, click **Browse**, and click **Modify**.
 
-   ![protected accounts and groups](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_13.png)
+   ![Screenshot that shows the Modify menu option in the Browse menu.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_13.png)
 
 7. In the **Modify** dialog box, leave the **DN** field blank. In the **Edit Entry Attribute** field, type **FixUpInheritance**, and in the **Values** field, type **Yes**. Click **Enter** to populate the **Entry List** as shown in the following screen shot.
 
-   ![protected accounts and groups](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_14.gif)
+   ![Screenshot that shows the Modify dialog box.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_14.gif)
 
 8. In the populated Modify dialog box, click Run, and verify that the changes you made to the AdminSDHolder object have appeared on that object.
 
@@ -101,7 +101,7 @@ You can force SDProp to run by using Ldp.exe or by running an LDAP modification 
 
 If you prefer to run SDProp manually via LDIFDE or a script, you can create a modify entry as shown here:
 
-![protected accounts and groups](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_15.gif)
+![Screenshot that shows how you can create a modify entry.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_15.gif)
 
 ###### Running SDProp Manually in Windows Server 2012 or Windows Server 2008 R2
 
@@ -111,19 +111,19 @@ You can also force SDProp to run by using Ldp.exe or by running an LDAP modifica
 
 2. In the **Ldp** dialog box, click **Connection**, and click **Connect**.
 
-   ![protected accounts and groups](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_16.gif)
+   ![Screenshot that shows the Ldp dialog box.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_16.gif)
 
 3. In the **Connect** dialog box, type the name of the domain controller for the domain that holds the PDC Emulator (PDCE) role and click **OK**.
 
-   ![protected accounts and groups](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_17.gif)
+   ![Screenshot that shows the Connect dialog box.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_17.gif)
 
 4. Verify that you have connected successfully, as indicated by **Dn: (RootDSE)** in the following screenshot, click **Connection** and click **Bind**.
 
-   ![protected accounts and groups](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_18.gif)
+   ![Screenshot that shows the Bind menu option on the Connection menu.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_18.gif)
 
 5. In the **Bind** dialog box, type the credentials of a user account that has permission to modify the rootDSE object. (If you are logged on as that user, you can select **Bind as currently logged on user**.) Click **OK**.
 
-   ![protected accounts and groups](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_19.gif)
+   ![Screenshot that shows where to type the credentials of a user account that has permission to modify the rootDSE object.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_19.gif)
 
 6. After you have completed the bind operation, click **Browse**, and click **Modify**.
 
@@ -131,10 +131,10 @@ You can also force SDProp to run by using Ldp.exe or by running an LDAP modifica
 
 7. In the **Modify** dialog box, leave the **DN** field blank. In the **Edit Entry Attribute** field, type **RunProtectAdminGroupsTask**, and in the **Values** field, type **1**. Click **Enter** to populate the entry list as shown here.
 
-   ![protected accounts and groups](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_21.gif)
+   ![Screenshot that shows the Edit Entry Attribute field.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_21.gif)
 
 8. In the populated **Modify** dialog box, click **Run**, and verify that the changes you made to the AdminSDHolder object have appeared on that object.
 
 If you prefer to run SDProp manually via LDIFDE or a script, you can create a modify entry as shown here:
 
-![protected accounts and groups](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_22.gif)
+![Screenshot that shows what to do if you prefer to run SDProp manually via LDIFDE or a script.](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_22.gif)

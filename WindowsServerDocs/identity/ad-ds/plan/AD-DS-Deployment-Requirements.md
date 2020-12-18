@@ -20,7 +20,7 @@ Also, as part of your AD DS deployment, you might decide to upgrade and restruct
 ## Deploying a Windows Server 2008 forest root domain
 The forest root domain provides the foundation for your AD DS forest infrastructure. To deploy AD DS, you must first deploy a forest root domain. To do this, you must review your AD DS design; configure the DNS service for the forest root domain; create the forest root domain, which consists of deploying forest root domain controllers, configuring the site topology for the forest root domain, and configuring operations master roles (also known as flexible single master operations or FSMO); and raise the forest and domain functional levels. The following illustration shows the overall process of deploying a forest root domain.
 
-![AD DS requirements](media/AD-DS-Deployment-Requirements/033aad0b-25ff-4793-8825-88a6daa01a55.gif)
+![Illustration that shows the overall process of deploying a forest root domain.](media/AD-DS-Deployment-Requirements/033aad0b-25ff-4793-8825-88a6daa01a55.gif)
 
 For more information, see [Deploying a Windows Server 2008 Forest Root Domain](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
 
