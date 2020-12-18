@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Health Service faults"
 title: Health Service faults
 manager: eldenc
 ms.author: cosdar

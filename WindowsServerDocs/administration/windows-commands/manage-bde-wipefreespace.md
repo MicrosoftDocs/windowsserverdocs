@@ -32,7 +32,7 @@ manage-bde -wipefreespace|-w [<drive>] [-cancel] [-computername <name>] [{-?|/?}
 
 ### Examples
 
-To wipe the free space on drive C, type:\
+To wipe the free space on drive C, type either:
 
 ```
 manage-bde -w C:
@@ -42,7 +42,7 @@ manage-bde -w C:
 manage-bde -wipefreespace C:
 ```
 
-To cancel the wipe of tje free space on drive C, type:
+To cancel the wipe of tje free space on drive C, type either:
 
 ```
 manage-bde -w -cancel C:

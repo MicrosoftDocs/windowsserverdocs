@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Cleaning metadata of removed writable domain controllers"
 title: AD Forest Recovery - Cleaning metadata of removed dcs
 ms.author: daveba
 author: iainfoulds

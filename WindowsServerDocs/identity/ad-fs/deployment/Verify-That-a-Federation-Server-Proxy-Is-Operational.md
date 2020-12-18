@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Verify That a Federation Server Proxy Is Operational"
 ms.assetid: d555041a-709e-42c7-920a-8dfd2c7e0488
 title: Verify That a Federation Server Proxy Is Operational
 author: billmath

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD DS Design and Planning"
 ms.assetid: a91339ef-6ad4-445f-8ecc-a95fbcc04296
 title: AD DS Design and Planning
 ms.author: daveba

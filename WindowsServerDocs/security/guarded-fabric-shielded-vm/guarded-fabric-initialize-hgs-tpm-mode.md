@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Initialize HGS using TPM-trusted attestation"
 title: Initialize HGS using TPM-trusted attestation
 ms.topic: article
 manager: dongill

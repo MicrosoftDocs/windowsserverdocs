@@ -1,5 +1,6 @@
 ---
 title: Obtain certificates for HGS
+description: "Learn more about: Obtain certificates for HGS"
 ms.topic: article
 ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Deploy guarded hosts"
 title: Deploy guarded hosts
 ms.topic: article
 ms.assetid: 2379ca26-b32d-4055-8b4b-99d1f2df37e1

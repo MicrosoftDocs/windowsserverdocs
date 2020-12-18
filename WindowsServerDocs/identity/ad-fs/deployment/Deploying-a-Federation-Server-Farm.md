@@ -1,6 +1,7 @@
 ---
 ms.assetid: bbb5b68f-00ad-4715-8176-0c2769b706c4
 title: Deploying a Federation Server Farm for Windows Server 2012 R2 AD FS
+description: "Learn more about: Deploying a Federation Server Farm"
 author: billmath
 ms.author: billmath
 manager: femila
@@ -31,4 +32,3 @@ In order to deploy a federation server farm, complete the tasks in this checklis
 [AD FS Deployment](../../ad-fs/AD-FS-Deployment.md)
 
 [Windows Server 2012 R2 AD FS Deployment Guide](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
-

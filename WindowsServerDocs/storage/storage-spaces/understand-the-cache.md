@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Understanding the cache in Storage Spaces Direct"
 title: Understanding the cache in Storage Spaces Direct
 ms.assetid: 69b1adc0-ee64-4eed-9732-0fb216777992
 ms.author: cosdar

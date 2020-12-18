@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Mirror-accelerated parity"
 title: Mirror-accelerated parity
 ms.author: gawatu
 manager: masriniv

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Health Service settings"
 title: Health Service settings
 manager: eldenc
 ms.author: cosdar

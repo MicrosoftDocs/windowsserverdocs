@@ -1,6 +1,7 @@
 ---
 ms.assetid: 4ddb927d-d65e-491d-840a-16049c083d13
 title: The Role of Attribute Stores
+description: "Learn more about: The Role of Attribute Stores"
 author: billmath
 ms.author: billmath
 manager: femila
@@ -33,4 +34,3 @@ AD FS supports a wide range of directory and database stores that you can use fo
 -   All editions of Microsoft SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, and SQL Server 2016 and newer;
 
 -   Custom attribute stores
-

@@ -37,6 +37,15 @@ To start using an app or desktop, select the item you want to use, enter the sam
 
 When you're finished, you can end your session by either selecting the **Sign Out** button in the toolbar at the top of your screen or closing the browser window.
 
+## Web client keyboard shortcuts
+
+The following table describes alternate key combinations to inject standard Windows shortcut keys in the remote session.
+
+|Shortcut key |Description |
+|-------------|------------|
+|(Windows) Ctrl+Alt+End</br>(MacOS) fn+control+option+delete|Inject Ctrl+Alt+Del in the remote session.|
+|Alt+F3       |Injects Windows key in the remote session.|    
+
 ## Printing from the Remote Desktop web client
 
 Follow these steps to print from the web client:
@@ -53,7 +62,13 @@ The web client currently supports copying and pasting text only. Files can't be 
 
 ## Use an Input Method Editor (IME) in the remote session
 
-To use an Input Method Editor to enter complex characters in the remote session, select the gear icon in the navigation bar to open the **Settings** side panel and set the **Enable Input Method Editor** switch to **On**. You must have an Input Method Editor installed and enabled in the remote session.
+Follow these steps to use an Input Method Editor to enter complex characters in the remote session:
+
+1. Select the gear icon in the navigation bar to open the **Settings** side panel.
+2. Set the **Enable Input Method Editor** switch to **On**.
+3. Select your preferred IME keyboard layout in the dropdown menu.
+
+You must have an Input Method Editor installed and enabled in the remote session.
 
 ## Get help with the web client
 

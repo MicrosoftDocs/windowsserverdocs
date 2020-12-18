@@ -10,6 +10,9 @@ ms.date: 01/28/2020
 
 >Applies to: Windows Server (Semi-Annual Channel)
 
+> [!IMPORTANT]
+> Windows Server version 1903 has reached end of servicing as of December 8, 2020.
+
 This topic describes some of the new features in Windows Server, version 1903 which is a Semi-Annual Channel release. These features include enhancements for running and managing containers, tools for working in Server Core installations, and the ability to migrate storage from Linux devices.
 
 Windows Server, version 1909 is the next Semi-Annual Channel release of Windows Server, focused on reliability, performance, and other general improvements, but no new features. Like other Semi-Annual Channel releases, it’s supported for 18 months from its first availability. For more info on the support dates of Semi-Annual Channel releases, see [Windows Server release info](../get-started/windows-server-release-info.md).

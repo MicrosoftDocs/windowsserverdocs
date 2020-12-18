@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Active Directory Domain Services Overview"
 ms.assetid: f052dfcd-dace-4485-8d0a-cc7df5cf3751
 title: Active Directory Domain Services Overview
 author: iainfoulds

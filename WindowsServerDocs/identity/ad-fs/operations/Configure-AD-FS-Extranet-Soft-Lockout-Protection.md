@@ -1,6 +1,7 @@
 ---
 ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: Configure AD FS Extranet Soft Lockout Protection
+description: "Learn more about: Configure AD FS Extranet Lockout Protection"
 author: billmath
 ms.author: billmath
 manager: femila
@@ -89,5 +90,3 @@ There is a known issue where the AD user account cannot authenticate with AD FS 
 - [Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties)
 
 [AD FS Operations](../ad-fs-operations.md)
-
-

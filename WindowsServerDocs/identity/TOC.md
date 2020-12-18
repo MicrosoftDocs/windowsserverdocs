@@ -476,10 +476,7 @@
 ## Active Directory Rights Management Service
 ### [Upgrading AD RMS to Windows Server 2016](ad-rms/adrms-deploy.md)
 
-
-## [Securing Privileged Access](securing-privileged-access/securing-privileged-access.md)
-### [Privileged Access Workstations](securing-privileged-access/privileged-access-workstations.md)
-### [Securing Privileged Access Reference Material](securing-privileged-access/securing-privileged-access-reference-material.md)
+## [Administrative tools and logon types reference](securing-privileged-access/reference-tools-logon-types.md)
 
 ## [Software Restriction Policies](software-restriction-policies/software-restriction-policies.md)
 ### [Software Restriction Policies Technical Overview](software-restriction-policies/software-restriction-policies-technical-overview.md)

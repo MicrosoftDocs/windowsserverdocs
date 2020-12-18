@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 12/02/2020
+ms.date: 12/11/2020
 ms.localizationpriority: medium
 ---
 # Windows Desktop client for admins
@@ -43,7 +43,7 @@ To turn notifications off, set the following registry information:
 - **Key:** HKLM\Software\Microsoft\MSRDC\Policies
 - **Type:** REG_DWORD
 - **Name:** AutomaticUpdates
-- **Data:** 0 = Disable notifications. 1 = Show notifications. 2 = Show notifications and auto-update on close.
+- **Data:** 0 = Disable notifications and turn off auto-update. 1 = Show notifications and turn off auto-update. 2 = Show notifications and auto-update on close.
 
 ### Configure user groups
 

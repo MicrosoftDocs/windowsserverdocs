@@ -1,6 +1,7 @@
 ---
 ms.assetid: e983d2ab-4153-41e7-b243-12cf7d71a552
 title: Federation Server Farm Using SQL Server
+description: "Learn more about: Legacy AD FS Federation Server Farm Using SQL Server"
 author: billmath
 ms.author: billmath
 manager: femila
@@ -153,4 +154,3 @@ For more detailed instructions on how to configure AD FS to use a SQL Server mer
 ## See Also
 [Plan Your AD FS Deployment Topology](Plan-Your-AD-FS-Deployment-Topology.md)
 [AD FS Design Guide in Windows Server 2012 R2](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)
-
