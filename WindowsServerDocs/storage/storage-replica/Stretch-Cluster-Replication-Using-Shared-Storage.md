@@ -42,6 +42,9 @@ This walkthrough uses the following environment as an example:
 -   A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.
 -   The replicated storage cannot be located on the drive containing the Windows operating system folder.
 
+> [!IMPORTANT]
+> Whilst it is possible to attach a storage device to a single server and use this for replication, Windows Failover Cluster still relies upon SCSI Persistent Reservations. Therefore, the storage must still be a Shared Storage type. Local disks or disks presented by a hypervisor may not be compatible. In Azure, the disks must be a Premium SSD size that supports sharing, even if only one VM is to be attached to it.
+
 Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the following steps.
 
 ## Provision operating system, features, roles, storage, and network
