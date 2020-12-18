@@ -1,6 +1,6 @@
 ---
 title: "Support for larger deployments"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the support for multiple domains, multiple domain controllers, 500 users and 500 devices, and the ability to specify a designated domain controller.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 07d0c4c6-3e92-4969-82b8-105e46ab8d97

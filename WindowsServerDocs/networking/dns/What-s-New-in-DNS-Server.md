@@ -59,11 +59,11 @@ You can configure RRL settings to control how to respond to requests to a DNS cl
 
 -   **Maximum responses**. This is the maximum number of responses the server will issue to a client while responses are suspended.
 
--   **White list domains**. This is a list of domains to be excluded from RRL settings.
+-   **Allowlist domains**. This is a list of domains to be excluded from RRL settings.
 
--   **White list subnets**. This is a list of subnets to be excluded from RRL settings.
+-   **Allowlist subnets**. This is a list of subnets to be excluded from RRL settings.
 
--   **White list server interfaces**. This is a list of DNS server interfaces to be excluded from RRL settings.
+-   **Allowlist server interfaces**. This is a list of DNS server interfaces to be excluded from RRL settings.
 
 ## DANE support
 

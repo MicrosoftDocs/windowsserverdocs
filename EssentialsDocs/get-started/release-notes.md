@@ -1,6 +1,6 @@
 ---
 title: "Release Documentation for Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about what is in the Windows Server 2016 Essentials release.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: db402a2b-7a46-448a-841c-750557cd12cc
