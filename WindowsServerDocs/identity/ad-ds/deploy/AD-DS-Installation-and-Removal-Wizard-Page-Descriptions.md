@@ -298,7 +298,7 @@ The **New Administrator Password** page requires you to provide a password for t
 
 For more information about removing AD DS, see [Remove Active Directory Domain Services (Level 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) and [Demoting Domain Controllers and Domains &#40;Level 200&#41;](Demoting-Domain-Controllers-and-Domains--Level-200-.md).
 
-## <a name="BKMK_ConfirmRoleRemovalPage"></a>Review Options
+## <a name="BKMK_ConfirmRoleRemovalPage"></a>Review Options page
 The **Review Options** page provides you the chance to export the configuration settings for demotion to a Windows PowerShell script so you can automate additional demotions. Click **Demote** to remove AD DS.
 
 ![AD DS Install](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_ReviewOptions.gif)
