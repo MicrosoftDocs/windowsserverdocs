@@ -1,6 +1,6 @@
 ---
 title: "Create an Image By Using Answer Files"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to use answer files to add, change, or keep track of data, settings and conditions when you crate a custom image.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 72809c9d-c2c9-478c-a867-65d3b9a08b95

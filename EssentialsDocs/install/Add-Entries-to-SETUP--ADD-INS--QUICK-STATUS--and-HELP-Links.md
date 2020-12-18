@@ -1,6 +1,6 @@
 ---
 title: "Add Entries to SETUP, ADD-INS, QUICK STATUS, and HELP Links"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to add tasks to the SETUP, ADD-INS, and QUICK STATUS task lists in Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c0a8f10d-fd85-4c8d-b9bb-176cb1db1f46
