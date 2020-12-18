@@ -1,6 +1,6 @@
 ---
 title: "Create the Oobe.xml File Including Logo and EULA"
-description: Lear now to use the Oobe.xml file to add your own End User License Agreement (EULA) to Initial Configuration.
+description: Learn how to use the Oobe.xml file to add your own End User License Agreement (EULA) to Initial Configuration.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 8a7b3cc1-21bb-4344-8110-f5d5959b370d
