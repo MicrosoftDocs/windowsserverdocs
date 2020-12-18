@@ -30,7 +30,7 @@ ms.topic: article
 
     -   "Include command line in process creation events"
 
-![command-line auditing](media/Command-line-process-auditing/GTR_ADDS_Event4688.gif)
+![Screenshot that highlights the Process Command Line.](media/Command-line-process-auditing/GTR_ADDS_Event4688.gif)
 
 **Figure  SEQ Figure \\\* ARABIC 16 Event 4688**
 
@@ -69,11 +69,11 @@ Event volume: Low to medium, depending on system usage
 |**Supported on:**|?|
 |**Description**|This policy setting determines what information is logged in security audit events when a new process has been created.<p>This setting only applies when the Audit Process Creation policy is enabled. If you enable this policy setting the command line information for every process will be logged in plain text in the security event log as part of the Audit Process Creation event 4688, "a new process has been created," on the workstations and servers on which this policy setting is applied.<p>If you disable or do not configure this policy setting, the process's command line information will not be included in Audit Process Creation events.<p>Default: Not configured<p>Note: When this policy setting is enabled, any user with access to read the security events will be able to read the command line arguments for any successfully created process. Command line arguments can contain sensitive or private information such as passwords or user data.|
 
-![command-line auditing](media/Command-line-process-auditing/GTR_ADDS_IncludeCLISetting.gif)
+![Screenshot that shows ](media/Command-line-process-auditing/GTR_ADDS_IncludeCLISetting.gif)
 
 When you use Advanced Audit Policy Configuration settings, you need to confirm that these settings are not overwritten by basic audit policy settings.  Event 4719 is logged when the settings are overwritten.
 
-![command-line auditing](media/Command-line-process-auditing/GTR_ADDS_Event4719.gif)
+![Screenshot that shows the Include command line in process creation events dialog box.](media/Command-line-process-auditing/GTR_ADDS_Event4719.gif)
 
 The following procedure shows how to prevent conflicts by blocking the application of any basic audit policy settings.
 

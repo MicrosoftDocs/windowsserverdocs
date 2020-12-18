@@ -17,7 +17,7 @@ This topic covers detailed methodology on troubleshooting domain controller conf
 
 ## Introduction to Troubleshooting
 
-![Troubleshooting](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)
+![Diagram that shows the workflow for troubleshooting domain controller deployment.](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)
 
 ## Built-in logs for troubleshooting
 
