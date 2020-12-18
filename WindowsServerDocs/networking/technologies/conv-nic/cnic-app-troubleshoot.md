@@ -47,7 +47,7 @@ Perform the following steps if you receive unexpected results when you run the *
 5. Make sure vSwitch is created over the right physical adapter by checking its RDMA capabilities.
 6. Check EventViewer System log and filter by source “Hyper-V-VmSwitch”.
 
-## Get-SmbClientNetworkInterface
+## Get-SmbClientNetworkInterface verifies RDMA configuration
 
 As an additional step to verify your RDMA configuration, run the following Windows PowerShell command on the Hyper-V server.
 
@@ -111,7 +111,7 @@ If your results are unexpected, perform the following steps.
 1. Make sure ping works both ways.
 2. Make sure the firewall is not blocking SMB connection initiation. Specifically, enable the firewall rule for SMB Direct port 5445 for iWARP and 445 for ROCE.
 
-## Get-SmbClientNetworkInterface
+## Get-SmbClientNetworkInterface verifies NIC is RMDA-capable
 
 You can use the following command to verify that the virtual NIC you enabled for RDMA is reported as RDMA\-capable by SMB.
 

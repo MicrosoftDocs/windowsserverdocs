@@ -13,7 +13,7 @@ ms.date: 08/29/2018
 >Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 
-## Join the HGS server to the existing domain
+## Join the HGS server to the root domain
 
 In an existing bastion forest, HGS must be added to the root domain. Use Server Manager or [Add-Computer](https://go.microsoft.com/fwlink/?LinkId=821564) to join your HGS server to the root domain.
 
@@ -26,7 +26,7 @@ Run all commands in this topic in an elevated PowerShell session.
 If your datacenter has a secure bastion forest where you want to join HGS nodes, follow these steps.
 You can also use these steps to configure 2 or more independent HGS clusters that are joined to the same domain.
 
-## Join the HGS server to the existing domain
+## Join the HGS server to the desired domain
 
 Use Server Manager or [Add-Computer](https://go.microsoft.com/fwlink/?LinkId=821564) to join the HGS servers to the desired domain.
 

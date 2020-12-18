@@ -367,7 +367,7 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
     }
     ```
 
-14.  Note the 'todo' for the **Resources.FormPageHtml** element above. You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class. To do this, add the following to your existing IAuthenticationAdapter implementation:
+14. Note the 'todo' for the **Resources.FormPageHtml** element above. You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class. To do this, add the following to your existing IAuthenticationAdapter implementation:
 
     ```csharp
     class MyAdapter : IAuthenticationAdapter
@@ -445,11 +445,11 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
 16. Then, select **Project-\>Add Component... Resources** file and name the file **Resources**, and click **Add:**
 
-   ![create the provider](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "create the provider")
+    ![create the provider](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "create the provider")
 
 17. Then, within the **Resources.resx** file, choose **Add Resource...Add existing file**. Navigate to the text file (containing the html fragment) that you saved above.
 
-   Ensure your GetFormHtml code resolves the name of the new resource correctly by the resources file (.resx file) name prefix followed by the name of the resource itself:
+    Ensure your GetFormHtml code resolves the name of the new resource correctly by the resources file (.resx file) name prefix followed by the name of the resource itself:
 
     ```csharp
     public string GetFormHtml(int lcid)
@@ -614,35 +614,35 @@ By completing the procedures above, you created a basic adapter implementation a
 
 Recall your TryEndAuthentication implementation:
 
-    ```csharp
-    public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
-    {
-        //return new instance of IAdapterPresentationForm derived class
-        outgoingClaims = new Claim[0];
-        return new MyPresentationForm();
-    }
-    ```
+```csharp
+public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
+{
+    //return new instance of IAdapterPresentationForm derived class
+    outgoingClaims = new Claim[0];
+    return new MyPresentationForm();
+}
+```
 
 Let's update it so it doesn't always return MyPresentationForm(). For this you can create one simple utility method within your class:
 
-    ```csharp
-    static bool ValidateProofData(IProofData proofData, IAuthenticationContext authContext)
+```csharp
+static bool ValidateProofData(IProofData proofData, IAuthenticationContext authContext)
+{
+    if (proofData == null || proofData.Properties == null || !proofData.Properties.ContainsKey("ChallengeQuestionAnswer"))
     {
-        if (proofData == null || proofData.Properties == null || !proofData.Properties.ContainsKey("ChallengeQuestionAnswer"))
-        {
-            throw new ExternalAuthenticationException("Error - no answer found", authContext);
-        }
-
-        if ((string)proofData.Properties["ChallengeQuestionAnswer"] == "adfabric")
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        throw new ExternalAuthenticationException("Error - no answer found", authContext);
     }
-    ```
+
+    if ((string)proofData.Properties["ChallengeQuestionAnswer"] == "adfabric")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+```
 
 Then, update TryEndAuthentication as below:
 

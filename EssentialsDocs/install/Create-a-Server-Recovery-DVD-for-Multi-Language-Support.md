@@ -1,6 +1,10 @@
 ---
 title: Create a Server Recovery DVD for Multi-Language Support
+<<<<<<< HEAD
 description: Learn how to create a server setup and server recovery DVD for multiple language support on locally administered servers.
+=======
+description: Learn how to a server setup and server recovery DVD for multiple language support on locally administered servers.
+>>>>>>> 2367986e9258bd86aec4dc17d1317b76d55b21bc
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d

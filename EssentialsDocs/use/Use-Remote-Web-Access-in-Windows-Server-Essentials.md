@@ -1,6 +1,6 @@
 ---
 title: "Use Remote Web Access in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how Remote Web Access enables you to access file/folders and computers on your network via a web browser from anywhere with Internet connectivity.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47ea21a0-5e05-4b4b-8fa4-338c82601276
@@ -36,13 +36,6 @@ manager: mtillman
 -   [Share files and folders](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_SharedFolders)
 
 -   [Connect from a mobile device](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_ConnectMobile)
-
-##  <a name="BKMK_Connect"></a> Connect to Remote Web Access
-
--   [Log on to Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1)
-
--   [Remotely access your computer](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_1.5)
-
 
 ###  <a name="BKMK_1"></a> Log on to Remote Web Access
  When you log on to  Remote Web Access from a local or remote computer, you can access resources on your server running Windows Server Essentials and computers on your network.
