@@ -15,7 +15,7 @@ ms.topic: article
 
 Consider the following example of a fictitious company, Contoso Pharmaceuticals, which is deploying Active Directory Domain Services (AD DS) in its environment. The Contoso environment consists of four domains. The forest functional level is Windows Server 2003. The following illustration shows the current domain structure for the Contoso organization.
 
-![AD DS deployment strategy](media/Evaluating-AD-DS-Deployment-Strategy-Examples/3dd79e00-48f8-4927-989c-c55a79caf1be.gif)
+![Illustration that shows the current domain structure for the Contoso organization.](media/Evaluating-AD-DS-Deployment-Strategy-Examples/3dd79e00-48f8-4927-989c-c55a79caf1be.gif)
 
 After reviewing its existing environment and identifying its deployment goals, Contoso established the following AD DS deployment strategy:
 
