@@ -1,6 +1,6 @@
 ---
 title: "Change the Color Scheme of the Dashboard and Launchpad"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to change the color scheme of the Dashboard and the Launchpad by defining the colors that you want to use in an XML formatted file.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: b2913e51-7979-4d48-a431-d2ec5f1042be

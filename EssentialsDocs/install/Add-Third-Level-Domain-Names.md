@@ -1,6 +1,6 @@
 ---
 title: "Add Third-Level Domain Names"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to add the ability for users to request third-level domain names in the Set Up Domain Name Wizard.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: e5b4a362-1881-4024-ae4e-cc3b05e50103

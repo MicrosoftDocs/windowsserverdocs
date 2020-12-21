@@ -1,6 +1,6 @@
 ---
 title: "Create a Simple Customized Image"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to create a simple customized image in Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 29f9a09f-e4e8-476d-ada1-ab9202a670d7

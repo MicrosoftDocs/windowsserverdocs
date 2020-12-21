@@ -1,6 +1,6 @@
 ---
 title: "Create a Bootable USB Flash Drive"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to create a bootable USB flash drive to use to deploy Windows Server Essentials.
 ms.date: 05/04/2018
 ms.topic: article
 ms.assetid: 2fe8e35c-69f9-40b3-a270-22e2402510d8

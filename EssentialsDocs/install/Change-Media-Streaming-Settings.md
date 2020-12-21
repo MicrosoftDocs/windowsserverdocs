@@ -1,6 +1,6 @@
 ---
 title: "Change Media Streaming Settings"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to change media streaming settings to hide remote media streaming add-in, set the media library name, set video streaming quality, and enable or disable streaming.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: dec690d2-f80c-4b09-99d6-3bba41331972

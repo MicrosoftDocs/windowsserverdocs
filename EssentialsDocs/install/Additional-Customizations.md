@@ -1,6 +1,6 @@
 ---
 title: "Additional Customizations"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about additional customizations you can can make to your image of Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 65a195d5-0098-4c3c-b4ba-07f7319c8f1e

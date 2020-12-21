@@ -1,6 +1,6 @@
 ---
 title: "Add Microsoft Online Service Partner Agreement Partner-of-Record Information"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to create a registry key that contains your Microsoft Online Service Partner Agreement Partner-of-Record Identification (POR ID).
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 9bd191d6-ecc5-4230-a88e-f3fc281cb956

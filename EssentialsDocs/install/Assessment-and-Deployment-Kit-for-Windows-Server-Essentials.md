@@ -1,6 +1,6 @@
 ---
 title: "Assessment and Deployment Kit for Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the Assessment and Deployment Kit for Windows Server Essentials which is a collection of tools, binaries, and operating system language packs.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ef3a7934-e36f-40d8-9e0b-7ed59089f85e
