@@ -45,7 +45,6 @@ This walkthrough uses the following environment as an example:
 > [!IMPORTANT]
 > While it is possible to attach a storage device to a single server and use this for replication, Windows Failover Clustering still relies upon SCSI Persistent Reservations. Therefore, the storage must still be a Shared Storage type such as a SAN technology. Local disks or disks presented by a hypervisor may not be compatible. In Azure, the disks must be a Premium SSD size that supports sharing, even if only one VM is to be attached to it.
 
-
 Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the following steps.
 
 ## Provision operating system, features, roles, storage, and network
