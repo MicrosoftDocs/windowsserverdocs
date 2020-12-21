@@ -48,7 +48,7 @@ In some configurations, DNS servers include root hints (that is, a list of names
 
 Root hints enable any DNS server to locate the DNS root servers. After a DNS server locates the DNS root server, it can resolve any query for that namespace. The following illustration describes how DNS resolves a name by using root hints.
 
-![DNS concepts](../../media/Reviewing-DNS-Concepts/1c044845-b104-4262-a7af-474ba3558a85.gif)
+![Illustration that shows how DNS resolves a name by using root hints.](../../media/Reviewing-DNS-Concepts/1c044845-b104-4262-a7af-474ba3558a85.gif)
 
 In this example, the following events occur:
 
@@ -63,7 +63,7 @@ In this example, the following events occur:
 
 Forwarding enables you to route name resolution through specific servers instead of using root hints. The following illustration describes how DNS resolves a name by using forwarding.
 
-![DNS concepts](../../media/Reviewing-DNS-Concepts/05bc2eb0-1033-4e53-ae30-244fa247d000.gif)
+![Illustration that shows how DNS resolves a name by using forwarding.](../../media/Reviewing-DNS-Concepts/05bc2eb0-1033-4e53-ae30-244fa247d000.gif)
 
 In this example, the following events occur:
 
