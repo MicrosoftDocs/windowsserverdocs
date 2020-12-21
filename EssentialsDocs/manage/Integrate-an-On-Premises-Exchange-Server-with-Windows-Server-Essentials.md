@@ -1,6 +1,6 @@
 ---
 title: "Integrate an On-Premises Exchange Server with Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to set up and integrate an on-premises server that is running Exchange Server with a server that is running Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b

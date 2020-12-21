@@ -1,6 +1,6 @@
 ---
 title: "Define Display Settings"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how define the display settings for Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 505bfc3f-53d2-4835-ab1a-418e7557bfb6

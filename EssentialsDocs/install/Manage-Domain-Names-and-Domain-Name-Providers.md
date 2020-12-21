@@ -1,6 +1,6 @@
 ---
 title: "Manage Domain Names and Domain Name Providers"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to manage third-level domain names and domain name providers.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 96959b7a-0267-41fd-9c5b-33c3ac89c1ee

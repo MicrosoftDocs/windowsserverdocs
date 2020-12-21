@@ -1,6 +1,6 @@
 ---
 title: "Preparing the Image for Deployment"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to use a sysprep.exe file to prepare an image for deployment.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 681c6cad-7fde-494f-86a5-f4c7c15d23f9

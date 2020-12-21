@@ -1,6 +1,6 @@
 ---
 title: "Manage Applications in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to manage applications and install and remove add-ins in Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ae89c46a-0afd-4858-9150-ec97650f45a4
