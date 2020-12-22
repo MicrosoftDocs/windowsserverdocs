@@ -167,7 +167,7 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
 > [!NOTE]
 >  Ensure that the time zone settings of the host virtual machine and the  Windows Server Essentials Experience are the same. Otherwise, you may experience several errors. These include: the initial configuration of the server may not be successful on certificate related tasks, the certificate may not work for a few hours after the  Windows Server Essentials Experience role is installed, and device information will not update correctly.
 
- After deployment, use the Windows PowerShell cmdlet **Get-WssConfigurationStatus** to verify if the initial configuration was successful. The returned status should be one of the following: **Notstarted**, **FinishedWithWarning**, **Running**, **Finished**, **Failed**, or **PendingReboot**.
+ After deployment, use the Windows PowerShell cmdlet **Get-WssConfigurationStatus** to verify if the initial configuration was successful. The returned status should be one of the following: `Notstarted`, `FinishedWithWarning`, `Running`, `Finished`, `Failed`, or `PendingReboot`.
 
  The server will be restarted during the initial configuration. If you need to prevent this automatic restart, you can use the following command to add a registry key before you start the Initial Configuration:
 
@@ -199,7 +199,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
  **Example**:
 
- $Enable-WssRemoteWebAccess  œDenyAccessByDefault  œApplyToExistingUsers
+ `$Enable-WssRemoteWebAccess  œDenyAccessByDefault  œApplyToExistingUsers`
 
  This command will enable Remote Web Access with the router configured automatically, and change the default access permissions for all existing users.
 
@@ -210,7 +210,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
  **Example**:
 
- $password = ConvertTo-SecureString "Passw0rd!" -asplaintext  œforce$Add-WssUser -Name User2Test -Password $password -Accesslevel Administrator -FirstName User2 -LastName Test
+ `$password = ConvertTo-SecureString "Passw0rd!" -asplaintext  œforce$Add-WssUser -Name User2Test -Password $password -Accesslevel Administrator -FirstName User2 -LastName Test`
 
  This command will add an administrator named User2Test with password Passw0rd!.
 
@@ -221,7 +221,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
  **Example**:
 
- $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
+ `$Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"`
 
  This command will add a server folder named MyTestFolder at the specified location.
 

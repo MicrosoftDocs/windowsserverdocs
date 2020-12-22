@@ -17,7 +17,7 @@ To create and customize an image of  Windows Server Essentials, you use many of 
 
  You should be aware of the following important differences:
 
--   Some settings have been changed in **%windir%\setup\script\SetupComplete.cmd**. If you want to use this command, you can add additional cmdlines, but do not remove the existing lines.
+-   Some settings have been changed in **%windir%\setup\script\SetupComplete.cmd**. If you want to use this command, you can add additional `cmdlines`, but do not remove the existing lines.
 
 ## Working with passwords
 

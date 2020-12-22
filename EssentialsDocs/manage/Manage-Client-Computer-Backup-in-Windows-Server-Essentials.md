@@ -328,7 +328,7 @@ manager: mtillman
 
     -   **Backup in progress**: Displays the percentage of backup completed.
 
-    -   **Backup was cancelled**: Displays the date and time that the backup started if you or the network administrator cancelled the backup.
+    -   **Backup was canceled**: Displays the date and time that the backup started if you or the network administrator canceled the backup.
 
     -   **Backup succeeded**: Displays the date and time that the backup started if the backup completed successfully.
 
@@ -352,7 +352,7 @@ manager: mtillman
 
 3.  In the **Backup Properties** dialog box, in the **Backup status** section, the **Start backup** button changes to **Stop backup** when the backup is in progress. Click **Stop backup**, and then click **Yes** to confirm. The backup will continue to run until you click **Yes**.
 
-4.  When you stop a backup in progress, the status changes to **Backup was cancelled** with the date and time that the backup started. If, instead, you see a status of **Successful**, **Incomplete**, or **Failed**, the last backup has already finished.
+4.  When you stop a backup in progress, the status changes to **Backup was canceled** with the date and time that the backup started. If, instead, you see a status of **Successful**, **Incomplete**, or **Failed**, the last backup has already finished.
 
 5.  Click **OK** to close the **Backup Properties** dialog box.
 
@@ -372,7 +372,7 @@ manager: mtillman
 
 4.  Type a description for the backup, and then click **OK**. The status changes to **Starting backup**, and then to **Backup in process** with a percentage complete.
 
-5.  After backup starts, the button changes to **Stop backup**. If the backup is in progress and you want to stop it, click **Stop backup**, and then click **Yes**. When you stop a backup in progress, the status changes to **Backup was cancelled** with the date and time that the backup was started.
+5.  After backup starts, the button changes to **Stop backup**. If the backup is in progress and you want to stop it, click **Stop backup**, and then click **Yes**. When you stop a backup in progress, the status changes to **Backup was canceled** with the date and time that the backup was started.
 
 6.  When the backup finishes successfully, the status changes to **Backup succeeded** with the date and time that the finished backup started.
 
