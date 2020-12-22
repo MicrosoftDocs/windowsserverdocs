@@ -32,7 +32,8 @@ You can view the current settings using the following PowerShell example:
 Get-AdfsProperties | select -ExpandProperty WiaSupportedUserAgents
 ```
 
-![WIA Support](../operations/media/Configure-AD-FS-Browser-WIA/wiasupport.png)
+![WIA Support](media/Configure-AD-FS-Browser-WIA/wiasupport.png)
+
 
 ### Change WIASupportedUserAgent settings
 By default, a new AD FS installation has a set of user agent string matches created. However, these may be out of date based on changes to browsers and devices. Particularly, Windows devices have similar user agent strings with minor variations in the tokens. The following Windows PowerShell example provides the best guidance for the current set of devices that are on the market today that support seamless WIA:
