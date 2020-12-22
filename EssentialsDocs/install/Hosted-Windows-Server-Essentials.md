@@ -1,6 +1,6 @@
 ---
 title: "Hosted Windows Server Essentials"
-description: Lean how to deploy Microsoft Windows Server and offer Windows Server Essentials Experience as a service to your customers.
+description: Learn how to deploy Microsoft Windows Server and offer Windows Server Essentials Experience as a service to your customers.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
