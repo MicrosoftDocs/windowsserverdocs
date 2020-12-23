@@ -4,7 +4,7 @@ description: This topic presents information about the Extensible Authentication
 author: khdownie
 ms.author: v-kedow
 ms.topic: conceptual
-ms.date: 12/22/2020
+ms.date: 12/23/2020
 ---
 
 # Extensible Authentication Protocol (EAP) for network access
@@ -345,4 +345,16 @@ Default = N/A
 
    > [!NOTE]
    > When both **Certificate Issuer** and **Extended Key Usage (EKU)** are enabled, only those certificates that satisfy both conditions are considered valid for the purpose of authenticating the client to the server.
+
+## Select EKUs
+
+You can select an EKU from the list provided, or add a new EKU.
+
+| Item          | Details |
+| :------------ | :------ |
+| **Add**       | Opens the **Add or Edit EKU** dialog box, which enables you to define and add custom EKUs. In **Select the EKUs from the list below**, select an EKU in the list, and then click **OK** to add that EKU to the **Client Authentication** or the **Any Purpose** list. |
+| **Edit**      | Opens the **Add or Edit EKU** dialog box, and enables you to edit custom EKUs that you have added. You cannot edit the default, predefined EKUs. |
+| **Remove**    | Removes the selected custom EKU from the list of EKUs in the **Select EKUs** dialog box. You cannot remove the default, predefined EKUs. |
+
+## Add or Edit EKU
 
