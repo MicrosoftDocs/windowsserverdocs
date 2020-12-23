@@ -27,9 +27,11 @@ This topic contains configuration information specific to the following authenti
 
   2. EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (MS-CHAP v2)
 
+     Secure password EAP-MS-CHAP v2 is an EAP type that can be used with PEAP for password-based network authentication. EAP-MsCHAPv2 can also be used as a standalone method for VPN, but only as a PEAP inner method for wireless.
+
 - **EAP-TLS**
 
-  This section about Smart Card or other Certificate Properties includes information about the following configurations:
+  The section about Smart card or other certificate properties includes information about the following configurations:
 
   - Configure New Certificate Selection configuration items
   - Select EKUs
@@ -63,7 +65,7 @@ You can access the EAP properties for virtual private network (VPN) connections 
 
 By default, you can configure EAP settings for the following network authentication methods for 802.1X authenticated wired access, 802.1X authenticated wireless access, and VPN:
 
-- Microsoft: Smart Card or other Certificate (EAP-TLS)
+- Microsoft: Smart card or other certificate (EAP-TLS)
 - Microsoft: Protected EAP (PEAP)
 - Microsoft: EAP-TTLS
 
@@ -71,16 +73,276 @@ Additionally, the MS-CHAP-V2 network authentication method is available for VPN 
 
 ## Protected EAP Properties configuration items
 
-The following table lists the items that can be configured for Protected EAP.
+This section lists the items that can be configured for Protected EAP.
 
    > [!IMPORTANT]
    > Deploying the same type of authentication method for PEAP and EAP creates a security vulnerability. When you deploy both PEAP and EAP (which is not protected), do not use the same authentication type. For example, if you deploy PEAP-TLS, do not also deploy EAP-TLS.
 
-| **Item** | **Details** |
-| --------------- | --------------- |
-| Verify the server's identity by validating the certificate | Specifies that the client verifies that server certificates presented to the client computer have the correct signatures, have not expired, and were issued by a trusted root certification authority (CA). The default setting is "enabled." 
-   > [!IMPORTANT]
-   > If you disable this check box, client computers cannot verify the identity of your servers during the authentication process. If server authentication does not occur, users are exposed to severe security risks, including the possibility that users might unknowingly connect to a rogue network.|
-| Connect to the servers | Allows you to specify the name for Remote Authentication Dial-In User Service (RADIUS) servers that provide network authentication and authorization. |
+### Verify the server's identity by validating the certificate
 
+This item specifies that the client verifies that server certificates presented to the client computer have the correct signatures, have not expired, and were issued by a trusted root certification authority (CA). The default setting is "enabled." **If you disable this check box, client computers cannot verify the identity of your servers during the authentication process. If server authentication does not occur, users are exposed to severe security risks, including the possibility that users might unknowingly connect to a rogue network.**
+
+### Connect to these servers
+
+This item allows you to specify the name for Remote Authentication Dial-In User Service (RADIUS) servers that provide network authentication and authorization. Note that you must type the name **exactly** as it appears in the **Subject** field of each RADIUS server certificate, or use regular expressions to specify the server name. The complete syntax of the regular expression can be used to specify the server name, but to differentiate a regular expression with the literal string, you must use at least one "" in the string specified. For example, you can specify nps.example.com to specify the RADIUS server nps1.example.com or nps2.example.com.
+
+Even if no RADIUS servers are specified, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
+
+Defaults:
+
+- Wired and wireless = not enabled
+- VPN = enabled
+
+### Trusted root certification authorities
+
+This item lists the trusted root certification authorities. The list is built from the trusted root CAs that are installed in the computer and in the user certificate stores. You can specify which trusted root CA certificates supplicants use to determine whether they trust your servers, such as your server running Network Policy Server (NPS) or your provisioning server. If no trusted root CAs are selected, the 802.1X client verifies that the computer certificate of the RADIUS server was issued by an installed trusted root CA. If one or multiple trusted root CAs are selected, the 802.1X client verifies that the computer certificate of the RADIUS server was issued by a selected trusted root CA. Even if no trusted root CAs are selected, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
+
+If you have a public key infrastructure (PKI) on your network, and you use your CA to issue certificates to your RADIUS servers, your CA certificate is automatically added to the list of trusted root CAs.
+
+You can also purchase a CA certificate from a non-Microsoft vendor. Some non-Microsoft trusted root CAs provide software with your purchased certificate that automatically installs the purchased certificate into the **Trusted Root Certification Authorities** certificate store. In this case, the trusted root CA automatically appears in the list of trusted root CAs.
+
+   > [!NOTE]
+   > Do not specify a trusted root CA certificate that is not already listed in client computers’ **Trusted Root Certification Authorities** certificate stores for **Current User** and **Local Computer**. If you designate a certificate that is not installed on client computers, authentication will fail.
+
+Default = not enabled, no trusted root CAs selected
+
+### Notifications before connecting
+
+This item specifies whether the user is notified if the server name or root certificate is not specified, or whether the server’s identity cannot be verified.
+
+By default, the following options are provided:
+
+- Case 1: **Do not ask user to authorize new servers or trusted CAs** specifies that if:
+
+  1. The server name is not in the **Connect to these servers** list
+  2. or the root certificate is found but is not selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**
+  3. or the root certificate is not found on the computer
+
+  then the user is not notified, and the connection attempt fails.
+
+- Case 2: **Tell user if the server name or root certificate is not specified** specifies that if:
+
+  1. The server name is not in the **Connect to these servers** list
+  2. or the root certificate is found but is not selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**
+
+  then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails. In this option, if the root certificate is not present on the computer, the user is not notified and the connection attempts fails.
+
+- Case 3: **Tell user if the server’s identity cannot be verified** specifies that if:
+
+  1. The server name is not in the **Connect to these servers** list
+  2. or the root certificate is found but is not selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**
+  3. or the root certificate is not found on the computer
+
+the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails.
+
+### Select authentication method
+
+This item allows you to select the EAP type to use with PEAP for network authentication. By default, two EAP types are available, **Secured password (EAP-MSCHAPv2)** and **Smart card or other certificate (EAP-TLS)**. However, EAP is a flexible protocol that allows inclusion of additional EAP methods, and it is not restricted to these two types.
+
+For information about Secured password (EAP-MSCHAPv2) or Smart card or other certificate (EAP-TLS) configuration settings, see:
+
+- Secure password (EAP-MSCHAP v2) Properties configuration items
+
+- Smart Card or other Certificate Properties configuration items
+
+Default = Secured password (EAP-MSCHAP v2)
+
+### Configure
+
+This item provides access to property settings for the specified EAP type. 
+
+### Enable fast reconnect
+
+Enables the ability to create a new or refreshed security association more efficiently or in a smaller number of round-trips, in the case where a security association was previously established.
+
+For VPN connections, Fast Reconnect uses IKEv2 technology to provide seamless and consistent VPN connectivity, when users temporarily lose their Internet connections. Users who connect by using wireless mobile broadband will benefit most from this capability.
+
+An example of this benefit is a common scenario in which a user is traveling on a train, uses a wireless mobile broadband card to connect to the Internet, and then establishes a VPN connection to the corporate network.
+
+As the train passes through a tunnel, the Internet connection is lost. When the train is outside the tunnel, the wireless mobile broadband card automatically reconnects to the Internet.
+
+In client versions prior to Windows 7, VPN does not automatically reconnect. The user must repeat the multistep process to connect to the VPN each time Internet connectivity is interrupted. This can quickly become time consuming for mobile users with intermittent connectivity disruptions.
+
+In Windows 8, Fast Reconnect automatically re-establishes active VPN connections when Internet connectivity is re-established. Although the reconnection might take several seconds to occur, it is performed transparently to users.
+
+Default = enabled
+
+### Enforce network access protection
+
+This item specifies that before connections to a network are permitted, system health checks are performed on EAP supplicants to determine if they meet system health requirements.
+
+Default = not enabled
+
+### Disconnect if server does not present cryptobinding TLV
+
+This item specifies that connecting clients must end the network authentication process if the RADIUS server does not present cryptobinding Type-Length-Value (TLV). Cryptobinding TLV increases the security of the TLS tunnel in PEAP by combining the inner method and the outer method authentications together so that attackers cannot perform man-in-the-middle attacks by redirecting an MS-CHAP v2 authentication by using the PEAP channel.
+
+Default = not enabled
+
+### Enable identity privacy
+
+Specifies that clients are configured so that they cannot send their identity before the client has authenticated the RADIUS server, and optionally, provides a place to type an anonymous identity value. For example, if you select Enable Identity Privacy, and then type “guest” as the anonymous identity value, the identity response for a user with identity alice@example is guest@example. If you select Enable Identity Privacy but do not provide an anonymous identity value, the identity response for the user alice@example is @example.
+
+This setting applies only to computers running Windows 7 and Windows 8.
+
+Default = not enabled
+
+## Secure password (EAP-MSCHAP v2) properties configuration items
+
+Checking **Automatically use my Windows logon name and password (and domain if any)** specifies that the current user-based Windows sign in name and password are used as network authentication credentials. 
+
+Defaults:
+
+- Wired and wireless = enabled
+- VPN = not enabled
+
+## Smart card or other certificate properties configuration items
+
+This section lists the items that can be configured for EAP-TLS.
+
+### Use my smart card
+
+This item specifies that clients making authentication requests must present a smart card certificate for network authentication.
+
+Defaults:
+
+- Wired and wireless = not enabled
+- VPN = enabled
+
+### Use a certificate on this computer
+
+This item specifies that authenticating clients must use a certificate located in the **Current User** or **Local Computer** certificate stores.
+
+Defaults:
+
+- Wired and wireless = enabled
+- VPN = not enabled
+
+### Use simple certificate selection (recommended)
+
+This item specifies whether Windows filters out certificates that are unlikely to meet authentication requirements. This serves to limit the list of available certificates when prompting the user to select a certificate.
+
+Defaults:
+
+- Wired and wireless = enabled
+- VPN = not enabled
+
+### Advanced
+
+This item opens the **Configure Certificate Selection** dialog box. For more information about **Configure Certificate Selection**, see Configure New Certificate Selection configuration items.
+
+### Verify the server’s identity by validating the certificate
+
+This item specifies that the client verifies that the server certificates presented to the client computer have the correct signatures, have not expired, and were issued by a trusted root certification authority (CA). **Do not disable this check box or client computers cannot verify the identity of your servers during the authentication process. If server authentication does not occur, users are exposed to severe security risks, including the possibility that users might unknowingly connect to a rogue network.**
+
+Default = enabled
+
+### Connect to these servers
+
+This item allows you to specify the name for RADIUS servers that provide network authentication and authorization. Note that you must type the name **exactly** as it appears in the Subject field of each RADIUS server certificate, or use regular expressions to specify the server name. The complete syntax of the regular expression can be used to specify the server name, but to differentiate a regular expression with the literal string, you must use at least one "" in the string that is specified. For example, you can specify nps.example.com to specify the RADIUS server nps1.example.com or nps2.example.com.
+
+Even if no RADIUS servers are specified, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
+
+Defaults:
+
+- Wired and wireless = not enabled
+- VPN = enabled
+
+### Trusted root certification authorities
+
+This item lists the **trusted root certification authorities**. The list is built from the trusted root CAs that are installed in the computer and user certificate stores. You can specify which trusted root CA certificates that supplicants use to determine whether they trust your servers, such as your server running NPS or your provisioning server. If no trusted root CAs are selected, the 802.1X client verifies that the computer certificate of the RADIUS server was issued by an installed trusted root CA. If one or multiple trusted root CAs are selected, the 802.1X client verifies that the computer certificate of the RADIUS server was issued by a selected trusted root CA.
+
+If you have a public key infrastructure (PKI) on your network, and you use your CA to issue certificates to your RADIUS servers, your CA certificate is automatically added to the list of trusted root CAs.
+
+You can also purchase a CA certificate from a non-Microsoft vendor. Some non-Microsoft trusted root CAs provide software with your purchased certificate that automatically installs the purchased certificate into the **Trusted Root Certification Authorities** certificate store. In this case, the trusted root CA automatically appears in the list of trusted root CAs.
+
+Do not specify a trusted root CA certificate that is not already listed in client computers’ **Trusted Root Certification Authorities** certificate stores for **Current User** and **Local Computer**. 
+
+Even if no trusted root CAs are selected, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
+
+   > [!NOTE]
+   > If you designate a certificate that is not installed on client computers, authentication will fail.
+
+Default = not enabled, no trusted root CAs selected.
+
+### View certificate
+
+This item enables you to view the properties of the selected certificate.
+
+### Do not prompt user to authorize new servers or trusted certification authorities
+
+This item prevents the user from being prompted to trust a server certificate if that certificate is incorrectly configured, is not already trusted, or both (if enabled). It is recommended that you select this check box to simplify the user experience and to prevent users from inadvertently choosing to trust a server that is deployed by an attacker.
+
+Default = not enabled
+
+### Use a different user name for the connection
+
+This item specifies whether to use a user name for authentication that is different from the user name in the certificate.
+
+Default = not enabled
+
+## Configure New Certificate Selection configuration items
+
+Use **New Certificate Selection** to configure the criteria that client computers use to automatically select the right certificate on the client computer for the purpose of authentication. When the configuration is provided to network client computers through the Wired Network (IEEE 802.3) Policies, the Wireless Network (IEEE 802.11) Policies, or through Connection Manager Administration Kit (CMAK) for VPN, clients are automatically provisioned with the specified authentication criteria.
+
+This section lists the configuration items for **New Certificate Selection**, along with a description of each.
+
+### Certificate Issuer
+
+This item specifies whether Certificate Issuer filtering is enabled.
+
+Default = not selected
+
+### Certificate Issuer list
+
+Used to specify one or multiple certificate issuers for the certificates.
+
+Lists the names of all of the issuers for which corresponding certification authority (CA) certificates are present in the **Trusted Root Certification Authorities** or **Intermediate Certification Authorities** certificate store of local computer account.
+
+- Includes all the root certification authorities and intermediate certification authorities.
+
+- Contains only those issuers for which there are corresponding valid certificates that are present on the computer (for example, certificates that are not expired or not revoked).
+
+The final list of certificates that are allowed for authentication contains only those certificates that were issued by any of the issuers selected in this list.
+
+Default = none selected
+
+### Extended Key Usage (EKU)
+
+You can select **All Purpose**, **Client Authentication**, **Any Purpose**, or any combination of these. Specifies that when a combination is selected, all the certificates satisfying at least one of the three conditions are considered valid certificates for the purpose of authenticating the client to the server. If EKU filtering is enabled, one of the choices must be selected; otherwise, the **OK** command control is disabled.
+
+Default = not enabled
+
+### All Purpose
+
+When selected, this item specifies that certificates having the **All Purpose** EKU are considered valid certificates for the purpose of authenticating the client to the server.
+
+Default = selected when **Extended Key Usage (EKU)** is selected
+
+### Client Authentication
+
+When selected, this item specifies that certificates having the **Client Authentication** EKU, and the specified list of EKUs are considered valid certificates for the purpose of authenticating the client to the server.
+
+Default = selected when **Extended Key Usage (EKU)** is selected
+
+### Any Purpose
+
+When selected, this item specifies that all certificates having **Any Purpose** EKU and the specified list of EKUs are considered valid certificates for the purpose of authenticating the client to the server.
+
+Default = selected when **Extended Key Usage (EKU)** is selected
+
+### Add
+
+This item opens the **Select EKUs** dialog box, which enables you to add standard, custom, or vendor-specific EKUs to the **Client Authentication** or **Any Purpose** list.
+
+Default = no EKUs listed
+
+### Remove
+
+This item removes the selected EKU from the **Client Authentication** or **Any Purpose** list.
+
+Default = N/A
+
+   > [!NOTE]
+   > When both **Certificate Issuer** and **Extended Key Usage (EKU)** are enabled, only those certificates that satisfy both conditions are considered valid for the purpose of authenticating the client to the server.
 
