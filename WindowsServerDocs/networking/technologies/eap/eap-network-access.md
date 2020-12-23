@@ -27,7 +27,7 @@ This topic contains configuration information specific to the following authenti
 
   2. EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (MS-CHAP v2)
 
-     Secure password EAP-MS-CHAP v2 is an EAP type that can be used with PEAP for password-based network authentication. EAP-MsCHAPv2 can also be used as a standalone method for VPN, but only as a PEAP inner method for wireless.
+     Secure password EAP-MS-CHAP v2 is an EAP type that can be used with PEAP for password-based network authentication. EAP-MsCHAP v2 can also be used as a standalone method for VPN, but only as a PEAP inner method for wireless.
 
 - **EAP-TLS**
 
@@ -136,7 +136,7 @@ By default, the following options are provided:
 
 ### Select authentication method
 
-This item allows you to select the EAP type to use with PEAP for network authentication. By default, two EAP types are available, **Secured password (EAP-MSCHAPv2)** and **Smart card or other certificate (EAP-TLS)**. However, EAP is a flexible protocol that allows inclusion of additional EAP methods, and it is not restricted to these two types.
+This item allows you to select the EAP type to use with PEAP for network authentication. By default, two EAP types are available, **Secure password (EAP-MSCHAP v2)** and **Smart card or other certificate (EAP-TLS)**. However, EAP is a flexible protocol that allows inclusion of additional EAP methods, and it is not restricted to these two types.
 
 For more information, see:
 
@@ -144,7 +144,7 @@ For more information, see:
 
 - [Smart Card or other certificate properties configuration items](#smart-card-or-other-certificate-properties-configuration-items)
 
-Default = Secured password (EAP-MSCHAP v2)
+Default = Secure password (EAP-MSCHAP v2)
 
 ### Configure
 
