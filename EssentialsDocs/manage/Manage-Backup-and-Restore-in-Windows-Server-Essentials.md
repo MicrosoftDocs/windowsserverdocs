@@ -1,6 +1,6 @@
 ---
 title: "Manage Backup and Restore in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to perform regular backups of your server and backups of your network computers and restore data from those backups in Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 41000915-f6ff-4dbb-b7be-629ef36386d4

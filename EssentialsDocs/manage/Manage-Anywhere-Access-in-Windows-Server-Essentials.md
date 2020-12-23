@@ -1,6 +1,6 @@
 ---
 title: "Manage Anywhere Access in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to turn on the Anywhere Access functionalities, Remote Web Access, virtual private network, and DirectAccess in Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c369c317-f94d-4179-a735-e74bf6f62692

@@ -1,6 +1,6 @@
 ---
 title: "Customize Shared Folders"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to customize the location of server folders and specify additional server folders.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47bc4986-14eb-4a29-9930-83a25704a3a0

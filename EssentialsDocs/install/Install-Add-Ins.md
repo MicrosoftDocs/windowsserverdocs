@@ -1,6 +1,6 @@
 ---
 title: "Install Add-Ins"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to include add-ins on all server or client computers by installing them before you create an image.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: e62e4f07-c2ba-4c5e-b30c-bdc287cd654e
