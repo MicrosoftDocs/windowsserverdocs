@@ -9,7 +9,7 @@ ms.date: 12/23/2020
 
 # Extensible Authentication Protocol (EAP) for network access
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8.1
 
 The Extensible Authentication Protocol (EAP) is an architectural framework that provides extensibility for authentication methods for commonly used protected network access technologies, such as IEEE 802.1X-based wireless access, IEEE 802.1X-based wired access, and Point-to-Point Protocol (PPP) connections such as Virtual Private Networking (VPN). EAP is not an authentication method like MS-CHAP v2, but rather a framework on the access client and authentication server that allows networking vendors to develop and easily install new authentication methods known as EAP methods.
 
@@ -33,7 +33,7 @@ This topic contains configuration information specific to the following authenti
 
   The section about Smart card or other certificate properties includes information about the following configurations:
 
-  - Configure New Certificate Selection configuration items
+  - [Configure New Certificate Selection configuration items](#Configure-New-Certificate-Selection-configuration-items)
   - Select EKUs
   - Add or Edit EKU
 
@@ -93,7 +93,7 @@ Defaults:
 - Wired and wireless = not enabled
 - VPN = enabled
 
-### Trusted root certification authorities
+### Trusted Root Certification Authorities
 
 This item lists the trusted root certification authorities. The list is built from the trusted root CAs that are installed in the computer and in the user certificate stores. You can specify which trusted root CA certificates supplicants use to determine whether they trust your servers, such as your server running Network Policy Server (NPS) or your provisioning server. If no trusted root CAs are selected, the 802.1X client verifies that the computer certificate of the RADIUS server was issued by an installed trusted root CA. If one or multiple trusted root CAs are selected, the 802.1X client verifies that the computer certificate of the RADIUS server was issued by a selected trusted root CA. Even if no trusted root CAs are selected, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
 
@@ -358,3 +358,141 @@ You can select an EKU from the list provided, or add a new EKU.
 
 ## Add or Edit EKU
 
+| Item          | Details |
+| :------------ | :------ |
+| **Enter the name of the EKU** | Provides a place to type the name of the custom EKU. |
+| **Enter the EKU OID** | Provides a place to type the OID for the EKU. Only numeric digits, separators, and “.” are allowed. Wild cards are permitted, in which case all of the child OIDs in the hierarchy are allowed. For example, entering 1.3.6.1.4.1.311.* allows 1.3.6.1.4.1.311.42 and 1.3.6.1.4.1.311.42.2.1 |
+
+## TTLS configuration items
+
+EAP-TTLS is a standards-based EAP tunneling method that supports mutual authentication and provides a secure tunnel for client inclusion authentication by using EAP methods and other legacy protocols. The addition of EAP-TTLS in Windows Server 2012 provides only client-side support, for the purpose of supporting interoperation with the most commonly-deployed RADIUS servers that support EAP-TTLS.
+
+This section lists the items that can be configured for EAP-TTLS.
+
+### Enable Identity Privacy (Windows 8 only)
+
+This item specifies that clients are configured so that they cannot send their identity before the client has authenticated the RADIUS server, and optionally, provides a place to type an anonymous identity value. For example, if you select **Enable Identity Privacy**, and then type “guest” as the anonymous identity value, the identity response for a user with identity alice@example is guest@example. If you select **Enable Identity Privacy** but do not provide an anonymous identity value, the identity response for the user alice@example is @example.
+
+This setting applies only to computers running Windows 8.
+
+Default = not enabled
+
+### Connect to these servers
+
+This item enables you to specify the name for RADIUS servers that provide network authentication and authorization. Note that you must type the name **exactly** as it appears in the Subject field of each RADIUS server certificate, or use regular expressions to specify the server name. The complete syntax of the regular expression can be used to specify the server name. But to differentiate a regular expression with the literal string, you must use at least one * in the string specified. For example, you can specify nps*.example.com to specify the RADIUS server nps1.example.com or nps2.example.com. Even if no RADIUS servers are specified, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
+
+Default = none
+
+### Trusted Root Certification Authorities
+
+This item lists the **trusted root certification authorities**. The list is built from the trusted root CAs that are installed in the computer and user certificate stores. You can specify which trusted root CA certificates that supplicants use to determine whether they trust your servers, such as your server running NPS or your provisioning server. If no trusted root CAs are selected, the 802.1X client verifies that the computer certificate of the RADIUS server was issued by an installed trusted root CA. If one or multiple trusted root CAs are selected, the 802.1X client verifies that the computer certificate of the RADIUS server was issued by a selected trusted root CA. Even if no trusted root CAs are selected, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
+
+If you have a public key infrastructure (PKI) on your network, and you use your CA to issue certificates to your RADIUS servers, your CA certificate is automatically added to the list of trusted root CAs. If selected, your root CA certificate is installed on a client computer when the computers are joined to the domain.
+
+You can also purchase a CA certificate from a non-Microsoft vendor. Some non-Microsoft trusted root CAs provide software with your purchased certificate that automatically installs the purchased certificate into the **Trusted Root Certification Authorities** certificate store. In this case, the trusted root CA automatically appears in the list of trusted root CAs.
+
+Do not specify a trusted root CA certificate that is not already listed in client computers’ **Trusted Root Certification Authorities** certificate stores for **Current User** and **Local Computer**.
+
+   > [!NOTE]
+   > If you designate a certificate that is not installed on client computers, authentication will fail.
+
+Default = not enabled, no trusted root CAs selected
+
+### Do not prompt user if unable to authorize server
+
+This item specifies (when not selected) that if server certificate validation fails due to any of the following reasons, the user is prompted to accept or reject the server:
+
+- A root certificate for the server certificate is not found or not selected in the **Trusted Root Certification Authorities** list.
+- One or more of the intermediate root certificates in the certificate chain is not found.
+- The subject name in the server certificate does not match any of the servers that are specified in the **Connect to these servers** list.
+
+Default = not selected
+
+### Select a non-EAP method for authentication
+
+Specifies whether a non-EAP or an EAP type is used for authentication. If **Select a non-EAP method for authentication** is selected, then **Select an EAP method for authentication** is disabled. If **Select a non-EAP method for authentication** is selected, the following non-EAP authentication types are provided in the drop-down list:
+
+- PAP
+- CHAP
+- MS-CHAP
+- MS-CHAP v2
+
+Defaults:
+
+- Select a non-EAP method for authentication = enabled
+- Non-EAP type = PAP
+
+### Automatically use my Windows logon name and password
+
+When enabled, this item uses Windows sign in credentials. This check-box is enabled only if **MS-CHAP v2** is selected in the **Select a non-EAP method for authentication** drop-down list. **Automatically use my Windows logon name and password** is disabled for **PAP**, **CHAP**, and **MS-CHAP** authentication types.
+
+### Select an EAP method for authentication
+
+This item specifies whether an EAP type or a non-EAP type is used for authentication. If **Select an EAP method for authentication** is selected, then **Select a non-EAP method for authentication** is disabled. If **Select a non-EAP method for authentication** is selected, by default, the following non-EAP authentication types are provided in the drop-down list:
+
+- Microsoft: Smart Card or other Certificate
+- Microsoft: MS-CHAP v2
+- MS-CHAP
+- MS-CHAP v2
+
+   > [!NOTE]
+   > The **Select an EAP method for authentication** drop-down list will enumerate all the EAP methods that are installed on the server, except for **PEAP** and **FAST** tunnel methods. The EAP types are listed in the order that they are discovered by the computer.
+
+### Configure
+
+Opens the properties dialog box of the specified EAP type. For details about the default EAP-types, see Smart Card or other Certificate Properties configuration items or Secure password (EAP-MSCHAP v2) Properties configuration items.
+
+## EAP-SIM configuration items
+
+EAP Subscriber Identity Module (SIM) is used for authentication and session key distribution for the Global System for Mobile Communications (GSM). EAP-SIM is defined in RFC 4186.
+
+The following table lists the configuration settings for EAP-SIM.
+
+| Item                                                                           | Description |
+| :----------------------------------------------------------------------------- | :---------- |
+| **Use strong Cipher keys**                                                     | Specifies that if selected, the profile uses strong encryption. |
+| **Do not reveal real identity to server when pseudonym identity is available** | When enabled, forces the client to fail the authentication if server requests for permanent identity though the client have a pseudonym identity with it. Pseudonym identities are used for identity privacy so that the actual or permanent identity of a user is not revealed during authentication. |
+| **Enable usage of realms**                                                     | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
+| **Specify a realm**                                                            | Provides a place to type the realm name |
+
+## EAP-AKA configuration items
+
+EAP Authentication and Key Agreement (AKA) for Universal Mobile Telecommunications System (UMTS) is used for authentication and session key distribution by using the UMTS Universal Subscriber Identity Module (USIM). EAP AKA is defined in RFC 4187.
+
+The following table lists the configuration settings for EAP-AKA.
+
+| Item                                                                           | Description |
+| :----------------------------------------------------------------------------- | :---------- |
+| **Do not reveal real identity to server when pseudonym identity is available** | When enabled, forces the client to fail the authentication if server requests for permanent identity though the client have a pseudonym identity with it. Pseudonym identities are used for identity privacy so that the actual or permanent identity of a user is not revealed during authentication. |
+| **Enable usage of realms**                                                     | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
+| **Specify a realm**                                                            | Provides a place to type the realm name. |
+
+## EAP-AKA' configuration items
+
+EAP- AKA Prime (AKA') is a modified version of EAP-AKA that is used to enable access to the 3rd-Generation Partnership Project (3GPP)-based networks by using non-3GPP standards, such as:
+
+- WiFi - sometimes referred to as wireless fidelity
+
+- Evolution-Data Optimized (EVDO)
+
+- Worldwide Interoperability for Microwave Access (WiMax)
+
+EAP-AKA' is defined in RFC 5448.
+
+The following table lists the configuration settings for EAP-AKA'.
+
+| Item                                                                           | Description |
+| :----------------------------------------------------------------------------- | :---------- |
+| **Do not reveal real identity to server when pseudonym identity is available** | When enabled, forces the client to fail the authentication if server requests for permanent identity though the client have a pseudonym identity with it. Pseudonym identities are used for identity privacy so that the actual or permanent identity of a user is not revealed during authentication. |
+| **Enable usage of realms**                                                     | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
+| **Specify a realm**                                                            | Provides a place to type the realm name. |
+| **Ignore network name mismatch**                                               | The client compares the name of network known to it, with the name sent by the RADIUS server during authentication. If there is mismatch, it is ignored if this option is selected. If not selected, authentication fails. |
+| **Enable Fast Reauthentication**                                               | Specifies that fast reauthentication is enabled. Fast Reauthentication is useful when SIM authentication happens frequently. The encryption keys that are derived from full authentication are reused. As a result, the SIM algorithm is not required to run for every authentication attempt, and the number of network operations that result from frequent authentication attempts is reduced. |
+
+## Additional resources
+
+For additional information about authenticated wireless settings in Group Policy, see [Managing the New Wireless Network (IEEE 802.11) Policies Settings](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994701(v=ws.11))
+
+For additional information about authenticated wired settings in Group Policy, see [Managing the New Wired Network (IEEE 802.3) Policies Settings](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831813(v=ws.11))
+
+For information about advanced settings for authenticated wired access and authenticated wireless access, see [Advanced Security Settings for Wired and Wireless Network Policies](/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994696(v=ws.11)).
