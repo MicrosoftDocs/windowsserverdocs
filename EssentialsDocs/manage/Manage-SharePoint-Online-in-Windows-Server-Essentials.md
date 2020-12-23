@@ -1,6 +1,6 @@
 ---
 title: "Manage SharePoint Online in Windows Server Essentials"
-description: Learn how to manage your SharePoint Online libraries and team sites from the Dashboard, without signing in to  Microsoft 365.
+description: Learn how to manage your SharePoint Online libraries and team sites from the Dashboard, without signing in to Microsoft 365.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 282f3634-6de6-4691-803c-df6c3c16660d

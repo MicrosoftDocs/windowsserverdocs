@@ -340,7 +340,7 @@ manager: mtillman
 
 6.  In **Customize Health Report Settings**, for **Automatically send the health report to the following email recipients:**, type the email addresses of the persons that you would like to receive Health Reports by email. Ensure that you separate each email address with a semicolon (;).
 
-7.  To verify that you have configured your SMTP server settings correctly to send health reports via email, from the Helath Report tab on the Dashboard, select a report, and click **Email the health report** from the task pane.
+7.  To verify that you have configured your SMTP server settings correctly to send health reports via email, from the Health Report tab on the Dashboard, select a report, and click **Email the health report** from the task pane.
 
 ##  <a name="BKMK_Potential"></a> Potential computer alerts
  This section discusses understanding and managing alerts that are specific to your computer that is connected to the server and that appear in the Launchpad of your computer.

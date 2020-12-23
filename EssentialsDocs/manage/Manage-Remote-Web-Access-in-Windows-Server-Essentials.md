@@ -363,9 +363,9 @@ manager: mtillman
 
 ##### To find the domain name service provider for your domain name
 
-1. Open a web browser, and then type <strong>www.internic.com</strong> in the address bar to go to the Internic home page.
+1. Open a web browser, and then type <strong>www.internic.com</strong> in the address bar to go to the InterNIC home page.
 
-2. On the Internic home page, click **Whois**.
+2. On the InterNIC home page, click **Whois**.
 
 3. In the **Whois** box, type your domain name (for example contoso.com).
 
