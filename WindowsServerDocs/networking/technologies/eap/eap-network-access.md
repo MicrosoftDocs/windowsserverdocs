@@ -23,7 +23,7 @@ This topic contains configuration information specific to the following authenti
 
   1. EAP-Transport Layer Security (TLS)
 
-     Appearing as **Smart Card or other Certificate Properties** in the operating system, EAP-TLS can be deployed as an inner method for PEAP or as a standalone EAP method. When it is configured as an inner authentication method, the configuration settings for EAP-TLS are identical to the settings that are used to deploy EAP-TLS as an outer method, except that it is configured to operate within PEAP. For configuration details, see Smart Card or other Certificate Properties configuration items.
+     Appearing as **Smart Card or other Certificate Properties** in the operating system, EAP-TLS can be deployed as an inner method for PEAP or as a standalone EAP method. When it is configured as an inner authentication method, the configuration settings for EAP-TLS are identical to the settings that are used to deploy EAP-TLS as an outer method, except that it is configured to operate within PEAP. For configuration details, see [Smart card or other certificate properties configuration items](#smart-card-or-other-certificate-properties-configuration-items).
 
   2. EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (MS-CHAP v2)
 
@@ -138,7 +138,7 @@ the user is prompted whether to accept the root certificate. If the user accepts
 
 This item allows you to select the EAP type to use with PEAP for network authentication. By default, two EAP types are available, **Secured password (EAP-MSCHAPv2)** and **Smart card or other certificate (EAP-TLS)**. However, EAP is a flexible protocol that allows inclusion of additional EAP methods, and it is not restricted to these two types.
 
-For information about Secured password (EAP-MSCHAPv2) or Smart card or other certificate (EAP-TLS) configuration settings, see:
+For more information, see:
 
 - [Secure password (EAP-MSCHAP v2) properties configuration items](#secure-password-properties-configuration-items)
 
