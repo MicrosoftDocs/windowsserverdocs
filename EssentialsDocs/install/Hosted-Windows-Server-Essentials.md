@@ -1,6 +1,6 @@
 ---
 title: "Hosted Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to deploy Microsoft Windows Server and offer Windows Server Essentials Experience as a service to your customers.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
@@ -48,7 +48,7 @@ This document includes information that is specific to hosters who intend to dep
    If you are using Virtual Machine Manager, you can create a template using the running instance. Creating a template will sysprep the instance and shut down the server. After you store it in your library, you can bring up the instance on a case-by-case basis.
 
 ##  <a name="BKMK_automatedeployment"></a> How do I automate the deployment?
- After you get the customized image, you can do the deployment with your own image. In order to do semiunattended installation, you need to provide/deploy unattend.xml for WinPE setup. To do a fully unattended installation, you also need to provide the cfg.ini file for Windows Server Essentials Initial Configuration.
+ After you get the customized image, you can do the deployment with your own image. In order to do semi-unattended installation, you need to provide/deploy unattend.xml for WinPE setup. To do a fully unattended installation, you also need to provide the cfg.ini file for Windows Server Essentials Initial Configuration.
 
 1. Perform only unattended WinPE setup. This will automate only the WinPE setup, and let the installation stop before Initial Configuration so that end users can provide Corp, Domain, and Administrator information by themselves after RDP into server session. To do this:
 

@@ -1,6 +1,6 @@
 ---
 title: "Important Information for Using the Windows Server Essentials ADK"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the important differences between the Windows 8 ADK and the  Windows Server Essentials ADK.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 26cb2992-1250-4672-98ee-8b870baa45d5
@@ -17,7 +17,7 @@ To create and customize an image of  Windows Server Essentials, you use many of 
 
  You should be aware of the following important differences:
 
--   Some settings have been changed in **%windir%\setup\script\SetupComplete.cmd**. If you want to use this command, you can add additional cmdlines, but do not remove the existing lines.
+-   Some settings have been changed in **%windir%\setup\script\SetupComplete.cmd**. If you want to use this command, you can add additional `cmdlines`, but do not remove the existing lines.
 
 ## Working with passwords
 

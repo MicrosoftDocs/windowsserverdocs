@@ -1,6 +1,6 @@
 ---
 title: "Integrate an On-Premises Exchange Server with Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to set up and integrate an on-premises server that is running Exchange Server with a server that is running Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b
@@ -354,18 +354,18 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
    - If you are performing a clean setup, run the following command:
 
-      **ARRConfig config  -cert** _path to the certificate file_ **-hostnames** _host names for Exchange Server_
+      `ARRConfig config  -cert` _path to the certificate file_ `-hostnames` _host names for Exchange Server_
 
      > [!NOTE]
-     >  For example; **ARRConfig config  -cert** _c:\temp\certificate.pfx_ **-hostnames** _mail.contoso.com_
+     >  For example; `ARRConfig config  -cert` _c:\temp\certificate.pfx_ `-hostnames` _mail.contoso.com_
      >
      >  Replace *mail.contoso.com* with the name of your domain that is protected by the certificate.
 
    - In you are migrating from Windows Small Business Server, run the following command:
 
-      **ARRConfig config  -cert** _path to the certificate file_ **-hostnames** _host names for Exchange Server_ **-targetserver** _server name of Exchange Server_
+      `ARRConfig config  -cert` _path to the certificate file_ `-hostnames` _host names for Exchange Server_ `-targetserver` _server name of Exchange Server_
 
-      For example; **ARRConfig config  -cert** _c:\temp\certificate.pfx_ **-hostnames** _mail.contoso.com_ **-targetserver** _ExchangeSvr_
+      For example; `ARRConfig config  -cert` _c:\temp\certificate.pfx_ `-hostnames` _mail.contoso.com_ `-targetserver` _ExchangeSvr_
 
       Replace *mail.contoso.com* with the name of your domain. Replace *ExchangeSvr* with the name of your server that is running Exchange Server.
 
