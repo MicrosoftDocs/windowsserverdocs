@@ -1,6 +1,6 @@
 ---
 title: "Customize the Image"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the articles that you can use to customize an image of the operating system.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 9dc89e34-fd35-4fa9-8d2f-894bfb780a5f
