@@ -34,7 +34,9 @@ manager: mtillman
 
     2.  Run the following command:
 
-         **dism /online /set-edition:ServerStandard /geteula: eula path**
+         ```console
+         dism /online /set-edition:ServerStandard /geteula: eula path
+         ```
 
          Where **eula path** represents the location to which you want to save the EULA file. For example;  C:\ws8std_eula.rtf.  Be sure to use .rtf as the file name extension.
 
@@ -56,7 +58,9 @@ manager: mtillman
 
 2. Open Windows PowerShell as Administrator, and then run the following command.
 
-    **dism /online /set-edition:ServerStandard /accepteula /productkey:** *Product Key*
+    ```console
+    dism /online /set-edition:ServerStandard /accepteula /productkey: <Product Key>
+    ```
 
     Where *Product Key* is the product key for your copy of  Windows Server 2012 Standard.
 

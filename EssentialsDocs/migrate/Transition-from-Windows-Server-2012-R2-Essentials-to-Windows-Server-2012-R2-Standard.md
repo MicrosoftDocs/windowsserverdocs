@@ -35,7 +35,11 @@ Windows Server 2016 is the cloud-ready operating system that supports your curre
 
     2.  Run the following command:
 
-         **dism /online /set-edition:ServerStandard /geteula:** *eula path* (where *eula path* represents the location to which you want to save the EULA file; for example: C:\ws8std_eula.rtf). Be sure to use .rtf as the file name extension.
+        ```console
+        dism /online /set-edition:ServerStandard /geteula: <eula path>
+        ```
+
+        Where *eula path* represents the location to which you want to save the EULA file; for example: C:\ws8std_eula.rtf). Be sure to use .rtf as the file name extension.
 
     3.  Open the location where you saved the file, and then double-click the file to open it.
 
@@ -55,7 +59,11 @@ Windows Server 2016 is the cloud-ready operating system that supports your curre
 
 2. Open Windows PowerShell as Administrator, and then run the following command:
 
-    **dism /online /set-edition:ServerStandard /accepteula /productkey:** *Product Key* (where *Product Key* is the product key for your copy of  Windows Server 2012 R2 Standard).
+    ```console
+    dism /online /set-edition:ServerStandard /accepteula /productkey: <Product Key>
+    ```
+
+    Where *Product Key* is the product key for your copy of  Windows Server 2012 R2 Standard).
 
     The server restarts to finish the transition process.
 
