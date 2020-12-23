@@ -1,6 +1,6 @@
 ---
 title: "Transition from Windows Server Essentials to Windows Server 2012 Standard"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to perform an in-place license transition from Windows Server Essentials to Windows Server 2012 Standard to remain license compliant.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 51bcf124-c215-4e9d-9fa8-a90fa2c2fa22

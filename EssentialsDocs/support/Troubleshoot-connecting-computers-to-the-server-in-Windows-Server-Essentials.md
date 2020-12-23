@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot connecting computers to the server in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to troubleshoot issues that you might encounter when you connect a computer to the server that is running Windows Server Essentials or Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: e45b3d89-c057-4c70-a627-86fb06dd22aa

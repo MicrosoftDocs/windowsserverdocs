@@ -1,6 +1,6 @@
 ---
 title: "Quick Start Guide to Using Microsoft 365 with Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to open the apps in Microsoft 365 using familiar tools like the  Windows Server Essentials Launchpad and My Server 2012 R2.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 51a7f1f1-088b-4487-b2c6-4f97aad3004d

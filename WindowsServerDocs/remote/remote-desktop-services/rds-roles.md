@@ -1,6 +1,6 @@
 ---
 title: Remote Desktop Services roles
-description: Describes the components of a desktop hosting service.
+description: Learn about the roles within a Remote Desktop Services environment in Windows Server.
 ms.author: helohr
 ms.date: 07/06/2018
 ms.topic: article

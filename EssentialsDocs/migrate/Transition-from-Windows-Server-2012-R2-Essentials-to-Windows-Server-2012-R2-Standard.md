@@ -1,6 +1,6 @@
 ---
 title: "Transition from Windows Server Essentials to Windows Server 2012 R2 Standard"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to transition from Windows Server Essentials to Windows Server 2012 R2 Standard.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: a14689e3-2310-4229-bd3e-dafc0e739e02

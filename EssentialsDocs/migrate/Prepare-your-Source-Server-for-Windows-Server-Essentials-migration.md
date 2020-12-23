@@ -1,6 +1,6 @@
 ---
 title: "Prepare your Source Server for Windows Server Essentials migration1"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the preliminary steps to complete to ensure that the settings and data on your Source Server migrate successfully to the Destination Server.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
