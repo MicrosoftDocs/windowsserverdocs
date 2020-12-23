@@ -1,6 +1,6 @@
 ---
 title: "Manage System Health in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to view and respond to all system health alerts in your network by using the Dashboard.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 3043f83b-389c-4f37-a1ff-85afe99314fa

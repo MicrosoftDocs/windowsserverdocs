@@ -1,6 +1,6 @@
 ---
 title: Install Windows Server Essentials in migration mode
-description: Describes how to use Windows Server Essentials
+description: Learn how to install Windows Server Essentials in migration mode.
 ms.date: 04/29/2020
 ms.topic: article
 ms.assetid: fd7196ac-cfa6-46a5-ba77-6962b47a825e

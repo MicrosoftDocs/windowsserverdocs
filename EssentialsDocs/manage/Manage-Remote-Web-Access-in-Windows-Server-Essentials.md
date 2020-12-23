@@ -1,6 +1,6 @@
 ---
 title: "Manage Remote Web Access in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to turn on Remote Web Access by using the Set Up Anywhere Access Wizard, and then learn how to set up your router and domain name.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f3ea40fa-b6ba-4d66-b754-221ca6271387

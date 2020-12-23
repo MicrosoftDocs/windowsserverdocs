@@ -1,6 +1,6 @@
 ---
 title: "Remote desktop options"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about remote desktop options including connection speed, screen size, how to enable the remote computer to print to your local computer, and more.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 51076946-ea9b-4ac7-9a6e-d6023816b97d

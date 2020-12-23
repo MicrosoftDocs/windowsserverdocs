@@ -1,6 +1,6 @@
 ---
 title: "Set up or customize server backup"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to protect your server and its data automatically by scheduling daily backups.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 441c2d6c-435a-42cb-90f2-6d680d279d34
