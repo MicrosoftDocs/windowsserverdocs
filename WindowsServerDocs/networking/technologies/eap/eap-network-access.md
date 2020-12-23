@@ -46,8 +46,7 @@ This topic contains configuration information specific to the following authenti
   This section provides information about the following:
 
   - [EAP-SIM configuration settings](#eap-sim-configuration-settings)
-  - [EAP-AKA configuration settings](#eap-aka-configuration-settings)
-  - [EAP-AKA' configuration settings](#eap-aka'-configuration-settings)
+  - [EAP-AKA and EAP-AKA' configuration settings](#eap-aka-configuration-settings)
 
 ## EAP-TLS, PEAP, and EAP-TTLS
 
@@ -141,7 +140,7 @@ This item allows you to select the EAP type to use with PEAP for network authent
 
 For information about Secured password (EAP-MSCHAPv2) or Smart card or other certificate (EAP-TLS) configuration settings, see:
 
-- [Secure password (EAP-MSCHAP v2) properties configuration items](#secure-password-(eap-mschap-v2)-properties-configuration-items)
+- [Secure password (EAP-MSCHAP v2) properties configuration items](#secure-password-properties-configuration-items)
 
 - [Smart Card or other certificate properties configuration items](#smart-card-or-other-certificate-properties-configuration-items)
 
@@ -187,7 +186,7 @@ This setting applies only to computers running Windows 7 and Windows 8.
 
 Default = not enabled
 
-## Secure password (EAP-MSCHAP v2) properties configuration items
+## Secure password properties configuration items
 
 Checking **Automatically use my Windows logon name and password (and domain if any)** specifies that the current user-based Windows sign in name and password are used as network authentication credentials.
 
@@ -438,7 +437,7 @@ This item specifies whether an EAP type or a non-EAP type is used for authentica
 
 ### Configure
 
-Opens the properties dialog box of the specified EAP type. For details about the default EAP types, see [Smart card or other certificate properties configuration items](#smart-card-or-other-certificate-properties-configuration-items) or [Secure password (EAP-MSCHAP v2) properties configuration items](#secure-password-(eap-mschap-v2)-properties-configuration-items).
+Opens the properties dialog box of the specified EAP type. For details about the default EAP types, see [Smart card or other certificate properties configuration items](#smart-card-or-other-certificate-properties-configuration-items) or [Secure password (EAP-MSCHAP v2) properties configuration items](#secure-password-properties-configuration-items).
 
 ## EAP-SIM configuration settings
 
