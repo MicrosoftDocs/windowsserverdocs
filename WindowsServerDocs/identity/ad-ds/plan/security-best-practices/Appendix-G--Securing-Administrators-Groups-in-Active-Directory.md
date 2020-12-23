@@ -49,7 +49,7 @@ For the Administrators group in each domain in the forest:
 
     1.  Double-click the **Administrators** group and click the **Members** tab.
 
-        ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_79.gif)
+        ![Screenshot that shows the Members tab for removing all members from the Administrators Group.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_79.gif)
 
     2.  Select a member of the group, click **Remove**, click **Yes**, and click **OK**.
 
@@ -63,17 +63,17 @@ For the Administrators group in each domain in the forest:
 
 3.  In the console tree, right-click **Group Policy Objects**, and click **New**.
 
-    ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_80.gif)
+    ![Screenshot that shows where to select New so you can secure Administrators Groups in Active Directory.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_80.gif)
 
 4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** (where *GPO Name* is the name of this GPO).
 
-    ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_81.gif)
+    ![Screenshot that shows where to name the GPO so you can secure Administrators Groups in Active Directory.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_81.gif)
 
 5.  In the details pane, right-click **<GPO Name>**, and click **Edit**.
 
 6.  Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.
 
-    ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_82.gif)
+    ![Screenshot that shows where to navigate so you can select User Rights Admin to secure Administrators Groups in Active Directory.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_82.gif)
 
 7.  Configure the user rights to prevent members of the Administrators group from accessing member servers and workstations over the network by doing the following:
 
@@ -83,7 +83,7 @@ For the Administrators group in each domain in the forest:
 
     3.  Type **Administrators**, click **Check Names**, and click **OK**.
 
-        ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_83.gif)
+        ![Screenshot that shows how to verify that you've configured the user rights to prevent members of the Administrators group from accessing member servers and workstations over the network.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_83.gif)
 
     4.  Click **OK**, and **OK** again.
 
@@ -95,7 +95,7 @@ For the Administrators group in each domain in the forest:
 
     3.  Type **Administrators**, click **Check Names**, and click **OK**.
 
-        ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_84.gif)
+        ![Screenshot that shows how to verify that you've configured the user rights to prevent members of the Administrators group from logging on as a batch job.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_84.gif)
 
     4.  Click **OK**, and **OK** again.
 
@@ -107,7 +107,7 @@ For the Administrators group in each domain in the forest:
 
     3.  Type **Administrators**, click **Check Names**, and click **OK**.
 
-        ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_85.gif)
+        ![Screenshot that shows how to verify that you've configured the user rights to prevent members of the Administrators group from logging on as a service.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_85.gif)
 
     4.  Click **OK**, and **OK** again.
 
@@ -119,11 +119,11 @@ For the Administrators group in each domain in the forest:
 
     2.  Right-click the OU that the GPO will be applied to and click **Link an existing GPO**.
 
-        ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_86.gif)
+        ![Screenshot that shows the Link an existing GPO menu option when you right-click the OU.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_86.gif)
 
     3.  Select the GPO that you just created and click **OK**.
 
-        ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_87.gif)
+        ![Screenshot that shows where to select the GPO you just created while you're linking the GPO to the member server and workstations.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_87.gif)
 
     4.  Create links to all other OUs that contain workstations.
 
@@ -137,7 +137,7 @@ For the Administrators group in each domain in the forest:
         >
         > The following screen shot shows configuration settings that block misuse of built-in local and domain Administrator accounts, in addition to misuse of built-in local or domain Administrators groups. Note that the **Deny log on through Remote Desktop Services** user right does not include the Administrators group, because including it in this setting would also block these logons for accounts that are members of the local computer's Administrators group. If services on computers are configured to run in the context of any of the privileged groups described in this section, implementing these settings can cause services and applications to fail. Therefore, as with all of the recommendations in this section, you should thoroughly test settings for applicability in your environment.
 
-        ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_88.gif)
+        ![Screenshot that shows configuration settings that block misuse of built-in local and domain Administrator accounts.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_88.gif)
 
 #### Step-by-Step Instructions to Grant User Rights to the Administrators Group
 
@@ -147,17 +147,17 @@ For the Administrators group in each domain in the forest:
 
 3.  In the console tree, right-click **Group Policy Objects**, and click **New**.
 
-    ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_89.gif)
+    ![Screenshot that shows the menu that displays when you right-click Group Policy Objects.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_89.gif)
 
 4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** (where <GPO Name> is the name of this GPO).
 
-    ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_90.gif)
+    ![Screenshot that shows where to name the GPO so you can secure Administrators Groups in Active Directory.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_90.gif)
 
 5.  In the details pane, right-click **<GPO Name>**, and click **Edit**.
 
 6.  Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.
 
-    ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_91.gif)
+    ![Screenshot that shows where to navigate so you can select User Rights Admin to secure Administrators Groups in Active Directory.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_91.gif)
 
 7.  Configure the user rights to allow members of the Administrators group to access domain controllers over the network by doing the following:
 
@@ -167,7 +167,7 @@ For the Administrators group in each domain in the forest:
 
     3.  Click **Add User or Group** and click **Browse**.
 
-        ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_92.gif)
+        ![Screenshot that shows how to verify that you've configured the user rights to allow members of the Administrators group to access domain controllers over the network.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_92.gif)
 
     4.  Click **OK**, and **OK** again.
 
@@ -179,7 +179,7 @@ For the Administrators group in each domain in the forest:
 
     3.  Type **Administrators**, click Check **Names**, and click **OK**.
 
-        ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_93.gif)
+        ![Screenshot that shows how to verify that you've configured the user rights to allow members of the Administrators group to log on locally.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_93.gif)
 
     4.  Click **OK**, and **OK** again.
 
@@ -191,7 +191,7 @@ For the Administrators group in each domain in the forest:
 
     3.  Type **Administrators**, click **Check Names**, and click **OK**.
 
-        ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_94.gif)
+        ![Screenshot that shows how to verify that you've configured the user rights to allow members of the Administrators group to log on through Remote Desktop Services.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_94.gif)
 
     4.  Click **OK**, and **OK** again.
 
@@ -203,11 +203,11 @@ For the Administrators group in each domain in the forest:
 
     2.  Right-click the domain controllers OU and click **Link an existing GPO**.
 
-        ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_95.gif)
+        ![Screenshot that shows the Link an existing GPO menu option when you're attempting to link the GPO to the domain controllers OU.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_95.gif)
 
     3.  Select the GPO that you just created and click **OK**.
 
-        ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_96.gif)
+        ![Screenshot that shows where to select the GPO you just created while you're linking the GPO to the member server and workstations.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_96.gif)
 
 #### Verification Steps
 
@@ -222,13 +222,13 @@ From any member server or workstation that is not affected by the GPO changes (s
 
 4.  When prompted to approve the elevation, click **Yes**.
 
-    ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_97.gif)
+    ![Screenshot that highlights the User Account Control dialog box.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_97.gif)
 
 5.  In the **Command Prompt** window, type **net use \\\\\<Server Name\>\c$**, where \<Server Name\> is the name of the member server or workstation you're attempting to access over the network.
 
 6.  The following screen shot shows the error message that should appear.
 
-    ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_98.gif)
+    ![Screenshot that highlights the logon failure error message.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_98.gif)
 
 ##### Verify "Deny log on as a batch job" GPO Settings
 From any member server or workstation affected by the GPO changes, log on locally.
@@ -282,7 +282,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 16. A dialog box similar to the following should appear.
 
-    ![secure admin groups](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_99.gif)
+    ![Screenshot that highlights the Task Scheduler dialog box.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_99.gif)
 
 ##### Verify "Deny log on as a service" GPO Settings
 
