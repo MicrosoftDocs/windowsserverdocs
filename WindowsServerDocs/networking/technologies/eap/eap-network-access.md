@@ -132,7 +132,7 @@ By default, the following options are provided:
   2. or the root certificate is found but is not selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**
   3. or the root certificate is not found on the computer
 
-the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails.
+  then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails.
 
 ### Select authentication method
 
