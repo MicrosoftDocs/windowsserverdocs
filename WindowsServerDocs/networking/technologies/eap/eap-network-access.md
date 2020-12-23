@@ -33,9 +33,9 @@ This topic contains configuration information specific to the following authenti
 
   The section about Smart card or other certificate properties includes information about the following configurations:
 
-  - [Configure New Certificate Selection configuration items](#Configure-New-Certificate-Selection-configuration-items)
-  - Select EKUs
-  - Add or Edit EKU
+  - [Configure New Certificate Selection configuration items](#configure-new-certificate-selection-configuration-items)
+  - [Select EKUs](#select-ekus)
+  - [Add or Edit EKU](#add-or-edit-eku)
 
 - **EAP-Tunneled Transport Layer Security (TTLS)**
 
@@ -43,11 +43,11 @@ This topic contains configuration information specific to the following authenti
 
   Enables authentication by using SIM cards, and is implemented when a customer purchases a wireless broadband service plan from a mobile network operator. As part of the plan, the customer commonly receives a wireless profile that is preconfigured for SIM authentication.
 
-  This section provides information about the following configuration settings:
+  This section provides information about the following:
 
-  - EAP-SIM
-  - EAP-AKA
-  - EAP-AKA’
+  - [EAP-SIM configuration settings](#eap-sim-configuration-settings)
+  - [EAP-AKA configuration settings](#eap-aka-configuration-settings)
+  - [EAP-AKA' configuration settings](#eap-aka'-configuration-settings)
 
 ## EAP-TLS, PEAP, and EAP-TTLS
 
@@ -71,9 +71,9 @@ By default, you can configure EAP settings for the following network authenticat
 
 Additionally, the MS-CHAP-V2 network authentication method is available for VPN by default.
 
-## Protected EAP Properties configuration items
+## Protected EAP Properties configuration settings
 
-This section lists the items that can be configured for Protected EAP.
+This section lists the settings that can be configured for Protected EAP.
 
    > [!IMPORTANT]
    > Deploying the same type of authentication method for PEAP and EAP creates a security vulnerability. When you deploy both PEAP and EAP (which is not protected), do not use the same authentication type. For example, if you deploy PEAP-TLS, do not also deploy EAP-TLS.
@@ -141,9 +141,9 @@ This item allows you to select the EAP type to use with PEAP for network authent
 
 For information about Secured password (EAP-MSCHAPv2) or Smart card or other certificate (EAP-TLS) configuration settings, see:
 
-- Secure password (EAP-MSCHAP v2) Properties configuration items
+- [Secure password (EAP-MSCHAP v2) properties configuration items](#secure-password-(eap-mschap-v2)-properties-configuration-items)
 
-- Smart Card or other Certificate Properties configuration items
+- [Smart Card or other certificate properties configuration items](#smart-card-or-other-certificate-properties-configuration-items)
 
 Default = Secured password (EAP-MSCHAP v2)
 
@@ -179,9 +179,9 @@ This item specifies that connecting clients must end the network authentication 
 
 Default = not enabled
 
-### Enable identity privacy
+### Enable identity privacy (Windows 7 and 8 only)
 
-Specifies that clients are configured so that they cannot send their identity before the client has authenticated the RADIUS server, and optionally, provides a place to type an anonymous identity value. For example, if you select Enable Identity Privacy, and then type “guest” as the anonymous identity value, the identity response for a user with identity alice@example is guest@example. If you select Enable Identity Privacy but do not provide an anonymous identity value, the identity response for the user alice@example is @example.
+Specifies that clients are configured so that they cannot send their identity before the client has authenticated the RADIUS server, and optionally, provides a place to type an anonymous identity value. For example, if you select **Enable Identity Privacy** and then type “guest” as the anonymous identity value, the identity response for a user with identity alice@example is guest@example. If you select **Enable Identity Privacy** but do not provide an anonymous identity value, the identity response for the user alice@example is @example.
 
 This setting applies only to computers running Windows 7 and Windows 8.
 
@@ -189,7 +189,7 @@ Default = not enabled
 
 ## Secure password (EAP-MSCHAP v2) properties configuration items
 
-Checking **Automatically use my Windows logon name and password (and domain if any)** specifies that the current user-based Windows sign in name and password are used as network authentication credentials. 
+Checking **Automatically use my Windows logon name and password (and domain if any)** specifies that the current user-based Windows sign in name and password are used as network authentication credentials.
 
 Defaults:
 
@@ -229,7 +229,7 @@ Defaults:
 
 ### Advanced
 
-This item opens the **Configure Certificate Selection** dialog box. For more information about **Configure Certificate Selection**, see Configure New Certificate Selection configuration items.
+This item opens the **Configure Certificate Selection** dialog box. For more information about **Configure Certificate Selection**, see [Configure New Certificate Selection configuration items](#configure-new-certificate-selection-configuration-items).
 
 ### Verify the server’s identity by validating the certificate
 
@@ -254,11 +254,9 @@ This item lists the **trusted root certification authorities**. The list is buil
 
 If you have a public key infrastructure (PKI) on your network, and you use your CA to issue certificates to your RADIUS servers, your CA certificate is automatically added to the list of trusted root CAs.
 
-You can also purchase a CA certificate from a non-Microsoft vendor. Some non-Microsoft trusted root CAs provide software with your purchased certificate that automatically installs the purchased certificate into the **Trusted Root Certification Authorities** certificate store. In this case, the trusted root CA automatically appears in the list of trusted root CAs.
+You can also purchase a CA certificate from a non-Microsoft vendor. Some non-Microsoft trusted root CAs provide software with your purchased certificate that automatically installs the purchased certificate into the **Trusted Root Certification Authorities** certificate store. In this case, the trusted root CA automatically appears in the list of trusted root CAs. Even if no trusted root CAs are selected, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
 
-Do not specify a trusted root CA certificate that is not already listed in client computers’ **Trusted Root Certification Authorities** certificate stores for **Current User** and **Local Computer**. 
-
-Even if no trusted root CAs are selected, the client will verify that the RADIUS server certificate was issued by a trusted root CA.
+Do not specify a trusted root CA certificate that is not already listed in client computers’ **Trusted Root Certification Authorities** certificate stores for **Current User** and **Local Computer**.
 
    > [!NOTE]
    > If you designate a certificate that is not installed on client computers, authentication will fail.
@@ -440,9 +438,9 @@ This item specifies whether an EAP type or a non-EAP type is used for authentica
 
 ### Configure
 
-Opens the properties dialog box of the specified EAP type. For details about the default EAP-types, see Smart Card or other Certificate Properties configuration items or Secure password (EAP-MSCHAP v2) Properties configuration items.
+Opens the properties dialog box of the specified EAP type. For details about the default EAP types, see [Smart card or other certificate properties configuration items](#smart-card-or-other-certificate-properties-configuration-items) or [Secure password (EAP-MSCHAP v2) properties configuration items](#secure-password-(eap-mschap-v2)-properties-configuration-items).
 
-## EAP-SIM configuration items
+## EAP-SIM configuration settings
 
 EAP Subscriber Identity Module (SIM) is used for authentication and session key distribution for the Global System for Mobile Communications (GSM). EAP-SIM is defined in RFC 4186.
 
@@ -455,7 +453,7 @@ The following table lists the configuration settings for EAP-SIM.
 | **Enable usage of realms**                                                     | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
 | **Specify a realm**                                                            | Provides a place to type the realm name |
 
-## EAP-AKA configuration items
+## EAP-AKA configuration settings
 
 EAP Authentication and Key Agreement (AKA) for Universal Mobile Telecommunications System (UMTS) is used for authentication and session key distribution by using the UMTS Universal Subscriber Identity Module (USIM). EAP AKA is defined in RFC 4187.
 
@@ -467,7 +465,7 @@ The following table lists the configuration settings for EAP-AKA.
 | **Enable usage of realms**                                                     | Provides a place to type the realm name. If this field is left blank with **Enable usage of realms** selected, the realm is derived from the International Mobile Subscriber Identity (IMSI) using the realm 3gpp.org, as described in the 3rd Generation Partnership Project (3GPP) standard 23.003 V6.8.0. |
 | **Specify a realm**                                                            | Provides a place to type the realm name. |
 
-## EAP-AKA' configuration items
+## EAP-AKA' configuration settings
 
 EAP- AKA Prime (AKA') is a modified version of EAP-AKA that is used to enable access to the 3rd-Generation Partnership Project (3GPP)-based networks by using non-3GPP standards, such as:
 
