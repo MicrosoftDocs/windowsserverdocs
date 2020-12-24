@@ -169,7 +169,7 @@ From any member server or workstation that is not affected by the GPO changes (s
 
 5.  In the **Command Prompt** window, type **net use \\\\\<Server Name\>\c$**, where \<Server Name\> is the name of the member server or workstation you're attempting to access over the network.
 
-6.  The following screen shot shows the error message that should appear.
+6.  The following screenshot shows the error message that should appear.
 
     ![Screenshot that shows the error message that should appear while you're attempting to accsss the member server.](media/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory/SAD_74.gif)
 

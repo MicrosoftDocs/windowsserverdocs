@@ -135,7 +135,7 @@ For the Administrators group in each domain in the forest:
         > [!NOTE]
         > When you implement restrictions on the Administrators group in GPOs, Windows applies the settings to members of a computer's local Administrators group in addition to the domain's Administrators group. Therefore, you should use caution when implementing restrictions in the Administrators group. Although prohibiting network, batch, and service logons for members of the Administrators group is advised wherever it is feasible to implement, do not restrict local logons or logons through Remote Desktop Services. Blocking these logon types can block legitimate administration of a computer by members of the local Administrators group.
         >
-        > The following screen shot shows configuration settings that block misuse of built-in local and domain Administrator accounts, in addition to misuse of built-in local or domain Administrators groups. Note that the **Deny log on through Remote Desktop Services** user right does not include the Administrators group, because including it in this setting would also block these logons for accounts that are members of the local computer's Administrators group. If services on computers are configured to run in the context of any of the privileged groups described in this section, implementing these settings can cause services and applications to fail. Therefore, as with all of the recommendations in this section, you should thoroughly test settings for applicability in your environment.
+        > The following screenshot shows configuration settings that block misuse of built-in local and domain Administrator accounts, in addition to misuse of built-in local or domain Administrators groups. Note that the **Deny log on through Remote Desktop Services** user right does not include the Administrators group, because including it in this setting would also block these logons for accounts that are members of the local computer's Administrators group. If services on computers are configured to run in the context of any of the privileged groups described in this section, implementing these settings can cause services and applications to fail. Therefore, as with all of the recommendations in this section, you should thoroughly test settings for applicability in your environment.
 
         ![Screenshot that shows configuration settings that block misuse of built-in local and domain Administrator accounts.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_88.gif)
 
@@ -272,7 +272,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 11. Type the name of an account that is a member of the Administrators group, click **Check Names**, and click **OK**.
 
-12. Select **Run whether the user is logged onor not** and **Do not store password**. The task will only have access to local computer resources.
+12. Select **Run whether the user is logged on or not** and **Do not store password**. The task will only have access to local computer resources.
 
 13. Click **OK**.
 

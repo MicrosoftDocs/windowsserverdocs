@@ -245,7 +245,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 5. Click the **Log On** tab.
 
-6. In the **Log on as**: field, select **Local Systemaccount**, and click **OK**.
+6. In the **Log on as**: field, select **Local System Account**, and click **OK**.
 
 ###### Verify "Deny log on through Remote Desktop Services" GPO Settings
 
