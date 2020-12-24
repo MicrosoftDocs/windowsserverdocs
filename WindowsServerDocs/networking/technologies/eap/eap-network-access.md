@@ -152,9 +152,7 @@ An example of this benefit is a common scenario in which a user is traveling on 
 
 As the train passes through a tunnel, the Internet connection is lost. When the train is outside the tunnel, the wireless mobile broadband card automatically reconnects to the Internet.
 
-In client versions prior to Windows 7, VPN does not automatically reconnect. The user must repeat the multistep process to connect to the VPN each time Internet connectivity is interrupted. This can quickly become time consuming for mobile users with intermittent connectivity disruptions.
-
-In Windows 8, Fast Reconnect automatically re-establishes active VPN connections when Internet connectivity is re-established. Although the reconnection might take several seconds to occur, it is performed transparently to users.
+Fast Reconnect automatically re-establishes active VPN connections when internet connectivity is re-established. Although the reconnection might take several seconds to occur, it is performed transparently to users.
 
 Default = enabled
 
@@ -170,11 +168,11 @@ This item specifies that connecting clients must end the network authentication 
 
 Default = not enabled
 
-### Enable identity privacy (Windows 7 and 8 only)
+### Enable identity privacy (Windows 8 only)
 
 Specifies that clients are configured so that they cannot send their identity before the client has authenticated the RADIUS server, and optionally, provides a place to type an anonymous identity value. For example, if you select **Enable Identity Privacy** and then type “guest” as the anonymous identity value, the identity response for a user with identity alice@example is guest@example. If you select **Enable Identity Privacy** but do not provide an anonymous identity value, the identity response for the user alice@example is @example.
 
-This setting applies only to computers running Windows 7 and Windows 8.
+This setting applies only to computers running Windows 8 and earlier.
 
 Default = not enabled
 
