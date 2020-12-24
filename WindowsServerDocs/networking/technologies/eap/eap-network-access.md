@@ -29,21 +29,13 @@ This topic contains configuration information specific to the following authenti
 
      Secure password EAP-MS-CHAP v2 is an EAP type that can be used with PEAP for password-based network authentication. EAP-MsCHAP v2 can also be used as a standalone method for VPN, but only as a PEAP inner method for wireless.
 
-- **EAP-TLS**
-
-  The section about Smart card or other certificate properties includes information about the following configurations:
-
-  - [Configure New Certificate Selection configuration items](#configure-new-certificate-selection-configuration-items)
-  - [Select EKUs](#select-ekus)
-  - [Add or Edit EKU](#add-or-edit-eku)
-
 - **EAP-Tunneled Transport Layer Security (TTLS)**
 
 - **EAP-Subscriber Identity Module (SIM), EAP-Authentication and Key Agreement (AKA), and EAP-AKA Prime (AKA')**
 
   Enables authentication by using SIM cards, and is implemented when a customer purchases a wireless broadband service plan from a mobile network operator. As part of the plan, the customer commonly receives a wireless profile that is preconfigured for SIM authentication.
 
-  This section provides information about the following:
+  This topic provides information about the following:
 
   - [EAP-SIM configuration settings](#eap-sim-configuration-settings)
   - [EAP-AKA and EAP-AKA' configuration settings](#eap-aka-configuration-settings)

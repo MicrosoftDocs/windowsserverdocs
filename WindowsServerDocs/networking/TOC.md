@@ -101,6 +101,8 @@
 #### [Troubleshoot problems on the DHCP client](../troubleshoot/troubleshoot-problems-on-dhcp-client.md)
 #### [Troubleshoot problems on the DHCP server](../troubleshoot/troubleshoot-problems-on-dhcp-server.md)
 
+## [Extensible Authentication Protocol (EAP)](technologies/eap/eap-network-access.md) 
+
 ## [High-Performance Networking (HPN)](technologies/hpn/hpn-top.md)
 ### [Network offload and optimization technologies](technologies/hpn/network-offload-and-optimization.md)
 #### [Software only (SO) features and technologies](technologies/hpn/hpn-software-only-features.md)
