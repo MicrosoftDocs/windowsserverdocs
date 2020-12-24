@@ -45,17 +45,17 @@ For the local Administrator account in each domain in your forest, you should co
 
 3. In the console tree, right-click **Group Policy Objects**, and click **New**.
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_101.png)
+    ![Screenshot that shows the Members tab for configuring GPOs to restrict the administrator account on domain-joined systems.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_101.png)
 
 4. In the **New GPO** dialog box, type **\<GPO Name\>**, and click **OK** (where \<GPO Name\> is the name of this GPO).
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_102.png)
+    ![Screenshot that shows where to name the GPO so you can configure GPOs to restrict the administrator account on domain-joined systems.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_102.png)
 
 5. In the details pane, right-click **\<GPO Name\>**, and click **Edit**.
 
 6. Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_103.png)
+    ![Screenshot that shows where to navigate so you can configure GPOs to restrict the administrator account on domain-joined systems.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_103.png)
 
 7. Configure the user rights to prevent the local Administrator account from accessing members servers and workstations over the network by doing the following:
 
@@ -63,7 +63,7 @@ For the local Administrator account in each domain in your forest, you should co
 
     2. Click **Add User or Group**, type the user name of the local Administrator account, and click **OK**. This user name will be **Administrator**, the default when Windows is installed.
 
-        ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_104.png)
+        ![Screenshot that shows how to verify that you've configured the user rights to prevent the local Administrator account from accessing members servers and workstations over the network.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_104.png)
 
     3. Click OK.
 
@@ -76,7 +76,7 @@ For the local Administrator account in each domain in your forest, you should co
 
     2. Click **Add User or Group**, type the user name of the local Administrator account, and click **OK**. This user name will be **Administrator**, the default when Windows is installed.
 
-        ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_105.png)
+        ![Screenshot that shows how to verify that you've configured the user rights to prevent the local Administrator account from logging on as a batch job.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_105.png)
 
     3. Click **OK**.
 
@@ -89,7 +89,7 @@ For the local Administrator account in each domain in your forest, you should co
 
     2. Click **Add User or Group**, type the user name of the local Administrator account, and click **OK**. This user name will be **Administrator**, the default when Windows is installed.
 
-        ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_106.png)
+        ![Screenshot that shows how to verify that you've configured the user rights to prevent the local Administrator account from logging on as a service.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_106.png)
 
     3. Click **OK**.
 
@@ -102,7 +102,7 @@ For the local Administrator account in each domain in your forest, you should co
 
     2. Click **Add User or Group**, type the user name of the local Administrator account, and click **OK**. This user name will be **Administrator**, the default when Windows is installed.
 
-        ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_107.png)
+        ![Screenshot that shows how to verify that you've configured the user rights to prevent the local Administrator account from accessing member servers and workstations via Remote Desktop Services.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_107.png)
 
     3. Click **OK**.
 
@@ -117,11 +117,11 @@ For the local Administrator account in each domain in your forest, you should co
 
     2. Right-click the OU that the GPO will be applied to and click **Link an existing GPO**.
 
-        ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_108.png)
+        ![Screenshot that shows the Link an existing GPO menu option when you're attempting to link the GPO to the member server and workstation OUs.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_108.png)
 
     3. Select the GPO that you created and click **OK**.
 
-        ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_109.png)
+        ![Screenshot that shows where to select the GPO you just created while you're linking the GPO to the member server and workstation OUs.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_109.png)
 
     4. Create links to all other OUs that contain workstations.
 
@@ -141,7 +141,7 @@ From any member server or workstation that is not affected by the GPO changes (s
 
 4. When prompted to approve the elevation, click **Yes**.
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_110.png)
+    ![Screenshot that highlights the User Account Control dialog box you'll see when verifying the GPO settings.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_110.png)
 
 5. In the **Command Prompt** window, type `net use \\<Server Name>\c$ /user:<Server Name>\Administrator`, where \<Server Name\> is the name of the member server or workstation you're attempting to access over the network.
 
@@ -150,7 +150,7 @@ From any member server or workstation that is not affected by the GPO changes (s
 
 6. The following screenshot shows the error message that should appear.
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_111.png)
+    ![Screenshot that highlights the logon failure error message when verifying the GPO settings.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_111.png)
 
 ##### Verify "Deny log on as a batch job" GPO Settings
 
@@ -205,7 +205,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 16. A dialog box similar to the following should appear.
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_112.png)
+    ![Screenshot that highlights the Task Scheduler dialog box that appears when scheduling a task.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_112.png)
 
 ###### Verify "Deny log on as a service" GPO Settings
 
@@ -231,7 +231,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 11. When the service is restarted, a dialog box similar to the following should appear.
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_113.png)
+    ![Screenshot that shows a message indicating that Windows could not start the Print Spooler on the Local Computer.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_113.png)
 
 ###### Revert Changes to the Printer Spooler Service
 

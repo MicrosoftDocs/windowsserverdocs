@@ -306,7 +306,7 @@ Although a thorough discussion of attacks against public key infrastructures (PK
 
 When a certificate is presented for authentication to a domain-joined system, the contents of the Subject or the Subject Alternative Name (SAN) attribute in the certificate are used to map the certificate to a user object in Active Directory. Depending on the type of certificate and how it is constructed, the Subject attribute in a certificate typically contains a user's common name (CN), as shown in the following screenshot.
 
-![least privilege admin models](media/Implementing-Least-Privilege-Administrative-Models/SAD_4.gif)
+![Screenshot that shows the Subject attribute in a certificate typically contains a user's common name.](media/Implementing-Least-Privilege-Administrative-Models/SAD_4.gif)
 
 By default, Active Directory constructs a user's CN by concatenating the account's first name + " "+ last name. However, CN components of user objects in Active Directory are not required or guaranteed to be unique, and moving a user account to a different location in the directory changes the account's distinguished name (DN), which is the full path to the object in the directory, as shown in the bottom pane of the previous screenshot.
 

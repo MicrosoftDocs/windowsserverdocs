@@ -103,7 +103,7 @@ To get a list of currently configured auditing subcategories on a computer runni
 
 The following screenshot shows an example of auditpol.exe listing the current audit policy.
 
-![monitoring AD](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_5.gif)
+![Screenshot that shows an example of auditpol.exe listing the current audit policy.](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_5.gif)
 
 > [!NOTE]
 > Group Policy does not always accurately report the status of all enabled auditing policies, whereas auditpol.exe does. See [Getting the Effective Audit Policy in Windows 7 and 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731607(v=ws.10)) for more details.
@@ -322,7 +322,7 @@ To set audit policy using group policies, configure the appropriate audit catego
 
 Advanced Audit Policy can be set by using Active Directory or local group policies. To set Advanced Audit Policy, configure the appropriate subcategories located under **Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy** (see the following screenshot for an example from the Local Group Policy Editor (gpedit.msc)). Each audit policy subcategory can be enabled for **Success**, **Failure**, or **Success** and **Failure** events.
 
-![monitoring AD](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_7.gif)
+![Screenshot that shows an example from the Local Group Policy Editor (gpedit.msc).](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_7.gif)
 
 ### Setting Windows Audit Policy Using Auditpol.exe
 
