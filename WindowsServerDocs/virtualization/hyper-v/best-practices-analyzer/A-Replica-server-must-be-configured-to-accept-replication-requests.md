@@ -1,6 +1,6 @@
 ---
 title: A Replica server must be configured to accept replication requests
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn about how a Replica server must be configured to accept replication requests.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

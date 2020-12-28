@@ -1,6 +1,6 @@
 ---
 title: "Use Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about topics that provide information to help you get started using Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 86f158a5-c807-4242-b73d-e97b604adb5f
