@@ -116,7 +116,7 @@ By default, the following options are provided:
   - The server name is not in the **Connect to these servers** list
   - or the root certificate is found but is not selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**
 
-  then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails. In this option, if the root certificate is not present on the computer, the user is not notified and the connection attempts fails.
+  then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails. In this option, if the root certificate is not present on the computer, the user is not notified, and the connection attempts fails.
 
 - Case 3: **Tell user if the server’s identity cannot be verified** specifies that if:
 
