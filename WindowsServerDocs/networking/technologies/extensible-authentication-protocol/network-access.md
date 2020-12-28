@@ -4,7 +4,7 @@ description: This topic presents information about the Extensible Authentication
 author: khdownie
 ms.author: v-kedow
 ms.topic: conceptual
-ms.date: 12/23/2020
+ms.date: 12/28/2020
 ---
 
 # Extensible Authentication Protocol (EAP) for network access
@@ -21,11 +21,11 @@ This topic contains configuration information specific to the following authenti
 
   This section contains configuration information for the two default inner EAP methods that are provided with PEAP.
 
-  1. EAP-Transport Layer Security (TLS)
+  - EAP-Transport Layer Security (TLS)
 
      Appearing as **Smart Card or other Certificate Properties** in the operating system, EAP-TLS can be deployed as an inner method for PEAP or as a standalone EAP method. When it is configured as an inner authentication method, the configuration settings for EAP-TLS are identical to the settings that are used to deploy EAP-TLS as an outer method, except that it is configured to operate within PEAP. For configuration details, see [Smart card or other certificate properties configuration items](#smart-card-or-other-certificate-properties-configuration-items).
 
-  2. EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (MS-CHAP v2)
+  - EAP-Microsoft Challenge Handshake Authentication Protocol version 2 (MS-CHAP v2)
 
      Secure password EAP-MS-CHAP v2 is an EAP type that can be used with PEAP for password-based network authentication. EAP-MsCHAP v2 can also be used as a standalone method for VPN, but only as a PEAP inner method for wireless.
 
@@ -105,24 +105,24 @@ By default, the following options are provided:
 
 - Case 1: **Do not ask user to authorize new servers or trusted CAs** specifies that if:
 
-  1. The server name is not in the **Connect to these servers** list
-  2. or the root certificate is found but is not selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**
-  3. or the root certificate is not found on the computer
+  - The server name is not in the **Connect to these servers** list
+  - or the root certificate is found but is not selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**
+  - or the root certificate is not found on the computer
 
   then the user is not notified, and the connection attempt fails.
 
 - Case 2: **Tell user if the server name or root certificate is not specified** specifies that if:
 
-  1. The server name is not in the **Connect to these servers** list
-  2. or the root certificate is found but is not selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**
+  - The server name is not in the **Connect to these servers** list
+  - or the root certificate is found but is not selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**
 
   then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails. In this option, if the root certificate is not present on the computer, the user is not notified and the connection attempts fails.
 
 - Case 3: **Tell user if the server’s identity cannot be verified** specifies that if:
 
-  1. The server name is not in the **Connect to these servers** list
-  2. or the root certificate is found but is not selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**
-  3. or the root certificate is not found on the computer
+  - The server name is not in the **Connect to these servers** list
+  - or the root certificate is found but is not selected in the list of **Trusted Root Certification Authorities** in **PEAP Properties**
+  - or the root certificate is not found on the computer
 
   then the user is prompted whether to accept the root certificate. If the user accepts the certificate, authentication proceeds. If the user rejects the certificate, the connection attempt fails.
 
