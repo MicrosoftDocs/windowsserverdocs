@@ -67,13 +67,13 @@ For the Administrators group in each domain in the forest:
 
 4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** (where *GPO Name* is the name of this GPO).
 
-    ![Screenshot that shows where to name the GPO so you can secure Administrators Groups.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_81.gif)
+    ![Screenshot that shows where to name the GPO in the New GPO dialog box so you can secure Administrators Groups.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_81.gif)
 
 5.  In the details pane, right-click **<GPO Name>**, and click **Edit**.
 
 6.  Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.
 
-    ![Screenshot that shows where to navigate so you can select User Rights Admin to secure Administrators Groups.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_82.gif)
+    ![Screenshot that shows where to navigate so you can select the User Rights Admin option to secure Administrators Groups.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_82.gif)
 
 7.  Configure the user rights to prevent members of the Administrators group from accessing member servers and workstations over the network by doing the following:
 
@@ -123,7 +123,7 @@ For the Administrators group in each domain in the forest:
 
     3.  Select the GPO that you just created and click **OK**.
 
-        ![Screenshot that shows where to select the GPO you just created while you're linking the GPO to the member workstations and server.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_87.gif)
+        ![Screenshot that shows where to select the GPO you just created.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_87.gif)
 
     4.  Create links to all other OUs that contain workstations.
 
