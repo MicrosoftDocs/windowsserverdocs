@@ -1,6 +1,6 @@
 ---
 title: Manage Microsoft 365 in Windows Server Essentials
-description: Describes how to use Windows Server Essentials
+description: Learn how to manage your Microsoft 365 services and online accounts along with your on-premises resources from the Windows Server Essentials Dashboard.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 3f8485e4-e10f-4f38-8a5e-d5227abd0d84
@@ -184,7 +184,7 @@ When you integrate your  Windows Server Essentials server with Microsoft 365, yo
 |-------------|--------------------------|-------------|
 |(Multiple services)|MX| Microsoft 365 uses this record to verify that you own a specific domain name. This MX record does not interfere with email message routing.|
 |Exchange Online|MX|Provides email message routing. **Important:**  If you are migrating email, do not assign a preference of zero (**0**) to the new MX record. Make sure the value for the record is greater than the value that is assigned to the current MX record. When the email migration is complete and you are ready to change the email server to  Microsoft 365, have your domain name registrar reset the preference value of the new MX record.|
-|Exchange Online|Alias (CNAME)|Autodiscover record that is used to help users easily set up a connection between Exchange Online and their Outlook desktop client or a mobile email client. **Note:**  If you prefer to access Outlook Web Access by using your organization's own domain name (for example, http://mail.contoso.com) instead of the standard URL (https://outlook.com/owa/office365.com), you can configure the Alias (CName) record as follows: **Type=CNAME, TTL=01:00:00, HostName=mail, Address=mail.office365.com**|
+|Exchange Online|Alias (CNAME)|Autodiscover record that is used to help users easily set up a connection between Exchange Online and their Outlook desktop client or a mobile email client. **Note:**  If you prefer to access Outlook Web Access by using your organization's own domain name (for example, http://mail.contoso.com) instead of the standard URL (https://outlook.com/owa/office365.com), you can configure the Alias (CNAME) record as follows: **Type=CNAME, TTL=01:00:00, HostName=mail, Address=mail.office365.com**|
 |Exchange Online|TXT|Specifies that outlook.com, the domain used by the  Microsoft 365 email servers, is authorized to send email on behalf of your domain. Create this record to help prevent your outbound email from being flagged as spam.|
 |Lync Online|SRV|Helps enable federation with other instant messaging services such as Windows Live or Yahoo!.|
 |Lync Online|SRV|Autodiscover record that is used to help users easily set up a connection between the Lync desktop client and Microsoft Lync Online.|
