@@ -226,7 +226,7 @@ From any member server or workstation that is not affected by the GPO changes (s
 
 5.  In the **Command Prompt** window, type **net use \\\\\<Server Name\>\c$**, where \<Server Name\> is the name of the member server or workstation you're attempting to access over the network.
 
-6.  The following screen shot shows the error message that should appear.
+6.  The following screenshot shows the error message that should appear.
 
     ![Screenshot that highlights the logon failure error message.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_98.gif)
 
