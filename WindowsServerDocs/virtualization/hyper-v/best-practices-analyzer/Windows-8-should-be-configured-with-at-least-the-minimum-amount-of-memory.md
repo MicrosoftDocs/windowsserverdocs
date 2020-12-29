@@ -2,6 +2,7 @@
 title: Windows 8 should be configured with at least the minimum amount of memory
 description: Learn what to do when a virtual machine running Windows 8 is configured with less than the minimum amount of RAM, which is 512 MB.
 author: BenjaminArmstrong
+ms.author: benarm
 ms.topic: article
 ms.assetid: 519d1091-fa4d-44d7-83ca-83f6aa71fb7d
 ms.date: 8/16/2016
