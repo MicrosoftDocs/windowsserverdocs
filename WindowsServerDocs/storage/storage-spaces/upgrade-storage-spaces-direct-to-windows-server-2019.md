@@ -7,6 +7,7 @@ manager: eldenc
 ms.date: 03/06/2019
 ms.topic: article
 ---
+
 # Upgrade a Storage Spaces Direct cluster to Windows Server 2019
 
 This topic describes how to upgrade a Storage Spaces Direct cluster to Windows Server 2019. There are four approaches to upgrading a Storage Spaces Direct
@@ -64,7 +65,7 @@ servers will be restarted sequentially during the upgrade process, the remaining
 
    1. Use Hyper-V VM live migration to move running VMs off the server you're about to upgrade.
 
-   2. Pause the cluster server using the following PowerShell command—note that some internal groups are hidden. We recommend this step to be cautious — if you didn't already live migrate VMs off the server this cmdlet will do that for you, so you could skip the previous step if you prefer.
+   2. Pause the cluster server using the following PowerShell cmdlet — note that some internal groups are hidden. We recommend this step to be cautious — if you didn't already live migrate VMs off the server this cmdlet will do that for you, so you could skip the previous step if you prefer.
 
         ```PowerShell
        Suspend-ClusterNode -Drain
@@ -84,12 +85,24 @@ servers will be restarted sequentially during the upgrade process, the remaining
        Get-PhysicalDisk
        ```
 
-   5. Perform an upgrade installation of Windows Server 2019 on the server by running **setup.exe** and using the “Keep personal files and apps” option. After installation is complete, the server remains in the cluster and the cluster service starts automatically.
+   5. To allow for multiple reboots and avoid unwanted service startup during these procedures, temporarily set the Cluster Service to Disabled.
 
-   6. Check that the newly upgraded server has the latest Windows Server 2019 updates. For more info, see [Windows 10 and Windows Server 2019 update
+   6. Perform an upgrade installation of Windows Server 2019 on the server by running **setup.exe** and using the “Keep personal files and apps” option. After installation is complete, the server remains in the cluster and the cluster service starts automatically.
+
+   7. After the node has rebooted, validate that the Network Teams and Adapters can still ping the other nodes.
+
+   8. Change the Load Balancing algorithm from Dynamic (default in Windows Server 2016) to Hyper-V Port by using this [Set-VMSwitchTeam](https://docs.microsoft.com/powershell/module/hyper-v/set-vmswitchteam) cmdlet:
+
+   ```PowerShell
+   Set-VMSwitchTeam -Name "SwitchName" -LoadBalancingAlgorithm HyperVPort
+   ```
+
+   9. Check that the newly upgraded server has the latest Windows Server 2019 updates. For more info, see [Windows 10 and Windows Server 2019 update
    history](https://support.microsoft.com/help/4464619/windows-10-update-history). The build number (see `ver` command) should be 17763.292 or higher.
 
-   7. Remove the server from storage maintenance mode by using the following PowerShell command:
+  10. From the **Tools** menu in Server Manager, select **Failover Cluster Manager** and start the Cluster Service on the node.
+
+  11. Remove the server from storage maintenance mode by using the following PowerShell command:
 
        ```PowerShell
        Get-StorageFaultDomain -type StorageScaleUnit |
@@ -97,13 +110,13 @@ servers will be restarted sequentially during the upgrade process, the remaining
        Disable-StorageMaintenanceMode
        ```
 
-   8. Resume the server by using the following PowerShell command:
+  12. Resume the server by using the following PowerShell command:
 
        ```PowerShell
        Resume-ClusterNode
        ```
 
-   9. Wait for storage repair jobs to finish and for all disks to return to a healthy state. This could take considerable time depending on the number of VMs running during the server upgrade. Here are the commands to run:
+  13. Wait for storage repair jobs to finish and for all disks to return to a healthy state. This could take considerable time depending on the number of VMs running during the server upgrade. Here are the commands to run:
 
        ```PowerShell
        Get-StorageJob
@@ -177,7 +190,7 @@ This option incurs no VM downtime, but you'll need to wait for storage jobs (mir
        Get-PhysicalDisk
        ```
 
-   3.  Evict the server from the cluster by running the following PowerShell command:
+   3. Evict the server from the cluster by running the following PowerShell command:
 
        ```PowerShell
        Remove-ClusterNode <ServerName>
@@ -277,13 +290,13 @@ This option incurs VM downtime but can take less time than if you kept the VMs r
    After installation is complete, the server remains in the cluster and the
    cluster service starts automatically.
 
-   5.  Check that the newly upgraded server has the latest Windows Server 2019
+   5. Check that the newly upgraded server has the latest Windows Server 2019
    updates.
    For more info, see [Windows 10 and Windows Server 2019 update
    history](https://support.microsoft.com/help/4464619/windows-10-update-history).
    The build number (see `ver` command) should be 17763.292 or higher.
 
-   6.  Remove the server from storage maintenance mode by using the following
+   6. Remove the server from storage maintenance mode by using the following
    PowerShell commands:
 
        ```PowerShell
@@ -292,13 +305,13 @@ This option incurs VM downtime but can take less time than if you kept the VMs r
        Disable-StorageMaintenanceMode
        ```
 
-   7.  Resume the server by using the following PowerShell command:
+   7. Resume the server by using the following PowerShell command:
 
        ```PowerShell
        Resume-ClusterNode
        ```
 
-   8.  Wait for storage repair jobs to finish and for all disks to return to a healthy state.
+   8. Wait for storage repair jobs to finish and for all disks to return to a healthy state.
    This should be relatively fast, since VMs are not running. Here are the commands to run:
 
        ```PowerShell
