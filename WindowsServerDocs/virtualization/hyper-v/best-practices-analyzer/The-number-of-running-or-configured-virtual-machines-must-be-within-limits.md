@@ -1,6 +1,6 @@
 ---
 title: The number of running or configured virtual machines must be within supported limits
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when more virtual machines are running or configured than are supported.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

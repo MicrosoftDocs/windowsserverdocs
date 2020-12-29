@@ -1,6 +1,6 @@
 ---
 title: A virtual machine running Windows 8.1 and configured with Dynamic Memory should use recommended values for memory settings
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when one or more virtual machines are configured to use Dynamic Memory with less than the amount of memory recommended for Windows 8.1.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

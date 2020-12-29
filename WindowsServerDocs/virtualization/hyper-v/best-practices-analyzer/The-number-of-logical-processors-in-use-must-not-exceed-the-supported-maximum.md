@@ -1,6 +1,6 @@
 ---
 title: The number of logical processors in use must not exceed the supported maximum
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when the server is configured with too many logical processors.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

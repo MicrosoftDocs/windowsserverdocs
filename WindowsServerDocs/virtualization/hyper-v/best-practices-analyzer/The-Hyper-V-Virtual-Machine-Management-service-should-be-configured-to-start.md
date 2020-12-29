@@ -1,6 +1,6 @@
 ---
 title: The Hyper-V Virtual Machine Management service should be configured to start automatically
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when the Hyper-V Virtual Machine Management Service is not configured to start automatically.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

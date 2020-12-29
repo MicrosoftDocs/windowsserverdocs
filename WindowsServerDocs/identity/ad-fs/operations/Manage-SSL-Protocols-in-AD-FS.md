@@ -1,6 +1,6 @@
 ---
 title: Managing SSL/TLS Protocols and Cipher Suites for AD FS
-description: Frequently asked questions for AD FS 2016
+description: Learn about managing SSL/TLS Protocols and Cipher Suites for AD FS.
 author: billmath
 ms.author: billmath
 manager: femila
