@@ -67,7 +67,7 @@ For the Administrators group in each domain in the forest:
 
 4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** (where *GPO Name* is the name of this GPO).
 
-    ![Screenshot that shows where to name the GPO in the New GPO dialog box so you can secure Administrators Groups.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_81.gif)
+    ![Screenshot that shows where to name the G P O in the New GPO dialog box so you can secure Administrators Groups.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_81.gif)
 
 5.  In the details pane, right-click **<GPO Name>**, and click **Edit**.
 
@@ -119,7 +119,7 @@ For the Administrators group in each domain in the forest:
 
     2.  Right-click the OU that the GPO will be applied to and click **Link an existing GPO**.
 
-        ![Screenshot that shows the Link an existing GPO menu option when you right-click the OU.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_86.gif)
+        ![Screenshot that shows the Link an existing G P O menu option when you right-click the OU.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_86.gif)
 
     3.  Select the GPO that you just created and click **OK**.
 
@@ -151,7 +151,7 @@ For the Administrators group in each domain in the forest:
 
 4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** (where <GPO Name> is the name of this GPO).
 
-    ![Screenshot that shows where to name the GPO so you can secure Administrators Groups.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_90.gif)
+    ![Screenshot that shows where to name the G P O so you can secure Administrators Groups.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_90.gif)
 
 5.  In the details pane, right-click **<GPO Name>**, and click **Edit**.
 
@@ -203,11 +203,11 @@ For the Administrators group in each domain in the forest:
 
     2.  Right-click the domain controllers OU and click **Link an existing GPO**.
 
-        ![Screenshot that shows the Link an existing GPO menu option when you're attempting to link the GPO to the domain controllers OU.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_95.gif)
+        ![Screenshot that shows the Link an existing GPO menu option when you're attempting to link the G P O to the domain controllers OU.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_95.gif)
 
     3.  Select the GPO that you just created and click **OK**.
 
-        ![Screenshot that shows where to select the GPO you just created while you're linking the GPO to the member workstations and server.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_96.gif)
+        ![Screenshot that shows where to select the GPO you just created while you're linking the G P O to the member workstations and server.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_96.gif)
 
 #### Verification Steps
 
