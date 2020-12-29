@@ -1,6 +1,6 @@
 ---
 title: "Step 3: Join computers to the new Windows Server Essentials server"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to connect client computers to the new server running Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: a0e07d1a-8409-429b-87d7-0f4a7e14d668

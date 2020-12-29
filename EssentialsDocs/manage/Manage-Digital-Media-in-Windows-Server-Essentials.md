@@ -1,6 +1,6 @@
 ---
 title: "Manage Digital Media in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the media streaming features of your server, and learn how to set up and use media streaming on your network.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 9378bffa-487c-43ca-9ec3-7e7864d2dd9a

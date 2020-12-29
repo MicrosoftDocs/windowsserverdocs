@@ -1,6 +1,6 @@
 ---
 title: "Migrate Windows Server Essentials to New Hardware"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to how to migrate an existing  Windows Server 2012 Essentials domain to Windows Server Essentials on new hardware, and then migrate the settings and data.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f695ae90-3160-407b-bebf-9e460f22c86d

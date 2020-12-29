@@ -1,6 +1,6 @@
 ---
 title: "Perform post-migration tasks for Windows Server Essentials migration1"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the post-migration tasks that you have to perform after you've migrated Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f2d236a4-0d62-4961-9d1f-332054e06f6d
