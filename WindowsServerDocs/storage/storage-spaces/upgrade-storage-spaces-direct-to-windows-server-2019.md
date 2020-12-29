@@ -93,16 +93,15 @@ servers will be restarted sequentially during the upgrade process, the remaining
 
    8. Change the Load Balancing algorithm from Dynamic (default in Windows Server 2016) to Hyper-V Port by using this [Set-VMSwitchTeam](https://docs.microsoft.com/powershell/module/hyper-v/set-vmswitchteam) cmdlet:
 
-   ```PowerShell
-   Set-VMSwitchTeam -Name "SwitchName" -LoadBalancingAlgorithm HyperVPort
-   ```
+       ```PowerShell
+       Set-VMSwitchTeam -Name "SwitchName" -LoadBalancingAlgorithm HyperVPort
+       ```
 
-   9. Check that the newly upgraded server has the latest Windows Server 2019 updates. For more info, see [Windows 10 and Windows Server 2019 update
-   history](https://support.microsoft.com/help/4464619/windows-10-update-history). The build number (see `ver` command) should be 17763.292 or higher.
+   9. Check that the newly upgraded server has the latest Windows Server 2019 updates. For more info, see [Windows 10 and Windows Server 2019 update history](https://support.microsoft.com/help/4464619/windows-10-update-history). The build number (see `ver` command) should be 17763.292 or higher.
 
-  10. From the **Tools** menu in Server Manager, select **Failover Cluster Manager** and start the Cluster Service on the node.
+   10. From the **Tools** menu in Server Manager, select **Failover Cluster Manager** and start the Cluster Service on the node.
 
-  11. Remove the server from storage maintenance mode by using the following PowerShell command:
+   11. Remove the server from storage maintenance mode by using the following PowerShell command:
 
        ```PowerShell
        Get-StorageFaultDomain -type StorageScaleUnit |
@@ -110,13 +109,13 @@ servers will be restarted sequentially during the upgrade process, the remaining
        Disable-StorageMaintenanceMode
        ```
 
-  12. Resume the server by using the following PowerShell command:
+   12. Resume the server by using the following PowerShell command:
 
        ```PowerShell
        Resume-ClusterNode
        ```
 
-  13. Wait for storage repair jobs to finish and for all disks to return to a healthy state. This could take considerable time depending on the number of VMs running during the server upgrade. Here are the commands to run:
+   13. Wait for storage repair jobs to finish and for all disks to return to a healthy state. This could take considerable time depending on the number of VMs running during the server upgrade. Here are the commands to run:
 
        ```PowerShell
        Get-StorageJob
