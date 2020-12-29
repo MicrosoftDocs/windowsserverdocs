@@ -1,6 +1,6 @@
 ---
 title: Managing SSL/TLS Protocols and Cipher Suites for AD FS
-description: Learn about managing SSL/TLS Protocols and Cipher Suites for AD FS.
+description: Learn how to disable and enable certain TLS/SSL protocols and cipher suites that are used by AD FS.
 author: billmath
 ms.author: billmath
 manager: femila

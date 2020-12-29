@@ -1,6 +1,6 @@
 ---
 title: "Step 6: Demote and remove the Source Server from the new Windows Server Essentials network"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to demote and remove the Source Server from the new Windows Server Essentials network.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 86244c66-2c5e-488d-adb8-112e1ca3e2e1

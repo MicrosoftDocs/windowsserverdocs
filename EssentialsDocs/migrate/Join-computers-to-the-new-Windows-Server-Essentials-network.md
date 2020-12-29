@@ -1,6 +1,6 @@
 ---
 title: "Join computers to the new Windows Server Essentials network1"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to join computers to the new Windows Server Essentials network.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d94de050-3300-4323-a5ea-c824cb9cecc9

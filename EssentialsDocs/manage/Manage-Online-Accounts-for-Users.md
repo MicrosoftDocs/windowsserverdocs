@@ -1,6 +1,6 @@
 ---
 title: Manage Online Accounts for Windows Server Essentials Users
-description: Describes how to use Windows Server Essentials
+description: Learn how to manage your online accounts along with user accounts from the Windows Server Essentials Dashboard.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c09f4cf6-4d12-49fe-9ae4-e6cb14027b9d
@@ -13,7 +13,7 @@ manager: mtillman
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-When you integrate your  Windows Server Essentials server with Microsoft 365, you can manage your online accounts along with user accounts from the Dashboard. In this topic, you ll find out what you can gain by managing your users  Microsoft Online Services accounts from the Dashboard, how to create and manage online accounts from the Dashboard, and how to manage email addresses and distribution groups for Exchange Online from the Dashboard.
+When you integrate your  Windows Server Essentials server with Microsoft 365, you can manage your online accounts along with user accounts from the Dashboard. In this topic, you'll find out what you can gain by managing your users  Microsoft Online Services accounts from the Dashboard, how to create and manage online accounts from the Dashboard, and how to manage email addresses and distribution groups for Exchange Online from the Dashboard.
 
 
 > [!NOTE]

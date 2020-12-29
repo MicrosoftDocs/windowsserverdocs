@@ -1,6 +1,6 @@
 ---
 title: "Run the Windows Server Essentials Best Practices Analyzer6"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to run the Windows Server Essentials Best Practices Analyzer (BPA) on the Destination Server.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 00addf78-8999-4c8e-8ac4-4ebdde00c5a3

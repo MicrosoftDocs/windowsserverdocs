@@ -1,6 +1,6 @@
 ---
 title: "Work Remotely in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the multiple ways to access resources that are located on the server when you are away from your network.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
