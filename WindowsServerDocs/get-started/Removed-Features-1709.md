@@ -56,4 +56,4 @@ iSNS is being considered for replacement. The Server Message Block (SMB) feature
 This encryption method is being considered for replacement because the superior Cryptography API: Next Generation (CNG) method is already available. To learn more about CNG encryption, see [About CNG](/windows/win32/seccng/about-cng).
 
 ### Windows PowerShell 2.0
-This early version of Windows PowerShell has been superseded by several more recent versions. For the best features and performance, migrate to Windows PowerShell 5.0 or later. See [PowerShell Documentation](/powershell/index?view=powershell-5.1) for plenty of information.
+This early version of Windows PowerShell has been superseded by several more recent versions. For the best features and performance, migrate to Windows PowerShell 5.0 or later. See [PowerShell Documentation](/powershell/index?view=powershell-5.1&preserve-view=true) for plenty of information.
