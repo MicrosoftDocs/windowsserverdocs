@@ -42,7 +42,7 @@ It's highly recommended to apply filters before starting any packet capture, bec
 
    If you want to capture traffic that passes through only specific component(s), the first step of the filters pane shows the networking stack layout so you can select the component(s) to filter by. This also is a great place to analyze and understand the layout of your machine's networking stack.
 
-   :::image type="content" source="media/filtering-by-networking-stack-components.png" alt-text="Example of filtering by networking stack components" border="true":::
+   :::image type="content" source="media/filtering-by-networking-stack-components.png" alt-text="Example of filtering by networking stack components" border="true" lightbox="media/filtering-by-networking-stack-components.png":::
 
 2. Filtering by packet parameters
 
@@ -52,17 +52,17 @@ It's highly recommended to apply filters before starting any packet capture, bec
    - To further filter TCP packets, an optional list of TCP flags to match can be provided. Supported flags are FIN, SYN, RST, PSH, ACK, URG, ECE, and CWR.
    - If the **encapsulation** box is checked, the tool applies the filter to encapsulated inner packets, in addition to the outer packet. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP. Custom VXLAN port is optional, and defaults to 4789.
 
-   :::image type="content" source="media/filtering-by-packet-parameters.png" alt-text="Example of filtering by packet parameters" border="true":::
+   :::image type="content" source="media/filtering-by-packet-parameters.png" alt-text="Example of filtering by packet parameters" border="true" lightbox="media/filtering-by-packet-parameters.png":::
 
 3. Filtering by packet flow status
 
    Packet Monitor will capture flowing and dropped packets by default. To capture only on dropped packets, select **Dropped Packets**.
 
-   :::image type="content" source="media/filtering-by-packet-flow-status.png" alt-text="Example of filtering by packet flow status" border="true":::
+   :::image type="content" source="media/filtering-by-packet-flow-status.png" alt-text="Example of filtering by packet flow status" border="true" lightbox="media/filtering-by-packet-flow-status.png":::
 
    Afterwards, a summary of all the selected filter conditions are displayed for review. You will be able to retrieve that view after starting the capture through the **Capture Conditions** button.
 
-   :::image type="content" source="media/filters-review.png" alt-text="How to capture only dropped packets" border="true":::
+   :::image type="content" source="media/filters-review.png" alt-text="How to capture only dropped packets" border="true" lightbox="media/filters-review.png":::
 
 ## Capture log
 
@@ -74,7 +74,7 @@ The results are displayed in a table that shows the main parameters of the captu
    - You can search for a value in any column in the log using the search bar.
    - You can restart the capture with same chosen filters using the **Restart** button.
 
-   :::image type="content" source="media/capture-log-result.png" alt-text="Example of capture log results table" border="true":::
+   :::image type="content" source="media/capture-log-result.png" alt-text="Example of capture log results table" border="true" lightbox="media/capture-log-result.png":::
 
 ## Details page
 
@@ -84,7 +84,7 @@ This page presents a snapshot of the packet as it flows by each component of the
    - When a snapshot is selected, more details about this specific snapshot are shown, including the raw packet headers.
    - All dropped packets have a “True” value in the **Dropped** tab, a drop reason, and are displayed in red text to make them easier to pinpoint.
 
-   :::image type="content" source="media/details-page.png" alt-text="Example of Details Page showing packet snapshots" border="true":::
+   :::image type="content" source="media/details-page.png" alt-text="Example of Details Page showing packet snapshots" border="true" lightbox="media/details-page.png":::
 
 ## Display filters
 
@@ -94,7 +94,7 @@ The display filters allow you to filter your log after capturing the packets. Fo
    - Display filters can be deleted and edited after applying them to change the view of the log.
    - Display filters are reversed in the saved logs.
 
-   :::image type="content" source="media/display-filters.png" alt-text="Display filters screen" border="true":::
+   :::image type="content" source="media/display-filters.png" alt-text="Display filters screen" border="true" lightbox="media/display-filters.png":::
 
 ## Save feature
 
@@ -106,10 +106,10 @@ The save button allows you to save the log on your local machine, your remote ma
       - Pcapng fomat which can be analyzed using tools like Wireshark.
          - Most of the Packet Monitor metadata will be lost during this conversion. [Check this page](pktmon-pcapng-support.md) for more information.
 
-   :::image type="content" source="media/packet-monitoring-save-feature.png" alt-text="Saving a local copy of the capture" border="true":::
+   :::image type="content" source="media/packet-monitoring-save-feature.png" alt-text="Saving a local copy of the capture" border="true" lightbox="media/packet-monitoring-save-feature.png":::
 
 ## Open feature
 
 The open feature will allow you to reopen any of the five last saved logs to analyze through the tool.
 
-   :::image type="content" source="media/open.png" alt-text="Opening a recent log" border="true":::
+   :::image type="content" source="media/open.png" alt-text="Opening a recent log" border="true" lightbox="media/open.png":::

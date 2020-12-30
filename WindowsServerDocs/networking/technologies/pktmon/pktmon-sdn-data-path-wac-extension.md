@@ -34,7 +34,7 @@ The cluster will be added to the connections list. Click it to launch the Dashbo
 
 <center>
 
-:::image type="content" source="media/add-sdn-enabled-hci-connection.png" alt-text="Adding an SDN enabled HCI connection with Windows Admin Center" border="true":::
+:::image type="content" source="media/add-sdn-enabled-hci-connection.png" alt-text="Adding an SDN enabled HCI connection with Windows Admin Center" border="true" lightbox="media/add-sdn-enabled-hci-connection.png":::
 
 </center>
 
@@ -48,7 +48,7 @@ The first page lists all the SDN scenarios classified as Workload scenarios and 
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-main-page.png" alt-text="SDN monitoring - Diagnostic Scenarios page" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-main-page.png" alt-text="SDN monitoring - Diagnostic Scenarios page" border="true" lightbox="media/sdn-data-path-diagnostics-main-page.png":::
 
 </center>
 
@@ -58,7 +58,7 @@ After choosing the scenario, fill out a list of mandatory and optional parameter
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-scenario-parameters.png" alt-text="SDN monitoring - Capture Conditions page" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-scenario-parameters.png" alt-text="SDN monitoring - Capture Conditions page" border="true" lightbox="media/sdn-data-path-diagnostics-scenario-parameters.png":::
 
 </center>
 
@@ -68,7 +68,7 @@ After starting the capture, the extension will show a list of the machines where
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-loading-wheel2.png" alt-text="starting the packet capture" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-loading-wheel2.png" alt-text="starting the packet capture" border="true" lightbox="media/sdn-data-path-diagnostics-loading-wheel2.png":::
 
 </center>
 
@@ -76,7 +76,7 @@ After stopping the capture, the logs of all the machines will be shown in a sing
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-log.png" alt-text="Data Path Diagnostics log after stopping the capture" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-log.png" alt-text="Data Path Diagnostics log after stopping the capture" border="true" lightbox="media/sdn-data-path-diagnostics-log.png":::
 
 </center>
 
@@ -97,7 +97,7 @@ The information in this page is particularly valuable if you have incorrect pack
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-details-page.png" alt-text="Data Path Diagnostics Details page" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-details-page.png" alt-text="Data Path Diagnostics Details page" border="true" lightbox="media/sdn-data-path-diagnostics-details-page.png":::
 
 </center>
 
@@ -105,7 +105,7 @@ Select a hop to view more details. In encapsulation and NAT (Network Address Tra
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-details-page-with-pane1.png" alt-text="viewing details about a specific hop" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-details-page-with-pane1.png" alt-text="viewing details about a specific hop" border="true" lightbox="media/sdn-data-path-diagnostics-details-page-with-pane1.png":::
 
 </center>
 
@@ -113,7 +113,7 @@ Scroll down to view raw packet details:
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-details-page-with-pane-raw-packet1.png" alt-text="viewing raw packet details about a specific hop" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-details-page-with-pane-raw-packet1.png" alt-text="viewing raw packet details about a specific hop" border="true" lightbox="media/sdn-data-path-diagnostics-details-page-with-pane-raw-packet1.png":::
 
 </center>
 
@@ -127,7 +127,7 @@ The display filters allow you to filter the log after capturing the packets. For
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-display-filters.png" alt-text="filtering logs with display filters" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-display-filters.png" alt-text="filtering logs with display filters" border="true" lightbox="media/sdn-data-path-diagnostics-display-filters.png":::
 
 </center>
 
@@ -142,6 +142,6 @@ The save button allows you to save the log on your local machine for further ana
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-save.png" alt-text="saving logs locally" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-save.png" alt-text="saving logs locally" border="true" lightbox="media/sdn-data-path-diagnostics-save.png":::
 
 </center>
