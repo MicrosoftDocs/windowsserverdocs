@@ -1,6 +1,6 @@
 ---
 title: Avoid enabling virtual machines configured with virtual Fibre Channel adapters to allow live migrations when there are fewer paths to Fibre Channel logical units (LUNs) on the destination than on the source
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when one or more virtual machines have the AllowReducedFcRedunancy property set in the virtualization WMI provider.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

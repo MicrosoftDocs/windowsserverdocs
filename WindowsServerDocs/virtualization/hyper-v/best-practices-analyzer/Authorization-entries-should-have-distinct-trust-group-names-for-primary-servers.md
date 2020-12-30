@@ -1,6 +1,6 @@
 ---
 title: Authorization entries should have distinct trust group names for primary servers with virtual machines that are not part of the same trust group
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the server will accept replication requests for the replica virtual machine from any of the servers in the authorization list associated with the same replication tag as the virtual machine.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
