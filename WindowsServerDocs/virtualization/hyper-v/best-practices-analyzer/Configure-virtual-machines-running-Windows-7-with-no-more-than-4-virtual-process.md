@@ -1,6 +1,6 @@
 ---
 title: Configure virtual machines running Windows 7 with no more than 4 virtual processors
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when a virtual machine running Windows 7 is configured with more than 4 virtual processors.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

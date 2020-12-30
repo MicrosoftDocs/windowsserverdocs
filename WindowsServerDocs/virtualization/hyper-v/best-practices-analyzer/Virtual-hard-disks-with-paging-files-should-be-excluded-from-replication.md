@@ -1,6 +1,6 @@
 ---
 title: Virtual hard disks with paging files should be excluded from replication
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when paging files experience a high volume of input/output activity, which will unnecessarily require much greater resources to participate in replication.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

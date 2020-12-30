@@ -1,6 +1,6 @@
 ---
 title: Domain membership is recommended for servers running Hyper-V
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the server is a member of a workgroup.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

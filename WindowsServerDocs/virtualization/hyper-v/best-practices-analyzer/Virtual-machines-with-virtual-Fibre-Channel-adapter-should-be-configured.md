@@ -1,6 +1,6 @@
 ---
 title: Virtual machines configured with a virtual Fibre Channel adapter should be configured for high availability to the Fibre Channel-based storage
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when one or more virtual machines lack a highly available connection to Fibre Channel-based storage because those virtual machines are configured with a virtual Fibre Channel adapter that is connected to only one host bus adapter (HBA).
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

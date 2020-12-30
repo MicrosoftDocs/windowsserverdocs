@@ -1,6 +1,6 @@
 ---
 title: Configure the Failover TCP/IP settings that you want the Replica virtual machine to use in the event of a failover
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when replica virtual machines configured with a static IP address should be configured to use a different IP address from their primary virtual machine counterpart in the event of failover.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
