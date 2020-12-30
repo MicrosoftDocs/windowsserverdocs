@@ -26,7 +26,7 @@ In this section:
 
 * &#10004; - Feature available
 * (*blank*) - Feature not available
-* **RHCK** - Red Hat Compatable Kernel
+* **RHCK** - Red Hat Compatible Kernel
 * **UEK** - Unbreakable Enterprise Kernel (UEK)
    * UEK4 - built on upstream Linux Kernel release 4.1.12
    * UEK5 - built on upstream Linux Kernel release 4.14
