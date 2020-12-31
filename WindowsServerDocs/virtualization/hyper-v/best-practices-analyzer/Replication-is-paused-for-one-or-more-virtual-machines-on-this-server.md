@@ -1,6 +1,6 @@
 ---
 title: Replication is paused for one or more virtual machines on this server
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when replication is paused for one or more of the virtual machines. While the primary virtual machine is paused, any changes that occur will be accumulated and will be sent to the Replica virtual machine once replication is resumed.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

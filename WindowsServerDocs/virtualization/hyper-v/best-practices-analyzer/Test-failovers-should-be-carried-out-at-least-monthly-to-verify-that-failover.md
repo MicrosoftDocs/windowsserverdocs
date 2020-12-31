@@ -1,6 +1,6 @@
 ---
 title: Test failovers should be carried out at least monthly to verify that failover will succeed and that virtual machine workloads will operate as expected after failover
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when there has been no test failover in at least one month.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

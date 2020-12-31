@@ -1,6 +1,6 @@
 ---
 title: One or more network adapters should be configured as the source for Port Mirroring
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when one or more virtual machines have a network adapter configured as a destination for Port Mirroring, but there is no corresponding source on the virtual switch.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
