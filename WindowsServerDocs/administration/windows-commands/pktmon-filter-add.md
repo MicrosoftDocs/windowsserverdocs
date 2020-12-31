@@ -21,6 +21,8 @@ pktmon filter add <name> [-m mac [mac2]] [-v vlan] [-d { IPv4 | IPv6 | number }]
                          [-i ip [ip2]] [-p port [port2]] [-e [port]]
 ```
 
+You may provide an optional name or description of the filter.
+
   > [!NOTE]
   > When two MACs (-m), IPs (-i), or ports (-p) are specified, the filter matches packets that contain both. It will not distinguish between source or destination for this purpose.
 
@@ -28,7 +30,6 @@ pktmon filter add <name> [-m mac [mac2]] [-v vlan] [-d { IPv4 | IPv6 | number }]
 
 | **Parameter** | **Description** |
 | ------------- | --------------- |
-| <name> | Optional name or description of the filter. |
 | **-m, --mac[-address]** | Match source or destination MAC address. See note above. |
 | **-v, --vlan** | Match by VLAN Id (VID) in the 802.1Q header. |
 | **-d, --data-link[-protocol], --ethertype** | Match by data link (layer 2) protocol. Can be IPv4, IPv6, ARP, or a protocol number. |
