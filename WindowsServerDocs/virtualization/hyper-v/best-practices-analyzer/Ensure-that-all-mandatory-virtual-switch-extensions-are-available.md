@@ -1,6 +1,6 @@
 ---
 title: Ensure that all mandatory virtual switch extensions are available
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when one or more virtual network adapters are connected to a virtual switch with mandatory extensions that are disabled or not installed.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

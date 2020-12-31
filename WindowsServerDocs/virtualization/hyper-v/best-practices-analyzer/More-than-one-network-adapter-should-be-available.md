@@ -1,6 +1,6 @@
 ---
 title: More than one network adapter should be available
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the server is configured with one network adapter, which must be shared by the management operating system and all virtual machines that require access to a physical network.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

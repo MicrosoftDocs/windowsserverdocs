@@ -1,6 +1,6 @@
 ---
 title: Ensure that the virtual function driver operates correctly when a virtual machine is configured to use SR-IOV
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the virtual function driver is not operating correctly in the guest operating system of one or more virtual machines.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

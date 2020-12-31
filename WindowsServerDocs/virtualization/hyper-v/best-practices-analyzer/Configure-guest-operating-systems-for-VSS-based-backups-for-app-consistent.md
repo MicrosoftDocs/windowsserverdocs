@@ -1,6 +1,6 @@
 ---
 title: Configure guest operating systems for VSS-based backups to enable application-consistent snapshots for Hyper-V Replica
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when Application-consistent snapshots require that Volume Shadow Copy Services (VSS) is enabled and configured in the guest operating systems of virtual machines participating in replication. 
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

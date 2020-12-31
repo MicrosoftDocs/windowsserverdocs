@@ -1,6 +1,6 @@
 ---
 title: Enable all virtual network adapters configured for a virtual machine
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when one or more network adapters may be disabled in a virtual machine.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: Use at least SMB protocol version 3.0 configured for continuous availability on file shares that store files for virtual machines
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when virtual machine files or virtual hard disk files are stored on a network file share that is not configured with the continuous availability feature of SMB protocol version 3.0.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

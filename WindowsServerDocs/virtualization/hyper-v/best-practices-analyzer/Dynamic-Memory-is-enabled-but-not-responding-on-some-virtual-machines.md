@@ -1,6 +1,6 @@
 ---
 title: Dynamic Memory is enabled but not responding on some virtual machines
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when one or more virtual machines are experiencing problems with the driver required for Dynamic Memory in the guest operating system.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

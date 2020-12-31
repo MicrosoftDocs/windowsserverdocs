@@ -1,7 +1,6 @@
 ---
 title: Recovery snapshots should be removed after failover
-description: Online version of the text for this Best Practices Analyzer rule.
-
+description: Learn what to do when a failed over virtual machine has one or more recovery snapshots.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
