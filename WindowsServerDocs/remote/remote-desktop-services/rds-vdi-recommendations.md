@@ -327,7 +327,7 @@ Collapse **Network**, and then expand **System**. Adjust each setting as follows
 ||Prevent Windows from sending an error report when a device driver requests additional software during installation|Enabled|
 ||Turn off "Found New Hardware" balloons during device installation|Enabled|
 
-Expand **Filesystem**, double-click **NTFS**, double-click **Short name creation options**, select the radio button for **Enabled**, and then use the **Options** pull-down menu to select **Enable on all volumes**. Click the **OK** button to save.
+Expand **Filesystem**, double-click **NTFS**, double-click **Short name creation options**, select the radio button for **Enabled**, and then use the **Options** pull-down menu to select **Disable on all volumes**. Click the **OK** button to save.
 
 Collapse **Filesystem**, and then expand **Internet Communication Management**. Click **Internet Communication settings**. Adjust each setting as follows by double-clicking it, then selecting the radio button for **Enabled**, and then clicking the **OK** button:
 
