@@ -31,7 +31,7 @@ You may provide an optional name or description of the filter.
 | **Parameter** | **Description** |
 | ------------- | --------------- |
 | **-m, --mac[-address]** | Match source or destination MAC address. See note above. |
-| **-v, --vlan** | Match by VLAN Id (VID) in the 802.1Q header. |
+| **-v, --vlan** | Match by VLAN ID (VID) in the 802.1Q header. |
 | **-d, --data-link[-protocol], --ethertype** | Match by data link (layer 2) protocol. Can be IPv4, IPv6, ARP, or a protocol number. |
 | **-t, --transport[-protocol], --ip-protocol** | Match by transport (layer 4) protocol. Can be TCP, UDP, ICMP, ICMPv6, or a protocol number. To further filter TCP packets, an optional list of TCP flags to match can be provided. Supported flags are FIN, SYN, RST, PSH, ACK, URG, ECE, and CWR. |
 | **-i, --ip[-address]** | Match source or destination IP address. See note above. To match by subnet, use CIDR notation with the prefix length. |
@@ -71,7 +71,7 @@ The following filter called **MySubnet** captures traffic on the subnet mask 255
 C:\Test> pktmon filter add MySubnet -i 10.10.10.0/24
 ```
 
-## Additional References
+## Other references
 
 - [Pktmon](pktmon.md)
 - [Pktmon comp](pktmon-comp.md)
