@@ -1,6 +1,6 @@
 ---
 title: Use DNS Policy for Intelligent DNS Responses Based on the Time of Day
-description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
+description: Learn how to distribute application traffic across different geographically distributed instances of an application by using DNS policies that are based on the time of day.
 manager: brianlic
 ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
