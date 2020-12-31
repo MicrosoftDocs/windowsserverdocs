@@ -1,6 +1,6 @@
 ---
 title: Windows hypervisor must be running
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when Windows hypervisor is not running.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
