@@ -1,6 +1,6 @@
 ---
 title: Use DNS Policy for Applying Filters on DNS Queries
-description: Learn how to configure DNS policy in Windows Server&reg; 2016 to create query filters that are based on criteria that you supply.
+description: Learn how to configure DNS policy in Windows Server 2016 to create query filters that are based on criteria that you supply.
 manager: brianlic
 ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
