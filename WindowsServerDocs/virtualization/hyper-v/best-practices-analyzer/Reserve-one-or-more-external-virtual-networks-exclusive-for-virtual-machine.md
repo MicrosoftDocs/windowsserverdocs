@@ -1,6 +1,6 @@
 ---
 title: Reserve one or more external virtual networks for exclusive use by virtual machines
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when all external virtual networks are configured for use by both the management operating system and virtual machines.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

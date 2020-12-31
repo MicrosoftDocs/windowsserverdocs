@@ -1,6 +1,6 @@
 ---
 title: A virtual SAN should be associated with a physical host bus adapter
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when a virtual storage area network (SAN) has been configured without an association to a host bus adapter (HBA).
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

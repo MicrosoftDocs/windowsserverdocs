@@ -1,6 +1,6 @@
 ---
 title: Avoid enabling storage Quality of Service when using a differencing virtual hard disk when the parent and child virtual hard disks are on different volumes
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when a differencing virtual hard disk with the parent and child virtual hard disks on different volumes has storage Quality of Service enabled.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

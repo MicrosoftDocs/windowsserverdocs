@@ -1,6 +1,6 @@
 ---
 title: Offer all available integration services to virtual machines
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when one or more available integration services are not enabled on virtual machines.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

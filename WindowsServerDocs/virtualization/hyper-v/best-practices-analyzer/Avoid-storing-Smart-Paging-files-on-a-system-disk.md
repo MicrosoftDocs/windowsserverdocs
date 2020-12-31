@@ -1,6 +1,6 @@
 ---
 title: Avoid storing Smart Paging files on a system disk
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the memory configuration for one or more virtual machines might require the use of Smart Paging if the virtual machine is rebooted, and the specified location for the Smart Paging file is the system disk of the server running Hyper-V.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

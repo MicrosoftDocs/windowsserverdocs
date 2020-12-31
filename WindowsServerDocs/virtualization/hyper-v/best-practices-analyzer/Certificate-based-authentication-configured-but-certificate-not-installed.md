@@ -1,6 +1,6 @@
 ---
 title: Certificate-based authentication is configured, but the specified certificate is not installed on the Replica server or failover cluster nodes
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the security certificate that Hyper-V Replica has been configured to use to provide certificate-based replication is not installed on the Replica server (or any failover cluster nodes).
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
