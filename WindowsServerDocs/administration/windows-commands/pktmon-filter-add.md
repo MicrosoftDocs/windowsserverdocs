@@ -11,7 +11,7 @@ ms.date: 12/31/2020
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-Pktmon filter add allows you to add a filter to control which packets are reported. For a packet to be reported, it must match all conditions specified in at least one filter. Up to 8 filters can be active at once.
+Pktmon filter add allows you to add a filter to control which packets are reported. For a packet to be reported, it must match all conditions specified in at least one filter. Up to eight filters can be active at once.
 
 ## Syntax
 
@@ -40,7 +40,7 @@ You may provide an optional name or description of the filter.
 
 ## Examples
 
-The following set of filters will capture any ICMP traffic from or to the IP address 10.0.0.10 as well as any traffic on port 53.
+The following set of filters will capture any ICMP traffic from or to the IP address 10.0.0.10 along with any traffic on port 53.
 
 ```PowerShell
 C:\Test> pktmon filter add -i 10.0.0.10 -t icmp
