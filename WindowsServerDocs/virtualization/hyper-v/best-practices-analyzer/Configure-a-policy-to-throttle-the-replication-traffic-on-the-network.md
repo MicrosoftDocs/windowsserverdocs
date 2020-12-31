@@ -1,6 +1,6 @@
 ---
 title: Configure a policy to throttle the replication traffic on the network
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when there might not be a limit on the amount of network bandwidth that replication is allowed to consume.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

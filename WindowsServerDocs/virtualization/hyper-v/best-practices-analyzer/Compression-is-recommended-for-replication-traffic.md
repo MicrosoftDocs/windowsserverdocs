@@ -1,6 +1,6 @@
 ---
 title: Compression is recommended for replication traffic
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the replication traffic sent across the network from the primary server to the Replica server is uncompressed.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

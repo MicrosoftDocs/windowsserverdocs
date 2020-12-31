@@ -1,6 +1,6 @@
 ---
 title: The number of logical processors in use must not exceed the supported maximum
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when the server is configured with too many logical processors.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -34,7 +34,7 @@ In the following sections, italics indicates text that appears in the Best Pract
 
 *Remove some processors from this machine or use msconfig to limit the number of available processors.*
 
-See the following instructions to use Msconfig. For details about removing processors, see the instructions that came with the computer or contact the hardware manufacturer. For details about maximum supported configurations for Hyper-V, see [Plan for Hyper-V scalability in Windows Server 2016](../plan/plan-hyper-v-scalability-in-windows-server.md).
+See the following instructions to use MSConfig. For details about removing processors, see the instructions that came with the computer or contact the hardware manufacturer. For details about maximum supported configurations for Hyper-V, see [Plan for Hyper-V scalability in Windows Server 2016](../plan/plan-hyper-v-scalability-in-windows-server.md).
 
 ### To limit the number of available processors
 

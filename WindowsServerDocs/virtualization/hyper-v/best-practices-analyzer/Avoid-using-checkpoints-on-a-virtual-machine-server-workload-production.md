@@ -1,6 +1,6 @@
 ---
 title: Avoid using checkpoints on a virtual machine that runs a server workload in a production environment
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when a virtual machine with one or more checkpoints has been found.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

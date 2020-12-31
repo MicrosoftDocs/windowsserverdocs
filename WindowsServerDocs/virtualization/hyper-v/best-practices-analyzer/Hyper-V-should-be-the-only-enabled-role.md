@@ -1,6 +1,6 @@
 ---
 title: Hyper-V should be the only enabled role
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when roles other than Hyper-V are enabled on your server.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

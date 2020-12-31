@@ -1,6 +1,6 @@
 ---
 title: All virtual network adapters should be enabled
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when one or more virtual network adapters associated with a physical network adapter are disabled in the management operating system.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

@@ -1,6 +1,6 @@
 ---
 title: A team bound to a virtual switch should only have one exposed team interface
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when one or more virtual switches are bound to a team that has multiple team interfaces.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
