@@ -26,16 +26,16 @@ pktmon filter add <name> [-m mac [mac2]] [-v vlan] [-d { IPv4 | IPv6 | number }]
 
 ### Parameters
 
-| Parameter | Description |
-| --------- | ----------- |
-| <name> | Optional name or description of the filter. |
-| -m, --mac[-address] | Match source or destination MAC address. See note above. |
-| -v, --vlan | Match by VLAN Id (VID) in the 802.1Q header. |
-| -d, --data-link[-protocol], --ethertype | Match by data link (layer 2) protocol. Can be IPv4, IPv6, ARP, or a protocol number. |
-| -t, --transport[-protocol], --ip-protocol | Match by transport (layer 4) protocol. Can be TCP, UDP, ICMP, ICMPv6, or a protocol number. To further filter TCP packets, an optional list of TCP flags to match can be provided. Supported flags are FIN, SYN, RST, PSH, ACK, URG, ECE, and CWR. |
-| -i, --ip[-address] | Match source or destination IP address. See note above. To match by subnet, use CIDR notation with the prefix length. |
-| -p, --port | Match source or destination port number. See note above. |
-| -e, --encap | This filter also applies to encapsulated inner packets, in addition to the outer packet. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP. Custom VXLAN port is optional, and defaults to 4789. |
+| **Parameter** | **Description** |
+| ------------- | --------------- |
+| **<name>** | Optional name or description of the filter. |
+| **-m, --mac[-address]** | Match source or destination MAC address. See note above. |
+| **-v, --vlan** | Match by VLAN Id (VID) in the 802.1Q header. |
+| **-d, --data-link[-protocol], --ethertype** | Match by data link (layer 2) protocol. Can be IPv4, IPv6, ARP, or a protocol number. |
+| **-t, --transport[-protocol], --ip-protocol** | Match by transport (layer 4) protocol. Can be TCP, UDP, ICMP, ICMPv6, or a protocol number. To further filter TCP packets, an optional list of TCP flags to match can be provided. Supported flags are FIN, SYN, RST, PSH, ACK, URG, ECE, and CWR. |
+| **-i, --ip[-address]** | Match source or destination IP address. See note above. To match by subnet, use CIDR notation with the prefix length. |
+| **-p, --port** | Match source or destination port number. See note above. |
+| **-e, --encap** | This filter also applies to encapsulated inner packets, in addition to the outer packet. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP. Custom VXLAN port is optional, and defaults to 4789. |
 
 ## Examples
 
@@ -52,7 +52,7 @@ The following filter will capture all the SYN packets sent or received by the IP
 C:\Test> pktmon filter add -i 10.0.0.10 -t tcp syn
 ```
 
-THe following filter called **MyPing** pings 10.10.10.10 using the ICMP protocol:
+The following filter called **MyPing** pings 10.10.10.10 using the ICMP protocol:
 
 ```PowerShell
 C:\Test> pktmon filter add MyPing -i 10.10.10.10 -t ICMP
@@ -73,5 +73,13 @@ C:\Test> pktmon filter add MySubnet -i 10.10.10.0/24
 ## Additional References
 
 - [Pktmon](pktmon.md)
+- [Pktmon comp](pktmon-comp.md)
+- [Pktmon counters](pktmon-counters.md)
 - [Pktmon filter](pktmon-filter.md)
+- [Pktmon format](pktmon-format.md)
+- [Pktmon list](pktmon-list.md)
+- [Pktmon pcapng](pktmon-pcapng.md)
+- [Pktmon reset](pktmon-reset.md)
+- [Pktmon start](pktmon-start.md)
+- [Pktmon unload](pktmon-unload.md)
 - [Packet Monitor overview](/windows-server/networking/technologies/pktmon/pktmon)

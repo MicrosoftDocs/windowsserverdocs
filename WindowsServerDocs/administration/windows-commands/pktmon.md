@@ -4,7 +4,7 @@ description: Reference article for the pktmon network diagnostics tool for Windo
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
-ms.date: 12/30/2020
+ms.date: 12/31/2020
 ---
 
 # pktmon
@@ -21,7 +21,7 @@ pktmon { filter | comp | reset | counters | format | list | start | stop | pcapn
 
 ### Commands
 
-| Command | Description |
+| **Command** | **Description** |
 | --------- | ----------- |
 | [pktmon filter](pktmon-filter.md) | Manage packet filters. |
 | [pktmon comp](pktmon-comp.md) | Manage registered components. |
@@ -30,10 +30,10 @@ pktmon { filter | comp | reset | counters | format | list | start | stop | pcapn
 | [pktmon format](pktmon-format.md) | Convert log file to text. |
 | [pktmon list](pktmon-list.md) | List all active components. |
 | [pktmon start](pktmon-start.md) | Start packet monitoring. |
-| [pktmon stop](pktmon-stop.md) | Stop packet monitoring. |
+| pktmon stop | Stop packet monitoring. |
 | [pktmon pcapng](pktmon-pcapng.md) | Convert log file to pcapng format. |
 | [pktmon unload](pktmon-unload.md) | Unload pktmon driver. |
-| [pktmon help](pktmon-help.md) | Displays a short summary of subcommands. |
+| pktmon help | Displays a short summary of subcommands. |
 
 ## Additional References
 

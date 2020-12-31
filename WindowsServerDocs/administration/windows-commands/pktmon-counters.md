@@ -1,37 +1,38 @@
 ---
-title: pktmon filter
-description: Reference article for the pktmon filter command.
+title: pktmon counters
+description: Reference article for the pktmon counters command.
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
 ms.date: 12/31/2020
 ---
 
-# pktmon filter
+# pktmon counters
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-Pktmon filter allows you to list, add, or remove packet filters.
+Pktmon counters allows you to query and display current per-component counters to confirm the presence of expected traffic and get a high-level view of how the traffic flowed in the machine.
 
 ## Syntax
 
 ```
-pktmon filter { list | add | remove } [OPTIONS | help]
+pktmon [comp] counters [-t { all | drop | flow }] [-z] [--json]
 ```
 
 ### Parameters
 
 | **Parameter** | **Description** |
 | ------------- | --------------- |
-| **pktmon filter list** | Display active packet filters. |
-| **pktmon filter add** |  Add a filter to control which packets are reported. |
-| **pktmon filter remove** | Remove all packet filters. |
+| **-t, --counter-type** | Select which types of counters to show. Supported values are all counters (default), drops only, or flows only. |
+| **-z, --show-zeros** | Show counters that are zero in both directions. |
+| **-i, --show-hidden** | Show components that are hidden by default. |
+| **--json** | Output the counters in JSON format. |
 
 ## Additional References
 
 - [Pktmon](pktmon.md)
 - [Pktmon comp](pktmon-comp.md)
-- [Pktmon counters](pktmon-counters.md)
+- [Pktmon filter](pktmon-filter.md)
 - [Pktmon filter add](pktmon-filter-add.md)
 - [Pktmon format](pktmon-format.md)
 - [Pktmon list](pktmon-list.md)

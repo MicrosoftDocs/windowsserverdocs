@@ -1,39 +1,43 @@
 ---
-title: pktmon filter
-description: Reference article for the pktmon filter command.
+title: pktmon format
+description: Reference article for the pktmon format command.
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
 ms.date: 12/31/2020
 ---
 
-# pktmon filter
+# pktmon format
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-Pktmon filter allows you to list, add, or remove packet filters.
+Pktmon format converts log files to text format.
 
 ## Syntax
 
 ```
-pktmon filter { list | add | remove } [OPTIONS | help]
+pktmon format log.etl [-o log.txt] [-b] [-v [level]] [-x] [-e] [-l [port]
 ```
 
 ### Parameters
 
 | **Parameter** | **Description** |
 | ------------- | --------------- |
-| **pktmon filter list** | Display active packet filters. |
-| **pktmon filter add** |  Add a filter to control which packets are reported. |
-| **pktmon filter remove** | Remove all packet filters. |
+| **-o, --out** | Name of the formatted text file. |
+| **-s, --stats-only** | Display log file statistical information. |
+| **-b, --brief** | Abbreviated packet format. |
+| **-v, --verbose** | Verbosity level [1..3]. |
+| **-x, --hex** | Hexadecimal format. |
+| **-e, --no-ethernet** | Don't print ethernet header. |
+| **-l, --vxlan** | Custom VXLAN port. |
 
 ## Additional References
 
 - [Pktmon](pktmon.md)
 - [Pktmon comp](pktmon-comp.md)
 - [Pktmon counters](pktmon-counters.md)
+- [Pktmon filter](pktmon-filter.md)
 - [Pktmon filter add](pktmon-filter-add.md)
-- [Pktmon format](pktmon-format.md)
 - [Pktmon list](pktmon-list.md)
 - [Pktmon pcapng](pktmon-pcapng.md)
 - [Pktmon reset](pktmon-reset.md)

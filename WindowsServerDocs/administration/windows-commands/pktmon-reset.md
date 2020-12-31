@@ -1,42 +1,34 @@
 ---
-title: pktmon filter
-description: Reference article for the pktmon filter command.
+title: pktmon reset
+description: Reference article for the pktmon reset command.
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
 ms.date: 12/31/2020
 ---
 
-# pktmon filter
+# pktmon reset
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-Pktmon filter allows you to list, add, or remove packet filters.
+Reset counters to zero.
 
 ## Syntax
 
 ```
-pktmon filter { list | add | remove } [OPTIONS | help]
+pktmon reset [-counters]
 ```
-
-### Parameters
-
-| **Parameter** | **Description** |
-| ------------- | --------------- |
-| **pktmon filter list** | Display active packet filters. |
-| **pktmon filter add** |  Add a filter to control which packets are reported. |
-| **pktmon filter remove** | Remove all packet filters. |
 
 ## Additional References
 
 - [Pktmon](pktmon.md)
 - [Pktmon comp](pktmon-comp.md)
 - [Pktmon counters](pktmon-counters.md)
+- [Pktmon filter](pktmon-filter.md)
 - [Pktmon filter add](pktmon-filter-add.md)
 - [Pktmon format](pktmon-format.md)
 - [Pktmon list](pktmon-list.md)
 - [Pktmon pcapng](pktmon-pcapng.md)
-- [Pktmon reset](pktmon-reset.md)
 - [Pktmon start](pktmon-start.md)
 - [Pktmon unload](pktmon-unload.md)
 - [Packet Monitor overview](/windows-server/networking/technologies/pktmon/pktmon)

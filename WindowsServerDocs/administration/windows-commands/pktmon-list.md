@@ -1,40 +1,39 @@
 ---
-title: pktmon filter
-description: Reference article for the pktmon filter command.
+title: pktmon list
+description: Reference article for the pktmon list command.
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
 ms.date: 12/31/2020
 ---
 
-# pktmon filter
+# pktmon list
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-Pktmon filter allows you to list, add, or remove packet filters.
+Lists all active components, allowing you to examine the networking stack layout. The command shows networking components (drivers) arranged by adapters bindings.
 
 ## Syntax
 
 ```
-pktmon filter { list | add | remove } [OPTIONS | help]
+pktmon [comp] list
 ```
 
 ### Parameters
 
 | **Parameter** | **Description** |
 | ------------- | --------------- |
-| **pktmon filter list** | Display active packet filters. |
-| **pktmon filter add** |  Add a filter to control which packets are reported. |
-| **pktmon filter remove** | Remove all packet filters. |
+| **-i, --show-hidden** | Show components that are hidden by default. |
+| **--json** | Output the list in JSON format. |
 
 ## Additional References
 
 - [Pktmon](pktmon.md)
 - [Pktmon comp](pktmon-comp.md)
 - [Pktmon counters](pktmon-counters.md)
+- [Pktmon filter](pktmon-filter.md)
 - [Pktmon filter add](pktmon-filter-add.md)
 - [Pktmon format](pktmon-format.md)
-- [Pktmon list](pktmon-list.md)
 - [Pktmon pcapng](pktmon-pcapng.md)
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon start](pktmon-start.md)
