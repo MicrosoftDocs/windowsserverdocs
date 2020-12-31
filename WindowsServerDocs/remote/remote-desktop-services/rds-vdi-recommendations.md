@@ -559,5 +559,5 @@ To remove the OneDrive app:
 4. Click or tap **Turn system icons on or off**, and then turn each system icon on or off as you prefer for the image.
 
 ### Delete downloaded updates
-1. Using File Explorer, navigate to **C:\Windows\Software Distribution\Download**.
+1. Using File Explorer, navigate to **C:\Windows\SoftwareDistribution\Download**.
 2. Delete all files and folders in that directory.
