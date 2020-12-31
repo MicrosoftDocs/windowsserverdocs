@@ -287,7 +287,7 @@ In the **Browsing history** area, select the check box for **Delete browsing his
 Push the Windows button and type *control panel*. In the results that return, click **Control Panel**. In Control Panel, click **Power Options** to open the Power Options control panel. In the **Choose or customize a power plan** area, click the down arrow for **Show additional plans**, and then select the radio button for **High performance**. This setting will have very little impact on the VDI host.
 
 ### System
-Push the Windows button and type *control panel*. In the results that return, click **Control Panel**. In Control Panel, click **System** to open the System control panel. In the left pane, click **Advanced system settings**. In the dialog that opens, click the **Advanced** tab. In the **Performance** area, click the **Settings** button, then on **Visual Effects** tab in the dialog that opens, select the **Adjust for best performance** radio button. Click **OK** to save and exit.
+Push the Windows button and type *control panel*. In the results that return, click **Control Panel**. In Control Panel, click **System** to open the System control panel. In the right pane, click **Advanced system settings**. In the dialog that opens, click the **Advanced** tab. In the **Performance** area, click the **Settings** button, then on **Visual Effects** tab in the dialog that opens, select the **Adjust for best performance** radio button. Click **OK** to save and exit.
 
 ## Group Policy settings
 
