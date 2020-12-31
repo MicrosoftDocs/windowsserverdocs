@@ -1,6 +1,6 @@
 ---
 title: Avoid mapping one storage path to multiple resource pools
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when a storage file path is mapped to multiple resource pools.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

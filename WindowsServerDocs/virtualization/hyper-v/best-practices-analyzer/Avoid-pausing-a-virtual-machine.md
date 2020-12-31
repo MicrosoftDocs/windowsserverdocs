@@ -1,6 +1,6 @@
 ---
 title: Avoid pausing a virtual machine
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when this server has one or more virtual machines in a paused state.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

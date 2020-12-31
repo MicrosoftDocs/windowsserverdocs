@@ -1,6 +1,6 @@
 ---
 title: Supported Oracle Linux virtual machines on Hyper-V
-description: Lists the Linux integration services and features included in each version
+description: Lists the Oracle Linux integration services and features included in each version
 ms.topic: article
 ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
 ms.author: benarm
@@ -26,7 +26,7 @@ In this section:
 
 * &#10004; - Feature available
 * (*blank*) - Feature not available
-* **RHCK** - Red Hat Compatable Kernel
+* **RHCK** - Red Hat Compatible Kernel
 * **UEK** - Unbreakable Enterprise Kernel (UEK)
    * UEK4 - built on upstream Linux Kernel release 4.1.12
    * UEK5 - built on upstream Linux Kernel release 4.14
