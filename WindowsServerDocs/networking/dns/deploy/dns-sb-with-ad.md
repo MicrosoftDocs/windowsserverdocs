@@ -1,6 +1,6 @@
 ---
 title: Use DNS Policy for Split-Brain DNS in Active Directory
-description: You can use this topic to leverage traffic management capabilities of DNS policies for split-brain deployments with Active Directory integrated DNS zones in Windows Server 2016.
+description: Learn how to leverage traffic management capabilities of DNS policies for split-brain deployments with Active Directory integrated DNS zones in Windows Server 2016.
 manager: brianlic
 ms.topic: article
 ms.assetid: f9533204-ad7e-4e49-81c1-559324a16aeb

@@ -1,6 +1,6 @@
 ---
 title: Use DNS Policy for Application Load Balancing
-description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
+description: Learn how to learn how to configure DNS policy to perform application load balancing.
 manager: brianlic
 ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
@@ -21,7 +21,7 @@ When you have deployed multiple instances of an application, you can use DNS pol
 
 Following is an example of how you can use DNS policy for application load balancing.
 
-This example uses one fictional company - Contoso Gift Services - which provides online gifing services, and which has a Web site named **contosogiftservices.com**.
+This example uses one fictional company - Contoso Gift Services - which provides online gifting services, and which has a Web site named **contosogiftservices.com**.
 
 The contosogiftservices.com website is hosted in multiple datacenters that each have different IP addresses.
 
