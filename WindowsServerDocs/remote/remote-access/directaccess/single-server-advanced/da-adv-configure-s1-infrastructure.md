@@ -368,9 +368,9 @@ In a deployment that uses staging and production GPOs, the domain administrator 
 
 3.  To link the production GPOs, see [Link a Group Policy Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732979(v=ws.11)).
 
-4.  Grant the Remote Access administrator **Edit settings, delete and modify security** permissions on all of the staging GPOs. For more informantion, see [Delegate Permissions for a Group or User on a Group Policy Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754542(v=ws.11)).
+4.  Grant the Remote Access administrator **Edit settings, delete and modify security** permissions on all of the staging GPOs. For more information, see [Delegate Permissions for a Group or User on a Group Policy Object](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754542(v=ws.11)).
 
-5.  Deny the Remote Access administrator permissions to link GPOs in all domains (or verify that the Remote Access administrator doesn"t have such permissions). For more information, see [Delegate Permissions to Link Group Policy Objects](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755086(v=ws.11)).
+5.  Deny the Remote Access administrator permissions to link GPOs in all domains (or verify that the Remote Access administrator doesn't have such permissions). For more information, see [Delegate Permissions to Link Group Policy Objects](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755086(v=ws.11)).
 
 When Remote Access administrators configure Remote Access, they should always specify only the staging GPOs (not the production GPOs). This is true in the initial configuration of Remote Access and when performing additional configuration operations where additional GPOs are required; for example, when adding entry points in a multisite deployment or enabling client computers in additional domains.
 
