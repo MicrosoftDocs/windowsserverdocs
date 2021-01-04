@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Enabling Multisite
-description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+description: Learn how to troubleshot issues related to the Enable-DAMultisite command.
 manager: brianlic
 ms.topic: article
 ms.assetid: 570c81d6-c4f4-464c-bee9-0acbd4993584

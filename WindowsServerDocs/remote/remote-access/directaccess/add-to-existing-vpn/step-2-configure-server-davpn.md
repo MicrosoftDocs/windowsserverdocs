@@ -1,6 +1,6 @@
 ---
 title: Step 2 Configure the DirectAccess-VPN Server
-description: This topic is part of the guide Add DirectAccess to an Existing Remote Access (VPN) Deployment for Windows Server 2016
+description: Learn how to configure the client and server settings required for a basic Remote Access deployment using the Enable DirectAccess Wizard.w
 manager: brianlic
 ms.topic: article
 ms.assetid: fe221fc9-c7d9-4508-b8a1-000d2515283c

@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Web Probe URLs
-description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+description: Learn how to troubleshoot issues related to the Set-DAEntryPointDC command.
 manager: brianlic
 ms.topic: article
 ms.assetid: 6dfffd1e-f4f4-43b6-9e3c-49015ce34338

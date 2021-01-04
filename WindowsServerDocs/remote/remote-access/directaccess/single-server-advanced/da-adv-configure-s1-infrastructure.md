@@ -1,6 +1,6 @@
 ---
 title: Step 1 Configure Advanced DirectAccess Infrastructure
-description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
+description: Learn how to configure the infrastructure that is required for an advanced Remote Access deployment that uses a single DirectAccess server in a mixed IPv4 and IPv6 environment.
 manager: brianlic
 ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
