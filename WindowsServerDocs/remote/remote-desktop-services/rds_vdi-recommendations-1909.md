@@ -658,7 +658,7 @@ Scheduled Task Name:
 
 ### Apply Windows (and other) updates
 
-Whether from Microsoft Update, or from your internal resources, apply the available updates including Windows Defender signatures. This is a good time to apply other available updates including Microsoft Office if installed, and other software updates. If PowerShell will remain in the image you can download the latest available help for PowerShell by running the command [Update-Help](/powershell/module/microsoft.powershell.core/update-help?view=powershell-7).
+Whether from Microsoft Update, or from your internal resources, apply the available updates including Windows Defender signatures. This is a good time to apply other available updates including Microsoft Office if installed, and other software updates. If PowerShell will remain in the image you can download the latest available help for PowerShell by running the command [Update-Help](/powershell/module/microsoft.powershell.core/update-help?view=powershell-7&preserve-view=true).
 
 #### Servicing the operating system and apps
 

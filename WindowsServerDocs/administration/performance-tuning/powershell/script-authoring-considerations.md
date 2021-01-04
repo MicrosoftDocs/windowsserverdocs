@@ -124,5 +124,5 @@ It is generally considered poor practice to write output directly to the console
 
 If you must write many messages to the console, `Write-Host` can be an order of magnitude slower than `[Console]::WriteLine()`. However, be aware that `[Console]::WriteLine()` is only a suitable alternative for specific hosts like powershell.exe or powershell_ise.exe - it's not guaranteed to work in all hosts.
 
-Instead of using `Write-Host`, consider using [Write-Output](/powershell/module/Microsoft.PowerShell.Utility/Write-Output?view=powershell-5.1).
+Instead of using `Write-Host`, consider using [Write-Output](/powershell/module/Microsoft.PowerShell.Utility/Write-Output?view=powershell-5.1&preserve-view=true).
 

@@ -375,7 +375,7 @@ You can also use Perfmon.exe's graphical interface remotely with Nano Server tar
 
 ### Interact with the Windows Event Log
 
-Nano Server supports the ```Get-WinEvent``` cmdlet, which provides Windows Event Log filtering and querying capabilities, both locally as well as on a remote computer. Detailed options and examples are available at the [Get-WinEvent documentation page](/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-5.1). This simple example retrieves the *Errors* noted in the *System* log during the past two days.
+Nano Server supports the ```Get-WinEvent``` cmdlet, which provides Windows Event Log filtering and querying capabilities, both locally as well as on a remote computer. Detailed options and examples are available at the [Get-WinEvent documentation page](/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-5.1&preserve-view=true). This simple example retrieves the *Errors* noted in the *System* log during the past two days.
 ```
 PS C:\> $StartTime = (Get-Date) - (New-TimeSpan -Day 2)
 PS C:\> Get-WinEvent -FilterHashTable @{LogName='System'; Level=2; StartTime=$StartTime} | select TimeCreated, Message
