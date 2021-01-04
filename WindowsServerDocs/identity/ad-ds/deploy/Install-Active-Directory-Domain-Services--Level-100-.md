@@ -76,7 +76,7 @@ Get-Help Add-ADDSReadOnlyDomainControllerAccount
 
 Optional arguments appear in square brackets.
 
-You can also download the latest Help examples and concepts for Windows PowerShell cmdlets. For more information, see [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help?view=powershell-5.1).
+You can also download the latest Help examples and concepts for Windows PowerShell cmdlets. For more information, see [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help?view=powershell-5.1&preserve-view=true).
 
 You can run Windows PowerShell cmdlets against remote servers:
 

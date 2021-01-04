@@ -101,7 +101,7 @@ Get-HgsTrace -RunDiagnostics -Target $server
 ```
 This example will generate a prompt to collect the remote user credentials, and then diagnostics will run using the remote host at `hgs-01.secure.contoso.com` to complete trace collection.  The resulting traces are downloaded to the localhost and then diagnosed.  The results of diagnosis are presented the same as when performing [local diagnosis](#local-diagnosis).  Similarly, it is not necessary to specify a role as it can be inferred based on the Windows PowerShell modules installed on the remote system.
 
-Remote diagnosis utilizes Windows PowerShell remoting for all accesses to the remote host.  Therefore it is a prerequisite that the trace target have Windows PowerShell remoting enabled (see [Enable PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7)) and that the localhost is properly configured for launching connections to the target.
+Remote diagnosis utilizes Windows PowerShell remoting for all accesses to the remote host.  Therefore it is a prerequisite that the trace target have Windows PowerShell remoting enabled (see [Enable PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7&preserve-view=true)) and that the localhost is properly configured for launching connections to the target.
 
 > [!NOTE]
 > In most cases, it is only necessary that the localhost be a part of the same Active Directory forest and that a valid DNS hostname is used.  If your environment utilizes a more complicated federation model or you wish to use direct IP addresses for connectivity, you may need to perform additional configuration such as setting the WinRM [trusted hosts](/previous-versions/technet-magazine/ff700227(v=msdn.10)).
@@ -118,7 +118,7 @@ This command will return `$True` if and only if `Get-HgsTrace` would be able to 
 When performing remote diagnosis from a user with sufficient privileges to connect remotely to the trace target, it is not necessary to supply credentials to `New-HgsTraceTarget`.  The `Get-HgsTrace` cmdlet will automatically reuse the credentials of the user that invoked the cmdlet when opening a connection.
 
 > [!WARNING]
-> Some restrictions apply to reusing credentials, particularly when performing what is known as a "second hop."  This occurs when attempting to reuse credentials from inside a remote session to another machine.  It is necessary to [setup CredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7) to support this scenario, but this is outside of the scope of guarded fabric management and troubleshooting.
+> Some restrictions apply to reusing credentials, particularly when performing what is known as a "second hop."  This occurs when attempting to reuse credentials from inside a remote session to another machine.  It is necessary to [setup CredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7&preserve-view=true) to support this scenario, but this is outside of the scope of guarded fabric management and troubleshooting.
 
 #### Using Windows PowerShell Just Enough Administration (JEA) and Diagnostics
 
