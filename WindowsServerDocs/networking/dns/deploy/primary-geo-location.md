@@ -1,6 +1,6 @@
 ---
 title: Use DNS Policy for Geo-Location Based Traffic Management with Primary Servers
-description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
+description: Learn how to configure DNS Policy to allow primary DNS servers to respond to DNS client queries based on the geographical location of both the client and the resource to which the client is attempting to connect, providing the client with the IP address of the closest resource.
 manager: brianlic
 ms.topic: article
 ms.assetid: ef9828f8-c0ad-431d-ae52-e2065532e68f

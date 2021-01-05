@@ -1,6 +1,6 @@
 ---
 title: Configure Windows Server Update Services (WSUS) Content Servers
-description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices.
+description: Learn how to configure Windows Server Update Services (WSUS) Content Servers to store update files on the local computer.
 manager: brianlic
 ms.topic: get-started-article
 ms.assetid: 9724aa8d-e4ae-404c-bee6-cef1534cd3ca

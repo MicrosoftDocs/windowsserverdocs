@@ -1,6 +1,6 @@
 ---
 title: Deploy Hosted Cache Servers (Optional)
-description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+description: Learn how to install and configure BranchCache hosted cache servers that are located in branch offices where you want to deploy BranchCache hosted cache mode.
 manager: brianlic
 ms.topic: get-started-article
 ms.assetid: 96d03b42-6cd9-4905-b6a2-dc36130dd24f
