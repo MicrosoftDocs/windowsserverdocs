@@ -25,7 +25,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 1. In Server Manager, click **Tools**, and then select **AD FS Management**.
 
 2. Expand **Service** and on the right click **Add Claim Description**.
-   ![add claim description](media/Add-a-Claim-Description/claimdesc1.png)
+   ![Screenshot that highlights Add Claim Description.](media/Add-a-Claim-Description/claimdesc1.png)
 
 3. On the Add a Claim Description dialog box, in **Display name**, type a unique name that identifies the group or role for this claim.
 
