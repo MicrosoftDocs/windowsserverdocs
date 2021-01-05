@@ -87,10 +87,9 @@ curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 sudo apt-get update
 ```
 
-
 ## See Also
 
 - [Frequently Asked Questions about Windows Subsystem for Linux](https://docs.microsoft.com/windows/wsl/faq)
-    - [How do I uninstall a WSL Distribution?](https://docs.microsoft.com/windows/wsl/faq#how-do-i-uninstall-a-wsl-distribution)
+- [How do I uninstall a WSL Distribution?](https://docs.microsoft.com/windows/wsl/faq#how-do-i-uninstall-a-wsl-distribution)
 - [Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/windows/wsl/install-win10)
 - [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/windows/wsl/)
