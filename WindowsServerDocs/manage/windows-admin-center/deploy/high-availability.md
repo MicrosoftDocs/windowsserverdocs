@@ -5,6 +5,7 @@ ms.topic: article
 author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
+ms.date: 08/07/2020
 ---
 
 # Deploy Windows Admin Center with high availability

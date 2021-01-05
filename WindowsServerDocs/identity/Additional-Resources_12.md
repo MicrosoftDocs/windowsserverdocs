@@ -6,6 +6,7 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
+ms.topic: reference
 ---
 # Additional Resources
 

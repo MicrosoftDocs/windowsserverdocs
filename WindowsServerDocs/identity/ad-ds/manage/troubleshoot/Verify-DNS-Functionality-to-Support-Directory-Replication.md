@@ -5,6 +5,7 @@ title: Verify DNS Functionality to Support Directory Replication
 ms.author: daveba
 ms.date: 05/31/2017
 author: Femila
+ms.topic: troubleshooting
 ---
 # Verify DNS Functionality to Support Directory Replication
 

@@ -7,6 +7,7 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.localizationpriority: medium
+ms.date: 01/04/2021
 ---
 
 # Windows Server 2019 and Microsoft Server application compatibility

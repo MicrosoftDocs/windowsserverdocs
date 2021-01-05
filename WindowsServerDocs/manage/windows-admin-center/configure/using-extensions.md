@@ -5,6 +5,7 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.localizationpriority: medium
+ms.date: 08/07/2020
 ---
 # Install and Manage Extensions
 
