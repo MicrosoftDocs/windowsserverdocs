@@ -23,7 +23,7 @@ The model allows to plug-in code at any of three stages of AD FS authentication 
 
 1.    **Request Received Stage** – Enables building plug-ins to allow or block request when AD FS receives the authentication request i.e. before user enters credentials. You can use the request context (eg, client IP, Http method, proxy server DNS, etc.) available at this stage to perform the risk assessment. For eg, you can build a plug-in to read the IP from the request context and block the authentication request if the IP is in the pre-defined list of risky IPs.
 
-2.    **Pre-Authentication Stage** – Enables building plug-ins to allow or block request at the point where user provides the credentials but before AD FS evaluates them. At this stage, in addition to the request context you also have information on the security context (eg, user token, user identifier, etc) and the protocol context (eg, authentication protocol, clientid, resourceid, etc) to use in your risk assessment logic. For eg, you can build a plug-in to prevent password spray attacks by reading the user password from the user token and blocking the authentication request if the password is in the pre-defined list of risky passwords.
+2.    **Pre-Authentication Stage** – Enables building plug-ins to allow or block request at the point where user provides the credentials but before AD FS evaluates them. At this stage, in addition to the request context you also have information on the security context (eg, user token, user identifier, etc.) and the protocol context (eg, authentication protocol, clientid, resourceid, etc) to use in your risk assessment logic. For eg, you can build a plug-in to prevent password spray attacks by reading the user password from the user token and blocking the authentication request if the password is in the pre-defined list of risky passwords.
 
 3.    **Post-Authentication** – Enables building plug-in to assess risk after user has provided credentials and AD FS has performed authentication. At this stage, in addition to the request context, security context, and protocol context, you also have information on the authentication result (Success or Failure). The plug-in can evaluate the risk score based on the available information and pass the risk score to claim and policy rules for further evaluation.
 
@@ -310,9 +310,9 @@ The method returns the [Risk Score](/dotnet/api/microsoft.identityserver.authent
 **A:** You can write error logs to "AD FS/Admin" event log using WriteAdminLogErrorMessage method, audit logs to "AD FS Auditing" security log using WriteAuditMessage method and debug logs to "AD FS Tracing" debug log using WriteDebugMessage method.
 
 **Can adding these plug-ins increase AD FS authentication process latency?**</br>
-**A:** Latency impact will be determined by the time taken to execute the risk assessment logic you implement. We recommend evaluating the latency impact before deploying the plug-in in production enviroment.
+**A:** Latency impact will be determined by the time taken to execute the risk assessment logic you implement. We recommend evaluating the latency impact before deploying the plug-in in production environment.
 
-**Why can't AD FS suggest the list of risky IPs, users, etc?**</br>
+**Why can't AD FS suggest the list of risky IPs, users, etc.?**</br>
 **A:** Though not currently available, we are working on building the intelligence to suggest risky IPs, users, etc. in the Pluggable Risk Assessment Model. We will share the launch dates soon.
 
 **What other sample plug-ins are available?**</br>
