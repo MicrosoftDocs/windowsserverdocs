@@ -7866,9 +7866,14 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs.md",
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs.md",
       "redirect_url": "/windows-server/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/Deploy-RA-OTP.md",
