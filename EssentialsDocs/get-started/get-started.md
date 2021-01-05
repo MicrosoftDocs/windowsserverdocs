@@ -6,6 +6,7 @@ ms.assetid: 2d0eb084-09dd-4d85-a41a-5d449cc3b504
 author: nnamuhcs
 ms.author: geschuma
 manager: mtillman
+ms.date: 12/18/2020
 ---
 
 # Get started with Windows Server Essentials
