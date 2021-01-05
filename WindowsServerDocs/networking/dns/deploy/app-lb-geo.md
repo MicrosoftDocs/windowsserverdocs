@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: b6e679c6-4398-496c-88bc-115099f3a819
 ms.author: lizross
 author: eross-msft
+ms.date: 01/05/2021
 ---
 
 # Use DNS Policy for Application Load Balancing With Geo-Location Awareness
