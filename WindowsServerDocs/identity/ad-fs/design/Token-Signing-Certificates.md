@@ -49,7 +49,7 @@ There are two server farm options that you can consider when you obtain token\-s
 
     As shown in the following illustration, the private key from a single token\-signing certificate can be shared to all the federation servers in a farm. This option—compared to the following "unique token\-signing certificate" option—reduces costs if you plan to obtain a token\-signing certificate from a public CA.
 
-![token signing](media/adfs2_fedserver_certstory_3.gif)
+![Illustration that shows the private key from a single token\-signing certificate can be shared to all the federation servers in a farm.](media/adfs2_fedserver_certstory_3.gif)
 
 -   There is a unique token\-signing certificate for each federation server in a farm.
 

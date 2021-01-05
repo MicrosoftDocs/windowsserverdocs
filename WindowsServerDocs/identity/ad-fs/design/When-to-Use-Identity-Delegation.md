@@ -25,7 +25,7 @@ Because the original request was made to the Web server itself, which is likely 
 ## How does identity delegation work?
 Web applications in multitier application architectures often call Web services to access common data or functionality. It is important for these Web services to know the identity of the original user so that the service can make authorization decisions and facilitate auditing. In this case, the front\-end Web application represents the user to the Web service as a delegate. AD FS facilitates this scenario by allowing Active Directory accounts to act as a user to another relying party. An identity delegation scenario is shown in the following illustration.
 
-![identity delegation](media/adfs2_identitydelegationsteps.gif)
+![Illustration that shows an identity delegation scenario.](media/adfs2_identitydelegationsteps.gif)
 
 1.  Frank attempts to access part\-ordering history from a Web application in another organization. His client computer requests and receives a token from AD FS for the front\-end part\-ordering Web application.
 

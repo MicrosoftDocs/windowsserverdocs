@@ -47,10 +47,10 @@ To following architectural diagram shows the setup that was used to validate and
 1.  Using Server Manager install the Active Directory Federation Services Role on the Windows Server 2016
 
 2.  Using the AD FS Configuration wizard, join the new Windows Server 2016 server to the existing AD FS farm.  On the **Welcome** screen click **Next**.
- ![Join farm](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)
+ ![Screenshot that shows the Welcome screen in the AD FS Configuration wizard.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)
 3.  On the **Connect to Active Directory Domain Services** screen, s**pecify an administrator account** with permissions to perform the federation services configuration and click **Next**.
 4.  On the **Specify Farm** screen, enter the name of the SQL server and instance and then click **Next**.
-![Join farm](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
+![Screenshot that shows the Specify Farm screen in the AD FS Configuration wizard.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
 5.  On the **Specify SSL Certificate** screen, specify the certificate and click **Next**.
 ![Join farm](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure4.png)
 6.  On the **Specify Service Account** screen, specify the service account and click **Next**.
@@ -65,7 +65,7 @@ To following architectural diagram shows the setup that was used to validate and
 >You do not need to set the primary AD FS server using Set-AdfsSyncProperties -Role when using SQL as the database.  This is because all of the nodes are considered primary in this configuration.
 
 1.  On the Windows Server 2012 R2 AD FS server in Server Manager use **Remove Roles and Features** under **Manage**.
-![Remove server](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png)
+![Screenshot that highlights the Remove Roles and Features menu option.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png)
 2.  On the **Before you Begin** screen, click **Next**.
 3.  On the **Server Selection** Screen, click **Next**.
 4.  On the **Server Roles** screen, remove the check next to **Active Directory Federation Services** and click **Next**.
@@ -87,7 +87,7 @@ Prior to this step you need to ensure that forestprep and domainprep have been r
 ![Finish Update](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish1.png)
 3. Now, if you go to AD FS Management, you will see the new nodes that have been added for AD FS in Windows Server 2016
 4. Likewise, you can use the PowerShell cmdlt:  Get-AdfsFarmInformation to show you the current FBL.
-![Finish Update](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish2.png)
+![Screenshot that shows how to use the Get-AdfsFarmInformation cmdlet to show your current F B L.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish2.png)
 
 #### Upgrade the Configuration Version of existing WAP servers
 1. On each Web Application Proxy, re-configure the WAP by executing the following PowerShell command in an elevated window:
