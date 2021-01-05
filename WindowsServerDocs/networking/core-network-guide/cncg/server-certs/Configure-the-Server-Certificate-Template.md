@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 8ff610e2-43ca-407f-a828-06d9366e02f0
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Configure the Server Certificate Template
 

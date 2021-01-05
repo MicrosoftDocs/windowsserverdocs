@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: ff06ba23-9c0f-49ec-8f7b-611cf8d73a1b
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Deploy Password\-Based 802.1X Authenticated Wireless Access

@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.assetid: c3d33bed-83ef-4eb8-acf9-0719ecb4a931
 ms.author: lizross
 author: eross-msft
+ms.date: 01/05/2021
 ---
 # Create the BranchCache Hash Publication Group Policy Object
 

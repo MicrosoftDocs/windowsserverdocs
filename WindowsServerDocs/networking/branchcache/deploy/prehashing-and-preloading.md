@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.assetid: 5a09d9f1-1049-447f-a9bf-74adf779af27
 ms.author: lizross
 author: eross-msft
+ms.date: 01/05/2021
 ---
 # Prehashing and Preloading Content on Hosted Cache Servers (Optional)
 

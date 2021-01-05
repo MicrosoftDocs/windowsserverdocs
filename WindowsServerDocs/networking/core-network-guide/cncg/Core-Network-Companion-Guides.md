@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: d57af0bd-9301-4f62-9888-f528cd10451d
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Core network companion guidance

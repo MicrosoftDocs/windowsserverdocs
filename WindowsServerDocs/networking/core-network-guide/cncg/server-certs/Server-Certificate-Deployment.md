@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 1ae4384b-f4e4-41e8-bc5f-9ac41953bca4
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Server Certificate Deployment
 

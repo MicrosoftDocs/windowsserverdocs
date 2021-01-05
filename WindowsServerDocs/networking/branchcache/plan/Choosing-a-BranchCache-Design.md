@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.assetid: 86c1ccad-2aa4-40fe-84c1-f77c49eb1216
 ms.author: lizross
 author: eross-msft
+ms.date: 01/05/2021
 ---
 # Choosing a BranchCache Design
 
