@@ -7867,8 +7867,8 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs.md",
-      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs.md",
