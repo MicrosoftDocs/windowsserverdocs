@@ -2,7 +2,7 @@
 title: DHCP Logging Events for DNS Record Registrations
 description: This topic provides information about DHCP server logging events in Windows Server 2016.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: beb8c188-6fcf-4520-8825-d17f8ee9fb04
 ms.author: lizross
 author: eross-msft

@@ -2,7 +2,7 @@
 title: Use Windows PowerShell to Configure Non-Domain Member Client Computers
 description: Learn how to manually configure a BranchCache client computer for distributed cache mode or hosted cache mode.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 1b511e1a-686d-441f-a1c7-d4d029e1a061
 ms.author: lizross
 author: eross-msft

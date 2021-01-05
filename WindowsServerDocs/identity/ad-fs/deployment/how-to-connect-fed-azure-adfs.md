@@ -4,7 +4,7 @@ description: In this document you will learn how to deploy AD FS in Azure for hi
 author: billmath
 manager: mtillman
 ms.assetid: 692a188c-badc-44aa-ba86-71c0e8074510
-ms.topic: get-started-article
+ms.topic: how-to
 ms.date: 10/28/2018
 ms.author: billmath
 ---

@@ -2,7 +2,7 @@
 title: Configure an Existing File Server as a Content Server
 description: Learn how to install the BranchCache for Network Files role service of the File Services server role on a computer running Windows Server 2016.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: bdac7d2a-25b4-4f61-bed1-b290700c18f3
 ms.author: lizross
 author: eross-msft

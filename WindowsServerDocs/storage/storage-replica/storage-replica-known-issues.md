@@ -3,7 +3,7 @@ description: "Learn more about: Known issues with Storage Replica"
 title: Known issues with Storage Replica
 manager: siroy
 ms.author: nedpyle
-ms.topic: get-started-article
+ms.topic: how-to
 author: nedpyle
 ms.date: 06/25/2019
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55

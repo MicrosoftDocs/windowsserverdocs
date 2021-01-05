@@ -2,7 +2,7 @@
 description: "Learn more about: Gateway bandwidth allocation"
 title: Gateway bandwidth allocation
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/22/2018
