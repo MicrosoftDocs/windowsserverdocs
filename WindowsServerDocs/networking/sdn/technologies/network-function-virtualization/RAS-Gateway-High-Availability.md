@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.assetid: 34d826c9-65bc-401f-889d-cf84e12f0144
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 08/07/2020
 ---
 # RAS Gateway High Availability
 

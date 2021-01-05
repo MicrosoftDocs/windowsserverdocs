@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.assetid: 334b090d-bec4-4e67-8307-13831dbdd1d8
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 12/08/2020
 ---
 
 # Network Controller High Availability

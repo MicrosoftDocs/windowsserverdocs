@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.assetid: 709cb192-313a-47b5-954e-eb5f6fee51a7
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 08/07/2020
 ---
 # What's New in RAS Gateway
 

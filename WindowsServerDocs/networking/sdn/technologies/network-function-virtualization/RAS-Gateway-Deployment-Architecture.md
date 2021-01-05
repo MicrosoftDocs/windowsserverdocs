@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.assetid: d46e4e91-ece0-41da-a812-af8ab153edc4
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 08/07/2020
 ---
 # RAS Gateway Deployment Architecture
 

@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.assetid: ad848a5b-0811-4c67-afe5-6147489c0384
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 01/04/2021
 ---
 # Internal DNS Service (iDNS) for SDN
 

@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 0ff29ef3-c458-4432-9065-e50a7de5b4b9
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Dynamic Host Configuration Protocol (DHCP)
 
