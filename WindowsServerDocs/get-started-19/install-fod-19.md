@@ -140,8 +140,8 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 - As a general point of guidance, when installing apps on Server Core (with or without these optional packages) it is sometimes necessary to use silent install options and instructions.
 
-  - As an example, SQL Server Management Studio for SQL Server 2016 and SQL Server 2017 can be installed on Server Core and is fully functional when the App Compatibility FOD is present.  See, [Install SQL Server from the Command Prompt](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-2017).
-  - If SQL Server Management Studio is not desired, then it is unnecessary to install the Server Core App Compatibility FOD.  See, [Install SQL Server on Server Core](/sql/database-engine/install-windows/install-sql-server-on-server-core?view=sql-server-2017).
+  - As an example, SQL Server Management Studio for SQL Server 2016 and SQL Server 2017 can be installed on Server Core and is fully functional when the App Compatibility FOD is present.  See, [Install SQL Server from the Command Prompt](/sql/database-engine/install-windows/install-sql-server-from-the-command-prompt?view=sql-server-2017&preserve-view=true).
+  - If SQL Server Management Studio is not desired, then it is unnecessary to install the Server Core App Compatibility FOD.  See, [Install SQL Server on Server Core](/sql/database-engine/install-windows/install-sql-server-on-server-core?view=sql-server-2017&preserve-view=true).
 
 ## <a id=add-capabilities> Adding capabilities and optional packages to an offline WIM Server Core image
 

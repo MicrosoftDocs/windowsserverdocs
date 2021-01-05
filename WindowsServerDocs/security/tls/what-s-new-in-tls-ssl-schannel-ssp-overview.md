@@ -86,7 +86,7 @@ If the  **Trusted Root Certifictation Authorities** store that was used contains
 
 The Schannel SSP architecture in Windows Server 2012 will by default use the stores as described above to manage the Trusted Issuers list. You can still use the existing certificate management commandlets of the PowerShell provider, as well as command line tools such as Certutil to manage certificates.
 
-For information about managing certificates using the PowerShell provider, see [AD CS Administration Cmdlets in Windows](/powershell/module/adcsadministration/?view=winserver2012-ps).
+For information about managing certificates using the PowerShell provider, see [AD CS Administration Cmdlets in Windows](/powershell/module/adcsadministration/?view=winserver2012-ps&preserve-view=true).
 
 For information about managing certificates using the certificate utility, see [certutil.exe](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732443(v=ws.11)).
 

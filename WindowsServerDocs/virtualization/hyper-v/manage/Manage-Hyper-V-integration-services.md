@@ -120,7 +120,7 @@ In order for an integration service to be fully functional, its corresponding se
     Running  vmicvss            Hyper-V Volume Shadow Copy Requestor
     ```
 
-1. Run either [Start-Service](/powershell/module/microsoft.powershell.management/start-service?view=powershell-7) or [Stop-Service](/powershell/module/microsoft.powershell.management/stop-service?view=powershell-7). For example, to turn off Windows PowerShell Direct, run:
+1. Run either [Start-Service](/powershell/module/microsoft.powershell.management/start-service?view=powershell-7&preserve-view=true) or [Stop-Service](/powershell/module/microsoft.powershell.management/stop-service?view=powershell-7&preserve-view=true). For example, to turn off Windows PowerShell Direct, run:
 
     ```
     Stop-Service -Name vmicvmsession

@@ -152,7 +152,7 @@ You can use the following Windows PowerShell command to restart the Network Cont
 Restart-Service nchostagent -Force
 ```
 
-For more information, see [Restart-Service](/powershell/module/microsoft.powershell.management/restart-service?view=powershell-7).
+For more information, see [Restart-Service](/powershell/module/microsoft.powershell.management/restart-service?view=powershell-7&preserve-view=true).
 
 ### Enable firewall rules for the DNS proxy service
 You can use the following Windows PowerShell command to create a firewall rule that allows exceptions for the proxy to communicate with the VM and the iDNS server.

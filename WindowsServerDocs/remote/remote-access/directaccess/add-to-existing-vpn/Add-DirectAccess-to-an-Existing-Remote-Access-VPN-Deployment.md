@@ -1,6 +1,6 @@
 ---
 title: Add DirectAccess to an Existing Remote Access (VPN) Deployment
-description: This topic is part of the guide Add DirectAccess to an Existing Remote Access (VPN) Deployment for Windows Server 2016
+description: Learn how to add DirectAccess to an existing remote access (VPN) deployment for Windows Server 2016.
 manager: brianlic
 ms.topic: article
 ms.assetid: b5db01f7-1ae0-46f2-9be7-8d9e121446b2

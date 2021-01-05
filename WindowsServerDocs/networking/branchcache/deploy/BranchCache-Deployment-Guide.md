@@ -1,6 +1,6 @@
 ---
 title: BranchCache Deployment Guide
-description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+description: Learn how to deploy BranchCache in Windows Server 2016.
 manager: brianlic
 ms.topic: get-started-article
 ms.assetid: 3830b356-36d3-44f9-a1d7-990ff3e57403
