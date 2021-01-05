@@ -99,7 +99,7 @@ Prior to this step you need to ensure that forestprep and domainprep have been r
     ```powershell
     Set-WebApplicationProxyConfiguration -ConnectedServersName WAPServerName1, WAPServerName2
     ```
-3. Check the WAP configuration by running the Get-WebApplicationProxyConfiguration commmandlet. The ConnectedServersName will reflect the server run from the prior command.
+3. Check the WAP configuration by running the Get-WebApplicationProxyConfiguration commmand. The ConnectedServersName will reflect the server run from the prior command.
     ```powershell
     Get-WebApplicationProxyConfiguration
     ```
