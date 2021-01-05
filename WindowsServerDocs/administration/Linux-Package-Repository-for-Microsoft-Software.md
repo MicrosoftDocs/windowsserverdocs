@@ -25,7 +25,13 @@ Microsoft's Linux Software Repository is comprised of multiple sub-repositories:
 
 ## Configuring the repositories
 
-Repositories can be configured automatically by installing the Linux package that applies to your Linux distribution and version. The package will install the repository configuration along with the GPG public key used by tools such as apt/yum/zypper to validate the signed packages and/or repository metadata.
+Repositories can be configured automatically by installing the Linux package that applies to your Linux distribution and version. The package will install the repository configuration along with the GPG public key used by tools such as apt, yum or zypper to validate the signed packages and/or repository metadata.
+
+Note that not all supported distributions are listed here, see the currect supported package repositorties at [https://packages.microsoft.com/](https://packages.microsoft.com/) and the instructions for [manual configuration](#manual-configuration) below.
+
+### Debian
+
+ - Debian 10 (Buster)<p>`curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -`<p>`sudo apt-add-repository https://packages.microsoft.com/debian/10/prod`<p>`sudo apt-get update`
 
 ### Enterprise Linux (RHEL and variants)
 
