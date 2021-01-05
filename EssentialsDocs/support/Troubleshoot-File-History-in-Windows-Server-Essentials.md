@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot File History in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to troubleshoot issues that might occur while managing File History backups for a user or a computer that has been added to a server running Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ed062945-27e9-4572-b1bb-6c8cf1b9c2f4

@@ -1,6 +1,6 @@
 ---
 title: Windows Server 2016 should be configured with at least the minimum amount of memory
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when a virtual machine running Windows Server 2016 is configured with less than the minimum amount of RAM, which is 512 MB.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

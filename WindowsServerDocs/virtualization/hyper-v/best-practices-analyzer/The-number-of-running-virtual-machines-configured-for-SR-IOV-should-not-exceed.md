@@ -1,6 +1,6 @@
 ---
 title: The number of running virtual machines configured for SR-IOV should not exceed the number of virtual functions available to the virtual machines
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when there are not enough virtual functions available for the number of running virtual machines configured for single-root I/O virtualization (SR-IOV).
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

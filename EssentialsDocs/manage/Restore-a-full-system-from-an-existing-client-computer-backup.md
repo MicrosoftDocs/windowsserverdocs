@@ -1,6 +1,6 @@
 ---
 title: "Restore a full system from an existing client computer backup"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to restore a full system from an existing client computer backup.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47e498a6-1b71-47de-88f6-8c13c221d108

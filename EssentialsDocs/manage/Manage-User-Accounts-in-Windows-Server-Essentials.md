@@ -1,6 +1,6 @@
 ---
 title: "Manage User Accounts in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the Users page of the Windows Server Essentials Dashboard and how it centralizes information and tasks that help you manage the user accounts.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 0d115697-532b-48c2-a659-9f889e235326

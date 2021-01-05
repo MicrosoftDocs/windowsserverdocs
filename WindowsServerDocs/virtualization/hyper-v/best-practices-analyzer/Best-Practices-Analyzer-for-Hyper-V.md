@@ -1,6 +1,6 @@
 ---
 title: Best Practices Analyzer for Hyper-V
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn how the Best Practices Analyzer scans your computer using rules based on these best practices and reports the results.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

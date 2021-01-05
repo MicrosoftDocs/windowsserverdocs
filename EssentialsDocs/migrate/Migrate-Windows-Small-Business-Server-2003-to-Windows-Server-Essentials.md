@@ -1,6 +1,6 @@
 ---
 title: "Migrate Windows Small Business Server 2003 to Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to migrate an existing Windows SBS 2003 domain to Windows Server 2012 Essentials on new hardware, and then migrate the settings and data.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 119a7fbc-2c76-4aa3-8a7f-c7073d461b5b

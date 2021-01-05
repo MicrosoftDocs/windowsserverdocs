@@ -1,6 +1,6 @@
 ---
 title: "Move Windows SBS 2008 settings and data to the Destination Server for Windows Server Essentials migration"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to move Windows SBS 2008 settings and data to the Destination Server for Windows Server Essentials migration.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 4950469d-d800-430d-8d10-53bafc4a9932

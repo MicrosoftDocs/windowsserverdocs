@@ -1,6 +1,6 @@
 ---
 title: At least one network for live migration traffic should have a link speed of at least 1 Gbps
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when at least one of the networks for live migration traffic have a link speed of at least 1 Gbps.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

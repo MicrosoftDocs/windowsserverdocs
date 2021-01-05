@@ -13,7 +13,7 @@ ms.date: 5/23/2018
 
 ## How can you use System Insights with Azure Monitor or System Center Operations Manager?
 
-[Azure Monitor](https://azure.microsoft.com/services/monitor/) and [System Center Operations Manager](/system-center/scom/welcome?view=sc-om-1807) provide operational information across your deployments to help you manage your infrastructure. System Insights, in contrast, is a Windows Server feature that introduces local predictive analytics capabilities. Together, System Insights and Azure Monitor or SCOM can help surface the predictions across a population of devices:
+[Azure Monitor](https://azure.microsoft.com/services/monitor/) and [System Center Operations Manager](/system-center/scom/welcome?view=sc-om-1807&preserve-view=true) provide operational information across your deployments to help you manage your infrastructure. System Insights, in contrast, is a Windows Server feature that introduces local predictive analytics capabilities. Together, System Insights and Azure Monitor or SCOM can help surface the predictions across a population of devices:
 
  Azure Monitor or SCOM can key off the events created by System Insights, as System Insights outputs the result of each prediction to the event log. They can surface these machine-specific predictions across a fleet of Windows Servers, enabling you to have a unified view of these predictions across a group of server instances.
 

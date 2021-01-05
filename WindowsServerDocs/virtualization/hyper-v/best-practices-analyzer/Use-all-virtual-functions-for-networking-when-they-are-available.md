@@ -1,6 +1,6 @@
 ---
 title: Use all virtual functions for networking when they are available
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when some hardware acceleration capabilities are not being utilized.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
