@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 68a94616-3c29-45bd-bd33-e4c578f119e1
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Unregister an NPS from an Active Directory Domain

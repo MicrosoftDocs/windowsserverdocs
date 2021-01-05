@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 2de954fd-a7d8-4cc6-85b1-b0c3c06f788f
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Register an NPS in an Active Directory Domain

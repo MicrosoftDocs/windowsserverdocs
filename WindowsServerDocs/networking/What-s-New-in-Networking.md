@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.assetid: 08fb7563-d319-48a9-b181-ca0ca3032c18
 author: dcuomo
 ms.author: dacuo
+ms.date: 08/07/2020
 ---
 # What's new in networking
 

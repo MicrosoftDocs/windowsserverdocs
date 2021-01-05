@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 4ec45e0c-6b37-4dfb-8158-5f40677b0157
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Connection Request Policies

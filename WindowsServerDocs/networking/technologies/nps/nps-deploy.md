@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 6cfb50e0-7088-4295-97c5-14ff8776cbf8
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Deploy Network Policy Server

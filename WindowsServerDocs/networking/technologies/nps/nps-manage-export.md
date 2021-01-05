@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: d268dc57-78f8-47ba-9a7a-a607e8b9225c
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Export an NPS Configuration for Import on Another Server

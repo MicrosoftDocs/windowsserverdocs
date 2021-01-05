@@ -6,6 +6,7 @@ ms.assetid: 74c97a14-b957-4568-b48e-8963a674fdb3
 manager: brianlic
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # QoS Policy Frequently Asked Questions
