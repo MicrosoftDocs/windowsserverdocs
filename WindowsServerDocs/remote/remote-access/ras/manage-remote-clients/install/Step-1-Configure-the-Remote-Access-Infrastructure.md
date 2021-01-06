@@ -430,7 +430,7 @@ Whether you use a private certificate or a self-signed certificate, they require
 
     This step is not required if the network location server website is hosted on the Remote Access server.
 
-3.  Set up a CRL site that hass high availability on the internal network.
+3.  Set up a CRL site that has high availability on the internal network.
 
     CRL distribution points can be accessed through:
 
