@@ -6,6 +6,7 @@ ms.assetid: 693acb5c-dffc-4484-8286-163bb67724c9
 ms.author: lizross
 author: eross-msft
 manager: mtillman
+ms.date: 08/07/2020
 ---
 
 # STEP 8: Configure INET1

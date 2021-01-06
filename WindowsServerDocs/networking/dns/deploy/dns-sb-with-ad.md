@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: f9533204-ad7e-4e49-81c1-559324a16aeb
 ms.author: lizross
 author: eross-msft
+ms.date: 01/05/2021
 ---
 
 # Use DNS Policy for Split-Brain DNS in Active Directory

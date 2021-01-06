@@ -7,6 +7,7 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 02/23/2018
+ms.topic: conceptual
 ---
 # Roles, Role Services, and Features not in Windows Server - Server Core
 

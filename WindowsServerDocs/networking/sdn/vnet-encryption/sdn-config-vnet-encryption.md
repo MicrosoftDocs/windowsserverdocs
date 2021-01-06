@@ -2,7 +2,7 @@
 title: Configure Encryption for a Virtual Network
 description: Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.'
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
 ms.author: anpaul
 author: AnirbanPaul

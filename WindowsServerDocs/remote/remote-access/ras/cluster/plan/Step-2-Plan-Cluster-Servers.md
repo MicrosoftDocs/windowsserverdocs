@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 673c5bfb-b590-4932-8e54-ca0a466d90cc
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 2 Plan Cluster Servers
 

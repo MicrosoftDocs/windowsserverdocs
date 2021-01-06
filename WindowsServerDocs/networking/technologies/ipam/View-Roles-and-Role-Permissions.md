@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: da8dce90-b54c-4ded-a48a-0cda5ccf1d8a
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # View Roles and Role Permissions
 

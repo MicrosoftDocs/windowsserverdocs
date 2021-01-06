@@ -5,6 +5,7 @@ ms.reviewer: cosmosdarwin
 author: iangpgh
 ms.author: jgerend
 manager: daveba
+ms.topic: article
 ms.date: 06/20/2019
 ---
 

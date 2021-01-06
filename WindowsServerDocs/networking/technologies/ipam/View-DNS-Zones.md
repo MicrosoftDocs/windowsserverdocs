@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 2cfe4e40-ec6d-4541-baa9-d772409fe27c
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # View DNS Zones
 

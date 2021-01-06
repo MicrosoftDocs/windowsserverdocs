@@ -7,6 +7,7 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 05/07/2018
+ms.topic: conceptual
 ---
 # Roles, Role Services, and Features not in Server Core containers - Windows Server, version 1803
 

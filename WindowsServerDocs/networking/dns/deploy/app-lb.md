@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: lizross
 author: eross-msft
+ms.date: 01/05/2021
 ---
 # Use DNS Policy for Application Load Balancing
 

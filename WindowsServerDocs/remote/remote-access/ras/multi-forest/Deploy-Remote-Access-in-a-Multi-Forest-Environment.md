@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: c44fecc9-fe39-40bd-b6da-d8f8afe1a01d
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Deploy Remote Access in a Multi-Forest Environment
 

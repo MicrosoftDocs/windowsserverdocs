@@ -7,6 +7,7 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.localizationpriority: medium
+ms.date: 09/09/2020
 ---
 # Windows Server 2019 Activation
 

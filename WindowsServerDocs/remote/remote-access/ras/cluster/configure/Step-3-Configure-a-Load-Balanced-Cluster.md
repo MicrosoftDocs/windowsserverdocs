@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: f000066e-7cf8-4085-82a3-4f4fe1cb3c5c
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 3 Configure a Load-Balanced Cluster
 

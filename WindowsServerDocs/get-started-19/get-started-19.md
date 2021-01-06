@@ -6,6 +6,7 @@ ms.topic: landing-page
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
+ms.date: 08/07/2020
 ---
 # Get started with Windows Server 2019
 

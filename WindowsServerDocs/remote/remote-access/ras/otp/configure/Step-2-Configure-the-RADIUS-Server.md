@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 0326818f-9144-496c-b946-f82be4eefbd3
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 2 Configure the RADIUS Server
 

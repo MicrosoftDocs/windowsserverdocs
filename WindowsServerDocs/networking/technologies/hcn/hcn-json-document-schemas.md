@@ -4,6 +4,7 @@ description: Information about HCN JSON document schemas.
 ms.author: daschott
 author: daschott
 ms.date: 11/05/2018
+ms.topic: article
 ---
 
 # HCN JSON document schemas

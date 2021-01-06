@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: f9086c4f-f950-44a9-93f1-7d03aecdaa60
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Step 1 Implement a Single Server Remote Access Deployment

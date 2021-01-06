@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: b1b2fe70-7956-46e8-a3e3-43848868df09
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Deploy Remote Access with OTP Authentication
 

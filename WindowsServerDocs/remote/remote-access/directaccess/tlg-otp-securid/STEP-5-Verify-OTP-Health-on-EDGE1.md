@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 013df067-e2a0-4cd5-a08b-29238663ebf8
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # STEP 5 Verify OTP Health on EDGE1
 

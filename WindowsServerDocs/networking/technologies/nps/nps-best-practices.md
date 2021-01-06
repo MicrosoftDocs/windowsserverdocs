@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 90e544bd-e826-4093-8c3b-6a6fc2dfd1d6
 ms.author: lizross
 author: eross-msft
+ms.date: 12/08/2020
 ---
 
 # Network Policy Server Best Practices

@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 92519b49-0df4-43c1-9717-f13570644212
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Use Remote Access Monitoring and Accounting
 

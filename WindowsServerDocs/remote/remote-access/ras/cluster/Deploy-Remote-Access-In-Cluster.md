@@ -5,6 +5,7 @@ manager: dougkim
 ms.topic: article
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Deploy Remote Access in a Cluster
 

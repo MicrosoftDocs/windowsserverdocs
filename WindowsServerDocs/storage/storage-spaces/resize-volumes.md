@@ -6,6 +6,7 @@ author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.date: 03/10/2020
+ms.topic: article
 ---
 
 # Extending volumes in Storage Spaces Direct

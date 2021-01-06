@@ -6,6 +6,7 @@ author: JasonGerend
 ms.author: jgerend
 manager: daveba
 ms.date: 06/20/2019
+ms.topic: reference
 ---
 
 # cleanmgr

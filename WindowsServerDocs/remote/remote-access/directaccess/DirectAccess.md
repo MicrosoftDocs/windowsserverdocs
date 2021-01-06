@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 6b71d18e-1939-4fc0-bb42-29e0e5ffc8da
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # DirectAccess
 

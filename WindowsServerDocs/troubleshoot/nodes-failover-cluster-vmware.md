@@ -4,6 +4,7 @@ description: This article addresses the issue of finding nodes removed from acti
 ms.date: 05/28/2020
 author: Deland-Han
 ms.author: delhan
+ms.topic: troubleshooting
 ---
 # Nodes being removed from Failover Cluster membership on VMWare ESX
 

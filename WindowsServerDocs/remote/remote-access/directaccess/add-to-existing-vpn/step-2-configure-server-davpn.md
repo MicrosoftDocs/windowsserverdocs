@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: fe221fc9-c7d9-4508-b8a1-000d2515283c
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 #  Step 2 Configure the DirectAccess-VPN Server
 

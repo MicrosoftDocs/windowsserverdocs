@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 4846b548-8fbc-4a7f-af13-09e834acdec0
 ms.author: lizross
 author: eross-msft
+ms.date: 01/05/2021
 ---
 # DNS Responses Based on Time of Day with an Azure Cloud App Server
 

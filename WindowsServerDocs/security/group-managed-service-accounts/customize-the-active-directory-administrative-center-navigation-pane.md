@@ -6,6 +6,7 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
+ms.topic: article
 ---
 # Customize the Active Directory Administrative Center Navigation Pane
 

@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 1 Configure Advanced DirectAccess Infrastructure
 

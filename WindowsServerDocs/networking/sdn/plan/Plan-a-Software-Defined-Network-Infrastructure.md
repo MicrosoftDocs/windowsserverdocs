@@ -2,7 +2,7 @@
 title: Plan a Software Defined Network Infrastructure
 description: This topic provides information on how to plan your Software Defined Network (SDN) infrastructure deployment.
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: ea7e53c8-11ec-410b-b287-897c7aaafb13
 ms.author: anpaul
 author: AnirbanPaul

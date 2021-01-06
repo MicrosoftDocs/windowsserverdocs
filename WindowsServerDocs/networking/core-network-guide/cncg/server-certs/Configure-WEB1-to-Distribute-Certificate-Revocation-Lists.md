@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: fa4a8c41-8c2a-425c-8511-736fe5d196ac
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Configure WEB1 to Distribute Certificate Revocation Lists (CRLs)
 

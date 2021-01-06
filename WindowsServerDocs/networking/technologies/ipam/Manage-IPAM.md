@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: c68905ef-d54f-4fc8-80ac-1006125db64f
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Manage IPAM
 

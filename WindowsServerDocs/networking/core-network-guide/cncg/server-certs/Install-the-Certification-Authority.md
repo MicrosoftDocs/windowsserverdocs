@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Install the Certification Authority
 

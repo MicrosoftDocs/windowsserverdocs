@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 08/07/2020
 ---
 # Hyper-V Network Virtualization Technical Details in Windows Server 2016
 

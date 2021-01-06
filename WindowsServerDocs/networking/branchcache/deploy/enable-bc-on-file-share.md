@@ -2,10 +2,11 @@
 title: Enable BranchCache on a File Share (Optional)
 description: Learn how to enable BranchCache on a file share.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 9c465a9e-c504-44ec-9ebc-4e06ba54db30
 ms.author: lizross
 author: eross-msft
+ms.date: 01/05/2021
 ---
 # Enable BranchCache on a File Share (Optional)
 

@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: f22dcf10-b453-4664-a9ef-e40e95c72f63
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 4 Verify the Cluster
 

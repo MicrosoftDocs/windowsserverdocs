@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: c9cecb94-3cd5-4da7-9a3e-084148b8226b
 ms.author: lizross
 author: eross-msft
+ms.date: 12/18/2020
 ---
 # What's New in DNS Server in Windows Server
 

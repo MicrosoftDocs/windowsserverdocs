@@ -4,6 +4,7 @@ description: Get links to troubleshooting articles for Windows Server issues
 ms.date: 1/24/2020
 author: kaushika-msft
 ms.author: kaushika
+ms.topic: troubleshooting
 ---
 # Troubleshooting Windows Server components
 

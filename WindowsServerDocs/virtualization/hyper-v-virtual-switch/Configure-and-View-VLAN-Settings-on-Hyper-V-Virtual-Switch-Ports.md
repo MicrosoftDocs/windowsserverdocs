@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 69e0e28a-98ae-4ade-bd27-ce2ad7eb310f
 ms.author: lizross
 author: eross-msft
+ms.date: 12/08/2020
 ---
 # Configure and View VLAN Settings on Hyper-V Virtual Switch Ports
 

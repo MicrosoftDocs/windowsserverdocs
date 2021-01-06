@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 70569958-d7a7-474e-a817-6b7b5134784a
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Configure NPS UDP Port Information

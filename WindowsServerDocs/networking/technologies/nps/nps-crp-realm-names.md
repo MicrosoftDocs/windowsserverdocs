@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Realm Names

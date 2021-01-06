@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 6a211dde-80eb-4888-b5bb-4e28fe8dc7df
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Set Access Scope for a DNS Zone
 

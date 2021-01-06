@@ -7,6 +7,7 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 12/18/2018
+ms.topic: how-to
 ---
 # Administer a Server Core server
 

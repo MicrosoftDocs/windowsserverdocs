@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Wireless Access Deployment
 
