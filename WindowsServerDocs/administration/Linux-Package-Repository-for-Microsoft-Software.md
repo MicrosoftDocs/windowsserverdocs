@@ -31,7 +31,7 @@ Note that not all supported distributions are listed here. See the current suppo
 
 ### Debian
 
- - Debian 10 (Buster)<p>`curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -`<p>`sudo apt-add-repository https://packages.microsoft.com/debian/10/prod`<p>`sudo apt-get update`
+- Debian 10 (Buster)<p>`curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -`<p>`sudo apt-add-repository https://packages.microsoft.com/debian/10/prod`<p>`sudo apt-get update`
 
 ### Enterprise Linux (RHEL and variants)
 
