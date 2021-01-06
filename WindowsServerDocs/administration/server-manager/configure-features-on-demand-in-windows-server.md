@@ -1,6 +1,6 @@
 ---
 title: Configure Features on Demand in Windows Server
-description: Server Manager
+description: Learn how to remove feature files in a Features on Demand configuration by using the Uninstall-WindowsFeature cmdlet.
 ms.topic: article
 ms.assetid: e663bbea-d025-41fa-b16c-c2bff00a88e8
 ms.author: lizross

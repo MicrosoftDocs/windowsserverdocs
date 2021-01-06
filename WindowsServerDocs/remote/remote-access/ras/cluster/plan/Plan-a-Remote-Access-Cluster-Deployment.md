@@ -1,6 +1,6 @@
 ---
 title: Plan a Remote Access Cluster Deployment
-description: This topic is part of the guide Deploy Remote Access in a Cluster in Windows Server 2016.
+description: Learn about the planning steps required in order to deploy a cluster of Windows Server 2016 or Windows Server 2012 Remote Access servers.
 manager: brianlic
 ms.topic: article
 ms.assetid: 88ffd598-2fde-402c-bd12-be790f84dc96
