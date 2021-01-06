@@ -45,7 +45,7 @@ You must uninstall Exchange Server from the Source Server before you demote it. 
 5. On the Component Selection page, expand **Exchange Server**, and then choose **Remove**.
 
    > [!NOTE]
-   > Exchange Server will check to make sure that there are no mailboxes or public folders on the server. If any data remains, an error message appears when you click **Remove**. To avoid this issue, make sure that you have completed all of the procedures in the topic [Move SBS settings and data to the Destination Server](./move-windows-sbs--to-the-destination-server-for-migration.md).
+   > Exchange Server will check to make sure that there are no mailboxes or public folders on the server. If any data remains, an error message appears when you click **Remove**. To avoid this issue, make sure that you have completed all of the procedures in the topic [Move SBS settings and data to the Destination Server](Move-Windows-SBS-2008-to-the-Destination-Server-for-migration.md).
 
 6. Click **Next** and follow the on-screen instructions.
 

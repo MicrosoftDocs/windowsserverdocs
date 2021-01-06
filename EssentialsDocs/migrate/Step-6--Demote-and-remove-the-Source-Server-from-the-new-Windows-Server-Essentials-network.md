@@ -23,7 +23,7 @@ After you finish installing  Windows Server Essentials and you complete the migr
 
 4. [Remove and re-purpose the Source Server](#remove-and-re-purpose-the-source-server).
 
-## Remove Active Directory Certificate Services (AD CS)
+## Remove Active Directory Certificate Services
 
 The procedure is slightly different if you have multiple Active Directory Certificate Services (AD CS) role services installed on a single server. You can use the following procedure to uninstall an AD CS role service and to retain other AD CS role services.
 
