@@ -43,7 +43,7 @@ Before you resize a volume, make sure you have enough capacity in the storage po
 
 In Storage Spaces Direct, every volume is comprised of several stacked objects: the cluster shared volume (CSV), which is a volume; the partition; the disk, which is a virtual disk; and one or more storage tiers (if applicable). To resize a volume, you will need to resize several of these objects.
 
-![volumes-in-smapi](media/resize-volumes/volumes-in-smapi.png)
+![Stacked objects that might need to be resized](media/resize-volumes/volumes-in-smapi.png)
 
 To familiarize yourself with them, try running **Get-** with the corresponding noun in PowerShell.
 
@@ -58,7 +58,7 @@ To follow associations between objects in the stack, pipe one **Get-** cmdlet in
 For example, here's how to get from a virtual disk up to its volume:
 
 ```PowerShell
-Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume
+Get-VirtualDisk [friendly_name] | Get-Disk | Get-Partition | Get-Volume
 ```
 
 ### Step 1 – Resize the virtual disk
@@ -68,7 +68,7 @@ The virtual disk may use storage tiers, or not, depending on how it was created.
 To check, run the following cmdlet:
 
 ```PowerShell
-Get-VirtualDisk <FriendlyName> | Get-StorageTier
+Get-VirtualDisk [friendly_name] | Get-StorageTier
 ```
 
 If the cmdlet returns nothing, the virtual disk doesn't use storage tiers.
@@ -80,12 +80,12 @@ If the virtual disk has no storage tiers, you can resize it directly using the *
 Provide the new size in the **-Size** parameter.
 
 ```PowerShell
-Get-VirtualDisk <FriendlyName> | Resize-VirtualDisk -Size <Size>
+Get-VirtualDisk [friendly_name] | Resize-VirtualDisk -Size [size]
 ```
 
 When you resize the **VirtualDisk**, the **Disk** follows automatically and is resized too.
 
-![Resize-VirtualDisk](media/resize-volumes/Resize-VirtualDisk.gif)
+![Animation showing the automatic Disk resizing](media/resize-volumes/Resize-VirtualDisk.gif)
 
 #### With storage tiers
 
@@ -94,13 +94,13 @@ If the virtual disk uses storage tiers, you can resize each tier separately usin
 Get the names of the storage tiers by following the associations from the virtual disk.
 
 ```PowerShell
-Get-VirtualDisk <FriendlyName> | Get-StorageTier | Select FriendlyName
+Get-VirtualDisk [friendly_name] | Get-StorageTier | Select FriendlyName
 ```
 
 Then, for each tier, provide the new size in the **-Size** parameter.
 
 ```PowerShell
-Get-StorageTier <FriendlyName> | Resize-StorageTier -Size <Size>
+Get-StorageTier [friendly_name] | Resize-StorageTier -Size [size]
 ```
 
 > [!TIP]
@@ -108,7 +108,7 @@ Get-StorageTier <FriendlyName> | Resize-StorageTier -Size <Size>
 
 When you resize the **StorageTier**(s), the **VirtualDisk** and **Disk** follow automatically and are resized too.
 
-![Resize-StorageTier](media/resize-volumes/Resize-StorageTier.gif)
+![Animation showing the automatic VirtualDisk and Disk resizing](media/resize-volumes/Resize-StorageTier.gif)
 
 ### Step 2 – Resize the partition
 
@@ -118,7 +118,7 @@ Provide the new size in the **-Size** parameter. We recommend using the maximum 
 
 ```PowerShell
 # Choose virtual disk
-$VirtualDisk = Get-VirtualDisk <FriendlyName>
+$VirtualDisk = Get-VirtualDisk [friendly_name]
 
 # Get its partition
 $Partition = $VirtualDisk | Get-Disk | Get-Partition | Where PartitionNumber -Eq 2
@@ -129,9 +129,7 @@ $Partition | Resize-Partition -Size ($Partition | Get-PartitionSupportedSize).Si
 
 When you resize the **Partition**, the **Volume** and **ClusterSharedVolume** follow automatically and are resized too.
 
-![Resize-Partition](media/resize-volumes/Resize-Partition.gif)
-
-That's it!
+![Animation showing the automatic Volume and ClusterSharedVolume resizing](media/resize-volumes/Resize-Partition.gif)
 
 > [!TIP]
 > You can verify the volume has the new size by running **Get-Volume**.
