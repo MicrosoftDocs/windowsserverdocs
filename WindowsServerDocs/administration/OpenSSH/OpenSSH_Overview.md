@@ -4,7 +4,7 @@ description: Overview about the OpenSSH tools used by administrators of Linux an
 ms.date: 01/07/2019
 ms.author: damaerte
 author: maertendmsft
-ms:topic: overview
+ms.topic: overview
 ---
 
 # OpenSSH in Windows
