@@ -28,7 +28,7 @@ Before you dive into in-depth troubleshooting, there are a few things that you s
 |[SQL Connectivity](ad-fs-tshoot-sql.md)|Information on testing the connectivity between your AD FS servers and the backend SQL databases|
 |[Claims Issuance](ad-fs-tshoot-claims-issuance.md)|Information on determining whether AD FS is issuing claims correctly.|
 |[Loop Detection](ad-fs-tshoot-loop.md)|Information on determining and preventing users from being bounced back and forth between the Idp and an RP.|
-|[Certificates](ad-fs-tshoot-certs.md)|Typcial certificate issues that can arise|
+|[Certificates](ad-fs-tshoot-certs.md)|Typical certificate issues that can arise|
 |[Fiddler](ad-fs-tshoot-fiddler.md)|Information on how to install and using Fiddler|
 |[WS-Federation with Fiddler](ad-fs-tshoot-fiddler-ws-fed.md)|Detailed Fiddler trace of a WS-Federation interaction|
 |[Claim Rules](ad-fs-tshoot-claims-rules.md)|Information on troubleshooting claim rules and their syntax|
