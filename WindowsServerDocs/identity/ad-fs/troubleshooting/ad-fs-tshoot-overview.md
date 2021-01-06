@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting AD FS
-description:  This document describes how to troubleshoot various aspects of AD FS
+description: Learn how to troubleshoot various aspects of AD FS.
 author: billmath
 ms.author: billmath
 manager: mtillman

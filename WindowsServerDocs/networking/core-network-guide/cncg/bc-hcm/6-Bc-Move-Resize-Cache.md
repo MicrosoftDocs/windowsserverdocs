@@ -1,6 +1,6 @@
 ---
 title: Move and Resize the Hosted Cache (Optional)
-description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
+description: Learn how to move the hosted cache to the drive and folder that you prefer, and to specify the amount of disk space that the hosted cache server can use for the hosted cache.
 manager: brianlic
 ms.topic: article
 ms.assetid: bb0eb349-914d-4596-9140-d3aae7597d55

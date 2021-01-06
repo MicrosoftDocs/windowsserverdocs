@@ -1,6 +1,6 @@
 ---
 title: AD FS Troubleshooting - SQL Connectivity
-description:  This document describes how to troubleshoot various aspects of AD FS
+description:  Learn how to troubleshoot various aspects of AD FS as it pertains to SQL connectivity.
 author: billmath
 ms.author: billmath
 manager: mtillman
