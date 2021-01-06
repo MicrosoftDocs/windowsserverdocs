@@ -35,7 +35,7 @@ For more information, check out [Understanding the cache in Storage Spaces Direc
 
 ## Option 1 – Maximizing performance
 
-To achieve predictable and uniform sub-millisecond latency across random reads and writes to any data, or to achieve extremely high IOPS (we've done [over 6 million](https://www.youtube.com/watch?v=0LviCzsudGY&t=28m)!) or IO throughput (we've done [over 1 Tb/s](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=16m50s)!), you should go "all-flash".
+To achieve predictable and uniform submillisecond latency across random reads and writes to any data, or to achieve high IOPS (we've done [over 6 million](https://www.youtube.com/watch?v=0LviCzsudGY&t=28m)!) or IO throughput (we've done [over 1 Tb/s](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=16m50s)!), you should go "all-flash".
 
 There are currently three ways to do so:
 
@@ -52,7 +52,7 @@ There are currently three ways to do so:
 
 ## Option 2 – Balancing performance and capacity
 
-For environments with a variety of applications and workloads, some with stringent performance requirements and others requiring considerable storage capacity, you should go "hybrid" with either NVMe or SSDs caching for larger HDDs.
+For environments with various applications and workloads, some with stringent performance requirements and others requiring considerable storage capacity, you should go "hybrid" with either NVMe or SSDs caching for larger HDDs.
 
 ![Hybrid deployment options for balancing performance and capacity](media/choosing-drives-and-resiliency-types/Hybrid-Deployment-Possibilities.png)
 
@@ -60,16 +60,16 @@ For environments with a variety of applications and workloads, some with stringe
 
 2. **SSD + HDD**. Similar to the above, the SSDs will accelerate reads and writes by caching both. This provides SSD-like write characteristics, and SSD-like read characteristics for frequently or recently read data.
 
-	There is one additional, rather exotic option: to use drives of *all three* types.
+	There is one more, rather exotic option: to use drives of *all three* types.
 
-3. **NVMe + SSD + HDD.** With drives of all three types, the NVMe drives cache for both the SSDs and HDDs. The appeal is that you can create volumes on the SSDs, and volumes on the HDDs, side-by-side in the same cluster, all accelerated by NVMe. The former are exactly as in an "all-flash" deployment, and the latter are exactly as in the "hybrid" deployments described above. This is conceptually like having two pools, with largely independent capacity management, failure and repair cycles, and so on.
+3. **NVMe + SSD + HDD.** With drives of all three types, the NVMe drives cache for both the SSDs and HDDs. The appeal is that you can create volumes on the SSDs, and volumes on the HDDs, side by side in the same cluster, all accelerated by NVMe. The former are exactly as in an "all-flash" deployment, and the latter are exactly as in the "hybrid" deployments described above. This is conceptually like having two pools, with largely independent capacity management, failure and repair cycles, and so on.
 
 	> [!IMPORTANT]
 	> We recommend using the SSD tier to place your most performance-sensitive workloads on all-flash.
 
 ## Option 3 – Maximizing capacity
 
-For workloads which require vast capacity and write infrequently, such as archival, backup targets, data warehouses or "cold" storage, you should combine a few SSDs for caching with many larger HDDs for capacity.
+For workloads that require vast capacity and write infrequently, such as archival, backup targets, data warehouses or "cold" storage, you should combine a few SSDs for caching with many larger HDDs for capacity.
 
 ![Deployment options for maximizing capacity](media/choosing-drives-and-resiliency-types/maximizing-capacity.png)
 
@@ -82,9 +82,9 @@ For workloads which require vast capacity and write infrequently, such as archiv
 
 ### Cache
 
-Every server must have at least two cache drives (the minimum required for redundancy). We recommend making the number of capacity drives a multiple of the number of cache drives. For example, if you have 4 cache drives, you will experience more consistent performance with 8 capacity drives (1:2 ratio) than with 7 or 9.
+Every server must have at least two cache drives (the minimum required for redundancy). We recommend making the number of capacity drives a multiple of the number of cache drives. For example, if you have four cache drives, you will experience more consistent performance with eight capacity drives (1:2 ratio) than with 7 or 9.
 
-The cache should be sized to accommodate the working set of your applications and workloads, i.e. all the data they are actively reading and writing at any given time. There is no cache size requirement beyond that. For deployments with HDDs, a fair starting place is 10% of capacity – for example, if each server has 4 x 4 TB HDD = 16 TB of capacity, then 2 x 800 GB SSD = 1.6 TB of cache per server. For all-flash deployments, especially with very [high endurance](https://techcommunity.microsoft.com/t5/storage-at-microsoft/understanding-ssd-endurance-drive-writes-per-day-dwpd-terabytes/ba-p/426024) SSDs, it may be fair to start closer to 5% of capacity – for example, if each server has 24 x 1.2 TB SSD = 28.8 TB of capacity, then 2 x 750 GB NVMe = 1.5 TB of cache per server. You can always add or remove cache drives later to adjust.
+The cache should be sized to accommodate the working set of your applications and workloads, for example all the data they are actively reading and writing at any given time. There is no cache size requirement beyond that. For deployments with HDDs, a fair starting place is 10% of capacity – for example, if each server has 4 x 4 TB HDD = 16 TB of capacity, then 2 x 800 GB SSD = 1.6 TB of cache per server. For all-flash deployments, especially with high endurance](https://techcommunity.microsoft.com/t5/storage-at-microsoft/understanding-ssd-endurance-drive-writes-per-day-dwpd-terabytes/ba-p/426024) SSDs, it may be fair to start closer to 5% of capacity – for example, if each server has 24 x 1.2 TB SSD = 28.8 TB of capacity, then 2 x 750 GB NVMe = 1.5 TB of cache per server. You can always add or remove cache drives later to adjust.
 
 ### General
 
