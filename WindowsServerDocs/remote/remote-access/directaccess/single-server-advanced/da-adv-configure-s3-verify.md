@@ -1,6 +1,6 @@
 ---
 title: Step 3 Verify the Advanced DirectAccess Deployment
-description: This topic is part of the guide Deploy a Single DirectAccess Server with Advanced Settings for Windows Server 2016
+description: Learn how to verify that you have correctly configured your advanced DirectAccess deployment.
 manager: brianlic
 ms.topic: article
 ms.assetid: ae8bbff0-c981-4bc6-8df1-861621d0627f

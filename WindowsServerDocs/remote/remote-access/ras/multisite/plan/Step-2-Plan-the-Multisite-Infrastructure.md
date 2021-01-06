@@ -1,6 +1,6 @@
 ---
 title: Step 2 Plan the Multisite Infrastructure
-description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+description: Learn how to complete the multisite infrastructure planning; including, Active Directory, security groups, and Group Policy Objects.
 manager: brianlic
 ms.topic: article
 ms.assetid: 64c10107-cb03-41f3-92c6-ac249966f574
