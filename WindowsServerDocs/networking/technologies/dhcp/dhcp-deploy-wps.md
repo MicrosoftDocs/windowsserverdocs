@@ -6,6 +6,7 @@ ms.assetid: 7110ad21-a33e-48d5-bb3c-129982913bc8
 manager: brianlic
 ms.author: lizross
 author: eross-msft
+ms.date: 01/04/2021
 ---
 
 # Deploy DHCP Using Windows PowerShell

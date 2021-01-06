@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 3d66901a-c40b-474c-9948-f989f399cfea
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # STEP 6 Install and Configure 2-DC1
 

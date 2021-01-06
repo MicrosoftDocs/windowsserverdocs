@@ -6,6 +6,7 @@ ms.assetid: c4306f06-a117-4f65-b78b-9fd0d1133f95
 manager: brianlic
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # QoS Policy Scenarios

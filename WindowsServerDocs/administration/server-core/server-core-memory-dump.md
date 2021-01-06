@@ -7,6 +7,7 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 10/17/2017
+ms.topic: how-to
 ---
 # Configure memory dump files for Server Core installation
 

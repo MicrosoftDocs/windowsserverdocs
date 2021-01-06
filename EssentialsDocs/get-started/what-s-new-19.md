@@ -6,6 +6,7 @@ ms.assetid: affff774-5fa6-4944-887a-9bfde05f6a3f
 ms.author: lizross
 author: eross-msft
 manager: mtillman
+ms.date: 09/09/2020
 ---
 
 # What's New in Windows Server 2019 Essentials

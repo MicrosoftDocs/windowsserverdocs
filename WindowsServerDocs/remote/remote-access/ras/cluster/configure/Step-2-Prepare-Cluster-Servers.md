@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 35d68abb-6914-42e0-91e8-803933cf785e
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 2 Prepare Cluster Servers
 

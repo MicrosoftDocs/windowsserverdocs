@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 5b80294a-7325-476b-84eb-69f0d051e8b2
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Filter the View of DNS Resource Records
 

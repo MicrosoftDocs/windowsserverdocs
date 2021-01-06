@@ -6,6 +6,7 @@ ms.author: lizross
 author: eross-msft
 manager: mtillman
 ms.date: 10/12/2016
+ms.topic: article
 ---
 # Manage Different Domains in Active Directory Administrative Center
 

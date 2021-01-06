@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 6edaba84-4595-4fd8-95d7-64d4d975a38a
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # What's New in DNS Client in Windows Server 2016
 

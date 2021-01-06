@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 7540c17b-81de-47de-a04f-3247afa26f70
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 3 Plan a Load-Balanced Cluster Deployment
 

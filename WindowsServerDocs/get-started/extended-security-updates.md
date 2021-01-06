@@ -4,7 +4,7 @@ description: Learn how to use Extended Security Updates (ESU) for Windows Server
 ms.mktglfcycl: manage
 author: iainfoulds
 ms.author: daveba
-ms.topic: get-started-article
+ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 02/21/2020
 ---

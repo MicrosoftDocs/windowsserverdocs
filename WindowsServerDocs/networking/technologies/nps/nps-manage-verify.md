@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: fc77450e-2af1-47ba-bb23-1fd36d9efdbf
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Verify Configuration After NPS Changes

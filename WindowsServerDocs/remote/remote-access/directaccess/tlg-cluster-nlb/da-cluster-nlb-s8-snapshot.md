@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 915ef7dd-169d-4d58-9174-438d8ffa3584
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # STEP 8 Snapshot the DirectAccess Cluster-NLB Configuration
 

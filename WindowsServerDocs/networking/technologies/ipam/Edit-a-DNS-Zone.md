@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: a35164e1-11ad-47c8-9843-580d30c70d07
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Edit a DNS Zone
 

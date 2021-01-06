@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 79e87013-7f27-4031-8383-288bcb291731
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 08/07/2020
 ---
 # Microsoft Azure and Software Defined Networking
 

@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 2d9cdada-0625-41c8-8248-a32259b03e47
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Increase Concurrent Authentications Processed by NPS

@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 4235231c-4732-4ea9-9330-2a8c8a616d39
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Deploy BranchCache Hosted Cache Mode
 

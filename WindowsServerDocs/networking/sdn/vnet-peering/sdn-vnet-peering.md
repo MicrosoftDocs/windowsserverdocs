@@ -2,7 +2,7 @@
 description: "Learn more about: Virtual network peering"
 title: Virtual network peering
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/08/2018

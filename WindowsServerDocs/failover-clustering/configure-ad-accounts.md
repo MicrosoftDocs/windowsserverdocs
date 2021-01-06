@@ -5,6 +5,7 @@ ms.date: 11/12/2012
 author: JasonGerend
 manager: lizross
 ms.author: jgerend
+ms.topic: how-to
 ---
 
 # Configuring cluster accounts in Active Directory

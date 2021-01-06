@@ -6,7 +6,7 @@ ms.sitesec: library
 author: eross-msft
 ms.author: thierryp
 ms.date: 07/12/2018
-ms.topic: get-started-article
+ms.topic: how-to
 ms.localizationpriority: high
 ---
 

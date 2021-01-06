@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: dcc1037f-1a65-4497-99e6-0df9aef748a8
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Troubleshooting Adding Entry Points
 

@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: bb0eb349-914d-4596-9140-d3aae7597d55
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Move and Resize the Hosted Cache \(Optional\)

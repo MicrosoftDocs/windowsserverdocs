@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 077a3a64-2fa3-4994-9711-ec1fbdc081ba
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Monitor the operations status of the Remote Access server and its components
 

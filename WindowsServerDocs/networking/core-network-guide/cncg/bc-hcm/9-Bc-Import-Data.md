@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: d6159e91-f77c-42ec-9180-14bbb230ad17
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Import Data Packages on the Hosted Cache Server \(Optional\)

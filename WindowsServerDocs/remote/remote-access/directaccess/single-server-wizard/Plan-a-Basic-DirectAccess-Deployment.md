@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: d12632d7-4f47-4b4e-a4ad-f18322d726e2
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Plan a Basic DirectAccess Deployment
 

@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 2555f238-926e-4b20-9bfb-9774831062da
 author: eross-msft
 ms.author: lizross
+ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Process
 

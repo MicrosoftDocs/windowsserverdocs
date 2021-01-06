@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 8acc260f-d6d1-4d32-9e3a-1fd0b2a71586
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Plan a Multi-Forest Deployment
 

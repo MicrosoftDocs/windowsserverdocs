@@ -6,6 +6,7 @@ ms.assetid: 8cb9b59f-0255-4261-b49a-562c5ea50ee0
 manager: brianlic
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Netsh Command Syntax, Contexts, and Formatting

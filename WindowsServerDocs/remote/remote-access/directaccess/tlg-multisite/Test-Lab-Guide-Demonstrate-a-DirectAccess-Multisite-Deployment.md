@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 3c98106c-67cc-406a-810e-f2e09f7e2c5e
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Test Lab Guide: Demonstrate a DirectAccess Multisite Deployment
 

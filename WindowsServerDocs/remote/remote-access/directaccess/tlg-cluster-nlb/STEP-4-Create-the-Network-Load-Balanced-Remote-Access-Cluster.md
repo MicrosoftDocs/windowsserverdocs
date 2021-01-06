@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 509eaa08-c49d-448d-a71e-c1c45519ccd5
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # STEP 4 Create the Network Load Balanced Remote Access Cluster
 

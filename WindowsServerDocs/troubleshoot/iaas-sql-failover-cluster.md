@@ -4,6 +4,7 @@ description: This article introduces solutions for adjusting the threshold of fa
 ms.date: 05/28/2020
 author: Deland-Han
 ms.author: delhan
+ms.topic: troubleshooting
 ---
 # IaaS with SQL AlwaysOn - Tuning Failover Cluster Network Thresholds
 

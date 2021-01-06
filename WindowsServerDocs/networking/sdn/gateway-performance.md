@@ -2,7 +2,7 @@
 description: "Learn more about: Windows Server 2019 Gateway Performance"
 title: Windows Server 2019 Gateway Performance
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/22/2018

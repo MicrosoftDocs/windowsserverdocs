@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 82505b18-dd77-4dd1-aa27-b2962b8241ca
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Configure Remote Access with OTP Authentication
 
