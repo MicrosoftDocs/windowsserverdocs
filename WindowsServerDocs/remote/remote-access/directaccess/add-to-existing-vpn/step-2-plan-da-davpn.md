@@ -1,6 +1,6 @@
 ---
 title: Step 2 Plan the DirectAccess Deployment
-description: This topic is part of the guide Add DirectAccess to an Existing Remote Access (VPN) Deployment for Windows Server 2016
+description: Learn how to plan the settings for the Enable DirectAccesss Wizard.
 manager: brianlic
 ms.topic: article
 ms.assetid: 72b5b2af-6925-41e0-a3f9-b8809ed711d1

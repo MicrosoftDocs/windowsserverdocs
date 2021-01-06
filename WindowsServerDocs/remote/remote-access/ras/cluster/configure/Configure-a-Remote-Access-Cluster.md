@@ -1,6 +1,6 @@
 ---
 title: Configure a Remote Access Cluster
-description: This topic is part of the guide Deploy Remote Access in a Cluster in Windows Server 2016.
+description: Learn about the configuration steps required to deploy a single Windows Server 2016 or Windows Server 2012 Remote Access server in a load-balanced cluster.
 manager: dougkim
 ms.topic: article
 ms.assetid: e8df3619-f365-4070-8117-888c88db13eb

@@ -1,6 +1,6 @@
 ---
 title: Step 2 Configure the Multisite Infrastructure
-description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+description: Learn about how, to configure a multisite deployment, there are a number of steps required to modify network infrastructure settings.
 manager: brianlic
 ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
@@ -49,7 +49,7 @@ For more information, see [Adding a Site to the Forest](/previous-versions/windo
 
 8.  Close Active Directory Sites and Services.
 
-![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
+:::image type="icon" source="../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif":::***<em>Windows PowerShell equivalent commands</em>***
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -158,7 +158,7 @@ A multisite deployment requires an additional security group for  Windows 7  cli
 
 8.  Repeat this procedure to create a security group for every entry point as required.
 
-![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
+:::image type="icon" source="../../../../media/Step-2-Configure-the-Multisite-Infrastructure/PowerShellLogoSmall.gif":::***<em>Windows PowerShell equivalent commands</em>***
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -266,7 +266,7 @@ Domain controller association information is stored both in the registry of the 
 
     The resulting configuration is shown in the following diagram.
 
-    ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssoc2.png)
+    ![Diagram showing the resulting configuration.](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssoc2.png)
 
 2.  To replace the unavailable domain controller "DC1" with the domain controller "DC3", run the following command:
 
@@ -276,7 +276,7 @@ Domain controller association information is stored both in the registry of the 
 
     This command updates the domain controller association for the "Entry point 1" server GPO in the registry of DA1 and in the "Entry point 1" and "Entry point 2" server GPOs. The resulting configuration is shown in the following diagram.
 
-    ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssoc3.png)
+    ![Diagram showing the update to th domain controller association.](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssoc3.png)
 
 3.  To synchronize the domain controller association for the "Entry point 2" server GPO in the "Entry point 1" server GPO, run the command to replace "DC2" with "DC3", and specify the Remote Access server whose server GPO is not synchronized, in this case "DA1", for the *ComputerName* parameter.
 
@@ -286,7 +286,7 @@ Domain controller association information is stored both in the registry of the 
 
     The final configuration is shown in the following diagram.
 
-    ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssocFinal.png)
+    ![Diagram showing the final configuration.](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssocFinal.png)
 
 ### <a name="ConfigDistOptimization"></a>Optimization of configuration distribution
 When making configuration changes, the changes are applied only after the server GPOs propagate to the Remote Access servers. To reduce the configuration distribution time, Remote Access automatically selects a writable domain controller which is [closest to the Remote Access server](/previous-versions/windows/it-pro/windows-2000-server/cc978016(v=technet.10)) when creating its server GPO.

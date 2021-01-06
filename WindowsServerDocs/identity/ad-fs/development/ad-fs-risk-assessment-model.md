@@ -18,7 +18,7 @@ The Risk Assessment Model is a set of interfaces and classes which enable develo
 
 The model allows to plug-in code at any of three stages of AD FS authentication pipeline as shown below:
 
-![model](media/ad-fs-risk-assessment-model/risk1.png)
+![Diagram that shows the three stages of A D F S authentication.](media/ad-fs-risk-assessment-model/risk1.png)
 
 1. **Request Received Stage** – Enables building plug-ins to allow or block request when AD FS receives the authentication request i.e. before user enters credentials. You can use the request context (for example: client IP, Http method, proxy server DNS, etc.) available at this stage to perform the risk assessment. For example, you can build a plug-in to read the IP from the request context and block the authentication request if the IP is in the pre-defined list of risky IPs.
 
@@ -64,51 +64,50 @@ The following procedure will walk you through building a sample plug-in dll:
 3. Open the project `ThreatDetectionModule.sln` using Visual Studio.
 
 4. Remove the `Microsoft.IdentityServer.dll` from the Solutions Explorer as shown below:</br>
-
-   ![model](media/ad-fs-risk-assessment-model/risk2.png)
+   ![Screenshot that highlights the Remove menu option.](media/ad-fs-risk-assessment-model/risk2.png)
 
 5. Add reference to the `Microsoft.IdentityServer.dll` of your AD FS as shown below:
 
    a. Right click on **References** in **Solutions Explorer** and select **Add Reference…**.</br>
 
-   ![model](media/ad-fs-risk-assessment-model/risk3.png)
+   ![Screenshot that highlights the Add Reference menu option.](media/ad-fs-risk-assessment-model/risk3.png)
 
    b. On the **Reference Manager** window, select **Browse**. In the **Select the files to reference…** dialogue, select `Microsoft.IdentityServer.dll` from your AD FS installation folder (in my case **C:\Windows\ADFS**) and click **Add**.
 
    > [!NOTE]
    > In my case, I am building the plug-in on the AD FS server itself. If your development environment is on a different server, copy the `Microsoft.IdentityServer.dll` from your AD FS installation folder on AD FS server on to your development box.</br>
 
-   ![model](media/ad-fs-risk-assessment-model/risk4.png)
+   ![Screenshot that shows the file you should copy.](media/ad-fs-risk-assessment-model/risk4.png)
 
    c. Click **OK** on the **Reference Manager** window after making sure the `Microsoft.IdentityServer.dll` check box is selected.</br>
 
-   ![model](media/ad-fs-risk-assessment-model/risk5.png)
+   ![Screenshot that shows the Microsoft dot Identity Server dot d l l checkbox.](media/ad-fs-risk-assessment-model/risk5.png)
 
 6. All the classes and references are now in place to do a build. However, since the output of this project is a dll, it will have to be installed into the **Global Assembly Cache**, or GAC, of the AD FS server and the dll needs to be signed first. This can be done as follows:
 
    a. **Right-click** on the name of the project, ThreatDetectionModule. From the menu, click **Properties**.</br>
 
-   ![model](media/ad-fs-risk-assessment-model/risk6.png)
+   ![Screenshot that highlights the Properties menu option.](media/ad-fs-risk-assessment-model/risk6.png)
 
    b. From the **Properties** page, click **Signing**, on the left, and then check the check box marked **Sign the assembly**. From the **Choose a strong name key file:** pull down menu, select **<New...>**.</br>
 
-   ![model](media/ad-fs-risk-assessment-model/risk7.png)
+   ![Screenshot that shows the Sign the assembly checkbox.](media/ad-fs-risk-assessment-model/risk7.png)
 
    c. In the **Create Strong Name Key dialogue**, type a name (you can choose any name) for the key, uncheck the check box **Protect my key file with password**. Then, click **OK**.</br>
 
-   ![model](media/ad-fs-risk-assessment-model/risk8.png)
+   ![Screenshot that shows Protect my key file with password checkbox.](media/ad-fs-risk-assessment-model/risk8.png)
 
    d. Save the project as shown below:</br>
 
-   ![model](media/ad-fs-risk-assessment-model/risk9.png)
+   ![Screenshot that shows where to save your project.](media/ad-fs-risk-assessment-model/risk9.png)
 
 7. Build the project by clicking **Build** and then **Rebuild Solution** as shown below:</br>
 
-   ![model](media/ad-fs-risk-assessment-model/risk10.png)
+   ![Screenshot that shows the Rebuild Solution menu option.](media/ad-fs-risk-assessment-model/risk10.png)
 
    Check the **Output window** at the bottom of the screen, to see if any errors occurred.</br>
 
-   ![model](media/ad-fs-risk-assessment-model/risk11.png)
+   ![Screenshot that shows the output from the rebuilt solution.](media/ad-fs-risk-assessment-model/risk11.png)
 
 
 The plug-in (dll) is now ready for use and is in the **\bin\Debug** folder of the project folder (in my case, that's **C:\extensions\ThreatDetectionModule\bin\Debug\ThreatDetectionModule.dll**).
@@ -123,11 +122,11 @@ We need to register the dll in AD FS by using the `Register-AdfsThreatDetectionM
 
 2. Start the **Developer Command Prompt** for Visual Studio and go to the directory containing the **sn.exe** (in my case, the directory is **C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**).
 
-   ![model](media/ad-fs-risk-assessment-model/risk12.png)
+   ![Screenshot that shows the Developer Command Prompt for Visual Studio.](media/ad-fs-risk-assessment-model/risk12.png)
 
 3. Run the **SN** command with the **-T** parameter and the location of the file (in my case `SN -T "C:\extensions\ThreatDetectionModule.dll"`).
 
-   ![model](media/ad-fs-risk-assessment-model/risk13.png)</br>
+   ![Screenshot that shows how to run the S N command.](media/ad-fs-risk-assessment-model/risk13.png)</br>
 
    The command will provide you the public key token (For me, the **Public Key Token is 714697626ef96b35**)
 
@@ -138,7 +137,7 @@ We need to register the dll in AD FS by using the `Register-AdfsThreatDetectionM
 
    b. Run the **Gacutil** command (in my case `Gacutil /IF C:\extensions\ThreatDetectionModule.dll`):
 
-   ![model](media/ad-fs-risk-assessment-model/risk14.png)
+   ![Screenshot that shows how to run the Gacutil command.](media/ad-fs-risk-assessment-model/risk14.png)
 
    > [!NOTE]
    > If you have an AD FS farm, the above needs to be executed on each AD FS server in the farm.
@@ -179,7 +178,7 @@ That's it, the dll is now registered with AD FS and ready for use!
 
 1. Open the **authconfig.csv** file we created earlier (in my case at location **C:\extensions**) and add the **Extranet IPs** you want to block. Every IP should be on a separate line and there should be no spaces at the end.</br>
 
-   ![model](media/ad-fs-risk-assessment-model/risk18.png)
+   ![Screenshot that shows how to add the extranet I P lines.](media/ad-fs-risk-assessment-model/risk18.png)
 
 2. Save and close the file.
 
@@ -200,11 +199,11 @@ That's it, the dll is now registered with AD FS and ready for use!
 
    Enter federation server instance and hit **Test Authentication** button.</br>
 
-   ![model](media/ad-fs-risk-assessment-model/risk15.png)
+   ![Screenshot that shows the Test Authentication button.](media/ad-fs-risk-assessment-model/risk15.png)
 
 5. Authentication is blocked as shown below.</br>
 
-   ![model](media/ad-fs-risk-assessment-model/risk16.png)
+   ![Screenshot that shows that authentication is blocked.](media/ad-fs-risk-assessment-model/risk16.png)
 
 Now that we know how to build and register the plug-in, let's walkthrough the plug-in code to understand the implementation using the new interfaces and classes introduced with the model.
 
@@ -336,9 +335,9 @@ The method returns the [Risk Score](/dotnet/api/microsoft.identityserver.authent
 **A:** You can write error logs to "AD FS/Admin" event log using WriteAdminLogErrorMessage method, audit logs to "AD FS Auditing" security log using WriteAuditMessage method and debug logs to "AD FS Tracing" debug log using WriteDebugMessage method.
 
 **Can adding these plug-ins increase AD FS authentication process latency?**</br>
-**A:** Latency impact will be determined by the time taken to execute the risk assessment logic you implement. We recommend evaluating the latency impact before deploying the plug-in in production enviroment.
+**A:** Latency impact will be determined by the time taken to execute the risk assessment logic you implement. We recommend evaluating the latency impact before deploying the plug-in in production environment.
 
-**Why can't AD FS suggest the list of risky IPs, users, etc?**</br>
+**Why can't AD FS suggest the list of risky IPs, users, etc.?**</br>
 **A:** Though not currently available, we are working on building the intelligence to suggest risky IPs, users, etc. in the Pluggable Risk Assessment Model. We will share the launch dates soon.
 
 **What other sample plug-ins are available?**</br>

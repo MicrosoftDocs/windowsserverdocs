@@ -1,6 +1,6 @@
 ---
 title: Step 4 Verify the Cluster
-description: This topic is part of the guide Deploy Remote Access in a Cluster in Windows Server 2016.
+description: Learn how to verify that you have correctly configured your DirectAccess cluster deployment.
 manager: brianlic
 ms.topic: article
 ms.assetid: f22dcf10-b453-4664-a9ef-e40e95c72f63
