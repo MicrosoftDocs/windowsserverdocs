@@ -6,6 +6,7 @@ ms.assetid: 3266328c-ca82-40d2-90ca-854b7088ccaa
 manager: dcscontentpm
 ms.author: v-tea
 author: Teresa-Motiv
+ms.date: 08/07/2020
 ---
 
 # Configure the Order of Network Interfaces

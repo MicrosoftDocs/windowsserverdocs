@@ -7,6 +7,7 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
+ms.date: 12/10/2020
 ---
 # Comparison of Standard and Datacenter editions of Windows Server 2019
 

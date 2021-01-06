@@ -56,7 +56,7 @@ Similar to the federation server farm with WID topology, all of the federation s
 
 The following illustration shows how the fictional Contoso Pharmaceuticals company deployed its federation server farm with SQL Server topology in the corporate network. It also shows how that company configured the perimeter network with access to a DNS server, an additional NLB host that uses the same cluster DNS name \(fs.contoso.com\) that is used on the corporate network NLB cluster, and with two web application proxies \(wap1 and wap2\).
 
-![server farm using SQL](media/SQLFarmADFSBlue.gif)
+![Illustration that shows how the fictional Contoso Pharmaceuticals company deployed its federation server farm with SQL Server topology in the corporate network.](media/SQLFarmADFSBlue.gif)
 
 For more information about how to configure your networking environment for use with federation servers or web application proxies, see "Name Resolution Requirements" section in [AD FS Requirements](AD-FS-Requirements.md) and [Plan the Web Application Proxy Infrastructure (WAP)](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)).
 
@@ -95,7 +95,7 @@ From the perspective of the nodes of an AD FS SQL Server farm, the AlwaysOn Avai
 
 The following diagram shows an AD FS SQL Server Farm with AlwaysOn Availability group.
 
-![server farm using SQL](media/alwaysonavailabilitygroups.jpg)
+![Diagram that shows an AD FS SQL Server Farm with AlwaysOn Availability group.](media/alwaysonavailabilitygroups.jpg)
 
 > [!NOTE]
 > AlwaysOn Availability groups require that the SQL Server instances reside on Windows Server Failover Clustering \(WSFC\) nodes.

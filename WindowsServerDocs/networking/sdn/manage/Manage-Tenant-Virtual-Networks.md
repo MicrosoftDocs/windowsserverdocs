@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 5905532b-626d-4b35-99a3-72a063e25809
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 08/07/2020
 ---
 # Manage Tenant Virtual Networks
 

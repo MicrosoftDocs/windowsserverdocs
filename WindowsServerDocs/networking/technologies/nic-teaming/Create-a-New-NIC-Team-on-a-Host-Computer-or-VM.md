@@ -6,6 +6,7 @@ ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
 ms.author: lizross
 author: eross-msft
 ms.date: 09/13/2018
+ms.topic: article
 ---
 # Create a new NIC Team on a host computer or VM
 

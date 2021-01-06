@@ -5,6 +5,7 @@ ms.topic: article
 ms.assetid: b5715c02-a90f-4de9-a71e-0fc08039ba1d
 ms.author: benarm
 author: BenjaminArmstrong
+ms.date: 12/08/2020
 ---
 
 # Cmdlets for configuring persistent memory devices for Hyper-V VMs

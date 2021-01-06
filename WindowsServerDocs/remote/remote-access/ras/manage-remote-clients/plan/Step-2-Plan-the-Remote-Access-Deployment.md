@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 2 Plan the Remote Access Deployment
 

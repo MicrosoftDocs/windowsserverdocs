@@ -7,7 +7,7 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 11/12/2019
-ms.topic: get-started-article
+ms.topic: how-to
 ---
 # KMS client setup keys
 

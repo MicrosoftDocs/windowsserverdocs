@@ -1,11 +1,12 @@
 ---
 title: Plan a Basic DirectAccess Deployment
-description: This topic is part of the guide Deploy a Single DirectAccess Server Using the Getting Started Wizard for Windows Server 2016
+description: Learn about the planning steps required to deploy a single DirectAccess server running  Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 with basic features.
 manager: brianlic
 ms.topic: article
 ms.assetid: d12632d7-4f47-4b4e-a4ad-f18322d726e2
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Plan a Basic DirectAccess Deployment
 

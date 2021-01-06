@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: ae6a42db-a104-401b-a8e6-b85c47d30b46
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Create a User Role for Access Control
 

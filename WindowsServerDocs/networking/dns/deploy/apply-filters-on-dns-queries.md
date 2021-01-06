@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
 ms.author: lizross
 author: eross-msft
+ms.date: 01/05/2021
 ---
 # Use DNS Policy for Applying Filters on DNS Queries
 

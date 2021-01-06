@@ -5,6 +5,7 @@ title: Web Application Proxy in Windows Server
 ms.topic: article
 ms.author: kgremban
 author: eross-msft
+ms.date: 12/10/2020
 ---
 # Web Application Proxy in Windows Server
 

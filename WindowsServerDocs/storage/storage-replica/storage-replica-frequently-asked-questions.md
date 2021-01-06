@@ -3,7 +3,7 @@ description: "Learn more about: Frequently Asked Questions about Storage Replica
 title: Frequently Asked Questions about Storage Replica
 manager: siroy
 ms.author: nedpyle
-ms.topic: get-started-article
+ms.topic: how-to
 author: nedpyle
 ms.date: 04/15/2020
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b

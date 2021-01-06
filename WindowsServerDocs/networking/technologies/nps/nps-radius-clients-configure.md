@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: cde37849-ce79-4c26-aa14-cd0ef31cae18
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Configure RADIUS Clients

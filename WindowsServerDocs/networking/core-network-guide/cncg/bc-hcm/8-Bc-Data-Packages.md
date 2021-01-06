@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 31e8428f-a482-4734-be1b-213912e34825
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Create Content Server Data Packages for Web and File Content (Optional)

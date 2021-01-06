@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 1cc0abc6-be4d-4cbe-bd0c-cc448bf294f6
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # STEP 7 Install and Configure 2-APP1

@@ -6,6 +6,7 @@ ms.assetid: c94e37a4-3637-4613-9eb5-ed604e831eca
 manager: brianlic
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Network Shell (Netsh) Example Batch File

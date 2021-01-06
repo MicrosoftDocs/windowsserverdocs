@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 62fa2895-62ae-42cf-817c-53e06ac2a26c
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Monitor the existing load on the Remote Access server
 

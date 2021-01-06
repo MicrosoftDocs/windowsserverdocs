@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: a96a8752-5678-49c5-b069-d2cce8042a51
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Set Access Scope for DNS Resource Records
 

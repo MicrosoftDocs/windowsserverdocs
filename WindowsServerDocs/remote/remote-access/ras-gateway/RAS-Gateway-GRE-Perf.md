@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: c051b2ec-de0f-49d1-82b9-5742b259cd7c
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # RAS Gateway GRE Tunnel Throughput and Performance

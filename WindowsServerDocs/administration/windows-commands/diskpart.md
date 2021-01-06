@@ -5,6 +5,7 @@ ms.topic: reference
 author: jasongerend
 manager: elizapo
 ms.author: jgerend
+ms.date: 12/10/2020
 ---
 
 # diskpart

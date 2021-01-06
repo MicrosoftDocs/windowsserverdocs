@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 08/07/2020
 ---
 # Network Function Virtualization
 

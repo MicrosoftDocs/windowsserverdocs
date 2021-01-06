@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 8e17d886-f216-400e-bd31-808aceb88033
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # STEP 14 Snapshot the Configuration
 

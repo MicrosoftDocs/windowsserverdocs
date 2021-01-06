@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 4b9569b8-a366-43ad-a52a-b35d88a08d41
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Troubleshoot an OTP Deployment
 

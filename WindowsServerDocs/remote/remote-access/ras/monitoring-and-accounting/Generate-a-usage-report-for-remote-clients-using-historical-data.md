@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 0305467b-ce39-4532-a05a-2cc5ff946f55
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Generate a usage report for remote clients using historical data
 

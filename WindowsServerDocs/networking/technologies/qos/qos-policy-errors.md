@@ -6,6 +6,7 @@ ms.assetid: 76974e10-6a57-4533-83be-cfd5a0d364a3
 manager: brianlic
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # QoS Policy Error and Event Messages

@@ -7,7 +7,9 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
+ms.date: 09/17/2020
 ---
+
 # Install, upgrade, or migrate to Windows Server
 
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008

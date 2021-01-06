@@ -3,7 +3,7 @@ description: "Learn more about: Storage Replica overview"
 title: Storage Replica Overview
 manager: siroy
 ms.author: nedpyle
-ms.topic: get-started-article
+ms.topic: how-to
 author: nedpyle
 ms.date: 4/26/2019
 ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5

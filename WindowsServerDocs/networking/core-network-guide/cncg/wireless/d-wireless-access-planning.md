@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 8c632d02-2270-4a82-8fc4-74ea3747f079
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Planning
 

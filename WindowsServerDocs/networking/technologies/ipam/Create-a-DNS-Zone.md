@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: a030ff51-a815-4fc4-b26d-aae41c3e4ce5
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Create a DNS Zone
 

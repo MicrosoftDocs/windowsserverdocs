@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: eca02eeb-d92d-463e-aae0-1f7038ba26fe
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 3 Plan OTP Certificate Deployment
 

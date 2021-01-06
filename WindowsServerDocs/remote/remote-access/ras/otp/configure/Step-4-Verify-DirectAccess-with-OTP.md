@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: ed49a0a3-1c45-42e5-8f13-cad20c1c1d68
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 4 Verify DirectAccess with OTP
 

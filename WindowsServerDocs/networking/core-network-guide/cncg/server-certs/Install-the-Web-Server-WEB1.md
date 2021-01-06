@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: f51c9e38-98bb-49c1-9d39-427d07021499
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Install the Web Server WEB1
 

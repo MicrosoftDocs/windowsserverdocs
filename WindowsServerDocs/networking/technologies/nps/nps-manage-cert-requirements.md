@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 2af0a1df-5c44-496b-ab11-5bc340dc96f0
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Configure Certificate Templates for PEAP and EAP Requirements
 

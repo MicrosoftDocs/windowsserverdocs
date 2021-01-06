@@ -7,6 +7,7 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
+ms.date: 08/07/2020
 ---
 
 # Windows Server 2019 System Requirements

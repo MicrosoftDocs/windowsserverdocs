@@ -5,6 +5,7 @@ ms.topic: article
 manager: dougkim
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Netsh http commands

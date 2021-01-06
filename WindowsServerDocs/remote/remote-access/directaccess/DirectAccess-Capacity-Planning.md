@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 456e5971-3aa7-4a24-bc5d-0c21fec7687e
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # DirectAccess Capacity Planning
 

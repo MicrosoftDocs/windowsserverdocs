@@ -3,7 +3,7 @@ title: General guidance to troubleshoot DHCP
 description: This artilce introduces general guidance to troubleshoot DHCP.
 manager: dcscontentpm
 ms.date: 5/26/2020
-ms.topic: article
+ms.topic: troubleshooting
 author: Deland-Han
 ms.author: delhan
 ---

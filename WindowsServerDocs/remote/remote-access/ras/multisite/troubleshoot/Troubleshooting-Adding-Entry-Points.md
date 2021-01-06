@@ -1,11 +1,12 @@
 ---
 title: Troubleshooting Adding Entry Points
-description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+description: Learn how to troubleshoot issues related to the Add-DAEntryPoint command. 
 manager: brianlic
 ms.topic: article
 ms.assetid: dcc1037f-1a65-4497-99e6-0df9aef748a8
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Troubleshooting Adding Entry Points
 

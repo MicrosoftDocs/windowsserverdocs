@@ -6,6 +6,7 @@ ms.assetid: 16918506-102c-482e-89d3-004ad8d6aabe
 manager: brianlic
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Quality of Service \(QoS\) Policy
