@@ -24,7 +24,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 2.  Under **Actions** click **Add an attribute store**.
 
-![add attribute store](media/Add-an-Attribute-Store/addstore1.PNG)
+![Screenshot that highlights the Add Attribute Store action.](media/Add-an-Attribute-Store/addstore1.PNG)
 
 3. In the **Add an attribute store** dialog box, configure the following properties for the attribute store that you want to add:
 

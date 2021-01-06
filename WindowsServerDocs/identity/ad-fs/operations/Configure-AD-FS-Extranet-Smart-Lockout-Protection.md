@@ -57,7 +57,7 @@ IPv4 and IPv6 addresses are supported.
 - **Successful Login**: If the log-in succeeds, then the IPs from the request are added to the user's familiar location IP list.
 - **Failed Login**: If the log-in fails the badPwdCount is increased. The user will go into a lockout state if the attacker sends more bad passwords to the system than the threshold allows. (badPwdCount > ExtranetLockoutThreshold)
 
-![configuration](media/configure-ad-fs-extranet-smart-lockout-protection/esl2.png)
+![Workflow diagram that shows the failed login process.](media/configure-ad-fs-extranet-smart-lockout-protection/esl2.png)
 
 The “UnknownLockout” value will equal to true when the account is locked out. This means that the user's badPwdCount is over than the threshold i.e. someone attempted more passwords than were allowed by the system. In this state, there are 2 ways that a valid user can login.
 - The user must wait for the ObservationWindow time to elapse or
