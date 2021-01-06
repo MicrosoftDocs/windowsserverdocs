@@ -32,7 +32,7 @@ You must be a member of the Administrators group to perform this procedure.
     Set-BCCache -Path C:\datacache –MoveTo D:\datacache
     ```
 
-3.  Type the following command to resize the hosted cache –specifically the datacache \- on the local computer. Press ENTER.
+3.  Type the following command to resize the hosted cache –specifically the data cache \- on the local computer. Press ENTER.
 
     > [!IMPORTANT]
     > Before running the following command, replace parameter values, such as \-Percentage, with values that are appropriate for your deployment.
