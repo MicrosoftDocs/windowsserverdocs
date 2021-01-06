@@ -1,6 +1,6 @@
 ---
 title: Create Content Server Data Packages for Web and File Content (Optional)
-description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
+description: Learn how to prehash content on Web and file servers, and then create data packages to import on your hosted cache server.
 manager: brianlic
 ms.topic: article
 ms.assetid: 31e8428f-a482-4734-be1b-213912e34825
