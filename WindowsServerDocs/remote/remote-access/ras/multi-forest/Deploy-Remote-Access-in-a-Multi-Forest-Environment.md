@@ -1,6 +1,6 @@
 ---
 title: Deploy Remote Access in a Multi-Forest Environment
-description: This topic is part of the guide Deploy Remote Access in a Multi-Forest Environment in Windows Server 2016.
+description: Learn about the planning and configuration steps for a multi-forest deployment; including when one-time password (OTP) authentication is used.
 manager: brianlic
 ms.topic: article
 ms.assetid: c44fecc9-fe39-40bd-b6da-d8f8afe1a01d

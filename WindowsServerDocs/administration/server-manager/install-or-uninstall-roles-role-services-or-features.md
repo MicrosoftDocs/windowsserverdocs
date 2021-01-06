@@ -1,6 +1,6 @@
 ---
 title: Install or Uninstall Roles, Role Services, or Features
-description: Server Manager
+description: Learn how to install roles and features to local or remote servers, or offline virtual hard disks (VHDs).
 ms.topic: article
 ms.assetid: 04f16d84-45c2-4771-84c1-1cc973d0ee02
 ms.author: lizross
@@ -387,7 +387,7 @@ The Group Policy setting described in this section specifies authorized source l
 
    **computer Configuration\Administrative Templates\System\Specify settings for optional component installation and component repair**
 
-2. Sselect **Enabled** to enable the policy setting, if it is not already enabled.
+2. Select **Enabled** to enable the policy setting, if it is not already enabled.
 
 3. In the **Alternate source file path** text box in the **Options** area, specify a fully qualified path to a shared folder or a WIM file. To specify a WIM file as an alternate source file location, add the prefix **WIM:** to the path, and add the index of the image to use in the WIM file as a suffix. The following are examples of values that you can specify.
 

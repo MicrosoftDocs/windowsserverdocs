@@ -1,6 +1,6 @@
 ---
 title: Verify the AD FS 2.0 migration to Windows Server 2012 R2
-description: Provides information on migrating an AD FS server to Windows Server 2012 R2.
+description: Learn how to verify that federation servers in your farm are operational; that is, that any client on the same network can reach your federation servers.
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,7 +10,7 @@ ms.topic: article
 
 # Verify the AD FS 2.0 migration to Windows Server 2012 R2
 
-Once you complete the same server migration of your Active Directory Federation Service (AD FS) farm to Windows Server 2012 R2, you can use the following procedure to verify that federation servers in your farm are operational; that is, that any client on the same network can reach your federtation servers.
+Once you complete the same server migration of your Active Directory Federation Service (AD FS) farm to Windows Server 2012 R2, you can use the following procedure to verify that federation servers in your farm are operational; that is, that any client on the same network can reach your federation servers.
 
 Membership in **Users**, **Backup Operators**, **Power Users**, **Administrators** or equivalent, on the local computer is the minimum required to complete this procedure.
 
