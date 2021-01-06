@@ -45,7 +45,7 @@ In order to use on-premises conditional access with registered devices, you must
 To verify your schema level, do the following:
 
 1.  You can use ADSIEdit or LDP and connect to the Schema Naming Context.
-2.  Using ADSIEdit, right-click on "CN=Schema,CN=Configuration,DC=<domain>,DC=<com> and select properties.  Relpace domain and the com portions with your forest information.
+2.  Using ADSIEdit, right-click on "CN=Schema,CN=Configuration,DC=<domain>,DC=<com> and select properties.  Replace domain and the com portions with your forest information.
 3.  Under the Attribute Editor locate the objectVersion attribute and it will tell you, your version.
 
 ![ADSI Edit](media/Configure-Device-Based-Conditional-Access-on-Premises/adsiedit.png)

@@ -249,8 +249,8 @@ While in log only mode, you can check the security audit log for lockout events.
 |-----|-----|
 |1203|This event is written for each bad password attempt. As soon as the badPwdCount reaches the value specified in ExtranetLockoutThreshold, the account will be locked out on ADFS for the duration specified in ExtranetObservationWindow.</br>Activity ID: %1</br>XML: %2|
 |1201|This event is written each time a user is locked out. </br>Activity ID: %1</br>XML: %2|
-|557 (ADFS 2019)| An error occured while trying to communicate with the account store rest service on node %1. If this is a WID farm the primary node may be offline. If this is a SQL farm ADFS will automatically select a new node to host the User store master role.|
-|562 (ADFS 2019)|An error occurred when communcating with the account store endpoint on server %1.</br>Exception Message: %2|
+|557 (ADFS 2019)| An error occurred while trying to communicate with the account store rest service on node %1. If this is a WID farm the primary node may be offline. If this is a SQL farm ADFS will automatically select a new node to host the User store master role.|
+|562 (ADFS 2019)|An error occurred when communicating with the account store endpoint on server %1.</br>Exception Message: %2|
 |563 (ADFS 2019)|An error occurred while calculating extranet lockout status. Due to the value of the %1 setting authentication will be allowed for this user and token issuance will continue. If this is a WID farm the primary node may be offline. If this is a SQL farm ADFS will automatically select a new node to host the User store master role.</br>Account store server name: %2</br>User Id: %3</br>Exception Message: %4|
 |512|The account for the following user is locked out. A login attempt is being allowed due to the system configuration.</br>Activity ID: %1 </br>User: %2 </br>Client IP: %3 </br>Bad Password Count: %4  </br>Last Bad Password Attempt: %5|
 |515|The following user account was in a locked out state and the correct password was just provided. This account may be compromised.</br>Additional Data </br>Activity ID: %1 </br>User: %2 </br>Client IP: %3 |
