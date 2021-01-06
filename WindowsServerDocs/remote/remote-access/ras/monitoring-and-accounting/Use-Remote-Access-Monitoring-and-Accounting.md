@@ -1,6 +1,6 @@
 ---
 title: Use Remote Access Monitoring and Accounting
-description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
+description: Learn how to leverage the monitoring capabilities of Remote Access by using the DirectAccess management console and the corresponding Windows PowerShell cmdlets
 manager: brianlic
 ms.topic: article
 ms.assetid: 92519b49-0df4-43c1-9717-f13570644212

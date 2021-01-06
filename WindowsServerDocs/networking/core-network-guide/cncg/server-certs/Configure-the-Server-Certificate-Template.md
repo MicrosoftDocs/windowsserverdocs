@@ -1,6 +1,6 @@
 ---
 title: Configure the Server Certificate Template
-description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+description: Learn how to configure the certificate template that Active Directory Certificate Services uses as the basis for server certificates that are enrolled to servers on your network.
 manager: brianlic
 ms.topic: article
 ms.assetid: 8ff610e2-43ca-407f-a828-06d9366e02f0

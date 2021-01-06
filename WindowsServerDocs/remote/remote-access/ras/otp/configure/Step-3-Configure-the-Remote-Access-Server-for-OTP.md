@@ -1,6 +1,6 @@
 ---
 title: Step 3 Configure the Remote Access Server for OTP
-description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
+description: Learn how to configure the Remote Access server to support OTP.
 manager: brianlic
 ms.topic: article
 ms.assetid: df1e87f2-6a0f-433b-8e42-816ae75395f9
