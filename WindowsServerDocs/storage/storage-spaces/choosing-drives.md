@@ -24,8 +24,8 @@ Storage Spaces Direct currently works with four types of drives:
 | --- | --- |
 | :::image type="content" source="media/understand-the-cache/pmem-100px.png" alt-text="Image of PMem (persistent memory)"::: | **Persistent memory.** A new type of low-latency, high-performance storage. |
 | :::image type="content" source="media/understand-the-cache/NVMe-100px.png" alt-text="Image of NVMe (Non-Volatile Memory Express)"::: | **NVMe (Non-Volatile Memory Express).** Solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2, PCIe Add-In-Card (AIC), and M.2. NVMe offers higher IOPS and IO throughput with lower latency than any other type of drive we support today except persistent memory. |
-| :::image type="content" source="media/understand-the-cache/SSD-100px.png" alt-text="Image of SSD drive)"::: | **SSD.** Solid-state drives which connect via conventional SATA or SAS. |
-| :::image type="content" source="media/understand-the-cache/HDD-100px.png" alt-text="Image of HDD)"::: | **HDD.** Rotational, magnetic hard disk drives which offer vast storage capacity. |
+| :::image type="content" source="media/understand-the-cache/SSD-100px.png" alt-text="Image of SSD drive)"::: | **SSD.** Solid-state drives, which connect via conventional SATA or SAS. |
+| :::image type="content" source="media/understand-the-cache/HDD-100px.png" alt-text="Image of HDD)"::: | **HDD.** Rotational, magnetic hard disk drives, which offer vast storage capacity. |
 
 ## Built-in cache
 
@@ -35,7 +35,7 @@ For more information, check out [Understanding the cache in Storage Spaces Direc
 
 ## Option 1 – Maximizing performance
 
-To achieve predictable and uniform sub-millisecond latency across random reads and writes to any data, or to achieve extremely high IOPS (we've done [over six million](https://www.youtube.com/watch?v=0LviCzsudGY&t=28m)!) or IO throughput (we've done [over 1 Tb/s](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=16m50s)!), you should go "all-flash".
+To achieve predictable and uniform sub-millisecond latency across random reads and writes to any data, or to achieve extremely high IOPS (we've done [over 6 million](https://www.youtube.com/watch?v=0LviCzsudGY&t=28m)!) or IO throughput (we've done [over 1 Tb/s](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=16m50s)!), you should go "all-flash".
 
 There are currently three ways to do so:
 
@@ -88,7 +88,7 @@ The cache should be sized to accommodate the working set of your applications an
 
 ### General
 
-We recommend limiting the total storage capacity per server to approximately 400 terabytes (TB). The more storage capacity per server, the longer the time required to resync data after downtime or rebooting, such when applying software updates. The current maximum size per storage pool is 4 petabyte (PB) (4,000 TB) for Windows Server 2019, or 1 petabyte for Windows Server 2016.
+We recommend limiting the total storage capacity per server to approximately 400 terabytes (TB). The more storage capacity per server, the longer the time required to resync data after downtime or rebooting, such when applying software updates. The current maximum size per storage pool is 4 petabytes (PB) (4,000 TB) for Windows Server 2019, or 1 petabyte for Windows Server 2016.
 
 ## Additional References
 
