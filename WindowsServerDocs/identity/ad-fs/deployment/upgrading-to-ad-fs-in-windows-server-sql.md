@@ -47,7 +47,7 @@ To following architectural diagram shows the setup that was used to validate and
 1.  Using Server Manager install the Active Directory Federation Services Role on the Windows Server 2016
 
 2.  Using the AD FS Configuration wizard, join the new Windows Server 2016 server to the existing AD FS farm.  On the **Welcome** screen click **Next**.
- ![Screenshot that shows the Welcome screen in the AD FS Configuration wizard.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)
+![Screenshot that shows the Welcome screen in the AD FS Configuration wizard.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)
 3.  On the **Connect to Active Directory Domain Services** screen, s**pecify an administrator account** with permissions to perform the federation services configuration and click **Next**.
 4.  On the **Specify Farm** screen, enter the name of the SQL server and instance and then click **Next**.
 ![Screenshot that shows the Specify Farm screen in the AD FS Configuration wizard.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)

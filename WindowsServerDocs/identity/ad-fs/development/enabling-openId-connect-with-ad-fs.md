@@ -116,7 +116,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-openid
 ## Verify the app is working
 Once the above changes have been made, hit F5.  This will bring up the sample page.  Click on sign in.
 
-![Screenshot that shows the A S P dot N E T sample page.(media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_12.PNG)
+![Screenshot that shows the A S P dot N E T sample page.](media/Enabling-OpenId-Connect-with-AD-FS-2016/AD_FS_OpenID_12.PNG)
 
 You will be re-directed to the AD FS sign-in page.  Go ahead and sign in.
 
