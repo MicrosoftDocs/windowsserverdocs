@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 70357156-fcb0-4346-a61e-4ea963e3ffb0
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # STEP 5 Configure DC1
 

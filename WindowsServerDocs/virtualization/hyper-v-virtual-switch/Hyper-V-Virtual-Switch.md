@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
 ms.author: lizross
 author: eross-msft
+ms.date: 12/08/2020
 ---
 # Hyper-V Virtual Switch
 

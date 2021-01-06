@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 68fdc02b-2904-4a67-8bfe-45e426f2bd6c
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Step 1 Complete the DirectAccess Configuration

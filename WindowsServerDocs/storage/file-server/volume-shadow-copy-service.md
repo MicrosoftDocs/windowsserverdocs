@@ -5,6 +5,7 @@ ms.date: 01/30/2019
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
+ms.topic: article
 ---
 
 # Volume Shadow Copy Service

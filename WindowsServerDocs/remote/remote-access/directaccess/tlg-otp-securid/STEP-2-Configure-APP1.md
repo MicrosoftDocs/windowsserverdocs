@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 19a7a4a6-9a04-42ea-a5d0-ecb28a34dbaa
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # STEP 2 Configure APP1
 

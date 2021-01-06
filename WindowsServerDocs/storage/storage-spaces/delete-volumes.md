@@ -6,6 +6,7 @@ author: iangpgh
 ms.author: jgerend
 manager: daveba
 ms.date: 05/07/2019
+ms.topic: article
 ---
 
 # Deleting volumes in Storage Spaces Direct

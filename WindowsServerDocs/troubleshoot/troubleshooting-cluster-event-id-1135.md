@@ -4,6 +4,7 @@ description: Describes how to troubleshoot the Cluster Service Startup issue wit
 ms.date: 05/28/2020
 author: Deland-Han
 ms.author: delhan
+ms.topic: troubleshooting
 ---
 # Troubleshooting cluster issue with Event ID 1135
 

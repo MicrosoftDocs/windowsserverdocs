@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 4adce101-1e30-439e-b78b-65b26479f33e
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Install and Configure Deployment for Remote Management of DirectAccess Clients
 

@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 3 Plan the Multisite Deployment
 

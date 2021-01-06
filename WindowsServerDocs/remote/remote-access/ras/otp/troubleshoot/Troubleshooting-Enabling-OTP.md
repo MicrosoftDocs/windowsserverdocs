@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: b58252ca-4c1d-4664-a3c4-7301e2121517
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Troubleshooting Enabling OTP
 

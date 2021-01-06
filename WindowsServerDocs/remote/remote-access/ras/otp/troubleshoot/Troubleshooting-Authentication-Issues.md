@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 71307757-f8f4-4f82-b8b3-ffd4fd8c5d6d
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Troubleshooting Authentication Issues
 

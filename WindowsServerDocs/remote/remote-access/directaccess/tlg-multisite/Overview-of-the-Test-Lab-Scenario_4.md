@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 9afeced4-1a9b-4cb3-9fc4-d7e44c675755
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Overview of the Test Lab Scenario
 

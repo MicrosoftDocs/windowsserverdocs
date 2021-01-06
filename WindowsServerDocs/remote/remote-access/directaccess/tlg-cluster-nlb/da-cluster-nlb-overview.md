@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: cd1e9efd-19e9-49e7-8432-881f661c9792
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Overview of the DirectAccess Cluster-NLB Test Lab Scenario
 

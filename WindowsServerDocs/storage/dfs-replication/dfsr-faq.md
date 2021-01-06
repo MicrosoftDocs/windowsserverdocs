@@ -5,6 +5,7 @@ ms.date: 06/18/2014
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
+ms.topic: article
 ---
 
 # DFS Replication: Frequently Asked Questions (FAQ)
