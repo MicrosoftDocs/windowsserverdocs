@@ -276,16 +276,19 @@ On WAP servers you can still use Set-WebApplicationProxySslCertificate. On the A
 3. Delete the existing certificates
 
     a. netsh http delete sslcert hostnameport=fs.contoso.com:443
+    
     b. netsh http delete sslcert hostnameport=localhost:443
+    
     c. netsh http delete sslcert hostnameport=fs.contoso.com:49443
 
 4.  Add the new cert
 
-    a. netsh http add sslcert hostnameport=fs.contoso.com:443 certhash=CERTTHUMBPRINT appid={5d89a20c-beab-4389-9447-324788eb944a} certstorename=MY sslctlstorename=AdfsTrustedDevices
+    a. netsh http add sslcert hostnameport=fs.contoso.com:443 certhash=THUMBPRINT appid="{5d89a20c-beab-4389-9447-324788eb944a}" certstorename=My verifyclientcertrevocation=Enable sslctlstorename=AdfsTrustedDevices
 
-    b. netsh http add sslcert hostnameport=localhost:443 certhash=CERTTHUMBPRINT appid={5d89a20c-beab-4389-9447-324788eb944a} certstorename=MY sslctlstorename=AdfsTrustedDevices
+    b. netsh http add sslcert hostnameport=localhost:443 certhash=THUMBPRINT appid="{5d89a20c-beab-4389-9447-324788eb944a}" certstorename=My verifyclientcertrevocation=Enable
 
-    c. netsh http add sslcert hostnameport=fs.contoso.com:49443 certhash=CERTTHUMBPRINT appid={5d89a20c-beab-4389-9447-324788eb944a} certstorename=MY sslctlstorename=AdfsTrustedDevices
+    c. netsh http add sslcert hostnameport=fs.contoso.com:49443 certhash=THUMBPRINT appid="{5d89a20c-beab-4389-9447-324788eb944a}" certstorename=My verifyclientcertrevocation=Enable clientcertnegotiation=Enable
+
 
 5. Restart ADFS service on the selected server
 6. Remove subset of WAP servers for maintenance
