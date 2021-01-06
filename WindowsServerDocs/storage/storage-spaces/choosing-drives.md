@@ -1,7 +1,7 @@
 ---
-description: "Learn more about: Choosing drives for Storage Spaces Direct"
-ms.assetid: 1368bc83-9121-477a-af09-4ae73ac16789
 title: Choosing drives for Storage Spaces Direct
+description: Learn more about how to choose drives for Storage Spaces Direct.
+ms.assetid: 1368bc83-9121-477a-af09-4ae73ac16789
 ms.author: cosdar
 manager: eldenc
 ms.topic: article
@@ -9,9 +9,10 @@ author: cosmosdarwin
 ms.date: 07/01/2020
 ms.localizationpriority: medium
 ---
+
 # Choosing drives for Storage Spaces Direct
 
->Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides guidance on how to choose drives for [Storage Spaces Direct](storage-spaces-direct-overview.md) to meet your performance and capacity requirements.
 
@@ -19,40 +20,12 @@ This topic provides guidance on how to choose drives for [Storage Spaces Direct]
 
 Storage Spaces Direct currently works with four types of drives:
 
-<table>
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/pmem-100px.png" alt="Image of PMem (persistent memory)">
-		</td>
-		<td style="padding: 10px; border: 0;" valign="middle">
-			<b>PMem</b> refers to persistent memory, a new type of low latency, high performance storage.
-		</td>
-	</tr>
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/NVMe-100px.png" alt="Image of NVMe (Non-Volatile Memory Express)">
-		</td>
-		<td style="padding: 10px; border: 0;" valign="middle">
-			<b>NVMe</b> (Non-Volatile Memory Express) refers to solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2, PCIe Add-In-Card (AIC), and M.2. NVMe offers higher IOPS and IO throughput with lower latency than any other type of drive we support today except persistent memory.
-		</td>
-	</tr>
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width:70px" >
-			<img src="media/understand-the-cache/SSD-100px.png" alt="Image of SSD drive">
-		</td>
-		<td style="padding: 10px; border: 0;" valign="middle">
-			<b>SSD</b> refers to solid-state drives which connect via conventional SATA or SAS.
-		</td>
-	</tr>
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/HDD-100px.png" alt="Image of HDD">
-		</td>
-		<td style="padding: 10px; border: 0;" valign="middle">
-			<b>HDD</b> refers to rotational, magnetic hard disk drives which offer vast storage capacity.
-		</td>
-	</tr>
-</table>
+| Type of drive | Description |
+| --- | --- |
+| :::image type="content" source="media/understand-the-cache/pmem-100px.png" alt-text="Image of PMem (persistent memory)"::: | **Persistent memory.** A new type of low-latency, high-performance storage. |
+| :::image type="content" source="media/understand-the-cache/NVMe-100px.png" alt-text="Image of NVMe (Non-Volatile Memory Express)"::: | **NVMe (Non-Volatile Memory Express).** Solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2, PCIe Add-In-Card (AIC), and M.2. NVMe offers higher IOPS and IO throughput with lower latency than any other type of drive we support today except persistent memory. |
+| :::image type="content" source="media/understand-the-cache/SSD-100px.png" alt-text="Image of SSD drive)"::: | **SSD.** Solid-state drives which connect via conventional SATA or SAS. |
+| :::image type="content" source="media/understand-the-cache/HDD-100px.png" alt-text="Image of HDD)"::: | **HDD.** Rotational, magnetic hard disk drives which offer vast storage capacity. |
 
 ## Built-in cache
 
@@ -66,7 +39,7 @@ To achieve predictable and uniform sub-millisecond latency across random reads a
 
 There are currently three ways to do so:
 
-![All-Flash-Deployment-Possibilities](media/choosing-drives-and-resiliency-types/All-Flash-Deployment-Possibilities.png)
+![All-flash deployment options to maximize performance](media/choosing-drives-and-resiliency-types/All-Flash-Deployment-Possibilities.png)
 
 1. **All NVMe.** Using all NVMe provides unmatched performance, including the most predictable low latency. If all your drives are the same model, there is no cache. You can also mix higher-endurance and lower-endurance NVMe models, and configure the former to cache writes for the latter ([requires set-up](understand-the-cache.md#manual-configuration)).
 
@@ -74,14 +47,14 @@ There are currently three ways to do so:
 
 3. **All SSD.** As with All-NVMe, there is no cache if all your drives are the same model. If you mix higher-endurance and lower-endurance models, you can configure the former to cache writes for the latter ([requires set-up](understand-the-cache.md#manual-configuration)).
 
-   >[!NOTE]
-   > An advantage to using all-NVMe or all-SSD with no cache is that you get usable storage capacity from every drive. There is no capacity "spent" on caching, which may be appealing at smaller scale.
+	> [!NOTE]
+	> An advantage to using all-NVMe or all-SSD with no cache is that you get usable storage capacity from every drive. There is no capacity "spent" on caching, which may be appealing at smaller scale.
 
 ## Option 2 – Balancing performance and capacity
 
 For environments with a variety of applications and workloads, some with stringent performance requirements and others requiring considerable storage capacity, you should go "hybrid" with either NVMe or SSDs caching for larger HDDs.
 
-![Hybrid-Deployment-Possibilities](media/choosing-drives-and-resiliency-types/Hybrid-Deployment-Possibilities.png)
+![Hybrid deployment options for balancing performance and capacity](media/choosing-drives-and-resiliency-types/Hybrid-Deployment-Possibilities.png)
 
 1. **NVMe + HDD**. The NVMe drives will accelerate reads and writes by caching both. Caching reads allows the HDDs to focus on writes. Caching writes absorbs bursts and allows writes to coalesce and be de-staged only as needed, in an artificially serialized manner that maximizes HDD IOPS and IO throughput. This provides NVMe-like write characteristics, and for frequently or recently read data, NVMe-like read characteristics too.
 
@@ -91,8 +64,8 @@ For environments with a variety of applications and workloads, some with stringe
 
 3. **NVMe + SSD + HDD.** With drives of all three types, the NVMe drives cache for both the SSDs and HDDs. The appeal is that you can create volumes on the SSDs, and volumes on the HDDs, side-by-side in the same cluster, all accelerated by NVMe. The former are exactly as in an "all-flash" deployment, and the latter are exactly as in the "hybrid" deployments described above. This is conceptually like having two pools, with largely independent capacity management, failure and repair cycles, and so on.
 
-   >[!IMPORTANT]
-   > We recommend using the SSD tier to place your most performance-sensitive workloads on all-flash.
+	> [!IMPORTANT]
+	> We recommend using the SSD tier to place your most performance-sensitive workloads on all-flash.
 
 ## Option 3 – Maximizing capacity
 
