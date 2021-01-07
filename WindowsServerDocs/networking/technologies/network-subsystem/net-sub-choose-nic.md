@@ -1,6 +1,6 @@
 ---
 title: Choosing a Network Adapter
-description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
+description: Learn how to learn some of the features of network adapters that might affect your purchasing choices.
 ms.topic: article
 ms.assetid: a6615411-83d9-495f-8a6a-1ebc8b12f164
 manager: dcscontentpm

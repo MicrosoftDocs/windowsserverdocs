@@ -1,6 +1,6 @@
 ---
 title: Create an Access Policy
-description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+description: Learn how to create an access policy in the IPAM client console.
 manager: brianlic
 ms.topic: article
 ms.assetid: 854bd064-2f86-4678-a940-a04b3e48ae10
