@@ -54,7 +54,7 @@ Depending on the requirements of your organization, use one of the following pro
 | Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient |
 |                  X.509\-based authentication that does not use TLS                  |   https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509    |
 
-![Screenshot that shows where to select Finish when you create a rule by using the Send Group Membership as Claims rule template.](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth2.PNG)
+![Screenshot that shows where to select Finish when you create a rule by using the Send Group Membership as Claims rule template in Windows Server 2016.](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth2.PNG)
 
 ## To create by using the Send Group Membership as Claims rule template on a Claims Provider Trust in Windows Server 2016
 

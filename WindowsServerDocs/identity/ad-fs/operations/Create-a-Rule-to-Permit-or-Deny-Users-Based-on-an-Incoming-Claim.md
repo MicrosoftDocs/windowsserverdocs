@@ -31,7 +31,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 ![Screenshot that highlights the Add Access Control Policy menu option.](media/Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim/permitdeny4.PNG)
 
 4. In the name box, enter a name for your policy, a description and click **Add**.
-![Screenshot that shows where to add an Access Control Policy.](media/Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim/permitdeny5.PNG)
+![Screenshot that shows where to add an Access Control Policy when you create a rule to permit users based on an incoming claim on Windows Server 2016.](media/Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim/permitdeny5.PNG)
 
 5. On the **Rule Editor**, under users, place a check in **with specific claims in the request** and click the underlined **specific** at the bottom.
 ![Screenshot that highlights where to select the underlined specific.](media/Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim/permitdeny6.PNG)
