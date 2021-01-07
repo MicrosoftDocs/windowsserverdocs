@@ -289,7 +289,6 @@ On WAP servers you can still use Set-WebApplicationProxySslCertificate. On the A
 
     c. netsh http add sslcert hostnameport=fs.contoso.com:49443 certhash=THUMBPRINT appid="{5d89a20c-beab-4389-9447-324788eb944a}" certstorename=My verifyclientcertrevocation=Enable clientcertnegotiation=Enable
 
-
 5. Restart ADFS service on the selected server
 6. Remove subset of WAP servers for maintenance
 7. On the selected WAP servers, import the new certificate via MMC
