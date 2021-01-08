@@ -1,6 +1,6 @@
 ---
 title: Install the Web Server WEB1
-description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+description: Learn how to install the Web Server (IIS) server role.
 manager: brianlic
 ms.topic: article
 ms.assetid: f51c9e38-98bb-49c1-9d39-427d07021499

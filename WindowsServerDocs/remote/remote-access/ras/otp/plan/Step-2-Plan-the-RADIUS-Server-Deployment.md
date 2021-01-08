@@ -1,6 +1,6 @@
 ---
 title: Step 2 Plan the RADIUS Server Deployment
-description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
+description: Learn how to plan for the one-time password (OTP) authentication server.
 manager: brianlic
 ms.topic: article
 ms.assetid: 2d6ad863-02a5-49b0-9aff-d189e78b2b80

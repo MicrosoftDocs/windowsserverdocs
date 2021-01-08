@@ -1,6 +1,6 @@
 ---
 title: Add a DNS Resource Record
-description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+description: Learn how to add one or more new DNS resource records by using the IPAM client console.
 manager: brianlic
 ms.topic: article
 ms.assetid: 5379373f-a3d9-4f51-b6fc-bf0f6df1d244

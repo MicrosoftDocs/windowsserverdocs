@@ -1,6 +1,6 @@
 ---
 title: Server Certificate Deployment Planning
-description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+description: Learn how to plan for your server certificate deployment.
 manager: brianlic
 ms.topic: article
 ms.assetid: 7eb746e0-1046-4123-b532-77d5683ded44

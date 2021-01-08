@@ -1,6 +1,6 @@
 ---
 title: Network Subsystem Performance Tuning
-description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
+description: Learn about the network subsystem and for links to other topics in this guide.
 ms.topic: article
 ms.assetid: 45217fce-bfb9-47e8-9814-88ffdb3c7b7d
 manager: dcscontentpm

@@ -1,6 +1,6 @@
 ---
 title: Install the Certification Authority
-description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+description: Learn how to install Active Directory Certificate Services so that you can enroll a server certificate to servers that are running Network Policy Server, Routing and Remote Access Service, or both.
 manager: brianlic
 ms.topic: article
 ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
