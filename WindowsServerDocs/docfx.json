@@ -92,6 +92,15 @@
     "template": [
       "docs.html"
     ],
+
+    "rules": {
+      "sensitive-language": {
+        "exclude": [
+          "administration/windows-commands/dnscmd.md"
+        ]
+      }
+    },
+
     "dest": "windows-server"
-    }
   }
+}
