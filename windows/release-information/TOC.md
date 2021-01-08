@@ -9,9 +9,6 @@
 # Version 1909
 ## [Known issues and notifications](status-windows-10-1909.md)
 ## [Resolved issues](resolved-issues-windows-10-1909.md)
-# Version 1903
-## [Known issues and notifications](status-windows-10-1903.md)
-## [Resolved issues](resolved-issues-windows-10-1903.md)
 # Version 1809 and Windows Server 2019
 ## [Known issues and notifications](status-windows-10-1809-and-windows-server-2019.md)
 ## [Resolved issues](resolved-issues-windows-10-1809-and-windows-server-2019.md)
