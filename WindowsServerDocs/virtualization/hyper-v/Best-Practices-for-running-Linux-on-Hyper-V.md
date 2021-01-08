@@ -48,7 +48,7 @@ Additionally, on RHEL/CentOS 6.6 keyboard and mouse input will not work with the
 
 * In the **efidefault** file on the PxE server, add the following kernel parameter **"console=ttyS1"**
 
-* On the VM in Hyper-V, setup a COM port using this PowerShell cmdlet:
+* On the VM in Hyper-V, set up a COM port using this PowerShell cmdlet:
 
 ```Powershell
 Set-VMComPort -VMName <Name> -Number 2 -Path \\.\pipe\dbg1
