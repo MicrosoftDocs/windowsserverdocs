@@ -6,13 +6,13 @@ author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
 ---
-# IaaS with SQL Server Always On - Tuning Failover Cluster Network Thresholds
+# IaaS with SQL Server - Tuning Failover Cluster Network Thresholds
 
 This article introduces solutions for adjusting the threshold of failover cluster networks.
 
 ## Symptom
 
-When running Windows Failover Cluster nodes in IaaS with SQL Server Always On availability group, changing the cluster setting to a more relaxed monitoring state is recommended. Cluster settings out of the box are restrictive and could cause unneeded outages. The default settings are designed for highly tuned on premises networks and do not take into account the possibility of induced latency caused by a multi-tenant environment such as Windows Azure (IaaS).
+When running Windows Failover Cluster nodes in IaaS with a SQL Server Always On availability group, changing the cluster setting to a more relaxed monitoring state is recommended. Cluster settings out of the box are restrictive and could cause unneeded outages. The default settings are designed for highly tuned on premises networks and do not take into account the possibility of induced latency caused by a multi-tenant environment such as Windows Azure (IaaS).
 
 Windows Server Failover Clustering is constantly monitoring the network connections and health of the nodes in a Windows Cluster.  If a node is not reachable over the network, then recovery action is taken to recover and bring applications and services online on another node in the cluster. Latency in communication between cluster nodes can lead to the following error:
 
