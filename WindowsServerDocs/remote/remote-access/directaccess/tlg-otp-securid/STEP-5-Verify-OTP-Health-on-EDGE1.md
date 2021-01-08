@@ -1,6 +1,6 @@
 ---
 title: STEP 5 Verify OTP Health on EDGE1
-description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID for Windows Server 2016
+description: Learn how to verify that OTP is configured and functioning correctly using DirectAccess Server Health Monitoring on EDGE1.
 manager: brianlic
 ms.topic: article
 ms.assetid: 013df067-e2a0-4cd5-a08b-29238663ebf8
