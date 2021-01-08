@@ -1,6 +1,6 @@
 ---
 title: Performance Tuning Network Adapters
-description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
+description: Learn how to tune the performance network adapters for computers that are running Windows Server 2016 and later versions.
 audience: Admin
   - CI ID 111485
   - CSSTroubleshoot

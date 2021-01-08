@@ -1,6 +1,6 @@
 ---
 title: Step 1 Plan the Remote Access Infrastructure
-description: This topic is part of the guide Manage DirectAccess Clients Remotely in Windows Server 2016.
+description: Learn about the steps for planning an infrastructure that you can use to set up a single Remote Access server for remote management of DirectAccess clients.
 manager: brianlic
 ms.topic: article
 ms.assetid: a1ce7af5-f3fe-4fc9-82e8-926800e37bc1

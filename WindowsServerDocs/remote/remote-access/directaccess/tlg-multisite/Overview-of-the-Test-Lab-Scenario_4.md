@@ -1,6 +1,6 @@
 ---
 title: Overview of the Test Lab Scenario
-description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
+description: Learn about what DirectAccess is deployed with and the four subnets that make up the the test lab.
 manager: brianlic
 ms.topic: article
 ms.assetid: 9afeced4-1a9b-4cb3-9fc4-d7e44c675755
