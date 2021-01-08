@@ -1,6 +1,6 @@
 ---
 title: Monitor the configuration distribution status of the Remote Access server
-description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
+description: Learn how to use the monitoring dashboard to monitor the configuration distribution status of the Remote Access server.
 manager: brianlic
 ms.topic: article
 ms.assetid: de285d13-9e54-4c46-88f0-607182e5e3dc
