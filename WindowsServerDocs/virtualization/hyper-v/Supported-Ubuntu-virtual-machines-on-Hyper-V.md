@@ -5,11 +5,11 @@ ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 08/29/2020
+ms.date: 01/08/2021
 ---
 # Supported Ubuntu virtual machines on Hyper-V
 
->Applies To: Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+>Applies To: Azure Stack HCI, version 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 The following feature distribution map indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.
 
