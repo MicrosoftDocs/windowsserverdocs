@@ -28,11 +28,11 @@ WindowsIntegratedFallbackEnabled  : True
 Set-AdfsAuthenticationProviderWebContent -Name CertificateAuthentication -DisplayName "Sign in with a certificate"
  ```
 
-![customize displayname](media/AD-FS-user-sign-in-customization/ADFS_Customize_Update2.PNG)
+![Screenshot that shows how to get the name of the authentication method and edit the displayed text.](media/AD-FS-user-sign-in-customization/ADFS_Customize_Update2.PNG)
 
 Now we see that our display message has changed.
 
-![customize displayname](media/AD-FS-user-sign-in-customization/ADFS_Customize_Update3.PNG)
+![Screenshot that shows that the display message has changed.](media/AD-FS-user-sign-in-customization/ADFS_Customize_Update3.PNG)
 
 ## Additional references
 

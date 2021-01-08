@@ -54,7 +54,7 @@ Because of the important role that the AD FS configuration database plays, it i
 
 When you add a federation server to the farm, the new computer that will become a secondary federation server connects to the primary federation server to replicate the copy of the AD FS configuration database. From this point forward, the new federation server continues to pull updates from the primary federation server on a regular basis, as shown in the following illustration.
 
-![AD FS roles](media/adfs2_WID.png)
+![Illustration that shows the new federation server continues to pull updates from the primary federation server on a regular basis.](media/adfs2_WID.png)
 
 Each secondary federation server polls the primary federation server every five minutes for changes. You can adjust this default five\-minute value or force an immediate synchronization anytime by using a Windows PowerShell cmdlet. For more information about how to do this, see [AD FS Administration with Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=179634).
 

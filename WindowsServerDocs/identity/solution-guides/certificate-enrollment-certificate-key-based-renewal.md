@@ -127,7 +127,7 @@ This command installs the Certificate Enrollment Web Service (CES) to use the ce
 ##### Step 2 Check the Internet Information Services (IIS) Manager console
 
 After a successful installation, you expect to see the following display in the Internet Information Services (IIS) Manager console.
-![IIS manager](media/certificate-enrollment-certificate-key-based-renewal-4.png)
+![Screenshot that shows the Internet Information Services Manager console.](media/certificate-enrollment-certificate-key-based-renewal-4.png)
 
 Under **Default Web Site**, select **ADPolicyProvider_CEP_UsernamePassword**, and then open **Application Settings**. Note the **ID** and the **URI**.
 
