@@ -1,6 +1,6 @@
 ---
 title: STEP 4 Configure APP1
-description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
+description: Learn how to configure the default gateway and DNS server.
 manager: brianlic
 ms.topic: article
 ms.assetid: 7000e80f-31b1-43c5-b51e-1469d26909e5

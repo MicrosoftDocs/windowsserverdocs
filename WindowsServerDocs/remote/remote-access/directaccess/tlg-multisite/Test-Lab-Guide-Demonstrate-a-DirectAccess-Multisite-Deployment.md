@@ -1,6 +1,6 @@
 ---
 title: Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment
-description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
+description: Learn about extending the Test Lab Guide - Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6 to demonstrate Remote Access in a multisite scenario.
 manager: brianlic
 ms.topic: article
 ms.assetid: 3c98106c-67cc-406a-810e-f2e09f7e2c5e

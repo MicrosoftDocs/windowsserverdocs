@@ -1,6 +1,6 @@
 ---
 title: STEP 1 Complete the DirectAccess in a Cluster with Windows NLB Configuration
-description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB for Windows Server 2016
+description: Learn about completing the steps in the Demonstrate DirectAccess Single Server Setup with Mixed IPv4 and IPv6 test lab guide.
 manager: brianlic
 ms.topic: article
 ms.assetid: e1e15544-b575-4f39-af0b-771bfae8b0b7
