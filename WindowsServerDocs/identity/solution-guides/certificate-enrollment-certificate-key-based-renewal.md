@@ -245,16 +245,16 @@ On the client computer, set up the Enrollment policies and Auto-Enrollment polic
    b. For **Authentication type**, select **Username/password**.
 
    c. Set a priority of **10**, and  then validate the policy server.
-      ![Enrollment Policy](media/certificate-enrollment-certificate-key-based-renewal-10.png)
+      ![Screenshot that shows where to set the priority.](media/certificate-enrollment-certificate-key-based-renewal-10.png)
 
    > [!Note]
    > Make sure that the port number is added to the URI and is allowed on the firewall.
 
 5. Enroll the first certificate for the computer through certlm.msc.
-   ![Enrollment Policy](media/certificate-enrollment-certificate-key-based-renewal-11.png)
+   ![Screenshot that shows where to select the certificate enrollment policy.](media/certificate-enrollment-certificate-key-based-renewal-11.png)
 
    Select the KBR template and enroll the certificate.
-   ![Enrollment Policy](media/certificate-enrollment-certificate-key-based-renewal-12.png)
+   ![Screenshot that shows where to select the K B R template.](media/certificate-enrollment-certificate-key-based-renewal-12.png)
 
 6. Open **gpedit.msc** again. Edit the **Certificate Services Client – Certificate Enrollment Policy**, and then add the key-based renewal enrollment policy:
 
@@ -281,7 +281,7 @@ Run the following command:
 certreq -machine -q -enroll -cert <thumbprint> renew
 ```
 
-![command](media/certificate-enrollment-certificate-key-based-renewal-14.png)
+![Screenshot that shows how to run the provided command.](media/certificate-enrollment-certificate-key-based-renewal-14.png)
 
 ### Method 2
 

@@ -174,7 +174,7 @@ Synchronous replication
 1. Application writes data
 2. Log data is written and the data is replicated to the remote site
 3. Log data is written at the remote site
-4. Acknowledgement from the remote site
+4. Acknowledgment from the remote site
 5. Application write acknowledged
 
 t & t1 : Data flushed to the volume, logs always write through

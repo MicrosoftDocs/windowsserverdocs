@@ -95,7 +95,7 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 2.  In the console tree, under **AD FS\\Trust Relationships**, click either **Claims Provider Trusts** or **Relying Party Trusts**, and then click a specific trust in the list where you want to create this rule.
 
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.
-![Screenshot that shows where to select Edit Claim Rules when you create a rule to transform an incoming claim in Windows Server 2012 R2.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
+![Screenshot that shows where to select Edit Claim Rules when you create a rule in Windows Server 2012 R2.](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule6.PNG)
 
 4.  In the **Edit Claim Rules** dialog box, select one the following tabs, which depends on the trust that you are editing and in which rule set you want to create this rule, and then click **Add Rule** to start the rule wizard that is associated with that rule set:
 
