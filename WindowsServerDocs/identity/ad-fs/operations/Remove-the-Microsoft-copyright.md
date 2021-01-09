@@ -14,7 +14,7 @@ ms.topic: article
 
 By default, the AD FS pages contain the Microsoft copyright. To remove this copyright from your customized pages, you can use the following procedure.
 
-![remove copyright](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1.png)
+![Screenshot that shows the login page for with the copyright at the bottom.](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1.png)
 
 ## To remove the Microsoft copyright
 
