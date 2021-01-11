@@ -114,7 +114,7 @@ To enable authenticated communication with the HCP services, we need to create 3
 
     ![AAD API Permission 4](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-ECP-Add.png)
 
-    - Once returned to the API permissions blade, wait 10 seconds before clicking on **Grand admin consent...**.
+    - Once returned to the API permissions blade, wait 10 seconds before clicking on **Grant admin consent...**.
 
     ![AAD API Permission 5](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-GrantConsent.png)
 
