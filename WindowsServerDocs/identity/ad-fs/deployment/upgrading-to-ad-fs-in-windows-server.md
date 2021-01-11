@@ -1,7 +1,7 @@
 ---
-description: "Learn more about: Upgrading to AD FS in Windows Server 2016 using a WID database"
+description: "Learn more about: Upgrading to AD FS in Windows Server 2016/2019 using a WID database"
 ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
-title: Upgrading to AD FS in Windows Server 2016
+title: Upgrading to AD FS in Windows Server 2016/2019
 author: billmath
 manager: femila
 ms.date: 04/09/2018
