@@ -1,6 +1,6 @@
 ---
 title: Authentication Policies and Authentication Policy Silos
-description: Windows Server Security
+description: Learn about authentication policy silos and the policies that can restrict accounts to those silos.
 ms.topic: article
 ms.assetid: 7eb0e640-033d-49b5-ab44-3959395ad567
 ms.author: lizross

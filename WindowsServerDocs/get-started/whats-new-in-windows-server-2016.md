@@ -1,6 +1,6 @@
 ---
 title: What's New in Windows Server 2016
-description: What are the new features in compute, identity, management, automation, networking, security, storage.
+description: What are the new features in compute, identity, management, automation, networking, security, and storage in Windows Server 2016.
 ms.date: 05/21/2019
 ms.topic: article
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
@@ -86,7 +86,7 @@ Windows Server 2016 and Windows 10 includes a new PackageManagement feature (for
 For more info, see [https://github.com/OneGet/oneget/wiki](https://github.com/OneGet/oneget/wiki).
 
 ### PowerShell enhancements to assist digital forensics and help reduce security breaches
-To help the team responsible for investigating comprimised systems - sometimes known as the "blue team" - we've added additional PowerShell logging and other digital forensics functionality, and we've added functionality to help reduce vulnerabilities in scripts, such as constrained PowerShell, and secure CodeGeneration APIs.
+To help the team responsible for investigating compromised systems - sometimes known as the "blue team" - we've added additional PowerShell logging and other digital forensics functionality, and we've added functionality to help reduce vulnerabilities in scripts, such as constrained PowerShell, and secure CodeGeneration APIs.
 
 For more info, see [PowerShell ♥ the Blue Team](https://devblogs.microsoft.com/powershell/powershell-the-blue-team/).
 
@@ -99,7 +99,7 @@ You can now both mirror and route traffic to new or existing virtual appliances.
 ### TCP performance improvements
 The default Initial Congestion Window (ICW) has been increased from 4 to 10 and TCP Fast Open (TFO) has been implemented. TFO reduces the amount of time required to establish a TCP connection and the increased ICW allows larger objects to be transferred in the initial burst. This combination can significantly reduce the time required to transfer an Internet object between the client and the cloud.
 
-In order to improve TCP behavior when recovering from packet loss we have implemented TCP Tail Loss Probe (TLP) and Recent Acknowledgement (RACK). TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet. 
+In order to improve TCP behavior when recovering from packet loss we have implemented TCP Tail Loss Probe (TLP) and Recent Acknowledgment (RACK). TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet. 
 
 ## [Security and Assurance](../security/Security-and-Assurance.yml)
 Includes security solutions and features for the IT professional to deploy in your datacenter and cloud environment. For information about security in Windows Server 2016 generally, see [Security and Assurance](../security/Security-and-Assurance.yml).

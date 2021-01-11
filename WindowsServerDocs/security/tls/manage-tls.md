@@ -1,6 +1,6 @@
 ---
 title: Manage Transport Layer Security (TLS)
-description: Windows Server Security
+description: Learn how to manage the Transport Layer Security.
 ms.topic: article
 author: justinha
 ms.author: justinha
