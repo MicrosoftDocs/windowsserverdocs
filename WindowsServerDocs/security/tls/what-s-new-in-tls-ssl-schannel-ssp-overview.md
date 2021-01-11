@@ -1,6 +1,6 @@
 ---
 title:  TLS - SSL (Schannel SSP) Overview
-description: Windows Server Security
+description: Learn about the changes in functionality in the Schannel Security Support Provider (SSP).
 ms.topic: article
 ms.assetid: c8836345-16bb-4dcc-8d2b-2b9b687456a3
 author: justinha
