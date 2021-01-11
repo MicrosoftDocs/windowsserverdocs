@@ -17,7 +17,7 @@ While the claims pipeline is more a logical concept of the end\-to\-end process 
 
 As shown in the following illustration, the act of accepting incoming claims \(acceptance rules\), authorizing claims requesters \(authorization rules\) and issuing outgoing claims \(issuance rules\) through claim rules across all of the federated trust relationships in your organization is performed by the claims engine.
 
-![AD FS roles](media/adfs2_enginepipeline.gif)
+![Illustration that shows the processes performed by the claims engine.](media/adfs2_enginepipeline.gif)
 
 ## Claim rules execution process
 When you configure a claims provider trust or relying party trust in your organization with claim rules, the claim rule set\(s\) for that trust act as a gatekeeper for incoming claims by invoking the claims engine to apply the necessary logic in the claim rules to determine whether to issue any claims and which claims to issue.
@@ -40,7 +40,7 @@ The input claim set is created by the claims engine when it needs to temporarily
 
 For example, in the illustration below, the claims engine reads the claims of A and B from the incoming claims and copies them to the input claim set. After they are in the input claim set, the claims engine retrieves and processes claims A and B as input for the logic in the first rule in the claim rule set.
 
-![AD FS roles](media/adfs2_context1.gif)
+![Illustration that shows that the claims engine reads the claims of A and B from the incoming claims and copies them to the input claim set.](media/adfs2_context1.gif)
 
 All the rules in a claim rule set share the same input claim set. Each rule in that set can add to the shared input claim set, thus affecting all subsequent rules in the set.
 
@@ -65,7 +65,7 @@ If the *add* statement is used, the claims are added to just the input claim set
 
 If the condition part of a rule within a rule set does not match any claims in the input claim set, the issuance statement part of the rule is ignored and thus no claims are added to either the output claim set or to the input claim set. The following illustration and corresponding steps show what happens when the claims engine executes a transform rule:
 
-![AD FS roles](media/adfs2_context2.gif)
+![Illustration that shows what happens when the claims engine executes a transform rule.](media/adfs2_context2.gif)
 
 1.  Incoming claims are added to the input claim set by the claims engine.
 
@@ -99,7 +99,7 @@ If the claim rule set that is being executed during step 2 of the claim rules ex
 
 The goal of authorization rules is to issue a permit or deny claim based on whether the user is to be allowed to obtain a token for the given relying party or not. As shown in the following illustration, the output of the authorization execution is used by the pipeline to determine whether the issuance rule set is executed or not—based on presence or absence of the permit and\/or deny claim—but the authorization execution output itself is not used as an input to the claim rule set.
 
-![AD FS roles](media/adfs2_authorization.gif)
+![Illustration that shows the output of the authorization execution is used by the pipeline to determine whether the issuance rule set is executed or not.](media/adfs2_authorization.gif)
 
 For more information about claims authorization, see [When to Use an Authorization Claim Rule](When-to-Use-an-Authorization-Claim-Rule.md).
 

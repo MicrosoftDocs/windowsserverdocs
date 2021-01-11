@@ -47,11 +47,11 @@ A central access policy rule has the following logical parts:
 
 The following two figures show the workflow in central access and audit policies.
 
-![solution guides](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide.JPG)
+![Diagram that shows the central access and audit policy concepts.](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide.JPG)
 
 **Figure 1** Central access and audit policy concepts
 
-![solution guides](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide_2.JPG)
+![Diagram that shows the central access policy workflow.](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide_2.JPG)
 
 **Figure 2** Central access policy workflow
 
