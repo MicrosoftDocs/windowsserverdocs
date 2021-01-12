@@ -31,14 +31,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 - Added support for proxies that require authentication for feed subscription.
 - The client now shows a notification with an option to retry if an update didn't successfully download.
 
-## Updates for version 1.2.1526
-
-*Date published: 12/15/2020*
-
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
-
-- Added support for the screen capture protection feature for Windows 10 endpoints. To learn more, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices).
-
 ## Updates for version 1.2.1525
 
 *Date published: 12/01/2020*
