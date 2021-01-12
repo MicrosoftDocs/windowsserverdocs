@@ -38,9 +38,9 @@ From PowerShell (elevated), run:
 #### Using SQL Management Studio
 
 1. Right-click **SUSDB** -&gt; **Tasks** -&gt; click **Detach**:
-    ![image1](images/image1.png)
+    ![Screenshot of SQL Server Management Studio showing the SUSDB > Tasks > Detach option selected.](images/image1.png)
 2. Check **Drop Existing Connections** and click **OK** (optional, if active connections exist).
-    ![image2](images/image2.png)
+    ![Screenshot of the Detach Database dialog box with the Drop Existing Connections option selected and the OK option highlighted.](images/image2.png)
 
 #### Using Command Prompt
 
@@ -69,10 +69,10 @@ From PowerShell (elevated), run:
 ### Attach SUSDB to the SQL Instance
 
 1. In **SQL Server Management Studio**, under the **Instance** node, right-click **Databases**, and then click **Attach**.
-    ![image3](images/image3.png)
+    ![Screenshot of SQL Server Management Studio showing the Databases > Attach option selected.](images/image3.png)
 2. In the **Attach Databases** box, under **Databases to attach**, click the **Add** button and locate the **SUSDB.mdf** file (copied from the WID Folder), and then click **OK**.
-    ![image4](images/image4.png)
-    ![image5](images/image5.png)
+    ![Screenshot of the Attach Databases dialog box with the Add option highlighted.](images/image4.png)
+    ![Screenshot of the Locate Database Files dialog box with the S U S D B M D F file highlighted.](images/image5.png)
 
 > [!TIP]
 > This is also able to be done using Transact-Sql.  Please see the [SQL documentation for attaching a database](/sql/relational-databases/databases/attach-a-database) for its instructions.
@@ -108,21 +108,21 @@ The **NT AUTHORITY\NETWORK SERVICE** account should be listed. If it is not, you
 ##### Adding NT AUTHORITY\NETWORK SERVICE and granting it rights
 
 1. Right Click **Logins** and click **New Login…**
-    ![image6](images/image6.png)
+    ![Screenshot of SQL Server Management Studio showing the Logins > New Login option selected.](images/image6.png)
 2. On the **General** page, fill out the **Login name** (**NT AUTHORITY\NETWORK SERVICE**), and set the **Default database** to SUSDB.
-    ![image7](images/image7.png)
+    ![Screenshot of the General page of the Login dialog box showing the Login name and Defualt database fields populated.](images/image7.png)
 3. On the **Server Roles** page, ensure **public** and **sysadmin** are selected.
-    ![image8](images/image8.png)
+    ![Screenshot of the Server Roles page of the Login dialog box showing the public and sysadmin options selected.](images/image8.png)
 4. On the **User Mapping** page:
     - Under **Users mapped to this login**: select **SUSDB**
     - Under **Database role membership for: SUSDB**, ensure the following are checked:
         - **public**
         - **webService**
-            ![image9](images/image9.png)
+            ![Screenshot of the User Mapping page of the Login dialog box showing the public and webService options selected.](images/image9.png)
 5. Click **OK**
 
 You should now see **NT AUTHORITY\NETWORK SERVICE** under Logins.
-![image10](images/image10.png)
+![Screenshot of the Object Explorer showing N T AUTHORITY NETWORK SERVICE under Logins.](images/image10.png)
 
 #### Database Permissions
 
@@ -140,11 +140,11 @@ The **NT AUTHORITY\NETWORK SERVICE** account should be listed.
     > [!TIP]
     > In the following example, the FQDN is **Contosto.com** and the WSUS machine name is **WsusMachine**:
     >
-    > ![image11](images/image11.png)
+    > ![Screenshot of the Login dialog box showing that the FQDN is Contosto.com** and the W S U S machine name is W s u s Machine.](images/image11.png)
 
 4. On the **User Mapping** page, select the **SUSDB** Database under **Users mapped to this login**
 5. Check **webservice** under the **Database role membership for: SUSDB**:
-    ![image12](images/image12.png)
+    ![Screenshot of the User Mapping page of the Login dialog box showing the SUSDB and webService options selected.](images/image12.png)
 6. Click  **OK** to save settings.
     > [!NOTE]
     > You may need to restart the SQL Service for the changes to take effect.
@@ -158,9 +158,9 @@ The **NT AUTHORITY\NETWORK SERVICE** account should be listed.
 2. Locate the following key: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\UpdateServices\Server\Setup\SqlServerName**
 3. In the **Value** text box, type **[ServerName]\\[InstanceName]**, and then click **OK**. If the instance name is the default instance, type **[ServerName]**.
 4. Locate the following key: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Update Services\Server\Setup\Installed Role Services\UpdateServices-WidDatabase**
-    ![image13](images/image13.png)
+    ![Screenshot of the Registry Editor dialog box with the UpdateServices-WidDatabase key highlighted.](images/image13.png)
 5. Rename the Key to **UpdateServices-Database**
-    ![image41](images/image14.png)
+    ![Screenshot of the Registry Editor dialog box showing the key name update to UpdateServices-Database.](images/image14.png)
 
     > [!NOTE]
     > If you do not update this key, then **WsusUtil** will attempt to service the WID rather than the SQL Instance to which you have migrated.

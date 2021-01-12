@@ -63,20 +63,20 @@ Suspend-ClusterNode -Drain
 
 To do this in Failover Cluster Manager, go to **Nodes**, right-click the node, and then select **Pause** > **Drain Roles**.
 
-![Pause-Drain](media/maintain-servers/pause-drain.png)
+![Screenshot of the Failover Cluster Manager showing the Pause Drain Rolls option selected.](media/maintain-servers/pause-drain.png)
 
 All virtual machines will begin live migrating to other servers in the cluster. This can take a few minutes.
 
    > [!NOTE]
    > When you pause and drain the cluster node properly, Windows performs an automatic safety check to ensure it is safe to proceed. If there are unhealthy volumes, it will stop and alert you that it's not safe to proceed.
 
-![Safety-Check](media/maintain-servers/safety-check.png)
+![Screenshot showing an error message that says that a clustered space is in a degraded condition and that the action can't be completed..](media/maintain-servers/safety-check.png)
 
 ## Shutting down the server
 
 Once the server has completed draining, it will show as **Paused** in Failover Cluster Manager and PowerShell.
 
-![Paused](media/maintain-servers/paused.png)
+![Screenshot of the Failover Cluster Manager showing that one of the nodes is paused.](media/maintain-servers/paused.png)
 
 You can now safely restart or shut it down, just like you would normally (for example, by using the Restart-Computer or Stop-Computer PowerShell cmdlets).
 
@@ -110,7 +110,7 @@ Resume-ClusterNode –Failback Immediate
 
 To do this in Failover Cluster Manager, go to **Nodes**, right-click the node, and then select **Resume** > **Fail Roles Back**.
 
-![Resume-Failback](media/maintain-servers/resume-failback.png)
+![Screenshot of the Failover Cluster Manager showing the Resume Fail Roles Back option selected.](media/maintain-servers/resume-failback.png)
 
 ## Waiting for storage to resync
 

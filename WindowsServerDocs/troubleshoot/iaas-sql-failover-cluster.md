@@ -127,7 +127,7 @@ The **Threshold** defines the number of heartbeats, which are missed before the 
     C:\Windows\system32> get-cluster | fl *subnet*
     ```
 
-    :::image type="content" source="media/iaas-sql-failover-cluster/cmd.png" alt-text="cmd" border="false":::
+    :::image type="content" source="media/iaas-sql-failover-cluster/cmd.png" alt-text="Screenshot of the PowerShell window showing the results of the command." border="false":::
 
 ## References
 

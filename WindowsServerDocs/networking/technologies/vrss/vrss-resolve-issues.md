@@ -53,7 +53,7 @@ If you have completed all of the preparation steps and you still do not see vRSS
    - VmmqEnabled = **False**
    - VmmqEnabledRequested = **True**
 
-   ![vmmq-enabled](../../media/vmmq-enabled.png)
+   ![Screenshot of the PowerShell window showing the settings on each adapter attached to the virtual switch.](../../media/vmmq-enabled.png)
 
    **View the current settings:**
 
