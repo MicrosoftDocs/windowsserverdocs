@@ -95,10 +95,11 @@ Open the **app.js** file and change the **adalProvider.init** definition to:
 ```
     adalProvider.init(
         {
-            instance: 'https://fs.contoso.com/', // your STS URL
-            tenant: 'adfs',                      // this should be adfs
-            clientId: 'https://localhost:44326/', // your client ID of the
-            //cacheLocation: 'localStorage', // enable this for IE, as sessionStorage does not work for localhost.
+            instance: 'https://fs.contoso.com/',                // your STS URL
+            tenant: 'adfs',                                     // this should be set to adfs
+            clientId: '150ab73e-0b05-4b78-9e50-0095a992cca9',   // set this to the Client Id generated during application registration in AD FS
+            popUp: false,
+            //cacheLocation: 'localStorage',                    // enable this for IE, as sessionStorage does not work for localhost.
         },
         $httpProvider
     );
