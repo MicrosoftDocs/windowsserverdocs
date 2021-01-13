@@ -20,7 +20,7 @@ The rest of this topic explains tools and a general methodology to fix Active Di
 
 Inbound or outbound replication failure causes Active Directory objects that represent the replication topology, replication schedule, domain controllers, users, computers, passwords, security groups, group memberships, and Group Policy to be inconsistent between domain controllers. Directory inconsistency and replication failure cause either operational failures or inconsistent results, depending on the domain controller that is contacted for the operation, and can prevent the application of Group Policy and access control permissions. Active Directory Domain Services (AD DS) depends on network connectivity, name resolution, authentication and authorization, the directory database, the replication topology, and the replication engine. When the root cause of a replication problem is not immediately obvious, determining the cause among the many possible causes requires systematic elimination of probable causes.
 
-For a UI-based tool to help monitor replication and diagnose errors, see [Active Directory Replication Status Tool](https://www.microsoft.com/download/details.aspx?id=30005)
+For a UI-based tool to help monitor replication and diagnose errors, download and run the [Microsoft Support and Recovery Assistant tool](https://aka.ms/sara-adreplication) OR see [Active Directory Replication Status Tool](https://www.microsoft.com/download/details.aspx?id=30005)
 
 For a comprehensive document that describes how you can use the Repadmin tool to troubleshoot Active Directory replication is available; see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830).
 
