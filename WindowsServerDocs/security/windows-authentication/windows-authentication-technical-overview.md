@@ -1,6 +1,6 @@
 ---
 title: Windows Authentication Technical Overview
-description: Windows Server Security
+description: Find links to articles for the Windows Authentication Technical Overview.
 ms.topic: article
 ms.assetid: 286d3e41-434f-4703-9320-706d06ebda51
 ms.author: lizross
