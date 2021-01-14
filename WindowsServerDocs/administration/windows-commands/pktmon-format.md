@@ -4,7 +4,7 @@ description: Reference article for the pktmon format command.
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
-ms.date: 12/31/2020
+ms.date: 1/14/2021
 ---
 
 # pktmon format
