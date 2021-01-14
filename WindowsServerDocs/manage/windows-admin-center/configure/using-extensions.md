@@ -7,7 +7,7 @@ ms.author: jol
 ms.localizationpriority: medium
 ms.date: 08/07/2020
 ---
-# Install and Manage Extensions
+# Install and manage extensions
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
@@ -56,7 +56,7 @@ If Windows Admin Center is installed on a computer that isn't connected to the i
 2. Click on the name of the package you want to install to view the package details page.
 3. Click on the **Download** link in the top navigation bar of the package details page and download the .nupkg file for the extension.
 4. Repeat steps 2 and 3 for all the packages you want to download.
-5. Copy the package files to a file share that can be accessed from the computer Windows Admin Center is installed on, or to the local disk of the computer.
+5. Copy the package files to a file share that can be accessed from the computer Windows Admin Center is installed on, or to the local disk of the computer on which Windows Admin Center is installed.
 6. [Follow the instructions to install extensions from a different feed](#installing-extensions-from-a-different-feed).
 
 ### Downloading packages with a PowerShell script
