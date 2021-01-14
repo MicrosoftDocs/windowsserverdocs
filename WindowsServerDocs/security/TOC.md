@@ -77,6 +77,7 @@
 ## [Group Managed Service Accounts](group-managed-service-accounts/group-managed-service-accounts-overview.md)
 ### [Getting started with Group Managed Service Accounts](group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md)
 #### [Create the Key Distribution Services KDS Root Key](group-managed-service-accounts/create-the-key-distribution-services-kds-root-key.md)
+#### [Configuring Kerberos delegation for group Managed Service Accounts](group-managed-service-accounts/configure-kerberos-delegation-group-managed-service-accounts.md)
 ## [Kerberos Authentication](kerberos/kerberos-authentication-overview.md)
 ### [What's new in Kerberos authentication](kerberos/whats-new-in-kerberos-authentication.md)
 ### [Domain-joined Device Public Key Authentication](kerberos/domain-joined-device-public-key-authentication.md)
