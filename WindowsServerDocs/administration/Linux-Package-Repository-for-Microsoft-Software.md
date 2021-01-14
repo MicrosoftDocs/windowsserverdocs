@@ -47,7 +47,7 @@ Repositories can be configured automatically by installing the Linux package tha
 
  - Ubuntu 18.04 (Bionic)<p>`curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -`<p>`sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod`<p>`sudo apt-get update`
 
- - Ubuntu 20.04 (Focal)<p>`curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -`<p>`sudo apt-add-repository https://packages.microsoft.com/ubuntu/20.04/prod`<p>`sudo apt-get update`
+ - Ubuntu 20.04 (Focal)<p>`curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc`<p>`sudo apt-add-repository https://packages.microsoft.com/ubuntu/20.04/prod`<p>`sudo apt-get update`
 
 ## Manual Configuration
 
@@ -81,7 +81,7 @@ sudo rpm --import ./microsoft.asc
 curl -sSL https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/microsoft-prod.list
 
 # Install Microsoft GPG public key
-curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
 # Update package index files
 sudo apt-get update
