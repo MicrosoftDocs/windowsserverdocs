@@ -11,10 +11,10 @@ ms.date: 01/14/2021
 
 Normally when working with Kerberos delegation, you just set the Service Principal Name (SPN) either with setspn.exe command or manually with the attribute editor in Active Directory Users and Computers. Additionally, enabling **View** > **Advanced features** in Active Directory Users and Computers adds another way to configure Kerberos delegation from the **Delegation** tab of a user or a computer account.
 
-But for standalone and group Managed Service Accounts, the Delegation tab appear, even after adding SPNs to these accounts or enabling **View** > **Advanced features**.
+But for standalone and group Managed Service Accounts, the Delegation tab doesn't appear, even after adding SPNs to these accounts or enabling **View** > **Advanced features**.
 
 To configure delegation for these special accounts, you need to set the correct attributes manually. 
-There are two attributes that you need to modify for these type of accounts:
+There are two attributes that you need to modify for these accounts:
 
 - userAccountControl defines the type of delegation
 - msDS-AllowedToDelegateTo defines where the SPNs for delegation will be added
@@ -62,7 +62,7 @@ The more secure and convenient way is by using PowerShell commands to update tho
 
 Some of the easiest ways to modify attributes are by enabling **View** > **Advanced features** in Active Directory Users and Computers or by using ADSIEdit.msc.
 
-Here are the userAccountControl values that can be added for a different types of delegation. Be careful while editing this attribute value and ensure only the TRUSTED_FOR_DELEGATION or TRUSTED_TO_AUTH_FOR_DELEGATION flags are added, and other properties are not changed. Also, ensure both the flags are not added together in the userAccountControl value on a Managed Service Account.
+Here are the userAccountControl values that can be added for different types of delegation. Be careful while editing this attribute value and ensure only the TRUSTED_FOR_DELEGATION or TRUSTED_TO_AUTH_FOR_DELEGATION flags are added, and other properties are not changed. Also, ensure both the flags are not added together in the userAccountControl value on a Managed Service Account.
 
 | Delegation Types | Property flag | Value in hexadecimal | Value in decimal |
 |------------------|---------------|----------------------|------------------|
