@@ -1,11 +1,12 @@
 ---
 title: Manage Tenant Virtual Networks
-description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
+description: Learn how to manage Tenant Hyper-V Network Virtualization Virtual Networks after you have deployed Software Defined Networking.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 5905532b-626d-4b35-99a3-72a063e25809
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 08/07/2020
 ---
 # Manage Tenant Virtual Networks
 

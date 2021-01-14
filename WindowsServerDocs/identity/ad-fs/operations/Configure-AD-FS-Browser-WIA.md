@@ -4,7 +4,7 @@ description: This document describes how to configure browsers to use WIA with A
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 03/20/2020
+ms.date: 01/04/2021
 ms.topic: article
 ---
 

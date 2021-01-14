@@ -2,7 +2,7 @@
 title: Deploy Storage Spaces Direct
 manager: eldenc
 ms.author: stevenek
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
 ms.date: 12/09/2020

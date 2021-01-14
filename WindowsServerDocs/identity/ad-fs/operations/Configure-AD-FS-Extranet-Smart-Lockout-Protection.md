@@ -57,7 +57,7 @@ IPv4 and IPv6 addresses are supported.
 - **Successful Login**: If the log-in succeeds, then the IPs from the request are added to the user's familiar location IP list.
 - **Failed Login**: If the log-in fails the badPwdCount is increased. The user will go into a lockout state if the attacker sends more bad passwords to the system than the threshold allows. (badPwdCount > ExtranetLockoutThreshold)
 
-![configuration](media/configure-ad-fs-extranet-smart-lockout-protection/esl2.png)
+![Workflow diagram that shows the failed login process.](media/configure-ad-fs-extranet-smart-lockout-protection/esl2.png)
 
 The “UnknownLockout” value will equal to true when the account is locked out. This means that the user's badPwdCount is over than the threshold i.e. someone attempted more passwords than were allowed by the system. In this state, there are 2 ways that a valid user can login.
 - The user must wait for the ObservationWindow time to elapse or
@@ -249,8 +249,8 @@ While in log only mode, you can check the security audit log for lockout events.
 |-----|-----|
 |1203|This event is written for each bad password attempt. As soon as the badPwdCount reaches the value specified in ExtranetLockoutThreshold, the account will be locked out on ADFS for the duration specified in ExtranetObservationWindow.</br>Activity ID: %1</br>XML: %2|
 |1201|This event is written each time a user is locked out. </br>Activity ID: %1</br>XML: %2|
-|557 (ADFS 2019)| An error occured while trying to communicate with the account store rest service on node %1. If this is a WID farm the primary node may be offline. If this is a SQL farm ADFS will automatically select a new node to host the User store master role.|
-|562 (ADFS 2019)|An error occurred when communcating with the account store endpoint on server %1.</br>Exception Message: %2|
+|557 (ADFS 2019)| An error occurred while trying to communicate with the account store rest service on node %1. If this is a WID farm the primary node may be offline. If this is a SQL farm ADFS will automatically select a new node to host the User store master role.|
+|562 (ADFS 2019)|An error occurred when communicating with the account store endpoint on server %1.</br>Exception Message: %2|
 |563 (ADFS 2019)|An error occurred while calculating extranet lockout status. Due to the value of the %1 setting authentication will be allowed for this user and token issuance will continue. If this is a WID farm the primary node may be offline. If this is a SQL farm ADFS will automatically select a new node to host the User store master role.</br>Account store server name: %2</br>User Id: %3</br>Exception Message: %4|
 |512|The account for the following user is locked out. A login attempt is being allowed due to the system configuration.</br>Activity ID: %1 </br>User: %2 </br>Client IP: %3 </br>Bad Password Count: %4  </br>Last Bad Password Attempt: %5|
 |515|The following user account was in a locked out state and the correct password was just provided. This account may be compromised.</br>Additional Data </br>Activity ID: %1 </br>User: %2 </br>Client IP: %3 |

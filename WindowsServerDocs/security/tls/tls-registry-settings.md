@@ -1,6 +1,6 @@
 ---
 title: Transport Layer Security (TLS) registry settings
-description: Windows Server Security
+description: Learn about supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol.
 ms.topic: article
 author: justinha
 ms.author: justinha

@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 58cca2b2-4ef3-4a09-a614-8bdc08d24f15
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Configure Firewalls for RADIUS Traffic

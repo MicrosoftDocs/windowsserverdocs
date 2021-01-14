@@ -1,11 +1,12 @@
 ---
 title: STEP 6 Test DirectAccess Connectivity from the Homenet Subnet
-description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID for Windows Server 2016
+description: Learn how to start to test connectivity from the Homenet subnet.
 manager: brianlic
 ms.topic: article
 ms.assetid: b9b77cfd-8dd4-476b-a118-f3d6bf59e7b1
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # STEP 6 Test DirectAccess Connectivity from the Homenet Subnet
 

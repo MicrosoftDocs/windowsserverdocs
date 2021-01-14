@@ -1,6 +1,6 @@
 ---
 title: Enable all integration services in virtual machines
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when one or more integration services are disabled or not working in a virtual machine.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

@@ -153,7 +153,7 @@ Running the application
 ![Solution properties](media/native-client-with-ad-fs-2016/solutionproperties.png)
 
 2.	Press F5 button or select Debug > Continue in the menu bar. This will launch both the native application and the WebAPI. Click on Sign-in button on the native application and it will pop-up an interactive logon from AD AL and redirect to your AD FS service. Enter the credentials of a valid user.
-![Sign-in](media/native-client-with-ad-fs-2016/sign-in.png)
+![Screenshot showing the sign in dialog box.](media/native-client-with-ad-fs-2016/sign-in.png)
 
 In this step, the native application redirected to AD FS and got an ID token and an access token for the Web API
 

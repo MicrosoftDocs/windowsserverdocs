@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: ca125e57-249c-4d97-85d1-2929cbf871f1
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Configure Remote RADIUS Server Groups

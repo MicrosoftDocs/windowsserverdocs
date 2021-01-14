@@ -3,7 +3,7 @@ title: Top support solutions for Windows Server
 description: Get links to solutions for Windows Server issues
 manager: alant
 ms.date: 03/16/2018
-ms.topic: article
+ms.topic: troubleshooting
 author: kaushika-msft
 ms.author: elizapo
 ---

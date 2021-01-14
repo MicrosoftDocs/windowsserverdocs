@@ -1,10 +1,11 @@
 ---
 title: Deploy Remote Access in a Cluster
-description: This topic is part of the guide Deploy Remote Access in a Cluster in Windows Server 2016.
+description: Learn about the enterprise scenario for deploying multiple Remote Access servers in a cluster load balanced with Windows Network Load Balancing or with an external load balancer.
 manager: dougkim
 ms.topic: article
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Deploy Remote Access in a Cluster
 

@@ -1,11 +1,12 @@
 ---
 title: STEP 3 Install and Configure EDGE2
-description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB for Windows Server 2016
+description: Learn how to install and configure EDGE2 which is the second member of a Remote Access cluster.
 manager: brianlic
 ms.topic: article
 ms.assetid: f04eb11e-ed5f-42a1-a77b-57a248ba2d10
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # STEP 3 Install and Configure EDGE2
 

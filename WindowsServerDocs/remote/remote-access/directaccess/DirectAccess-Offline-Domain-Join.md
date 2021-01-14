@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 55528736-6c19-40bd-99e8-5668169ef3c7
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # DirectAccess Offline Domain Join
 

@@ -1,11 +1,12 @@
 ---
 title: Wireless Access Deployment Planning
-description: This topic is part of the Windows Server 2016 Networking guide "Deploy Password-Based 802.1X Authenticated Wireless Access"
+description: Learn how to plan wireless AP installations and plan wireless client configuration and access.
 manager: brianlic
 ms.topic: article
 ms.assetid: 8c632d02-2270-4a82-8fc4-74ea3747f079
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Planning
 

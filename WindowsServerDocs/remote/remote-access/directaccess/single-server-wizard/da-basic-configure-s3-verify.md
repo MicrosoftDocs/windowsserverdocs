@@ -1,11 +1,12 @@
 ---
 title: Step 3 Verify Deployments
-description: This topic is part of the guide Deploy a Single DirectAccess Server Using the Getting Started Wizard for Windows Server 2016
+description: Learn how to verify that you have correctly configured your basic DirectAccess deployment.
 manager: brianlic
 ms.topic: article
 ms.assetid: 45e9edd6-acca-4d59-851a-a0cc8bd8b4c6
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 3 Verify Deployments
 

@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: aa5b5d11-3921-44f9-8e14-e378c75fca76
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 08/07/2020
 ---
 # Switch Embedded Teaming for SDN
 

@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: fe77655a-e2be-4949-92e1-aaaa215d86ea
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Configure Network Policies

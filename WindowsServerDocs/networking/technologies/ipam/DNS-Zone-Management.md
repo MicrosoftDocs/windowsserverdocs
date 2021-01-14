@@ -1,11 +1,12 @@
 ---
 title: DNS Zone Management
-description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+description: Learn how to manage DNS zones by using the IPAM client console.
 manager: brianlic
 ms.topic: article
 ms.assetid: de3dc14b-164a-49f1-8a57-b9e788046c23
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # DNS Zone Management
 

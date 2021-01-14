@@ -2,10 +2,11 @@
 title: Internal DNS Service (iDNS) for SDN
 description: This topic explains how you can provide DNS services to your hosted tenant workloads by using Internal DNS (iDNS), which is integrated with Software Defined Networking in Windows Server 2016.
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: ad848a5b-0811-4c67-afe5-6147489c0384
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 01/04/2021
 ---
 # Internal DNS Service (iDNS) for SDN
 
@@ -152,7 +153,7 @@ You can use the following Windows PowerShell command to restart the Network Cont
 Restart-Service nchostagent -Force
 ```
 
-For more information, see [Restart-Service](/powershell/module/microsoft.powershell.management/restart-service?view=powershell-7).
+For more information, see [Restart-Service](/powershell/module/microsoft.powershell.management/restart-service?view=powershell-7&preserve-view=true).
 
 ### Enable firewall rules for the DNS proxy service
 You can use the following Windows PowerShell command to create a firewall rule that allows exceptions for the proxy to communicate with the VM and the iDNS server.

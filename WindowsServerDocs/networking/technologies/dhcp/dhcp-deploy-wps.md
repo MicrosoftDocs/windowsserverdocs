@@ -6,6 +6,7 @@ ms.assetid: 7110ad21-a33e-48d5-bb3c-129982913bc8
 manager: brianlic
 ms.author: lizross
 author: eross-msft
+ms.date: 01/04/2021
 ---
 
 # Deploy DHCP Using Windows PowerShell
@@ -347,7 +348,7 @@ Restart-Computer
 
 For more information about the Add-Computer command, see the following topic.
 
-- [Add-Computer](/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1)
+- [Add-Computer](/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1&preserve-view=true)
 
 ### Install DHCP
 

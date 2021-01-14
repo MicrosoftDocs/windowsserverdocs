@@ -1,6 +1,6 @@
 ---
 title: Performance Tools for Network Workloads
-description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
+description: Learn about performance tools including the Client to Server Traffic tool, TCP/IP Window Size, and Microsoft Server Performance Advisor. 
 ms.topic: article
 ms.assetid: c7789781-87e8-464e-981b-af887d01badd
 manager: dcscontentpm

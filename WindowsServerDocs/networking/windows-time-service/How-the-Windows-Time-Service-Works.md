@@ -64,7 +64,7 @@ The following figure shows the architecture of the Windows Time service.
 
 **Windows Time Service Architecture**
 
-![Windows Time](../media/Windows-Time-Service/How-the-Windows-Time-Service-Works/trnt_sec_arcc.gif)
+![Diagram that shows the architecture of the Windows Time service.](../media/Windows-Time-Service/How-the-Windows-Time-Service-Works/trnt_sec_arcc.gif)
 
 The Service Control Manager is responsible for starting and stopping the Windows Time service. The Windows Time Service Manager is responsible for initiating the action of the NTP time providers included with the operating system. The Windows Time Service Manager controls all functions of the Windows Time service and the coalescing of all time samples. In addition to providing information about the current system state, such as the current time source or the last time the system clock was updated, the Windows Time Service Manager is also responsible for creating events in the event log.
 

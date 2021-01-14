@@ -1,11 +1,12 @@
 ---
 title: Steps for Configuring the Test Lab
-description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
+description: Learn how to configure the Remote Access infrastructure, configure the Remote Access servers and clients and test DirectAccess connectivity from the Internet and Homenet subnets.
 manager: brianlic
 ms.topic: article
 ms.assetid: dc7205b4-a822-4038-ab67-ec0a870737f2
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Steps for Configuring the Test Lab
 

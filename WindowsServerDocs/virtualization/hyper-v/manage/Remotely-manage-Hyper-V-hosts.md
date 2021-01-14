@@ -114,7 +114,7 @@ To do this:
    Enable-WSManCredSSP -Role server
    ```
 
-    For details, see [Enable-PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7) and [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7).
+    For details, see [Enable-PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7&preserve-view=true) and [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7&preserve-view=true).
 
 Next, configure the computer you'll use to manage the Hyper-V host.
 
@@ -139,7 +139,7 @@ Next, configure the computer you'll use to manage the Hyper-V host.
 > [!NOTE]
 > This will only work for Windows Server 2016 or Windows 10 **remote** hosts.
 
-For cmdlet details, see [Set-Item](/powershell/module/microsoft.powershell.management/set-item?view=powershell-7) and [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7).
+For cmdlet details, see [Set-Item](/powershell/module/microsoft.powershell.management/set-item?view=powershell-7&preserve-view=true) and [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7&preserve-view=true).
 
 ## Install Hyper-V Manager
 

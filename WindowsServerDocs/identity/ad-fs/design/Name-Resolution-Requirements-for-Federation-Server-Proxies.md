@@ -26,7 +26,7 @@ In this scenario, your organization has one or two DNS zones in the perimeter ne
 
 The following illustration and corresponding steps show how each of these conditions is achieved for a given example. In this illustration, Microsoft Network Load Balancing \(NLB\) technology provides a single, cluster FQDN and a single, cluster IP address for an existing federation server farm.
 
-![name requirements](media/adfs2_deploy_single_fs.gif)
+![Illustration that shows Microsoft Network Load Balancing technology provides a single, cluster F Q D N and a single, cluster I P address for an existing federation server farm.](media/adfs2_deploy_single_fs.gif)
 
 For more information about configuring a cluster IP address or a cluster FQDN using NLB, see [Specifying the Cluster Parameters](https://go.microsoft.com/fwlink/?LinkId=75282).
 

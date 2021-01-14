@@ -1,6 +1,6 @@
 ---
 title: What's New in Windows Server, version 1803
-description: What are the new features in compute, identity, management, automation, networking, security, storage.
+description: Learn about the new features in compute, identity, management, automation, networking, security, and storage in Windows Server, version 1803.
 ms.topic: article
 author: greg-lindsay
 ms.author: greglin

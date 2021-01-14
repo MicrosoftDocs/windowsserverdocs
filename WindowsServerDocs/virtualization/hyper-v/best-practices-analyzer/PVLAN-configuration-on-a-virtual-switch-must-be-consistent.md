@@ -1,6 +1,6 @@
 ---
 title: PVLAN configuration on a virtual switch must be consistent
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the Private Virtual Local Area Network (PVLAN) is not configured correctly on one or more virtual network adapters.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

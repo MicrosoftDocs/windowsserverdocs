@@ -5,6 +5,7 @@ ms.date: 07/02/2012
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
+ms.topic: article
 ---
 
 # Migrate SYSVOL replication to DFS Replication

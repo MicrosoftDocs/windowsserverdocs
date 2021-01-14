@@ -1,11 +1,12 @@
 ---
 title: View Roles and Role Permissions
-description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+description: Learn how to view Access Control user roles in the IPAM client console.
 manager: brianlic
 ms.topic: article
 ms.assetid: da8dce90-b54c-4ded-a48a-0cda5ccf1d8a
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # View Roles and Role Permissions
 

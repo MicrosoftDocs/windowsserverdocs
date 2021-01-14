@@ -3,7 +3,7 @@ description: "Learn more about: Stretch Cluster Replication Using Shared Storage
 title: Stretch Cluster Replication Using Shared Storage
 manager: eldenc
 ms.author: nedpyle
-ms.topic: get-started-article
+ms.topic: how-to
 author: nedpyle
 ms.date: 04/26/2019
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0

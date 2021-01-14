@@ -1,11 +1,12 @@
 ---
 title: View DNS Zones
-description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+description: Learn how to view DNS zones in the IPAM client console.
 manager: brianlic
 ms.topic: article
 ms.assetid: 2cfe4e40-ec6d-4541-baa9-d772409fe27c
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # View DNS Zones
 

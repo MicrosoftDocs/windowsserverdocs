@@ -1,6 +1,6 @@
 ---
 title: Configure the server with a sufficient amount of dynamic MAC addresses
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the number of available dynamic MAC addresses is low.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

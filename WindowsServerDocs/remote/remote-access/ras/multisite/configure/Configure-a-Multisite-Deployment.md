@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: cb84920e-7cf5-4266-b071-d09e3d5e1f10
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Configure a Multisite Deployment
 

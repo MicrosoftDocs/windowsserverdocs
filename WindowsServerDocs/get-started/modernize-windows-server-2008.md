@@ -6,7 +6,7 @@ ms.sitesec: library
 author: eross-msft
 ms.author: thierryp
 ms.date: 07/12/2018
-ms.topic: get-started-article
+ms.topic: how-to
 ms.localizationpriority: high
 ---
 
@@ -45,7 +45,7 @@ To help you understand how to analyze existing IT resources, assess what you hav
 
 ![SQL Server logo](media/sqlr2.jpg)
 
-If you are running SQL Server 2008/2008 R2, you can upgrade to SQL Server [2016](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016) or [2017](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017).
+If you are running SQL Server 2008/2008 R2, you can upgrade to SQL Server [2016](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016&preserve-view=true) or [2017](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017&preserve-view=true).
 
 
 ## Additional resources

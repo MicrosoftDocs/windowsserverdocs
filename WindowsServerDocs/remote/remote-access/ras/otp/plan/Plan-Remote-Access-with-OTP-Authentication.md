@@ -1,11 +1,12 @@
 ---
 title: Plan Remote Access with OTP Authentication
-description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
+description: Learn about the configuration steps required in order to deploy a single Windows Server 2016 or Windows Server 2012  Remote Access multisite deployment.
 manager: brianlic
 ms.topic: article
 ms.assetid: 762bc463-eead-46ac-8b90-32355743c27c
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Plan Remote Access with OTP Authentication
 

@@ -1,7 +1,7 @@
 ---
 title: Cluster Operating System Rolling Upgrade
 description: "Learn more about: Cluster operating system rolling upgrade"
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
 author: jasongerend
 ms.author: jgerend
@@ -37,7 +37,7 @@ This guide describes the various stages of the Cluster OS Rolling Upgrade proces
 The following scenario is not supported in Windows Server 2016:
 -  Cluster OS Rolling Upgrade of guest clusters using virtual hard disk (.vhdx file) as shared storage
 
-Cluster OS Rolling Upgrade is fully supported by System Center Virtual Machine Manager (SCVMM) 2016. If you are using SCVMM 2016, see [Perform a rolling upgrade of a Hyper-V host cluster to Windows Server 2016 in VMM](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807) for guidance on upgrading the clusters and automating the steps that are described in this document.
+Cluster OS Rolling Upgrade is fully supported by System Center Virtual Machine Manager (SCVMM) 2016. If you are using SCVMM 2016, see [Perform a rolling upgrade of a Hyper-V host cluster to Windows Server 2016 in VMM](/system-center/vmm/hyper-v-rolling-upgrade?view=sc-vmm-1807&preserve-view=true) for guidance on upgrading the clusters and automating the steps that are described in this document.
 
 ## Requirements
 Complete the following requirements before you begin the Cluster OS Rolling Upgrade process:

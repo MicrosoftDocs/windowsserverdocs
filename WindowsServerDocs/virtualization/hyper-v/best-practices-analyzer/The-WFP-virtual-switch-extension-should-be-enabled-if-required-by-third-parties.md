@@ -1,6 +1,6 @@
 ---
 title: The WFP virtual switch extension should be enabled if it is required by third party extensions
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the Windows Filtering Platform (WFP) virtual switch extension is disabled.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

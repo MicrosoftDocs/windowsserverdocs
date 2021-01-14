@@ -1,11 +1,12 @@
 ---
 title: STEP 9 Configure EDGE1
-description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
+description: Learn how to configure the DNS servers on EDGE1 and configure routing between subnets.
 manager: brianlic
 ms.topic: article
 ms.assetid: f6e8d85b-de65-43b3-bf3e-ec84471a1fcc
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # STEP 9 Configure EDGE1
 

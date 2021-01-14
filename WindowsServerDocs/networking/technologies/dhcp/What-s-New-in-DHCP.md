@@ -2,10 +2,11 @@
 title: What's New in DHCP
 description: This topic provides an overview of new features for Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: c6f36998-5b64-45d1-b1f0-0f0d6604dbe3
 ms.author: lizross
 author: eross-msft
+ms.date: 12/09/2020
 ---
 # What's New in DHCP
 

@@ -1,11 +1,12 @@
 ---
 title: Step 1 Implement a Single Server Remote Access Deployment with OTP Authentication
-description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
+description: Learn how to implement an advanced single server deployment and then plan to add the RADIUS server.
 manager: brianlic
 ms.topic: article
 ms.assetid: c0f4d665-d44e-4348-a89f-5f9191bd96fd
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 1 Implement a Single Server Remote Access Deployment with OTP Authentication
 

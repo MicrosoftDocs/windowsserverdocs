@@ -1,11 +1,12 @@
 ---
 title: Step 1 Plan DirectAccess Infrastructure
-description: This topic is part of the guide Add DirectAccess to an Existing Remote Access (VPN) Deployment for Windows Server 2016
+description: Learn how to perform planning for the infrastructure required for the DirectAccess deployment.
 manager: brianlic
 ms.topic: article
 ms.assetid: 4ca50ea8-6987-4081-acd5-5bf9ead62acd
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 # Step 1 Plan DirectAccess Infrastructure
 

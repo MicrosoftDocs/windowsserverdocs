@@ -1,11 +1,12 @@
 ---
 title: Verify Client Computer Settings
-description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+description: Learn how to verify that the client computer is correctly configured for BranchCache.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 31ea58b0-d407-4f62-8ec6-6a1b19174042
 ms.author: lizross
 author: eross-msft
+ms.date: 01/05/2021
 ---
 # Verify Client Computer Settings
 

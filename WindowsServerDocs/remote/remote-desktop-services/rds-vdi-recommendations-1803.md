@@ -4,6 +4,7 @@ description: Recommended settings and configuration to minimize overhead for Win
 ms.author: robsmi
 ms.topic: article
 author: jaimeo
+ms.date: 12/08/2020
 ---
 
 # Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role

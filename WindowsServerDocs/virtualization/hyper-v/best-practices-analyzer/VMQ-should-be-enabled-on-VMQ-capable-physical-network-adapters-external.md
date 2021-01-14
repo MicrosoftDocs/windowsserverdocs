@@ -1,6 +1,6 @@
 ---
 title: VMQ should be enabled on VMQ-capable physical network adapters bound to an external virtual switch
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the following network adapters are capable of virtual machine queue (VMQ) but the capability is disabled.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

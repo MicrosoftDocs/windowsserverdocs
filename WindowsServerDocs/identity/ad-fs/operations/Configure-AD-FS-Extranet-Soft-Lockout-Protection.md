@@ -61,7 +61,7 @@ Let's take a look at AD lockout policy first. There are three settings regarding
 Let's take a look at two examples and see how **badPwdCount** changes over time based on different settings and states. Let's assume in both examples **Account Lockout Threshold** = 4 and **ExtranetLockoutThreshold** = 2. The **red** arrow represents bad password attempt, the **green** arrow represents a good password attempt. In example #1, **ExtranetObservationWindow** &gt; **Reset Account Lockout Counter After**. In example #2, **ExtranetObservationWindow** &lt; **Reset Account Lockout Counter After**.
 
 ### Example 1
-![Example1](media/Configure-AD-FS-Extranet-Lockout-Protection/one.png)
+![Diagram that shows how badPwdCount changes over time based on different settings and states.](media/Configure-AD-FS-Extranet-Lockout-Protection/one.png)
 
 ### Example 2
 ![Example1](media/Configure-AD-FS-Extranet-Lockout-Protection/two.png)

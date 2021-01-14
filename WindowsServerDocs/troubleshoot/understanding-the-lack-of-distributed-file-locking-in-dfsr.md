@@ -4,6 +4,7 @@ description: This article discusses the absence of a multi-host distributed file
 ms.date: 06/10/2020
 author: Deland-Han
 ms.author: delhan
+ms.topic: troubleshooting
 ---
 # Understanding (the Lack of) Distributed File Locking in DFSR
 

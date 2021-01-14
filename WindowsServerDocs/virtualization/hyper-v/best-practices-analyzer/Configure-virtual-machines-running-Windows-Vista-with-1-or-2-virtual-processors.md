@@ -1,6 +1,6 @@
 ---
 title: Configure virtual machines running Windows Vista with 1 or 2 virtual processors
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when a virtual machine running Windows Vista is configured with more than 2 virtual processors.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article

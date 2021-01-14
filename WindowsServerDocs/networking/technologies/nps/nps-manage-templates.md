@@ -6,6 +6,7 @@ ms.topic: article
 ms.assetid: 989b00c5-4767-4081-ace5-6321f8b2c55e
 ms.author: lizross
 author: eross-msft
+ms.date: 08/07/2020
 ---
 
 # Manage NPS Templates
