@@ -70,17 +70,17 @@ Here are the userAccountControl values that can be added for different types of 
 | Kerberos Constrained Delegation/Trust this computer for delegation to specified services only (Use Kerberos Only) | No Change | No Change | No Change |
  Kerberos Constrained Delegation with Protocol Transition/Trust this computer for delegation to specified services only (Use Any Authentication Protocol) | TRUSTED_TO_AUTH_FOR_DELEGATION | 0x1000000 | 16777216 |
 
-While configuring Kerberos delegation using UAC value, please ensure new value is added with the existing value but not replaced. 
-Example: Consider the current value of UAC is 4096 (Hex 0x1000) which is WORKSTATION_TRUST_ACCOUNT.
+When you manually update the userAccountControl value, make sure the new value is added with the existing value but not replaced. 
+For example, consider the current value of UAC is 4096 (Hex 0x1000) which is WORKSTATION_TRUST_ACCOUNT.
 
 ![Screenshot of userAccountControl value 4096](media/user-account-control-4096.png)
 
-To enable **Unconstrained delegation (Not secure)**, you must add the UAC value for TRUSTED_FOR_DELEGATION + existing value. 
+To enable **Unconstrained delegation (Not secure)**, you must add the userAccountControl value for TRUSTED_FOR_DELEGATION plus the existing value. 
 The UAC value should become 0x81000 (0x1000 + 0x80000) which means WORKSTATION_TRUST_ACCOUNT and TRUSTED_FOR_DELEGATION.
 
 ![Screenshot of userAccountControl value 81000](media/user-account-control-81000.png)
 
-If you have added some SPN(s) by mistake or want to remove some SPNs from Delegation list of the account, you can manually edit the attribute **msDS-AllowedToDelegateTo** of the account. However, this method is applicable for any user or computer account as well.
+If you have added some SPNs by mistake or want to remove some SPNs from the delegation list of the account, you can manually edit the attribute **msDS-AllowedToDelegateTo** of the account. This method is applicable for any user or computer account.
 
 ![Screenshot of Allowed to delegate](media/allowed-to-delegate.png)
 
