@@ -317,6 +317,17 @@ Auto detection works as follows:
 
 -   If the corporate network is IPv6-based, the default address is the IPv6 address of DNS servers in the corporate network.
 
+> [!NOTE]
+> Starting with the Windows 10 May 2020 Update, a client no longer registers its IP addresses on DNS servers configured in a Name Resolution Policy (NRPT).
+> If the DNS registration is needed, for e.g. Manage Out, it can be explicitely enabled with this registry key on the client:
+> 
+> Path: ```HKLM\System\CurrentControlSet\Services\Dnscache\Parameters```   
+> Type: ``DWORD``   
+> Value name: ``DisableNRPTForAdapterRegistration``   
+> Values:   
+> ``1`` - DNS Registration disabled (default since Windows 10 May 2020 Update)   
+> ``0`` - DNS Registration enabled
+
 **Infrastructure servers**
 
 -   **Network location server**
