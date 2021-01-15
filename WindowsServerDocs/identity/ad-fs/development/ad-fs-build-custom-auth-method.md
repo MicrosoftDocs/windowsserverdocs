@@ -600,11 +600,11 @@ Finally, perform the steps below to test your adapter:
 
     If you have more than one adapter configured, you will see the MFA choice page with your friendly name from above.
 
-    ![Screenshot of the the MFA forms page with example challenge questions.](media/ad-fs-build-custom-auth-method/Dn783423.c98d2712-cbd3-4cb9-ac03-2838b81c4f63(MSDN.10).jpg "authenticate with adapter")
+    ![Screenshot of the the M F A forms page with example challenge questions.](media/ad-fs-build-custom-auth-method/Dn783423.c98d2712-cbd3-4cb9-ac03-2838b81c4f63(MSDN.10).jpg "authenticate with adapter")
 
-    ![Screenshot of the the MFA choice page.](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "authenticate with adapter")
+    ![Screenshot of the the M F A choice page.](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "authenticate with adapter")
 
-You now have a working implementation of the interface and you have the knowledge of how the model works. You can trym as an extra example to set break points in the BeginAuthentication as well as the TryEndAuthentication. Notice how BeginAuthentication is executed when the user first enters the MFA form, whereas TryEndAuthentication is triggered at each Submit of the form.
+You now have a working implementation of the interface and you have the knowledge of how the model works. You can try as an extra example to set break points in the BeginAuthentication as well as the TryEndAuthentication. Notice how BeginAuthentication is executed when the user first enters the MFA form, whereas TryEndAuthentication is triggered at each Submit of the form.
 
 ## Update the adapter for successful authentication
 
@@ -748,11 +748,11 @@ Finally, perform the steps below to test your adapter:
 
     1. If you have more than one adapter configured, you will see the MFA choice page with your friendly name.
 
-You should see a successful sign-in when entering “adfabric” at the MFA authentication page.
+You should see a successful sign-in when entering _adfabric_ at the MFA authentication page.
 
-![Screenshot of the MFA forms page with example challenge text.](media/ad-fs-build-custom-auth-method/Dn783423.630d8a91-3bfe-4cba-8acf-03eae21530ee(MSDN.10).jpg "sign in with adapter")
+![Screenshot of the M F A forms page with example challenge text.](media/ad-fs-build-custom-auth-method/Dn783423.630d8a91-3bfe-4cba-8acf-03eae21530ee(MSDN.10).jpg "sign in with adapter")
 
-![Screenshot of the MFA successful sign in page.](media/ad-fs-build-custom-auth-method/Dn783423.c340fa73-f70f-4870-b8dd-07900fea4469(MSDN.10).jpg "sign in with adapter")
+![Screenshot of the M F A successful sign in page.](media/ad-fs-build-custom-auth-method/Dn783423.c340fa73-f70f-4870-b8dd-07900fea4469(MSDN.10).jpg "sign in with adapter")
 
 ## See Also
 

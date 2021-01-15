@@ -79,11 +79,11 @@ Follow the steps below to create and configure the application in AD FS for rece
 9. On the **Complete** screen,  click **Close**.
 10. In AD FS Management, click on Application Groups to get list of all application groups. Right-click on **ADFSSSO** and select **Properties**. Select **ADFSSSO - Web API** and click **Edit...**
 
-    ![Screenshot of the ADFSSO Properties dialog box showing the Web API listed in the Applications section.](media/Custom-Id-Tokens-in-AD-FS/clientsnap7.PNG)
+    ![Screenshot of the A D F S S O Properties dialog box showing the Web API listed in the Applications section.](media/Custom-Id-Tokens-in-AD-FS/clientsnap7.PNG)
 
 11. On **ADFSSSO - Web API Properties** screen, select **Issuance Transform Rules** tab and click **Add Rule...**
 
-    ![Screenshot of the ADFSSO Properties dialog box Showing the Issuance Transform Rules tab.](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.PNG)
+    ![Screenshot of the A D F S S O Properties dialog box Showing the Issuance Transform Rules tab.](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.PNG)
 
 12. On **Add Transform Claim Rule Wizard** screen, select **Send Claims Using a Custom Rule** from the drop-down and click **Next**
 
@@ -120,7 +120,7 @@ git clone https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-op
 #### To Modify the app
 
 1. Open the sample using Visual Studio.
-2. Rebuild the app so that all of the missing NuGets are restored.
+2. Rebuild the app so that all of the missing NuGet packages are restored.
 3. Open the web.config file.  Modify the following values so the look like the following:
 
    ```xml
@@ -202,7 +202,7 @@ Once the above changes have been made, hit F5. This will bring up the sample pag
 
 You will be redirected to the AD FS sign-in page. Go ahead and sign in.
 
-![Screenshot of the AD FS Sign in page.](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_7.PNG)
+![Screenshot of the A D F S Sign in page.](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_7.PNG)
 
 Once this is successful, you should see that you are now signed in.
 

@@ -29,7 +29,7 @@ Below is the authentication flow that the sample will achieve
 4. AD FS returns the access token to Mid Tier Web Service. For additional functionality, Middle Tier Service needs access to the Backend WebAPI
 5. Client uses the access token to use Middle Tier service.
 6. Middle Tier service provides the access token to the AD FS token end point and requests access token for Backend WebAPI on-behalf-of the authenticated user
-7. AD FS returns access token for backend WebAPI to Middle Tier Service actiing as client
+7. AD FS returns access token for backend WebAPI to Middle Tier Service acting as client
 8. Middle Tier Service uses the access token provided by AD FS in step 7 to access the backend WebAPI as client and perform the necessary functions
 
 ## Sample Structure
@@ -124,13 +124,13 @@ c:[]
 => issue(Type = "http://schemas.microsoft.com/identity/claims/scope", Value = "user_impersonation");
 ```
 
-![Screenshot ot the Properties dialog box showing the Issuance Transform Rules tab.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO10.PNG)
+![Screenshot of the Properties dialog box showing the Issuance Transform Rules tab.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO10.PNG)
 
 **Adding ToDoListService as a client in the application group**
 
 At this stage we need to make an additional entry in AD FS for the WebServer App to act as a client and not just as a resource. Open the application group you just created and click on Add Application.
 
-![Screenshot ot the Properties dialog box showing the Add application option in the bottom-left corner of the window.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO15.PNG)
+![Screenshot of the Properties dialog box showing the Add application option in the bottom-left corner of the window.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO15.PNG)
 
 You will be presented with the "Add a new application to MySampleGroup" page. On that page, select "Server Application or Website" as the standalone application
 
@@ -266,7 +266,7 @@ On the Configure Web API page provide an appropriate name for the WebAPI entry a
 
 Continue through the rest of the wizard same as when we configured the ToDoListService WebAPI. At the end your application group should look like below:
 
-![Sctreenshot of the My Sample Group Properties dialog box showing the ToDoListService WebAPI listed in the Application section.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO5.PNG)
+![Screenshot of the My Sample Group Properties dialog box showing the ToDoListService WebAPI listed in the Application section.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO5.PNG)
 
 ### Modifying the ToDoListService code
 
@@ -359,7 +359,7 @@ private static string OBOWebAPIBase = ConfigurationManager.AppSettings["ida:OBOW
 
 **Modify the claim used for Name**
 
-From AD FS we are issuing the Nmae claim but we are not issuing NameIdentifier claim. The sample uses NameIdentifier to uniquely key in the ToDo items. For simplicity, you can safely remove the NameIdentifier with Name claim in the code. Find and replace all occurrences of NameIdentifier with Name.
+From AD FS we are issuing the Name claim but we are not issuing NameIdentifier claim. The sample uses NameIdentifier to uniquely key in the ToDo items. For simplicity, you can safely remove the NameIdentifier with Name claim in the code. Find and replace all occurrences of NameIdentifier with Name.
 
 **Modify Post routine and CallGraphAPIOnBehalfOfUser()**
 
@@ -499,7 +499,7 @@ After you sign-in, add a ToDo item in the list. Behind the scenes we are going t
 
 ![Screenshot of the To Do List Client dialog box with the Create a To Do item text field populated.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO26.PNG)
 
-On successful operation you will see that the item has been added to the list with the additional message from the backend Web API which was accessed using OBO auth-flow.
+On successful operation you will see that the item has been added to the list with the additional message from the backend Web API which was accessed using OBO flow.
 
 ![Screenshot of the To Do List Client dialog box with the new to do item populating the To Do Items section.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO27.PNG)
 

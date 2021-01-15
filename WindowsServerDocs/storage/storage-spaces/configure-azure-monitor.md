@@ -200,7 +200,7 @@ Event | where (EventLevelName == "Error")
 
 ![Filter](media/configure-azure-monitor/log-analytics-portal-eventlist-02.png)
 
-After you have the approriate queries made for events you care about, save them for the next step.
+After you have the appropriate queries made for events you care about, save them for the next step.
 
 ### Create alerts
 Now, let's walk through an example for creating an alert.
@@ -211,7 +211,7 @@ Now, let's walk through an example for creating an alert.
 4. Under the section **Alert Criteria**, click **Add Criteria** to select your saved query and then specify logic that the alert rule follows.
 5. Configure the alert with the following information:
    a. From the **Based on** drop-down list, select **Metric measurement**.  A metric measurement will create an alert for each object in the query with a value that exceeds our specified threshold.
-   b. For the **Condition**, select **Greater than** and specify a thershold.
+   b. For the **Condition**, select **Greater than** and specify a threshold.
    c. Then define when to trigger the alert. For example you could select **Consecutive breaches** and from the drop-down list select **Greater than** a value of 3.
    d. Under Evaluation based on section, modify the **Period** value to **30** minutes and **Frequency** to 5. The rule will run every five minutes and return records that were created within the last thirty minutes from the current time.  Setting the time period to a wider window accounts for the potential of data latency, and ensures the query returns data to avoid a false negative where the alert never fires.
 6. Click **Done** to complete the alert rule.<br><br> ![Configure alert signal](media/configure-azure-monitor/alert-signal-logic-02.png)<br>
