@@ -9944,6 +9944,16 @@
       "source_path": "WindowsServerDocs/Windows-Server-2016.md",
       "redirect_url": "/windows-server/windows-server",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/vm-load-balancing-overview.md",
+      "redirect_url": "/azure-stack/hci/manage/vm-load-balancing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/vm-load-balancing-deep-dive.md",
+      "redirect_url": "/azure-stack/hci/manage/vm-load-balancing",
+      "redirect_document_id": true
+    }    
   ]
 }
