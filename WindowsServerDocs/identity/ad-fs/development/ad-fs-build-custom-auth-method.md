@@ -29,7 +29,7 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
 2. Select Class Library and be sure you are targeting .NET 4.5.
 
-    ![create the provider](media/ad-fs-build-custom-auth-method/Dn783423.71a57ae1-d53d-462b-a846-5b3c02c7d3f2(MSDN.10).jpg "create the provider")
+    ![Screenshot of the New Project dialog box showing the Class Library option selected.](media/ad-fs-build-custom-auth-method/Dn783423.71a57ae1-d53d-462b-a846-5b3c02c7d3f2(MSDN.10).jpg "create the provider")
 
 3. Make a copy of **Microsoft.IdentityServer.Web.dll** from %windir%ADFS on the Windows Server 2012 R2 server where AD FS has been installed and paste it in your Project folder on your development machine.
 
@@ -39,13 +39,13 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
 6. Click **OK** to confirm the new reference:
 
-    ![create the provider](media/ad-fs-build-custom-auth-method/Dn783423.f18df353-9259-4744-b4b6-dd780ce90951(MSDN.10).jpg "create the provider")
+    ![Screenshot of the Reference Manager dialog box showing the Microsoft.IdentityServer.Web.dll selected.](media/ad-fs-build-custom-auth-method/Dn783423.f18df353-9259-4744-b4b6-dd780ce90951(MSDN.10).jpg "create the provider")
 
     You should now be set up to resolve all of the types required for the provider.
 
 7. Add a new class to your project (Right click your project, **Add...Class...**) and give it a name like **MyAdapter**, shown below:
 
-    ![create the provider](media/ad-fs-build-custom-auth-method/Dn783423.6b6a7a8b-9d66-40c7-8a86-a2e3b9e14d09(MSDN.10).jpg "create the provider")
+    ![Screenshot of the Add New Item dialog box with the Class option selected.](media/ad-fs-build-custom-auth-method/Dn783423.6b6a7a8b-9d66-40c7-8a86-a2e3b9e14d09(MSDN.10).jpg "create the provider")
 
 8. In the new file MyAdapter.cs, replace the existing code with the following:
 
@@ -445,7 +445,7 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
 16. Then, select **Project-\>Add Component... Resources** file and name the file **Resources**, and click **Add:**
 
-    ![create the provider](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "create the provider")
+    ![Screenshot of the Add New Item dialog box showing Resource File selected.](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "create the provider")
 
 17. Then, within the **Resources.resx** file, choose **Add Resource...Add existing file**. Navigate to the text file (containing the html fragment) that you saved above.
 
@@ -600,9 +600,9 @@ Finally, perform the steps below to test your adapter:
 
     If you have more than one adapter configured, you will see the MFA choice page with your friendly name from above.
 
-    ![authenticate with adapter](media/ad-fs-build-custom-auth-method/Dn783423.c98d2712-cbd3-4cb9-ac03-2838b81c4f63(MSDN.10).jpg "authenticate with adapter")
+    ![Screenshot of the the MFA forms page with example challenge questions.](media/ad-fs-build-custom-auth-method/Dn783423.c98d2712-cbd3-4cb9-ac03-2838b81c4f63(MSDN.10).jpg "authenticate with adapter")
 
-    ![authenticate with adapter](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "authenticate with adapter")
+    ![Screenshot of the the MFA choice page.](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "authenticate with adapter")
 
 You now have a working implementation of the interface and you have the knowledge of how the model works. You can trym as an extra example to set break points in the BeginAuthentication as well as the TryEndAuthentication. Notice how BeginAuthentication is executed when the user first enters the MFA form, whereas TryEndAuthentication is triggered at each Submit of the form.
 
@@ -750,9 +750,9 @@ Finally, perform the steps below to test your adapter:
 
 You should see a successful sign-in when entering “adfabric” at the MFA authentication page.
 
-![sign in with adapter](media/ad-fs-build-custom-auth-method/Dn783423.630d8a91-3bfe-4cba-8acf-03eae21530ee(MSDN.10).jpg "sign in with adapter")
+![Screenshot of the MFA forms page with example challenge text.](media/ad-fs-build-custom-auth-method/Dn783423.630d8a91-3bfe-4cba-8acf-03eae21530ee(MSDN.10).jpg "sign in with adapter")
 
-![sign in with adapter](media/ad-fs-build-custom-auth-method/Dn783423.c340fa73-f70f-4870-b8dd-07900fea4469(MSDN.10).jpg "sign in with adapter")
+![Screenshot of the MFA successful sign in page.](media/ad-fs-build-custom-auth-method/Dn783423.c340fa73-f70f-4870-b8dd-07900fea4469(MSDN.10).jpg "sign in with adapter")
 
 ## See Also
 

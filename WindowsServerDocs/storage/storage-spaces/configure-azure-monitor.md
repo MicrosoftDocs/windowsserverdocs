@@ -133,7 +133,7 @@ To understand the supported configuration, review [supported Windows operating s
 
 In Windows Admin Center, you can configure default alerts that will apply to all servers in your Log Analytics workspace.
 
-![Gif of setting up alerts"](media/configure-azure-monitor/setup1.gif)
+![A short video that shows a user configuring default alerts that will apply to all servers in your Log Analytics workspace.](media/configure-azure-monitor/setup1.gif)
 
 These are the alerts and their default conditions that you can opt into:
 
@@ -148,7 +148,7 @@ These are the alerts and their default conditions that you can opt into:
 
 Once you configure the alerts in Windows Admin Center, you can see the alerts in your log analytics workspace in Azure.
 
-![Gif of setting up alerts"](media/configure-azure-monitor/setup2.gif)
+![A short video that shows the user accessing the alerts in the log analytics workspace in Azure.](media/configure-azure-monitor/setup2.gif)
 
 During this onboarding flow, the steps below are happening under the hood. We detail how to configure them in detail in case you want to manually setup your cluster.
 

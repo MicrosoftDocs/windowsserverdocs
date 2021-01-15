@@ -18,7 +18,7 @@ This document applies to AD FS and WAP in Windows Server 2012 R2 and Windows Ser
 ## Standard deployment topology
 For deployment in on-premises environments, we recommend a standard deployment topology consisting of one or more AD FS servers on the internal corporate network, with one or more Web Application Proxy (WAP) servers in a DMZ or extranet network.  At each layer, AD FS and WAP, a hardware or software load balancer is placed in front of the server farm and handles traffic routing.  Firewalls are placed as required in front of the external IP address of the load balancer in front of each (FS and proxy) farm.
 
-![AD FS Standard topology](media/Best-Practices-Securing-AD-FS/adfssec1.png)
+![A diagram depicting a standard A D F S topology.](media/Best-Practices-Securing-AD-FS/adfssec1.png)
 
 >[!NOTE]
 > AD FS requires a full writable Domain Controller to function as opposed to a Read-Only Domain Controller. If a planned topology includes a Read-Only Domain controller, the Read-Only domain controller can be used for authentication but LDAP claims processing will require a connection to the writable domain controller.
@@ -28,7 +28,7 @@ The below diagram depicts the firewall ports that must be enabled between and am
 
 >Note that port 49443 is only required if user certificate authentication is used, which is optional for Azure AD and Office 365.
 
-![AD FS Standard topology](media/Best-Practices-Securing-AD-FS/adfssec2.png)
+![a diagram showing the required ports and protocols for an A D F S deployment.](media/Best-Practices-Securing-AD-FS/adfssec2.png)
 
 >[!NOTE]
 > Port 808 (Windows Server 2012R2) or port 1501 (Windows Server 2016+) is the Net.TCP port AD FS uses for the local WCF endpoint to transfer configuration data to the service process and Powershell. This port can be seen by running Get-AdfsProperties | select NetTcpPort. This is a local port that will not need to be opened in the firewall but will be displayed in a port scan.
