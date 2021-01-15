@@ -2,7 +2,7 @@
 title: Use performance counters to diagnose application responsiveness problems on Remote Desktop Session Hosts
 description: Is your app running slow on RDS? Learn about performance counters you can use to diagnose app performance problems on RDSH
 ms.author: elizapo
-ms.date: 07/11/2019
+ms.date: 01/19/2021
 ms.topic: article
 author: lizap
 manager: dougkim
@@ -133,9 +133,3 @@ Monitoring tools can consume this counter by [Using Performance Counters](/windo
 ## Download Windows Server Insider software
 
 Registered Insiders can navigate directly to the [Windows Server Insider Preview download page](https://microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Insider software downloads.  To learn how to register as an Insider, see [Getting started with Server](https://insider.windows.com/en-us/for-business-getting-started-server/).
-
-## Share your feedback
-
-You can submit feedback for this feature through the Feedback Hub. Select **Apps > All other apps** and include "RDS performance counters—performance monitor" in your post's title.
-
-For general feature ideas, visit the [RDS UserVoice page](https://aka.ms/uservoice-rds).
