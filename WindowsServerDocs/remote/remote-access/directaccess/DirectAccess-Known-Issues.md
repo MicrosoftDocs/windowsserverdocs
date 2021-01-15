@@ -10,8 +10,19 @@ ms.date: 08/07/2020
 ---
 # DirectAccess Known Issues
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2019
 
+## DNS registration of DirectAccess client IPv6 addresses
+
+Starting with the Windows 10 May 2020 Update, a client no longer registers its IP addresses on DNS servers configured in a Name Resolution Policy (NRPT).
+If the DNS registration is needed, for e.g. Manage Out, it can be explicitely enabled with this registry key on the client:
+
+Path: ```HKLM\System\CurrentControlSet\Services\Dnscache\Parameters```   
+Type: ``DWORD``   
+Value name: ``DisableNRPTForAdapterRegistration``   
+Values:   
+``1`` - DNS Registration disabled (default since Windows 10 May 2020 Update)   
+``0`` - DNS Registration enabled
 
 ## Recommended hotfixes and updates for Windows Server 2012 DirectAccess
 The following link lists Microsoft Technical Support documents for DirectAccess that you should review and apply before you start your deployment to avoid an unusable configuration.
