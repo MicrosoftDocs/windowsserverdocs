@@ -130,6 +130,8 @@ This is what it looks like if you turn both keys on:
 
 Monitoring tools can consume this counter by [Using Performance Counters](/windows/win32/perfctrs/using-performance-counters).
 
-## Download Windows Server Insider software
+## Share your feedback
 
-Registered Insiders can navigate directly to the [Windows Server Insider Preview download page](https://microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Insider software downloads.  To learn how to register as an Insider, see [Getting started with Server](https://insider.windows.com/en-us/for-business-getting-started-server/).
+You can submit feedback for this feature through the Feedback Hub. Select **Apps > All other apps** and include "RDS performance counters—performance monitor" in your post's title.
+
+For general feature ideas, visit the [RDS UserVoice page](https://aka.ms/uservoice-rds).
