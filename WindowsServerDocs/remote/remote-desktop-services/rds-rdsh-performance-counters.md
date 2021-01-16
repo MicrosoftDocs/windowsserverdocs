@@ -133,5 +133,3 @@ Monitoring tools can consume this counter by [Using Performance Counters](/windo
 ## Share your feedback
 
 You can submit feedback for this feature through the Feedback Hub. Select **Apps > All other apps** and include "RDS performance counters—performance monitor" in your post's title.
-
-For general feature ideas, visit the [RDS UserVoice page](https://aka.ms/uservoice-rds).
