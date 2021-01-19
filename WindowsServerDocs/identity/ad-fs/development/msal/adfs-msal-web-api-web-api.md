@@ -40,23 +40,23 @@ This section shows how to register the Native App as a public client and Web API
 
   2. On the Application Group Wizard, for the **Name** enter **WebApiToWebApi** and under **Client-Server applications** select the **Native application accessing a Web API** template. Click **Next**.
 
-      ![App Registration](media/adfs-msal-web-api-web-api/webapi2.png)
+      ![Screenshot of the Welcome page of the Add Application Group Wizard showing the Native application accessing a Web API template highlighted.](media/adfs-msal-web-api-web-api/webapi2.png)
 
   3. Copy the **Client Identifier** value. It will be used later as the value for **ClientId** in the application's **App.config** file. Enter the following for **Redirect URI:** - https://ToDoListClient. Click **Add**. Click **Next**.
 
-      ![App Registration](media/adfs-msal-web-api-web-api/webapi3.png)
+      ![Screenshot of the Native application page of the Add Application Group Wizard showing the redirect U R I .](media/adfs-msal-web-api-web-api/webapi3.png)
 
   4. On the Configure Web API screen, enter the **Identifier:** https://localhost:44321/. Click **Add**. Click **Next**. This value will be used later in the application's **App.config** and **Web.Config** files.
 
-      ![App Registration](media/adfs-msal-web-api-web-api/webapi4.png)
+      ![Screenshot of the Configure Web API page of the Add Application Group Wizard showing the correct identifier.](media/adfs-msal-web-api-web-api/webapi4.png)
 
   5. On the Apply Access Control Policy screen, select **Permit everyone** and click **Next**.
 
-      ![App Registration](media/adfs-msal-web-api-web-api/webapi5.png)
+      ![Screenshot of the Choose Access Control Policy page of the Add Application Group Wizard showing the Permit everyone option highlighted.](media/adfs-msal-web-api-web-api/webapi5.png)
 
   6. On the Configure Application Permissions screen, select **openid** and **user_impersonation**. Click **Next**.
 
-      ![App Registration](media/adfs-msal-web-api-web-api/webapi6.png)
+      ![Screenshot of the Configure Application Permissions page of the Add Application Group Wizard showing open I D selected.](media/adfs-msal-web-api-web-api/webapi6.png)
 
   7. On the Summary screen, click **Next**.
 
@@ -65,23 +65,23 @@ This section shows how to register the Native App as a public client and Web API
 
   9. In AD FS Management, click on **Application Groups** and select **WebApiToWebApi** application group. Right-click and select **Properties**.
 
-      ![App Registration](media/adfs-msal-web-api-web-api/webapi7.png)
+      ![Screenshot of the A D F S Management dialog box showing the WebApiToWebApi group highlighted and the Properties option in the dropdown list.](media/adfs-msal-web-api-web-api/webapi7.png)
 
   10. On WebApiToWebApi properties screen, click **Add application…**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi8.png)
+      ![Screenshot of the WebApiToWebApi Properties dialog box showing the WebApiToWebApi - Web A P I application listed.](media/adfs-msal-web-api-web-api/webapi8.png)
 
   11. Under Standalone applications, select **Server application**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi9.png)
+      ![Screenshot of the Welcome page of the Add a new application to WebApiToWebApi wizard showing the Server application option highlighted.](media/adfs-msal-web-api-web-api/webapi9.png)
 
   12. On Server Application screen, add https://localhost:44321/ as the **Client Identifier** and **Redirect URI**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi10.png)
+      ![Screenshot of the Server application page of the Add a new application to WebApiToWebApi wizard showing the correct client identifier and redirect U R I.](media/adfs-msal-web-api-web-api/webapi10.png)
 
   13. On Configure Application Credentials screen, select **Generate a shared secret**. Copy the secret for later use.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi11.png)
+      ![Screenshot of the Configure Application Credentials application page of the Add a new application to WebApiToWebApi wizard showing the Generate a shared secret option selected and the generated shared secret highlighted.](media/adfs-msal-web-api-web-api/webapi11.png)
 
   14. On the Summary screen, click **Next**.
 
@@ -89,27 +89,27 @@ This section shows how to register the Native App as a public client and Web API
 
   16. In AD FS Management, click on **Application Groups** and select **WebApiToWebApi** application group. Right-click and select **Properties**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi12.png)
+      ![Screenshot of the A D F S Management dialog box showing the WebApiToWebApi group highlighted and the Properties option in the dropdown list.](media/adfs-msal-web-api-web-api/webapi12.png)
 
   17. On WebApiToWebApi properties screen, click **Add application…**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi13.png)
+      ![Screenshot of the WebApiToWebApi Properties dialog box showing the WebApiToWebApi - Web A P I application listed.](media/adfs-msal-web-api-web-api/webapi13.png)
 
   18. Under Standalone applications, select **Web API**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi14.png)
+      ![Screenshot of the Welcome page of the Add a new application to WebApiToWebApi wizard showing the Web A P I option highlighted.](media/adfs-msal-web-api-web-api/webapi14.png)
 
   19. On Configure Web API, add https://localhost:44300 as the **Identifier**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi15.png)
+      ![Screenshot of the Configure Web A P I page of the Add a new application to WebApiToWebApi wizard showing the correct redirect U R I.](media/adfs-msal-web-api-web-api/webapi15.png)
 
   20. On the Apply Access Control Policy screen, select **Permit everyone** and click **Next**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi16.png)
+      ![Screenshot of the Choose Access Control Policy page of the Add a new application to WebApiToWebApi wizard showing the Permit everyone option highlighted.](media/adfs-msal-web-api-web-api/webapi16.png)
 
   21. On the Configure Application Permissions screen, click **Next**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi17.png)
+      ![Screenshot of the Configure Application Permissions page of the Add a new application to WebApiToWebApi wizard showing the Next option called out.](media/adfs-msal-web-api-web-api/webapi17.png)
 
   22. On the Summary screen, click **Next**.
 
@@ -119,33 +119,33 @@ This section shows how to register the Native App as a public client and Web API
 
   25. On WebApiToWebApi Properties screen, select **WebApiToWebApi – Web API** and click **Edit…**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi18.png)
+      ![Screenshot of the WebApiToWebApi Properties dialog box showing the WebApiToWebApi - Web A P I application highlighted.](media/adfs-msal-web-api-web-api/webapi18.png)
 
   26. On WebApiToWebApi – Web API Properties screen, select **Issuance Transform Rules** tab and click **Add Rule…**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi19.png)
+      ![Screenshot of the WebApiToWebApi - Web A P I Properties dialog box showing the Issuance Transform Rules tab.](media/adfs-msal-web-api-web-api/webapi19.png)
 
   27. On Add Transform Claim Rule Wizard, select **Send Claims Using a Custom Rule** from dropdown and click **Next**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi20.png)
+      ![Screenshot of the Select Rule Template page of the Add Transform Claim Rule Wizard showing the Send Claims Using a Custom Rule option selected.](media/adfs-msal-web-api-web-api/webapi20.png)
 
   28. Enter **PassAllClaims** in **Claim rule name:** field and **x:[] => issue(claim=x);** claim rule in Custom rule: field and click Finish.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi21.png)
+      ![Screenshot of the Configure Rule page of the Add Transform Claim Rule Wizard showing the configuration explained above.](media/adfs-msal-web-api-web-api/webapi21.png)
 
   29. Click OK on WebApiToWebApi – Web API Properties screen
 
   30. On WebApiToWebApi Properties screen, select select WebApiToWebApi – Web API 2 and click Edit…</br>
-  ![App Reg](media/adfs-msal-web-api-web-api/webapi22.png)
+  ![Screenshot of the WebApiToWebApi Properties dialog box showing the WebApiToWebApi - Web A P I 2 application highlighted.](media/adfs-msal-web-api-web-api/webapi22.png)
 
   31. On WebApiToWebApi – Web API 2 Properties screen, select Issuance Transform Rules tab and click Add Rule…
 
-  32. On Add Transform Claim Rule Wizard, select Send Claims Using a Custom Rule from dopdown and click Next
-  ![App Reg](media/adfs-msal-web-api-web-api/webapi23.png)
+  32. On Add Transform Claim Rule Wizard, select Send Claims Using a Custom Rule from dropdown and click Next
+  ![Screenshot of the Select Rule Template page of the Add Transform Claim Rule Wizard showing the Send Claims Using a Custom Rule option selected.](media/adfs-msal-web-api-web-api/webapi23.png)
 
   33. Enter PassAllClaims in Claim rule name: field and **x:[] => issue(claim=x);** claim rule in **Custom rule:** field and click **Finish**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi24.png)
+      ![Screenshot of the Configure Rule page of the Add Transform Claim Rule Wizard showing the configuration explained above.](media/adfs-msal-web-api-web-api/webapi24.png)
 
   34.  Click OK on WebApiToWebApi – Web API 2 Properties screen and then on WebApiToWebApi Properties screen.
 
@@ -165,7 +165,7 @@ This section shows how to configure a Web API to call another Web API
        - todo:TodoListResourceId – enter the Identifier value from #4 in App Registration in AD FS section above
        - ida: todo:TodoListBaseAddress - enter the Identifier value from #4 in App Registration in AD FS section above.
 
-            ![App Reg](media/adfs-msal-web-api-web-api/webapi25.png)
+            ![Screenshot of the App config file showing the modified values.](media/adfs-msal-web-api-web-api/webapi25.png)
 
   4. Open the Web.config file under ToDoListService. Modify the following:
        - ida:Audience - enter the Client Identifier value from #12 in App Registration in AD FS section above
@@ -176,13 +176,13 @@ This section shows how to configure a Web API to call another Web API
        - ida:OBOWebAPIBase - enter the Identifier value from #19 in App Registration in AD FS section above.
        - ida:Authority - enter https://[your AD FS hostname]/adfs
 
-          ![App Reg](media/adfs-msal-web-api-web-api/webapi26.png)
+          ![Screenshot of the web config file under ToDoListService showing the modified values.](media/adfs-msal-web-api-web-api/webapi26.png)
 
  5. Open the Web.config file under WebAPIOBO. Modify the following:
        - ida: AdfsMetadataEndpoint - enter https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml
        - ida:Audience - enter the Client Identifier value from #12 in App Registration in AD FS section above
 
-          ![App Reg](media/adfs-msal-web-api-web-api/webapi27.png)
+          ![Screenshot of the web config file under WebAPIOBO showing the modified values.](media/adfs-msal-web-api-web-api/webapi27.png)
 
 ## Test the sample
 
@@ -192,29 +192,29 @@ Once the code changes are made rebuild the solution
 
   1. On Visual Studio, right click on solution and select **Set StartUp Projects…**
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi28.png)
+      ![Screenshot of the list that appears when you right-click the solution with the Set Start Up Projects option highlighted.](media/adfs-msal-web-api-web-api/webapi28.png)
 
   2. On the Properties pages make sure **Action** is set to **Start** for each of the Projects, except TodoListSPA.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi29.png)
+      ![Screenshot of the Solution Property Pages dialog box showing the Multiple startup project option selected and all of the projects' actions set to Start.](media/adfs-msal-web-api-web-api/webapi29.png)
 
   3. At the top of Visual Studio, click the green arrow.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi30.png)
+      ![Screenshot of the Visual Studio UI with the Start option called out.](media/adfs-msal-web-api-web-api/webapi30.png)
 
   4. On the Native App's Main Screen, click on **Sign In**.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi31.png)
+      ![Screenshot of the To Do List Client dialog box.](media/adfs-msal-web-api-web-api/webapi31.png)
 
      If you don't see the native app screen, search and remove *msalcache.bin files from the folder where project repo is saved on your system.
 
   5. You will be re-directed to the AD FS sign-in page. Go ahead and sign in.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi32.png)
+      ![Screenshot of the Sign In page.](media/adfs-msal-web-api-web-api/webapi32.png)
 
   6. Once signed-in, enter text Web Api to Web Api Call in the **Create a To Do item**. Click **Add item**.  This will call the Web API (To Do List Service) which then calls Web API 2 (WebAPIOBO) and adds the item in the cache.
 
-      ![App Reg](media/adfs-msal-web-api-web-api/webapi33.png)
+      ![Screenshot of the To Do List Client dialog box with the new to do item populating the To Do Items section.](media/adfs-msal-web-api-web-api/webapi33.png)
 
  ## Next Steps
 [AD FS OpenID Connect/OAuth flows and Application Scenarios](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
