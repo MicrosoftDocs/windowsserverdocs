@@ -89,11 +89,11 @@ This section shows how to register the Native App as a public client and Web API
 
   16. In AD FS Management, click on **Application Groups** and select **WebApiToWebApi** application group. Right-click and select **Properties**.
 
-      ![Screenshot of the A D F S Management dialog box showing the WebApiToWebApi group highlighted and the Properties option in the dropdown list.](media/adfs-msal-web-api-web-api/webapi12.png)
+      ![Second screenshot of the A D F S Management dialog box showing the WebApiToWebApi group highlighted and the Properties option in the dropdown list.](media/adfs-msal-web-api-web-api/webapi12.png)
 
   17. On WebApiToWebApi properties screen, click **Add application…**.
 
-      ![Screenshot of the WebApiToWebApi Properties dialog box showing the WebApiToWebApi - Web A P I application listed.](media/adfs-msal-web-api-web-api/webapi13.png)
+      ![Second screenshot of the WebApiToWebApi Properties dialog box showing the WebApiToWebApi - Web A P I application listed.](media/adfs-msal-web-api-web-api/webapi13.png)
 
   18. Under Standalone applications, select **Web API**.
 
@@ -141,11 +141,11 @@ This section shows how to register the Native App as a public client and Web API
   31. On WebApiToWebApi – Web API 2 Properties screen, select Issuance Transform Rules tab and click Add Rule…
 
   32. On Add Transform Claim Rule Wizard, select Send Claims Using a Custom Rule from dropdown and click Next
-  ![Screenshot of the Select Rule Template page of the Add Transform Claim Rule Wizard showing the Send Claims Using a Custom Rule option selected.](media/adfs-msal-web-api-web-api/webapi23.png)
+  ![Second screenshot of the Select Rule Template page of the Add Transform Claim Rule Wizard showing the Send Claims Using a Custom Rule option selected.](media/adfs-msal-web-api-web-api/webapi23.png)
 
   33. Enter PassAllClaims in Claim rule name: field and **x:[] => issue(claim=x);** claim rule in **Custom rule:** field and click **Finish**.
 
-      ![Screenshot of the Configure Rule page of the Add Transform Claim Rule Wizard showing the configuration explained above.](media/adfs-msal-web-api-web-api/webapi24.png)
+      ![Second screenshot of the Configure Rule page of the Add Transform Claim Rule Wizard showing the configuration explained above.](media/adfs-msal-web-api-web-api/webapi24.png)
 
   34.  Click OK on WebApiToWebApi – Web API 2 Properties screen and then on WebApiToWebApi Properties screen.
 
