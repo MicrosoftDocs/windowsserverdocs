@@ -37,23 +37,23 @@ This section shows how to register the Native App as a public client and Web API
 
   2. On the Application Group Wizard, for the **Name** enter **NativeAppToWebApi** and under **Client-Server applications** select the **Native application accessing a Web API** template. Click **Next**.
 
-      ![App Reg](media/adfs-msal-native-app-web-api/native2.png)
+      ![Screenshot of the Welcome page of the Add Application Group Wizard showing the Native application accessing a Web API template highlighted.](media/adfs-msal-native-app-web-api/native2.png)
 
   3. Copy the **Client Identifier** value. It will be used later as the value for **ClientId** in the application's **App.config** file. Enter the following for **Redirect URI:** https://ToDoListClient. Click **Add**. Click **Next**.
 
-     ![App Reg](media/adfs-msal-native-app-web-api/native3.png)
+     ![Screenshot of the Native application page of the Add Application Group Wizard showing the redirect U R I.](media/adfs-msal-native-app-web-api/native3.png)
 
   4. On the Configure Web API screen, enter the **Identifier:** https://localhost:44321/. Click **Add**. Click **Next**. This value will be used later in the application's **App.config** and **Web.config** files.
 
-     ![App Reg](media/adfs-msal-native-app-web-api/native4.png)
+     ![Screenshot of the Configure Web API page of the Add Application Group Wizard showing the correct identifier.](media/adfs-msal-native-app-web-api/native4.png)
 
   5. On the Apply Access Control Policy screen, select **Permit everyone** and click **Next**.
 
-     ![App Reg](media/adfs-msal-native-app-web-api/native5.png)
+     ![Screenshot of the Choose Access Control Policy page of the Add Application Group Wizard showing the Permit everyone option highlighted.](media/adfs-msal-native-app-web-api/native5.png)
 
   6. On the Configure Application Permissions screen, make sure **openid** is selected and click **Next**.
 
-     ![App Reg](media/adfs-msal-native-app-web-api/native6.png)
+     ![Screenshot of the Configure Application Permissions page of the Add Application Group Wizard showing open I D selected.](media/adfs-msal-native-app-web-api/native6.png)
 
   7. On the Summary screen, click **Next**.
 
@@ -61,23 +61,23 @@ This section shows how to register the Native App as a public client and Web API
 
   9. In AD FS Management, click on **Application Groups** and select **NativeAppToWebApi**         application group. Right-click and select **Properties**.
 
-      ![App Reg](media/adfs-msal-native-app-web-api/native7.png)
+      ![Screenshot of the A D F S Management dialog box showing the NativeAppToWebApi group highlighted and the Properties option in the dropdown list.](media/adfs-msal-native-app-web-api/native7.png)
 
   10. On NativeAppToWebApi properties screen, select **NativeAppToWebApi – Web API** under **Web API** and click **Edit…**
 
-      ![App Reg](media/adfs-msal-native-app-web-api/native8.png)
+      ![Screenshot of the NativeAppToWebApi Properties dialog box showing the NativeAppToWebApi - Web A P I application highlighted.](media/adfs-msal-native-app-web-api/native8.png)
 
   11. On NativeAppToWebApi – Web API Properties screen, select **Issuance Transform Rules** tab and click **Add Rule…**
 
-      ![App Reg](media/adfs-msal-native-app-web-api/native9.png)
+      ![Screenshot of the NativeAppToWebApi - Web A P I Properties dialog box showing the Issuance Transform Rules tab.](media/adfs-msal-native-app-web-api/native9.png)
 
   12. On Add Transform Claim Rule Wizard, select **Transform an Incoming Claim** from the **Claim rule template:** dropdown and click **Next**.
 
-      ![App Reg](media/adfs-msal-native-app-web-api/native10.png)
+      ![Screenshot of the Select Rule Template page of the Add Transform Claim Rule Wizard showing the Transform an Incoming Claim option selected.](media/adfs-msal-native-app-web-api/native10.png)
 
   13. Enter **NameID** in **Claim rule name:** field. Select **Name** for **Incoming claim type:**, **Name ID** for **Outgoing claim type:** and **Common Name** for **Outgoing name ID format:**. click **Finish**.
 
-      ![App Reg](media/adfs-msal-native-app-web-api/native11.png)
+      ![Screenshot of the Configure Rule page of the Add Transform Claim Rule Wizard showing the configuration explained above.](media/adfs-msal-native-app-web-api/native11.png)
 
   14. Click OK on NativeAppToWebApi – Web API Properties screen and then NativeAppToWebApi Properties screen.
 
@@ -95,13 +95,13 @@ This section shows how to configure a Native App to sign-in user and retrieve to
    - todo:TodoListResourceId – enter the **Identifier** value from #4 in App Registration in AD FS section above
    - ida: todo:TodoListBaseAddress - enter the **Identifier** value from #4 in App Registration in AD FS section above.
 
-     ![code config](media/adfs-msal-native-app-web-api/native12.png)
+     ![Screenshot of the App config file showing the modified values.](media/adfs-msal-native-app-web-api/native12.png)
 
  4. Open the Web.config file. Modify the following:
     - ida:Audience - enter the **Identifier** value from #4 in App Registration in AD FS section above
     - ida: AdfsMetadataEndpoint - enter `https://[your AD FS hostname]/federationmetadata/2007-06/federationmetadata.xml`
 
-      ![code config](media/adfs-msal-native-app-web-api/native13.png)
+      ![Screenshot of the web config file showing the modified values.](media/adfs-msal-native-app-web-api/native13.png)
 
 ## Test the sample
 This section shows how to test the sample configured above.
@@ -110,29 +110,29 @@ This section shows how to test the sample configured above.
 
   2. On Visual Studio, right click on solution and select **Set StartUp Projects…**
 
-     ![App test](media/adfs-msal-native-app-web-api/native14.png)
+     ![Screenshot of the list that appears when you right-click the solution with the Set Start Up Projects option highlighted.](media/adfs-msal-native-app-web-api/native14.png)
 
   3. On the Properties pages make sure **Action** is set to **Start** for each of the Projects
 
-     ![App test](media/adfs-msal-native-app-web-api/native15.png)
+     ![Screenshot of the Solution Property Pages dialog box showing the Multiple startup project option selected and all of the projects' actions set to Start.](media/adfs-msal-native-app-web-api/native15.png)
 
   4. At the top of Visual Studio, click the green arrow.
 
-     ![App test](media/adfs-msal-native-app-web-api/native16.png)
+     ![Screenshot of the Visual Studio UI with the Start option called out.](media/adfs-msal-native-app-web-api/native16.png)
 
   5. On the Native App's Main screen, click on **Sign In**.
 
-     ![App test](media/adfs-msal-native-app-web-api/native17.png)
+     ![Screenshot of the To Do List Client dialog box.](media/adfs-msal-native-app-web-api/native17.png)
 
    If you don't see the native app screen, search and remove `*msalcache.bin` files from the folder where project repo is saved on your system.
 
   1. You will be re-directed to the AD FS sign-in page. Go ahead and sign in.
 
-      ![App test](media/adfs-msal-native-app-web-api/native18.png)
+      ![Screenshot of the Sign In page.](media/adfs-msal-native-app-web-api/native18.png)
 
   2. Once signed-in, enter text **Build Native App to Web Api** in the **Create a To Do item**. Click **Add item**.  This will call the **To Do List Service (Web API)** and add the item in the cache.
 
-       ![App test](media/adfs-msal-native-app-web-api/native19.png)
+       ![Screenshot of the To Do List Client dialog box with the new to do item populating the To Do Items section.](media/adfs-msal-native-app-web-api/native19.png)
 
 ## Next Steps
 [AD FS OpenID Connect/OAuth flows and Application Scenarios](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
