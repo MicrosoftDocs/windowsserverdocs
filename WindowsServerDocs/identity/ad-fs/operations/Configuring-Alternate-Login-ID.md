@@ -8,10 +8,12 @@ manager: mtillman
 ms.date: 11/14/2018
 ms.topic: article
 ---
+
 # Configuring Alternate Login ID
 
 
 ## What is Alternate Login ID?
+
 In most scenarios, users use their UPN (User Principal Names) to login to their accounts. However, in some environments due to corporate policies or on-premises line-of-business application dependencies, the users may be using some other form of sign-in.
 
 > [!NOTE]
@@ -29,6 +31,7 @@ An organization may have to use alternate ID in the following scenarios:
    In the above-mentioned scenarios, alternate ID with AD FS enables users to sign-in to Azure AD without modifying your on-premises UPNs.
 
 ## Configure alternate logon ID
+
 Using Azure AD Connect
 We recommend using Azure AD connect to configure alternate logon ID for your environment.
 
@@ -41,6 +44,7 @@ When Azure AD Connect is provided details about AD FS environment, it automatica
 > Microsoft recommends using Azure AD Connect to configure alternate logon ID.
 
 ### Manually configure alternate ID
+
 In order to configure alternate login ID, you must perform the following tasks:
 Configure your AD FS claims provider trusts to enable alternate login ID
 
@@ -76,6 +80,7 @@ Set-AdfsClaimsProviderTrust -TargetIdentifier "AD AUTHORITY" -AlternateLoginID $
 > The following has only been tested against AD FS and not 3rd party identity providers.
 
 ### Exchange and Skype for Business
+
 If you are using alternate login id with Exchange and Skype for Business, the user experience varies depending on whether or not you are using HMA.
 
 > [!NOTE]
@@ -84,6 +89,7 @@ If you are using alternate login id with Exchange and Skype for Business, the us
 or more information see, [Hybrid Modern Authentication Overview](https://support.office.com/article/Hybrid-Modern-Authentication-overview-and-prerequisites-for-using-it-with-on-premises-Skype-for-Business-and-Exchange-servers-ef753b32-7251-4c9e-b442-1a5aec14e58d)
 
 ### Pre-requisites for Exchange and Skype for Business
+
 The following are pre-requisites for achieving SSO with alternate ID.
 
 - Exchange Online should have Modern Authentication turned ON.
@@ -107,12 +113,15 @@ Using alternate-id can cause extra prompts for authentication if these additiona
 With the following additional configuration, the user experience is improved significantly, and you can achieve near zero prompts for authentication for alternate-id users in your organization.
 
 ##### Step 1. Update to required Office version
+
 Office version 1712 (build no 8827.2148) and above have updated the authentication logic to handle the alternate-id scenario. In order to leverage the new logic, the client machines need to be updated to Office version 1712 (build no 8827.2148) and above.
 
 ##### Step 2. Update to required Windows version
+
 Windows version 1709 and above have updated the authentication logic to handle the alternate-id scenario. In order to leverage the new logic, the client machines need to be updated to Windows version 1709 and above.
 
 ##### Step 3. Configure registry for impacted users using group policy
+
 The office applications rely on information pushed by the directory administrator to identify the alternate-id environment. The following registry keys need to be configured to help office applications authenticate the user with alternate-id without showing any extra prompts
 
 |Regkey to add|Regkey data name, type, and value|Windows 7/8|Windows 10|Description|
@@ -161,11 +170,9 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
     - Non-routable domains (e.g. Contoso.local) that cannot be verified by Azure AD.
     - Managed environments that do not have AD FS deployed.
 
-
 - When enabled, the alternate login ID feature is only available for username/password authentication across all the user name/password authentication protocols supported by AD FS (SAML-P, WS-Fed, WS-Trust, and OAuth).
 
-
-- When Windows Integrated Authentication (WIA) is performed (for example, when users try to access a corporate application on a domain-joined machine from intranet and AD FS administrator has configured the authentication policy to use WIA for intranet), UPN isused for authentication. If you have configured any claim rules for the relying parties for alternate login ID feature, you should make sure those rules are still valid in the WIA case.
+- When Windows Integrated Authentication (WIA) is performed (for example, when users try to access a corporate application on a domain-joined machine from intranet and AD FS administrator has configured the authentication policy to use WIA for intranet), UPN is used for authentication. If you have configured any claim rules for the relying parties for alternate login ID feature, you should make sure those rules are still valid in the WIA case.
 
 - When enabled, the alternate login ID feature requires at least one global catalog server to be reachable from the AD FS server for each user account forest that AD FS supports. Failure to reach a global catalog server in the user account forest results in AD FS falling back to use UPN. By default all the domain controllers are global catalog servers.
 
@@ -180,6 +187,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 - The new claim type that contains the alternate login ID value is **http:schemas.microsoft.com/ws/2013/11/alternateloginid**
 
 ## Events and Performance Counters
+
 The following performance counters have been added to measure the performance of AD FS servers when alternate login ID is enabled:
 
 - Alternate Login Id Authentications: number of authentications performed by using alternate login ID
@@ -200,4 +208,5 @@ The following are various error cases and corresponding impact on a user's sign-
 |   Multiple user objects are found across multiple forests    |          Login failure           |           Event ID 364 with exception message MSIS8014: Found multiple user accounts with identity '{0}' in forests: {1}            |
 
 ## See Also
+
 [AD FS Operations](../ad-fs-operations.md)
