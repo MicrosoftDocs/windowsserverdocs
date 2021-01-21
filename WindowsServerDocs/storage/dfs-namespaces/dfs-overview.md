@@ -4,7 +4,7 @@ ms.author: jgerend
 manager: daveba
 ms.topic: article
 author: jasongerend
-ms.date: 06/07/2019
+ms.date: 01/21/2021
 description: This topic describes DFS Namespaces, which is a role service in Windows Server enabling you to group shared folders located on different servers into one or more logically structured namespaces.
 ---
 # DFS Namespaces overview
@@ -100,11 +100,11 @@ Install-WindowsFeature "FS-DFS-Namespace", "RSAT-DFS-Mgmt-Con"
 
 ## Interoperability with Azure virtual machines
 
-Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested; however, there are some limitations and requirements that you must follow.
-
-- You can't cluster stand-alone namespaces in Azure virtual machines.
+Using DFS Namespaces on a virtual machine in Microsoft Azure has been tested.
 
 - You can host domain-based namespaces in Azure virtual machines, including environments with Azure Active Directory.
+- You can cluster stand-alone namespaces in Azure virtual machines using failover clusters that use [Shared Disk](/azure/virtual-machines/disks-shared) or [Ultra Disks](/azure/virtual-machines/disks-enable-ultra-ssd).
+
 
 To learn about how to get started with Azure virtual machines, see [Azure virtual machines documentation](/azure/virtual-machines/).
 
