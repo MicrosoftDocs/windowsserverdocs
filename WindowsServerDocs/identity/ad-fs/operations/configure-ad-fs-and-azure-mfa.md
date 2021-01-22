@@ -85,12 +85,12 @@ In order to complete configuration for Azure MFA for AD FS, you need to configur
 
 The first thing you need to do is generate a certificate for Azure MFA to use.  This can be done using PowerShell.  The certificate generated can be found in the local machines certificate store, and it is marked with a subject name containing the TenantID for your Azure AD directory.
 
-![AD FS and MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA3.png)
+![Screenshot of the certificate store of a local machine showing the generated certificate.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA3.png)
 
 Note that TenantID is the name of your directory in Azure AD.  Use the following PowerShell cmdlet to generate the new certificate.
     `$certbase64 = New-AdfsAzureMfaTenantCertificate -TenantID <tenantID>`
 
-![AD FS and MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA1.PNG)
+![Screenshot of the PowerShell window showing the cmdlet above.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA1.PNG)
 
 ### Step 2: Add the new credentials to the Azure Multi-Factor Auth Client Service Principal
 
@@ -122,7 +122,7 @@ Open a PowerShell prompt and enter your own *tenantId* with the [Set-AdfsAzureMf
 Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720
 ```
 
-![AD FS and MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png)
+![Screenshot of the PowerShell window showing the warning message received after running the Set-AdfsAzureMfaTenant cmdlet.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png)
 
 Windows Server without the latest service pack doesn't support the `-Environment` parameter for the [Set-AdfsAzureMfaTenant](/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet. If you use Azure Government cloud and the previous steps failed to configure your Azure tenant due to the missing `-Environment` parameter, complete the following steps to manually create the registry entries. Skip these steps if the previous cmdlet correctly registered your tenant information or you aren't in the Azure Government cloud:
 
@@ -139,7 +139,7 @@ Windows Server without the latest service pack doesn't support the `-Environment
 
 After this, you will see that Azure MFA is available as a primary authentication method for intranet and extranet use.
 
-![AD FS and MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png)
+![Screenshot of the Edit Authentication Methods dialog box showing the Azure MFA option highlighted in both the Extranet and Intranet sections.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png)
 
 ## Renew and Manage AD FS Azure MFA Certificates
 

@@ -37,7 +37,7 @@ In today's day and age, hardening your servers and removing older or weak cipher
 
 The registry keys below are located in the same location:  HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols.  Use regedit or PowerShell to enable or disable these protocols and cipher suites.
 
-![Registry location](media/Managing-SSL-Protocols-in-AD-FS/registry.png)
+![Screenshot of the Registry Editor showing the registry keys located in the Protocols folder.](media/Managing-SSL-Protocols-in-AD-FS/registry.png)
 
 ## Enable and Disable SSL 2.0
 Use the following registry keys and their values to enable and disable SSL 2.0.
@@ -212,7 +212,7 @@ Use the following registry keys and their values to enable and disable RC4.  Thi
 
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\
 
-![Registry location](media/Managing-SSL-Protocols-in-AD-FS/cipher.png)
+![Screenshot of the Registry Editor showing the registry keys located in the Ciphers folder.](media/Managing-SSL-Protocols-in-AD-FS/cipher.png)
 
 
 
@@ -245,7 +245,7 @@ Use the following registry keys and their values to enable and disable RC4.  Thi
 
 You can disable certain specific ciphers by removing them from HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002
 
-![Registry location](media/Managing-SSL-Protocols-in-AD-FS/suites.png)
+![Screenshot of the Registry Editor showing the Edit Multi-String dialog box for the 00010002 folder.](media/Managing-SSL-Protocols-in-AD-FS/suites.png)
 
 To enable a cipher suite, add its string value to the Functions multi-string value key.  For example, if we want to enable TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521 then we would add it to the string.
 

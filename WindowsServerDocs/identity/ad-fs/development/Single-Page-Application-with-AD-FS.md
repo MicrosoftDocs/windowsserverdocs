@@ -73,17 +73,17 @@ In the sample, the WebAPI is configured to listen at https://localhost:44326/. T
 
 1. Open the AD FS management console and click on **Add Application Group**. In the **Add Application Group Wizard** enter the name of the application, description and select the **Web browser accessing a web application** template from the **Client-Server applications** section as shown below
 
-    ![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
+    ![Screenshot of the Welcome page of the Add Application Group Wizard showing the Web browser accessing a web application template highlighted.](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
 
 2. On the next page **Native application**, provide the application client identifier and redirect URI as shown below
 
-    ![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step2.png)
+    ![Screenshot of the Native application page of the Add Application Group Wizard showing the redirect U R I.](media/Single-Page-Application-with-AD-FS/appgroup_step2.png)
 
 3. On the next page **Apply Access Control Policy** leave the permissions as *Permit everyone*
 
 4. The summary page should look similar to below
 
-    ![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step3.png)
+    ![Screenshot of the Summary page of the Add Application Group Wizard.](media/Single-Page-Application-with-AD-FS/appgroup_step3.png)
 
 5. Click on **Next** to complete the addition of the application group and close the wizard.
 

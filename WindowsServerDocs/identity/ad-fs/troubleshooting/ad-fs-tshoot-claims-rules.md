@@ -40,24 +40,24 @@ For more information on claims and the syntax see [The Role of the Claims Rule L
 ## Claims rule editor
 Syntax checking is performed by the claims rule editor once you have completed the claim and click **OK**.  So if you have the incorrect syntax then the editor will let you know.
 
-![claims](media/ad-fs-tshoot-claims/claims1.png)
+![Screenshot of the A D F S Management dialog box showing a message stating that the custom claim rule syntax is not valid.](media/ad-fs-tshoot-claims/claims1.png)
 
 ## Event logs
 When looking trying to troubleshoot a claim using the logs the best approach is to look for claims output.  You can look for 1000 and 1001 events in the event log.
 
-![claims](media/ad-fs-tshoot-claims/claims2.png)
+![Screenshot of the Event Properties dialog box showing the results of a 1000 event ID.](media/ad-fs-tshoot-claims/claims2.png)
 
 ## Creating a sample application
 You can also create a sample application the echoes your claims.  For example you can use a sample application and create a relying party that has the same claim you are trying to troubleshoot and see if the app has any issues with that claim.
 
-![claims](media/ad-fs-tshoot-claims/claim4.png)
+![Screenshot of the sample application displayed in a browser.](media/ad-fs-tshoot-claims/claim4.png)
 
 A good sample web app is available here.  This app is a simple web app that echoes back the claims that it receives from the relying party.  In order to use this you need to edit the web.config app by:
 - changing https://app1.contoso.com/sampapp to the URL the you will be using for hosting the sampapp
 - changing all instances of sts.contoso.com to point you AD FS federation server
 - Replacing the thumbprint with your thumbprint
 
-![claims](media/ad-fs-tshoot-claims/claims3.png)
+![Screenshot of Visual Studio showing the web config file.](media/ad-fs-tshoot-claims/claims3.png)
 
 The following [blog article](/archive/blogs/tangent_thoughts/install-and-configure-a-simple-net-4-5-sample-federated-application-samapp) has excellent, in-depth instructions, for setting this up.
 

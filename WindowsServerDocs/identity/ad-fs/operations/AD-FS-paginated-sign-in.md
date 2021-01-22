@@ -1,4 +1,4 @@
----
+ ---
 title: AD FS paginated sign-in
 description: This document describes the new sign-in experience for AD FS 2019.
 author: billmath
@@ -25,15 +25,15 @@ In AD FS in Windows Server 2019, these are the major design changes that you'll 
 - **A centered UI**. Previously, the sign-in UI existed on the right side of the screen, as shown above. We've moved the UI front and center to modernize the experience.
 - **Pagination**. Instead of providing you a long form to fill out, we've incorporated a new flow that will take you through the sign-in experience step-by-step. Our telemetry shows that with this approach, our customers have more successful sign-ins. It also provides us more flexibility to incorporate various authentication methods, such us phone factor authentication.
 
-![newsignin](media/AD-FS-paginated-sign-in/signin2.png)
+![Screenshot of the new Sign in screen.](media/AD-FS-paginated-sign-in/signin2.png)
 
 On the first page, you'll be asked to enter your username. You may also select the option to “Keep me signed in” to reduce the frequency of sign-in prompts and remain signed in when it's safe to do so. (This option is disabled by default.)
 
-![newsignin](media/AD-FS-paginated-sign-in/signin3.png)
+![Screenshot of the first page of the new Sign in screen.](media/AD-FS-paginated-sign-in/signin3.png)
 
 On the second page, you'll be presented with authentication options, configured by your administrator. If allowing external authentication as primary is enabled, this will be included as well.
 
-![newsignin](media/AD-FS-paginated-sign-in/signin4.png)
+![Screenshot of the second page of the new Sign in screen.](media/AD-FS-paginated-sign-in/signin4.png)
 
 On the third page, you'll be asked to enter your password (assuming you selected “Password” as your authentication option).
 

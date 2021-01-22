@@ -35,20 +35,20 @@ Use the following steps for configuring compound authentication and claims
 ### Step 1:  Enable KDC support for claims, compound authentication, and Kerberos armoring on the Default Domain Controller Policy
 1.  In Server Manager, select Tools, **Group Policy Management**.
 2.  Navigate down to the **Default Domain Controller Policy**, right-click and select **edit**.
-![Group Policy Management](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc1.png)
+![Screenshot showing the Default Domain Policy page in the Group Policy Management dialog box.](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc1.png)
 3.  On the **Group Policy Management Editor**, under **Computer Configuration**, expand **Policies**, expand **Administrative Templates**, expand **System**, and select **KDC**.
 4.  In the right pane, double-click **KDC support for claims, compound authentication, and Kerberos armoring**.
-![Group Policy Management](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc2.png)
+![Screenshot of the Group Policy Management Editor showing the KDC support for claims, compound authentication, and Kerberos armoring setting highlighted.](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc2.png)
 5.  In the new dialog window, set KDC support for claims to **Enabled**.
 6.  Under Options, select **Supported** from the drop-down menu and then click **Apply** and **OK**.
-![Group Policy Management](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc3.png)
+![Screenshot of the KDC support for claims, compound authentication and Kerberos armoring dialog box showing the Supported option selected.](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc3.png)
 
 ### Step 2: Enable Kerberos client support for claims, compound authentication, and Kerberos armoring on computers accessing federated applications
 
 1.	On a Group Policy applied to the computers accessing federated applications,  in the **Group Policy Management Editor**, under **Computer Configuration**, expand **Policies**, expand **Administrative Templates**, expand **System**, and select **Kerberos**.
 2.	In the right pane of the Group Policy Management Editor window, double-click **Kerberos client support for claims, compound authentication, and Kerberos armoring.**
 3.	In the new dialog window, set Kerberos client support to **Enabled** and click **Apply** and **OK**.
-![Group Policy Management](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc4.png)
+![Screenshot of the KDC support for claims, compound authentication and Kerberos armoring dialog box showing the Enabled option selected.](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc4.png)
 4.	Close the Group Policy Management Editor.
 
 ### Step 3: Ensure the AD FS servers have been updated.
@@ -67,7 +67,7 @@ You need to ensure that the following updates are installed on your AD FS server
 3. On **Edit Global Authentication Policy** under **Intranet** select **Windows Authentication**.
 4. Click **Apply** and **Ok**.
 
-![Group Policy Management](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc5.png)
+    ![Screenshot of the Edit Global Authentication Policy dialog box showing the Windows Authentication option selected.](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc5.png)
 
 5. Using PowerShell you can use the **Set-AdfsGlobalAuthenticationPolicy** cmdlet.
 
@@ -87,7 +87,7 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 4. Place a check in both boxes.
 5. Click **OK**.
 
-![Claim Description](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc6.png)
+    ![Screenshot of the Ad a Claim Description dialog box.](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc6.png)
 
 6. Using PowerShell you can use the **Add-AdfsClaimDescription** cmdlet.
    ``` powershell
@@ -129,7 +129,7 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 4.  On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
 5.  Add a display name and select **Windows device group** from the **Incoming claim type** drop-down.
 6.  Click **Finish**.  Click **Apply** and **Ok**.
-![Claim Description](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc7.png)
+    ![Screenshot of the AD FS, Edit Claim Rules for Active Directory, and Edit Rule - Windows Device Group dialog boxes with arrows and call outs showing the workflow described above.](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc7.png)
 
 ### Step 8: On the Relying Party where the ‘WindowsDeviceGroup' claims are expected, add a similar ‘Pass-through' Or ‘Transform' claim rule.
 2. In **AD FS Management**, click **Relying Party Trusts** and in the right pane, righ-click your RP and select **Edit Claim Rules**.
@@ -137,7 +137,7 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 4. On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
 5. Add a display name and select **Windows device group** from the **Incoming claim type** drop-down.
 6. Click **Finish**.  Click **Apply** and **Ok**.
-   ![Claim Description](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc8.png)
+   ![Screenshot of the AD FS, Edit Claim Rules for myclaims.fedhome.in, and Edit Rule - Windows Device Grp dialog boxes with arrows and call outs showing the workflow described above.](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc8.png)
 
 
 ## Steps for configuring AD FS in Windows Server 2016

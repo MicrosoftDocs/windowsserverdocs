@@ -29,11 +29,11 @@ If the AD FS service account has a misconfigured or the wrong SPN then this can 
 
 Using network traces (such as Wireshark) you can determine what SPN the browser is trying to resolve and then using the command line tool, setspn - Q <spn>, you can do a lookup on that SPN.  It may not be found or it may be assigned to another account other than the AD FS service account.
 
-![integrated](media/ad-fs-tshoot-iwa/iwa3.png)
+![Screenshot of the Command Prompt window.](media/ad-fs-tshoot-iwa/iwa3.png)
 
 You can verify the SPN by looking at the properties of the AD FS service account.
 
-![integrated](media/ad-fs-tshoot-iwa/iwa1.png)
+![Screenshot of the Attribute Editor tab of the A D F S Service Account Properties dialog box showing the Service Principal Name value called out.](media/ad-fs-tshoot-iwa/iwa1.png)
 
 ## Channel Binding Token
 Currently, when a client application authenticates itself to the server using Kerberos, Digest, or NTLM using HTTPS, a Transport Level Security (TLS) channel is first established and authentication takes place using this channel.
