@@ -11,7 +11,7 @@ ms.date: 08/10/2018
 
 # Requirements for Deploying Network Controller
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 Prepare your datacenter for Network Controller deployment, which requires one or more computers or VMs and one computer or VM. Before you can deploy Network Controller, you must configure the security groups, log file locations (if needed), and dynamic DNS registration.
 
@@ -19,8 +19,8 @@ Prepare your datacenter for Network Controller deployment, which requires one or
 
 Network Controller deployment requires one or more computers or VMs that serve as the Network Controller, and one computer or VM to serve as a management client for Network Controller.
 
-- All VMs and computers planned as Network Controller nodes must be running Windows Server 2016 Datacenter edition.
-- Any computer or virtual machine (VM) upon which you install Network Controller must be running the Datacenter edition of Windows Server 2016.
+- All VMs and computers planned as Network Controller nodes must be running Windows Server 2019 or 2016 Datacenter edition.
+- Any computer or virtual machine (VM) upon which you install Network Controller must be running Windows Server 2019 or 2016 Datacenter edition.
 - The management client computer or VM for Network Controller must be running Windows 10.
 
 ## Configuration requirements

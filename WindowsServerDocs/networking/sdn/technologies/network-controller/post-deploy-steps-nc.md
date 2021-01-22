@@ -1,6 +1,6 @@
 ---
 title: Post-Deployment Steps for Network Controller
-description: This topic provides certificate configuration instructions for non-Kerberos deployments of Network Controller in Windows Server 2016 Datacenter.
+description: This topic provides certificate configuration instructions for non-Kerberos deployments of Network Controller in Windows Server 2019 and 2016 Datacenter.
 manager: grcusanz
 ms.topic: article
 ms.assetid: eea0aca9-8d89-48fb-8068-fca40c90d34b
@@ -9,6 +9,8 @@ author: AnirbanPaul
 ms.date: 08/07/2020
 ---
 # Post-Deployment Steps for Network Controller
+
+> Applies to: Windows Server 2019, Windows Server 2016
 
 When you install Network Controller, you can choose Kerberos or non-Kerberos deployments.
 

@@ -10,7 +10,7 @@ ms.date: 08/08/2018
 ---
 # Configure Encryption for a Virtual Subnet
 
->Applies to: Windows Server
+>Applies to: Windows Server 2019, Windows Server 2016
 
 Virtual network encryption allows for encryption of virtual network traffic between VMs that communicate with each other within subnets marked as ‘Encryption Enabled.' It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
 

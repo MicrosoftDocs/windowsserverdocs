@@ -1,6 +1,6 @@
 ---
-title: Hyper-V Network Virtualization Overview in Windows Server 2016
-description: This topic provides an overview of Hyper-V Network Virtualization in Windows Server 2016
+title: Hyper-V Network Virtualization Overview in Windows Server
+description: This topic provides an overview of Hyper-V Network Virtualization in Windows Server 2019 and 2016
 manager: grcusanz
 ms.topic: article
 ms.assetid: 0115b7ad-d229-4c69-9d7e-a3f5fbaa3b2f
@@ -8,11 +8,11 @@ ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/07/2020
 ---
-# Hyper-V Network Virtualization Overview in Windows Server 2016
+# Hyper-V Network Virtualization Overview in Windows Server
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
-In Windows Server 2016 and Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution.  There are five major components that comprise Microsoft's network virtualization solution:
+In Windows Server and Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution.  There are five major components that comprise Microsoft's network virtualization solution:
 
 -   **Windows Azure Pack for Windows Server** provides a tenant facing portal to create virtual networks, and an administrative portal to manage virtual networks.
 

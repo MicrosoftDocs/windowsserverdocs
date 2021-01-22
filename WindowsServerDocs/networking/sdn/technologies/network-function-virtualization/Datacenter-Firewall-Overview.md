@@ -1,6 +1,6 @@
 ---
 title: Datacenter Firewall Overview
-description: You can use this topic to learn about Datacenter Firewall, which is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall in Windows Server 2016.
+description: You can use this topic to learn about Datacenter Firewall, which is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall in Windows Server 2019 and 2016.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 67576533-206b-428a-956c-ed8c53218d9b
@@ -10,9 +10,9 @@ ms.date: 08/07/2020
 ---
 # Datacenter Firewall Overview
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
-Datacenter Firewall is a new service included with Windows Server 2016. It is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall. When deployed and offered as a service by the service provider, tenant administrators can install and configure firewall policies to help protect their virtual networks from unwanted traffic originating from Internet and intranet networks.
+New in Windows Server 2016, Datacenter Firewall is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall. When deployed and offered as a service by the service provider, tenant administrators can install and configure firewall policies to help protect their virtual networks from unwanted traffic originating from Internet and intranet networks.
 
 ![Datacenter Firewall in the network stack](../../../media/Datacenter-Firewall-Overview/MultitenantFirewallOverview2.png)
 
