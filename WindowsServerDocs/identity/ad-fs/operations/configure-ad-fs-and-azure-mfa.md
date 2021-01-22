@@ -139,7 +139,7 @@ Windows Server without the latest service pack doesn't support the `-Environment
 
 After this, you will see that Azure MFA is available as a primary authentication method for intranet and extranet use.
 
-![Screenshot of the Edit Authentication Methods dialog box showing the Azure MFA option highlighted in both the Extranet and Intranet sections.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png)
+![Screenshot of the Edit Authentication Methods dialog box showing the Azure M F A option highlighted in both the Extranet and Intranet sections.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png)
 
 ## Renew and Manage AD FS Azure MFA Certificates
 

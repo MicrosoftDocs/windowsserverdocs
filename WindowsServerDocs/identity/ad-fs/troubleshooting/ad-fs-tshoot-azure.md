@@ -31,7 +31,7 @@ If redirection is not occurring there are a few things you want to check
 
 3. Finally, you want to check [DNS](ad-fs-tshoot-dns.md) and make sure that your AD FS servers or WAP servers are resolving from the internet.  Verify that this resolves and that you are able to navigate to it.
 
-4. You can also use the PowerShell cmdlt `Get-AzureADDomain` to get this information also.
+4. You can also use the PowerShell cmdlet `Get-AzureADDomain` to get this information also.
 
    ![Screenshot of the PowerShell window showing the results of the Get-AzureADDomain command.](media/ad-fs-tshoot-azure/azure6.png)
 

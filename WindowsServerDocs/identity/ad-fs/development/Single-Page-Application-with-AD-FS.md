@@ -172,11 +172,11 @@ Click on Login.  The ToDo List will trigger the authentication flow and ADAL JS 
 
 In Fiddler you can see the token being returned as part of the URL in the # fragment.
 
-![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp5a.png)
+![Screenshot of Fiddler showing that you can see the token being returned as part of the URL in the # fragment.](media/Single-Page-Application-with-AD-FS/singleapp5a.png)
 
 You will be able to now call the backend API to add ToDo List items for the logged-in user:
 
-![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp6.png)
+![Screenshot of the ADAL JS Sample  app.](media/Single-Page-Application-with-AD-FS/singleapp6.png)
 
 ## Next Steps
 [AD FS Development](../../ad-fs/AD-FS-Development.md)

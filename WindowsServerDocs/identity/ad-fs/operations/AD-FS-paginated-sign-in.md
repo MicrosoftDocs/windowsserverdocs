@@ -1,4 +1,4 @@
- ---
+---
 title: AD FS paginated sign-in
 description: This document describes the new sign-in experience for AD FS 2019.
 author: billmath
@@ -15,7 +15,7 @@ For AD FS in Windows Server 2019, we've redesigned the sign-in UI.  Now, the AD 
 ## What's changing
 In AD FS in Windows Server 2012 R2 and 2016, your sign-in screen looked something like this:
 
-![oldsignin](media/AD-FS-paginated-sign-in/signin1.png)
+![Screenshot of the old Sign in screen.](media/AD-FS-paginated-sign-in/signin1.png)
 
 We're moving away from displaying a single form located on the right side of the screen.
 

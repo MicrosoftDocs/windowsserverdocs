@@ -11,13 +11,13 @@ ms.topic: article
 # Managing SSL/TLS Protocols and Cipher Suites for AD FS
 The following documentation provides information on how to disable and enable certain TLS/SSL protocols and cipher suites that are used by AD FS
 
-## TLS/SSL, SChannel and Cipher Suites in AD FS
+## TLS/SSL, SChannel, and Cipher Suites in AD FS
 
 The Transport Layer Security (TLS) and Secure Sockets Layer (SSL) are protocols that provide for secure communications.  Active Directory Federation Services uses these protocols for communications.  Today several versions of these protocols exist.
 
 Schannel is a Security Support Provider (SSP) that implements the SSL, TLS and DTLS Internet standard authentication protocols. The Security Support Provider Interface (SSPI) is an API used by Windows systems to perform security-related functions including authentication. The SSPI functions as a common interface to several Security Support Providers (SSPs), including the Schannel SSP.
 
-A cipher suite is a set of cryptographic algorithms. The schannel SSP implementation of the TLS/SSL protocols use algorithms from a cipher suite to create keys and encrypt information. A cipher suite specifies one algorithm for each of the following tasks:
+A cipher suite is a set of cryptographic algorithms. The Schannel SSP implementation of the TLS/SSL protocols use algorithms from a cipher suite to create keys and encrypt information. A cipher suite specifies one algorithm for each of the following tasks:
 
 - Key exchange
 - Bulk encryption

@@ -39,7 +39,7 @@ Request:
 
 Response:
 
-- The Response is a prompt for credentials.  This indicates that we are using forms authnetication
+- The Response is a prompt for credentials.  This indicates that we are using forms authentication
 - By clicking on the WebView of the Response you can see the credentials prompt.
 
 ![Screenshot of the web view of the response showing the credentials prompt.](media/ad-fs-tshoot-fiddler-ws-fed/fiddler6.png)

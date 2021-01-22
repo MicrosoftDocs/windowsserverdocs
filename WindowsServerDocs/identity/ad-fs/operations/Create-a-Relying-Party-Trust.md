@@ -1,6 +1,7 @@
 ---
 ms.assetid: 5b9fc9c1-5d12-4ad4-8ddc-3b8a6d45b217
 title: Create a Relying Party Trust
+description: Learn how to create a relying party trust manually and use federation metadata.
 author: billmath
 ms.author: billmath
 manager: femila

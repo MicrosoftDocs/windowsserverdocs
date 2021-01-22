@@ -87,7 +87,7 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 4. Place a check in both boxes.
 5. Click **OK**.
 
-    ![Screenshot of the Ad a Claim Description dialog box.](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc6.png)
+    ![Screenshot of the Add a Claim Description dialog box.](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc6.png)
 
 6. Using PowerShell you can use the **Add-AdfsClaimDescription** cmdlet.
    ``` powershell
@@ -124,7 +124,7 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 ### Step 7: Update the AD FS Claims Provider Trust for Active Directory
 
 1. Update the AD FS Claims Provider Trust for Active Directory to include the following ‘Pass-through' Claim rule for ‘WindowsDeviceGroup' Claim.
-2.  In **AD FS Management**, click **Claims Provider Trusts** and in the right pane, righ-click **Active Directory** and select **Edit Claim Rules**.
+2.  In **AD FS Management**, click **Claims Provider Trusts** and in the right pane, right-click **Active Directory** and select **Edit Claim Rules**.
 3.  On the **Edit Claim Rules for Active Director** click **Add Rule**.
 4.  On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
 5.  Add a display name and select **Windows device group** from the **Incoming claim type** drop-down.
@@ -132,7 +132,7 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
     ![Screenshot of the AD FS, Edit Claim Rules for Active Directory, and Edit Rule - Windows Device Group dialog boxes with arrows and call outs showing the workflow described above.](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc7.png)
 
 ### Step 8: On the Relying Party where the ‘WindowsDeviceGroup' claims are expected, add a similar ‘Pass-through' Or ‘Transform' claim rule.
-2. In **AD FS Management**, click **Relying Party Trusts** and in the right pane, righ-click your RP and select **Edit Claim Rules**.
+2. In **AD FS Management**, click **Relying Party Trusts** and in the right pane, right-click your RP and select **Edit Claim Rules**.
 3. On the **Issuance Transform Rules** click **Add Rule**.
 4. On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
 5. Add a display name and select **Windows device group** from the **Incoming claim type** drop-down.
@@ -198,7 +198,7 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 ### Step 5: Update the AD FS Claims Provider Trust for Active Directory
 
 1. Update the AD FS Claims Provider Trust for Active Directory to include the following ‘Pass-through' Claim rule for ‘WindowsDeviceGroup' Claim.
-2.  In **AD FS Management**, click **Claims Provider Trusts** and in the right pane, righ-click **Active Directory** and select **Edit Claim Rules**.
+2.  In **AD FS Management**, click **Claims Provider Trusts** and in the right pane, right-click **Active Directory** and select **Edit Claim Rules**.
 3.  On the **Edit Claim Rules for Active Director** click **Add Rule**.
 4.  On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
 5.  Add a display name and select **Windows device group** from the **Incoming claim type** drop-down.
@@ -206,7 +206,7 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 
 
 ### Step 6: On the Relying Party where the ‘WindowsDeviceGroup' claims are expected, add a similar ‘Pass-through' Or ‘Transform' claim rule.
-2. In **AD FS Management**, click **Relying Party Trusts** and in the right pane, righ-click your RP and select **Edit Claim Rules**.
+2. In **AD FS Management**, click **Relying Party Trusts** and in the right pane, right-click your RP and select **Edit Claim Rules**.
 3. On the **Issuance Transform Rules** click **Add Rule**.
 4. On the **Add Transform Claim Rule Wizard** select **Pass Through or Filter an Incoming Claim** and click **Next**.
 5. Add a display name and select **Windows device group** from the **Incoming claim type** drop-down.
@@ -215,7 +215,7 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 ## Validation
 To validate the release of ‘WindowsDeviceGroup' claims, create a test Claims Aware Application using .Net 4.6. With WIF SDK 4.0.
 Configure the Application as a Relying Party in ADFS and update it with Claim Rule as specified in steps above.
-When authenticating to the Application using Windows Integrated Authentication provider of ADFS, the following claims are casted.
+When authenticating to the Application using Windows Integrated Authentication provider of ADFS, the following claims are created.
 ![Validation](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc9.png)
 
 The Claims for the computer/device may now be consumed for richer access controls.
