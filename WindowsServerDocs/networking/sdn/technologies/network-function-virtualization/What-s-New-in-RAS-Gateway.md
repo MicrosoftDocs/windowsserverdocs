@@ -1,6 +1,6 @@
 ---
 title: What's New in RAS Gateway
-description: You can use this topic to learn about new features for RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in  Windows Server 2016.
+description: You can use this topic to learn about new features for RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in  Windows Server 2019 and 2016.
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: 709cb192-313a-47b5-954e-eb5f6fee51a7
@@ -10,9 +10,9 @@ ms.date: 08/07/2020
 ---
 # What's New in RAS Gateway
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
-You can use this topic to learn about new features for RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in  Windows Server 2016. The RAS Gateway Multitenant BGP router is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.
+You can use this topic to learn about new features for RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router introduced in Windows Server 2016. The RAS Gateway Multitenant BGP router is designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.
 
 > [!NOTE]
 > In Windows Server 2012 R2, RAS Gateway is named RRAS Gateway; and in System Center Virtual Machine Manager, RAS Gateway is named Windows Server Gateway.

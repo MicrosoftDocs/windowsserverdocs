@@ -1,6 +1,6 @@
 ---
 title: Network Controller
-description: This topic provides an overview of Network Controller in Windows Server 2016.
+description: This topic provides an overview of Network Controller in Windows Server 2019 and 2016.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 31f3fa4e-cd25-4bf3-89e9-a01a6cec7893
@@ -10,9 +10,9 @@ ms.date: 12/08/2020
 ---
 # Network Controller
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
-New in  Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter.
+New in Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter.
 
 Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services.
 

@@ -1,6 +1,6 @@
 ---
 title: Network Controller High Availability
-description: You can use this topic to learn about Network Controller high availability for Software Defined Networking (SDN) in Windows Server 2016.
+description: You can use this topic to learn about Network Controller high availability for Software Defined Networking (SDN) in Windows Server 2019 and 2016.
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: 334b090d-bec4-4e67-8307-13831dbdd1d8
@@ -11,7 +11,7 @@ ms.date: 12/08/2020
 
 # Network Controller High Availability
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn about Network Controller high availability and scalability configuration for Software Defined Networking \(SDN\).
 

@@ -10,7 +10,7 @@ ms.date: 08/10/2018
 ---
 # Plan a Software Defined Network Infrastructure
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 Learn about deployment planning for a Software Defined Network infrastructure, including the hardware and software prerequisites.
 

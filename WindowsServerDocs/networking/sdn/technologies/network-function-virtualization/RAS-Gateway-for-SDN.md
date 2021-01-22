@@ -1,6 +1,6 @@
 ---
 title: RAS Gateway for SDN
-description: You can use this topic to learn about RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in  Windows Server 2016.
+description: You can use this topic to learn about RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol (BGP) capable router in  Windows Server 2019 and 2016.
 manager: grcusanz
 ms.topic: article
 ms.assetid: a32357a5-ab1a-4a4c-848a-7a4ed65b1921
@@ -10,13 +10,11 @@ ms.date: 08/07/2020
 ---
 # RAS Gateway for SDN
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016## RAS Gateway for SDN
-
+>Applies to: Windows Server 2019, Windows Server 2016
 
 RAS Gateway is a software-based, multitenant, Border Gateway Protocol (BGP) capable router designed for Cloud Service Providers (CSPs) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization. RAS Gateways routes network traffic between the physical network and VM network resources, regardless of the location. You can route the network traffic at the same physical location or many different locations.
 
 Multitenancy is the ability of a cloud infrastructure to support the virtual machine workloads of multiple tenants, yet isolate them from each other, while all of the workloads run on the same infrastructure. The multiple workloads of an individual tenant can interconnect and be managed remotely, but these systems do not interconnect with the workloads of other tenants, nor can other tenants remotely manage them.
-
 
 > [!NOTE]
 > In addition to this topic, the following RAS Gateway topics are available.

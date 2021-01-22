@@ -10,8 +10,7 @@ ms.date: 10/02/2018
 
 # Egress metering in a virtual network
 
->Applies to: Windows Server 2019
-
+>Applies to: Windows Server 2019, Windows Server 2016
 
 A fundamental aspect of cloud networking monetization is being able to bill by network bandwidth utilization. Outbound data is charged based on the total amount of data moving out of the data center via the Internet in a given billing cycle.
 

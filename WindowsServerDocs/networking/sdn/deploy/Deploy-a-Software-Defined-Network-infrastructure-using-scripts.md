@@ -1,6 +1,6 @@
 ---
 title: Deploy a Software Defined Network Infrastructure Using Scripts
-description: This topic covers how to deploy a Microsoft Software Defined Network (SDN) infrastructure using scripts in Windows Server 2016.
+description: This topic covers how to deploy a Microsoft Software Defined Network (SDN) infrastructure using scripts in Windows Server 2019 and 2016.
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: 5ba5bb37-ece0-45cb-971b-f7149f658d19
@@ -11,7 +11,7 @@ ms.date: 08/23/2018
 
 # Deploy a Software Defined Network infrastructure using scripts
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 In this topic, you deploy a Microsoft Software Defined Network (SDN) infrastructure using scripts. The infrastructure includes a highly available (HA) network controller, an HA Software Load Balancer (SLB)/MUX, virtual networks, and associated Access Control Lists (ACLs). Additionally, another script deploys a tenant workload for you to validate your SDN infrastructure.
 
@@ -24,7 +24,7 @@ You can also deploy an SDN infrastructure using Virtual Machine Manager (VMM). F
 > [!IMPORTANT]
 > Before you begin deployment, you must plan and configure your hosts and physical network infrastructure. For more information, see [Plan a Software Defined Network Infrastructure](../../sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md).
 
-All Hyper-V hosts must have Windows Server 2016 installed.
+All Hyper-V hosts must have Windows Server 2019 or 2016 installed.
 
 ## Deployment steps
 Start by configuring the Hyper-V host's (physical servers) Hyper-V virtual switch and  IP address assignment. Any storage type that is compatible with Hyper-V, shared or local may be used.
