@@ -21,7 +21,7 @@ The Host Networking Service (HNS), through the private cloud plugin, dynamically
 
 Network policy (ACLs, encapsulation, and QoS) for these container endpoints are enforced in the physical Hyper-V host as received by the Network Controller and defined in upper-layer management systems.
 
-The difference between the *l2bridge* and *l2tunnel* drivers are:
+The differences between the *l2bridge* and *l2tunnel* drivers are:
 
 
 |                                                                                                                                                                                                                                                                            l2bridge                                                                                                                                                                                                                                                                            |                                                                                                 l2tunnel                                                                                                  |
