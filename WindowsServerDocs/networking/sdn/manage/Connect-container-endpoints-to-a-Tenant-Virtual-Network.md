@@ -11,7 +11,7 @@ ms.date: 08/24/2018
 
 # Connect container endpoints to a tenant virtual network
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 In this topic, we show you how to connect container endpoints to an existing tenant virtual network created through SDN. You use the *l2bridge* (and optionally *l2tunnel*) network driver available with the Windows libnetwork plugin for Docker to create a container network on the tenant VM.
 
@@ -21,7 +21,7 @@ The Host Networking Service (HNS), through the private cloud plugin, dynamically
 
 Network policy (ACLs, encapsulation, and QoS) for these container endpoints are enforced in the physical Hyper-V host as received by the Network Controller and defined in upper-layer management systems.
 
-The difference between the *l2bridge* and *l2tunnel* drivers are:
+The differences between the *l2bridge* and *l2tunnel* drivers are:
 
 
 |                                                                                                                                                                                                                                                                            l2bridge                                                                                                                                                                                                                                                                            |                                                                                                 l2tunnel                                                                                                  |

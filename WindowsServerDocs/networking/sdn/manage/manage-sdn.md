@@ -10,7 +10,7 @@ ms.date: 08/26/2018
 ---
 # Manage SDN
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 You can use the topics in this section to manage Software Defined Networking, including tenant workloads and virtual networks.
 

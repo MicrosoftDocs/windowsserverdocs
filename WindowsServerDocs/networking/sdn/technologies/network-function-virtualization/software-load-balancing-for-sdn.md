@@ -1,6 +1,6 @@
 ---
 title: Software Load Balancing (SLB) for SDN
-description: You can use this topic to learn about Software Load Balancing for Software Defined Networking in Windows Server 2016.
+description: You can use this topic to learn about Software Load Balancing for Software Defined Networking in Windows Server 2019 and 2016.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 97abf182-4725-4026-801c-122db96964ed
@@ -10,11 +10,11 @@ ms.date: 12/08/2020
 ---
 # Software Load Balancing \(SLB\) for SDN
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
-You can use this topic to learn about Software Load Balancing for Software Defined Networking in Windows Server 2016.
+You can use this topic to learn about Software Load Balancing for Software Defined Networking in Windows Server 2019 and 2016.
 
-Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.
+Cloud Service Providers (CSPs) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server can use Software Load Balancing (SLB) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.
 
 Windows Server SLB includes the following capabilities.
 

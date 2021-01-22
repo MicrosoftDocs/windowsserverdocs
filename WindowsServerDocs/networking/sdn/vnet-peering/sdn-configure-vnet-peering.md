@@ -10,7 +10,7 @@ ms.date: 08/08/2018
 
 # Configure virtual network peering
 
->Applies to: Windows Server
+>Applies to: Windows Server 2019, Windows Server 2016
 
 In this procedure, you use Windows PowerShell to create two virtual networks, each with one subnet. Then, you configure peering between the two virtual networks to enable connectivity between them.
 
