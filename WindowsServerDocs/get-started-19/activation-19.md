@@ -14,9 +14,9 @@ ms.date: 09/09/2020
 >Applies To: Windows Server 2019, Windows Server 2016
 
 > [!NOTE]
-> It is greatly adviced to implement ADBA (Active Directory Activation) instead of KMS. 
-> ADBA supports every OS of Windows Server 2012 and newer, respectively Windows 8.1 or newer, but also Office 2013 or newer
-> except Microsoft 365 Office Apps for Business, which is activated via internet.
+> It is greatly advised to implement ADBA (Active Directory Activation) instead of KMS, aswell as migrating existing KMS for modern products to ADBA. 
+> ADBA supports every OS of Windows Server 2012 and newer, respectively Windows 8.1 or newer, aswell as Office 2013 or newer.
+> An exception are Microsoft 365 Office Apps for Business, which are activated via Internet, only.
 >
 > References: 
 > [How to implement ADBA](https://docs.microsoft.com/en-us/windows/deployment/volume-activation/activate-using-active-directory-based-activation-client)
