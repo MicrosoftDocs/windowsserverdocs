@@ -28,14 +28,10 @@ This table shows examples of a standard user workload with 30 or more users:
 
 | Workload type | Maximum users per vCPU | vCPU/RAM/OS storage minimum | Example Azure instances | Profile container storage minimum |
 | --- | --- | --- | --- | --- |
-| Light | 6 | 2 vCPUs, 8 GB RAM, 16 GB storage | D8s_v3, F8s_v2, D8as_v4
-D16s_v3, F16s_v2, D16as_v4 | 30 GB |
-| Medium | 4 | 4 vCPUs, 16 GB RAM, 32 GB storage | D8s_v3, F8s_v2, D8as_v4
-D16s_v3, F16s_v2, D16as_v4 | 30 GB |
-| Heavy | 2 | 4 vCPUs, 16 GB RAM, 32 GB storage | D8s_v3, F8s_v2, D8as_v4
-D16s_v3, F16s_v2, D16as_v4 | 30 GB |
-| Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D8s_v3, F8s_v2, D8as_v4
-D16s_v3, F16s_v2, D16as_v4, NV6 | 30 GB |
+| Light | 6 | 2 vCPUs, 8 GB RAM, 16 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
+| Medium | 4 | 4 vCPUs, 16 GB RAM, 32 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
+| Heavy | 2 | 4 vCPUs, 16 GB RAM, 32 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
+| Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4, NV6 | 30 GB |
 
 ## Recommended VM sizes for standard or larger environments
 
