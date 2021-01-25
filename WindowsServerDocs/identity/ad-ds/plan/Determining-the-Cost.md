@@ -35,7 +35,7 @@ The following table lists the speeds for different types of networks.
 |100BaseT|100 Mbps|
 |Gigabit Ethernet|1 gigabit per second (Gbps)|
 
-Use the following table to calculate the cost of each site link based on wide area network speed (WAN) link speed. For WAN link speed that is not listed in the table, you can calculate a relative cost factor by dividing 1,024 by the log of the available bandwidth, as measured in Kbps.
+Use the following table to calculate the cost of each site link based on wide area network speed (WAN) link speed. For WAN link speed that is not listed in the table, you can calculate a relative cost factor by dividing 1,024 by the logarythm  of the available bandwidth, as measured in Kbps.
 
 |Available bandwidth (Kbps)|Cost|
 |--------------------------------|--------|
