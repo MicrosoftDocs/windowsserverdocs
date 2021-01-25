@@ -77,13 +77,13 @@ When HCI participate in Hyper-V Replica, you must have the [Hyper-V Replica Brok
 
 ## Backup and restore
 
-One traditional disaster recovery option that isn't talked about very much but is just as important is the failure of the entire cluster or a node in the cluster. Either option with this scenario makes use of Windows NT Backup.
+One traditional disaster recovery option that isn't talked about very much but is just as important is the failure of the entire cluster or a node in the cluster. Either option with this scenario makes use of Windows Server Backup.
 
 It is always a recommendation to have periodic backups of the hyper-converged infrastructure. While the Cluster Service is running, if you take a System State Backup, the cluster registry database would be a part of that backup. Restoring the cluster or the database has two different methods (Non-Authoritative and Authoritative).
 
 ### Non-authoritative
 
-A Non-Authoritative restore can be accomplished using Windows NT Backup and equates to a full restore of just the cluster node itself. If you only need to restore a cluster node (and the cluster registry database) and all current cluster information good, you would restore using non-authoritative. Non-Authoritative restores can be done through the Windows NT Backup interface or the command line WBADMIN.EXE.
+A Non-Authoritative restore can be accomplished using Windows Server Backup and equates to a full restore of just the cluster node itself. If you only need to restore a cluster node (and the cluster registry database) and all current cluster information good, you would restore using non-authoritative. Non-Authoritative restores can be done through the Windows Server Backup interface or the command line WBADMIN.EXE.
 
 Once you restore the node, let it join the cluster. What will happen is that it will go out to the existing running cluster and update all of its information with what is currently there.
 
