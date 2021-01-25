@@ -10,13 +10,11 @@ ms.date: 08/22/2018
 
 # Windows Server 2019 Gateway Performance
 
->Applies to: Windows Server
-
+>Applies to: Windows Server 2019
 
 In Windows Server 2016, one of the customer concerns was the inability of SDN gateway to meet the throughput requirements of modern networks. The network throughput of IPsec and GRE tunnels had limitations with the single connection throughput for IPsec connectivity being about 300 Mbps and for GRE connectivity being about 2.5 Gbps.
 
-We have improved significantly in Windows Server 2019, with the numbers soaring to 1.8 Gbps and 15 Gbps for IPsec and GRE connections, respectively. All this, with significant reductions in the CPU cycles/per byte, thereby providing
-ultra-high-performance throughput with much less CPU utilization.
+We have improved significantly in Windows Server 2019, with the numbers soaring to 1.8 Gbps and 15 Gbps for IPsec and GRE connections, respectively. All this, with significant reductions in the CPU cycles/per byte, thereby providing ultra-high-performance throughput with much less CPU utilization.
 
 ## Enable high performance with gateways in Windows Server 2019
 

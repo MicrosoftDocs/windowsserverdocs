@@ -110,6 +110,17 @@ In a DirectAccess deployment, DNS is required for the following:
 
     2.  If the corporate network is IPv6-based, the default address is the IPv6 address of DNS servers in the corporate network.
 
+> [!NOTE]
+> Starting with the Windows 10 May 2020 Update, a client no longer registers its IP addresses on DNS servers configured in a Name Resolution Policy Table (NRPT).
+> If DNS registration is needed, for example **Manage Out**, it can be explicitly enabled with this registry key on the client:
+>
+> Path: `HKLM\System\CurrentControlSet\Services\Dnscache\Parameters`<br/>
+> Type: `DWORD`<br/>
+> Value name: `DisableNRPTForAdapterRegistration`<br/>
+> Values:<br/>
+> `1` - DNS Registration disabled (default since the Windows 10 May 2020 Update)<br/>
+> `0` - DNS Registration enabled
+
 -   **Infrastructure servers**
 
     1.  **Network location server**. DirectAccess clients attempt to reach the network location server to determine if they are on the internal network. Clients on the internal network must be able to resolve the name of the network location server, but must be prevented from resolving the name when they are located on the Internet. To ensure this occurs, by default, the FQDN of the network location server is added as an exemption rule to the NRPT. In addition, when you configure DirectAccess, the following rules are created automatically:
@@ -242,4 +253,3 @@ If a DirectAccess server, client, or application server GPO has been deleted by 
 ### <a name="BKMK_Links"></a>Next step
 
 -   [Step 2: Plan the Basic DirectAccess Deployment](da-basic-plan-s2-deployment.md)
-

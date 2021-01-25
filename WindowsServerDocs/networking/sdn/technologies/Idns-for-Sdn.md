@@ -1,6 +1,6 @@
 ---
 title: Internal DNS Service (iDNS) for SDN
-description: This topic explains how you can provide DNS services to your hosted tenant workloads by using Internal DNS (iDNS), which is integrated with Software Defined Networking in Windows Server 2016.
+description: This topic explains how you can provide DNS services to your hosted tenant workloads by using Internal DNS (iDNS), which is integrated with Software Defined Networking in Windows Server 2019 and 2016.
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: ad848a5b-0811-4c67-afe5-6147489c0384
@@ -10,9 +10,9 @@ ms.date: 01/04/2021
 ---
 # Internal DNS Service (iDNS) for SDN
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
-If you work for a Cloud Service Provider \(CSP\) or Enterprise that is planning to deploy Software Defined Networking \(SDN\) in Windows Server 2016, you can provide DNS services to your hosted tenant workloads by using Internal DNS \(iDNS\), which is integrated with SDN.
+If you work for a Cloud Service Provider \(CSP\) or Enterprise that is planning to deploy Software Defined Networking \(SDN\) in Windows Server 2019 or 2016, you can provide DNS services to your hosted tenant workloads by using Internal DNS \(iDNS\), which is integrated with SDN.
 
 Hosted virtual machines \(VMs\) and applications require DNS to communicate within their own networks and with external resources on the Internet. With iDNS, you can provide tenants with DNS name resolution services for their isolated, local name space and for Internet resources.
 

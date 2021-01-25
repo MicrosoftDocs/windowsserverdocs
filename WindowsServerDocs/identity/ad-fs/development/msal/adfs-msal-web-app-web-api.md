@@ -43,27 +43,27 @@ This section shows how to register the Web App as a confidential client and Web 
   1. In AD FS Management, right-click on **Application Groups** and select **Add Application Group**.
   2. On the Application Group Wizard, for the **Name** enter **WebAppToWebApi** and under **Client-Server applications** select the **Server application accessing a Web API** template. Click **Next**.
 
-      ![Add application group](media/adfs-msal-web-app-web-api/webapp2.png)
+      ![Screenshot of the Welcome page of the Add Application Group Wizard showing the Server application accessing a web A P I template highlighted.](media/adfs-msal-web-app-web-api/webapp2.png)
 
   3. Copy the **Client Identifier** value. It will be used later as the value for **ida:ClientId** in the applications **Web.config** file. Enter the following for **Redirect URI:** - https://localhost:44326. Click Add. Click **Next**.
 
-      ![Add application group](media/adfs-msal-web-app-web-api/webapp3.png)
+      ![Screenshot of the Server application page of the Add Application Group Wizard showing the correct client identifier and redirect U R I.](media/adfs-msal-web-app-web-api/webapp3.png)
 
   4. On the Configure Application Credentials screen, place a check in **Generate a shared secret** and copy the secret. This will be used later as the value for **ida:ClientSecret** in the applications **Web.config** file. Click **Next**.
 
-      ![Add application group](media/adfs-msal-web-app-web-api/webapp4.png)
+      ![Screenshot of the Configure Application Credentials application page of the Add Application Group Wizard showing the Generate a shared secret option selected and the generated shared secret populated.](media/adfs-msal-web-app-web-api/webapp4.png)
 
   5. On the Configure Web API screen, enter the **Identifier:** https://webapi. Click **Add**. Click **Next**. This value will be used later for **ida:GraphResourceId** in the applications **Web.config** file.
 
-      ![Add application group](media/adfs-msal-web-app-web-api/webapp5.png)
+      ![Screenshot of the Configure Web API page of the Add Application Group Wizard showing the correct identifier.](media/adfs-msal-web-app-web-api/webapp5.png)
 
   6. On the Apply Access Control Policy screen, select **Permit** everyone and click **Next**.
 
-      ![Add application group](media/adfs-msal-web-app-web-api/webapp6.png)
+      ![Screenshot of the Choose Access Control Policy page of the Add Application Group Wizard showing the Permit everyone option highlighted.](media/adfs-msal-web-app-web-api/webapp6.png)
 
   7. On the Configure Application Permissions screen, make sure **openid** and **user_impersonation** are selected and click **Next**.
 
-      ![Add application group](media/adfs-msal-web-app-web-api/webapp7.png)
+      ![Screenshot of the Configure Application Permissions page of the Add Application Group Wizard showing the open I D and user impersonation options selected.](media/adfs-msal-web-app-web-api/webapp7.png)
 
   8. On the Summary screen, click **Next**.
 
@@ -86,7 +86,7 @@ This section shows how to configure a ASP.NET Web App to sign-in user and retrie
        - ida:Authority - enter https://[your AD FS hostname]/adfs. E.g., https://adfs.contoso.com/adfs
        - ida:Resource - enter the **Identifier** value from #5 in App Registration in AD FS section above.
 
-          ![Add application group](media/adfs-msal-web-app-web-api/webapp8.png)
+          ![Screenshot of the web config file showing the modified values.](media/adfs-msal-web-app-web-api/webapp8.png)
 
 
 ### Test the sample
@@ -96,23 +96,23 @@ This section shows how to test the sample configured above.
 
   2. At the top of Visual Studio, make sure Internet Explorer is selected and click the green arrow.
 
-      ![Add application group](media/adfs-msal-web-app-web-api/webapp9.png)
+      ![Screenshot of the Visual Studio UI with the IIS Express (Internet Explorer) option called out.](media/adfs-msal-web-app-web-api/webapp9.png)
 
   3. On Home Page, click on Sign-in.
 
-      ![Add application group](media/adfs-msal-web-app-web-api/webapp10.png)
+      ![Screenshot of the Home Page with the Sign in option called out.](media/adfs-msal-web-app-web-api/webapp10.png)
 
   4. You will be re-directed to the AD FS sign-in page. Go ahead and sign in.
 
-      ![Add application group](media/adfs-msal-web-app-web-api/webapp11.png)
+      ![Screenshot of the Sign in page.](media/adfs-msal-web-app-web-api/webapp11.png)
 
   5. Once signed-in, click on Access Token.
 
-      ![Add application group](media/adfs-msal-web-app-web-api/webapp12.png)
+      ![Screenshot of the Home Page with the Access Token option called out.](media/adfs-msal-web-app-web-api/webapp12.png)
 
   6. Clicking on Access Token will get the access token info by calling the Web API
 
-      ![Add application group](media/adfs-msal-web-app-web-api/webapp13.png)
+      ![Screenshot of the Access Token page showing the access token info.](media/adfs-msal-web-app-web-api/webapp13.png)
 
  ## Next Steps
 [AD FS OpenID Connect/OAuth flows and Application Scenarios](../../overview/ad-fs-openid-connect-oauth-flows-scenarios.md)

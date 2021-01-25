@@ -11,7 +11,7 @@ ms.date: 08/27/2018
 
 # Upgrade, backup, and restore SDN infrastructure
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 In this topic, you learn how to update, backup and restore an SDN infrastructure.
 
