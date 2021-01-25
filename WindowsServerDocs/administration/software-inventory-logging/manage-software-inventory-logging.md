@@ -276,11 +276,11 @@ Below are two examples of what the output on the PowerShell console would look l
 
 **Output Example 1**
 
-![Image of an example output report](../media/software-inventory-logging/SILHyper-VExample1.png)
+![Screenshot of the first example output report.](../media/software-inventory-logging/SILHyper-VExample1.png)
 
 **Output Example 2** (w/ Expand-SilData function)
 
-![Image of an example output report](../media/software-inventory-logging/SILHyper-VExample2.png)
+![Screenshot of the second example output report that includes the Expand-SilData function.](../media/software-inventory-logging/SILHyper-VExample2.png)
 
 ## See Also
 [Get Started with Software Inventory Logging](get-started-with-software-inventory-logging.md)
