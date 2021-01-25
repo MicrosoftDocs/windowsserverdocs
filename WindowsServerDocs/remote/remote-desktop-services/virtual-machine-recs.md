@@ -2,7 +2,7 @@
 title: Virtual machine sizing
 description: Size recommendations for each workload type.
 ms.author: helohr
-ms.date: 01/22/2021
+ms.date: 01/25/2021
 ms.topic: article
 author: Heidilohr
 manager: lizross
@@ -15,7 +15,7 @@ Whether you're running your virtual machine on Remote Desktop Services or Window
 
 The following tables list the maximum suggested number of users per virtual central processing unit (vCPU) and the minimum VM configuration for each workload. These recommendations are based on [Remote Desktop workloads](remote-desktop-workloads.md).
 
-This table shows examples of a smaller user workload with less than 30 users:
+The following table shows an example proof-of-concept scenario with a smaller user workload of less than 30 users:
 
 | Workload type | Maximum users per vCPU | vCPU/RAM/OS storage minimum | Example Azure instances | Profile container storage minimum |
 | --- | --- | --- | --- | --- |
@@ -37,7 +37,11 @@ This table shows examples of a standard user workload with 30 or more users:
 
 We recommend limiting VM size to between 4 vCPUs and 24 vCPUs. We don't recommend using 2 cores or 32 or more cores for standard and larger environments. Why is that?
 
+### All VMs should have more than two cores
+
 Windows 10 and its UI components rely on using at least two parallel threads for some of the heavier rendering operations. Having multiple users on a two-core VM will lead to the UI and apps becoming unstable, which lowers the quality of user experience. Four cores is the lowest possible number of cores that a stable multi-user VM can have.
+
+### VMs should not have more than 32 cores
 
 As the number of cores increase, the system's synchronization overhead also increases. For most workloads, at around 16 cores the return on investment gets lower, with most of the extra capacity being offset by synchronization overhead. It is likely to get more capacity from two 16 core VMs as opposed to one 32 core one.
 
