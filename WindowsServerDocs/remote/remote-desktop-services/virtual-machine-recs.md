@@ -2,7 +2,7 @@
 title: Virtual machine sizing
 description: Size recommendations for each workload type.
 ms.author: helohr
-ms.date: 01/25/2021
+ms.date: 01/27/2021
 ms.topic: article
 author: Heidilohr
 manager: lizross
