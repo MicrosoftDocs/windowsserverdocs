@@ -30,6 +30,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 - Added support for the screen capture protection feature for Windows 10 endpoints. To learn more, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices).
 - Added support for proxies that require authentication for feed subscription.
 - The client now shows a notification with an option to retry if an update didn't successfully download.
+- Addressed some accessibility issues with keyboard focus and high-contrast mode.
 
 ## Updates for version 1.2.1525
 
