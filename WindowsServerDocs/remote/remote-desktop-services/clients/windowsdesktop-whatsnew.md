@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/12/2021
+ms.date: 01/26/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -18,10 +18,10 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.1525        |1.2.945                   |
-|Insider    |1.2.1670        |1.2.945                   |
+|Public     |1.2.1672        |1.2.945                   |
+|Insider    |1.2.1672        |1.2.945                   |
 
-## Updates for version 1.2.1670 (Insider)
+## Updates for version 1.2.1672
 
 *Date published: 1/12/2021*
 
@@ -35,7 +35,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 
 *Date published: 12/01/2020*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4M4Qb), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4M4Qc), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4M4Qa)
 
 - Added List view for remote resources so that longer app names are readable.
 - Added a notification icon that appears when an update for the client is available.
@@ -43,8 +43,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.1446
 
 *Date published: 10/27/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Hq7C), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4HvgF), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Ho64)
 
 - Added the auto-update feature, which allows the client to install the latest updates automatically.
 - The client now distinguishes between different feeds in the Connection Center.
