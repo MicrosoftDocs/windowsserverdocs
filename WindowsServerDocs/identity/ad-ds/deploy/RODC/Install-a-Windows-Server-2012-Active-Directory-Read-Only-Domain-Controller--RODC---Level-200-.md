@@ -68,7 +68,7 @@ Add-addsreadonlydomaincontrolleraccount
 ```
 
 ### Welcome
-![Screenshot of the Welcome page of the Azure Directory Domain Services Installation Wizard showing the Use advanced mode installation option selected..](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_WelcomeStage1.png)
+![Screenshot of the Welcome page of the Azure Directory Domain Services Installation Wizard showing the Use advanced mode installation option selected.](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_WelcomeStage1.png)
 
 The **Welcome to the Active Directory Domain Services Installation Wizard** dialog has one option named **Use advanced mode installation**. Select this option and click **Next** to show password replication policy options. Clear this option to use the default values for password replication policy options (this is discussed in further detail later in this section).
 
@@ -185,7 +185,7 @@ Add-addsreadonlydomaincontrolleraccount
 
 See [Stage RODC Windows PowerShell](../../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md#BKMK_StagePS) for required and optional arguments.
 
-Because **Add-addsreadonlydomaincontrolleraccount** only has one action with two phases (prerequisite checking and installation), the following screen shots show the installation phase with the minimum required arguments.
+Because **Add-addsreadonlydomaincontrolleraccount** only has one action with two phases (prerequisite checking and installation), the following screenshots show the installation phase with the minimum required arguments.
 
 ![Screenshot of the PowerShell window showing the full Add-addsreadonlydomaincontrolleraccount cmdlet.](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_PSAddRODC.png)
 
@@ -665,7 +665,7 @@ Install-addsdomaincontroller
 
 ```
 
-See the **ADDSDeployment Cmdlet** table at the begininng of this section for required and optional arguments.
+See the **ADDSDeployment Cmdlet** table at the beginning of this section for required and optional arguments.
 
 The **Install-addsdomaincontroller** cmdlet only has two phases (prerequisite checking and installation). The two figures below show the installation phase with the minimum required arguments of **-domainname**, **-readonlyreplica**, **-sitename**, and **-credential**. Note how, just like Server Manager, **Install-ADDSDomainController** reminds you that promotion will reboot the server automatically:
 
