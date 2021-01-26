@@ -15,16 +15,16 @@ Whether you're running your virtual machine on Remote Desktop Services or Window
 
 The following tables list the maximum suggested number of users per virtual central processing unit (vCPU) and the minimum VM configuration for each workload. These recommendations are based on [Remote Desktop workloads](remote-desktop-workloads.md).
 
-The following table shows an example proof-of-concept scenario with a smaller user workload of less than 30 users:
+The following table shows an example of a smaller, proof-of-concept scenario with a user workload of less than 20 users:
 
 | Workload type | Maximum users per vCPU | vCPU/RAM/OS storage minimum | Example Azure instances | Profile container storage minimum |
 | --- | --- | --- | --- | --- |
-| Light | 4 | 4 vCPUs, 16 GB RAM, 32 GB storage | D4s_v3, F4s_v2, D4a_v4 | 30 GB |
-| Medium | 4 | 4 vCPUs, 16 GB RAM, 32 GB storage | D4s_v3, F4s_v2, D4a_v4 | 30 GB |
-| Heavy | 2 | 4 vCPUs, 16 GB RAM, 32 GB storage | D4s_v3, F4s_v2, D4a_v4 | 30 GB |
+| Light | 4 | 8 vCPUs, 16 GB RAM, 16 GB storage | D4s_v3, F4s_v2, D4a_v4 | 30 GB |
+| Medium | 4 | 8 vCPUs, 16 GB RAM, 32 GB storage | D4s_v3, F4s_v2, D4a_v4 | 30 GB |
+| Heavy | 2 | 8 vCPUs, 16 GB RAM, 32 GB storage | D4s_v3, F4s_v2, D4a_v4 | 30 GB |
 | Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D4s_v3, F4s_v2, D4a_v4, NV6 | 30 GB |
 
-This table shows examples of a standard user workload with 30 or more users:
+This table shows examples of standard or larger user workloads with 20 or more users:
 
 | Workload type | Maximum users per vCPU | vCPU/RAM/OS storage minimum | Example Azure instances | Profile container storage minimum |
 | --- | --- | --- | --- | --- |
@@ -47,7 +47,7 @@ As the number of cores increase, the system's synchronization overhead also incr
 
 The recommended range between 4 and 24 cores will generally provide better capacity returns for your users as you increase the number of cores. For example, if your scenario needs one-third of a core for each user, then 12 users on a four-core system would have less available burst capacity than 14 users with eight cores.
 
-For scenarios with 20 or more connections on a single VM, several smaller VMs would perform better than one or two large VMs. For example, if you're expecting 30 or more user to simultaneously sign in on the same session host within 10 minutes, two eight-core VMs will handle the workload better than one 16-core VM. You can also use breadth-first load balancing to evenly distribute users across different VMs.
+For scenarios with 20 or more connections on a single VM, several smaller VMs would perform better than one or two large VMs. For example, if you're expecting 30 or more users to simultaneously sign in on the same session host within 10 minutes, two eight-core VMs will handle the workload better than one 16-core VM. You can also use breadth-first load balancing to evenly distribute users across different VMs.
 
 ## Single-session recommendations
 
