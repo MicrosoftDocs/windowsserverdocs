@@ -301,5 +301,5 @@ For more information about removing AD DS, see [Remove Active Directory Domain S
 ## <a name="BKMK_ConfirmRoleRemovalPage"></a>Review Options page
 The **Review Options** page provides you the chance to export the configuration settings for demotion to a Windows PowerShell script so you can automate additional demotions. Click **Demote** to remove AD DS.
 
-![Screenshot of the Review Options page of the Active Directory Domain Services Configuration Wizard.](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_ReviewOptions.gif)
+![Screenshot of the final Review Options page of the Active Directory Domain Services Configuration Wizard.](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_ReviewOptions.gif)
 
