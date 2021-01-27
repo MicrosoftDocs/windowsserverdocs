@@ -161,6 +161,10 @@ When performing a transfer, the Storage Migration Service seeks to mirror data f
 
 Most errors found in the transfer CSV file are Windows System Error Codes. You can find out what each error means by reviewing the [Win32 error codes documentation](/windows/win32/debug/system-error-codes).
 
+## Are existing certificates updated on the destination server during cutover?
+
+A destination server may contain certificates - issued prior to cutover - in its local certificate store, with the name of the server being part of the subject, subject alternative name, or other fields. When cutover occurs and the server is renamed, these certificates are not updated. You must reissue certificates to your newly-renamed servers using your current deployment methods, such as group policy or web enrollment.    
+
 ## <a name="give-feedback"></a> What are my options to give feedback, file bugs, or get support?
 
 To give feedback on the Storage Migration Service:
