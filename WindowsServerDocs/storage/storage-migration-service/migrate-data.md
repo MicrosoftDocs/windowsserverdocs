@@ -110,6 +110,13 @@ In this step you cut over from the source servers to the destination servers, mo
 7. Select **Validate** on the **Validate source and destination device** page, and then select **Next**.
 8. When you're ready to perform the cutover, select **Start cutover**. <br>Users and apps might experience an interruption while the address and names are moved and the servers restarted several times each, but will otherwise be unaffected by the migration. How long cutover takes depends on how quickly the servers restart, as well as Active Directory and DNS replication times.
 
+## Post-migration operations
+
+After migrating a server or cluster, evaluate the environment for possible post migration operations: 
+
+- **Create a plan for the now-decommissioned source server**. The Storage Migration Service uses the cutover process to have a destination server assume the identity of a source server, changing the names and IPs of the source so that users and applications can no longer access it. It does not, however, turn off or otherwise alter the contents of the source server. You should create a plan for decommissioning the source server. We recommend leaving the source online for at least two weeks in case of missed in-use data , so that files can easily be retrieved without a need for offline backup restoration. After that period, we recommend turning the server off for another four weeks so that it is still available for data retrieval but is no longer consuming operational or power resources. After that period, perform one final full backup of the server, then evaluate repurposing if it is a physical server or deleting if it is a virtual machine.      
+- **Reissue certificates on the new destination server**. During the time that the destination server was online but not yet cutover, certificates may have been issued to it through autoenrollment or other processes. Renaming a Windows Server does not automatically change or reissue existing certificates, so the existing certificates may contain the name of the server prior to it cutover. You should examine the existing certificates on that server and reissue new ones as necessary.   
+
 ## Additional References
 
 - [Storage Migration Service overview](overview.md)
