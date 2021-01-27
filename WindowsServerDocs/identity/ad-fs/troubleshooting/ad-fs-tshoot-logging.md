@@ -25,7 +25,7 @@ The Admin log provides high level information on issues that are occurring and i
 3.  Expand **AD FS**.
 4.  Click on **Admin**.
 
-![audit enhancements](media/ad-fs-tshoot-logging/event1.PNG)
+![Screenshot of the Event Viewer with the Admin option called out.](media/ad-fs-tshoot-logging/event1.PNG)
 
 ## Trace Log
 The Trace log is where detailed messages are logged, and will be the most useful log when troubleshooting. Since a lot of trace log information can be generated in a short amount of time, which can impact system performance, the trace logs are disabled by default.
@@ -33,10 +33,10 @@ The Trace log is where detailed messages are logged, and will be the most useful
 ### To enable and view the trace log
 1.  Open Event Viewer
 2.  Right-click on **Applications and Services Log** and select view and click on **Show Analytic and Debug Logs**.  This will show additional nodes on the left.
-![audit enhancements](media/ad-fs-tshoot-logging/event2.PNG)
+![Screenshot of the Event Viewer showing that the user right-clicked Applications and Services Log and selected View with the Show Analytic and Debug Logs option called out.](media/ad-fs-tshoot-logging/event2.PNG)
 3.  Expand AD FS Tracing
 4.  Right-click on Debug and select **Enable Log**.
-![audit enhancements](media/ad-fs-tshoot-logging/event3.PNG)
+![Screenshot of the Event Viewer showing that the user right-clicked Debug with the Enable Log option called out.](media/ad-fs-tshoot-logging/event3.PNG)
 
 
 ## Event auditing information for AD FS on Windows Server 2016
@@ -56,11 +56,11 @@ The table below explains the available auditing levels.
 
 To view the current auditing level, you can use the PowerShell cmdlt:  Get-AdfsProperties.
 
-![audit enhancements](media/ad-fs-tshoot-logging/ADFS_Audit_1.PNG)
+![Screenshot of the PowerShell window showing the results of the Get-AdfsProperties cmdlet with the Audit Level property called out.](media/ad-fs-tshoot-logging/ADFS_Audit_1.PNG)
 
 The auditing level can be raised or lowered using the PowerShell cmdlt:  Set-AdfsProperties -AuditLevel.
 
-![audit enhancements](media/ad-fs-tshoot-logging/ADFS_Audit_2.png)
+![Screenshot of the PowerShell window showing the Set-AdfsProperties -AuditLevel Verbose cmdlet typed in the command prompt.](media/ad-fs-tshoot-logging/ADFS_Audit_2.png)
 
 ## Types of Events
 AD FS events can be of different types, based on the different types of requests processed by AD FS. Each type of event has specific data associated with it.  The type of events can be differentiated between login requests (i.e. token requests) versus system requests (server-server calls including fetching configuration information).
@@ -96,7 +96,7 @@ To open the AD FS Management snap-in, click Start, point to Programs, point to A
 8. Select the **Success audits** and **Failure audits** check boxes.
 9. Click OK.
 
-![audit enhancements](media/ad-fs-tshoot-logging/event4.PNG)
+![Screenshot of the Events tab of the Federation Service Properties dialog box showing the Success audits and Failure audits options are selected.](media/ad-fs-tshoot-logging/event4.PNG)
 
 >[!NOTE]
 >The above instructions are used only when AD FS is on a stand-alone member server.  If AD FS is running on a domain controller, instead of the Local Security Policy, use the **Default Domain Controller Policy** located in **Group Policy Management/Forest/Domains/Domain Controllers**.  Click edit and navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Management**
@@ -123,14 +123,14 @@ One of the hardest things to troubleshoot is access issues that generate a lot o
 
 To help with this, AD FS correlates all events that are recorded to the Event Viewer, in both the admin and the debug logs, which correspond to a particular request by using a unique Globally Unique Identifier (GUID) called the Activity ID. This ID is generated when the token issuance request is initially presented to the web application (for applications using the passive requestor profile) or requests sent directly to the claims provider (for applications using WS-Trust).
 
-![activityid](media/ad-fs-tshoot-logging/activityid1.png)
+![Screenshot of the Details tab of the event Properties dialog box with the Active I D value called out.](media/ad-fs-tshoot-logging/activityid1.png)
 
 This activity ID remains the same for the entire duration of the request, and is logged as part of every event recorded in the Event Viewer for that request. This means:
  - that filtering or searching the Event Viewer using this activity ID can help keep track of all related events that correspond to the token request
  - the same activity ID is logged across different machines which allows you to troubleshooting a user request across multiple machines such as the Federation Server proxy (FSP)
  - the activity ID will also appear in the user's browser if the AD FS request fails in any way, thus allowing the user to communicate this ID to help desk or IT Support.
 
-![activityid](media/ad-fs-tshoot-logging/activityid2.png)
+![Screenshot of the Details tab of the event Properties dialog box with the client request I D value called out.](media/ad-fs-tshoot-logging/activityid2.png)
 
 To aid in the troubleshooting process, AD FS also logs the caller ID event whenever the token-issuance process fails on an AD FS server. This event contains the claim type and value of one of the following claim types, assuming that this information was passed to the Federation Service as part of a token request:
 - https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountnameh
