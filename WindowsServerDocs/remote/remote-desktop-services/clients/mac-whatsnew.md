@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/29/2021
+ms.date: 01/27/2021
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
