@@ -195,15 +195,15 @@ To enable authenticated communication with the HCP services, we need to create 3
 
     - Refer to the screenshot below to find the Azure Active Directory domain name.
 
-    ![Print Server How to Get AAD Domain Name](../media/hybrid-cloud-print/PrintServer-GetAADDomainName.png)
+      ![Print Server How to Get AAD Domain Name](../media/hybrid-cloud-print/PrintServer-GetAADDomainName.png)
 
     - Refer to the screenshot below to find the Azure Active Directory ID.
 
-    ![Print Server Cloud Print Deploy](../media/hybrid-cloud-print/PrintServer-GetAADId.png)
+      ![Screenshot of Azure showing the Azure Active Directory, Properties, and Directory I D options called out.](../media/hybrid-cloud-print/PrintServer-GetAADId.png)
 
     - The output of the CloudPrintDeploy script looks like this:
 
-    ![Print Server Cloud Print Deploy](../media/hybrid-cloud-print/PrintServer-CloudPrintDeploy.png)
+      ![Screenshot of the PowerShell window showing what the CloudPrintDeploy script looks like.](../media/hybrid-cloud-print/PrintServer-CloudPrintDeploy.png)
 
     - Check the log file to see if there is any error:
     `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0\CloudPrintDeploy.log`
@@ -219,7 +219,7 @@ To enable authenticated communication with the HCP services, we need to create 3
     - Make sure AzureTenant is the Azure AD domain name.
     - Make sure URL is the Application ID URI of Mopria Discovery Service app.
 
-    ![Print Server Mopria Registry Keys](../media/hybrid-cloud-print/PrintServer-RegEdit-Mopria.png)
+    ![Screenshot showing the Mopria Discovery Service folder displayed in the Registry Editor with the Azure Audience, Azure Tenant, and URL values called out.](../media/hybrid-cloud-print/PrintServer-RegEdit-Mopria.png)
 
 6. Run **iisreset** in an elevate Powershell command prompt. This will ensure any registry change made in the previous step takes effect.
 
@@ -240,7 +240,7 @@ To enable authenticated communication with the HCP services, we need to create 3
 
    > NOTE: It is recommended to download and install the latest version by leaving out the -requiredversion option.
 
-    ![Print Server Mopria Registry Keys](../media/hybrid-cloud-print/PrintServer-InstallSQLite.png)
+    ![Screenshot of the PowerShell window showing the results of the Register-PackageSource and Install-Package cmdlets.](../media/hybrid-cloud-print/PrintServer-InstallSQLite.png)
 
 9. Copy the SQLite dlls to the MopriaCloudService Webapp bin folder (C:\inetpub\wwwroot\MopriaCloudService\bin).
     - Create a .ps1 file containing the PowerShell script below.
@@ -295,7 +295,7 @@ To enable authenticated communication with the HCP services, we need to create 3
     - From File Explorer, open up the MopriaDeviceDb.db file properties to add users or groups which are allowed to publish to Mopria database in the Security tab. The users or groups must exist in on-premises Active Directory, and synchronized with Azure AD.
     - If the solution is deployed to a non-routable domain (e.g. *mydomain*.local), the Azure AD domain (e.g. *domainname*.onmicrosoft.com, or one purchased from third-party vendor) needs to be added as a UPN suffix to on-premises Active Directory. This is so the exact same user who will be publishing printers (e.g. admin@*domainname*.onmicrosoft.com) can be added in the security setting of the database file. See [Prepare a non-routable domain for directory synchronization](/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization).
 
-    ![Print Server Mopria Registry Keys](../media/hybrid-cloud-print/PrintServer-SQLiteDB.png)
+    ![Screenshot of the Security tab of the Mopria Device D b dot D b Properties dialog box with the H C P Admin value highlighted.](../media/hybrid-cloud-print/PrintServer-SQLiteDB.png)
 
 ### Step 5 \[Optional\] - Configure pre-authentication with Azure AD
 
