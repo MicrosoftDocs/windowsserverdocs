@@ -19,11 +19,11 @@ This article describes a web application running on a web server. The applicatio
 ## Prerequisites
 You'll need the following resources: 
 
--   GitHub client tools
+-   GitHub client tools.
 
--   AD FS in Windows Server 2016 Technical Preview 4 or later (This article assumes that AD FS has been installed.)
+-   AD FS in Windows Server 2016 Technical Preview 4 or later. (This article assumes that AD FS has been installed.)
 
--   Visual Studio 2013 or later
+-   Visual Studio 2013 or later.
 
 ## Create an application group
 
@@ -38,7 +38,7 @@ To create an application group in AD FS 2016 or later:
 
     :::image type="content" source="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_2.PNG" alt-text="Screenshot that shows where to select the template for the server application that accesses a Web A P I." lightbox="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_2.PNG":::
 
-3.  Copy the **Client Identifier** value. You'll use it later in the applications *web.config* file. It's the value for `ida:ClientId`.
+3.  Copy the **Client Identifier** value. You'll use it later in the application's *web.config* file. It's the value for `ida:ClientId`.
 
     :::image type="content" source="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_3.PNG" alt-text="Screenshot that shows where to copy the Client Identifier value." lightbox="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_3.PNG":::
 
@@ -46,13 +46,13 @@ To create an application group in AD FS 2016 or later:
 
 5.  On the **Configure Application Credentials** page: 
     1. Select **Generate a shared secret**. 
-    1. Copy the secret. You'll use this secret later in the applications *web.config* file. It's the value for `ida:ClientSecret`.  
+    1. Copy the secret. You'll use this secret later in the application's *web.config* file. It's the value for `ida:ClientSecret`.  
     1. Select **Next**.
 
     :::image type="content" source="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_4.PNG" alt-text="Screenshot that shows the Configure Application Credentials page." lightbox="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_4.PNG":::
 
 6. On the **Configure Web API** page: 
-    1. For **Identifier**, enter *https://contoso.com/WebApp*. You'll use this value later in the applications *web.config* file. It's the value for `ida:GraphResourceId`. 
+    1. For **Identifier**, enter *https://contoso.com/WebApp*. You'll use this value later in the application's *web.config* file. It's the value for `ida:GraphResourceId`. 
     1. Select **Add**. 
     1. Select **Next**.  
 
@@ -151,11 +151,11 @@ To modify the sample web API in Visual Studio:
 
 2.  Open the *web.config* file.  Modify the following settings by using the values you copied in the [Create an application group](#create-an-application-group) procedure:
 
-    -   `ida:ClientId` - Enter the client ID.
+    -   `ida:ClientId`: Enter the client ID.
 
-    -   `ida:ClientSecret` - Enter the client secret.
+    -   `ida:ClientSecret`: Enter the client secret.
 
-    -   `ida:GraphResourceId` - Enter the graph resource ID.
+    -   `ida:GraphResourceId`: Enter the graph resource ID.
 
     ![Screenshot that highlights the values you should change.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_24.PNG)
 
@@ -175,7 +175,7 @@ To modify the sample web API in Visual Studio:
         public static readonly string Authority = "https://<your_fsname>/adfs";
         ```
 
-        Here, replace `<your_fsname>` with the DNS portion of your federation service URL, for example, *adfs.contoso.com*
+        Here, replace `<your_fsname>` with the DNS portion of your federation service URL. For example, enter *adfs.contoso.com*.
 
         ![Screenshot that shows the changes in the Startup dot Auth dot C S file.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_25.PNG)
 
