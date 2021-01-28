@@ -1,7 +1,7 @@
 ---
-description: "Learn more about: Build a server side application using OAuth confidential clients with AD FS 2016 or later"
+description: "Build a server-side application that uses OAuth confidential clients. Use AD FS 2016 or later."
 ms.assetid: 5a64e790-6725-4099-aa08-8067d57c3168
-title: Build a server side application using OAuth confidential clients with AD FS 2016 or later
+title: Build a server-side app that uses OAuth confidential clients by using Active Directory Federation Services 2016 or later
 author: billmath
 ms.author: billmath
 manager: mtillman
@@ -9,64 +9,73 @@ ms.date: 02/22/2018
 ms.topic: article
 ---
 
-# Build a server side application using OAuth confidential clients with AD FS 2016 or later
+# Build a server-side app that uses OAuth confidential clients by using AD FS 2016 or later
 
 
-AD FS 2016 and later releases provide support for clients capable of maintaining their own secret, such as an app or service running on a web server.  These clients are known as confidential clients.
-Below is a schematic of a web application running on a web server and serving as a confidential client to AD FS:
+Active Directory Federation Services (AD FS) 2016 and later supports clients that can maintain their own secret, such as an app or service that runs on a web server.  These clients are known as *confidential clients*.
 
-## Pre-requisites
-The following are a list of pre-requisites that are required prior to completing this document. This document assumes that AD FS has been installed.
+This article describes a web application running on a web server. The application serves as a confidential client to AD FS.
 
--   GitHub client tools
+## Prerequisites
+You'll need the following resources: 
 
--   AD FS in Windows Server 2016 TP4 or later
+-   GitHub client tools.
+
+-   AD FS in Windows Server 2016 Technical Preview 4 or later. (This article assumes that AD FS has been installed.)
 
 -   Visual Studio 2013 or later.
 
-## Create an Application Group in AD FS 2016 or later
-The following section describes how to configure the application group in AD FS 2016 or later.
+## Create an application group
 
-#### Create the Application Group
+To create an application group in AD FS 2016 or later:
 
-1.  In AD FS Management, right-click on Application Groups and select **Add Application Group**.
+1.  In AD FS Management, right-click **Application Groups**. Then select **Add Application Group**.
 
-2.  On the Application Group Wizard, for the **Name** enter **ADFSOAUTHCC** and under **Client-Server applications** select the **Server application accessing a Web API** template.  Click **Next**.
+2.  In the **Add Application Group Wizard**: 
+    1. Under **Name**, enter *ADFSOAUTHCC*. 
+    1. Under **Client-Server applications**, select the **Server application accessing a Web API** template.  
+    1. Select **Next**.
 
-    ![Screenshot that shows where to select Server application accessing a Web API.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_2.PNG)
+    :::image type="content" source="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_2.PNG" alt-text="Screenshot that shows where to select the template for the server application that accesses a Web A P I." lightbox="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_2.PNG":::
 
-3.  Copy the **Client Identifier** value.  It will be used later as the value for **ida:ClientId** in the applications web.config file.
+3.  Copy the **Client Identifier** value. You'll use it later in the application's *web.config* file. It's the value for `ida:ClientId`.
 
-    ![Screenshot that shows where you can copy the Client Identifier value from.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_3.PNG)
+    :::image type="content" source="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_3.PNG" alt-text="Screenshot that shows where to copy the Client Identifier value." lightbox="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_3.PNG":::
 
-4.  Enter the following for **Redirect URI:** - **https://localhost:44323**.  Click **Add**. Click **Next**.
+4. For **Redirect URI**, enter *https://localhost:44323*.  Select **Add**, and then select **Next**.
 
-5.  On the **Configure Application Credentials** screen, place a check in **Generate a shared secret** and copy the secret.  This will be used later as the value for **ida:ClientSecret** in the applications web.config file.  Click **Next**.
+5.  On the **Configure Application Credentials** page: 
+    1. Select **Generate a shared secret**. 
+    1. Copy the secret. You'll use this secret later in the application's *web.config* file. It's the value for `ida:ClientSecret`.  
+    1. Select **Next**.
 
-    ![Screenshot that shows the Configure Application Credentials screen.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_4.PNG)
+    :::image type="content" source="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_4.PNG" alt-text="Screenshot that shows the Configure Application Credentials page." lightbox="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_4.PNG":::
 
-6. On the **Configure Web API** screen, enter the following for **Identifier** - **https://contoso.com/WebApp**.  Click **Add**. Click **Next**.  This value will be used later for **ida:GraphResourceId** in the applications web.config file.
+6. On the **Configure Web API** page: 
+    1. For **Identifier**, enter *https://contoso.com/WebApp*. You'll use this value later in the application's *web.config* file. It's the value for `ida:GraphResourceId`. 
+    1. Select **Add**. 
+    1. Select **Next**.  
 
-    ![Screenshot that shows the Configure Web API screen.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_9.PNG)
+    :::image type="content" source="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_9.PNG" alt-text="Screenshot that shows the Configure Web A P I page." lightbox="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_9.PNG":::
 
-7. On the **Apply Access Control Policy** screen, select **Permit everyone** and click **Next**.
+7. On the **Apply Access Control Policy** page, select **Permit everyone**. Then select **Next**.
 
-    ![Screenshot that shows the Apply Access Control Policy screen.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_7.PNG)
+    :::image type="content" source="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_7.PNG" alt-text="Screenshot that shows the Apply Access Control Policy page." lightbox="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_7.PNG":::
 
-8. On the **Configure Application Permissions** screen,  make sure **openid** and **user_impersonation** are selected and click **Next**.
+8. On the **Configure Application Permissions** page, make sure **openid** and **user_impersonation** are selected. Then select **Next**.
 
-    ![Screenshot that shows the Configure Application Permissions screen.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_8.PNG)
+    :::image type="content" source="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_8.PNG" alt-text="Screenshot that shows the Configure Application Permissions page." lightbox="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_8.PNG":::
 
-9. On the **Summary** screen,  click **Next**.
+9. On the **Summary** page,  select **Next**.
 
-10. On the **Complete** screen,  click **Close**.
+10. On the **Complete** page,  select **Close**.
 
 ## Upgrade the database
-Visual Studio 2015 was used in creating this walkthrough.   In order to get the example working with Visual Studio 2015 you will need to update the database file.  Use the following procedure to do this.
+This article is based on Visual Studio 2015. To make the example work with Visual Studio 2015, upgrade the database file by following the instructions in this section.
 
-This section discusses how to download the sample Web API and upgrade the database in Visual Studio 2015.   We will be using the Azure AD sample that is [here](https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi-oauth2-useridentity).
+This section discusses how to download the sample web API and upgrade the database in Visual Studio 2015. We use the [Azure Active Directory sample](https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi-oauth2-useridentity).
 
-To download the sample project, use Git Bash and type the following:
+To download the sample project, in Git Bash, enter the following command:
 
 ```
 git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi-oauth2-useridentity.git
@@ -74,83 +83,83 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
 ![Screenshot that shows how to download the sample project.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_10.PNG)
 
-#### To upgrade the database file
+To upgrade the database file:
 
-1.  Open the project in Visual Studio, there will be a pop-up telling you that the app requires SQL Server 2012 Express or you will need to upgrade the database.  Click Ok.
+1.  Open the project in Visual Studio. In the window that appears, a message explains that the app requires SQL Server 2012 Express. If you don't have SQL Server 2012 Express, you need to upgrade the database.  Select **OK**.
 
-    ![Screenshot that shows the message telling you that the app requires SQL Server 2012 Express or you will need to upgrade the database.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_12.PNG)
+    ![Screenshot that shows a message explaining that the app requires S Q L Server 2012 Express. Otherwise, you need to upgrade the database.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_12.PNG)
 
-2.  Next compile the application by selecting Build -> Build Solution at the top.  This will restore all of the NuGet packages.
+2. At the top of the window, compile the application by selecting **Build** > **Build Solution**. All of the NuGet packages will be restored.
 
     ![Screenshot that shows that the restoration of the NuGet packages was successful.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_13.PNG)
 
-3.  Now at the top, select **View** -> **Server Explorer**.  Once that opens, under **Data Connections**, right-click **DefaultConnection** and select **Modify Connection**.
+3.  At the top of the window, select **View** > **Server Explorer**.  In the pane that opens, under **Data Connections**, right-click **DefaultConnection** and then select **Modify Connection**.
 
-    ![Screenshot that highlights the Modify Connection menu option.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_14.PNG)
+    ![Screenshot that highlights the Modify Connection menu item.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_14.PNG)
 
-4.  On **Modify Connection**, under **Database file name (new or existing)**, select **Browse** and provide **path\filename.mdf**. Click **Yes** on the dialogue box.
+4.  In the **Modify Connection** window, under **Database file name (new or existing)**, select **Browse**. Enter *path\filename.mdf*. Then, in the dialog box, select **Yes**.
 
     ![Screenshot that shows the dialog box for creating the database file.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_6.PNG)
 
-5.  On **Modify Connection**, select **Advanced**.
+5.  In the **Modify Connection** dialog box, select **Advanced**.
 
     ![Screenshot that shows the Advanced button.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_15.PNG)
 
-6.  On the Advanced Properties, locate Data Source and use the drop-down to change it from **(LocalDb\v11.0)** to **(LocalDB)\MSSQLLocalDB**.
+6.  In the **Advanced Properties** dialog box, under **Data Source**, change **(LocalDb\v11.0)** to **(LocalDB)\MSSQLLocalDB**.
 
     ![Screenshot that highlights the Data Source field.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_16.PNG)
 
-7.  Click Ok. Click Ok.  Click Yes to upgrade the database.
+7.  Select **OK** > **OK**. Then select **Yes** to upgrade the database.
 
     ![Screenshot that shows the dialog box for upgrading the database.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_17.PNG)
 
-8.  When this completes, over on the right, copy the value in the box next to **Connection String.**
+8.  After the process finishes, on the right, copy the value in the **Connection String** field.
 
     ![Screenshot that shows the Connection String field.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_18.PNG)
 
-9.  Now, open the Web.config file and replace the value that is in connectionString with the value you copied above.  Save the Web.config file.
+9.  Open the *web.config* file and replace the `connectionString` value with the value you copied earlier.  Save the *web.config* file.
 
     > [!NOTE]
-    > The steps above are necessary so that we can get the new connectionString.  Otherwise, when we run Update-Database below it will error out.
+    > The preceding steps are necessary so you can get the new connection string. Otherwise, you'll get errors when you run `Update-Database` later in this article.
 
     ![Screenshot that shows where to find the connection string value.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_19.PNG)
 
-10. At the top of Visual Studio, select **View** -> **Other Windows** -> **Package Manager Console**.
+10. At the top of the Visual Studio window, select **View** > **Other Windows** > **Package Manager Console**.
 
-    ![Screenshot that highlights the Package Manager Console menu option.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_20.PNG)
+    ![Screenshot that highlights the Package Manager Console menu item.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_20.PNG)
 
-11. At the bottom, in the Package Manager Console enter:  `Enable-Migrations` and hit enter.
+11. In the **Package Manager Console** pane, enter  `Enable-Migrations`.
 
     > [!NOTE]
-    > If you get an error that says Enable-Migrations is not recognized as a cmdlet, enter Install-Package EntityFramework to update the EntityFramework.
+    > If you get an error that says "Enable-Migrations isn't recognized as a cmdlet," enter *Install-Package EntityFramework* to update the entity framework.
 
-    ![Sceenshot that shows where to enter Enable-Migrations.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_21.PNG)
+    ![Screenshot that shows where to enter Enable-Migrations.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_21.PNG)
 
-12. At the bottom, in the Package Manager Console enter:  `Add-Migration <anynamehere>` and hit enter.
+12. Enter `Add-Migration <AnyNameHere>`.
 
-    ![Screenshot that shows where to enter Add-Migration test.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_22.PNG)
+    ![Screenshot that shows where to enter the Add-Migration test.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_22.PNG)
 
-13. At the bottom, in the Package Manager Console enter:  `Update-Database` and hit enter.
+13. Enter `Update-Database`.
 
     ![Screenshot that shows where to enter Update-Database.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_23.PNG)
 
-## Modify the WebApi in Visual Studio
+## Modify the web API 
 
-#### To Modify the Sample Web API
+To modify the sample web API in Visual Studio:
 
-1.  Open the sample using Visual Studio.
+1.  In Visual Studio, open the sample.
 
-2.  Open the web.config file.  Modify the following values:
+2.  Open the *web.config* file.  Modify the following settings by using the values you copied in the [Create an application group](#create-an-application-group) procedure:
 
-    -   ida:ClientId - enter the value from #3 in Create the Application Group section above.
+    -   `ida:ClientId`: Enter the client ID.
 
-    -   ida:ClientSecret - enter the value from #5 in Create the Application Group section above.
+    -   `ida:ClientSecret`: Enter the client secret.
 
-    -   ida:GraphResourceId - enter the value from #6 in Create the Application Group section above.
+    -   `ida:GraphResourceId`: Enter the graph resource ID.
 
     ![Screenshot that highlights the values you should change.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_24.PNG)
 
-3.  Open the Startup.Auth.cs file under App_Start and make the following changes:
+3. Under **App_Start**, open the *Startup.Auth.cs* file. Make the following changes:
 
     -   Comment out the following lines:
 
@@ -160,25 +169,25 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
         //public static readonly string Authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);
         ```
 
-    -   Add the following in it's place:
+    -   In place of the removed lines, add the following line:
 
         ```
         public static readonly string Authority = "https://<your_fsname>/adfs";
         ```
 
-        where <your_fsname> is replaced with the DNS portion of your federation service url, for example adfs.contoso.com
+        Here, replace `<your_fsname>` with the DNS portion of your federation service URL. For example, enter *adfs.contoso.com*.
 
         ![Screenshot that shows the changes in the Startup dot Auth dot C S file.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_25.PNG)
 
-4.  Open the UserProfileController.cs file and make the following changes:
+4.  Open the *UserProfileController.cs* file. Make the following changes:
 
-    -   Comment out the following:
+    -   Comment out the following line:
 
         ```
         //authContext = new AuthenticationContext(Startup.Authority, new TokenDbCache(userObjectID));
         ```
 
-    -   Replace both occurrences with the following:
+    -   Replace both occurrences with the following code:
 
         ```
         authContext = new AuthenticationContext(Startup.Authority, false, new TokenDbCache(userObjectID));
@@ -186,13 +195,13 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
         ![Screenshot that shows the changes in the User Profile Controller dot C S file.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_27.PNG)
 
-    -   Comment out the following:
+    -   Comment out the following line:
 
         ```
         //authContext = new AuthenticationContext(Startup.Authority);
         ```
 
-    -   Replace both occurrences with the following:
+    -   Replace both occurrences with the following code:
 
         ```
         authContext = new AuthenticationContext(Startup.Authority, false);
@@ -200,44 +209,46 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
         ![Screenshot that highlights the changes made to the authContext value.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_28.PNG)
 
-    -   Now comment out all instances of the following:
+    -   Comment out all instances of the following line:
 
         ```
         Uri redirectUri = new Uri(Request.Url.GetLeftPart(UriPartial.Authority).ToString() + "/OAuth");
         ```
 
-    -   Replace all occurrences with the following:
+    -   Replace all occurrences with the following code:
 
         ```
         Uri redirectUri = new Uri(Request.Url.GetLeftPart(UriPartial.Authority).ToString());
         ```
 
-        ![Screenshot that highlights the U r i redirect u r i value.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_34.PNG)
+        ![Screenshot that highlights the U R I redirect U R I value.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_34.PNG)
 
-## Test the Solution
-In this section we will test the confidential client solution.  Use the following procedure to test the solution.
+## Test the solution
 
-#### Testing the confidential client solution
+To test the confidential client solution:
 
-1. At the top of Visual Studio, make sure Internet Explorer is selected and click the green arrow.
+1. At the top of the Visual Studio window, make sure **Internet Explorer** is selected. Then select the green arrow.
 
    ![Screenshot that highlights the Internet Explorer button.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_36.png)
 
-2. Once the ASP.Net page comes up, click on **Register** on top right of the page.  Enter a username and password and then click **Register** button.  This creates a local account in the SQL database.
+2. On the **ASP.NET** page that opens: 
+    1. In the upper-right corner, select **Register**.  
+    1. Enter a username and password. 
+    1. Select **Register** to create a local account in the SQL database.
 
-   ![Screenshot that shows where to create a local account in the S Q L database.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG)
+   :::image type="content" source="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG" alt-text="Screenshot that shows where to create a local account in the S Q L database." lightbox="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG":::
 
-3. Notice now, the ASP.NET site says Hello abby@contoso.com!.  Click **Profile**.
+3. Notice the message **Hello abby\@contoso.com!**.  Select **Profile**.
 
-   ![Screenshot that highlights Profile.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG)
+   :::image type="content" source="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG" alt-text="Screenshot that highlights Profile." lightbox="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG":::
 
-4. This brings up a page without any information and says that we must click here to sign-in.  Click **here**.
+4. On the new page, you see a message that prompts you to sign in.  Select **here**.
 
-   ![Screenshot that shows the User Profile page.](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_33.PNG)
+    :::image type="content" source="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_33.PNG" alt-text="Screenshot that shows the User Profile page." lightbox="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_33.PNG":::
 
-5. You will now be prompted to sign-in to AD FS.
+    You're prompted to sign in to AD FS.
 
-   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG)
-
-## Next Steps
-[AD FS Development](../../ad-fs/AD-FS-Development.md)
+   :::image type="content" source="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG" alt-text="Screenshot that shows the sign-in page for A D F S." lightbox="media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG":::     
+        
+## Next steps
+Learn about [AD FS development](../../ad-fs/AD-FS-Development.md).

@@ -160,7 +160,7 @@ In this step, the file server role and failover cluster feature will be installe
 
 1. Open **Server Manager** and under the **Manage** drop down, select **Add Roles and Features**.
 
-   ![Add Feature](media/Cluster-File-Server/Cluster-FS-Add-Feature.png)
+   ![Screenshot of the Manage drop-down list in Server Manager with the Add Roles and Features option highlighted.](media/Cluster-File-Server/Cluster-FS-Add-Feature.png)
 
 2. If the **Before you begin** window opens, choose **Next**.
 
@@ -170,7 +170,7 @@ In this step, the file server role and failover cluster feature will be installe
 
 5. For the Server Role, from the list of roles, open **File Services**, select **File Server**, and **Next**.
 
-   ![Add Role](media/Cluster-File-Server/Cluster-FS-Add-FS-Role-1.png)
+   ![Screenshot of the Server Roles  page of the Add Roles and Features dialog box showing the File Server option selected and highlighted.](media/Cluster-File-Server/Cluster-FS-Add-FS-Role-1.png)
 
 6. For the Features, from the list of features, select **Failover Clustering**.  A popup dialog will show that lists the administration tools also being installed.  Keep all the selected, choose **Add Features** and **Next**.
 

@@ -117,31 +117,31 @@ Use the Remote Server Administration Tools for Windows 10 to manage domain contr
 
 The following is a simple example of upgrading the Contoso forest from Windows Server 2012 R2 to Windows Server 2016.
 
-![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade1.png)
+![Image depicting an upgrade of the Contoso forest from Windows Server 2012 R2 to Windows Server 2016.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade1.png)
 
 1. Join the new Windows Server 2016 to your forest. Restart when prompted.
 
-   ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade2.png)
+   ![Screenshot of the Server Manager showing the Systems Properties and Computer Name/Domain Changes dialog boxes.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade2.png)
 
 1. Sign in to the new Windows Server 2016 with a domain admin account.
 1. In **Server Manager**, under **Add Roles and Features**, install **Active Directory Domain Services** on the new Windows Server 2016. This will automatically run adprep on the 2012 R2 forest and domain.
 
-   ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade3.png)
+   ![Screenshot of the Select server roles page of the Add Roles and Features Wizard showing the Active Directory Domain Services option highlighted.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade3.png)
 
 1. In **Server Manager**, click the yellow triangle, and from the drop-down click **Promote the server to a domain controller**.
 
-   ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade4.png)
+   ![Screenshot of the Post-deployment Configuration progress dialog box with the Promote the server to a domain controller option called out](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade4.png)
 
 1. On the **Deployment Configuration** screen, select **Add a domain controller to an existing forest** and click next.
 
-   ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
+   ![Screenshot of the Deployment Configuration page of the Active Directory Domain Services Configuration Wizard showing the Add a domain controller to an existing forest option selected.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
 
 1. On the **Domain Controller options** screen, enter the **Directory Services Restore Mode (DSRM)** password and click next.
 1. For the remainder of the screens click **Next**.
 1. On the **Prerequisite Check** screen, click **install**. Once the restart has completed you can sign back in.
 1. On the Windows Server 2012 R2 server, in **Server Manager**, under tools, select **Active Directory Module for Windows PowerShell**.
 
-   ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade6.png)
+   ![Screenshot of the Tools drop-down list in the Server Manager with the Active Directory Module for Windows PowerShell option called out.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade6.png)
 
 1. In the PowerShell windows use the Move-ADDirectoryServerOperationMasterRole to move the FSMO roles. You can type the name of each -OperationMasterRole or use numbers to specify the roles. For more information see [Move-ADDirectoryServerOperationMasterRole](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10))
 
@@ -149,13 +149,13 @@ The following is a simple example of upgrading the Contoso forest from Windows S
     Move-ADDirectoryServerOperationMasterRole -Identity "DC-W2K16" -OperationMasterRole 0,1,2,3,4
     ```
 
-    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade7.png)
+    ![Screenshot of the Active Directory Module for Windows PowerShell window showing the results of the Move-ADDirectoryServerOperationMasterRole cmdlet.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade7.png)
 
 1. Verify the roles have been moved by going to the Windows Server 2016 server, in **Server Manager**, under **tools**, select **Active Directory Module for Windows PowerShell**. Use the `Get-ADDomain` and `Get-ADForest` cmdlets to view the FSMO role holders.
 
-    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade8.png)
+    ![Screenshot of the Active Directory Module for Windows PowerShell window showing the results of the Get-ADDomain cmdlet with the Infrastructure Master, P D C Emulator, and R I D Master values called out.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade8.png)
 
-    ![Upgrade](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade9.png)
+    ![Screenshot of the Active Directory Module for Windows PowerShell window showing the results of the Get-ADForest cmdlet with the Domain Naming Master and Schema Master values called out.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade9.png)
 
 1. Demote and remove the Windows Server 2012 R2 domain controller. For information on demoting a dc, see [Demoting Domain Controllers and Domains](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md)
 1. Once the server is demoted and removed you can raise the forest functional and domain functional levels to Windows Server 2016.

@@ -12,7 +12,7 @@ ms.date: 10/16/2017
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
-This document describes how to manage Software Inventory Logging, a feature that helps datacenter administrators easily log Microsoft software asset management data for their deployments over time. This document describes how to manage Software Inventory Logging. Before using Software Inventory Logging with Windows Server 2012 R2, make sure that Windows Update [KB 3000850](https://support.microsoft.com/kb/3000850) and [KB 3060681](https://support.microsoft.com/kb/3060681) are installed on each system needing to be inventoried. No Wndows Updates are required for Windows Server 2016. This feature runs locally on each server to be inventoried. It does not collect data from remote servers.
+This document describes how to manage Software Inventory Logging, a feature that helps datacenter administrators easily log Microsoft software asset management data for their deployments over time. This document describes how to manage Software Inventory Logging. Before using Software Inventory Logging with Windows Server 2012 R2, make sure that Windows Update [KB 3000850](https://support.microsoft.com/kb/3000850) and [KB 3060681](https://support.microsoft.com/kb/3060681) are installed on each system needing to be inventoried. No Windows Updates are required for Windows Server 2016. This feature runs locally on each server to be inventoried. It does not collect data from remote servers.
 
 The Software Inventory Logging feature can also be added to two versions of Windows Server prior to Windows Server 2012 R2. You can install the following updates to add Software Inventory Logging functionality to Windows Server 2012 and Windows Server 2008 R2 SP1:
 
@@ -267,7 +267,7 @@ The following changes to Software Inventory Logging capability and default setti
 > [!NOTE]
 > This functionality is removed with the installation of the [KB 3000850](https://support.microsoft.com/kb/3000850) update.
 
-When using Software Inventory Logging on a Windows Server 2012 R2 Hyper-V host, it is possible to retrieve SIL data from Windows Server 2012 R2 guests that are running locally, if SIL logging has been started in the guest(s). However, this is only possible when using the Get-SilData and Publish-SilData Powershell cmdlets, and only possible with WIndows Server 2012 R2 in both host and guest.  The purpose of this capability is to allow data center administrators that provide guest VMs to tenants, or other entities of a large corporation, to capture software inventory data at the hypervisor host and subsequently forward all of this data to an aggregator (or target URI).
+When using Software Inventory Logging on a Windows Server 2012 R2 Hyper-V host, it is possible to retrieve SIL data from Windows Server 2012 R2 guests that are running locally, if SIL logging has been started in the guest(s). However, this is only possible when using the Get-SilData and Publish-SilData Powershell cmdlets, and only possible with Windows Server 2012 R2 in both host and guest.  The purpose of this capability is to allow data center administrators that provide guest VMs to tenants, or other entities of a large corporation, to capture software inventory data at the hypervisor host and subsequently forward all of this data to an aggregator (or target URI).
 
 Below are two examples of what the output on the PowerShell console would look like (much abbreviated) on a Windows Server 2012 R2 Hyper-V host running one Windows Server 2012 R2 guest VM with SIL logging started.  You will notice the first example, which uses Get-SilData alone, will output all data from the host as expected.  Also included is all SIL data from the guest, but in a collapsed format.  To expand and view this data from the guest, simply cut and paste the snippet used in the second example below.  SIL data objects from the guest will always have the VM GUID associated within the object.
 
@@ -276,11 +276,11 @@ Below are two examples of what the output on the PowerShell console would look l
 
 **Output Example 1**
 
-![Image of an example output report](../media/software-inventory-logging/SILHyper-VExample1.png)
+![Screenshot of the first example output report.](../media/software-inventory-logging/SILHyper-VExample1.png)
 
 **Output Example 2** (w/ Expand-SilData function)
 
-![Image of an example output report](../media/software-inventory-logging/SILHyper-VExample2.png)
+![Screenshot of the second example output report that includes the Expand-SilData function.](../media/software-inventory-logging/SILHyper-VExample2.png)
 
 ## See Also
 [Get Started with Software Inventory Logging](get-started-with-software-inventory-logging.md)
