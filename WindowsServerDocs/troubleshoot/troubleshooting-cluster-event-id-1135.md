@@ -67,8 +67,8 @@ There are three typical scenarios:
 
 You are looking at all the Events and all the nodes in the cluster are indicating that NODE A had lost communication.
 
-![Scenario A](media/troubleshooting-cluster-event-id-1135/18647.png)
-![Scenario A](media/troubleshooting-cluster-event-id-1135/18648.png)
+![Diagram showing Node A, Node B, and Node C communicating successfully.](media/troubleshooting-cluster-event-id-1135/18647.png)
+![Diagram showing that Node A has lost communication with Node B and Node C.](media/troubleshooting-cluster-event-id-1135/18648.png)
 
 It could be possible that when you are seeing the system logs on NODE A, it has events for all the remaining nodes in the cluster.
 
@@ -82,11 +82,11 @@ You should review and validate the Network configuration and communication issue
 
 You are looking at the Events on the nodes and let us say that your cluster is dispersed across two sites. NODE A, NODE B, and NODE C at Site 1 and NODE D & NODE E at Site 2.
 
-![Scenario B](media/troubleshooting-cluster-event-id-1135/18649.png)
+![Diagram showing that Site 1 is communicating successfully with Site 2 over a WAN Link.](media/troubleshooting-cluster-event-id-1135/18649.png)
 
 On Nodes A,B, and C, you see that the events that are logged are for connectivity to Nodes D & E. Similarly, when you see the events on Nodes D & E, the events suggest that we lost communication with A, B, and C.
 
-![Scenario B](media/troubleshooting-cluster-event-id-1135/18650.png)
+![Diagram showing that SIte 1 has lost the WAN Link connection with Site 2.](media/troubleshooting-cluster-event-id-1135/18650.png)
 
 #### Solution
 

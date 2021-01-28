@@ -74,7 +74,7 @@ If you disable this policy setting, the device does not configure automatic sign
 
 **Type:** DWORD
 
-![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/gtr-adds-signinpolicy.png)
+![Screenshot of the Sign-in and lock last interactive user automatically after a restart dialog box.](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/gtr-adds-signinpolicy.png)
 
 ## Policy #2
 
@@ -115,7 +115,7 @@ If you disable or don't configure this setting, automatic sign on will default t
 
 **Type:** DWORD
 
-![winlogon](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/arso-policy-setting.png)
+![Screenshot of the Configure the mode of automatically signing in and locking last interactive user after a restart or cold boot dialog box.](media/Winlogon-Automatic-Restart-Sign-On--ARSO-/arso-policy-setting.png)
 
 ## Troubleshooting
 

@@ -25,11 +25,11 @@ Since users can modify data on multiple servers, and since each Windows server o
 
 Now, this is far *less* common than people like to believe. Typically, true shared files are modified in a local environment; in the branch office or in the same row of cubicles. They are usually worked on by people on the same team, so people are generally aware of colleagues modifying data. And since they are usually in the same site, the odds are much higher that all the users working on a shared doc will be using the same server. Windows SMB handles the situation here. When a user has a file locked for modification and his coworker tries to edit it, the other user will get an error like:
 
-![File In Use](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/1.jpg)
+![Screenshot of the File In Use dialog box showing an error message that says This action can't be completed because the file is open in another program.](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/1.jpg)
 
 And if the application opening the file is really clever, like Word 2007, it might give you:
 
-![File In Use](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/2.jpg)
+![Screenshot of the File In Use dialog box showing three actions you can take when a file is locked by another user.](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/2.jpg)
 
 DFSR does have a mechanism for locked files, but it is only within the server's own context. DFSR will not replicate a file in or out if its local copy has an exclusive lock. But this doesn't prevent anyone on another server from modifying the file.
 
@@ -43,13 +43,13 @@ There are some vendor solutions that take on this problem, which they typically 
 
 > Having a central ‘traffic cop' allows one server to be aware of all the other servers and which files they have locked by users. Unfortunately this also means that there is often a single point of failure in the distributed locking system.
 
-![Topology](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/3.png)
+![Diagram showing the use of a broker mechanism.](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/3.png)
 
   - Requirement for a fully routed network
 
 > Since a central broker must be able to talk to all servers participating in file replication, this removes the ability to handle complex network topologies. Ring topologies and multi hub-and-spoke topologies are not usually possible. In a non-fully routed network, some servers may not be able to directly contact each other or a broker, and can only talk to a partner who himself can talk to another server – and so on. This is fine in a multi-master environment, but not with a brokering mechanism.
 
-![Topology](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/4.png)
+![Diagram showing the requirement for a fully routed network.](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/4.png)
 
   - Are limited to a pair of servers
 
@@ -67,13 +67,13 @@ There are some vendor solutions that take on this problem, which they typically 
 
 As you think further about this issue, some fundamental issues start to crop up. For example, if we have four servers with data that can be modified by users in four sites, and the WAN connection to one of them goes offline, what do we do? The users can still access their individual servers – but should we let them? We don't want them to make changes that conflict, but we definitely want them to keep working and making our company money. If we arbitrarily block changes at that point, no users can work even though there may not actually be any conflicts happening\! There's no way to tell the other servers that the file is in use and you're back at square one.
 
-![Topology](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/5.png)
+![Diagram showing the results of a partial network outage.](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/5.png)
 
 Then there's SMB itself and the error handling of reporting locks. We can't really change how SMB reports sharing violations as we'd break a ton of applications and clients wouldn't understand new extended error messages anyways. Applications like Word 2007 do some undercover trickery to figure out who is locking files, but the vast majority of applications don't know who has a file in use (or even that SMB exists. Really.). So when a user gets the message ‘This file is in use' it's not particularly actionable – should they all call the help desk? Does the help desk have access to all the file servers to see which users are accessing files? Messy.
 
 Since we want multi-master for high availability, a broker system is less desirable; we might need to have something running on all servers that allows them all to communicate even through non-fully routed networks. This will require very complex synchronization techniques. It will add some overhead on the network (although probably not much) and it will need to be lightning fast to make sure that we are not holding up the user in their work; it needs to outrun file replication itself - in fact, it might need to actually be tied to replication somehow. It will also have to account for server outages that are network related and not server crashes, somehow.
 
-![Topology](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/6.png)
+![Diagram showing Locking and Replication across five servers.](./media/understanding-the-lack-of-distributed-file-locking-in-dfsr/6.png)
 
 And then we're back to special client software for this scenario that better understands the locks and can give the user some useful info (“Go call Susie in accounting and tell her to release that doc”, “Sorry, the file locking topology is broken and your administrator is preventing you from opening this file until it's fixed”, etc). Getting this to play nicely with the millions of applications running in Windows will definitely be interesting. There are plenty of OS's that would not be supported or get the software – Windows 2000 is out of mainstream support and XP soon will be. Linux and Mac clients wouldn't have this software until they felt it was important, so the customer would have to hope their vendors made something analogous.
 
