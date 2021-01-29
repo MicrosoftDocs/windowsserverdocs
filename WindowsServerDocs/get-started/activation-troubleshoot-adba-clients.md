@@ -84,11 +84,11 @@ Now, what had gone wrong? Why did I have to remove the installed key and add tho
 
 When I ran the first **/dlv** switch, in the description was the key. The description was Windows® Operating System, RETAIL Channel. I had looked at that and thought that RETAIL Channel meant that it had been purchased and was a valid key.
 
-![Image showing the results of the slmgr /dlv, with the channel information highlighted](./media/032618_1700_Troubleshoo13.png)
+![Screenshot showing the results of the slmgr /dlv command with the RETAIL channel information highlighted.](./media/032618_1700_Troubleshoo13.png)
 
 When we look at the output of the **/dlv** switch from a properly activated server, notice the description now states VOLUME_KMSCLIENT channel. This lets us know that it is indeed a volume license.
 
-![Image showing the results of the slmgr /dlv, with the channel information highlighted](./media/032618_1700_Troubleshoo14.png)
+![Screenshot showing the results of the slmgr /dlv command with the VOLUME_KMSCLIENT channel information highlighted.](./media/032618_1700_Troubleshoo14.png)
 
 So what does that RETAIL channel mean then? Well, it means the media that was used to install the operating system was an MSDN ISO. I went back to my customer and asked if, by some chance, there was a second Windows Server 2016 ISO floating around the network. Turns out that yes, there was another ISO on the network, and it had been used to create the other dozen machines. They compared the two ISOs and sure enough the one that was given to me to build the virtual servers was, in fact, an MSDN ISO. They removed that MSDN ISO from their network and now we have all our existing servers activated and no more worries about the activation failing on future builds.
 
