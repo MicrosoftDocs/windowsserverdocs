@@ -35,7 +35,7 @@ The following table lists the speeds for different types of networks.
 |100BaseT|100 Mbps|
 |Gigabit Ethernet|1 gigabit per second (Gbps)|
 
-Use the following table to calculate the cost of each site link based on wide area network speed (WAN) link speed. For WAN link speed that is not listed in the table, you can calculate a relative cost factor by dividing 1,024 by the logarythm  of the available bandwidth, as measured in Kbps.
+Use the following table to calculate the cost of each site link based on wide area network speed (WAN) link speed. For WAN link speed that is not listed in the table, you can calculate a relative cost factor by dividing 1,024 by the logarithm of the available bandwidth, as measured in Kbps.
 
 |Available bandwidth (Kbps)|Cost|
 |--------------------------------|--------|
@@ -52,6 +52,5 @@ Use the following table to calculate the cost of each site link based on wide ar
 |4,096|283|
 
 These costs do not reflect differences in reliability between network links. Set higher costs on any failure-prone network links so that you do not have to rely on those links for replication. By setting higher site link costs, you can control replication failover when a site link fails.
-
 
 
