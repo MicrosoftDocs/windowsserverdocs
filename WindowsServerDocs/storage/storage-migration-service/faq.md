@@ -163,7 +163,7 @@ Most errors found in the transfer CSV file are Windows System Error Codes. You c
 
 ## Are existing certificates updated on the destination server during cutover?
 
-A destination server may contain certificates - issued prior to cutover - in its local certificate store, with the name of the server being part of the subject, subject alternative name, or other fields. When cutover occurs and the server is renamed, these certificates are not updated. You must reissue certificates to your newly-renamed servers using your current deployment methods, such as group policy or web enrollment.    
+A destination server may contain certificates - issued prior to cutover - in its local certificate store, with the name of the server being part of the subject, subject alternative name, or other fields. When cutover occurs and the server is renamed, these certificates are not updated. You must reissue certificates to your newly renamed servers using your current deployment methods, such as Group Policy or web enrollment.    
 
 ## <a name="give-feedback"></a> What are my options to give feedback, file bugs, or get support?
 
