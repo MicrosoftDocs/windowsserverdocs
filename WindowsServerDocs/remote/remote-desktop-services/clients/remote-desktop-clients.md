@@ -6,7 +6,7 @@ ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
 author: HeidiLohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/28/2021
+ms.date: 01/29/2021
 ms.localizationpriority: medium
 ---
 # Remote Desktop clients
