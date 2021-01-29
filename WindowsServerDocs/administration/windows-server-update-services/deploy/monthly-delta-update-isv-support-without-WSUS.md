@@ -17,7 +17,7 @@ Since version 7, Windows has been able to reduce the size of Windows Update down
 
 If you do not currently have WSUS installed, but you need smaller update package sizes in the interim, you can use Monthly Delta update. Delta update reduces package sizes substantially, but not as much as with WSUS Express update delivery. We recommend that you deploy WSUS Express update whenever possible for the greatest reduction in package sizes. Following is a chart comparing Delta, Cumulative and Express download sizes for Windows 10 version 1607:
 
-![Download size comparison](../../media/express-update-delivery-isv-support/delta-1.png)
+![Screenshot of a chart comparing Delta, Cumulative and Express download sizes for Windows 10 version 1607.](../../media/express-update-delivery-isv-support/delta-1.png)
 
 ## What is Monthly Delta update?
 
@@ -45,7 +45,7 @@ Delta and Cumulative have the same KB number, with the same classification, and 
 
 If size of the update to the client device is a concern, we recommend using Delta update on the devices that have the previous month's update, and Cumulative update on the devices that are falling behind. This way, all devices only require a single update to bring them up to date. This requires a small adjustment in the overall update management process, as you will have to deploy different updates based on how up-to-date the devices are in the organization:
 
-![Download size comparison](../../media/express-update-delivery-isv-support/delta-2.png)
+![Diagram showing how you will have to deploy different updates based on how up-to-date the devices are in the organization.](../../media/express-update-delivery-isv-support/delta-2.png)
 
 ### Prevent deployment of Delta and Cumulative updates in the same month
 

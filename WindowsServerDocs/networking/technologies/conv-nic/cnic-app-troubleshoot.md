@@ -42,7 +42,7 @@ Perform the following steps if you receive unexpected results when you run the *
 1. Make sure the Mlnx miniport and Mlnx bus drivers are latest. For Mellanox, use at least drop 42.
 2. Verify that Mlnx miniport and bus drivers match by checking the driver version through Device Manager. The bus driver can be found in System Devices. The name should start with Mellanox Connect-X 3 PRO VPI, as illustrated in the following screen shot of network adapter properties.
 
-![Network adapter properties](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-02.jpg)
+   ![Screenshot showing the Information tab of the Mellanox ConnectX-3 Pro EthernetAdapter Properties dialog box and the Driver tab of the Mellanox ConnectX-3 Pro VPI Network Adapter Properties dialog box.](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-02.jpg)
 
 4. Make sure Network Direct (RDMA) is enabled on both the physical NIC and host vNIC.
 5. Make sure vSwitch is created over the right physical adapter by checking its RDMA capabilities.
@@ -60,7 +60,7 @@ Get-SmbClientNetworkInterface
 
 The host vNIC should appear as RDMA capable from SMB's perspective as well.
 
-![Network adapter properties](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-03.jpg)
+![Screenshot of the PowerShell window showing the result of the Get-SmbClientNetworkInterface cmdlet.](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-03.jpg)
 
 ### Get-SmbClientNetworkInterface unexpected results
 

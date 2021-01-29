@@ -87,11 +87,11 @@ With multiple TCP sessions, the CPU utilization reaches 100% and the maximum thr
 
 The following illustration depicts CPU Utilization on both of the RAS Gateway VMs. The active VM, RAS Gateway VM #1, is on the left, while the passive VM, RAS Gateway VM #2, is on the right.
 
-![Gateway VM CPU utilization in Task Manager](../../media/GRE-Tunnel-Perf/Gre-Tunnel-01.jpg)
+![Screenshot of two Task Manager windows showing CPU Utilization on both of the RAS Gateway VMs when there are multiple TCP sessions.](../../media/GRE-Tunnel-Perf/Gre-Tunnel-01.jpg)
 
 The following illustration depicts Ethernet network throughput on the RAS Gateway VMs. The active VM, RAS Gateway VM #1, is on the left, while the passive VM, RAS Gateway VM #2, is on the right.
 
-![Gateway VM Ethernet network throughput in Task Manager](../../media/GRE-Tunnel-Perf/Gre-Tunnel-02.jpg)
+![Screenshot of two Task Manager windows showing the Ethernet network throughput on the RAS Gateway VMs when there are multiple TCP sessions.](../../media/GRE-Tunnel-Perf/Gre-Tunnel-02.jpg)
 
 
 ### GRE Tunnel Performance with One TCP Connection
@@ -102,11 +102,11 @@ The maximum throughput on the GRE tunnel is between 400-500 Mbps.
 
 The following illustration depicts CPU Utilization on both of the RAS Gateway VMs. The active VM, RAS Gateway VM #1, is on the left, while the passive VM, RAS Gateway VM #2, is on the right.
 
-![Gateway VM CPU utilization in Task Manager](../../media/GRE-Tunnel-Perf/Gre-Tunnel-03.jpg)
+![Screenshot of two Task Manager windows showing CPU Utilization on both of the RAS Gateway VMs when there is one TCP session.](../../media/GRE-Tunnel-Perf/Gre-Tunnel-03.jpg)
 
 
 The following illustration depicts Ethernet network throughput on the RAS Gateway VMs. The active VM, RAS Gateway VM #1, is on the left, while the passive VM, RAS Gateway VM #2, is on the right.
 
-![Gateway VM Ethernet network throughput in Task Manager](../../media/GRE-Tunnel-Perf/Gre-Tunnel-04.jpg)
+![Screenshot of two Task Manager windows showing the Ethernet network throughput on the RAS Gateway VMs when there is one TCP session.](../../media/GRE-Tunnel-Perf/Gre-Tunnel-04.jpg)
 
 For more information about RAS Gateway performance, see [HNV Gateway Performance Tuning in Software Defined Networks](../../../administration/performance-tuning/subsystem/software-defined-networking/hnv-gateway-performance.md).

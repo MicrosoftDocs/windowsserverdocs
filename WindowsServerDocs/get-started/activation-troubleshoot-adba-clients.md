@@ -42,11 +42,11 @@ My thinking now is that for some reason the key is broken, so I use the **/upk**
 
 I ran the **/dlv** switch again, to see the detailed license information. Unfortunately for me that didn’t give me any helpful information, just a product key not found error. Because, of course, there’s no key since I just uninstalled it!
 
-![Image that shows the slmgr /dlv command and its result](./media/032618_1700_Troubleshoo4.png)
+![Screenshot of the Command Prompt window showing the slmgr /dlv command and the resulting Product Key Not Found error message.](./media/032618_1700_Troubleshoo4.png)
 
 I figured it was a longshot, but I tried the **/ato** switch, which should activate Windows against the known KMS servers (or Active Directory as the case may be). Again, just a product not found error.
 
-![Image that shows the slmgr /ato command and its result](./media/032618_1700_Troubleshoo5.png)
+![Screenshot of the Command Prompt window showing the slmgr /ato command and the resulting Product Not Found error message.](./media/032618_1700_Troubleshoo5.png)
 
 My next thought was that sometimes stopping and starting a service does the trick, so I tried that next. I need to stop and start the Microsoft Software Protection Platform Service (SPPSvc service). From an administrative command prompt, I use the trusty **net stop** and **net start** commands. I notice at first that the service isn’t running, so I think this must be it!
 
@@ -74,11 +74,11 @@ I used the **/ipk** switch to install a product key, choosing the Windows Server
 
 From here on out I only captured results from my Datacenter experiences, but they were the same. I used the **/ato** switch to force the activation. We get the awesome message that the product has been activated successfully!
 
-![Image that shows the slmgr /ato command and its result](./media/032618_1700_Troubleshoo11.png)
+![Screenshot of the Command Prompt window showing the slmgr /ato command and the resulting Product Activated Successfully message.](./media/032618_1700_Troubleshoo11.png)
 
 Using the **/dlv** switch again, we can see that now we have been activated by Active Directory.
 
-![Image that shows the slmgr /dlv command and its result](./media/032618_1700_Troubleshoo12.png)
+![Screenshot of the Command Prompt window showing the slmgr /dlv command and the resulting message indicating that the user is activated by Active Directory.](./media/032618_1700_Troubleshoo12.png)
 
 Now, what had gone wrong? Why did I have to remove the installed key and add those generic keys to get these machines to activate properly? Why did the other dozen or so machines activate with no issues? As I said earlier, I missed something key in the initial stages of looking at the issue. I was thoroughly confused, so reached out to Charity from the initial blog post to see if she could help me. She saw the problem right away and helped me understand what I had missed early on.
 
