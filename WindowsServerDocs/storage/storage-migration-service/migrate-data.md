@@ -4,7 +4,7 @@ description: Brief description of topic for search engine results
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 03/25/2020
+ms.date: 01/29/2021
 ms.topic: article
 ---
 # Use Storage Migration Service to migrate a server
