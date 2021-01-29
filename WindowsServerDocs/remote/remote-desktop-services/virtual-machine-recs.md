@@ -2,7 +2,7 @@
 title: Virtual machine sizing
 description: Size recommendations for each workload type.
 ms.author: helohr
-ms.date: 01/27/2021
+ms.date: 01/29/2021
 ms.topic: article
 author: Heidilohr
 manager: lizross
@@ -13,16 +13,16 @@ Whether you're running your virtual machine on Remote Desktop Services or Window
 
 ## Multi-session recommendations
 
-The following tables list the maximum suggested number of users per virtual central processing unit (vCPU) and the minimum VM configuration for each workload. These recommendations are based on [Remote Desktop workloads](remote-desktop-workloads.md).
+The examples in this section are generic guidelines and you should only use them for initial performance estimates. The following tables list the maximum suggested number of users per virtual central processing unit (vCPU) and the minimum VM configuration for each workload. These recommendations are based on [Remote Desktop workloads](remote-desktop-workloads.md).
 
 The following table shows an example of a smaller, proof-of-concept scenario with a user workload of less than 20 users:
 
 | Workload type | Maximum users per vCPU | vCPU/RAM/OS storage minimum | Example Azure instances | Profile container storage minimum |
 | --- | --- | --- | --- | --- |
-| Light | 4 | 8 vCPUs, 16 GB RAM, 16 GB storage | D4s_v3, F4s_v2, D4a_v4 | 30 GB |
-| Medium | 4 | 8 vCPUs, 16 GB RAM, 32 GB storage | D4s_v3, F4s_v2, D4a_v4 | 30 GB |
-| Heavy | 2 | 8 vCPUs, 16 GB RAM, 32 GB storage | D4s_v3, F4s_v2, D4a_v4 | 30 GB |
-| Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D4s_v3, F4s_v2, D4a_v4, NV6 | 30 GB |
+| Light | 4 | 8 vCPUs, 16 GB RAM, 16 GB storage | D4s_v3, F4s_v2, D4as_v4 | 30 GB |
+| Medium | 4 | 8 vCPUs, 16 GB RAM, 32 GB storage | D4s_v3, F4s_v2, D4as_v4 | 30 GB |
+| Heavy | 2 | 8 vCPUs, 16 GB RAM, 32 GB storage | D4s_v3, F4s_v2, D4as_v4 | 30 GB |
+| Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D4s_v3, F4s_v2, D4as_v4, NV12, NVv4 | 30 GB |
 
 This table shows examples of standard or larger user workloads with 20 or more users:
 
@@ -31,7 +31,7 @@ This table shows examples of standard or larger user workloads with 20 or more u
 | Light | 6 | 2 vCPUs, 8 GB RAM, 16 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
 | Medium | 4 | 4 vCPUs, 16 GB RAM, 32 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
 | Heavy | 2 | 4 vCPUs, 16 GB RAM, 32 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
-| Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4, NV6 | 30 GB |
+| Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4, NV12, NVv4 | 30 GB |
 
 ## Recommended VM sizes for standard or larger environments
 
@@ -45,9 +45,11 @@ Windows 10 and its UI components rely on using at least two parallel threads for
 
 As the number of cores increase, the system's synchronization overhead also increases. For most workloads, at around 16 cores the return on investment gets lower, with most of the extra capacity being offset by synchronization overhead. It is likely to get more capacity from two 16 core VMs as opposed to one 32 core one.
 
-The recommended range between 4 and 24 cores will generally provide better capacity returns for your users as you increase the number of cores. For example, if your scenario needs one-third of a core for each user, then 12 users on a four-core system would have less available burst capacity than 14 users with eight cores.
+The recommended range between 4 and 24 cores will generally provide better capacity returns for your users as you increase the number of cores. For example, let’s say you have 12 users sign in at the same time to a VM with four cores. The ratio is three users per core. Meanwhile, on a VM with eight cores and 14 users, the ratio is 1.75 users per core. The 1.75 ratio scenario offers greater burst capacity for your applications have short-term CPU demand.
 
 For scenarios with 20 or more connections on a single VM, several smaller VMs would perform better than one or two large VMs. For example, if you're expecting 30 or more users to simultaneously sign in on the same session host within 10 minutes, two eight-core VMs will handle the workload better than one 16-core VM. You can also use breadth-first load balancing to evenly distribute users across different VMs.
+
+It's better to use a large number of smaller VMs instead of a few large VMs because it's easier to shut down VMs that need to be updated or aren't currently in use. With larger VMs, you're guaranteed to always have at least one user signed in at any time, which prevents you from shutting down the VM. When you have many smaller VMs, it's more likely you'll have some that don't have any users signed in. You can safely shut these unused VMs to conserve resources, making your deployment more resilient, easier to maintain, and less expensive.
 
 ## Single-session recommendations
 
