@@ -94,7 +94,7 @@
     ],
 
     "rules": {
-      "sensitive-language": {
+      "sensitive-language-sl": {
         "exclude": [
           "administration/windows-commands/dnscmd.md"
         ]
