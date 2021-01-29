@@ -36,7 +36,7 @@ By using Monthly Delta update, packages will only contain one month's updates. M
 | **Application**    | Can only be applied if the previous month's update was applied (Cumulative or Delta)                                                                                                                                           | Can be applied at any time                                                                                                                                                                                                |
 | **Delivery**       | **Published only to Windows Update Catalog** where it can be downloaded for use with other tools or processes. Not offered to PCs that are connected to Windows Update                                                         | Published to Windows Update (where all consumer PCs will install it), WSUS, and the Windows Update Catalog                                                                                                                |
 
-Delta and Cumulative have the same KB number, with the same classification, and release at the same time. Updates can be distinguished by either the update title in the catalog, or by the name of the msu:
+Delta and Cumulative have the same KB number, with the same classification, and release at the same time. Updates can be distinguished by either the update title in the catalog, or by the MSU file name:
 
 - 2017-02 *\***Delta Update**\** for Windows 10 Version 1607 for x64-based Systems (KB1234567)
 - 2017-02 *\***Cumulative Update**\** for Windows 10 Version 1607 for x86-based Systems (KB1234567)

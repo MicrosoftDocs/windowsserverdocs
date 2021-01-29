@@ -20,7 +20,7 @@ As proper procedure for making all changes, we started our migration in the cust
 
 We started by building four virtual machines, two Windows 2016 Standard and two Windows 2016 Datacenter. At this point everything was great, and everyone was happy. We built a physical server running Windows 2016 Standard, and the machine activated properly. And that’s where our story ends.
 
-Ha Ha! Just kidding! Nothing is ever that easy. Truthfully, the set up and configuration were super easy, so that part was simple and straight forward. I came back into the office on Monday, and all the virtual machines I had built the week prior showed that they weren’t activated. Hey! That’s not right! I went back to the physical machine and it was fine. I went to the customer to discuss what had happened. Of course, the first question was “What changed over the weekend?” And as usual the answer was “nothing.” This time, nothing really had been changed, and we had to figure out what was going on.
+Haha! Just kidding! Nothing is ever that easy. Truthfully, the set up and configuration were super easy, so that part was simple and straight forward. I came back into the office on Monday, and all the virtual machines I had built the week prior showed that they weren’t activated. Hey! That’s not right! I went back to the physical machine and it was fine. I went to the customer to discuss what had happened. Of course, the first question was “What changed over the weekend?” And as usual the answer was “nothing.” This time, nothing really had been changed, and we had to figure out what was going on.
 
 I went to one of my problem servers, opened a command prompt, and checked my output from the **slmgr /ao-list** command. The **/ao-list** switch displays all activation objects in Active Directory.
 
@@ -44,7 +44,7 @@ I ran the **/dlv** switch again, to see the detailed license information. Unfort
 
 ![Screenshot of the Command Prompt window showing the slmgr /dlv command and the resulting Product Key Not Found error message.](./media/032618_1700_Troubleshoo4.png)
 
-I figured it was a longshot, but I tried the **/ato** switch, which should activate Windows against the known KMS servers (or Active Directory as the case may be). Again, just a product not found error.
+I figured it was a long shot, but I tried the **/ato** switch, which should activate Windows against the known KMS servers (or Active Directory as the case may be). Again, just a product not found error.
 
 ![Screenshot of the Command Prompt window showing the slmgr /ato command and the resulting Product Not Found error message.](./media/032618_1700_Troubleshoo5.png)
 
