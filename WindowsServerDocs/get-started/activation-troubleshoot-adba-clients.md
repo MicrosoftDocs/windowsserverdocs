@@ -20,7 +20,7 @@ As proper procedure for making all changes, we started our migration in the cust
 
 We started by building four virtual machines, two Windows 2016 Standard and two Windows 2016 Datacenter. At this point everything was great, and everyone was happy. We built a physical server running Windows 2016 Standard, and the machine activated properly. And that’s where our story ends.
 
-Ha Ha! Just kidding! Nothing is ever that easy. Truthfully, the set up and configuration were super easy, so that part was simple and straight forward. I came back into the office on Monday, and all the virtual machines I had built the week prior showed that they weren’t activated. Hey! That’s not right! I went back to the physical machine and it was fine. I went to the customer to discuss what had happened. Of course, the first question was “What changed over the weekend?” And as usual the answer was “nothing.” This time, nothing really had been changed, and we had to figure out what was going on.
+Haha! Just kidding! Nothing is ever that easy. Truthfully, the set up and configuration were super easy, so that part was simple and straight forward. I came back into the office on Monday, and all the virtual machines I had built the week prior showed that they weren’t activated. Hey! That’s not right! I went back to the physical machine and it was fine. I went to the customer to discuss what had happened. Of course, the first question was “What changed over the weekend?” And as usual the answer was “nothing.” This time, nothing really had been changed, and we had to figure out what was going on.
 
 I went to one of my problem servers, opened a command prompt, and checked my output from the **slmgr /ao-list** command. The **/ao-list** switch displays all activation objects in Active Directory.
 
@@ -42,11 +42,11 @@ My thinking now is that for some reason the key is broken, so I use the **/upk**
 
 I ran the **/dlv** switch again, to see the detailed license information. Unfortunately for me that didn’t give me any helpful information, just a product key not found error. Because, of course, there’s no key since I just uninstalled it!
 
-![Image that shows the slmgr /dlv command and its result](./media/032618_1700_Troubleshoo4.png)
+![Screenshot of the Command Prompt window showing the slmgr /dlv command and the resulting Product Key Not Found error message.](./media/032618_1700_Troubleshoo4.png)
 
-I figured it was a longshot, but I tried the **/ato** switch, which should activate Windows against the known KMS servers (or Active Directory as the case may be). Again, just a product not found error.
+I figured it was a long shot, but I tried the **/ato** switch, which should activate Windows against the known KMS servers (or Active Directory as the case may be). Again, just a product not found error.
 
-![Image that shows the slmgr /ato command and its result](./media/032618_1700_Troubleshoo5.png)
+![Screenshot of the Command Prompt window showing the slmgr /ato command and the resulting Product Not Found error message.](./media/032618_1700_Troubleshoo5.png)
 
 My next thought was that sometimes stopping and starting a service does the trick, so I tried that next. I need to stop and start the Microsoft Software Protection Platform Service (SPPSvc service). From an administrative command prompt, I use the trusty **net stop** and **net start** commands. I notice at first that the service isn’t running, so I think this must be it!
 
@@ -74,21 +74,21 @@ I used the **/ipk** switch to install a product key, choosing the Windows Server
 
 From here on out I only captured results from my Datacenter experiences, but they were the same. I used the **/ato** switch to force the activation. We get the awesome message that the product has been activated successfully!
 
-![Image that shows the slmgr /ato command and its result](./media/032618_1700_Troubleshoo11.png)
+![Screenshot of the Command Prompt window showing the slmgr /ato command and the resulting Product Activated Successfully message.](./media/032618_1700_Troubleshoo11.png)
 
 Using the **/dlv** switch again, we can see that now we have been activated by Active Directory.
 
-![Image that shows the slmgr /dlv command and its result](./media/032618_1700_Troubleshoo12.png)
+![Screenshot of the Command Prompt window showing the slmgr /dlv command and the resulting message indicating that the user is activated by Active Directory.](./media/032618_1700_Troubleshoo12.png)
 
 Now, what had gone wrong? Why did I have to remove the installed key and add those generic keys to get these machines to activate properly? Why did the other dozen or so machines activate with no issues? As I said earlier, I missed something key in the initial stages of looking at the issue. I was thoroughly confused, so reached out to Charity from the initial blog post to see if she could help me. She saw the problem right away and helped me understand what I had missed early on.
 
 When I ran the first **/dlv** switch, in the description was the key. The description was Windows® Operating System, RETAIL Channel. I had looked at that and thought that RETAIL Channel meant that it had been purchased and was a valid key.
 
-![Image showing the results of the slmgr /dlv, with the channel information highlighted](./media/032618_1700_Troubleshoo13.png)
+![Screenshot showing the results of the slmgr /dlv command with the RETAIL channel information highlighted.](./media/032618_1700_Troubleshoo13.png)
 
 When we look at the output of the **/dlv** switch from a properly activated server, notice the description now states VOLUME_KMSCLIENT channel. This lets us know that it is indeed a volume license.
 
-![Image showing the results of the slmgr /dlv, with the channel information highlighted](./media/032618_1700_Troubleshoo14.png)
+![Screenshot showing the results of the slmgr /dlv command with the VOLUME_KMSCLIENT channel information highlighted.](./media/032618_1700_Troubleshoo14.png)
 
 So what does that RETAIL channel mean then? Well, it means the media that was used to install the operating system was an MSDN ISO. I went back to my customer and asked if, by some chance, there was a second Windows Server 2016 ISO floating around the network. Turns out that yes, there was another ISO on the network, and it had been used to create the other dozen machines. They compared the two ISOs and sure enough the one that was given to me to build the virtual servers was, in fact, an MSDN ISO. They removed that MSDN ISO from their network and now we have all our existing servers activated and no more worries about the activation failing on future builds.
 
