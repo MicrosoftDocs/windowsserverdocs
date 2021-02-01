@@ -19,7 +19,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 *Date published: 1/6/2021*
 
 >[!IMPORTANT]
-> Version 1.0.24.0 includes an important security fix. We have removed earlier versions of the web client containing this bug. We encourage all customers to update to version 1.0.24.0 as soon as possible. 
+> Version 1.0.24.0 includes an important security fix. We have removed earlier versions of the web client containing this bug. 
 
 - Added support for redirecting local microphone input to the remote session.
 - Fixed issues with **AltGr** and several other keyboard bugs.
@@ -29,7 +29,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 *Date published: 9/2/2020*
 
 > [!IMPORTANT]
-> In version 1.0.22.0, we introduced a regression that impacts some Chromebook operating systems. Users on impacted operating systems won't be able to connect to a remote session using the web client. We're currently investigating this issue and will release a new version of the web client as soon as we fix this regression. In the meantime, you can avoid this problem by reverting to version 1.0.21.0.
+> In version 1.0.22.0, we introduced a regression that impacts some Chromebook operating systems. Users on impacted operating systems won't be able to connect to a remote session using the web client. We're currently investigating this issue and will release a new version of the web client as soon as we fix this regression. 
 
 - Users can now move the minimized menu.
 - Improved support for 4K and ultra-wide monitors and fixed an issue where copying large amounts of data caused sessions to crash.
