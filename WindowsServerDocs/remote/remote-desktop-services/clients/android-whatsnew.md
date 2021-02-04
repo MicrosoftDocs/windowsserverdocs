@@ -5,12 +5,24 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 12/02/2020
+ms.date: 02/04/2020
 ms.localizationpriority: medium
 ---
 # What's new in the Android client
 
 We regularly update the [Remote Desktop client for Android](remote-desktop-android.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+
+## Updates for version 10.0.9
+
+*Date published: 2/2/2020*
+
+- Support for dark mode on Android 10 and later.
+- Fixed clipboard redirection synchronization issues.
+- Added clipboard redirection to the Add/Edit PC UI.
+- The Android client now supports the DEL key on external keyboards.
+- Fixed a bug that caused workspace URL auto-complete to stop responding.
+- Addressed keyboard and screen reader-related accessibility bugs.
+- Addressed reliability issues identified by user reports.
 
 ## Updates for version 10.0.8
 
