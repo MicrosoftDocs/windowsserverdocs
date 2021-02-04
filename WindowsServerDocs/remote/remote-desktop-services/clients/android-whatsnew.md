@@ -17,7 +17,6 @@ We regularly update the [Remote Desktop client for Android](remote-desktop-andro
 *Date published: 2/2/2020*
 
 - Support for dark mode on Android 10 and later.
-- Native x86 and x64 support for Chromebooks.
 - Fixed clipboard redirection synchronization issues.
 - Added clipboard redirection to the Add/Edit PC UI.
 - The Android client now supports the DEL key on external keyboards.
