@@ -44,6 +44,7 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /z | Copies files in restartable mode. |
 | /b | Copies files in Backup mode. |
 | /zb | Uses restartable mode. If access is denied, this option uses Backup mode. |
+| /j | Copies using unbuffered I/O (recommended for large files). |
 | /efsraw | Copies all encrypted files in EFS RAW mode. |
 | /copy:`<copyflags>` | Specifies which file properties to copy. The valid values for this option are:<ul><li>**D** - Data</li><li>**A** - Attributes</li><li>**T** - Time stamps</li><li>**S** - NTFS access control list (ACL)</li><li>**O** - Owner information</li><li>**U** - Auditing information</li></ul>The default value for this option is **DAT** (data, attributes, and time stamps). |
 | /dcopy:`<copyflags>`| Specifies what to copy in directories. The valid values for this option are:<ul><li>**D** - Data</li><li>**A** - Attributes</li><li>**T** - Time stamps</li></ul>The default value for this option is **DA** (data and attributes). |
@@ -68,6 +69,9 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /pf | Checks run times on a per-file (not per-pass) basis. |
 | /ipg:n | Specifies the inter-packet gap to free bandwidth on slow lines. |
 | /sl | Don't follow symbolic links and instead create a copy of the link. |
+| /nodcopy | Copies no directory info (the default **/dcopy:DA** is done). |
+| /nooffload | Copies files without using the Windows Copy Offload mechanism. |
+| /compress | Requests network compression during file transfer, if applicable. |
 
 > [!IMPORTANT]
 > When using the **/secfix** copy option, specify the type of security information you want to copy, using one of these additional copy options:
