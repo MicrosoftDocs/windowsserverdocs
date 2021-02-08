@@ -6,6 +6,7 @@
       tocHref: /windows
       topicHref: /windows/windows-10
       items:
-        - name: Release information
-          tocHref: /windows/release-information/
-          topicHref: /windows/release-information/index
+        - name: Release health
+          tocHref: /windows/release-health/
+          topicHref: /windows/release-health/index
+     
