@@ -43,7 +43,7 @@ conceptualContent:
     - title: Message center
       links:
         - text: The quickest way to learn about Windows release health 
-          url: https://techcommunity.microsoft.com/
+          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-quickest-way-to-learn-about-windows-release-health/ba-p/2118080
           itemType: whats-new
         - text: The new Microsoft Edge to replace Microsoft Edge Legacy with April’s Windows 10 cumulative monthly security update
           url: https://aka.ms/EdgeLegacyEOS
