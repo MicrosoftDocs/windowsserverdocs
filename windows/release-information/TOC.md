@@ -1,4 +1,5 @@
-﻿# [Windows 10 release information](index.md)
+﻿# [Windows release health](index.yml)
+# [Windows 10 release information](release-information.md)
 # [Message center](windows-message-center.md)
 # Version 20H2
 ## [Known issues and notifications](status-windows-10-20H2.md)
