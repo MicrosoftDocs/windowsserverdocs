@@ -56,7 +56,10 @@ For other applications of Storage Spaces, such as shared SAS clusters and stand-
 
 ## Deployment options
 
-Storage Spaces Direct was designed for two distinct deployment options:
+Storage Spaces Direct was designed for two distinct deployment options: converged and hyper-converged.
+
+   > [!NOTE]
+   > Azure Stack HCI 20H2 supports only hyper-converged deployment, while Azure Stack HCI 2019 supports both converged and hyper-converged deployment.
 
 ### Converged
 
