@@ -382,6 +382,7 @@ The following settings were chosen to not counter or conflict with any setting t
 | Logon | Show first sign-in animation |  | Disabled |
 | Logon | Turn off app notifications on the lock screen |  | Enabled |
 | Logon | Turn  off Windows Startup sound |  | Enabled |
+|Logon|Show clear logon background| N/A |**Enabled** (This policy setting disables the acrylic blur effect on logon background image. With this setting enabled, the logon background image shows without blur.)|
 | Power Management | Select an active power plan | High Performance | Enabled |
 | Recovery | Allow restore of system to default state |  | Disabled |
 | *Storage Health | Allow downloading updates to the Disk Failure Prediction Model |  | Disabled. Updates aren't downloaded for the Disk Failure Prediction Failure Model. |
