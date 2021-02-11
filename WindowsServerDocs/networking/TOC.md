@@ -258,7 +258,7 @@
 ##### [Install the Network Controller server role using Server Manager](sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-server-manager.md)
 ##### [Post-deployment steps for Network Controller](sdn/technologies/network-controller/post-deploy-steps-nc.md)
 #### [Network function virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md)
-##### [Datacenter firewall overview](sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)
+##### [Datacenter firewall overview](/azure-stack/hci/concepts/datacenter-firewall-overview.md)
 ##### [RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
 ###### [What's new in RAS Gateway](sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md)
 ###### [RAS Gateway deployment architecture](sdn/technologies/network-function-virtualization/RAS-Gateway-Deployment-Architecture.md)
@@ -299,7 +299,7 @@
 #### [Secure the Network Controller](sdn/security/nc-security.md)
 #### [Manage certificates for SDN](sdn/security/sdn-manage-certs.md)
 #### [Kerberos with Service Principal Name (SPN)](sdn/security/kerberos-with-spn.md)
-#### [SDN firewall auditing](sdn/security/sdn-firewall-auditing.md)
+#### [SDN firewall auditing](/azure-stack/hci/manage/use-datacenter-firewall-powershell#firewall-auditing)
 
 ### [Virtual network peering](sdn/vnet-peering/sdn-vnet-peering.md)
 #### [Configure virtual network peering](sdn/vnet-peering/sdn-configure-vnet-peering.md)
