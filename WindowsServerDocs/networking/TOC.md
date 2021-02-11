@@ -258,7 +258,7 @@
 ##### [Install the Network Controller server role using Server Manager](sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-server-manager.md)
 ##### [Post-deployment steps for Network Controller](sdn/technologies/network-controller/post-deploy-steps-nc.md)
 #### [Network function virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md)
-##### [Datacenter firewall overview](/azure-stack/hci/concepts/datacenter-firewall-overview.md)
+##### [Datacenter firewall overview](/azure-stack/hci/concepts/datacenter-firewall-overview)
 ##### [RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
 ###### [What's new in RAS Gateway](sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md)
 ###### [RAS Gateway deployment architecture](sdn/technologies/network-function-virtualization/RAS-Gateway-Deployment-Architecture.md)
