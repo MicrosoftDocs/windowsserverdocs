@@ -43,7 +43,7 @@ conceptualContent:
     - title: Message center
       links:
         - text: Out-of-band update to address an issue when making WPA3 Wi-Fi connections
-          url: https://docs.microsoft.com/en-us/windows/release-health/status-windows-10-20h2#1557msgdesc
+          url: https://docs.microsoft.com/en-us/windows/release-health/status-windows-10-1909#1557msgdesc
           itemType: whats-new
         - text: Take action - February 2021 security update available for all supported versions of Windows
           url: https://support.microsoft.com/help/4601319
