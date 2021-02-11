@@ -7,21 +7,23 @@ ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 10/04/2016
 ---
+
 # Hyper-V Virtual Machine Connection
 
->Applies To: Windows Server 2016, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2012, Windows 8
+> **Applies to:** Windows Server 2019, Windows Server 2016, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2012, Windows 8
 
-Virtual Machine Connection \(VMConnect\) is a tool that you use to connect to a virtual machine so that you can install or interact with the guest operating system in a virtual machine. Some of the tasks that you can perform by using VMConnect include the following:
+Virtual Machine Connection \(VMConnect\) is a tool you can use to connect to a virtual machine to install or interact with the guest operating system in a virtual machine. Some of the tasks you can perform by using VMConnect include the following:
 
--   Start and shut down a virtual machine
+- Start and shut down a virtual machine
 
--   Connect to a DVD image \(.iso file\) or a USB flash drive
+- Connect to a DVD image \(.iso file\) or a USB flash drive
 
--   Create a checkpoint
+- Create a checkpoint
 
--   Modify the settings of a virtual machine
+- Modify the settings of a virtual machine
 
 ## Tips for using VMConnect
+
 You may find the following information helpful for using VMConnect:
 
 |To do this…|Do this…|
@@ -41,6 +43,7 @@ You may find the following information helpful for using VMConnect:
 
 
 ## Keyboard shortcuts
+
 By default, the keyboard input and mouse clicks are sent to the virtual machine. So you may need to press CTRL + ALT + LEFT arrow before you use the following shortcut keys.
 
 |Key combination|Description|
@@ -55,6 +58,7 @@ By default, the keyboard input and mouse clicks are sent to the virtual machine.
 |CTRL\+C|Do a screen capture|
 
 ## See Also
--   [Use local resources on Hyper-V virtual machine with VMConnect](Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)
--   [Hyper-V on Windows Server 2016](../Hyper-V-on-Windows-Server.md)
--   [Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/)
+
+- [Use local resources on Hyper-V virtual machine with VMConnect](Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)
+- [Hyper-V on Windows Server 2016](../Hyper-V-on-Windows-Server.md)
+- [Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/)
