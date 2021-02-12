@@ -56,7 +56,9 @@ The management PC or other system that you use to connect to the Azure portal mu
 - The [Microsoft Edge](https://www.microsoft.com/edge) or Google Chrome web browser
 - Access to the virtual network that's connected to the VM (this is more secure than using a public IP address to connect). There are a number of ways of connecting to a virtual network, including by using a [VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
 
-## Installing Windows Admin Center in a VM
+## Installing in a VM
+
+Before you can use Windows Admin Center in the Azure portal, you must install it in the VM you want to manage. Here's how:
 
 1. Open the Azure portal and navigate to your VM.
 2. If the VM has all outbound internet traffic blocked, create an outbound port rule to connect to the Windows Admin Center service. <br>To do so, in the virtual machine settings, navigate to **Networking** > **Outbound port rules**, select **Add outbound port rule**, enter the following values, and then select **Add**.
@@ -75,7 +77,7 @@ The management PC or other system that you use to connect to the Azure portal mu
 <br>However, we recommend instead using a private IP address to connect with, or at least [manually creating an inbound port rule](#creating-an-inbound-port-rule-for-connecting-from-specific-public-ip-addresses) that's locked down to accept traffic from only the IP addresses you specify.
 5. Select **Install**.<br>Installing takes a few minutes. If you selected **Open this port for me** or manually created an inbound port rule in the last couple minutes, it might take another couple minutes before you can connect with Windows Admin Center.
 
-## Using Windows Admin Center in a VM
+## Using to manage the OS in a VM
 
 After you've installed Windows Admin Center in an Azure VM, here's how to connect to it and use it to manage Windows Server:
 
@@ -92,7 +94,7 @@ Just like with Remote Desktop, opening an inbound port rule on your VM's public 
 However, if you need to use a public IP address, you can improve security by limiting the IP addresses that can reach your VM to only the IP addresses used by the systems you use to connect to the Azure portal. Here's how:
 
 1. Open the Azure portal and navigate to your VM > **Networking** > **Inbound port rules**.
-2. If you already installed Windows Admin Center and configured it to open an inbound port for your public IP address, select PortForWAC. Otherwise, select **Add inbound port rule**.
+2. If you already installed Windows Admin Center and configured it to open an inbound port for your public IP address, select **PortForWAC**. Otherwise, select **Add inbound port rule**.
 3. Provide the following values, specifying the public IP addresses of your management systems (separated with commas), and optionally changing the destination port from port 6516. Then select **Add**.
 
    | Field                        | Value              |
