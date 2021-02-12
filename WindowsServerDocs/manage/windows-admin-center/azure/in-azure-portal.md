@@ -1,6 +1,6 @@
 ---
 title: Windows Admin Center in Azure
-description: 
+description: An overview of using Windows Admin Center in the Azure portal to manage the Windows Server OS in an Azure VM. Includes the functionality provided, requirements, and how to install Windows Admin Center and use it to manage a VM. Also provides troubleshooting tips.
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
@@ -10,7 +10,7 @@ ms.date: 02/16/2021
 
 You can now use Windows Admin Center (preview) in the Azure portal to manage the Windows Server operating system inside an Azure VM. This provides the ability to manage most operating system functions and manage files in the VM from the Azure portal without using Remote Desktop or PowerShell to connect to the VM.
 
-This article provides an overview of the functionality provided, how to install Windows Admin Center in your VMs, answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work quite right.
+This article provides an overview of the functionality provided, requirements, and how to install Windows Admin Center and use it to manage a VM. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work quite right.
 
 ## Overview of functionality
 
@@ -40,21 +40,21 @@ We don't support extensions to Windows Admin Center in the Azure portal at this 
 
 To use Windows Admin Center in the Azure portal, we install Windows Admin Center in each Azure VM that you want to use it to manage. The Azure VM has the following requirements:
 
-* Windows Server 2019 or Windows Server 2016
-* At least 3 GiB of memory
-* Be in any region of an Azure public cloud (it's not supported in Azure China, Azure Government, or other non-public clouds)
+- Windows Server 2019 or Windows Server 2016
+- At least 3 GiB of memory
+- Be in any region of an Azure public cloud (it's not supported in Azure China, Azure Government, or other non-public clouds)
 
 The VM also has the following networking requirements, which we step through during the installation procedure:
 
-* Outbound internet access or an outbound port rule allowing HTTPS traffic to the Windows Admin Center service IP address (we don't use service tags yet)
+- Outbound internet access or an outbound port rule allowing HTTPS traffic to the Windows Admin Center service IP address (we don't use service tags yet)
 
-* An inbound port rule if using a public IP address to connect to the VM (not recommended)
+- An inbound port rule if using a public IP address to connect to the VM (not recommended)
 <br>We recommend connecting to the VM using a private IP address in the VM's virtual network to increase security. This is the same recommendation we make when connecting with Remote Desktop, and doesn't require an inbound port rule, though does require access to the virtual network (which we discuss next).
 
 The management PC or other system that you use to connect to the Azure portal must have the following:
 
-* The [Microsoft Edge](https://www.microsoft.com/edge) or Google Chrome web browser
-* Access to the virtual network that's connected to the VM (this is more secure than using a public IP address to connect). There are a number of ways of connecting to a virtual network, including by using a [VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
+- The [Microsoft Edge](https://www.microsoft.com/edge) or Google Chrome web browser
+- Access to the virtual network that's connected to the VM (this is more secure than using a public IP address to connect). There are a number of ways of connecting to a virtual network, including by using a [VPN gateway](/azure/vpn-gateway/vpn-gateway-about-vpngateways).
 
 ## Installing Windows Admin Center in a VM
 
@@ -71,7 +71,7 @@ The management PC or other system that you use to connect to the Azure portal mu
    | **Action**                   | Allow              |
 
 3. In the virtual machine settings, navigate to **Windows Admin Center** (found in the **Settings** group).
-4. To optionally provide access to your VM over the public internet from any IP address (convenient for testing but exposes the VM to attack from any host on the internet), you can select **Open this port for me**. 
+4. To optionally provide access to your VM over the public internet from any IP address (convenient for testing but exposes the VM to attack from any host on the internet), you can select **Open this port for me**.
 <br>However, we recommend instead using a private IP address to connect with, or at least [manually creating an inbound port rule](#creating-an-inbound-port-rule-for-connecting-from-specific-public-ip-addresses) that's locked down to accept traffic from only the IP addresses you specify.
 5. Select **Install**.<br>Installing takes a few minutes. If you selected **Open this port for me** or manually created an inbound port rule in the last couple minutes, it might take another couple minutes before you can connect with Windows Admin Center.
 
