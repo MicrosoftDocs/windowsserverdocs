@@ -9592,7 +9592,47 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/manage/Use-Access-Control-Lists--ACLs--to-Manage-Datacenter-Network-Traffic-Flow.md",
-      "redirect_url": "/windows-server/networking/sdn/manage/use-acls-for-traffic-flow",
+      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/manage/use-acls-for-traffic-flow.md",
+      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/manage/configure-datacenter-firewall-acls.md",
+      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/sdn-firewall-auditing.md",
+      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/plan/plan-a-software-defined-network-infrastructure.md",
+      "redirect_url": "/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-controller/network-controller.md",
+      "redirect_url": "/azure-stack/hci/concepts/network-controller-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/plan/installation-and-preparation-requirements-for-deploying-network-controller.md",
+      "redirect_url": "/azure-stack/hci/concepts/network-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/ras-gateway-for-sdn.md",
+      "redirect_url": "/azure-stack/hci/concepts/gateway-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/what-s-new-in-ras-gateway.md",
+      "redirect_url": "/azure-stack/hci/concepts/gateway-overview",
       "redirect_document_id": false
     },
     {
@@ -9602,7 +9642,17 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md",
-      "redirect_url": "/windows-server/networking/sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn",
+      "redirect_url": "/azure-stack/hci/concepts/software-load-balancer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md",
+      "redirect_url": "/azure-stack/hci/concepts/software-load-balancer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/datacenter-firewall-overview.md",
+      "redirect_url": "/azure-stack/hci/concepts/datacenter-firewall-overview",
       "redirect_document_id": false
     },
     {
