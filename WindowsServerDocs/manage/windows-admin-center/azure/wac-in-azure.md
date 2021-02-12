@@ -233,7 +233,7 @@ There are two ways to find out the port:
 Yes:
 
 - PowerShell: [Set-AzVMExtension](/powershell/module/az.compute/set-azvmextension)
-- Azure CLI: [az vm extension set](/cli/azure/vm/extension?view=azure-cli-latest#az_vm_extension_set)
+- Azure CLI: [az vm extension set](/cli/azure/vm/extension#az_vm_extension_set)
 
 ### I already have Windows Admin Center installed on my VM. Can I access it from the portal?
 
