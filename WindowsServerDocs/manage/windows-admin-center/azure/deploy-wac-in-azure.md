@@ -4,11 +4,12 @@ description: How to deploy a Windows Admin Center gateway in Azure
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.date: 04/12/2019
+ms.date: 02/16/2021
 ms.localizationpriority: medium
 ---
+# Manually deploy Windows Admin Center in Azure for managing multiple servers
 
-# Deploy Windows Admin Center in Azure
+This article describes how to manually deploy Windows Admin Center in an Azure VM for use in managing multiple Azure VMs. To manage a single VM, instead use the Windows Admin Center functionality built into the Azure portal, as described in [Use Windows Admin Center in the Azure portal](wac-in-azure.md).
 
 ## Deploy using script
 
