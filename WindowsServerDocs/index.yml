@@ -37,8 +37,8 @@ highlightedContent:
       itemType: how-to-guide
       url: ./get-started/extended-security-updates.md
     - title: Windows Insider Program for Server
-      itemType: overview
-      url: /windows-insider/at-work/
+      itemType: how-to-guide
+      url: /windows-insider/business/server-get-started
 
 conceptualContent:
   items:
