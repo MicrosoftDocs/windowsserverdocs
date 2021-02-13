@@ -12,7 +12,7 @@ You can now use Windows Admin Center (preview) in the Azure portal to manage the
 
 This article provides an overview of the functionality provided, requirements, and how to install Windows Admin Center and use it to manage a VM. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
 
-:::image type="content" source="../../media/wac-in-azure/windows-admin-center-in-azure.png" alt-text="Screenshot showing Windows Admin Center in the Azure portal, displaying the files and folders on the running operating system. "lightbox="../../media/wac-in-azure/windows-admin-center-in-azure.png":::
+:::image type="content" source="../../media/wac-in-azure/windows-admin-center-in-azure.png" alt-text="Screenshot showing Windows Admin Center in the Azure portal, displaying the files and folders on the running operating system." lightbox="../../media/wac-in-azure/windows-admin-center-in-azure.png":::
 
 ## Overview of functionality
 
@@ -79,6 +79,8 @@ Before you can use Windows Admin Center in the Azure portal, you must install it
 <br>However, we recommend instead using a private IP address to connect with, or at least [manually creating an inbound port rule](#creating-an-inbound-port-rule-for-connecting-from-specific-public-ip-addresses) that's locked down to accept traffic from only the IP addresses you specify.
 5. Select **Install**.<br>Installing takes a few minutes. If you selected **Open this port for me** or manually created an inbound port rule in the last couple minutes, it might take another couple minutes before you can connect with Windows Admin Center.
 
+:::image type="content" source="../../media/wac-in-azure/install-windows-admin-center.png" alt-text="Screenshot showing the install button for Windows Admin Center on a VM." lightbox="../../media/wac-in-azure/install-windows-admin-center.png":::
+
 ## Using with a VM
 
 After you've installed Windows Admin Center in an Azure VM, here's how to connect to it and use it to manage Windows Server:
@@ -127,7 +129,7 @@ Here are some tips to try in case something isn't working. For general help trou
 
 ### Failed to connect error
 
-1. In a new tab, open https://<ip_address>:<port>. If this page loads successfully with a certificate error, create a support request.<br>If this page doesn't load successfully, there's something wrong with your connection to Windows Admin Center itself. Make sure that you are connected to the correct Vnet and are using the correct IP address before trying further troubleshooting.
+1. In a new tab, open `https://<ip_address>:<port>`. If this page loads successfully with a certificate error, create a support request.<br>If this page doesn't load successfully, there's something wrong with your connection to Windows Admin Center itself. Make sure that you are connected to the correct Vnet and are using the correct IP address before trying further troubleshooting.
 1. If you are using a Public IP address, make sure that the port you selected upon installation is open to the internet. By default, the port is set to 6516. In your virtual machine, navigate to “Networking” > “Add inbound port rule”.
 1. Make sure that the port can be reached.
     1. In the Azure portal, navigate to “Networking” and make sure that there are no conflicting rules with a higher priority that could be blocking the Windows Admin Center port
