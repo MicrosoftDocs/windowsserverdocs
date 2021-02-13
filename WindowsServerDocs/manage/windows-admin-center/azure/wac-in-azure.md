@@ -1,16 +1,18 @@
 ---
-title: Windows Admin Center in Azure
+title: What is Windows Admin Center in the Azure portal?
 description: An overview of using Windows Admin Center in the Azure portal to manage the Windows Server OS in an Azure VM. Includes the functionality provided, requirements, and how to install Windows Admin Center and use it to manage a VM. Also provides troubleshooting tips.
-ms.topic: article
+ms.topic: overview
 author: jasongerend
 ms.author: jgerend
 ms.date: 02/16/2021
 ---
-# Using Windows Admin Center in the Azure portal
+# What is Windows Admin Center in the Azure portal?
 
 You can now use Windows Admin Center (preview) in the Azure portal to manage the Windows Server operating system inside an Azure VM. This provides the ability to manage most operating system functions and manage files in the VM from the Azure portal without using Remote Desktop or PowerShell to connect to the VM.
 
 This article provides an overview of the functionality provided, requirements, and how to install Windows Admin Center and use it to manage a VM. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work quite right.
+
+:::image type="content" source="../../media/wac-in-azure/windows-admin-center-in-azure.png" alt-text="Screenshot showing Windows Admin Center in the Azure portal, displaying the files and folders on the running operating system. "lightbox="../../media/wac-in-azure/windows-admin-center-in-azure.png":::
 
 ## Overview of functionality
 
@@ -60,7 +62,7 @@ The management PC or other system that you use to connect to the Azure portal mu
 
 Before you can use Windows Admin Center in the Azure portal, you must install it in the VM you want to manage. Here's how:
 
-1. Open the Azure portal and navigate to your VM.
+1. Open the Azure portal and navigate to your VM's settings.
 2. If the VM has all outbound internet traffic blocked, create an outbound port rule to connect to the Windows Admin Center service. <br>To do so, in the virtual machine settings, navigate to **Networking** > **Outbound port rules**, select **Add outbound port rule**, enter the following values, and then select **Add**.
 
    | Field                        | Value              |
@@ -84,6 +86,8 @@ After you've installed Windows Admin Center in an Azure VM, here's how to connec
 1. Open the Azure portal and navigate to your VM, then Windows Admin Center.
 2. If you're connecting using a private IP address, select the IP address you want to use when connecting to the VM, and then select **Connect**.
 3. Enter credentials for an account with local Administrator permissions on the VM's operating system, and then select **Sign in**.<br>Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
+
+:::image type="content" source="../../media/wac-in-azure/connect-to-vm.png" alt-text="Screenshot showing a VM's settings and connecting to Windows Admin Center by private IP address. "lightbox="../../media/wac-in-azure/connect-to-vm.png":::
 
 If you see a "Failed to connect" message and you installed Windows Admin Center or created an inbound port rule for it within the last couple minutes, wait another minute or two and try again--it can take a couple minutes for the rule to propagate.
 
@@ -150,7 +154,7 @@ Here are some tips to try in case something isn't working quite right. For gener
 1. Check that your installation is in a good state.
     1. In the Azure Portal, navigate to “Connect” > “RDP” > “Download RDP File”.
     1. Open the RDP file and sign in with your administrator credentials.
-    1. Open a browser and type https://localhost:<port> replacing <port> with the port on which you installed Windows Admin Center. Not sure what port you installed it on? Check out the Frequently Asked Questions later in this article.
+    1. Open a browser and type `https://localhost:<port>` replacing `<port>` with the port on which you installed Windows Admin Center. Not sure what port you installed it on? Check out the Frequently Asked Questions later in this article.
     1. If this doesn’t load, there might be something wrong with your installation. Go back to the Azure Portal, navigate to “Extensions”, and uninstall the Admin Center extension. Navigate back to “Windows Admin Center (preview” and reinstall the extension.
 1. Check that the firewall rule is open for SmeInboundOpenException.
     1. In the Azure Portal, navigate to “Connect” > “RDP” > “Download RDP File”.
