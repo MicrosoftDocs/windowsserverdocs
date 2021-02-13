@@ -115,7 +115,7 @@ For additional related information, see the following resources.
 | Content type        | References |
 | ------------------  | ----------------|
 | **Product evaluation** | [What's New in DFS Namespaces and DFS Replication in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn281957(v=ws.11)) |
-| **Deployment**    | [DFS Namespace Scalability Considerations](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) |
+| **Deployment**    | [DFS Namespace Scalability Considerations](https://techcommunity.microsoft.com/t5/storage-at-microsoft/dfs-namespace-scalability-considerations/ba-p/424485) |
 | **Operations**    | [DFS Namespaces: Frequently Asked Questions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee404780(v=ws.10)) |
 | **Community resources** | [The File Services and Storage TechNet Forum](/answers/topics/windows-server-storage.html) |
 | **Protocols**        | [File Services Protocols in Windows Server](/openspecs/windows_protocols/MS-WINPROTLP/df36f95e-6a6b-48d6-a3ae-35a17674f546) (Deprecated) |
