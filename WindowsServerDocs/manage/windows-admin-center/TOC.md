@@ -15,7 +15,6 @@
 ### [Install Windows Admin Center](deploy/install.md)
 ### [High availability](deploy/high-availability.md)
 
-
 ## Configure
 ### [Windows Admin Center settings](configure/settings.md)
 ### [User access control and permissions](configure/user-access-control.md)
@@ -39,11 +38,11 @@
 #### [Azure File Sync](azure/azure-file-sync.md)
 #### [Azure Monitor](azure/azure-monitor.md)
 #### [Azure Update Management](azure/azure-update-management.md)
-### [Use Windows Admin Center in the Azure portal](azure/wac-in-azure.md)
-### [Connect Windows Admin Center to Azure](azure/azure-integration.md)
-### [Deploy Windows Admin Center in Azure](azure/deploy-wac-in-azure.md)
-### [Create Azure VMs with Windows Admin Center](azure/create-azure-vms.md)
-### [Manage Azure VMs with Windows Admin Center](azure/manage-azure-vms.md)
+### [Connect to Azure](azure/azure-integration.md)
+### [Create Azure VMs](azure/create-azure-vms.md)
+### [Manage Azure VMs](azure/manage-azure-vms.md)
+### [Use Windows Admin Center in Azure](azure/wac-in-azure.md)
+### [Manually deploy a Windows Admin Center server in Azure](azure/deploy-wac-in-azure.md)
 
 ## Support
 ### [Release history](support/release-history.md)
