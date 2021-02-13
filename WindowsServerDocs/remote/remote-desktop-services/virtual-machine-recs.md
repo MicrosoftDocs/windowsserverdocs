@@ -30,7 +30,7 @@ This table shows examples of standard or larger user workloads with 20 or more u
 | --- | --- | --- | --- | --- |
 | Light | 6 | 8 vCPUs, 16 GB RAM, 16 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
 | Medium | 4 | 8 vCPUs, 16 GB RAM, 32 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
-| Heavy | 2 | 8 vCPUs, 16 GB RAM, 32 GB storage | 30 GB |
+| Heavy | 2 | 8 vCPUs, 16 GB RAM, 32 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
 | Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4, NV12, NVv4 | 30 GB |
 
 ## Recommended VM sizes for standard or larger environments
