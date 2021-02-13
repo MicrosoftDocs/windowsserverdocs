@@ -2,7 +2,7 @@
 title: Virtual machine sizing
 description: Size recommendations for each workload type.
 ms.author: helohr
-ms.date: 01/29/2021
+ms.date: 02/13/2021
 ms.topic: article
 author: Heidilohr
 manager: lizross
@@ -19,18 +19,18 @@ The following table shows an example of a smaller, proof-of-concept scenario wit
 
 | Workload type | Maximum users per vCPU | vCPU/RAM/OS storage minimum | Example Azure instances | Profile container storage minimum |
 | --- | --- | --- | --- | --- |
-| Light | 4 | 8 vCPUs, 16 GB RAM, 16 GB storage | D4s_v3, F4s_v2, D4as_v4 | 30 GB |
-| Medium | 4 | 8 vCPUs, 16 GB RAM, 32 GB storage | D4s_v3, F4s_v2, D4as_v4 | 30 GB |
-| Heavy | 2 | 8 vCPUs, 16 GB RAM, 32 GB storage | D4s_v3, F4s_v2, D4as_v4 | 30 GB |
+| Light | 4 | 4 vCPUs, 8 GB RAM, 16 GB storage | D4s_v3, F4s_v2, D4as_v4 | 30 GB |
+| Medium | 4 | 4 vCPUs, 16 GB RAM, 32 GB storage | D4s_v3, F4s_v2, D4as_v4 | 30 GB |
+| Heavy | 2 | 4 vCPUs, 16 GB RAM, 32 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | D4s_v3, F4s_v2, D4as_v4 | 30 GB |
 | Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D4s_v3, F4s_v2, D4as_v4, NV12, NVv4 | 30 GB |
 
 This table shows examples of standard or larger user workloads with 20 or more users:
 
 | Workload type | Maximum users per vCPU | vCPU/RAM/OS storage minimum | Example Azure instances | Profile container storage minimum |
 | --- | --- | --- | --- | --- |
-| Light | 6 | 2 vCPUs, 8 GB RAM, 16 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
-| Medium | 4 | 4 vCPUs, 16 GB RAM, 32 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
-| Heavy | 2 | 4 vCPUs, 16 GB RAM, 32 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
+| Light | 6 | 8 vCPUs, 16 GB RAM, 16 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
+| Medium | 4 | 8 vCPUs, 16 GB RAM, 32 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4 | 30 GB |
+| Heavy | 2 | 8 vCPUs, 16 GB RAM, 32 GB storage | 30 GB |
 | Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D8s_v3, F8s_v2, D8as_v4, D16s_v3, F16s_v2, D16as_v4, NV12, NVv4 | 30 GB |
 
 ## Recommended VM sizes for standard or larger environments
