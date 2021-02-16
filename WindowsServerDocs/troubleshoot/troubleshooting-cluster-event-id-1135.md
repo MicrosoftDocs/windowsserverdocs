@@ -172,7 +172,7 @@ System service name: **ClusSvc**
 
 - For more information, see [Creating a Windows Server 2012 Failover Cluster Fails with Error 0xc000005e](https://docs.microsoft.com/troubleshoot/windows-server/high-availability/creating-failover-cluster-fails-error-0xc0000055).
 
-- For more information about how to customize these ports, see [Service overview and network port requirements for Windows](https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements) in the "References" section.
+- For more information about how to customize these ports, see [Service overview and network port requirements for Windows](https://docs.microsoft.com/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements) in the "References" section.
 
 This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
