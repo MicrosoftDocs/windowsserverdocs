@@ -16,7 +16,7 @@ If you encounter any issues, you can always contact us by navigating to **Help**
 
 ## Updates for version 10.5.1
 
-*Date published: 1/29/2020*
+*Date published: 1/29/2021*
 
 It's time for our first release of the year! In this version we made the following changes:
 
