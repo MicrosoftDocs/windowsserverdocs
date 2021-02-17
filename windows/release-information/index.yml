@@ -42,14 +42,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: Introducing the next feature update - Windows 10, version 21H1
+          url: https://blogs.windows.com/windowsexperience/?p=175347
+          itemType: whats-new
         - text: February 2021 Windows non-security preview "C" release is available for some versions for Windows 10
           url: https://support.microsoft.com/help/4601395
           itemType: whats-new
         - text: Out-of-band update to address an issue when making WPA3 Wi-Fi connections
           url: https://docs.microsoft.com/en-us/windows/release-health/status-windows-10-1909#1557msgdesc
-          itemType: whats-new
-        - text: Take action - February 2021 security update available for all supported versions of Windows
-          url: https://support.microsoft.com/help/4601319
           itemType: whats-new
 
       footerLink:
