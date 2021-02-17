@@ -72,4 +72,4 @@ You must have an Input Method Editor installed and enabled in the remote session
 
 ## Get help with the web client
 
-If you've encountered an issue that can't be solved by the information in this article, you can get help with the web client by emailing the address on the web client's About page.
+If you've encountered an issue that can't be solved by the information in this article, you can get help with the web client by raising feedback on the web client's Feedback page.
