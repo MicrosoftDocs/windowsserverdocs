@@ -165,7 +165,7 @@ The following table lists valid hexadecimal digits that you can use as the value
 
   - File and directory name completion correctly processes file names that contain white space or special characters if you place quotation marks around the matching path.
 
-  - You must use quotation marks around the following special characters: & < > [ ] { } ^ = ; ! ' + , ` ~ [white space].
+  - You must use quotation marks around the following special characters: & < > [ ] | { } ^ = ; ! ' + , ` ~ [white space].
 
   - If the information that you supply contains spaces, you must use quotation marks around the text (for example, "Computer Name").
 
