@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 02/09/2021
+ms.date: 02/19/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -23,17 +23,18 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 ## Updates for version 1.2.1750 (Insider)
 
-*Date published: 2/9/2021*
+*Date published: 02/09/2021*
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
 - Added the Experience Monitor access point to the system tray icon.
 - Fixed an issue where entering an email address into the "Subscribe to a Workplace" tab caused the application to stop responding.
 - Fixed an issue where the client sometimes didn't send EventHub and Diagnostics events.
+- Fixed an issue where hardware devices with special characters would sometimes not be available in Teams.
 
 ## Updates for version 1.2.1672
 
-*Date published: 1/26/2021*
+*Date published: 01/26/2021*
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
