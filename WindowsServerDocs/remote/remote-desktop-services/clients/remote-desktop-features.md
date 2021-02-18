@@ -27,7 +27,7 @@ The following table compares the features of each client.
 | Smart sizing | X | X | X |||| Remote Desktop in Windowed mode is dynamically scaled to the window's size. |
 | Localization | X | X | X | X | English only. | X | User interface is available in multiple languages. |
 | Multi-factor authentication | X | X | X | X | X | X | Supports multi-factor authentication for remote connections. |
-| SSO with ADFS | X ||||| X | Supports Single Sign-On (SSO) used with Active Directory Federeation Services (ADFS). |
+| SSO with ADFS | X ||||| X | Supports Single Sign-On (SSO) used with Active Directory Federation Services (ADFS). |
 | Teams optimization for Windows Virtual Desktop | X |||||| Media optimizations for Microsoft Teams to provide high quality calls and screen sharing experiences. Learn more at [Use Microsoft Teams on Windows Virtual Desktop](/virtual-desktop/teams-on-wvd). |
 
 ## Other resources
