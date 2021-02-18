@@ -12,7 +12,7 @@ You can now use Windows Admin Center (preview) in the Azure portal to manage the
 
 This article provides an overview of the functionality provided, requirements, and how to install Windows Admin Center and use it to manage a single VM. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
 
-:::image type="content" source="../../media/wac-in-azure/windows-admin-center-in-azure.png" alt-text="Screenshot showing Windows Admin Center in the Azure portal, displaying the files and folders on the running operating system." lightbox="../../media/wac-in-azure/windows-admin-center-in-azure.png":::
+:::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure.png" alt-text="Screenshot showing Windows Admin Center in the Azure portal, displaying the files and folders on the running operating system." lightbox="../../media/manage-vm/windows-admin-center-in-azure.png":::
 
 ## Overview of functionality
 
@@ -81,7 +81,7 @@ Before you can use Windows Admin Center in the Azure portal, you must install it
 <br>However, we recommend instead using a private IP address to connect with, or at least [manually creating an inbound port rule](#creating-an-inbound-port-rule-for-connecting-from-specific-public-ip-addresses) that's locked down to accept traffic from only the IP addresses you specify.
 5. Select **Install**.<br>Installing takes a few minutes. If you selected **Open this port for me** or manually created an inbound port rule in the last couple minutes, it might take another couple minutes before you can connect with Windows Admin Center.
 
-:::image type="content" source="../../media/wac-in-azure/install-windows-admin-center.png" alt-text="Screenshot showing the install button for Windows Admin Center on a VM." lightbox="../../media/wac-in-azure/install-windows-admin-center.png":::
+:::image type="content" source="../../media/manage-vm/install-windows-admin-center.png" alt-text="Screenshot showing the install button for Windows Admin Center on a VM." lightbox="../../media/manage-vm/install-windows-admin-center.png":::
 
 ## Using with a VM
 
@@ -91,7 +91,7 @@ After you've installed Windows Admin Center in an Azure VM, here's how to connec
 2. If you're connecting using a private IP address, select the IP address you want to use when connecting to the VM, and then select **Connect**.
 3. Enter credentials for an account with local Administrator permissions on the VM's operating system, and then select **Sign in**.<br>Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
-:::image type="content" source="../../media/wac-in-azure/connect-to-vm.png" alt-text="Screenshot showing a VM's settings and connecting to Windows Admin Center by private IP address. "lightbox="../../media/wac-in-azure/connect-to-vm.png":::
+:::image type="content" source="../../media/manage-vm/connect-to-vm.png" alt-text="Screenshot showing a VM's settings and connecting to Windows Admin Center by private IP address. "lightbox="../../media/manage-vm/connect-to-vm.png":::
 
 If you see a "Failed to connect" message and you installed Windows Admin Center or created an inbound port rule for it within the last couple minutes, wait another minute or two and try again--it can take a couple minutes for the rule to propagate.
 
