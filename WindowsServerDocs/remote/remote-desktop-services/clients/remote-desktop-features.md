@@ -17,7 +17,7 @@ We're often asked how the different Remote Desktop clients compare to each other
 
 The following table compares the features of each client.
 
-|Feature|Desktop|Microsoft Store|Mac|iOS|Android|HTML5|Description|
+|Feature|Desktop|Microsoft Store|Mac|iOS|Android|Web|Description|
 |---|---|---|---|---|---|---|---|
 | Remote Desktop | X | X | X | X | X | X | Desktop of a remote computer presented in a full screen or windowed mode. |
 | Integrated remote apps (RAIL) | X || X |||| Individual remote apps integrated into the local desktop as if they are running locally. |
