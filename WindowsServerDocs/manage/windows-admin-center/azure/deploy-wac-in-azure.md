@@ -25,7 +25,7 @@ You can download [Deploy-WACAzVM.ps1](https://aka.ms/deploy-wacazvm) which you w
 
 If specifying your own certificate:
 
-* Upload the certificate to [Azure Key Vault](/azure/key-vault/key-vault-whatis). First, create a key vault in Azure Portal, then upload the certificate into the key vault. Alternatively, you can use Azure Portal to generate a certificate for you.
+* Upload the certificate to [Azure Key Vault](/azure/key-vault/key-vault-whatis). First, create a key vault in Azure portal, then upload the certificate into the key vault. Alternatively, you can use Azure portal to generate a certificate for you.
 
 ### Script parameters
 

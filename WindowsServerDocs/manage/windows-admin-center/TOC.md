@@ -41,7 +41,7 @@
 ### [Connect to Azure](azure/azure-integration.md)
 ### [Create Azure VMs](azure/create-azure-vms.md)
 ### [Manage Azure VMs](azure/manage-azure-vms.md)
-### [Use Windows Admin Center in Azure](azure/wac-in-azure.md)
+### [Manage a VM from within Azure](azure/manage-vm.md)
 ### [Manually deploy a Windows Admin Center server in Azure](azure/deploy-wac-in-azure.md)
 
 ## Support
@@ -82,5 +82,3 @@
 #### [Pure Storage](extend/case-studies/purestorage.md)
 #### [QCT](extend/case-studies/qct.md)
 #### [Thomas-Krenn](extend/case-studies/thomas-krenn.md)
-
-

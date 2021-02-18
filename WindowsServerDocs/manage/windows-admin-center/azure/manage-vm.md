@@ -1,22 +1,22 @@
 ---
-title: What is Windows Admin Center in the Azure portal?
+title: Use Windows Admin Center in the Azure portal to manage a Windows Server VM
 description: An overview of using Windows Admin Center in the Azure portal to manage the Windows Server OS in an Azure VM. Includes the functionality provided, requirements, and how to install Windows Admin Center and use it to manage a VM. Also provides troubleshooting tips.
 ms.topic: overview
 author: jasongerend
 ms.author: jgerend
 ms.date: 02/16/2021
 ---
-# What is Windows Admin Center in the Azure portal?
+# Use Windows Admin Center in the Azure portal to manage a Windows Server VM
 
 You can now use Windows Admin Center (preview) in the Azure portal to manage the Windows Server operating system inside an Azure VM. Manage operating system functions from the Azure portal as well as work with files in the VM without using Remote Desktop or PowerShell.
 
-This article provides an overview of the functionality provided, requirements, and how to install Windows Admin Center and use it to manage a VM. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
+This article provides an overview of the functionality provided, requirements, and how to install Windows Admin Center and use it to manage a single VM. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
 
 :::image type="content" source="../../media/wac-in-azure/windows-admin-center-in-azure.png" alt-text="Screenshot showing Windows Admin Center in the Azure portal, displaying the files and folders on the running operating system." lightbox="../../media/wac-in-azure/windows-admin-center-in-azure.png":::
 
 ## Overview of functionality
 
-Windows Admin Center in the Azure portal provides the essential set of management tools for managing Windows Server in an Azure VM:
+Windows Admin Center in the Azure portal provides the essential set of management tools for managing Windows Server in a single Azure VM:
 
 - Certificates
 - Devices
@@ -37,6 +37,8 @@ Windows Admin Center in the Azure portal provides the essential set of managemen
 - Updates
 
 We don't support extensions to Windows Admin Center in the Azure portal at this time.
+
+If you manually installed Windows Admin Center in the VM to manage multiple systems, installing this VM extension reduces the functionality to managing just the VM in which the extension is installed. Uninstall the extension to get back full functionality.
 
 ## Requirements
 
@@ -200,6 +202,7 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 - If you change any of your networking rules, it takes Windows Admin Center about a minute or so to update its networking. The connection may fail for a few minutes.
 - If you just started your virtual machine, it takes about a minute for the IP address to be registered with Windows Admin Center and thus, it may not load.
 - The first load time of Windows Admin Center might be a little longer. Any subsequent load will be just a few seconds.
+- Chrome Incognito mode isn't supported.
 
 ## Frequently asked questions
 
