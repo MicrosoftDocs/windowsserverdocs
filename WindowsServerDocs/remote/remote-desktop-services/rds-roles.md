@@ -63,6 +63,7 @@ For more information, see the following articles:
 * [Add high availability to the RD Web and Gateway web front](rds-rdweb-gateway-ha.md)
 * [Remote Desktop Services - Access from anywhere](rds-plan-access-from-anywhere.md)
 * [Remote Desktop Services - Multi-factor authentication](rds-plan-mfa.md)
+* [Set up the RD Gateway role](rd-gateway-role.md)
 
 ## Remote Desktop Web Access
 
