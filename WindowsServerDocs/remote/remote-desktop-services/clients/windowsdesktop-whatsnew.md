@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 02/22/2021
+ms.date: 02/23/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -23,16 +23,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 ## Updates for version 1.2.1755
 
-*Date published: 02/09/2021*
+*Date published: 02/23/2021*
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
 - Added the Experience Monitor access point to the system tray icon.
 - Fixed an issue where entering an email address into the "Subscribe to a Workplace" tab caused the application to stop responding.
 - Fixed an issue where the client sometimes didn't send EventHub and Diagnostics events.
-- Fixed an issue where hardware devices with special characters would sometimes not be available in Teams.
 - Updates to the Teams on Windows Virtual Desktop plugin including:
-
   - Improved audio and video sync performance and added hardware accelerated decode that decreases CPU utilization on the client.
   - Addressed the most prevalent causes of black screen issues when a user joins a call or meeting with their video turned on, when a user performs screen sharing, and when a user toggles their camera on and off.
   - Improved quality of active speaker switching in single video view by reducing the time it takes for the video to appear and reducing intermittent black screens when switching video streams to another user.
