@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 02/19/2021
+ms.date: 02/23/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -18,25 +18,29 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.1672        |1.2.945                   |
-|Insider    |1.2.1750        |1.2.945                   |
+|Public     |1.2.1755        |1.2.945                   |
+|Insider    |1.2.1755        |1.2.945                   |
 
-## Updates for version 1.2.1750 (Insider)
+## Updates for version 1.2.1755
 
-*Date published: 02/09/2021*
+*Date published: 02/23/2021*
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
 - Added the Experience Monitor access point to the system tray icon.
 - Fixed an issue where entering an email address into the "Subscribe to a Workplace" tab caused the application to stop responding.
 - Fixed an issue where the client sometimes didn't send EventHub and Diagnostics events.
-- Fixed an issue where hardware devices with special characters would sometimes not be available in Teams.
+- Updates to the Teams on Windows Virtual Desktop plugin including:
+  - Improved audio and video sync performance and added hardware accelerated decode that decreases CPU utilization on the client.
+  - Addressed the most prevalent causes of black screen issues when a user joins a call or meeting with their video turned on, when a user performs screen sharing, and when a user toggles their camera on and off.
+  - Improved quality of active speaker switching in single video view by reducing the time it takes for the video to appear and reducing intermittent black screens when switching video streams to another user.
+  - Fixed an issue where hardware devices with special characters would sometimes not be available in Teams.
 
 ## Updates for version 1.2.1672
 
 *Date published: 01/26/2021*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4MntP), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4MntQ), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4MntO)
 
 - Added support for the screen capture protection feature for Windows 10 endpoints. To learn more, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices).
 - Added support for proxies that require authentication for feed subscription.
@@ -46,8 +50,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 ## Updates for version 1.2.1525
 
 *Date published: 12/01/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4M4Qb), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4M4Qc), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4M4Qa)
 
 - Added List view for remote resources so that longer app names are readable.
 - Added a notification icon that appears when an update for the client is available.
