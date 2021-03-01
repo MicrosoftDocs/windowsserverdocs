@@ -84,7 +84,7 @@ AD FS requires the client device (or browsers) and the load balancers to support
     *	Open an elevated command prompt window on the primary AD FS server
     *   Type in ```Netsh http show sslcert```
     *   Copy the ‘application GUID' and ‘certificate hash' of the federation service
-    *   Type in `netsh http add sslcert ipport=0.0.0.0:{your_certauth_port} certhash={your_certhash} appid={your_applicaitonGUID}`
+    *   Type in `netsh http add sslcert ipport=0.0.0.0:{your_certauth_port} certhash={your_certhash} appid={your_applicaitonGUID} certstorename=MY sslctlstorename=AdfsTrustedDevices`
 
 ### Check if the client device has been provisioned with the certificate correctly
 You may notice that some devices are working correctly but other devices are not. In this case, it is usually a result of the user certificate not being provisioned correctly on the client device. Follow the steps below.
