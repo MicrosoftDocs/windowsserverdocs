@@ -80,7 +80,7 @@ set /a <variable>=<expression>
 
 ## Examples
 
-To set an environment variable named *TEST^1*, type:
+To set an environment variable named `testVar` the value of *TEST^1*, type:
 
 ```
 set testVar=test^^1
@@ -88,7 +88,7 @@ set testVar=test^^1
 
 The **set** command assigns everything that follows the equal sign (=) to the value of the variable. Therefore, if you type `set testVar=test^1`, you'll get the following result, `testVar=test^1`.
 
-To set an environment variable named *TEST&1*, type:
+To set an environment variable the value *TEST&1*, type:
 
 ```
 set testVar=test^&1
