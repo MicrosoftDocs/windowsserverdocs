@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 12/16/2020
+ms.date: 02/18/2021
 ms.localizationpriority: medium
 ---
 
@@ -17,7 +17,7 @@ We're often asked how the different Remote Desktop clients compare to each other
 
 The following table compares the features of each client.
 
-|Feature|Desktop|10X|Mac|iOS|Android|HTML5|Description|
+|Feature|Desktop|Microsoft Store|Mac|iOS|Android|Web|Description|
 |---|---|---|---|---|---|---|---|
 | Remote Desktop | X | X | X | X | X | X | Desktop of a remote computer presented in a full screen or windowed mode. |
 | Integrated remote apps (RAIL) | X || X |||| Individual remote apps integrated into the local desktop as if they are running locally. |
@@ -27,7 +27,7 @@ The following table compares the features of each client.
 | Smart sizing | X | X | X |||| Remote Desktop in Windowed mode is dynamically scaled to the window's size. |
 | Localization | X | X | X | X | English only. | X | User interface is available in multiple languages. |
 | Multi-factor authentication | X | X | X | X | X | X | Supports multi-factor authentication for remote connections. |
-| SSO with ADFS | X ||||| X | Supports Single Sign-On (SSO) used with Active Directory Federeation Services (ADFS). |
+| SSO with ADFS | X ||||| X | Supports Single Sign-On (SSO) used with Active Directory Federation Services (ADFS). |
 | Teams optimization for Windows Virtual Desktop | X |||||| Media optimizations for Microsoft Teams to provide high quality calls and screen sharing experiences. Learn more at [Use Microsoft Teams on Windows Virtual Desktop](/virtual-desktop/teams-on-wvd). |
 
 ## Other resources

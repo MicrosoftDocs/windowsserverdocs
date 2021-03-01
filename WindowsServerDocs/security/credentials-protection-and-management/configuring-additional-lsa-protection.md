@@ -1,6 +1,6 @@
 ---
 title: Configuring Additional LSA Protection
-description: Windows Server Security
+description: Learn how to configure additional protection for the Local Security Authority (LSA) process to prevent code injection that could compromise credentials.
 ms.topic: article
 ms.assetid: 038e7c2b-c032-491f-8727-6f3f01116ef9
 ms.author: jgerend

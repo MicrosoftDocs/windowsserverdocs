@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 12/02/2020
+ms.date: 01/27/2021
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -13,6 +13,16 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+
+## Updates for version 10.5.1
+
+*Date published: 1/29/2021*
+
+It's time for our first release of the year! In this version we made the following changes:
+
+- Addressed an issue where the UI would stop resolving a workspace name during subscription.
+- Fixed an in-session bug where graphics updates would stall while the client continued to send input.
+- Resolved a number of reliability issues identified through crash reporting.
 
 ## Updates for version 10.5.0
 
@@ -86,7 +96,6 @@ In this release, we've made substantial updates to the underlying code that powe
 - Fixed a number of accessibility issues that impacted VoiceOver and keyboard navigation scenarios.
 - Lots of updates to improve interoperability with current and upcoming features in the Windows Virtual Desktop service.
 - You can now configure the AVC support level advertised by the client from a terminal prompt. Here are the support levels you can configure:
-  
    - Don't advertise AVC support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel disabled`
    - Advertise AVC420 support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel avc420`
    - Advertise support for AVC444 support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel avc444`

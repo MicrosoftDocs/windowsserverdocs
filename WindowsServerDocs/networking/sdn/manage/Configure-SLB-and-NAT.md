@@ -10,7 +10,7 @@ ms.date: 08/23/2018
 ---
 # Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to use the Software Defined Networking \(SDN\)  software load balancer \(SLB\) to provide outbound network address translation \(NAT\), inbound NAT, or load balancing between multiple instances of an application.
 

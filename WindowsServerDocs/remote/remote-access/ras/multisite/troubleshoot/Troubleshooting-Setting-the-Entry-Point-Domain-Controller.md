@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Setting the Entry Point Domain Controller
-description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+description: Learn how to troubleshoot issues related to the Set-DAEntryPointDC command.
 manager: brianlic
 ms.topic: article
 ms.assetid: b12dd0e8-1d80-4d4b-bb45-586f19d17ef0

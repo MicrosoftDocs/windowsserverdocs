@@ -10,7 +10,7 @@ ms.date: 08/26/2018
 ---
 # Manage tenant workloads
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 This topic contains links to documentation that allows you to manage tenant workloads by adding tenant virtual machines (VMs), using network virtual appliances, configuring software load balancing, and more.
 

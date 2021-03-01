@@ -237,7 +237,7 @@ To build a cross certificate request:
 certreq -policy certsrv.req policy.inf newcertsrv.req
 ```
 
-Using `certreq -policy` without any additional parameter opens a dialog window, allowing you to select the requested fie (.req, .cmc, .txt, .der, .cer or .crt). After you select the requested file and click **Open**, another dialog window opens, allowing you to select the policy.inf file.
+Using `certreq -policy` without any additional parameter opens a dialog window, allowing you to select the requested file (.req, .cmc, .txt, .der, .cer or .crt). After you select the requested file and click **Open**, another dialog window opens, allowing you to select the policy.inf file.
 
 #### Examples
 

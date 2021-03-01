@@ -171,21 +171,21 @@ Update classifications represent the type of update. For any given product or pr
  There are no operational concerns.
 
 ### Superseding Icon
- ![icon](../../media/wsus/wsus-superseding.png) This update supersedes other updates.
+ :::image type="icon" source="../../media/wsus/wsus-superseding.png"::: This update supersedes other updates.
 
  **Operational Concerns:**
 
  There are no operational concerns.
 
 ### Superseded & Superseding Icon
- ![icon](../../media/wsus/wsus-superseded.png) This update is superseded by another update, and supersedes other updates.
+ :::image type="icon" source="../../media/wsus/wsus-superseded.png"::: This update is superseded by another update, and supersedes other updates.
 
  **Operational Concerns:**
 
  Replace these updates with the superseding updates when possible.
 
 ### Superseded Icon
- ![icon](../../media/wsus/wsus-superseded-leaf.png) This update is superseded by another update.
+ :::image type="icon" source="../../media/wsus/wsus-superseded-leaf.png"::: This update is superseded by another update.
 
  **Operational Concerns:**
 

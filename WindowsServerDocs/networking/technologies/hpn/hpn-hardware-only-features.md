@@ -1,6 +1,6 @@
 ---
 title: High-performance networking
-description: This topic provides an overview of the Offload and Optimization Technologies in Windows Server 2016, and includes links to additional guidance about these technologies.
+description: Learn about high-performance networking and how hardware accelerations improve networking performance in conjunction with the software but are not intimately part of any software feature.
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim

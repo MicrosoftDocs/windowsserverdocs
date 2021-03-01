@@ -10,7 +10,7 @@ ms.date: 08/22/2018
 
 # Gateway bandwidth allocation
 
->Applies to: Windows Server
+>Applies to: Windows Server 2019
 
 In Windows Server 2016, the individual tunnel bandwidth for IPsec, GRE, and L3 was a ratio of the total gateway capacity. Therefore, customers would provide the gateway capacity based on the standard TCP bandwidth expecting this out of the gateway VM.
 

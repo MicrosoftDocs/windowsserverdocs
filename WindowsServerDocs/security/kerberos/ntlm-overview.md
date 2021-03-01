@@ -1,6 +1,6 @@
 ---
 title: NTLM Overview
-description: Windows Server Security
+description: Learn about NTLM, any changes in functionality, and find links to technical resources to Windows Authentication and NTLM for Windows Server 2012 and previous versions.
 ms.topic: article
 ms.assetid: 773909fd-c0bc-498a-95fc-bb452ec04d90
 ms.author: jgerend

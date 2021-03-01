@@ -73,17 +73,17 @@ In the sample, the WebAPI is configured to listen at https://localhost:44326/. T
 
 1. Open the AD FS management console and click on **Add Application Group**. In the **Add Application Group Wizard** enter the name of the application, description and select the **Web browser accessing a web application** template from the **Client-Server applications** section as shown below
 
-    ![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
+    ![Screenshot of the Welcome page of the Add Application Group Wizard showing the Web browser accessing a web application template highlighted.](media/Single-Page-Application-with-AD-FS/appgroup_step1.png)
 
 2. On the next page **Native application**, provide the application client identifier and redirect URI as shown below
 
-    ![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step2.png)
+    ![Screenshot of the Native application page of the Add Application Group Wizard showing the redirect U R I.](media/Single-Page-Application-with-AD-FS/appgroup_step2.png)
 
 3. On the next page **Apply Access Control Policy** leave the permissions as *Permit everyone*
 
 4. The summary page should look similar to below
 
-    ![Create new application group](media/Single-Page-Application-with-AD-FS/appgroup_step3.png)
+    ![Screenshot of the Summary page of the Add Application Group Wizard.](media/Single-Page-Application-with-AD-FS/appgroup_step3.png)
 
 5. Click on **Next** to complete the addition of the application group and close the wizard.
 
@@ -95,10 +95,11 @@ Open the **app.js** file and change the **adalProvider.init** definition to:
 ```
     adalProvider.init(
         {
-            instance: 'https://fs.contoso.com/', // your STS URL
-            tenant: 'adfs',                      // this should be adfs
-            clientId: 'https://localhost:44326/', // your client ID of the
-            //cacheLocation: 'localStorage', // enable this for IE, as sessionStorage does not work for localhost.
+            instance: 'https://fs.contoso.com/',                // your STS URL
+            tenant: 'adfs',                                     // this should be set to adfs
+            clientId: '150ab73e-0b05-4b78-9e50-0095a992cca9',   // set this to the Client Id generated during application registration in AD FS
+            popUp: false,
+            //cacheLocation: 'localStorage',                    // enable this for IE, as sessionStorage does not work for localhost.
         },
         $httpProvider
     );
@@ -171,11 +172,11 @@ Click on Login.  The ToDo List will trigger the authentication flow and ADAL JS 
 
 In Fiddler you can see the token being returned as part of the URL in the # fragment.
 
-![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp5a.png)
+![Screenshot of Fiddler showing that you can see the token being returned as part of the URL in the # fragment.](media/Single-Page-Application-with-AD-FS/singleapp5a.png)
 
 You will be able to now call the backend API to add ToDo List items for the logged-in user:
 
-![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp6.png)
+![Screenshot of the ADAL JS Sample  app.](media/Single-Page-Application-with-AD-FS/singleapp6.png)
 
 ## Next Steps
 [AD FS Development](../../ad-fs/AD-FS-Development.md)

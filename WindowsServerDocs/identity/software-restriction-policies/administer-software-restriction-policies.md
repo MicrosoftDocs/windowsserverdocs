@@ -1,6 +1,6 @@
 ---
 title: Administer Software Restriction Policies
-description: Windows Server Security
+description: Learn how to administer application control policies using Software Restriction Policies (SRP) beginning with Windows Server 2008 and Windows Vista.
 ms.topic: article
 ms.assetid: 8cc22093-67d1-47b6-9ddd-4569b6761ce9
 ms.author: jgerend

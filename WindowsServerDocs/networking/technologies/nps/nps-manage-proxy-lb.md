@@ -1,6 +1,6 @@
 ---
 title: NPS Proxy Server Load Balancing
-description: You can use this topic to learn about Windows Server 2016 and Windows 10 VPN features and functionality.
+description: Learn about NPS proxy server load balancing and the methods you can use to balance the load of connection requests sent to your NPSs.
 ms.topic: article
 ms.assetid: 528280e6-b47e-489f-b310-b257d434aa0d
 manager: brianlic

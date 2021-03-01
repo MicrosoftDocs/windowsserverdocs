@@ -1,6 +1,6 @@
 ---
-title: Hyper-V Network Virtualization Overview in Windows Server 2016
-description: This topic provides an overview of Hyper-V Network Virtualization in Windows Server 2016
+title: Hyper-V Network Virtualization Overview in Windows Server
+description: This topic provides an overview of Hyper-V Network Virtualization in Windows Server 2019 and 2016
 manager: grcusanz
 ms.topic: article
 ms.assetid: 0115b7ad-d229-4c69-9d7e-a3f5fbaa3b2f
@@ -8,11 +8,11 @@ ms.author: anpaul
 author: AnirbanPaul
 ms.date: 08/07/2020
 ---
-# Hyper-V Network Virtualization Overview in Windows Server 2016
+# Hyper-V Network Virtualization Overview in Windows Server
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
-In Windows Server 2016 and Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution.  There are five major components that comprise Microsoft's network virtualization solution:
+In Windows Server and Virtual Machine Manager, Microsoft provides an end-to-end network virtualization solution.  There are five major components that comprise Microsoft's network virtualization solution:
 
 -   **Windows Azure Pack for Windows Server** provides a tenant facing portal to create virtual networks, and an administrative portal to manage virtual networks.
 
@@ -48,7 +48,7 @@ For workload owners, the key benefit is that they can now move their workload "t
 For infrastructure owners, the additional flexibility in virtual machine placement makes it possible to move workloads anywhere in the datacenters without changing the virtual machines or reconfiguring the networks. For example Hyper-V Network Virtualization enables cross subnet live migration so that a virtual machine can live migrate anywhere in the datacenter without a service disruption. Previously live migration was limited to the same subnet restricting where virtual machines could be located. Cross subnet live migration allows administrators to consolidate workloads based on dynamic resource requirements, energy efficiency, and can also accommodate infrastructure maintenance without disrupting customer workload up time.
 
 ## <a name="BKMK_APP"></a>Practical applications
-With the success of virtualized datacenters, IT organizations and hosting providers (providers who offer colocation or physical server rentals) have begun offering more flexible virtualized infrastructures that make it easier to offer on-demand server instances to their customers. This new class of service is referred to as Infrastructure as a Service (IaaS). Windows Server 2016 provides all the required platform capabilities to enable enterprise customers to build private clouds and transition to an IT as a service operational model. Windows Server 2016 2016 also enables hosters to build public clouds and offer IaaS solutions to their customers. When combined with Virtual Machine Manager and Windows Azure Pack to manage Hyper-V Network Virtualization policy, Microsoft provides a powerful cloud solution.
+With the success of virtualized datacenters, IT organizations and hosting providers (providers who offer colocation or physical server rentals) have begun offering more flexible virtualized infrastructures that make it easier to offer on-demand server instances to their customers. This new class of service is referred to as Infrastructure as a Service (IaaS). Windows Server 2016 provides all the required platform capabilities to enable enterprise customers to build private clouds and transition to an IT as a service operational model. Windows Server 2016 also enables hosters to build public clouds and offer IaaS solutions to their customers. When combined with Virtual Machine Manager and Windows Azure Pack to manage Hyper-V Network Virtualization policy, Microsoft provides a powerful cloud solution.
 
 Windows Server 2016 Hyper-V Network Virtualization provides policy-based, software-controlled network virtualization that reduces the management overhead faced by enterprises when they expand dedicated IaaS clouds, and it provides cloud hosters better flexibility and scalability for managing virtual machines to achieve higher resource utilization.
 

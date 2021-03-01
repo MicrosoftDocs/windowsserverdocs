@@ -1,6 +1,6 @@
 ---
 title: Configure Encryption for a Virtual Network
-description: Virtual network encryption allows encryption of virtual network traffic between virtual machines that communicate with each other within subnets marked as ‘Encryption Enabled.'
+description: Learn how to create the encryption certificate, create the certificate credential, and configuring a virtual network for encryption.
 manager: grcusanz
 ms.topic: how-to
 ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
@@ -10,7 +10,7 @@ ms.date: 08/08/2018
 ---
 # Configure Encryption for a Virtual Subnet
 
->Applies to: Windows Server
+>Applies to: Windows Server 2019, Windows Server 2016
 
 Virtual network encryption allows for encryption of virtual network traffic between VMs that communicate with each other within subnets marked as ‘Encryption Enabled.' It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
 

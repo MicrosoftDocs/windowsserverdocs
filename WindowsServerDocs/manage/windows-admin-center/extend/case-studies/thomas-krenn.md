@@ -24,27 +24,27 @@ A few of the insights available are:
 
 Use the dashboard to determine the cluster's health status and important system information such as serial numbers, model, OS version and utilization. Additionally, fan, NIC and overall node hardware health are displayed on the dashboard as well.
 
-![Thomas-Krenn Extension](../../media/extend-case-study-thomas-krenn/thomas-krenn-1.png)
+![Screenshot of the Thomas-Krenn extension showing the cluster's health status and important system information.](../../media/extend-case-study-thomas-krenn/thomas-krenn-1.png)
 
 You can drill down into storage devices to view serial numbers, SMART-status, and capacity utilization. Boot devices also show wear out indicators, reallocated sectors and power on time, which are the best indicators of SSD health.
 
-![Thomas-Krenn Extension](../../media/extend-case-study-thomas-krenn/thomas-krenn-2.png)
+![Screenshot of the Thomas-Krenn extension showing serial numbers, SMART-status, and capacity utilization of the storage devices.](../../media/extend-case-study-thomas-krenn/thomas-krenn-2.png)
 
 The cluster status icon expands to show a summary of the cluster's operational details.
 
-![Thomas-Krenn Extension](../../media/extend-case-study-thomas-krenn/thomas-krenn-3.png)
+![Screenshot of the Thomas-Krenn extension showing the cluster's operational details](../../media/extend-case-study-thomas-krenn/thomas-krenn-3.png)
 
 After this Micro-Cluster's Azure cloud witness was unavailable for a whole night, one glance is enough to identify the problem. Clicking on “Notifications” immediately lists relevant events for quick remediation. Cluster events are localized and determined by the base OS language. The extension itself supports English and German.
 
-![Thomas-Krenn Extension](../../media/extend-case-study-thomas-krenn/thomas-krenn-4.png)
+![Screenshot of the Thomas-Krenn extension showing the Notifications tab of the Cluster Details.](../../media/extend-case-study-thomas-krenn/thomas-krenn-4.png)
 
 Network information is readily available as well.
 
-![Thomas-Krenn Extension](../../media/extend-case-study-thomas-krenn/thomas-krenn-5.png)
+![Screenshot of the Thomas-Krenn extension showing the network information that is readily available. ](../../media/extend-case-study-thomas-krenn/thomas-krenn-5.png)
 
 Based on customer feedback, we've also implemented “Dark Mode” available in Windows Admin Center v1904. This is soothing in dark datacenters and in poorly lighted cabinets and closets. It also makes Windows Admin Center more accessible by reducing glare for admins with certain visual impairments.
 
-![Thomas-Krenn Extension](../../media/extend-case-study-thomas-krenn/thomas-krenn-6.png)
+![Screenshot of the Thomas-Krenn extension showing Dark Mode available in Windows Admin Center v1904.](../../media/extend-case-study-thomas-krenn/thomas-krenn-6.png)
 
 Thomas-Krenn immediately realized that usability and accessibility for untrained admins would be key to a great customer experience for hyper-converged infrastructure in the small and mid-sized business market. Thomas-Krenn's Micro-Cluster extension perfectly complements Windows Admin Center's native HCI management capabilities by including proprietary hardware information on the dashboard and re-grouping important cluster health information in a new, human-friendly interface.
 

@@ -73,7 +73,7 @@ forfiles /P c:\ /S /M *.bat /C "cmd /c echo @file is a batch file"
 To list all of the directories on drive C, type:
 
 ```
-forfiles /P c:\ /S /M *.* /C "cmd /c if @isdir==TRUE echo @file is a directory"
+forfiles /P c:\ /S /M * /C "cmd /c if @isdir==TRUE echo @file is a directory"
 ```
 
 To list all of the files in the current directory that are at least one year old, type:

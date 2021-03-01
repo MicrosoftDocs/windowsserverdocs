@@ -57,7 +57,7 @@ The following prompt appears when the batch file runs the **choice** command:
 To hide the choices **Y**, **N**, and **C**, but display the text **Yes**, **No**, or **Continue**, type the following line in a batch file:
 
 ```
-choice /c ync /n /m Yes, No, or Continue?
+choice /c ync /n /m "Yes, No, or Continue?"
 ```
 
 > [!NOTE]
@@ -66,7 +66,7 @@ choice /c ync /n /m Yes, No, or Continue?
 To show both the text and the options used in the previous examples, type the following line in a batch file:
 
 ```
-choice /c ync /m Yes, No, or Continue
+choice /c ync /m "Yes, No, or Continue"
 ```
 
 To set a time limit of five seconds and specify **N** as the default value, type the following line in a batch file:

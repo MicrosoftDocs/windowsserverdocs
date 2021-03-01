@@ -1,6 +1,6 @@
 ---
 title: Security Support Provider Interface Architecture
-description: Windows Server Security
+description: Learn about the Windows authentication protocols that are used within the Security Support Provider Interface (SSPI) architecture.
 ms.topic: article
 ms.assetid: de09e099-5711-48f8-adbd-e7b8093a0336
 ms.author: jgerend
@@ -174,7 +174,7 @@ This provider is included by default in versions designated in the **Applies to*
 -   [\[MS-TLSP\]: Transport Layer Security (TLS) Profile](/openspecs/windows_protocols/ms-tlsp/58aba05b-62b0-4cd1-b88b-dc8a24920346)
 
 ### <a name="BKMK_NegoSSP"></a>Negotiate Security Support Provider
-The Simple and Protected GSS-API Negotiation Mechanism (SPNEGO) forms the basis for the Negotiate SSP, whichcan be used to negotiate a specific authentication protocol. When an application calls into SSPI to log on to a network, it can specify an SSP to process the request. If the application specifies the Negotiate SSP, it analyzes the request and picks the appropriate provider to handle the request, based on customer-configured security policies.
+The Simple and Protected GSS-API Negotiation Mechanism (SPNEGO) forms the basis for the Negotiate SSP, which can be used to negotiate a specific authentication protocol. When an application calls into SSPI to log on to a network, it can specify an SSP to process the request. If the application specifies the Negotiate SSP, it analyzes the request and picks the appropriate provider to handle the request, based on customer-configured security policies.
 
 SPNEGO is specified in RFC 2478.
 
