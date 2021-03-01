@@ -13,6 +13,9 @@ ms.date: 10/16/2017
 
 Records comments in a script, batch, or config.sys file. If no comment is specified, **rem** adds vertical spacing.
 
+> [!NOTE]
+> This command is internal for cmd.exe .
+
 ## Syntax
 
 ```
@@ -70,6 +73,17 @@ create partition logical size=2048
 assign e:
 create partition logical
 assign f:
+```
+
+For multi-line comments use conditional execution:
+
+```
+  Rem/||(
+    The REM evaluates to success so these
+    lines will never be executed.
+    Mind that here you need to escape closing parentheses
+    within multi-line comment blocks like this ^)
+  )
 ```
 
 ## Additional References
