@@ -32,7 +32,7 @@ Each of these connection types map to a solution and solutions are defined throu
 
 When you click on a connection in the Windows Admin Center home screen and connect, the solution extension for the selected connection type will be loaded and you will then be presented with the solution UI including a list of tools in the left navigation pane. When you click on a tool, the tool UI is loaded and displayed in the right pane.
 
-![Windows Admin Center UI architecture](../media/understand-extensions/extend-understanding-extensions-2.PNG)
+![Windows Admin Center UI architecture](../media/understand-extensions/extend-understanding-extensions-2.png)
 
 Each of these tools are defined through a second type of extension called “tool” extensions. When a tool is loaded, it can execute WMI calls or PowerShell scripts on a target server or cluster and display information in the UI or execute commands based on user input. A tool extension defines which solutions it should be displayed for, resulting in a different set of tools for each solution. If you are creating a new solution extension, you'll additionally need to write one or more tool extensions that provide functionality for the solution.
 

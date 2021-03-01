@@ -22,7 +22,7 @@ There are three primary options for configurable package sources that Windows Ad
 
 ### Publishing to the Windows Admin Center extension feed
 
-By default, Windows Admin Center is connected to a NuGet feed maintained by the Windows Admin Center product team at Microsoft. Early preview versions of new extensions developed by Microsoft may be published to this feed and available to Windows Admin Center users. External developers planning to build and release extensions publicly may also [submit a request](#publishing-your-extension-to-the-windows-admin-center-feed) to publish to this feed.
+By default, Windows Admin Center is connected to a NuGet feed maintained by the Windows Admin Center product team at Microsoft. Early preview versions of new extensions developed by Microsoft may be published to this feed and available to Windows Admin Center users. External developers planning to build and release extensions publicly may also [submit a request](#publishing-your-extension-to-the-windows-admin-center-feed) to publish to this feed. Prior to publishing to this feed, external developers will have to agree to Windows Admin Center's [Extension Publisher Agreement](https://docs.microsoft.com/legal/windows-server/windows-admin-center/extensions-publishers-agreement) and [Extension Participation Policy](https://docs.microsoft.com/legal/windows-server/windows-admin-center/extensions-participation-policy).
 
 ### Publishing to a different NuGet feed
 
@@ -131,7 +131,9 @@ Your extension package is now ready for testing! Upload the .nupkg file to a NuG
 
 By publishing to the Windows Admin Center feed, you can make your extension available to any Windows Admin Center user. Since the Windows Admin Center SDK is still in preview, we'd like to work closely with you to help resolve development issues, and, make sure you are able to deliver a quality product and experience to your users.
 
-Before releasing the initial version of your extension, we recommend that you submit an extension review request to Microsoft at least 2-3 weeks before release to ensure we have sufficient time to review and for you to make any changes to your extension if necessary. Once your extension is ready to be published, you'll need to send it to us for review, and if approved, we'll publish it to the feed for you.
+Prior to submitting an extension review request to Microsoft, you must send an email to [wacextensionrequest@microsoft.com](mailto:wacextensionrequest@microsoft.com?subject=Windows%20Admin%20Center%20Extension%20Review%20Request) expressing the intent to publish an extension to the public feed. We will provide you will copies of the Extension Publisher Agreement and the Extension Participation Policy to review and acknowledge in writing.
+
+Before releasing the initial version of your extension, we recommend that you submit an extension review request to Microsoft at least 2-3 weeks before release to ensure we have sufficient time to review and for you to make any changes to your extension if necessary. Once your extension is ready to be published, you'll need to send it to us for review, and if approved, we'll publish it to the feed for you. By sending Microsoft your extension package, you agree to be bound by the terms of the Extension Publisher Agreement and the Extension Participation Policy.
 
 Afterwards, if you want to release an update to your extension, you will need to submit another request for review. While depending on the scope of change, the turnaround time for update reviews should generally be shorter.
 
