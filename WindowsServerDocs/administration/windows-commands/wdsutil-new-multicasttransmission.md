@@ -3,8 +3,8 @@ title: wdsutil new-multicasttransmission
 description: Reference article for wdsutil new-multicasttransmission, which creates a new multicast transmission for an image.
 ms.topic: reference
 ms.assetid: c1f1dc46-dd50-4eb9-9f72-cf0e5d71bd3d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

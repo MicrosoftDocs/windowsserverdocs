@@ -3,8 +3,8 @@ title: shadow
 description: Reference article for the shadow command, which enables you to remotely control an active session of another user on a Remote Desktop Session Host server.
 ms.topic: reference
 ms.assetid: f81d9717-6883-4e14-9508-4b2a87e48ea7
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

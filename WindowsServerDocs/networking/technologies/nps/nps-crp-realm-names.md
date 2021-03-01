@@ -4,8 +4,8 @@ description: This topic provides an overview of using realm names in Network Pol
 manager: brianlic
 ms.topic: article
 ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 

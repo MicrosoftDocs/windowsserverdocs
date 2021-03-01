@@ -3,8 +3,8 @@ title: wbadmin stop job
 description: Reference article for the wbadmin stop job command, which cancels the backup or recovery operation that is currently running.
 ms.topic: reference
 ms.assetid: 3b83b398-39c7-4410-bf17-5c1fb1a4f46d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

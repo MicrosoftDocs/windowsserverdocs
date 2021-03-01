@@ -3,8 +3,8 @@ title: View and Configure Performance Event and Service Data
 description: Learn how to view and configure the event log entries, performance counters, and service alerts that are displayed for local and remote servers in Server Manager.
 ms.topic: article
 ms.assetid: ccd59c35-4dbf-48e7-88a4-c519c00184d1
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

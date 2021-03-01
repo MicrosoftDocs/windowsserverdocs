@@ -4,8 +4,8 @@ description: In this topic, we give you an overview of Network Interface Card (N
 manager: dougkim
 ms.topic: article
 ms.assetid: abded6f3-5708-4e35-9a9e-890e81924fec
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/10/2018
 ---
 # NIC Teaming

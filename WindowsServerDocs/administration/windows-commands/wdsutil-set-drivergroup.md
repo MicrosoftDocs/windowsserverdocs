@@ -3,8 +3,8 @@ title: Subcommand set-DriverGroup
 description: Reference article for Subcommand set-DriverGroup, which sets the properties of an existing driver group on a server.
 ms.topic: reference
 ms.assetid: e4ba9b1c-8c52-4fd5-969b-f7905611b364
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

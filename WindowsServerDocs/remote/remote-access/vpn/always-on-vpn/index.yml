@@ -8,8 +8,8 @@ metadata:
   description: Learn about the features, technology, and deployment of Always On VPN. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: eross-msft #Required; your GitHub user alias, with correct capitalization.
-  ms.author: lizross #Required; microsoft alias of author; optional team alias.
+  author: JasonGerend #Required; your GitHub user alias, with correct capitalization.
+  ms.author: jgerend #Required; microsoft alias of author; optional team alias.
   ms.date: 06/10/2020 #Required; mm/dd/yyyy format.
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new

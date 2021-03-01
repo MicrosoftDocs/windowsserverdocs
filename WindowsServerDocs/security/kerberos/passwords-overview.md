@@ -3,8 +3,8 @@ title: Passwords Overview
 description: Windows Server Security
 ms.topic: article
 ms.assetid: f608960e-2039-4c91-9c8c-9b81053c675e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---

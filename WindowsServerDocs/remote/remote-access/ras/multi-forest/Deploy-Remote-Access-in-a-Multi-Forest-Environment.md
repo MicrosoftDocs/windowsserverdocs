@@ -4,8 +4,8 @@ description: Learn about the planning and configuration steps for a multi-forest
 manager: brianlic
 ms.topic: article
 ms.assetid: c44fecc9-fe39-40bd-b6da-d8f8afe1a01d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Deploy Remote Access in a Multi-Forest Environment

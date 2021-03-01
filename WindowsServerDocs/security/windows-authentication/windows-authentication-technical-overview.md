@@ -3,8 +3,8 @@ title: Windows Authentication Technical Overview
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 286d3e41-434f-4703-9320-706d06ebda51
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---

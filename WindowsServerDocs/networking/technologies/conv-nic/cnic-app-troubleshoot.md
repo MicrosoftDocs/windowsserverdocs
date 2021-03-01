@@ -4,8 +4,8 @@ description: This topic is part of the Converged NIC Configuration Guide for Win
 ms.topic: article
 ms.assetid: 0bc6746f-2adb-43d8-a503-52f473833164
 manager: brianlic
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 12/18/2020
 ---
 

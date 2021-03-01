@@ -4,8 +4,8 @@ description: Learn about what DirectAccess is deployed with and the four subnets
 manager: brianlic
 ms.topic: article
 ms.assetid: 9afeced4-1a9b-4cb3-9fc4-d7e44c675755
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Overview of the Test Lab Scenario

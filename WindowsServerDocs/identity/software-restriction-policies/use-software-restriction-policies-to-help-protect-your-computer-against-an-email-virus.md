@@ -3,8 +3,8 @@ title: Use Software Restriction Policies to Help Protect Your Computer Against a
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 02f23979-f832-4e46-bdea-21fd77db35b2
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---

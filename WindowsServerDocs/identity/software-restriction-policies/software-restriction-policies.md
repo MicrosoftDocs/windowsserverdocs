@@ -3,8 +3,8 @@ title: Software Restriction Policies
 description: Windows Server Security
 ms.topic: article
 ms.assetid: 5c0befad-07c3-4262-b418-372d01850305
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---

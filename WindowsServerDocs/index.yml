@@ -6,12 +6,12 @@ summary: Windows Server is the platform for building an infrastructure of connec
 metadata:
   title: Windows Server Documentation - Microsoft Docs
   description: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
-  author: eross-msft
+  author: JasonGerend
   manager: daveba
   ms.service: windows-server
   ms.topic: hub-page
   ms.date: 06/06/2019
-  ms.author: lizross
+  ms.author: jgerend
 
 highlightedContent:
   items:

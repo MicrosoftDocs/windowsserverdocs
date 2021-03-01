@@ -6,8 +6,8 @@ description: Reference article for the nslookup set recurse command, which tells
 
 ms.topic: reference
 ms.assetid: d1b7a93f-dfb0-4ccd-b230-e0953057fada
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

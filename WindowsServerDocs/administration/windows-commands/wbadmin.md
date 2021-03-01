@@ -3,8 +3,8 @@ title: wbadmin
 description: Reference article for the wbadmin commands, which lets you back up and restore your operating system, volumes, files, folders, and applications from a command prompt.
 ms.topic: reference
 ms.assetid: 4b0b3f32-d21f-4861-84bb-b2eadbf1e7b8
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

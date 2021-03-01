@@ -3,8 +3,8 @@ title: cacls
 description: Reference article for the cacls command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
 ms.topic: reference
 ms.assetid: b5bdbaaa-4557-48b8-80df-e75ee0d2f27d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

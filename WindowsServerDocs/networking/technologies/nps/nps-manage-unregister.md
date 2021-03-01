@@ -4,8 +4,8 @@ description: You can use this topic to register a server running Network Policy 
 manager: brianlic
 ms.topic: article
 ms.assetid: 68a94616-3c29-45bd-bd33-e4c578f119e1
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 

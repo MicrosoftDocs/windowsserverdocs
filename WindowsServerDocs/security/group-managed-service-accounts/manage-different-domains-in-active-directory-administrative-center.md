@@ -2,8 +2,8 @@
 title: Manage Different Domains in Active Directory Administrative Center
 description: Windows Server Security
 ms.assetid: 166351c3-4076-48be-aa8f-797adf1e9d68
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ms.topic: article

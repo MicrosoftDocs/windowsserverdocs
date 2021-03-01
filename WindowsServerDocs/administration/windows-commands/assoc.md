@@ -3,8 +3,8 @@ title: assoc
 description: Reference article for the assoc command, which displays or modifies file name extension associations.
 ms.topic: reference
 ms.assetid: 237bedda-b24c-4fec-a39c-9b7eacf96417
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

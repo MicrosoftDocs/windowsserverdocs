@@ -3,8 +3,8 @@ title: Services for Network File System (NFS) command-line tools
 description: Reference article about Services for Network File System (NFS) command-line tools
 ms.topic: reference
 ms.assetid: 06c81f88-a672-4405-9b73-085f8933114c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

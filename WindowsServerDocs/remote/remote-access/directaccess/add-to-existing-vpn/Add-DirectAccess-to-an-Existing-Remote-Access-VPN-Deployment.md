@@ -4,8 +4,8 @@ description: Learn how to add DirectAccess to an existing remote access (VPN) de
 manager: brianlic
 ms.topic: article
 ms.assetid: b5db01f7-1ae0-46f2-9be7-8d9e121446b2
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 01/05/2021
 ---
 # Add DirectAccess to an Existing Remote Access (VPN) Deployment
