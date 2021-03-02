@@ -79,10 +79,10 @@ For multi-line comments use conditional execution:
 
 ```
   Rem/||(
-    The REM evaluates to success so these
-    lines will never be executed.
-    Mind that here you need to escape closing parentheses
-    within multi-line comment blocks like this ^)
+    The REM statement evaluates to success,
+    so these lines will never be executed.
+    Keep in mind that you will need to escape closing parentheses
+    within multi-line comment blocks like shown in this example. ^)
   )
 ```
 
