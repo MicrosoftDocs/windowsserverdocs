@@ -37,7 +37,7 @@ assoc [<.[ext]>[=[<filetype>]]]
 
 - To remove the file type association for a file name extension, add a white space after the equal sign by pressing the SPACEBAR.
 
-- To associatie files without extension to a file type use just dot (see the examples).
+- To associate files without extension to a file type, use just a dot (see the examples).
 
 - To view current file types that have open command strings defined, use the **ftype** command.
 
