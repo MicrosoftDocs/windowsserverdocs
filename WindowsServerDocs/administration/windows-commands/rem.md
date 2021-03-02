@@ -14,7 +14,7 @@ ms.date: 10/16/2017
 Records comments in a script, batch, or config.sys file. If no comment is specified, **rem** adds vertical spacing.
 
 > [!NOTE]
-> This command is internal for cmd.exe .
+> This command is internal to the command-line interpreter, cmd.exe .
 
 ## Syntax
 
