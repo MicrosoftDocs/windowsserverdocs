@@ -18,19 +18,19 @@ metadata:
            
 highlightedContent:
   items:
-    - title: Windows 10 release information and servicing options
+    - title: "Windows 10 release information and servicing options"
       itemType: reference
       url: https://aka.ms/windows/releaseinfo
-    - title: How to get Windows 10, version 20H2
+    - title: "How to get Windows 10, version 20H2"
       itemType: whats-new
       url: https://blogs.windows.com/windowsexperience/2020/10/20/how-to-get-the-windows-10-october-2020-update/
-    - title: Explore the latest features for IT professionals
+    - title: "Explore the latest features for IT professionals"
       itemType: get-started
       url: https://aka.ms/new-in-20H2
     - title: "Windows update fundamentals: Windows as a service"
       itemType: overview
       url: https://docs.microsoft.com/windows/deployment/update/waas-overview
-    - title: How to plan for, prepare & deploy updates for Windows 10
+    - title: "How to plan for, prepare & deploy updates for Windows 10"
       itemType: learn
       url: https://docs.microsoft.com/learn/paths/m365-stay-current
     - title: "Frequently asked questions: Windows lifecycle"
@@ -42,20 +42,20 @@ conceptualContent:
   items:
     - title: Message center
       links:
-        - text: Introducing the next feature update - Windows 10, version 21H1
-          url: https://blogs.windows.com/windowsexperience/?p=175347
+        - text: "Microsoft Ignite 2021 shows off the latest Windows capabilities"
+          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/bg-p/Windows10Blog
           itemType: whats-new
-        - text: February 2021 Windows non-security preview "C" release is available for some versions for Windows 10
-          url: https://support.microsoft.com/help/4601395
+        - text: "February 2021 Windows non-security preview \"C\" release for Windows 10, version 20H2 is available"
+          url: https://support.microsoft.com/help/4601382
           itemType: whats-new
-        - text: Out-of-band update to address an issue when making WPA3 Wi-Fi connections
-          url: https://docs.microsoft.com/en-us/windows/release-health/status-windows-10-1909#1557msgdesc
+        - text: "Understanding the new Windows update history experience"
+          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/understanding-the-new-windows-update-history-experience/ba-p/2146594
           itemType: whats-new
 
       footerLink:
         url: https://docs.microsoft.com/windows/release-information/windows-message-center
         text: See more
-    - title: Windows 10 and Windows Server, version 20H2
+    - title: "Windows 10 and Windows Server, version 20H2"
       links:
         - text: Known issues
           url: status-windows-10-20H2
@@ -63,16 +63,16 @@ conceptualContent:
         - text: Resolved issues
           url: resolved-issues-windows-10-20H2
           itemType: how-to-guide
-        - text: Release notes
+        - text: "Release notes"
           url: https://support.microsoft.com/en-us/topic/windows-10-update-history-7dd3071a-3906-fa2c-c342-f7f86728a6e3
           itemType: deploy
-        - text: How to get Windows 10, version 20H2
+        - text: "How to get Windows 10, version 20H2"
           url: https://aka.ms/how-to-get-20h2
           itemType: whats-new
-        - text: What's new in Windows 10, version 20H2
+        - text: "What's new in Windows 10, version 20H2"
           url: https://aka.ms/new-in-20h2
           itemType: whats-new
-    - title: Windows 10 and Windows Server, version 2004 
+    - title: "Windows 10 and Windows Server, version 2004 "
       links:
         - text: Known issues
           url: status-windows-10-2004
@@ -80,16 +80,16 @@ conceptualContent:
         - text: Resolved issues
           url: resolved-issues-windows-10-2004
           itemType: how-to-guide
-        - text: Release notes
+        - text: "Release notes"
           url: https://support.microsoft.com/en-us/topic/windows-10-update-history-24ea91f4-36e7-d8fd-0ddb-d79d9d0cdbda
           itemType: deploy
-        - text: What’s new in Windows 10, version 2004
+        - text: "What’s new in Windows 10, version 2004"
           url: https://aka.ms/new-in-2004
           itemType: whats-new
-        - text: Deploying a new version of Windows 10 in a remote world
+        - text: "Deploying a new version of Windows 10 in a remote world"
           url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/deploying-a-new-version-of-windows-10-in-a-remote-world/ba-p/1419846
           itemType: whats-new
-    - title: Windows 10 and Windows Server, version 1909
+    - title: "Windows 10 and Windows Server, version 1909"
       links:
         - text: Known issues
           url: status-windows-10-1909
@@ -97,16 +97,16 @@ conceptualContent:
         - text: Resolved issues
           url: resolved-issues-windows-10-1909
           itemType: how-to-guide
-        - text: Release notes
+        - text: "Release notes"
           url: https://support.microsoft.com/en-us/topic/windows-10-update-history-53c270dc-954f-41f7-7ced-488578904dfe
           itemType: deploy
-        - text: What’s new in Windows 10, version 1909
+        - text: "What’s new in Windows 10, version 1909"
           url: https://aka.ms/whats-new-in-1909
           itemType: whats-new
-        - text: Windows 10, version 1909 delivery options
+        - text: "Windows 10, version 1909 delivery options"
           url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-10-version-1909-delivery-options/ba-p/1002660
           itemType: whats-new
-    - title: Windows 10, version 1809 and Windows Server 2019
+    - title: "Windows 10, version 1809 and Windows Server 2019"
       links:
         - text: Known issues
           url: status-windows-10-1809-and-windows-server-2019
@@ -114,10 +114,10 @@ conceptualContent:
         - text: Resolved issues
           url: resolved-issues-windows-10-1809-and-windows-server-2019
           itemType: how-to-guide
-        - text: Release notes
+        - text: "Release notes"
           url: https://support.microsoft.com/en-us/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059
           itemType: deploy
-    - title: Windows 10, version 1803
+    - title: "Windows 10, version 1803"
       links:
         - text: Known issues
           url: status-windows-10-1803
@@ -125,10 +125,10 @@ conceptualContent:
         - text: Resolved issues
           url: resolved-issues-windows-10-1803
           itemType: how-to-guide
-        - text: Release notes
+        - text: "Release notes"
           url: https://support.microsoft.com/en-us/topic/windows-10-update-history-0d8c2da6-3dba-66e4-2ef2-059192bf7869
           itemType: deploy
-    - title: Windows 10, version 1607 and Windows Server 2016
+    - title: "Windows 10, version 1607 and Windows Server 2016"
       links:
         - text: Known issues
           url: status-windows-10-1607-and-windows-server-2016
@@ -136,7 +136,7 @@ conceptualContent:
         - text: Resolved issues
           url: resolved-issues-windows-10-1607-and-windows-server-2016
           itemType: how-to-guide
-        - text: Release notes
+        - text: "Release notes"
           url: https://support.microsoft.com/en-us/topic/windows-10-and-windows-server-2016-update-history-4acfbc84-a290-1b54-536a-1c0430e9f3fd
           itemType: deploy
 
