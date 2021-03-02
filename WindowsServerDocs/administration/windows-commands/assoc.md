@@ -33,7 +33,7 @@ assoc [<.[ext]>[=[<filetype>]]]
 
 ### Remarks
 
-- To make changes in associations you need administrator privileges.
+- To make changes in associations, you need administrator privileges.
 
 - To remove the file type association for a file name extension, add a white space after the equal sign by pressing the SPACEBAR.
 
