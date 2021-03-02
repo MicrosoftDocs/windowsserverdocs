@@ -72,7 +72,7 @@ To send the output of **assoc** to the file assoc.txt, type:
 assoc>assoc.txt
 ```
 
-Associatie **.log** with no extension to text files:
+Associatie **.log** to text files:
 
 ```
 assoc .log=txtfile
