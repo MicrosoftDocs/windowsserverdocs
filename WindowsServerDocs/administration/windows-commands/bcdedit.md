@@ -3,8 +3,8 @@ title: bcdedit
 description: Reference article for the bcdedit command, which creates new stores, modify existing stores, and add boot menu parameters.
 ms.topic: reference
 ms.assetid: ab2da47d-3aac-44a0-b7fd-bd9561d61553
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 03/27/2018
 ---

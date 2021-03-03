@@ -4,8 +4,8 @@ description: Learn how to make sure client computers that are located on the Int
 manager: brianlic
 ms.topic: article
 ms.assetid: 65ac1c23-3a47-4e58-888d-9dde7fba1586
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # STEP 12 Test DirectAccess Connectivity

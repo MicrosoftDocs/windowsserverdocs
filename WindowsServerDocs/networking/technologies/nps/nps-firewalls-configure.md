@@ -4,8 +4,8 @@ description: This topic provides an overview of how to configure firewalls to al
 manager: brianlic
 ms.topic: article
 ms.assetid: 58cca2b2-4ef3-4a09-a614-8bdc08d24f15
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 

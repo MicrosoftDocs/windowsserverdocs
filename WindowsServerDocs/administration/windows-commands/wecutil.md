@@ -3,8 +3,8 @@ title: wecutil
 description: Reference article for the wecutil command, which lets you create and manage subscriptions to events that are forwarded from remote computers.
 ms.topic: reference
 ms.assetid: 0c82a6cb-d652-429c-9c3d-0f568c78d54b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 12/04/2020
 ---

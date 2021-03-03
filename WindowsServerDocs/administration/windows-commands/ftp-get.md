@@ -3,8 +3,8 @@ title: ftp get
 description: Reference article for the ftp get command, which copies a remote file to the local computer using the current file transfer type.
 ms.topic: reference
 ms.assetid: d70355c4-58ef-43e0-916b-c7ecf77e6ee4
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

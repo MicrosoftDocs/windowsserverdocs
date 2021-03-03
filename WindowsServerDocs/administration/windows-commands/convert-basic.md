@@ -3,8 +3,8 @@ title: convert basic
 description: Reference article for the convert basic command, which converts an empty dynamic disk to a basic disk.
 ms.topic: reference
 ms.assetid: 61329896-3b56-4959-8d58-45cbe18ba860
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

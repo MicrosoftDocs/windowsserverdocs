@@ -4,8 +4,8 @@ description: You can use this topic to learn about the tools that you can use to
 manager: brianlic
 ms.topic: article
 ms.assetid: 5de80dc0-53be-42b7-8e5b-24d213bf2b25
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 12/08/2020
 ---
 # Network Policy Server Management with Administration Tools

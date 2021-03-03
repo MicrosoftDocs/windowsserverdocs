@@ -4,8 +4,8 @@ description: Learn how to complete the multisite infrastructure planning; includ
 manager: brianlic
 ms.topic: article
 ms.assetid: 64c10107-cb03-41f3-92c6-ac249966f574
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Step 2 Plan the Multisite Infrastructure

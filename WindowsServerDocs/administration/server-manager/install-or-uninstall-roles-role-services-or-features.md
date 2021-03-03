@@ -3,8 +3,8 @@ title: Install or Uninstall Roles, Role Services, or Features
 description: Learn how to install roles and features to local or remote servers, or offline virtual hard disks (VHDs).
 ms.topic: article
 ms.assetid: 04f16d84-45c2-4771-84c1-1cc973d0ee02
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

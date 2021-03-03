@@ -3,8 +3,8 @@ title: secedit export
 description: Reference article for the secedit export, which exports security settings stored in a database configured with security templates.
 ms.topic: reference
 ms.assetid: 49a8b241-aa8c-45b7-844d-67a29fab708e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

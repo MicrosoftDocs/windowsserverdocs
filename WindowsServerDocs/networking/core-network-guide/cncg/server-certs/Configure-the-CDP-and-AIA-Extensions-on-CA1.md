@@ -4,8 +4,8 @@ description: Learn how to configure the Certificate Revocation List (CRL) Distri
 manager: dougkim
 ms.topic: article
 ms.assetid: f77a3989-9f92-41ef-92a8-031651dd73a8
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 07/26/2018
 ---
 # Configure the CDP and AIA Extensions on CA1

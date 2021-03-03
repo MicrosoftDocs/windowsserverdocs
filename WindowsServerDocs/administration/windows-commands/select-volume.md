@@ -3,8 +3,8 @@ title: select volume
 description: Reference article for the select volume command, which selects the specified volume and shifts the focus to it.
 ms.topic: reference
 ms.assetid: 5d70d776-80ad-4f20-8288-a7997fb1df28
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

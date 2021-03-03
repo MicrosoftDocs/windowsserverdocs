@@ -4,8 +4,8 @@ description: This topic provides instructions on how to create, apply, export, a
 manager: brianlic
 ms.topic: article
 ms.assetid: 989b00c5-4767-4081-ace5-6321f8b2c55e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 

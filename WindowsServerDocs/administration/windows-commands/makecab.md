@@ -3,8 +3,8 @@ title: makecab
 description: Reference article for the makecab command, which packages existing files into a cabinet (.cab) file.
 ms.topic: reference
 ms.assetid: 4da95297-c593-427b-9f76-2f389c46cbf4
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

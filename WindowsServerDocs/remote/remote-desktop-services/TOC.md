@@ -94,6 +94,7 @@
 #### [Grant Remote Desktop access to your PC](clients/remote-desktop-allow-access.md)
 #### [Grant access to your PC from outside your network](clients/remote-desktop-allow-outside-access.md)
 #### [Change the RD listening port on your PC](clients/change-listening-port.md)
+#### [Configure the RD Gateway role](remote-desktop-gateway-role.md)
 ### Advanced information
 #### [Compare the clients: features](clients/remote-desktop-features.md)
 #### [Compare the clients: redirections](clients/remote-desktop-app-compare.md)

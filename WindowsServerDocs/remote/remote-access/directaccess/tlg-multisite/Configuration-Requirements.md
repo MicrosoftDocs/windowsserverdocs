@@ -4,8 +4,8 @@ description: Learn about the components that have to have Remote Access configur
 manager: brianlic
 ms.topic: article
 ms.assetid: aaabdf3b-d926-48d9-9d01-358668da88ba
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Configuration Requirements

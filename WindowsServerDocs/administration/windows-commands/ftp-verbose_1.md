@@ -3,8 +3,8 @@ title: ftp verbose
 description: Reference article for the ftp verbose command, which toggles verbose mode.
 ms.topic: reference
 ms.assetid: 59febc81-0b14-487e-8aa3-642f59d0b34f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

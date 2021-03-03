@@ -4,8 +4,8 @@ description: Learn how to use DNS policy to control how a DNS server processes n
 manager: brianlic
 ms.topic: article
 ms.assetid: 50fdb08a-bbd8-4107-954a-6699672110ff
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 01/05/2021
 ---
 # DNS Policy Scenario Guide

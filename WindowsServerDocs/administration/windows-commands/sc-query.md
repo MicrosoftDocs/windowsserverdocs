@@ -3,8 +3,8 @@ title: Sc.exe query
 description: Reference article for the sc.exe query command, which obtains and displays information about the specified service, driver, type of service, or type of driver.
 ms.topic: reference
 ms.assetid: ac365f89-4b20-4de6-a582-b204c5e7d0eb
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

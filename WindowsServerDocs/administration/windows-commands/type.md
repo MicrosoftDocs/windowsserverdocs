@@ -3,8 +3,8 @@ title: type
 description: Reference article for the type command, which displays the contents of a text file.
 ms.topic: reference
 ms.assetid: c44fe905-a865-4c97-8cc5-fb95fec7d4d5
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2020
 ---

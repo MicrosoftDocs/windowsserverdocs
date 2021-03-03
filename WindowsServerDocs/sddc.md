@@ -3,8 +3,8 @@ title: Windows Server Software-Defined Datacenter
 description: Windows Server SDDC Overview
 ms.prod: windows-server
 ms.topic: how-to
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 06/04/2019
 ms.localizationpriority: medium

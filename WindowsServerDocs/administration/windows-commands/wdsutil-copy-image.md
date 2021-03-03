@@ -3,8 +3,8 @@ title: wdsutil copy-image
 description: Reference article for the wdsutil copy-image command, which copies images that are within the same image group.
 ms.topic: reference
 ms.assetid: bea41cf4-36e6-4181-afa5-00170ebd4fdc
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

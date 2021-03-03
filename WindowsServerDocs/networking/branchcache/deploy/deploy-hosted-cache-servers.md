@@ -4,8 +4,8 @@ description: Learn how to install and configure BranchCache hosted cache servers
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 96d03b42-6cd9-4905-b6a2-dc36130dd24f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 01/05/2021
 ---
 # Deploy Hosted Cache Servers (Optional)

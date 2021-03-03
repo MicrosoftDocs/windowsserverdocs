@@ -81,7 +81,7 @@ Next, build and side load your extension into Windows Admin Center.  Open a comm
 
     ```
     gulp build
-    gulp serve -p 4201
+    gulp serve --port 4201
     ```
 
 Note that you need to choose a port that is currently free. Make sure you do not attempt to use the port that Windows Admin Center is running on.

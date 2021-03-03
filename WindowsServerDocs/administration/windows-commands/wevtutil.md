@@ -3,8 +3,8 @@ title: wevtutil
 description: Reference article for wevtutil, which lets you retrieve information about event logs and publishers.
 ms.topic: reference
 ms.assetid: d4c791e0-7e59-45c5-aa55-0223b77a4822
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

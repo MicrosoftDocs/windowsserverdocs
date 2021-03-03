@@ -2,8 +2,8 @@
 title: bitsadmin gethttpmethod
 description: Reference article for the bitsadmin gethttpmethod command, which gets the HTTP verb to use with the job.
 ms.topic: reference
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 03/01/2019
 ---

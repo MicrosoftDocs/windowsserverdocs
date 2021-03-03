@@ -2,8 +2,8 @@
 title: bitsadmin sethelpertoken
 description: Reference article for the bitsadmin sethelpertoken command, which sets the current command prompt's primary token (or an arbitrary local user account's token, if specified) as a BITS transfer job's helper token.
 ms.topic: reference
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 03/01/2019
 ---
