@@ -4,8 +4,8 @@ description: Learn how to save a snapshot of the DirectAccess multisite test lab
 manager: brianlic
 ms.topic: article
 ms.assetid: 8e17d886-f216-400e-bd31-808aceb88033
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # STEP 14 Snapshot the Configuration

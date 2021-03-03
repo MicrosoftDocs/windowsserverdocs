@@ -3,8 +3,8 @@ title: verifier
 description: Reference article for the verifier command, which runs the Driver Verifier manager utility.
 ms.topic: reference
 ms.assetid: 782173d6-f196-4bc4-a547-76109829453c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

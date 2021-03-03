@@ -3,8 +3,8 @@ title: wbadmin get items
 description: Reference article for the wbadmin get items command, which lists the items included in a specific backup.
 ms.topic: reference
 ms.assetid: 27d08ce3-6e06-4260-b264-fc1bde132d09
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

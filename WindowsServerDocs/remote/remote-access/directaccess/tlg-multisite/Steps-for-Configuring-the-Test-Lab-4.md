@@ -4,8 +4,8 @@ description: Learn how to configure the Remote Access infrastructure, configure 
 manager: brianlic
 ms.topic: article
 ms.assetid: dc7205b4-a822-4038-ab67-ec0a870737f2
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 

@@ -4,8 +4,8 @@ description:  In this topic, we give you an overview of the NIC Team properties 
 manager: dougkim
 ms.topic: article
 ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/13/2018
 ---
 

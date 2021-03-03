@@ -4,8 +4,8 @@ description: Learn how to configure the infrastructure that is required for an a
 manager: brianlic
 ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Step 1 Configure Advanced DirectAccess Infrastructure

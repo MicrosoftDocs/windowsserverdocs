@@ -4,8 +4,8 @@ description: Learn about extending the Demonstrate DirectAccess Single Server Se
 manager: brianlic
 ms.topic: article
 ms.assetid: ce584811-b209-48fe-ab2b-4c399bd0bd79
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Overview of the Test Lab Scenario OTP Authentication and RSA SecurID

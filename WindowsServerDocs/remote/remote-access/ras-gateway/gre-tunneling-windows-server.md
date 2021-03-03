@@ -4,8 +4,8 @@ description: You can use this topic to gain an understanding of updates to Gener
 manager: brianlic
 ms.topic: article
 ms.assetid: df2023bf-ba64-481e-b222-6f709edaa5c1
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # GRE Tunneling in Windows Server 2016

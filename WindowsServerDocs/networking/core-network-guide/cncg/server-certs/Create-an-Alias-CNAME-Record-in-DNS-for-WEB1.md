@@ -4,8 +4,8 @@ description: Learn how to add an Alias canonical name (CNAME) resource record fo
 manager: brianlic
 ms.topic: article
 ms.assetid: bfae23f0-ae12-486b-94fe-50a137e141a5
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Create an Alias \(CNAME\) Record in DNS for WEB1

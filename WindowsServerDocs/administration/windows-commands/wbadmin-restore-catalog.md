@@ -3,8 +3,8 @@ title: wbadmin restore catalog
 description: Reference article for the wbadmin restore catalog command, which recovers a backup catalog for the local computer from a storage location that you specify.
 ms.topic: reference
 ms.assetid: ce1e24a0-821d-4353-b09d-8f82c5c4ad56
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

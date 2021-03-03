@@ -3,8 +3,8 @@ title: wdsutil get-image
 description: Reference article for wdsutil get-image, which retrieves information about an image.
 ms.topic: reference
 ms.assetid: 0ecaa999-72ad-4191-adb5-a418de42a001
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

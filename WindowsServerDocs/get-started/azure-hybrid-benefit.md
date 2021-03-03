@@ -3,7 +3,7 @@ title: Azure Hybrid Benefit for Windows Server
 description: Use your on-premises Windows Server licenses to save on Azure VMs
 ms.date: 11/10/2017
 ms.topic: article
-author: eross-msft
+author: JasonGerend
 ms.author: chrisrin
 ms.localizationpriority: high
 ---

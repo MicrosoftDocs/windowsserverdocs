@@ -3,8 +3,8 @@ title: unexpose
 description: Reference article for the unexpose command, which unexposes an exposed shadow copy.
 ms.topic: reference
 ms.assetid: 58dc7d0f-52e9-4587-9487-d3b4c3e52640
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
