@@ -4,8 +4,8 @@ description: Learn how to verify that your Network Policy Server servers have en
 manager: brianlic
 ms.topic: article
 ms.assetid: bd80a018-5a30-47c3-89fc-aacb9f5ad298
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Verify Server Enrollment of a Server Certificate

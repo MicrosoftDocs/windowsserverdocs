@@ -3,8 +3,8 @@ title: prnqctl
 description: Reference article for the prnqctl command, which prints a test page, and pauses or resumes a printer.
 ms.topic: reference
 ms.assetid: 8df9dfa7-984c-4276-bb7d-e7675e7c399e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 07/11/2018
 ---

@@ -4,8 +4,8 @@ description: Learn about the steps required to set up the  Remote Access multisi
 manager: brianlic
 ms.topic: article
 ms.assetid: ea7ecd52-4c12-4a49-92fd-b8c08cec42a9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Step 3 Configure the Multisite Deployment

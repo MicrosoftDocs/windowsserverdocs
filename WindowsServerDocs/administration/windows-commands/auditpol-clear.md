@@ -3,8 +3,8 @@ title: auditpol clear
 description: Reference article for the auditpol clear command, which deletes the per-user audit policy for all users, resets (disables) the system audit policy for all subcategories, and sets all the auditing options to disabled.
 ms.topic: reference
 ms.assetid: 05bfa218-2434-4ad1-b33c-e6fcfb2b4f67
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

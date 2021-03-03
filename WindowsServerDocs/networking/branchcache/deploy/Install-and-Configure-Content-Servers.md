@@ -4,8 +4,8 @@ description: Learn how to install and configure content servers.
 manager: brianlic
 ms.topic: how-to
 ms.assetid: e753c56b-8902-4610-9c53-381e77bf29ab
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 01/05/2021
 ---
 # Install and Configure Content Servers

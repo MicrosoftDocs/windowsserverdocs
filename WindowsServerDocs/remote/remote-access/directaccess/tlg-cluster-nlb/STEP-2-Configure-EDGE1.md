@@ -4,8 +4,8 @@ description: Learn how to configure DirectAccess on the EDGE1 server.
 manager: brianlic
 ms.topic: article
 ms.assetid: 84457351-1ca7-4e7c-8e2c-53d55b1fcdc0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # STEP 2 Configure EDGE1

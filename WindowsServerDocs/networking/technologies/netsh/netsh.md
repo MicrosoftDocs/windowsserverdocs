@@ -4,8 +4,8 @@ description: This topic provides an overview of the Network Shell (netsh) comman
 ms.topic: article
 ms.assetid: aedef092-8445-4e53-b9d4-525ecd98b02d
 manager: dougkim
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/13/2018
 ---
 

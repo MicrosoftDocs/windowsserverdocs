@@ -3,8 +3,8 @@ title: wbadmin get versions
 description: Reference article for the wbadmin get versions command, which lists details about the available backups that are stored on the local computer or another computer.
 ms.topic: reference
 ms.assetid: b986acc4-d083-4d32-9434-862314ed5e97
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

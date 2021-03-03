@@ -4,8 +4,8 @@ description: Learn how to verify that you have correctly configured your DirectA
 manager: brianlic
 ms.topic: article
 ms.assetid: ed49a0a3-1c45-42e5-8f13-cad20c1c1d68
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Step 4 Verify DirectAccess with OTP

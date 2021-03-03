@@ -4,8 +4,8 @@ description: Learn how to install the BranchCache for network files role service
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 74b0a5ed-dc20-4974-9d4b-2426987a01a1
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 01/05/2021
 ---
 # Install File Services Content Servers

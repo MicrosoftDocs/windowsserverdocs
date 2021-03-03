@@ -4,8 +4,8 @@ description: This topic provides information about Network Policy Server RADIUS 
 manager: brianlic
 ms.topic: article
 ms.assetid: 2900dd2c-0f70-4f8d-9650-ed83d51d509a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 

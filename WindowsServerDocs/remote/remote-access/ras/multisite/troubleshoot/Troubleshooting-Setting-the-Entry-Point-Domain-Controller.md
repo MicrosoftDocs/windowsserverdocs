@@ -4,8 +4,8 @@ description: Learn how to troubleshoot issues related to the Set-DAEntryPointDC 
 manager: brianlic
 ms.topic: article
 ms.assetid: b12dd0e8-1d80-4d4b-bb45-586f19d17ef0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Troubleshooting Setting the Entry Point Domain Controller

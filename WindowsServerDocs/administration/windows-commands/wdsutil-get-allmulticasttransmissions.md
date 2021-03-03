@@ -3,8 +3,8 @@ title: wdsutil get-allmulticasttransmissions
 description: Reference article for wdsutil get-allmulticasttransmissions, which displays information about all multicast transmissions on a server.
 ms.topic: reference
 ms.assetid: 95b8fb79-7a8a-4f0c-88f4-92bc1111c67f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

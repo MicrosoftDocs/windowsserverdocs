@@ -3,8 +3,8 @@ title: bootcfg ems
 description: Reference article for the bootcfg ems command, which enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer.
 ms.topic: reference
 ms.assetid: 57abdc50-c64a-45f1-8470-3f8c3a51f743
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

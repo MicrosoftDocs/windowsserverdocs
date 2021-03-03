@@ -3,8 +3,8 @@ title: servermanagercmd
 description: Reference article for the servermanagercmd command, which installs and removes roles, role services, and features.
 ms.topic: reference
 ms.assetid: 507c4b87-8e13-4872-8b34-0c7508eecbc1
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 07/11/2018
 ---

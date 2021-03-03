@@ -4,8 +4,8 @@ description: Learn how to use the management console on the Remote Access server
 manager: brianlic
 ms.topic: article
 ms.assetid: beb94475-b21f-46a9-ac51-bf2bb28ca94e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Monitor connected remote clients for activity and status

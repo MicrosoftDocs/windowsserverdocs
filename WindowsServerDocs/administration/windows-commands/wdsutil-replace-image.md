@@ -3,8 +3,8 @@ title: wdsutil replace-image
 description: Reference article for wdsutil replace-image, which replaces an existing image with a new version of that image.
 ms.topic: reference
 ms.assetid: 68ded3df-e309-420f-9f5d-caeb609385a5
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -3,8 +3,8 @@ title: secedit validate
 description: Reference article for the secedit validate command, which validates the security settings stored in a security template.
 ms.topic: reference
 ms.assetid: 9fb06354-f55a-4ca4-9fbc-9a872eb9b9cf
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

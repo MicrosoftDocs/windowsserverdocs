@@ -3,8 +3,8 @@ title: bitsadmin peercaching and help
 description: Reference article for **bitsadmin peercaching** and **help**, which displays the command-line usage for the /peercaching switches.
 ms.topic: reference
 ms.assetid: 2cb0fcc0-5464-47c9-b44d-dd32a4f0d907
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

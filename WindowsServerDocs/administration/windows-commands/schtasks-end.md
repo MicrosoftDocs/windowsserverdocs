@@ -2,8 +2,8 @@
 title: schtasks end
 description: Reference article for the schtasks end command, which stops only the instances of a program started by a scheduled task.
 ms.topic: reference
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 09/16/2020
 ---

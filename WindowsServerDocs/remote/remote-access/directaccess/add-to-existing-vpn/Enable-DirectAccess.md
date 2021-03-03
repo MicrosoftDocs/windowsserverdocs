@@ -4,8 +4,8 @@ description: Learn about the configuration steps required in order to deploy a s
 manager: brianlic
 ms.topic: article
 ms.assetid: bf9aaf36-fc3c-4007-bba9-c0b752774601
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 01/05/2021
 ---
 # Enable DirectAccess

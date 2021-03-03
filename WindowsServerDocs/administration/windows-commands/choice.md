@@ -3,8 +3,8 @@ title: choice
 description: Reference article for the choice command, which prompts the user to select one item from a list of single-character choices in a batch program, and then returns the index of the selected choice.
 ms.topic: reference
 ms.assetid: c65a9119-410b-4dcf-9fa7-4e07d2a7238b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

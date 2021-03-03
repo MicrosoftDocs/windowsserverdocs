@@ -3,8 +3,8 @@ title: copy-drivergroup
 description: Reference article for the copy-drivergroup command, which duplicates an existing driver group on the server including the filters, driver packages, and enabled/disabled status.
 ms.topic: reference
 ms.assetid: 0aaf6fa5-8b5b-4a1e-ae9b-8b5c6d89f571
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

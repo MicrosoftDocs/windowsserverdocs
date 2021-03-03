@@ -1,8 +1,8 @@
 ---
 title: Server Performance Advisor Pack Development Guide
 description: Server Performance Advisor Pack Development Guide
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ms.topic: article

@@ -3,8 +3,8 @@ title: begin backup
 description: Reference article for the begin backup command, which starts a full backup session.
 ms.topic: reference
 ms.assetid: 8a53b5d5-e24c-4fc3-a3d8-c622c1bbf8f0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
