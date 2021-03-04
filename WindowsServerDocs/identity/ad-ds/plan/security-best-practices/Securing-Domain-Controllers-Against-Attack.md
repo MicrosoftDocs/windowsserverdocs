@@ -11,7 +11,7 @@ ms.topic: article
 
 # Securing Domain Controllers Against Attack
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2022 Preview, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 *Law Number Three: If a bad guy has unrestricted physical access to your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](https://www.microsoft.com/en-us/msrc?rtc=1)
 
@@ -35,6 +35,9 @@ In datacenters, physical domain controllers should be installed in dedicated sec
 
 If you implement virtual domain controllers, you should ensure that domain controllers run on separate physical hosts than other virtual machines in the environment. Even if you use a third-party virtualization platform, consider deploying virtual domain controllers on Hyper-V Server in Windows Server 2012 or Windows Server 2008 R2, which provides a minimal attack surface and can be managed with the domain controllers it hosts rather than being managed with the rest of the virtualization hosts. If you implement System Center Virtual Machine Manager (SCVMM) for management of your virtualization infrastructure, you can delegate administration for the physical hosts on which domain controller virtual machines reside and the domain controllers themselves to authorized administrators. You should also consider separating the storage of virtual domain controllers to prevent storage administrators from accessing the virtual machine files.
 
+> [!NOTE]
+> If you intend to co-locate virtualized domain controllers with other, less sensitive virtual machines on the same physical virtualization servers (hosts), consider implementing a solution which enforces role-based separation of duties, such as [Shielded VMs](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms) in Hyper-V. This technology provides comprehensive protection against malicious or clueless fabric administrators (including virtualization, network, storage and backup administrators.) It leverages physical root of trust with remote attestation and secure VM provisioning, and effectively ensures level of security which is on par with a dedicated physical server.
+
 ### Branch Locations
 
 #### Physical Domain Controllers in branches
@@ -51,19 +54,14 @@ If your infrastructure includes locations in which only a single physical server
 
 ## Domain Controller Operating Systems
 
-You should run all domain controllers on the newest version of Windows Server that is supported within your organization and prioritize decommissioning of legacy operating systems in the domain controller population. By keeping your domain controllers current and eliminating legacy domain controllers, you can often take advantage of new functionality and security that may not be available in domains or forests with domain controllers running legacy operating system. Domain controllers should be freshly installed and promoted rather than upgraded from previous operating systems or server roles; that is, do not perform in-place upgrades of domain controllers or run the AD DS Installation Wizard on servers on which the operating system is not freshly installed. By implementing freshly installed domain controllers, you ensure that legacy files and settings are not inadvertently left on domain controllers, and you simplify the enforcement of consistent, secure domain controller configuration.
+You should run all domain controllers on the newest version of Windows Server that is supported within your organization and prioritize decommissioning of legacy operating systems in the domain controller population. By keeping your domain controllers current and eliminating legacy domain controllers, you can often take advantage of new functionality and security that may not be available in domains or forests with domain controllers running legacy operating system. 
+
+> [!NOTE]
+> As for any security-sensitive and single-purpose configuration, we recommend that you deploy the operating system in [Server Core](/windows-server/administration/server-core/what-is-server-core) installation option. It provides multiple benefits, such as minimizing attack surface, improving performance and reducing the likelihood of human error. It is recommended that all operations and management are performed **remotely,** from dedicated highly secured endpoints such as [Privileged access workstations (PAW)](/security/compass/privileged-access-devices) or [Secure administrative hosts](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-secure-administrative-hosts).
 
 ## Secure Configuration of Domain Controllers
 
-A number of freely available tools, some of which are installed by default in Windows, can be used to create an initial security configuration baseline for domain controllers that can subsequently be enforced by GPOs. These tools are described here.
-
-### Security Configuration Wizard
-
-All domain controllers should be locked down upon initial build. This can be achieved using the Security Configuration Wizard that ships natively in Windows Server to configure service, registry, system, and WFAS settings on a "base build" domain controller. Settings can be saved and exported to a GPO that can be linked to the Domain Controllers OU in each domain in the forest to enforce consistent configuration of domain controllers. If your domain contains multiple versions of Windows operating systems, you can configure Windows Management Instrumentation (WMI) filters to apply GPOs only to the domain controllers running the corresponding version of the operating system.
-
-### Microsoft Security Compliance Toolkit
-
-[Microsoft Security Compliance Toolkit](https://microsoft.com/download/details.aspx?id=55319) domain controller settings can be combined with Security Configuration Wizard settings to produce comprehensive configuration baselines for domain controllers that are deployed and enforced by GPOs deployed at the Domain Controllers OU in Active Directory.
+A number of freely available tools, some of which are installed by default in Windows, can be used to create an initial security configuration baseline for domain controllers that can subsequently be enforced by GPOs. These tools are described in [Administer security policy settings](/windows/security/threat-protection/security-policy-settings/administer-security-policy-settings) section of Microsoft operating systems documentation.
 
 ### RDP Restrictions
 
