@@ -32,7 +32,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 | /f | Forces deletion of read-only files. |
 | /s | Deletes specified files from the current directory and all subdirectories. Displays the names of the files as they are being deleted. |
 | /q | Specifies quiet mode. You are not prompted for delete confirmation. |
-| /a[:]`<attributes>` | Deletes files based on the following file attributes:<ul><li>**r** Read-only files</li><li>**h** Hidden files</li><li>**i** Not content indexed files</li><li>**s** System files</li><li>**a** Files ready for archiving</li><li>**l** Reparse points</li><li>**-** Used as a prefix meaning 'not'</li></ul>. |
+| /a[:]`<attributes>` | Deletes files based on the following file attributes:<ul><li>**r** Read-only files</li><li>**h** Hidden files</li><li>**i** Not content indexed files</li><li>**s** System files</li><li>**a** Files ready for archiving</li><li>**l** Reparse points</li><li>**-** Used as a prefix meaning 'not'</li></ul> |
 | /? | Displays help at the command prompt. |
 
 #### Remarks
