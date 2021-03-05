@@ -23,20 +23,23 @@ The following roles, role services, and features have been removed from the Serv
 - Fax Server (**Fax**)
 - MultiPoint Services (**MultiPointServerRole**)
 - Network Policy and Access Services (**NPAS**)
-- Windows Deployment Services (**WDS**) *(before Windows Server version 1803)*
+- Windows Deployment Services (**WDS**) *
 
 ## Role Services not in Server Core
-Note that some Remote Desktop role services are included in Server Core (Connection Broker, Licensing, Virtualization Host), but others are NOT (Gateway, RD Session Host, Web Access).
+Note only Remote Desktop Licenses services are still included in Server Core. Other features have been removed after Windows Server 1803 SAC / Windows Server 2019 LTSC.
+This removal does not affect the Server Core Installation option of Windows Server SAC or LTSC prior to these releases.
 
 - Print and Document Services \ Distributed Scan Server (**Print-Scan-Server**)
 - Print and Document Services \ Internet Printing (**Print-Internet**)
 - Remote Desktop Services \ Remote Desktop Gateway (**RDS-Gateway**)
 - Remote Desktop Services \ Remote Desktop Session Host (**RDS-RD-Server**)
 - Remote Desktop Services \ Remote Desktop Web Access (**RDS-Web-Access**)
+- Remote Desktop Services \ Remote Desktop Connection Broker **
+- Remote Desktop Services \ Remote Desktop Virtualization Host **
 - Role Service Web Server (IIS) \ Management Tools \ IIS Management Console (**Web-Mgmt-Console**)
 - Role Service Web Server (IIS) \ Management Tools \ IIS 6 Management Compatibility \ IIS 6 Management Console (**Web-Lgcy-Mgmt-Console**)
 - Windows Deployment Services \ Deployment Server (**WDS-Deployment**)
-- Windows Deployment Services \ Transport Server (**WDS-Transport**) *(before Windows Server version 1803)*
+- Windows Deployment Services \ Transport Server (**WDS-Transport**) *
 
 ## Features not in Server Core
 - Background Intelligent Transfer Service (BITS) \ IIS Server Extension (**BITS-IIS-Ext**)
@@ -46,6 +49,7 @@ Note that some Remote Desktop role services are included in Server Core (Connect
 - LPR Port Monitor (**LPR-Port-Monitor**)
 - Message Queuing \ Message Queuing Services \ Multicasting Support (**MSMQ-Multicasting**)
 - RAS Connection Manager Administration Kit (**CMAK**)
+- PowerShell ISE (**PowerShell-ISE**) ***
 - Remote Assistance (**Remote-Assistance**)
 - Remote Server Administration Tools \ Feature Administration Tools \ SMTP Server Tools (**RSAT-SMTP**)
 - Remote Server Administration Tools \ Feature Administration Tools \ BitLocker Drive Encryption Administration Utilities \ BitLocker Drive Encryption Tools (**RSAT-Feature-Tools-BitLocker-RemoteAdminTool**)
@@ -84,3 +88,8 @@ Note that some Remote Desktop role services are included in Server Core (Connect
 - Windows TIFF IFilter (**Windows-TIFF-IFilter**)
 - Wireless LAN Service (**Wireless-Networking**)
 - XPS Viewer (**XPS-Viewer**)
+
+
+* Services indicated with an asterisk ( * ) were **added** starting with Windows Server 1803 SAC / Windows Server 2019 LTSC
+* Services indicated with 2 asterisks ( ** ) were **removed** starting with Windows Server 1803 SAC / Windows Server 2019 LTSC
+* Services indicated with 3 asterisks ( *** ) were **added** starting with Feature on Demand 1903 on Server SAC or LTSC
