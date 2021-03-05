@@ -88,7 +88,7 @@ set testVar=test^^1
 
 The **set** command assigns everything that follows the equal sign (=) to the value of the variable. Therefore, if you type `set testVar=test^1`, you'll get the following result, `testVar=test^1`.
 
-To set an environment variable the value *TEST&1*, type:
+To set the value *TEST&1* for the environment variable `testVar`, type:
 
 ```
 set testVar=test^&1
