@@ -80,7 +80,7 @@ set /a <variable>=<expression>
 
 ## Examples
 
-To set an environment variable named `testVar` the value of *TEST^1*, type:
+To set the value *TEST^1* for the environment variable named `testVar`, type:
 
 ```
 set testVar=test^^1
