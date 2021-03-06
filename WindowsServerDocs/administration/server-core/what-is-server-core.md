@@ -71,21 +71,24 @@ The following table shows which applications are available *locally* on Server C
 | Taskmgr                            | available       | available                      |
 | Taskscheduler (taskschd.msc)       | with FOD 1903   | available                      |
 | Internet Explorer                  | with FOD 1903   | available                      |
-| Edge                               | not available   | available*                     |
+| Edge                               | not available   | available**                    |
 | Edge Chromium (Enterprise)         | optional install| optional install               |
 | Built-in help system               | not available   | available                      |
 | Windows 10 Shell                   | not available   | available                      |
 | Windows Media Player               | not available   | available                      |
 | PowerShell                         | available       | available                      |
-| PowerShell ISE                     | FOD 1903**      | available**                    |
+| PowerShell ISE                     | FOD 1903***     | available***                   |
 | PowerShell IME                     | available       | available                      |
 | Mstsc.exe                          | not available   | available                      |
 | Remote Desktop Services            | available       | available                      |
 | Hyper-V Manager                    | FOD 1903        | available                      |
 | WordPad\*                          | not available   | available                      |
 
-Features indicated with an asterisk ( * ) are end of support by March 21, 2021. Edge Chromium is a more versatile and modern Browser to replace Internet Explorer and EdgeHTML.
-Features indicated with 2 asterisks ( ** ) are officially deprecated. Please consider to use Visual Studio Code instead of ISE.
+\* To read .RTF  files locally stored on a Server Core SKU, users can copy the file(s) to a different Windows computer where WordPad is present.
+
+Features indicated with 2 asterisks ( \** ) are end of support by March 21, 2021. Edge Chromium is a more versatile and modern Browser to replace Internet Explorer and EdgeHTML.
+
+Features indicated with 3 asterisks ( \*** ) are officially deprecated. Please consider to use Visual Studio Code instead of ISE.
 
 >[!NOTE]
 > **Adding Feature on Demand can lower security and increase the amount of servicing due security updates needed OS restarts.**
@@ -95,12 +98,12 @@ Features indicated with 2 asterisks ( ** ) are officially deprecated. Please con
 > 
 > For modern Remote Administration please use in-built tools like PowerShell 5.1, Sconfig. or external Tools like web-based Windows Admin Center, or PowerShell 7 for enchanced capabilites.
 > 
-> Alternatively you can still use Server Manager with RSAT Tools on a remote management Client or Windows Server with a graphical experience.
+> Alternatively you can use Server Manager with RSAT Tools on a current remote management Client or current Windows Server with a graphical experience.
 
 
 For more information about what *is* included in Server Core, see [Roles, Role Services, and Features included in Windows Server - Server Core](server-core-roles-and-services.md). And for information about what *is not* included in Server Core, see [Roles, Role Services, and Features not included in Server Core](server-core-removed-roles.md)
 
-\* To read .RTF  files locally stored on a Server Core SKU, users can copy the file(s) to a different Windows computer where WordPad is present.
+
 
 ## Get started using Server Core
 
