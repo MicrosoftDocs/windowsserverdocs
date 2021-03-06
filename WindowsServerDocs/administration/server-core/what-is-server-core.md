@@ -122,4 +122,4 @@ Using Server Core:
 - [Configure memory dump files](server-core-memory-dump.md)
 
 Adding and managing Features on Demand (FOD):
-[Server Core App Compatibility Feature on Demand (FOD)](../../get-started-19/install-fod-19.md)
+- [Server Core App Compatibility Feature on Demand (FOD)](../../get-started-19/install-fod-19.md)
