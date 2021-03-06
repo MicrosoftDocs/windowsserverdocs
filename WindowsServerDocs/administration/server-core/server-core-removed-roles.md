@@ -90,6 +90,6 @@ This removal does not affect the Server Core Installation option of Windows Serv
 - XPS Viewer (**XPS-Viewer**)
 
 
-* Services indicated with an asterisk ( * ) were **added** starting with Windows Server 1803 SAC / Windows Server 2019 LTSC
-* Services indicated with 2 asterisks ( ** ) were **removed** starting with Windows Server 1803 SAC / Windows Server 2019 LTSC
-* Services indicated with 3 asterisks ( *** ) were **added** starting with Feature on Demand 1903 on Server SAC or LTSC
+* Services indicated with an asterisk ( * ) were **added** starting with Windows Server 1803 SAC / Windows Server 2019 LTSC.
+* Services indicated with 2 asterisks ( ** ) were **removed** starting with Windows Server 1803 SAC / Windows Server 2019 LTSC.
+* Services indicated with 3 asterisks ( *** ) were **added** starting with Feature on Demand 1903 on Server SAC or LTSC.
