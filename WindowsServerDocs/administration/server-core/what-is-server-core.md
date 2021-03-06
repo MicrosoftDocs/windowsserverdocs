@@ -49,38 +49,50 @@ The following table shows which applications are available *locally* on Server C
 |------------------------------------|-----------------|--------------------------------|
 | Command prompt                     | available       | available                      |
 | Windows PowerShell/ Microsoft .NET | available       | available                      |
-| Perfmon.exe                        | not available   | available                      |
+| Perfmon.exe                        | with FOD 1903   | available                      |
 | Windbg (GUI)                       | supported       | supported                      |
-| Resmon.exe                         | not available   | available                      |
+| Resmon.exe                         | with FOD 1903   | available                      |
 | Regedit                            | available       | available                      |
 | Fsutil.exe                         | available       | available                      |
 | Disksnapshot.exe                   | not available   | available                      |
 | Diskpart.exe                       | available       | available                      |
-| Diskmgmt.msc                       | not available   | available                      |
-| Devmgmt.msc                        | not available   | available                      |
+| Diskmgmt.msc                       | with FOD 1903   | available                      |
+| Devmgmt.msc                        | with FOD 1903   | available                      |
 | Server Manager                     | not available   | available                      |
-| Mmc.exe                            | not available   | available                      |
-| Eventvwr                           | not available   | available                      |
+| Mmc.exe                            | with FOD 1903   | available                      |
+| Eventvwr                           | with FOD 1903   | available                      |
 | Wevtutil (Event queries)           | available       | available                      |
 | Services.msc                       | not available   | available                      |
 | Control Panel                      | not available   | available                      |
 | Windows Update (GUI)               | not available   | available                      |
-| Windows Explorer                   | not available   | available                      |
+| Windows Explorer                   | with FOD 1903   | available                      |
 | Taskbar                            | not available   | available                      |
 | Taskbar notifications              | not available   | available                      |
 | Taskmgr                            | available       | available                      |
-| Internet Explorer or Edge          | not available   | available                      |
+| Taskscheduler (taskschd.msc)       | with FOD 1903   | available                      |
+| Internet Explorer                  | with FOD 1903   | available                      |
+| Edge                               | not available   | available*                     |
+| Edge Chromium (Enterprise)         | optional install| optional install               |
 | Built-in help system               | not available   | available                      |
 | Windows 10 Shell                   | not available   | available                      |
 | Windows Media Player               | not available   | available                      |
 | PowerShell                         | available       | available                      |
-| PowerShell ISE                     | not available   | available                      |
+| PowerShell ISE                     | FOD 1903**      | available**                    |
 | PowerShell IME                     | available       | available                      |
 | Mstsc.exe                          | not available   | available                      |
 | Remote Desktop Services            | available       | available                      |
-| Hyper-V Manager                    | not available   | available                      |
+| Hyper-V Manager                    | FOD 1903        | available                      |
 | WordPad\*                          | not available   | available                      |
 
+Features indicated with an asterisk ( * ) are end of support by March 21, 2021. Edge Chromium is a more versatile and modern Browser to replace Internet Explorer and EdgeHTML.
+Features indicated with 2 asterisks ( ** ) are officially deprecated. Please consider to use Visual Studio Code instead of ISE.
+
+>[!NOTE]
+> The idea of installing of Feature on Demand on Server Core is to a balance between security and a smaller footprint and application compatibility.
+> We do not encourage to install Feature on Demand per default, nor to enchance local administration of Server Core, but to mitigate possible application compatibility issues, of 3rd application application hosted on Server Core installation that will only run as intended when some of the removed featureset of Server Core is added back by Feature on Demand. 
+> For modern Remote Administration please use in-built tools like PowerShell 5.1, Sconfig. or External Tools like Windows Admin Center via web browser.
+> Alternatively Server Manager with RSAT Tools on a remote management client or server with a graphical experience.
+> Adding Feature on Demand can lower security and increase the amount of servicing through updates and restarts.
 
 For more information about what *is* included in Server Core, see [Roles, Role Services, and Features included in Windows Server - Server Core](server-core-roles-and-services.md). And for information about what *is not* included in Server Core, see [Roles, Role Services, and Features not included in Server Core](server-core-removed-roles.md)
 
