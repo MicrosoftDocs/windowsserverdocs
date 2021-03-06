@@ -88,11 +88,15 @@ Features indicated with an asterisk ( * ) are end of support by March 21, 2021. 
 Features indicated with 2 asterisks ( ** ) are officially deprecated. Please consider to use Visual Studio Code instead of ISE.
 
 >[!NOTE]
+> **Adding Feature on Demand can lower security and increase the amount of servicing due security updates needed OS restarts.**
 > The idea of installing of Feature on Demand on Server Core is to a balance between security and a smaller footprint and application compatibility.
+> 
 > We do not encourage to install Feature on Demand per default, nor to enchance local administration of Server Core, but to mitigate possible application compatibility issues, of 3rd application application hosted on Server Core installation that will only run as intended when some of the removed featureset of Server Core is added back by Feature on Demand. 
-> For modern Remote Administration please use in-built tools like PowerShell 5.1, Sconfig. or External Tools like Windows Admin Center via web browser.
-> Alternatively Server Manager with RSAT Tools on a remote management client or server with a graphical experience.
-> Adding Feature on Demand can lower security and increase the amount of servicing through updates and restarts.
+> 
+> For modern Remote Administration please use in-built tools like PowerShell 5.1, Sconfig. or external Tools like web-based Windows Admin Center, or PowerShell 7 for enchanced capabilites.
+> 
+> Alternatively you can still use Server Manager with RSAT Tools on a remote management Client or Windows Server with a graphical experience.
+
 
 For more information about what *is* included in Server Core, see [Roles, Role Services, and Features included in Windows Server - Server Core](server-core-roles-and-services.md). And for information about what *is not* included in Server Core, see [Roles, Role Services, and Features not included in Server Core](server-core-removed-roles.md)
 
