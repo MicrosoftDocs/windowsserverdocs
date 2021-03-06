@@ -94,7 +94,7 @@ Features indicated with 3 asterisks ( \*** ) are officially deprecated. Please c
 > **Adding Feature on Demand can lower security and increase the amount of servicing due security updates needed OS restarts.**
 > The idea of installing of Feature on Demand on Server Core is to a balance between security and a smaller footprint and application compatibility.
 > 
-> We do not encourage to install Feature on Demand per default, nor to enchance local administration of Server Core, but to mitigate possible application compatibility issues, of 3rd application application hosted on Server Core installation that will only run as intended when some of the removed featureset of Server Core is added back by Feature on Demand. 
+> We do not encourage to install Feature on Demand per default, nor to improve local administration capabilities of Server Core, but to mitigate possible application compatibility issues, of 3rd party application application hosted on Server Core installation that will only run as intended when some of the removed featureset of Server Core is added back by Feature on Demand. 
 > 
 > For modern Remote Administration please use in-built tools like PowerShell 5.1, Sconfig. or external Tools like web-based Windows Admin Center, or PowerShell 7 for enchanced capabilites.
 > 
