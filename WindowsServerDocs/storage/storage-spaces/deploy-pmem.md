@@ -153,7 +153,7 @@ Storage Spaces Direct on Windows Server 2019 supports using persistent memory as
 There are two methods for accessing persistent memory. They are:
 
 1. **Direct access (DAX)**, which operates like memory to get the lowest latency. The app directly modifies the persistent memory, bypassing the stack. Note that you can only use DAX in combination with NTFS.
-1. **Block access**, which operates like storage for app compatibility. In this configuraion, the data flows through the stack. You can use this configuration in combination with NTFS and ReFS.
+1. **Block access**, which operates like storage for app compatibility. In this configuration, the data flows through the stack. You can use this configuration in combination with NTFS and ReFS.
 
 The following figure shows an example of a DAX configuration:
 
