@@ -88,7 +88,7 @@ The following table shows which applications are available *locally* on Server C
 
 Features indicated with 2 asterisks ( \** ) reached end of support by March 21, 2021. Edge Chromium is a more versatile and modern Browser, replacing Internet Explorer and EdgeHTML.
 
-Features indicated with 3 asterisks ( \*** ) are officially deprecated. Please consider to use Visual Studio Code instead of ISE.
+Features indicated with 3 asterisks ( \*** ) are officially deprecated. Please consider using Visual Studio Code instead of ISE.
 
 > [!NOTE]
 > **Adding Features on Demand can lower security and increase the amount of servicing due security updates needed OS restarts.**
