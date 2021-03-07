@@ -98,7 +98,7 @@ Features indicated with 3 asterisks ( \*** ) are officially deprecated. Please c
 > 
 > For modern Remote Administration, please use built-in tools like PowerShell 5.1 or Sconfig.exe, or use external Tools, like web-based Windows Admin Center or PowerShell 7, for enhanced capabilities.
 > 
-> Alternatively you can use Server Manager with RSAT Tools on a current remote management Client or current Windows Server with a graphical experience.
+> Alternatively, you can use Server Manager with RSAT Tools on a current remote management Client or on a current Windows Server with Desktop Experience.
 
 
 For more information about what *is* included in Server Core, see [Roles, Role Services, and Features included in Windows Server - Server Core](server-core-roles-and-services.md). And for information about what *is not* included in Server Core, see [Roles, Role Services, and Features not included in Server Core](server-core-removed-roles.md)
