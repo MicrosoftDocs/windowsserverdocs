@@ -96,7 +96,7 @@ Features indicated with 3 asterisks ( \*** ) are officially deprecated. Please c
 > 
 > We do not encourage installing Features on Demand by default, nor to improve local administration capabilities of Server Core, but to mitigate possible application compatibility issues, of 3rd party applications hosted on a Server Core installation, which might only run as intended when some of the removed feature sets of Server Core is re-added by installing Features on Demand.
 > 
-> For modern Remote Administration please use in-built tools like PowerShell 5.1, Sconfig. or external Tools like web-based Windows Admin Center, or PowerShell 7 for enchanced capabilites.
+> For modern Remote Administration, please use built-in tools like PowerShell 5.1 or Sconfig.exe, or use external Tools, like web-based Windows Admin Center or PowerShell 7, for enhanced capabilities.
 > 
 > Alternatively you can use Server Manager with RSAT Tools on a current remote management Client or current Windows Server with a graphical experience.
 
