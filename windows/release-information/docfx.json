@@ -43,7 +43,8 @@
       "breadcrumb_path": "/windows/release-information/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "None",
-	  "hide_comments": true
+	  "hide_comments": true,
+	  "searchScope": ["Windows-10"]
     },
     "fileMetadata": {
       "open_to_public_contributors": {
