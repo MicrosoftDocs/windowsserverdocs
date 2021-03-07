@@ -84,7 +84,7 @@ The following table shows which applications are available *locally* on Server C
 | Hyper-V Manager                    | FOD 1903        | available                      |
 | WordPad\*                          | not available   | available                      |
 
-\* To read .RTF  files locally stored on a Server Core SKU, users can copy the file(s) to a different Windows computer where WordPad is present.
+\* To read .RTF files locally stored on a Server Core SKU, users can copy the file(s) to a different Windows computer where WordPad is present.
 
 Features indicated with 2 asterisks ( \** ) are end of support by March 21, 2021. Edge Chromium is a more versatile and modern Browser to replace Internet Explorer and EdgeHTML.
 
