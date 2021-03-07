@@ -92,7 +92,7 @@ Features indicated with 3 asterisks ( \*** ) are officially deprecated. Please c
 
 > [!NOTE]
 > **Adding Features on Demand can lower security and increase the amount of servicing due security updates needed OS restarts.**
-> The idea of installing of Features on Demand on Server Core is to a balance between security and a smaller footprint and application compatibility.
+> The idea of installing Features on Demand on Server Core is to a balance between security, a smaller footprint, and application compatibility.
 > 
 > We do not encourage to install Features on Demand per default, nor to improve local administration capabilities of Server Core, but to mitigate possible application compatibility issues, of 3rd party applications hosted on a Server Core installation, which might only run as intended when some of the removed featuresets of Server Core is added back by installing Features on Demand.
 > 
