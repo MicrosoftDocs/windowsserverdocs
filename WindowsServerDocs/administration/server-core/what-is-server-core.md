@@ -90,7 +90,7 @@ Features indicated with 2 asterisks ( \** ) are end of support by March 21, 2021
 
 Features indicated with 3 asterisks ( \*** ) are officially deprecated. Please consider to use Visual Studio Code instead of ISE.
 
->[!NOTE]
+> [!NOTE]
 > **Adding Features on Demand can lower security and increase the amount of servicing due security updates needed OS restarts.**
 > The idea of installing of Features on Demand on Server Core is to a balance between security and a smaller footprint and application compatibility.
 > 
