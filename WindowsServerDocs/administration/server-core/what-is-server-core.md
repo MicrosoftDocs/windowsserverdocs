@@ -86,7 +86,7 @@ The following table shows which applications are available *locally* on Server C
 
 \* To read .RTF files locally stored on a Server Core SKU, users can copy the file(s) to a different Windows computer where WordPad is present.
 
-Features indicated with 2 asterisks ( \** ) are end of support by March 21, 2021. Edge Chromium is a more versatile and modern Browser to replace Internet Explorer and EdgeHTML.
+Features indicated with 2 asterisks ( \** ) reached end of support by March 21, 2021. Edge Chromium is a more versatile and modern Browser, replacing Internet Explorer and EdgeHTML.
 
 Features indicated with 3 asterisks ( \*** ) are officially deprecated. Please consider to use Visual Studio Code instead of ISE.
 
