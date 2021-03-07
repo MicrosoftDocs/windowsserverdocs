@@ -27,8 +27,8 @@ The following roles, role services, and features have been removed from the Serv
 
 ## Role Services not in Server Core
 > [!NOTE]
-Remote Desktop Licenses services are still included in Server Core. Other features have been removed after Windows Server 1803 SAC / Windows Server 2019 LTSC.
-This removal does not affect the availability in Windows Server SAC or LTSC prior to the named releases.
+> Remote Desktop Licenses services are still included in Server Core. Other features have been removed after Windows Server 1803 SAC / Windows Server 2019 LTSC.
+> This removal does not affect the availability in Windows Server SAC or LTSC prior to the named releases.
 
 - Print and Document Services \ Distributed Scan Server (**Print-Scan-Server**)
 - Print and Document Services \ Internet Printing (**Print-Internet**)
