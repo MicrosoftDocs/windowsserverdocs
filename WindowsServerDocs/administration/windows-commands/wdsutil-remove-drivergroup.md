@@ -3,8 +3,8 @@ title: remove-DriverGroup
 description: Reference article for remove-DriverGroup, which removes a driver group from a server.
 ms.topic: reference
 ms.assetid: 1fefe9df-9782-433c-8abe-3f1a35e50da2
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

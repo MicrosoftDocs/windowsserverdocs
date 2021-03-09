@@ -3,8 +3,8 @@ title: rpcinfo
 description: Reference article for the rpcinfo command, which lists the programs on a remote computer.
 ms.topic: reference
 ms.assetid: 7c342232-a8f0-42ff-8f11-d18c4981f5ca
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 07/11/2018
 ---

@@ -3,8 +3,8 @@ title: Getting Started with Group Managed Service Accounts
 description: Learn how to enable and use group Managed Service Accounts in Windows Server 2012.
 ms.topic: article
 ms.assetid: 7130ad73-9688-4f64-aca1-46a9187a46cf
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---

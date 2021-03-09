@@ -4,8 +4,8 @@ description: Learn how to view Access Control user roles in the IPAM client cons
 manager: brianlic
 ms.topic: article
 ms.assetid: da8dce90-b54c-4ded-a48a-0cda5ccf1d8a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # View Roles and Role Permissions

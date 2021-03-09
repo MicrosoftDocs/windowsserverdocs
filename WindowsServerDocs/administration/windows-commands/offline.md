@@ -3,8 +3,8 @@ title: offline
 description: Reference article for the offline command, which takes an online disk or volume to the offline state.
 ms.topic: reference
 ms.assetid: 44b265b2-fb08-4e7a-8939-c004258196b2
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

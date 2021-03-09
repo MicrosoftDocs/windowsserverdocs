@@ -3,8 +3,8 @@ title: scwcmd view
 description: Reference article for the scwcmd view command, which renders an .xml file by using a specified .xsl transform.
 ms.topic: reference
 ms.assetid: 7995959a-d93e-4865-a6a0-2ab18c2bb47f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

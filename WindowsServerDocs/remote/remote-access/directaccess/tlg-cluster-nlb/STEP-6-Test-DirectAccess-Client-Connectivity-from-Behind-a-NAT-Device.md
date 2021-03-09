@@ -4,8 +4,8 @@ description: Learn how to test DirectAccess Teredo connectivity and IP-HTTPS con
 manager: brianlic
 ms.topic: article
 ms.assetid: aded2881-99ed-4f18-868b-b765ab926597
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # STEP 6 Test DirectAccess Client Connectivity from Behind a NAT Device

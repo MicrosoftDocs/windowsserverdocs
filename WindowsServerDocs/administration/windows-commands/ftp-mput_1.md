@@ -3,8 +3,8 @@ title: ftp mput
 description: Reference article for the ftp mput command, which copies local files to the remote computer using the current file transfer type.
 ms.topic: reference
 ms.assetid: 980f15e7-7cf1-4813-9946-a8cc4edfb198
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,8 +4,8 @@ description: This topic provides an overview of the Core Network Guide, which al
 manager: brianlic
 ms.topic: article
 ms.assetid: 9b3ef3eb-4246-4e0e-8bf1-53224ca5f2f9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 

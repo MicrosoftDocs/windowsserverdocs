@@ -3,8 +3,8 @@ title: wdsutil uninitialize-server
 description: Reference article for uninitialize-Server, which reverts changes made to the server during the initial server configuration.
 ms.topic: reference
 ms.assetid: 015efb04-fe84-469f-bd81-49d0046296b2
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

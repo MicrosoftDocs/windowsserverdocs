@@ -3,8 +3,8 @@ title: Configuring Additional LSA Protection
 description: Learn how to configure additional protection for the Local Security Authority (LSA) process to prevent code injection that could compromise credentials.
 ms.topic: article
 ms.assetid: 038e7c2b-c032-491f-8727-6f3f01116ef9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---

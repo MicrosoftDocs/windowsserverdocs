@@ -2,8 +2,8 @@
 title: Licensing content for Windows Server and the Windows Admin Center
 description: Learn about the Windows Admin Center licensing agreements.
 ms.topic: reference
-author: eross-msft
-ms.author: lizross
+author: JasonGerend
+ms.author: jgerend
 ms.date: 06/11/2019
 ---
 

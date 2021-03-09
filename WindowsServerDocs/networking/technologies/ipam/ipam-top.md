@@ -4,8 +4,8 @@ description: This topic provides links to information about IPAM in Windows Serv
 manager: brianlic
 ms.topic: article
 ms.assetid: 6a6291ba-0d39-4434-a8c5-0f0369860faa
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # IP Address Management (IPAM)

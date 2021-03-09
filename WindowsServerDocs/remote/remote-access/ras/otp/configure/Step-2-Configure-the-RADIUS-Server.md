@@ -4,8 +4,8 @@ description: Learn how to configure the RADIUS server.
 manager: brianlic
 ms.topic: article
 ms.assetid: 0326818f-9144-496c-b946-f82be4eefbd3
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Step 2 Configure the RADIUS Server

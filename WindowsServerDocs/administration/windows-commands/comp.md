@@ -3,8 +3,8 @@ title: comp
 description: Reference article for the comp command, which compares the contents of two files or sets of files byte-by-byte.
 ms.topic: reference
 ms.assetid: 40319d23-704d-4da1-be93-8259547275d0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

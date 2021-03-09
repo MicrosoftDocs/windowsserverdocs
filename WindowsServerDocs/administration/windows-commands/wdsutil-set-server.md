@@ -3,8 +3,8 @@ title: wdsutil set-server
 description: Reference article for Subcommand set-Server, which configured the settings for a Windows Deployment Services server.
 ms.topic: reference
 ms.assetid: da55c29d-a94a-4d73-877b-af480f906ca0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

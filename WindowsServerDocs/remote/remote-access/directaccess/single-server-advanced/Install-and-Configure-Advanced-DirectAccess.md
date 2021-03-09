@@ -4,8 +4,8 @@ description: Learn about the configuration steps required to deploy a single Dir
 manager: brianlic
 ms.topic: article
 ms.assetid: f45e5b6f-fc66-4deb-bed4-a1baa3cc6dae
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Install and Configure Advanced DirectAccess

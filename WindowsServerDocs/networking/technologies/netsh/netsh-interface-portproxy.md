@@ -3,8 +3,8 @@ title: Netsh commands for interface portproxy
 description: Use the netsh interface portproxy commands to act as proxies between IPv4 and IPv6 networks and applications.
 ms.topic: article
 manager: dougkim
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/30/2018
 ---
 
@@ -24,7 +24,7 @@ Use the **netsh interface portproxy** commands to act as proxies between IPv4 an
 When writing batch files or scripts using these commands, each command must start with **netsh interface portproxy**. For example, when using the **delete v4tov6** command to specify that the portproxy server deletes an IPv4 port and address from the list of IPv4 addresses for which the server listens, the batch file or script must use the following syntax:
 
 ```PowerShell
-netsh interface portproxy delete v4tov6listenport= {Integer | ServiceName} [[listenaddress=] {IPv4Address| HostName}] [[protocol=]tcp]
+netsh interface portproxy delete v4tov6 listenport= {Integer | ServiceName} [[listenaddress=] {IPv4Address| HostName}] [[protocol=]tcp]
 ```
 
 The available netsh interface portproxy commands are:

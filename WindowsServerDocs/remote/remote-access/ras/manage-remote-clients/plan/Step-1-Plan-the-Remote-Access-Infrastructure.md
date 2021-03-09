@@ -4,8 +4,8 @@ description: Learn about the steps for planning an infrastructure that you can u
 manager: brianlic
 ms.topic: article
 ms.assetid: a1ce7af5-f3fe-4fc9-82e8-926800e37bc1
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Step 1 Plan the Remote Access Infrastructure

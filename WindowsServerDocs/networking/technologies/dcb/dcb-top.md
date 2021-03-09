@@ -4,8 +4,8 @@ description: You can use this topic for introductory information about Data Cent
 ms.topic: article
 ms.assetid: da58f312-bd3b-4bb6-98ca-6177869dd6ad
 manager: brianlic
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 12/08/2020
 ---
 

@@ -3,8 +3,8 @@ title: select partition
 description: Reference article for the select partition command, which selects the specified partition and shifts the focus to it.
 ms.topic: reference
 ms.assetid: 25f70083-b8f7-4a8e-9b34-4b3ffbe06670
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

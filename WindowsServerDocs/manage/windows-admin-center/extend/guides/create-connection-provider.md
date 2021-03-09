@@ -308,10 +308,10 @@ The full TypeScript class for implementing a connection provider is below. Note 
 ``` ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AppContextService } from '@msft-sme/shell/angular';
-import { Connection, ConnectionUtility } from '@msft-sme/shell/core';
-import { EnvironmentModule } from '@msft-sme/shell/dist/core/manifest/environment-modules';
-import { RpcUpdateData } from '@msft-sme/shell/dist/core/rpc/rpc-base';
+import { AppContextService } from '@microsoft/windows-admin-center-sdk/shell/angular';
+import { Connection, ConnectionUtility } from '@microsoft/windows-admin-center-sdk/shell/core';
+import { EnvironmentModule } from '@microsoft/windows-admin-center-sdk/shell/dist/core/manifest/environment-modules';
+import { RpcUpdateData } from '@microsoft/windows-admin-center-sdk/shell/dist/core/rpc/rpc-base';
 import { Strings } from '../../generated/strings';
 
 @Component({

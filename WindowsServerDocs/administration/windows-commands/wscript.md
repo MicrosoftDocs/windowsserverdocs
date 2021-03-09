@@ -3,8 +3,8 @@ title: wscript
 description: Reference article for wscript, which provides an environment in which users can execute scripts in a variety of languages that use a variety of object models to perform tasks.
 ms.topic: reference
 ms.assetid: 2fbaf193-cdbd-414c-84c9-bb5720f84c29
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 08/21/2018
 ---

@@ -3,8 +3,8 @@ title: clean
 description: Reference article for the Diskpart clean command, which removes all partitions or volume formatting from the disk with focus.
 ms.topic: reference
 ms.assetid: 9bbe6fd3-e07e-487b-9035-910957a1d326
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

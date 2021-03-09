@@ -4,8 +4,8 @@ description: This topic provides an overview of the Remote Access server role in
 manager: dougkim
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 05/18/2018
 ---
 

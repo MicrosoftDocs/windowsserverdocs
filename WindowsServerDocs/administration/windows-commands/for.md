@@ -3,8 +3,8 @@ title: for
 description: Reference article for the for command, which runs a specified command for each file, within a set of files.
 ms.topic: reference
 ms.assetid: e275726c-035f-4a74-8062-013c37f5ded1
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

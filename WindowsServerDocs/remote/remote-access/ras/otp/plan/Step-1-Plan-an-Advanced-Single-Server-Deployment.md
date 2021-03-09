@@ -4,8 +4,8 @@ description: Learn how to plan and configure an advanced single server deploymen
 manager: brianlic
 ms.topic: article
 ms.assetid: 96538cbb-7d6c-4860-9ec7-b1834284ad10
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Step 1 Plan an Advanced Single Server Deployment

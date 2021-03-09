@@ -3,8 +3,8 @@ title: bitsadmin util and version
 description: Reference article for the bitsadmin util and version command, which displays the version of BITS service.
 ms.topic: reference
 ms.assetid: 98f17328-dfbd-4cbb-93c1-b8d424bc3f0a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

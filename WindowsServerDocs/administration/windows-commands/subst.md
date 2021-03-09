@@ -3,8 +3,8 @@ title: subst
 description: Reference article for the subst command, which associates a path with a drive letter.
 ms.topic: reference
 ms.assetid: 3e69234c-2312-4343-868b-afc1017c622a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

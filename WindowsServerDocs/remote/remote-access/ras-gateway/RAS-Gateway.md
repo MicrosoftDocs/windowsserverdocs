@@ -4,8 +4,8 @@ description: This topic, which is intended for Information Technology (IT) profe
 manager: dougkim
 ms.topic: article
 ms.assetid: acaa46b7-09b1-4707-9562-116df8db17eb
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 05/23/2018
 ---
 

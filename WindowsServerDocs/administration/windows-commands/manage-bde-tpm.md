@@ -3,8 +3,8 @@ title: manage-bde tpm
 description: Reference article for the manage-bde tpm command, which configures the computer's Trusted Platform Module (TPM).
 ms.topic: reference
 ms.assetid: 11a8530d-edd7-4fe3-ae81-b943766760fe
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

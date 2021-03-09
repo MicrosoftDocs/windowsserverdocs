@@ -3,8 +3,8 @@ title: bitsadmin cache and info
 description: Reference article for the bitsadmin cache and info command, which dumps a specific cache entry.
 ms.topic: reference
 ms.assetid: 15975cbf-dba6-49ca-a725-d15ce1952de5
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

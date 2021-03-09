@@ -208,6 +208,10 @@ The following features are supported in Events:
 - View event details
 - Clear events from the log
 - Export events from the log
+- Create workspaces (preview)
+- Save workspaces (preview)
+- Delete workspaces (preview)
+- View events in a stacked bar format (preview)
 
 [**View feedback and proposed features for Events**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BEvents%5D).
 

@@ -3,8 +3,8 @@ title: wdsutil get-driverpackagefile
 description: Reference article for wdsutil get-driverpackagefile, which displays information about a driver package, including the drivers and files it contains.
 ms.topic: reference
 ms.assetid: f01a2c67-7e9c-4aad-b625-383f5a1fca25
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -3,8 +3,8 @@ title: telnet
 description: Reference article for the telnet command, which communicates with a computer running the telnet server service.
 ms.topic: reference
 ms.assetid: b70a6156-9413-4300-84ce-a34c467e2b4e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
