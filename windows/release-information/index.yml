@@ -42,14 +42,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "Take action: March 2021 security update available for all supported versions of Windows"
+          url: https://support.microsoft.com/en-us/help/5000802
+          itemType: whats-new
         - text: "Microsoft Ignite 2021 shows off the latest Windows capabilities"
-          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/bg-p/Windows10Blog
+          url: https://blogs.windows.com/windowsexperience/2021/03/01/a-guide-to-windows-devices-at-microsoft-ignite-2021/
           itemType: whats-new
         - text: "February 2021 Windows non-security preview \"C\" release for Windows 10, version 20H2 is available"
           url: https://support.microsoft.com/help/4601382
-          itemType: whats-new
-        - text: "Understanding the new Windows update history experience"
-          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/understanding-the-new-windows-update-history-experience/ba-p/2146594
           itemType: whats-new
 
       footerLink:
