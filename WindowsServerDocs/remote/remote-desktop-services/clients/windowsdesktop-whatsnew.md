@@ -27,7 +27,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
-- Updated background install functionality to perform silently for the client auto-update feature.
+- Updated background installation functionality to perform silently for the client auto-update feature.
 - Added the option to allow multiple desktop sessions from the client.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 
