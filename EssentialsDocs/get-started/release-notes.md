@@ -27,4 +27,4 @@ Before you connect a client computer to the server, make sure that you open Wind
 ## Enabling TLS 1.2 for Windows Server Essentials
 In order to comply with the latest compliance standards for the Federal Risk and Authorization Management Program (FedRAMP), Microsoft plans to disable Transport Layer Security (TLS) versions 1.1 and 1.0 and enable TLS 1.2 in Windows Server Essentials. This would be done for both Client and Server computers.
 
-Please follow the steps mentioned in this released communication : https://docs.microsoft.com/en-us/mem/configmgr/core/plan-design/security/enable-tls-1-2-client
+To do enable TLS 1.2, see [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client).
