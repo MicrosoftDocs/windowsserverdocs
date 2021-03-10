@@ -51,7 +51,7 @@ This section shows how to register the Native App as a public client and Web API
 
      ![Screenshot of the Choose Access Control Policy page of the Add Application Group Wizard showing the Permit everyone option highlighted.](media/adfs-msal-native-app-web-api/native5.png)
 
-  6. On the Configure Application Permissions screen, make sure **openid** is selected and click **Next**.
+  6. On the Configure Application Permissions screen, make sure **openid** and **allatclaims** are selected and click **Next**.
 
      ![Screenshot of the Configure Application Permissions page of the Add Application Group Wizard showing open I D selected.](media/adfs-msal-native-app-web-api/native6.png)
 
@@ -71,13 +71,13 @@ This section shows how to register the Native App as a public client and Web API
 
       ![Screenshot of the NativeAppToWebApi - Web A P I Properties dialog box showing the Issuance Transform Rules tab.](media/adfs-msal-native-app-web-api/native9.png)
 
-  12. On Add Transform Claim Rule Wizard, select **Transform an Incoming Claim** from the **Claim rule template:** dropdown and click **Next**.
+  12. On Add Transform Claim Rule Wizard, select **Send LDAP Attributes as Claims** from the **Claim rule template:** dropdown and click **Next**.
 
-      ![Screenshot of the Select Rule Template page of the Add Transform Claim Rule Wizard showing the Transform an Incoming Claim option selected.](media/adfs-msal-native-app-web-api/native10.png)
+      ![Screenshot of the Select Rule Template page of the Add Transform Claim Rule Wizard showing the Send LDAP Attributes as Claims option selected.](media/adfs-msal-native-app-web-api/native10.png)
 
-  13. Enter **NameID** in **Claim rule name:** field. Select **Name** for **Incoming claim type:**, **Name ID** for **Outgoing claim type:** and **Common Name** for **Outgoing name ID format:**. click **Finish**.
+  13. Enter **Issue preferred_username and Name ID** in **Claim rule name:** field. Select **Active Directory** under **Attribute store**. Select **User-Principal-Name** under **LDAP Attribute** and map to **preferred_username** under **Outgoing Claim Type**, select **SAM-Account-Name** and map to **Name ID**. click **OK**.
 
-      ![Screenshot of the Configure Rule page of the Add Transform Claim Rule Wizard showing the configuration explained above.](media/adfs-msal-native-app-web-api/native11.png)
+      ![Screenshot of the Configure Rule page of the Send LDAP Attributes as Claims Wizard showing the configuration explained above.](media/adfs-msal-native-app-web-api/native11.png)
 
   14. Click OK on NativeAppToWebApi – Web API Properties screen and then NativeAppToWebApi Properties screen.
 
@@ -89,7 +89,7 @@ This section shows how to configure a Native App to sign-in user and retrieve to
 2. Open the sample using Visual Studio
 
 3. Open the App.config file. Modify the following:
-   - ida:Authority - enter h`ttps://[your AD FS hostname]/adfs`
+   - ida:Authority - enter `https://[your AD FS hostname]/adfs`
    - ida:ClientId - enter the **Client Identifier** value from #3 in App Registration in AD FS section above.
    - ida:RedirectUri - enter the **Redirect URI** value from #3 in App Registration in AD FS section above.
    - todo:TodoListResourceId – enter the **Identifier** value from #4 in App Registration in AD FS section above
@@ -112,7 +112,7 @@ This section shows how to test the sample configured above.
 
      ![Screenshot of the list that appears when you right-click the solution with the Set Start Up Projects option highlighted.](media/adfs-msal-native-app-web-api/native14.png)
 
-  3. On the Properties pages make sure **Action** is set to **Start** for each of the Projects
+  3. On the Properties pages make sure **Action** is set to **Start** for each of the Projects, and **TodoListService** project should be moved to the top. 
 
      ![Screenshot of the Solution Property Pages dialog box showing the Multiple startup project option selected and all of the projects' actions set to Start.](media/adfs-msal-native-app-web-api/native15.png)
 
