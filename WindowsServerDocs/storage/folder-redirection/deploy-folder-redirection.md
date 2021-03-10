@@ -244,7 +244,7 @@ To test Folder Redirection, sign in to a computer by using a user account that i
 
 ## Appendix A: Checklist for deploying Folder Redirection
 
-| | |
+|Complete |Item |
 | - | - |
 | |**Prepare domain** |
 | |- Join computers to domain |
