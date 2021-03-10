@@ -112,7 +112,7 @@ This section shows how to test the sample configured above.
 
      ![Screenshot of the list that appears when you right-click the solution with the Set Start Up Projects option highlighted.](media/adfs-msal-native-app-web-api/native14.png)
 
-  3. On the Properties pages make sure **Action** is set to **Start** for each of the Projects, and **TodoListService** project should be moved to the top. 
+  3. On the Properties pages make sure **Action** is set to **Start** for each of the Projects.
 
      ![Screenshot of the Solution Property Pages dialog box showing the Multiple startup project option selected and all of the projects' actions set to Start.](media/adfs-msal-native-app-web-api/native15.png)
 
