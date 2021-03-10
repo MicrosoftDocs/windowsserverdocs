@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/27/2021
+ms.date: 03/10/2021
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -13,6 +13,18 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+
+## Updates for version 10.5.2
+
+*Date published: 02/15/2021*
+
+In this release, we've refreshed the application icon and made the following changes:
+
+- Added HTTP proxy support for RD Gateway connections.
+- Fixed an issue where an RD Gateway connection would disconnect and a message with error code 0x3000064 would appear.
+- Addressed a bug where workspace discovery and download wouldn't work if you included the port number in HTTP GET requests.
+
+This is the last release that will be compatible with macOS version 10.13. If you're interested in trying out the latest pre-release builds of the macOS client, you can install beta updates from the [Microsoft Remote Desktop Beta](https://aka.ms/rdmacbeta).
 
 ## Updates for version 10.5.1
 
