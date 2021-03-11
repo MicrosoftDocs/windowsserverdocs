@@ -25,6 +25,7 @@ Find information on known issues and the status of the rollout for Windows 10, v
 ## Known issues
 <div>This table offers a summary of current active issues and those issues that have been resolved in the last 30 days.</div><br>
 <table border ='0'><thead><tr><th width='62%'>Summary</th><th width='15%'>Originating update</th><th width='8%'>Status</th><th width='15%' class='has-no-wrap'>Last updated</th></tr></thead><tbody>
+      <tr><td><div id='1570msg'></div><a href = '#1570msgdesc'><b>Error when attempting to print to certain printers</b></a><br>You might receive an APC_INDEX_MISMATCH error with a blue screen when attempting to print.<br></td><td class='has-no-wrap'>OS Build 19041.867<br> <a href = 'https://support.microsoft.com/help/5000802' target = '_blank' > KB5000802</a><br>2021-03-09</td><td>Investigating<br></td><td>2021-03-10 <br>18:04 PT</td></tr>
       <tr><td><div id='1546msg'></div><a href = '#1546msgdesc'><b>Some games might fail to open, or you might receive an error</b></a><br>You might have issues with some Direct3D games when using in-game overlay feature of Discord.<br></td><td class='has-no-wrap'>OS Build 19041.1000<br> <a href = 'https://support.microsoft.com/help/4598291' target = '_blank' > KB4598291</a><br>2021-02-02</td><td>Resolved External<br></td><td>2021-02-08 <br>19:16 PT</td></tr>
       <tr><td><div id='417msg'></div><a href = '#417msgdesc'><b>Errors or issues during or after updating devices with Conexant ISST audio drivers</b></a><br>Devices with affected Conexant ISST audio drivers might receive an error or have issues with Windows 10, version 2004.<br></td><td class='has-no-wrap'>N/A <br> <br></td><td>Confirmed<br></td><td>2021-01-22 <br>13:43 PT</td></tr>
       <tr><td><div id='377msg'></div><a href = '#377msgdesc'><b>Errors or issues during or after updating devices with certain Conexant audio drivers</b></a><br>Devices with affected Conexant or Synaptics audio drivers might receive a stop error with a blue screen.<br></td><td class='has-no-wrap'>N/A <br> <br></td><td>Confirmed<br></td><td>2021-01-05 <br>17:37 PT</td></tr>
@@ -32,6 +33,14 @@ Find information on known issues and the status of the rollout for Windows 10, v
       </table>
 
 ## Issue details
+
+
+<h3>March 2021</h3><table border ='0' class='has-text-wrap'>
+<tr><td style='border-left-width:0px;border-right-width:0px;border-bottom-width:0px;font-size:1.5rem !important;margin-top:0px;margin-bottom:0px;' class='has-margin-top-none has-margin-bottom-none has-padding-left-none has-padding-right-none' colspan='3' width='100%'><div id='1570msgdesc'></div><h4 class='has-margin-top-none has-margin-bottom-none has-margin-right-none has-margin-left-none has-padding-left-none has-padding-right-none has-padding-top-none has-padding-bottom-none'>Error when attempting to print to certain printers</h4></td></tr>
+<tr><td width='30%' class='has-margin-top-small has-padding-top-small has-margin-bottom-small has-padding-bottom-small'><b>Status</b></td><td width='30%' class='has-margin-top-small has-padding-top-small has-margin-bottom-small has-padding-bottom-small'><b>Originating update</b></td><td class='has-margin-top-small has-padding-top-small has-margin-bottom-small has-padding-bottom-small'><b>History</b></td></tr><td class='has-no-wrap'>Investigating</td><td class='has-no-wrap'>OS Build 19041.867<br> <a href = 'https://support.microsoft.com/help/5000802' target = '_blank' > KB5000802</a><br>2021-03-09</td><td class='has-no-wrap'>Last updated: 2021-03-10, 06:04 PT<br>Opened: 2021-03-10, 06:04 PT</td></tr>
+<tr><td width='100%' colspan='3'><div>After installing <a href='https://support.microsoft.com/help/5000802' target='_blank'> KB5000802</a>, you might receive an APC_INDEX_MISMATCH error with a blue screen when attempting to print to certain printers in some apps.</div><div><br></div><div><strong>Affected platforms:</strong></div><ul><li>Client: Windows 10, version 20H2; Windows 10, version 2004; Windows 10, version 1909; Windows 10, version 1809; Windows 10 Enterprise LTSC 2019; Windows 10, version 1803</li><li>Server: Windows Server, version 20H2; Windows Server, version 2004; Windows Server, version 1909; Windows Server, version 1809; Windows Server 2019; Windows Server, version 1803</li></ul><div></div><div><strong>Next steps: </strong>We are presently investigating and will provide an update when more information is available.</div><div align='right'><a href ='#known-issues'>Back to top</a></div></td></tr>
+</table>
+<br>
 
 
 <h3>February 2021</h3><table border ='0' class='has-text-wrap'>

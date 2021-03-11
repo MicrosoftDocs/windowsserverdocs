@@ -25,10 +25,19 @@ Find information on known issues for Windows 10, version 1803. Looking for a spe
 ## Known issues
 <div>This table offers a summary of current active issues and those issues that have been resolved in the last 30 days.</div><br>
 <table border ='0'><thead><tr><th width='62%'>Summary</th><th width='15%'>Originating update</th><th width='8%'>Status</th><th width='15%' class='has-no-wrap'>Last updated</th></tr></thead><tbody>
+      <tr><td><div id='1570msg'></div><a href = '#1570msgdesc'><b>Error when attempting to print to certain printers</b></a><br>You might receive an APC_INDEX_MISMATCH error with a blue screen when attempting to print.<br></td><td class='has-no-wrap'>OS Build 17134.2087<br> <a href = 'https://support.microsoft.com/help/5000809' target = '_blank' > KB5000809</a><br>2021-03-09</td><td>Investigating<br></td><td>2021-03-10 <br>18:04 PT</td></tr>
       <tr><td><div id='1560msg'></div><a href = '#1560msgdesc'><b>Windows Presentation Foundation (WPF) apps might close, or you may receive an error</b></a><br>Microsoft and third-party applications which use the .Net UI framework called WPF might have issues.<br></td><td class='has-no-wrap'>OS Build 17134.2026<br> <a href = 'https://support.microsoft.com/help/4601354' target = '_blank' > KB4601354</a><br>2021-02-09</td><td>Mitigated<br></td><td>2021-02-11 <br>20:41 PT</td></tr></tbody>
       </table>
 
 ## Issue details
+
+
+<h3>March 2021</h3><table border ='0' class='has-text-wrap'>
+<tr><td style='border-left-width:0px;border-right-width:0px;border-bottom-width:0px;font-size:1.5rem !important;margin-top:0px;margin-bottom:0px;' class='has-margin-top-none has-margin-bottom-none has-padding-left-none has-padding-right-none' colspan='3' width='100%'><div id='1570msgdesc'></div><h4 class='has-margin-top-none has-margin-bottom-none has-margin-right-none has-margin-left-none has-padding-left-none has-padding-right-none has-padding-top-none has-padding-bottom-none'>Error when attempting to print to certain printers</h4></td></tr>
+<tr><td width='30%' class='has-margin-top-small has-padding-top-small has-margin-bottom-small has-padding-bottom-small'><b>Status</b></td><td width='30%' class='has-margin-top-small has-padding-top-small has-margin-bottom-small has-padding-bottom-small'><b>Originating update</b></td><td class='has-margin-top-small has-padding-top-small has-margin-bottom-small has-padding-bottom-small'><b>History</b></td></tr><td class='has-no-wrap'>Investigating</td><td class='has-no-wrap'>OS Build 17134.2087<br> <a href = 'https://support.microsoft.com/help/5000809' target = '_blank' > KB5000809</a><br>2021-03-09</td><td class='has-no-wrap'>Last updated: 2021-03-10, 06:04 PT<br>Opened: 2021-03-10, 06:04 PT</td></tr>
+<tr><td width='100%' colspan='3'><div>After installing <a href='https://support.microsoft.com/help/5000809' target='_blank'> KB5000809</a>, you might receive an APC_INDEX_MISMATCH error with a blue screen when attempting to print to certain printers in some apps.</div><div><br></div><div><strong>Affected platforms:</strong></div><ul><li>Client: Windows 10, version 20H2; Windows 10, version 2004; Windows 10, version 1909; Windows 10, version 1809; Windows 10 Enterprise LTSC 2019; Windows 10, version 1803</li><li>Server: Windows Server, version 20H2; Windows Server, version 2004; Windows Server, version 1909; Windows Server, version 1809; Windows Server 2019; Windows Server, version 1803</li></ul><div></div><div><strong>Next steps: </strong>We are presently investigating and will provide an update when more information is available.</div><div align='right'><a href ='#known-issues'>Back to top</a></div></td></tr>
+</table>
+<br>
 
 
 <h3>February 2021</h3><table border ='0' class='has-text-wrap'>
