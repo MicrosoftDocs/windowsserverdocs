@@ -14,36 +14,26 @@ ms.localizationpriority: medium
 
 This article describes the requirements for deploying the Folder Redirection and Offline Files features together, including the steps that you need to follow to control access to the redirected files.
 
+> [!IMPORTANT]
+> Because of the security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016)), we updated [Step 5: Create a GPO for Folder Redirection](#step-5-create-a-gpo-for-folder-redirection) of this article so that Windows can properly apply the Folder Redirection policy (and not revert redirected folders on affected client computers).
+
 For a list of recent changes to this article, see [Change history](#change-history).
 
-## Administration requirements
+## Prerequisites
+
+### Administration requirements
 
 - To administer Folder Redirection, you must be signed in as a member of the Domain Administrators security group, the Enterprise Administrators security group, or the Group Policy Creator Owners security group.
 - A computer must be available that has Group Policy Management and Active Directory Administration Center installed.
 
-## Client requirements
+### File server requirements
 
-- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server (Semi-annual Channel), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
-- Client computers must be joined to the Active Directory Domain Services (AD DS) that you are managing.
-
-> [!NOTE]  
-> Some newer features in Folder Redirection have additional client computer and Active Directory schema requirements. For more info, see [Deploy primary computers](deploy-primary-computers.md), [Disable Offline Files on folders](disable-offline-files-on-folders.md), [Enable Always Offline mode](enable-always-offline.md), and [Enable optimized folder moving](enable-optimized-moving.md).
-
-## Configure user groups and storage
-
-The file server is the computer that hosts the redirected folders. Follow these steps to configure the components that support Folder Redirection.
+The file server is the computer that hosts the redirected folders.
 
 > [!IMPORTANT]  
-> Folder Redirection requires an x64-based or x86-based computer; it is not supported by Windows&reg; RT.  
+> Folder Redirection requires that the file server be an x64-based or x86-based computer; it is not supported by Windows&reg; RT.  
 
-1. [Choose the type of file server configuration to use](#fileserverandgroup-1).  
-2. [(Separate server configuration) Create a folder redirection security group](#fileserverandgroup-2).  
-3. [Restrict access to the file server](#fileserverandgroup-3).  
-4. [Create a file share for redirected folders](#fileserverandgroup-4).  
-5. [(Co-located server configuration) Pre-create the folders for new users](#fileserverandgroup-5).  
-6. [Configure other storage features to work with Folder Redirection file shares](#fileserverandgroup-6).  
-
-### <a id="fileserverandgroup-1"></a>Step 1: Choose the type of file server configuration to use
+#### Choose the type of file server configuration to use
 
 Your remote access configuration affects how you configure the file server, file shares, and policies. You can configure one of two different scenarios:
 
@@ -53,9 +43,24 @@ Your remote access configuration affects how you configure the file server, file
 > [!IMPORTANT]  
 > Most of the procedures in the rest of this section apply to both configurations. The procedures or steps that are specific to one configuration or the other are identified as *separate server* or *co-located server* procedures or steps.
 
-### <a id="fileserverandgroup-2"></a>Step 2 (Separate server configuration): Create a folder redirection security group
+#### Restrict access to the file server
 
-Use this procedure if you are using the separate server configuration (the file server and RD Session Host run on separate computers).
+Apply the following changes to the file server, as appropriate for your configuration:
+
+- **All configurations.** Make sure that only required IT administrators have administrative access to the file server. The procedure in the next step configures access for the individual file shares.
+- **Separate server configuration**. Disable the Remote Desktop Services service (termserv).
+
+### Client requirements
+
+- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server (Semi-annual Channel), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
+- Client computers must be joined to the Active Directory Domain Services (AD DS) that you are managing.
+
+> [!NOTE]  
+> Some newer features in Folder Redirection have additional client computer and Active Directory schema requirements. For more info, see [Deploy primary computers](deploy-primary-computers.md), [Disable Offline Files on folders](disable-offline-files-on-folders.md), [Enable Always Offline mode](enable-always-offline.md), and [Enable optimized folder moving](enable-optimized-moving.md).
+
+## <a id="ss-securitygroup"></a>Step 1 (Separate server configuration): Create a folder redirection security group
+
+Use this procedure if you are using the separate server configuration (the file server and Remote Desktop Services run on separate computers).
 
 This procedure creates a security group that contains all users to which you want to apply Folder Redirection policy settings.
 
@@ -69,14 +74,7 @@ This procedure creates a security group that contains all users to which you wan
 5. In the **Members** section, select **Add**. The **Select Users, Contacts, Computers, Service Accounts or Groups** dialog box appears.
 6. Enter the names of the users or groups to which you want to deploy Folder Redirection, select **OK**, and then select **OK** again.
 
-### <a id="fileserverandgroup-3"></a>Step 3: Restrict access to the file server
-
-Apply the following changes, as appropriate for your configuration:
-
-- **All configurations.** Make sure that only required IT administrators have administrative access to the file server. The procedure in the next step configures access for the individual file shares.
-- **Separate server configuration**. Disable the Remote Desktop Services service (termserv).
-
-### <a id="fileserverandgroup-4"></a>Step 4: Create a file share for redirected folders
+## Step 2: Create a file share for redirected folders
 
 If you do not already have a file share for redirected folders, use the following procedure to create a file share on a server that runs Windows Server 2012 or a later version.
 
@@ -130,15 +128,17 @@ If you do not already have a file share for redirected folders, use the followin
     - Optionally, select a quota to apply to users of the share.
 11. On the **Confirmation** page, select **Create.**
 
-### <a id="fileserverandgroup-5"></a>Step 5 (co-located server configuration): Pre-create the folders for new users
+## <a id="cls-usernames"></a>Step 3 (co-located server configuration): Pre-create the folders for new users
 
-1. In the file share that you created in [Step 4](#fileserverandgroup-4), navigate to the file share's root folder.
+1. In the file share that you created in the previous procedure, navigate to the file share's root folder.
 2. Create a new folder. You can use one of the following methods:
    - Right-click the root folder, and then select **New** > **Folder**. For the name of the folder, enter the user name of the new user.
    - Alternatively, to use Windows PowerShell to create the new folder, open a PowerShell Command Prompt window and run the following cmdlet:
+
      ```powershell
       New-Item -Path 'c:\shares\frdeploy\<newuser>' -ItemType Directory
      ```
+
      > [!NOTE]  
      > In this command, \<*newuser*> represents the user name of the new user.
 
@@ -157,7 +157,7 @@ If you do not already have a file share for redirected folders, use the followin
 
    ![Setting the permissions for newuser’s folder under the root of the Folder Redirection share](.\media\deploy-folder-redirection\co-located-config-folder-redirect-perms-newuser.jpg)
 
-### <a id="fileserverandgroup-6"></a>Step 6: Configure other storage features to work with Folder Redirection file shares
+## Step 4: Configure Folder Redirection file shares to work with other storage features
 
 To make sure that Folder Redirection and Offline Files interact correctly with other storage features, check the following configurations.
 
@@ -165,16 +165,9 @@ To make sure that Folder Redirection and Offline Files interact correctly with o
 - If the file share uses DFS Replication to replicate the contents with another server, users must be able to access only the source server to prevent users from making conflicting edits on different servers.
 - When using a clustered file share, disable continuous availability on the file share to avoid performance issues with Folder Redirection and Offline Files. Additionally, Offline Files might not transition to offline mode for 3-6 minutes after a user loses access to a continuously available file share, which could frustrate users who aren’t yet using the Always Offline mode of Offline Files.
 
-## Configure Group Policy
+## Step 5: Create a GPO for Folder Redirection
 
-These procedures create and configure the Group Policy object (GPO) that manages the Folder Redirection and Offline Files functionality. Follow these steps to configure Group Policy for Folder Redirection.
-
-1. [Create a GPO for Folder Redirection](#gpo-1).
-2. [Configure the Group Policy settings for Folder Redirection and Offline Files](#gpo-2).
-
-### <a id="gpo-1"></a>Step 1: Create a GPO for Folder Redirection
-
-If you do not already have a GPO that manages Folder Redirection settings, use the following procedure to create one.
+If you do not already have a Group Policy object (GPO) that manages the Folder Redirection and Offline Files functionality, use the following procedure to create one.
 
 1. On a computer that has Group Policy Management installed, open Server Manager.
 2. Select **Tools** > **Group Policy Management**.
@@ -184,14 +177,14 @@ If you do not already have a GPO that manages Folder Redirection settings, use t
 6. Select the GPO. Select **Scope** > **Security Filtering** > **Authenticated Users**, and then select **Remove** to prevent the GPO from being applied to everyone.
 7. In the **Security Filtering** section, select **Add**.
 8. In the **Select User, Computer, or Group** dialog box, do one of the following, depending on your configuration:
-   - **Separate server configuration**. Enter the name of the security group that you created in [the previous section](#fileserverandgroup-2) (for example, Folder Redirection Users), and then select **OK**.
-   - **Co-located server configuration**. Enter the user name that you used for the user folder in [the previous section](#fileserverandgroup-5) and then select **OK**.
+   - **Separate server configuration**. Enter the name of the security group that you created in [Create a folder redirection security group](#ss-securitygroup) (for example, Folder Redirection Users), and then select **OK**.
+   - **Co-located server configuration**. Enter the user name that you used for the user folder in [Pre-create the folders for new users](#cls-usernames) and then select **OK**.
 
 9. Select **Delegation** > **Add**, and then enter **Authenticated Users**. Select **OK**, and then select **OK** again to accept the default **Read** permission.
    > [!IMPORTANT]  
    > This step is necessary because of security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016), you now must give the Authenticated Users group delegated Read permissions to the Folder Redirection GPO - otherwise the GPO won't get applied to users, or if it's already applied, the GPO is removed, redirecting folders back to the local PC. For more info, see [Deploying Group Policy Security Update MS16-072](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/deploying-group-policy-security-update-ms16-072-kb3163622/ba-p/400434).
 
-### <a id="gpo-2"></a>Step 2: Configure the Group Policy settings for Folder Redirection and Offline Files
+## Step 6: Configure the Group Policy settings for Folder Redirection and Offline Files
 
 After you create a GPO for Folder Redirection settings, follow these steps to edit the Group Policy settings that enable and configure Folder Redirection.
 
@@ -207,18 +200,11 @@ After you create a GPO for Folder Redirection settings, follow these steps to ed
    > [!NOTE]  
    > To apply Folder Redirection to client computers that run Windows XP or Windows Server 2003, select the **Settings** tab and then select the **Also apply redirection policy to Windows 2000, Windows 2000 Server, Windows XP, and Windows Server 2003 operating systems** checkbox.
 
-5. In the **Target folder location** section, select **Create a folder for each user under the root path** and then in the **Root Path** box, enter the path to the file share that stores the redirected folders, for example: **\\\\fs1.corp.contoso.com\\users$**.
+5. In the **Target folder location** section, select **Create a folder for each user under the root path** and then in the **Root Path** box, enter the path to the file share that stores the redirected folders, for example: **\\\\`fs1.corp.contoso.com`\\`users$`**.
 6. (Optional) Select the **Settings** tab, and in the **Policy Removal** section, select **Redirect the folder back to the local userprofile location when the policy is removed** (this setting can help make Folder Redirection behave more predictably for administrators and users).
 7. Select **OK**, and then select **Yes** in the **Warning** dialog box.
 
-## Enable Group Policy and test Folder Redirection
-
-Follow these steps to enable and test your configuration.
-
-1. [Enable the Folder Redirection GPO](#test-1).
-2. [Test Folder Redirection](#test-2).
-
-### <a id="test-1"></a>Step 1: Enable the Folder Redirection GPO
+## Step 7: Enable the Folder Redirection GPO
 
 After you finish configuring the Folder Redirection Group Policy settings, the next step is to enable the GPO. This change allows the GPO to be applied to affected users.
 > [!TIP]  
@@ -227,7 +213,7 @@ After you finish configuring the Folder Redirection Group Policy settings, the n
 1. Open Group Policy Management.
 2. Right-click the GPO that you created, and then select **Link Enabled**. A checkbox appears next to the menu item.
 
-### <a id="test-2"></a>Step 2: Test Folder Redirection
+## Step 8: Test Folder Redirection
 
 To test Folder Redirection, sign in to a computer by using a user account that is configured to use redirected folders. Then confirm that the folders and profiles are redirected.
 
@@ -288,8 +274,8 @@ The following table summarizes some of the most important changes to this topic.
 
 |Date |Description |Reason |
 | --- | --- | --- |
-|March 9, 2021 |Updated content, added instructions for different configurations, and moved from "Previous Versions" content to current Windows content. |Changes required to improve access control in different configurations. |
-|January 18, 2017 |Added a step to [Create a GPO for Folder Redirection](#gpo-1) to delegate Read permission to Authenticated Users, which is now required because of a Group Policy security update. |Customer feedback. |
+|March 9, 2021 |Added instructions for different configurations. |Changes required to improve access control in different configurations. |
+|January 18, 2017 |Added a step to [Create a GPO for Folder Redirection](#step-5-create-a-gpo-for-folder-redirection) to delegate Read permission to Authenticated Users, which is now required because of a Group Policy security update. |Customer feedback. |
 
 ## More information
 
