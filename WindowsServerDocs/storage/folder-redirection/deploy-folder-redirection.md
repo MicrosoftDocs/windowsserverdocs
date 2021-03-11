@@ -121,7 +121,7 @@ If you do not already have a file share for redirected folders, use the followin
       |Creator/Owner |Full Control |Subfolders and files only |
       |Other groups and accounts |None (remove any other accounts from the access control list) | |
 
-      ![Advanced permissions page showing the permissions configuration for the co-located server configuration.](.\media\deploy-folder-redirection\co-located-config-folder-redirect-perms.jpg)
+      ![Advanced permissions page showing the permissions configuration for the co-located server configuration.](.\media\deploy-folder-redirection\co-located-config-folder-redirect-perms.png)
 10. If you chose the **SMB Share - Advanced** profile earlier in this procedure, follow these additional steps:
 
     - On the **Management Properties** page, select the **User Files** Folder Usage value.
@@ -155,7 +155,7 @@ If you do not already have a file share for redirected folders, use the followin
 
    <sup>1</sup> newuser *represents the user name of the new user's account*.  
 
-   ![Setting the permissions for newuser’s folder under the root of the Folder Redirection share](.\media\deploy-folder-redirection\co-located-config-folder-redirect-perms-newuser.jpg)
+   ![Setting the permissions for newuser’s folder under the root of the Folder Redirection share](.\media\deploy-folder-redirection\co-located-config-folder-redirect-perms-newuser.png)
 
 ## Step 4: Configure Folder Redirection file shares to work with other storage features
 
