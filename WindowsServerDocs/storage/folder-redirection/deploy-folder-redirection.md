@@ -37,8 +37,8 @@ The file server is the computer that hosts the redirected folders.
 
 Your remote access configuration affects how you configure the file server, file shares, and policies. You can configure one of two different scenarios:
 
-- **Separate servers**. The most straightforward scenario is to use different computers for the file server and for Remote Desktop Services (also known as the Terminal Services).
-- **Co-located servers**. In this scenario, a single computer functions as both the file server and the RD Session Host.
+- **Separate servers**. The most straightforward scenario is to use different computers for the file server and for Remote Desktop Services (RDS, also known as the Terminal Services).
+- **Co-located servers**. In this scenario, a single computer functions as both the file server and RDS.
 
 > [!IMPORTANT]  
 > Most of the procedures in the rest of this section apply to both configurations. The procedures or steps that are specific to one configuration or the other are identified as *separate server* or *co-located server* procedures or steps.
