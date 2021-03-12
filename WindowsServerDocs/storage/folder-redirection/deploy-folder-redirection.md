@@ -37,8 +37,6 @@ The file server is the computer that hosts the redirected folders.
 
 Your remote access configuration affects how you configure the file server, file shares, and policies. You can configure one of two different scenarios:
 
-- **Separate servers**. The most straightforward scenario is to use different computers for the file server and for Remote Desktop Services (RDS, also known as the Terminal Services).
-- **Co-located servers**. In this scenario, a single computer functions as both the file server and RDS.
 
 > [!IMPORTANT]  
 > Most of the procedures in the rest of this section apply to both configurations. The procedures or steps that are specific to one configuration or the other are identified as *separate server* or *co-located server* procedures or steps.
@@ -48,7 +46,7 @@ Your remote access configuration affects how you configure the file server, file
 Apply the following changes to the file server, as appropriate for your configuration:
 
 - **All configurations.** Make sure that only required IT administrators have administrative access to the file server. The procedure in the next step configures access for the individual file shares.
-- **Separate server configuration**. Disable the Remote Desktop Services service (termserv).
+- **Servers not also hosting Remote Desktop Services**. Disable the Remote Desktop Services service (termserv) on your file server if it's not also hosting Remote Desktop Services.
 
 ### Client requirements
 
@@ -58,9 +56,9 @@ Apply the following changes to the file server, as appropriate for your configur
 > [!NOTE]  
 > Some newer features in Folder Redirection have additional client computer and Active Directory schema requirements. For more info, see [Deploy primary computers](deploy-primary-computers.md), [Disable Offline Files on folders](disable-offline-files-on-folders.md), [Enable Always Offline mode](enable-always-offline.md), and [Enable optimized folder moving](enable-optimized-moving.md).
 
-## <a id="ss-securitygroup"></a>Step 1 (Separate server configuration): Create a folder redirection security group
+## <a id="ss-securitygroup"></a>Step 1: Create a folder redirection security group
 
-Use this procedure if you are using the separate server configuration (the file server and Remote Desktop Services run on separate computers).
+If you are running Remote Desktop Services on the file server, skip this step and instead assign permissions to the users when pre-creating folders for new users.
 
 This procedure creates a security group that contains all users to which you want to apply Folder Redirection policy settings.
 
@@ -98,7 +96,7 @@ If you do not already have a file share for redirected folders, use the followin
    > [!IMPORTANT]  
    > The permissions that you use depend on your remote access configuration, so make sure that you use the correct table.
 
-   - **Separate server configuration:**  
+   - **Permissions for file servers without Remote Desktop Services:**  
   
       |User Account |Permission |Applies to |
       | --- | --- | --- |
@@ -112,7 +110,7 @@ If you do not already have a file share for redirected folders, use the followin
 
       ![Advanced permissions page showing the permissions configuration for the separate server configuration.](.\media\deploy-folder-redirection\setting-the-permissions-for-the-redirected-folders-share.png)
 
-   - **Co-located server configuration**  
+   - **Permissions for file servers with Remote Desktop Services**  
   
       |User Account or Role |Permission |Applies to |
       | --- | --- | --- |
@@ -128,8 +126,8 @@ If you do not already have a file share for redirected folders, use the followin
     - Optionally, select a quota to apply to users of the share.
 11. On the **Confirmation** page, select **Create.**
 
-## <a id="cls-usernames"></a>Step 3 (co-located server configuration): Pre-create the folders for new users
-
+## <a id="cls-usernames"></a>Step 3: Pre-create folders for new users on servers that also host Remote Desktop Services
+If the file server also hosts Remote Desktop Services, use the following procedure to pre-create folders for new users and assign the appropriate permissions to the folders.
 1. In the file share that you created in the previous procedure, navigate to the file share's root folder.
 2. Create a new folder. You can use one of the following methods:
    - Right-click the root folder, and then select **New** > **Folder**. For the name of the folder, enter the user name of the new user.
@@ -177,8 +175,8 @@ If you do not already have a Group Policy object (GPO) that manages the Folder R
 6. Select the GPO. Select **Scope** > **Security Filtering** > **Authenticated Users**, and then select **Remove** to prevent the GPO from being applied to everyone.
 7. In the **Security Filtering** section, select **Add**.
 8. In the **Select User, Computer, or Group** dialog box, do one of the following, depending on your configuration:
-   - **Separate server configuration**. Enter the name of the security group that you created in [Create a folder redirection security group](#ss-securitygroup) (for example, Folder Redirection Users), and then select **OK**.
-   - **Co-located server configuration**. Enter the user name that you used for the user folder in [Pre-create the folders for new users](#cls-usernames) and then select **OK**.
+   - **File servers without Remote Desktop Services**. Enter the name of the security group that you created in [Create a folder redirection security group](#ss-securitygroup) (for example, Folder Redirection Users), and then select **OK**.
+   - **File servers with Remote Desktop Services**. Enter the user name that you used for the user folder in [Pre-create the folders for new users](#cls-usernames) and then select **OK**.
 
 9. Select **Delegation** > **Add**, and then enter **Authenticated Users**. Select **OK**, and then select **OK** again to accept the default **Read** permission.
    > [!IMPORTANT]  
