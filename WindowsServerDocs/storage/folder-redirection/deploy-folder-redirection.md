@@ -105,7 +105,7 @@ If you do not already have a file share for redirected folders, use the followin
       |System |Full Control |This folder, subfolders, and files |
       |Administrators |Full Control |This folder only |
       |Creator/Owner |Full Control |Subfolders and files only |
-      |Security group of users who need to put data on share (Folder Redirection Users) |List folder/read data<sup>1</sup><br />Create&nbsp;folders/append data<sup>1</sup><br />Read attributes<sup>1</sup><br />Read extended attributes<sup>1</sup><br />Read<sup>1</sup><br />Traverse folder/execute file<sup>1</sup> |This&nbsp;folder&nbsp;only |
+      |Security group of users who need to put data on the share (Folder Redirection Users) |List folder/read data<sup>1</sup><br />Create&nbsp;folders/append data<sup>1</sup><br />Read attributes<sup>1</sup><br />Read extended attributes<sup>1</sup><br />Read<sup>1</sup><br />Traverse folder/execute file<sup>1</sup> |This&nbsp;folder&nbsp;only |
       |Other groups and accounts |None (Remove any accounts that this table does not list) | |
 
       *<sup>1</sup> Advanced permissions*
