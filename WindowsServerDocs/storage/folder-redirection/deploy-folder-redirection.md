@@ -235,26 +235,21 @@ To test Folder Redirection, sign in to a computer by using a user account that i
 
 |Complete |Task or item |
 | - | - |
-| |**Prepare domain** |
+| |**Prepare domain and other prerequisites** |
 | |- Join computers to domain |
 | |- Create user accounts |
-| |**Configure user groups and storage** |
-| |1. Choose the type of file server configuration to use (separate server configuration or co-located server configuration. |
-| |2. Separate server configuration: Create a folder redirection security group. |
-| |   - Group name: |
-| |   - Members: |
-| |3. Restrict access to the file server. |
-| |4. Create a file share for redirected folders. |
+| |- Check file server prerequisites and compatibility with other services |
+| |- Does the file server also host Remote Desktop Services? |
+| |- Restrict access to the file server |
+| |**Step 1: Create a folder redirection security group** |
+| |- Group name: |
+| |- Members: |
+| |**Step 2: Create a file share for redirected folders** |
 | |- File share name: |
-| |5. Co-located server configuration: Pre-create the folders for new users. |
-| |6. Configure other storage features to work with Folder Redirection file shares. |
-| |- DFS Namespaces |
-| |- DFS Replication |
-| |- Clustering |
-| |**Configure Group Policy** |
-| |1. Create a GPO for Folder Redirection. |
+| |**Step 3: Pre-create folders for new users on servers that also host Remote Desktop Services** |
+| |**Step 4: Create a GPO for Folder Redirection** |
 | |- GPO name: |
-| |2. Configure the Group Policy settings for Folder Redirection and Offline Files. |
+| |**Step 5: Configure the Group Policy settings for Folder Redirection and Offline Files** |
 | |- Redirected folders: |
 | |- Windows 2000, Windows XP, and Windows Server 2003 support enabled? |
 | |- Offline Files enabled? (enabled by default on Windows client computers) |
@@ -267,9 +262,8 @@ To test Folder Redirection, sign in to a computer by using a user account that i
 | |- Location of user and primary computer mappings: |
 | |- (Optional) Enable primary computer support for Folder Redirection |
 | |- (Optional) Enable primary computer support for Roaming User Profiles |
-| |**Enable Group Policy and test Folder Redirection** |
-| |1. Enable the Folder Redirection GPO. |
-| |2. Test Folder Redirection. |
+| |**Step 6: Enable the Folder Redirection GPO** |
+| |**Step 7: Test Folder Redirection** |
 
 ## Change history
 
@@ -278,7 +272,7 @@ The following table summarizes some of the most important changes to this topic.
 |Date |Description |Reason |
 | --- | --- | --- |
 |March 9, 2021 |Added instructions for different configurations. |Changes required to improve access control in different configurations. |
-|January 18, 2017 |Added a step to [Create a GPO for Folder Redirection](#step-5-create-a-gpo-for-folder-redirection) to delegate Read permission to Authenticated Users, which is now required because of a Group Policy security update. |Customer feedback. |
+|January 18, 2017 |Added a step to [Create a GPO for Folder Redirection](#step-4-create-a-gpo-for-folder-redirection) to delegate Read permission to Authenticated Users, which is now required because of a Group Policy security update. |Customer feedback. |
 
 ## More information
 
