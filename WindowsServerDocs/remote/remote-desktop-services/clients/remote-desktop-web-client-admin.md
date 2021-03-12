@@ -232,7 +232,7 @@ Follow these steps if the RD Session Host server is different from the RD Broker
     >
     > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
 
-3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to `https://+:3392/rdp/`.
+3. Open the Windows Registry (regedit) and navigate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to `https://+:3392/rdp/`.
 
 ### General Observations
 
