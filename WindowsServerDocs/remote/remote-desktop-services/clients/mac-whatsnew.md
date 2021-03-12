@@ -30,7 +30,7 @@ This is the last release that will be compatible with macOS version 10.13. If yo
 
 *Date published: 1/29/2021*
 
-It's time for our first release of the year! In this version we made the following changes:
+It's time for our first release of the year! In this version, we made the following changes:
 
 - Addressed an issue where the UI would stop resolving a workspace name during subscription.
 - Fixed an in-session bug where graphics updates would stall while the client continued to send input.
@@ -40,7 +40,7 @@ It's time for our first release of the year! In this version we made the followi
 
 *Date published: 12/02/2020*
 
-It's time for another update. Thanks to everyone who reported bugs and worked with us to diagnose and fix issues. In this version we made the following changes:
+It's time for another update. Thanks to everyone who reported bugs and worked with us to diagnose and fix issues. In this version, we made the following changes:
 
 - You can now edit the display, device, and folder redirection settings of published PC connections.
 - Remote app windows now shrink to the dock when minimized.
@@ -118,7 +118,7 @@ Thanks again to everyone who reported bugs and took the time to help us diagnose
 
 *Date published: 4/6/20*
 
-In this release we've made some changes to improve interoperability with the [Windows Virtual Desktop service](https://azure.microsoft.com/services/virtual-desktop/). In addition, we've included the following updates:
+In this release, we've made some changes to improve interoperability with the [Windows Virtual Desktop service](https://azure.microsoft.com/services/virtual-desktop/). In addition, we've included the following updates:
 
 - Control+Option+Delete now triggers the Ctrl+Alt+Del sequence (previously required pressing the Fn key).
 - Fixed the keyboard mode notification color scheme for Light mode.
@@ -277,13 +277,13 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 
 *Date published: 3/30/2019*
 
-- In this release we addressed instability caused by the recent macOS 10.14.4 update. We also fixed mispaints that appeared when decoding AVC codec data encoded by a server using NVIDIA hardware.
+In this release, we addressed instability caused by the recent macOS 10.14.4 update. We also fixed mispaints that appeared when decoding AVC codec data encoded by a server using NVIDIA hardware.
 
 ## Updates for version 10.2.9
 
 *Date published: 3/6/2019*
 
-- In this release we fixed an RD gateway connectivity issue that can occur when server redirection takes place.
+- In this release, we fixed an RD gateway connectivity issue that can occur when server redirection takes place.
 - We also addressed an RD gateway regression caused by the 10.2.8 update.
 
 ## Updates for version 10.2.8
@@ -300,7 +300,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 
 *Date published: 2/6/2019*
 
-- In this release we addressed graphics mispaints (caused by a server encoding bug) that appeared when using AVC444 mode.
+In this release, we addressed graphics mispaints (caused by a server encoding bug) that appeared when using AVC444 mode.
 
 ## Updates for version 10.2.6
 

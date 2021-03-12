@@ -41,13 +41,13 @@ In this release, we've fixed issues that caused crashes and interfered with the 
 
 *Date published: 11/23/2020*
 
-In this release we've addressed some bugs affecting users running iOS 14 and iPadOS 14.
+In this release, we've addressed some bugs affecting users running iOS 14 and iPadOS 14.
 
 ## Updates for version 10.2.1
 
 *Date published: 11/11/2020*
 
-It's time for a quick update. In this version we made the following fixes:
+It's time for a quick update. In this version, we made the following fixes:
 
 - Added support for newly released iPhone and iPad devices.
 - Addressed an issue where the client would return a 0x30000066 error when connecting using an RD Gateway server.
