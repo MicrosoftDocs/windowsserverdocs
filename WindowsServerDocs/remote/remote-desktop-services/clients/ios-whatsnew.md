@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 12/02/2020
+ms.date: 03/12/2021
 ms.localizationpriority: medium
 ---
 # What's new in the iOS client
@@ -16,17 +16,38 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Help** > **Report an Issue**.
 
+## Updates for version 10.2.4
+
+*Date published: 02/01/2021*
+
+In this release, we've made the following changes to the connection bar and in-session user experience:
+
+- You can now collapse the connection bar by moving it into one of the four corners of the screen.
+- On iPads and large iPhones you can dock the connection bar to the left or right edge of the screen.
+- You can now see the zoom slider panel by pressing and holding the connection bar magnification button. The new zoom slider controls the magnification level of the session in both touch and mouse pointer mode.
+
+We also addressed some accessibility bugs and the following two issues:
+
+- The client now validates the PC name in the Add/Edit PC UI to make sure the name doesn't contain illegal characters.
+- Addressed an issue where the UI would stop resolving a workspace name during subscription.
+
+## Updates for version 10.2.3
+
+*Date published: 12/15/2020*
+
+In this release, we've fixed issues that caused crashes and interfered with the "Display Zoom View" setting. We've also tweaked the "Use Full Display" setting to only appear on applicable iPads and adjusted the available resolutions for iPhones and iPads.
+
 ## Updates for version 10.2.2
 
 *Date published: 11/23/2020*
 
-In this release we've addressed some bugs affecting users running iOS 14 and iPadOS 14.
+In this release, we've addressed some bugs affecting users running iOS 14 and iPadOS 14.
 
 ## Updates for version 10.2.1
 
 *Date published: 11/11/2020*
 
-It's time for a quick update. In this version we made the following fixes:
+It's time for a quick update. In this version, we made the following fixes:
 
 - Added support for newly released iPhone and iPad devices.
 - Addressed an issue where the client would return a 0x30000066 error when connecting using an RD Gateway server.

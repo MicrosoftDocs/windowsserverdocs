@@ -19,7 +19,7 @@ Before you set up email discovery, do the following:
 >[!NOTE]
 >If you're using Windows Virtual Desktop instead of Remote Desktop, you'll want to use these URLs instead:
 >
->- If you're using Windows Virtual Desktop (classic): <https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfedddiscovery.aspx>
+>- If you're using Windows Virtual Desktop (classic): <https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx>
 >- If you're using Windows Virtual Desktop: <https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery>
 
 Now, follow these steps to set up email discovery:
