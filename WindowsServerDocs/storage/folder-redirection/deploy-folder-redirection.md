@@ -33,7 +33,7 @@ The file server is the computer that hosts the redirected folders.
 > [!NOTE]  
 > Folder Redirection requires that the file server be an x64-based or x86-based computer. Folder Redirection is not supported on PCs powered by ARM processors.  
 
-#### Choose the type of file server configuration to use
+#### Interoperability with Remote Desktop Services
 
 Your remote access configuration affects how you configure the file server, file shares, and policies. You can configure one of two different scenarios:
 
