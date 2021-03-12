@@ -31,7 +31,6 @@ For a list of recent changes to this article, see [Change history](#change-histo
 The file server is the computer that hosts the redirected folders.
 
 > [!NOTE]  
-> Folder Redirection requires that the file server be an x64-based or x86-based computer. Folder Redirection is not supported on PCs powered by ARM processors.  
 
 #### Interoperability with Remote Desktop Services
 
