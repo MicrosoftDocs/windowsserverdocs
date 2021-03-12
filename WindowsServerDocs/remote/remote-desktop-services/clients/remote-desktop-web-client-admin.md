@@ -210,7 +210,7 @@ This section describes how to enable a web client connection to an RD Broker wit
     >
     > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
 
-3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to <strong>https://+:3392/rdp/</strong>.
+3. Open the Windows Registry (regedit), go to `HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp` and locate the key **WebSocketURI**. Next, set the value to `https://+:3392/rdp/`.
 
 ### Setting up the RD Session Host
 Follow these steps if the RD Session Host server is different from the RD Broker server:
@@ -232,7 +232,7 @@ Follow these steps if the RD Session Host server is different from the RD Broker
     >
     > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
 
-3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to `https://+:3392/rdp/`.
+3. Open the Windows Registry (regedit) and navigate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to `https://+:3392/rdp/`.
 
 ### General Observations
 
@@ -263,7 +263,7 @@ By default, the user may select to enable or disable telemetry. A boolean value 
 >[!NOTE]
 >This setting currently only works with the RDS web client, not the Windows Virtual Desktop web client.
 
-By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following Powershell command:
+By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following PowerShell command:
 
    ```PowerShell
     Set-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser" ($true|$false)
