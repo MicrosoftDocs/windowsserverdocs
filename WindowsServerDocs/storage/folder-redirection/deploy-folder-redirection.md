@@ -49,7 +49,7 @@ Your remote access configuration affects how you configure the file server, file
 Apply the following changes to the file server, as appropriate for your configuration:
 
 - **All configurations.** Make sure that only required IT administrators have administrative access to the file server. The procedure in the next step configures access for the individual file shares.
-- **Servers that do not also hosting Remote Desktop Services**. Disable the Remote Desktop Services service (termserv) on your file server if it's not also hosting Remote Desktop Services.
+- **Servers that do not also host Remote Desktop Services**. Disable the Remote Desktop Services service (termserv) on your file server if it's not also hosting Remote Desktop Services.
 
 #### Interoperability with other storage features
 
