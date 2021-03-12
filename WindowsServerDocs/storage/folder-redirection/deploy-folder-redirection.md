@@ -30,7 +30,6 @@ For a list of recent changes to this article, see [Change history](#change-histo
 
 The file server is the computer that hosts the redirected folders.
 
-> [!NOTE]  
 
 #### Interoperability with Remote Desktop Services
 
