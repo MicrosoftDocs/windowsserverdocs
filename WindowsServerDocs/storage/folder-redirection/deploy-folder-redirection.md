@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 This article describes the requirements for deploying the Folder Redirection and Offline Files features together, including the steps that you need to follow to control access to the redirected files.
 
 > [!IMPORTANT]
-> Because of the security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016)), we updated [Step 5: Create a GPO for Folder Redirection](#step-5-create-a-gpo-for-folder-redirection) of this article so that Windows can properly apply the Folder Redirection policy (and not revert redirected folders on affected client computers).
+> Because of the security changes made in [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016)), we updated [Step 4: Create a GPO for Folder Redirection](#step-4-create-a-gpo-for-folder-redirection) of this article so that Windows can properly apply the Folder Redirection policy (and not revert redirected folders on affected client computers).
 
 For a list of recent changes to this article, see [Change history](#change-history).
 
