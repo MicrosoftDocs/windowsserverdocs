@@ -43,7 +43,7 @@ conceptualContent:
     - title: Message center
       links:
         - text: "Take action: March 2021 security update available for all supported versions of Windows"
-          url: https://support.microsoft.com/en-us/help/5000802
+          url: https://support.microsoft.com/help/5000802
           itemType: whats-new
         - text: "Microsoft Ignite 2021 shows off the latest Windows capabilities"
           url: https://blogs.windows.com/windowsexperience/2021/03/01/a-guide-to-windows-devices-at-microsoft-ignite-2021/
