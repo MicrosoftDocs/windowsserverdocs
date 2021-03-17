@@ -87,7 +87,7 @@ Kerberos cannot be used in the following situations:
 - Authenticating against a domain running only Windows NT 4.0 or earlier
 - Accessing a resource on an Active Directory domain member by using an IP address rather than a host name
 - Accessing a resource on a computer that is not a member of an Active Directory domain
-- Accessing resource on a computer that is a member of an Active Directory domain not trusted by your domain may work when the verbatim names can't be matched to have KDCs in DNS.
+- Accessing a resource on a computer that is a member of an Active Directory domain but not trusted by your domain
 - Accessing any resource on a computer running that does not support Kerberos
 
 In these situations, the authentication process uses two different protocols, called LAN Manager and NTLM. The process starts with the client requesting a challenge from the authentication server. After the challenge is received, the client computes a response to this challenge. This is done by first padding the two hashes of the password with null values to 168 bits. The 168 bits of each hash are then split into three 56-bit DES keys. The six DES keys are then used to encrypt the challenge. The three cipher texts produced by using the LM hash are concatenated and become the LAN Manager response. The three cipher texts produced by using the NT hash are concatenated and become the NTLM response.
