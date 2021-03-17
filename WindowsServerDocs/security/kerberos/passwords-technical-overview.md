@@ -56,6 +56,12 @@ Passwords at rest are stored in several attributes of the Active Directory datab
 
 When stored in the DIT file, the NT hash is protected by two layers of encryption. In Windows Server 2016/Windows 10 and later versions, it is first encrypted with DES for backwards compatibility and then with CNG BCrypt AES-256 (see [CNG](/windows/win32/seccng/typical-cng-programming) [BCRYPT_AES_ALGORITHM](/windows/win32/seccng/cng-algorithm-identifiers)). Previous Windows versions encrypt NT hashes using two layers of DES + RC4 encryption.
 
+For more information about Supplemental Credentials, see [MS-SAMR: supplementalCredentials](/openspecs/windows_protocols/ms-samr/0705f888-62e1-4a4c-bac0-b4d427f396f8) and [Supplemental Credentials Structures](/openspecs/windows_protocols/ms-samr/84cefe3e-a688-4232-b997-ac5d9993f5eb).
+
+### Passwords stored in the local SAM
+
+Similarly on domain members and workstations, local user account password hashes are stored in a local Security Account Manager (SAM) Database located in the registry, and are encrypted using the same encryption and hashing algorithms as detailed above for Active Directory. The passwords in supplementalCredentials attribute for local user accounts are also stored in the local SAM Database since Windows Server 2016.
+
 ### Cached credentials
 
 Windows also stores a password verifier on domain members when a domain user logs on to that domain member. This verifier can be used to authenticate a domain user if the computer is not able to access the domain controller. The password verifier is also commonly called a cached credential. It is computed by taking the NT hash, concatenating the user name to it, and then hashing the result by using the MD4 hash function.
