@@ -43,6 +43,7 @@ Neither the NT hash nor the LM hash is salted. Salting is a process that combine
 ### Passwords stored in Active Directory
 
 Passwords at rest are stored in several attributes of the Active Directory database (NTDS.DIT file). These attributes are listed in the following table:
+
 |Active Directory Attribute |Content |
 |---|---|
 |unicodePwd|Encrypted NT Hash|
