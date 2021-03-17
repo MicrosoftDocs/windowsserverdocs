@@ -14,11 +14,12 @@ ms.date:
 
 This topic for the IT professional describes the system key utility (Syskey), which protects the Security Accounts Manager (SAM) database in Windows operating systems.
 
-Syskey utility is no longer supported in Windows 10, version 1607, Windows Server 2016, and later versions.
+> [!NOTE]
+> Syskey utility is no longer supported in Windows 10, version 1607, Windows Server 2016, and later versions.
 
 ## What is the system key utility?
 
-Password information for user accounts is stored in the SAM database of the registry on workstations and member servers. On domain controllers, password information is stored in directory services. It is not unusual for password-cracking software to target the SAM database or directory services to access passwords for user accounts. The system key utility (Syskey) provides an extra line of defence against password-cracking software. It uses strong encryption techniques to secure account password information that is stored in the SAM database or in directory services. Cracking encrypted account passwords is more difficult and time consuming than cracking nonencrypted account passwords.
+Password information for user accounts is stored in the SAM database of the registry on workstations and member servers. On domain controllers, password information is stored in directory services. It is not unusual for password-cracking software to target the SAM database or directory services to access passwords for user accounts. The system key utility (Syskey) provides an extra line of defense against password-cracking software. It uses strong encryption techniques to secure account password information that is stored in the SAM database or in directory services. Cracking encrypted account passwords is more difficult and time consuming than cracking nonencrypted account passwords.
 
 There are three system key options in the **Startup Key** dialog box that are designed to meet the needs of different environments, as described in the following table.
 

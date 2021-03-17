@@ -60,7 +60,7 @@ For more information about Supplemental Credentials, see [MS-SAMR: supplementalC
 
 ### Passwords stored in the local SAM
 
-Similarly on domain members and workstations, local user account password hashes are stored in a local Security Account Manager (SAM) Database located in the registry, and are encrypted using the same encryption and hashing algorithms as detailed above for Active Directory. The passwords in supplementalCredentials attribute for local user accounts are also stored in the local SAM Database since Windows Server 2016.
+Similarly on domain members and workstations, local user account password hashes are stored in a local Security Account Manager (SAM) Database located in the registry, and are encrypted using the same encryption and hashing algorithms as detailed above for Active Directory. The passwords in the supplementalCredentials attribute for local user accounts are also stored in the local SAM Database since Windows Server 2016.
 
 ### Cached credentials
 
