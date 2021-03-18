@@ -10,7 +10,7 @@ metadata:
   services: windows
   ms.service: windows
   ms.topic: hub-page
-  author: v-nishmi
+  author: DocsPreview
   ms.author: v-nishmi
   ms.date: 09/25/2020
   featureFlags:
@@ -42,14 +42,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
-        - text: "Out-of-band update to address an error when attempting to print to certain printers"
-          url: https://support.microsoft.com/help/5001567
+        - text: "Take action: SHA-2 code signing support guidance for Windows 7 SP1 and Windows Server 2008 RS2 SP1"
+          url: https://support.microsoft.com/help/4472027
           itemType: whats-new
-        - text: "Take action: March 2021 security update available for all supported versions of Windows"
-          url: https://support.microsoft.com/help/5000802
+        - text: "August 2019 security update now available for Windows 10, version 1903 and all supported versions of Windows"
+          url: https://support.microsoft.com/help/4512508
           itemType: whats-new
-        - text: "Microsoft Ignite 2021 shows off the latest Windows capabilities"
-          url: https://blogs.windows.com/windowsexperience/2021/03/01/a-guide-to-windows-devices-at-microsoft-ignite-2021/
+        - text: "Resolved:  Delays starting Internet Explorer 11"
+          url: https://docs.microsoft.com/windows/release-information/windows-message-center
           itemType: whats-new
 
       footerLink:
@@ -58,10 +58,10 @@ conceptualContent:
     - title: "Windows 10 and Windows Server, version 20H2"
       links:
         - text: Known issues
-          url: status-windows-10-20H2
+          url: https://docs.microsoft.com/windows/release-information/status-windows-10-20H2
           itemType: concept
         - text: Resolved issues
-          url: resolved-issues-windows-10-20H2
+          url: https://docs.microsoft.com/windows/release-information/resolved-issues-windows-10-20H2
           itemType: how-to-guide
         - text: "Release notes"
           url: https://support.microsoft.com/en-us/topic/windows-10-update-history-7dd3071a-3906-fa2c-c342-f7f86728a6e3
@@ -75,10 +75,10 @@ conceptualContent:
     - title: "Windows 10 and Windows Server, version 2004 "
       links:
         - text: Known issues
-          url: status-windows-10-2004
+          url: https://docs.microsoft.com/windows/release-information/status-windows-10-2004
           itemType: concept
         - text: Resolved issues
-          url: resolved-issues-windows-10-2004
+          url: https://docs.microsoft.com/windows/release-information/resolved-issues-windows-10-2004
           itemType: how-to-guide
         - text: "Release notes"
           url: https://support.microsoft.com/en-us/topic/windows-10-update-history-24ea91f4-36e7-d8fd-0ddb-d79d9d0cdbda
@@ -92,10 +92,10 @@ conceptualContent:
     - title: "Windows 10 and Windows Server, version 1909"
       links:
         - text: Known issues
-          url: status-windows-10-1909
+          url: https://docs.microsoft.com/windows/release-information/status-windows-10-1909
           itemType: concept
         - text: Resolved issues
-          url: resolved-issues-windows-10-1909
+          url: https://docs.microsoft.com/windows/release-information/resolved-issues-windows-10-1909
           itemType: how-to-guide
         - text: "Release notes"
           url: https://support.microsoft.com/en-us/topic/windows-10-update-history-53c270dc-954f-41f7-7ced-488578904dfe
@@ -109,10 +109,10 @@ conceptualContent:
     - title: "Windows 10, version 1809 and Windows Server 2019"
       links:
         - text: Known issues
-          url: status-windows-10-1809-and-windows-server-2019
+          url: https://docs.microsoft.com/windows/release-information/status-windows-10-1809-and-windows-server-2019
           itemType: concept
         - text: Resolved issues
-          url: resolved-issues-windows-10-1809-and-windows-server-2019
+          url: https://docs.microsoft.com/windows/release-information/resolved-issues-windows-10-1809-and-windows-server-2019
           itemType: how-to-guide
         - text: "Release notes"
           url: https://support.microsoft.com/en-us/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059
@@ -120,10 +120,10 @@ conceptualContent:
     - title: "Windows 10, version 1803"
       links:
         - text: Known issues
-          url: status-windows-10-1803
+          url: https://docs.microsoft.com/windows/release-information/status-windows-10-1803
           itemType: concept
         - text: Resolved issues
-          url: resolved-issues-windows-10-1803
+          url: https://docs.microsoft.com/windows/release-information/resolved-issues-windows-10-1803
           itemType: how-to-guide
         - text: "Release notes"
           url: https://support.microsoft.com/en-us/topic/windows-10-update-history-0d8c2da6-3dba-66e4-2ef2-059192bf7869
@@ -131,10 +131,10 @@ conceptualContent:
     - title: "Windows 10, version 1607 and Windows Server 2016"
       links:
         - text: Known issues
-          url: status-windows-10-1607-and-windows-server-2016
+          url: https://docs.microsoft.com/windows/release-information/status-windows-10-1607-and-windows-server-2016
           itemType: concept
         - text: Resolved issues
-          url: resolved-issues-windows-10-1607-and-windows-server-2016
+          url: https://docs.microsoft.com/windows/release-information/resolved-issues-windows-10-1607-and-windows-server-2016
           itemType: how-to-guide
         - text: "Release notes"
           url: https://support.microsoft.com/en-us/topic/windows-10-and-windows-server-2016-update-history-4acfbc84-a290-1b54-536a-1c0430e9f3fd
