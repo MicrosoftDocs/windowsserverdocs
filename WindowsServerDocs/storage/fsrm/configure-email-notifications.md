@@ -31,6 +31,26 @@ To send these notifications and storage reports, you must specify the SMTP serve
 
 6. Click **OK**.
 
+## To configure e-mail options using PowerShell
+
+You use the `Set-FsrmSetting` cmdlet to set the e-mail configuration and the `Send-FsrmTestEmail` cmdlet to sent a test email as follows:
+
+```powershell
+#   Setting FSRM email options
+$MHT = @{
+  SmtpServer        = 'SMTP.Contoso.Com'  
+  FromEmailAddress  = 'FSRM@RContoso.Com'
+  AdminEmailAddress = 'FSAdmin@Contoso.com'
+}
+Set-FsrmSetting @MHT
+
+#   Sending a test email to check the setup
+$MHT = @{
+  ToEmailAddress = 'JerryG@Contoso.Com'
+  Confirm        = $false
+}
+Send-FsrmTestEmail @MHT
+```
 
 ## Additional References
 
