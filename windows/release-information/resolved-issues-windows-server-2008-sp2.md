@@ -7,6 +7,8 @@ ms.topic: article
 ms.mktglfcycl: deploy
 ms.sitesec: library
 ms.localizationpriority: high
+ms.author: v-nishmi
+author: DocsPreview
 ---
 
 # Resolved issues in Windows Server 2008 SP2
