@@ -295,7 +295,7 @@ set dataenablement [interface=]<string> [profileset=]internet|mms|all [mode=]yes
 
 **Parameters**
 
-|                |                                                                                               |          |
+| Parameter  |  Description                                                                                |          |
 |----------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface**  | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **profileset** | Name of the profile set.                                                                      | Required |
@@ -321,7 +321,7 @@ set dataroamcontrol [interface=]<string> [profileset=]internet|mms|all [state=]n
 
 **Parameters**
 
-|                |                                                                                               |          |
+|  Parameter  |    Description                                                                    |          |
 |----------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface**  | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **profileset** | Name of the profile set.                                                                      | Required |
