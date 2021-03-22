@@ -33,7 +33,7 @@ format <volume> [/q]
 | Parameter | Description |
 | --------- | ----------- |
 | `<volume>` | Specifies the mount point, volume name, or drive letter (followed by a colon) of the drive that you want to format. If you do not specify any of the following command-line options, **format** uses the volume type to determine the default format for the disk. |
-| /fs:{FAT | FAT32 | NTFS} | Specifies the type of file system (FAT, FAT32, NTFS). |
+| /fs:{FAT \| FAT32 \| NTFS} | Specifies the type of file system (FAT, FAT32, NTFS). |
 | /v:`<label>` | Specifies the volume label. If you omit the **/v** command-line option or use it without specifying a volume label, **format** prompts you for the volume label after the formatting is complete. Use the syntax **/v:** to prevent the prompt for a volume label. If you use a single **format** command to format more than one disk, all of the disks will be given the same volume label. |
 | /a:`<unitsize>` | Specifies the allocation unit size to use on FAT, FAT32, or NTFS volumes. If you don't specify *unitsize*, it's chosen based on volume size. Default settings are strongly recommended for general use. The following list presents valid values for NTFS, FAT, and FAT32 *unitsize*:<ul><li>512</li><li>1024</li><li>2048</li><li>4096</li><li>8192</li><li>16K</li><li>32K</li><li>64K</li></ul>FAT and FAT32 also support 128K and 256K for a sector size greater than 512 bytes. |
 | /q | Performs a quick format. Deletes the file table and the root directory of a previously formatted volume, but does not perform a sector-by-sector scan for bad areas. You should use the **/q** command-line option to format only previously formatted volumes that you know are in good condition. Note that **/q** overrides **/p**. |
