@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/09/2021
+ms.date: 03/23/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -18,14 +18,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.1755        |1.2.945                   |
-|Insider    |1.2.1838        |1.2.945                   |
+|Public     |1.2.1845        |1.2.945                   |
+|Insider    |1.2.1845        |1.2.945                   |
 
-## Updates for version 1.2.1838 (Insider)
+## Updates for version 1.2.1845
 
-*Date published: 03/09/2021*
+*Date published: 03/23/2021*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Updated background installation functionality to perform silently for the client auto-update feature.
 - Added the option to allow multiple desktop sessions from the client.
@@ -35,7 +35,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 
 *Date published: 02/23/2021*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWxOpp), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWxZbP), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWxWHc)
 
 - Added the Experience Monitor access point to the system tray icon.
 - Fixed an issue where entering an email address into the "Subscribe to a Workplace" tab caused the application to stop responding.
@@ -49,8 +49,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 ## Updates for version 1.2.1672
 
 *Date published: 01/26/2021*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4MntP), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4MntQ), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4MntO)
 
 - Added support for the screen capture protection feature for Windows 10 endpoints. To learn more, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices).
 - Added support for proxies that require authentication for feed subscription.
