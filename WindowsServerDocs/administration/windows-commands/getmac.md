@@ -28,7 +28,7 @@ getmac[.exe][/s <computer> [/u <domain\<user> [/p <password>]]][/fo {table | lis
 | /s `<computer>` | Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer. |
 | /u `<domain>\<user>` | Runs the command with the account permissions of the user specified by *user* or *domain\user*. The default is the permissions of the current logged on user on the computer issuing the command. |
 | /p `<password>` | Specifies the password of the user account that is specified in the **/u** parameter. |
-| /fo {table | list | csv} | Specifies the format to use for the query output. Valid values are **table**, **list**, and **csv**. The default format for output is **table**. |
+| /fo {table \| list \| csv} | Specifies the format to use for the query output. Valid values are **table**, **list**, and **csv**. The default format for output is **table**. |
 | /nh | Suppresses column header in output. Valid when the **/fo** parameter is set to **table** or **csv**. |
 | /v | Specifies that the output display verbose information. |
 | /? | Displays help at the command prompt. |

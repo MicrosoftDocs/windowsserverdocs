@@ -85,6 +85,8 @@
 ### [Configuring Kerberos for IP Addresses](kerberos/configuring-kerberos-over-ip.md)
 ## [NTLM](kerberos/ntlm-overview.md)
 ## [Passwords](kerberos/passwords-overview.md)
+### [Passwords technical overview](kerberos/passwords-technical-overview.md)
+### [System key utility technical overview](kerberos/system-key-utility-technical-overview.md)
 ## [TLS - SSL (Schannel SSP)](tls/tls-ssl-schannel-ssp-overview.md)
 ### [TLS changes in Windows 10 and Windows Server 2016](tls/tls-schannel-ssp-changes-in-windows-10-and-windows-server.md)
 ### [Manage TLS](tls/manage-tls.md)
