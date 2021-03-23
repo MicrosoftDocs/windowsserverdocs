@@ -35,6 +35,8 @@ Windows Admin Center in the Azure portal provides the essential set of managemen
 - Services
 - Storage
 - Updates
+- Virtual machines
+- Virtual switches
 
 We don't support extensions to Windows Admin Center in the Azure portal at this time.
 
@@ -44,9 +46,10 @@ If you manually installed Windows Admin Center in the VM to manage multiple syst
 
 To use Windows Admin Center in the Azure portal, we install Windows Admin Center in each Azure VM that you want to use it to manage. The Azure VM has the following requirements:
 
-- Windows Server 2019 or Windows Server 2016
+- Windows Server 2022, Windows Server 2019, or Windows Server 2016
 - At least 3 GiB of memory
 - Be in any region of an Azure public cloud (it's not supported in Azure China, Azure Government, or other non-public clouds)
+- Have the [Azure Virtual Machine Agent](/azure/virtual-machines/extensions/agent-windows) installed (it's installed by default on any Windows VM deployed from an Azure Marketplace image)
 
 The VM also has the following networking requirements, which we step through during the installation procedure:
 
@@ -105,17 +108,18 @@ However, if you need to use a public IP address, you can improve security by lim
 2. If you already installed Windows Admin Center and configured it to open an inbound port for your public IP address, select **PortForWAC**. Otherwise, select **Add inbound port rule**.
 3. Provide the following values, specifying the public IP addresses of your management systems (separated with commas), and optionally changing the destination port from port 6516. Then select **Add**.
 
+    > [!IMPORTANT]
+    > You might need to use a non-Microsoft website or app to find the public IP address of the management systems you're using to connect to the Azure portal.
+
    | Field                        | Value              |
    | --------------------------   | ------------------ |
    | **Source**                   | IP address         |
-   | **Source IP addresses**      | *Management system IPs* |
+   | **Source IP addresses**      | *Public IP address of your management systems* |
    | **Source port ranges**       | *                  |
    | **Destination**              | Any                |
    | **Destination port ranges**  | `6516`             |
    | **Protocol**                 | Any                |
    | **Action**                   | Allow              |
-
-You might need to use a non-Microsoft website or app to find the public IP address of the system you're using to connect to the Azure portal.
 
 ## Implementation details
 
@@ -263,3 +267,7 @@ Yes, you can use Windows Admin Center on-premises to manage servers and virtual 
 ### Does Windows Admin Center in the Azure portal work with Azure Bastion?
 
 No, unfortunately not.
+
+### Is Windows Admin Center supported for VMs behind a load balancer?
+
+No, unfortunately not at this time.
