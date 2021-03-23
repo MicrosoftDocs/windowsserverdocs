@@ -35,7 +35,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
   - We've added XVP and hardware decode, which allows older machines to display more incoming video streams smoothly in 2x2 mode.
   - We've also updated the WebRTC stack from version M74 to M88. M88 has better reliability, AV sync performance, and fewer transient issues.
   - We've replaced our software H264 encoder with OpenH264. OpenH264 is an open-source codec that increases video quality of the outgoing camera stream.
-- The client now has simultaneous shipping with 2x2 mode. 2x2 mode shows up to four incoming video streams simultaneously.
+  - The client now has simultaneous shipping with 2x2 mode. 2x2 mode shows up to four incoming video streams simultaneously.
 
 ## Updates for version 1.2.1755
 
