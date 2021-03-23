@@ -4,7 +4,7 @@ description: An overview of using Windows Admin Center in the Azure portal to ma
 ms.topic: overview
 author: jasongerend
 ms.author: jgerend
-ms.date: 02/18/2021
+ms.date: 03/23/2021
 ---
 # Use Windows Admin Center in the Azure portal to manage a Windows Server VM
 
@@ -230,7 +230,7 @@ Windows Admin Center installs on your Azure Virtual Machine. The installation co
 
 There is an external Windows Admin Center service that manages certificates and DNS records for you. To allow your VM to interact with our service, you must create an outbound port rule.
 
-### How do I find used for Windows Admin Center installation?
+### How do I find the ports used for Windows Admin Center?
 
 There are two ways to find out the port:
 
