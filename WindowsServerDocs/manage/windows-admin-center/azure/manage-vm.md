@@ -8,7 +8,7 @@ ms.date: 03/23/2021
 ---
 # Use Windows Admin Center in the Azure portal to manage a Windows Server VM
 
-You can now use Windows Admin Center (preview) in the Azure portal to manage the Windows Server operating system inside an Azure VM. Manage operating system functions from the Azure portal as well as work with files in the VM without using Remote Desktop or PowerShell.
+You can now use Windows Admin Center (preview) in the Azure portal to manage the Windows Server operating system inside an Azure VM. You can manage operating system functions and work with files in the VM—without using Remote Desktop or PowerShell.
 
 This article provides an overview of the functionality provided, requirements, and how to install Windows Admin Center and use it to manage a single VM. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
 
@@ -143,7 +143,7 @@ Here are some tips to try in case something isn't working. For general help trou
 1. Make sure that outbound traffic to Windows Admin Center is allowed on your virtual machine
     1. In the Azure portal, navigate to “Networking” and “Outbound port rules”.
     1. Create a new port rule for Windows Admin Center
-    1. You can test this by running the following command using PowerShell inside of your virtual machine:
+    1. You can test whether outbound traffic is allowed by running the following command using PowerShell inside of your virtual machine:
 
        ```powershell
        Invoke-RestMethod -Method GET -Uri https://wac.azure.com
