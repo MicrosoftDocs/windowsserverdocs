@@ -119,7 +119,7 @@ The destination server must run one of the following operating systems:
 - Windows Server 2016
 - Windows Server 2012 R2
 
-The destination servers can be standalone servers or VMs or part of a Windows Server failover cluster. They cannot run Azure Stack HCI or use a non-Microsoft clustering add-on. 
+The destination servers can be VMs, standalone servers, or part of a Windows Server failover cluster. They cannot run Azure Stack HCI or use a non-Microsoft clustering add-on. 
 
 > [!TIP]
 > Destination servers running Windows Server 2019 or Windows Server, Semi-Annual Channel or later have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service, which also opens the necessary firewall ports if they're not already open.
