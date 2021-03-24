@@ -1,16 +1,26 @@
 ---
-title: What's new in the Microsoft Store Client
-description: Learn about recent changes to the Remote Desktop client for Windows Store
+title: What's new in the Microsoft Store client
+description: Learn about recent changes to the Microsoft Store client.
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 10/14/2020
+ms.date: 03/25/2021
 ms.localizationpriority: medium
 ---
-# What's new in the Microsoft Store Client
+# What's new in the Microsoft Store client
 
-We regularly update the [Microsoft Store Client](windows.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+We regularly update the [Microsoft Store client](windows.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+
+## Updates for version 10.2.1810
+
+*Date published: 03/23/2021*
+
+- Fixed an issue that caused crashes during clipboard scenarios.
+- Fixed an issue that happened when using the client with Hololens.
+- Fixed an issue where the lock screen wasn't appearing in the remote session.
+- Fixed an issue that caused remote devices to prompt for a password every time users tried to connect.
+- Added several stability improvements to the client.
 
 ## Updates for version 10.2.1534
 
