@@ -42,14 +42,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "Windows release health on M365 Admin Center"
+          url: https://aka.ms/WRH-GA
+          itemType: whats-new
         - text: "March 2021 Windows non-security preview \"C\" release is available for some versions for Windows 10"
           url: https://support.microsoft.com/help/5000850
           itemType: whats-new
         - text: "Out-of-band update to address unexpected results when printing from some apps or to some printers"
           url: https://support.microsoft.com/help/5001649
-          itemType: whats-new
-        - text: "Out-of-band update to address an error when attempting to print to certain printers"
-          url: https://support.microsoft.com/help/5001567
           itemType: whats-new
 
       footerLink:
