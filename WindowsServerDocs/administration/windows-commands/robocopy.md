@@ -93,8 +93,8 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /xf `<filename>[ ...]` | Excludes files that match the specified names or paths. Wildcard characters (**&#42;** and **?**) are supported. |
 | /xd `<directory>[ ...]` | Excludes directories that match the specified names and paths. |
 | /xc | Excludes existing files with the same timestamp, but different file sizes. |
-| /xn | Excludes existing files newer than the copy in the source directory. |
-| /xo | Excludes existing files older than the copy in the source directory. |
+| /xn | In the source directory excludes existing files newer than the copy in destination directory. |
+| /xo | In the source directory excludes existing files older than the copy in destination directory. |
 | /xx | Excludes extra files and directories present in the destination but not the source. Excluding extra files will not delete files from the destination.  |
 | /xl | Excludes "lonely" files and directories present in the source but not the destination. Excluding lonely files prevents any new files from being added to the destination. |
 | /is | Includes the same files. Same files are identical in name, size, times, and all attributes. |
