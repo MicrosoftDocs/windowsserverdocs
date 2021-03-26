@@ -33,7 +33,7 @@ To send these notifications and storage reports, you must specify the SMTP serve
 
 ## To configure e-mail options using PowerShell
 
-You use the `Set-FsrmSetting` cmdlet to set the e-mail configuration and the `Send-FsrmTestEmail` cmdlet to sent a test email as follows:
+You can use the `Set-FsrmSetting` cmdlet to set the e-mail configuration and the `Send-FsrmTestEmail` cmdlet to send a test email as shown in the following example:
 
 ```powershell
 #   Setting FSRM email options
