@@ -18,9 +18,9 @@ While disabling or removing SMBv1 might cause some compatibility issues with old
 
 ## Disabling SMBv2 or SMBv3 for troubleshooting
 
-While we recommend that you keep SMBv2 and SMBv3 enabled, you might find it useful to disable one temporarily for troubleshooting, as described in [How to detect status, enable, and disable SMB protocols on the SMB Server](detect-enable-and-disable-smbv1-v2-v3.md#how-to-detect-status-enable-and-disable-smb-protocols-on-the-smb-server).
+We recommend keeping SMBv2 and SMBv3 enabled, but you might find it useful to disable one temporarily for troubleshooting. For more information, see [How to detect status, enable, and disable SMB protocols on the SMB Server](detect-enable-and-disable-smbv1-v2-v3.md#how-to-detect-status-enable-and-disable-smb-protocols-on-the-smb-server).
 
-In Windows 10, Windows 8.1, and Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012, disabling SMBv3 deactivates the following functionality (and also the SMBv2 functionality that's described in the previous list):
+In Windows 10, Windows 8.1, and Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012, disabling SMBv3 deactivates the following functionality:
 
 - Transparent Failover - clients reconnect without interruption to cluster nodes during maintenance or failover
 - Scale Out - concurrent access to shared data on all file cluster nodes 
@@ -362,7 +362,7 @@ This procedure disables the SMBv1 Server components. This Group Policy must be 
 
 To disable the SMBv1 client, the services registry key needs to be updated to disable the start of **MRxSMB10** and then the dependency on **MRxSMB10** needs to be removed from the entry for **LanmanWorkstation** so that it can start normally without requiring **MRxSMB10** to first start.
 
-This updates and replaces the default values in the following two items in the registry:
+This guidance updates and replaces the default values in the following two items in the registry:
 
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\mrxsmb10**
 
@@ -377,7 +377,7 @@ Registry entry: **DependOnService** REG_MULTI_SZ: **"Bowser","MRxSmb20″,"NSI"*
 
 To configure this by using Group Policy, follow these steps:
 
-1. Open the **Group Policy Management Console**. Right-click the Group Policy object (GPO) that should contain the new preference item, and then click **Edit**.
+1. Open the **Group Policy Management Console**. Right-click the GPO that should contain the new preference item, and then click **Edit**.
 
 2. In the console tree under **Computer Configuration**, expand the **Preferences** folder, and then expand the **Windows Settings** folder.
 
@@ -446,7 +446,7 @@ When SMBv1 auditing is enabled, event 3000 appears in the "Microsoft-Windows-SMB
 
 ### Summary
 
-If all the settings are in the same Group Policy Object (GPO), Group Policy Management displays the following settings.
+If all the settings are in the same GPO, Group Policy Management displays the following settings.
 
 ![Group Policy Management Editor - Registry](media/detect-enable-and-disable-smbv1-v2-v3-7.png)
 
