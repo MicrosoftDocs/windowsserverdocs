@@ -89,7 +89,7 @@ The following code changes are needed in order to get the above information to t
 * Set the value of **ida:RedirectUri** with the value from **Redirect URI** in the **Native application** page during the Application Group creation in AD FS. For example, https://ToDoListClient
 * For ease of reading you can remove / comment the key for **ida:Tenant** and **ida:AADInstance**.
 
-  ![App config](media/native-client-with-ad-fs-2016/app_configfile.PNG)
+  ![App config](media/native-client-with-ad-fs-2016/app_configfile.png)
 
 **MainWindow.xaml.cs**
 
@@ -123,7 +123,7 @@ Two files need changes in this project – Web.config and Startup.Auth.cs. Web.C
 * Modify key **ida:Audience** with the value of the Web API identifier that you specified in the **Configure Web API** page during Add Application Group in AD FS.
 * Add key **ida:AdfsMetadataEndpoint** with value corresponding to the federation metadata URL of the AD FS service, for ex: https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml
 
-![Web config](media/native-client-with-ad-fs-2016/webconfig.PNG)
+![Web config](media/native-client-with-ad-fs-2016/webconfig.png)
 
 **Startup.Auth.cs**
 
