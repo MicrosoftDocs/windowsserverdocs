@@ -49,12 +49,12 @@ The following are a list of pre-requisites that are required prior to completing
 Click next and then complete the wizard.
 
 ### Add the NameIdentifier claim to the list of claims issued
-The demo application uses the value in NameIdentifier claim at various places. Unlike Azure AD, AD FS does not issue a NameIdentifier claim by default. Therefore, we need to add a claim rule to issue the NameIdentifier claim so that the application can use the correct value. In this example, the given name of the user is issued as the NameIdentifier value for the user in the token.
+The demo application uses the value in NameIdentifier claim at various places. Unlike Azure AD, AD FS does not issue a NameIdentifier claim by default. Therefore, we need to add a claim rule to issue the NameIdentifier claim so that the application can use the correct value. In this example, the given name of the user is issued as the NameIdentifier value for the user in the token. In addition, we map given name of user to the GivenName claim so that given name will show as the sign-in display name. 
 To configure the claim rule, open the application group just created, and double click on the Web API. Select the Issuance Transform Rules tab and then click on Add Rule button. In the type of claim rule, choose Custom claim rule and then add the claim rule as shown below.
 
 ```
-c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
- => issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"), query = ";givenName;{0}", param = c.Value);
+c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
+ => issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier", "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname"), query = ";givenName,givenName;{0}", param = c.Value);
 ```
 
 ![NameIdentifier claim rule](media/native-client-with-ad-fs-2016/addnameidentifierclaimrule.png)
