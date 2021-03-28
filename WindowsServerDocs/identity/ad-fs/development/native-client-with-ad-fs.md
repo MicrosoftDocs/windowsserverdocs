@@ -43,10 +43,12 @@ The following are a list of pre-requisites that are required prior to completing
 4. On the **Configure Web API** page, set the identifier value for the Web API. For this example, this should be the value of the **SSL URL** where the Web App is supposed to be running. You can get this value by clicking on the properties of the TooListServer project in the solution. This will be later used as the **todo:TodoListResourceId** value in **App.config** file of the native client application and also as the **todo:TodoListBaseAddress**.
 ![Web API](media/native-client-with-ad-fs-2016/addapplicationgroup3.png)
 
-5. Go through the **Apply Access Control Policy** and **Configure Application Permissions** with the default values in place. The summary page should look like below.
-![Summary](media/native-client-with-ad-fs-2016/addapplicationgroupsummary.png)
+5. Go through the **Apply Access Control Policy** with the default values in place. 
 
-Click next and then complete the wizard.
+6. On the **Configure Application Permissions** screen, make sure **openid** and **allatclaims** are selected and click **Next**.
+![Application Permissions](media/native-client-with-ad-fs-2016/addapplicationgroup4.png)
+
+7. On the Summary screen, click **Next** to complete the wizard.
 
 ### Add the NameIdentifier claim to the list of claims issued
 The demo application uses the value in NameIdentifier claim at various places. Unlike Azure AD, AD FS does not issue a NameIdentifier claim by default. Therefore, we need to add a claim rule to issue the NameIdentifier claim so that the application can use the correct value. In this example, the given name of the user is issued as the NameIdentifier value for the user in the token. In addition, we map given name of user to the GivenName claim so that given name will show as the sign-in display name. 
