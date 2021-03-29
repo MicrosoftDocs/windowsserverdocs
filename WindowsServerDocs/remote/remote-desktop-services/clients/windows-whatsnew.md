@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/25/2021
+ms.date: 03/29/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Microsoft Store client
@@ -14,12 +14,12 @@ We regularly update the [Microsoft Store client](windows.md), adding new feature
 
 ## Updates for version 10.2.1810
 
-*Date published: 03/23/2021*
+*Date published: 03/29/2021*
 
 - Fixed an issue that caused crashes during clipboard scenarios.
 - Fixed an issue that happened when using the client with Hololens.
 - Fixed an issue where the lock screen wasn't appearing in the remote session.
-- Fixed an issue that caused remote devices to prompt for a password every time users tried to connect.
+- Fixed issues that happened when the client tried to connect to devices with the “Always prompt for password upon connection” group policy set.
 - Added several stability improvements to the client.
 
 ## Updates for version 10.2.1534
