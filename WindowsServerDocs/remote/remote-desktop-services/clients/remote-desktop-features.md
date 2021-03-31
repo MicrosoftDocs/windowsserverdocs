@@ -17,7 +17,8 @@ We're often asked how the different Remote Desktop clients compare to each other
 
 The following table compares the features of each client.
 
-| Feature | Windows Inbox | Windows Desktop | Microsoft Store | Android | iOS | MacOS | Web | Description |
+| Feature | Windows Inbox | Windows Desktop | Microsoft Store | Android | iOS | macOS | Web | Description |
+
 |---|---|---|---|---|---|---|---|---|
 | Remote Desktop sessions | X | X | X | X | X | X | X | Desktop of a remote computer presented in a full screen or windowed mode. |
 | Integrated RemoteApp sessions | X | X |||| X || Individual remote apps integrated into the local desktop as if they are running locally. |
