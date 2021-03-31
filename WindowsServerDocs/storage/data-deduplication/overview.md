@@ -37,7 +37,7 @@ The space savings that you can gain from Data Deduplication depend on the datase
 | General file share | All the above                           | 50-60%                |
 
 > [!NOTE]
-> If you're just looking to free up space on a volume, consider using Azure File Sync with cloud tiering enabled. This allows you to cache your most frequently accessed files locally and tier your least frequently accessed files to the cloud, saving local storage space while maintaining performance. For details, see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning.md).
+> If you're just looking to free up space on a volume, consider using Azure File Sync with cloud tiering enabled. This allows you to cache your most frequently accessed files locally and tier your least frequently accessed files to the cloud, saving local storage space while maintaining performance. For details, see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning).
 
 ## <a id="when-can-dedup-be-used"></a>When can Data Deduplication be used?
 <table>
