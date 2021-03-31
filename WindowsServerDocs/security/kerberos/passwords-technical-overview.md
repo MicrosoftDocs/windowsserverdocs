@@ -81,7 +81,7 @@ Users' ability to modify their passwords is governed by the password policies an
 
 ## How passwords are used in Windows
 
-When a user logs on, the password the user types is converted into both types of one-way functions and held in memory by the Local Security Authority Subsystem Service (LSASS) process. If the user using a local account for authentication, the NT OWF is compared against the locally stored NT hash, and if the two match, the user is logged on. If the user is authenticating against an Active Directory domain by using a host name to access a resource, the NT hash is used in a Kerberos logon against the Key Distribution Center (KDC), which is typically the domain controller. The password verifier is computed by WINLOGON, not LSASS.
+When a user logs on, the password the user types is converted into both types of one-way functions and held in memory by the Local Security Authority Subsystem Service (LSASS) process. If the user using a local account for authentication, the NT OWF is compared against the locally stored NT hash, and if the two match, the user is logged on. If the user is authenticating against an Active Directory domain by using a host name to access a resource, the NT hash is used in a Kerberos logon against the Key Distribution Center (KDC), which is typically the domain controller.
 
 Kerberos cannot be used in the following situations:
 

@@ -4,7 +4,7 @@ description: Storage Migration Service makes it easier to migrate storage to Win
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
-ms.date: 03/26/2020
+ms.date: 03/25/2021
 ms.topic: article
 ---
 # Storage Migration Service overview
@@ -118,6 +118,8 @@ The destination server must run one of the following operating systems:
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
+
+The destination servers can be standalone servers or part of a failover cluster. They cannot run Azure Stack HCI or use a non-Microsoft clustering add-on. 
 
 > [!TIP]
 > Destination servers running Windows Server 2019 or Windows Server, Semi-Annual Channel or later have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service, which also opens the necessary firewall ports if they're not already open.
