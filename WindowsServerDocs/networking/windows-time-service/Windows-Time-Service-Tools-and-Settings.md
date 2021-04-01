@@ -4,128 +4,107 @@ title: Windows Time service tools and settings
 author: Teresa-Motiv
 description: Describes the settings that are available for Windows Time Service (W32Time) and the tools that you can use to configure those settings
 ms.author: v-tea
-ms.date: 03/30/2021
+ms.date: 04/01/2021
 ms.topic: article
-ms.custom: contperfq4
+ms.custom: contperf-fy21q4
 ---
 
 # Windows Time service tools and settings
 
-> Applies to Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+> Applies to Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
 The Windows Time service (W32Time) synchronizes the date and time for all computers managed by Active Directory Domain Services (AD DS). This article covers the different tools and settings used to manage the Windows Time service.
 
-If you want to synchronize time for just a domain-joined client computer, see [Configure a client computer for automatic domain time synchronization](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29). For additional information on configuring the Windows Time service, see [Where to Find Windows Time Service Configuration Information](windows-time-service-top.md).
+By default, a computer that is joined to a domain synchronizes time through the domain hierarchy of reliable time sources. However, if a computer has been manually configured to synchronize from a specific time source. perhaps because it was formerly not joined to the domain, you must reconfigure the computer to begin sourcing its time from the domain hierarchy.
 
 > [!CAUTION]
-> Don't use the **Net time** command to configure or set time when the Windows Time service is running.
+> Don't use the **Net time** command to configure or set clock time when the Windows Time service is running.
 >
-> Also, on older computers that run Windows XP or earlier versions, the **Net time /querysntp** command displays the name of a Network Time Protocol (NTP) server with which a computer is configured to synchronize, but that NTP server is used only when the computer's time client is configured as NTP or AllSync. That command has since been deprecated.
+> Also, on older computers that run Windows XP or earlier, the **Net time /querysntp** command displays the name of a Network Time Protocol (NTP) server with which a computer is configured to synchronize, but that NTP server is used only when the computer's time client is configured as NTP or AllSync. That command has since been deprecated.
 
-Most domain member computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. The only typical exception to this is the domain controller that functions as the primary domain controller (PDC) emulator operations master of the forest root domain. The PDC emulator operations master is usually configured to synchronize time with an external time source. To view the time client configuration of a computer (starting in Windows Server 2008 and Windows Vista), run the **W32tm /query /configuration** command from an elevated Command Prompt, and read the **Type** line in the command output. For more information, see [How Windows Time Service Works](How-the-Windows-Time-Service-Works.md). Additionally, you can run the **reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters** command and read the value of **NtpServer** in the command output.
+Most domain-joined computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. An exception to this is the domain controller, which functions as the primary domain controller (PDC) emulator operations master of the forest root domain. The PDC emulator operations master is usually configured to synchronize time with an external time source.
 
-> [!IMPORTANT]
-> Prior to Windows Server 2016, the W32Time service was not designed to meet time-sensitive application needs. However, updates to Windows Server 2016 now allow you to implement a solution for one-millisecond accuracy in your domain. For more information, see [Windows 2016 Accurate Time](accurate-time.md) and [Support boundary to configure the Windows Time service for high-accuracy environments](support-boundary.md).
+You can implement a solution for down to one-millisecond accuracy in your domain. For more information, see [Support boundary for high-accuracy time](support-boundary.md) and see [Accurate Time for Windows Server 2016](accurate-time.md).
 
 ## Network port
 
-Windows Time follows the NTP specification, which requires the use of UDP port 123 for all time synchronization. Whenever the computer synchronizes its clock or provides time to another computer, it happens over UDP port 123. This port is exclusively reserved by the Windows Time service.
+Windows Time follows the Network Time Protocol (NTP) specification, which requires the use of UDP port 123 for all time synchronization. Whenever the computer synchronizes its clock or provides time to another computer, it happens over UDP port 123. This port is exclusively reserved by the Windows Time service.
 
 > [!NOTE]
-> If you have a computer with multiple network adapters (multihomed), you cannot enable the Windows Time service based on a network adapter.
+> If you have a computer with multiple network adapters (multi-homed), you cannot enable the Windows Time service based on a network adapter.
 
-## Using W32tm.exe
+## <a id="windows-time-service-tools"></a> Using W32tm.exe
 
-You can use W32tm.exe to configure Windows Time service settings and to diagnose time service problems. W32tm.exe is the preferred command-line tool for configuring, monitoring, and troubleshooting the Windows Time service. W32tm.exe is included with Windows XP and later versions and Windows Server 2003 and later versions.
+You can use the command-line tool W32tm.exe to configure Windows Time service settings and to diagnose time service problems. W32tm.exe is the preferred command-line tool for configuring, monitoring, and troubleshooting the Windows Time service. W32tm.exe is included with Windows XP and later and Windows Server 2003 and later.
 
-The following tables describe the parameters for W32tm.exe use:
+Membership in the local **Administrators group** is required to run W32tm.exe locally. Membership in the **Domain Admins group** is required to run W32tm.exe remotely.
+
+### Run W32tm.exe
+
+1. In the Search bar, enter **cmd**.
+1. Right-click **Command Prompt**, then select **Run as administrator**.
+1. At the command prompt, enter **w32tm** followed by the applicable parameter, as described below:
 
 |Parameter |Description |
 | --- | --- |
-|**w32tm /?** |Displays the W32tm command-line help |
-|**w32tm /register** |Registers the time service to run as a service and adds its default configuration information to the registry. |
-|**w32tm /unregister** |Unregisters the time service and removes all of its configuration information from the registry. |
-|**w32tm /monitor [/domain:\<*domain name*>] [/computers:\<*name*>[,\<*name*>[,\<*name*>...]]] [/threads:\<*num*>]** |Monitors the Windows Time service.<p>**/domain**: Specifies which domain to monitor. If no domain name is given, or neither the **/domain** nor **/computers** option is specified, the default domain is used. This option might be used more than once.<p>**/computers**: Monitors the given list of computers. Computer names are separated by commas, with no spaces. If a name is prefixed with a **\***, it is treated as a PDC. This option might be used more than once.<p>**/threads**: Specifies the number of computers to analyze simultaneously. The default value is three. Allowed range is 1-50. |
-|**w32tm /ntte \<NT *time epoch*>** |Converts a Windows NT system time (measured in 10<sup>-7</sup>-second intervals starting from 0h 1-Jan 1601) into a readable format. |
-|**w32tm /ntpte \<NTP *time epoch*>** |Converts an NTP time (measured in 2<sup>-32</sup>-second intervals starting from 0h 1-Jan 1900) into a readable format. |
-|**w32tm /resync [/computer:\<*computer*>] [/nowait] [/rediscover] [/soft]** |Tells a computer that it should resynchronize its clock as soon as possible, throwing out all accumulated error statistics.<p>**/computer:\<*computer*>**: Specifies the computer that should resynchronize. If not specified, the local computer will resynchronize.<p>**/nowait**: do not wait for the resynchronize to occur; return immediately. Otherwise, wait for the resynchronize to complete before returning.<p>**/rediscover**: Redetects the network configuration and rediscovers network sources, then resynchronize.<p>**/soft**: Resynchronizes by using existing error statistics. Not useful, provided for compatibility. |
-|**w32tm /stripchart /computer:\<*target*> [/period:\<*refresh*>] [/dataonly] [/samples:\<*count*>] [/rdtsc]** |Displays a strip chart of the offset between this computer and another computer.<p>**/computer:\<*target*>**: The computer to measure the offset against.<p>**/period:\<*refresh*>**: The time between samples, in seconds. The default is two seconds.<p>**/dataonly**: Displays the data only, without graphics.<p>**/samples:\<*count*>**: Collects \<*count*> samples, then stops. If not specified, samples will be collected until **Ctrl+C** is pressed.<br/><br/>**/rdtsc**: For each sample, this option prints comma-separated values along with the headers **RdtscStart**, **RdtscEnd**, **FileTime**, **RoundtripDelay**, and **NtpOffset** instead of the text graphic.<br/><ul><li>**RdtscStart**: [RDTSC (Read Time Stamp Counter)](https://en.wikipedia.org/wiki/Time_Stamp_Counter) value collected just before the NTP request was generated.</li><li>**RdtscEnd**: RDTSC value collected just after the NTP response was received and processed.</li><li>**FileTime**: Local FILETIME value used in the NTP request.</li><li>**RoundtripDelay**: Time elapsed in seconds between generating the NTP request and processing the received NTP response, computed as per NTP roundtrip computations.</li><li>**NTPOffset**: Time offset in seconds between the local computer and the NTP server, computed as per NTP offset computations.</li></ul> |
-|**w32tm /config [/computer:\<*target*>] [/update] [/manualpeerlist:\<*peers*>] [/syncfromflags:\<*source*>] [/LocalClockDispersion:\<*seconds*>] [/reliable:(YES\|NO)] [/largephaseoffset:\<*milliseconds*>]** |**/computer:\<*target*>**: Adjusts the configuration of \<*target*>. If not specified, the default is the local computer.<p>**/update**: Notifies the time service that the configuration has changed, causing the changes to take effect.<p>**/manualpeerlist:\<*peers*>**: Sets the manual peer list to \<*peers*>, which is a space-delimited list of DNS and/or IP addresses. When specifying multiple peers, this option must be enclosed in quotes.<p>**/syncfromflags:\<*source*>**: Sets what sources the NTP client should synchronize from. \<*source*> should be a comma-separated list of these keywords (not case sensitive):<ul><li>**MANUAL**: Include peers from the manual peer list.</li><li>**DOMHIER**: Synchronize from a domain controller (DC) in the domain hierarchy.</li></ul>**/LocalClockDispersion:\<*seconds*>**: Configures the accuracy of the internal clock that W32Time will assume when it can't acquire time from its configured sources.<p>**/reliable:(YES\|NO)**: Set whether this computer is a reliable time source. This setting is only meaningful on domain controllers.<ul><li>**YES**: This computer is a reliable time service.</li><li>**NO**: This computer is not a reliable time service.</li></ul>**/largephaseoffset:\<*milliseconds*>**: sets the time difference between local and network time which W32Time will consider a spike. |
-|**w32tm /tz** |Display the current time zone settings. |
-|**w32tm /dumpreg [/subkey:\<*key*>] [/computer:\<*target*>]** |Display the values associated with a given registry key.<p>The default key is **HKLM\System\CurrentControlSet\Services\W32Time** (the root key for the time service).<p>**/subkey:\<*key*>**: Displays the values associated with subkey <key> of the default key.<p>**/computer:\<*target*>**: Queries registry settings for computer \<*target*> |
-|**w32tm /query [/computer:\<*target*>] {/source \| /configuration \| /peers \| /status} [/verbose]** |Displays a computer's Windows Time service information. This parameter was first made available in the Windows Time client in Windows Vista and Windows Server 2008.<p>**/computer:\<*target*>**: Queries the information of \<*target*>. If not specified, the default value is the local computer.<p>**/source**: Displays the time source.<p>**/configuration**: Displays the configuration of run time and where the setting comes from. In verbose mode, display the undefined or unused setting too.<p>**/peers**: Displays a list of peers and their status.<p>**/status**: Displays Windows Time service status.<p>**/verbose**: Sets the verbose mode to display more information. |
-|**w32tm /debug {/disable \| {/enable /file:\<*name*> /size:/<*bytes*> /entries:\<*value*> [/truncate]}}** |Enables or disables the local computer Windows Time service private log. This parameter was first made available in the Windows Time client in Windows Vista and Windows Server 2008.<p>**/disable**: Disables the private log.<p>**/enable**: Enables the private log.<ul><li>**file:\<*name*>**: Specifies the absolute file name.</li><li>**size:\<*bytes*>**: Specifies the maximum size for circular logging.</li><li>**entries:\<*value*>**: Contains a list of flags, specified by number and separated by commas, that specify the types of information that should be logged. Valid numbers are 0 to 300. A range of numbers is valid, in addition to single numbers, such as 0-100,103,106. Value 0-300 is for logging all information.</li></ul>**/truncate**: Truncate the file if it exists. |
+|**/?** |Displays the W32tm command-line help |
+|**/register** |Registers the time service to run as a service and adds its default configuration information to the registry. |
+|**/unregister** |Unregisters the time service and removes all of its configuration information from the registry. |
+|**/monitor** [/domain:\<*domain name*>] [/computers:\<*name*>[,\<*name*>[,\<*name*>...]]] [/threads:\<*num*>] |Monitors the Windows Time service.<p>**/domain**: Specifies which domain to monitor. If no domain name is given, or neither the **/domain** nor **/computers** option is specified, the default domain is used. This option might be used more than once.<p>**/computers**: Monitors the given list of computers. Computer names are separated by commas, with no spaces. If a name is prefixed with a **\***, it is treated as a PDC. This option might be used more than once.<p>**/threads**: Specifies the number of computers to analyze simultaneously. The default value is three. Allowed range is 1-50. |
+|**/ntte** \<NT *time epoch*> |Converts a Windows NT system time (measured in 10<sup>-7</sup>-second intervals starting from 0h 1-Jan 1601) into a readable format. |
+|**/ntpte** \<NTP *time epoch*> |Converts an NTP time (measured in 2<sup>-32</sup>-second intervals starting from 0h 1-Jan 1900) into a readable format. |
+|**/resync** [/computer:\<*computer*>] [/nowait] [/rediscover] [/soft] |Tells a computer that it should resynchronize its clock as soon as possible, throwing out all accumulated error statistics.<p>**/computer:\<*computer*>**: Specifies the computer that should resynchronize. If not specified, the local computer will resynchronize.<p>**/nowait**: do not wait for the resynchronize to occur; return immediately. Otherwise, wait for the resynchronize to complete before returning.<p>**/rediscover**: Redetects the network configuration and rediscovers network sources, then resynchronize.<p>**/soft**: Resynchronizes by using existing error statistics. Not useful, provided for compatibility. |
+|**/stripchart** /computer:\<*target*> [/period:\<*refresh*>] [/dataonly] [/samples:\<*count*>] [/rdtsc] |Displays a strip chart of the offset between this computer and another computer.<p>**/computer:\<*target*>**: The computer to measure the offset against.<p>**/period:\<*refresh*>**: The time between samples, in seconds. The default is two seconds.<p>**/dataonly**: Displays the data only, without graphics.<p>**/samples:\<*count*>**: Collects \<*count*> samples, then stops. If not specified, samples will be collected until **Ctrl+C** is pressed.<br/><br/>**/rdtsc**: For each sample, this option prints comma-separated values along with the headers **RdtscStart**, **RdtscEnd**, **FileTime**, **RoundtripDelay**, and **NtpOffset** instead of the text graphic.<br/><ul><li>**RdtscStart**: [RDTSC (Read Time Stamp Counter)](https://en.wikipedia.org/wiki/Time_Stamp_Counter) value collected just before the NTP request was generated.</li><li>**RdtscEnd**: RDTSC value collected just after the NTP response was received and processed.</li><li>**FileTime**: Local FILETIME value used in the NTP request.</li><li>**RoundtripDelay**: Time elapsed in seconds between generating the NTP request and processing the received NTP response, computed as per NTP roundtrip computations.</li><li>**NTPOffset**: Time offset in seconds between the local computer and the NTP server, computed as per NTP offset computations.</li></ul> |
+|**/config** [/computer:\<*target*>] [/update] [/manualpeerlist:\<*peers*>] [/syncfromflags:\<*source*>] [/LocalClockDispersion:\<*seconds*>] [/reliable:(YES\|NO)] [/largephaseoffset:\<*milliseconds*>]** |**/computer:\<*target*>**: Adjusts the configuration of \<*target*>. If not specified, the default is the local computer.<p>**/update**: Notifies the time service that the configuration has changed, causing the changes to take effect.<p>**/manualpeerlist:\<*peers*>**: Sets the manual peer list to \<*peers*>, which is a space-delimited list of DNS and/or IP addresses. When specifying multiple peers, this option must be enclosed in quotes.<p>**/syncfromflags:\<*source*>**: Sets what sources the NTP client should synchronize from. \<*source*> should be a comma-separated list of these keywords (not case sensitive):<ul><li>**MANUAL**: Include peers from the manual peer list.</li><li>**DOMHIER**: Synchronize from a domain controller (DC) in the domain hierarchy.</li></ul>**/LocalClockDispersion:\<*seconds*>**: Configures the accuracy of the internal clock that W32Time will assume when it can't acquire time from its configured sources.<p>**/reliable:(YES\|NO)**: Set whether this computer is a reliable time source. This setting is only meaningful on domain controllers.<ul><li>**YES**: This computer is a reliable time service.</li><li>**NO**: This computer is not a reliable time service.</li></ul>**/largephaseoffset:\<*milliseconds*>**: sets the time difference between local and network time which W32Time will consider a spike. |
+|**/tz** |Display the current time zone settings. |
+|**/dumpreg** [/subkey:\<*key*>] [/computer:\<*target*>] |Display the values associated with a given registry key.<p>The default key is **HKLM\System\CurrentControlSet\Services\W32Time** (the root key for the time service).<p>**/subkey:\<*key*>**: Displays the values associated with subkey <key> of the default key.<p>**/computer:\<*target*>**: Queries registry settings for computer \<*target*> |
+|**/query** [/computer:\<*target*>] {/source \| /configuration \| /peers \| /status} [/verbose] |Displays a computer's Windows Time service information. This parameter was first made available in the Windows Time client in Windows Vista and Windows Server 2008.<p>**/computer:\<*target*>**: Queries the information of \<*target*>. If not specified, the default value is the local computer.<p>**/source**: Displays the time source.<p>**/configuration**: Displays the configuration of run time and where the setting comes from. In verbose mode, display the undefined or unused setting too.<p>**/peers**: Displays a list of peers and their status.<p>**/status**: Displays Windows Time service status.<p>**/verbose**: Sets the verbose mode to display more information. |
+|**/debug** {/disable \| {/enable /file:\<*name*> /size:/<*bytes*> /entries:\<*value*> [/truncate]}} |Enables or disables the local computer Windows Time service private log. This parameter was first made available in the Windows Time client in Windows Vista and Windows Server 2008.<p>**/disable**: Disables the private log.<p>**/enable**: Enables the private log.<ul><li>**file:\<*name*>**: Specifies the absolute file name.</li><li>**size:\<*bytes*>**: Specifies the maximum size for circular logging.</li><li>**entries:\<*value*>**: Contains a list of flags, specified by number and separated by commas, that specify the types of information that should be logged. Valid numbers are 0 to 300. A range of numbers is valid, in addition to single numbers, such as 0-100,103,106. Value 0-300 is for logging all information.</li></ul>**/truncate**: Truncate the file if it exists. |
 
-**Examples**
+### Example: Set client to use two time servers
 
-To set a local client to point to two different time servers, one named ntpserver.contoso.com and another named clock.adatum.com, type the following command at the command line, and then press ENTER:
+To set a client computer to point to two different time servers, one named `ntpserver.contoso.com` and another named `clock.adatum.com`, type the following command at the command prompt, and then press ENTER:
 
 ```cmd
 w32tm /config /manualpeerlist:"ntpserver.contoso.com clock.adatum.com" /syncfromflags:manual /update
 ```
 
-If you want to check the Windows Time client configuration from a Windows-based client computer that has a host name of CONTOSOW1, run the following command:
+### Example: Set client to sync time from domain source
+
+To configure a client computer that is currently synchronizing time using a manually-specified computer to synchronize time automatically from the AD domain hierarchy:
+
+```cmd
+w32tm /config /syncfromflags:domhier /update
+
+net stop w32time
+
+net start w32time
+```
+
+### Example: Check client time configuration
+
+To check a client configuration from a Windows-based client computer that has a host name of `contosoW1`, run the following command:
 
 ```cmd
 W32tm /query /computer:contosoW1 /configuration
 ```
 
-The output of this command is a list of configuration parameters that are set for the Windows Time client.
+The output of this command displays a list of W32time configuration parameters that are set for the client.
 
 > [!IMPORTANT]
-> [Windows Server 2016 has improved the time synchronization algorithms](./accurate-time.md) to align with RFC specifications. Therefore, if you want to set the local Windows Time client to point to multiple peers, it is highly recommended that you prepare three or more different time servers.
+> [Windows Server 2016 has improved the time synchronization algorithms](./accurate-time.md) to align with RFC specifications. Therefore, if you want to set the local Windows Time client to point to multiple peers, we recommended that you prepare three or more different time servers.
 >
-> If you have only two time servers, you should specify the **UseAsFallbackOnly** flag (0x2) to de-prioritize one of them. For instance, if you want to prioritize ntpserver.contoso.com over clock.adatum.com, run the following command.
+> If you have only two time servers, you should specify the **UseAsFallbackOnly** flag (0x2) to de-prioritize one of them. For instance, if you want to prioritize `ntpserver.contoso.com` over `clock.adatum.com`, run the following command.
 > ```cmd
 > w32tm /config /manualpeerlist:"ntpserver.contoso.com,0x8 clock.adatum.com,0xa" /syncfromflags:manual /update
 > ```
-> For the meaning of the specified flag, see [Parameters subkeys](#parameters).
+> For the meaning of the specified parameter, see [Parameters subkeys](#parameters).
 
-## Using Local Group Policy Editor
+Additionally, you can run the **reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters** command and read the value of **NtpServer** in the command output.
 
-The Windows Time service stores a number of configuration properties as registry entries. You can use Group Policy Objects to configure most of this information. For example, you can use GPOs to configure a computer to be an NTPServer or NTPClient, configure the time synchronization mechanism, or configure a computer to be a reliable time source.
+## Configure computer clock reset
 
-> [!NOTE]
-> Group Policy settings for the Windows Time service can be configured on Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, and Windows Server 2008 R2 domain controllers and can be applied only to computers running Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, and Windows Server 2008 R2.
-
-Windows stores the Windows Time service policy information in the W32Time.admx administrative template file, under **Computer Configuration\Administrative Templates\System\Windows Time Service**. It stores the configuration information that the policies define in the registry, and uses those registry entries to configure the registry entries for the Windows Time service. As a result, the values defined by Group Policy overwrite any pre-existing values in the Windows Time service section of the registry.
-
-> [!IMPORTANT]
-> Some of the preset GPO settings differ from the corresponding default registry entries. If you plan to use a GPO to configure any Windows Time setting, be sure that you review [Preset values for the Windows Time service Group Policy settings are different from the corresponding Windows Time service registry entries in Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=186066). This issue applies to Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 R2, and Windows Server 2003.
-
-For example, suppose you edit policy settings in the **Configure Windows NTP Client** policy.
-
-Your changes are stored in the following location in the administrative template:
-
-> **Computer Configuration\Administrative Templates\System\Windows Time Service\Time Providers\ Configure Windows NTP Client**
-
-Windows loads these settings into the policy area of the registry under the following subkey:
-
-> **HKLM\Software\Policies\Microsoft\W32time\TimeProviders\NtpClient**
-
-Then Windows uses the policy settings to configure the related Windows Time service registry entries under the following subkey:
-
-> **HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Time Providers\NTPClient\\**
-
-The following table lists the policies that you can configure for the Windows Time service, and the registry subkeys that those policies affect.
-
-> [!NOTE]
-> When you remove a Group Policy setting, Windows removes the corresponding entry from the policy area of the registry.
-
-|Policy<sup>1</sup> |Registry locations<sup>2,</sup> <sup>3</sup> |
-| --- | --- |
-|Global Configuration Settings |W32Time<br />W32Time\Config<br />W32Time\Parameters |
-|Time Providers\Configure Windows NTP Client |W32Time\TimeProviders\NtpClient |
-|Time Providers\Enable Windows NTP Client |W32Time\TimeProviders\NtpClient |
-|Time Providers\Enable Windows NTP Server |W32Time\TimeProviders\NtpServer |
-
-> <sup>1</sup> Category path: **Computer Configuration\Administrative Templates\System\Windows Time Service**
-> <sup>2</sup> Subkey: **HKLM\SOFTWARE\Policies\Microsoft**
-> <sup>3</sup> Subkey: **HKLM\SYSTEM\CurrentControlSet\Services**
-
-## How a computer clock is reset
-
-In order for the Windows Time service to reset a computer clock, the computer clock time offset from the current time (`CurrentTimeOffset`) must be less than the `MaxAllowedPhaseOffset` value and satisfy the following at the same time:
+In order for W32tm.exe to reset a computer clock, the computer clock time offset from the current time (`CurrentTimeOffset`) must be less than the `MaxAllowedPhaseOffset` value and satisfy the following at the same time:
 
 - Windows Server 2016 and later:
 
@@ -151,7 +130,7 @@ ClockRate: 0.0156000s
 
 The following examples show how to apply these calculations when you use Windows Server 2012 R2 or an earlier version.
 
-### Example 1: Clock time off by four minutes
+### Example: Clock time off by four minutes
 
 Your computer clock time is 11:05 and the actual current time is 11:09:
 
@@ -182,7 +161,7 @@ Therefore, W32tm would set the clock back immediately.
 > [!NOTE]
 > In this case, if you want to set the clock back slowly, you would also have to adjust the values of **PhaseCorrectRate** or **UpdateInterval** in the registry to make sure that the equation result is **TRUE**.
 
-### Example 2: Clock time off by three minutes
+### Example: Clock time off by three minutes
 
 Your computer clock time is 11:05 and the actual current time is 11:08:
 
@@ -210,21 +189,52 @@ AND does it satisfy the above equation?
 
 In this case, the clock will be set back slowly.
 
+## Using Local Group Policy Editor
+
+The Windows Time service stores a number of configuration properties as registry entries. You can use Group Policy Objects (GPOs) in Local Group Policy Editor to configure most of this information. For example, you can use GPOs to configure a computer to be an NTPServer or NTPClient, configure the time synchronization mechanism, or configure a computer to be a reliable time source.
+
+> [!NOTE]
+> Group Policy settings for the Windows Time service can be configured on Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, and Windows Server 2008 R2 domain controllers and can applied to computers running Windows Server 2003, Windows Server 2003 R2, Windows Server 2008, and Windows Server 2008 R2.
+
+Windows stores the Windows Time service policy information in the Local Group Policy Editor under `Computer Configuration\Administrative Templates\System\Windows Time Service`. It stores configuration information that the policies define in the Windows registry, and then uses those registry entries to configure the registry entries specific to the Windows Time service. As a result, the values defined by Group Policy overwrite any pre-existing values in the Windows Time service section of the registry. Some of the preset GPO settings differ from the corresponding default Windows Time service registry entries.
+
+For example, suppose you edit policy settings in the **Time Providers\Configure Windows NTP Client** policy. Windows loads these settings into the policy area of the registry under the following subkey:
+
+> `HKLM\Software\Policies\Microsoft\W32time\TimeProviders\NtpClient`
+
+Then Windows uses the policy settings to configure the related Windows Time service registry entries under the following subkey:
+
+> `HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Time Providers\NTPClient\\`
+
+The following table lists the policies that you can configure for the Windows Time service, and the registry subkeys that those policies affect.
+
+> [!NOTE]
+> When you remove a Group Policy setting, Windows removes the corresponding entry from the policy area of the registry.
+
+|Group Policy<sup>1</sup> |Registry locations<sup>2,</sup> <sup>3</sup> |
+| --- | --- |
+|Global Configuration Settings |W32Time<br />W32Time\Config<br />W32Time\Parameters |
+|Time Providers\Configure Windows NTP Client |W32Time\TimeProviders\NtpClient |
+|Time Providers\Enable Windows NTP Client |W32Time\TimeProviders\NtpClient |
+|Time Providers\Enable Windows NTP Server |W32Time\TimeProviders\NtpServer |
+
+<sup>1</sup> Category path: Computer Configuration\Administrative Templates\System\Windows Time Service<br>
+<sup>2</sup> Subkey: HKLM\SOFTWARE\Policies\Microsoft<br>
+<sup>3</sup> Subkey: HKLM\SYSTEM\CurrentControlSet\Services
+
 ## Windows registry reference
 
 > [!WARNING]
 > This information is provided as a reference for use in troubleshooting and validation. Windows registry keys are used by W32Time to store critical information. Don't change these values. Modifications to the registry are not validated by the registry editor or by Windows before they are applied. If the registry contains invalid values, Windows may experience unrecoverable errors.
 
-Windows Time service stores information in the following registry subkeys:
+The Windows Time service stores information in the following registry subkeys:
 
 - [**HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config**](#config)
 - [**HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters**](#parameters)
 - [**HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient**](#ntpclient)
 - [**HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer**](#ntpserver)
 
-Additionally, for troubleshooting purposes, you can [add entries in order to configure logs](#enabling-w32time-logging).
-
-In the following tables, "All versions" refers to Windows 7, Windows 8, Windows 10, Windows Server 2008 and Windows Server 2008 R2, Windows Server 2012 and Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019. Some entries are only available on later Windows versions.
+In the following tables, "All versions" refers to Windows 7, Windows 8, Windows 10, Windows Server 2008 and Windows Server 2008 R2, Windows Server 2012 and Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019. 
 
 > [!NOTE]
 > Some of the parameters in the registry are measured in clock ticks and some are measured in seconds. To convert the time from clock ticks to seconds, use these conversion factors:
@@ -311,54 +321,58 @@ The `NtpClient` subkey entries are located at `HKLM\SYSTEM\CurrentControlSet\Ser
 |**Enabled** |All versions |Indicates if the NtpServer provider is enabled in the current Time Service. <ul><li>**1** - Yes</li><li>**0** - No</li></ul>The default value on domain members is **1**. The default value on stand-alone clients and servers is **1**. |
 |**InputProvider** |All versions |Indicates whether to enable the NtpClient as an InputProvider, which obtains time information from the NtpServer. The NtpServer is a time server that responds to client time requests on the network by returning time samples that are useful for synchronizing the local clock. <ul><li>**1** - Yes</li><li>**0** - No = 0 </li></ul>Default value for both domain members and stand-alone clients: 1 |
 
-### Logging entries
+### Enhanced logging
 
-The following registry entries are not a part of the W32Time default configuration but can be added to the registry to obtain increased logging capabilities. The information logged to the System Event log can be modified by changing value for the **EventLogFlags** setting in the Group Policy Object Editor. By default, the time service logs an event every time that it switches to a new time source.
+The following registry entries are not a part of the W32Time default configuration but can be added to the registry to obtain enhanced logging capabilities. The information logged to the System Event log can be modified by changing values for the **EventLogFlags** setting in the Group Policy Object Editor. By default, the Windows Time service logs an event every time that it switches to a new time source.
 
 In order to enable W32Time logging, add the following registry entries:
 
-|Registry Entry |Versions |Description |
+|Entry |Versions |Description |
 | --- | --- | --- |
-|**FileLogEntries** |All versions |Controls the number of entries created in the Windows Time log file. The default value is none, which does not log any Windows Time activity. Valid values are **0** to **300**. This value does not affect the event log entries normally created by Windows Time |
-|**FileLogName** |All versions |Controls the location and file name of the Windows Time log. The default value is blank, and should not be changed unless **FileLogEntries** is changed. A valid value is a full path and file name that Windows Time will use to create the log file. This value does not affect the event log entries normally created by Windows Time. |
-|**FileLogSize** |All versions |Controls the circular logging behavior of Windows Time log files. When **FileLogEntries** and **FileLogName** are defined, Entry defines the size, in bytes, to allow the log file to reach before overwriting the oldest log entries with new entries. Please use **1000000** or larger value for this setting. This value does not affect the event log entries normally created by Windows Time. |
+|FileLogEntries |All versions |Controls the number of entries created in the Windows Time log file. The default value is none, which does not log any Windows Time activity. Valid values are **0** to **300**. This value does not affect the event log entries normally created by Windows Time |
+|FileLogName |All versions |Controls the location and file name of the Windows Time log. The default value is blank, and should not be changed unless **FileLogEntries** is changed. A valid value is a full path and file name that Windows Time will use to create the log file. This value does not affect the event log entries normally created by Windows Time. |
+|FileLogSize |All versions |Controls the circular logging behavior of Windows Time log files. When **FileLogEntries** and **FileLogName** are defined, Entry defines the size, in bytes, to allow the log file to reach before overwriting the oldest log entries with new entries. Please use **1000000** or larger value for this setting. This value does not affect the event log entries normally created by Windows Time. |
 
-## Global Group Policy settings
+## Group Policy Object settings
 
-The following lists the global Group Policy settings associated with the Windows Time service and the default value for each setting. These settings are contained in the **Global Configuration Settings** GPO.
+Group Policy settings are contained in the **Global Configuration Settings** and the **Windows NTP Client Settings** GPOs.
+
+### Global Configuration Settings
+
+These are the global Group Policy settings and default values for the Windows Time service. These settings are contained in the **Global Configuration Settings** GPO in Local Policy Editor.
 
 |Group Policy setting|Default value|
 | --- | --- |
-|**AnnounceFlags**|10|
-|**EventLogFlags**|2|
-|**FrequencyCorrectRate**|4|
-|**HoldPeriod**|5|
-|**LargePhaseOffset**|1,280,000|
-|**LocalClockDispersion**|10|
-|**MaxAllowedPhaseOffset**|300|
-|**MaxNegPhaseCorrection**|54,000 (15 hours)|
-|**MaxPollInterval**|15|
-|**MaxPosPhaseCorrection**|54,000 (15 hours)|
-|**MinPollInterval**|10|
-|**PhaseCorrectRate**|7|
-|**PollAdjustFactor**|5|
-|**SpikeWatchPeriod**|90|
-|**UpdateInterval**|100|
+|AnnounceFlags|10|
+|EventLogFlags|2|
+|FrequencyCorrectRate|4|
+|HoldPeriod|5|
+|LargePhaseOffset|1,280,000|
+|LocalClockDispersion|10|
+|MaxAllowedPhaseOffset|300|
+|MaxNegPhaseCorrection|54,000 (15 hours)|
+|MaxPollInterval|15|
+|MaxPosPhaseCorrection|54,000 (15 hours)|
+|MinPollInterval|10|
+|PhaseCorrectRate|7|
+|PollAdjustFactor|5|
+|SpikeWatchPeriod|90|
+|UpdateInterval|100|
 
-## Windows NTP Client settings
+### Windows NTP Client settings
 
-The following the available settings for the **Configure Windows NTP Client** GPO and the default values associated with the Windows Time service.
+These are the Windows NTP client settings and default values for the Windows Time service. These settings are contained in the **Configure Windows NTP Client** GPO in Local Group Policy Editor.
 
 |Group Policy setting|Default value|
 |------------------------|-----------------|
-|**NtpServer**|time.windows.com, 0x1|
-|**Type**|**NTP** - Use for non-domain-joined computers<br>**NT5DS** - Use for domain-joined computers|
-|**CrossSiteSyncFlags**|2|
-|**ResolvePeerBackoffMinutes**|15|
-|**ResolvePeerBackoffMaxTimes**|7|
-|**SpecialPollInterval**|3,600|
-|**EventLogFlags**|0|
+|NtpServer|`time.windows.com`, 0x1|
+|Type|**NTP** - Use for non-domain-joined computers<br>**NT5DS** - Use for domain-joined computers|
+|CrossSiteSyncFlags|2|
+|ResolvePeerBackoffMinutes|15|
+|ResolvePeerBackoffMaxTimes|7|
+|SpecialPollInterval|3,600|
+|EventLogFlags|0|
 
 ## Related information
 
-Also see [RFC 1305 - Network Time Protocol](https://datatracker.ietf.org/doc/rfc1305/) of the Internet Engineering Task Force (IETF).
+See [RFC 1305 - Network Time Protocol](https://datatracker.ietf.org/doc/rfc1305/) of the Internet Engineering Task Force (IETF).
