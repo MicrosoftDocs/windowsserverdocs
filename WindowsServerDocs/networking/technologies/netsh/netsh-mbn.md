@@ -1,10 +1,9 @@
 ---
 title: Netsh Commands for Mobile Broadband Network (MBN)
 description: Use netsh mbn to query and configure mobile broadband settings and parameters.
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 author: apdutta
+ms.author: apdutta
 ms.date: 02/20/2020
 ---
 
@@ -14,7 +13,7 @@ ms.date: 02/20/2020
 Use **netsh mbn** to query and configure mobile broadband settings and parameters.
 
 > [!TIP]
-> You can get help on the netsh mbn command by using 
+> You can get help on the netsh mbn command by using
 >
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netsh mbn /?
 
@@ -29,6 +28,7 @@ The available netsh mbn commands are:
 - [help](#help)
 - [set](#set)
 - [show](#show)
+- [test](#test)
 
 ## add
 
@@ -51,7 +51,7 @@ add dmprofile [interface=]<string> [name=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **name**      | Name of the profile XML file. It is the name of the XML file containing the profile data.     | Required |
@@ -76,7 +76,7 @@ add profile [interface=]<string> [name=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **name**      | Name of the profile XML file. It is the name of the XML file containing the profile data.     | Required |
@@ -101,7 +101,7 @@ connect [interface=]<string> [connmode=]tmp|name [name=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **connmode**  | Specifies how connection parameters are being provided. The connection can be requested using a profile XML, or using profile name for the profile XML that has been previously stored in Mobile Broadband Profile Data Store using "netsh mbn add profile" command. In former case, the parameter connmode shall hold "tmp" as value. Whereas, it shall be "name" in the latter case                                       | Required |
@@ -137,7 +137,7 @@ delete dmprofile [interface=]<string> [name=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **name**      | Name of the profile XML file. It is the name of the XML file containing the profile data.     | Required |
@@ -160,7 +160,7 @@ delete profile [interface=]<string> [name=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **name**      | Name of the profile XML file. It is the name of the XML file containing the profile data.     | Required |
@@ -184,7 +184,7 @@ diagnose [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -208,7 +208,7 @@ disconnect [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -222,7 +222,7 @@ disconnect interface="Cellular"
 
 ## dump
 
-Displays a configuration script. 
+Displays a configuration script.
 
 Creates a script that contains the current configuration.  If saved to a file, this script can be used to restore altered configuration settings.
 
@@ -270,7 +270,7 @@ set acstate [interface=]<string> [state=]autooff|autoon|manualoff|manualon
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **name**      | The auto connect state to be set. One of the following values:<br>autooff: Auto connect token off.<br>autoon: Auto connect token on.<br>manualoff: Manual connect token off.<br>manualon: Manual connect token on. | Required |
@@ -295,7 +295,7 @@ set dataenablement [interface=]<string> [profileset=]internet|mms|all [mode=]yes
 
 **Parameters**
 
-|                |                                                                                               |          |
+| Parameter  |  Description                                                                                | Requirement         |
 |----------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface**  | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **profileset** | Name of the profile set.                                                                      | Required |
@@ -321,7 +321,7 @@ set dataroamcontrol [interface=]<string> [profileset=]internet|mms|all [state=]n
 
 **Parameters**
 
-|                |                                                                                               |          |
+|  Parameter  |    Description                                                                    | Requirement         |
 |----------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface**  | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **profileset** | Name of the profile set.                                                                      | Required |
@@ -347,7 +347,7 @@ set enterpriseapnparams [interface=]<string> [allowusercontrol=]yes|no|nc [allow
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **allowusercontrol** | One of the following values:<br>yes: allow end user control enterpriseAPN.<br>no: disallow end user control enterpriseAPN.<br>nc: no change. | Required |
@@ -374,7 +374,7 @@ set highestconncategory [interface=]<string> [highestcc=]admim|user|operator|dev
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **highestcc** | One of the following values:<br>admin: admin provisioned profiles.<br>user: user proviioned profiles.<br>operator: operator proviioned profiles.<br>device: device proviioned profiles. | Required |
@@ -399,7 +399,7 @@ set powerstate [interface=]<string> [state=]on|off
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **state**      | One of the following values:<br>on: power on radio transceiver.<br>off:  power off the radio transceiver. | Required |
@@ -424,7 +424,7 @@ set profileparameter [name=]<string> [[interface=]<string>] [[cost]=default|unre
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **name**      | Name of the profile to be  modified. If the interface is specified then only the profile on that interface is modified. | Required |
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Optional |
@@ -455,7 +455,7 @@ set slotmapping [interface=]<string> [slotindex=]<integer>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **slotindex** | Slot index to be set.                                                                         | Required |
@@ -480,7 +480,7 @@ set tracing [mode=]yes|no
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **mode**      | One of the following values:<br>yes: Enables tracing for Mobile Broadband.<br>no: Disables tracing for Mobile Broadband.     | Required |
 
@@ -495,16 +495,16 @@ set tracing mode=yes
 
 Displays mobile broadband network information.
 
-The available netsh mbn set commands are:
+The available netsh mbn show commands are:
 
-- [acstate](#acstate)
+- [acstate](#acstate-1)
 - [capability](#capability)
 - [connection](#connection)
-- [dataenablement](#dataenablement)
-- [dataroamcontrol](#dataroamcontrol)
+- [dataenablement](#dataenablement-1)
+- [dataroamcontrol](#dataroamcontrol-1)
 - [dmprofiles](#dmprofiles)
-- [enterpriseapnparams](#enterpriseapnparams)
-- [highestconncategory](#highestconncategory)
+- [enterpriseapnparams](#enterpriseapnparams-1)
+- [highestconncategory](#highestconncategory-1)
 - [homeprovider](#homeprovider)
 - [interfaces](#interfaces)
 - [netlteattachinfo](#netlteattachinfo)
@@ -518,13 +518,13 @@ The available netsh mbn set commands are:
 - [radio](#radio)
 - [readyinfo](#readyinfo)
 - [signal](#signal)
-- [slotmapping](#slotmapping)
+- [slotmapping](#slotmapping-1)
 - [slotstatus](#slotstatus)
 - [smsconfig](#smsconfig)
-- [tracing](#tracing)
+- [tracing](#tracing-1)
 - [visibleproviders](#visibleproviders)
 
-### acstate  
+### acstate
 
 Shows the Mobile Broadband data auto connect state for the given interface.
 
@@ -536,7 +536,7 @@ show acstate [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -560,7 +560,7 @@ show capability [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -584,7 +584,7 @@ show connection [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -608,7 +608,7 @@ show dataenablement [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -632,7 +632,7 @@ show dataroamcontrol [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -656,13 +656,13 @@ show dmprofiles [[name=]<string>] [[interface=]<string>]
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **name**      | Name of the profile to display.                                                               | Optional |
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Optional |
 
 **Remarks**
-    
+
 Shows the profile data or lists the profiles on the system.
 
 If profile name is given then the content of the profile will be displayed. Otherwise profiles will be listed for the interface.
@@ -690,7 +690,7 @@ show enterpriseapnparams [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -714,7 +714,7 @@ show highestconncategory [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -738,7 +738,7 @@ show homeprovider [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -773,7 +773,7 @@ show netlteattachinfo [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -784,7 +784,7 @@ show netlteattachinfo [interface=]<string>
 show netlteattachinfo interface="Cellular"
 ```
 
-### pin      
+### pin
 
 Shows the pin information for the given interface.
 
@@ -796,7 +796,7 @@ show pin [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -808,7 +808,7 @@ show pin interface="Cellular"
 ```
 
 
-### pinlist  
+### pinlist
 
 Shows the pin list information for the given interface.
 
@@ -820,7 +820,7 @@ show pinlist [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -844,7 +844,7 @@ show preferredproviders [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -856,7 +856,7 @@ show preferredproviders interface="Cellular"
 ```
 
 
-### profiles 
+### profiles
 
 Shows a list of profiles configured on the system.
 
@@ -868,7 +868,7 @@ show profiles [[name=]<string>] [[interface=]<string>] [[purpose=]<string>]
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **name**      | Name of the profile to display.                                                               | Optional |
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Optional |
@@ -881,7 +881,7 @@ If profile name is given then the content of the profile will be displayed. Othe
 If interface name is given, only the specified profile on the given interface will be listed. Otherwise, first matched profile will be displayed.
 
 If the purpose is provided, only profiles with the matching purpose GUID will be displayed.  Otherwise, profiles will not be filtered by purpose.  The string can either be a GUID with curly brackets or one of the following strings: internet, supl, mms, ims, or allhost.
-	
+
 **Example**
 
 ```powershell
@@ -903,7 +903,7 @@ show profilestate [interface=]<string> [name=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **name**      | Name of the profile. It is the name of the profile that has the state to be shown.            | Required |
@@ -926,7 +926,7 @@ show provisionedcontexts [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -938,7 +938,7 @@ show provisionedcontexts interface="Cellular"
 ```
 
 
-### purpose  
+### purpose
 
 Shows the purpose group GUIDs that can be used to filter profiles on the device. There are no parameters for this command.
 
@@ -949,7 +949,7 @@ show purpose
 ```
 
 
-### radio    
+### radio
 
 Shows the radio state information for the given interface.
 
@@ -961,7 +961,7 @@ show radio [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -985,7 +985,7 @@ show readyinfo [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -997,7 +997,7 @@ show readyinfo interface="Cellular"
 ```
 
 
-### signal   
+### signal
 
 Shows the signal information for the given interface.
 
@@ -1009,7 +1009,7 @@ show signal [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -1033,7 +1033,7 @@ show slotmapping [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -1057,7 +1057,7 @@ show slotstatus [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -1081,7 +1081,7 @@ show smsconfig [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -1093,14 +1093,14 @@ show smsconfig interface="Cellular"
 ```
 
 
-### tracing  
+### tracing
 
 Shows whether Mobile Broadband tracing is enabled or disabled.
 
 **Syntax**
 
 ```powershell
-show tracing 
+show tracing
 ```
 
 
@@ -1116,7 +1116,7 @@ show visibleproviders [interface=]<string>
 
 **Parameters**
 
-|               |                                                                                               |          |
+| Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 
@@ -1125,4 +1125,49 @@ show visibleproviders [interface=]<string>
 
 ```powershell
 show visibleproviders interface="Cellular"
+```
+
+## test
+
+Runs tests for a specific feature area, while collecting logs.
+
+**Syntax**
+```
+test [feature=<feature area>] [testPath=<path>] [taefPath=<path>] [param=<test input params>]
+```
+
+**Parameters**
+
+| Tag | Value | Optional? |
+|---|---|---|
+| **feature** | A feature area out of the supported feature areas listed below | Required |
+| **testpath** | Path containing the test binaries | Optional if HLK Server is installed |
+| **taefpath** | Path containing the TAEF binaries | Optional if HLK Server is installed |
+| **param** | Comma separated parameters, to be used for the tests | Required for certain feature areas, optional for others |
+
+**Remarks**
+
+Supported feature areas are:
+- connectivity
+- power
+- radio
+- esim
+- sms
+- dssa
+- lte
+- bringup
+
+Some tests require additional test parameters that need to be provided in the `param` field.
+The required parameters for the features are listed below.
+- **connectivity**: AccessString, UserName (If applicable), Password (If applicable)
+- **radio**: AccessString, UserName (If applicable), Password (If applicable)
+- **esim**: ActivationCode
+- **bringup**: AccessString, UserName (If applicable), Password (If applicable)
+
+**Examples**
+
+```
+test feature=connectivity param="AccessString=internet"
+test feature=lte testpath="C:\\data\\test\\bin" taefpath="C:\\data\\test\\bin"
+test feature=lte
 ```

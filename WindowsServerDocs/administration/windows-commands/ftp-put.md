@@ -1,48 +1,56 @@
 ---
 title: ftp put
-description: "Windows Commands topic for FTP - put"
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
-ms.assetid: 95cc1e3f-523d-4374-98b8-16e6c276b2ca vhorne
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+description: Reference article for the ftp put command, which copies a local file to the remote computer using the current file transfer type.
+ms.topic: reference
+ms.assetid: 95cc1e3f-523d-4374-98b8-16e6c276b2ca
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 03/30/2020
 ---
-# ftp: put
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# ftp put
+
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies a local file to the remote computer using the current file transfer type.
+
+> [!NOTE]
+> This command is the same as the [ftp send command](ftp-send_1.md).
+
 ## Syntax
-```
-put <LocalFile> [<remoteFile>]
-```
-#### Parameters
 
-|    Parameter     |                    Description                    |
-|------------------|---------------------------------------------------|
-|   `<LocalFile>`  |         Specifies the local file to copy.         |
-| `[<remoteFile>]` | Specifies the name to use on the remote computer. |
+```
+put <localfile> [<remotefile>]
+```
 
-## Remarks
-- The **put** command is identical to the **send** command.
-- if *remoteFile* is not specified, the file is given the *LocalFile* name.
-  ## <a name="BKMK_Examples"></a>Examples
-  copy the local file **test.txt** and name it **test1.txt** on the remote computer.
-  ```
-  put test.txt test1.txt
-  ```
-  copy the local file **program.exe** to the remote computer.
-  ```
-  put program.exe
-  ```
-  ## Additional References
-- [ftp: ascii](ftp-ascii.md)
-- [ftp: binary](ftp-binary.md)
-- - [Command-Line Syntax Key](command-line-syntax-key.md)
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `<localfile>` | Specifies the local file to copy. |
+| `[<remotefile>]` | Specifies the name to use on the remote computer. If you don't specify a *remotefile*, the file is give the *localfile* name.|
+
+### Examples
+
+To copy the local file *test.txt* and name it *test1.txt* on the remote computer, type:
+
+```
+put test.txt test1.txt
+```
+
+To copy the local file *program.exe* to the remote computer, type:
+
+```
+put program.exe
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [ftp ascii command](ftp-ascii.md)
+
+- [ftp binary command](ftp-binary.md)
+
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

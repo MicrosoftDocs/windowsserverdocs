@@ -1,10 +1,8 @@
 ---
-title: Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan
-description: Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
-ms.topic: article
-ms.author:  qizha;tristanb
+title: Processor Power Management (PPM) tuning for the Windows Server balanced power plan
+description: Processor Power Management (PPM) Tuning for the Windows Server balanced power plan
+ms.topic: conceptual
+ms.author: qizha
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -20,30 +18,29 @@ If you run a server system that has dramatically different workload characterist
 
 ## Windows Processor Power Tuning Methodology
 
-
 ### Tested workloads
 
 Workloads are selected to cover a best-effort set of "typical" Windows Server workloads. Obviously this set is not intended to be representative of the entire breadth of real-world server environments.
 
 The tuning in each power policy is data driven by the following five workloads:
 
--   **IIS Web Server workload**
+- **IIS Web Server workload**
 
     A Microsoft internal benchmark called Web Fundamentals is used to optimize the energy efficiency of platforms running IIS Web Server. The setup contains a web server and multiple clients that simulate the web access traffic. The distribution of dynamic, static hot (in-memory), and static cold (disk access required) web pages is based on statistical studies of production servers. To push the server's CPU cores to full utilization (one end of the tested spectrum), the setup needs sufficiently fast network and disk resources.
 
--   **SQL Server Database workload**
+- **SQL Server Database workload**
 
     The [TPC-E](http://www.tpc.org/tpce/default.asp) benchmark is a popular benchmark for database performance analysis. It is used to generate an OLTP workload for PPM tuning optimizations. This workload has significant disk I/O, and hence has a high performance requirement for the storage system and memory size.
 
--   **File Server workload**
+- **File Server workload**
 
     A Microsoft-developed benchmark called [FSCT](http://www.snia.org/sites/default/files2/sdc_archives/2009_presentations/tuesday/BartoszNyczkowski-JianYan_FileServerCapacityTool.pdf) is used to generate an SMB file server workload. It creates a large file set on the server and uses many client systems (actual or virtualized) to generate file open, close, read and write operations. The operation mix is based on statistical studies of production servers. It stresses CPU, disk, and network resources.
 
--   **SPECpower – JAVA workload**
+- **SPECpower – JAVA workload**
 
     [SPECpower\_ssj2008](http://spec.org/power_ssj2008/) is the first industry-standard SPEC benchmark that jointly evaluates power and performance characteristics. It is a server-side Java workload with varying CPU load levels. It doesn't require many disk or network resources, but it has certain requirements for memory bandwidth. Almost all of the CPU activity is performed in user-mode; kernel-mode activity does not have much impact on the benchmarks' power and performance characteristics except for the power management decisions.
 
--   **Application Server workload**
+- **Application Server workload**
 
     The [SAP-SD](http://global.sap.com/campaigns/benchmark/index.epx) benchmark is used to generate an application server workload. A two-tier setup is used, with the database and the application server on the same server host. This workload also utilizes response time as a performance metric, which differs from other tested workloads. Thus it is used to verify the impact of PPM parameters on responsiveness. Nevertheless, it is not intended to be representative of all latency-sensitive production workloads.
 
@@ -85,7 +82,7 @@ If your primary workload characteristics differ significantly from the five work
 
 Due to the number and complexity of parameters, this may be a challenging task, but if you are looking for the best tradeoff between energy consumption and workload efficacy for your particular environment, it may be worth the effort.
 
- The complete set of tunable PPM parameters can be found in [Processor power management tuning](https://msdn.microsoft.com/windows/hardware/gg566941.aspx). Some of the simplest power parameters to start with could be:
+ The complete set of tunable PPM parameters can be found in [Processor power management tuning](/previous-versions/windows/hardware/design/dn613983(v=vs.85)). Some of the simplest power parameters to start with could be:
 
 -   **Processor Performance Increase Threshold and Processor Performance Increase Time** – larger values slow the perf response to increased activity
 

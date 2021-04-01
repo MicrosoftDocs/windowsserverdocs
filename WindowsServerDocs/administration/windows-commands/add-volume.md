@@ -1,46 +1,38 @@
 ---
 title: add volume
-description: Windows Commands topic for **add volume**, which adds volumes to the shadow copy Set, which is the set of volumes to be shadow copied.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the add volume command, which adds volumes to the shadow copy Set, which is the set of volumes to be shadow copied.
+ms.topic: reference
 ms.assetid: b7d4d35d-8bda-46d2-8df5-eb598cecaaba
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # add volume
 
-Adds volumes to the Shadow Copy Set, which is the set of volumes to be shadow copied. This command is necessary to create shadow copies. If used without parameters, **add volume** displays help at the command prompt.
+Adds volumes to the Shadow Copy Set, which is the set of volumes to be shadow copied. When a shadow copy is created, an environment variable links the alias to the shadow ID, so the alias can then be used for scripting.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Volumes are added one at a time. Each time a volume is added, it's checked to make sure VSS supports shadow copy creation for that volume. This check can be invalidated by later use of the **set context** command.
+
+This command is necessary to create shadow copies. If used without parameters, **add volume** displays help at the command prompt.
 
 ## Syntax
 
 ```
-add volume <Volume> [provider <ProviderID>]
+add volume <volume> [provider <providerid>]
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-| `<Volume>` | Specifies a volume to add to the Shadow Copy Set. At least one volume is required for shadow copy creation.|
-| `[provider \<ProviderID>]` | Specifies the Provider ID of a registered provider to use to create the shadow copy. If **provider** is not specified, the default provider is used.|
+| Parameter | Description |
+| --------- | ----------- |
+| `<volume>` | Specifies a volume to add to the Shadow Copy Set. At least one volume is required for shadow copy creation. |
+| `[provider \<providerid>]` | Specifies the Provider ID for a registered provider to use to create the shadow copy. If **provider** is not specified, the default provider is used. |
 
-## Remarks
+## Examples
 
--   Volumes are added one at a time.
-
--   Each time a volume is added, it is checked to ensure that VSS supports shadow copy creation of that volume. This primary check may be invalidated, however, by later use of the **set context** command.
-
--   When a shadow copy is created, an environment variable links the alias to the shadow ID, so the alias can then be used for scripting.
-
-## <a name=BKMK_examples></a>Examples
-
-To view the current list of registered providers, at the `DISKSHADOW>` prompt, type:
+To view the current list of registered providers, at the `diskshadow>` prompt, type:
 
 ```
 list providers
@@ -57,7 +49,7 @@ The following output displays a single provider, which will be used by default:
 1 provider registered.
 ```
 
-To add drive C to the Shadow Copy Set and assign an alias named System1, type:
+To add drive C: to the Shadow Copy Set and assign an alias named *System1*, type:
 
 ```
 add volume c: alias System1
@@ -66,3 +58,5 @@ add volume c: alias System1
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [set context command](set-context.md)

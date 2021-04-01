@@ -1,8 +1,7 @@
 ---
 title: Troubleshooting DNS Servers
-description: This article introduces how to troubleshoot DNS issue from server-side. 
+description: This article introduces how to troubleshoot DNS issue from server-side.
 manager: dcscontentpm
-ms.technology: networking-dns
 ms.topic: article
 ms.author: delhan
 ms.date: 8/8/2019
@@ -24,7 +23,7 @@ This article discusses how to troubleshoot issues on DNS servers.
    ```cmd
    nslookup <name> <IP address of the DNS server>
    ```
-   For example: 
+   For example:
    ```cmd
    nslookup app1 10.0.0.1
    ```
@@ -40,7 +39,7 @@ This article discusses how to troubleshoot issues on DNS servers.
    Clear-DnsServerCache
    ```
 
-5. Repeat step 3. 
+5. Repeat step 3.
 
 ## Check DNS server problems
 
@@ -78,7 +77,7 @@ In rare cases, the DNS server might have an advanced security or firewall config
 
 ## Checking for problems with authoritative data
 
-Check whether the server that returns the incorrect response is a primary server for the zone (the standard primary server for the zone or a server that uses Active Directory integration to load the zone) or a server that's hosting a secondary copy of the zone. 
+Check whether the server that returns the incorrect response is a primary server for the zone (the standard primary server for the zone or a server that uses Active Directory integration to load the zone) or a server that's hosting a secondary copy of the zone.
 
 ### If the server is a primary server
 
@@ -86,23 +85,23 @@ The problem might be caused by user error when users enter data into the zone. O
 
 ### If the server is hosting a secondary copy of the zone
 
-1. Examine the zone on the master server (the server from which this server pulls zone transfers).
+1. Examine the zone on the primary server (the server from which this server pulls zone transfers).
 
    > [!NOTE]
-   >You can determine which server is the master server by examining the properties of the secondary zone in the DNS console.
+   >You can determine which server is the primary server by examining the properties of the secondary zone in the DNS console.
 
-   If the name is not correct on the master server, go to step 4.
+   If the name is not correct on the primary server, go to step 4.
 
-2. If the name is correct on the master server, check whether the serial number on the master server is less than or equal to the serial number on the secondary server. If it is, modify either the master server or the secondary server so that the serial number on the master server is greater than than the serial number on the secondary server. 
-  
+2. If the name is correct on the primary server, check whether the serial number on the primary server is less than or equal to the serial number on the secondary server. If it is, modify either the primary server or the secondary server so that the serial number on the primary server is greater than than the serial number on the secondary server.
+
 3. On the secondary server, force a zone transfer from within the DNS console or by running the following command:
-  
+
    ```cmd
    dnscmd /zonerefresh <zone name>
    ```
-  
+
    For example, if the zone is corp.contoso.com, enter: `dnscmd /zonerefresh corp.contoso.com`.
-  
+
 4. Examine the secondary server again to see whether the zone was transferred correctly. If not, you probably have a zone transfer problem. For more information, see [Zone Transfer Problems](#zone-transfer-problems).
 
 5. If the zone was transferred correctly, check whether the data is now correct. If not, the data is incorrect in the primary zone. The problem might be caused by user error when users enter data into the zone. Or, it might be caused by a problem that affects Active Directory replication or dynamic update.
@@ -150,11 +149,11 @@ Begin the tests in the following procedure by querying a valid root server. The 
    ```
    > [!NOTE]
    >Resource record type is the type of resource record that you were querying for in your original query, and FQDN is the FQDN for which you were querying (terminated by a period).
- 
+
 2. If the response includes a list of "NS" and "A" resource records for delegated servers, repeat step 1 for each server and use the IP address from the "A" resource records as the server IP address.
 
    - If the response does not contain an "NS" resource record, you have a broken delegation.
-   
+
    - If the response contains "NS" resource records, but no "A" resource records, enter **set recursion**, and query individually for "A" resource records of servers that are listed in the "NS" records. If you do not find at least one valid IP address of an "A" resource record for each NS resource record in a zone, you have a broken delegation.
 
 3. If you determine that you have a broken delegation, fix it by adding or updating an "A" resource record in the parent zone by using a valid IP address for a correct DNS server for the delegated zone.
@@ -181,19 +180,19 @@ Run the following checks:
 
 - Check Event Viewer for both the primary and secondary DNS server.
 
-- Check the master server to see whether it's refusing to send the transfer for security. 
+- Check the primary server to see whether it's refusing to send the transfer for security.
 
 - Check the **Zone Transfers** tab of the zone properties in the DNS console. If the server restricts zone transfers to a list of servers, such as those listed on the **Name Servers** tab of the zone properties, make sure that the secondary server is on that list. Make sure that the server is configured to send zone transfers.
 
-- Check the master server for problems by following the steps in the [Check DNS server problems](#check-dns-server-problems) section. When you're prompted to perform a task on the client, perform the task on the secondary server instead.
+- Check the primary server for problems by following the steps in the [Check DNS server problems](#check-dns-server-problems) section. When you're prompted to perform a task on the client, perform the task on the secondary server instead.
 
 - Check whether the secondary server is running another DNS server implementation, such as BIND. If it is, the problem might have one of the following causes:
 
-  - The Windows master server might be configured to send fast zone transfers, but the third-party secondary server might not support fast-zone transfers. If this is the case, disable fast-zone transfers on the master server from within the DNS console by selecting the **Enable Bind secondaries** check box on the **Advanced** tab of the properties for your server.
+  - The Windows primary server might be configured to send fast zone transfers, but the third-party secondary server might not support fast-zone transfers. If this is the case, disable fast-zone transfers on the primary server from within the DNS console by selecting the **Enable Bind secondaries** check box on the **Advanced** tab of the properties for your server.
 
   - If a forward lookup zone on the Windows server contains a record type (for example, an SRV record) that the secondary server does not support, the secondary server might have problems pulling the zone.
 
-Check whether the master server is running another DNS server implementation, such as BIND. If so, it's possible that the zone on the master server includes incompatible resource records that Windows does not recognize.
- 
+Check whether the primary server is running another DNS server implementation, such as BIND. If so, it's possible that the zone on the primary server includes incompatible resource records that Windows does not recognize.
+
 If either the master or secondary server is running another DNS server implementation, check both servers to make sure that they support the same features. You can check the Windows server in the DNS console on the **Advanced** tab of the properties page for the server. In addition to the Enable Bind secondaries box, this page includes the **Name checking** drop-down list. This enables you to select enforcement of strict RFC compliance for characters in DNS names.
 

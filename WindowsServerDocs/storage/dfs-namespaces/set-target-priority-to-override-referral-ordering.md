@@ -2,8 +2,6 @@
 title: Set Target Priority to Override Referral Ordering
 description: This article describes how to set the target priority to override referral ordering
 ms.date: 6/5/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -13,7 +11,7 @@ ms.author: jgerend
 
 > Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-A referral is an ordered list of targets that a client computer receives from a domain controller or namespace server when the user accesses a namespace root or folder with targets in the namespace. Each target in a referral is ordered according to the ordering method for the namespace root or folder. 
+A referral is an ordered list of targets that a client computer receives from a domain controller or namespace server when the user accesses a namespace root or folder with targets in the namespace. Each target in a referral is ordered according to the ordering method for the namespace root or folder.
 
 To refine how targets are ordered, you can set priority on individual targets. For example, you can specify that the target is first among all targets, last among all targets, or first or last among all targets of equal cost.
 
@@ -47,9 +45,9 @@ To set target priority on a folder target, use the following procedure:
 4.  On the **Advanced** tab, click **Override referral ordering**  and then click the priority that you want.
 
 > [!NOTE]
-> To set target priorities by using Windows PowerShell, use the  [Set-DfsnRootTarget](https://technet.microsoft.com/library/jj884266.aspx) and [Set-DfsnFolderTarget](https://technet.microsoft.com/library/jj884264.aspx) cmdlets with the **ReferralPriorityClass** and **ReferralPriorityRank** parameters. These cmdlets were introduced in Windows Server 2012.
+> To set target priorities by using Windows PowerShell, use the  [Set-DfsnRootTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad) and [Set-DfsnFolderTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad) cmdlets with the **ReferralPriorityClass** and **ReferralPriorityRank** parameters. These cmdlets were introduced in Windows Server 2012.
 
-## See also
+## Additional References
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)

@@ -1,13 +1,12 @@
 ---
 title: Step 2 Configure the DirectAccess-VPN Server
-description: This topic is part of the guide Add DirectAccess to an Existing Remote Access (VPN) Deployment for Windows Server 2016
+description: Learn how to configure the client and server settings required for a basic Remote Access deployment using the Enable DirectAccess Wizard.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking-da
 ms.topic: article
 ms.assetid: fe221fc9-c7d9-4508-b8a1-000d2515283c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 #  Step 2 Configure the DirectAccess-VPN Server
 
@@ -26,7 +25,7 @@ The following table provides an overview of the steps you can complete by using 
 
 ## To Start the Enable DirectAcces Wizard
 
-1. In Server Manager, click **Tools**, and then click **Remote Access**.The Enable DirectAccess Wizard starts automatically unless you have selected **Do not show this screen again**. 
+1. In Server Manager, click **Tools**, and then click **Remote Access**.The Enable DirectAccess Wizard starts automatically unless you have selected **Do not show this screen again**.
 
 2. If the wizard does not start automatically, right-click the server node in the Routing and Remote Access tree, and then click **Enable DirectAccess**.
 
@@ -63,24 +62,24 @@ For DNS clients, you can configure a DNS domain suffix search list that extends 
 >[NOTE]
 >In a disjoint name space scenario \(where one or more domain computers has an DNS suffix that does not match the Active Directory domain to which the computers belong\), you should ensure that the search list is customized to include all the required suffixes. The Remote Access wizard will by default configure the Active Directory DNS name as the primary DNS suffix on the client. Admin should ensure that he adds the DNS suffix used by clients for name resolution.
 
-For computers and servers, the following default DNS search behavior is predetermined and used when completing and resolving short, unqualified names.When the suffix search list is empty or unspecified, the primary DNS suffix of the computer is appended to short unqualified names, and a DNS query is used to resolve the resultant FQDN. 
+For computers and servers, the following default DNS search behavior is predetermined and used when completing and resolving short, unqualified names.When the suffix search list is empty or unspecified, the primary DNS suffix of the computer is appended to short unqualified names, and a DNS query is used to resolve the resultant FQDN.
 
 If this query fails, the computer can try additional queries for alternate FQDNs by appending any connection-specific DNS suffix configured for network connections.If no connection-specific suffixes are configured or queries for these resultant connection-specific FQDNs fail, then the client can then begin to retry queries based on systematic reduction of the primary suffix (also known as devolution).
 
 For example, if the primary suffix is "example.microsoft.com," the devolution process can retry queries for the short name by searching for it in the "microsoft.com" and "com" domains.
 
-When the suffix search list is not empty and has at least one DNS suffix specified, attempts to qualify and resolve short DNS names is limited to searching only those FQDNs made possible by the specified suffix list. 
+When the suffix search list is not empty and has at least one DNS suffix specified, attempts to qualify and resolve short DNS names is limited to searching only those FQDNs made possible by the specified suffix list.
 
-If queries for all FQDNs formed as a result of appending and trying each suffix in the list are not resolved, the query process fails, producing a "name not found" result. 
+If queries for all FQDNs formed as a result of appending and trying each suffix in the list are not resolved, the query process fails, producing a "name not found" result.
 
 > [!WARNING]
 > If the domain suffix list is used, clients continue to send additional alternate queries based on different DNS domain names when a query is not answered or resolved. Once a name is resolved using an entry in the suffix list, unused list entries are not tried. For this reason, it is most efficient to order the list with the most used domain suffixes first.
-> 
+>
 > Domain name suffix searches are used only when a DNS name entry is not fully qualified. To fully qualify a DNS name, a trailing period (.) is entered at the end of the name.
 
 ## GPO Configuration
 
-When you configure Remote Access, DirectAccess settings are collected into Group Policy Objects (GPO). 
+When you configure Remote Access, DirectAccess settings are collected into Group Policy Objects (GPO).
 
 In **GPO Settings**, the DirectAccess server GPO name and Client GPO name are listed. Additionally, you can modify the GPO selection settings.
 

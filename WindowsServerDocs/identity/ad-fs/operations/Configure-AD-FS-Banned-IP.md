@@ -1,12 +1,11 @@
 ---
 title: Configure AD FS Banned IP Addesses
+description: "Learn more about: AD FS and banned IP addresses"
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 06/28/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # AD FS and banned IP addresses
@@ -40,7 +39,7 @@ PS C:\ >Set-AdfsProperties -RemoveBannedIps "1.2.3.4"
 To read the current set of banned IP addresses, use the below Powershell cmdlet:
 
 ``` powershell
-PS C:\ >Get-AdfsProperties 
+PS C:\ >Get-AdfsProperties
 ```
 
 Example output:
@@ -51,9 +50,9 @@ BannedIpList                   : {1.2.3.4, ::3,1.2.3.4/16}
 
 
 
-## Additional references  
+## Additional references
 [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
-[Set-AdfsProperties](https://technet.microsoft.com/itpro/powershell/windows/adfs/set-adfsproperties)
+[Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties)
 
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)

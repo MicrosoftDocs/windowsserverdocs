@@ -1,13 +1,11 @@
 ---
 title: Configuring user access control and permissions
 description: Learn how to configure user access control and permissions using Active Directory or Azure AD (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
 ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Configure User Access Control and Permissions
 
@@ -62,7 +60,7 @@ By default, all members of the Azure AD tenant have user access to the Windows A
 
 If you want to give specific Azure AD users or groups gateway user or gateway administrator access to the Windows Admin Center service, you must do the following:
 
-1.	Go to your Windows Admin Center Azure AD application in the Azure portal by using the hyperlink provided in Access Settings. Note this hyperlink is only available when Azure Active Directory authentication is enabled. 
+1.	Go to your Windows Admin Center Azure AD application in the Azure portal by using the hyperlink provided in Access Settings. Note this hyperlink is only available when Azure Active Directory authentication is enabled.
     -	You can also find your application in the Azure portal by going to **Azure Active Directory** > **Enterprise applications** > **All applications** and searching **WindowsAdminCenter** (the Azure AD app will be named WindowsAdminCenter-<gateway name>). If you don't get any search results, ensure **Show** is set to **all applications**, **application status** is set to **any** and click Apply, then try your search. Once you've found the application, go to **Users and groups**
 2.	In the Properties tab, set **User assignment required** to Yes.
     Once you've done this, only members listed in the **Users and groups** tab will be able to access the Windows Admin Center gateway.
@@ -76,36 +74,36 @@ Users and administrators can view their currently logged-in account and as well 
 
 ### Configuring Azure Active Directory authentication for Windows Admin Center
 
-[To set up Azure AD authentication, you must first register your gateway with Azure](azure-integration.md) (you only need to do this once for your Windows Admin Center gateway). This step creates an Azure AD application from which you can manage gateway user and gateway administrator access.
+[To set up Azure AD authentication, you must first register your gateway with Azure](../azure/azure-integration.md) (you only need to do this once for your Windows Admin Center gateway). This step creates an Azure AD application from which you can manage gateway user and gateway administrator access.
 
 If you want to give specific Azure AD users or groups gateway user or gateway administrator access to the Windows Admin Center service, you must do the following:
 
-1.	Go to your SME Azure AD application in the Azure portal. 
+1.	Go to your SME Azure AD application in the Azure portal.
     -	When you click **Change access control** and then select **Azure Active Directory** from the Windows Admin Center Access settings, you can use the hyperlink provided in the UI to access your Azure AD application in the Azure portal. This hyperlink is also available in the Access settings after you click save and have selected Azure AD as your access control identity provider.
     -	You can also find your application in the Azure portal by going to **Azure Active Directory** > **Enterprise applications** > **All applications** and searching **SME** (the Azure AD app will be named SME-<gateway>). If you don't get any search results, ensure **Show** is set to **all applications**, **application status** is set to **any** and click Apply, then try your search. Once you've found the application, go to **Users and groups**
 2.	In the Properties tab, set **User assignment required** to Yes.
     Once you've done this, only members listed in the **Users and groups** tab will be able to access the Windows Admin Center gateway.
 3.	In the Users and groups tab, select **Add user**. You must assign a gateway user or gateway administrator role for each user/group added.
 
-Once you save the Azure AD access control in the **Change access control** pane, the gateway service restarts and you must refresh your browser. You can update user access for the Windows Admin Center Azure AD application in the Azure portal at any time. 
+Once you save the Azure AD access control in the **Change access control** pane, the gateway service restarts and you must refresh your browser. You can update user access for the Windows Admin Center Azure AD application in the Azure portal at any time.
 
-Users will be prompted to sign in using their Azure Active Directory identity when they attempt to access the Windows Admin Center gateway URL. Remember that users must also be a member of the local Users on the gateway server to access Windows Admin Center. 
+Users will be prompted to sign in using their Azure Active Directory identity when they attempt to access the Windows Admin Center gateway URL. Remember that users must also be a member of the local Users on the gateway server to access Windows Admin Center.
 
 Using the **Azure** tab of Windows Admin Center general settings, users and administrators can view their currently logged-in account and as well as sign-out of this Azure AD account.
 
 ### Conditional access and multi-factor authentication
 
-One of the benefits of using Azure AD as an additional layer of security to control access to the Windows Admin Center gateway is that you can leverage Azure AD's powerful security features like conditional access and multi-factor authentication. 
+One of the benefits of using Azure AD as an additional layer of security to control access to the Windows Admin Center gateway is that you can leverage Azure AD's powerful security features like conditional access and multi-factor authentication.
 
-[Learn more about configuring conditional access with Azure Active Directory.](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+[Learn more about configuring conditional access with Azure Active Directory.](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
 
 ## Configure single sign-on
 
 **Single sign-on when deployed as a Service on Windows Server**
 
-When you install Windows Admin Center on Windows 10, it's ready to use single sign-on. If you're going to use Windows Admin Center on Windows Server, however, you need to set up some form of Kerberos delegation in your environment before you can use single sign-on. The delegation configures the gateway computer as trusted to delegate to the target node. 
+When you install Windows Admin Center on Windows 10, it's ready to use single sign-on. If you're going to use Windows Admin Center on Windows Server, however, you need to set up some form of Kerberos delegation in your environment before you can use single sign-on. The delegation configures the gateway computer as trusted to delegate to the target node.
 
-To configure [Resource-based constrained delegation](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) in your environment, use the following PowerShell example. This example shows how you would configure a Windows Server [node01.contoso.com] to accept delegation from your Windows Admin Center gateway [wac.contoso.com] in the contoso.com domain.
+To configure [Resource-based constrained delegation](../../../security/kerberos/kerberos-constrained-delegation-overview.md) in your environment, use the following PowerShell example. This example shows how you would configure a Windows Server [node01.contoso.com] to accept delegation from your Windows Admin Center gateway [wac.contoso.com] in the contoso.com domain.
 
 ```powershell
 Set-ADComputer -Identity (Get-ADComputer node01) -PrincipalsAllowedToDelegateToAccount (Get-ADComputer wac)
@@ -153,7 +151,7 @@ Once the configuration is applied, you can assign users to the roles:
 3.  In the *Details* pane at the bottom, click **Add User** and enter the name of a user or security group which should have read-only access to the server through Windows Admin Center. The users and groups can come from the local machine or your Active Directory domain.
 4.  Repeat steps 2-3 for the **Windows Admin Center Hyper-V Administrators** and **Windows Admin Center Administrators** groups.
 
-You can also fill these groups consistently across your domain by configuring a Group Policy Object with the [Restricted Groups Policy Setting](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc756802%28v=ws.10%29).
+You can also fill these groups consistently across your domain by configuring a Group Policy Object with the [Restricted Groups Policy Setting](/previous-versions/windows/it-pro/windows-server-2003/cc756802%28v=ws.10%29).
 
 ### Apply role-based access control to multiple machines
 

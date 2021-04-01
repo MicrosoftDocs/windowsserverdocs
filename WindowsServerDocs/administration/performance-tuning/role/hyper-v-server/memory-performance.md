@@ -1,10 +1,8 @@
 ---
 title: Hyper-V Memory Performance
 description: Memory considerations in performance tuning Hyper-V
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: asmahi; sandysp; jopoulso
+ms.author: asmahi
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -24,11 +22,11 @@ For more info on Dynamic Memory, see [Hyper-V Dynamic Memory Overview]( https://
 
 When running Windows in the child partition, you can use the following performance counters within a child partition to identify whether the child partition is experiencing memory pressure and is likely to perform better with a higher virtual machine memory size.
 
-| Performance counter                                                         | Suggested threshold value                                                                                                                                                           |
-|-----------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Memory – Standby Cache Reserve Bytes                                        | Sum of Standby Cache Reserve Bytes and Free and Zero Page List Bytes should be 200 MB or more on systems with 1 GB, and 300 MB or more on systems with 2 GB or more of visible RAM. |
-| Memory – Free & Zero Page List Bytes                                        | Sum of Standby Cache Reserve Bytes and Free and Zero Page List Bytes should be 200 MB or more on systems with 1 GB, and 300 MB or more on systems with 2 GB or more of visible RAM. |
-| Memory – Pages Input/Sec                                                    | Average over a 1-hour period is less than 10.                                                                                                                                       | 
+| Performance counter| Suggested threshold value|
+|-------------------|----------------------------------|
+| Memory – Standby Cache Reserve Bytes  | Sum of Standby Cache Reserve Bytes and Free and Zero Page List Bytes should be 200 MB or more on systems with 1 GB, and 300 MB or more on systems with 2 GB or more of visible RAM. |
+| Memory – Free & Zero Page List Bytes    | Sum of Standby Cache Reserve Bytes and Free and Zero Page List Bytes should be 200 MB or more on systems with 1 GB, and 300 MB or more on systems with 2 GB or more of visible RAM. |
+| Memory – Pages Input/Sec   | Average over a 1-hour period is less than 10.|
 
 ## Correct memory sizing for root partition
 
@@ -36,7 +34,7 @@ The root partition must have sufficient memory to provide services such as I/O v
 
 Hyper-V in Windows Server 2016 monitors the runtime health of the root partition's management operating system to determine how much memory can safely be allocated to child partitions, while still ensuring high performance and reliability of the root partition.
 
-## See also
+## Additional References
 
 -   [Hyper-V terminology](terminology.md)
 

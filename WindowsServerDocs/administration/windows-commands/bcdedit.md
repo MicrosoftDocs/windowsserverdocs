@@ -1,13 +1,11 @@
 ---
 title: bcdedit
-description: Windows Commands topic for **bcdedit**, which creates new stores, modify existing stores, and add boot menu parameters.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the bcdedit command, which creates new stores, modify existing stores, and add boot menu parameters.
+ms.topic: reference
 ms.assetid: ab2da47d-3aac-44a0-b7fd-bd9561d61553
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 03/27/2018
 ---
 
@@ -31,12 +29,12 @@ BCDEdit is limited to the standard data types and is designed primarily to perfo
 ## Syntax
 
 ```
-BCDEdit /Command [<Argument1>] [<Argument2>] ...
+bcdedit /command [<argument1>] [<argument2>] ...
 ```
 
 ### Parameters
 
-### General BCDEdit Command-Line Option
+### General BCDEdit Command-Line Options
 
 | Option | Description |
 | ------ | ----------- |
@@ -99,10 +97,8 @@ BCDEdit /Command [<Argument1>] [<Argument2>] ...
 | /dbgsettings | Specifies or displays the global debugger settings for the system. This command does not enablepose. To set an individual global debugger setting, use the **bcdedit /set** `<dbgsettings> <type> <value>` command. |
 | /debug | Enables or disables the kernel debugger for a specified boot entry. |
 
-## <a name=BKMK_examples></a>Examples
-
-For examples of how to use BCDEdit, see the [BCDEdit Options Reference](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcd-boot-options-reference) article.
-
 ## Additional References
 
-- [Command-Line Syntax Key](command-line-syntax-key.md)
+For examples of how to use BCDEdit, see the [BCDEdit Options Reference](/windows-hardware/drivers/devtest/bcd-boot-options-reference) article.
+
+To see the notation used to indicate command-line syntax, see  [Command-Line Syntax Key](command-line-syntax-key.md).

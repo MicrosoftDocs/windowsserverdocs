@@ -1,19 +1,19 @@
 ---
 title: Administer Server Core
 description: Learn how to administer a Server Core installation of Windows Server
-ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: lizap
-ms.author: elizapo
+author: pronichkin
+ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 12/18/2018
+ms.topic: how-to
 ---
 # Administer a Server Core server
 
 >Applies to: Windows Server 2019, Windows Server 2016, and Windows Server (Semi-Annual Channel)
 
-Because Server Core doesn't have a UI, you need to use Windows PowerShell cmdlets, command line tools, or remote tools to perform basic administration tasks. The following sections outline the PowerShell cmdlets and commands used for basic tasks. You can also use [Windows Admin Center](../../manage/windows-admin-center/overview.md), a unified management portal currently in public preview, to administer your installation. 
+Because Server Core doesn't have a UI, you need to use Windows PowerShell cmdlets, command line tools, or remote tools to perform basic administration tasks. The following sections outline the PowerShell cmdlets and commands used for basic tasks. You can also use [Windows Admin Center](../../manage/windows-admin-center/overview.md), a unified management portal currently in public preview, to administer your installation.
 
 ## Administrative tasks using PowerShell cmdlets
 Use the following information to perform basic administrative tasks with Windows PowerShell cmdlets.
@@ -25,9 +25,9 @@ To view your current network configuration, use **Get-NetIPConfiguration**.
 
 To view the IP addresses you're already using, use **Get-NetIPAddress**.
 
-To set a static IP address, do the following: 
+To set a static IP address, do the following:
 
-1. Run **Get-NetIPInterface**. 
+1. Run **Get-NetIPInterface**.
 2. Note the number in the **IfIndex** column for your IP interface or the **InterfaceDescription** string. If you have more than one network adapter, note the number or string corresponding to the interface you want to set the static IP address for.
 3. Run the following cmdlet to set the static IP address:
 
@@ -40,16 +40,16 @@ To set a static IP address, do the following:
    - **IPAddress** is the static IP address you want to set. (In our example, 191.0.2.2)
    - **PrefixLength** is the prefix length (another form of subnet mask) for the IP address you're setting. (For our example, 24)
    - **DefaultGateway** is the IP address to the default gateway. (For our example, 192.0.2.1)
-4. Run the following cmdlet to set the DNS client server address: 
+4. Run the following cmdlet to set the DNS client server address:
 
    ```powershell
    Set-DNSClientServerAddress –InterfaceIndex 12 -ServerAddresses 192.0.2.4
    ```
-   
+
    where:
    - **InterfaceIndex** is the value of IfIndex from step 2.
    - **ServerAddresses** is the IP address of your DNS server.
-5. To add multiple DNS servers, run the following cmdlet: 
+5. To add multiple DNS servers, run the following cmdlet:
 
    ```powershell
    Set-DNSClientServerAddress –InterfaceIndex 12 -ServerAddresses 192.0.2.4,192.0.2.5
@@ -82,21 +82,21 @@ Use the following steps to rename the server.
 Run **slmgr.vbs –ipk\<productkey\>**. Then run **slmgr.vbs –ato**. If activation succeeds, you won't get a message.
 
 > [!NOTE]
-> You can also activate the server by phone, using a [Key Management Service (KMS) server](../../get-started/server-2016-activation.md), or remotely. To activate remotely, run the following cmdlet from a remote computer: 
-> 
+> You can also activate the server by phone, using a [Key Management Service (KMS) server](../../get-started/server-2016-activation.md), or remotely. To activate remotely, run the following cmdlet from a remote computer:
+>
 > ```
 > cscript windows\system32\slmgr.vbs <ServerName> <UserName> <password>:-ato
 > ```
- 
+
 ### Configure Windows Firewall
 
-You can configure Windows Firewall locally on the Server Core computer using Windows PowerShell cmdlets and scripts. See [NetSecurity](/powershell/module/netsecurity/?view=win10-ps) for the cmdlets you can use to configure Windows Firewall.
+You can configure Windows Firewall locally on the Server Core computer using Windows PowerShell cmdlets and scripts. See [NetSecurity](/powershell/module/netsecurity/) for the cmdlets you can use to configure Windows Firewall.
 
 ### Enable Windows PowerShell remoting
 
 You can enable Windows PowerShell Remoting, in which commands typed in Windows PowerShell on one computer run on another computer. Enable Windows PowerShell Remoting with **Enable-PSRemoting**.
 
-For more information, see [About Remote FAQ](/powershell/module/microsoft.powershell.core/about/about_remote_faq?view=powershell-5.1).
+For more information, see [About Remote FAQ](/powershell/module/microsoft.powershell.core/about/about_remote_faq?view=powershell-5.1&preserve-view=true).
 
 ## Administrative tasks from the command line
 Use the following reference information to perform administrative tasks from the command line.
@@ -127,22 +127,22 @@ Use the following reference information to perform administrative tasks from the
 
 ### Networking and firewall
 
-|Task|Command| 
+|Task|Command|
 |----|-------|
 |Configure your server to use a proxy server|**netsh Winhttp set proxy \<servername\>:\<port number\>** <br>**Note:** Server Core installations can't access the Internet through a proxy that requires a password to allow connections.|
-|Configure your server to bypass the proxy for Internet addresses|**netsh winhttp set proxy \<servername\>:\<port number\> bypass-list="\<local\>"**| 
-|Display or modify IPSEC configuration|**netsh ipsec**| 
-|Display or modify NAP configuration|**netsh nap**| 
-|Display or modify IP to physical address translation|**arp**| 
-|Display or configure the local routing table|**route**| 
-|View or configure DNS server settings|**nslookup**| 
-|Display protocol statistics and current TCP/IP network connections|**netstat**| 
-|Display protocol statistics and current TCP/IP connections using NetBIOS over TCP/IP (NBT)|**nbtstat**| 
-|Display hops for network connections|**pathping**| 
-|Trace hops for network connections|**tracert**| 
-|Display the configuration of the multicast router|**mrinfo**| 
-|Enable remote administration of the firewall|**netsh advfirewall firewall set rule group="Windows Defender Firewall Remote Management" new enable=yes**| 
- 
+|Configure your server to bypass the proxy for Internet addresses|**netsh winhttp set proxy \<servername\>:\<port number\> bypass-list="\<local\>"**|
+|Display or modify IPSEC configuration|**netsh ipsec**|
+|Display or modify NAP configuration|**netsh nap**|
+|Display or modify IP to physical address translation|**arp**|
+|Display or configure the local routing table|**route**|
+|View or configure DNS server settings|**nslookup**|
+|Display protocol statistics and current TCP/IP network connections|**netstat**|
+|Display protocol statistics and current TCP/IP connections using NetBIOS over TCP/IP (NBT)|**nbtstat**|
+|Display hops for network connections|**pathping**|
+|Trace hops for network connections|**tracert**|
+|Display the configuration of the multicast router|**mrinfo**|
+|Enable remote administration of the firewall|**netsh advfirewall firewall set rule group="Windows Defender Firewall Remote Management" new enable=yes**|
+
 
 ### Updates, error reporting, and feedback
 
@@ -168,12 +168,12 @@ Use the following reference information to perform administrative tasks from the
 
 ### Event logs
 
-|Task|Command| 
+|Task|Command|
 |----|-------|
-|List event logs|**wevtutil el**| 
-|Query events in a specified log|**wevtutil qe /f:text \<log name\>**| 
-|Export an event log|**wevtutil epl \<log name\>**| 
-|Clear an event log|**wevtutil cl \<log name\>**| 
+|List event logs|**wevtutil el**|
+|Query events in a specified log|**wevtutil qe /f:text \<log name\>**|
+|Export an event log|**wevtutil epl \<log name\>**|
+|Clear an event log|**wevtutil cl \<log name\>**|
 
 
 ### Disk and file system
@@ -190,10 +190,10 @@ Use the following reference information to perform administrative tasks from the
 |          Administer VSS folders          | For a complete list of commands, run **vssadmin /?**  |
 |        Administer the file system        |  For a complete list of commands, run **fsutil /?**   |
 |    Take ownership of a file or folder    |  For a complete list of commands, run **icacls /?**   |
- 
+
 ### Hardware
 
-|Task|Command| 
+|Task|Command|
 |----|-------|
 |Add a driver for a new hardware device|Copy the driver to a folder at %homedrive%\\\<driver folder\>. Run **pnputil -i -a %homedrive%\\\<driver folder\>\\\<driver\>.inf**|
 |Remove a driver for a hardware device|For a list of loaded drivers, run **sc query type= driver**. Then run **sc delete \<service_name\>**|

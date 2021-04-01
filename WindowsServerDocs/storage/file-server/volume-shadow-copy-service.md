@@ -1,11 +1,11 @@
 ---
+description: "Learn more about: Volume Shadow Copy Service"
 title: Volume Shadow Copy Service
 ms.date: 01/30/2019
-ms.prod: windows-server
-ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
+ms.topic: article
 ---
 
 # Volume Shadow Copy Service
@@ -18,7 +18,6 @@ Backing up and restoring critical business data can be very complex due to the f
 
   - If the data set is large, it can be difficult to back up all of it at one time.
 
-
 Correctly performing backup and restore operations requires close coordination between the backup applications, the line-of-business applications that are being backed up, and the storage management hardware and software. The Volume Shadow Copy Service (VSS), which was introduced in Windows Server® 2003, facilitates the conversation between these components to allow them to work better together. When all the components support VSS, you can use them to back up your application data without taking the applications offline.
 
 VSS coordinates the actions that are required to create a consistent shadow copy (also known as a snapshot or a point-in-time copy) of the data that is to be backed up. The shadow copy can be used as-is, or it can be used in scenarios such as the following:
@@ -29,7 +28,7 @@ VSS coordinates the actions that are required to create a consistent shadow copy
 
   - You are performing disk-to-disk backups.
 
-  - You need a fast recovery from data loss by restoring data to the original LUN or to an entirely new LUN that replaces an original LUN that failed.
+  - You need a fast recovery from data loss by restoring data to the original Logical Unit Number (LUN) or to an entirely new LUN that replaces an original LUN that failed.
 
 
 Windows features and applications that use VSS include the following:
@@ -57,7 +56,7 @@ A complete VSS solution requires all of the following basic parts:
 
 The following diagram illustrates how the VSS service coordinates with requesters, writers, and providers to create a shadow copy of a volume.
 
-![](media/volume-shadow-copy-service/Ee923636.94dfb91e-8fc9-47c6-abc6-b96077196741(WS.10).jpg)
+![Architectural diagram of Volume Shadow Copy Service](media/volume-shadow-copy-service/Ee923636.94dfb91e-8fc9-47c6-abc6-b96077196741(WS.10).jpg)
 
 **Figure 1**   Architectural diagram of Volume Shadow Copy Service
 
@@ -65,7 +64,7 @@ The following diagram illustrates how the VSS service coordinates with requester
 
 This section puts the various roles of the requester, writer, and provider into context by listing the steps that need to be taken to create a shadow copy. The following diagram shows how the Volume Shadow Copy Service controls the overall coordination of the requester, writer, and provider.
 
-![](media/volume-shadow-copy-service/Ee923636.1c481a14-d6bc-4796-a3ff-8c6e2174749b(WS.10).jpg)
+![Diagram how Volume Shadow Copy Service works](media/volume-shadow-copy-service/Ee923636.1c481a14-d6bc-4796-a3ff-8c6e2174749b(WS.10).jpg)
 
 **Figure 2** Shadow copy creation process
 
@@ -242,7 +241,7 @@ The Windows operating system includes a set of VSS writers that are responsible 
 
 For more information about these writers, see the following Microsoft Docs Web page:
 
-- [In-Box VSS Writers](https://docs.microsoft.com/windows/win32/vss/in-box-vss-writers) (https://docs.microsoft.com/windows/win32/vss/in-box-vss-writers)
+- [In-Box VSS Writers](/windows/win32/vss/in-box-vss-writers) (https://docs.microsoft.com/windows/win32/vss/in-box-vss-writers)
 
 
 ## How Shadow Copies Are Used
@@ -304,7 +303,7 @@ With the Volume Shadow Copy Service and a storage array with a hardware provider
 
 3.  The data is now ready to be used.
 
-![](media/volume-shadow-copy-service/Ee923636.633752e0-92f6-49a7-9348-f451b1dc0ed7(WS.10).jpg)
+![Diagram how to transport a shadow copy between two servers](media/volume-shadow-copy-service/Ee923636.633752e0-92f6-49a7-9348-f451b1dc0ed7(WS.10).jpg)
 
 **Figure 3**   Shadow copy creation and transport between two servers
 
@@ -370,7 +369,7 @@ To exclude specific files from shadow copies, use the following registry key: **
 > <UL>
 > <LI>It cannot delete files from a shadow copy that was created on a Windows Server by using the Previous Versions feature.<BR><BR>
 > <LI>It cannot delete files from shadow copies for shared folders.<BR><BR>
-> <LI>It can delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow)">Diskshadow</a> utility, but it cannot delete files from a shadow copy that was created by using the <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin)">Vssadmin</a> utility.<BR><BR>
+> <LI>It can delete files from a shadow copy that was created by using the <a href="/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](../../administration/windows-commands/diskshadow.md)">Diskshadow</a> utility, but it cannot delete files from a shadow copy that was created by using the <a href="/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](../../administration/windows-commands/vssadmin.md)">Vssadmin</a> utility.<BR><BR>
 > <LI>Files are deleted from a shadow copy on a best-effort basis. This means that they are not guaranteed to be deleted.<BR><BR></LI></UL>
 
 
@@ -572,7 +571,7 @@ The following table lists the minimum supported operating system versions for VS
 </colgroup>
 <thead>
 <tr class="header">
-<th><img src="media/volume-shadow-copy-service/Dd560667.note(WS.10).gif" />Note</th>
+<th>Note</th>
 </tr>
 </thead>
 <tbody>
@@ -615,6 +614,6 @@ The following table lists the minimum supported operating system versions for VS
 </tbody>
 </table>
 
-## See also
+## Additional References
 
-[Volume Shadow Copy Service in Windows Developer Center](https://docs.microsoft.com/windows/desktop/vss/volume-shadow-copy-service-overview)
+[Volume Shadow Copy Service in Windows Developer Center](/windows/desktop/vss/volume-shadow-copy-service-overview)

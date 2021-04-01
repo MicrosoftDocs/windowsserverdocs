@@ -25,7 +25,7 @@ steps:
     
   - This usually occurs when the initial copy is cached or buffered (either in memory or in the RAID controller's memory cache) and the cache runs out. This forces data to be written directly to disk (write-through). This is a slower process.
     
-  - Use storage performance monitor counters to determine whether storage performance degrades over time. For more information, see [Performance tuning for SMB file servers](https://docs.microsoft.com/windows-server/administration/performance-tuning/role/file-server/smb-file-server).
+  - Use storage performance monitor counters to determine whether storage performance degrades over time. For more information, see [Performance tuning for SMB file servers](../../../administration/performance-tuning/role/file-server/smb-file-server.md).
 
 - Use RAMMap (SysInternals) to determine whether "Mapped File" usage in memory stops growing because of free memory exhaustion.
 
@@ -85,4 +85,4 @@ We recommend that you make sure that the Office and SMB binaries are up-to-date,
    NET START SERVER
    ```
 
-To avoid this issue, you can also replicate the file to a local file server. For more information, see [aving Office documents to a network server is slow when using EFS](https://docs.microsoft.com/office/troubleshoot/office/saving-file-to-network-server-slow).
+To avoid this issue, you can also replicate the file to a local file server. For more information, see [aving Office documents to a network server is slow when using EFS](/office/troubleshoot/office/saving-file-to-network-server-slow).

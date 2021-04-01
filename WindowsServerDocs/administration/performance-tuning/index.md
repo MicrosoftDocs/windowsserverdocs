@@ -1,8 +1,6 @@
 ---
 title: Windows Server 2016 Performance Tuning Guidelines
 description: Performance tuning guidelines for Windows Server 2016
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: landing-page
 ms.author: phstee
 author: phstee
@@ -63,4 +61,4 @@ This guide organizes performance and tuning guidance for Windows Server 2016 acr
 
 - *Removal of dedicated storage sections*, in favor of new [Storage Spaces Direct](subsystem/storage-spaces-direct/index.md) section and canonical Technet content
 
-- *Removal of dedicated networking section*, in favor of canonical Technet content  
+- *Removal of dedicated networking section*, in favor of canonical Technet content

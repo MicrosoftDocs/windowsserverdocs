@@ -1,12 +1,13 @@
 ---
 title: Roles, Role Services, and Features included in Windows Server - Server Core
 description: What roles and features are included in the Server Core installation option of Windows Server?
-ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: lizap
+author: pronichkin
+ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 02/23/2018
+ms.topic: conceptual
 ---
 # Roles, Role Services, and Features included in Windows Server - Server Core
 
@@ -73,7 +74,7 @@ The Server Core installation option includes the following role services.
 | Remote Access                         | DirectAccess and VPN (RAS)                                     | DirectAccess-VPN        | N                     |
 |                                       | Routing                                                        | Routing                 | N                     |
 |                                       | Web Application Proxy                                          | Web-Application-Proxy   | N                     |
-| Remote Desktop Services               | Remote Desktop Connection Broker                               | RDS-Connection-Broker   | N                     |
+| Remote Desktop Services               | Remote Desktop Connection Broker*                               | RDS-Connection-Broker   | N                     |
 |                                       | Remote Desktop Licensing                                       | RDS-Licensing           | N                     |
 |                                       | Remote Desktop Virtualization Host                             | RDS-Virtualization      | N                     |
 | Web Server (IIS)                      | Web Server                                                     | Web-WebServer           | N                     |
@@ -234,3 +235,5 @@ The Server Core installation option includes the following features.
 | WINS Server                                            | WINS                               | N                     |
 | WoW64 Support                                          | WoW64-Support                      | Y                     |
 |                                                        |                                    |                       |
+
+*Services indicated with a * are no longer available in server core starting with Server 2019 1803.

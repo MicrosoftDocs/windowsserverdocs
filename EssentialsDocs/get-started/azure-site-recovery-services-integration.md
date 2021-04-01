@@ -1,20 +1,19 @@
 ---
 title: "Azure Site Recovery Services integration"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to use Azure Site Recovery Services to create real-time replications of your virtual machines (VM) that are stored in your backup vault in Azure.
 ms.date: 10/01/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 262701a6-8a97-4c4e-bfbf-9f8007c308d6
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Azure Site Recovery Services integration
 
 >Applies To: Windows Server 2016 Essentials
 
-[Azure Site Recovery Services](https://docs.microsoft.com/azure/site-recovery/) is a service offered by Microsoft Azure enabling real-time replication of your virtual machines (VM) to a backup vault in Azure. In the event that your server or site is down due to a hardware or other failure, you can fail-over to Azure where the VM image stored in your backup vault will be provisioned as a running VM in Azure. Combined with an Azure Virtual network, in the event of a failover to Azure, client PCs that previously connected to the on-premises server will transparently connect to the server running in Azure.
+[Azure Site Recovery Services](/azure/site-recovery/) is a service offered by Microsoft Azure enabling real-time replication of your virtual machines (VM) to a backup vault in Azure. In the event that your server or site is down due to a hardware or other failure, you can fail-over to Azure where the VM image stored in your backup vault will be provisioned as a running VM in Azure. Combined with an Azure Virtual network, in the event of a failover to Azure, client PCs that previously connected to the on-premises server will transparently connect to the server running in Azure.
 
 Integrating Azure Site Recovery Services with Windows Server Essentials starts in the same manner as configuring [Azure Virtual networking](azure-virtual-network-integration.md). From the **Microsoft Cloud Services Integration** page in the dashboard, click **Integrate with Azure Site Recovery Services** to the right of the dashboard:
 

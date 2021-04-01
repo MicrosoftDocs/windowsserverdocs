@@ -1,14 +1,13 @@
 ---
 title: KMS client setup keys
 description: Keys needed to activate Windows products from a KMS server
-ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 11/12/2019
-ms.topic: get-started-article
+ms.topic: how-to
 ---
 # KMS client setup keys
 
@@ -17,11 +16,11 @@ ms.topic: get-started-article
 Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS clients with no additional configuration needed.
 
 > [!NOTE]
-> In the tables that follow, "LTSC" stands for "Long-Term Servicing Channel," while "LTSB" refers to the "Long-Term Servicing Branch." 
+> In the tables that follow, "LTSC" stands for "Long-Term Servicing Channel," while "LTSB" refers to the "Long-Term Servicing Branch."
 
 **To use the keys listed here (which are GVLKs), you must first have a KMS host
 running in your deployment.** If you haven't already configured a KMS host, see
-[Deploy KMS Activation](https://technet.microsoft.com/library/dn502531(v=ws.11).aspx) for steps to set one up.
+[Deploy KMS Activation](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502531(v=ws.11)) for steps to set one up.
 
 If you are converting a computer from a KMS host, MAK, or retail edition of
 Windows to a KMS client, install the applicable setup key (GVLK) from the
@@ -57,7 +56,7 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 ### Windows Server 2019
 | Operating system edition       | KMS Client Setup Key          |
 |--------------------------------|-------------------------------|
-| Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG | 
+| Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG |
 | Windows Server 2019 Standard   | N69G4-B89J2-4G8F4-WWYCC-J464C |
 | Windows Server 2019 Essentials | WVDHN-86M7X-466P6-VHXV7-YY726 |
 
@@ -104,7 +103,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows 10 Enterprise LTSB 2016   | DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ |
 | Windows 10 Enterprise N LTSB 2016 | QFFDN-GRT3P-VKWWX-X7T3R-8B639 |
 
-### Windows 10 LTSB 2015 
+### Windows 10 LTSB 2015
 
 | Operating system edition          | KMS Client Setup Key          |
 |-----------------------------------|-------------------------------|
@@ -117,14 +116,14 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 
 | Operating system edition  | KMS Client Setup Key          |
 |---------------------------|-------------------------------|
-| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG | 
+| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG |
 | Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR |
 
 ### Windows Server, version 1709
 
 | Operating system edition  | KMS Client Setup Key          |
 |---------------------------|-------------------------------|
-| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6 | 
+| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6 |
 | Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4 |
 
 ### Windows Server 2012 R2
@@ -195,7 +194,7 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows 8 Enterprise N   | JMNMF-RHW7P-DMY6X-RF3DR-X2BQT |
 
 
-### Windows 7 
+### Windows 7
 
 | Operating system edition | KMS Client Setup Key          |
 |--------------------------|-------------------------------|
@@ -209,6 +208,4 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 
 See also
 
-• [Plan for Volume Activation](https://technet.microsoft.com/library/jj134042(v=ws.11).aspx)
-
-
+• [Plan for Volume Activation](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134042(v=ws.11))

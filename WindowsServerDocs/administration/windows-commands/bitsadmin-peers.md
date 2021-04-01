@@ -1,18 +1,18 @@
 ---
 title: bitsadmin peers
-description: Windows Commands topic for **bitsadmin peers**, which lists the /peers switches.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the bitsadmin peers command, which lists the /peers switches.
+ms.topic: reference
 ms.assetid: 5effbd52-993a-4657-b331-596c64deb8fb
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # bitsadmin peers
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Lists the available /peers switches.
 
 Lists the available /peers switches.
 
@@ -34,3 +34,5 @@ bitsadmin /peers /list
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

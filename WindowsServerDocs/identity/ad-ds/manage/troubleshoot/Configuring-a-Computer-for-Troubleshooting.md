@@ -1,13 +1,12 @@
 ---
+description: "Learn more about: Configuring a Computer for Troubleshooting"
 ms.assetid: 155abe09-6360-4913-8dd9-7392d71ea4e6
 title: Configuring a Computer for Troubleshooting
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: daveba
+author: iainfoulds
+manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 # Configuring a Computer for Troubleshooting
 
@@ -25,7 +24,7 @@ To configure your computer for troubleshooting Active Directory Domain Services 
 
 When you install AD DS to create a domain controller, the administrative tools that you use to manage AD DS are installed automatically. If you want to manage domain controllers remotely from a computer that is not a domain controller, you can install the Remote Server Administration Tools (RSAT) on a member server or workstation that is running a supported version of Windows. RSAT replaces Windows Support Tools from Windows Server 2003.
 
-For information about installing RSAT, see the article [Remote Server Administration Tools](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+For information about installing RSAT, see the article [Remote Server Administration Tools](../../../../remote/remote-server-administration-tools.md).
 
 ### Configure Reliability and Performance Monitor
 

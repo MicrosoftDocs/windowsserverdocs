@@ -1,17 +1,11 @@
 ---
 title: Manage Multiple, remote Servers with Server Manager
-description: Server Manager
-
-ms.prod: windows-server
-
-
-ms.technology: manage-server-manager
-
+description: Learn how to use features in the Server Manager console to manage multiple, remote servers.
 ms.topic: article
 ms.assetid: 3a17e686-e7f2-47e2-b7af-733777c38b5f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Manage Multiple, remote Servers with Server Manager
@@ -132,7 +126,7 @@ To perform management tasks on remote servers by using Server Manager, remote se
 
     -   To enable remote management on servers that are running  Windows Server 2008 , see [Enable and Use remote Commands in Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=242565).
 
-    -   To enable remote management on servers that are running Windows Server 2003, enable WMI DCOM exceptions in Windows Firewall. For more information about how to do this on servers that are running Windows Server 2003, see [Connecting Through Windows Firewall](https://msdn.microsoft.com/library/aa389286.aspx) on MSDN.
+    -   To enable remote management on servers that are running Windows Server 2003, enable WMI DCOM exceptions in Windows Firewall. For more information about how to do this on servers that are running Windows Server 2003, see [Connecting Through Windows Firewall](/windows/win32/wmisdk/connecting-to-wmi-remotely-with-vbscript) on MSDN.
 
 ## <a name=BKMK_tasks></a>Tasks that you can perform in Server Manager
 Server Manager makes server administration more efficient by allowing administrators to do tasks in the following table by using a single tool. In  Windows Server 2012 R2  and  Windows Server 2012 , both standard users of a server and members of the Administrators group can perform management tasks in Server Manager, but by default, standard users are prevented from performing some tasks, as shown in the following table.
@@ -184,7 +178,7 @@ You can restart a remote server from the **Servers** tile of a role or group pag
 
 > [!IMPORTANT]
 > Restarting a remote server forces the server to restart, even if users are still logged on to the remote server, and even if programs with unsaved data are still open. This behavior is different from shutting down or restarting the local computer, on which you would be prompted to save unsaved program data, and verify that you wanted to force logged-on users to log off. Be sure that you can force other users to log off of remote servers, and that you can discard unsaved data in programs that are running on the remote servers.
-> 
+>
 > if an automatic refresh occurs in Server Manager while a managed server is shutting down and restarting, refresh and manageability status errors can occur for the managed server, because Server Manager cannot connect to the remote server until it is finished restarting.
 
 #### To restart remote servers in Server Manager
@@ -237,5 +231,3 @@ You can export Server Manager settings, make Server Manager settings portable, o
     -   %*appdata*%\Microsoft\Windows\ServerManager\Serverlist.xml
 
     -   %*localappdata*%\Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
-
-

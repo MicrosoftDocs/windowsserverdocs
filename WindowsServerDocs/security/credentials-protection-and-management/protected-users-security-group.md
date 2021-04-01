@@ -1,13 +1,11 @@
 ---
 title: Protected Users Security Group
-description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-credential-protection
+description: Learn about the Active Directory security group Protected Users feature, and how it works.
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f296
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Protected Users Security Group
@@ -33,7 +31,7 @@ Requirements to provide device protections for members of the Protected Users gr
 
 - The Protected Users global security group is replicated to all domain controllers in the account domain.
 
-- Windows 8.1 and Windows Server 2012 R2 added support by default. [Microsoft Security Advisory 2871997](https://technet.microsoft.com/library/security/2871997) adds support to Windows 7, Windows Server 2008 R2 and Windows Server 2012.
+- Windows 8.1 and Windows Server 2012 R2 added support by default. [Microsoft Security Advisory 2871997](/security-updates/SecurityAdvisories/2016/2871997) adds support to Windows 7, Windows Server 2008 R2 and Windows Server 2012.
 
 Requirements to provide domain controller protection for members of the Protected Users group include:
 
@@ -41,12 +39,12 @@ Requirements to provide domain controller protection for members of the Protecte
 
 ### Adding Protected User global security group to down-level domains
 
-Domain controllers that run an operating system earlier than Windows Server 2012 R2 can support adding members to the new Protected User security group. This allows the users to benefit from device protections before the domain is upgraded. 
+Domain controllers that run an operating system earlier than Windows Server 2012 R2 can support adding members to the new Protected User security group. This allows the users to benefit from device protections before the domain is upgraded.
 
 > [!Note]
-> The domain controllers will not support domain protections. 
+> The domain controllers will not support domain protections.
 
-Protected Users group can be created by [transferring the primary domain controller (PDC) emulator role](https://technet.microsoft.com/library/cc816944(v=ws.10).aspx) to a domain controller that runs Windows Server 2012 R2. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
+Protected Users group can be created by [transferring the primary domain controller (PDC) emulator role](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816944(v=ws.10)) to a domain controller that runs Windows Server 2012 R2. After that group object is replicated to other domain controllers, the PDC emulator role can be hosted on a domain controller that runs an earlier version of Windows Server.
 
 ### <a name="BKMK_ADgroup"></a>Protected Users group AD properties
 
@@ -79,7 +77,7 @@ When the signed in user is a member of the Protected Users group the following p
 - Beginning with Windows 8.1 and Windows Server 2012 R2, Windows Digest will not cache the user's plain text credentials even when Windows Digest is enabled.
 
 > [!Note]
-> After installing [Microsoft Security Advisory 2871997](https://technet.microsoft.com/library/security/2871997) Windows Digest will continue to cache credentials until the registry key is configured. See [Microsoft Security Advisory: Update to improve credentials protection and management: May 13, 2014](https://support.microsoft.com/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a) for instructions.
+> After installing [Microsoft Security Advisory 2871997](/security-updates/SecurityAdvisories/2016/2871997) Windows Digest will continue to cache credentials until the registry key is configured. See [Microsoft Security Advisory: Update to improve credentials protection and management: May 13, 2014](https://support.microsoft.com/help/2871997/microsoft-security-advisory-update-to-improve-credentials-protection-a) for instructions.
 
 - NTLM will not cache the user's plain text credentials or NT one-way function (NTOWF).
 
@@ -102,7 +100,7 @@ Accounts that are members of the Protected Users group that authenticate to a  W
 
 Non-configurable settings to the TGTs expiration are established for every account in the Protected Users group. Normally, the domain controller sets the TGTs lifetime and renewal, based on the domain policies, **Maximum lifetime for user ticket** and **Maximum lifetime for user ticket renewal**. For the Protected Users group, 600 minutes is set for these domain policies.
 
-For more information, see [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
+For more information, see [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md).
 
 ## Troubleshooting
 Two operational administrative logs are available to help troubleshoot events that are related to Protected Users. These new logs are located in Event Viewer and are disabled by default, and are located under **Applications and Services Logs\Microsoft\Windows\Authentication**.
@@ -122,4 +120,4 @@ Two operational administrative logs are available to help troubleshoot events th
 
 - [Authentication Policies and Authentication Policy Silos](authentication-policies-and-authentication-policy-silos.md)
 
-- [How to Configure Protected Accounts](how-to-configure-protected-accounts.md)
+- [How to Configure Protected Accounts](../../identity/ad-ds/manage/how-to-configure-protected-accounts.md)

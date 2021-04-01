@@ -1,13 +1,12 @@
 ---
 title: Prepare the CAPolicy.inf File
-description:  The CAPolicy.inf contains various settings that are used when installing the Active Directory Certification Service (AD CS) or when renewing the CA certificate. 
+description:  The CAPolicy.inf contains various settings that are used when installing the Active Directory Certification Service (AD CS) or when renewing the CA certificate.
 manager: alanth
 ms.topic: article
 ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
-ms.prod: windows-server
-ms.technology: networking
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # CAPolicy.inf Syntax
@@ -93,7 +92,7 @@ Notice=”Legal policy statement text”
 
 ### CRLDistributionPoint
 
-You can specify CRL Distribution Points (CDPs) for a root CA certificate in the CAPolicy.inf.  After installing the CA, you can configure the CDP URLs that the CA includes in each certificate issued. The root CA certificate shows the URLs specified in this section of the CAPolicy.inf file. 
+You can specify CRL Distribution Points (CDPs) for a root CA certificate in the CAPolicy.inf.  After installing the CA, you can configure the CDP URLs that the CA includes in each certificate issued. The root CA certificate shows the URLs specified in this section of the CAPolicy.inf file.
 
 ```
 [CRLDistributionPoint]
@@ -102,11 +101,11 @@ URL=http://pki.wingtiptoys.com/cdp/WingtipToysRootCA.crl
 
 Some additional information about this section:
 -   Supports:
-    - HTTP 
+    - HTTP
     - File URLs
-    - LDAP URLs 
+    - LDAP URLs
     - Multiple URLs
-   
+
     >[!IMPORTANT]
     >Does not support HTTPS URLs.
 
@@ -117,7 +116,7 @@ Some additional information about this section:
 -    CA can publish to FILE UNC, for example, to a share that represents the folder of a website where a client retrieves via HTTP.
 
 -   Only use this section if you are setting up a root CA or renewing the root CA certificate. The CA determines the subordinate CA CDP extensions.
-   
+
 
 ### AuthorityInformationAccess
 
@@ -208,23 +207,23 @@ Before you install AD CS, you configure the CAPolicy.inf file with specific sett
 
 3. Enter the following as the contents of the file:
    ```
-   [Version]  
-   Signature="$Windows NT$"  
-   [PolicyStatementExtension]  
-   Policies=InternalPolicy  
-   [InternalPolicy]  
-   OID=1.2.3.4.1455.67.89.5  
-   Notice="Legal Policy Statement"  
-   URL=https://pki.corp.contoso.com/pki/cps.txt  
-   [Certsrv_Server]  
-   RenewalKeyLength=2048  
-   RenewalValidityPeriod=Years  
-   RenewalValidityPeriodUnits=5  
-   CRLPeriod=weeks  
-   CRLPeriodUnits=1  
-   LoadDefaultTemplates=0  
-   AlternateSignatureAlgorithm=1  
-   [CRLDistributionPoint]  
+   [Version]
+   Signature="$Windows NT$"
+   [PolicyStatementExtension]
+   Policies=InternalPolicy
+   [InternalPolicy]
+   OID=1.2.3.4.1455.67.89.5
+   Notice="Legal Policy Statement"
+   URL=https://pki.corp.contoso.com/pki/cps.txt
+   [Certsrv_Server]
+   RenewalKeyLength=2048
+   RenewalValidityPeriod=Years
+   RenewalValidityPeriodUnits=5
+   CRLPeriod=weeks
+   CRLPeriodUnits=1
+   LoadDefaultTemplates=0
+   AlternateSignatureAlgorithm=1
+   [CRLDistributionPoint]
    [AuthorityInformationAccess]
    ```
 4. Click **File**, and then click **Save As**.

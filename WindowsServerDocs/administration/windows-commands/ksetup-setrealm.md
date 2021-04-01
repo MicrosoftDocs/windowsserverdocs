@@ -1,53 +1,45 @@
 ---
-title: ksetup:setrealm
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
+title: ksetup setrealm
+description: Reference article for the ksetup setrealm command, which sets the name of a Kerberos realm.
+ms.topic: reference
 ms.assetid: ab268c40-276b-46ef-ab16-d5ce7667fbed
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# ksetup:setrealm
+# ksetup setrealm
 
+Sets the name of a Kerberos realm.
 
-
-Sets the name of a Kerberos realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+> [!IMPORTANT]
+> Setting the Kerberos realm on a domain controller isn't supported. Attempting to do so causes a warning and a command failure.
 
 ## Syntax
 
 ```
-ksetup /setrealm <DNSDomainName>
+ksetup /setrealm <DNSdomainname>
 ```
 
-#### Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<DNSDomainName>|The DNS domain name can be in the form of a fully qualified domain name or simple domain name.|
+| Parameter | Description |
+| --------- | ----------- |
+| `<DNSdomainname>` | Specifies the uppercase DNS name, such as CORP.CONTOSO.COM. You can use the fully-qualified domain name or a simple form of the name. If you don't use uppercase for the DNS name, you'll be asked for verification to continue. |
 
-## Remarks
+### Examples
 
-The DNS domain name parameter should be entered in uppercase letters. Otherwise, the **ksetup** command will ask for verification to continue.
+To set the realm of this computer to a specific domain name, and to restrict access by a non-domain controller just to the CONTOSO Kerberos realm, type:
 
-Setting the Kerberos realm on a domain controller is not supported. Attempting to do so will cause a warning and a command failure.
-
-## <a name=BKMK_Examples></a>Examples
-
-Set the realm for this computer to a specific domain name to restrict access by a non-domain controller just to the CONTOSO Kerberos realm:
 ```
 ksetup /setrealm CONTOSO
 ```
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Ksetup](ksetup.md)
--   [Ksetup:removerealm](ksetup-removerealm.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [ksetup command](ksetup.md)
+
+- [ksetup removerealm](ksetup-removerealm.md)

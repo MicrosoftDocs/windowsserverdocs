@@ -1,47 +1,50 @@
 ---
 title: help
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
+description: Reference article for the help command, which displays a list of the available commands or detailed help information on a specified command.
+ms.topic: reference
 ms.assetid: c65b5ac3-711a-4368-95b8-ba82e2d00713
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # help
 
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-
-Provides online information about system commands (that is, non-network commands). If used without parameters, **help** lists and briefly describes every system command.
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Displays a list of the available commands or detailed help information on a specified command. If used without parameters, **help** lists and briefly describes every system command.
 
 ## Syntax
 
 ```
-help [<Command>] 
-[<Command>] /?
+help [<command>]
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<Command>|Specifies the name of the command that you want information about.|
+| Parameter | Description |
+| --------- | ----------- |
+| `<command>` | Specifies the command for which to display detailed help information. |
 
-## <a name=BKMK_examples></a>Examples
+### Examples
 
-To view information about the **robocopy** command, type either of the following:
+To view information about the **robocopy** command, type:
+
 ```
 help robocopy
-robocopy /? 
+```
+
+To display a list of all commands available in DiskPart, type:
+
+```
+help
+```
+
+To display detailed help information about how to use the **create partition primary** command in DiskPart, type:
+
+```
+help create partition primary
 ```
 
 ## Additional References

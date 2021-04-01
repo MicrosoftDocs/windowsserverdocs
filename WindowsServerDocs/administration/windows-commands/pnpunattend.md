@@ -1,58 +1,55 @@
 ---
 title: pnpunattend
-description: Learn how to audit the device drivers on a computer, as well as perform silent driver installations.
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
-ms.assetid: 4fa88932-cff0-4dfc-936c-98c0e3dfbeb8 britw
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+description: Reference article for the pnpunattend command, which audits the device drivers on a computer, as well as performs silent driver installations.
+ms.topic: reference
+ms.assetid: 4fa88932-cff0-4dfc-936c-98c0e3dfbeb8
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 07/11/2018
 ---
 
 # pnpunattend
 
-Audits a computer for device drivers, and perform unattended driver installations, or search for drivers without installing and, optionally, report the results to the command line. Use this command to specify the installation of specific drivers for specific hardware devices. See Remarks.
+Audits a computer for device drivers, and perform unattended driver installations, or search for drivers without installing and, optionally, report the results to the command line. Use this command to specify the installation of specific drivers for specific hardware devices.
+
+## Prerequisites
+
+Preliminary preparation is required for older versions of the Windows operating system. Prior to using this command, you must complete the following tasks:
+
+1. Create a directory for the drivers you want to install. For example, create a folder at **C:\Drivers\Video** for video adapter drivers.
+
+2. Download and extract the driver package for your device. Copy the contents of the subfolder that contains the INF file for your version of the operating system and any subfolders to the video folder that you created. For example, copy the video driver files to **C:\Drivers\Video**.
+
+3. Add a system environment path variable to the folder you created in step 1.For example, **C:\Drivers\Video**.
+
+4. Create the following registry key, and then for the **DriverPaths** key you create, set the **Value Data** to **1**.
+
+5. For Windows® 7 navigate the registry path: **HKEY_LOCAL_Machine\Software\Microsoft\Windows NT\CurrentVersion\\**, and then create the keys: **UnattendSettings\PnPUnattend\DriverPaths\\**
 
 ## Syntax
 
 ```
-PnPUnattend.exe auditSystem [/help] [/?] [/h] [/s] [/L]
+PnPUnattend.exe auditsystem [/help] [/?] [/h] [/s] [/l]
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|auditSystem|Specifies online driver install.</br>Required, except when **pnpunattend** is run with either the **/Help** or **/?** parameters.|
-|/s|Optional. Specifies to search for drivers without installing.|
-|/L|Optional. Specifies to display the log information for this command in the command prompt.|
-|/?|Optional. Displays help for this command at the command prompt.|
+| Parameter | Description |
+|--|--|
+| auditsystem | Specifies online driver install.<p>Required, except when this command is run with either the **/help** or **/?** parameters. |
+| /s | Optional. Specifies to search for drivers without installing. |
+| /l | Optional. Specifies to display the log information for this command in the command prompt. |
+| `/? | /help` | Optional. Displays help for this command at the command prompt. |
 
-## Remarks
+### Examples
 
-Preliminary preparation is required. Prior to using this command, you must complete the following tasks:
-
-1. Create a directory for the drivers you want to install. For example, create a folder at **C:\Drivers\Video** for video adapter drivers.
-2. Download and extract the driver package for your device. Copy the contents of the subfolder that contains the INF file for your version of the operating system and any subfolders to the video folder that you created. For example, copy the video driver files to C:\Drivers\Video.
-3. Add a system environment path variable to the folder you created in step 1.For example, **C:\Drivers\Video**.
-4. Create the following registry key, and then for the **DriverPaths** key you create, set the **Value Data** to **1**.
-5. For Windows® 7 navigate the Registry path: **HKEY_LOCAL_Machine\Software\Microsoft\Windows NT\CurrentVersion\\**, and then create the keys: **UnattendSettings\PnPUnattend\DriverPaths\\**
-6. For Windows Vista, navigate to the Registry path: **HK_LM\Software\Microsoft\Windows NT\CurrentVersion\\**, and then create the keys = **\UnattendSettings\PnPUnattend\DriverPaths**.
-
-## Examples
-
-The following example command shows how to use the **PNPUnattend.exe** to audit a computer for possible driver updates, and then report the findings to the command prompt.
+To command shows how to use the **PNPUnattend.exe** to audit a computer for possible driver updates, and then report the findings to the command prompt, type:
 
 ```
-pnpunattend auditsystem /s /l 
+pnpunattend auditsystem /s /l
 ```
 
-## Additional references
+## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

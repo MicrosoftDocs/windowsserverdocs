@@ -1,10 +1,8 @@
 ---
 title: Tuning IIS 10.0
 description: Performance tuning recommmendations for IIS 10.0 web servers on Windows Server 16
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: landing-page
-ms.author: davso; ericam; yashi
+ms.author: ericam
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -39,8 +37,6 @@ HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Http\Parameters
 
 **Note** 
 If the HTTP service is already running, you must restart it for the changes to take effect.
-
-Â 
 
 ## Cache management settings
 
@@ -140,12 +136,12 @@ This section describes the settings that affect caching behavior in IISÂ 10.0.
 
 **system.webServer/caching**
 
-|Attribute|Description|Default|
-|--- |--- |--- |
-|Enabled|Disables the user-mode IIS cache when set to **False**. When the cache hit rate is very small, you can disable the cache completely to avoid the overhead that is associated with the cache code path. Disabling the user-mode cache does not disable the kernel-mode cache.|True|
-|enableKernelCache|Disables the kernel-mode cache when set to **False**.|True|
-|maxCacheSize|Limits the IIS user-mode cache size to the specified size in Megabytes. IIS adjusts the default depending on available memory. Choose the value carefully based on the size of the set of frequently accessed files versus the amount of RAM or the IIS process address space.|0|
-|maxResponseSize|Caches files up to the specified size. The actual value depends on the number and size of the largest files in the data set versus the available RAM. Caching large, frequently requested files can reduce CPU usage, disk access, and associated latencies.|262144|
+| Attribute | Description | Default |
+|--|--|--|
+| Enabled | Disables the user-mode IIS cache when set to **False**. When the cache hit rate is very small, you can disable the cache completely to avoid the overhead that is associated with the cache code path. Disabling the user-mode cache does not disable the kernel-mode cache. | True |
+| enableKernelCache | Disables the kernel-mode cache when set to **False**. | True |
+| maxCacheSize | Limits the IIS user-mode cache size to the specified size in Megabytes. IIS adjusts the default depending on available memory. Choose the value carefully based on the size of the set of frequently accessed files versus the amount of RAM or the IIS process address space. | 0 |
+| maxResponseSize | Caches files up to the specified size. The actual value depends on the number and size of the largest files in the data set versus the available RAM. Caching large, frequently requested files can reduce CPU usage, disk access, and associated latencies. | 262144 |
 
 ## Compression behavior settings
 
@@ -155,23 +151,22 @@ To completely disable compression, remove StaticCompressionModule and DynamicCom
 
 **system.webServer/httpCompression**
 
-|Attribute|Description|Default|
-|--- |--- |--- |
-|staticCompression-EnableCpuUsage<br><br>staticCompression-DisableCpuUsage<br><br>dynamicCompression-EnableCpuUsage<br><br>dynamicCompression-DisableCpuUsage|Enables or disables compression if the current percentage CPU usage goes above or below specified limits.<br><br>Starting with IIS 7.0, compression is automatically disabled if steady-state CPU increases above the disable threshold. Compression is enabled if CPU drops below the enable threshold.|50, 100, 50, and 90 respectively|
-|directory|Specifies the directory in which compressed versions of static files are temporarily stored and cached. Consider moving this directory off the system drive if it is accessed frequently.|%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files|
-|doDiskSpaceLimiting|Specifies whether a limit exists for how much disk space all compressed files can occupy. Compressed files are stored in the compression directory that is specified by the **directory** attribute.|True|
-|maxDiskSpaceUsage|Specifies the number of bytes of disk space that compressed files can occupy in the compression directory.<br><br>This setting might need to be increased if the total size of all compressed content is too large.|100 MB|
+| Attribute | Description | Default |
+|--|--|--|
+| staticCompression-EnableCpuUsage<br><br>staticCompression-DisableCpuUsage<br><br>dynamicCompression-EnableCpuUsage<br><br>dynamicCompression-DisableCpuUsage | Enables or disables compression if the current percentage CPU usage goes above or below specified limits.<br><br>Starting with IIS 7.0, compression is automatically disabled if steady-state CPU increases above the disable threshold. Compression is enabled if CPU drops below the enable threshold. | 50, 100, 50, and 90 respectively |
+| directory | Specifies the directory in which compressed versions of static files are temporarily stored and cached. Consider moving this directory off the system drive if it is accessed frequently. | %SystemDrive%\inetpub\temp\IIS Temporary Compressed Files |
+| doDiskSpaceLimiting | Specifies whether a limit exists for how much disk space all compressed files can occupy. Compressed files are stored in the compression directory that is specified by the **directory** attribute. | True |
+| maxDiskSpaceUsage | Specifies the number of bytes of disk space that compressed files can occupy in the compression directory.<br><br>This setting might need to be increased if the total size of all compressed content is too large. | 100 MB |
 
 **system.webServer/urlCompression**
 
-|Attribute|Description|Default|
-|--- |--- |--- |
-|doStaticCompression|Specifies whether static content is compressed.|True|
-|doDynamicCompression|Specifies whether dynamic content is compressed.|True|
+| Attribute | Description | Default |
+|--|--|--|
+| doStaticCompression | Specifies whether static content is compressed. | True |
+| doDynamicCompression | Specifies whether dynamic content is compressed. | True |
 
-**Note**
-For servers running IIS 10.0 that have low average CPU usage, consider enabling compression for dynamic content, especially if responses are large. This should first be done in a test environment to assess the effect on the CPU usage from the baseline.
-
+> [!NOTE]
+> For servers running IIS 10.0 that have low average CPU usage, consider enabling compression for dynamic content, especially if responses are large. This should first be done in a test environment to assess the effect on the CPU usage from the baseline.
 
 ### Tuning the default document list
 
@@ -185,10 +180,10 @@ To disable default documents completely, remove DefaultDocumentModule from the l
 
 **system.webServer/defaultDocument**
 
-|Attribute|Description|Default|
-|--- |--- |--- |
-|enabled|Specifies that default documents are enabled.|True|
-|&lt;files&gt; element|Specifies the file names that are configured as default documents.|The default list is Default.htm, Default.asp, Index.htm, Index.html, Iisstart.htm, and Default.aspx.|
+| Attribute | Description | Default |
+|--|--|--|
+| enabled | Specifies that default documents are enabled. | True |
+| `<files>` element | Specifies the file names that are configured as default documents. | The default list is Default.htm, Default.asp, Index.htm, Index.html, Iisstart.htm, and Default.aspx. |
 
 ## Central binary logging
 
@@ -198,17 +193,16 @@ You can enable central binary logging by setting the centralLogFileMode attribut
 
 **system.applicationHost/log**
 
-|Attribute|Description|Default|
-|--- |--- |--- |
-|centralLogFileMode|Specifies the logging mode for a server. Change this value to CentralBinary to enable central binary logging.|Site|
+| Attribute | Description | Default |
+|--|--|--|
+| centralLogFileMode | Specifies the logging mode for a server. Change this value to CentralBinary to enable central binary logging. | Site |
 
 **system.applicationHost/log/centralBinaryLogFile**
 
-|Attribute|Description|Default|
-|--- |--- |--- |
-|enabled|Specifies whether central binary logging is enabled.|False|
-|directory|Specifies the directory where log entries are written.|%SystemDrive%\inetpub\logs\LogFiles|
-
+| Attribute | Description | Default |
+|--|--|--|
+| enabled | Specifies whether central binary logging is enabled. | False |
+| directory | Specifies the directory where log entries are written. | %SystemDrive%\inetpub\logs\LogFiles |
 
 ## Application and site tunings
 
@@ -216,16 +210,16 @@ The following settings relate to application pool and site tunings.
 
 **system.applicationHost/applicationPools/applicationPoolDefaults**
 
-|Attribute|Description|Default|
-|--- |--- |--- |
-|queueLength|Indicates to HTTP.sys how many requests are queued for an application pool before future requests are rejected. When the value for this property is exceeded, IIS rejects subsequent requests with a 503 error.<br><br>Consider increasing this for applications that communicate with high-latency back-end data stores if 503 errors are observed.|1000|
-|enable32BitAppOnWin64|When True, enables a 32-bit application to run on a computer that has a 64-bit processor.<br><br>Consider enabling 32-bit mode if memory consumption is a concern. Because pointer sizes and instruction sizes are smaller, 32-bit applications use less memory than 64-bit applications. The drawback to running 32-bit applications on a 64-bit computer is that user-mode address space is limited to 4 GB.|False|
+| Attribute | Description | Default |
+|--|--|--|
+| queueLength | Indicates to HTTP.sys how many requests are queued for an application pool before future requests are rejected. When the value for this property is exceeded, IIS rejects subsequent requests with a 503 error.<br><br>Consider increasing this for applications that communicate with high-latency back-end data stores if 503 errors are observed. | 1000 |
+| enable32BitAppOnWin64 | When True, enables a 32-bit application to run on a computer that has a 64-bit processor.<br><br>Consider enabling 32-bit mode if memory consumption is a concern. Because pointer sizes and instruction sizes are smaller, 32-bit applications use less memory than 64-bit applications. The drawback to running 32-bit applications on a 64-bit computer is that user-mode address space is limited to 4 GB. | False |
 
 **system.applicationHost/sites/VirtualDirectoryDefault**
 
-|Attribute|Description|Default|
-|--- |--- |--- |
-|allowSubDirConfig|Specifies whether IIS looks for web.config files in content directories lower than the current level (True) or does not look for web.config files in content directories lower than the current level (False). By imposing a simple limitation, which allows configuration only in virtual directories, IISÂ 10.0 can know that, unless **/&lt;name&gt;.htm** is a virtual directory, it should not look for a configuration file. Skipping the additional file operations can significantly improve performance of websites that have a very large set of randomly accessed static content.|True|
+| Attribute | Description | Default |
+|--|--|--|
+| allowSubDirConfig | Specifies whether IIS looks for web.config files in content directories lower than the current level (True) or does not look for web.config files in content directories lower than the current level (False). By imposing a simple limitation, which allows configuration only in virtual directories, IISÂ 10.0 can know that, unless **/&lt;name&gt;.htm** is a virtual directory, it should not look for a configuration file. Skipping the additional file operations can significantly improve performance of websites that have a very large set of randomly accessed static content. | True |
 
 ## Managing IIS 10.0 modules
 
@@ -243,25 +237,24 @@ The following settings are used to configure the classic ASP template cache and 
 
 **system.webServer/asp/cache**
 
-|Attribute|Description|Default|
-|--- |--- |--- |
-|diskTemplateCacheDirectory|The name of the directory that ASP uses to store compiled templates when the in-memory cache overflows.<br><br>Recommendation: Set to a directory that is not heavily used, for example, a drive that is not shared with the operating system, IIS log, or other frequently accessed content.|%SystemDrive%\inetpub\temp\ASP Compiled Templates|
-|maxDiskTemplateCacheFiles|Specifies the maximum number of compiled ASP templates that can be cached on disk.<br><br>Recommendation: Set to the maximum value of 0x7FFFFFFF.|2000|
-|scriptFileCacheSize|This attribute specifies the maximum number of compiled ASP templates that can be cached in memory.<br><br>Recommendation: Set to at least as many as the number of frequently-requested ASP scripts served by an application pool. If possible, set to as many ASP templates as memory limits allow.|500|
-|scriptEngineCacheMax|Specifies the maximum number of script engines that will keep cached in memory.<br><br>Recommendation: Set to at least as many as the number of frequently-requested ASP scripts served by an application pool. If possible, set to as many script engines as the memory limit allows.|250|
+| Attribute | Description | Default |
+|--|--|--|
+| diskTemplateCacheDirectory | The name of the directory that ASP uses to store compiled templates when the in-memory cache overflows.<br><br>Recommendation: Set to a directory that is not heavily used, for example, a drive that is not shared with the operating system, IIS log, or other frequently accessed content. | %SystemDrive%\inetpub\temp\ASP Compiled Templates |
+| maxDiskTemplateCacheFiles | Specifies the maximum number of compiled ASP templates that can be cached on disk.<br><br>Recommendation: Set to the maximum value of 0x7FFFFFFF. | 2000 |
+| scriptFileCacheSize | This attribute specifies the maximum number of compiled ASP templates that can be cached in memory.<br><br>Recommendation: Set to at least as many as the number of frequently-requested ASP scripts served by an application pool. If possible, set to as many ASP templates as memory limits allow. | 500 |
+| scriptEngineCacheMax | Specifies the maximum number of script engines that will keep cached in memory.<br><br>Recommendation: Set to at least as many as the number of frequently-requested ASP scripts served by an application pool. If possible, set to as many script engines as the memory limit allows. | 250 |
 
 **system.webServer/asp/limits**
 
-|Attribute|Description|Default|
-|--- |--- |--- |
-|processorThreadMax|Specifies the maximum number of worker threads per processor that ASP can create. Increase if the current setting is insufficient to handle the load, which can cause errors when it is serving requests or cause under-usage of CPU resources.|25|
+| Attribute | Description | Default |
+|--|--|--|
+| processorThreadMax | Specifies the maximum number of worker threads per processor that ASP can create. Increase if the current setting is insufficient to handle the load, which can cause errors when it is serving requests or cause under-usage of CPU resources. | 25 |
 
 **system.webServer/asp/comPlus**
 
-|Attribute|Description|Default|
-|--- |--- |--- |
-|executeInMta|Set to **True** if errors or failures are detected while IIS is serving ASP content. This can occur, for example, when hosting multiple isolated sites in which each site runs under its own worker process. Errors are typically reported from COM+ in the Event Viewer. This setting enables the multi-threaded apartment model in ASP.|False|
-
+| Attribute | Description | Default |
+|--|--|--|
+| executeInMta | Set to **True** if errors or failures are detected while IIS is serving ASP content. This can occur, for example, when hosting multiple isolated sites in which each site runs under its own worker process. Errors are typically reported from COM+ in the Event Viewer. This setting enables the multi-threaded apartment model in ASP. | False |
 
 ## ASP.NET concurrency setting
 
@@ -302,13 +295,12 @@ You can enable process recycling for a particular application by adding attribut
 
 **system.applicationHost/applicationPools/ApplicationPoolDefaults/recycling/periodicRestart**
 
-|Attribute|Description|Default|
-|--- |--- |--- |
-|memory|Enable process recycling if virtual memory consumption exceeds the specified limit in kilobytes. This is a useful setting for 32-bit computers that have a small, 2 GB address space. It can help avoid failed requests due to out-of-memory errors.|0|
-|privateMemory|Enable process recycling if private memory allocations exceed a specified limit in kilobytes.|0|
-|requests|Enable process recycling after a certain number of requests.|0|
-|time|Enable process recycling after a specified time period.|29:00:00|
-
+| Attribute | Description | Default |
+|--|--|--|
+| memory | Enable process recycling if virtual memory consumption exceeds the specified limit in kilobytes. This is a useful setting for 32-bit computers that have a small, 2 GB address space. It can help avoid failed requests due to out-of-memory errors. | 0 |
+| privateMemory | Enable process recycling if private memory allocations exceed a specified limit in kilobytes. | 0 |
+| requests | Enable process recycling after a certain number of requests. | 0 |
+| time | Enable process recycling after a specified time period. | 29:00:00 |
 
 ## Dynamic worker-process page-out tuning
 
@@ -318,10 +310,8 @@ The main purpose of both the idle worker process page-out and idle worker proces
 
 Before we go into specifics, we must keep in mind that if there are no memory constraints, then it's probably best to simply set the sites to never suspend or terminate. After all, thereâs little value in terminating a worker process if it's the only one on the machine.
 
-**Note** 
-In case the site runs unstable code, such as code with a memory leak, or otherwise unstable, setting the site to terminate on idle can be a quick-and-dirty alternative to fixing the code bug. This isn't something we would encourage, but in a crunch, it may be better to use this feature as a clean-up mechanism while a more permanent solution is in the works.\]
-
-Â 
+> [!NOTE]
+> In case the site runs unstable code, such as code with a memory leak, or otherwise unstable, setting the site to terminate on idle can be a quick-and-dirty alternative to fixing the code bug. This isn't something we would encourage, but in a crunch, it may be better to use this feature as a clean-up mechanism while a more permanent solution is in the works.\]
 
 Another factor to consider is that if the site does use a lot of memory, then the suspension process itself takes a toll, because the computer has to write the data used by the worker process to disk. If the worker process is using a large chunk of memory, then suspending it might be more expensive than the cost of having to wait for it to start back up.
 
@@ -331,20 +321,20 @@ Ideally, the sites that you will configure for suspension or termination are tho
 
 Keep in mind that once a specific user connects to the site, they will typically stay on it for at least a while, making additional requests, and so just counting daily requests may not accurately reflect the real traffic patterns. To get a more accurate reading, you can also use a tool, such as Microsoft Excel, to calculate the average time between requests. For example:
 
-||Request URL|Request time|Delta|
-|--- |--- |--- |--- |
-|1|/SourceSilverLight/Geosource.web/grosource.html|10:01||
-|2|/SourceSilverLight/Geosource.web/sliverlight.js|10:10|0:09|
-|3|/SourceSilverLight/Geosource.web/clientbin/geo/1.aspx|10:11|0:01|
-|4|/lClientAccessPolicy.xml|10:12|0:01|
-|5|/ SourceSilverLight/GeosourcewebService/Service.asmx|10:23|0:11|
-|6|/ SourceSilverLight/Geosource.web/GeoSearchServer...¦.|11:50|1:27|
-|7|/rest/Services/CachedServices/Silverlight_load_la...¦|12:50|1:00|
-|8|/rest/Services/CachedServices/Silverlight_basemap...¦.|12:51|0:01|
-|9|/rest/Services/DynamicService/ Silverlight_basemap...¦.|12:59|0:08|
-|10|/rest/Services/CachedServices/Ortho_2004_cache.as...|13:40|0:41|
-|11|/rest/Services/CachedServices/Ortho_2005_cache.js|13:40|0:00|
-|12|/rest/Services/CachedServices/OrthoBaseEngine.aspx|13:41|0:01|
+| Number | Request URL | Request time | Delta |
+|--|--|--|--|
+| 1 | /SourceSilverLight/Geosource.web/grosource.html | 10:01 |  |
+| 2 | /SourceSilverLight/Geosource.web/sliverlight.js | 10:10 | 0:09 |
+| 3 | /SourceSilverLight/Geosource.web/clientbin/geo/1.aspx | 10:11 | 0:01 |
+| 4 | /lClientAccessPolicy.xml | 10:12 | 0:01 |
+| 5 | / SourceSilverLight/GeosourcewebService/Service.asmx | 10:23 | 0:11 |
+| 6 | / SourceSilverLight/Geosource.web/GeoSearchServer...¦. | 11:50 | 1:27 |
+| 7 | /rest/Services/CachedServices/Silverlight_load_la...¦ | 12:50 | 1:00 |
+| 8 | /rest/Services/CachedServices/Silverlight_basemap...¦. | 12:51 | 0:01 |
+| 9 | /rest/Services/DynamicService/ Silverlight_basemap...¦. | 12:59 | 0:08 |
+| 10 | /rest/Services/CachedServices/Ortho_2004_cache.as... | 13:40 | 0:41 |
+| 11 | /rest/Services/CachedServices/Ortho_2005_cache.js | 13:40 | 0:00 |
+| 12 | /rest/Services/CachedServices/OrthoBaseEngine.aspx | 13:41 | 0:01 |
 
 The hard part, though, is figuring out what setting to apply to make sense. In our case, the site gets a bunch of requests from users, and the table above shows that a total of 4 unique sessions occurred in a period of 4 hours. With the default settings for worker process suspension of the application pool, the site would be terminated after the default timeout of 20 minutes, which means each of these users would experience the site spin-up cycle. This makes it an ideal candidate for worker process suspension, because for most of the time, the site is idle, and so suspending it would conserve resources, and allow the users to reach the site almost instantly.
 
@@ -354,10 +344,9 @@ Whether you use an SSD or not, we also recommend fixing the size of the page fil
 
 To configure a pre-fixed page file size, you need to calculate its ideal size, which depends on how many sites you will be suspending, and how much memory they consume. If the average is 200 MB for an active worker process and you have 500 sites on the servers that will be suspending, then the page file should be at least (200 \* 500) MB over the base size of the page file (so base + 100 GB in our example).
 
-**Note**
-When sites are suspended, they will consume approximately 6 MB each, so in our case, memory usage if all sites are suspended would be around 3 GB. In reality, though, youâre probably never going to have them all suspended at the same time.
+> [!NOTE]
+> When sites are suspended, they will consume approximately 6 MB each, so in our case, memory usage if all sites are suspended would be around 3 GB. In reality, though, youâre probably never going to have them all suspended at the same time.
 
- 
 ## Transport Layer Security tuning parameters
 
 The use of Transport Layer Security (TLS) imposes additional CPU cost. The most expensive component of TLS is the cost of establishing a session establishment because it involves a full handshake. Reconnection, encryption, and decryption also add to the cost. For better TLS performance, do the following:
@@ -368,12 +357,10 @@ The use of Transport Layer Security (TLS) imposes additional CPU cost. The most 
 
 -   Selectively apply encryption only to pages or parts of the site that need it, rather to the entire site.
 
-**Note**
--   Larger keys provide more security, but they also use more CPU time.
+> [!NOTE]
+> - Larger keys provide more security, but they also use more CPU time.
+> - All components might not need to be encrypted. However, mixing plain HTTP and HTTPS might result in a pop-up warning that not all content on the page is secure.
 
--   All components might not need to be encrypted. However, mixing plain HTTP and HTTPS might result in a pop-up warning that not all content on the page is secure.
-
- 
 ## Internet Server Application Programming Interface (ISAPI)
 
 No special tuning parameters are needed for ISAPI applications. If you write a private ISAPI extension, make sure that it is written for performance and resource use.
@@ -392,7 +379,6 @@ Also using Output Cache properly will also boost the performance of your web sit
 
 When you run multiple hosts that contain ASP.NET scripts in isolated mode (one application pool per site), monitor the memory usage. Make sure that the server has enough RAM for the expected number of concurrently running application pools. Consider using multiple application domains instead of multiple isolated processes.
 
-
 ## Other issues that affect IIS performance
 
 The following issues can affect IIS performance:
@@ -405,6 +391,7 @@ The following issues can affect IIS performance:
 
     For performance reasons, the use of CGI applications to serve requests is not recommended with IIS. Frequently creating and deleting CGI processes involves significant overhead. Better alternatives include using FastCGI, ISAPI application scripts and ASP or ASP.NET scripts. Isolation is available for each of these options.
 
-## See also
-- [Web Server performance tuning](index.md) 
+## Additional References
+
+- [Web Server performance tuning](index.md)
 - [HTTP 1.1/2 tuning](http-performance.md)

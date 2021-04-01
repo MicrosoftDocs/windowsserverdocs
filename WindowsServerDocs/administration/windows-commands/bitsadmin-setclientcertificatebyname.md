@@ -1,13 +1,11 @@
 ---
 title: bitsadmin setclientcertificatebyname
-description: Windows Commands topic for **bitsadmin setclientcertificatebyname**, which specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the bitsadmin setclientcertificatebyname command, which specifies the subject name of the client certificate to use for client authentication in an HTTPS (SSL) request.
+ms.topic: reference
 ms.assetid: f308a6d9-d0da-48be-ae41-eced14b3cccb
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -32,12 +30,14 @@ bitsadmin /setclientcertificatebyname <job> <store_location> <store_name> <subje
 
 ## Examples
 
-The following example specifies the name of the client certificate *myCertificate* to use for client authentication in an HTTPS (SSL) request for the job named *myDownloadJob*.
+To specify the name of the client certificate *myCertificate* to use for client authentication in an HTTPS (SSL) request for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /setclientcertificatebyname myDownloadJob 1 MY myCertificate
+bitsadmin /setclientcertificatebyname myDownloadJob 1 MY myCertificate
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

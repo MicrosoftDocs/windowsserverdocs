@@ -1,12 +1,11 @@
 ---
+description: "Learn more about: Create OS specialization answer file"
 title: Create OS specialization answer file
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 299aa38e-28d2-4cbe-af16-5b8c533eba1f
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 
@@ -17,7 +16,7 @@ ms.date: 08/29/2018
 In preparation to deploy shielded VMs, you may need to create an operating system specialization answer file. On Windows, this is commonly known as the "unattend.xml" file. The **New-ShieldingDataAnswerFile** Windows PowerShell function helps you do this. You can then use the answer file when you're creating shielded VMs from a template by using System Center Virtual Machine Manager (or any other fabric controller).
 
 For general guidelines for Unattend files for shielded VMs, see [Create an answer file](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file).
- 
+
 ## Downloading the New-ShieldingDataAnswerFile function
 
 You can obtain the **New-ShieldingDataAnswerFile** function from the [PowerShell Gallery](https://aka.ms/gftools). If your computer has Internet connectivity, you can install it from PowerShell with the following command:
@@ -123,7 +122,7 @@ $rootPassword = Read-Host -Prompt "Root password" -AsSecureString
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -RootPassword $rootPassword -RootSshKey '~\.ssh\id_rsa.pub'
 ```
 
-## See also
+## Additional References
 
 - [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)

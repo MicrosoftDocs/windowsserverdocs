@@ -1,17 +1,11 @@
 ---
 title: Manage the Local Server and the Server Manager Console
-description: Server Manager
-
-ms.prod: windows-server
-
-
-ms.technology: manage-server-manager
-
+description: Learn how to  manage both the local server and remote servers that are running Windows Server 2008 and newer releases of the Windows Server operating system.
 ms.topic: article
 ms.assetid: eeb32f65-d588-4ed5-82ba-1ca37f517139
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Manage the Local Server and the Server Manager Console
@@ -49,7 +43,7 @@ You can view or change the following settings in the **Properties** tile on the 
 
 > [!NOTE]
 > Typically, the properties displayed in the Local Server **Properties** tile can only be changed on the local server. You cannot change the local server properties from a remote computer by using Server Manager because the **Properties** tile can only get information about the local computer, not remote computers.
-> 
+>
 > Because many properties displayed in the **Properties** tile are controlled by tools that are not part of Server Manager (Control Panel, for example), changes to **Properties** settings are not always displayed in the **Properties** tile immediately. By default, data in the **Properties** tile is refreshed every two minutes. To refresh **Properties** tile data immediately, click **Refresh** in the Server Manager address bar.
 
 |Setting|Description|
@@ -141,9 +135,9 @@ The following procedure describes how to create an example folder called *MyTool
 
     > [!NOTE]
     > if you restrict access to an entire folder that you have copied to Administrative Tools, restricted users can see neither the folder nor its contents in the Server Manager**Tools** menu.
-    > 
+    >
     > edit permissions for the folder in the **Administrative Tools** folder. Because hidden files and folders in Administrative Tools are always displayed in the Server Manager**Tools** menu, do not use the **Hidden** setting on a file or folder's **Properties** dialog box to restrict user access to your custom tool shortcuts.
-    > 
+    >
     > **Deny** permissions always overwrite **Allow** permissions.
 
 6.  Right-click the original tool, script, or executable file for which you want to add entries on the **Tools** menu, and then click **create shortcut**.

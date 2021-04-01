@@ -1,13 +1,12 @@
 ---
+description: "Learn more about: Introduction to Active Directory Administrative Center Enhancements (Level 100)"
 ms.assetid: 074e63e9-976c-49da-8cba-9ae0b3325e34
 title: Introduction to Active Directory Administrative Center Enhancements (Level 100)
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: daveba
+author: iainfoulds
+manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # Introduction to Active Directory Administrative Center Enhancements (Level 100)
@@ -30,7 +29,7 @@ In Windows Server 2003 Active Directory and Windows Server 2008 AD DS, you could
 
 Active Directory Recycle Bin, starting in Windows Server 2008 R2, builds on the existing tombstone reanimation infrastructure and enhances your ability to preserve and recover accidentally deleted Active Directory objects.
 
-When you enable Active Directory Recycle Bin, all link-valued and non-link-valued attributes of the deleted Active Directory objects are preserved and the objects are restored in their entirety to the same consistent logical state that they were in immediately before deletion. For example, restored user accounts automatically regain all group memberships and corresponding access rights that they had immediately before deletion, within and across domains. Active Directory Recycle Bin works for both AD DS and AD LDS environments. For a detailed description of Active Directory Recycle Bin, see [What's New in AD DS: Active Directory Recycle Bin](https://technet.microsoft.com/library/dd391916(WS.10).aspx).
+When you enable Active Directory Recycle Bin, all link-valued and non-link-valued attributes of the deleted Active Directory objects are preserved and the objects are restored in their entirety to the same consistent logical state that they were in immediately before deletion. For example, restored user accounts automatically regain all group memberships and corresponding access rights that they had immediately before deletion, within and across domains. Active Directory Recycle Bin works for both AD DS and AD LDS environments. For a detailed description of Active Directory Recycle Bin, see [What's New in AD DS: Active Directory Recycle Bin](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd391916(v=ws.10)).
 
 **What's new?** In Windows Server 2012 and newer, the Active Directory Recycle Bin feature is enhanced with a new graphical user interface for users to manage and restore deleted objects. Users can now visually locate a list of deleted objects and restore them to their original or desired locations.
 
@@ -43,7 +42,7 @@ If you plan to enable Active Directory Recycle Bin in Windows Server, consider t
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     >
-    > For information about installing RSAT, see the article [Remote Server Administration Tools](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+    > For information about installing RSAT, see the article [Remote Server Administration Tools](../../../../remote/remote-server-administration-tools.md).
 
 ### Active Directory Recycle Bin step-by-step
 
@@ -69,7 +68,7 @@ In this step, you will raise the forest functional level. You must first raise t
 
 3. Click the target domain in the left navigation pane and in the **Tasks** pane, click **Raise the forest functional level**. Select a forest functional level that is at least  Windows Server 2008 R2  or higher and then click **OK**.
 
-![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
+![PowerShell logo, Shows the PowerShell equivalent commands for raising the forest functional level.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -93,7 +92,7 @@ In this step, you will enable the Recycle Bin to restore deleted objects in AD D
 
 4. Press F5 to refresh ADAC.
 
-![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
+![PowerShell logo, Shows the PowerShell equivalent commands for enabling the recycle bin.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -113,7 +112,7 @@ In the following procedures, you will create two test users. You will then creat
 
 3. In the **Tasks** pane, click **New** and then click **User**.
 
-    ![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewUser.gif)
+    ![Screenshot that shows how to create a new test user.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewUser.gif)
 
 4. Enter the following information under **Account** and then click OK:
 
@@ -136,7 +135,7 @@ In the following procedures, you will create two test users. You will then creat
 5. Click **group1**, and then under the **Tasks** pane, click **Properties**.
 6. Click **Members**, click **Add**, type **test1;test2**, and then click **OK**.
 
-![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
+![PowerShell logo, Shows the PowerShell equivalent commands for adding users to the group.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -153,7 +152,7 @@ Add-ADGroupMember -Identity group1 -Member test1
 
    - **NameOU1**
 
-![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
+![PowerShell logo, Shows the PowerShell equivalent commands for creating an organizational unit.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -175,7 +174,7 @@ In the following procedures, you will restore deleted objects from the **Deleted
 
 3. Select users **test1** and **test2**, click **Delete** in the **Tasks** pane and then click **Yes** to confirm the deletion.
 
-    ![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
+    ![PowerShell logo, Shows the PowerShell equivalent commands for removing users.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
 
     The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -192,7 +191,7 @@ In the following procedures, you will restore deleted objects from the **Deleted
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
-![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
+![PowerShell logo, Shows the PowerShell equivalent commands for restoring objects to their original location.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
 
 ```powershell
 Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADObject
@@ -212,7 +211,7 @@ Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADOb
 
 6. To confirm the objects were restored to **OU1**, navigate to the target domain, double click **OU1** and verify the user accounts are listed.
 
-![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
+![PowerShell logo, Shows the PowerShell equivalent commands for restoring deleted objects to a different location.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -224,7 +223,7 @@ Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADOb
 
 The Windows Server 2008 operating system provides organizations with a way to define different password and account lockout policies for different sets of users in a domain. In Active Directory domains prior to Windows Server 2008, only one password policy and account lockout policy could be applied to all users in the domain. These policies were specified in the Default Domain Policy for the domain. As a result, organizations that wanted different password and account lockout settings for different sets of users had to either create a password filter or deploy multiple domains. Both are costly options.
 
-You can use fine-grained password policies to specify multiple password policies within a single domain and apply different restrictions for password and account lockout policies to different sets of users in a domain. For example, you can apply stricter settings to privileged accounts and less strict settings to the accounts of other users. In other cases, you might want to apply a special password policy for accounts whose passwords are synchronized with other data sources. For a detailed description of Fine-Grained Password Policy, see [AD DS: Fine-Grained Password Policies](https://technet.microsoft.com/library/cc770394(WS.10).aspx)
+You can use fine-grained password policies to specify multiple password policies within a single domain and apply different restrictions for password and account lockout policies to different sets of users in a domain. For example, you can apply stricter settings to privileged accounts and less strict settings to the accounts of other users. In other cases, you might want to apply a special password policy for accounts whose passwords are synchronized with other data sources. For a detailed description of Fine-Grained Password Policy, see [AD DS: Fine-Grained Password Policies](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770394(v=ws.10))
 
 **What's new?**
 
@@ -239,7 +238,7 @@ If you plan to use fine-grained password policies in Windows Server 2012, consid
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     >
-    > For information about installing RSAT, see the article [Remote Server Administration Tools](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+    > For information about installing RSAT, see the article [Remote Server Administration Tools](../../../../remote/remote-server-administration-tools.md).
 
 ### Fine-Grained Password Policy step-by-step
 
@@ -267,7 +266,7 @@ In the following procedure, you will raise the domain functional level of the ta
 
 3. Click the target domain in the left navigation pane and in the **Tasks** pane, click **Raise the domain functional level**. Select a forest functional level that is at least  Windows Server 2008  or higher and then click **OK**.
 
-![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
+![PowerShell logo, Shows the PowerShell equivalent commands for raising the domain functional level.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -295,7 +294,7 @@ In the following procedure you will create a new fine-grained password policy us
 
     Fill in or edit fields inside the property page to create a new **Password Settings** object. The **Name** and **Precedence** fields are required.
 
-    ![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewFGPP.gif)
+    ![Screenshot that shows how to create or edit password settings.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/ADDS_ADACNewFGPP.gif)
 
 5. Under **Directly Applies To**, click **Add**, type **group1**, and then click **OK**.
 
@@ -303,7 +302,7 @@ In the following procedure you will create a new fine-grained password policy us
 
 6. Click **OK** to submit the creation.
 
-![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
+![PowerShell logo, Shows the PowerShell equivalent commands for creating a new fine grained password policy.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -328,7 +327,7 @@ In the following procedure, you will view the resultant password settings for a 
 
 5. Examine the password setting policy and then click **Cancel**.
 
-![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
+![PowerShell logo, Shows the PowerShell equivalent commands for viewing a resultant set of policies for a user.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -354,7 +353,7 @@ In the following procedure, you will edit the fine grained password policy you c
 
 6. Click **OK**.
 
-![Intro to AD Admin center](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
+![PowerShell logo, Shows the PowerShell equivalent commands for editing a fine-grained password policy.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>Windows PowerShell equivalent commands</em>***
 
 The following Windows PowerShell cmdlet or cmdlets perform the same function as the preceding procedure. Enter each cmdlet on a single line, even though they may appear word-wrapped across several lines here because of formatting constraints.
 
@@ -400,9 +399,9 @@ When using the Windows PowerShell History Viewer in Windows Server 2012 or newer
     > [!NOTE]
     > You can use **Server Manager** to install Remote Server Administration Tools (RSAT) to use the correct version of Active Directory Administrative Center to manage Recycle Bin through a user interface.
     >
-    > For information about installing RSAT, see the article [Remote Server Administration Tools](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+    > For information about installing RSAT, see the article [Remote Server Administration Tools](../../../../remote/remote-server-administration-tools.md).
 
-- Have a basic understanding of Windows PowerShell. For example, you need to know how piping in Windows PowerShell works. For more information about piping in Windows PowerShell, see [Piping and the Pipeline in Windows PowerShell](https://technet.microsoft.com/library/ee176927.aspx).
+- Have a basic understanding of Windows PowerShell. For example, you need to know how piping in Windows PowerShell works. For more information about piping in Windows PowerShell, see [Piping and the Pipeline in Windows PowerShell](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176927(v=technet.10)).
 
 ### Windows PowerShell History Viewer step-by-step
 

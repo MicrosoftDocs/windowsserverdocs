@@ -1,13 +1,11 @@
 ---
 title: What's new in the macOS client
 description: Learn about recent changes to the Remote Desktop client for Mac
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 04/08/2020
+ms.date: 03/12/2021
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -16,11 +14,111 @@ We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md)
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
 
+## Updates for version 10.5.2
+
+*Date published: 02/15/2021*
+
+In this release, we've refreshed the application icon and made the following changes:
+
+- Added HTTP proxy support for RD Gateway connections.
+- Fixed an issue where an RD Gateway connection would disconnect and a message with error code 0x3000064 would appear.
+- Addressed a bug where workspace discovery and download wouldn't work if you included the port number in HTTP GET requests.
+
+This is the last release that will be compatible with macOS version 10.13. If you're interested in trying out the latest pre-release builds of the macOS client, you can install beta updates from the [Microsoft Remote Desktop Beta](https://aka.ms/rdmacbeta).
+
+## Updates for version 10.5.1
+
+*Date published: 1/29/2021*
+
+It's time for our first release of the year! In this version, we made the following changes:
+
+- Addressed an issue where the UI would stop resolving a workspace name during subscription.
+- Fixed an in-session bug where graphics updates would stall while the client continued to send input.
+- Resolved a number of reliability issues identified through crash reporting.
+
+## Updates for version 10.5.0
+
+*Date published: 12/02/2020*
+
+It's time for another update. Thanks to everyone who reported bugs and worked with us to diagnose and fix issues. In this version, we made the following changes:
+
+- You can now edit the display, device, and folder redirection settings of published PC connections.
+- Remote app windows now shrink to the dock when minimized.
+- Added a Connection Information dialog that displays the current bandwidth and round-trip time.
+- Added support for RD Gateway consent and admin messages.
+- Fixed an issue where an RDP file specifying a gatewayusagemethod value of 0 or 4 was incorrectly imported.
+- The Edit Workspace sheet now shows the exact time at which the workspace was last updated.
+- Removed trace spew that was output when using the *--script* parameter.
+- Addressed an issue where the client would return a 0x30000066 error when connecting using an RD Gateway server.
+- Fixed an issue users would be repeatedly prompted for credentials if Extended Protection for Authentication was set on the server.
+- Addressed reliability issues that users identified through crash reporting.
+- Addressed keyboard and VoiceOver-related accessibility bugs.
+
+## Updates for version 10.4.1
+
+*Date published: 11/06/2020*
+
+We've put together some bug fixes and small feature updates for this 10.4.1 release. Here's what's new:
+
+- Addressed several reliability issues identified through crash reporting.
+- Addressed keyboard and VoiceOver-related accessibility bugs.
+- Fixed an issue where the client would hang on reconnect when resuming from sleep.
+- Fixed an audio artifact heard when playing back the first chunk of a redirected audio stream.
+- Addressed an issue where the client would report a 0x5000007 error message when connecting using an RD Gateway server.
+- Corrected the aspect ratio of PC thumbnails displayed in the Connection Center.
+- Improved smart card redirection heuristics to better handle nested transactions.
+- Fixed a bug that prevented bookmark export if the bookmark's display name contained the "/" character.
+- Resolved a bug that caused a 0xD06 protocol error when running Outlook as a remote app.
+- Added support for a new integer RDP file property (ForceHiDpiOptimizations) to enable Retina display optimization.
+
+## Updates for version 10.4.0
+
+*Date published: 8/20/20*
+
+In this release, we've made substantial updates to the underlying code that powers the Remote Desktop experience across all our clients. We've also added some new features and addressed bugs and crashes that were showing up in error reporting. Here are some changes you may notice:
+
+- PC Quick Connect (Cmd+K) allows you to connect to a PC without creating a bookmark.
+- Auto-reconnect now recovers from transient network glitches for PC connections.
+- When resuming a suspended MacBook, you can use auto-reconnect to reconnect to any disconnected PC connections.
+- Added support for HTTP proxies when subscribing and connecting to Windows Virtual Desktop resources.
+- Implemented support for HTTP proxy automatic configuration with PAC files.
+- Integrated support for NETBIOS name resolution so you can connect to PCs on your local network more easily.
+- Fixed an issue where the system menu bar wouldn't respond while the app was in focus.
+- Fixed a client-side race condition that could cause decryption errors on the server.
+- Made improvements to monitor layout and geometry heuristics for multimon scenarios involving Retina-class monitors.
+- Multimon layout configurations are now maintained across session redirection scenarios.
+- Addressed an issue that prevented the menu bar from dropping in multimon scenarios.
+- User account UI that interacts with the macOS keychain will now surface keychain access errors.
+- Hitting cancel during workspace subscription will now result in nothing being added to the Connection Center.
+- Added key mappings for Cmd+Z and Cmd+F to map to Ctrl+Z and Ctrl+F respectively.
+- Fixed a bug that caused remote apps to open behind the Connection Center when launched.
+- Worked around an issue where AAC audio playback on macOS 10.15 would cause the client to stall.
+- Shift+left-click now works in Unicode mode.
+- Fixed a bug where using the Shift key triggered the Sticky Keys alert in Unicode mode.
+- Added a check for network availability before connection initiation.
+- Addressed pulsing of PC thumbnails that sometimes happened during the connection sequence.
+- Fixed a bug where the password field in the Add/Edit User Account sheet become multiline.
+- The "Collapse All" option is now greyed out if all workspaces are collapsed.
+- The "Expand All" option is now greyed out if all workspaces are expanded.
+- The first-run permissions UI is no longer shown on High Sierra.
+- Fixed an issue where users were unable to connect to Windows Virtual Desktop endpoints using saved credentials in the DOMAIN\USERNAME format.
+- The username field in the credential prompt is now always prepopulated for Windows Virtual Desktop connections.
+- Fixed a bug that clipped the Edit, Delete, and Refresh buttons for workspaces if the Connection Center wasn't wide enough.
+- The "email or workspace URL" field in the Add Workspace sheet is no longer case-sensitive.
+- Fixed a number of accessibility issues that impacted VoiceOver and keyboard navigation scenarios.
+- Lots of updates to improve interoperability with current and upcoming features in the Windows Virtual Desktop service.
+- You can now configure the AVC support level advertised by the client from a terminal prompt. Here are the support levels you can configure:
+   - Don't advertise AVC support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel disabled`
+   - Advertise AVC420 support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel avc420`
+   - Advertise support for AVC444 support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel avc444`
+
+Thanks again to everyone who reported bugs and took the time to help us diagnose problems!
+
 ## Updates for version 10.3.9
 
 *Date published: 4/6/20*
 
-In this release we've made some changes to improve interoperability with the [Windows Virtual Desktop service](https://azure.microsoft.com/services/virtual-desktop/). In addition, we've included the following updates:
+In this release, we've made some changes to improve interoperability with the [Windows Virtual Desktop service](https://azure.microsoft.com/services/virtual-desktop/). In addition, we've included the following updates:
 
 - Control+Option+Delete now triggers the Ctrl+Alt+Del sequence (previously required pressing the Fn key).
 - Fixed the keyboard mode notification color scheme for Light mode.
@@ -179,13 +277,13 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 
 *Date published: 3/30/2019*
 
-- In this release we addressed instability caused by the recent macOS 10.14.4 update. We also fixed mispaints that appeared when decoding AVC codec data encoded by a server using NVIDIA hardware.
+In this release, we addressed instability caused by the recent macOS 10.14.4 update. We also fixed mispaints that appeared when decoding AVC codec data encoded by a server using NVIDIA hardware.
 
 ## Updates for version 10.2.9
 
 *Date published: 3/6/2019*
 
-- In this release we fixed an RD gateway connectivity issue that can occur when server redirection takes place.
+- In this release, we fixed an RD gateway connectivity issue that can occur when server redirection takes place.
 - We also addressed an RD gateway regression caused by the 10.2.8 update.
 
 ## Updates for version 10.2.8
@@ -202,7 +300,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 
 *Date published: 2/6/2019*
 
-- In this release we addressed graphics mispaints (caused by a server encoding bug) that appeared when using AVC444 mode.
+In this release, we addressed graphics mispaints (caused by a server encoding bug) that appeared when using AVC444 mode.
 
 ## Updates for version 10.2.6
 
@@ -267,19 +365,19 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Fixed a bug that caused thumbnails to consume too much disk storage on macOS 10.14.
 - Added support for enforcing RD Gateway device redirection policies.
 - Fixed an issue that prevented session windows from closing when disconnecting from a connection using RD Gateway.
-- If Network Level Authentication (NLA) is not enforced by the server, you will now be routed to the login screen if your password has expired.
+- If Network Level Authentication (NLA) is not enforced by the server, you will now be routed to the sign in screen if your password has expired.
 - Fixed performance issues that surfaced when lots of data was being transferred over the network.
 - Smart card redirection fixes.
 - Support for all possible values of the "EnableCredSspSupport" and "Authentication Level" RDP file settings if the ClientSettings.EnforceCredSSPSupport user default key (in the com.microsoft.rdc.macos domain) is set to 0.
 - Support for the "Prompt for Credentials on Client" RDP file setting when NLA is not negotiated.
-- Support for smart card-based login via smart card redirection at the Winlogon prompt when NLA is not negotiated.
+- Support for smart card-based sign in using smart card redirection at the Winlogon prompt when NLA is not negotiated.
 - Fixed an issue that prevented downloading feed resources that have spaces in the URL.
 
 ## Updates for version 10.2.1
 
 *Date published: 08/06/2018*
 
-- Enabled connectivity to Azure Active Directory (AAD) joined PCs. To connect to an AAD joined PC, your username must be in one of the following formats: "AzureAD\user" or "AzureAD\user@domain".
+- Enabled connectivity to Azure Active Directory (Azure AD) joined PCs. To connect to an Azure AD joined PC, your username must be in one of the following formats: "AzureAD\user" or "AzureAD\user@domain".
 - Addressed some bugs affecting the usage of smart cards in a remote session.
 
 ## Updates for version 10.2.0
@@ -299,7 +397,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - The mouse cursor shape now updates correctly when moving out of a session or RemoteApp window.
 - Fixed a folder redirection bug that was causing data loss when copy and pasting folders.
 - Fixed a folder redirection issue that caused incorrect reporting of folder sizes.
-- Fixed a regression that was preventing logging into an AAD-joined machine using a local account.
+- Fixed a regression that was preventing logging into an Azure AD-joined machine using a local account.
 - Fixed bugs that were causing the session window contents to be clipped.
 - Added support for RD endpoint certificates that contain elliptic-curve asymmetric keys.
 - Fixed a bug that was preventing the download of managed resources in some scenarios.
@@ -328,8 +426,8 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Addressed issues where RemoteApp windows appeared behind the Connection Center.
 - Fixed a problem that occurred when you edit local resources after importing from Remote Desktop 8.
 - You can now start a connection by pressing ENTER on a desktop tile.
-- When you're in full screen view, CMD+M now correctly maps to WIN+M.
-- The Connection Center, Preferences, and About windows now respond to CMD+M.
+- When you're in full screen view, Cmd+M now correctly maps to WIN+M.
+- The Connection Center, Preferences, and About windows now respond to Cmd+M.
 - You can now start discovering feeds by pressing ENTER on the **Adding Remote Resources*- page.
 - Fixed an issue where a new remote resources feed showed up empty in the Connection Center until after you refreshed.
 

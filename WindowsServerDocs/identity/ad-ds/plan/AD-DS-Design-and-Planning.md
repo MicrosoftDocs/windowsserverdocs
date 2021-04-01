@@ -1,13 +1,12 @@
 ---
+description: "Learn more about: AD DS Design and Planning"
 ms.assetid: a91339ef-6ad4-445f-8ecc-a95fbcc04296
 title: AD DS Design and Planning
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: daveba
+author: iainfoulds
+manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # AD DS Design and Planning
@@ -24,7 +23,7 @@ This guide describes sets of tasks for several possible starting points of a  Wi
 
 Although the strategies that are presented in this guide are appropriate for almost all server operating system deployments, they have been tested and validated specifically for environments that contain fewer than 100,000 users and fewer than 1,000 sites, with network connections of a minimum of 28.8 kilobits per second (Kbps). If your environment does not meet these criteria, consider using a consulting firm that has experience deploying AD DS in more complex environments.
 
-For more information about testing the AD DS deployment process, see the article [Testing and Verifying the Deployment Process](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc772722(v=ws.10)).
+For more information about testing the AD DS deployment process, see the article [Testing and Verifying the Deployment Process](/previous-versions/windows/it-pro/windows-server-2003/cc772722(v=ws.10)).
 
 ## In this guide
 

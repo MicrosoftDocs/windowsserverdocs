@@ -1,13 +1,11 @@
 ---
 title: bitsadmin setvalidationstate
-description: Windows Commands topic for **bitsadmin setvalidationstate**, which sets the content validation state of the given file within the job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the bitsadmin setvalidationstate command, which sets the content validation state of the given file within the job.
+ms.topic: reference
 ms.assetid: e8fc8e8c-171c-4681-8057-6986b018e576
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -31,12 +29,14 @@ bitsadmin /setvalidationstate <job> <file_index> <TRUE|FALSE>
 
 ## Examples
 
-The following example sets the content validation state of file 2 to TRUE for the job named *myDownloadJob*.
+To set the content validation state of file 2 to TRUE for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /setvalidationstate myDownloadJob 2 TRUE
+bitsadmin /setvalidationstate myDownloadJob 2 TRUE
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

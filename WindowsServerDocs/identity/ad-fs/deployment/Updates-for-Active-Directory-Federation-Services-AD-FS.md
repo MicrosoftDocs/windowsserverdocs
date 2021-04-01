@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Required Updates for Active Directory Federation Services (AD FS) and Web Application Proxy (WAP)"
 ms.assetid: ed3206b4-bbfc-4bc7-a43c-981b0544a50d
 title: Required Updates for Active Directory Federation Services (AD FS)
 author: billmath
@@ -6,8 +7,6 @@ ms.author: billmath
 manager: femila
 ms.date: 3/29/2019
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 # Required Updates for Active Directory Federation Services (AD FS) and Web Application Proxy (WAP)
 
@@ -21,7 +20,7 @@ Updates for Windows Server 2016 are delivered monthly via Windows Update and are
 
 |KB # |Description|Date Released
 |----- | ----- |-----
-|[4534271](https://support.microsoft.com/help/4534271/windows-10-update-kb4534271) | Addresses a potential AD FS chrome failure due to support of new [SameSite](https://www.chromestatus.com/feature/5088147346030592) cookie policies by default for release 80 of Google Chrome. For more information, please refer [here](https://docs.microsoft.com/office365/troubleshoot/miscellaneous/chrome-behavior-affects-applications). |January 2020|
+|[4534271](https://support.microsoft.com/help/4534271/windows-10-update-kb4534271) | Addresses a potential AD FS chrome failure due to support of new [SameSite](https://www.chromestatus.com/feature/5088147346030592) cookie policies by default for release 80 of Google Chrome. For more information, please refer [here](/office365/troubleshoot/miscellaneous/chrome-behavior-affects-applications). |January 2020|
 |[CVE-2019-1126](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2019-1126) | This security update addresses a vulnerability in Active Directory Federation Services (AD FS) which could allow an attacker to bypass the extranet lockout policy. |July 2019|
 |[4489889 (OS Build 14393.2879)](https://support.microsoft.com/help/4489889/windows-10-update-kb4489889) | Addresses an issue in Active Directory Federation Services (AD FS) that causes a duplicate relying party trust to appear in the AD FS management console. This occurs when you create or view relying party trusts using the AD FS management console.</br></br> Addresses a high Active Directory Federation Services (ADFS) Web Application Proxy (WAP) latency issue (over 10,000ms) that occurs while Extranet Smart Lockout (ESL) is enabled on AD FS 2016. This security update addresses the vulnerability described in [CVE-2018-16794](https://nvd.nist.gov/vuln/detail/CVE-2018-16794). |March 2019|
 |[4487006 (OS Build 14393.2828)](https://support.microsoft.com/help/4487006/windows-10-update-kb4487006) | Addresses an issue that causes updates to a relying party trust to fail when using PowerShell or the Active Directory Federation Services (AD FS) management console. This issue occurs if you configure a relying party trust to use an online metadata URL that publishes more than one PassiveRequestorEndpoint. The error is, "MSIS7615: The trusted endpoints specified in a relying party trust must be unique for that relying party trust."  </br></br>Addresses an issue that displays a specific error message for external complexity password changes because of Azure Password Protection policies. |February 2019|
@@ -44,7 +43,7 @@ Below is the list of hotfixes and update rollups that have been released for Act
 
 |KB # |Description|Date Released
 |----- | ----- |-----
-|[4534309](https://support.microsoft.com/help/4534309/windows-8-1-kb4534309)| Addresses a potential AD FS chrome failure due to support of new [SameSite](https://www.chromestatus.com/feature/5088147346030592) cookie policies by default for release 80 of Google Chrome. For more information, please refer [here](https://docs.microsoft.com/office365/troubleshoot/miscellaneous/chrome-behavior-affects-applications). |January 2020
+|[4534309](https://support.microsoft.com/help/4534309/windows-8-1-kb4534309)| Addresses a potential AD FS chrome failure due to support of new [SameSite](https://www.chromestatus.com/feature/5088147346030592) cookie policies by default for release 80 of Google Chrome. For more information, please refer [here](/office365/troubleshoot/miscellaneous/chrome-behavior-affects-applications). |January 2020
 |[4507448](https://support.microsoft.com/help/4507448/windows-8-1-update-kb4507448)| This security update addresses a vulnerability in Active Directory Federation Services (AD FS) which could allow an attacker to bypass the extranet lockout policy. |July 2019
 |[4041685](https://support.microsoft.com/kb/4041685)|Addressed an AD FS issue where MSISConext cookies in request headers can eventually overflow the headers size limit and cause failure to authenticate with HTTP status code 400 "Bad Request - Header Too Long".</br></br>Fixed a problem where ADFS can no longer ignore "prompt=login" during authentication. A "Disabled" option was added to restore scenarios where non-password authentication is used.|October 2017 Preview of Update Rollup
 |[4019217](https://support.microsoft.com/kb/4019217)|Work Folders clients using token broker do not work when using a Server 2012 R2 AD FS Server|May 2017 Preview Update Rollup
@@ -52,7 +51,7 @@ Below is the list of hotfixes and update rollups that have been released for Act
 |[4015547](https://support.microsoft.com/kb/4015547)|Fixed an issue with AD FS not authenticating External users and AD FS WAP randomly failing to forward request|April 2017 Security Update
 |[4012216](https://support.microsoft.com/kb/4009970)|MS17-019 This security update resolves a vulnerability in Active Directory Federation Services (ADFS). The vulnerability could allow information disclosure if an attacker sends a specially crafted request to an AD FS server, allowing the attacker to read sensitive information about the target system.|March 2017 Update Rollup
 |[3179574](https://support.microsoft.com/kb/3179574)|Fixed issue with AD FS extranet password update. |August 2016 Update Rollup
-|[3172614](https://support.microsoft.com/kb/3172614)|Introduced prompt=login [support](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/overview/ad-fs-faq#BKMK_7), fixed issue with the AD FS management console and AlwaysRequireAuthentication setting. |July 2016 Update Rollup
+|[3172614](https://support.microsoft.com/kb/3172614)|Introduced prompt=login [support](../overview/ad-fs-faq.md), fixed issue with the AD FS management console and AlwaysRequireAuthentication setting. |July 2016 Update Rollup
 |[3163306](https://support.microsoft.com/kb/3163306)|Active Directory Federation Services (AD FS) 3.0 can't connect to Lightweight Directory Access Protocol (LDAP) attribute stores that are configured to use Secure Sockets Layer (SSL) port 636 or 3269 in connection string. |June 2016 Update Rollup
 |[3148533](https://support.microsoft.com/kb/3148533)|MFA fallback authentication fails through ADFS Proxy in Windows Server 2012 R2 |May 2016
 |[3134787](https://support.microsoft.com/kb/3134787)|AD FS logs don't contain client IP address for account lockout scenarios in Windows Server 2012 R2 |February 2016

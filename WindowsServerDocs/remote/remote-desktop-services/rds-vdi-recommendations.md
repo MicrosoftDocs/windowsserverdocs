@@ -1,8 +1,6 @@
 ---
 title: Recommended configuration for VDI desktops
 description: Recommended settings and configuration to minimize overhead for Windows 10 1607 (10.0.1393) desktops used as VDI images
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 12/18/2018
 ms.topic: article
@@ -25,7 +23,7 @@ These instructions and recommended settings are relevant to Windows 10 1607 (ver
 > [!NOTE]
 > Any settings not specifically mentioned in this topic can be left at their default values (or set per your requirements and policies) without appreciable impact on VDI functionality.
 
-When you create an image to base the VDI deployment, be sure to use the **Current Branch**. For more information about Current Branch, see [Windows 10 release information](https://technet.microsoft.com/windows/release-info.aspx).
+When you create an image to base the VDI deployment, be sure to use the **Current Branch**. For more information about Current Branch, see [Windows 10 release information](/archive/blogs/mniehaus/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update).
 
 ## Creating the Windows 10 image
 The first step is to install a reference image of Windows 10 1607 (version 10.0.1393) on either a physical  or virtual machine. Installing to a virtual machine is easy and allows you to save versions of the virtual hard-disk (VHD) file, in case you want to roll back to an earlier version.
@@ -561,5 +559,5 @@ To remove the OneDrive app:
 4. Click or tap **Turn system icons on or off**, and then turn each system icon on or off as you prefer for the image.
 
 ### Delete downloaded updates
-1. Using File Explorer, navigate to **C:\Windows\Software Distribution\Download**.
+1. Using File Explorer, navigate to **C:\Windows\SoftwareDistribution\Download**.
 2. Delete all files and folders in that directory.

@@ -1,8 +1,6 @@
 ---
 title: Set up disaster recovery for RDS using Azure Disaster Recovery
 description: Learn how to use Azure Disaster Recovery for disaster recovery for an RDS deployment
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 06/12/2017
 ms.topic: article
@@ -13,9 +11,9 @@ manager: dongill
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
-You can use Azure Site Recovery to create a disaster recovery solution for your Remote Desktop Services deployment. 
+You can use Azure Site Recovery to create a disaster recovery solution for your Remote Desktop Services deployment.
 
-[Azure Site Recovery](/azure/site-recovery/site-recovery-overview) is an Azure-based service that provides disaster recovery capabilities by orchestrating replication, failover, and recovery of virtual machines. Azure Site Recovery supports a number of replication technologies to consistently replicate, protect, and seamlessly failover virtual machines and applications to private/public or hoster's clouds. 
+[Azure Site Recovery](/azure/site-recovery/site-recovery-overview) is an Azure-based service that provides disaster recovery capabilities by orchestrating replication, failover, and recovery of virtual machines. Azure Site Recovery supports a number of replication technologies to consistently replicate, protect, and seamlessly failover virtual machines and applications to private/public or hoster's clouds.
 
 Use the following information to create and validate the disaster recovery solution.
 
@@ -36,7 +34,7 @@ Before you can configure Azure Site Recovery for your deployment, make sure you 
 - Create an [on-premises RDS deployment](rds-deploy-infrastructure.md).
 - Add [Azure Site Recovery Services vault](/azure/site-recovery/site-recovery-vmm-to-azure#create-a-recovery-services-vault) to your Microsoft Azure subscription.
 - If you are going to use Azure as your recovery site, run the [Azure Virtual Machine Readiness Assessment tool](https://azure.microsoft.com/downloads/vm-readiness-assessment/) on your VMs to ensure they are compatible with Azure VMs and Azure Site Recovery Services.
- 
+
 ## Implementation checklist
 
 We'll cover the various steps to enable Azure Site Recovery Services for your RDS deployment in more detail, but here are the high-level implementation steps.
@@ -44,7 +42,7 @@ We'll cover the various steps to enable Azure Site Recovery Services for your RD
 | **Step 1 - Configure VMs for disaster recovery**                                                                                                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Hyper-V - Download the Microsoft Azure Site Recovery Provider. Install it on your VMM server or Hyper-V host. See [Prerequisites for replication to Azure by using Azure Site Recovery](/azure/site-recovery/site-recovery-prereq) for information.                                                                                                                             |
-| VMWare - Configure protection server, configuration server, and master target servers                                                                                                                                                      |
+| VMWare - Configure protection server, configuration server, and target servers                                                                                                                                                      |
 | **Step 2 - Prepare your resources**                                                                                                                                                                                                           |
 | Add an [Azure Storage account](/azure/storage/storage-create-storage-account).                                                                                                                                                                                                              |
 | Hyper-V - Download the Microsoft Azure Recovery Services agent and install it on Hyper-V host servers.                                                                                                                                     |

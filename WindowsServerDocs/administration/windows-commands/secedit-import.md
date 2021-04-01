@@ -1,67 +1,64 @@
 ---
-title: secedit:import
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
+title: secedit import
+description: Reference article for the secedit import command, which imports security settings (.inf file), previously exported from the database configured with security templates.
+ms.topic: reference
 ms.assetid: 1dd59d4c-9d48-444a-871b-b957eb682597
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# secedit:import
+# secedit /import
 
+Imports security settings (.inf file), previously exported from the database configured with security templates.
 
-
-Imports security settings stored in an inf file previously exported from the database configured with security templates. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+> [!IMPORTANT]
+> Before you import an .inf file to another computer, you must run the `secedit /generaterollback` command on the database on which the import will be performed.
+>
+> You must also run the `secedit /validate` command on the import file to verify its integrity.
 
 ## Syntax
 
 ```
-Secedit /import /db <database file name> /cfg <configuration file name> [/overwrite] [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]
+secedit /import /db <database file name> /cfg <configuration file name> [/overwrite] [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]
 ```
 
-#### Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|db|Required.</br>Specifies the path and file name of a database that contains the stored configuration into which the import will be performed.</br>If file name specifies a database that has not had a security template (as represented by the configuration file) associated with it, the `/cfg \<configuration file name>` command-line option must also be specified.|
-|overwrite|Optional.</br>Specifies whether the security template in the /cfg parameter should overwrite any template or composite template that is stored in the database instead of appending the results to the stored template.</br>This command-line option is only valid when the `/cfg \<configuration file name>` parameter is also used. If this is not specified, the template in the /cfg parameter is appended to the stored template.|
-|cfg|Required.</br>Specifies the path and file name for the security template that will be imported into the database for analysis.</br>This /cfg option is only valid when used with the `/db \<database file name>` parameter. If this is not specified, the analysis is performed against any configuration already stored in the database.|
-|overwrite|Optional.</br>Specifies whether the security template in the /cfg parameter should overwrite any template or composite template that is stored in the database instead of appending the results to the stored template.</br>This command-line option is only valid when the `/cfg \<configuration file name>` parameter is also used. If this is not specified, the template in the /cfg parameter is appended to the stored template.|
-|areas|Optional.</br>Specifies the security areas to be applied to the system. If this parameter is not specified, all security settings defined in the database are applied to the system. To configure multiple areas, separate each area by a space. The following security areas are supported:</br>-   SecurityPolicy</br>    Local policy and domain policy for the system, including account policies, audit policies, security options, and so on.</br>-   Group_Mgmt</br>    Restricted group settings for any groups specified in the security template.</br>-   User_Rights</br>    User logon rights and granting of privileges.</br>-   RegKeys</br>    Security on local registry keys.</br>-   FileStore</br>    Security on local file storage.</br>-   Services</br>    Security for all defined services.|
-|log|Optional.</br>Specifies the path and file name of the log file for the process.|
-|quiet|Optional.</br>Suppresses screen and log output. You can still view analysis results by using the Security Configuration and Analysis snap-in to the Microsoft Management Console (MMC).|
+| Parameter | Description |
+|--|--|
+| /db | Required. Specifies the path and file name of the database containing the stored configuration against which the import is performed. If the file name specifies a database that hasn't had a security template (as represented by the configuration file) associated with it, the `/cfg <configuration file name>` option must also be specified. |
+| /overwrite | Specifies whether the security template in the **/cfg** parameter should overwrite any template or composite template that is stored in the database, instead of appending the results to the stored template. This option is only valid when the `/cfg <configuration file name>` parameter is also used. If this parameter isn't also specified, the template in the **/cfg** parameter is appended to the stored template. |
+| /cfg | Required. Specifies the path and file name for the security template that will be imported into the database for analysis. This option is only valid when used with the `/db <database file name>` parameter. If this parameter isn't also specified, the analysis is performed against any configuration already stored in the database. |
+| /areas | Specifies the security areas to be applied to the system. If this parameter is not specified, all security settings defined in the database are applied to the system. To configure multiple areas, separate each area by a space. The following security areas are supported:<ul><li>**securitypolicy:** Local policy and domain policy for the system, including account policies, audit policies, security options, and so on.</li><li>  **group_mgmt:** Restricted group settings for any groups specified in the security template.</li><li>**user_rights:** User logon rights and granting of privileges.</li><li>**regkeys:** Security on local registry keys.</li><li>**filestore:** Security on local file storage.</li><li>**services:** Security for all defined services.</li></ul> |
+| /log | Specifies the path and file name of the log file to be used in the process. If you don't specify a file location, the default log file, `<systemroot>\Documents and Settings\<UserAccount>\My Documents\Security\Logs\<databasename>.log` is used. |
+| /quiet | Suppresses screen and log output. You can still view analysis results by using the Security Configuration and Analysis snap-in to the Microsoft Management Console (MMC). |
 
-## Remarks
+## Examples
 
-Before importing an .inf file onto another computer, run the command secedit /generaterollback on the database on which the import will be performed and secedit /validate on the import file to verify its integrity.
+To export the security database and the domain security policies to an .inf file, and then to import that file to a different database to replicate the policy settings on another computer, type:
 
-If the path for the log file is not provided, the default log file, (*systemroot*\Documents and Settings\*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>.log) is used.
-
-In Windows Server 2008, `Secedit /refreshpolicy` has been replaced with `gpupdate`. For information on how to refresh security settings, see [Gpupdate](gpupdate.md).
-
-## <a name=BKMK_Examples></a>Examples
-
-Export the security database and the domain security policies to an inf file and then import that file to a different database in order to replicate the security policy settings on another computer.
 ```
-Secedit /export /db C:\Security\FY11\SecDbContoso.sdb /mergedpolicy /cfg NetworkShare\Policies\SecContoso.inf /log C:\Security\FY11\SecAnalysisContosoFY11.log /quiet
+secedit /export /db C:\Security\FY11\SecDbContoso.sdb /mergedpolicy /cfg NetworkShare\Policies\SecContoso.inf /log C:\Security\FY11\SecAnalysisContosoFY11.log /quiet
 ```
-Import just the security policies portion of the file to a different database on another computer.
+
+To import just the security policies portion of the file to a different database on another computer, type:
+
 ```
-Secedit /import /db C:\Security\FY12\SecDbContoso.sdb /cfg NetworkShare\Policies\SecContoso.inf /areas securitypolicy /log C:\Security\FY11\SecAnalysisContosoFY12.log /quiet
+secedit /import /db C:\Security\FY12\SecDbContoso.sdb /cfg NetworkShare\Policies\SecContoso.inf /areas securitypolicy /log C:\Security\FY11\SecAnalysisContosoFY12.log /quiet
 ```
 
 ## Additional References
 
--   [Secedit:export](secedit-export.md)
--   [Secedit:generaterollback](secedit-generaterollback.md)
--   [Secedit:validate](secedit-validate.md)
--   [Secedit](secedit.md)
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [secedit /analyze](secedit-analyze.md)
+
+- [secedit /configure](secedit-configure.md)
+
+- [secedit /export](secedit-export.md)
+
+- [secedit /generaterollback](secedit-generaterollback.md)
+
+- [secedit /validate](secedit-validate.md)

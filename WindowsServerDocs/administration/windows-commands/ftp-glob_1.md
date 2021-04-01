@@ -1,37 +1,36 @@
 ---
-title: ftp glob_1
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
-ms.assetid: 111494f9-0083-4f48-9d35-46366debafae vhorne
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+title: ftp glob
+description: Reference article for the ftp glob command, which toggles allowing wildcard expansion for local file names.
+ms.topic: reference
+ms.assetid: 111494f9-0083-4f48-9d35-46366debafae
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
-# ftp: glob_1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# ftp glob
 
-Toggles wildcard expansion of local file names.   
-## Syntax  
-```  
-glob  
-```  
-#### Parameters  
-none  
-## Remarks  
-- By default, globbing is on.  
-- Globbing permits the use of the asterisk (*) and question mark (?) as wildcard characters in local file or path names.  
-  ## <a name=BKMK_Examples></a>Examples  
-  Toggle wildcard expansion of local file names.  
-  ```  
-  glob  
-  ```  
-  ## Additional References  
-- - [Command-Line Syntax Key](command-line-syntax-key.md)  
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Toggles allowing wildcard expansion for local file names. By default, globbing (wildcard expansion) is turned on. If globbing is turned on, you'll be able to use the asterisk (*) and question mark (?) as wildcard characters in local file or path names.
+
+## Syntax
+
+```
+glob
+```
+
+### Examples
+
+To toggle whether to allow wildcard expansion of local file names, type:
+
+```
+glob
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

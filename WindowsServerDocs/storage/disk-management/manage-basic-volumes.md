@@ -2,12 +2,10 @@
 title: Manage basic volumes
 description: This article describes how to manage basic volumes.
 ms.date: 10/12/2017
-ms.prod: windows-server 
-ms.technology: storage 
-ms.topic: article 
-author: JasonGerend 
-manager: brianlic 
-ms.author: jgerend 
+ms.topic: article
+author: JasonGerend
+manager: brianlic
+ms.author: jgerend
 ---
 
 # Manage basic volumes

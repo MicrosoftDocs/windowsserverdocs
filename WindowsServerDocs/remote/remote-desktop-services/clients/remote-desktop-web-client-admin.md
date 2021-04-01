@@ -1,8 +1,6 @@
 ---
 title: Set up the Remote Desktop web client for your users
 description: Describes how an admin can set up the Remote Desktop web client.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 09/19/2019
 ms.topic: article
@@ -14,7 +12,7 @@ ms.localizationpriority: medium
 The Remote Desktop web client lets users access your organization's Remote Desktop infrastructure through a compatible web browser. They'll be able to interact with remote apps or desktops like they would with a local PC no matter where they are. Once you set up your Remote Desktop web client, all your users need to get started is the URL where they can access the client, their credentials, and a supported web browser.
 
 >[!IMPORTANT]
->The web client does not currently support using Azure Application Proxy and does not support Web Application Proxy at all. See [Using RDS with application proxy services](../rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
+>The web client does support using Azure AD Application Proxy but does not support Web Application Proxy at all. See [Using RDS with application proxy services](../rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
 
 ## What you'll need to set up the web client
 
@@ -75,7 +73,7 @@ To install the web client for the first time, follow these steps:
     ```PowerShell
     Publish-RDWebClientPackage -Type Production -Latest
     ```
-    Make sure you can access the web client at the web client URL with your server name, formatted as <https://server_FQDN/RDWeb/webclient/index.html>. It's important to use the server name that matches the RD Web Access public certificate in the URL (typically the server FQDN).
+    Make sure you can access the web client at the web client URL with your server name, formatted as `https://server_FQDN/RDWeb/webclient/index.html`. It's important to use the server name that matches the RD Web Access public certificate in the URL (typically the server FQDN).
 
     >[!NOTE]
     >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you're aware of the configuration limitation.
@@ -212,7 +210,7 @@ This section describes how to enable a web client connection to an RD Broker wit
     >
     > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
 
-3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to <strong>https://+:3392/rdp/</strong>.
+3. Open the Windows Registry (regedit), go to `HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp` and locate the key **WebSocketURI**. Next, set the value to `https://+:3392/rdp/`.
 
 ### Setting up the RD Session Host
 Follow these steps if the RD Session Host server is different from the RD Broker server:
@@ -234,7 +232,7 @@ Follow these steps if the RD Session Host server is different from the RD Broker
     >
     > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
 
-3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to <https://+:3392/rdp/>.
+3. Open the Windows Registry (regedit) and navigate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to `https://+:3392/rdp/`.
 
 ### General Observations
 
@@ -265,7 +263,7 @@ By default, the user may select to enable or disable telemetry. A boolean value 
 >[!NOTE]
 >This setting currently only works with the RDS web client, not the Windows Virtual Desktop web client.
 
-By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following Powershell command:
+By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following PowerShell command:
 
    ```PowerShell
     Set-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser" ($true|$false)

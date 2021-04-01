@@ -2,8 +2,6 @@
 title: Classification Management
 description: This article describes how to categorize files based on classification properties
 ms.date: 7/7/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -28,6 +26,6 @@ This section includes the following topics:
 > To set e-mail notifications and certain reporting capabilities, you must first configure the general File Server Resource Manager options.
 
 
-## See also
+## Additional References
 
 [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)

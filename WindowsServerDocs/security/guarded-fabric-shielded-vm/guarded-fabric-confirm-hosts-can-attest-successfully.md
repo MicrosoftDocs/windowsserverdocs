@@ -1,12 +1,11 @@
 ---
 title: Confirm guarded hosts can attest
-ms.prod: windows-server
+description: "Learn more about: Confirm guarded hosts can attest"
 ms.topic: article
 ms.assetid: 7485796b-b840-4678-9b33-89e9710fbbc7
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
 ---
 
@@ -34,7 +33,7 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
 
         To configure a fallback HGS server, repeat this command and specify the fallback URLs for the Key Protection and Attestation services. For more information, see [Fallback configuration](guarded-fabric-manage-branch-office.md#fallback-configuration).
 
-    - **Through VMM**: If you are using System Center 2016 - Virtual Machine Manager (VMM), you can configure Attestation and Key Protection URLs in VMM. For details, see [Configure global HGS settings](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts#configure-global-hgs-settings) in **Provision guarded hosts in VMM**.
+    - **Through VMM**: If you are using System Center Virtual Machine Manager (VMM), you can configure Attestation and Key Protection URLs in VMM. For details, see [Configure global HGS settings](/system-center/vmm/guarded-deploy-host#configure-global-hgs-settings) in **Provision guarded hosts in VMM**.
 
     >**Notes**
     > - If the HGS administrator [enabled HTTPS on the HGS server](guarded-fabric-configure-hgs-https.md), begin the URLs with `https://`.
@@ -57,7 +56,7 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
     ```
 
     > [!IMPORTANT]
-    > If you're using Windows Server 2019 or Windows 10, version 1809 and are using code integrity policies, `Get-HgsTrace` return a failure for the **Code Integrity Policy Active** diagnostic.
+    > If you're using Windows Server 2019 or Windows 10, version 1809 or later, and are using code integrity policies, `Get-HgsTrace` return a failure for the **Code Integrity Policy Active** diagnostic.
     > You can safely ignore this result when it is the only failing diagnostic.
 
 ## Next step
@@ -65,7 +64,7 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
 > [!div class="nextstepaction"]
 > [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 
-## See also
+## Additional References
 
 - [Deploy the Host Guardian Service (HGS)](guarded-fabric-deploying-hgs-overview.md)
 - [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)

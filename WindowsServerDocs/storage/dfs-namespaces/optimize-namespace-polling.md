@@ -2,8 +2,6 @@
 title: Optimize Namespace Polling
 description: This article describes how to optimize namespace polling to maintain a consistent domain-based namespace across namespace servers
 ms.date: 6/5/2017
-ms.prod: windows-server
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -13,7 +11,7 @@ ms.author: jgerend
 
 > Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-To maintain a consistent domain-based namespace across namespace servers, it is necessary for namespace servers to periodically poll Active Directory Domain Services (AD DS) to obtain the most current namespace data. 
+To maintain a consistent domain-based namespace across namespace servers, it is necessary for namespace servers to periodically poll Active Directory Domain Services (AD DS) to obtain the most current namespace data.
 
 ## To optimize namespace polling
 
@@ -29,9 +27,9 @@ Use the following procedure to optimize how namespace polling occurs:
     -   Choose **Optimize for scalability** if there are more than 16 namespace servers. This reduces the load on the Primary Domain Controller (PDC) Emulator, but increases the time required for changes to the namespace to replicate to all namespace servers. Until changes replicate to all servers, users might have an inconsistent view of the namespace.
 
 > [!NOTE]
-> To set the namespace polling mode by using Windows PowerShell, use the [Set-DfsnRoot EnableRootScalability](https://technet.microsoft.com/library/jj884281.aspx) cmdlet, which was introduced in Windows Server 2012.
+> To set the namespace polling mode by using Windows PowerShell, use the [Set-DfsnRoot EnableRootScalability](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771913(v=ws.11)) cmdlet, which was introduced in Windows Server 2012.
 
-## See also
+## Additional References
 
 -   [Tuning DFS Namespaces](tuning-dfs-namespaces.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)

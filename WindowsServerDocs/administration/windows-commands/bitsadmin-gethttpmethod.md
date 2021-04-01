@@ -1,12 +1,10 @@
 ---
 title: bitsadmin gethttpmethod
-description: Windows Commands topic for **bitsadmin gethttpmethod**, which gets the HTTP verb to use with the job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+description: Reference article for the bitsadmin gethttpmethod command, which gets the HTTP verb to use with the job.
+ms.topic: reference
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 03/01/2019
 ---
 
@@ -26,6 +24,16 @@ bitsadmin /gethttpmethod <Job>
 | -------------- | -------------- |
 | job | The job's display name or GUID. |
 
+## Examples
+
+To retrieve the HTTP verb to use with the job named *myDownloadJob*:
+
+```
+bitsadmin /gethttpmethod myDownloadJob
+```
+
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

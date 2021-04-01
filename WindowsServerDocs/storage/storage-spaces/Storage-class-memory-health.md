@@ -1,10 +1,9 @@
 ---
 ms.assetid: 2bab6bf6-90e7-46a7-b917-14a7a8f55366
 title: Storage-class Memory (NVDIMM-N) Health Management in Windows
-ms.prod: windows-server
+description: "Learn more about: Storage-class Memory (NVDIMM-N) Health Management in Windows"
 ms.author: jgerend
 manager: dongill
-ms.technology: storage-spaces
 ms.topic: article
 author: JasonGerend
 ms.date: 06/25/2019
@@ -27,7 +26,7 @@ JEDEC-compliant NVDIMM-N storage-class memory devices are supported in Windows w
 
 All conditions listed here are expected to be very rare occurrences, but depend on the conditions in which the hardware is used.
 
-The various cases below may refer to Storage Spaces configurations. The particular configuration of interest is one where two NVDIMM-N devices are utilized as a mirrored write-back cache in a storage space. To set up such a configuration, see [Configuring Storage Spaces with a NVDIMM-N write-back cache](https://msdn.microsoft.com/library/mt650885.aspx).
+The various cases below may refer to Storage Spaces configurations. The particular configuration of interest is one where two NVDIMM-N devices are utilized as a mirrored write-back cache in a storage space. To set up such a configuration, see [Configuring Storage Spaces with a NVDIMM-N write-back cache](/sql/relational-databases/performance/configuring-storage-spaces-with-a-nvdimm-n-write-back-cache).
 
 In Windows Server 2016, the Storage Spaces GUI shows NVDIMM-N bus type as UNKNOWN. It doesn't have any fuctionality loss or inability in creation of Pool, Storage VD. You can verify the bus type by running the following command:
 
@@ -66,7 +65,7 @@ This condition is when you check the health of a storage-class memory device and
 
 The following table lists some info about this condition.
 
-| | Description |
+| Heading | Description |
 | --- | --- |
 | Likely condition | NVDIMM-N Warning Threshold breached |
 | Root Cause | NVDIMM-N devices track various thresholds, such as temperature, NVM lifetime, and/or energy source lifetime. When one of those thresholds is exceeded, the operating system is notified. |
@@ -86,7 +85,7 @@ This condition is when you check the health of a storage-class memory device and
 
 The following table lists some info about this condition.
 
-| | Description |
+| Heading | Description |
 | --- | --- |
 | Likely condition | Loss of Persistence / Backup Power |
 |Root Cause|NVDIMM-N devices rely on a back-up power source for their persistence – usually a battery or super-cap. If this back-up power source is unavailable or the device cannot perform a backup for any reason (Controller/Flash Error), data is at risk and Windows will prevent any further writes to the affected devices. Reads are still possible to evacuate data.|
@@ -106,7 +105,7 @@ This condition is when a storage-class memory device is shown with a capacity of
 
 The following table lists some info about this condition.
 
-||Description|
+|Heading|Description|
 |---|---|
 |Likely condition|BIOS Did Not Expose NVDIMM-N to OS|
 |Root Cause|NVDIMM-N devices are DRAM based. When a corrupt DRAM address is referenced, most CPUs will initiate a machine check and restart the server. Some server platforms then un-map the NVDIMM, preventing the OS from accessing it and potentially causing another machine check. This may also occur if the BIOS detects that the NVDIMM-N has failed and needs to be replaced.|
@@ -126,7 +125,7 @@ This condition is when you check the health of a storage-class memory device and
 
 The following table lists some info about this condition.
 
-||Description|
+|Heading|Description|
 |---|---|
 |Likely condition|Backup/Restore Failure|
 |Root Cause|A failure in the backup or restore procedure will likely result in all data on the NVDIMM-N to be lost. When the operating system loads, it will appear as a brand new NVDIMM-N without a partition or file system and surface as RAW, meaning it doesn't have a file system.|
@@ -142,5 +141,3 @@ Interleaved sets can often be created in a platform's BIOS to make multiple NVDI
 Windows Server 2016 and Windows 10 Anniversary Edition do not support interleaved sets of NVDIMM-Ns.
 
 At the time of this writing, there is no mechanism for the host operating system to correctly identify individual NVDIMM-Ns in such a set and clearly communicate to the user which particular device may have caused an error or needs to be serviced.
-
-

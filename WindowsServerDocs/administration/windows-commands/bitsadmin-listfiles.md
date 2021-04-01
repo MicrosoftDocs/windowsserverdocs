@@ -1,13 +1,11 @@
 ---
 title: bitsadmin listfiles
-description: Windows Commands topic for **bitsadmin listfiles**, which lists the files in the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the bitsadmin listfiles command, which lists the files in the specified job.
+ms.topic: reference
 ms.assetid: ad0d1eaa-3bd8-45e5-8f72-4da7366f0d59
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -27,14 +25,16 @@ bitsadmin /listfiles <job>
 | -------------- | -------------- |
 | job | The job's display name or GUID. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example retrieves the list of files for the job named *myDownloadJob*.
+To retrieve the list of files for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /listfiles myDownloadJob
+bitsadmin /listfiles myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

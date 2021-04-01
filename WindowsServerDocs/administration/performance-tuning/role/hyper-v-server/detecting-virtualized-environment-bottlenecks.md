@@ -1,10 +1,8 @@
 ---
 title: Detecting bottlenecks in a virtualized environment
 description: How to detect and resolve potential Hyper-v performance bottlenecks
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: asmahi; sandysp; jopoulso
+ms.author: asmahi
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -125,7 +123,7 @@ If latencies are consistently greater than 50ms, you should do the following:
 
 -   Use VHDX
 
-## See also
+## Additional References
 
 -   [Hyper-V terminology](terminology.md)
 

@@ -1,27 +1,30 @@
 ---
-title: Services for Network File System Command Reference
-description: Windows Commands topic for **** - 
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
+title: Services for Network File System (NFS) command-line tools
+description: Reference article about Services for Network File System (NFS) command-line tools
+ms.topic: reference
 ms.assetid: 06c81f88-a672-4405-9b73-085f8933114c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
-# Services for Network File System Command Reference
-Services for Network File System (NFS) provides a file sharing solution that enables you to transfer files between computers running Windows Server 2008 and UNIX operating systems using the NFS protocol.
-The following is a list of NFS command-line tools.
-|Command|Description|
-|-------|-----------|
-|[mapadmin](mapadmin.md)|Manage User Name Mapping for Microsoft Services for Network File System.|
-|[Mount](mount.md)|Mount Network File System (NFS) network shares.|
-|[Nfsadmin](nfsadmin.md)|Manage Server for NFS and Client for NFS.|
-|[Nfsshare](nfsshare.md)|Control Network File System (NFS) shares.|
-|[Nfsstat](nfsstat.md)|Display or reset counts of calls made to Server for NFS.|
-|[Rpcinfo](rpcinfo.md)|List programs on remote computers.|
-|[Showmount](showmount.md)|Display mounted directories.|
+
+# Services for Network File System command-line tools
+
+Services for Network File System (NFS) provides a file sharing solution that lets you transfer files between computers running Windows Server and UNIX operating systems using the NFS protocol.
+
+Information and links to each of the associated NFS command-line tools:
+
+| Command | Description |
+|--|--|
+| [mapadmin](mapadmin.md) | Manage User Name Mapping for Microsoft Services for Network File System. |
+| [mount](mount.md) | Mount Network File System (NFS) network shares. |
+| [nfsadmin](nfsadmin.md) | Manage Server for NFS and Client for NFS. |
+| [nfsshare](nfsshare.md) | Control Network File System (NFS) shares. |
+| [nfsstat](nfsstat.md) | Display or reset counts of calls made to Server for NFS. |
+| [rpcinfo](rpcinfo.md) | List programs on remote computers. |
+| [showmount](showmount.md) | Display mounted directories. |
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)

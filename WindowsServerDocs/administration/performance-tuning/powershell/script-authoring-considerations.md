@@ -1,8 +1,6 @@
 ---
 title: PowerShell scripting performance considerations
 description: Scripting for Performance in PowerShell
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.author: jasonsh
 author: lzybkr
@@ -13,7 +11,7 @@ ms.date: 10/16/2017
 
 PowerShell scripts that leverage .NET directly and avoid the pipeline tend to be faster than idiomatic PowerShell. Idiomatic PowerShell typically uses cmdlets and PowerShell functions heavily, often leveraging the pipeline, and dropping down into .NET only when necessary.
 
->[!Note] 
+>[!Note]
 > Many of the techniques described here are not idiomatic PowerShell and may reduce the readability of a PowerShell script. Script authors are advised to use idiomatic PowerShell unless performance dictates otherwise.
 
 ## Suppressing Output
@@ -126,5 +124,5 @@ It is generally considered poor practice to write output directly to the console
 
 If you must write many messages to the console, `Write-Host` can be an order of magnitude slower than `[Console]::WriteLine()`. However, be aware that `[Console]::WriteLine()` is only a suitable alternative for specific hosts like powershell.exe or powershell_ise.exe - it's not guaranteed to work in all hosts.
 
-Instead of using `Write-Host`, consider using [Write-Output](/powershell/module/Microsoft.PowerShell.Utility/Write-Output?view=powershell-5.1).
+Instead of using `Write-Host`, consider using [Write-Output](/powershell/module/Microsoft.PowerShell.Utility/Write-Output?view=powershell-5.1&preserve-view=true).
 

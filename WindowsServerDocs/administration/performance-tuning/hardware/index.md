@@ -1,8 +1,6 @@
 ---
 title: Server Hardware Performance Considerations
 description: Server hardware performance considerations for Windows Server 2016
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: landing-page
 ms.author: phstee
 author: phstee
@@ -35,15 +33,15 @@ Choose large L2 or L3 processor caches. On newer architectures, such as Haswell 
 
 ## Memory (RAM) and Paging Storage Recommendations
 
->[!Note] 
-> Some systems may exhibit reduced storage performance when running a new install of Windows Server 2016 versus Windows Server 2012 R2. A number of changes were made during the development of Windows Server 2016 to improve security and reliability of the platform. Some of those changes, such as enabling Windows Defender by default, result in longer I/O paths that can reduce I/O performance in specific workloads and patterns. Microsoft does not recommend disabling Windows Defender as it is an important layer of protection for your systems. 
+>[!Note]
+> Some systems may exhibit reduced storage performance when running a new install of Windows Server 2016 versus Windows Server 2012 R2. A number of changes were made during the development of Windows Server 2016 to improve security and reliability of the platform. Some of those changes, such as enabling Windows Defender by default, result in longer I/O paths that can reduce I/O performance in specific workloads and patterns. Microsoft does not recommend disabling Windows Defender as it is an important layer of protection for your systems.
 
 Increase the RAM to match your memory needs.
 When your computer runs low on memory and it needs more immediately, Windows uses hard disk space to supplement system RAM through a procedure called paging. Too much paging degrades the overall system performance.
 You can optimize paging by using the following guidelines for page file placement:
 - Isolate the page file on its own storage device, or at least make sure it doesn't share the same storage devices as other frequently accessed files. For example, place the page file and operating system files on separate physical disk drives.
 
-- Place the page file on a drive that is not fault-tolerant. If the disk fails, a system crash is likely to occur. If you place the page file on a fault-tolerant drive, remember that fault-tolerant systems are often slower to write data because they write data to multiple locations.
+- Place the page file on a drive that is fault-tolerant. If a non-fault-tolerant disk fails, a system crash is likely to occur. If you place the page file on a fault-tolerant drive, remember that fault-tolerant systems are often slower to write data because they write data to multiple locations.
 
 - Use multiple disks or a disk array if you need additional disk bandwidth for paging. Do not place multiple page files on different partitions of the same physical disk drive.
 

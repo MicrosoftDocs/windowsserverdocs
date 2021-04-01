@@ -2,12 +2,10 @@
 title: Change a Master Boot Record (MBR) into a GUID partition table (GPT) disk
 description: Describes how to change a Master boot record (MBR) into a GUID partition table (GPT) disk
 ms.date: 06/07/2019
-ms.prod: windows-server 
-ms.technology: storage 
-ms.topic: article 
-author: JasonGerend 
-manager: brianlic 
-ms.author: jgerend 
+ms.topic: article
+author: JasonGerend
+manager: brianlic
+ms.author: jgerend
 ---
 # Convert an MBR disk into a GPT disk
 
@@ -33,7 +31,7 @@ You can change a disk from MBR to GPT partition style as long as the disk contai
 
 ## Converting using a command line
 
-Use the following steps to convert an empty MBR disk to a GPT disk. There's also a MBR2GPT.EXE tool that you can use, but it's a little complicated - see [Convert MBR partition to GPT](https://docs.microsoft.com/windows/deployment/mbr-to-gpt) for more details.
+Use the following steps to convert an empty MBR disk to a GPT disk. There's also a MBR2GPT.EXE tool that you can use, but it's a little complicated - see [Convert MBR partition to GPT](/windows/deployment/mbr-to-gpt) for more details.
 
 1.  Back up or move the data on the basic MBR disk you want to convert into a GPT disk.
 
@@ -61,4 +59,4 @@ Use the following steps to convert an empty MBR disk to a GPT disk. There's also
 
 ## See Also
 
--   [Command-line syntax notation](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
+-   [Command-line syntax notation](/previous-versions/orphan-topics/ws.11/cc742449(v=ws.11))

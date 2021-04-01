@@ -1,13 +1,11 @@
 ---
 title: bitsadmin getvalidationstate
-description: Windows Commands topic for **bitsadmin getvalidationstate**, which reports the content validation state of the given file within the job. 
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the bitsadmin getvalidationstate command, which reports the content validation state of the given file within the job.
+ms.topic: reference
 ms.assetid: 6ada3f1f-9967-4262-9d22-ed641e23f516
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -28,14 +26,16 @@ bitsadmin /getvalidationstate <job> <file_index>
 | job | The job's display name or GUID. |
 | file_index | Starts from 0. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example gets the content validation state of file 2 within the job named *myDownloadJob*.
+To retrieve the content validation state of file 2 within the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /getvalidationstate myDownloadJob 1
+bitsadmin /getvalidationstate myDownloadJob 1
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

@@ -1,12 +1,10 @@
 ---
 title: Windows Server 2008 and 2008 R2 extended security updates
 description: Learn how to use Extended Security Updates (ESU) for Windows Server 2008 and 2008 R2 after the end of their support lifecycle.
-ms.prod: windows-server
-ms.technology: server-general
 ms.mktglfcycl: manage
 author: iainfoulds
-ms.author: iainfou
-ms.topic: get-started-article
+ms.author: daveba
+ms.topic: how-to
 ms.localizationpriority: high
 ms.date: 02/21/2020
 ---
@@ -40,6 +38,9 @@ For more information, see the [Extended Security Updates frequently asked questi
 ## How to use Extended Security Updates
 
 If you run Windows Server 2008 or 2008 R2 VMs in Azure, they're automatically enabled for Extended Security Updates. You don't need to configure anything, and there's no additional charge for using Extended Security Updates with Azure VMs. Extended Security Updates are automatically delivered to Azure VMs if they're configured to receive updates.
+
+> [!NOTE]
+> Microsoft.ClassicCompute VMs require additional configuration for Extended Security Updates deployment since they don't have access to the [Azure Instance Metadata Service](/azure/virtual-machines/windows/instance-metadata-service) that determines Extended Security Updates eligibility. Please contact [Microsoft support](https://support.microsoft.com/contactus?PID=17336) for more help.
 
 For other environments, such as on-premises VMs or physical servers, you need to manually request and configure Extended Security Updates. You can purchase Extended Security Updates through Volume Licensing Programs such as Enterprise Agreement (EA), Enterprise Agreement Subscription (EAS), Enrollment for Education Solutions (EES), or Server and Cloud Enrollment (SCE).
 
@@ -81,7 +82,7 @@ To register your VM for Extended Security Updates and create a key, open the Azu
 5. If you see a page that says "Register to get a Multiple Activation Key," that means you need to request access to the private preview before you can use Extended Security Updates. If you don't see this page, skip ahead to step 6.
 
    To request access, select **join the private preview**. An email message window will open. This email is your access request to the product team.
-  
+
     Include the following information in your request:
 
     * Customer name
@@ -95,7 +96,7 @@ To register your VM for Extended Security Updates and create a key, open the Azu
 
     If the team doesn't approve your request, you'll see the following error:
 
-    [The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://social.msdn.microsoft.com/Forums/office/94b16a89-3149-43da-865d-abf7dba7b977/the-resource-type-could-not-be-found-in-the-namespace-microsoftwindowsesu-for-api-version)
+    [The resource type could not be found in the namespace 'Microsoft.WindowsESU']()
 
 6. Under **Azure details**, select your Azure subscription, a resource group, and location for your key.
 

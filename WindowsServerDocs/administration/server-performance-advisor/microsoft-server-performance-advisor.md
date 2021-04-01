@@ -2,13 +2,11 @@
 title: Microsoft Server Performance Advisor
 description: Microsoft Server Performance Advisor
 ms.assetid: 468ebcb3-9eaf-477c-ab10-e3f1b3ce63dc
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: manage
 ---
 # Microsoft Server Performance Advisor
 
@@ -45,7 +43,7 @@ SPA Advisor Packs are the center of all tuning rules, which consist of a series 
     **Note**
     The Hyper-V Advisor Pack does not analyze guest operating systems.
 
-     
+
 
 -   The active directory advisor pack analyzes the general performance of the active directory role.
 
@@ -54,7 +52,7 @@ SPA also offers an extensible model for non-Microsoft developers to write adviso
 **Note**
 SPA cannot understand all hardware and user scenario contexts. You should use the recommendations that are provided by the tool to help you make decisions and understand the consequences of any potential changes that are made to the servers.
 
- 
+
 
 ## <a href="" id="bkmk-downloadspa"></a>Download Server Performance Advisor
 

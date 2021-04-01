@@ -1,14 +1,12 @@
 ---
 title: Software only (SO) features and technologies
 description: These features are implemented as part of the OS and are independent of the underlying NIC(s). Sometimes these features require some tuning of the NIC for optimal operation. Examples of these include Hyper-v features such as Virtual Machine Quality of Service (vmQoS), Access Control Lists (ACLs), and non-Hyper-V features like NIC Teaming.
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
-ms.author: lizross 
-author: eross-msft
-ms.date: 09/20/2018 
+ms.author: jgerend
+author: JasonGerend
+ms.date: 09/20/2018
 ---
 
 
@@ -17,24 +15,24 @@ Software only features are implemented as part of the OS and are independent of 
 
 ## Access Control Lists (ACLs)
 
-A Hyper-V and SDNv1 feature for managing security for a VM. This feature applies to the non-virtualized Hyper-V stack and the HVNv1 stack. You can manage Hyper-V switch ACLs through [Add-VMNetworkAdapterAcl](https://docs.microsoft.com/powershell/module/hyper-v/add-vmnetworkadapteracl?view=win10-ps)
-and [Remove-VMNetworkAdapterAcl](https://docs.microsoft.com/powershell/module/hyper-v/remove-vmnetworkadapteracl?view=win10-ps)
+A Hyper-V and SDNv1 feature for managing security for a VM. This feature applies to the non-virtualized Hyper-V stack and the HVNv1 stack. You can manage Hyper-V switch ACLs through [Add-VMNetworkAdapterAcl](/powershell/module/hyper-v/add-vmnetworkadapteracl)
+and [Remove-VMNetworkAdapterAcl](/powershell/module/hyper-v/remove-vmnetworkadapteracl)
 PowerShell cmdlets.
 
 ## Extended ACLs
 
 Hyper-V Virtual Switch extended ACLs enable you to configure the Hyper-V Virtual Switch Extended Port ACLs to provide firewall protection and enforce security policies for the tenant VMs in datacenters. Because the port ACLs are configured on the Hyper-V Virtual Switch rather than within the VMs, the administrator can manage security policies for all tenants in a multitenant environment.
 
-You can manage Hyper-V switch extended ACLs through the [Add-VMNetworkAdapterExtendedAcl](https://docs.microsoft.com/powershell/module/hyper-v/add-vmnetworkadapterextendedacl?view=win10-ps) and [Remove-VMNetworkAdapterExtendedAcl](https://docs.microsoft.com/powershell/module/hyper-v/remove-vmnetworkadapteracl?view=win10-ps) PowerShell cmdlets.
+You can manage Hyper-V switch extended ACLs through the [Add-VMNetworkAdapterExtendedAcl](/powershell/module/hyper-v/add-vmnetworkadapterextendedacl) and [Remove-VMNetworkAdapterExtendedAcl](/powershell/module/hyper-v/remove-vmnetworkadapteracl) PowerShell cmdlets.
 
->[!TIP] 
+>[!TIP]
 >This feature applies to the HNVv1 stack. For ACLs in the SDN stack, refer to Software Defined Networking SDN) ACLs below.
 
-For more information about Extended Port Access Control Lists in this library, see [Create Security Policies with Extended Port Access Control Lists](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/Create-Security-Policies-with-Extended-Port-Access-Control-Lists).
+For more information about Extended Port Access Control Lists in this library, see [Create Security Policies with Extended Port Access Control Lists](../../../virtualization/hyper-v-virtual-switch/create-security-policies-with-extended-port-access-control-lists.md).
 
 ## NIC Teaming
 
-NIC Teaming, also called NIC bonding, is the aggregation of multiple NIC ports into an entity the host perceives as a single NIC port. NIC Teaming protects against the failure of a single NIC port (or the cable connected to it). It also aggregates network traffic for faster throughput. For more details, see [NIC Teaming](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/nic-teaming).
+NIC Teaming, also called NIC bonding, is the aggregation of multiple NIC ports into an entity the host perceives as a single NIC port. NIC Teaming protects against the failure of a single NIC port (or the cable connected to it). It also aggregates network traffic for faster throughput. For more details, see [NIC Teaming](../nic-teaming/nic-teaming.md).
 
 With Windows Server 2016 you have two ways to do teaming:
 
@@ -45,11 +43,11 @@ With Windows Server 2016 you have two ways to do teaming:
 
 ## RSC in the vSwitch
 
-Receive Segment Coalescing (RSC) in the vSwitch is a feature that takes packets that are part of the same stream and arrive between network interrupts, and coalesces them into a single packet before delivering them to the operating system. The virtual switch in Windows Server 2019 has this feature. For more details about this feature, see [Receive Segment Coalescing in the vSwitch](https://docs.microsoft.com/windows-server/networking/technologies/hpn/rsc-in-the-vswitch).
+Receive Segment Coalescing (RSC) in the vSwitch is a feature that takes packets that are part of the same stream and arrive between network interrupts, and coalesces them into a single packet before delivering them to the operating system. The virtual switch in Windows Server 2019 has this feature. For more details about this feature, see [Receive Segment Coalescing in the vSwitch](./rsc-in-the-vswitch.md).
 
 ## Software Defined Networking (SDN) ACLs
 
-The SDN-extension in Windows Server 2016 improved ways to support ACLs. In the Windows Server 2016 SDN v2 stack, SDN ACLs are used instead of ACLs and Extended ACLs. You can use Network Controller to manage SDN ACLs. 
+The SDN-extension in Windows Server 2016 improved ways to support ACLs. In the Windows Server 2016 SDN v2 stack, SDN ACLs are used instead of ACLs and Extended ACLs. You can use Network Controller to manage SDN ACLs.
 
 ## SDN Quality of Service (QoS)
 
@@ -57,11 +55,11 @@ The SDN extension in Windows Server 2016 improved ways to provide bandwidth cont
 
 ## Switch Embedded Teaming (SET)
 
-SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch. For information about Switch Embedded Teaming in this library, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming).
+SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch. For information about Switch Embedded Teaming in this library, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md).
 
 ## Virtual Receive Side Scaling (vRSS)
 
-Software vRSS is used to spread incoming traffic destined for a VM across multiple logical processors (LPs) of the VM. Software vRSS gives the VM the ability to handle more networking traffic than a single LP would be able to handle. For more information, see [Virtual Receive Side Scaling (vRSS)](https://docs.microsoft.com/windows-server/networking/technologies/vrss/vrss-top).
+Software vRSS is used to spread incoming traffic destined for a VM across multiple logical processors (LPs) of the VM. Software vRSS gives the VM the ability to handle more networking traffic than a single LP would be able to handle. For more information, see [Virtual Receive Side Scaling (vRSS)](../vrss/vrss-top.md).
 
 ## Virtual Machine Quality of Service (vmQoS)
 

@@ -1,12 +1,10 @@
 ---
 title: bitsadmin makecustomheaderswriteonly
-description: Windows Commands topic for **bitsadmin makecustomheaderswriteonly**, which make a job's Custom HTTP Headers write-only.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+description: Reference article for the bitsadmin makecustomheaderswriteonly command, which make a job's Custom HTTP Headers write-only.
+ms.topic: reference
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 03/01/2019
 ---
 
@@ -14,7 +12,7 @@ ms.date: 03/01/2019
 
 Make a job's Custom HTTP Headers write-only.
 
-> [!Important]
+> [!IMPORTANT]
 > This action can't be undone.
 
 ## Syntax
@@ -29,14 +27,16 @@ bitsadmin /makecustomheaderswriteonly <job>
 | -------------- | -------------- |
 | job | The job's display name or GUID. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example makes Custom HTTP Headers write-only for the job named *myDownloadJob*.
+To make Custom HTTP Headers write-only for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /makecustomheaderswriteonly myDownloadJob
+bitsadmin /makecustomheaderswriteonly myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

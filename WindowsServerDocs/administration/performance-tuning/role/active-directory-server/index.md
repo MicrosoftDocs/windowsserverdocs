@@ -1,10 +1,8 @@
 ---
 title: Performance Tuning Active Directory Servers
 description: Performance Tuning for Active Directory Servers
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: landing-page
-ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab; v-tea
+ms.author: timwi
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -38,12 +36,12 @@ However, we realize that this takes time and many environments are running in a 
 
 We encourage you to stay up to date on the latest news, guidance and best practices for managing ADDS by following our team blog, ["Ask the Directory Services Team"](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/bg-p/AskDS).
 
-## See also
+## Additional References
 
 - [Capacity planning for AD DS](capacity-planning-for-active-directory-domain-services.md)
 - [Hardware considerations](hardware-considerations.md)
 - [Memory usage considerations](memory-usage-considerations.md)
 - [LDAP considerations](ldap-considerations.md)
 - [Proper placement of domain controllers and site considerations](site-definition-considerations.md)
-- [Troubleshooting AD DS performance](troubleshoot.md)  
-  
+- [Troubleshooting AD DS performance](troubleshoot.md)
+

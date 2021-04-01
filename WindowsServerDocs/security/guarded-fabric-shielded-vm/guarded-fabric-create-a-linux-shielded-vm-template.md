@@ -1,18 +1,17 @@
 ---
 title: Create a Linux shielded VM template disk
-ms.prod: windows-server
+description: "Learn more about: Create a Linux shielded VM template disk"
 ms.topic: article
 ms.assetid: d0e1d4fb-97fc-4389-9421-c869ba532944
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 
 # Create a Linux shielded VM template disk
 
-> Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel), 
+> Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel),
 
 This topic explains how to prepare a template disk for Linux shielded VMs that can be used to instantiate one or more tenant VMs.
 
@@ -65,7 +64,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
     You can do this by clicking "Connect to Server..." in the Actions pane or by right clicking on Hyper-V Manager and choosing "Connect to Server..."
     Provide the DNS name for your Hyper-V server and, if necessary, the credentials needed to connect to it.
 
-5.  Using Hyper-V Manager, [configure an external switch](https://docs.microsoft.com/windows-server/virtualization/hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines) on your virtualization server so the Linux VM can access the Internet to obtain updates.
+5.  Using Hyper-V Manager, [configure an external switch](../../virtualization/hyper-v/get-started/create-a-virtual-switch-for-hyper-v-virtual-machines.md) on your virtualization server so the Linux VM can access the Internet to obtain updates.
 
 6.  Next, create a new virtual machine to install the Linux OS onto.
     In the Actions pane, click **New** > **Virtual Machine** to bring up the wizard.
@@ -117,7 +116,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 
 13. If you are planning to use System Center Virtual Machine Manager to deploy your VMs, install the VMM guest agent to enable VMM to specialize your OS during VM provisioning.
     Specialization allows each VM to be set up securely with different users and SSH keys, networking configurations, and custom setup steps.
-    Learn how to [obtain and install the VMM guest agent](https://docs.microsoft.com/system-center/vmm/vm-linux#install-the-vmm-guest-agent) in the VMM documentation.
+    Learn how to [obtain and install the VMM guest agent](/system-center/vmm/vm-linux#install-the-vmm-guest-agent) in the VMM documentation.
 
 14. Next, [add the Microsoft Linux Software Repository to your package manager](../../administration/linux-package-repository-for-microsoft-software.md).
 
@@ -135,7 +134,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
     ```
 
 14. When you're done customizing the Linux OS, locate the lsvmprep installation program on your system and run it.
-    
+
     ```bash
     # The path below may change based on the version of lsvmprep installed
     # Run "find /opt -name lsvmprep" to locate the lsvmprep executable
@@ -146,7 +145,7 @@ These steps will walk you through the bare minimum requirements to get a Linux V
 
 16. If you took any checkpoints of your VM (including automatic checkpoints created by Hyper-V with the Windows 10 Fall Creators Update), be sure to delete them before continuing.
     Checkpoints create differencing disks (.avhdx) that are not supported by the Template Disk Wizard.
-    
+
     To delete checkpoints, open **Hyper-V Manager**, select your VM,  right click the topmost checkpoint in the Checkpoints pane, then click **Delete Checkpoint Subtree**.
 
     ![Delete all checkpoints for your template VM in Hyper-V manager](../media/Guarded-Fabric-Shielded-VM/delete-checkpoints-lsvm-template.png)
@@ -187,7 +186,7 @@ The VHDX you provide to the `-Path` parameter will be overwritten with the updat
 
 > [!IMPORTANT]
 > The Remote Server Administration Tools available on Windows Server 2016 or Windows 10 cannot be used to prepare a Linux shielded VM template disk.
-> Only use the [Protect-TemplateDisk](https://docs.microsoft.com/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps) cmdlet available on Windows Server, version 1709 or the Remote Server Administration Tools available on Windows Server 2019 to prepare a Linux shielded VM template disk.
+> Only use the [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk) cmdlet available on Windows Server, version 1709 or the Remote Server Administration Tools available on Windows Server 2019 to prepare a Linux shielded VM template disk.
 
 ```powershell
 # Replace "THUMBPRINT" with the thumbprint of your template disk signing certificate in the line below

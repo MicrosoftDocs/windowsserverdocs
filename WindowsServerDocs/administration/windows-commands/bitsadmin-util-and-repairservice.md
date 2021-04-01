@@ -1,13 +1,11 @@
 ---
 title: bitsadmin util and repairservice
-description: Windows Commands topic for **bitsadmin util and repairservice**, which fixes known issues in various versions of BITS service.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the bitsadmin util and repairservice command, which fixes known issues in various versions of BITS service.
+ms.topic: reference
 ms.assetid: 2ac7baeb-4340-4186-bfcb-66478195378d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -35,12 +33,16 @@ bitsadmin /util /repairservice [/force]
 
 ## Examples
 
-The following example repairs the BITS service configuration.
+To repair the BITS service configuration:
 
 ```
-C:\>bitsadmin /util /repairservice
+bitsadmin /util /repairservice
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin util command](bitsadmin-util.md)
+
+- [bitsadmin command](bitsadmin.md)

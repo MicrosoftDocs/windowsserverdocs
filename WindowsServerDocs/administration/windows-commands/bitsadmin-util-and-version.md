@@ -1,13 +1,11 @@
 ---
 title: bitsadmin util and version
-description: Windows Commands topic for **bitsadmin util and version**, which displays the version of BITS service.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the bitsadmin util and version command, which displays the version of BITS service.
+ms.topic: reference
 ms.assetid: 98f17328-dfbd-4cbb-93c1-b8d424bc3f0a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -32,12 +30,16 @@ bitsadmin /util /version [/verbose]
 
 ## Examples
 
-The following example the version of the BITS Service.
+To display the version of the BITS Service.
 
 ```
-C:\>bitsadmin /util /version
+bitsadmin /util /version
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin util command](bitsadmin-util.md)
+
+- [bitsadmin command](bitsadmin.md)

@@ -1,8 +1,6 @@
 ---
 title: Create a Remote Desktop Services collection
-description: Learn how to add and RDSH and RemoteApp programs to your RDS deployment.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
+description: Learn how to create a Remote Desktop Services session collection.
 ms.author: elizapo
 ms.date: 10/22/2019
 ms.topic: article
@@ -16,11 +14,11 @@ manager: dongill
 
 Use the following steps to create a Remote Desktop Services session collection. A session collection holds the apps and desktops you want to make available to users. After you create the collection, publish it so users can access it.
 
-Before you create a collection, you need to decide what kind of collection you need: pooled desktop sessions or personal desktop sessions. 
+Before you create a collection, you need to decide what kind of collection you need: pooled desktop sessions or personal desktop sessions.
 
 - **Use pooled desktop sessions for session-based virtualization**: Leverage the compute power of Windows Server to provide a cost-effective multi-session environment to drive your users' everyday workloads
 - **Use personal desktop sessions for to create a virtual desktop infrastructure (VDI)**: Leverage Windows client to provide the high performance, app compatibility, and familiarity that your users have come to expect of their Windows desktop experience.
- 
+
 With a pooled session, multiple users access a shared pool of resources, while with a personal desktop session, users are assigned their own desktop from within the pool. The pooled session provides lower overall cost, while personal sessions enable users to customize their desktop experience.
 
 If you need to share graphics-intensive hosted applications, you can combine personal session desktops with the new Discrete Device Assignment (DDA) capability to also provide support for hosted applications that require accelerated graphics. Check out [Which graphics virtualization technology is right for you](rds-graphics-virtualization.md) for more information.
@@ -30,12 +28,12 @@ Regardless of the type of collection you choose, you'll populate those collectio
 
 ## Create a pooled desktop session collection
 
-1.  In Server Manager, click **Remote Desktop Services > Collections > Tasks > Create Session Collections**.  
-2.  Enter a name for the collection, for example **ContosoAps**.  
-3.  Select the RD Session Host server you created (for example, Contoso-Shr1).  
-4.  Accept the default **User Groups**.  
-5.  Enter the location of the file share you created for the user profile disks for this collection (for example, **\Contoso-Cb1\UserDisksr**).   
-6.  Click **Create**. When the collection is created, click **Close**.  
+1.  In Server Manager, click **Remote Desktop Services > Collections > Tasks > Create Session Collections**.
+2.  Enter a name for the collection, for example **ContosoAps**.
+3.  Select the RD Session Host server you created (for example, Contoso-Shr1).
+4.  Accept the default **User Groups**.
+5.  Enter the location of the file share you created for the user profile disks for this collection (for example, **\Contoso-Cb1\UserDisksr**).
+6.  Click **Create**. When the collection is created, click **Close**.
 
 
 ## Create a personal desktop session collection
@@ -51,6 +49,6 @@ You can use PowerShell cmdlets to manage your personal desktop session collectio
 ## Publish RemoteApp programs
 Use the following steps to publish the apps and resources in your collection:
 
-1.  In Server Manager, select the new collection (**ContosoApps**).  
-2.  Under RemoteApp Programs, click **Publish RemoteApp programs**.  
-3. Select the programs you want to publish, and then click **Publish**.  
+1.  In Server Manager, select the new collection (**ContosoApps**).
+2.  Under RemoteApp Programs, click **Publish RemoteApp programs**.
+3. Select the programs you want to publish, and then click **Publish**.

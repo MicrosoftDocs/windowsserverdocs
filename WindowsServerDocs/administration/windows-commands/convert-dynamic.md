@@ -1,21 +1,20 @@
 ---
 title: convert dynamic
-description: Windows Commands topic for convert dynamic, which converts a basic disk into a dynamic disk.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the convert dynamic command, which converts a basic disk into a dynamic disk.
+ms.topic: reference
 ms.assetid: 7b8fa4b1-850f-4e48-b05f-871c883ea33c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # convert dynamic
 
-Converts a basic disk into a dynamic disk.
+Converts a basic disk into a dynamic disk. A basic disk must be selected for this operation to succeed. Use the [select disk command](select-disk.md) to select a basic disk and shift the focus to it.
 
-For instructions regarding how to use this command, see [Change a Basic Disk into a Dynamic Disk](https://go.microsoft.com/fwlink/?LinkId=207047) (https://go.microsoft.com/fwlink/?LinkId=207047).
+> [!NOTE]
+> For instructions regarding how to use this command, see [Change a Dynamic Disk Back to a Basic Disk](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc755238(v=ws.11))).
 
 ## Syntax
 
@@ -25,18 +24,18 @@ convert dynamic [noerr]
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
+| Parameter | Description |
+| --------- | ----------- |
+| noerr | For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code. |
 
-## Remarks
+#### Remarks
 
--   Any existing partitions on the basic disk become simple volumes.
--   A basic disk must be selected for this operation to succeed. Use the **select disk** command to select a basic disk and shift the focus to it.
+- Any existing partitions on the basic disk become simple volumes.
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
 To convert a basic disk into a dynamic disk, type:
+
 ```
 convert dynamic
 ```
@@ -45,3 +44,4 @@ convert dynamic
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
+- [convert command](convert.md)

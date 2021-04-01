@@ -1,8 +1,6 @@
 ---
 title: Manage Windows Server
 description: Learns about tools, recommendations and guidance on managing Windows Server
-ms.prod: windows-server
-ms.technology: manage
 ms.topic: article
 author: lizap
 ms.author: elizapo
@@ -14,7 +12,7 @@ ms.localizationpriority: medium
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 >[!TIP]
-> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
+> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
 
  <ul class="cardse panelContent cols cols3">
     <li>
@@ -24,7 +22,7 @@ ms.localizationpriority: medium
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../media/i-manage.svg" alt="" />
+                            <img src="../media/i-manage.svg" alt="manage icon" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -35,8 +33,8 @@ ms.localizationpriority: medium
             </div>
         </div>
         </a>
-    </li> 
-</ul> 
+    </li>
+</ul>
 
 ## Manage Windows Server systems and environments
 The tools you use to manage Windows Server instances depend, in large amount, on the types of systems you have deployed (Windows Server with Desktop Experience vs Server Core), physical versus virtual machines, and where your servers are located. Use the following information to perform basic management tasks on Windows Server.
@@ -79,7 +77,7 @@ Many of the decisions you make as an administrator depend on data about the syst
 Start with [Configure Windows diagnostic data in your organization](/windows/configuration/configure-windows-diagnostic-data-in-your-organization) for information about the diagnostic data that can be gathered from Windows 10 and Windows Server.
 
 ### [Setup and Boot Event Collection](get-started-with-setup-and-boot-event-collection.md)
-Setup and Boot Event Collection lets you designate a "collector" computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process. You can then later analyze the collected events with Event Viewer, Message Analyzer, Wevtutil, or Windows PowerShell cmdlets. 
+Setup and Boot Event Collection lets you designate a "collector" computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process. You can then later analyze the collected events with Event Viewer, Message Analyzer, Wevtutil, or Windows PowerShell cmdlets.
 
 ### [Software Inventory Logging (SIL)](software-inventory-logging/get-started-with-software-inventory-logging.md)
 
@@ -87,7 +85,7 @@ Software Inventory Logging in Windows Server is a feature with a simple set of P
 
 ### [User Access Logging (UAL)](user-access-logging/get-started-with-user-access-logging.md)
 
-User Access Logging aggregates unique client device and user request events that are logged on a computer running Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 into a local database. These records are then made available (through a query by a server administrator) to retrieve quantities and instances by server role, by user, by device, by the local server, and by date. In addition, UAL also enables non-Microsoft software developers to instrument their UAL events to be aggregated. 
+User Access Logging aggregates unique client device and user request events that are logged on a computer running Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 into a local database. These records are then made available (through a query by a server administrator) to retrieve quantities and instances by server role, by user, by device, by the local server, and by date. In addition, UAL also enables non-Microsoft software developers to instrument their UAL events to be aggregated.
 
 ## Tune your Windows Server environment for performance
 Use the following information to help tune your environment for performance.
@@ -104,8 +102,8 @@ With Microsoft Server Performance Advisor (SPA), you can collect metrics to diag
 
 Windows Server includes a set of commands and Windows PowerShell modules that you can use to automate management tasks.
 
-### [Windows PowerShell](/powershell/scripting/powershell-scripting?view=powershell-5.1)
-Winows PowerShell is a command-line shell and scripting language designed to let you rapidly automate administrative tasks. 
+### [Windows PowerShell](/powershell/scripting/powershell-scripting?view=powershell-5.1&preserve-view=true)
+Winows PowerShell is a command-line shell and scripting language designed to let you rapidly automate administrative tasks.
 
 ### [Windows Commands](windows-commands/windows-commands.md)
 
@@ -113,4 +111,4 @@ The Windows command-line tools are used to perform administrative tasks in Windo
 
 ## Windows Server Insider Preview
 ### [System Insights](../manage/system-insights/overview.md)
-System Insights is a new feature that introduces predictive analytics natively to Windows Server. These predictive capabilities locally analyze Windows Server system data, such as performance counters or ETW events, helping IT administrators proactively detect and address problematic behavior in their deployments. 
+System Insights is a new feature that introduces predictive analytics natively to Windows Server. These predictive capabilities locally analyze Windows Server system data, such as performance counters or ETW events, helping IT administrators proactively detect and address problematic behavior in their deployments.

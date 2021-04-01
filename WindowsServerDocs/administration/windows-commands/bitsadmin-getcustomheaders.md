@@ -1,14 +1,12 @@
 ---
 title: bitsadmin getcustomheaders
-description: Windows Commands topic for **bitsadmin getcustomheaders**, which retrieves the custom HTTP headers from the job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the bitsadmin getcustomheaders command, which retrieves the custom HTTP headers from the job.
+ms.topic: reference
 ms.assetid: 1f0d38d3-e865-4474-81e8-773d65c3d1cc
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
-ms.date: 10/16/2017 
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
+ms.date: 10/16/2017
 ---
 
 # bitsadmin getcustomheaders
@@ -27,14 +25,16 @@ bitsadmin /getcustomheaders <job>
 | -------------- | -------------- |
 | job | The job's display name or GUID. |
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following example gets the custom headers for the job named *myDownloadJob*.
+To get the custom headers for the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /getcustomheaders myDownloadJob
+bitsadmin /getcustomheaders myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

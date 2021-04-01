@@ -1,12 +1,11 @@
 ---
+description: "Learn more about: Deploy guarded hosts"
 title: Deploy guarded hosts
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 2379ca26-b32d-4055-8b4b-99d1f2df37e1
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 
@@ -23,16 +22,16 @@ The topics in this section describe the steps that a fabric administrator takes 
 
 **For host key attestation**:
 1. [Create a host key](guarded-fabric-create-host-key.md#create-a-host-key): Tells how to set up a DNS forwarder from the fabric domain to the HGS domain.
-2. [Add the host key to the attestation service](guarded-fabric-create-host-key.md#add-the-host-key-to-the-attestation-service): Tells how to set up an Active Directory security group in the fabric domain, add guarded hosts as members of that group, and provide that group identifier to the HGS administrator. 
+2. [Add the host key to the attestation service](guarded-fabric-create-host-key.md#add-the-host-key-to-the-attestation-service): Tells how to set up an Active Directory security group in the fabric domain, add guarded hosts as members of that group, and provide that group identifier to the HGS administrator.
 3. [Confirm guarded hosts can attest](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
 
 **For Admin-trusted attestation**:
 1. [Configure the fabric DNS](guarded-fabric-configuring-fabric-dns.md): Tells how to set up a DNS forwarder from the fabric domain to the HGS domain.
-2. [Create a security group](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md): Tells how to set up an Active Directory security group in the fabric domain, add guarded hosts as members of that group, and provide that group identifier to the HGS administrator. 
+2. [Create a security group](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md): Tells how to set up an Active Directory security group in the fabric domain, add guarded hosts as members of that group, and provide that group identifier to the HGS administrator.
 3. [Confirm guarded hosts can attest](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
 
-## See also
+## Additional References
 
 - [Deployment tasks for guarded fabrics and shielded VMs](guarded-fabric-deploying-hgs-overview.md#deployment-tasks-for-guarded-fabrics-and-shielded-vms)

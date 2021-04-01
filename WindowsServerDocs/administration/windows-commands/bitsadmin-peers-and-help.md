@@ -1,13 +1,11 @@
 ---
 title: bitsadmin peers and help
-description: Windows Commands topic for **bitsadmin peers** and **help**, which displays the command-line usage for the /peers switches.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the bitsadmin peers and help command, which displays the command-line usage for the /peers switches.
+ms.topic: reference
 ms.assetid: 49016dcb-e3be-44d9-b00a-1a42eb5984ff
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -21,14 +19,18 @@ Displays the command-line usage for the **/peers** switches.
 bitsadmin /peers /help
 ```
 
-## <a name=BKMK_examples></a>Examples
+## Examples
 
-The following command displays the command-line help for the **/peers** switches.
+To display the command-line usage for the **/peers** switches:
 
 ```
-C:\>bitsadmin /peers /help
+bitsadmin /peers /help
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)
+
+- [bitsadmin peers command](bitsadmin-peers.md)

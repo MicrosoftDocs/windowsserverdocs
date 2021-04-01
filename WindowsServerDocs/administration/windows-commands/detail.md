@@ -1,13 +1,11 @@
 ---
 title: detail
-description: Windows Commands topic for detail, which displays information about the selected disk, partition, volume, or virtual hard disk (VHD).
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the detail command, which displays information about the selected disk, partition, volume, or virtual hard disk (VHD).
+ms.topic: reference
 ms.assetid: 305755bd-1a51-486b-8515-62d3f227c291
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -20,20 +18,19 @@ Displays information about the selected disk, partition, volume, or virtual hard
 ```
 detail disk
 detail partition
-detail volume 
+detail volume
 detail vdisk
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|[Detail disk](detail-disk.md)|Displays the properties of the selected disk and the volumes on that disk.|
-|[Detail partition](detail-partition.md)|Displays the properties of the selected partition.|
-|[Detail volume](detail-volume.md)|Displays the disks on which the current volume resides.|
-|[Detail vdisk](detail-vdisk.md)|Displays the properties of the selected VHD.|
+| Parameter | Description |
+| --------- | ----------- |
+| [Detail disk](detail-disk.md) | Displays the properties of the selected disk and the volumes on that disk. |
+| [Detail partition](detail-partition.md) | Displays the properties of the selected partition. |
+| [Detail volume](detail-volume.md) | Displays the disks on which the current volume resides. |
+| [Detail vdisk](detail-vdisk.md) | Displays the properties of the selected VHD. |
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-

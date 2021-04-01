@@ -1,13 +1,12 @@
 ---
+description: "Learn more about: Replication error 1396 Logon Failure The target account name is incorrect"
 ms.assetid: 399a8bbe-3375-4bb0-b55b-5f46e7050028
 title: Replication error 1396 Logon Failure The target account name is incorrect
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # Replication error 1396 Logon Failure The target account name is incorrect
@@ -51,7 +50,7 @@ Logon Failure: The target account name is incorrect.</codeFeaturedElement>
 The failure occurred at &lt;date&gt; &lt;time&gt;.
 The last success occurred at &lt;date&gt; &lt;time&gt;.
 XX failures have occurred since the last success</code></listItem><listItem><para>REPADMIN.EXE reports that the last replication attempt has failed with status 1396.</para><para>REPADMIN commands that commonly cite the 1396 status include but are not limited to:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN /ADD</para></listItem><listItem><para>REPADMIN /REPLSUM</para></listItem><listItem><para>REPADMIN /REHOST</para></listItem><listItem><para>REPADMIN /SHOWVECTOR /LATENCY</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN /SHOWREPS</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem><listItem><para>REPADMIN /SYNCALL</para></listItem></list></TD></tr></tbody></table><para>Sample output from &quot;REPADMIN /SHOWREPS&quot; depicting inbound replication from CONTOSO-DC2 to CONTOSO-DC1 failing with the &quot;Logon Failure: The target account name is incorrect.&quot; error is shown below::</para><code>Default-First-Site-NameCONTOSO-DC1
-DSA Options: IS_GC 
+DSA Options: IS_GC
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01

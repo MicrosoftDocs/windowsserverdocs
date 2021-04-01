@@ -1,61 +1,70 @@
 ---
 title: cmdkey
-description: Windows Commands topic for cmdkey, which creates, lists, and deletes stored user names and passwords or credentials.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the cmdkey command, which creates, lists, and deletes stored user names and passwords or credentials.
+ms.topic: reference
 ms.assetid: 5fcd68ee-a14a-4b71-9300-c3f5c5d31e8e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # cmdkey
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates, lists, and deletes stored user names and passwords or credentials.
 
 ## Syntax
+
 ```
-cmdkey [{/add:<TargetName>|/generic:<TargetName>}] {/smartcard|/user:<UserName> [/pass:<Password>]} [/delete{:<TargetName>|/ras}] /list:<TargetName>
+cmdkey [{/add:<targetname>|/generic:<targetname>}] {/smartcard | /user:<username> [/pass:<password>]} [/delete{:<targetname> | /ras}] /list:<targetname>
 ```
+
 ### Parameters
 
-|             Parameters             |                                                                                    Description                                                                                     |
-|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         /add:<TargetName>          | adds a user name and password to the list.<p>Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with. |
-|       /generic:<TargetName>        |   adds generic credentials to the list.<p>Requires the parameter of <TargetName> which identifies the computer or domain name that this entry will be associated with.    |
-|             /smartcard             |                                                                    Retrieves the credential from a smart card.                                                                     |
-|          /user:<UserName>          |                                 Specifies the user or account name to store with this entry. If *UserName* is not supplied, it will be requested.                                  |
-|          /pass:<Password>          |                                       Specifies the password to store with this entry. If *Password* is not supplied, it will be requested.                                        |
-| /delete{:<TargetName> &#124; /ras} |  deletes a user name and password from the list. If *TargetName* is specified, that entry will be deleted. If /ras is specified, the stored remote access entry will be deleted.   |
-|         /list:<TargetName>         |                  Displays the list of stored user names and credentials. If *TargetName* is not specified, all stored user names and credentials will be listed.                   |
-|                 /?                 |                                                                        Displays help at the command prompt.                                                                        |
+| Parameters | Description |
+| ---------- | ----------- |
+| /add:`<targetname>` | Adds a user name and password to the list.<p>Requires the parameter of `<targetname>` which identifies the computer or domain name that this entry will be associated with. |
+| /generic:`<targetname>` | Adds generic credentials to the list.<p>Requires the parameter of `<targetname>` which identifies the computer or domain name that this entry will be associated with. |
+| /smartcard | Retrieves the credential from a smart card. If more than one smart card is found on the system when this option is used, **cmdkey** displays information about all available smart cards, and then prompts the user to specify which one to use. |
+| /user:`<username>` | Specifies the user or account name to store with this entry. If `<username>` isn't supplied, it will be requested. |
+|/pass:`<password>` | Specifies the password to store with this entry. If `<password>` isn't supplied, it will be requested. Passwords are not displayed after they're stored. |
+| /delete:`{<targetname> \| /ras}` | Deletes a user name and password from the list. If `<targetname>` is specified, that entry is deleted. If `/ras` is specified, the stored remote access entry is deleted. |
+| /list:`<targetname>` | Displays the list of stored user names and credentials. If `<targetname>` isn't specified, all stored user names and credentials are listed. |
+| /? | Displays help at the command prompt. |
 
-## Remarks
-- if more than one smart card is found on the system when the /smartcard command-line option is used, **cmdkey** will display information about all available smart cards and then prompt the user to specify which one to use.
-- Passwords will not be displayed once they are stored.
-  ## <a name=BKMK_examples></a>Examples
-  To display a list of all user names and credentials that are stored, type:
-  ```
-  cmdkey /list
-  ```
-  To add a user name and password for user Mikedan to access computer Server01 with the password Kleo, type:
-  ```
-  cmdkey /add:server01 /user:mikedan /pass:Kleo
-  ```
-  To add a user name and password for user Mikedan to access computer Server01 and prompt for the password whenever Server01 is accessed, type:
-  ```
-  cmdkey /add:server01 /user:mikedan
-  ```
-  To delete the credential that remote access has stored, type:
-  ```
-  cmdkey /delete /ras
-  ```
-  To delete the credential that is stored for Server01, type:
-  ```
-  cmdkey /delete:Server01
-  ```
-  ## Additional References
-  - [Command-Line Syntax Key](command-line-syntax-key.md)
+## Examples
+
+To display a list of all user names and credentials that are stored, type:
+
+```
+cmdkey /list
+```
+
+To add a user name and password for user *Mikedan* to access computer *Server01* with the password *Kleo*, type:
+
+```
+cmdkey /add:server01 /user:mikedan /pass:Kleo
+```
+
+To add a user name and password for user *Mikedan* to access computer *Server01* and prompt for the password whenever Server01 is accessed, type:
+
+```
+cmdkey /add:server01 /user:mikedan
+```
+
+To delete a credential stored by remote access, type:
+
+```
+cmdkey /delete /ras
+```
+
+To delete a credential stored for *Server01*, type:
+
+```
+cmdkey /delete:server01
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)

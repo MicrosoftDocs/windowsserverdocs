@@ -1,13 +1,11 @@
 ---
 title: Settings
 description: Learn about settings in Windows Admin Center (Project Honolulu). User settings let users change their language/region and other preferences. Gateway settings let administrators configure the gateway.
-ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
 ms.date: 04/12/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 
 # Windows Admin Center Settings
@@ -51,6 +49,6 @@ In the **Extensions** tab, administrators can install, uninstall, or update gate
 
 The **Access** tab lets administrators configure who can access the Windows Admin Center gateway, as well as the identity provider used to authenticate users. [Learn more about controlling access to the gateway.](user-access-control.md)
 
-From the **Azure** tab, administrators can register the gateway with Azure to enable [Azure integration features](azure-integration.md) in Windows Admin Center.
+From the **Azure** tab, administrators can register the gateway with Azure to enable [Azure integration features](../azure/azure-integration.md) in Windows Admin Center.
 
 Using the **Shared Connections** tab, administrators can configure a single list of connections to be shared across all users of the Windows Admin Center gateway. [Learn more about configuring connections once for all users of a gateway.](shared-connections.md)

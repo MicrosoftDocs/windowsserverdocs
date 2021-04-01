@@ -1,28 +1,22 @@
 ---
 title: offline disk
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
+description: Reference article for the offline disk command, which takes the online disk with focus to the offline state.
+ms.topic: reference
 ms.assetid: 8fb9b3c3-0b2c-4192-a2e7-f706292653e3
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # offline disk
 
+Takes the online disk with focus to the offline state. If a dynamic disk in a disk group is taken offline, the status of the disk changes to **missing** and the group shows a disk that's offline. The missing disk is moved to the invalid group. If the dynamic disk is the last disk in the group, then the status of the disk changes to **offline**, and the empty group is removed.
 
-
-Takes the online disk with focus to the offline state.
-
-> [!IMPORTANT]
-> This DiskPart command is not available in any edition of Windows Vista.
+> [!NOTE]
+> A disk must be selected for the **offline disk** command to succeed. Use the [select disk](select-disk.md) command to select a disk and shift the focus to it.
+>
+> This command also works on disks in SAN online mode by changing the SAN mode to offline.
 
 ## Syntax
 
@@ -32,19 +26,14 @@ offline disk [noerr]
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
+| Parameter | Description |
+| --------- | ----------- |
+| noerr | For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code. |
 
-## Remarks
-
--   This command operates on disks that are in SAN online mode. It changes their SAN mode to offline.
--   If a dynamic disk in a disk group is taken offline, the status of the disk changes to **missing** and the group shows a disk that is offline. The missing disk is moved to the invalid group. If the dynamic disk is the last disk in the group, then the status of the disk will change to **offline**, and the empty group will be removed.
--   A disk must be selected for the **offline disk** command to succeed. Use the **select disk** command to select a disk and shift the focus to it.
-
-## <a name=BKMK_examples></a>Examples
+### Examples
 
 To take the disk with focus offline, type:
+
 ```
 offline disk
 ```
@@ -52,4 +41,3 @@ offline disk
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-

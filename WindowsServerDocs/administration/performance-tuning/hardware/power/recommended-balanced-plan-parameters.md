@@ -1,10 +1,8 @@
 ---
-title: Recommended Balanced Power Plan Parameters for Quick Response Times
-description: Recommended Balanced Power Plan Parameters for Quick Response Time
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
-ms.topic: article
-ms.author:  qizha;tristanb
+title: Recommended balanced power plan parameters for quick response times
+description: Recommended balanced power plan parameters for quick response times
+ms.topic: conceptual
+ms.author: qizha
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -64,4 +62,4 @@ We set up a [Failover Cluster], and used Diskspd to generate random and sequenti
 - [Server Hardware Power Considerations](../power.md)
 - [Power and Performance Tuning](power-performance-tuning.md)
 - [Processor Power Management Tuning](processor-power-management-tuning.md)
-- [Failover Cluster](https://technet.microsoft.com/library/cc725923.aspx)
+- [Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725923(v=ws.10))

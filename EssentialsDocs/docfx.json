@@ -1,42 +1,47 @@
 {
-  "build": {
-    "content": [
-      {
-        "files": [
-          "**/*.md"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "window-server-docs/essentials/**",
-          "**/includes/**"
-        ]
-      }
-    ],
-    "resource": [
-      {
-        "files": [
-          "**/*.png",
-          "**/*.jpg"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "window-server-docs/essentials/**",
-          "**/includes/**"
-        ]
-      }
-    ],
-    "overwrite": [],
-    "externalReference": [],
-    "globalMetadata": {
-      "_op_documentIdPathDepotMapping": {
-        "./": {
-          "depot_name": "WS.EssentialsDocs"
-        }
-      }
-    },
-    "fileMetadata": {},
-    "template": [],
-    "dest": "window-server-docs/essentials",
-    "markdownEngineName": "markdig"
-  }
+   "build": {
+      "content": [
+         {
+            "files": [
+               "**/*.md"
+            ],
+            "exclude": [
+               "**/obj/**",
+               "**/includes/**"
+            ]
+         }
+      ],
+      "resource": [
+         {
+            "files": [
+               "**/*.png",
+               "**/*.jpg"
+            ],
+            "exclude": [
+               "**/obj/**",
+               "**/includes/**"
+            ]
+         }
+      ],
+      "overwrite": [],
+      "externalReference": [],
+      "globalMetadata": {
+         "_op_documentIdPathDepotMapping": {
+            "./": {
+               "depot_name": "WS.EssentialsDocs"
+            }
+         }
+      },
+      "fileMetadata": {
+         "ms.prod": {
+            "**/*.md": "windows-server"
+         },
+         "ms.technology": {
+            "**/*.md": "essentials"
+         }
+      },
+       "template": [],
+       "dest": "window-server-docs/essentials",
+       "markdownEngineName": "markdig"
+   }
 }

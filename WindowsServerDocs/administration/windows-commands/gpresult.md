@@ -1,76 +1,73 @@
 ---
 title: gpresult
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
+description: Reference article for the gpresult command, which displays the Resultant Set of Policy (RSoP) information for a remote user and computer.
+ms.topic: reference
 ms.assetid: dfaa3adf-2c83-486c-86d6-23f93c5c883c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
+
 # gpresult
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays the Resultant Set of Policy (RSoP) information for a remote user and computer.
-To use RSoP reporting for remotely targeted computers through the firewall, you must have firewall rules that enable inbound network traffic on the ports.
+Displays the Resultant Set of Policy (RSoP) information for a remote user and computer. To use RSoP reporting for remotely targeted computers through the firewall, you must have firewall rules that enable inbound network traffic on the ports.
 
 ## Syntax
 
 ```
-gpresult [/s <system> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN>\]<TARGETUSER>] [/scope {user | computer}] {/r | /v | /z | [/x | /h] <FILENAME> [/f] | /?}
+gpresult [/s <system> [/u <username> [/p [<password>]]]] [/user [<targetdomain>\]<targetuser>] [/scope {user | computer}] {/r | /v | /z | [/x | /h] <filename> [/f] | /?}
 ```
+
+> [!NOTE]
+> Except when using **/?**, you must include an output option, **/r**, **/v**, **/z**, **/x**, or **/h**.
 
 ### Parameters
 
-> [!NOTE]
-> Except when you use **/?**, you must include an output option, either **/r**, **/v**, **/z**, **/x**, or **/h**.
+| Parameter | Description |
+| --------- | ----------- |
+| /s `<system>` | Specifies the name or IP address of a remote computer. Don't use backslashes. The default is the local computer. |
+| /u `<username>` | Uses the credentials of the specified user to run the command. The default user is the user who is logged on to the computer that issues the command. |
+| /p `[<password>]` | Specifies the password of the user account that is provided in the **/u** parameter. If **/p** is omitted, **gpresult** prompts for the password. The **/p** parameter can't be used with **/x** or **/h**. |
+| /user `[<targetdomain>\]<targetuser>]` | Specifies the remote user whose RSoP data is to be displayed. |
+| /scope `{user | computer}` | Displays RSoP data for either the user or the computer. If **/scope** is omitted, **gpresult** displays RSoP data for both the user and the computer. |
+| `[/x | /h] <filename>` | Saves the report in either XML (**/x**) or HTML (**/h**) format at the location and with the file name that is specified by the *filename* parameter. Can't be used with **/u**, **/p**, **/r**, **/v**, or **/z**. |
+| /f | Forces **gpresult** to overwrite the file name that is specified in the **/x** or **/h** option. |
+| /r | Displays RSoP summary data. |
+| /v | Displays verbose policy information. This includes detailed settings that were applied with a precedence of 1. |
+| /z | Displays all available information about Group Policy. This includes detailed settings that were applied with a precedence of 1 and higher. |
+| /? | Displays help at the command prompt. |
 
-|                Parameter                 |                                                                                                     Description                                                                                                      |
-|------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|              /s \<system\>               |                                                  Specifies the name or IP address of a remote computer. Do not use backslashes. The default is the local computer.                                                   |
-|             /u \<USERNAME\>              |                                Uses the credentials of the specified user to run the command. The default user is the user who is logged on to the computer that issues the command.                                 |
-|            /p [\<PASSWOrd\>]             |            Specifies the password of the user account that is provided in the **/u** parameter. If **/p** is omitted, **gpresult** prompts for the password. **/p** cannot be used with **/x** or **/h**.            |
-| /user [\<TARGETDOMAIN\>\\]\<TARGETUSER\> |                                                                            Specifies the remote user whose RSoP data is to be displayed.                                                                             |
-|      /scope {user &#124; computer}       |                                Displays RSoP data for either the user or the computer. If **/scope** is omitted, **gpresult** displays RSoP data for both the user and the computer.                                 |
-|        [/x &#124; /h] <FILENAME>         | Saves the report in either XML (**/x**) or HTML (**/h**) format at the location and with the file name that is specified by the *FILENAME* parameter. Cannot be used with **/u**, **/p**, **/r**, **/v**, or **/z**. |
-|                    /f                    |                                                           forces **gpresult** to overwrite the file name that is specified in the **/x** or **/h** option.                                                           |
-|                    /r                    |                                                                                             Displays RSoP summary data.                                                                                              |
-|                    /v                    |                                                    Displays verbose policy information. This includes detailed settings that were applied with a precedence of 1.                                                    |
-|                    /z                    |                                     Displays all available information about Group Policy. This includes detailed settings that were applied with a precedence of 1 and higher.                                      |
-|                    /?                    |                                                                                         Displays help at the command prompt.                                                                                         |
+#### Remarks
 
-## Remarks
 - Group Policy is the primary administrative tool for defining and controlling how programs, network resources, and the operating system operate for users and computers in an organization. In an active directory environment, Group Policy is applied to users or computers based on their membership in sites, domains, or organizational units.
-- Because you can apply overlapping policy settings to any computer or user, the Group Policy feature generates a resulting set of policy settings when the user logs on. **gpresult** displays the resulting set of policy settings that were enforced on the computer for the specified user when the user logged on.
-- Because **/v** and **/z** produce lots of information, it is useful to redirect output to a text file (for example, **gpresult/z >policy.txt**).
-- The **gpresult** command is available in  Windows Server 2012 , Windows Server 2008 R2, Windows Server2008, Windows 8, Windows 7, and Windows Vista.
-  ## Examples
-  The following example retrieves RSoP data for the remote user **targetusername** of the computer **srvmain**, and displays RSoP data about the user only. The command is run with the credentials of the user **maindom\hiropln**, and <strong>p@ssW23</strong> is entered as the password for that user.
 
-  ```
-  gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /scope user /r
-  ```
-  
-The following example saves all available information about Group Policy for the remote user **targetusername** of the computer **srvmain** to a file that is named **policy.txt**. No data is included about the computer. The command is run with the credentials of the user **maindom\hiropln**, and <strong>p@ssW23</strong> is entered as the password for that user.
+- Because you can apply overlapping policy settings to any computer or user, the Group Policy feature generates a resulting set of policy settings when the user logs on. The **gpresult** command displays the resulting set of policy settings that were enforced on the computer for the specified user when the user logged on.
 
-  ```
-  gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /z > policy.txt
-  ```
-  
-The following example displays RSoP data for the computer **srvmain** and the logged-on user. Data is included about both the user and the computer. The command is run with the credentials of the user **maindom\hiropln**, and <strong>p@ssW23</strong> is entered as the password for that user.
+- Because **/v** and **/z** produce a lot of information, it's useful to redirect output to a text file (for example, `gpresult/z >policy.txt`).
 
-  ```
-  gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r
-  ```
-  
+### Examples
+
+To retrieve RSoP data for only the remote user, *maindom\hiropln* with the password *p@ssW23*, who's on the computer *srvmain*, type:
+
+```
+gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /scope user /r
+```
+
+To save all available information about Group Policy to a file named, *policy.txt*, for only the remote user *maindom\hiropln* with the password *p@ssW23*, on the computer *srvmain*, type:
+
+```
+gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /user targetusername /z > policy.txt
+```
+
+To display RSoP data for the logged on user, *maindom\hiropln* with the password *p@ssW23*, for the computer *srvmain*, type:
+
+```
+gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r
+```
+
 ## Additional References
-- [Group Policy TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)
 
-- - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

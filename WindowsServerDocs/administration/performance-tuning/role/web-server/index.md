@@ -1,10 +1,8 @@
 ---
 title: Performance Tuning Web Servers
 description: Performance tuning recommendations for Web Servers on Windows Server 16
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: landing-page
-ms.author: davso; ericam; yashi
+ms.author: ericam
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -52,7 +50,7 @@ Disabling the updates is effective when you are using large data sets (or many h
 >[!Warning]
 > Some applications, such as incremental backup utilities, rely on this update information, and they do not function correctly without it.
 
-## See also
+## Additional References
 - [IIS 10.0 performance tuning](tuning-iis-10.md)
 - [HTTP 1.1/2 tuning](http-performance.md)
 

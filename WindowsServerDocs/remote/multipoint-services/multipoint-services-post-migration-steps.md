@@ -2,12 +2,11 @@
 title: MultiPoint Services - post-migration tasks
 description: Learn how to validate and close out your migration to MultiPoint Services
 ms.date: 07/29/2016
-ms.prod: windows-server
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 1497cae0-071e-467d-89b8-a7050815d7de
-author: lizap
-manager: dongill
+author: evaseydl
+manager: scottman
+ms.author: evas
 ---
 # MultiPoint Services - post-migration tasks
 
@@ -19,7 +18,7 @@ After you migrate to MultiPoint Services in Windows Server 2016, use the followi
 
 You can validate your MultiPoint Services migration by creating a pilot project in the production environment. Run the pilot project on the servers before you put the migrated role services into production to verify that your deployment works as you expect. Consider limiting the number of connections at first, slowly increasing the number of users accessing MultiPoint Services.
 
-> [!NOTE] 
+> [!NOTE]
 > Always use test accounts to test the migration. Use an account with administrative privileges and an account for a valid user.
 
 ## Retire the source server

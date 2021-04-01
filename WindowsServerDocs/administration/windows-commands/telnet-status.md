@@ -1,31 +1,34 @@
 ---
 title: telnet status
-description: Windows Commands topic for telnet status, which displays status information.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
-ms.assetid: 4e819f11-3dc4-44d1-957b-1bcecf9fc1fc vhorne
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+description: Reference article for the telnet status command, which displays status information.
+ms.topic: reference
+ms.assetid: 4e819f11-3dc4-44d1-957b-1bcecf9fc1fc
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
+
 # telnet: status
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays status information.   
+Displays status information.
 
-## Syntax  
-```  
-st[atus]  
-```  
-#### Parameters  
-none  
-## <a name=BKMK_Examples></a>Examples  
-Display status information.  
-```  
-st  
-```  
-## Additional References  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+## Syntax
+
+```
+st[atus]
+```
+
+## Example
+
+To display status information, type:
+
+```
+st
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)

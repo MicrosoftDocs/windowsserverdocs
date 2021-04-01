@@ -1,4 +1,4 @@
-# [Storage](storage.md)
+# [Storage](storage.yml)
 ## [What's new in Storage](whats-new-in-storage.md)
 ## [Data Deduplication](data-deduplication/overview.md)
 ### [What's new in Data Deduplication](data-deduplication/whats-new.md)
@@ -31,6 +31,8 @@
 ### [Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)
 ### [Use robocopy to preseed files for DFS Replication](dfs-replication/preseed-dfsr-with-robocopy.md)
 ### [DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)
+### [How to determine the minimum staging area DFSR needs for a replicated folder](../troubleshoot/how-to-determine-the-minimum-staging-area-dfsr-needs-for-a-replicated-folder.md)
+### [Understanding (the Lack of) Distributed File Locking in DFSR](../troubleshoot/understanding-the-lack-of-distributed-file-locking-in-dfsr.md)
 ## [Disk Management](disk-management/overview-of-disk-management.md)
 ## [File Server and SMB](file-server/file-server-smb-overview.md)
 ### [SMB Direct](file-server/smb-direct.md)
@@ -102,10 +104,12 @@
 ### [Mirror-accelerated parity](refs/mirror-accelerated-parity.md)
 ### [Block cloning](refs/block-cloning.md)
 ### [Integrity streams](refs/integrity-streams.md)
+### [ReFSUtil](../administration/windows-commands/refsutil.md)
 
 ## Storage Migration Service
 ### [Overview](storage-migration-service/overview.md)
 ### [Migrate a server](storage-migration-service/migrate-data.md)
+### [How cutover works](storage-migration-service/cutover.md)
 ### [Frequently asked questions (FAQ)](storage-migration-service/faq.md)
 ### [Known issues](storage-migration-service/known-issues.md)
 

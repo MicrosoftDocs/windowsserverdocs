@@ -1,260 +1,262 @@
 ---
+description: "Learn more about: Appendix H: Securing Local Administrator Accounts and Groups"
 ms.assetid: ea015cbc-dea9-4c72-a9d8-d6c826d07608
 title: Appendix H - Securing Local Administrator Accounts and Groups
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # Appendix H: Securing Local Administrator Accounts and Groups
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-## Appendix H: Securing Local Administrator Accounts and Groups  
-On all versions of Windows currently in mainstream support, the local Administrator account is disabled by default, which makes the account unusable for pass-the-hash and other credential theft attacks. However, in environments that contain legacy operating systems or in which local Administrator accounts have been enabled, these accounts can be used as previously described to propagate compromise across member servers and workstations. Each local Administrator account and group should be secured as described in the step-by-step instructions that follow.  
+## Appendix H: Securing Local Administrator Accounts and Groups
 
-For detailed information about considerations in securing Built-in Administrator (BA) groups, see [Implementing Least-Privilege Administrative Models](../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md).  
+On all versions of Windows currently in mainstream support, the local Administrator account is disabled by default, which makes the account unusable for pass-the-hash and other credential theft attacks. However, in environments that contain legacy operating systems or in which local Administrator accounts have been enabled, these accounts can be used as previously described to propagate compromise across member servers and workstations. Each local Administrator account and group should be secured as described in the step-by-step instructions that follow.
 
-#### Controls for Local Administrator Accounts  
-For the local Administrator account in each domain in your forest, you should configure the following settings:  
+For detailed information about considerations in securing Built-in Administrator (BA) groups, see [Implementing Least-Privilege Administrative Models](../../../ad-ds/plan/security-best-practices/Implementing-Least-Privilege-Administrative-Models.md).
 
--   Configure GPOs to restrict the domain's Administrator account's use on domain-joined systems  
-    -   In one or more GPOs that you create and link to workstation and member server OUs in each domain, add the Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignments**:  
+#### Controls for Local Administrator Accounts
 
-        -   Deny access to this computer from the network  
+For the local Administrator account in each domain in your forest, you should configure the following settings:
 
-        -   Deny log on as a batch job  
+- Configure GPOs to restrict the domain's Administrator account's use on domain-joined systems
+    - In one or more GPOs that you create and link to workstation and member server OUs in each domain, add the Administrator account to the following user rights in **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies\User Rights Assignments**:
 
-        -   Deny log on as a service  
+        - Deny access to this computer from the network
 
-        -   Deny log on through Remote Desktop Services  
+        - Deny log on as a batch job
 
-#### Step-by-Step Instructions to Secure Local Administrators Groups  
+        - Deny log on as a service
 
-###### Configuring GPOs to Restrict Administrator Account on Domain-Joined Systems  
+        - Deny log on through Remote Desktop Services
 
-1.  In **Server Manager**, click **Tools**, and click **Group Policy Management**.  
+#### Step-by-Step Instructions to Secure Local Administrators Groups
 
-2.  In the console tree, expand <Forest>\Domains\\<Domain>, and then **Group Policy Objects** (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).  
+###### Configuring GPOs to Restrict Administrator Account on Domain-Joined Systems
 
-3.  In the console tree, right-click **Group Policy Objects**, and click **New**.  
+1. In **Server Manager**, click **Tools**, and click **Group Policy Management**.
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_101.png)  
+2. In the console tree, expand \<Forest\>\Domains\\<Domain\>, and then **Group Policy Objects** (where \<Forest\> is the name of the forest and \<Domain\> is the name of the domain where you want to set the Group Policy).
 
-4.  In the **New GPO** dialog box, type **<GPO Name>**, and click **OK** (where <GPO Name> is the name of this GPO).  
+3. In the console tree, right-click **Group Policy Objects**, and click **New**.
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_102.png)  
+    ![Screenshot that shows the Members tab for configuring GPOs to restrict the administrator account on domain-joined systems.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_101.png)
 
-5.  In the details pane, right-click **<GPO Name>**, and click **Edit**.  
+4. In the **New GPO** dialog box, type **\<GPO Name\>**, and click **OK** (where \<GPO Name\> is the name of this GPO).
 
-6.  Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.  
+    ![Screenshot that shows where to name the GPO so you can configure GPOs to restrict the administrator account on domain-joined systems.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_102.png)
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_103.png)  
+5. In the details pane, right-click **\<GPO Name\>**, and click **Edit**.
 
-7.  Configure the user rights to prevent the local Administrator account from accessing members servers and workstations over the network by doing the following:  
+6. Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.
 
-    1.  Double-click **Deny access to this computer from the network** and select **Define these policy settings**.  
+    ![Screenshot that shows where to navigate so you can configure GPOs to restrict the administrator account on domain-joined systems.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_103.png)
 
-    2.  Click **Add User or Group**, type the user name of the local Administrator account, and click **OK**. This user name will be **Administrator**, the default when Windows is installed.  
+7. Configure the user rights to prevent the local Administrator account from accessing members servers and workstations over the network by doing the following:
 
-        ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_104.png)  
+    1. Double-click **Deny access to this computer from the network** and select **Define these policy settings**.
 
-    3.  Click OK.  
+    2. Click **Add User or Group**, type the user name of the local Administrator account, and click **OK**. This user name will be **Administrator**, the default when Windows is installed.
 
-        > [!IMPORTANT]  
-        > When you add the Administrator account to these settings, you specify whether you are configuring a local Administrator account or a domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domain's Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
+        ![Screenshot that shows how to verify that you've configured the user rights to prevent the local Administrator account from accessing members servers and workstations over the network.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_104.png)
 
-8.  Configure the user rights to prevent the local Administrator account from logging on as a batch job by doing the following:  
+    3. Click OK.
 
-    1.  Double-click **Deny log on as a batch job** and select **Define these policy settings**.  
+        > [!IMPORTANT]
+        > When you add the Administrator account to these settings, you specify whether you are configuring a local Administrator account or a domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domain's Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.
 
-    2.  Click **Add User or Group**, type the user name of the local Administrator account, and click **OK**. This user name will be **Administrator**, the default when Windows is installed.  
+8. Configure the user rights to prevent the local Administrator account from logging on as a batch job by doing the following:
 
-        ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_105.png)  
+    1. Double-click **Deny log on as a batch job** and select **Define these policy settings**.
 
-    3.  Click **OK**.  
+    2. Click **Add User or Group**, type the user name of the local Administrator account, and click **OK**. This user name will be **Administrator**, the default when Windows is installed.
 
-        > [!IMPORTANT]  
-        > When you add the Administrator account to these settings, you specify whether you are configuring local Administrator account or domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domain's Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
+        ![Screenshot that shows how to verify that you've configured the user rights to prevent the local Administrator account from logging on as a batch job.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_105.png)
 
-9. Configure the user rights to prevent the local Administrator account from logging on as a service by doing the following:  
+    3. Click **OK**.
 
-    1.  Double-click **Deny log on as a service** and select **Define these policy settings**.  
+        > [!IMPORTANT]
+        > When you add the Administrator account to these settings, you specify whether you are configuring local Administrator account or domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domain's Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.
 
-    2.  Click **Add User or Group**, type the user name of the local Administrator account, and click **OK**. This user name will be **Administrator**, the default when Windows is installed.  
+9. Configure the user rights to prevent the local Administrator account from logging on as a service by doing the following:
 
-        ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_106.png)  
+    1. Double-click **Deny log on as a service** and select **Define these policy settings**.
 
-    3.  Click **OK**.  
+    2. Click **Add User or Group**, type the user name of the local Administrator account, and click **OK**. This user name will be **Administrator**, the default when Windows is installed.
 
-        > [!IMPORTANT]  
-        > When you add the Administrator account to these settings, you specify whether you are configuring local Administrator account or domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domain's Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
+        ![Screenshot that shows how to verify that you've configured the user rights to prevent the local Administrator account from logging on as a service.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_106.png)
 
-10. Configure the user rights to prevent the local Administrator account from accessing member servers and workstations via Remote Desktop Services by doing the following:  
+    3. Click **OK**.
 
-    1.  Double-click **Deny log on through Remote Desktop Services** and select **Define these policy settings**.  
+        > [!IMPORTANT]
+        > When you add the Administrator account to these settings, you specify whether you are configuring local Administrator account or domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domain's Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.
 
-    2.  Click **Add User or Group**, type the user name of the local Administrator account, and click **OK**. This user name will be **Administrator**, the default when Windows is installed.  
+10. Configure the user rights to prevent the local Administrator account from accessing member servers and workstations via Remote Desktop Services by doing the following:
 
-        ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_107.png)  
+    1. Double-click **Deny log on through Remote Desktop Services** and select **Define these policy settings**.
 
-    3.  Click **OK**.  
+    2. Click **Add User or Group**, type the user name of the local Administrator account, and click **OK**. This user name will be **Administrator**, the default when Windows is installed.
 
-        > [!IMPORTANT]  
-        > When you add the Administrator account to these settings, you specify whether you are configuring local Administrator account or domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domain's Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.  
+        ![Screenshot that shows how to verify that you've configured the user rights to prevent the local Administrator account from accessing member servers and workstations via Remote Desktop Services.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_107.png)
 
-11. To exit **Group Policy Management Editor**, click **File**, and click **Exit**.  
+    3. Click **OK**.
 
-12. In **Group Policy Management**, link the GPO to the member server and workstation OUs by doing the following:  
+        > [!IMPORTANT]
+        > When you add the Administrator account to these settings, you specify whether you are configuring local Administrator account or domain Administrator account by how you label the accounts. For example, to add the TAILSPINTOYS domain's Administrator account to these deny rights, you would browse to the Administrator account for the TAILSPINTOYS domain, which would appear as TAILSPINTOYS\Administrator. If you type **Administrator** in these user rights settings in the Group Policy Object Editor, you will restrict the local Administrator account on each computer to which the GPO is applied, as described earlier.
 
-    1.  Navigate to the <Forest>\Domains\\<Domain> (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).  
+11. To exit **Group Policy Management Editor**, click **File**, and click **Exit**.
 
-    2.  Right-click the OU that the GPO will be applied to and click **Link an existing GPO**.  
+12. In **Group Policy Management**, link the GPO to the member server and workstation OUs by doing the following:
 
-        ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_108.png)  
+    1. Navigate to the \<Forest\>\Domains\\<Domain\> (where \<Forest\> is the name of the forest and \<Domain\> is the name of the domain where you want to set the Group Policy).
 
-    3.  Select the GPO that you created and click **OK**.  
+    2. Right-click the OU that the GPO will be applied to and click **Link an existing GPO**.
 
-        ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_109.png)  
+        ![Screenshot that shows the Link an existing GPO menu option when you're attempting to link the GPO to the member server and workstation OUs.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_108.png)
 
-    4.  Create links to all other OUs that contain workstations.  
+    3. Select the GPO that you created and click **OK**.
 
-    5.  Create links to all other OUs that contain member servers.  
+        ![Screenshot that shows where to select the GPO you just created while you're linking the GPO to the member server and workstation OUs.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_109.png)
 
-#### Verification Steps  
+    4. Create links to all other OUs that contain workstations.
 
-##### Verify "Deny access to this computer from the network" GPO Settings  
+    5. Create links to all other OUs that contain member servers.
 
-From any member server or workstation that is not affected by the GPO changes (such as a jump server), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command.  
+#### Verification Steps
 
-1.  Log on locally to any member server or workstation that is not affected by the GPO changes.  
+##### Verify "Deny access to this computer from the network" GPO Settings
 
-2.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
+From any member server or workstation that is not affected by the GPO changes (such as a jump server), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command.
 
-3.  In the **Search** box, type **command prompt**, right-click **Command Prompt**, and then click **Run as administrator** to open an elevated command prompt.  
+1. Log on locally to any member server or workstation that is not affected by the GPO changes.
 
-4.  When prompted to approve the elevation, click **Yes**.  
+2. With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_110.png)  
+3. In the **Search** box, type **command prompt**, right-click **Command Prompt**, and then click **Run as administrator** to open an elevated command prompt.
 
-5.  In the **Command Prompt** window, type **net use \\\\<Server Name>\c$ /user:<Server Name>\Administrator**, where <Server Name> is the name of the member server or workstation you're attempting to access over the network.  
+4. When prompted to approve the elevation, click **Yes**.
 
-    > [!NOTE]  
-    > The local Administrator credentials must be from the same system you're attempting to access over the network.  
+    ![Screenshot that highlights the User Account Control dialog box you'll see when verifying the GPO settings.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_110.png)
 
-6.  The following screenshot shows the error message that should appear.  
+5. In the **Command Prompt** window, type `net use \\<Server Name>\c$ /user:<Server Name>\Administrator`, where \<Server Name\> is the name of the member server or workstation you're attempting to access over the network.
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_111.png)  
+    > [!NOTE]
+    > The local Administrator credentials must be from the same system you're attempting to access over the network.
 
-##### Verify "Deny log on as a batch job" GPO Settings  
-From any member server or workstation affected by the GPO changes, log on locally.  
+6. The following screenshot shows the error message that should appear.
 
-###### Create a Batch File  
+    ![Screenshot that highlights the logon failure error message when verifying the GPO settings.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_111.png)
 
-1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
+##### Verify "Deny log on as a batch job" GPO Settings
 
-2.  In the **Search** box, type **notepad**, and click **Notepad**.  
+From any member server or workstation affected by the GPO changes, log on locally.
 
-3.  In **Notepad**, type **dir c:**.  
+###### Create a Batch File
 
-4.  Click **File**, and click **Save As**.  
+1. With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.
 
-5.  In the **File name** box, type **<Filename>.bat** (where <Filename> is the name of the new batch file).  
+2. In the **Search** box, type **notepad**, and click **Notepad**.
 
-###### Schedule a Task  
+3. In **Notepad**, type **dir c:**.
 
-1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
+4. Click **File**, and click **Save As**.
 
-2.  In the **Search** box, type task scheduler, and click **Task Scheduler**.  
+5. In the **File name** box, type `<Filename>.bat` (where \<Filename\> is the name of the new batch file).
 
-    > [!NOTE]  
-    > On computers running Windows 8, in the **Search** box, type **schedule tasks**, and click **Schedule tasks**.  
+###### Schedule a Task
 
-3.  Click **Action**, and click **Create Task**.  
+1. With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.
 
-4.  In the **Create Task** dialog box, type **<Task Name>** (where <Task Name> is the name of the new task).  
+2. In the **Search** box, type task scheduler, and click **Task Scheduler**.
 
-5.  Click the **Actions** tab, and click **New**.  
+    > [!NOTE]
+    > On computers running Windows 8, in the **Search** box, type **schedule tasks**, and click **Schedule tasks**.
 
-6.  In the **Action** field, click **Start a program**.  
+3. Click **Action**, and click **Create Task**.
 
-7.  In the **Program/script** field, click **Browse**, locate and select the batch file created in the **Create a Batch File** section, and click **Open**.  
+4. In the **Create Task** dialog box, type **\<Task Name\>** (where \<Task Name\> is the name of the new task).
 
-8.  Click **OK**.  
+5. Click the **Actions** tab, and click **New**.
 
-9. Click the **General** tab.  
+6. In the **Action** field, click **Start a program**.
 
-10. In the **Security options** field, click **Change User or Group**.  
+7. In the **Program/script** field, click **Browse**, locate and select the batch file created in the **Create a Batch File** section, and click **Open**.
 
-11. Type the name of the system's local Administrator account, click **Check Names**, and click **OK**.  
+8. Click **OK**.
 
-12. Select **Run whether the user is logged on or not** and **Do not store password**. The task will only have access to local computer resources.  
+9. Click the **General** tab.
 
-13. Click **OK**.  
+10. In the **Security options** field, click **Change User or Group**.
 
-14. A dialog box should appear, requesting user account credentials to run the task.  
+11. Type the name of the system's local Administrator account, click **Check Names**, and click **OK**.
 
-15. After entering the credentials, click **OK**.  
+12. Select **Run whether the user is logged on or not** and **Do not store password**. The task will only have access to local computer resources.
 
-16. A dialog box similar to the following should appear.  
+13. Click **OK**.
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_112.png)  
+14. A dialog box should appear, requesting user account credentials to run the task.
 
-###### Verify "Deny log on as a service" GPO Settings  
+15. After entering the credentials, click **OK**.
 
-1.  From any member server or workstation affected by the GPO changes, log on locally.  
+16. A dialog box similar to the following should appear.
 
-2.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
+    ![Screenshot that highlights the Task Scheduler dialog box that appears when scheduling a task.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_112.png)
 
-3.  In the **Search** box, type **services**, and click **Services**.  
+###### Verify "Deny log on as a service" GPO Settings
 
-4.  Locate and double-click **Print Spooler**.  
+1. From any member server or workstation affected by the GPO changes, log on locally.
 
-5.  Click the **Log On** tab.  
+2. With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.
 
-6.  In **Log on as** field, click **This account**.  
+3. In the **Search** box, type **services**, and click **Services**.
 
-7.  Click **Browse**, type the system's local Administrator account, click **Check Names**, and click **OK**.  
+4. Locate and double-click **Print Spooler**.
 
-8.  In the **Password** and **Confirm password** fields, type the selected account's password, and click **OK**.  
+5. Click the **Log On** tab.
 
-9. Click **OK** three more times.  
+6. In **Log on as** field, click **This account**.
 
-10. Right-click **Print Spooler** and click **Restart**.  
+7. Click **Browse**, type the system's local Administrator account, click **Check Names**, and click **OK**.
 
-11. When the service is restarted, a dialog box similar to the following should appear.  
+8. In the **Password** and **Confirm password** fields, type the selected account's password, and click **OK**.
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_113.png)  
+9. Click **OK** three more times.
 
-###### Revert Changes to the Printer Spooler Service  
+10. Right-click **Print Spooler** and click **Restart**.
 
-1.  From any member server or workstation affected by the GPO changes, log on locally.  
+11. When the service is restarted, a dialog box similar to the following should appear.
 
-2.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
+    ![Screenshot that shows a message indicating that Windows could not start the Print Spooler on the Local Computer.](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_113.png)
 
-3.  In the **Search** box, type **services**, and click **Services**.  
+###### Revert Changes to the Printer Spooler Service
 
-4.  Locate and double-click **Print Spooler**.  
+1. From any member server or workstation affected by the GPO changes, log on locally.
 
-5.  Click the **Log On** tab.  
+2. With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.
 
-6.  In the **Log on as**: field, select **Local Systemaccount**, and click **OK**.  
+3. In the **Search** box, type **services**, and click **Services**.
 
-###### Verify "Deny log on through Remote Desktop Services" GPO Settings  
+4. Locate and double-click **Print Spooler**.
 
-1.  With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.  
+5. Click the **Log On** tab.
 
-2.  In the **Search** box, type **remote desktop connection**, and click **Remote Desktop Connection**.  
+6. In the **Log on as**: field, select **Local System Account**, and click **OK**.
 
-3.  In the **Computer** field, type the name of the computer that you want to connect to, and click **Connect**. (You can also type the IP address instead of the computer name.)  
+###### Verify "Deny log on through Remote Desktop Services" GPO Settings
 
-4.  When prompted, provide credentials for the system's local **Administrator** account.  
+1. With the mouse, move the pointer into the upper-right or lower-right corner of the screen. When the **Charms** bar appears, click **Search**.
 
-5.  A dialog box similar to the following should appear.  
+2. In the **Search** box, type **remote desktop connection**, and click **Remote Desktop Connection**.
 
-    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_114.png)  
+3. In the **Computer** field, type the name of the computer that you want to connect to, and click **Connect**. (You can also type the IP address instead of the computer name.)
+
+4. When prompted, provide credentials for the system's local **Administrator** account.
+
+5. A dialog box similar to the following should appear.
+
+    ![secure local admin accounts and groups](media/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups/SAD_114.png)

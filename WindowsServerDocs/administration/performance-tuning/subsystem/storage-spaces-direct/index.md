@@ -1,12 +1,10 @@
 ---
 title: Performance Tuning for Storage Spaces Direct
 description: Storage Spaces Direct automatically tunes its performance based on the cache configuration of the hardware you use, as described in this topic.
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: article
 ms.assetid: 15a519fa-37cc-4d84-a9fe-097d33bb71ea
 author: phstee
-ms.author: vshankar; danlo; clausjor; stevenek
+ms.author: vshankar
 ms.date: 4/14/2017
 ---
 # Performance tuning for Storage Spaces Direct
@@ -30,9 +28,9 @@ Note that caching over an SSD or NVMe device defaults to write caching, only. Th
 
 To view and alter the cache configuration, use the [Get-ClusterStorageSpacesDirect](https://technet.microsoft.com/library/mt634616.aspx) and [Set-ClusterStorageSpacesDirect](https://technet.microsoft.com/library/mt763265.aspx) cmdlets. The `CacheModeHDD` and `CacheModeSSD` properties define how the cache operates on capacity media of the indicated type.
 
-## See also
+## Additional References
 
-- [Understanding Storage Spaces Direct](../../../../storage/storage-spaces/understand-storage-spaces-direct.md)
-- [Planning Storage Spaces Direct](../../../../storage/storage-spaces/plan-storage-spaces-direct.md)
+- [Understanding Storage Spaces Direct](../../../../storage/storage-spaces/understand-the-cache.md)
+- [Planning Storage Spaces Direct](../../../../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md)
 - [Performance tuning for file servers](../../role/file-server/index.md)
-- [Software-Defined Storage Design Considerations Guide](https://technet.microsoft.com/library/mt243829.aspx) (for Windows Server 2012 R2 and shared SAS storage)
+- [Software-Defined Storage Design Considerations Guide](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/mt243829(v=ws.11)) (for Windows Server 2012 R2 and shared SAS storage)

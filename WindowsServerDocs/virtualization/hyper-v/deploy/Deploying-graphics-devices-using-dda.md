@@ -1,19 +1,15 @@
 ---
 title: Deploy graphics devices using Discrete Device Assignment
 description: Learn how to use DDA to deploy graphics devices in Windows Server
-ms.prod: windows-server
-
-ms.technology: hyper-v
-
 ms.topic: article
-author: chrishuybregts
-ms.author: chrihu
+ms.author: benarm
+author: BenjaminArmstrong
 ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
 ms.date: 08/21/2019
 ---
 # Deploy graphics devices using Discrete Device Assignment
 
-> Applies to: Microsoft Hyper-V Server 2016, Windows Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019  
+> Applies to: Microsoft Hyper-V Server 2016, Windows Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 Starting with Windows Server 2016, you can use Discrete Device Assignment, or DDA, to pass an entire PCIe Device into a VM.  This will allow high performance access to devices like [NVMe storage](./Deploying-storage-devices-using-dda.md) or Graphics Cards from within a VM while being able to leverage the devices native drivers.  Please visit the [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) for more details on which devices work, what are the possible security implications, etc.
 
@@ -49,7 +45,7 @@ Some hardware performs better if the VM in configured in a certain way.  For det
    ```
    Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName VMName
    ```
-   > [!TIP] 
+   > [!TIP]
    > The MMIO space values above are reasonable values to set for experimenting with a single GPU.  If after starting the VM, the device is reporting an error relating to not enough resources, you'll likely need to modify these values. Consult [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) to learn how to precisely calculate MMIO requirements.
 
 ## Dismount the Device from the Host Partition
@@ -61,7 +57,7 @@ Discrete Device Assignment provide hardware venders the ability to provide a sec
 The PCI Location path is required to dismount and mount the device from the Host.  An example location path looks like the following: `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`.  More details on located the Location Path can be found here: [Plan for Deploying Devices using Discrete Device Assignment](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
 
 ### Disable the Device
-Using Device Manager or PowerShell, ensure the device is “disabled.”  
+Using Device Manager or PowerShell, ensure the device is “disabled.”
 
 ### Dismount the Device
 Depending on if the vendor provided a mitigation driver, you'll either need to use the “-force” option or not.
@@ -97,7 +93,7 @@ You can then re-enable the device in device manager and the host operating syste
 ## Example
 
 ### Mounting a GPU to a VM
-In this example we use PowerShell to configure a VM named “ddatest1” to take the first GPU available by the manufacturer NVIDIA and assign it into the VM.  
+In this example we use PowerShell to configure a VM named “ddatest1” to take the first GPU available by the manufacturer NVIDIA and assign it into the VM.
 ```
 #Configure the VM for a Discrete Device Assignment
 $vm = 	"ddatest1"

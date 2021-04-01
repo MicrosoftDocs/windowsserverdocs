@@ -1,13 +1,11 @@
 ---
 title: bitsadmin rawreturn
-description: Windows Commands topic for **bitsadmin rawreturn**, which returns data suitable for parsing.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+description: Reference article for the bitsadmin rawreturn command, which returns data suitable for parsing.
+ms.topic: reference
 ms.assetid: bbe97130-26f6-4cdd-84f1-baf530ce38b7
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -15,24 +13,25 @@ ms.date: 10/16/2017
 
 Returns data suitable for parsing. Typically, you use this command in conjunction with the **/create** and **/get*** switches to receive only the value. You must specify this switch before other switches.
 
+> [!NOTE]
+> This command strips newline characters and formatting from the output.
+
 ## Syntax
 
 ```
 bitsadmin /rawreturn
 ```
 
-## Remarks
+## Examples
 
-- Strips newline characters and formatting from the output.
-
-## <a name=BKMK_examples></a>Examples
-
-The following example retrieves the raw data for the state of the job named *myDownloadJob*.
+To retrieve the raw data for the state of the job named *myDownloadJob*:
 
 ```
-C:\>bitsadmin /rawreturn /getstate myDownloadJob
+bitsadmin /rawreturn /getstate myDownloadJob
 ```
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

@@ -1,66 +1,72 @@
 ---
-title: ksetup:changepassword
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
+title: ksetup changepassword
+description: Reference article for the ksetup changepassword command, which uses the Key Distribution Center (KDC) password (kpasswd) value to change the password of the logged-on user.
+ms.topic: reference
 ms.assetid: 283078e7-a88f-4875-90e6-f8605e6b7ea7
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# ksetup:changepassword
+# ksetup changepassword
 
+Uses the Key Distribution Center (KDC) password (kpasswd) value to change the password of the logged-on user. The output of the command informs you of the success or failure status.
 
+You can check whether the **kpasswd** is set, by running the `ksetup /dumpstate` command and viewing the output.
 
-Uses the Key Distribution Center (KDC) password (kpasswd) value to change the password of the logged-on user. For examples of how this command can be used, see [Examples](#BKMK_Examples).
 
 ## Syntax
 
 ```
-ksetup /changepassword <OldPasswd> <NewPasswd>
+ksetup /changepassword <oldpassword> <newpassword>
 ```
 
-#### Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<OldPasswd>|States the logged-on user's existing password.|
-|\<NewPasswd>|States the logged on user's new password.|
+| Parameter | Description |
+| --------- | ----------- |
+| `<oldpassword>` | Specifies the logged-on user's existing password. |
+| `<newpassword>` | Specifies the logged on user's new password. This password must meet all the password requirements set on this computer. |
 
-## Remarks
+#### Remarks
 
-This command uses the KDC password (kpasswd) value to change the password of the logged-on user. The kpasswd, if set, is displayed in the output by running the **ksetup /dumpstate** command.
+- If the user account isn't found in the current domain, the system will ask you to supply the domain name where the user account resides.
 
-The user's new password must meet all the password requirements that are set on this computer.
+- If you want to force a password change at next logon, this command allows the use of the asterisk (*) so the user will be prompted for a new password.
 
-If the user account is not found in the current domain, the system will ask you to supply the domain name where the user account resides.
+-
 
-If you want to force a password change at next logon, this command allows the use of the asterisk (*) so the user will be prompted for a new password.
+### Examples
 
-The output of the command informs you of the success or failure status.
+To change the password of a user who is currently logged on to this computer in this domain, type:
 
-## <a name=BKMK_Examples></a>Examples
-
-Change the password of a user who is currently logged on to this computer in this domain:
 ```
 ksetup /changepassword Pas$w0rd Pa$$w0rd
 ```
-Change the password of a user who is currently logged on in the Contoso domain:
+
+To change the password of a user who is currently logged on in the Contoso domain, type:
+
 ```
 ksetup /domain CONTOSO /changepassword Pas$w0rd Pa$$w0rd
 ```
-Force the currently logged on user to change the password at the next logon:
+
+To force the currently logged on user to change the password at the next logon, type:
+
 ```
 ksetup /changepassword Pas$w0rd *
 ```
 
 ## Additional References
 
--   - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [ksetup command](ksetup.md)
+
+- [ksetup dumpstate command](ksetup-dumpstate.md)
+
+- [ksetup addkpasswd command](ksetup-addkpasswd.md)
+
+- [ksetup delkpasswd command](ksetup-delkpasswd.md)
+
+- [ksetup dumpstate command](ksetup-dumpstate.md)

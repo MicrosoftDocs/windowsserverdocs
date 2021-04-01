@@ -1,34 +1,36 @@
 ---
-title: ftp pwd_1
-description: Windows Commands topic for **** - 
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
-ms.assetid: bf40dede-5dd8-4d06-bfe4-17c8bada681f vhorne
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+title: ftp pwd
+description: Reference article for the ftp pwd command, which displays the current remote computer directory.
+ms.topic: reference
+ms.assetid: bf40dede-5dd8-4d06-bfe4-17c8bada681f
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
-# ftp: pwd_1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+# ftp pwd
 
-Displays the current remote computer directory.   
-## Syntax  
-```  
-pwd  
-```  
-#### Parameters  
-none  
-## <a name=BKMK_Examples></a>Examples  
-Display the current remote computer directory.  
-```  
-pwd  
-```  
-## Additional References  
--   - [Command-Line Syntax Key](command-line-syntax-key.md)  
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Displays the current remote computer directory.
+
+## Syntax
+
+```
+pwd
+```
+
+### Examples
+
+To display the current remote computer directory, type:
+
+```
+pwd
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

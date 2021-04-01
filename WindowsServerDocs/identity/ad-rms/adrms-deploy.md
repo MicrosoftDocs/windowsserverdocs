@@ -1,10 +1,10 @@
 ---
+description: "Learn more about: Upgrading AD RMS to Windows Server 2016"
 ms.assetid: e6fa9069-ec9c-4615-b266-957194b49e11
 title: Upgrading AD RMS to Windows Server 2016
 author: msmbaldwin
 ms.author: esaggese
 ms.date: 05/30/2019
-ms.prod: windows-server
 ms.topic: article
 ---
 
@@ -12,19 +12,19 @@ ms.topic: article
 
 ## Introduction
 
-Active Directory Rights Management Services (AD RMS) is a Microsoft service that protects sensitive documents and emails. Unlike traditional protection methods, such as firewalls and ACLs, AD RMS encryption and protection are persistent no matter where a file goes or how it is transported. 
+Active Directory Rights Management Services (AD RMS) is a Microsoft service that protects sensitive documents and emails. Unlike traditional protection methods, such as firewalls and ACLs, AD RMS encryption and protection are persistent no matter where a file goes or how it is transported.
 
 This document provides guidance for migrating from Windows Server 2012 R2 with SQL Server 2012 to Windows Server 2016 and SQL Server 2016. The same process can be used to migrate from older but supported versions of AD RMS.
-Please note that Active Directory Rights Management Services is no longer in active development, and for the latest capabilities customers should consider migrating to [Azure Information Protection](https://azure.microsoft.com/services/information-protection/), which offers a much more comprehensive set of features with more complete device and application support. 
+Please note that Active Directory Rights Management Services is no longer in active development, and for the latest capabilities customers should consider migrating to [Azure Information Protection](https://azure.microsoft.com/services/information-protection/), which offers a much more comprehensive set of features with more complete device and application support.
 
-For information on migrating to Azure Information Protection from AD RMS without having to re-protect your content see [the Azure Information Protection migration documentation](https://docs.microsoft.com/azure/information-protection/migrate-from-ad-rms-to-azure-rms).
+For information on migrating to Azure Information Protection from AD RMS without having to re-protect your content see [the Azure Information Protection migration documentation](/azure/information-protection/migrate-from-ad-rms-to-azure-rms).
 
 ## About the environment used in this guide
 
 AD FS is an optional component of an AD RMS installation. In this guide, the use of ADFS is assumed. If ADFS hasn't been used in your environment for supporting AD RMS users, you can skip all steps that refer to ADFS.
 
-In this guide, SQL Server is upgraded to SQL Server 2016 by performing a parallel install and moving the databases over via a backup. 
-Alternatively, if you can upgrade your AD RMS and ADFS database servers to SQL Server 2016 in-place, you can move to the next section in this document after having done that without having to follow the steps in this section.  
+In this guide, SQL Server is upgraded to SQL Server 2016 by performing a parallel install and moving the databases over via a backup.
+Alternatively, if you can upgrade your AD RMS and ADFS database servers to SQL Server 2016 in-place, you can move to the next section in this document after having done that without having to follow the steps in this section.
 
 ## Installation
 
@@ -32,7 +32,7 @@ Alternatively, if you can upgrade your AD RMS and ADFS database servers to SQL S
 
 The following section details implementation tasks related directly to the SQL Server 2016 configuration. This guide focuses on using the Server Manager and the SQL Server Management Studio to complete these tasks.
 
-These steps must be completed on a SQL Server 2016 installation. Install SQL Server 2016 on suitable hardware as per your organization's standard practices and policies. 
+These steps must be completed on a SQL Server 2016 installation. Install SQL Server 2016 on suitable hardware as per your organization's standard practices and policies.
 
 #### Preparing the SQL Server
 
@@ -215,15 +215,15 @@ If you are using MDE logging for troubleshooting, we recommend disabling it afte
 
 The following sections provide guidance on how to add a Windows Server 2016-based AD RMS Server into the current Windows Server 2012 R2 cluster. The server will be added into the cluster and the information will be replicated to it so that the previous AD RMS server can be deprecated to free up resources.
 
-After you add one Windows Server 2016-based AD RMS server has been added to your AD RMS cluster, all nodes based on older versions of Windows will become inactive. After this is done you can deprovision those servers (e.g. shut down, repurpose or reinstall with Windows Server 2016 to join the AD RMS cluster). 
+After you add one Windows Server 2016-based AD RMS server has been added to your AD RMS cluster, all nodes based on older versions of Windows will become inactive. After this is done you can deprovision those servers (e.g. shut down, repurpose or reinstall with Windows Server 2016 to join the AD RMS cluster).
 
 You can deploy additional AD RMS servers to the cluster to support the load on your AD RMS deployment. You may also choose to perform this action in the event of increased traffic to the AD RMS servers.
 
-This guide doesn't cover the steps required to alter the load balancing mechanisms you might be using in your environment to exclude the servers you are deprecating and to include the ones you are adding to the cluster. 
+This guide doesn't cover the steps required to alter the load balancing mechanisms you might be using in your environment to exclude the servers you are deprecating and to include the ones you are adding to the cluster.
 
 #### Adding a 2016 AD RMS Server
 
-If your AD RMS cluster is using a Hardware Security Module instead of a Centrally Managed key for its Server Licensor Certificate, you will need to install the software and other HSM artifacts (e.g. key and configuragtion files) on the server before installing AD RMS. You will also need to connect the HSM to the server, either physically or through the relevant network configurations. Follow your HSM guidance for these steps. 
+If your AD RMS cluster is using a Hardware Security Module instead of a Centrally Managed key for its Server Licensor Certificate, you will need to install the software and other HSM artifacts (e.g. key and configuragtion files) on the server before installing AD RMS. You will also need to connect the HSM to the server, either physically or through the relevant network configurations. Follow your HSM guidance for these steps.
 
 **To add a 2016 AD RMS Server**
 
@@ -253,12 +253,12 @@ If your AD RMS cluster is using a Hardware Security Module instead of a Centrall
 
 13. Once logged back on, open **Server Manager** select **Tools** and then **Active Directory Rights Management**. The management window should appear and indicate that the cluster has the additional server in the cluster.
 
-14. If the AD RMS Mobile Device Extension was installed in the original AD RMS cluster, you need to also install the MDE in the updated cluster nodes. Follow the instructions in the MDE documentation to add MDE to your AD RMS cluster. 
-At this point, you can repurpose all the preexisting nodes or upgrade them to Windows Server 2016 and re-join them to the AD RMS cluster using the same process outlined above. 
+14. If the AD RMS Mobile Device Extension was installed in the original AD RMS cluster, you need to also install the MDE in the updated cluster nodes. Follow the instructions in the MDE documentation to add MDE to your AD RMS cluster.
+At this point, you can repurpose all the preexisting nodes or upgrade them to Windows Server 2016 and re-join them to the AD RMS cluster using the same process outlined above.
 
 ### Configuring Windows Server 2016 Web Application Proxy (WAP)
 
-The following sections provide guidance on operational tasks you may need to perform on your Web Application Proxy deployment. This is an optional step, not required if you are publishing AD RMS to the Internet through other mechanisms. 
+The following sections provide guidance on operational tasks you may need to perform on your Web Application Proxy deployment. This is an optional step, not required if you are publishing AD RMS to the Internet through other mechanisms.
 
 #### Adding a Windows Server 2016 WAP Server
 

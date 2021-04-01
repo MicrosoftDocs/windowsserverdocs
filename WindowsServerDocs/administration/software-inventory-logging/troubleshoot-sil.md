@@ -1,20 +1,14 @@
 ---
 title: Troubleshoot Software Inventory Logging
 description: Describes how to resolve common Software Inventory Logging deployment issues.
-
-ms.prod: windows-server
-ms.technology: manage-software-inventory-logging
-
-
-
 ms.topic: article
 author: brentfor
-ms.author: coreyp
-manager: lizapo
+ms.author: brentf
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# Troubleshoot Software Inventory Logging 
+# Troubleshoot Software Inventory Logging
 
 >Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
@@ -32,7 +26,7 @@ Before you start troubleshooting SIL, you should have a good understanding of it
 
 The SIL framework has two main components and two channels of communication. Flow of data over both channels, and between both components, is necessary for a successful SIL deployment (this assumes a virtualized, or cloud, environment -- purely physical environments only need one of the communication channels). You'll need to understand the components and data flow of SIL to deploy it correctly. After watching the overview videos above, you will have seen the architectural diagram that illustrates the components and the flow of data over both channels. Orange arrows indicate remote queries over WinRM, green dashed arrows indicate HTTPS posts to the SIL Aggregator from SIL in each WS end node:
 
-![](../media/software-inventory-logging/image1.png)
+![SIL framework diagram](../media/software-inventory-logging/image1.png)
 
 If you encounter a problem with SIL, it is likely related to a disruption in the flow of data over the channels, and between the components. Following are the most common issues related to data flow, followed in the next section by the troubleshooting steps to resolve each of the three issues:
 
@@ -60,7 +54,7 @@ If you are troubleshooting data in the report (or missing from the report) that 
 
 If there is still no data in the report, proceed with troubleshooting the three data flow issues.
 
-### Data flow issue 1 
+### Data flow issue 1
 
 #### No data in the report when using the Publish-SilReport cmdlet (or data is generally missing)
 
@@ -82,7 +76,7 @@ There are two ways to check for data: **Powershell** or **SSMS**.
 
 2. Run **get-silvmhost**
    - If there are no hosts listed, then add hosts using the **add-silvmhost** cmdlet.
-   - If hosts are listed as **Unknown**, then go to Issue 2. 
+   - If hosts are listed as **Unknown**, then go to Issue 2.
    d - If hosts are listed but there is no **datetime** under the **Recent Poll** column, then go to **Issue 2** below.
 
 **Other related commands**
@@ -94,18 +88,18 @@ There are two ways to check for data: **Powershell** or **SSMS**.
 #### SSMS
 
 n**Check for data from hosts being polled:**
- 
+
 1. Open **SSMS** and connect to the **Database Engine**.
-2. Expand **Databases**, expand the **SoftwareInventoryLogging** database, expand **Tables**, right click the **HostInfo** table and then select top 1000 rows. 
+2. Expand **Databases**, expand the **SoftwareInventoryLogging** database, expand **Tables**, right click the **HostInfo** table and then select top 1000 rows.
 
     If there is data for one or more hosts in the table, then polling for that/those host(s) has been successful at least once.
 
-   **Check for data from VMs, or standalone servers, that have pushed data over HTTPS:** 
+   **Check for data from VMs, or standalone servers, that have pushed data over HTTPS:**
 
 3. Open **SSMS** and connect to the **Database Engine**.
-   a2. Expand **Databases**, expand the **SoftwareInventoryLogging** database, expand **Tables**, right click the **VMInfo** table and then select the top 1000 rows. 
+   a2. Expand **Databases**, expand the **SoftwareInventoryLogging** database, expand **Tables**, right click the **VMInfo** table and then select the top 1000 rows.
 
-    >[!NOTE] 
+    >[!NOTE]
     >Each row for a unique VM will represent one processed **bmil** file successfully pushed over HTTPS and processed by the SIL Aggregator. Bmil files are proprietary files used by SIL, one is created each our by each SIL instance Note that this is only necessary when SIL and SILA are used in virtual environments. Otherwise only HTTPS traffic is necessary/expected).
 
    All data in the database should be reflected in SIL reports after the cube has processed.
@@ -139,7 +133,7 @@ Once the hosts are polling correctly, you will be able to see the data for these
 
    - If there is an error:
      - Ensure the **targeturi** has **https://** in the entry.
-     - Ensure all pre-requisites are met 
+     - Ensure all pre-requisites are met
      - Ensure all required updates for Windows Server are installed (see Prerequisites for SIL). A quick way to check (on WS 2012 R2 only) is to look for these using the following cmdlet: **Get-SilWindowsUpdate \*3060, \*3000**
      - Ensure the certificate being used to authenticate with the aggregator is installed in the correct store on the local server to be inventoried with **SilLogging**.
      - On the SIL Aggregator, be sure the certificate thumbprint of the certificate being used to authenticate with the aggregator is added to list using the **Set-SilAggregator** **–AddCertificateThumbprint** cmdlet.
@@ -153,10 +147,10 @@ Once the hosts are polling correctly, you will be able to see the data for these
 
 If there is no error, and no output on the console, then the data push/publish from the Windows Server end node to SIL Aggregator over HTTPS was successful. To follow the path of the data forward, login to the SIL Aggregator as an administrator and examine the data file(s) that have arrived. Go to **Program Files (x86)** &gt; **Microsoft SIL Aggregator** &gt; SILA directory. You can watch data files arriving in real time.
 
->[!NOTE] 
+>[!NOTE]
 >More than one data file may have been transferred with the **Publish-SilData** cmdlet. SIL on the end node will cache failed pushes for up to 30 days. On the next successful push ALL data files will go to the Aggregator for processing. In this way, a newly set up SIL Aggregator could show data from an end node well before its own setup.
 
->[!NOTE] 
+>[!NOTE]
 >There are rules SILA follows when processing data files in the SILA directory that are only relevant in low traffic situations. High traffic will always trigger processing in real time. The default behavior is that processing will commence either after 100 files arrive in the directory, or after 15 minutes. When troubleshooting end-to-end in a small environment, it is often necessary to wait 15 minutes.
 
 After these files are processed, you will see the data in the database.
