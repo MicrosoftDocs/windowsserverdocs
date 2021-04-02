@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/23/2021
+ms.date: 04/02/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -28,6 +28,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Updated background installation functionality to perform silently for the client auto-update feature.
+- Fixed an issue where the client forwarded multiple attempts to launch a desktop to the same session. Depending on your group policy configuration, the session host can now allow the creation of multiple sessions for the same user on the same session host or disconnect the previous connection by default. This behavior wasn't consistent before version 1.2.1755.
 - Added the option to allow multiple desktop sessions from the client.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates for Teams on Windows Virtual Desktop, including the following:
