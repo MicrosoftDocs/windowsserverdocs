@@ -4,7 +4,7 @@ description: Learn about the different Remote Desktop clients available for all 
 ms.topic: article
 ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
 author: HeidiLohr
-manager: lizross
+manager: femila
 ms.author: helohr
 ms.date: 04/02/2021
 ms.localizationpriority: medium

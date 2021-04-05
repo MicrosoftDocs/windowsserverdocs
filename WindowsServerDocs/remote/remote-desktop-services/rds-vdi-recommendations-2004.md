@@ -7,7 +7,7 @@ ms.technology: remote-desktop-services
 author: Heidilohr
 ms.author: helohr
 ms.topic: article
-manager: 
+manager: femila
 ms.date: 09/24/2020
 ---
 
