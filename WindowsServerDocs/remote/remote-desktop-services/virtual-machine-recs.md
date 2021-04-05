@@ -5,7 +5,7 @@ ms.author: helohr
 ms.date: 02/16/2021
 ms.topic: article
 author: Heidilohr
-manager: lizross
+manager: femila
 ---
 # Virtual machine sizing guidelines
 
