@@ -4,7 +4,7 @@ description: Troubleshooting input method editor problems in RemoteApp scenarios
 ms.reviewer: elluthra
 ms.topic: troubleshooting
 author: Heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
 ms.date: 10/06/2020
 ms.localizationpriority: medium

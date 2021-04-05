@@ -4,7 +4,7 @@ description: General information about the Android client.
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
 ms.date: 02/04/2020
 ms.localizationpriority: medium
