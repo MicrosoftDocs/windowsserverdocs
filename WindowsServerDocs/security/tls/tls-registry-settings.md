@@ -286,8 +286,7 @@ Default server cache time: 10 hours
 
 ## TLS, DTLS and SSL Protocol Version Settings
 
-Schannel SSP implements versions of the TLS, DTLS and SSL protocols. Different Windows releases support different protocol versions as described here: 
-https://docs.microsoft.com/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-. The set of (D)TLS and SSL versions available system-wide 
+Schannel SSP implements versions of the TLS, DTLS and SSL protocols. Different Windows releases support different [protocol versions](https://docs.microsoft.com/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-). The set of (D)TLS and SSL versions available system-wide 
 can be restricted (but not expanded) by SSPI callers specifying either [SCH_CREDENTIALS](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-sch_credentials) or 
 [SCHANNEL_CRED](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-schannel_cred) structure in the 
 [AcquireCredentialsHandle](https://docs.microsoft.com/windows/win32/secauthn/acquirecredentialshandle--schannel) call. It is recommended that 
