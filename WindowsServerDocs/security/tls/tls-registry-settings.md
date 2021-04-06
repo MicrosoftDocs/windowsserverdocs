@@ -5,7 +5,7 @@ ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic
-ms.date: 02/28/2019
+ms.date: 04/06/2021
 ---
 
 # Transport Layer Security (TLS) registry settings
@@ -284,7 +284,7 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 Default server cache time: 10 hours
 
-## TLS, DTLS and SSL Protocol Version Settings
+## TLS, DTLS and SSL protocol version settings
 
 Schannel SSP implements versions of the TLS, DTLS and SSL protocols. Different Windows releases support different protocol versions as described here: 
 https://docs.microsoft.com/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-. The set of (D)TLS and SSL versions available system-wide 
@@ -321,17 +321,17 @@ In order to override a system default and set a supported (D)TLS or SSL protocol
 
 The following example shows TLS 1.0 client set to the **Enabled** state:
 
-![TLS 1.0 client enabled](images/tls10-client-enabled.png)
+![TLS 1.0 client enabled](images/tls-10-client-enabled.png)
 
 In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled by default** state, create DWORD registry values named "Enabled" 
 and "DisabledByDefault" with a non-zero value under the corresponding version-specific subkey. The following example shows TLS 1.0 server set to the **Disabled by default** state:
 
-![TLS 1.0 server disabled by default](images/tls10-server-disabledbydefault.png)
+![TLS 1.0 server disabled by default](images/tls-10-server-disabledbydefault.png)
 
 In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled** state, create a DWORD registry value named "Enabled", with a value of zero,
 under the corresponding version-specific subkey. The following example shows TLS 1.0 server set to the **Disabled** state:
 
-![TLS 1.0 server disabled](images/tls10-server-disabled.png)
+![TLS 1.0 server disabled](images/tls-10-server-disabled.png)
 
 Switching a (D)TLS or SSL protocol version to **Disabled by default** or **Disabled** state may cause 
 [AcquireCredentialsHandle](https://docs.microsoft.com/windows/win32/secauthn/acquirecredentialshandle--schannel) calls to fail due to the lack of protocol versions 
