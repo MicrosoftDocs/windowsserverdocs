@@ -286,10 +286,11 @@ Default server cache time: 10 hours
 
 ## TLS, DTLS, and SSL protocol version settings
 
-Schannel SSP implements versions of the TLS, DTLS, and SSL protocols. Different Windows releases support different protocol versions, as described in
-[Protocols in TLS/SSL (Schannel SSP)](https://docs.microsoft.com/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-). 
-The set of (D)TLS and SSL versions available system-wide can be restricted (but not expanded) by SSPI callers specifying either [SCH_CREDENTIALS](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-sch_credentials) or [SCHANNEL_CRED](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-schannel_cred) structure in the [AcquireCredentialsHandle](https://docs.microsoft.com/windows/win32/secauthn/acquirecredentialshandle--schannel) call. 
-It is recommended that SSPI callers use the system defaults, rather than imposing protocol version restrictions.
+Schannel SSP implements versions of the TLS, DTLS, and SSL protocols. Different Windows releases support different [protocol versions](https://docs.microsoft.com/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-). The set of (D)TLS and SSL versions available system-wide 
+can be restricted (but not expanded) by SSPI callers specifying either [SCH_CREDENTIALS](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-sch_credentials) or 
+[SCHANNEL_CRED](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-schannel_cred) structure in the 
+[AcquireCredentialsHandle](https://docs.microsoft.com/windows/win32/secauthn/acquirecredentialshandle--schannel) call. It is recommended that 
+SSPI callers use the system defaults, rather than imposing protocol version restrictions.
 
 A supported (D)TLS or SSL protocol version can exist in one of the following states:
 - **Enabled**: unless the SSPI caller explicitly disables this protocol version using the [SCH_CREDENTIALS](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-sch_credentials) structure, 
