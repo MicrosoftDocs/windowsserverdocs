@@ -73,7 +73,7 @@ The Storage Migration Service version shipped in Windows Server 2019 doesn't sup
 
 ## Can I migrate from sources other than Windows Server?
 
-The Storage Migration Service supports migrating from Samba Linux servers after installation of cumulative update [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) or subsequent updates. See the requirements for a list of supported Samba versions and Linux distros. The Storage Migration Service supports migating from NetApp FAS arrays after installation of cumulative update [KBxxxxxxxx](foo)
+The Storage Migration Service supports migrating from Samba Linux servers after installation of cumulative update [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) or subsequent updates. See the requirements for a list of supported Samba versions and Linux distros. The Storage Migration Service supports migating from NetApp FAS arrays after installation of cumulative update [KB5001384](https://support.microsoft.com/topic/april-20-2021-security-update-kb5001384-e471f445-59be-42cb-8c57-5db644cbc698).   
 
 ## Can I migrate previous file versions?
 
