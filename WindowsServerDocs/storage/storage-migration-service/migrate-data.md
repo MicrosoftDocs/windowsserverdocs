@@ -9,7 +9,7 @@ ms.topic: article
 ---
 # Use Storage Migration Service to migrate a server
 
-This topic discusses how to migrate a server, including its files and configuration, to another server by using [Storage Migration Service](overview.md) and Windows Admin Center. Migrating takes three steps once you've installed the service and opened any necessary firewall ports: inventory your servers, transfer data, and cut over to the new servers.
+This topic discusses how to migrate a Windows server, a Windows Failover Cluster, a Samba server, or a NetApp FAS array, including their files and configuration, to another Windows server or Windows Failover Cluster by using [Storage Migration Service](overview.md) and Windows Admin Center. Migrating takes three steps once you've installed the service and opened any necessary firewall ports: inventory your servers, transfer data, and cut over to the new servers.
 
 ## Step 0: Install Storage Migration Service and check firewall ports
 
@@ -21,7 +21,7 @@ Before you get started, install Storage Migration Service and make sure that the
     ![Screenshot of the Storage Migration Service page showing the Install button](media/migrate/install.png)
      **Figure 1: Installing Storage Migration Service**
 4. Install the Storage Migration Service proxy on all destination servers running Windows Server 2019. This doubles the transfer speed when installed on destination servers. <br>To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, > **Features**, select **Storage Migration Service Proxy**, and then select **Install**.
-5. If you intend to migrate to or from Windows Failver Clusters, install the Failover Clustering tools on the orchestrator server. <br>To do so, connect to the orchestrator server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, > **Features**, > **Remote Server Administration Tools**, > **Feature Administration Tools**, select **Failover Clustering Tools**, and then select **Install**.
+5. If you intend to migrate to or from Windows Failver Clusters, install the Failover Clustering tools on the orchestrator server. This happens automatically in the latest version of Windows Admin Center when you select **Migrate from failover clusters** in the **Job Settings** option of Inventory.  <br>To install outside of the Storage Migration Service Inventory phase, connect to the orchestrator server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, > **Features**, > **Remote Server Administration Tools**, > **Feature Administration Tools**, select **Failover Clustering Tools**, and then select **Install**.
 6. On all source servers and on any destination servers running Windows Server 2012 R2 or Windows Server 2016, in Windows Admin Center, connect to each server, go to **Server Manager** (in Windows Admin Center) > **Firewall** > **Incoming rules**, and then check that the following rules are enabled:
     - File and Printer Sharing (SMB-In)
     - Netlogon Service (NP-In)
@@ -36,16 +36,22 @@ Before you get started, install Storage Migration Service and make sure that the
 
 In this step, you specify what servers to migrate and then scan them to collect info on their files and configurations.
 
-1. Select **New job**, name the job, and then select whether to migrate Windows servers and clusters or Linux servers that use Samba. Then select **OK**.
-2. On the **Enter credentials** page, type admin credentials that work on the servers you want to migrate from, and then select **Next**. <br>If you're migrating from Linux servers, instead enter credentials on the **Samba credentials** and **Linux credentials** pages, including an SSH password or private key.
+1. Select **New job**, name the job, and then select whether to migrate Windows servers and clusters, Linux servers that use Samba, or NetApp FAS array. Then select **OK**.
+2. On the **Check prerequisites** page, review the prerequisites. Then select **Next**.
+3. If you are migrating from a NetApp FAS Array, you will see a **Select the NetApp FAS array** page. Enter your NetApp FAS Array IP address, admin credential, and password. Then select **Next**.
+4. If you are migrating from a Windows server or cluster, you will see an **Enter credentials** page. Type admin credentials that work on the servers you want to migrate from, and then select **Next**. <br>If you're migrating from Linux servers, instead enter credentials on the **Samba credentials** and **Linux credentials** pages, including an SSH password or private key. <br>If you are migrating from a NetApp FAS Array, you will see a **Enter credentials and prescan NetApp** page. Type admin credentials that work on the NetApp CIFS servers you want to migrate from, then click **Start scan** to list all the NetApp CIFS servers running on the NetApp FAS array. You can uncheck any CIFS servers you don't want to migrate. Then select **Next**.
+5. On the **Install required tools** page, confirm that required tools have installed without error. Then select **Next**. 
+6. If you are migrating from a Windows server, cluster or Linux Samba, you will see a **Add and scan devices** page. Select **Add a device**, then search Active Directory for a source server or name of a clustered file server. You can use an asterisk to perform wildcard partial searches. You can also type an exact source server name or the name of a clustered file server. Select **OK**. <br>Repeat this for any other servers that you want to inventory. If you are migrating from a NetApp FAS array, you will see a **Select and scan servers** page and there will be no need to add a device as they will already be listed. 
+7. Select **Validate** and ensure that validation passes for all servers. 
 
-3. Select **Add a device**, type a source server name or the name of a clustered file server, and then select **OK**. <br>Repeat this for any other servers that you want to inventory.
+    > [!NOTE]
+    > An error for backup privileges is *expected* from NetApp CIFS servers. You can safely ignore this error. 
 
-4. Select **Start scan**.<br>The page updates to shows when the scan is complete.
-    ![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
+8. Select **Start scan**.<br>The page updates to shows when the scan is complete.
+    ![Screenshot showing a server ready to be scanned](media/migrate/inventory.png) <--- @jason gerend, new screenshot here from "\\uglymonkey\shared\jason\inventory-new.png"
      **Figure 2: Inventorying servers**
-5. Select each server to review the shares, configuration, network adapters, and volumes that were inventoried. <br><br>Storage Migration Service won't transfer files or folders that we know could interfere with Windows operation, so in this release you'll see warnings for any shares located in the Windows system folder. You'll have to skip these shares during the transfer phase. For more info, see [What files and folders are excluded from transfers](faq.md#what-files-and-folders-are-excluded-from-transfers).
-6. Select **Next** to move on to transferring data.
+9. Select each server to review the shares, configuration, network adapters, and volumes that were inventoried. <br><br>Storage Migration Service won't transfer files or folders that we know could interfere with Windows operation, so you'll see warnings for any shares located in the Windows system folder. You'll have to skip these shares during the transfer phase. For more info, see [What files and folders are excluded from transfers](faq.md#what-files-and-folders-are-excluded-from-transfers).
+8. Select **Next** to move on to transferring data.
 
 ## Step 2: Transfer data from your old servers to the destination servers
 
@@ -65,7 +71,11 @@ In this step you transfer data after specifying where to put it on the destinati
     > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ]
 
 3. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder), and then select **Next**.
-   ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
+
+    > [!NOTE]
+    > If migrating NetApp CIFS servers, source volumes will not have letters. You can map these volumes to any destination volumes you wish and you can map multiple NetApp CIFS volumes to the same destination volume. New root folder patchs will be created to avoid any folder overwrites or collisions, and then shares will be created that the correct level. The **Shares** detail pane will show the folder structure you are about to create.
+        
+   ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png) <--- @jason gerend please add new screenshot "\\uglymonkey\shared\jason\transfer-new.png"
     **Figure 3: A source server and where its storage will be transferred to**
 4. Add a destination server and mappings for any more source servers, and then select **Next**.
 5. On the **Adjust transfer settings** page, specify whether to migrate local users and groups on the source servers and then select **Next**. This lets you recreate any local users and groups on the destination servers so that file or share permissions set to local users and groups aren't lost. Here are the options when migrating local users and groups:
@@ -76,18 +86,21 @@ In this step you transfer data after specifying where to put it on the destinati
 
    > [!NOTE]
    > Migrated user accounts are disabled on the destination and assigned a 127-character password that's both complex and random, so you'll have to enable them and assign a new password when you're finished to keep using them. This helps ensure any old accounts with forgotten and weak passwords on the source don't continue to be a security problem on the destination. You might also want to check out [Local Administrator Password Solution (LAPS)](https://www.microsoft.com/download/details.aspx?id=46899) as a way to manage local Administrator passwords.
+   
+   >     > [!NOTE]
+    > If migrating NetApp CIFS servers, you cannot migrate local users and groups.
 
 6. Select **Validate** and then select **Next**.
 7. Select **Start transfer** to start transferring data.<br>The first time you transfer, we'll move any existing files in a destination to a backup folder. On subsequent transfers, by default we'll refresh the destination without backing it up first. <br>Also, Storage Migration Service is smart enough to deal with overlapping shares—we won't copy the same folders twice in the same job.
 8. After the transfer completes, check out the destination server to make sure everything transferred properly. Select **Error log only** if you want to download a log of any files that didn't transfer.
 
    > [!NOTE]
-   > If you want to keep an audit trail of transfers or are planning to perform more than one transfer in a job, click **Transfer log** or the other log save options to save a CSV copy. Every subsequent transfer overwrites the database information of a previous run.
+   > If you want to keep an audit trail of transfers or are planning to perform more than one transfer in a job, click **Transfer log** or the other log save options to save a CSV copy. Every subsequent transfer overwrites the database information of a previous run. If you are migrating a large number of files, you may need to adjust the timeout for saving this CSV file. For more see [Storage Migration Service times out downloading the transfer error CSV](known-issues.md#storage-migration-service-times-out-downloading-the-transfer-error-csv)
 
 At this point, you have three options:
 
-- **Go to the next step**, cutting over so that the destination servers adopt the identities of the source servers.
-- **Consider the migration complete** without taking over the source servers' identities.
+- **Go to the next step**, cutting over so that the destination servers adopt the identities of the source servers. 
+- **Consider the migration complete** without taking over the source servers' identities. 
 - **Transfer again**, copying only files that were updated since the last transfer.
 
 If your goal is to sync the files with Azure, you could set up the destination servers with Azure File Sync after transferring files, or after cutting over to the destination servers (see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning)).
@@ -98,15 +111,12 @@ In this step you cut over from the source servers to the destination servers, mo
 
 1. If you've navigated away from the migration job, in Windows Admin Center, go to **Server Manager** > **Storage Migration Service** and then select the job that you want to complete.
 2. On the **Cut over to the new servers** > **Enter credentials** page, select **Next** to use the credentials you typed previously.
-
-   If your destination is a clustered file server, you might need to provide credentials with permissions to remove the cluster from the domain and then add it back with the new name.
-
 3. On the **Configure cutover** page, specify which network adapter on the destination should take over the settings from each adapter on the source. This moves the IP address from the source to the destination as part of the cutover, giving the source server a new DHCP or static IP address. You have the option to skip all network migrations or certain interfaces.
-4. Specify what IP address to use for the source server after cutover moves its address to the destination. You can use DHCP or a static address. If using a static address, the new subnet must be the same as the old subnet or cutover will fail.
-    ![Screenshot showing a source server and its IP addresses and computer names and what they'll be replaced with after the cutover](media/migrate/cutover.png)
+4. Specify what IP address to use for the source server after cutover moves its address to the destination. If migrating a Windows server, cluster, or Linux Samba, you can use DHCP or specify a new static IP address. If using a static address, the new subnet must be the same as the old subnet or cutover will fail. If you are migrating a NetApp FAS array, you will use NetApp subnets instead of DHCP.
+    ![Screenshot showing a source server and its IP addresses and computer names and what they'll be replaced with after the cutover](media/migrate/cutover.png) <-- @jason gerend please replace with "\\uglymonkey\shared\jason\cutover-new.png"
     **Figure 4: A source server and how its network configuration will move to the destination**
 5. Specify how to rename the source server after the destination server takes over its name. You can use a randomly generated name or type one yourself. Then select **Next**.
-6. Select **Next** on the **Adjust cutover settings** page.
+6. On the **Adjust settings** page, you might need to provide new AD user credentials with permissions to remove the source computer or clustered file server from the domain and then add them back with a new name if your source migration credentails do not have that permission.
 7. Select **Validate** on the **Validate source and destination device** page, and then select **Next**.
 8. When you're ready to perform the cutover, select **Start cutover**. <br>Users and apps might experience an interruption while the address and names are moved and the servers restarted several times each, but will otherwise be unaffected by the migration. How long cutover takes depends on how quickly the servers restart, as well as Active Directory and DNS replication times.
 
