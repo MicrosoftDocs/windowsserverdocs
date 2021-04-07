@@ -10,12 +10,11 @@ ms.topic: article
 # Use Storage Migration Service to migrate a server
 
 This topic discusses how to migrate a Windows server, a Windows Failover Cluster, a Samba server, or a NetApp FAS array, including their files and configuration, to another Windows server or Windows Failover Cluster by using [Storage Migration Service](overview.md) and Windows Admin Center. Migrating takes three steps once you've installed the service and opened any necessary firewall ports: inventory your servers, transfer data, and cut over to the new servers.
-
 ## Step 0: Install Storage Migration Service and check firewall ports
 
 Before you get started, install Storage Migration Service and make sure that the necessary firewall ports are open.
 
-1. Check the [Storage Migration Service requirements](overview.md#requirements) and install [Windows Admin Center](../../manage/windows-admin-center/overview.md) on your PC or a management server if you haven't already. If migrating domain-joined source computers, you must install and run the Storage Migration Service on a server joined to the same domain or forest as the source computers.
+1. Check the [Storage Migration Service requirements](overview.md#requirements) and install the latest [Windows Admin Center](../../manage/windows-admin-center/overview.md) on your PC or a management server if you haven't already. Ensure that you upgrade the Storage Migration Service tool if a newer version is available in the feed. If migrating domain-joined source computers, you must install and run the Storage Migration Service on a server joined to the same domain or forest as the source computers.
 2. In Windows Admin Center, connect to the orchestrator server running Windows Server 2019. <br>This is the server that you'll install Storage Migration Service on and use to manage the migration. If you're migrating only one server, you can use the destination server as long as it's running Windows Server 2019. We recommend you use a separate orchestration server for any multi-server migrations.
 3. Go to **Server Manager** (in Windows Admin Center) > **Storage Migration Service** and select **Install** to install Storage Migration Service and its required components (shown in Figure 1).
     ![Screenshot of the Storage Migration Service page showing the Install button](media/migrate/install.png)
