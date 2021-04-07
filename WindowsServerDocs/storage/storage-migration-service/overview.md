@@ -50,7 +50,7 @@ To use Storage Migration Service, you need the following:
 - A **source server** or **failover cluster** to migrate files and data from
 - A **destination server** running Windows Server 2019 (clustered or standalone) to migrate to. Windows Server 2016 and Windows Server 2012 R2 work as well but are around 50% slower
 - An **orchestrator server** running Windows Server 2019 to manage the migration  <br>If you're migrating only a few servers and one of the servers is running Windows Server 2019, you can use that as the orchestrator. If you're migrating more servers, we recommend using a separate orchestrator server.
-- A **PC or server running [Windows Admin Center](../../manage/windows-admin-center/overview.md)** to run the Storage Migration Service user interface, unless you prefer using PowerShell to manage the migration. The Windows Admin Center and Windows Server 2019 version must both be at least version 1809.
+- A **PC or server running the latest [Windows Admin Center](../../manage/windows-admin-center/overview.md)** to run the Storage Migration Service user interface, along with the latest Storage Migration Service tool (extension) available from the feed. The Windows Admin Center must be at least version 2103.
 
 We strongly recommend that the orchestrator and destination computers have at least two cores or two vCPUs, and at least 2 GB of memory. Inventory and transfer operations are significantly faster with more processors and memory.
 
@@ -120,14 +120,14 @@ The destination server must run one of the following operating systems:
 - Windows Server 2016
 - Windows Server 2012 R2
 
-The destination servers can be standalone servers or part of a failover cluster. They cannot run Azure Stack HCI or use a non-Microsoft clustering add-on. 
+The destination servers can be standalone servers or part of a Windows failover cluster. They cannot run Azure Stack HCI or use a non-Microsoft clustering add-on. 
 
 > [!TIP]
-> Destination servers running Windows Server 2019 or Windows Server, Semi-Annual Channel or later have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service, which also opens the necessary firewall ports if they're not already open.
-
+> Destination servers running Windows Server 2019 or Windows Server, Semi-Annual Channel or later have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service.
+> 
 ## Azure VM Migration
 
-Windows Admin Center version 1910 allows you to deploy Azure virtual machines. This integrates VM deployment into Storage Migration Service. Instead of building new servers and VMs in the Azure Portal by hand prior to deploying your workload - and possibly missing required steps and configuration - Windows Admin Center can deploy the Azure VM, configure its storage, join it to your domain, install roles, and then set up your distributed system.
+Windows Admin Center integrates Azure IaaS deployment into Storage Migration Service. Instead of building new servers and VMs in the Azure Portal by hand prior to deploying your workload - and possibly missing required steps and configuration - Windows Admin Center can deploy the Azure IaaS VM, configure its storage, join it to your domain, install roles, and then set up your distributed system.
 
    Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
    > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ]
@@ -136,7 +136,7 @@ If you want to lift and shift virtual machines to Azure without migrating to a l
 
 ## What's new in Storage Migration Service
 
-Windows Admin Center version 1910 adds the ability to deploy Azure virtual machines. This integrates Azure VM deployment into Storage Migration Service. For more info, see [Azure VM migration](#azure-vm-migration).
+Windows Admin Center version 1910 added the ability to deploy Azure virtual machines. This integrates Azure VM deployment into Storage Migration Service. For more info, see [Azure VM migration](#azure-vm-migration).
 
 The following post-RTM features are available when running the Storage Migration Server orchestrator on Windows Server 2019 with [KB5001384](https://support.microsoft.com/topic/april-20-2021-security-update-kb5001384-e471f445-59be-42cb-8c57-5db644cbc698) installed:   
 
