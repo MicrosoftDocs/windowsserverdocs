@@ -1,6 +1,6 @@
 ---
 title: Storage Migration Service overview
-description: Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows and Linux servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
+description: Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows, Linux, and NetApp CIFS servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
@@ -11,7 +11,7 @@ ms.topic: article
 
 >Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server (Semi-Annual Channel)
 
-Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows and Linux servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
+Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows, Linux, and NetApp CIFS servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
 
 This topic discusses why you'd want to use Storage Migration Service, how the migration process works, what the requirements are for source and destination servers, and [what's new in Storage Migration Service](#whats-new-in-storage-migration-service).
 
@@ -24,7 +24,7 @@ Use Storage Migration Service because you've got a server (or a lot of servers) 
 - Optionally take over the identity of the source servers (also known as cutting over) so that users and apps don't have to change anything to access existing data
 - Manage one or multiple migrations from the Windows Admin Center user interface
 
-![Diagram showing Storage Migration Service migrating files & configuration from source servers to destination servers, Azure VMs, or Azure File Sync.](media/overview/storage-migration-service-diagram.png)
+![Diagram showing Storage Migration Service migrating files & configuration from source servers to destination servers, Azure VMs, or Azure File Sync.](media/overview/storage-migration-service-diagram.png) <-- @jason gerend please update with new diagram "\\uglymonkey\shared\jason\latest architecture diagram.png"
 
 **Figure 1: Storage Migration Service sources and destinations**
 
@@ -36,7 +36,7 @@ Migration is a three-step process:
 2. **Transfer (copy) data** from the source servers to the destination servers.
 3. **Cut over to the new servers** (optional).<br>The destination servers assume the source servers' former identities so that apps and users don't have to change anything. <br>The source servers enter a maintenance state where they still contain the same files they always have (we never remove files from the source servers) but are unavailable to users and apps. You can then decommission the servers at your convenience.
 
-![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
+![Screenshot showing a server ready to be scanned](media/migrate/inventory.png) <-- @jason gerend please update with new screenshot "\\uglymonkey\shared\jason\inventory-new.png"
 **Figure 2: Storage Migration Service inventorying servers**
 
 Here's a video showing how to use Storage Migration Service to take a server, such as a Windows Server 2008 R2 server that's now out of support, and move the storage to a newer server.
@@ -99,7 +99,7 @@ The source server must run one of the following operating systems:
 
 Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.
 
-You can migrate the following additional source types if the orchestrator is running Windows Server, version 1903 or later, or if the orchestrator is running an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
+You can migrate the following additional source types if the orchestrator is running Windows Server 2019 with [KBxxxxxxx](foo) installed:
 
 - Failover clusters running Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 - Linux servers that use Samba. We've tested the following:
@@ -109,6 +109,7 @@ You can migrate the following additional source types if the orchestrator is run
     - SUSE Linux Enterprise Server (SLES) 11 SP4
     - Ubuntu 16.04 LTS and 12.04.5 LTS
     - Samba 4.8, 4.7, 4.3, 4.2, and 3.6
+ - NetApp FAS arrays hosting NetApp CIFS server, running NetApp ONTAP 9.  
 
 ### Requirements for destination servers
 
@@ -137,13 +138,17 @@ If you want to lift and shift virtual machines to Azure without migrating to a l
 
 Windows Admin Center version 1910 adds the ability to deploy Azure virtual machines. This integrates Azure VM deployment into Storage Migration Service. For more info, see [Azure VM migration](#azure-vm-migration).
 
-The following new features are available when running the Storage Migration Server orchestrator on Windows Server, version 1903 or later, or an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
+The following new features are available when running the Storage Migration Server orchestrator on Windows Server 2019 with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
 
 - Migrate local users and groups to the new server
 - Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters
 - Migrate storage from a Linux server that uses Samba
 - More easily sync migrated shares into Azure by using Azure File Sync
 - Migrate to new networks such as Azure
+
+The following new feature is available when running the Storage Migration Server orchestrator on Windows Server 2019 with [KBxxxxxxx](foo) installed:   
+
+- Migrate NetApp CIFS servers from NetApp FAS arrays to Windows servers and clusters
 
 ## Additional References
 
