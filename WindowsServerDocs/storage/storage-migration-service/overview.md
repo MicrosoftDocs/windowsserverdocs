@@ -99,7 +99,7 @@ The source server must run one of the following operating systems:
 
 Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.
 
-You can migrate the following additional source types if the orchestrator is running Windows Server 2019 with [KBxxxxxxx](foo) installed:
+You can migrate the following additional source types if the orchestrator is running Windows Server 2019 with [KB5001384](https://support.microsoft.com/topic/april-20-2021-security-update-kb5001384-e471f445-59be-42cb-8c57-5db644cbc698) installed:
 
 - Failover clusters running Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 - Linux servers that use Samba. We've tested the following:
@@ -138,16 +138,13 @@ If you want to lift and shift virtual machines to Azure without migrating to a l
 
 Windows Admin Center version 1910 adds the ability to deploy Azure virtual machines. This integrates Azure VM deployment into Storage Migration Service. For more info, see [Azure VM migration](#azure-vm-migration).
 
-The following new features are available when running the Storage Migration Server orchestrator on Windows Server 2019 with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
+The following post-RTM features are available when running the Storage Migration Server orchestrator on Windows Server 2019 with [KB5001384](https://support.microsoft.com/topic/april-20-2021-security-update-kb5001384-e471f445-59be-42cb-8c57-5db644cbc698) installed:   
 
 - Migrate local users and groups to the new server
 - Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters
 - Migrate storage from a Linux server that uses Samba
 - More easily sync migrated shares into Azure by using Azure File Sync
 - Migrate to new networks such as Azure
-
-The following new feature is available when running the Storage Migration Server orchestrator on Windows Server 2019 with [KBxxxxxxx](foo) installed:   
-
 - Migrate NetApp CIFS servers from NetApp FAS arrays to Windows servers and clusters
 
 ## Additional References
