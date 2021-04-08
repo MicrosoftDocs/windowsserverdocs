@@ -3,7 +3,7 @@ title: What's new in the macOS client
 description: Learn about recent changes to the Remote Desktop client for Mac
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
 ms.date: 03/12/2021
 ms.localizationpriority: medium

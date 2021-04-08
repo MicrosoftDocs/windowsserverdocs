@@ -4,9 +4,9 @@ description: Learn about the different Remote Desktop clients available for all 
 ms.topic: article
 ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
 author: HeidiLohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 03/29/2021
+ms.date: 04/02/2021
 ms.localizationpriority: medium
 ---
 # Remote Desktop clients
@@ -27,7 +27,7 @@ The following client apps are available:
 |-----------------|-------------|------|---|
 | Windows Desktop | [Windows Desktop client](windowsdesktop.md#install-the-client) | [Get started](windowsdesktop.md), [What's new](windowsdesktop-whatsnew.md) | 1.2.1844  |
 | Microsoft Store   | [Windows 10 client in the Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=616709) | [Get started](windows.md), [What's new](windows-whatsnew.md)  | 1.2.1810  |
-| Android         | [Android client in Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android)     | [Get started](remote-desktop-android.md), [What's new](android-whatsnew.md) | 10.0.9 |
+| Android         | [Android client in Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)     | [Get started](remote-desktop-android.md), [What's new](android-whatsnew.md) | 10.0.10 |
 | iOS             | [iOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id714464092)     | [Get started](remote-desktop-ios.md), [What's new](ios-whatsnew.md)         | 10.2.5 |
 | macOS | [macOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Get started](remote-desktop-mac.md), [What's new](mac-whatsnew.md)       | 10.5.2 |
 
