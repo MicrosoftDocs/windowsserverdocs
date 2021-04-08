@@ -471,7 +471,7 @@
 ##### [How URIs Are Used in AD FS](ad-fs/technical-reference/How-URIs-Are-Used-in-AD-FS.md)
 #### [Device registration Technical Reference](ad-fs/technical-reference/device-registration-technical-reference.md)
 #### [AD FS Password Attack Protection](ad-fs/technical-reference/ad-fs-password-protection.md)
-### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
+### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.yml)
 
 ## Active Directory Rights Management Service
 ### [Upgrading AD RMS to Windows Server 2016](ad-rms/adrms-deploy.md)
