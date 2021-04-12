@@ -4,7 +4,7 @@ title: Windows Time service tools and settings
 author: Teresa-Motiv
 description: Describes the settings that are available for Windows Time Service (W32Time) and the tools that you can use to configure those settings
 ms.author: v-tea
-ms.date: 04/01/2021
+ms.date: 04/09/2021
 ms.topic: article
 ms.custom: contperf-fy21q4
 ---
@@ -61,7 +61,7 @@ Membership in the local **Administrators group** is required to run W32tm.exe lo
 |**/query** [/computer:\<*target*>] {/source \| /configuration \| /peers \| /status} [/verbose] |Displays a computer's Windows Time service information. This parameter was first made available in the Windows Time client in Windows Vista and Windows Server 2008.<p>**/computer:\<*target*>**: Queries the information of \<*target*>. If not specified, the default value is the local computer.<p>**/source**: Displays the time source.<p>**/configuration**: Displays the configuration of run time and where the setting comes from. In verbose mode, display the undefined or unused setting too.<p>**/peers**: Displays a list of peers and their status.<p>**/status**: Displays Windows Time service status.<p>**/verbose**: Sets the verbose mode to display more information. |
 |**/debug** {/disable \| {/enable /file:\<*name*> /size:/<*bytes*> /entries:\<*value*> [/truncate]}} |Enables or disables the local computer Windows Time service private log. This parameter was first made available in the Windows Time client in Windows Vista and Windows Server 2008.<p>**/disable**: Disables the private log.<p>**/enable**: Enables the private log.<ul><li>**file:\<*name*>**: Specifies the absolute file name.</li><li>**size:\<*bytes*>**: Specifies the maximum size for circular logging.</li><li>**entries:\<*value*>**: Contains a list of flags, specified by number and separated by commas, that specify the types of information that should be logged. Valid numbers are 0 to 300. A range of numbers is valid, in addition to single numbers, such as 0-100,103,106. Value 0-300 is for logging all information.</li></ul>**/truncate**: Truncate the file if it exists. |
 
-### Example: Set client to use two time servers
+### Set client to use two time servers
 
 To set a client computer to point to two different time servers, one named `ntpserver.contoso.com` and another named `clock.adatum.com`, type the following command at the command prompt, and then press ENTER:
 
@@ -69,7 +69,7 @@ To set a client computer to point to two different time servers, one named `ntps
 w32tm /config /manualpeerlist:"ntpserver.contoso.com clock.adatum.com" /syncfromflags:manual /update
 ```
 
-### Example: Set client to sync time from domain source
+### Set client to sync time automatically from domain source
 
 To configure a client computer that is currently synchronizing time using a manually-specified computer to synchronize time automatically from the AD domain hierarchy:
 
@@ -81,7 +81,7 @@ net stop w32time
 net start w32time
 ```
 
-### Example: Check client time configuration
+### Check client time configuration
 
 To check a client configuration from a Windows-based client computer that has a host name of `contosoW1`, run the following command:
 
@@ -102,7 +102,7 @@ The output of this command displays a list of W32time configuration parameters t
 
 Additionally, you can run the **reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters** command and read the value of **NtpServer** in the command output.
 
-## Configure computer clock reset
+### Configure computer clock reset
 
 In order for W32tm.exe to reset a computer clock, the computer clock time offset from the current time (`CurrentTimeOffset`) must be less than the `MaxAllowedPhaseOffset` value and satisfy the following at the same time:
 
@@ -130,61 +130,61 @@ ClockRate: 0.0156000s
 
 The following examples show how to apply these calculations when you use Windows Server 2012 R2 or an earlier version.
 
-### Example: Clock time off by four minutes
+#### Example: Clock time off by four minutes
 
 Your computer clock time is 11:05 and the actual current time is 11:09:
 
-> **PhaseCorrectRate** = 1
+> PhaseCorrectRate = 1
 >
-> **UpdateInterval** = 30,000 clock ticks
+> UpdateInterval = 30,000 clock ticks
 >
-> **SystemClockRate** = 156,000 clock ticks
+> SystemClockRate = 156,000 clock ticks
 >
-> **MaxAllowedPhaseOffset** = 10 min = 600 seconds = 600 &times; 1,000 &times; 10,000 = 6,000,000,000 clock ticks
+> MaxAllowedPhaseOffset = 10 min = 600 seconds = 600 &times; 1,000 &times; 10,000 = 6,000,000,000 clock ticks
 >
-> |**CurrentTimeOffset**| = 4 min = 4 &times; 60 &times; 1,000 &times; 10,000 = 2,400,000,000 clock ticks
+> |CurrentTimeOffset| = 4 min = 4 &times; 60 &times; 1,000 &times; 10,000 = 2,400,000,000 clock ticks
 >
-> Is **CurrentTimeOffset** &le; **MaxAllowedPhaseOffset**?
->
+Is **CurrentTimeOffset** &le; **MaxAllowedPhaseOffset**?
+
 > 2,400,000,000 &le; 6,000,000,000: TRUE
 
 AND does it satisfy the above equation?
 
-> (|**CurrentTimeOffset**| &divide; (**PhaseCorrectRate** &times; **UpdateInterval**) &le; **SystemClockRate** &divide; 2)
+> (|CurrentTimeOffset| &divide; (PhaseCorrectRate &times; UpdateInterval) &le; SystemClockRate &divide; 2)
 
 Is 2,400,000,000 / (30,000 &times; 1) &le; 156,000 &divide; 2
 
 80,000 &le; 78,000: FALSE
 
-Therefore, W32tm would set the clock back immediately.
+Therefore, W32tm.exe would set the clock back immediately.
 
 > [!NOTE]
 > In this case, if you want to set the clock back slowly, you would also have to adjust the values of **PhaseCorrectRate** or **UpdateInterval** in the registry to make sure that the equation result is **TRUE**.
 
-### Example: Clock time off by three minutes
+#### Example: Clock time off by three minutes
 
 Your computer clock time is 11:05 and the actual current time is 11:08:
 
-> **PhaseCorrectRate** = 1
+> PhaseCorrectRate = 1
 >
-> **UpdateInterval** = 30,000 clock ticks
+> UpdateInterval = 30,000 clock ticks
 >
 > SystemClockRate = 156,000 clock ticks
 >
-> **MaxAllowedPhaseOffset** = 10 min = 600 seconds = 600 &times; 1,000 &times; 10,000 = 6,000,000,000 clock ticks
+> MaxAllowedPhaseOffset = 10 min = 600 seconds = 600 &times; 1,000 &times; 10,000 = 6,000,000,000 clock ticks
 >
-> |**CurrentTimeOffset**| = 3 mins = 3 &times; 60 &times; 1,000 &times; 10,000 = 1,800,000,000 clock ticks
+> |CurrentTimeOffset| = 3 mins = 3 &times; 60 &times; 1,000 &times; 10,000 = 1,800,000,000 clock ticks
 >
-> Is |**CurrentTimeOffset**| &le; **MaxAllowedPhaseOffset**?
+Is **CurrentTimeOffset** &le; **MaxAllowedPhaseOffset**?
 >
 > 1,800,000,000 &le; 6,000,000,000: TRUE
 
 AND does it satisfy the above equation?
 
-> (|**CurrentTimeOffset**| &divide; (**PhaseCorrectRate** &times; **UpdateInterval**) &le; **SystemClockRate** &divide; 2)
->
-> Is 3 mins &times; (1,800,000,000) &divide; (30,000 &times; 1) &le; 156,000 &divide; 2
->
+> (|CurrentTimeOffset| &divide; (PhaseCorrectRate &times; UpdateInterval) &le; SystemClockRate &divide; 2)
+
+ Is 3 mins &times; (1,800,000,000) &divide; (30,000 &times; 1) &le; 156,000 &divide; 2
+
 > Is 60,000 &le; 78,000: TRUE
 
 In this case, the clock will be set back slowly.
