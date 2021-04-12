@@ -1,7 +1,7 @@
 ---
 title:  Install OpenSSH
 description: Installing OpenSSH Client and Server for Windows.
-ms.date: 04/08/2021
+ms.date: 04/12/2021
 ms.topic: conceptual
 ms.author: damaerte
 author: maertendmsft
@@ -12,7 +12,7 @@ ms.custom: contperf-fy21q4
 
 > Applies to Windows Server 2019, Windows 10
 
-OpenSSH is a connectivity tool for remote login using the SSH protocol. It encrypts all traffic between client and server to eliminate eavesdropping, connection hijacking, and other attacks.
+OpenSSH is a connectivity tool for remote login that uses the SSH protocol. It encrypts all traffic between client and server to eliminate eavesdropping, connection hijacking, and other attacks.
 
 OpenSSH can be used to connect Window 10 clients to Windows Server 2019. OpenSSH Client is available to install on Windows 10 build 1809 and later, while OpenSSH Server is available to install on Windows Server 2019 and later.
 
@@ -21,7 +21,9 @@ OpenSSH can be used to connect Window 10 clients to Windows Server 2019. OpenSSH
 
 ## Install OpenSSH using Windows Settings
 
-Both OpenSSH components can be installed using Windows Settings. OpenSSH server is installed on Windows Server and OpenSSH client is installed on Windows 10 devices.
+Both OpenSSH components can be installed using Windows Settings. OpenSSH Server is installed on Windows Server and OpenSSH Client is installed on Windows 10 devices.
+
+To install the OpenSSH components:
 
 1. Open **Settings**, select **Apps > Apps & Features**, then select **Optional Features**.
 
@@ -37,7 +39,7 @@ Once setup completes, return to **Apps > Apps & Features** and **Optional Featur
 
 ## Install OpenSSH using PowerShell
 
-To install OpenSSH using Windows PowerShell, run PowerShell as an Administrator.
+To install OpenSSH using PowerShell, run PowerShell as an Administrator.
 To make sure that OpenSSH is available, run the following cmdlet:
 
 ```powershell
@@ -123,7 +125,7 @@ To uninstall OpenSSH using Windows Settings:
 
 ## Uninstall OpenSSH using PowerShell
 
-To uninstall OpenSSH using PowerShell, use one of the following commands:
+To uninstall the OpenSSH components using PowerShell, use the following commands:
 
 ```powershell
 # Uninstall the OpenSSH Client
