@@ -59,7 +59,7 @@ You can perform BPA scans on roles by using either the BPA GUI in Server Manager
 
 In Windows Server, some roles prompt you to specify additional parameters, such as the names of specific servers or shares that are running parts of the role, or the IDs of submodels, before starting a BPA scan. For BPA scans on models that require you to specify additional parameters, use the BPA cmdlets; the BPA GUI cannot accept additional parameters such as submodel IDs. For example, the submodel ID **FSRM** represents the File Services BPA submodel for File Server Resource Manager, a role service of File and Storage Services. To run a scan only on the File Server Resource Manager role service, run a BPA scan by using Windows PowerShell cmdlets, and add the parameter `SubmodelId` to your cmdlet.
 
-Although you cannot pass additional parameters to a scan that you start in the BPA GUI, the BPA tile in Server Manager displays results for the most recent BPA scan, regardless of how you started the scand.
+Although you cannot pass additional parameters to a scan that you start in the BPA GUI, the BPA tile in Server Manager displays results for the most recent BPA scan, regardless of how you started the scan.
 
 -   [Scanning roles by using the BPA GUI](#BKMK_GUIscan)
 
