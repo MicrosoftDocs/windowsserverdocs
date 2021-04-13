@@ -17,9 +17,9 @@ summary: |
   Now that you've set up the Remote Desktop client on your device (Android, Mac, iOS, or Windows), you may have questions. Here are answers to the most commonly asked questions about the Remote Desktop clients.
   
   - [Setting up](#setting-up)
-  - [Connections, gateway, and networks](#connection-gateway-and-networks)
+  - [Connections, gateway, and networks](#connection--gateway--and-networks)
   - [Web client](#web-client)
-  - [Monitors, audio, and mouse](#monitors-audio-and-mouse)
+  - [Monitors, audio, and mouse](#monitors--audio--and-mouse)
   - [Mac hardware](#mac-client---hardware-questions)
   - [Specific error messages](#specific-errors)
   
@@ -85,7 +85,7 @@ sections:
             4. Under **Allowed apps and features**, select **Remote Desktop**, and then tap or click **OK**.
           
                If you're using a different firewall, make sure the port for Remote Desktop (usually 3389) is open.
-          - **Remote connections might not be set up on the remote PC.** To fix this, scroll back up to [How do I set up a PC for Remote Desktop?](#how-do-i-set-up-a-pc-for-remote-desktop) question in this topic.
+          - **Remote connections might not be set up on the remote PC.** To fix this, scroll back up to [How do I set up a PC for Remote Desktop?](#how-do-i-set-up-a-pc-for-remote-desktop-) question in this topic.
           - **The remote PC might only allow PCs to connect that have Network Level Authentication set up.**
           - **The remote PC might be turned off.** You can't connect to a PC that's turned off, asleep, or hibernating, so make sure the settings for sleep and hibernation on the remote PC are set to **Never** (hibernation isn't available on all PCs.).
           
