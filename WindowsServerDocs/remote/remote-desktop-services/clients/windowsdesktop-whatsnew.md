@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 04/02/2021
+ms.date: 04/13/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -19,13 +19,23 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.1844        |1.2.945                   |
-|Insider    |1.2.1844        |1.2.945                   |
+|Insider    |1.2.1946        |1.2.945                   |
+
+## Updates for version 1.2.1946 (Insider)
+
+*Date published: 04/13/2021*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Fixed an issue that caused the client to crash when users selected "Disconnect all sessions" in the system tray.
+- Fixed an issue where the client wouldn't switch to full screen on a single monitor with a docking station.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 
 ## Updates for version 1.2.1844
 
 *Date published: 03/23/2021*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWA1Gg), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWzWD8), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWzUw8)
 
 - Updated background installation functionality to perform silently for the client auto-update feature.
 - Fixed an issue where the client forwarded multiple attempts to launch a desktop to the same session. Depending on your group policy configuration, the session host can now allow the creation of multiple sessions for the same user on the same session host or disconnect the previous connection by default. This behavior wasn't consistent before version 1.2.1755.
