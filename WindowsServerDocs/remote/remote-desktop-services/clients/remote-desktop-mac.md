@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 >Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
-You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.md) if you have questions.
+You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.yml) if you have questions.
 
 >[!NOTE]
 > - Curious about the new releases for the macOS client? Check out [What's new for Remote Desktop on Mac?](mac-whatsnew.md)
@@ -25,7 +25,7 @@ You can use the Remote Desktop client for Mac to work with Windows apps, resourc
 Follow these steps to get started with Remote Desktop on your Mac:
 
 1. Download the Microsoft Remote Desktop client from the [Mac App Store](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12).
-2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop). (If you skip this step, you can't connect to your PC.)
+2. [Set up your PC to accept remote connections](remote-desktop-client-faq.yml#how-do-i-set-up-a-pc-for-remote-desktop). (If you skip this step, you can't connect to your PC.)
 3. Add a Remote Desktop connection or a remote resource. You use a connection to connect directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or a virtual desktop published on-premises using RemoteApp and Desktop Connections. This feature is typically available in corporate environments.
 
 ## What about the Mac beta client?
@@ -144,7 +144,7 @@ Mac keyboard layouts differ from the Windows keyboard layouts.
 - The function keys can be activated in the session by pressing additionally the FN key (for example, FN+F1).
 - The Alt key to the right of the space bar on the Mac keyboard equals the Alt Gr/right Alt key in Windows.
 
-By default, the remote session will use the same keyboard locale as the OS you're running the client on. (If your Mac is running an en-us OS, that will be used for the remote sessions as well.) If the OS keyboard locale is not used, check the keyboard setting on the remote PC and change it manually. See the [Remote Desktop Client FAQ](remote-desktop-client-faq.md) for more information about keyboards and locales.
+By default, the remote session will use the same keyboard locale as the OS you're running the client on. (If your Mac is running an en-us OS, that will be used for the remote sessions as well.) If the OS keyboard locale is not used, check the keyboard setting on the remote PC and change it manually. See the [Remote Desktop Client FAQ](remote-desktop-client-faq.yml) for more information about keyboards and locales.
 
 ## Support for Remote Desktop gateway pluggable authentication and authorization
 
