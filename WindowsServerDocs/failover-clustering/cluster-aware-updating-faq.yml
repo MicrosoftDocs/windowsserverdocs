@@ -207,4 +207,4 @@ sections:
       - question: |
           Additional References
         answer: |
-            [Cluster\-Aware Updating Overview](cluster-aware-updating.md)
+          -   [Cluster\-Aware Updating Overview](cluster-aware-updating.md)

@@ -72,7 +72,7 @@ To use CAU, install the Failover Clustering feature in Windows Server and create
 
 To install the Failover Clustering feature, you can use the following tools:
 - Add Roles and Features Wizard in Server Manager
-- [Install-WindowsFeature](/powershell/module/servermanager/Install-WindowsFeature?view=winserver2012r2-ps) Windows PowerShell cmdlet
+- [Install-WindowsFeature](/powershell/module/servermanager/Install-WindowsFeature) Windows PowerShell cmdlet
 - Deployment Image Servicing and Management (DISM) command-line tool
 
 For more information, see [Install the Failover Clustering feature](create-failover-cluster.md#install-the-failover-clustering-feature).
