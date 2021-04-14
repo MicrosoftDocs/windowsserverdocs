@@ -42,14 +42,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "Microsoft to use SHA-2 exclusively starting May 9, 2021"
+          url: https://aka.ms/blog/SHA2
+          itemType: whats-new
         - text: "Take action: April 2021 security update available for all supported versions of Windows"
           url: https://support.microsoft.com/help/5001330
           itemType: whats-new
         - text: "Reminder: End of service for Windows 10, version 1909 and others - May 11, 2020"
           url: https://docs.microsoft.com/windows/release-information/windows-message-center#1585
-          itemType: whats-new
-        - text: "March 2021 Windows non-security preview \"C\" release for Windows 10, version 20H2 is available"
-          url: https://support.microsoft.com/help/5000842
           itemType: whats-new
 
       footerLink:
