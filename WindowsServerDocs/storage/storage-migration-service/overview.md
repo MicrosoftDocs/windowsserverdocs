@@ -24,7 +24,7 @@ Use Storage Migration Service because you've got a server (or a lot of servers) 
 - Optionally take over the identity of the source servers (also known as cutting over) so that users and apps don't have to change anything to access existing data
 - Manage one or multiple migrations from the Windows Admin Center user interface
 
-![Diagram showing Storage Migration Service migrating files & configuration from source servers to destination servers, Azure VMs, or Azure File Sync.](media/overview/storage-migration-service-diagram.png) <-- @jason gerend please update with new diagram "\\uglymonkey\shared\jason\latest architecture diagram.png"
+![Diagram showing Storage Migration Service migrating files & configuration from source servers to destination servers, Azure VMs, or Azure File Sync.](media/overview/storage-migration-service-diagram.png)
 
 **Figure 1: Storage Migration Service sources and destinations**
 
