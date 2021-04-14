@@ -26,7 +26,7 @@
 ### [Cluster-Aware Updating](cluster-aware-updating.md)
 #### [Requirements and best practices](cluster-aware-updating-requirements.md)
 #### [Advanced options](cluster-aware-updating-options.md)
-#### [FAQ](cluster-aware-updating-faq.md)
+#### [FAQ](cluster-aware-updating-faq.yml)
 #### [Plug-ins](cluster-aware-updating-plug-ins.md)
 ### [Health Service](health-service-overview.md)
 #### [Reports](health-service-reports.md)

@@ -120,7 +120,7 @@ The following links provide more information about using Cluster-Aware Updating.
 
 -   [Requirements and Best Practices for Cluster\-Aware Updating](cluster-aware-updating.md)
 
--   [Cluster\-Aware Updating: Frequently Asked Questions](cluster-aware-updating-faq.md)
+-   [Cluster\-Aware Updating: Frequently Asked Questions](cluster-aware-updating-faq.yml)
 
 -   [Advanced Options and Updating Run Profiles for CAU](cluster-aware-updating-options.md)
 
