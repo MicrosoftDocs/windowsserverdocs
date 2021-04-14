@@ -24,7 +24,6 @@ Before you get started, install Storage Migration Service and make sure that the
     
     > [!NOTE]
     > If you're migrating from a NetApp FAS array, you must manually install the latest version of the NetApp PowerShell Toolkit onto the orchestrator. This toolkit is available to all licensed NetApp customers with an active NetApp support agreement from [mysupport.netapp.com](https://mysupport.netapp.com).  
-    >  
 
 7. On all source servers and on any destination servers running Windows Server 2016 or Windows Server 2012 R2, in Windows Admin Center, connect to each server, go to **Server Manager** (in Windows Admin Center) > **Firewall** > **Incoming rules**, and then check that the following rules are enabled:
     - File and Printer Sharing (SMB-In)
