@@ -91,7 +91,7 @@ In this step you transfer data after specifying where to put it on the destinati
    > [!NOTE]
    > Migrated user accounts are disabled on the destination and assigned a 127-character password that's both complex and random, so you'll have to enable them and assign a new password when you're finished to keep using them. This helps ensure any old accounts with forgotten and weak passwords on the source don't continue to be a security problem on the destination. You might also want to check out [Local Administrator Password Solution (LAPS)](https://www.microsoft.com/download/details.aspx?id=46899) as a way to manage local Administrator passwords.
    
-   >     > [!NOTE]
+   >  [!NOTE]
     > If migrating NetApp CIFS servers, you cannot migrate local users and groups.
 
 6. Select **Validate** and then select **Next**.
