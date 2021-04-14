@@ -34,7 +34,7 @@ The Storage Migration Service supports migrating from and to clusters after inst
 
 ## Do local groups and local users migrate?
 
-The Storage Migration Service supports migrating local users and groups after installation of cumulative update [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) or subsequent updates. It does not support migrating local users and groups from NetApp CIFS servers.
+The Storage Migration Service supports migrating local users and groups after installation of cumulative update [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) or subsequent updates. It doesn't support migrating local users and groups from NetApp CIFS servers.
 
 ## Is domain controller migration supported?
 
