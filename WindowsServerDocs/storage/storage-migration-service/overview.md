@@ -36,7 +36,7 @@ Migration is a three-step process:
 2. **Transfer (copy) data** from the source servers to the destination servers.
 3. **Cut over to the new servers** (optional).<br>The destination servers assume the source servers' former identities so that apps and users don't have to change anything. <br>The source servers enter a maintenance state where they still contain the same files they always have (we never remove files from the source servers) but are unavailable to users and apps. You can then decommission the servers at your convenience.
 
-![Screenshot showing a server ready to be scanned](media/migrate/inventory.png) <-- @jason gerend please update with new screenshot "\\uglymonkey\shared\jason\inventory-new.png"
+![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
 **Figure 2: Storage Migration Service inventorying servers**
 
 Here's a video showing how to use Storage Migration Service to take a server, such as a Windows Server 2008 R2 server that's now out of support, and move the storage to a newer server.
