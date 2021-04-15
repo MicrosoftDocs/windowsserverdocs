@@ -119,7 +119,7 @@ In this step you cut over from the source servers to the destination servers, mo
     ![Screenshot showing a source server and its IP addresses and computer names and what they'll be replaced with after the cutover](media/migrate/cutover.png) 
     **Figure 4: A source server and how its network configuration will move to the destination**
 5. Specify how to rename the source server after the destination server takes over its name. You can use a randomly generated name or type one yourself. Then select **Next**.
-6. On the **Adjust settings** page, you might need to provide new AD user credentials with permissions to remove the source computer or clustered file server from the domain and then add them back with a new name if your source migration credentails do not have that permission.
+6. On the **Adjust settings** page, you might need to provide new AD user credentials with permissions to remove the source computer or clustered file server from the domain and then add them back with a new name if your source migration credentials don't have that permission.
 7. Select **Validate** on the **Validate source and destination device** page, and then select **Next**.
 8. When you're ready to perform the cutover, select **Start cutover**. <br>Users and apps might experience an interruption while the address and names are moved and the servers restarted several times each, but will otherwise be unaffected by the migration. How long cutover takes depends on how quickly the servers restart, as well as Active Directory and DNS replication times.
 
