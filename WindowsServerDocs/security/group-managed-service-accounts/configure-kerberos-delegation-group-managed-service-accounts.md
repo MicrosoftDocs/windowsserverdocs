@@ -11,7 +11,7 @@ ms.date: 04/15/2021
 
 Normally when working with Kerberos delegation, you just set the Service Principal Name (SPN) either with setspn.exe command or manually with the attribute editor in Active Directory Users and Computers. Additionally, enabling **View** > **Advanced features** in Active Directory Users and Computers adds another way to configure Kerberos delegation from the **Delegation** tab of a user or a computer account.
 
-But for standalone and group Managed Service Accounts, the Delegation tab doesn't appear, even after adding SPNs to these accounts or enabling **View** > **Advanced features**.
+But for standalone and group Managed Service Accounts, the **Delegation** tab doesn't appear, even after adding SPNs to these accounts or enabling **View** > **Advanced features**.
 
 To configure delegation for these special accounts, you need to set the correct attributes manually. 
 There are two attributes that you need to modify for these accounts:
