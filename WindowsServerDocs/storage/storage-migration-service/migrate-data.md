@@ -78,7 +78,7 @@ In this step you transfer data after specifying where to put it on the destinati
     > [!NOTE]
     > If migrating NetApp CIFS servers, source volumes will not have letters. You can map these volumes to any destination volumes you wish and you can map multiple NetApp CIFS volumes to the same destination volume. New root folder patchs will be created to avoid any folder overwrites or collisions, and then shares will be created that the correct level. The **Shares** detail pane will show the folder structure you are about to create.
         
-   ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png) <--- @jason gerend please add new screenshot "\\uglymonkey\shared\jason\transfer-new.png"
+   ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
     **Figure 3: A source server and where its storage will be transferred to**
 4. Add a destination server and mappings for any more source servers, and then select **Next**.
 5. On the **Adjust transfer settings** page, specify whether to migrate local users and groups on the source servers and then select **Next**. This lets you recreate any local users and groups on the destination servers so that file or share permissions set to local users and groups aren't lost. Here are the options when migrating local users and groups:
