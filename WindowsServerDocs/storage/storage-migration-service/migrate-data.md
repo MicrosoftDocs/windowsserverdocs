@@ -98,7 +98,7 @@ In this step you transfer data after specifying where to put it on the destinati
 8. After the transfer completes, check out the destination server to make sure everything transferred properly. Select **Error log only** if you want to download a log of any files that didn't transfer.
 
    > [!NOTE]
-   > If you want to keep an audit trail of transfers or are planning to perform more than one transfer in a job, click **Transfer log** or the other log save options to save a CSV copy. Every subsequent transfer overwrites the database information of a previous run. If you are migrating a large number of files, you may need to adjust the timeout for saving this CSV file. For more see [Storage Migration Service times out downloading the transfer error CSV](known-issues.md#storage-migration-service-times-out-downloading-the-transfer-error-csv)
+   > If you want to keep an audit trail of transfers or are planning to perform more than one transfer in a job, click **Transfer log** or the other log save options to save a CSV copy. Every subsequent transfer overwrites the database information of a previous run. If you're migrating a large number of files, you may need to adjust the timeout for saving this CSV file. For details, see [Storage Migration Service times out downloading the transfer error CSV](known-issues.md#storage-migration-service-times-out-downloading-the-transfer-error-csv)
 
 At this point, you have three options:
 
