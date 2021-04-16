@@ -3,7 +3,7 @@ title: Remote Desktop clients feature comparison
 description: Learn how the different Remote Desktop clients compare when it comes to features.
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
 ms.date: 03/31/2021
 ms.localizationpriority: medium

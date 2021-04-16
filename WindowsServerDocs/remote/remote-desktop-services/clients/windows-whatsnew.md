@@ -3,7 +3,7 @@ title: What's new in the Microsoft Store client
 description: Learn about recent changes to the Microsoft Store client.
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
 ms.date: 03/29/2021
 ms.localizationpriority: medium

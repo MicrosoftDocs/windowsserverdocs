@@ -5,7 +5,7 @@ ms.topic: article
 author: justinha
 ms.author: justinha
 manager: brianlic
-ms.date: 02/28/2019
+ms.date: 04/06/2021
 ---
 
 # Transport Layer Security (TLS) registry settings
@@ -284,209 +284,62 @@ Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 Default server cache time: 10 hours
 
-## SSL 2.0
+## TLS, DTLS, and SSL protocol version settings
 
-This subkey controls the use of SSL 2.0.
+Schannel SSP implements versions of the TLS, DTLS, and SSL protocols. Different Windows releases support different [protocol versions](https://docs.microsoft.com/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-). The set of (D)TLS and SSL versions available system-wide 
+can be restricted (but not expanded) by SSPI callers specifying either [SCH_CREDENTIALS](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-sch_credentials) or 
+[SCHANNEL_CRED](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-schannel_cred) structure in the 
+[AcquireCredentialsHandle](https://docs.microsoft.com/windows/win32/secauthn/acquirecredentialshandle--schannel) call. It is recommended that 
+SSPI callers use the system defaults, rather than imposing protocol version restrictions.
 
-Beginning with Windows 10, version 1607 and Windows Server 2016, SSL 2.0 has been removed and is no longer supported.
-For a SSL 2.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
+A supported (D)TLS or SSL protocol version can exist in one of the following states:
+- **Enabled**: unless the SSPI caller explicitly disables this protocol version using the [SCH_CREDENTIALS](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-sch_credentials) structure, 
+  Schannel SSP may negotiate this protocol version with a supporting peer.
+- **Disabled by default**: unless the SSPI caller explicitly requests this protocol version using the deprecated 
+  [SCHANNEL_CRED](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-schannel_cred) structure, Schannel SSP will not negotiate this protocol version.
+- **Disabled**: Schannel SSP will not negotiate this protocol version regardless of the settings the SSPI caller may specify.
 
-Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
+The system administrator can override the default (D)TLS and SSL protocol version settings by creating DWORD registry values "Enabled" and "DisabledByDefault". 
+These registry values are configured separately for the protocol client and server roles under the registry subkeys named using the following format: 
 
-To enable the SSL 2.0 protocol, create an **Enabled** entry in either the Client or Server subkey, as described in the following table.
-This entry does not exist in the registry by default.
-After you have created the entry, change the DWORD value to 1.
+<SSL/TLS/DTLS> \<major version number\>.\<minor version number\>\<Client\Server>
 
-SSL 2.0 subkey table
+These version-specific subkeys can be created under the following registry path: 
 
-| Subkey | Description |
-|--------|-------------|
-| Client | Controls the use of SSL 2.0 on the SSL client. |
-| Server | Controls the use of SSL 2.0 on the SSL server. |
+HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
 
-To disable SSL 2.0 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use SSL 2.0, it will be denied.
+For example, here are some valid registry paths with version-specific subkeys:
 
-To disable SSL 2.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1.
-If an SSPI app explcitly requests to use SSL 2.0, it may be negotiated.
+HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client
 
-The following example shows SSL 2.0 disabled in the registry:
+HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server
 
-![SSL 2.0 disabled](images/ssl-2-registry-setting.png)
+HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\DTLS 1.2\Client
 
+In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Enabled** state, create a DWORD registry value named "Enabled" with a non-zero value, and a DWORD registry value named "DisabledByDefault" with a value of zero, under the corresponding version-specific subkey. 
 
-## SSL 3.0
+The following example shows TLS 1.0 client set to the **Enabled** state:
 
-This subkey controls the use of SSL 3.0.
+![TLS 1.0 client enabled](images/tls-10-client-enabled.png)
 
-Beginning with Windows 10, version 1607 and Windows Server 2016, SSL 3.0 has been disabled by default.
-For SSL 3.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
+In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled by default** state, create DWORD registry values named "Enabled" 
+and "DisabledByDefault" with a non-zero value under the corresponding version-specific subkey. The following example shows TLS 1.0 server set to the **Disabled by default** state:
 
-Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
+![TLS 1.0 server disabled by default](images/tls-10-server-disabledbydefault.png)
 
-To enable the SSL 3.0 protocol, create an **Enabled** entry in either the Client or Server subkey, as described in the following table.
-This entry does not exist in the registry by default.
-After you have created the entry, change the DWORD value to 1.
+In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled** state, create a DWORD registry value named "Enabled", with a value of zero,
+under the corresponding version-specific subkey. The following example shows TLS 1.0 server set to the **Disabled** state:
 
-SSL 3.0 subkey table
+![TLS 1.0 server disabled](images/tls-10-server-disabled.png)
 
-| Subkey | Description |
-|--------|-------------|
-| Client | Controls the use of SSL 3.0 on the SSL client. |
-| Server | Controls the use of SSL 3.0 on the SSL server. |
+Switching a (D)TLS or SSL protocol version to **Disabled by default** or **Disabled** state may cause 
+[AcquireCredentialsHandle](https://docs.microsoft.com/windows/win32/secauthn/acquirecredentialshandle--schannel) calls to fail due to the lack of protocol versions 
+enabled system-wide and at the same time allowed by particular SSPI callers. In addition, reducing the set of **Enabled** (D)TLS and SSL versions may break interoperability 
+with remote peers.
 
-To disable SSL 3.0 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use SSL 3.0, it will be denied.
+Once the (D)TLS or SSL protocol version settings have been modified, they take effect on connections established using credential handles opened by subsequent 
+[AcquireCredentialsHandle](https://docs.microsoft.com/windows/win32/secauthn/acquirecredentialshandle--schannel) calls. (D)TLS and SSL client and server applications 
+and services tend to reuse credential handles for multiple connections, for performance reasons. In order to get these applications to reacquire their credential handles, 
+an application or service restart may be required.
 
-To disable SSL 3.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1.
-If an SSPI app explicitly requests to use SSL 3.0, it may be negotiated.
-
-The following example shows SSL 3.0 disabled in the registry:
-
-![SSL 3.0 disabled](images/ssl-3-registry-setting.png)
-
-## TLS 1.0
-
-This subkey controls the use of TLS 1.0.
-
-For TLS 1.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
-
-Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
-
-To enable the TLS 1.0 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table.
-This entry does not exist in the registry by default.
-After you have created the entry, change the DWORD value to 1.
-
-TLS 1.0 subkey table
-
-| Subkey | Description |
-|--------|-------------|
-| Client | Controls the use of TLS 1.0 on the TLS client. |
-| Server | Controls the use of TLS 1.0 on the TLS server. |
-
-To disable TLS 1.0 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use TLS 1.0, it will be denied.
-
-To disable TLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1.
-If an SSPI app explicitly requests to use TLS 1.0, it may be negotiated.
-
-The following example shows TLS 1.0 disabled in the registry:
-
-![TLS 1.0 disabled](images/tls-registry-setting.png)
-
-## TLS 1.1
-
-This subkey controls the use of TLS 1.1.
-
-For TLS 1.1 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
-
-Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
-
-To enable the TLS 1.1 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table.
-This entry does not exist in the registry by default.
-After you have created the entry, change the DWORD value to 1.
-
-TLS 1.1 subkey table
-
-| Subkey | Description |
-|--------|-------------|
-| Client | Controls the use of TLS 1.1 on the TLS client. |
-| Server | Controls the use of TLS 1.1 on the TLS server. |
-
-To disable TLS 1.1 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use TLS 1.1, it will be denied.
-
-To disable TLS 1.1 by default, create a **DisabledByDefault** entry and change the DWORD value to 1.
-If an SSPI app explicitly requests to use TLS 1.1, it may be negotiated.
-
-The following example shows TLS 1.1 disabled in the registry:
-
-![TLS 1.1 disabled](images/tls-11-registry-setting.png)
-
-## TLS 1.2
-
-This subkey controls the use of TLS 1.2.
-
-For TLS 1.2 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
-
-Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
-
-To enable the TLS 1.2 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table.
-This entry does not exist in the registry by default.
-After you have created the entry, change the DWORD value to 1.
-
-TLS 1.2 subkey table
-
-| Subkey | Description |
-|--------|-------------|
-| Client | Controls the use of TLS 1.2 on the TLS client. |
-| Server | Controls the use of TLS 1.2 on the TLS server. |
-
-To disable TLS 1.2 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use TLS 1.2, it will be denied.
-
-To disable TLS 1.2 by default, create a **DisabledByDefault** entry and change the DWORD value to 1.
-If an SSPI app explicitly requests to use TLS 1.2, it may be negotiated.
-
-The following example shows TLS 1.2 disabled in the registry:
-
-![TLS 1.2 disabled](images/tls-12-registry-setting.png)
-
-## DTLS 1.0
-
-This subkey controls the use of DTLS 1.0.
-
-For DTLS 1.0 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
-
-Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
-
-To enable the DTLS 1.0 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table.
-This entry does not exist in the registry by default.
-After you have created the entry, change the DWORD value to 1.
-
-DTLS 1.0 subkey table
-
-| Subkey | Description |
-|--------|-------------|
-| Client | Controls the use of DTLS 1.0 on the DTLS client. |
-| Server | Controls the use of DTLS 1.0 on the DTLS server. |
-
-To disable DTLS 1.0 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use DTLS 1.0, it will be denied.
-
-To disable DTLS 1.0 by default, create a **DisabledByDefault** entry and change the DWORD value to 1.
-If an SSPI app explicitly requests to use DTLS 1.0, it may be negotiated.
-
-The following example shows DTLS 1.0 disabled in the registry:
-
-![DTLS 1.0 disabled](images/dtls-10-registry-setting.png)
-
-## DTLS 1.2
-
-This subkey controls the use of DTLS 1.2.
-
-For DTLS 1.2 default settings, see [Protocols in the TLS/SSL (Schannel SSP)](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-).
-
-Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols
-
-To enable the DTLS 1.2 protocol, create an **Enabled** entry in either the Client or Server subkey as described in the following table.
-This entry does not exist in the registry by default.
-After you have created the entry, change the DWORD value to 1.
-
-DTLS 1.2 subkey table
-
-| Subkey | Description |
-|--------|-------------|
-| Client | Controls the use of DTLS 1.2 on the DTLS client. |
-| Server | Controls the use of DTLS 1.2 on the DTLS server. |
-
-
-To disable DTLS 1.2 for client or server, change the DWORD value to 0.
-If an SSPI app requests to use DTLS 1.0, it will be denied.
-
-To disable DTLS 1.2 by default, create a **DisabledByDefault** entry and change the DWORD value to 1.
-If an SSPI app explicitly requests to use DTLS 1.2, it may be negotiated.
-
-The following example shows DTLS 1.1 disabled in the registry:
-
-![DTLS 1.1 disabled](images/dtls-11-registry-setting.png)
+Please note that these registry settings only apply to Schannel SSP and do not affect any 3rd-party (D)TLS and SSL implementations that may be installed on the system.

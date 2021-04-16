@@ -4,7 +4,7 @@ description: Learn how to set up the Remote Desktop client for iOS
 ms.topic: article
 ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: Heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
 ms.date: 08/20/2020
 ms.localizationpriority: medium
