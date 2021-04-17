@@ -44,7 +44,7 @@ dfsrmig [/setglobalstate <state> | /getglobalstate | /getmigrationstate | /creat
 
 - Active Directory replication replicates the global state to other domain controllers in the domain, but because of replication latencies, you can get inconsistencies if you run `dfsrmig /getglobalstate` on a domain controller other than the PDC emulator.
 
-- The output of `dsfrmig /getmigrationstate` indicates whether migration to the current global state is complete, listing the local migration state for any domain controllers that haven't yet reached the current global migration state. The local migration state for domain controllers can also include transition states for domain controllers that have not reached the current global migration state.
+- The output of `dfsrmig /getmigrationstate` indicates whether migration to the current global state is complete, listing the local migration state for any domain controllers that haven't yet reached the current global migration state. The local migration state for domain controllers can also include transition states for domain controllers that have not reached the current global migration state.
 
 - Read-only domain controllers can't delete settings from AD DS, the PDC emulator performs this operation, and the changes eventually replicate to the read-only domain controllers after the applicable latencies for active directory replication.
 
