@@ -188,7 +188,7 @@ sections:
           -   CAU is supported only on clusters that are running Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012. VMM also supports Hyper\-V clusters on computers running Windows Server 2008 R2 and Windows Server 2008.
           
       - question: |
-          Can I use remote\-updating on a cluster that is configured for self\-updating?
+          Can I use remote-updating on a cluster that is configured for self-updating?
         answer: |
           Yes. A failover cluster in a self\-updating configuration can be updated through remote\-updating on\-demand, just as you can force a Windows Update scan at any time on your computer, even if Windows Update is configured to install updates automatically. However, you need to make sure that an Updating Run is not already in progress.
 
@@ -198,7 +198,7 @@ sections:
           Yes. CAU supports a number of Updating Run options that determine how the Updating Run behaves when it updates the cluster. These options can be saved as an Updating Run Profile, and they can be reused across any cluster. We recommend that you save and reuse your settings across failover clusters that have similar updating needs. For example, you might create a "Business\-Critical SQL Server Cluster Updating Run Profile" for all Microsoft SQL Server clusters that support business\-critical services.
 
       - question: |
-          Where is the CAU plug\-in specification?
+          Where is the CAU plug-in specification?
         answer: |
           -   [Cluster\-Aware Updating Plug\-in Reference](/previous-versions/windows/desktop/mscs/cluster-aware-update-plug-in-interfaces-and-classes)
           
