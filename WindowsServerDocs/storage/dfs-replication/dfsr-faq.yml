@@ -33,11 +33,8 @@ summary: |
   
 
 sections:
-  - name: Ignored
+  - name: Interoperability
     questions:
-      - question: |
-          Interoperability
-        answer: |
       - question: |
           Can DFS Replication communicate with FRS?
         answer: |
@@ -145,9 +142,8 @@ sections:
         answer: |
           Windows&reg; SharePoint&reg; Services provides tight coherency in the form of file check-out functionality that DFS Replication does not. If you are concerned about multiple people editing the same file, we recommend using Windows SharePoint Services. Windows SharePoint Services 2.0 with Service Pack 2 is available as part of Windows Server 2003 R2. Windows SharePoint Services can be downloaded from the Microsoft Web site; it is not included in newer versions of Windows Server. However, if you are replicating data across multiple sites and users will not edit the same files at the same time, DFS Replication provides greater bandwidth and simpler management.
 
-      - question: |
-          Limitations and requirements
-        answer: |
+  - name: Limitations and requirements
+    questions:
       - question: |
           Can DFS Replication replicate between branch offices without a VPN connection?
         answer: |
@@ -294,9 +290,8 @@ sections:
         answer: |
           DFS Replication uses new objects in the domain-naming context of Active Directory Domain Services to store configuration information. These objects are created when you update the Active Directory Domain Services schema. For more information, see [Review Requirements for DFS Replication](https://go.microsoft.com/fwlink/?linkid=182264) (https://go.microsoft.com/fwlink/?LinkId=182264).
           
-      - question: |
-          Monitoring and management tools
-        answer: |
+  - name: Monitoring and management tools
+    questions:
       - question: |
           Can I automate the health report to receive warnings?
         answer: |
@@ -353,9 +348,8 @@ sections:
             - Scripts can use WMI to collect backlog information—manually or through MOM.
           
           
-      - question: |
-          Performance
-        answer: |
+  - name: Performance
+    questions:
       - question: |
           Does DFS Replication support dial-up connections?
         answer: |
@@ -414,9 +408,8 @@ sections:
         answer: |
           If the connection goes down, DFS Replication will keep trying to replicate while the schedule is open. There will also be connectivity errors noted in the DFS Replication event log that can be harvested using MOM (proactively through alerts) and the DFS Replication Health Report (reactively, such as when an administrator runs it).
 
-      - question: |
-          Remote Differential Compression details
-        answer: |
+  - name: Remote Differential Compression details
+    questions:
       - question: |
           Are changes compressed before being replicated?
         answer: |
@@ -530,9 +523,8 @@ sections:
           
           \* You can optionally disable cross-file RDC on Windows Server 2012 R2.
           
-      - question: |
-          Replication details
-        answer: |
+  - name: Replication details
+    questions:
       - question: |
           Can I change the path for a replicated folder after it is created?
         answer: |
@@ -754,9 +746,8 @@ sections:
             - The conflict could reside on a server different from the origin of the conflict.
           
           
-      - question: |
-          Staging
-        answer: |
+  - name: Staging
+    questions:
       - question: |
           Does DFS Replication continue staging files when replication is disabled by a schedule or bandwidth throttling quota, or when a connection is manually disabled?
         answer: |
@@ -812,9 +803,8 @@ sections:
         answer: |
           If any part of the file is already being transmitted, DFS Replication continues the transmission. If the file is changed before DFS Replication begins transmitting the file, then the newer version of the file is sent.
 
-      - question: |
-          Change History
-        answer: |
+          ## Change History
+
           <table>
           <colgroup>
           <col style="width: 33%" />
