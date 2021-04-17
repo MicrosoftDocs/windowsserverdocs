@@ -29,11 +29,8 @@ summary: |
   
 
 sections:
-  - name: Ignored
+  - name: Setting up
     questions:
-      - question: |
-          Setting up
-        answer: |
       - question: |
           Which PCs can I connect to?
         answer: |
@@ -65,11 +62,8 @@ sections:
           
           For Windows 8.1, follow the instructions to allow remote connections in [Connect to another desktop using Remote Desktop Connections](https://support.microsoft.com/help/17463/windows-7-connect-to-another-computer-remote-desktop-connection#1TC=windows-8).
           
-          
-          
-      - question: |
-          Connection, gateway, and networks
-        answer: |
+  - name: Connection, gateway, and networks
+    questions:
       - question: |
           Why can't I connect using Remote Desktop?
         answer: |
@@ -139,9 +133,8 @@ sections:
         answer: |
           If you are using L2TP or PPTP in your VPN, make sure to set **Send all traffic** to **ON** in the VPN configuration.
 
-      - question: |
-          Web client
-        answer: |
+  - name: Web client
+    questions:
       - question: |
           Which browsers can I use?
         answer: |
@@ -167,9 +160,8 @@ sections:
         answer: |
           This feature is not supported at the moment.
 
-      - question: |
-          Monitors, audio, and mouse
-        answer: |
+  - name: Monitors, audio, and mouse
+    questions:
       - question: |
           How do I use all of my monitors?
         answer: |
@@ -188,9 +180,8 @@ sections:
         answer: |
           Sign out of the session (don't just disconnect, sign all the way out), and then sign in again.
 
-      - question: |
-          Mac client - hardware questions
-        answer: |
+  - name: Mac client - hardware questions
+    questions:
       - question: |
           Is retina resolution supported?
         answer: |
@@ -245,10 +236,8 @@ sections:
           
           You might need to close and restart the application you are currently using for the keyboard changes to take effect.
           
-          
-      - question: |
-          Specific errors
-        answer: |
+  - name: Specific errors
+    questions:
       - question: |
           Why do I get an "Insufficient privileges" error?
         answer: |
