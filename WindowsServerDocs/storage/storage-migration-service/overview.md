@@ -101,7 +101,7 @@ Note: Windows Small Business Server and Windows Server Essentials are domain con
 
 You can migrate the following additional source types if the orchestrator is running Windows Server, version 1903 or later, or if the orchestrator is running an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
 
-- Failover clusters running Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
+- Failover clusters running Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019 (Windows Server 2008 R2 only supports inventory and transfer, not cutover)
 - Linux servers that use Samba. We've tested the following:
     - CentOS 7
     - Debian GNU/Linux 8
