@@ -11,7 +11,7 @@ ms.custom: contperf-fy21q4
 
 # Windows Time service tools and settings
 
-> Applies to Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
 The Windows Time service (W32Time) synchronizes the date and time for all computers managed by Active Directory Domain Services (AD DS). This article covers the different tools and settings used to manage the Windows Time service.
 
