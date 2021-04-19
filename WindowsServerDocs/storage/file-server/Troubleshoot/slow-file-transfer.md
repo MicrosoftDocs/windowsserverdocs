@@ -22,9 +22,9 @@ steps:
 - Test the storage speed. This is because file copy speeds are limited by storage speed.
 
 - File copies sometimes start fast and then slow down. Follow these guidelines to verify this situation:
-    
+
   - This usually occurs when the initial copy is cached or buffered (either in memory or in the RAID controller's memory cache) and the cache runs out. This forces data to be written directly to disk (write-through). This is a slower process.
-    
+
   - Use storage performance monitor counters to determine whether storage performance degrades over time. For more information, see [Performance tuning for SMB file servers](../../../administration/performance-tuning/role/file-server/smb-file-server.md).
 
 - Use RAMMap (SysInternals) to determine whether "Mapped File" usage in memory stops growing because of free memory exhaustion.
@@ -33,8 +33,8 @@ steps:
 
 - For SMBv3 and later versions, make sure that SMB Multichannel is enabled and working.
 
-- On the SMB client, enable large MTU in SMB, and disable bandwidth throttling. To do this, run the following command:  
-  
+- On the SMB client, enable large MTU in SMB, and disable bandwidth throttling. To do this, run the following command:
+
   ```PowerShell
   Set-SmbClientConfiguration -EnableBandwidthThrottling 0 -EnableLargeMtu 1
   ```
@@ -62,27 +62,27 @@ The following are technical details about this problem:
 This problem generally occurs on a WAN connection. This is common and typically is caused by the manner in which Office apps (Microsoft Excel, in particular) access and read data.
 
 We recommend that you make sure that the Office and SMB binaries are up-to-date, and then test by having leasing disabled on the SMB server. To do this, follow these steps:
-   
+
 1. Run the following PowerShell command in Windows 8 and Windows Server 2012 or later versions of Windows:
-      
+
    ```PowerShell
-   Set-SmbServerConfiguration -EnableLeasing $false  
+   Set-SmbServerConfiguration -EnableLeasing $false
    ```
-      
-   Or, run the following command in an elevated Command Prompt window:  
+
+   Or, run the following command in an elevated Command Prompt window:
 
    ```cmd
-   REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\parameters /v DisableLeasing /t REG\_DWORD /d 1 /f  
+   REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\lanmanserver\parameters /v DisableLeasing /t REG\_DWORD /d 1 /f
    ```
-      
+
    > [!NOTE]
    > After you set this registry key, SMB2 leases are no longer granted, but oplocks are still available. This setting is used primarily for troubleshooting.
-    
+
 2. Restart the file server or restart the **Server** service. To restart the service, run the following commands:
 
-   ```cmd  
-   NET STOP SERVER 
+   ```cmd
+   NET STOP SERVER
    NET START SERVER
    ```
 
-To avoid this issue, you can also replicate the file to a local file server. For more information, see [aving Office documents to a network server is slow when using EFS](/office/troubleshoot/office/saving-file-to-network-server-slow).
+To avoid this issue, you can also replicate the file to a local file server. For more information, see [Saving Office documents to a network server is slow when using EFS](/office/troubleshoot/office/saving-file-to-network-server-slow).
