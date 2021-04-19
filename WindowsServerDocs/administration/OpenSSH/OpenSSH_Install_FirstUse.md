@@ -1,7 +1,7 @@
 ---
 title:  Install OpenSSH
 description: Installing OpenSSH Client and Server for Windows.
-ms.date: 04/12/2021
+ms.date: 04/19/2021
 ms.topic: conceptual
 ms.author: damaerte
 author: maertendmsft
@@ -49,9 +49,9 @@ Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
 This should return the following output:
 
 ```
-Name  : OpenSSH.Client    0.0.1.0
+Name  : OpenSSH.Client~~~~0.0.1.0
 State : NotPresent
-Name  : OpenSSH.Server    0.0.1.0
+Name  : OpenSSH.Server~~~~0.0.1.0
 State : NotPresent
 ```
 
@@ -59,10 +59,10 @@ Then, install the server or client components as needed:
 
 ```powershell
 # Install the OpenSSH Client
-Add-WindowsCapability -Online -Name OpenSSH.Client    0.0.1.0
+Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 
 # Install the OpenSSH Server
-Add-WindowsCapability -Online -Name OpenSSH.Server    0.0.1.0
+Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 
 Both of these should return the following output:
@@ -129,10 +129,10 @@ To uninstall the OpenSSH components using PowerShell, use the following commands
 
 ```powershell
 # Uninstall the OpenSSH Client
-Remove-WindowsCapability -Online -Name OpenSSH.Client    0.0.1.0
+Remove-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 
 # Uninstall the OpenSSH Server
-Remove-WindowsCapability -Online -Name OpenSSH.Server    0.0.1.0
+Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 
 You may need to restart Windows afterwards if the service was in use at the time it was uninstalled.
