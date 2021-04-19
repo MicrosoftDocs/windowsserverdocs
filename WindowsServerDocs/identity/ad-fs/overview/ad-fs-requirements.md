@@ -105,7 +105,7 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
 
 -   For extranet access, you must deploy the Web Application Proxy role service \- part of the Remote Access server role.
 
--   Third party proxies must support the [MS-ADFSPIP protocol](/openspecs/windows_protocols/ms-adfspip/76deccb1-1429-4c80-8349-d38e61da5cbb) to be supported as an AD FS proxy.  For a list of 3rd party vendors see the [FAQ](AD-FS-FAQ.md).
+-   Third party proxies must support the [MS-ADFSPIP protocol](/openspecs/windows_protocols/ms-adfspip/76deccb1-1429-4c80-8349-d38e61da5cbb) to be supported as an AD FS proxy.  For a list of 3rd party vendors see the [FAQ](AD-FS-FAQ.yml).
 
 -   AD FS 2016 requires Web Application Proxy servers on Windows Server 2016.  A downlevel proxy cannot be configured for an AD FS 2016 farm running at the 2016 farm behavior level.
 
