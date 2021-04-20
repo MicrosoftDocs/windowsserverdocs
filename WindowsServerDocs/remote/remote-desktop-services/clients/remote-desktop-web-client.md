@@ -56,19 +56,46 @@ Follow these steps to print from the web client:
 4. Your browser will generate a PDF file of your print job.
 5. You can choose to either open the PDF and print its contents to your local printer or save it to your PC for later use.
 
+## Transfer files with the web client
+
+To learn how to enable web client file transfer, check out [Configure device redirections](https://docs.microsoft.com/azure/virtual-desktop/configure-device-redirections#local-drive-redirection).
+
+Follow these steps to transfer files from your local computer to the remote session:
+
+1. Connect to the remote session.
+2. Select the file upload icon in the web client menu.
+3. When prompted, select the files you want to upload using the local file explorer.
+4. Open the file explorer in your remote session. Your files will be uploaded to **Remote Desktop Virtual Drive** > **Uploads**.
+
+To download files from the remote session to your local computer:
+
+1. Connect to the remote session.
+2. Open the file explorer in your remote session.
+3. Copy the files you want to download to **Remote Desktop Virtual Drive** > **Downloads**.
+4. Your files will be downloaded to your local default downloads folder.
+
 ## Copy and paste from the Remote Desktop web client
 
 The web client currently supports copying and pasting text only. Files can't be copied or pasted to and from the web client. Additionally, you can only use **Ctrl+C** and **Ctrl+V** to copy and paste text.
 
 ## Use an Input Method Editor (IME) in the remote session
 
-Follow these steps to use an Input Method Editor to enter complex characters in the remote session:
+The web client supports using an Input Method Editor (IME) in the remote session in version **1.0.21.16 or later**. The language pack for the keyboard you want to use in the remote session must be installed on the host virtual machine. To learn more about setting up language packs in the remote session, check out [Add language packs to a Windows 10 multi-session image](https://docs.microsoft.com/azure/virtual-desktop/language-packs).
 
-1. Select the gear icon in the navigation bar to open the **Settings** side panel.
-2. Set the **Enable Input Method Editor** switch to **On**.
-3. Select your preferred IME keyboard layout in the dropdown menu.
+To enable IME input using the web client:
 
-You must have an Input Method Editor installed and enabled in the remote session.
+1. Before connecting to the remote session, go to the web client **Settings** panel.
+
+2. Toggle the **Enable Input Method Editor** setting to **On**.
+
+3. In the dropdown menu, select the keyboard you will use in the remote session.
+
+4. Connect to the remote session.
+
+The web client will suppress the local IME window when you are focused on the remote session. Changing IME settings once you have already connected to the remote session will not have any effect. IME input is not supported when using a private browsing window.
+
+>[!NOTE]
+>If the language pack is not installed on the host virtual machine, the remote session will default to English (United States) keyboard.
 
 ## Get help with the web client
 
