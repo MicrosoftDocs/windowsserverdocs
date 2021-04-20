@@ -207,4 +207,4 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 - [Windows Admin Center Common Troubleshooting Steps](../manage/windows-admin-center/support/troubleshooting.md)
 - [Windows Admin Center Known Issues](../manage/windows-admin-center/support/known-issues.md)
-- [Windows Admin Center Frequently Asked Questions](../manage/windows-admin-center/understand/faq.md)
+- [Windows Admin Center Frequently Asked Questions](../manage/windows-admin-center/understand/faq.yml)
