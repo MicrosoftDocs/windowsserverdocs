@@ -67,7 +67,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 - [AD FS Troubleshooting - Claims Rules](../identity/ad-fs/troubleshooting/ad-fs-tshoot-claims-rules.md)
 - [AD FS Troubleshooting - Integrated Windows Authentication](../identity/ad-fs/troubleshooting/ad-fs-tshoot-iwa.md)
 - [AD FS Troubleshooting - Azure AD](../identity/ad-fs/troubleshooting/ad-fs-tshoot-azure.md)
-- [AD FS FAQ](../identity/ad-fs/overview/ad-fs-faq.md)
+- [AD FS FAQ](../identity/ad-fs/overview/ad-fs-faq.yml)
 - [AD FS Help Diagnostics Analyzer](../identity/ad-fs/troubleshooting/ad-fs-diagnostics-analyzer.md)
 
 ## Troubleshoot AoVPN
