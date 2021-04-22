@@ -76,7 +76,7 @@ In this step you transfer data after specifying where to put it on the destinati
 3. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder), and then select **Next**.
 
     > [!NOTE]
-    > If migrating NetApp CIFS servers, source volumes will not have letters. You can map these volumes to any destination volumes you wish and you can map multiple NetApp CIFS volumes to the same destination volume. New root folder patchs will be created to avoid any folder overwrites or collisions, and then shares will be created that the correct level. The **Shares** detail pane will show the folder structure you are about to create.
+    > When migrating NetApp CIFS servers, source volumes don't show drive letters. You can map these volumes to any destination volumes, and you can map multiple NetApp CIFS volumes to the same destination volume. New root folder paths are created to avoid any folder overwrites or collisions, and then shares are created at the correct level. The **Shares** detail pane shows the folder structure you're about to create.
         
    ![Screenshot showing a source server and its volumes and shares and where they'll be transferred to on the destination](media/migrate/transfer.png)
     **Figure 3: A source server and where its storage will be transferred to**
