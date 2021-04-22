@@ -17,9 +17,9 @@ Microsoft Remote Desktop clients let you use and control a remote PC. With a Rem
 
 - Use apps installed on the remote PC.
 - Access files and network resources on the remote PC.
-- Leave the apps open when you turn the client off.
+- Leave the apps open when you turn off the client.
 
-You can also use a Remote Desktop client to access your remote PC from almost any device, even mobile smartphones. This table lists the latest versions of the client apps that are currently available and where you can download them:
+You can also use a Remote Desktop client to access your remote PC from almost any device, even mobile smartphones. Here's a list of the latest versions of the client apps and where you can download them:
 
 | Client | Get the app | Documentation | Latest version |
 |-----------------|-------------|------|---|
