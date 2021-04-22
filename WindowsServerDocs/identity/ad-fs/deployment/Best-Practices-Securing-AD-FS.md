@@ -159,6 +159,23 @@ AD FS can be configured to require strong authentication (such as multi factor a
 
 Supported external MFA providers include those listed in [this](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn758113(v=ws.11)) page, as well as HDI Global.
 
+### Hardening your AD FS servers
+The following is a list of best practices and recommendations for hardening and securing your AD FS deployment.
+
+- Ensure only Active Directory Admins and AD FS Admins have admin rights to the AD FS system.
+- Reduce local Administrators group membership on all AD FS servers.
+- Require all cloud admins use Multi-Factor Authentication (MFA).
+- Minimal administration capability via agents.
+- Limit access on-network via host firewall.
+- Ensure AD FS Admins use Admin Workstations to protect their credentials.
+- Place AD FS server computer objects in a top-level OU that doesn’t also host other servers.
+- All GPOs that apply to AD FS servers should only apply to them and not other servers as well. This limits potential privilege escalation through GPO modification.
+- Ensure the installed certificates are protected against theft (don’t store these on a share on the network) and set a calendar reminder to ensure they get renewed before expiring (expired certificate breaks federation auth).
+-bSet logging to the highest level and send the AD FS (& security) logs to a SIEM to correlate with AD authentication as well as AzureAD (or similar).
+- Remove unnecessary protocols & Windows features
+- Use a long (>25 characters), complex password for the AD FS service account. A Group-Managed Service Account is ideal since AD will manage the account password automatically.
+- Update to the latest AD FS version for security and logging improvements (as always, test first).
+
 ### Hardware Security Module (HSM)
 In its default configuration, the keys AD FS uses to sign tokens never leave the federation servers on the intranet.  They are never present in the DMZ or on the proxy machines.  Optionally to provide additional protection, these keys can be protected in a hardware security module attached to AD FS.  Microsoft does not produce an HSM product, however there are several on the market that support AD FS.  In order to implement this recommendation, follow the vendor guidance to create the X509 certs for signing and encryption, then use the AD FS installation powershell commandlets, specifying your custom certificates as follows:
 
