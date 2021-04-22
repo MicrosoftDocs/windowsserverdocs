@@ -13,13 +13,13 @@ ms.localizationpriority: medium
 
 >Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-You can control a remote PC by using a Microsoft Remote Desktop client. There are clients you can use on almost any device, including your mobile smartphone. With a Remote Desktop client, you do all the things you can do on a physical PC, such as:
+Microsoft Remote Desktop clients let you use and control a remote PC. With a Remote Desktop client, you can do all the things with a remote PC that you can do with a physical PC, such as:
 
 - Use apps installed on the remote PC.
 - Access files and network resources on the remote PC.
 - Leave the apps open when you turn the client off.
 
-This table lists the latest versions of the client apps that are currently available and where you can download them:
+You can also use a Remote Desktop client to access your remote PC from almost any device, even mobile smartphones. This table lists the latest versions of the client apps that are currently available and where you can download them:
 
 | Client | Get the app | Documentation | Latest version |
 |-----------------|-------------|------|---|
@@ -29,7 +29,7 @@ This table lists the latest versions of the client apps that are currently avail
 | iOS             | [iOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id714464092)     | [Get started](remote-desktop-ios.md), [What's new](ios-whatsnew.md)         | 10.2.5 |
 | macOS | [macOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Get started](remote-desktop-mac.md), [What's new](mac-whatsnew.md)       | 10.6.1 |
 
-Before you can start using the Remote Desktop client of your choice, there are a few things you'll need to do first.
+Before you start using the client of your choice, there are a few things you'll need to do first.
 
 ## Configure your remote PC
 
@@ -38,9 +38,9 @@ Just as you would with a local computer, you'll need to configure your remote co
 To configure your remote PC:
 
 1. Check the [supported configuration](remote-desktop-supported-config.md) article to make sure your local PC is compatible with the Remote Desktop client.
-2. Follow the instructions in [Allow access to your PC](remote-desktop-allow-access.md) to set up your remote PC and give you the necessary permissions to acces the remote PC with the client.
+2. Follow the instructions in [Allow access to your PC](remote-desktop-allow-access.md) to set up your remote PC and give you the necessary permissions to access the remote PC with the client.
 
-## Remote Desktop client URI scheme
+## Remote Desktop client Uniform Resource Identifier (URI) scheme
 
 You can also use features of Remote Desktop clients across platforms by enabling a Uniform Resource Identifier (URI) scheme. The [Supported URI attributes](remote-desktop-uri.md) article will tell you about URIs you can use with the iOS, Mac, and Android clients.
 
