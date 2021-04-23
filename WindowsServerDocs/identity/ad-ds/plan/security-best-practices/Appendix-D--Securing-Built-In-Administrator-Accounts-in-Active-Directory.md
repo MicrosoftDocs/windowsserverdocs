@@ -61,11 +61,11 @@ For the built-in Administrator account in each domain in your forest, you should
         -   Deny log on through Remote Desktop Services
 
 > [!NOTE]
-> These settings will ensure that the domain's built-in Administrator account cannot be used to connect to a domain controller, although the account, if enabled, can log on locally to domain controllers. Because this account should only be enabled and used in disaster-recovery scenarios, it is anticipated that physical access to at least one domain controller will be available, or that other accounts with permissions to access domain controllers remotely can be used.
+> These settings will ensure that the domain's built-in Administrator account cannot be used to connect to a domain controller, although the account can log on locally to domain controllers. Because this account should only be used in disaster-recovery scenarios, it is anticipated that physical access to at least one domain controller will be available, or that other accounts with permissions to access domain controllers remotely can be used.
 
 -   Configure Auditing of Administrator Accounts
 
-    When you have secured each domain's Administrator account and disabled it, you should configure auditing to monitor for changes to the account. If the account is enabled, its password is reset, or any other modifications are made to the account, alerts should be sent to the users or teams responsible for administration of Active Directory, in addition to incident response teams in your organization.
+    When you have secured each domain's Administrator account, you should configure auditing to monitor for usage of, or changes to, the account. If the account is used to logon, its password is reset, or any other modifications are made to the account, alerts should be sent to the users or teams responsible for administration of Active Directory, in addition to incident response teams in your organization.
 
 #### Step-by-Step Instructions to Secure Built-in Administrator Accounts in Active Directory
 
@@ -191,12 +191,6 @@ The verification steps outlined here are specific to Windows 8 and Windows Serve
 1.  From any member server or workstation affected by the GPO changes, attempt to log on interactively to the domain by using the domain's built-in Administrator account. After attempting to log on, a dialog box similar to the following should appear.
 
 ![Screenshot that says you must use a smart card to sign in.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_36.gif)
-
-##### Verify "Account is disabled" Account Option
-
-1.  From any member server or workstation affected by the GPO changes, attempt to log on interactively to the domain by using the domain's built-in Administrator account. After attempting to log on, a dialog box similar to the following should appear.
-
-![Screenshot that says your account has been disabled.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_37.gif)
 
 ##### Verify "Deny access to this computer from the network" GPO Settings
 From any member server or workstation that is not affected by the GPO changes (such as a jump server), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command by performing the following steps:
