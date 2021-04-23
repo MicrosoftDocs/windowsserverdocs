@@ -50,29 +50,14 @@ Use these best practices for streamlining your network analysis.
 
 ## Functionality
 
-Packet Monitor's functionality has evolved through Windows releases. The table below shows its major capabilities and corresponding Windows release.
-
-| Capability                                                                  | V 1809 (B:17763) | V 1903 (B:18362) | V 2004 (B:19041) |
-|:---------------------------------------------------------------------------:|:----------------:|:----------------:|:----------------:|
-| Packet monitoring and counting at multiple locations along networking stack | &#x2611;         | &#x2611;         | &#x2611;         |
-| Packets drop detection at multiple stack locations                          | &#x2611;         | &#x2611;         | &#x2611;         |
-| Flexible runtime packet filtering                                           | &#x2611;         | &#x2611;         | &#x2611;         |
-| Encapsulation support                                                       | &#x2610;         | &#x2611;         | &#x2611;         |
-| Network analysis based on TcpDump packet parsing                            | &#x2610;         | &#x2611;         | &#x2611;         |
-| Packet metadata (OOB) analysis                                              | &#x2610;         | &#x2610;         | &#x2611;         |
-| Real-time on-screen packet monitoring                                       | &#x2610;         | &#x2610;         | &#x2611;         |
-| High volume in-memory logging                                               | &#x2610;         | &#x2610;         | &#x2611;         |
-| Wireshark and Network Monitor format support                                | &#x2610;         | &#x2610;         | &#x2611;         |
-
->[!NOTE]
->Azure Stack HCI and Azure Stack Hub customers should expect the Vibranium functionality.
-
-## Limitations
-
-Below are some of Packet Monitor's most significant limitations.
-
-- Only Ethernet traffic is supported for now. Wireless traffic support will be added in later releases.
-- Packet drops from Windows Firewall are not visible through Packet Monitor yet. 
+- Packet monitoring and counting at multiple locations along networking stack
+- Packets drop detection at multiple stack locations
+- Flexible runtime packet filtering with encapsulation support
+- General logging and tracing support (ETW and WPP events)
+- TXT log analysis based on TcpDump packet parsing
+- Multiple logging modes: real-time, high volume in-memory, multi-file, circular
+- Ethernet, Wifi and Mobile broadband media type support
+- PCAPNG format support
 
 ## Get started with Packet Monitor
 
