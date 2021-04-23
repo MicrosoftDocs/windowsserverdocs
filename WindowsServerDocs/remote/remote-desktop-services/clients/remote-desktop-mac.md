@@ -126,7 +126,7 @@ To delete the resolution, select it, and then select **-**.
 
 ## Displays have separate spaces
 
-If you're running Mac OS X 10.9 and have disabled **Displays have separate spaces** in Mavericks (**System Preferences > Mission Control**), you need to configure this setting in the Remote Desktop client using the same option.
+If you're running macOS X 10.9 and have disabled **Displays have separate spaces** in Mavericks (**System Preferences > Mission Control**), you need to configure this setting in the Remote Desktop client using the same option.
 
 ### Drive redirection for remote resources
 
