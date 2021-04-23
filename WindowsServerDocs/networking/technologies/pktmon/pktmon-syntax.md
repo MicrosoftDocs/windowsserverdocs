@@ -11,13 +11,14 @@ ms.date: 1/20/2021
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack. Packet Monitor is available in-box via pktmon.exe command on Vibranium OS (build 19041). You can use this topic to learn how to understand pktmon syntax, command formatting, and output. For a complete list of commands, see [pktmon syntax](/windows-server/administration/windows-commands/pktmon). 
+Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack. Packet Monitor is available in-box via pktmon.exe command on Windows 10 and Windows Server 2019 (Version 1809 and later). You can use this topic to learn how to understand pktmon syntax, command formatting, and output. For a complete list of commands, see [pktmon syntax](/windows-server/administration/windows-commands/pktmon). 
 
 ## Quick start
 
 Use the following steps to get started in generic scenarios:
 
-1. Identify the type of packets needed for the capture, i.e. specific IP addresses, ports, or protocols associated with the packet. Then, check the syntax to apply capture filters, and apply the filters for the packets identified in the previous step.
+1. Identify the type of packets needed for the capture, i.e. specific IP addresses, ports, or protocols associated with the packet.
+2. Check the syntax to apply capture filters, and apply the filters for the packets identified in the previous step.
 
    ```PowerShell
    C:\Test> pktmon filter add help
@@ -27,7 +28,7 @@ Use the following steps to get started in generic scenarios:
 2. Start the capture and enable packet logging.
 
    ```PowerShell
-   C:\Test> pktmon start --etw
+   C:\Test> pktmon start -c
    ```
 
 3. Reproduce the issue being diagnosed. Query counters to confirm the presence of expected traffic, and to get a high-level view of how the traffic flowed in the machine.
@@ -40,7 +41,7 @@ Use the following steps to get started in generic scenarios:
 
    ```PowerShell
    C:\Test> pktmon stop
-   C:\Test> pktmon format <etl file>
+   C:\Test> pktmon etl2txt <etl file>
    ```
 
 See [Analyze Packet Monitor output](#analyze-packet-monitor-output) for instructions on analyzing txt output.
@@ -74,22 +75,28 @@ C:\Test> pktmon filter add -i 10.0.0.10 -t tcp syn
 
 For more information, see [pktmon filter syntax](/windows-server/administration/windows-commands/pktmon-filter).
 
-## Packet capture and logging
+## Packets and general events capture
+PacketMon can capture packets through the [-c] parameter with the start command. This will enable packet capture and logging as well as packet counters. To enable packet counters only without logging the packet, add the [-o] parameter to the start command. For more information about packet counters, please check the Packet Counters section below.
 
-Packet Monitor can capture networking traffic with or without packet logging. For more information about capturing traffic without packet logging, check the Packet Counters section below. To capture and log packets, add the **[--etw]** parameter to the start command.
+You can select components to monitor through the [--comp] parameter. It can be NICs only, or a list of component ids, and it defaults to all components. You can also filter by packet propagation status (dropped or flowing packets) through the [--type] parameter.
 
-Select components to monitor through the **[-c]** parameter. It can be all components, NICs only, or a list of component ids. The default is to capture traffic at all components. Monitor dropped packets only with [-d] parameter. The default is to capture flowing and dropped packets.
+Along with capturing packets, PacketMon also allows the capture of general events (e.g. ETW and WPP events) by declaring the [-t] parameter and specifying the providers through the [-p] parameter. Use "pktmon stop" to stop all data collection
 
-For example, the following command will capture packet counters of all the network adapters without logging packets:
+For example, the following command will capture packets of only the network adapters.
 
 ```PowerShell
-C:\Test> pktmon start -c nics
+C:\Test> pktmon start -c --comp nics
 ```
 
 However, the following command will capture only the dropped packets that pass through components 4 and 5, and log them:
 
 ```PowerShell
-C:\Test> pktmon start --etw -c 4,5 -d
+C:\Test> pktmon start -c --comp 4,5 --type drop
+```
+This command will capture packets and log events from the provider "Microsoft-Windows-TCPIP"
+
+```PowerShell
+C:\Test> pktmon start --capture --trace -p Microsoft-Windows-TCPIP
 ```
 
 ### Packet logging capability
