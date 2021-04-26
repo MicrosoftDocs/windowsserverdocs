@@ -65,7 +65,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
 -   Configure Auditing of Administrator Accounts
 
-    When you have secured each domain's Administrator account, you should configure auditing to monitor for usage of, or changes to, the account. If the account is used to logon, its password is reset, or any other modifications are made to the account, alerts should be sent to the users or teams responsible for administration of Active Directory, in addition to incident response teams in your organization.
+    When you have secured each domain's Administrator account, you should configure auditing to monitor for usage of, or changes to, the account. If the account is logged in to, its password is reset, or any other modifications are made to the account, alerts should be sent to the users or teams responsible for administration of Active Directory, in addition to incident response teams in your organization.
 
 #### Step-by-Step Instructions to Secure Built-in Administrator Accounts in Active Directory
 
