@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 
 You can use the Remote Desktop client for iOS to work with Windows apps, resources, and desktops from your iOS device (iPhones and iPads).
 
-Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
+Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.yml) if you have any questions.
 
 > [!NOTE]
 > - Curious about the new releases for the iOS client? Check out [What's new for Remote Desktop on iOS?](ios-whatsnew.md).
@@ -33,7 +33,7 @@ First you'll need to download the client and configure your PC to connect to rem
 To download the client:
 
 1. Download the Microsoft Remote Desktop client from the [iOS App Store](https://aka.ms/rdios) or [iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8).
-2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop).
+2. [Set up your PC to accept remote connections](remote-desktop-client-faq.yml#how-do-i-set-up-a-pc-for-remote-desktop-).
 
 ### Add a PC
 
