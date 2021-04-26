@@ -40,6 +40,11 @@ The following is a list of best practices and recommendations for hardening and 
 - Use a long (>25 characters), complex password for the AD FS service account. A Group-Managed Service Account is ideal since AD will manage the account password automatically.
 - Update to the latest AD FS version for security and logging improvements (as always, test first).
 
+
+## Communication between Federation Servers
+Federation servers on an AD FS farm communicate with each server in the farm and the Web Application Proxy (WAP) servers via HTTP port 80.  This communication is done for configuration synchronization. Making sure that **only these servers** can communicate with each other, can help prevent potential rogue servers aiming to attack the service via unauthorized configuration changes. Organizations can do this by setting up firewall rules on each server and only allowing inbound communication from the IP addresses of the other servers in the farm and WAP servers. Please note that some Network Load Balancers (NLB) use HTTP port 80 for probing the health on individual federation servers. Please make sure that you include the IP addresses of the NLB in the configured firewall rules.
+
+
 ## Ports required
 The below diagram depicts the firewall ports that must be enabled between and amongst the components of the AD FS and WAP deployment.  If the deployment does not include Azure AD / Office 365, the sync requirements can be disregarded.
 
