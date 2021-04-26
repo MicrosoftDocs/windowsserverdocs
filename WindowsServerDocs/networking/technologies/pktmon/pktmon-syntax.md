@@ -78,7 +78,7 @@ For more information, see [pktmon filter syntax](/windows-server/administration/
 ## Packets and general events capture
 PacketMon can capture packets through the [-c] parameter with the start command. This will enable packet capture and logging as well as packet counters. To enable packet counters only without logging the packet, add the [-o] parameter to the start command. For more information about packet counters, please check the Packet Counters section below.
 
-You can select components to monitor through the [--comp] parameter. It can be NICs only, or a list of component ids, and it defaults to all components. You can also filter by packet propagation status (dropped or flowing packets) through the [--type] parameter.
+You can select components to monitor through the [--comp] parameter. It can be NICs only, or a list of component IDs, and it defaults to all components. You can also filter by packet propagation status (dropped or flowing packets) through the [--type] parameter.
 
 Along with capturing packets, PacketMon also allows the capture of general events (e.g. ETW and WPP events) by declaring the [-t] parameter and specifying the providers through the [-p] parameter. Use "pktmon stop" to stop all data collection
 
