@@ -56,7 +56,7 @@ Use these best practices for streamlining your network analysis.
 - General logging and tracing support (ETW and WPP events)
 - TXT log analysis based on TcpDump packet parsing
 - Multiple logging modes: real-time, high volume in-memory, multi-file, circular
-- Ethernet, Wifi and Mobile broadband media type support
+- Ethernet, Wi-Fi and Mobile broadband media type support
 - PCAPNG format support
 
 ## Get started with Packet Monitor
