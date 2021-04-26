@@ -50,7 +50,7 @@ Use these best practices for streamlining your network analysis.
 
 ## Functionality
 
-- Packet monitoring and counting at multiple locations along networking stack
+- Packet monitoring and counting at multiple locations along the networking stack
 - Packets drop detection at multiple stack locations
 - Flexible runtime packet filtering with encapsulation support
 - General logging and tracing support (ETW and WPP events)
