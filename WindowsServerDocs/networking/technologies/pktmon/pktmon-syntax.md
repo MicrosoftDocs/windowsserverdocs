@@ -19,7 +19,7 @@ Use the following steps to get started in generic scenarios:
 
 1. Identify the type of packets needed for the capture, such as specific IP addresses, ports, or protocols associated with the packet.
  
-2. heck the syntax to apply capture filters, and apply the filters for the packets identified in the previous step.
+2. Check the syntax to apply capture filters, and apply the filters for the packets identified in the previous step.
 
    ```PowerShell
    C:\Test> pktmon filter add help
