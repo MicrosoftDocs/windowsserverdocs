@@ -30,7 +30,7 @@
 ## [DFS Replication](dfs-replication/dfsr-overview.md)
 ### [Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)
 ### [Use robocopy to preseed files for DFS Replication](dfs-replication/preseed-dfsr-with-robocopy.md)
-### [DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.yml)
+### [DFS Replication FAQ](dfs-replication/dfsr-faq.yml)
 ### [How to determine the minimum staging area DFSR needs for a replicated folder](../troubleshoot/how-to-determine-the-minimum-staging-area-dfsr-needs-for-a-replicated-folder.md)
 ### [Understanding (the Lack of) Distributed File Locking in DFSR](../troubleshoot/understanding-the-lack-of-distributed-file-locking-in-dfsr.md)
 ## [Disk Management](disk-management/overview-of-disk-management.md)
