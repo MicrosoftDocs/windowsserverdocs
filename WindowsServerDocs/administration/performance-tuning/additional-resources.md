@@ -116,4 +116,4 @@ Here's a list of performance tuning guidelines for previous versions of Windows 
 
 -   [Performance Tuning Guidelines for Windows Server 2008](https://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Perf-tun-srv.docx)
 
--   [Performance Tuning Guidelines for Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/opbuildpdf/administration/performance-tuning/toc.pdf?branch=live)
+-   [Performance Tuning Guidelines for Windows Server 2016](https://docs.microsoft.com/windows-server/opbuildpdf/administration/performance-tuning/toc.pdf?branch=live)
