@@ -1,14 +1,14 @@
 ### YamlMime:FAQ
 metadata:
   description: "Learn more about"
-  title: DFS Replication - Frequently Asked Questions (FAQ)
-  ms.date: 06/18/2014
+  title: DFS Replication - FAQ
+  ms.date: 4/30/2021
   author: JasonGerend
   manager: elizapo
   ms.author: jgerend
   ms.topic: article
     
-title: "DFS Replication: Frequently Asked Questions (FAQ)"
+title: "DFS Replication FAQ"
 summary: |
   Updated: April 30, 2019
   
@@ -45,16 +45,16 @@ sections:
         answer: |
           Yes, DFS Replication can replace FRS for SYSVOL replication on servers running Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008. Servers running Windows Server 2003 R2 do not support using DFS Replication to replicate the SYSVOL folder.
           
-          For more information about replicating SYSVOL by using DFS Replication, see the [SYSVOL Replication Migration Guide: FRS to DFS Replication](./migrate-sysvol-to-dfsr.md).
+          For more information about replicating SYSVOL by using DFS Replication, see the [Migrate SYSVOL replication to DFS Replication](./migrate-sysvol-to-dfsr.md).
           
       - question: |
           Can I upgrade from FRS to DFS Replication without losing configuration settings?
         answer: |
           Yes. To migrate replication from FRS to DFS Replication, see the following documents:
           
-            - To migrate replication of folders other than the SYSVOL folder, see [DFS Operations Guide: Migrating from FRS to DFS Replication](https://go.microsoft.com/fwlink/?linkid=192776) and [FRS2DFSR – An FRS to DFSR Migration Utility](https://go.microsoft.com/fwlink/?linkid=195437) (https://go.microsoft.com/fwlink/?LinkID=195437).
+            - To migrate replication of folders other than the SYSVOL folder, see DFS Operations Guide: Migrating from FRS to DFS Replication and [FRS2DFSR – An FRS to DFSR Migration Utility](https://go.microsoft.com/fwlink/?linkid=195437) (https://go.microsoft.com/fwlink/?LinkID=195437).
           
-            - To migrate replication of the SYSVOL folder to DFS Replication, see [SYSVOL Replication Migration Guide: FRS to DFS Replication](./migrate-sysvol-to-dfsr.md).
+            - To migrate replication of the SYSVOL folder to DFS Replication, see [Migrate SYSVOL replication to DFS Replication](./migrate-sysvol-to-dfsr.md).
           
           
       - question: |
@@ -411,50 +411,6 @@ sections:
   - name: Remote Differential Compression details
     questions:
       - question: |
-          Are changes compressed before being replicated?
-        answer: |
-          Yes. Changed portions of files are compressed before being sent for all file types except the following (which are already compressed): .wma, .wmv, .zip, .jpg, .mpg, .mpeg, .m1v, .mp2, .mp3, .mpa, .cab, .wav, .snd, .au, .asf, .wm, .avi, .z, .gz, .tgz, and .frx. Compression settings for these file types are not configurable in Windows Server 2003 R2.
-          
-      - question: |
-          Can an administrator turn off RDC or change the threshold?
-        answer: |
-          Yes. You can turn off RDC through the property page of a given connection. Disabling RDC can reduce CPU utilization and replication latency on fast local area network (LAN) links that have no bandwidth constraints or for replication groups that consist primarily of files smaller than 64 KB. If you choose to disable RDC on a connection, test the replication efficiency before and after the change to verify that you have improved replication performance.
-          
-          You can change the RDC size threshold by using the **Dfsradmin Connection Set** command, the DFS Replication WMI Provider, or by manually editing the configuration XML file.
-          
-      - question: |
-          Does RDC work on all file types?
-        answer: |
-          Yes. RDC computes differences at the block level irrespective of file data type. However, RDC works more efficiently on certain file types such as Word docs, PST files, and VHD images.
-
-      - question: |
-          How does RDC work on a compressed file?
-        answer: |
-          DFS Replication uses RDC, which computes the blocks in the file that have changed and sends only those blocks over the network. DFS Replication does not need to know anything about the contents of the file—only which blocks have changed.
-
-      - question: |
-          Is cross-file RDC enabled when upgrading to Windows Server Enterprise Edition or Datacenter Edition?
-        answer: |
-          The Standard Editions of Windows Server do not support cross-file RDC. However, it is automatically enabled when you upgrade to an edition that supports cross-file RDC, or if a member of the replication connection is running a supported edition. For a list of editions that support cross-file RDC, see Which editions of the Windows operating system support cross-file RDC?
-
-      - question: |
-          Is RDC true block-level replication?
-        answer: |
-          No. RDC is a general purpose protocol for compressing file transfer. DFS Replication uses RDC on blocks at the file level, not at the disk block level. RDC divides a file into blocks. For each block in a file, it calculates a signature, which is a small number of bytes that can represent the larger block. The set of signatures is transferred from server to client. The client compares the server signatures to its own. The client then requests the server send only the data for signatures that are not already on the client.
-
-      - question: |
-          What happens if I rename a file?
-        answer: |
-          DFS Replication renames the file on all other members of the replication group during the next replication. Files are tracked using a unique ID, so renaming a file and moving the file within the replica has no effect on the ability of DFS Replication to replicate a file.
-
-      - question: |
-          What is cross-file RDC?
-        answer: |
-          Cross-file RDC allows DFS Replication to use RDC even when a file with the same name does not exist at the client end. Cross-file RDC uses a heuristic to determine files that are similar to the file that needs to be replicated, and uses blocks of the similar files that are identical to the replicating file to minimize the amount of data transferred over the WAN. Cross-file RDC can use blocks of up to five similar files in this process.
-          
-          To use cross-file RDC, one member of the replication connection must be running an edition of Windows that supports cross-file RDC. For a list of editions that support cross-file RDC, see Which editions of the Windows operating system support cross-file RDC?
-          
-      - question: |
           What is RDC?
         answer: |
           Remote differential compression (RDC) is a client-server protocol that can be used to efficiently update files over a limited-bandwidth network. RDC detects insertions, removals, and rearrangements of data in files, enabling DFS Replication to replicate only the changes when files are updated. RDC is used only for files that are 64 KB or larger by default. RDC can use an older version of a file with the same name in the replicated folder or in the DfsrPrivate\\ConflictandDeleted folder (located under the local path of the replicated folder).
@@ -522,7 +478,51 @@ sections:
           </table>
           
           \* You can optionally disable cross-file RDC on Windows Server 2012 R2.
+
+      - question: |
+          Are changes compressed before being replicated?
+        answer: |
+          Yes. Changed portions of files are compressed before being sent for all file types except the following (which are already compressed): .wma, .wmv, .zip, .jpg, .mpg, .mpeg, .m1v, .mp2, .mp3, .mpa, .cab, .wav, .snd, .au, .asf, .wm, .avi, .z, .gz, .tgz, and .frx. Compression settings for these file types are not configurable in Windows Server 2003 R2.
           
+      - question: |
+          Can an administrator turn off RDC or change the threshold?
+        answer: |
+          Yes. You can turn off RDC through the property page of a given connection. Disabling RDC can reduce CPU utilization and replication latency on fast local area network (LAN) links that have no bandwidth constraints or for replication groups that consist primarily of files smaller than 64 KB. If you choose to disable RDC on a connection, test the replication efficiency before and after the change to verify that you have improved replication performance.
+          
+          You can change the RDC size threshold by using the **Dfsradmin Connection Set** command, the DFS Replication WMI Provider, or by manually editing the configuration XML file.
+          
+      - question: |
+          Does RDC work on all file types?
+        answer: |
+          Yes. RDC computes differences at the block level irrespective of file data type. However, RDC works more efficiently on certain file types such as Word docs, PST files, and VHD images.
+
+      - question: |
+          How does RDC work on a compressed file?
+        answer: |
+          DFS Replication uses RDC, which computes the blocks in the file that have changed and sends only those blocks over the network. DFS Replication does not need to know anything about the contents of the file—only which blocks have changed.
+
+      - question: |
+          Is cross-file RDC enabled when upgrading to Windows Server Enterprise Edition or Datacenter Edition?
+        answer: |
+          The Standard Editions of Windows Server do not support cross-file RDC. However, it is automatically enabled when you upgrade to an edition that supports cross-file RDC, or if a member of the replication connection is running a supported edition. For a list of editions that support cross-file RDC, see Which editions of the Windows operating system support cross-file RDC?
+
+      - question: |
+          Is RDC true block-level replication?
+        answer: |
+          No. RDC is a general purpose protocol for compressing file transfer. DFS Replication uses RDC on blocks at the file level, not at the disk block level. RDC divides a file into blocks. For each block in a file, it calculates a signature, which is a small number of bytes that can represent the larger block. The set of signatures is transferred from server to client. The client compares the server signatures to its own. The client then requests the server send only the data for signatures that are not already on the client.
+
+      - question: |
+          What happens if I rename a file?
+        answer: |
+          DFS Replication renames the file on all other members of the replication group during the next replication. Files are tracked using a unique ID, so renaming a file and moving the file within the replica has no effect on the ability of DFS Replication to replicate a file.
+
+      - question: |
+          What is cross-file RDC?
+        answer: |
+          Cross-file RDC allows DFS Replication to use RDC even when a file with the same name does not exist at the client end. Cross-file RDC uses a heuristic to determine files that are similar to the file that needs to be replicated, and uses blocks of the similar files that are identical to the replicating file to minimize the amount of data transferred over the WAN. Cross-file RDC can use blocks of up to five similar files in this process.
+          
+          To use cross-file RDC, one member of the replication connection must be running an edition of Windows that supports cross-file RDC. For a list of editions that support cross-file RDC, see Which editions of the Windows operating system support cross-file RDC?
+
   - name: Replication details
     questions:
       - question: |
