@@ -31,7 +31,7 @@ For more information, see the following articles:
 
 * [Remote Desktop Services - Secure data storage](rds-plan-secure-data-storage.md)
 * [Upload a generalized VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed?toc=/azure/virtual-machines/windows/toc.json)
-* [Update RDSH collection (ARM template)](https://azure.microsoft.com/resources/templates/rds-update-rdsh-collection/)
+* [Update RDSH collection (ARM template)](https://github.com/Azure/RDS-Templates/tree/master/rds-update-rdsh-collection/)
 
 ## Remote Desktop Connection Broker
 
