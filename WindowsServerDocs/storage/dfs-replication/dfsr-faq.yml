@@ -27,7 +27,7 @@ summary: |
     - [Distributed File System](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753479(v=ws.10)) topic in [Changes in Functionality from Windows Server 2003 with SP1 to Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753208(v=ws.10))
   
   
-  For a list of recent changes to this topic, see the [Change History](#change-history) section of this topic.
+  For a list of recent changes to this topic, see the [Change history](#change-history) section of this topic.
   
   
   
@@ -803,7 +803,7 @@ sections:
         answer: |
           If any part of the file is already being transmitted, DFS Replication continues the transmission. If the file is changed before DFS Replication begins transmitting the file, then the newer version of the file is sent.
 
-          ## Change History
+          ## Change history
 
           <table>
           <colgroup>
