@@ -5,7 +5,7 @@ author: Deland-Han
 manager: dcscontentpm
 ms.topic: how-to
 ms.author: delhan
-ms.date: 03/29/2021
+ms.date: 04/27/2021
 ms.custom: contperf-fy21q2
 ---
 # How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows
@@ -79,6 +79,14 @@ Here's how to remove SMBv1 in Windows 10, Windows 8.1, Windows Server 2019, Wind
 ##### SMB v1
 
 ![Server Manager - Dashboard method](media/detect-enable-and-disable-smbv1-v2-v3-1.png)
+
+To remove SMB v1 from Windows Server:
+1. On the Server Manager Dashboard of the server where you want to remove SMB v1, under **Configure this local server**, select **Add roles and features**.
+1. On the **Before you begin** page, select **Start the Remove Roles and Features Wizard**, and then on the following page, select **Next**.
+1. On the **Select destination server** page, under **Server Pool**, ensure that the server you want to remove the feature from is selected, and then select **Next**.
+1. On the **Remove server roles** page, select **Next**.
+1. On the **Remove features** page, clear the check box for **SMB 1.0/CIFS File Sharing Support** and select **Next**.
+1. On the **Confirm removal selections** page, confirm that the feature is listed, and then select **Remove**.
 
 #### Windows 8.1 and Windows 10: PowerShell method
 
