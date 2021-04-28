@@ -42,14 +42,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "April 2021 Windows preview \"C\" release for Windows 10, version 20H2 and Windows 10, version 2004 is available"
+          url: https://support.microsoft.com/help/5001391
+          itemType: whats-new
         - text: ".NET Framework 4.5.2, 4.6, 4.6.1 will reach end of support in 2022"
           url: https://aka.ms/framework-452-46-461-eos-blog
           itemType: whats-new
         - text: "April 2021 Windows non-security preview \"C\" release is available for some versions for Windows 10"
           url: https://support.microsoft.com/help/5001396
-          itemType: whats-new
-        - text: "Group configuration: news and interests on the Windows taskbar "
-          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/group-configuration-news-and-interests-on-the-windows-taskbar/ba-p/2281005
           itemType: whats-new
 
       footerLink:
