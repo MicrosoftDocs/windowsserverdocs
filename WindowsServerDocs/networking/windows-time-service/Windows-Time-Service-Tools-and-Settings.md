@@ -4,7 +4,7 @@ title: Windows Time service tools and settings
 author: Teresa-Motiv
 description: Describes the settings that are available for Windows Time Service (W32Time) and the tools that you can use to configure those settings
 ms.author: v-tea
-ms.date: 04/19/2021
+ms.date: 04/28/2021
 ms.topic: article
 ms.custom: contperf-fy21q4
 ---
@@ -94,7 +94,7 @@ The output of this command displays a list of W32time configuration parameters t
 > [!IMPORTANT]
 > [Windows Server 2016 has improved the time synchronization algorithms](./accurate-time.md) to align with RFC specifications. Therefore, if you want to set the local time client to point to multiple peers, we recommended that you prepare three or more different time servers.
 >
-> If you have only two time servers, you should specify the `UseAsFallbackOnly` flag (0x2) to de-prioritize one of them. For example, if you want to prioritize `ntpserver.contoso.com` over `clock.adatum.com`, run the following command.
+> If you have only two time servers, you should specify the **Ntpserver**`UseAsFallbackOnly` flag (0x2)to de-prioritize one of them. For example, if you want to prioritize `ntpserver.contoso.com` over `clock.adatum.com`, run the following command.
 > ```cmd
 > w32tm /config /manualpeerlist:"ntpserver.contoso.com,0x8 clock.adatum.com,0xa" /syncfromflags:manual /update
 > ```
@@ -226,12 +226,12 @@ The following table lists the policies that you can configure for the Windows Ti
 > [!WARNING]
 > This information is provided as a reference for use in troubleshooting and validation. Windows registry keys are used by W32Time to store critical information. Don't change these values. Modifications to the registry are not validated by the registry editor or by Windows before they are applied. If the registry contains invalid values, Windows may experience unrecoverable errors.
 
-The Windows Time service stores information in the following registry subkeys:
+The Windows Time service stores information in the registry at the **HKLM\SYSTEM\CurrentControlSet\Services\W32Time** path under the following subkeys:
 
-- [**HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config**](#config)
-- [**HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters**](#parameters)
-- [**HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient**](#ntpclient)
-- [**HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer**](#ntpserver)
+- [**\Config**](#config)
+- [**\Parameters**](#parameters)
+- [**\TimeProviders\NtpClient**](#ntpclient)
+- [**\TimeProviders\NtpServer**](#ntpserver)
 
 In the following tables, "All versions" refers to Windows 7, Windows 8, Windows 10, Windows Server 2008 and Windows Server 2008 R2, Windows Server 2012 and Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019. 
 
