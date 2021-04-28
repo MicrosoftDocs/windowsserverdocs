@@ -1721,7 +1721,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-client-faq.md",
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-client-faq.yml",
       "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq",
       "redirect_document_id": true
     },

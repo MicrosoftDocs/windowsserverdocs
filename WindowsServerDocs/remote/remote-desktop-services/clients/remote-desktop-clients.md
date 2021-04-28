@@ -19,7 +19,7 @@ You can control a remote PC by using a Microsoft Remote Desktop client. The clie
 - Access the files and network resources of the PC.
 - Leave the apps open when you end the client.
 
-Before you start, see the [supported configuration](remote-desktop-supported-config.md) article. The article discusses the PC configurations that the Remote Desktop clients can connect to. Also see the [client FAQ](remote-desktop-client-faq.md) article.
+Before you start, see the [supported configuration](remote-desktop-supported-config.md) article. The article discusses the PC configurations that the Remote Desktop clients can connect to. Also see the [client FAQ](remote-desktop-client-faq.yml) article.
 
 The following client apps are available:
 
