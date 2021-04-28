@@ -3,10 +3,10 @@ ms.assetid: cb834273-828a-4141-9387-37dd8270e932
 title: Winlogon automatic restart sign-on (ARSO)
 description: How Windows automatic restart sign-on can help make your users more productive.
 author: iainfoulds
-ms.author: daveba
+ms.author: justinha
 manager: daveba
 ms.reviewer: cahick
-ms.date: 08/20/2019
+ms.date: 04/28/2021
 ms.topic: article
 ---
 
@@ -149,6 +149,8 @@ The Logon Hours and parental controls can prohibit a new user session from being
 
 ## Security details
 
+In environments where the device’s physical security is of concern (for example, the device can be stolen), Microsoft does not recommend using ARSO. ARSO relies on the integrity of the platform firmware and TPM, an attacker with physical access maybe able to compromise these and as such access the credentials stored on disk with ARSO enabled.
+
 ### Credentials stored
 
 | Password hash | Credential key | Ticket-granting ticket | Primary refresh token |
@@ -160,7 +162,7 @@ The Logon Hours and parental controls can prohibit a new user session from being
 
 ### Credential Guard interaction
 
-If a device has Credential Guard enabled, a user's derived secrets are encrypted with a key specific to the current boot session. Therefore, ARSO is not currently supported on devices with Credential Guard enabled.
+ARSO is supported with Credential Guard enabled on devices beginning with Windows 10 version 1909.
 
 ## Additional resources
 
