@@ -6,7 +6,7 @@ ms.topic: landing-page
 manager: lizross
 author: JasonGerend
 ms.author: jgerend
-ms.date: 06/06/2019
+ms.date: 04/30/2021
 ms.localizationpriority: high
 ---
 # Failover Clustering in Windows Server
