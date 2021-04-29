@@ -23,6 +23,9 @@ You can configure the Always On VPN client through PowerShell, Microsoft Endpoin
 >[!NOTE]
 >Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client.  However, you can use logon scripts.
 
+>[!NOTE]
+>Auto-triggered VPN connections will not work if Folder Redirection for %appdata% (C:\Users\username\AppData\Roaming) is enabled. Either Folder Redirection must be disabled for %appdata% or the auto-triggered VPN profile must be deployed in system context, that changes the path the rasphone.pbk file is stored.
+
 ## ProfileXML overview
 
 ProfileXML is a URI node within the VPNv2 CSP. Rather than configuring each VPNv2 CSP node individually—such as triggers, route lists, and authentication protocols—use this node to configure a Windows 10 VPN client by delivering all the settings as a single XML block to a single CSP node. The ProfileXML schema matches the schema of the VPNv2 CSP nodes almost identically, but some terms are slightly different.
