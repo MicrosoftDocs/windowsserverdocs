@@ -11,7 +11,7 @@ description: This article describes failover cluster affinity and antiaffinity l
 
 > Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
-A failover cluster can hold many roles that can move between nodes and run. There are times when certain roles (that is, virtual machines, resource groups, and so on) should not run on the same node.  This could be due to resource consumption, memory usage, and so on.  For example, there are two virtual machines that are memory and CPU intensive and if the two virtual machines are running on the same node, one or both of the virtual machines could have performance impact issues.  This article will explain cluster antiaffinity levels and how you can use them.
+A failover cluster can hold many roles that can move between nodes and run. There are times when certain roles (that is, virtual machines, resource groups, and so on) should not run on the same node.  This could be because of resource consumption, memory usage, and so on.  For example, there are two virtual machines that are memory and CPU intensive and if the two virtual machines are running on the same node, one or both of the virtual machines could have performance impact issues.  This article will explain cluster antiaffinity levels and how you can use them.
 
 ## What is Affinity and AntiAffinity?
 
@@ -57,7 +57,7 @@ The AntiAffinityClassName parameter is a "soft" block.  Meaning, it will try to 
 
 As mentioned, AntiAffinityClassNames is a soft block.  But what if a hard block is needed?  The virtual machines cannot be run on the same node; otherwise, performance impact will occur and cause some services to possibly go down.
 
-For those cases, there is an additional cluster property of ClusterEnforcedAntiAffinity.  This antiaffinity level will prevent at all costs any of the same AntiAffinityClassNames values from running on the same node.
+For those cases, there is another cluster property of ClusterEnforcedAntiAffinity.  This antiaffinity level will prevent at all costs any of the same AntiAffinityClassNames values from running on the same node.
 
 To view the property and value, the PowerShell command (and result) would be:
 

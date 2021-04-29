@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 > Applies to: Azure Stack HCI, version 20H2; Windows Server 2019
 
-Cluster sets is a cloud scale-out technology introduced in the Windows Server 2019 release that increases cluster node count in a single Software Defined Data Center (SDDC) cloud by orders of magnitude. A cluster set is a loosely-coupled grouping of multiple Failover Clusters: compute, storage or hyper-converged. Cluster sets technology enables virtual machine fluidity across member clusters within a cluster set and a unified storage namespace across the set in support of virtual machine fluidity.
+Cluster sets is a cloud scale-out technology introduced in the Windows Server 2019 release that increases cluster node count in a single Software Defined Data Center (SDDC) cloud by orders of magnitude. A cluster set is a loosely-coupled grouping of multiple Failover Clusters: compute, storage, or hyper-converged. Cluster sets technology enables virtual machine fluidity across member clusters within a cluster set and a unified storage namespace across the set in support of virtual machine fluidity.
 
 While preserving existing Failover Cluster management experiences on member clusters, a cluster set instance additionally offers key use cases around lifecycle management at the aggregate. This Windows Server 2019 Scenario Evaluation Guide provides you the necessary background information along with step-by-step instructions to evaluate cluster sets technology using PowerShell.
 
@@ -25,9 +25,9 @@ Cluster sets technology is developed to meet specific customer requests operatin
 - Manage entire Failover Cluster lifecycle including onboarding and retiring clusters, without impacting tenant virtual machine availability, via fluidly migrating virtual machines across this large fabric
 - Easily change the compute-to-storage ratio in your hyper-converged I
 - Benefit from [Azure-like Fault Domains and Availability sets](htttps://docs.microsoft.com/azure/virtual-machines/windows/manage-availability) across clusters in initial virtual machine placement and subsequent virtual machine migration
-- Mix-and-match different generations of CPU hardware into the same cluster set fabric, even while keeping individual fault domains homogeneous for maximum efficiency. Please note that the recommendation of same hardware is still present within each individual cluster as well as the entire cluster set.
+- Mix-and-match different generations of CPU hardware into the same cluster set fabric, even while keeping individual fault domains homogeneous for maximum efficiency. Please note that the recommendation of the same hardware is still present within each individual cluster as well as the entire cluster set.
 
-From a high level view, this is what cluster sets can look like.
+From a high-level view, this is what cluster sets can look like.
 
 ![Cluster sets solution View](media/Cluster-sets-Overview/Cluster-sets-solution-View.png)
 
@@ -43,7 +43,7 @@ A member cluster in a cluster set is typically a traditional hyper-converged clu
 
 **Cluster set namespace referral SOFS**
 
-A cluster set namespace referral (Cluster Set Namespace) SOFS is a Scale-Out File Server wherein each SMB Share on the Cluster Set Namespace SOFS is a referral share – of type 'SimpleReferral' newly introduced in Windows Server 2019. This referral allows Server Message Block (SMB) clients access to the target SMB share hosted on the member cluster SOFS. The cluster set namespace referral SOFS is a light-weight referral mechanism and as such, does not participate in the I/O path. The SMB referrals are cached perpetually on the each of the client nodes and the cluster sets namespace dynamically updates automatically these referrals as needed.
+A cluster set namespace referral (Cluster Set Namespace) SOFS is a Scale-Out File Server wherein each SMB Share on the Cluster Set Namespace SOFS is a referral share – of type 'SimpleReferral' newly introduced in Windows Server 2019. This referral allows Server Message Block (SMB) clients access to the target SMB share hosted on the member cluster SOFS. The cluster set namespace referral SOFS is a light-weight referral mechanism and as such, does not participate in the I/O path. The SMB referrals are cached perpetually on each of the client nodes and the cluster sets namespace dynamically updates automatically these referrals as needed.
 
 **Cluster set master**
 
@@ -65,7 +65,7 @@ An availability set helps the administrator configure desired redundancy of clus
 
 Cluster sets provides the benefit of scale without sacrificing resiliency.
 
-Cluster sets allows for clustering multiple clusters together to create a large fabric, while each cluster remains independent for resiliency. For example, you have a several 4-node HCI clusters running virtual machines. Each cluster provides the resiliency needed for itself. If the storage or memory starts to fill up, scaling up is your next step. With scaling up, there are some options and considerations.
+Cluster sets allows for clustering multiple clusters together to create a large fabric, while each cluster remains independent for resiliency. For example, you have several 4-node HCI clusters running virtual machines. Each cluster provides the resiliency needed for itself. If the storage or memory starts to fill up, scaling up is your next step. With scaling up, there are some options and considerations.
 
 1. Add more storage to the current cluster. With Storage Spaces Direct, this may be tricky as the exact same model/firmware drives may not be available. The consideration of rebuild times also need to be taken into account.
 2. Add more memory. What if you are maxed out on the memory the machines can handle?  What if all available memory slots are full?
@@ -108,7 +108,7 @@ Once a cluster set is created, the cluster set namespace relies on an Infrastruc
 
 At the time a member cluster is added to a cluster set, the administrator specifies the name of an Infrastructure SOFS on that cluster if one already exists. If the Infrastructure SOFS does not exist, a new Infrastructure SOFS role on the new member cluster is created by this operation. If an Infrastructure SOFS role already exists on the member cluster, the Add operation implicitly renames it to the specified name as needed. Any existing singleton SMB servers, or non-Infrastructure SOFS roles on the member clusters are left unutilized by the cluster set.
 
-At the time the cluster set is created, the administrator has the option to use an already-existing AD computer object as the namespace root on the management cluster. Cluster set creation operations create the Infrastructure SOFS cluster role on the management cluster or renames the existing Infrastructure SOFS role just as previously described for member clusters. The Infrastructure SOFS on the management cluster is used as the cluster set namespace referral (Cluster Set Namespace) SOFS. It simply means that each SMB Share on the cluster set namespace SOFS is a referral share – of type 'SimpleReferral' - newly introduced in Windows Server 2019. This referral allows SMB clients access to the target SMB share hosted on the member cluster SOFS. The cluster set namespace referral SOFS is a light-weight referral mechanism and as such, does not participate in the I/O path. The SMB referrals are cached perpetually on the each of the client nodes and the cluster sets namespace dynamically updates automatically these referrals as needed
+At the time the cluster set is created, the administrator has the option to use an already-existing AD computer object as the namespace root on the management cluster. Cluster set creation operations create the Infrastructure SOFS cluster role on the management cluster or renames the existing Infrastructure SOFS role just as previously described for member clusters. The Infrastructure SOFS on the management cluster is used as the cluster set namespace referral (Cluster Set Namespace) SOFS. It simply means that each SMB Share on the cluster set namespace SOFS is a referral share – of type 'SimpleReferral' - newly introduced in Windows Server 2019. This referral allows SMB clients access to the target SMB share hosted on the member cluster SOFS. The cluster set namespace referral SOFS is a light-weight referral mechanism and as such, does not participate in the I/O path. The SMB referrals are cached perpetually on each of the client nodes and the cluster sets namespace dynamically updates automatically these referrals as needed.
 
 ## Creating a Cluster Set
 
@@ -205,7 +205,7 @@ After creating the cluster set, the next step is to create new virtual machines.
 - How much disk space is available on the cluster nodes?
 - Does the virtual machine require specific storage requirements (i.e. I want my SQL Server virtual machines to go to a cluster running faster drives; or, my infrastructure virtual machine is not as critical and can run on slower drives).
 
-Once this questions are answered, you create the virtual machine on the cluster you need it to be. One of the benefits of cluster sets is that cluster sets do those checks for you and place the virtual machine on the most optimal node.
+Once these questions are answered, you create the virtual machine on the cluster you need it to be. One of the benefits of cluster sets is that cluster sets do those checks for you and place the virtual machine on the most optimal node.
 
 The below commands will both identify the optimal cluster and deploy the virtual machine to it. In the below example, a new virtual machine is created specifying that at least 4 gigabytes of memory is available for the virtual machine and that it will need to utilize 1 virtual processor.
 
@@ -300,7 +300,7 @@ For example, I want to move a Cluster Set virtual machine from CLUSTER1 to NODE2
 Move-ClusterSetVM -CimSession CSMASTER -VMName CSVM1 -Node NODE2-CL3
 ```
 
-Please note that this does not move the virtual machine storage or configuration files. This is not necessary as the path to the virtual machine remains as \\\\SOFS-CLUSTER1\VOLUME1. Once a virtual machine has been registered with cluster sets has the Infrastructure File Server share path, the drives and virtual machine do not require being on the same machine as the virtual machine.
+Note that this does not move the virtual machine storage or configuration files. This is not necessary as the path to the virtual machine remains as \\\\SOFS-CLUSTER1\VOLUME1. Once a virtual machine has been registered with cluster sets has the Infrastructure File Server share path, the drives and virtual machine do not require being on the same machine as the virtual machine.
 
 ## Creating Availability sets Fault Domains
 
@@ -421,5 +421,5 @@ Remove-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER
 **Question:** Does the cluster set namespace-based storage access slow down storage performance in a cluster set? <br>
 **Answer:** No. Cluster set namespace offers an overlay referral namespace within a cluster set – conceptually like Distributed File System Namespaces (DFSN). And unlike DFSN, all cluster set namespace referral metadata is auto-populated and auto-updated on all nodes without any administrator intervention, so there is almost no performance overhead in the storage access path.
 
-**Question:** How can I backup cluster set metadata? <br>
+**Question:** How can I back up cluster set metadata? <br>
 **Answer:** This guidance is the same as that of Failover Cluster. The System State Backup will backup the cluster state as well. Through Windows Server Backup, you can do restores of just a node's cluster database (which should never be needed because of a bunch of self-healing logic we have) or do an authoritative restore to roll back the entire cluster database across all nodes. In the case of cluster sets, Microsoft recommends doing such an authoritative restore first on the member cluster and then the management cluster if needed.
