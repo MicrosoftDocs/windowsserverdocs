@@ -110,7 +110,7 @@
 ### [Overview](storage-migration-service/overview.md)
 ### [Migrate a server](storage-migration-service/migrate-data.md)
 ### [How cutover works](storage-migration-service/cutover.md)
-### [Frequently asked questions (FAQ)](storage-migration-service/faq.md)
+### [Frequently asked questions (FAQ)](storage-migration-service/faq.yml)
 ### [Known issues](storage-migration-service/known-issues.md)
 
 ## [Storage Replica](storage-replica/storage-replica-overview.md)
@@ -120,7 +120,7 @@
 ### [Cluster to Cluster Storage Replica cross region in Azure](storage-replica/cluster-to-cluster-azure-cross-region.md)
 ### [Cluster to Cluster Storage Replica within the same region in Azure](storage-replica/cluster-to-cluster-azure-one-region.md)
 ### [Storage Replica: known issues](storage-replica/storage-replica-known-issues.md)
-### [Storage Replica: Frequently Asked Questions](storage-replica/storage-replica-frequently-asked-questions.md)
+### [Storage Replica: Frequently Asked Questions](storage-replica/storage-replica-frequently-asked-questions.yml)
 ## [Storage Spaces](storage-spaces/overview.md)
 ### [Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)
 ### [Health and operational states](storage-spaces/storage-spaces-states.md)

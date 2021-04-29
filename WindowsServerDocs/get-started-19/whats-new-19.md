@@ -140,7 +140,7 @@ Here's a list of what's new in Storage Spaces Direct. For details, see [What's n
 Here's what's new in Storage Replica. For details, see [What's new in Storage Replica](../storage/whats-new-in-storage.md#storage-replica).
 
 - Storage Replica is now available in Windows Server 2019 Standard Edition.
-- Test failover is a new feature that allows mounting of destination storage to validate replication or backup data. For more information, see [Frequently Asked Questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.md).
+- Test failover is a new feature that allows mounting of destination storage to validate replication or backup data. For more information, see [Frequently Asked Questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.yml).
 - Storage Replica log performance improvements
 - Windows Admin Center support
 

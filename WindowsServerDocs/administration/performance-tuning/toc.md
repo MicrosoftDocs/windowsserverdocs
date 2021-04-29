@@ -57,7 +57,7 @@
 #### [SLB gateway performance](subsystem/software-defined-networking/slb-gateway-performance.md)
 ### Storage subsystem tuning
 #### [Storage Spaces Direct tuning](subsystem/storage-spaces-direct/index.md)
-#### [Storage Replication FAQ](../../storage/storage-replica/storage-replica-frequently-asked-questions.md)
+#### [Storage Replication FAQ](../../storage/storage-replica/storage-replica-frequently-asked-questions.yml)
 #### [Data Deduplication advanced settings](../../storage/data-deduplication/advanced-settings.md)
 ## [PowerShell tuning](powershell/index.md)
 ### [Script authoring considerations](powershell/script-authoring-considerations.md)

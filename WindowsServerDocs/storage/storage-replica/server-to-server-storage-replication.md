@@ -455,5 +455,5 @@ The process is, at a high level:
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
-- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
