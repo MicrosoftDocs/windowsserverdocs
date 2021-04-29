@@ -6,15 +6,15 @@ ms.topic: how-to
 manager: lizross
 author: JasonGerend
 ms.author: jgerend
-ms.date: 10/18/2018
+ms.date: 04/30/2021
 ---
 # What's new in Failover Clustering
 
-> Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
-This topic explains the new and changed functionality in Failover Clustering for Windows Server 2019 and Windows Server 2016.
+This topic explains the new and changed functionality in Failover Clustering for Azure Stack HCI, Windows Server 2019, and Windows Server 2016.
 
-## What's new in Windows Server 2019
+## What's new in Windows Server 2019 and Azure Stack HCI
 
 - **Cluster sets**
 
