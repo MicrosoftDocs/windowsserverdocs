@@ -42,7 +42,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 | New or changed topic                                        | Description |
 | ---                                                         | ---           |
 | [Disk cleanup](file-server/disk-cleanup.md)                                              | New (Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770278(v%3dws.11)))
-| [Storage Migration Service FAQ](storage-migration-service/faq.yml#can-i-consolidate-multiple-servers-into-one-server) | Added performance optimization info. |
+| [Storage Migration Service FAQ](storage-migration-service/faq.yml#can-i-consolidate-multiple-servers-into-one-server-) | Added performance optimization info. |
 
 ## May 2019
 
@@ -150,7 +150,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |[Understanding Quorum in Storage Spaces Direct](storage-spaces/understand-quorum.md)| New topic.|
 |[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)| Heavily revised to include both converged and hyper-converged scenarios.|
 |[Deploying Roaming User Profiles](folder-redirection/deploy-roaming-user-profiles.md)|Moved from Previous Versions library and updated.|
-|[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)|Added [Is CSV required to replicate in a stretch cluster or between clusters?](storage-replica/storage-replica-frequently-asked-questions.yml#FAQ7.5).|
+|[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)|Added [Is CSV required to replicate in a stretch cluster or between clusters?](storage-replica/storage-replica-frequently-asked-questions.yml).|
 
 ## February 2018
 
