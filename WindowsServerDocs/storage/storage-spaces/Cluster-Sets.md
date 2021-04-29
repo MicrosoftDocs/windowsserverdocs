@@ -69,10 +69,10 @@ Cluster sets allows for clustering multiple clusters together to create a large 
 
 1. Add more storage to the current cluster. With Storage Spaces Direct, this may be tricky as the exact same model/firmware drives may not be available. The consideration of rebuild times also need to be taken into account.
 2. Add more memory. What if you are maxed out on the memory the machines can handle?  What if all available memory slots are full?
-3. Add additional compute nodes with drives into the current cluster. This takes us back to Option 1 needing to be considered.
+3. Add more compute nodes with drives into the current cluster. This takes us back to Option 1 needing to be considered.
 4. Purchase a whole new cluster
 
-This is where cluster sets provides the benefit of scaling. If I add my clusters into a cluster set, I can take advantage of storage or memory that may be available on another cluster without any additional purchases. From a resiliency perspective, adding more nodes to a Storage Spaces Direct is not going to provide additional votes for quorum. As mentioned [here](drive-symmetry-considerations.md), a Storage Spaces Direct Cluster can survive the loss of 2 nodes before going down. If you have a 4-node HCI cluster, 3 nodes go down will take the entire cluster down. If you have an 8-node cluster, 3 nodes go down will take the entire cluster down. With Cluster sets that has two 4-node HCI clusters in the set, 2 nodes in one HCI go down and 1 node in the other HCI go down, both clusters remain up. Is it better to create one large 16-node Storage Spaces Direct cluster or break it down into four 4-node clusters and use cluster sets?  Having four 4-node clusters with cluster sets gives the same scale, but better resiliency in that multiple compute nodes can go down (unexpectedly or for maintenance) and production remains.
+This is where cluster sets provides the benefit of scaling. If I add my clusters into a cluster set, I can take advantage of storage or memory that may be available on another cluster without any more purchases. From a resiliency perspective, adding more nodes to a Storage Spaces Direct is not going to provide more votes for quorum. As mentioned [here](drive-symmetry-considerations.md), a Storage Spaces Direct Cluster can survive the loss of 2 nodes before going down. If you have a 4-node HCI cluster, 3 nodes go down will take the entire cluster down. If you have an 8-node cluster, 3 nodes go down will take the entire cluster down. With Cluster sets that has two 4-node HCI clusters in the set, 2 nodes in one HCI go down and 1 node in the other HCI go down, both clusters remain up. Is it better to create one large 16-node Storage Spaces Direct cluster or break it down into four 4-node clusters and use cluster sets?  Having four 4-node clusters with cluster sets gives the same scale, but better resiliency in that multiple compute nodes can go down (unexpectedly or for maintenance) and production remains.
 
 ## Considerations for deploying cluster sets
 
@@ -86,7 +86,7 @@ When considering if cluster sets is something you need to use, consider these qu
 
 If your answer is yes, then cluster sets is what you need.
 
-There are a few other items to consider where a larger SDDC might change your overall data center strategies. SQL Server is a good example. Does moving SQL Server virtual machines between clusters require licensing SQL to run on additional nodes?
+There are a few other items to consider where a larger SDDC might change your overall data center strategies. SQL Server is a good example. Does moving SQL Server virtual machines between clusters require licensing SQL to run on more nodes?
 
 ## Scale-out file server and cluster sets
 
@@ -102,13 +102,13 @@ The following considerations apply to an Infrastructure SOFS role:
 
 2. Each CSV volume created in the failover automatically triggers the creation of an SMB Share with an auto-generated name based on the CSV volume name. An administrator cannot directly create or modify SMB shares under an SOFS role, other than via CSV volume create/modify operations.
 
-3. In hyper-converged configurations, an Infrastructure SOFS allows an SMB client (Hyper-V host) to communicate with guaranteed Continuous Availability (CA) to the Infrastructure SOFS SMB server. This hyper-converged SMB loopback CA is achieved via virtual machines accessing their virtual disk (VHDx) files where the owning virtual machine identity is forwarded between the client and server. This identity forwarding allows ACL-ing VHDx files just as in standard hyper-converged cluster configurations as before.
+3. In hyper-converged configurations, an Infrastructure SOFS allows an SMB client (Hyper-V host) to communicate with guaranteed Continuous Availability (CA) to the Infrastructure SOFS SMB server. This hyper-converged SMB loopback CA is achieved via virtual machines accessing their virtual disk (VHDx) files where the owning virtual machine identity is forwarded between the client and server. This identity forwarding allows ACL-ing VHDx files as in standard hyper-converged cluster configurations as before.
 
 Once a cluster set is created, the cluster set namespace relies on an Infrastructure SOFS on each of the member clusters, and additionally an Infrastructure SOFS in the management cluster.
 
 At the time a member cluster is added to a cluster set, the administrator specifies the name of an Infrastructure SOFS on that cluster if one already exists. If the Infrastructure SOFS does not exist, a new Infrastructure SOFS role on the new member cluster is created by this operation. If an Infrastructure SOFS role already exists on the member cluster, the Add operation implicitly renames it to the specified name as needed. Any existing singleton SMB servers, or non-Infrastructure SOFS roles on the member clusters are left unutilized by the cluster set.
 
-At the time the cluster set is created, the administrator has the option to use an already-existing AD computer object as the namespace root on the management cluster. Cluster set creation operations create the Infrastructure SOFS cluster role on the management cluster or renames the existing Infrastructure SOFS role just as previously described for member clusters. The Infrastructure SOFS on the management cluster is used as the cluster set namespace referral (Cluster Set Namespace) SOFS. It simply means that each SMB Share on the cluster set namespace SOFS is a referral share – of type 'SimpleReferral' - newly introduced in Windows Server 2019. This referral allows SMB clients access to the target SMB share hosted on the member cluster SOFS. The cluster set namespace referral SOFS is a light-weight referral mechanism and as such, does not participate in the I/O path. The SMB referrals are cached perpetually on each of the client nodes and the cluster sets namespace dynamically updates automatically these referrals as needed.
+At the time the cluster set is created, the administrator has the option to use an already-existing AD computer object as the namespace root on the management cluster. Cluster set creation operations create the Infrastructure SOFS cluster role on the management cluster or renames the existing Infrastructure SOFS role as previously described for member clusters. The Infrastructure SOFS on the management cluster is used as the cluster set namespace referral (Cluster Set Namespace) SOFS. It simply means that each SMB Share on the cluster set namespace SOFS is a referral share – of type 'SimpleReferral' - newly introduced in Windows Server 2019. This referral allows SMB clients access to the target SMB share hosted on the member cluster SOFS. The cluster set namespace referral SOFS is a light-weight referral mechanism and as such, does not participate in the I/O path. The SMB referrals are cached perpetually on each of the client nodes and the cluster sets namespace dynamically updates automatically these referrals as needed.
 
 ## Creating a Cluster Set
 
@@ -203,7 +203,7 @@ After creating the cluster set, the next step is to create new virtual machines.
 
 - How much memory is available on the cluster nodes?
 - How much disk space is available on the cluster nodes?
-- Does the virtual machine require specific storage requirements (i.e. I want my SQL Server virtual machines to go to a cluster running faster drives; or, my infrastructure virtual machine is not as critical and can run on slower drives).
+- Does the virtual machine require specific storage requirements (that is, I want my SQL Server virtual machines to go to a cluster running faster drives; or, my infrastructure virtual machine is not as critical and can run on slower drives).
 
 Once these questions are answered, you create the virtual machine on the cluster you need it to be. One of the benefits of cluster sets is that cluster sets do those checks for you and place the virtual machine on the most optimal node.
 
@@ -263,7 +263,7 @@ Get-ClusterSetMember -Name CLUSTER3 -CimSession CSMASTER | Register-ClusterSetVM
 
 However, the process is not yet complete, as the path to the virtual machine needs to be added to the cluster set namespace.
 
-For example: An existing cluster is added and it has pre-configured virtual machines which reside on the local Cluster Shared Volume (CSV). The path for the VHDX would be something similar to "C:\ClusterStorage\Volume1\MYVM\Virtual Hard Disks\MYVM.vhdx". A storage migration would need to be accomplished, as CSV paths are by design local to a single member cluster and will therefore not be accessible to the virtual machine once they are live migrated across member clusters.
+For example: An existing cluster is added and it has pre-configured virtual machines that reside on the local Cluster Shared Volume (CSV). The path for the VHDX would be something similar to "C:\ClusterStorage\Volume1\MYVM\Virtual Hard Disks\MYVM.vhdx". A storage migration would need to be accomplished, as CSV paths are by design local to a single member cluster and will therefore not be accessible to the virtual machine once they are live migrated across member clusters.
 
 In this example, CLUSTER3 was added to the cluster set using Add-ClusterSetMember with the Infrastructure Scale-Out File Server as SOFS-CLUSTER3. To move the virtual machine configuration and storage, the command is:
 
