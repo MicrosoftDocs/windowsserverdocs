@@ -53,6 +53,12 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 
 ## Windows Server LTSC/LTSB versions
 
+### Windows Server 2022
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server 2022 Datacenter | VDYBN-27WPP-V4HQT-9VMD4-VMK7H |
+| Windows Server 2022 Standard   | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
+
 ### Windows Server 2019
 | Operating system edition       | KMS Client Setup Key          |
 |--------------------------------|-------------------------------|
