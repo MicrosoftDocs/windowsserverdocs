@@ -1,17 +1,17 @@
 ---
 ms.assetid: c9844427-27cf-4d76-b5bb-e06368b092f7
 title: Failover Clustering
-description: "Learn more about: Failover Clustering in Windows Server"
+description: "Learn more about: Failover Clustering in Windows Server and Azure Stack HCI"
 ms.topic: landing-page
 manager: lizross
 author: JasonGerend
 ms.author: jgerend
-ms.date: 06/06/2019
+ms.date: 04/30/2021
 ms.localizationpriority: high
 ---
-# Failover Clustering in Windows Server
+# Failover Clustering in Windows Server and Azure Stack HCI
 
-> Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 A failover cluster is a group of independent computers that work together to increase the availability and scalability of clustered roles (formerly called clustered applications and services). The clustered servers (called nodes) are connected by physical cables and by software. If one or more of the cluster nodes fail, other nodes begin to provide service (a process known as failover). In addition, the clustered roles are proactively monitored to verify that they are working properly. If they are not working, they are restarted or moved to another node.
 
@@ -21,6 +21,8 @@ Failover Clustering has many practical applications, including:
 
 * Highly available or continuously available file share storage for applications such as Microsoft SQL Server and Hyper-V virtual machines
 * Highly available clustered roles that run on physical servers or on virtual machines that are installed on servers running Hyper-V
+
+To learn more about failover clustering in Azure Stack HCI, see [Understanding cluster and pool quorum](https://docs.microsoft.com/azure-stack/hci/concepts/quorum).
 
 | **Understand**                                                               |  **Planning**                          |  **Deployment**       |
 | -------------                                                                |  --------------                        | --------------------- |
