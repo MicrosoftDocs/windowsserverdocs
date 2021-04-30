@@ -205,7 +205,7 @@ sections:
            - Post on the [Windows Server 2019 forum](/answers/topics/windows-server-2019.html)
            - Open a support case via [Microsoft Support](https://support.microsoft.com)
           
-      - question: |
-          Additional References
-        answer: |
-          - [Storage Migration Service overview](overview.md)
+additionalContent: |
+
+  ## Additional References
+    - [Storage Migration Service overview](overview.md)
