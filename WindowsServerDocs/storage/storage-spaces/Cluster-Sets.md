@@ -25,7 +25,7 @@ Cluster sets technology is developed to meet specific customer requests operatin
 - Manage entire Failover Cluster lifecycle including onboarding and retiring clusters, without impacting tenant virtual machine availability, via fluidly migrating virtual machines across this large fabric
 - Easily change the compute-to-storage ratio in your hyper-converged I
 - Benefit from [Azure-like Fault Domains and Availability sets](htttps://docs.microsoft.com/azure/virtual-machines/windows/manage-availability) across clusters in initial virtual machine placement and subsequent virtual machine migration
-- Mix-and-match different generations of CPU hardware into the same cluster set fabric, even while keeping individual fault domains homogeneous for maximum efficiency. Please note that the recommendation of the same hardware is still present within each individual cluster as well as the entire cluster set.
+- Mix-and-match different generations of CPU hardware into the same cluster set fabric, even while keeping individual fault domains homogeneous for maximum efficiency. Note that the recommendation of the same hardware is still present within each individual cluster as well as the entire cluster set.
 
 From a high-level view, this is what cluster sets can look like.
 
@@ -280,7 +280,7 @@ WARNING: Report file location: C:\Windows\Cluster\Reports\Update-ClusterVirtualM
 
 This warning can be ignored as the warning is "No changes in the virtual machine role storage configuration were detected". The reason for the warning as the actual physical location does not change; only the configuration paths.
 
-For more information on Move-VMStorage, please review this [link](/powershell/module/hyper-v/move-vmstorage).
+For more information on Move-VMStorage, review this [link](/powershell/module/hyper-v/move-vmstorage).
 
 Live migrating a virtual machine between different cluster set clusters is not the same as in the past. In non-cluster set scenarios, the steps would be:
 
@@ -375,7 +375,7 @@ Remove-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER
 **Answer:** No. You can mix Storage Spaces Direct with traditional clusters.
 
 **Question:** Can I manage my Cluster Set via System Center Virtual Machine Manager? <br>
-**Answer:** System Center Virtual Machine Manager does not currently support Cluster sets <br><br> **Question:** Can Windows Server 2012 R2 or 2016 clusters co-exist in the same cluster set? <br>
+**Answer:** System Center Virtual Machine Manager does not currently support Cluster sets <br><br> **Question:** Can Windows Server 2012 R2 or 2016 clusters coexist in the same cluster set? <br>
 **Question:** Can I migrate workloads off Windows Server 2012 R2 or 2016 clusters by simply having those clusters join the same Cluster Set? <br>
 **Answer:** Cluster sets is a new technology being introduced in Windows Server 2019, so as such, does not exist in previous releases. Down-level OS-based clusters cannot join a cluster set. However, Cluster Operating System rolling upgrades technology should provide the migration functionality that you are looking for by upgrading these clusters to Windows Server 2019.
 
@@ -395,13 +395,13 @@ Remove-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER
 **Answer:** Use cross-cluster Storage Replica (SR) solution across member clusters to realize the storage resiliency to cluster failures.
 
 **Question:** I use Storage Replica (SR) to replicate across member clusters. Do cluster set namespace storage UNC paths change on SR failover to the replica target Storage Spaces Direct cluster? <br>
-**Answer:** In this release, such a cluster set namespace referral change does not occur with SR failover. Please let Microsoft know if this scenario is critical to you and how you plan to use it.
+**Answer:** In this release, such a cluster set namespace referral change does not occur with SR failover. Let Microsoft know if this scenario is critical to you and how you plan to use it.
 
 **Question:** Is it possible to failover virtual machines across fault domains in a disaster recovery situation (say the entire fault domain went down)? <br>
 **Answer:** No, note that cross-cluster failover within a logical fault domain is not yet supported.
 
 **Question:** Can my cluster set span clusters in multiple sites (or DNS domains)? <br>
-**Answer:** This is an untested scenario and not immediately planned for production support. Please let Microsoft know if this scenario is critical to you and how you plan to use it.
+**Answer:** This is an untested scenario and not immediately planned for production support. Let Microsoft know if this scenario is critical to you and how you plan to use it.
 
 **Question:** Does cluster set work with IPv6? <br>
 **Answer:** Both IPv4 and IPv6 are supported with cluster sets as with Failover Clusters.
@@ -410,13 +410,13 @@ Remove-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER
 **Answer:** All member clusters must be in the same AD forest.
 
 **Question:** How many clusters or nodes can be part of a single cluster Set? <br>
-**Answer:** In Windows Server 2019, cluster sets been tested and supported up to 64 total cluster nodes. However, cluster sets architecture scales to much larger limits and is not something that is hardcoded for a limit. Please let Microsoft know if larger scale is critical to you and how you plan to use it.
+**Answer:** In Windows Server 2019, cluster sets been tested and supported up to 64 total cluster nodes. However, cluster sets architecture scales to much larger limits and is not something that is hardcoded for a limit. Let Microsoft know if larger scale is critical to you and how you plan to use it.
 
 **Question:** Will all Storage Spaces Direct clusters in a cluster set form a single storage pool? <br>
 **Answer:** No. Storage Spaces Direct technology still operates within a single cluster and not across member clusters in a cluster set.
 
 **Question:** Is the cluster set namespace highly available? <br>
-**Answer:** Yes, the cluster set namespace is provided via a Continuously Available (CA) referral SOFS namespace server running on the management cluster. Microsoft recommends having enough number of virtual machines from member clusters to make it resilient to localized cluster-wide failures. However, to account for unforeseen catastrophic failures – e.g. all virtual machines in the management cluster going down at the same time – the referral information is additionally persistently cached in each cluster set node, even across reboots.
+**Answer:** Yes, the cluster set namespace is provided via a Continuously Available (CA) referral SOFS namespace server running on the management cluster. Microsoft recommends having enough number of virtual machines from member clusters to make it resilient to localized cluster-wide failures. However, to account for unforeseen catastrophic failures – for example, all virtual machines in the management cluster going down at the same time – the referral information is additionally persistently cached in each cluster set node, even across reboots.
 
 **Question:** Does the cluster set namespace-based storage access slow down storage performance in a cluster set? <br>
 **Answer:** No. Cluster set namespace offers an overlay referral namespace within a cluster set – conceptually like Distributed File System Namespaces (DFSN). And unlike DFSN, all cluster set namespace referral metadata is auto-populated and auto-updated on all nodes without any administrator intervention, so there is almost no performance overhead in the storage access path.
