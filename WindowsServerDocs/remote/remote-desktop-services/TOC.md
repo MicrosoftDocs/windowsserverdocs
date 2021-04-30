@@ -100,7 +100,7 @@
 #### [Compare the clients: redirections](clients/remote-desktop-app-compare.md)
 #### [Supported Remote Desktop RDP file settings](clients/rdp-files.md)
 #### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
-#### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
+#### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.yml)
 #### [Privacy settings for managed apps and desktops](clients/remote-privacy-settings.md)
 ### Known issues
 #### [General Remote Desktop connection troubleshooting](troubleshoot/rdp-error-general-troubleshooting.md)
