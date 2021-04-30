@@ -25,7 +25,7 @@ Cluster sets technology is developed to meet specific customer requests operatin
 - Manage entire Failover Cluster lifecycle including onboarding and retiring clusters, without impacting tenant virtual machine availability, via fluidly migrating virtual machines across this large fabric
 - Easily change the compute-to-storage ratio in your hyper-converged I
 - Benefit from [Azure-like Fault Domains and Availability sets](htttps://docs.microsoft.com/azure/virtual-machines/windows/manage-availability) across clusters in initial virtual machine placement and subsequent virtual machine migration
-- Mix-and-match different generations of CPU hardware into the same cluster set fabric, even while keeping individual fault domains homogeneous for maximum efficiency. Note that the recommendation of the same hardware is still present within each individual cluster as well as the entire cluster set.
+- Mix-and-match different generations of CPU hardware into the same cluster set fabric, even while keeping individual fault domains homogeneous for maximum efficiency. Note that the recommendation of the same hardware is still present within each individual cluster and the entire cluster set.
 
 From a high-level view, this is what cluster sets can look like.
 
@@ -235,7 +235,7 @@ State         : Running
 ComputerName  : 1-S2D2
 ```
 
-If you were to have not enough memory, CPU capacity, or disk space to add the virtual machine, you will receive the following error:
+If you didn't have enough memory, CPU capacity, or disk space to add the virtual machine, you will receive the following error:
 
 ```
 Get-ClusterSetOptimalNodeForVM : A cluster node is not available for this operation.

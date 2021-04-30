@@ -69,7 +69,7 @@ Cluster Operating System Rolling Upgrade enables an administrator to upgrade the
 
 **What value does this change add?**
 
-Upgrading a Hyper-V or Scale-Out File Server cluster from Windows Server 2012 R2 to Windows Server 2016 no longer requires downtime. The cluster will continue to function at a Windows Server 2012 R2 level until all of the nodes in the cluster are running Windows Server 2016. The cluster functional level is upgraded to Windows Server 2016 by using the Windows PowerShell cmdlt `Update-ClusterFunctionalLevel`.
+Upgrading a Hyper-V or Scale-Out File Server cluster from Windows Server 2012 R2 to Windows Server 2016 no longer requires downtime. The cluster will continue to function at a Windows Server 2012 R2 level until all of the nodes in the cluster are running Windows Server 2016. The cluster functional level is upgraded to Windows Server 2016 by using the Windows PowerShell cmdlet `Update-ClusterFunctionalLevel`.
 
 > [!WARNING]
 > - After you update the cluster functional level, you cannot go back to a  Windows Server 2012 R2 cluster functional level.
