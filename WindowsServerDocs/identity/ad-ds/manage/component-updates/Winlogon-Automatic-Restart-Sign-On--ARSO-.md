@@ -6,7 +6,7 @@ author: iainfoulds
 ms.author: justinha
 manager: daveba
 ms.reviewer: cahick
-ms.date: 04/28/2021
+ms.date: 04/30/2021
 ms.topic: article
 ---
 
@@ -151,6 +151,8 @@ The Logon Hours and parental controls can prohibit a new user session from being
 
 In environments where the device’s physical security is of concern (for example, the device can be stolen), Microsoft does not recommend using ARSO. ARSO relies on the integrity of the platform firmware and TPM, an attacker with physical access maybe able to compromise these and as such access the credentials stored on disk with ARSO enabled.
 
+In enterprise environments where the security for data protected by Data Protection API (DPAPI) is of concern, Microsoft does not recommend using ARSO. ARSO has a negative impact user data protected by DPAPI because decryption doesn't requires user credentials. Enterprises should test the impact on the security of data protected by DPAPI before using ARSO.
+
 ### Credentials stored
 
 | Password hash | Credential key | Ticket-granting ticket | Primary refresh token |
@@ -162,7 +164,7 @@ In environments where the device’s physical security is of concern (for exampl
 
 ### Credential Guard interaction
 
-ARSO is supported with Credential Guard enabled on devices beginning with Windows 10 version 1909.
+ARSO is supported with Credential Guard enabled on devices beginning with Windows 10 version 2004.
 
 ## Additional resources
 
