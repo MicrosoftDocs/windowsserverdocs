@@ -6,12 +6,12 @@ ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 04/29/2021
+ms.date: 04/30/2021
 ms.topic: how-to
 ---
 # KMS client setup keys
 
->Applies to: Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
 
 Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS clients with no additional configuration needed.
 
