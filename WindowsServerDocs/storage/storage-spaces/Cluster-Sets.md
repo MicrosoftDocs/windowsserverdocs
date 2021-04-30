@@ -306,7 +306,7 @@ Note that this does not move the virtual machine storage or configuration files.
 
 As described in the introduction, Azure-like fault domains and availability sets can be configured in a cluster set. This is beneficial for initial virtual machine placements and migrations between clusters.
 
-In the example below, there are four clusters participating in the cluster set. Within the set, a logical fault domain will be created with two of the clusters and a fault domain created with the other two clusters. These two fault domains will comprise the Availabiilty Set.
+In the example below, there are four clusters participating in the cluster set. Within the set, a logical fault domain will be created with two of the clusters and a fault domain created with the other two clusters. These two fault domains will comprise the Availability Set.
 
 In the example below, CLUSTER1 and CLUSTER2 will be in a fault domain called **FD1** while CLUSTER3 and CLUSTER4 will be in a fault domain called **FD2**. The availability set will be called **CSMASTER-AS** and be comprised of the two fault domains.
 
