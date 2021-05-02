@@ -8,9 +8,10 @@ ms.date: 06/11/2018
 ms.author: v-tea
 author: Teresa-MOTIV
 ---
+
 # Troubleshoot Always On VPN
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+> **Applies to:** Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 If your Always On VPN setup is failing to connect clients to your internal network, the cause is likely an invalid VPN certificate, incorrect NPS policies, or issues with the client deployment scripts or in Routing and Remote Access. The first step in troubleshooting and testing your VPN connection is understanding the core components of the Always On VPN infrastructure.
 
@@ -106,7 +107,7 @@ Generally, the VPN client machine is joined to the Active Directory–based doma
 
 The application logs on client computers record most of the higher-level details of VPN connection events.
 
-Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](/previous-versions/mt728163(v=technet.10)).
+Look for events from source RasClient. All error messages return the error code at the end of the message. Some of the more common error codes are detailed below, but a full list is available in [Routing and Remote Access Error Codes](https://docs.microsoft.com/windows/win32/rras/routing-and-remote-access-error-codes).
 
 ## NPS logs
 
@@ -268,8 +269,8 @@ A small misconfiguration can cause the client connection to fail and can be chal
       Private key is NOT exportable
       Encryption test passed
      ```
-     >[!NOTE]
-     >If a certificate from Issuer **CN=Microsoft VPN root CA gen 1** is present in the user's Personal store, but the user gained access by selecting **X** to close the Oops message, collect CAPI2 event logs to verify the certificate used to authenticate was a valid Client Authentication certificate that was not issued from the Microsoft VPN root CA.
+     > [!NOTE]
+     > If a certificate from Issuer **CN=Microsoft VPN root CA gen 1** is present in the user's Personal store, but the user gained access by selecting **X** to close the Oops message, collect CAPI2 event logs to verify the certificate used to authenticate was a valid Client Authentication certificate that was not issued from the Microsoft VPN root CA.
 
   4. If a valid Client Authentication certificate exists in the user's Personal store, the connection fails (as it should) after the user selects the **X** and  if the **\<TLSExtensions>**, **\<EKUName>**, and **\<EKUOID>** sections exist and contain the correct information.
 
