@@ -112,7 +112,7 @@ You can keep track of cutover progress through descriptions of each stage that a
 
 ### __Is domain controller migration supported?__
 
-Not currently, but see the [FAQ page](./faq.yml#is-domain-controller-migration-supported) for a workaround.
+Not currently, but see the [FAQ page](./faq.yml#is-domain-controller-migration-supported-) for a workaround.
 
 
 ## Known issues
