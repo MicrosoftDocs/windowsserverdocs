@@ -1721,7 +1721,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-client-faq.md",
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-client-faq.yml",
       "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq",
       "redirect_document_id": true
     },
@@ -10004,6 +10004,11 @@
       "source_path": "WindowsServerDocs/failover-clustering/vm-load-balancing-deep-dive.md",
       "redirect_url": "/azure-stack/hci/manage/vm-load-balancing",
       "redirect_document_id": false
-    }    
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    } 
   ]
 }

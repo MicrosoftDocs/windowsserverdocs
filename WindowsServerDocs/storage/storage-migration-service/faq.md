@@ -30,11 +30,11 @@ The Storage Migration Service doesn't allow migrating between Active Directory d
 
 ## Are clusters supported as sources or destinations?
 
-The Storage Migration Service supports migrating from and to clusters after installation of cumulative update [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) or subsequent updates. This includes migrating from a source cluster to a destination cluster as well as migrating from a standalone source server to a destination cluster for device consolidation purposes. You cannot, however, migrate a cluster to a standalone server.
+The Storage Migration Service supports migrating from and to clusters after installation of cumulative update [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) or subsequent updates. This includes migrating from a source cluster to a destination cluster as well as migrating from a standalone source server to a destination cluster for device consolidation purposes. You cannot, however, migrate a cluster to a standalone server. You can migrate from Samba and NetApp CIFS servers to clusters.
 
 ## Do local groups and local users migrate?
 
-The Storage Migration Service supports migrating local users and groups after installation of cumulative update [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) or subsequent updates.
+The Storage Migration Service supports migrating local users and groups after installation of cumulative update [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) or subsequent updates. It doesn't support migrating local users and groups from NetApp CIFS servers.
 
 ## Is domain controller migration supported?
 
@@ -73,7 +73,7 @@ The Storage Migration Service version shipped in Windows Server 2019 doesn't sup
 
 ## Can I migrate from sources other than Windows Server?
 
-The Storage Migration Service supports migrating from Samba Linux servers after installation of cumulative update [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) or subsequent updates. See the requirements for a list of supported Samba versions and Linux distros.
+The Storage Migration Service supports migrating from Samba Linux servers after installation of cumulative update [KB4513534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) or subsequent updates. See the requirements for a list of supported Samba versions and Linux distros. The Storage Migration Service supports migating from NetApp FAS arrays after installation of cumulative update [KB5001384](https://support.microsoft.com/topic/april-20-2021-security-update-kb5001384-e471f445-59be-42cb-8c57-5db644cbc698).   
 
 ## Can I migrate previous file versions?
 
@@ -170,7 +170,6 @@ A destination server may contain certificates - issued prior to cutover - in its
 To give feedback on the Storage Migration Service:
 
 - Use the Feedback Hub tool included in Windows 10, clicking "Suggest a Feature", and specifying the category of "Windows Server" and subcategory of "Storage Migration"
-- Use the [Windows Server UserVoice](https://windowsserver.uservoice.com) site
 - Email smsfeed@microsoft.com
 
 To file bugs:

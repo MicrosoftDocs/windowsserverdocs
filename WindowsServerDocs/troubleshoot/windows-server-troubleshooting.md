@@ -80,7 +80,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 ## Troubleshoot DFSR
 
-- [DFS Replication: Frequently Asked Questions (FAQ)](../storage/dfs-replication/dfsr-faq.md)
+- [DFS Replication: Frequently Asked Questions (FAQ)](../storage/dfs-replication/dfsr-faq.yml)
 
 ## Troubleshoot DirectAccess
 
@@ -100,10 +100,10 @@ This section contains advanced troubleshooting topics and links to help you reso
 ## Troubleshoot failover cluster
 
 - [Troubleshooting a Failover Cluster using Windows Error Reporting](../failover-clustering/troubleshooting-using-wer-reports.md)
-- [Cluster-Aware Updating - Frequently Asked Questions](../failover-clustering/cluster-aware-updating-faq.md)
+- [Cluster-Aware Updating - Frequently Asked Questions](../failover-clustering/cluster-aware-updating-faq.yml)
 - [Troubleshooting cluster issue with Event ID 1135](./troubleshooting-cluster-event-id-1135.md)
 - [Having a problem with nodes being removed from active Failover Cluster membership](./problem-nodes-failover-cluster.md)
-- [Nodes being removed from Failover Cluster membership on VMWare ESX](./nodes-failover-cluster-vmware.md)
+- [Nodes being removed from Failover Cluster membership on VMware ESX](./nodes-failover-cluster-vmware.md)
 - [IaaS with SQL AlwaysOn - Tuning Failover Cluster Network Thresholds](./iaas-sql-failover-cluster.md)
 
 ## Troubleshoot DHCP
@@ -207,4 +207,8 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 - [Windows Admin Center Common Troubleshooting Steps](../manage/windows-admin-center/support/troubleshooting.md)
 - [Windows Admin Center Known Issues](../manage/windows-admin-center/support/known-issues.md)
+<<<<<<< HEAD
 - [Windows Admin Center Frequently Asked Questions](../manage/windows-admin-center/understand/faq.yml)
+=======
+- [Windows Admin Center Frequently Asked Questions](../manage/windows-admin-center/understand/faq.md)
+>>>>>>> 15ab96094275f87f5b2c035d32223d59f65ff115
