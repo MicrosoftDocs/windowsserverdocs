@@ -150,5 +150,5 @@ The following post-RTM features are available when running the Storage Migration
 ## Additional References
 
 - [Migrate a file server by using Storage Migration Service](migrate-data.md)
-- [Storage Migration Services frequently asked questions (FAQ)](faq.md)
+- [Storage Migration Services frequently asked questions (FAQ)](faq.yml)
 - [Storage Migration Service known issues](known-issues.md)
