@@ -103,7 +103,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 - [Cluster-Aware Updating - Frequently Asked Questions](../failover-clustering/cluster-aware-updating-faq.yml)
 - [Troubleshooting cluster issue with Event ID 1135](./troubleshooting-cluster-event-id-1135.md)
 - [Having a problem with nodes being removed from active Failover Cluster membership](./problem-nodes-failover-cluster.md)
-- [Nodes being removed from Failover Cluster membership on VMWare ESX](./nodes-failover-cluster-vmware.md)
+- [Nodes being removed from Failover Cluster membership on VMware ESX](./nodes-failover-cluster-vmware.md)
 - [IaaS with SQL AlwaysOn - Tuning Failover Cluster Network Thresholds](./iaas-sql-failover-cluster.md)
 
 ## Troubleshoot DHCP
