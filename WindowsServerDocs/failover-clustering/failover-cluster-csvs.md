@@ -5,13 +5,13 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.date: 09/21/2020
+ms.date: 05/05/2021
 ms.localizationpriority: medium
 ---
 
 # Use Cluster Shared Volumes in a failover cluster
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
 Cluster Shared Volumes (CSV) enable multiple nodes in a failover cluster to simultaneously have read-write access to the same LUN (disk) that is provisioned as an NTFS volume. (In Windows Server 2012 R2, the disk can be provisioned as NTFS or Resilient File System (ReFS).) With CSV, clustered roles can fail over quickly from one node to another node without requiring a change in drive ownership, or dismounting and remounting a volume. CSV also help simplify the management of a potentially large number of LUNs in a failover cluster.
 

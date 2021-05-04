@@ -5,13 +5,13 @@ ms.author: eldenc
 manager: eldenc
 ms.topic: article
 author: eldenchristensen
-ms.date: 07/15/2020
+ms.date: 05/05/2021
 ms.localizationpriority: medium
 ---
 
 # Using Storage Spaces Direct in guest virtual machine clusters
 
-> Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can deploy Storage Spaces Direct (sometimes called S2D) on a cluster of physical servers or on virtual machine guest clusters as discussed in this topic. This type of deployment delivers virtual shared storage across a set of VMs on top of a private or public cloud so that application high availability solutions can be used to increase the availability of applications.
 
