@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 > Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
-You can deploy Storage Spaces Direct (sometimes called S2D) on a cluster of physical servers or on virtual machine guest clusters as discussed in this topic. This type of deployment delivers virtual shared storage across a set of VMs on top of a private or public cloud so that application high availability solutions can be used to increase the availability of applications.
+You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine guest clusters as discussed in this topic. This type of deployment delivers virtual shared storage across a set of VMs on top of a private or public cloud. This allows you to use application high availability solutions.
 
 To instead use Azure Shared Disks for guest virtual machines, see [Azure Shared Disks](/azure/virtual-machines/windows/disks-shared).
 
@@ -36,7 +36,7 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 
 - 2-node deployments must configure a witness (Cloud Witness or File Share Witness)
 
-- 3-node deployments can tolerate 1 node down and the loss of 1 or more disks on another node.  If 2 nodes are shutdown then the virtual disks we be offline until one of the nodes returns.
+- 3-node deployments can tolerate 1 node down and the loss of 1 or more disks on another node.  If 2 nodes are shutdown then the virtual disks will be offline until one of the nodes returns.
 
 - Configure the virtual machines to be deployed across fault domains
 
