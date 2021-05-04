@@ -33,7 +33,6 @@ This section describes the Active Directory computer accounts (also called Activ
 
 The following table describes the permissions required for these accounts.
 
-
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -116,19 +115,19 @@ The minimum group membership required to complete the following procedure depend
 
 #### To configure the account for the person who installs the cluster
 
-1.  Create or obtain a domain account for the person who installs the cluster. This account can be a domain user account or an **Account Operators** account. If you use a standard user account, you'll have to give it some extra permissions later in this procedure.
+1. Create or obtain a domain account for the person who installs the cluster. This account can be a domain user account or an **Account Operators** account. If you use a standard user account, you'll have to give it some extra permissions later in this procedure.
 
-2.  If the account that was created or obtained in step 1 isn't automatically included in the local **Administrators** group on computers in the domain, add the account to the local **Administrators** group on the servers that will be nodes in the failover cluster:
+2. If the account that was created or obtained in step 1 isn't automatically included in the local **Administrators** group on computers in the domain, add the account to the local **Administrators** group on the servers that will be nodes in the failover cluster:
 
-    1.  Click **Start**, click **Administrative Tools**, and then click **Server Manager**.
+    1. Click **Start**, click **Administrative Tools**, and then click **Server Manager**.
 
-    2.  In the console tree, expand **Configuration**, expand **Local Users and Groups**, and then expand **Groups**.
+    2. In the console tree, expand **Configuration**, expand **Local Users and Groups**, and then expand **Groups**.
 
-    3.  In the center pane, right-click **Administrators**, click **Add to Group**, and then click **Add**.
+    3. In the center pane, right-click **Administrators**, click **Add to Group**, and then click **Add**.
 
-    4.  Under **Enter the object names to select**, type the name of the user account that was created or obtained in step 1. If prompted, enter an account name and password with sufficient permissions for this action. Then click **OK**.
+    4. Under **Enter the object names to select**, type the name of the user account that was created or obtained in step 1. If prompted, enter an account name and password with sufficient permissions for this action. Then click **OK**.
 
-    5.  Repeat these steps on each server that will be a node in the failover cluster.
+    5. Repeat these steps on each server that will be a node in the failover cluster.
 
 > [!IMPORTANT]
 > These steps must be repeated on all servers that will be nodes in the cluster.
@@ -137,19 +136,19 @@ The minimum group membership required to complete the following procedure depend
 
 3. If the account that was created or obtained in step 1 is a domain administrator account, skip the rest of this procedure. Otherwise, give the account the **Create Computer objects** and **Read All Properties** permissions in the container that is used for computer accounts in the domain:
 
-   1.  On a domain controller, click **Start**, click **Administrative Tools**, and then click **Active Directory Users and Computers**. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Continue**.
+   1. On a domain controller, click **Start**, click **Administrative Tools**, and then click **Active Directory Users and Computers**. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Continue**.
 
-   2.  On the **View** menu, make sure that **Advanced Features** is selected.
+   2. On the **View** menu, make sure that **Advanced Features** is selected.
 
        When **Advanced Features** is selected, you can see the **Security** tab in the properties of accounts (objects) in **Active Directory Users and Computers**.
 
-   3.  Right-click the default **Computers** container or the default container in which computer accounts are created in your domain, and then click **Properties**. **Computers** is located in <b>Active Directory Users and Computers/</b><i>domain-node</i><b>/Computers</b>.
+   3. Right-click the default **Computers** container or the default container in which computer accounts are created in your domain, and then click **Properties**. **Computers** is located in <b>Active Directory Users and Computers/</b><i>domain-node</i><b>/Computers</b>.
 
-   4.  On the **Security** tab, click **Advanced**.
+   4. On the **Security** tab, click **Advanced**.
 
-   5.  Click **Add**, type the name of the account that was created or obtained in step 1, and then click **OK**.
+   5. Click **Add**, type the name of the account that was created or obtained in step 1, and then click **OK**.
 
-   6.  In the **Permission Entry for***container* dialog box, locate the **Create Computer objects** and **Read All Properties** permissions, and make sure that the **Allow** check box is selected for each one.
+   6. In the **Permission Entry for** *container* dialog box, locate the **Create Computer objects** and **Read All Properties** permissions, and make sure that the **Allow** check box is selected for each one.
 
        ![Screenshot that shows Create Computer objects option set to Allow. ](media/configure-ad-accounts/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
 

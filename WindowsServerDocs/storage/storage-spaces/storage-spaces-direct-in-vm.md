@@ -21,7 +21,7 @@ To instead use Azure Shared Disks for guest virtual machines, see [Azure Shared 
 
 ## Deploying in Azure Iaas VM guest clusters
 
-[Azure templates](https://github.com/robotechredmond/301-storage-spaces-direct-md) have been published decrease the complexity, configure best practices, and speed of your Storage Spaces Direct deployments in an Azure Iaas VM. This is the recommended solution for deploying in Azure.
+[Azure templates](https://github.com/robotechredmond/301-storage-spaces-direct-md) have been published to decrease complexity, configure best practices, and speed your Storage Spaces Direct deployments in an Azure Iaas VM. This is the recommended solution for deploying in Azure.
 
 <iframe src="https://channel9.msdn.com/Series/Microsoft-Hybrid-Cloud-Best-Practices-for-IT-Pros/Step-by-Step-Deploy-Windows-Server-2016-Storage-Spaces-Direct-S2D-Cluster-in-Microsoft-Azure/player" width="960" height="540" allowfullscreen></iframe>
 
@@ -46,7 +46,7 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 
     - VMware – Configure VM-VM Anti-Affinity rule by Creating a DRS Rule of type 'Separate Virtual Machines" to separate the VMs across ESX hosts. Disks presented for use with Storage Spaces Direct should use the Paravirtual SCSI (PVSCSI) adapter. For PVSCSI support with Windows Server, consult https://kb.vmware.com/s/article/1010398.
 
-- Leverage low latency / high performance storage - Azure Premium Storage managed disks are required
+- Use low latency / high performance storage - Azure Premium Storage managed disks are required
 
 - Deploy a flat storage design with no caching devices configured
 
@@ -66,19 +66,19 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 
     `dword: 00007530`
 
-    The decimal equivalent of Hexadecimal 7530 is 30000, which is 30 seconds. Note that the default value is 1770 Hexadecimal, or 6000 Decimal, which is 6 seconds.
+    The decimal equivalent of Hexadecimal 7530 is 30000, which is 30 seconds. The default value is 1770 Hexadecimal, or 6000 Decimal, which is 6 seconds.
 
 ## Not supported
 
 - Host level virtual disk snapshot/restore
 
-    Instead use traditional guest level backup solutions to backup and restore the data on the Storage Spaces Direct volumes.
+    Instead use traditional guest level backup solutions to back up and restore the data on the Storage Spaces Direct volumes.
 
 - Host level virtual disk size change
 
     The virtual disks exposed through the virtual machine must retain the same size and characteristics. Adding more capacity to the storage pool can be accomplished by adding more virtual disks to each of the virtual machines and adding them to the pool. It's highly recommended to use virtual disks of the same size and characteristics as the current virtual disks.
 
-## Additional References
+## More references
 
 - [Additional Azure Iaas VM templates for deploying Storage Spaces Direct, videos, and step-by-step guides](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126).
 
