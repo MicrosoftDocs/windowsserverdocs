@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 04/13/2021
+ms.date: 05/04/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -19,9 +19,9 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.1844        |1.2.945                   |
-|Insider    |1.2.1946        |1.2.945                   |
+|Insider    |1.2.1953        |1.2.945                   |
 
-## Updates for version 1.2.1946 (Insider)
+## Updates for version 1.2.1953 (Insider)
 
 *Date published: 04/13/2021*
 
