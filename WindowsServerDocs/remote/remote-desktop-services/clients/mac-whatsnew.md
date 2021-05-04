@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 04/20/2021
+ms.date: 05/05/2021
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -13,6 +13,35 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+
+## Updates for version 10.6.5
+
+**Date published: 04/29/2021**
+
+In this release, we fixed an issue that made the client return a 0x907 error code when connecting to a server endpoint with a certificate containing the Remote Desktop Authentication EKU (1.3.6.1.4.1.311.54.1.2). We also updated the client to address a 0x2407 error code that was preventing users from being authorized for remote access.
+
+## Updates for version 10.6.4
+
+**Date published: 04/22/2021**
+
+In this release, we fixed an issue that caused the client to return a 0x907 error code when processing a server authentication certificate with a validity lifetime of over 825 days.
+
+## Updates for version 10.6.3
+
+**Date published: 04/20/2021**
+
+In this release, we fixed an issue that caused the client to return a 0x507 error code.
+
+In addition, we enabled the following features on Apple Silicon:
+
+- Support for the AVC420 codec
+- Smart card redirection (requires macOS 11.2 or later)
+
+## Updates for version 10.6.2
+
+*Date published: 04/19/2021*
+
+In this release, we removed a double prompt for credentials that occurred in some scenarios when users tried to connect with an RD Gateway.
 
 ## Updates for version 10.6.1
 
