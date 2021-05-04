@@ -76,7 +76,7 @@ In this release, we've refreshed the application icon and made the following cha
 - Fixed an issue where an RD Gateway connection would disconnect and a message with error code 0x3000064 would appear.
 - Addressed a bug where workspace discovery and download wouldn't work if you included the port number in HTTP GET requests.
 
-This is the last release that will be compatible with macOS version 10.13. If you're interested in trying out the latest pre-release builds of the macOS client, you can install beta updates from the [Microsoft Remote Desktop Beta](https://aka.ms/rdmacbeta).
+This release is the last release that will be compatible with macOS version 10.13. If you're interested in trying out the latest pre-release builds of the macOS client, you can install beta updates from the [Microsoft Remote Desktop Beta](https://aka.ms/rdmacbeta).
 
 ## Updates for version 10.5.1
 
@@ -86,7 +86,7 @@ It's time for our first release of the year! In this version, we made the follow
 
 - Addressed an issue where the UI would stop resolving a workspace name during subscription.
 - Fixed an in-session bug where graphics updates would stall while the client continued to send input.
-- Resolved a number of reliability issues identified through crash reporting.
+- Resolved reliability issues identified through crash reporting.
 
 ## Updates for version 10.5.0
 
@@ -130,8 +130,8 @@ We've put together some bug fixes and small feature updates for this 10.4.1 rele
 In this release, we've made substantial updates to the underlying code that powers the Remote Desktop experience across all our clients. We've also added some new features and addressed bugs and crashes that were showing up in error reporting. Here are some changes you may notice:
 
 - PC Quick Connect (Cmd+K) allows you to connect to a PC without creating a bookmark.
-- Autoreconnect now recovers from transient network glitches for PC connections.
-- When resuming a suspended MacBook, you can use autoreconnect to reconnect to any disconnected PC connections.
+- Auto-reconnect now recovers from transient network glitches for PC connections.
+- When resuming a suspended MacBook, you can use auto-reconnect to reconnect to any disconnected PC connections.
 - Added support for HTTP proxies when subscribing and connecting to Windows Virtual Desktop resources.
 - Implemented support for HTTP proxy automatic configuration with PAC files.
 - Integrated support for NETBIOS name resolution so you can connect to PCs on your local network more easily.
@@ -300,7 +300,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - On Mojave and Catalina we've added a new dialog that requests your permission to use the microphone and camera for device redirection.
 - The feed subscription flow has been rewritten to be simpler and faster.
 - Clipboard redirection now includes the Rich Text Format (RTF).
-- When entering your password you have the option to reveal it with a "Show password" checkbox.
+- When entering your password, can now choose to reveal it by selecting the "Show password" checkbox.
 - Addressed scenarios where the session window was jumping between monitors.
 - The Connection Center displays high-resolution remote app icons (when available).
 - Cmd+A maps to Ctrl+A when Mac clipboard shortcuts are being used.
@@ -439,10 +439,10 @@ In this release, we addressed graphics mispaints (caused by a server encoding bu
 - Incorporated updates for GDPR compliance.
 - MicrosoftAccount\username@domain is now accepted as a valid username.
 - Clipboard sharing has been rewritten to be faster and support more formats.
-- Copy and pasting text, images or files between sessions now bypasses the local machine's clipboard.
+- Copy and pasting text, images, or files between sessions now bypasses the local machine's clipboard.
 - You can now connect via an RD Gateway server with an untrusted certificate (if you accept the warning prompts).
 - Metal hardware acceleration is now used (where supported) to speed up rendering and optimize battery usage.
-- When using Metal hardware acceleration we try to work some magic to make the session graphics appear sharper.
+- When using Metal hardware acceleration, we try to work some magic to make the session graphics appear sharper.
 - Got rid of some instances where windows would hang around after being closed.
 - Fixed bugs that were preventing the launch of RemoteApp programs in some scenarios.
 - Fixed an RD Gateway channel synchronization error that was resulting in 0x204 errors.
