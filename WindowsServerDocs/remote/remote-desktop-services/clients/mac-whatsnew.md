@@ -18,7 +18,7 @@ If you encounter any issues, you can always contact us by navigating to **Help**
 
 **Date published: 04/29/2021**
 
-In this release, we fixed an issue that made the client return a 0x907 error code when connecting to a server endpoint with a certificate containing the Remote Desktop Authentication EKU (1.3.6.1.4.1.311.54.1.2). We also updated the client to address a 0x2407 error code that was preventing users from being authorized for remote access.
+In this release, we fixed an issue that made the client return a 0x907 error code when connecting to a server endpoint with a certificate that had a Remote Desktop Authentication EKU property of 1.3.6.1.4.1.311.54.1.2. We also updated the client to address a 0x2407 error code that prevented the client from authorizing users for remote access.
 
 ## Updates for version 10.6.4
 
@@ -102,7 +102,7 @@ It's time for another update. Thanks to everyone who reported bugs and worked wi
 - The Edit Workspace sheet now shows the exact time at which the workspace was last updated.
 - Removed trace spew that was output when using the *--script* parameter.
 - Addressed an issue where the client would return a 0x30000066 error when connecting using an RD Gateway server.
-- Fixed an issue users would be repeatedly prompted for credentials if Extended Protection for Authentication was set on the server.
+- Fixed an issue that caused the client to repeatedly prompt users for credentials if Extended Protection for Authentication was set on the server.
 - Addressed reliability issues that users identified through crash reporting.
 - Addressed keyboard and VoiceOver-related accessibility bugs.
 
@@ -130,8 +130,8 @@ We've put together some bug fixes and small feature updates for this 10.4.1 rele
 In this release, we've made substantial updates to the underlying code that powers the Remote Desktop experience across all our clients. We've also added some new features and addressed bugs and crashes that were showing up in error reporting. Here are some changes you may notice:
 
 - PC Quick Connect (Cmd+K) allows you to connect to a PC without creating a bookmark.
-- Auto-reconnect now recovers from transient network glitches for PC connections.
-- When resuming a suspended MacBook, you can use auto-reconnect to reconnect to any disconnected PC connections.
+- Autoreconnect now recovers from transient network glitches for PC connections.
+- When resuming a suspended MacBook, you can use autoreconnect to reconnect to any disconnected PC connections.
 - Added support for HTTP proxies when subscribing and connecting to Windows Virtual Desktop resources.
 - Implemented support for HTTP proxy automatic configuration with PAC files.
 - Integrated support for NETBIOS name resolution so you can connect to PCs on your local network more easily.
@@ -144,7 +144,7 @@ In this release, we've made substantial updates to the underlying code that powe
 - Hitting cancel during workspace subscription will now result in nothing being added to the Connection Center.
 - Added key mappings for Cmd+Z and Cmd+F to map to Ctrl+Z and Ctrl+F respectively.
 - Fixed a bug that caused remote apps to open behind the Connection Center when launched.
-- Worked around an issue where AAC audio playback on macOS 10.15 would cause the client to stall.
+- Worked around an issue in macOS 10.15 where AAC audio playback caused the client to stall.
 - Shift+left-click now works in Unicode mode.
 - Fixed a bug where using the Shift key triggered the Sticky Keys alert in Unicode mode.
 - Added a check for network availability before connection initiation.
@@ -157,7 +157,7 @@ In this release, we've made substantial updates to the underlying code that powe
 - The username field in the credential prompt is now always prepopulated for Windows Virtual Desktop connections.
 - Fixed a bug that clipped the Edit, Delete, and Refresh buttons for workspaces if the Connection Center wasn't wide enough.
 - The "email or workspace URL" field in the Add Workspace sheet is no longer case-sensitive.
-- Fixed a number of accessibility issues that impacted VoiceOver and keyboard navigation scenarios.
+- Fixed accessibility issues that impacted VoiceOver and keyboard navigation scenarios.
 - Lots of updates to improve interoperability with current and upcoming features in the Windows Virtual Desktop service.
 - You can now configure the AVC support level advertised by the client from a terminal prompt. Here are the support levels you can configure:
    - Don't advertise AVC support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel disabled`
@@ -302,7 +302,7 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - Clipboard redirection now includes the Rich Text Format (RTF).
 - When entering your password you have the option to reveal it with a "Show password" checkbox.
 - Addressed scenarios where the session window was jumping between monitors.
-- The Connection Center displays high resolution remote app icons (when available).
+- The Connection Center displays high-resolution remote app icons (when available).
 - Cmd+A maps to Ctrl+A when Mac clipboard shortcuts are being used.
 - Cmd+R now refreshes all of your subscribed feeds.
 - Added new secondary click options to expand or collapse all groups or feeds in the Connection Center.
@@ -417,7 +417,7 @@ In this release, we addressed graphics mispaints (caused by a server encoding bu
 - Fixed a bug that caused thumbnails to consume too much disk storage on macOS 10.14.
 - Added support for enforcing RD Gateway device redirection policies.
 - Fixed an issue that prevented session windows from closing when disconnecting from a connection using RD Gateway.
-- If Network Level Authentication (NLA) is not enforced by the server, you will now be routed to the sign in screen if your password has expired.
+- If Network Level Authentication (NLA) is not enforced by the server, you will now be routed to the sign-in screen if your password has expired.
 - Fixed performance issues that surfaced when lots of data was being transferred over the network.
 - Smart card redirection fixes.
 - Support for all possible values of the "EnableCredSspSupport" and "Authentication Level" RDP file settings if the ClientSettings.EnforceCredSSPSupport user default key (in the com.microsoft.rdc.macos domain) is set to 0.
