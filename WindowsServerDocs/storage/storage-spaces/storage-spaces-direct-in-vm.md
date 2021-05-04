@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 > Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
-You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine guest clusters as discussed in this topic. This type of deployment delivers virtual shared storage across a set of VMs on top of a private or public cloud. This allows you to use application high availability solutions.
+You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine (VM) guest clusters as discussed in this topic. This type of deployment delivers virtual shared storage across a set of VMs on top of a private or public cloud. This allows you to use application high availability solutions.
 
 To instead use Azure Shared Disks for guest virtual machines, see [Azure Shared Disks](/azure/virtual-machines/windows/disks-shared).
 
@@ -30,27 +30,27 @@ To instead use Azure Shared Disks for guest virtual machines, see [Azure Shared 
 The following considerations apply when deploying Storage Spaces Direct in a virtualized environment.
 
 > [!TIP]
-> Azure templates will automatically configure the below considerations for you and are the recommended solution when deploying in Azure IaaS VMs.
+> Azure templates will automatically configure the following considerations for you and they are the recommended solution when deploying in Azure IaaS VMs.
 
-- Minimum of 2 nodes and maximum of 3 nodes
+- Minimum of two nodes and maximum of three nodes
 
-- 2-node deployments must configure a witness (Cloud Witness or File Share Witness)
+- Two-node deployments must configure a witness (Cloud Witness or File Share Witness)
 
-- 3-node deployments can tolerate 1 node down and the loss of 1 or more disks on another node.  If 2 nodes are shutdown then the virtual disks will be offline until one of the nodes returns.
+- Three-node deployments can tolerate one node down and the loss of one or more disks on another node.  If two nodes shut down, then the virtual disks will be offline until one of the nodes returns.
 
-- Configure the virtual machines to be deployed across fault domains
+- Configure the VMs to be deployed across fault domains
 
-    - Azure – Configure Availability Set
+    - Azure – Configure the Availability Set
 
     - Hyper-V – Configure AntiAffinityClassNames on the VMs to separate the VMs across nodes
 
-    - VMware – Configure VM-VM Anti-Affinity rule by Creating a DRS Rule of type 'Separate Virtual Machines" to separate the VMs across ESX hosts. Disks presented for use with Storage Spaces Direct should use the Paravirtual SCSI (PVSCSI) adapter. For PVSCSI support with Windows Server, consult https://kb.vmware.com/s/article/1010398.
+    - VMware – Configure the VM-VM Anti-Affinity rule by creating a DRS Rule of type "Separate Virtual Machines" to separate the VMs across ESX hosts. Disks presented for use with Storage Spaces Direct should use the Paravirtual SCSI (PVSCSI) adapter. For PVSCSI support with Windows Server, consult https://kb.vmware.com/s/article/1010398.
 
 - Use low latency / high performance storage - Azure Premium Storage managed disks are required
 
 - Deploy a flat storage design with no caching devices configured
 
-- Minimum of 2 virtual data disks presented to each VM (VHD / VHDX / VMDK)
+- Use a minimum of two virtual data disks presented to each VM (VHD / VHDX / VMDK)
 
     This number is different than bare-metal deployments because the virtual disks can be implemented as files that aren't susceptible to physical failures.
 
@@ -76,7 +76,7 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 
 - Host level virtual disk size change
 
-    The virtual disks exposed through the virtual machine must retain the same size and characteristics. Adding more capacity to the storage pool can be accomplished by adding more virtual disks to each of the virtual machines and adding them to the pool. It's highly recommended to use virtual disks of the same size and characteristics as the current virtual disks.
+    The virtual disks exposed through the VM must retain the same size and characteristics. Adding more capacity to the storage pool can be accomplished by adding more virtual disks to each of the VMs, and then adding them to the pool. It's highly recommended to use virtual disks of the same size and characteristics as the current virtual disks.
 
 ## More references
 
