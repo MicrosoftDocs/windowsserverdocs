@@ -5,16 +5,20 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.date: 04/26/2018
+ms.date: 05/05/2021
 ms.localizationpriority: medium
 ---
 # Failover clustering hardware requirements and storage options
 
-Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+Applies to: Azure Stack HCI, version 20H2, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You need the following hardware to create a failover cluster. To be supported by Microsoft, all hardware must be certified for the version of Windows Server that you are running, and the complete failover cluster solution must pass all tests in the Validate a Configuration Wizard. For more information about validating a failover cluster, see [Validate Hardware for a Failover Cluster](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>).
 
 - **Servers**: We recommend that you use a set of matching computers that contain the same or similar components.
+
+    > [!NOTE]
+    > If you've purchased Azure Stack HCI Integrated System solution hardware from the [Azure Stack HCI Catalog](https://hcicatalog.azurewebsites.net) through your preferred Microsoft hardware partner, the Azure Stack HCI operating system should be pre-installed.
+
 - **Network adapters and cable (for network communication)**: If you use iSCSI, each network adapter should be dedicated to either network communication or iSCSI, not both.
 
     In the network infrastructure that connects your cluster nodes, avoid having single points of failure. For example, you can connect your cluster nodes by multiple, distinct networks. Alternatively, you can connect your cluster nodes with one network that's constructed with teamed network adapters, redundant switches, redundant routers, or similar hardware that removes single points of failure.
