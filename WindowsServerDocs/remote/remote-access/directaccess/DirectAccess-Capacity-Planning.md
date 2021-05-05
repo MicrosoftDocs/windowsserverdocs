@@ -47,9 +47,8 @@ The following sections describe individual tests. Each section title highlights 
 
 The following three tests represent low-end hardware.  In the below test runs, there were 750 clients with a throughput of 84.17 Mbits/sec and a traffic split of 562 Teredo and 188 IPHTTPS. Teredo MTU was set to 1472, and Teredo Shunt was enabled. CPU utilization averaged 46.42% across the three tests, and average memory utilization, expressed as a percentage of committed bytes of the total available memory of 4Gb, was 25.95%.
 
-||||||||
+| Scenario | CPUAvg (from counter) | Mbit/s (Corp Side) | Mbit/s (internet Side) | Active QMSA | Active MMSA | Mem Utilization (4 Gig system) |
 |-|-|-|-|-|-|-|
-|**Scenario**|**CPUAvg (from counter)**|**Mbit/s (Corp Side)**|**Mbit/s (internet Side)**|**Active QMSA**|**Active MMSA**|**Mem Utilization (4 Gig system)**|
 |**Low-end HW.  562 Teredo clients.  188  IPHTTPS clients.**|47.7472542|84.3|119.13|1502.05|1502.1|26.27%|
 |**Low-end HW.  562 Teredo clients.  188  IPHTTPS clients.**|46.3889778|84.146|118.73|1501.25|1501.2|25.90%|
 |**Low-end HW.  562 Teredo clients.  188  IPHTTPS clients.**|45.113082|84.0494|118.43|1546.14|1546.1|25.68%|
@@ -58,9 +57,8 @@ The following three tests represent low-end hardware.  In the below test runs, t
 
 The following three tests represent performance on low-end hardware. In the test runs below, there were 1000 clients with an average throughput of ~78.64 Mbits/sec and a traffic split of 700 Teredo and 300 IPHTTPS.  Teredo MTU was set to 1472 and Teredo Shunt was enabled.  CPU utilization averaged ~50.7%, and average memory utilization, expressed as a percentage of committed bytes of the total available memory of 4Gb, was ~28.7%.
 
-||||||||
+| Scenario | CPUAvg (from counter) | Mbit/s (Corp Side) | Mbit/s (internet Side) | Active QMSA | Active MMSA | Mem Utilization (4 Gig system) |
 |-|-|-|-|-|-|-|
-|**Scenario**|**CPUAvg (from counter)**|**Mbit/s (Corp Side)**|**Mbit/s (internet Side)**|**Active QMSA**|**Active MMSA**|**Mem Utilization (4 Gig system)**|
 |**Low-end HW.  700 Teredo clients.  300 IPHTTPS clients.**|51.28406247|78.6432|113.19|2002.42|1502.1|25.59%|
 |**Low-end HW.  700 Teredo clients.  300 IPHTTPS clients.**|51.06993128|78.6402|113.22|2001.4|1501.2|30.87%|
 |**Low-end HW.  700 Teredo clients.  300 IPHTTPS clients.**|49.75235617|78.6387|113.2|2002.6|1546.1|30.66%|
@@ -69,9 +67,8 @@ The following three tests represent performance on low-end hardware. In the test
 
 In the following three test runs there were 1000 clients with an average throughput of ~109.2 Mbits/sec and a traffic split of 700 Teredo and 300 IPHTTPS. Teredo MTU was set to 1472 and Teredo Shunt was enabled. CPU utilization averaged ~59.06% across the three tests, and average memory utilization, expressed as a percentage of committed bytes of the total available memory of 4Gb, was ~27.34%.
 
-||||||||
+| Scenario | CPUAvg (from counter) | Mbit/s (Corp Side) | Mbit/s (internet Side) | Active QMSA | Active MMSA | Mem Utilization (4 Gig system) |
 |-|-|-|-|-|-|-|
-|**Scenario**|**CPUAvg (from counter)**|**Mbit/s (Corp Side)**|**Mbit/s (internet Side)**|**Active QMSA**|**Active MMSA**|**Mem Utilization (4 Gig system)**|
 |**Low-end HW.  700 Teredo clients.  300 IPHTTPS clients.**|59.81640675|108.305|153.14|2001.64|2001.6|24.38%|
 |**Low-end HW.  700 Teredo clients.  300 IPHTTPS clients.**|59.46473798|110.969|157.53|2005.22|2005.2|28.72%|
 |**Low-end HW.  700 Teredo clients.  300 IPHTTPS clients.**|57.89089768|108.305|153.14|1999.53|2018.3|24.38%|
@@ -87,9 +84,8 @@ The following sections describe individual tests. Each section title highlights 
 
 The following five tests represent high-end hardware. In the below test runs there were 1500 clients with an average throughput of 153.2 Mbits/sec and a traffic split of 1050 Teredo and 450 IPHTTPS. CPU utilization averaged 50.68% across the five tests, and average memory utilization, expressed as a percentage of committed bytes of the total available memory of 8Gb, was 22.25%.
 
-||||||||
+| Scenario | CPUAvg (from counter) | Mbit/s (Corp Side) | Mbit/s (internet Side) | Active QMSA | Active MMSA | Mem Utilization (4 Gig system) |
 |-|-|-|-|-|-|-|
-|**Scenario**|**CPUAvg (from counter)**|**Mbit/s (Corp Side)**|**Mbit/s (internet Side)**|**Active QMSA**|**Active MMSA**|**Mem Utilization (4 Gig system)**|
 |**High-end HW.  1050 Teredo clients.  450  IPHTTPS clients.**|51.712437|157.029|216.29|3000.31|3046|21.58%|
 |**High-end HW.  1050 Teredo clients.  450  IPHTTPS clients.**|48.86020205|151.012|206.53|3002.86|3045.3|21.15%|
 |**High-end HW.  1050 Teredo clients.  450  IPHTTPS clients.**|52.23979519|155.511|213.45|3001.15|3002.9|22.90%|

@@ -220,4 +220,4 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 ## Next steps
 
-[Step 5. Configure DNS and firewall settings for Always On VPN](vpn-deploy-dns-firewall.md): In this step, you install Network Policy Server (NPS) by using either Windows PowerShell or the Server Manager Add Roles and Features Wizard. You also configure NPS to handle all authentication, authorization, and accounting duties for connection requests that it receives from the VPN server.
+[Step 5. Configure DNS and firewall settings for Always On VPN](vpn-deploy-dns-firewall.md): In this step, configure DNS and firewall settings for VPN connectivity.
