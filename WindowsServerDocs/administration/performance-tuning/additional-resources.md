@@ -82,7 +82,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [How to use NTttcp to Test Network Performance](https://msdn.microsoft.com/windows/hardware/gg463264.aspx)
 
--   [Using the File Server Capactiy Tool](/previous-versions/dn567658(v=vs.85))
+-   [Using the File Server Capacity Tool](/previous-versions/dn567658(v=vs.85))
 
 -   [Using the SPECsfs2008 File Server](/previous-versions/dn567653(v=vs.85))
 
