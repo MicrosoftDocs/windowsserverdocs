@@ -1,6 +1,21 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/administration/performance-tuning/powershell/index.md",
+      "redirect_url": "/powershell/scripting/dev-cross-plat/performance/script-authoring-considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/performance-tuning/powershell/module-authoring-considerations.md",
+      "redirect_url": "/powershell/scripting/dev-cross-plat/performance/module-authoring-considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/performance-tuning/powershell/script-authoring-considerationsscript-authoring-considerations.md",
+      "redirect_url": "/powershell/scripting/dev-cross-plat/performance/script-authoring-considerations",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/nict-vms.md",
       "redirect_url": "/windows-server/networking/technologies/nic-teaming/NIC-Teaming",
       "redirect_document_id": false
@@ -10009,6 +10024,6 @@
       "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md",
       "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
       "redirect_document_id": false
-    } 
+    }
   ]
 }

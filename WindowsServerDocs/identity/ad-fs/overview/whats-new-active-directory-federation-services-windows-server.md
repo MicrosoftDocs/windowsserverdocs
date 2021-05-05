@@ -55,7 +55,7 @@ The following sign-in SSO improvements have been made in AD FS 2019:
 - **Bug fix: Persistent SSO state for Win10 devices when doing PRT auth**    This addresses an issue where MFA state was not persisted when using PRT authentication for Windows 10 devices. The result of the issue was that end users would get prompted for 2nd factor credential (MFA) frequently. The fix also makes the experience consistent when device auth is successfully performed via client TLS and via PRT mechanism.
 
 
-### Suppport for building modern line-of-business apps
+### Support for building modern line-of-business apps
 
 The following support for building modern LOB apps has been added to AD FS 2019:
 
