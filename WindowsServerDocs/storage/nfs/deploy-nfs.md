@@ -91,7 +91,8 @@ When using the NFS version 4.1 and NFS version 3.0 protocols, we recommend using
   - **Krb5i**. Uses Kerberos version 5 protocol to authenticate with integrity checking (checksums), which verifies that the data has not been altered.
   - **Krb5p** Uses Kerberos version 5 protocol, which authenticates NFS traffic with encryption for privacy. This is the most secure Kerberos option.
 
-  > [!NOTE] You can also choose not to use the Kerberos authentication methods above by enabling unmapped user access through AUTH_SYS. We *strongly discourage* using 
+  > [!NOTE] 
+  > You can also choose not to use the Kerberos authentication methods above by enabling unmapped user access through AUTH_SYS. We *strongly discourage* using 
   > this option as it removes all authentication protections and allows any user with access to the NFS server to access data. 
   > When using unmapped user access, you can specify to allow unmapped user access by UID / GID, which is the default, or allow anonymous access. 
 
