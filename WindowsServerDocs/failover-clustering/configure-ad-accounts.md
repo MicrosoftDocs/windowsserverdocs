@@ -129,9 +129,9 @@ The minimum group membership required to complete the following procedure depend
 
     5. Repeat these steps on each server that will be a node in the failover cluster.
 
-> [!IMPORTANT]
-> These steps must be repeated on all servers that will be nodes in the cluster.
-<br>
+    > [!IMPORTANT]
+    > These steps must be repeated on all servers that will be nodes in the cluster.
+    <br>
 
 
 3. If the account that was created or obtained in step 1 is a domain administrator account, skip the rest of this procedure. Otherwise, give the account the **Create Computer objects** and **Read All Properties** permissions in the container that is used for computer accounts in the domain:

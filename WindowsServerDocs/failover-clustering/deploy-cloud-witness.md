@@ -29,11 +29,11 @@ Most organizations do not have a third separate datacenter that will host File S
 Cloud Witness is a new type of Failover Cluster quorum witness that uses Microsoft Azure as the arbitration point (figure 2). It uses Azure Blob Storage to read/write a blob file, which is then used as an arbitration point if there is a split-brain resolution.
 
 There are significant benefits which this approach:
-1. Uses Microsoft Azure (no need for third separate datacenter).
-2. Uses standard available Azure Blob Storage (no extra maintenance overhead of virtual machines hosted in public cloud).
-3. Same Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique ID used as blob file name).
-4. Low on-going $cost to the Storage Account (small data written per blob file, blob file updated only once when cluster nodes' state changes).
-5. Built-in Cloud Witness resource type.
+- Uses Microsoft Azure (no need for third separate datacenter).
+- Uses standard available Azure Blob Storage (no extra maintenance overhead of virtual machines hosted in public cloud).
+- Same Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique ID used as blob file name).
+- Low on-going $cost to the Storage Account (small data written per blob file, blob file updated only once when cluster nodes' state changes).
+- Built-in Cloud Witness resource type.
 
 ![Diagram illustrating a multi-site stretched cluster with Cloud Witness as a quorum witness](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_2.png)
 **Figure 2: Multi-site stretched clusters with Cloud Witness as a quorum witness**
@@ -70,7 +70,7 @@ When you use the same Azure Storage Account for configuring Cloud Witness for mu
 
 ### To create an Azure storage account
 
-1. Sign in to the [Azure Portal](https://portal.azure.com).
+1. Sign in to the [Azure portal](https://portal.azure.com).
 2. On the Hub menu, select New -> Data + Storage -> Storage account.
 3. In the Create a storage account page, do the following:
     1. Enter a name for your storage account.
@@ -89,7 +89,7 @@ When you create a Microsoft Azure Storage Account, it is associated with two Acc
 
 #### To view and copy storage access keys
 
-In the Azure Portal, navigate to your storage account, click **All settings** and then click **Access Keys** to view, copy, and regenerate your account access keys. The Access Keys blade also includes pre-configured connection strings using your primary and secondary keys that you can copy to use in your applications (see figure 4).
+In the Azure portal, navigate to your storage account, click **All settings** and then click **Access Keys** to view, copy, and regenerate your account access keys. The Access Keys blade also includes pre-configured connection strings using your primary and secondary keys that you can copy to use in your applications (see figure 4).
 
 ![Snapshot of the Manage Access Keys dialog in Microsoft Azure](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_4.png)
 **Figure 4: Storage Access Keys**
@@ -105,7 +105,7 @@ Cloud Witness always uses **Blob** as the storage type. Azure uses **.core.windo
 
 #### To view and copy endpoint URL links
 
-In the Azure Portal, navigate to your storage account, click **All settings** and then click **Properties** to view and copy your endpoint URLs (see figure 5).
+In the Azure portal, navigate to your storage account, click **All settings** and then click **Properties** to view and copy your endpoint URLs (see figure 5).
 
 ![Snapshot of the Cloud Witness endpoint links](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_5.png)
 **Figure 5: Cloud Witness endpoint URL links**
