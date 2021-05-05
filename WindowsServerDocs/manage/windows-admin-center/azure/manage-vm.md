@@ -40,7 +40,7 @@ Windows Admin Center in the Azure portal provides the essential set of managemen
 
 We don't support extensions to Windows Admin Center in the Azure portal at this time.
 
-If you manually installed Windows Admin Center in the VM to manage multiple systems, installing this VM extension reduces the functionality to managing just the VM in which the extension is installed. Uninstall the extension to get back full functionality.
+If you manually installed Windows Admin Center in the VM to manage multiple systems, installing this VM extension reduces the functionality to managing just this VM only. Uninstall the extension to get back full functionality.
 
 ## Requirements
 

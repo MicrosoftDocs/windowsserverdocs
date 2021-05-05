@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # Configure and manage quorum
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides background and steps to configure and manage the quorum in a Windows Server failover cluster.
 
