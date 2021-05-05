@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 04/20/2021
+ms.date: 05/05/2021
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -13,6 +13,35 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+
+## Updates for version 10.6.5
+
+**Date published: 04/29/2021**
+
+In this release, we fixed an issue that made the client return a 0x907 error code when connecting to a server endpoint with a certificate that had a Remote Desktop Authentication EKU property of 1.3.6.1.4.1.311.54.1.2. We also updated the client to address a 0x2407 error code that prevented the client from authorizing users for remote access.
+
+## Updates for version 10.6.4
+
+**Date published: 04/22/2021**
+
+In this release, we fixed an issue that caused the client to return a 0x907 error code when processing a server authentication certificate with a validity lifetime of over 825 days.
+
+## Updates for version 10.6.3
+
+**Date published: 04/20/2021**
+
+In this release, we fixed an issue that caused the client to return a 0x507 error code.
+
+In addition, we enabled the following features on Apple Silicon:
+
+- Support for the AVC420 codec
+- Smart card redirection (requires macOS 11.2 or later)
+
+## Updates for version 10.6.2
+
+*Date published: 04/19/2021*
+
+In this release, we removed a double prompt for credentials that occurred in some scenarios when users tried to connect with an RD Gateway.
 
 ## Updates for version 10.6.1
 
@@ -47,7 +76,7 @@ In this release, we've refreshed the application icon and made the following cha
 - Fixed an issue where an RD Gateway connection would disconnect and a message with error code 0x3000064 would appear.
 - Addressed a bug where workspace discovery and download wouldn't work if you included the port number in HTTP GET requests.
 
-This is the last release that will be compatible with macOS version 10.13. If you're interested in trying out the latest pre-release builds of the macOS client, you can install beta updates from the [Microsoft Remote Desktop Beta](https://aka.ms/rdmacbeta).
+This release is the last release that will be compatible with macOS version 10.13. If you're interested in trying out the latest pre-release builds of the macOS client, you can install beta updates from the [Microsoft Remote Desktop Beta](https://aka.ms/rdmacbeta).
 
 ## Updates for version 10.5.1
 
@@ -57,7 +86,7 @@ It's time for our first release of the year! In this version, we made the follow
 
 - Addressed an issue where the UI would stop resolving a workspace name during subscription.
 - Fixed an in-session bug where graphics updates would stall while the client continued to send input.
-- Resolved a number of reliability issues identified through crash reporting.
+- Resolved reliability issues identified through crash reporting.
 
 ## Updates for version 10.5.0
 
@@ -73,7 +102,7 @@ It's time for another update. Thanks to everyone who reported bugs and worked wi
 - The Edit Workspace sheet now shows the exact time at which the workspace was last updated.
 - Removed trace spew that was output when using the *--script* parameter.
 - Addressed an issue where the client would return a 0x30000066 error when connecting using an RD Gateway server.
-- Fixed an issue users would be repeatedly prompted for credentials if Extended Protection for Authentication was set on the server.
+- Fixed an issue that caused the client to repeatedly prompt users for credentials if Extended Protection for Authentication was set on the server.
 - Addressed reliability issues that users identified through crash reporting.
 - Addressed keyboard and VoiceOver-related accessibility bugs.
 
@@ -115,7 +144,7 @@ In this release, we've made substantial updates to the underlying code that powe
 - Hitting cancel during workspace subscription will now result in nothing being added to the Connection Center.
 - Added key mappings for Cmd+Z and Cmd+F to map to Ctrl+Z and Ctrl+F respectively.
 - Fixed a bug that caused remote apps to open behind the Connection Center when launched.
-- Worked around an issue where AAC audio playback on macOS 10.15 would cause the client to stall.
+- Worked around an issue in macOS 10.15 where AAC audio playback caused the client to stall.
 - Shift+left-click now works in Unicode mode.
 - Fixed a bug where using the Shift key triggered the Sticky Keys alert in Unicode mode.
 - Added a check for network availability before connection initiation.
@@ -128,7 +157,7 @@ In this release, we've made substantial updates to the underlying code that powe
 - The username field in the credential prompt is now always prepopulated for Windows Virtual Desktop connections.
 - Fixed a bug that clipped the Edit, Delete, and Refresh buttons for workspaces if the Connection Center wasn't wide enough.
 - The "email or workspace URL" field in the Add Workspace sheet is no longer case-sensitive.
-- Fixed a number of accessibility issues that impacted VoiceOver and keyboard navigation scenarios.
+- Fixed accessibility issues that impacted VoiceOver and keyboard navigation scenarios.
 - Lots of updates to improve interoperability with current and upcoming features in the Windows Virtual Desktop service.
 - You can now configure the AVC support level advertised by the client from a terminal prompt. Here are the support levels you can configure:
    - Don't advertise AVC support to the server: `defaults write com.microsoft.rdc.macos AvcSupportLevel disabled`
@@ -271,9 +300,9 @@ It's been a few weeks since we last updated, but we've been hard at work during 
 - On Mojave and Catalina we've added a new dialog that requests your permission to use the microphone and camera for device redirection.
 - The feed subscription flow has been rewritten to be simpler and faster.
 - Clipboard redirection now includes the Rich Text Format (RTF).
-- When entering your password you have the option to reveal it with a "Show password" checkbox.
+- When entering your password, can now choose to reveal it by selecting the "Show password" checkbox.
 - Addressed scenarios where the session window was jumping between monitors.
-- The Connection Center displays high resolution remote app icons (when available).
+- The Connection Center displays high-resolution remote app icons (when available).
 - Cmd+A maps to Ctrl+A when Mac clipboard shortcuts are being used.
 - Cmd+R now refreshes all of your subscribed feeds.
 - Added new secondary click options to expand or collapse all groups or feeds in the Connection Center.
@@ -388,7 +417,7 @@ In this release, we addressed graphics mispaints (caused by a server encoding bu
 - Fixed a bug that caused thumbnails to consume too much disk storage on macOS 10.14.
 - Added support for enforcing RD Gateway device redirection policies.
 - Fixed an issue that prevented session windows from closing when disconnecting from a connection using RD Gateway.
-- If Network Level Authentication (NLA) is not enforced by the server, you will now be routed to the sign in screen if your password has expired.
+- If Network Level Authentication (NLA) is not enforced by the server, you will now be routed to the sign-in screen if your password has expired.
 - Fixed performance issues that surfaced when lots of data was being transferred over the network.
 - Smart card redirection fixes.
 - Support for all possible values of the "EnableCredSspSupport" and "Authentication Level" RDP file settings if the ClientSettings.EnforceCredSSPSupport user default key (in the com.microsoft.rdc.macos domain) is set to 0.
@@ -410,10 +439,10 @@ In this release, we addressed graphics mispaints (caused by a server encoding bu
 - Incorporated updates for GDPR compliance.
 - MicrosoftAccount\username@domain is now accepted as a valid username.
 - Clipboard sharing has been rewritten to be faster and support more formats.
-- Copy and pasting text, images or files between sessions now bypasses the local machine's clipboard.
+- Copy and pasting text, images, or files between sessions now bypasses the local machine's clipboard.
 - You can now connect via an RD Gateway server with an untrusted certificate (if you accept the warning prompts).
 - Metal hardware acceleration is now used (where supported) to speed up rendering and optimize battery usage.
-- When using Metal hardware acceleration we try to work some magic to make the session graphics appear sharper.
+- When using Metal hardware acceleration, we try to work some magic to make the session graphics appear sharper.
 - Got rid of some instances where windows would hang around after being closed.
 - Fixed bugs that were preventing the launch of RemoteApp programs in some scenarios.
 - Fixed an RD Gateway channel synchronization error that was resulting in 0x204 errors.
