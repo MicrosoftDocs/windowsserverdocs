@@ -38,7 +38,7 @@ To install OpenSSH using PowerShell, first launch PowerShell as an Administrator
 To make sure that the OpenSSH features are available for install:
 
 ```powershell
-Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
+Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 
 # This should return the following output:
 
