@@ -18,8 +18,8 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.1953        |1.2.945                   |
-|Insider    |1.2.1953        |1.2.945                   |
+|Public     |1.2.1953        |1.2.1446                   |
+|Insider    |1.2.1953        |1.2.1446                   |
 
 ## Updates for version 1.2.1953 (Insider)
 
