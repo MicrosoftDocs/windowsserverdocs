@@ -40,39 +40,39 @@ You must have membership in **Administrators**, or equivalent.
 
 ### Procedure
 
-1.  On the Hyper-V host, open Hyper-V Manager, and under Actions, click **Virtual Switch Manager**.
+1. On the Hyper-V host, open Hyper-V Manager, and under Actions, click **Virtual Switch Manager**.
 
-   ![Virtual Switch Manager](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv.jpg)
+    ![Virtual Switch Manager](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv.jpg)
 
-2.  In Virtual Switch Manager, make sure **External** is selected, and then click **Create Virtual Switch**.
+2. In Virtual Switch Manager, make sure **External** is selected, and then click **Create Virtual Switch**.
 
-   ![Create Virtual Switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv_02.jpg)
+    ![Create Virtual Switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv_02.jpg)
 
-3.  In Virtual Switch Properties, type a **Name** for the virtual switch, and add **Notes** as needed.
+3. In Virtual Switch Properties, type a **Name** for the virtual switch, and add **Notes** as needed.
 
-4.  In **Connection type**, in **External network**, select the physical network adapter to which you want to attach the virtual switch.
+4. In **Connection type**, in **External network**, select the physical network adapter to which you want to attach the virtual switch.
 
-5.  Configure additional switch properties for your deployment, and then click **OK**.
+5. Configure additional switch properties for your deployment, and then click **OK**.
 
-6.  Create a second external virtual switch by repeating the previous steps. Connect the second external switch to a different network adapter.
+6. Create a second external virtual switch by repeating the previous steps. Connect the second external switch to a different network adapter.
 
-7.  In Hyper-V Manager, under **Virtual Machines**, right-click the VM that you want to configure, and then click **Settings**.
+7. In Hyper-V Manager, under **Virtual Machines**, right-click the VM that you want to configure, and then click **Settings**.
 
-   The VM **Settings** dialog box opens.
+    The VM **Settings** dialog box opens.
 
-8.  Ensure that the VM is not started. If it is started, perform a shutdown before configuring the VM.
+8. Ensure that the VM is not started. If it is started, perform a shutdown before configuring the VM.
 
-8.  In **Hardware**, click **Network Adapter**.
+9. In **Hardware**, click **Network Adapter**.
 
-   ![Network Adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_01.jpg)
+    ![Network Adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_01.jpg)
 
-9. In **Network Adapter** properties, select one of the virtual switches that you created in previous steps, and then click **Apply**.
+10. In **Network Adapter** properties, select the first virtual switches that you created in previous steps, and then click **Apply**.
 
     ![Select a virtual switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_02.jpg)
 
-10. In **Hardware**, click to expand the plus sign (+) next to **Network Adapter**.
+11. In **Hardware**, click to expand the plus sign (+) next to **Network Adapter**.
 
-11. Click **Advanced Features** to enable NIC Teaming by using the graphical user interface.
+12. Click **Advanced Features** to enable NIC Teaming by using the graphical user interface.
 
     >[!TIP]
     >You can also enable NIC Teaming with a Windows PowerShell command:
@@ -97,11 +97,11 @@ You must have membership in **Administrators**, or equivalent.
 
 14. In **Add Hardware**, click **Network Adapter**, and then click **Add**.
 
-   ![Add a network adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_06.jpg)
+    ![Add a network adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_06.jpg)
 
 15. In **Network Adapter** properties, select the second virtual switch that you created in previous steps, and then click **Apply**.
 
-   ![Apply a virtual switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_07.jpg)
+    ![Apply a virtual switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_07.jpg)
 
 16. In **Hardware**, click to expand the plus sign (+) next to **Network Adapter**.
 
