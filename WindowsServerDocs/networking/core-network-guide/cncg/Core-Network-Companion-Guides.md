@@ -2,25 +2,24 @@
 title: Core Network Companion Guides
 description: This topic provides an overview of the companion guides to the Windows Server 2016 Core Network Guide
 manager: brianlic
-ms.technology: networking
-ms.prod: windows-server-threshold
 ms.topic: article
 ms.assetid: d57af0bd-9301-4f62-9888-f528cd10451d
-ms.author: pashort
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Core network companion guidance
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-While the Windows Server 2016 [Core Network Guide](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide) provides instructions on how to deploy a new Active Directory&reg; forest with a new root domain and the supporting networking infrastructure, Companion Guides provide you with the ability to add features to your network.
+While the Windows Server 2016 [Core Network Guide](../core-network-guide.md) provides instructions on how to deploy a new Active Directory&reg; forest with a new root domain and the supporting networking infrastructure, Companion Guides provide you with the ability to add features to your network.
 
 Each companion guide allows you to accomplish a specific goal after you have deployed your core network. In some cases, there are multiple companion guides that, when deployed together and in the correct order, allow you to accomplish very complex goals in a measured, cost-effective, reasonable manner.
 
 If you deployed your Active Directory domain and core network before encountering the Core Network Guide, you can still use the Companion Guides to add features to your network. Simply use the Core Network Guide as a list of prerequisites, and know that to deploy additional features with the Companion Guides, your network must meet the prerequisites that are provided by the Core Network Guide.
 
-## Core Network Companion Guide: Deploy Server Certificates for 802.1X Wired and Wireless Deployments 
+## Core Network Companion Guide: Deploy Server Certificates for 802.1X Wired and Wireless Deployments
 
 This companion guide explains how to build upon the core network by deploying server certificates for computers that are running Network Policy Server \(NPS\), Remote Access Service \(RAS\), or both.
 
@@ -31,8 +30,8 @@ Server certificates are required when you deploy certificate-based authenticatio
 - An efficient method for managing certificates and certification authorities
 - Security provided by certificate-based authentication
 - The ability to expand the use of certificates for additional purposes
-  
-For instructions on how to deploy server certificates, see [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](server-certs/Deploy-Server-Certificates-for-802.1X-Wired-and-Wireless-Deployments.md).  
+
+For instructions on how to deploy server certificates, see [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](server-certs/Deploy-Server-Certificates-for-802.1X-Wired-and-Wireless-Deployments.md).
 ## Core Network Companion Guide: Deploy Password-Based 802.1X Authenticated Wireless Access
 
 This companion guide explains how to build upon the core network by providing instructions about how to deploy Institute of Electrical and Electronics Engineers \(IEEE\) 802.1X\-authenticated IEEE 802.11 wireless access using Protected Extensible Authentication Protocol\–Microsoft Challenge Handshake Authentication Protocol version 2 \(PEAP\-MS\-CHAP v2\).

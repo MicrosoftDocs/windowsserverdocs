@@ -2,8 +2,6 @@
 title: Create a File Screen Exception
 description: This article describes how to create a file screen exception
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -39,7 +37,7 @@ You assign file groups to determine which file types will be allowed in the file
 
 5.  Click **OK**.
 
-## See also
+## Additional References
 
 -   [File Screening Management](file-screening-management.md)
 -   [Define File Groups for Screening](define-file-groups-for-screening.md)

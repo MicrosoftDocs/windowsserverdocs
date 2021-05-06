@@ -1,17 +1,15 @@
 ---
 title: Remote Desktop Services roles
-description: Describes the components of a desktop hosting service.
-ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
+description: Learn about the roles within a Remote Desktop Services environment in Windows Server.
 ms.author: helohr
 ms.date: 07/06/2018
 ms.topic: article
 author: heidilohr
-manager: dougkim
+manager: femila
 ---
 # Remote Desktop Services roles
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 This article describes the roles within a Remote Desktop Services environment.
 
@@ -32,12 +30,12 @@ You can customize desktops even more by creating and uploading a virtual hard di
 For more information, see the following articles:
 
 * [Remote Desktop Services - Secure data storage](rds-plan-secure-data-storage.md)
-* [Upload a generalized VHD and use it to create new VMs in Azure](https://docs.microsoft.com/azure/virtual-machines/windows/upload-generalized-managed?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json)
+* [Upload a generalized VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed?toc=/azure/virtual-machines/windows/toc.json)
 * [Update RDSH collection (ARM template)](https://azure.microsoft.com/resources/templates/rds-update-rdsh-collection/)
 
 ## Remote Desktop Connection Broker
 
-Remote Desktop Connection Broker (RD Connection Broker) manages incoming remote desktop connections to RD Session Host server farms. RD Connection Broker handles connections to both collections of full desktops and collections of remote apps. RD Connection Broker can balance the load across the collection's servers when making new connections. If a session disconnects, RD Connection Broker will reconnect the user to the correct RD Session Host server and their interrupted session, which still exists in the RD Session Host farm.
+Remote Desktop Connection Broker (RD Connection Broker) manages incoming remote desktop connections to RD Session Host server farms. RD Connection Broker handles connections to both collections of full desktops and collections of remote apps. RD Connection Broker can balance the load across the collection's servers when making new connections. If RD Connection Broker is enabled, using DNS round robin to RD Session Hosts for balacing servers is not supported. If a session disconnects, RD Connection Broker will reconnect the user to the correct RD Session Host server and their interrupted session, which still exists in the RD Session Host farm.
 
 You'll need to install matching digital certificates on both the RD Connection Broker server and the client to support single sign-on and application publishing. When developing or testing a network, you can use a self-generated and self-signed certificate. However, released services require a digital certificate from a trusted certification authority. The name you give the certificate must be the same as the internal Fully Qualified Domain Name (FQDN) of the RD Connection Broker virtual machine.
 
@@ -65,10 +63,11 @@ For more information, see the following articles:
 * [Add high availability to the RD Web and Gateway web front](rds-rdweb-gateway-ha.md)
 * [Remote Desktop Services - Access from anywhere](rds-plan-access-from-anywhere.md)
 * [Remote Desktop Services - Multi-factor authentication](rds-plan-mfa.md)
+* [Set up the RD Gateway role](remote-desktop-gateway-role.md)
 
 ## Remote Desktop Web Access
 
-Remote Desktop Web Access (RD Web Access) lets users access desktops and applications through a web portal and launches them through the device’s native Microsoft Remote Desktop client application. You can use the web portal to publish Windows desktops and applications to Windows and non-Windows client devices, and you can also selectively publish desktops or apps to specific users or groups.
+Remote Desktop Web Access (RD Web Access) lets users access desktops and applications through a web portal and launches them through the device's native Microsoft Remote Desktop client application. You can use the web portal to publish Windows desktops and applications to Windows and non-Windows client devices, and you can also selectively publish desktops or apps to specific users or groups.
 
 RD Web Access needs Internet Information Services (IIS) to work properly. A Hypertext Transfer Protocol Secure (HTTPS) connection provides an encrypted communications channel between the clients and the RD Web server. The RD Web Access virtual machine must be accessible through a public IP address that allows inbound TCP connections to port 443 to allow the tenant's users to connect from the internet using the HTTPS communications transport protocol.
 
@@ -95,4 +94,4 @@ For more information, see the following articles:
 * [License your RDS deployment with client access licenses (CALs)](rds-client-access-license.md)
 * [Activate the Remote Desktop Services license server](rds-activate-license-server.md)
 * [Track your Remote Desktop Services client access licenses (RDS CALs)](rds-track-cals.md)
-* [Microsoft Volume Licensing: licensing options for service providers](https://www.microsoft.com/en-us/Licensing/licensing-programs/spla-program.aspx)
+* [Microsoft Volume Licensing: licensing options for service providers](https://www.microsoft.com/Licensing/licensing-programs/spla-program.aspx)

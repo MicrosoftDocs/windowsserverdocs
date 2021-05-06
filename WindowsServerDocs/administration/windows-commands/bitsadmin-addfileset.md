@@ -1,45 +1,39 @@
 ---
 title: bitsadmin addfileset
-description: "Windows Commands topic for **bitsadmin addfileset** - adds one or more files to the specified job."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin addfileset command, which adds one or more files to the specified job.
+ms.topic: reference
 ms.assetid: 75466994-262f-4724-b14d-f813c5397675
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin addfileset
-
-
 
 Adds one or more files to the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /addfileset <Job> <TextFile>
+bitsadmin /addfileset <job> <textfile>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|TextFile|A text file containing remote and local file names.</br>Note: The names are space-delimited. Lines that begin with a # character are treated as a comment.|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| textfile | A text file, each line of which contains a remote and a local file name. **Note:** Names must space-delimited. Lines starting with a `#` character are treated as a comment. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 ```
-C:\>bitsadmin /addfileset files.txt
+bitsadmin /addfileset files.txt
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

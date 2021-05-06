@@ -1,50 +1,41 @@
 ---
 title: bitsadmin setaclflag
-description: "Windows Commands topic for **bitsadmin setaclflag** - Sets the access control list propagations flags."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin setaclflag command, which sets the access control list (ACL) propagations flags.
+ms.topic: reference
 ms.assetid: 6e3bcda0-827d-4dfd-8384-d1da018f3e10
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin setaclflag
 
-
-
-Sets the access control list propagations flags.
+Sets the access control list (ACL) propagations flags for the job. The flags indicate that you want to maintain the owner and ACL information with the file being downloaded. For example, to maintain the owner and group with the file, set the **flags** parameter to `og`.
 
 ## Syntax
 
 ```
-bitsadmin /SetAclFlags <Job> <Flags>
+bitsadmin /setaclflag <job> <flags>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|Flags|Specify one or more of the following flag values:</br>-   O: Copy owner information with file.</br>-   G: Copy group information with file.</br>-   D: Copy DACL information with file.</br>-   S :Copy SACL information with file.|
+| Parameter | Description |
+| --------- | ----------- |
+| job | The job's display name or GUID. |
+| flags | Specify one or more of the values, including:<ul><li>**o** - Copy owner information with file.</li><li>**g** - Copy group information with file.</li><li>**d** - Copy discretionary access control list (DACL) information with file.</li><li>**s** - Copy system access control list (SACL) information with file.</li></ul> |
 
-## Remarks
+## Examples
 
-The SetAclFlags command is used to maintain Owner and access control list information when a job is downloading data from a Windows (SMB) share.
+To set the access control list propagation flags for the job named *myDownloadJob*, so it maintains the owner and group information with the downloaded files.
 
-## <a name="BKMK_examples"></a>Examples
-
-The following example sets the access control list propagation flags for the job named *myDownloadJob* to maintain the owner and group information with the downloaded files.
 ```
-C:\>bitsadmin /setaclflags myDownloadJob OG
+bitsadmin /setaclflags myDownloadJob og
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

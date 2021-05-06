@@ -1,40 +1,33 @@
 ---
-title: nslookup finger Command
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+title: nslookup finger
+description: Reference article for the nslookup finger command, which connects with the finger server on the current device.
+ms.topic: reference
 ms.assetid: 11ea2bde-8ccb-4b87-bbad-231dd9e5e858
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# nslookup finger Command
+# nslookup /finger
 
-
-
-Connects with the finger server on the current computer.
+Connects with the finger server on the current device.
 
 ## Syntax
 
 ```
-finger [<UserName>] [{[>] <FileName>|[>>] <FileName>}]
+finger [<username>] [{[>] <filename> | [>>] <filename>}]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<UserName>|Specifies the name of the user to look up.|
-|\<FileName>|Specifies a file name in which to save the output. You can use the greater than (>) and double greater than (>>) characters to redirect the output in the usual manner.|
-|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+| Parameter | Description |
+| --------- | ----------- |
+| `<username>` | Specifies the name of the user to look up. |
+| `<filename>` | Specifies a file name in which to save the output. You can use the greater than (`>`) and double greater than (`>>`) characters to redirect the output in the usual manner. |
+| /? | Displays help at the command prompt. |
+| /help | Displays help at the command prompt. |
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

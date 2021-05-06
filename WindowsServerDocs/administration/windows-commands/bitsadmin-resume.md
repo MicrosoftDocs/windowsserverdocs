@@ -1,44 +1,42 @@
 ---
 title: bitsadmin resume
-description: "Windows Commands topic for **bitsadmin resume** - Activates a new or suspended job in the transfer queue."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin resume command, which activates a new or suspended job in the transfer queue.
+ms.topic: reference
 ms.assetid: 7c7540a9-a11a-4910-923a-2a2a61cbf11d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin resume
 
-
-
-Activates a new or suspended job in the transfer queue.
+Activates a new or suspended job in the transfer queue. If you resumed your job by mistake, or simply need to suspend your job, you can use the [bitsadmin suspend](bitsadmin-suspend.md) switch to suspend the job.
 
 ## Syntax
 
 ```
-bitsadmin /Resume <Job>
+bitsadmin /resume <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example resumes the job named *myDownloadJob*.
+To resume the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin /Resume myDownloadJob
+bitsadmin /resume myDownloadJob
 ```
-Additional references
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin suspend command](bitsadmin-suspend.md)
+
+- [bitsadmin command](bitsadmin.md)

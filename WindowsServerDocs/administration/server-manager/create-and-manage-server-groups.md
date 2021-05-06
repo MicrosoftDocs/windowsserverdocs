@@ -1,17 +1,11 @@
 ---
-title: create and Manage Server Groups
-description: "Server Manager"
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
+title: Create and Manage Server Groups
+description: Learn how to create custom, user-defined groups of servers in Server Manager in Windows Server.
 ms.topic: article
 ms.assetid: 9d5b1be8-49fd-4ff7-9580-e4ff21fe4b17
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # create and Manage Server Groups
@@ -20,7 +14,7 @@ ms.date: 10/16/2017
 
 This topic describes how to create custom, user-defined groups of servers in Server Manager in Windows Server.
 
-## <a name="BKMK_groups"></a>Server groups
+## <a name=BKMK_groups></a>Server groups
 Servers that you add to the server pool are displayed on the **All Servers** page in Server Manager. You can create custom groups of servers that you have added. Server groups allow you to view and manage a smaller subset of your server pool as a logical unit; for example, you can create a group called **Accounting Servers** for all servers in your organization's Accounting department, or a group called **Chicago** for all servers that are geographically located in Chicago. After you create a server group, the group's home page in Server Manager displays information about events, services, performance counters, Best Practices Analyzer results, and installed roles and features for the group as a whole.
 
 Servers can be a member of more than one group.

@@ -1,42 +1,40 @@
 ---
-title: "Comparison of Standard and Datacenter editions of Windows Server 2019" 
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: server-general
-ms.tgt_pltfrm: na
+description: "Learn more about: Comparison of Standard and Datacenter editions of Windows Server 2019"
+title: "Comparison of Standard and Datacenter editions of Windows Server 2019"
 ms.topic: article
 ms.assetid: c5ca3bfe-7ced-49f6-2932-80cab33fe914
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
+ms.date: 12/10/2020
 ---
 # Comparison of Standard and Datacenter editions of Windows Server 2019
 
 > Applies To: Windows Server 2019
-  
+
 ## Locks and Limits
-|Locks and Limits|Windows Server 2019 Standard|Windows Server 2019 Datacenter|  
-|-------------------|----------|---------------------------|  
-|Maximum number of users|Based on CALs|Based on CALs|
-|Maximum SMB connections|16777216|16777216|
-|Maximum RRAS connections|unlimited|unlimited|
-|Maximum IAS connections|2147483647|2147483647|
-|Maximum RDS connections|65535|65535|
-|Maximum number of 64-bit sockets|64|64|
-|Maximum number of cores|unlimited|unlimited|
-|Maximum RAM|24 TB|24 TB|
-|Can be used as virtualization guest|Yes; 2 virtual machines, plus one Hyper-V host per license|Yes; unlimited virtual machines, plus one Hyper-V host per license|
-|Server can join a domain|yes|yes|
-|Edge network protection/firewall|no|no|
-|DirectAccess|yes|yes|
-|DLNA codecs and web media streaming|Yes, if installed as Server with Desktop Experience|Yes, if installed as Server with Desktop Experience|
+
+| Locks and Limits                 | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| -------------------              | ---------------------------  | --------------------------- |
+| Maximum number of users          | Based on CALs                | Based on CALs |
+| Maximum SMB connections          | 16,777,216                   | 16,777,216 |
+| Maximum RRAS connections         | unlimited                    | unlimited |
+| Maximum IAS connections          | 2,147,483,647                | 2,147,483,647 |
+| Maximum RDS connections          | 65,535                       | 65,535 |
+| Maximum number of 64-bit sockets | 64                           | 64 |
+| Maximum number of cores          | unlimited                    | unlimited |
+| Maximum RAM                      | 24 TB                        | 24 TB |
+| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license|Yes; <strong>unlimited virtual machines</strong>, plus one Hyper-V host per license |
+| Server can join a domain        | yes                           | yes |
+| Edge network protection/firewall| no                            | no    |
+| DirectAccess                    | yes                           | yes |
+| DLNA codecs and web media streaming | Yes, if installed as Server with Desktop Experience | Yes, if installed as Server with Desktop Experience |
 
 ## Server roles
-|Windows Server roles available|Role services|Windows Server 2019 Standard|Windows Server 2019 Datacenter|  
-|-------------------|----------|----------|---------------------------|  
+
+|Windows Server roles available|Role services|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|-------------------|----------|----------|---------------------------|
 |Active Directory Certificate Services| |Yes|Yes|
 |Active Directory Domain Services| |Yes|Yes|
 |Active Directory Federation Services| |Yes|Yes|
@@ -60,8 +58,7 @@ ms.localizationpriority: medium
 |File and Storage Services|Storage Services|Yes|Yes|
 |Host Guardian Service| |Yes|Yes|
 |Hyper-V| |Yes|Yes; including Shielded Virtual Machines|
-|MultiPoint Services| |Yes|Yes|
-|Network Controller| |No|Yes|
+|Network Controller| |No| <strong>Yes</strong> |
 |Network Policy and Access Services| |Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Print and Document Services| |Yes|Yes|
 |Remote Access| |Yes|Yes|
@@ -69,7 +66,7 @@ ms.localizationpriority: medium
 |Volume Activation Services| |Yes|Yes|
 |Web Services (IIS)| |Yes|Yes|
 |Windows Deployment Services| |Yes*|Yes*|
-|Windows Server Essentials Experience| |Yes|Yes|
+|Windows Server Essentials Experience| |No | No |
 |Windows Server Update Services| |Yes|Yes|
 
 *WDS Transport Server is new to Server Core installations in Windows Server 2019 (also in the semi-annual channel starting with Windows Server, version 1803)
@@ -77,22 +74,22 @@ ms.localizationpriority: medium
 
 ## Features
 
-|Windows Server Features installable with Server Manager (or PowerShell)|Windows Server 2019 Standard|Windows Server 2019 Datacenter|  
-|-------------------|----------|---------------------------|  
-|.NET Framework 3.5|Yes|Yes|
-|.NET Framework 4.6|Yes|Yes|
+|Windows Server Features installable with Server Manager (or PowerShell)|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|-------------------|----------|---------------------------|
+|.NET Framework 3.5 |Yes|Yes|
+|.NET Framework 4.7 |Yes|Yes|
 |Background Intelligent Transfer Service (BITS)|Yes|Yes|
 |BitLocker Drive Encryption|Yes|Yes|
 |BitLocker Network Unlock|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |BranchCache|Yes|Yes|
 |Client for NFS|Yes|Yes|
-|Containers|Yes (Windows containers unlimited; Hyper-V containers up to 2)|Yes (all container types unlimited)|
+|Containers|Yes (unlimited Windows containers; up to two Hyper-V containers)|Yes (<strong>unlimited Windows and Hyper-V containers</strong>) |
 |Data Center Bridging|Yes|Yes|
 |Direct Play|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Enhanced Storage|Yes|Yes|
 |Failover Clustering|Yes|Yes|
 |Group Policy Management|Yes|Yes|
-|Host Guardian Hyper-V Support|No|Yes|
+|Host Guardian Hyper-V Support|No| <strong>Yes</strong> |
 |I/O Quality of Service|Yes|Yes|
 |IIS Hostable Web Core|Yes|Yes|
 |Internet Printing Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
@@ -119,7 +116,7 @@ ms.localizationpriority: medium
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
 |Software Load Balancer|Yes|Yes|
-|Storage Replica|No|Yes|
+|Storage Replica|Yes|Yes|
 |Telnet Client|Yes|Yes|
 |TFTP Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |VM Shielding Tools for Fabric Management|Yes|Yes|
@@ -141,10 +138,9 @@ ms.localizationpriority: medium
 |WoW64 support|Installed|Installed|
 |XPS Viewer|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 
-|Features available generally|Windows Server 2019 Standard|Windows Server 2019 Datacenter|  
-|-------------------|----------|---------------------------|  
+|Features available generally|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|-------------------|----------|---------------------------|
 |Best Practices Analyzer|Yes|Yes|
-|Constrained Storage Replica|Yes, (1 Partnership and 1 Resource Group with Single 2TB volume)|Yes, unlimited|
 |Direct Access|Yes|Yes|
 |Dynamic Memory (in virtualization)|Yes|Yes|
 |Hot Add/Replace RAM|Yes|Yes|
@@ -153,18 +149,17 @@ ms.localizationpriority: medium
 |Network Load Balancing|Yes|Yes|
 |Windows PowerShell|Yes|Yes|
 |Server Core installation option|Yes|Yes|
-|Nano Server installation option|Yes|Yes|
 |Server Manager|Yes|Yes|
 |SMB Direct and SMB over RDMA|Yes|Yes|
-|Software-defined Networking|No|Yes|
-|Storage Management Service|Yes|Yes|
+|Software-defined Networking|No| <strong>Yes</strong> |
+|Storage Migration  Service|Yes|Yes|
+| Storage Replica         | Yes, (1 partnership and 1 resource group with a single 2TB volume)    | Yes, <strong>unlimited</strong> |
 |Storage Spaces|Yes|Yes|
-|Storage Spaces Direct|No|Yes|
+|Storage Spaces Direct|No| <strong>Yes</strong> |
 |Volume Activation Services|Yes|Yes|
 |VSS (Volume Shadow Copy Service) integration|Yes|Yes|
 |Windows Server Update Services|Yes|Yes|
 |Windows System Resource Manager|Yes|Yes|
 |Server license logging|Yes|Yes|
-|Inherited activation|As guest if hosted on Datacenter|Can be host or guest|
-|Work folders|Yes|Yes|
-
+|Inherited activation|As guest if hosted on Datacenter| <strong>Can be a host or a guest</strong> |
+|Work Folders|Yes|Yes|

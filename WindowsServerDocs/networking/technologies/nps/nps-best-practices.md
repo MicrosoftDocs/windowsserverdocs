@@ -2,12 +2,11 @@
 title: Network Policy Server Best Practices
 description: This topic provides best practices for deploying and managing Network Policy Server in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
-ms.technology: networking
 ms.topic: article
 ms.assetid: 90e544bd-e826-4093-8c3b-6a6fc2dfd1d6
-ms.author: pashort 
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 12/08/2020
 ---
 
 # Network Policy Server Best Practices
@@ -26,7 +25,7 @@ There are two types of accounting, or logging, in NPS:
 
 - Event logging for NPS. You can use event logging to record NPS events in the system and security event logs. This is used primarily for auditing and troubleshooting connection attempts.
 
-- Logging user authentication and accounting requests. You can log user authentication and accounting requests to log files in text format or database format, or you can log to a stored procedure in a SQL Server 2000 database. Request logging is used primarily for connection analysis and billing purposes, and is also useful as a security investigation tool, providing you with a method of tracking down the activity an attacker.
+- Logging user authentication and accounting requests. You can log user authentication and accounting requests to log files in text format or database format, or you can log to a stored procedure in a SQL Server 2000 database. Request logging is used primarily for connection analysis and billing purposes, and is also useful as a security investigation tool, providing you with a method of tracking down the activity of an attacker.
 
 To make the most effective use of NPS logging:
 
@@ -44,20 +43,23 @@ To make the most effective use of NPS logging:
 
 For more information, see [Configure Network Policy Server Accounting](nps-accounting-configure.md).
 
-- To provide failover and redundancy with SQL Server logging, place two computers running SQL Server on different subnets. Use the SQL Server **Create Publication Wizard** to set up database replication between the two servers. For more information, see [SQL Server Technical Documentation](https://msdn.microsoft.com/library/ms130214.aspx) and [SQL Server Replication](https://msdn.microsoft.com/library/ms151198.aspx).
+- To provide failover and redundancy with SQL Server logging, place two computers running SQL Server on different subnets. Use the SQL Server **Create Publication Wizard** to set up database replication between the two servers. For more information, see [SQL Server Technical Documentation](/sql/sql-server/) and [SQL Server Replication](/sql/relational-databases/replication/sql-server-replication).
 
 ## Authentication
 
 Following are the best practices for authentication.
 
-- Use certificate-based authentication methods such as Protected Extensible Authentication Protocol \(PEAP\) and Extensible Authentication Protocol \(EAP\) for strong authentication. Do not use password-only authentication methods because they are vulnerable to a variety of attacks and are not secure. For secure wireless authentication, using PEAP\-MS\-CHAP v2 is recommended, because the NPS proves its identity to wireless clients by using a server certificate, while users prove their identity with their user name and password.  For more information about using NPS in your wireless deployment, see [Deploy Password-Based 802.1X Authenticated Wireless Access](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/wireless/a-deploy-8021x-wireless-access).
-- Deploy your own certification authority \(CA\) with Active Directory&reg; Certificate Services \(AD CS\) when you use strong certificate-based authentication methods, such as PEAP and EAP, that require the use of a server certificate on NPSs. You can also use your CA to enroll computer certificates and user certificates. For more information on deploying server certificates to NPS and Remote Access servers, see [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments).
+- Use certificate-based authentication methods such as Protected Extensible Authentication Protocol \(PEAP\) and Extensible Authentication Protocol \(EAP\) for strong authentication. Do not use password-only authentication methods because they are vulnerable to a variety of attacks and are not secure. For secure wireless authentication, using PEAP\-MS\-CHAP v2 is recommended, because the NPS proves its identity to wireless clients by using a server certificate, while users prove their identity with their user name and password.  For more information about using NPS in your wireless deployment, see [Deploy Password-Based 802.1X Authenticated Wireless Access](../../core-network-guide/cncg/wireless/a-deploy-8021x-wireless-access.md).
+- Deploy your own certification authority \(CA\) with Active Directory&reg; Certificate Services \(AD CS\) when you use strong certificate-based authentication methods, such as PEAP and EAP, that require the use of a server certificate on NPSs. You can also use your CA to enroll computer certificates and user certificates. For more information on deploying server certificates to NPS and Remote Access servers, see [Deploy Server Certificates for 802.1X Wired and Wireless Deployments](../../core-network-guide/cncg/server-certs/deploy-server-certificates-for-802.1x-wired-and-wireless-deployments.md).
+
+> [!IMPORTANT]
+> Network Policy Server (NPS) does not support the use of the Extended ASCII characters within passwords.
 
 ## Client computer configuration
 
 Following are the best practices for client computer configuration.
 
-- Automatically configure all of your domain member 802.1X client computers by using Group Policy. For more information, see the section "Configure Wireless Network (IEEE 802.11) Policies" in the topic [Wireless Access Deployment](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/cncg/wireless/e-wireless-access-deployment#bkmk_policies).
+- Automatically configure all of your domain member 802.1X client computers by using Group Policy. For more information, see the section "Configure Wireless Network (IEEE 802.11) Policies" in the topic [Wireless Access Deployment](../../core-network-guide/cncg/wireless/e-wireless-access-deployment.md#bkmk_policies).
 
 ## Installation suggestions
 
@@ -65,7 +67,7 @@ Following are the best practices for installing NPS.
 
 - Before installing NPS, install and test each of your network access servers using local authentication methods before you configure them as RADIUS clients in NPS.
 
-- After you install and configure NPS, save the configuration by using the Windows PowerShell command [Export-NpsConfiguration](https://technet.microsoft.com/library/jj872749.aspx). Save the NPS configuration with this command each time you reconfigure the NPS.
+- After you install and configure NPS, save the configuration by using the Windows PowerShell command [Export-NpsConfiguration](/powershell/module/nps/export-npsconfiguration). Save the NPS configuration with this command each time you reconfigure the NPS.
 
 >[!CAUTION]
 >- The exported NPS configuration file contains unencrypted shared secrets for RADIUS clients and members of remote RADIUS server groups. Because of this, make sure that you save the file to a secure location.
@@ -89,7 +91,7 @@ Following are the best practices for using NPS in large organizations.
 
 - Use a user principal name to refer to users whenever possible. A user can have the same user principal name regardless of domain membership. This practice provides scalability that might be required in organizations with a large number of domains.
 
-- If you installed Network Policy Server \(NPS\) on a computer other than a domain controller and the NPS is receiving a large number of authentication requests per second, you can improve NPS performance by increasing the number of concurrent authentications allowed between the NPS and the domain controller. For more information, see 
+- If you installed Network Policy Server \(NPS\) on a computer other than a domain controller and the NPS is receiving a large number of authentication requests per second, you can improve NPS performance by increasing the number of concurrent authentications allowed between the NPS and the domain controller. For more information, see [Increase Concurrent Authentications Processed by NPS](./nps-concurrent-auth.md).
 
 ## Security issues
 
@@ -105,4 +107,3 @@ When you are administering a NPS remotely, do not send sensitive or confidential
 >You can install Remote Server Administration Tools for Windows 10 only on the full release of Windows 10 Professional or Windows 10 Enterprise.
 
 For more information about NPS, see [Network Policy Server (NPS)](nps-top.md).
-

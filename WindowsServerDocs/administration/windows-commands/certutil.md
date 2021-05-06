@@ -1,1717 +1,2007 @@
 ---
 title: certutil
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the certutil command, which is a command-line program that dumps and displays certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components, and verifies certificates, key pairs, and certificate chains.
+ms.topic: reference
 ms.assetid: c264ccf0-ba1e-412b-9dd3-d77dd9345ad9
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # certutil
 
+Certutil.exe is a command-line program, installed as part of Certificate Services. You can use certutil.exe to dump and display certification authority (CA) configuration information, configure Certificate Services, backup and restore CA components, and verify certificates, key pairs, and certificate chains.
 
+If certutil is run on a certification authority without additional parameters, it displays the current certification authority configuration. If certutil is run on a non-certification authority, the command defaults to running the `certutil [-dump]` command.
 
-Certutil.exe is a command-line program that is installed as part of Certificate Services. You can use Certutil.exe to dump and display certification authority (CA) configuration information, configure Certificate Services, backup and restore CA components, and verify certificates, key pairs, and certificate chains.
+> [!IMPORTANT]
+> Earlier versions of certutil may not provide all of the options that are described in this document. You can see all the options that a specific version of certutil provides by running `certutil -?` or `certutil <parameter> -?`.
 
-When certutil is run on a certification authority without additional parameters, it displays the current certification authority configuration. When cerutil is run on a non-certification authority, the command defaults to running the certutil [-dump](#BKMK_dump) verb.
+## Parameters
 
-> [!WARNING]
-> Earlier versions of certutil may not provide all of the options that are described in this document. You can see all the options that a specific version of certutil provides by running the commands shown in the [Syntax notations](#BKMK_notations) section.
+### -dump
 
-## <a name="BKMK_menu"></a>Menu
+Dump configuration information or files.
 
-The major sections in this document are:
--   [Verbs](#BKMK_Verbs)
--   [Syntax notations](#BKMK_notations)
--   [Options](#BKMK_Options)
--   [Additional certutil examples](#BKMK_AddedExamples)
+```
+certutil [options] [-dump]
+certutil [options] [-dump] file
+```
 
-## <a name="BKMK_Verbs"></a>Verbs
+```
+[-f] [-silent] [-split] [-p password] [-t timeout]
+```
 
-The following table describes the verbs that can be used with the certutil command.
+### -asn
 
-|Verbs|Description|
-|-----|-----------|
-|[-dump](#BKMK_dump)|Dump configuration information or files|
-|[-asn](#BKMK_asn)|Parse ASN.1 file|
-|[-decodehex](#BKMK_decodehex)|Decode hexadecimal-encoded file|
-|[-decode](#BKMK_decode)|Decode a Base64-encoded file|
-|[-encode](#BKMK_encode)|Encode a file to Base64|
-|[-deny](#BKMK_deny)|Deny a pending certificate request|
-|[-resubmit](#BKMK_resubmit)|Resubmit a pending certificate request|
-|[-setattributes](#BKMK_setattributes)|Set attributes for a pending certificate request|
-|[-setextension](#BKMK_setextension)|Set an extension for a pending certificate request|
-|[-revoke](#BKMK_revoke)|Revoke a certificate|
-|[-isvalid](#BKMK_isvalid)|Display the disposition of the current certificate|
-|[-getconfig](#BKMK_getconfig)|Get the default configuration string|
-|[-ping](#BKMK_ping)|Attempt to contact the Active Directory Certificate Services Request interface|
-|-pingadmin|Attempt to contact the Active Directory Certificate Services Admin interface|
-|[-CAInfo](#BKMK_CAInfo)|Display information about the certification authority|
-|[-ca.cert](#BKMK_ca.cert)|Retrieve the certificate for the certification authority|
-|[-ca.chain](#BKMK_ca.chain)|Retrieve the certificate chain for the certification authority|
-|[-GetCRL](#BKMK_GetCRL)|Get a certificate revocation list (CRL)|
-|[-CRL](#BKMK_CRL)|Publish new certificate revocation lists (CRLs) [or only delta CRLs]|
-|[-shutdown](#BKMK_shutdown)|Shutdown Active Directory Certificate Services|
-|[-installCert](#BKMK_installcert)|Install a certification authority certificate|
-|[-renewCert](#BKMK_renewcert)|Renew a certification authority certificate|
-|[-schema](#BKMK_schema)|Dump the schema for the certificate|
-|[-view](#BKMK_view)|Dump the certificate view|
-|[-db](#BKMK_db)|Dump the raw database|
-|[-deleterow](#BKMK_deleterow)|Delete a row from the server database|
-|[-backup](#BKMK_backup)|Backup Active Directory Certificate Services|
-|[-backupDB](#BKMK_backupDB)|Backup the Active Directory Certificate Services database|
-|[-backupKey](#BKMK_backupKey)|Backup the Active Directory Certificate Services certificate and private key|
-|[-restore](#BKMK_restore)|Restore Active Directory Certificate Services|
-|[-restoreDB](#BKMK_restoreDB)|Restore the Active Directory Certificate Services database|
-|[-restoreKey](#BKMK_restorekey)|Restore the Active Directory Certificate Services certificate and private key|
-|[-importPFX](#BKMK_importPFX)|Import certificate and private key|
-|[-dynamicfilelist](#BKMK_dynamicfilelist)|Display a dynamic file list|
-|[-databaselocations](#BKMK_databaselocations)|Display database locations|
-|[-hashfile](#BKMK_hashfile)|Generate and display a cryptographic hash over a file|
-|[-store](#BKMK_Store)|Dump the certificate store|
-|[-addstore](#BKMK_addstore)|Add a certificate to the store|
-|[-delstore](#BKMK_delstore)|Delete a certificate from the store|
-|[-verifystore](#BKMK_verifystore)|Verify a certificate in the store|
-|[-repairstore](#BKMK_repairstore)|Repair a key association or update certificate properties or the key security descriptor|
-|[-viewstore](#BKMK_viewstore)|Dump the certificates store|
-|[-viewdelstore](#BKMK_viewdelstore)|Delete a certificate from the store|
-|[-dsPublish](#BKMK_dsPublish)|Publish a certificate or certificate revocation list (CRL) to Active Directory|
-|[-ADTemplate](#BKMK_ADTemplate)|Display AD templates|
-|[-Template](#BKMK_template)|Display certificate templates|
-|[-TemplateCAs](#BKMK_TemplateCAs)|Display the certification authorities (CAs) for a certificate template|
-|[-CATemplates](#BKMK_CATemplates)|Display templates for CA|
-|[-SetCASites](#BKMK_SetCASites)|Manage Site Names for CAs|
-|[-enrollmentServerURL](#BKMK_enrollmentServerURL)|Display, add or delete enrollment server URLs associated with a CA|
-|[-ADCA](#BKMK_ADCA)|Display AD CAs|
-|[-CA](#BKMK_CA)|Display Enrollment Policy CAs|
-|[-Policy](#BKMK_Policy)|Display Enrollment Policy|
-|[-PolicyCache](#BKMK_PolicyCache)|Display or delete Enrollment Policy Cache entries|
-|[-CredStore](#BKMK_Credstore)|Display, add or delete Credential Store entries|
-|[-InstallDefaultTemplates](#BKMK_InstallDefaultTemplates)|Install default certificate templates|
-|[-URLCache](#BKMK_URLCache)|Display or delete URL cache entries|
-|[-pulse](#BKMK_pulse)|Pulse auto enrollment events|
-|[-MachineInfo](#BKMK_MachineInfo)|Display information about the Active Directory machine object|
-|[-DCInfo](#BKMK_DCInfo)|Display information about the domain controller|
-|[-EntInfo](#BKMK_EntInfo)|Display information about an enterprise CA|
-|[-TCAInfo](#BKMK_TCAInfo)|Display information about the CA|
-|[-SCInfo](#BKMK_SCInfo)|Display information about the smart card|
-|[-SCRoots](#BKMK_SCRoots)|Manage smart card root certificates|
-|[-verifykeys](#BKMK_verifykeys)|Verify a public or private key set|
-|[-verify](#BKMK_verify)|Verify a certificate, certificate revocation list (CRL), or certificate chain|
-|[-verifyCTL](#BKMK_verifyCTL)|Verify AuthRoot or Disallowed Certificates CTL|
-|[-sign](#BKMK_sign)|Re-sign a certificate revocation list (CRL) or certificate|
-|[-vroot](#BKMK_vroot)|Create or delete web virtual roots and file shares|
-|[-vocsproot](#BKMK_vocsproot)|Create or delete web virtual roots for an OCSP web proxy|
-|[-addEnrollmentServer](#BKMK_addEnrollmentServer)|Add an Enrollment Server application|
-|[-deleteEnrollmentServer](#BKMK_deleteEnrollmentServer)|Delete an Enrollment Server application|
-|[-addPolicyServer](#BKMK_addPolicyServer)|Add a Policy Server application|
-|[-deletePolicyServer](#BKMK_deletePolicyServer)|Delete a Policy Server application|
-|[-oid](#BKMK_oid)|Display the object identifier or set a display name|
-|[-error](#BKMK_error)|Display the message text associated with an error code|
-|[-getreg](#BKMK_getreg)|Display a registry value|
-|[-setreg](#BKMK_setreg)|Set a registry value|
-|[-delreg](#BKMK_delreg)|Delete a registry value|
-|[-ImportKMS](#BKMK_ImportKMS)|Import user keys and certificates into the server database for key archival|
-|[-ImportCert](#BKMK_ImportCert)|Import a certificate file into the database|
-|[-GetKey](#BKMK_GetKey)|Retrieve an archived private key recovery blob|
-|[-RecoverKey](#BKMK_RecoverKey)|Recover an archived private key|
-|[-MergePFX](#BKMK_MergePFX)|Merge PFX files|
-|[-ConvertEPF](#BKMK_ConvertEPF)|Convert a PFX file into an EPF file|
-|-?|Displays the list of verbs|
-|-*\<verb>* -?|Displays help for the verb specified.|
-|-? -v|Displays a full list of verbs and|
+Parse the ASN.1 file.
 
-Return to [Menu](#BKMK_menu)
+```
+certutil [options] -asn file [type]
+```
 
-## <a name="BKMK_notations"></a>Syntax notations
+`[type]`: numeric CRYPT_STRING_* decoding type
 
--   For basic command line syntax, run `certutil -?`
--   For the syntax on using certutil with a specific verb, run **certutil** *\<verb>* **-?**
--   To send all of the certutil syntax into a text file, run the following commands:  
-    -   `certutil -v -? > certutilhelp.txt`
-    -   `notepad certutilhelp.txt`
+### -decodehex
 
-The following table describes the notation used to indicate command-line syntax.
+Decode a hexadecimal-encoded file.
 
-|Notation|Description|
-|--------|-----------|
-|Text without brackets or braces|Items you must type as shown|
-|\<Text inside angle brackets>|Placeholder for which you must supply a value|
-|[Text inside square brackets]|Optional items|
-|{Text inside braces}|Set of required items; choose one|
-|Vertical bar (|)|Separator for mutually exclusive items; choose one|
-|Ellipsis (…)|Items that can be repeated|
+```
+certutil [options] -decodehex infile outfile [type]
+```
 
-Return to [Menu](#BKMK_menu)
+`[type]`: numeric CRYPT_STRING_* encoding type
 
-## <a name="BKMK_dump"></a>-dump
-
-CertUtil [Options] [-dump]
-
-CertUtil [Options] [-dump] File
-
-Dump configuration information or files
-
-[-f] [-silent] [-split] [-p Password] [-t Timeout]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_asn"></a>-asn
-
-CertUtil [Options] -asn File [type]
-
-Parse ASN.1 file
-
-type: numeric CRYPT_STRING_* decoding type
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_decodehex"></a>-decodehex
-
-CertUtil [Options] -decodehex InFile OutFile [type]
-
-type: numeric CRYPT_STRING_* encoding type
-
+```
 [-f]
+```
 
-Return to [Menu](#BKMK_menu)
+### -decode
 
-## <a name="BKMK_decode"></a>-decode
+Decode a Base64-encoded file.
 
-CertUtil [Options] -decode InFile OutFile
+```
+certutil [options] -decode infile outfile
+```
 
-Decode Base64-encoded file
-
+```
 [-f]
+```
 
-Return to [Menu](#BKMK_menu)
+### -encode
 
-## <a name="BKMK_encode"></a>-encode
+Encode a file to Base64.
 
-CertUtil [Options] -encode InFile OutFile
+```
+certutil [options] -encode infile outfile
+```
 
-Encode file to Base64
+```
+[-f] [-unicodetext]
+```
 
-[-f] [-UnicodeText]
+### -deny
 
-Return to [Menu](#BKMK_menu)
+Deny a pending request.
 
-## <a name="BKMK_deny"></a>-deny
+```
+certutil [options] -deny requestID
+```
 
-CertUtil [Options] -deny RequestId
-
-Deny pending request
-
+```
 [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -resubmit
 
-## <a name="BKMK_resubmit"></a>-resubmit
+Resubmit a pending request.
 
-CertUtil [Options] -resubmit RequestId
+```
+certutil [options] -resubmit requestId
+```
 
-Resubmit pending request
-
+```
 [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -setattributes
 
-## <a name="BKMK_setattributes"></a>-setattributes
+Set attributes for a pending certificate request.
 
-CertUtil [Options] -setattributes RequestId AttributeString
+```
+certutil [options] -setattributes RequestID attributestring
+```
 
-Set attributes for pending request
+Where:
 
-RequestId -- numeric Request Id of pending request
+- **requestID** is the numeric Request ID for the pending request.
 
-AttributeString -- Request Attribute name and value pairs
--   Names and values are colon separated.
--   Multiple name, value pairs are newline separated.
--   Example: "CertificateTemplate:User\nEMail:User@Domain.com"
--   Each "\n" sequence is converted to a newline separator.
+- **attributestring** is the request attribute name and value pairs.
 
+```
 [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+#### Remarks
 
-## <a name="BKMK_setextension"></a>-setextension
+- Names and values must be colon separated, while multiple name, value pairs must be newline separated. For example: `CertificateTemplate:User\nEMail:User@Domain.com` where the `\n` sequence is converted to a newline separator.
 
-CertUtil [Options] -setextension RequestId ExtensionName Flags {Long | Date | String | @InFile}
+### -setextension
 
-Set extension for pending request
+Set an extension for a pending certificate request.
 
-RequestId -- numeric Request Id of a pending request
+```
+certutil [options] -setextension requestID extensionname flags {long | date | string | \@infile}
+```
 
-ExtensionName -- ObjectId string of the extension
+Where:
 
-Flags -- 0 is recommended.  1 makes the extension critical, 2 disables it, 3 does both.
+- **requestID** is the numeric Request ID for the pending request.
 
-If the last parameter is numeric, it is taken as a Long.
+- **extensionname** is the ObjectId string for the extension.
 
-If it can be parsed as a date, it is taken as a Date.
+- **flags** sets the priority of the extension. `0` is recommended, while `1` sets the extension to critical, `2` disables the extension, and `3` does both.
 
-If it starts with '@', the rest of the token is the filename containing binary data or an ascii-text hex dump.
-
-Anything else is taken as a String.
-
+```
 [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+#### Remarks
 
-## <a name="BKMK_revoke"></a>-revoke
+- If the last parameter is numeric, it's taken as a **Long**.
 
-CertUtil [Options] -revoke SerialNumber [Reason]
+- If the last parameter can be parsed as a date, it's taken as a **Date**.
 
-Revoke Certificate
+- If the last parameter starts with `\@`, the rest of the token is taken as the filename with binary data or an ascii-text hex dump.
 
-SerialNumber: Comma separated list of certificate serial numbers to revoke
+- If the last parameter is anything else, it's taken as a String.
 
-Reason: numeric or symbolic revocation reason
--   0: CRL_REASON_UNSPECIFIED: Unspecified (default)
--   1: CRL_REASON_KEY_COMPROMISE: Key Compromise
--   2: CRL_REASON_CA_COMPROMISE: CA Compromise
--   3: CRL_REASON_AFFILIATION_CHANGED: Affiliation Changed
--   4: CRL_REASON_SUPERSEDED: Superseded
--   5: CRL_REASON_CESSATION_OF_OPERATION: Cessation of Operation
--   6: CRL_REASON_CERTIFICATE_HOLD: Certificate Hold
--   8: CRL_REASON_REMOVE_FROM_CRL: Remove From CRL
--   -1: Unrevoke: Unrevoke
+### -revoke
 
+Revoke a certificate.
+
+```
+certutil [options] -revoke serialnumber [reason]
+```
+
+Where:
+
+- **serialnumber** is a comma-separated list of certificate serial numbers to revoke.
+
+- **reason** is the numeric or symbolic representation of the revocation reason, including:
+
+  - **0. CRL_REASON_UNSPECIFIED** -  Unspecified (default)
+
+  - **1. CRL_REASON_KEY_COMPROMISE** - Key compromise
+
+  - **2. CRL_REASON_CA_COMPROMISE** - Certificate Authority compromise
+
+  - **3. CRL_REASON_AFFILIATION_CHANGED** - Affiliation changed
+
+  - **4. CRL_REASON_SUPERSEDED** - Superseded
+
+  - **5. CRL_REASON_CESSATION_OF_OPERATION** - Cessation of operation
+
+  - **6. CRL_REASON_CERTIFICATE_HOLD** - Certificate hold
+
+  - **8. CRL_REASON_REMOVE_FROM_CRL** - Remove From CRL
+
+  - **1. Unrevoke** - Unrevoke
+
+```
 [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -isvalid
 
-## <a name="BKMK_isvalid"></a>-isvalid
+Display the disposition of the current certificate.
 
-CertUtil [Options] -isvalid SerialNumber | CertHash
+```
+certutil [options] -isvalid serialnumber | certhash
+```
 
-Display current certificate disposition
-
+```
 [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -getconfig
 
-## <a name="BKMK_getconfig"></a>-getconfig
+Get the default configuration string.
 
-CertUtil [Options] -getconfig
+```
+certutil [options] -getconfig
+```
 
-Get default configuration string
-
+```
 [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -ping
 
-## <a name="BKMK_ping"></a>-ping
+Attempt to contact the Active Directory Certificate Services Request interface.
 
-CertUtil [Options] -ping [MaxSecondsToWait | CAMachineList]
+```
+certutil [options] -ping [maxsecondstowait | camachinelist]
+```
 
-Ping Active Directory Certificate Services Request interface
+Where:
 
-CAMachineList -- Comma-separated CA machine name list
-1.  For a single machine, use a terminating comma
-2.  Displays the site cost for each CA machine
+- **camachinelist** is a comma-separated list of CA machine names. For a single machine, use a terminating comma. This option also displays the site cost for each CA machine.
 
+```
 [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -cainfo
 
-## <a name="BKMK_CAInfo"></a>-CAInfo
+Display information about the certification authority.
 
-CertUtil [Options] -CAInfo [InfoName [Index | ErrorCode]]
+```
+certutil [options] -cainfo [infoname [index | errorcode]]
+```
 
-Display CA Information
+Where:
 
-InfoName -- indicates the CA property to display (see below). Use "*" for all properties.
+- **infoname** indicates the CA property to display, based on the following infoname argument syntax:
 
-Index -- optional zero-based property index
+  - **file** - File version
 
-ErrorCode -- numeric error code
+  - **product** - Product version
 
+  - **exitcount** - Exit module count
+
+  - **exit `[index]`** - Exit module description
+
+  - **policy** - Policy module description
+
+  - **name** - CA name
+
+  - **sanitizedname** - Sanitized CA name
+
+  - **dsname** - Sanitized CA short name (DS name)
+
+  - **sharedfolder** - Shared folder
+
+  - **error1 ErrorCode** - Error message text
+
+  - **error2 ErrorCode** - Error message text and error code
+
+  - **type** - CA type
+
+  - **info** - CA info
+
+  - **parent** - Parent CA
+
+  - **certcount** - CA cert count
+
+  - **xchgcount** - CA exchange cert count
+
+  - **kracount** - KRA cert count
+
+  - **kraused** - KRA cert used count
+
+  - **propidmax** - Maximum CA PropId
+
+  - **certstate `[index]`** - CA cert
+
+  - **certversion `[index]`** - CA cert version
+
+  - **certstatuscode `[index]`** - CA cert verify status
+
+  - **crlstate `[index]`** - CRL
+
+  - **krastate `[index]`** - KRA cert
+
+  - **crossstate+ `[index]`** - Forward cross cert
+
+  - **crossstate- `[index]`** - Backward cross cert
+
+  - **cert `[index]`** - CA cert
+
+  - **certchain `[index]`** - CA cert chain
+
+  - **certcrlchain `[index]`** - CA cert chain with CRLs
+
+  - **xchg `[index]`** - CA exchange cert
+
+  - **xchgchain `[index]`** - CA exchange cert chain
+
+  - **xchgcrlchain `[index]`** - CA exchange cert chain with CRLs
+
+  - **kra `[index]`** - KRA cert
+
+  - **cross+ `[index]`** - Forward cross cert
+
+  - **cross- `[index]`** - Backward cross cert
+
+  - **CRL `[index]`** - Base CRL
+
+  - **deltacrl `[index]`** - Delta CRL
+
+  - **crlstatus `[index]`** - CRL Publish Status
+
+  - **deltacrlstatus `[index]`** - Delta CRL Publish Status
+
+  - **dns** - DNS Name
+
+  - **role** - Role Separation
+
+  - **ads** - Advanced Server
+
+  - **templates** - Templates
+
+  - **csp `[index]`** - OCSP URLs
+
+  - **aia `[index]`** - AIA URLs
+
+  - **cdp `[index]`** - CDP URLs
+
+  - **localename** - CA locale name
+
+  - **subjecttemplateoids** - Subject Template OIDs
+
+  - **&#42;** - Displays all properties
+
+- **index** is the optional zero-based property index.
+
+- **errorcode** is the numeric error code.
+
+```
 [-f] [-split] [-config Machine\CAName]
+```
 
-InfoName argument syntax:
--   file: File version
--   product: Product version
--   exitcount: Exit module count
--   exit [Index]: Exit module description
--   policy: Policy module description
--   name: CA name
--   sanitizedname: Sanitized CA name
--   dsname: Sanitized CA short name (DS name)
--   sharedfolder: Shared folder
--   error1 ErrorCode: Error message text
--   error2 ErrorCode: Error message text and error code
--   type: CA type
--   info: CA info
--   parent: Parent CA
--   certcount: CA cert count
--   xchgcount: CA exchange cert count
--   kracount: KRA cert count
--   kraused: KRA cert used count
--   propidmax: Maximum CA PropId
--   certstate [Index]: CA cert
--   certversion [Index]: CA cert version
--   certstatuscode [Index]: CA cert verify status
--   crlstate [Index]: CRL
--   krastate [Index]: KRA cert
--   crossstate+ [Index]: Forward cross cert
--   crossstate- [Index]: Backward cross cert
--   cert [Index]: CA cert
--   certchain [Index]: CA cert chain
--   certcrlchain [Index]: CA cert chain with CRLs
--   xchg [Index]: CA exchange cert
--   xchgchain [Index]: CA exchange cert chain
--   xchgcrlchain [Index]: CA exchange cert chain with CRLs
--   kra [Index]: KRA cert
--   cross+ [Index]: Forward cross cert
--   cross- [Index]: Backward cross cert
--   CRL [Index]: Base CRL
--   deltacrl [Index]: Delta CRL
--   crlstatus [Index]: CRL Publish Status
--   deltacrlstatus [Index]: Delta CRL Publish Status
--   dns: DNS Name
--   role: Role Separation
--   ads: Advanced Server
--   templates: Templates
--   ocsp [Index]: OCSP URLs
--   aia [Index]: AIA URLs
--   cdp [Index]: CDP URLs
--   localename: CA locale name
--   subjecttemplateoids: Subject Template OIDs
+### -ca.cert
 
-Return to [Menu](#BKMK_menu)
+Retrieve the certificate for the certification authority.
 
-## <a name="BKMK_ca.cert"></a>-ca.cert
+```
+certutil [options] -ca.cert outcacertfile [index]
+```
 
-CertUtil [Options] -ca.cert OutCACertFile [Index]
+Where:
 
-Retrieve the CA's certificate
+- **outcacertfile** is the output file.
 
-OutCACertFile: output file
+- **index** is the CA certificate renewal index (defaults to most recent).
 
-Index: CA certificate renewal index (defaults to most recent)
-
+```
 [-f] [-split] [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -ca.chain
 
-## <a name="BKMK_ca.chain"></a>-ca.chain
+Retrieve the certificate chain for the certification authority.
 
-CertUtil [Options] -ca.chain OutCACertChainFile [Index]
+```
+certutil [options] -ca.chain outcacertchainfile [index]
+```
 
-Retrieve the CA's certificate chain
+Where:
 
-OutCACertChainFile: output file
+- **outcacertchainfile** is the output file.
 
-Index: CA certificate renewal index (defaults to most recent)
+- **index** is the CA certificate renewal index (defaults to most recent).
 
+```
 [-f] [-split] [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -getcrl
 
-## <a name="BKMK_GetCRL"></a>-GetCRL
+Gets a certificate revocation list (CRL).
 
-CertUtil [Options] -GetCRL OutFile [Index] [delta]
+```
+certutil [options] -getcrl outfile [index] [delta]
+```
 
-Get CRL
+Where:
 
-Index: CRL index or key index (defaults to CRL for newest key)
+- **index** is the CRL index or key index (defaults to CRL for most recent key).
 
-delta: delta CRL (default is base CRL)
+- **delta** is the delta CRL (default is base CRL).
 
+```
 [-f] [-split] [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -crl
 
-## <a name="BKMK_CRL"></a>-CRL
+Publish new certificate revocation lists (CRLs) or delta CRLs.
 
-CertUtil [Options] -CRL [dd:hh | republish] [delta]
+```
+certutil [options] -crl [dd:hh | republish] [delta]
+```
 
-Publish new CRLs [or delta CRLs only]
+Where:
 
-dd:hh -- new CRL validity period in days and hours
+- **dd:hh** is the new CRL validity period in days and hours.
 
-republish -- republish most recent CRLs
+- **republish** republishes the most recent CRLs.
 
-delta -- delta CRLs only (default is base and delta CRLs)
+- **delta** publishes the delta CRLs only (default is base and delta CRLs).
 
+```
 [-split] [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -shutdown
 
-## <a name="BKMK_shutdown"></a>-shutdown
+Shuts down the Active Directory Certificate Services.
 
-CertUtil [Options] -shutdown
+```
+certutil [options] -shutdown
+```
 
-Shutdown Active Directory Certificate Services
-
+```
 [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -installcert
 
-## <a name="BKMK_installcert"></a>-installCert
+Installs a certification authority certificate.
 
-CertUtil [Options] -installCert [CACertFile]
+```
+certutil [options] -installcert [cacertfile]
+```
 
-Install Certification Authority certificate
-
+```
 [-f] [-silent] [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -renewcert
 
-## <a name="BKMK_renewcert"></a>-renewCert
+Renews a certification authority certificate.
 
-CertUtil [Options] -renewCert [ReuseKeys] [Machine\ParentCAName]
+```
+certutil [options] -renewcert [reusekeys] [Machine\ParentCAName]
+```
 
-Renew Certification Authority certificate
+- Use `-f` to ignore an outstanding renewal request, and to generate a new request.
 
-Use -f to ignore an outstanding renewal request, and generate a new request.
-
+```
 [-f] [-silent] [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -schema
 
-## <a name="BKMK_schema"></a>-schema
+Dumps the schema for the certificate.
 
-CertUtil [Options] -schema [Ext | Attrib | CRL]
+```
+certutil [options] -schema [ext | attrib | cRL]
+```
+Where:
 
-Dump Certificate Schema
+- The command defaults to the Request and Certificate table.
 
-Defaults to Request and Certificate table
+- **ext** is the extension table.
 
-Ext: Extension table
+- **attribute** is the attribute table.
 
-Attrib: Attribute table
+- **crl** is the CRL table.
 
-CRL: CRL table
-
+```
 [-split] [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -view
 
-## <a name="BKMK_view"></a>-view
+Dumps the certificate view.
 
-CertUtil [Options] -view [Queue | Log | LogFail | Revoked | Ext | Attrib | CRL] [csv]
+```
+certutil [options] -view [queue | log | logfail | revoked | ext | attrib | crl] [csv]
+```
 
-Dump Certificate View
+Where:
 
-Queue: Request queue
+- **queue** dumps a specific request queue.
 
-Log: Issued or revoked certificates, plus failed requests
+- **log** dumps the issued or revoked certificates, plus any failed requests.
 
-LogFail: Failed requests
+- **logfail** dumps the failed requests.
 
-Revoked: Revoked certificates
+- **revoked** dumps the revoked certificates.
 
-Ext: Extension table
+- **ext** dumps the extension table.
 
-Attrib: Attribute table
+- **attribute** dumps the attribute table.
 
-CRL: CRL table
+- **crl** dumps the CRL table.
 
-csv: Output as Comma Separated Values
+- **csv** provides the output using comma-separated values.
 
-To display the StatusCode column for all entries: -out StatusCode
-
-To display all columns for the last entry: -restrict "RequestId==$"
-
-To display RequestId and Disposition for three requests: -restrict "RequestId>=37,RequestId\<40" -out "RequestId,Disposition"
-
-To display Row Ids and CRL Numbers for all Base CRLs: -restrict "CRLMinBase=0" -out "CRLRowId,CRLNumber" CRL
-
-To display Base CRL Number 3: -v -restrict "CRLMinBase=0,CRLNumber=3" -out "CRLRawCRL" CRL
-
-To display the entire CRL table: CRL
-
-Use "Date[+|-dd:hh]" for date restrictions
-
-Use "now+dd:hh" for a date relative to the current time
-
+```
 [-silent] [-split] [-config Machine\CAName] [-restrict RestrictionList] [-out ColumnList]
+```
 
-Return to [Menu](#BKMK_menu)
+#### Remarks
 
-## <a name="BKMK_db"></a>-db
+- To display the **StatusCode** column for all entries, type `-out StatusCode`
 
-CertUtil [Options] -db
+- To display all columns for the last entry, type: `-restrict RequestId==$`
 
-Dump Raw Database
+- To display the **RequestID** and **Disposition** for three requests, type: `-restrict requestID>37,requestID<40 -out requestID,disposition`
 
+- To display Row IDs**Row IDs** and **CRL numbers** for all Base CRLs, type: `-restrict crlminbase=0 -out crlrowID,crlnumber crl`
+
+- To display , type: `-v -restrict crlminbase=0,crlnumber=3 -out crlrawcrl crl`
+
+- To display the entire CRL table, type: `CRL`
+
+- Use `Date[+|-dd:hh]` for date restrictions.
+
+- Use `now+dd:hh` for a date relative to the current time.
+
+### -db
+
+Dumps the raw database.
+
+```
+certutil [options] -db
+```
+
+```
 [-config Machine\CAName] [-restrict RestrictionList] [-out ColumnList]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_deleterow"></a>-deleterow
-
-CertUtil [Options] -deleterow RowId | Date [Request | Cert | Ext | Attrib | CRL]
-
-Delete server database row
-
-Request: Failed and pending requests (submission date)
-
-Cert: Expired and revoked certificates (expiration date)
-
-Ext: Extension table
-
-Attrib: Attribute table
-
-CRL: CRL table (expiration date)
-
-To delete failed and pending requests submitted by January 22, 2001: 1/22/2001 Request
-
-To delete all certificates that expired by January 22, 2001: 1/22/2001 Cert
-
-To delete the certificate row, attributes and extensions for RequestId 37: 37
-
-To delete CRLs that expired by January 22, 2001: 1/22/2001 CRL
-
-[-f] [-config Machine\CAName]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_backup"></a>-backup
-
-CertUtil [Options] -backup BackupDirectory [Incremental] [KeepLog]
-
-Backup Active Directory Certificate Services
-
-BackupDirectory: directory to store backed up data
-
-Incremental: perform incremental backup only (default is full backup)
-
-KeepLog: preserve database log files (default is to truncate log files)
-
-[-f] [-config Machine\CAName] [-p Password]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_backupDB"></a>-backupDB
-
-CertUtil [Options] -backupDB BackupDirectory [Incremental] [KeepLog]
-
-Backup Active Directory Certificate Services database
-
-BackupDirectory: directory to store backed up database files
-
-Incremental: perform incremental backup only (default is full backup)
-
-KeepLog: preserve database log files (default is to truncate log files)
-
-[-f] [-config Machine\CAName]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_backupKey"></a>-backupKey
-
-CertUtil [Options] -backupKey BackupDirectory
-
-Backup Active Directory Certificate Services certificate and private key
-
-BackupDirectory: directory to store backed up PFX file
-
-[-f] [-config Machine\CAName] [-p Password] [-t Timeout]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_restore"></a>-restore
-
-CertUtil [Options] -restore BackupDirectory
-
-Restore Active Directory Certificate Services
-
-BackupDirectory: directory containing data to be restored
-
-[-f] [-config Machine\CAName] [-p Password]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_restoreDB"></a>-restoreDB
-
-CertUtil [Options] -restoreDB BackupDirectory
-
-Restore Active Directory Certificate Services database
-
-BackupDirectory: directory containing database files to be restored
-
-[-f] [-config Machine\CAName]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_restorekey"></a>-restoreKey
-
-CertUtil [Options] -restoreKey BackupDirectory | PFXFile
-
-Restore Active Directory Certificate Services certificate and private key
-
-BackupDirectory: directory containing PFX file to be restored
-
-PFXFile: PFX file to be restored
-
-[-f] [-config Machine\CAName] [-p Password]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_importPFX"></a>-importPFX
-
-CertUtil [Options] -importPFX [CertificateStoreName] PFXFile [Modifiers]
-
-Import certificate and private key
-
-CertificateStoreName: Certificate store name.  See [-store](#BKMK_Store).
-
-PFXFile: PFX file to be imported
-
-Modifiers: Comma separated list of one or more of the following:
-1.  AT_SIGNATURE: Change the KeySpec to Signature
-2.  AT_KEYEXCHANGE: Change the KeySpec to Key Exchange
-3.  NoExport: Make the private key non-exportable
-4.  NoCert: Do not import the certificate
-5.  NoChain: Do not import the certificate chain
-6.  NoRoot: Do not import the root certificate
-7.  Protect: Protect keys with password
-8.  NoProtect: Do not password protect keys
-
-Defaults to personal machine store.
-
-[-f] [-user] [-p Password] [-csp Provider]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_dynamicfilelist"></a>-dynamicfilelist
-
-CertUtil [Options] -dynamicfilelist
-
-Display dynamic file List
-
-[-config Machine\CAName]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_databaselocations"></a>-databaselocations
-
-CertUtil [Options] -databaselocations
-
-Display database locations
-
-[-config Machine\CAName]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_hashfile"></a>-hashfile
-
-CertUtil [Options] -hashfile InFile [HashAlgorithm]
-
-Generate and display cryptographic hash over a file
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_Store"></a>-store
-
-CertUtil [Options] -store [CertificateStoreName [CertId [OutputFile]]]
-
-Dump certificate store
-
-CertificateStoreName: Certificate store name. Examples:
--   "My", "CA" (default), "Root",
--   "ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority" (View Root Certificates)
--   "ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Modify Root Certificates)
--   "ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint" (View CRLs)
--   "ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Enterprise CA Certificates)
--   ldap: (AD computer object certificates)
--   -user ldap: (AD user object certificates)
-
-CertId: Certificate or CRL match token.  This can be a serial number, an SHA-1 certificate, CRL, CTL or public key hash, a numeric cert index (0, 1, and so on), a numeric CRL index (.0, .1, and so on), a numeric CTL index (..0, ..1, and so on), a public key, signature or extension ObjectId, a certificate subject Common Name, an e-mail address, UPN or DNS name, a key container name or CSP name, a template name or ObjectId, an EKU or Application Policies ObjectId, or a CRL issuer Common Name. Many of these may result in multiple matches.
-
-OutputFile: file to save matching cert
-
-Use -user to access a user store instead of a machine store.
-
-Use -enterprise to access a machine enterprise store.
-
-Use -service to access a machine service store.
-
-Use -grouppolicy to access a machine group policy store.
-
-Examples:
--   -enterprise NTAuth
--   -enterprise Root 37
--   -user My 26e0aaaf000000000004
--   CA .11
-
-[-f] [-enterprise] [-user] [-GroupPolicy] [-silent] [-split] [-dc DCName]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_addstore"></a>-addstore
-
-CertUtil [Options] -addstore CertificateStoreName InFile
-
-Add certificate to store
-
-CertificateStoreName: Certificate store name.  See [-store](#BKMK_Store).
-
-InFile: Certificate or CRL file to add to store.
-
-[-f] [-enterprise] [-user] [-GroupPolicy] [-dc DCName]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_delstore"></a>-delstore
-
-CertUtil [Options] -delstore CertificateStoreName CertId
-
-Delete certificate from store
-
-CertificateStoreName: Certificate store name.  See [-store](#BKMK_Store).
-
-CertId: Certificate or CRL match token.  See [-store](#BKMK_Store).
-
-[-enterprise] [-user] [-GroupPolicy] [-dc DCName]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_verifystore"></a>-verifystore
-
-CertUtil [Options] -verifystore CertificateStoreName [CertId]
-
-Verify certificate in store
-
-CertificateStoreName: Certificate store name.  See [-store](#BKMK_Store).
-
-CertId: Certificate or CRL match token.  See [-store](#BKMK_Store).
-
-[-enterprise] [-user] [-GroupPolicy] [-silent] [-split] [-dc DCName] [-t Timeout]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_repairstore"></a>-repairstore
-
-CertUtil [Options] -repairstore CertificateStoreName CertIdList [PropertyInfFile | SDDLSecurityDescriptor]
-
-Repair key association or update certificate properties or key security descriptor
-
-CertificateStoreName: Certificate store name.  See [-store](#BKMK_Store).
-
-CertIdList: comma separated list of Certificate or CRL match tokens. See [-store](#BKMK_Store) CertId description.
-
-PropertyInfFile -- INF file containing external properties:
 ```
-[Properties]
-     19 = Empty ; Add archived property, OR:
-     19 =       ; Remove archived property
 
-     11 = "{text}Friendly Name" ; Add friendly name property
+### -deleterow
 
-     127 = "{hex}" ; Add custom hexadecimal property
-         _continue_ = "00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f"
-         _continue_ = "10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f"
+Deletes a row from the server database.
 
-     2 = "{text}" ; Add Key Provider Information property
-       _continue_ = "Container=Container Name&"
-       _continue_ = "Provider=Microsoft Strong Cryptographic Provider&"
-       _continue_ = "ProviderType=1&"
-       _continue_ = "Flags=0&"
-       _continue_ = "KeySpec=2"
-
-     9 = "{text}" ; Add Enhanced Key Usage property
-       _continue_ = "1.3.6.1.5.5.7.3.2,"
-       _continue_ = "1.3.6.1.5.5.7.3.1,"
 ```
-[-f] [-enterprise] [-user] [-GroupPolicy] [-silent] [-split] [-csp Provider]
+certutil [options] -deleterow rowID | date [request | cert | ext | attrib | crl]
+```
 
-Return to [Menu](#BKMK_menu)
+Where:
 
-## <a name="BKMK_viewstore"></a>-viewstore
+- **request** deletes the failed and pending requests, based on submission date.
 
-CertUtil [Options] -viewstore [CertificateStoreName [CertId [OutputFile]]]
+- **cert** deletes the expired and revoked certificates, based on expiration date.
 
-Dump certificate store
+- **ext** deletes the extension table.
 
-CertificateStoreName: Certificate store name.  Examples:
--   "My", "CA" (default), "Root",
--   "ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority" (View Root Certificates)
--   "ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Modify Root Certificates)
--   "ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint" (View CRLs)
--   "ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Enterprise CA Certificates)
--   ldap: (AD machine object certificates)
--   -user ldap: (AD user object certificates)
+- **attribute** deletes the attribute table.
 
-CertId: Certificate or CRL match token. This can be a serial number, an SHA-1 certificate, CRL, CTL or public key hash, a numeric cert index (0, 1, and so on), a numeric CRL index (.0, .1, and so on), a numeric CTL index (..0, ..1, and so on), a public key, signature or extension ObjectId, a certificate subject Common Name, an e-mail address, UPN or DNS name, a key container name or CSP name, a template name or ObjectId, an EKU or Application Policies ObjectId, or a CRL issuer Common Name. Many of these may result in multiple matches.
+- **crl** deletes the CRL table.
 
-OutputFile: file to save matching cert
+```
+[-f] [-config Machine\CAName]
+```
 
-Use -user to access a user store instead of a machine store.
+#### Examples
 
-Use -enterprise to access a machine enterprise store.
+- To delete failed and pending requests submitted by January 22, 2001, type: `1/22/2001 request`
 
-Use -service to access a machine service store.
+- To delete all certificates that expired by January 22, 2001, type: `1/22/2001 cert`
 
-Use -grouppolicy to access a machine group policy store.
+- To delete the certificate row, attributes, and extensions for RequestID 37, type: `37`
 
-Examples:
-1.  -enterprise NTAuth
-2.  -enterprise Root 37
-3.  -user My 26e0aaaf000000000004
-4.  CA .11
+- To delete CRLs that expired by January 22, 2001, type: `1/22/2001 crl`
 
-[-f] [-enterprise] [-user] [-GroupPolicy] [-dc DCName]
+### -backup
 
-Return to [Menu](#BKMK_menu)
+Backs up the Active Directory Certificate Services.
 
-## <a name="BKMK_viewdelstore"></a>-viewdelstore
+```
+certutil [options] -backup backupdirectory [incremental] [keeplog]
+```
 
-CertUtil [Options] -viewdelstore [CertificateStoreName [CertId [OutputFile]]]
+Where:
 
-Delete certificate from store
+- **backupdirectory** is the directory to store the backed up data.
 
-CertificateStoreName: Certificate store name.  Examples:
--   "My", "CA" (default), "Root",
--   "ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority" (View Root Certificates)
--   "ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Modify Root Certificates)
--   "ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint" (View CRLs)
--   "ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority" (Enterprise CA Certificates)
--   ldap: (AD machine object certificates)
--   -user ldap: (AD user object certificates)
+- **incremental** performs an incremental backup only (default is full backup).
 
-CertId: Certificate or CRL match token. This can be a serial number, an SHA-1 certificate, CRL, CTL or public key hash, a numeric cert index (0, 1, and so on), a numeric CRL index (.0, .1, and so on), a numeric CTL index (..0, ..1, and so on), a public key, signature or extension ObjectId, a certificate subject Common Name, an e-mail address, UPN or DNS name, a key container name or CSP name, a template name or ObjectId, an EKU or Application Policies ObjectId, or a CRL issuer Common Name. Many of these may result in multiple matches.
+- **keeplog** preserves the database log files (default is to truncate log files).
 
-OutputFile: file to save matching cert
+```
+[-f] [-config Machine\CAName] [-p Password]
+```
 
-Use -user to access a user store instead of a machine store.
+### -backupdb
 
-Use -enterprise to access a machine enterprise store.
+Backs up the Active Directory Certificate Services database.
 
-Use -service to access a machine service store.
+```
+certutil [options] -backupdb backupdirectory [incremental] [keeplog]
+```
 
-Use -grouppolicy to access a machine group policy store.
+Where:
 
-Examples:
-1.  -enterprise NTAuth
-2.  -enterprise Root 37
-3.  -user My 26e0aaaf000000000004
-4.  CA .11
+- **backupdirectory** is the directory to store the backed up database files.
 
-[-f] [-enterprise] [-user] [-GroupPolicy] [-dc DCName]
+- **incremental** performs an incremental backup only (default is full backup).
 
-Return to [Menu](#BKMK_menu)
+- **keeplog** preserves the database log files (default is to truncate log files).
 
-## <a name="BKMK_dsPublish"></a>-dsPublish
+```
+[-f] [-config Machine\CAName]
+```
 
-CertUtil [Options] -dsPublish CertFile [NTAuthCA | RootCA | SubCA | CrossCA | KRA | User | Machine]
+### -backupkey
 
-CertUtil [Options] -dsPublish CRLFile [DSCDPContainer [DSCDPCN]]
+Backs up the Active Directory Certificate Services certificate and private key.
 
-Publish certificate or CRL to Active Directory
+```
+certutil [options] -backupkey backupdirectory
+```
 
-CertFile: certificate file to publish
+Where:
 
-NTAuthCA: Publish cert to DS Enterprise store
+- **backupdirectory** is the directory to store the backed up PFX file.
 
-RootCA: Publish cert to DS Trusted Root store
+```
+[-f] [-config Machine\CAName] [-p password] [-t timeout]
+```
 
-SubCA: Publish CA cert to DS CA object
+### -restore
 
-CrossCA: Publish cross cert to DS CA object
+Restores the Active Directory Certificate Services.
 
-KRA: Publish cert to DS Key Recovery Agent object
+```
+certutil [options] -restore backupdirectory
+```
 
-User: Publish cert to User DS object
+Where:
 
-Machine: Publish cert to Machine DS object
+- **backupdirectory** is the directory containing the data to be restored.
 
-CRLFile: CRL file to publish
+```
+[-f] [-config Machine\CAName] [-p password]
+```
 
-DSCDPContainer: DS CDP container CN, usually the CA machine name
+### -restoredb
 
-DSCDPCN: DS CDP object CN, usually based on the sanitized CA short name and key index
+Restores the Active Directory Certificate Services database.
 
-Use -f to create DS object.
+```
+certutil [options] -restoredb backupdirectory
+```
 
+Where:
+
+- **backupdirectory** is the directory containing the database files to be restored.
+
+```
+[-f] [-config Machine\CAName]
+```
+
+### -restorekey
+
+Restores the Active Directory Certificate Services certificate and private key.
+
+```
+certutil [options] -restorekey backupdirectory | pfxfile
+```
+
+Where:
+
+- **backupdirectory** is the directory containing PFX file to be restored.
+
+```
+[-f] [-config Machine\CAName] [-p password]
+```
+
+### -importpfx
+
+Import the certificate and private key. For more info, see the `-store` parameter in this article.
+
+```
+certutil [options] -importpfx [certificatestorename] pfxfile [modifiers]
+```
+
+Where:
+
+- **certificatestorename** is the name of the certificate store.
+
+- **modifiers** are the comma-separated list, which can include one or more of the following:
+
+  1. **AT_SIGNATURE** - Changes the keyspec to signature
+
+  2. **AT_KEYEXCHANGE** - Changes the keyspec to key exchange
+
+  3. **NoExport** - Makes the private key non-exportable
+
+  4. **NoCert** - Doesn't import the certificate
+
+  5. **NoChain** - Doesn't import the certificate chain
+
+  6. **NoRoot** - Doesn't import the root certificate
+
+  7. **Protect** - Protects keys by using a password
+
+  8. **NoProtect** - Doesn't password protect keys by using a password
+
+```
+[-f] [-user] [-p password] [-csp provider]
+```
+
+#### Remarks
+
+- Defaults to personal machine store.
+
+### -dynamicfilelist
+
+Displays a dynamic file list.
+
+```
+certutil [options] -dynamicfilelist
+```
+
+```
+[-config Machine\CAName]
+```
+
+### -databaselocations
+
+Displays database locations.
+
+```
+certutil [options] -databaselocations
+```
+
+```
+[-config Machine\CAName]
+```
+
+### -hashfile
+
+Generates and displays a cryptographic hash over a file.
+
+```
+certutil [options] -hashfile infile [hashalgorithm]
+```
+
+### -store
+
+Dumps the certificate store.
+
+```
+certutil [options] -store [certificatestorename [certID [outputfile]]]
+```
+
+Where:
+
+- **certificatestorename** is the certificate store name. For example:
+
+  - `My, CA (default), Root,`
+
+  - `ldap:///CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?one?objectClass=certificationAuthority (View Root Certificates)`
+
+  - `ldap:///CN=CAName,CN=Certification Authorities,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Modify Root Certificates)`
+
+  - `ldap:///CN=CAName,CN=MachineName,CN=CDP,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?certificateRevocationList?base?objectClass=cRLDistributionPoint (View CRLs)`
+
+  - `ldap:///CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=cpandl,DC=com?cACertificate?base?objectClass=certificationAuthority (Enterprise CA Certificates)`
+
+  - `ldap: (AD computer object certificates)`
+
+  - `-user ldap: (AD user object certificates)`
+
+- **certID** is the certificate or CRL match token. This can be a serial number, a SHA-1 certificate, CRL, CTL or public key hash, a numeric cert index (0, 1, and so on), a numeric CRL index (.0, .1, and so on), a numeric CTL index (..0, ..1, and so on), a public key, signature or extension ObjectId, a certificate subject Common Name, an e-mail address, UPN or DNS name, a key container name or CSP name, a template name or ObjectId, an EKU or Application Policies ObjectId, or a CRL issuer Common Name. Many of these may result in multiple matches.
+
+- **outputfile** is the file used to save the matching certificates.
+
+```
+[-f] [-user] [-enterprise] [-service] [-grouppolicy] [-silent] [-split] [-dc DCName]
+```
+
+#### Options
+
+- The `-user` option accesses a user store instead of a machine store.
+
+- The `-enterprise` option accesses a machine enterprise store.
+
+- The `-service` option accesses a machine service store.
+
+- The `-grouppolicy` option accesses a machine group policy store.
+
+For example:
+
+- `-enterprise NTAuth`
+
+- `-enterprise Root 37`
+
+- `-user My 26e0aaaf000000000004`
+
+- `CA .11`
+
+### -addstore
+
+Adds a certificate to the store. For more info, see the `-store` parameter in this article.
+
+```
+certutil [options] -addstore certificatestorename infile
+```
+
+Where:
+
+- **certificatestorename** is the certificate store name.
+
+- **infile** is the certificate or CRL file you want to add to store.
+
+```
+[-f] [-user] [-enterprise] [-grouppolicy] [-dc DCName]
+```
+
+### -delstore
+
+Deletes a certificate from the store. For more info, see the `-store` parameter in this article.
+
+```
+certutil [options] -delstore certificatestorename certID
+```
+
+Where:
+
+- **certificatestorename** is the certificate store name.
+
+- **certID** is the certificate or CRL match token.
+
+```
+[-enterprise] [-user] [-grouppolicy] [-dc DCName]
+```
+
+### -verifystore
+
+Verifies a certificate in the store. For more info, see the `-store` parameter in this article.
+
+```
+certutil [options] -verifystore certificatestorename [certID]
+```
+
+Where:
+
+- **certificatestorename** is the certificate store name.
+
+- **certID** is the certificate or CRL match token.
+
+```
+[-enterprise] [-user] [-grouppolicy] [-silent] [-split] [-dc DCName] [-t timeout]
+```
+
+### -repairstore
+
+Repairs a key association or update certificate properties or the key security descriptor. For more info, see the `-store` parameter in this article.
+
+```
+certutil [options] -repairstore certificatestorename certIDlist [propertyinffile | SDDLsecuritydescriptor]
+```
+
+Where:
+
+- **certificatestorename** is the certificate store name.
+
+- **certIDlist** is the comma-separated list of certificate or CRL match tokens. For more info, see the `-store certID` description in this article.
+
+- **propertyinffile** is the INF file containing external properties, including:
+
+  ```
+  [Properties]
+      19 = Empty ; Add archived property, OR:
+      19 =       ; Remove archived property
+
+      11 = {text}Friendly Name ; Add friendly name property
+
+      127 = {hex} ; Add custom hexadecimal property
+          _continue_ = 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f
+          _continue_ = 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f
+
+      2 = {text} ; Add Key Provider Information property
+        _continue_ = Container=Container Name&
+        _continue_ = Provider=Microsoft Strong Cryptographic Provider&
+        _continue_ = ProviderType=1&
+        _continue_ = Flags=0&
+        _continue_ = KeySpec=2
+
+      9 = {text} ; Add Enhanced Key Usage property
+        _continue_ = 1.3.6.1.5.5.7.3.2,
+        _continue_ = 1.3.6.1.5.5.7.3.1,
+  ```
+
+```
+[-f] [-enterprise] [-user] [-grouppolicy] [-silent] [-split] [-csp provider]
+```
+
+### -viewstore
+
+Dumps the certificates store. For more info, see the `-store` parameter in this article.
+
+```
+certutil [options] -viewstore [certificatestorename [certID [outputfile]]]
+```
+
+Where:
+
+- **certificatestorename** is the certificate store name.
+
+- **certID** is the certificate or CRL match token.
+
+- **outputfile** is the file used to save the matching certificates.
+
+```
+[-f] [-user] [-enterprise] [-service] [-grouppolicy] [-dc DCName]
+```
+
+#### Options
+
+- The `-user` option accesses a user store instead of a machine store.
+
+- The `-enterprise` option accesses a machine enterprise store.
+
+- The `-service` option accesses a machine service store.
+
+- The `-grouppolicy` option accesses a machine group policy store.
+
+For example:
+
+- `-enterprise NTAuth`
+
+- `-enterprise Root 37`
+
+- `-user My 26e0aaaf000000000004`
+
+- `CA .11`
+
+### -viewdelstore
+
+Deletes a certificate from the store.
+
+```
+certutil [options] -viewdelstore [certificatestorename [certID [outputfile]]]
+```
+
+Where:
+
+- **certificatestorename** is the certificate store name.
+
+- **certID** is the certificate or CRL match token.
+
+- **outputfile** is the file used to save the matching certificates.
+
+```
+[-f] [-user] [-enterprise] [-service] [-grouppolicy] [-dc DCName]
+```
+
+#### Options
+
+- The `-user` option accesses a user store instead of a machine store.
+
+- The `-enterprise` option accesses a machine enterprise store.
+
+- The `-service` option accesses a machine service store.
+
+- The `-grouppolicy` option accesses a machine group policy store.
+
+For example:
+
+- `-enterprise NTAuth`
+
+- `-enterprise Root 37`
+
+- `-user My 26e0aaaf000000000004`
+
+- `CA .11`
+
+### -dspublish
+
+Publishes a certificate or certificate revocation list (CRL) to Active Directory.
+
+```
+certutil [options] -dspublish certfile [NTAuthCA | RootCA | SubCA | CrossCA | KRA | User | Machine]
+```
+
+```
+certutil [options] -dspublish CRLfile [DSCDPContainer [DSCDPCN]]
+```
+
+Where:
+
+- **certfile** is the name of the certificate file to publish.
+
+- **NTAuthCA** publishes the certificate to the DS Enterprise store.
+
+- **RootCA** publishes the certificate to the DS Trusted Root store.
+
+- **SubCA** publishes the CA certificate to the DS CA object.
+
+- **CrossCA** publishes the cross-certificate to the DS CA object.
+
+- **KRA** publishes the certificate to the DS Key Recovery Agent object.
+
+- **User** publishes the certificate to the User DS object.
+
+- **Machine** publishes the certificate to the Machine DS object.
+
+- **CRLfile** is the name of the CRL file to publish.
+
+- **DSCDPContainer** is the DS CDP container CN, usually the CA machine name.
+
+- **DSCDPCN** is the DS CDP object CN, usually based on the sanitized CA short name and key index.
+
+- Use `-f` to create a new DS object.
+
+```
 [-f] [-user] [-dc DCName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -adtemplate
 
-## <a name="BKMK_ADTemplate"></a>-ADTemplate
+Displays Active Directory templates.
 
-CertUtil [Options] -ADTemplate [Template]
+```
+certutil [options] -adtemplate [template]
+```
 
-Display AD templates
-
+```
 [-f] [-user] [-ut] [-mt] [-dc DCName]
+```
 
-## <a name="BKMK_template"></a>-Template
+### -template
 
-CertUtil [Options] -Template [Template]
+Displays the certificate templates.
 
-Display Enrollment Policy templates
+```
+certutil [options] -template [template]
+```
 
-[-f] [-user] [-silent] [-PolicyServer URLOrId] [-Anonymous] [-Kerberos] [-ClientCertificate ClientCertId] [-UserName UserName] [-p Password]
+```
+[-f] [-user] [-silent] [-policyserver URLorID] [-anonymous] [-kerberos] [-clientcertificate clientcertID] [-username username] [-p password]
+```
 
-Return to [Menu](#BKMK_menu)
+### -templatecas
 
-## <a name="BKMK_TemplateCAs"></a>-TemplateCAs
+Displays the certification authorities (CAs) for a certificate template.
 
-CertUtil [Options] -TemplateCAs Template
+```
+certutil [options] -templatecas template
+```
 
-Display CAs for template
-
+```
 [-f] [-user] [-dc DCName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -catemplates
 
-## <a name="BKMK_CATemplates"></a>-CATemplates
+Displays templates for the Certificate Authority.
 
-CertUtil [Options] -CATemplates [Template]
+```
+certutil [options] -catemplates [template]
+```
 
-Display templates for CA
-
+```
 [-f] [-user] [-ut] [-mt] [-config Machine\CAName] [-dc DCName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -setcasites
 
-## <a name="BKMK_SetCASites"></a>-SetCASites
+Manages site names, including setting, verifying, and deleting Certificate Authority site names
 
-CertUtil [Options] -SetCASites [set] [SiteName]
+```
+certutil [options] -setcasites [set] [sitename]
+certutil [options] -setcasites verify [sitename]
+certutil [options] -setcasites delete
+```
 
-CertUtil [Options] -SetCASites verify [SiteName]
+Where:
 
-CertUtil [Options] -SetCASites delete
+- **sitename** is allowed only when targeting a single Certificate Authority.
 
-Set, Verify or Delete CA site names
--   Use the -config option to target a single CA (Default is all CAs)
--   *SiteName* is allowed only when targeting a single CA
--   Use -f to override validation errors for the specified *SiteName*
--   Use -f to delete all CA site names
-
+```
 [-f] [-config Machine\CAName] [-dc DCName]
+```
+
+#### Remarks
+
+- The `-config` option targets a single Certificate Authority (Default is all CAs).
+
+- The `-f` option can be used to override validation errors for the specified **sitename** or to delete all CA sitenames.
 
 > [!NOTE]
-> For more information on configuring CAs for Active Directory Domain Services (AD DS) site awareness, see [AD DS Site Awareness for AD CS and PKI clients](https://social.technet.microsoft.com/wiki/contents/articles/14106.ad-ds-site-awareness-for-ad-cs-and-pki-clients.aspx).
+> For more information about configuring CAs for Active Directory Domain Services (AD DS) site awareness, see [AD DS Site Awareness for AD CS and PKI clients](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11)).
 
-Return to [Menu](#BKMK_menu)
+### -enrollmentserverURL
 
-## <a name="BKMK_enrollmentServerURL"></a>-enrollmentServerURL
+Displays, adds, or deletes enrollment server URLs associated with a CA.
 
-CertUtil [Options] -enrollmentServerURL [URL AuthenticationType [Priority] [Modifiers]]
+```
+certutil [options] -enrollmentServerURL [URL authenticationtype [priority] [modifiers]]
+certutil [options] -enrollmentserverURL URL delete
+```
 
-CertUtil [Options] -enrollmentServerURL URL delete
+Where:
 
-Display, add or delete enrollment server URLs associated with a CA
+- **authenticationtype** specifies one of the following client authentication methods, while adding a URL:
 
-AuthenticationType: Specify one of the following client authentication methods while adding a URL
-1.  Kerberos: Use Kerberos SSL credentials
-2.  UserName: Use named account for SSL credentials
-3.  ClientCertificate: Use X.509 Certificate SSL credentials
-4.  Anonymous: Use anonymous SSL credentials
+  1. **kerberos** - Use Kerberos SSL credentials.
 
-delete: deletes the specified URL associated with the CA
+  2. **username** - Use a named account for SSL credentials.
 
-Priority: defaults to '1' if not specified when adding a URL
+  3. **clientcertificate**: - Use X.509 Certificate SSL credentials.
 
-Modifiers -- Comma separated list of one or more of the following:
-1.  AllowRenewalsOnly: Only renewal requests can be submitted to this CA via this URL
-2.  AllowKeyBasedRenewal: Allows use of a certificate that has no associated account in the AD. This applies only with ClientCertificate and AllowRenewalsOnly Mode
+  4. **anonymous** - Use anonymous SSL credentials.
 
+- **delete** deletes the specified URL associated with the CA.
+
+- **priority** defaults to `1` if not specified when adding a URL.
+
+- **modifiers** is a comma-separated list, which includes one or more of the following:
+
+1. **allowrenewalsonly** - Only renewal requests can be submitted to this CA via this URL.
+
+2. **allowkeybasedrenewal** - Allows use of a certificate that has no associated account in the AD. This applies only with clientcertificate and allowrenewalsonly Mode
+
+```
 [-config Machine\CAName] [-dc DCName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -adca
 
-## <a name="BKMK_ADCA"></a>-ADCA
+Displays Active Directory Certificate Authorities.
 
-CertUtil [Options] -ADCA [CAName]
+```
+certutil [options] -adca [CAName]
+```
 
-Display AD CAs
-
+```
 [-f] [-split] [-dc DCName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -ca
 
-## <a name="BKMK_CA"></a>-CA
+Displays enrollment policy Certificate Authorities.
 
-CertUtil [Options] -CA [CAName | TemplateName]
+```
+certutil [options] -CA [CAName | templatename]
+```
 
-Display Enrollment Policy CAs
+```
+[-f] [-user] [-silent] [-split] [-policyserver URLorID] [-anonymous] [-kerberos] [-clientcertificate clientcertID] [-username username] [-p password]
+```
 
-[-f] [-user] [-silent] [-split] [-PolicyServer URLOrId] [-Anonymous] [-Kerberos] [-ClientCertificate ClientCertId] [-UserName UserName] [-p Password]
+### -policy
 
-Return to [Menu](#BKMK_menu)
+Displays the enrollment policy.
 
-## <a name="BKMK_Policy"></a>-Policy
+```
+[-f] [-user] [-silent] [-split] [-policyserver URLorID] [-anonymous] [-kerberos] [-clientcertificate clientcertID] [-username username] [-p password]
+```
 
-Display Enrollment Policy
+### -policycache
 
-[-f] [-user] [-silent] [-split] [-PolicyServer URLOrId] [-Anonymous] [-Kerberos] [-ClientCertificate ClientCertId] [-UserName UserName] [-p Password]
+Displays or deletes enrollment policy cache entries.
 
-Return to [Menu](#BKMK_menu)
+```
+certutil [options] -policycache [delete]
+```
 
-## <a name="BKMK_PolicyCache"></a>-PolicyCache
+Where:
 
-CertUtil [Options] -PolicyCache [delete]
+- **delete** deletes the policy server cache entries.
 
-Display or delete Enrollment Policy Cache entries
+- **-f** deletes all cache entries
 
-delete: delete Policy Server cache entries
+```
+[-f] [-user] [-policyserver URLorID]
+```
 
--f: use -f to delete all cache entries
+### -credstore
 
-[-f] [-user] [-PolicyServer URLOrId]
+Displays, adds, or deletes Credential Store entries.
 
-Return to [Menu](#BKMK_menu)
+```
+certutil [options] -credstore [URL]
+certutil [options] -credstore URL add
+certutil [options] -credstore URL delete
+```
 
-## <a name="BKMK_Credstore"></a>-CredStore
+Where:
 
-CertUtil [Options] -CredStore [URL]
+- **URL** is the target URL. You can also use `*` to match all entries or `https://machine*` to match a URL prefix.
 
-CertUtil [Options] -CredStore URL add
+- **add** adds a credential store entry. Using this option also requires the use of SSL credentials.
 
-CertUtil [Options] -CredStore URL delete
+- **delete** deletes credential store entries.
 
-Display, add or delete Credential Store entries
+- **-f** overwrites a single entry or deletes multiple entries.
 
-URL: target URL.  Use * to match all entries. Use https://machine* to match a URL prefix.
+```
+[-f] [-user] [-silent] [-anonymous] [-kerberos] [-clientcertificate clientcertID] [-username username] [-p password]
+```
 
-add: add a Credential Store entry. SSL credentials must also be specified.
+### -installdefaulttemplates
 
-delete: delete Credential Store entries
+Installs default certificate templates.
 
--f: use -f to overwrite an entry or to delete multiple entries.
+```
+certutil [options] -installdefaulttemplates
+```
 
-[-f] [-user] [-silent] [-Anonymous] [-Kerberos] [-ClientCertificate ClientCertId] [-UserName UserName] [-p Password]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_InstallDefaultTemplates"></a>-InstallDefaultTemplates
-
-CertUtil [Options] -InstallDefaultTemplates
-
-Install default certificate templates
-
+```
 [-dc DCName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -URLcache
 
-## <a name="BKMK_URLCache"></a>-URLCache
+Displays or deletes URL cache entries.
 
-CertUtil [Options] -URLCache [URL | CRL | * [delete]]
+```
+certutil [options] -URLcache [URL | CRL | * [delete]]
+```
 
-Display or delete URL cache entries
+Where:
 
-URL: cached URL
+- **URL** is the cached URL.
 
-CRL: operate on all cached CRL URLs only
+- **CRL** runs on all cached CRL URLs only.
 
-*: operate on all cached URLs
+- **&#42;** operates on all cached URLs.
 
-delete: delete relevant URLs from the current user's local cache
+- **delete** deletes relevant URLs from the current user's local cache.
 
-Use -f to force fetching a specific URL and updating the cache.
+- **-f** forces fetching a specific URL and updating the cache.
 
+```
 [-f] [-split]
+```
 
-Return to [Menu](#BKMK_menu)
+### -pulse
 
-## <a name="BKMK_pulse"></a>-pulse
+Pulses auto enrollment events.
 
-CertUtil [Options] -pulse
+```
+certutil [options] -pulse
+```
 
-Pulse autoenrollment events
-
+```
 [-user]
+```
 
-Return to [Menu](#BKMK_menu)
+### -machineinfo
 
-## <a name="BKMK_MachineInfo"></a>-MachineInfo
+Displays information about the Active Directory machine object.
 
-CertUtil [Options] -MachineInfo DomainName\MachineName$
+```
+certutil [options] -machineinfo domainname\machinename$
+```
 
-Display Active Directory computer object information
+### -DCInfo
 
-Return to [Menu](#BKMK_menu)
+Displays information about the domain controller. The default displays DC certificates without verification.
 
-## <a name="BKMK_DCInfo"></a>-DCInfo
+```
+certutil [options] -DCInfo [domain] [verify | deletebad | deleteall]
+```
 
-CertUtil [Options] -DCInfo [Domain] [Verify | DeleteBad | DeleteAll]
-
-Display domain controller information
-
-Default is to display DC certs without verification
-
-[-f] [-user] [-urlfetch] [-dc DCName] [-t Timeout]
+```
+[-f] [-user] [-urlfetch] [-dc DCName] [-t timeout]
+```
 
 > [!TIP]
-> The ability to specify an Active Directory Domain Services (AD DS) domain **[Domain]** and to specify a domain controller (**-dc**) was added in Windows Server 2012. To successfully run the command, you must use an account that is a member of **Domain Admins** or **Enterprise Admins**. The behavior modifications of this command are as follows:</br>> 1.  If a domain is not specified and a specific domain controller is not specified, this option returns a list of domain controllers to process from the default domain controller.</br>> 2.  If a domain is not specified, but a domain controller is specified, a report of the certificates on the specified domain controller is generated.</br>> 3.  If a domain is specified, but a domain controller is not specified, a list of domain controllers is generated along with reports on the certificates for each domain controller in the list.</br>> 4.  If the domain and domain controller are specified, a list of domain controllers is generated from the targeted domain controller. A report of the certificates for each domain controller in the list is also generated.
+> The ability to specify an Active Directory Domain Services (AD DS) domain **[Domain]** and to specify a domain controller (**-dc**) was added in Windows Server 2012. To successfully run the command, you must use an account that is a member of **Domain Admins** or **Enterprise Admins**. The behavior modifications of this command are as follows:<ol><li>1. If a domain is not specified and a specific domain controller is not specified, this option returns a list of domain controllers to process from the default domain controller.</li><li>2. If a domain is not specified, but a domain controller is specified, a report of the certificates on the specified domain controller is generated.</li><li>3. If a domain is specified, but a domain controller is not specified, a list of domain controllers is generated along with reports on the certificates for each domain controller in the list.</li><li>4. If the domain and domain controller are specified, a list of domain controllers is generated from the targeted domain controller. A report of the certificates for each domain controller in the list is also generated.</li></ol>
+>
+>For example, assume there is a domain named CPANDL with a domain controller named CPANDL-DC1. You can run the following command to a retrieve a list of domain controllers and their certificates that from CPANDL-DC1: `certutil -dc cpandl-dc1 -DCInfo cpandl`
 
-For example, assume there is a domain named CPANDL with a domain controller named CPANDL-DC1. You could run the following command to a retrieve a list of domain controllers and their certificates that from CPANDL-DC1: certutil -dc cpandl-dc1 -dcinfo cpandl
+### -entinfo
 
-Return to [Menu](#BKMK_menu)
+Displays information about an enterprise Certificate Authority.
 
-## <a name="BKMK_EntInfo"></a>-EntInfo
+```
+certutil [options] -entinfo domainname\machinename$
+```
 
-CertUtil [Options] -EntInfo DomainName\MachineName$
-
+```
 [-f] [-user]
+```
 
-Return to [Menu](#BKMK_menu)
+### -tcainfo
 
-## <a name="BKMK_TCAInfo"></a>-TCAInfo
+Displays information about the Certificate Authority.
 
-CertUtil [Options] -TCAInfo [DomainDN | -]
+```
+certutil [options] -tcainfo [domainDN | -]
+```
 
-Display CA information
+```
+[-f] [-enterprise] [-user] [-urlfetch] [-dc DCName] [-t timeout]
+```
 
-[-f] [-enterprise] [-user] [-urlfetch] [-dc DCName] [-t Timeout]
+### -scinfo
 
-Return to [Menu](#BKMK_menu)
+Displays information about the smart card.
 
-## <a name="BKMK_SCInfo"></a>-SCInfo
+```
+certutil [options] -scinfo [readername [CRYPT_DELETEKEYSET]]
+```
 
-CertUtil [Options] -SCInfo [ReaderName [CRYPT_DELETEKEYSET]]
+Where:
 
-Display smart card information
+- **CRYPT_DELETEKEYSET** deletes all keys on the smart card.
 
-CRYPT_DELETEKEYSET: Delete all keys on the smart card
+```
+[-silent] [-split] [-urlfetch] [-t timeout]
+```
 
-[-silent] [-split] [-urlfetch] [-t Timeout]
+### -scroots
 
-Return to [Menu](#BKMK_menu)
+Manages smart card root certificates.
 
-## <a name="BKMK_SCRoots"></a>-SCRoots
+```
+certutil [options] -scroots update [+][inputrootfile] [readername]
+certutil [options] -scroots save \@in\\outputrootfile [readername]
+certutil [options] -scroots view [inputrootfile | readername]
+certutil [options] -scroots delete [readername]
+```
 
-CertUtil [Options] -SCRoots update [+][InputRootFile] [ReaderName]
-
-CertUtil [Options] -SCRoots save @OutputRootFile [ReaderName]
-
-CertUtil [Options] -SCRoots view [InputRootFile | ReaderName]
-
-CertUtil [Options] -SCRoots delete [ReaderName]
-
-Manage smart card root certificates
-
+```
 [-f] [-split] [-p Password]
+```
 
-Return to [Menu](#BKMK_menu)
+### -verifykeys
 
-## <a name="BKMK_verifykeys"></a>-verifykeys
+Verifies a public or private key set.
 
-CertUtil [Options] -verifykeys [KeyContainerName CACertFile]
+```
+certutil [options] -verifykeys [keycontainername cacertfile]
+```
 
-Verify public/private key set
+Where:
 
-KeyContainerName: key container name of the key to verify. Defaults to machine keys.  Use -user for user keys.
+- **keycontainername** is the key container name for the key to verify. This option defaults to machine keys. To switch to user keys, use `-user`.
 
-CACertFile: signing or encryption certificate file
+- **cacertfile** signs or encrypts certificate files.
 
-If no arguments are specified, each signing CA cert is verified against its private key.
-
-This operation can only be performed against a local CA or local keys.
-
+```
 [-f] [-user] [-silent] [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+#### Remarks
 
-## <a name="BKMK_verify"></a>-verify
+- If no arguments are specified, each signing CA certificate is verified against its private key.
 
-CertUtil [Options] -verify CertFile [ApplicationPolicyList | - [IssuancePolicyList]]
+- This operation can only be performed against a local CA or local keys.
 
-CertUtil [Options] -verify CertFile [CACertFile [CrossedCACertFile]]
+### -verify
 
-CertUtil [Options] -verify CRLFile CACertFile [IssuedCertFile]
+Verifies a certificate, certificate revocation list (CRL), or certificate chain.
 
-CertUtil [Options] -verify CRLFile CACertFile [DeltaCRLFile]
+```
+certutil [options] -verify certfile [applicationpolicylist | - [issuancepolicylist]]
+certutil [options] -verify certfile [cacertfile [crossedcacertfile]]
+certutil [options] -verify CRLfile cacertfile [issuedcertfile]
+certutil [options] -verify CRLfile cacertfile [deltaCRLfile]
+```
 
-Verify certificate, CRL or chain
+Where:
 
-CertFile: Certificate to verify
+- **certfile** is the name of the certificate to verify.
 
-ApplicationPolicyList: optional comma separated list of required Application Policy ObjectIds
+- **applicationpolicylist** is the optional comma-separated list of required Application Policy ObjectIds.
 
-IssuancePolicyList: optional comma separated list of required Issuance Policy ObjectIds
+- **issuancepolicylist** is the optional comma-separated list of required Issuance Policy ObjectIds.
 
-CACertFile: optional issuing CA certificate to verify against
+- **cacertfile** is the optional issuing CA certificate to verify against.
 
-CrossedCACertFile: optional certificate cross-certified by CertFile
+- **crossedcacertfile** is the optional certificate cross-certified by **certfile**.
 
-CRLFile: CRL to verify
+- **CRLfile** is the CRL file used to verify the **cacertfile**.
 
-IssuedCertFile: optional issued certificate covered by CRLFile
+- **issuedcertfile** is the optional issued certificate covered by the CRLfile.
 
-DeltaCRLFile: optional delta CRL
+- **deltaCRLfile** is the optional delta CRL file.
 
-If ApplicationPolicyList is specified, chain building is restricted to chains valid for the specified Application Policies.
+```
+[-f] [-enterprise] [-user] [-silent] [-split] [-urlfetch] [-t timeout]
+```
 
-If IssuancePolicyList is specified, chain building is restricted to chains valid for the specified Issuance Policies.
+#### Remarks
 
-If CACertFile is specified, fields in CACertFile are verified against CertFile or CRLFile.
+- Using **applicationpolicylist** restricts chain building to only chains valid for the specified Application Policies.
 
-If CACertFile is not specified, CertFile is used to build and verify a full chain.
+- Using **issuancepolicylist** restricts chain building to only chains valid for the specified Issuance Policies.
 
-If CACertFile and CrossedCACertFile are both specified, fields in CACertFile and CrossedCACertFile are verified against CertFile.
+- Using **cacertfile**  verifies the fields in the file against **certfile** or **CRLfile**.
 
-If IssuedCertFile is specified, fields in IssuedCertFile are verified against CRLFile.
+- Using **issuedcertfile** verifies the fields in the file against **CRLfile**.
 
-If DeltaCRLFile is specified, fields in DeltaCRLFile are verified against CRLFile.
+- Using deltaCRLfile verifies the fields in the file against **certfile**.
 
-[-f] [-enterprise] [-user] [-silent] [-split] [-urlfetch] [-t Timeout]
+- If **cacertfile** isn't specified, the full chain is built and verified against **certfile**.
 
-Return to [Menu](#BKMK_menu)
+- If **cacertfile** and **crossedcacertfile** are both specified, the fields in both files are verified against **certfile**.
 
-## <a name="BKMK_verifyCTL"></a>-verifyCTL
+### -verifyCTL
 
-CertUtil [Options] -verifyCTL CTLObject [CertDir] [CertFile]
+Verifies the AuthRoot or Disallowed Certificates CTL.
 
-Verify AuthRoot or Disallowed Certificates CTL
+```
+certutil [options] -verifyCTL CTLobject [certdir] [certfile]
+```
 
-CTLObject: Identifies the CTL to verify:
--   AuthRootWU: read AuthRoot CAB and matching certificates from the URL cache. Use -f to download from Windows Update instead.
--   DisallowedWU: read Disallowed Certificates CAB and disallowed certificate store file from the URL cache.  Use -f to download from Windows Update instead.
--   AuthRoot: read registry cached AuthRoot CTL.  Use with -f and a             CertFile that is not already trusted to force updating the registry cached AuthRoot and Disallowed Certificate CTLs.
--   Disallowed: read registry cached Disallowed Certificates CTL. -f has the same behavior as with AuthRoot.
--   CTLFileName: file or http: path to CTL or CAB
+Where:
 
-CertDir: folder containing certificates matching CTL entries. An http: folder path must end with a path separator. If a folder is not specified with AuthRoot or Disallowed, multiple locations will be searched for matching certificates: local certificate stores, crypt32.dll resources and the local URL cache. Use -f to download from Windows Update when necessary. Otherwise defaults to the same folder or web site as the CTLObject.
+- **CTLobject** identifies the CTL to verify, including:
 
-CertFile: file containing certificate(s) to verify. Certificates will be matched against CTL entries, and match results displayed. Suppresses most of the default output.
+  - **AuthRootWU** - Reads the AuthRoot CAB and matching certificates from the URL cache. Use `-f` to download from Windows Update instead.
 
+  - **DisallowedWU** - Reads the Disallowed Certificates CAB and disallowed certificate store file from the URL cache. Use `-f` to download from Windows Update instead.
+
+  - **AuthRoot** - Reads the registry-cached AuthRoot CTL. Use with `-f` and an untrusted **certfile** to force the registry cached AuthRoot and Disallowed Certificate CTLs to update.
+
+  - **Disallowed** - Reads the registry-cached Disallowed Certificates CTL. Use with `-f` and an untrusted **certfile** to force the registry cached AuthRoot and Disallowed Certificate CTLs to update.
+
+- **CTLfilename** specifies the file or http path to the CTL or CAB file.
+
+- **certdir** specifies the folder containing certificates matching the CTL entries. Defaults to the same folder or website as the **CTLobject**. Using an http folder path requires a path separator at the end. If you don't specify **AuthRoot** or **Disallowed**, multiple locations will be searched for matching certificates, including local certificate stores, crypt32.dll resources and the local URL cache. Use `-f` to download from Windows Update, as needed.
+
+- **certfile** specifies the certificate(s) to verify. Certificates are matched against CTL entries, displaying the results. This option suppresses most of the default output.
+
+```
 [-f] [-user] [-split]
-
-Return to [Menu](#BKMK_menu)
-
-## <a name="BKMK_sign"></a>-sign
-
-CertUtil [Options] -sign InFileList|SerialNumber|CRL OutFileList [StartDate+dd:hh] [+SerialNumberList | -SerialNumberList | -ObjectIdList | @ExtensionFile]
-
-CertUtil [Options] -sign InFileList|SerialNumber|CRL OutFileList [#HashAlgorithm] [+AlternateSignatureAlgorithm | -AlternateSignatureAlgorithm]
-
-Re-sign CRL or certificate
-
-InFileList: comma separated list of Certificate or CRL files to modify and re-sign
-
-SerialNumber: Serial number of certificate to create. Validity period and other options must not be present.
-
-CRL: Create an empty CRL. Validity period and other options must not be present.
-
-OutFileList: comma separated list of modified Certificate or CRL output files. The number of files must match InFileList.
-
-StartDate+dd:hh: new validity period: optional date plus; optional days and hours validity period; If both are specified, use a plus sign (+) separator. Use "now[+dd:hh]" to start at the current time. Use "never" to have no expiration date (for CRLs only).
-
-SerialNumberList: comma separated serial number list to add or remove
-
-ObjectIdList: comma separated extension ObjectId list to remove
-
-@ExtensionFile: INF file containing extensions to update or remove:
 ```
-[Extensions]
-     2.5.29.31 = ; Remove CRL Distribution Points extension
-     2.5.29.15 = "{hex}" ; Update Key Usage extension
-     _continue_="03 02 01 86"
+
+### -sign
+
+Re-signs a certificate revocation list (CRL) or certificate.
+
 ```
-HashAlgorithm: Name of the hash algorithm preceded by a # sign
+certutil [options] -sign infilelist | serialnumber | CRL outfilelist [startdate+dd:hh] [+serialnumberlist | -serialnumberlist | -objectIDlist | \@extensionfile]
+certutil [options] -sign infilelist | serialnumber | CRL outfilelist [#hashalgorithm] [+alternatesignaturealgorithm | -alternatesignaturealgorithm]
+```
 
-AlternateSignatureAlgorithm: alternate Signature algorithm specifier
+Where:
 
-A minus sign causes serial numbers and extensions to be removed. A plus sign causes serial numbers to be added to a CRL. When removing items from a CRL, the list may contain both serial numbers and ObjectIds. A minus sign before AlternateSignatureAlgorithm causes the legacy signature format to be used. A plus sign before AlternateSignatureAlgorithm causes the alternature signature format to be used. If AlternateSignatureAlgorithm is not specified then the signature format in the certificate or CRL is used.
+- **infilelist** is the comma-separated list of certificate or CRL files to modify and re-sign.
 
-[-nullsign] [-f] [-silent] [-Cert CertId]
+- **serialnumber** is the serial number of the certificate to create. The validity period and other options can't be present.
 
-Return to [Menu](#BKMK_menu)
+- **CRL** creates an empty CRL. The validity period and other options can't be present.
 
-## <a name="BKMK_vroot"></a>-vroot
+- **outfilelist** is the comma-separated list of modified certificate or CRL output files. The number of files must match infilelist.
 
-CertUtil [Options] -vroot [delete]
+- **startdate+dd:hh** is the new validity period for the certificate or CRL files, including:
 
-Create/delete web virtual roots and file shares
+  - optional date plus
 
-Return to [Menu](#BKMK_menu)
+  - optional days and hours validity period
 
-## <a name="BKMK_vocsproot"></a>-vocsproot
+  If both are specified, you must use a plus sign (+) separator. Use `now[+dd:hh]` to start at the current time. Use `never` to have no expiration date (for CRLs only).
 
-CertUtil [Options] -vocsproot [delete]
+- **serialnumberlist** is the comma-separated serial number list of the files to add or remove.
 
-Create/delete web virtual roots for OCSP web proxy
+- **objectIDlist** is the comma-separated extension ObjectId list of the files to remove.
 
-Return to [Menu](#BKMK_menu)
+- **\@extensionfile** is the INF file that contains the extensions to update or remove. For example:
 
-## <a name="BKMK_addEnrollmentServer"></a>-addEnrollmentServer
+  ```
+  [Extensions]
+      2.5.29.31 = ; Remove CRL Distribution Points extension
+      2.5.29.15 = {hex} ; Update Key Usage extension
+      _continue_=03 02 01 86
+  ```
 
-CertUtil [Options] -addEnrollmentServer Kerberos | UserName | ClientCertificate [AllowRenewalsOnly] [AllowKeyBasedRenewal]
+- **hashalgorithm** is the name of the hash algorithm. This must only be the text preceded by the `#` sign.
 
-Add an Enrollment Server application
+- **alternatesignaturealgorithm** is the alternate signature algorithm specifier.
 
-Add an Enrollment Server application and application pool if necessary, for the specified CA. This command does not install binaries or packages. One of the following authentication methods with which the client connects to a Certificate Enrollment Server.
--   Kerberos: Use Kerberos SSL credentials
--   UserName: Use named account for SSL credentials
--   ClientCertificate: Use X.509 Certificate SSL credentials
--   AllowRenewalsOnly: Only renewal requests can be submitted to this CA via this URL
--   AllowKeyBasedRenewal -- Allows use of a certificate that has no associated account in the AD. This applies only with ClientCertificate and AllowRenewalsOnly mode.
+```
+[-nullsign] [-f] [-silent] [-cert certID]
+```
 
+#### Remarks
+
+- Using the minus sign (-) removes serial numbers and extensions.
+
+- Using the plus sign (+) adds serial numbers to a CRL.
+
+- You can use a list to remove both serial numbers and ObjectIDs from a CRL at the same time.
+
+- Using the minus sign before **alternatesignaturealgorithm** allows you to use the legacy signature format. Using the plus sign allows you to use the alternate signature format. If you don't specify **alternatesignaturealgorithm**, the signature format in the certificate or CRL is used.
+
+### -vroot
+
+Creates or deletes web virtual roots and file shares.
+
+```
+certutil [options] -vroot [delete]
+```
+
+### -vocsproot
+
+Creates or deletes web virtual roots for an OCSP web proxy.
+
+```
+certutil [options] -vocsproot [delete]
+```
+
+### -addenrollmentserver
+
+Add an Enrollment Server application and application pool if necessary, for the specified Certificate Authority. This command does not install binaries or packages.
+
+```
+certutil [options] -addenrollmentserver kerberos | username | clientcertificate [allowrenewalsonly] [allowkeybasedrenewal]
+```
+
+Where:
+
+- **addenrollmentserver** requires you to use an authentication method for the client connection to the Certificate Enrollment Server, including:
+
+  - **kerberos** uses Kerberos SSL credentials.
+
+  - **username** uses named account for SSL credentials.
+
+  - **clientcertificate** uses X.509 Certificate SSL credentials.
+
+- **allowrenewalsonly** allows only renewal request submissions to the Certificate Authority through the URL.
+
+- **allowkeybasedrenewal** allows use of a certificate with no associated account in Active Directory. This applies when used with **clientcertificate** and **allowrenewalsonly** mode.
+
+```
 [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -deleteenrollmentserver
 
-## <a name="BKMK_deleteEnrollmentServer"></a>-deleteEnrollmentServer
+Deletes an Enrollment Server application and application pool if necessary, for the specified Certificate Authority. This command does not install binaries or packages.
 
-CertUtil [Options] -deleteEnrollmentServer Kerberos | UserName | ClientCertificate
+```
+certutil [options] -deleteenrollmentserver kerberos | username | clientcertificate
+```
 
-Delete an Enrollment Server application
+Where:
 
-Delete an Enrollment Server application and application pool if necessary, for the specified CA. This command does not remove binaries or packages. One of the following authentication methods with which the client connects to a Certificate Enrollment Server.
-1.  Kerberos: Use Kerberos SSL credentials
-2.  UserName: Use named account for SSL credentials
-3.  ClientCertificate: Use X.509 Certificate SSL credentials
+- **deleteenrollmentserver** requires you to use an authentication method for the client connection to the Certificate Enrollment Server, including:
 
+  - **kerberos** uses Kerberos SSL credentials.
+
+  - **username** uses named account for SSL credentials.
+
+  - **clientcertificate** uses X.509 Certificate SSL credentials.
+
+```
 [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+### -addpolicyserver
 
-## <a name="BKMK_addPolicyServer"></a>-addPolicyServer
+Add a Policy Server application and application pool, if necessary. This command does not install binaries or packages.
 
-CertUtil [Options] -addPolicyServer Kerberos | UserName | ClientCertificate [KeyBasedRenewal]
+```
+certutil [options] -addpolicyserver kerberos | username | clientcertificate [keybasedrenewal]
+```
 
-Add a Policy Server application
+Where:
 
-Add a Policy Server application and application pool if necessary. This command does not install binaries or packages. One of the following authentication methods with which the client connects to a Certificate Policy Server:
--   Kerberos: Use Kerberos SSL credentials
--   UserName: Use named account for SSL credentials
--   ClientCertificate: Use X.509 Certificate SSL credentials
--   KeyBasedRenewal: Only policies that contain KeyBasedRenewal templates are returned to the client. This flag applies only for UserName and ClientCertificate authentication.
+- **addpolicyserver** requires you to use an authentication method for the client connection to the Certificate Policy Server, including:
 
-Return to [Menu](#BKMK_menu)
+  - **kerberos** uses Kerberos SSL credentials.
 
-## <a name="BKMK_deletePolicyServer"></a>-deletePolicyServer
+  - **username** uses named account for SSL credentials.
 
-CertUtil [Options] -deletePolicyServer Kerberos | UserName | ClientCertificate [KeyBasedRenewal]
+  - **clientcertificate** uses X.509 Certificate SSL credentials.
 
-Delete a Policy Server application
+- **keybasedrenewal** allows use of policies returned to the client containing keybasedrenewal templates. This option applies only for **username** and **clientcertificate** authentication.
 
-Delete a Policy Server application and application pool if necessary. This command does not remove binaries or packages. One of the following authentication methods with which the client connects to a Certificate Policy Server:
-1.  Kerberos: Use Kerberos SSL credentials
-2.  UserName: Use named account for SSL credentials
-3.  ClientCertificate: Use X.509 Certificate SSL credentials
-4.  KeyBasedRenewal: KeyBasedRenewal policy server
+### -deletepolicyserver
 
-Return to [Menu](#BKMK_menu)
+Deletes a Policy Server application and application pool, if necessary. This command does not remove binaries or packages.
 
-## <a name="BKMK_oid"></a>-oid
+```
+certutil [options] -deletePolicyServer kerberos | username | clientcertificate [keybasedrenewal]
+```
 
-CertUtil [Options] -oid ObjectId [DisplayName | delete [LanguageId [Type]]]
+Where:
 
-CertUtil [Options] -oid GroupId
+- **deletepolicyserver** requires you to use an authentication method for the client connection to the Certificate Policy Server, including:
 
-CertUtil [Options] -oid AlgId | AlgorithmName [GroupId]
+  - **kerberos** uses Kerberos SSL credentials.
 
-Display ObjectId or set display name
--   ObjectId -- ObjectId to display or to add display name
--   GroupId -- decimal GroupId number for ObjectIds to enumerate
--   AlgId -- hexadecimal AlgId for ObjectId to look up
--   AlgorithmName -- Algorithm Name for ObjectId to look up
--   DisplayName -- Display Name to store in DS
--   delete -- delete display name
--   LanguageId -- Language Id (defaults to current: 1033)
--   Type -- DS object type to create: 1 for Template (default), 2 for Issuance Policy, 3 for Application Policy
--   Use -f to create DS object.
+  - **username** uses named account for SSL credentials.
 
-[-f]
+  - **clientcertificate** uses X.509 Certificate SSL credentials.
 
-Return to [Menu](#BKMK_menu)
+- **keybasedrenewal** allows use of a KeyBasedRenewal policy server.
 
-## <a name="BKMK_error"></a>-error
+### -oid
 
-CertUtil [Options] -error ErrorCode
+Displays the object identifier or set a display name.
 
-Display error code message text
+```
+certutil [options] -oid objectID [displayname | delete [languageID [type]]]
+certutil [options] -oid groupID
+certutil [options] -oid agID | algorithmname [groupID]
+```
 
-Return to [Menu](#BKMK_menu)
+Where:
 
-## <a name="BKMK_getreg"></a>-getreg
+- **objectID** displays or to adds the display name.
 
-CertUtil [Options] -getreg [{ca|restore|policy|exit|template|enroll|chain|PolicyServers}\[ProgId\]][RegistryValueName]
+- **groupID** is the groupID number (decimal) that objectIDs enumerate.
 
-Display registry value
+- **algID** is the hexadecimal ID that objectID looks up.
 
-ca: Use CA's registry key
+- **algorithmname** is the algorithm name that objectID looks up.
 
-restore: Use CA's restore registry key
+- **displayname** displays the name to store in DS.
 
-policy: Use policy module's registry key
+- **delete** deletes the display name.
 
-exit: Use first exit module's registry key
+- **LanguageId** is the language ID value (defaults to current: 1033).
 
-template: Use template registry key (use -user for user templates)
+- **Type** is the type of DS object to create, including:
 
-enroll: Use enrollment registry key (use -user for user context)
+  - `1` - Template (default)
 
-chain: Use chain configuration registry key
+  - `2` - Issuance Policy
 
-PolicyServers: Use Policy Servers registry key
+  - `3` - Application Policy
 
-ProgId: Use policy or exit module's ProgId (registry subkey name)
+- `-f` creates a DS object.
 
-RegistryValueName: registry value name (use "Name*" to prefix match)
+### -error
 
-Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
+Displays the message text associated with an error code.
 
-If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
+```
+certutil [options] -error errorcode
+```
 
-If the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+### -getreg
 
-Use "chain\ChainCacheResyncFiletime @now" to effectively flush cached CRLs.
+Displays a registry value.
 
-[-f] [-user] [-GroupPolicy] [-config Machine\CAName]
+```
+certutil [options] -getreg [{ca | restore | policy | exit | template | enroll |chain | policyservers}\[progID\]][registryvaluename]
+```
 
-Return to [Menu](#BKMK_menu)
+Where:
 
-## <a name="BKMK_setreg"></a>-setreg
+- **ca** uses a Certificate Authority's registry key.
 
-CertUtil [Options] -setreg [{ca|restore|policy|exit|template|enroll|chain|PolicyServers}\[ProgId\]]RegistryValueName Value
+- **restore** uses Certificate Authority's restore registry key.
 
-Set registry value
+- **policy** uses the policy module's registry key.
 
-ca: Use CA's registry key
+- **exit** uses the first exit module's registry key.
 
-restore: Use CA's restore registry key
+- **template** uses the template registry key (use `-user` for user templates).
 
-policy: Use policy module's registry key
+- **enroll** uses the enrollment registry key (use `-user` for user context).
 
-exit: Use first exit module's registry key
+- **chain** uses the chain configuration registry key.
 
-template: Use template registry key (use -user for user templates)
+- **policyservers** uses the Policy Servers registry key.
 
-enroll: Use enrollment registry key (use -user for user context)
+- **progID** uses the policy or exit module's ProgID (registry subkey name).
 
-chain: Use chain configuration registry key
+- **registryvaluename** uses the registry value name (use `Name*` to prefix match).
 
-PolicyServers: Use Policy Servers registry key
+- **value** uses the new numeric, string or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
 
-ProgId: Use policy or exit module's ProgId (registry subkey name)
+```
+[-f] [-user] [-grouppolicy] [-config Machine\CAName]
+```
 
-RegistryValueName: registry value name (use "Name*" to prefix match)
+#### Remarks
 
-Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
+- If a string value starts with `+` or `-`, and the existing value is a `REG_MULTI_SZ` value, the string is added to or removed from the existing registry value. To force creation of a `REG_MULTI_SZ` value, add `\n` to the end of the string value.
 
-If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
+- If the value starts with `\@`, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it doesn't refer to a valid file, it's instead parsed as `[Date][+|-][dd:hh]` - an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use `now+dd:hh` for a date relative to the current time.
 
-If the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+- Use `chain\chaincacheresyncfiletime \@now` to effectively flush cached CRLs.
 
-Use "chain\ChainCacheResyncFiletime @now" to effectively flush cached CRLs.
+### -setreg
 
-[-f] [-user] [-GroupPolicy] [-config Machine\CAName]
+Sets a registry value.
 
-Return to [Menu](#BKMK_menu)
+```
+certutil [options] -setreg [{ca | restore | policy | exit | template | enroll |chain | policyservers}\[progID\]]registryvaluename value
+```
 
-## <a name="BKMK_delreg"></a>-delreg
+Where:
 
-CertUtil [Options] -delreg [{ca|restore|policy|exit|template|enroll|chain|PolicyServers}\[ProgId\]][RegistryValueName]
+- **ca** uses a Certificate Authority's registry key.
 
-Delete registry value
+- **restore** uses Certificate Authority's restore registry key.
 
-ca: Use CA's registry key
+- **policy** uses the policy module's registry key.
 
-restore: Use CA's restore registry key
+- **exit** uses the first exit module's registry key.
 
-policy: Use policy module's registry key
+- **template** uses the template registry key (use `-user` for user templates).
 
-exit: Use first exit module's registry key
+- **enroll** uses the enrollment registry key (use `-user` for user context).
 
-template: Use template registry key (use -user for user templates)
+- **chain** uses the chain configuration registry key.
 
-enroll: Use enrollment registry key (use -user for user context)
+- **policyservers** uses the Policy Servers registry key.
 
-chain: Use chain configuration registry key
+- **progID** uses the policy or exit module's ProgID (registry subkey name).
 
-PolicyServers: Use Policy Servers registry key
+- **registryvaluename** uses the registry value name (use `Name*` to prefix match).
 
-ProgId: Use policy or exit module's ProgId (registry subkey name)
+- **value** uses the new numeric, string or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
 
-RegistryValueName: registry value name (use "Name*" to prefix match)
+```
+[-f] [-user] [-grouppolicy] [-config Machine\CAName]
+```
 
-Value: new numeric, string or date registry value or filename. If a numeric value starts with "+" or "-", the bits specified in the new value are set or cleared in the existing registry value.
+#### Remarks
 
-If a string value starts with "+" or "-", and the existing value is a REG_MULTI_SZ value, the string is added to or removed from the existing registry value. To force creation of a REG_MULTI_SZ value, add a "\n" to the end of the string value.
+- If a string value starts with `+` or `-`, and the existing value is a `REG_MULTI_SZ` value, the string is added to or removed from the existing registry value. To force creation of a `REG_MULTI_SZ` value, add `\n` to the end of the string value.
 
-If the value starts with "@", the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it does not refer to a valid file, it is instead parsed as [Date][+|-][dd:hh] -- an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use "now+dd:hh" for a date relative to the current time.
+- If the value starts with `\@`, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it doesn't refer to a valid file, it's instead parsed as `[Date][+|-][dd:hh]` - an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use `now+dd:hh` for a date relative to the current time.
 
-Use "chain\ChainCacheResyncFiletime @now" to effectively flush cached CRLs.
+- Use `chain\chaincacheresyncfiletime \@now` to effectively flush cached CRLs.
 
-[-f] [-user] [-GroupPolicy] [-config Machine\CAName]
+### -delreg
 
-Return to [Menu](#BKMK_menu)
+Deletes a registry value.
 
-## <a name="BKMK_ImportKMS"></a>-ImportKMS
+```
+certutil [options] -delreg [{ca | restore | policy | exit | template | enroll |chain | policyservers}\[progID\]][registryvaluename]
+```
 
-CertUtil [Options] -ImportKMS UserKeyAndCertFile [CertId]
+Where:
 
-Import user keys and certificates into server database for key archival
+- **ca** uses a Certificate Authority's registry key.
 
-UserKeyAndCertFile -- Data file containing user private keys and certificates to be archived.  This can be any of the following:
--   Exchange Key Management Server (KMS) export file
--   PFX file
+- **restore** uses Certificate Authority's restore registry key.
 
-CertId: KMS export file decryption certificate match token.  See [-store](#BKMK_Store).
+- **policy** uses the policy module's registry key.
 
-Use -f to import certificates not issued by the CA.
+- **exit** uses the first exit module's registry key.
 
-[-f] [-silent] [-split] [-config Machine\CAName] [-p Password] [-symkeyalg SymmetricKeyAlgorithm[,KeyLength]]
+- **template** uses the template registry key (use `-user` for user templates).
 
-Return to [Menu](#BKMK_menu)
+- **enroll** uses the enrollment registry key (use `-user` for user context).
 
-## <a name="BKMK_ImportCert"></a>-ImportCert
+- **chain** uses the chain configuration registry key.
 
-CertUtil [Options] -ImportCert Certfile [ExistingRow]
+- **policyservers** uses the Policy Servers registry key.
 
-Import a certificate file into the database
+- **progID** uses the policy or exit module's ProgID (registry subkey name).
 
-Use ExistingRow to import the certificate in place of a pending request for the same key.
+- **registryvaluename** uses the registry value name (use `Name*` to prefix match).
 
-Use -f to import certificates not issued by the CA.
+- **value** uses the new numeric, string or date registry value or filename. If a numeric value starts with `+` or `-`, the bits specified in the new value are set or cleared in the existing registry value.
 
-The CA may also need to be configured to support foreign certificate import: certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN
+```
+[-f] [-user] [-grouppolicy] [-config Machine\CAName]
+```
 
+#### Remarks
+
+- If a string value starts with `+` or `-`, and the existing value is a `REG_MULTI_SZ` value, the string is added to or removed from the existing registry value. To force creation of a `REG_MULTI_SZ` value, add `\n` to the end of the string value.
+
+- If the value starts with `\@`, the rest of the value is the name of the file containing the hexadecimal text representation of a binary value. If it doesn't refer to a valid file, it's instead parsed as `[Date][+|-][dd:hh]` - an optional date plus or minus optional days and hours. If both are specified, use a plus sign (+) or minus sign (-) separator. Use `now+dd:hh` for a date relative to the current time.
+
+- Use `chain\chaincacheresyncfiletime \@now` to effectively flush cached CRLs.
+
+### -importKMS
+
+Imports user keys and certificates into the server database for key archival.
+
+```
+certutil [options] -importKMS userkeyandcertfile [certID]
+```
+
+Where:
+
+- **userkeyandcertfile** is a data file with user private keys and certificates that are to be archived. This file can be:
+
+  - An Exchange Key Management Server (KMS) export file.
+
+  - A PFX file.
+
+- certID is a KMS export file decryption certificate match token. For more info, see the `-store` parameter in this article.
+
+- `-f` imports certificates not issued by the Certificate Authority.
+
+```
+[-f] [-silent] [-split] [-config Machine\CAName] [-p password] [-symkeyalg symmetrickeyalgorithm[,keylength]]
+```
+
+### -importcert
+
+Imports a certificate file into the database.
+
+```
+certutil [options] -importcert certfile [existingrow]
+```
+
+Where:
+
+- **existingrow** imports the certificate in place of a pending request for the same key.
+
+- `-f` imports certificates not issued by the Certificate Authority.
+
+```
 [-f] [-config Machine\CAName]
+```
 
-Return to [Menu](#BKMK_menu)
+#### Remarks
 
-## <a name="BKMK_GetKey"></a>-GetKey
+The Certificate Authority may also need to be configured to support foreign certificates. To do this, type `import - certutil -setreg ca\KRAFlags +KRAF_ENABLEFOREIGN`.
 
-CertUtil [Options] -GetKey SearchToken [RecoveryBlobOutFile]
+### -getkey
 
-CertUtil [Options] -GetKey SearchToken script OutputScriptFile
+Retrieves an archived private key recovery blob, generates a recovery script, or recovers archived keys.
 
-CertUtil [Options] -GetKey SearchToken retrieve | recover OutputFileBaseName
+```
+certutil [options] -getkey searchtoken [recoverybloboutfile]
+certutil [options] -getkey searchtoken script outputscriptfile
+certutil [options] -getkey searchtoken retrieve | recover outputfilebasename
+```
 
-Retrieve archived private key recovery blob, generate a recovery script, or recover archived keys
+Where:
 
-script: generate a script to retrieve and recover keys (default behavior if multiple matching recovery candidates are found, or if the output file is not specified).
+- **script** generates a script to retrieve and recover keys (default behavior if multiple matching recovery candidates are found, or if the output file is not specified).
 
-retrieve: retrieve one or more Key Recovery Blobs (default behavior if exactly one matching recovery candidate is found, and if the output file is specified)
+- **retrieve** retrieves one or more Key Recovery Blobs (default behavior if exactly one matching recovery candidate is found, and if the output file is specified). Using this option truncates any extension and appends the certificate-specific string and the .rec extension for each key recovery blob.  Each file contains a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
 
-recover: retrieve and recover private keys in one step (requires Key Recovery Agent certificates and private keys)
+- **recover** retrieves and recovers private keys in one step (requires Key Recovery Agent certificates and private keys). Using this option truncates any extension and appends the .p12 extension.  Each file contains the recovered certificate chains and associated private keys, stored as a PFX file.
 
-SearchToken: Used to select the keys and certificates to be recovered.
+- **searchtoken** selects the keys and certificates to be recovered, including:
 
-Can be any of the following:
-1.  Certificate Common Name
-2.  Certificate Serial Number
-3.  Certificate SHA-1 hash (thumbprint)
-4.  Certificate KeyId SHA-1 hash (Subject Key Identifier)
-5.  Requester Name (domain\user)
-6.  UPN (user@domain)
+  - 1. Certificate Common Name
 
-RecoveryBlobOutFile: output file containing a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
+  - 2. Certificate Serial Number
 
-OutputScriptFile: output file containing a batch script to retrieve and recover private keys.
+  - 3. Certificate SHA-1 hash (thumbprint)
 
-OutputFileBaseName: output file base name. For retrieve, any extension is truncated and a certificate-specific string and the .rec extension are appended for each key recovery blob.  Each file contains a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates. For recover, any extension is truncated and the .p12 extension is appended.  Contains the recovered certificate chains and associated private keys, stored as a PFX file.
+  - 4. Certificate KeyId SHA-1 hash (Subject Key Identifier)
 
-[-f] [-UnicodeText] [-silent] [-config Machine\CAName] [-p Password] [-ProtectTo SAMNameAndSIDList] [-csp Provider]
+  - 5. Requester Name (domain\user)
 
-Return to [Menu](#BKMK_menu)
+  - 6. UPN (user\@domain)
 
-## <a name="BKMK_RecoverKey"></a>-RecoverKey
+- **recoverybloboutfile** outputs a file with a certificate chain and an associated private key, still encrypted to one or more Key Recovery Agent certificates.
 
-CertUtil [Options] -RecoverKey RecoveryBlobInFile [PFXOutFile [RecipientIndex]]
+- **outputscriptfile** outputs a file with a batch script to retrieve and recover private keys.
 
-Recover archived private key
+- **outputfilebasename** outputs a file base name.
 
-[-f] [-user] [-silent] [-split] [-p Password] [-ProtectTo SAMNameAndSIDList] [-csp Provider] [-t Timeout]
+```
+[-f] [-unicodetext] [-silent] [-config Machine\CAName] [-p password] [-protectto SAMnameandSIDlist] [-csp provider]
+```
 
-Return to [Menu](#BKMK_menu)
+### -recoverkey
 
-## <a name="BKMK_MergePFX"></a>-MergePFX
+Recover an archived private key.
 
-CertUtil [Options] -MergePFX PFXInFileList PFXOutFile [ExtendedProperties]
+```
+certutil [options] -recoverkey recoveryblobinfile [PFXoutfile [recipientindex]]
+```
 
-PFXInFileList: Comma separated PFX input file list
+```
+[-f] [-user] [-silent] [-split] [-p password] [-protectto SAMnameandSIDlist] [-csp provider] [-t timeout]
+```
 
-PFXOutFile: PFX output file
+### -mergePFX
 
-ExtendedProperties: Include extended properties
+Merges PFX files.
 
-The password specified on the command line is a comma separated password list.  If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is "*", the user will be prompted for the output file password.
+```
+certutil [options] -mergePFX PFXinfilelist PFXoutfile [extendedproperties]
+```
 
-[-f] [-user] [-split] [-p Password] [-ProtectTo SAMNameAndSIDList] [-csp Provider]
+Where:
 
-Return to [Menu](#BKMK_menu)
+- **PFXinfilelist** is a comma-separated list of PFX input files.
 
-## <a name="BKMK_ConvertEPF"></a>-ConvertEPF
+- **PFXoutfile** is the name of the PFX output file.
 
-CertUtil [Options] -ConvertEPF PFXInFileList EPFOutFile [cast | cast-] [V3CACertId][,Salt]
+- **extendedproperties** includes any extended properties.
 
-Convert PFX files to EPF file
+```
+[-f] [-user] [-split] [-p password] [-protectto SAMnameAndSIDlist] [-csp provider]
+```
 
-PFXInFileList: Comma separated PFX input file list
+#### Remarks
 
-EPF: EPF output file
+- The password specified on the command line must be a comma-separated password list.
 
-cast: Use CAST 64 encryption
+- If more than one password is specified, the last password is used for the output file. If only one password is provided or if the last password is `*`, the user will be prompted for the output file password.
 
-cast-: Use CAST 64 encryption (export)
+### -convertEPF
 
-V3CACertId: V3 CA Certificate match token.  See [-store](#BKMK_Store) CertId description.
+Converts a PFX file into an EPF file.
 
-Salt: EPF output file salt string
+```
+certutil [options] -convertEPF PFXinfilelist PFXoutfile [cast | cast-] [V3CAcertID][,salt]
+```
 
-The password specified on the command line is a comma separated password list. If more than one password is specified, the last password is used for the output file.  If only one password is provided or if the last password is "*", the user will be prompted for the output file password.
+Where:
 
-[-f] [-silent] [-split] [-dc DCName] [-p Password] [-csp Provider]
 
-Return to [Menu](#BKMK_menu)
+- **PFXinfilelist** is a comma-separated list of PFX input files.
 
-## <a name="BKMK_Options"></a>Options
+- **PFXoutfile** is the name of the PFX output file.
 
-This section defines the options that you can specify with the command.
+- **EPF** is the name of the EPF output file.
 
-|Options|Description|
-|-------|-----------|
-|-nullsign|Use hash of data as signature|
-|-f|Force overwrite|
-|-enterprise|Use local machine Enterprise registry certificate store|
-|-user|Use HKEY_CURRENT_USER keys or certificate store|
-|-GroupPolicy|Use Group Policy certificate store|
-|-ut|Display user templates|
-|-mt|Display machine templates|
-|-Unicode|Write redirected output in Unicode|
-|-UnicodeText|Write output file in Unicode|
-|-gmt|Display times as GMT|
-|-seconds|Display times with seconds and milliseconds|
-|-silent|Use silent flag to acquire crypt context|
-|-split|Split embedded ASN.1 elements, and save to files|
-|-v|Verbose operation|
-|-privatekey|Display password and private key data|
-|-pin PIN|Smart Card PIN|
-|-urlfetch|Retrieve and verify AIA Certs and CDP CRLs|
-|-config Machine\CAName|CA and computer name string|
-|-PolicyServer URLOrId|Policy Server URL or Id. For selection U/I, use -PolicyServer. For all Policy Servers, use -PolicyServer *|
-|-Anonymous|Use anonymous SSL credentials|
-|-Kerberos|Use Kerberos SSL credentials|
-|-ClientCertificate ClientCertId|Use X.509 Certificate SSL credentials. For selection U/I, use -clientCertificate.|
-|-UserName UserName|Use named account for SSL credentials. For selection U/I, use -UserName.|
-|-Cert CertId|Signing certificate|
-|-dc DCName|Target a specific Domain Controller|
-|-restrict RestrictionList|Comma separated Restriction List. Each restriction consists of a column name, a relational operator and a constant integer, string or date. One column name may be preceded by a plus or minus sign to indicate the sort order. Examples:</br>"RequestId = 47"</br>"+RequesterName >= a, RequesterName < b"</br>"-RequesterName > DOMAIN, Disposition = 21"|
-|-out ColumnList|Comma separated Column List|
-|-p Password|Password|
-|-ProtectTo SAMNameAndSIDList|Comma separated SAM Name/SID List|
-|-csp Provider|Provider|
-|-t Timeout|URL fetch timeout in milliseconds|
-|-symkeyalg SymmetricKeyAlgorithm[,KeyLength]|Name of Symmetric Key Algorithm with optional key length, example: AES,128 or 3DES|
+- **cast** uses CAST 64 encryption.
 
-Return to [Menu](#BKMK_menu)
+- **cast-** uses CAST 64 encryption (export)
 
-## <a name="BKMK_AddedExamples"></a>Additional certutil examples
+- **V3CAcertID** is the V3 CA certificate match token. For more info, see the `-store` parameter in this article.
 
-For some examples of how to use this command, see
-1.  [Certutil Examples for Managing Active Directory Certificate Services (AD CS) from the Command Line](https://social.technet.microsoft.com/wiki/contents/articles/3063.certutil-examples-for-managing-active-directory-certificate-services-ad-cs-from-the-command-line.aspx)
-2.  [Certutil tasks for managing certificates](https://technet.microsoft.com/library/cc772898.aspx)
-3.  [Binary Request Export Using the CertUtil.exe Command-Line Tool Walkthrough](https://social.technet.microsoft.com/wiki/contents/articles/7573.active-directory-certificate-services-pki-key-archival-and-management.aspx)
-4.  [Root CA certificate renewal](https://social.technet.microsoft.com/wiki/contents/articles/2016.root-ca-certificate-renewal.aspx)
-5.  [Certutil](https://msdn.microsoft.com/subscriptions/cc773087.aspx)
+- **salt** is the EPF output file salt string.
 
-Return to [Menu](#BKMK_menu)
+```
+[-f] [-silent] [-split] [-dc DCName] [-p password] [-csp provider]
+```
+
+#### Remarks
+
+- The password specified on the command line must be a comma-separated password list.
+
+- If more than one password is specified, the last password is used for the output file. If only one password is provided or if the last password is `*`, the user will be prompted for the output file password.
+
+### -?
+
+Displays the list of parameters.
+
+```
+certutil -?
+certutil <name_of_parameter> -?
+certutil -? -v
+```
+
+Where:
+
+- **-?** displays the full list of parameters
+
+- **-`<name_of_parameter>` -?** displays help content for the specified parameter.
+
+- **-? -v** displays a full list of parameters and options.
+
+## Options
+
+This section defines all of the options you're able to specify, based on the command. Each parameter includes information about which options are valid for use.
+
+| Options | Description |
+| ------- | ----------- |
+| -nullsign | Use the hash of the data as a signature. |
+| -f | Force overwrite. |
+| -enterprise | Use the local machine enterprise registry certificate store. |
+| -user | Use the HKEY_CURRENT_USER keys or certificate store. |
+| -GroupPolicy | Use the group policy certificate store. |
+| -ut | Display user templates. |
+| -mt | Display machine templates. |
+| -Unicode | Write redirected output in Unicode. |
+| -UnicodeText | Write output file in Unicode. |
+| -gmt | Display times using GMT. |
+| -seconds | Display times using seconds and milliseconds. |
+| -silent | Use the `silent` flag to acquire crypt context. |
+| -split | Split embedded ASN.1 elements, and save to files. |
+| -v | Provide more detailed (verbose) information. |
+| -privatekey | Display password and private key data. |
+| -pin PIN | Smart card PIN. |
+| -urlfetch | Retrieve and verify AIA Certs and CDP CRLs. |
+| -config Machine\CAName | Certificate Authority and computer name string. |
+| -policyserver URLorID | Policy Server URL or ID. For selection U/I, use `-policyserver`. For all Policy Servers, use `-policyserver *`|
+| -anonymous | Use anonymous SSL credentials. |
+| -kerberos | Use Kerberos SSL credentials. |
+| -clientcertificate clientcertID | Use X.509 Certificate SSL credentials. For selection U/I, use `-clientcertificate`. |
+| -username username | Use named account for SSL credentials. For selection U/I, use `-username`. |
+| -cert certID | Signing certificate. |
+| -dc DCName | Target a specific Domain Controller. |
+| -restrict restrictionlist | Comma-separated Restriction List. Each restriction consists of a column name, a relational operator and a constant integer, string or date. One column name may be preceded by a plus or minus sign to indicate the sort order. For example: `requestID = 47`, `+requestername >= a, requestername`, or `-requestername > DOMAIN, Disposition = 21` |
+| -out columnlist | Comma-separated column list. |
+| -p password | Password |
+| -protectto SAMnameandSIDlist | Comma-separated SAM name/SID list. |
+| -csp provider | Provider |
+| -t timeout | URL fetch timeout in milliseconds. |
+| -symkeyalg symmetrickeyalgorithm[,keylength] | Name of the Symmetric Key Algorithm with optional key length. For example: `AES,128` or `3DES` |
+
+### Additional References
+
+For some more examples about how to use this command, see
+
+- [Active Directory Certificate Services (AD CS)](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11))
+
+- [Certutil tasks for managing certificates](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
+
+- [certutil command](certutil.md)

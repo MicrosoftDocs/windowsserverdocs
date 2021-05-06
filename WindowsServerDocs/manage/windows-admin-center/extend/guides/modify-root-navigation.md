@@ -1,13 +1,11 @@
 ---
 title: Modify root navigation behavior
 description: Develop a solution extension Windows Admin Center SDK (Project Honolulu) - modify root navigation behavior
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 08/07/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
 ---
 
 # Modify root navigation behavior for a solution extension

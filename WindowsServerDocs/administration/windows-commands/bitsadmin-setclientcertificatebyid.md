@@ -1,48 +1,43 @@
 ---
 title: bitsadmin setclientcertificatebyid
-description: "Windows Commands topic for **bitsadmin setclientcertificatebyid** Specifies the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request"
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin setclientcertificatebyid command, which specifies the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request
+ms.topic: reference
 ms.assetid: 8585a7a1-7472-437b-b04a-a11925782a3a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin setclientcertificatebyid
-
-
 
 Specifies the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request.
 
 ## Syntax
 
 ```
-bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> hexa-decimal_cert_id>
+bitsadmin /setclientcertificatebyid <job> <store_location> <store_name> <hexadecimal_cert_id>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|Store_location|Identifies the location of a system store to use for looking up the certificate. Possible values include:</br>1 (CURRENT_USER)</br>2 (LOCAL_MACHINE)</br>3 (CURRENT_SERVICE)</br>4 (SERVICES)</br>5 (USERS)</br>6 (CURRENT_USER_GROUP_POLICY)</br>7 (LOCAL_MACHINE_GROUP_POLICY)</br>8 (LOCAL_MACHINE_ENTERPRISE)|
-|Store_name|The name of the certificate store. Possible values include:</br>CA (Certification Authority certificates)</br>MY (Personal certificates)</br>ROOT (Root certificates)</br>SPC (Software Publisher Certificate)|
-|Hexadecimal_cert_id|A hexadecimal number representing the hash of the certificate|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
+| store_location | Identifies the location of a system store to use for looking up the certificate, including:<ul><li>CURRENT_USER</li><li>LOCAL_MACHINE</li><li>CURRENT_SERVICE</li><li>SERVICES</li><li>USERS</li><li>CURRENT_USER_GROUP_POLICY</li><li>LOCAL_MACHINE_GROUP_POLICY</li><li>LOCAL_MACHINE_ENTERPRISE.</li></ul> |
+| store_name | The name of the certificate store, including:<ul><li>CA (Certification Authority certificates)</li><li>MY (Personal certificates)</li><li>ROOT (Root certificates)</li><li>SPC (Software Publisher Certificate).</li></ul> |
+| hexadecimal_cert_id | A hexadecimal number representing the hash of the certificate. |
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example specifies the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request for the job named *myJob*.
+To specify the identifier of the client certificate to use for client authentication in an HTTPS (SSL) request for the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin Bitsadmin /SetClientCertificateByID myJob BG_CERT_STORE_LOCATION_CURRENT_USER MY A106B52356D3FBCD1853A41B619358BD 
+bitsadmin /setclientcertificatebyid myDownloadJob BG_CERT_STORE_LOCATION_CURRENT_USER MY A106B52356D3FBCD1853A41B619358BD
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

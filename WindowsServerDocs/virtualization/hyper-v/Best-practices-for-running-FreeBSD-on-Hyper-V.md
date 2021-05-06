@@ -1,20 +1,15 @@
 ---
 title: Best practices for running FreeBSD on Hyper-V
-description: "Provides recommendations for running FreeBSD on virtual machines"
-ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
-ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
+description: Provides recommendations for running FreeBSD on virtual machines
 ms.topic: article
 ms.assetid: 0c66f1c8-2606-43a3-b4cc-166acaaf2d2a
-author: shirgall
-ms.author: kathydav
-ms.date: 01/09/2017
+ms.author: benarm
+author: BenjaminArmstrong
+ms.date: 01/08/2021
 ---
 # Best practices for running FreeBSD on Hyper-V
 
->Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>Applies To: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 This topic contains a list of recommendations for running FreeBSD as a guest operating system on a Hyper-V virtual machine.
 
@@ -36,7 +31,7 @@ The Common Address Redundancy Protocol (CARP) allows multiple hosts to share the
 
 ## Create labels for disk devices
 
-During startup, device nodes are created as new devices are discovered. This can mean that device names can change when new devices are added. If you get a ROOT MOUNT ERROR during startup, you should create labels for each IDE partition to avoid conflicts and changes. To learn how, see [Labeling Disk Devices](https://www.freebsd.org/doc/handbook/geom-glabel.html). Below are examples. 
+During startup, device nodes are created as new devices are discovered. This can mean that device names can change when new devices are added. If you get a ROOT MOUNT ERROR during startup, you should create labels for each IDE partition to avoid conflicts and changes. To learn how, see [Labeling Disk Devices](https://www.freebsd.org/doc/handbook/geom-glabel.html). Below are examples.
 
 > [!IMPORTANT]
 > Make a backup copy of your fstab before making any changes.
@@ -64,11 +59,10 @@ During startup, device nodes are created as new devices are discovered. This can
    # Device                Mountpoint      FStype  Options         Dump    Pass#
    /dev/label/rootfs       /               ufs     rw              1       1
    /dev/label/swap         none            swap    sw              0       0
-
    ```
 
-4.	The system can now be rebooted. If everything went well, it will come up normally and mount will show:
-   
+4. The system can now be rebooted. If everything went well, it will come up normally and mount will show:
+
    ```
    # mount
    /dev/label/rootfs on / (ufs, local, journaled soft-updates)

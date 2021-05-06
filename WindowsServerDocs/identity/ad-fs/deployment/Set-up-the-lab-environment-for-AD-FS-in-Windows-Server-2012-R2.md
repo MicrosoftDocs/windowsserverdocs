@@ -1,20 +1,16 @@
 ---
+description: "Learn more about: Set up the lab environment for AD FS in Windows Server 2012 R2"
 ms.assetid: 6b38480e-5b1c-49f0-9d46-8cf22f70f0d2
 title: Set up the lab environment for AD FS in Windows Server 2012 R2
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
-ms.technology: identity-adfs
 ---
 
 # Set up the lab environment for AD FS in Windows Server 2012 R2
 
->Applies To: Windows Server 2012 R2
 
 This topic outlines the steps to configure a test environment that can be used to complete the walkthroughs in the following walkthrough guides:
 
@@ -41,22 +37,22 @@ To set up this test environment, complete the following steps:
 4.  [Step 4: Configure the client computer (Client1)](../../ad-fs/deployment/../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
 
 ## <a name="BKMK_1"></a>Step 1: Configure the domain controller (DC1)
-For the purposes of this test environment, you can call your root Active Directory domain **contoso.com** and specify **pass@word1** as the administrator password.
+For the purposes of this test environment, you can call your root Active Directory domain **contoso.com** and specify <strong>pass@word1</strong> as the administrator password.
 
--   Install the AD DS role service and install Active Directory Domain Services (AD DS) to make your computer a domain controller in  Windows Server 2012 R2 . This action upgrades your AD DS schema as part of the domain controller creation. For more information and step-by-step instructions, see[https://technet.microsoft.com/library/hh472162.aspx](https://technet.microsoft.com/library/hh472162.aspx).
+-   Install the AD DS role service and install Active Directory Domain Services (AD DS) to make your computer a domain controller in  Windows Server 2012 R2 . This action upgrades your AD DS schema as part of the domain controller creation. For more information and step-by-step instructions, see[https://technet.microsoft.com/library/hh472162.aspx](../../ad-ds/deploy/install-active-directory-domain-services--level-100-.md).
 
 ### <a name="BKMK_2"></a>Create test Active Directory accounts
 After your domain controller is functional, you can create a test group and test user accounts in this domain and add the user account to the group account. You use these accounts to complete the walkthroughs in the walkthrough guides that are referenced earlier in this topic.
 
 Create the following accounts:
 
--   User: **Robert Hatley** with the following credentials: User name: **RobertH** and password: **P@ssword**
+- User: **Robert Hatley** with the following credentials: User name: **RobertH** and password: <strong>P@ssword</strong>
 
--   Group: **Finance**
+- Group: **Finance**
 
-For information about how to create user and group accounts in Active Directory (AD), see [https://technet.microsoft.com/library/cc783323%28v.aspx](https://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx).
+For information about how to create user and group accounts in Active Directory (AD), see [https://technet.microsoft.com/library/cc783323%28v.aspx](/previous-versions/windows/it-pro/windows-server-2003/cc783323(v=ws.10)).
 
-Add the **Robert Hatley** account to the **Finance** group. For information on how to add a user to a group in Active Directory, see [https://technet.microsoft.com/library/cc737130%28v=ws.10%29.aspx](https://technet.microsoft.com/library/cc737130%28v=ws.10%29.aspx).
+Add the **Robert Hatley** account to the **Finance** group. For information on how to add a user to a group in Active Directory, see [https://technet.microsoft.com/library/cc737130%28v=ws.10%29.aspx](/previous-versions/windows/it-pro/windows-server-2003/cc737130(v=ws.10)).
 
 ### Create a GMSA account
 The group Managed Service Account (GMSA) account is required during the Active Directory Federation Services (AD FS) installation and configuration.
@@ -74,7 +70,7 @@ The group Managed Service Account (GMSA) account is required during the Active D
 ## <a name="BKMK_4"></a>Step 2: Configure the federation server (ADFS1) by using Device Registration Service
 To set up another virtual machine, install  Windows Server 2012 R2  and connect it to the domain **contoso.com**. Set up the computer after you have joined it to the domain, and then proceed to install and configure the AD FS role.
 
-For a video, see [Active Directory Federation Services How-To Video Series: Installing an AD FS Server Farm](https://technet.microsoft.com/video/dn469436).
+For a video, see [Active Directory Federation Services How-To Video Series: Installing an AD FS Server Farm](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search).
 
 ### Install a server SSL certificate
 You must install a server Secure Socket Layer (SSL) certificate on the ADFS1 server in the local computer store. The certificate MUST have the following attributes:
@@ -85,29 +81,29 @@ You must install a server Secure Socket Layer (SSL) certificate on the ADFS1 ser
 
 -   Subject Alternative Name (DNS): enterpriseregistration.contoso.com
 
-For more information about setting up SSL certificates, see [Configure SSL/TLS on a Web site in the domain with an Enterprise CA](https://social.technet.microsoft.com/wiki/contents/articles/12485.configure-ssltls-on-a-web-site-in-the-domain-with-an-enterprise-ca.aspx).
+For more information about setting up SSL certificates, see [Configure SSL/TLS on a Web site in the domain with an Enterprise CA](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)).
 
-[Active Directory Federation Services How-To Video Series: Updating Certificates](https://technet.microsoft.com/video/adfs-updating-certificates).
+[Active Directory Federation Services How-To Video Series: Updating Certificates](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search).
 
 ### Install the AD FS server role
 
 ##### To install the Federation Service role service
 
-1.  Log on to the server by using the domain administrator account administrator@contoso.com.
+1. Log on to the server by using the domain administrator account administrator@contoso.com.
 
-2.  Start Server Manager. To start Server Manager, click **Server Manager** on the Windows **Start** screen, or click **Server Manager** on the Windows taskbar on the Windows desktop. On the **Quick Start** tab of the **Welcome** tile on the **Dashboard** page, click **Add roles and features**. Alternatively, you can click **Add Roles and Features** on the **Manage** menu.
+2. Start Server Manager. To start Server Manager, click **Server Manager** on the Windows **Start** screen, or click **Server Manager** on the Windows taskbar on the Windows desktop. On the **Quick Start** tab of the **Welcome** tile on the **Dashboard** page, click **Add roles and features**. Alternatively, you can click **Add Roles and Features** on the **Manage** menu.
 
-3.  On the **Before you begin** page, click **Next**.
+3. On the **Before you begin** page, click **Next**.
 
-4.  On the **Select installation type** page, click **Role-based or feature-based installation**, and then click **Next**.
+4. On the **Select installation type** page, click **Role-based or feature-based installation**, and then click **Next**.
 
-5.  On the **Select destination server** page, click **Select a server from the server pool**, verify that the target computer is selected, and then click **Next**.
+5. On the **Select destination server** page, click **Select a server from the server pool**, verify that the target computer is selected, and then click **Next**.
 
-6.  On the **Select server roles** page, click **Active Directory Federation Services**, and then click **Next**.
+6. On the **Select server roles** page, click **Active Directory Federation Services**, and then click **Next**.
 
-7.  On the **Select features** page, click **Next**.
+7. On the **Select features** page, click **Next**.
 
-8.  On the **Active Directory Federation Service (AD FS)** page, click **Next**.
+8. On the **Active Directory Federation Service (AD FS)** page, click **Next**.
 
 9. After you verify the information on the **Confirm installation selections** page, select the **Restart the destination server automatically if required** check box, and then click **Install**.
 
@@ -145,7 +141,7 @@ The next step is to configure the federation server.
 9. On the **Results** page, review the results, check whether the configuration has completed successfully, and then click **Next steps required for completing your federation service deployment**.
 
 ### Configure Device Registration Service
-The next step is to configure Device Registration Service on the ADFS1 server. For a video, see [Active Directory Federation Services How-To Video Series: Enabling the Device Registration Service](https://technet.microsoft.com/video/adfs-how-to-enabling-the-device-registration-service).
+The next step is to configure Device Registration Service on the ADFS1 server. For a video, see [Active Directory Federation Services How-To Video Series: Enabling the Device Registration Service](https://channel9.msdn.com/).
 
 ##### To configure Device Registration Service for Windows Server 2012 RTM
 
@@ -178,7 +174,7 @@ On DC1, you must ensure that the following Domain Name System (DNS) records are 
 
 You can use the following procedure to add a host (A) resource record to corporate DNS name servers for the federation server and Device Registration Service.
 
-Membership in the Administrators group or an equivalent is the minimum requirement to complete this procedure. Review details about using the appropriate accounts and group memberships in the  HYPERLINK "https://go.microsoft.com/fwlink/?LinkId=83477" Local and Domain Default Groups (https://go.microsoft.com/fwlink/p/?LinkId=83477).
+Membership in the Administrators group or an equivalent is the minimum requirement to complete this procedure. Review details about using the appropriate accounts and group memberships in the  HYPERLINK "<https://go.microsoft.com/fwlink/?LinkId=83477>" Local and Domain Default Groups (<https://go.microsoft.com/fwlink/p/?LinkId=83477>).
 
 ##### To add a host (A) and alias (CNAME) resource records to DNS for your federation server
 
@@ -221,24 +217,24 @@ You must complete the following steps to set up a web server with this sample cl
 
 ### <a name="BKMK_15"></a>Install the Web Server role and Windows Identity Foundation
 
-1.  > [!NOTE]
-    > You must have access to the  Windows Server 2012 R2  installation media.
+1. > [!NOTE]
+   > You must have access to the  Windows Server 2012 R2  installation media.
 
-    Log on to WebServ1 by using **administrator@contoso.com** and the password **pass@word1**.
+   Log on to WebServ1 by using <strong>administrator@contoso.com</strong> and the password <strong>pass@word1</strong>.
 
-2.  From Server Manager, on the **Quick Start** tab of the **Welcome** tile on the **Dashboard** page, click **Add roles and features**. Alternatively, you can click **Add Roles and Features** on the **Manage** menu.
+2. From Server Manager, on the **Quick Start** tab of the **Welcome** tile on the **Dashboard** page, click **Add roles and features**. Alternatively, you can click **Add Roles and Features** on the **Manage** menu.
 
-3.  On the **Before you begin** page, click **Next**.
+3. On the **Before you begin** page, click **Next**.
 
-4.  On the **Select installation type** page, click **Role-based or feature-based installation**, and then click **Next**.
+4. On the **Select installation type** page, click **Role-based or feature-based installation**, and then click **Next**.
 
-5.  On the **Select destination server** page, click **Select a server from the server pool**, verify that the target computer is selected, and then click **Next**.
+5. On the **Select destination server** page, click **Select a server from the server pool**, verify that the target computer is selected, and then click **Next**.
 
-6.  On the **Select server roles** page, select the check box next to **Web Server (IIS)**, click **Add Features**, and then click **Next**.
+6. On the **Select server roles** page, select the check box next to **Web Server (IIS)**, click **Add Features**, and then click **Next**.
 
-7.  On the **Select features** page, select **Windows Identity Foundation 3.5**, and then click **Next**.
+7. On the **Select features** page, select **Windows Identity Foundation 3.5**, and then click **Next**.
 
-8.  On the **Web Server Role (IIS)** page, click **Next**.
+8. On the **Web Server Role (IIS)** page, click **Next**.
 
 9. On the **Select role services** page, select and expand **Application Development**. Select **ASP.NET 3.5**, click **Add Features**, and then click **Next**.
 
@@ -317,13 +313,13 @@ You must complete the following steps to set up a web server with this sample cl
 
     7.  Your sample application is now configured. If you test the application URL **https://webserv1.contoso.com/claimapp**, it should redirect you to your federation server. The federation server should display an error page because you have not yet configured the relying party trust. In other words, you have not secured this test application by AD FS.
 
-You must now secure your sample application that runs on your web server with AD FS. You can do this by adding a relying party trust on your federation server (ADFS1). For a video, see [Active Directory Federation Services How-To Video Series: Add a Relying Party Trust](https://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust).
+You must now secure your sample application that runs on your web server with AD FS. You can do this by adding a relying party trust on your federation server (ADFS1). For a video, see [Active Directory Federation Services How-To Video Series: Add a Relying Party Trust](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search).
 
 ### <a name="BKMK_11"></a>Create a relying party trust on your federation server
 
 1.  On you federation server (ADFS1), in the **AD FS Management console**, navigate to **Relying Party Trusts**, and then click **Add Relying Party Trust**.
 
-2.  On the **Select Data Source** page, select **Import data about the relying party published online or on a local network**, enter the metadata URL for **claimapp**, and then click **Next**. Running FedUtil.exe created a metadata .xml file. It is located at 
+2.  On the **Select Data Source** page, select **Import data about the relying party published online or on a local network**, enter the metadata URL for **claimapp**, and then click **Next**. Running FedUtil.exe created a metadata .xml file. It is located at
     **https://webserv1.contoso.com/claimapp/federationmetadata/2007-06/federationmetadata.xml**.
 
 3.  On the **Specify Display Name** page, specify the **display name** for your relying party trust, **claimapp**, and then click **Next**.
@@ -358,11 +354,8 @@ You also must set up and use a Microsoft account to log on to Client1.
 ## See Also
 
 
-- [Active Directory Federation Services How-To Video Series: Installing an AD FS Server Farm](https://technet.microsoft.com/video/dn469436)
-- [Active Directory Federation Services How-To Video Series: Updating Certificates](https://technet.microsoft.com/video/adfs-updating-certificates)
-- [Active Directory Federation Services How-To Video Series: Add a Relying Party Trust](https://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust)
-- [Active Directory Federation Services How-To Video Series: Enabling the Device Registration Service](https://technet.microsoft.com/video/adfs-how-to-enabling-the-device-registration-service)
-- [Active Directory Federation Services How-To Video Series: Installing the Web Application Proxy](https://technet.microsoft.com/video/dn469438)
-
-
-
+- [Active Directory Federation Services How-To Video Series: Installing an AD FS Server Farm](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)
+- [Active Directory Federation Services How-To Video Series: Updating Certificates](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)
+- [Active Directory Federation Services How-To Video Series: Add a Relying Party Trust](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)
+- [Active Directory Federation Services How-To Video Series: Enabling the Device Registration Service](https://channel9.msdn.com/)
+- [Active Directory Federation Services How-To Video Series: Installing the Web Application Proxy](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)

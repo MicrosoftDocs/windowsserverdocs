@@ -1,52 +1,53 @@
 ---
-title: Scwcmd rollback
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+title: scwcmd rollback
+description: Reference article for the scwcmd rollback command, which applies the most recent rollback policy available, and then deletes that rollback policy.
+ms.topic: reference
 ms.assetid: 4fd9f89b-0420-420a-ad20-4a328636b1e7
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# Scwcmd: rollback
+# scwcmd rollback
 
-> Applies To: Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2012 R2 and Windows Server 2012
 
 Applies the most recent rollback policy available, and then deletes that rollback policy.
 
 ## Syntax
 
 ```
-scwcmd rollback /m:<ComputerName> [/u:<UserName>] [/pw:<Password>]
+scwcmd rollback /m:<computername> [/u:<username>] [/pw:<password>]
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|/m:\<ComputerName>|Specifies the NetBIOS name, DNS name, or IP address of a computer where the rollback operation should be performed.|
-|/u:\<UserName>|Specifies an alternate user account to use when performing a remote rollback. The default is the logged on user.|
-|/pw:\<Password>|Specifies an alternate user credential to use when performing a remote rollback. The default is the logged on user.|
-|/?|Displays help at the command prompt.|
+| Parameter | Description |
+|--|--|
+| /m:`<computername>` | Specifies the NetBIOS name, DNS name, or IP address of a computer where the rollback operation should be performed. |
+| /u:`<username>` | Specifies an alternate user account to use when performing a remote rollback. The default is the logged on user. |
+| /pw:`<password>` | Specifies an alternate user credential to use when performing a remote rollback. The default is the logged on user. |
+| /? | Displays help at the command prompt. |
 
-## Remarks
+## Examples
 
-Scwcmd.exe is only available on computers running Windows Server 2008 R2, Windows Server 2008, or Windows Server 2003.
+To roll back the security policy on a computer at IP address *172.16.0.0*, type:
 
-## <a name="BKMK_Examples"></a>Examples
-
-To roll back the security policy on a computer at IP address 172.16.0.0, type:
 ```
 scwcmd rollback /m:172.16.0.0
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [scwcmd analyze command](scwcmd-analyze.md)
+
+- [scwcmd configure command](scwcmd-configure.md)
+
+- [scwcmd register command](scwcmd-register.md)
+
+- [scwcmd transform command](scwcmd-transform.md)
+
+- [scwcmd view command](scwcmd-view.md)

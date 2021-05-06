@@ -1,22 +1,32 @@
 ---
 ms.assetid: 289cbd10-e7ec-4f2e-8dd1-eb5692565578
 title: Change history for Failover Clustering topics
-ms.prod: windows-server-threshold
-ms.technology: storage-failover-clustering
+description: New and updated topics in the Failover Clustering documentation for Windows Server 2016
 ms.topic: article
 author: JasonGerend
-manager: daveba
+manager: lizross
 ms.author: jgerend
-ms.date: 02/28/2019
-description: New and updated topics in the Failover Clustering documentation for Windows Server 2016
+ms.date: 01/07/2020
 ---
 # Change history for Failover Clustering topics
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2019, Windows Server 2016
 
 This topic lists new and updated topics in the [Failover Clustering](failover-clustering-overview.md) documentation for Windows Server.
 
 > If you're looking for update history for Windows Server 2016, see [Windows 10 and Windows Server 2016 update history](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## January 2020
+
+|New or changed topic                                    |Description |
+|--------------------------------------------------------|------------|
+|[Cluster events](system-events.md)| New     |
+
+## March 2019
+
+|New or changed topic                                    |Description |
+|--------------------------------------------------------|------------|
+|[Cluster affinity](cluster-affinity.md)| New     |
 
 ## February 2019
 
@@ -36,7 +46,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 |New or changed topic|Description|
 |---|---|
-|[Configuring cluster accounts in Active Directory](configure-ad-accounts.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
+|[Configuring cluster accounts in Active Directory](configure-ad-accounts.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) library|
 
 ## October 2018
 
@@ -54,19 +64,19 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 |New or changed topic|Description|
 |---|---|
-|[Configure and manage quorum](manage-cluster-quorum.md) | Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library. |
+|[Configure and manage quorum](manage-cluster-quorum.md) | Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library. |
 
 ## April 2018
 
 |New or changed topic|Description|
 |---|---|
 |[Troubleshooting a Failover Cluster using Windows Error Reporting](troubleshooting-using-WER-reports.md)| New topic. |
-|[Scale-Out File Server for application data](sofs-overview.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
-|[Hardware requirements](clustering-requirements.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
-|[Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
-|[Create a failover cluster](create-failover-cluster.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
-|[Prestage a cluster in AD DS](prestage-cluster-adds.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
-|[Deploy a Cloud Witness for a Failover Cluster](deploy-cloud-witness.md)|Migrated from the [Previous Versions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Scale-Out File Server for application data](sofs-overview.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Hardware requirements](clustering-requirements.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Use Cluster Shared Volumes (CSVs)](failover-cluster-csvs.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Create a failover cluster](create-failover-cluster.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Prestage a cluster in AD DS](prestage-cluster-adds.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
+|[Deploy a Cloud Witness for a Failover Cluster](deploy-cloud-witness.md)|Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) library.|
 
 ## June 2017
 
@@ -81,7 +91,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 |[Cluster-Aware Updating overview](cluster-aware-updating.md)|New topic.|
 |[Cluster-Aware Updating requirements and best practices](cluster-aware-updating-requirements.md)|New topic.|
 |[Cluster-Aware Updating advanced options](cluster-aware-updating-options.md)|New topic.|
-|[Cluster-Aware Updating FAQ](cluster-aware-updating-faq.md)|New topic.|
+|[Cluster-Aware Updating FAQ](cluster-aware-updating-faq.yml)|New topic.|
 |[Cluster-Aware Updating plug-ins](cluster-aware-updating-plug-ins.md)|New topic.|
 |[Deploy a cloud witness for a Failover Cluster](deploy-cloud-witness.md)|Clarified the type of storage account that's required (you can't use Azure Premium Storage or Blob storage accounts).|
 

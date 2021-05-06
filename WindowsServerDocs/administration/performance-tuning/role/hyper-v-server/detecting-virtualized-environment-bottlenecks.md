@@ -1,10 +1,8 @@
 ---
 title: Detecting bottlenecks in a virtualized environment
 description: How to detect and resolve potential Hyper-v performance bottlenecks
-ms.prod: windows-server-threshold
-ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Asmahi; SandySp; JoPoulso
+ms.author: asmahi
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -93,7 +91,7 @@ If the **Physical NIC Bytes/sec** counter is greater than or equal to 90% of cap
 
 If the **Hyper-V Virtual Network Adapter Bytes/sec** counter is greater than or equal to 250 MBps, you should add additional teamed network adapters in the virtual machine, enable vRSS, and use SR-IOV.
 
-If your workloads can’t meet their network latency, enable SR-IOV to present physical network adapter resources to the virtual machine.
+If your workloads can't meet their network latency, enable SR-IOV to present physical network adapter resources to the virtual machine.
 
 ## Storage bottlenecks
 
@@ -125,7 +123,7 @@ If latencies are consistently greater than 50ms, you should do the following:
 
 -   Use VHDX
 
-## See also
+## Additional References
 
 -   [Hyper-V terminology](terminology.md)
 

@@ -1,13 +1,12 @@
 ---
 title: Dynamic Host Configuration Protocol (DHCP)
-description: This topic provides a brief overview of Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016. 
+description: This topic provides a brief overview of Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
-ms.technology: networking-dhcp
 ms.topic: article
 ms.assetid: 0ff29ef3-c458-4432-9065-e50a7de5b4b9
-ms.author: pashort
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Dynamic Host Configuration Protocol (DHCP)
 
@@ -15,11 +14,11 @@ author: shortpatti
 
 You can use this topic for a brief overview of DHCP in Windows Server 2016.
 
->[!NOTE]
->In addition to this topic, the following DHCP documentation is available.
+> [!NOTE]
+> In addition to this topic, the following DHCP documentation is available.
 >
->- [What's New in DHCP](What-s-New-in-DHCP.md)
->- [Deploy DHCP Using Windows PowerShell](dhcp-deploy-wps.md)
+> - [What's New in DHCP](What-s-New-in-DHCP.md)
+> - [Deploy DHCP Using Windows PowerShell](dhcp-deploy-wps.md)
 
 Dynamic Host Configuration Protocol (DHCP) is a client/server protocol that automatically provides an Internet Protocol (IP) host with its IP address and other related configuration information such as the subnet mask and default gateway. RFCs 2131 and 2132 define DHCP as an Internet Engineering Task Force (IETF) standard based on Bootstrap Protocol (BOOTP), a protocol with which DHCP shares many implementation details. DHCP allows hosts to obtain required TCP/IP configuration information from a DHCP server.
 
@@ -43,8 +42,8 @@ The network administrator establishes DHCP servers that maintain TCP/IP configur
 
 A DHCP-enabled client, upon accepting a lease offer, receives:
 
-- A valid IP address for the subnet to which it is connecting.  
-  
+- A valid IP address for the subnet to which it is connecting.
+
 - Requested DHCP options, which are additional parameters that a DHCP server is configured to assign to clients. Some examples of DHCP options are Router (default gateway), DNS Servers, and DNS Domain Name.
 
 ## Benefits of DHCP

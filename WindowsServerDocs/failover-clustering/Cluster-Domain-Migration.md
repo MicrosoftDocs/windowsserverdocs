@@ -1,17 +1,16 @@
 ---
 title: Cross Domain Cluster Migration in Windows Server 2016/2019
-ms.prod: windows-server-threshold
-ms.manager: eldenc
-ms.technology: failover-clustering
+description: This article describes moving a Windows Server 2019 cluster from one domain to another
+manager: eldenc
 ms.topic: article
 author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 01/18/2019
-description: This article describes moving a Windows Server 2019 cluster from one domain to another
 ms.localizationpriority: medium
 ---
 # Failover Cluster domain migration
 
-> Applies To: Windows Server 2019, Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic provides an overview for moving Windows Server failover clusters from one domain to another.
 
@@ -32,7 +31,7 @@ Microsoft doesn't provide support to administrators who try to move resources fr
 
 ## Windows Server 2016 and earlier
 
-In Windows Server 2016 and earlier, the Cluster service didn't have the capability of moving from one domain to another.  This was due to the increased dependence on Active Directory Domain Services and the virtual names created.   
+In Windows Server 2016 and earlier, the Cluster service didn't have the capability of moving from one domain to another.  This was due to the increased dependence on Active Directory Domain Services and the virtual names created.
 
 ## Options
 
@@ -40,7 +39,7 @@ In order to do such a move, there are two options.
 
 The first option involves destroying the cluster and rebuilding it in the new domain.
 
-![Destroy and Rebuild](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-1.gif)
+![Destroy and Rebuild](media/Cross-Domain-Cluster-Migration/Cross-Cluster-Domain-Migration-1.gif)
 
 As the animation shows, this option is destructive with the steps being:
 
@@ -50,19 +49,19 @@ As the animation shows, this option is destructive with the steps being:
 
 The second option is less destructive but requires additional hardware as a new cluster would need to be built in the new domain.  Once the cluster is in the new domain, run the Cluster Migration Wizard to migrate the resources. Note that this doesn't migrate data - you'll need to use another tool to migrate data, such as [Storage Migration Service](../storage/storage-migration-service/overview.md)(once cluster support is added).
 
-![Build and Migrate](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-2.gif)
+![Build and Migrate](media/Cross-Domain-Cluster-Migration/Cross-Cluster-Domain-Migration-2.gif)
 
 As the animation shows, this option is not destructive but does require either different hardware or a node from the existing cluster than has been removed.
 
 1. Create a new clusterin the new domain while still having the old cluster available.
-2. Use the [Cluster Migration Wizard](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754481(v=ws.10)) to migrate all the resources to the new cluster. Reminder, this does not copy data, so will need to be done separately.
+2. Use the [Cluster Migration Wizard](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754481(v=ws.10)) to migrate all the resources to the new cluster. Reminder, this does not copy data, so will need to be done separately.
 3. Decommission or destroy the old cluster.
 
-In both options, the new cluster would need to have all [cluster-aware applications](https://technet.microsoft.com/aa369082(v=vs.90)) installed, drivers all up-to-date, and possibly testing to ensure all will run properly.  This is a time consuming process if data also needs to be moved.
+In both options, the new cluster would need to have all [cluster-aware applications](/previous-versions/windows/desktop/mscs/cluster-aware-applications) installed, drivers all up-to-date, and possibly testing to ensure all will run properly.  This is a time consuming process if data also needs to be moved.
 
 ## Windows Server 2019
 
-In Windows Server 2019, we introduced cross cluster domain migration capabilities.  So now, the scenarios listed above can easily be done and the need of rebuilding is no longer needed.  
+In Windows Server 2019, we introduced cross cluster domain migration capabilities.  So now, the scenarios listed above can easily be done and the need of rebuilding is no longer needed.
 
 Moving a cluster from one domain is a straight-forward process. To accomplish this, there are two new PowerShell commandlets.
 
@@ -71,7 +70,7 @@ Moving a cluster from one domain is a straight-forward process. To accomplish th
 
 The process to accomplish this is to change the cluster from one domain to a workgroup and back to the new domain.  The need to destroy a cluster, rebuild a cluster, install applications, etc is not a requirement. For example, it would look like this:
 
-![Migrate](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-3.gif)
+![Migrate](media/Cross-Domain-Cluster-Migration/Cross-Cluster-Domain-Migration-3.gif)
 
 ## Migrating a cluster to a new domain
 
@@ -134,4 +133,3 @@ If you are using the new USB witness feature, you will be unable to add the clus
 ```
 New-ClusternameAccount : Cluster name account cannot be created.  This cluster contains a file share witness with invalid permissions for a cluster of type AdministrativeAccesssPoint ActiveDirectoryAndDns. To proceed, delete the file share witness.  After this you can create the cluster name account and recreate the file share witness.  The new file share witness will be automatically created with valid permissions.
 ```
-

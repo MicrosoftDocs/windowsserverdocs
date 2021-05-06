@@ -1,13 +1,12 @@
 ---
 title: Configure server certificate auto-enrollment
-description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+description: Learn how to configure server certificate auto-enrollment and user certificate auto-enrollment.
 manager: brianlic
 ms.topic: article
 ms.assetid: c81e85cb-ecb8-442a-ad27-442c2f9e40df
-ms.prod: windows-server-threshold
-ms.technology: networking
-ms.author: pashort
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Configure certificate auto-enrollment
 

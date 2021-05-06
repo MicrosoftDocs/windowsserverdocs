@@ -1,18 +1,17 @@
 ---
+description: "Learn more about: Performance history for virtual hard disks"
 title: Performance history for virtual hard disks
 ms.author: cosdar
-ms.manager: eldenc
-ms.technology: storage-spaces
+manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/09/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
 # Performance history for virtual hard disks
 
-> Applies To: Windows Server Insider Preview
+> Applies to: Windows Server 2019
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for virtual hard disk (VHD) files. Performance history is available for every VHD attached to a running, clustered virtual machine. Performance history is available for both VHD and VHDX formats, however it is not available for Shared VHDX files.
 
@@ -68,7 +67,7 @@ The `iops.*`, `throughput.*`, and `latency.*` series are collected from the `Hyp
 
 ## Usage in PowerShell
 
-Use the [Get-VHD](https://docs.microsoft.com/powershell/module/hyper-v/get-vhd) cmdlet:
+Use the [Get-VHD](/powershell/module/hyper-v/get-vhd) cmdlet:
 
 ```PowerShell
 Get-VHD <Path> | Get-ClusterPerf
@@ -83,6 +82,6 @@ To get the path of every VHD from the virtual machine:
    > [!NOTE]
    > The Get-VHD cmdlet requires a file path to be provided. It does not support enumeration.
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

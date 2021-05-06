@@ -1,39 +1,36 @@
 ---
 title: bitsadmin util and help
-description: "Windows Commands topic for **bitsadmin util and help** - Displays the command-line usage for the **Util** commands."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin util and help command, which displays the command-line usage for the /util switches.
+ms.topic: reference
 ms.assetid: 806e377a-3022-4764-b451-0aa4f754f195
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin util and help
 
-
-
-Displays the command-line usage for the **Util** commands.
+Displays the command-line usage for the **/util** switches.
 
 ## Syntax
 
 ```
-Bitsadmin /Util /Help 
+bitsadmin /util /help
 ```
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following command displays the command-line help for the **Util** commands.
+To display the command-line help for the **/util** switches:
+
 ```
-Bitsadmin /Util /Help
+bitsadmin /util /help
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin util command](bitsadmin-util.md)
+
+- [bitsadmin command](bitsadmin.md)

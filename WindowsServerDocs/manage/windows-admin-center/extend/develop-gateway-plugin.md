@@ -1,13 +1,11 @@
 ---
 title: Develop a gateway plugin
 description: Develop a gateway plugin Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
 ---
 
 # Develop a gateway plugin
@@ -32,7 +30,7 @@ If you haven't already, [prepare your environment](prepare-development-environme
 
 ## Create a gateway plugin (C# library)
 
-To create a custom gateway plugin, create a new C# class that implements the ```IPlugIn``` interface from the ```Microsoft.ManagementExperience.FeatureInterfaces``` namespace.  
+To create a custom gateway plugin, create a new C# class that implements the ```IPlugIn``` interface from the ```Microsoft.ManagementExperience.FeatureInterfaces``` namespace.
 
 > [!NOTE]
 > The ```IFeature``` interface, available in earlier versions of the SDK, is now flagged as obsolete.  All gateway plugin development should use IPlugIn (or optionally the HttpPlugIn abstract class).
@@ -52,7 +50,7 @@ Test your custom gateway plugin DLL by loading it into Windows Admin Center gate
 Windows Admin Center looks for all plugins in a ```plugins``` folder in the Application Data folder of the current machine (using the CommonApplicationData value of the Environment.SpecialFolder enumeration). On Windows 10 this location is ```C:\ProgramData\Server Management Experience```.  If the ```plugins``` folder doesn't exist yet, you can create the folder yourself.
 
 > [!NOTE]
-> You can override the plugin location in a debug build by updating the "StaticsFolder" configuration value. If you're debugging locally, this setting is in the App.Config of the Desktop solution. 
+> You can override the plugin location in a debug build by updating the "StaticsFolder" configuration value. If you're debugging locally, this setting is in the App.Config of the Desktop solution.
 
 Inside the plugins folder (in this example, ```C:\ProgramData\Server Management Experience\plugins```)
 
@@ -64,7 +62,7 @@ After the Windows Admin process restarts, you will be able to exercise the APIs 
 
 ### Optional: Attach to plugin for debugging
 
-In Visual Studio 2017, from the Debug menu, select "Attach to Process". In the next window, scroll through the Available Processes list and select SMEDesktop.exe, then click "Attach". Once the debugger starts, you can place a breakpoint in your feature code and then exercise through the above URL format. For our sample project (feature name: "Sample Uno") the URL is: "http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno"
+In Visual Studio 2017, from the Debug menu, select "Attach to Process". In the next window, scroll through the Available Processes list and select SMEDesktop.exe, then click "Attach". Once the debugger starts, you can place a breakpoint in your feature code and then exercise through the above URL format. For our sample project (feature name: "Sample Uno") the URL is: "<http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno>"
 
 ## Create a tool extension with the Windows Admin Center CLI ##
 
@@ -85,7 +83,7 @@ Here's an example usage:
 wac create --company "Contoso Inc" --tool "Manage Foo Works"
 ```
 
-This creates a new folder inside the current working directory using the name you specified for your tool, copies all the necessary template files into your project, and configures the files with your company and tool name.  
+This creates a new folder inside the current working directory using the name you specified for your tool, copies all the necessary template files into your project, and configures the files with your company and tool name.
 
 Next, change directory into the folder just created, then install required local dependencies by running the following command:
 
@@ -93,15 +91,15 @@ Next, change directory into the folder just created, then install required local
 npm install
 ```
 
-Once this completes, you've set up everything you need to load your new extension into Windows Admin Center. 
+Once this completes, you've set up everything you need to load your new extension into Windows Admin Center.
 
 ## Connect your tool extension to your custom gateway plugin
 
 Now that you've created an extension with the Windows Admin Center CLI, you are ready to connect your tool extension to your custom gateway plugin, by following these steps:
 
-- Add an [empty module](guides\add-module.md)
-- Use your [custom gateway plugin](guides\use-custom-gateway-plugin.md) in your tool extension
- 
+- Add an [empty module](guides/add-module.md)
+- Use your [custom gateway plugin](guides/use-custom-gateway-plugin.md) in your tool extension
+
 ## Build and side load your extension
 
 Next, build and side load your extension into Windows Admin Center.  Open a command window, change directory to your source directory, then you're ready to build.

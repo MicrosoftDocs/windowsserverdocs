@@ -6,15 +6,13 @@ ms.author: billmath
 manager: mtillman
 ms.date: 01/03/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-ms.technology: identity-adfs
 ---
 
 # AD FS Troubleshooting - Claims Issuance
 A claim is a statement that one subject makes about itself or another subject.  Claims are issued by a relying party, and they are given one or more values and then packaged in security tokens that are issued by the AD FS server.  Because there are several moving parts in this process, claims issuance can be broken down into these key parts.
 
->[!NOTE]  
->You can use [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) on the [ADFS Help](https://adfshelp.microsoft.com) site to assist in troubleshooting claims issues.   
+>[!NOTE]
+>You can use [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) on the [ADFS Help](https://adfshelp.microsoft.com) site to assist in troubleshooting claims issues.
 
 ## Token Request
 When you go to a relying party it will redirect you to AD FS with a token request.  Issues can arise with the request.  Most notably:

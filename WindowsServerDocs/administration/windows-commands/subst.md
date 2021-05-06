@@ -1,74 +1,66 @@
 ---
 title: subst
-description: Learn how to associate a path with a drive letter.
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the subst command, which associates a path with a drive letter.
+ms.topic: reference
 ms.assetid: 3e69234c-2312-4343-868b-afc1017c622a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # subst
 
-
-
 Associates a path with a drive letter. If used without parameters, **subst** displays the names of the virtual drives in effect.
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-subst [<Drive1>: [<Drive2>:]<Path>] 
-subst <Drive1>: /d
+subst [<drive1>: [<drive2>:]<path>]
+subst <drive1>: /d
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<Drive1>:|Specifies the virtual drive to which you want to assign a path.|
-|[\<Drive2>:]\<Path>|Specifies the physical drive and path that you want to assign to a virtual drive.|
-|/d|Deletes a substituted (virtual) drive.|
-|/?|Displays help at the command prompt.|
+| Parameter | Description |
+|--|--|
+| `<drive1>:` | Specifies the virtual drive to which you want to assign a path. |
+| `[<drive2>:]<path>` | Specifies the physical drive and path that you want to assign to a virtual drive. |
+| /d | Deletes a substituted (virtual) drive. |
+| /? | Displays help at the command prompt. |
 
 ## Remarks
 
--   The following commands do not work and should not be used on drives that are specified in the **subst** command:
+- The following commands don't work and must not be used on drives specified in the **subst** command:
 
-    **chkdsk**
+  - [chkdsk command](chkdsk.md)
 
-    **diskcomp**
+    [diskcomp command](diskcomp.md)
 
-    **diskcopy**
+    [diskcopy command](diskcopy.md)
 
-    **format**
+    [format command](format.md)
 
-    **label**
+    [label command](label.md)
 
-    **recover**
--   The *Drive1* parameter must be within the range that is specified by the **lastdrive** command. If not, **subst** displays the following error message:
+    [recover command](recover.md)
 
-    `Invalid parameter - drive1:`
+- The `<drive1>` parameter must be within the range that is specified by the **lastdrive** command. If not, **subst** displays the following error message: `Invalid parameter - drive1:`
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-To create a virtual drive Z for the path B:\User\Betty\Forms, type:
+To create a virtual drive z for the path b:\user\betty\forms, type:
+
 ```
-subst z: b:\user\betty\forms 
+subst z: b:\user\betty\forms
 ```
+
 Instead of typing the full path, you can reach this directory by typing the letter of the virtual drive followed by a colon as follows:
+
 ```
-z: 
+z:
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

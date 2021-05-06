@@ -1,67 +1,84 @@
 ---
 title: netcfg
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: e2daaab7-12db-4e36-b70c-db8906d084f7 vhorne
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+description: Reference article for the netcfg command, which installs the Windows Preinstallation Environment (WinPE), a lightweight version of Windows used to deploy workstations.
+ms.topic: reference
+ms.assetid: e2daaab7-12db-4e36-b70c-db8906d084f7
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
+
 # netcfg
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Installs the Windows Preinstallation Environment (WinPE), a lightweight version of Windows used to deploy workstations.   
-## Syntax  
-```  
-netcfg [/v] [/e] [/winpe] [/l ] /c /i  
-```  
-### Parameters  
-|Parameter|Description|  
-|-------|--------|  
-|/v|Run in verbose (detailed) mode|  
-|/e|Use servicing environment variables during install and uninstall|  
-|/winpe|Installs TCP/IP, NetBIOS and Microsoft Client for Windows preinstallation envrionment|  
-|/l|Provides the location of INF|  
-|/c|Provides the class of the component to be installed; protocol, Service, or client|  
-|/i|Provides the component ID|  
-|/s|Provides the type of components to show<br /><br />\ta = adapters, n = net components|  
-|/?|Displays help at the command prompt.|  
-## <a name="BKMK_Examples"></a>Examples  
-To install the protocol *example* using c:\oemdir\example.inf:  
-```  
-netcfg /l c:\oemdir\example.inf /c p /i example  
-```  
-To install the *MS_Server* service:  
-```  
-netcfg /c s /i MS_Server  
-```  
-To install TCP/IP, NetBIOS and Microsoft Client for Windows preinstallation environment  
-```  
-netcfg /v /winpe  
-```  
-To display if component *MS_IPX* is installed:  
-```  
-netcfg /q MS_IPX  
-```  
-To uninstall component *MS_IPX*:  
-```  
-netcfg /u MS_IPX  
-```  
-To show all installed net components:  
-```  
-netcfg /s n  
-```  
-To shows binding paths containing *MS_TCPIP*:  
-```  
-netcfg /b ms_tcpip  
-```  
-## additional references  
--   [Command-Line Syntax Key](command-line-syntax-key.md)  
+Installs the Windows Preinstallation Environment (WinPE), a lightweight version of Windows used to deploy workstations.
+
+## Syntax
+
+```
+netcfg [/v] [/e] [/winpe] [/l ] /c /i
+```
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| /v | Runs in verbose (detailed) mode. |
+| /e | Uses servicing environment variables during install and uninstall. |
+| /winpe | Installs TCP/IP, NetBIOS, and Microsoft Client for Windows preinstallation environment (WinPE). |
+| /l | Provides the location of the INF file. |
+| /c | Provides the class of the component to be installed; **protocol**, **service**, or **client**. |
+| /i | Provides the component ID. |
+| /s | Provides the type of components to show, including **\ta** for adapters or **n** for net components. |
+| /b | Displays the binding paths, when followed by a string containing the name of the path. |
+| /? | Displays help at the command prompt. |
+
+### Examples
+
+To install the protocol *example* using c:\oemdir\example.inf, type:
+
+```
+netcfg /l c:\oemdir\example.inf /c p /i example
+```
+
+To install the *MS_Server* service, type:
+
+```
+netcfg /c s /i MS_Server
+```
+
+To install TCP/IP, NetBIOS and Microsoft Client for Windows preinstallation environment, type:
+
+```
+netcfg /v /winpe
+```
+
+To display if component *MS_IPX* is installed, type:
+
+```
+netcfg /q MS_IPX
+```
+
+To uninstall component *MS_IPX*, type:
+
+```
+netcfg /u MS_IPX
+```
+
+To show all installed net components, type:
+
+```
+netcfg /s n
+```
+
+To display binding paths containing *MS_TCPIP*, type:
+
+```
+netcfg /b ms_tcpip
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,15 +1,13 @@
 ---
 title: Hardware considerations in AD performance tuning
 description: Hardware considerations in AD performance tuning
-ms.prod: windows-server-threshold
-ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
+ms.author: timwi
 author: phstee
 ms.date: 10/16/2017
 ---
 
-# Hardware considerations in ADDS performance tuning 
+# Hardware considerations in ADDS performance tuning
 
 >[!Important]
 > The following is a summary of the key recommendations and considerations to optimize server hardware for Active Directory workloads covered in greater depth in the [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566) article. Readers are highly encouraged to review [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566) for a greater technical understanding and implications of these recommendations.
@@ -48,9 +46,9 @@ Active Directory caches as much of the database as memory allows. Fetching pages
 
 -   Plan non-core disk I/O loads, such as backup and anti-virus scans, for non-peak load periods. Also, use backup and anti-virus solutions that support the low-priority I/O feature introduced in Windows Server 2008 to reduce competition with I/O needs of Active Directory.
 
-## Don’t over tax the processors
+## Don't over tax the processors
 
-Processors that don’t have enough free cycles can cause long wait times on getting threads on to the processor for execution. Across many environments, the philosophy is to ensure that there is enough head room to accommodate surges or spikes in load to minimize impact on client responsiveness in these scenarios. In short, exceeding the below thresholds is not bad in the short term (5 to 15 minutes a few times a day), however a system running sustained with these sorts of statistics doesn’t provide any head room to accommodate abnormal loads and can easily be put into an over taxed scenario. Systems spending sustained periods above the thresholds should be investigated to how to reduce processor loads.
+Processors that don't have enough free cycles can cause long wait times on getting threads on to the processor for execution. Across many environments, the philosophy is to ensure that there is enough head room to accommodate surges or spikes in load to minimize impact on client responsiveness in these scenarios. In short, exceeding the below thresholds is not bad in the short term (5 to 15 minutes a few times a day), however a system running sustained with these sorts of statistics doesn't provide any head room to accommodate abnormal loads and can easily be put into an over taxed scenario. Systems spending sustained periods above the thresholds should be investigated to how to reduce processor loads.
 
 -   For more info on how to select a processor, see [Performance Tuning for Server Hardware](../../hardware/index.md).
 
@@ -66,9 +64,9 @@ Just like with processors, excessive network adapter utilization will cause long
 
 -   Use the Compare NetworkInterface(\*)\\Bytes Sent/Sec with NetworkInterface(\*)\\Current Bandwidth performance counter. The ratio should be less than 60% utilized.
 
-## See also
+## Additional References
 - [Performance tuning Active Directory Servers](index.md)
 - [LDAP considerations](ldap-considerations.md)
 - [Proper placement of domain controllers and site considerations](site-definition-considerations.md)
-- [Troubleshooting ADDS performance](troubleshoot.md) 
+- [Troubleshooting ADDS performance](troubleshoot.md)
 - [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566)

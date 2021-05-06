@@ -1,32 +1,25 @@
 ---
 title: autofmt
-description: "Windows Commands topic for **autofmt** - formats a drive or partition when called from the Windows recovery Console."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the autofmt command, which formats a drive or partition when called from the Windows Recovery Console.
+ms.topic: reference
 ms.assetid: 81f9abac-f927-41d8-8667-f056db4cb2af
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # autofmt
 
+Starts the Auto File System Format Utility, which formats a drive or partition when called from the Windows Recovery Console.
 
+> [!IMPORTANT]
+> You cannot run **autofmt** directly from the command-line.
 
-Formats a drive or partition when called from the Windows Recovery Console.
+## Additional References
 
-## Remarks
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
-You cannot run **Autofmt** directly from the command-line.
+- [Windows Recovery Environment (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)
 
-#### Additional references
-
-[Command-Line Syntax Key](command-line-syntax-key.md)
-
-[Working with File Systems](https://go.microsoft.com/fwlink/?LinkId=4509)
+- [How to use Windows Recovery Environment (WinRE) to troubleshoot common startup issues](https://support.microsoft.com/help/4026030/how-to-use-windows-recovery-environment-winre-to-troubleshoot-common-s)

@@ -1,13 +1,11 @@
 ---
 title: Kerberos with Service Principal Name (SPN)
-description: Network Controller supports multiple authentication methods for communication with management clients. You can use Kerberos based authentication, X509 certificate-based authentication. You also have the option to use no authentication for test deployments. 
-manager: dougkim
-ms.prod: windows-server-threshold
-ms.technology: networking-sdn
+description: Network Controller supports multiple authentication methods for communication with management clients. You can use Kerberos based authentication, X509 certificate-based authentication. You also have the option to use no authentication for test deployments.
+manager: grcusanz
 ms.topic: article
 ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
-ms.author: pashort
-author: shortpatti
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/23/2018
 ---
 
@@ -17,7 +15,7 @@ ms.date: 08/23/2018
 
 Network Controller supports multiple authentication methods for communication with management clients. You can use Kerberos based authentication, X509 certificate-based authentication. You also have the option to use no authentication for test deployments.
 
-System Center Virtual Machine Manager uses Kerberos-based authentication. If you are using Kerberos-based  authentication, you must configure a Service Principal Name (SPN) for Network Controller in Active Directory. The SPN is a unique identifier for the Network Controller service instance, which is used by Kerberos authentication to associate a service instance with a service login account. For more details, see [Service Principal Names](https://docs.microsoft.com/windows/desktop/ad/service-principal-names).
+System Center Virtual Machine Manager uses Kerberos-based authentication. If you are using Kerberos-based  authentication, you must configure a Service Principal Name (SPN) for Network Controller in Active Directory. The SPN is a unique identifier for the Network Controller service instance, which is used by Kerberos authentication to associate a service instance with a service login account. For more details, see [Service Principal Names](/windows/desktop/ad/service-principal-names).
 
 ## Configure Service Principal Names (SPN)
 
@@ -53,9 +51,9 @@ The Network Controller automatically configures the SPN. All you need to do is t
 
 ## Failure to provide permissions for SPN registration/modification
 
-On a **NEW** Windows Server 2019 deployment, if you chose Kerberos for REST client authentication and don’t grant permission for Network Controller nodes to register or modify the SPN, REST operations on Network Controller fails preventing you from managing the SDN.
+On a **NEW** Windows Server 2019 deployment, if you chose Kerberos for REST client authentication and don't grant permission for Network Controller nodes to register or modify the SPN, REST operations on Network Controller fails preventing you from managing the SDN.
 
-For an upgrade from Windows Server 2016 to Windows Server 2019, and you chose Kerberos for REST client authentication, REST operations do not get blocked, ensuring transparency for existing production deployments. 
+For an upgrade from Windows Server 2016 to Windows Server 2019, and you chose Kerberos for REST client authentication, REST operations do not get blocked, ensuring transparency for existing production deployments.
 
 If SPN is not registered, REST client authentication uses NTLM, which is less secure. You also get a critical event in the Admin channel of **NetworkController-Framework** event channel asking you to provide permissions to the Network Controller nodes to register SPN. Once you provide permission, Network Controller registers the SPN automatically, and all client operations use Kerberos.
 

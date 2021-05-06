@@ -6,8 +6,6 @@ ms.author: billmath
 manager: samueld
 ms.date: 10/23/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-ms.technology: identity-adfs
 ---
 
 # Obtain and Configure TS and TD Certificates for AD FS
@@ -22,26 +20,26 @@ For additional information see [Certificate Requirements](../design/ad-fs-requir
 By default, AD FS is configured to generate token signing and token decryption certificates automatically, both at the initial configuration time and when the certificates are approaching their expiration date.
 
 You can run the following Windows PowerShell command: `Get-AdfsProperties`.
-  
-  ![Get-ADFSProperties](media/configure-TS-TD-certs-ad-fs/ts1.png)
-  
+
+  ![Screenshot of the PowerShell window showing the results of the Get-ADFSProperties command with the Auto Certificate Rollover and Certificate Generation Threshold properties called out.](media/configure-TS-TD-certs-ad-fs/ts1.png)
+
 The AutoCertificateRollover property describes whether AD FS is configured to renew token signing and token decrypting certificates automatically.
 
 If AutoCertificateRollover is set to TRUE, the AD FS certificates will be renewed and configured in AD FS automatically. Once the new certificate is configured, in order to avoid an outage, you must ensure that each federation partner (represented in your AD FS farm by either relying party trusts or claims provider trusts) is updated with this new certificate.
-    
+
 If AD FS is not configured to renew token signing and token decrypting certificates automatically (if AutoCertificateRollover is set to False), AD FS will not automatically generate or start using new token signing or token decrypting certificates. You will have to perform these tasks manually.
-    
+
 If AD FS is configured to renew token signing and token decrypting certificates automatically (AutoCertificateRollover is set to TRUE), you can determine when they will be renewed:
 
-CertificateGenerationThreshold describes how many days in advance of the certificate’s Not After date a new certificate will be generated.
+CertificateGenerationThreshold describes how many days in advance of the certificate's Not After date a new certificate will be generated.
 
 CertificatePromotionThreshold determines how many days after the new certificate is generated that it will be promoted to be the primary certificate (in other words, AD FS will start using it to sign tokens it issues and decrypt tokens from identity providers).
 
-![Get-ADFSProperties](media/configure-TS-TD-certs-ad-fs/ts2.png)
-  
+![Screenshot of the PowerShell window showing the results of the Get-ADFSProperties command with the Certificate Generation Threshold and Certificate Promotion Threshold properties called out.](media/configure-TS-TD-certs-ad-fs/ts2.png)
+
 If AD FS is configured to renew token signing and token decrypting certificates automatically (AutoCertificateRollover is set to TRUE), you can determine when they will be renewed:
 
- - **CertificateGenerationThreshold** describes how many days in advance of the certificate’s Not After date a new certificate will be generated.
+ - **CertificateGenerationThreshold** describes how many days in advance of the certificate's Not After date a new certificate will be generated.
  - **CertificatePromotionThreshold** determines how many days after the new certificate is generated that it will be promoted to be the primary certificate (in other words, AD FS will start using it to sign tokens it issues and decrypt tokens from identity providers).
 
 ## Determine when the current certificates expire
@@ -49,7 +47,7 @@ You can use the following procedure to identify the primary token signing and to
 
 You can run the following Windows PowerShell command:  `Get-AdfsCertificate –CertificateType token-signing` (or  `Get-AdfsCertificate –CertificateType token-decrypting `). Or you can examine the current certificates in the MMC: Service->Certificates.
 
-![Get-ADFSCertificate](media/configure-TS-TD-certs-ad-fs/ts3.png)
+![Screenshot of the PowerShell window showing the results of the Get-AdfsCertificate –CertificateType token-signing command with the Not After and Is Primary properties called out.](media/configure-TS-TD-certs-ad-fs/ts3.png)
 
 The certificate for which the **IsPrimary** value is set to **True** is the certificate that AD FS is currently using.
 
@@ -70,10 +68,10 @@ You can use the following steps to generate a new self-signed certificate manual
 >[!IMPORTANT]
 >To avoid a service outage, update the certificate information on Azure AD by running the steps in the How to update Azure AD with a valid token-signing certificate.
 
-## If you’re not using self-signed certificates…
+## If you're not using self-signed certificates…
 If you are not using the default automatically generated, self-signed token signing and token decryption certificates, you must renew and configure these certificates manually.
 
-First, you must obtain a new certificate from your certificate authority and import it into the local machine personal certificate store on each federation server. For instructions, see the [Import a Certificate](https://technet.microsoft.com/library/cc754489.aspx) article.
+First, you must obtain a new certificate from your certificate authority and import it into the local machine personal certificate store on each federation server. For instructions, see the [Import a Certificate](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754489(v=ws.11)) article.
 
 Then you must configure this certificate as the secondary AD FS token signing or decryption certificate. (You configure it as a secondary certificate to allow your federation partners enough time to consume this new certificate before you promote it to the primary certificate).
 
@@ -82,14 +80,14 @@ Then you must configure this certificate as the secondary AD FS token signing or
 2. Once you have imported the certificate. Open the **AD FS Management** console.
 3. Expand **Service** and then select **Certificates**.
 4. In the Actions pane, click **Add Token-Signing Certificate**.
-![Get-ADFSCertificate](media/configure-TS-TD-certs-ad-fs/ts4.png)</br>
+    ![Screenshot of the A D F S dialog box showing the Add Token Signing Certificate option called out.](media/configure-TS-TD-certs-ad-fs/ts4.png)</br>
 5. Select the new certificate from the list of displayed certificates, and then click OK.
 6.  Open PowerShell and run the following: `Set-ADFSProperties -AutoCertificateRollover $true`
 
 >[!WARNING]
 >Ensure the new certificate has a private key associated with it and that the AD FS service account is granted Read permissions to the private key. Verify this on each federation server. To do so, in the Certificates snap-in, right-click the new certificate, click All Tasks, and then click Manage Private Keys.
 
-Once you’ve allowed enough time for your federation partners to consume your new certificate (either they pull your federation metadata or you send them the public key of your new certificate), you must promote the secondary certificate to primary certificate.
+Once you've allowed enough time for your federation partners to consume your new certificate (either they pull your federation metadata or you send them the public key of your new certificate), you must promote the secondary certificate to primary certificate.
 
 ### To promote the new certificate from secondary to primary
 
@@ -97,7 +95,7 @@ Once you’ve allowed enough time for your federation partners to consume your n
 2. Expand **Service** and then select **Certificates**.
 3. Click the secondary token signing certificate.
 4. In the **Actions** pane, click **Set As Primary**. Click Yes at the confirmation prompt.
-![Get-ADFSCertificate](media/configure-TS-TD-certs-ad-fs/ts5.png)</br>
+    ![Screenshot of the A D F S dialog box showing the Set as Primary option in teh Actions pane called out.](media/configure-TS-TD-certs-ad-fs/ts5.png)</br>
 
 
 ## Updating federation partners
@@ -113,4 +111,4 @@ If **AutoCertificateRollover** is set to **False**, AD FS will not automatically
 After allowing a sufficient period of time for all of your federation partners to consume the new secondary certificate, promote this secondary certificate to primary (in the MMC snap-in, click the secondary token signing certificate and in the Actions pane, click **Set As Primary**.)
 
 ## Updating Azure AD
-AD FS provides single sign-on access to Microsoft cloud services such as Office 365 by authenticating users via their existing AD DS credentials.  For additional information on using certificates see [Renew federation certificates for Office 365 and Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
+AD FS provides single sign-on access to Microsoft cloud services such as Office 365 by authenticating users via their existing AD DS credentials.  For additional information on using certificates see [Renew federation certificates for Office 365 and Azure AD](/azure/active-directory/connect/active-directory-aadconnect-o365-certs).

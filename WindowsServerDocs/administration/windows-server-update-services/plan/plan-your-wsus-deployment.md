@@ -1,37 +1,34 @@
 ---
 title: Plan Your WSUS Deployment
-description: "Windows Server Update Service (WSUS) topic - An overview of the deployment planning process with links to the related topics"
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.technology: manage-wsus
+description: Windows Server Update Service (WSUS) topic - An overview of the deployment planning process with links to the related topics
 ms.topic: article
 ms.assetid: 35865398-b011-447a-b781-1c52bc0c9e3a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 05/24/2018
 ---
 # Plan your WSUS deployment
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The first step in the deployment of Windows Server Update Services (WSUS) is to make important decisions, such as deciding the WSUS deployment scenario, choosing a network topology, and understanding the system requirements. The following checklist summarizes the steps that are involved in preparing for your deployment.
 
 |Task|Description|
 |----|--------|
-|[1.1. Review considerations and system requirements](plan-your-wsus-deployment.md#BKMK_1.1)|Review the list of considerations and system requirements to ensure that you have all the necessary hardware and software to deploy WSUS.|
-|[1.2. Choose a WSUS deployment scenario](plan-your-wsus-deployment.md#BKMK_1.2)|Decide which WSUS deployment scenario will be used.|
-|[1.3. Choose a WSUS storage strategy](plan-your-wsus-deployment.md#BKMK_1.3.)|Decide which WSUS storage strategy best fits your deployment.|
-|[1.4. Choose WSUS update languages](plan-your-wsus-deployment.md#BKMK_1.4.)|Decide which WSUS update languages will be installed.|
-|[1.5. Plan WSUS computer groups](plan-your-wsus-deployment.md#BKMK_1.5)|Plan the WSUS computer group approach that you will use for your deployment.|
-|[1.6. Plan WSUS Performance Considerations: Background Intelligent Transfer Service](plan-your-wsus-deployment.md#BKMK_1.6.)|Plan a WSUS design for optimized performance.|
-|[1.7. Plan Automatic Updates settings](plan-your-wsus-deployment.md#BKMK_1.7.)|Plan how you will configure the automatic updates settings for your scenario.|
+|[1.1. Review considerations and system requirements](#11-review-considerations-and-system-requirements)|Review the list of considerations and system requirements to ensure that you have all the necessary hardware and software to deploy WSUS.|
+|[1.2. Choose a WSUS deployment scenario](#12-choose-a-wsus-deployment-scenario)|Decide which WSUS deployment scenario will be used.|
+|[1.3. Choose a WSUS storage strategy](#13-choose-a-wsus-storage-strategy)|Decide which WSUS storage strategy best fits your deployment.|
+|[1.4. Choose WSUS update languages](#14-choose-wsus-update-languages)|Decide which WSUS update languages will be installed.|
+|[1.5. Plan WSUS computer groups](#15-plan-wsus-computer-groups)|Plan the WSUS computer group approach that you will use for your deployment.|
+|[1.6. Plan WSUS Performance Considerations: Background Intelligent Transfer Service](#16-plan-wsus-performance-considerations)|Plan a WSUS design for optimized performance.|
+|[1.7. Plan Automatic Updates settings](#17-plan-automatic-updates-settings)|Plan how you will configure the automatic updates settings for your scenario.|
 
-## <a name="BKMK_1.1"></a>1.1. Review considerations and system requirements
+## 1.1. Review considerations and system requirements
 
 ### System Requirements
 
-Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
+Hardware and database software requirements are driven by the number of client computers being updated in your organization.  Before you enable the WSUS server role, confirm that the server meets the system requirements and confirm that you have the necessary permissions to complete the installation by adhering with the following guidelines:
 
 -   Server hardware requirements to enable WSUS role are bound to hardware requirements. The minimum hardware requirements for WSUS are:
 
@@ -39,9 +36,12 @@ Before you enable the WSUS server role, confirm that the server meets the system
 
     -   **Memory:** WSUS requires an additional 2 GB of RAM more than what is required by the server and all other services or software.
 
-    -   **Available disk space:** 10 GB (40 GB or greater is recommended)
+    -   **Available disk space:** 40 GB or greater is recommended
 
-    -   **Network adapter:** 100 megabits per second (Mbps) or greater
+    -   **Network adapter:** 100 megabits per second (Mbps) or greater (1GB is recommended)
+
+> [!NOTE]
+> These guidelines assume that WSUS clients are synchronizing with the server every eight hours for a rullup of 30,000 clients. If they sychronize more often, there will be a corresponding increment in the server load.
 
 -   Software Requirements:
 
@@ -88,34 +88,26 @@ During the installation process, WSUS will install the following by default:
 
 Be aware that configuring client computers (including servers) to update by using WSUS will result in the following limitations:
 
-1.  Server roles that have had their payloads removed using Features on Demand cannot be installed on demand from Microsoft Update. You must either provide an installation source at the time you try to install such server roles, or configure a source for Features on Demand in Group Policy.
+1. Server roles that have had their payloads removed using Features on Demand cannot be installed on demand from Microsoft Update. You must either provide an installation source at the time you try to install such server roles, or configure a source for Features on Demand in Group Policy.
 
-2.  Windows client editions will not be able to install .NET 3.5 on demand from the web. The same considerations as server roles apply to .NET 3.5.
+2. Windows client editions will not be able to install .NET 3.5 on demand from the web. The same considerations as server roles apply to .NET 3.5.
 
-    > [!NOTE]
-    > Configuring a Features on Demand installation source does not involve WSUS. For information on how to configure Features, see [Configure Features on Demand in Windows Server](https://technet.microsoft.com/library/jj127275.aspx).
+   > [!NOTE]
+   > Configuring a Features on Demand installation source does not involve WSUS. For information on how to configure Features, see [Configure Features on Demand in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127275(v=ws.11)).
 
-3. Enterprise devices running Windows 10, version 1709 or version 1803, cannot install any Features on Demand directly from WSUS. To install Features on Demand, [create a feature file (side-by-side store)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127275%28v=ws.11%29#create-a-feature-file-or-side-by-side-store) or obtain the Feature on Demand package from one of the following sources:
-    - [Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter) (VLSC) - VL access is required
-    - OEM Portal - OEM access is required
-    - MSDN Download - MSDN subscription is required
+3. Enterprise devices running Windows 10, version 1709 or version 1803, cannot install any Features on Demand directly from WSUS. To install Features on Demand, [create a feature file (side-by-side store)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127275%28v=ws.11%29#create-a-feature-file-or-side-by-side-store) or obtain the Feature on Demand package from one of the following sources:
+   - [Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter) (VLSC) - VL access is required
+   - OEM Portal - OEM access is required
+   - MSDN Download - MSDN subscription is required
 
-    Individually-obtained Feature on Demand packages can be installed using [DISM command-line options](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options).
+     Individually-obtained Feature on Demand packages can be installed using [DISM command-line options](/windows-hardware/manufacture/desktop/dism-operating-system-package-servicing-command-line-options).
 
-### <a name="BKM_1.1.1."></a>WSUS database requirements
+### WSUS database requirements
 WSUS requires one of the following databases:
 
 -   Windows Internal Database (WID)
 
--   Microsoft SQL Server 2017
-
--   Microsoft SQL Server 2016
-
--   Microsoft SQL Server 2014
-
--   Microsoft SQL Server 2012
-
--   Microsoft SQL Server 2008 R2
+-   Any supported Microsoft SQL Server version. For more information, see [Microsoft Lifecycle Policy](/lifecycle/products/?products=sql-server).
 
 The following editions of SQL Server are supported by WSUS:
 
@@ -138,7 +130,7 @@ You can install the WSUS role on a computer that is separate from the database s
 
 4.  The WSUS server and the database server must be in the same time zone or be synchronized to the same Coordinated Universal time (Greenwich Mean time) source.
 
-## <a name="BKMK_1.2"></a>1.2. Choose a WSUS deployment scenario
+## 1.2. Choose a WSUS deployment scenario
 This section describes the basic features of all WSUS deployments. Use this section to familiarize yourself with a simple deployment with a single WSUS server, in addition to more complex scenarios, such as a WSUS server hierarchy or a WSUS server on an isolated network segment.
 
 ### Simple WSUS deployment
@@ -166,7 +158,7 @@ You can create complex hierarchies of WSUS servers. Because you can synchronize 
 
 -   You can scale WSUS for a large organization that has more client computers than one WSUS server can effectively manage.
 
-> [!NOTE] 
+> [!NOTE]
 > We recommend that you do not create a WSUS server hierarchy that is more than three levels deep. Each level adds time to propagate updates throughout the connected servers. Although there is no theoretical limit to a hierarchy, only deployments that have a hierarchy of five levels deep have been tested by Microsoft.
 >
 > Also, downstream servers must be at the same version or an earlier version of WSUS as the upstream server synchronization source.
@@ -174,10 +166,10 @@ You can create complex hierarchies of WSUS servers. Because you can synchronize 
 You can connect WSUS servers in Autonomous mode (to achieve distributed administration) or in Replica mode (to achieve centralized administration). You do not have to deploy a server hierarchy that uses only one mode: you can deploy a WSUS solution that uses both autonomous and replica WSUS servers.
 
 #### Autonomous mode
-The Autonomous mode, also called distributed administration, is the default installation option for WSUS. In Autonomous mode, an upstream WSUS server shares updates with downstream servers during synchronization. Downstream WSUS servers are administered separately, and they do not receive update approval status or computer group information from the upstream server. By using the distributed management model, each WSUS server administrator selects update languages, creates computer groups, assigns computers to groups, tests and approves updates, and makes sure that the correct updates are installed to the appropriate computer groups. The following image shows how you might deploy autonomous WSUS servers in a branch office environment:
+The Autonomous mode, also called distributed administration, is the default installation option for WSUS. In Autonomous mode, an upstream WSUS server shares updates with downstream servers during synchronization. Downstream WSUS servers are administered separately, and they do not receive update approval status or computer group information from the upstream server. By using the distributed management model, each WSUS server administrator selects update languages, creates computer groups, assigns computers to groups, tests and approves updates, and makes sure that the correct updates are installed to the appropriate computer groups.
 
 #### Replica mode
-The Replica mode, also called centralized administration, works by having an upstream WSUS server that shares updates, approval status, and computer groups with downstream servers. Replica servers inherit update approvals and are not administered separately from the upstream WSUS server. The following image shows how you might deploy replica WSUS servers in a branch office environment.
+The Replica mode, also called centralized administration, works by having an upstream WSUS server that shares updates, approval status, and computer groups with downstream servers. Replica servers inherit update approvals and are not administered separately from the upstream WSUS server.
 
 > [!NOTE]
 > If you set up several replica servers to connect to a single upstream WSUS server, do not schedule synchronization to run at the same time on each replica server. This practice will avoid sudden surges in bandwidth usage.
@@ -190,7 +182,7 @@ You can leverage the Branch Office feature in Windows to optimize WSUS deploymen
 2.  In branch offices that have low-bandwidth connections to the central office but high-bandwidth connections to the Internet, the Branch Office feature can also be used. In this case you may want to configure downstream WSUS servers to get information about which updates to install from the central WSUS server, but download the updates from Microsoft Update.
 
 ### Network Load Balancing
-Network Load Balancing (NLB) increases the reliability and performance of your WSUS network. You can set up multiple WSUS servers that share a single failover cluster running QL Server such as SQL Server 2008 R2 SP1. In this configuration you must use a full SQL Server installation, not the Windows Internal Database installation that is provided by WSUS, and the database role must be installed on all WSUS front-end servers. You can also have all the WSUS servers use a distributed file system (DFS) to store their content.
+Network Load Balancing (NLB) increases the reliability and performance of your WSUS network. You can set up multiple WSUS servers that share a single failover cluster running SQL Server such as SQL Server 2008 R2 SP1. In this configuration you must use a full SQL Server installation, not the Windows Internal Database installation that is provided by WSUS, and the database role must be installed on all WSUS front-end servers. You can also have all the WSUS servers use a distributed file system (DFS) to store their content.
 
 **WSUS setup for NLB:** compared to WSUS 3.2 setup for NLB, a special setup call and parameters are no longer required to configure WSUS for NLB. You need only setup each WSUS server, keeping the following considerations in mind.
 
@@ -203,13 +195,13 @@ Network Load Balancing (NLB) increases the reliability and performance of your W
 ### WSUS deployment with roaming client computers
 If the network includes mobile users who log on to the network from different locations, you can configure WSUS to let roaming users update their client computers from the WSUS server that is closest to them geographically. For example, you might deploy one WSUS server each region and use a different DNS subnet for each region. All client computers could be directed to the same WSUS server, which resolves in each subnet to the nearest physical WSUS server.
 
-## <a name="BKMK_1.3."></a>1.3. Choose a WSUS storage strategy
+## 1.3. Choose a WSUS storage strategy
 Windows Server Update Services (WSUS) uses two types of storage systems: a database to store WSUS configuration and update metadata, and an optional local file system to store update files. Before you install WSUS, you should decide how you want to implement storage.
 
 Updates are composed of two parts: metadata that describes the update, and the files that are required to install the update. Update metadata is typically much smaller than the actual update, and it is stored in the WSUS database. Update files are stored on a local WSUS server or on a Microsoft Update Web server.
 
 ### WSUS database
-WSUS requires a database for each WSUS server. WSUS supports the use of a database that resides on a different computer than the WSUS server, with some restrictions. For a list of supported databases and remote database limitations, see section "1.1 Review initial considerations and system requirements," in this guide.
+WSUS requires a database for each WSUS server. WSUS supports the use of a database that resides on a different computer than the WSUS server, with some restrictions. For a list of supported databases and remote database limitations, see section 1.1 Review initial considerations and system requirements, in this guide.
 
 The WSUS database stores the following information:
 
@@ -230,7 +222,7 @@ SQL Server, SQL Server Express, and Windows Internal Database provide the same p
 By default, the installation wizard creates and uses a Windows Internal Database that is named SUSDB.mdf. This database is located in the %windir%\wid\data\ folder, where %windir% is the local drive on which the WSUS server software is installed.
 
 > [!NOTE]
-> Windows Internal Database (WID) was introduced in  Windows Server 2012 .
+> Windows Internal Database (WID) was introduced in Windows Server 2008 .
 
 WSUS supports Windows authentication only for the database. You cannot use SQL Server authentication with WSUS. If you use Windows Internal Database for the WSUS database, WSUS Setup creates an instance of SQL Server that is named server\Microsoft##WID, where server is the name of the computer. With either database option, WSUS Setup creates a database named SUSDB. The name of this database is not configurable.
 
@@ -244,9 +236,9 @@ We recommend that you use Windows Internal Database in the following cases:
 
 Windows Internal Database does not provide a user interface or any database management tools. If you select this database for WSUS, you must use external tools to manage the database. For more information, see:
 
--   [Backup and Restore WSUS Data and Backing Up Your Server](https://technet.microsoft.com/library/dd939904(WS.10).aspx)
+-   [Backup and Restore WSUS Data and Backing Up Your Server](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd939904(v=ws.10))
 
--   [Reindex the WSUS database](https://technet.microsoft.com/library/dd939795(WS.10).aspx)
+-   [Reindex the WSUS database](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd939795(v=ws.10))
 
 #### WSUS with SQL Server
 We recommend that you use SQL Server with WSUS in the following cases:
@@ -267,12 +259,12 @@ Local storage of update files is the default option when you install and configu
 
 This option requires that the server have sufficient disk space to store all needed updates. at a minimum, WSUS requires 20 GB to store updates locally; however, we recommend 30 GB based on tested variables.
 
-#### remote storage on Microsoft Update servers
+#### Remote storage on Microsoft Update servers
 You can store updates remotely on Microsoft Update servers. This option is useful if most client computers connect to the WSUS server over a slow WAN connection, but they connect to the Internet over a high-bandwidth connection.
 
 In this case, the root WSUS server synchronizes with Microsoft Update and receives the update metadata. After you approve the updates, the client computers download the approved updates from Microsoft Update servers.
 
-## <a name="BKMK_1.4."></a>1.4. Choose WSUS update languages
+## 1.4. Choose WSUS update languages
 When you deploy a WSUS server hierarchy, you should determine which language updates are required throughout the organization. You should configure the root WSUS server to download updates in all languages that are used throughout the entire organization.
 
 For example, the main office might require English and French language updates, but one branch office requires English, French, and German language updates, and another branch office requires English and Spanish language updates. In this situation, you would configure the root WSUS server to download updates in English, French, German, and Spanish. You would then configure the first branch office WSUS server to download updates in English, French, and German only, and configure the second branch office to download updates in English and Spanish only.
@@ -313,18 +305,18 @@ Choosing languages for an upstream server is not the same as choosing languages 
 > [!NOTE]
 > You should do this even though you want the downstream server to download the same languages as the upstream server.
 
-2.  If the upstream server has been configured to download update files in all languages: In the WSUS Configuration Wizard, click **Download updates in all languages supported by the upstream server**.
+2. If the upstream server has been configured to download update files in all languages: In the WSUS Configuration Wizard, click **Download updates in all languages supported by the upstream server**.
 
 > [!NOTE]
 > You should do this even though you want the downstream server to download the same languages as the upstream server. This setting causes the upstream server to download updates in all languages, including languages that were not originally configured for the upstream server. If you add languages to the upstream server, you should copy the new updates to its replica servers.
 >
 > Changing language options on the upstream server alone might cause a mismatch between the number of updates that are approved on the central server and the number of updates approved on the replica servers.
 
-## <a name="BKMK_1.5"></a>1.5. Plan WSUS computer groups
+## 1.5. Plan WSUS computer groups
 WSUS allows you to target updates to groups of client computers, so you can ensure that specific computers always get the right updates at the most convenient times. For example, if all the computers in one department (such as the Accounting team) have a specific configuration, you can set up a group for that team, decide which updates their computers need and what time they should be installed, and then use WSUS reports to evaluate the updates for the team.
 
 > [!NOTE]
-> If a WSUS server is running in replica mode, computer groups cannot be created on that server. All the computer groups that are needed for client computers of the replica server must be created on the WSUS server that is the root of the WSUS server hierarchy. For more information about replica mode, see Manage WSUS Replica Servers [Manage WSUS Replica Servers](https://technet.microsoft.com/library/dd939893(WS.10).aspx) in the WSUS 3.0 SP2 Operations Guide.
+> If a WSUS server is running in replica mode, computer groups cannot be created on that server. All the computer groups that are needed for client computers of the replica server must be created on the WSUS server that is the root of the WSUS server hierarchy. For more information about replica mode, see Manage WSUS Replica Servers [Manage WSUS Replica Servers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd939893(v=ws.10)) in the WSUS 3.0 SP2 Operations Guide.
 
 Computers are always assigned to the **All computers** group, and they remain assigned to the **Unassigned computers** group until you assign them to another group. Computers can belong to more than one group.
 
@@ -347,7 +339,7 @@ The server applies the following rules to resolve conflicts and determine the re
 
 3.  Deadline
 
-#### <a name="BKMK_Priority"></a>Priority
+#### Priority
 The actions associated with the group of the highest priority override the actions of other groups. The deeper a group appears within the hierarchy of groups, the higher its priority. Priority is assigned only based on depth; all branches have equal priority. For example, a group two levels beneath the Desktops branch has a higher priority than a group one level beneath the Server branch.
 
 In the following text example of the Update Services console hierarchy pane, for a WSUS server named WSUS-01, computer groups named Desktop computers and Server have been added to the default **All computers** group. Both the Desktop computers and Server groups are at the same hierarchical level.
@@ -384,14 +376,14 @@ In the following text example of the Update Services console hierarchy pane, for
 
 In this example, the group two levels beneath the Desktop computers branch (Desktops L2) has a higher priority than the group one level beneath the Server branch (Servers L1). Accordingly, for a computer that has membership in both the Desktops-L2 and the Servers-L1 groups, all actions for the Desktops-L2 group take priority over actions specified for the Servers-L1 group.
 
-#### <a name="BKMK_Install"></a>Priority of Install and Uninstall
+#### Priority of Install and Uninstall
 Install actions override uninstall actions. Required installs override optional installs (optional installs are only available through the API and changing an approval for an update using the WSUS Administration Console will clear all optional approval.)
 
-#### <a name="BKMK_Deadline"></a>Priority of Deadlines
+#### Priority of Deadlines
 Actions that have a deadline override those with no deadline.  Actions with earlier deadlines override those with later deadlines.
 
-## <a name="BKMK_1.6."></a>1.6. Plan WSUS performance considerations
-There are some areas that you should carefully plan before deploy WSUS so that you can have optimized performance. The key areas are:
+## 1.6. Plan WSUS performance considerations
+There are some areas that you should carefully plan before deploying WSUS so that you can have optimized performance. The key areas are:
 
 -   Network setup
 
@@ -405,47 +397,47 @@ There are some areas that you should carefully plan before deploy WSUS so that y
 
 -   Background Intelligent Transfer Service (BITS)
 
-### <a name="BKMK_1.6.Network"></a>Network setup
+### Network setup
 To optimize performance in WSUS networks, consider the following suggestions:
 
 1.  Set up WSUS networks in a hub-and-spoke topology rather than in a hierarchical topology.
 
 2.  Use DNS netmask ordering for roaming client computers, and configure roaming client computers to obtain updates from the local WSUS server.
 
-### <a name="BKMK_1.6.Deferred"></a>Deferred download
+### Deferred download
 You can approve updates, and download the update metadata before you download the update files, this method is called *deferred downloads*. When you defer downloads, an update is downloaded only after it is approved. We recommend that you defer downloads because it optimizes network bandwidth and disk space.
 
 In a hierarchy of WSUS servers, WSUS automatically sets all downstream servers to use the deferred download setting of the root WSUS server. You can change this default setting. For example, you can configure an upstream server to perform full, immediate synchronizations, and then configure a downstream server to defer the downloads.
 
 If you deploy a hierarchy of connected WSUS servers, we recommend that you do not deeply nest the servers. If you enable deferred downloads and a downstream server requests an update that is not approved on the upstream server, the downstream server's request forces a download on the upstream server. The downstream server then downloads the update on a subsequent synchronization. In a deep hierarchy of WSUS servers, delays can occur as updates are requested, downloaded, and then passed through the server hierarchy. By default, deferred downloads are enabled when you store updates locally. You can change this option manually.
 
-### <a name="BKMK_1.6.Filters"></a>Filters
+### Filters
 WSUS lets you filter update synchronizations by language, product, and classification. In a hierarchy of WSUS servers, WSUS automatically sets all downstream servers to use the update filtering options that are selected on the root WSUS server. You can reconfigure download servers to receive only a subset of the languages.
 
 By default, the products to be updated are Windows and Office, and the default classifications are Critical updates, Security updates, and Definition updates. To conserve bandwidth and disk space, we recommend that you limit languages to those that you actually use.
 
-### <a name="BKMK_1.6.Installation"></a>Installation
+### Installation
 Updates typically consist of new versions of files that already exist on the computer that is being updated. On a binary level, these existing files might not differ very much from updated versions. The express installation files feature identifies the exact bytes between versions, creates and distributes updates of only those differences, and then merges the existing file together with the updated bytes.
 
-Sometimes this feature is called "delta delivery" because it downloads only the delta (difference) between two versions of a file. Express installation files are larger than the updates that are distributed to client computers because the express installation file contains all possible versions of each file that is to be updated.
+Sometimes this feature is called delta delivery because it downloads only the delta (difference) between two versions of a file. Express installation files are larger than the updates that are distributed to client computers because the express installation file contains all possible versions of each file that is to be updated.
 
 You can use express installation files to limit the bandwidth that is consumed on the local network, because WSUS transmits only the delta applicable to a particular version of an updated component. However, this comes at the cost of additional bandwidth between your WSUS server, any upstream WSUS servers, and Microsoft Update, and requires additional local disk space. By default, WSUS does not use express installation files.
 
 Not all updates are good candidates for distribution by using express installation files. If you select this option, you obtain express installation files for all updates. If you do not store updates locally, the Windows Update Agent will decide whether to download the express installation files or the full-file update distributions.
 
-### <a name="BKMK_1.6.LargeUpdates"></a>Large update deployment
+### Large update deployment
 When you deploy large updates (such as service packs), you can avoid saturating the network by using the following practices:
 
-1.  Use Background Intelligent Transfer Service (BITS) throttling. BITS bandwidth limitations can be controlled by time-of-day, but they apply to all applications that are using BITS. To learn how to control BITS throttling, please see [Group Policies](https://msdn.microsoft.com/library/windows/desktop/aa362844(v=vs.85).aspx)
+1.  Use Background Intelligent Transfer Service (BITS) throttling. BITS bandwidth limitations can be controlled by time-of-day, but they apply to all applications that are using BITS. To learn how to control BITS throttling, please see [Group Policies](/windows/win32/bits/group-policies).
 
 2.  Use Internet Information Services (IIS) throttling to limit throttling to one or more web services.
 
 3.  Use computer groups to control the rollout. A client computer identifies itself as a member of a particular computer group when it sends information to the WSUS server. The WSUS server uses this information to determine which updates should be deployed to this computer. You can set up multiple computer groups and sequentially approve large service pack downloads for a subset of these groups.
 
-### <a name="BKMK_1.6.BITS"></a>Background Intelligent Transfer Service
-WSUS uses the Background Intelligent Transfer Service (BITS) protocol for all its file transfer tasks. This includes downloads to client computers and server synchronizations. BITS enables programs to download files by using spare bandwidth. BITS maintains file transfers through network disconnections and computer restarts. For more information, see: [Background Intelligent Transfer Service](https://msdn.microsoft.com/library/bb968799.aspx).
+### Background Intelligent Transfer Service
+WSUS uses the Background Intelligent Transfer Service (BITS) protocol for all its file transfer tasks. This includes downloads to client computers and server synchronizations. BITS enables programs to download files by using spare bandwidth. BITS maintains file transfers through network disconnections and computer restarts. For more information, see: [Background Intelligent Transfer Service](/windows/win32/bits/background-intelligent-transfer-service-portal).
 
-## <a name="BKMK_1.7."></a>1.7. Plan Automatic Updates settings
+## 1.7. Plan Automatic Updates settings
 You can specify a deadline to approve updates on the WSUS server. The deadline causes client computers to install the update at a specific time, but there are a number of different situations, depending on whether the deadline has expired, whether there are other updates in the queue for the computer to install, and whether the update (or another update in the queue) requires a restart.
 
 By default, Automatic Updates polls the WSUS server for approved updates every 22 hours minus a random offset. If new updates need to be installed, they are downloaded. The time between each detection cycle can be manipulated from 1 to 22 hours.
@@ -463,4 +455,3 @@ At the scheduled day and time, Automatic Updates installs the update and restart
 If the computer must be restarted, and any user is logged on, a similar countdown dialog box is displayed, which warns the user about the impending restart. You can manipulate computer restarts with Group Policy.
 
 After the new updates are downloaded, Automatic Updates polls the WSUS server for the list of approved packages to confirm that the packages it downloaded are still valid and approved. This means that, if a WSUS administrator removes updates from the list of approved updates while Automatic Updates is downloading updates, only the updates that are still approved are actually installed.
-

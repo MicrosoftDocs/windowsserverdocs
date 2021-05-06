@@ -1,13 +1,11 @@
 ---
 title: Event logging
 description: Event logging from Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
 ---
 
 # Use event logging in Windows Admin Center to gain insight into management activities and track gateway usage
@@ -31,11 +29,11 @@ Logged events include the following information:
 | UserOnGateway | User name used to access the Windows Admin Center gateway and execute the action                    |
 | UserOnTarget  | User name used to access the target managed server, if different from the userOnGateway (i.e. the user accessed using the server using "Manage as" credentials) |
 | Delegation    | Boolean: if the target managed server trusts the gateway and credentials are delegated from the user's client machine             |
-| LAPS          | Boolean: if the user accessed the server using [LAPS](https://technet.microsoft.com/mt227395.aspx) credentials                          |
+| LAPS          | Boolean: if the user accessed the server using [LAPS](/previous-versions/mt227395(v=msdn.10)) credentials                          |
 | File          | name of the file uploaded, if the action was a file upload                                |
 
 ## Learn about Windows Admin Center activity with event logging
 
 Windows Admin Center logs gateway activity to the event channel on the gateway computer to help you troubleshoot issues and view metrics on usage. These events are logged to the **Microsoft-ServerManagementExperience** event channel.
 
-[Learn more about troubleshooting Windows Admin Center.](troubleshooting.md)
+[Learn more about troubleshooting Windows Admin Center.](../support/troubleshooting.md)

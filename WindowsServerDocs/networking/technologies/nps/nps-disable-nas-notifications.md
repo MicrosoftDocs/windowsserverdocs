@@ -1,13 +1,12 @@
 ---
 title: Disable NAS Notification Forwarding in NPS
-description: This topic provides instructions on configuring Network Policy Server concurrent authentications in Windows Server 2016.
+description: Learn how to disable the forwarding of start and stop messages from network access servers to members of a remote RADIUS server group configured in NPS.
 manager: brianlic
-ms.prod: windows-server-threshold
-ms.technology: networking
 ms.topic: article
 ms.assetid: a09bfb03-95fc-4534-bf3c-97078ef6b07e
-ms.author: pashort 
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Disable NAS Notification Forwarding in NPS
@@ -16,7 +15,7 @@ author: shortpatti
 
 You can use this procedure to disable the forwarding of start and stop messages from network access servers (NASs) to members of a remote RADIUS server group configured in NPS.
 
-When you have remote RADIUS server groups configured and, in NPS **Connection Request Policies**, you clear the **Forward accounting requests to this remote RADIUS server group** check box, these groups are still sent NAS start and stop notification messages. 
+When you have remote RADIUS server groups configured and, in NPS **Connection Request Policies**, you clear the **Forward accounting requests to this remote RADIUS server group** check box, these groups are still sent NAS start and stop notification messages.
 
 This creates unnecessary network traffic. To eliminate this traffic, disable NAS notification forwarding for individual servers in each remote RADIUS server group.
 

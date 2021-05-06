@@ -1,60 +1,54 @@
 ---
 title: reg save
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the reg save command, which saves a copy of specified subkeys, entries, and values of the registry in a specified file.
+ms.topic: reference
 ms.assetid: b326482b-c8af-467d-a20c-0481eeda3d5c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # reg save
 
-
-
 Saves a copy of specified subkeys, entries, and values of the registry in a specified file.
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
 
 ## Syntax
 
 ```
-reg save <KeyName> <FileName> [/y]
+reg save <keyname> <filename> [/y]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<KeyName>|Specifies the full path of the subkey. For specifying remote computers, include the computer name (in the format \\\\ComputerName\) as part of the *KeyName*. Omitting \\\\ComputerName\ causes the operation to default to the local computer. The *KeyName* must include a valid root key. Valid root keys for the local computer are: HKLM, HKCU, HKCR, HKU, and HKCC. If a remote computer is specified, valid root keys are: HKLM and HKU.|
-|\<FileName>|Specifies the name and path of the file that is created. If no path is specified, the current path is used.|
-|/y|Overwrites an existing file with the name *FileName* without prompting for confirmation.|
-|/?|Displays help for **reg save** at the command prompt.|
+| Parameter | Description |
+|--|--|
+| `<keyname>` | Specifies the full path of the subkey. To specify a remote computer, include the computer name (in the format `\\<computername>\`) as part of the *keyname*. Omitting `\\<computername>\` causes the operation to default to the local computer. The *keyname* must include a valid root key. Valid root keys for the local computer are: **HKLM**, **HKCU**, **HKCR**, **HKU**, and **HKCC**. If a remote computer is specified, valid root keys are: **HKLM** and **HKU**. If the registry key name contains a space, enclose the key name in quotes. |
+| `<filename>` | Specifies the name and path of the created file. If no path is specified, the current path is used. |
+| /y | Overwrites an existing file with the name *filename* without prompting for confirmation. |
+| /? | Displays help at the command prompt. |
 
-## Remarks \<optional section>
+#### Remarks
 
--   The following table lists the return values for the **reg save** operation.
+- Before editing any registry entries, you must save the parent subkey using the **reg save** command. If the edit fails, you can then restore the original subkey using the **reg restore** operation.
 
-|Value|Description|
-|-----|-----------|
-|0|Success|
-|1|Failure|
--   Before editing any registry entries, save the parent subkey with the **reg save** operation. If the edit fails, restore the original subkey with the **reg restore** operation.
+- The return values for the **reg save** operation are:
 
-## <a name="BKMK_examples"></a>Examples
+    | Value | Description |
+    |--|--|
+    | 0 | Success |
+    | 1 | Failure |
+
+### Examples
 
 To save the hive MyApp into the current folder as a file named AppBkUp.hiv, type:
+
 ```
-REG SAVE HKLM\Software\MyCo\MyApp AppBkUp.hiv
+reg save HKLM\Software\MyCo\MyApp AppBkUp.hiv
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [reg restore command](reg-restore.md)

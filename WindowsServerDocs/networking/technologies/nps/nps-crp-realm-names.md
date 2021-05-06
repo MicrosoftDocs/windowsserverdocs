@@ -2,18 +2,16 @@
 title: Realm Names
 description: This topic provides an overview of using realm names in Network Policy Server connection request processing in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
-ms.technology: networking
 ms.topic: article
 ms.assetid: d011eaad-f72a-4a83-8099-8589c4ee8994
-ms.author: pashort 
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Realm Names
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
-
 
 You can use this topic for an overview of using realm names in Network Policy Server connection request processing.
 
@@ -23,7 +21,7 @@ In another example, if the User-Name RADIUS attribute contains the user name use
 
 - **Example\user1**. In this example, the realm name **Example** is a prefix; and it is also the name of an Active Directory&reg; Domain Services \(AD DS\) domain.
 
-- **user1@example.com**. In this example, the realm name **example.com** is a suffix; and it is either a DNS domain name or the name of an AD DS domain.
+- <strong>user1@example.com</strong>. In this example, the realm name **example.com** is a suffix; and it is either a DNS domain name or the name of an AD DS domain.
 
 You can use realm names configured in connection request policies while designing and deploying your RADIUS infrastructure to ensure that connection requests are routed from RADIUS clients, also called network access servers, to RADIUS servers that can authenticate and authorize the connection request.
 
@@ -69,11 +67,11 @@ After the User-Name attribute is modified according to the attribute manipulatio
 
 When the user name does not contain a domain name, NPS supplies one. By default, the NPS-supplied domain name is the domain of which the NPS is a member. You can specify the NPS-supplied domain name through the following registry setting:
 
-    
-    HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\RasMan\PPP\ControlProtocols\BuiltIn\DefaultDomain
-    
+```
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\RasMan\PPP\ControlProtocols\BuiltIn\DefaultDomain
+```
 
->[!CAUTION]
->Incorrectly editing the registry can severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
+> [!CAUTION]
+> Incorrectly editing the registry can severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
 
 Some non-Microsoft network access servers delete or modify the domain name as specified by the user. As the result, the network access request is authenticated against the default domain, which might not be the domain for the user's account. To resolve this problem, configure your RADIUS servers to change the user name into the correct format with the accurate domain name.

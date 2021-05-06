@@ -1,25 +1,19 @@
 ---
-title: Begin backup
-description: "Windows Commands topic for **Begin backup** - starts a full backup session."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+title: begin backup
+description: Reference article for the begin backup command, which starts a full backup session.
+ms.topic: reference
 ms.assetid: 8a53b5d5-e24c-4fc3-a3d8-c622c1bbf8f0
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# Begin backup
+# begin backup
 
+> Applies To: Windows Server 2012 R2, Windows Server 2012
 
-
-Starts a full backup session.
+Starts a full backup session. This command overrides the default copy backup setting.
 
 ## Syntax
 
@@ -27,10 +21,8 @@ Starts a full backup session.
 begin backup
 ```
 
-## Remarks
+## Additional References
 
--   This command overrides the default copy backup setting.
+- [Command-Line Syntax Key](command-line-syntax-key.md)
 
-#### Additional references
-
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [begin restore command](begin-restore.md)

@@ -1,8 +1,7 @@
 ---
-author: shortpatti
-ms.author: pashort
+author: JasonGerend
+ms.author: jgerend
 ms.date:  10/02/2018
-ms.prod: windows-server-threshold
 ms:topic: include
 ---
 

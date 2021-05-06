@@ -1,19 +1,16 @@
 ---
+description: "Learn more about: Gateway bandwidth allocation"
 title: Gateway bandwidth allocation
-description: 
-manager: dougkim
-ms.prod: windows-server-threshold
-ms.technology: networking-hv-switch
-ms.topic: get-started-article
-ms.assetid: 
-ms.author: pashort
-author: shortpatti
+manager: grcusanz
+ms.topic: how-to
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/22/2018
 ---
 
 # Gateway bandwidth allocation
 
->Applies to: Windows Server
+>Applies to: Windows Server 2019
 
 In Windows Server 2016, the individual tunnel bandwidth for IPsec, GRE, and L3 was a ratio of the total gateway capacity. Therefore, customers would provide the gateway capacity based on the standard TCP bandwidth expecting this out of the gateway VM.
 
@@ -58,12 +55,12 @@ Remaining available capacity on the gateway = Total capacity of the gateway – 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25–5*2 = 15 Gbps
 
-Remaining IPsec throughput that you can allocate on the gateway 
+Remaining IPsec throughput that you can allocate on the gateway
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5-2 = 3 Gbps
 
 Remaining GRE throughput that you can allocate on the gateway = Remaining
-capacity of gateway/GRE throughput ratio 
+capacity of gateway/GRE throughput ratio
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15*3/5 = 9 Gbps
 

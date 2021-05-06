@@ -1,22 +1,20 @@
 ---
 title: NIC advanced properties
 description: You can manage NICs and all the features via Windows PowerShell or the Network Control Panel.
-ms.prod: windows-server-threshold
-ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
-ms.author: pashort 
-author: shortpatti
-ms.date: 09/20/2018 
+ms.author: jgerend
+author: JasonGerend
+ms.date: 09/20/2018
 ---
 
 
 # NIC advanced properties
 
-You can manage NICs and all the features via Windows PowerShell using the [NetAdapter](https://docs.microsoft.com/powershell/module/netadapter/?view=win10-ps&viewFallbackFrom=winserverr2-ps) cmdlet.  You can also manage NICs and all the features using Network Control Panel (ncpa.cpl). 
+You can manage NICs and all the features via Windows PowerShell using the [NetAdapter](/powershell/module/netadapter/) cmdlet.  You can also manage NICs and all the features using Network Control Panel (ncpa.cpl).
 
-1. In **Windows PowerShell**, run the `Get‑NetAdapterAdvancedProperties` cmdlet against two different make/model of NICs.
+1. In **Windows PowerShell**, run the `Get‑NetAdapterAdvancedProperty` cmdlet against two different make/model of NICs.
 
    ![Get-NetAdapterAdvancedProperty m1](../../media/network-offload-and-optimization/Get-NetAdapterAdvancedProperty-m1.png)
 
@@ -26,7 +24,7 @@ You can manage NICs and all the features via Windows PowerShell using the [NetAd
 
 2. In the **Network Control Panel** (ncpa.cpl), do the following:
 
-   a. and right-click the NIC.
+   a. Right-click the NIC.
 
    ![Network connections dialog](../../media/network-offload-and-optimization/network-connections-dialog.png)
 

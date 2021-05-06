@@ -1,13 +1,11 @@
 ---
+description: "Learn more about: Single log-out for OpenID Connect with AD FS"
 title: Single log-out for OpenID Connect with AD FS
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 11/17/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-ms.technology: identity-adfs
 ---
 
 #  Single log-out for OpenID Connect with AD FS
@@ -46,8 +44,8 @@ OpenID Connect uses a JSON document called a "Discovery document" to provide det
 "rp_id_token_token_binding_supported":true,
 "frontchannel_logout_supported":true,
 "frontchannel_logout_session_supported":true
-} 
- 
+}
+
 ```
 
 
@@ -60,7 +58,7 @@ The following additional values will be available in the discovery doc to indica
 
 
 ## AD FS server configuration
-The AD FS property EnableOAuthLogout will be enabled by default.  This property tells the AD FS server to browse for the URL (LogoutURI) with the SID to initiate logout on the client. 
+The AD FS property EnableOAuthLogout will be enabled by default.  This property tells the AD FS server to browse for the URL (LogoutURI) with the SID to initiate logout on the client.
 If you do not have [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801) installed you can use the following PowerShell command:
 
 ```PowerShell
@@ -74,7 +72,7 @@ Set-ADFSProperties -EnableOAuthLogout $true
 >frontchannel_logout is supported **only** after installtion of [KB4038801](https://support.microsoft.com/en-gb/help/4038801/windows-10-update-kb4038801)
 
 ## Client configuration
-Client needs to implement a url which 'logs off' the logged in user. Administrator can configure the LogoutUri in the client configuration using the following PowerShell cmdlets. 
+Client needs to implement a url which 'logs off' the logged in user. Administrator can configure the LogoutUri in the client configuration using the following PowerShell cmdlets.
 
 
 - `(Add | Set)-AdfsNativeApplication`
@@ -85,10 +83,9 @@ Client needs to implement a url which 'logs off' the logged in user. Administrat
 Set-AdfsClient -LogoutUri <url>
 ```
 
-The `LogoutUri` is the url used by AF FS to "log off" the user. For implementing the `LogoutUri`, the client needs to ensure it clears the authentication state of the user in the application, for example, dropping the authentication tokens that it has. AD FS will browse to that URL, with the SID as the query parameter, signaling the relying party / application to log off the user. 
+The `LogoutUri` is the url used by AF FS to "log off" the user. For implementing the `LogoutUri`, the client needs to ensure it clears the authentication state of the user in the application, for example, dropping the authentication tokens that it has. AD FS will browse to that URL, with the SID as the query parameter, signaling the relying party / application to log off the user.
 
-![](media/ad-fs-logout-openid-connect/adfs_single_logout2.png)
-
+![ADFS log off user diagram](media/ad-fs-logout-openid-connect/adfs_single_logout2.png)
 
 1.	**OAuth token with session ID**: AD FS includes session id in the OAuth token at the time of id_token token issuance. This will be used later by AD FS to identify the relevant SSO cookies to be cleaned up for the user.
 2.	**User initiates logout on App1**: The user can initiate a logout from any of the logged in applications. In this example scenario, a user initiates a logout from App1.
@@ -107,4 +104,4 @@ The `LogoutUri` is the url used by AF FS to "log off" the user. For implementing
 
 
 ## Next Steps
-[AD FS Development](../../ad-fs/AD-FS-Development.md)  
+[AD FS Development](../../ad-fs/AD-FS-Development.md)

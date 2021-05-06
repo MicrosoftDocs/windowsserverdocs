@@ -1,13 +1,7 @@
 ---
 title: Prepare to migrate to MultiPoint Services
 description: Describes information to gather before you migrate to MultiPoint Services in Windows Server 2016
-ms.custom: na
 ms.date: 07/29/2016
-ms.prod: windows-server-threshold
-ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3060c531-98a2-4957-a02c-be273f25f493
 author: lizap
@@ -58,6 +52,6 @@ To retrieve the display orientation settings, view the **station settings** for 
 
 ## VDI template location
  If you previously enabled the VDI template feature, record the location of the VDI template. As long as the source and destination servers are on the same network, you can import the template by using MultiPoint Manager.
- 
+
 ## Next step
 You're now ready to [migrate to MultiPoint Services](multipoint-services-migration-steps.md) in the RTM release of Windows Server 2016.

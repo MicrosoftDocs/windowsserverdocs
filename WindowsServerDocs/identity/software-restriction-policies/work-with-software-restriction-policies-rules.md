@@ -1,17 +1,11 @@
 ---
 title: Work with Software Restriction Policies Rules
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: security-software-restriction-policies
-ms.tgt_pltfrm: na
+description: Learn about procedures working with certificate, path, internet zone and hash rules using Software Restriction Policies.
 ms.topic: article
 ms.assetid: 4a8047d5-9bb9-4bed-bc8f-583a237731e2
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Work with Software Restriction Policies Rules

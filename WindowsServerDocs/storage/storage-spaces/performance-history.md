@@ -1,17 +1,16 @@
 ---
+description: "Learn more about: Performance history for Storage Spaces Direct"
 title: Performance history for Storage Spaces Direct
 ms.author: cosdar
-ms.manager: eldenc
-ms.technology: storage-spaces
+manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 09/07/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 # Performance history for Storage Spaces Direct
 
-> Applies To: Windows Server 2019
+> Applies to: Windows Server 2019
 
 Performance history is a new feature that gives [Storage Spaces Direct](storage-spaces-direct-overview.md) administrators easy access to historical compute, memory, network, and storage measurements across host servers, drives, volumes, virtual machines, and more. Performance history is collected automatically and stored on the cluster for up to one year.
 
@@ -22,7 +21,7 @@ Performance history is a new feature that gives [Storage Spaces Direct](storage-
 
 Performance history is collected by default with Storage Spaces Direct in Windows Server 2019. You do not need to install, configure, or start anything. An Internet connection is not required, System Center is not required, and an external database is not required.
 
-To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md):
+To see your cluster's performance history graphically, use [Windows Admin Center](../../manage/windows-admin-center/overview.md):
 
 ![Performance history in Windows Admin Center](media/performance-history/perf-history-in-wac.png)
 
@@ -147,7 +146,7 @@ Shortly after Storage Spaces Direct is enabled, an approximately 10 GB volume na
 
 The volume is backed by Storage Spaces and uses either simple, two-way mirror, or three-way mirror resiliency, depending on the number of nodes in the cluster. It is repaired after drive or server failures just like any other volume in Storage Spaces Direct.
 
-The volume uses ReFS but is not Cluster Shared Volume (CSV), so it only appears on the Cluster Group owner node. Besides being automatically created, there is nothing special about this volume: you can see it, browse it, resize it, or delete it (not recommended). If something goes wrong, see [Troubleshooting](#troubleshooting). 
+The volume uses ReFS but is not Cluster Shared Volume (CSV), so it only appears on the Cluster Group owner node. Besides being automatically created, there is nothing special about this volume: you can see it, browse it, resize it, or delete it (not recommended). If something goes wrong, see [Troubleshooting](#troubleshooting).
 
 ### Object discovery and data collection
 
@@ -157,7 +156,7 @@ Collection is handled by the Health Service, which is highly available: if the n
 
 ### Handling measurement gaps
 
-When measurements are merged into less granular series that span more time, as described in [Timeframes](#Timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `ClusterNode.Cpu.Usage` average for the hour will be recorded correctly as 50% (not 25%).
+When measurements are merged into less granular series that span more time, as described in [Timeframes](#timeframes), periods of missing data are excluded. For example, if the server was down for 30 minutes, then running at 50% CPU for the next 30 minutes, the `ClusterNode.Cpu.Usage` average for the hour will be recorded correctly as 50% (not 25%).
 
 ### Extensibility and customization
 
@@ -205,7 +204,7 @@ An error message like "*The term 'Get-ClusterPerf' is not recognized as the name
    > [!NOTE]
    > This feature is not available on Windows Server 2016 or earlier.
 
-### No data available 
+### No data available
 
 If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
@@ -221,6 +220,6 @@ If a chart shows "*No data available*" as pictured, here's how to troubleshoot:
 
 5. If the command in the previous step returns nothing, you can try restarting the Health Service (which collects performance history) by running `Stop-ClusterResource Health ; Start-ClusterResource Health` in PowerShell.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)

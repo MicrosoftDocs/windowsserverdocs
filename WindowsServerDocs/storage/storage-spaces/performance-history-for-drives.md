@@ -1,18 +1,17 @@
 ---
+description: "Learn more about: Performance history for drives"
 title: Performance history for drives
 ms.author: cosdar
-ms.manager: eldenc
-ms.technology: storage-spaces
+manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
 # Performance history for drives
 
-> Applies To: Windows Server Insider Preview
+> Applies to: Windows Server 2019
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for drives. Performance history is available for every drive in the cluster storage subsystem, regardless of bus or media type. However, it is not available for OS boot drives.
 
@@ -81,12 +80,12 @@ The `size.*` series are collected from the `MSFT_PhysicalDisk` class in WMI, one
 
 ## Usage in PowerShell
 
-Use the [Get-PhysicalDisk](https://docs.microsoft.com/powershell/module/storage/get-physicaldisk) cmdlet:
+Use the [Get-PhysicalDisk](/powershell/module/storage/get-physicaldisk) cmdlet:
 
 ```PowerShell
 Get-PhysicalDisk -SerialNumber <SerialNumber> | Get-ClusterPerf
 ```
 
-## See also
+## Additional References
 
 - [Performance history for Storage Spaces Direct](performance-history.md)

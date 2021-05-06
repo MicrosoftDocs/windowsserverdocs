@@ -1,13 +1,11 @@
 ---
 title: Add a module to a tool extension
 description: Develop a tool extension Windows Admin Center SDK (Project Honolulu) - add a module to a tool extension
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
 ---
 
 # Add a module to a tool extension
@@ -18,7 +16,7 @@ In this article, we will add an empty module to a tool extension we have created
 
 ## Prepare your environment
 
-If you haven't already, follow the directions in develop a [tool](..\develop-tool.md) (or [solution](..\develop-solution.md)) extension to prepare your environment and create a new, empty tool extension.
+If you haven't already, follow the directions in develop a [tool](../develop-tool.md) (or [solution](../develop-solution.md)) extension to prepare your environment and create a new, empty tool extension.
 
 ## Use the Angular CLI to create a module (and component)
 
@@ -28,10 +26,10 @@ If you are new to Angular, it is highly recommended that you read the documentat
 * More information about generating a new component in Angular CLI: https://github.com/angular/angular-cli/wiki/generate-component
 
 
-Open a command prompt, change directory to \src\app in your project, then run the following commands, replacing ```{!ModuleName}``` with your module name (spaces removed):
+Open a command prompt, change directory to .\src\app in your project, then run the following commands, replacing ```{!ModuleName}``` with your module name (spaces removed):
 
 ```
-cd \src\app
+cd .\src\app
 ng generate module {!ModuleName}
 ng generate component {!ModuleName}
 ```
@@ -42,7 +40,7 @@ ng generate component {!ModuleName}
 
 Example usage:
 ```
-cd \src\app
+cd .\src\app
 ng generate module ManageFooWorksPortal
 ng generate component ManageFooWorksPortal
 ```
@@ -78,7 +76,7 @@ Use the same module name that you used in the step above.
             // if the component has child components that need to be routed to, include them in the children array.
             children: [
                 {
-                    path: '', 
+                    path: '',
                     redirectTo: 'base',
                     pathMatch: 'full'
                 }
@@ -138,7 +136,7 @@ Open file ```{!module-name}.component.ts```, found with the following naming con
 | Value | Explanation | Example filename |
 | ----- | ----------- | ------- |
 | ```{!module-name}``` | Your module name (lower case, spaces replaced with dashes) | ```manage-foo-works-portal.component.ts``` |
-    
+
 Modify content in the file to the following:
 
 ``` ts
@@ -161,14 +159,14 @@ Open file ```app-routing.module.ts```, and modify the default path so it will lo
 
 ``` ts
     {
-        path: '', 
+        path: '',
         loadChildren: 'app/{!module-name}/{!module-name}.module#{!ModuleName}Module'
     },
 ```
 Here's an example of an updated default path:
 ``` ts
     {
-        path: '', 
+        path: '',
         loadChildren: 'app/manage-foo-works-portal/manage-foo-works-portal.module#ManageFooWorksPortalModule'
     },
 ```
@@ -176,4 +174,4 @@ Here's an example of an updated default path:
 
 ## Build and side load your extension
 
-You've now added a module to your extension.  Next, you can [build and side load](..\develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center to see the results.
+You've now added a module to your extension.  Next, you can [build and side load](../develop-tool.md#build-and-side-load-your-extension) your extension in Windows Admin Center to see the results.

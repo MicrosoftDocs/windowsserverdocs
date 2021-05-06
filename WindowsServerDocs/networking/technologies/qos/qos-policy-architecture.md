@@ -1,13 +1,12 @@
 ---
 title: QoS Policy Architecture
-description: This topic provides an overview of Quality of Service (QoS) Policy, which allows you to use Group Policy to prioritize network traffic bandwidth of specific applications and services in Windows Server 2016.
-ms.prod: windows-server-threshold
-ms.technology: networking
+description: Learn about the architecture of QoS Policy.
 ms.topic: article
 ms.assetid: 25097cb8-b9b1-41c9-b3c7-3610a032e0d8
 manager: brianlic
-ms.author: pashort
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # QoS Policy Architecture
@@ -28,7 +27,7 @@ The architecture of Policy-based QoS consists of the following components:
 
 - **QoS Client Side Extension**. A component of the Group Policy Client Service that waits for an indication from the Group Policy engine that the QoS policies have changed and informs the QoS Inspection Module.
 
-- **TCP/IP Stack**. The TCP/IP stack that includes integrated support for IPv4 and IPv6 and supports Windows Filtering Platform. 
+- **TCP/IP Stack**. The TCP/IP stack that includes integrated support for IPv4 and IPv6 and supports Windows Filtering Platform.
 
 - **QoS Inspection**. Module A component within the TCP/IP stack that waits for indications of QoS policy changes from the QoS Client Side Extension, retrieves the QoS policy settings, and interacts with the Transport Layer and Pacer.sys to internally mark traffic that matches the QoS policies.
 

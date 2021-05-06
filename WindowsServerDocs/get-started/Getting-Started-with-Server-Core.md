@@ -1,40 +1,34 @@
 ---
 title: Install Server Core
 description: How to obtain and install a Server Core installation on Windows Server 2019, Windows Server 2016, or Windows Server (Semi-Annual Channel).
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.date: 1/04/2019
-ms.technology: server-general
-ms.tgt_pltfrm: na
+ms.date: 05/21/2019
 ms.topic: article
 ms.assetid: 2d22818c-fbb7-487a-bb82-81ef0a3f7ede
-author: jaimeo
-ms.author: jaimeo
+author: jasongerend
+ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ---
 # Install Server Core
 
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
-  
+
 When you install Windows Server for the first time, you have the following installation options:
 
 >[!NOTE]
-> In the following list, editions without “Desktop Experience” are the Server Core installation options
+> In the following list, editions without "Desktop Experience" are the Server Core installation options
 
--	Windows Server Standard
--	Windows Server Standard with Desktop Experience
--	Windows Server Datacenter
--	Windows Server Datacenter with Desktop Experience
+-    Windows Server Standard
+-    Windows Server Standard with Desktop Experience
+-    Windows Server Datacenter
+-    Windows Server Datacenter with Desktop Experience
 
-When you install Windows Server (Semi-Annual Channel), including versions 1709, 1803, and 1809, you have the following installation options:
+When you install Windows Server (Semi-Annual Channel), you have the following installation options:
 
--	Windows Server Standard 
--	Windows Server Datacenter
+-    Windows Server Standard
+-    Windows Server Datacenter
 
-The Server Core option reduces the space required on disk and the potential attack surface, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you do feel you need the additional user interface elements, see [Install Server with Desktop Experience](Getting-Started-with-Server-with-Desktop-Experience.md). 
+The Server Core option reduces the space required on disk and the potential attack surface, so we recommend that you choose the Server Core installation unless you have a particular need for the additional user interface elements and graphical management tools that are included in the Server with Desktop Experience option. If you do feel you need the additional user interface elements, see [Install Server with Desktop Experience](Getting-Started-with-Server-with-Desktop-Experience.md).
 
 With the Server Core option, the standard user interface (the Desktop Experience) is not installed; you manage the server using the command line, Windows PowerShell, or by remote methods.
 
@@ -68,10 +62,10 @@ With the Server Core option, the standard user interface (the Desktop Experience
 - Windows Server Update Server
 - Active Directory Rights Management Server
 - Routing and Remote Access Server and the following sub-roles:
-- Remote Desktop Services Connection Broker
-- Licensing
-- Virtualization
-- Volume Activation Services
+   - Remote Desktop Services Connection Broker
+   - Licensing
+   - Virtualization
+   - Volume Activation Services
 
 For roles not included in Server Core, see [Roles, Role Services, and Features not in Windows Server - Server Core](../administration/server-core/server-core-removed-roles.md).
 
@@ -82,13 +76,12 @@ For general installation steps and options for Windows Server (Long Term Servici
 ## Installing on Windows Server (Semi-Annual Channel)
 
 Installation steps for Windows Server (Semi-Annual Channel) are the same as installing previous versions of Windows Server (from an .ISO image), with the following exceptions:
+
 - No supported upgrades from previous versions of Windows Server to Windows Server, version 1709. A fresh installation is always required.
    This means that when you run setup.exe from the desktop of a Windows computer, the setup experience does not permit the upgrade option (it is grayed out).
-- There’s no evaluation version for Windows Server (Semi-Annual Channel)
-- There’s no OEM or retail version. Windows Server (Semi-Annual Channel) can only be licensed through Software Assurance or loyalty programs.
+- There's no evaluation version for Windows Server (Semi-Annual Channel)
+- There's no OEM or retail version. Windows Server (Semi-Annual Channel) can only be licensed through Software Assurance or loyalty programs.
 
-To get Windows Server version 1709, see [Introducing Windows Server, version 1709](get-started-with-1709.md).
+For more info about Semi-Annual Channel, see [Comparison of servicing channels](../get-started-19/servicing-channels-19.md).
 
-To get Windows Server version 1803, see [Introducing Windows Server, version 1803](get-started-with-1803.md).
-
-To see what's new in Windows Server, version 1809, see [What's New in Windows Server version 1809](whats-new-in-windows-server-1809.md)
+To see what's new in Windows Server Semi-Annual Channel, see [What's New in Windows Server](whats-new-in-windows-server.md)

@@ -1,12 +1,11 @@
 ---
+description: "Learn more about: Nested resiliency for Storage Spaces Direct"
 title: Nested resiliency for Storage Spaces Direct
-ms.prod: windows-server-threshold
 ms.author: jgerend
-ms.manager: dansimp
-ms.technology: storagespaces
+manager: dansimpspaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 11/06/2018
+ms.date: 03/15/2019
 ---
 
 # Nested resiliency for Storage Spaces Direct
@@ -51,7 +50,7 @@ Storage Spaces Direct in Windows Server 2019 offers two new resiliency options i
 
   ![Nested two-way mirror](media/nested-resiliency/nested-two-way-mirror.png)
 
-- **Nested mirror-accelerated parity.** Combine nested two-way mirroring, from above, with nested parity. Within each server, local resiliency for most data is provided by single [bitwise parity arithmetic](storage-spaces-fault-tolerance.md#parity), except new recent writes which use two-way mirroring. Then, further resiliency for all data is provided by two-way mirroring between the servers. For more information about how mirror-accelerated parity works, see [Mirror-accelerated parity](https://docs.microsoft.com/windows-server/storage/refs/mirror-accelerated-parity).
+- **Nested mirror-accelerated parity.** Combine nested two-way mirroring, from above, with nested parity. Within each server, local resiliency for most data is provided by single [bitwise parity arithmetic](storage-spaces-fault-tolerance.md#parity), except new recent writes which use two-way mirroring. Then, further resiliency for all data is provided by two-way mirroring between the servers. For more information about how mirror-accelerated parity works, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md).
 
   ![Nested mirror-accelerated parity](media/nested-resiliency/nested-mirror-accelerated-parity.png)
 
@@ -75,7 +74,7 @@ Capacity efficiency is the ratio of usable space to [volume footprint](plan-volu
 
 Notice that the capacity efficiency of classic two-way mirroring (about 50%) and nested mirror-accelerated parity (up to 40%) are not very different. Depending on your requirements, the slightly lower capacity efficiency may be well worth the significant increase in storage availability. You choose resiliency per-volume, so you can mix nested resiliency volumes and classic two-way mirror volumes within the same cluster.
 
-![Tradeoff](media/nested-resiliency/tradeoff.png)
+![Diagram showing the tradeoff between a two-way mirror and nested mirror-accelerated parity.](media/nested-resiliency/tradeoff.png)
 
 ## Usage in PowerShell
 
@@ -87,13 +86,13 @@ First, create new storage tier templates using the `New-StorageTier` cmdlet. You
 
 If your capacity drives are hard disk drives (HDD), launch PowerShell as Administrator and run:
 
-```PowerShell 
+```PowerShell
 # For mirror
 New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedMirror -ResiliencySettingName Mirror -MediaType HDD -NumberOfDataCopies 4
 
 # For parity
-New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParity -ResiliencySettingName Parity -MediaType HDD -NumberOfDataCopies 2 -PhysicalDiskRedundancy 1 -NumberOfGroups 1 -FaultDomainAwareness StorageScaleUnit -ColumnIsolation PhysicalDisk 
-``` 
+New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParity -ResiliencySettingName Parity -MediaType HDD -NumberOfDataCopies 2 -PhysicalDiskRedundancy 1 -NumberOfGroups 1 -FaultDomainAwareness StorageScaleUnit -ColumnIsolation PhysicalDisk
+```
 
 If your capacity drives are solid-state drives (SSD), set the `-MediaType` to `SSD` instead. Do not modify the other parameters.
 
@@ -122,15 +121,15 @@ New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume02 -StorageTierFrie
 
 ### Step 3: Continue in Windows Admin Center
 
-Volumes that use nested resiliency appear in [Windows Admin Center](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center) with clear labeling, as in the screenshot below. Once they're created, you can manage and monitor them using Windows Admin Center just like any other volume in Storage Spaces Direct.
+Volumes that use nested resiliency appear in [Windows Admin Center](../../manage/windows-admin-center/overview.md) with clear labeling, as in the screenshot below. Once they're created, you can manage and monitor them using Windows Admin Center just like any other volume in Storage Spaces Direct.
 
-![](media/nested-resiliency/windows-admin-center.png)
+![Volume management in Windows Admin Center](media/nested-resiliency/windows-admin-center.png)
 
 ### Optional: Extend to cache drives
 
 With its default settings, nested resiliency protects against the loss of multiple capacity drives at the same time, or one server and one capacity drive at the same time. To extend this protection to [cache drives](understand-the-cache.md) has an additional consideration: because cache drives often provide read *and write* caching for *multiple* capacity drives, the only way to ensure you can tolerate the loss of a cache drive when the other server is down is to simply not cache writes, but that impacts performance.
 
-To address this scenario, Storage Spaces Direct offers the option to automatically disable write caching when one server in a two-server cluster is down, and then re-enable write caching once the server is back up. To allow routine restarts without performance impact, write caching isn't disabled until the server has been down for 30 minutes.
+To address this scenario, Storage Spaces Direct offers the option to automatically disable write caching when one server in a two-server cluster is down, and then re-enable write caching once the server is back up. To allow routine restarts without performance impact, write caching isn't disabled until the server has been down for 30 minutes. Once write caching is disabled, the contents of the write cache is written to capacity devices. After this, the server can tolerate a failed cache device in the online server, though reads from the cache might be delayed or fail if a cache device fails.
 
 To set this behavior (optional), launch PowerShell as Administrator and run:
 
@@ -138,13 +137,13 @@ To set this behavior (optional), launch PowerShell as Administrator and run:
 Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.NestedResiliency.DisableWriteCacheOnNodeDown.Enabled" -Value "True"
 ```
 
-Once set to `True`, the cache behavior is:
+Once set to **True**, the cache behavior is:
 
 | Situation                       | Cache behavior                           | Can tolerate cache drive loss? |
 |---------------------------------|------------------------------------------|--------------------------------|
 | Both servers up                 | Cache reads and writes, full performance | Yes                            |
 | Server down, first 30 minutes   | Cache reads and writes, full performance | No (temporarily)               |
-| After first 30 minutes          | Cache reads only, performance impacted   | Yes                            |
+| After first 30 minutes          | Cache reads only, performance impacted   | Yes (after the cache has been written to capacity drives)                           |
 
 ## Frequently asked questions
 
@@ -179,7 +178,7 @@ No. To replace a server node and its drives, follow this order:
 
 For details see the [Remove servers](remove-servers.md) topic.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Understand fault tolerance in Storage Spaces Direct](storage-spaces-fault-tolerance.md)

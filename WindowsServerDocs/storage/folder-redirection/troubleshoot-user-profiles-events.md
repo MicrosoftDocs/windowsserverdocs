@@ -1,17 +1,15 @@
 ---
 title: Troubleshoot user profiles with events
 description: How to troubleshoot problems loading and unloading user profiles by using events and trace logs.
-ms.prod: windows-server-threshold 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage 
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
 ms.date: 04/05/2018
 ms.localizationpriority: medium
 ---
 # Troubleshoot user profiles with events
 
->Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, and Windows Server 2016.
+>Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server (Semi-annual Channel).
 
 This topic discusses how to troubleshoot problems loading and unloading user profiles by using events and trace logs. The following sections describe how to use the three event logs that record user profile information.
 
@@ -52,7 +50,7 @@ Here's how to enable and view analytic and debug logs:
 1. In the **Actions** pane of Event Viewer, select **View**, and then select **Show Analytic and Debug Logs**.
 2. Navigate to **Applications and Services Logs**, then **Microsoft**, then **Windows**, then **User Profile Service**, and then **Diagnostic**.
 3. Select **Enable Log** and then select **Yes**. This enables the Diagnostic log, which will start logging.
-4. If you require even more detailed information, see [Step 4: Creating and decoding a trace](#step-4:-creating-and-decoding-a-trace) for more information about how to create a trace log.
+4. If you require even more detailed information, see [Step 4: Creating and decoding a trace](#step-4-creating-and-decoding-a-trace) for more information about how to create a trace log.
 5. When you are finished troubleshooting the issue, navigate to the **Diagnostic** log, select **Disable Log**, select **View** and then clear the **Show Analytic and Debug Logs** checkbox to hide analytic and debug logging.
 
 ## Step 4: Creating and decoding a trace
@@ -65,7 +63,7 @@ Here's how to create and decode a trace for the User Profile Service:
 
 1. Sign on to the computer where the user is experiencing problems, using an account that is a member of the local Administrators group.
 2. From an elevated command prompt enter the following commands, where *\<Path\>* is the path to a local folder that you have previously created, for example C:\\logs:
-        
+
     ```PowerShell
     logman create trace -n RUP -o <Path>\RUP.etl -ets
     logman update RUP -p {eb7428f5-ab1f-4322-a4cc-1f1a9b2c5e98} 0x7FFFFFFF 0x7 -ets
@@ -74,12 +72,12 @@ Here's how to create and decode a trace for the User Profile Service:
 4. Reproduce the problem. The procedure to reproduce the problem is typically to sign on as the user experiencing the issue, sign the user off, or both.
 5. After reproducing the problem, sign on as the local administrator again.
 6. From an elevated command prompt run the following command to save the log into an ETL file:
-  
+
     ```PowerShell
     logman stop -n RUP -ets
     ```
 7. Type the following command to export the ETL file into a human-readable file in the current directory (likely your home folder or the %WINDIR%\\System32 folder):
-    
+
     ```PowerShell
     Tracerpt <path>\RUP.etl
     ```

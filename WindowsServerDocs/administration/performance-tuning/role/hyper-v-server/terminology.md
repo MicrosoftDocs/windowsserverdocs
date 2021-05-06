@@ -1,10 +1,8 @@
 ---
 title: Hyper-V terminology
-description: Hyper-v terminology useful in Hyper-V performance tuning 
-ms.prod: windows-server-threshold
-ms.technology: performance-tuning-guide
+description: Hyper-v terminology useful in Hyper-V performance tuning
 ms.topic: article
-ms.author: Asmahi; SandySp; JoPoulso
+ms.author: asmahi
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -21,7 +19,7 @@ This section summarizes key terminology specific to virtual machine technology t
 |*guest*|Software that is running in a partition. It can be a full-featured operating system or a small, special-purpose kernel. The hypervisor is guest-agnostic.|
 |*hypervisor*|A layer of software that sits above the hardware and below one or more operating systems. Its primary job is to provide isolated execution environments called partitions. Each partition has its own set of virtualized hardware resources (central processing unit or CPU, memory, and devices). The hypervisor controls and arbitrates access to the underlying hardware.|
 |*logical processor*| A processing unit that handles one thread of execution (instruction stream). There can be one or more logical processors per processor core and one or more cores per processor socket.|
-| *passthrough disk access*|A representation of an entire physical disk as a virtual disk within the guest. The data and commands are passed through to the physical disk (through the root partition’s native storage stack) with no intervening processing by the virtual stack.|
+| *passthrough disk access*|A representation of an entire physical disk as a virtual disk within the guest. The data and commands are passed through to the physical disk (through the root partition's native storage stack) with no intervening processing by the virtual stack.|
 |*root partition*|The root partition that is created first and owns all the resources that the hypervisor does not, including most devices and system memory. The root partition hosts the virtualization stack and creates and manages the child partitions.|
 |*Hyper-V-specific device*|A virtualized device with no physical hardware analog, so guests may need a driver (virtualization service client) to that Hyper-V-specific device. The driver can use virtual machine bus (VMBus) to communicate with the virtualized device software in the root partition.|
 |*virtual machine*|A virtual computer that was created by software emulation and has the same characteristics as a real computer.|
@@ -32,7 +30,7 @@ This section summarizes key terminology specific to virtual machine technology t
 | *virtualization stack*|A collection of software components in the root partition that work together to support virtual machines. The virtualization stack works with and sits above the hypervisor. It also provides management capabilities.|
 |*VMBus*|Channel-based communication mechanism used for inter-partition communication and device enumeration on systems with multiple active virtualized partitions. The VMBus is installed with Hyper-V Integration Services.|
 
-## See also
+## Additional References
 
 -   [Hyper-V architecture](architecture.md)
 

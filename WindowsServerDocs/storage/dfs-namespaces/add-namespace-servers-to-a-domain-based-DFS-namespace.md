@@ -2,8 +2,6 @@
 title: Add Namespace Servers to a Domain-based DFS Namespace
 description: This article describes how to specify additional namespace servers to host a namespace using DFS management.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -30,12 +28,11 @@ To add a namespace server to a domain-based namespace using DFS Management, use 
 
 
 > [!TIP]
-> To add a namespace server by using Windows PowerShell, use the [New-DfsnRootTarget cmdlet](https://docs.microsoft.com/powershell/module/dfsn/set-dfsnroottarget). The DFSN Windows PowerShell module was introduced in Windows Server 2012.
+> To add a namespace server by using Windows PowerShell, use the [New-DfsnRootTarget cmdlet](/powershell/module/dfsn/new-dfsnroottarget). The DFSN Windows PowerShell module was introduced in Windows Server 2012.
 
-## See also
+## Additional References
 
 -   [Deploying DFS Namespaces](deploying-dfs-namespaces.md)
--   [Review DFS Namespaces Server Requirements](https://technet.microsoft.com/library/cc753448(v=ws.11).aspx)
+-   [Review DFS Namespaces Server Requirements](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753448(v=ws.11))
 -   [Create a DFS Namespace](create-a-dfs-namespace.md)
 -   [Delegate Management Permissions for DFS Namespaces](delegate-management-permissions-for-dfs-namespaces.md)
-

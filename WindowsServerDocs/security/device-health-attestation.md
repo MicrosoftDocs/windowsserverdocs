@@ -1,15 +1,10 @@
 ---
+description: "Learn more about: Device Health Attestation"
 title: Device Health Attestation
-H1: na
-ms.custom: na
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - techgroup-security
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e7b77a4-1c6a-4c21-8844-0df89b63f68d
 author: brianlic-msft
+ms.author: brianlic
 ms.date: 10/12/2016
 ---
 # Device Health Attestation
@@ -18,20 +13,20 @@ ms.date: 10/12/2016
 
 Introduced in Windows 10, version 1507, Device Health Attestation (DHA) included the following:
 
--	Integrates with Windows 10 Mobile Device Management (MDM) framework in alignment with  [Open Mobile Alliance (OMA) standards](http://openmobilealliance.org/).
+-    Integrates with Windows 10 Mobile Device Management (MDM) framework in alignment with  [Open Mobile Alliance (OMA) standards](http://openmobilealliance.org/).
 
--	Supports devices that have a Trusted Module Platform (TPM) provisioned in a firmware or discrete format.
+-    Supports devices that have a Trusted Module Platform (TPM) provisioned in a firmware or discrete format.
 
--	Enables enterprises to raise the security bar of their organization to hardware monitored and attested security, with minimal or no impact on operation cost.
+-    Enables enterprises to raise the security bar of their organization to hardware monitored and attested security, with minimal or no impact on operation cost.
 
 Starting with Windows Server 2016, you can now run the DHA service as a server role within your organization. Use this topic to learn how to install and configure the Device Health Attestation server role.
 
 ## Overview
 
 You can use DHA to assess device health for:
-  
--	Windows 10 and Windows 10 Mobile devices that support TPM 1.2 or 2.0.  
--	On-premises devices that are managed by using Active Directory with Internet access, devices that are managed by using Active Directory without Internet access, devices managed by Azure Active Directory , or a hybrid deployment using both Active Directory and Azure Active Directory.
+
+-    Windows 10 and Windows 10 Mobile devices that support TPM 1.2 or 2.0.
+-    On-premises devices that are managed by using Active Directory with Internet access, devices that are managed by using Active Directory without Internet access, devices managed by Azure Active Directory , or a hybrid deployment using both Active Directory and Azure Active Directory.
 
 
 ### DHA service
@@ -44,31 +39,31 @@ The DHA service validates the TPM and PCR logs for a device and then issues a DH
 
 - **DHA Azure cloud service** A virtual host in Microsoft Azure. To do this, you need a virtual host and licenses for the DHA on-premises service.
 
-The DHA service integrates with MDM solutions and provides the following: 
+The DHA service integrates with MDM solutions and provides the following:
 
--	Combine the info they receive from devices (through existing device management communication channels) with the DHA report
--	Make a more secure and trusted security decision, based on hardware attested and protected data
+-    Combine the info they receive from devices (through existing device management communication channels) with the DHA report
+-    Make a more secure and trusted security decision, based on hardware attested and protected data
 
 Here's an example that shows how you can use DHA to help raise the security protection bar for your organization's assets.
 
 1. You create a policy that checks the following boot configuration/attributes:
-  - Secure Boot
-  - BitLocker
-  - ELAM
+   - Secure Boot
+   - BitLocker
+   - ELAM
 2. The MDM solution enforces this policy and triggers a corrective action based on the DHA report data.  For example, it could verify the following:
-  - Secure Boot was enabled, the device loaded trusted code that is authentic, and the Windows boot loader was not tampered with.
-  - Trusted Boot successfully verified the digital signature of the Windows kernel and the components that were loaded while the device started.
-  - Measured Boot created a TPM-protected audit trail that could be verified remotely.
-  - BitLocker was enabled and that it protected the data when the device was turned off.
-  - ELAM was enabled at early boot stages and is monitoring the runtime.
-  
+   - Secure Boot was enabled, the device loaded trusted code that is authentic, and the Windows boot loader was not tampered with.
+   - Trusted Boot successfully verified the digital signature of the Windows kernel and the components that were loaded while the device started.
+   - Measured Boot created a TPM-protected audit trail that could be verified remotely.
+   - BitLocker was enabled and that it protected the data when the device was turned off.
+   - ELAM was enabled at early boot stages and is monitoring the runtime.
+
 #### DHA cloud service
 
 The DHA cloud service provides the following benefits:
 
--	Reviews the TCG and PCR device boot logs it receives from a device that is enrolled with an MDM solution. 
--	Creates a tamper resistant and tamper evident report (DHA report) that describes how the device started based on data that is collected and protected by a device's TPM chip. 
--	Delivers the DHA report to the MDM server that requested the report in a protected communication channel.
+-    Reviews the TCG and PCR device boot logs it receives from a device that is enrolled with an MDM solution.
+-    Creates a tamper resistant and tamper evident report (DHA report) that describes how the device started based on data that is collected and protected by a device's TPM chip.
+-    Delivers the DHA report to the MDM server that requested the report in a protected communication channel.
 
 #### DHA on-premises service
 
@@ -89,15 +84,15 @@ You can set up the DHA on-premises service to run in either EKCert or AIKCert va
 
 EKCert validation mode is optimized for devices in organizations that are not connected to the Internet. Devices connecting to a DHA service running in EKCert validation mode do **not** have direct access to the Internet.
 
-When DHA is running in EKCert validation mode, it relies on an enterprise managed chain of trust that needs to updated occasionally (approximately 5 - 10 times per year). 
+When DHA is running in EKCert validation mode, it relies on an enterprise managed chain of trust that needs to updated occasionally (approximately 5 - 10 times per year).
 
 Microsoft publishes aggregated packages of trusted Roots and intermediate CA's for approved TPM manufacturers (as they become available) in a publicly accessible archive in .cab archive. You need to download the feed, validate its integrity, and install it on the server running Device Health Attestation.
 
-An example archive is [https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
+An example archive is [https://go.microsoft.com/fwlink/?linkid=2097925](https://go.microsoft.com/fwlink/?linkid=2097925).
 
 #### AIKCert validation mode
 
-AIKCert Validation Mode is optimized for operational environments that do have access to the Internet. Devices connecting to a DHA service running in AIKCert validation mode must have direct access to the Internet and are able to get an AIK certificate from Microsoft. 
+AIKCert Validation Mode is optimized for operational environments that do have access to the Internet. Devices connecting to a DHA service running in AIKCert validation mode must have direct access to the Internet and are able to get an AIK certificate from Microsoft.
 
 ## Install and configure the DHA service on Windows Server 2016
 
@@ -112,8 +107,8 @@ In order to set up and verify a DHA on-premises service, you need:
 - Decide if you are going to run in EKCert or AIKCert validation mode.
 - The following certificates:
   - **DHA SSL certificate** An x.509 SSL certificate that chains to an enterprise trusted root with an exportable private key. This certificate protects DHA data communications in transit including server to server (DHA service and MDM server) and server to client (DHA service and a Windows 10 device) communications.
-  - **DHA signing certificate** An x.509 certificate that chains to an enterprise trusted root with an exportable private key. The DHA service uses this certificate for digital signing. 
-  - **DHA encryption certificate** An x.509 certificate that chains to an enterprise trusted root with an exportable private key. The DHA service also uses this certificate for encryption. 
+  - **DHA signing certificate** An x.509 certificate that chains to an enterprise trusted root with an exportable private key. The DHA service uses this certificate for digital signing.
+  - **DHA encryption certificate** An x.509 certificate that chains to an enterprise trusted root with an exportable private key. The DHA service also uses this certificate for encryption.
 
 
 ### Install Windows Server 2016
@@ -122,34 +117,34 @@ Install Windows Server 2016 using your preferred installation method, such as Wi
 
 ### Add the Device Health Attestation server role
 
-You can install the Device Health Attestation server role and its dependencies by using Server Manager. 
+You can install the Device Health Attestation server role and its dependencies by using Server Manager.
 
 After you've installed Windows Server 2016, the device restarts and opens Server Manager. If Server manager doesn't start automatically, click **Start**, and then click **Server Manager**.
 
-1.	Click **Add roles and features**.
-2.	On the **Before you begin** page, click **Next**.
-3.	On the **Select installation type** page, click **Role-based or feature-based installation**, and then click **Next**.
-4.	On the **Select destination server** page, click **Select a server from the server pool**, select the server, and then click **Next**.
-5.	On the **Select server roles** page, select the **Device Health Attestation** check box.
-6.	Click **Add Features** to install other required role services and features.
-7.	Click **Next**.
-8.	On the **Select features** page, click **Next**.
-9.	On the **Web Server Role (IIS)** page, click **Next**.
-10.	On the **Select role services** page, click **Next**.
-11.	On the **Device Health Attestation Service** page, click **Next**.
-12.	On the **Confirm installation selections** page, click **Install**.
-13.	When the installation is done, click **Close**.
+1.    Click **Add roles and features**.
+2.    On the **Before you begin** page, click **Next**.
+3.    On the **Select installation type** page, click **Role-based or feature-based installation**, and then click **Next**.
+4.    On the **Select destination server** page, click **Select a server from the server pool**, select the server, and then click **Next**.
+5.    On the **Select server roles** page, select the **Device Health Attestation** check box.
+6.    Click **Add Features** to install other required role services and features.
+7.    Click **Next**.
+8.    On the **Select features** page, click **Next**.
+9.    On the **Web Server Role (IIS)** page, click **Next**.
+10.    On the **Select role services** page, click **Next**.
+11.    On the **Device Health Attestation Service** page, click **Next**.
+12.    On the **Confirm installation selections** page, click **Install**.
+13.    When the installation is done, click **Close**.
 
 ### Install the signing and encryption certificates
 
-Using the following Windows PowerShell script to install the signing and encryption certificates. For more information about the thumbprint, see [How to: Retrieve the Thumbprint of a Certificate](https://msdn.microsoft.com/library/ms734695.aspx).
+Using the following Windows PowerShell script to install the signing and encryption certificates. For more information about the thumbprint, see [How to: Retrieve the Thumbprint of a Certificate](/dotnet/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate).
 
 ```
 $key = Get-ChildItem Cert:\LocalMachine\My | Where-Object {$_.Thumbprint -like "<thumbprint>"}
 $keyname = $key.PrivateKey.CspKeyContainerInfo.UniqueKeyContainerName
 $keypath = $env:ProgramData + "\Microsoft\Crypto\RSA\MachineKeys\" + $keyname
 icacls $keypath /grant <username>`:R
-  
+
 #<thumbprint>: Certificate thumbprint for encryption certificate or signing certificate
 #<username>: Username for web service app pool, by default IIS_IUSRS
 ```
@@ -161,7 +156,7 @@ To install the trusted TPM roots certificate package, you must extract it, remov
 #### Download the trusted TPM roots certificate package
 
 Before you install the certificate package, you can download the latest list of trusted TPM roots from
-[https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab](https://tpmsec.microsoft.com/OnPremisesDHA/TrustedTPM.cab).
+[https://go.microsoft.com/fwlink/?linkid=2097925](https://go.microsoft.com/fwlink/?linkid=2097925).
 
 > **Important:** Before installing the package, verify that it is digitally signed by Microsoft.
 
@@ -261,7 +256,7 @@ Get-DHASActiveEncryptionCertificate
 Set-DHASActiveEncryptionCertificate -Thumbprint "<hex>" -Force
 ```
 
-The certificate must be deployed on the device in the **LocalMachine\My** certificate store. 
+The certificate must be deployed on the device in the **LocalMachine\My** certificate store.
 
 When the active encryption certificate is set, the existing active encryption certificate is moved to the list of inactive encryption certificates.
 
@@ -274,10 +269,10 @@ Get-DHASInactiveEncryptionCertificates
 
 ```
 Remove-DHASInactiveEncryptionCertificates -Force
-Remove-DHASInactiveEncryptionCertificates -Thumbprint "<hex>" -Force 
+Remove-DHASInactiveEncryptionCertificates -Thumbprint "<hex>" -Force
 ```
 
-### Get the X509ChainPolicy configuration 
+### Get the X509ChainPolicy configuration
 
 ```
 Get-DHASCertificateChainPolicy
@@ -295,9 +290,9 @@ Set-DHASCertificateChainPolicy = $certificateChainPolicy
 
 ## DHA service reporting
 
-The following are a list of messages that are reported by the DHA service to the MDM solution: 
+The following are a list of messages that are reported by the DHA service to the MDM solution:
 
 - **200** HTTP OK. The certificate is returned.
 - **400** Bad request. Invalid request format, invalid health certificate, certificate signature does not match, invalid Health Attestation Blob, or an invalid Health Status Blob. The response also contains a message, as described by the response schema, with an error code and an error message that can be used for diagnostics.
 - **500** Internal server error. This can happen if there are issues that prevent the service from issuing certificates.
-- **503** Throttling is rejecting requests to prevent server overloading. 
+- **503** Throttling is rejecting requests to prevent server overloading.

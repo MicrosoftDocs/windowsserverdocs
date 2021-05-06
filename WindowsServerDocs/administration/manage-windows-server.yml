@@ -1,0 +1,83 @@
+### YamlMime:Landing
+
+title: Windows Server Management documentation
+summary: Once you have deployed Windows Server into your environment, including the specific roles for the features and functions you need, the next step is managing those servers. Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, and eventually automate many management tasks.
+
+metadata:
+  title: Windows Server Management documentation
+  description: Learn about tools, recommendations and guidance on managing Windows Server.
+  ms.topic: landing-page # Required
+  author: lizap
+  ms.author: elizapo
+  ms.date: 06/09/2020
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+  # Card (optional)
+  - title: Manage Windows Server systems and environments
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Manage on-premises systems, remote systems, and systems without UI with Windows Admin Center
+            url: ../manage/windows-admin-center/overview.md
+          - text: Manage on-premises systems with Server Manager
+            url: server-manager/server-manager.md
+          - text: Manage remote systems and systems without UI with Remote Server Administration Tools (RSAT)
+            url: ../remote/remote-server-administration-tools.md
+          - text: Manage updates to Windows Server systems
+            url: windows-server-update-services/get-started/windows-server-update-services-wsus.md
+
+  # Card
+  - title: Gather information about your environment
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Setup and Boot Event Collection
+            url: get-started-with-setup-and-boot-event-collection.md
+          - text: Software Inventory Logging (SIL)
+            url: software-inventory-logging/get-started-with-software-inventory-logging.md
+          - text: User Access Logging (UAL)
+            url: user-access-logging/get-started-with-user-access-logging.md
+
+  # Card
+  - title: Tune your Windows Server environment for performance
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Performance tuning guidelines
+            url: performance-tuning/index.md
+          - text: Microsoft Server Performance Advisor
+            url: server-performance-advisor/microsoft-server-performance-advisor.md
+
+  # Card
+  - title: Automate Windows Server management
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Windows PowerShell
+            url: /powershell/scripting/overview
+          - text: Windows Commands
+            url: windows-commands/windows-commands.md
+          - text: System Insights
+            url: ..\manage\system-insights\overview.md
+
+  # Card
+  - title: Access on-premises, remote, and virtual servers
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Remote Desktop Services
+            url: ../remote/remote-desktop-services/welcome-to-rds.md
+
+  # Card
+  - title: Older versions of Windows Server
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Windows previous versions documentation
+            url: /previous-versions/windows/
+          - text: Search for specific information
+            url: /search/?dataSource=previousVersions&search=Windows+Server

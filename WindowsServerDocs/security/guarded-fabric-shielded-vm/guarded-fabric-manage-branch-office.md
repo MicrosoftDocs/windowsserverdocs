@@ -1,16 +1,16 @@
 ---
+description: "Learn more about: Branch office considerations"
 title: Branch Office Considerations
-ms.custom: na
-ms.prod: windows-server-threshold
 ms.topic: article
 manager: dongill
 author: rpsqrd
-ms.technology: security-guarded-fabric
+ms.author: ryanpu
+ms.date: 12/10/2020
 ---
 
 # Branch office considerations
 
-> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), 
+> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel),
 
 This article describes best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.
 
@@ -19,7 +19,7 @@ This article describes best practices for running shielded virtual machines in b
 Starting with Windows Server version 1709, you can configure an additional set of Host Guardian Service URLs on Hyper-V hosts for use when your primary HGS is unresponsive.
 This allows you to run a local HGS cluster that is used as a primary server for better performance with the ability to fall back to your corporate datacenter's HGS if the local servers are down.
 
-To use the fallback option, you’ll need to set up two HGS servers. They can run Windows Server 2019 or Windows Server 2016 and either be part of the same or different clusters. If they are different clusters, you will want to establish operational practices to ensure the attestation policies are in sync between the two servers. They both need to be able to correctly authorize the Hyper-V host to run shielded VMs and have the key material needed to start up the shielded VMs. You can choose to either have a pair of shared encryption and signing certificates between the two clusters, or use separate certificates and configure the HGS shielded VM to authorize both guardians (encryption/signing certificate pairs) in the shielding data file.
+To use the fallback option, you'll need to set up two HGS servers. They can run Windows Server 2019 or Windows Server 2016 and either be part of the same or different clusters. If they are different clusters, you will want to establish operational practices to ensure the attestation policies are in sync between the two servers. They both need to be able to correctly authorize the Hyper-V host to run shielded VMs and have the key material needed to start up the shielded VMs. You can choose to either have a pair of shared encryption and signing certificates between the two clusters, or use separate certificates and configure the HGS shielded VM to authorize both guardians (encryption/signing certificate pairs) in the shielding data file.
 
 Then upgrade your Hyper-V hosts to Windows Server version 1709 or Windows Server 2019 and run the following command:
 ```powershell
@@ -36,7 +36,7 @@ In order for the Hyper-V host to pass attestation with both the primary and fall
 Additionally, the certificates used to decrypt the virtual machine's TPM need to be available in both HGS clusters.
 You can configure each HGS with different certificates and configure the VM to trust both, or add a shared set of certificates to both HGS clusters.
 
-For additional information about configuring HGS in a branch office using fallback URLs, see the blog post [Improved branch office support for shielded VMs in Windows Server, version 1709](https://blogs.technet.microsoft.com/datacentersecurity/2017/11/15/improved-branch-office-support-for-shielded-vms-in-windows-server-version-1709/).
+For additional information about configuring HGS in a branch office using fallback URLs, see the blog post [Improved branch office support for shielded VMs in Windows Server, version 1709](/archive/blogs/datacentersecurity/improved-branch-office-support-for-shielded-vms-in-windows-server-version-1709).
 
 
 ## Offline mode

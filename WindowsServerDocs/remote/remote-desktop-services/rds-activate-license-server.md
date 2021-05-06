@@ -1,12 +1,6 @@
 ---
 title: Activate the Remote Desktop Services license server
 description: Install and activate the RD license server
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb24ddd2-0361-41fe-bd6b-c7c63427cb71
 author: lizap
@@ -16,9 +10,9 @@ manager: dongill
 ---
 # Activate the Remote Desktop Services license server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
-The Remote Desktop Services license server issues client access licenses (CALs) to users and devices when they access the RD Session Host. You can activate the license server by using the Remote Desktop Licensing Manager. 
+The Remote Desktop Services license server issues client access licenses (CALs) to users and devices when they access the RD Session Host. You can activate the license server by using the Remote Desktop Licensing Manager.
 
 ## Install the RD Licensing role
 
@@ -37,7 +31,7 @@ The Remote Desktop Services license server issues client access licenses (CALs) 
 3. Click **Next** on the welcome page.
 4. For the connection method, select **Automatic connection (recommended)**, and then click **Next**.
 5. Enter your company information (your name, the company name, your geographic region), and then click **Next**.
-6. Optionally enter any other company information (for example, email and company addresses), and then click **Next**. 
+6. Optionally enter any other company information (for example, email and company addresses), and then click **Next**.
 7. Make sure that **Start Install Licenses Wizard now** is not selected (we'll install the licenses in a later step), and then click **Next**.
 
-Your license server is now ready to start issuing and managing licenses. 
+Your license server is now ready to start issuing and managing licenses.

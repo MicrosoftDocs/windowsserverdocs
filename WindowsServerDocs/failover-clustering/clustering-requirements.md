@@ -1,21 +1,24 @@
 ---
 title: Failover clustering hardware requirements and storage options
 description: Hardware requirements and storage options for creating a failover cluster.
-ms.prod: windows-server-threshold 
-ms.topic: article 
-author: JasonGerend 
-ms.author: jgerend 
-ms.technology: storage-failover-clustering 
-ms.date: 04/26/2018
+ms.topic: article
+author: JasonGerend
+ms.author: jgerend
+manager: lizross
+ms.date: 05/05/2021
 ms.localizationpriority: medium
 ---
 # Failover clustering hardware requirements and storage options
 
-Applies to: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
+Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-You need the following hardware to create a failover cluster. To be supported by Microsoft, all hardware must be certified for the version of Windows Server that you are running, and the complete failover cluster solution must pass all tests in the Validate a Configuration Wizard. For more information about validating a failover cluster, see [Validate Hardware for a Failover Cluster](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>).
+You need the following hardware to create a failover cluster. To be supported by Microsoft, all hardware must be certified for the version of Windows Server that you are running, and the complete failover cluster solution must pass all tests in the Validate a Configuration Wizard. For more information about validating a failover cluster, see [Validate Hardware for a Failover Cluster](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134244(v%3dws.11)>).
 
 - **Servers**: We recommend that you use a set of matching computers that contain the same or similar components.
+
+    > [!NOTE]
+    > If you've purchased Azure Stack HCI Integrated System solution hardware from the [Azure Stack HCI Catalog](https://hcicatalog.azurewebsites.net) through your preferred Microsoft hardware partner, the Azure Stack HCI operating system should be pre-installed.
+
 - **Network adapters and cable (for network communication)**: If you use iSCSI, each network adapter should be dedicated to either network communication or iSCSI, not both.
 
     In the network infrastructure that connects your cluster nodes, avoid having single points of failure. For example, you can connect your cluster nodes by multiple, distinct networks. Alternatively, you can connect your cluster nodes with one network that's constructed with teamed network adapters, redundant switches, redundant routers, or similar hardware that removes single points of failure.
@@ -27,7 +30,7 @@ You need the following hardware to create a failover cluster. To be supported by
 
   - **Serial Attached SCSI or Fibre Channel**: If you are using Serial Attached SCSI or Fibre Channel, in all clustered servers, all elements of the storage stack should be identical. It's required that the multipath I/O (MPIO) software be identical and that the Device Specific Module (DSM) software be identical. It's recommended that the mass-storage device controllers— the host bus adapter (HBA), HBA drivers, and HBA firmware—that are attached to cluster storage be identical. If you use dissimilar HBAs, you should verify with the storage vendor that you are following their supported or recommended configurations.
   - **iSCSI**: If you are using iSCSI, each clustered server should have one or more network adapters or HBAs that are dedicated to the cluster storage. The network you use for iSCSI should not be used for network communication. In all clustered servers, the network adapters you use to connect to the iSCSI storage target should be identical, and we recommend that you use Gigabit Ethernet or higher.
-- **Storage**: You must use [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md) or shared storage that's compatible with Windows Server 2012 R2 or Windows Server 2012. You can use shared storage that's attached, and you can also use SMB 3.0 file shares as shared storage for servers that are running Hyper-V that are configured in a failover cluster. For more information, see [Deploy Hyper-V over SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>).
+- **Storage**: You must use [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md) or shared storage that's compatible with Windows Server 2012 R2 or Windows Server 2012. You can use shared storage that's attached, and you can also use SMB 3.0 file shares as shared storage for servers that are running Hyper-V that are configured in a failover cluster. For more information, see [Deploy Hyper-V over SMB](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>).
 
     In most cases, attached storage should contain multiple, separate disks (logical unit numbers, or LUNs) that are configured at the hardware level. For some clusters, one disk functions as the disk witness (described at the end of this subsection). Other disks contain the files required for the clustered roles (formerly called clustered services or applications). Storage requirements include the following:
 
@@ -48,7 +51,7 @@ If you are creating a failover cluster that includes clustered virtual machines,
 - Hardware-assisted virtualization. This is available in processors that include a virtualization option—specifically processors with Intel Virtualization Technology (Intel VT) or AMD Virtualization (AMD-V) technology.
 - Hardware-enforced Data Execution Prevention (DEP) must be available and enabled. Specifically, you must enable Intel XD bit (execute disable bit) or AMD NX bit (no execute bit).
 
-For more information about the Hyper-V role, see [Hyper-V Overview](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831531(v%3dws.11)>).
+For more information about the Hyper-V role, see [Hyper-V Overview](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831531(v%3dws.11)>).
 
 ## Deploying storage area networks with failover clusters
 
@@ -58,15 +61,15 @@ When deploying a storage area network (SAN) with a failover cluster, follow thes
 - **Isolate storage devices, one cluster per device**: Servers from different clusters must not be able to access the same storage devices. In most cases, a LUN used for one set of cluster servers should be isolated from all other servers through LUN masking or zoning.
 - **Consider using multipath I/O software or teamed network adapters**: In a highly available storage fabric, you can deploy failover clusters with multiple host bus adapters by using multipath I/O software or network adapter teaming (also called load balancing and failover, or LBFO). This provides the highest level of redundancy and availability. For Windows Server 2012 R2 or Windows Server 2012, your multipath solution must be based on Microsoft Multipath I/O (MPIO). Your hardware vendor will typically supply an MPIO device-specific module (DSM) for your hardware, although Windows Server includes one or more DSMs as part of the operating system.
 
-    For more information about LBFO, see [NIC Teaming Overview](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/nic-teaming) in the Windows Server Technical Library.
+    For more information about LBFO, see [NIC Teaming Overview](../networking/technologies/nic-teaming/nic-teaming.md) in the Windows Server Technical Library.
 
     >[!IMPORTANT]
     >Host bus adapters and multipath I/O software can be very version sensitive. If you are implementing a multipath solution for your cluster, work closely with your hardware vendor to choose the correct adapters, firmware, and software for the version of Windows Server that you are running.
 
-- **Consider using Storage Spaces**: If you plan to deploy serial attached SCSI (SAS) clustered storage that's configured using Storage Spaces, see [Deploy Clustered Storage Spaces](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>) for the requirements.
+- **Consider using Storage Spaces**: If you plan to deploy serial attached SCSI (SAS) clustered storage that's configured using Storage Spaces, see [Deploy Clustered Storage Spaces](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj822937(v%3dws.11)>) for the requirements.
 
 ## More information
 
-- [Failover Clustering](failover-clustering.md)
-- [Storage Spaces](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831739(v%3dws.11)>)
-- [Using Guest Clustering for High Availability](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn440540(v%3dws.11)>)
+- [Failover Clustering](./failover-clustering-overview.md)
+- [Storage Spaces](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831739(v%3dws.11)>)
+- [Using Guest Clustering for High Availability](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn440540(v%3dws.11)>)

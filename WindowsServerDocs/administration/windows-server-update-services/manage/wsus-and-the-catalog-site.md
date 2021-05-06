@@ -1,16 +1,11 @@
 ---
 title: WSUS and the Catalog Site
-description: "Windows Server Update Service (WSUS) topic - How to import hotfixes into WSUS by accessing the Microsoft Update catalog site"
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-wsus
-ms.tgt_pltfrm: na
+description: Windows Server Update Service (WSUS) topic - How to import hotfixes into WSUS by accessing the Microsoft Update catalog site
 ms.topic: article
 ms.assetid: f19a8659-5a96-4fdd-a052-29e4547fe51a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # WSUS and the Catalog Site
@@ -58,7 +53,7 @@ WSUS administrators might consider restricting access to the hotfixes they have 
 
     -   Select **Windows Authentication** and click **Enable** in the **Actions** pane on the right.
 
-2.  Create a WSUS target group for the computers that need the hotfix, and add them to the group. For more information about computers and groups, see [Managing WSUS Client computers and WSUS computer Groups](managing-wsus-client-computers-and-wsus-computer-groups.md) in this guide, and section [3.3. Configure WSUS computer groups](../deploy/2-configure-wsus.md#BKMK_ConfigcomputerGroups) of Step 3: Configure WSUS, in the WSUS deployment guide.
+2.  Create a WSUS target group for the computers that need the hotfix, and add them to the group. For more information about computers and groups, see [Managing WSUS Client computers and WSUS computer Groups](managing-wsus-client-computers-and-wsus-computer-groups.md) in this guide, and section [3.3. Configure WSUS computer groups](../deploy/2-configure-wsus.md#23-configure-wsus-computer-groups) of Step 3: Configure WSUS, in the WSUS deployment guide.
 
 3.  Download the files for the hotfix.
 

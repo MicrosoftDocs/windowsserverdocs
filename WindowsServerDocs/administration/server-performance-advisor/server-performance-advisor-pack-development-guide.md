@@ -1,10 +1,11 @@
 ---
 title: Server Performance Advisor Pack Development Guide
 description: Server Performance Advisor Pack Development Guide
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
+ms.topic: article
 ---
 # Server Performance Advisor Pack Development Guide
 
@@ -35,7 +36,7 @@ An advisor pack includes the following elements:
 
 * **XML metadata** (ProvisionMetadata.xml)
 
-    * [Performance Logs and Alerts (PLA)](https://msdn.microsoft.com/library/windows/desktop/aa372635.aspx) data collector set
+    * [Performance Logs and Alerts (PLA)](/previous-versions/windows/desktop/pla/pla-portal) data collector set
 
     * Report layout
 
@@ -121,7 +122,7 @@ The following is an example header for the ProvisionMetadata.xml file:
 
 ``` syntax
 <advisorPack
-xmlns="http://microsoft.com/schemas/ServerPerformanceAdvisor/ap/2010"
+xmlns="https://microsoft.com/schemas/ServerPerformanceAdvisor/ap/2010"
 name="Microsoft.ServerPerformanceAdvisor.CoreOS.V2"
 displayName="Microsoft CoreOS Advisor Pack V2"
 description="Microsoft CoreOS Advisor Pack"
@@ -173,7 +174,7 @@ A data collector set defines the performance data that the SPA framework should 
 
 ``` syntax
 <advisorPack>
-<dataSourceDefinition xmlns="http://microsoft.com/schemas/ServerPerformanceAdvisor/dc/2010">
+<dataSourceDefinition xmlns="https://microsoft.com/schemas/ServerPerformanceAdvisor/dc/2010">
  <dataCollectorSet duration="10">
 <registryKeys>
  ?<registryKey>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\\</registryKey>
@@ -229,7 +230,7 @@ Windows registry editor version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\db310065-829b-4671-9647-2261c00e86ef]
 "Description"=
- FriendlyName = Power Source Optimized 
+ FriendlyName = Power Source Optimized
 
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\db310065-829b-4671-9647-2261c00e86ef \0012ee47-9041-4b5d-9b77-535fba8b1442\6738e2c4-e8a5-4a42-b16a-e040e769756e
 "ACSettingIndex"=dword:000000b4
@@ -270,6 +271,7 @@ KeytypeId | Smallint NOT NULL | Internal type Id
 Value | Nvarchar(4000) NOT NULL | All the values
 
 The **KeytypeID** column can have one of the following types:
+
 ID | Type
 --- | ---
 1 | String
@@ -286,7 +288,7 @@ ID | Type
 
 ### Collect WMI
 
-You can add any WMI query. For more info about writing WMI queries, see [WQL (SQL for WMI)](https://msdn.microsoft.com/library/windows/desktop/aa394606.aspx).The following example queries a page file location:
+You can add any WMI query. For more info about writing WMI queries, see [WQL (SQL for WMI)](/windows/win32/wmisdk/wql-sql-for-wmi).The following example queries a page file location:
 
 ``` syntax
 <path>Root\Cimv2:select * FROM Win32_PageFileUsage</path>
@@ -444,7 +446,7 @@ Here s an example of a simple rule:
 
 ``` syntax
 <advisorPack>
-   
+
   <reportDefinition>
     <thresholds>
       <threshold  />
@@ -513,7 +515,7 @@ Continuing with the previous example, the user knows whether there is enough fre
 Name | Value
 ---- | ----
 Free Disk Size On System Drive (GB) | 100
-Total Disk Size Installed (GB) | 500 
+Total Disk Size Installed (GB) | 500
 
 if a user wants to see a list of all hard drives that are installed on the server and their disk size, we could call a list value, which has three columns and multiple rows, as shown here.
 
@@ -643,7 +645,7 @@ A data type name can be any valid string. Here's a list of allowed SQL data type
 
 * varchar
 
-For more info about these SQL data types, see [Data types (Transact-SQL)](https://msdn.microsoft.com/library/ms187752.aspx).
+For more info about these SQL data types, see [Data types (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).
 
 ### <a href="" id="bkmk-ui-svg"></a>Single value groups
 
@@ -708,7 +710,7 @@ The **caption** attribute of &lt;column/&gt; is shown as a column name, and the 
 In some cases, a table may have a lot of columns and only a few rows, so swapping the columns and rows would make the table look much better. To swap the columns and rows, you can add the following style attribute:
 
 ``` syntax
-<listValue style="Transpose"  
+<listValue style="Transpose"
 ```
 
 ### Defining charting elements
@@ -728,7 +730,7 @@ SPA uses a single value group to support static statistics and a list value tabl
 As mentioned previously, a static statistic is a single value. Logically, any single value could be defined as a static statistic. However, it is meaningless to view a single value that cannot be cast to a number type. To define a static statistic, you can simply add the attribute **trendable** to the corresponding single value key as shown below:
 
 ``` syntax
-<value name="freediskSize" type="int" trendable="true"  
+<value name="freediskSize" type="int" trendable="true"
 ```
 
 ### Dynamic statistics
@@ -764,7 +766,7 @@ As the following example indicates multiple **Value** columns with multiple **Ke
 CounterName | InstanceName | Average | Sum
 --- | :---: | :---: | :---:
 % Processor time | _Total | 10 | 20
-% Processor time | CPU0 | 20 | 30 
+% Processor time | CPU0 | 20 | 30
 
 In this example, you have two **Key** columns and two **Value** columns. SPA generates two statistics keys for the Average column and another two keys for the Sum column. The statistics keys are:
 
@@ -805,7 +807,7 @@ After the provision metadata is defined, we can start to write the report script
 There are **name** and **reportScript** attributes in the provision metadata header, as shown here:
 
 ``` syntax
-<advisorPack name="Microsoft.ServerPerformanceAdvisor.CoreOS.V1" reportScript="ReportScript"  
+<advisorPack name="Microsoft.ServerPerformanceAdvisor.CoreOS.V1" reportScript="ReportScript"
 ```
 
 The main report script is named by combining the **name** and **reportScript** attributes. In the following example, it will be \[Microsoft.ServerPerformanceAdvisor.CoreOS.V2\].\[ReportScript\].
@@ -899,7 +901,7 @@ END
 ELSE
 BEGIN
     exec dbo.SetNotification N'freediskSize', N'SuccessAdvice'
-END 
+END
 ```
 
 ### Get threshold value
@@ -936,7 +938,7 @@ DECLARE @freediskSize FLOat
 exec dbo.GetThreshold N freediskSize , @freediskSize output
 
 if (@freediskSizeInGB < @freediskSize)
- 
+
 ```
 
 ### Set or remove the single value
@@ -962,9 +964,9 @@ The following example shows some defined single values:
 You can then set the single value as shown here:
 
 ``` syntax
-exec dbo.SetSingleValue N OsName ,  Windows 7 
-exec dbo.SetSingleValue N Osversion ,  6.1.7601 
-exec dbo.SetSingleValue N OsLocation ,  c:\ 
+exec dbo.SetSingleValue N OsName ,  Windows 7
+exec dbo.SetSingleValue N Osversion ,  6.1.7601
+exec dbo.SetSingleValue N OsLocation ,  c:\
 ```
 
 In rare cases, you may want to remove the result that you previously set by using the \[dbo\].\[removeSingleValue\] API.
@@ -974,7 +976,7 @@ In rare cases, you may want to remove the result that you previously set by usin
 You can use the following script to remove the previously set value.
 
 ``` syntax
-exec dbo.removeSingleValue N Osversion 
+exec dbo.removeSingleValue N Osversion
 ```
 
 ### Get data collection information
@@ -1028,7 +1030,7 @@ INSERT INTO #NetworkAdapterInformation (
   MACaddress
 )
 VALUES (
-   
+
 )
 ```
 
@@ -1040,7 +1042,7 @@ VALUES (
 if there is any further information that you want to communicate to the system administrators, you can write logs. If there is any log for a particular report, a yellow banner will be shown in the report header. The following example shows how you can write a log:
 
 ``` syntax
-exec dbo.WriteSystemLog N'Any information you want to show to the system administrators , N Warning 
+exec dbo.WriteSystemLog N'Any information you want to show to the system administrators , N Warning
 ```
 
 The first parameter is the message you want show in the log. The second parameter is the log level. The valid input for the second parameter could be **Informational**, **Warning**, or **Error**.
@@ -1087,7 +1089,7 @@ The SPA console can run in two modes, Debug or Release. Release mode is the defa
     **Note**
     You can also press F11 to step into the previous statement and debug.
 
-     
+
 
 Running \[dbo\].\[DebugReportScript\] returns multiple result sets, including:
 
@@ -1105,9 +1107,9 @@ Running \[dbo\].\[DebugReportScript\] returns multiple result sets, including:
 
 ### Naming convention and styles
 
-Pascal casing | Camel casing | Uppercase
---- | ---- | ---
-<ul><li>Names in ProvisionMetadata.xml</li><li>Stored procedures</li><li>Functions</li><li>View names</li><li>Temporary table names</li></ul> | <ul><li>Parameter names</li><li>Local variables</li></ul> | Use for all SQL reserved keywords
+|                                                                 Pascal casing                                                                 |                       Camel casing                        |             Uppercase             |
+|-----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|-----------------------------------|
+| <ul><li>Names in ProvisionMetadata.xml</li><li>Stored procedures</li><li>Functions</li><li>View names</li><li>Temporary table names</li></ul> | <ul><li>Parameter names</li><li>Local variables</li></ul> | Use for all SQL reserved keywords |
 
 ### Other recommendations
 
@@ -1139,13 +1141,13 @@ The following example shows the workflow for running two advisor packs.
 
 The Merger Data Collector Set is only for collecting performance counter and ETW data sources. The following merge rules apply:
 
-1.  SPA takes the biggest duration as the new duration.
+1. SPA takes the biggest duration as the new duration.
 
-2.  Where there are merge conflicts, the following rules are followed:
+2. Where there are merge conflicts, the following rules are followed:
 
-    1.  Take the smallest interval as the new interval.
+   1. Take the smallest interval as the new interval.
 
-    2.  Take the super set of the performance counters. For example, with **Process(\*)\\% Processor time** and **Process(\*)\\\*,\\Process(\*)\\\*** returns more data, so **Process(\*)\\% Processor time** and **Process(\*)\\\*** is removed from the merged data collector set.
+   2. Take the super set of the performance counters. For example, with **Process(\*)\\% Processor time** and **Process(\*)\\\*,\\Process(\*)\\\\*** returns more data, so **Process(\*)\\% Processor time** and **Process(\*)\\\\*** is removed from the merged data collector set.
 
 ### Collect dynamic data
 
@@ -1165,7 +1167,7 @@ It returns a list of network adapter objects. Each object has a property called 
 ROOT\*ISatAP\0001
 PCI\VEN_8086&DEV_4238&SUBSYS_11118086&REV_35\4&372A6B86&0&00E4
 ROOT\*IPHTTPS\0000
- 
+
 ```
 
 To find the **FriendlyName** value, open registry editor and navigate to registry setting by combining **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\** with each line in the previous sample. , for example: **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Enum\\ ROOT\\\*IPHTTPS\\0000**.
@@ -1174,7 +1176,7 @@ To translate the previous steps into SPA provision metadata, add the script in t
 
 ``` syntax
 <advisorPack>
-<dataSourceDefinition xmlns="http://microsoft.com/schemas/ServerPerformanceAdvisor/dc/2010">
+<dataSourceDefinition xmlns="https://microsoft.com/schemas/ServerPerformanceAdvisor/dc/2010">
  <dataCollectorSet >
 <registryKeys>
  ?<registryKey>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\$(NetworkAdapter.PNPDeviceID)\FriendlyName</registryKey>
@@ -1386,7 +1388,7 @@ A data analysis session is a performance analysis on a specific target server. A
 
 **Event Tracing for Windows**
 
-[Event Tracing](https://msdn.microsoft.com/library/windows/desktop/bb968803.aspx) for Windows (ETW) is a high-performance, low-overhead, scalable tracing system that is provided in the Windows operating systems. It provides profiling and debugging capabilities, which can be used to troubleshoot a variety of scenarios. SPA uses ETW events as a data source for generating the performance reports. For general info about ETW, see [Improve Debugging and Performance Tuning with ETW](https://msdn.microsoft.com/magazine/cc163437.aspx).
+[Event Tracing](/windows/win32/etw/event-tracing-portal) for Windows (ETW) is a high-performance, low-overhead, scalable tracing system that is provided in the Windows operating systems. It provides profiling and debugging capabilities, which can be used to troubleshoot a variety of scenarios. SPA uses ETW events as a data source for generating the performance reports. For general info about ETW, see [Improve Debugging and Performance Tuning with ETW](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw).
 
 **WMI query**
 

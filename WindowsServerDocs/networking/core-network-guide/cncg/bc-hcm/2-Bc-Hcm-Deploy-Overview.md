@@ -1,13 +1,12 @@
 ---
 title: BranchCache Hosted Cache Mode Deployment Overview
-description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
+description: Learn how to deploy a BranchCache hosted cache server in a branch office where computers are joined to a domain.
 manager: brianlic
-ms.prod: windows-server-threshold
-ms.technology: networking-bc
 ms.topic: article
 ms.assetid: 55686a9c-60dd-47f4-9f1f-fe72c2873a44
-ms.author: pashort
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # BranchCache Hosted Cache Mode Deployment Overview
 
@@ -39,7 +38,7 @@ WEB1 is a BranchCache\-enabled content server. If you choose to prehash content 
 ### FILE1 in the cloud data center
 
 FILE1 is a BranchCache\-enabled content server. If you choose to prehash content server data so that you can preload the content on your hosted cache servers, you can prehash the shared content on FILE1, then create a data package that you copy to HCS1.
-  
+
 ### DC1 in the main office
 
 DC1 is a domain controller, and you must configure the Default Domain Policy, or another policy that is more appropriate for your deployment,  with BranchCache Group Policy settings to enable Automatic Hosted Cache Discovery by Service Connection Point.

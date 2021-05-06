@@ -1,21 +1,16 @@
 ---
 title: Get started with Windows Server Update Services (WSUS)
-description: "Windows Server Update Service (WSUS) topic - An overview of the Server role and its practical applications"
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-wsus
-ms.tgt_pltfrm: na
-ms.topic: get-started article
+description: Windows Server Update Service (WSUS) topic - An overview of the Server role and its practical applications
+ms.topic: how-to
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09ec5b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 5/22/2017
 ---
 # Windows Server Update Services (WSUS)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows Server Update Services (WSUS) enables information technology administrators to deploy the latest Microsoft product updates. You can use WSUS to fully manage the distribution of updates that are released through Microsoft Update to computers on your network. This topic provides an overview of this server role and more information about how to deploy and maintain WSUS.
 
@@ -35,9 +30,9 @@ The core scenarios where WSUS adds value to your business are:
 
 > [!NOTE]
 > Upgrade from any version of Windows Server that supports WSUS 3.2 to Windows Server 2012 R2 requires that you first uninstall WSUS 3.2.
-> 
+>
 > In Windows Server 2012, upgrading from any version of Windows Server with WSUS 3.2 installed is blocked during the installation process if WSUS 3.2 is detected. In that case, you will be prompted to first uninstall Windows Server Update Services prior to upgrading your server.
-> 
+>
 > However, because of changes in this release of Windows Server and Windows Server 2012 R2, when upgrading from any version of Windows Server and WSUS 3.2, the installation is not blocked. Failure to uninstall WSUS 3.2 prior to performing a Windows Server 2012 R2 upgrade will cause the post installation tasks for WSUS in Windows Server 2012 R2 to fail. In this case, the only known corrective measure is to format the hard drive and reinstall Windows Server.
 
 Windows Server Update Services is a built-in server role that includes the following enhancements:

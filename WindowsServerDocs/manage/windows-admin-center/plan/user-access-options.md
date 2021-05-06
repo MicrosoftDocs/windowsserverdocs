@@ -1,33 +1,34 @@
 ---
 title: User access options with Windows Admin Center
 description: User access options and identity providers with Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 06/18/2018
+ms.date: 03/07/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
 ---
 
 # User access options with Windows Admin Center
 
 >Applies To: Windows Admin Center, Windows Admin Center Preview
 
-When deployed as a service on Windows Server, Windows Admin Center provides a centralized point of management for your server environment. By controlling access to Windows Admin Center, you can improve the security of your management landscape.
+When deployed on Windows Server, Windows Admin Center provides a centralized point of management for your server environment. By controlling access to Windows Admin Center, you can improve the security of your management landscape.
 
 ## Gateway access roles
 
 Windows Admin Center defines two roles for access to the gateway service: gateway users and gateway administrators.
 
+> [!NOTE]
+> Access to the gateway does not imply access to the target servers visible by the gateway. To manage a target server, a user must connect with credentials that have administrative privileges on the target server.
+
 **Gateway users** can connect to the Windows Admin Center gateway service in order to manage servers through that gateway, but they cannot change access permissions nor the authentication mechanism used to authenticate to the gateway.
 
 **Gateway administrators** can configure who gets access as well as how users will authenticate to the gateway.
 
-[Configure gateway user and administrator access in Windows Admin Center.](../configure/user-access-control.md)
+>[!NOTE]
+> If there are no access groups defined in Windows Admin Center, the roles will reflect the Windows account access to the gateway server.
 
-> [!NOTE]
-> Access to the gateway does not imply access to the target servers visible by the gateway. To manage a target server, a user must connect with credentials that have administrative privileges on the target server.
+[Configure gateway user and administrator access in Windows Admin Center.](../configure/user-access-control.md)
 
 ## Identity provider options
 
@@ -43,7 +44,7 @@ When using Active Directory or local machine groups as the identity provider, yo
 
 ### Conditional access and multi-factor authentication
 
-By requiring Azure AD authentication for the gateway, you can leverage additional security features like conditional access and multi-factor authentication provided by Azure AD. [Learn more about configuring conditional access with Azure Active Directory.](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+By requiring Azure AD authentication for the gateway, you can leverage additional security features like conditional access and multi-factor authentication provided by Azure AD. [Learn more about configuring conditional access with Azure Active Directory.](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
 
 ## Role-based access control
 
@@ -52,7 +53,7 @@ This allows them to connect to the machine remotely and ensures they have suffic
 However, some users may not need unrestricted access to the machine to perform their jobs.
 You can use **role-based access control** in Windows Admin Center to provide such users with limited access to the machine instead of making them full local administrators.
 
-Role-based access control in Windows Admin Center works by configuring each managed server with a PowerShell [Just Enough Administration](https://aka.ms/jeadocs) endpoint.
+Role-based access control in Windows Admin Center works by configuring each managed server with a PowerShell [Just Enough Administration](/powershell/scripting/learn/remoting/jea/overview) endpoint.
 This endpoint defines the roles, including what aspects of the system each role is allowed to manage and which users are assigned to the role.
 When a user connects to the restricted endpoint, a temporary local administrator account is created to manage the system on their behalf.
 This ensures that even tools which do not have their own delegation model can still be managed with Windows Admin Center.

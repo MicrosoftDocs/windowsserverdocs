@@ -1,47 +1,43 @@
 ---
 title: bitsadmin peercaching and setconfigurationflags
-description: "Windows Commands topic for **bitsadmin peercaching and setconfigurationflags** - 
-Sets the configuration flags that determine if the computer can serve content to peers and can download content from peers."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin peercaching and setconfigurationflags command, which sets the configuration flags that determine if the computer can serve content to peers and if it can download content from peers.
+ms.topic: reference
 ms.assetid: ff0a2b49-66e3-4d40-824c-6a3816055d2e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin peercaching and setconfigurationflags
 
-
-
-Sets the configuration flags that determine if the computer can serve content to peers and can download content from peers.
+Sets the configuration flags that determine if the computer can serve content to peers and if it can download content from peers.
 
 ## Syntax
 
 ```
-bitsadmin /PeerCaching /SetConfigurationFlags <Job> <Value>
+bitsadmin /peercaching /setconfigurationflags <job> <value>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
-|Value|The value is an unsigned integer with the following interpretation for the bits in the binary representation:</br>-   Allow the job's data to be downloaded from a peer: Set the least significant bit</br>-   Allow the job's data to be served to peers: Set the 2nd bit from the right.|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
+| value | An unsigned integer with the following interpretation for the bits in the binary representation:<ul><li>To allow the job's data to be downloaded from a peer, set the least significant bit.</li><li>To allow the job's data to be served to peers, set the second bit from the right.</li></ul>|
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
-The following example specifies the job's data to be downloaded from peers for the job named *myJob*.
+To specify the job's data to be downloaded from peers for the job named *myDownloadJob*:
+
 ```
-C:\> Bitsadmin /PeerCaching /SetConfigurationFlags myJob 1
+bitsadmin /peercaching /setconfigurationflags myDownloadJob 1
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)
+
+- [bitsadmin peercaching command](bitsadmin-peercaching.md)

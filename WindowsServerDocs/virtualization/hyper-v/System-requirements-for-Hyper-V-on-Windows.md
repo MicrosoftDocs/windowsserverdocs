@@ -1,15 +1,10 @@
 ---
 title: System requirements for Hyper-V on Windows Server
-description: "Lists the hardware and firmware requirements for Hyper-V in Windows Server"
-ms.prod: windows-server-threshold
-ms.service: na
-manager: dongill
-ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
+description: Lists the hardware and firmware requirements for Hyper-V in Windows Server
 ms.topic: article
 ms.assetid: bc4a4971-f727-40cd-91f5-2ee6d24b54cb
-author: KBDAzure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 9/30/2016
 ---
 # System requirements for Hyper-V on Windows Server
@@ -20,7 +15,7 @@ Hyper-V has specific hardware requirements, and some Hyper-V features have addit
 
 If you're already using Hyper-V, it's likely that you can use your existing hardware. The general hardware requirements haven't changed significantly from  Windows Server 2012 R2 .  But, you will need newer hardware to use shielded virtual machines or discrete device assignment. Those features rely on specific hardware support, as described below. Other than that, the main difference in hardware is that second-level address translation (SLAT) is now required instead of recommended.
 
-For details about maximum supported configurations for Hyper-V, such as the number of running virtual machines, see [Plan for Hyper-V scalability in Windows Server 2016](plan/Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md). The list of operating systems you can run in your virtual machines is covered in [Supported Windows guest operating systems for Hyper-V on Windows Server](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md).
+For details about maximum supported configurations for Hyper-V, such as the number of running virtual machines, see [Plan for Hyper-V scalability in Windows Server 2016](./plan/plan-hyper-v-scalability-in-windows-server.md). The list of operating systems you can run in your virtual machines is covered in [Supported Windows guest operating systems for Hyper-V on Windows Server](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md).
 
 ## General requirements
 
@@ -38,7 +33,7 @@ Regardless of the Hyper-V features you want to use, you'll need:
 
   - Hardware-enforced Data Execution Prevention (DEP) must be available and enabled. For Intel systems, this is the XD bit (execute disable bit). For AMD systems, this is the NX bit (no execute bit).
 
-## <a name="bkmk_CheckReq"></a>How to check for Hyper-V requirements
+## How to check for Hyper-V requirements
 
 Open Windows PowerShell or a command prompt and type:
 
@@ -87,4 +82,3 @@ These virtual machines rely on virtualization-based security and are available s
 
 - Generation 2
 - Windows Server 2012 or newer as the guest operating system
-

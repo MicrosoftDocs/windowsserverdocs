@@ -1,31 +1,23 @@
 ---
 title: online volume
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the online volume command, which takes the offline volume to the online state.
+ms.topic: reference
 ms.assetid: 5da073fd-578d-4691-ad0f-605ba66e0c7e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # online volume
 
+Takes the offline volume to the online state. This command works on volumes that have failed, are failing, or are in failed redundancy state.
 
-
-Brings volumes that are currently offline to an online state
-
-> [!IMPORTANT]
-> This command is not available in any edition of Windows Vista.
+> [!NOTE]
+> A volume must be selected for the **online volume** command to succeed. Use the [select volume](select-volume.md) command to select a volume and shift the focus to it.
 
 > [!IMPORTANT]
-> This command will fail if it is used on a read-only volume.
+> This command will fails if it's used on a read-only disk.
 
 ## Syntax
 
@@ -33,25 +25,20 @@ Brings volumes that are currently offline to an online state
 online volume [noerr]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|noerr|For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code.|
+| Parameter | Description |
+|--|--|
+| noerr | For scripting only. When an error is encountered, DiskPart continues to process commands as if the error did not occur. Without this parameter, an error causes DiskPart to exit with an error code. |
 
-## Remarks
+### Examples
 
--   This command operates on volumes that have failed, are failing, or are in failed redundancy state.
--   A volume must be selected for this command to succeed. Use the **select volume** command to select a volume and shift the focus to it.
+To take the volume with focus online, type:
 
-## <a name="BKMK_examples"></a>Examples
-
-To bring the volume with focus online, type:
 ```
 online volume
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
-
+- [Command-Line Syntax Key](command-line-syntax-key.md)

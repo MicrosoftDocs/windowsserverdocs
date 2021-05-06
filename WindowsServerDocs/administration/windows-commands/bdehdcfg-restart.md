@@ -1,48 +1,38 @@
 ---
 title: bdehdcfg restart
-description: Windows Commands topic for bdehdcfg restart - Tells bdehdcfg that the computer should be restarted after the drive preparation has concluded.
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bdehdcfg restart command, which tells bdehdcfg that the computer should be restarted after the drive preparation has concluded.
+ms.topic: reference
 ms.assetid: a98b76bb-36f1-4790-b337-7dc35f606bc6
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bdehdcfg: restart
 
-
-
-Informs the Bdehdcfg command-line tool that the computer should be restarted after the drive preparation has concluded. For an example of how this command can be used, see [Examples](#BKMK_Examples).
+Informs the bdehdcfg command-line tool that the computer should be restarted after the drive preparation has concluded. If other users are logged on to the computer and the **quiet** command is not specified, a prompt appears to confirm that the computer should be restarted.
 
 ## Syntax
 
 ```
-bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge} -restart
+bdehdcfg -target {default|unallocated|<drive_letter> shrink|<drive_letter> merge} -restart
 ```
 
-### Parameters
+#### Parameters
 
-This command takes no additional parameters.
+This command has no additional parameters.
 
-## Remarks
+## Examples
 
-If other users are logged on to the computer and the **quiet** command is not specified, a prompt will be displayed to confirm that the computer should be restarted.
+To use the **restart** command:
 
-## <a name="BKMK_Examples"></a>Examples
-
-The following example illustrates using the **restart** command.
 ```
 bdehdcfg -target default -restart
 ```
 
-#### Additional references
+## Additional References
 
--   [Command-Line Syntax Key](command-line-syntax-key.md)
--   [Bdehdcfg](bdehdcfg.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bdehdcfg](bdehdcfg.md)

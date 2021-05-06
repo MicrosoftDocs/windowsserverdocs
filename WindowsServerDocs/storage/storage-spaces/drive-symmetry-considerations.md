@@ -1,16 +1,15 @@
 ---
-title: Drive symmetry considerations for Storage Spaces Direct 
+description: "Learn more about: Drive symmetry considerations for Storage Spaces Direct"
+title: Drive symmetry considerations for Storage Spaces Direct
 ms.author: cosdar
-ms.manager: eldenc
-ms.technology: storage-spaces
+manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/08/2018
-Keywords: Storage Spaces Direct
 ms.localizationpriority: medium
 ---
 
-# Drive symmetry considerations for Storage Spaces Direct 
+# Drive symmetry considerations for Storage Spaces Direct
 
 > Applies to: Windows Server 2019, Windows Server 2016
 
@@ -86,7 +85,7 @@ However, using cache drives of different sizes may not improve cache performance
 
 Here are some supported and unsupported configurations:
 
-### ![supported](media/drive-symmetry-considerations/supported.png) Supported: different models between servers
+### :::image type="icon" source="media/drive-symmetry-considerations/supported.png"::: Supported: different models between servers
 
 The first two servers use NVMe model "X" but the third server uses NVMe model "Z", which is very similar.
 
@@ -97,7 +96,7 @@ The first two servers use NVMe model "X" but the third server uses NVMe model "Z
 
 This is supported.
 
-### ![supported](media/drive-symmetry-considerations/supported.png) Supported: different models within server
+### :::image type="icon" source="media/drive-symmetry-considerations/supported.png"::: Supported: different models within server
 
 Every server uses some different mix of HDD models "Y" and "Z", which are very similar. Every server has 10 total HDD.
 
@@ -109,7 +108,7 @@ Every server uses some different mix of HDD models "Y" and "Z", which are very s
 
 This is supported.
 
-### ![supported](media/drive-symmetry-considerations/supported.png) Supported: different sizes across servers
+### :::image type="icon" source="media/drive-symmetry-considerations/supported.png"::: Supported: different sizes across servers
 
 The first two servers use 4 TB HDD but the third server uses very similar 6 TB HDD.
 
@@ -120,7 +119,7 @@ The first two servers use 4 TB HDD but the third server uses very similar 6 TB H
 
 This is supported, although it will result in stranded capacity.
 
-### ![supported](media/drive-symmetry-considerations/supported.png) Supported: different sizes within server
+### :::image type="icon" source="media/drive-symmetry-considerations/supported.png"::: Supported: different sizes within server
 
 Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD. Every server has 4 total SSD.
 
@@ -132,7 +131,7 @@ Every server uses some different mix of 1.2 TB and very similar 1.6 TB SSD. Ever
 
 This is supported.
 
-### ![unsupported](media/drive-symmetry-considerations/unsupported.png) Not supported: different types of drives across servers
+### :::image type="icon" source="media/drive-symmetry-considerations/unsupported.png"::: Not supported: different types of drives across servers
 
 Server 1 has NVMe but the others don't.
 
@@ -144,7 +143,7 @@ Server 1 has NVMe but the others don't.
 
 This isn't supported. The types of drives should be the same in every server.
 
-### ![unsupported](media/drive-symmetry-considerations/unsupported.png) Not supported: different number of each type across servers
+### :::image type="icon" source="media/drive-symmetry-considerations/unsupported.png"::: Not supported: different number of each type across servers
 
 Server 3 has more drives than the others.
 
@@ -155,12 +154,12 @@ Server 3 has more drives than the others.
 
 This isn't supported. The number of drives of each type should be the same in every server.
 
-### ![unsupported](media/drive-symmetry-considerations/unsupported.png) Not supported: only HDD drives
+### :::image type="icon" source="media/drive-symmetry-considerations/unsupported.png"::: Not supported: only HDD drives
 
 All servers have only HDD drives connected.
 
 |Server 1|Server 2|Server 3|
-|-|-|-| 
+|-|-|-|
 |18 x HDD (capacity) |18 x HDD (capacity)|18 x HDD (capacity)|
 
 This isn't supported. You need to add a minimum of two cache drives (NvME or SSD) attached to each of the servers.
@@ -169,14 +168,14 @@ This isn't supported. You need to add a minimum of two cache drives (NvME or SSD
 
 To recap, every server in the cluster should have the same types of drives and the same number of each type. It's supported to mix-and-match drive models and drive sizes as needed, with the considerations above.
 
-| Constraint                               |               |
-|------------------------------------------|---------------|
-| Same types of drives in every server     | **Required**  |
-| Same number of each type in every server | **Required**  |
-| Same drive models in every server        | Recommended   |
-| Same drive sizes in every server         | Recommended   |
+| Constraint | State |
+|--|--|
+| Same types of drives in every server | **Required** |
+| Same number of each type in every server | **Required** |
+| Same drive models in every server | Recommended |
+| Same drive sizes in every server | Recommended |
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md)
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)

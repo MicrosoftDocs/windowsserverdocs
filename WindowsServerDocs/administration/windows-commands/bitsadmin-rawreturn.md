@@ -1,45 +1,37 @@
 ---
 title: bitsadmin rawreturn
-description: "Windows Commands topic for **bitsadmin rawreturn** - Returns data suitable for parsing."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin rawreturn command, which returns data suitable for parsing.
+ms.topic: reference
 ms.assetid: bbe97130-26f6-4cdd-84f1-baf530ce38b7
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin rawreturn
 
+Returns data suitable for parsing. Typically, you use this command in conjunction with the **/create** and **/get*** switches to receive only the value. You must specify this switch before other switches.
 
-
-Returns data suitable for parsing.
+> [!NOTE]
+> This command strips newline characters and formatting from the output.
 
 ## Syntax
 
 ```
-bitsadmin /RawReturn
+bitsadmin /rawreturn
 ```
 
-## Remarks
+## Examples
 
-Strips new line characters and formatting from the output.
+To retrieve the raw data for the state of the job named *myDownloadJob*:
 
-Typically, you use this command in conjunction with the **Create** and **Get\*** commands to receive only the value. You must specify this command before other commands.
-
-## <a name="BKMK_examples"></a>Examples
-
-The following example retrieves the raw data for the state of the job named *myDownloadJob*.
 ```
-C:\>bitsadmin /RawReturn /GetState myDownloadJob
+bitsadmin /rawreturn /getstate myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

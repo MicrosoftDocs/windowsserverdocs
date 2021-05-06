@@ -1,38 +1,43 @@
 ---
 title: bitsadmin util
-description: "Windows Commands topic for **bitsadmin util** - list of the **Util** commands"
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin util command, which lists the Util switches.
+ms.topic: reference
 ms.assetid: e8278a28-1ecc-42be-92e2-c93dee59751d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # bitsadmin util
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Lists the **/util** switches.
+
+Lists the **util** switches.
 
 ## Syntax
+
 ```
-bitsadmin /Util /help
-bitsadmin /Util /GetIEProxy
-bitsadmin /Util /repairService
-bitsadmin /Util /SetIEProxy
-bitsadmin /Util /version
+bitsadmin /util /help
+bitsadmin /util /getieproxy
+bitsadmin /util /repairservice
+bitsadmin /util /setieproxy
+bitsadmin /util /version
 ```
-## Parameters
-|Parameter|Description|
-|-------|--------|
-|[bitsadmin util and help](bitsadmin-util-and-help.md)|Displays the command-line usage for the /Util commands.|
-|[bitsadmin util and getieproxy](bitsadmin-util-and-getieproxy.md)|Retrieves the proxy usage for the given service account.|
-|[bitsadmin util and repairservice](bitsadmin-util-and-repairservice.md)|repairs known issues with BITS service|
-|[bitsadmin util and setieproxy](bitsadmin-util-and-setieproxy.md)|Specifies proxy settings to use when transferring files using a service account.|
-|[bitsadmin util and version](bitsadmin-util-and-version.md)|Displays the version of the BITS service|
-## additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| [bitsadmin util and help](bitsadmin-util-and-help.md) | Displays the command-line usage for the /Util switches. You can also specify /?. |
+| [bitsadmin util and getieproxy](bitsadmin-util-and-getieproxy.md) | Retrieves the proxy usage for the given service account. |
+| [bitsadmin util and repairservice](bitsadmin-util-and-repairservice.md) | Repairs known issues with BITS service. |
+| [bitsadmin util and setieproxy](bitsadmin-util-and-setieproxy.md) | Specifies proxy settings to use when transferring files using a service account. |
+| [bitsadmin util and version](bitsadmin-util-and-version.md) | Displays the version of the BITS service. |
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

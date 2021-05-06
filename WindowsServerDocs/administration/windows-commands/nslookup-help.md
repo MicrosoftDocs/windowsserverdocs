@@ -1,38 +1,35 @@
 ---
 title: nslookup help
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the nslookup help command, which displays the subcommand help content.
+ms.topic: reference
 ms.assetid: 20ffe3e4-4cf3-4bc4-9392-a6be4ccd2c23
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # nslookup help
 
-
-
-Displays a short summary of **nslookup** subcommands.
+Displays the subcommand help text.
 
 ## Syntax
 
 ```
-{help | ?}
+help
 ```
 
-## Parameters
+```
+?
+```
 
-|Parameter|Description|
-|---------|-----------|
-|{help | ?}|Displays a short summary of **nslookup** subcommands.|
+### Parameters
 
-#### Additional references
+| Parameter | Description |
+| --------- | ----------- |
+| /? | Displays help at the command prompt. |
+| /help | Displays help at the command prompt. |
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,53 +1,52 @@
 ---
 title: bitsadmin getproxyusage
-description: "Windows Commands topic for **bitsadmin getproxyusage** - Retrieves the proxy usage setting for the specified job."
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the bitsadmin getproxyusage command, which retrieves the proxy usage setting for the specified job.
+ms.topic: reference
 ms.assetid: f940a70e-3b02-497e-a47f-b37b905c299e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin getproxyusage
-
-
 
 Retrieves the proxy usage setting for the specified job.
 
 ## Syntax
 
 ```
-bitsadmin /GetProxyUsage <Job>
+bitsadmin /getproxyusage <job>
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|Job|The job's display name or GUID|
+| Parameter | Description |
+| -------------- | -------------- |
+| job | The job's display name or GUID. |
 
-## Remarks
+#### Output
 
-The possible values are:
--   PRECONFIG—use the owner's Internet Explorer defaults.
--   NO_PROXY—do not use a proxy server.
--   OVERRIDE—Use an explicit proxy list.
--   AUTODETECT—Automatically detect the proxy settings.
+The returned proxy usage values can be:
 
-## <a name="BKMK_examples"></a>Examples
+- **Preconfig** - Use the owner's Internet Explorer defaults.
 
-The following example retrieves the proxy usage for the job named *myDownloadJob*.
+- **No_Proxy** - Don't use a proxy server.
+
+- **Override** - Use an explicit proxy list.
+
+- **Autodetect** - Automatically detect the proxy settings.
+
+## Examples
+
+To retrieve the proxy usage for the job named *myDownloadJob*:
+
 ```
-C:\>bitsadmin /GetProxyUsage myDownloadJob
+bitsadmin /getproxyusage myDownloadJob
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [bitsadmin command](bitsadmin.md)

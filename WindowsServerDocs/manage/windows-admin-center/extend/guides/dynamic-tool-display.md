@@ -1,13 +1,11 @@
 ---
 title: Control your tool's visibility in a solution
 description: Control your tool's visibility in a solution Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
 ---
 
 # Control your tool's visibility in a solution #
@@ -189,6 +187,7 @@ Finally, you can run a custom PowerShell script to identify the availability and
 }
 ```
 The State property is the important value that will control the decision to show or hide your extension in the tools list.  The allowed values are:
+
 | Value | Description |
 | ---- | ----------- |
 | Available | The extension should be displayed in the tools list. |
@@ -206,7 +205,7 @@ $response = @{
 }
 
 if (Get-Module -ListAvailable -Name servermanager) {
-    Import-module servermanager; 
+    Import-module servermanager;
     $isInstalled = (Get-WindowsFeature -name bitlocker).Installed;
     $isGood = $isInstalled;
 }

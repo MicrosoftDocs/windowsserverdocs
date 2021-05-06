@@ -1,55 +1,45 @@
 ---
-title: ksetup:delhosttorealmmap
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+title: ksetup delhosttorealmmap
+description: Reference article for the ksetup delhosttorealmmap command, which removes a service principal name (SPN) mapping between the stated host and the realm.
+ms.topic: reference
 ms.assetid: 3faee482-a96c-4614-86fd-aaa446643ec4
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# ksetup:delhosttorealmmap
+# ksetup delhosttorealmmap
 
+Removes a service principal name (SPN) mapping between the stated host and the realm. This command also removes any mapping between a host to realm (or multiple hosts to realm).
 
-
-Removes a service principal name (SPN) mapping between the stated host and the realm. For examples of how this command can be used, see [Examples](#BKMK_Examples).
+The mapping is stored in the registry, under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentContolSet\Lsa\Kerberos\HostToRealm`. After running this command, we recommend making sure the mapping appears in the registry.
 
 ## Syntax
 
 ```
-ksetup /delhosttorealmmap <HostName> <RealmName>
+ksetup /delhosttorealmmap <hostname> <realmname>
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<HostName>|The host name is the computer name, and it can be stated as the computer's fully qualified domain name.|
-|\<RealmName>|The realm name is stated as an uppercase DNS name, such as CORP.CONTOSO.COM.|
+| Parameter | Description |
+| --------- | ----------- |
+| `<hostname>` | Specifies the fully-qualified domain name of the computer. |
+| `<realmname>` | Specifies the uppercase DNS name, such as CORP.CONTOSO.COM. |
 
-## Remarks
+### Examples
 
-When a host to realm (or multiple hosts to realm) mapping exists, this command removes that mapping.
+To change the configuration of the realm CONTOSO, and to delete the mapping of the host computer IPops897 to the realm, type:
 
-The mapping is recorded in the registry in **HKEY_LOCAL_MACHINE\SYSTEM\CurrentContolSet\Lsa\Kerberos\HostToRealm**. You should verify the mapping in the registry after using this command.
-
-## <a name="BKMK_Examples"></a>Examples
-
-Altering the configuration of the realm CONTOSO, delete the mapping of the host computer IPops897 to the realm:
 ```
 ksetup /delhosttorealmmap IPops897 CONTOSO
 ```
-After running this command, you can verify in the registry that the mapping is as intended.
 
-#### Additional references
+## Additional References
 
--   [Ksetup:addhosttorealmmap](ksetup-addhosttorealmmap.md)
--   [Ksetup](ksetup.md)
--   [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [ksetup command](ksetup.md)
+
+- [ksetup addhosttorealmmap command](ksetup-addhosttorealmmap.md)

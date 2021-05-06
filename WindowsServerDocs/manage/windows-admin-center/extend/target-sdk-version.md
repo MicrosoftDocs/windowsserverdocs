@@ -1,13 +1,11 @@
 ---
 title: Target a different version of the Windows Admin Center SDK
 description: Target a different version of the Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
 ---
 
 # Target a different version of the Windows Admin Center SDK
@@ -23,7 +21,7 @@ There are three SDK versions you can choose from:
 * ```next``` – this SDK package contains the most recent functionality
 
 > [!NOTE]
-> Find out more about the different [versions](https://aka.ms/WACDownloadPage) of Windows Admin Center that are available to download.
+> Find out more about the different [versions](../overview.md) of Windows Admin Center that are available to download.
 
 ## Targeting SDK version on a new project
 

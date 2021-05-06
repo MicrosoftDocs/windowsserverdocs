@@ -1,20 +1,19 @@
 ---
+description: "Learn more about: Health Service reports"
 title: Health Service reports
-ms.prod: windows-server-threshold
 manager: eldenc
 ms.author: cosdar
-ms.technology: storage-health-service
 ms.topic: article
-ms.assetid:
 author: cosmosdarwin
 ms.date: 10/05/2017
 ---
 # Health Service reports
-> Applies to Windows Server 2016
 
-## What are reports  
+> Applies to: Windows Server 2019, Windows Server 2016
 
-The Health Service reduces the work required to get live performance and capacity information from your Storage Spaces Direct cluster. One new cmdlet provides a curated list of essential metrics, which are collected efficiently and aggregated dynamically across nodes, with built-in logic to detect cluster membership. All values are real-time and point-in-time only.  
+## What are reports
+
+The Health Service reduces the work required to get live performance and capacity information from your Storage Spaces Direct cluster. One new cmdlet provides a curated list of essential metrics, which are collected efficiently and aggregated dynamically across nodes, with built-in logic to detect cluster membership. All values are real-time and point-in-time only.
 
 ## Usage in PowerShell
 
@@ -24,16 +23,16 @@ Use this cmdlet to get metrics for the entire Storage Spaces Direct cluster:
 Get-StorageSubSystem Cluster* | Get-StorageHealthReport
 ```
 
-The optional **Count** parameter indicates how many sets of values to return, at one second intervals.  
+The optional **Count** parameter indicates how many sets of values to return, at one second intervals.
 
 ```PowerShell
-Get-StorageSubSystem Cluster* | Get-StorageHealthReport -Count <Count>  
+Get-StorageSubSystem Cluster* | Get-StorageHealthReport -Count <Count>
 ```
 
-You can also get metrics for one specific volume or server:  
+You can also get metrics for one specific volume or server:
 
 ```PowerShell
-Get-Volume -FileSystemLabel <Label> | Get-StorageHealthReport -Count <Count>  
+Get-Volume -FileSystemLabel <Label> | Get-StorageHealthReport -Count <Count>
 
 Get-StorageNode -Name <Name> | Get-StorageHealthReport -Count <Count>
 ```
@@ -44,8 +43,7 @@ Get-StorageNode -Name <Name> | Get-StorageHealthReport -Count <Count>
 
 In order to query the Health Service, you will need to establish a **CimSession** with the cluster. To do so, you will need some things that are only available in full .NET, meaning you cannot readily do this directly from a web or mobile app. These code samples will use C\#, the most straightforward choice for this data access layer.
 
-``` 
-...
+```
 using System.Security;
 using Microsoft.Management.Infrastructure;
 
@@ -104,10 +102,9 @@ public void DiscoverObjects(CimSession Session)
 
 These are the same objects you get in PowerShell using cmdlets like **Get-StorageSubSystem**, **Get-StorageNode**, and **Get-Volume**.
 
-You can access all the same properties, documented at [Storage Management API Classes](https://msdn.microsoft.com/en-us/library/windows/desktop/hh830612(v=vs.85).aspx).
+You can access all the same properties, documented at [Storage Management API Classes](/previous-versions/windows/desktop/stormgmt/storage-management-api-classes).
 
 ```
-...
 using System.Diagnostics;
 
 foreach (CimInstance Node in Nodes)
@@ -125,7 +122,7 @@ The complete list of metrics available at each scope in Windows Server 2016 is d
 
 ### IObserver.OnNext()
 
-This sample code uses the [Observer Design Pattern](https://msdn.microsoft.com/en-us/library/ee850490(v=vs.110).aspx) to implement an Observer whose **OnNext()** method will be invoked when each new sample of metrics arrives. Its **OnCompleted()** method will be called if/when streaming ends. For example, you might use it to reinitiate streaming, so it continues indefinitely.
+This sample code uses the [Observer Design Pattern](/dotnet/standard/events/observer-design-pattern) to implement an Observer whose **OnNext()** method will be invoked when each new sample of metrics arrives. Its **OnCompleted()** method will be called if/when streaming ends. For example, you might use it to reinitiate streaming, so it continues indefinitely.
 
 ```
 class MetricsObserver<T> : IObserver<T>
@@ -276,6 +273,6 @@ Below are the metrics available for each scope in Windows Server 2016.
 | IOThroughputTotal   | 1         |
 | IOThroughputWrite   | 1         |
 
-## See also
+## Additional References
 
 - [Health Service in Windows Server 2016](health-service-overview.md)

@@ -1,20 +1,17 @@
 ---
+description: "Learn more about: Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications"
 ms.assetid: e22d84a5-113d-4bec-b484-036ed29f0c28
 title: Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications
-description:
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 12/05/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-
-ms.technology: identity-adfs
 ---
 
 # Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications
 
->Applies To: Windows Server 2012 R2
+
 
 The rapid increase in the number of consumer devices and ubiquitous information access is changing the way that people perceive their technology. The constant use of information technology throughout the day, along with easy access of information, is blurring traditional boundaries between work and home life. These shifting boundaries are accompanied by a belief that personal technology-selected and customized to fit users' personalities, activities, and schedules-should extend into the workplace. To accommodate the growing requirement of personal consumer devices to be connected to enterprise networks, we are introducing the following value propositions:
 
@@ -30,7 +27,7 @@ By using Workplace Join, information workers can join their personal devices wit
 ### <a name="BKMK_DRS"></a>Azure Active Directory Device Registration service
 Workplace Join is made possible by the Azure Active Directory Device Registration service. When a device is joined by Workplace Join, the service provisions a device object in Azure Active Directory and then sets a key on the local device that is used to represent the device identity. This device identity can then be used with access control rules for applications that are hosted in the cloud and on-premises.
 
-For more details, see [Introduction to device management in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
+For more details, see [Introduction to device management in Azure Active Directory](/azure/active-directory/device-management-introduction).
 
 ### Workplace Join as a seamless second factor authentication
 Companies can manage the risk that is related to information access and drive governance and compliance while granting consumer devices access to corporate resources. Workplace Join on devices provides the following capabilities to administrators:
@@ -46,7 +43,7 @@ Single Sign-On (SSO) in the context of this scenario is the functionality that r
 As part of this solution, you learn how to use Workplace Join on a supported device and experience Single Sign-On to a company resource.
 
 > [!NOTE]
-> To support Windows 8.1, iOS 6.0+, and Android 4.0+ devices, you MUST configure Azure Active Directory Device Registration along with device object write-back, see [Step-by-Step Guide for On-premises Conditional Access using Azure Active Directory Device Registration Service](https://msdn.microsoft.com/library/azure/dn788908.aspx)
+> To support Windows 8.1, iOS 6.0+, and Android 4.0+ devices, you MUST configure Azure Active Directory Device Registration along with device object write-back, see [Step-by-Step Guide for On-premises Conditional Access using Azure Active Directory Device Registration Service](/previous-versions/azure/dn788908(v=azure.100))
 
 This solution guides takes you through the following walkthrough steps:
 
@@ -58,6 +55,3 @@ This solution guides takes you through the following walkthrough steps:
 
 ## See Also
 [Configure a federation server with Device Registration Service](../deployment/configure-a-federation-server-with-device-registration-service.md)
-
-
-

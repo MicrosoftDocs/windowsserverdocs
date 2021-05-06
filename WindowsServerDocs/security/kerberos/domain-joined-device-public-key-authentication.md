@@ -1,12 +1,10 @@
 ---
+description: "Learn more about: Domain-joined Device Public Key Authentication"
 title: Domain-joined Device Public Key Authentication
-ms.custom: na
-ms.prod: windows-server-threshold
 ms.topic: article
 ms.assetid: 7bd17803-6e42-4a3b-803f-e47c74725813
-manager: alanth
-author: michikos
-ms.technology: security-authentication
+author: justinha
+ms.author: Justinha
 ms.date: 08/18/2017
 ---
 
@@ -14,18 +12,18 @@ ms.date: 08/18/2017
 
 >Applies to: Windows Server 2016, Windows 10
 
-Kerberos added support for domain-joined devices to sign-in using a certificate beginning with Windows Server 2012 and Windows 8. This change allows 3rd party vendors to create solutions to provision and initialize certificates for domain-joined devices to use for domain authentication. 
+Kerberos added support for domain-joined devices to sign-in using a certificate beginning with Windows Server 2012 and Windows 8. This change allows 3rd party vendors to create solutions to provision and initialize certificates for domain-joined devices to use for domain authentication.
 
 ## Automatic public key provisioning
 
 Beginning with Windows 10 version 1507 and Windows Server 2016, domain-joined devices automatically provision a bound public key to a Windows Server 2016 domain controller (DC). Once a key is provisioned, then Windows can use public key authentication to the domain.
 
-### Public key generation
-If the device is running Credential Guard, then a public key is created protected by Credential Guard. 
+### Key generation
+If the device is running Credential Guard, then a public/private key pair is created protected by Credential Guard.
 
-If Credential Guard is not available and a TPM is, then a public key is created protected by the TPM. 
+If Credential Guard is not available and a TPM is, then a public/private key pair is created protected by the TPM.
 
-If neither is available, then a key is not generated and the device can only authenticate using password.
+If neither is available, then a key pair is not generated and the device can only authenticate using password.
 
 ### Provisioning computer account public key
 When Windows starts up, it checks if a public key is provisioned for its computer account. If not, then it generates a bound public key and configures it for its account in AD using a Windows Server 2016 or higher DC. If all the DCs are down-level, then no key is provisioned.

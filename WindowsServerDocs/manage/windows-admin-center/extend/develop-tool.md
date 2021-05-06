@@ -1,13 +1,11 @@
 ---
 title: Develop a tool extension
 description: Develop a tool extension Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
 ---
 
 # Develop a tool extension
@@ -44,7 +42,7 @@ Here's an example usage:
 wac create --company "Contoso Inc" --tool "Manage Foo Works"
 ```
 
-This creates a new folder inside the current working directory using the name you specified for your tool, copies all the necessary template files into your project, and configures the files with your company and tool name.  
+This creates a new folder inside the current working directory using the name you specified for your tool, copies all the necessary template files into your project, and configures the files with your company and tool name.
 
 Next, change directory into the folder just created, then install required local dependencies by running the following command:
 
@@ -52,17 +50,18 @@ Next, change directory into the folder just created, then install required local
 npm install
 ```
 
-Once this completes, you've set up everything you need to load your new extension into Windows Admin Center. 
+Once this completes, you've set up everything you need to load your new extension into Windows Admin Center.
 
 ## Add content to your extension
 
 Now that you've created an extension with the Windows Admin Center CLI, you are ready to customize content.  See these guides for examples of what you can do:
 
-- Add an [empty module](guides\add-module.md)
-- Add an [iFrame](guides\add-iframe.md)
- 
-Even more examples can be found our [GitHub SDK site](https://aka.ms/wacsdk):
--  [Developer Tools](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools) is a fully functioning extension that can be side-loaded into Windows Admin Center, and contains a rich collection of sample functionality and tool examples that you can browse and use in your own extension.
+- Add an [empty module](guides/add-module.md)
+- Add an [iFrame](guides/add-iframe.md)
+
+Even more examples can be found in our Developer Guide. The Developer Guide is a fully functioning solution extension that can be side-loaded into Windows Admin Center, and contains a rich collection of sample functionality and tool examples that you can browse and use in your own extension. 
+
+Enable the Developer Guide extension on the **Advanced** page of your Windows Admin Center settings. 
 
 ## Customize your extension's icon
 
@@ -92,7 +91,7 @@ Next, build and side load your extension into Windows Admin Center.  Open a comm
 
     ``` cmd
     gulp build
-    gulp serve -p 4201
+    gulp serve --port 4201
     ```
 
 Note that you need to choose a port that is currently free. Make sure you do not attempt to use the port that Windows Admin Center is running on.

@@ -1,27 +1,20 @@
 ---
-title: import
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+title: import diskshadow
+description: Reference article for the import command, which imports a transportable shadow copy from a loaded metadata file into the system.
+ms.topic: reference
 ms.assetid: 7bd78d76-0560-4d47-944c-fe960be2c10b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# import
-
-
+# import (diskshadow)
 
 Imports a transportable shadow copy from a loaded metadata file into the system.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+> [IMPORTANT]
+> Before you can use this command, you must use the [load metadata command](load-metadata.md) to load a DiskShadow metadata file.
 
 ## Syntax
 
@@ -29,14 +22,14 @@ For examples of how to use this command, see [Examples](#BKMK_examples).
 import
 ```
 
-## Remarks
+#### Remarks
 
--   Transportable shadow copies are not stored on the system immediately. Their details are stored in a Backup Components Document XML file, which DiskShadow automatically requests and saves in a .cab metadata file in the working directory. You can change the path and name of this file using the **set metadata** command.
--   Before you can use **import**, you must load a DiskShadow metadata file using the **load metadata** command.
+- Transportable shadow copies aren't stored on the system immediately. Their details are stored in a Backup Components Document XML file, which DiskShadow automatically requests and saves in a .cab metadata file in the working directory. Use the [set metadata command](set-metadata.md) to change the path and name of this XML file.
 
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 The following is a sample DiskShadow script that demonstrates the use of the **import** command:
+
 ```
 #Sample DiskShadow script demonstrating IMPORT
 SET CONTEXT PERSISTENT
@@ -54,6 +47,8 @@ IMPORT
 #The shadow copy will now be loaded into the system.
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [diskshadow command](diskshadow.md)

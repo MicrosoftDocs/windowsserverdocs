@@ -6,8 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 03/02/2018
 ms.topic: article
-ms.prod: windows-server-threshold
-ms.technology: identity-adfs
 ---
 
 # AD FS Troubleshooting - Fiddler
@@ -17,7 +15,7 @@ Fiddler is a tool that can be used to capture HTTP/HTTPS web traffic.  This tool
 You can download Fiddler [here](https://www.telerik.com/download/fiddler).  Once you have downloaded it go ahead and install it.
 
 ## Configure Fiddler to capture AD FS traffic
-In order to capture AD FS traffic, we need to configure Fiddler to decrypt SSL traffic. 
+In order to capture AD FS traffic, we need to configure Fiddler to decrypt SSL traffic.
 
 ### Configure the Fiddler SSL certificate
  Use the following procedure to setup Fiddler to decrypt SSL traffic.

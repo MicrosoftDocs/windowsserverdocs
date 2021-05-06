@@ -1,20 +1,20 @@
 ---
+description: "Learn more about: Delimit the allocation of volumes in Storage Spaces Direct"
 title: Delimit the allocation of volumes in Storage Spaces Direct
-ms.author: cosmosdarwin
-ms.manager: eldenc
-ms.technology: storage-spaces
+manager: eldenc
 ms.topic: article
 author: cosmosdarwin
+ms.author: cosdar
 ms.date: 03/29/2018
 ---
 
 # Delimit the allocation of volumes in Storage Spaces Direct
-> Applies To: Windows Server Insider Preview, build 17093 and later
+> Applies to: Windows Server 2019
 
-Windows Server Insider Preview introduces an option to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. This topic explains how it works and gives examples in PowerShell.
+Windows Server 2019 introduces an option to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. This topic explains how it works and gives examples in PowerShell.
 
    > [!IMPORTANT]
-   > This feature is new in Windows Server Insider Preview, build 17093 and later. It is not available in Windows Server 2016. We invite IT pros to join the [Windows Server Insider Program](https://aka.ms/serverinsider) to give us feedback on what we can do to make Windows Server work better for your organization.
+   > This feature is new in Windows Server 2019. It is not available in Windows Server 2016.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ Windows Server Insider Preview introduces an option to manually delimit the allo
 
 ### Review: regular allocation
 
-With regular three-way mirroring, the volume is divided into many small "slabs" that are copied three times and distributed evenly across every drive in every server in the cluster. For more details, read [this deep dive blog](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/).
+With regular three-way mirroring, the volume is divided into many small "slabs" that are copied three times and distributed evenly across every drive in every server in the cluster. For more details, read [this deep dive blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deep-dive-the-storage-pool-in-storage-spaces-direct/ba-p/425959).
 
 ![Diagram showing the volume being divided into three stacks of slabs and distributed evenly across every server.](media/delimit-volume-allocation/regular-allocation.png)
 
@@ -48,17 +48,12 @@ The volume goes offline and becomes inaccessible until the servers are recovered
 
 ### New: delimited allocation
 
-With delimited allocation, you specify a subset of servers to use (minimum three for three-way mirror). The volume is divided into slabs that are copied three times, like before, but instead of allocating across every server, **the slabs are allocated only to the subset of servers you specify**.
+With delimited allocation, you specify a subset of servers to use (minimum four). The volume is divided into slabs that are copied three times, like before, but instead of allocating across every server, **the slabs are allocated only to the subset of servers you specify**.
 
-![Diagram showing the volume being divided into three stacks of slabs and distributed only to three of six servers.](media/delimit-volume-allocation/delimited-allocation.png)
-
+For example, if you have an 8 node cluster (nodes 1 through 8), you can specify a volume to be located only on disks in nodes 1, 2, 3, 4.
 #### Advantages
 
-With this allocation, the volume is likely to survive three concurrent failures: in fact, its probability of survival increases from 0% (with regular allocation) to 95% (with delimited allocation) in this case! Intuitively, this is because it does not depend on servers 4, 5, or 6 so it is not affected by their failures.
-
-In the example from above, servers 1, 3, and 5 fail at the same time. Because delimited allocation ensured that server 2 contains a copy of every slab, every slab has a surviving copy and the volume stays online and accessible:
-
-![Diagram showing three of six servers highlighted in red, yet the overall volume is green.](media/delimit-volume-allocation/delimited-does-survive.png)
+With the example allocation, the volume is likely to survive three concurrent failures. If nodes 1, 2, and 6 go down, only 2 of the nodes that hold the 3 copies of data for the volume are down and the volume will stay online.
 
 Survival probability depends on the number of servers and other factors – see [Analysis](#analysis) for details.
 
@@ -95,10 +90,10 @@ To create a three-way mirror volume and delimit its allocation:
    > [!TIP]
    > In Storage Spaces Direct, the term 'Storage Scale Unit' refers to all the raw storage attached to one server, including direct-attached drives and direct-attached external enclosures with drives. In this context, it's the same as 'server'.
 
-2. Specify which servers to use with the new `-StorageFaultDomainsToUse` parameter and by indexing into `$Servers`. For example, to delimit the allocation to the first, second, and third servers (indices 0, 1, and 2):
+2. Specify which servers to use with the new `-StorageFaultDomainsToUse` parameter and by indexing into `$Servers`. For example, to delimit the allocation to the first, second, third, and fourth servers (indices 0, 1, 2, and 3):
 
     ```PowerShell
-    New-Volume -FriendlyName "MyVolume" -Size 100GB -StorageFaultDomainsToUse $Servers[0,1,2]
+    New-Volume -FriendlyName "MyVolume" -Size 100GB -StorageFaultDomainsToUse $Servers[0,1,2,3]
     ```
 
 ### See a delimited allocation
@@ -110,10 +105,10 @@ PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
 
 VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 Server6
 ----------------------- -------------- ------- ------- ------- ------- ------- -------
-MyVolume                300 GB         100 GB  100 GB  100 GB  0       0       0      
+MyVolume                300 GB         100 GB  100 GB  100 GB  100 GB  0       0
 ```
 
-Note that only Server1, Server2, and Server3 contains slabs of *MyVolume*.
+Note that only Server1, Server2, Server3, and Server4 contain slabs of *MyVolume*.
 
 ### Change a delimited allocation
 
@@ -121,10 +116,10 @@ Use the new `Add-StorageFaultDomain` and `Remove-StorageFaultDomain` cmdlets to 
 
 For example, to move *MyVolume* over by one server:
 
-1. Specify that the fourth server **can** store slabs of *MyVolume*:
+1. Specify that the fifth server **can** store slabs of *MyVolume*:
 
     ```PowerShell
-    Get-VirtualDisk MyVolume | Add-StorageFaultDomain -StorageFaultDomains $Servers[3]
+    Get-VirtualDisk MyVolume | Add-StorageFaultDomain -StorageFaultDomains $Servers[4]
     ```
 
 2. Specify that the first server **cannot** store slabs of *MyVolume*:
@@ -139,8 +134,6 @@ For example, to move *MyVolume* over by one server:
     Get-StoragePool S2D* | Optimize-StoragePool
     ```
 
-![Diagram showing the slabs migrate en-masse from servers 1, 2, and 3 to servers 2, 3, and 4.](media/delimit-volume-allocation/move.gif)
-
 You can monitor the progress of the rebalance with `Get-StorageJob`.
 
 Once it is complete, verify that *MyVolume* has moved by running `Get-VirtualDiskFootprintBySSU.ps1` again.
@@ -150,44 +143,32 @@ PS C:\> .\Get-VirtualDiskFootprintBySSU.ps1
 
 VirtualDiskFriendlyName TotalFootprint Server1 Server2 Server3 Server4 Server5 Server6
 ----------------------- -------------- ------- ------- ------- ------- ------- -------
-MyVolume                300 GB         0       100 GB  100 GB  100 GB  0       0      
+MyVolume                300 GB         0       100 GB  100 GB  100 GB  100 GB  0
 ```
 
-Note that Server1 does not contain slabs of *MyVolume* anymore – instead, Server04 does.
+Note that Server1 does not contain slabs of *MyVolume* anymore – instead, Server5 does.
 
 ## Best practices
 
 Here are the best practices to follow when using delimited volume allocation:
 
-### Choose three servers
+### Choose four servers
 
-Delimit each three-way mirror volume to three servers, not more.
+Delimit each three-way mirror volume to four servers, not more.
 
 ### Balance storage
 
 Balance how much storage is allocated to each server, accounting for volume size.
 
-### Every delimited allocation unique
+### Stagger delimited allocation volumes
 
-To maximize fault tolerance, make each volume's allocation unique, meaning it does not share *all* its servers with another volume (some overlap is okay). With N servers, there are "N choose 3" unique combinations – here's what that means for some common cluster sizes:
+To maximize fault tolerance, make each volume's allocation unique, meaning it does not share *all* its servers with another volume (some overlap is okay).
 
-| Number of servers (N) | Number of unique delimited allocations (N choose 3) |
-|-----------------------|-----------------------------------------------------|
-| 6                     | 20                                                  |
-| 8                     | 56                                                  |
-| 12                    | 220                                                 |
-| 16                    | 560                                                 |
-
-   > [!TIP]
-   > Consider this helpful review of [combinatorics and choose notation](https://betterexplained.com/articles/easy-permutations-and-combinations/).
-
-Here's an example that maximizes fault tolerance – every volume has a unique delimited allocation:
-
-![unique-allocation](media/delimit-volume-allocation/unique-allocation.png)
-
-Conversely, in the next example, the first three volumes use the same delimited allocation (to servers 1, 2, and 3) and the last three volumes use the same delimited allocation (to servers 4, 5, and 6). This doesn't maximize fault tolerance: if three servers fail, multiple volumes could go offline and become inaccessible at once.
-
-![non-unique-allocation](media/delimit-volume-allocation/non-unique-allocation.png)
+For example on an eight-node system:
+Volume 1: Servers 1, 2, 3, 4
+Volume 2: Servers 5, 6, 7, 8
+Volume 3: Servers 3, 4, 5, 6
+Volume 4: Servers 1, 2, 7, 8
 
 ## Analysis
 
@@ -198,7 +179,7 @@ This section derives the mathematical probability that a volume stays online and
 
 ### Up to two failures is always okay
 
-Every three-way mirror volume can survive up to two failures at the same time, as [these examples](storage-spaces-fault-tolerance.md#examples) illustrate, regardless of its allocation. If two drives fail, or two servers fail, or one of each, every three-way mirror volume stays online and accessible, even with regular allocation.
+Every three-way mirror volume can survive up to two failures at the same time, regardless of its allocation. If two drives fail, or two servers fail, or one of each, every three-way mirror volume stays online and accessible, even with regular allocation.
 
 ### More than half the cluster failing is never okay
 
@@ -206,53 +187,7 @@ Conversely, in the extreme case that more than half of servers or drives in the 
 
 ### What about in between?
 
-If three or more failures occur at once but at least half of servers and drives are still up, volumes with delimited allocation may stay online and accessible, depending on which servers have failures. Let's run the numbers to determine the precise odds.
-
-For simplicity, assume volumes are independently and identically distributed (IID) according to the best practices above, and that enough unique combinations are available for every volume’s allocation to be unique. The probability that any given volume survives is also the expected fraction of overall storage that survives by linearity of expectation. 
-
-Given **N** servers of which **F** have failures, a volume allocated to **3** of them goes offline if-and-only-if all **3** are among the **F** with failures. There are **(N choose F)** ways for **F** failures to occur, of which **(F choose 3)** result in the volume going offline and becoming inaccessible. The probability can be expressed as:
-
-![P_offline = Fc3 / NcF](media/delimit-volume-allocation/probability-volume-offline.png)
-
-In all other cases, the volume stays online and accessible:
-
-![P_online = 1 – (Fc3 / NcF)](media/delimit-volume-allocation/probability-volume-online.png)
-
-The following tables evaluate the probability for some common cluster sizes and up to 5 failures, revealing that delimited allocation increases fault tolerance compared to regular allocation in every case considered.
-
-### With 6 servers
-
-| Allocation                           | Probability of surviving 1 failure | Probability of surviving 2 failures | Probability of surviving 3 failures | Probability of surviving 4 failures | Probability of surviving 5 failures |
-|--------------------------------------|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
-| Regular, spread across all 6 servers | 100%                               | 100%                                | 0%                                  | 0%                                  | 0%                                  |
-| Delimited to 3 servers only          | 100%                               | 100%                                | 95.0%                               | 0%                                  | 0%                                  |
-
-   > [!NOTE]
-   > After more than 3 failures out of 6 total servers, the cluster loses quorum.
-
-### With 8 servers
-
-| Allocation                           | Probability of surviving 1 failure | Probability of surviving 2 failures | Probability of surviving 3 failures | Probability of surviving 4 failures | Probability of surviving 5 failures |
-|--------------------------------------|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
-| Regular, spread across all 8 servers | 100%                               | 100%                                | 0%                                  | 0%                                  | 0%                                  |
-| Delimited to 3 servers only          | 100%                               | 100%                                | 98.2%                               | 94.3%                               | 0%                                  |
-
-   > [!NOTE]
-   > After more than 4 failures out of 8 total servers, the cluster loses quorum.
-
-### With 12 servers
-
-| Allocation                            | Probability of surviving 1 failure | Probability of surviving 2 failures | Probability of surviving 3 failures | Probability of surviving 4 failures | Probability of surviving 5 failures |
-|---------------------------------------|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
-| Regular, spread across all 12 servers | 100%                               | 100%                                | 0%                                  | 0%                                  | 0%                                  |
-| Delimited to 3 servers only           | 100%                               | 100%                                | 99.5%                               | 99.2%                               | 98.7%                               |
-
-### With 16 servers
-
-| Allocation                            | Probability of surviving 1 failure | Probability of surviving 2 failures | Probability of surviving 3 failures | Probability of surviving 4 failures | Probability of surviving 5 failures |
-|---------------------------------------|------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|-------------------------------------|
-| Regular, spread across all 16 servers | 100%                               | 100%                                | 0%                                  | 0%                                  | 0%                                  |
-| Delimited to 3 servers only           | 100%                               | 100%                                | 99.8%                               | 99.8%                               | 99.8%                               |
+If three or more failures occur at once, but at least half of the servers and the drives are still up, volumes with delimited allocation may stay online and accessible, depending on which servers have failures.
 
 ## Frequently asked questions
 
@@ -264,7 +199,7 @@ Yes. You can choose per-volume whether or not to delimit allocation.
 
 No, it's the same as with regular allocation.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Fault tolerance in Storage Spaces Direct](storage-spaces-fault-tolerance.md)

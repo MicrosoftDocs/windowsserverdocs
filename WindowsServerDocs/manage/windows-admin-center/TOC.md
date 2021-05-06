@@ -1,17 +1,14 @@
 # [Windows Admin Center](overview.md)
 
 ## Understand
-### [Hello, Windows Admin Center!](understand/windows-admin-center.md)
 ### [What is Windows Admin Center?](understand/what-is.md)
 ### [FAQ](understand/faq.md)
 ### [Case studies](understand/case-studies.md)
 ### [Related management products](understand/related-management.md)
-### [Videos](understand/videos.md)
 
 ## Plan
 ### [What type of installation is right for you?](plan/installation-options.md)
 ### [User access options](plan/user-access-options.md)
-### [Azure integration options](plan/azure-integration-options.md)
 
 ## Deploy
 ### [Prepare your environment](deploy/prepare-environment.md)
@@ -22,21 +19,37 @@
 ### [Windows Admin Center settings](configure/settings.md)
 ### [User access control and permissions](configure/user-access-control.md)
 ### [Using extensions](configure/using-extensions.md)
-### [Configure Azure integration](configure/azure-integration.md)
-### [Manage Azure VMs with Windows Admin Center](configure/manage-azure-vms.md)
+### [Shared connections](configure/shared-connections.md)
+### [Automate with PowerShell](configure/use-powershell.md)
 
 ## Use
 ### [Get started](use/get-started.md)
 ### [Manage servers](use/manage-servers.md)
+### [Deploy hyperconverged infrastructure](use/deploy-hyperconverged-infrastructure.md)
 ### [Manage hyper-converged infrastructure](use/manage-hyper-converged.md)
 ### [Manage failover clusters](use/manage-failover-clusters.md)
 ### [Manage Hyper-V virtual machines](use/manage-virtual-machines.md)
-### [Configure Azure services](use/azure-services.md)
-#### [Protect your Hyper-V VMs with Azure Site Recovery](use/azure-site-recovery.md)
-#### [Update your servers with Azure Update Management](use/azure-update-management.md)
 ### [Logging](use/logging.md)
-### [Common troubleshooting steps](use/troubleshooting.md)
-### [Known issues](use/known-issues.md)
+
+## Connect to Azure
+### [Azure hybrid services](azure/index.md)
+#### [Azure Backup](azure/azure-backup.md)
+#### [Azure Site Recovery](azure/azure-site-recovery.md)
+#### [Azure File Sync](azure/azure-file-sync.md)
+#### [Azure Monitor](azure/azure-monitor.md)
+#### [Azure Update Management](azure/azure-update-management.md)
+### [Connect to Azure](azure/azure-integration.md)
+### [Create Azure VMs](azure/create-azure-vms.md)
+### [Manage Azure VMs](azure/manage-azure-vms.md)
+### [Manage a VM from within Azure](azure/manage-vm.md)
+### [Manually deploy a Windows Admin Center server in Azure](azure/deploy-wac-in-azure.md)
+
+## Support
+### [Release history](support/release-history.md)
+### [Support policy](support/index.md)
+### [Common troubleshooting steps](support/troubleshooting.md)
+### [Known issues](support/known-issues.md)
+### [Windows Admin Center license terms](../../windows-server-licensing/windows-admin-center-licensing.md)
 
 ## Extend
 ### [Overview of extensions](extend/extensibility-overview.md)
@@ -58,11 +71,14 @@
 #### [UI text and design style guide](extend/guides/ui-text-style-guide.md)
 #### [Using PowerShell in your extension](extend/guides/powershell.md)
 #### [CSS icon guide](extend/guides/cssicons.md)
-#### [Migrate to the latest SDK](extend/guides/migration-guide-0_1-1_0.md)
+#### [Enable the extension discovery banner](extend/guides/extension-discovery-banner.md)
 ### [Publishing extensions](extend/publish-extensions.md)
 ### Case Studies
+#### [BiitOps](extend/case-studies/biitops.md)
 #### [DataON](extend/case-studies/dataon.md)
 #### [Fujitsu](extend/case-studies/fujitsu.md)
 #### [Lenovo](extend/case-studies/lenovo.md)
+#### [NEC](extend/case-studies/nec.md)
 #### [Pure Storage](extend/case-studies/purestorage.md)
-#### [Squared Up](extend/case-studies/squared-up.md)
+#### [QCT](extend/case-studies/qct.md)
+#### [Thomas-Krenn](extend/case-studies/thomas-krenn.md)

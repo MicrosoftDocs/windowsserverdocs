@@ -1,35 +1,38 @@
 ---
 title: nslookup server
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the nslookup server command, which changes the default server to the specified Domain Name System (DNS) domain.
+ms.topic: reference
 ms.assetid: 608267f8-f7b4-412a-8dcd-e08b5ffc2085
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
+
 # nslookup server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-changes the default server to the specified Domain Name System (DNS) domain.
+Changes the default server to the specified Domain Name System (DNS) domain.
+
+This command uses the current default server to look up the information about the specified DSN domain. If you want to lookup information using the initial server, use the [nslookup lserver](nslookup-lserver.md) command.
+
 ## Syntax
+
 ```
-server <DNSDomain>
+server <DNSdomain>
 ```
-## Parameters
-|Parameter|Description|
-|-------|--------|
-|<DNSDomain>|Required. Specifies the new DNS domain for the default server.|
-|{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## Remarks
--   The **server** command uses the current default server to look up the information about the specified DNS domain. This is in contrast to the **lserver** command, which uses the initial server.
-## additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[nslookup lserver](nslookup-lserver.md)
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| `<DNSdomain>` | Specifies the DNS domain for the default server. |
+| /? | Displays help at the command prompt. |
+| /help | Displays help at the command prompt. |
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [nslookup lserver](nslookup-lserver.md)

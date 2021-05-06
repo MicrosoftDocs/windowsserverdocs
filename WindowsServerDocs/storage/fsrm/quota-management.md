@@ -2,8 +2,6 @@
 title: Quota Management
 description: This article describes how to create and manage quotas
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
-ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -12,7 +10,7 @@ ms.author: jgerend
 
 # Quota Management
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019,Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 On the **Quota Management** node of the File Server Resource Manager Microsoft<sup>®</sup> Management Console (MMC) snap-in, you can perform the following tasks:
 
@@ -35,10 +33,8 @@ This section includes the following topics:
 -   [Edit Auto Apply Quota Properties](edit-auto-apply-quota-properties.md)
 
 > [!Note]
-> To set e-mail notifications and reporting capabilities, you must first configure the general File Server Resource Manager options.
+> To set e-mail notifications and reporting capabilities, you must first configure the general File Server Resource Manager options. If you're just looking to free up space on a volume, consider using Azure File Sync with cloud tiering enabled. This allows you to cache your most frequently accessed files locally and tier your least frequently accessed files to the cloud, saving local storage space while maintaining performance. For details, see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning).
 
-## See also
+## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
-
-

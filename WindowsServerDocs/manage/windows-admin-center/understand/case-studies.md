@@ -1,13 +1,11 @@
 ---
 title: Windows Admin Center Case Studies
 description: Windows Admin Center Case Studies (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
 ---
 
 # Windows Admin Center Case Studies
@@ -29,11 +27,11 @@ ms.prod: windows-server-threshold
 
 [Ava6](http://www.avassys.com/) is an IT consulting company that specializes in design, evaluation, and integration of IT infrastructure, specifically virtualization, networking, storage, backup, and cloud computing.
 
-Ava6 uses Windows Server 2016 Core, Hyper-V, Failover Clustering, and S2D. 
+Ava6 uses Windows Server 2016 Core, Hyper-V, Failover Clustering, and S2D.
 
 ### **The Challenge**
 
-Ava6’s first use case for Windows Admin Center is Hyper-V and Failover Clustering, and is evaluating hyper-converged cluster.
+Ava6's first use case for Windows Admin Center is Hyper-V and Failover Clustering, and is evaluating hyper-converged cluster.
 
 Windows Admin Center helps Ava6 manage Windows Server deployed in Core Edition, especially for driver management.  Windows Admin Center gives a better experience for Hyper-V and Failover Cluster to customers, especially to manage VMs, and shows customers that a GUI is coming for the hyper-converged solution.
 
@@ -41,7 +39,7 @@ Windows Admin Center helps Ava6 manage Windows Server deployed in Core Edition, 
 
 Ava6 has Windows Admin Center deployed as a single instance for VM management.
 
-Ava6’s customers have been impressed with Windows Admin Center, and prefer its management capabilities for Hyper-V and Failover Clustering over other options.  Before Windows Admin Center, driver management was overly complicated on a Core server.  Windows Admin Center has also helped introduce S2D Ava6’s customers, with a similar offering to competitors like Nutanix and VMWare.
+Ava6's customers have been impressed with Windows Admin Center, and prefer its management capabilities for Hyper-V and Failover Clustering over other options.  Before Windows Admin Center, driver management was overly complicated on a Core server.  Windows Admin Center has also helped introduce S2D Ava6's customers, with a similar offering to competitors like Nutanix and VMWare.
 
 ## Comparex
 
@@ -57,7 +55,7 @@ Comparex was looking for an easy-to-use and remote-accessible server management 
 
 ### **The Solution**
 
-Comparex is running a server-based Windows Admin Center installation for access to, and management of, their demo lab, which has helped alleviate extra VPN and RDP steps.  Comparex’s consultants also run Windows Admin Center on their notebooks to help customers in their environment, without the need for explicit RDP access.
+Comparex is running a server-based Windows Admin Center installation for access to, and management of, their demo lab, which has helped alleviate extra VPN and RDP steps.  Comparex's consultants also run Windows Admin Center on their notebooks to help customers in their environment, without the need for explicit RDP access.
 
 Windows Admin Center has saved Comparex time in their daily business, to do more and achieve more.  Windows Admin Center has also solved common management challenges with their customers, such as with Hyper-V and Storage Spaces Direct.
 
@@ -77,7 +75,7 @@ Convergent Computing has three distinct environments: hosted, secured, and web o
 
 Convergent Computing uses Windows Admin Center to manage three environments with 40+ hosts running 200+ workloads.
 
-Prior to Windows Admin Center, Convergent Computing used a range of tools and technologies to perform management tasks, including System Center and custom scripts.  With the goal of minimizing overhead and effort to manage their servers farms, Convergent Computing found that the “thinner” a management layer got, the more complex it became, so they typically ended up with higher overhead for the sake of simplicity.  With Windows Admin Center, 20+ hours a month that were spent “managing the management system” are saved, a 75% reduction in time and effort, allowing their operations teams to focus on more valuable tasks including security, compliance, capacity planning, and overall systems optimization. 
+Prior to Windows Admin Center, Convergent Computing used a range of tools and technologies to perform management tasks, including System Center and custom scripts.  With the goal of minimizing overhead and effort to manage their servers farms, Convergent Computing found that the “thinner” a management layer got, the more complex it became, so they typically ended up with higher overhead for the sake of simplicity.  With Windows Admin Center, 20+ hours a month that were spent “managing the management system” are saved, a 75% reduction in time and effort, allowing their operations teams to focus on more valuable tasks including security, compliance, capacity planning, and overall systems optimization.
 
 ## FZI Research Center for Information Technology
 
@@ -117,7 +115,7 @@ GVC Group has seen increased productivity due to less management hops for admini
 
 ## Inside Technologies
 
-[Inside Technologies](http://www.insidetechnologies.eu) is a globally-focused IT consulting firm that provides application development, enterprise solutions, and infrastructure services.  They specialize in applying new and unique approaches with Microsoft solutions to meet customer’s needs.
+[Inside Technologies](http://www.insidetechnologies.eu) is a globally-focused IT consulting firm that provides application development, enterprise solutions, and infrastructure services.  They specialize in applying new and unique approaches with Microsoft solutions to meet customer's needs.
 
 Inside Technologies uses a wide variety of Windows Server technologies, including Hyper-V and Storage.
 
@@ -136,7 +134,7 @@ Inside Technologies is using Windows Admin Center to manage their customers remo
 ## <a id="secureguard-copa-data"></a>SecureGUARD / COPA-DATA
 
 [SecureGUARD GmbH](http://www.secureguard.at/) helps companies solve complex IT problems in security and cloud infrastructure with a series of products and custom engineering services. SecureGUARD builds IT security appliances and Microsoft Windows Server based appliances, more recently building rack-level converged appliances for cloud infrastructures. SecureGUARD is a Microsoft Gold Partner in Application Development and Datacenter.
- 
+
 [COPA-DATA](https://www.copadata.com) develops the software solution “zenon” that allows for end-to-end industrial IoT solutions - from the field level up to the cloud and to mobile devices. COPA-DATA has deployed systems worldwide to companies in the Food & Beverage, Energy & Infrastructure, Automotive and Pharmaceutical sectors.
 
 ### **The Challenge**

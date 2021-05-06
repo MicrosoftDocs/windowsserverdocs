@@ -1,21 +1,15 @@
 ---
-title: Desktop hosting service
-description: Describes the components of a desktop hosting service.
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: remote-desktop-services
+title: Desktop hosting service 
+description: Learn about the desktop hosting service's components in Windows Server.
 ms.author: helohr
 ms.date: 07/06/2018
-ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
-manager: dougkim
+manager: femila
 ---
 # Desktop hosting service
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 This article will tell you more about the desktop hosting service's components.
 
@@ -27,25 +21,25 @@ The provider's desktop hosting service is implemented as a set of isolated tenan
 
 ## Active Directory Domain Services
 
-Active Directory Domain Services (AD DS) provides the domain and forest information, such that the tenant’s users can sign in to the desktops and applications to carry out their workloads. This also enables you to set up or connect to required file shares and databases that may be required for Windows applications.
+Active Directory Domain Services (AD DS) provides the domain and forest information, such that the tenant's users can sign in to the desktops and applications to carry out their workloads. This also enables you to set up or connect to required file shares and databases that may be required for Windows applications.
 
 The tenant's forest does not require any trust relationship with the provider's management forest. A domain administrator account may be set up in the tenant's domain to allow the provider's technical personnel to perform administrative tasks in the tenant's environment (such as monitoring system status and applying software updates) and to assist with troubleshooting and configuration.
 
 There are multiple ways to deploy AD DS:
 
-1. Enable Azure Active Directory Domain Services in the tenant’s virtual networking environment. This will create a managed AD DS instance for the tenant based on the users and groups that exist in Azure AD.
-2. Set up a stand-alone AD DS server in the tenant’s virtual networking environment. This gives you all of the full control of the AD DS instance running on virtual machines.
-3. Create a site-to-site VPN connection to an AD DS server located on the tenant’s premises. This allows the tenant to connect to their existing AD DS instance and reduce duplication of users, groups, organizational units, and so on.
+1. Enable Azure Active Directory Domain Services in the tenant's virtual networking environment. This will create a managed AD DS instance for the tenant based on the users and groups that exist in Azure AD.
+2. Set up a stand-alone AD DS server in the tenant's virtual networking environment. This gives you all of the full control of the AD DS instance running on virtual machines.
+3. Create a site-to-site VPN connection to an AD DS server located on the tenant's premises. This allows the tenant to connect to their existing AD DS instance and reduce duplication of users, groups, organizational units, and so on.
 
 For more information, see the following articles:
 
-* [Azure Active Directory Domain Services documentation](https://docs.microsoft.com/azure/active-directory-domain-services/)
-* [Desktop Hosting Reference Architecture Guide for Windows Server 2012 R2](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
-* [Create a site-to-site connection in the Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
+* [Azure Active Directory Domain Services documentation](/azure/active-directory-domain-services/)
+* [Desktop Hosting Reference Architecture Guide for Windows Server 2012 R2](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
+* [Create a site-to-site connection in the Azure portal](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 
 ## SQL database
 
-A highly-available SQL database is used by the Remote Desktop Connection Broker to store deployment information, such as the mapping of current users’ connections to the host servers.
+A highly-available SQL database is used by the Remote Desktop Connection Broker to store deployment information, such as the mapping of current users' connections to the host servers.
 
 There are multiple ways to deploy an SQL database:
 
@@ -54,8 +48,8 @@ There are multiple ways to deploy an SQL database:
 
 For more information about how to set up a highly-available SQL database infrastructure, see the following articles:
 
-* [What is the Azure SQL Database service?](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
-* [Creation and configuration of availability groups (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-2017).
+* [What is the Azure SQL Database service?](/azure/sql-database/sql-database-technical-overview)
+* [Creation and configuration of availability groups (SQL Server)](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-2017&preserve-view=true).
 * [Add the RD Connection Broker server to the deployment and configure high availability](rds-connection-broker-cluster.md).
 
 ## File server
@@ -68,8 +62,8 @@ Small tenants can reduce costs by combining the file server and [RD Licensing ro
 
 For more information, see the following articles:
 
-* [Storage in Windows Server](../../storage/storage.md)
-* [How to attach a managed data disk to a Windows VM in the Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Fclassic%2Ftoc.json)
+* [Storage in Windows Server](../../storage/storage.yml)
+* [How to attach a managed data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal?toc=/azure/virtual-machines/windows/classic/toc.json)
 
 ### User profile disks
 

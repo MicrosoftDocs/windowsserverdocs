@@ -1,17 +1,11 @@
 ---
 title: What's New for Managed Service Accounts
-description: "Windows Server Security"
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: security-gmsa
-ms.tgt_pltfrm: na
+description: Learn about the changes in functionality for Managed Service Accounts with the introduction of the group Managed Service Account in Windows Server 2012 and Windows 8.
 ms.topic: article
 ms.assetid: 2f2a8b6b-c152-4c40-b712-bfabff0e408b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # What&#39;s New for Managed Service Accounts
@@ -45,12 +39,12 @@ On computers running Windows Server 2012 or Windows 8, a group MSA can be create
 ### <a name="interoperability"></a>Removed or deprecated functionality
 For  Windows Server 2012 , the Windows PowerShell cmdlets default to managing the group Managed Service Accounts instead of the server Managed Service Accounts.
 
-## See also
+## Additional References
 
 -   [Group Managed Service Accounts Overview](group-managed-service-accounts-overview.md)
 
 -   [Active Directory Domain Services Overview](active-directory-domain-services-overview.md)
 
--   [Managed Service Accounts: Understanding, Implementing, Best Practices, and Troubleshooting](http://blogs.technet.com/b/askds/archive/20../managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)
+-   [Managed Service Accounts: Understanding, Implementing, Best Practices, and Troubleshooting](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/managed-service-accounts-understanding-implementing-best/ba-p/397009)
 
 

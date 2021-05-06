@@ -1,10 +1,8 @@
 ---
 title: Set up the Remote Desktop web client for your users
 description: Describes how an admin can set up the Remote Desktop web client.
-ms.prod: windows-server-threshold
-ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 11/2/2018
+ms.date: 09/19/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
@@ -14,7 +12,7 @@ ms.localizationpriority: medium
 The Remote Desktop web client lets users access your organization's Remote Desktop infrastructure through a compatible web browser. They'll be able to interact with remote apps or desktops like they would with a local PC no matter where they are. Once you set up your Remote Desktop web client, all your users need to get started is the URL where they can access the client, their credentials, and a supported web browser.
 
 >[!IMPORTANT]
->The web client does not currently support using Azure Application Proxy and does not support Web Application Proxy at all. See [Using RDS with application proxy services](../rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
+>The web client does support using Azure AD Application Proxy but does not support Web Application Proxy at all. See [Using RDS with application proxy services](../rds-supported-config.md#using-remote-desktop-services-with-application-proxy-services) for details.
 
 ## What you'll need to set up the web client
 
@@ -22,7 +20,7 @@ Before getting started, keep the following things in mind:
 
 * Make sure your [Remote Desktop deployment](../rds-deploy-infrastructure.md) has an RD Gateway, an RD Connection Broker, and RD Web Access running on Windows Server 2016 or 2019.
 * Make sure your deployment is configured for [per-user client access licenses](../rds-client-access-license.md) (CALs) instead of per-device, otherwise all licenses will be consumed.
-* Install the [Windows 10 KB4025334 update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) on the RD Gateway. Later cumulative updates may already contains this KB.
+* Install the [Windows 10 KB4025334 update](https://support.microsoft.com/help/4025334/windows-10-update-kb4025334) on the RD Gateway. Later cumulative updates may already contains this KB.
 * Make sure public trusted certificates are configured for the RD Gateway and RD Web Access roles.
 * Make sure that any computers your users will connect to are running one of the following OS versions:
   * Windows 10
@@ -75,10 +73,10 @@ To install the web client for the first time, follow these steps:
     ```PowerShell
     Publish-RDWebClientPackage -Type Production -Latest
     ```
-    Make sure you can access the web client at the web client URL with your server name, formatted as <https://server_FQDN/RDWeb/webclient/index.html>. It's important to use the server name that matches the RD Web Access public certificate in the URL (typically the server FQDN).
+    Make sure you can access the web client at the web client URL with your server name, formatted as `https://server_FQDN/RDWeb/webclient/index.html`. It's important to use the server name that matches the RD Web Access public certificate in the URL (typically the server FQDN).
 
     >[!NOTE]
-    >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you’re aware of the configuration limitation.
+    >When running the **Publish-RDWebClientPackage** cmdlet, you may see a warning that says per-device CALs are not supported, even if your deployment is configured for per-user CALs. If your deployment uses per-user CALs, you can ignore this warning. We display it to make sure you're aware of the configuration limitation.
 8. When you're ready for users to access the web client, just send them the web client URL you created.
 
 >[!NOTE]
@@ -164,10 +162,12 @@ Follow these steps to deploy the web client to an RD Web Access server that does
 
 Follow the instructions under [How to publish the Remote Desktop web client](remote-desktop-web-client-admin.md#how-to-publish-the-remote-desktop-web-client), replacing steps 4 and 5 with the following.
 
-4. Import the Remote Desktop web client management PowerShell module from the local folder:
-    ```PowerShell
-    Import-Module -Name "C:\WebClient\"
-    ```
+4. You have two options to retrieve the latest web client management PowerShell module:
+    - Import the Remote Desktop web client management PowerShell module:
+      ```PowerShell
+      Import-Module -Name RDWebClientManagement
+      ```
+    - Copy the downloaded RDWebClientManagement folder to one of the local PowerShell module folders listed under **$env:psmodulePath**, or add the path to the folder with the downloaded files to the **$env:psmodulePath**.
 
 5. Deploy the latest version of the Remote Desktop web client from the local folder (replace with the appropriate zip file):
     ```PowerShell
@@ -210,7 +210,7 @@ This section describes how to enable a web client connection to an RD Broker wit
     >
     > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
 
-3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to **https://+:3392/rdp/**.
+3. Open the Windows Registry (regedit), go to `HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp` and locate the key **WebSocketURI**. Next, set the value to `https://+:3392/rdp/`.
 
 ### Setting up the RD Session Host
 Follow these steps if the RD Session Host server is different from the RD Broker server:
@@ -232,7 +232,7 @@ Follow these steps if the RD Session Host server is different from the RD Broker
     >
     > In the list of SSL Certificate bindings, ensure that the correct certificate is bound to port 3392.
 
-3. Open the Windows Registry (regedit) and nagivate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to **https://+:3392/rdp/**.
+3. Open the Windows Registry (regedit) and navigate to ```HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp``` and locate the key **WebSocketURI**. The value must be set to `https://+:3392/rdp/`.
 
 ### General Observations
 
@@ -243,6 +243,41 @@ Follow these steps if the RD Session Host server is different from the RD Broker
     > If both the RD Session Host and the RD Broker server share the same machine, set the RD Broker server certificate only. If the RD Session Host and RD Broker server use different machines, both must be configured with unique certificates.
 
 * The **Subject Alternative Name (SAN)** for each certificate must be set to the machine's **Fully Qualified Domain Name (FQDN)**. The **Common Name (CN)** must match the SAN for each certificate.
+
+## How to pre-configure settings for Remote Desktop web client users
+This section will tell you how to use PowerShell to configure settings for your Remote Desktop web client deployment. These PowerShell cmdlets control a user's ability to change settings based on your organization's security concerns or intended workflow. The following settings are all located in the **Settings** side panel of the web client.
+
+### Suppress telemetry
+By default, users may choose to enable or disable collection of telemetry data that is sent to Microsoft. For information about the telemetry data Microsoft collects, please refer to our Privacy Statement via the link in the **About** side panel.
+
+As an administrator, you can choose to suppress telemetry collection for your deployment using the following PowerShell cmdlet:
+
+   ```PowerShell
+    Set-RDWebClientDeploymentSetting -Name "SuppressTelemetry" $true
+   ```
+
+By default, the user may select to enable or disable telemetry. A boolean value **$false** will match the default client behavior. A boolean value **$true** disables telemetry and restricts the user from enabling telemetry.
+
+### Remote resource launch method
+
+>[!NOTE]
+>This setting currently only works with the RDS web client, not the Windows Virtual Desktop web client.
+
+By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following PowerShell command:
+
+   ```PowerShell
+    Set-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser" ($true|$false)
+   ```
+ By default, the user may select either launch method. A boolean value **$true** will force the user to launch resources in the browser. A boolean value **$false** will force the user to launch resources by downloading an .rdp file to handle with a locally installed RDP client.
+
+### Reset RDWebClientDeploymentSetting configurations to default
+
+To reset a deployment-level web client setting to the default configuration, run the following PowerShell cmdlet and use the -name parameter to specify the setting you want to reset:
+
+   ```PowerShell
+    Reset-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser"
+    Reset-RDWebClientDeploymentSetting -Name "SuppressTelemetry"
+   ```
 
 ## Troubleshooting
 
@@ -259,7 +294,7 @@ If that doesn't work, your server name in the web client URL might not match the
 If the user reports that they can't connect with the web client even though they can see the resources listed, check the following things:
 
 * Is the RD Gateway role properly configured to use a trusted public certificate?
-* Does the RD Gateway server have the required updates installed? Make sure that your server has [the KB4025334 update](https://support.microsoft.com/en-us/help/4025334/windows-10-update-kb4025334) installed.
+* Does the RD Gateway server have the required updates installed? Make sure that your server has [the KB4025334 update](https://support.microsoft.com/help/4025334/windows-10-update-kb4025334) installed.
 
 If the user gets an "unexpected server authentication certificate was received" error message when they try to connect, then the message will show the certificate's thumbprint. Search the RD Broker server's certificate manager using that thumbprint to find the right certificate. Verify that the certificate is configured to be used for the RD Broker role in the Remote Desktop deployment properties page. After making sure the certificate hasn't expired, copy the certificate in .cer file format to the RD Web Access server and run the following command on the RD Web Access server with the bracketed value replaced by the certificate's file path:
 
@@ -281,4 +316,4 @@ The console may also be accessed directly through your browser. The console is g
 
 ## Get help with the web client
 
-If you've encountered an issue that can’t be solved by the information in this article, you can [email us](mailto:rdwbclnt@microsoft.com) to report it. You can also request or vote for new features at our [suggestion box](https://aka.ms/rdwebfbk).
+If you've encountered an issue that can't be solved by the information in this article, you can report it on [Tech Community](https://aka.ms/wvdtc). You can also request or vote for new features at our [suggestion box](https://remotedesktop.uservoice.com/forums/911494-remote-desktop-web-client).

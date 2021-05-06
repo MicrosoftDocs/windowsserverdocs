@@ -1,11 +1,10 @@
 ---
+description: "Learn more about: Initialize HGS using Admin-trusted attestation"
 title: Initialize HGS using Admin-trusted attestation
-ms.custom: na
-ms.prod: windows-server-threshold
 ms.topic: article
 manager: dongill
 author: rpsqrd
-ms.technology: security-guarded-fabric
+ms.author: ryanpu
 ms.date: 08/29/2018
 ---
 
@@ -14,7 +13,7 @@ ms.date: 08/29/2018
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 >[!IMPORTANT]
->Admin-trusted attestation (AD mode) is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up. 
+>Admin-trusted attestation (AD mode) is deprecated beginning with Windows Server 2019. For environments where TPM attestation is not possible, configure [host key attestation](guarded-fabric-initialize-hgs-key-mode.md). Host key attestation provides similar assurance to AD mode and is simpler to set up.
 
 
 These steps vary depending on whether you are initializing HGS in a new forest or an existing bastion forest:

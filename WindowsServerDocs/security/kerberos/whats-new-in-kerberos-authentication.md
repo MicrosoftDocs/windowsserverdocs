@@ -1,12 +1,10 @@
 ---
-title: What’s New in Kerberos Authentication
-ms.custom: na
-ms.prod: windows-server-threshold
+description: "Learn more about: What's New in Kerberos Authentication"
+title: What's New in Kerberos Authentication
 ms.topic: article
 ms.assetid: 7bd17803-6e42-4a3b-803f-e47c74725813
-manager: alanth
 author: justinha
-ms.technology: security-authentication
+ms.author: Justinha
 ms.date: 11/09/2016
 ---
 
@@ -16,18 +14,18 @@ ms.date: 11/09/2016
 
 ## KDC support for Public Key Trust-based client authentication
 
-Beginning with Windows Server 2016, KDCs support a way of public key mapping. 
-If the public key is provisioned for an account, then the KDC supports Kerberos PKInit explicitly using that key. 
+Beginning with Windows Server 2016, KDCs support a way of public key mapping.
+If the public key is provisioned for an account, then the KDC supports Kerberos PKInit explicitly using that key.
 Since there is no certificate validation, self-signed certificates are supported and authentication mechanism assurance is not supported.
 
 Key Trust is preferred when configured for an account regardless of the UseSubjectAltName setting.
 
 ## Kerberos client and KDC support for RFC 8070 PKInit Freshness Extension
 
-Beginning with Windows 10, version 1607 and Windows Server 2016, Kerberos clients attempt the [RFC 8070 PKInit freshness extension](https://datatracker.ietf.org/doc/draft-ietf-kitten-pkinit-freshness/) for public key based sign-ons. 
+Beginning with Windows 10, version 1607 and Windows Server 2016, Kerberos clients attempt the [RFC 8070 PKInit freshness extension](https://datatracker.ietf.org/doc/draft-ietf-kitten-pkinit-freshness/) for public key based sign-ons.
 
-Beginning with Windows Server 2016, KDCs can support the PKInit freshness extension. 
-By default, KDCs do not offer the PKInit freshness extension. To enable it, use the new KDC support for PKInit Freshness Extension KDC administrative template policy setting on all the DCs in the domain. 
+Beginning with Windows Server 2016, KDCs can support the PKInit freshness extension.
+By default, KDCs do not offer the PKInit freshness extension. To enable it, use the new KDC support for PKInit Freshness Extension KDC administrative template policy setting on all the DCs in the domain.
 When configured, the following options are supported when the domain is Windows Server 2016 domain functional level (DFL):
 
 - **Disabled**: The KDC never offers the PKInit Freshness Extension and accepts valid authentication requests without checking for freshness. Users will never receive the fresh public key identity SID.
@@ -40,18 +38,20 @@ Beginning with Windows 10 version 1507 and Windows Server 2016, if a domain-join
 
 ## Kerberos clients allow IPv4 and IPv6 address hostnames in Service Principal Names (SPNs)
 
-Beginning with Windows 10 version 1507 and Windows Server 2016, Kerberos clients can be configured to support IPv4 and IPv6 hostnames in SPNs. 
+Beginning with Windows 10 version 1507 and Windows Server 2016, Kerberos clients can be configured to support IPv4 and IPv6 hostnames in SPNs.
 
 Registry path:
 
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Parameters
 
-To configure support for IP address hostnames in SPNs, create a TryIPSPN entry. 
-This entry does not exist in the registry by default. 
-After you have created the entry, change the DWORD value to 1. 
+To configure support for IP address hostnames in SPNs, create a TryIPSPN entry.
+This entry does not exist in the registry by default.
+After you have created the entry, change the DWORD value to 1.
 If not configured, IP address hostnames are not attempted.
 
-If the SPN is registered in Active Directory, then authentication succeeds with Kerberos. 
+If the SPN is registered in Active Directory, then authentication succeeds with Kerberos.
+
+For more information check out the document [Configuring Kerberos for IP Addresses](configuring-kerberos-over-ip.md).
 
 ## KDC support for Key Trust account mapping
 

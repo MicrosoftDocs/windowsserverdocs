@@ -1,19 +1,18 @@
 ---
+description: "Learn more about: Create a shielded VM using PowerShell"
 title: Create a shielded VM using PowerShell
-ms.custom: na
-ms.prod: windows-server-threshold
 ms.topic: article
 manager: dongill
 author: rpsqrd
-ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
+ms.author: ryanpu
+ms.date: 09/25/2019
 ---
 
 # Create a shielded VM using PowerShell
 
 >Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
-In production, you would typically use a fabric manager (e.g. VMM) to deploy shielded VMs. 
+In production, you would typically use a fabric manager (e.g. VMM) to deploy shielded VMs.
 However, the steps illustrated below allow you to deploy and validate the entire scenario without a fabric manager.
 
 In a nutshell, you will create a template disk, a shielding data file, an unattended installation answer file and other security artifacts on any machine, then copy these files to a guarded host and provision the shielded VM.
@@ -52,22 +51,26 @@ In addition, you will need an unattended installation answer file (unattend.xml 
 Run the following cmdlets on a machine with the Remote Server Administration Tools for Shielded VMs installed.
 If you are creating a PDK for a Linux VM, you must do this on a server running Windows Server, version 1709 or later.
 
- 
+
 ```powershell
 # Create owner certificate, don't lose this!
 # The certificate is stored at Cert:\LocalMachine\Shielded VM Local Certificates
 $Owner = New-HgsGuardian –Name 'Owner' –GenerateCertificates
- 
+
 # Import the HGS guardian for each fabric you want to run your shielded VM
 $Guardian = Import-HgsGuardian -Path C:\HGSGuardian.xml -Name 'TestFabric'
- 
+
 # Create the PDK file
 # The "Policy" parameter describes whether the admin can see the VM's console or not
 # Use "EncryptionSupported" if you are testing out shielded VMs and want to debug any issues during the specialization process
 New-ShieldingDataFile -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -Owner $Owner –Guardian $guardian –VolumeIDQualifier (New-VolumeIDQualifier -VolumeSignatureCatalogFilePath 'C:\temp\MyTemplateDiskCatalog.vsc' -VersionRule Equals) -WindowsUnattendFile 'C:\unattend.xml' -Policy Shielded
 ```
-    
+
 ## Provision shielded VM on a guarded host
+On a host that is running Windows Server 2016, you can monitor for the VM to shut down to signal completion of the provisioning task, and consult the Hyper-V event logs for error information if the provisioning is unsuccessful.
+
+You can also create a new template disk every time before creating new Shielded VM.
+
 Copy the template disk file (ServerOS.vhdx) and the PDK file (contoso.pdk) to the guarded host to get ready for deployment.
 
 On the guarded host, install the Guarded Fabric Tools PowerShell module, which contains the New-ShieldedVM cmdlet to simplify the provisioning process. If your guarded host has access to the Internet, run the following command:
@@ -86,6 +89,19 @@ Once the module is installed, you're ready to provision your shielded VM.
 
 ```powershell
 New-ShieldedVM -Name 'MyShieldedVM' -TemplateDiskPath 'C:\temp\MyTemplateDisk.vhdx' -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -Wait
+```
+
+If your shielding data answer file includes specialization values, you can provide the replacement values to New-ShieldedVM. In this example, the answer file is configured with placeholder values for a static IPv4 address.
+
+```powershell
+$specializationValues = @{
+    "@IP4Addr-1@" = "192.168.1.10/24"
+    "@MacAddr-1@" = "Ethernet"
+    "@Prefix-1-1@" = "24"
+    "@NextHop-1-1@" = "192.168.1.254"
+}
+New-ShieldedVM -Name 'MyStaticIPVM' -TemplateDiskPath 'C:\temp\MyTemplateDisk.vhdx' -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -SpecializationValues $specializationValues -Wait
+
 ```
 
 If your template disk contains a Linux-based OS, include the `-Linux` flag when running the command:
@@ -111,5 +127,5 @@ The shielded VM can now be live migrated within the cluster.
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Deploy a shielded using VMM](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)
+> [!div class="nextstepaction"]
+> [Deploy a shielded using VMM](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)

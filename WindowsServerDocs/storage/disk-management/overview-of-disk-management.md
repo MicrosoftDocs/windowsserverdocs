@@ -1,17 +1,15 @@
 ---
 title: Overview of Disk Management
 description: Disk Management is a system utility in Windows that enables you to perform advanced storage tasks, such as initializing a new drive, extending volumes, shrinking partitions, and changing drive letters.
-ms.date: 4/2/2018
-ms.prod: windows-server-threshold 
-ms.technology: storage 
-ms.topic: article 
-author: JasonGerend 
-manager: brianlic 
-ms.author: jgerend 
+ms.date: 06/07/2019
+ms.topic: article
+author: JasonGerend
+manager: brianlic
+ms.author: jgerend
 ---
 # Overview of Disk Management
 
-> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows 7, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Disk Management is a system utility in Windows that enables you to perform advanced storage tasks. Here are some of the things Disk Management is good for:
 
@@ -43,7 +41,7 @@ In case you're curious (we've read your comments!), Windows typically includes t
 
 Although Disk Management might show the EFI system partition and the recovery partition as 100% free, it's lying. These partitions are generally pretty full with really important files your PC needs to operate properly. It's best to just leave them alone to do their jobs starting your PC and helping you recover from problems.
 
-## See also
+## Additional References
 
 - [Manage disks](manage-disks.md)
 - [Manage basic volumes](manage-basic-volumes.md)

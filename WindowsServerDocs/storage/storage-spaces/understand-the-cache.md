@@ -1,13 +1,12 @@
 ---
+description: "Learn more about: Understanding the cache in Storage Spaces Direct"
 title: Understanding the cache in Storage Spaces Direct
 ms.assetid: 69b1adc0-ee64-4eed-9732-0fb216777992
-ms.prod: windows-server-threshold
 ms.author: cosdar
-ms.manager: dongill
-ms.technology: storage-spaces
+manager: dongill
 ms.topic: article
 author: cosmosdarwin
-ms.date: 07/18/2017
+ms.date: 09/21/2020
 ms.localizationpriority: medium
 ---
 # Understanding the cache in Storage Spaces Direct
@@ -24,48 +23,28 @@ The following video goes into details on how caching works for Storage Spaces Di
 
 ## Drive types and deployment options
 
-Storage Spaces Direct currently works with three types of storage devices:
+Storage Spaces Direct currently works with four types of storage devices:
 
-<table>
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/NVMe-100px.png">
-		</td>
-		<td style="padding: 10px; border: 0;" valign="middle">
-			NVMe (Non-Volatile Memory Express)
-		</td>
-	</tr>
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/SSD-100px.png">
-		</td>
-		<td style="padding: 10px; border: 0;" valign="middle">
-			SATA/SAS SSD (Solid-State Drive)
-		</td>
-	</tr>
-	<tr style="border: 0;">
-		<td style="padding: 10px; border: 0; width:70px">
-			<img src="media/understand-the-cache/HDD-100px.png">
-		</td>
-		<td style="padding: 10px; border: 0;" valign="middle">
-			HDD (Hard Disk Drive)
-		</td>
-	</tr>
-</table>
+| Type of drive | Description |
+|----------------------|--------------------------|
+|![PMem](media/understand-the-cache/pmem-100px.png)|**PMem** refers to persistent memory, a new type of low latency, high performance storage.|
+|![NVMe](media/understand-the-cache/NVMe-100px.png)|**NVMe** (Non-Volatile Memory Express) refers to solid-state drives that sit directly on the PCIe bus. Common form factors are 2.5" U.2, PCIe Add-In-Card (AIC), and M.2. NVMe offers higher IOPS and IO throughput with lower latency than any other type of drive we support today except PMem.|
+|![SSD](media/understand-the-cache/SSD-100px.png)|**SSD** refers to solid-state drives, which connect via conventional SATA or SAS.|
+|![HDD](media/understand-the-cache/HDD-100px.png)|**HDD** refers to rotational, magnetic hard disk drives, which offer vast storage capacity.|
 
-These can be combined in six ways, which we group into two categories: "all-flash" and "hybrid".
+These can be combined in various ways, which we group into two categories: "all-flash" and "hybrid".
 
 ### All-flash deployment possibilities
 
 All-flash deployments aim to maximize storage performance and do not include rotational hard disk drives (HDD).
 
-![All-Flash-Deployment-Possibilities](media/understand-the-cache/All-Flash-Deployment-Possibilities.png)
+![Diagram showing the all-flash deployment possibilities.](media/understand-the-cache/All-Flash-Deployment-Possibilities.png)
 
 ### Hybrid deployment possibilities
 
 Hybrid deployments aim to balance performance and capacity or to maximize capacity and do include rotational hard disk drives (HDD).
 
-![Hybrid-Deployment-Possibilities](media/understand-the-cache/Hybrid-Deployment-Possibilities.png)
+![Diagram showing hybrid deployment possibilities.](media/understand-the-cache/Hybrid-Deployment-Possibilities.png)
 
 ## Cache drives are selected automatically
 
@@ -73,7 +52,7 @@ In deployments with multiple types of drives, Storage Spaces Direct automaticall
 
 Which type is "fastest" is determined according to the following hierarchy.
 
-![Drive-Type-Hierarchy](media/understand-the-cache/Drive-Type-Hierarchy.png)
+![Diagram showing the hierarchy of the speed of the different drives with the hard-drive being the slowest, and teh NVMe the fastest.](media/understand-the-cache/Drive-Type-Hierarchy.png)
 
 For example, if you have NVMe and SSDs, the NVMe will cache for the SSDs.
 
@@ -82,7 +61,7 @@ If you have SSDs and HDDs, the SSDs will cache for the HDDs.
    >[!NOTE]
    > Cache drives do not contribute usable storage capacity. All data stored in the cache is also stored elsewhere, or will be once it de-stages. This means the total raw storage capacity of your deployment is the sum of your capacity drives only.
 
-When all drives are of the same type, no cache is configured automatically. You have the option to manually configure higher-endurance drives to cache for lower-endurance drives of the same type – see the [Manual configuration](#manual) section to learn how.
+When all drives are of the same type, no cache is configured automatically. You have the option to manually configure higher-endurance drives to cache for lower-endurance drives of the same type – see the [Manual configuration](#manual-configuration) section to learn how.
 
    >[!TIP]
    > In all-NVMe or all-SSD deployments, especially at very small scale, having no drives "spent" on cache can improve storage efficiency meaningfully.
@@ -91,7 +70,7 @@ When all drives are of the same type, no cache is configured automatically. You 
 
 The behavior of the cache is determined automatically based on the type(s) of drives that are being cached for. When caching for solid-state drives (such as NVMe caching for SSDs), only writes are cached. When caching for hard disk drives (such as SSDs caching for HDDs), both reads and writes are cached.
 
-![Cache-Read-Write-Behavior](media/understand-the-cache/Cache-Read-Write-Behavior.png)
+![Diagram showing the cache, read, and write behavior of all-flash deployment versus a hybrid deployment.](media/understand-the-cache/Cache-Read-Write-Behavior.png)
 
 ### Write-only caching for all-flash deployments
 
@@ -109,19 +88,19 @@ Storage Spaces Direct implements an algorithm that de-randomizes writes before d
 
 ### Caching in deployments with drives of all three types
 
-When drives of all three types are present, the NVMe drives provides caching for both the SSDs and the HDDs. The behavior is as described above: only writes are cached for the SSDs, and both reads and writes are cached for the HDDs. The burden of caching for the HDDs is distributed evenly among the cache drives. 
+When drives of all three types are present, the NVMe drives provides caching for both the SSDs and the HDDs. The behavior is as described above: only writes are cached for the SSDs, and both reads and writes are cached for the HDDs. The burden of caching for the HDDs is distributed evenly among the cache drives.
 
 ## Summary
 
 This table summarizes which drives are used for caching, which are used for capacity, and what the caching behavior is for each deployment possibility.
 
-| Deployment       | Cache drives                        | Capacity drives | Cache behavior (default)                  |
-|------------------|-------------------------------------|-----------------|-------------------------------------------|
-| All NVMe         | None (Optional: configure manually) | NVMe            | Write-only (if configured)                |
-| All SSD          | None (Optional: configure manually) | SSD             | Write-only (if configured)                |
-| NVMe + SSD       | NVMe                                | SSD             | Write-only                                |
-| NVMe + HDD       | NVMe                                | HDD             | Read + Write                              |
-| SSD + HDD        | SSD                                 | HDD             | Read + Write                              |
+| Deployment     | Cache drives                        | Capacity drives | Cache behavior (default)  |
+| -------------- | ----------------------------------- | --------------- | ------------------------- |
+| All NVMe         | None (Optional: configure manually) | NVMe            | Write-only (if configured)  |
+| All SSD          | None (Optional: configure manually) | SSD             | Write-only (if configured)  |
+| NVMe + SSD       | NVMe                                | SSD             | Write-only                  |
+| NVMe + HDD       | NVMe                                | HDD             | Read + Write                |
+| SSD + HDD        | SSD                                 | HDD             | Read + Write                |
 | NVMe + SSD + HDD | NVMe                                | SSD + HDD       | Read + Write for HDD, Write-only for SSD  |
 
 ## Server-side architecture
@@ -132,7 +111,7 @@ Because the cache is below the rest of the Windows software-defined storage stac
 
 Given that resiliency in Storage Spaces Direct is at least server-level (meaning data copies are always written to different servers; at most one copy per server), data in the cache benefits from the same resiliency as data not in the cache.
 
-![Cache-Server-Side-Architecture](media/understand-the-cache/Cache-Server-Side-Architecture.png)
+![Diagram showing the cache server-side architecture.](media/understand-the-cache/Cache-Server-Side-Architecture.png)
 
 For example, when using three-way mirroring, three copies of any data are written to different servers, where they land in cache. Regardless of whether they are later de-staged or not, three copies will always exist.
 
@@ -140,7 +119,7 @@ For example, when using three-way mirroring, three copies of any data are writte
 
 The binding between cache and capacity drives can have any ratio, from 1:1 up to 1:12 and beyond. It adjusts dynamically whenever drives are added or removed, such as when scaling up or after failures. This means you can add cache drives or capacity drives independently, whenever you want.
 
-![Dynamic-Binding](media/understand-the-cache/Dynamic-Binding.gif)
+![Animation showing how drive bindings are dynamic.](media/understand-the-cache/Dynamic-Binding.gif)
 
 We recommend making the number of capacity drives a multiple of the number of cache drives, for symmetry. For example, if you have 4 cache drives, you will experience more even performance with 8 capacity drives (1:2 ratio) than with 7 or 9.
 
@@ -152,7 +131,7 @@ For a brief period, the capacity drives which were bound to the lost cache drive
 
 This scenario is why at minimum two cache drives are required per server to preserve performance.
 
-![Handling-Failure](media/understand-the-cache/Handling-Failure.gif)
+![Animation showing why, at a minimum, two cache drives are required per server to preserve performance.](media/understand-the-cache/Handling-Failure.gif)
 
 You can then replace the cache drive just like any other drive replacement.
 
@@ -165,11 +144,13 @@ There are several other unrelated caches in the Windows software-defined storage
 
 With Storage Spaces Direct, the Storage Spaces write-back cache should not be modified from its default behavior. For example, parameters such as **-WriteCacheSize** on the **New-Volume** cmdlet should not be used.
 
-You may choose to use the CSV cache, or not – it's up to you. It is off by default in Storage Spaces Direct, but it does not conflict with the new cache described in this topic in any way. In certain scenarios it can provide valuable performance gains. For more information, see [How to Enable CSV Cache](https://blogs.msdn.microsoft.com/clustering/2013/07/19/how-to-enable-csv-cache/).
+You may choose to use the CSV cache, or not – it's up to you. It does not conflict with the cache described in this topic in any way. In certain scenarios it can provide valuable performance gains. For more information, see [How to Enable CSV Cache](../../failover-clustering/failover-cluster-csvs.md#enable-the-csv-cache-for-read-intensive-workloads-optional).
 
-## <a name="manual"></a> Manual configuration
+## Manual configuration
 
-For most deployments, manual configuration is not required. In case you do need it, read on!
+For most deployments, manual configuration is not required. In case you do need it, see the following sections.
+
+If you need to make changes to the cache device model after setup, edit the Health Service's Support Components Document, as described in [Health Service overview](../../failover-clustering/health-service-overview.md#supported-components-document).
 
 ### Specify cache drive model
 
@@ -182,15 +163,25 @@ To use higher-endurance drives to cache for lower-endurance drives of the same t
 
 ####  Example
 
-```
-PS C:\> Get-PhysicalDisk | Group Model -NoElement
+First, get a list of physical disks:
 
+```PowerShell
+Get-PhysicalDisk | Group Model -NoElement
+```
+
+Here's some example output:
+
+```
 Count Name
 ----- ----
     8 FABRIKAM NVME-1710
    16 CONTOSO NVME-1520
+```
 
-PS C:\> Enable-ClusterS2D -CacheDeviceModel "FABRIKAM NVME-1710"
+Then enter the following command, specifying the cache device model:
+
+```PowerShell
+Enable-ClusterS2D -CacheDeviceModel "FABRIKAM NVME-1710"
 ```
 
 You can verify that the drives you intended are being used for caching by running **Get-PhysicalDisk** in PowerShell and verifying that their **Usage** property says **"Journal"**.
@@ -199,32 +190,44 @@ You can verify that the drives you intended are being used for caching by runnin
 
 Manual configuration enables the following deployment possibilities:
 
-![Exotic-Deployment-Possibilities](media/understand-the-cache/Exotic-Deployment-Possibilities.png)
+![Diagram that shows manual deployment possibilities.](media/understand-the-cache/Exotic-Deployment-Possibilities.png)
 
 ### Set cache behavior
 
 It is possible to override the default behavior of the cache. For example, you can set it to cache reads even in an all-flash deployment. We discourage modifying the behavior unless you are certain the default does not suit your workload.
 
-To override the behavior, use **Set-ClusterS2D** cmdlet and its **-CacheModeSSD** and **-CacheModeHDD** parameters. The **CacheModeSSD** parameter sets the cache behavior when caching for solid-state drives. The **CacheModeHDD** parameter sets cache behavior when caching for hard disk drives. This can be done at any time after Storage Spaces Direct is enabled.
+To override the behavior, use **Set-ClusterStorageSpacesDirect** cmdlet and its **-CacheModeSSD** and **-CacheModeHDD** parameters. The **CacheModeSSD** parameter sets the cache behavior when caching for solid-state drives. The **CacheModeHDD** parameter sets cache behavior when caching for hard disk drives. This can be done at any time after Storage Spaces Direct is enabled.
 
-You can use **Get-ClusterS2D** to verify the behavior is set.
+You can use **Get-ClusterStorageSpacesDirect** to verify the behavior is set.
 
 #### Example
 
-```
-PS C:\> Get-ClusterS2D
+First, get the Storage Spaces Direct settings:
 
+```PowerShell
+Get-ClusterStorageSpacesDirect
+```
+
+Here's some example output:
+
+```
 CacheModeHDD : ReadWrite
 CacheModeSSD : WriteOnly
-...
+```
 
-PS C:\> Set-ClusterS2D -CacheModeSSD ReadWrite
+Then, do the following:
 
-PS C:\> Get-ClusterS2D
+```PowerShell
+Set-ClusterStorageSpacesDirect -CacheModeSSD ReadWrite
 
+Get-ClusterS2D
+```
+
+Here's some example output:
+
+```
 CacheModeHDD : ReadWrite
 CacheModeSSD : ReadWrite
-...
 ```
 
 ## Sizing the cache
@@ -241,7 +244,7 @@ For example, 2 cache drives bound to 4 capacity drives results in 4 "Hybrid Disk
 
 There is no universal rule, but if too many reads are missing the cache, it may be undersized and you should consider adding cache drives to expand your cache. You can add cache drives or capacity drives independently whenever you want.
 
-## See also
+## Additional References
 
 - [Choosing drives and resiliency types](choosing-drives.md)
 - [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)

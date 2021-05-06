@@ -1,65 +1,77 @@
 ---
 title: rem
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the rem command, which records comments in a script, batch, or config.sys file.
+ms.topic: reference
 ms.assetid: 1a45b585-a83c-4ff6-badd-ff40f34cec23
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # rem
 
-
-
-Records comments (remarks) in a batch file or CONFIG.SYS. If no comment is specified, **rem** adds vertical spacing.
-
-For examples of how to use this command, see [Examples](#BKMK_examples).
+Records comments in a script, batch, or config.sys file. If no comment is specified, **rem** adds vertical spacing.
 
 ## Syntax
 
 ```
-rem [<Comment>]
+rem [<comment>]
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|\<Comment>|Specifies a string of characters to include as a comment.|
-|/?|Displays help at the command prompt.|
+| Parameter | Description |
+|--|--|
+| `<comment>` | Specifies a string of characters to include as a comment. |
+| /? | Displays help at the command prompt. |
 
-## Remarks
+#### Remarks
 
--   The **rem** command does not display comments on the screen. You must use the **echo on** command in your batch or CONFIG.SYS file to display comments on the screen.
--   You cannot use a redirection character (**<** or **>**) or pipe (**|**) in a batch file comment.
--   Although you can use **rem** without a comment to add vertical spacing to a batch file, you can also use blank lines. Blank lines are ignored when a batch program is processed.
+- The **rem** command doesn't display comments on the screen. To display comments on the screen, you must include the **echo on** command in your file.
 
-## <a name="BKMK_examples"></a>Examples
+- You can't use a redirection character (`<` or `>`) or pipe (`|`) in a batch file comment.
 
-The following example shows a batch file that uses remarks for comments and for vertical spacing:
+- Although you can use **rem** without a comment to add vertical spacing to a batch file, you can also use blank lines. Blank lines are ignored when a batch program is processed.
+
+### Examples
+
+To add vertical spacing through batch file comments, type:
+
 ```
 @echo off
 rem  This batch program formats and checks new disks.
 rem  It is named Checknew.bat.
 rem
 rem echo Insert new disk in Drive B.
-pause 
-format b: /v chkdsk b: 
+pause
+format b: /v chkdsk b:
 ```
-To include an explanatory comment before the **prompt** command in your CONFIG.SYS file, add the following lines to CONFIG.SYS:
+
+To include an explanatory comment before the **prompt** command in a config.sys file, type:
+
 ```
 rem Set prompt to indicate current directory
 prompt $p$g
 ```
 
-#### Additional references
+To provide a comment about what a script does, type:
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+```
+rem The commands in this script set up 3 drives.
+rem The first drive is a primary partition and is
+rem assigned the letter D. The second and third drives
+rem are logical partitions, and are assigned letters
+rem E and F.
+create partition primary size=2048
+assign d:
+create partition extended
+create partition logical size=2048
+assign e:
+create partition logical
+assign f:
+```
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)

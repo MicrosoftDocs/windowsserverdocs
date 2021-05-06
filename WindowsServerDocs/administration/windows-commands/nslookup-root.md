@@ -1,34 +1,38 @@
 ---
 title: nslookup root
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the nslookup root command, which changes the default server to the server for the root of the Domain Name System (DNS) domain name space.
+ms.topic: reference
 ms.assetid: 9c29edc3-ec49-43f2-bc49-86bf0612d816
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
+
 # nslookup root
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-changes the default server to the server for the root of the Domain Name System (DNS) domain name space.
+Changes the default server to the server for the root of the Domain Name System (DNS) domain name space. Currently, the ns.nic.ddn.mil name server is used. You can change the name of the root server using the [nslookup set root](nslookup-set-root.md) command.
+
+> [!NOTE]
+> This command is the same as `lserver ns.nic.ddn.mil`.
+
 ## Syntax
+
 ```
-root 
+root
 ```
-## Parameters
-|Parameter|Description|
-|-------|--------|
-|{help &#124; ?}|Displays a short summary of **nslookup** subcommands.|
-## Remarks
--   Currently, the ns.nic.ddn.mil name server is used. This command is a synonym for lserver ns.nic.ddn.mil. You can change the name of the root server with the **set root** command.
-## additional references
-[Command-Line Syntax Key](command-line-syntax-key.md)
-[nslookup set root](nslookup-set-root.md)
+
+### Parameters
+
+| Parameter | Description |
+| --------- | ----------- |
+| /? | Displays help at the command prompt. |
+| /help | Displays help at the command prompt. |
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [nslookup set root](nslookup-set-root.md)

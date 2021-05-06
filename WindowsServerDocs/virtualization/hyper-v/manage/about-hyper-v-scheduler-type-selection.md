@@ -1,12 +1,10 @@
 ---
 title: About Hyper-V hypervisor scheduler type selection
-description: Provides information for Hyper-V host administrators on the use of Hyper-V's scheduler modes
-author: allenma
-ms.author: allenma
+description: Learn about important changes to Hyper-V's default and recommended use of hypervisor scheduler types.
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 08/14/2018
 ms.topic: article
-ms.prod: windows-server-hyper-v
-ms.technology: virtualization
 ms.localizationpriority: low
 ms.assetid: 5fe163d4-2595-43b0-ba2f-7fad6e4ae069
 ---
@@ -26,7 +24,7 @@ This document describes important changes to Hyper-V's default and recommended u
 
 ## Background
 
-Starting with Windows Server 2016, Hyper-V supports several methods of scheduling and managing virtual processors, referred to as hypervisor scheduler types.  A detailed description of all hypervisor scheduler types can be found in [Understanding and using Hyper-V hypervisor scheduler types](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/manage-hyper-v-scheduler-types).
+Starting with Windows Server 2016, Hyper-V supports several methods of scheduling and managing virtual processors, referred to as hypervisor scheduler types.  A detailed description of all hypervisor scheduler types can be found in [Understanding and using Hyper-V hypervisor scheduler types](./manage-hyper-v-scheduler-types.md).
 
 >[!NOTE]
 >New hypervisor scheduler types were first introduced with Windows Server 2016, and are not available in prior releases. All versions of Hyper-V prior to Windows Server 2016 support only the classic scheduler. Support for the core scheduler was only recently published.
@@ -72,7 +70,7 @@ These performance impacts can be minimized by following the deployment guidance 
 Deploying Hyper-V hosts with the maximum security posture requires use of the hypervisor core scheduler type. To ensure our customers are secure by default, Microsoft is changing the following default and recommended settings.
 
 >[!NOTE]
->While the hypervisor's internal support for the scheduler types was included in the initial release of Windows Server 2016, Windows Server 1709, and Windows Server 1803, updates are required in order to access the configuration control which allows selecting the hypervisor scheduler type.  Please refer to [Understanding and using Hyper-V hypervisor scheduler types](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/manage-hyper-v-scheduler-types) for details on these updates.
+>While the hypervisor's internal support for the scheduler types was included in the initial release of Windows Server 2016, Windows Server 1709, and Windows Server 1803, updates are required in order to access the configuration control which allows selecting the hypervisor scheduler type.  Please refer to [Understanding and using Hyper-V hypervisor scheduler types](./manage-hyper-v-scheduler-types.md) for details on these updates.
 
 ### Virtualization host changes
 
@@ -101,9 +99,9 @@ Deploying Hyper-V hosts with the maximum security posture requires use of the hy
 
 The guest virtual machine SMT configuration is set on a per-VM basis. The host administrator can inspect and configure a VM's SMT configuration to select from the following options:
 
-    1. Configure VMs to run as SMT-enabled, optionally inheriting the host SMT topology automatically
+1. Configure VMs to run as SMT-enabled, optionally inheriting the host SMT topology automatically
 
-    2. Configure VMs to run as non-SMT
+2. Configure VMs to run as non-SMT
 
 The SMT configuaration for a VM is displayed in the Summary panes in the Hyper-V Manager console.  Configuring a VM's SMT settings may be done by using the VM Settings or PowerShell.
 
@@ -117,11 +115,11 @@ Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore <0, 1, 2>
 
 Where:
 
-    0 = Inherit SMT topology from the host (this setting of HwThreadCountPerCore=0 is not supported on Windows Server 2016)
+- 0 = Inherit SMT topology from the host (this setting of HwThreadCountPerCore=0 is not supported on Windows Server 2016)
 
-    1 = Non-SMT
+- 1 = Non-SMT
 
-    Values > 1 = the desired number of SMT threads per core. May not exceed the number of physical SMT threads per core.
+- Values > 1 = the desired number of SMT threads per core. May not exceed the number of physical SMT threads per core.
 
 To read the SMT settings for a guest virtual machine, open a PowerShell window with sufficient permissions, and type:
 
@@ -133,7 +131,7 @@ Note that guest VMs configured with HwThreadCountPerCore = 0 indicates that SMT 
 
 ### Guest VMs may observe changes to CPU topology across VM mobility scenarios
 
-The OS and applications in a VM may see changes to both host and VM settings before and after VM lifecycle events such as live migration or save and restore operations. During an operation in which VM state is saved and restored, both the VM's HwThreadCountPerCore setting and the realized value (that is, the computed combination of the VM's setting and source host’s configuration) are migrated. The VM will continue running with these settings on the destination host. At the point the VM is shutdown and re-started, it’s possible that the realized value observed by the VM will change. This should be benign, as OS and application layer software should look for CPU topology information as part of their normal startup and initialization code flows. However, because these boot time initialization sequences are skipped during live migration or save/restore operations, VMs that undergo these state transitions could observe the originally computed realized value until they are shut down and re-started.  
+The OS and applications in a VM may see changes to both host and VM settings before and after VM lifecycle events such as live migration or save and restore operations. During an operation in which VM state is saved and restored, both the VM's HwThreadCountPerCore setting and the realized value (that is, the computed combination of the VM's setting and source host's configuration) are migrated. The VM will continue running with these settings on the destination host. At the point the VM is shutdown and re-started, it's possible that the realized value observed by the VM will change. This should be benign, as OS and application layer software should look for CPU topology information as part of their normal startup and initialization code flows. However, because these boot time initialization sequences are skipped during live migration or save/restore operations, VMs that undergo these state transitions could observe the originally computed realized value until they are shut down and re-started.
 
 ### Alerts regarding non-optimal VM configurations
 
@@ -158,11 +156,11 @@ The Microsoft hypervisor offers multiple enlightenments, or hints, which the OS 
 >[!NOTE]
 >Microsoft recommends that host administrators enable SMT for guest VMs to optimize workload performance.
 
-The details of this guest enlightenment are provided below, however the key takeaway for virtualization host administrators is that virtual machines should have HwThreadCountPerCore configured to match the host’s physical SMT configuration. This allows the hypervisor to report that there is no non-architectural core sharing. Therefore, any guest OS supporting optimizations that require the enlightenment may be enabled. On Windows Server 2019, create new VMs and leave the default value of HwThreadCountPerCore (0). Older VMs migrated from Windows Server 2016 hosts can be updated to the Windows Server 2019 configuration version. After doing so, Microsoft recommends setting HwThreadCountPerCore = 0.  On Windows Server 2016, Microsoft recommends setting HwThreadCountPerCore to match the host configuration (typically 2).
+The details of this guest enlightenment are provided below, however the key takeaway for virtualization host administrators is that virtual machines should have HwThreadCountPerCore configured to match the host's physical SMT configuration. This allows the hypervisor to report that there is no non-architectural core sharing. Therefore, any guest OS supporting optimizations that require the enlightenment may be enabled. On Windows Server 2019, create new VMs and leave the default value of HwThreadCountPerCore (0). Older VMs migrated from Windows Server 2016 hosts can be updated to the Windows Server 2019 configuration version. After doing so, Microsoft recommends setting HwThreadCountPerCore = 0.  On Windows Server 2016, Microsoft recommends setting HwThreadCountPerCore to match the host configuration (typically 2).
 
 ### NoNonArchitecturalCoreSharing enlightenment details
 
-Starting in Windows Server 2016, the hypervisor defines a new enlightenment to describe its handling of VP scheduling and placement to the guest OS. This enlightenment is defined in the [Hypervisor Top Level Functional Specification v5.0c](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/tlfs).
+Starting in Windows Server 2016, the hypervisor defines a new enlightenment to describe its handling of VP scheduling and placement to the guest OS. This enlightenment is defined in the [Hypervisor Top Level Functional Specification v5.0c](/virtualization/hyper-v-on-windows/reference/tlfs).
 
 Hypervisor synthetic CPUID leaf CPUID.0x40000004.EAX:18[NoNonArchitecturalCoreSharing = 1] indicates that a virtual processor will never share a physical core with another virtual processor, except for virtual processors that are reported as sibling SMT threads. For example, a guest VP will never run on an SMT thread alongside a root VP running simultaneously on a sibling SMT thread on the same processor core. This condition is only possible when running virtualized, and so represents a non-architectural SMT behavior that also has serious security implications. The guest OS can use NoNonArchitecturalCoreSharing = 1 as an indication that it is safe to enable optimizations, which may help it avoid the performance overhead of setting STIBP.
 

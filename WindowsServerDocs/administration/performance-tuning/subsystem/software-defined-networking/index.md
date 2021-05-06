@@ -1,10 +1,8 @@
 ---
-title: Performance Tuning Software Defined Networks  
+title: Performance Tuning Software Defined Networks
 description: Software Defined Network (SDN) performance tuning guidelines
-ms.prod: windows-server-threshold
-ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: grcusanz; AnPaul
+ms.author: grcusanz
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -25,11 +23,11 @@ To ensure virtual machine traffic is prioritized effectively and fairly, it is r
 
 ## Hyper-V Host Networking
 
-The guidance provided in the [Hyper-V network I/O performance](#netio) section of the    [Performance Tuning for Hyper-V Servers](../../role/remote-desktop/session-hosts.md) guide is applicable when SDN is used, however this section covers additional guidelines that must be followed to ensure the best performance when using SDN.
+The guidance provided in the Hyper-V network I/O performance section of the [Performance Tuning for Hyper-V Servers](../../role/remote-desktop/session-hosts.md) guide is applicable when SDN is used, however this section covers additional guidelines that must be followed to ensure the best performance when using SDN.
 
 ### Physical Network Adapter (NIC) Teaming
 
-For best performance and fail-over capabilities, it is recommended that you configure the physical network adapters to be teamed.  When using SDN you must create the team with Switch Embedded Teaming (SET).  
+For best performance and fail-over capabilities, it is recommended that you configure the physical network adapters to be teamed.  When using SDN you must create the team with Switch Embedded Teaming (SET).
 
 The optimal number of team members is two as virtualized traffic will be spread across both of the team members for both inbound and outbound directions.  You can have more than two team members; however inbound traffic will be spread over at most two of the adapters.  Outbound traffic will always be spread across all adapters if the default of dynamic load balancing remains configured on the virtual switch.
 
@@ -50,7 +48,7 @@ For best performance, if VXLAN is returned then you must make sure your physical
 
 Encapsulation results in extra bytes being added to each packet.  In order to avoid fragmentation of these packets, the physical network must be configured to use jumbo frames.  An MTU value of 9234 is the recommended size for either VXLAN or NVGRE and must be configured on the physical switch for the physical interfaces of the host ports (L2) and the router interfaces (L3) of the VLANs over which encapsulated packets will be sent.  This includes the Transit, HNV Provider and Management networks.
 
-MTU on the Hyper-V host is configured through the network adapter, and the Network Controller Host Agent running on the Hyper-V host will adjust for the encapsulation overhead automatically if supported by the network adapter driver.  
+MTU on the Hyper-V host is configured through the network adapter, and the Network Controller Host Agent running on the Hyper-V host will adjust for the encapsulation overhead automatically if supported by the network adapter driver.
 
 Once traffic egresses from the virtual network via a Gateway, the encapsulation is removed and the original MTU as sent from the VM is used.
 
@@ -68,4 +66,4 @@ You can find information on tuning HNV Gateways for use with SDN in the [HVN Gat
 
 ## Software Load Balancer (SLB)
 
-SLB Gateways can only be used with the Network Controller and SDN.  You can find more information on tuning SDN for use iwth SLB Gateways in the [Software Load Balancer Gateways](slb-gateway-performance.md) section.
+SLB Gateways can only be used with the Network Controller and SDN.  You can find more information on tuning SDN for use with SLB Gateways in the [Software Load Balancer Gateways](slb-gateway-performance.md) section.

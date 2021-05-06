@@ -1,15 +1,14 @@
 ---
-title: Install HGS in a new forest 
-ms.custom: na
-ms.prod: windows-server-threshold
+description: "Learn more about: Install HGS in a new forest"
+title: Install HGS in a new forest
 ms.topic: article
 manager: dongill
 author: rpsqrd
-ms.technology: security-guarded-fabric
+ms.author: ryanpu
 ms.date: 08/29/2018
 ---
 
-# Install HGS in a new forest 
+# Install HGS in a new forest
 
 >Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
@@ -17,11 +16,11 @@ ms.date: 08/29/2018
 
 Run the following commands in an elevated PowerShell session to add the HGS server role and install HGS.
 
-[!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)] 
+[!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)]
 
-## Install HGS 
+## Install HGS
 
-[!INCLUDE [Install HGS by default](../../../includes/install-hgs-default.md)] 
+[!INCLUDE [Install HGS by default](../../../includes/install-hgs-default.md)]
 
 ## Next steps
 
@@ -31,7 +30,7 @@ Run the following commands in an elevated PowerShell session to add the HGS serv
 
 ## Next step
 
->[!div class="nextstepaction"]
-[Initialize HGS](guarded-fabric-initialize-hgs.md)
+> [!div class="nextstepaction"]
+> [Initialize HGS](guarded-fabric-initialize-hgs.md)
 
 

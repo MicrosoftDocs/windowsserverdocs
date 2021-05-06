@@ -1,12 +1,6 @@
 ---
 title: Manage users in your RDS collection
 description: Learn how to manage users in Remote Desktop Services.
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2727e1ab-69b8-46f3-9f6d-2540324fe596
 author: christianmontoya
@@ -16,12 +10,12 @@ manager: scottman
 ---
 # Manage users in your RDS collection
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 As an admin, you can directly manage which users have access to specific collections. This way, you can create one collection with standard applications for information workers, but then create a separate collection with graphics-intensive modeling applications for engineers. There are two primary steps to managing user access in a Remote Desktop Services (RDS) deployment:
 
-1.	[Create users and groups in Active Directory](#create-your-users-and-groups-in-active-directory)
-2.	[Assign users and groups to collections](#assign-users-and-groups-to-collections)
+1.    [Create users and groups in Active Directory](#create-your-users-and-groups-in-active-directory)
+2.    [Assign users and groups to collections](#assign-users-and-groups-to-collections)
 
 
 ## Create your users and groups in Active Directory
@@ -72,7 +66,7 @@ You can use AD DS groups to grant access to a set of users that need to use the 
 Now that you've created the users and groups in Active Directory, you can add some granularity regarding who has access to the Remote Desktop collections in your deployment.
 
 1. Connect to the server running the Remote Desktop Connection Broker (RD Connection Broker) role, following the steps described earlier.
-2. Add the other Remote Desktop servers to the RD Connection Broker’s pool of managed servers:
+2. Add the other Remote Desktop servers to the RD Connection Broker's pool of managed servers:
    1. In Server Manager click **Manage > Add Servers**.
    2. Click **Find Now**.
    3. Click each server in your deployment that is running a Remote Desktop Services role, and then click **OK**.
@@ -80,7 +74,7 @@ Now that you've created the users and groups in Active Directory, you can add so
    1. In Server Manager click **Remote Desktop Services > Overview**, and then click a specific collection.
    2. Under **Properties**, click **Tasks > Edit properties**.
    3. Click **User groups**.
-   4. Click **Add** and enter the user or group that you want to have access to the collection. You can also remove users and groups from this window by selecting the user or group you want to remove, and then clicking **Remove**. 
-   
-   >[!NOTE] 
+   4. Click **Add** and enter the user or group that you want to have access to the collection. You can also remove users and groups from this window by selecting the user or group you want to remove, and then clicking **Remove**.
+
+   >[!NOTE]
    > The User groups window can never be empty. To narrow the scope of users who have access to the collection, you must first add specific users or groups before removing broader groups.

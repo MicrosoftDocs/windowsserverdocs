@@ -1,17 +1,11 @@
 ---
 title: wmic
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for wmic, which displays WMI information inside an interactive command shell.
+ms.topic: reference
 ms.assetid: 76397c72-d06f-4cea-88cf-c7603315a983
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -21,12 +15,12 @@ ms.date: 10/16/2017
 
 Displays WMI information inside an interactive command shell.
 
-For examples of how to use this command, see [Examples](#BKMK_examples).
+
 
 ## Syntax
 
 ```
-command </parameter>
+wmic </parameter>
 ```
 
 ## Sub-commands
@@ -40,15 +34,7 @@ The following sub-commands are available at all times:
 |context|Displays the current values of all global switches.|
 |[quit \| exit]|Exits the WMIC command shell.|
 
-## Parameters
-
-|Parameter|Description|
-|---------|-----------|
-|</parameter>|\<Concise description, starts with a verb.>|
-|</param2>|\<Another concise description, starts with a verb.>|
-
-
-## <a name="BKMK_examples"></a>Examples
+## Examples
 
 To display the current values of all global switches, type:
 ```
@@ -78,6 +64,6 @@ To change the language ID used by the command line to English (locale ID 409), t
 wmic /locale:ms_409
 ```
 
-#### Additional references
+## Additional References
 
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

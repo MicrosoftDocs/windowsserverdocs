@@ -1,13 +1,11 @@
 ---
 title: Guides
 description: Guides Windows Admin Center SDK (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/17/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
 ---
 
 # Guides

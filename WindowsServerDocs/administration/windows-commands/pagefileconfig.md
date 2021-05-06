@@ -1,23 +1,23 @@
 ---
 title: pagefileconfig
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the pagefileconfig command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
+ms.topic: reference
 ms.assetid: a18c98ce-a0dc-41cc-8d44-dc7eee0131e8
-
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
+
 # pagefileconfig
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2003, Windows Server 2003 R2, Windows Server 2003 with SP1, Windows Server 2003 with SP2
 
-pagefileconfig is deprecated, and is not guaranteed to be supported in future releases of Windows.  
-This tool is included in Windows Server 2003. For more information see [pagefileconfig](https://technet.microsoft.com/library/cc772827.aspx).  
+>[!IMPORTANT]
+> This command has been deprecated.
+
+Enables an administrator to display and configure a system's paging file Virtual Memory settings. For descriptions and usage information, see [pagefileconfig](/previous-versions/orphan-topics/ws.10/cc772827(v=ws.10)).
+
+## Additional References
+
+- [Command-Line Syntax Key](command-line-syntax-key.md)

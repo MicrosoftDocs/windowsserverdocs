@@ -2,17 +2,11 @@
 title: DirectAccess Test Lab Guides
 description: This topic provides links to the test lab guides for DirectAccess in Windows Server 2016.
 manager: brianlic
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: 
-  - networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 931a75ac-80f8-434c-8789-1dffb308ee13
-ms.author: pashort
-author: shortpatti
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # DirectAccess Test Lab Guides
 

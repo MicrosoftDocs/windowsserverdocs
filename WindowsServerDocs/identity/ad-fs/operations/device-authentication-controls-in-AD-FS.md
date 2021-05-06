@@ -6,8 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 11/09/2017
 ms.topic: article
-ms.prod: windows-server-threshold
-ms.technology: identity-adfs
 ---
 
 # Device authentication controls in AD FS
@@ -32,13 +30,13 @@ The only type of device authentication supported in 2012 R2 was clientTLS.  In A
 - PKeyAuth
 - PRT
 
-To control the new behavior, the `DeviceAuthenticationEnabled` property is used in combination with a new property called `DeviceAuthenticationMethod`.  
+To control the new behavior, the `DeviceAuthenticationEnabled` property is used in combination with a new property called `DeviceAuthenticationMethod`.
 
 The device authentication method determines the type of device authentication that will be done: PRT, PKeyAuth, clientTLS, or some combination.
 It has the following values:
  - SignedToken: PRT only
  - PKeyAuth: PRT + PKeyAuth
- - ClientTLS: PRT + clientTLS 
+ - ClientTLS: PRT + clientTLS
  - All: All of the above
 
 As you can see, PRT is part of all device authentication methods, making it in effect the default method that is always enabled when `DeviceAuthenticationEnabled` is set to `$true`.
@@ -49,6 +47,14 @@ To configure the method(s), use the DeviceAuthenticationEnabled cmdlet as above,
 ``` powershell
 PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
 ```
+
+>[!NOTE]
+> In ADFS 2019, `DeviceAuthenticationMethod` can be used with the `Set-AdfsRelyingPartyTrust` command.
+
+``` powershell
+PS:\>Set-AdfsRelyingPartyTrust -DeviceAuthenticationMethod ClientTLS
+```
+
 >[!NOTE]
 > Enabling device authentication (setting `DeviceAuthenticationEnabled` to `$true`) means the `DeviceAuthenticationMethod` is implicitly set to `SignedToken`, which equates to **PRT**.
 
@@ -56,8 +62,8 @@ PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
 ``` powershell
 PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationMethod All
 ```
->[!NOTE]
->The default device authentication method is `SignedToken`.  Other values are **PKeyAuth,****ClientTLS,** and **All**.
+> [!NOTE]
+> The default device authentication method is `SignedToken`.  Other values are **PKeyAuth,**<strong>ClientTLS,</strong> and **All**.
 
 The meanings of the `DeviceAuthenticationMethod` values have changed slightly since AD FS 2016 was released.  See the table below for the meaning of each value, depending on the update level:
 
@@ -73,4 +79,4 @@ The meanings of the `DeviceAuthenticationMethod` values have changed slightly si
 ||All|PRT + PkeyAuth + clientTLS|
 
 ## See Also
-[AD FS Operations](../../ad-fs/AD-FS-2016-Operations.md)
+[AD FS Operations](../ad-fs-operations.md)

@@ -1,22 +1,39 @@
 ---
 title: Extending volumes in Storage Spaces Direct
-ms.assetid: fa48f8f7-44e7-4a0b-b32d-d127eff470f0
-ms.prod: windows-server-threshold
-ms.author: cosmosdarwin
-ms.manager: eldenc
-ms.technology: storage-spaces
-ms.topic: article
+description: How to resize volumes in Storage Spaces Direct using Windows Admin Center and PowerShell.
+ms.reviewer: cosmosdarwin
 author: cosmosdarwin
-ms.date: 01/23/2017
-ms.localizationpriority: medium
+ms.author: cosdar
+manager: eldenc
+ms.date: 03/10/2020
+ms.topic: article
 ---
 
 # Extending volumes in Storage Spaces Direct
 > Applies to: Windows Server 2019, Windows Server 2016
 
-This topic provides instructions for resizing volumes in [Storage Spaces Direct](storage-spaces-direct-overview.md).
+This topic provides instructions for resizing volumes on a [Storage Spaces Direct](storage-spaces-direct-overview.md) cluster by using Windows Admin Center.
 
-## Prerequisites
+> [!WARNING]
+> **Not supported: resizing the underlying storage used by Storage Spaces Direct.** If you are running Storage Spaces Direct in a virtualized storage environment, including in Azure, resizing or changing the characteristics of the storage devices used by the virtual machines isn't supported and will cause data to become inaccessible. Instead, follow the instructions in the [Add servers or drives](add-nodes.md) section to add additional capacity before extending volumes.
+
+Watch a quick video on how to resize a volume.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/hqyBzipBoTI]
+
+## Extending volumes using Windows Admin Center
+
+1. In Windows Admin Center, connect to a Storage Spaces Direct cluster, and then select **Volumes** from the **Tools** pane.
+2. On the Volumes page, select the **Inventory** tab, and then select the volume that you want to resize.
+
+    On the volume detail page, the storage capacity for the volume is indicated. You can also open the volumes detail page directly from the Dashboard. On the Dashboard, in the Alerts pane, select the alert, which notifies you if a volume is running low on storage capacity, and then select **Go To Volume**.
+
+4. At the top of the volumes detail page, select **Resize**.
+5. Enter a new larger size, and then select **Resize**.
+
+    On the volumes detail page, the larger storage capacity for the volume is indicated, and the alert on the Dashboard is cleared.
+
+## Extending volumes using PowerShell
 
 ### Capacity in the storage pool
 
@@ -26,7 +43,7 @@ Before you resize a volume, make sure you have enough capacity in the storage po
 
 In Storage Spaces Direct, every volume is comprised of several stacked objects: the cluster shared volume (CSV), which is a volume; the partition; the disk, which is a virtual disk; and one or more storage tiers (if applicable). To resize a volume, you will need to resize several of these objects.
 
-![volumes-in-smapi](media/resize-volumes/volumes-in-smapi.png)
+![Stacked objects that might need to be resized](media/resize-volumes/volumes-in-smapi.png)
 
 To familiarize yourself with them, try running **Get-** with the corresponding noun in PowerShell.
 
@@ -41,49 +58,49 @@ To follow associations between objects in the stack, pipe one **Get-** cmdlet in
 For example, here's how to get from a virtual disk up to its volume:
 
 ```PowerShell
-Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume 
+Get-VirtualDisk [friendly_name] | Get-Disk | Get-Partition | Get-Volume
 ```
 
-## Step 1 – Resize the virtual disk
+### Step 1 – Resize the virtual disk
 
 The virtual disk may use storage tiers, or not, depending on how it was created.
 
 To check, run the following cmdlet:
 
 ```PowerShell
-Get-VirtualDisk <FriendlyName> | Get-StorageTier 
+Get-VirtualDisk [friendly_name] | Get-StorageTier
 ```
 
 If the cmdlet returns nothing, the virtual disk doesn't use storage tiers.
 
-### No storage tiers
+#### No storage tiers
 
 If the virtual disk has no storage tiers, you can resize it directly using the **Resize-VirtualDisk** cmdlet.
 
 Provide the new size in the **-Size** parameter.
 
 ```PowerShell
-Get-VirtualDisk <FriendlyName> | Resize-VirtualDisk -Size <Size>
+Get-VirtualDisk [friendly_name] | Resize-VirtualDisk -Size [size]
 ```
 
 When you resize the **VirtualDisk**, the **Disk** follows automatically and is resized too.
 
-![Resize-VirtualDisk](media/resize-volumes/Resize-VirtualDisk.gif)
+![Animation showing the automatic Disk resizing](media/resize-volumes/Resize-VirtualDisk.gif)
 
-### With storage tiers
+#### With storage tiers
 
 If the virtual disk uses storage tiers, you can resize each tier separately using the **Resize-StorageTier** cmdlet.
 
 Get the names of the storage tiers by following the associations from the virtual disk.
 
 ```PowerShell
-Get-VirtualDisk <FriendlyName> | Get-StorageTier | Select FriendlyName
+Get-VirtualDisk [friendly_name] | Get-StorageTier | Select FriendlyName
 ```
 
 Then, for each tier, provide the new size in the **-Size** parameter.
 
 ```PowerShell
-Get-StorageTier <FriendlyName> | Resize-StorageTier -Size <Size>
+Get-StorageTier [friendly_name] | Resize-StorageTier -Size [size]
 ```
 
 > [!TIP]
@@ -91,9 +108,9 @@ Get-StorageTier <FriendlyName> | Resize-StorageTier -Size <Size>
 
 When you resize the **StorageTier**(s), the **VirtualDisk** and **Disk** follow automatically and are resized too.
 
-![Resize-StorageTier](media/resize-volumes/Resize-StorageTier.gif)
+![Animation showing the automatic VirtualDisk and Disk resizing](media/resize-volumes/Resize-StorageTier.gif)
 
-## Step 2 – Resize the partition
+### Step 2 – Resize the partition
 
 Next, resize the partition using the **Resize-Partition** cmdlet. The virtual disk is expected to have two partitions: the first is Reserved and should not be modified; the one you need to resize has **PartitionNumber = 2** and **Type = Basic**.
 
@@ -101,26 +118,25 @@ Provide the new size in the **-Size** parameter. We recommend using the maximum 
 
 ```PowerShell
 # Choose virtual disk
-$VirtualDisk = Get-VirtualDisk <FriendlyName>
+$VirtualDisk = Get-VirtualDisk [friendly_name]
 
 # Get its partition
 $Partition = $VirtualDisk | Get-Disk | Get-Partition | Where PartitionNumber -Eq 2
 
-# Resize to its maximum supported size 
+# Resize to its maximum supported size
 $Partition | Resize-Partition -Size ($Partition | Get-PartitionSupportedSize).SizeMax
 ```
 
 When you resize the **Partition**, the **Volume** and **ClusterSharedVolume** follow automatically and are resized too.
 
-![Resize-Partition](media/resize-volumes/Resize-Partition.gif)
-
-That's it!
+![Animation showing the automatic Volume and ClusterSharedVolume resizing](media/resize-volumes/Resize-Partition.gif)
 
 > [!TIP]
 > You can verify the volume has the new size by running **Get-Volume**.
 
-## See also
+## Additional References
 
 - [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
 - [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 - [Creating volumes in Storage Spaces Direct](create-volumes.md)
+- [Deleting volumes in Storage Spaces Direct](delete-volumes.md)

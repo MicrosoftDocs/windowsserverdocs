@@ -1,10 +1,9 @@
 ---
+description: "Learn more about: Troubleshooting drive firmware updates"
 ms.assetid: 13210461-1e92-48a1-91a2-c251957ba256
-title: Troubleshooting drive firmware updates	
-ms.prod: windows-server-threshold
+title: Troubleshooting drive firmware updates
 ms.author: toklima
-ms.manager: masriniv
-ms.technology: storage
+manager: masriniv
 ms.topic: article
 author: toklima
 ms.date: 04/18/2017
@@ -91,14 +90,14 @@ At line:1 char:47
 + CategoryInfo          : NotSpecified: (:) [Update-StorageFirmware], CimException
 + FullyQualifiedErrorId : StorageWMI 4,Microsoft.Management.Infrastructure.CimCmdlets.InvokeCimMethodCommand,Update-StorageFirmware
 ```
-	
+
 PowerShell will throw an error and has received the information that the function called (i.e. Kernel API) was incorrect. This could mean that either the API was not implemented by the 3rd party SAS mini-port driver (true in this case), or that the API was failed for another reason, such as a misalignment of download segments.
 
 ```
 EventData
 DeviceGUID	{132EDB55-6BAC-A3A0-C2D5-203C7551D700}
 DeviceNumber	1
-Vendor	ATA 
+Vendor	ATA
 Model	TOSHIBA THNSNJ12
 FirmwareVersion	6101
 SerialNumber	44GS103UT5EW
@@ -113,7 +112,7 @@ CdbBytes	3B0E0000000001000000
 NumberOfRetriesDone	0
 ```
 
-The ETW event 507 from the channel shows that a SCSI SRB request failed and provides the additional information that SenseKey was ‘5’ (Illegal Request), and that AdditionalSense information was ‘36’ (Illegal Field in CDB).
+The ETW event 507 from the channel shows that a SCSI SRB request failed and provides the additional information that SenseKey was ‘5' (Illegal Request), and that AdditionalSense information was ‘36' (Illegal Field in CDB).
 
    > [!Note]
    > This information is provided directly by the miniport in question and the accuracy of this information will depend on the implementation and sophistication of the miniport driver.
@@ -128,7 +127,7 @@ If the 3rd party driver is identified as not implementing the needed APIs or tra
 ## Additional troubleshooting with Microsoft drivers (SATA/NVMe)
 When Windows-native drivers, such as StorAHCI.sys or StorNVMe.sys are used to power storage devices, it is possible to get additional information about possible failure cases during firmware update operations.
 
-Beyond the ClassPnP Operational channel, StorAHCI and StorNVMe will log the device’s protocol specific return codes in the following ETW channel:
+Beyond the ClassPnP Operational channel, StorAHCI and StorNVMe will log the device's protocol specific return codes in the following ETW channel:
 
 Event Viewer - Application and Services Logs - Microsoft - Windows - StorDiag - **Microsoft-Windows-Storage-StorPort/Diagnose**
 
@@ -138,7 +137,7 @@ To gather these advanced log entries, enable the log, reproduce the firmware upd
 
 Here is an example of a firmware update on a SATA device failing, because the image to be downloaded was invalid (Event ID: 258):
 
-```	
+```
 EventData
 MiniportName	storahci
 MiniportEventId	19
@@ -169,10 +168,10 @@ Parameter8Value	0
 
 The above event contains detailed device information in parameter values 2 through 6. Here we are looking at various ATA register values. The ATA ACS specification can be used to decode the below values for failure of a Download Microcode command:
 - Return Code: 0 (0000 0000) (N/A - meaningless since no payload was transferred)
-- Features: 15 (0000 1111) (Bit 1 is set to ‘1’ and indicates “abort”)
+- Features: 15 (0000 1111) (Bit 1 is set to ‘1' and indicates “abort”)
 - SectorCount: 0 (0000 0000) (N/A)
 - DriveHead: 160 (1010 0000) (N/A – only obsolete bits are set)
-- Command: 146 (1001 0010) (Bit 1 is set to ‘1’ indicating the availability of sense data)
+- Command: 146 (1001 0010) (Bit 1 is set to ‘1' indicating the availability of sense data)
 
 This tells us that the firmware update operation was aborted by the device.
 

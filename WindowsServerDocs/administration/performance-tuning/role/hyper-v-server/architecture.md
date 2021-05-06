@@ -1,10 +1,8 @@
 ---
 title: Hyper-V Architecture
 description: Hyper-v architecture condsiderations for performance tuning
-ms.prod: windows-server-threshold
-ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Asmahi; SandySp; JoPoulso
+ms.author: asmahi
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -17,13 +15,13 @@ The root partition owns and has direct access to the physical I/O devices. The v
 
 ![hyper-v hypervisor-based architecture](../../media/perftune-guide-hyperv-arch.png)
 
-The Hyper-V-specific I/O architecture consists of virtualization service providers (VSPs) in the root partition and virtualization service clients (VSCs) in the child partition. Each service is exposed as a device over VMBus, which acts as an I/O bus and enables high-performance communication between virtual machines that use mechanisms such as shared memory. The guest operating system’s Plug and Play manager enumerates these devices, including VMBus, and loads the appropriate device drivers (virtual service clients). Services other than I/O are also exposed through this architecture.
+The Hyper-V-specific I/O architecture consists of virtualization service providers (VSPs) in the root partition and virtualization service clients (VSCs) in the child partition. Each service is exposed as a device over VMBus, which acts as an I/O bus and enables high-performance communication between virtual machines that use mechanisms such as shared memory. The guest operating system's Plug and Play manager enumerates these devices, including VMBus, and loads the appropriate device drivers (virtual service clients). Services other than I/O are also exposed through this architecture.
 
 Starting with Windows Server 2008, the operating system features enlightenments to optimize its behavior when it is running in virtual machines. The benefits include reducing the cost of memory virtualization, improving multicore scalability, and decreasing the background CPU usage of the guest operating system.
 
 The following sections suggest best practices that yield increased performance on servers running Hyper-V role.
 
-## See also
+## Additional References
 
 -   [Hyper-V terminology](terminology.md)
 

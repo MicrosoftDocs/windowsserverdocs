@@ -1,25 +1,17 @@
 ---
 title: nslookup set debug
-description: "Windows Commands topic for **** - "
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
-ms.topic: article
+description: Reference article for the nslookup set debug command, which turns debugging mode on and off.
+ms.topic: reference
 ms.assetid: b51e04e7-5f6f-4183-88bf-5628a506bdab
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # nslookup set debug
 
-
-
-Turns Debugging Mode on or off.
+Turns debugging mode on or off.
 
 ## Syntax
 
@@ -27,18 +19,15 @@ Turns Debugging Mode on or off.
 set [no]debug
 ```
 
-## Parameters
+### Parameters
 
-|Parameter|Description|
-|---------|-----------|
-|**nodebug**|Turns off Debugging Mode. The default syntax is **nodebug**.|
-|**debug**|Turns on Debugging Mode.|
-|**{help | ?}**|Displays a short summary of **nslookup** subcommands.|
+| Parameter | Description |
+| ---------- | ---------- |
+| nodebug | Turns off debugging mode. This is the default value. |
+| debug | Turns on debugging mode. By turning debugging mode on, you can view more information about the packet sent to the server and the resulting answer. |
+| /? | Displays help at the command prompt. |
+| /help | Displays help at the command prompt. |
 
-## Remarks
+## Additional References
 
--   With Debugging Mode turned on, more information is printed about the packet sent to the server and the resulting answer.
-
-#### Additional references
-
-[Command-Line Syntax Key](command-line-syntax-key.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)

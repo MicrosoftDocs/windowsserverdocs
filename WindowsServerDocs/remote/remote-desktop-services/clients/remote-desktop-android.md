@@ -1,195 +1,236 @@
 ---
-title: Get started with Remote Desktop on Android
-description: Basic set up steps for the Remote Desktop client for Android.
-ms.custom: na
-ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
+title: Get started with the Android client
+description: General information about the Android client.
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 07/24/2018
+author: heidilohr
+manager: femila
+ms.author: helohr
+ms.date: 02/04/2020
 ms.localizationpriority: medium
+ms.custom: contperf-fy21q1
 ---
-# Get started with Remote Desktop on Android
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+# Get started with the Android client
 
-You can use the Remote Desktop client for Android to work with Windows apps and desktops directly from your Android device.
+>Applies to: Android 7.0 and later
 
-Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
+You can use the Remote Desktop client for Android to work with Windows apps and desktops directly from your Android device or a Chromebook that supports the Google Play Store.
 
-> [!NOTE]
-> - Curious about the new releases for the Android client? Check out [What's new for Remote Desktop on Android?](android-whatsnew.md)
-> You can run the client on Android 4.1 and newer devices as well as on Chromebooks with ChromeOS 53 installed. Learn more about Android applications on Chrome [here](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps).
-
-## Get the RD client and start using it
-
-Follow these steps to get started with Remote Desktop on your Android device:
-
-1. Download the Remote Desktop client from [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android). 
-2. [Set up your PC to accept remote connections](remote-desktop-allow-access.md).
-3. Add a Remote Desktop connection or a remote resource. You use a connection to connect directly to a Windows PC and a remote resource to use a RemoteApp program, session-based desktop, or virtual desktop published on-premises. 
-4. Create a widget so you can get to Remote Desktop quickly.
+This article will show you how to get started using the client. If you have any additional questions, make sure to check our [FAQ](remote-desktop-client-faq.yml).
 
 > [!NOTE]
-> If you would like to flight new features earlier we recommend downloading our [Microsoft Remote Desktop Beta](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android.beta) application from the Google Play store. 
+> - Curious about the new releases for the Android client? Check out [What's new for the Android client](android-whatsnew.md).
+> - The Android client supports devices running Android 6.0 and later, as well as Chromebooks with ChromeOS 53 and later. Learn more about Android applications on Chrome at [Chrome OS Systems Supporting Android Apps](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-android-apps).
 
-### Add a Remote Desktop connection
+## Download the Remote Desktop client
 
-To create a Remote Desktop connection:
+Here's how to set up the Remote Desktop client on your Android device:
 
-1. In the Connection Center tap **+**, and then tap **Desktop**.
-2. Enter the following information for the computer you want to connect to:
-  - **PC name** – the name of the computer. This can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, **MyDesktop:3389** or **10.0.0.1:3389**).
-  - **User name** – The user name to use to access the remote PC. You can use the following formats: *user_name*, *domain\user_name*, or *user_name@domain.com*. You can also specify whether to prompt for a user name and password.
-3. You can also set the following additional options:
-  - **Friendly name** – An easy-to-remember name for the PC you are connecting to. You can use any string, but if you do not specify a friendly name, the PC name is displayed.
-  - **Gateway** – The Remote Desktop gateway that you want to use to connect to virtual desktops, RemoteApp programs, and session-based desktops on an internal corporate network. Get the information about the gateway from your system administrator.
-    Need to configure a Remote Desktop Gateway?
-  - **Sound** – Select the device to use for audio during your remote session. You can choose to play sound on the local devices, the remote device, or not at all.
-  - **Customize display resolution** - Set a custom resolution for a connection by enabling this setting. When off the resolution is applied which you have defined in the global settings of the app.
-  - **Swap mouse buttons** – Use this option to swap the left mouse button functions for the right mouse button. (This is especially useful if the remote PC is configured for a left-handed user but you use a right-handed mouse.)
-  - **Connect to admin session** - Use this option to connect to a console session to administrate a Windows server.
-  - **Redirect to local storage** – Mounts your local storage as a remote file system on the remote PC.
-4. Tap **Save**.
+1. [Download the Microsoft Remote Desktop client](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx) from Google Play.
+2. Launch **RD client** from your list of apps.
+3. Add a [Remote Desktop connection](#add-a-remote-desktop-connection) or [remote resources](#add-remote-resources). Remote Desktop connections let you connect directly to a Windows PC and remote resources to access apps and desktops published to you by an admin.
 
-Need to edit these settings? Tap the overflow menu (**...**) next to the name of the desktop, and then tap **edit**.
+## Add a Remote Desktop connection
 
-Want to delete the connection? Again, tap the overflow menu (**...**), and then tap **remove**.
+Now that you have the client on your device, you can add Remote Desktop connections to access your remote resources.
+
+Before you add a connection, if you haven't done so already, [set up your PC to accept remote connections](remote-desktop-allow-access.md).
+
+To add a Remote Desktop connection:
+
+1. In the Connection Center, tap **+**, and then tap **Desktop**.
+2. Enter the name of the remote PC into **PC name**. This name can be a Windows computer name, an Internet domain name, or an IP address. You can also append port information to the PC name (for example, MyDesktop:3389 or 10.0.0.1:3389). This field is the only required field.
+3. Select the **User name** you use to access the Remote PC.
+
+   - Select **Enter every time** for the client to ask for your credentials every time you connect to the remote PC.
+   - Select **Add user account** to save an account that you use frequently so you don't have to enter credentials every time you sign in. To learn more about user accounts, see [Manage your user accounts](#manage-your-user-accounts).
+
+4. You can also tap on **Show additional options** to set the following optional parameters:
+
+   - In **Friendly name**, you can enter an easy-to-remember name for the PC you're connecting to. If you don't specify a friendly name, the PC name is displayed instead.
+   - The **Gateway** is the Remote Desktop gateway you'll use to connect to a computer from an external network. Contact your system administrator for more information.
+   - **Sound** selects the device your remote session uses for audio. You can choose to play sound on your local device, the remote device, or not at all.
+   - **Customize display resolution** sets the resolution for the remote session. When turned off, the resolution specified in global settings is used.
+   - **Swap mouse buttons** switches the commands sent by right and left mouse gestures. Ideal for left-handed users.
+   - **Connect to admin session** lets you connect to an admin session on the remote PC.
+   - **Redirect local storage** enables local storage redirection. This setting is disabled by default.
+
+5. When you're done, tap **Save**.
+
+Need to edit these settings? Tap the **More options** menu (**...**) next to the name of the desktop, and then tap **Edit**.
+
+Want to remove the connection? Again, tap the **More options** menu (**...**), and then tap **Remove**.
 
 >[!TIP]
-> If you get error 0xf07 about a bad password ("We couldn't connect to the remote PC because the password associated with the user account has expired"), change your password and try again.
+> If you get an error name "0xf07" that says something like "We couldn't connect to the remote PC because the password associated with the user account has expired," try again with a new password.
 
-### Add a remote resource
-Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published using RemoteApp and Desktop Connections.
+## Add remote resources
 
-To add a remote resource:
+Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published by your admin. The Android client supports resources published from **Remote Desktop Services** and **Windows Virtual Desktop** deployments.
 
-1. On the Connection Center screen, tap **+**, and then tap **Remote Resources Feed**. 
-2. Enter information for the Remote Resource:
-   - **Email or URL** - The URL of the RD Web Access server. You can also enter your corporate email account in this field – this tells the client to search for the RD Web Access Server associated with your email address.
-   - **User name** - The user name to use for the RD Web Access server you are connecting to.
-   - **Password** - The password to use for the RD Web Access server you are connecting to.
-3. Tap **Save**.
+To add remote resources:
+
+1. In the Connection Center, tap **+**, and then tap **Remote Resource Feed**.
+2. Enter the **Feed URL**. This URL can be a URL or an email address:
+   - The **URL** is the RD Web Access server provided to you by your admin. If accessing resources from Windows Virtual Desktop, you can use one of the following URLs depending on which version you're using:
+     - If you're using Windows Virtual Desktop (classic), use: `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
+     - If you're using Windows Virtual Desktop, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
+   - If you plan to use **Email**, enter your email address in this field. Filling out this field tells the client to search for an RD Web Access server associated with your email address if it was configured by your admin.
+3. Tap **Next**.
+4. Provide your sign-in information when prompted. The credentials you should use can vary based on the deployment and can include:
+   - The **User name** that has permission to access the resources.
+   - The **Password** associated with the user name.
+   - **Additional factor**, which you may be prompted for a if authentication was configured that way by your admin.
+5. When you're done, tap **Save**.
 
 The remote resources will be displayed in the Connection Center.
 
+## Remove remote resources
 
-To delete remote resources:
+To remove remote resources:
 
 1. In the Connection Center, tap the overflow menu (**...**) next to the remote resource.
 2. Tap **Remove**.
-3. Confirm the deletion.
+3. Confirm you've removed the resource.
 
-### Widgets – Pin a saved desktop to your home screen
+## Pin a connection to your home screen
 
-The Remote Desktop applications support pinning connections to your home screen by using the Android widget feature. The way that you add a widget depends on the type of Android device you are using and its operating system. Here is the most common way to add a widget: 
+The Remote Desktop client supports using the Android widget feature to pin connections to your home screen. The widget adding process depends on which type of Android device and Android OS version you're using.
 
-1. Tap **apps** to launch the apps menu.
-2. Tap **widgets**.
-3. Swipe through the widgets and look for the Remote Desktop icon with the description, “Pin Remote Desktop.”
+To add a widget:
+
+1. Tap **Apps** to launch the apps menu.
+2. Tap **Widgets**.
+3. Swipe through the widgets and look for the Remote Desktop icon with the description: Pin Remote Desktop.
 4. Tap and hold that Remote Desktop widget and move it to the home screen.
-5. When you release the icon, you’ll see the saved remote desktops. Choose the connection that you want to save to your home screen.
+5. When you release the icon, you'll see the saved remote desktops. Choose the connection that you want to save to your home screen.
 
 Now you can start the remote desktop connection directly from your home screen by tapping it.
 
 > [!NOTE]
-> If you rename the desktop connection in the Remote Desktop application, the label of this pinned remote desktop will not update.
+> If you rename the desktop connection in the Remote Desktop client, its pinned label won't update.
 
-## Connect to an RD Gateway to access internal assets
+## Manage general app settings
 
-A Remote Desktop Gateway (RD Gateway) lets you connect to a remote computer on a corporate network from anywhere on the Internet. You can create and manage your gateways using the Remote Desktop client.
+To change the general app settings, go to the Connection Center, tap **Settings**, and then tap **General**.
 
-To set up a new gateway:
+You can set the following general settings:
 
-1. In the Connection Center, tap **Settings > Gateways**. Tap **+** to add a new gateway.
-2. Enter the following information:
-  - **Server name** – The name of the computer you want to use as a gateway. This can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: **RDGateway:443** or **10.0.0.1:443**).
-  - **User name** - The user name and password to be used for the Remote Desktop Gateway you are connecting to. You can also select **Use desktop user account** to use the same credentials as those used for the remote desktop connection.
+- **Show desktop previews** lets you see a preview of a desktop in the Connection Center before you connect to it. This setting is enabled by default.
+- **Pinch to zoom remote session** lets you use pinch-to-zoom gestures. If the app you're using through Remote Desktop supports multi-touch (introduced in Windows 8), disable this feature.
+- Enable **Use scancode input when available** if your remote app doesn't respond properly to keyboard input sent as scancode. Input is sent as unicode when disabled.
+- **Help improve Remote Desktop** sends anonymous data about how you use Remote Desktop for Android to Microsoft. We use this data to improve the client. To learn more about our privacy policy and what kinds of data we collect, see the [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement). This setting is enabled by default.
+
+## Manage display settings
+
+To change the display settings tap **Settings**, and then tap **Display** from the Connection Center.
+
+You can set the following display settings:
+
+- **Orientation** sets the preferred orientation (landscape or portrait) for your session.
+
+  >[!NOTE]
+  > If you connect to a PC running Windows 8 or earlier, the session won't scale correctly if the orientation of the device changes. To make the client scale correctly, disconnect from the PC, then reconnect in the orientation you want to use. You can also ensure correct scaling by using a PC with Windows 10 instead.
+
+- **Resolution** sets the remote resolution you want to use for desktop connections globally. If you have already set a custom resolution for an individual connection, this setting won't change that.
+
+  >[!NOTE]
+  >When you change the display settings, the changes only apply to new connections you make after the you changed the setting. To apply your changes to the session you're currently connected to, refresh your session by disconnecting and reconnecting.
+
+## Manage your RD Gateways
+
+A Remote Desktop Gateway (RD Gateway) lets you connect to a remote computer on a private network from anywhere on the Internet. You can create and manage your gateways using the Remote Desktop client.
+
+To set up a new RD Gateway:
+
+1. In the Connection Center, tap **Settings**, and then tap **Gateways**.
+2. Tap **+** to add a new gateway.
+3. Enter the following information:
+   - Enter the name of the computer you want to use as a gateway into **Server name**. This name can be a Windows computer name, an Internet domain name, or an IP address. You can also add port information to the server name (for example: RDGateway:443 or 10.0.0.1:443).
+   - Select the **User account** you'll use to access the RD Gateway.
+     - Select **Use desktop user account** to use the same credentials that you specified for the remote PC.
+     - Select **Add user account** to save an account that you use frequently so you don't have to enter credentials every time you sign in. For more information, see [Manage your user accounts](#manage-your-user-accounts).
+
+To delete an RD Gateway:
+
+1. In the Connection Center, tap **Settings**, and then tap **Gateways**.
+2. Tap and hold a gateway in the list to select it. You can select multiple gateways at once.
+3. Tap the trash can to delete the selected gateway.
 
 ## Manage your user accounts
 
-When you connect to a desktop or remote resources, you can save the user accounts to select from again. You can also define user accounts in the client itself, as opposed to saving the user data when you connect to a desktop.
+You can save user accounts to use whenever you connect to a remote desktop or remote resources.
 
-To create a new user account:
+To save a user account:
 
 1. In the Connection Center, tap **Settings**, and then tap **User accounts**.
 2. Tap **+** to add a new user account.
 3. Enter the following information:
-   - **User Name** - The name of the user to save for use with a remote connection. You can enter the user name in any of the following formats: user_name, domain\user_name, or user_name@domain.com.
-   - **Password** - The password for the user you specified. Every user account that you want to save to use for remote connections needs to have a password associated with it.
-4. Tap **Save**.
+   - The **User Name** to save for use with a remote connection. You can enter the user name in any of the following formats: user_name, domain\user_name, or user_name@domain.com.
+   - The **Password** for the user you specified. Every user account that you want to save to use for remote connections needs to have a password associated with it.
+4. When you're done, tap **Save**.
 
-To delete a user account:
+To delete a saved user account:
 
-1. In the Connection Center, tap **Settings > User accounts**.
-2. Tap and hold a user account in the list to select it. You can select multiple users.
+1. In the Connection Center, tap **Settings**, and then tap **User accounts**.
+2. Tap and hold a user account in the list to select it. You can select multiple users at the same time.
 3. Tap the trash can to delete the selected user.
 
-## Navigate the Remote Desktop session
-When you start a remote desktop connection, there are tools available that you can use to navigate the session.
+## Start a Remote Desktop connection
 
-### Start a Remote Desktop connection
+Now that you've set up your Remote Desktop Android client, let's learn how to start a Remote Desktop session.
 
-1. Tap the Remote Desktop connection to start the session. 
-2. If you are asked to verify the certificate for the remote desktop, tap **Connect**. You can also select **Don’t ask me again for connections to this computer** to always accept the certificate.
+To start a session:
 
-### Manage global app settings
+1. Tap **the name of your Remote Desktop connection** to start the session.
+2. If you're asked to verify the certificate for the remote desktop, tap **Connect**. You can also select **Don't ask me again for connections to this computer** to always accept the certificate by default.
 
-You can set the following global settings in your Android client:
+## Use the connection bar
 
-- **Show Desktop Previews** - Lets you see a preview of a desktop in the Connection Center before you connect to it. By default, this is set to **on**.
-- **Pinch to Zoom** - Lets you use pinch-to-zoom gestures. If the app you're using through Remote Desktop supports multi-touch (introduced in Windows 8), turn this setting **off**.
-- **Help to improve Remote Desktop** - Sends anonymous data to Microsoft. We use this data to improve the client. You can learn more about how we treat this anonymous, private data, see the [Remote Desktop Client Privacy Statement](https://www.microsoft.com/privacystatement/RemoteApp/Default.aspx). By default, this setting is **on**.
-- **Display** - There are two global settings for your display:
-   - **Orientation** - Sets the preferred orientation (landscape or portrait) for your session. 
-   >[!NOTE]
-   > If you connect to a PC running Windows 8 or an older version of Windows, the session won't scale correctly. Your best bet is to disconnect from the PC, and then reconnect in the orientation you want to use. An even better option is to upgrade the PC to at least Windows 8.1.
+The connection bar gives you access to additional navigation controls. By default, the connection bar is placed in the middle at the top of the screen. Drag the bar to the left or right to move it.
 
-   - **Resolution** - Sets the resolution you want to use for desktop connections globally. If you have already set a custom resolution for an individual app or connection, this setting won't change that.
-   >[!NOTE]
-   >When you change one of the display settings, they only apply to new connections from that point on. To see the change in a session you're already connected to disconnect and then connect again.
-
-### Connection Bar
-
-The connection bar gives you access to additional navigation controls. By default, the connection bar is placed in the middle at the top of the screen. Double-tap and drag the bar to the left or right to move it.
-
-- **Pan Control**: The pan control enables the screen to be enlarged and moved around. Note that pan control is only available using direct touch.
-   - Enable / Disable the pan control: Tap the pan icon in the connection bar to display the pan control and zoom the screen. Tap the pan icon in the connection bar again to hide the control and return the screen to its original resolution.
-   - Use the pan control: Tap and hold the pan control and then drag in the direction you want to move the screen.
-   - Move the pan control: Double tap and hold the pan control to move the control on the screen.
-- **Additional options**: Tap the additional options icon to display the session selection bar and command bar (see below).
+- **Pan Control**: The pan control enables the screen to be enlarged and moved around. Pan control is only available for direct touch.
+  - To show the pan control, tap the pan icon in the connection bar to display the pan control and zoom the screen. Tap the pan icon again to hide the control and return the screen to its original size.
+  - To use the pan control, tap and hold it, then drag it in the direction you want to move the screen.
+  - To move the pan control, double-tap and hold it to move the control around on the screen.
+- **Additional options**: Tap the additional options icon to display the session selection bar and command bar.
 - **Keyboard**: Tap the keyboard icon to display or hide the keyboard. The pan control is displayed automatically when the keyboard is displayed.
-- **Move the connection bar**: Tap and hold the connection bar, and then drag and drop to a new location at the top of the screen.
 
+## Use the session selection bar
 
-### Command bar
+You can have multiple connections open to different PCs at the same time. Tap the connection bar to display the session selection bar on the left side of the screen. The session selection bar lets you view your open connections and switch between them.
 
-Tap the connection bar to display the command bar on the right-hand side of the screen. You can switch between the mouse modes (Direct Touch and Mouse Pointer). Use the home button to return to the connection center from the command bar. Alternatively you can use the back button for the same action. Your active session will not be disconnected. 
+When you're connected to remote resources, you can switch between apps within that session by tapping the expander menu ( **>** ) and choosing from the list of available items.
 
+To start a new session within your current connection, tap **Start New**, then choose from the list of available items.
 
-### Use direct touch gestures and mouse modes in a remote session
+To disconnect a session, tap **X** in the left side of the session tile.
 
-The client uses standard touch gestures. You can also use touch gestures to replicate mouse actions on the remote desktop. The mouse modes available are defined in the table below.
+## Use the command bar
+
+Tap the connection bar to display the command bar on the right side of the screen. On the command bar, you can switch between mouse modes (direct touch and mouse pointer) or tap the Home button to return to the Connection Center. You can also tap the Back button to return to the Connection Center. Returning to the Connection Center won't disconnect your active session.
+
+## Touch gestures and mouse modes
+
+The Remote Desktop for Android client uses standard touch gestures. You can also use touch gestures to replicate mouse actions on the remote desktop. The following table explains which gestures match which mouse actions in each mouse mode.
 
 > [!NOTE]
-> Interacting with Windows 8 or newer the native touch gestures are supported in Direct Touch mode. 
+> Native touch gestures are supported in Direct Touch mode in Windows 8 or later.
 
-| Mouse mode    | Mouse operation      | Gesture                                                               |
-|---------------|----------------------|-----------------------------------------------------------------------|
-| Direct touch  | Left click           | 1 finger tap                                                          |
-| Direct touch  | Right click          | 1 finger tap and hold                                                 |
-| Mouse pointer | Zoom                 | Use 2 fingers and pinch to zoom in or move fingers apart to zoom out. |
-| Mouse pointer | Left click           | 1 finger tap                                                          |
-| Mouse pointer | Left click and drag  | 1 finger double tap and hold, then drag                               |
-| Mouse pointer | Right click          | 2 finger tap                                                          |
-| Mouse pointer | Right click and drag | 2 finger double tap and hold, then drag                               |
-| Mouse pointer | Mouse wheel          | 2 finger tap and hold, then drag up or down                           |
+| Mouse mode    | Mouse action         | Gesture                                                                 |
+|---------------|----------------------|-------------------------------------------------------------------------|
+| Direct touch  | Left-click           | Tap with one finger                                                     |
+| Direct touch  | Right-click          | Tap with one finger and hold, then release                              |
+| Mouse pointer | Zoom                 | Use two fingers and pinch to zoom out or move fingers apart to zoom in. |
+| Mouse pointer | Left-click           | Tap with one finger                                                     |
+| Mouse pointer | Left-click and drag  | Double-tap and hold with one finger, then drag                          |
+| Mouse pointer | Right-click          | Tap with two fingers                                                    |
+| Mouse pointer | Right-click and drag | Double-tap and hold with two fingers, then drag                         |
+| Mouse pointer | Mouse wheel          | Tap and hold with two fingers, then drag up or down                     |
 
-> [!TIP]
-> Questions and comments are always welcome. However, please do NOT post a request for troubleshooting help by using the comment feature at the end of this article. Instead, go to the [Remote Desktop client forum](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) and start a new thread. Have a feature suggestion? Tell us in the [client user voice forum](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
+## Join the Beta channel
+
+If you want to help us test new builds or find issues in upcoming version updates before they're released, you should join our Beta channel. Enterprise admins can use the Beta channel to validate new versions of the Android client for their users.
+
+To join the Beta, [download our Beta client](https://play.google.com/apps/testing/com.microsoft.rdc.androidx) and give consent to access preview versions and download the client. You'll receive preview versions directly through the Google Play Store.
