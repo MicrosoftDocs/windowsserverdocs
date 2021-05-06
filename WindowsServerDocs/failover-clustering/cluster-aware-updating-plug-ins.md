@@ -17,7 +17,7 @@ ms.date: 04/28/2017
 ## <a name="BKMK_INSTALL"></a>Install a plug\-in
 A plug\-in other than the default plug\-ins that are installed with CAU \(**Microsoft.WindowsUpdatePlugin** and **Microsoft.HotfixPlugin**\) must be installed separately. If CAU is used in self\-updating mode, the plug\-in must be installed on all cluster nodes. If CAU is used in remote\-updating mode, the plug\-in must be installed on the remote Update Coordinator computer. A plug\-in that you install may have additional installation requirements on each node.
 
-To install a plug\-in, follow the instructions from the plug\-in publisher. To manually register a plug\-in with CAU, run the [Register-CauPlugin](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/register-cauplugin) cmdlet on each computer where the plug\-in is installed.
+To install a plug\-in, follow the instructions from the plug\-in publisher. To manually register a plug\-in with CAU, run the [Register-CauPlugin](/powershell/module/clusterawareupdating/register-cauplugin) cmdlet on each computer where the plug\-in is installed.
 
 ## Specify a plug\-in and plug\-in arguments
 
