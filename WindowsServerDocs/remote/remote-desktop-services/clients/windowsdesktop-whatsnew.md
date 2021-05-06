@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 05/04/2021
+ms.date: 05/06/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -18,7 +18,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.1844        |1.2.945                   |
+|Public     |1.2.1953        |1.2.945                   |
 |Insider    |1.2.1953        |1.2.945                   |
 
 ## Updates for version 1.2.1953 (Insider)
@@ -30,6 +30,11 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 - Fixed an issue that caused the client to crash when users selected "Disconnect all sessions" in the system tray.
 - Fixed an issue where the client wouldn't switch to full screen on a single monitor with a docking station.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams on Windows Virtual Desktop, including the following:
+  - When joining a meeting with both a front-facing and rear-facing or external camera, the front-facing camera will be selected by default.
+  - Fixed an issue that made Teams on Windows Virtual Desktop crash while loading on x86-based machines.
+  - Fixed an issue that caused striations during screen sharing.
+  - Fixed an issue that prevented some people in meetings from seeing incoming video or screen sharing.
 
 ## Updates for version 1.2.1844
 
