@@ -66,7 +66,7 @@ You must have membership in **Administrators**, or equivalent.
 
     ![Network Adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_01.jpg)
 
-10. In **Network Adapter** properties, select the first virtual switches that you created in previous steps, and then click **Apply**.
+10. In **Network Adapter** properties, select the first virtual switch that you created in previous steps, and then click **Apply**.
 
     ![Select a virtual switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_02.jpg)
 
