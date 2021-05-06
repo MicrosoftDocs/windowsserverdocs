@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 05/04/2021
+ms.date: 05/06/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -18,18 +18,23 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.1844        |1.2.945                   |
-|Insider    |1.2.1953        |1.2.945                   |
+|Public     |1.2.1953        |1.2.1446                   |
+|Insider    |1.2.1953        |1.2.1446                   |
 
-## Updates for version 1.2.1953 (Insider)
+## Updates for version 1.2.1953
 
-*Date published: 04/13/2021*
+*Date published: 05/06/2021*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
 - Fixed an issue that caused the client to crash when users selected "Disconnect all sessions" in the system tray.
 - Fixed an issue where the client wouldn't switch to full screen on a single monitor with a docking station.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams on Windows Virtual Desktop, including the following:
+  - When joining a meeting with both a front-facing and rear-facing or external camera, the front-facing camera will be selected by default.
+  - Fixed an issue that made Teams on Windows Virtual Desktop crash while loading on x86-based machines.
+  - Fixed an issue that caused striations during screen sharing.
+  - Fixed an issue that prevented some people in meetings from seeing incoming video or screen sharing.
 
 ## Updates for version 1.2.1844
 
@@ -50,8 +55,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.1755
 
 *Date published: 02/23/2021*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWxOpp), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWxZbP), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWxWHc)
 
 - Added the Experience Monitor access point to the system tray icon.
 - Fixed an issue where entering an email address into the "Subscribe to a Workplace" tab caused the application to stop responding.
