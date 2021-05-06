@@ -3,7 +3,7 @@ title: What's new in the web client
 description: Learn about recent changes to the Remote Desktop web client
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
 ms.date: 01/06/2021
 ms.localizationpriority: medium
