@@ -1,6 +1,6 @@
 ﻿---
 title: Windows Server 2008 SP2
-description: View announcements and review known issues and fixes for Windows Server 2008 SP2
+description: View announcements and review known issues and fixes for Windows Server 2008 SP2 
 keywords: Windows, Windows 10, issues, fixes, announcements, Windows Server, advisories
 ms.prod: w10
 ms.topic: article
