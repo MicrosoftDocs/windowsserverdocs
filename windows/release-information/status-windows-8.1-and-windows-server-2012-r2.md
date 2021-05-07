@@ -1,12 +1,12 @@
 ﻿---
 title: Windows 8.1 and Windows Server 2012 R2
-description: View announcements and review known issues and fixes for Windows 8.1 and Windows Server 2012 R2
+description: View announcements and review known issues and fixes for Windows 8.1 and Windows Server 2012 R2 
 keywords: Windows 10, issues, fixes, announcements, Windows Server, advisories
 ms.prod: w10
 ms.topic: article
 ms.mktglfcycl: deploy
 ms.sitesec: library
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.author: v-nishmi
 author: DocsPreview
 ---
