@@ -390,7 +390,7 @@ DynamicSig[29].Value=10008
 
 The list of services and processes that we collect in a dump is controlled by the following property: **PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpServicesSmphost**
 
-To identify why the hang happened, open the dum files. Then run the following query: **EventLog.EventData["LogString"] contains "Cluster Disk 10"**  This will give you give you the following output:
+To identify why the hang happened, open the dump files. Then run the following query: **EventLog.EventData["LogString"] contains "Cluster Disk 10"**  This will give you give you the following output:
 
 ![Output of running log query 2](media/troubleshooting-using-WER-reports/output-of-running-log-query-2.png)
 
