@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 05/06/2021
+ms.date: 05/07/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -31,6 +31,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 - Fixed an issue where the client wouldn't switch to full screen on a single monitor with a docking station.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to Teams on Windows Virtual Desktop, including the following:
+  - Added hardware acceleration for video processing outgoing video streams for Windows 10-based clients.
   - When joining a meeting with both a front-facing and rear-facing or external camera, the front-facing camera will be selected by default.
   - Fixed an issue that made Teams on Windows Virtual Desktop crash while loading on x86-based machines.
   - Fixed an issue that caused striations during screen sharing.

@@ -10,7 +10,7 @@ description: Requirements for using Cluster-Aware Updating to install updates on
 ---
 # Cluster-Aware Updating requirements and best practices
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This section describes the requirements and dependencies that are needed to use [Cluster-Aware Updating](cluster-aware-updating.md) (CAU) to apply updates to a failover cluster running Windows Server.
 
@@ -101,7 +101,7 @@ To manually enable remote management, do the following:
 
 1.  In the Services console, start the **Windows Remote Management** service and set the startup type to **Automatic**.
 
-2.  Run the [Set-WSManQuickConfig](/powershell/module/Microsoft.WsMan.Management/Set-WSManQuickConfig?view=powershell-6) cmdlet, or run the following command from an elevated command prompt:
+2.  Run the [Set-WSManQuickConfig](/powershell/module/Microsoft.WsMan.Management/Set-WSManQuickConfig?view=powershell-6&preserve-view=true) cmdlet, or run the following command from an elevated command prompt:
 
     ```PowerShell
     winrm quickconfig -q
@@ -118,7 +118,7 @@ To enable PowerShell remoting, use one of the following methods:
 
 -   Configure a domain\-level Group Policy setting for Windows Remote Management \(WinRM\).
 
-For more information about enabling PowerShell remoting, see [About Remote Requirements](/powershell/module/microsoft.powershell.core/about/about_remote_requirements?view=powershell-6).
+For more information about enabling PowerShell remoting, see [About Remote Requirements](/powershell/module/microsoft.powershell.core/about/about_remote_requirements?view=powershell-6&preserve-view=true).
 
 ### <a name="BKMK_NET"></a>Install .NET Framework 4.6 or 4.5
 To enable self\-updating mode and certain CAU features in remote\-updating mode,.NET Framework 4.6, or .NET Framework 4.5 (on Windows Server 2012 R2) must be installed on all cluster nodes. By default, NET Framework is installed.

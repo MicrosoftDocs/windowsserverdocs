@@ -10,7 +10,7 @@ ms.date: 04/28/2017
 ---
 # How Cluster-Aware Updating plug-ins work
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 [Cluster-Aware Updating](cluster-aware-updating.md) (CAU) uses plug-ins to coordinate the installation of updates across nodes in a failover cluster. This topic provides information about using the built\-in CAU plug\-ins or other plug\-ins that you install for CAU.
 
@@ -304,7 +304,7 @@ The following tables describe the `<Template>` attributes and the possible `<Exi
 > Any exit code that is not explicitly defined in `<ExitConditions>` is interpreted as the update failed, and the node does not restart.
 
 ### <a name="BKMK_ACL"></a>Restrict access to the hotfix root folder
-You must perform several steps to configure the SMB file server and file share to help secure the hotfix root folder files and hofix configuration file for access only in the context of **Microsoft.HotfixPlugin**. These steps enable several features that help prevent possible tampering with the hotfix files in a way that might compromise the failover cluster.
+You must perform several steps to configure the SMB file server and file share to help secure the hotfix root folder files and hotfix configuration file for access only in the context of **Microsoft.HotfixPlugin**. These steps enable several features that help prevent possible tampering with the hotfix files in a way that might compromise the failover cluster.
 
 The general steps are as follows:
 
