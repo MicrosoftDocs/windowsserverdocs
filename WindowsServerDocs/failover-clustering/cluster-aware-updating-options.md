@@ -10,7 +10,7 @@ ms.date: 08/06/2018
 ---
 # Cluster-Aware Updating advanced options and updating run profiles
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012.
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012.
 
 This topic describes Updating Run options that can be configured for a [Cluster-Aware Updating](cluster-aware-updating.md) (CAU) Updating Run. These advanced options can be configured when you use either the CAU UI or the CAU Windows PowerShell cmdlets to apply updates or to configure self-updating options.
 
