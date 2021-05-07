@@ -9,7 +9,7 @@ ms.date: 01/14/2020
 ---
 # Failover Clustering system log events
 
-> Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 This topic lists the Failover Clustering events from the Windows Server System
 log (viewable in Event Viewer). These events all share the event source of
