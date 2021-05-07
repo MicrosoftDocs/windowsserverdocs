@@ -13,6 +13,7 @@ metadata:
   author: DocsPreview
   ms.author: v-nishmi
   ms.date: 09/25/2020
+  ms.localizationpriority: high
   featureFlags:
             -clicktale
            
