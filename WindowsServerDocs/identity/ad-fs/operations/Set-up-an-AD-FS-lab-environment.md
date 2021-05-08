@@ -24,13 +24,13 @@ This topic outlines the steps to configure a test environment that can be used t
 
 To set up this test environment, complete the following steps:
 
-1.  [Step 1: Configure the domain controller (DC1)](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_1)
+1.  [Step 1: Configure the domain controller (DC1)](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_1)
 
-2.  [Step 2: Configure the federation server (ADFS1) with Device Registration Service](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)
+2.  [Step 2: Configure the federation server (ADFS1) with Device Registration Service](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)
 
-3.  [Step 3: Configure Claims X-Ray a sample claims-based application](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)
+3.  [Step 3: Configure Claims X-Ray as a sample claims-based application](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)
 
-4.  [Step 4: Configure the client computer (Client1)](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
+4.  [Step 4: Configure the client computer (Client1)](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
 
 ## <a name="BKMK_1"></a>Step 1: Configure the domain controller (DC1)
 For the purposes of this test environment, you can call your root Active Directory domain **contoso.com** and specify <strong>pass@word1</strong> as the administrator password.
@@ -191,7 +191,7 @@ Membership in the Administrators group or an equivalent is the minimum requireme
     > [!IMPORTANT]
     > In a real-world deployment, if your company has multiple user principal name (UPN) suffixes, you must create multiple CNAME records, one for each of those UPN suffixes in DNS.
 
-## <a name="BKMK_5"></a>Step 3: Configure Claims X-Ray a sample claims-based application
+## <a name="BKMK_5"></a>Step 3: Configure Claims X-Ray as a sample claims-based application
 
 To complete the walkthroughs that were referenced earlier in this topic, you must have a sample application that is secured by your federation server (ADFS1). Here we use the Claims X-Ray as a sample claims-based application. 
 
