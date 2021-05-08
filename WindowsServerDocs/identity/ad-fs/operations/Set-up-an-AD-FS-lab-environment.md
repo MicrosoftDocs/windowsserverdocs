@@ -21,8 +21,6 @@ This topic outlines the steps to configure a test environment that can be used t
 
 -   [Walkthrough Guide: Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 
-> [!NOTE]
-> We do not recommend that you install the web server and the federation server on the same computer.
 
 To set up this test environment, complete the following steps:
 
@@ -30,7 +28,7 @@ To set up this test environment, complete the following steps:
 
 2.  [Step 2: Configure the federation server (ADFS1) with Device Registration Service](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)
 
-3.  [Step 3: Configure the web server (WebServ1) and a sample claims-based application](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)
+3.  [Step 3: Configure Claims X-Ray a sample claims-based application](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)
 
 4.  [Step 4: Configure the client computer (Client1)](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
 
@@ -193,146 +191,25 @@ Membership in the Administrators group or an equivalent is the minimum requireme
     > [!IMPORTANT]
     > In a real-world deployment, if your company has multiple user principal name (UPN) suffixes, you must create multiple CNAME records, one for each of those UPN suffixes in DNS.
 
-## <a name="BKMK_5"></a>Step 3: Configure the web server (WebServ1) and a sample claims-based application
-Set up a virtual machine (WebServ1) by installing the  Windows Server 2012 R2  operating system and connect it to the domain **contoso.com**. After it is joined to the domain, you can proceed to install and configure the Web Server role.
+## <a name="BKMK_5"></a>Step 3: Configure Claims X-Ray a sample claims-based application
 
-To complete the walkthroughs that were referenced earlier in this topic, you must have a sample application that is secured by your federation server (ADFS1).
+To complete the walkthroughs that were referenced earlier in this topic, you must have a sample application that is secured by your federation server (ADFS1). Here we use the Claims X-Ray as a sample claims-based application. 
 
-You can download Windows Identity Foundation SDK ([https://www.microsoft.com/download/details.aspx?id=4451](https://www.microsoft.com/download/details.aspx?id=4451), which includes a sample claims-based application.
+You can find Claims X-Ray here ([https://adfshelp.microsoft.com/ClaimsXray/TokenRequest](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest)).
 
-You must complete the following steps to set up a web server with this sample claims-based application.
+Follow steps below to quickly setup Claims X-Ray on your ADFS server.
 
-> [!NOTE]
-> These steps have been tested on a web server that runs the  Windows Server 2012 R2  operating system.
+1.  On your workstation that has Internet access, navigate to Claims X-Ray [https://adfshelp.microsoft.com/ClaimsXray/TokenRequest](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest). In section 1, select **Relying Party Trust Management** tab, download the ADFS Help Claims X-Ray Manager script.
 
-1.  [Install the Web Server Role and Windows Identity Foundation](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_15)
+![Claims X-Ray Manager Script download](media/Set-up-an-AD-FS-lab-environment/claimsxray-script-download.png)
 
-2.  [Install Windows Identity Foundation SDK](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_13)
+2.  Copy the downloaded script to your federation server (ADFS1) and run it. You should see a pop up for **ADFS Help Claims X-Ray Manager**, it means the script has been completed successfully. Close the pop up. 
 
-3.  [Configure the simple claims app in IIS](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_9)
+3.  Open **AD FS Management Console** on your federation server (ADFS1), navigate to **Relying Party Trusts**, click on **Refresh** under Actions. Now you should see a new relying party trust **ClaimsXray** has been created.  
 
-4.  [Create a relying party trust on your federation server](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_11)
+4. Right click the **ClaimsXray** relying party trust, select **Edit Claim Issuance Policy**.
 
-### <a name="BKMK_15"></a>Install the Web Server role and Windows Identity Foundation
-
-1. > [!NOTE]
-   > You must have access to the  Windows Server 2012 R2  installation media.
-
-   Log on to WebServ1 by using <strong>administrator@contoso.com</strong> and the password <strong>pass@word1</strong>.
-
-2. From Server Manager, on the **Quick Start** tab of the **Welcome** tile on the **Dashboard** page, click **Add roles and features**. Alternatively, you can click **Add Roles and Features** on the **Manage** menu.
-
-3. On the **Before you begin** page, click **Next**.
-
-4. On the **Select installation type** page, click **Role-based or feature-based installation**, and then click **Next**.
-
-5. On the **Select destination server** page, click **Select a server from the server pool**, verify that the target computer is selected, and then click **Next**.
-
-6. On the **Select server roles** page, select the check box next to **Web Server (IIS)**, click **Add Features**, and then click **Next**.
-
-7. On the **Select features** page, select **Windows Identity Foundation 3.5**, and then click **Next**.
-
-8. On the **Web Server Role (IIS)** page, click **Next**.
-
-9. On the **Select role services** page, select and expand **Application Development**. Select **ASP.NET 3.5**, click **Add Features**, and then click **Next**.
-
-10. On the **Confirm installation selections** page, click **Specify an alternate source path**. Enter the path to the Sxs directory that is located in the  Windows Server 2012 R2  installation media. For example D:SourcesSxs. Click **OK**, and then click **Install**.
-
-### <a name="BKMK_13"></a>Install Windows Identity Foundation SDK
-
-1.  Run WindowsIdentityFoundation-SDK-3.5.msi to install Windows Identity Foundation SDK 3.5 (https://www.microsoft.com/download/details.aspx?id=4451). Choose all of the default options.
-
-### <a name="BKMK_9"></a>Configure the simple claims app in IIS
-
-1.  Install a valid SSL certificate in the computer certificate store. The certificate should contain the name of your web server, **webserv1.contoso.com**.
-
-2.  Copy the contents of C:Program Files (x86)Windows Identity Foundation SDKv3.5SamplesQuick StartWeb ApplicationPassiveRedirectBasedClaimsAwareWebApp to C:InetpubClaimapp.
-
-3.  Edit the **Default.aspx.cs** file so that no claim filtering takes place. This step is performed to ensure that the sample application displays all the claims that are issued by the federation server. Do the following:
-
-    1.  Open **Default.aspx.cs** in a text editor.
-
-    2.  Search the file for the second instance of `ExpectedClaims`.
-
-    3.  Comment out the entire `IF` statement and its braces. Indicate comments by typing "//" (without the quotes) at the beginning of a line.
-
-    4.  Your `FOREACH` statement should now look like this code example.
-
-        ```
-        Foreach (claim claim in claimsIdentity.Claims)
-        {
-           //Before showing the claims validate that this is an expected claim
-           //If it is not in the expected claims list then don't show it
-           //if (ExpectedClaims.Contains( claim.ClaimType ) )
-           // {
-              writeClaim( claim, table );
-           //}
-        }
-
-        ```
-
-    5.  Save and close **Default.aspx.cs**.
-
-    6.  Open **web.config** in a text editor.
-
-    7.  Remove the entire `<microsoft.identityModel>` section. Remove everything starting from `including <microsoft.identityModel>` and up to and including `</microsoft.identityModel>`.
-
-    8.  Save and close **web.config**.
-
-4.  **Configure IIS Manager**
-
-    1.  Open **Internet Information Services (IIS) Manager**.
-
-    2.  Go to **Application Pools**, right-click **DefaultAppPool** to select **Advanced Settings**. Set **Load User Profile** to **True**, and then click **OK**.
-
-    3.  Right-click **DefaultAppPool** to select **Basic Settings**. Change the **.NET CLR Version** to **.NET CLR Version v2.0.50727**.
-
-    4.  Right-click **Default Web Site** to select **Edit Bindings**.
-
-    5.  Add an **HTTPS** binding to port **443** with the SSL certificate that you have installed.
-
-    6.  Right-click **Default Web Site** to select **Add Application**.
-
-    7.  Set the alias to **claimapp** and the physical path to **c:inetpubclaimapp**.
-
-5.  To configure **claimapp** to work with your federation server, do the following:
-
-    1.  Run FedUtil.exe, which is located in **C:Program Files (x86)Windows Identity Foundation SDKv3.5**.
-
-    2.  Set the application configuration location to **C:inetputclaimappweb.config** and set the application URI to the URL for your site, **https://webserv1.contoso.com /claimapp/**. Click **Next**.
-
-    3.  Select **Use an existing STS** and browse to your AD FS server's metadata URL **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml**. Click **Next**.
-
-    4.  Select **Disable certificate chain validation**, and then click **Next**.
-
-    5.  Select **No encryption**, and then click **Next**. On the **Offered claims** page, click **Next**.
-
-    6.  Select the check box next to **Schedule a task to perform daily WS-Federation metadata updates**. Click **Finish**.
-
-    7.  Your sample application is now configured. If you test the application URL **https://webserv1.contoso.com/claimapp**, it should redirect you to your federation server. The federation server should display an error page because you have not yet configured the relying party trust. In other words, you have not secured this test application by AD FS.
-
-You must now secure your sample application that runs on your web server with AD FS. You can do this by adding a relying party trust on your federation server (ADFS1). For a video, see [Active Directory Federation Services How-To Video Series: Add a Relying Party Trust](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search).
-
-### <a name="BKMK_11"></a>Create a relying party trust on your federation server
-
-1.  On you federation server (ADFS1), in the **AD FS Management console**, navigate to **Relying Party Trusts**, and then click **Add Relying Party Trust**.
-
-2.  On the **Select Data Source** page, select **Import data about the relying party published online or on a local network**, enter the metadata URL for **claimapp**, and then click **Next**. Running FedUtil.exe created a metadata .xml file. It is located at
-    **https://webserv1.contoso.com/claimapp/federationmetadata/2007-06/federationmetadata.xml**.
-
-3.  On the **Specify Display Name** page, specify the **display name** for your relying party trust, **claimapp**, and then click **Next**.
-
-4.  On the **Configure Multi-factor Authentication Now?** page, select **I do not want to specify multi-factor authentication setting for this relying party trust at this time**, and then click **Next**.
-
-5.  On the **Choose Issuance Authorization Rules** page, select **Permit all users to access this relying party**, and then click **Next**.
-
-6.  On the **Ready to Add Trust** page, click **Next**.
-
-7.  On the **Edit Claim Rules** dialog box, click **Add Rule**.
-
-8.  On the **Choose Rule Type** page, select **Send Claims Using a Custom Rule**, and then click **Next**.
-
-9. On the **Configure Claim Rule** page, in the **Claim rule name** box, type **All Claims**. In the **Custom rule** box, type the following claim rule.
+5.  On the **Edit Claim Rules** dialog box, you should see a default claim rule called **Issue all claims** has been added automatically (by running the script). If you click **Edit Rule** button, you should see claim rule like below.
 
     ```
     c:[ ]
@@ -340,14 +217,30 @@ You must now secure your sample application that runs on your web server with AD
 
     ```
 
-10. Click **Finish**, and then click **OK**.
+6.  Click **OK** to close the dialog box.
 
 ## <a name="BKMK_10"></a>Step 4: Configure the client computer (Client1)
-Set up another virtual machine and install Windows 8.1. This virtual machine must be on the same virtual network as the other machines. This machine should NOT be joined to the Contoso domain.
+Set up another virtual machine and install Windows 8.1. This virtual machine must be on the same virtual network as the other machines. This machine should NOT be joined to the Contoso domain. This machine should have Internet access. 
 
 The client MUST trust the SSL certificate that is used for the federation server (ADFS1), which you set up in [Step 2: Configure the federation server (ADFS1) with Device Registration Service](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4). It must also be able to validate certificate revocation information for the certificate.
 
-You also must set up and use a Microsoft account to log on to Client1.
+Open a browser on the client machine (Client1), navigate to the Claims X-Ray [https://adfshelp.microsoft.com/ClaimsXray/TokenRequest](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest). Go to section 2, follow below steps to provide information for testing.
+
+1.  In **Federation Instance** field, type your federation service name (adfs1.contoso.com).
+
+2.  In **Authentication type** field, select **Forms**. 
+
+3.  In **Token Request** field, select **SAML-P (SAML 2.0)** or **WS-FED (SAML 1.1)**.
+
+4.  Check the box **Force fresh authentication**.
+
+5.  Click on **Test Authentication** button. Now a new browser tab should be opened and you should be redirected to ADFS login page.
+
+![Claims X-Ray Manager Script download](media/Set-up-an-AD-FS-lab-environment/provide-info-claimsxray.png)
+
+6. Type your **username** (UPN or domain\name format) and **password** on the ADFS login page. 
+
+7. After successful authentication, you should be redirected back to Claims X-Ray page which will display all your claims. 
 
 ## See Also
 [Active Directory Federation Services How-To Video Series: Installing an AD FS Server Farm](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)
