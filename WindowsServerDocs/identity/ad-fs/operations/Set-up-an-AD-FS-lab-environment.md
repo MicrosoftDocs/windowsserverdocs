@@ -24,13 +24,13 @@ This topic outlines the steps to configure a test environment that can be used t
 
 To set up this test environment, complete the following steps:
 
-1.  [Step 1: Configure the domain controller (DC1)](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_1)
+1.  [Step 1: Configure the domain controller (DC1)](../../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md#BKMK_1)
 
-2.  [Step 2: Configure the federation server (ADFS1) with Device Registration Service](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)
+2.  [Step 2: Configure the federation server (ADFS1) with Device Registration Service](../../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md#BKMK_4)
 
-3.  [Step 3: Configure Claims X-Ray as a sample claims-based application](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)
+3.  [Step 3: Configure Claims X-Ray as a sample claims-based application](../../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md#BKMK_5)
 
-4.  [Step 4: Configure the client computer (Client1)](../../ad-fs/operations/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
+4.  [Step 4: Configure the client computer (Client1)](../../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md#BKMK_10)
 
 ## <a name="BKMK_1"></a>Step 1: Configure the domain controller (DC1)
 For the purposes of this test environment, you can call your root Active Directory domain **contoso.com** and specify <strong>pass@word1</strong> as the administrator password.
