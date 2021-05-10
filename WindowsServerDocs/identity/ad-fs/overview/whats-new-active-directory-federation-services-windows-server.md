@@ -68,7 +68,7 @@ The following support for building modern LOB apps has been added to AD FS 2019:
 
 ### Supportability improvements
 
-The following supportability improvements are not part of AD FS 2019:
+The following supportability improvements are now part of AD FS 2019:
 - **Send error details to AD FS admins** - Allows admins to configure end users to send debug logs relating to a failure in end user authentication to be stored as a zipped filed for easy consumption. Admins can also configure an SMTP connection to automail the zipped file to a triage email account or to auto create a ticket based on the email.
 
 
