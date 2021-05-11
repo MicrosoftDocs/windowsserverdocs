@@ -13,6 +13,7 @@ metadata:
   author: DocsPreview
   ms.author: v-nishmi
   ms.date: 09/25/2020
+  ms.localizationpriority: high
   featureFlags:
             -clicktale
            
@@ -42,14 +43,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "Take action: May 2021 security update available for all supported versions of Windows"
+          url: https://support.microsoft.com/help/5003173
+          itemType: whats-new
+        - text: "Windows 10, version 1803 and other editions of Windows 10 have reached end of servicing"
+          url: https://docs.microsoft.com/windows/release-information/windows-message-center#1601
+          itemType: whats-new
         - text: "Public preview of Microsoft Graph APIs to manage Windows updates "
           url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/public-preview-of-microsoft-graph-apis-to-manage-windows-updates/ba-p/2302751
-          itemType: whats-new
-        - text: "April 2021 Windows preview \"C\" release for Windows 10, version 20H2 and Windows 10, version 2004 is available"
-          url: https://support.microsoft.com/help/5001391
-          itemType: whats-new
-        - text: ".NET Framework 4.5.2, 4.6, 4.6.1 will reach end of support in 2022"
-          url: https://aka.ms/framework-452-46-461-eos-blog
           itemType: whats-new
 
       footerLink:
