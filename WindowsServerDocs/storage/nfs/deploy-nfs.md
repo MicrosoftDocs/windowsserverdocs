@@ -4,7 +4,7 @@ description: Describes how to deploy Network File System.
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.date: 07/09/2018
+ms.date: 05/12/2021
 ms.localizationpriority: medium
 ---
 # Deploy Network File System
