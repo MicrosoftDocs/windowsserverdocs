@@ -1,0 +1,23 @@
+### YamlMime:Hub
+
+title: Windows Server 2022 documentation
+summary: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
+
+metadata:
+  title: Windows Server Documentation - Microsoft Docs
+  description: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
+  author: IngridAtMicrosoft
+  manager: femila
+  ms.service: windows-server
+  ms.topic: hub-page
+  ms.date: 05/13/2021
+  ms.author: inhenkel
+
+highlightedContent:
+  items:
+    - title: What's new in Windows Server 2022?
+      itemType: whats-new # controls the icon image and super-title text
+      url: ./whatsnew/whats-new-windows-server-2022.md
+    - title: Compare Windows Server 2022 to previous versions
+      itemType: overview # controls the icon image and super-title text
+      url: ./whatsnew/reference-windows-server-2022-comparison.md
