@@ -121,7 +121,7 @@ C. The client then sends the authorization code in the Access Token Request as u
 D. The AD FS transforms "code_verifier" and compares it to "t(code_verifier)" from (B).  Access is denied if they are not equal.
 
 #### How to choose additional auth providers in 2019 
-ADFS already supports triggering additional authentication based on claim rule policy. Those policies can be set on a particular RP or at global level. Additional auth policy for a particular RP could be set using the cmdlet [Set-AdfsRelyingPartyTrust (ADFS) | Microsoft Docs](https://docs.microsoft.com/powershell/module/adfs/set-adfsrelyingpartytrust?view=windowsserver2019-ps&viewFallbackFrom=win10-ps&preserve-view=true) by passing either AdditionalAuthenticationRules or AdditionalAuthenticationRulesFile parameter. To set it globally admin can use the cmdlet [Set-AdfsAdditionalAuthenticationRule (ADFS) | Microsoft Docs](https://docs.microsoft.com/powershell/module/adfs/set-adfsadditionalauthenticationrule?view=windowsserver2019-ps&viewFallbackFrom=win10-ps&preserve-view=true ).
+ADFS already supports triggering additional authentication based on claim rule policy. Those policies can be set on a particular RP or at global level. Additional auth policy for a particular RP could be set using the cmdlet [Set-AdfsRelyingPartyTrust (ADFS) | Microsoft Docs](https://docs.microsoft.com/powershell/module/adfs/set-adfsrelyingpartytrust) by passing either AdditionalAuthenticationRules or AdditionalAuthenticationRulesFile parameter. To set it globally admin can use the cmdlet [Set-AdfsAdditionalAuthenticationRule (ADFS) | Microsoft Docs](https://docs.microsoft.com/powershell/module/adfs/set-adfsadditionalauthenticationrule ).
 
 For example, 2012 R2 onwards admin can already write the following rule to prompt additional authentication if the request comes from extranet. 
 
@@ -163,11 +163,11 @@ Set- Set-AdfsRelyingPartyTrust -TargetName AppB -AdditionalAuthenticationRules '
 c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "CertificateAuthentication");' 
  ```
  
-Admin can also make rules to allow more than one additional authentication provider in which case ADFS will show all the issued auth methods providers and user can choose any of them. For allowing multiple additional authentication provider they should issue multiple claim  http://schemas.microsoft.com/claims/authnmethodsproviders 
+Admin can also make rules to allow more than one additional authentication provider in which case ADFS will show all the issued auth methods providers and user can choose any of them. For allowing multiple additional authentication provider they should issue multiple claim  https://schemas.microsoft.com/claims/authnmethodsproviders 
 
 If none of the auth providers are returned by the claim evaluation, ADFS will fall back to show all the additional auth providers configured by Admin on ADFS and user will need to select the appropriate auth provider. 
 
-To get all the additional authentication providers allowed, admin can use the cmdlet (Get-AdfsGlobalAuthenticationPolicy).AdditionalAuthenticationProvider. The value of http://schemas.microsoft.com/claims/authnmethodsproviders claim should be one of the provider names returned by above cmdlet. 
+To get all the additional authentication providers allowed, admin can use the cmdlet (Get-AdfsGlobalAuthenticationPolicy).AdditionalAuthenticationProvider. The value of https://schemas.microsoft.com/claims/authnmethodsproviders claim should be one of the provider names returned by above cmdlet. 
 
 There is no support to trigger particular additional auth provider if the RP is using [Access Control Policies in AD FS Windows Server 2016 | Microsoft Docs](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/access-control-policies-in-ad-fs). While moving an Application away from Access control policy, ADFS copies the corresponding policy from Access Control Policy to AdditionalAuthenticationRules and IssuanceAuthorizationRules. So if an admin wants to use particular auth provider, they can moves away from not using access control policy and then modify AdditionalAuthenticationRules to trigger particular additional auth provider. 
 
