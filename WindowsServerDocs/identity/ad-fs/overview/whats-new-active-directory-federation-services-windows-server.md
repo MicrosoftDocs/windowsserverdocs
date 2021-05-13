@@ -121,12 +121,12 @@ C. The client then sends the authorization code in the Access Token Request as u
 D. The AD FS transforms "code_verifier" and compares it to "t(code_verifier)" from (B).  Access is denied if they are not equal.
 
 #### How to choose additional auth providers in 2019 
-ADFS already supports triggering additional authentication based on claim rule policy. Those policies can be set on a particular RP or at global level. Additional auth policy for a particular RP could be set using the cmdlet [Set-AdfsRelyingPartyTrust (ADFS) | Microsoft Docs](https://docs.microsoft.com/powershell/module/adfs/set-adfsrelyingpartytrust?view=windowsserver2019-ps&viewFallbackFrom=win10-ps) by passing either AdditionalAuthenticationRules or AdditionalAuthenticationRulesFile parameter. To set it globally admin can use the cmdlet [Set-AdfsAdditionalAuthenticationRule (ADFS) | Microsoft Docs](https://docs.microsoft.com/en-us/powershell/module/adfs/set-adfsadditionalauthenticationrule?view=windowsserver2019-ps&viewFallbackFrom=win10-ps).
+ADFS already supports triggering additional authentication based on claim rule policy. Those policies can be set on a particular RP or at global level. Additional auth policy for a particular RP could be set using the cmdlet [Set-AdfsRelyingPartyTrust (ADFS) | Microsoft Docs](https://docs.microsoft.com/powershell/module/adfs/set-adfsrelyingpartytrust?view=windowsserver2019-ps&viewFallbackFrom=win10-ps&preserve-view=true) by passing either AdditionalAuthenticationRules or AdditionalAuthenticationRulesFile parameter. To set it globally admin can use the cmdlet [Set-AdfsAdditionalAuthenticationRule (ADFS) | Microsoft Docs](https://docs.microsoft.com/powershell/module/adfs/set-adfsadditionalauthenticationrule?view=windowsserver2019-ps&viewFallbackFrom=win10-ps&preserve-view=true ).
 
 For example, 2012 R2 onwards admin can already write the following rule to prompt additional authentication if the request comes from extranet. 
 
 ```
-Set-AdfsAdditionalAuthenticationRule -AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );' 
+Set-AdfsAdditionalAuthenticationRule -AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );' 
 ```
 In 2019, customers can now use claims rules to decide which additional authentication provider to invoke for additional authentication. This is useful for 2 scenarios: 
 
@@ -134,25 +134,25 @@ Customers are transitioning from one additional authentication provider to anoth
 
 Customers have a need for a specific additional authentication provider (e.g. certificate) for certain applications but different method (AzureMFA) for other applications. 
 
-This could be achieved by issuing the claim http://schemas.microsoft.com/claims/authnmethodsproviders from additional authentication policies. The value of this claim should be the Name of the authentication provider. 
+This could be achieved by issuing the claim https://schemas.microsoft.com/claims/authnmethodsproviders from additional authentication policies. The value of this claim should be the Name of the authentication provider. 
 
 Now in 2019 they can modify above claim rule to choose auth providers based on their scenarios.  
 
 Transitioning from one additional authentication provider to another: 
 We will modify the above rule to choose AzureMFA for users which are in group SID S-1-5-21-608905689-872870963-3921916988-12345 (say a group managed by enterprise which tracks the users which has registered for AzureMFA) and for rest of the users, admin wants to use certificate auth. 
 ```
-'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" ); 
+'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
 
- c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-21-608905689-872870963-3921916988-12345"] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "AzureMfaAuthentication"); 
+ c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-21-608905689-872870963-3921916988-12345"] => issue(Type = "https://schemas.microsoft.com/claims/authnmethodsproviders", Value = "AzureMfaAuthentication"); 
 
-not exists([Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value=="S-1-5-21-608905689-872870963-3921916988-12345"]) => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "CertificateAuthentication");’ 
+not exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value=="S-1-5-21-608905689-872870963-3921916988-12345"]) => issue(Type = "https://schemas.microsoft.com/claims/authnmethodsproviders", Value = "CertificateAuthentication");’ 
 ```
  
 Example to set 2 different auth providers for 2 different applications. 
 
 Application A to use Azure MFA as additional auth provider: 
 ```
-Set-AdfsRelyingPartyTrust -TargetName AppA -AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" ); 
+Set-AdfsRelyingPartyTrust -TargetName AppA -AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
 
 c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "AzureMfaAuthentication");' 
 ```
