@@ -53,7 +53,7 @@ In this step, you specify what servers to migrate and then scan them to collect 
 8. Select **Start scan**.<br>The page updates to shows when the scan is complete.
     ![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
      **Figure 2: Inventorying servers**
-9. Select each server to review the shares, configuration, network adapters, and volumes that were inventoried. <br><br>Storage Migration Service won't transfer files or folders that we know could interfere with Windows operation, so you'll see warnings for any shares located in the Windows system folder. You'll have to skip these shares during the transfer phase. For more info, see [What files and folders are excluded from transfers](faq.md#what-files-and-folders-are-excluded-from-transfers).
+9. Select each server to review the shares, configuration, network adapters, and volumes that were inventoried. <br><br>Storage Migration Service won't transfer files or folders that we know could interfere with Windows operation, so you'll see warnings for any shares located in the Windows system folder. You'll have to skip these shares during the transfer phase. For more info, see [What files and folders are excluded from transfers](faq.yml#what-files-and-folders-are-excluded-from-transfers-).
 8. Select **Next** to move on to transferring data.
 
 ## Step 2: Transfer data from your old servers to the destination servers
@@ -133,5 +133,5 @@ After migrating a server or cluster, evaluate the environment for possible post 
 ## Additional References
 
 - [Storage Migration Service overview](overview.md)
-- [Storage Migration Services frequently asked questions (FAQ)](faq.md)
+- [Storage Migration Services frequently asked questions (FAQ)](faq.yml)
 - [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning)

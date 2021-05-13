@@ -184,12 +184,12 @@ This section contains advanced troubleshooting topics and links to help you reso
 ## Troubleshoot storage migration
 
 - [Storage Migration Service known issues](../storage/storage-migration-service/known-issues.md)
-- [Storage Migration Service frequently asked questions (FAQ)](../storage/storage-migration-service/faq.md)
+- [Storage Migration Service frequently asked questions (FAQ)](../storage/storage-migration-service/faq.yml)
 
 ## Troubleshoot Storage Replica
 
 - [Known issues with Storage Replica](../storage/storage-replica/storage-replica-known-issues.md)
-- [Frequently Asked Questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.md)
+- [Frequently Asked Questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.yml)
 
 ## Troubleshoot user profiles
 
