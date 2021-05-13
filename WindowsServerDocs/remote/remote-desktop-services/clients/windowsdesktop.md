@@ -3,7 +3,7 @@ title: Get started with the Windows Desktop client
 description: Basic information about the Windows Desktop client.
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
 ms.date: 09/05/2020
 ms.localizationpriority: medium

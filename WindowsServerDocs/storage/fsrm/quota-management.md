@@ -33,10 +33,8 @@ This section includes the following topics:
 -   [Edit Auto Apply Quota Properties](edit-auto-apply-quota-properties.md)
 
 > [!Note]
-> To set e-mail notifications and reporting capabilities, you must first configure the general File Server Resource Manager options.
+> To set e-mail notifications and reporting capabilities, you must first configure the general File Server Resource Manager options. If you're just looking to free up space on a volume, consider using Azure File Sync with cloud tiering enabled. This allows you to cache your most frequently accessed files locally and tier your least frequently accessed files to the cloud, saving local storage space while maintaining performance. For details, see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning).
 
 ## Additional References
 
 -   [Setting File Server Resource Manager Options](setting-file-server-resource-manager-options.md)
-
-
