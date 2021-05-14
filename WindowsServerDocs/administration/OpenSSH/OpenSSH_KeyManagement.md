@@ -43,7 +43,7 @@ To make this easier,
 * On first use of sshd, the key pair for the host will be automatically generated. If ssh-agent is running, the keys will be automatically added to the local store.
 
 > [!IMPORTANT]
-> You need to have OpenSSH Server installed first. Please see [Getting started with OpenSSH](OpenSSH_Install_FirstUse.md)
+> You need to have OpenSSH Server installed first. Please see [Getting started with OpenSSH](OpenSSH_Install_FirstUse.md).
 
 To make key authentication easy with an SSH server, run the following commands from an elevated PowerShell prompt:
 
