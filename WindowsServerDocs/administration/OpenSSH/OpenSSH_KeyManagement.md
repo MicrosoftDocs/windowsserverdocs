@@ -42,10 +42,12 @@ To make this easier,
 * The OpenSSHUtils PowerShell module has been created to set the key ACLs properly, and should be installed on the server
 * On first use of sshd, the key pair for the host will be automatically generated. If ssh-agent is running, the keys will be automatically added to the local store.
 
+> [!IMPORTANT]
+> You need to have OpenSSH Server installed first. Please see [Getting started with OpenSSH](OpenSSH_Install_FirstUse.md)
+
 To make key authentication easy with an SSH server, run the following commands from an elevated PowerShell prompt:
 
 ```powershell
-
 # Install the OpenSSHUtils module to the server. This will be valuable when deploying user keys.
 Install-Module -Force OpenSSHUtils -Scope AllUsers
 
@@ -128,7 +130,6 @@ Get-Service ssh-agent
 
 # Now load your key files into ssh-agent
 ssh-add ~\.ssh\id_ed25519
-
 ```
 
 After completing these steps, whenever a private key is needed for authentication from this client, ssh-agent will automatically retrieve the local private key and pass it to your SSH client.
