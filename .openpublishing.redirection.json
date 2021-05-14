@@ -10004,6 +10004,11 @@
       "source_path": "WindowsServerDocs/failover-clustering/vm-load-balancing-deep-dive.md",
       "redirect_url": "/azure-stack/hci/manage/vm-load-balancing",
       "redirect_document_id": false
-    }    
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/cluster-sets.md",
+      "redirect_url": "/azure-stack/hci/deploy/cluster-set",
+      "redirect_document_id": false
+    }  
   ]
 }
