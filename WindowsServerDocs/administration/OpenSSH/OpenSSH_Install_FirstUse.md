@@ -73,7 +73,7 @@ Online        : True
 RestartNeeded : False
 ```
 
-## Start and configure SSH Server
+## Start and configure OpenSSH Server
 
 To start and configure OpenSSH server for initial use, open PowerShell as an administrator, then run the following commands to start the `SSHD service`:
 
@@ -88,9 +88,9 @@ Get-NetFirewallRule -Name *ssh*
 New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
 ```
 
-## Connect to SSH Server
+## Connect to OpenSSH Server
 
-Once installed, you can connect to OpenSSH Server from a Windows 10 device with the SSH client installed using PowerShell as follows. Be sure to run PowerShell as an administrator:
+Once installed, you can connect to OpenSSH Server from a Windows 10 device with the OpenSSH client installed using PowerShell as follows. Be sure to run PowerShell as an administrator:
 
 ```powershell
 Ssh username@servername
@@ -104,7 +104,7 @@ ECDSA key fingerprint is SHA256:(<a large string>).
 Are you sure you want to continue connecting (yes/no)?
 ```
 
-Selecting **yes** adds that server to the list of known ssh hosts on your Windows client.
+Selecting **yes** adds that server to the list of known SSH hosts on your Windows client.
 
 You are prompted for the password at this point. As a security precaution, your password will not be displayed as you type.
 
