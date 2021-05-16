@@ -4,7 +4,7 @@ title: Windows Time service tools and settings
 author: Teresa-Motiv
 description: Describes the settings that are available for Windows Time Service (W32Time) and the tools that you can use to configure those settings
 ms.author: v-tea
-ms.date: 04/28/2021
+ms.date: 05/20/2021
 ms.topic: article
 ms.custom: contperf-fy21q4
 ---
@@ -119,7 +119,7 @@ In order for W32tm.exe to reset a computer clock, the computer clock time offset
 
 The values for `CurrentTimeOffset`, `SystemClockRate`, `PhaseCorrectRate`, and `MaxAllowedPhaseOffset` are all measured in clock ticks, where 1 ms = 10,000 clock ticks on a Windows system.
 
-To get the `SystemClockRate` value, you can use the following command and convert it from seconds to clock ticks by using the formula of (seconds &times; 1,000 &times; 10,0000):
+To get the `SystemClockRate` value, you can use the following command and convert it from seconds to clock ticks by using the formula of (seconds &times; 1,000 &times; 10,000):
 
 ```cmd
 W32tm /query /status /verbose
@@ -142,7 +142,7 @@ Your computer clock time is 11:05 and the actual current time is 11:09:
 > MaxAllowedPhaseOffset = 10 min = 600 seconds = 600 &times; 1,000 &times; 10,000 = 6,000,000,000 clock ticks
 >
 > |CurrentTimeOffset| = 4 min = 4 &times; 60 &times; 1,000 &times; 10,000 = 2,400,000,000 clock ticks
->
+
 Is `CurrentTimeOffset` &le; `MaxAllowedPhaseOffset`?
 
 > 2,400,000,000 &le; 6,000,000,000: TRUE
@@ -173,16 +173,16 @@ Your computer clock time is 11:05 and the actual current time is 11:08:
 > MaxAllowedPhaseOffset = 10 min = 600 seconds = 600 &times; 1,000 &times; 10,000 = 6,000,000,000 clock ticks
 >
 > |CurrentTimeOffset| = 3 mins = 3 &times; 60 &times; 1,000 &times; 10,000 = 1,800,000,000 clock ticks
->
+
 Is `CurrentTimeOffset` &le; `MaxAllowedPhaseOffset`?
->
+
 > 1,800,000,000 &le; 6,000,000,000: TRUE
 
 AND does it satisfy the above equation?
 
 > (|CurrentTimeOffset| &divide; (PhaseCorrectRate &times; UpdateInterval) &le; SystemClockRate &divide; 2)
 
- Is 3 mins &times; (1,800,000,000) &divide; (30,000 &times; 1) &le; 156,000 &divide; 2
+Is 3 mins &times; (1,800,000,000) &divide; (30,000 &times; 1) &le; 156,000 &divide; 2
 
 > Is 60,000 &le; 78,000: TRUE
 
@@ -233,7 +233,7 @@ The Windows Time service stores information in the registry at the **HKLM\SYSTEM
 - [**\TimeProviders\NtpClient**](#ntpclient)
 - [**\TimeProviders\NtpServer**](#ntpserver)
 
-In the following tables, "All versions" refers to Windows 7, Windows 8, Windows 10, Windows Server 2008 and Windows Server 2008 R2, Windows Server 2012 and Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019. 
+In the following tables, "All versions" refers to Windows 7, Windows 8, Windows 10, Windows Server 2008 and Windows Server 2008 R2, Windows Server 2012 and Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019.
 
 > [!NOTE]
 > Some of the parameters in the registry are measured in clock ticks and some are measured in seconds. To convert the time from clock ticks to seconds, use these conversion factors:
@@ -363,7 +363,7 @@ These are the global Group Policy settings and default values for the Windows Ti
 These are the Windows NTP client settings and default values for the Windows Time service. These settings are contained in the **Configure Windows NTP Client** GPO in Local Group Policy Editor.
 
 |Group Policy setting|Default value|
-|------------------------|-----------------|
+|--------------------|-------------|
 |NtpServer|`time.windows.com`, 0x1|
 |Type|**NTP** - Use for non-domain-joined computers<br>**NT5DS** - Use for domain-joined computers|
 |CrossSiteSyncFlags|2|
