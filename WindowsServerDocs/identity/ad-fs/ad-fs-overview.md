@@ -21,7 +21,7 @@ This document contains a list of all of the documentation overviews for AD FS fo
 
 * [AD FS Requirements](./overview/ad-fs-requirements.md)
 
-* [AD FS FAQ](../ad-fs/overview/AD-FS-FAQ.md)
+* [AD FS FAQ](../ad-fs/overview/AD-FS-FAQ.yml)
 
 
 
