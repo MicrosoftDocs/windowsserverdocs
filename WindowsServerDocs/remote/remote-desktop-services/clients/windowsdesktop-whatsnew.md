@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 05/11/2021
+ms.date: 05/18/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -19,7 +19,16 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.1954        |1.2.1446                   |
-|Insider    |1.2.1954        |1.2.1446                   |
+|Insider    |1.2.2059        |1.2.1446                   |
+
+## Updates for version 1.2.2059 (Insiders)
+
+*Date published: 05/18/2021*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Admins can now set a policy to automatically subscribe users.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 
 ## Updates for version 1.2.1954
 
