@@ -17,7 +17,7 @@ Find information on known issues for Windows Server 2008 SP2. Looking for a spec
 
 |               |               |               |               |
 | ------------- | ------------- | ------------- | ------------- |
-| ![Windows 10, version 20H2 is now available](https://docs.microsoft.com/office/media/icons/whats-new-megaphone-blue.png) | **[Windows 10, version 20H2 is now available](https://aka.ms/how-to-get-20H2)** <br/> Find out how to get the update >| ![What’s new for IT pros](https://docs.microsoft.com/office/media/icons/education-tutorial-blue.png) | **[What’s new for IT pros](https://aka.ms/new-in-20H2)** <br/> Explore the latest features and servicing innovations in Windows 10, version 20H2 >|
+| ![Windows 10, version 21H1 is now available](https://docs.microsoft.com/office/media/icons/whats-new-megaphone-blue.png) | **[Windows 10, version 21H1 is now available](https://aka.ms/how-to-get-21H1)** <br/> Find out how to get the update >| ![IT tools for Windows 10, version 21H1](https://docs.microsoft.com/office/media/icons/education-tutorial-blue.png) | **[IT tools for Windows 10, version 21H1](https://aka.ms/tools-for-21H1)** <br/> Explore the latest tools and resources to support your rollout >|
 <div align='right' style='font-size:0.87rem'><a class='is-size-7' href='https://docs.microsoft.com/windows/release-information/windows-message-center'>See all messages ></a></div><hr class='cardsM'>
 
 ## Known issues
