@@ -9,7 +9,7 @@ ms.date: 10/16/2017
 
 # Tuning IIS 10.0
 
-Internet Information Services (IIS) 10.0 is included with Windows Server 2016. It uses a process model similar to that of IIS 8.5 and IIS 7.0. A kernel-mode web driver (http.sys) receives and routes HTTP requests, and satisfies requests from its response cache. Worker processes register for URL subspaces, and http.sys routes the request to the appropriate process (or set of processes for application pools).
+Internet Information Services (IIS) 10.0 is included with Windows Server 2022. It uses a process model similar to that of IIS 8.5 and IIS 7.0. A kernel-mode web driver (http.sys) receives and routes HTTP requests, and satisfies requests from its response cache. Worker processes register for URL subspaces, and http.sys routes the request to the appropriate process (or set of processes for application pools).
 
 HTTP.sys is responsible for connection management and request handling. The request can be served from the HTTP.sys cache or passed to a worker process for further handling. Multiple worker processes can be configured, which provides isolation at a reduced cost. For more info on how request handling works, see the following figure:
 
@@ -69,7 +69,7 @@ The following are some useful settings for the HTTP.sys kernel-mode cache:
 
 ## Request and connection management settings
 
-In Windows Server 2016, HTTP.sys manages connections automatically. The following registry settings are no longer used:
+In Windows Server 2022, HTTP.sys manages connections automatically. The following registry settings are no longer used:
 
 -   **MaxConnections**
 
@@ -119,7 +119,7 @@ Use Appcmd.exe, the IIS 10.0 Management Console, the WebAdministration or IISAd
 
 ## Ideal CPU setting for NUMA hardware
 
-Starting from Windows 2016, IIS 10.0 supports automatic ideal CPU assignment for its thread pool threads to enhance the performance and scalability on NUMA hardware. This feature is enabled by default and can be configured through the following registry key:
+Starting from Windows Server 2016, IIS 10.0 supports automatic ideal CPU assignment for its thread pool threads to enhance the performance and scalability on NUMA hardware. This feature is enabled by default and can be configured through the following registry key:
 
 ``` syntax
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\InetInfo\Parameters\ThreadPoolUseIdealCpu
