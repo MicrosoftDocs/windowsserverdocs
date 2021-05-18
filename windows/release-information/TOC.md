@@ -1,6 +1,9 @@
 ﻿# [Windows release health](index.yml)
 # [Windows 10 release information](release-information.md)
 # [Message center](windows-message-center.md)
+# Version 21H1
+## [Known issues and notifications](status-windows-10-21H1.md)
+## [Resolved issues](resolved-issues-windows-10-21H1.md)
 # Version 20H2
 ## [Known issues and notifications](status-windows-10-20H2.md)
 ## [Resolved issues](resolved-issues-windows-10-20H2.md)
