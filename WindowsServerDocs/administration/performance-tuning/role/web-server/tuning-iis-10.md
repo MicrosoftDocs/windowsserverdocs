@@ -1,6 +1,6 @@
 ---
 title: Tuning IIS 10.0
-description: Performance tuning recommmendations for IIS 10.0 web servers on Windows Server 16
+description: Performance tuning recommendations for IIS 10.0 web servers on Windows Server 16
 ms.topic: landing-page
 ms.author: ericam
 author: phstee
@@ -285,7 +285,7 @@ Besides the maxConcurrentRequestPerCpu setting, ASP.NET 4.7 also provides settin
 -   **percentCpuLimit** Default value: 90
 Asynchronous request has some scalability issues when a huge load (beyond the hardware capabilities) is put on such scenario. The problem is due to the nature of allocation on asynchronous scenarios. In these conditions, allocation will happen when the asynchronous operation starts, and it will be consumed when it completes. By that time, itâs very possible the objects have been moved to generation 1 or 2 by GC. When this happens, increasing the load will show increase on request per second (rps) until a point. Once we pass that point, the time spent in GC will start to become a problem and the rps will start to dip, having a negative scaling effect. To fix the problem, when the cpu usage exceeds percentCpuLimit setting, requests will be sent to the ASP.NET native queue.
 -   **percentCpuLimitMinActiveRequestPerCpu** Default value: 100
-CPU throttling(percentCpuLimit setting) is not based on number of requests but on how expensive they are. As a result, there could be just a few CPU-intensive requests causing a backup in the native queue with no way to empty it aside from incoming requests. To solve this problme, percentCpuLimitMinActiveRequestPerCpu can be used to ensure a minimum number of requests are being served before throttling kicks in.
+CPU throttling(percentCpuLimit setting) is not based on number of requests but on how expensive they are. As a result, there could be just a few CPU-intensive requests causing a backup in the native queue with no way to empty it aside from incoming requests. To solve this problem, percentCpuLimitMinActiveRequestPerCpu can be used to ensure a minimum number of requests are being served before throttling kicks in.
 
 ## Worker process and recycling options
 
