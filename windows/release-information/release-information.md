@@ -20,9 +20,6 @@ We recommend that you begin deployment of each Semi-Annual Channel release immed
 
 For information about servicing timelines, see the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853).
 
-> [!NOTE]
-> Beginning with Windows 10, version 1903, you will find a [single entry for each SAC release](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523).
-
 <div class="m-rich-content-block" data-grid="col-12">
     <div id="winrelinfo" xmlns="http://www.w3.org/1999/xhtml"><iframe width="100%" height="866px" id="winrelinfo_iframe" title="Windows Release Information" src="https://winreleaseinfoprod.blob.core.windows.net/winreleaseinfoprod/en-US.html" frameborder="0" marginwidth="0" marginheight="0" scrolling="auto"></iframe></div>
     <script src="https://winreleaseinfoprod.blob.core.windows.net/winreleaseinfoprod/iframe.js" xmlns="http://www.w3.org/1999/xhtml"></script>
