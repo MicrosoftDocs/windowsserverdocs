@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 05/18/2021
+ms.date: 05/19/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
