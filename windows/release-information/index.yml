@@ -43,14 +43,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "Internet Explorer 11 (IE11) desktop application will be retired on Windows 10 on June 15, 2022 "
+          url: https://aka.ms/IEmodeblog
+          itemType: whats-new
         - text: "Windows 10, version 21H1 now available"
           url: https://docs.microsoft.com/windows/release-information/windows-message-center#1608
           itemType: whats-new
         - text: "Take action: May 2021 security update available for all supported versions of Windows"
           url: https://support.microsoft.com/help/5003173
-          itemType: whats-new
-        - text: "Windows 10, version 1803 and other editions of Windows 10 have reached end of servicing"
-          url: https://docs.microsoft.com/windows/release-information/windows-message-center#1601
           itemType: whats-new
 
       footerLink:
