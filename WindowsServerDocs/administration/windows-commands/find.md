@@ -71,7 +71,7 @@ for %f in (*.bat) do find PROMPT %f
 To search your hard disk to find and display the file names on drive C that contain the string CPU, use the pipe (|) to direct the output of the **dir** command to the **find** command as follows:
 
 ```
-dir c:\ /s /b | find CPU
+dir c:\ /s /b | find "CPU"
 ```
 
 Because **find** searches are case-sensitive and **dir** produces uppercase output, you must either type the string CPU in uppercase letters or use the **/i** command-line option with **find**.

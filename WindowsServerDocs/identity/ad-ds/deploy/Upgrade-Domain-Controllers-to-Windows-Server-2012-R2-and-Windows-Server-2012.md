@@ -116,9 +116,8 @@ Because Windows Update is a part of Automatic Maintenance in Windows 8 and Windo
 
 The following table lists some examples of how to configure these settings to provide desired restart behavior.
 
-|||
-|-|-|
 |**Scenario**|**Recommended configuration(s)**|
+|-|-|
 |**WSUS managed**<p>-   Install updates once per week<br />-   Reboot Fridays at 11PM|Set machines to auto-install, prevent auto-reboot until desired time<p>**Policy**: Configure Automatic Updates (Enabled)<p>Configure automatic updating: 4 - Auto download and schedule the install<p>**Policy**: No auto-restart with logged-on users (Disabled)<p>**WSUS deadlines**: set to Fridays at 11PM|
 |**WSUS managed**<p>-   Stagger installs across different hours/days|Set target groups for different groups of machines that should be updated together<p>Use above steps for previous scenario<p>Set different deadlines for different target groups|
 |**Not WSUS-managed - no support for deadlines**<p>-   Stagger installs at different times|**Policy**: Configure Automatic Updates (Enabled)<p>Configure automatic updating: 4 - Auto download and schedule the install<p>**Registry key:** Enable the registry key discussed in Microsoft KB article [2835627](https://support.microsoft.com/kb/2835627)<p>**Policy:** Automatic Maintenance Random Delay (Enabled)<p>Set **Regular maintenance random delay** to PT6H for 6-hour random delay to provide the following behavior:<p>-   Updates will install at the configured maintenance time plus a random delay<p>-   Restart for each machine will take place exactly 3 days later<p>Alternatively, set a different maintenance time for each group of machines|
