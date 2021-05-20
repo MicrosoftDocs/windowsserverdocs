@@ -37,7 +37,7 @@ The following is a list of best practices and recommendations for hardening and 
 - Ensure the installed certificates are protected against theft (don’t store these on a share on the network) and set a calendar reminder to ensure they get renewed before expiring (expired certificate breaks federation auth).  Additionally, we recommend protecting signing keys/certificates in a [hardware security module (HSM)](#hardware-security-module-hsm) attached to AD FS. 
 - Set logging to the highest level and send the AD FS (& security) logs to a SIEM to correlate with AD authentication as well as AzureAD (or similar).
 - Remove unnecessary protocols & Windows features
-- Use a long (>25 characters), complex password for the AD FS service account. We recommend using a [Group Managed Service Account (gMSA)](../security/group-managed-service-accounts/group-managed-service-accounts-overview.md) as the service account, as it removes the need for managing the service account password over time by managing it automatically. 
+- Use a long (>25 characters), complex password for the AD FS service account. We recommend using a [Group Managed Service Account (gMSA)](../../security/group-managed-service-accounts/group-managed-service-accounts-overview.md) as the service account, as it removes the need for managing the service account password over time by managing it automatically. 
 - Update to the latest AD FS version for security and logging improvements (as always, test first).
 
 ## Ports required
