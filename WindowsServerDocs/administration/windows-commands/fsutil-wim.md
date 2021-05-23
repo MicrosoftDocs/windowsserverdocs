@@ -53,7 +53,7 @@ fsutil wim enumwims C:
 To see if a file is backed by WIM, type:
 
 ```
-fsutil wim C:\Windows\Notepad.exe
+fsutil wim queryFile C:\Windows\Notepad.exe
 ```
 
 To remove the WIM from backing files for volume C: and data source 2, type:
