@@ -3,7 +3,7 @@ title: Supported Remote Desktop RDP file settings
 description: Learn about the RDP file settings for Remote Desktop
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
 ms.date: 09/14/2020
 ms.localizationpriority: medium

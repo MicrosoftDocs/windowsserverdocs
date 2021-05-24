@@ -3,8 +3,8 @@ title: cmdkey
 description: Reference article for the cmdkey command, which creates, lists, and deletes stored user names and passwords or credentials.
 ms.topic: reference
 ms.assetid: 5fcd68ee-a14a-4b71-9300-c3f5c5d31e8e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

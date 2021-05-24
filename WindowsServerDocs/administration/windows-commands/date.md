@@ -3,8 +3,8 @@ title: date
 description: Reference article for the date command, which displays or sets the system date. If used without parameters,
 ms.topic: reference
 ms.assetid: ce6700fb-32f9-4350-a1af-5aee61d4448c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

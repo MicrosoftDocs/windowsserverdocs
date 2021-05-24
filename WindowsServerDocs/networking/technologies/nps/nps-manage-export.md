@@ -4,8 +4,8 @@ description: You can use this topic to learn how to export a Network Policy Serv
 manager: brianlic
 ms.topic: article
 ms.assetid: d268dc57-78f8-47ba-9a7a-a607e8b9225c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 

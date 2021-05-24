@@ -3,8 +3,8 @@ title: typeperf
 description: Reference article for the typeperf command, which writes performance data to the command window or to a log file.
 ms.topic: reference
 ms.assetid: 0c7ca89a-03b3-4626-afcf-ef8565e90043
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

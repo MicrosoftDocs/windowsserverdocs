@@ -4,8 +4,8 @@ description: Learn about the planning steps for deploying a single Remote Access
 manager: brianlic
 ms.topic: article
 ms.assetid: ab518c0d-a496-414e-b9c7-f4378d8b13aa
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Plan Deployment for Remote Management of DirectAccess Clients

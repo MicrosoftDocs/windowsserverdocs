@@ -3,8 +3,8 @@ title: wdsutil get-server
 description: Reference article for wdsutil get-server, which retrieves information from the specified Windows Deployment Services server.
 ms.topic: reference
 ms.assetid: bef60db4-d58d-4304-ab4b-be53dd3271c3
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

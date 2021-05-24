@@ -4,8 +4,8 @@ description: Learn how to configure the Remote Access server to support OTP.
 manager: brianlic
 ms.topic: article
 ms.assetid: df1e87f2-6a0f-433b-8e42-816ae75395f9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Step 3 Configure the Remote Access Server for OTP

@@ -4,8 +4,8 @@ description: Learn how to implement an advanced single server deployment and the
 manager: brianlic
 ms.topic: article
 ms.assetid: f9086c4f-f950-44a9-93f1-7d03aecdaa60
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 

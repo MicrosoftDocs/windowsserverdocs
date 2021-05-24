@@ -3,8 +3,8 @@ title: xcopy
 description: Reference article for xcopy, which copies files and directories, including subdirectories.
 ms.topic: reference
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 01/05/2019
 ---

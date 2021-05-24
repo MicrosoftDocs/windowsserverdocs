@@ -4,8 +4,8 @@ description: Learn how to verify that the client computer is correctly configure
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 31ea58b0-d407-4f62-8ec6-6a1b19174042
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 01/05/2021
 ---
 # Verify Client Computer Settings

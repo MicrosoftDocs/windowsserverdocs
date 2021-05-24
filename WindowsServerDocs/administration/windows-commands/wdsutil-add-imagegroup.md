@@ -3,8 +3,8 @@ title: wdsutil add-imagegroup
 description: Reference article for the wdsutil add-imagegroup command, which adds an image group to a Windows Deployment Services server.
 ms.topic: reference
 ms.assetid: 6ca88671-51de-4924-b969-88f3dfd84270
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

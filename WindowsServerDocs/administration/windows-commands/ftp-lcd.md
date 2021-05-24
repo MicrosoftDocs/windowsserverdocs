@@ -3,8 +3,8 @@ title: ftp lcd
 description: Reference article for the ftp lcd command, which changes the working directory on the local computer.
 ms.topic: reference
 ms.assetid: 60a25808-6abb-408b-8373-0bbdcd0994b4
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

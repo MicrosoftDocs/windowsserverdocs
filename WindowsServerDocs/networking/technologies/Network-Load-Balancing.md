@@ -4,8 +4,8 @@ description: In this topic, we provide you with an overview of the Network Load 
 manager: dougkim
 ms.topic: article
 ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/13/2018
 ---
 # Network Load Balancing

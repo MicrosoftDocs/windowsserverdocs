@@ -4,8 +4,8 @@ description: This topic provides links to information about planning Network Pol
 manager: brianlic
 ms.topic: article
 ms.assetid: cd6fc1b8-26b0-47a4-b27d-f6fa9da0d447
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 

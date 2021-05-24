@@ -3,8 +3,8 @@ title: msinfo32
 description: Reference article for the msinfo32 command, which opens the System Information tool to display a comprehensive view of the hardware, system components, and software environment on the local computer.
 ms.topic: reference
 ms.assetid: a38f31d7-1766-4103-becc-9d0b87c2826d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
