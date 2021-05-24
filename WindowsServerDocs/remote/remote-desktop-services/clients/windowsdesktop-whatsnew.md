@@ -30,7 +30,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to Teams on Windows Virtual Desktop, including the following:
   - Resolved a black screen video issue that also fixed a mismatch in video resolutions with Teams Server.
-  - Teams on WVD now changes resolution and bitrate in accordance with what Teams Server expects.
+  - Teams on Windows Virtual Desktop now changes resolution and bitrate in accordance with what Teams Server expects.
 
 ## Updates for version 1.2.1954
 
