@@ -6,12 +6,15 @@ ms.topic: how-to
 author: msjimwu
 ms.author: jimwu
 manager: mtillman
-ms.date: 3/15/2018
+ms.date: 05/25/2021
 ---
 
 # Deploy Windows Server Hybrid Cloud Print
 
 >Applies To: Windows Server 2016
+
+> [!WARNING]
+> Hybrid Cloud Print is no longer under investment.  We recommend customers to look into [Universal Print](https://aka.ms/universalprint), which is a subscription based cloud service offering with direct support from printer OEMs to enable a completely serverless print solution.
 
 This topic, for IT administrators, describes the end-to-end deployment of the Microsoft Hybrid Cloud Print (HCP) solution. This solution layers on top of existing Windows Server(s) running as Print Server, and enables Azure Active Directory (Azure AD) joined, and MDM managed, devices to discover and print to organization managed printers.
 
