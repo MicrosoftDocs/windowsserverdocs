@@ -56,8 +56,8 @@ We strongly recommend that the orchestrator and destination computers have at le
 
 ### Security requirements, the Storage Migration Service proxy service, and firewall ports
 
-- A migration account that is an administrator on the source computers and the orchestrator computer.
-- A migration account that is an administrator on the destination computers and the orchestrator computer.
+- A migration account that is an administrator on the source computers and the orchestrator computer. This can be a domain or local account except in the case of a computer not joined to the domain, in which case it must be a local user. 
+- A migration account that is an administrator on the destination computers and the orchestrator computer. This can be a domain or local account except in the case of a computer not joined to the domain, in which case it must be a local user. 
 - The orchestrator computer must have the File and Printer Sharing (SMB-In) firewall rule enabled *inbound*.
 - The source and destination computers must have the following firewall rules enabled *inbound* (though you might already have them enabled):
   - File and Printer Sharing (SMB-In)
@@ -69,7 +69,7 @@ We strongly recommend that the orchestrator and destination computers have at le
   > Installing the Storage Migration Service Proxy service on a Windows Server 2019 computer automatically opens the necessary firewall ports on that computer. To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
 
 
-- If the computers belong to an Active Directory Domain Services domain, they should all belong to the same forest. The destination server must also be in the same domain as the source server if you want to transfer the source's domain name to the destination when cutting over. Cutover technically works across domains, but the fully-qualified domain name of the destination will be different from the source...
+- If the computers belong to an Active Directory Domain Services domain, they should all belong to the same forest. The destination server must also be in the same domain as the source server if you want to transfer the source's domain name to the destination when cutting over. Cutover technically works across domains, but the fully-qualified domain name of the destination will be different from the source.
 
 ### Requirements for source servers
 
