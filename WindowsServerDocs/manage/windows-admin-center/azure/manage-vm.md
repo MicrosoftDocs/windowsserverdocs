@@ -260,4 +260,8 @@ Yes, you can use Windows Admin Center on-premises to manage servers and virtual 
 
 ### Does Windows Admin Center in the Azure portal work with Azure Bastion?
 
-Yes.
+No, unfortunately not. 
+
+### Is Windows Admin Center supported for VMs behind a load balancer?
+
+Yes. 
