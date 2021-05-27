@@ -60,7 +60,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Windows Defender Application Control (WDAC) Deployment Guide
-            url: /windows/security/threat-protection/windows-defender-application-control/windows-defender-application-contro
+            url: /windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide.md
           - text: Transport Layer Security Registry Settings
             url: ./tls/tls-registry-settings.md
           - text: Control Flow Guard
