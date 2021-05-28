@@ -3,7 +3,7 @@ title: Windows Desktop client for admins
 description: Information on the Windows Desktop client primarily useful to admins.
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
 ms.date: 12/11/2020
 ms.localizationpriority: medium
