@@ -4,7 +4,7 @@ description: An overview of using Windows Admin Center in the Azure portal to ma
 ms.topic: overview
 author: jasongerend
 ms.author: jgerend
-ms.date: 02/18/2021
+ms.date: 05/28/2021
 ---
 # Use Windows Admin Center in the Azure portal to manage a Windows Server VM
 
@@ -260,4 +260,8 @@ Yes, you can use Windows Admin Center on-premises to manage servers and virtual 
 
 ### Does Windows Admin Center in the Azure portal work with Azure Bastion?
 
-Yes.
+No, unfortunately not. 
+
+### Is Windows Admin Center supported for VMs behind a load balancer?
+
+Yes. 
