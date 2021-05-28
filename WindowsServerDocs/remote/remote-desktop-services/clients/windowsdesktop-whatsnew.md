@@ -3,9 +3,9 @@ title: What's new in the Windows Desktop client
 description: Learn about recent changes to the Remote Desktop client for Windows Desktop
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 03/23/2021
+ms.date: 05/25/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -18,17 +18,42 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.1844        |1.2.945                   |
-|Insider    |1.2.1844        |1.2.945                   |
+|Public     |1.2.2061        |1.2.1446                   |
+|Insider    |1.2.2061        |1.2.1446                   |
+
+## Updates for version 1.2.2061
+
+*Date published: 05/25/2021*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams on Windows Virtual Desktop, including the following:
+  - Resolved a black screen video issue that also fixed a mismatch in video resolutions with Teams Server.
+  - Teams on Windows Virtual Desktop now changes resolution and bitrate in accordance with what Teams Server expects.
+
+## Updates for version 1.2.1954
+
+*Date published: 05/06/2021*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWDU5e), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWDZmj), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWDU5d)
+
+- Fixed an issue that caused the client to crash when users selected "Disconnect all sessions" in the system tray.
+- Fixed an issue where the client wouldn't switch to full screen on a single monitor with a docking station.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams on Windows Virtual Desktop, including the following:
+  - Added hardware acceleration for video processing outgoing video streams for Windows 10-based clients.
+  - When joining a meeting with both a front-facing and rear-facing or external camera, the front-facing camera will be selected by default.
+  - Fixed an issue that made Teams on Windows Virtual Desktop crash while loading on x86-based machines.
+  - Fixed an issue that caused striations during screen sharing.
+  - Fixed an issue that prevented some people in meetings from seeing incoming video or screen sharing.
 
 ## Updates for version 1.2.1844
 
 *Date published: 03/23/2021*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
-
 - Updated background installation functionality to perform silently for the client auto-update feature.
-- Added the option to allow multiple desktop sessions from the client.
+- Fixed an issue where the client forwarded multiple attempts to launch a desktop to the same session. Depending on your group policy configuration, the session host can now allow the creation of multiple sessions for the same user on the same session host or disconnect the previous connection by default. This behavior wasn't consistent before version 1.2.1755.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates for Teams on Windows Virtual Desktop, including the following:
   - We've offloaded video processing (XVP) to reduce CPU utilization by 5-10% (depending on CPU generation). Combined with the hardware decode feature from February's update, we've now reduced the total CPU utilization by 10-20% (depending on CPU generation).
@@ -40,8 +65,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.1755
 
 *Date published: 02/23/2021*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWxOpp), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWxZbP), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWxWHc)
 
 - Added the Experience Monitor access point to the system tray icon.
 - Fixed an issue where entering an email address into the "Subscribe to a Workplace" tab caused the application to stop responding.

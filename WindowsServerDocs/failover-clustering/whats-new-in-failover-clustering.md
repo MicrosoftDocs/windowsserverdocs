@@ -6,15 +6,15 @@ ms.topic: how-to
 manager: lizross
 author: JasonGerend
 ms.author: jgerend
-ms.date: 10/18/2018
+ms.date: 04/30/2021
 ---
 # What's new in Failover Clustering
 
-> Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
-This topic explains the new and changed functionality in Failover Clustering for Windows Server 2019 and Windows Server 2016.
+This topic explains the new and changed functionality in Failover Clustering for Azure Stack HCI, Windows Server 2019, and Windows Server 2016.
 
-## What's new in Windows Server 2019
+## What's new in Windows Server 2019 and Azure Stack HCI
 
 - **Cluster sets**
 
@@ -25,7 +25,7 @@ This topic explains the new and changed functionality in Failover Clustering for
 
 - **Azure-aware clusters**
 
-    Failover clusters now automatically detect when they're running in Azure IaaS virtual machines and optimize the configuration to provide proactive failover and logging of Azure planned maintenance events to achieve the highest levels of availability. Deployment is also simplified by removing the need to configure the load balancer with Distributed Network Name for cluster name.
+    Failover clusters now automatically detect when they're running in Azure IaaS virtual machines and optimize the configuration to provide proactive failover and logging of Azure planned maintenance events to achieve the highest levels of availability. Deployment is also simplified by removing the need to configure the load balancer with Dynamic Network Name for cluster name.
 
 - **Cross-domain cluster migration**
 
@@ -69,7 +69,7 @@ Cluster Operating System Rolling Upgrade enables an administrator to upgrade the
 
 **What value does this change add?**
 
-Upgrading a Hyper-V or Scale-Out File Server cluster from Windows Server 2012 R2 to Windows Server 2016 no longer requires downtime. The cluster will continue to function at a Windows Server 2012 R2 level until all of the nodes in the cluster are running Windows Server 2016. The cluster functional level is upgraded to Windows Server 2016 by using the Windows PowerShell cmdlt `Update-ClusterFunctionalLevel`.
+Upgrading a Hyper-V or Scale-Out File Server cluster from Windows Server 2012 R2 to Windows Server 2016 no longer requires downtime. The cluster will continue to function at a Windows Server 2012 R2 level until all of the nodes in the cluster are running Windows Server 2016. The cluster functional level is upgraded to Windows Server 2016 by using the Windows PowerShell cmdlet `Update-ClusterFunctionalLevel`.
 
 > [!WARNING]
 > - After you update the cluster functional level, you cannot go back to a  Windows Server 2012 R2 cluster functional level.
