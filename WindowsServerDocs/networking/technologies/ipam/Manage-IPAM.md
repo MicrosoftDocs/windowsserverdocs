@@ -4,8 +4,8 @@ description: Learn about administration and troubleshooting information for the 
 manager: brianlic
 ms.topic: article
 ms.assetid: c68905ef-d54f-4fc8-80ac-1006125db64f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Manage IPAM

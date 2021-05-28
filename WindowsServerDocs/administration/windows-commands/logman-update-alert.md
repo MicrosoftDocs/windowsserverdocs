@@ -3,8 +3,8 @@ title: logman update alert
 description: Reference article for the logman update alert command, which updates the properties of an existing alert data collector.
 ms.topic: reference
 ms.assetid: ede94a76-931c-40ed-9fda-6766bed8ff72
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

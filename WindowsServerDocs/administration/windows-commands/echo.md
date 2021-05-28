@@ -3,8 +3,8 @@ title: echo
 description: Reference article for the echo command, which displays messages or turns on or off the command echoing feature.
 ms.topic: reference
 ms.assetid: fb9fcd0f-5e73-4504-aa95-78204e1a79d3
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

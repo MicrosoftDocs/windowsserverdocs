@@ -3,8 +3,8 @@ title: wdsutil remove-imagegroup
 description: Reference article for wdsutil remove-imagegroup, which removes an image group from a server.
 ms.topic: reference
 ms.assetid: 5b2c9813-5df2-4272-8449-26f3bb16f82b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,8 +4,8 @@ description: Learn how to deploy BranchCache file server-based content servers o
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 68b0f5a0-1ae8-489e-b8f8-1190267a0e1d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 01/05/2021
 ---
 # Configure the File Services server role

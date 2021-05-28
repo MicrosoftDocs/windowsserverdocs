@@ -3,8 +3,8 @@ title: Netsh Commands for Hypertext Transfer Protocol (HTTP)
 description: Use netsh http to query and configure HTTP.sys settings and parameters.
 ms.topic: article
 manager: dougkim
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 
@@ -49,8 +49,8 @@ add iplisten [ ipaddress= ] IPAddress
 
 **Parameters**
 
-|               |                                                                                                                                                                                                                          |          |
-|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+|Parameter|Description|Requirement|
+|-|-|
 | **ipaddress** | The IPv4 or IPv6 address to be added to the IP listen list. The IP listen list is used to scope the list of addresses to which the HTTP service binds. "0.0.0.0" means any IPv4 address and "::" means any IPv6 address. | Required |
 
 ---
@@ -79,8 +79,8 @@ add sslcert [ ipport= ] IPAddress:port [ certhash= ] CertHash [ appid= ] GUID [ 
 **Parameters**
 
 
-|                                              |                                                                                                                                                                                          |          |
-|----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+|Parameter|Description|Requirement|
+|-|-|
 |                  **ipport**                  |                       Specifies the IP address and port for the binding. A colon character (:) is used as a delimiter between the IP address and the port number.                        | Required |
 |                 **certhash**                 |                                     Specifies the SHA hash of the certificate. This hash is 20 bytes long and is specified as a hexadecimal string.                                      | Required |
 |                  **appid**                   |                                                                  Specifies the GUID to identify the owning application.                                                                  | Required |
@@ -118,7 +118,7 @@ add timeout [ timeouttype= ] IdleConnectionTimeout | HeaderWaitTimeout [ value=]
 
 **Parameters**
 
-|                 |                                                                                                     |
+|  Parameter               |   Description                                                                                                  |
 |-----------------|-----------------------------------------------------------------------------------------------------|
 | **timeouttype** |                                    Type of timeout for setting.                                     |
 |    **value**    | Value of the timeout (in seconds). If the value is in hexadecimal notation, then add the prefix 0x. |
@@ -149,8 +149,8 @@ add urlacl [ url= ] URL [ [user=] User [ [ listen= ] yes | no [ delegate= ] yes 
 
 **Parameters**
 
-|              |                                                                                                                                                  |          |
-|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+|Parameter|Description|Requirement|
+|-|-|
 |   **url**    |                                          Specifies the fully qualified Uniform Resource Locator (URL).                                           | Required |
 |   **user**   |                                                      Specifies the user or user-group name                                                       | Required |
 |  **listen**  | Specifies one of the following values: yes: Allow the user to register URLs. This is the default value. no: Deny the user from registering URLs. | Optional |
@@ -183,7 +183,7 @@ delete cache [ [ url= ] URL [ [recursive= ] yes | no ]
 
 **Parameters**
 
-|               |                                                                                                                              |          |
+|Parameter|Description|Requirement|
 |---------------|------------------------------------------------------------------------------------------------------------------------------|----------|
 |    **url**    |                    Specifies the fully qualified Uniform Resource Locator (URL) that you want to delete.                     | Optional |
 | **recursive** | Specifies whether all entries under the url cache get removed. **yes**: remove all entries **no**: do not remove all entries | Optional |
@@ -212,7 +212,7 @@ delete iplisten [ ipaddress= ] IPAddress
 
 **Parameters**
 
-|               |                                                                                                                                                                                                                                                                     |          |
+|Parameter|Description|Requirement|
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | **ipaddress** | The IPv4 or IPv6 address to be deleted from the IP listen list. The IP listen list is used to scope the list of addresses to which the HTTP service binds. "0.0.0.0" means any IPv4 address and "::" means any IPv6 address. This does not include the port number. | Required |
 
@@ -244,7 +244,7 @@ delete sslcert [ ipport= ] IPAddress:port
 
 **Parameters**
 
-|            |                                                                                                                                                                                          |          |
+|Parameter|Description|Requirement|
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | **ipport** | Specifies the IPv4 or IPv6 address and port for which the SSL certificate bindings get deleted. A colon character (:) is used as a delimiter between the IP address and the port number. | Required |
 
@@ -273,7 +273,7 @@ delete timeout [ timeouttype= ] idleconnectiontimeout | headerwaittimeout
 
 **Parameters**
 
-|                 |                                        |          |
+|Parameter|Description|Requirement|
 |-----------------|----------------------------------------|----------|
 | **timeouttype** | Specifies the type of timeout setting. | Required |
 
@@ -301,7 +301,7 @@ delete urlacl [ url= ] URL
 
 **Parameters**
 
-|         |                                                                                       |          |
+|Parameter|Description|Requirement|
 |---------|---------------------------------------------------------------------------------------|----------|
 | **url** | Specifies the fully qualified Uniform Resource Locator (URL) that you want to delete. | Required |
 
@@ -343,7 +343,7 @@ show cachestate [ [url= ] URL]
 
 **Parameters**
 
-|         |                                                                                                                                                    |          |
+|Parameter|Description|Requirement|
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | **url** | Specifies the fully qualified URL that you want to display. If not specified, display all URLs. The URL could also be a prefix to registered URLs. | Optional |
 
@@ -384,7 +384,7 @@ show servicestate [ [ view= ] session | requestq ] [ [ verbose= ] yes | no ]
 
 **Parameters**
 
-|             |                                                                                                                      |          |
+|Parameter|Description|Requirement|
 |-------------|----------------------------------------------------------------------------------------------------------------------|----------|
 |  **View**   | Specifies whether to view a snapshot of the HTTP service state based on the server session or on the request queues. | Optional |
 | **Verbose** |                Specifies whether to display verbose information that also shows property information.                | Optional |
@@ -413,7 +413,7 @@ show sslcert [ ipport= ] IPAddress:port
 
 **Parameters**
 
-|            |                                                                                                                                                                                                                                                |          |
+|Parameter|Description|Requirement|
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
 | **ipport** | Specifies the IPv4 or IPv6 address and port for which the SSL certificate bindings display. A colon character (:) is used as a delimiter between the IP address and the port number. If you do not specify ipport, all bindings are displayed. | Required |
 
@@ -456,7 +456,7 @@ show urlacl [ [url= ] URL]
 
 **Parameters**
 
-|         |                                                                                                |          |
+|Parameter|Description|Requirement|
 |---------|------------------------------------------------------------------------------------------------|----------|
 | **url** | Specifies the fully qualified URL that you want to display. If not specfied, display all URLs. | Optional |
 

@@ -4,8 +4,8 @@ description: These features are implemented as part of the OS and are independen
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/20/2018
 ---
 

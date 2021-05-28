@@ -3,8 +3,8 @@ title: wdsutil get-alldevices
 description: Reference article for the wdsutil get-alldevices command, which displays the Windows Deployment Services properties of all pre-staged computers.
 ms.topic: reference
 ms.assetid: 5824b3d2-2df1-4ed6-a289-e6c47c13fea2
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

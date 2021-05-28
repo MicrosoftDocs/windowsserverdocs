@@ -4,8 +4,8 @@ description: Learn how to add BranchCache file servers to an organizational unit
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 56c915ec-edb1-43b0-8ad2-c93841bb566f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 01/05/2021
 ---
 # Move File Servers to the BranchCache File Servers Organizational Unit

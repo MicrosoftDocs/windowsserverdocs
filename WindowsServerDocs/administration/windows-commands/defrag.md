@@ -3,8 +3,8 @@ title: defrag
 description: Reference article for the defrag command, which locates and consolidates fragmented files on local volumes to improve system performance.
 ms.topic: reference
 ms.assetid: aaf1d1ac-996a-4282-9b4d-1e8245ff162c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

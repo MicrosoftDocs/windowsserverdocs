@@ -3,8 +3,8 @@ title: reg import
 description: Reference article for the reg import command, which copies the contents of a file that contains exported registry subkeys, entries, and values into the registry of the local computer.
 ms.topic: reference
 ms.assetid: 0be103de-08fc-4f02-b590-361782680b3e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

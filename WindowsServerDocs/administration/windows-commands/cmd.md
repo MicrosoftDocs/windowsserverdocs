@@ -3,8 +3,8 @@ title: cmd
 description: Reference article for the cmd command, which starts a new instance of the command interpreter, Cmd.exe.
 ms.topic: reference
 ms.assetid: 6ec588db-31a9-4a73-a970-65a2c6f4abbe
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -30,7 +30,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<b><f> | <f>}] [/e:{on | off}] [/f:{on |
 | /d | Disables execution of AutoRun commands. |
 | /a | Formats internal command output to a pipe or a file as American National Standards Institute (ANSI). |
 | /u | Formats internal command output to a pipe or a file as Unicode. |
-| /t:{`<b><f>` | `<f>`} | Sets the background (*b*) and foreground (*f*) colors. |
+| /t:{`<b><f>` \| `<f>`} | Sets the background (*b*) and foreground (*f*) colors. |
 | /e:on | Enables command extensions. |
 | /e:off | Disables commands extensions. |
 | /f:on | Enables file and directory name completion. |

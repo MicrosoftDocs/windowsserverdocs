@@ -3,8 +3,8 @@ title: compact vdisk
 description: Reference article for the compact vdisk command, which reduces the physical size of a dynamically expanding virtual hard disk (VHD) file.
 ms.topic: reference
 ms.assetid: 40ca0820-67de-4160-b62a-e9bf63fe2790
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

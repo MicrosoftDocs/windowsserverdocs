@@ -4,8 +4,8 @@ description: This topic provides you with instructions on how to use Windows Pow
 ms.topic: article
 ms.assetid: 1575cc7c-62a7-4add-8f78-e5d93effe93f
 manager: brianlic
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 12/08/2020
 ---
 

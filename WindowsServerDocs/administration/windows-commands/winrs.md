@@ -3,8 +3,8 @@ title: winrs
 description: Reference article for winrs, which allows you to manage and execute programs remotely.
 ms.topic: reference
 ms.assetid: c370de31-5651-400a-872d-ef229aae2309
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

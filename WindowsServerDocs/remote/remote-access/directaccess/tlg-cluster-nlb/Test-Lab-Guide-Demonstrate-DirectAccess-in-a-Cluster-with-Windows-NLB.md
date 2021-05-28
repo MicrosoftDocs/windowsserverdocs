@@ -4,8 +4,8 @@ description: Learn how to extend the Demonstrate DirectAccess Single Server Setu
 manager: brianlic
 ms.topic: article
 ms.assetid: db15dcf5-4d64-48d7-818a-06c2839e1289
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Test Lab Guide: Demonstrate DirectAccess in a Cluster with Windows NLB

@@ -3,8 +3,8 @@ title: attributes disk
 description: Reference article for the attributes disk command, which displays, sets, or clears the attributes of a disk.
 ms.topic: reference
 ms.assetid: eed57071-c1c6-4394-9542-62b52a878c92
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

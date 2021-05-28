@@ -4,8 +4,8 @@ description: Learn about the planning steps that are required to deploy a single
 manager: brianlic
 ms.topic: article
 ms.assetid: d486735e-71fe-4443-9878-4b784cd588a7
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Plan an Advanced DirectAccess Deployment

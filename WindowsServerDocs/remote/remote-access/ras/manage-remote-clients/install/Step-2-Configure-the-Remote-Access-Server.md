@@ -4,8 +4,8 @@ description: Learn how to configure the client and server settings that are requ
 manager: brianlic
 ms.topic: article
 ms.assetid: c0257b98-5633-4264-9df6-b6ffae80592c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Step 2 Configure the Remote Access Server

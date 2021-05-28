@@ -3,8 +3,8 @@ title: tsprof
 description: Reference article for the tsprof command, which copies the Remote Desktop Services user configuration information from one user to another.
 ms.topic: reference
 ms.assetid: 27047868-b706-4208-b7e0-1437a2325dd3
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

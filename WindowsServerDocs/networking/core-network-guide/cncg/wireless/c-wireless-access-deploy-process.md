@@ -4,8 +4,8 @@ description: Learn about the five stages used in the process to deploy wireless 
 manager: brianlic
 ms.topic: article
 ms.assetid: 2555f238-926e-4b20-9bfb-9774831062da
-author: eross-msft
-ms.author: lizross
+author: JasonGerend
+ms.author: jgerend
 ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Process

@@ -4,8 +4,8 @@ description: Learn about the configuration steps required in order to deploy a s
 manager: brianlic
 ms.topic: article
 ms.assetid: 762bc463-eead-46ac-8b90-32355743c27c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Plan Remote Access with OTP Authentication

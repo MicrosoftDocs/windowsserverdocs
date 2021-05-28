@@ -4,8 +4,8 @@ description: Learn how to implement an advanced single server deployment and the
 manager: brianlic
 ms.topic: article
 ms.assetid: c0f4d665-d44e-4348-a89f-5f9191bd96fd
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Step 1 Implement a Single Server Remote Access Deployment with OTP Authentication

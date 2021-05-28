@@ -19,6 +19,9 @@ To start the Disk Cleanup tool, either run the Cleanmgr.exe command, or select *
 
 You can also run Disk Cleanup by using the [cleanmgr Windows command](../../administration/windows-commands/cleanmgr.md) and use command-line options to specify that Disk Cleanup cleans up certain files.
 
+> [!NOTE]
+> If you're just looking to free up disk space, consider using Azure File Sync with cloud tiering enabled. This allows you to cache your most frequently accessed files locally and tier your least frequently accessed files to the cloud, saving local storage space while maintaining performance. For details, see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning).
+
 ## Enable Disk Cleanup on an earlier version of Windows Server by installing the Desktop Experience
 
 Follow these steps to use the Add Roles and Features Wizard to install the Desktop Experience on a server running Windows Server 2012 R2 or earlier, which also installs Disk Cleanup.

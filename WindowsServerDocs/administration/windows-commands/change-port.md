@@ -3,8 +3,8 @@ title: change port
 description: Reference article for the change port command, which lists or changes the COM port mappings to be compatible with MS-DOS applications.
 ms.topic: article
 ms.assetid: 3d772c90-e849-4e74-b9ec-b6cae1159336 Lizap
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
