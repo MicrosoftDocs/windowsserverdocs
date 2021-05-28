@@ -135,7 +135,7 @@ Using Cloud Witness as a Failover Cluster quorum witness provides the following 
 
 -   Uses the standard publicly available Microsoft Azure Blob Storage which eliminates the extra maintenance overhead of VMs hosted in a public cloud.
 
--   Same Microsoft Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique id used as blob file name).
+-   Same Microsoft Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique ID used as blob file name).
 
 -   Provides a very low on-going cost to the Storage Account (very small data written per blob file, blob file updated only once when cluster nodes' state changes).
 
