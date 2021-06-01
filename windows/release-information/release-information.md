@@ -9,7 +9,7 @@ ms.mktglfcycl: deploy
 ms.sitesec: library
 author: lizap
 ms.author: elizapo
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ---
 
 # Windows 10 release information
