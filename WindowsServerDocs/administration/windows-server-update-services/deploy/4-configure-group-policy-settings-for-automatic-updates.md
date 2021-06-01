@@ -101,7 +101,7 @@ Specifies whether non-administrative users will receive update notifications bas
 
 |Supported on:|Excluding:|
 |---------|-------|
-|Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|See details in the table below.|
+|Windows Server 2012, Windows 8.1, and earlier versions|
 
 > [!NOTE]
 > if the Configure Automatic Updates policy setting is disabled or is not configured, this policy setting has no effect.
