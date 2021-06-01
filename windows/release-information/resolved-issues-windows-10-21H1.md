@@ -6,7 +6,7 @@ ms.prod: w10
 ms.topic: article
 ms.mktglfcycl: deploy
 ms.sitesec: library
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: v-nishmi
 author: DocsPreview
 ---
