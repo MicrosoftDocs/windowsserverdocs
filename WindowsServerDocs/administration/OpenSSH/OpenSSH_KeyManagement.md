@@ -9,9 +9,11 @@ author: maertendmsft
 
 # OpenSSH key management
 
+> Applies to Windows Server 2019, Windows 10
+
 Most authentication in Windows environments is done with a username-password pair.
 This works well for systems that share a common domain.
-When working across domains, such as between on-premise and cloud-hosted systems, it becomes vulnerable to brute force intrusions.
+When working across domains, such as between on-premises and cloud-hosted systems, it becomes vulnerable to brute force intrusions.
 
 By comparison, Linux environments commonly use public-key/private-key pairs to drive authentication which doesn't require the use of guessable passwords.
 OpenSSH includes tools to help support this, specifically:
@@ -37,9 +39,9 @@ During authentication the user is prompted for the passphrase, which is used alo
 ## Host key generation
 
 Public keys have specific ACL requirements that, on Windows, equate to only allowing access to administrators and System.
-To make this easier,
+To make this easier:
 
-* The OpenSSHUtils PowerShell module has been created to set the key ACLs properly, and should be installed on the server
+* OpenSSH Client in Windows 10 and Windows Server 2019 has the tools to set the key ACLs properly, and should be installed.
 * On first use of sshd, the key pair for the host will be automatically generated. If ssh-agent is running, the keys will be automatically added to the local store.
 
 > [!IMPORTANT]
@@ -48,9 +50,6 @@ To make this easier,
 To make key authentication easy with an SSH server, run the following commands from an elevated PowerShell prompt:
 
 ```powershell
-# Install the OpenSSHUtils module to the server. This will be valuable when deploying user keys.
-Install-Module -Force OpenSSHUtils -Scope AllUsers
-
 # By default the ssh-agent service is disabled. Allow it to be manually started for the next step to work.
 Get-Service -Name ssh-agent | Set-Service -StartupType Manual
 
@@ -61,28 +60,27 @@ Start-Service ssh-agent
 Start-Service sshd
 ```
 
-Since there is no user associated with the sshd service, the host keys are stored under \ProgramData\ssh.
+Since there is no user associated with the sshd service, the host keys are stored under C:\ProgramData\ssh.
 
 ## User key generation
 
 To use key-based authentication, you first need to generate some public/private key pairs for your client.
-From PowerShell or cmd, use ssh-keygen to generate some key files.
+From PowerShell or cmd, use ssh-keygen to generate some key files:
 
 ```powershell
-cd ~\.ssh\
 ssh-keygen
 ```
 
-This should display something like the following (where "username" is replaced by your user name)
+This should display something like the following (where "username" is replaced by your user name):
 
 ```
 Generating public/private ed25519 key pair.
 Enter file in which to save the key (C:\Users\username\.ssh\id_ed25519):
 ```
 
-You can hit Enter to accept the default, or specify a path where you'd like your keys to be generated.
+You can hit Enter to accept the defaults, or specify a path and/or filename where you'd like your keys to be generated.
 At this point, you'll be prompted to use a passphrase to encrypt your private key files.
-The passphrase works with the key file to provide 2-factor authentication.
+The passphrase works with the key file to provide two-factor authentication.
 For this example, we are leaving the passphrase empty.
 
 ```
@@ -107,8 +105,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-Now you have a public/private ED25519 key pair
-(the .pub files are public keys and the rest are private keys):
+Now you have a public/private ED25519 key pair in the location specified (the .pub files are public keys and the rest are private keys):
 
 ```
 Mode                LastWriteTime         Length Name
@@ -118,8 +115,7 @@ Mode                LastWriteTime         Length Name
 ```
 
 Remember that private key files are the equivalent of a password should be protected the same way you protect your password.
-To help with that, use ssh-agent to securely store the private keys within a Windows security context, associated with your Windows login.
-To do that, start the ssh-agent service as Administrator and use ssh-add to store the private key.
+To help with that, use ssh-agent to securely store the private keys within a Windows security context, associated with your Windows login. To do that, start the ssh-agent service as Administrator and use ssh-add to store the private key.
 
 ```powershell
 # Make sure you're running as an Administrator
