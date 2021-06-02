@@ -9,6 +9,8 @@ author: maertendmsft
 
 # OpenSSH key management
 
+> Applies to Windows Server 2019, Windows 10
+
 Most authentication in Windows environments is done with a username-password pair.
 This works well for systems that share a common domain.
 When working across domains, such as between on-premise and cloud-hosted systems, it becomes vulnerable to brute force intrusions.
@@ -48,9 +50,6 @@ To make this easier,
 To make key authentication easy with an SSH server, run the following commands from an elevated PowerShell prompt:
 
 ```powershell
-# Install the OpenSSHUtils module to the server. This will be valuable when deploying user keys.
-Install-Module -Force OpenSSHUtils -Scope AllUsers
-
 # By default the ssh-agent service is disabled. Allow it to be manually started for the next step to work.
 Get-Service -Name ssh-agent | Set-Service -StartupType Manual
 
