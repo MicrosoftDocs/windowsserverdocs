@@ -21,7 +21,7 @@ Windows also includes PowerShell and Bash, and third-party command shells are al
 
 To set the default command shell, first confirm that the OpenSSH installation folder is on the system path.
 For Windows, the default installation folder is SystemDrive:WindowsDirectory\System32\openssh.
-The following commands shows the current path setting, and add the default OpenSSH installation folder to it.
+The following command shows the current path setting, and add the default OpenSSH installation folder to it.
 
 Command shell | Command to use
 ------------- | --------------
@@ -85,7 +85,7 @@ The default is ".ssh/authorized_keys .ssh/authorized_keys2". If the path is not 
 
 ### ChrootDirectory (Support added in v7.7.0.0)
 
-This directive is only supported with sftp sessions. A remote session into cmd.exe wouldn't honor this. To setup a sftp-only chroot server, set ForceCommand to internal-sftp. You may also set up scp with chroot, by implementing a custom shell that would only allow scp and sftp.
+This directive is only supported with sftp sessions. A remote session into cmd.exe wouldn't honor this. To set up a sftp-only chroot server, set ForceCommand to internal-sftp. You may also set up scp with chroot, by implementing a custom shell that would only allow scp and sftp.
 
 ### HostKey
 
