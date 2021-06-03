@@ -15,6 +15,8 @@ author: DocsPreview
 
 Find information on known issues and the status of the rollout for Windows 10, version 2004 and Windows Server, version 2004. Looking for a specific issue? Press CTRL + F (or Command + F if you are using a Mac) and enter your search term(s). Want the latest Windows release health updates? Follow <a href="https://twitter.com/windowsupdate" rel="noopener noreferrer" target="_blank">@WindowsUpdate</a> on Twitter.</p>
 
+<p><table border = "0" class="box-info has-overflow-hidden"><tr><td class="alert is-success"><div>The Windows release health hub is always evolving. <a href="https://aka.ms/WRH-survey" target="_blank">Take our short survey</a> and let us know how we can improve. </div></td></tr></table></p>
+
  <table border = '0' class='box-info has-overflow-hidden'><tr>
 <td bgcolor='#d3f1fb' class='alert is-primary'><div><strong>Current status as of February 3, 2021</strong></div><div>Windows 10, version 2004 is designated for broad deployment. The recommended servicing status is Semi-Annual Channel.</div>
 </td></tr></table>
