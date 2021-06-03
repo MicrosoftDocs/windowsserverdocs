@@ -20,6 +20,7 @@ We recommend that you begin deployment of each Semi-Annual Channel release immed
 
 For information about servicing timelines, see the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853).
 
+<p><table border = "0" class="box-info has-overflow-hidden"><tr><td class="alert is-success"><div>The Windows release health hub is always evolving. <a href="https://aka.ms/WRH-survey" target="_blank">Take our short survey</a> and let us know how we can improve. </div></td></tr></table></p>
 <div class="m-rich-content-block" data-grid="col-12">
     <div id="winrelinfo" xmlns="http://www.w3.org/1999/xhtml"><iframe width="100%" height="866px" id="winrelinfo_iframe" title="Windows Release Information" src="https://winreleaseinfoprod.blob.core.windows.net/winreleaseinfoprod/en-US.html" frameborder="0" marginwidth="0" marginheight="0" scrolling="auto"></iframe></div>
     <script src="https://winreleaseinfoprod.blob.core.windows.net/winreleaseinfoprod/iframe.js" xmlns="http://www.w3.org/1999/xhtml"></script>
