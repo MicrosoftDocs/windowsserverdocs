@@ -56,7 +56,7 @@ Since there is no user associated with the sshd service, the host keys are store
 
 ## User key generation
 
-To use key-based authentication, you first need to generate public/private key pairs for your client. ssh-keygen.exe is used to generate key files and the algorithms DSA, RSA, ECDSA or Ed25519 can be specified.  If no algorithm is specified, RSA is used. To generate key files using the Ed25519 algorithm, run the following from a PowerShell or cmd prompt on your client:
+To use key-based authentication, you first need to generate public/private key pairs for your client. ssh-keygen.exe is used to generate key files and the algorithms DSA, RSA, ECDSA, or Ed25519 can be specified.  If no algorithm is specified, RSA is used. To generate key files using the Ed25519 algorithm, run the following from a PowerShell or cmd prompt on your client:
 
 ```powershell
 ssh-keygen -t ed25519
@@ -108,7 +108,8 @@ Remember that private key files are the equivalent of a password should be prote
 To help with that, use ssh-agent to securely store the private keys within a Windows security context, associated with your Windows login. To do that, start the ssh-agent service as Administrator and use ssh-add to store the private key.
 
 ```powershell
-# By default the ssh-agent service is disabled. Allow it to be manually started for the next step to work. Make sure you're running as an Administrator.
+# By default the ssh-agent service is disabled. Allow it to be manually started for the next step to work.
+# Make sure you're running as an Administrator.
 Get-Service ssh-agent | Set-Service -StartupType Manual
 
 # Start the service
