@@ -10021,6 +10021,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/cluster-sets.md",
+      "redirect_url": "/azure-stack/hci/deploy/cluster-set",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md",
       "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
       "redirect_document_id": false
