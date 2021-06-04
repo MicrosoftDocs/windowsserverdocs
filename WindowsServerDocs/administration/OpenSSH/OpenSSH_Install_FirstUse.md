@@ -76,7 +76,7 @@ RestartNeeded : False
 
 ## Start and configure OpenSSH Server
 
-To start and configure OpenSSH Server for initial use, open PowerShell as an administrator, then run the following commands to start the `SSHD service`:
+To start and configure OpenSSH Server for initial use, open PowerShell as an administrator, then run the following commands to start the `sshd service`:
 
 ```powershell
 # Start the sshd service
