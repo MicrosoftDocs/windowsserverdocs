@@ -34,19 +34,16 @@ Multi-factor authentication may be implemented with key pairs by entering a pass
 
 ## Host key generation
 
-Public keys have specific ACL requirements that, on Windows, equate to only allowing access to administrators and System. On first use of sshd, the key pair for the host will be automatically generated. If the ssh-agent is running, the keys will be automatically added to the local store.
+Public keys have specific ACL requirements that, on Windows, equate to only allowing access to administrators and System. On first use of sshd, the key pair for the host will be automatically generated.
 
 > [!IMPORTANT]
 > You need to have OpenSSH Server installed first. Please see [Getting started with OpenSSH](OpenSSH_Install_FirstUse.md).
 
-To make key authentication easy with OpenSSH Server on Windows, run the following commands from an elevated PowerShell prompt on your server:
+By default the sshd service is set to start manually. To start it each time the server is rebooted, run the following commands from an elevated PowerShell prompt on your server:
 
 ```powershell
-# By default the ssh-agent service is disabled. Allow it to be manually started for the next step to work.
-Get-Service -Name ssh-agent | Set-Service -StartupType Manual
-
-# Start the ssh-agent service to preserve the server keys
-Start-Service ssh-agent
+# Set the sshd service to be started automatically
+Get-Service -Name ssh-agent | Set-Service -StartupType Automatic
 
 # Now start the sshd service
 Start-Service sshd
@@ -56,7 +53,9 @@ Since there is no user associated with the sshd service, the host keys are store
 
 ## User key generation
 
-To use key-based authentication, you first need to generate public/private key pairs for your client. ssh-keygen.exe is used to generate key files and the algorithms DSA, RSA, ECDSA, or Ed25519 can be specified.  If no algorithm is specified, RSA is used. To generate key files using the Ed25519 algorithm, run the following from a PowerShell or cmd prompt on your client:
+To use key-based authentication, you first need to generate public/private key pairs for your client. ssh-keygen.exe is used to generate key files and the algorithms DSA, RSA, ECDSA, or Ed25519 can be specified. If no algorithm is specified, RSA is used. A strong algorithm and key length should be used, such as Ed25519 in this example.
+
+To generate key files using the Ed25519 algorithm, run the following from a PowerShell or cmd prompt on your client:
 
 ```powershell
 ssh-keygen -t ed25519
@@ -127,7 +126,7 @@ After completing these steps, whenever a private key is needed for authenticatio
 > [!IMPORTANT]
 > It is strongly recommended that you back up your private key to a secure location,
 > then delete it from the local system, *after* adding it to ssh-agent.
-> The private key cannot be retrieved from the agent.
+> The private key cannot be retrieved from the agent providing a strong algorithm has been used, such as Ed25519 in this example.
 > If you lose access to the private key, you will have to create a new key pair
 > and update the public key on all systems you interact with.
 
@@ -137,7 +136,7 @@ To use the user key that was created above, the contents of your public key (~\\
 
 ### Standard user
 
-The contents of your public key (~\\.ssh\id_ed25519.pub) needs to be placed on the server into a text file called **authorized_keys** in C:\Users\username\\.ssh\\. The OpenSSH client includes scp, which is a secure file-transfer utility, to help with this.
+The contents of your public key (~\\.ssh\id_ed25519.pub) needs to be placed on the server into a text file called `authorized_keys` in C:\Users\username\\.ssh\\. The OpenSSH client includes scp, which is a secure file-transfer utility, to help with this.
 
 The example below copies the public key to the server (where "username" is replaced by your user name). You will need to use the password for the user account for the server initially.
 
@@ -151,12 +150,12 @@ scp C:\Users\username\.ssh\id_ed25519.pub user1@domain1@contoso.com:C:\Users\use
 
 ### Administrative user
 
-The contents of your public key (~\\.ssh\id_ed25519.pub) needs to be placed on the server into a text file called **administrators_authorized_keys** in C:\ProgramData\ssh\\. The OpenSSH client includes scp, which is a secure file-transfer utility, to help with this. The ACL on this file needs to be configured to only allow access to administrators and System.
+The contents of your public key (~\\.ssh\id_ed25519.pub) needs to be placed on the server into a text file called `administrators_authorized_keys` in C:\ProgramData\ssh\\. The OpenSSH client includes scp, which is a secure file-transfer utility, to help with this. The ACL on this file needs to be configured to only allow access to administrators and System.
 
 The example below copies the public key to the server and configures the ACL (where "username" is replaced by your user name). You will need to use the password for the user account for the server initially.
 
 > [!NOTE]
-> This example shows the steps for creating the administrators_authorized_keys file. If it is run multiple times, it will overwrite this file each time. To add the public key for multiple administrative users, you need to append this file with each public key.
+> This example shows the steps for creating the `administrators_authorized_keys file`. If it is run multiple times, it will overwrite this file each time. To add the public key for multiple administrative users, you need to append this file with each public key.
 
 ```powershell
 # Make sure that the .ssh directory exists in your server's user account home folder
@@ -166,7 +165,7 @@ ssh user1@domain1@contoso.com mkdir C:\ProgramData\ssh\
 scp C:\Users\username\.ssh\id_ed25519.pub user1@domain1@contoso.com:C:\ProgramData\ssh\administrators_authorized_keys
 
 # Appropriately ACL the authorized_keys file on your server
-ssh --% user1@domain1@contoso.com 'icacls.exe "C:\ProgramData\ssh\administrators_authorized_keys" /inheritance:r /grant "Administrators:F" /grant "SYSTEM:F"'
+ssh --% user1@domain1@contoso.com icacls.exe "C:\ProgramData\ssh\administrators_authorized_keys" /inheritance:r /grant "Administrators:F" /grant "SYSTEM:F"
 ```
 
 These steps complete the configuration required to use key-based authentication with OpenSSH on Windows.
