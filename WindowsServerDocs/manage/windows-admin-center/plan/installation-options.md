@@ -32,7 +32,7 @@ You can **install** Windows Admin Center on the following Windows operating syst
 | Windows Server 2016                | Gateway sever, managed server, failover cluster |
 | Windows Server 2019                | Gateway sever, managed server, failover cluster |
 
-To operating Windows Admin Center:
+## To Operate Windows Admin Center:
 
 - **In local client scenario:** Launch the Windows Admin Center gateway from the Start menu and connect to it from a client web browser by accessing `https://localhost:6516`.
 - **In other scenarios:** Connect to the Windows Admin Center gateway on a different machine from a client browser via its URL, e.g., `https://servername.contoso.com`
