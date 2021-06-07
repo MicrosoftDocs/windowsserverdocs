@@ -14,23 +14,23 @@ ms.custom: contperf-fy21q4
 
 OpenSSH is a connectivity tool for remote login that uses the SSH protocol. It encrypts all traffic between client and server to eliminate eavesdropping, connection hijacking, and other attacks.
 
-OpenSSH can be used to connect Window 10 clients to Windows Server 2019. OpenSSH Client is available to install on Windows 10 build 1809 and later, while OpenSSH Server is available to install on Windows Server 2019 and later.
+OpenSSH can be used to connect Window 10 (build 1809 and later) or Windows Server 2019 devices with OpenSSH Client installed to those devices with OpenSSH Server installed.
 
 > [!IMPORTANT]
 > If you downloaded OpenSSH from the GitHub repo at [PowerShell/openssh-portable](https://github.com/PowerShell/OpenSSH-Portable), follow the instructions listed there, not the ones in this article.
 
 ## Install OpenSSH using Windows Settings
 
-Both OpenSSH components can be installed using Windows Settings. OpenSSH Server is installed on Windows Server and OpenSSH Client is installed on Windows 10 devices.
+Both OpenSSH components can be installed using Windows Settings on Windows Server 2019 and Windows 10 devices.
 
 To install the OpenSSH components:
 
 1. Open **Settings**, select **Apps > Apps & Features**, then select **Optional Features**.
 
-1. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
+2. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
 
-    - On Windows 10, find **OpenSSH Client**, then click **Install**
-    - On Windows Server 2019, find **OpenSSH Server**, then click **Install**
+    - Find **OpenSSH Client**, then click **Install**
+    - Find **OpenSSH Server**, then click **Install**
 
 Once setup completes, return to **Apps > Apps & Features** and **Optional Features** and you should see OpenSSH listed.
 
@@ -46,7 +46,7 @@ To make sure that OpenSSH is available, run the following cmdlet:
 Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
 ```
 
-This should return the following output:
+This should return the following output if neither are already installed:
 
 ```
 Name  : OpenSSH.Client~~~~0.0.1.0
@@ -76,7 +76,7 @@ RestartNeeded : False
 
 ## Start and configure OpenSSH Server
 
-To start and configure OpenSSH Server for initial use, open PowerShell as an administrator, then run the following commands to start the `SSHD service`:
+To start and configure OpenSSH Server for initial use, open PowerShell as an administrator, then run the following commands to start the `sshd service`:
 
 ```powershell
 # Start the sshd service
@@ -95,7 +95,7 @@ New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled Tru
 
 ## Connect to OpenSSH Server
 
-Once installed, you can connect to OpenSSH Server from a Windows 10 device with the OpenSSH client installed using PowerShell as follows. Be sure to run PowerShell as an administrator:
+Once installed, you can connect to OpenSSH Server from a Windows 10 or Windows Server 2019 device with the OpenSSH client installed using PowerShell as follows. Be sure to run PowerShell as an administrator:
 
 ```powershell
 ssh username@servername
