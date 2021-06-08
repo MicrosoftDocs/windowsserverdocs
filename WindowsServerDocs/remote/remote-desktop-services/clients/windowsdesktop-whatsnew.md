@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 05/25/2021
+ms.date: 06/08/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -18,8 +18,19 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.2061        |1.2.1446                   |
-|Insider    |1.2.2061        |1.2.1446                   |
+|Public     |1.2.2061        |1.2.1446                  |
+|Insider    |1.2.2127        |1.2.1446                  |
+
+## Updates for version 1.2.2127 (Insider)
+
+*Date published: 06/08/2021*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Windows Virtual Desktop has been renamed to Azure Virtual Desktop. Learn more about the name change at [our announcement on our blog](https://azure.microsoft.com/blog/azure-virtual-desktop-the-desktop-and-app-virtualization-platform-for-the-hybrid-workplace/).
+- Fixed an issue where the client would ask for authentication after the user ended their session and closed the window.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Fixed an issue with Logitech C270 cameras where Teams only showed a black screen in the camera settings and while sharing images during calls.
 
 ## Updates for version 1.2.2061
 
