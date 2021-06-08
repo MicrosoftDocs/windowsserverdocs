@@ -6,7 +6,7 @@ ms.author: cosdar
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
-ms.date: 09/16/2016
+ms.date: 05/28/2021
 ---
 # Fault domain awareness
 
