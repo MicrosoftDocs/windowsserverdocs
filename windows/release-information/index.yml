@@ -13,7 +13,7 @@ metadata:
   author: DocsPreview
   ms.author: v-nishmi
   ms.date: 09/25/2020
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
   featureFlags:
             -clicktale
            
@@ -43,14 +43,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "Take action: June 2021 security update available for all supported versions of Windows"
+          url: https://support.microsoft.com/help/5003637
+          itemType: whats-new
         - text: "May 2021 Windows non-security preview \"C\" release is available for all supported versions"
           url: https://support.microsoft.com/help/5003214
           itemType: whats-new
         - text: "May 2021 Windows non-security preview \"C\" release is available for some versions for Windows 10"
           url: https://support.microsoft.com/help/5003212
-          itemType: whats-new
-        - text: "Internet Explorer 11 (IE11) desktop application will be retired on Windows 10 on June 15, 2022 "
-          url: https://aka.ms/IEmodeblog
           itemType: whats-new
 
       footerLink:
