@@ -10,22 +10,18 @@ ms.custom: template-tutorial #Required; leave this attribute/value as-is.
 ---
 
 
-# Tutorial: Enable storage bus cache with Storage Spaces on standalone servers 
+# Tutorial: Enable storage bus cache with Storage Spaces on standalone servers
 
-<!-- 2. Introductory paragraph 
-Required. Lead with a light intro that describes, in customer-friendly language, 
-what the customer will learn, or do, or accomplish. Answer the fundamental “why 
-would I want to do this?” question. Keep it short.
--->
+>Applies to: Windows Server 2022
 
-If you are using Storage Spaces to manage a lot of frequently accessed and modified data, then this is a feature that you will want to learn more about! The storage bus cache (SBC) for standalone servers can return information and data to your customers fast, while maintaining storage efficiency and keeping the operational costs low. Take for example a SQL database or a mail hosting service, any application where performance is crucial, but storage efficiency is still prioritized. The admin would want a solution that balances resiliency (to combat data loss), speed (better user experience), and ease of management. Frequently accessed content will be cached so that reads return faster, while other content is efficiently stored and the system remains easily scalable.
+If you are using Storage Spaces to manage frequently accessed and modified data, then this is a feature that you will want to learn more about! The storage bus cache (SBC) for standalone servers can return information and data to your customers fast, while maintaining storage efficiency and keeping the operational costs low. Take for example, a SQL database or a mail hosting service, any application where performance is crucial, but storage efficiency is still prioritized. The admin would want a solution that balances resiliency (to combat data loss), speed (better user experience), and ease of management. Frequently accessed content will be cached so that reads return faster, while other content is efficiently stored and the system remains easily scalable.
 
 |  |  |
 |---------|---------|
 |:::image type="content" source="media/storage-bus-cache/ReadPathMAP.png" alt-text="Read path in a mirror accelerated parity volume without storage bus cache":::|:::image type="content" source="media/storage-bus-cache/ReadPathMAPSBC.png" alt-text="Read oath with storage bus cache enabled on a mirror accelerated parity volume":::|
 |Left: Read path in a mirror accelerated parity volume|Right: Read path with storage bus cache enabled and with a mirror accelerated parity volume|
 
-Similar to its implementation for Storage Spaces Direct, this feature binds together faster media (e.g. SSD) with slower media (e.g. HDD), and reserves a portion (not the whole!) of the faster media tier for caching. If you are using simple spaces (no resiliency), both read and write caching is supported, any other resiliency setting will only have read caching capabilities for now. The best configuration is using the SBC in combination with ReFS [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md). This set up maintains all the storage efficiency benefits of ReFS MAP and incorporates a read cache as a part of the faster media tier for better random read performance. Setup and maintenance is extremely streamlined, below is a step-by-step guide with screenshots to help you add this capability to your system and boost performance.
+Similar to its implementation for Storage Spaces Direct, this feature binds together faster media (for example, SSD) with slower media (for example, HDD), and reserves a portion (not the whole!) of the faster media tier for caching. If you are using simple spaces (no resiliency), both read and write caching is supported, any other resiliency setting will only have read caching capabilities for now. The best configuration is using the SBC in combination with ReFS [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md). This set up maintains all the storage efficiency benefits of ReFS MAP and incorporates a read cache as a part of the faster media tier for better random read performance. Setup and maintenance are streamlined, below is a step-by-step guide with screenshots to help you add this capability to your system and boost performance.
 
 In this tutorial, you learn about:
 
@@ -38,32 +34,25 @@ In this tutorial, you learn about:
 
 ### ![Green checkmark icon.](media/storage-bus-cache/supported.png) Consider storage bus cache if:
 
-- Your cluster runs Windows Server 2022; and
-- Your cluster has 2 media/ drive types (e.g. SSD + HDD or NVMe + HDD)
-- Your cluster has failover cluster installed 
+- Your server runs Windows Server 2022; and
+- Your server has 2 media/ drive types (for example: SSD + HDD or NVMe + HDD)
+- Your server has failover cluster installed 
 
 ### ![Red X icon.](media/storage-bus-cache/unsupported.png) You can't use storage bus cache if:
 
-- Your cluster runs Windows Server 2016 or 2019; or
-- Your cluster has an all flash configuration  
-
-<!-- 5. H2s
-Required. Give each H2 a heading that sets expectations for the content that follows. 
-Follow the H2 headings with a sentence about how the section contributes to the whole.
--->
+- Your server runs Windows Server 2016 or 2019; or
+- Your server has an all flash configuration
+- You are running Storage Spaces Direct or a cluster  
 
 ## Feature overview
 
 This section explains what each configurable field of the storage bus cache is and applicable values.
 
-> [!NOTE]
-> For general use, default settings are recommended. If a change is necessary, do so prior to enabling the feature.
-
 ```powershell
 Get-StorageBusCache
 ```
 
-The output should resemble the following:
+The output should resemble below:
 
 ```powershell
 ProvisionMode                  : Shared
@@ -75,11 +64,14 @@ CachePageSizeKBytes            : 16
 Enabled                        : True
 ```
 
+> [!NOTE]
+> For general use, default settings are recommended. If a change is necessary, do so prior to enabling the feature.
+
 ### Provision Mode
 
 This field determines if the entire fast media tier or only a portion of it will be used for caching. This field cannot be modified after enabling the SBC.
 
-- Shared (default): The cache will only take up a portion of the faster media tier (e.g. all the SSDs). The exact percentage is configurable by the Shared Cache Percentage field below.
+- Shared (default): The cache will only take up a portion of the faster media tier (for example, all the SSDs). The exact percentage is configurable by the Shared Cache Percentage field below.
 - Cache: Dedicate the entire faster media tier to caching as opposed to only a portion. This is currently only supported for simple spaces (no resiliency).
 
 ### Shared cache percentage
@@ -95,25 +87,25 @@ This field refers to the state of the storage bus cache and can either be True o
 > [!IMPORTANT]
 > Changes to these fields are not recommended. Adjustments after enabling the storage bus cache cannot be made.
 
-- Cache metadata reserve bytes: The amount of disk space, in bytes, to reserve for the cache of a flash drive when using Storage Spaces. Changes to this field is only allowed if the Provision Mode is Cache.
+- **Cache metadata reserve bytes:** The amount of disk space, in bytes, to reserve for the cache of a flash drive when using Storage Spaces. Changes to this field are only allowed if the Provision Mode is Cache.
 
-- Cache mode HDD: The default is to allow the HDD capacity devices to cache reads and writes. For simple spaces, this setting can be set to ReadWrite or WriteOnly.
+- **Cache mode HDD:** The default is to allow the HDD capacity devices to cache reads and writes. For simple spaces, this setting can be set to ReadWrite or WriteOnly.
 
-- Cache mode SSD: For future use. Comes in when all flash system is supported. The default is to allow the SSD capacity devices to cache writes only.
+- **Cache mode SSD:** For future use. Comes in when all flash system is supported. The default is to allow the SSD capacity devices to cache writes only.
 
-- Cache page size bytes: This field can be set to 8, 16 (default), 32 and 64.
+- **Cache page size bytes:** This field can be set to 8, 16 (default), 32 and 64.
 
 ## Enable storage bus cache in PowerShell
 
-This section is a step by step guide on how to enable the storage bus cache for your stand-alone server in PowerShell. 
+This section is a step-by-step guide on how to enable the storage bus cache for your stand-alone server in PowerShell. 
 
-1. Import the module
+**1. Import the module**
 
 ```powerShell
 Import-Module StorageBusCache 
 ```
 
-2. Configure storage bus cache settings
+**2. Configure storage bus cache settings**
 
 Default settings are recommended, skip this step to continue with the defaults. If configuration is needed, do so before enabling the storage bus cache. Refer to Feature overview section for information.
 
@@ -125,7 +117,7 @@ Set-StorageBusCache -ProvisionMode Cache
 Set-StorageBusCache -SharedCachePercent 25
 ```
 
-3. Check the drive status
+**3. Check the drive status**
 
 Ensure that all expected drives show up and are Healthy and True for CanPool
 
@@ -136,7 +128,7 @@ Get-PhysicalDisk
 The output should look something like:
 :::image type="content" source="media/storage-bus-cache/Get-PhysicalDisk.png" alt-text="Result from Get-PhysicalDisk cmdlet":::
 
-4. Enable storage bus cache
+**4. Enable storage bus cache**
 
 ```powershell
 Enable-StorageBusCache
@@ -150,7 +142,7 @@ This step will:
 
 You can run the cmdlet in Step 3 again to see the effects of enabling storage bus cache.
 
-5. Check the storage bus cache state
+**5. Check the storage bus cache state**
 
 Check that the fields are correct and the Enabled field is now set to true.
 
@@ -158,10 +150,12 @@ Check that the fields are correct and the Enabled field is now set to true.
 Get-StorageBusCache 
 ```
 
-## Create a volume 
+Now the storage bus cache has been successfully enabled, the next step is to create a volume. 
 
-# Volumes with resiliency: 
-The storage bus cache performs best when combined with a ReFS mirror accelerated parity volume.This combination offers read caching and write caching as writes are stored on the mirror tier, while maintaining storage efficiency as cold data gets rotated to the slower tier as parity. 
+## Create a volume
+
+### Volumes with resiliency:
+The storage bus cache performs best when combined with a ReFS mirror accelerated parity volume. This combination offers read caching and write caching as writes are stored on the mirror tier, while maintaining storage efficiency as cold data gets rotated to the slower tier as parity.
 
 The PowerShell cmdlet below creates a mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the recommended configuration for most workloads. For more information, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md). 
 
@@ -169,8 +163,8 @@ The PowerShell cmdlet below creates a mirror-accelerated parity volume with a Mi
 New-Volume – FriendlyName “TestVolume” -FileSystem CSVFS_ReFS -StoragePoolFriendlyName “StoragePoolName” -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 200GB, 800GB
 ```
 
-# Volumes without resiliency:
-Use the following to create a volume that cannot tolerate node and disk failures, both read and write caching is supported.
+### Volumes without resiliency:
+Use the following to create a volume that cannot tolerate node and disk failures. Both read and write caching is supported.
 
 ```powershell
 New-Volume -FriendlyName "TestVolume" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName “StoragePoolName”-ResiliencySettingName simple -Size Size
@@ -179,7 +173,7 @@ New-Volume -FriendlyName "TestVolume" -FileSystem CSVFS_ReFS -StoragePoolFriendl
 ## Making changes after enabling storage bus cache
 After running ``Enable-StorageBusCache``, limited changes can be made to the setup, below are some common scenarios for reference.
 
-# Adding or replacing capacity drives (HDDs)
+### Adding or replacing capacity drives (HDDs)
 
 Once the drive has been manually added, run the cmdlet below to finish the intake process.
 
@@ -187,7 +181,7 @@ Once the drive has been manually added, run the cmdlet below to finish the intak
 Update-StorageBusCache
 ```
 
-# Adding or replacing cache drives (NVMes or SSDs)
+### Adding or replacing cache drives (NVMes or SSDs)
 There is no cmdlet to intake a new cache drive and balance out the bindings. This process will cause the existing read cache to be lost. 
 
 ```powershell
@@ -195,12 +189,17 @@ Remove-StorageBusBinding
 New-StorageBusBinding 
 ```
 
-# Balance cache and capacity bindings 
+### Check and balance cache and capacity bindings 
 Use the following cmdlet to check for existing cache and capacity bindings:
 
 ```powershell
 Get-StorageBusBinding
 ```
 
-In the example below, the first column lists out capacity drives and the third column lists out the cache drives that they are bound to. Follow the instructions in Adding or replacing cache drives to balance, note that this is at the expense of loosing the existing cache.
+In the example below, the first column lists out capacity drives and the third column lists out the cache drives that they are bound to. 
 :::image type="content" source="media/storage-bus-cache/Get-StorageBusBinding.png" alt-text="Output of Get-StorageBusBinding":::
+
+Follow the instructions in Adding or replacing cache drives to balance, this is at the expense of loosing the existing cache.
+
+## Additional references
+
