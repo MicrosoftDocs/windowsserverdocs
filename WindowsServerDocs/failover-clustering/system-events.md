@@ -5,7 +5,7 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.date: 01/14/2020
+ms.date: 05/28/2021
 ---
 # Failover Clustering system log events
 
