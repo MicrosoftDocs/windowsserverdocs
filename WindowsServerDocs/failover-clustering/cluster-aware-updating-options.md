@@ -6,7 +6,7 @@ ms.topic: article
 manager: lizross
 ms.author: jgerend
 author: JasonGerend
-ms.date: 08/06/2018
+ms.date: 05/28/2021
 ---
 # Cluster-Aware Updating advanced options and updating run profiles
 
