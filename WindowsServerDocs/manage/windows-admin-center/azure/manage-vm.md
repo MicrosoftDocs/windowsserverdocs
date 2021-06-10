@@ -228,7 +228,7 @@ Windows Admin Center installs on your Azure Virtual Machine. The installation co
 
 There is an external Windows Admin Center service that manages certificates and DNS records for you. To allow your VM to interact with our service, you must create an outbound port rule.
 
-### How do I find used for Windows Admin Center installation?
+### How do I find the port used for Windows Admin Center installation?
 
 There are two ways to find out the port:
 
