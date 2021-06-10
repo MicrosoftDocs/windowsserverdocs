@@ -97,7 +97,8 @@ This field refers to the state of the storage bus cache and can either be True o
 
 ## Enable storage bus cache in PowerShell
 
-This section is a step-by-step guide on how to enable the storage bus cache for your stand-alone server in PowerShell. 
+This section is a step-by-step guide on how to enable the storage bus cache for your stand-alone server in PowerShell.
+
 
 **1. Import the module**
 
@@ -126,6 +127,7 @@ Get-PhysicalDisk
 ```
 
 The output should look something like:
+
 :::image type="content" source="media/storage-bus-cache/Get-PhysicalDisk.png" alt-text="Result from Get-PhysicalDisk cmdlet":::
 
 **4. Enable storage bus cache**
@@ -157,10 +159,10 @@ Now the storage bus cache has been successfully enabled, the next step is to cre
 ### Volumes with resiliency:
 The storage bus cache performs best when combined with a ReFS mirror accelerated parity volume. This combination offers read caching and write caching as writes are stored on the mirror tier, while maintaining storage efficiency as cold data gets rotated to the slower tier as parity.
 
-The PowerShell cmdlet below creates a mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the recommended configuration for most workloads. For more information, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md). 
+The PowerShell cmdlet below creates a mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the recommended configuration for most workloads. For more information, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md).
 
 ```powershell
-New-Volume – FriendlyName “TestVolume” -FileSystem CSVFS_ReFS -StoragePoolFriendlyName “StoragePoolName” -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 200GB, 800GB
+New-Volume –FriendlyName “TestVolume” -FileSystem ReFS -StoragePoolFriendlyName “StoragePoolName” -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 200GB, 800GB
 ```
 
 ### Volumes without resiliency:
@@ -196,8 +198,8 @@ Use the following cmdlet to check for existing cache and capacity bindings:
 Get-StorageBusBinding
 ```
 
-In the example below, the first column lists out capacity drives and the third column lists out the cache drives that they are bound to. 
-:::image type="content" source="media/storage-bus-cache/Get-StorageBusBinding.png" alt-text="Output of Get-StorageBusBinding":::
+In the example below, the first column lists out capacity drives and the third column lists out the cache drives that they are bound to.
+:::image type="content" source="media/storage-bus-cache/GetStorageBusBinding.PNG" alt-text="Output of Get-StorageBusBinding":::
 
 Follow the instructions in Adding or replacing cache drives to balance, this is at the expense of loosing the existing cache.
 
