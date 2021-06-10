@@ -70,7 +70,7 @@ The virtual machine will automatically activate the license against the virtuali
 
 ## AVMA keys
 
-The following AVMA keys can be used for Windows Server 2019.
+The following AVMA keys can be used for Windows Server 2022 LTSC preview.
 
 |Edition|    AVMA key|
 |-|-|
@@ -78,14 +78,23 @@ The following AVMA keys can be used for Windows Server 2019.
 |Standard|    TNK62-RXVTB-4P47B-2D623-4GF74|
 |Essentials|    2CTP7-NHT64-BP62M-FV6GG-HFV28|
 
-The following AVMA keys can be used for Windows Server, versions 1909, 1903, and 1809.
+
+The following AVMA keys can be used for Windows Server 2019 LTSC.
+
+|Edition|    AVMA key|
+|-|-|
+|Datacenter|    H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
+|Standard|    TNK62-RXVTB-4P47B-2D623-4GF74|
+|Essentials|    2CTP7-NHT64-BP62M-FV6GG-HFV28|
+
+The following AVMA keys can be used for Windows Server, versions 1909, 1903, and 1809 (SAC).
 
 |Edition|    AVMA key|
 |-|-|
 |Datacenter|    H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
 |Standard|    TNK62-RXVTB-4P47B-2D623-4GF74|
 
-The following AVMA keys can be used for Windows Server, version 1803 and 1709.
+The following AVMA keys can be used for Windows Server, version 1803 and 1709 (SAC).
 
 |Edition|AVMA key|
 |-|-|
@@ -93,7 +102,7 @@ The following AVMA keys can be used for Windows Server, version 1803 and 1709.
 |Standard|C3RCX-M6NRP-6CXC9-TW2F2-4RHYD|
 
 
-The following AVMA keys can be used for Windows Server 2016.
+The following AVMA keys can be used for Windows Server 2016 LTSC.
 
 |Edition|AVMA key|
 |-|-|
