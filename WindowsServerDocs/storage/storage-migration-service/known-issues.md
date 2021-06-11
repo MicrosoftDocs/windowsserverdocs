@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 11/12/2020
+ms.date: 06/11/2021
 ms.topic: article
 ---
 # Storage Migration Service known issues
@@ -663,6 +663,75 @@ It doesn't necessarily happen for all source computers. We are working to diagno
 
 > [!IMPORTANT]
 > Don't uninstall [KB4586793](https://support.microsoft.com/office/november-10-2020%E2%80%94kb4586793-os-build-17763-1577-e6a24f90-5659-8b80-5a50-8752de3d90b7). This update upgrades the Storage Migration Service database and removing the update will require you to delete your database.
+
+## Transfer fails with "Failed to get file handle" and one or no shares transfer from a particular volume
+
+When you attempt to transfer data from a source computer, you find that no files for a particular volume transfer even though they do transfer for other volumes. You receive the following errors in Windows Admin Center and the event log:
+
+```
+"Couldn't transfer storage on any of the endpoints"
+
+========================
+
+SMS Admin log:
+06/11/2021 08:44:17  3515 Error Couldn't transfer all of the files in the endpoint on the computer.
+
+Job: test1
+Computer: nedsrv1.corp.contoso.com
+Destination Computer: nedsrv2.corp.contoso.com
+Endpoint: foo
+State: Failed
+Source File Count: 0
+Source File Size in KB: 0
+Succeeded File Count: 0
+Succeeded File Size in KB: 0
+New File Count: 0
+New File Size in KB: 0
+Failed File Count: 0
+Error: -2146233088
+Error Message: 
+
+Guidance: Check the detailed error and make sure the transfer requirements are met. This could be because the orchestrator computer couldn't reach a source or destination computer, possibly due to a firewall rule, or missing permissions.
+
+========================
+
+```
+If you dump the SMS debug logs with [Get-SMSLogs](https://aka.ms.smslogs) you also see:
+
+```
+SMS Debug log:
+
+06/11/2021-08:44:17.236 [Erro] End file transfer failed with -2146233088 exception:ErrorCode: -2146233088, Transfer failed
+    at Microsoft.StorageMigration.Service.EndpointHelper.TransferFiles(String source, String destination, String sourceOSVersion, IEndpointRecord endpointRecord, TransferConfiguration config, String sourcePath, String destinationPath, ProxyInformation transferProxyInformation, Int64& skippedSystemObjectCount, CancellationToken cancelToken, SourceType sourceType, Protocol protocol, String sourceClusterSharedVolumesRoot, String targetClusterSharedVolumesRoot, ServerType sourceServerType, ServerType targetServerType, Boolean isTieredAFSEnabled, Int32 volumeMinimumFreeSpace, String targetVolume, String[] mountedVolumes)    [d:\os\src\base\dms\service\OperationManager\EndpointHelper.cs::TransferFiles::510]
+
+SMS Proxy Debug log:
+
+14090 06/11/2021-08:44:17.123 [Crit] Failed to create root of the share \\nedsrv1.corp.contoso.com\D$ with error -2147467259 and message Failed to get file handle    [d:\os\src\base\dms\proxy\transfer\transferproxy\stages\DirectoryEnumerationStage.cs::ProcessItem::112]
+14091 06/11/2021-08:44:17.124 [Erro] Stage DirectoryEnumerationStage cancelled. Received error: Failed to get file handle    [d:\os\src\base\dms\proxy\transfer\transferproxy\stages\StageBase.cs::DoStage::50]
+14124 06/11/2021-08:44:17.141 [Erro] Failed pipeline execution. System.AggregateException: One or more errors occurred. ---> System.ComponentModel.Win32Exception: Failed to get file handle 
+14125    at Microsoft.StorageMigration.Proxy.Service.Transfer.DirectoryEnumerationStage.ProcessItem(DirEnumResultWithParent input)
+14126    at Microsoft.StorageMigration.Proxy.Service.Transfer.StageBase`3.DoStage(CancellationTokenSource cts)
+14127    at System.Threading.Tasks.Task.Execute()
+14128    --- End of inner exception stack trace ---
+14129    at System.Threading.Tasks.Task.WaitAll(Task[] tasks, Int32 millisecondsTimeout, CancellationToken cancellationToken)
+14130    at Microsoft.StorageMigration.Proxy.Service.Transfer.Pipeline.Run(CancellationToken token)
+14131    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Run()
+14132    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)
+14133 ---> (Inner Exception #0) System.ComponentModel.Win32Exception (0x80004005): Failed to get file handle
+14134    at Microsoft.StorageMigration.Proxy.Service.Transfer.DirectoryEnumerationStage.ProcessItem(DirEnumResultWithParent input)
+14135    at Microsoft.StorageMigration.Proxy.Service.Transfer.StageBase`3.DoStage(CancellationTokenSource cts)
+14136    at System.Threading.Tasks.Task.Execute()<---
+14137     [d:\os\src\base\dms\proxy\transfer\transferproxy\TransferRequestHandler.cs::ProcessRequest::132]
+
+```
+
+This issue is caused by a limitation in the Storage Migration Service Proxy service when an entire NTFS volume has been configured with the Compression flag. To work around this issue, remove the compression flag from the destination volume:
+
+1. Open File Explorer, right-click the destination drive letter, and click Properties.
+2. Uncheck "Compress this drive to save disk space"
+3. Rerun the transfer.
+
+Alternatively, you can perform the same steps on the source computer if its volume was compressed and if it has free space to hold the expanded files. NTFS-compressed files are always decompressed while copying or moving, compressing them won't reduce transfer time.
 
 ## See also
 
