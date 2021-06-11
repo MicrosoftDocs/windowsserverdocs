@@ -16,9 +16,6 @@
 # Version 1809 and Windows Server 2019
 ## [Known issues and notifications](status-windows-10-1809-and-windows-server-2019.md)
 ## [Resolved issues](resolved-issues-windows-10-1809-and-windows-server-2019.md)
-# Version 1803
-## [Known issues and notifications](status-windows-10-1803.md)
-## [Resolved issues](resolved-issues-windows-10-1803.md)
 # Version 1607 and Windows Server 2016
 ## [Known issues and notifications](status-windows-10-1607-and-windows-server-2016.md)
 ## [Resolved issues](resolved-issues-windows-10-1607.md)
