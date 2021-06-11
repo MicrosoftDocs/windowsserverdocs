@@ -731,7 +731,7 @@ This issue is caused by a limitation in the Storage Migration Service Proxy serv
 2. Uncheck "Compress this drive to save disk space"
 3. Rerun the transfer.
 
-Alternatively, you can perform the same steps on the source computer if its volume was compressed and if it has free space to hold the expanded files. NTFS-compressed files are always decompressed while copying or moving, compressing them will not save SMS transfer time.
+Alternatively, you can perform the same steps on the source computer if its volume was compressed and if it has free space to hold the expanded files. NTFS-compressed files are always decompressed while copying or moving, compressing them won't reduce transfer time.
 
 ## See also
 
