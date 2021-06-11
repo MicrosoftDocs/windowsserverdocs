@@ -725,7 +725,7 @@ SMS Proxy Debug log:
 
 ```
 
-This issue is caused by a limitation in the SMS Proxy service when an entire NTFS volume has been configured with the Compression flag. To workaround this issue, remove the compression flag from the destination volume:
+This issue is caused by a limitation in the Storage Migration Service Proxy service when an entire NTFS volume has been configured with the Compression flag. To work around this issue, remove the compression flag from the destination volume:
 
 1. Open File Explorer, right-click the destination drive letter, and click Properties.
 2. Uncheck "Compress this drive to save disk space"
