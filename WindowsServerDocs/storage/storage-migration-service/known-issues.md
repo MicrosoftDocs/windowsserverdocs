@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 11/12/2020
+ms.date: 06/11/2021
 ms.topic: article
 ---
 # Storage Migration Service known issues
