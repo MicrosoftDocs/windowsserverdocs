@@ -80,8 +80,8 @@ When you use the same Azure Storage Account for configuring Cloud Witness for mu
     <br>You can't use a Blob storage account for a Cloud Witness.
     3. For **Performance**, select **Standard**.
     <br>You can't use Azure Premium Storage for a Cloud Witness.
-    2. For **Replication**, select **Locally-redundant storage (LRS)** .
-    <br>Failover Clustering uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Therefore you must select **Locally-redundant storage** for **Replication** type.
+    2. For **Replication**, select **Locally-redundant storage (LRS)** or **Zone-redundant storage (ZRS)** as applicable.
+    <br>Failover Clustering uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Therefore you must select **Locally-redundant storage** for **Replication** type when the Cloud Witness is for a cluster that recides on premise or its a cluster in Azure which isn't deployed across different availability zones in the saem region. When the cluster nodes are in the same region but different availability zone use **Zone-redundant storage** as **Replication** type.
 
 ### View and copy storage access keys for your Azure Storage Account
 
