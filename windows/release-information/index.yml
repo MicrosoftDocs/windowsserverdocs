@@ -43,8 +43,8 @@ conceptualContent:
   items:
     - title: Message center
       links:
-        - text: "Manage Windows updates in the cloud"
-          url: https://docs.microsoft.com/en-us/learn/modules/m365-windows-manage-cloud-device-updates/
+        - text: "Learning Module: Manage Windows updates in the cloud"
+          url: https://docs.microsoft.com/learn/modules/m365-windows-manage-cloud-device-updates/
           itemType: whats-new
         - text: "Out-of-band update to address an issue preventing installing or opening Xbox Game Pass games"
           url: https://support.microsoft.com/help/5004476
