@@ -5,7 +5,7 @@ ms.topic: article
 manager: lizross
 author: JasonGerend
 ms.author: jgerend
-ms.date: 08/06/2018
+ms.date: 05/28/2021
 ms.assetid: 3c2993b4-aa81-452b-a5c3-3724ad95d892
 ---
 # Cluster-Aware Updating overview

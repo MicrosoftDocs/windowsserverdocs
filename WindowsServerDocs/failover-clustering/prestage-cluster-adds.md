@@ -5,7 +5,7 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.date: 05/09/2019
+ms.date: 05/28/2021
 ms.localizationpriority: medium
 ---
 # Prestage cluster computer objects in Active Directory Domain Services

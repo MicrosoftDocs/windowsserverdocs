@@ -6,7 +6,7 @@ ms.topic: article
 manager: lizross
 ms.author: jgerend
 author: JasonGerend
-ms.date: 04/28/2017
+ms.date: 05/28/2021
 ---
 # How Cluster-Aware Updating plug-ins work
 

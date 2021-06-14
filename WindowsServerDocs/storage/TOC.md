@@ -146,6 +146,7 @@
 #### [Configure quorum](../failover-clustering/manage-cluster-quorum.md)
 #### [Upgrade a Storage Spaces Direct cluster](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)
 #### [Understand and deploy persistent memory](storage-spaces/deploy-pmem.md)
+#### [Understand and configure DAX](storage-spaces/persistent-memory-direct-access.md)
 
 ### Manage
 #### [Manage with Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md)
