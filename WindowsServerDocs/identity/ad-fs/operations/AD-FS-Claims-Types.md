@@ -11,7 +11,7 @@ ms.topic: article
 
 # Client access policy claim Types in AD FS
 
-To provide additional request context information, Client Access Policies use the following claim types, which AD FS generates from request header information for processing.  For more information see [The role of the claims engine](../technical-reference/the-role-of-the-claims-engine.md).
+To provide more request context information, Client Access Policies use the following claim types, which AD FS generates from request header information for processing.  For more information, see [The role of the claims engine](../technical-reference/the-role-of-the-claims-engine.md).
 
 ## X-MS-Forwarded-Client-IP
 
@@ -26,7 +26,7 @@ This AD FS claim represents a "best attempt" at ascertaining the IP address of t
     >The IP address of a client on the corporate network will appear as the external interface IP address of the organization's outbound proxy or gateway.
 
 - One or more IP addresses
-  - If Exchange Online cannot determine the IP address of the connecting client, it will set the value based on the value of the x-forwarded-for header, a non-standard header that can be included in HTTP based requests and is supported by many clients, load balancers, and proxies on the market.
+  - If Exchange Online can't determine the IP address of the connecting client, it will set the value based on the value of the x-forwarded-for header, a non-standard header that can be included in HTTP-based requests and is supported by many clients, load balancers, and proxies on the market.
   - Multiple IP addresses indicating the client IP address and the address of each proxy that passed the request will be separated by a comma.
 
     >[!NOTE]
@@ -59,7 +59,7 @@ This AD FS claim represents the protocol used by the end client, which correspon
 
 Claim type: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
 
-This AD FS claim provides a string to represent the device type that the client is using to access the service. This can be used when customers would like to prevent access for certain devices (such as particular types of smart phones).  This claim is populated from an HTTP header that is currently only set by Exchange Online, which populates the header when passing the authentication request to AD FS. Example values for this claim include (but are not limited to) the values below.
+This AD FS claim provides a string to represent the device type that the client is using to access the service. This can be used when customers would like to prevent access for certain devices (such as particular types of smart phones).  This claim is populated from an HTTP header that is currently only set by Exchange Online, which populates the header when passing the authentication request to AD FS. Example values for this claim include (but aren't limited to) the values below.
 
 >[!NOTE]
 >The below are examples of what the x-ms-user-agent value might contain for a client whose x-ms-client-application is "Microsoft.Exchange.ActiveSync"
@@ -79,7 +79,7 @@ This AD FS claim provides a string to represent the device type that the client 
 
 Claim type: `http://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
 
-This AD FS claim indicates that the request has passed through the federation server proxy.  This claim is populated by the federation server proxy, which populates the header when passing the authentication request to the back end Federation Service. AD FS then converts it to a claim.
+This AD FS claim indicates that the request has passed through the federation server proxy.  This claim is populated by the federation server proxy, which populates the header when passing the authentication request to the back-end Federation Service. AD FS then converts it to a claim.
 
 The value of the claim is the DNS name of the federation server proxy that passed the request.
 
