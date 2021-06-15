@@ -18,7 +18,7 @@ You can use the following procedure to verify that the federation server proxy c
 > [!IMPORTANT]
 > The result of this test is the successful generation of a specific event in Event Viewer on the federation server proxy computer.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ### To verify that a federation server proxy is operational
 
@@ -34,5 +34,3 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 ## Additional references
 [Checklist: Setting Up a Federation Server Proxy](Checklist--Setting-Up-a-Federation-Server-Proxy.md)
-
-

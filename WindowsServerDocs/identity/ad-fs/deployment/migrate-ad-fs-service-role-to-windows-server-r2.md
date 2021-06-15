@@ -26,7 +26,7 @@ ms.topic: article
 
 - Recreating the original AD FS configuration and restoring the remaining AD FS service settings on this server, which is now running the AD FS server role that is installed with Windows Server 2012 R2.
 
-  This guide does not include instructions to migrate a server that is running multiple roles. If your server is running multiple roles, we recommend that you design a custom migration process specific to your server environment, based on the information provided in other role migration guides. Migration guides for additional roles are available on the [Windows Server Migration Portal](https://go.microsoft.com/fwlink/?LinkId=247608).
+  This guide does not include instructions to migrate a server that is running multiple roles. If your server is running multiple roles, we recommend that you design a custom migration process specific to your server environment, based on the information provided in other role migration guides. Migration guides for additional roles are available on the [Windows Server Migration Portal](../../../get-started/migrate-roles-and-features.md).
 
 ### Supported operating systems
  Destination server operating system:
