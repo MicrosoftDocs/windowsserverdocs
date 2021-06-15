@@ -1,16 +1,16 @@
 ---
-title: Hyper-V Network Virtualization Technical Details in Windows Server 2016
-description: This topic provides technical information about Hyper-V Network Virtualization in Windows Server 2016
+title: Hyper-V Network Virtualization Technical Details in Windows Server
+description: This topic provides technical information about Hyper-V Network Virtualization in Windows Server
 manager: grcusanz
 ms.topic: article
 ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/07/2020
+ms.date: 06/16/2021
 ---
-# Hyper-V Network Virtualization Technical Details in Windows Server 2016
+# Hyper-V Network Virtualization Technical Details in Windows Server
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Server virtualization enables multiple server instances to run concurrently on a single physical host; yet server instances are isolated from each other. Each virtual machine essentially operates as if it is the only server running on the physical computer.
 
