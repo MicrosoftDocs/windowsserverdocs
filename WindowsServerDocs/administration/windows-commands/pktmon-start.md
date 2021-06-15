@@ -94,4 +94,4 @@ C:\Test> pktmon start --etw -c 4,5 -d
 - [Pktmon pcapng](pktmon-pcapng.md)
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon unload](pktmon-unload.md)
-- [Packet Monitor overview](/windows-server/networking/technologies/pktmon/pktmon)
+- [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)

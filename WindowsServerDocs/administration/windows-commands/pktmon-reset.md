@@ -31,4 +31,4 @@ pktmon reset [-counters]
 - [Pktmon pcapng](pktmon-pcapng.md)
 - [Pktmon start](pktmon-start.md)
 - [Pktmon unload](pktmon-unload.md)
-- [Packet Monitor overview](/windows-server/networking/technologies/pktmon/pktmon)
+- [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)

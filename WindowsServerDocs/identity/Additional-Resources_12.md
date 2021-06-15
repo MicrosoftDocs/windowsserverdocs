@@ -14,23 +14,23 @@ ms.topic: reference
 
 For detailed information about using Repadmin.exe to manage Active Directory replication, see the following resource:
 
-- [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830)
+- [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551(v=ws.10))
 
 For information about specific events that are logged for Active Directory problems, see the following resource:
 
-- [Active Directory](https://go.microsoft.com/fwlink/?LinkId=122877)
+- [Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753985(v=ws.10))
 
 For information about Active Directory known issues and best practices, see the following resources:
 
-- [Known Issues for Creating Domain and Forest Trusts](https://go.microsoft.com/fwlink/?LinkId=128784)
-- [Best Practices for Administering Domain and Forest Trusts](https://go.microsoft.com/fwlink/?LinkId=128785)
-- [Known Issues for Backing Up Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=128793)
-- [Known Issues for Authoritative Restore](https://go.microsoft.com/fwlink/?LinkId=128788)
-- [Best Practices for Authoritative Restore](https://go.microsoft.com/fwlink/?LinkId=128791)
-- [Known Issues for Adding Domain Controllers in Remote Sites](https://go.microsoft.com/fwlink/?LinkId=128794)
-- [Best Practices for Adding Domain Controllers in Remote Sites](https://go.microsoft.com/fwlink/?LinkId=128796)
+- [Known Issues for Creating Domain and Forest Trusts](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794894(v=ws.10))
+- [Best Practices for Administering Domain and Forest Trusts](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816850(v=ws.10))
+- [Known Issues for Backing Up Active Directory Domain Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816816(v=ws.10))
+- [Known Issues for Authoritative Restore](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794728(v=ws.10))
+- [Best Practices for Authoritative Restore](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816636(v=ws.10))
+- [Known Issues for Adding Domain Controllers in Remote Sites](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816685(v=ws.10))
+- [Best Practices for Adding Domain Controllers in Remote Sites](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794962(v=ws.10))
 
 For general information about how to manage and configure Active Directory Domain Services (AD DS) and how it works, see the following resources:
 
-- [Administering Active Directory Operations](https://go.microsoft.com/fwlink/?LinkId=128798)
-- [Active Directory Collection](https://go.microsoft.com/fwlink/?LinkId=34157)
+- [Administering Active Directory Operations](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794908(v=ws.10))
+- [Active Directory Collection](/previous-versions/windows/it-pro/windows-server-2003/cc780036(v=ws.10))

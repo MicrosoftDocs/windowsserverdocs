@@ -37,5 +37,5 @@ pktmon { filter | comp | reset | counters | format | list | start | stop | pcapn
 
 ## Additional References
 
-- [Packet Monitor overview](/windows-server/networking/technologies/pktmon/pktmon)
-- [Pktmon support for Microsoft Network Monitor (Netmon)](/windows-server/networking/technologies/pktmon/pktmon-netmon-support)
+- [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)
+- [Pktmon support for Microsoft Network Monitor (Netmon)](../../networking/technologies/pktmon/pktmon-netmon-support.md)

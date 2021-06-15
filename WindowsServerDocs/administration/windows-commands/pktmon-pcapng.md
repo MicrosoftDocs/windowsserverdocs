@@ -47,4 +47,4 @@ C:\Test> pktmon pcapng C:\tmp\PktMon.etl -d -c nics
 - [Pktmon unload](pktmon-unload.md)
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon start](pktmon-start.md)
-- [Packet Monitor overview](/windows-server/networking/technologies/pktmon/pktmon)
+- [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)
