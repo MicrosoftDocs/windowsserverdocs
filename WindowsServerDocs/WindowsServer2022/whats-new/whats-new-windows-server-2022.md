@@ -73,7 +73,7 @@ You can increase your efficiency and agility with built-in hybrid capabilities i
 
 ### Azure Arc enabled server
 
-*Content needed* <!-- Need some more info on this. What's specific to WS 2022 that's not already available for Windows Server? -->
+** *Content needed* **<!-- Need some more info on this. What's specific to WS 2022 that's not already available for Windows Server? -->
 
 ### Windows Admin Center
 
@@ -81,7 +81,7 @@ Improvements to Windows Admin Center to manage Windows Server 2022 include capab
 
 ### Azure Automanage
 
-*Content needed* <!-- Need some more info on this. Is it only referring to the Azure Edition or will this apply to on-premises servers that are managed by Arc, etc.? -->
+** *Content needed* ** <!-- Need some more info on this. Is it only referring to the Azure Edition or will this apply to on-premises servers that are managed by Arc, etc.? -->
 
 ## Application platform
 
