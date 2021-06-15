@@ -4,7 +4,7 @@ description: Learn about the new High-Performance Networking features in Windows
 manager: dougkim
 author: JasonGerend
 ms.author: jgerend
-ms.date: 09/12/2018
+ms.date: 06/15/2021
 ms.topic: article
 ---
 
