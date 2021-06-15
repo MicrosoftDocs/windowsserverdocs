@@ -241,7 +241,7 @@ The Windows operating system includes a set of VSS writers that are responsible 
 
 For more information about these writers, see the following Microsoft Docs Web page:
 
-- [In-Box VSS Writers](/windows/win32/vss/in-box-vss-writers) (https://docs.microsoft.com/windows/win32/vss/in-box-vss-writers)
+- [In-Box VSS Writers](/windows/win32/vss/in-box-vss-writers)
 
 
 ## How Shadow Copies Are Used
