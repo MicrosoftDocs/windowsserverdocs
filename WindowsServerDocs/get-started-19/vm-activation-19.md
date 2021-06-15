@@ -1,7 +1,7 @@
 ---
 title: Automatic virtual machine activation
 TOCTitle: Automatic VM Activation
-description: How to activate VMs in Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2
+description: How to activate VMs in Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2
 ms.topic: article
 author: lizap
 ms.author: elizapo
@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Automatic virtual machine activation
 
-> Applies to: Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows Server 2012 R2
+> Applies to: Windows Server 2022, Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows Server 2012 R2
 
 Automatic Virtual Machine Activation (AVMA) acts as a proof-of-purchase mechanism, helping to ensure that Windows products are used in accordance with the Product Use Rights and Microsoft Software License Terms.
 
@@ -39,11 +39,13 @@ AVMA requires a Microsoft Virtualization Server running Windows Server 2019 Data
 
 Here are the guests that the different version hosts can activate:
 
-|Server host version|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|
-|-|-|-|-|
-|Windows Server 2019|X|X|X|
-|Windows Server 2016| |X|X|
-|Windows Server 2012 R2| ||X|
+|Server host version|Windows Server 2022|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|
+|:---:|:---:|:---:|:---:|:---:| 
+|Windows Server 2022|X|X|X|X|
+|Windows Server 2019|X|X|X|X|
+|Windows Server 2016| | |X|X|
+|Windows Server 2012 R2| | ||X|
+
 
 Note that these activate all editions (Datacenter, Standard, or Essentials).
 
@@ -73,7 +75,7 @@ The virtual machine will automatically activate the license against the virtuali
 The following AVMA keys can be used for Windows Server 2022 LTSC preview.
 
 |Edition|    AVMA key|
-|-|-|
+|:---|:---:|
 |Datacenter|    H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
 |Standard|    TNK62-RXVTB-4P47B-2D623-4GF74|
 |Essentials|    2CTP7-NHT64-BP62M-FV6GG-HFV28|
@@ -82,7 +84,7 @@ The following AVMA keys can be used for Windows Server 2022 LTSC preview.
 The following AVMA keys can be used for Windows Server 2019 LTSC.
 
 |Edition|    AVMA key|
-|-|-|
+|:---|:---:|
 |Datacenter|    H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
 |Standard|    TNK62-RXVTB-4P47B-2D623-4GF74|
 |Essentials|    2CTP7-NHT64-BP62M-FV6GG-HFV28|
@@ -90,14 +92,14 @@ The following AVMA keys can be used for Windows Server 2019 LTSC.
 The following AVMA keys can be used for Windows Server, versions 1909, 1903, and 1809 (SAC).
 
 |Edition|    AVMA key|
-|-|-|
+|:---|:---:|
 |Datacenter|    H3RNG-8C32Q-Q8FRX-6TDXV-WMBMW|
 |Standard|    TNK62-RXVTB-4P47B-2D623-4GF74|
 
 The following AVMA keys can be used for Windows Server, version 1803 and 1709 (SAC).
 
 |Edition|AVMA key|
-|-|-|
+|:---|:---:|
 |Datacenter|TMJ3Y-NTRTM-FJYXT-T22BY-CWG3J|
 |Standard|C3RCX-M6NRP-6CXC9-TW2F2-4RHYD|
 
@@ -105,7 +107,7 @@ The following AVMA keys can be used for Windows Server, version 1803 and 1709 (S
 The following AVMA keys can be used for Windows Server 2016 LTSC.
 
 |Edition|AVMA key|
-|-|-|
+|:---|:---:|
 |Datacenter|TMJ3Y-NTRTM-FJYXT-T22BY-CWG3J|
 |Standard|C3RCX-M6NRP-6CXC9-TW2F2-4RHYD|
 |Essentials|B4YNW-62DX9-W8V6M-82649-MHBKQ|
@@ -114,7 +116,7 @@ The following AVMA keys can be used for Windows Server 2016 LTSC.
 The following AVMA keys can be used for Windows Server 2012 R2.
 
 |Edition|AVMA key|
-|-|-|
+|:---|:---:|
 |Datacenter|Y4TGP-NPTV9-HTC2H-7MGQ3-DV4TW|
 |Standard|DBGBW-NPF86-BJVTX-K3WKJ-MTB6V|
 |Essentials|K2XGM-NMBT3-2R6Q8-WF2FK-P36R2|
