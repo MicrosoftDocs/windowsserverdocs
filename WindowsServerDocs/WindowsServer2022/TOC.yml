@@ -1,8 +1,0 @@
-- name: Media Services Documentation
-  href: ./index.yml  
-- name: Overview
-  items:
-  - name: What's new in Windows Server 2022 (hey that rhymes!)
-    href: whatsnew/whats-new-windows-server-2022.md
-  - name: Comparison of features
-    href: whatsnew/reference-windows-server-2022-comparison.md
