@@ -16,8 +16,5 @@ metadata:
 highlightedContent:
   items:
     - title: What's new in Windows Server 2022?
-      itemType: whats-new # controls the icon image and super-title text
-      url: ./whatsnew/whats-new-windows-server-2022.md
-    - title: Compare Windows Server 2022 to previous versions
-      itemType: overview # controls the icon image and super-title text
-      url: ./whatsnew/reference-windows-server-2022-comparison.md
+      itemType: whats-new
+      url: ./whats-new/whats-new-windows-server-2022.md
