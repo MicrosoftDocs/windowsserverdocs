@@ -192,7 +192,7 @@ After you create a GPO for Folder Redirection settings, follow these steps to ed
 > [!NOTE]  
 > By default, the Offline Files feature is enabled for redirected folders on Windows client computers, and disabled on Windows Server computers. Users can enable this feature, or you can use Group Policy to control it. The policy is **Allow or disallow use of the Offline Files feature**.  
 >
-> For information about some of the other Offline Files Group Policy settings, see [Enable Advanced Offline Files Functionality](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v=ws.11)), and [Configuring Group Policy for Offline Files](https://technet.microsoft.com/library/cc759721(v=ws.10).aspx).
+> For information about some of the other Offline Files Group Policy settings, see [Enable Advanced Offline Files Functionality](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v=ws.11)), and [Configuring Group Policy for Offline Files](/previous-versions/windows/it-pro/windows-server-2003/cc759721(v=ws.10)).
 
 1. In Group Policy Management, right-click the GPO you created (for example, **Folder Redirection Settings**), and then select **Edit**.
 2. In the Group Policy Management Editor window, navigate to **User Configuration** > **Policies** > **Windows Settings** > **Folder Redirection**.
@@ -277,6 +277,6 @@ The following table summarizes some of the most important changes to this topic.
 - [Folder Redirection, Offline Files, and Roaming User Profiles](folder-redirection-rup-overview.md)
 - [Deploy Primary Computers for Folder Redirection and Roaming User Profiles](deploy-primary-computers.md)
 - [Enable Advanced Offline Files Functionality](enable-always-offline.md)
-- [Microsoft's Support Statement Around Replicated User Profile Data](https://docs.microsoft.com/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
-- [Sideload Apps with DISM](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10))
-- [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://docs.microsoft.com/windows/win32/appxpkg/troubleshooting)
+- [Microsoft's Support Statement Around Replicated User Profile Data](/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data)
+- [Sideload Apps with DISM](/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10))
+- [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](/windows/win32/appxpkg/troubleshooting)
