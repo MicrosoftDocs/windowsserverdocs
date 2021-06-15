@@ -17,7 +17,7 @@ In this topic, we give you an overview of the different network offload and opti
 
 The three categories of networking features available in Windows Server 2016 are:
 
-1.  [Software only (SO) features and technologies](hpn-software-only-features.md): These features are implemented as part of the OS and are independent of the underlying NIC(s). Sometimes these features will require some tuning of the NIC for optimal operation. Examples of these include Hyper-v features such as vmQoS, ACLs, and non-Hyper-V features like NIC Teaming.
+1.  [Software only (SO) features and technologies](hpn-software-only-features.md): These features are implemented as part of the OS and are independent of the underlying NIC(s). Sometimes these features will require some tuning of the NIC for optimal operation. Examples of these include Hyper-V features such as vmQoS, ACLs, and non-Hyper-V features like NIC Teaming.
 
 2.  [Software and Hardware (SH) integrated features and technologies](hpn-software-hardware-features.md): These features have both software and hardware components. The software is intimately tied to hardware capabilities that are required for the feature to work. Examples of these include VMMQ, VMQ, Send-side IPv4 Checksum Offload, and RSS.
 
