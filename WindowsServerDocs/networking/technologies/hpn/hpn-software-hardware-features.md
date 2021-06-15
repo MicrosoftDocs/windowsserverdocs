@@ -32,7 +32,7 @@ To use the converged NIC capability:
 
 3.  Ensure to enable RDMA on the vNICs designated for RDMA in the host.
 
-For more details about RDMA and SET, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md).
+For more details about RDMA and SET, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
 
 ## Data Center Bridging (DCB)
 
@@ -69,7 +69,7 @@ For details about PVLAN isolation, see [System Center: Virtual Machine Manager E
 
 RDMA is a networking technology that provides high-throughput, low-latency communication that minimizes CPU usage. RDMA supports zero-copy networking by enabling the network adapter to transfer data directly to or from application memory. RDMA-capable means the NIC (physical or virtual) is capable of exposing RDMA to an RDMA client. RDMA-enabled, on the other hand, means an RDMA-capable NIC is exposing the RDMA interface up the stack.
 
-For more details about RDMA, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md).
+For more details about RDMA, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
 
 ## Receive Side Scaling (RSS)
 

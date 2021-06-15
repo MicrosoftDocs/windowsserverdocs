@@ -55,7 +55,7 @@ The SDN extension in Windows Server 2016 improved ways to provide bandwidth cont
 
 ## Switch Embedded Teaming (SET)
 
-SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch. For information about Switch Embedded Teaming in this library, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md).
+SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch. For information about Switch Embedded Teaming in this library, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
 
 ## Virtual Receive Side Scaling (vRSS)
 

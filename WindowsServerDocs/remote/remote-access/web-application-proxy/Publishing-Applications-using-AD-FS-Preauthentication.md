@@ -63,7 +63,7 @@ The general AD FS preauthentication flow is as follows:
 > When configuring the external URL and the backend server URL, make sure you include the fully qualified domain name (FQDN), and not an IP address.
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](/previous-versions//bb648607(v=vs.85)).
 
 ## <a name="BKMK_1.1"></a>Publish a Claims-based Application for Web Browser Clients
 To publish an application that uses claims for authentication, you must add a relying party trust for the application to the Federation Service.
@@ -447,4 +447,3 @@ Add-WebApplicationProxyApplication
 -   [Add-WebApplicationProxyApplication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280944(v=ws.11))
 
 -   [Set-WebApplicationProxyConfiguration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280944(v=ws.11))
-
