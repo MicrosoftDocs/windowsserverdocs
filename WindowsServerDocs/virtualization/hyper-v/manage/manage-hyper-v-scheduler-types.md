@@ -130,7 +130,7 @@ Windows Server 2016 Hyper-V uses the classic hypervisor scheduler model by defau
 
 ## Windows Server 2019 Hyper-V defaults to using the core scheduler
 
-To help ensure Hyper-V hosts are deployed in the optimal security configuration, Windows Server 2019 Hyper-V now uses the core hypervisor scheduler model by default. The host administrator may optionally configure the host to use the legacy classic scheduler. Administrators should carefully read, understand and consider the impacts each scheduler type has on the security and performance of virtualization hosts prior to overriding the scheduler type default settings. See [About Hyper-V hypervisor scheduler type selection](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/about-hyper-v-scheduler-type-selection) for more information.
+To help ensure Hyper-V hosts are deployed in the optimal security configuration, Windows Server 2019 Hyper-V now uses the core hypervisor scheduler model by default. The host administrator may optionally configure the host to use the legacy classic scheduler. Administrators should carefully read, understand and consider the impacts each scheduler type has on the security and performance of virtualization hosts prior to overriding the scheduler type default settings. See [About Hyper-V hypervisor scheduler type selection](./about-hyper-v-scheduler-type-selection.md) for more information.
 
 ### Required updates
 
