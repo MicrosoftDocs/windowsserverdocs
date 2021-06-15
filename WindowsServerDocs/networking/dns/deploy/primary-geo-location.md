@@ -120,7 +120,7 @@ For example, **USZoneScope** and **EuropeZoneScope**. In USZoneScope, you can ad
 You can use the following Windows PowerShell commands to add records to the zone scopes.
 
 ```powershell
-Add-DnsServerResourceRecord -ZoneName "woodgrove.com" -A -Name "www" -IPv4Address "192.0.0.1" -ZoneScope "USZoneScope
+Add-DnsServerResourceRecord -ZoneName "woodgrove.com" -A -Name "www" -IPv4Address "192.0.0.1" -ZoneScope "USZoneScope"
 Add-DnsServerResourceRecord -ZoneName "woodgrove.com" -A -Name "www" -IPv4Address "141.1.0.1" -ZoneScope "EuropeZoneScope"
 ```
 
