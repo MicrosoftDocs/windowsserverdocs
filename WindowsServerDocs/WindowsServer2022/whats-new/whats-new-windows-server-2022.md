@@ -13,7 +13,7 @@ ms.prod: windows-server
 
 # What's new in Windows Server 2022
 
-This topic describes some of the new features in Windows Server 2022. Windows Server 2022 is built on the strong foundation of Windows Server 2019 and brings many innovations on three key themes: security, Azure hybrid integration and management, and application platform. In addition, Windows Server 2022 Datacenter: Azure Edition helps use the benefits of cloud to keep your VMs up to date while minimizing downtime. <!-- includes hotpatching, which is a new way to install updates on new Windows Server Azure Edition virtual machines (VMs) that doesn’t require a reboot after installation -->
+This topic describes some of the new features in Windows Server 2022. Windows Server 2022 is built on the strong foundation of Windows Server 2019 and brings many innovations on three key themes: security, Azure hybrid integration and management, and application platform. In addition, Windows Server 2022 Datacenter: Azure Edition helps use the benefits of cloud to make remotely accessing your files more secure and simple, and keep your VMs up to date while minimizing downtime.
 
 ## Security
 
