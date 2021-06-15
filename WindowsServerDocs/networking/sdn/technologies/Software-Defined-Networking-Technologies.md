@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 02/14/2019
+ms.date: 06/17/2021
 ---
 # SDN Technologies
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 The topics in this section provide overview and technical information about the Software Defined Networking technologies that are included in Windows Server 2019 and 2016.
 
