@@ -16,12 +16,12 @@ summary: |
   
   Now that you've set up the Remote Desktop client on your device (Android, Mac, iOS, or Windows), you may have questions. Here are answers to the most commonly asked questions about the Remote Desktop clients.
   
-  - [Setting up](#setting-up)
-  - [Connections, gateway, and networks](#connection,-gateway,-and-networks)
-  - [Web client](#web-client)
-  - [Monitors, audio, and mouse](#monitors,-audio,-and-mouse)
-  - [Mac hardware](#mac-client---hardware-questions)
-  - [Specific error messages](#specific-errors)
+  - [Setting up](/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq#setting-up)
+  - [Connections, gateway, and networks](/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq#connection,-gateway,-and-networks)
+  - [Web client](/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq#web-client)
+  - [Monitors, audio, and mouse](/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq#monitors,-audio,-and-mouse)
+  - [Mac hardware](/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq#mac-client---hardware-questions)
+  - [Specific error messages](/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq#specific-errors)
   
   The majority of these questions apply to all of the clients, but there are a few client specific items.
   
