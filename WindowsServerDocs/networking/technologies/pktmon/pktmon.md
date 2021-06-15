@@ -31,7 +31,7 @@ However, with the advent of network virtualization, the size of the networking s
 
 </center>
 
-Packet Monitor intercepts packets at multiple locations throughout the networking stack, exposing the packet route. If a packet was dropped by a supported component in the networking stack, Packet Monitor will report that packet drop. This allows users to differentiate between a component that is the intended destination for a packet and a component that is interfering with a packet. Additionally, Packet Monitor will report drop reasons; for example, MTU Mistmatch, or Filtered VLAN, etc. These drop reasons provide the root cause of the issue without the need to exhaust all the possibilities. Packet Monitor also provides packet counters for each intercept point, enabling a high-level packet flow examination without the need for time-consuming log analysis.
+Packet Monitor intercepts packets at multiple locations throughout the networking stack, exposing the packet route. If a packet was dropped by a supported component in the networking stack, Packet Monitor will report that packet drop. This allows users to differentiate between a component that is the intended destination for a packet and a component that is interfering with a packet. Additionally, Packet Monitor will report drop reasons; for example, MTU Mismatch, or Filtered VLAN, etc. These drop reasons provide the root cause of the issue without the need to exhaust all the possibilities. Packet Monitor also provides packet counters for each intercept point, enabling a high-level packet flow examination without the need for time-consuming log analysis.
 
 <center>
 
