@@ -332,7 +332,7 @@ manager: mtillman
 >  Work with your domain name service provider to determine the type of certificate that you need. The certificate can be one of the inexpensive certificates that are offered. However, you should review the documentation and features of higher level security certificates to determine if they better meet your business needs.
 
 ###  <a name="BKMK_ExportCert"></a> Export or import your certificate on your server
- If you want to create a backup copy of a certificate or use it on another server, you must export the certificate. For information about exporting certificates, see [Export a Certificate](https://go.microsoft.com/fwlink/p/?LinkId=214362).
+ If you want to create a backup copy of a certificate or use it on another server, you must export the certificate. For information about exporting certificates, see [Export a Certificate](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.11)).
 
 ###  <a name="BKMK_SetNameManually"></a> Set up a domain name manually
  If you choose this option, the server does not monitor or maintain your domain name, and it does not alert you if there is a configuration issue. You might also consider this option if any of the following is true:

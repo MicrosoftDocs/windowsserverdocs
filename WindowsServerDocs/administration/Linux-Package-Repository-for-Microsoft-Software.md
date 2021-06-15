@@ -18,7 +18,7 @@ Microsoft's Linux Software Repository is comprised of multiple sub-repositories:
 
  - prod – The Production sub-repository is designated for packages intended for use in production. These packages are commercially supported by Microsoft under the terms of the applicable support agreement or program that you have with Microsoft.
 
- - mssql-server - These repositories contain packages for Microsoft SQL Server on Linux - See also: [SQL Server on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-overview).
+ - mssql-server - These repositories contain packages for Microsoft SQL Server on Linux - See also: [SQL Server on Linux](/sql/linux/sql-server-linux-overview).
 
 > [!NOTE]
 > Packages in the Linux software repositories are subject to the license terms located in the packages. Please read the license terms prior to using the package. Your installation and use of the package constitutes your acceptance of these terms. If you do not agree with the license terms, do not use the package.
@@ -89,7 +89,7 @@ sudo apt-get update
 
 ## See Also
 
-- [Frequently Asked Questions about Windows Subsystem for Linux](https://docs.microsoft.com/windows/wsl/faq)
-- [How do I uninstall a WSL Distribution?](https://docs.microsoft.com/windows/wsl/faq#how-do-i-uninstall-a-wsl-distribution)
-- [Windows Subsystem for Linux Installation Guide for Windows 10](https://docs.microsoft.com/windows/wsl/install-win10)
-- [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/windows/wsl/)
+- [Frequently Asked Questions about Windows Subsystem for Linux](/windows/wsl/faq)
+- [How do I uninstall a WSL Distribution?](/windows/wsl/faq#how-do-i-uninstall-a-wsl-distribution)
+- [Windows Subsystem for Linux Installation Guide for Windows 10](/windows/wsl/install-win10)
+- [Windows Subsystem for Linux Documentation](/windows/wsl/)
