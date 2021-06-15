@@ -13,7 +13,7 @@ ms.date: 06/15/2021
 
 > Applies to: Azure Stack HCI, version 20H2
 
-These features have both software and hardware components. The software is intimately tied to hardware capabilities that are required for the feature to work. Examples of these include VMMQ, VMQ, Send-side IPv4 Checksum Offload, and RSS. To learn more, see [Host network requirements for Azure Stack HCI](https://docs.microsoft.com/azure-stack/hci/concepts/host-network-requirements.md).
+These features have both software and hardware components. The software is intimately tied to hardware capabilities that are required for the feature to work. Examples of these include VMMQ, VMQ, Send-side IPv4 Checksum Offload, and RSS. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
 
 >[!TIP]
 >SH and HO features are available if the installed NIC supports it. The feature descriptions below will cover how to tell if your NIC supports the feature.

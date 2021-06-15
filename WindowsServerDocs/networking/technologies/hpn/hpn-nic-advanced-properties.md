@@ -13,7 +13,7 @@ ms.date: 06/15/2021
 
 > Applies to: Azure Stack HCI, version 20H2
 
-You can manage NICs and all the features via Windows PowerShell using the [NetAdapter](/powershell/module/netadapter/) cmdlet.  You can also manage NICs and all the features using Network Control Panel (ncpa.cpl). To learn more, see [Host network requirements for Azure Stack HCI](https://docs.microsoft.com/azure-stack/hci/concepts/host-network-requirements.md).
+You can manage NICs and all the features via Windows PowerShell using the [NetAdapter](/powershell/module/netadapter/) cmdlet.  You can also manage NICs and all the features using Network Control Panel (ncpa.cpl). To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
 
 1. In **Windows PowerShell**, run the `Get‑NetAdapterAdvancedProperty` cmdlet against two different make/model of NICs.
 
