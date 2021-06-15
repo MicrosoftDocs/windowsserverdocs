@@ -16,7 +16,7 @@ ms.topic: article
 
 In the past, Virtual Machine Queues and Virtual Machine Multi-Queues enabled much higher throughput to individual VMs as network throughputs first reached the 10GbE mark and beyond. Unfortunately, the planning, baselining, tuning, and monitoring required for success became a large undertaking; often more than the IT administrator intended to spend. 
 
-Windows Server 2019 improves these optimizations by dynamically spreading and tuning the processing of network workloads as required. Windows Server 2019 ensures peak efficiency and removes the configuration burden for IT administrators. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements.md).
+Windows Server 2019 improves these optimizations by dynamically spreading and tuning the processing of network workloads as required. Windows Server 2019 ensures peak efficiency and removes the configuration burden for IT administrators. To learn more, see [Host network requirements for Azure Stack HCI](https://docs.microsoft.com/azure-stack/hci/concepts/host-network-requirements.md).
 
 For more information, see:
 
