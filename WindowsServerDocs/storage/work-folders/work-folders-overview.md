@@ -22,6 +22,9 @@ If you're looking to download or use Work Folders on Windows 10, Windows 7, or a
 - [Work Folders for iOS](https://itunes.apple.com/app/work-folders/id950878067)
 - [Work Folders for Android](https://play.google.com/store/apps/details?id=com.microsoft.workfolders)
 
+> [!NOTE]
+>  The Work Folders application for Android and iOS is no longer being actively developed and will remain on the respective app stores if the application is functioning properly.
+
 ## Role description
 
  With Work Folders users can store and access work files on personal computers and devices, often referred to as bring-your-own device (BYOD), in addition to corporate PCs. Users gain a convenient location to store work files, and they can access them from anywhere. Organizations maintain control over corporate data by storing the files on centrally managed file servers, and optionally specifying user device policies such as encryption and lock-screen passwords.
@@ -106,6 +109,9 @@ Work Folders has the following software requirements for client computers:
     -   Android 4.4 KitKat and later
 
     -   iOS 10.2 and later
+
+ > [!NOTE]
+ >  The Work Folders application for Android and iOS is no longer being actively developed and will remain on the respective app stores if the application is functioning properly.
 
 -   Windows 7 PCs must be running one of the following editions of Windows:
 

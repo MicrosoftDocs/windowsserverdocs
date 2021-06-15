@@ -5,7 +5,7 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.date: 06/07/2019
+ms.date: 05/28/2021
 ms.localizationpriority: medium
 ---
 # Configure and manage quorum

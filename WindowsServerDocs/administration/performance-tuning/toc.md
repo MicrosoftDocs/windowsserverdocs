@@ -1,4 +1,4 @@
-# [Performance tuning guidelines for Windows Server 2016](index.md)
+# [Performance tuning guidelines for Windows Server 2022](index.md)
 ## [Server Hardware Tuning](hardware/index.md)
 ### [Performance considerations](hardware/index.md)
 ### [Power considerations](hardware/power.md)
