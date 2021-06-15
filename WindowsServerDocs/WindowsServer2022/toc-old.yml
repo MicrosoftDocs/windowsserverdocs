@@ -1,5 +1,6 @@
-- name: Media Services Documentation
-  href: ./index.yml  
+items:
+- name: Windows Server Documentation
+  href: index.yml  
 - name: Overview
   items:
   - name: What's new in Windows Server 2022
