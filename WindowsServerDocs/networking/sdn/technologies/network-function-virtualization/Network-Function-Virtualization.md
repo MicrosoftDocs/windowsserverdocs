@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/07/2020
+ms.date: 06/16/2021
 ---
 # Network Function Virtualization
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn about Network Function Virtualization, which allows you to deploy virtual networking appliances such as Datacenter Firewall, multitenant RAS Gateway, and Software Load Balancing \(SLB\) multiplexer \(MUX\).
 
