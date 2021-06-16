@@ -43,14 +43,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "Join Windows office hours on June 17, 2021, at 9:00 a.m. PT"
+          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/office-hours-servicing-windows-10-in-a-remote-world/ba-p/1316322
+          itemType: whats-new
         - text: "June 2021 Windows non-security preview \"C\" release is available for some versions for Windows 10"
           url: https://support.microsoft.com/help/5003698
           itemType: whats-new
         - text: "Learning Module: Manage Windows updates in the cloud"
           url: https://docs.microsoft.com/learn/modules/m365-windows-manage-cloud-device-updates/
-          itemType: whats-new
-        - text: "Out-of-band update to address an issue preventing installing or opening Xbox Game Pass games"
-          url: https://support.microsoft.com/help/5004476
           itemType: whats-new
 
       footerLink:
