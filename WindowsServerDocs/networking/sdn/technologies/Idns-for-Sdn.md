@@ -162,7 +162,7 @@ You can use the following Windows PowerShell command to create a firewall rule t
 Enable-NetFirewallRule -DisplayGroup 'DNS Proxy Firewall'
 ```
 
-For more information, see [Enable-NetFirewallRule](/powershell/module/netsecurity/enable-netfirewallrule?view=winserver2012r2-ps).
+For more information, see [Enable-NetFirewallRule](/powershell/module/netsecurity/enable-netfirewallrule?view=winserver2012r2-ps&preserve-view=true).
 
 ### Validate the iDNS Service
 To validate the iDNS Service, you must deploy a sample tenant workload.
