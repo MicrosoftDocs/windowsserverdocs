@@ -398,3 +398,9 @@ sections:
           In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following Powershell command and remove token binding support.
           
           `Set-AdfsProperties -IgnoreTokenBinding $true`
+          
+      - question: |
+          Does AD FS support implicit flow for confidential client?
+          AD FS does not support implicit flow for confidential client. Client authentication is only enabled for token endpoint. So if confidential client needs an access token, it will need to use auth code flow.
+
+
