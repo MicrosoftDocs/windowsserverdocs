@@ -250,7 +250,12 @@ sections:
           - access_token: 1 hour by default, based on the relying party
           
           - id_token: same as access token
-          
+  
+        - question: |
+          Does AD FS support implicit flow for confidential client?
+          answer: |
+          AD FS does not support implicit flow for confidential client. Client authentication is only enabled for token endpoint. So if confidential client needs an access token, it will need to use auth code flow.
+  
       - question: |
           Does AD FS support HTTP Strict Transport Security (HSTS)?
         answer: |
@@ -399,8 +404,3 @@ sections:
           
           `Set-AdfsProperties -IgnoreTokenBinding $true`
           
-      - question: |
-          Does AD FS support implicit flow for confidential client?
-          AD FS does not support implicit flow for confidential client. Client authentication is only enabled for token endpoint. So if confidential client needs an access token, it will need to use auth code flow.
-
-
