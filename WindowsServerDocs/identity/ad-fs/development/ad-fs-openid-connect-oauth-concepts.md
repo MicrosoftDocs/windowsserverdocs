@@ -44,6 +44,11 @@ Modern authentication uses following token types:
 - **access_token**: A JWT token issued by authorization server (AD FS) and intended to be consumed by the resource. The 'aud' or audience claim of this token must match the identifier of the resource or Web API.
 - **refresh_token**: This is token issued by AD FS for client to use when it needs to refresh the id_token and access_token. The token is opaque to the client and can only be consumed by AD FS.
 
+## Refresh Token Lifetimes
+•	**Simple logon (no KMSI, device *not* registered)**: AD FS will  apply the SsoLifetime + DeviceUsageWindowInDays, and the first refresh token will have lifetime=DeviceUsageWindowInDays or SsoLifetime  (based on which field is lower) but *no* further refresh tokens are issued.
+•	**KMSI logon (EnableKmsi=true in adfs conf and kmsi=true passed as parameter**): ADFS will apply KmsiLifetimeMins with DeviceUsageWindowInDays. The first refresh token will have lifetime=DeviceUsageWindowInDays and each subsequent grant_type=refresh_token request will get a new refresh_token. (This happens only with native clients or confidential client + device auth)
+•	**Registered devices (device auth)**: ADFS will use PersistentSsoLifetimeMins + DeviceUsageWindowInDays similar to KMSI. Both Native and Confidential Clients should get new refresh tokens (based on device auth).
+
 ## Scopes
 
 While registering a resource in AD FS, scopes can be configured to allow AD FS to perform specific actions. In addition to configuring the scope, the scope value is also required to be sent in the request for AD FS to perform the action. For e.g., Admin needs to configure scope as openid during resource registration and application (client) needs to send scope = openid in the auth request for AD FS to issue ID Token. Details on the scopes available in AD FS are provided below
