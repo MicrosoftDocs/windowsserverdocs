@@ -49,6 +49,8 @@ Modern authentication uses following token types:
 •	**KMSI logon (EnableKmsi=true in adfs conf and kmsi=true passed as parameter**): ADFS will apply KmsiLifetimeMins with DeviceUsageWindowInDays. The first refresh token will have lifetime=DeviceUsageWindowInDays and each subsequent grant_type=refresh_token request will get a new refresh_token. (This happens only with native clients or confidential client + device auth)
 •	**Registered devices (device auth)**: ADFS will use PersistentSsoLifetimeMins + DeviceUsageWindowInDays similar to KMSI. Both Native and Confidential Clients should get new refresh tokens (based on device auth).
 
+Additional details in [AD FS Single Sign On documentation](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings)_
+
 ## Scopes
 
 While registering a resource in AD FS, scopes can be configured to allow AD FS to perform specific actions. In addition to configuring the scope, the scope value is also required to be sent in the request for AD FS to perform the action. For e.g., Admin needs to configure scope as openid during resource registration and application (client) needs to send scope = openid in the auth request for AD FS to issue ID Token. Details on the scopes available in AD FS are provided below
