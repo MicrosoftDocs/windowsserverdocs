@@ -38,7 +38,7 @@ There are two HNV implementations which will be available in  Windows Server 201
 
 -   **HNVv2**
 
-    A significant number of new features are included in HNVv2 which is implemented using the Azure Virtual Filtering Platform (VFP) forwarding extension in the Hyper-V Switch. HNVv2 is fully integrated with Microsoft Azure Stack which includes the new Network Controller in the Software Defined Networking (SDN) Stack.  Virtual network policy is defined through the Microsoft [Network Controller](../../../sdn/technologies/network-controller/Network-Controller.md) using a RESTful NorthBound (NB) API and plumbed to a Host Agent via multiple SouthBound Intefaces (SBI) including OVSDB. The Host Agent programs policy in the VFP extension of the Hyper-V Switch where it is enforced.
+    A significant number of new features are included in HNVv2 which is implemented using the Azure Virtual Filtering Platform (VFP) forwarding extension in the Hyper-V Switch. HNVv2 is fully integrated with Microsoft Azure Stack which includes the new Network Controller in the Software Defined Networking (SDN) Stack.  Virtual network policy is defined through the Microsoft [Network Controller](../../../sdn/technologies/network-controller/Network-Controller.md) using a RESTful NorthBound (NB) API and plumbed to a Host Agent via multiple SouthBound Interfaces (SBI) including OVSDB. The Host Agent programs policy in the VFP extension of the Hyper-V Switch where it is enforced.
 
     > [!IMPORTANT]
     > This topic focuses on HNVv2.
