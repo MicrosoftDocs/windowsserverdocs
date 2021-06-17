@@ -9,11 +9,7 @@ ms.date: 06/17/2021
 ms.prod: windows-server
 ---
 
-<!--Need to check the UCM taxonomy for the correct metadata -->
-
 # Comparison of Windows Server 2022 to Windows Server 2019
-
-## Table of comparison
 
 ## Secured-core server
 
@@ -45,14 +41,12 @@ ms.prod: windows-server
 | 2019 | You have the ability to search inventory at-scale with a unified management experience and consistent VM extensions. |
 | 2019 | The built-in security baseline with Role-based Access Control (RBAC) facilitates compliance across environments.|
 
-
 ## Administration
 
 | Windows Server 2019 | Windows Server 2022 |
 | --- | --- |
 | 2019 | Windows Admin Center (WAC) allows you to manage Windows Servers with edge-local or hosted in Azure support. |
 | 2019 | Azure Automanage for Windows Server virutal machines includes backup, Security center, monitoring, update management, an Azure automation account, change tracking and inventory, configuration managment, log analytics. Security patches are applied without reboot to protect against critical security threats.|
-
 
 ## Application platform
 
