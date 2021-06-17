@@ -34,7 +34,6 @@ pktmon format log.etl [-o log.txt] [-b] [-v [level]] [-x] [-e] [-l [port]
 ## Additional References
 
 - [Pktmon](pktmon.md)
-- [Pktmon comp](pktmon-comp.md)
 - [Pktmon counters](pktmon-counters.md)
 - [Pktmon filter](pktmon-filter.md)
 - [Pktmon filter add](pktmon-filter-add.md)

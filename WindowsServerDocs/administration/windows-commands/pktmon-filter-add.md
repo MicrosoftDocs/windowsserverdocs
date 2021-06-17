@@ -74,7 +74,6 @@ C:\Test> pktmon filter add MySubnet -i 10.10.10.0/24
 ## Other references
 
 - [Pktmon](pktmon.md)
-- [Pktmon comp](pktmon-comp.md)
 - [Pktmon counters](pktmon-counters.md)
 - [Pktmon filter](pktmon-filter.md)
 - [Pktmon format](pktmon-format.md)
