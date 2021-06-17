@@ -16,7 +16,7 @@ ms.date: 08/22/2018
 You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking \(SDN\) in Windows Server 2019 or 2016 Datacenter and you are using System Center Virtual Machine Manager \(SCVMM\) as your SDN management client.
 
 >[!NOTE]
->For overview information about Network Controller, see [Network Controller](../technologies/network-controller/Network-Controller.md).
+>For overview information about Network Controller, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).
 
 If you are not using Kerberos for securing the Network Controller communication, you can use X.509 certificates for authentication, authorization, and encryption.
 

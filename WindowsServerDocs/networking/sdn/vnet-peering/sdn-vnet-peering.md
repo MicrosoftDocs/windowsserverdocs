@@ -55,7 +55,7 @@ After you peer virtual networks, resources in either virtual network can directl
 -   Virtual machines in a virtual network can access the internal load-balancer in the peered virtual network.
 
 You can apply access control lists (ACLs) in either virtual network to block access to other virtual networks or subnets if desired. If you open full connectivity between peered virtual networks (which is the default option), you
-can apply ACLs to specific subnets or virtual machines to block or deny specific access. To learn more about ACLs, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](../manage/use-acls-for-traffic-flow.md).
+can apply ACLs to specific subnets or virtual machines to block or deny specific access. To learn more about ACLs, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](/azure-stack/hci/manage/use-datacenter-firewall-powershell).
 
 ## Service chaining
 
