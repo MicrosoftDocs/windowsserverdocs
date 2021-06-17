@@ -11,7 +11,7 @@ ms.date: 8/16/2016
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -49,6 +49,3 @@ The availability of some integration services can be managed through the virtual
 4.  Under **Management**, click **Integration Services**.
 
 5.  In the list of integration services, select the check box for each service you want to offer to the virtual machine. If a check box is unavailable, that particular integration service is not supported by the guest operating system that runs in the virtual machine.
-
-
-
