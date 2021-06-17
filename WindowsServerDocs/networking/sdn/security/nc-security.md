@@ -13,7 +13,7 @@ ms.date: 08/30/2018
 
 >Applies to: Windows Server 2019, Windows Server 2016
 
-In this topic, you learn how to configure security for all communication between [Network Controller](../technologies/network-controller/network-controller.md) and other software and devices.
+In this topic, you learn how to configure security for all communication between [Network Controller](/azure-stack/hci/concepts/network-controller-overview) and other software and devices.
 
 The communication paths that you can secure include Northbound communication on the management plane, cluster communication between Network Controller virtual machines \(VMs\) in a cluster, and Southbound communication on the data plane.
 

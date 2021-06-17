@@ -68,7 +68,7 @@ conceptualContent:
         - url: ./identity/active-directory-federation-services.md
           itemType: overview
           text: Active Directory Federation Services (AD FS)
-        - url: ./identity/securing-privileged-access/securing-privileged-access.md
+        - url: /security/compass/overview
           itemType: concept
           text: Securing privileged access
       footerLink:
@@ -113,7 +113,7 @@ conceptualContent:
         - url: ./networking/sdn/index.yml
           itemType: overview
           text: Software-defined Networking (SDN) overview
-        - url: ./networking/sdn/technologies/network-controller/network-controller.md
+        - url: /azure-stack/hci/concepts/network-controller-overview
           itemType: overview
           text: Network controller
       footerLink:

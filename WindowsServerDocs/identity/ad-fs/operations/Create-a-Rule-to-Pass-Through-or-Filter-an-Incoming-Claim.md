@@ -15,7 +15,7 @@ Using the Pass Through or Filter an Incoming Claim rule template in Active Dire
 
 You can use the following procedure to create a claim rule with the AD FS Management snap\-in.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ## To create a rule to pass through or filter an incoming claim on a Relying Party Trust in Windows Server 2016
 
@@ -128,4 +128,3 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 [The Role of Claims](../../ad-fs/technical-reference/The-Role-of-Claims.md)
 
 [The Role of Claim Rules](../../ad-fs/technical-reference/The-Role-of-Claim-Rules.md)
-
