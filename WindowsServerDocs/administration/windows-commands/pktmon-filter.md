@@ -30,7 +30,6 @@ pktmon filter { list | add | remove } [OPTIONS | help]
 ## Additional References
 
 - [Pktmon](pktmon.md)
-- [Pktmon comp](pktmon-comp.md)
 - [Pktmon counters](pktmon-counters.md)
 - [Pktmon filter add](pktmon-filter-add.md)
 - [Pktmon format](pktmon-format.md)
@@ -39,4 +38,4 @@ pktmon filter { list | add | remove } [OPTIONS | help]
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon start](pktmon-start.md)
 - [Pktmon unload](pktmon-unload.md)
-- [Packet Monitor overview](/windows-server/networking/technologies/pktmon/pktmon)
+- [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)

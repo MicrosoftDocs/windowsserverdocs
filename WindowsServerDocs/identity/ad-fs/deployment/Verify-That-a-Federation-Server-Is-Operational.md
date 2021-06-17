@@ -14,7 +14,7 @@ ms.author: billmath
 
 You can use the following procedures to verify that a federation server is operational; that is, that any client on the same network can reach a new federation server.
 
-Membership in **Users**, **Backup Operators**, **Power Users**, **Administrators** or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Users**, **Backup Operators**, **Power Users**, **Administrators** or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ### Procedure 1: To verify that a federation server is operational
 
@@ -28,7 +28,7 @@ Membership in **Users**, **Backup Operators**, **Power Users**, **Administrators
 
     The expected output is a display of XML with the service description document. If this page appears, IIS on the federation server is operational and serving pages successfully.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ### Procedure 2: To verify that a federation server is operational
 
@@ -42,5 +42,3 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 
 ## Additional references
 [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)
-
-

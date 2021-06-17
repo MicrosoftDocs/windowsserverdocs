@@ -74,7 +74,6 @@ C:\Test> pktmon filter add MySubnet -i 10.10.10.0/24
 ## Other references
 
 - [Pktmon](pktmon.md)
-- [Pktmon comp](pktmon-comp.md)
 - [Pktmon counters](pktmon-counters.md)
 - [Pktmon filter](pktmon-filter.md)
 - [Pktmon format](pktmon-format.md)
@@ -83,4 +82,4 @@ C:\Test> pktmon filter add MySubnet -i 10.10.10.0/24
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon start](pktmon-start.md)
 - [Pktmon unload](pktmon-unload.md)
-- [Packet Monitor overview](/windows-server/networking/technologies/pktmon/pktmon)
+- [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)

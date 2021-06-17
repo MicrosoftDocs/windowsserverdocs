@@ -502,7 +502,6 @@
 ### [perfmon](perfmon.md)
 ### [ping](ping.md)
 ### [pktmon](pktmon.md)
-#### [pktmon comp](pktmon-comp.md)
 #### [pktmon counters](pktmon-counters.md)
 #### [pktmon filter](pktmon-filter.md)
 #### [pktmon filter add](pktmon-filter-add.md)

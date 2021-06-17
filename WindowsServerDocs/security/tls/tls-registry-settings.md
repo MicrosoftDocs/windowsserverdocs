@@ -277,11 +277,11 @@ Default server cache time: 10 hours
 
 ## TLS, DTLS, and SSL protocol version settings
 
-Schannel SSP implements versions of the TLS, DTLS, and SSL protocols. Different Windows releases support different [protocol versions](https://docs.microsoft.com/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-). The set of (D)TLS and SSL versions available system-wide can be restricted (but not expanded) by SSPI callers specifying either [SCH_CREDENTIALS](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-sch_credentials) or [SCHANNEL_CRED](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-schannel_cred) structure in the [AcquireCredentialsHandle](https://docs.microsoft.com/windows/win32/secauthn/acquirecredentialshandle--schannel) call. It is recommended that SSPI callers use the system defaults, rather than imposing protocol version restrictions.
+Schannel SSP implements versions of the TLS, DTLS, and SSL protocols. Different Windows releases support different [protocol versions](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-). The set of (D)TLS and SSL versions available system-wide can be restricted (but not expanded) by SSPI callers specifying either [SCH_CREDENTIALS](/windows/win32/api/schannel/ns-schannel-sch_credentials) or [SCHANNEL_CRED](/windows/win32/api/schannel/ns-schannel-schannel_cred) structure in the [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) call. It is recommended that SSPI callers use the system defaults, rather than imposing protocol version restrictions.
 
 A supported (D)TLS or SSL protocol version can exist in one of the following states:
-- **Enabled**: unless the SSPI caller explicitly disables this protocol version using the [SCH_CREDENTIALS](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-sch_credentials) structure, Schannel SSP may negotiate this protocol version with a supporting peer.
-- **Disabled by default**: unless the SSPI caller explicitly requests this protocol version using the deprecated [SCHANNEL_CRED](https://docs.microsoft.com/windows/win32/api/schannel/ns-schannel-schannel_cred) structure, Schannel SSP will not negotiate this protocol version.
+- **Enabled**: unless the SSPI caller explicitly disables this protocol version using the [SCH_CREDENTIALS](/windows/win32/api/schannel/ns-schannel-sch_credentials) structure, Schannel SSP may negotiate this protocol version with a supporting peer.
+- **Disabled by default**: unless the SSPI caller explicitly requests this protocol version using the deprecated [SCHANNEL_CRED](/windows/win32/api/schannel/ns-schannel-schannel_cred) structure, Schannel SSP will not negotiate this protocol version.
 - **Disabled**: Schannel SSP will not negotiate this protocol version regardless of the settings the SSPI caller may specify.
 
 The system administrator can override the default (D)TLS and SSL protocol version settings by creating DWORD registry values "Enabled" and "DisabledByDefault". These registry values are configured separately for the protocol client and server roles under the registry subkeys named using the following format:
@@ -317,12 +317,12 @@ under the corresponding version-specific subkey. The following example shows TLS
 ![TLS 1.0 server disabled](images/tls-10-server-disabled.png)
 
 Switching a (D)TLS or SSL protocol version to **Disabled by default** or **Disabled** state may cause 
-[AcquireCredentialsHandle](https://docs.microsoft.com/windows/win32/secauthn/acquirecredentialshandle--schannel) calls to fail due to the lack of protocol versions 
+[AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls to fail due to the lack of protocol versions 
 enabled system-wide and at the same time allowed by particular SSPI callers. In addition, reducing the set of **Enabled** (D)TLS and SSL versions may break interoperability 
 with remote peers.
 
 Once the (D)TLS or SSL protocol version settings have been modified, they take effect on connections established using credential handles opened by subsequent 
-[AcquireCredentialsHandle](https://docs.microsoft.com/windows/win32/secauthn/acquirecredentialshandle--schannel) calls. (D)TLS and SSL client and server applications 
+[AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls. (D)TLS and SSL client and server applications 
 and services tend to reuse credential handles for multiple connections, for performance reasons. In order to get these applications to reacquire their credential handles, 
 an application or service restart may be required.
 

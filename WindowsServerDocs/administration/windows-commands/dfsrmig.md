@@ -147,7 +147,7 @@ dfsrmig /?
 
 ## Additional References
 
-- [Command-Line Syntax Key](https://go.microsoft.com/fwlink/?LinkId=122056)
+- [Command-Line Syntax Key](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc771080(v=ws.11))
 
 - [SYSvol Migration Series: Part 2 dfsrmig.exe: The SYSvol Migration Tool](https://techcommunity.microsoft.com/t5/storage-at-microsoft/sysvol-migration-series-part-2-8211-dfsrmig-exe-the-sysvol/ba-p/423470)
 
