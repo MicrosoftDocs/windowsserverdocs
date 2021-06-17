@@ -16,7 +16,7 @@ Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool f
 ## Syntax
 
 ```
-pktmon { filter | comp | reset | counters | format | list | start | stop | pcapng | unload | help } [options]
+pktmon { filter | reset | counters | format | list | start | stop | pcapng | unload | help } [options]
 ```
 
 ### Commands
@@ -24,7 +24,6 @@ pktmon { filter | comp | reset | counters | format | list | start | stop | pcapn
 | **Command** | **Description** |
 | --------- | ----------- |
 | [pktmon filter](pktmon-filter.md) | Manage packet filters. |
-| [pktmon comp](pktmon-comp.md) | Manage registered components. |
 | [pktmon reset](pktmon-reset.md) | Reset counters to zero. |
 | [pktmon counters](pktmon-counters.md) | Query packet counters. |
 | [pktmon format](pktmon-format.md) | Convert log file to text. |
