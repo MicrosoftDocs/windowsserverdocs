@@ -43,4 +43,4 @@ pktmon format log.etl [-o log.txt] [-b] [-v [level]] [-x] [-e] [-l [port]
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon start](pktmon-start.md)
 - [Pktmon unload](pktmon-unload.md)
-- [Packet Monitor overview](/windows-server/networking/technologies/pktmon/pktmon)
+- [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)

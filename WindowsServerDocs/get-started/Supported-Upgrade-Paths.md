@@ -98,7 +98,7 @@ If the server is running an evaluation version of Windows Server 2016 Standard o
 For the evaluation version of Windows Server 2016 Standard, you can also convert to the retail version of Windows Server 2016 Datacenter in one step using this same command and the appropriate product key.
 
 > [!TIP]
-> For more information about Dism.exe, see [DISM Command-line options](https://go.microsoft.com/fwlink/?LinkId=192466).
+> For more information about Dism.exe, see [DISM Command-line options](/previous-versions/orphan-topics/ws.10/dd772580(v=ws.10)).
 
 ## Converting a current retail edition to a different current retail edition
 
