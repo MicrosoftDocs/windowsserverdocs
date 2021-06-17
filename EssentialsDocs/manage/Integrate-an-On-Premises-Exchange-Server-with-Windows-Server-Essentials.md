@@ -105,7 +105,7 @@ This guide provides information and basic instructions to help you set up and in
 
 > [!NOTE]
 > - You must always choose to install the Management Tools on the server that is running Exchange Server. The Management Tools are required by the Exchange Server Integration feature on Windows Server Essentials.
->   -   If you need to configure virtual directories, we recommend that you also set the **InternalUrl** property to be the same URL as the **ExternalUrl** property for each virtual directory. For more information, see [Managing Client Access Server Virtual Directories](https://go.microsoft.com/fwlink/p/?LinkId=251058) at the Exchange Server 2010 online Help website.
+>   -   If you need to configure virtual directories, we recommend that you also set the **InternalUrl** property to be the same URL as the **ExternalUrl** property for each virtual directory. For more information, see [Managing Client Access Server Virtual Directories](/exchange/virtual-directory-management-exchange-2013-help) at the Exchange Server 2010 online Help website.
 >   -   If you want to access Outlook Web Access (OWA) from within the Remote Web Access site on Windows Server Essentials, you must set the External URL property for OWA.
 
  If you are installing Exchange Server 2010 in a clean setup, you can also use the following scripts to set up Exchange Server.
@@ -250,13 +250,13 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
 ##### To add your email domain as the default accepted domain
 
-1.  Follow the instructions in the Exchange Server article [Create an Accepted Domain](https://go.microsoft.com/fwlink/p/?LinkId=249174) to add an accepted domain.
+1.  Follow the instructions in the Exchange Server article [Create an Accepted Domain](/previous-versions/office/exchange-server-2010/bb124911(v=exchg.141)) to add an accepted domain.
 
 2.  Log on to the second server as an administrator, open the Exchange Management Console, and then navigate to the **Hub Transport** tab of the **Organization Configuration**.
 
 3.  In the Exchange Management Console work pane, right-click the new accepted domain, and then click **Set as Default**.
 
-4.  Follow the instructions in the Exchange Server article [Create an Email Address Policy](https://go.microsoft.com/fwlink/p/?LinkId=249179) to create a new email address policy. You can accept all of the default values except the email address. For email address, specify your public email domain.
+4.  Follow the instructions in the Exchange Server article [Create an Email Address Policy](/Exchange/email-addresses-and-address-books/email-address-policies/eap-procedures) to create a new email address policy. You can accept all of the default values except the email address. For email address, specify your public email domain.
 
 ### Create SMTP Send and Receive connectors
 
@@ -284,7 +284,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 |80 (HTTP)|Internal IP of the server that is running Windows Server Essentials|80||
 |443 (HTTPS)|Internal IP of the server that is running Windows Server Essentials|443||
 
- If you support the POP3 or IMAP messaging protocols on your network, you must also configure port forwardings for those protocols. For related information, see the section **Client Access Servers** in the topic [Exchange Network Port Reference](https://go.microsoft.com/fwlink/p/?LinkId=250773) in the Exchange Server TechNet Library.
+ If you support the POP3 or IMAP messaging protocols on your network, you must also configure port forwardings for those protocols. For related information, see the section **Client Access Servers** in the topic [Exchange Network Port Reference](/Exchange/plan-and-deploy/deployment-ref/network-ports) in the Exchange Server TechNet Library.
 
 > [!NOTE]
 > - We recommend that you configure static IP addresses for the server that is running Windows Server Essentials and for the second server that is running Exchange Server. For instructions about how to configure a static IP address on a computer running Windows Server 2003 or Windows Server 2008 R2, see [Configure a Static IP Address](https://technet.microsoft.com/library/cc754203\(v=ws.10\).aspx) in the Windows Server TechNet Library
