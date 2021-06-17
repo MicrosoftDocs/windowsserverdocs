@@ -53,7 +53,7 @@ This guide organizes performance and tuning guidance for Windows Server 2022 acr
 
 - Updates to [Hardware Power guidance](hardware/power.md) section
 
-- Updates to [PowerShell tuning guidance](powershell/index.md) section
+- Updates to [PowerShell tuning guidance](/powershell/scripting/dev-cross-plat/performance/script-authoring-considerations) section
 
 - Significant updates to the [Hyper-V guidance](role/hyper-v-server/index.md) section
 
