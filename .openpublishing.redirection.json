@@ -10034,6 +10034,11 @@
       "source_path": "WindowsServerDocs/storage/storage-spaces/deploy-pmem.md",
       "redirect_url": "/azure-stack/hci/concepts/deploy-persistent-memory",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-comp.md",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-list",
+      "redirect_document_id": false
+    }    
   ]
 }
