@@ -132,7 +132,7 @@ Windows Admin Center integrates Azure IaaS deployment into Storage Migration Ser
    Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
    > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ]
 
-If you want to lift and shift virtual machines to Azure without migrating to a later operating system, consider using Azure Migrate. For more info, see [Azure Migrate overview](https://go.microsoft.com/fwlink/?linkid=2056064).
+If you want to lift and shift virtual machines to Azure without migrating to a later operating system, consider using Azure Migrate. For more info, see [Azure Migrate overview](/azure/migrate/migrate-services-overview).
 
 ## What's new in Storage Migration Service
 
