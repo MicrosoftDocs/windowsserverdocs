@@ -9,7 +9,7 @@ ms.date: 06/17/2021
 ms.prod: windows-server
 ---
 
-# Comparison of Windows Server 2022 to Windows Server 2019
+# Comparison of Windows Server 2019 to Windows Server 2022
 
 ## Secured-core server
 
