@@ -4,19 +4,19 @@ description: Reference article for the pktmon network diagnostics tool for Windo
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
-ms.date: 1/14/2021
+ms.date: 06/17/2021
 ---
 
 # pktmon
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, drop detection, filtering, and counting. Pktmon is especially helpful in virtualization scenarios such as container networking and SDN, because it provides visibility within the networking stack.
+Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for advanced packet capture and event collection, drop detection, filtering, and counting. Pktmon is especially helpful in virtualization scenarios such as container networking and SDN, because it provides visibility within the networking stack.
 
 ## Syntax
 
 ```
-pktmon { filter | reset | counters | format | list | start | stop | pcapng | unload | help } [options]
+pktmon { filter | reset | counters | format | list | start | stop | pcapng | unload } [OPTIONS | help]
 ```
 
 ### Commands
@@ -24,15 +24,15 @@ pktmon { filter | reset | counters | format | list | start | stop | pcapng | unl
 | **Command** | **Description** |
 | --------- | ----------- |
 | [pktmon filter](pktmon-filter.md) | Manage packet filters. |
-| [pktmon reset](pktmon-reset.md) | Reset counters to zero. |
-| [pktmon counters](pktmon-counters.md) | Query packet counters. |
+| [pktmon reset](pktmon-reset.md) | Reset packet counters to zero. |
+| [pktmon counters](pktmon-counters.md) | Display current packet counters. |
 | [pktmon format](pktmon-format.md) | Convert log file to text. |
-| [pktmon list](pktmon-list.md) | List all active components. |
-| [pktmon start](pktmon-start.md) | Start packet monitoring. |
-| pktmon stop | Stop packet monitoring. |
+| [pktmon list](pktmon-list.md) | List all active packet processing components. |
+| [pktmon start](pktmon-start.md) | Start packet capture and event collection. |
+| pktmon stop | Stop data collection. |
 | [pktmon pcapng](pktmon-pcapng.md) | Convert log file to pcapng format. |
 | [pktmon unload](pktmon-unload.md) | Unload pktmon driver. |
-| pktmon help | Displays a short summary of subcommands. |
+| pktmon help | Show help text for specific command, for example `pktmon start help`. |
 
 ## Additional References
 
