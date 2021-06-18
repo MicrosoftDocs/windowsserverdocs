@@ -15,7 +15,7 @@ The Health Service is a new feature in Windows Server 2016 that improves the day
 
 ## Actions
 
-The next section describes workflows which are automated by the Health Service. To verify that an action is indeed being taken autonomously, or to track its progress or outcome, the Health Service generates "Actions". Unlike logs, Actions disappear shortly after they have completed, and are intended primarily to provide insight into ongoing activity which may impact performance or capacity (e.g. restoring resiliency or rebalancing data).
+The next section describes workflows that are automated by the Health Service. To verify that an action is indeed being taken autonomously, or to track its progress or outcome, the Health Service generates "Actions". Unlike logs, Actions disappear shortly after they have completed, and are intended primarily to provide insight into ongoing activity that may impact performance or capacity (for example restoring resiliency or rebalancing data).
 
 ### Usage
 
