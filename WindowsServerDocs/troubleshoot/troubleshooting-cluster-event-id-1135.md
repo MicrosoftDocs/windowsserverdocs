@@ -32,9 +32,9 @@ A validation and the network tests would be recommended as one of the initial tr
 
 The Cluster service is the essential software component that controls all aspects of failover cluster operation and manages the cluster configuration database. If you see the event ID 1135, Microsoft recommends you to install the fixes mentioned in the below KB articles and reboot all the nodes of the cluster, then observe if issue reoccurs.
 
-- [Hotfix for Windows Server 2012 R2](https://docs.microsoft.com/troubleshoot/windows-server/high-availability/updates-for-windows-server-2012-r2-failover-cluster)
-- [Hotfix for Windows Server 2012](https://docs.microsoft.com/troubleshoot/windows-server/high-availability/updates-for-windows-server-2012-failover-cluster)
-- [Hotfix for Windows Server 2008 R2](https://docs.microsoft.com/troubleshoot/windows-server/high-availability/updates-for-windows-server-2008-r2-sp1-failover-cluster)
+- [Hotfix for Windows Server 2012 R2](/troubleshoot/windows-server/high-availability/updates-for-windows-server-2012-r2-failover-cluster)
+- [Hotfix for Windows Server 2012](/troubleshoot/windows-server/high-availability/updates-for-windows-server-2012-failover-cluster)
+- [Hotfix for Windows Server 2008 R2](/troubleshoot/windows-server/high-availability/updates-for-windows-server-2008-r2-sp1-failover-cluster)
 
 ### Check if the cluster service running on all the nodes
 
@@ -46,7 +46,7 @@ From an elevated cmd prompt, run: **cluster.exe node /stat**
 
 #### For Windows Server 2012 and Windows Server 2012 R2 cluster
 
-Run the following PS command: [`Get-ClusterResource`](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusterresource)
+Run the following PS command: [`Get-ClusterResource`](/powershell/module/failoverclusters/get-clusterresource)
 
 Is the cluster service continuously running and available on all the nodes?
 
@@ -172,9 +172,9 @@ System service name: **ClusSvc**
 > [!NOTE]
 > Additionally, for successful validation on Windows Failover Clusters on Windows Server 2008 and above, allow inbound and outbound traffic for ICMP4, ICMP6.
 
-- For more information, see [Creating a Windows Server 2012 Failover Cluster Fails with Error 0xc000005e](https://docs.microsoft.com/troubleshoot/windows-server/high-availability/creating-failover-cluster-fails-error-0xc0000055).
+- For more information, see [Creating a Windows Server 2012 Failover Cluster Fails with Error 0xc000005e](/troubleshoot/windows-server/high-availability/creating-failover-cluster-fails-error-0xc0000055).
 
-- For more information about how to customize these ports, see [Service overview and network port requirements for Windows](https://docs.microsoft.com/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements) in the "References" section.
+- For more information about how to customize these ports, see [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements) in the "References" section.
 
 This is the range in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, and Windows Vista.
 
@@ -190,11 +190,11 @@ The cluster validation tool runs a suite of tests to verify that your hardware a
 
 Follow these instructions:
 
-1. Run the Cluster Validation report for any errors or warnings. For more information, see [Understanding Cluster Validation Tests: Network](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771323(v=ws.11))
+1. Run the Cluster Validation report for any errors or warnings. For more information, see [Understanding Cluster Validation Tests: Network](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771323(v=ws.11))
 
     ![subhatt1](media/troubleshooting-cluster-event-id-1135/18653.png)
 
-2. Verify for warnings and errors for Networks. For more information, see [Understanding Cluster Validation Tests: Network](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771323(v=ws.11)).
+2. Verify for warnings and errors for Networks. For more information, see [Understanding Cluster Validation Tests: Network](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771323(v=ws.11)).
 
     ![Results by Category](media/troubleshooting-cluster-event-id-1135/18654.png)
     ![Network](media/troubleshooting-cluster-event-id-1135/18655.png)
@@ -231,7 +231,7 @@ Either address 192.168.0.2 is not reachable from 10.0.0.96 or **the ping latency
 This may be expected, since network interfaces node004.contoso.com - Production Network and node003.contoso.com - Heartbeat Network for MSCS are on different cluster networks
 ```
 
-For multi-site cluster, you may increase the time-out values. For more information, see [Configure Heartbeat and DNS Settings in a Multi-Site Failover Cluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197562(v=ws.10)).
+For multi-site cluster, you may increase the time-out values. For more information, see [Configure Heartbeat and DNS Settings in a Multi-Site Failover Cluster](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197562(v=ws.10)).
 
 Check with ISP for any WAN connectivity issues.
 

@@ -25,7 +25,7 @@ The sections in this topic include example Windows PowerShell commands that cont
 
 2. If the VM requires network access on startup, do not start the VM until after setting the interface ID on the VM network adapter port. If you start the VM before setting the interface ID, and the network interface does not exist, the VM cannot communicate on the network in the Network Controller, and all policies applied.
 
-3. If you require custom ACLs for this network interface, then create the ACL now by using instructions in the topic [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](./use-acls-for-traffic-flow.md)
+3. If you require custom ACLs for this network interface, then create the ACL now by using instructions in the topic [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](/azure-stack/hci/manage/use-datacenter-firewall-powershell)
 
 Ensure that you have already created a Virtual Network before using this example command. For more information, see [Create, Delete, or Update Tenant Virtual Networks](./create,-delete,-or-update-tenant-virtual-networks.md).
 

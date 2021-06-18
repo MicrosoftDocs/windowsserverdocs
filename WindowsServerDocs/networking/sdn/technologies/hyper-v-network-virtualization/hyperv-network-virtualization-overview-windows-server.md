@@ -119,7 +119,7 @@ The following is a list of the key functionality, benefits, and capabilities of 
 
 -   **Policy-based configuration**
 
-    Network virtualization policies in Windows Server 2016 are configured through the Microsoft Network Controller. The network controller has a RESTful northbound API, and Windows PowerShell interface to configure policy. For more information about the Microsoft Network Controller, see [Network Controller](../../../sdn/technologies/network-controller/../../../sdn/technologies/network-controller/Network-Controller.md).
+    Network virtualization policies in Windows Server 2016 are configured through the Microsoft Network Controller. The network controller has a RESTful northbound API, and Windows PowerShell interface to configure policy. For more information about the Microsoft Network Controller, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).
 
 ## <a name="BKMK_SOFT"></a>Software requirements
 Hyper-V Network Virtualization using the Microsoft Network Controller requires Windows Server 2016 and the Hyper-V role.
@@ -132,4 +132,4 @@ To learn more about Hyper-V Network Virtualization in Windows Server 2016 see th
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Community Resources**  |     -   [Private Cloud Architecture Blog](/archive/blogs/privatecloud/cloud-datacenter-network-architecture-in-the-windows-server-8-era)<br />-   Ask questions: [cloudnetfb@microsoft.com](mailto:%20cloudnetfb@microsoft.com)     |
 |         **RFC**          |                                                                                                     -   VXLAN - [RFC 7348](https://www.rfc-editor.org/info/rfc7348)                                                                                                      |
-| **Related Technologies** | -   [Network Controller](../../../sdn/technologies/network-controller/../../../sdn/technologies/network-controller/Network-Controller.md)<br />-   [Hyper-V Network Virtualization Overview](assetId:///bf1dba9d-1960-4dd2-a5e2-99466a02044b) ( Windows Server 2012 R2 ) |
+| **Related Technologies** | -   [Network Controller](/azure-stack/hci/concepts/network-controller-overview)<br />-   [Hyper-V Network Virtualization Overview](assetId:///bf1dba9d-1960-4dd2-a5e2-99466a02044b) ( Windows Server 2012 R2 ) |

@@ -47,15 +47,15 @@ landingContent:
           - text: Software Defined Networking (SDN)
             url: sdn/index.yml
           - text: Network Controller
-            url: sdn/technologies/network-controller/Network-Controller.md
+            url: /azure-stack/hci/concepts/network-controller-overview
           - text: Software Load Balancing (SLB) for SDN
-            url: sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md
+            url: /azure-stack/hci/concepts/software-load-balancer
           - text: RAS Gateway for SDN
-            url: sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md
+            url: /azure-stack/hci/concepts/gateway-overview
           - text: Network Function Virtualization
             url: sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md
           - text: Datacenter Firewall Overview
-            url: sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md
+            url: /azure-stack/hci/concepts/datacenter-firewall-overview
       - linkListType: deploy
         links:
           - text: Deploy a SDN infrastructure using scripts

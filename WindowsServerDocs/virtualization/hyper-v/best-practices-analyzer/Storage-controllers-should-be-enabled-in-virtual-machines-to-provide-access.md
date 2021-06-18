@@ -11,7 +11,7 @@ ms.date: 8/16/2016
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -51,6 +51,3 @@ For instructions on how to use Device Manager, see Help in the guest operating s
 5.  In the left pane of the **Settings** dialog box, under **Hardware**, click **SCSI Controller**.
 
 6.  In the right pane, click **Remove**.
-
-
-

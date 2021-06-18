@@ -22,7 +22,6 @@ pktmon unload
 ## Additional References
 
 - [Pktmon](pktmon.md)
-- [Pktmon comp](pktmon-comp.md)
 - [Pktmon counters](pktmon-counters.md)
 - [Pktmon filter](pktmon-filter.md)
 - [Pktmon filter add](pktmon-filter-add.md)
@@ -31,4 +30,4 @@ pktmon unload
 - [Pktmon pcapng](pktmon-pcapng.md)
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon start](pktmon-start.md)
-- [Packet Monitor overview](/windows-server/networking/technologies/pktmon/pktmon)
+- [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)

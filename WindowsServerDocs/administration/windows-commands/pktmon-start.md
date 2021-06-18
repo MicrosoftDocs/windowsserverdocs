@@ -85,7 +85,6 @@ C:\Test> pktmon start --etw -c 4,5 -d
 ## Additional References
 
 - [Pktmon](pktmon.md)
-- [Pktmon comp](pktmon-comp.md)
 - [Pktmon counters](pktmon-counters.md)
 - [Pktmon filter](pktmon-filter.md)
 - [Pktmon filter add](pktmon-filter-add.md)
@@ -94,4 +93,4 @@ C:\Test> pktmon start --etw -c 4,5 -d
 - [Pktmon pcapng](pktmon-pcapng.md)
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon unload](pktmon-unload.md)
-- [Packet Monitor overview](/windows-server/networking/technologies/pktmon/pktmon)
+- [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)

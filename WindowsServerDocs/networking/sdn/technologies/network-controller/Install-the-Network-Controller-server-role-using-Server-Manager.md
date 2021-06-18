@@ -56,4 +56,4 @@ After you install Network Controller, you must use Windows PowerShell commands f
     ![Server Manager](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/nc_013.jpg)
 
 ## See Also
-[Network Controller](Network-Controller.md)
+[Network Controller](/azure-stack/hci/concepts/network-controller-overview)
