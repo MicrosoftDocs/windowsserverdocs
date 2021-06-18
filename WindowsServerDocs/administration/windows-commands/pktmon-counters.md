@@ -23,7 +23,7 @@ pktmon counters [--type { all | flow | drop }] [--include-hidden] [--zero] [--dr
 
 | **Parameter** | **Description** |
 | ------------- | --------------- |
-| **-t, --type { all | flow | drop }** | Select which types of counters to show. Supported values are all counters (default), flows only, or drops only. |
+| **-t, --type** | Select which types of counters to show. Supported values are **all** counters (default), **flow** (flows only), or **drop** (drops only). |
 | **-z, --zero** | Show counters that are zero in both directions. |
 | **-i, --include-hidden** | Show counters from components that are hidden by default. |
 | **-r, --drop-reason** | Show the most recent drop reason for each drop counter. |
