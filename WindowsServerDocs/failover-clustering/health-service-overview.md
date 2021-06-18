@@ -10,7 +10,7 @@ ms.date: 06/18/2021
 ---
 # Health Service in Windows Server
 
-> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016 
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 The Health Service is a new feature in Windows Server 2016 that improves the day-to-day monitoring and operational experience for clusters running Storage Spaces Direct.
 
