@@ -4,29 +4,32 @@ description: Reference article for the pktmon counters command.
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
-ms.date: 1/14/2021
+ms.date: 06/18/2021
 ---
 
 # pktmon counters
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-Pktmon counters allows you to query and display current per-component counters to confirm the presence of expected traffic and get a high-level view of how the traffic flowed in the machine.
+Pktmon counters allows you to query and display current packet counters from monitored components to confirm the presence of expected traffic and get a high-level view of how the traffic flowed in the machine.
 
 ## Syntax
 
 ```
-pktmon [comp] counters [-t { all | drop | flow }] [-z] [--json]
+pktmon counters [--type { all | flow | drop }] [--include-hidden] [--zero] [--drop-reason] [--live] [--refresh-rate <n>] [--json]
 ```
 
 ### Parameters
 
 | **Parameter** | **Description** |
 | ------------- | --------------- |
-| **-t, --counter-type** | Select which types of counters to show. Supported values are all counters (default), drops only, or flows only. |
-| **-z, --show-zeros** | Show counters that are zero in both directions. |
-| **-i, --show-hidden** | Show components that are hidden by default. |
-| **--json** | Output the counters in JSON format. |
+| **-t, --type { all | flow | drop }** | Select which types of counters to show. Supported values are all counters (default), flows only, or drops only. |
+| **-z, --zero** | Show counters that are zero in both directions. |
+| **-i, --include-hidden** | Show counters from components that are hidden by default. |
+| **-r, --drop-reason** | Show the most recent drop reason for each drop counter. |
+| **--live** | Automatically refresh the counters. Press **Ctrl+C** to stop. |
+| **--refresh-rate <n>** | Number of times to refresh the counters per second, from 1 to 30. Default is 10. |
+| **--json** | Output the counters in JSON format. Implies -i and -r. |
 
 ## Additional References
 
