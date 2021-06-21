@@ -49,7 +49,7 @@ Enabling Secured-core functionality helps proactively defend against and disrupt
 
 ### Secure connectivity
 
-<!-- #### Transport: Faster and more secure encrypted HTTPS connections -->
+You get faster and more secure encrypted HTTPS connections. TLS 1.3 is enabled by default on Windows Server 2022. Encrypted DNS name resolution requests with DoH are now enabled. SMB AES-256 encryption is now available as well as East-West SMB encryption controls for internal cluster communications and industry standard encryption.
 
 #### Transport: HTTPS and TLS 1.3 enabled by default on Windows Server 2022
 
