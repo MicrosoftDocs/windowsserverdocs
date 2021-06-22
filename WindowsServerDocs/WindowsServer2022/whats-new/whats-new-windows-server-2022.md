@@ -49,7 +49,7 @@ Enabling Secured-core functionality helps proactively defend against and disrupt
 
 ### Secure connectivity
 
-<!-- #### Transport: Faster and more secure encrypted HTTPS connections -->
+You get faster and more secure encrypted HTTPS connections. TLS 1.3 is enabled by default on Windows Server 2022. Encrypted DNS name resolution requests with DoH are now enabled. SMB AES-256 encryption is now available as well as East-West SMB encryption controls for internal cluster communications and industry standard encryption.
 
 #### Transport: HTTPS and TLS 1.3 enabled by default on Windows Server 2022
 
@@ -73,7 +73,7 @@ You can increase your efficiency and agility with built-in hybrid capabilities i
 
 ### Azure Arc enabled server
 
-<!-- Need some more info on this. What's specific to WS 2022 that's not already available for Windows Server? -->
+Azure Arc enabled Windows Servers allow for domain agnostic virtual machines. You have the ability to search inventory at-scale with a unified management experience and consistent VM extensions. The built-in security baseline with Role-based Access Control (RBAC) facilitates compliance across environments.
 
 ### Windows Admin Center
 
@@ -81,7 +81,7 @@ Improvements to Windows Admin Center to manage Windows Server 2022 include capab
 
 ### Azure Automanage
 
-<!-- Need some more info on this. Is it only referring to the Azure Edition or will this apply to on-premises servers that are managed by Arc, etc.? -->
+Azure Automanage for Windows Server virtual machines includes backup, Security center, monitoring, update management, an Azure automation account, change tracking and inventory, configuration management, log analytics. Security patches are applied without reboot to protect against critical security threats.
 
 ## Application platform
 
