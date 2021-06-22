@@ -199,8 +199,8 @@ To do this:
 1. Search for **Internet Options** in the Windows Start Menu
 2. Go to the **Security** tab
 3. Under the **Trusted Sites** option, click on the **sites** button and add the URLs in the dialog box that opens. You'll need to add your gateway URL as well as https://login.microsoftonline.com and https://login.live.com.
-4. Go to the **Privacy** tab
-5. Under the **Pop-up Blocker** section, click on the **Settings** button and add the URLs in the dialog box that opens. You'll need to add your gateway URL as well as https://login.microsoftonline.com and https://login.live.com.
+4. Go to the **Pop-up Blocker** settings in Microsoft Edge via edge://settings/content/popups?search=pop-up
+5. You'll need to add your gateway URL as well as https://login.microsoftonline.com and https://login.live.com to the **Allow list**.
 
 ## Having an issue with an Azure-related feature?
 
