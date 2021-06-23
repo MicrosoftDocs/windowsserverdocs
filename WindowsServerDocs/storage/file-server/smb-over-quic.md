@@ -1,6 +1,6 @@
 ---
 title: SMB over QUIC
-description: Describes the SMB over QUIC feature in Windows Server 2022 Datacenter Azure Edition Preview, Windows Insider client 
+description: Describes the SMB over QUIC feature in Windows Server 2022 Datacenter Azure Edition Preview, Windows Insider Dev Channel client 
 ms.prod: windows-server
 ms.topic: article
 author: NedPyle
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # SMB over QUIC (PREVIEW)
 
->Applies to: Windows Server 2022 Datacenter: Azure Edition Preview, Windows Insider preview client
+>Applies to: Windows Server 2022 Datacenter: Azure Edition Preview, Windows Insider Dev Channel preview client
 
 SMB over QUIC (Preview) introduces an alternative to the TCP network transport, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. QUIC is an IETF-standardized protocol with many benefits when compared with TCP:
 
@@ -20,10 +20,8 @@ SMB over QUIC (Preview) introduces an alternative to the TCP network transport, 
 - Exchanges application data in the first round trip (0-RTT)
 - Improved congestion control and loss recovery
 - Survives a change in the clients IP address or port
-- Stateless load balancing
-- Easily extendable for new features and extensions
 
-SMB over QUIC offers an "SMB VPN" for telecommuters, mobile device users, and high security organizations. The server certificate creates a TLS 1.3-encrypted tunnel over the internet-friendly UDP port 443 instead of the legacy TCP port 445. All SMB traffic. This includes authentication and authorization within the tunnel. It's never exposed to the underlying network. SMB behaves normally within the QUIC tunnel, meaning the user experience doesn't change. SMB features like multichannel, signing, compression, continuous availability, directory leasing, and so on, work normally.
+SMB over QUIC offers an "SMB VPN" for telecommuters, mobile device users, and high security organizations. The server certificate creates a TLS 1.3-encrypted tunnel over the internet-friendly UDP port 443 instead of the legacy TCP port 445. All SMB traffic, including authentication and authorization within the tunnel is never exposed to the underlying network. SMB behaves normally within the QUIC tunnel, meaning the user experience doesn't change. SMB features like multichannel, signing, compression, continuous availability, directory leasing, and so on, work normally.
 
 A file server administrator must opt in to enabling SMB over QUIC. It isn't on by default and a client can't force a file server to enable SMB over QUIC. Windows SMB clients still use TCP by default and will only attempt SMB over QUIC if the TCP attempt first fails or if intentionally requiring QUIC using `NET USE /TRANSPORT:QUIC` or `New-SmbMapping -TransportType QUIC`.
 
@@ -35,11 +33,9 @@ A file server administrator must opt in to enabling SMB over QUIC. It isn't on b
 To use SMB over QUIC, you need the following things:
 
 - A file server running Windows Server 2022 Datacenter: Azure Edition Preview ([Microsoft Server Operating Systems Preview](https://aka.ms/ws2022ae))
-- A Windows Insider client ([Windows Insider Preview Downloads](https://www.microsoft.com/software-download/windowsinsiderpreviewiso))
+- A Windows Insider Dev Channel client ([Windows Insider Dev Channel Preview Downloads](https://www.microsoft.com/software-download/windowsinsiderpreviewiso))
 - Windows Admin Center ([Homepage](https://aka.ms/windowsadmincenter))
-- A Public Key Infrastructure to issue certificates like:
-  - Active Directory Certificate Server
-  - For giving access to a trusted third-party certificate issuer like Verisign, Digicert, Let's Encrypt, and so on.
+- A Public Key Infrastructure to issue certificates like Active Directory Certificate Server or access to a trusted third party certificate issuer like Verisign, Digicert, Let's Encrypt, and so on.
 
 ## Deploy SMB over QUIC
 
@@ -62,7 +58,8 @@ To use SMB over QUIC, you need the following things:
 
     If using a Microsoft Enterprise Certificate Authority, you can create a certificate template and allow the file server administrator to supply the DNS names when requesting it. For more information on creating a certificate template, review [Designing and Implementing a PKI: Part III Certificate Templates](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/designing-and-implementing-a-pki-part-iii-certificate-templates/ba-p/397860). For a demonstration of creating a certificate for SMB over QUIC using a Microsoft Enterprise Certificate Authority, watch this video:
 
-    <!-- Ingrid an embedded video goes here-->
+
+    > [!VIDEO https://www.youtube.com/embed?v=L0yl5Z5wToA]
 
     For requesting a third-party certificate, consult your vendor documentation.
 
@@ -89,10 +86,7 @@ To use SMB over QUIC, you need the following things:
 
 1. Deploy a [Windows Server 2022 Datacenter: Azure Edition](https://aka.ms/ws2022ae) preview in one of the following Azure regions: West Central US, South Central US, or North Europe.  
 1. Install the latest version of Windows Admin Center on a management PC or the file server. You need the latest version of the *Files & File Sharing* extension. It's installed automatically by Windows Admin Center if *Automatically update extensions* is enabled in **Settings > Extensions**.
-1. Join your Windows Server 2022 Datacenter:
-    1. Join your Azure Edition file server to your Active Directory domain
-    1. Make it accessible to Windows Insider clients on the Azure public interface by adding a firewall allow rule for UDP/443 inbound.
-    1. Do NOT allow TCP/445 inbound to the file server. The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
+1. Join your Windows Server 2022 Datacenter: Azure Edition file server to your Active Directory domain and make it accessible to Windows Insider clients on the Azure public interface by adding a firewall allow rule for UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
 1. Connect to the server with Windows Admin Center and click the **Settings** icon in the lower left. In the **File Shares (SMB server)** section, under **File sharing across the internet with SMB over QUIC**, click **Configure**.
 1. Click a certificate under **Select a computer certificate for this file server**, click the server addresses clients can connect to or click **Select all**, and click **Enable**.
 
@@ -102,20 +96,12 @@ To use SMB over QUIC, you need the following things:
 
     :::image type="content" source="./media/smb-over-quic/wac2.png" alt-text="image showing the steps for configure SMB over QUIC2":::
 
-1. Click on the **Files and File Sharing** menu option. Note your existing SMB shares or create a new one. 
+1. Click on the **Files and File Sharing** menu option. Note your existing SMB shares or create a new one.
 
 ### Step 3: Connect to SMB shares
 
-1. Join your Windows Insider client to your domain.
-    1. First 
-        1. Be certain the names of the SMB over QUIC file server's certificate subject alternative names are published to DNS and are fully qualified<br/>
-        OR<br/>
-        1. Added to the HOTS files for your Windows Insider client.
-    1. Then,
-        1. Ensure that the  server's certificate subject alternative names are published to DNS<br/>
-        OR<br/>
-        1. added to the HOSTS files for your Windows Insider client.
-1. Move your Windows Insider client to an external network where it no longer has any network access to domain controllers or the file server's internal IP addresses.
+1. Join your Windows Insider Dev Channel client to your domain.Be certain the names of the SMB over QUIC file server's certificate subject alternative names are published to DNS and are fully qualified **OR** added to the HOST files for your Windows Insider Dev Channel client.Ensure that the  server's certificate subject alternative names are published to DNS **OR** added to the HOSTS files for your Windows Insider Dev Channel client.
+1. Move your Windows Insider Dev Channel client to an external network where it no longer has any network access to domain controllers or the file server's internal IP addresses.
 1. In Windows File Explorer, in the Address Bar, type the UNC path to a share on the file server and confirm you can access data in the share. Alternatively, you can use *NET USE /TRANSPORT:QUIC* or *New-SmbMapping -TransportType QUIC* with a UNC path. Examples:
 
     `NET USE * \\fsedge1.contoso.com\sales` *(automatically tries TCP then QUIC)*
@@ -126,7 +112,7 @@ To use SMB over QUIC, you need the following things:
 
 ### Configure the KDC Proxy (Optional, but recommended)
 
-By default, a Windows Insider client won't have access to an Active Directory domain controller when connecting to an SMB over QUIC file server. This means authentication uses NTLMv2, where the file server authenticates on behalf of the client. No NTLMv2 authentication or authorization occurs outside the TLS 1.3-encrypted QUIC tunnel. However, we still recommend using Kerberos as a general security best practice and don't recommend creating new NTLMv2 dependencies in deployments. To allow this, you can configure the KDC proxy to forward ticket requests on the user's behalf, all while using an internet-friendly HTTPS encrypted communication channel.
+By default, a Windows Insider Dev Channel client won't have access to an Active Directory domain controller when connecting to an SMB over QUIC file server. This means authentication uses NTLMv2, where the file server authenticates on behalf of the client. No NTLMv2 authentication or authorization occurs outside the TLS 1.3-encrypted QUIC tunnel. However, we still recommend using Kerberos as a general security best practice and don't recommend creating new NTLMv2 dependencies in deployments. To allow this, you can configure the KDC proxy to forward ticket requests on the user's behalf, all while using an internet-friendly HTTPS encrypted communication channel.
 
 1. On the file server, in an elevated PowerShell prompt, run:
 
@@ -154,7 +140,7 @@ By default, a Windows Insider client won't have access to an Active Directory do
 
     `Start-Service -Name kpssvc`
 
-1. Configure the following group policy to apply to the Windows Insider client:
+1. Configure the following group policy to apply to the Windows Insider Dev Channel client:
 
     **Computers > Administrative templates > System > Kerberos > Specify KDC proxy servers for Kerberos clients**
 
@@ -167,7 +153,7 @@ By default, a Windows Insider client won't have access to an Active Directory do
     This Kerberos realm mapping means that if user `ned@corp.contoso.com` tried to connect to a file server name `fs1edge.contoso.com"`, the KDC proxy will know to forward the kerberos tickets to a domain controller in the internal `corp.contoso.com` domain. The communication with the client will be over HTTPS/443 and user credentials aren't directly exposed on the client-file server network.
 1. Create a Windows Defender Firewall rule that inbound-enables TCP port 443 for the KDC Proxy service to receive authentication requests.  
 1. Ensure that edge firewalls allow HTTPS/443 inbound to the file server.
-1. Apply the group policy and restart the Windows Insider client.  
+1. Apply the group policy and restart the Windows Insider Dev Channel client.  
 
 > [!NOTE]
 > Automatic configuration of the KDC Proxy will come later in the SMB over QUIC Preview and these server steps will not be necessary.
@@ -176,7 +162,7 @@ By default, a Windows Insider client won't have access to an Active Directory do
 
 - Windows Server 2022 Datacenter: Azure Edition Preview will also be available on Azure Stack HCI 21H2 Preview later this year, for customers not using Azure public cloud.
 - We recommend read-only domain controllers configured only with passwords of mobile users be made available to the file server.
-- Users should have strong passwords and be configured with Windows Hello for Business MFA. Configure an account lockout policy for mobile users through fine-grained password policy and you should deploy Intrusion protection software to detect brute force or password spray attacks. 
+- Users should have strong passwords and be configured with Windows Hello for Business MFA. Configure an account lockout policy for mobile users through fine-grained password policy and you should deploy intrusion protection software to detect brute force or password spray attacks. 
 
 ## More references
 
