@@ -510,6 +510,7 @@
 #### [pktmon pcapng](pktmon-pcapng.md)
 #### [pktmon reset](pktmon-reset.md)
 #### [pktmon start](pktmon-start.md)
+#### [pktmon status](pktmon-status.md)
 #### [pktmon unload](pktmon-unload.md)
 ### [pnpunattend](pnpunattend.md)
 ### [pnputil](pnputil.md)
