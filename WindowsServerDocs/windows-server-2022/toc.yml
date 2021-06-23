@@ -7,3 +7,5 @@ items:
     href: ./get-started/whats-new.md
   - name: System requirements
     href: get-started/system-requirements.md
+  - name: Automatic Virtual Machine Activation
+    href: get-started/vm-activation.md
