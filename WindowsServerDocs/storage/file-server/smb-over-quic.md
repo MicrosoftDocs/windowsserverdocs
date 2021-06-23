@@ -59,7 +59,7 @@ To use SMB over QUIC, you need the following things:
     If using a Microsoft Enterprise Certificate Authority, you can create a certificate template and allow the file server administrator to supply the DNS names when requesting it. For more information on creating a certificate template, review [Designing and Implementing a PKI: Part III Certificate Templates](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/designing-and-implementing-a-pki-part-iii-certificate-templates/ba-p/397860). For a demonstration of creating a certificate for SMB over QUIC using a Microsoft Enterprise Certificate Authority, watch this video:
 
 
-    > [!VIDEO https://www.youtube.com/embed?v=L0yl5Z5wToA]
+    > [!VIDEO https://www.youtube.com/embed/L0yl5Z5wToA]
 
     For requesting a third-party certificate, consult your vendor documentation.
 
