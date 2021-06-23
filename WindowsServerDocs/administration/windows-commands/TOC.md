@@ -506,6 +506,7 @@
 #### [pktmon filter](pktmon-filter.md)
 #### [pktmon filter add](pktmon-filter-add.md)
 #### [pktmon format](pktmon-format.md)
+#### [pktmon hex2pkt](pktmon-hex2pkt.md)
 #### [pktmon list](pktmon-list.md)
 #### [pktmon pcapng](pktmon-pcapng.md)
 #### [pktmon reset](pktmon-reset.md)
