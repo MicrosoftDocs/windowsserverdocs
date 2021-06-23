@@ -30,7 +30,7 @@ A file server administrator must opt in to enabling SMB over QUIC. It isn't on b
 > [!NOTE]
 > SMB over QUIC is in preview and not supported for production workloads, but you can get support from Microsoft while evaluating it.
 
-## Requirements
+## Prerequisites
 
 To use SMB over QUIC, you need the following things:
 
