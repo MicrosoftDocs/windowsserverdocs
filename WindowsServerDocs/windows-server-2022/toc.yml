@@ -1,0 +1,9 @@
+items:
+- name: Get started with Windows Server 2022
+  href: get-started-with-windows-server-2022.md
+  expanded: true
+  items:
+  - name: What's new in Windows Server 2022
+    href: ./get-started/whats-new.md
+  - name: System requirements
+    href: get-started/system-requirements.md
