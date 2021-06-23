@@ -42,7 +42,7 @@ Here are the guests that the different version hosts can activate:
 | Windows Server 2022 | X | X | X | X |
 | Windows Server 2019 | | X | X | X |
 | Windows Server 2016 | | | X | X |
-| Windows Server 2012 R2 | | | | | X |
+| Windows Server 2012 R2 | | | | X |
 
 Note that these activate all editions (Datacenter, Standard, or Essentials).
 
