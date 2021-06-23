@@ -36,6 +36,7 @@
 ## [Disk Management](disk-management/overview-of-disk-management.md)
 ## [File Server and SMB](file-server/file-server-smb-overview.md)
 ### [SMB Direct](file-server/smb-direct.md)
+### [SMB over QUIC](file-server/smb-over-quic.md)
 ### [SMB security enhancements](file-server/smb-security.md)
 ### [SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)
 ### [Network File System overview](nfs/nfs-overview.md)
