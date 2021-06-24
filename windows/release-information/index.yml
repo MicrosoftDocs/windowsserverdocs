@@ -43,14 +43,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "Introducing Windows 11"
+          url: https://blogs.windows.com/windowsexperience/?p=175814
+          itemType: whats-new
         - text: "June 2021 Windows non-security preview \"C\" release is available for all supported versions of Windows"
           url: https://support.microsoft.com/help/5003690
           itemType: whats-new
         - text: "PowerShell for the Windows Update for Business deployment service now available!"
           url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/powershell-for-the-windows-update-for-business-deployment/ba-p/2437208
-          itemType: whats-new
-        - text: "We welcome your feedback"
-          url: https://forms.office.com/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbR9Zj3quy52pHoiTxrAQMY9JUMjA3S04xTTVPOUxENTI2SkMxQ1VRQjRFOC4u
           itemType: whats-new
 
       footerLink:
