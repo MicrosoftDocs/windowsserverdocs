@@ -1,9 +1,7 @@
 ---
 title: Upgrade Windows Server 2008 R2 to Windows Server 2012 R2 | Microsoft Docs
-description: Learn how to perform an in-place upgrade to go from Windows Server 2008 R2 to Windows Server 2012 R2. 
-ms.prod: windows-server
-ms.technology: server-general
-ms.topic: upgrade
+description: Learn how to perform an in-place upgrade to go from Windows Server 2008 R2 to Windows Server 2012 R2.
+ms.topic: how-to
 author: RobHindman
 ms.author: robhind
 ms.date: 09/16/2019
@@ -61,7 +59,7 @@ After you've collected all of your Windows Server-related information, we highly
 
     ![Screen to choose your installation type](media/upgrade-2008r2-2012r2/choose-install-upgrade.png)
 
-9. Setup reminds you to make sure your apps are compatible with Windows Server 2012 R2, using the information in the [Windows Server installation and upgrade](https://docs.microsoft.com/windows-server/get-started/installation-and-upgrade) article, and then select **Next**.
+9. Setup reminds you to make sure your apps are compatible with Windows Server 2012 R2, using the information in the [Windows Server installation and upgrade](../get-started/installation-and-upgrade.md) article, and then select **Next**.
 
     ![Screen reminding you to check your app compatibility](media/upgrade-2008r2-2012r2/compatibility-report.png)
 
@@ -89,4 +87,4 @@ You can perform one more upgrade to go from Windows Server 2012 R2 to Windows Se
 
 ## Related articles
 
-- For more details and information about Windows Server 2012 R2, see [Windows Server 2012 R2 and Windows Server 2012](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)).
+- For more details and information about Windows Server 2012 R2, see [Windows Server 2012 R2 and Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)).

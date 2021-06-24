@@ -1,13 +1,11 @@
 ---
 title: Windows Admin Center SDK Case Study - NEC
 description: Windows Admin Center SDK Case Study - NEC
-ms.technology: extend
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 04/01/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # NEC ESMPRO Extension
 
@@ -17,11 +15,11 @@ NEC ESMPRO is NEC's server management software to manage NEC Express5800 series 
 
 The NEC ESMPRO extension requires installing the NEC ESMPRO Manager as it retrieves server hardware information through the NEC ESMPRO Manager.
 
-![NEC Extension](../../media/extend-case-study-nec/nec-1.png)
+![Screenshot of the NEC ESMPRO extension in Windows Admin Center showing the System Overview page.](../../media/extend-case-study-nec/nec-1.png)
 
 The NEC ESMPRO extension has two tabs, the 'System Overview' tab and the 'System Health' tab. In the System Overview tab, you can easily view the system's basic information.
 
-![NEC Extension](../../media/extend-case-study-nec/nec-2.png)
+![Screenshot of the NEC ESMPRO extension in Windows Admin Center showing the System Health page.](../../media/extend-case-study-nec/nec-2.png)
 
 In the System Health tab, you can view the detailed information of individual hardware components, such as processors, memory, power supplies, network adapters, temperature and fan. The status and configuration for RAID systems, power consumption and hardware event logs are also available.
 

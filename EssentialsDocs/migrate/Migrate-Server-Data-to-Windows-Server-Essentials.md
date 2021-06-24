@@ -1,13 +1,12 @@
 ---
 title: "Migrate Server Data to Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about all of the articles that are available to learn how to migrate server data to Windows Server Essentials.
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: dff2bf27-5d97-409b-81e8-286f7d933d90
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Migrate Server Data to Windows Server Essentials
@@ -17,17 +16,12 @@ manager: dongill
 The following guides provide information about how to migrate to Windows Server Essentials from an existing installation of Windows Small Business Server or Windows Server Essentials, and include information about how to prepare and plan for specific Windows Server Essentials migration scenarios.
 
 ## Migrate to Windows Server Essentials
- To avoid problems while migrating your existing server to  Windows Server Essentials, read the migration guide before you begin the migration.
 
+To avoid problems while migrating your existing server to  Windows Server Essentials, read the migration guide that applies to your business scenario before you begin the migration.
 
 -   [Migrate to Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)
 
 -   [Transition to Windows Server 2012 R2 Standard](Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)
-
-
-## Migrate to Windows Server Essentials
- To avoid problems while migrating your existing server to  Windows Server Essentials, read the migration guide that applies to your business scenario before you begin the migration.
-
 
 -   [Transition to Windows Server 2012 Standard](Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)
 
@@ -48,11 +42,11 @@ The following guides provide information about how to migrate to Windows Server 
 
 ## End-to-end solution guides
 
--    To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](https://technet.microsoft.com/library/dn582043.aspx).
+-    To learn how to centralize data storage, restrict data access permissions, and back up your data both on-premises and in the cloud, see [Provide data protection in small and midsize businesses](/previous-versions/orphan-topics/ws.11/dn582043(v=ws.11)).
 
--    To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](https://technet.microsoft.com/library/dn629457.aspx).
+-    To learn how to securely access business data on any Internet-connected device from any location, see [Secure remote access in small and midsize businesses](/previous-versions/windows/it-pro/solutions-guidance/dn629457(v=ws.11)).
 
--    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](https://technet.microsoft.com/library/dn747893.aspx).
+-    To learn how to securely collaborate with partners and vendors, see [Improve collaboration in small and midsize businesses](/previous-versions/windows/it-pro/solutions-guidance/dn747893(v=ws.11)).
 
 ## See also
 

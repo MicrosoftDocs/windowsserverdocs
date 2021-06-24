@@ -1,8 +1,8 @@
 ---
+description: "Learn more about: Performance history for servers"
 title: Performance history for servers
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/05/2018
@@ -80,7 +80,7 @@ The `memory.*` series are (COMING SOON).
 
 ## Usage in PowerShell
 
-Use the [Get-ClusterNode](https://docs.microsoft.com/powershell/module/failoverclusters/get-clusternode) cmdlet:
+Use the [Get-ClusterNode](/powershell/module/failoverclusters/get-clusternode) cmdlet:
 
 ```PowerShell
 Get-ClusterNode <Name> | Get-ClusterPerf

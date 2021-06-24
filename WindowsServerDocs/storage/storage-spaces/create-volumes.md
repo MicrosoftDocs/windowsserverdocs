@@ -1,13 +1,12 @@
 ---
 title: Creating volumes in Storage Spaces Direct
 description: How to create volumes in Storage Spaces Direct using Windows Admin Center and PowerShell.
-ms.prod: windows-server
 ms.reviewer: cosmosdarwin
 author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.date: 02/25/2020
+ms.topic: article
 ---
 # Creating volumes in Storage Spaces Direct
 

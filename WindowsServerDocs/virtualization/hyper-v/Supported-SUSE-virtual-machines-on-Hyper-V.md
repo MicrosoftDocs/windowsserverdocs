@@ -1,18 +1,15 @@
 ---
 title: Supported SUSE virtual machines on Hyper-V
-description: Lists the Linux integration services and features included in each version
-ms.prod: windows-server
-manager: dongill
-ms.technology: compute-hyper-v
+description: Lists the SUSE/Linux integration services and features included in each version
 ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
-author: shirgall
-ms.author: kathydav
-ms.date: 04/07/2020
+ms.author: benarm
+author: BenjaminArmstrong
+ms.date: 01/08/2021
 ---
 # Supported SUSE virtual machines on Hyper-V
 
->Applies To: Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+>Applies To: Azure Stack HCI, version 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 The following is a feature distribution map that indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.
 
@@ -28,7 +25,7 @@ The built-in SUSE Linux Enterprise Service drivers for Hyper-V are certified by 
 
 SLES12+ is 64-bit only.
 
-|**Feature**|**Windows Server operating system version**|**SLES 15 SP1**|**SLES 15**|**SLES 12 SP3-SP5**|**SLES 12 SP2**|**SLES 12 SP1**|**SLES 11 SP4**|**SLES 11 SP3**|
+|**Feature**|**Windows Server operating system version**|**SLES 15 SP1-SP2**|**SLES 15**|**SLES 12 SP3-SP5**|**SLES 12 SP2**|**SLES 12 SP1**|**SLES 11 SP4**|**SLES 11 SP3**|
 |-|-|-|-|-|-|-|-|-|
 |**Availability**||Built-in|Built-in|Built-in|Built-in|Built-in|Built-in|Built-in|
 |**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -97,7 +94,7 @@ SLES12+ is 64-bit only.
 
 ## See Also
 
-* [Set-VMFirmware](https://technet.microsoft.com/library/dn464287.aspx)
+* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware)
 
 * [Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

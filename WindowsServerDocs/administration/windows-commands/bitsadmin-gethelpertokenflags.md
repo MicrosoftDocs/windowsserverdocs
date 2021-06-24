@@ -1,18 +1,16 @@
 ---
 title: bitsadmin gethelpertokenflags
 description: Reference article for the bitsadmin gethelpertokenflags command, which returns the usage flags for a helper token that is associated with a BITS transfer job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.topic: reference
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 03/01/2019
 ---
 
 # bitsadmin gethelpertokenflags
 
-Returns the usage flags for a [helper token](https://docs.microsoft.com/windows/win32/bits/helper-tokens-for-bits-transfer-jobs) that is associated with a BITS transfer job.
+Returns the usage flags for a [helper token](/windows/win32/bits/helper-tokens-for-bits-transfer-jobs) that is associated with a BITS transfer job.
 
 > [!NOTE]
 > This command isn't supported by BITS 3.0 and earlier.

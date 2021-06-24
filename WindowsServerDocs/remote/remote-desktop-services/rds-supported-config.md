@@ -1,10 +1,8 @@
 ---
 title: Supported configurations for Remote Desktop Services
 description: Provides information about supported configurations for RDS in Windows Server 2016 and Windows Server 2019.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: elizapo
-ms.date: 10/22/2019  
+ms.date: 07/14/2020
 ms.topic: article
 ms.assetid: c925c7eb-6880-411f-8e59-bd0f57cc5fc3
 author: lizap
@@ -47,7 +45,7 @@ Windows Server 2016 removes the restriction for the number of Connection Brokers
 
 Remote Desktop Services support systems equipped with GPUs. Applications that require a GPU can be used over the remote connection. Additionally, GPU-accelerated rendering and encoding can be enabled for improved app performance and scalability.
 
-Remote Desktop Services Session Hosts and single-session client operating systems can take advantage of the physical or virtual GPUs presented to the operating system in many ways, including the [Azure GPU optimized virtual machine sizes](/en-us/azure/virtual-machines/windows/sizes-gpu), GPUs available to the physical RDSH server, RemoteFX vGPUs (Only on Windows Server 2016), and GPUs presented to the VMs by supported hypervisors.
+Remote Desktop Services Session Hosts and single-session client operating systems can take advantage of the physical or virtual GPUs presented to the operating system in many ways, including the [Azure GPU optimized virtual machine sizes](/en-us/azure/virtual-machines/windows/sizes-gpu), GPUs available to the physical RDSH server, and GPUs presented to the VMs by supported hypervisors.
 
 See [Which graphics virtualization technology is right for you?](rds-graphics-virtualization.md) for help figuring out what you need. For specific information about DDA, check out [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md).
 
@@ -81,13 +79,15 @@ The following table shows support for GPU scenarios in the client OS.
 
 ### RemoteFX 3D Video Adapter (vGPU) support
 
+> [!NOTE]
+> Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update and removed starting with the April 13, 2021 Security Update. To learn more, see [KB 4570006](https://support.microsoft.com/help/4570006).
+
 Remote Desktop Services supports RemoteFX vGPUs when VM is running as a Hyper-V guest on Windows Server 2012 R2 or Windows Server 2016. The following guest operating systems have RemoteFX vGPU support:
 
 - Windows 7 SP1
 - Windows 8.1
 - Windows 10 1703 or later
 - Windows Server 2016 in a single-session deployment only
-- Windows Server 2019 in a single-session deployment only
 
 ### Discrete Device Assignment support
 
@@ -129,4 +129,4 @@ For more information about creating VDI deployment of Remote Desktop Services, c
 
 ## Using Remote Desktop Services with application proxy services
 
-You can use Remote Desktop Services, except for the web client, with [Azure AD Application Proxy](https://docs.microsoft.com/azure/active-directory/application-proxy-publish-remote-desktop). Remote Desktop Services does not support using [Web Application Proxy](https://docs.microsoft.com/windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server), which is included in Windows Server 2016 and earlier versions.
+You can use Remote Desktop Services with [Azure AD Application Proxy](/azure/active-directory/application-proxy-publish-remote-desktop). Remote Desktop Services does not support using [Web Application Proxy](../remote-access/web-application-proxy/web-application-proxy-windows-server.md), which is included in Windows Server 2016 and earlier versions.

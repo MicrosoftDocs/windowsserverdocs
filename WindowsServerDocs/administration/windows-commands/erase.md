@@ -1,13 +1,11 @@
 ---
 title: erase
 description: Reference article for the erase command, which deletes one or more files.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 024a4d0f-8679-4e06-b46f-61fdaf5464bc
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -17,7 +15,6 @@ Deletes one or more files. If you use **erase** to delete a file from your disk,
 
 > [!NOTE]
 > This command is the same as the [del command](del.md).
-
 
 ## Syntax
 
@@ -35,7 +32,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 | /f | Forces deletion of read-only files. |
 | /s | Deletes specified files from the current directory and all subdirectories. Displays the names of the files as they are being deleted. |
 | /q | Specifies quiet mode. You are not prompted for delete confirmation. |
-| /a[:]`<attributes>` | Deletes files based on the following file attributes:<ul><li>**r** Read-only files</li><li>**h** Hidden files</li><li>**i** Not content indexed files</li><li>**s** System files</li><li>**a** Files ready for archiving</li><li>**l** Reparse points</li><li>**-** Used as a prefix meaning 'not'</li></ul>. |
+| /a[:]`<attributes>` | Deletes files based on the following file attributes:<ul><li>**r** Read-only files</li><li>**h** Hidden files</li><li>**i** Not content indexed files</li><li>**s** System files</li><li>**a** Files ready for archiving</li><li>**l** Reparse points</li><li>**-** Used as a prefix meaning 'not'</li></ul> |
 | /? | Displays help at the command prompt. |
 
 #### Remarks

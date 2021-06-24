@@ -1,25 +1,17 @@
 ---
 title: rescan
-description: Reference article for **** -
-
-ms.prod: windows-server
-
-
-ms.technology: manage-windows-commands
-
-ms.topic: article
+description: Reference article for the rescan command, which locates new disks added to the computer.
+ms.topic: reference
 ms.assetid: 87d7f7a1-104c-4a5d-b4ec-7d532263888c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # rescan
 
-
-
-Locates new disks that may have been added to the computer.
+Using the diskpart command interpreter, you can locate new disks added to your computer.
 
 ## Syntax
 
@@ -31,3 +23,4 @@ rescan
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
+- [Diskpart command](diskpart.md)

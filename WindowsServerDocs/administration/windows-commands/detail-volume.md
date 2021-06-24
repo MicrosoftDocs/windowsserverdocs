@@ -1,13 +1,11 @@
 ---
 title: detail volume
 description: Reference article for detail volume, which displays the disks on which the current volume resides.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 38f2bc75-2ed6-4e80-aa74-ab83133db1cd
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

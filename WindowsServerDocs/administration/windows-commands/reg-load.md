@@ -1,13 +1,11 @@
 ---
 title: reg load
 description: Reference article for the reg load command, which writes saved subkeys and entries into a different subkey in the registry.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 3b0b2b1b-f510-4108-9e9d-7057e924aa6e
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

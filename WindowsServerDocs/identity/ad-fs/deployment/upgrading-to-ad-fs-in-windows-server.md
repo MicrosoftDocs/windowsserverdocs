@@ -1,12 +1,11 @@
 ---
+description: "Learn more about: Upgrading to AD FS in Windows Server 2016 and 2019 using a WID database"
 ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
-title: Upgrading to AD FS in Windows Server 2016
+title: Upgrading to AD FS in Windows Server 2016 and 2019
 author: billmath
 manager: femila
 ms.date: 04/09/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ms.author: billmath
 ---
 
@@ -60,11 +59,11 @@ The remainder of the is document provides the steps for adding a Windows Server 
 
 2. Using the AD FS Configuration wizard, join the new Windows Server 2019 server to the existing AD FS farm.
 
-![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_1.png)
+![Screenshot that shows how to join the new Windows Server 2019 server to the existing AD FS farm.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_1.png)
 
 3. On the Windows Server 2019 federation server, open AD FS management. Note that management capabilities are not available because this federation server is not the primary server.
 
-![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_3.png)
+![Screenshot that shows the A D F S window.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_3.png)
 
 4. On the Windows Server 2019 server, open an elevated PowerShell command window and run the following cmdlet:
 
@@ -72,7 +71,7 @@ The remainder of the is document provides the steps for adding a Windows Server 
 Set-AdfsSyncProperties -Role PrimaryComputer
 ```
 
-![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_4.png)
+![Screenshot of a terminal window that shows how to use the Set-AdfsSyncProperties -Role PrimaryComputer cmdlet.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_4.png)
 
 5. On the  AD FS server that was previously configured as primary, open  an elevated PowerShell command window and run the following cmdlet:
 
@@ -80,22 +79,22 @@ Set-AdfsSyncProperties -Role PrimaryComputer
 Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}
 ```
 
-![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)
+![Screenshot of a terminal window that shows how to use the Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN} cmdlet.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)
 
 6. Now on the Windows Server 2016 federation server open AD FS Management. Note that now all of the admin capabilities appear because the primary role has been transferred to this server.
 
-![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)
+![Screenshot that shows the Windows Server 2016 federation server open AD FS Management window.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)
 
 7. If you are upgrading an AD FS 2012 R2 farm to 2016 or 2019, the farm upgrade requires the AD schema to be at least level 85.  To upgrade the schema, With the Windows Server 2016 installation media, open a command prompt and navigate to support\adprep directory. Run the following:  `adprep /forestprep`
 
-![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)
+![Screenshot that shows how to navigate to support\adprep directory.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)
 
-Once that completes run `adprep/domainprep`
+Once that completes run `adprep /domainprep`
 
 > [!NOTE]
 > Prior to running the next step, ensure Windows Server is current by running Windows Update from Settings. Continue this process until no further updates are needed.
 
-![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)
+![Screenshot that shows how to run adprep /domainprep.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)
 
 8. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlet:
 
@@ -107,15 +106,15 @@ Once that completes run `adprep/domainprep`
 Invoke-AdfsFarmBehaviorLevelRaise
 ```
 
-![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)
+![Screenshot of a terminal window that shows how to run the Invoke-AdfsFarmBehaviorLevelRaise cmdlet.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)
 
 9. When prompted, type Y. This will begin raising the level. Once this completes you have successfully raised the FBL.
 
-![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)
+![Screenshot of a terminal window that shows when to type Y.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)
 
 10. Now, if you go to AD FS Management, you will see the new capabilities have been added for the later AD FS version
 
-![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)
+![Screenshot that shows the new capabilities that have been added.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)
 
 11. Likewise, you can use the PowerShell cmdlet:  `Get-AdfsFarmInformation` to show you the current FBL.
 
@@ -139,6 +138,9 @@ Check the WAP configuration by running the Get-WebApplicationProxyConfiguration 
 ```PowerShell
 Get-WebApplicationProxyConfiguration
 ```
+> [!NOTE]
+> Skip the next step if the ConfigurationVersion is Windows Server 2016. This is the correct value for Web Application Proxy on Windows Server 2016 / 2019.
+
 To upgrade the ConfigurationVersion of the WAP servers, run the following Powershell command.
 
 ```PowerShell
@@ -148,9 +150,9 @@ Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
 This will complete the upgrade of the WAP servers.
 
 
-> [!NOTE] 
-> A known PRT issue exists in AD FS 2019 if Windows Hello for Business with a Hybrid Certificate trust is performed. You may encounter this error in ADFS Admin event logs: Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'. 
-> To remediate this error: 
+> [!NOTE]
+> A known PRT issue exists in AD FS 2019 if Windows Hello for Business with a Hybrid Certificate trust is performed. You may encounter this error in ADFS Admin event logs: Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'.
+> To remediate this error:
 > 1. Launch AD FS management console. Brose to "Services > Scope Descriptions"
 > 2. Right click "Scope Descriptions" and select "Add Scope Description"
 > 3. Under name type "ugs" and Click Apply > OK

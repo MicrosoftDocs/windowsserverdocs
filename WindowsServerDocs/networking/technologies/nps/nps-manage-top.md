@@ -2,28 +2,27 @@
 title: Manage Network Policy Server (NPS)
 description: This topic provides links to management procedures for Network Policy Server in Windows Server 2016, and includes links to additional guidance about NPS.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: a275b02c-62b3-4b8a-8417-a710f24bebfe
-ms.author: lizross 
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Manage Network Policy Server (NPS)
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-You can use the topics in this section to manage Network Policy Server.  
-  
+You can use the topics in this section to manage Network Policy Server.
+
 >[!NOTE]
->For additional Network Policy Server documentation, you can use the following library sections.  
+>For additional Network Policy Server documentation, you can use the following library sections.
 >- [Getting Started with Network Policy Server](nps-getstart-top.md)
 >- [Plan Network Policy Server](nps-plan-top.md)
->- [Deploy Network Policy Server](nps-deploy.md)  
-  
-This section contains the following topics.  
-  
+>- [Deploy Network Policy Server](nps-deploy.md)
+
+This section contains the following topics.
+
 - [Network Policy Server Management with Administration Tools](nps-admintools.md)
 - [Configure Connection Request Policies](nps-crp-configure.md)
 - [Configure Firewalls for RADIUS Traffic](nps-firewalls-configure.md)

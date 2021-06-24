@@ -1,13 +1,11 @@
 ---
 title: ftp quote
 description: Reference article for the ftp quote command, which sends verbatim arguments to the remote ftp server.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4500a1d3-c091-42c7-a909-f61df7f2e993
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -46,4 +44,4 @@ quote quit
 
 - [ftp literal command](ftp-literal_1.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

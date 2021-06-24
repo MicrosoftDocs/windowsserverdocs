@@ -1,13 +1,11 @@
 ---
 title: pause
 description: Reference article for the pause command, which suspends the processing of batch programs.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: cab3afc3-d046-432f-a0bf-6282f0099032
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

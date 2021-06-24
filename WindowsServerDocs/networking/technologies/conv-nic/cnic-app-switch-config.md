@@ -1,13 +1,11 @@
 ---
 title: Physical switch configuration for Converged NIC
-description: In this topic, we provide you with guidelines for configuring your physical switches. 
-ms.prod: windows-server
-ms.technology: networking
+description: In this topic, we provide you with guidelines for configuring your physical switches.
 ms.topic: article
 ms.assetid: 6d53c797-fb67-4b9e-9066-1c9a8b76d2aa
 manager: dougkim
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/14/2018
 ---
 
@@ -15,10 +13,9 @@ ms.date: 09/14/2018
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-In this topic, we provide you with guidelines for configuring your physical switches. 
+In this topic, we provide you with guidelines for configuring your physical switches.
 
-
-These are only commands and their uses; you must determine the ports to which the NICs are connected in your environment. 
+These are only commands and their uses; you must determine the ports to which the NICs are connected in your environment.
 
 >[!IMPORTANT]
 >Ensure that the VLAN and no-drop policy is set for the priority over which SMB is configured.
@@ -47,11 +44,9 @@ These are only commands and their uses; you must determine the ports to which th
 4.	For more information on configuring Arista Switch, search online for: Arista EOS Manual
 5.	Use this command to verify PFC settings: show priority-flow-control counters detail
 
---- 
-
 ## Dell switch \(S4810, FTOS 9.9 \(0.0\)\)
 
-    
+```
     !
     dcb enable
     ! put pfc control on qos class 3
@@ -66,13 +61,13 @@ These are only commands and their uses; you must determine the ports to which th
     interface range ten 0/0-31
     dcb-map dcb-smb
     exit
-    
---- 
+```
 
 ## Cisco switch \(Nexus 3132, version 6.0\(2\)U6\(1\)\)
 
 ### Global
-    
+
+```
     class-map type qos match-all RDMA
     match cos 3
     class-map type queuing RDMA
@@ -98,11 +93,11 @@ These are only commands and their uses; you must determine the ports to which th
     service-policy type qos input QOS_MARKING
     service-policy type queuing output QOS_QUEUEING
     service-policy type network-qos QOS_NETWORK
-    
+```
 
 ### Port specific
 
-    
+```
     switchport mode trunk
     switchport trunk native vlan 99
     switchport trunk allowed vlan 99,2000,2050   çuse VLANs that already exists
@@ -111,13 +106,10 @@ These are only commands and their uses; you must determine the ports to which th
     flowcontrol send on (not supported with PFC in Cisco NX-OS)
     no shutdown
     priority-flow-control mode on
-    
---- 
+```
 
 ## Related topics
 
 - [Converged NIC Configuration with a Single Network Adapter](cnic-single.md)
 - [Converged NIC Teamed NIC Configuration](cnic-datacenter.md)
 - [Troubleshooting Converged NIC Configurations](cnic-app-troubleshoot.md)
-
---- 

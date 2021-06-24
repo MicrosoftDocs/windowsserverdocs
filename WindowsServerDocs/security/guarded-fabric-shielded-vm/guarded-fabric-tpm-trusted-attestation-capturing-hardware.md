@@ -1,12 +1,11 @@
 ---
 title: Capture TPM-mode information required by HGS
-ms.prod: windows-server
+description: "Learn more about: Authorize guarded hosts using TPM-based attestation"
 ms.topic: article
 ms.assetid: 915b1338-5085-481b-8904-75d29e609e93
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 04/01/2019
 ---
 
@@ -24,17 +23,17 @@ TPM mode uses a TPM identifier (also called a platform identifier or endorsement
 
     -  This is applicable to all Hyper-V hosts that run on the same class of hardware
 
-3.  Code integrity policy (a whitelist of allowed binaries)
+3.  Code integrity policy (an allowlist of allowed binaries)
 
     -  This is applicable to all Hyper-V hosts that share common hardware and software
 
-We recommend that you capture the baseline and CI policy from a "reference host" that is representative of each unique class of Hyper-V hardware configuration within your datacenter. Beginning with Windows Server version 1709, sample CI policies are included at C:\Windows\schemas\CodeIntegrity\ExamplePolicies. 
+We recommend that you capture the baseline and CI policy from a "reference host" that is representative of each unique class of Hyper-V hardware configuration within your datacenter. Beginning with Windows Server version 1709, sample CI policies are included at C:\Windows\schemas\CodeIntegrity\ExamplePolicies.
 
 ## Versioned attestation policies
 
-Windows Server 2019 introduces a new method for attestation, called *v2 attestation*, where a TPM certificate must be present in order to add the EKPub to HGS. The v1 attestation method used in Windows Server 2016 allowed you to override this safety check by specifying the -Force flag when you run Add-HgsAttestationTpmHost or other TPM attestation cmdlets to capture the artifacts. Beginning with Windows Server 2019, v2 attestation is used by default and you need to specify the -PolicyVersion v1 flag when you run Add-HgsAttestationTpmHost if you need to register a TPM without a certificate. The -Force flag does not work with v2 attestation. 
+Windows Server 2019 introduces a new method for attestation, called *v2 attestation*, where a TPM certificate must be present in order to add the EKPub to HGS. The v1 attestation method used in Windows Server 2016 allowed you to override this safety check by specifying the -Force flag when you run Add-HgsAttestationTpmHost or other TPM attestation cmdlets to capture the artifacts. Beginning with Windows Server 2019, v2 attestation is used by default and you need to specify the -PolicyVersion v1 flag when you run Add-HgsAttestationTpmHost if you need to register a TPM without a certificate. The -Force flag does not work with v2 attestation.
 
-A host can only attest if all artifacts (EKPub + TPM baseline + CI Policy) use the same version of attestation. V2 attestation is tried first, and if that fails, v1 attestation is used. This means if you need to register a TPM identifier by using v1 attestation, you need to also specify the -PolicyVersion v1 flag to use v1 attestation when you capture the TPM baseline and create the CI policy. If the TPM baseline and CI policy were created by using v2 attestation and then later you need to add a guarded host without a TPM certificate, you need to re-create each artifact with the -PolicyVersion v1 flag. 
+A host can only attest if all artifacts (EKPub + TPM baseline + CI Policy) use the same version of attestation. V2 attestation is tried first, and if that fails, v1 attestation is used. This means if you need to register a TPM identifier by using v1 attestation, you need to also specify the -PolicyVersion v1 flag to use v1 attestation when you capture the TPM baseline and create the CI policy. If the TPM baseline and CI policy were created by using v2 attestation and then later you need to add a guarded host without a TPM certificate, you need to re-create each artifact with the -PolicyVersion v1 flag.
 
 ## Capture the TPM identifier (platform identifier or EKpub) for each host
 
@@ -63,25 +62,25 @@ A host can only attest if all artifacts (EKPub + TPM baseline + CI Policy) use t
 
 ## Create and apply a code integrity policy
 
-A code integrity policy helps ensure that only the executables you trust to run on a host are allowed to run. 
+A code integrity policy helps ensure that only the executables you trust to run on a host are allowed to run.
 Malware and other executables outside the trusted executables are prevented from running.
 
-Each guarded host must have a code integrity policy applied in order to run shielded VMs in TPM mode. 
-You specify the exact code integrity policies you trust by adding them to HGS. 
-Code integrity policies can be configured to enforce the policy, blocking any software that does not comply with the policy, or simply audit (log an event when software not defined in the policy is executed). 
+Each guarded host must have a code integrity policy applied in order to run shielded VMs in TPM mode.
+You specify the exact code integrity policies you trust by adding them to HGS.
+Code integrity policies can be configured to enforce the policy, blocking any software that does not comply with the policy, or simply audit (log an event when software not defined in the policy is executed).
 
 Starting with Windows Server version 1709, sample code integrity policies are included with Windows at C:\Windows\schemas\CodeIntegrity\ExamplePolicies. Two policies are recommended for Windows Server:
 
 - **AllowMicrosoft**: Allows all files signed by Microsoft. This policy is recommended for server applications such as SQL or Exchange, or if the server is monitored by agents published by Microsoft.
-- **DefaultWindows_Enforced**: Allows only files that shipped in Windows and doesn't permit other applications released by Microsoft, such as Office. This policy is recommended for servers that run only built-in server roles and features such as Hyper-V. 
+- **DefaultWindows_Enforced**: Allows only files that shipped in Windows and doesn't permit other applications released by Microsoft, such as Office. This policy is recommended for servers that run only built-in server roles and features such as Hyper-V.
 
-It is recommended that you first create the CI policy in audit (logging) mode to see if it's missing anything, then enforce the policy for host production workloads. 
+It is recommended that you first create the CI policy in audit (logging) mode to see if it's missing anything, then enforce the policy for host production workloads.
 
-If you use the [New-CIPolicy](https://docs.microsoft.com/powershell/module/configci/new-cipolicy?view=win10-ps) cmdlet to generate your own code integrity policy, you will need to decide the rule levels to use. 
+If you use the [New-CIPolicy](/powershell/module/configci/new-cipolicy) cmdlet to generate your own code integrity policy, you will need to decide the rule levels to use.
 We recommend a primary level of **Publisher** with fallback to **Hash**, which allows most digitally signed software to be updated without changing the CI policy.
 New software written by the same publisher can also be installed on the server without changing the CI policy.
 Executables that are not digitally signed will be hashed -- updates to these files will require you to create a new CI policy.
-For more information about the available CI policy rule levels, see [Deploy code integrity policies: policy rules and file rules](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-policy-rules) and cmdlet help.
+For more information about the available CI policy rule levels, see [Deploy code integrity policies: policy rules and file rules](/windows/security/threat-protection/windows-defender-application-control/select-types-of-rules-to-create#windows-defender-application-control-policy-rules) and cmdlet help.
 
 1.  On the reference host, generate a new code integrity policy. The following commands create a policy at the **Publisher** level with fallback to **Hash**. It then converts the XML file to the binary file format Windows and HGS need to apply and measure the CI policy, respectively.
 
@@ -98,7 +97,7 @@ For more information about the available CI policy rule levels, see [Deploy code
 
 3.  Apply the CI policy to your reference host:
 
-    1.  Run the following command to configure the machine to use your CI policy. You can also deploy the CI policy with [Group Policy](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) or [System Center Virtual Machine Manager](https://docs.microsoft.com/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#manage-and-deploy-code-integrity-policies-with-vmm).
+    1.  Run the following command to configure the machine to use your CI policy. You can also deploy the CI policy with [Group Policy](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy) or [System Center Virtual Machine Manager](/system-center/vmm/guarded-deploy-host#manage-and-deploy-code-integrity-policies-with-vmm).
 
         ```powershell
         Invoke-CimMethod -Namespace root/Microsoft/Windows/CI -ClassName PS_UpdateAndCompareCIPolicy -MethodName Update -Arguments @{ FilePath = "C:\temp\HW1CodeIntegrity.p7b" }
@@ -120,12 +119,12 @@ For more information about the available CI policy rule levels, see [Deploy code
 
     ```powershell
     Invoke-CimMethod -Namespace root/Microsoft/Windows/CI -ClassName PS_UpdateAndCompareCIPolicy -MethodName Update -Arguments @{ FilePath = "C:\temp\HW1CodeIntegrity.p7b" }
-    
+
     Restart-Computer
     ```
 
     >[!NOTE]
-    >Be careful when applying CI policies to hosts and when updating any software on these machines. Any kernel mode drivers that are non-compliant with the CI Policy may prevent the machine from starting up. 
+    >Be careful when applying CI policies to hosts and when updating any software on these machines. Any kernel mode drivers that are non-compliant with the CI Policy may prevent the machine from starting up.
 
 6.  Provide the binary file (in this example, HW1CodeIntegrity\_enforced.p7b) to the HGS administrator.
 
@@ -137,9 +136,12 @@ For more information about the available CI policy rule levels, see [Deploy code
     Add-HgsAttestationCIPolicy -Path <Path> -Name '<PolicyName>'
     ```
 
+    > [!NOTE]
+    > If you're using a signed code integrity policy, register an unsigned copy of the same policy with HGS. The signature on code integrity policies is used to control updates to the policy, but is not measured into the host TPM and therefore cannot be attested to by HGS.
+
 ## Capture the TPM baseline for each unique class of hardware
 
-A TPM baseline is required for each unique class of hardware in your datacenter fabric. Use a "reference host" again. 
+A TPM baseline is required for each unique class of hardware in your datacenter fabric. Use a "reference host" again.
 
 1. On the reference host, make sure that the Hyper-V role and the Host Guardian Hyper-V Support feature are installed.
 
@@ -149,9 +151,9 @@ A TPM baseline is required for each unique class of hardware in your datacenter 
     ```powershell
     Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
     ```
-        
+
 2. To capture the baseline policy, run the following command in an elevated Windows PowerShell console.
-        
+
     ```powershell
     Get-HgsAttestationBaselinePolicy -Path 'HWConfig1.tcglog'
     ```

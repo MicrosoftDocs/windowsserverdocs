@@ -1,9 +1,7 @@
 ---
 title: IIS on Nano Server
 description: Details for configuring IIS on Nano Server
-ms.prod: windows-server
 manager: DonGill
-ms.technology: server-nano
 ms.topic: article
 ms.date: 09/06/2017
 ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
@@ -58,7 +56,7 @@ In this release of Nano Server, the following IIS features are available:
 |**Management Tools**||
 |IISAdministration module for Windows PowerShell|x|
 
-A series of articles on other configurations of IIS (such as using ASP.NET, PHP, and Java), as well as other related content is published at [http://iis.net/learn](https://iis.net/learn).
+A series of articles on other configurations of IIS (such as using ASP.NET, PHP, and Java), as well as other related content is published at [https://iis.net/learn](https://iis.net/learn).
 
 ## Installing IIS on Nano Server
 You can install this server role either offline (with the Nano Server off) or online (with the Nano Server running); offline installation is the recommended option.

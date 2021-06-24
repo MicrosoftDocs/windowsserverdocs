@@ -1,15 +1,14 @@
 ---
 title: How to determine the minimum staging area DFSR needs for a replicated folder
 description: This article is a quick reference guide on how to calculate the minimum staging area needed for DFSR to function properly.
-ms.prod: windows-server
-ms.technology: server-general
 ms.date: 06/10/2020
 author: Deland-Han
 ms.author: delhan
+ms.topic: troubleshooting
 ---
 # How to determine the minimum staging area DFSR needs for a replicated folder
 
-This article is a quick reference guide on how to calculate the minimum staging area needed for DFSR to function properly. Values lower than these may cause replication to go slowly or stop altogether. 
+This article is a quick reference guide on how to calculate the minimum staging area needed for DFSR to function properly. Values lower than these may cause replication to go slowly or stop altogether.
 
 Keep in mind these are *minimums only*. When considering staging area size, the bigger the staging area the better, up to the size of the Replicated Folder. See the section "How to determine if you have a staging area problem" and the blog posts linked at the end of this article for more details on why it is important to have a properly sized staging area.
 
@@ -32,23 +31,23 @@ PowerShell is included on Windows 2008 and higher. You must install PowerShell o
 
 Use a PowerShell script to find the 32 or 9 largest files and determine how many gigabytes they add up to (thanks to Ned Pyle for the PowerShell commands). I am actually going to present you with three PowerShell scripts. Each is useful on its own; however, number 3 is the most useful.
 
-1. Run the following command:  
+1. Run the following command:
    ```Powershell
    Get-ChildItem c:\\temp -recurse | Sort-Object length -descending | select-object -first 32 | ft name,length -wrap –auto
    ```
-   
+
    This command will return the file names and the size of the files in bytes. Useful if you want to know what 32 files are the largest in the Replicated Folder so you can “visit” their owners.
 
-2. Run the following command:  
+2. Run the following command:
    ```Poswershell
    Get-ChildItem c:\\temp -recurse | Sort-Object length -descending | select-object -first 32 | measure-object -property length –sum
    ```
    This command will return the total number of bytes of the 32 largest files in the folder without listing the file names.
 
-3. Run the following command:  
+3. Run the following command:
    ```Poswershell
    $big32 = Get-ChildItem c:\\temp -recurse | Sort-Object length -descending | select-object -first 32 | measure-object -property length –sum
-   
+
    $big32.sum /1gb
    ```
    This command will get the total number of bytes of 32 largest files in the folder and do the math to convert bytes to gigabytes for you. This command is two separate lines. You can paste both them into the PowerShell command shell at once or run them back to back.
@@ -168,29 +167,29 @@ You detect staging area problems by monitoring for specific events IDs on your D
 
 ### Staging Area Events
 
-> Event ID: **4202**  
+> Event ID: **4202**
 > Severity: **Warning**
-> 
+>
 > The DFS Replication service has detected that the staging space in use for the replicated folder at local path (path) is above the high watermark. The service will attempt to delete the oldest staging files. Performance may be affected.
-> 
-> Event ID: **4204**  
+>
+> Event ID: **4204**
 > Severity: **Informational**
-> 
+>
 > The DFS Replication service has successfully deleted old staging files for the replicated folder at local path (path). The staging space is now below the high watermark.
-> 
-> Event ID: **4206**  
+>
+> Event ID: **4206**
 > Severity: **Warning**
-> 
+>
 > The DFS Replication service failed to clean up old staging files for the replicated folder at local path (path). The service might fail to replicate some large files and the replicated folder might get out of sync. The service will automatically retry staging space cleanup in (x) minutes. The service may start cleanup earlier if it detects some staging files have been unlocked.
-> 
-> Event ID: **4208**  
+>
+> Event ID: **4208**
 > Severity: **Warning**
-> 
+>
 > The DFS Replication service detected that the staging space usage is above the staging quota for the replicated folder at local path (path). The service might fail to replicate some large files and the replicated folder might get out of sync. The service will attempt to clean up staging space automatically.
-> 
-> Event ID: **4212**  
+>
+> Event ID: **4212**
 > Severity: **Error**
-> 
+>
 > The DFS Replication service could not replicate the replicated folder at local path (path) because the staging path is invalid or inaccessible.
 
 ## What is the difference between 4202 and 4208?

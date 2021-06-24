@@ -1,8 +1,6 @@
 ---
 title: Manage Transport Layer Security (TLS)
-description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-tls-ssl
+description: Learn how to manage the Transport Layer Security.
 ms.topic: article
 author: justinha
 ms.author: justinha
@@ -16,10 +14,10 @@ ms.date: 05/16/2018
 
 ## Configuring TLS Cipher Suite Order
 
-Different Windows versions support different TLS cipher suites and priority order. See [Cipher Suites in TLS/SSL (Schannel SSP)](https://docs.microsoft.com/windows/win32/secauthn/cipher-suites-in-schannel) for the default order supported by the Microsoft Schannel Provider in different Windows versions.
+Different Windows versions support different TLS cipher suites and priority order. See [Cipher Suites in TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel) for the default order supported by the Microsoft Schannel Provider in different Windows versions.
 
 > [!NOTE]
-> You can also modify the list of cipher suites by using CNG functions, see [Prioritizing Schannel Cipher Suites](https://docs.microsoft.com/windows/win32/secauthn/prioritizing-schannel-cipher-suites) for details.
+> You can also modify the list of cipher suites by using CNG functions, see [Prioritizing Schannel Cipher Suites](/windows/win32/secauthn/prioritizing-schannel-cipher-suites) for details.
 
 Changes to the TLS cipher suite order will take effect on the next boot. Until restart or shutdown, the existing order will be in effect.
 
@@ -49,11 +47,11 @@ You can use the SSL Cipher Suite Order Group Policy settings to configure the de
 
 ### Configuring TLS Cipher Suite Order by using MDM
 
-The Windows 10 Policy CSP supports configuration of the TLS Cipher Suites. See [Cryptography/TLSCipherSuites](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-tlsciphersuites) for more information.
+The Windows 10 Policy CSP supports configuration of the TLS Cipher Suites. See [Cryptography/TLSCipherSuites](/windows/client-management/mdm/policy-csp-cryptography#cryptography-tlsciphersuites) for more information.
 
 ### Configuring TLS Cipher Suite Order by using TLS PowerShell Cmdlets
 
-The TLS PowerShell module supports getting the ordered list of TLS cipher suites, disabling a cipher suite, and enabling a cipher suite. See [TLS Module](https://docs.microsoft.com/powershell/module/tls/?view=win10-ps) for more information.
+The TLS PowerShell module supports getting the ordered list of TLS cipher suites, disabling a cipher suite, and enabling a cipher suite. See [TLS Module](/powershell/module/tls/) for more information.
 
 ## Configuring TLS ECC Curve Order
 
@@ -120,7 +118,7 @@ The process for distributing a curve is:
 4. Configure the newly created Group Policy Preference Registry Collection by adding a new **Registry Item** for each registry value listed under *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters\[curveName]*.
 5. Deploy the Group Policy object containing Group Policy Registry Collection item to Windows 10 and Windows Server 2016 computers that should receive the new named curves.
 
-    ![GPP distribute curves](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)
+    ![Screenshot of the Preferences tab of the Group Policy Management Editor.](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)
 
     *Figure 3 Using Group Policy Preferences to distribute curves*
 
@@ -130,7 +128,6 @@ Beginning with Windows 10 and Windows Server 2016, ECC Curve Order group policy 
 Using Generic ECC and this setting, organizations can add their own trusted named curves (that are approved for use with TLS) to the operating system and then add those named curves to the curve priority Group Policy setting to ensure they are used in future TLS handshakes.
 New curve priority lists become active on the next reboot after receiving the policy settings.
 
-![GPP distribute curves](../media/Transport-Layer-Security-protocol/gp-managing-tls-curve-priority-order.png)
+![Screenshot of the EEC Curve Order dialog box.](../media/Transport-Layer-Security-protocol/gp-managing-tls-curve-priority-order.png)
 
 *Figure 4 Managing TLS curve priority using Group Policy*
-

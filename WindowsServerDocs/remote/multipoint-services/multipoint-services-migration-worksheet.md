@@ -1,9 +1,7 @@
 ---
 title: Planning worksheet for MultiPoint Services migration
-description: Provides planning worksheets to help you migrate to MultiPoint Services in Windows Server 2016 
+description: Provides planning worksheets to help you migrate to MultiPoint Services in Windows Server 2016
 ms.date: 07/29/2016
-ms.prod: windows-server
-ms.technology: multipoint-services
 ms.topic: article
 ms.assetid: 864405bb-47ed-4c83-97a2-8df4c6e6f96b
 author: lizap
@@ -90,7 +88,7 @@ Dashboard users:
 
 Record the VDI template information and the names of virtual desktops in your MultiPoint Services deployment. You can find this information on the **Virtual Desktops** tab in MultiPoint Manager.
 
-**VDI template location**: 
+**VDI template location**:
 
 | # | Virtual desktop name      |
 |---|---------------------------|

@@ -1,9 +1,8 @@
 ---
+description: "Learn more about: Guidelines for troubleshooting DNS-related activation issues"
 title: Guidelines for troubleshooting DNS-related activation issues
 ms.topic: troubleshooting
 ms.date: 09/10/2019
-ms.technology: server-general
-ms.topic: article
 author: Teresa-Motiv
 ms.author: v-tea
 ms.localizationpriority: medium
@@ -60,7 +59,7 @@ To change the product key to an MAK, follow these steps:
 
 KMS activation requires that a KMS host be configured for the clients to activate against. If there are no KMS hosts configured in your environment, install and activate one by using an appropriate KMS host key. After you configure a computer on the network to host the KMS software, publish the Domain Name System (DNS) settings.
 
-For information about the KMS host configuration process, see [Activate using Key Management Service](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt) and [Install and Configure VAMT](https://docs.microsoft.com/windows/deployment/volume-activation/install-configure-vamt).
+For information about the KMS host configuration process, see [Activate using Key Management Service](/windows/deployment/volume-activation/activate-using-key-management-service-vamt) and [Install and Configure VAMT](/windows/deployment/volume-activation/install-configure-vamt).
 
 [Return to the procedure list.](#list)
 
@@ -74,7 +73,7 @@ Verify basic IP connectivity to the DNS server by using the ping command. To do 
    ping <DNS_Server_IP_address>
    ```
    > [!NOTE]
-   > If the output from this command does not include the phrase "Reply from," there is a network problem or DNS issue that you must resolve before you can use the other procedures in this article. For more information about how to troubleshoot TCP/IP issues if you cannot ping the DNS server, see [Advanced troubleshooting for TCP/IP issues](https://docs.microsoft.com/windows/client-management/troubleshoot-tcpip).
+   > If the output from this command does not include the phrase "Reply from," there is a network problem or DNS issue that you must resolve before you can use the other procedures in this article. For more information about how to troubleshoot TCP/IP issues if you cannot ping the DNS server, see [Advanced troubleshooting for TCP/IP issues](/windows/client-management/troubleshoot-tcpip).
 
 [Return to the procedure list.](#list)
 
@@ -155,7 +154,7 @@ You can use the following commands to determine whether this is a name resolutio
       1. Verify the IP address, host name, port, and domain of the KMS host.
       1. If these **_vlmcs** entries exist, and if they contain the expected KMS host names, go to [Manually assign a KMS host to a KMS client](#manually-assign-a-kms-host-to-a-kms-client).
       > [!NOTE]
-      > If the [**nslookup**](https://docs.microsoft.com/windows-server/administration/windows-commands/nslookup) command finds the KMS host, it does not mean that the DNS client can find the KMS host. If the **nslookup** command finds the KMS host, but you still cannot activate by using the KMS host, check the other DNS settings, such as the primary DNS suffix and the search list of the DNS suffix.
+      > If the [**nslookup**](../administration/windows-commands/nslookup.md) command finds the KMS host, it does not mean that the DNS client can find the KMS host. If the **nslookup** command finds the KMS host, but you still cannot activate by using the KMS host, check the other DNS settings, such as the primary DNS suffix and the search list of the DNS suffix.
 1. Verify that the search list of the primary DNS suffix contains the DNS domain suffix that is associated with the KMS host. If the search list does not include this information, go to the [Configure the KMS host to publish in multiple DNS domains](#configure-the-kms-host-to-publish-in-multiple-dns-domains) procedure.
 
 [Return to the procedure list.](#list)

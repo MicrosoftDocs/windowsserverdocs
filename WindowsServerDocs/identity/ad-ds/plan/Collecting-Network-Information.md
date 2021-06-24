@@ -1,13 +1,12 @@
 ---
+description: "Learn more about: Collecting Network Information"
 ms.assetid: 8be8c48d-790c-4199-b9d3-9f4a07d5ced2
 title: Collecting Network Information
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: daveba
+author: iainfoulds
+manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 
 # Collecting Network Information
@@ -24,7 +23,7 @@ Create a location map that represents the physical network infrastructure of you
 
 After creating a location map, document the type of communication link, its link speed, and the available bandwidth between each location. Obtain a wide area network (WAN) topology from your networking group. For a list of common WAN circuit types and their bandwidths, see "Determining the cost" section in [Creating a Site Link Design](../../ad-ds/plan/Creating-a-Site-Link-Design.md). You will need this information to create site links later in the site topology design process.
 
-Bandwidth refers to the amount of data that you can transmit across a communication channel in a given amount of time. Available bandwidth refers to the amount of bandwidth actually available for use by AD DS. You can obtain available bandwidth information from your networking group, or you can analyze traffic on each link by using a protocol analyzer such as Network Monitor. For information about installing Network Monitor, see the article [Monitoring network traffic](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc783075(v=ws.10)).
+Bandwidth refers to the amount of data that you can transmit across a communication channel in a given amount of time. Available bandwidth refers to the amount of bandwidth actually available for use by AD DS. You can obtain available bandwidth information from your networking group, or you can analyze traffic on each link by using a protocol analyzer such as Network Monitor. For information about installing Network Monitor, see the article [Monitoring network traffic](/previous-versions/windows/it-pro/windows-server-2003/cc783075(v=ws.10)).
 
 Document each location and the other locations that are linked to it. In addition, record the type of communication link and its available bandwidth. For a worksheet to assist you in listing communication links and available bandwidth, see [Job Aids for Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608), download Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip, and open "Geographic Locations and Communication Links" (DSSTOPO_1.doc).
 

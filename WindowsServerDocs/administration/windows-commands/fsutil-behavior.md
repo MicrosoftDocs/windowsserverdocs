@@ -1,12 +1,10 @@
 ---
 title: fsutil behavior
 description: Reference article for the fsutil behavior command, which queries or sets NTFS volume behavior.
-ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
-ms.technology: storage
-ms.topic: article
+ms.topic: reference
 ms.date: 10/16/2017
 ms.assetid: 84eaba2c-c0af-49e1-bbbd-2ed2928e5e4b
 ---
@@ -60,7 +58,7 @@ fsutil behavior set {allowextchar {1|0} | bugcheckoncorrupt {1|0} | disable8dot3
 | mftzone `<value>` | Sets the size of the MFT Zone, and is expressed as a multiple of 200MB units. Set *value* to a number from **1** (default is 200 MB) to **4** (maximum is 800 MB).<p>You must restart your computer for this parameter to take effect. |
 | memoryusage `<value>` | Configures the internal cache levels of NTFS paged-pool memory and NTFS nonpaged-pool memory. Set to **1** or **2**. When set to **1** (the default), NTFS uses the default amount of paged-pool memory. When set to **2**, NTFS increases the size of its lookaside lists and memory thresholds. (A lookaside list is a pool of fixed-size memory buffers that the kernel and device drivers create as private memory caches for file system operations, such as reading a file.)<p>You must restart your computer for this parameter to take effect. |
 | quotanotify `<frequency>` | Configures how frequently NTFS quota violations are reported in the system log. Valid values for are in the range **0 – 4294967295**. The default frequency is **3600** seconds (one hour).<p>You must restart your computer for this parameter to take effect. |
-| symlinkevaluation `<symboliclinktype>` | Controls the kind of symbolic links that can be created on a computer. Valid choices are:<ul><li>**1** - Local to local symbolic links, `L2L:{0|1}`</li><li>**2** - Local to remote symbolic links, `L2R:{1|0}`</li><li>**3** - Remote to local symbolic links, `R2R:{1|0}`</li><li>**4** - Remote to remote symbolic links, `R2L:{1|0}`</li></ul> |
+| symlinkevaluation `<symboliclinktype>` | Controls the kind of symbolic links that can be created on a computer. Valid choices are:<ul><li>**1** - Local to local symbolic links, `L2L:{0|1}`</li><li>**2** - Local to remote symbolic links, `L2R:{1|0}`</li><li>**3** - Remote to local symbolic links, `R2L:{1|0}`</li><li>**4** - Remote to remote symbolic links, `R2R:{1|0}`</li></ul> |
 | disabledeletenotify | Disables (**1**) or enables (**0**) delete notifications. Delete notifications (also known as trim or unmap) is a feature that notifies the underlying storage device of clusters that have been freed due to a file delete operation. In addition:<ul><li>For systems using ReFS v2, trim is disabled by default.</li><li>For systems using ReFS v1, trim is enabled by default.</li><li>For systems using NTFS, trim is enabled by default unless an administrator disables it.</li><li>If your hard disk drive or SAN reports that it doesn't support trim, then your hard disk drive and SANs don't get trim notifications.</li><li>Enabling or disabling doesn't require a restart.</li><li>Trim is effective when the next unmap command is issued.</li><li>Existing inflight IO are not impacted by the registry change.</li><li>Doesn't require any service restart when you enable or disable trim.</li></ul> |
 
 #### Remarks

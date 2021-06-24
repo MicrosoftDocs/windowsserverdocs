@@ -1,17 +1,17 @@
 ---
 title: What type of installation is right for you
-description: This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins. 
-ms.technology: manage
+description: This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins.
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
-ms.prod: windows-server
-ms.date: 12/02/2019
+ms.date: 12/11/2019
 ---
 # What type of installation is right for you?
 
 This topic describes the different installation options for Windows Admin Center, including installing on a Windows 10 PC or a Windows server for use by multiple admins. To install Windows Admin Center on a VM in Azure, see [Deploy Windows Admin Center in Azure](../azure/deploy-wac-in-azure.md).
+
+We don’t recommend using Windows Admin Center for local management of the same server on which it’s installed. To manage a server, use Windows Admin Center to connect to the server remotely from a management PC or other server.
 
 ## Installation: Types
 
@@ -19,7 +19,7 @@ This topic describes the different installation options for Windows Admin Center
 
 | Local client                                | Gateway server                                  | Managed server                               | Failover cluster                           |
 |---------------------------------------------|-------------------------------------------------|----------------------------------------------|--------------------------------------------|
-| [Install](../deploy/install.md) on a local Windows 10 client that has connectivity to the managed servers.  Great for quick start, testing, ad-hoc or small scale scenarios. |[Install](../deploy/install.md) on a designated gateway server and access from any client browser with connectivity to the gateway server.  Great for large-scale scenarios. | [Install](../deploy/install.md) directly on a managed server for the purpose of managing itself or a cluster in which it's a member node.  Great for distributed scenarios. | [Deploy](#high-availability) in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
+| [Install](../deploy/install.md) on a local Windows 10 client that has connectivity to the managed servers. Great for quick start, testing, ad-hoc or small scale scenarios. |[Install](../deploy/install.md) on a designated gateway server and access from any client browser with connectivity to the gateway server. Great for large-scale scenarios. | [Install](../deploy/install.md) directly on a managed server for the purpose of remotely managing the server or a cluster in which it's a member node. Great for distributed scenarios. | [Deploy](#high-availability) in a failover cluster to enable high availability of the gateway service. Great for production environments to ensure resiliency of your management service. |
 
 ## Installation: Supported operating systems
 
@@ -32,13 +32,13 @@ You can **install** Windows Admin Center on the following Windows operating syst
 | Windows Server 2016                | Gateway sever, managed server, failover cluster |
 | Windows Server 2019                | Gateway sever, managed server, failover cluster |
 
-To operating Windows Admin Center:
+To operate Windows Admin Center:
 
 - **In local client scenario:** Launch the Windows Admin Center gateway from the Start menu and connect to it from a client web browser by accessing `https://localhost:6516`.
 - **In other scenarios:** Connect to the Windows Admin Center gateway on a different machine from a client browser via its URL, e.g., `https://servername.contoso.com`
 
 > [!WARNING]
-> Installing Windows Admin Center on a Domain controller is not supported. [Read more about domain controller security best practices](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack).
+> Installing Windows Admin Center on a Domain controller is not supported. [Read more about domain controller security best practices](../../../identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack.md).
 
 ## Installation: Supported web browsers
 
@@ -61,10 +61,10 @@ You can **manage** the following Windows operating systems using Windows Admin C
 
 > [!NOTE]
 > Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
-> 
+>
 > Type `$PSVersiontable` in PowerShell to verify that WMF is installed,
-> and that the version is 5.1 or higher. 
-> 
+> and that the version is 5.1 or higher.
+>
 > If WMF is not installed, you can [download WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
 
 ## High availability
@@ -74,4 +74,4 @@ You can enable high availability of the gateway service by deploying Windows Adm
 [Learn how to deploy Windows Admin Center with high availability.](../deploy/high-availability.md)
 
 > [!Tip]
-> Ready to install Windows Admin Center? [Download now](https://aka.ms/windowsadmincenter)
+> Ready to install Windows Admin Center? [Download now](../overview.md)

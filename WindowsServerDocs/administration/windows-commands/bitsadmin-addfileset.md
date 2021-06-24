@@ -1,13 +1,11 @@
 ---
 title: bitsadmin addfileset
 description: Reference article for the bitsadmin addfileset command, which adds one or more files to the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 75466994-262f-4724-b14d-f813c5397675
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

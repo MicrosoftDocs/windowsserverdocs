@@ -1,13 +1,12 @@
 ---
 title: Get Connected in Windows Server Essentials
-description: Describes how to use Windows Server Essentials
+description: Learn how to use the Connector software to connect your computers to the Windows Server Essentials server.
 ms.date: 05/07/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 149a5d34-43b7-4b9e-99e7-9f2294ab9ddb
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Get Connected in Windows Server Essentials

@@ -1,10 +1,8 @@
 ---
 title: Performance Tuning Active Directory Servers
 description: Performance Tuning for Active Directory Servers
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: landing-page
-ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab; v-tea
+ms.author: timwi
 author: phstee
 ms.date: 10/16/2017
 ---

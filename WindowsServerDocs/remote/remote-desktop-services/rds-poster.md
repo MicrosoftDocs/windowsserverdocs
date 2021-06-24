@@ -1,12 +1,10 @@
 ---
 title: Remote Desktop Services - planning poster
 description: Provides an overview of planning, deploying, and running Remote Desktop Services
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: elizapo
 author: lizap
 manager: dongill
-ms.date: 11/06/2018  
+ms.date: 11/06/2018
 ms.topic: article
 ms.assetid: a8c6d5fa-399b-4823-8f10-affec1bbfe65
 ms.localizationpriority: medium
@@ -15,7 +13,7 @@ ms.localizationpriority: medium
 
 ## Windows Virtual Desktop
 
-You may have heard us talk about a new "modern infrastructure" for Remote Desktop. Maybe you've heard us use the phrase "RDmi." The phrase you need to know is "Windows Virtual Desktop." Learn more at our [Windows Virtual Desktop documentation page](https://docs.microsoft.com/azure/virtual-desktop/).
+You may have heard us talk about a new "modern infrastructure" for Remote Desktop. Maybe you've heard us use the phrase "RDmi." The phrase you need to know is "Windows Virtual Desktop." Learn more at our [Windows Virtual Desktop documentation page](/azure/virtual-desktop/).
 
 The Remote Desktop Services team have created a poster to help you plan, build, and run your Windows Virtual Desktop environment.
 

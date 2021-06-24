@@ -1,13 +1,11 @@
 ---
 title: delete disk
 description: Reference article for the delete disk command, which deletes a missing dynamic disk from the list of disks.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 44079900-e4ed-49d0-81e4-d652c38cd636
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -16,7 +14,7 @@ ms.date: 10/16/2017
 Deletes a missing dynamic disk from the list of disks.
 
 > [!NOTE]
-> For detailed instructions about how to use this command, see [Remove a Missing Dynamic Disk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753029(v=ws.11)).
+> For detailed instructions about how to use this command, see [Remove a Missing Dynamic Disk](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc753029(v=ws.11)).
 
 ## Syntax
 

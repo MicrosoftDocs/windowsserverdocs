@@ -1,13 +1,11 @@
 ---
 title: move
 description: Reference article for the move command, which moves one or more files from one directory to another directory.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: fde290a8-d385-450f-8987-ee837fed667d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

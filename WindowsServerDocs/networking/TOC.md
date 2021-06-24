@@ -67,11 +67,12 @@
 ####### [Configure firewall rules for non-domain members to allow BranchCache traffic](branchcache/deploy/Configure-Firewall-Rules-for-Non-Domain-Members-to-Allow-BranchCache-Traffic.md)
 ###### [Verify client computer settings](branchcache/deploy/verify-Client-computer-Settings.md)
 
-## [DirectAccess](../remote/remote-access/da-stub.md) 
+## [DirectAccess](../remote/remote-access/directaccess/directaccess.md) 
 
 ## [Domain Name System (DNS)](dns/dns-top.md)
 ### [What's new in DNS client in Windows Server](dns/What-s-New-in-DNS-Client.md)
 ### [What's new in DNS server in Windows Server](dns/What-s-New-in-DNS-Server.md)
+### [Anycast DNS](dns/deploy/anycast.md)
 ### [DNS policy scenario guidance](dns/deploy/DNS-Policy-Scenario-Guide.md)
 #### [DNS policies overview](dns/deploy/DNS-Policies-Overview.md)
 #### [Use DNS policy for geo-location traffic management with primary servers](dns/deploy/primary-geo-location.md)
@@ -99,6 +100,8 @@
 ##### [How to use automatic TCP/IP addressing without a DHCP server](../troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh.md)
 #### [Troubleshoot problems on the DHCP client](../troubleshoot/troubleshoot-problems-on-dhcp-client.md)
 #### [Troubleshoot problems on the DHCP server](../troubleshoot/troubleshoot-problems-on-dhcp-server.md)
+
+## [Extensible Authentication Protocol (EAP)](technologies/extensible-authentication-protocol/network-access.md) 
 
 ## [High-Performance Networking (HPN)](technologies/hpn/hpn-top.md)
 ### [Network offload and optimization technologies](technologies/hpn/network-offload-and-optimization.md)
@@ -135,7 +138,7 @@
 ### [Example of C# generated code](technologies/hcn/example-c-sharp.md)
 ### [Example of Go generated code](technologies/hcn/example-go.md)
 
-## [Hyper-V Virtual Switch](technologies/vswitch-stub.md)
+## [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch.md)
 
 ## [IP Address Management (IPAM)](technologies/ipam/ipam-top.md)
 ### [What's new in IPAM](technologies/ipam/What-s-New-in-IPAM.md)
@@ -224,12 +227,19 @@
 ### [Create a New NIC Team on a host computer or VM](technologies/nic-teaming/create-a-New-NIC-Team-on-a-Host-computer-or-VM.md)
 ### [Troubleshooting NIC Teaming](technologies/nic-teaming/Troubleshooting-NIC-Teaming.md)
 
+## [Packet Monitor (Pktmon)](technologies/pktmon/pktmon.md)
+### [Pktmon command syntax and formatting](technologies/pktmon/pktmon-syntax.md)
+### [Packet Monitoring Extension in Windows Admin Center](technologies/pktmon/pktmon-wac-extension.md)
+### [SDN Data Path Diagnostics Extension in Windows Admin Center](technologies/pktmon/pktmon-sdn-data-path-wac-extension.md)
+### [Microsoft Network Monitor (Netmon) support](technologies/pktmon/pktmon-netmon-support.md)
+### [Wireshark (pcapng format) support](technologies/pktmon/pktmon-pcapng-support.md)
+
 ## [Quality of Service (QoS) policy](technologies/qos/qos-policy-top.md)
 ### [Getting started with QoS policy](technologies/qos/qos-policy-get-started.md)
 #### [How QoS policy works](technologies/qos/qos-policy-works.md)
 #### [QoS policy architecture](technologies/qos/qos-policy-architecture.md)
 #### [QoS policy scenarios](technologies/qos/qos-policy-scenarios.md)
-###[Manage QoS policy](technologies/qos/qos-policy-manage.md)
+### [Manage QoS policy](technologies/qos/qos-policy-manage.md)
 #### [QoS policy events and errors](technologies/qos/qos-policy-errors.md)
 ### [QoS policy FAQ](technologies/qos/qos-policy-faq.md)
 
@@ -243,22 +253,21 @@
 ##### [Hyper-V network virtualization technical details](sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-technical-details-windows-server.md)
 ##### [What's new in Hyper-V Network virtualization](sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md)
 #### [Internal DNS service (iDNS) for SDN](sdn/technologies/Idns-for-Sdn.md)
-#### [Network Controller](sdn/technologies/network-controller/Network-Controller.md)
+#### [Network Controller](/azure-stack/hci/concepts/network-controller-overview)
 ##### [Network Controller high availability](sdn/technologies/network-controller/network-controller-high-availability.md)
 ##### [Install the Network Controller server role using Server Manager](sdn/technologies/network-controller/Install-the-Network-Controller-server-role-using-server-manager.md)
 ##### [Post-deployment steps for Network Controller](sdn/technologies/network-controller/post-deploy-steps-nc.md)
 #### [Network function virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md)
-##### [Datacenter firewall overview](sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)
-##### [RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
-###### [What's new in RAS Gateway](sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md)
+##### [Datacenter firewall overview](/azure-stack/hci/concepts/datacenter-firewall-overview)
+##### [RAS Gateway for SDN](/azure-stack/hci/concepts/gateway-overview)
 ###### [RAS Gateway deployment architecture](sdn/technologies/network-function-virtualization/RAS-Gateway-Deployment-Architecture.md)
 ###### [RAS Gateway high availability](sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)
-##### [Software Load Balancing (SLB) for SDN](sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md)
+##### [Software Load Balancing (SLB) for SDN](/azure-stack/hci/concepts/software-load-balancer)
 #### [Switch Embedded Teaming (SET) for SDN](sdn/technologies/Set-for-Sdn.md)
 #### [Container networking](sdn/technologies/Containers/Container-networking-overview.md)
 
-### [Plan for SDN](sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)
-#### [Installation and preparation requirements for deploying Network Controller](sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)
+### [Plan for SDN](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure)
+#### [Installation and preparation requirements for deploying Network Controller](/azure-stack/hci/concepts/network-controller)
 
 ### Deploy SDN
 #### [Deploy an SDN Infrastructure](sdn/deploy/Deploy-a-Software-Defined-Network-Infrastructure.md)
@@ -269,7 +278,7 @@
 ### [Manage SDN](sdn/manage/manage-sdn.md)
 #### [Manage tenant virtual networks](sdn/manage/Manage-Tenant-Virtual-Networks.md)
 ##### [Understanding usage of virtual networks and VLANs](sdn/manage/Understanding-Usage-of-Virtual-Networks-and-VLANs.md)
-##### [Use Access Control lists (ACLs) to manage datacenter network traffic flow](sdn/manage/use-acls-for-traffic-flow.md)
+##### [Use Access Control lists (ACLs) to manage datacenter network traffic flow](/azure-stack/hci/manage/use-datacenter-firewall-powershell)
 ##### [Create, delete, or update tenant virtual networks](sdn/manage/create,-delete,-or-Update-Tenant-Virtual-Networks.md)
 ##### [Add a virtual gateway to a tenant virtual network](sdn/manage/add-a-Virtual-Gateway-to-a-Tenant-Virtual-Network.md)
 ##### [Connect container endpoints to a tenant virtual network](sdn/manage/Connect-container-endpoints-to-a-Tenant-Virtual-Network.md)
@@ -279,7 +288,7 @@
 #### [Manage tenant workloads](sdn/manage/Manage-Tenant-Workloads.md)
 ##### [Create a VM and connect to a tenant virtual network or VLAN](sdn/manage/create-a-Tenant-VM.md)
 ##### [Configure QoS for a tenant VM network adapter](sdn/manage/Configure-QoS-for-Tenant-VM-Network-Adapter.md)
-##### [Configure datacenter firewall ACLs](sdn/manage/Configure-Datacenter-Firewall-Acls.md)
+##### [Configure datacenter firewall ACLs](/azure-stack/hci/manage/use-datacenter-firewall-powershell)
 ##### [Configure the Software Load Balancer for load balancing and Network address Translation (NAT)](sdn/manage/Configure-SLB-and-Nat.md)
 ##### [Use network virtual appliances on a virtual network](sdn/manage/Use-Network-Virtual-Appliances-on-a-VN.md)
 ##### [Guest clustering in a virtual network](sdn/manage/guest-clustering.md)
@@ -289,7 +298,7 @@
 #### [Secure the Network Controller](sdn/security/nc-security.md)
 #### [Manage certificates for SDN](sdn/security/sdn-manage-certs.md)
 #### [Kerberos with Service Principal Name (SPN)](sdn/security/kerberos-with-spn.md)
-#### [SDN firewall auditing](sdn/security/sdn-firewall-auditing.md)
+#### [SDN firewall auditing](/azure-stack/hci/manage/use-datacenter-firewall-powershell#firewall-auditing)
 
 ### [Virtual network peering](sdn/vnet-peering/sdn-vnet-peering.md)
 #### [Configure virtual network peering](sdn/vnet-peering/sdn-configure-vnet-peering.md)
@@ -304,7 +313,7 @@
 ### [Microsoft Azure and SDN](sdn/Azure_and_Sdn.md)
 ### [Contact the Datacenter and Cloud Networking Team](sdn/contact-sdn-team.md)
 
-## [Virtual Private Networking (VPN)](technologies/vpn-stub.md)
+## [Virtual Private Networking (VPN)](../remote/remote-access/vpn/vpn-top.md)
 
 ## [Windows Internet Name Service (WINS)](technologies/wins/wins-top.md)
 
@@ -317,4 +326,3 @@
 ### [Windows Time service technical reference](windows-time-service/windows-time-service-tech-ref.md)
 #### [How the Windows Time service works](windows-time-service/How-the-Windows-Time-Service-Works.md)
 #### [Windows Time service tools and settings](windows-time-service/Windows-Time-Service-Tools-and-Settings.md)
-

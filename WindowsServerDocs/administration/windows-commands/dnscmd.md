@@ -1,13 +1,11 @@
 ---
 title: dnscmd
 description: Reference article for the dnscmd command, which is a command-line interface for managing DNS servers.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: e7f31cb5-a426-4e25-b714-88712b8defd5
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -63,7 +61,7 @@ dnscmd [<servername>] /ageallrecords <zonename>[<nodename>] | [/tree]|[/f]
 
 ### Examples
 
-[Example 1: Set the current time on a time stamp to resource records](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-1-set-the-current-time-on-a-time-stamp-to-resource-records)
+[Example 1: Set the current time on a time stamp to resource records](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-1-set-the-current-time-on-a-time-stamp-to-resource-records)
 
 ## dnscmd /clearcache command
 
@@ -101,6 +99,9 @@ dnscmd [<servername>] /config <parameter>
 ```
 
 #### Parameters
+
+> [!NOTE]
+> This article contains references to the term slave, a term that Microsoft no longer uses. When the term is removed from the software, we’ll remove it from this article.
 
 | Parameters | Description |
 | ---------- | ----------- |
@@ -171,7 +172,7 @@ dnscmd /config <parameters>
 | /forwardertimeout `<zonename>` | Determines how many seconds a DNS zone waits for a forwarder to respond before trying another forwarder. This value overrides the value that is set at the server level. |
 | /norefreshinterval `<zonename>` | Sets a time interval for a zone during which no refreshes can dynamically update DNS records in a specified zone. |
 | /refreshinterval `<zonename>` | Sets a time interval for a zone during which refreshes can dynamically update DNS records in a specified zone. |
-| /securesecondaries `<zonename>` | Determines which secondary servers can receive zone updates from the master server for this zone. |
+| /securesecondaries `<zonename>` | Determines which secondary servers can receive zone updates from the primary server for this zone. |
 
 ## dnscmd /createbuiltindirectorypartitions command
 
@@ -344,9 +345,9 @@ dnscmd [<servername>] /enumzones [/primary | /secondary | /forwarder | /stub | /
 
 #### Examples
 
-- [Example 2: Display a complete list of zones on a DNS server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-2-display-a-complete-list-of-zones-on-a-dns-server))
+- [Example 2: Display a complete list of zones on a DNS server](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-2-display-a-complete-list-of-zones-on-a-dns-server))
 
-- [Example 3: Display a list of autocreated zones on a DNS server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-3-display-a-list-of-autocreated-zones-on-a-dns-server)
+- [Example 3: Display a list of autocreated zones on a DNS server](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-3-display-a-list-of-autocreated-zones-on-a-dns-server)
 
 ## dnscmd /exportsettings command
 
@@ -383,13 +384,13 @@ dnscmd [<servername>] /info [<settings>]
 
 #### Example
 
-- [Example 4: Display the IsSlave setting from a DNS server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-4-display-the-isslave-setting-from-a-dns-server)
+- [Example 4: Display the IsSlave setting from a DNS server](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-4-display-the-isslave-setting-from-a-dns-server)
 
-- [Example 5: Display the RecursionTimeout setting from a DNS server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-5-display-the-recursiontimeout-setting-from-a-dns-server)
+- [Example 5: Display the RecursionTimeout setting from a DNS server](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-5-display-the-recursiontimeout-setting-from-a-dns-server)
 
 ## dnscmd /ipvalidate command
 
-Tests whether an IP address identifies a functioning DNS server or whether the DNS server can act as a forwarder, a root hint server, or a master server for a specific zone.
+Tests whether an IP address identifies a functioning DNS server or whether the DNS server can act as a forwarder, a root hint server, or a primary server for a specific zone.
 
 ### Syntax
 
@@ -402,7 +403,7 @@ dnscmd [<servername>] /ipvalidate <context> [<zonename>] [[<IPaddress>]]
 | Parameters | Description |
 | ---------- | ----------- |
 | `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
-| `<context>` | Specifies the type of test to perform. You can specify any of the following tests:<ul><li>**/dnsservers** - Tests that the computers with the addresses that you specify are functioning DNS servers.</li><li>**/forwarders** - Tests that the addresses that you specify identify DNS servers that can act as forwarders.</li><li>**/roothints** - Tests that the addresses that you specify identify DNS servers that can act as root hint name servers.</li><li>**/zonemasters** - Tests that the addresses that you specify identify DNS servers that are master servers for *zonename*. |
+| `<context>` | Specifies the type of test to perform. You can specify any of the following tests:<ul><li>**/dnsservers** - Tests that the computers with the addresses that you specify are functioning DNS servers.</li><li>**/forwarders** - Tests that the addresses that you specify identify DNS servers that can act as forwarders.</li><li>**/roothints** - Tests that the addresses that you specify identify DNS servers that can act as root hint name servers.</li><li>**/zonemasters** - Tests that the addresses that you specify identify DNS servers that are primary servers for *zonename*. |
 | `<zonename>` | Identifies the zone. Use this parameter with the **/zonemasters** parameter. |
 | `<IPaddress>` | Specifies the IP addresses that the command tests. |
 
@@ -435,7 +436,7 @@ dnscmd [<servername>] /nodedelete <zonename> <nodename> [/tree] [/f]
 
 #### Example
 
-[Example 6: Delete the records from a node](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-6-delete-the-records-from-a-node)
+[Example 6: Delete the records from a node](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-6-delete-the-records-from-a-node)
 
 ## dnscmd /recordadd command
 
@@ -458,7 +459,7 @@ dnscmd [<servername>] /recordadd <zonename> <nodename> <rrtype> <rrdata>
 | `<rrdata>` | Specifies the type of data that is expected. |
 
 > [!NOTE]
-> After you add a record, make sure that you use the correct data type and data format. For a list of resource record types and the appropriate data types, see [Dnscmd Examples](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)).
+> After you add a record, make sure that you use the correct data type and data format. For a list of resource record types and the appropriate data types, see [Dnscmd Examples](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)).
 
 #### Examples
 
@@ -616,9 +617,9 @@ dnscmd [<servername>] /statistics [<statid>] [/clear]
 
 #### Examples
 
-- [Example 7: ](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-7-display-time-statistics-for-a-dns-server)
+- [Example 7: ](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-7-display-time-statistics-for-a-dns-server)
 
-- [Example 8: Display NbstatMem statistics for a DNS server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-8-display-nbstatmem-statistics-for-a-dns-server)
+- [Example 8: Display NbstatMem statistics for a DNS server](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-8-display-nbstatmem-statistics-for-a-dns-server)
 
 ## dnscmd /unenlistdirectorypartition command
 
@@ -732,7 +733,7 @@ dnscmd [<servername>] /zonedelete <zonename> [/dsdel] [/f]
 
 #### Examples
 
-- [Example 9: Delete a zone from a DNS server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-9-delete-a-zone-from-a-dns-server)
+- [Example 9: Delete a zone from a DNS server](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-9-delete-a-zone-from-a-dns-server)
 
 ## dnscmd /zoneexport command
 
@@ -754,7 +755,7 @@ dnscmd [<servername>] /zoneexport <zonename> <zoneexportfile>
 
 #### Examples
 
-- [Example 10: Export zone resource records list to a file](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-10-export-zone-resource-records-list-to-a-file)
+- [Example 10: Export zone resource records list to a file](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-10-export-zone-resource-records-list-to-a-file)
 
 ## dnscmd /zoneinfo
 
@@ -782,9 +783,9 @@ dnscmd [<servername>] /zoneinfo <zonename> [<setting>]
 
 #### Examples
 
-- [Example 11: Display RefreshInterval setting from the registry](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-11-display-refreshinterval-setting-from-the-registry)
+- [Example 11: Display RefreshInterval setting from the registry](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-11-display-refreshinterval-setting-from-the-registry)
 
-- [Example 12: Display Aging setting from the registry](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-12-display-aging-setting-from-the-registry)
+- [Example 12: Display Aging setting from the registry](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-12-display-aging-setting-from-the-registry)
 
 ## dnscmd /zonepause command
 
@@ -855,7 +856,7 @@ dnscmd [<servername>] /zonerefresh <zonename>
 
 ##### Remarks
 
-- The **zonerefresh** command forces a check of the version number in the master server s start of authority (SOA) resource record. If the version number on the master server is higher than the secondary server's version number, a zone transfer is initiated that updates the secondary server. If the version number is the same, no zone transfer occurs.
+- The **zonerefresh** command forces a check of the version number in the primary server s start of authority (SOA) resource record. If the version number on the primary server is higher than the secondary server's version number, a zone transfer is initiated that updates the secondary server. If the version number is the same, no zone transfer occurs.
 
 - The forced check occurs by default every 15 minutes. To change the default, use the `dnscmd config refreshinterval` command.
 
@@ -896,7 +897,7 @@ dnscmd dnssvr1.contoso.com /zonereload test.contoso.com
 
 ## dnscmd /zoneresetmasters command
 
-Resets the IP addresses of the master server that provides zone transfer information to a secondary zone.
+Resets the IP addresses of the primary server that provides zone transfer information to a secondary zone.
 
 ### Syntax
 
@@ -911,7 +912,7 @@ dnscmd [<servername>] /zoneresetmasters <zonename> [/local] [<IPaddress> [<IPadd
 | `<servername>` | Specifies the DNS server to manage, represented by IP address, FQDN, or host name. If this parameter is omitted, the local server is used. |
 | `<zonename>` | Specifies the name of the zone to be reset. |
 | /local | Sets a local master list. This parameter is used for active directory integrated zones. |
-| `<IPaddress>` | The IP addresses of the master servers of the secondary zone. |
+| `<IPaddress>` | The IP addresses of the primary servers of the secondary zone. |
 
 ##### Remarks
 
@@ -959,7 +960,7 @@ dnscmd dnssvr1.contoso.com /zoneresetscavengeservers test.contoso.com 10.0.0.1 1
 
 ## dnscmd /zoneresetsecondaries command
 
-Specifies a list of IP addresses of secondary servers to which a master server responds when it is asked for a zone transfer.
+Specifies a list of IP addresses of secondary servers to which a primary server responds when it is asked for a zone transfer.
 
 ### Syntax
 
@@ -977,16 +978,16 @@ dnscmd [<servername>] /zoneresetsecondaries <zonename> {/noxfr | /nonsecure | /s
 | /noxfr | Specifies that no zone transfers are allowed. |
 | /nonsecure | Specifies that all zone transfer requests are granted. |
 | /securens | Specifies that only the server that is listed in the name server (NS) resource record for the zone is granted a transfer. |
-| /securelist | Specifies that zone transfers are granted only to the list of servers. This parameter must be followed by an IP address or addresses that the master server uses. |
-| `<securityIPaddresses>` | Lists the IP addresses that receive zone transfers from the master server. This parameter is used only with the **/securelist** parameter. |
+| /securelist | Specifies that zone transfers are granted only to the list of servers. This parameter must be followed by an IP address or addresses that the primary server uses. |
+| `<securityIPaddresses>` | Lists the IP addresses that receive zone transfers from the primary server. This parameter is used only with the **/securelist** parameter. |
 | /nonotify | Specifies that no change notifications are sent to secondary servers. |
 | /notify | Specifies that change notifications are sent to all secondary servers. |
-| /notifylist | Specifies that change notifications are sent to only the list of servers. This command must be followed by an IP address or addresses that the master server uses. |
+| /notifylist | Specifies that change notifications are sent to only the list of servers. This command must be followed by an IP address or addresses that the primary server uses. |
 | `<notifyIPaddresses>` | Specifies the IP address or addresses of the secondary server or servers to which change notifications are sent. This list is used only with the **/notifylist** parameter. |
 
 ##### Remarks
 
-- Use the **zoneresetsecondaries** command on the master server to specify how it responds to zone transfer requests from secondary servers.
+- Use the **zoneresetsecondaries** command on the primary server to specify how it responds to zone transfer requests from secondary servers.
 
 #### Examples
 

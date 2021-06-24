@@ -2,12 +2,10 @@
 title: Remote Access
 description: This topic provides an overview of the Remote Access server role in Windows Server 2016.
 manager: dougkim
-ms.prod: windows-server
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 05/18/2018
 ---
 
@@ -19,12 +17,12 @@ The Remote Access guide provides you with an overview of the Remote Access serve
 
 - [Always On VPN Deployment Guide](vpn/always-on-vpn/deploy/always-on-vpn-deploy.md)
 - [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol-BGP.md)
-- [RAS Gateway](ras-gateway/RAS-Gateway.md) 
+- [RAS Gateway](ras-gateway/RAS-Gateway.md)
 - [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md)
-- [RAS Gateway for SDN](../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
+- [RAS Gateway for SDN](/azure-stack/hci/concepts/gateway-overview)
 - [Virtual Private Networking (VPN)](vpn/vpn-top.md)
- 
-For more information about other networking technologies, see [Networking in Windows Server 2016](https://docs.microsoft.com/windows-server/networking/networking).
+
+For more information about other networking technologies, see [Networking in Windows Server 2016](../../networking/index.yml).
 
 The Remote Access server role is a logical grouping of these related network access technologies: [Remote Access Service (RAS)](#bkmk_da), [Routing](#bkmk_rras), and [Web Application Proxy](#bkmk_proxy). These technologies are the *role services* of the Remote Access server role. When you install the Remote Access server role with the **Add Roles and Features Wizard** or Windows PowerShell, you can install one or more of these three role services.
 
@@ -42,7 +40,7 @@ When you install the **DirectAccess and VPN (RAS)** role service, you are deploy
 >[!IMPORTANT]
 > The RAS Gateway with multitenant capabilities is also available in  Windows Server 2012 R2.
 
-- **Always On VPN**. Always On VPN enables remote users to securely access shared resources, intranet Web sites, and applications on an internal network without connecting to a VPN. 
+- **Always On VPN**. Always On VPN enables remote users to securely access shared resources, intranet Web sites, and applications on an internal network without connecting to a VPN.
 
 For more information, see [RAS Gateway](ras-gateway/RAS-Gateway.md) and [Border Gateway Protocol (BGP)](bgp/Border-Gateway-Protocol-BGP.md).
 
@@ -52,21 +50,21 @@ You can use Remote Access to route network traffic between subnets on your Local
 
 To install Remote Access as a LAN router, either use the Add Roles and Features Wizard in Server Manager and select the **Remote Access** server role and the **Routing** role service; or type the following command at a Windows PowerShell prompt, and then press ENTER.
 
-```  
+```
 Install-RemoteAccess -VpnType RoutingOnly
-```  
+```
 
 ## <a name="bkmk_proxy"></a>Web Application Proxy
 
 Web Application Proxy is a Remote Access role service in Windows Server 2016. Web Application Proxy provides reverse proxy functionality for web applications inside your corporate network to allow users on any device to access them from outside the corporate network. Web Application Proxy pre-authenticates access to web applications using Active Directory Federation Services (AD FS), and also functions as an AD FS proxy.
 
-To install Remote Access as a Web Application Proxy, either use the Add Roles and Features Wizard in Server Manager and select the **Remote Access** server role and the **Web Application Proxy** role service; or type the following command at a Windows PowerShell prompt, and then press ENTER.  
+To install Remote Access as a Web Application Proxy, either use the Add Roles and Features Wizard in Server Manager and select the **Remote Access** server role and the **Web Application Proxy** role service; or type the following command at a Windows PowerShell prompt, and then press ENTER.
 
-```  
-Install-RemoteAccess -VpnType SstpProxy  
-```  
+```
+Install-RemoteAccess -VpnType SstpProxy
+```
 
-For more information, see [Web Application Proxy](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server).
+For more information, see [Web Application Proxy](./web-application-proxy/web-application-proxy-windows-server.md).
 
 
 ---

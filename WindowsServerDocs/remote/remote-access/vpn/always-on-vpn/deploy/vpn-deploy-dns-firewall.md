@@ -1,11 +1,9 @@
 ---
 title: Configure DNS and Firewall Settings
-description: This topic provides detailed instructions for deploying Always On VPN in Windows Server 2016.
-ms.prod: windows-server
-ms.technology: networking-ras
+description: Learn how to configure DNS and Firewall settings for VPN connectivity.
 ms.topic: article
 ms.assetid: d8cf3bae-45bf-4ffa-9205-290d555c59da
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ms.author: v-tea
 author: Teresa-MOTIV
 ms.date: 06/11/2018

@@ -1,13 +1,12 @@
 ---
 title: "Troubleshoot connecting computers to the server in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to troubleshoot issues that you might encounter when you connect a computer to the server that is running Windows Server Essentials.
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: e45b3d89-c057-4c70-a627-86fb06dd22aa
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Troubleshoot connecting computers to the server in Windows Server Essentials
@@ -17,7 +16,7 @@ manager: dongill
  This topic contains troubleshooting guidance for issues that you might encounter when you connect a computer to the server that is running  Windows Server Essentials or  Windows Server Essentials.
 
 > [!NOTE]
->  For the most current troubleshooting information from the  Windows Server Essentials and  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.
+>  For the most current troubleshooting information from the  Windows Server Essentials and  Windows Server Essentials community, we suggest that you visit the [Windows Server Essentials Forum](/answers/topics/windows-server-essentials.html). The Windows Server Essentials Forum is a great place to search for help, or to ask a question.
 
  This topic provides solutions for the following issues:
 
@@ -276,6 +275,6 @@ manager: dongill
 
 ## Additional References
 
--   [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)
+- [Manage Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)
 
--   [Windows 2012 Server Essentials ConnectComputer Troubleshooting (TechNet Wiki)](https://social.technet.microsoft.com/wiki/contents/articles/14370.windows-2012-server-essentials-connectcomputer-troubleshooting.aspx)
+- [Windows 2012 Server Essentials ConnectComputer Troubleshooting]()

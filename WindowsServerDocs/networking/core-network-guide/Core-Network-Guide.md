@@ -2,12 +2,11 @@
 title: Core network components
 description: This guide provides instructions on how to plan and deploy the core components required for a fully functioning network and a new Active Directory domain in a new forest with Windows Server 2016
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Core network components
 
@@ -41,43 +40,43 @@ A core network is a collection of network hardware, devices, and software that p
 
 A Windows Server core network provides you with many benefits, including the following.
 
--   Core protocols for network connectivity between computers and other Transmission Control Protocol/Internet Protocol (TCP/IP) compatible devices. TCP/IP is a suite of standard protocols for connecting computers and building networks. TCP/IP is network protocol software provided with Microsoft Windows operating systems that implements and supports the TCP/IP protocol suite.
+- Core protocols for network connectivity between computers and other Transmission Control Protocol/Internet Protocol (TCP/IP) compatible devices. TCP/IP is a suite of standard protocols for connecting computers and building networks. TCP/IP is network protocol software provided with Microsoft Windows operating systems that implements and supports the TCP/IP protocol suite.
 
--   Dynamic Host Configuration Protocol (DHCP) automatic IP address assignment to computers and other devices that are configured as DHCP clients. Manual configuration of IP addresses on all computers on your network is time-consuming and less flexible than dynamically providing computers and other devices with IP address configurations using a DHCP server.
+- Dynamic Host Configuration Protocol (DHCP) automatic IP address assignment to computers and other devices that are configured as DHCP clients. Manual configuration of IP addresses on all computers on your network is time-consuming and less flexible than dynamically providing computers and other devices with IP address configurations using a DHCP server.
 
--   Domain Name System (DNS) name resolution service. DNS allows users, computers, applications, and services to find the IP addresses of computers and devices on the network by using the Fully Qualified Domain Name of the computer or device.
+- Domain Name System (DNS) name resolution service. DNS allows users, computers, applications, and services to find the IP addresses of computers and devices on the network by using the Fully Qualified Domain Name of the computer or device.
 
--   A forest, which is one or more Active Directory domains that share the same class and attribute definitions (schema), site and replication information (configuration), and forest-wide search capabilities (global catalog).
+- A forest, which is one or more Active Directory domains that share the same class and attribute definitions (schema), site and replication information (configuration), and forest-wide search capabilities (global catalog).
 
--   A forest root domain, which is the first domain created in a new forest. The Enterprise Admins and Schema Admins groups, which are forest-wide administrative groups, are located in the forest root domain. In addition, a forest root domain, as with other domains, is a collection of computer, user, and group objects that are defined by the administrator in Active Directory Domain Services (AD DS). These objects share a common directory database and security policies. They can also share security relationships with other domains if you add domains as your organization grows. The directory service also stores directory data and allows authorized computers, applications, and users to access the data.
+- A forest root domain, which is the first domain created in a new forest. The Enterprise Admins and Schema Admins groups, which are forest-wide administrative groups, are located in the forest root domain. In addition, a forest root domain, as with other domains, is a collection of computer, user, and group objects that are defined by the administrator in Active Directory Domain Services (AD DS). These objects share a common directory database and security policies. They can also share security relationships with other domains if you add domains as your organization grows. The directory service also stores directory data and allows authorized computers, applications, and users to access the data.
 
--   A user and computer account database. The directory service provides a centralized user accounts database that allows you to create user and computer accounts for people and computers that are authorized to connect to your network and access network resources, such as applications, databases, shared files and folders, and printers.
+- A user and computer account database. The directory service provides a centralized user accounts database that allows you to create user and computer accounts for people and computers that are authorized to connect to your network and access network resources, such as applications, databases, shared files and folders, and printers.
 
 A core network also allows you to scale your network as your organization grows and IT requirements change. For example, with a core network you can add domains, IP subnets, remote access services, wireless services, and other features and server roles provided by  Windows Server 2016.
 
 ### Network hardware requirements
 To successfully deploy a core network, you must deploy network hardware, including the following:
 
--   Ethernet, Fast Ethernet, or Gigabyte Ethernet cabling
+- Ethernet, Fast Ethernet, or Gigabyte Ethernet cabling
 
--   A hub, Layer 2 or 3 switch, router, or other device that performs the function of relaying network traffic between computers and devices.
+- A hub, Layer 2 or 3 switch, router, or other device that performs the function of relaying network traffic between computers and devices.
 
--   Computers that meet the minimum hardware requirements for their respective client and server operating systems.
+- Computers that meet the minimum hardware requirements for their respective client and server operating systems.
 
 ## What this guide does not provide
 This guide does not provide instructions for deploying the following:
 
--   Network hardware, such as cabling, routers, switches, and hubs
+- Network hardware, such as cabling, routers, switches, and hubs
 
--   Additional network resources, such as printers and file servers
+- Additional network resources, such as printers and file servers
 
--   Internet connectivity
+- Internet connectivity
 
--   Remote access
+- Remote access
 
--   Wireless access
+- Wireless access
 
--   Client computer deployment
+- Client computer deployment
 
 > [!NOTE]
 > Computers running Windows client operating systems are configured by default to receive IP address leases from the DHCP server. Therefore, no additional DHCP or Internet Protocol version 4 (IPv4) configuration of client computers is required.
@@ -101,51 +100,51 @@ For TCP/IP-based networks, DHCP reduces the complexity and amount of administrat
 ### TCP/IP
 TCP/IP in Windows Server 2016 is the following:
 
--   Networking software based on industry-standard networking protocols.
+- Networking software based on industry-standard networking protocols.
 
--   A routable enterprise networking protocol that supports the connection of your Windows-based computer to both local area network (LAN) and wide area network (WAN) environments.
+- A routable enterprise networking protocol that supports the connection of your Windows-based computer to both local area network (LAN) and wide area network (WAN) environments.
 
--   Core technologies and utilities for connecting your Windows-based computer with dissimilar systems for the purpose of sharing information.
+- Core technologies and utilities for connecting your Windows-based computer with dissimilar systems for the purpose of sharing information.
 
--   A foundation for gaining access to global Internet services, such as the World Wide Web and File Transfer Protocol (FTP) servers.
+- A foundation for gaining access to global Internet services, such as the World Wide Web and File Transfer Protocol (FTP) servers.
 
--   A robust, scalable, cross-platform, client/server framework.
+- A robust, scalable, cross-platform, client/server framework.
 
 TCP/IP provides basic TCP/IP utilities that enable Windows-based computers to connect and share information with other Microsoft and non-Microsoft systems, including:
 
--    Windows Server 2016
+-  Windows Server 2016
 
--   Windows 10
+- Windows 10
 
--    Windows Server 2012 R2
+-  Windows Server 2012 R2
 
--   Windows 8.1
+- Windows 8.1
 
--    Windows Server 2012
+-  Windows Server 2012
 
--   Windows 8
+- Windows 8
 
--    Windows Server 2008 R2
+-  Windows Server 2008 R2
 
--    Windows 7
+-  Windows 7
 
--    Windows Server 2008
+-  Windows Server 2008
 
--   Windows Vista
+- Windows Vista
 
--   Internet hosts
+- Internet hosts
 
--   Apple Macintosh systems
+- Apple Macintosh systems
 
--   IBM mainframes
+- IBM mainframes
 
--   UNIX and Linux systems
+- UNIX and Linux systems
 
--   Open VMS systems
+- Open VMS systems
 
--   Network-ready printers
+- Network-ready printers
 
--   Tablets and cellular telephones with wired Ethernet or wireless 802.11 technology enabled
+- Tablets and cellular telephones with wired Ethernet or wireless 802.11 technology enabled
 
 ## <a name="BKMK_overview"></a>Core Network Overview
 The following illustration shows the Windows Server Core Network topology.
@@ -176,15 +175,15 @@ Computers running Windows client operating systems are configured by default as 
 ## <a name="BKMK_planning"></a>Core Network Planning
 Before you deploy a core network, you must plan the following items.
 
--   [Planning subnets](#bkmk_NetFndtn_Pln_Subnt)
+- [Planning subnets](#bkmk_NetFndtn_Pln_Subnt)
 
--   [Planning basic configuration of all servers](#bkmk_NetFndtn_Pln_AllSrvrs)
+- [Planning basic configuration of all servers](#bkmk_NetFndtn_Pln_AllSrvrs)
 
--   [Planning the deployment of DC1](#bkmk_NetFndtn_Pln_AD-DNS-01)
+- [Planning the deployment of DC1](#bkmk_NetFndtn_Pln_AD-DNS-01)
 
--   [Planning domain access](#bkmk_NetFndtn_Pln_DomAccess)
+- [Planning domain access](#bkmk_NetFndtn_Pln_DomAccess)
 
--   [Planning the deployment of DHCP1](#bkmk_NetFndtn_Pln_DHCP-01)
+- [Planning the deployment of DHCP1](#bkmk_NetFndtn_Pln_DHCP-01)
 
 The following sections provide more detail on each of these items.
 
@@ -201,11 +200,11 @@ In addition, to configure the servers on your network with static IP addresses, 
 
 The following recognized private IP address ranges are specified by Internet Request for Comments (RFC) 1918:
 
--   10.0.0.0 - 10.255.255.255
+- 10.0.0.0 - 10.255.255.255
 
--   172.16.0.0 - 172.31.255.255
+- 172.16.0.0 - 172.31.255.255
 
--   192.168.0.0 - 192.168.255.255
+- 192.168.0.0 - 192.168.255.255
 
 When you use the private IP address ranges as specified in RFC 1918, you cannot connect directly to the Internet using a private IP address because requests going to or from these addresses are automatically discarded by Internet service provider (ISP) routers. To add Internet connectivity to your core network later, you must contract with an ISP to obtain a public IP address.
 
@@ -220,11 +219,11 @@ For each server in the core network, you must rename the computer and assign and
 #### Planning naming conventions for computers and devices
 For consistency across your network, it is a good idea to use consistent names for servers, printers, and other devices. Computer names can be used to help users and administrators easily identify the purpose and location of the server, printer, or other device. For example, if you have three DNS servers, one in San Francisco, one in Los Angeles, and one in Chicago, you might use the naming convention *server function*-*location*-*number*:
 
--   DNS-DEN-01. This name represents the DNS server in Denver, Colorado. If additional DNS servers are added in Denver, the numeric value in the name can be incremented, as in DNS-DEN-02 and DNS-DEN-03.
+- DNS-DEN-01. This name represents the DNS server in Denver, Colorado. If additional DNS servers are added in Denver, the numeric value in the name can be incremented, as in DNS-DEN-02 and DNS-DEN-03.
 
--   DNS-SPAS-01. This name represents the DNS server in South Pasadena, California.
+- DNS-SPAS-01. This name represents the DNS server in South Pasadena, California.
 
--   DNS-ORL-01. This name represents the DNS server in Orlando, Florida.
+- DNS-ORL-01. This name represents the DNS server in Orlando, Florida.
 
 For this guide, the server naming convention is very simple, and consists of the primary server function and a number. For example, the domain controller is named DC1 and the DHCP server is named DHCP1.
 
@@ -258,15 +257,15 @@ While installing AD DS, you must choose the forest functional level that you wan
 
 Forest functionality enables features across all the domains in your forest. The following forest functional levels are available:
 
--    Windows Server 2008 . This forest functional level supports only domain controllers that are running  Windows Server 2008  and later versions of the Windows Server operating system.
+-  Windows Server 2008 . This forest functional level supports only domain controllers that are running  Windows Server 2008  and later versions of the Windows Server operating system.
 
--    Windows Server 2008 R2 . This forest functional level supports  Windows Server 2008 R2  domain controllers and domain controllers that are running later versions of the Windows Server operating system.
+-  Windows Server 2008 R2 . This forest functional level supports  Windows Server 2008 R2  domain controllers and domain controllers that are running later versions of the Windows Server operating system.
 
--    Windows Server 2012 . This forest functional level supports  Windows Server 2012  domain controllers and domain controllers that are running later versions of the Windows Server operating system.
+-  Windows Server 2012 . This forest functional level supports  Windows Server 2012  domain controllers and domain controllers that are running later versions of the Windows Server operating system.
 
--    Windows Server 2012 R2 . This forest functional level supports  Windows Server 2012 R2  domain controllers and domain controllers that are running later versions of the Windows Server operating system.
+-  Windows Server 2012 R2 . This forest functional level supports  Windows Server 2012 R2  domain controllers and domain controllers that are running later versions of the Windows Server operating system.
 
--    Windows Server 2016. This forest functional level supports only  Windows Server 2016 domain controllers and domain controllers that are running later versions of the Windows Server operating system.
+-  Windows Server 2016. This forest functional level supports only  Windows Server 2016 domain controllers and domain controllers that are running later versions of the Windows Server operating system.
 
 If you are deploying a new domain in a new forest and all of your domain controllers will be running  Windows Server 2016, it is recommended that you configure AD DS with the  Windows Server 2016 forest functional level during AD DS installation.
 
@@ -277,8 +276,8 @@ Example configuration items for AD DS are provided in the following table.
 
 |Configuration items:|Example values:|
 |------------------------|-------------------|
-|Full DNS name|Examples:<p>-   corp.contoso.com<br />-   example.com|
-|Forest functional level|-    Windows Server 2008 <br />-    Windows Server 2008 R2 <br />-    Windows Server 2012 <br />-    Windows Server 2012 R2 <br />-    Windows Server 2016|
+|Full DNS name|Examples:<p>- corp.contoso.com<br />- example.com|
+|Forest functional level|-  Windows Server 2008 <br />-  Windows Server 2008 R2 <br />-  Windows Server 2012 <br />-  Windows Server 2012 R2 <br />-  Windows Server 2016|
 |Active Directory Domain Services Database folder location|E:\Configuration\\<p>Or accept the default location.|
 |Active Directory Domain Services Log files folder location|E:\Configuration\\<p>Or accept the default location.|
 |Active Directory Domain Services SYSVOL folder location|E:\Configuration\\<p>Or accept the default location|
@@ -312,11 +311,11 @@ After the first successful logon with domain logon credentials, the logon settin
 
 Before you log on to the domain:
 
--   Create user accounts in Active Directory Users and Computers. Each user must have an Active Directory Domain Services user account in Active Directory Users and Computers. For more information, see [Create a User Account in Active Directory Users and Computers](#BKMK_createUA).
+- Create user accounts in Active Directory Users and Computers. Each user must have an Active Directory Domain Services user account in Active Directory Users and Computers. For more information, see [Create a User Account in Active Directory Users and Computers](#BKMK_createUA).
 
--   Ensure the correct IP address configuration. To join a computer to the domain, the computer must have an IP address. In this guide, servers are configured with static IP addresses and client computers receive IP address leases from the DHCP server. For this reason, the DHCP server must be deployed before you join clients to the domain. For more information, see [Deploying DHCP1](#BKMK_deployDHCP01).
+- Ensure the correct IP address configuration. To join a computer to the domain, the computer must have an IP address. In this guide, servers are configured with static IP addresses and client computers receive IP address leases from the DHCP server. For this reason, the DHCP server must be deployed before you join clients to the domain. For more information, see [Deploying DHCP1](#BKMK_deployDHCP01).
 
--   Join the computer to the domain. Any computer that provides or accesses network resources must be joined to the domain. For more information, see [Joining Server Computers to the Domain and Logging On](#BKMK_joinlogserver) and [Joining Client Computers to the Domain and Logging On](#BKMK_joinlogclients).
+- Join the computer to the domain. Any computer that provides or accesses network resources must be joined to the domain. For more information, see [Joining Server Computers to the Domain and Logging On](#BKMK_joinlogserver) and [Joining Client Computers to the Domain and Logging On](#BKMK_joinlogclients).
 
 ### <a name="bkmk_NetFndtn_Pln_DHCP-01"></a>Planning the deployment of DHCP1
 Following are key planning steps before installing the DHCP server role on DHCP1.
@@ -324,9 +323,9 @@ Following are key planning steps before installing the DHCP server role on DHCP1
 #### Planning DHCP servers and DHCP forwarding
 Because DHCP messages are broadcast messages, they are not forwarded between subnets by routers. If you have multiple subnets and want to provide DHCP service for each subnet, you must do one of the following:
 
--   Install a DHCP server on each subnet
+- Install a DHCP server on each subnet
 
--   Configure routers to forward DHCP broadcast messages across subnets and configure multiple scopes on the DHCP server, one scope per subnet.
+- Configure routers to forward DHCP broadcast messages across subnets and configure multiple scopes on the DHCP server, one scope per subnet.
 
 In most cases, configuring routers to forward DHCP broadcast messages is more cost effective than deploying a DHCP server on each physical segment of the network.
 
@@ -337,17 +336,17 @@ A scope is an administrative grouping of IP addresses for computers on a subnet 
 
 A scope has the following properties:
 
--   A range of IP addresses from which to include or exclude addresses used for DHCP service lease offerings.
+- A range of IP addresses from which to include or exclude addresses used for DHCP service lease offerings.
 
--   A subnet mask, which determines the subnet prefix for a given IP address.
+- A subnet mask, which determines the subnet prefix for a given IP address.
 
--   A scope name assigned when it is created.
+- A scope name assigned when it is created.
 
--   Lease duration values, which are assigned to DHCP clients that receive dynamically allocated IP addresses.
+- Lease duration values, which are assigned to DHCP clients that receive dynamically allocated IP addresses.
 
--   Any DHCP scope options configured for assignment to DHCP clients, such as DNS server IP address and router/default gateway IP address.
+- Any DHCP scope options configured for assignment to DHCP clients, such as DNS server IP address and router/default gateway IP address.
 
--   Reservations are optionally used to ensure that a DHCP client always receives the same IP address.
+- Reservations are optionally used to ensure that a DHCP client always receives the same IP address.
 
 Before deploying your servers, list your subnets and the IP address range you want to use for each subnet.
 
@@ -425,15 +424,15 @@ To deploy a core network, the basic steps are as follows:
 6.  [Deploying optional features for network access authentication and Web services](#BKMK_optionalfeatures)
 
 > [!NOTE]
-> -   Equivalent Windows PowerShell commands are provided for most procedures in this guide. Before running these cmdlets in Windows PowerShell, replace example values with values that are appropriate for your network deployment. In addition, you must enter each cmdlet on a single line in Windows PowerShell. In this guide, individual cmdlets might appear on several lines due to formatting constraints and the display of the document by your browser or other application.
-> -   The procedures in this guide do not include instructions for those cases in which the **User Account Control** dialog box opens to request your permission to continue. If this dialog box opens while you are performing the procedures in this guide, and if the dialog box was opened in response to your actions, click **Continue**.
+> - Equivalent Windows PowerShell commands are provided for most procedures in this guide. Before running these cmdlets in Windows PowerShell, replace example values with values that are appropriate for your network deployment. In addition, you must enter each cmdlet on a single line in Windows PowerShell. In this guide, individual cmdlets might appear on several lines due to formatting constraints and the display of the document by your browser or other application.
+> - The procedures in this guide do not include instructions for those cases in which the **User Account Control** dialog box opens to request your permission to continue. If this dialog box opens while you are performing the procedures in this guide, and if the dialog box was opened in response to your actions, click **Continue**.
 
 ### <a name="BKMK_configuringAll"></a>Configuring All Servers
 Before installing other technologies, such as Active Directory Domain Services or DHCP, it is important to configure the following items.
 
--   [Rename the computer](#BKMK_rename)
+- [Rename the computer](#BKMK_rename)
 
--   [Configure a static IP address](#BKMK_ip)
+- [Configure a static IP address](#BKMK_ip)
 
 You can use the following sections to perform these actions for each server.
 
@@ -503,15 +502,15 @@ You can use the procedures in this topic to configure the Internet Protocol vers
 #### <a name="BKMK_deployADDNS01"></a>Deploying DC1
 To deploy DC1, which is the computer running Active Directory Domain Services (AD DS) and DNS, you must complete these steps in the following order:
 
--   Perform the steps in the section [Configuring All Servers](#BKMK_configuringAll).
+- Perform the steps in the section [Configuring All Servers](#BKMK_configuringAll).
 
--   [Install AD DS and DNS for a New Forest](#BKMK_installAD-DNS)
+- [Install AD DS and DNS for a New Forest](#BKMK_installAD-DNS)
 
--   [Create a User Account in Active Directory Users and Computers](#BKMK_createUA)
+- [Create a User Account in Active Directory Users and Computers](#BKMK_createUA)
 
--   [Assign Group Membership](#BKMK_assigngroup)
+- [Assign Group Membership](#BKMK_assigngroup)
 
--   [Configure a DNS Reverse Lookup Zone](#BKMK_reverse)
+- [Configure a DNS Reverse Lookup Zone](#BKMK_reverse)
 
 **Administrative privileges**
 
@@ -531,7 +530,7 @@ You can configure user accounts to designate the days and times that the user is
 
 #### <a name="BKMK_installAD-DNS"></a>Install AD DS and DNS for a New Forest
 
-You can use one of the following procedures to install Active Directory Domain Services (AD DS) and DNS and to create a new domain in a new forest. 
+You can use one of the following procedures to install Active Directory Domain Services (AD DS) and DNS and to create a new domain in a new forest.
 
 The first procedure provides instructions on performing these actions by using Windows PowerShell, while the second procedure shows you how to install AD DS and DNS by using Server Manager.
 
@@ -544,26 +543,26 @@ You can use the following commands to install and configure AD DS and DNS. You m
 
 >[!NOTE]
 >For more information about these Windows PowerShell commands, see the following reference topics.
->- [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/servermanager/install-windowsfeature?view=win10-ps)
->- [Install-ADDSForest](https://docs.microsoft.com/powershell/module/addsdeployment/install-addsforest?view=win10-ps)
+>- [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature)
+>- [Install-ADDSForest](/powershell/module/addsdeployment/install-addsforest)
 
 Membership in **Administrators** is the minimum required to perform this procedure.
 
-- Run Windows PowerShell as an Administrator, type the following command, and then press ENTER:  
+- Run Windows PowerShell as an Administrator, type the following command, and then press ENTER:
 
-`Install-WindowsFeature AD-Domain-Services -IncludeManagementTools`
+```powershell
+Install-WindowsFeature AD-Domain-Services -IncludeManagementTools`
+```
 
 When installation has successfully completed, the following message is displayed in Windows PowerShell.
 
-
-    Success Restart Needed  Exit Code   Feature Result
-    ------- --------------  ---------   --------------
-    True    No              Success     {Active Directory Domain Services, Group P...
-
+| Success | Restart Needed | Exit Code |  Feature Result |
+|--|--|--|--|
+| True | No | Success | {Active Directory Domain Services, Group P... |
 
 - In Windows PowerShell, type the following command, replacing the text **corp.contoso.com** with your domain name, and then press ENTER:
 
-````
+````powershell
 Install-ADDSForest -DomainName "corp.contoso.com"
 ````
 
@@ -577,12 +576,11 @@ Install-ADDSForest -DomainName "corp.contoso.com"
 
 - When the following prompt appears, type the letter **Y** and then press ENTER.
 
-
-~~~
-The target server will be configured as a domain controller and restarted when this operation is complete.
-Do you want to continue with this operation?
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
-~~~
+    ```
+    The target server will be configured as a domain controller and restarted when this operation is complete.
+    Do you want to continue with this operation?
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+    ```
 
 - If you want to, you can read the warning messages that are displayed during normal, successful installation of AD DS and DNS. These messages are normal and are not an indication of install failure.
 
@@ -590,7 +588,7 @@ Do you want to continue with this operation?
 
 - After the server is restarted, you can verify successful installation of Active Directory Domain Services and DNS. Open Windows PowerShell, type the following command, and press ENTER.
 
-````
+````powershell
 Get-WindowsFeature
 ````
 
@@ -627,9 +625,9 @@ The results of this command are displayed in Windows PowerShell, and should be s
 
 12. In **Paths**, in **Specify the location of the AD DS database, log files, and SYSVOL**, do one of the following:
 
-    -   Accept the default values.
+    - Accept the default values.
 
-    -   Type folder locations that you want to use for **Database folder**, **Log files folder**, and **SYSVOL folder**.
+    - Type folder locations that you want to use for **Database folder**, **Log files folder**, and **SYSVOL folder**.
 
 13. Click **Next**.
 
@@ -665,7 +663,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to perfo
 
     **Where?**
 
-    -   Active Directory Users and Computers/*domain node*/*folder*
+    - Active Directory Users and Computers/*domain node*/*folder*
 
 3.  Point to **New**, and then click **User**. The **New Object - User** dialog box opens.
 
@@ -696,7 +694,7 @@ Membership in **Domain Admins**, or equivalent is the minimum required to perfor
 
     Where?
 
-    -   **Active Directory Users and Computers**/*domain node*/*folder that contains the group*
+    - **Active Directory Users and Computers**/*domain node*/*folder that contains the group*
 
 3.  In the details pane, right-click the object that you want to add to a group, such as a user or computer, and then click **Properties**. The object's **Properties** dialog box opens. Click the **Member of** tab.
 
@@ -712,8 +710,8 @@ You can use this procedure to configure a reverse lookup zone in Domain Name Sys
 Membership in **Domain Admins** is the minimum required to perform this procedure.
 
 > [!NOTE]
-> -   For medium and large organizations, it's recommended that you configure and use the DNSAdmins group in Active Directory Users and Computers. For more information, see [Additional Technical Resources](#BKMK_resources)
-> -   To perform this procedure by using Windows PowerShell, open PowerShell and type the following cmdlet on one line, and then press ENTER. You must also replace the DNS reverse lookup zone and zonefile names in this example with the values that you want to use. Ensure that you reverse the network ID for the reverse zone name. For example, if the network ID is 192.168.0, create the reverse lookup zone name **0.168.192.in-addr.arpa**.
+> - For medium and large organizations, it's recommended that you configure and use the DNSAdmins group in Active Directory Users and Computers. For more information, see [Additional Technical Resources](#BKMK_resources)
+> - To perform this procedure by using Windows PowerShell, open PowerShell and type the following cmdlet on one line, and then press ENTER. You must also replace the DNS reverse lookup zone and zonefile names in this example with the values that you want to use. Ensure that you reverse the network ID for the reverse zone name. For example, if the network ID is 192.168.0, create the reverse lookup zone name **0.168.192.in-addr.arpa**.
 >
 > `Add-DnsServerPrimaryZone 0.0.10.in-addr.arpa -ZoneFile 0.0.10.in-addr.arpa.dns`
 
@@ -737,9 +735,9 @@ Membership in **Domain Admins** is the minimum required to perform this procedur
 
 9. In the second **Reverse Lookup Zone Name** page, do one of the following:
 
-    -   In **Network ID**, type the network ID of your IP address range. For example, if your IP address range is 10.0.0.1 through 10.0.0.254, type **10.0.0**.
+    - In **Network ID**, type the network ID of your IP address range. For example, if your IP address range is 10.0.0.1 through 10.0.0.254, type **10.0.0**.
 
-    -   In **Reverse lookup zone name**, your IPv4 reverse lookup zone name is automatically added. Click **Next**.
+    - In **Reverse lookup zone name**, your IPv4 reverse lookup zone name is automatically added. Click **Next**.
 
 10. In **Dynamic Update**, select the type of dynamic updates that you want to allow. Click **Next**.
 
@@ -800,15 +798,15 @@ On all servers that you are deploying, except for the server running AD DS, do t
 #### <a name="BKMK_deployDHCP01"></a>Deploying DHCP1
 Before deploying this component of the core network, you must do the following:
 
--   Perform the steps in the section [Configuring All Servers](#BKMK_configuringAll).
+- Perform the steps in the section [Configuring All Servers](#BKMK_configuringAll).
 
--   Perform the steps in the section [Joining Server Computers to the Domain and Logging On](#BKMK_joinlogserver).
+- Perform the steps in the section [Joining Server Computers to the Domain and Logging On](#BKMK_joinlogserver).
 
 To deploy DHCP1, which is the computer running the Dynamic Host Configuration Protocol (DHCP) server role, you must complete these steps in the following order:
 
--   [Install Dynamic Host Configuration Protocol (DHCP)](#BKMK_installDHCP)
+- [Install Dynamic Host Configuration Protocol (DHCP)](#BKMK_installDHCP)
 
--   [Create and Activate a New DHCP Scope](#BKMK_newscopeDHCP)
+- [Create and Activate a New DHCP Scope](#BKMK_newscopeDHCP)
 
 > [!NOTE]
 > To perform these procedures by using Windows PowerShell, open PowerShell and type the following cmdlets on separate lines, and then press ENTER. You must also replace the scope name, IP address start and end ranges, subnet mask, and other values in this example with the values that you want to use.
@@ -900,9 +898,9 @@ Membership in **DHCP Administrators**, or equivalent, is the minimum required to
 
 12. In **Router (Default Gateway)**, do one of the following:
 
-    -   If you do not have routers on your network, click **Next**.
+    - If you do not have routers on your network, click **Next**.
 
-    -   In **IP address**, type the IP address of your router or default gateway. For example, type **10.0.0.1**. Click **Add**, and then click **Next**.
+    - In **IP address**, type the IP address of your router or default gateway. For example, type **10.0.0.1**. Click **Add**, and then click **Next**.
 
 13. In **Domain Name and DNS Servers**, do the following:
 
@@ -996,9 +994,9 @@ The following illustration shows the Windows Server Core Network topology with a
 
 The following sections provide information on adding NPS and Web servers to your network.
 
--   [Deploying NPS1](#BKMK_deployNPS1)
+- [Deploying NPS1](#BKMK_deployNPS1)
 
--   [Deploying WEB1](#BKMK_IIS)
+- [Deploying WEB1](#BKMK_IIS)
 
 #### <a name="BKMK_deployNPS1"></a>Deploying NPS1
 The Network Policy Server (NPS) server is installed as a preparatory step for deploying other network access technologies, such as virtual private network (VPN) servers, wireless access points, and 802.1X authenticating switches.
@@ -1007,24 +1005,24 @@ Network Policy Server (NPS) allows you to centrally configure and manage network
 
 NPS is an optional component of a core network, but you should install NPS if any of the following are true:
 
--   You are planning to expand your network to include remote access servers that are compatible with the RADIUS protocol, such as a computer running Windows Server 2016, Windows Server 2012 R2, Windows Server 2012,  Windows Server 2008 R2 or Windows Server 2008 and Routing and Remote Access service, Terminal Services Gateway, or Remote Desktop Gateway.
+- You are planning to expand your network to include remote access servers that are compatible with the RADIUS protocol, such as a computer running Windows Server 2016, Windows Server 2012 R2, Windows Server 2012,  Windows Server 2008 R2 or Windows Server 2008 and Routing and Remote Access service, Terminal Services Gateway, or Remote Desktop Gateway.
 
 
--   You plan to deploy 802.1X authentication for wired or wireless  access.
+- You plan to deploy 802.1X authentication for wired or wireless  access.
 
 Before deploying this role service, you must perform the following steps on the computer you are configuring as an NPS.
 
--   Perform the steps in the section [Configuring All Servers](#BKMK_configuringAll).
+- Perform the steps in the section [Configuring All Servers](#BKMK_configuringAll).
 
--   Perform the steps in the section [Joining Server Computers to the Domain and Logging On](#BKMK_joinlogserver)
+- Perform the steps in the section [Joining Server Computers to the Domain and Logging On](#BKMK_joinlogserver)
 
 To deploy NPS1, which is the computer running the Network Policy Server (NPS) role service of the Network Policy and Access Services server role, you must complete this step:
 
--   [Planning the deployment of NPS1](#bkmk_NetFndtn_Pln_NPS-01)
+- [Planning the deployment of NPS1](#bkmk_NetFndtn_Pln_NPS-01)
 
--   [Install Network Policy Server (NPS)](#BKMK_installNPS)
+- [Install Network Policy Server (NPS)](#BKMK_installNPS)
 
--   [Register the NPS in the Default Domain](#BKMK_registerNPS)
+- [Register the NPS in the Default Domain](#BKMK_registerNPS)
 
 > [!NOTE]
 > This guide provides instructions for deploying NPS on a standalone server or VM named NPS1.  Another recommended deployment model is the installation of NPS on a domain controller. If you prefer installing NPS on a domain controller instead of on a standalone server, install NPS on DC1.
@@ -1106,23 +1104,23 @@ The Web Server (IIS) role in  Windows Server 2016 provides a secure, easy-to-man
 
 In addition to allowing you to publish a CRL for access by domain member computers, the Web Server (IIS) server role allows you to set up and manage multiple web sites, web applications, and FTP sites. IIS also provides the following benefits:
 
--   Maximize web security through a reduced server foot print and automatic application isolation.
+- Maximize web security through a reduced server foot print and automatic application isolation.
 
--   Easily deploy and run ASP.NET, classic ASP, and PHP web applications on the same server.
+- Easily deploy and run ASP.NET, classic ASP, and PHP web applications on the same server.
 
--   Achieve application isolation by giving worker processes a unique identity and sandboxed configuration by default, further reducing security risks.
+- Achieve application isolation by giving worker processes a unique identity and sandboxed configuration by default, further reducing security risks.
 
--   Easily add, remove, and even replace built-in IIS components with custom modules, suited for customer needs.
+- Easily add, remove, and even replace built-in IIS components with custom modules, suited for customer needs.
 
--   Speed up your website through built-in dynamic caching and enhanced compression.
+- Speed up your website through built-in dynamic caching and enhanced compression.
 
 To deploy WEB1, which is the computer that is running the Web Server (IIS) server role, you must do the following:
 
--   Perform the steps in the section [Configuring All Servers](#BKMK_configuringAll).
+- Perform the steps in the section [Configuring All Servers](#BKMK_configuringAll).
 
--   Perform the steps in the section [Joining Server Computers to the Domain and Logging On](#BKMK_joinlogserver)
+- Perform the steps in the section [Joining Server Computers to the Domain and Logging On](#BKMK_joinlogserver)
 
--   [Install the Web Server (IIS) server role](#BKMK_install_IIS)
+- [Install the Web Server (IIS) server role](#BKMK_install_IIS)
 
 ##### <a name="BKMK_install_IIS"></a>Install the Web Server (IIS) server role
 To complete this procedure, you must be a member of the **Administrators** group.
@@ -1154,19 +1152,19 @@ For more information about the technologies in this guide, see the following res
 
  Windows Server 2016,  Windows Server 2012 R2 , and  Windows Server 2012  Technical Library Resources
 
--   [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](https://technet.microsoft.com/library/mt163897.aspx)
+- [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](../../identity/whats-new-active-directory-domain-services.md)
 
--   [Active Directory Domain Services overview](https://technet.microsoft.com/library/hh831484.aspx) at https://technet.microsoft.com/library/hh831484.aspx.
+- [Active Directory Domain Services overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831484(v=ws.11)) at https://technet.microsoft.com/library/hh831484.aspx.
 
--   [Domain Name System (DNS) overview](https://technet.microsoft.com/library/hh831667.aspx) at https://technet.microsoft.com/library/hh831667.aspx.
+- [Domain Name System (DNS) overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831667(v=ws.11)) at https://technet.microsoft.com/library/hh831667.aspx.
 
--   [Implementing the DNS Admins Role](https://technet.microsoft.com/library/cc756152(WS.10).aspx)
+- [Implementing the DNS Admins Role](/previous-versions/windows/it-pro/windows-server-2003/cc756152(v=ws.10))
 
--   [Dynamic Host Configuration Protocol (DHCP) overview](https://technet.microsoft.com/library/hh831825.aspx) at https://technet.microsoft.com/library/hh831825.aspx.
+- [Dynamic Host Configuration Protocol (DHCP) overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831825(v=ws.11)) at https://technet.microsoft.com/library/hh831825.aspx.
 
--   [Network Policy and Access Services overview](https://technet.microsoft.com/library/hh831683.aspx) at https://technet.microsoft.com/library/hh831683.aspx.
+- [Network Policy and Access Services overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831683(v=ws.11)) at https://technet.microsoft.com/library/hh831683.aspx.
 
--   [Web Server (IIS) overview](https://technet.microsoft.com/library/hh831725.aspx) at https://technet.microsoft.com/library/hh831725.aspx.
+- [Web Server (IIS) overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831725(v=ws.11)) at https://technet.microsoft.com/library/hh831725.aspx.
 
 ## <a name="BKMK_appendix"></a>Appendices A through E
 The following sections contain additional configuration information for computers that are running operating systems other than  Windows Server 2016, Windows 10,  Windows Server 2012 , and Windows 8. In addition, a network preparation worksheet is provided to assist you with your deployment.
@@ -1184,9 +1182,9 @@ The following sections contain additional configuration information for computer
 ## <a name="BKMK_A"></a>Appendix A - Renaming computers
 You can use the procedures in this section to provide computers running Windows Server 2008 R2, Windows 7,  Windows Server 2008 , and Windows Vista with a different computer name.
 
--   [Windows Server 2008 R2 and Windows 7](#bkmk_NetFndtn_Pln_rename_R2)
+- [Windows Server 2008 R2 and Windows 7](#bkmk_NetFndtn_Pln_rename_R2)
 
--   [Windows Server 2008 and Windows Vista](#bkmk_NetFndtn_Pln_Renam08)
+- [Windows Server 2008 and Windows Vista](#bkmk_NetFndtn_Pln_Renam08)
 
 ### <a name="bkmk_NetFndtn_Pln_rename_R2"></a>Windows Server 2008 R2 and Windows 7
 Membership in **Administrators**, or equivalent, is the minimum required to perform these procedures.
@@ -1227,9 +1225,9 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 ## <a name="BKMK_B"></a>Appendix B - Configuring static IP addresses
 This topic provides procedures for configuring static IP addresses on computers running the following operating systems:
 
--   [Windows Server 2008 R2](#bkmk_R2Cng_WS08R2IP)
+- [Windows Server 2008 R2](#bkmk_R2Cng_WS08R2IP)
 
--   [Windows Server 2008](#bkmk_NetFndtn_Pln_CfgStatic08)
+- [Windows Server 2008](#bkmk_NetFndtn_Pln_CfgStatic08)
 
 ### <a name="bkmk_R2Cng_WS08R2IP"></a>Windows Server 2008 R2
 Membership in **Administrators**, or equivalent, is the minimum required to perform this procedure.
@@ -1290,9 +1288,9 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 ## <a name="BKMK_C"></a>Appendix C - Joining computers to the domain
 You can use these procedures to join computers running Windows Server 2008 R2, Windows 7,  Windows Server 2008 ,  and Windows Vista to the domain.
 
--   [Windows Server 2008 R2 and Windows 7](#BKMK_c1)
+- [Windows Server 2008 R2 and Windows 7](#BKMK_c1)
 
--   [Windows Server 2008 and Windows Vista](#BKMK_c2)
+- [Windows Server 2008 and Windows Vista](#BKMK_c2)
 
 > [!IMPORTANT]
 > To join a computer to a domain, you must be logged on to the computer with the local Administrator account or, if you are logged on to the computer with a user account that does not have local computer administrative credentials, you must provide the credentials for the local Administrator account during the process of joining the computer to the domain. In addition, you must have a user account in the domain to which you want to join the computer. During the process of joining the computer to the domain, you will be prompted for your domain account credentials (user name and password).
@@ -1349,9 +1347,9 @@ Membership in **Domain Users**, or equivalent, is the minimum required to perfor
 ## <a name="BKMK_D"></a>Appendix D - Log on to the domain
 You can use these procedures to log on to the domain using computers running Windows Server 2008 R2, Windows 7,  Windows Server 2008 , and Windows Vista.
 
--   [Windows Server 2008 R2 and Windows 7](#BKMK_d1)
+- [Windows Server 2008 R2 and Windows 7](#BKMK_d1)
 
--   [Windows Server 2008 and Windows Vista](#BKMK_d2)
+- [Windows Server 2008 and Windows Vista](#BKMK_d2)
 
 ### <a name="BKMK_d1"></a>Windows Server 2008 R2 and Windows 7
 Membership in **Domain Users**, or equivalent, is the minimum required to perform this procedure.
@@ -1392,13 +1390,13 @@ The following links lead to the sections in this topic that provide configuratio
 
 1.  [Installing Active Directory Domain Services and DNS](#BKMK_FndtnPrep_InstallAD)
 
-    -   [Configuring a DNS Reverse Lookup Zone](#BKMK_FndtnPrep_DNSRevrsLook)
+    - [Configuring a DNS Reverse Lookup Zone](#BKMK_FndtnPrep_DNSRevrsLook)
 
 2.  [Installing DHCP](#BKMK_FndtnPrep_InstallDHCP)
 
-    -   [Creating an exclusion range in DHCP](#BKMK_FndtnPrep_DHCP_Exclusn)
+    - [Creating an exclusion range in DHCP](#BKMK_FndtnPrep_DHCP_Exclusn)
 
-    -   [Creating a new DHCP scope](#bkmk_NetFndtn_Pln_DHCP_NewScope)
+    - [Creating a new DHCP scope](#bkmk_NetFndtn_Pln_DHCP_NewScope)
 
 3.  [Installing Network Policy Server (optional)](#BKMK_FndtnPrep_InstallNPS)
 
@@ -1408,7 +1406,7 @@ The tables in this section list configuration items for pre-installation and ins
 ##### Pre-installation configuration items for AD DS and DNS
 The following tables list pre-installation configuration items as described in [Configuring All Servers](#BKMK_configuringAll):
 
--   [Configure a Static IP Address](#BKMK_ip)
+- [Configure a Static IP Address](#BKMK_ip)
 
 |Configuration items|Example values|Values|
 |-----------------------|------------------|----------|
@@ -1418,7 +1416,7 @@ The following tables list pre-installation configuration items as described in [
 |Preferred DNS server|127.0.0.1||
 |Alternate DNS server|10.0.0.15||
 
--   [Rename the Computer](#BKMK_rename)
+- [Rename the Computer](#BKMK_rename)
 
 |Configuration item|Example value|Value|
 |----------------------|-----------------|---------|
@@ -1441,10 +1439,10 @@ Configuration items for the Windows Server Core Network deployment procedure [In
 
 |Configuration items|Example values|Values|
 |-----------------------|------------------|----------|
-|Zone type:|-   Primary zone<br />-   Secondary zone<br />-   Stub zone||
-|Zone type<p>**Store the zone in Active Directory**|-   Selected<br />-   Not selected||
-|Active Directory zone replication scope|-   To all DNS servers in this forest<br />-   To all DNS servers in this domain<br />-   To all domain controllers in this domain<br />-   To all domain controllers specified in the scope of this directory partition||
-|Reverse lookup zone name<p>(IP type)|-   IPv4 Reverse Lookup Zone<br />-   IPv6 Reverse Lookup Zone||
+|Zone type:|- Primary zone<br />- Secondary zone<br />- Stub zone||
+|Zone type<p>**Store the zone in Active Directory**|- Selected<br />- Not selected||
+|Active Directory zone replication scope|- To all DNS servers in this forest<br />- To all DNS servers in this domain<br />- To all domain controllers in this domain<br />- To all domain controllers specified in the scope of this directory partition||
+|Reverse lookup zone name<p>(IP type)|- IPv4 Reverse Lookup Zone<br />- IPv6 Reverse Lookup Zone||
 |Reverse lookup zone name<p>(network ID)|10.0.0||
 
 ### <a name="BKMK_FndtnPrep_InstallDHCP"></a>Installing DHCP
@@ -1453,7 +1451,7 @@ The tables in this section list configuration items for pre-installation and ins
 ##### Pre-installation configuration items for DHCP
 The following tables list pre-installation configuration items as described in [Configuring All Servers](#BKMK_configuringAll):
 
--   [Configure a Static IP Address](#BKMK_ip)
+- [Configure a Static IP Address](#BKMK_ip)
 
 |Configuration items|Example values|Values|
 |-----------------------|------------------|----------|
@@ -1463,7 +1461,7 @@ The following tables list pre-installation configuration items as described in [
 |Preferred DNS server|10.0.0.2||
 |Alternate DNS server|10.0.0.15||
 
--   [Rename the Computer](#BKMK_rename)
+- [Rename the Computer](#BKMK_rename)
 
 |Configuration item|Example value|Value|
 |----------------------|-----------------|---------|
@@ -1509,7 +1507,7 @@ Configuration items for the Windows Server Core Network deployment procedure [Cr
 |Subnet mask|255.255.255.0||
 |(Exclusion range) Start IP address|10.0.1.1||
 |Exclusion range end IP address|10.0.1.15||
-|Lease duration<p>Days<p>Hours<p>Minutes|-   8<br />-   0<br />-   0||
+|Lease duration<p>Days<p>Hours<p>Minutes|- 8<br />- 0<br />- 0||
 |Router (default gateway)<p>IP address|10.0.1.1||
 |DNS parent domain|corp.contoso.com||
 |DNS server<p>IP address|10.0.0.2||
@@ -1520,7 +1518,7 @@ The tables in this section list configuration items for pre-installation and ins
 ##### Pre-installation configuration items
 The following three tables list pre-installation configuration items as described in [Configuring All Servers](#BKMK_configuringAll):
 
--   [Configure a Static IP Address](#BKMK_ip)
+- [Configure a Static IP Address](#BKMK_ip)
 
 |Configuration items|Example values|Values|
 |-----------------------|------------------|----------|
@@ -1530,7 +1528,7 @@ The following three tables list pre-installation configuration items as describe
 |Preferred DNS server|10.0.0.2||
 |Alternate DNS server|10.0.0.15||
 
--   [Rename the Computer](#BKMK_rename)
+- [Rename the Computer](#BKMK_rename)
 
 |Configuration item|Example value|Value|
 |----------------------|-----------------|---------|
@@ -1539,5 +1537,4 @@ The following three tables list pre-installation configuration items as describe
 ##### Network Policy Server installation configuration items
 Configuration items for the Windows Server Core Network NPS deployment procedures [Install Network Policy Server (NPS)](#BKMK_installNPS) and [Register the NPS in the Default Domain](#BKMK_registerNPS).
 
--   No additional configuration items are required to install and register NPS.
-
+- No additional configuration items are required to install and register NPS.

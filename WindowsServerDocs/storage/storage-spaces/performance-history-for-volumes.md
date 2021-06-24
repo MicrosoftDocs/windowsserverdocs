@@ -1,8 +1,8 @@
 ---
+description: "Learn more about: Performance history for volumes"
 title: Performance history for volumes
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/09/2018
@@ -83,7 +83,7 @@ The `size.*` series are collected from the `MSFT_Volume` class in WMI, one insta
 
 ## Usage in PowerShell
 
-Use the [Get-Volume](https://docs.microsoft.com/powershell/module/storage/get-volume) cmdlet:
+Use the [Get-Volume](/powershell/module/storage/get-volume) cmdlet:
 
 ```PowerShell
 Get-Volume -FriendlyName <FriendlyName> | Get-ClusterPerf

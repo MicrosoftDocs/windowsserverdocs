@@ -1,13 +1,11 @@
 ---
 title: print
 description: Reference article for the print command, which sends a text file to a printer.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: aa2325d5-a993-4ed3-b996-255165452db8
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

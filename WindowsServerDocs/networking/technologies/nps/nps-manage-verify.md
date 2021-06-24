@@ -2,12 +2,11 @@
 title: Verify Configuration After NPS Changes
 description: You can use this topic to verify Windows Server 2016 Network Policy Server configuration after an IP address or name change to the server.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: fc77450e-2af1-47ba-bb23-1fd36d9efdbf
-ms.author: lizross 
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Verify Configuration After NPS Changes
@@ -18,9 +17,9 @@ You can use this topic to verify NPS configuration after an IP address or name c
 
 ## Verify Configuration After an NPS IP Address Change
 
-There might be circumstances where you need to change the IP address of an NPS or proxy, such as when you move the server to a different IP subnet. 
+There might be circumstances where you need to change the IP address of an NPS or proxy, such as when you move the server to a different IP subnet.
 
-If you change an NPS or proxy IP address, it is necessary to reconfigure portions of your NPS deployment. 
+If you change an NPS or proxy IP address, it is necessary to reconfigure portions of your NPS deployment.
 
 Use the following general guidelines to assist you in verifying that an IP address change does not interrupt network access authentication, authorization, or accounting on your network for NPS RADIUS servers and RADIUS proxy servers.
 
@@ -56,7 +55,7 @@ You must be a member of **Administrators**, or equivalent, to perform these proc
 
 There might be circumstances when you need to change the name of an NPS or proxy, such as when you redesign the naming conventions for your servers.
 
-If you change an NPS or proxy name, it is necessary to reconfigure portions of your NPS deployment. 
+If you change an NPS or proxy name, it is necessary to reconfigure portions of your NPS deployment.
 
 Use the following general guidelines to assist you in verifying that a server name change does not interrupt network access authentication, authorization, or accounting.
 
@@ -73,13 +72,13 @@ You must be a member of **Administrators**, or equivalent, to perform this proce
 	b. Type **gpupdate**, and then press ENTER.
 
 
-3. After you have a new server certificate, request that the CA administrator revoke the old certificate. 
+3. After you have a new server certificate, request that the CA administrator revoke the old certificate.
 
-     After the old certificate is revoked, NPS continues to use it until the old certificate expires. By default, the old certificate remains valid for a maximum time of one week and 10 hours. This time period might be different depending on whether the Certificate Revocation List (CRL) expiry and the Transport Layer Security (TLS) cache time expiry have been modified from their defaults. The default CRL expiry is one week; the default TLS cache time expiry is 10 hours. 
+     After the old certificate is revoked, NPS continues to use it until the old certificate expires. By default, the old certificate remains valid for a maximum time of one week and 10 hours. This time period might be different depending on whether the Certificate Revocation List (CRL) expiry and the Transport Layer Security (TLS) cache time expiry have been modified from their defaults. The default CRL expiry is one week; the default TLS cache time expiry is 10 hours.
 
      If you want to configure NPS to use the new certificate immediately, however, you can manually reconfigure network policies with the new certificate.
 
-4. After the old certificate expires, NPS automatically begins using the new certificate. 
+4. After the old certificate expires, NPS automatically begins using the new certificate.
 
 5. If you have configured the NPS to use SQL Server logging, verify that connectivity between the computer running SQL Server and the NPS is still functioning properly.
 

@@ -1,21 +1,20 @@
 ---
 title: Adjust the failover baseline network threshold
 description: This article introduces solutions for adjusting the threshold of failover cluster networks.
-ms.prod: windows-server
-ms.technology: server-general
 ms.date: 05/28/2020
 author: Deland-Han
 ms.author: delhan
+ms.topic: troubleshooting
 ---
-# IaaS with SQL AlwaysOn - Tuning Failover Cluster Network Thresholds
+# IaaS with SQL Server - Tuning Failover Cluster Network Thresholds
 
 This article introduces solutions for adjusting the threshold of failover cluster networks.
 
 ## Symptom
 
-When running Windows Failover Cluster nodes in IaaS with SQL Server AlwaysOn, changing the cluster setting to a more relaxed monitoring state is recommended. Cluster settings out of the box are restrictive and could cause unneeded outages. The default settings are designed for highly tuned on premises networks and do not take into account the possibility of induced latency caused by a multi-tenant environment such as Windows Azure (IaaS).
+When running Windows Failover Cluster nodes in IaaS with a SQL Server Always On availability group, changing the cluster setting to a more relaxed monitoring state is recommended. Cluster settings out of the box are restrictive and could cause unneeded outages. The default settings are designed for highly tuned on premises networks and do not take into account the possibility of induced latency caused by a multi-tenant environment such as Windows Azure (IaaS).
 
-Windows Server Failover Clustering is constantly monitoring the network connections and health of the nodes in a Windows Cluster.  If a node is not reachable over the network, then recovery action is taken to recover and bring applications and services online on another node in the cluster. Latency in communication between cluster nodes can lead to the following error:  
+Windows Server Failover Clustering is constantly monitoring the network connections and health of the nodes in a Windows Cluster.  If a node is not reachable over the network, then recovery action is taken to recover and bring applications and services online on another node in the cluster. Latency in communication between cluster nodes can lead to the following error:
 
 > Error 1135 (system event log)
 
@@ -85,17 +84,16 @@ C:\Windows\system32> get-cluster | fl *subnet*
 
 Default, minimum, maximum, and recommended values for each support OS
 
-|   |OS|Min|Max|Default|Recommended|
-|---|---|---|---|---|---|
-|CrossSubnetThreshold|2008 R2|3|20|5|20|
-|CrossSubnet Threshold|2012|3|120|5|20|
-|CrossSubnet Threshold|2012 R2|3|120|5|20|
-|CrossSubnet Threshold|2016|3|120|20|20|
-|SameSubnet Threshold|2008 R2|3|10|5|10|
-|SameSubnet Threshold|2012|3|120|5|10
-|SameSubnet Threshold|2012 R2|3|120|5|10|
-|SameSubnetThreshold|2016|3|120|10|10|
-|||||||
+| Description | OS | Min | Max | Default | Recommended |
+|--|--|--|--|--|--|
+| CrossSubnetThreshold | 2008 R2 | 3 | 20 | 5 | 20 |
+| CrossSubnet Threshold | 2012 | 3 | 120 | 5 | 20 |
+| CrossSubnet Threshold | 2012 R2 | 3 | 120 | 5 | 20 |
+| CrossSubnet Threshold | 2016 | 3 | 120 | 20 | 20 |
+| SameSubnet Threshold | 2008 R2 | 3 | 10 | 5 | 10 |
+| SameSubnet Threshold | 2012 | 3 | 120 | 5 | 10 |
+| SameSubnet Threshold | 2012 R2 | 3 | 120 | 5 | 10 |
+| SameSubnetThreshold | 2016 | 3 | 120 | 10 | 10 |
 
 The values for Threshold reflect the current recommendations regarding the scope of  deployment as described in the following article:
 
@@ -113,7 +111,7 @@ The **Threshold** defines the number of heartbeats, which are missed before the 
     > [!NOTE]
     > Changing the cluster threshold will take effect immediately, you don't have to restart the cluster or any resources.
 
-    The following settings are recommended for both same subnet and cross-region deployments of AlwaysOn availability groups.
+    The following settings are recommended for both same subnet and cross-region deployments of availability groups.
 
     ```powershell
     C:\Windows\system32> (get-cluster).SameSubnetThreshold = 20
@@ -129,7 +127,7 @@ The **Threshold** defines the number of heartbeats, which are missed before the 
     C:\Windows\system32> get-cluster | fl *subnet*
     ```
 
-    :::image type="content" source="media/iaas-sql-failover-cluster/cmd.png" alt-text="cmd" border="false":::
+    :::image type="content" source="media/iaas-sql-failover-cluster/cmd.png" alt-text="Screenshot of the PowerShell window showing the results of the command." border="false":::
 
 ## References
 

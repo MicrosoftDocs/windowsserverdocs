@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: The Role of Claim Rules"
 ms.assetid: 65e474b5-3076-4ba3-809d-a09160f7c2bd
 title: The Role of Claim Rules
 author: billmath
@@ -6,8 +7,6 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 
@@ -54,7 +53,7 @@ For more information about how to use the claim rule language syntax, see [The R
 ### How to create a claim rule
 Claim rules are created separately for each federated trust relationship within the Federation Service and are not shared across multiple trusts. You can either create a rule from a claim rule template, start from scratch by authoring the rule using the claim rule language or use Windows PowerShell to customize a rule.
 
-All of these options coexist to provide you with the flexibility of choosing the appropriate method for a given scenario. For more information about how to create a claim rule, see [Configuring Claim Rules](https://technet.microsoft.com/library/ee913571.aspx) in the AD FSDeployment Guide.
+All of these options coexist to provide you with the flexibility of choosing the appropriate method for a given scenario. For more information about how to create a claim rule, see [Configuring Claim Rules](../deployment/configuring-claim-rules.md) in the AD FSDeployment Guide.
 
 #### Using claim rule templates
 Claim rule templates are only used during the claim rule creation process. You can use any of the following templates to create a claim rule:
@@ -79,7 +78,7 @@ For more information describing each of these claim rule templates, see [Determi
 For business rules that are beyond the scope of standard claim rule templates, you can use a custom rule template to express a series of complex logic conditions using the claim rule language. For more information about using a custom rule, see [When to Use a Custom Claim Rule](When-to-Use-a-Custom-Claim-Rule.md).
 
 #### Using Windows PowerShell
-You can also use the ADFSClaimRuleSet cmdlet object with Windows PowerShell to create or administer rules in AD FS. For more information about how you can use Windows PowerShell with this cmdlet, see [AD FS Administration with Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=179634).
+You can also use the ADFSClaimRuleSet cmdlet object with Windows PowerShell to create or administer rules in AD FS. For more information about how you can use Windows PowerShell with this cmdlet, see [AD FS Administration with Windows PowerShell](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee126138(v=ws.10)).
 
 ## What is a claim rule set?
 As shown in the following illustration, a claim rule set is a grouping of one or more rules for a given federated trust that will define how claims will be processed by the claims rule engine. When an incoming claim is received by the Federation Service the claim rule engine applies the logic specified by the appropriate claim rule set. It is the final sum of the logic from each rule in the set that will determine how claims will be issued for a given trust in its entirety.
@@ -102,5 +101,3 @@ The following table describes the various types of claim rule sets and explains 
 |Impersonation Authorization Rule Set|A set of claim rules that you configure using Windows PowerShell to determine whether a user can fully impersonate another user to the relying party.<p>These rules determine whether the requester is permitted to impersonate a user without identifying the requester in the token that is sent to the relying party.<p>Impersonating another user in this way is a very powerful capability, because the relying party will not know that the user is being impersonated.|Relying party trust|
 
 For more information about select the appropriate claim rules to use in your organization, see [Determine the Type of Claim Rule Template to Use](Determine-the-Type-of-Claim-Rule-Template-to-Use.md).
-
-

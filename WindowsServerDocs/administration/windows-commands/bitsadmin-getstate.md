@@ -1,13 +1,11 @@
 ---
 title: bitsadmin getstate
 description: Reference article for the bitsadmin getstate command, which retrieves the state of the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1252d6cf-14ca-44df-beb2-930ff011f297
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

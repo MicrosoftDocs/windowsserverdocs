@@ -1,23 +1,22 @@
 ---
+description: "Learn more about: Initialize the HGS cluster using TPM mode in a new dedicated forest (default)"
 title: Initialize the HGS cluster using TPM mode in a new dedicated forest (default)
-ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 
 # Initialize the HGS cluster using TPM mode in a new dedicated forest (default)
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
 
 1.  [!INCLUDE [Initialize HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-one.md)]
 
 2.  [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]
 
-3.  Run [Initialize-HgsServer](https://technet.microsoft.com/library/mt652185.aspx) in an elevated PowerShell window on the first HGS node. The syntax of this cmdlet supports many different inputs, but the 2 most common invocations are below:
+3.  Run [Initialize-HgsServer](/powershell/module/hgsserver/initialize-hgsserver) in an elevated PowerShell window on the first HGS node. The syntax of this cmdlet supports many different inputs, but the 2 most common invocations are below:
 
     -   If you are using PFX files for your signing and encryption certificates, run the following commands:
 
@@ -42,4 +41,3 @@ ms.date: 08/29/2018
 
 > [!div class="nextstepaction"]
 > [Install TPM root certs](guarded-fabric-install-trusted-tpm-root-certificates.md)
-  

@@ -1,13 +1,11 @@
 ---
 title: autochk
 description: Reference article for the autochk command, which runs when the computer is started and prior to Windows Server starting to verify the logical integrity of a file system.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 8787e6a3-f023-4ea5-b2d1-61c6876d8aff
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

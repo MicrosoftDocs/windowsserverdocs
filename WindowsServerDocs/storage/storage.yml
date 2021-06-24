@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: JasonGerend
   ms.author: jgerend
-  ms.date: 06/09/2020 
+  ms.date: 07/15/2020 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -66,6 +66,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
+          - text: SMB over QUIC
+            url: file-server/smb-over-quic.md
           - text: ReFS
             url: refs/refs-overview.md
           - text: Server Message Block (SMB) protocol
@@ -73,13 +75,13 @@ landingContent:
           - text: Storage-class memory
             url: storage-spaces/Storage-class-memory-health.md
           - text: BitLocker Drive Encryption
-            url: https://technet.microsoft.com/library/cc766295(v=ws.10).aspx
+            url: /previous-versions/windows/it-pro/windows-vista/cc766295(v=ws.10)
           - text: NTFS
-            url: https://technet.microsoft.com/library/dn466522(v=ws.11).aspx
+            url: /previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466522(v=ws.11)
           - text: Network File System (NFS)
-            url: https://technet.microsoft.com/library/jj592688(v=ws.11).aspx
+            url: /previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj592688(v=ws.11)
 
-  # Card (optional)
+  # Card
   - title: In Azure
     linkLists:
       - linkListType: overview
@@ -88,6 +90,8 @@ landingContent:
             url: https://azure.microsoft.com/documentation/services/storage/
           - text: Azure StorSimple
             url: https://www.microsoft.com/cloud-platform/azure-storsimple
+          - text: Azure Shared Disk
+            url: /azure/virtual-machines/windows/disks-shared
 
   # Card
   - title: Older versions of Windows Server
@@ -95,6 +99,6 @@ landingContent:
       - linkListType: overview
         links:
           - text: Windows previous versions documentation
-            url: https://docs.microsoft.com/previous-versions/windows/
+            url: /previous-versions/windows/
           - text: Search for specific information
-            url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions
+            url: /search/?dataSource=previousVersions&search=Windows Server

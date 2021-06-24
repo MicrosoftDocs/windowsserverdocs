@@ -1,13 +1,9 @@
 ---
 title: How to use automatic TCP/IP addressing without a DHCP server
 description: Introduce how to use automatic TCP/IP addressing without a DHCP server.
-ms.date: 05/26/2020
-ms.prod: windows-server
-ms.service: na
 manager: dcscontentpm
-ms.technology: server-general
 ms.date: 5/26/2020
-ms.topic: article
+ms.topic: troubleshooting
 author: Deland-Han
 ms.author: delhan
 ms.reviewer: robsmi
@@ -18,7 +14,7 @@ This article describes how to use automatic Transmission Control Protocol/Intern
 
 ## More Information
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 A Windows-based computer that is configured to use DHCP can automatically assign itself an Internet Protocol (IP) address if a DHCP server is not available. For example, this could occur on a network without a DHCP server, or on a network if a DHCP server is temporarily down for maintenance.
@@ -33,8 +29,8 @@ You may want to disable it in any of the following cases:
 
 - Your network is connected to the Internet without a NAT or proxy server.
 
-Unless you have disabled DHCP-related messages, DHCP messages provide you with notification when you change between DHCP addressing and automatic private IP addressing. If DHCP messaging is accidentally disabled, you can turn the DHCP messages back on by changing the value of the PopupFlag value in the following registry key from 00 to 01:  
-`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\DHCP` 
+Unless you have disabled DHCP-related messages, DHCP messages provide you with notification when you change between DHCP addressing and automatic private IP addressing. If DHCP messaging is accidentally disabled, you can turn the DHCP messages back on by changing the value of the PopupFlag value in the following registry key from 00 to 01:
+`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\DHCP`
 
 Note that you must restart your computer for the change to take effect. You can also determine whether your computer is using APIPA by using the Winipcfg tool in Windows Millennium Edition, Windows 98, or Windows 98 Second Edition:
 
@@ -46,8 +42,8 @@ You can disable automatic private IP addressing by using either of the following
 
 You can configure the TCP/IP information manually, which disables DHCP altogether. You can disable automatic private IP addressing (but not DHCP) by editing the registry. You can do so by adding the "IPAutoconfigurationEnabled" DWORD registry entry with a value of 0x0 to the following registry key for Windows Millennium Edition, Windows98, or Windows 98 Second Edition:  `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\DHCP`
 
-For Windows 2000, Windows XP, and Windows Server 2003, APIPA can be disabled by adding the "IPAutoconfigurationEnabled" DWORD registry entry with a value of 0x0 to the following registry key:  
-`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\<Adapter GUID>`  
+For Windows 2000, Windows XP, and Windows Server 2003, APIPA can be disabled by adding the "IPAutoconfigurationEnabled" DWORD registry entry with a value of 0x0 to the following registry key:
+`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\<Adapter GUID>`
 > [!NOTE]
 > The **Adapter GUID** subkey is a globally unique identifier (GUID) for the computer's LAN adapter.
 

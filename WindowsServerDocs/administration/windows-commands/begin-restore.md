@@ -1,13 +1,11 @@
 ---
 title: begin restore
 description: Reference article for the begin restore command, which starts a restore session and issues a PreRestore event to involved writers.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: f629bbd5-315d-4cbb-9cb0-9d75cf617092
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -29,4 +27,4 @@ begin restore
 
 - [begin backup command](begin-backup.md)
 
-- [Prepare for restore](https://docs.microsoft.com/windows/win32/vss/overview-of-preparing-for-restore)
+- [Prepare for restore](/windows/win32/vss/overview-of-preparing-for-restore)

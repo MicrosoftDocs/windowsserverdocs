@@ -1,13 +1,12 @@
 ---
 title: "Manage Devices in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the device management features of a server, and learn how to set up and use devices on your network.
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: f5fe1088-ebe7-4799-a47d-075b0048dea1
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 

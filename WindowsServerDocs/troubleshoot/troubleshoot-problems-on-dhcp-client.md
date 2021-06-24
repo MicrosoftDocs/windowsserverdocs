@@ -1,12 +1,9 @@
 ---
 title: Troubleshoot problems on the DHCP client
 description: This artilce introduces how to troubleshoot problems on the DHCP client and collect data.
-ms.prod: windows-server
-ms.service: na
 manager: dcscontentpm
-ms.technology: server-general
 ms.date: 5/26/2020
-ms.topic: article
+ms.topic: troubleshooting
 author: Deland-Han
 ms.author: delhan
 ---
@@ -32,7 +29,7 @@ Check the following devices and settings:
 
 ## Event logs
 
-Examine the Microsoft-Windows-DHCP Client Events/Operational and Microsoft-Windows-DHCP Client Events/Admin event logs. All events that are related to the DHCP client service are sent to these event logs.  
+Examine the Microsoft-Windows-DHCP Client Events/Operational and Microsoft-Windows-DHCP Client Events/Admin event logs. All events that are related to the DHCP client service are sent to these event logs.
 The Microsoft-Windows-DHCP Client Events are located in the Event Viewer under **Applications and Services Logs**.
 
 The "Get-NetAdapter -IncludeHidden" PowerShell command provides the necessary information to interpret the events that are listed in the logs. For example, Interface ID, MAC address, and so on.
@@ -46,7 +43,7 @@ To collect data from the server and affected client, use [Wireshark](https://www
 Run the following commands on the client that is experiencing the problem:
 
 ```console
-ipconfig /release  
+ipconfig /release
 ipconfig /renew
 ```
 

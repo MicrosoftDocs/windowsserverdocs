@@ -1,13 +1,11 @@
 ---
 title: msinfo32
 description: Reference article for the msinfo32 command, which opens the System Information tool to display a comprehensive view of the hardware, system components, and software environment on the local computer.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: a38f31d7-1766-4103-becc-9d0b87c2826d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -17,7 +15,7 @@ ms.date: 10/16/2017
 
 Opens the System Information tool to display a comprehensive view of the hardware, system components, and software environment on the local computer.
 
-Some System Information categories contain large amounts of data. You can use the **start /wait** command to optimize reporting performance for these categories. For more information, see [System Information](https://technet.microsoft.com/library/cc783305(v=ws.10).aspx).
+Some System Information categories contain large amounts of data. You can use the **start /wait** command to optimize reporting performance for these categories. For more information, see [System Information](/previous-versions/windows/it-pro/windows-server-2003/cc783305(v=ws.10)).
 
 ## Syntax
 

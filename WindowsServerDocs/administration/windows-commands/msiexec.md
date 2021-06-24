@@ -1,13 +1,11 @@
 ---
 title: msiexec
 description: Reference article for the msiexec command, which provides the means to install, modify, and perform operations on Windows Installer from the command line.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 122eb0ce-ecbc-4909-a52a-15c3413619af
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -208,7 +206,7 @@ msiexec.exe [/f{p|o|e|d|c|a|u|m|s|v}] <product_code>
 | /fu | Repairs all the required user-specific registry entries. |
 | /fm | Repairs all the required computer-specific registry entries. |
 | /fs | Repairs all existing shortcuts. |
-| /fc | Runs from source and re-caches the local package. |
+| /fv | Runs from source and re-caches the local package. |
 
 #### Examples
 
@@ -220,12 +218,12 @@ msiexec.exe /fa {AAD3D77A-7476-469F-ADF4-04424124E91D}
 
 ## Set public properties
 
-You can set public properties through this command. For information about the available properties and how to set them, see [Public Properties](https://docs.microsoft.com/windows/win32/msi/public-properties).
+You can set public properties through this command. For information about the available properties and how to set them, see [Public Properties](/windows/win32/msi/public-properties).
 
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Msiexec.exe Command-Line Options](https://docs.microsoft.com/windows/win32/msi/command-line-options)
+- [Msiexec.exe Command-Line Options](/windows/win32/msi/command-line-options)
 
-- [Standard Installer Command-Line Options](https://docs.microsoft.com/windows/win32/msi/standard-installer-command-line-options)
+- [Standard Installer Command-Line Options](/windows/win32/msi/standard-installer-command-line-options)

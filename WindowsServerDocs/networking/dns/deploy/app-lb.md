@@ -1,13 +1,12 @@
 ---
 title: Use DNS Policy for Application Load Balancing
-description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
+description: Learn how to learn how to configure DNS policy to perform application load balancing.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking-dns
 ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # Use DNS Policy for Application Load Balancing
 
@@ -23,7 +22,7 @@ When you have deployed multiple instances of an application, you can use DNS pol
 
 Following is an example of how you can use DNS policy for application load balancing.
 
-This example uses one fictional company - Contoso Gift Services - which provides online gifing services, and which has a Web site named **contosogiftservices.com**.
+This example uses one fictional company - Contoso Gift Services - which provides online gifting services, and which has a Web site named **contosogiftservices.com**.
 
 The contosogiftservices.com website is hosted in multiple datacenters that each have different IP addresses.
 
@@ -64,14 +63,14 @@ A zone scope is a unique instance of the zone. A DNS zone can have multiple zone
 >By default, a zone scope exists on the DNS zones. This zone scope has the same name as the zone, and legacy DNS operations work on this scope.
 
 You can use the following Windows PowerShell commands to create zone scopes.
-    
-    Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "SeattleZoneScope"
-    
-    Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DallasZoneScope"
-    
-    Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "ChicagoZoneScope"
 
-For more information, see [Add-DnsServerZoneScope](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
+```powershell
+Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "SeattleZoneScope"
+Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DallasZoneScope"
+Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "ChicagoZoneScope"
+```
+
+For more information, see [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope)
 
 #### <a name="bkmk_records"></a>Add Records to the Zone Scopes
 
@@ -84,15 +83,14 @@ In **ChicagoZoneScope**, you can add the same record \(www.contosogiftservices.c
 Similarly in **DallasZoneScope**, you can add a record \(www.contosogiftservices.com\) with IP address 162.0.0.1 in the Chicago datacenter.
 
 You can use the following Windows PowerShell commands to add records to the zone scopes.
-    
-    Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "192.0.0.1" -ZoneScope "SeattleZoneScope
-    
-    Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "182.0.0.1" -ZoneScope "ChicagoZoneScope"
-    
-    Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "162.0.0.1" -ZoneScope "DallasZoneScope"
-    
 
-For more information, see [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
+```powershell
+Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "192.0.0.1" -ZoneScope "SeattleZoneScope"
+Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "182.0.0.1" -ZoneScope "ChicagoZoneScope"
+Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "162.0.0.1" -ZoneScope "DallasZoneScope"
+```
+
+For more information, see [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord).
 
 #### <a name="bkmk_policies"></a>Create the DNS Policies
 
@@ -101,12 +99,13 @@ After you have created the partitions (zone scopes) and you have added records, 
 You can use the following Windows PowerShell commands to create a DNS policy that balances application traffic across these three datacenters.
 
 >[!NOTE]
->In the example command below, the expression –ZoneScope "SeattleZoneScope,2; ChicagoZoneScope,1; DallasZoneScope,1" configures the DNS server with an array that includes the parameter combination \<ZoneScope\>,\<weight\>.
-    
-    Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW -ZoneScope "SeattleZoneScope,2;ChicagoZoneScope,1;DallasZoneScope,1" -ZoneName "contosogiftservices.com"
-    
+>In the example command below, the expression –ZoneScope "SeattleZoneScope,2; ChicagoZoneScope,1; DallasZoneScope,1" configures the DNS server with an array that includes the parameter combination `<ZoneScope>`,`<weight>`.
 
-For more information, see [Add-DnsServerQueryResolutionPolicy](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).  
+```powershell
+Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW -ZoneScope "SeattleZoneScope,2;ChicagoZoneScope,1;DallasZoneScope,1" -ZoneName "contosogiftservices.com"
+```
+
+For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy).
 
 You have now successfully created a DNS policy that provides application load balancing across Web servers in three different datacenters.
 

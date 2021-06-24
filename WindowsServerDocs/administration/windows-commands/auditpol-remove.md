@@ -1,13 +1,11 @@
 ---
 title: auditpol remove
 description: Reference article for the auditpol remove command, which removes the per-user audit policy for a specified account or all accounts.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: be42ec55-235c-44f7-9abd-ed1cf3f5b1f5
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # auditpol remove

@@ -1,13 +1,12 @@
 ---
 title: Step 2 Plan the Remote Access Deployment
-description: This topic is part of the guide Manage DirectAccess Clients Remotely in Windows Server 2016.
+description: Learn how to plan the settings that the Remote Access Setup Wizard will use.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking-ras
 ms.topic: article
 ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Step 2 Plan the Remote Access Deployment
 

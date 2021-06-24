@@ -1,21 +1,19 @@
 ---
-title: query
-description: Reference article for the query command, which displays information about processes, sessions, and Remote Desktop Session Host servers.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+title: query commands
+description: Reference article for the query commands, which displays information about processes, sessions, and Remote Desktop Session Host servers.
+ms.topic: reference
 ms.assetid: 675c5128-f3cf-4e8f-8a3f-b29ab2a8b6de
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# query
+# query commands
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Displays information about processes, sessions, and Remote Desktop Session Host servers. To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)).
+Displays information about processes, sessions, and Remote Desktop Session Host servers. To find out what's new in the latest version, see [What's New in Remote Desktop Services in Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## Syntax
 

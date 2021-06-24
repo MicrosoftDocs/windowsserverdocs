@@ -1,13 +1,11 @@
 ---
 title: logman create
 description: Reference article for the logman create command, which creates a counter, trace, configuration data collector, or API.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 972f0126-7bc4-4b14-9265-062864f3ffd4
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

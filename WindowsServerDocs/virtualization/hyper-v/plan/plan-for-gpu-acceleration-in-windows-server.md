@@ -1,13 +1,11 @@
 ---
 title: Plan for GPU acceleration in Windows Server
 description: Learn about the different Hyper-V technologies for GPU acceleration, including DDA and RemoteFX vGPU
-ms.prod: windows-server
-ms.reviewer: rickman
 author: rick-man
 ms.author: rickman
 manager: stevelee
 ms.topic: article
-ms.date: 08/21/2019
+ms.date: 07/14/2020
 ---
 
 # Plan for GPU acceleration in Windows Server
@@ -33,7 +31,7 @@ The following graphics virtualization technologies are available to Hyper-V VMs 
 - [Discrete Device Assignment (DDA)](#discrete-device-assignment-dda)
 - [RemoteFX vGPU](#remotefx-vgpu)
 
-In addition to VM workloads, Windows Server also supports GPU acceleration of containerized workloads within Windows Containers. For more information, see [GPU Acceleration in Windows containers](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/gpu-acceleration).
+In addition to VM workloads, Windows Server also supports GPU acceleration of containerized workloads within Windows Containers. For more information, see [GPU Acceleration in Windows containers](/virtualization/windowscontainers/deploy-containers/gpu-acceleration).
 
 ## Discrete Device Assignment (DDA)
 
@@ -49,7 +47,7 @@ For more information, see these topics:
 ## RemoteFX vGPU
 
 > [!NOTE]
-> RemoteFX vGPU is fully supported in Windows Server 2016 but isn't supported in Windows Server 2019.
+> Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update and removed starting with the April 13, 2021 Security Update. To learn more, see [KB 4570006](https://support.microsoft.com/help/4570006).
 
 RemoteFX vGPU is a graphics virtualization technology that allows a single physical GPU to be shared among multiple virtual machines. In a RemoteFX vGPU deployment, virtualized workloads run on Microsoft's RemoteFX 3D adapter, which coordinates GPU processing requests between the host and guests. RemoteFX vGPU is most suitable for knowledge worker and high-burst workloads where dedicated GPU resources are not required. RemoteFX vGPU can only provide GPU acceleration to Windows VMs.
 
@@ -62,17 +60,17 @@ For more information, see these topics:
 
 Consider the following functionality and support differences between graphics virtualization technologies when planning your deployment:
 
-|                       | RemoteFX vGPU                                                                       | Discrete Device Assignment                                                          |
-|-----------------------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| GPU resource model    | Dedicated or shared                                                                 | Dedicated only                                                                      |
-| VM density            | High (one or more GPUs to many VMs)                                                 | Low (one or more GPUs to one VM)                                                    |
-| App compatibility     | DX 11.1, OpenGL 4.4, OpenCL 1.1                                                     | All GPU capabilities provided by vendor (DX 12, OpenGL, CUDA)                       |
-| AVC444                | Enabled by default                                                                  | Available through Group Policy                                                      |
-| GPU VRAM              | Up to 1 GB dedicated VRAM                                                           | Up to VRAM supported by the GPU                                                     |
-| Frame rate            | Up to 30fps                                                                         | Up to 60fps                                                                         |
-| GPU driver in guest   | RemoteFX 3D adapter display driver (Microsoft)                                      | GPU vendor driver (NVIDIA, AMD, Intel)                                              |
-| Host OS support       | Windows Server 2016                                                                 | Windows Server 2016; Windows Server 2019                                            |
-| Guest OS support      | Windows Server 2012 R2; Windows Server 2016; Windows 7 SP1; Windows 8.1; Windows 10 | Windows Server 2012 R2; Windows Server 2016; Windows Server 2019; Windows 10; Linux |
-| Hypervisor            | Microsoft Hyper-V                                                                   | Microsoft Hyper-V                                                                   |
-| GPU hardware          | Enterprise GPUs (such as Nvidia Quadro/GRID or AMD FirePro)                         | Enterprise GPUs (such as Nvidia Quadro/GRID or AMD FirePro)                         |
-| Server hardware       | No special requirements                                                             | Modern server, exposes IOMMU to OS (usually SR-IOV compliant hardware)              |
+| Description | RemoteFX vGPU | Discrete Device Assignment |
+|--|--|--|
+| GPU resource model | Dedicated or shared | Dedicated only |
+| VM density | High (one or more GPUs to many VMs) | Low (one or more GPUs to one VM) |
+| App compatibility | DX 11.1, OpenGL 4.4, OpenCL 1.1 | All GPU capabilities provided by vendor (DX 12, OpenGL, CUDA) |
+| AVC444 | Enabled by default | Available through Group Policy |
+| GPU VRAM | Up to 1 GB dedicated VRAM | Up to VRAM supported by the GPU |
+| Frame rate | Up to 30fps | Up to 60fps |
+| GPU driver in guest | RemoteFX 3D adapter display driver (Microsoft) | GPU vendor driver (NVIDIA, AMD, Intel) |
+| Host OS support | Windows Server 2016 | Windows Server 2016; Windows Server 2019 |
+| Guest OS support | Windows Server 2012 R2; Windows Server 2016; Windows 7 SP1; Windows 8.1; Windows 10 | Windows Server 2012 R2; Windows Server 2016; Windows Server 2019; Windows 10; Linux |
+| Hypervisor | Microsoft Hyper-V | Microsoft Hyper-V |
+| GPU hardware | Enterprise GPUs (such as Nvidia Quadro/GRID or AMD FirePro) | Enterprise GPUs (such as Nvidia Quadro/GRID or AMD FirePro) |
+| Server hardware | No special requirements | Modern server, exposes IOMMU to OS (usually SR-IOV compliant hardware) |

@@ -1,17 +1,11 @@
 ---
 title: Manage Multiple, remote Servers with Server Manager
-description: Server Manager
-
-ms.prod: windows-server
-
-
-ms.technology: manage-server-manager
-
+description: Learn how to use features in the Server Manager console to manage multiple, remote servers.
 ms.topic: article
 ms.assetid: 3a17e686-e7f2-47e2-b7af-733777c38b5f
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Manage Multiple, remote Servers with Server Manager
@@ -41,7 +35,7 @@ The following sections list some initial considerations that you need to review,
 Server Manager is installed by default with all editions of  Windows Server 2012 R2  and  Windows Server 2012 . No additional hardware requirements exist for Server Manager.
 
 ### <a name=BKMK_softconfig></a>Software and configuration requirements
-Server Manager is installed by default with all editions of  Windows Server 2012 . Although you can use Server Manager to manage [Server Core installation options](https://go.microsoft.com/fwlink/p/?LinkID=241573) of  Windows Server 2012  and  Windows Server 2008 R2  that are running on remote computers, Server Manager does not run directly on Server Core installation options.
+Server Manager is installed by default with all editions of  Windows Server 2012 . Although you can use Server Manager to manage [Server Core installation options](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831786(v=ws.11)) of  Windows Server 2012  and  Windows Server 2008 R2  that are running on remote computers, Server Manager does not run directly on Server Core installation options.
 
 To fully manage remote servers that are running  Windows Server 2008  or  Windows Server 2008 R2 , install the following updates on the servers you want to manage, in the order shown.
 
@@ -73,7 +67,7 @@ The Server Manager console is included with [Remote Server Administration Tools]
 
 ###### To start Server Manager on a client computer
 
-1.  Follow instructions in [Deploy Remote Server Administration Tools](https://go.microsoft.com/fwlink/?LinkID=238562) to install Remote Server Administration Tools for Windows 8.1 or Remote Server Administration Tools for Windows 8.
+1.  Follow instructions in [Deploy Remote Server Administration Tools](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831501(v=ws.11)) to install Remote Server Administration Tools for Windows 8.1 or Remote Server Administration Tools for Windows 8.
 
 2.  On the **start** screen, click **Server Manager**. The **Server Manager** tile is available after you install Remote Server Administration Tools.
 
@@ -122,17 +116,17 @@ To perform management tasks on remote servers by using Server Manager, remote se
     > [!NOTE]
     > This command also works in a command prompt that has been opened with elevated user rights (Run as Administrator).
 
-    if enabling remote management fails, see [about_remote_Troubleshooting](https://go.microsoft.com/fwlink/p/?LinkID=135188) on Microsoft TechNet for troubleshooting tips and best practices.
+    if enabling remote management fails, see [about_remote_Troubleshooting](/powershell/module/microsoft.powershell.core/about/about_remote_troubleshooting) on Microsoft TechNet for troubleshooting tips and best practices.
 
 ###### To enable Server Manager and Windows PowerShell remote management on older operating systems
 
 -   Do one of the following.
 
-    -   To enable remote management on servers that are running  Windows Server 2008 R2 , see [remote Management with Server Manager](https://go.microsoft.com/fwlink/?LinkID=137378) in the  Windows Server 2008 R2  help.
+    -   To enable remote management on servers that are running  Windows Server 2008 R2 , see [remote Management with Server Manager](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759202(v=ws.11)) in the  Windows Server 2008 R2  help.
 
-    -   To enable remote management on servers that are running  Windows Server 2008 , see [Enable and Use remote Commands in Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=242565).
+    -   To enable remote management on servers that are running  Windows Server 2008 , see [Enable and Use remote Commands in Windows PowerShell](/previous-versions/technet-magazine/ff700227(v=msdn.10)).
 
-    -   To enable remote management on servers that are running Windows Server 2003, enable WMI DCOM exceptions in Windows Firewall. For more information about how to do this on servers that are running Windows Server 2003, see [Connecting Through Windows Firewall](https://msdn.microsoft.com/library/aa389286.aspx) on MSDN.
+    -   To enable remote management on servers that are running Windows Server 2003, enable WMI DCOM exceptions in Windows Firewall. For more information about how to do this on servers that are running Windows Server 2003, see [Connecting Through Windows Firewall](/windows/win32/wmisdk/connecting-to-wmi-remotely-with-vbscript) on MSDN.
 
 ## <a name=BKMK_tasks></a>Tasks that you can perform in Server Manager
 Server Manager makes server administration more efficient by allowing administrators to do tasks in the following table by using a single tool. In  Windows Server 2012 R2  and  Windows Server 2012 , both standard users of a server and members of the Administrators group can perform management tasks in Server Manager, but by default, standard users are prevented from performing some tasks, as shown in the following table.
@@ -146,7 +140,7 @@ Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdl
 |----------|----------------------------------|-------------|
 |add remote servers to a pool of servers that Server Manager can be used to manage.|Yes|No|
 |create and edit custom groups of servers, such as servers that are in a specific geographic location or serve a specific purpose.|Yes|Yes|
-|Install or uninstall roles, role services, and features on the local or on remote servers that are running  Windows Server 2012 R2  or  Windows Server 2012 . For definitions of roles, role services, and features, see [Roles, Role Services, and Features](https://go.microsoft.com/fwlink/p/?LinkId=239558).|Yes|No|
+|Install or uninstall roles, role services, and features on the local or on remote servers that are running  Windows Server 2012 R2  or  Windows Server 2012 . For definitions of roles, role services, and features, see [Roles, Role Services, and Features](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754923(v=ws.11)).|Yes|No|
 |View and make changes to server roles and features that are installed on either local or remote servers. **Note:** In Server Manager, role and feature data is displayed in the base language of the system, also called the system default GUI language, or the language selected during installation of the operating system.|Yes|Standard users can view and manage roles and features, and perform tasks such as viewing role events, but cannot add or remove role services.|
 |start management tools such as Windows PowerShell or mmc snap-ins. You can start a Windows PowerShell session targeted at a remote server by right-clicking the server in the **Servers** tile, and then clicking **Windows PowerShell**. You can start mmc snap-ins from the **Tools** menu of the Server Manager console, and then point the mmc toward a remote computer after the snap-in is open.|Yes|Yes|
 |Manage remote servers with different credentials by right-clicking a server in the **Servers** tile, and then clicking **Manage As**. You can use **Manage As** for general server and File and Storage Services management tasks.|Yes|No|
@@ -184,7 +178,7 @@ You can restart a remote server from the **Servers** tile of a role or group pag
 
 > [!IMPORTANT]
 > Restarting a remote server forces the server to restart, even if users are still logged on to the remote server, and even if programs with unsaved data are still open. This behavior is different from shutting down or restarting the local computer, on which you would be prompted to save unsaved program data, and verify that you wanted to force logged-on users to log off. Be sure that you can force other users to log off of remote servers, and that you can discard unsaved data in programs that are running on the remote servers.
-> 
+>
 > if an automatic refresh occurs in Server Manager while a managed server is shutting down and restarting, refresh and manageability status errors can occur for the managed server, because Server Manager cannot connect to the remote server until it is finished restarting.
 
 #### To restart remote servers in Server Manager
@@ -237,5 +231,3 @@ You can export Server Manager settings, make Server Manager settings portable, o
     -   %*appdata*%\Microsoft\Windows\ServerManager\Serverlist.xml
 
     -   %*localappdata*%\Microsoft_Corporation\ServerManager.exe_StrongName_*GUID*\6.2.0.0\user.config
-
-

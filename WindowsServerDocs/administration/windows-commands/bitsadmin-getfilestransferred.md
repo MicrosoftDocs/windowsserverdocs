@@ -1,13 +1,11 @@
 ---
 title: bitsadmin getfilestransferred
 description: Reference article for the bitsadmin getfilestransferred command, which retrieves the number of files transferred for the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: e282815c-938b-4ac0-a09d-9baafb656dcb
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

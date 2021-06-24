@@ -1,13 +1,11 @@
 ---
 title: Manage Hyper-Converged Infrastructure with Windows Admin Center
 description: Manage Hyper-Converged Infrastructure with Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 03/01/2019
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Manage Hyper-Converged Infrastructure with Windows Admin Center
 
@@ -15,13 +13,13 @@ ms.prod: windows-server
 
 ## What is Hyper-Converged Infrastructure
 
-Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview), [Software Defined Networking](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking) and [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server).
+Hyper-Converged Infrastructure consolidates software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. This capability was introduced in Windows Server 2016 with [Storage Spaces Direct](../../../storage/storage-spaces/storage-spaces-direct-overview.md), [Software Defined Networking](../../../networking/sdn/software-defined-networking.md) and [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md).
 
 > [!Tip]
 > Looking to acquire Hyper-Converged Infrastructure? Microsoft recommends these [Windows Server Software-Defined](https://microsoft.com/wssd) solutions from our partners. They are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly.
 
 > [!IMPORTANT]
-> Some of the features described in this article are only available in Windows Admin Center Preview. [How do I get this version?](https://aka.ms/windowsadmincenter)
+> Some of the features described in this article are only available in Windows Admin Center Preview. [How do I get this version?](../overview.md)
 
 ## What is Windows Admin Center
 
@@ -92,7 +90,7 @@ Once your Hyper-Converged Infrastructure is deployed, you can manage it using Wi
 
 ### Install Windows Admin Center
 
-If you haven't already, download and install Windows Admin Center. The fastest way to get up and running is to install it on your Windows 10 computer and manage your servers remotely. This takes less than five minutes. [Download now](https://aka.ms/windowsadmincenter) or [learn more about other installation options](../deploy/install.md).
+If you haven't already, download and install Windows Admin Center. The fastest way to get up and running is to install it on your Windows 10 computer and manage your servers remotely. This takes less than five minutes. [Download now](../overview.md) or [learn more about other installation options](../deploy/install.md).
 
 ### Add Hyper-Converged Cluster
 
@@ -272,7 +270,7 @@ You can also configure the virtual network when creating a virtual machine.
 
 ![Monitor SDN infrastructure](../media/manage-hyper-converged/sdn-monitoring.png)
 
-## Feedback
+## Give us feedback
 
 It's all about your feedback! The most important benefit of frequent updates is to hear what's working and what needs to be improved. Here are some ways to let us know what you're thinking:
 
@@ -283,6 +281,6 @@ It's all about your feedback! The most important benefit of frequent updates is 
 ### Additional References
 
 - [Windows Admin Center](../overview.md)
-- [Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
-- [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server)
-- [Software Defined Networking](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking)
+- [Storage Spaces Direct](../../../storage/storage-spaces/storage-spaces-direct-overview.md)
+- [Hyper-V](../../../virtualization/hyper-v/hyper-v-on-windows-server.md)
+- [Software Defined Networking](../../../networking/sdn/software-defined-networking.md)

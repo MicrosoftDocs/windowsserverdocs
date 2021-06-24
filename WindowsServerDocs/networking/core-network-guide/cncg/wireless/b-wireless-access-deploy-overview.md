@@ -1,19 +1,18 @@
 ---
 title: Wireless Access Deployment Overview
-description: This topic is part of the Windows Server 2016 Networking guide "Deploy Password-Based 802.1X Authenticated Wireless Access"
+description: Learn about wireless access deployment components that are required to deploy 802.1X authenticated wireless access with PEAP-MS-CHAP v2.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: 29ae0f54-f045-465a-a08e-5867979345f2
-author: eross-msft
-ms.author: lizross
+author: JasonGerend
+ms.author: jgerend
+ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Overview
 
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-The following illustration shows the components that are required to deploy 802.1X authenticated wireless access with PEAP\-MS\-CHAP v2.  
+The following illustration shows the components that are required to deploy 802.1X authenticated wireless access with PEAP\-MS\-CHAP v2.
 
 ![802.1X Deployment Infrastructure Overview](../../../media/8021X-Deploy-Overview/8021X-Deploy-Overview.jpg)
 
@@ -49,7 +48,7 @@ In Group Policy Management Editor, when you right\-click **Wireless Network \(IE
 - **Create a New Windows XP Policy**
 
 >[!TIP]
->When configuring a new wireless network policy, you have the option to change the name and description of the policy. If you change the name of the policy, the change is reflected in the **Details** pane of Group Policy Management Editor and on the title bar of the wireless network policy dialog box. Regardless of how you rename your policies, the New XP Wireless Policy will always be listed in Group Policy Management Editor with the **Type** displaying **XP**. Other policies are listed with the **Type** showing **Vista and Later Releases**.  
+>When configuring a new wireless network policy, you have the option to change the name and description of the policy. If you change the name of the policy, the change is reflected in the **Details** pane of Group Policy Management Editor and on the title bar of the wireless network policy dialog box. Regardless of how you rename your policies, the New XP Wireless Policy will always be listed in Group Policy Management Editor with the **Type** displaying **XP**. Other policies are listed with the **Type** showing **Vista and Later Releases**.
 
 The Wireless Network Policy for Windows Vista and Later Releases enables you to configure, prioritize, and manage multiple wireless profiles. A wireless profile is a collection of connectivity and security settings that are used to connect to a specific wireless network. When Group Policy is updated on your wireless client computers, the profiles you create in the  Wireless Network Policy are automatically added to the configuration on your wireless client computers to which the Wireless Network Policy applies.
 
@@ -76,7 +75,7 @@ This is commonly known as a mixed\-mode deployment, and it allows computers of d
 ### Network Policy Server \(NPS\)
 NPS enables you to create and enforce network access policies for connection request authentication and authorization.
 
-When you use NPS as a RADIUS server, you configure network access servers, such as wireless access points, as RADIUS clients in NPS. You also configure the network policies that NPS uses to authenticate access clients and authorize their connection requests.  
+When you use NPS as a RADIUS server, you configure network access servers, such as wireless access points, as RADIUS clients in NPS. You also configure the network policies that NPS uses to authenticate access clients and authorize their connection requests.
 
 ### Wireless client computers
 For the purpose of this guide, wireless client computers are computers and other devices that are equipped with IEEE 802.11 wireless network adapters and that are running Windows client or Windows Server operating systems.

@@ -3,8 +3,6 @@ title: MAK activation known issues
 description: Describes common issues that may occur during the MAK activation process, and provides resolutions and guidance
 ms.topic: troubleshooting
 ms.date: 10/3/2019
-ms.technology: server-general
-ms.topic: article
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm
@@ -21,7 +19,7 @@ On the computer, open the **System** control panel and look for **Windows is act
 
 ## The computer does not activate over the internet
 
-Make sure that the required ports are open in the firewall. For a list of ports, see the [Volume Activation Deployment Guide](https://go.microsoft.com/fwlink/?linkid=150083).
+Make sure that the required ports are open in the firewall. For a list of ports, see the [Volume Activation Deployment Guide](/previous-versions/tn-archive/dd772269(v=technet.10)).
 
 ## Internet and telephone activation fail
 

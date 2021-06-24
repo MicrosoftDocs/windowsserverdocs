@@ -1,13 +1,11 @@
 ---
 title: makecab
 description: Reference article for the makecab command, which packages existing files into a cabinet (.cab) file.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4da95297-c593-427b-9f76-2f389c46cbf4
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -46,4 +44,4 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 
 - [diantz command](diantz.md)
 
-- [Microsoft Cabinet format](https://docs.microsoft.com/previous-versions/bb417343(v=msdn.10))
+- [Microsoft Cabinet format](/previous-versions/bb417343(v=msdn.10))

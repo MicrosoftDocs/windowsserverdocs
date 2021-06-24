@@ -1,13 +1,11 @@
 ---
 title: bitsadmin listfiles
 description: Reference article for the bitsadmin listfiles command, which lists the files in the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: ad0d1eaa-3bd8-45e5-8f72-4da7366f0d59
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

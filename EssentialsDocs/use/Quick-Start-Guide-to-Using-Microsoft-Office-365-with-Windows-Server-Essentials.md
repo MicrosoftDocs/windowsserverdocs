@@ -1,51 +1,50 @@
 ---
-title: "Quick Start Guide to Using Microsoft Office 365 with Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+title: "Quick Start Guide to Using Microsoft 365 with Windows Server Essentials"
+description: Learn how to open the apps in Microsoft 365 using familiar tools like the Windows Server Essentials Launchpad and My Server 2012 R2.
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 51a7f1f1-088b-4487-b2c6-4f97aad3004d
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
-# Quick Start Guide to Using Microsoft Office 365 with Windows Server Essentials
+# Quick Start Guide to Using Microsoft 365 with Windows Server Essentials
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
- Office 365 is an easy-to-use set of web-enabled tools that let you access your email, important documents, contacts, and calendar from almost anywhere and any device. These tools include Microsoft Office Web Apps, which are web versions of the Microsoft Office desktop applications that you are already familiar with, such as Microsoft Word, Microsoft Excel, and Microsoft PowerPoint. With Office Web Apps, you can create and edit documents on any computer with a web browser.
+ Microsoft 365 is an easy-to-use set of web-enabled tools that let you access your email, important documents, contacts, and calendar from almost anywhere and any device. These tools include Microsoft Office Web Apps, which are web versions of the Microsoft Office desktop applications that you are already familiar with, such as Microsoft Word, Microsoft Excel, and Microsoft PowerPoint. With Office Web Apps, you can create and edit documents on any computer with a web browser.
 
- For a quick introduction to  Office 365, view the [Office 365: A tour for users](https://onlinehelp.microsoft.com/office365-smallbusinesses/hh534379.aspx) videos at the  Office 365 website.
+ For a quick introduction to  Microsoft 365, view the [Microsoft 365: A tour for users](https://onlinehelp.microsoft.com/office365-smallbusinesses/hh534379.aspx) videos at the  Microsoft 365 website.
 
- If your organization uses  Office 365 web apps, you can open the apps in  Office 365 using familiar tools like the  Windows Server Essentials Launchpad and My Server 2012 R2. (You can also, of course, [sign in to Office 365 directly](https://login.microsoftonline.com/login.srf?wa=wsignin1.0&rpsnv=2&ct=1384059583&rver=6.1.6206.0&wp=MBI_KEY&wreply=https:%2F%2Fwww.outlook.com%2Fowa%2F&id=260563&whr=students.tamuk.edu&CBCXT=out) using your organizational online ID and your network password.)
+ If your organization uses  Microsoft 365 web apps, you can open the apps in  Microsoft 365 using familiar tools like the  Windows Server Essentials Launchpad and My Server 2012 R2. (You can also, of course, [sign in to Microsoft 365 directly](https://login.microsoftonline.com/login.srf?wa=wsignin1.0&rpsnv=2&ct=1384059583&rver=6.1.6206.0&wp=MBI_KEY&wreply=https:%2F%2Fwww.outlook.com%2Fowa%2F&id=260563&whr=students.tamuk.edu&CBCXT=out) using your organizational online ID and your network password.)
 
 > [!IMPORTANT]
 >  If you lose a mobile device that you use to connect to Exchange Online, contact your administrator so they can remove sensitive data from the device the next time it's turned on.
 
 ### Before you begin
 
-1.  You must have a Microsoft Online Services account (in  Windows Server Essentials, it's called an *Office 365 account*) assigned to your user account. If you don't already have an online account for  Office 365, ask the person who maintains your computer network to create one for you.
+1.  You must have a Microsoft Online Services account (in  Windows Server Essentials, it's called an *Microsoft 365 account*) assigned to your user account. If you don't already have an online account for  Microsoft 365, ask the person who maintains your computer network to create one for you.
 
-2.  After you get your online account, sign in on the network and reset your Windows password. You will now use the same password to sign in to  Office 365 that you use on your network.
+2.  After you get your online account, sign in on the network and reset your Windows password. You will now use the same password to sign in to  Microsoft 365 that you use on your network.
 
     > [!NOTE]
     >  You might be prompted to change your Windows password when you sign in on your network.
 
-## Open Office 365 apps from the Launchpad
- The  Windows Server Essentials Launchpad gives you access to computer backups, shared files and media, and the Remote Web Access site from your computer. If you have a Microsoft online account, you can also open  Office 365 web apps from the Launchpad. The Launchpad is installed automatically the first time you use your computer to connect to the server.
+## Open Microsoft 365 apps from the Launchpad
+ The  Windows Server Essentials Launchpad gives you access to computer backups, shared files and media, and the Remote Web Access site from your computer. If you have a Microsoft online account, you can also open  Microsoft 365 web apps from the Launchpad. The Launchpad is installed automatically the first time you use your computer to connect to the server.
 
-#### To open Office 365 from the Launchpad
+#### To open Microsoft 365 from the Launchpad
 
-1.  Open the Launchpad, click **Microsoft Office 365**, and then click **Office 365 Home**.
+1.  Open the Launchpad, click **Microsoft Microsoft 365**, and then click **Microsoft 365 Home**.
 
-2.  Sign in to  Office 365 using the Microsoft online ID you were given and your Windows password.
+2.  Sign in to  Microsoft 365 using the Microsoft online ID you were given and your Windows password.
 
 > [!NOTE]
->  If you have not set up your computer to work with  Office 365, follow the steps in the **Start here** section of the  Office 365 portal.
+>  If you have not set up your computer to work with  Microsoft 365, follow the steps in the **Start here** section of the  Microsoft 365 portal.
 
 ## Work with documents in your SharePoint Online libraries from My Server 2012 R2
- If your server has the  Windows Server Essentials operating system, and your administrator is managing  Office 365 from the server, you can work with the documents in your SharePoint Online libraries from your laptop, mobile device, or phone by using the My Server 2012 R2 app. The app is free. You will need to install it first.
+ If your server has the  Windows Server Essentials operating system, and your administrator is managing  Microsoft 365 from the server, you can work with the documents in your SharePoint Online libraries from your laptop, mobile device, or phone by using the My Server 2012 R2 app. The app is free. You will need to install it first.
 
 #### To install My Server 2012 R2
 
@@ -63,7 +62,7 @@ manager: dongill
 2.  Click **SharePoint Online**.
 
     > [!NOTE]
-    >  If you don't see **SharePoint Online**, ask your administrator whether  Office 365 has been integrated with the server.
+    >  If you don't see **SharePoint Online**, ask your administrator whether  Microsoft 365 has been integrated with the server.
 
 3.  Click a SharePoint Online library to display the documents in the library.
 
@@ -79,7 +78,7 @@ manager: dongill
 
 -   [Launchpad Overview](../manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials.md)
 
--   [Manage Office 365](../manage/Manage-Office-365-in-Windows-Server-Essentials.md)
+-   [Manage Microsoft 365](../manage/Manage-Office-365-in-Windows-Server-Essentials.md)
 
 -   [Work Remotely](Work-Remotely-in-Windows-Server-Essentials.md)
 

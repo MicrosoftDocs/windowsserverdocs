@@ -1,13 +1,11 @@
 ---
 title: nslookup set class
 description: Reference article for the nslookup set class command, which changes the query class.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: ed826400-40da-42b6-b7f0-95db73790723
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

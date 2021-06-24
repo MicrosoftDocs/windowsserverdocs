@@ -1,13 +1,11 @@
 ---
 title: fsutil transaction
 description: Reference article for the fsutil transaction command, which manages NTFS transactions.
-ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
-ms.technology: storage
 ms.assetid: f2eefaaf-2817-4ac7-abac-d2b65fa971dc
-ms.topic: article
+ms.topic: reference
 ms.date: 10/16/2017
 ---
 
@@ -53,4 +51,4 @@ fsutil transaction fileinfo c:\test.txt
 
 - [fsutil](fsutil.md)
 
-- [Transactional NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730726(v=ws.10))
+- [Transactional NTFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730726(v=ws.10))

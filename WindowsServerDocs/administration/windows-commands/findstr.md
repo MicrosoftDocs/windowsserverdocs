@@ -1,13 +1,11 @@
 ---
 title: findstr
 description: Reference article for the findstr command, which searches for patterns of text in files.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: c2d803fb-4cd2-46a1-a1b7-6f5e0249c418
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -44,7 +42,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<file>] 
 | /d:`<dirlist>` | Searches the specified list of directories. Each directory must be separated with a semicolon (;), for example `dir1;dir2;dir3`. |
 | /a:`<colorattribute>` | Specifies color attributes with two hexadecimal digits. Type `color /?` for additional information. |
 | `<strings>` | Specifies the text to search for in *filename*. Required. |
-| `[\<drive>:][<path>]<filename>[ ...]` | Specifies the location and file or files to search. At least one file name is required. |
+| `[\<drive>:][<path>]<filename>[...]` | Specifies the location and file or files to search. At least one file name is required. |
 | /? | Displays Help at the command prompt. |
 
 #### Remarks
@@ -57,20 +55,20 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<file>] 
 
   - A meta-character is a symbol with special meaning (an operator or delimiter) in the regular-expression syntax.
 
-    The accepted meta-characters, are:
+    The accepted meta-characters are:
 
     | Meta-character | Value |
     | -------------- | ----- |
-    | `.` | **Wildcard** - Any character |
-    | `*` | **Repeat** - Zero or more occurrences of the previous character or class. |
-    | `^` | **Beginning line position** - Beginning of the line. |
-    | `$` | **Ending line position** - End of the line. |
-    | `[class]` | **Character class** - Any one character in a set. |
-    | `[^class]` | **Inverse class** - Any one character not in a set. |
-    | `[x-y]` | **Range** - Any characters within the specified range. |
-    | `\x` | **Escape** - Literal use of a meta-character. |
-    | `<string` | **Beginning word position** - Beginning of the word. |
-    | `string>` | **Ending word position** - End of the word. |
+    | `.`            | **Wildcard** - Any character |
+    | `*`            | **Repeat** - Zero or more occurrences of the previous character or class. |
+    | `^`            | **Beginning line position** - Beginning of the line. |
+    | `$`            | **Ending line position** - End of the line. |
+    | `[class]`      | **Character class** - Any one character in a set. |
+    | `[^class]`     | **Inverse class** - Any one character not in a set. |
+    | `[x-y]`        | **Range** - Any characters within the specified range. |
+    | `\x`           | **Escape** - Literal use of a meta-character. |
+    | `\<string`     | **Beginning word position** - Beginning of the word. |
+    | `string\>`     | **Ending word position** - End of the word. |
 
     The special characters in regular expression syntax have the most power when you use them together. For example, use the combination of the wildcard character (`.`) and repeat (`*`) character to match any string of characters: `.*`
 
@@ -91,7 +89,7 @@ findstr hello there x.y
 To search for *hello there* in file *x.y*, type:
 
 ```
-findstr /c:hello there x.y
+findstr /c:"hello there" x.y
 ```
 
 To find all occurrences of the word *Windows* (with an initial capital letter W) in the file *proposal.txt*, type:
@@ -121,13 +119,13 @@ findstr /g:stringlist.txt /f:filelist.txt > results.out
 To list every file containing the word *computer* within the current directory and all subdirectories, regardless of case, type:
 
 ```
-findstr /s /i /m <computer> *.*
+findstr /s /i /m \<computer\> *.*
 ```
 
 To list every file containing the word computer and any other words that begin with comp, (such as compliment and compete), type:
 
 ```
-findstr /s /i /m <comp.* *.*
+findstr /s /i /m \<comp.* *.*
 ```
 
 ## Additional References

@@ -1,13 +1,10 @@
 ---
 title: Install the Hyper-V role on Windows Server
 description: Gives instructions for installing Hyper-V using Server Manager or Windows PowerShell
-ms.prod: windows-server
-manager: dongill
-ms.technology: compute-hyper-v
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 12/02/2016
 ---
 # Install the Hyper-V role on Windows Server
@@ -15,7 +12,7 @@ ms.date: 12/02/2016
 >Applies To: Windows Server 2016, Windows Server 2019
 
 To create and run virtual machines, install the Hyper-V role on Windows Server by using Server Manager or the **Install-WindowsFeature** cmdlet in Windows PowerShell.
-For Windows 10, see [Install Hyper-V on Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+For Windows 10, see [Install Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
 To learn more about Hyper-V, see the [Hyper-V Technology Overview](../Hyper-V-Technology-Overview.md). To try out Windows Server 2019, you can download and install an evaluation copy. See the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019).
 
@@ -72,4 +69,4 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
 
 ## Additional References
 
-- [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/Microsoft.Windows.ServerManager.Migration/Install-WindowsFeature)
+- [Install-WindowsFeature](/powershell/module/Microsoft.Windows.ServerManager.Migration/Install-WindowsFeature)

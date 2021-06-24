@@ -1,13 +1,11 @@
 ---
 title: Create the Key Distribution Services KDS Root Key
-description: Windows Server Security
-ms.prod: windows-server
-ms.technology: security-gmsa
+description: Learn how to create a Microsoft Key Distribution Service (kdssvc.dll) root key on the domain controller using Windows PowerShell to generate group Managed Service Account passwords in Windows Server 2012 or later.
 ms.topic: article
 ms.assetid: 42e5db8f-1516-4d42-be0a-fa932f5588e9
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Create the Key Distribution Services KDS Root Key
@@ -21,7 +19,7 @@ Domain Controllers (DC) require a root key to begin generating gMSA passwords. T
 > [!NOTE]
 > Deleting and recreating the root key may lead to issues where the old key continues to be used after deletion due to caching of the key. The Key Distribution Service (KDC) should be restarted on all domain controllers if the root key is recreated.
 
-Membership in the **Domain Admins** or **Enterprise Admins** groups, or equivalent, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](https://technet.microsoft.com/library/dd728026(WS.10).aspx).
+Membership in the **Domain Admins** or **Enterprise Admins** groups, or equivalent, is the minimum required to complete this procedure. For detailed information about using the appropriate accounts and group memberships, see [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 > [!NOTE]
 > A 64-bit architecture is required to run the Windows PowerShell commands which are used to administer group Managed Service Accounts.
@@ -57,5 +55,3 @@ For test environments with only one DC, you can create a KDS root key and set th
 
 ## See Also
 [Getting Started with Group Managed Service Accounts](getting-started-with-group-managed-service-accounts.md)
-
-

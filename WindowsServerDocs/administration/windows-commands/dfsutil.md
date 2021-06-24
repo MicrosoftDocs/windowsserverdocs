@@ -1,13 +1,11 @@
 ---
 title: dfsutil
 description: Reference article for the dfsutil command, which manages DFS Namespaces, servers and clients.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: ef5093a4-0d24-4b21-9d04-59933ad98e2c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -19,7 +17,7 @@ The dfsutil command manages DFS Namespaces, servers, and clients.
 
 ## Functionality available in PowerShell
 
-The [DFSN](https://docs.microsoft.com/powershell/module/dfsn/?view=win10-ps) PowerShell module provides equivalent functionality to the following dfsutil parameters.
+The [DFSN](/powershell/module/dfsn/) PowerShell module provides equivalent functionality to the following dfsutil parameters.
 
 | Parameter | Description |
 | --------- | ----------- |

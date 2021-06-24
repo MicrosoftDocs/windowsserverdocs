@@ -1,13 +1,11 @@
 ---
 title: xcopy
 description: Reference article for xcopy, which copies files and directories, including subdirectories.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 76a310d7-9925-4571-a252-0e28960d5f89
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 01/05/2019
 ---
 

@@ -60,7 +60,7 @@
 
 ### [Hyper-V Performance Tuning](../administration/performance-tuning/role/hyper-v-server/index.md)
 ## [Hyper-V Virtual Switch](hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
-### [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](hyper-v-virtual-switch/rdMA-and-Switch-Embedded-Teaming.md)
+### [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements)
 ### [Manage Hyper-V Virtual Switch](hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md)
 #### [Configure and View VLAN Settings on Hyper-V Virtual Switch Ports](hyper-v-virtual-switch/Configure-and-View-VLAN-Settings-on-Hyper-V-Virtual-Switch-Ports.md)
 #### [Create Security Policies with extended Port Access Control lists](hyper-v-virtual-switch/create-Security-Policies-with-extended-Port-Access-Control-lists.md)

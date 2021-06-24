@@ -2,12 +2,11 @@
 title: Plan Network Policy Server
 description: This topic provides links to information about planning Network Policy Server RADIUS server deployment planning in Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server
-ms.technology: networking
 ms.topic: article
 ms.assetid: cd6fc1b8-26b0-47a4-b27d-f6fa9da0d447
-ms.author: lizross 
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Plan Network Policy Server
@@ -17,7 +16,7 @@ author: eross-msft
 This topic provides links to information about planning NPS and proxy deployments.
 
 >[!NOTE]
->For additional Network Policy Server documentation, you can use the following library sections. 
+>For additional Network Policy Server documentation, you can use the following library sections.
 > - [Getting Started with Network Policy Server](nps-getstart-top.md)
 > - [Deploy Network Policy Server](nps-deploy.md)
 > - [Manage Network Policy Server](nps-manage-top.md)

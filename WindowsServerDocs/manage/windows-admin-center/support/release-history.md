@@ -1,18 +1,19 @@
 ---
 title: Windows Admin Center release history
 description: A summary of the history of Windows Admin Center releases, including links to download them.
-ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 01/06/2020
-ms.prod: windows-server
 ---
 # Windows Admin Center release history
 
 Here's a listing of our latest released features:
 
-- Version [1910.2](https://aka.ms/wac1910.2) is the most recent GA release - it includes updates to the platform’s accessibility and numerous bug fixes
+- Version [2103](https://aka.ms/wac2103) is the most recent GA release - it introduces automatic platform an extension updates and includes updates to several of our core tools like the VM tool and Events.
+- Version [2009](https://aka.ms/wac2009) includes support for Azure Kubernetes Service on Azure Stack HCI and major updates to the Virtual machines, File shares, and Containers tools.
+- Version [2007](https://aka.ms/wac2007) includes support for the new Azure Stack HCI and new features for several tools.
+- Version [1910.2](https://aka.ms/wac1910.2) includes updates to the platform’s accessibility and numerous bug fixes
 - Version [1910](https://aka.ms/wac1910) introduces several new Azure hybrid services and brings features that were previously in preview to the GA channel.
 - Version [1909](https://aka.ms/wac1909) introduces the Azure VM specific connection type and unifies the connection types for traditional failover clusters and HCI clusters.
 - Version [1908](https://aka.ms/wac1908) added visual updates, Packetmon, FlowLog Audit, Azure Monitor onboarding for clusters, and support for WinRM over HTTPS (port 5986.)

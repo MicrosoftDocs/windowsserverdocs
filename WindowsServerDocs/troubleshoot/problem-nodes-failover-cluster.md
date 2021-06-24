@@ -1,11 +1,10 @@
 ---
 title: A problem with deleting a node
 description: This article describes the problems encountered when removing nodes from active failover cluster membership.
-ms.prod: windows-server
-ms.technology: server-general
 ms.date: 05/28/2020
 author: Deland-Han
 ms.author: delhan
+ms.topic: troubleshooting
 ---
 # Having a problem with nodes being removed from active Failover Cluster membership
 

@@ -1,10 +1,8 @@
 ---
 title: Performance Tuning Windows Server Containers
 description: Performance tuning recommendations for containers on Windows Server 16
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
 ms.topic: landing-page
-ms.author: davso; ericam; yashi
+ms.author: ericam
 author: akino
 ms.date: 10/16/2017
 ---
@@ -12,7 +10,7 @@ ms.date: 10/16/2017
 # Performance tuning Windows Server containers
 
 ## Introduction
-Windows Server 2016 is the first version of Windows to ship support for container technology built in to the OS. In Server 2016, two types of containers are available: Windows Server Containers and Hyper-V Containers. Each container type supports either the Server Core or Nano Server SKU of Windows Server 2016. 
+Windows Server 2016 is the first version of Windows to ship support for container technology built in to the OS. In Server 2016, two types of containers are available: Windows Server Containers and Hyper-V Containers. Each container type supports either the Server Core or Nano Server SKU of Windows Server 2016.
 
 These configurations have different performance implications which we detail below to help you understand which is right for your scenarios. In addition, we detail performance impacting configurations, and describe the tradeoffs with each of those options.
 
@@ -28,7 +26,7 @@ The additional isolation provided by Hyper-V containers is achieved in large par
 
 ### Nano Server and Server Core
 
-Windows Server Containers and Hyper-V containers offer support for Server Core and for a new installation option available in Windows Server 2016 : [Nano Server](https://technet.microsoft.com/windows-server-docs/compute/nano-server/getting-started-with-nano-server). 
+Windows Server Containers and Hyper-V containers offer support for Server Core and for a new installation option available in Windows Server 2016 : [Nano Server](https://technet.microsoft.com/windows-server-docs/compute/nano-server/getting-started-with-nano-server).
 
 Nano Server is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64-bit applications, tools, and agents. It takes up far less disk space and starts faster.
 
@@ -66,7 +64,7 @@ Windows Server Containers and Hyper-V containers offer a variety of networking m
 
 Each container will receive an IP address from an internal, private IP prefix (e.g. 172.16.0.0/12). Port forwarding / mapping from the container host to container endpoints is supported. Docker creates a NAT network by default when the dockerd first runs.
 
-Of these three modes, the NAT configuration is the most expensive network IO path, but has the least amount of configuration needed. 
+Of these three modes, the NAT configuration is the most expensive network IO path, but has the least amount of configuration needed.
 
 Windows Server containers use a Host vNIC to attach to the virtual switch. Hyper-V Containers use a Synthetic VM NIC (not exposed to the Utility VM) to attach to the virtual switch. When containers are communicating with the external network, packets are routed through WinNAT with address translations applied, which incurs some overhead.
 

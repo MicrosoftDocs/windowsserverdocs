@@ -1,10 +1,8 @@
 ---
-title: SLB Gateway Performance Tuning in Software Defined Networks  
-description: SLB Gateway performance tuning guidelines on SDN networks 
-ms.prod: windows-server
-ms.technology: performance-tuning-guide
+title: SLB Gateway Performance Tuning in Software Defined Networks
+description: SLB Gateway performance tuning guidelines on SDN networks
 ms.topic: article
-ms.author: grcusanz; anpaul
+ms.author: grcusanz
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -17,13 +15,13 @@ No additional performance tuning is required to configure the Network Controller
 
 ## SLB Mux VM Configuration
 
-SLB Mux virtual machines are deployed in an Active-Active configuration.  This means that every Mux VM that is deployed and added to the Network Controller can process incoming requests.  Thus, the total aggregate throughput of all of the connections is only limited by the number of Mux VMs that you have deployed.  
+SLB Mux virtual machines are deployed in an Active-Active configuration.  This means that every Mux VM that is deployed and added to the Network Controller can process incoming requests.  Thus, the total aggregate throughput of all of the connections is only limited by the number of Mux VMs that you have deployed.
 
 An individual connection to a Virtual IP (VIP) will always be sent to the same Mux, assuming the number of muxes remains constant, and as a result its throughput will be limited to the throughput of a single Mux VM.  Muxes only process the inbound traffic that is destined to a VIP.  Response packets go directly from the VM that is sending the response to the physical switch which forwards it on to the client.
 
 In some cases when the source of the request originates from an SDN host that is added to the same Network Controller that manages the VIP, further optimization of the inbound path for the request is also performed which enables most packets to travel directly from the client to the server, bypassing the Mux VM entirely.  No additional configuration is required for this optimization to take place.
 
-Each SLB Mux VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the  [Plan a Software Defined Network Infrastructure](../../../../networking/sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md) topic.
+Each SLB Mux VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the  [Plan a Software Defined Network Infrastructure](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure) topic.
 
 ## Single Root IO virtualization (SR-IOV)
 

@@ -1,13 +1,11 @@
 ---
 title: ftp dir
 description: Reference article for the ftp dir command, which displays a list of directory files and subdirectories on a remote computer.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: a29a92a5-7b79-4e6e-95cf-2ccb38bb6fb2
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -48,4 +46,4 @@ dir . dirlist.txt
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Additional FTP guidance](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Additional FTP guidance](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

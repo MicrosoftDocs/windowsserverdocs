@@ -1,18 +1,16 @@
 ---
 title: What's New in Windows Server, version 1803
-description: What are the new features in compute, identity, management, automation, networking, security, storage.
-ms.prod: windows-server
-ms.technology: server-general
+description: Learn about the new features in compute, identity, management, automation, networking, security, and storage in Windows Server, version 1803.
 ms.topic: article
 author: greg-lindsay
-ms.author: greg-lindsay
+ms.author: greglin
 ms.localizationpriority: high
 ms.date: 05/07/2018
 ---
 
 # What's New in Windows Server version 1803
 
->Applies To: Windows Server (Semi-Annual Channel)
+> Applies To: Windows Server (Semi-Annual Channel)
 
 <img src=../media/landing-icons/new.png style='float:left; padding:.5em;' alt=Icon showing a newspaper>&nbsp;To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server, version 1803. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server Semi-Annual Channel update](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update/).
 
@@ -22,7 +20,7 @@ Project Honolulu is now the **Windows Admin Center**.
 <br>&nbsp;
 > [!video https://www.youtube.com/embed/WCWxAp27ERk?autoplay=false]
 
-[Windows Admin Center](https://docs.microsoft.com/windows-server/manage/windows-admin-center/overview) consolidates all aspects of local and remote server management. Windows Admin Center is a locally deployed, browser-based management experience that does not require an Internet connection, giving you full control of all aspects of your Windows Server deployment.
+[Windows Admin Center](../manage/windows-admin-center/overview.md) consolidates all aspects of local and remote server management. Windows Admin Center is a locally deployed, browser-based management experience that does not require an Internet connection, giving you full control of all aspects of your Windows Server deployment.
 
 ## Windows Server release strategy
 
@@ -34,14 +32,14 @@ Based on telemetry and feedback, these channels have demonstrated that they conf
 
 The specific scenarios for the Semi-Annual Channel and the Long-Term Servicing Channel are as follows:
 
-|   | Long Term Servicing Channel |  Semi-Annual Channel |
-| ------------- | ------------- | ------------ |
-| Recommended scenarios     | General purpose file servers, first and third-party workloads, traditional apps, infrastructure roles, software-defined Datacenter, and Hyper-converged infrastructure  | Containerized applications, container hosts, and application scenarios benefiting from faster innovation |
-| New releases  | Every 2–3 years  | Every 6 months |
-| Support  | 5 years of Mainstream support + 5 years of Extended support  | 18 months |
-| Editions  | All available Windows Server editions  | Standard and Datacenter editions |
-| Who can use  | All customers through all channels | Software Assurance and cloud customers only |
-| Installation options  | Server Core and Server with Desktop Experience  | Server Core for container host, container image, and Nano Server container image |
+| Description | Long Term Servicing Channel | Semi-Annual Channel |
+|--|--|--|
+| Recommended scenarios | General purpose file servers, first and third-party workloads, traditional apps, infrastructure roles, software-defined Datacenter, and Hyper-converged infrastructure | Containerized applications, container hosts, and application scenarios benefiting from faster innovation |
+| New releases | Every 2–3 years | Every 6 months |
+| Support | 5 years of Mainstream support + 5 years of Extended support | 18 months |
+| Editions | All available Windows Server editions | Standard and Datacenter editions |
+| Who can use | All customers through all channels | Software Assurance and cloud customers only |
+| Installation options | Server Core and Server with Desktop Experience | Server Core for container host, container image, and Nano Server container image |
 
 ## Application platform and containers
 
@@ -54,7 +52,7 @@ The specific scenarios for the Semi-Annual Channel and the Long-Term Servicing C
 
 ### Server Core container image
 
-A smaller Server Core container with better application compatibility is now available. Detailed information is available [here](https://blogs.technet.microsoft.com/virtualization/2018/01/22/a-smaller-windows-server-core-container-with-better-application-compatibility/).
+A smaller Server Core container with better application compatibility is now available. Detailed information is available [here](https://techcommunity.microsoft.com/t5/virtualization/bg-p/Virtualization).
 
 - Unused optional features and roles have been removed. For more information see [Roles, Role Services, and Features not in Server Core containers](../administration/server-core/server-core-container-removed-roles.md).
     - Decreased download size to 1.58 GB, 30% reduction from Windows Server, version 1709.
@@ -63,7 +61,7 @@ A smaller Server Core container with better application compatibility is now ava
 
 ### Windows Subsystem for Linux (WSL)
 
-WSL enables server administrators to use existing tools and scripts from Linux on Windows Server. Many improvements showcased in the [command line blog](https://blogs.msdn.microsoft.com/commandline/tag/wsl/) are now part of Windows Server, including Background tasks, DriveFS, WSLPath, and much more.
+WSL enables server administrators to use existing tools and scripts from Linux on Windows Server. Many improvements showcased in the [command line blog](https://devblogs.microsoft.com/commandline/tag/wsl/) are now part of Windows Server, including Background tasks, DriveFS, WSLPath, and much more.
 
 ### Kubernetes
 
@@ -89,7 +87,7 @@ With the release of Windows Server, version 1803 more features will be available
 
 ## Storage
 
-With this release, it is possible to prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on all volumes when the service starts. This can conserve space on each volume, but will disable real-time file classification. For more information, see [File Server Resource Manager overview](https://docs.microsoft.com/windows-server/storage/fsrm/fsrm-overview).
+With this release, it is possible to prevent the File Server Resource Manager service from creating a change journal (also known as a USN journal) on all volumes when the service starts. This can conserve space on each volume, but will disable real-time file classification. For more information, see [File Server Resource Manager overview](../storage/fsrm/fsrm-overview.md).
 
 ## Features added to Server Core
 
@@ -105,5 +103,5 @@ Install-WindowsFeature -Name WDS
 
 ## Additional References
 
-[Windows Server release information](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info)<br>
-[What's new in Windows 10, version 1803 IT Pro content](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1803)
+[Windows Server release information](./windows-server-release-info.md)<br>
+[What's new in Windows 10, version 1803 IT Pro content](/windows/whats-new/whats-new-windows-10-version-1803)

@@ -1,12 +1,11 @@
 ---
 title: Create a Windows shielded VM template disk
-ms.prod: windows-server
+description: "Learn more about: Create a Windows shielded VM template disk"
 ms.topic: article
 ms.assetid: 9c8b84e8-1f5a-47a1-83ca-b1dbd801cb0b
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 01/29/2019
 ---
 
@@ -15,7 +14,7 @@ ms.date: 01/29/2019
 >Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2019
 
 
-As with regular VMs, you can create a VM template (for example, a [VM template in Virtual Machine Manager (VMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-library-add-vm-templates)) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This topic covers the steps to create a shielded template disk and a VM template in VMM.
+As with regular VMs, you can create a VM template (for example, a [VM template in Virtual Machine Manager (VMM)](/system-center/vmm/library-vm-templates)) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This topic covers the steps to create a shielded template disk and a VM template in VMM.
 
 To understand how this topic fits in the overall process of deploying shielded VMs, see [Hosting service provider configuration steps for guarded hosts and shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md).
 
@@ -52,15 +51,19 @@ Perform the following steps on a computer running Windows Server 2016, Windows 1
 
 2. To administer the server locally, install the **Shielded VM Tools** feature from **Remote Server Administration Tools** on the server.
 
-        Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
+    ```
+    Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
+    ```
 
     You can also administer the server from a client computer on which you have installed the [Windows 10 Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520).
 
-3. Obtain or create a certificate to sign the VSC for the VHDX that will become the template disk for new shielded VMs. Details about this certificate will be shown to tenants when they create their shielding data files and are authorizing disks they trust. Therefore, it is important to obtain this certificate from a certificate authority mutually trusted by you and your tenants. In enterprise scenarios where you are both the hoster and tenant, you might consider issuing this certificate from your PKI.
+3. Obtain or create a certificate to sign the VSC for the VHDX that will become the template disk for new shielded VMs. Details about this certificate will be shown to tenants when they create their shielding data files and are authorizing disks they trust. Therefore, it is important to obtain this certificate from a certificate authority mutually trusted by you and your tenants. In enterprise scenarios where you are both the host and tenant, you might consider issuing this certificate from your PKI.
 
     If you are setting up a test environment and just want to use a self-signed certificate to prepare your template disk, run a command similar to the following:
 
-        New-SelfSignedCertificate -DnsName publisher.fabrikam.com
+    ```
+    New-SelfSignedCertificate -DnsName publisher.fabrikam.com
+    ```
 
 4. Start the **Template Disk Wizard** from the **Administrative Tools** folder on the Start menu or by typing **TemplateDiskWizard.exe** into a command prompt.
 
@@ -131,8 +134,7 @@ After the template is created, tenants can use it to create new virtual machines
 
 ## Prepare and protect the VHDX using PowerShell
 
-As an alternative to running the Template Disk Wizard, you can copy your template disk and certificate to a computer running RSAT and run [Protect-TemplateDisk](https://docs.microsoft.com/powershell/module/shieldedvmtemplate/protect-templatedisk?view=win10-ps
-) to initiate the signing process.
+As an alternative to running the Template Disk Wizard, you can copy your template disk and certificate to a computer running RSAT and run [Protect-TemplateDisk](/powershell/module/shieldedvmtemplate/protect-templatedisk) to initiate the signing process.
 The following example uses the name and version information specified by the _TemplateName_ and _Version_ parameters.
 The VHDX you provide to the `-Path` parameter will be overwritten with the updated template disk, so be sure to make a copy before running the command.
 

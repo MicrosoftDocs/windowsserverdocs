@@ -1,13 +1,11 @@
 ---
 title: bitsadmin getdescription
 description: Reference article for the bitsadmin getdescription command, which retrieves the description of the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: f3974603-ebbe-4d31-8217-040fe2d90c85
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

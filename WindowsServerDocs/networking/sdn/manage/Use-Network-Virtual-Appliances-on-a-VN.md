@@ -3,8 +3,6 @@ title: Use network virtual appliances on a virtual network
 description: In this topic, you learn how to deploy network virtual appliances on tenant virtual networks. You can add network virtual appliances to networks that perform user-defined routing and port mirroring functions.
 manager: grcusanz
 ms.topic: article
-ms.prod: windows-server
-ms.technology: networking-sdn
 ms.assetid: 3c361575-1050-46f4-ac94-fa42102f83c1
 ms.author: anpaul
 author: AnirbanPaul
@@ -12,7 +10,7 @@ ms.date: 08/30/2018
 ---
 # Use network virtual appliances on a virtual network
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 In this topic, you learn how to deploy network virtual appliances on tenant virtual networks. You can add network virtual appliances to networks that perform user-defined routing and port mirroring functions.
 
@@ -22,7 +20,7 @@ You can use one of the two types of virtual appliances:
 
 1. **User defined routing** - replaces distributed routers on the virtual network with the routing capabilities of the virtual appliance.  With user-defined routing, the virtual appliance gets used as a router between the virtual subnets on the virtual network.
 
-2. **Port mirroring** - all network traffic that is entering or leaving the monitored port is duplicated and sent to a virtual appliance for analysis. 
+2. **Port mirroring** - all network traffic that is entering or leaving the monitored port is duplicated and sent to a virtual appliance for analysis.
 
 
 ## Deploying a network virtual appliance
@@ -31,7 +29,7 @@ To deploy a network virtual appliance, you must first create a VM that contains 
 
 Some appliances require multiple virtual network adapters. Usually, one network adapter dedicated to the appliance management while additional adapters process traffic.  If your appliance requires multiple network adapters, you must create each network interface in Network Controller. You must also assign an interface ID on each host for each of the additional adapters that are on different virtual subnets.
 
-Once you've deployed the network virtual appliance, you can use the appliance for defined routing, porting mirroring, or both. 
+Once you've deployed the network virtual appliance, you can use the appliance for defined routing, porting mirroring, or both.
 
 
 ## Example: User-defined routing
@@ -44,7 +42,7 @@ For most environments, you only need the system routes already defined by the vi
 For these scenarios, you must create a routing table and add user-defined routes to the table. You can have multiple routing tables, and you can associate the same routing table to one or more subnets. You can only associate each subnet to a single routing table. All VMs in a subnet use the routing table associated to the subnet.
 
 Subnets rely on system routes until a routing table gets associated to the subnet. After an association exists, routing is done based on Longest Prefix Match (LPM) among both user-defined routes and system routes. If there is more than one route with the same LPM match, then the user defined route is selected first - before the system route.
- 
+
 **Procedure:**
 
 1. Create the route table properties, which contains all of the user defined routes.<p>System routes still apply according to the rules defined above.
@@ -85,7 +83,7 @@ As soon as you apply the routing table to the virtual network, traffic gets forw
 
 ## Example: Port mirroring
 
-In this example, you configure the traffic for MyVM_Ethernet1 to mirror Appliance_Ethernet1.  We assume that you've deployed two VMs, one as the appliance and the other as the VM to monitor with mirroring. 
+In this example, you configure the traffic for MyVM_Ethernet1 to mirror Appliance_Ethernet1.  We assume that you've deployed two VMs, one as the appliance and the other as the VM to monitor with mirroring.
 
 The appliance must have a second network interface for management. After you enable mirroring as a destination on Appliciance_Ethernet1, it no longer receives traffic destined for the IP interface configured there.
 
@@ -159,5 +157,5 @@ The appliance must have a second network interface for management. After you ena
    ```
 
 After completing these steps, the Appliance_Ethernet1 interface mirrors the traffic from the MyVM_Ethernet1 interface.
- 
+
 ---

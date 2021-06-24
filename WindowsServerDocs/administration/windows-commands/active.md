@@ -1,13 +1,11 @@
 ---
 title: active
 description: Reference article for the active command, which on basic disks, marks the partition with focus as active.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1f25da2e-87fc-4392-a7ee-f38d09b7873c
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

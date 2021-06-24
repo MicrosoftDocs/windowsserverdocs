@@ -1,17 +1,15 @@
 ---
-title: manage-bde pause
-description: Reference article for the manage-bde pause command, which pauses BitLocker encryption or decryption.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+title: manage-bde -pause
+description: Reference article for the manage-bde -pause command, which pauses BitLocker encryption or decryption.
+ms.topic: reference
 ms.assetid: efda0e08-b9ff-4e71-83d8-bb666b3032bd
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
-# manage-bde pause
+# manage-bde -pause
 
 Pauses BitLocker encryption or decryption.
 
@@ -35,8 +33,8 @@ manage-bde -pause [<volume>] [-computername <name>] [{-?|/?}] [{-help|-h}]
 
 To pause BitLocker encryption on drive C, type:
 
-```
-manage-bde pause C:
+```Output
+manage-bde -pause C:
 ```
 
 ## Additional References

@@ -1,10 +1,8 @@
 ---
 title: Configure the Server Infrastructure
-description: In this step, you install and configure the server-side components necessary to support the VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.  
-ms.prod: windows-server
-ms.technology: networking-ras
+description: In this step, you install and configure the server-side components necessary to support the VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.
 ms.topic: article
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ms.author: v-tea
 author: Teresa-MOTIV
 ms.date: 08/30/2018
@@ -20,7 +18,7 @@ ms.reviewer: deverette
 In this step, you'll install and configure the server-side components necessary to support the VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.  You also configure RRAS to support IKEv2 connections and the NPS server to perform authorization for the VPN connections.
 
 ## Configure certificate autoenrollment in Group Policy
-In this procedure, you configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so allows VPN users to request and retrieve user certificates that authenticate VPN connections automatically. Likewise, this policy allows NPS servers to request server authentication certificates automatically. 
+In this procedure, you configure Group Policy on the domain controller so that domain members automatically request user and computer certificates. Doing so allows VPN users to request and retrieve user certificates that authenticate VPN connections automatically. Likewise, this policy allows NPS servers to request server authentication certificates automatically.
 
 You manually enroll certificates on VPN servers.
 
@@ -93,7 +91,7 @@ Since the RRAS server is not domain joined, autoenrollment cannot be used to enr
 
 7. If prompted by the Certification Authority List window, select the appropriate Enterprise CA to service the certificate request.
 
-8. Copy the newly created **VPNGateway.cer** output file to the RRAS server. 
+8. Copy the newly created **VPNGateway.cer** output file to the RRAS server.
 
 9. Save or copy the **VPNGateway.cer** file to a chosen location on the RRAS server.
 
@@ -103,11 +101,11 @@ Since the RRAS server is not domain joined, autoenrollment cannot be used to enr
     certreq -accept VPNGateway.cer
     ```
 
-11. Run the Certificates MMC snap-in as described [here](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in) selecting the **Computer account** option.
+11. Run the Certificates MMC snap-in as described [here](/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in) selecting the **Computer account** option.
 
 12. Ensure that a valid certificate exists for the RRAS server with the following properties:
 
-    - **Intended Purposes:** Server Authentication, IP security IKE intermediate 
+    - **Intended Purposes:** Server Authentication, IP security IKE intermediate
 
     - **Certificate Template:** [_Customer_] VPN Server
 
@@ -119,19 +117,19 @@ Here you can see an example script of a certificate request policy used to reque
 >You can find a copy of the VPNGateway.inf script in the VPN Offering IP Kit under the Certificate Request Policies folder. Only update the 'Subject' and '\_continue\_' with customer-specific values.
 
 ```
-[Version] 
+[Version]
 
 Signature="$Windows NT$"
 
 [NewRequest]
 Subject = "CN=vpn.contoso.com"
-Exportable = FALSE   
-KeyLength = 2048     
-KeySpec = 1          
-KeyUsage = 0xA0      
+Exportable = FALSE
+KeyLength = 2048
+KeySpec = 1
+KeyUsage = 0xA0
 MachineKeySet = True
 ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
-RequestType = PKCS10 
+RequestType = PKCS10
 
 [Extensions]
 2.5.29.17 = "{text}"
@@ -195,9 +193,9 @@ You also add a group containing VPN servers and another group containing NPS ser
 
 ## Create the User Authentication template
 
-In this procedure, you configure a custom client-server authentication template. This template is required because you want to improve the certificate's overall security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. This last change lets you use the TPM on the client computers to secure the certificate. For an overview of the TPM, see [Trusted Platform Module Technology Overview](https://docs.microsoft.com/windows/device-security/tpm/trusted-platform-module-overview).
+In this procedure, you configure a custom client-server authentication template. This template is required because you want to improve the certificate's overall security by selecting upgraded compatibility levels and choosing the Microsoft Platform Crypto Provider. This last change lets you use the TPM on the client computers to secure the certificate. For an overview of the TPM, see [Trusted Platform Module Technology Overview](/windows/device-security/tpm/trusted-platform-module-overview).
 
->[!IMPORTANT] 
+>[!IMPORTANT]
 >Microsoft Platform Crypto Provider" requires a TPM chip, in the case that you are running a VM and you get the following error: "Can not find a valid CSP in the local machine" when trying to manually enroll the certificate you need to check "Microsoft Software Key Storage Provider" and have it second in order after "Microsoft Platform Crypto Provider" in the Cryptography tab in certificate properties.
 
 **Procedure:**
@@ -209,7 +207,7 @@ In this procedure, you configure a custom client-server authentication template.
 3. In the Certificate Templates console, right-click **User** and select **Duplicate Template**.
 
    >[!WARNING]
-   >Do not select **Apply** or **OK** at any time prior to step 10.  If you select these buttons before entering ALL parameters, many choices become fixed and no longer editable. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_ shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.  
+   >Do not select **Apply** or **OK** at any time prior to step 10.  If you select these buttons before entering ALL parameters, many choices become fixed and no longer editable. For example, on the **Cryptography** tab, if _Legacy Cryptographic Storage Provider_ shows in the Provider Category field, it becomes disabled, preventing any further change. The only alternative is to delete the template and recreate it.
 
 4. On the Properties of New Template dialog box, on the **General** tab, complete the following steps:
 
@@ -228,7 +226,7 @@ In this procedure, you configure a custom client-server authentication template.
    4. In **Permissions for VPN Users**, select the **Enroll** and **Autoenroll** check boxes in the **Allow** column.
 
       >[!TIP]
-      >Make sure to keep the Read check box selected. In other words, you need the Read permissions for enrollment. 
+      >Make sure to keep the Read check box selected. In other words, you need the Read permissions for enrollment.
 
    5. In **Group or user names**, select **Domain Users**, then select **Remove**.
 
@@ -292,7 +290,7 @@ Domain-joined VPN servers
     2. In the **Edit Application Policies Extension** dialog box, select **Add**.
 
     3. On the **Add Application Policy** dialog box, select **IP security IKE intermediate**, then select **OK**.
-   
+
         Adding IP security IKE intermediate to the EKU helps in scenarios where more than one server authentication certificate exists on the VPN server. When IP security IKE intermediate is present, IPSec only uses the certificate with both EKU options. Without this, IKEv2 authentication could fail with Error 13801: IKE authentication credentials are unacceptable.
 
     4. Select **OK** to return to the **Properties of New Template** dialog box.
@@ -321,21 +319,19 @@ Domain-joined VPN servers
 
 10. Close the Certificate Templates console.
 
-11. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, click **New** and then click **Certificate Template to Issue**.
+11. Restart the Certificate Authority services.(*)
 
-12. Restart the Certificate Authority services.(*)
+12. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, select **New** and then select **Certificate Template to Issue**.
 
-13. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, select **New** and then select **Certificate Template to Issue**.
+13. Select the name you chose in step 4 above, and click **OK**.
 
-14. Select the name you chose in step 4 above, and click **OK**.
-
-15. Close the Certification Authority snap-in.
+14. Close the Certification Authority snap-in.
 
 * **You can stop/start the CA service by running the following command in CMD:**
 
 ```
-Net Stop "certsvc"
-Net Start "certsvc"
+net stop "certsvc"
+net start "certsvc"
 ```
 
 ## Create the NPS Server Authentication template
@@ -434,7 +430,7 @@ Unlike the user certificate, you must manually enroll the VPN server's certifica
 8. Select **Finish**.
 
 9. In the Certificates snap-in, under **Personal**, select **Certificates**.
-    
+
     Your listed certificates appear in the details pane.
 
 10. Right-click the certificate that has your VPN server's name, and then select **Open**.

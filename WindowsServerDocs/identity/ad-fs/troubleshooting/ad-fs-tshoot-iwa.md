@@ -6,8 +6,6 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/21/2017
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adfs
 ---
 
 # AD FS Troubleshooting - Integrated Windows Authentication
@@ -31,45 +29,50 @@ If the AD FS service account has a misconfigured or the wrong SPN then this can 
 
 Using network traces (such as Wireshark) you can determine what SPN the browser is trying to resolve and then using the command line tool, setspn - Q <spn>, you can do a lookup on that SPN.  It may not be found or it may be assigned to another account other than the AD FS service account.
 
-![integrated](media/ad-fs-tshoot-iwa/iwa3.png)
+![Screenshot of the Command Prompt window.](media/ad-fs-tshoot-iwa/iwa3.png)
 
 You can verify the SPN by looking at the properties of the AD FS service account.
 
-![integrated](media/ad-fs-tshoot-iwa/iwa1.png)
+![Screenshot of the Attribute Editor tab of the A D F S Service Account Properties dialog box showing the Service Principal Name value called out. ](media/ad-fs-tshoot-iwa/iwa1.png)
 
 ## Channel Binding Token
-Currently, when a client application authenticates itself to the server using Kerberos, Digest, or NTLM using HTTPS, a Transport Level Security (TLS) channel is first established and authentication takes place using this channel. 
+Currently, when a client application authenticates itself to the server using Kerberos, Digest, or NTLM using HTTPS, a Transport Level Security (TLS) channel is first established and authentication takes place using this channel.
 
 The Channel Binding Token is a property of the TLS-secured outer channel, and is used to bind the outer channel to a conversation over the client-authenticated inner channel.
 
-If there is a "man-in-the-middle" attack occurring and they are de-crypting and re-encrypting the SSL traffic, then the key will not match.  AD FS will determine that there is something sitting in the middle between the web browse r and itself.  This will cause the Kerberos authentication to fail and the user will be prompted with a 401 dialog instead of an SSO experience.
+If there is a "man-in-the-middle" attack occurring and they are decrypting and re-encrypting the SSL traffic, then the key will not match.  AD FS will determine that there is something sitting in the middle between the web browse r and itself.  This will cause the Kerberos authentication to fail and the user will be prompted with a 401 dialog instead of an SSO experience.
 
 This can be cause by:
  - anything sitting in between the browser and AD FS
  - Fiddler
  - Reverse proxies performing SSL bridging
 
-By default, AD FS has this set to "allow".  You can change this setting using the PowerShell cmdlt `Set-ADFSProperties -ExtendProtectionTokenCheck`
+By default, AD FS has this set to "allow".  You can change this setting using the PowerShell cmdlet `Set-ADFSProperties -ExtendProtectionTokenCheck`
 
 For more information on this see [Best Practices for Secure Planning and Deployment of AD FS](../../ad-fs/design/best-practices-for-secure-planning-and-deployment-of-ad-fs.md).
 
 ## Internet Explorer configuration
+
 By default, Internet explorer will be have the following way:
 
 1. Internet explorer will receive a 401 response from AD FS with the word NEGOTIATE in the header.
 2. This tells the web browser to get a Kerberos or NTLM ticket to send back to AD FS.
 3. By default IE will try to do this (SPNEGO) without user interaction if the word NEGOTIATE is in the header.  It will only work for intranet sites.
 
-There are 2 main things that can prevent this from happeing.
-   - Enable Integrated Windows Authentication is not checked in the properties of IE.  This located under Internet Options -> Advanced -> Security.
-   
-   ![integrated](media/ad-fs-tshoot-iwa/iwa4.png)
-   
-   - Security zones are not configured properly
-       - FQDNs are not in the intranet zone
-       - AD FS URL is not in the intranet zone.
+There are 2 main things that can prevent this from happening.
 
-      ![integrated](media/ad-fs-tshoot-iwa/iwa5.png)
+- Enable Integrated Windows Authentication is not checked in the properties of IE.  This located under Internet Options -> Advanced -> Security.
+
+   ![Screenshot of the Advanced tab of the Internet Options dialog box with the Enable Integrated Windows Authentication option called out.](media/ad-fs-tshoot-iwa/iwa4.png)
+
+- Security zones are not configured properly
+
+  - FQDNs are not in the intranet zone
+
+  - AD FS URL is not in the intranet zone.
+
+    ![Screenshot of the Local intranet window in front of the Internet Options dialog box.](media/ad-fs-tshoot-iwa/iwa5.png)
+
 ## Next Steps
 
 - [AD FS Troubleshooting](ad-fs-tshoot-overview.md)

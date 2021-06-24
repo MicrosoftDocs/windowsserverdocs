@@ -1,8 +1,8 @@
 ---
+description: "Learn more about: Performance history for drives"
 title: Performance history for drives
 ms.author: cosdar
 manager: eldenc
-ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
@@ -80,7 +80,7 @@ The `size.*` series are collected from the `MSFT_PhysicalDisk` class in WMI, one
 
 ## Usage in PowerShell
 
-Use the [Get-PhysicalDisk](https://docs.microsoft.com/powershell/module/storage/get-physicaldisk) cmdlet:
+Use the [Get-PhysicalDisk](/powershell/module/storage/get-physicaldisk) cmdlet:
 
 ```PowerShell
 Get-PhysicalDisk -SerialNumber <SerialNumber> | Get-ClusterPerf

@@ -1,13 +1,11 @@
 ---
 title: list writers
 description: Reference article for the list writers command, which lists writers that are on the system.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 1c30cbc4-f568-4fa7-b564-66c41d3ca82d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

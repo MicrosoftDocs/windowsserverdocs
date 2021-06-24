@@ -1,13 +1,11 @@
 ---
 title: Network guidelines
 description: Bandwidth recommendations for Remote Desktop deployments.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: helohr
 ms.date: 12/12/2019
 ms.topic: article
 author: Heidilohr
-manager: lizross
+manager: femila
 ---
 # Network guidelines
 
@@ -48,6 +46,10 @@ Different display resolutions require different available bandwidths. The follow
 | About 1920 × 1080 px                     | 5 Mbps                |
 | About 3840 × 2160 px (4K)                | 15 Mbps               |
 
-## Additional resources
+## Windows Virtual Desktop experience estimator
 
 The Azure region you're in can affect user experience as much as network conditions. Check out the [Windows Virtual Desktop experience estimator](https://azure.microsoft.com/services/virtual-desktop/assessment/) to learn more.
+
+## Assistive technologies
+
+Assistive technology workloads, like using Narrator in the remote session, require connections with a connection round trip time (RTT) of 20 milliseconds (ms) or better for the best user experience.

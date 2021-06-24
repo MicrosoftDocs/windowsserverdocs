@@ -6,8 +6,6 @@ ms.author: robhind
 manager: eldenc
 ms.date: 03/06/2019
 ms.topic: article
-ms.prod: windows-server
-ms.technology: storage-spaces
 ---
 # Upgrade a Storage Spaces Direct cluster to Windows Server 2019
 
@@ -75,8 +73,8 @@ servers will be restarted sequentially during the upgrade process, the remaining
    3. Place the server in storage maintenance mode by running the following PowerShell commands:
 
        ```PowerShell
-       Get-StorageFaultDomain -type StorageScaleUnit | 
-       Where FriendlyName -Eq <ServerName> | 
+       Get-StorageFaultDomain -type StorageScaleUnit |
+       Where FriendlyName -Eq <ServerName> |
        Enable-StorageMaintenanceMode
        ```
 
@@ -94,8 +92,8 @@ servers will be restarted sequentially during the upgrade process, the remaining
    7. Remove the server from storage maintenance mode by using the following PowerShell command:
 
        ```PowerShell
-       Get-StorageFaultDomain -type StorageScaleUnit | 
-       Where FriendlyName -Eq <ServerName> | 
+       Get-StorageFaultDomain -type StorageScaleUnit |
+       Where FriendlyName -Eq <ServerName> |
        Disable-StorageMaintenanceMode
        ```
 
@@ -168,8 +166,8 @@ This option incurs no VM downtime, but you'll need to wait for storage jobs (mir
    3. Place the server in storage maintenance mode by running the following PowerShell commands:
 
        ```PowerShell
-       Get-StorageFaultDomain -type StorageScaleUnit | 
-       Where FriendlyName -Eq <ServerName> | 
+       Get-StorageFaultDomain -type StorageScaleUnit |
+       Where FriendlyName -Eq <ServerName> |
        Enable-StorageMaintenanceMode
        ```
 
@@ -179,7 +177,7 @@ This option incurs no VM downtime, but you'll need to wait for storage jobs (mir
        Get-PhysicalDisk
        ```
 
-   3.  Evict the server from the cluster by running the following PowerShell command:  
+   3.  Evict the server from the cluster by running the following PowerShell command:
 
        ```PowerShell
        Remove-ClusterNode <ServerName>
@@ -202,8 +200,8 @@ This option incurs no VM downtime, but you'll need to wait for storage jobs (mir
    9. Remove the server from storage maintenance mode by using the following PowerShell commands:
 
        ```PowerShell
-       Get-StorageFaultDomain -type StorageScaleUnit | 
-       Where FriendlyName -Eq <ServerName> | 
+       Get-StorageFaultDomain -type StorageScaleUnit |
+       Where FriendlyName -Eq <ServerName> |
        Disable-StorageMaintenanceMode
        ```
 
@@ -217,7 +215,7 @@ This option incurs no VM downtime, but you'll need to wait for storage jobs (mir
 4. Upgrade the next server in the cluster.
 
 5. After all servers have been upgraded to Windows Server 2019, use the following PowerShell cmdlet to update the cluster functional level.
-    
+
    ```PowerShell
    Update-ClusterFunctionalLevel
    ```
@@ -237,7 +235,7 @@ This option incurs no VM downtime, but you'll need to wait for storage jobs (mir
    re-enable VM Live verification checks:
 
    ```PowerShell
-   Get-ClusterResourceType -Cluster {clusterName} -Name "Virtual Machine" | 
+   Get-ClusterResourceType -Cluster {clusterName} -Name "Virtual Machine" |
    Set-ClusterParameter SkipMigrationDestinationCheck -Value 0
    ```
 
@@ -264,8 +262,8 @@ This option incurs VM downtime but can take less time than if you kept the VMs r
    2. Place the server in storage maintenance mode by running the following PowerShell commands:
 
        ```PowerShell
-       Get-StorageFaultDomain -type StorageScaleUnit | 
-       Where FriendlyName -Eq <ServerName> | 
+       Get-StorageFaultDomain -type StorageScaleUnit |
+       Where FriendlyName -Eq <ServerName> |
        Enable-StorageMaintenanceMode
        ```
 
@@ -275,12 +273,12 @@ This option incurs VM downtime but can take less time than if you kept the VMs r
        Get-PhysicalDisk
        ```
 
-   4. Perform an upgrade installation of Windows Server 2019 on the server by running **setup.exe** and using the “Keep personal files and apps” option.  
+   4. Perform an upgrade installation of Windows Server 2019 on the server by running **setup.exe** and using the “Keep personal files and apps” option.
    After installation is complete, the server remains in the cluster and the
    cluster service starts automatically.
 
    5.  Check that the newly upgraded server has the latest Windows Server 2019
-   updates.  
+   updates.
    For more info, see [Windows 10 and Windows Server 2019 update
    history](https://support.microsoft.com/help/4464619/windows-10-update-history).
    The build number (see `ver` command) should be 17763.292 or higher.
@@ -289,8 +287,8 @@ This option incurs VM downtime but can take less time than if you kept the VMs r
    PowerShell commands:
 
        ```PowerShell
-       Get-StorageFaultDomain -type StorageScaleUnit | 
-       Where FriendlyName -Eq <ServerName> | 
+       Get-StorageFaultDomain -type StorageScaleUnit |
+       Where FriendlyName -Eq <ServerName> |
        Disable-StorageMaintenanceMode
        ```
 
@@ -300,7 +298,7 @@ This option incurs VM downtime but can take less time than if you kept the VMs r
        Resume-ClusterNode
        ```
 
-   8.  Wait for storage repair jobs to finish and for all disks to return to a healthy state.  
+   8.  Wait for storage repair jobs to finish and for all disks to return to a healthy state.
    This should be relatively fast, since VMs are not running. Here are the commands to run:
 
        ```PowerShell
@@ -310,7 +308,7 @@ This option incurs VM downtime but can take less time than if you kept the VMs r
 
 4. Upgrade the next server in the cluster.
 5. After all servers have been upgraded to Windows Server 2019, use the following PowerShell cmdlet to update the cluster functional level.
-    
+
    ```PowerShell
    Update-ClusterFunctionalLevel
    ```
@@ -318,7 +316,7 @@ This option incurs VM downtime but can take less time than if you kept the VMs r
    > [!NOTE]
    >   We recommend updating the cluster functional level as soon as possible, though technically you have up to four weeks to do so.
 
-6. After the cluster functional level has been updated, use the following cmdlet to update the storage pool.  
+6. After the cluster functional level has been updated, use the following cmdlet to update the storage pool.
    At this point, new cmdlets such as `Get-ClusterPerf` will be fully operational on any server in the cluster.
 
    ```PowerShell
@@ -330,7 +328,7 @@ This option incurs VM downtime but can take less time than if you kept the VMs r
 8. Optionally upgrade VM configuration levels by stopping each VM and using the
    `Update-VMVersion` cmdlet, and then starting the VMs again.
 
-9. Verify that the upgraded cluster functions as expected.  
+9. Verify that the upgraded cluster functions as expected.
    Roles should fail-over correctly and if VM live migration is used on the
    cluster, VMs should successfully live migrate.
 
@@ -344,7 +342,7 @@ running during the upgrade because you don't need to wait for storage jobs
 servers will be restarted sequentially during the upgrade process, the remaining
 servers in the cluster remain running.
 
-1. Check that all the servers in the cluster are running the latest updates.  
+1. Check that all the servers in the cluster are running the latest updates.
    For more info, see [Windows 10 and Windows Server 2016 update
    history](https://support.microsoft.com/help/4000825/windows-10-windows-server-2016-update-history).
    At a minimum, install Microsoft Knowledge Base [article
@@ -356,7 +354,7 @@ servers in the cluster remain running.
 
 3. Perform the following steps on one cluster server at a time:
 
-   2. Pause the cluster server using the following PowerShell command—note that some internal groups are hidden.  
+   2. Pause the cluster server using the following PowerShell command—note that some internal groups are hidden.
       We recommend this step to be cautious.
 
        ```PowerShell
@@ -367,8 +365,8 @@ servers in the cluster remain running.
       PowerShell commands:
 
       ```PowerShell
-      Get-StorageFaultDomain -type StorageScaleUnit | 
-      Where FriendlyName -Eq <ServerName> | 
+      Get-StorageFaultDomain -type StorageScaleUnit |
+      Where FriendlyName -Eq <ServerName> |
       Enable-StorageMaintenanceMode
       ```
 
@@ -380,14 +378,14 @@ servers in the cluster remain running.
       ```
 
    5. Evict the server from the cluster by running the following PowerShell
-      command:  
-    
+      command:
+
       ```PowerShell
       Remove-ClusterNode <ServerName>
       ```
 
    6. Perform a clean installation of Windows Server 2019 on the server: format
-      the system drive, run **setup.exe** and use the “Nothing” option.  
+      the system drive, run **setup.exe** and use the “Nothing” option.
       You'll have to configure the server identity, roles, features, and
       applications after setup completes and the server restarts.
 
@@ -398,7 +396,7 @@ servers in the cluster remain running.
       approved by your server manufacturer for use with Storage Spaces Direct.
 
    9. Check that the newly upgraded server has the latest Windows Server 2019
-      updates.  
+      updates.
       For more info, see [Windows 10 and Windows Server 2019 update
       history](https://support.microsoft.com/help/4464619/windows-10-update-history).
       The build number (see `ver` command) should be 17763.292 or higher.
@@ -413,12 +411,12 @@ servers in the cluster remain running.
        PowerShell command:
 
        ```PowerShell
-       Get-StorageFaultDomain -type StorageScaleUnit | 
-       Where FriendlyName -Eq <ServerName> | 
+       Get-StorageFaultDomain -type StorageScaleUnit |
+       Where FriendlyName -Eq <ServerName> |
        Disable-StorageMaintenanceMode
        ```
 
-   12. Wait for storage repair jobs to finish and for all disks to return to a healthy state.  
+   12. Wait for storage repair jobs to finish and for all disks to return to a healthy state.
        This could take considerable time depending on the number of VMs running during the server upgrade. Here are the commands to run:
 
        ```PowerShell
@@ -429,7 +427,7 @@ servers in the cluster remain running.
 4. Upgrade the next server in the cluster.
 
 5. After all servers have been upgraded to Windows Server 2019, use the following PowerShell cmdlet to update the cluster functional level.
-    
+
    ```PowerShell
    Update-ClusterFunctionalLevel
    ```
@@ -437,7 +435,7 @@ servers in the cluster remain running.
    > [!NOTE]
    >   We recommend updating the cluster functional level as soon as possible, though technically you have up to four weeks to do so.
 
-6. After the cluster functional level has been updated, use the following cmdlet to update the storage pool.  
+6. After the cluster functional level has been updated, use the following cmdlet to update the storage pool.
    At this point, new cmdlets such as `Get-ClusterPerf` will be fully operational on any server in the cluster.
 
    ```PowerShell
@@ -449,7 +447,7 @@ servers in the cluster remain running.
 8. Optionally upgrade VM configuration levels by stopping each VM and using the
    `Update-VMVersion` cmdlet, and then starting the VMs again.
 
-9. Verify that the upgraded cluster functions as expected.  
+9. Verify that the upgraded cluster functions as expected.
    Roles should fail-over correctly and if VM live migration is used on the
    cluster, VMs should successfully live migrate.
 

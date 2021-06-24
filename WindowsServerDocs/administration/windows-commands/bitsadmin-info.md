@@ -1,13 +1,11 @@
 ---
 title: bitsadmin info
 description: Reference article for the bitsadmin info command, which displays summary information about the specified job.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5c306677-0d64-41c0-8276-5bba7750cecb
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

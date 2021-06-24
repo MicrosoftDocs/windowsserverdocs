@@ -1,13 +1,11 @@
 ---
 title: certreq
 description: Reference article for the certreq command, which requests certificates from a certification authority (CA), retrieves a response to a previous request from a CA, creates a new request from an .inf file, accepts and installs a response to a request, constructs a cross-certification or qualified subordination request from an existing CA certificate or request, and signs a cross-certification or qualified subordination request.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7a04e51f-f395-4bff-b57a-0e9efcadf973
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -101,12 +99,12 @@ This area of the INF file is mandatory for any new certificate request templates
 | Subject | Several apps rely on the subject information in a certificate. We recommend specifying a value for this key. If the subject isn't set here, we recommend you include a subject name as part of the subject alternative name certificate extension. | Relative Distinguished Name string values | Subject = CN=computer1.contoso.com Subject=CN=John Smith,CN=Users,DC=Contoso,DC=com |
 | Exportable | If set to TRUE, the private key can be exported with the certificate. To ensure a high level of security, private keys shouldn't be exportable; however, in some cases, it might be required if several computers or users must share the same private key. | `true | false` | `Exportable = TRUE`. CNG keys can distinguish between this and plaintext exportable. CAPI1 keys can't. |
 | ExportableEncrypted | Specifies whether the private key should be set to be exportable. | `true | false` | `ExportableEncrypted = true`<p>**Tip:** Not all public key sizes and algorithms will work with all hash algorithms. The specified CSP must also support the specified hash algorithm. To see the list of supported hash algorithms, you can run the command: `certutil -oid 1 | findstr pwszCNGAlgid | findstr /v CryptOIDInfo` |
-| HashAlgorithm | Hash Algorithm to be used for this request. | `Sha256, sha384, sha512, sha1, md5, md4, md2` | `HashAlgorithm = sha1`. To see the list of supported hash algorithms use: certutil -oid 1 | findstr pwszCNGAlgid | findstr /v CryptOIDInfo|
+| HashAlgorithm | Hash Algorithm to be used for this request. | `Sha256, sha384, sha512, sha1, md5, md4, md2` | `HashAlgorithm = sha1`. To see the list of supported hash algorithms use: certutil -oid 1 \| findstr pwszCNGAlgid \| findstr /v CryptOIDInfo|
 | KeyAlgorithm| The algorithm that will be used by the service provider to generate a public and private key pair.| `RSA, DH, DSA, ECDH_P256, ECDH_P521, ECDSA_P256, ECDSA_P384, ECDSA_P521` | `KeyAlgorithm = RSA` |
 | KeyContainer | We don't recommend setting this parameter for new requests where new key material is generated. The key container is automatically generated and maintained by the system.<p>For requests where the existing key material should be used, this value can be set to the key-container name of the existing key. Use the `certutil –key` command to display the list of available key containers for the machine context. Use the `certutil –key –user` command for the current user's context.| Random string value<p>**Tip:** Use double quotes around any INF key value that has blanks or special characters to avoid potential INF parsing issues. | `KeyContainer = {C347BD28-7F69-4090-AA16-BC58CF4D749C}` |
 | KeyLength | Defines the length of the public and private key. The key length has an impact on the security level of the certificate. Greater key length usually provides a higher security level; however, some applications may have limitations regarding the key length. | Any valid key length that is supported by the cryptographic service provider. | `KeyLength = 2048` |
 | KeySpec | Determines if the key can be used for signatures, for Exchange (encryption), or for both. | `AT_NONE, AT_SIGNATURE, AT_KEYEXCHANGE` | `KeySpec = AT_KEYEXCHANGE` |
-| KeyUsage | Defines what the certificate key should be used for. | <ul><li>`CERT_DIGITAL_SIGNATURE_KEY_USAGE -- 80 (128)`</li><li>`CERT_NON_REPUDIATION_KEY_USAGE -- 40 (64)`</li><li>`CERT_KEY_ENCIPHERMENT_KEY_USAGE -- 20 (32)`</li><li>`CERT_DATA_ENCIPHERMENT_KEY_USAGE -- 10 (16)`</li><li>`CERT_KEY_AGREEMENT_KEY_USAGE -- 8`</li><li>`CERT_KEY_CERT_SIGN_KEY_USAGE -- 4`</li><li>`CERT_OFFLINE_CRL_SIGN_KEY_USAGE -- 2`</li><li>`CERT_CRL_SIGN_KEY_USAGE -- 2`</li><li>`CERT_ENCIPHER_ONLY_KEY_USAGE -- 1`</li><li>`CERT_DECIPHER_ONLY_KEY_USAGE -- 8000 (32768)`</li></ul> | `KeyUsage = CERT_DIGITAL_SIGNATURE_KEY_USAGE | CERT_KEY_ENCIPHERMENT_KEY_USAGE`<p>**Tip:** Multiple values use a pipe (|) symbol separator. Ensure that you use double-quotes when using multiple values to avoid INF parsing issues. The values shown are hexadecimal (decimal) values for each bit definition. Older syntax can also be used: a single hexadecimal value with multiple bits set, instead of the symbolic representation. For example, `KeyUsage = 0xa0`. |
+| KeyUsage | Defines what the certificate key should be used for. | <ul><li>`CERT_DIGITAL_SIGNATURE_KEY_USAGE -- 80 (128)`</li><li>`CERT_NON_REPUDIATION_KEY_USAGE -- 40 (64)`</li><li>`CERT_KEY_ENCIPHERMENT_KEY_USAGE -- 20 (32)`</li><li>`CERT_DATA_ENCIPHERMENT_KEY_USAGE -- 10 (16)`</li><li>`CERT_KEY_AGREEMENT_KEY_USAGE -- 8`</li><li>`CERT_KEY_CERT_SIGN_KEY_USAGE -- 4`</li><li>`CERT_OFFLINE_CRL_SIGN_KEY_USAGE -- 2`</li><li>`CERT_CRL_SIGN_KEY_USAGE -- 2`</li><li>`CERT_ENCIPHER_ONLY_KEY_USAGE -- 1`</li><li>`CERT_DECIPHER_ONLY_KEY_USAGE -- 8000 (32768)`</li></ul> | `KeyUsage = CERT_DIGITAL_SIGNATURE_KEY_USAGE | CERT_KEY_ENCIPHERMENT_KEY_USAGE`<p>**Tip:** Multiple values use a pipe (\|) symbol separator. Ensure that you use double-quotes when using multiple values to avoid INF parsing issues. The values shown are hexadecimal (decimal) values for each bit definition. Older syntax can also be used: a single hexadecimal value with multiple bits set, instead of the symbolic representation. For example, `KeyUsage = 0xa0`. |
 | KeyUsageProperty | Retrieves a value that identifies the specific purpose for which a private key can be used. | <ul><li>`NCRYPT_ALLOW_DECRYPT_FLAG -- 1`</li><li>`NCRYPT_ALLOW_SIGNING_FLAG -- 2`</li><li>`NCRYPT_ALLOW_KEY_AGREEMENT_FLAG -- 4`</li><li>`NCRYPT_ALLOW_ALL_USAGES -- ffffff (16777215)`</li></ul> | `KeyUsageProperty = NCRYPT_ALLOW_DECRYPT_FLAG | NCRYPT_ALLOW_SIGNING_FLAG` |
 | MachineKeySet | This key is important when you need to create certificates that are owned by the machine and not a user. The key material that is generated is maintained in the security context of the security principal (user or computer account) that has created the request. When an administrator creates a certificate request on behalf of a computer, the key material must be created in the machine's security context and not the administrator's security context. Otherwise, the machine could not access its private key since it would be in the administrator's security context. | `true | false`. The default is false. | `MachineKeySet = true` |
 | NotBefore | Specifies a date or date and time before which the request cannot be issued. `NotBefore` can be used with `ValidityPeriod` and `ValidityPeriodUnits`. | Date or date and time | `NotBefore = 7/24/2012 10:31 AM`<p>**Tip:** `NotBefore` and `NotAfter` are for R`equestType=cert` only. Date parsing attempts to be locale-sensitive. Using month names will disambiguate and should work in every locale. |
@@ -119,7 +117,7 @@ This area of the INF file is mandatory for any new certificate request templates
 | RenewalCert | If you need to renew a certificate that exists on the system where the certificate request is generated, you must specify its certificate hash as the value for this key. | The certificate hash of any certificate that is available at the computer where the certificate request is created. If you do not know the certificate hash, use the Certificates MMC Snap-In and look at the certificate that should be renewed. Open the certificate properties and see the `Thumbprint` attribute of the certificate. Certificate renewal requires either a `PKCS#7` or a `CMC` request format. | `RenewalCert = 4EDF274BD2919C6E9EC6A522F0F3B153E9B1582D` |
 | RequesterName | Makes the request to enroll on behalf of another user request.The request must also be signed with an Enrollment Agent certificate, or the CA will reject the request. Use the `-cert` option to specify the enrollment agent certificate. The requester name can be specified for certificate requests if the `RequestType` is set to `PKCS#7` or `CMC`. If the `RequestType` is set to `PKCS#10`, this key will be ignored. The `Requestername` can only be set as part of the request. You cannot manipulate the `Requestername` in a pending request. | `Domain\User` | `Requestername = Contoso\BSmith` |
 | RequestType | Determines the standard that is used to generate and send the certificate request. | <ul><li>`PKCS10 -- 1`</li><li>`PKCS7 -- 2`</li><li>`CMC -- 3`</li><li>`Cert -- 4`</li><li>`SCEP -- fd00 (64768)`</li></ul>**Tip:** This option indicates a self-signed or self-issued certificate. It doesn't generate a request, but rather a new certificate and then installs the certificate. Self-signed is the default. Specify a signing cert by using the –cert option to create a self-issued certificate that is not self-signed. | `RequestType = CMC` |
-| SecurityDescriptor | Contains the security information associated with securable objects. For most securable objects, you can specify an object's security descriptor in the function call that creates the object.Strings based on [security descriptor definition language](https://msdn.microsoft.com/library/aa379567(v=vs.85).aspx).<p>**Tip:** This is relevant only for machine context non-smart card keys. | `SecurityDescriptor = D:P(A;;GA;;;SY)(A;;GA;;;BA)` |
+| SecurityDescriptor | Contains the security information associated with securable objects. For most securable objects, you can specify an object's security descriptor in the function call that creates the object.Strings based on [security descriptor definition language](/windows/win32/secauthz/security-descriptor-definition-language).<p>**Tip:** This is relevant only for machine context non-smart card keys. | `SecurityDescriptor = D:P(A;;GA;;;SY)(A;;GA;;;BA)` |
 | AlternateSignatureAlgorithm | Specifies and retrieves a Boolean value that indicates whether the signature algorithm object identifier (OID) for a PKCS#10 request or certificate signature is discrete or combined. | `true | false` | `AlternateSignatureAlgorithm = false`<p>For an RSA signature, `false` indicates a `Pkcs1 v1.5`, while `true` indicates a `v2.1` signature. |
 | Silent | By default, this option allows the CSP access to the interactive user desktop and request information such as a smart card PIN from the user. If this key is set to TRUE, the CSP must not interact with the desktop and will be blocked from displaying any user interface to the user. | `true | false` | `Silent = true` |
 | SMIME | If this parameter is set to TRUE, an extension with the object identifier value 1.2.840.113549.1.9.15 is added to the request. The number of object identifiers depends on the on the operating system version installed and CSP capability, which refer to symmetric encryption algorithms that may be used by Secure Multipurpose Internet Mail Extensions (S/MIME) applications such as Outlook. | `true | false` | `SMIME = true` |
@@ -239,11 +237,11 @@ To build a cross certificate request:
 certreq -policy certsrv.req policy.inf newcertsrv.req
 ```
 
-Using `certreq -policy` without any additional parameter opens a dialog window, allowing you to select the requested fie (.req, .cmc, .txt, .der, .cer or .crt). After you select the requested file and click **Open**, another dialog window opens, allowing you to select the policy.inf file.
+Using `certreq -policy` without any additional parameter opens a dialog window, allowing you to select the requested file (.req, .cmc, .txt, .der, .cer or .crt). After you select the requested file and click **Open**, another dialog window opens, allowing you to select the policy.inf file.
 
 #### Examples
 
-Find an example of the policy.inf file in the [CAPolicy.inf Syntax](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/prepare-the-capolicy-inf-file).
+Find an example of the policy.inf file in the [CAPolicy.inf Syntax](../../networking/core-network-guide/cncg/server-certs/prepare-the-capolicy-inf-file.md).
 
 ### certreq -sign
 
@@ -306,7 +304,7 @@ You can only renew valid certificates. Expired certificates can't be renewed and
 | -crl | Includes certificate revocation lists (CRLs) in the output to the base64-encoded PKCS #7 file specified by `certchainfileout` or to the base64-encoded file specified by `requestfileout`. |
 | -rpc | Instructs Active Directory Certificate Services (AD CS) to use a remote procedure call (RPC) server connection instead of Distributed COM. |
 | -adminforcemachine | Use the Key Service or impersonation to submit the request from Local System context. Requires that the user invoking this option be a member of Local Administrators. |
-| -renewonbehalfof | Submit a renewal on behalf of the subject identified in the signing certificate. This sets CR_IN_ROBO when calling [ICertRequest::Submit method](https://docs.microsoft.com/windows/win32/api/certcli/nf-certcli-icertrequest-submit) |
+| -renewonbehalfof | Submit a renewal on behalf of the subject identified in the signing certificate. This sets CR_IN_ROBO when calling [ICertRequest::Submit method](/windows/win32/api/certcli/nf-certcli-icertrequest-submit) |
 | -f | Force existing files to be overwritten. This also bypasses caching templates and policy. |
 | -q | Use silent mode; suppress all interactive prompts. |
 | -unicode | Writes Unicode output when standard output is redirected or piped to another command, which helps when invoked from Windows PowerShell scripts. |
@@ -330,16 +328,14 @@ The following articles contain examples of certreq usage:
 
 - [How to add a subject alternative name to a secure LDAP certificate](https://support.microsoft.com/help/931351/how-to-add-a-subject-alternative-name-to-a-secure-ldap-certificate)
 
-- [Test Lab Guide: Deploying an AD CS Two-Tier PKI Hierarchy](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831348(v=ws.11))
+- [Test Lab Guide: Deploying an AD CS Two-Tier PKI Hierarchy](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831348(v=ws.11))
 
-- [Appendix 3: Certreq.exe Syntax](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736326(v=ws.10))
+- [Appendix 3: Certreq.exe Syntax](/previous-versions/windows/it-pro/windows-server-2003/cc736326(v=ws.10))
 
 - [How to create a web server SSL certificate manually](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-create-a-web-server-ssl-certificate-manually/ba-p/1128529)
 
-- [Request an AMT Provisioning Certificate Using a Windows Server 2008 CA](https://social.technet.microsoft.com/wiki/contents/articles/548.request-an-amt-provisioning-certificate-using-a-windows-server-2008-ca.aspx)
+- [Certificate Enrollment for System Center Operations Manager Agent](/system-center/scom/plan-planning-agent-deployment)
 
-- [Certificate Enrollment for System Center Operations Manager Agent](https://social.technet.microsoft.com/wiki/contents/articles/2017.certificate-enrollment-for-system-center-operations-manager-agent.aspx)
-
-- [AD CS Step by Step Guide: Two Tier PKI Hierarchy Deployment](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx)
+- [Active Directory Certificate Services Overview](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11))
 
 - [How to enable LDAP over SSL with a third-party certification authority](https://support.microsoft.com/help/321051/how-to-enable-ldap-over-ssl-with-a-third-party-certification-authority)

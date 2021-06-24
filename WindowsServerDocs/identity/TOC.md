@@ -46,7 +46,7 @@
 ##### [Virtualized Domain Controller Cloning Test Guidance for Application Vendors](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Cloning-Test-Guidance-for-Application-Vendors.md)
 ##### [Support for using Hyper-V Replica for virtualized domain controllers](ad-ds/get-started/virtual-dc/Support-for-using-Hyper-V-Replica-for-virtualized-domain-controllers.md)
 
-####[Windows Time Service and AD DS](../networking/windows-time-service/windows-time-service.md)
+#### [Windows Time Service and AD DS](../networking/windows-time-service/windows-time-service.md)
 
 ### [AD DS Design and Planning](ad-ds/plan/AD-DS-Design-and-Planning.md)
 
@@ -275,7 +275,7 @@
 #### [Deploy AD FS in Azure](ad-fs/deployment/how-to-connect-fed-azure-adfs.md)
 #### [AD FS in Azure with Azure Traffic Manager](ad-fs/deployment/active-directory-adfs-in-azure-with-azure-traffic-manager.md)  
 #### [Upgrading to AD FS in Windows Server 2016 using a SQL database](ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-SQL.md)
-#### [Deploy Azure AD Connect Health to Monitor your on-premises identity infrastructure in the cloud](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health)
+#### [Deploy Azure AD Connect Health to Monitor your on-premises identity infrastructure in the cloud](/azure/active-directory/hybrid/whatis-hybrid-identity)
 
 
 #### [Windows Server 2016 and 2012 R2 AD FS Deployment Guide](ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
@@ -330,8 +330,8 @@
 ##### [Deploying Federation Server Proxies](ad-fs/deployment/Deploying-Federation-Server-Proxies.md)
 ###### [Checklist: Setting Up a Federation Server Proxy](ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server-Proxy.md)
 ###### [Join a computer to a Domain](ad-fs/deployment/Join-a-computer-to-a-Domain.md)
-###### [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network](ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Only-the-Perimeter-Network.md)
-###### [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients](ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Both-the-Perimeter-Network-and-Internet-Clients.md)
+###### [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Only the Perimeter Network](./ad-fs/deployment/configure-name-resolution-for-federation-server-proxy-in-dns-zone-serving-only-perimeter-network.md)
+###### [Configure Name Resolution for a Federation Server Proxy in a DNS Zone That Serves Both the Perimeter Network and Internet Clients](./ad-fs/deployment/configure-name-resolution-for-federation-server-proxy-in-dns-zone-serving-only-perimeter-network.md)
 ###### [Export the Private Key Portion of a Server Authentication Certificate](ad-fs/deployment/Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md)
 ###### [Import a Server Authentication Certificate to the Default Web Site](ad-fs/deployment/import-a-Server-Authentication-Certificate-to-the-Default-Web-Site.md)
 ###### [Install the Federation Service Proxy Role Service](ad-fs/deployment/Install-the-Federation-Service-Proxy-Role-Service.md)
@@ -345,25 +345,25 @@
 ###### [Create a Relying Party Trust Manually](ad-fs/operations/create-a-Relying-Party-Trust.md)
 ###### [Create a Claims Provider Trust Manually](ad-fs/operations/create-a-Claims-Provider-Trust.md)
 ###### [Create a Rule to Send an AD FS 1.x compatible Claim](ad-fs/operations/create-a-Rule-to-Send-an-AD-FS-1x-compatible-Claim.md)
-#### [Deploy Azure AD Connect Health](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health/)
+#### [Deploy Azure AD Connect Health](/azure/active-directory/hybrid/whatis-hybrid-identity)
 #### [Migrate Active Directory Federation Services Role Services to Windows Server 2012 R2](ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2.md)
 ##### [Prepare to Migrate the AD FS Federation Server](ad-fs/deployment/prepare-migrate-ad-fs-server-r2.md)
-#####[Migrate the AD FS Federation Server](ad-fs/deployment/migrate-ad-fs-fed-server-r2.md)
-#####[Migrate the AD FS Federation Server Proxy](ad-fs/deployment/migrate-fed-server-proxy-r2.md)
-#####[Verfiy the AD FS Migration to Windows Server 2012 R2](ad-fs/deployment/verify-ad-fs-migration.md)
+##### [Migrate the AD FS Federation Server](ad-fs/deployment/migrate-ad-fs-fed-server-r2.md)
+##### [Migrate the AD FS Federation Server Proxy](ad-fs/deployment/migrate-fed-server-proxy-r2.md)
+##### [Verfiy the AD FS Migration to Windows Server 2012 R2](ad-fs/deployment/verify-ad-fs-migration.md)
 
 #### [Migrate Active Directory Federation Services Role Services to Windows Server 2012](ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012.md)
 ##### [Prepare to Migrate the AD FS 2.0 Federation Server](ad-fs/deployment/prepare-to-migrate-ad-fs-fed-server.md)
-######[Prepare to Migrate the AD FS 2.0 Stand Alone or Single Node Farm Server](ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md)
-######[Prepare to Migrate the AD FS 2.0 WID Farm](ad-fs/deployment/prepare-to-migrate-a-wid-farm.md)
-######[Prepare to Migrate the AD FS 2.0 SQL Farm](ad-fs/deployment/prepare-to-migrate-a-sql-server-farm.md)
-#####[Prepare to Migrate the AD FS 2.0 Federation Server Proxy](ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy.md)
-#####[Migrate the AD FS 2.0 Federation Server](ad-fs/deployment/migrate-the-ad-fs-fed-server.md)
-######[Migrate the AD FS 2.0 Stand Alone or Single Node Farm Server](ad-fs/deployment/migrate-ad-fs-stand-alone-server.md)
-######[Migrate the AD FS 2.0 WID Farm](ad-fs/deployment/migrate-ad-fs-wid-farm.md)
-######[Migrate the AD FS 2.0 SQL Farm](ad-fs/deployment/migrate-ad-fs-sql-farm.md)
-#####[Migrate the AD FS 2.0 Federation Server Proxy](ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy.md)
-#####[Migrate the AD FS 1.1 Web Agents](ad-fs/deployment/migrate-the-ad-fs-web-agent.md)
+###### [Prepare to Migrate the AD FS 2.0 Stand Alone or Single Node Farm Server](ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md)
+###### [Prepare to Migrate the AD FS 2.0 WID Farm](ad-fs/deployment/prepare-to-migrate-a-wid-farm.md)
+###### [Prepare to Migrate the AD FS 2.0 SQL Farm](ad-fs/deployment/prepare-to-migrate-a-sql-server-farm.md)
+##### [Prepare to Migrate the AD FS 2.0 Federation Server Proxy](ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy.md)
+##### [Migrate the AD FS 2.0 Federation Server](ad-fs/deployment/migrate-the-ad-fs-fed-server.md)
+###### [Migrate the AD FS 2.0 Stand Alone or Single Node Farm Server](ad-fs/deployment/migrate-ad-fs-stand-alone-server.md)
+###### [Migrate the AD FS 2.0 WID Farm](ad-fs/deployment/migrate-ad-fs-wid-farm.md)
+###### [Migrate the AD FS 2.0 SQL Farm](ad-fs/deployment/migrate-ad-fs-sql-farm.md)
+##### [Migrate the AD FS 2.0 Federation Server Proxy](ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy.md)
+##### [Migrate the AD FS 1.1 Web Agents](ad-fs/deployment/migrate-the-ad-fs-web-agent.md)
 
 
 
@@ -471,15 +471,12 @@
 ##### [How URIs Are Used in AD FS](ad-fs/technical-reference/How-URIs-Are-Used-in-AD-FS.md)
 #### [Device registration Technical Reference](ad-fs/technical-reference/device-registration-technical-reference.md)
 #### [AD FS Password Attack Protection](ad-fs/technical-reference/ad-fs-password-protection.md)
-### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
+### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.yml)
 
 ## Active Directory Rights Management Service
 ### [Upgrading AD RMS to Windows Server 2016](ad-rms/adrms-deploy.md)
 
-
-## [Securing Privileged Access](securing-privileged-access/securing-privileged-access.md)
-### [Privileged Access Workstations](securing-privileged-access/privileged-access-workstations.md)
-### [Securing Privileged Access Reference Material](securing-privileged-access/securing-privileged-access-reference-material.md)
+## [Administrative tools and logon types reference](securing-privileged-access/reference-tools-logon-types.md)
 
 ## [Software Restriction Policies](software-restriction-policies/software-restriction-policies.md)
 ### [Software Restriction Policies Technical Overview](software-restriction-policies/software-restriction-policies-technical-overview.md)

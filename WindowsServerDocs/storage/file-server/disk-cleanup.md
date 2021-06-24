@@ -1,12 +1,11 @@
 ---
 title: Using Disk Cleanup on Windows Server
 description: Learn how to use command-line options to configure the Disk Cleanup tool (Cleanmgr.exe) to automatically clean up certain files.
-ms.prod: windows-server
 ms.reviewer: cosmosdarwin
 author: iangpgh
 ms.author: jgerend
 manager: daveba
-ms.technology: storage-spaces
+ms.topic: article
 ms.date: 06/20/2019
 ---
 
@@ -19,6 +18,9 @@ The Disk Cleanup tool clears unnecessary files in a Windows Server environment. 
 To start the Disk Cleanup tool, either run the Cleanmgr.exe command, or select **Start**, select **Windows Administrative Tools**, and then select **Disk Cleanup**.
 
 You can also run Disk Cleanup by using the [cleanmgr Windows command](../../administration/windows-commands/cleanmgr.md) and use command-line options to specify that Disk Cleanup cleans up certain files.
+
+> [!NOTE]
+> If you're just looking to free up disk space, consider using Azure File Sync with cloud tiering enabled. This allows you to cache your most frequently accessed files locally and tier your least frequently accessed files to the cloud, saving local storage space while maintaining performance. For details, see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning).
 
 ## Enable Disk Cleanup on an earlier version of Windows Server by installing the Desktop Experience
 
@@ -58,7 +60,7 @@ To use cleanmgr.exe, install the Desktop Experience as described earlier, or cop
 
 | Operating System  | Architecture  | File Location  |
 | ----------------- | -------------- | --------------- |
-| Windows Server 2008 R2 | 64-bit | C:\Windows\winsxs\amd64_microsoft-windows-cleanmgr_31bf3856ad364e35_6.1.7600.16385_none_c9392808773cd7da\cleanmgr.exe 
+| Windows Server 2008 R2 | 64-bit | C:\Windows\winsxs\amd64_microsoft-windows-cleanmgr_31bf3856ad364e35_6.1.7600.16385_none_c9392808773cd7da\cleanmgr.exe
 | Windows Server 2008 R2 | 64-bit | C:\Windows\winsxs\amd64_microsoft-windows-cleanmgr.resources_31bf3856ad364e35_6.1.7600.16385_en-us_b9cb6194b257cc63\cleanmgr.exe.mui |
 
 Locate cleanmgr.exe and move the file to **%systemroot%\System32**.

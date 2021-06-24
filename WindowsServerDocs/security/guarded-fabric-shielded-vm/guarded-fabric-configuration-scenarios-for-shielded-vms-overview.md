@@ -1,12 +1,11 @@
 ---
+description: "Learn more about: Deploy shielded VMs"
 title: Deploy shielded VMs
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 5d1a06c9-24e1-4e14-9c9a-efb2adbfeddd
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 

@@ -1,13 +1,11 @@
 ---
 title: diskcomp
 description: Reference article for the diskcomp command, which compares the contents of two floppy disks.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4f56f534-a356-4daa-8b4f-38e089341e42
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

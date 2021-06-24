@@ -2,7 +2,7 @@
 
 ## Understand
 ### [What is Windows Admin Center?](understand/what-is.md)
-### [FAQ](understand/faq.md)
+### [FAQ](understand/faq.yml)
 ### [Case studies](understand/case-studies.md)
 ### [Related management products](understand/related-management.md)
 
@@ -14,7 +14,6 @@
 ### [Prepare your environment](deploy/prepare-environment.md)
 ### [Install Windows Admin Center](deploy/install.md)
 ### [High availability](deploy/high-availability.md)
-
 
 ## Configure
 ### [Windows Admin Center settings](configure/settings.md)
@@ -39,10 +38,11 @@
 #### [Azure File Sync](azure/azure-file-sync.md)
 #### [Azure Monitor](azure/azure-monitor.md)
 #### [Azure Update Management](azure/azure-update-management.md)
-### [Connect Windows Admin Center to Azure](azure/azure-integration.md)
-### [Deploy Windows Admin Center in Azure](azure/deploy-wac-in-azure.md)
-### [Create Azure VMs with Windows Admin Center](azure/create-azure-vms.md)
-### [Manage Azure VMs with Windows Admin Center](azure/manage-azure-vms.md)
+### [Connect to Azure](azure/azure-integration.md)
+### [Create Azure VMs](azure/create-azure-vms.md)
+### [Manage Azure VMs](azure/manage-azure-vms.md)
+### [Manage a VM from within Azure](azure/manage-vm.md)
+### [Manually deploy a Windows Admin Center server in Azure](azure/deploy-wac-in-azure.md)
 
 ## Support
 ### [Release history](support/release-history.md)
@@ -82,5 +82,3 @@
 #### [Pure Storage](extend/case-studies/purestorage.md)
 #### [QCT](extend/case-studies/qct.md)
 #### [Thomas-Krenn](extend/case-studies/thomas-krenn.md)
-
-

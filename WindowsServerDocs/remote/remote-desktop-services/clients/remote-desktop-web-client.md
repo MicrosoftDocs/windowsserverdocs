@@ -1,10 +1,8 @@
 ---
 title: Get started with the web client
 description: Describes how to sign in to the Remote Desktop web client.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
 ms.author: helohr
-ms.date: 08/27/2019
+ms.date: 04/20/2021
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
@@ -39,6 +37,15 @@ To start using an app or desktop, select the item you want to use, enter the sam
 
 When you're finished, you can end your session by either selecting the **Sign Out** button in the toolbar at the top of your screen or closing the browser window.
 
+## Web client keyboard shortcuts
+
+The following table describes alternate key combinations to inject standard Windows shortcut keys in the remote session.
+
+|Shortcut key |Description |
+|-------------|------------|
+|(Windows) Ctrl+Alt+End</br>(MacOS) fn+control+option+delete|Inject Ctrl+Alt+Del in the remote session.|
+|Alt+F3       |Injects Windows key in the remote session.|    
+
 ## Printing from the Remote Desktop web client
 
 Follow these steps to print from the web client:
@@ -49,14 +56,44 @@ Follow these steps to print from the web client:
 4. Your browser will generate a PDF file of your print job.
 5. You can choose to either open the PDF and print its contents to your local printer or save it to your PC for later use.
 
+## Transfer files with the web client
+
+To learn how to enable web client file transfer, check out [Configure device redirections](/azure/virtual-desktop/configure-device-redirections#local-drive-redirection).
+
+Follow these steps to transfer files from your local computer to the remote session:
+
+1. Connect to the remote session.
+2. Select the file upload icon in the web client menu.
+3. When prompted, select the files you want to upload using the local file explorer.
+4. Open the file explorer in your remote session. Your files will be uploaded to **Remote Desktop Virtual Drive** > **Uploads**.
+
+To download files from the remote session to your local computer:
+
+1. Connect to the remote session.
+2. Open the file explorer in your remote session.
+3. Copy the files you want to download to **Remote Desktop Virtual Drive** > **Downloads**.
+4. Your files will be downloaded to your local default downloads folder.
+
 ## Copy and paste from the Remote Desktop web client
 
 The web client currently supports copying and pasting text only. Files can't be copied or pasted to and from the web client. Additionally, you can only use **Ctrl+C** and **Ctrl+V** to copy and paste text.
 
 ## Use an Input Method Editor (IME) in the remote session
 
-To use an Input Method Editor to enter complex characters in the remote session, select the gear icon in the navigation bar to open the **Settings** side panel and set the **Enable Input Method Editor** switch to **On**. You must have an Input Method Editor installed and enabled in the remote session. 
+The web client supports using an Input Method Editor (IME) in the remote session in version 1.0.21.16 or later. Before you can use the IME, you must install the language pack for the keyboard you want to use in the remote session on the host virtual machine. To learn more about setting up language packs in the remote session, check out [Add language packs to a Windows 10 multi-session image](/azure/virtual-desktop/language-packs).
+
+To enable IME input using the web client:
+
+1. Before you connect to the remote session, go to the web client **Settings** panel.
+2. Toggle the **Enable Input Method Editor** setting to **On**.
+3. In the drop-down menu, select the keyboard you want to use in the remote session.
+4. Connect to the remote session.
+
+The web client will suppress the local IME window when you are focused on the remote session. If you change the IME settings after you've already connected to the remote session, the setting changes won't have any effect. The web client doesn't support IME input while using a private browsing window.
+
+>[!NOTE]
+>If the language pack isn't installed on the host virtual machine, the remote session will default to the English (United States) keyboard.
 
 ## Get help with the web client
 
-If you've encountered an issue that can't be solved by the information in this article, you can get help with the web client by emailing the address on the web client's About page.
+If you've encountered an issue that can't be solved by the information in this article, you can get help with the web client by raising feedback on the web client's Feedback page.

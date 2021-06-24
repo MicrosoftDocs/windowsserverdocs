@@ -1,13 +1,11 @@
 ---
 title: logman create cfg
 description: Reference article for the logman create cfg command, which creates a configuration data collector.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: bfc87093-3ff5-4e19-aa93-d185fb8e2239
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

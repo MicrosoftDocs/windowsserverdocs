@@ -1,13 +1,12 @@
 ---
 title: "Manage Remote Web Access in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to turn on Remote Web Access by using the Set Up Anywhere Access Wizard, and then learn how to set up your router and domain name.
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: f3ea40fa-b6ba-4d66-b754-221ca6271387
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Manage Remote Web Access in Windows Server Essentials
@@ -145,9 +144,9 @@ manager: dongill
  During this step, Windows Server Essentials attempts to automatically configure your router by using UPnP commands. To do this, your router must support UPnP standards, and the UPnP setting must be enabled on your router.
 
 > [!NOTE]
->  Your network configuration should follow the supported network requirements for Windows Server Essentials. There should be only one router on your network.
+> Your network configuration should follow the supported network requirements for Windows Server Essentials. There should be only one router on your network.
 
- If the router is not set up by the Set Up Your Domain Name Wizard, you must manually forward port 443. For information about how to set up port forwarding on your router, see [Router Setup](https://social.technet.microsoft.com/wiki/contents/articles/windows-small-business-server-2011-essentials-router-setup.aspx).
+ If the router is not set up by the Set Up Your Domain Name Wizard, you must manually forward port 443. For information about how to set up port forwarding on your router, see the [Small Business Server forum](/answers/topics/windows-small-business-server.html).
 
 ###  <a name="BKMK_ReplaceRouter"></a> Replace a router
  Replace the router according to the manufacturer's instructions, and then run the Set Up Your Router Wizard to configure the new router.
@@ -333,7 +332,7 @@ manager: dongill
 >  Work with your domain name service provider to determine the type of certificate that you need. The certificate can be one of the inexpensive certificates that are offered. However, you should review the documentation and features of higher level security certificates to determine if they better meet your business needs.
 
 ###  <a name="BKMK_ExportCert"></a> Export or import your certificate on your server
- If you want to create a backup copy of a certificate or use it on another server, you must export the certificate. For information about exporting certificates, see [Export a Certificate](https://go.microsoft.com/fwlink/p/?LinkId=214362).
+ If you want to create a backup copy of a certificate or use it on another server, you must export the certificate. For information about exporting certificates, see [Export a Certificate](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730988(v=ws.11)).
 
 ###  <a name="BKMK_SetNameManually"></a> Set up a domain name manually
  If you choose this option, the server does not monitor or maintain your domain name, and it does not alert you if there is a configuration issue. You might also consider this option if any of the following is true:
@@ -364,9 +363,9 @@ manager: dongill
 
 ##### To find the domain name service provider for your domain name
 
-1. Open a web browser, and then type <strong>www.internic.com</strong> in the address bar to go to the Internic home page.
+1. Open a web browser, and then type <strong>www.internic.com</strong> in the address bar to go to the InterNIC home page.
 
-2. On the Internic home page, click **Whois**.
+2. On the InterNIC home page, click **Whois**.
 
 3. In the **Whois** box, type your domain name (for example contoso.com).
 

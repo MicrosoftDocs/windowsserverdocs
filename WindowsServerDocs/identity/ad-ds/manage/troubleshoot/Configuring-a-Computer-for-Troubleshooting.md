@@ -1,13 +1,12 @@
 ---
+description: "Learn more about: Configuring a Computer for Troubleshooting"
 ms.assetid: 155abe09-6360-4913-8dd9-7392d71ea4e6
 title: Configuring a Computer for Troubleshooting
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: daveba
+author: iainfoulds
+manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
-ms.prod: windows-server
-ms.technology: identity-adds
 ---
 # Configuring a Computer for Troubleshooting
 
@@ -15,7 +14,7 @@ ms.technology: identity-adds
 
 Before you use advanced troubleshooting techniques to identify and fix Active Directory problems, configure your computers for troubleshooting. You should also have a basic understanding of troubleshooting concepts, procedures, and tools.
 
-For information about monitoring tools for Windows Server, see the Step-by-Step Guide for [Performance and Reliability Monitoring in Windows Server](https://go.microsoft.com/fwlink/?LinkId=123737)
+For information about monitoring tools for Windows Server, see the Step-by-Step Guide for [Performance and Reliability Monitoring in Windows Server](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771692(v=ws.10))
 
 ## Configuration tasks for troubleshooting
 
@@ -25,7 +24,7 @@ To configure your computer for troubleshooting Active Directory Domain Services 
 
 When you install AD DS to create a domain controller, the administrative tools that you use to manage AD DS are installed automatically. If you want to manage domain controllers remotely from a computer that is not a domain controller, you can install the Remote Server Administration Tools (RSAT) on a member server or workstation that is running a supported version of Windows. RSAT replaces Windows Support Tools from Windows Server 2003.
 
-For information about installing RSAT, see the article [Remote Server Administration Tools](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+For information about installing RSAT, see the article [Remote Server Administration Tools](../../../../remote/remote-server-administration-tools.md).
 
 ### Configure Reliability and Performance Monitor
 

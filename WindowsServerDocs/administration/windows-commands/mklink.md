@@ -1,13 +1,11 @@
 ---
 title: mklink
 description: Reference article for the mklink command, which creates a directory or file symbolic or hard link.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: 0ce4df22-2dbc-48fc-9c16-b721ae85f857
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -34,7 +32,7 @@ mklink [[/d] | [/h] | [/j]] <link> <target>
 
 ### Examples
 
-To create and remove a symbolic link named, MyFolder and Myfile.file, from the root directory to the \Users\User1\Documents directory and a example.file located within the directory, type:
+To create and remove a symbolic link named MyFolder from the root directory to the \Users\User1\Documents directory, and a hard link named Myfile.file to the example.file file located within the directory, type:
 
 ```
 mklink /d \MyFolder \Users\User1\Documents
@@ -51,4 +49,4 @@ del \MyFile.file
 
 - [rd command](rd.md)
 
-- [New-Item in Windows PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-item?view=powershell-6)
+- [New-Item in Windows PowerShell](/powershell/module/microsoft.powershell.management/new-item?view=powershell-6)

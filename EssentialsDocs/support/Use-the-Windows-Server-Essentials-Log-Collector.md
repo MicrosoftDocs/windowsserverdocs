@@ -1,13 +1,12 @@
 ---
 title: "Use the Windows Server Essentials Log Collector"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to use the Windows Server Essentials Log Collector to gather logs from servers, computers on the network, or both.
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: c6985518-b42d-4cfb-9761-eaa75306b6d7
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Use the Windows Server Essentials Log Collector

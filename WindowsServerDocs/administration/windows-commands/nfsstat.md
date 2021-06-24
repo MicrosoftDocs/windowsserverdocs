@@ -1,13 +1,11 @@
 ---
 title: nfsstat
 description: Reference article for the nfsstat command, which displays statistical info about the Network File System (NFS) and Remote Procedure Call (RPC) calls.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: da7a9768-44bd-404b-97ee-c388d00dc395
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -70,4 +68,4 @@ nfsstat -z
 
 - [Services for Network File System Command Reference](services-for-network-file-system-command-reference.md)
 
-- [NFS cmdlets reference](https://docs.microsoft.com/powershell/module/nfs)
+- [NFS cmdlets reference](/powershell/module/nfs)

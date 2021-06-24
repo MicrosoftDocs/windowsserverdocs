@@ -1,13 +1,11 @@
 ---
 title: choice
 description: Reference article for the choice command, which prompts the user to select one item from a list of single-character choices in a batch program, and then returns the index of the selected choice.
-ms.prod: windows-server
-ms.technology: manage-windows-commands
-ms.topic: article
+ms.topic: reference
 ms.assetid: c65a9119-410b-4dcf-9fa7-4e07d2a7238b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -59,7 +57,7 @@ The following prompt appears when the batch file runs the **choice** command:
 To hide the choices **Y**, **N**, and **C**, but display the text **Yes**, **No**, or **Continue**, type the following line in a batch file:
 
 ```
-choice /c ync /n /m Yes, No, or Continue?
+choice /c ync /n /m "Yes, No, or Continue?"
 ```
 
 > [!NOTE]
@@ -68,7 +66,7 @@ choice /c ync /n /m Yes, No, or Continue?
 To show both the text and the options used in the previous examples, type the following line in a batch file:
 
 ```
-choice /c ync /m Yes, No, or Continue
+choice /c ync /m "Yes, No, or Continue"
 ```
 
 To set a time limit of five seconds and specify **N** as the default value, type the following line in a batch file:

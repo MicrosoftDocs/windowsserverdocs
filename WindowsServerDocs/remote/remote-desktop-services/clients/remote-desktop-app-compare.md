@@ -1,18 +1,16 @@
 ---
-title: Remote Desktop - compare the client apps
-description: Learn how the different RD apps compare when it comes to supported features and functions.
-ms.prod: windows-server
-ms.technology: remote-desktop-services
+title: Remote Desktop - compare the client apps redirections
+description: Learn how the different RD apps compare when it comes to redirections.
 ms.topic: article
 ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 04/06/2020
+ms.date: 02/04/2021
 ms.localizationpriority: medium
 ---
 
-# Compare the clients
+# Compare the clients: redirections
 
 >Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
@@ -26,18 +24,18 @@ If you remote into your personal desktop, there are additional redirections that
 
 ### Input redirection
 
-| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS | macOS | Web client    |
+| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS | macOS | Web client    |
 |-------------|---------------------------|-----------------------------|---------------|---------|-----|-------|---------------|
 | Keyboard    | X                         | X                           | X             | X       | X   | X     | X             |
 | Mouse       | X                         | X                           | X             | X       | X\* | X     | X             |
 | Touch       | X                         | X                           | X             | X       | X   |       | X (except IE) |
-| Pen         | X                         | X                           |               |         |     |       |               |
+| Pen         | X                         | X                           |               | X (as touch) |  X (as touch)  |       |               |
 
 *View the [list of supported input devices for the Remote Desktop iOS client](remote-desktop-ios.md#supported-input-devices).
 
 ### Port redirection
 
-| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS | macOS | Web client |
+| Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS | macOS | Web client |
 |-------------|---------------------------|-----------------------------|---------------|---------|-----|-------|------------|
 | Serial port | X                         | X                           |               |         |     |       |            |
 | USB         | X                         | X                           |               |         |     |       |            |
@@ -46,16 +44,20 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 
 ### Other redirection (devices, etc.)
 
-| Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Windows Store | Android | iOS         | macOS                           | Web client    |
+| Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS         | macOS                           | Web client    |
 |---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
-| Cameras             | X                         | X                           |               |         |   X         | X                               |               |
+| Cameras             | X                         | X                           |               |          |   X         | X                               |               |
 | Clipboard           | X                         | X                           | X             | Text    | Text, images | X                               | text          |
 | Local drive/storage | X                         | X                           |               | X       |   X        | X                               |               |
 | Location            | X                         | X                           |               |         |             |                                 |               |
-| Microphones         | X                         | X                           | X             |         |  X          | X                               |               |
+| Microphones         | X                         | X                           | X             |    X    |  X          | X                               |               |
 | Printers            | X                         | X                           |               |         |             | X (CUPS only)                   | PDF print     |
 | Scanners            | X                         | X                           |               |         |             |                                 |               |
 | Smart Cards         | X                         | X                           |               |         |             | X (Windows logon not supported) |               |
 | Speakers            | X                         | X                           | X             | X       | X           | X                               | X (except IE) |
 
 *For printer redirection - the macOS app supports the Publisher Imagesetter printer driver by default. They do not support redirecting native printer drivers.
+
+## Other resources
+
+If you're looking for feature comparisons, check out [Compare the clients: features](remote-desktop-features.md).

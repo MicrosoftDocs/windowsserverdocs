@@ -1,12 +1,11 @@
 ---
 title: Shielded VMs - Hosting service provider sets up Windows Azure Pack
-ms.prod: windows-server
+description: "Learn more about: Shielded VMs - Hosting service provider sets up Windows Azure Pack"
 ms.topic: article
 ms.assetid: d528c689-58b0-425c-9740-25e2553ed689
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
-ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ---
 
@@ -22,7 +21,7 @@ You will complete the following tasks to set up Windows Azure Pack in your envir
 
 1. Complete configuration of System Center 2016 - Virtual Machine Manager (VMM) for your hosting fabric. This includes setting up VM templates and a VM cloud, which will be exposed through Windows Azure Pack:
 
-    [Scenario - Deploy guarded hosts and shielded virtual machines in VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview)
+    [Scenario - Deploy guarded hosts and shielded virtual machines in VMM](/system-center/vmm/deploy-guarded-host-fabric)
 
 2. Install and configure System Center 2016 - Service Provider Foundation (SPF). This software enables Windows Azure Pack to communicate with your VMM servers:
 
@@ -41,7 +40,7 @@ You will complete the following tasks to set up Windows Azure Pack in your envir
 
 Install and configure Windows Azure Pack (WAP) on the machine where you wish to host the web portal for your tenants. This machine will need to be able to reach the SPF server and be reachable by your tenants.
 
-1.  Reviewing [WAP system requirements](https://technet.microsoft.com/library/dn296442.aspx) and install the [prerequisite software](https://technet.microsoft.com/library/dn469335.aspx).
+1.  Reviewing [WAP system requirements](/previous-versions/azure/windows-server-azure-pack/dn296442(v=technet.10)) and install the [prerequisite software](/previous-versions/azure/windows-server-azure-pack/dn469335(v=technet.10)).
 
 2.  Download and install the [Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx). If the machine is not connected to the Internet, follow the [offline installation instructions](https://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release).
 
@@ -49,7 +48,7 @@ Install and configure Windows Azure Pack (WAP) on the machine where you wish to 
 
 4.  Proceed through the installation. After the installation completes, the configuration site (*https://&lt;wapserver&gt;:30101/*) opens in your web browser. On this website, provide information about your SQL server and finish configuring WAP.
 
-For help setting up Windows Azure Pack, see [Install an express deployment of Windows Azure Pack](https://technet.microsoft.com/dn296439.aspx).
+For help setting up Windows Azure Pack, see [Install an express deployment of Windows Azure Pack](/previous-versions/azure/windows-server-azure-pack/dn296439(v=technet.10)).
 
 > [!NOTE]
 > If you already run Windows Azure Pack in your environment, you may use your existing installation. In order to work with the latest shielded VM features, however, you will need to upgrade your installation to at least Update Rollup 10.

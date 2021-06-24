@@ -47,15 +47,15 @@ landingContent:
           - text: Software Defined Networking (SDN)
             url: sdn/index.yml
           - text: Network Controller
-            url: sdn/technologies/network-controller/Network-Controller.md
+            url: /azure-stack/hci/concepts/network-controller-overview
           - text: Software Load Balancing (SLB) for SDN
-            url: sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md
+            url: /azure-stack/hci/concepts/software-load-balancer
           - text: RAS Gateway for SDN
-            url: sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md
+            url: /azure-stack/hci/concepts/gateway-overview
           - text: Network Function Virtualization
             url: sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md
           - text: Datacenter Firewall Overview
-            url: sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md
+            url: /azure-stack/hci/concepts/datacenter-firewall-overview
       - linkListType: deploy
         links:
           - text: Deploy a SDN infrastructure using scripts
@@ -71,7 +71,7 @@ landingContent:
           - text: Core Network Guide
             url: core-network-guide/core-network-guide-windows-server.md
           - text: DirectAccess
-            url: ../remote/remote-access/da-stub.md
+            url: ../remote/remote-access/directaccess/directaccess.md
           - text: Domain Name System (DNS)
             url: dns/dns-top.md
           - text: Dynamic Host Configuration Protocol (DHCP)
@@ -111,9 +111,9 @@ landingContent:
       - linkListType: reference
         links:
           - text: Web Application Proxy in Windows Server 2016
-            url: /windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server
+            url: ../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md
           - text: Remote Access Always On VPN Deployment Guide
-            url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy
+            url: ../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy.md
 
   # Card
   - title: High-Performance Networking

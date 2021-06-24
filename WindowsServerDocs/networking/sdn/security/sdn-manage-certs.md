@@ -1,9 +1,7 @@
 ---
 title: Manage certificates for Software Defined Networking
-description: You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking (SDN) in Windows Server 2016 Datacenter.
+description: You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking (SDN) in Windows Server 2019 and 2016 Datacenter.
 manager: grcusanz
-ms.prod: windows-server
-ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
 ms.author: anpaul
@@ -13,16 +11,16 @@ ms.date: 08/22/2018
 
 # Manage certificates for Software Defined Networking
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
-You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking \(SDN\) in Windows Server 2016 Datacenter and you are using System Center Virtual Machine Manager \(SCVMM\) as your SDN management client.
+You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking \(SDN\) in Windows Server 2019 or 2016 Datacenter and you are using System Center Virtual Machine Manager \(SCVMM\) as your SDN management client.
 
 >[!NOTE]
->For overview information about Network Controller, see [Network Controller](../technologies/network-controller/Network-Controller.md).
+>For overview information about Network Controller, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).
 
 If you are not using Kerberos for securing the Network Controller communication, you can use X.509 certificates for authentication, authorization, and encryption.
 
-SDN in Windows Server 2016 Datacenter supports both self\-signed and Certification Authority \(CA\)-signed X.509 certificates. This topic provides step-by-step instructions for creating these certificates and applying them to secure Network Controller Northbound communication channels with management clients and Southbound communications with network devices, such as the Software Load Balancer \(SLB\).
+SDN in Windows Server 2019 and 2016 Datacenter supports both self\-signed and Certification Authority \(CA\)-signed X.509 certificates. This topic provides step-by-step instructions for creating these certificates and applying them to secure Network Controller Northbound communication channels with management clients and Southbound communications with network devices, such as the Software Load Balancer \(SLB\).
 .
 When you are using certificate\-based authentication, you must enroll one certificate on Network Controller nodes that is used in the following ways.
 
@@ -38,7 +36,7 @@ You can create and enroll either a self\-signed certificate or a certificate tha
 
 The certificate configuration must include the following values.
 
-- The value for the **RestEndPoint** text box must either be the Network Controller Fully Qualified Domain Name \(FQDN\) or IP address. 
+- The value for the **RestEndPoint** text box must either be the Network Controller Fully Qualified Domain Name \(FQDN\) or IP address.
 - The **RestEndPoint** value must match the subject name \(Common Name, CN\) of the X.509 certificate.
 
 ### Creating a Self\-Signed X.509 Certificate
@@ -48,36 +46,44 @@ You can create a self-signed X.509 certificate and export it with the private ke
 When you create self\-signed certificates, you can use the following guidelines.
 
 - You can use the IP address of the Network Controller REST Endpoint for the DnsName parameter - but this is not recommended because it requires that the Network Controller nodes are all located within a single management subnet \(e.g. on a single rack\)
-- For multiple node NC deployments, the DNS name that you specify will become the FQDN of the Network Controller Cluster \(DNS Host A records are automatically created.\) 
+- For multiple node NC deployments, the DNS name that you specify will become the FQDN of the Network Controller Cluster \(DNS Host A records are automatically created.\)
 - For single node Network Controller deployments, the DNS name can be the Network Controller's host name followed by the full domain name.
 
 #### Multiple node
 
-You can use the [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
+You can use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
 
 **Syntax**
 
-    New-SelfSignedCertificate -KeyUsageProperty All -Provider "Microsoft Strong Cryptographic Provider" -FriendlyName "<YourNCComputerName>" -DnsName @("<NCRESTName>")
+```powershell
+New-SelfSignedCertificate -KeyUsageProperty All -Provider "Microsoft Strong Cryptographic Provider" -FriendlyName "<YourNCComputerName>" -DnsName @("<NCRESTName>")
+```
 
 **Example usage**
 
-    New-SelfSignedCertificate -KeyUsageProperty All -Provider "Microsoft Strong Cryptographic Provider" -FriendlyName "MultiNodeNC" -DnsName @("NCCluster.Contoso.com")
+```powershell
+New-SelfSignedCertificate -KeyUsageProperty All -Provider "Microsoft Strong Cryptographic Provider" -FriendlyName "MultiNodeNC" -DnsName @("NCCluster.Contoso.com")
+```
 
 #### Single node
 
-You can use the [New-SelfSignedCertificate](https://technet.microsoft.com/itpro/powershell/windows/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
+You can use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
 
 **Syntax**
 
-    New-SelfSignedCertificate -KeyUsageProperty All -Provider "Microsoft Strong Cryptographic Provider" -FriendlyName "<YourNCComputerName>" -DnsName @("<NCFQDN>")
+```powershell
+New-SelfSignedCertificate -KeyUsageProperty All -Provider "Microsoft Strong Cryptographic Provider" -FriendlyName "<YourNCComputerName>" -DnsName @("<NCFQDN>")
+```
 
 **Example usage**
 
-    New-SelfSignedCertificate -KeyUsageProperty All -Provider "Microsoft Strong Cryptographic Provider" -FriendlyName "SingleNodeNC" -DnsName @("SingleNodeNC.Contoso.com")
+```powershell
+New-SelfSignedCertificate -KeyUsageProperty All -Provider "Microsoft Strong Cryptographic Provider" -FriendlyName "SingleNodeNC" -DnsName @("SingleNodeNC.Contoso.com")
+```
 
 ### Creating a CA\-Signed X.509 Certificate
 
-To create a certificate by using a CA, you must have already deployed a Public Key Infrastructure \(PKI\) with Active Directory Certificate Services \(AD CS\). 
+To create a certificate by using a CA, you must have already deployed a Public Key Infrastructure \(PKI\) with Active Directory Certificate Services \(AD CS\).
 
 >[!NOTE]
 >You can use third party CAs or tools, such as openssl, to create a certificate for use with Network Controller, however the instructions in this topic are specific to AD CS. To learn how to use a third party CA or tool, see the documentation for the software you are using.
@@ -99,11 +105,11 @@ While you are configuring a certificate template in the next step, ensure that t
 >If the Personal \(My – cert:\localmachine\my\) certificate store on the Hyper\-V host has more than one X.509 certificate with Subject Name (CN) as the host Fully Qualified Domain Name \(FQDN\), ensure that the certificate that will be used by SDN has an additional custom Enhanced Key Usage property with the OID 1.3.6.1.4.1.311.95.1.1.1. Otherwise, the communication between Network Controller and the host might not work.
 
 #### To configure the certificate template
-  
+
 >[!NOTE]
 >Before you perform this procedure, you should review the certificate requirements and the available certificate templates in the Certificate Templates console. You can either modify an existing template or create a duplicate of an existing template and then modify your copy of the template. Creating a copy of an existing template is recommended.
 
-1. On the server where AD CS is installed, in Server Manager, click **Tools**, and then click **Certification Authority**. The Certification Authority Microsoft Management Console \(MMC\) opens. 
+1. On the server where AD CS is installed, in Server Manager, click **Tools**, and then click **Certification Authority**. The Certification Authority Microsoft Management Console \(MMC\) opens.
 2. In the MMC, double-click the CA name, right-click **Certificate Templates**, and then click **Manage**.
 3. The Certificate Templates console opens. All of the certificate templates are displayed in the details pane.
 4. In the details pane, click the template that you want to duplicate.
@@ -139,7 +145,7 @@ In the Certificates MMC, click on the Personal store to view the certificate you
 
 ## Exporting and Copying the Certificate to the SCVMM Library
 
-After creating either a self\-signed or CA\-signed certificate, you must export the certificate with the private key \(in .pfx format\) and without the private key \(in Base-64 .cer format\) from the Certificates snap-in. 
+After creating either a self\-signed or CA\-signed certificate, you must export the certificate with the private key \(in .pfx format\) and without the private key \(in Base-64 .cer format\) from the Certificates snap-in.
 
 You must then copy the two exported files to the **ServerCertificate.cr** and **NCCertificate.cr** folders that you specified at the time when you imported the NC Service Template.
 
@@ -155,7 +161,7 @@ You must then copy the two exported files to the **ServerCertificate.cr** and **
 
 When you are done, refresh these folders in the SCVMM Library and ensure that you have these certificates copied. Continue with the Network Controller Service Template Configuration and Deployment.
 
-## Authenticating Southbound devices and services 
+## Authenticating Southbound devices and services
 
 Network Controller communication with hosts and SLB MUX devices uses certificates for authentication. Communication with the hosts is over OVSDB protocol while communication with the SLB MUX devices is over the WCF protocol.
 
@@ -163,11 +169,12 @@ Network Controller communication with hosts and SLB MUX devices uses certificate
 
 For communication with the Hyper-V hosts over OVSDB, Network Controller needs to present a certificate to the host machines. By default, SCVMM picks up the SSL certificate configured on the Network Controller and uses it for southbound communication with the hosts.
 
-That is the reason why the SSL certificate must have the Client Authentication EKU configured. This certificate is configured on the “Servers” REST resource \(Hyper-V hosts are represented in Network Controller as a Server resource\), and can be viewed by running the Windows PowerShell command **Get-NetworkControllerServer**.
+That is the reason why the SSL certificate must have the Client Authentication EKU configured. This certificate is configured on the “Servers” REST resource (Hyper-V hosts are represented in Network Controller as a Server resource), and can be viewed by running the Windows PowerShell command **Get-NetworkControllerServer**.
 
 Following is a partial example of the server REST resource.
 
-      "resourceId": "host31.fabrikam.com",
+```
+   "resourceId": "host31.fabrikam.com",
       "properties": {
         "connections": [
           {
@@ -180,14 +187,15 @@ Following is a partial example of the server REST resource.
             "credentialType": "X509Certificate"
           }
         ],
+```
 
-For mutual authentication, the Hyper-V host must also have a certificate to communicate with Network Controller. 
+For mutual authentication, the Hyper-V host must also have a certificate to communicate with Network Controller.
 
 You can enroll the certificate from a Certification Authority \(CA\). If a CA based certificate is not found on the host machine, SCVMM creates a self-signed certificate and provisions it on the host machine.
 
-Network Controller and the Hyper-V host certificates must be trusted by each other. The Hyper-V host certificate's root certificate must be present in the Network Controller Trusted Root Certification Authorities store for the Local Computer, and vice versa. 
+Network Controller and the Hyper-V host certificates must be trusted by each other. The Hyper-V host certificate's root certificate must be present in the Network Controller Trusted Root Certification Authorities store for the Local Computer, and vice versa.
 
-When you're using self\-signed certificates, SCVMM ensures that the required certificates are present in the Trusted Root Certification Authorities store for the Local Computer. 
+When you're using self\-signed certificates, SCVMM ensures that the required certificates are present in the Trusted Root Certification Authorities store for the Local Computer.
 
 If you are using CA based certificates for the Hyper-V hosts, you need to ensure that the CA root certificate is present on the Network Controller's Trusted Root Certification Authorities store for the Local Computer.
 
@@ -199,6 +207,7 @@ By default, SCVMM picks up the SSL certificate configured on the Network Control
 
 Example of MUX REST resource \(partial\):
 
+```
       "resourceId": "slbmux1.fabrikam.com",
       "properties": {
         "connections": [
@@ -212,6 +221,7 @@ Example of MUX REST resource \(partial\):
             "credentialType": "X509Certificate"
           }
         ],
+```
 
 For mutual authentication, you must also have a certificate on the SLB MUX devices. This certificate is automatically configured by SCVMM when you deploy software load balancer using SCVMM.
 
@@ -219,6 +229,3 @@ For mutual authentication, you must also have a certificate on the SLB MUX devic
 >On the host and SLB nodes, it is critical that the Trusted Root Certification Authorities certificate store does not include any certificate where “Issued to” is not the same as “Issued by”. If this occurs, communication between Network Controller and the southbound device fails.
 
 Network Controller and the SLB MUX certificates must be trusted by each other \(the SLB MUX certificate's root certificate must be present in the Network Controller machine Trusted Root Certification Authorities store and vice versa\). When you're using self\-signed certificates, SCVMM ensures that the required certificates are present in the in the Trusted Root Certification Authorities store for the Local Computer.
-
-
-

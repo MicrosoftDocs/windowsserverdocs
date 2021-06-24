@@ -1,12 +1,9 @@
 ---
 title: General guidance to troubleshoot DHCP
 description: This artilce introduces general guidance to troubleshoot DHCP.
-ms.prod: windows-server
-ms.service: na
 manager: dcscontentpm
-ms.technology: server-general
 ms.date: 5/26/2020
-ms.topic: article
+ms.topic: troubleshooting
 author: Deland-Han
 ms.author: delhan
 ---
@@ -21,7 +18,7 @@ help you find the root cause of the problem.
 
   - Are there any error messages?
 
-  - Was the DHCP server working previously, or has it never worked?  
+  - Was the DHCP server working previously, or has it never worked?
     If it worked previously, did anything change before the problem started. For example, was an update installed? Was a change made to the infrastructure?
 
   - Is the problem persistent or intermittent? If it is intermittent, when did it last occur?

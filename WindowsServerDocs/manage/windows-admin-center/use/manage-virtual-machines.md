@@ -1,13 +1,11 @@
 ---
 title: Managing Virtual Machines with Windows Admin Center
 description: Managing Hyper-V hosts and virtual machines with Windows Admin Center (Project Honolulu)
-ms.technology: manage
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 06/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server
 ---
 # Managing Virtual Machines with Windows Admin Center
 
@@ -76,7 +74,7 @@ NOTE: If you are connected to a cluster, the Virtual Machine tool will only disp
 5. Choose a path for the virtual machine files. Choose a volume from the dropdown list or click **Browse** to choose a folder using the folder picker. The virtual machine configuration files and virtual hard disk file will be saved in a single folder under the `\Hyper-V\\[virtual machine name]` path of the selected volume or path.
 
    >[!Tip]
-   > In the folder picker, you can browse to any available SMB share on the network by entering the path in the **Folder name** field as ```\\server\share```. Using a network share for VM storage will require [CredSSP](../understand/faq.md#does-windows-admin-center-use-credssp).
+   > In the folder picker, you can browse to any available SMB share on the network by entering the path in the **Folder name** field as ```\\server\share```. Using a network share for VM storage will require [CredSSP](../understand/faq.yml#does-windows-admin-center-use-credssp-).
 
 6. Choose the number of virtual processors, whether you want nested virtualization enabled, configure memory settings, network adapters, virtual hard disks and choose whether you want to install an operating system from an .iso image file or from the network.
 7. Click **Create** to create the virtual machine.
