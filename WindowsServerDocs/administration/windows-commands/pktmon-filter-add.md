@@ -4,7 +4,7 @@ description: Reference article for the pktmon filter add command.
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
-ms.date: 06/18/2021
+ms.date: 06/24/2021
 ---
 
 # pktmon filter add
@@ -78,11 +78,13 @@ C:\Test> pktmon filter add MySubnet -i 10.10.10.0/24
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)
+- [Pktmon etl2pcap](pktmon-etl2pcap.md)
+- [Pktmon etl2txt](pktmon-etl2txt.md)
 - [Pktmon filter](pktmon-filter.md)
-- [Pktmon format](pktmon-format.md)
+- [Pktmon hex2pkt](pktmon-hex2pkt.md)
 - [Pktmon list](pktmon-list.md)
-- [Pktmon pcapng](pktmon-pcapng.md)
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon start](pktmon-start.md)
+- [Pktmon status](pktmon-status.md)
 - [Pktmon unload](pktmon-unload.md)
 - [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)

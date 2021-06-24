@@ -47,11 +47,11 @@ Where `<file>` is the ETL file to convert.
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)
+- [Pktmon etl2pcap](pktmon-etl2pcap.md)
 - [Pktmon filter](pktmon-filter.md)
 - [Pktmon filter add](pktmon-filter-add.md)
 - [Pktmon hex2pkt](pktmon-hex2pkt.md)
 - [Pktmon list](pktmon-list.md)
-- [Pktmon pcapng](pktmon-pcapng.md)
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon start](pktmon-start.md)
 - [Pktmon status](pktmon-status.md)
