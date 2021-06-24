@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 3c361575-1050-46f4-ac94-fa42102f83c1
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/30/2018
+ms.date: 06/25/2021
 ---
 # Use network virtual appliances on a virtual network
 
