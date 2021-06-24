@@ -69,7 +69,7 @@ To add a workspace:
       - This URL is usually a Windows Virtual Desktop URL. Which one you use depends on which version of Windows Virtual Desktop you're using.
         - For Windows Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
         - For Windows Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
-   - If you use an email address, enter your email address. Entering your email address tells the client ot search for a URL associated with your email address if your admin configured the server that way.
+   - If you use an email address, enter your email address. Entering your email address tells the client to search for a URL associated with your email address if your admin configured the server that way.
 3. Tap **Next**.
 4. Provide your credentials when prompted.
    - For **User name**, give the user name of an account with permission to access resources.
