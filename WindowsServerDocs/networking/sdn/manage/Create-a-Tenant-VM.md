@@ -78,7 +78,7 @@ Ensure that you have already created a Virtual Network before using this example
 4. Get the InstanceId for the network interface from Network Controller.
 
    ```PowerShell
-    $nic = Get-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId "MyVM-Ethernet1"
+    $nic = Get-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId "MyVM_Ethernet1"
    ```
 
 5. Set the Interface ID on the Hyper-V VM network adapter port.
