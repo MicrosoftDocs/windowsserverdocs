@@ -4,7 +4,7 @@ description: Reference article for the pktmon network diagnostics tool for Windo
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
-ms.date: 06/17/2021
+ms.date: 06/24/2021
 ---
 
 # pktmon
@@ -16,21 +16,23 @@ Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool f
 ## Syntax
 
 ```
-pktmon { filter | reset | counters | format | list | start | stop | pcapng | unload } [OPTIONS | help]
+pktmon { filter | reset | counters | hex2pkt | list | start | status | stop | etl2pcap | etl2txt | unload } [OPTIONS | help]
 ```
 
 ### Commands
 
 | **Command** | **Description** |
 | --------- | ----------- |
+| [pktmon etl2pcap](pktmon-etl2pcap.md) | Convert log file to pcapng format. |
+| [pktmon etl2txt](pktmon-etl2txt.md) | Convert log file to text format. |
 | [pktmon filter](pktmon-filter.md) | Manage packet filters. |
 | [pktmon reset](pktmon-reset.md) | Reset packet counters to zero. |
 | [pktmon counters](pktmon-counters.md) | Display current packet counters. |
-| [pktmon format](pktmon-format.md) | Convert log file to text. |
+| [pktmon hex2pkt](pktmon-hex2pkt.md) | Decode packet in hexadecimal format. |
 | [pktmon list](pktmon-list.md) | List all active packet processing components. |
 | [pktmon start](pktmon-start.md) | Start packet capture and event collection. |
+| [pktmon status](pktmon-status.md) | Query current Packet Monitor status. |
 | pktmon stop | Stop data collection. |
-| [pktmon pcapng](pktmon-pcapng.md) | Convert log file to pcapng format. |
 | [pktmon unload](pktmon-unload.md) | Unload pktmon driver. |
 | pktmon help | Show help text for specific command, for example `pktmon start help`. |
 

@@ -36,6 +36,7 @@ Where `<file>` is the ETL file to convert.
 - [Pktmon etl2txt](pktmon-etl2txt.md)
 - [Pktmon filter](pktmon-filter.md)
 - [Pktmon filter add](pktmon-filter-add.md)
+- [Pktmon hex2pkt](pktmon-hex2pkt.md)
 - [Pktmon list](pktmon-list.md)
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon start](pktmon-start.md)
