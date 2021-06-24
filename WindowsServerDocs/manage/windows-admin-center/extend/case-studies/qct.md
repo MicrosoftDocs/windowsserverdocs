@@ -15,24 +15,24 @@ The QCT Management Suite extension for Windows Admin Center provides a single pa
 
 Driven by customer pain points around existing monitoring and management, QCT provides exclusive, complementary features and functions, which includes an overview of system event logs, monitoring drivers, and hardware component health to enhance the overall management experience.
 
-![QCT Extension](../../media/extend-case-study-qct/D52T_DarkMode_Disk-Detail-General.PNG)
+![Screenshot of the Disk tab of the QCT extension.](../../media/extend-case-study-qct/D52T_DarkMode_Disk-Detail-General.PNG)
 
 The QCT Management Suite extends the functionality of Windows Admin Center with the key features below:
 - **One-click exclusive hardware management** - An intuitive user interface displays hardware information, including model name, processor, memory and BIOS. IT administrators can restart the BMC with a simple one-click UI.
 
-![QCT Extension](../../media/extend-case-study-qct/D52T_Overview.PNG)
+![Screenshot of the One-click exclusive hardware management feature of the QCT extension.](../../media/extend-case-study-qct/D52T_Overview.PNG)
 
 - **Disk mapping and LED identification for efficient service support** - QCT Management Suite wizard UI design displays the slot of each selected disk with an overview of disk profiles and LED light controls of selected disks for efficient replacement.
 
-![QCT Extension](../../media/extend-case-study-qct/T21P_disk_mapping.png)
+![Screenshot of the Disk Replacement feature of the QCT extension.](../../media/extend-case-study-qct/T21P_disk_mapping.png)
 
 - Easy-to-use monitoring tool for hardware event log and health status.
 
-![QCT Extension](../../media/extend-case-study-qct/D52T_event_log.PNG)
+![Screenshot of the monitoring tool for hardware event log and health status that is included in the QCT extension.](../../media/extend-case-study-qct/D52T_event_log.PNG)
 
 - **Predictive disk management** - Evaluate the system condition with S.M.A.R.T information and unhealthy notifications which allow organizations to take action before total failure occurs.
 
-![QCT Extension](../../media/extend-case-study-qct/T21P_SMART.PNG)
+![Screenshot of the S.M.A.R.T information and unhealthy notifications that are included in the QCT extension.](../../media/extend-case-study-qct/T21P_SMART.PNG)
 
 Learn more about the QCT Management Suite for Windows Admin Center:
 - [QCT Management Suite web page](https://go.qct.io/solutions/enterprise-private-cloud/qxstack-windows-server-cloud-ready-appliances/)

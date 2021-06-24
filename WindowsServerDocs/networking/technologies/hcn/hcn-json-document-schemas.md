@@ -1,13 +1,15 @@
 ---
 title: Host Compute Network (HCN) JSON document schemas
-ms.author: jmesser
-author: jmesser81
+description: Information about HCN JSON document schemas.
+ms.author: daschott
+author: daschott
 ms.date: 11/05/2018
+ms.topic: article
 ---
 
 # HCN JSON document schemas
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019
+> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019
 
 ## HCN schema
 
@@ -111,7 +113,6 @@ ms.date: 11/05/2018
         "NextHop" : <ip address of the next hop gateway>,
         "DestinationPrefix" : <ip prefix in cidr>,
         "Metric" : <route metric in uint8>,
-
     } ],
 }
 ```
@@ -124,7 +125,6 @@ ms.date: 11/05/2018
     "Type" : "VLAN",
     "IsolationId" : <uint32>,
 }
-
 // PortMappingPolicy
 {
     "Type" : "PortMapping",
@@ -230,4 +230,3 @@ ms.date: 11/05/2018
     "Success" : <bool>,
 }
 ```
-

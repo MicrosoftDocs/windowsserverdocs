@@ -4,8 +4,9 @@ description: When you configure a NIC Team with switch independent mode and eith
 manager: dougkim
 ms.topic: article
 ms.assetid: 26d105e0-afc3-44b5-bb5e-0c884a4c5d62
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # NIC Teaming MAC address use and management
 

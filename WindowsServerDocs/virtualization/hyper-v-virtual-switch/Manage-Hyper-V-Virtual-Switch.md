@@ -4,8 +4,9 @@ description: This topic provides links to Hyper-V Virtual Switch management cont
 manager: brianlic
 ms.topic: article
 ms.assetid: a7a06a7d-b8f3-4c9d-a69e-762bbb0dec72
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Manage Hyper-V Virtual Switch
 

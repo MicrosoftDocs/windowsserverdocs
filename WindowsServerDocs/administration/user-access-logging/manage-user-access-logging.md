@@ -4,8 +4,8 @@ description: Describes how to manage User Access Logging
 ms.topic: article
 ms.assetid: 4f039017-4152-47eb-838e-bb6ef730b638
 author: brentfor
-ms.author: coreyp
-manager: dongill
+ms.author: brentf
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # Manage User Access Logging
@@ -195,7 +195,7 @@ On the first day of the year, UAL will create a new *GUID.mdb*. The old *GUID.md
 4.  Use the Services console to stop and restart the User Access Logging Service.
 
 ## Deleting data logged by UAL
-UAL is not intended to be a mission critical component. Its design is intended to impact local system operations as little as possible while maintaining a high level of reliability. This also allows the administrator to manually delete UAL database and supporting files (every file in \Windows\System32\LogFilesSUM\ directory) to meet operational needs.
+UAL is not intended to be a mission critical component. Its design is intended to impact local system operations as little as possible while maintaining a high level of reliability. This also allows the administrator to manually delete UAL database and supporting files (every file in \Windows\System32\LogFiles\SUM\ directory) to meet operational needs.
 
 #### To delete data logged by UAL
 

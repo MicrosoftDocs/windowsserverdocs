@@ -3,12 +3,9 @@ title: Create Hyper-V VHD Set files
 description: Steps to create a VHDset file on Hyper-v 2016
 author: jiwool
 ms.author: jiwool
-manager: senthilr
 ms.date: 01/26/2017
 ms.topic: article
 ms.assetid: 444e1496-9e5a-41cf-bfbc-306e2ed8e00a
-audience: IT Pros
-ms.reviewer: kathydav
 ---
 
 # Create Hyper-V VHD Set files
@@ -31,7 +28,7 @@ Hyper-V handles all aspects of managing the checkpoint chains and merging the sh
 
 ## Create a VHD Set file from Windows PowerShell
 
-Use the [New-VHD](/powershell/module/hyper-v/new-vhd?view=win10-ps) cmdlet, with the file type .VHDS in the file path. This example creates a VHD Set file named base.vhds that is 10 Gigabytes in size.
+Use the [New-VHD](/powershell/module/hyper-v/new-vhd) cmdlet, with the file type .VHDS in the file path. This example creates a VHD Set file named base.vhds that is 10 Gigabytes in size.
 
 ``` PowerShell
 PS c:\>New-VHD -Path c:\base.vhds -SizeBytes 10GB

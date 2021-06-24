@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Shielded VMs for tenants - Creating a template disk (optional)"
 title: Shielded VMs for tenants - Creating a template disk - optional
 ms.topic: article
 ms.assetid: c1992f8b-6f88-4dbc-b4a5-08368bba2787

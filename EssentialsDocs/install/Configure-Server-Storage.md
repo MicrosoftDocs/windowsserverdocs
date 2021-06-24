@@ -1,12 +1,12 @@
 ---
 title: "Configure Server Storage"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to configure your server storage, your server backup, and the data partition.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ef7ddcdd-3a74-40ca-9487-c3a6fc5155a5
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Configure Server Storage

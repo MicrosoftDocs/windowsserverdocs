@@ -1,12 +1,12 @@
 ---
 title: "Configure DirectAccess in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to configure DirectAccess to enable your mobile workforce to connect to your network from any remote location without establishing a VPN connection.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c959b6fc-c67e-46cd-a9cb-cee71a42fa4c
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Configure DirectAccess in Windows Server Essentials

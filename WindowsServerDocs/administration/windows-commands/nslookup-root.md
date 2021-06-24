@@ -1,11 +1,11 @@
 ---
 title: nslookup root
 description: Reference article for the nslookup root command, which changes the default server to the server for the root of the Domain Name System (DNS) domain name space.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 9c29edc3-ec49-43f2-bc49-86bf0612d816
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

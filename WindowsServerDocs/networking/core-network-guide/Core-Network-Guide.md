@@ -4,8 +4,9 @@ description: This guide provides instructions on how to plan and deploy the core
 manager: brianlic
 ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Core network components
 
@@ -542,8 +543,8 @@ You can use the following commands to install and configure AD DS and DNS. You m
 
 >[!NOTE]
 >For more information about these Windows PowerShell commands, see the following reference topics.
->- [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=win10-ps)
->- [Install-ADDSForest](/powershell/module/addsdeployment/install-addsforest?view=win10-ps)
+>- [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature)
+>- [Install-ADDSForest](/powershell/module/addsdeployment/install-addsforest)
 
 Membership in **Administrators** is the minimum required to perform this procedure.
 

@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Active Directory Administrative Center"
 ms.assetid: dc60ebc1-4363-4bb7-81ab-be4889292d55
 title: Active Directory Administrative Center
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

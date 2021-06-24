@@ -1,11 +1,12 @@
 ---
 title: STEP 8 Snapshot the DirectAccess Cluster-NLB Configuration
-description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB for Windows Server 2016
+description: Learn how to create and save a snapshot of the DirectAccess Cluster-NLB configuration test lab.
 manager: brianlic
 ms.topic: article
 ms.assetid: 915ef7dd-169d-4d58-9174-438d8ffa3584
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # STEP 8 Snapshot the DirectAccess Cluster-NLB Configuration
 

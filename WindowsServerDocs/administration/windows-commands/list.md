@@ -1,11 +1,11 @@
 ---
 title: list
 description: Reference article for the list command, which displays a list of disks, of partitions in a disk, of volumes in a disk, or of virtual hard disks (VHDs).
-ms.topic: article
+ms.topic: reference
 ms.assetid: 69b105a1-9710-4a06-8102-38cc9e475ca5
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

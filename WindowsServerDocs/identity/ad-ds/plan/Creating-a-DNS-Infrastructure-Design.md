@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Creating a DNS Infrastructure Design"
 ms.assetid: cd70b0aa-0a67-4966-a041-4dd3f302c98b
 title: Creating a DNS Infrastructure Design
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: daveba
+author: iainfoulds
+manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
 ---

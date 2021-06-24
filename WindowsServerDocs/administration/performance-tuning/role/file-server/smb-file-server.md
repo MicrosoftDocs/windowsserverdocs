@@ -3,7 +3,7 @@ title: Performance Tuning for SMB File Servers
 description: Performance Tuning for SMB File Servers
 ms.topic: article
 author: phstee
-ms.author: nedpyle; danlo; dkruse
+ms.author: nedpyle
 ms.date: 4/14/2017
 ---
 # Performance tuning for SMB file servers
@@ -18,11 +18,11 @@ Copying files is a common operation performed on a file server. Windows Server h
 ## SMB performance tuning
 
 
-File server performance and available tunings depend on the SMB protocol that is negotiated between each client and the server, and on the deployed file server features. The highest protocol version currently available is SMB 3.1.1 in Windows Server 2016 and Windows 10. You can check which version of SMB is in use on your network by using Windows PowerShell **Get-SMBConnection** on clients and **Get-SMBSession | FL** on servers.
+File server performance and available tunings depend on the SMB protocol that is negotiated between each client and the server, and on the deployed file server features. The highest protocol version currently available is SMB 3.1.1 in Windows Server 2022, Windows Server 2016 and Windows 10. You can check which version of SMB is in use on your network by using Windows PowerShell **Get-SMBConnection** on clients and **Get-SMBSession | FL** on servers.
 
 ### SMB 3.0 protocol family
 
-SMB 3.0 was introduced in Windows Server 2012 and further enhanced in Windows Server 2012 R2 (SMB 3.02) and Windows Server 2016 (SMB 3.1.1). This version introduced technologies that may significantly improve performance and availability of the file server. For more info, see [SMB in Windows Server 2012 and 2012 R2 2012](https://aka.ms/smb3plus) and [What's new in SMB 3.1.1](https://aka.ms/smb311).
+SMB 3.0 was introduced in Windows Server 2012 and further enhanced in Windows Server 2012 R2 (SMB 3.02) and Windows Server 2016 (SMB 3.1.1). This version introduced technologies that may significantly improve performance and availability of the file server. For more info, see [SMB in Windows Server 2012 and 2012 R2 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11)) and [What's new in SMB 3.1.1](https://aka.ms/smb311).
 
 
 
@@ -34,13 +34,13 @@ Whenever SMB detects an RDMA-capable network, it automatically tries to use the 
 
 SMB Direct is not required in any SMB configuration, but it' s always recommended for those who want lower latency and lower CPU utilization.
 
-For more info about SMB Direct, see [Improve Performance of a File Server with SMB Direct](https://aka.ms/smbdirect).
+For more info about SMB Direct, see [Improve Performance of a File Server with SMB Direct](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134210(v=ws.11)).
 
 ### SMB Multichannel
 
 SMB Multichannel allows file servers to use multiple network connections simultaneously and provides increased throughput.
 
-For more info about SMB Multichannel, see [Deploy SMB Multichannel](https://aka.ms/smbmulti).
+For more info about SMB Multichannel, see [Deploy SMB Multichannel](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn610980(v=ws.11)).
 
 ### SMB Scale-Out
 
@@ -125,7 +125,7 @@ The following REG\_DWORD registry settings can affect the performance of SMB fil
   > An indication that the value may need to be increased is if the SMB2 work queues are growing very large (performance counter ‘Server Work Queues\\Queue Length\\SMB2 NonBlocking \*'  is consistently above ~100).
 
   >[!Note]
-  >In Windows 10 and Windows Server 2016, MaxThreadsPerQueue is unavailable. The number of threads for a thread pool will be "20 * the number of processors in a NUMA node".
+  >In Windows 10, Windows Server 2016, and Windows Server 2022, MaxThreadsPerQueue is unavailable. The number of threads for a thread pool will be "20 * the number of processors in a NUMA node".
 
 
 - **AsynchronousCredits**

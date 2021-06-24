@@ -1,11 +1,10 @@
 ---
 title: Set up hosts for live migration without Failover Clustering
 description: Gives instructions for setting up live migration in a non-clustered environment
-manager: dongill
 ms.topic: article
 ms.assetid: b5e3c405-cb76-4ff2-8042-c2284448c435
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 9/30/2016
 ---
 # Set up hosts for live migration without Failover Clustering
@@ -106,7 +105,7 @@ This step includes choosing options for authentication and networking. As a secu
 
 ### Use Windows PowerShell to set up the source and destination computers for live migration
 
-Three cmdlets are available for configuring live migration on non-clustered hosts: [Enable-VMMigration](/powershell/module/hyper-v/enable-vmmigration?view=win10-ps), [Set-VMMigrationNetwork](/powershell/module/hyper-v/set-vmmigrationnetwork?view=win10-ps), and [Set-VMHost](/powershell/module/hyper-v/set-vmhost?view=win10-ps). This example uses all three and does the following:
+Three cmdlets are available for configuring live migration on non-clustered hosts: [Enable-VMMigration](/powershell/module/hyper-v/enable-vmmigration), [Set-VMMigrationNetwork](/powershell/module/hyper-v/set-vmmigrationnetwork), and [Set-VMHost](/powershell/module/hyper-v/set-vmhost). This example uses all three and does the following:
   - Configures live migration on the local host
   - Allows incoming migration traffic only on a specific network
   - Chooses Kerberos as the authentication protocol

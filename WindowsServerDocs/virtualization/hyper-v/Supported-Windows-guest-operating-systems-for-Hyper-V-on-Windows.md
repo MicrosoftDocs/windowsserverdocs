@@ -1,18 +1,15 @@
 ---
 title: Supported Windows guest operating systems for Hyper-V on Windows Server
 description: Lists the Windows operating systems supported for use as a guest in a virtual machine. Also gives links to similar articles for previous versions of Hyper-V.
-
-manager: dongill
-
 ms.topic: article
 ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
-author: lizap
-ms.author: elizapo
-ms.date: 01/08/2019
+ms.author: benarm
+author: BenjaminArmstrong
+ms.date: 12/09/2020
 ---
 # Supported Windows guest operating systems for Hyper-V on Windows Server
 
->Applies To: Windows Server 2016, Windows Server 2019
+>Applies To: Windows Server 2016, Windows Server 2019, Azure Stack HCI, version 20H2
 
 Hyper-V supports several versions of Windows Server, Windows, and Linux distributions to run in virtual machines, as guest operating systems. This article covers supported Windows Server and Windows guest operating systems. For Linux and FreeBSD distributions, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).
 

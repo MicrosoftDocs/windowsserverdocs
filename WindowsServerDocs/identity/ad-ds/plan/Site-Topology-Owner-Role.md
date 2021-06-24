@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Site Topology Owner Role"
 ms.assetid: af76ddbe-83a2-4a62-9989-873e3bb1c772
 title: Site Topology Owner Role
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

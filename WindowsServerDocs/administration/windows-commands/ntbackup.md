@@ -1,11 +1,11 @@
 ---
 title: ntbackup
 description: Reference article for the ntbackup command, which has been replaced by the wbadmin command.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 6bce6b0d-646b-46b6-b833-0ff1d6f082c2
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Virtualized Domain Controller Troubleshooting"
 ms.assetid: 249ba1be-b0d3-4a77-99af-3699074a2b6e
 title: Virtualized Domain Controller Troubleshooting
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---
@@ -187,7 +188,8 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Event ID** | **2161** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message** | The local *<COMPUTERNAME>* did not find the virtual domain controller cloning configuration file. The local machine is not a cloned DC.| **Notes and resolution** | This is a success event and only an issue if unexpected. Examine the DSA Working Directory, %systemroot%\ntds, and root of any local or removable disks for the dcclconeconfig.xml file. |
+| **Message** | The local *<COMPUTERNAME>* did not find the virtual domain controller cloning configuration file. The local machine is not a cloned DC.|
+| **Notes and resolution** | This is a success event and only an issue if unexpected. Examine the DSA Working Directory, %systemroot%\ntds, and root of any local or removable disks for the dcclconeconfig.xml file. |
 
 | Events | Description |
 |--|--|
@@ -876,7 +878,7 @@ The promotion process means that the cloning starts, the DC is scrubbed of its c
 >
 > For further explanation of the dcpromo.log see the Understand and Troubleshoot AD DS Simplified Administration in Windows Server 2012.
 >
-> [https://go.microsoft.com/fwlink/p/?LinkId=237244](https://go.microsoft.com/fwlink/p/?LinkId=237244)
+> [https://go.microsoft.com/fwlink/p/?LinkId=237244](../ad-ds-simplified-administration.md)
 
 - Start clone-based promotion
 

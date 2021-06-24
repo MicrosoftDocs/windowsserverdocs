@@ -1,12 +1,12 @@
 ---
 title: "Install the Windows Server Essentials Log Collector"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to use the Log Collector installation wizard to install the Log Collector as a Launchpad Add-in.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d271c54f-1ffa-464e-afa5-27b8df61854e
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Install the Windows Server Essentials Log Collector

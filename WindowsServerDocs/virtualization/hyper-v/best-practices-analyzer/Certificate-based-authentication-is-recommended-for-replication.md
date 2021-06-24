@@ -1,18 +1,17 @@
 ---
 title: Certificate-based authentication is recommended for replication
-description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+description: Learn what to do when one or more virtual machines selected for replication are configured for Kerberos authentication.
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: d931cc57-414f-4bdf-9ebd-08fd5e22b19d
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Certificate-based authentication is recommended for replication
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -33,6 +32,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## **Resolution**
 *If another method is being used to perform encryption, you can ignore this. Otherwise, modify the virtual machine settings to choose certificate-based authentication.*
-
-
-

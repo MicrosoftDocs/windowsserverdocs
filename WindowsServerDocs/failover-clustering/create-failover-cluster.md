@@ -5,14 +5,14 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.date: 06/06/2019
+ms.date: 05/05/2021
 ms.localizationpriority: medium
 ---
 # Create a failover cluster
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 
-This topic shows how to create a failover cluster by using either the Failover Cluster Manager snap-in or Windows PowerShell. The topic covers a typical deployment, where computer objects for the cluster and its associated clustered roles are created in Active Directory Domain Services (AD DS). If you're deploying a Storage Spaces Direct cluster, instead see [Deploy Storage Spaces Direct](../storage/storage-spaces/deploy-storage-spaces-direct.md).
+This topic shows how to create a failover cluster by using either the Failover Cluster Manager snap-in or Windows PowerShell. The topic covers a typical deployment, where computer objects for the cluster and its associated clustered roles are created in Active Directory Domain Services (AD DS). If you're deploying a Storage Spaces Direct cluster, instead see [Deploy Storage Spaces Direct](../storage/storage-spaces/deploy-storage-spaces-direct.md). For information about using a failover cluster in Azure Stack HCI, see [Update Azure Stack HCI clusters](/azure-stack/hci/manage/update-cluster).
 
 You can also deploy an Active Directory-detached cluster. This deployment method enables you to create a failover cluster without permissions to create computer objects in AD DS or the need to request that computer objects are prestaged in AD DS. This option is only available through Windows PowerShell, and is only recommended for specific scenarios. For more information, see [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11)).
 
@@ -210,7 +210,9 @@ The following example creates a cluster that is named *MyCluster* in the *Cluste
 New-Cluster -Name CN=MyCluster,OU=Cluster,DC=Contoso,DC=com -Node Server1, Server2
 ```
 
-For examples of how to add clustered roles, see topics such as [Add-ClusterFileServerRole](/powershell/module/failoverclusters/add-clusterfileserverrole?view=win10-ps) and [Add-ClusterGenericApplicationRole](/powershell/module/failoverclusters/add-clustergenericapplicationrole?view=win10-ps).
+For examples of how to add clustered roles, see topics such as [Add-ClusterFileServerRole](/powershell/module/failoverclusters/add-clusterfileserverrole) and [Add-ClusterGenericApplicationRole](/powershell/module/failoverclusters/add-clustergenericapplicationrole).
+
+After the AD Detached failover Cluster is created backup the certificate with private key exportable option. Open MMC ==>File ==>Add remove Snap in ==>Certificates==>Services Accounts==>Next==>Local Computer==>Cluster Service==>Certificates==>Clussvc\Personal==>Select Certificate right click==>export ==>Next==>Yes export the Private Key ==>PfX Format==>Choose Password or you can add group ==>Next==>Select path where you want to store certificate==>Next ==>Finish. "More details have been documented in Internal Article https://internal.support.services.microsoft.com/en-US/help/4569891"
 
 ## More information
 
@@ -220,5 +222,5 @@ For examples of how to add clustered roles, see topics such as [Add-ClusterFileS
   - [Deploy an Active Directory-Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265970(v=ws.11))
   - [Using Guest Clustering for High Availability](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn440540(v%3dws.11)>)
   - [Cluster-Aware Updating](cluster-aware-updating.md)
-  - [New-Cluster](/powershell/module/failoverclusters/new-cluster?view=win10-ps)
-  - [Test-Cluster](/powershell/module/failoverclusters/test-cluster?view=win10-ps)
+  - [New-Cluster](/powershell/module/failoverclusters/new-cluster)
+  - [Test-Cluster](/powershell/module/failoverclusters/test-cluster)

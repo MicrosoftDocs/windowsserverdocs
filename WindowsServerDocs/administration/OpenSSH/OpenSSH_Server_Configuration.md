@@ -1,13 +1,13 @@
 ---
 title: OpenSSH Server Configuration for Windows
-description: Configuration information about OpenSSH Server for Windows 10 1809 and Server 2019.
+description: Configuration information about OpenSSH Server for Windows 10 1809 and Windows Server 2019.
 ms.date: 09/27/2018
 ms.topic: conceptual
-contributor: maertendMSFT
+ms.author: damaerte
 author: maertendmsft
 ---
 
-# OpenSSH Server Configuration for Windows 10 1809 and Server 2019
+# OpenSSH Server Configuration for Windows 10 1809 and Windows Server 2019
 
 This topic covers the Windows-specific configuration for OpenSSH Server (sshd).
 
@@ -17,11 +17,11 @@ OpenSSH maintains detailed documentation for configuration options online at [Op
 
 The default command shell provides the experience a user sees when connecting to the server using SSH.
 The initial default Windows is the Windows Command shell (cmd.exe).
-Windows also includes PowerShell and Bash, and third party command shells are also available for Windows and may be configured as the default shell for a server.
+Windows also includes PowerShell and Bash, and third-party command shells are also available for Windows and may be configured as the default shell for a server.
 
 To set the default command shell, first confirm that the OpenSSH installation folder is on the system path.
 For Windows, the default installation folder is SystemDrive:WindowsDirectory\System32\openssh.
-The following commands shows the current path setting, and add the default OpenSSH installation folder to it.
+The following command shows the current path setting, and add the default OpenSSH installation folder to it.
 
 Command shell | Command to use
 ------------- | --------------
@@ -30,7 +30,7 @@ PowerShell | $env:path
 
 Configuring the default ssh shell is done in the Windows registry by adding the full path to the shell executable to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH in the string value DefaultShell.
 
-As an example, the following Powershell command sets the default shell to be PowerShell.exe:
+As an example, the following PowerShell command sets the default shell to be powershell.exe:
 
 ```powershell
 New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force
@@ -43,7 +43,6 @@ If the file is absent, sshd generates one with the default configuration when th
 
 The elements listed below provide Windows-specific configuration possible through entries in sshd_config.
 There are other configuration settings possible in that are not listed here, as they are covered in detail in the online [Win32 OpenSSH documentation](https://github.com/powershell/win32-openssh/wiki).
-
 
 ### AllowGroups, AllowUsers, DenyGroups, DenyUsers
 
@@ -86,7 +85,7 @@ The default is ".ssh/authorized_keys .ssh/authorized_keys2". If the path is not 
 
 ### ChrootDirectory (Support added in v7.7.0.0)
 
-This directive is only supported with sftp sessions. A remote session into cmd.exe wouldn't honor this. To setup a sftp-only chroot server, set ForceCommand to internal-sftp. You may also set up scp with chroot, by implementing a custom shell that would only allow scp and sftp.
+This directive is only supported with sftp sessions. A remote session into cmd.exe wouldn't honor this. To set up a sftp-only chroot server, set ForceCommand to internal-sftp. You may also set up scp with chroot, by implementing a custom shell that would only allow scp and sftp.
 
 ### HostKey
 
@@ -103,11 +102,11 @@ Not applicable in Windows. To prevent administrator login, use Administrators wi
 ### SyslogFacility
 
 If you need file based logging, use LOCAL0. Logs are generated under %programdata%\ssh\logs.
-Any other value, including the default value AUTH directs logging to ETW. For more info see Logging Facilities in Windows.
+For any other value, including the default value, AUTH directs logging to ETW. For more info, see [Logging Facilities in Windows](https://github.com/PowerShell/Win32-OpenSSH/wiki/Logging-Facilities).
 
 ### Not supported
 
-The following configuration options are not available in the OpenSSH version that ships in Windows Server 2019 and Windows 10 1809:
+The following configuration options are not available in the OpenSSH version that ships in Windows Server 2019 and Windows 10 build 1809:
 
 * AcceptEnv
 * AllowStreamLocalForwarding

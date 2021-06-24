@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ReFS integrity streams"
 title: ReFS integrity streams
 author: gawatu
 ms.author: jgerend

@@ -6,6 +6,7 @@ ms.topic: article
 author: lizap
 ms.author: elizapo
 ms.localizationpriority: medium
+ms.date: 08/07/2020
 ---
 
 # Automatic virtual machine activation

@@ -16,15 +16,15 @@ In case you're not yet familiar with how Windows Admin Center works, let's start
 - Lightweight **web service** that serves Windows Admin Center UI web pages to web browser requests.
 - **Gateway component** that listens for REST API requests from the web pages and relays WMI calls or PowerShell scripts to be executed on a target server or cluster.
 
-![Windows Admin Center architecture](../media/understand-extensions/wac-architecture-500px.png)
+![A diagram of a Windows Admin Center architecture.](../media/understand-extensions/wac-architecture-500px.png)
 
 The Windows Admin Center UI web pages served by the web service has two main UI components from an extensibility perspective, solutions and tools, which are implemented as extensions, and, a third extension type called gateway plugins.
 
 ## Solution extensions
 
-In the Windows Admin Center home screen, by default, you can add connections that are one of four types – Windows Server connections, Windows PC connections, failover cluster connections and hyper-converged cluster connections. Once a connection is added, the connection name and type will be displayed in the home screen. Clicking on the connection name will attempt to connect to the target server or cluster and then load the UI for the connection.
+In the Windows Admin Center home screen, by default, you can add connections that are one of four types – Windows Server connections, Windows PC connections, server clusters connections and Azure VMs connections. Once a connection is added, the connection name and type will be displayed in the home screen. Clicking on the connection name will attempt to connect to the target server or cluster and then load the UI for the connection.
 
-![Windows Admin Center architecture](../media/understand-extensions/solutions-ui.png)
+![Screenshot of the Add Connections feature of the Windows Admin Center.](../media/launch/use-get-started-5.png)
 
 Each of these connection types map to a solution and solutions are defined through a type of extension called “solution” extensions. Solutions typically define a unique type of object you wish to manage through Windows Admin Center, such as servers, PCs or failover clusters. You could also define a new solution for connecting to and managing other devices such as network switches and Linux servers, or even services such as Remote Desktop Services.
 
@@ -32,11 +32,11 @@ Each of these connection types map to a solution and solutions are defined throu
 
 When you click on a connection in the Windows Admin Center home screen and connect, the solution extension for the selected connection type will be loaded and you will then be presented with the solution UI including a list of tools in the left navigation pane. When you click on a tool, the tool UI is loaded and displayed in the right pane.
 
-![Windows Admin Center UI architecture](../media/understand-extensions/ui-architecture.png)
+![Windows Admin Center UI architecture](../media/understand-extensions/extend-understanding-extensions-2.png)
 
 Each of these tools are defined through a second type of extension called “tool” extensions. When a tool is loaded, it can execute WMI calls or PowerShell scripts on a target server or cluster and display information in the UI or execute commands based on user input. A tool extension defines which solutions it should be displayed for, resulting in a different set of tools for each solution. If you are creating a new solution extension, you'll additionally need to write one or more tool extensions that provide functionality for the solution.
 
-![List of tools for each solution](../media/understand-extensions/tools-for-solutions.png)
+![List of tools for each solution](../media/understand-extensions/extend-understanding-extensions-3.png)
 
 ## Gateway plugins
 

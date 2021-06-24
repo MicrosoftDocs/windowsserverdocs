@@ -1,11 +1,10 @@
 ---
 title: Avoid configuring virtual machines to allow unfiltered SCSI commands
-description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+description: Learn what to do when a virtual machine is configured to allow unfiltered SCSI commands.
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: dd4a3d78-a77f-451e-a383-d5cf45ea17cf
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Avoid configuring virtual machines to allow unfiltered SCSI commands
@@ -14,7 +13,7 @@ ms.date: 8/16/2016
 
 
 
-*For more information about best practices and scans, see* [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+*For more information about best practices and scans, see* [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -38,6 +37,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## Resolution
 
 *Contact your storage vendor to determine if this configuration is required. Also, if the management operating system or other guest operating systems are compromised or exhibit unusual behavior, reconfigure the virtual machine to block the commands.*
-
-
-

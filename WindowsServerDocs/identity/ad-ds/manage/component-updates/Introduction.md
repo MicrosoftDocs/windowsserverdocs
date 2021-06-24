@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Introduction"
 ms.assetid: 84754c23-f039-4de4-a378-853942e662df
 title: Introduction
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

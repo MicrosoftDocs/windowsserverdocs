@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Resources to verify replication is working"
 title: AD Forest Recovery - Verify Replication
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: daveba
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 302e522a-fb40-43bc-bc63-83dcc87ebde5

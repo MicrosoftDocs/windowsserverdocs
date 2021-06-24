@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Introducing Token Binding"
 title: Introducing Token Binding
 ms.topic: article
 ms.assetid: 4623a48c-cefd-4a27-9173-2af58ac212f2
-manager: alanth
 author: justinha
+ms.author: Justinha
 ms.date: 11/09/2016
 ---
 

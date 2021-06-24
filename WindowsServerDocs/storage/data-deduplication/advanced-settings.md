@@ -1,6 +1,7 @@
 ---
 ms.assetid: 01c8cece-66ce-4a83-a81e-aa6cc98e51fc
 title: Advanced Data Deduplication settings
+description: "Learn more about: Advanced Data Deduplication settings"
 ms.topic: article
 author: wmgries
 manager: klaasl
@@ -18,10 +19,10 @@ The [default Data Deduplication job schedules](understand.md#job-info) are desig
 
 ### <a id="modifying-job-schedules-change-schedule"></a>Changing a Data Deduplication schedule
 Data Deduplication jobs are scheduled via Windows Task Scheduler and can be viewed and edited there under the path Microsoft\Windows\Deduplication. Data Deduplication includes several cmdlets that make scheduling easy.
-* [`Get-DedupSchedule`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11)) shows the current scheduled jobs.
-* [`New-DedupSchedule`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11)) creates a new scheduled job.
-* [`Set-DedupSchedule`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11)) modifies an existing scheduled job.
-* [`Remove-DedupSchedule`](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730705(v=ws.11)) removes a scheduled job.
+* [`Get-DedupSchedule`](/powershell/module/deduplication/get-dedupschedule) shows the current scheduled jobs.
+* [`New-DedupSchedule`](/powershell/module/deduplication/new-dedupschedule) creates a new scheduled job.
+* [`Set-DedupSchedule`](/powershell/module/deduplication/set-dedupschedule) modifies an existing scheduled job.
+* [`Remove-DedupSchedule`](/powershell/module/deduplication/remove-dedupschedule) removes a scheduled job.
 
 The most common reason for changing when Data Deduplication jobs run is to ensure that jobs run during off hours. The following step-by-step example shows how to modify the Data Deduplication schedule for a *sunny day* scenario: a hyper-converged Hyper-V host that is idle on weekends and after 7:00 PM on weeknights. To change the schedule, run the following PowerShell cmdlets in an Administrator context.
 

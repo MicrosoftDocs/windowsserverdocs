@@ -4,8 +4,9 @@ description: This topic is part of the Converged NIC Configuration Guide for Win
 ms.topic: article
 ms.assetid: 0bc6746f-2adb-43d8-a503-52f473833164
 manager: brianlic
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 12/18/2020
 ---
 
 # Troubleshooting Converged NIC Configurations
@@ -39,15 +40,15 @@ Host vNIC and the physical NIC show non-zero RDMA capabilities.
 Perform the following steps if you receive unexpected results when you run the **Get-NetAdapterRdma** command.
 
 1. Make sure the Mlnx miniport and Mlnx bus drivers are latest. For Mellanox, use at least drop 42.
-2. Verify that Mlnx miniport and bus drivers match by checking the driver version through Device Manager. The bus driver can be found in System Devices. The name should start with Mellanox Connect-X 3 PRO VPI, as illustrated in the following screen shot of network adapter properties.
+2. Verify that Mlnx miniport and bus drivers match by checking the driver version through Device Manager. The bus driver can be found in System Devices. The name should start with Mellanox Connect-X 3 PRO VPI, as illustrated in the following screenshot of network adapter properties.
 
-![Network adapter properties](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-02.jpg)
+   ![Screenshot showing the Information tab of the Mellanox ConnectX-3 Pro EthernetAdapter Properties dialog box and the Driver tab of the Mellanox ConnectX-3 Pro VPI Network Adapter Properties dialog box.](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-02.jpg)
 
 4. Make sure Network Direct (RDMA) is enabled on both the physical NIC and host vNIC.
 5. Make sure vSwitch is created over the right physical adapter by checking its RDMA capabilities.
 6. Check EventViewer System log and filter by source “Hyper-V-VmSwitch”.
 
-## Get-SmbClientNetworkInterface
+## Get-SmbClientNetworkInterface verifies RDMA configuration
 
 As an additional step to verify your RDMA configuration, run the following Windows PowerShell command on the Hyper-V server.
 
@@ -59,12 +60,12 @@ Get-SmbClientNetworkInterface
 
 The host vNIC should appear as RDMA capable from SMB's perspective as well.
 
-![Network adapter properties](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-03.jpg)
+![Screenshot of the PowerShell window showing the result of the Get-SmbClientNetworkInterface cmdlet.](../../media/Converged-NIC/CNIC-Troubleshooting/cnic-tshoot-03.jpg)
 
 ### Get-SmbClientNetworkInterface unexpected results
 
 1. Make sure the Mlnx miniport and Mlnx bus drivers are latest. For Mellanox, use at least drop 42.
-2. Verify that Mlnx miniport and bus drivers match by checking the driver version through Device Manager. The bus driver can be found in System Devices. The name should start with Mellanox Connect-X 3 PRO VPI, as illustrated in the following screen shot of network adapter properties.
+2. Verify that Mlnx miniport and bus drivers match by checking the driver version through Device Manager. The bus driver can be found in System Devices. The name should start with Mellanox Connect-X 3 PRO VPI, as illustrated in the following screenshot of network adapter properties.
 3. Make sure Network Direct (RDMA) is enabled on both the physical NIC and host vNIC.
 4. Make sure the Hyper-V Virtual Switch is created over the right physical adapter by checking its RDMA capabilities.
 5. Check EventViewer logs for “SMB Client” in **Application And Services | Microsoft | Windows**.
@@ -111,7 +112,7 @@ If your results are unexpected, perform the following steps.
 1. Make sure ping works both ways.
 2. Make sure the firewall is not blocking SMB connection initiation. Specifically, enable the firewall rule for SMB Direct port 5445 for iWARP and 445 for ROCE.
 
-## Get-SmbClientNetworkInterface
+## Get-SmbClientNetworkInterface verifies NIC is RMDA-capable
 
 You can use the following command to verify that the virtual NIC you enabled for RDMA is reported as RDMA\-capable by SMB.
 

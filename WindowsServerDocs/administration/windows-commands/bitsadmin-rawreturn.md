@@ -1,11 +1,11 @@
 ---
 title: bitsadmin rawreturn
 description: Reference article for the bitsadmin rawreturn command, which returns data suitable for parsing.
-ms.topic: article
+ms.topic: reference
 ms.assetid: bbe97130-26f6-4cdd-84f1-baf530ce38b7
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

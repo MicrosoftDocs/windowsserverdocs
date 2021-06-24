@@ -1,12 +1,12 @@
 ---
 title: "Configure folder redirection on the Windows Server Essentials Destination Server"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to configure folder redirection on the Windows Server Essentials Destination Server.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: fe77ba67-128c-4fc3-9361-30fa6af42516
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Configure folder redirection on the Windows Server Essentials Destination Server

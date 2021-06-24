@@ -1,11 +1,11 @@
 ---
 title: auditpol get
 description: Reference article for the auditpol get command, which retrieves the system policy, per-user policy, auditing options, and audit security descriptor object.
-ms.topic: article
+ms.topic: reference
 ms.assetid: fe13de4e-836c-4207-b47c-64b6272d6c41
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # auditpol get

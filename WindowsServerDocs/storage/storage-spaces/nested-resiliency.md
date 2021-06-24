@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Nested resiliency for Storage Spaces Direct"
 title: Nested resiliency for Storage Spaces Direct
 ms.author: jgerend
 manager: dansimpspaces
@@ -73,7 +74,7 @@ Capacity efficiency is the ratio of usable space to [volume footprint](plan-volu
 
 Notice that the capacity efficiency of classic two-way mirroring (about 50%) and nested mirror-accelerated parity (up to 40%) are not very different. Depending on your requirements, the slightly lower capacity efficiency may be well worth the significant increase in storage availability. You choose resiliency per-volume, so you can mix nested resiliency volumes and classic two-way mirror volumes within the same cluster.
 
-![Tradeoff](media/nested-resiliency/tradeoff.png)
+![Diagram showing the tradeoff between a two-way mirror and nested mirror-accelerated parity.](media/nested-resiliency/tradeoff.png)
 
 ## Usage in PowerShell
 

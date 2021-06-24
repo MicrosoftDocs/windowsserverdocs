@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: AD Forest Recovery - Performing a full server recovery"
 title: AD Forest Recovery - Performing a full server recovery
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: daveba
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ms.assetid: 1a1182a6-4462-4a13-806e-0e642a0d5db2
@@ -28,23 +29,23 @@ Depending on your scenario, use one of the following procedures to perform a ful
 
 1. Start Windows Setup, specify the Language, Time and currency format, and keyboard options and click **Next**.
 2. Click **Repair your computer**.
-   ![Server Restore](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore1.png)
+   ![Screenshot that shows where to select Repair your computer.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore1.png)
 3. Click **Troubleshoot**.</br>
-   ![Server Restore](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore2.png)
+   ![Screenshot that shows the Troubleshoot option.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore2.png)
 4. Click **System Image Recovery**.</br>
-   ![Server Restore](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore3.png)
+   ![Screenshot that shows the System Image Recovery option.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore3.png)
 5. Click **Windows Server 2016**.
-   ![Server Restore](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore4.png)
+   ![Screenshot that shows the Windows Server 2016 option.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore4.png)
 6. If you are restoring the most recent local backup, click **Use the latest available system image (recommended)** and click **Next**.
-   ![Server Restore](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore5.png)
+   ![Screenshot that shows the Use the latest available system image (recommended) option.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore5.png)
 7. You will now be given an option to:
    -  Format and repartition disks
    -  Install drivers
    -  De-selecting the **Advanced** features of automatically restarting and checking for disk errors. These are enabled by default.
-   ![Server Restore](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore6.png)
+   ![Screenshot that highlights the Advanced... button.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore6.png)
 8. Click **Next**.
 9. Click **Finish**. You will be prompted asking if you are sure you want to continue. Click **Yes**.
-   ![Server Restore](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore11.png)
+   ![Screenshot that shows the progress of the image restoration.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore11.png)
 10. Once this completes perform an authoritative restore of SYSVOL, as described in [AD Forest Recovery - Performing an authoritative synchronization of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md).
 
 ## Perform a full server restore with any image local or remote
@@ -55,9 +56,9 @@ Depending on your scenario, use one of the following procedures to perform a ful
 4. If you are restoring the most recent local backup, click **Select a system image** and click **Next**.
 5. Now you can select the location of the backup that you want to restore. If the image is local you can select it from the list.
 6. If the image is on a network share, select **Advanced**. You can also select **Advanced** if you need to install a driver.
-   ![Server Restore](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore7.png)
+   ![Screenshot that highlights the Advanced button in the Re-image your computer dialog box.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore7.png)
 7. If you are restoring from the network after clicking **Advanced** select **Search for a system image on the network**. You may be prompted to restore network connectivity. Select Ok. </br>
-   ![Server Restore](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore8.png)
+   ![Screenshot that highlights the Search for a system image on the network option.](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore8.png)
 8. Type the UNC path to the backup share location (for example, \\\server1\backups) and click **OK**. You can also type the IP address of the target server, such as \\\192.168.1.3\backups.
    ![Server Restore](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore9.png)
 9. Type credentials necessary to access the share and click OK.

@@ -2,7 +2,7 @@
 title: Hyper-V Configuration
 description: Hyper-V configuration considerations for performance tuning
 ms.topic: article
-ms.author: asmahi; sandysp; jopoulso
+ms.author: asmahi
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -51,7 +51,7 @@ For additional recommendations and insight on leveraging power plans to optimize
 
 Windows Server 2016 feature the Server Core installation option. Server Core offers a minimal environment for hosting a select set of server roles including Hyper-V. It features a smaller disk footprint for the host OS, and a smaller attack and servicing surface. Therefore, we highly recommend that Hyper-V virtualization servers use the Server Core installation option.
 
-A Server Core installation offers a console window only when the user is logged on, but Hyper-V exposes remote management features including [Windows Powershell](/powershell/module/hyper-v/?view=win10-ps) so administrators can manage it remotely.
+A Server Core installation offers a console window only when the user is logged on, but Hyper-V exposes remote management features including [Windows Powershell](/powershell/module/hyper-v/) so administrators can manage it remotely.
 
 ## Dedicated server role
 

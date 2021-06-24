@@ -1,12 +1,12 @@
 ---
 title: "Migrate Windows Server 2008 Foundation to Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to how to migrate an existing Windows Server 2008 Foundation domain to Windows Server 2012 Essentials on new hardware, and then migrate the settings and data.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: f22fc0a4-cb82-4e60-afe6-2d03145745e7
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Migrate Windows Server 2008 Foundation to Windows Server Essentials
@@ -19,7 +19,7 @@ This guide describes how to migrate an existing Windows Server 2008 Foundation d
 >  To avoid problems during migration, the  Windows Server Essentials product development team strongly recommends that you read this document before you begin the migration.
 
 ## Additional resources
- For links to additional information, tools, and community resources to help guide you through the migration process, see [Windows Small Business Server Migration](https://go.microsoft.com/fwlink/?LinkId=217520).
+ For links to additional information, tools, and community resources to help guide you through the migration process, see [Windows Small Business Server Migration](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10)).
 
 ## Terms and definitions
  **Source Server:** The existing server from which you are migrating your settings and data.

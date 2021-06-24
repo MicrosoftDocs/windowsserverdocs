@@ -1,11 +1,10 @@
 ---
 title: What's new in Hyper-V on Windows Server 2016
 description: Gives a summary of the new features in Hyper-V
-manager: dongill
 ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 09/21/2017
 ---
 # What's new in Hyper-V on Windows Server
@@ -119,7 +118,7 @@ For details and instructions, see [Run Hyper-V in a Virtual Machine with Nested 
 
 New networking features include:
 
--   **Remote direct memory access (RDMA) and switch embedded teaming (SET)**. You can set up RDMA on network adapters bound to a Hyper-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md).
+-   **Remote direct memory access (RDMA) and switch embedded teaming (SET)**. You can set up RDMA on network adapters bound to a Hyper-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
 
 -   **Virtual machine multi queues (VMMQ)**. Improves on VMQ throughput by allocating multiple hardware queues per virtual machine.  The default queue becomes a set of queues for a virtual machine, and traffic is spread between the queues.
 
@@ -157,7 +156,7 @@ After you update the cluster functional level:
 
 -   You can enable new Hyper-V features.
 
--   To make new virtual machine features available, use the Update-VmConfigurationVersion cmdlet to manually update the virtual machine configuration level. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
+-   To make new virtual machine features available, use the `Update-vmVersion` cmdlet to manually update the virtual machine configuration level. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
 -   You can't add a node to the Hyper-V Cluster that runs Windows Server 2012 R2.
 
 > [!NOTE]

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Data Deduplication Overview"
 ms.assetid: 4b844404-36ba-4154-aa5d-237a3dd644be
 title: Data Deduplication Overview
 ms.topic: article
@@ -9,7 +10,7 @@ ms.date: 05/09/2017
 ---
 # Data Deduplication Overview
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel),
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
 
@@ -35,6 +36,9 @@ The space savings that you can gain from Data Deduplication depend on the datase
 | Virtualization libraries | ISOs, virtual hard disk files, etc.  | 80-95%                |
 | General file share | All the above                           | 50-60%                |
 
+> [!NOTE]
+> If you're just looking to free up space on a volume, consider using Azure File Sync with cloud tiering enabled. This allows you to cache your most frequently accessed files locally and tier your least frequently accessed files to the cloud, saving local storage space while maintaining performance. For details, see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning).
+
 ## <a id="when-can-dedup-be-used"></a>When can Data Deduplication be used?
 <table>
     <tbody>
@@ -46,7 +50,7 @@ The space savings that you can gain from Data Deduplication depend on the datase
                 <ul>
                     <li>Team shares</li>
                     <li>User home folders</li>
-                    <li><a href="https://technet.microsoft.com/library/dn265974.aspx">Work Folders</a></li>
+                    <li><a href="/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265974(v=ws.11)">Work Folders</a></li>
                     <li>Software development shares</li>
                 </ul>
                 General purpose file servers are a good candidate for Data Deduplication because multiple users tend to have many copies or versions of the same file. Software development shares benefit from Data Deduplication because many binaries remain essentially unchanged from build to build.
@@ -55,8 +59,8 @@ The space savings that you can gain from Data Deduplication depend on the datase
         <tr>
             <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-vdi.png" alt="Illustration of VDI servers" /></td>
             <td style="vertical-align:top">
-                <b>Virtualized Desktop Infrastructure (VDI) deployments</b><br />
-                VDI servers, such as <a href="https://technet.microsoft.com/library/cc725560.aspx">Remote Desktop Services</a>, provide a lightweight option for organizations to provision desktops to users. There are many reasons for an organization to rely on such technology:
+                <b>Virtual Desktop Infrastructure (VDI) deployments</b><br />
+                VDI servers, such as <a href="/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725560(v=ws.11)">Remote Desktop Services</a>, provide a lightweight option for organizations to provision desktops to users. There are many reasons for an organization to rely on such technology:
                 <ul>
                     <li><b>Application deployment</b>: You can quickly deploy applications across your enterprise. This is especially useful when you have applications that are frequently updated, infrequently used, or difficult to manage.</li>
                     <li><b>Application consolidation</b>: When you install and run applications from a set of centrally managed virtual machines, you eliminate the need to update applications on client computers. This option also reduces the amount of network bandwidth that is required to access applications.</li>
@@ -70,7 +74,7 @@ The space savings that you can gain from Data Deduplication depend on the datase
             <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-backup.png" alt="Illustration of backup applications" /></td>
             <td style="vertical-align:top">
                 <b>Backup targets, such as virtualized backup applications</b><br />
-                Backup applications, such as <a href="https://technet.microsoft.com/library/hh758173.aspx">Microsoft Data Protection Manager (DPM)</a>, are excellent candidates for Data Deduplication because of the significant duplication between backup snapshots.
+                Backup applications, such as <a href="/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)">Microsoft Data Protection Manager (DPM)</a>, are excellent candidates for Data Deduplication because of the significant duplication between backup snapshots.
             </td>
         </tr>
         <tr>

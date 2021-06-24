@@ -1,12 +1,12 @@
 ---
 title: "Move Windows SBS 2011 Essentials settings and data to the Destination Server for Windows Server Essentials migration"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to move Windows SBS 2011 Essentials settings and data to the Destination Server for Windows Server Essentials migration.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47548994-9fa0-42e0-afa4-c2ccbd063acb
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Move Windows SBS 2011 Essentials settings and data to the Destination Server for Windows Server Essentials migration

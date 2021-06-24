@@ -9,9 +9,9 @@ metadata:
   ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.prod: windows-server
   ms.technology: manage-rsat
-  author: coreyp-at-msft
-  ms.author: coreyp
-  manager: dougkim
+  author: JasonGerend
+  ms.author: jgerend
+  manager: mtillman
   ms.localizationpriority: high
   ms.topic: landing-page # Required
   ms.date: 06/29/2020 #Required; mm/dd/yyyy format.
@@ -68,7 +68,7 @@ landingContent:
             url: ./remote-access/ras/remote-access-server-role-documentation.md
           - text: Virtual Private Networking (VPN)
             url: ./remote-access/vpn/vpn-top.md
-  
+
   # Card
   - title: Web Application Proxy
     linkLists:
@@ -84,7 +84,7 @@ landingContent:
             url: ./remote-access/web-application-proxy/publishing-applications-with-sharepoint,-exchange-and-rdg.md
           - text: Troubleshooting Web Application Proxy
             url: ./remote-access/web-application-proxy/troubleshooting-web-application-proxy.md
-  
+
   # Card (optional)
   - title: Tools
     linkLists:

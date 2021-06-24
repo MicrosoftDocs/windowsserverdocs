@@ -1,11 +1,11 @@
 ---
 title: bitsadmin setcustomheaders
 description: Reference article for the bitsadmin setcustomheaders command, which adds a custom HTTP header to a GET request.
-ms.topic: article
+ms.topic: reference
 ms.assetid: ed926410-80d0-46ed-9a90-f752c164bb9a
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: Windows Logon Scenarios
-description: Windows Server Security
+description: Learn about common Windows logon and sign-in scenarios.
 ms.topic: article
 ms.assetid: 66b7c568-67b7-4ac9-a479-a5a3b8a66142
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Windows Logon Scenarios

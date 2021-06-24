@@ -1,11 +1,11 @@
 ---
 title: dfsrmig
 description: Reference article for the dfsrmig command, which migrates SYSvol replication from FRS to DFS Replication, provides information about the progress of the migration, and modifies AD DS objects to support the migration.
-ms.topic: article
+ms.topic: reference
 ms.assetid: e1b6a464-6a93-4e66-9969-04f175226d8d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -147,7 +147,7 @@ dfsrmig /?
 
 ## Additional References
 
-- [Command-Line Syntax Key](https://go.microsoft.com/fwlink/?LinkId=122056)
+- [Command-Line Syntax Key](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc771080(v=ws.11))
 
 - [SYSvol Migration Series: Part 2 dfsrmig.exe: The SYSvol Migration Tool](https://techcommunity.microsoft.com/t5/storage-at-microsoft/sysvol-migration-series-part-2-8211-dfsrmig-exe-the-sysvol/ba-p/423470)
 

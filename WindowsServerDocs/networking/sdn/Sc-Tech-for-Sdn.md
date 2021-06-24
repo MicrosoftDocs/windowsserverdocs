@@ -6,10 +6,11 @@ ms.topic: article
 ms.assetid: f66ee49a-1fd3-4927-a813-64a15017b63b
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 12/08/2020
 ---
 # System Center Technologies for SDN
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 System Center includes the following technologies for use with Software Defined Networking (SDN):
 
@@ -19,12 +20,12 @@ System Center includes the following technologies for use with Software Defined 
 
 
 ## <a name="bkmk_scom"></a>System Center Operations Manager
-System Center 2016 Operations Manager provides infrastructure monitoring that is flexible and cost-effective, helps ensure the predictable performance and availability of vital applications, and offers comprehensive monitoring for your datacenter and cloud, both private and public.
+System Center 2019 and 2016 Operations Manager provide infrastructure monitoring that is flexible and cost-effective, helps ensure the predictable performance and availability of vital applications, and offer comprehensive monitoring for your datacenter and cloud, both private and public.
 
-For more information, see [Operations Manager](/previous-versions/system-center/system-center-2012-R2/hh205987(v=sc.12)).
+For more information, see [Operations Manager](/system-center/scom/welcome?view=sc-om-2019)
 
 ## <a name="bkmk_scvmm"></a>System Center Virtual Machine Manager
-With System Center 2016 Virtual Machine Manager (VMM), you can:
+With System Center 2019 and 2016 Virtual Machine Manager (VMM), you can:
 
 - Provision and manage virtual networks at scale.
 - Deploy and manage the SDN infrastructure, including network controllers, software load balancers, and gateways.
@@ -34,4 +35,4 @@ With System Center 2016 Virtual Machine Manager (VMM), you can:
 - Helps you to control traffic flow between virtual networks, including the ability to define guaranteed bandwidth for your critical applications and workloads.
 
 
-For more information, see [Set up a Software Defined Network (SDN) infrastructure in the VMM fabric](/system-center/vmm/deploy-sdn?view=sc-vmm-2019).
+For more information, see [Set up a Software Defined Network (SDN) infrastructure in the VMM fabric](/system-center/vmm/deploy-sdn).

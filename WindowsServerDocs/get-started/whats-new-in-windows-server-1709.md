@@ -1,9 +1,10 @@
 ---
 title: What's New in Windows Server, version 1709
-description: What are the new features in compute, identity, management, automation, networking, security, storage.
+description: What are the new features in compute, identity, management, automation, networking, security, and storage in Windows Server, version 1709.
 ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.localizationpriority: medium
 ms.date: 06/03/2019
 ---
@@ -84,7 +85,7 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
 ## Storage
 
 **Storage Replica**: The disaster recovery protection added by Storage Replica in Windows Server 2016 is now expanded to include:
-- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes.  For more information, see [Frequently Asked Questions about Storage Replica](https://aka.ms/srfaq).
+- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes.  For more information, see [Frequently Asked Questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.yml).
 - **Project Honolulu support**: Support for graphical management of server to server replication is now available in Project Honolulu. This removes the requirement to use PowerShell to manage a common disaster protection workload.
 
 **SMB**:
@@ -138,7 +139,7 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
 
   - **ISATAP and 6to4**: As a step towards future deprecation, the Creators Update will have these technologies disabled by default.
 - **Dead Gateway Detection (DGD)**: The DGD algorithm automatically transitions connections over to another gateway when the current gateway is unreachable. In this release, the algorithm is improved to periodically re-probe the network environment.
-- [Test-NetConnection](/powershell/module/nettcpip/test-netconnection?view=win10-ps) is a built-in cmdlet in Windows PowerShell that performs a variety of network diagnostics.  In this release we have enhanced the cmdlet to provide detailed information about both route selection as well as source address selection.
+- [Test-NetConnection](/powershell/module/nettcpip/test-netconnection) is a built-in cmdlet in Windows PowerShell that performs a variety of network diagnostics.  In this release we have enhanced the cmdlet to provide detailed information about both route selection as well as source address selection.
 
 **Software Defined Networking**
 

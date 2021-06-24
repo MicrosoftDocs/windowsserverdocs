@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Troubleshooting Guarded Hosts"
 title: Troubleshooting Guarded Hosts
 ms.topic: article
 ms.assetid: 80ea38f4-4de6-4f85-8188-33a63bb1cf81

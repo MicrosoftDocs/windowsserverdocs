@@ -1,11 +1,11 @@
 ---
 title: assign
 description: Reference article for the assign command, which assigns a drive letter or mount point to the volume with focus.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 57912b73-622e-489b-b053-a369021ba8e1
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

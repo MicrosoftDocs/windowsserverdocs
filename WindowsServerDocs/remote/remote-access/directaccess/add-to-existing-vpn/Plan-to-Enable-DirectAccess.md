@@ -1,11 +1,12 @@
 ---
 title: Plan to Enable DirectAccess
-description: This topic is part of the guide Add DirectAccess to an Existing Remote Access (VPN) Deployment for Windows Server 2016
+description: Learn about DirectAccess infrastructure and DirectAccess deployment for Windows Server (Semi-Annual Channel), Windows Server 2016.
 manager: brianlic
 ms.topic: article
 ms.assetid: 458a3bcf-50b6-47b2-b53c-1b8204c5189e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # Plan to Enable DirectAccess
 

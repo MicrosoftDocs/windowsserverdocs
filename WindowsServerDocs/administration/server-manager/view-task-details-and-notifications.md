@@ -1,11 +1,11 @@
 ---
 title: View Task details and Notifications
-description: Server Manager
+description: Learn how to view the status of user tasks or requests, see if a task failed, and troubleshoot problems by accessing detailed error messages about task failures.
 ms.topic: article
 ms.assetid: 95117407-2dd3-4f9a-841f-4331be3544c3
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # View Task details and Notifications

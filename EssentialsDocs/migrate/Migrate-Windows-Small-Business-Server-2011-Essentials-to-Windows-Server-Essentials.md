@@ -1,12 +1,12 @@
 ---
 title: "Migrate Windows Small Business Server 2011 Essentials to Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to migrate an existing Windows Small Business Server 2011 Essentials domain to Windows Server 2012 Essentials, and then migrate the settings and data.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 32fc90d8-31c5-4c7e-9fe3-483cf3c35f78
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Migrate Windows Small Business Server 2011 Essentials to Windows Server Essentials
@@ -24,7 +24,7 @@ This guide describes how to migrate an existing Windows Small Business Server 20
 
 
 ## Additional resources
- For links to additional information, tools, and community resources to help guide you through the migration process, see [Windows Small Business Server Migration](https://go.microsoft.com/fwlink/?LinkId=217520).
+ For links to additional information, tools, and community resources to help guide you through the migration process, see [Windows Small Business Server Migration](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10)).
 
 ## Terms and definitions
  **Source Server:** The existing server from which you are migrating your settings and data.

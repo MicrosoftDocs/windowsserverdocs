@@ -1,11 +1,10 @@
 ---
 title: Should I create a generation 1 or 2 virtual machine in Hyper-V?
 description: Gives considerations such as supported boot methods and other feature differences to help you choose which generation meets your needs.
-manager: dongill
 ms.topic: article
 ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
-author: kbdazure
-ms.author: kathydav
+ms.author: benarm
+author: BenjaminArmstrong
 ms.date: 12/05/2016
 ---
 # Should I create a generation 1 or 2 virtual machine in Hyper-V?
@@ -216,7 +215,7 @@ Here are some additional tips about using generation 2 virtual machines.
 
 ### Use IPv6 instead of IPv4
 
-By default, generation 2 virtual machines use IPv4. To use IPv6 instead, run the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:
+By default, generation 2 virtual machines use IPv4. To use IPv6 instead, run the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) Windows PowerShell cmdlet. For example, the following command sets the preferred protocol to IPv6 for a virtual machine named TestVM:
 
 ```powershell
 Set-VMFirmware -VMName TestVM -IPProtocolPreference IPv6
@@ -228,13 +227,13 @@ COM ports aren't available in generation 2 virtual machines until you add them. 
 
 To add a COM port:
 
-1. Disable Secure Boot. Kernel debugging isn't compatible with Secure Boot. Make sure the virtual machine is in an Off state, then use the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps) cmdlet. For example, the following command disables Secure Boot on virtual machine TestVM:
+1. Disable Secure Boot. Kernel debugging isn't compatible with Secure Boot. Make sure the virtual machine is in an Off state, then use the [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware) cmdlet. For example, the following command disables Secure Boot on virtual machine TestVM:
 
     ```powershell
     Set-VMFirmware -Vmname TestVM -EnableSecureBoot Off
     ```
 
-2. Add a COM port. Use the [Set-VMComPort](/powershell/module/hyper-v/set-vmcomport?view=win10-ps) cmdlet to do this. For example, the following command configures the first COM port on virtual machine, TestVM, to connect to the named pipe, TestPipe, on the local computer:
+2. Add a COM port. Use the [Set-VMComPort](/powershell/module/hyper-v/set-vmcomport) cmdlet to do this. For example, the following command configures the first COM port on virtual machine, TestVM, to connect to the named pipe, TestPipe, on the local computer:
 
     ```powershell
     Set-VMComPort -VMName TestVM 1 \\.\pipe\TestPipe

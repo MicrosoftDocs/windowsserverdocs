@@ -1,11 +1,11 @@
 ---
 title: Getting Started with Group Managed Service Accounts
-description: Windows Server Security
+description: Learn how to enable and use group Managed Service Accounts in Windows Server 2012.
 ms.topic: article
 ms.assetid: 7130ad73-9688-4f64-aca1-46a9187a46cf
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # Getting Started with Group Managed Service Accounts
@@ -31,7 +31,7 @@ This guide provides step-by-step instructions and background information for ena
 
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](/previous-versions//bb648607(v=vs.85)).
 
 ## <a name="BKMK_Prereqs"></a>Prerequisites
 See the section in this topic on [Requirements for group Managed Service Accounts](#BKMK_gMSA_Req).
@@ -133,7 +133,7 @@ When deploying a new server farm, the service administrator will need to determi
 ### <a name="BKMK_Step1"></a>Step 1: Provisioning group Managed Service Accounts
 You can create a gMSA only if the forest schema has been updated to  Windows Server 2012 , the master root key for Active Directory has been deployed, and there is at least one Windows Server 2012 DC in the domain in which the gMSA will be created.
 
-Membership in **Domain Admins**, **Account Operators** or ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures.
+Membership in **Domain Admins** or the  ability to create msDS-GroupManagedServiceAccount objects, is the minimum required to complete the following procedures.
 
 > [!NOTE]
 > A value for the -Name parameter is always required (whether you specify -Name or not), with -DNSHostName, -RestrictToSingleComputer, and -RestrictToOutboundAuthentication being secondary requirements for the three deployment scenarios.

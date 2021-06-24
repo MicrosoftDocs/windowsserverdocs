@@ -1,12 +1,12 @@
 ---
 title: "Support for larger deployments"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the support for multiple domains, multiple domain controllers, 500 users and 500 devices, and the ability to specify a designated domain controller.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 07d0c4c6-3e92-4969-82b8-105e46ab8d97
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Support for larger deployments
@@ -30,7 +30,7 @@ Windows server 2012 R2 Essentials supports only one domain per server, which is 
 
 ## Support for multiple domain controllers
 
- Windows Server Essentials 2012 R2 blocks any services that leverage Azure Active Directory, such as Office 365, where more than one domain controller is deployed. The reason is that account and password synchronization between the local domain controllers and Azure Active Directory can lead to account credentials with passwords that are out of sync. This limitation has been removed in Windows Server 2016 Essentials.
+ Windows Server Essentials 2012 R2 blocks any services that leverage Azure Active Directory, such as Microsoft 365, where more than one domain controller is deployed. The reason is that account and password synchronization between the local domain controllers and Azure Active Directory can lead to account credentials with passwords that are out of sync. This limitation has been removed in Windows Server 2016 Essentials.
 
 ## Ability to specify a designated domain controller
 

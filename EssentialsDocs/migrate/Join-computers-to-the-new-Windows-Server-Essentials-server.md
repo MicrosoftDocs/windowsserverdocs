@@ -1,12 +1,12 @@
 ---
 title: "Join computers to the new Windows Server Essentials server1"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to join computers to the new Windows Server Essentials server.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: cdfa9504-9881-4265-b308-c7ee8721bfaa
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Join computers to the new Windows Server Essentials server1

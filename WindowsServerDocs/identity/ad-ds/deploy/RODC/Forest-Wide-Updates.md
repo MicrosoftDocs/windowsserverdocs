@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Forest-Wide Updates"
 ms.assetid: 3647b7e3-54a4-46c6-ab68-82fcf3bfacda
 title: Active Directory Forest-Wide Updates
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 10/29/2018
 ms.topic: article
 ---

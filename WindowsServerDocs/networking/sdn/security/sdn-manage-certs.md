@@ -1,6 +1,6 @@
 ---
 title: Manage certificates for Software Defined Networking
-description: You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking (SDN) in Windows Server 2016 Datacenter.
+description: You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking (SDN) in Windows Server 2019 and 2016 Datacenter.
 manager: grcusanz
 ms.topic: article
 ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
@@ -11,16 +11,16 @@ ms.date: 08/22/2018
 
 # Manage certificates for Software Defined Networking
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
-You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking \(SDN\) in Windows Server 2016 Datacenter and you are using System Center Virtual Machine Manager \(SCVMM\) as your SDN management client.
+You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking \(SDN\) in Windows Server 2019 or 2016 Datacenter and you are using System Center Virtual Machine Manager \(SCVMM\) as your SDN management client.
 
 >[!NOTE]
->For overview information about Network Controller, see [Network Controller](../technologies/network-controller/Network-Controller.md).
+>For overview information about Network Controller, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).
 
 If you are not using Kerberos for securing the Network Controller communication, you can use X.509 certificates for authentication, authorization, and encryption.
 
-SDN in Windows Server 2016 Datacenter supports both self\-signed and Certification Authority \(CA\)-signed X.509 certificates. This topic provides step-by-step instructions for creating these certificates and applying them to secure Network Controller Northbound communication channels with management clients and Southbound communications with network devices, such as the Software Load Balancer \(SLB\).
+SDN in Windows Server 2019 and 2016 Datacenter supports both self\-signed and Certification Authority \(CA\)-signed X.509 certificates. This topic provides step-by-step instructions for creating these certificates and applying them to secure Network Controller Northbound communication channels with management clients and Southbound communications with network devices, such as the Software Load Balancer \(SLB\).
 .
 When you are using certificate\-based authentication, you must enroll one certificate on Network Controller nodes that is used in the following ways.
 
@@ -51,7 +51,7 @@ When you create self\-signed certificates, you can use the following guidelines.
 
 #### Multiple node
 
-You can use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps) Windows PowerShell command to create a self\-signed certificate.
+You can use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
 
 **Syntax**
 
@@ -67,7 +67,7 @@ New-SelfSignedCertificate -KeyUsageProperty All -Provider "Microsoft Strong Cryp
 
 #### Single node
 
-You can use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate?view=win10-ps) Windows PowerShell command to create a self\-signed certificate.
+You can use the [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) Windows PowerShell command to create a self\-signed certificate.
 
 **Syntax**
 

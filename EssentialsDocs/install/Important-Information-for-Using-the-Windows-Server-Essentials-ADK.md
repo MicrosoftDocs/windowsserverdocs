@@ -1,12 +1,12 @@
 ---
 title: "Important Information for Using the Windows Server Essentials ADK"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the important differences between the Windows 8 ADK and the  Windows Server Essentials ADK.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 26cb2992-1250-4672-98ee-8b870baa45d5
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Important Information for Using the Windows Server Essentials ADK
@@ -17,7 +17,7 @@ To create and customize an image of  Windows Server Essentials, you use many of 
 
  You should be aware of the following important differences:
 
--   Some settings have been changed in **%windir%\setup\script\SetupComplete.cmd**. If you want to use this command, you can add additional cmdlines, but do not remove the existing lines.
+-   Some settings have been changed in **%windir%\setup\script\SetupComplete.cmd**. If you want to use this command, you can add additional `cmdlines`, but do not remove the existing lines.
 
 ## Working with passwords
 
@@ -25,7 +25,7 @@ To create and customize an image of  Windows Server Essentials, you use many of 
 
 -   During Initial Configuration, the end user is prompted to create a new account and password. This new account becomes the network administrator account for the operating system. The Administrator account and auto logon is then disabled. You can automate this process by using the cfg.ini file for quality assurance testing.
 
--   Refer to the [Windows 8 ADK](https://go.microsoft.com/fwlink/?LinkId=248694) documentation for details on creating an unattend.xml file.
+-   Refer to the [Windows 8 ADK](/previous-versions/windows/hh825420(v=win.10)) documentation for details on creating an unattend.xml file.
 
 ## See Also
 
@@ -34,4 +34,3 @@ To create and customize an image of  Windows Server Essentials, you use many of 
  [Additional Customizations](Additional-Customizations.md)
  [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md)
  [Testing the Customer Experience](Testing-the-Customer-Experience.md)
-

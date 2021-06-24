@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: AD DS Deployment"
 ms.assetid: 241d93f9-06cf-4327-96a3-70dfe656f19d
 title: AD DS Deployment
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: daveba
+author: iainfoulds
+manager: daveba
 ms.date: 08/07/2018
 ms.topic: article
 ---

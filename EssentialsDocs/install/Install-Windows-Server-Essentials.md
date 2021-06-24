@@ -1,12 +1,12 @@
 ---
 title: "Install Windows Server Essentials"
-description: "Describes how to install and customize Windows Server Essentials"
+description: Learn how to install Windows Server Essentials.
 ms.date: 01/02/2017
 ms.topic: article
 ms.assetid: fdf020cd-3184-4886-9f9d-7d729a89057e
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 

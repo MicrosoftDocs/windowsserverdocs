@@ -1,11 +1,12 @@
 ---
 title: Delete DNS Resource Records
-description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+description: Learn how to delete one or more DNS resource records by using the IPAM client console.
 manager: brianlic
 ms.topic: article
 ms.assetid: 366e6fd5-d563-4de3-9551-5614cbb8f2cb
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Delete DNS Resource Records
 

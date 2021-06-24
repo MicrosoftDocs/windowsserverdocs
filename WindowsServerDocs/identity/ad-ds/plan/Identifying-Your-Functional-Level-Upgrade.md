@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Identifying Your Functional Level Upgrade"
 ms.assetid: 231158d8-5e81-4630-b8d5-93fee16e0cd3
 title: Identifying Your Functional Level Upgrade
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

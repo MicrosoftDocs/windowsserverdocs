@@ -1,11 +1,11 @@
 ---
 title: Use Group Policy to Configure Domain Member Client Computers
-description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+description: Learn how to use Group Policy to configure domain member client computers.
 manager: dougkim
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 911c1538-f79d-42e9-ba38-f4618f87b008
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 06/02/2018
 ---
 # Use Group Policy to Configure Domain Member Client Computers

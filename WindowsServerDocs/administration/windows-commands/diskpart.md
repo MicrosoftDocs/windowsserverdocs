@@ -1,9 +1,11 @@
 ---
 title: diskpart
 description: Reference article for the diskpart command interpreter, which helps you manage your computer's drives.
+ms.topic: reference
 author: jasongerend
 manager: elizapo
 ms.author: jgerend
+ms.date: 12/10/2020
 ---
 
 # diskpart
@@ -74,7 +76,7 @@ You can run the following commands from the Diskpart command interpreter:
 | [format](format.md) | Formats a disk to accept Windows files. |
 | [gpt](gpt.md) | Assigns the gpt attribute(s) to the partition with focus on basic GUID partition table (gpt) disks. |
 | [help](help.md) | Displays a list of the available commands or detailed help information on a specified command. |
-| [import](import.md) | Imports a foreign disk group into the disk group of the local computer. |
+| [import](import_1.md) | Imports a foreign disk group into the disk group of the local computer. |
 | [inactive](inactive.md) | Marks the system partition or boot partition with focus as inactive on basic master boot record (MBR) disks. |
 | [list](list.md) | Displays a list of disks, of partitions in a disk, of volumes in a disk, or of virtual hard disks (VHDs). |
 | [merge vdisk](merge-vdisk.md) | Merges a differencing virtual hard disk (VHD) with its corresponding parent VHD. |

@@ -1,12 +1,12 @@
 ---
 title: "Add Windows Server Essentials as a Member Server"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to add Windows Server Essentials as a member server to an existing Active Directory domain environment.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d09dd82f-f7d2-47ce-862d-fd9869f2021c
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Add Windows Server Essentials as a Member Server

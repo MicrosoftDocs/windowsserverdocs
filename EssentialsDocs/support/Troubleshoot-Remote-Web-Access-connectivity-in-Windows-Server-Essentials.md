@@ -1,12 +1,12 @@
 ---
 title: "Troubleshoot Remote Web Access connectivity in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to troubleshoot issues with Remote Web Access connectivity in Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d3642575-b3ee-4488-b654-5bf9d3b8c935
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Troubleshoot Remote Web Access connectivity in Windows Server Essentials

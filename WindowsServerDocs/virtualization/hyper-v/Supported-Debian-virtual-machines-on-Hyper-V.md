@@ -1,16 +1,15 @@
 ---
 title: Supported Debian virtual machines on Hyper-V
-description: Lists the Linux integration services and features included in each version
-manager: dongill
+description: Lists the Debin/Linux integration services and features included in each version
 ms.topic: article
 ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
-author: shirgall
-ms.author: kathydav
-ms.date: 04/07/2020
+ms.author: benarm
+author: BenjaminArmstrong
+ms.date: 01/08/2021
 ---
 # Supported Debian virtual machines on Hyper-V
 
->Applies To: Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+>Applies To: Azure Stack HCI, version 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 The following feature distribution map indicates the features that are present in each version. The known issues and workarounds for each distribution are listed after the table.
 
@@ -72,11 +71,11 @@ The following feature distribution map indicates the features that are present i
    ```Powershell
    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
    ```
-4. The latest upstream kernel capabilities are only available by using the kernel included [Debian backports](https://wiki.debian.org/Backports).
+4. The latest upstream kernel capabilities are only available by using the kernels available in the [Debian Backports repository](https://wiki.debian.org/Backports).
 
 5. While Debian 7.x is out of support and uses an older kernel, the kernel included in Debian backports for Debian 7.x has improved Hyper-V capabilities.
 
-See Also
+## See Also
 
 * [Supported CentOS and Red Hat Enterprise Linux virtual machines on Hyper-V](Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md)
 

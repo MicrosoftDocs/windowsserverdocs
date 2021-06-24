@@ -1,11 +1,12 @@
 ---
 title: Install the BranchCache Feature and Configure the Hosted Cache Server by Service Connection Point
-description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
+description: Learn how to install the BranchCache feature on your hosted cache server, HCS1, and to configure the server to register an SCP in AD DS.
 manager: brianlic
 ms.topic: article
 ms.assetid: 9adf420b-5a58-4e59-9906-71bd58f757fd
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Install the BranchCache Feature and Configure the Hosted Cache Server by Service Connection Point

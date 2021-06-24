@@ -7,7 +7,7 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 05/21/2019
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544
 ---
 # Changes to Nano Server in Windows Server Semi-Annual Channel
@@ -27,5 +27,5 @@ However, starting with Windows Server, version 1803, Nano Server is available on
 
 ## Related topics
 
-- [Windows Container Documentation](https://aka.ms/windowscontainers)
+- [Windows Container Documentation](/virtualization/windowscontainers/)
 - [Window Server Semi-Annual Channel Overview](../get-started-19/servicing-channels-19.md)

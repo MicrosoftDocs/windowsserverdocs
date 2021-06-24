@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Replication error 1753 There are no more endpoints available from the endpoint mapper"
 ms.assetid: 0f21951c-b1bf-43bb-a329-bbb40c58c876
 title: Replication error 1753 There are no more endpoints available from the endpoint mapper
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Domain Controller Location"
 ms.assetid: cc2834ec-8f66-4209-aba3-402d710cd1bd
 title: Domain Controller Location
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

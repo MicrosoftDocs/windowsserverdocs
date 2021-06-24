@@ -1,10 +1,11 @@
 ---
+description: "Learn more about: Stretch Cluster Replication Using Shared Storage"
 title: Stretch Cluster Replication Using Shared Storage
 manager: eldenc
 ms.author: nedpyle
-ms.topic: get-started-article
+ms.topic: how-to
 author: nedpyle
-ms.date: 04/26/2019
+ms.date: 01/27/2021
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 ---
 # Stretch Cluster Replication Using Shared Storage
@@ -15,6 +16,9 @@ In this evaluation example, you will configure these computers and their storage
 
 > [!IMPORTANT]
 > In this evaluation, servers in different sites must be able to communicate with the other servers via a network, but not have any physical connectivity to the other site's shared storage. This scenario does not make use of Storage Spaces Direct.
+
+> [!NOTE]
+> You may also want to consider using an Azure Stack HCI solution to implement a stretch cluster. For more information, see [Stretched clusters overview in Azure Stack HCI](/azure-stack/hci/concepts/stretched-clusters).
 
 ## Terms
 This walkthrough uses the following environment as an example:
@@ -792,8 +796,9 @@ Now you will manage and operate your stretch cluster. You can perform all of the
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
-- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 
 ## See Also
 - [Windows Server 2016](../../index.yml)
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
+- [Stretched Clusters in Azure Stack HCI](/azure-stack/hci/concepts/stretched-clusters)

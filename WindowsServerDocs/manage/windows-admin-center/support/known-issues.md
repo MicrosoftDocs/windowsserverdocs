@@ -43,6 +43,10 @@ If you encounter an issue not described on this page, please [let us know](https
 - When you update Windows Admin Center, you must reinstall your extensions.
 - If you add an extension feed that is inaccessible, there is no warning. [14412861]
 
+## Partner extension issues
+
+- Dell's EMC OpenManage Integration extension utilizes APIs provided by Windows Admin Center to push files onto target nodes. This API only works when the user is a gateway administrator and does not support non-admin use.
+
 ## Browser Specific Issues
 
 ### Microsoft Edge
@@ -51,7 +55,7 @@ If you encounter an issue not described on this page, please [let us know](https
 
 ### Google Chrome
 
-- Prior to version 70 (released late October, 2018) Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the websockets protocol and NTLM authentication. This effects the following tools: Events, PowerShell, Remote Desktop.
+- Prior to version 70 (released late October, 2018) Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the WebSockets protocol and NTLM authentication. This effects the following tools: Events, PowerShell, Remote Desktop.
 
 - Chrome may pop-up multiple credential prompts, especially during the add connection experience in a **workgroup** (non-domain) environment.
 
@@ -190,7 +194,7 @@ The Computer Management solution contains a subset of the tools from the Server 
 
   - To enable management of the Windows 10 Client, you must issue the command ```Enable-PSRemoting``` from an elevated PowerShell prompt.
 
-  - You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any```. For more restrictive networks scenarios, please refer to [this documentation](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1).
+  - You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any```. For more restrictive networks scenarios, please refer to [this documentation](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1&preserve-view=true).
 
 ## Cluster Deployment
 
@@ -205,7 +209,7 @@ Hyper-V needs to be installed on virtual machines running the Azure Stack HCI OS
 To install Hyper-V on virtual machines running the Azure Stack HCI OS, run the following command:
 
 ```PowerShell
-Enable-windowsoptionalfeature -online -featurename Microsoft-hyper-v
+Enable-WindowsOptionalFeature -Online -FeatureName 'Microsoft-Hyper-V'
 ```
 
 ### Step 1.7
@@ -239,7 +243,7 @@ Disable-WsmanCredSSP -Role Server
 Test-ComputerSecureChannel -Verbose -Repair -Credential <account name>
 ```
 
-3. Reset group policy propogated data using the command
+3. Reset group policy propagated data using the command
 ```Command Line
 gpupdate /force
 ```
@@ -283,6 +287,17 @@ The cluster deployment wizard in Windows Admin Center version 2007 does not prov
 - Some commands such as **Drives - Update firmware**, **Servers - Remove** and **Volumes - Open** are disabled and currently not supported.
 
 ## Azure services
+
+### Azure login and gateway registration
+In the 2009 release, you may run into issues logging into Azure or registering your Windows Admin Center gateway with Azure. The guidance below should help you mitigate these issues: 
+
+* Before using any Azure capabilities within Windows Admin Center, including gateway registration, make sure you are signed into your Azure account in a different tab or window. We suggest signing in through the [Azure Portal](https://portal.azure.com/).  
+
+* If you successfully sign into Azure during gateway registration but do not see visual confirmation on the **Azure** page of your Windows Admin Center settings, try navigating to a different page in settings before navigating back to the **Azure** page. 
+
+* The Azure sign-in pop-up may appear more frequently in this build and may require administrators to grant Windows Admin Center permissions more frequently. 
+
+* If you have already given admin approval for Windows Admin Center in the Azure Portal and you are still seeing an error message saying “Need admin approval”, try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page. 
 
 ### Azure File Sync permissions
 

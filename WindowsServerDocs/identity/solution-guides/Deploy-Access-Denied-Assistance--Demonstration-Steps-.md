@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Deploy Access-Denied Assistance (Demonstration Steps)"
 ms.assetid: b035e9f8-517f-432a-8dfb-40bfc215bee5
 title: Deploy Access-Denied Assistance (Demonstration Steps)
 author: billmath
@@ -23,7 +24,7 @@ This topic explains how to configure access-denied assistance, and verify that i
 -   [Step 3: Verify that access-denied assistance is configured correctly](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_3)
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](/previous-versions//bb648607(v=vs.85)).
 
 ## <a name="BKMK_1"></a>Step 1: Configure access-denied assistance
 You can configure access-denied assistance within a domain by using Group Policy, or you can configure the assistance individually on each file server by using the File Server Resource Manager console. You can also change the access-denied message for a specific shared folder on a file server.
@@ -223,5 +224,3 @@ You can verify that the access-denied assistance is configured correctly by havi
 -   [Plan for Access-Denied Assistance](assetId:///b169f0a4-8b97-4da8-ae4a-c8f1986d19e1)
 
 -   [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md)
-
-

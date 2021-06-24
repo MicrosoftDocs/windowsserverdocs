@@ -1,11 +1,11 @@
 ---
 title: Get started with Windows Server Update Services (WSUS)
 description: Windows Server Update Service (WSUS) topic - An overview of the Server role and its practical applications
-ms.topic: get-started article
+ms.topic: how-to
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09ec5b
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 5/22/2017
 ---
 # Windows Server Update Services (WSUS)

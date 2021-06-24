@@ -1,11 +1,12 @@
 ---
 title: Install the Certification Authority
-description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+description: Learn how to install Active Directory Certificate Services so that you can enroll a server certificate to servers that are running Network Policy Server, Routing and Remote Access Service, or both.
 manager: brianlic
 ms.topic: article
 ms.assetid: 4acdc3ad-078e-45cc-b54c-e9456e0c90f5
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Install the Certification Authority
 
@@ -31,7 +32,7 @@ Membership in both the **Enterprise Admins** and the root domain's **Domain Admi
 ### To install Active Directory Certificate Services
 
 > [!TIP]
-> If you want to use Windows PowerShell to install Active Directory Certificate Services, see [Install-AdcsCertificationAuthority](/powershell/module/adcsdeployment/install-adcscertificationauthority?view=win10-ps) for cmdlets and optional parameters.
+> If you want to use Windows PowerShell to install Active Directory Certificate Services, see [Install-AdcsCertificationAuthority](/powershell/module/adcsdeployment/install-adcscertificationauthority) for cmdlets and optional parameters.
 
 1.  Log on as a member of both the Enterprise Admins group and the root domain's Domain Admins group.
 

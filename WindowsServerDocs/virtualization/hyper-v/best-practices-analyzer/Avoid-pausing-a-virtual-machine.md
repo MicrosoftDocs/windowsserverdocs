@@ -1,18 +1,17 @@
 ---
 title: Avoid pausing a virtual machine
-description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+description: Learn what to do when this server has one or more virtual machines in a paused state.
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 930f927c-e414-4a36-9786-028941e886e4
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Avoid pausing a virtual machine
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -55,6 +54,3 @@ You can do this in one command by using filtering and the pipeline after you get
 ```
 get-vm | where state -eq 'paused' | resume-vm
 ```
-
-
-

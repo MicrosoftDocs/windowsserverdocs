@@ -4,9 +4,8 @@ description: How to activate Windows Server 2016.
 ms.date: 09/19/2018
 ms.topic: article
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a45d5cc7a54
-author: jaimeo
-ms.author: jaimeo
-manager: dougkim
+author: JasonGerend
+ms.author: thierryp
 ms.localizationpriority: medium
 ---
 # Windows Server 2016 Activation

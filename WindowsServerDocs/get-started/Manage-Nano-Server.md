@@ -3,7 +3,7 @@ title: Manage Nano Server
 description: updates, servicing packages, networking tracing, performance monitoring
 manager: DonGill
 ms.date: 09/06/2017
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
 author: jaimeo
 ms.author: jaimeo
@@ -218,12 +218,12 @@ Currently, the way to automate update installation is to convert the steps above
 
 ## Performance and event monitoring on Nano Server
 [comment]: # (from Venkat Yalla.)
-Nano Server fully supports the [Event Tracing for Windows](https://aka.ms/u2pa0i) (ETW) framework, but some familiar tools used to manage tracing and performance counters are not currently available on Nano Server. However, Nano Server has tools and cmdlets to accomplish most common performance analysis scenarios.
+Nano Server fully supports the [Event Tracing for Windows](/windows/win32/etw/event-tracing-portal) (ETW) framework, but some familiar tools used to manage tracing and performance counters are not currently available on Nano Server. However, Nano Server has tools and cmdlets to accomplish most common performance analysis scenarios.
 
 The high-level workflow remains the same as on any Window Server installation -- low-overhead tracing is performed on the target (Nano Server) computer, and the resulting trace files and/or logs are post-processed offline on a separate computer using tools such as [Windows Performance Analyzer](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10)), [Message Analyzer](https://www.microsoft.com/download/details.aspx?id=44226), or others.
 
 > [!NOTE]
-> Refer to [How to copy files to and from Nano Server](https://aka.ms/nri9c8) for a refresher on how to transfer files using PowerShell remoting.
+> Refer to [How to copy files to and from Nano Server](/previous-versions/windows/desktop/legacy/mt708806(v=vs.85)) for a refresher on how to transfer files using PowerShell remoting.
 
 The following sections list the most common performance data collection activities along with a supported way to accomplish them on Nano Server.
 
@@ -375,7 +375,7 @@ You can also use Perfmon.exe's graphical interface remotely with Nano Server tar
 
 ### Interact with the Windows Event Log
 
-Nano Server supports the ```Get-WinEvent``` cmdlet, which provides Windows Event Log filtering and querying capabilities, both locally as well as on a remote computer. Detailed options and examples are available at the [Get-WinEvent documentation page](/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-5.1). This simple example retrieves the *Errors* noted in the *System* log during the past two days.
+Nano Server supports the ```Get-WinEvent``` cmdlet, which provides Windows Event Log filtering and querying capabilities, both locally as well as on a remote computer. Detailed options and examples are available at the [Get-WinEvent documentation page](/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-5.1&preserve-view=true). This simple example retrieves the *Errors* noted in the *System* log during the past two days.
 ```
 PS C:\> $StartTime = (Get-Date) - (New-TimeSpan -Day 2)
 PS C:\> Get-WinEvent -FilterHashTable @{LogName='System'; Level=2; StartTime=$StartTime} | select TimeCreated, Message
@@ -387,7 +387,7 @@ TimeCreated           Message
 9/15/2016 11:31:16 AM The Virtualization Based Security enablement policy check at phase 0 failed with status: {File...
 ```
 
-Nano Server also supports ```wevtutil.exe``` which allows retrieving information about event logs and publishers. See [wevtutil.exe documentation](https://aka.ms/qvod7p) for more details.
+Nano Server also supports ```wevtutil.exe``` which allows retrieving information about event logs and publishers. See [wevtutil.exe documentation](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732848(v=ws.11)) for more details.
 
 ### Graphical interface tools
 [Web-based server management tools](https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog) can be used to remotely manage Nano Server targets and present a Nano Server Event Log by using a web browser. Finally, the MMC snap-in Event Viewer (eventvwr.msc) can also be used to view logs -- just open it on a computer with a desktop and point it to a remote Nano Server.

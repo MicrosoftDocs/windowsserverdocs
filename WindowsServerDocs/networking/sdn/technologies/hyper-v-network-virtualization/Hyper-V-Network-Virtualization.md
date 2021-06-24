@@ -1,15 +1,16 @@
 ---
 title: Hyper-V Network Virtualization
-description: This topic provides links to content about Hyper-V Network Virtualization in Windows Server 2016.
+description: This topic provides links to content about Hyper-V Network Virtualization in Windows Server 2019 and 2016.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 150976f0-ccd5-487a-a458-92261444a846
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 06/16/2021
 ---
 # Hyper-V Network Virtualization
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Introduced in Windows Server 2012, Hyper-V Network Virtualization (HNV) enables virtualization of customer networks on top of a shared physical network infrastructure. With minimal changes necessary on the physical network fabric, HNV gives service providers the agility to deploy and migrate tenant workloads anywhere across the three clouds: the service provider cloud, the private cloud, or the Microsoft Azure public cloud.
 

@@ -41,7 +41,7 @@ From the Azure hybrid services tool, you can:
 - Apply governance policies to your on-premises servers through Azure Policy using [Azure Arc for servers](/azure/azure-arc/servers/overview)
 - Secure your servers and get advanced threat protection with [Azure Security Center](/azure/security-center/windows-admin-center-integration)
 - Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)
-- Make Azure VMs look like your on-premises network with [Azure Extended Network](https://go.microsoft.com/fwlink/?linkid=2109517&clcid=0x409)
+- Make Azure VMs look like your on-premises network with [Azure Extended Network](/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)
 
 ## Back up and protect your on-premises servers and VMs
 
@@ -61,7 +61,7 @@ For more info, see [Server-to-server replication with Storage Replica](../../../
 
 ### Extend storage capacity
 
-- **Sync your file server with the cloud by using [Azure File Sync](https://aka.ms/afs)**
+- **Sync your file server with the cloud by using [Azure File Sync](/azure/storage/files/storage-sync-files-planning)**
 Sync files on this server with Azure file shares. Keep all your files local or use cloud tiering to free up space and cache only the most frequently used files on the server, tiering cold data to the cloud. Data in the cloud can be backed up, eliminating the need to worry about on-premises server backup. Additionally, multi-site-sync can keep a set of files in sync across multiple servers.
 For more info, see [Sync your file server with the cloud by using Azure File Sync](azure-file-sync.md).
 
@@ -83,7 +83,7 @@ For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../../fail
 - **Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)**
 Let Windows Admin Center simplify setting up a point-to-site VPN from an on-premises server into an Azure virtual network.
 
-- **Make Azure VMs look like your on-premises network with [Azure Extended Network](https://go.microsoft.com/fwlink/?linkid=2109517&clcid=0x409)**
+- **Make Azure VMs look like your on-premises network with [Azure Extended Network](/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)**
 Windows Admin Center can set up a site-to-site VPN and extend your on-premises IP addresses into your Azure vNet to let you more easily migrate workloads into Azure without breaking dependencies on IP addresses.
 
 ## Centrally manage your hybrid environment from Azure
@@ -108,7 +108,7 @@ Inventory, organize, and manage on-premises servers from Azure. You can govern s
 Azure hybrid services work with Windows Servers in the following configurations:
 
 - Stand-alone physical servers and virtual machines (VMs)
-- Clusters, including hyper-converged clusters certified by the [Azure Stack HCI](/azure-stack/hci/overview?view=azs-2002), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/cloud-platform/software-defined-datacenter) programs
+- Clusters, including hyper-converged clusters certified by the [Azure Stack HCI](/azure-stack/hci/overview?view=azs-2002&preserve-view=true), and [Windows Server Software-Defined (WSSD)](https://www.microsoft.com/cloud-platform/software-defined-datacenter) programs
 
 ### Services for stand-alone servers and VMs
 
@@ -122,7 +122,7 @@ This is the complete list of Azure services that provide functionality to stand-
 - Apply governance policies to your on-premises servers through Azure Policy using [Azure Arc for servers](/azure/azure-arc/servers/overview)
 - Secure your servers and get advanced threat protection with [Azure Security Center](/azure/security-center/windows-admin-center-integration)
 - Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)
-- Make Azure VMs look like your on-premises network with [Azure Extended Network](https://go.microsoft.com/fwlink/?linkid=2109517&clcid=0x409)
+- Make Azure VMs look like your on-premises network with [Azure Extended Network](/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)
 
 ### Services for clusters
 

@@ -1,12 +1,12 @@
 ---
 title: "Step 1: Prepare your Source Server for Windows Server Essentials migration"
-description: Describes how to use Windows Server Essentials
+description: Learn how to back up the Source Server, evaluate the system health, install the most recent service packs and fixes, and verify the network configuration.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 244c8a06-04c6-4863-8b52-974786455373
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Step 1: Prepare your Source Server for Windows Server Essentials migration
@@ -163,16 +163,16 @@ To view the description and the solutions for an issue, click the issue in the r
 > [!NOTE]
 >  After you update and prepare your Source Server for migration, we recommend that you create a backup of the updated server before you continue the migration process.
 
-#### Migrate email to Microsoft Office 365
- If you have chosen to use Microsoft Office 365 as the email solution for your domain, follow the guidance in [Migrate All Mailboxes to the Cloud with a Cutover Exchange Migration](https://help.outlook.com/140/ms.exch.ecp.emailmigrationwizardexchangelearnmore.aspx) to start the email migration to Office 365. We recommend that you complete the email migration before you install  Windows Server Essentials.
+#### Migrate email to Microsoft 365
+ If you have chosen to use Microsoft 365 as the email solution for your domain, follow the guidance in [Migrate All Mailboxes to the Cloud with a Cutover Exchange Migration](https://help.outlook.com/140/ms.exch.ecp.emailmigrationwizardexchangelearnmore.aspx) to start the email migration to Microsoft 365. We recommend that you complete the email migration before you install  Windows Server Essentials.
 
 > [!NOTE]
->  The step to remove the on-premises Exchange Server on the Source Server is mandatory if you intend to integrate  Windows Server Essentials with Office 365. For information about how to migrate Exchange Server public folders to Office 365,  see the blog post [Microsoft Exchange 2013 Public Folders Migration Scripts for Office 365](/archive/blogs/fmustafa/microsoft-exchange-2013-public-folders-migration-scripts-for-office-365).
+>  The step to remove the on-premises Exchange Server on the Source Server is mandatory if you intend to integrate  Windows Server Essentials with Microsoft 365. For information about how to migrate Exchange Server public folders to Microsoft 365,  see the blog post [Microsoft Exchange 2013 Public Folders Migration Scripts for Microsoft 365](/archive/blogs/fmustafa/microsoft-exchange-2013-public-folders-migration-scripts-for-office-365).
 >
->  After you complete the installation, you should turn on the Office 365 Integration feature in  Windows Server Essentials by running the **Integrate with Microsoft Office 365** task.
+>  After you complete the installation, you should turn on the Microsoft 365 Integration feature in  Windows Server Essentials by running the **Integrate with Microsoft 365** task.
 
 > [!IMPORTANT]
->  To allow the Office 365 migration tool to connect to the Exchange Server that is running on the Source Server, you must enable RPC over HTTP on the Source Server. For information about how to enable RPC over HTTP, see [How to Deploy RPC over HTTP for the First Time in Small Business Server 2003 (Standard or Premium)](/previous-versions/tn-archive/bb123622(v=exchg.65)). If you cannot successfully run the Office 365 migration tool after you enable RPC over HTTP, view the **ValidPorts** setting in the registry at HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\RpcProxy, and make sure that the fully qualified domain name (FQDN) for the Source Server is listed. If the FQDN is not listed, add it manually by using the following example:
+>  To allow the Microsoft 365 migration tool to connect to the Exchange Server that is running on the Source Server, you must enable RPC over HTTP on the Source Server. For information about how to enable RPC over HTTP, see [How to Deploy RPC over HTTP for the First Time in Small Business Server 2003 (Standard or Premium)](/previous-versions/tn-archive/bb123622(v=exchg.65)). If you cannot successfully run the Microsoft 365 migration tool after you enable RPC over HTTP, view the **ValidPorts** setting in the registry at HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\RpcProxy, and make sure that the fully qualified domain name (FQDN) for the Source Server is listed. If the FQDN is not listed, add it manually by using the following example:
 >
 >  remote. *contoso*.com:6001-6002;remote. *contoso*.com:6004 (replace *contoso* with the name of your domain).
 

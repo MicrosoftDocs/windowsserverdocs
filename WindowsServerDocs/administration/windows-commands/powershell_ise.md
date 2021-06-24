@@ -1,11 +1,11 @@
 ---
 title: PowerShell_ise
 description: Reference article for the PowerShell_ise command, which starts a Windows PowerShell Integrated Scripting Environment (ISE) session.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 32c41b5b-a210-47d9-bd8c-91eb9830b4f0
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

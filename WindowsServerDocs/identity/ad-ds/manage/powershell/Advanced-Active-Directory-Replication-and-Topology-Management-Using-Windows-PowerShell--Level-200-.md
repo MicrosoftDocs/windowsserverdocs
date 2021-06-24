@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)"
 ms.assetid: fe05e52c-cbf8-428b-8176-63407991042f
 title: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---
@@ -107,7 +108,7 @@ Get-ADReplicationAttributeMetadata -object "cn=domain admins,cn=users,dc=corp,dc
 
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMd.png)
+![Screenshot that shows the metadata output of the Domain Admins Object ordered as a readable list.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMd.png)
 
 Alternatively, you can arrange the data to look like repadmin, in a table:
 
@@ -116,7 +117,7 @@ Get-ADReplicationAttributeMetadata -object "cn=domain admins,cn=users,dc=corp,dc
 
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdTable.png)
+![Screenshot that shows the data arranged to look like repadmin in a table.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdTable.png)
 
 Alternatively, you can get metadata for an entire class of objects, by pipelining the **Get-Adobject** cmdlet with a filter, such as all groups - then combine that with a specific date. The pipeline is a channel used between multiple cmdlets to pass data. To see all groups modified in some fashion on January 13th, 2012:
 
@@ -124,7 +125,7 @@ Alternatively, you can get metadata for an entire class of objects, by pipelinin
 get-adobject -filter 'objectclass -eq "group"' | Get-ADReplicationAttributeMetadata -server dc1.corp.contoso.com | where-object {$_.lastoriginatingchangetime -like "*1/13/2012*" -and $_.attributename -eq "name"} | format-table object
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdClass.png)
+![Screenshot that shows how to see all groups modified in some fashion on January 13th, 2012.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdClass.png)
 
 For more information about more Windows PowerShell operations with pipelines, see [Piping and the Pipeline in Windows PowerShell](/previous-versions/windows/it-pro/windows-powershell-1.0/ee176927(v=technet.10)).
 
@@ -135,7 +136,7 @@ get-adobject -filter 'objectclass -eq "group"' | Get-ADReplicationAttributeMetad
 
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdFilter.png)
+![Screenshot that shows how to find out every group that has Tony Wang as a member and when the group was last modified.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdFilter.png)
 
 Alternatively, to find all objects authoritatively restored using a system state backup in the domain, based on their artificially high version:
 
@@ -143,7 +144,7 @@ Alternatively, to find all objects authoritatively restored using a system state
 get-adobject -filter 'objectclass -like "*"' | Get-ADReplicationAttributeMetadata -server dc1.corp.contoso.com | where-object {$_.version -gt "100000" -and $_.attributename -eq "name"} | format-table object,LastOriginatingChangeTime
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdFilter2.png)
+![Screenshot that shows how to find all objects authoritatively restored using a system state backup in the domain, based on their artificially high version.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplAttrMdFilter2.png)
 
 Alternatively, send all user metadata to a CSV file for later examination in Microsoft Excel:
 
@@ -160,7 +161,7 @@ For example, the readable replication state of a single domain controller:
 Get-ADReplicationPartnerMetadata -target dc1.corp.contoso.com
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMd.png)
+![Screenshot that shows how to get the readable replication state of a single domain controller.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMd.png)
 
 Alternatively, the last time a domain controller replicated inbound and its partners, in a table format:
 
@@ -168,7 +169,7 @@ Alternatively, the last time a domain controller replicated inbound and its part
 Get-ADReplicationPartnerMetadata -target dc1.corp.contoso.com | format-table lastreplicationattempt,lastreplicationresult,partner -auto
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMdTable.png)
+![Screenshot that shows the last time a domain controller replicated inbound and its partners, in a table format.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMdTable.png)
 
 Alternatively, contact all domain controllers in the forest and display any whose last attempted replication failed for any reason:
 
@@ -177,7 +178,7 @@ Get-ADReplicationPartnerMetadata -target * -scope server | where {$_.lastreplica
 
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMdFail.png)
+![Screenshot that shows how to contact all domain controllers in the forest and display any whose last attempted replication failed for any reason.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMdFail.png)
 
 ### <a name="BKMK_ReplFail"></a>Get-ADReplicationFailure
 This cmdlet can be used to returns information about recent errors in replication. It is analogous to **Repadmin.exe /showreplsum**, but again, with much more control thanks to Windows PowerShell.
@@ -188,7 +189,7 @@ For example, you can return a domain controller's most recent failures and the p
 Get-ADReplicationFailure dc1.corp.contoso.com
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplFail.png)
+![Screenshot that shows how you can return a domain controller's most recent failures and the partners he failed contacting.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplFail.png)
 
 Alternatively, return a table view for all servers in a specific AD logical site, ordered for easier viewing and containing only the most critical data:
 
@@ -197,7 +198,7 @@ Get-ADReplicationFailure -scope site -target default-first-site-name | format-ta
 
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplFailScoped.png)
+![Screenshot that shows how to return a table view for all servers in a specific AD logical site, ordered for easier viewing and containing only the most critical data.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplFailScoped.png)
 
 ### <a name="BKMK_ReplQueue"></a>Get-ADReplicationQueueOperation and Get-ADReplicationUpToDatenessVectorTable
 Both of these cmdlets returns further aspects of domain controller "up to dateness", which includes pending replication and version vector information.
@@ -212,7 +213,7 @@ Get-ADDomainController -filter * | foreach {Sync-ADObject -object "cn=tony wang,
 
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSSyncAD.png)
+![Screenshot that shows how to replicate a deleted account from the Active Directory Recycle Bin to all domain controllers without forcing replication of all the other object changes made.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSSyncAD.png)
 
 ### <a name="BKMK_Topo"></a>Topology
 While Repadmin.exe is good at returning information about replication topology like sites, site links, site link bridges, and connections, it does not have a comprehensive set of arguments to make changes. In fact, there has never been scriptable, in-box Windows utility designed specifically for administrators to create and modify AD DS topology. As Active Directory has matured in millions of customer environments, the need to bulk modify Active Directory logical information becomes apparent.
@@ -227,9 +228,9 @@ For example, you can create new sites using a CSV file:
 import-csv -path C:\newsites.csv | new-adreplicationsite
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewSitesCSV.png)
+![Screenshot that shows the Notepad interface.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewSitesCSV.png)
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSImportCSV.png)
+![Screenshot that shows how to create new sites using a CSV file.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSImportCSV.png)
 
 Alternatively, create a new site link between two existing sites with a custom replication interval and site cost:
 
@@ -237,7 +238,7 @@ Alternatively, create a new site link between two existing sites with a custom r
 new-adreplicationsitelink -name "chicago<-->waukegan" -sitesincluded chicago,waukegan -cost 50 -replicationfrequencyinminutes 15
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewADReplSite.png)
+![Screenshot that shows create a new site link between two existing sites with a custom replication interval and site cost.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewADReplSite.png)
 
 Alternatively, find every site in the forest and replace their **Options** attributes with the flag to enable inter-site change notification, in order to replicate at maximum speed with compression:
 
@@ -256,7 +257,7 @@ Alternatively, find all sites missing subnet assignments, in order to reconcile 
 get-adreplicationsite -filter * -property subnets | where-object {!$_.subnets -eq "*"} | format-table name
 ```
 
-![advanced management with powershell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewADReplSiteFiltrer.png)
+![Screenshot that shows how to find all sites missing subnet assignments, in order to reconcile the list with the actual subnets of those locations.](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSNewADReplSiteFiltrer.png)
 
 ## See Also
 [Introduction to Active Directory Replication and Topology Management Using Windows PowerShell &#40;Level 100&#41;](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md)

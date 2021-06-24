@@ -1,11 +1,12 @@
 ---
 title: Install Content Servers that Use the BranchCache Feature
-description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+description: Learn how to install content servers that use the BranchCache feature.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 0f00ae6e-ae1b-41e3-8c50-65226b5b9c9e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # Install Content Servers that Use the BranchCache Feature
 

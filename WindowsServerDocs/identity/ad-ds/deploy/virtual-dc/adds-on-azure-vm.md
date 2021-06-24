@@ -1,9 +1,9 @@
 ---
 title: Install Active Directory Domain Services on an Azure virtual machine
 description: How to create a new Active Directory forest on a virtual machine (VM) on an Azure virtual machine.
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 04/11/2019
 ms.topic: article
 ---
@@ -29,7 +29,7 @@ AD DS can run on an Azure virtual machine (VM) in the same way it runs in many o
 
 ## Build the test environment
 
-We use the [Azure portal](https://portal.azure.com) and [Azure CLI](/cli/azure/overview?view=azure-cli-latest) for creating the environment.
+We use the [Azure portal](https://portal.azure.com) and [Azure CLI](/cli/azure/overview) for creating the environment.
 
 The Azure CLI is used to create and manage Azure resources from the command line or in scripts. This tutorial details using the Azure CLI to deploy virtual machines running Windows Server 2019. Once deployment is complete, we connect to the servers and install AD DS.
 
@@ -39,7 +39,7 @@ If you don't have an Azure subscription, [create a free account](https://azure.m
 
 The following script automates the process of building two Windows Server 2019 VMs, for the purpose of building domain controllers for a new Active Directory Forest in Azure. An administrator can modify the variables below to suit their needs, then complete, as one operation. The script creates the necessary resource group, network security group with a traffic rule for Remote Desktop, virtual network and subnet, and availability group. The VMs are each then built with a 20 GB data disk with caching disabled for AD DS to be installed to.
 
-The script below can be run directly from the Azure portal. If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.4 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0](/cli/azure/install-azure-cli?view=azure-cli-latest).
+The script below can be run directly from the Azure portal. If you choose to install and use the CLI locally, this quickstart requires that you are running the Azure CLI version 2.0.4 or later. Run `az --version` to find the version. If you need to install or upgrade, see [Install Azure CLI 2.0](/cli/azure/install-azure-cli).
 
 | Variable Name | Purpose |
 | :---: | :--- |
@@ -143,7 +143,6 @@ az vm create \
     --data-disk-caching None \
     --nsg $NetworkSecurityGroup \
     --private-ip-address $DC2IP
-
 ```
 
 ## DNS and Active Directory
@@ -188,6 +187,10 @@ When the VM has completed rebooting, log back in with the credentials used befor
 
 [Azure virtual networks do now support IPv6](/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) , but in case you want to set your VMs to prefer IPv4 over IPv6, information on how to complete this task can be found in the KB article [Guidance for configuring IPv6 in Windows for advanced users](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
 
+### Configure DNS
+
+After promoting the first server in Azure, the servers will need to be set to the primary and secondary DNS Servers for the virtual network, and any on-premises DNS Servers would be demoted to tertiary and beyond. More information on changing DNS Servers can be found in the article [Create, change, or delete a virtual network](/azure/virtual-network/manage-virtual-network#change-dns-servers).
+
 ### Configure the second Domain Controller
 
 Connect to AZDC02 using the credentials you provided in the script.
@@ -215,11 +218,7 @@ When the wizard completes the install process, the VM reboots.
 
 When the VM has completed rebooting, log back in with the credentials used before, but this time as a member of the CONTOSO.com domain
 
-[Azure virtual networks do now support IPv6](/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) , but in case you want to set your VMs to prefer IPv4 over IPv6, information on how to complete this task can be found in the KB article [Guidance for configuring IPv6 in Windows for advanced users](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
-
-### Configure DNS
-
-After promoting the new domain controllers in Azure, they will need to be set to the primary and secondary DNS Servers for the virtual network, and any on-premises DNS Servers would be demoted to tertiary and beyond. More information on changing DNS Servers can be found in the article [Create, change, or delete a virtual network](/azure/virtual-network/manage-virtual-network#change-dns-servers).
+[Azure virtual networks do now support IPv6](/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6), but in case you want to set your VMs to prefer IPv4 over IPv6, information on how to complete this task can be found in the KB article [Guidance for configuring IPv6 in Windows for advanced users](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
 
 ### Wrap up
 

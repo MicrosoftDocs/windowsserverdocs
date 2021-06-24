@@ -1,18 +1,17 @@
 ---
 title: Enable all virtual network adapters configured for a virtual machine
-description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+description: Learn what to do when one or more network adapters may be disabled in a virtual machine.
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: fcd350b7-4240-4359-aadd-93e7ac4d314e
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Enable all virtual network adapters configured for a virtual machine
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -36,6 +35,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ## Resolution
 
 *Use Device Manager in the guest operating system to enable all virtual network adapters. If the adapter is not required, use Hyper-V Manager to remove it from the virtual machine.*
-
-
-

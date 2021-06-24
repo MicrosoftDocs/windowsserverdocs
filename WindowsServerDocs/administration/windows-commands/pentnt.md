@@ -1,11 +1,11 @@
 ---
 title: pentnt
 description: Reference article for the pentnt command. This command has been deprecated and isn't guaranteed to be supported in future releases of Windows.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4911e640-aa7f-4afb-abc2-5eefc7010204
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

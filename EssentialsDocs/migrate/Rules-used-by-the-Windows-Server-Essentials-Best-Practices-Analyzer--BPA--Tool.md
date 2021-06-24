@@ -1,12 +1,12 @@
 ---
 title: "Rules used by the Windows Server Essentials Best Practices Analyzer (BPA) Tool"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the rules used by the Windows Server Essentials Best Practices Analyzer (BPA) tool.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 37e1dae7-586c-4dd7-bf83-7e14a9567c8f
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Rules used by the Windows Server Essentials Best Practices Analyzer (BPA) Tool
@@ -1060,18 +1060,18 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
 
 5.  Restart the service.
 
-### The Windows Server Office 365 Integration Service is not set to use the Local System account
- **Issue:**  The Windows Server Office 365 Integration Service is not set to use the Local System account as the default logon account.
+### The Windows Server Microsoft 365 Integration Service is not set to use the Local System account
+ **Issue:**  The Windows Server Microsoft 365 Integration Service is not set to use the Local System account as the default logon account.
 
- **Impact:**  If Windows Server Office 365 Integration Service does not use Local System as the default logon account, some features of Office 365 might not function properly. You might also encounter permissions-related errors.
+ **Impact:**  If Windows Server Microsoft 365 Integration Service does not use Local System as the default logon account, some features of Microsoft 365 might not function properly. You might also encounter permissions-related errors.
 
  **Resolution:**
 
-##### To configure the Office 365 Integration Service to use Local System as the default logon account
+##### To configure the Microsoft 365 Integration Service to use Local System as the default logon account
 
 1.  Open the Services console.
 
-2.  In the list of services, double-click **Windows Server Office 365 Integration Service**.
+2.  In the list of services, double-click **Windows Server Microsoft 365 Integration Service**.
 
 3.  On the **Service Properties** page, click the **Log On** tab.
 
@@ -1079,33 +1079,33 @@ This article describes the rules used by the  Windows Server Essentials Best Pra
 
 5.  Restart the service.
 
-### The Windows Server Office 365 Integration Service is not running
- **Issue:**  The Windows Server Office 365 Integration Service is not currently running.
+### The Windows Server Microsoft 365 Integration Service is not running
+ **Issue:**  The Windows Server Microsoft 365 Integration Service is not currently running.
 
- **Impact:**  If the Windows Server Office 365 Integration Service is not running, the cloud-based features of Office 365 are not available.
+ **Impact:**  If the Windows Server Microsoft 365 Integration Service is not running, the cloud-based features of Microsoft 365 are not available.
 
  **Resolution:**
 
-##### To start the Windows Server Office 365 Integration Service
+##### To start the Windows Server Microsoft 365 Integration Service
 
 1.  Open the Services console.
 
-2.  In the list of services, double-click **Windows Server Office 365 Integration Service**.
+2.  In the list of services, double-click **Windows Server Microsoft 365 Integration Service**.
 
 3.  Click **Start**.
 
-### The startup type for the Windows Server Office 365 Integration Service is not set to Automatic
- **Issue:**  The Windows Server Office 365 Integration Service might not start if the startup type is not set to the default value of Automatic.
+### The startup type for the Windows Server Microsoft 365 Integration Service is not set to Automatic
+ **Issue:**  The Windows Server Microsoft 365 Integration Service might not start if the startup type is not set to the default value of Automatic.
 
- **Impact:**  If the Windows Server Office 365 Integration Service is not running, the cloud-based features of Office 365 are not available.
+ **Impact:**  If the Windows Server Microsoft 365 Integration Service is not running, the cloud-based features of Microsoft 365 are not available.
 
  **Resolution:**
 
-##### To configure the Office 365 Integration Service for automatic startup
+##### To configure the Microsoft 365 Integration Service for automatic startup
 
 1.  Open the Services console.
 
-2.  In the list of services, double-click **Windows Server Office 365 Integration Service**.
+2.  In the list of services, double-click **Windows Server Microsoft 365 Integration Service**.
 
 3.  For **Startup type**, select **Automatic**, and then click **Apply**.
 

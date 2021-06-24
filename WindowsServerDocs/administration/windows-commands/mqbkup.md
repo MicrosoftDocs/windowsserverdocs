@@ -1,11 +1,11 @@
 ---
 title: mqbkup
 description: Reference article for the mqbkup command, which backs up MSMQ message files and registry settings to a storage device and restores previously-stored messages and settings.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7bdd41c4-75ef-455f-b241-1d64a4c7acf5
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -66,4 +66,4 @@ mqbkup /r c:\msmqbkup
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [MSMQ Powershell Reference](/powershell/module/msmq/?view=win10-ps)
+- [MSMQ Powershell Reference](/powershell/module/msmq/)

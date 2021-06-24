@@ -1,11 +1,11 @@
 ---
 title: Overview of Active Directory Domain Services
-description: Windows Server Security
+description: Learn about how Active Directory Domain Services, provides the methods for storing directory data and making this data available to network users and administrators.
 ms.topic: article
 ms.assetid: 6cfe9479-5d17-41d5-939a-891e5233fdca
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/12/2016
 ---
 

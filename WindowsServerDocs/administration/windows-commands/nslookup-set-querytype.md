@@ -1,11 +1,11 @@
 ---
 title: nslookup set querytype
 description: Reference article for the nslookup set querytype command, which changes the resource record type for the query.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 5af54ac5-fc1a-4af6-977b-f8e97c8eba90
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Upgrading to AD FS in Windows Server 2016 with SQL Server"
 title: Upgrading to AD FS in Windows Server 2016 with SQL Server
 author: billmath
 manager: mtillman
@@ -29,7 +30,7 @@ A Windows Server 2016 AD FS server can be added to a Windows Server 2012 R2 farm
 
 -   As a result of the mixed farm feature, AD FS Windows Server 2012 R2 organizations looking to upgrade to Windows Server 2016 will not have to deploy an entirely new farm, export and import configuration data.  Instead, they can add Windows Server 2016 nodes to an existing farm while it is online and only incur the relatively brief downtime involved in the FBL raise.
 
-Be aware that while in mixed farm mode, the AD FS farm is not capable of any new features or functionality introduced in AD FS in Windows Server 2016.  This means organizations that want to try out new features cannot do this until the FBL is raised.  So if your organization is looking to test the new features prior to rasing the FBL, you will need to deploy a separate farm to do this.
+Be aware that while in mixed farm mode, the AD FS farm is not capable of any new features or functionality introduced in AD FS in Windows Server 2016.  This means organizations that want to try out new features cannot do this until the FBL is raised.  So if your organization is looking to test the new features prior to raising the FBL, you will need to deploy a separate farm to do this.
 
 The remainder of the is document provides the steps for adding a Windows Server 2016 federation server to a Windows Server 2012 R2 environment and then raising the FBL to Windows Server 2016.  These steps were performed in a test environment outlined by the architectural diagram below.
 
@@ -46,10 +47,10 @@ To following architectural diagram shows the setup that was used to validate and
 1.  Using Server Manager install the Active Directory Federation Services Role on the Windows Server 2016
 
 2.  Using the AD FS Configuration wizard, join the new Windows Server 2016 server to the existing AD FS farm.  On the **Welcome** screen click **Next**.
- ![Join farm](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)
+![Screenshot that shows the Welcome screen in the AD FS Configuration wizard.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)
 3.  On the **Connect to Active Directory Domain Services** screen, s**pecify an administrator account** with permissions to perform the federation services configuration and click **Next**.
 4.  On the **Specify Farm** screen, enter the name of the SQL server and instance and then click **Next**.
-![Join farm](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
+![Screenshot that shows the Specify Farm screen in the AD FS Configuration wizard.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
 5.  On the **Specify SSL Certificate** screen, specify the certificate and click **Next**.
 ![Join farm](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure4.png)
 6.  On the **Specify Service Account** screen, specify the service account and click **Next**.
@@ -64,7 +65,7 @@ To following architectural diagram shows the setup that was used to validate and
 >You do not need to set the primary AD FS server using Set-AdfsSyncProperties -Role when using SQL as the database.  This is because all of the nodes are considered primary in this configuration.
 
 1.  On the Windows Server 2012 R2 AD FS server in Server Manager use **Remove Roles and Features** under **Manage**.
-![Remove server](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png)
+![Screenshot that highlights the Remove Roles and Features menu option.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png)
 2.  On the **Before you Begin** screen, click **Next**.
 3.  On the **Server Selection** Screen, click **Next**.
 4.  On the **Server Roles** screen, remove the check next to **Active Directory Federation Services** and click **Next**.
@@ -85,8 +86,8 @@ Prior to this step you need to ensure that forestprep and domainprep have been r
 2. When prompted, type **Y**.  This will begin raising the level.  Once this completes you have successfully raised the FBL.
 ![Finish Update](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish1.png)
 3. Now, if you go to AD FS Management, you will see the new nodes that have been added for AD FS in Windows Server 2016
-4. Likewise, you can use the PowerShell cmdlt:  Get-AdfsFarmInformation to show you the current FBL.
-![Finish Update](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish2.png)
+4. Likewise, you can use the PowerShell cmdlet:  Get-AdfsFarmInformation to show you the current FBL.
+![Screenshot that shows how to use the Get-AdfsFarmInformation cmdlet to show your current F B L.](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish2.png)
 
 #### Upgrade the Configuration Version of existing WAP servers
 1. On each Web Application Proxy, re-configure the WAP by executing the following PowerShell command in an elevated window:
@@ -94,16 +95,16 @@ Prior to this step you need to ensure that forestprep and domainprep have been r
     $trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
     Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred
     ```
-2. Remove old servers from the cluster and keep only the WAP servers running the latest server version, which were reconfigured above, by running the following Powershell commandlet.
+2. Remove old servers from the cluster and keep only the WAP servers running the latest server version, which were reconfigured above, by running the following PowerShell command.
     ```powershell
     Set-WebApplicationProxyConfiguration -ConnectedServersName WAPServerName1, WAPServerName2
     ```
-3. Check the WAP configuration by running the Get-WebApplicationProxyConfiguration commmandlet. The ConnectedServersName will reflect the server run from the prior command.
+3. Check the WAP configuration by running the Get-WebApplicationProxyConfiguration commmand. The ConnectedServersName will reflect the server run from the prior command.
     ```powershell
     Get-WebApplicationProxyConfiguration
     ```
-4. To upgrade the ConfigurationVersion of the WAP servers, run the following Powershell command.
+4. To upgrade the ConfigurationVersion of the WAP servers, run the following PowerShell command.
     ```powershell
     Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
     ```
-5. Verify the ConfigurationVersion has been upgraded with the Get-WebApplicationProxyConfiguration Powershell command.
+5. Verify the ConfigurationVersion has been upgraded with the Get-WebApplicationProxyConfiguration PowerShell command.

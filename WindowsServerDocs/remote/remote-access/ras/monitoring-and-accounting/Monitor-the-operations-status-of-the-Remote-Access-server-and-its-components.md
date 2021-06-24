@@ -1,11 +1,12 @@
 ---
 title: Monitor the operations status of the Remote Access server and its components
-description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
+description: Learn how to use the management console in the Remote Access server to monitor its operations status.
 manager: brianlic
 ms.topic: article
 ms.assetid: 077a3a64-2fa3-4994-9711-ec1fbdc081ba
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Monitor the operations status of the Remote Access server and its components
 

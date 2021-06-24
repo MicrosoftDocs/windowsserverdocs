@@ -10,7 +10,7 @@ ms.date: 08/23/2018
 ---
 # Add a virtual gateway to a tenant virtual network
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 Learn how to use Windows PowerShell cmdlets and scripts to provide site-to-site connectivity for your tenant's virtual networks. In this topic, you add tenant virtual gateways to instances of RAS gateway that are members of gateways pools, using Network Controller. RAS gateway supports up to one hundred tenants, depending on the bandwidth used by each tenant. Network Controller automatically determines the best RAS Gateway to use when you deploy a new virtual gateway for your tenants.
 

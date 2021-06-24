@@ -1,11 +1,12 @@
 ---
 title: Deploy Password-Based 802.1X Authenticated Wireless Access
-description: This topic is part of the Windows Server 2016 Networking guide "Deploy Password-Based 802.1X Authenticated Wireless Access"
+description: Learn how to deploy Institute of Electrical and Electronics Engineers 802.1X-authenticated IEEE 802.11 wireless access using Protected Extensible Authentication Protocol – Microsoft Challenge Handshake Authentication Protocol version 2.
 manager: brianlic
 ms.topic: article
 ms.assetid: ff06ba23-9c0f-49ec-8f7b-611cf8d73a1b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Deploy Password\-Based 802.1X Authenticated Wireless Access
@@ -188,7 +189,7 @@ In Windows Server 2016, the following AES\-based wireless encryption methods are
 > [!IMPORTANT]
 > Wired Equivalency Privacy \(WEP\) was the original wireless security standard that was used to encrypt network traffic. You should not deploy WEP on your network because there are well\-known vulnerabilities in this outdated form of security.
 
-### Active Directory Doman Services \(AD DS\)
+### Active Directory Domain Services \(AD DS\)
 AD DS provides a distributed database that stores and manages information about network resources and application\-specific data from directory\-enabled applications. Administrators can use AD DS to organize elements of a network, such as users, computers, and other devices, into a hierarchical containment structure. The hierarchical containment structure includes the Active Directory forest, domains in the forest, and organizational units \(OUs\) in each domain. A server that is running AD DS is called a *domain controller*.
 
 AD DS contains the user accounts, computer accounts, and account properties that are required by IEEE 802.1X and PEAP\-MS\-CHAP v2 to authenticate user credentials and to evaluate authorization for wireless connections.
@@ -247,7 +248,7 @@ Successful mutual PEAP\-MS\-CHAP v2 authentication has two main parts:
 
     If you deploy your own private CA, the CA certificate is automatically installed in the Trusted Root Certification Authorities certificate store for the Current User and for the Local Computer when Group Policy is refreshed on the domain member client computer. If you decide to deploy server certificates from a public CA, ensure that the public CA certificate is already in the Trusted Root Certification Authorities certificate store.
 
-2.  The NPS authenticates the user. After the client successfully authenticates the NPS, the client sends the user's password\-based credentials to the NPS, which verifies the user's credentials against the user accounts database in Active Directory Doman Services \(AD DS\).
+2.  The NPS authenticates the user. After the client successfully authenticates the NPS, the client sends the user's password\-based credentials to the NPS, which verifies the user's credentials against the user accounts database in Active Directory Domain Services \(AD DS\).
 
 If the credentials are valid and authentication succeeds, the NPS begins the authorization phase of processing the connection request. If the credentials are not valid and authentication fails, NPS sends an Access Reject message and the connection request is denied.
 

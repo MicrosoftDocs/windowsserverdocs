@@ -4,7 +4,7 @@ description: Storage Spaces Direct automatically tunes its performance based on 
 ms.topic: article
 ms.assetid: 15a519fa-37cc-4d84-a9fe-097d33bb71ea
 author: phstee
-ms.author: vshankar; danlo; clausjor; stevenek
+ms.author: vshankar
 ms.date: 4/14/2017
 ---
 # Performance tuning for Storage Spaces Direct

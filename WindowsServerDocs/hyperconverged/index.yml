@@ -10,8 +10,8 @@ metadata:
   description: Consolidate software-defined compute, storage, and networking into one cluster to provide high-performance, cost-effective, and easily scalable virtualization. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: help #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: hub-page # Required
-  author: coreyp-at-msft  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: coreyp #Required; microsoft alias of author; optional team alias.
+  author: JasonGerend  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: jgerend #Required; microsoft alias of author; optional team alias.
   ms.date: 06/10/2020 #Required; mm/dd/yyyy format.
 
 # productDirectory section (optional)

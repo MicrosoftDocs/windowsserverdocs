@@ -1,11 +1,12 @@
 ---
 title: DNS Resource Record Management
-description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+description: Learn how to manage DNS resource records by using IPAM.
 manager: brianlic
 ms.topic: article
 ms.assetid: 7b66c09d-e401-4f70-9a2a-6047dd629bfa
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # DNS Resource Record Management
 

@@ -1,11 +1,11 @@
 ---
 title: openfiles
 description: Reference article for the openfiles command, which enables an administrator to query, display, or disconnect files and directories that have been opened on a system.
-ms.topic: article
+ms.topic: reference
 ms.assetid: c3be561d-a11f-4bf1-9835-8e4e96fe98ec
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

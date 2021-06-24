@@ -1,18 +1,17 @@
 ---
 title: Offer all available integration services to virtual machines
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+description: Learn what to do when one or more available integration services are not enabled on virtual machines.
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 2c4b2043-ad81-495e-aa7a-467f813bb3d2
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Offer all available integration services to virtual machines
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -50,6 +49,3 @@ The availability of some integration services can be managed through the virtual
 4.  Under **Management**, click **Integration Services**.
 
 5.  In the list of integration services, select the check box for each service you want to offer to the virtual machine. If a check box is unavailable, that particular integration service is not supported by the guest operating system that runs in the virtual machine.
-
-
-

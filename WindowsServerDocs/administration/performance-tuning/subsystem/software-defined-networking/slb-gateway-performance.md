@@ -2,7 +2,7 @@
 title: SLB Gateway Performance Tuning in Software Defined Networks
 description: SLB Gateway performance tuning guidelines on SDN networks
 ms.topic: article
-ms.author: grcusanz; anpaul
+ms.author: grcusanz
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -21,7 +21,7 @@ An individual connection to a Virtual IP (VIP) will always be sent to the same M
 
 In some cases when the source of the request originates from an SDN host that is added to the same Network Controller that manages the VIP, further optimization of the inbound path for the request is also performed which enables most packets to travel directly from the client to the server, bypassing the Mux VM entirely.  No additional configuration is required for this optimization to take place.
 
-Each SLB Mux VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the  [Plan a Software Defined Network Infrastructure](../../../../networking/sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md) topic.
+Each SLB Mux VM must be sized according to the guidelines provided in the SDN infrastructure virtual machine role requirements section of the  [Plan a Software Defined Network Infrastructure](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure) topic.
 
 ## Single Root IO virtualization (SR-IOV)
 

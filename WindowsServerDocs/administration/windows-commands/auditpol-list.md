@@ -1,11 +1,11 @@
 ---
 title: auditpol list
 description: Reference article for the auditpol list command, which lists audit policy categories and subcategories, or lists users for whom a per-user audit policy is defined.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 45502abe-3d6e-4e13-94f0-8e6fcb6db860
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 # auditpol list

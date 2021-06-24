@@ -1,12 +1,12 @@
 ---
 title: "Manage Server Backup in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about common backup tasks that you can accomplish by using the Windows Server Essentials Dashboard.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 0302d070-c58a-40f2-b56d-7e7842813d02
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Manage Server Backup in Windows Server Essentials

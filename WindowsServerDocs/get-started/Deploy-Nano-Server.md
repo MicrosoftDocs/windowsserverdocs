@@ -67,7 +67,7 @@ This table shows the roles and features that are available in this release of Na
 | PowerShell Desired State Configuration (DSC) | -Package Microsoft-NanoServer-DSC-Package<p>**Note:** For full details, see [Using DSC on Nano Server](/archive/blogs/askcore/kms-host-client-count-not-increasing-due-to-duplicate-cmids). |
 | Internet Information Server (IIS) | -Package Microsoft-NanoServer-IIS-Package<p>**Note:** See [IIS on Nano Server](IIS-on-Nano-Server.md) for details about working with IIS. |
 | Host support for Windows Containers | -Containers |
-| System Center Virtual Machine Manager agent | -Package Microsoft-NanoServer-SCVMM-Package<p>-Package Microsoft-NanoServer-SCVMM-Compute-Package<p>**Note:** Use the SCVMM Compute package only if you are monitoring Hyper-V. For hyper-converged deployments in VMM, you should also specify the -Storage parameter. For more details, see the [VMM documentation](/system-center/vmm/hyper-v-nano?view=sc-vmm-2016&viewFallbackFrom=sc-vmm-2019). |
+| System Center Virtual Machine Manager agent | -Package Microsoft-NanoServer-SCVMM-Package<p>-Package Microsoft-NanoServer-SCVMM-Compute-Package<p>**Note:** Use the SCVMM Compute package only if you are monitoring Hyper-V. For hyper-converged deployments in VMM, you should also specify the -Storage parameter. For more details, see the [VMM documentation](/system-center/vmm/hyper-v-nano?view=sc-vmm-2016&preserve-view=true). |
 | System Center Operations Manager agent | Installed separately. See the System Center Operations Manager documentation for more details at https://technet.microsoft.com/system-center-docs/om/manage/install-agent-on-nano-server. |
 | Data Center Bridging (including DCBQoS) | -Package Microsoft-NanoServer-DCB-Package |
 | Deploying on a virtual machine | -Package Microsoft-NanoServer-Guest-Package |
@@ -520,7 +520,7 @@ Both PnP and File System Filter driver packages must follow the Universal driver
 
 #### Installing driver packages offline
 
-Supported driver packages can be installed on Nano Server offline via [DISM.exe](/windows-hardware/manufacture/desktop/dism-driver-servicing-command-line-options-s14) or [DISM PowerShell](/powershell/module/dism/add-windowsdriver?view=win10-ps) cmdlets.
+Supported driver packages can be installed on Nano Server offline via [DISM.exe](/windows-hardware/manufacture/desktop/dism-driver-servicing-command-line-options-s14) or [DISM PowerShell](/powershell/module/dism/add-windowsdriver) cmdlets.
 
 #### Installing driver packages online
 PnP driver packages can be installed to Nano Server online by using [PnpUtil](/windows-hardware/drivers/devtest/pnputil). Online driver installation for non-PnP driver packages is not currently supported on Nano Server.

@@ -1,12 +1,12 @@
 ---
 title: "Testing the Customer Experience"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to run through Initial Configuration of a target computer to verify the experience of the customer and check your partner customizations.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 1b1a2040-4cfd-48bf-8d04-3ffde9c26b9b
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Testing the Customer Experience

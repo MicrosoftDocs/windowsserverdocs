@@ -1,12 +1,12 @@
 ---
 title: "Restore a full system from an existing client computer backup"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to restore a full system from an existing client computer backup.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 47e498a6-1b71-47de-88f6-8c13c221d108
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Restore a full system from an existing client computer backup
@@ -54,11 +54,11 @@ manager: dongill
 > [!NOTE]
 >  After a successful full system restore, you must reactivate BitLocker on the computer.
 >
->  For instructions about how to enable BitLocker on computers that are running  Windows 8, see [BitLocker: How to enable BitLocker](https://go.microsoft.com/fwlink/p/?LinkID=254918).
+>  For instructions about how to enable BitLocker on computers that are running  Windows 8, see [BitLocker: How to enable BitLocker](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831713(v=ws.11)).
 >
->  For instructions about how to enable BitLocker on computers that are running  Windows 7, see [BitLocker Drive Encryption Step-by-Step Guide for Windows 7](https://go.microsoft.com/fwlink/p/?LinkId=140225).
+>  For instructions about how to enable BitLocker on computers that are running  Windows 7, see [BitLocker Drive Encryption Step-by-Step Guide for Windows 7](/previous-versions/windows/it-pro/windows-7/dd835565(v=ws.10)).
 
- For more information about BitLocker Drive Encryption basics, see [BitLocker Frequently Asked Questions (FAQ)](https://go.microsoft.com/fwlink/p/?LinkID=254917).
+ For more information about BitLocker Drive Encryption basics, see [BitLocker Frequently Asked Questions (FAQ)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831507(v=ws.11)).
 
 ### Encrypting File System-encrypted files
  The Encrypting File System (EFS) feature in Windows can provide additional user-based file level encryption for different levels of security among multiple users of the same computer. It is important to note that, unlike BitLocker-encrypted drives, EFS-encrypted folders and files continue to be encrypted in any computer backup. EFS is not available in Windows XP Home Edition,  Windows Vista Starter,  Windows Vista Home Basic, Windows Vista Home Premium,  Windows 7 Starter,  Windows 7 Home Basic,  Windows 7 Home Premium, or Windows 8. It is only available in Windows 8 Pro.

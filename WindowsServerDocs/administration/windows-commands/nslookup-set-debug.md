@@ -1,11 +1,11 @@
 ---
 title: nslookup set debug
 description: Reference article for the nslookup set debug command, which turns debugging mode on and off.
-ms.topic: article
+ms.topic: reference
 ms.assetid: b51e04e7-5f6f-4183-88bf-5628a506bdab
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

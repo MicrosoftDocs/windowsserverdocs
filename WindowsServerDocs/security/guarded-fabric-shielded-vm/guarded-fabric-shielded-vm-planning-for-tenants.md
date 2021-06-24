@@ -1,10 +1,12 @@
 ---
+description: "Learn more about: Guarded Fabric and Shielded VM Planning Guide for Tenants"
 title: Guarded Fabric and Shielded VM Planning Guide for Tenants
 ms.topic: article
 ms.assetid: 392af37f-a02d-4d40-a25d-384211cbbfdd
 manager: dongill
 author: nirb-ms
 ms.author: nirb
+ms.date: 12/10/2020
 ---
 
 # Guarded Fabric and Shielded VM Planning Guide for Tenants

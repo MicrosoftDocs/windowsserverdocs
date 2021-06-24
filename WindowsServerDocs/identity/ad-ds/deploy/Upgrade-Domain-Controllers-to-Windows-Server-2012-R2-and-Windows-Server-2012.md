@@ -1,19 +1,22 @@
 ---
 ms.assetid: e4c31187-f15f-410b-bb79-8d63e2f2b421
 title: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+description: "Learn more about: Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012"
+ms.author: daveba
+author: iainfoulds
+manager: daveba
 ms.date: 08/09/2018
 ms.topic: article
 ---
+
 # Upgrade Domain Controllers to Windows Server 2012 R2 and Windows Server 2012
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides background information about Active Directory Domain Services in  Windows Server 2012 R2  and  Windows Server 2012  and explains the process for upgrading domain controllers from Windows Server 2008 or Windows Server 2008 R2.
 
 ## <a name="BKMK_UpgradeWorkflow"></a>Domain controller upgrade steps
+
 The recommended way to upgrade a domain is to promote domain controllers that run newer versions of Windows Server and demote older domain controllers as needed. That method is preferable to upgrading the operating system of an existing domain controller. This list covers general steps to follow before you promote a domain controller that runs a newer version of Windows Server:
 
 1. Verify the target server meets [system requirements](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303418(v=ws.11)).
@@ -113,14 +116,13 @@ Because Windows Update is a part of Automatic Maintenance in Windows 8 and Windo
 
 The following table lists some examples of how to configure these settings to provide desired restart behavior.
 
-|||
-|-|-|
 |**Scenario**|**Recommended configuration(s)**|
+|-|-|
 |**WSUS managed**<p>-   Install updates once per week<br />-   Reboot Fridays at 11PM|Set machines to auto-install, prevent auto-reboot until desired time<p>**Policy**: Configure Automatic Updates (Enabled)<p>Configure automatic updating: 4 - Auto download and schedule the install<p>**Policy**: No auto-restart with logged-on users (Disabled)<p>**WSUS deadlines**: set to Fridays at 11PM|
 |**WSUS managed**<p>-   Stagger installs across different hours/days|Set target groups for different groups of machines that should be updated together<p>Use above steps for previous scenario<p>Set different deadlines for different target groups|
 |**Not WSUS-managed - no support for deadlines**<p>-   Stagger installs at different times|**Policy**: Configure Automatic Updates (Enabled)<p>Configure automatic updating: 4 - Auto download and schedule the install<p>**Registry key:** Enable the registry key discussed in Microsoft KB article [2835627](https://support.microsoft.com/kb/2835627)<p>**Policy:** Automatic Maintenance Random Delay (Enabled)<p>Set **Regular maintenance random delay** to PT6H for 6-hour random delay to provide the following behavior:<p>-   Updates will install at the configured maintenance time plus a random delay<p>-   Restart for each machine will take place exactly 3 days later<p>Alternatively, set a different maintenance time for each group of machines|
 
-For more information about why the Windows engineering team implemented these changes, see [Minimizing restarts after automatic updating in Windows Update](https://blogs.msdn.com/b/b8/archive/2011/11/14/minimizing-restarts-after-automatic-updating-in-windows-update.aspx).
+For more information about why the Windows engineering team implemented these changes, see [How to reduce your chances of being prompted to restart your computer](/troubleshoot/windows-server/deployment/why-prompted-restart-computer#how-to-reduce-your-chances-of-being-prompted-to-restart-your-computer).
 
 ## <a name="BKMK_InstallationChanges"></a>AD DS server role installation changes
 
@@ -142,23 +144,23 @@ There are some changes related to AD DS:
 - **Deprecation of Dcpromo.exe**
    - Dcpromo is deprecated although in  Windows Server 2012  only it can still be run with an answer file or command line parameters to give organizations time to transition existing automation to the new Windows PowerShell installation options.
 - **LMHash is disabled on user accounts**
-  - Secure defaults in Security templates on Windows Server 2008, Windows Server 2008 R2 and Windows Server 2012 enable the NoLMHash policy which is disabled in the security templates of Windows 2000 and Windows Server 2003 domain controllers. Disable the NoLMHash policy for LMHash-dependent clients as required, using the steps in KB article [946405](https://support.microsoft.com/kb/946405).
+  - Secure defaults in Security templates on Windows Server 2008, Windows Server 2008 R2 and Windows Server 2012 enable the NoLMHash policy which is disabled in the security templates of Windows 2000 and Windows Server 2003 domain controllers. Disable the NoLMHash policy for LMHash-dependent clients as required, using the steps described in the page [How to prevent Windows from storing a LAN manager hash of your password in Active Directory and local SAM databases](/troubleshoot/windows-server/windows-security/prevent-windows-store-lm-hash-password).
 
-Beginning with  Windows Server 2008 , domain controllers also have the following secure default settings, compared to domain controllers that run Windows Server 2003 or Windows 2000.
+Beginning with  Windows Server 2008 , domain controllers also have the following secure default settings, compared to domain controllers that run Windows Server 2003 or Windows 2000:
 
 | Encryption type or policy | Windows Server 2008 default | Windows Server 2012 and Windows Server 2008 R2 default | Comment |
 |--|--|--|--|
 | AllowNT4Crypto | Disabled | Disabled | Third-party Server Message Block (SMB) clients may be incompatible with the secure default settings on domain controllers. In all cases, these settings can be relaxed to allow interoperability, but only at the expense of security. For more information, see [article 942564](https://go.microsoft.com/fwlink/?LinkId=164558) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=164558). |
-| DES | Enabled | Disabled | [Article 977321](https://go.microsoft.com/fwlink/?LinkId=177717) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=177717) |
-| CBT/Extended Protection for Integrated Authentication | N/A | Enabled | See [Microsoft Security Advisory (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=164559) and [article 976918](https://go.microsoft.com/fwlink/?LinkId=178251) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251).<p>Review and install the hotfix in [article 977073](https://go.microsoft.com/fwlink/?LinkId=186394) (https://go.microsoft.com/fwlink/?LinkId=186394) in the Microsoft Knowledge Base as required. |
-| LMv2 | Enabled | Disabled | [Article 976918](https://go.microsoft.com/fwlink/?LinkId=178251) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251) |
+| DES | Enabled | Disabled | [Article 977321](/troubleshoot/windows-server/windows-security/kdc-event-16-27-des-encryption-disabled) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=177717) |
+| CBT/Extended Protection for Integrated Authentication | N/A | Enabled | See [Microsoft Security Advisory (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=164559) and [article 976918](/troubleshoot/windows-server/windows-security/authentication-fails-non-windows-ntlm-kerberos-server) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251).<p>Review and install the hotfix in [article 977073](https://go.microsoft.com/fwlink/?LinkId=186394) (https://go.microsoft.com/fwlink/?LinkId=186394) in the Microsoft Knowledge Base as required. |
+| LMv2 | Enabled | Disabled | [Article 976918](/troubleshoot/windows-server/windows-security/authentication-fails-non-windows-ntlm-kerberos-server) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251) |
 
 ## <a name="BKMK_SysReqs"></a>Operating system requirements
 
 The minimum system requirements for  Windows Server 2012  are listed in the following table. For more information about system requirements and pre-installation information, see [Installing Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)). There are no additional system requirements to install a new Active Directory forest, but you should add sufficient memory to cache the contents of Active Directory database in order to improve performance for domain controllers, LDAP client requests, and Active Directory-enabled applications. If you are upgrading an existing domain controller or adding a new domain controller to an existing forest, review the next section to ensure the server meets disk space requirements.
 
 | Requirement | Value |
-|--|--|
+| ---------- | ----- |
 | Processor | 1.4 Ghz 64-bit processor |
 | RAM | 512 MB |
 | Free disk space requirements | 32 GB |
@@ -201,7 +203,7 @@ Domain controllers that run 64-bit versions of Windows Server 2008 or Windows Se
 | Windows Server 2008 R2 Datacenter with SP1 | Windows Server 2012 Datacenter |
 | Windows Web Server 2008 R2 | Windows Server 2012 Standard |
 
-For more information about supported upgrade paths, see [Evaluation Versions and Upgrade Options for Windows Server 2012](https://go.microsoft.com/fwlink/?LinkId=260917). Note that you cannot convert a domain controller that runs an evaluation version of Windows Server 2012 directly to a retail version. Instead, install an additional domain controller on a server that runs a retail version and remove AD DS from the domain controller that runs on the evaluation version.
+For more information about supported upgrade paths, see [Evaluation Versions and Upgrade Options for Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574204(v=ws.11)). Note that you cannot convert a domain controller that runs an evaluation version of Windows Server 2012 directly to a retail version. Instead, install an additional domain controller on a server that runs a retail version and remove AD DS from the domain controller that runs on the evaluation version.
 
 Due to a known issue, you cannot upgrade a domain controller that runs a Server Core installation of Windows Server 2008 R2 to a Server Core installation of  Windows Server 2012 . The upgrade will hang on a solid black screen late in the upgrade process. Rebooting such DCs exposes an option in boot.ini file to roll back to the previous operating system version. An additional reboot triggers the automatic rollback to the previous operating system version. Until a solution is available, it is recommended that you install a new domain controller running a Server Core installation of  Windows Server 2012  instead of in-place upgrading an existing domain controller that runs a Server Core installation of Windows Server 2008 R2. For more information, see KB article [2734222](https://support.microsoft.com/kb/2734222).
 
@@ -280,7 +282,7 @@ The following table covers common Active Directory-integrated Microsoft applicat
 |Forefront Threat Management Gateway (TMG)|TMG is supported to run only on Windows Server 2008 and Windows Server 2008 R2. For more information, see [System requirements for Forefront TMG](/previous-versions/tn-archive/dd896981(v=technet.10)).|
 |Windows Server Update Services|This release of WSUS already supports Windows 8-based computers or Windows Server 2012-based computers as clients.|
 |Windows Server Update Services 3.0|Update KB article [2734608](https://support.microsoft.com/kb/2734608) lets servers that are running Windows Server Update Services (WSUS) 3.0 SP2 provide updates to computers that are running Windows 8 or Windows Server 2012: **Note:** Customers with standalone WSUS 3.0 SP2 environments or Configuration Manager 2007 Service Pack 2 environments with WSUS 3.0 SP2 require [2734608](https://support.microsoft.com/kb/2734608) to properly manage Windows 8-based computers or Windows Server 2012-based computers as clients.|
-|[Exchange 2013](/Exchange/plan-and-deploy/prerequisites?view=exchserver-2019)|Windows Server 2012 Standard and Datacenter are supported for the following roles: schema master, global catalog server, domain controller, mailbox and client access server role<p>Forest Functional Level: Windows Server 2003 or higher<p>Source: Exchange 2013 System Requirements|
+|[Exchange 2013](/Exchange/plan-and-deploy/prerequisites)|Windows Server 2012 Standard and Datacenter are supported for the following roles: schema master, global catalog server, domain controller, mailbox and client access server role<p>Forest Functional Level: Windows Server 2003 or higher<p>Source: Exchange 2013 System Requirements|
 |Exchange 2010|[Source: Exchange 2010 Service Pack 3](https://techcommunity.microsoft.com/t5/exchange-team-blog/bg-p/Exchange)<p>Exchange 2010 with Service Pack 3 can be installed on Windows Server 2012 member servers.<p>[Exchange 2010 System Requirements](/previous-versions/office/exchange-server-2010/aa996719(v=exchg.141)) lists the latest supported schema master, global catalog and domain controller as Windows Server 2008 R2.<p>Forest Functional Level: Windows Server 2003 or higher|
 |SQL Server 2012|Source: KB [2681562](https://support.microsoft.com/kb/2681562)<p>SQL Server 2012 RTM is supported on Windows Server 2012.|
 |SQL Server 2008 R2|Source: KB [2681562](https://support.microsoft.com/kb/2681562)<p>Requires SQL Server 2008 R2 with Service Pack 1 or later to install on Windows Server 2012.|
@@ -289,7 +291,7 @@ The following table covers common Active Directory-integrated Microsoft applicat
 
 ## <a name="BKMK_KnownIssues"></a>Known issues
 
-The following table lists known issues related to AD DS installation.
+The following table lists known issues related to AD DS installation:
 
 | KB article number and title | Technology area impacted | Issue/description |
 |--|--|--|

@@ -1,12 +1,12 @@
 ---
 title: "Hardware Requirements for the Target Computer"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the hardware requirements that must be in place for you to install Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c20b06b9-ce0d-4c20-bf49-257c3f5dc01b
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Hardware Requirements for the Target Computer

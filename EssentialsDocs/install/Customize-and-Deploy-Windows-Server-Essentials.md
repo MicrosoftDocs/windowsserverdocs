@@ -1,12 +1,12 @@
 ---
 title: "Customize and Deploy Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to customize and deploy Windows Server Essentials by using the information in the Windows Assessment and Deployment Kit and related articles.
 ms.date: 09/13/2016
 ms.topic: article
 ms.assetid: d1c70cf2-0db8-4b75-af46-73620b9e81c8
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 # Customize and Deploy Windows Server Essentials
 

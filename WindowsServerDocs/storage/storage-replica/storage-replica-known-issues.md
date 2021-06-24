@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Known issues with Storage Replica"
 title: Known issues with Storage Replica
 manager: siroy
 ms.author: nedpyle
-ms.topic: get-started-article
+ms.topic: how-to
 author: nedpyle
 ms.date: 06/25/2019
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
@@ -256,7 +257,7 @@ When specifying a bandwidth limit to Storage Replica, the limit is ignored and f
 Set-SmbBandwidthLimit  -Category StorageReplication -BytesPerSecond 32MB
 ```
 
-This issue occurs because of an interoperability issue between Storage Replica and SMB. This issue was first fixed in the July 2017 Cumulative Update of Windows Server 2016 and in Windows Server, version 1709.
+This issue occurs because of an interoperability issue between Storage Replica and SMB.
 
 ## Event 1241 warning repeated during initial sync
 
@@ -502,5 +503,5 @@ This is caused by a known code defect in Windows Server, version 1709. To resolv
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
-- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 - [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)

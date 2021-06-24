@@ -5,12 +5,12 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.date: 06/07/2019
+ms.date: 05/28/2021
 ms.localizationpriority: medium
 ---
 # Configure and manage quorum
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides background and steps to configure and manage the quorum in a Windows Server failover cluster.
 
@@ -20,7 +20,7 @@ The quorum for a cluster is determined by the number of voting elements that mus
 
 ## Quorum configuration options
 
-The quorum model in Windows Server is flexible. If you need to modify the quorum configuration for your cluster, you can use the Configure Cluster Quorum Wizard or the Failover Clusters Windows PowerShell cmdlets. For steps and considerations to configure the quorum, see [Configure the cluster quorum](#configure-the-cluster-quorum) later in this topic.
+The quorum model in Windows Server is flexible. If you need to modify the quorum configuration for your cluster, you can use the Configure Cluster Quorum Wizard or the FailoverClusters Windows PowerShell cmdlets. For steps and considerations to configure the quorum, see [Configure the cluster quorum](#configure-the-cluster-quorum) later in this topic.
 
 The following table lists the three quorum configuration options that are available in the Configure Cluster Quorum Wizard.
 
@@ -52,7 +52,7 @@ The following table provides additional information and considerations about the
 | ---------    |---------        |---------                        |
 | Disk witness     |  <ul><li> Dedicated LUN that stores a copy of the cluster database</li><li> Most useful for clusters with shared (not replicated) storage</li>       |  <ul><li>Size of LUN must be at least 512 MB</li><li> Must be dedicated to cluster use and not assigned to a clustered role</li><li> Must be included in clustered storage and pass storage validation tests</li><li> Cannot be a disk that is a Cluster Shared Volume (CSV)</li><li> Basic disk with a single volume</li><li> Does not need to have a drive letter</li><li> Can be formatted with NTFS or ReFS</li><li> Can be optionally configured with hardware RAID for fault tolerance</li><li> Should be excluded from backups and antivirus scanning</li><li> A Disk witness isn't supported with Storage Spaces Direct</li>|
 | File share witness     | <ul><li>SMB file share that is configured on a file server running Windows Server</li><li> Does not store a copy of the cluster database</li><li> Maintains cluster information only in a witness.log file</li><li> Most useful for multisite clusters with replicated storage </li>       |  <ul><li>Must have a minimum of 5 MB of free space</li><li> Must be dedicated to the single cluster and not used to store user or application data</li><li> Must have write permissions enabled for the computer object for the cluster name</li></ul><br>The following are additional considerations for a file server that hosts the file share witness:<ul><li>A single file server can be configured with file share witnesses for multiple clusters.</li><li> The file server must be on a site that is separate from the cluster workload. This allows equal opportunity for any cluster site to survive if site-to-site network communication is lost. If the file server is on the same site, that site becomes the primary site, and it is the only site that can reach the file share.</li><li> The file server can run on a virtual machine if the virtual machine is not hosted on the same cluster that uses the file share witness.</li><li> For high availability, the file server can be configured on a separate failover cluster. </li>      |
-| Cloud witness     |  <ul><li>A witness file stored in Azure blob storage</li><li> Recommended when all servers in the cluster have a reliable Internet connection.</li>      |  See [Deploy a cloud witness](./deploy-cloud-witness.md).       |
+| Cloud witness     |  <ul><li>A witness file stored in Azure Blob Storage</li><li> Recommended when all servers in the cluster have a reliable Internet connection.</li>      |  See [Deploy a cloud witness](./deploy-cloud-witness.md).       |
 
 ### Node vote assignment
 
@@ -60,7 +60,7 @@ As an advanced quorum configuration option, you can choose to assign or remove q
 
 You might want to remove votes from nodes in certain disaster recovery configurations. For example, in a multisite cluster, you could remove votes from the nodes in a backup site so that those nodes do not affect quorum calculations. This configuration is recommended only for manual failover across sites. For more information, see [Quorum considerations for disaster recovery configurations](#quorum-considerations-for-disaster-recovery-configurations) later in this topic.
 
-The configured vote of a node can be verified by looking up the **NodeWeight** common property of the cluster node by using the [Get-ClusterNode](https://technet.microsoft.com/library/hh847268.aspx)Windows PowerShell cmdlet. A value of 0 indicates that the node does not have a quorum vote configured. A value of 1 indicates that the quorum vote of the node is assigned, and it is managed by the cluster. For more information about management of node votes, see [Dynamic quorum management](#dynamic-quorum-management) later in this topic.
+The configured vote of a node can be verified by looking up the **NodeWeight** common property of the cluster node by using the [Get-ClusterNode](https://technet.microsoft.com/library/hh847268.aspx) Windows PowerShell cmdlet. A value of 0 indicates that the node does not have a quorum vote configured. A value of 1 indicates that the quorum vote of the node is assigned, and it is managed by the cluster. For more information about management of node votes, see [Dynamic quorum management](#dynamic-quorum-management) later in this topic.
 
 The vote assignment for all cluster nodes can be verified by using the **Validate Cluster Quorum** validation test.
 
@@ -75,7 +75,7 @@ In Windows Server 2012, as an advanced quorum configuration option, you can choo
 
 With dynamic quorum management, it is also possible for a cluster to run on the last surviving cluster node. By dynamically adjusting the quorum majority requirement, the cluster can sustain sequential node shutdowns to a single node.
 
-The cluster-assigned dynamic vote of a node can be verified with the **DynamicWeight** common property of the cluster node by using the [Get-ClusterNode](/powershell/module/failoverclusters/get-clusternode?view=win10-ps) Windows PowerShell cmdlet. A value of 0 indicates that the node does not have a quorum vote. A value of 1 indicates that the node has a quorum vote.
+The cluster-assigned dynamic vote of a node can be verified with the **DynamicWeight** common property of the cluster node by using the [Get-ClusterNode](/powershell/module/failoverclusters/get-clusternode) Windows PowerShell cmdlet. A value of 0 indicates that the node does not have a quorum vote. A value of 1 indicates that the node has a quorum vote.
 
 The vote assignment for all cluster nodes can be verified by using the **Validate Cluster Quorum** validation test.
 
@@ -88,7 +88,7 @@ The vote assignment for all cluster nodes can be verified by using the **Validat
 
 ## General recommendations for quorum configuration
 
-The cluster software automatically configures the quorum for a new cluster, based on the number of nodes configured and the availability of shared storage. This is usually the most appropriate quorum configuration for that cluster. However, it is a good idea to review the quorum configuration after the cluster is created, before placing the cluster into production. To view the detailed cluster quorum configuration, you can you use the Validate a Configuration Wizard, or the [Test-Cluster](/powershell/module/failoverclusters/test-cluster?view=win10-ps) Windows PowerShell cmdlet, to run the **Validate Quorum Configuration** test. In Failover Cluster Manager, the basic quorum configuration is displayed in the summary information for the selected cluster, or you can review the information about quorum resources that returns when you run the [Get-ClusterQuorum](/powershell/module/failoverclusters/get-clusterquorum?view=win10-ps) Windows PowerShell cmdlet.
+The cluster software automatically configures the quorum for a new cluster, based on the number of nodes configured and the availability of shared storage. This is usually the most appropriate quorum configuration for that cluster. However, it is a good idea to review the quorum configuration after the cluster is created, before placing the cluster into production. To view the detailed cluster quorum configuration, you can you use the Validate a Configuration Wizard, or the [Test-Cluster](/powershell/module/failoverclusters/test-cluster) Windows PowerShell cmdlet, to run the **Validate Quorum Configuration** test. In Failover Cluster Manager, the basic quorum configuration is displayed in the summary information for the selected cluster, or you can review the information about quorum resources that returns when you run the [Get-ClusterQuorum](/powershell/module/failoverclusters/get-clusterquorum) Windows PowerShell cmdlet.
 
 At any time, you can run the **Validate Quorum Configuration** test to validate that the quorum configuration is optimal for your cluster. The test output indicates if a change to the quorum configuration is recommended and the settings that are optimal. If a change is recommended, you can use the Configure Cluster Quorum Wizard to apply the recommended settings.
 
@@ -103,7 +103,7 @@ For more information about validating a failover cluster, see [Validate Hardware
 
 ## Configure the cluster quorum
 
-You can configure the cluster quorum settings by using Failover Cluster Manager or the Failover Clusters Windows PowerShell cmdlets.
+You can configure the cluster quorum settings by using Failover Cluster Manager or the FailoverClusters Windows PowerShell cmdlets.
 
 > [!IMPORTANT]
 > It is usually best to use the quorum configuration that is recommended by the Configure Cluster Quorum Wizard. We recommend customizing the quorum configuration only if you have determined that the change is appropriate for your cluster. For more information, see [General recommendations for quorum configuration](#general-recommendations-for-quorum-configuration) in this topic.
@@ -121,8 +121,8 @@ Membership in the local **Administrators** group on each clustered server, or eq
 2. With the cluster selected, under **Actions**, select **More Actions**, and then select **Configure Cluster Quorum Settings**. The Configure Cluster Quorum Wizard appears. Select **Next**.
 3. On the **Select Quorum Configuration Option** page, select one of the three configuration options and complete the steps for that option. Before you configure the quorum settings, you can review your choices. For more information about the options, see [Understanding quorum](#understanding-quorum), earlier in this topic.
 
-    - To allow the cluster to automatically reset the quorum settings that are optimal for your current cluster configuration, select **Use typical settings** and then complete the wizard.
-    - To add or change the quorum witness, select **Add or change the quorum witness**, and then complete the following steps. For information and considerations about configuring a quorum witness, see [Witness configuration](#witness-configuration) earlier in this topic.
+    - To allow the cluster to automatically reset the quorum settings that are optimal for your current cluster configuration, select **Use default quorum configuration** and then complete the wizard.
+    - To add or change the quorum witness, select **Select the quorum witness**, and then complete the following steps. For information and considerations about configuring a quorum witness, see [Witness configuration](#witness-configuration) earlier in this topic.
 
       1. On the **Select Quorum Witness** page, select an option to configure a disk witness or a file share witness. The wizard indicates the witness selection options that are recommended for your cluster.
 
@@ -131,8 +131,11 @@ Membership in the local **Administrators** group on each clustered server, or eq
 
       2. If you select the option to configure a disk witness, on the **Configure Storage Witness** page, select the storage volume that you want to assign as the disk witness, and then complete the wizard.
       3. If you select the option to configure a file share witness, on the **Configure File Share Witness** page, type or browse to a file share that will be used as the witness resource, and then complete the wizard.
+      4. If you select the option to configure a cloud witness, on the **Configure Cloud Witness** page, enter your Azure storage account name, Azure storage account key and the Azure service endpoint, and then complete the wizard.
+          > [!NOTE]
+          > This option is available in Windows Server 2016 and above.
 
-    - To configure quorum management settings and to add or change the quorum witness, select **Advanced quorum configuration and witness selection**, and then complete the following steps. For information and considerations about the advanced quorum configuration settings, see [Node vote assignment](#node-vote-assignment) and [Dynamic quorum management](#dynamic-quorum-management) earlier in this topic.
+    - To configure quorum management settings and to add or change the quorum witness, select **Advanced quorum configuration**, and then complete the following steps. For information and considerations about the advanced quorum configuration settings, see [Node vote assignment](#node-vote-assignment) and [Dynamic quorum management](#dynamic-quorum-management) earlier in this topic.
 
       1. On the **Select Voting Configuration** page, select an option to assign votes to nodes. By default, all nodes are assigned a vote. However, for certain scenarios, you can assign votes only to a subset of the nodes.
 
@@ -140,13 +143,19 @@ Membership in the local **Administrators** group on each clustered server, or eq
           > You can also select **No Nodes**. This is generally not recommended, because it does not allow nodes to participate in quorum voting, and it requires configuring a disk witness. This disk witness becomes the single point of failure for the cluster.
 
       2. On the **Configure Quorum Management** page, you can enable or disable the **Allow cluster to dynamically manage the assignment of node votes** option. Selecting this option generally increases the availability of the cluster. By default the option is enabled, and it is strongly recommended to not disable this option. This option allows the cluster to continue running in failure scenarios that are not possible when this option is disabled.
-      3. On the **Select Quorum Witness** page, select an option to configure a disk witness or a file share witness. The wizard indicates the witness selection options that are recommended for your cluster.
+          > [!NOTE]
+          > This option is not present in Windows Server 2016 and above.
+          
+      3. On the **Select Quorum Witness** page, select an option to configure a disk witness, file share witness or a cloud witness. The wizard indicates the witness selection options that are recommended for your cluster.
 
           > [!NOTE]
           > You can also select **Do not configure a quorum witness**, and then complete the wizard. If you have an even number of voting nodes in your cluster, this may not be a recommended configuration.
 
       4. If you select the option to configure a disk witness, on the **Configure Storage Witness** page, select the storage volume that you want to assign as the disk witness, and then complete the wizard.
       5. If you select the option to configure a file share witness, on the **Configure File Share Witness** page, type or browse to a file share that will be used as the witness resource, and then complete the wizard.
+      6. If you select the option to configure a cloud witness, on the **Configure Cloud Witness** page, enter your Azure storage account name, Azure storage account key and the Azure service endpoint, and then complete the wizard.
+          > [!NOTE]
+          > This option is available in Windows Server 2016 and above.
 
 4. Select **Next**. Confirm your selections on the confirmation page that appears, and then select **Next**.
 
@@ -157,7 +166,7 @@ After the wizard runs and the **Summary** page appears, if you want to view a re
 
 ### Windows PowerShell equivalent commands
 
-The following examples show how to use the [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum?view=win10-ps) cmdlet and other Windows PowerShell cmdlets to configure the cluster quorum.
+The following examples show how to use the [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum) cmdlet and other Windows PowerShell cmdlets to configure the cluster quorum.
 
 The following example changes the quorum configuration on cluster *CONTOSO-FC1* to a simple node majority configuration with no quorum witness.
 
@@ -306,5 +315,5 @@ The following table summarizes considerations and recommendations for this confi
 ## More information
 
 * [Failover Clustering](./failover-clustering-overview.md)
-* [Failover Clusters Windows PowerShell cmdlets](/powershell/module/failoverclusters/?view=win10-ps)
+* [Failover Clusters Windows PowerShell cmdlets](/powershell/module/failoverclusters/)
 * [Understanding Cluster and Pool Quorum](../storage/storage-spaces/understand-quorum.md)

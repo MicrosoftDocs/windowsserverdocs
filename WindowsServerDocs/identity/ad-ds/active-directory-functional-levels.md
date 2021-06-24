@@ -1,10 +1,11 @@
 ---
+description: "Learn more about: Forest and Domain Functional Levels"
 ms.assetid: f964d056-11bf-4d9b-b5ab-dceaad8bfbc3
 title: Windows Server 2016 Functional Levels
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
-ms.date: 10/29/2018
+ms.author: daveba
+author: iainfoulds
+manager: daveba
+ms.date: 08/25/2020
 ms.topic: article
 ms.custom: it-pro
 ms.reviewer: maheshu
@@ -17,9 +18,9 @@ Functional levels determine the available Active Directory Domain Services (AD D
 
 When you deploy AD DS, set the domain and forest functional levels to the highest value that your environment can support. This way, you can use as many AD DS features as possible. When you deploy a new forest, you are prompted to set the forest functional level and then set the domain functional level. You can set the domain functional level to a value that is higher than the forest functional level, but you cannot set the domain functional level to a value that is lower than the forest functional level.
 
-With the end of life of Windows 2003, Windows 2003 domain controllers (DCs) need to be updated to Windows Server 2008, 2008R2, 2012, 2012R2, 2016, or 2019. As a result, any domain controller that runs Windows Server 2003 should be removed from the domain.
+With the end of life of Windows Server 2003, 2008, and 2008 R2, these domain controllers (DCs) need to be updated to Windows Server 2012, 2012 R2, 2016, or 2019. As a result, any domain controller that runs Windows Server 2008 R2 and older should be removed from the domain.
 
-At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](../../storage/dfs-replication/migrate-sysvol-to-dfsr.md) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
+At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](../../storage/dfs-replication/migrate-sysvol-to-dfsr.md) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx). Windows Server 2016 RS1 is the last Windows Server release that includes FRS.
 
 ## Windows Server 2019
 
@@ -110,7 +111,7 @@ Supported Domain Controller Operating System:
 
 * All default Active Directory features, all features from the Windows Server 2008 domain functional level, plus the following features:
    * Authentication mechanism assurance, which packages information about the type of logon method (smart card or user name/password) that is used to authenticate domain users inside each user's Kerberos token. When this feature is enabled in a network environment that has deployed a federated identity management infrastructure, such as Active Directory Federation Services (AD FS), the information in the token can then be extracted whenever a user attempts to access any claims-aware application that has been developed to determine authorization based on a user's logon method.
-   * Automatic SPN management for services running on a particular computer under the context of a Managed Service Account when the name or DNS host name of the machine account changes. For more information about Managed Service Accounts, see [Service Accounts Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkId=180401).
+   * Automatic SPN management for services running on a particular computer under the context of a Managed Service Account when the name or DNS host name of the machine account changes. For more information about Managed Service Accounts, see [Service Accounts Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd548356(v=ws.10)).
 
 ## Windows Server 2008
 
@@ -136,26 +137,27 @@ Supported Domain Controller Operating System:
       > [!NOTE]
       > Beginning with Windows Server 2012 R2, File Replication Service (FRS) is deprecated. A new domain that is created on a domain controller that runs at least Windows Server 2012 R2 must be set to the Windows Server 2008 domain functional level or higher.
 
-  * Domain-based DFS namespaces running in Windows Server 2008 Mode, which includes support for access-based enumeration and increased scalability. Domain-based namespaces in Windows Server 2008 mode also require the forest to use the Windows Server 2003 forest functional level. For more information, see [Choose a Namespace Type](https://go.microsoft.com/fwlink/?LinkId=180400).
+  * Domain-based DFS namespaces running in Windows Server 2008 Mode, which includes support for access-based enumeration and increased scalability. Domain-based namespaces in Windows Server 2008 mode also require the forest to use the Windows Server 2003 forest functional level. For more information, see [Choose a Namespace Type](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770287(v=ws.11)).
   * Advanced Encryption Standard (AES 128 and AES 256) support for the Kerberos protocol. In order for TGTs to be issued using AES, the domain functional level must be Windows Server 2008 or higher and the domain password needs to be changed.
     * For more information, see [Kerberos Enhancements](/previous-versions/windows/it-pro/windows-vista/cc749438(v=ws.10)).
 
       > [!NOTE]
       >Authentication errors may occur on a domain controller after the domain functional level is raised to Windows Server 2008 or higher if the domain controller has already replicated the DFL change but has not yet refreshed the krbtgt password. In this case, a restart of the KDC service on the domain controller will trigger an in-memory refresh of the new krbtgt password and resolve related authentication errors.
 
-  * [Last Interactive Logon](https://go.microsoft.com/fwlink/?LinkId=180387) Information displays the following information:
+  * [Last Interactive Logon](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd446680(v=ws.10)) Information displays the following information:
      * The total number of failed logon attempts at a domain-joined Windows Server 2008 server or a Windows Vista workstation
      * The total number of failed logon attempts after a successful logon to a Windows Server 2008 server or a Windows Vista workstation
      * The time of the last failed logon attempt at a Windows Server 2008 or a Windows Vista workstation
      * The time of the last successful logon attempt at a Windows Server 2008 server or a Windows Vista workstation
-  * Fine-grained password policies make it possible for you to specify password and account lockout policies for users and global security groups in a domain. For more information, see [Step-by-Step Guide for Fine-Grained Password and Account Lockout Policy Configuration](https://go.microsoft.com/fwlink/?LinkID=91477).
+  * Fine-grained password policies make it possible for you to specify password and account lockout policies for users and global security groups in a domain. For more information, see [Step-by-Step Guide for Fine-Grained Password and Account Lockout Policy Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770842(v=ws.10)).
   * Personal Virtual Desktops
-     * To use the added functionality provided by the Personal Virtual Desktop tab in the User Account Properties dialog box in Active Directory Users and Computers, your AD DS schema must be extended for Windows Server 2008 R2 (schema object version = 47). For more information, see [Deploying Personal Virtual Desktops by Using RemoteApp and Desktop Connection Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkId=183552).
+     * To use the added functionality provided by the Personal Virtual Desktop tab in the User Account Properties dialog box in Active Directory Users and Computers, your AD DS schema must be extended for Windows Server 2008 R2 (schema object version = 47). For more information, see [Deploying Personal Virtual Desktops by Using RemoteApp and Desktop Connection Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd941616(v=ws.10)).
 
 ## Windows Server 2003
 
 Supported Domain Controller Operating System:
 
+* Windows Server 2016
 * Windows Server 2012 R2
 * Windows Server 2012
 * Windows Server 2008 R2
@@ -177,7 +179,7 @@ Supported Domain Controller Operating System:
    * The ability to create instances of new group types to support role-based authorization.
       - These types are called application basic groups and LDAP query groups.
    * Deactivation and redefinition of attributes and classes in the schema. The following attributes can be reused: ldapDisplayName, schemaIdGuid, OID, and mapiID.
-   * Domain-based DFS namespaces running in Windows Server 2008 Mode, which includes support for access-based enumeration and increased scalability. For more information, see [Choose a Namespace Type](https://go.microsoft.com/fwlink/?LinkId=180400).
+   * Domain-based DFS namespaces running in Windows Server 2008 Mode, which includes support for access-based enumeration and increased scalability. For more information, see [Choose a Namespace Type](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770287(v=ws.11)).
 
 ### Windows Server 2003 domain functional level features
 

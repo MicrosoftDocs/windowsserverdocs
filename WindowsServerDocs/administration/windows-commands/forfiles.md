@@ -1,11 +1,11 @@
 ---
 title: forfiles
 description: Reference article for forfiles command, which selects and runs a command on a file or set of files.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 43f6b004-446d-4fdd-91c5-5653613524a4
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 05/20/2020
 ---
 
@@ -73,7 +73,7 @@ forfiles /P c:\ /S /M *.bat /C "cmd /c echo @file is a batch file"
 To list all of the directories on drive C, type:
 
 ```
-forfiles /P c:\ /S /M *.* /C "cmd /c if @isdir==TRUE echo @file is a directory"
+forfiles /P c:\ /S /M * /C "cmd /c if @isdir==TRUE echo @file is a directory"
 ```
 
 To list all of the files in the current directory that are at least one year old, type:

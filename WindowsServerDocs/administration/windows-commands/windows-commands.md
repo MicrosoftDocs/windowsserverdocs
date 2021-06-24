@@ -1,7 +1,7 @@
 ---
 title: Windows commands
 description: Reference
-ms.topic: article
+ms.topic: reference
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: jasongerend
 ms.author: jgerend
@@ -40,7 +40,7 @@ PowerShell was designed to extend the capabilities of the Command shell to run P
 For the most robust, up-to-date Windows automation, we recommend using PowerShell instead of Windows Commands or Windows Script Host for Windows automation.
 
 > [!NOTE]
->You can also download and install [PowerShell Core](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), the open source version of PowerShell.
+>You can also download and install [PowerShell Core](/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6&preserve-view=true), the open source version of PowerShell.
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.
@@ -709,7 +709,7 @@ To find information about a specific command, in the following A-Z menu, click t
 - [servermanagercmd](servermanagercmd.md)
 - [serverweroptin](serverweroptin.md)
 - [set environmental variables](set_1.md)
-- [set shadow copy](set_2.md)
+- [set shadow copy](./set.md)
   - [set context](set-context.md)
   - [set id](set-id.md)
   - [setlocal](setlocal.md)
@@ -726,20 +726,20 @@ To find information about a specific command, in the following A-Z menu, click t
 - [simulate restore](simulate-restore.md)
 - [sort](sort.md)
 - [start](start.md)
-- [subcommand set device](subcommand-set-device.md)
-- [subcommand set drivergroup](subcommand-set-drivergroup.md)
-- [subcommand set drivergroupfilter](subcommand-set-drivergroupfilter.md)
-- [subcommand set driverpackage](subcommand-set-driverpackage.md)
-- [subcommand set image](subcommand-set-image.md)
-- [subcommand set imagegroup](subcommand-set-imagegroup.md)
-- [subcommand set server](subcommand-set-server.md)
-- [subcommand set transportserver](subcommand-set-transportserver.md)
-- [subcommand set multicasttransmission](subcommand-start-multicasttransmission.md)
-- [subcommand start namespace](subcommand-start-namespace.md)
-- [subcommand start server](subcommand-start-server.md)
-- [subcommand start transportserver](subcommand-start-transportserver.md)
-- [subcommand stop server](subcommand-stop-server.md)
-- [subcommand stop transportserver](subcommand-stop-transportserver.md)
+- [subcommand set device](./wdsutil-set-device.md)
+- [subcommand set drivergroup](./wdsutil-set-drivergroup.md)
+- [subcommand set drivergroupfilter](./wdsutil-set-drivergroupfilter.md)
+- [subcommand set driverpackage](./wdsutil-set-driverpackage.md)
+- [subcommand set image](./wdsutil-set-image.md)
+- [subcommand set imagegroup](./wdsutil-set-imagegroup.md)
+- [subcommand set server](./wdsutil-set-server.md)
+- [subcommand set transportserver](./wdsutil-set-transportserver.md)
+- [subcommand set multicasttransmission](./wdsutil-start-multicasttransmission.md)
+- [subcommand start namespace](./wdsutil-start-namespace.md)
+- [subcommand start server](./wdsutil-start-server.md)
+- [subcommand start transportserver](./wdsutil-start-transportserver.md)
+- [subcommand stop server](./wdsutil-stop-server.md)
+- [subcommand stop transportserver](./wdsutil-stop-transportserver.md)
 - [subst](subst.md)
 - [sxstrace](sxstrace.md)
 - [sysocmgr](sysocmgr.md)
@@ -764,17 +764,17 @@ To find information about a specific command, in the following A-Z menu, click t
   - [telnet unset](telnet-unset.md)
 - [tftp](tftp.md)
 - [time](time.md)
-- [timeout](timeout_1.md)
-- [title](title_1.md)
+- [timeout](timeout.md)
+- [title](title.md)
 - [tlntadmn](tlntadmn.md)
 - [tpmtool](tpmtool.md)
 - [tpmvscmgr](tpmvscmgr.md)
-- [tracerpt](tracerpt_1.md)
+- [tracerpt](tracerpt.md)
 - [tracert](tracert.md)
 - [tree](tree.md)
 - [tscon](tscon.md)
 - [tsdiscon](tsdiscon.md)
-- [tsecimp](tsecimp_1.md)
+- [tsecimp](tsecimp.md)
 - [tskill](tskill.md)
 - [tsprof](tsprof.md)
 - [type](type.md)
@@ -785,13 +785,13 @@ To find information about a specific command, in the following A-Z menu, click t
 
 - [unexpose](unexpose.md)
 - [uniqueid](uniqueid.md)
-- [unlodctr](unlodctr_1.md)
+- [unlodctr](unlodctr.md)
 
 ### V
 
 - [ver](ver.md)
 - [verifier](verifier.md)
-- [verify](verify_1.md)
+- [verify](verify.md)
 - [vol](vol.md)
 - [vssadmin](vssadmin.md)
   - [vssadmin delete shadows](vssadmin-delete-shadows.md)
@@ -821,7 +821,7 @@ To find information about a specific command, in the following A-Z menu, click t
 - [wdsutil](wdsutil.md)
 - [wecutil](wecutil.md)
 - [wevtutil](wevtutil.md)
-- [where](where_1.md)
+- [where](where.md)
 - [whoami](whoami.md)
 - [winnt](winnt.md)
 - [winnt32](winnt32.md)

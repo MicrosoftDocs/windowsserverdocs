@@ -3,7 +3,7 @@ title: Nano Server Quick Start
 description: Steps to quickly deploy a basic Nano Server on physical or virtual machines
 manager: DonGill
 ms.date: 09/05/2017
-ms.topic: get-started-article
+ms.topic: how-to
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium

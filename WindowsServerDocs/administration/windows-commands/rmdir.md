@@ -1,11 +1,11 @@
 ---
 title: rmdir
 description: Reference article for the rmdir command, which deletes a directory.
-ms.topic: article
+ms.topic: reference
 ms.assetid: e4d7162b-7132-413c-a416-6eb3dc032a26
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
@@ -47,7 +47,7 @@ rmdir [<drive>:]<path> [/s [/q]]
 
     If you receive this error message, you must change to a different directory (not a subdirectory of the current directory), and then try again.
 
-### Examples
+## Examples
 
 To change to the parent directory so you can safely remove the desired directory, type:
 

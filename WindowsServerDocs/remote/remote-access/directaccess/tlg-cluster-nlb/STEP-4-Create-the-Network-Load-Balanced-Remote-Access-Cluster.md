@@ -1,11 +1,12 @@
 ---
 title: STEP 4 Create the Network Load Balanced Remote Access Cluster
-description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB for Windows Server 2016
+description: Learn how to create and test a network load balanced Remote Access cluster.
 manager: brianlic
 ms.topic: article
 ms.assetid: 509eaa08-c49d-448d-a71e-c1c45519ccd5
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # STEP 4 Create the Network Load Balanced Remote Access Cluster
 

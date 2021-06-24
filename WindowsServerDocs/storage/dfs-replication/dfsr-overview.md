@@ -1,10 +1,13 @@
 ---
+description: "Learn more about: DFS Replication overview"
 title: DFS Replication overview
 ms.date: 03/08/2019
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
+ms.topic: article
 ---
+
 # DFS Replication overview
 
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows Server (Semi-Annual Channel)

@@ -10,11 +10,11 @@ ms.date: 08/23/2018
 ---
 # Configure Quality of Service (QoS) for a tenant VM network adapter
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 When you configure QoS for a tenant VM network adapter, you have a choice between Data Center Bridging \(DCB\)or Software Defined Networking \(SDN\) QoS.
 
-1.    **DCB**. You can configure DCB by using the Windows PowerShell NetQoS cmdlets. For an example, see the section "Enable Data Center Bridging"  in the topic [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).
+1.    **DCB**. You can configure DCB by using the Windows PowerShell NetQoS cmdlets. For an example, see the section "Enable Data Center Bridging"  in the topic [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
 
 2.    **SDN QoS**. You can enable SDN QoS by using Network Controller, which can be set to limit bandwidth on a virtual interface to prevent a high-traffic VM from blocking other users.  You can also configure SDN QoS to reserve a specific amount of bandwidth for a VM to ensure that the VM is accessible regardless of the amount of network traffic.
 

@@ -1,13 +1,14 @@
 ---
-title: Vssadmin resize shadowstorage
-description: A description of the vssadmin resize shadowstorage command.
-ms.topic: article
+title: vssadmin resize shadowstorage
+description: A description of the vssadmin resize shadowstorage command, which resizes the maximum amount of storage space that can be used for shadow copy storage.
+ms.topic: reference
 author: JasonGerend
 ms.author: jgerend
 ms.date: 03/05/2020
 ms.localizationpriority: medium
 ---
-# Vssadmin resize shadowstorage
+
+# vssadmin resize shadowstorage
 
 > Applies to: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
@@ -20,27 +21,40 @@ The minimum amount of storage space that can be used for shadow copy storage can
 
 ## Syntax
 
-```cmd
+```
 vssadmin resize shadowstorage /for=<ForVolumeSpec> /on=<OnVolumeSpec> [/maxsize=<MaxSizeSpec>]
 ```
 
 ### Parameters
 
-|Parameter|Description|
-|---|---|
-`/for=<ForVolumeSpec>`  | Specifies the volume for which the maximum amount of storage space is to be resized.
-`/on=<OnVolumeSpec>` | Specifies the storage volume.
-`[/maxsize=<MaxSizeSpec>]` |  Specifies the maximum amount of space that can be used for storing shadow copies. If no value is specified for /maxsize, there is no limit placed on the amount of storage space that can be used.  <br> <br> The MaxSizeSpec value must be 1 MB or greater and must be expressed in one of the following units: KB, MB, GB, TB, PB, or EB. If no unit is specified, MaxSizeSpec uses bytes by default.
+| Parameter | Description |
+|--|--|
+| /for=`<ForVolumeSpec>` | Specifies the volume for which the maximum amount of storage space is to be resized. |
+| /on=`<OnVolumeSpec>` | Specifies the storage volume. |
+| [/maxsize=`<MaxSizeSpec>`] | Specifies the maximum amount of space that can be used for storing shadow copies. If no value is specified for **/maxsize**, there's no limit placed on the amount of storage space that can be used.<p>The **MaxSizeSpec** value must be 1 MB or greater and must be expressed in one of the following units: KB, MB, GB, TB, PB, or EB. If no unit is specified, **MaxSizeSpec** uses bytes by default. |
 
 ## Examples
 
-```cmd
-vssadmin Resize ShadowStorage /For=C: /On=D: /MaxSize=900MB
-vssadmin Resize ShadowStorage /For=C: /On=D: /MaxSize=UNBOUNDED
-vssadmin Resize ShadowStorage /For=C: /On=C: /MaxSize=20%
+To resize shadow copy of volume C on volume D, with a maximum size of 900MB, type:
+
+```
+vssadmin resize shadowstorage /For=C: /On=D: /MaxSize=900MB
+```
+
+To resize shadow copy of volume C on volume D, with no maximum size, type:
+
+```
+vssadmin resize shadowstorage /For=C: /On=D: /MaxSize=UNBOUNDED
+```
+
+To resize shadow copy of volume C by 20%, type:
+
+```
+vssadmin resize shadowstorage /For=C: /On=C: /MaxSize=20%
 ```
 
 ## Additional References
 
-* [Command-line syntax key](./command-line-syntax-key.md)
-* [Vssadmin](vssadmin.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [vssadmin command](vssadmin.md)

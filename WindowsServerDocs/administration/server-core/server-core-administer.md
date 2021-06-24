@@ -3,10 +3,11 @@ title: Administer Server Core
 description: Learn how to administer a Server Core installation of Windows Server
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: lizap
-ms.author: elizapo
+author: pronichkin
+ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 12/18/2018
+ms.topic: how-to
 ---
 # Administer a Server Core server
 
@@ -89,13 +90,13 @@ Run **slmgr.vbs –ipk\<productkey\>**. Then run **slmgr.vbs –ato**. If activa
 
 ### Configure Windows Firewall
 
-You can configure Windows Firewall locally on the Server Core computer using Windows PowerShell cmdlets and scripts. See [NetSecurity](/powershell/module/netsecurity/?view=win10-ps) for the cmdlets you can use to configure Windows Firewall.
+You can configure Windows Firewall locally on the Server Core computer using Windows PowerShell cmdlets and scripts. See [NetSecurity](/powershell/module/netsecurity/) for the cmdlets you can use to configure Windows Firewall.
 
 ### Enable Windows PowerShell remoting
 
 You can enable Windows PowerShell Remoting, in which commands typed in Windows PowerShell on one computer run on another computer. Enable Windows PowerShell Remoting with **Enable-PSRemoting**.
 
-For more information, see [About Remote FAQ](/powershell/module/microsoft.powershell.core/about/about_remote_faq?view=powershell-5.1).
+For more information, see [About Remote FAQ](/powershell/module/microsoft.powershell.core/about/about_remote_faq?view=powershell-5.1&preserve-view=true).
 
 ## Administrative tasks from the command line
 Use the following reference information to perform administrative tasks from the command line.

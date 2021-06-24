@@ -1,11 +1,11 @@
 ---
 title: ftp send
 description: Reference article for the ftp send command, which copies a local file to the remote computer using the current file transfer type.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 000aa80a-60a0-4b51-815f-3237a4f3e0f4
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

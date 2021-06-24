@@ -1,10 +1,12 @@
 ---
+description: "Learn more about: Managing the Host Guardian Service"
 title: Managing the Host Guardian Service
 ms.topic: article
 ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
+ms.date: 12/10/2020
 ---
 
 # Managing the Host Guardian Service
@@ -34,7 +36,7 @@ This also means that the domain and enterprise admins for the two Active Directo
 Anyone who can grant themselves access to more resources poses a security risk.
 
 ### Using Just Enough Administration
-HGS comes with [Just Enough Administration](https://aka.ms/JEAdocs) (JEA) roles built in to help you manage it more securely.
+HGS comes with [Just Enough Administration](/powershell/scripting/learn/remoting/jea/overview) (JEA) roles built in to help you manage it more securely.
 JEA helps by allowing you to delegate admin tasks to non-admin users, meaning the people who manage HGS policies need not actually be admins of the entire machine or domain.
 JEA works by limiting what commands a user can run in a PowerShell session and using a temporary local account behind the scenes (unique for each user session) to run the commands which normally require elevation.
 

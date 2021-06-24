@@ -29,7 +29,7 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
 2. Select Class Library and be sure you are targeting .NET 4.5.
 
-    ![create the provider](media/ad-fs-build-custom-auth-method/Dn783423.71a57ae1-d53d-462b-a846-5b3c02c7d3f2(MSDN.10).jpg "create the provider")
+    ![Screenshot of the New Project dialog box showing the Class Library option selected.](media/ad-fs-build-custom-auth-method/Dn783423.71a57ae1-d53d-462b-a846-5b3c02c7d3f2(MSDN.10).jpg "create the provider")
 
 3. Make a copy of **Microsoft.IdentityServer.Web.dll** from %windir%ADFS on the Windows Server 2012 R2 server where AD FS has been installed and paste it in your Project folder on your development machine.
 
@@ -39,90 +39,220 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
 6. Click **OK** to confirm the new reference:
 
-    ![create the provider](media/ad-fs-build-custom-auth-method/Dn783423.f18df353-9259-4744-b4b6-dd780ce90951(MSDN.10).jpg "create the provider")
+    ![Screenshot of the Reference Manager dialog box showing the Microsoft.IdentityServer.Web.dll selected.](media/ad-fs-build-custom-auth-method/Dn783423.f18df353-9259-4744-b4b6-dd780ce90951(MSDN.10).jpg "create the provider")
 
     You should now be set up to resolve all of the types required for the provider.
 
 7. Add a new class to your project (Right click your project, **Add...Class...**) and give it a name like **MyAdapter**, shown below:
 
-    ![create the provider](media/ad-fs-build-custom-auth-method/Dn783423.6b6a7a8b-9d66-40c7-8a86-a2e3b9e14d09(MSDN.10).jpg "create the provider")
+    ![Screenshot of the Add New Item dialog box with the Class option selected.](media/ad-fs-build-custom-auth-method/Dn783423.6b6a7a8b-9d66-40c7-8a86-a2e3b9e14d09(MSDN.10).jpg "create the provider")
 
 8. In the new file MyAdapter.cs, replace the existing code with the following:
 
-    ```
+    ```csharp
     using System;
-        using System.Collections.Generic;
-        using System.Linq;
-        using System.Text;
-        using System.Threading.Tasks;
-        using System.Globalization;
-        using System.IO;
-        using System.Net;
-        using System.Xml.Serialization;
-        using Microsoft.IdentityServer.Web.Authentication.External;
-        using Claim = System.Security.Claims.Claim;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Globalization;
+    using System.IO;
+    using System.Net;
+    using System.Xml.Serialization;
+    using Microsoft.IdentityServer.Web.Authentication.External;
+    using Claim = System.Security.Claims.Claim;
 
-        namespace MFAadapter
-        {
+    namespace MFAadapter
+    {
         class MyAdapter : IAuthenticationAdapter
         {
-         }
+            public IAuthenticationAdapterMetadata Metadata
+            {
+                //get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
+            }
+
+            public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
+            {
+                //return new instance of IAdapterPresentationForm derived class
+            }
+
+            public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
+            {
+                return true; //its all available for now
+            }
+
+            public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
+            {
+                //this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
+            }
+
+            public void OnAuthenticationPipelineUnload()
+            {
+
+            }
+
+            public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
+            {
+                //return new instance of IAdapterPresentationForm derived class
+            }
+
+            public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
+            {
+                //return new instance of IAdapterPresentationForm derived class
+            }
+
         }
+    }
+    ```
+
+9. We are not ready to build yet... there are two more interfaces to go.
+
+    Add two more classes to your project: one is for the metadata, and the other for the presentation form.  You can add these within the same file as the class above.
+
+    ```csharp
+    class MyMetadata : IAuthenticationAdapterMetadata
+    {
+
+    }
+
+    class MyPresentationForm : IAdapterPresentationForm
+    {
+
+    }
+    ```         
+
+10. Next, you can add the required members for each.First, the metadata (with helpful inline comments)
+
+    ```csharp
+    class MyMetadata : IAuthenticationAdapterMetadata
+    {
+        //Returns the name of the provider that will be shown in the AD FS management UI (not visible to end users)
+        public string AdminName
+        {
+            get { return "My Example MFA Adapter"; }
+        }
+
+        //Returns an array of strings containing URIs indicating the set of authentication methods implemented by the adapter 
+        /// AD FS requires that, if authentication is successful, the method actually employed will be returned by the
+        /// final call to TryEndAuthentication(). If no authentication method is returned, or the method returned is not
+        /// one of the methods listed in this property, the authentication attempt will fail.
+        public virtual string[] AuthenticationMethods 
+        {
+            get { return new[] { "http://example.com/myauthenticationmethod1", "http://example.com/myauthenticationmethod2" }; }
+        }
+
+        /// Returns an array indicating which languages are supported by the provider. AD FS uses this information
+        /// to determine the best language\locale to display to the user.
+        public int[] AvailableLcids
+        {
+            get
+            {
+                return new[] { new CultureInfo("en-us").LCID, new CultureInfo("fr").LCID};
+            }
+        }
+
+        /// Returns a Dictionary containing the set of localized friendly names of the provider, indexed by lcid. 
+        /// These Friendly Names are displayed in the "choice page" offered to the user when there is more than 
+        /// one secondary authentication provider available.
+        public Dictionary<int, string> FriendlyNames
+        {
+            get
+            {
+                Dictionary<int, string> _friendlyNames = new Dictionary<int, string>();
+                _friendlyNames.Add(new CultureInfo("en-us").LCID, "Friendly name of My Example MFA Adapter for end users (en)");
+                _friendlyNames.Add(new CultureInfo("fr").LCID, "Friendly name translated to fr locale");
+                return _friendlyNames;
+            }
+        }
+
+        /// Returns a Dictionary containing the set of localized descriptions (hover over help) of the provider, indexed by lcid. 
+        /// These descriptions are displayed in the "choice page" offered to the user when there is more than one 
+        /// secondary authentication provider available.
+        public Dictionary<int, string> Descriptions
+        {
+            get 
+            {
+                Dictionary<int, string> _descriptions = new Dictionary<int, string>();
+                _descriptions.Add(new CultureInfo("en-us").LCID, "Description of My Example MFA Adapter for end users (en)");
+                _descriptions.Add(new CultureInfo("fr").LCID, "Description translated to fr locale");
+                return _descriptions; 
+            }
+        }
+
+        /// Returns an array indicating the type of claim that the adapter uses to identify the user being authenticated.
+        /// Note that although the property is an array, only the first element is currently used.
+        /// MUST BE ONE OF THE FOLLOWING
+        /// "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
+        /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"
+        /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
+        /// "http://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid"
+        public string[] IdentityClaims
+        {
+            get { return new[] { "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" }; }
+        }
+
+        //All external providers must return a value of "true" for this property.
+        public bool RequiresIdentity
+        {
+            get { return true; }
+        }
+    }
     ```
 
     Now you should be able to F12 (right click – Go To Definition) on IAuthenticationAdapter to see the set of required interface members.
 
     Next, you can do a simple implementation of these.
 
-9. Replace the entire contents of your class with the following:
+11. Replace the entire contents of your class with the following:
 
-    ```
+    ```csharp
     namespace MFAadapter
     {
-    class MyAdapter : IAuthenticationAdapter
-    {
-    public IAuthenticationAdapterMetadata Metadata
-    {
-    //get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
-    }
+        class MyAdapter : IAuthenticationAdapter
+        {
+            public IAuthenticationAdapterMetadata Metadata
+            {
+                //get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
+            }
 
-    public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
-    {
-    //return new instance of IAdapterPresentationForm derived class
-    }
+            public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
+            {
+                //return new instance of IAdapterPresentationForm derived class
+            }
 
-    public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
-    {
-    return true; //its all available for now
-    }
+            public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
+            {
+                return true; //its all available for now
+            }
 
-    public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
-    {
-    //this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
-    }
+            public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
+            {
+                //this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
+            }
 
-    public void OnAuthenticationPipelineUnload()
-    {
-     }
+            public void OnAuthenticationPipelineUnload()
+            {
 
-    public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
-    {
-    //return new instance of IAdapterPresentationForm derived class
-    }
+            }
 
-    public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
-    {
-    //return new instance of IAdapterPresentationForm derived class
+            public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
+            {
+                //return new instance of IAdapterPresentationForm derived class
+            }
+
+            public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
+            {
+                //return new instance of IAdapterPresentationForm derived class
             }
         }
     }
     ```
 
-1. We are not ready to build yet... there are two more interfaces to go.
+12. We are not ready to build yet... there are two more interfaces to go.
 
     Add two more classes to your project: one is for the metadata, and the other for the presentation form. You can add these within the same file as the class above.
 
-    ```
+    ```csharp
     class MyMetadata : IAuthenticationAdapterMetadata
     {
     }
@@ -131,204 +261,203 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
     }
     ```
 
-2. Next, you can add the required members for each.First, the metadata (with helpful inline comments)
+13. Next, you can add the required members for each.First, the metadata (with helpful inline comments)
 
-    ```
+    ```csharp
     class MyMetadata : IAuthenticationAdapterMetadata
     {
-    //Returns the name of the provider that will be shown in the AD FS management UI (not visible to end users)
-    public string AdminName
-    {
-    get { return "My Example MFA Adapter"; }
-    }
+        //Returns the name of the provider that will be shown in the AD FS management UI (not visible to end users)
+        public string AdminName
+        {
+            get { return "My Example MFA Adapter"; }
+        }
 
-    //Returns an array of strings containing URIs indicating the set of authentication methods implemented by the adapter
-    /// AD FS requires that, if authentication is successful, the method actually employed will be returned by the
-    /// final call to TryEndAuthentication(). If no authentication method is returned, or the method returned is not
-    /// one of the methods listed in this property, the authentication attempt will fail.
-    public virtual string[] AuthenticationMethods
-    {
-    get { return new[] { "http://example.com/myauthenticationmethod1", "http://example.com/myauthenticationmethod2" }; }
-    }
+        //Returns an array of strings containing URIs indicating the set of authentication methods implemented by the adapter
+        /// AD FS requires that, if authentication is successful, the method actually employed will be returned by the
+        /// final call to TryEndAuthentication(). If no authentication method is returned, or the method returned is not
+        /// one of the methods listed in this property, the authentication attempt will fail.
+        public virtual string[] AuthenticationMethods
+        {
+            get { return new[] { "http://example.com/myauthenticationmethod1", "http://example.com/myauthenticationmethod2" }; }
+        }
 
-    /// Returns an array indicating which languages are supported by the provider. AD FS uses this information
-    /// to determine the best languagelocale to display to the user.
-    public int[] AvailableLcids
-    {
-    get
-    {
-    return new[] { new CultureInfo("en-us").LCID, new CultureInfo("fr").LCID};
-    }
-    }
+        /// Returns an array indicating which languages are supported by the provider. AD FS uses this information
+        /// to determine the best languagelocale to display to the user.
+        public int[] AvailableLcids
+        {
+            get
+            {
+                return new[] { new CultureInfo("en-us").LCID, new CultureInfo("fr").LCID};
+            }
+        }
 
-    /// Returns a Dictionary containing the set of localized friendly names of the provider, indexed by lcid.
-    /// These Friendly Names are displayed in the "choice page" offered to the user when there is more than
-    /// one secondary authentication provider available.
-    public Dictionary<int, string> FriendlyNames
-    {
-    get
-    {
-    Dictionary<int, string> _friendlyNames = new Dictionary<int, string>();
-    _friendlyNames.Add(new CultureInfo("en-us").LCID, "Friendly name of My Example MFA Adapter for end users (en)");
-    _friendlyNames.Add(new CultureInfo("fr").LCID, "Friendly name translated to fr locale");
-    return _friendlyNames;
-    }
-    }
+        /// Returns a Dictionary containing the set of localized friendly names of the provider, indexed by lcid.
+        /// These Friendly Names are displayed in the "choice page" offered to the user when there is more than
+        /// one secondary authentication provider available.
+        public Dictionary<int, string> FriendlyNames
+        {
+            get
+            {
+                Dictionary<int, string> _friendlyNames = new Dictionary<int, string>();
+                _friendlyNames.Add(new CultureInfo("en-us").LCID, "Friendly name of My Example MFA Adapter for end users (en)");
+                _friendlyNames.Add(new CultureInfo("fr").LCID, "Friendly name translated to fr locale");
+                return _friendlyNames;
+            }
+        }
 
-    /// Returns a Dictionary containing the set of localized descriptions (hover over help) of the provider, indexed by lcid.
-    /// These descriptions are displayed in the "choice page" offered to the user when there is more than one
-    /// secondary authentication provider available.
-    public Dictionary<int, string> Descriptions
-    {
-    get
-    {
-    Dictionary<int, string> _descriptions = new Dictionary<int, string>();
-    _descriptions.Add(new CultureInfo("en-us").LCID, "Description of My Example MFA Adapter for end users (en)");
-    _descriptions.Add(new CultureInfo("fr").LCID, "Description translated to fr locale");
-    return _descriptions;
-    }
-    }
+        /// Returns a Dictionary containing the set of localized descriptions (hover over help) of the provider, indexed by lcid.
+        /// These descriptions are displayed in the "choice page" offered to the user when there is more than one
+        /// secondary authentication provider available.
+        public Dictionary<int, string> Descriptions
+        {
+            get
+            {
+                Dictionary<int, string> _descriptions = new Dictionary<int, string>();
+                _descriptions.Add(new CultureInfo("en-us").LCID, "Description of My Example MFA Adapter for end users (en)");
+                _descriptions.Add(new CultureInfo("fr").LCID, "Description translated to fr locale");
+                return _descriptions;
+            }
+        }
 
-    /// Returns an array indicating the type of claim that the adapter uses to identify the user being authenticated.
-    /// Note that although the property is an array, only the first element is currently used.
-    /// MUST BE ONE OF THE FOLLOWING
-    /// "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
-    /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"
-    /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
-    /// "https://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid"
-    public string[] IdentityClaims
-    {
-    get { return new[] { "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" }; }
-    }
+        /// Returns an array indicating the type of claim that the adapter uses to identify the user being authenticated.
+        /// Note that although the property is an array, only the first element is currently used.
+        /// MUST BE ONE OF THE FOLLOWING
+        /// "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
+        /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"
+        /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
+        /// "https://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid"
+        public string[] IdentityClaims
+        {
+            get { return new[] { "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" }; }
+        }
 
-    //All external providers must return a value of "true" for this property.
-    public bool RequiresIdentity
-    {
-    get { return true; }
-    }
+        //All external providers must return a value of "true" for this property.
+        public bool RequiresIdentity
+        {
+            get { return true; }
+        }
     }
     ```
 
     Next, the presentation form:
 
-    ```
+    ```csharp
     class MyPresentationForm : IAdapterPresentationForm
     {
-    /// Returns the HTML Form fragment that contains the adapter user interface. This data will be included in the web page that is presented
-    /// to the cient.
-    public string GetFormHtml(int lcid)
-    {
-    string htmlTemplate = Resources.FormPageHtml; //todo we will implement this
-    return htmlTemplate;
-    }
+        /// Returns the HTML Form fragment that contains the adapter user interface. This data will be included in the web page that is presented
+        /// to the cient.
+        public string GetFormHtml(int lcid)
+        {
+            string htmlTemplate = Resources.FormPageHtml; //todo we will implement this
+            return htmlTemplate;
+        }
 
-    /// Return any external resources, ie references to libraries etc., that should be included in
-    /// the HEAD section of the presentation form html.
-    public string GetFormPreRenderHtml(int lcid)
-    {
-    return null;
-    }
+        /// Return any external resources, ie references to libraries etc., that should be included in
+        /// the HEAD section of the presentation form html.
+        public string GetFormPreRenderHtml(int lcid)
+        {
+            return null;
+        }
 
-    //returns the title string for the web page which presents the HTML form content to the end user
-    public string GetPageTitle(int lcid)
-    {
-    return "MFA Adapter";
+        //returns the title string for the web page which presents the HTML form content to the end user
+        public string GetPageTitle(int lcid)
+        {
+            return "MFA Adapter";
+        }
     }
     ```
 
-3.  Note the ‘todo' for the **Resources.FormPageHtml** element above.
+14. Note the 'todo' for the **Resources.FormPageHtml** element above. You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class. To do this, add the following to your existing IAuthenticationAdapter implementation:
 
-    You can fix it in a minute, but first let's add the final required return statements, based on the newly implemented types, to your initial MyAdapter class. To do this, add the items in *Italic* below to your existing IAuthenticationAdapter implementation:
-
-    ```
+    ```csharp
     class MyAdapter : IAuthenticationAdapter
     {
-    public IAuthenticationAdapterMetadata Metadata
-    {
-    //get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
-    get { return new MyMetadata(); }
-    }
+        public IAuthenticationAdapterMetadata Metadata
+        {
+            //get { return new <instance of IAuthenticationAdapterMetadata derived class>; }
+            get { return new MyMetadata(); }
+        }
 
-    public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
-    {
-    //return new instance of IAdapterPresentationForm derived class
-    return new MyPresentationForm();
-    }
+        public IAdapterPresentation BeginAuthentication(Claim identityClaim, HttpListenerRequest request, IAuthenticationContext authContext)
+        {
+            //return new instance of IAdapterPresentationForm derived class
+            return new MyPresentationForm();
+        }
 
-    public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
-    {
-    return true; //its all available for now
-    }
+        public bool IsAvailableForUser(Claim identityClaim, IAuthenticationContext authContext)
+        {
+            return true; //its all available for now
+        }
 
-    public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
-    {
-    //this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
+        public void OnAuthenticationPipelineLoad(IAuthenticationMethodConfigData configData)
+        {
+            //this is where AD FS passes us the config data, if such data was supplied at registration of the adapter
+        }
 
-    }
+        public void OnAuthenticationPipelineUnload()
+        {
 
-    public void OnAuthenticationPipelineUnload()
-    {
+        }
 
-    }
+        public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
+        {
+            //return new instance of IAdapterPresentationForm derived class
+            return new MyPresentationForm();
+        }
 
-    public IAdapterPresentation OnError(HttpListenerRequest request, ExternalAuthenticationException ex)
-    {
-    //return new instance of IAdapterPresentationForm derived class
-        return new MyPresentationForm();
-    }
-
-    public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
-    {
-    //return new instance of IAdapterPresentationForm derived class
-    outgoingClaims = new Claim[0];
-    return new MyPresentationForm();
-    }
+        public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
+        {
+            //return new instance of IAdapterPresentationForm derived class
+            outgoingClaims = new Claim[0];
+            return new MyPresentationForm();
+        }
 
     }
     ```
 
-13. Now for the resource file containing the html fragment. Create a new text file in your project folder with the following contents:
+15. Now for the resource file containing the html fragment. Create a new text file in your project folder with the following contents:
 
-    ```
+    ```html
     <div id="loginArea">
-    <form method="post" id="loginForm" >
-    <!-- These inputs are required by the presentation framework. Do not modify or remove -->
-    <input id="authMethod" type="hidden" name="AuthMethod" value="%AuthMethod%"/>
-    <input id="context" type="hidden" name="Context" value="%Context%"/>
-    <!-- End inputs are required by the presentation framework. -->
-    <p id="pageIntroductionText">This content is provided by the MFA sample adapter. Challenge inputs should be presented below.</p>
-    <label for="challengeQuestionInput" class="block">Question text</label>
-    <input id="challengeQuestionInput" name="ChallengeQuestionAnswer" type="text" value="" class="text" placeholder="Answer placeholder" />
-    <div id="submissionArea" class="submitMargin">
-    <input id="submitButton" type="submit" name="Submit" value="Submit" onclick="return AuthPage.submitAnswer()"/>
+        <form method="post" id="loginForm" >
+            <!-- These inputs are required by the presentation framework. Do not modify or remove -->
+            <input id="authMethod" type="hidden" name="AuthMethod" value="%AuthMethod%" />
+            <input id="context" type="hidden" name="Context" value="%Context%" />
+            <!-- End inputs are required by the presentation framework. -->
+            <p id="pageIntroductionText">This content is provided by the MFA sample adapter. Challenge inputs should be presented below.</p>
+            <label for="challengeQuestionInput" class="block">Question text</label>
+            <input id="challengeQuestionInput" name="ChallengeQuestionAnswer" type="text" value="" class="text" placeholder="Answer placeholder" />
+            <div id="submissionArea" class="submitMargin">
+                <input id="submitButton" type="submit" name="Submit" value="Submit" onclick="return AuthPage.submitAnswer()"/>
+            </div>
+        </form>
+        <div id="intro" class="groupMargin">
+            <p id="supportEmail">Support information</p>
+        </div>
+        <script type="text/javascript" language="JavaScript">
+            //<![CDATA[
+            function AuthPage() { }
+            AuthPage.submitAnswer = function () { return true; };
+            //]]>
+        </script>
     </div>
-    </form>
-    <div id="intro" class="groupMargin">
-    <p id="supportEmail">Support information</p>
-    </div>
-    <script type="text/javascript" language="JavaScript">
-    //<![CDATA[
-    function AuthPage() { }
-    AuthPage.submitAnswer = function () { return true; };
-    //]]>
-    </script></div>
     ```
 
-14. Then, select **Project->Add Component... Resources** file and name the file **Resources**, and click **Add:**
+16. Then, select **Project-\>Add Component... Resources** file and name the file **Resources**, and click **Add:**
 
-   ![create the provider](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "create the provider")
+    ![Screenshot of the Add New Item dialog box showing Resource File selected.](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "create the provider")
 
-15. Then, within the **Resources.resx** file, choose **Add Resource...Add existing file**. Navigate to the text file (containing the html fragment) that you saved above.
+17. Then, within the **Resources.resx** file, choose **Add Resource...Add existing file**. Navigate to the text file (containing the html fragment) that you saved above.
 
-   Ensure your GetFormHtml code resolves the name of the new resource correctly by the resources file (.resx file) name prefix followed by the name of the resource itself:
+    Ensure your GetFormHtml code resolves the name of the new resource correctly by the resources file (.resx file) name prefix followed by the name of the resource itself:
 
-```
+    ```csharp
     public string GetFormHtml(int lcid)
     {
-    string htmlTemplate = Resources.MfaFormHtml; //Resxfilename.resourcename
-    return htmlTemplate;
+        string htmlTemplate = Resources.MfaFormHtml; //Resxfilename.resourcename
+        return htmlTemplate;
     }
-```
+    ```
 
    You should now be able to build.
 
@@ -370,7 +499,6 @@ Copy files and add to GAC.
 
     To view the resulting entry in the GAC:`C:>.gacutil.exe /l <yourassemblyname>`
 
-6.
 
 ### Register your provider in AD FS
 
@@ -441,16 +569,15 @@ Once the above pre-requisites are met, open a Windows PowerShell command window 
 2. Next, configure global or relying-party-specific rules to trigger MFA:
 
    Example 1: to create global rule to require MFA for External requests:
-
+   
    ```powershell
-   Set-AdfsAdditionalAuthenticationRule –AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );
+   Set-AdfsAdditionalAuthenticationRule –AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );'
    ```
-
    Example 2: to create MFA rules to require MFA for external requests to a specific relying party. (Note that individual providers cannot be connected to individual relying parties in AD FS in Windows Server 2012 R2).
 
     ```powershell
     $rp = Get-AdfsRelyingPartyTrust –Name <Relying Party Name>
-    Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );
+    Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );'
     ```
 
 ### Authenticate with MFA using your adapter
@@ -465,7 +592,7 @@ Finally, perform the steps below to test your adapter:
 
 2. Ensure **Forms Authentication** is the only option checked for both the Extranet and the Intranet authentication method. Click **OK**.
 
-3. Open the IDP initiated sign-on html page (https://<fsname>/adfs/ls/idpinitiatedsignon.htm) and sign in as a valid AD user in your test environment.
+3. Open the IDP initiated sign-on html page (https://\<fsname\>/adfs/ls/idpinitiatedsignon.htm) and sign in as a valid AD user in your test environment.
 
 4. Enter credentials for primary authentication.
 
@@ -473,11 +600,11 @@ Finally, perform the steps below to test your adapter:
 
     If you have more than one adapter configured, you will see the MFA choice page with your friendly name from above.
 
-    ![authenticate with adapter](media/ad-fs-build-custom-auth-method/Dn783423.c98d2712-cbd3-4cb9-ac03-2838b81c4f63(MSDN.10).jpg "authenticate with adapter")
+    ![Screenshot of the the M F A forms page with example challenge questions.](media/ad-fs-build-custom-auth-method/Dn783423.c98d2712-cbd3-4cb9-ac03-2838b81c4f63(MSDN.10).jpg "authenticate with adapter")
 
-    ![authenticate with adapter](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "authenticate with adapter")
+    ![Screenshot of the the M F A choice page.](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "authenticate with adapter")
 
-You now have a working implementation of the interface and you have the knowledge of how the model works. You can trym as an extra example to set break points in the BeginAuthentication as well as the TryEndAuthentication. Notice how BeginAuthentication is executed when the user first enters the MFA form, whereas TryEndAuthentication is triggered at each Submit of the form.
+You now have a working implementation of the interface and you have the knowledge of how the model works. You can try as an extra example to set break points in the BeginAuthentication as well as the TryEndAuthentication. Notice how BeginAuthentication is executed when the user first enters the MFA form, whereas TryEndAuthentication is triggered at each Submit of the form.
 
 ## Update the adapter for successful authentication
 
@@ -487,58 +614,57 @@ By completing the procedures above, you created a basic adapter implementation a
 
 Recall your TryEndAuthentication implementation:
 
-```
+```csharp
 public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
 {
-//return new instance of IAdapterPresentationForm derived class
-outgoingClaims = new Claim[0];
-return new MyPresentationForm();
+    //return new instance of IAdapterPresentationForm derived class
+    outgoingClaims = new Claim[0];
+    return new MyPresentationForm();
 }
 ```
 
 Let's update it so it doesn't always return MyPresentationForm(). For this you can create one simple utility method within your class:
 
-```
+```csharp
 static bool ValidateProofData(IProofData proofData, IAuthenticationContext authContext)
 {
-if (proofData == null || proofData.Properties == null || !proofData.Properties.ContainsKey("ChallengeQuestionAnswer"))
-{
-throw new ExternalAuthenticationException("Error - no answer found", authContext);
-}
+    if (proofData == null || proofData.Properties == null || !proofData.Properties.ContainsKey("ChallengeQuestionAnswer"))
+    {
+        throw new ExternalAuthenticationException("Error - no answer found", authContext);
+    }
 
-if ((string)proofData.Properties["ChallengeQuestionAnswer"] == "adfabric")
-{
-return true;
-}
-else
-{
-return false;
-}
+    if ((string)proofData.Properties["ChallengeQuestionAnswer"] == "adfabric")
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 ```
 
 Then, update TryEndAuthentication as below:
 
-```
+```csharp
 public IAdapterPresentation TryEndAuthentication(IAuthenticationContext authContext, IProofData proofData, HttpListenerRequest request, out Claim[] outgoingClaims)
 {
-outgoingClaims = new Claim[0];
-if (ValidateProofData(proofData, authContext))
-{
-//authn complete - return authn method
-outgoingClaims = new[]
-{
-// Return the required authentication method claim, indicating the particulate authentication method used.
-new Claim( "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod",
-"http://example.com/myauthenticationmethod1" )
-};
-return null;
-}
-else
-{
-//authentication not complete - return new instance of IAdapterPresentationForm derived class
-return new MyPresentationForm();
-}
+    outgoingClaims = new Claim[0];
+    if (ValidateProofData(proofData, authContext))
+    {
+        //authn complete - return authn method
+        outgoingClaims = new[]
+        {
+            // Return the required authentication method claim, indicating the particulate authentication method used.
+            new Claim( "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", "http://example.com/myauthenticationmethod1" )
+        };
+        return null;
+    }
+    else
+    {
+        //authentication not complete - return new instance of IAdapterPresentationForm derived class
+        return new MyPresentationForm();
+    }
 }
 ```
 
@@ -614,7 +740,7 @@ Finally, perform the steps below to test your adapter:
 
 2. Ensure **Forms Authentication** is the only option checked for both the **Extranet** and the **Intranet** authentication method. Click **OK**.
 
-3. Open the IDP initiated sign-on html page (https://<fsname>/adfs/ls/idpinitiatedsignon.htm) and sign in as a valid AD user in your test environment.
+3. Open the IDP initiated sign-on html page (https://\<fsname\>/adfs/ls/idpinitiatedsignon.htm) and sign in as a valid AD user in your test environment.
 
 4. Enter the credentials for primary authentication.
 
@@ -622,11 +748,11 @@ Finally, perform the steps below to test your adapter:
 
     1. If you have more than one adapter configured, you will see the MFA choice page with your friendly name.
 
-You should see a successful sign-in when entering “adfabric” at the MFA authentication page.
+You should see a successful sign-in when entering _adfabric_ at the MFA authentication page.
 
-![sign in with adapter](media/ad-fs-build-custom-auth-method/Dn783423.630d8a91-3bfe-4cba-8acf-03eae21530ee(MSDN.10).jpg "sign in with adapter")
+![Screenshot of the M F A forms page with example challenge text.](media/ad-fs-build-custom-auth-method/Dn783423.630d8a91-3bfe-4cba-8acf-03eae21530ee(MSDN.10).jpg "sign in with adapter")
 
-![sign in with adapter](media/ad-fs-build-custom-auth-method/Dn783423.c340fa73-f70f-4870-b8dd-07900fea4469(MSDN.10).jpg "sign in with adapter")
+![Screenshot of the M F A successful sign in page.](media/ad-fs-build-custom-auth-method/Dn783423.c340fa73-f70f-4870-b8dd-07900fea4469(MSDN.10).jpg "sign in with adapter")
 
 ## See Also
 

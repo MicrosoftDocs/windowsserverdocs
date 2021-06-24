@@ -1,11 +1,11 @@
 ---
 title: query user
 description: Reference article for the query user command, which displays information about user sessions on a Remote Desktop Session Host server.
-ms.topic: article
+ms.topic: reference
 ms.assetid: a670fb78-c055-464a-b61d-3a85632c52c5
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

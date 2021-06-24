@@ -1,11 +1,11 @@
 ---
 title: How User Account Control Works
-description: Windows Server Security
+description: Learn about User Account Control (UAC) and how it helps prevent malicious programs from damaging a computer and helps organizations deploy a better-managed desktop.
 ms.topic: article
 ms.assetid: da83ddb2-6182-417c-aa8e-0b47b2e17d13
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/12/2016
 ---
 # How User Account Control Works
@@ -44,7 +44,7 @@ With UAC enabled, Windows Server 2012 prompts for consent or prompts for credent
 
 **The consent prompt**
 
-The consent prompt is presented when a user attempts to perform a task that requires a user's administrative access token. The following is a screen shot of the UAC consent prompt.
+The consent prompt is presented when a user attempts to perform a task that requires a user's administrative access token. The following is a screenshot of the UAC consent prompt.
 
 ![Screen shot of the UAC consent prompt](../media/How-User-Account-Control-Works/UACConsentPrompt.gif)
 
@@ -52,7 +52,7 @@ The consent prompt is presented when a user attempts to perform a task that requ
 
 The credential prompt is presented when a standard user attempts to perform a task that requires a user's administrative access token. This standard user default prompt behavior can be configured by using the Local Security Policy snap-in (Secpol.msc) or Group Policy. Administrators can also be required to provide their credentials by setting the User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode policy setting value to Prompt for credentials.
 
-The following screen shot is an example of the UAC credential prompt.
+The following screenshot is an example of the UAC credential prompt.
 
 ![Screen shot showing an example of the UAC credential prompt](../media/How-User-Account-Control-Works/UACCredentialPrompt.gif)
 
@@ -72,7 +72,7 @@ The elevation prompt color-coding is as follows:
 
 **Shield icon**
 
-Some Control Panel items, such as **Date and Time Properties**, contain a combination of administrator and standard user operations. Standard users can view the clock and change the time zone, but a full administrator access token is required to change the local system time. The following is a screen shot of the **Date and Time Properties** Control Panel item.
+Some Control Panel items, such as **Date and Time Properties**, contain a combination of administrator and standard user operations. Standard users can view the clock and change the time zone, but a full administrator access token is required to change the local system time. The following is a screenshot of the **Date and Time Properties** Control Panel item.
 
 ![Screen shot showing the **Date and Time Properties** Control Panel item](../media/How-User-Account-Control-Works/UACShieldIcon.gif)
 

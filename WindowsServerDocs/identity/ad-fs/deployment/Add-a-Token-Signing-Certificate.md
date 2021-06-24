@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Add a Token-Signing Certificate"
 ms.assetid: bbb84ea6-7e31-4442-85ab-a9447e7c19e8
 title: Add a Token-Signing Certificate
 author: billmath
@@ -18,7 +19,7 @@ Federation servers in Active Directory Federation Services \(AD FS\) require t
 
 The token\-signing certificate should chain to a trusted root in the Federation Service. You can use the following procedure to add the token\-signing certificate to the AD FS Management snap\-in from a file that you have exported.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).
 
 ### To add a token\-signing certificate
 
@@ -34,4 +35,3 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)
 
 [Certificate Requirements for Federation Servers](../design/certificate-requirements-for-federation-servers.md)
-

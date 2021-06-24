@@ -1,18 +1,17 @@
 ---
 title: Configure virtual machines running Windows Vista with 1 or 2 virtual processors
-description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+description: Learn what to do when a virtual machine running Windows Vista is configured with more than 2 virtual processors.
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: e562bce3-fd68-42c9-821c-12022ae4746c
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Configure virtual machines running Windows Vista with 1 or 2 virtual processors
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -48,6 +47,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 4.  In the navigation pane, click **Processor**.
 
 5.  On the **Processor** page, set the number of processors to **1** or **2** and then click **OK**.
-
-
-

@@ -1,11 +1,11 @@
 ---
 title: rename
 description: Reference article for the rename command, which renames a file or directory.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7f2ea658-0fa9-4015-8031-22c2b0089231
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

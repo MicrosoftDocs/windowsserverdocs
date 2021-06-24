@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)"
 ms.assetid: ee008835-7d3b-4977-adcb-7084c40e5918
 title: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
 author: billmath
@@ -27,7 +28,7 @@ You can set retention periods for folders and put files on legal hold by using F
 -   [Step 4: Classify a file manually](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md#BKMK_Step4)
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](/previous-versions//bb648607(v=vs.85)).
 
 ## Prerequisites
 The steps in this topic assume you have a SMTP server configured for file expiration notifications.
@@ -182,5 +183,3 @@ In this step, we manually classify a file to be on legal hold. The parent folder
 -   [Plan for Retention of Information on File Servers](assetId:///edf13190-7077-455a-ac01-f534064a9e0c)
 
 -   [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md)
-
-

@@ -1,12 +1,13 @@
 ---
 title: Storage Spaces Direct troubleshooting
 description: Learn how to troubleshoot your Storage Spaces Direct deployment.
-ms.author:
+ms.author: kaushika
 ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
 ---
+
 # Troubleshoot Storage Spaces Direct
 
 > Applies to: Windows Server 2019, Windows Server 2016
@@ -410,6 +411,7 @@ In a Windows Server 2016 Storage Spaces Direct cluster, you might see the Health
 "Removing from Pool" is an intent set when **Remove-PhysicalDisk** is called but stored in Health to maintain state and allow recovery if the remove operation fails. You can manually change the OperationalStatus to Healthy with one of the following methods:
 
 - Remove the physical disk from the pool, and then add it back.
+- Import-Module Clear-PhysicalDiskHealthData.ps1
 - Run the [Clear-PhysicalDiskHealthData.ps1 script](https://go.microsoft.com/fwlink/?linkid=2034205) to clear the intent. (Available for download as a .TXT file. You'll need to save it as a .PS1 file before you can run it.)
 
 Here are some examples showing how to run the script:

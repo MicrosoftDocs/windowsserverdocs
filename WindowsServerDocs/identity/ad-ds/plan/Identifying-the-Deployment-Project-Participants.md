@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Identifying the Deployment Project Participants"
 ms.assetid: 50bd2566-e03c-4884-b5c4-895c8aab80aa
 title: Identifying the Deployment Project Participants
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

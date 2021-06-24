@@ -5,7 +5,7 @@ manager: dmoss
 ms.author: toklima
 author: toklima
 ms.assetid: f2eefaaf-2817-4ac7-abac-d2b65fa971dc
-ms.topic: article
+ms.topic: reference
 ms.date: 10/16/2017
 ---
 

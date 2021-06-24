@@ -1,11 +1,12 @@
 ---
 title: DNS Policies Overview
-description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
+description: Learn how to use DNS Policy for Geo-Location based traffic management, intelligent DNS responses based on the time of day, to manage a single DNS server configured for split\-brain deployment, applying filters on DNS queries, and more.
 manager: brianlic
 ms.topic: article
 ms.assetid: 566bc270-81c7-48c3-a904-3cba942ad463
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # DNS Policies Overview
 

@@ -1,12 +1,12 @@
 ---
 title: "Additional Customizations"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about additional customizations you can can make to your image of Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 65a195d5-0098-4c3c-b4ba-07f7319c8f1e
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Additional Customizations
@@ -41,7 +41,7 @@ You can make the following additional customizations to create and customize an 
 
 -   [Add Microsoft Online Service Partner Agreement Partner-of-Record Information](../install/Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md)
 
--   [Replace O365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement](../install/Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)
+-   [Replace Microsoft 365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement](../install/Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)
 
 -   [Create a Server Recovery DVD for Remotely Administered Servers](../install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md)
 

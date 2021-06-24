@@ -1,12 +1,12 @@
 ---
 title: "Manage System Health in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to view and respond to all system health alerts in your network by using the Dashboard.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 3043f83b-389c-4f37-a1ff-85afe99314fa
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Manage System Health in Windows Server Essentials
@@ -216,17 +216,17 @@ manager: dongill
 
 -   License Error: Active Directory Domain Services.
 
--   Your Office 365 subscription has expired.
+-   Your Microsoft 365 subscription has expired.
 
--   Office 365 authentication did not succeed.
+-   Microsoft 365 authentication did not succeed.
 
 -   The password policy is not correct.
 
--   The Password Sync Service cannot synchronize a user password with Office 365.
+-   The Password Sync Service cannot synchronize a user password with Microsoft 365.
 
 -   Change your Windows password.
 
--   Your Office 365 password is not the same as your Windows password.
+-   Your Microsoft 365 password is not the same as your Windows password.
 
 -   Cannot connect to Exchange Server.
 
@@ -340,7 +340,7 @@ manager: dongill
 
 6.  In **Customize Health Report Settings**, for **Automatically send the health report to the following email recipients:**, type the email addresses of the persons that you would like to receive Health Reports by email. Ensure that you separate each email address with a semicolon (;).
 
-7.  To verify that you have configured your SMTP server settings correctly to send health reports via email, from the Helath Report tab on the Dashboard, select a report, and click **Email the health report** from the task pane.
+7.  To verify that you have configured your SMTP server settings correctly to send health reports via email, from the Health Report tab on the Dashboard, select a report, and click **Email the health report** from the task pane.
 
 ##  <a name="BKMK_Potential"></a> Potential computer alerts
  This section discusses understanding and managing alerts that are specific to your computer that is connected to the server and that appear in the Launchpad of your computer.
@@ -359,7 +359,7 @@ manager: dongill
 |The **File History** agent on the server is not properly configured to run on this computer.|File History backups cannot be created.|
 |One or more services are not running.||
 |Change your Windows password.||
-|Your Microsoft Office 365 password is not the same as your Windows password.||
+|Your Microsoft Microsoft 365 password is not the same as your Windows password.||
 
 ###  <a name="BKMK_Protect"></a> To protect your computer
 

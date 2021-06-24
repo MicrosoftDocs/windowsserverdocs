@@ -1,6 +1,6 @@
 ---
 title: Performance Tuning Network Adapters
-description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
+description: Learn how to tune the performance network adapters for computers that are running Windows Server 2016 and later versions.
 audience: Admin
   - CI ID 111485
   - CSSTroubleshoot
@@ -216,8 +216,8 @@ Set-NetTCPSetting -AutoTuningLevelLocal <Value>
 
 For more information about these cmdlets, see the following articles:
 
-- [Get-NetTCPSetting](/powershell/module/nettcpip/get-nettcpsetting?view=win10-ps)
-- [Set-NetTCPSetting](/powershell/module/nettcpip/set-nettcpsetting?view=win10-ps)
+- [Get-NetTCPSetting](/powershell/module/nettcpip/get-nettcpsetting)
+- [Set-NetTCPSetting](/powershell/module/nettcpip/set-nettcpsetting)
 
 #### Autotuning levels
 

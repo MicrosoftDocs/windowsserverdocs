@@ -1,11 +1,11 @@
 ---
 title: ksetup addhosttorealmmap
 description: Reference article for the ksetup addhosttorealmmap command, which adds a service principal name (SPN) mapping between the stated host and the realm.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 237742d5-fa68-466c-b97e-636f489248ea
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

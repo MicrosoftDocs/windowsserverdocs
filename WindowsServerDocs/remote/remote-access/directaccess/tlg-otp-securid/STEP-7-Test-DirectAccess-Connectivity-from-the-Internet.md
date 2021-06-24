@@ -1,11 +1,12 @@
 ---
 title: STEP 7 Test DirectAccess Connectivity from the Internet
-description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID for Windows Server 2016
+description: Learn how to start to test connectivity from the internet.
 manager: brianlic
 ms.topic: article
 ms.assetid: ed2a1616-30c6-482a-9a02-4a5023621f58
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # STEP 7 Test DirectAccess Connectivity from the Internet
 

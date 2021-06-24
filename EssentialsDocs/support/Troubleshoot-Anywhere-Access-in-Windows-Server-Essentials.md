@@ -1,12 +1,12 @@
 ---
 title: "Troubleshoot Anywhere Access in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to use the Repair Anywhere Access wizard in Windows Server Essentials to troubleshoot issues preventing network users from accessing server resources.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 68f2b05c-09eb-4cba-8db4-a91353b513c6
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Troubleshoot Anywhere Access in Windows Server Essentials

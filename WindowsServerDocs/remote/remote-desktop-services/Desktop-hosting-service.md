@@ -1,11 +1,11 @@
 ---
-title: Desktop hosting service
-description: Describes the components of a desktop hosting service.
+title: Desktop hosting service 
+description: Learn about the desktop hosting service's components in Windows Server.
 ms.author: helohr
 ms.date: 07/06/2018
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ---
 # Desktop hosting service
 
@@ -49,7 +49,7 @@ There are multiple ways to deploy an SQL database:
 For more information about how to set up a highly-available SQL database infrastructure, see the following articles:
 
 * [What is the Azure SQL Database service?](/azure/sql-database/sql-database-technical-overview)
-* [Creation and configuration of availability groups (SQL Server)](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-2017).
+* [Creation and configuration of availability groups (SQL Server)](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-2017&preserve-view=true).
 * [Add the RD Connection Broker server to the deployment and configure high availability](rds-connection-broker-cluster.md).
 
 ## File server

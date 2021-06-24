@@ -2,7 +2,7 @@
 title: Site definition and domain controller placement in ADDS performance tuning
 description: Site definition and domain controller placement considerations in Active Directory performance tuning.
 ms.topic: article
-ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
+ms.author: timwi
 author: phstee
 ms.date: 10/16/2017
 ---
@@ -74,4 +74,4 @@ For all trust scenarios, credentials are routed according to the domain specifie
 - [Hardware considerations](hardware-considerations.md)
 - [LDAP considerations](ldap-considerations.md)
 - [Troubleshooting ADDS performance](troubleshoot.md)
-- [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566)
+- [Capacity Planning for Active Directory Domain Services](./capacity-planning-for-active-directory-domain-services.md)

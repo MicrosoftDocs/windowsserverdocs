@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Distribute Certificates to Client Computers by Using Group Policy"
 ms.assetid: cf32926a-2083-408b-a264-2cad179ed18a
 title: Distribute Certificates to Client Computers by Using Group Policy
 author: billmath
@@ -13,7 +14,7 @@ ms.author: billmath
 
 You can use the following procedure to push down the appropriate Secure Sockets Layer \(SSL\) certificates \(or equivalent certificates that chain to a trusted root\) for account federation servers, resource federation servers, and Web servers to each client computer in the account partner forest by using Group Policy.
 
-Membership in **Domain Admins** or **Enterprise Admins**, or equivalent, in Active Directory Domain Services \(AD DS\) is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).
+Membership in **Domain Admins** or **Enterprise Admins**, or equivalent, in Active Directory Domain Services \(AD DS\) is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).
 
 ### To distribute certificates to client computers by using Group Policy
 

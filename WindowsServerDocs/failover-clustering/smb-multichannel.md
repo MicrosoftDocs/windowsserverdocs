@@ -1,14 +1,15 @@
 ---
+description: "Learn more about: Simplified SMB Multichannel and Multi-NIC Cluster Networks"
 ms.assetid: a6343f1c-e9dd-4a02-91ad-39bd519d66cd
 title: Simplified SMB Multichannel and Multi-NIC Cluster Networks
 ms.topic: article
 author: RobHindman
 ms.author: robhind
-ms.date: 09/15/2016
+ms.date: 05/28/2021
 ---
 # Simplified SMB Multichannel and Multi-NIC Cluster Networks
 
-> Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Simplified SMB Multichannel and Multi-<abbr title="Network Interface Card">NIC</abbr> Cluster Networks is a feature that enables the use of multiple NICs on the same cluster network subnet, and automatically enables SMB Multichannel.
 
@@ -50,10 +51,10 @@ When using more than one private (cluster only) network, check the IPv6 routing 
 **Figure 4: Automatic IPv6 Link Local (fe80) Address resource configuration**
 
 ## Throughput and Fault Tolerance
-Windows Server 2019 and Windows Server 2016 automatically detect NIC capabilities and will attempt to use each NIC in the fastest possible configuration. NICs that are teamed, NICs using RSS, and NICs with RDMA capability can all be used. The table below summarizes the trade-offs when using these technologies. Maximum throughput is achieved when using multiple RDMA capable NICs. For more information, see [The basics of SMB Mutlichannel](/archive/blogs/josebda/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0).
+Windows Server 2019 and Windows Server 2016 automatically detect NIC capabilities and will attempt to use each NIC in the fastest possible configuration. NICs that are teamed, NICs using RSS, and NICs with RDMA capability can all be used. The table below summarizes the trade-offs when using these technologies. Maximum throughput is achieved when using multiple RDMA capable NICs. For more information, see [The basics of SMB multichannel](/archive/blogs/josebda/the-basics-of-smb-multichannel-a-feature-of-windows-server-2012-and-smb-3-0).
 
 ![An illustration of throughput and fault tolerance for various NIC configurations](media/Simplified-SMB-Multichannel-and-Multi-NIC-Cluster-Networks/Clustering_MulitNIC_Fig5.png)
-**Figure 5: Throughput and fault tolerance for various NIC conifigurations**
+**Figure 5: Throughput and fault tolerance for various NIC configurations**
 
 ## Frequently asked questions
 **Are all NICs in a multi-NIC network used for cluster heart beating?**
@@ -66,7 +67,7 @@ Windows Server 2019 and Windows Server 2016 automatically detect NIC capabilitie
     Yes, by default all cluster and CSV traffic will use available multi-NIC networks. Administrators can use the Failover Clustering PowerShell cmdlets or Failover Cluster Manager UI to change the network role.
 
 **How can I see the SMB Multichannel settings?**
-    Use the **Get-SMBServerConfiguration** cmdlet, look for the value of the EnableMultiChannel property.
+    Use the **Get-SMBServerConfiguration** cmdlet, look for the value of the **EnableMultiChannel** property.
 
 **Is the cluster common property PlumbAllCrossSubnetRoutes respected on a multi-NIC network?**
      Yes.

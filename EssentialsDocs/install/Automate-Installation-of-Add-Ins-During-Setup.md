@@ -1,12 +1,12 @@
 ---
 title: "Automate Installation of Add-Ins During Setup"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to use the PostIC.cmd method to automatically install add-ins during Windows Server Essentials setup.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 2e6ff6e4-8d68-4d49-9e38-8088bc8bf95e
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Automate Installation of Add-Ins During Setup

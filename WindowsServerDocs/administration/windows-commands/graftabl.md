@@ -1,17 +1,20 @@
 ---
 title: graftabl
 description: Reference article for the graftabl command, which enables Windows operating systems to display an extended character set in graphics mode.
-ms.topic: article
+ms.topic: reference
 ms.assetid: b08351d4-3d24-490c-86f6-1252da11d923
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # graftabl
 
 Enables Windows operating systems to display an extended character set in graphics mode. If used without parameters, **graftabl** displays the previous and the current code page.
+
+> [!IMPORTANT]
+> The **graftabl** command is a legacy command, and therefore outdated. It is normally not installed in modern Windows versions. Please see the [chcp](./chcp.md) page for codepage handling.
 
 ## Syntax
 

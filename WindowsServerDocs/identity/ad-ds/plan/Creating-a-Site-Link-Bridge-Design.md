@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Creating a Site Link Bridge Design"
 ms.assetid: 64142026-07b5-4601-840a-c8dcf6ab9814
 title: Creating a Site Link Bridge Design
-ms.author: joflore
-author: MicrosoftGuyJFlo
-manager: mtillman
+ms.author: daveba
+author: iainfoulds
+manager: daveba
 ms.date: 08/08/2018
 ms.topic: article
 ---
@@ -31,4 +32,4 @@ If your organization has a hub-and-spoke network topology, you generally do not 
 
 ### Controlling replication through a firewall
 
-If two domain controllers representing the same domain in two different sites are specifically allowed to communicate with each other only through a firewall, you can disable **Bridge all site links** and create site link bridges for sites on the same side of the firewall. Therefore, if your network is separated by firewalls, we recommend that you disable transitivity of site links and create site link bridges for the network on one side of the firewall. For information about managing replication through firewalls, see the article [Active Directory in Networks Segmented by Firewalls](https://go.microsoft.com/fwlink/?LinkId=107074).
+If two domain controllers representing the same domain in two different sites are specifically allowed to communicate with each other only through a firewall, you can disable **Bridge all site links** and create site link bridges for sites on the same side of the firewall. Therefore, if your network is separated by firewalls, we recommend that you disable transitivity of site links and create site link bridges for the network on one side of the firewall. For information about managing replication through firewalls, see the article [Active Directory in Networks Segmented by Firewalls](/previous-versions/orphan-topics/ws.10/cc732148(v=ws.10)).

@@ -1,12 +1,12 @@
 ---
 title: "Step 5: Enable folder redirection on the Destination Server for Windows Server Essentials migration"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to enable folder redirection on the Destination Server for Windows Server Essentials migration.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d3925f80-552d-431f-b2a6-2af202e50ca4
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Step 5: Enable folder redirection on the Destination Server for Windows Server Essentials migration

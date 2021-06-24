@@ -1,15 +1,15 @@
 ---
 title: Tuning IIS 10.0
-description: Performance tuning recommmendations for IIS 10.0 web servers on Windows Server 16
+description: Performance tuning recommendations for IIS 10.0 web servers on Windows Server 16
 ms.topic: landing-page
-ms.author: davso; ericam; yashi
+ms.author: ericam
 author: phstee
 ms.date: 10/16/2017
 ---
 
 # Tuning IIS 10.0
 
-Internet Information Services (IIS) 10.0 is included with Windows Server 2016. It uses a process model similar to that of IIS 8.5 and IIS 7.0. A kernel-mode web driver (http.sys) receives and routes HTTP requests, and satisfies requests from its response cache. Worker processes register for URL subspaces, and http.sys routes the request to the appropriate process (or set of processes for application pools).
+Internet Information Services (IIS) 10.0 is included with Windows Server 2022. It uses a process model similar to that of IIS 8.5 and IIS 7.0. A kernel-mode web driver (http.sys) receives and routes HTTP requests, and satisfies requests from its response cache. Worker processes register for URL subspaces, and http.sys routes the request to the appropriate process (or set of processes for application pools).
 
 HTTP.sys is responsible for connection management and request handling. The request can be served from the HTTP.sys cache or passed to a worker process for further handling. Multiple worker processes can be configured, which provides isolation at a reduced cost. For more info on how request handling works, see the following figure:
 
@@ -69,7 +69,7 @@ The following are some useful settings for the HTTP.sys kernel-mode cache:
 
 ## Request and connection management settings
 
-In Windows Server 2016, HTTP.sys manages connections automatically. The following registry settings are no longer used:
+In Windows Server 2022, HTTP.sys manages connections automatically. The following registry settings are no longer used:
 
 -   **MaxConnections**
 
@@ -119,7 +119,7 @@ Use Appcmd.exe, the IIS 10.0 Management Console, the WebAdministration or IISAd
 
 ## Ideal CPU setting for NUMA hardware
 
-Starting from Windows 2016, IIS 10.0 supports automatic ideal CPU assignment for its thread pool threads to enhance the performance and scalability on NUMA hardware. This feature is enabled by default and can be configured through the following registry key:
+Starting from Windows Server 2016, IIS 10.0 supports automatic ideal CPU assignment for its thread pool threads to enhance the performance and scalability on NUMA hardware. This feature is enabled by default and can be configured through the following registry key:
 
 ``` syntax
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\InetInfo\Parameters\ThreadPoolUseIdealCpu
@@ -285,7 +285,7 @@ Besides the maxConcurrentRequestPerCpu setting, ASP.NET 4.7 also provides settin
 -   **percentCpuLimit** Default value: 90
 Asynchronous request has some scalability issues when a huge load (beyond the hardware capabilities) is put on such scenario. The problem is due to the nature of allocation on asynchronous scenarios. In these conditions, allocation will happen when the asynchronous operation starts, and it will be consumed when it completes. By that time, itâs very possible the objects have been moved to generation 1 or 2 by GC. When this happens, increasing the load will show increase on request per second (rps) until a point. Once we pass that point, the time spent in GC will start to become a problem and the rps will start to dip, having a negative scaling effect. To fix the problem, when the cpu usage exceeds percentCpuLimit setting, requests will be sent to the ASP.NET native queue.
 -   **percentCpuLimitMinActiveRequestPerCpu** Default value: 100
-CPU throttling(percentCpuLimit setting) is not based on number of requests but on how expensive they are. As a result, there could be just a few CPU-intensive requests causing a backup in the native queue with no way to empty it aside from incoming requests. To solve this problme, percentCpuLimitMinActiveRequestPerCpu can be used to ensure a minimum number of requests are being served before throttling kicks in.
+CPU throttling(percentCpuLimit setting) is not based on number of requests but on how expensive they are. As a result, there could be just a few CPU-intensive requests causing a backup in the native queue with no way to empty it aside from incoming requests. To solve this problem, percentCpuLimitMinActiveRequestPerCpu can be used to ensure a minimum number of requests are being served before throttling kicks in.
 
 ## Worker process and recycling options
 

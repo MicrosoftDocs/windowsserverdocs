@@ -1,12 +1,12 @@
 ---
 title: "Move settings and data to the Destination Server for Windows Server Essentials migration"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to move settings and data to the Destination Server for Windows Server Essentials migration.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 2b882e87-347a-4010-b7fd-9599d61198dd
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Move settings and data to the Destination Server for Windows Server Essentials migration

@@ -1,12 +1,12 @@
 ---
 title: "System Requirements for Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the system requirements for Windows Server Essentials.
 ms.date: 10/31/2013
 ms.topic: article
 ms.assetid: 0951a67d-492f-41ad-9ae5-8e4cd25e3041
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # System Requirements for Windows Server Essentials
@@ -32,7 +32,7 @@ manager: dongill
 |---------------|-----------------|
 |Network adapter|Gigabit Ethernet adapter (10/100/1000baseT PHY/MAC)|
 |Internet|Some functionality may require Internet access (fees may apply) or a Microsoft account|
-|Supported Client operating systems|Windows 8.1, Windows 8, Windows 7, Macintosh OS X versions 10.5 to 10.8.<br /><br /> **Note:** Some features require professional or higher editions.<br /><br /> 1 GB of available hard drive space (a portion of this disk will be freed after installation)|
+|Supported Client operating systems| Windows 10, Windows 8.1, Windows 8, Windows 7, Macintosh OS X versions 10.5 to 10.8.<br /><br /> **Note:** Some features require professional or higher editions.<br /><br /> 1 GB of available hard drive space (a portion of this disk will be freed after installation)|
 |Router|A router or firewall that supports IPv4 NAT or IPv6|
 |Additional requirements|DVD-ROM drive|
 

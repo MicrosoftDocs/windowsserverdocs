@@ -2,9 +2,9 @@
 title: Server Performance Advisor User's Guide
 description: Server Performance Advisor User's Guide
 ms.assetid: be99a5a9-b9c0-436b-912c-e5c5839a533d
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ms.topic: article
 ---

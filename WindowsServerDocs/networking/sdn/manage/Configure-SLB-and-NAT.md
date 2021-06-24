@@ -1,6 +1,6 @@
 ---
 title: Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)
-description: This topic is part of the Software Defined Networking guide on how to Manage Tenant Workloads and Virtual Networks in Windows Server 2016.
+description: Learn how to use the Software Defined Networking software load balancer to provide outbound network address translation, inbound NAT, or load balancing between multiple instances of an application.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 73bff8ba-939d-40d8-b1e5-3ba3ed5439c3
@@ -10,7 +10,7 @@ ms.date: 08/23/2018
 ---
 # Configure the Software Load Balancer for Load Balancing and Network Address Translation (NAT)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to use the Software Defined Networking \(SDN\)  software load balancer \(SLB\) to provide outbound network address translation \(NAT\), inbound NAT, or load balancing between multiple instances of an application.
 

@@ -1,18 +1,17 @@
 ---
 title: Avoid using virtual hard disks with a sector size less than the sector size of the physical storage that stores the virtual hard disk file
-description: Online version of the text for this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+description: Learn what to do when one or more virtual hard disks have a physical sector size that is smaller than the physical sector size of the storage on which the virtual hard disk file is located.
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: b7cf994e-bf4b-4b1b-bad6-ecf7d46d105e
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Avoid using virtual hard disks with a sector size less than the sector size of the physical storage that stores the virtual hard disk file
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -39,6 +38,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 -   *Use Windows PowerShell or WMI to enable a VHDX-format virtual hard disk to report a specific sector size*
 
 -   *Use a registry setting to enable a VHD-format virtual hard disk to report a physical sector size of 4k*
-
-
-

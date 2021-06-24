@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Delegating Administration by Using OU Objects"
 ms.assetid: d8e61aa4-8e4b-4097-83ca-70cf61366b75
 title: Delegating Administration by Using OU Objects
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

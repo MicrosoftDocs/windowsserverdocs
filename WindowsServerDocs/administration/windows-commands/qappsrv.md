@@ -1,11 +1,11 @@
 ---
 title: qappsrv
 description: Reference article for the qappsrv command, which displays a list of all Remote Desktop Session Host servers on the network.
-ms.topic: article
+ms.topic: reference
 ms.assetid: 7df68283-2484-418c-a8f0-d273884919ad
-author: coreyp-at-msft
-ms.author: coreyp
-manager: dongill
+ms.author: jgerend
+author: JasonGerend
+manager: mtillman
 ms.date: 10/16/2017
 ---
 

@@ -1,12 +1,12 @@
 ---
 title: "Troubleshoot computer backup and restore errors in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to troubleshoot computer backups including backup configuration issues, incomplete or unsuccessful backups, backup health alerts, and other issues.
 ms.date: 06/25/2013
 ms.topic: article
 ms.assetid: 5cc73aff-d2c0-4cf9-a23d-ef928ae5ddc9
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Troubleshoot computer backup and restore errors in Windows Server Essentials
@@ -90,7 +90,7 @@ When a backup has Unsuccessful status, no part of the backup succeeded and no da
 
 1. Make sure that the hard disk is connected to the computer, turned on, and functioning properly.
 
-2. Run **chkdsk /f /r** to fix any errors on the hard disk (**/f**) and recover readable information from any bad sectors (**/r**). For more information about running **chkdsk**, see [CHKDSK](https://go.microsoft.com/fwlink/?LinkId=206562).
+2. Run **chkdsk /f /r** to fix any errors on the hard disk (**/f**) and recover readable information from any bad sectors (**/r**). For more information about running **chkdsk**, see [CHKDSK](/previous-versions/orphan-topics/ws.10/cc755829(v=ws.10)).
 
 3. Make sure that the computer was not shut down or disconnected from the network while backup was running.
 

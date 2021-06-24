@@ -1,7 +1,7 @@
 ---
 title: Extend a basic volume
 description: You can add space to an existing volume in Windows, extending it into empty space on the drive, but only if the empty space doesn't have a volume on it (it's unallocated) and comes immediately after the volume you want to extend, with no other volumes in-between. This article describes how to do so.
-ms.date: 12/19/2019
+ms.date: 04/28/2021
 ms.topic: article
 author: JasonGerend
 manager: brianlic
@@ -12,6 +12,9 @@ ms.author: jgerend
 > **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use Disk Management to add space to an existing volume, extending it into empty space on the drive, but only if the empty space doesn't have a volume on it (it's unallocated) and comes immediately after the volume you want to extend, with no other volumes in-between, as shown in the following image. The volume to extend also must be formatted with the NTFS or ReFS file systems.
+
+If you're using Windows Server 2012 R2 or later, you can also use Azure File Sync to extend your volume into the cloud. 
+For details, see [Planning for an Azure File Sync deployment on Windows Server](/azure/storage/files/storage-sync-files-planning).
 
 :::image type="content" source="media/extend-volume-space-highlighted.png" alt-text="Disk Management showing free space that a volume can extend into.":::
 
@@ -51,7 +54,7 @@ Here's how to extend a volume into empty space immediately after the volume on t
    Resize-Partition -DriveLetter $drive_letter -Size $size.SizeMax
    ```
 
-## See slso
+## See also
 
 - [Resize-Partition](/powershell/module/storage/resize-partition)
 - [Diskpart extend](../../administration/windows-commands/extend.md)

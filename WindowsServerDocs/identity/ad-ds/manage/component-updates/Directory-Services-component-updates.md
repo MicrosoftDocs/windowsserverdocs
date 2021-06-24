@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Directory Services component updates"
 ms.assetid: 8a3cf2ae-2511-4eea-afd5-a43179a78613
 title: Directory Services component updates
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---
@@ -102,7 +103,7 @@ Promotion of a DC running Windows Server 2012 R2 as an additional replica into a
 
 New domain creation in an existing forest
 
-![directory services updates](media/Directory-Services-component-updates/GTR_ADDS_FFL.gif)
+![Screenshot that shows the Domain Controller Options page.](media/Directory-Services-component-updates/GTR_ADDS_FFL.gif)
 
 ### ADPREP
 There are no new forest or domain operations in this release.
@@ -144,9 +145,9 @@ FRS is deprecated in Windows Server 2012 R2.  The deprecation of FRS is accompli
 
 You use the -DomainMode parameter with the Install-ADDSForest or Install-ADDSDomain cmdlets to specify the domain functional level.  Supported values for this parameter can be either a valid integer or a corresponding enumerated string value. For example, to set the domain mode level to Windows Server 2008 R2, you can specify either a value of 4 or "Win2008R2".  When executing these cmdlets from Server 2012 R2 valid values include those for Windows Server 2008 (3, Win2008) Windows Server 2008 R2 (4, Win2008R2) Windows Server 2012 (5, Win2012) and Windows Server 2012 R2 (6, Win2012R2). The domain functional level cannot be lower than the forest functional level, but it can be higher.  Since FRS is deprecated in this release, Windows Server 2003 (2, Win2003) is not a recognized parameter with these cmdlets when executed from Windows Server 2012 R2.
 
-![directory services updates](media/Directory-Services-component-updates/GTR_ADDS_PS_Install2003DFL.gif)
+![Screenshot of a terminal window that shows the -DomainMode parameter used with the Install-ADDSForest cmdlet.](media/Directory-Services-component-updates/GTR_ADDS_PS_Install2003DFL.gif)
 
-![directory services updates](media/Directory-Services-component-updates/GTR_ADDS_PS_InstallDFL2.gif)
+![Screenshot of a terminal window that shows how to use the Install-ADDSForest cmdlet.](media/Directory-Services-component-updates/GTR_ADDS_PS_InstallDFL2.gif)
 
 ## <a name="BKMK_LDAPQuery"></a>LDAP Query Optimizer changes
 
@@ -258,7 +259,7 @@ Log Record Bytes Generated: 0
 
     -   Exposed via ETW tracing and event ID 1644
 
-        ![directory services updates](media/Directory-Services-component-updates/GTR_ADDS_Event1644.gif)
+        ![Screenshot that highlights the Attributes Preventing Optimization value.](media/Directory-Services-component-updates/GTR_ADDS_Event1644.gif)
 
 ### <a name="BKMK_EnableStats"></a>To enable the Stats control in LDP
 
@@ -268,7 +269,7 @@ Log Record Bytes Generated: 0
 
 3.  On the Controls dialog box, expand the **Load Predefined** pull-down menu, click **Search Stats** and then click **OK**.
 
-    ![directory services updates](media/Directory-Services-component-updates/GTR_ADDS_Controls.gif)
+    ![Screenshot that highlights the Load Predefined list.](media/Directory-Services-component-updates/GTR_ADDS_Controls.gif)
 
 4.  On the **Browse** menu, click **Search**
 
@@ -276,7 +277,7 @@ Log Record Bytes Generated: 0
 
 6.  Ensure the **Extended** check box is selected on the Search Options dialog box and select **OK**.
 
-    ![directory services updates](media/Directory-Services-component-updates/GTR_ADDS_SearchOptions.gif)
+    ![Screenshot that highlights the the Extended option.](media/Directory-Services-component-updates/GTR_ADDS_SearchOptions.gif)
 
 ### Try This: Use LDP to return query statistics
 Perform the following on a domain controller, or from a domain-joined client or server that has the AD DS tools installed.  Repeat the following targeting your Windows Server 2012 DC and your Windows Server 2012 R2 DC.
@@ -362,7 +363,7 @@ Windows Registry Editor Version 5.00
 #### Comparison of the old and new event ID 1644
 OLD
 
-![directory services updates](media/Directory-Services-component-updates/GTR_ADDS_Event1644_2012.gif)
+![Screenshot that shows the old event ID 1664.](media/Directory-Services-component-updates/GTR_ADDS_Event1644_2012.gif)
 
 NEW
 

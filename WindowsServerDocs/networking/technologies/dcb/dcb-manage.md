@@ -4,8 +4,9 @@ description: This topic provides you with instructions on how to use Windows Pow
 ms.topic: article
 ms.assetid: 1575cc7c-62a7-4add-8f78-e5d93effe93f
 manager: brianlic
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 12/08/2020
 ---
 
 # Manage Data Center Bridging (DCB)
@@ -464,10 +465,10 @@ There are DCB Windows PowerShell commands for both Windows Server 2016 and Windo
 
 The following topic for Windows Server 2016 provides Windows PowerShell cmdlet descriptions and syntax for all Data Center Bridging \(DCB\) Quality of Service \(QoS\)\-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-- [DcbQoS Module](/powershell/module/dcbqos/?view=win10-ps)
+- [DcbQoS Module](/powershell/module/dcbqos/)
 
 ### Windows Server 2012 R2 Windows PowerShell Commands for DCB
 
 The following topic for Windows Server 2012 R2 provides Windows PowerShell cmdlet descriptions and syntax for all Data Center Bridging \(DCB\) Quality of Service \(QoS\)\-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-- [Data Center Bridging (DCB) Quality of Service (QoS) Cmdlets in Windows PowerShell](/powershell/module/dcbqos/?view=win10-ps&viewFallbackFrom=winserverr2-ps)
+- [Data Center Bridging (DCB) Quality of Service (QoS) Cmdlets in Windows PowerShell](/powershell/module/dcbqos/)

@@ -1,12 +1,12 @@
 ---
 title: "Troubleshoot Windows Server Essentials installation"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to troubleshoot general issues that might occur when installing Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: ecf19216-7aac-4aca-839a-342ac28f5329
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Troubleshoot Windows Server Essentials installation

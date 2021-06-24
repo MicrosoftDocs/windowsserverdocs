@@ -1,12 +1,12 @@
 ---
 title: "Integrate an On-Premises Exchange Server with Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to set up and integrate an on-premises server that is running Exchange Server with a server that is running Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Integrate an On-Premises Exchange Server with Windows Server Essentials
@@ -105,7 +105,7 @@ This guide provides information and basic instructions to help you set up and in
 
 > [!NOTE]
 > - You must always choose to install the Management Tools on the server that is running Exchange Server. The Management Tools are required by the Exchange Server Integration feature on Windows Server Essentials.
->   -   If you need to configure virtual directories, we recommend that you also set the **InternalUrl** property to be the same URL as the **ExternalUrl** property for each virtual directory. For more information, see [Managing Client Access Server Virtual Directories](https://go.microsoft.com/fwlink/p/?LinkId=251058) at the Exchange Server 2010 online Help website.
+>   -   If you need to configure virtual directories, we recommend that you also set the **InternalUrl** property to be the same URL as the **ExternalUrl** property for each virtual directory. For more information, see [Managing Client Access Server Virtual Directories](/exchange/virtual-directory-management-exchange-2013-help) at the Exchange Server 2010 online Help website.
 >   -   If you want to access Outlook Web Access (OWA) from within the Remote Web Access site on Windows Server Essentials, you must set the External URL property for OWA.
 
  If you are installing Exchange Server 2010 in a clean setup, you can also use the following scripts to set up Exchange Server.
@@ -250,13 +250,13 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
 ##### To add your email domain as the default accepted domain
 
-1.  Follow the instructions in the Exchange Server article [Create an Accepted Domain](https://go.microsoft.com/fwlink/p/?LinkId=249174) to add an accepted domain.
+1.  Follow the instructions in the Exchange Server article [Create an Accepted Domain](/previous-versions/office/exchange-server-2010/bb124911(v=exchg.141)) to add an accepted domain.
 
 2.  Log on to the second server as an administrator, open the Exchange Management Console, and then navigate to the **Hub Transport** tab of the **Organization Configuration**.
 
 3.  In the Exchange Management Console work pane, right-click the new accepted domain, and then click **Set as Default**.
 
-4.  Follow the instructions in the Exchange Server article [Create an Email Address Policy](https://go.microsoft.com/fwlink/p/?LinkId=249179) to create a new email address policy. You can accept all of the default values except the email address. For email address, specify your public email domain.
+4.  Follow the instructions in the Exchange Server article [Create an Email Address Policy](/Exchange/email-addresses-and-address-books/email-address-policies/eap-procedures) to create a new email address policy. You can accept all of the default values except the email address. For email address, specify your public email domain.
 
 ### Create SMTP Send and Receive connectors
 
@@ -284,7 +284,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 |80 (HTTP)|Internal IP of the server that is running Windows Server Essentials|80||
 |443 (HTTPS)|Internal IP of the server that is running Windows Server Essentials|443||
 
- If you support the POP3 or IMAP messaging protocols on your network, you must also configure port forwardings for those protocols. For related information, see the section **Client Access Servers** in the topic [Exchange Network Port Reference](https://go.microsoft.com/fwlink/p/?LinkId=250773) in the Exchange Server TechNet Library.
+ If you support the POP3 or IMAP messaging protocols on your network, you must also configure port forwardings for those protocols. For related information, see the section **Client Access Servers** in the topic [Exchange Network Port Reference](/Exchange/plan-and-deploy/deployment-ref/network-ports) in the Exchange Server TechNet Library.
 
 > [!NOTE]
 > - We recommend that you configure static IP addresses for the server that is running Windows Server Essentials and for the second server that is running Exchange Server. For instructions about how to configure a static IP address on a computer running Windows Server 2003 or Windows Server 2008 R2, see [Configure a Static IP Address](https://technet.microsoft.com/library/cc754203\(v=ws.10\).aspx) in the Windows Server TechNet Library
@@ -354,18 +354,18 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
    - If you are performing a clean setup, run the following command:
 
-      **ARRConfig config  -cert** _path to the certificate file_ **-hostnames** _host names for Exchange Server_
+      `ARRConfig config  -cert` _path to the certificate file_ `-hostnames` _host names for Exchange Server_
 
      > [!NOTE]
-     >  For example; **ARRConfig config  -cert** _c:\temp\certificate.pfx_ **-hostnames** _mail.contoso.com_
+     >  For example; `ARRConfig config  -cert` _c:\temp\certificate.pfx_ `-hostnames` _mail.contoso.com_
      >
      >  Replace *mail.contoso.com* with the name of your domain that is protected by the certificate.
 
    - In you are migrating from Windows Small Business Server, run the following command:
 
-      **ARRConfig config  -cert** _path to the certificate file_ **-hostnames** _host names for Exchange Server_ **-targetserver** _server name of Exchange Server_
+      `ARRConfig config  -cert` _path to the certificate file_ `-hostnames` _host names for Exchange Server_ `-targetserver` _server name of Exchange Server_
 
-      For example; **ARRConfig config  -cert** _c:\temp\certificate.pfx_ **-hostnames** _mail.contoso.com_ **-targetserver** _ExchangeSvr_
+      For example; `ARRConfig config  -cert` _c:\temp\certificate.pfx_ `-hostnames` _mail.contoso.com_ `-targetserver` _ExchangeSvr_
 
       Replace *mail.contoso.com* with the name of your domain. Replace *ExchangeSvr* with the name of your server that is running Exchange Server.
 
@@ -421,7 +421,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
  If you disable integration with an on-premises Exchange Server, you will no longer be able to use the Windows Server Essentials Dashboard to view, create, or manage Exchange Server mailboxes.
 
 ### What do I need to know about email accounts?
- A hosted email solution is configured on your server. A solution from a hosted email provider, such as Microsoft  Office 365, can provide individual email accounts for network users. When you run the Add a User Account Wizard in Windows Server Essentials to create a user account, the wizard attempts to add the user account to the available hosted email solution. At the same time, the wizard assigns an email name (alias) to the user, and sets the maximum size of the mailbox (quota). The maximum size of the mailbox varies depending on the email provider that you use. After adding the user account, you can continue to manage the mailbox alias and quota information from the properties page for the user. For full management of your user accounts and hosted email provider, use the management console of your hosted provider. Depending on your provider, you can access their management console either from a web-based portal, or from a tab in the server Dashboard.
+ A hosted email solution is configured on your server. A solution from a hosted email provider, such as Microsoft 365, can provide individual email accounts for network users. When you run the Add a User Account Wizard in Windows Server Essentials to create a user account, the wizard attempts to add the user account to the available hosted email solution. At the same time, the wizard assigns an email name (alias) to the user, and sets the maximum size of the mailbox (quota). The maximum size of the mailbox varies depending on the email provider that you use. After adding the user account, you can continue to manage the mailbox alias and quota information from the properties page for the user. For full management of your user accounts and hosted email provider, use the management console of your hosted provider. Depending on your provider, you can access their management console either from a web-based portal, or from a tab in the server Dashboard.
 
  The alias that you provide when you run the Add a User Account Wizard is sent to the hosted email provider as the suggested name for the user alias. For example, if the user alias is *FrankM*, the user's email address might be <em>FrankM@Contoso.com</em>.
 

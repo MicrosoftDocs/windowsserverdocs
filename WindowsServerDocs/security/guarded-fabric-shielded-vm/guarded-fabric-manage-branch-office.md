@@ -1,9 +1,11 @@
 ---
+description: "Learn more about: Branch office considerations"
 title: Branch Office Considerations
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
+ms.date: 12/10/2020
 ---
 
 # Branch office considerations

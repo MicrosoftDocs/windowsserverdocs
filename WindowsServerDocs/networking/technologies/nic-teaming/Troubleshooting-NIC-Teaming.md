@@ -4,8 +4,8 @@ description: This topic provides information about troubleshooting NIC Teaming i
 manager: dougkim
 ms.topic: article
 ms.assetid: fdee02ec-3a7e-473e-9784-2889dc1b6dbb
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/13/2018
 ---
 # Troubleshooting NIC Teaming

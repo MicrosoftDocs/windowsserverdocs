@@ -5,11 +5,11 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.date: 01/14/2020
+ms.date: 05/28/2021
 ---
 # Failover Clustering system log events
 
-> Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 This topic lists the Failover Clustering events from the Windows Server System
 log (viewable in Event Viewer). These events all share the event source of
@@ -975,7 +975,7 @@ performing:<br> '%2'
 
 Cluster service failed to change the trace log size. Please verify the
 ClusterLogSize setting with the 'Get-Cluster \| Format-List \*' PowerShell
-cmdlet. Also, use the Performance Monitor snapin to verify the event trace
+cmdlet. Also, use the Performance Monitor snap-in to verify the event trace
 session settings for FailoverClustering.
 
 ### Event 1567: RES_VIPADDR_ADDRESS_INTERFACE_FAILED
@@ -1338,26 +1338,26 @@ was '%2'.
 
 Volume shadow copy service task resource '%1' failed. The error code was '%2'.
 This is because the associated task could not be stopped as part of an offline
-operation. You may need to stop it manually using the Task Scheduler snapin.
+operation. You may need to stop it manually using the Task Scheduler snap-in.
 
 ### Event 4866: RES_VSSTASK_DELETE_TASK_FAILED
 
 Volume shadow copy service task resource '%1' failed. The error code was '%2'.
 This is because the associated task could not be deleted as part of an offline
-operation. You may need to delete it manually using the Task Scheduler snapin.
+operation. You may need to delete it manually using the Task Scheduler snap-in.
 
 ### Event 4867: RES_VSSTASK_ONLINE_FAILED
 
 Volume shadow copy service task resource '%1' failed. The error code was '%2'.
 This is because the associated task could not be added as part of an online
-operation. Please use the Task Scheduler snapin to ensure your tasks are
+operation. Please use the Task Scheduler snap-in to ensure your tasks are
 properly configured.
 
 ### Event 4868: UNABLE_TO_START_AUTOLOGGER
 
 Cluster service failed to start the cluster log trace session. The error code
 was '%2'. The cluster will function properly, but supplemental logging
-information will be missing. Use the Performance Monitor snapin to verify the
+information will be missing. Use the Performance Monitor snap-in to verify the
 event channel settings for '%1'.
 
 ### Event 4869: NETFT_WATCHDOG_PROCESS_HUNG
@@ -1405,9 +1405,9 @@ storage device and network connectivity.
 
 Move of the disk ('%2') is vetoed based on the current state of the Cache
 Manager on the node '%1' to prevent a potential deadlock. 'Cache Manager Dirty
-Pages Theshold' is %3, and 'Cache Manager Dirty Pages' is %4. Move is allowed if
+Pages Threshold' is %3, and 'Cache Manager Dirty Pages' is %4. Move is allowed if
 'Cache Manager Dirty Pages' is less than 70% of 'Cache Manager Dirty Pages
-Theshold' or if 'Cache Manager Dirty Pages Theshold' minus 'Cache Manager Dirty
+Threshold' or if 'Cache Manager Dirty Pages Threshold' minus 'Cache Manager Dirty
 Pages' is greater than 128000 pages (about 500MB if a page size is 4096 bytes).
 Cluster vetoed resource move to prevent potential deadlock due to Cache Manager
 throttling buffered writes while Cluster Shared Volumes on this disk are being
@@ -1824,7 +1824,7 @@ resource name: %1<br>Error Code: %2<br>Time Elapsed (seconds): %3
 
 Run the Validate a Configuration wizard to check your storage configuration. If the
 error code was ERROR_CLUSTER_SHUTDOWN then the Online Pending state was
-cancelled by an administrator. If this is a replicated volume then this could be
+canceled by an administrator. If this is a replicated volume then this could be
 the result of a failure to set the disk attributes. Review the Storage
 Replication events for additional information.
 
@@ -2036,5 +2036,4 @@ completing successfully.
 
 ## Additional References
 
--   [Detailed event info for Failover Clustering components in Windows Server
-    2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753362(v%3dws.10))
+-   [Detailed event info for Failover Clustering components in Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753362(v%3dws.10))

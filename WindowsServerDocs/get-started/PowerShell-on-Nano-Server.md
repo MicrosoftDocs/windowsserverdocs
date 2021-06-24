@@ -7,6 +7,7 @@ ms.assetid: 9b25b939-1e2c-4bed-a8d3-2a8e8e46b53d
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
+ms.date: 08/07/2020
 ---
 # PowerShell on Nano Server
 

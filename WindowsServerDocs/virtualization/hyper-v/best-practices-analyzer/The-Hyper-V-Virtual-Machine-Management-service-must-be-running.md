@@ -1,18 +1,17 @@
 ---
 title: The Hyper-V Virtual Machine Management service must be running
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+description: Learn what to do when the service required to manage virtual machines is not running.
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: f44d6887-6458-4438-9d93-574587e3f7d1
-author: kbdazure
 ms.date: 10/03/2016
 ---
 # The Hyper-V Virtual Machine Management service must be running
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -83,6 +82,3 @@ If the service is already configured to start automatically and you just need to
 2.  In the navigation pane, click the name of the server if it's not already selected.
 
 3.  In the **Actions** pane, click **Start Service**.
-
-
-

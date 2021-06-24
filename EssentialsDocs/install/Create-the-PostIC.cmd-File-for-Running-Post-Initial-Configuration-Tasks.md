@@ -1,12 +1,12 @@
 ---
 title: "Create the PostIC.cmd File for Running Post Initial Configuration Tasks"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to create the PostIC.cmd file to run Post Initial Configuration tasks for Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 99e258bc-0695-48c9-b694-a7f3cbe2a2d0
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Create the PostIC.cmd File for Running Post Initial Configuration Tasks

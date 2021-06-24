@@ -1,12 +1,12 @@
 ---
 title: "Manage Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the server and network management features that are included with Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 4f1902f1-a0e0-49a6-afa7-3c4b61a11b48
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Manage Windows Server Essentials

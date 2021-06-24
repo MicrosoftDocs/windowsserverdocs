@@ -1,12 +1,12 @@
 ---
 title: "Step 2: Install Windows Server Essentials as a new replica domain controller"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to install Windows Server Essentials and Windows Server 2012 R2 Standard (with the Windows Server Essentials Experience role enabled) as a domain controller.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c7ccfc34-63fd-436b-a1cd-e05810f60bfe
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Step 2: Install Windows Server Essentials as a new replica domain controller

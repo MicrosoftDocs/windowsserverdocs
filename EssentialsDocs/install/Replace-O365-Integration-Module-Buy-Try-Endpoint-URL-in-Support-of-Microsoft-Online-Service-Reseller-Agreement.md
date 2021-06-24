@@ -1,24 +1,24 @@
 ---
-title: "Replace O365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement"
-description: "Describes how to use Windows Server Essentials"
+title: "Replace Microsoft 365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement"
+description: Learn how to replace the endpoint URLs used by the Windows Server Essentials Microsoft 365 integration module.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 9860a6b9-baea-4bf0-9a9f-6f1a288f996e
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
-# Replace O365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement
+# Replace Microsoft 365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_O365"></a>
- If you are a Microsoft Online Service Reseller Agreement (MOSRA) partner, to ensure that customer signup transactions are processed via your portal, you will need to replace the endpoint URLs used by the  Windows Server Essentials Office 365 integration module.
+ If you are a Microsoft Online Service Reseller Agreement (MOSRA) partner, to ensure that customer signup transactions are processed via your portal, you will need to replace the endpoint URLs used by the  Windows Server Essentials Microsoft 365 integration module.
 
  The integration module uses the following four endpoint URLs:
 
-1.  An Office 365 Enterprise subscription purchase endpoint.
+1.  An Microsoft 365 Enterprise subscription purchase endpoint.
 
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\
 
@@ -28,7 +28,7 @@ manager: dongill
 
     -   Value = *xxxxx*, where xxxxx is your enterprise subscription purchase URL. For example, Value = http://syndicatepartner.office365.com/enterprisebuy.html
 
-2.  An Office 365 Enterprise subscription trial endpoint.
+2.  An Microsoft 365 Enterprise subscription trial endpoint.
 
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\
 
@@ -38,7 +38,7 @@ manager: dongill
 
     -   Value = *xxxxx*, where xxxxx is your enterprise subscription purchase URL. For example, Value = http://syndicatepartner.office365.com/enterprisetry.html
 
-3.  An  Office 365 Small Business Premium subscription purchase endpoint.
+3.  An  Microsoft 365 Small Business Premium subscription purchase endpoint.
 
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\
 
@@ -48,7 +48,7 @@ manager: dongill
 
     -   Value = *xxxxx*, where xxxxx is your enterprise subscription purchase URL. For example, Value = http://syndicatepartner.office365.com/smallbizbuy.html
 
-4.  An  Office 365 Small Business Premium subscription trial endpoint.
+4.  An  Microsoft 365 Small Business Premium subscription trial endpoint.
 
     -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO\
 

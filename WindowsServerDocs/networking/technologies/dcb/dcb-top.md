@@ -4,8 +4,9 @@ description: You can use this topic for introductory information about Data Cent
 ms.topic: article
 ms.assetid: da58f312-bd3b-4bb6-98ca-6177869dd6ad
 manager: brianlic
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 12/08/2020
 ---
 
 # Data Center Bridging \(DCB\)
@@ -68,7 +69,7 @@ Following is a list that summarizes the functionality that is provided by DCB.
 7. Supports the coexistence of Windows Server 2016 Quality of Service \(QoS\) solutions.
 
 >[!NOTE]
->Before using any RDMA over Converged Ethernet \(RoCE\) version of RDMA, you must enable DCB. While not required for Internet Wide Area RDMA Protocol \(iWARP\) networks, testing has determined that all Ethernet\-based RDMA technologies work better with DCB. Because of this, you should consider using DCB for iWARP RDMA deployments. For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).
+>Before using any RDMA over Converged Ethernet \(RoCE\) version of RDMA, you must enable DCB. While not required for Internet Wide Area RDMA Protocol \(iWARP\) networks, testing has determined that all Ethernet\-based RDMA technologies work better with DCB. Because of this, you should consider using DCB for iWARP RDMA deployments. For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
 
 ##  Practical applications of DCB
 
@@ -98,10 +99,10 @@ There are DCB Windows PowerShell commands for both Windows Server 2016 and Windo
 
 The following topic for Windows Server 2016 provides Windows PowerShell cmdlet descriptions and syntax for all Data Center Bridging \(DCB\) Quality of Service \(QoS\)\-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-- [DcbQoS Module](/powershell/module/dcbqos/?view=win10-ps)
+- [DcbQoS Module](/powershell/module/dcbqos/)
 
 ### Windows Server 2012 R2 Windows PowerShell Commands for DCB
 
 The following topic for Windows Server 2012 R2 provides Windows PowerShell cmdlet descriptions and syntax for all Data Center Bridging \(DCB\) Quality of Service \(QoS\)\-specific cmdlets. It lists the cmdlets in alphabetical order based on the verb at the beginning of the cmdlet.
 
-- [Data Center Bridging (DCB) Quality of Service (QoS) Cmdlets in Windows PowerShell](/powershell/module/dcbqos/?view=win10-ps&viewFallbackFrom=winserverr2-ps)
+- [Data Center Bridging (DCB) Quality of Service (QoS) Cmdlets in Windows PowerShell](/powershell/module/dcbqos/)

@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Site Functions"
 ms.assetid: 22c514b2-401e-49e1-a87e-0cbaa2c1dac1
 title: Site Functions
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
 ---

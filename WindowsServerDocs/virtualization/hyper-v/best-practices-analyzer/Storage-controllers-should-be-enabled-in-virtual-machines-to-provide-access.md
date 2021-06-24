@@ -1,18 +1,17 @@
 ---
 title: Storage controllers should be enabled in virtual machines to provide access to attached storage
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
-manager: dongill
-ms.author: kathydav
+description: Learn what to do when one or more storage controllers may be disabled in a virtual machine.
+ms.author: benarm
+author: BenjaminArmstrong
 ms.topic: article
 ms.assetid: 532548a1-8ffe-4b5b-902e-ed2f0819012b
-author: kbdazure
 ms.date: 8/16/2016
 ---
 # Storage controllers should be enabled in virtual machines to provide access to attached storage
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -52,6 +51,3 @@ For instructions on how to use Device Manager, see Help in the guest operating s
 5.  In the left pane of the **Settings** dialog box, under **Hardware**, click **SCSI Controller**.
 
 6.  In the right pane, click **Remove**.
-
-
-

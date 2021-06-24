@@ -5,9 +5,9 @@ services: active-directory
 author: anandyadavmsft
 manager: mtillman
 ms.assetid: a14bc870-9fad-45ed-acd5-a90ccd432e54
-ms.topic: get-started-article
+ms.topic: how-to
 ms.date: 09/01/2016
-ms.author: anandy;billmath
+ms.author: billmath
 
 ---
 # High availability cross-geographic AD FS deployment in Azure with Azure Traffic Manager

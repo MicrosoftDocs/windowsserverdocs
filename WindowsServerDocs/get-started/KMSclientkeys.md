@@ -6,12 +6,12 @@ ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 11/12/2019
-ms.topic: get-started-article
+ms.date: 04/30/2021
+ms.topic: how-to
 ---
 # KMS client setup keys
 
->Applies to: Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
 
 Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS clients with no additional configuration needed.
 
@@ -52,6 +52,12 @@ prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**
 | Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
 
 ## Windows Server LTSC/LTSB versions
+
+### Windows Server 2022
+| Operating system edition       | KMS Client Setup Key          |
+|--------------------------------|-------------------------------|
+| Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
+| Windows Server 2022 Standard   | VDYBN-27WPP-V4HQT-9VMD4-VMK7H |
 
 ### Windows Server 2019
 | Operating system edition       | KMS Client Setup Key          |

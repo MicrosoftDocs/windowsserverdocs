@@ -1,7 +1,7 @@
 ---
 title: Upgrade Windows Server 2008 R2 to Windows Server 2012 R2 | Microsoft Docs
 description: Learn how to perform an in-place upgrade to go from Windows Server 2008 R2 to Windows Server 2012 R2.
-ms.topic: upgrade
+ms.topic: how-to
 author: RobHindman
 ms.author: robhind
 ms.date: 09/16/2019

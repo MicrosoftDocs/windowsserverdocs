@@ -1,16 +1,15 @@
 ---
 title: Best practices for running FreeBSD on Hyper-V
 description: Provides recommendations for running FreeBSD on virtual machines
-manager: dongill
 ms.topic: article
 ms.assetid: 0c66f1c8-2606-43a3-b4cc-166acaaf2d2a
-author: shirgall
-ms.author: kathydav
-ms.date: 01/09/2017
+ms.author: benarm
+author: BenjaminArmstrong
+ms.date: 01/08/2021
 ---
 # Best practices for running FreeBSD on Hyper-V
 
->Applies To: Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>Applies To: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 This topic contains a list of recommendations for running FreeBSD as a guest operating system on a Hyper-V virtual machine.
 

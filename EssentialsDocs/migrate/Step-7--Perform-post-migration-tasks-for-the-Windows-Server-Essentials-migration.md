@@ -1,12 +1,12 @@
 ---
 title: "Step 7: Perform post-migration tasks for the Windows Server Essentials migration"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to perform post-migration tasks for the Windows Server Essentials migration.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: d382e3fd-d393-4bd0-883f-db50104a969f
 author: nnamuhcs
-ms.author: coreyp
-manager: dongill
+ms.author: geschuma
+manager: mtillman
 ---
 
 # Step 7: Perform post-migration tasks for the Windows Server Essentials migration

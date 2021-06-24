@@ -2,9 +2,9 @@
 title: Safely virtualizing Active Directory Domain Services (AD DS)
 description: USN Rollback and safe virtualization of Active Directory
 ms.topic: article
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 03/22/2019
 ms.assetid: 7a3114c8-bda8-49bb-83a8-4e04340ab221
 ---

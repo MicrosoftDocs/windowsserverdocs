@@ -1,53 +1,62 @@
 ---
-title:  Installation of OpenSSH For Windows Server
-description: Installing the OpenSSH client and server for Windows Server using the Windows Settings options or Windows PowerShell.
-ms.date: 09/27/2019
+title:  Install OpenSSH
+description: Installing OpenSSH Client and Server for Windows.
+ms.date: 04/19/2021
 ms.topic: conceptual
-contributor: maertendMSFT
+ms.author: damaerte
 author: maertendmsft
+ms.custom: contperf-fy21q4
 ---
 
-# Installation of OpenSSH For Windows Server 2019 and Windows 10
+# Install OpenSSH
 
-The OpenSSH Client and OpenSSH Server are separately installable components in Windows Server 2019 and Windows 10 1809.
-Users with these Windows versions should use the instructions that follow to install and configure OpenSSH.
+> Applies to Windows Server 2019, Windows 10
+
+OpenSSH is a connectivity tool for remote login that uses the SSH protocol. It encrypts all traffic between client and server to eliminate eavesdropping, connection hijacking, and other attacks.
+
+OpenSSH can be used to connect Window 10 (build 1809 and later) or Windows Server 2019 devices with OpenSSH Client installed to those devices with OpenSSH Server installed.
+
+> [!IMPORTANT]
+> If you downloaded OpenSSH from the GitHub repo at [PowerShell/openssh-portable](https://github.com/PowerShell/OpenSSH-Portable), follow the instructions listed there, not the ones in this article.
+
+## Install OpenSSH using Windows Settings
+
+Both OpenSSH components can be installed using Windows Settings on Windows Server 2019 and Windows 10 devices.
+
+To install the OpenSSH components:
+
+1. Open **Settings**, select **Apps > Apps & Features**, then select **Optional Features**.
+
+2. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
+
+    - Find **OpenSSH Client**, then click **Install**
+    - Find **OpenSSH Server**, then click **Install**
+
+Once setup completes, return to **Apps > Apps & Features** and **Optional Features** and you should see OpenSSH listed.
 
 > [!NOTE]
-> Users who acquired OpenSSH from the PowerShell GitHub repo (https://github.com/PowerShell/OpenSSH-Portable) should use the instructions from there, and __should not__ use these instructions.
+> Installing OpenSSH Server will create and enable a firewall rule named `OpenSSH-Server-In-TCP`. This allows inbound SSH traffic on port 22. If this rule is not enabled and this port is not open, connections will be refused or reset.
 
-## Installing OpenSSH from the Settings UI on Windows Server 2019 or Windows 10 1809
+## Install OpenSSH using PowerShell
 
-OpenSSH client and server are installable features of Windows 10 1809.
-
-To install OpenSSH, start Settings then go to Apps > Apps and Features > Manage Optional Features.
-
-Scan this list to see if OpenSSH client is already installed. If not, then at the top of the page select "Add a feature", then:
-
-* To install the OpenSSH client, locate "OpenSSH Client", then click "Install".
-* To install the OpenSSH server, locate "OpenSSH Server", then click "Install".
-
-Once the installation completes, return to Apps > Apps and Features > Manage Optional Features and you should see the OpenSSH component(s) listed.
-
-> [!NOTE]
-> Installing OpenSSH Server will create and enable a firewall rule named "OpenSSH-Server-In-TCP". This allows inbound SSH traffic on port 22.
-
-## Installing OpenSSH with PowerShell
-
-To install OpenSSH using PowerShell, first launch PowerShell as an Administrator.
-To make sure that the OpenSSH features are available for install:
+To install OpenSSH using PowerShell, run PowerShell as an Administrator.
+To make sure that OpenSSH is available, run the following cmdlet:
 
 ```powershell
 Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
+```
 
-# This should return the following output:
+This should return the following output if neither are already installed:
 
+```
 Name  : OpenSSH.Client~~~~0.0.1.0
 State : NotPresent
+
 Name  : OpenSSH.Server~~~~0.0.1.0
 State : NotPresent
 ```
 
-Then, install the server and/or client features:
+Then, install the server or client components as needed:
 
 ```powershell
 # Install the OpenSSH Client
@@ -55,20 +64,73 @@ Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 
 # Install the OpenSSH Server
 Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+```
 
-# Both of these should return the following output:
+Both of these should return the following output:
 
+```
 Path          :
 Online        : True
 RestartNeeded : False
 ```
 
-## Uninstalling OpenSSH
+## Start and configure OpenSSH Server
 
-To uninstall OpenSSH using the Windows Settings, start Settings then go to Apps > Apps and Features > Manage Optional Features.
-In the list of installed features, select the OpenSSH Client or OpenSSH Server component, then select Uninstall.
+To start and configure OpenSSH Server for initial use, open PowerShell as an administrator, then run the following commands to start the `sshd service`:
 
-To uninstall OpenSSH using PowerShell, use one of the following commands:
+```powershell
+# Start the sshd service
+Start-Service sshd
+
+# OPTIONAL but recommended:
+Set-Service -Name sshd -StartupType 'Automatic'
+
+# Confirm the firewall rule is configured. It should be created automatically by setup.
+Get-NetFirewallRule -Name *ssh*
+
+# There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled
+# If the firewall does not exist, create one
+New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+```
+
+## Connect to OpenSSH Server
+
+Once installed, you can connect to OpenSSH Server from a Windows 10 or Windows Server 2019 device with the OpenSSH client installed using PowerShell as follows. Be sure to run PowerShell as an administrator:
+
+```powershell
+ssh username@servername
+```
+
+Once connected, you get a message similar to the following:
+
+```
+The authenticity of host 'servername (10.00.00.001)' can't be established.
+ECDSA key fingerprint is SHA256:(<a large string>).
+Are you sure you want to continue connecting (yes/no)?
+```
+
+Selecting **yes** adds that server to the list of known SSH hosts on your Windows client.
+
+You are prompted for the password at this point. As a security precaution, your password will not be displayed as you type.
+
+Once connected, you will see the Windows command shell prompt:
+
+```
+domain\username@SERVERNAME C:\Users\username>
+```
+
+## Uninstall OpenSSH using Windows Settings
+
+To uninstall OpenSSH using Windows Settings:
+
+1. Open **Settings**, then go to **Apps > Apps & Features**.
+1. Go to **Optional Features**.
+1. In the list, select **OpenSSH Client** or **OpenSSH Server**.
+1. Select **Uninstall**.
+
+## Uninstall OpenSSH using PowerShell
+
+To uninstall the OpenSSH components using PowerShell, use the following commands:
 
 ```powershell
 # Uninstall the OpenSSH Client
@@ -78,51 +140,4 @@ Remove-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 
-A Windows restart may be required after removing OpenSSH, if the service is in use at the time it was uninstalled.
-
-
-## Initial Configuration of SSH Server
-
-To configure the OpenSSH server for initial use on Windows, launch PowerShell as an administrator, then run the following commands to start the SSHD service:
-
-```powershell
-Start-Service sshd
-# OPTIONAL but recommended:
-Set-Service -Name sshd -StartupType 'Automatic'
-# Confirm the Firewall rule is configured. It should be created automatically by setup.
-Get-NetFirewallRule -Name *ssh*
-# There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled
-# If the firewall does not exist, create one
-New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
-```
-
-## Initial use of SSH
-
-Once you have installed the OpenSSH Server on Windows, you can quickly test it using PowerShell from any Windows device with the SSH Client installed.
-In PowerShell type the following command:
-
-```powershell
-Ssh username@servername
-```
-
-The first connection to any server will result in a message similar to the following:
-
-```
-The authenticity of host 'servername (10.00.00.001)' can't be established.
-ECDSA key fingerprint is SHA256:(<a large string>).
-Are you sure you want to continue connecting (yes/no)?
-```
-
-The answer must be either "yes" or "no".
-Answering Yes will add that server to the local system's list of known ssh hosts.
-
-You will be prompted for the password at this point. As a security precaution, your password will not be displayed as you type.
-
-Once you connect you will see a command shell prompt similar to the following:
-
-```
-domain\username@SERVERNAME C:\Users\username>
-```
-
-The default shell used by Windows OpenSSH server is the Windows command shell.
-
+You may need to restart Windows afterwards if the service was in use at the time it was uninstalled.

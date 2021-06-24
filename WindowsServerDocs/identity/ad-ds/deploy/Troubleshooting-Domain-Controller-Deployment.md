@@ -1,9 +1,10 @@
 ---
+description: "Learn more about: Troubleshooting Domain Controller Deployment"
 ms.assetid: 5ab76733-804d-4f30-bee6-cb672ad5075a
 title: Troubleshooting Domain Controller Deployment
-author: MicrosoftGuyJFlo
-ms.author: joflore
-manager: mtillman
+author: iainfoulds
+ms.author: daveba
+manager: daveba
 ms.date: 03/20/2019
 ms.topic: article
 ---
@@ -16,7 +17,7 @@ This topic covers detailed methodology on troubleshooting domain controller conf
 
 ## Introduction to Troubleshooting
 
-![Troubleshooting](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)
+![Diagram that shows the workflow for troubleshooting domain controller deployment.](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)
 
 ## Built-in logs for troubleshooting
 

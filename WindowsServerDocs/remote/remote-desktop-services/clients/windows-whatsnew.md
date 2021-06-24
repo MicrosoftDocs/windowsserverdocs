@@ -1,20 +1,30 @@
 ---
-title: What's new in the Windows Store client
-description: Learn about recent changes to the Remote Desktop client for Windows Store
+title: What's new in the Microsoft Store client
+description: Learn about recent changes to the Microsoft Store client.
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 08/19/2020
+ms.date: 03/29/2021
 ms.localizationpriority: medium
 ---
-# What's new in the Windows Store client
+# What's new in the Microsoft Store client
 
-We regularly update the [Windows Store client](windows.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+We regularly update the [Microsoft Store client](windows.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
-## Updates for version 10.2.1519 (Insider)
+## Updates for version 10.2.1810
 
-*Date published: 08/19/2020*
+*Date published: 03/29/2021*
+
+- Fixed an issue that caused crashes during clipboard scenarios.
+- Fixed an issue that happened when using the client with HoloLens.
+- Fixed an issue where the lock screen wasn't appearing in the remote session.
+- Fixed issues that happened when the client tried to connect to devices with the “Always prompt for password upon connection” group policy set.
+- Added several stability improvements to the client.
+
+## Updates for version 10.2.1534
+
+*Date published: 08/26/2020*
 
 - Rewrote the client to use the same underlying RDP core engine as the iOS, macOS, and Android clients.
 - Added support for the Azure Resource Manager-integrated version of Windows Virtual Desktop.
@@ -27,6 +37,7 @@ We regularly update the [Windows Store client](windows.md), adding new features 
 - Updated subscription can now detect whether you're using Windows Virtual Desktop or Windows Virtual Desktop (classic).
 - Fixed issue with copying files to remote PCs.
 - Fixed commonly reported accessibility issues with buttons.
+- A limit of up to 20 credentials per app is allowed.
 
 ## Updates for version 10.1.1215
 
