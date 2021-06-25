@@ -4,8 +4,8 @@ description: This topic provides links to documentation for Remote Access in Win
 manager: brianlic
 ms.topic: article
 ms.assetid: 3c6df007-4c39-4b72-9f2c-b2c9b2825c2f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Remote Access Server Role Documentation

@@ -18,7 +18,7 @@ SMBv1 has the following behavior in Windows 10 and Windows Server starting in v
 
 - SMBv1 now has both client and server sub-features that can be uninstalled separately.
 - Windows 10 Enterprise, Windows 10 Education, and Windows 10 Pro for Workstations no longer contain the SMBv1 client or server by default after a clean installation.
-- Windows Server 2016 no longer contains the SMBv1 client or server by default after a clean installation.
+- Windows Server 2019 no longer contains the SMBv1 client or server by default after a clean installation.
 - Windows 10 Home and Windows 10 Pro no longer contain the SMBv1 server by default after a clean installation.
 - Windows 10 Home and Windows 10 Pro still contain the SMBv1 client by default after a clean installation. If the SMBv1 client is not used for 15 days in total (excluding the computer being turned off), it automatically uninstalls itself.
 - In-place upgrades and Insider flights of Windows 10 Home and Windows 10 Pro do not automatically remove SMBv1 initially. If the SMBv1 client or server is not used for 15 days in total (excluding the time during which the computer is off), they each automatically uninstall themselves. 

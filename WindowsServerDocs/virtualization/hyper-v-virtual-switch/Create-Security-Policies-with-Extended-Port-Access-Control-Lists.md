@@ -4,8 +4,8 @@ description: This topic provides information about extended port Access Control 
 manager: brianlic
 ms.topic: article
 ms.assetid: a92e61c3-f7d4-4e42-8575-79d75d05a218
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Create Security Policies with Extended Port Access Control Lists

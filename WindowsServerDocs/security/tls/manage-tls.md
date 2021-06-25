@@ -118,7 +118,7 @@ The process for distributing a curve is:
 4. Configure the newly created Group Policy Preference Registry Collection by adding a new **Registry Item** for each registry value listed under *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters\[curveName]*.
 5. Deploy the Group Policy object containing Group Policy Registry Collection item to Windows 10 and Windows Server 2016 computers that should receive the new named curves.
 
-    ![GPP distribute curves](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)
+    ![Screenshot of the Preferences tab of the Group Policy Management Editor.](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)
 
     *Figure 3 Using Group Policy Preferences to distribute curves*
 
@@ -128,6 +128,6 @@ Beginning with Windows 10 and Windows Server 2016, ECC Curve Order group policy 
 Using Generic ECC and this setting, organizations can add their own trusted named curves (that are approved for use with TLS) to the operating system and then add those named curves to the curve priority Group Policy setting to ensure they are used in future TLS handshakes.
 New curve priority lists become active on the next reboot after receiving the policy settings.
 
-![GPP distribute curves](../media/Transport-Layer-Security-protocol/gp-managing-tls-curve-priority-order.png)
+![Screenshot of the EEC Curve Order dialog box.](../media/Transport-Layer-Security-protocol/gp-managing-tls-curve-priority-order.png)
 
 *Figure 4 Managing TLS curve priority using Group Policy*

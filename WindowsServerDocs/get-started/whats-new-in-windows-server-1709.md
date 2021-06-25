@@ -2,8 +2,8 @@
 title: What's New in Windows Server, version 1709
 description: What are the new features in compute, identity, management, automation, networking, security, and storage in Windows Server, version 1709.
 ms.topic: article
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.localizationpriority: medium
 ms.date: 06/03/2019
@@ -85,7 +85,7 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
 ## Storage
 
 **Storage Replica**: The disaster recovery protection added by Storage Replica in Windows Server 2016 is now expanded to include:
-- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes.  For more information, see [Frequently Asked Questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.md).
+- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes.  For more information, see [Frequently Asked Questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.yml).
 - **Project Honolulu support**: Support for graphical management of server to server replication is now available in Project Honolulu. This removes the requirement to use PowerShell to manage a common disaster protection workload.
 
 **SMB**:

@@ -3,8 +3,8 @@ title: bitsadmin
 description: Reference article for the bitsadmin command, which is a command-line tool used to create, download, or upload jobs and monitor their progress.
 ms.topic: reference
 ms.assetid: 4853036e-1df8-45ad-8be6-cfb097b8dd27
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

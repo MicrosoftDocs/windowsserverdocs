@@ -4,8 +4,8 @@ description: Learn how to install and configure CLIENT2.
 manager: brianlic
 ms.topic: article
 ms.assetid: f009fdd1-94e6-4ccb-8c6e-609a5394db53
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # STEP 3 Install and Configure CLIENT2

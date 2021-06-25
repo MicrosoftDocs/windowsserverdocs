@@ -3,8 +3,8 @@ title: Schannel Security Support Provider Technical Reference
 description: Learn about Transport Layer Security protocol, the Secure Sockets Layer protocol, and the Datagram Transport Layer Security protocol as implemented by the Schannel Security Support Provider.
 ms.topic: article
 ms.assetid: 5bf9c4a5-cdc1-49eb-bf9a-8bf987410b63
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 08/08/2018
 ---

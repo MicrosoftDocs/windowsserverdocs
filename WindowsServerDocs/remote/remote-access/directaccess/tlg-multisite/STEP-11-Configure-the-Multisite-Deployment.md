@@ -4,8 +4,8 @@ description: Learn how to make changes to the current Remote Access configuratio
 manager: brianlic
 ms.topic: article
 ms.assetid: 8cbdeb1d-5f7c-4360-bcc1-ab40d3cd8040
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # STEP 11 Configure the Multisite Deployment

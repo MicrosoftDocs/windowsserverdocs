@@ -4,8 +4,8 @@ description: Learn how to verify that User1 has a User Principal Name defined on
 manager: brianlic
 ms.topic: article
 ms.assetid: 836a2a08-3d22-48d2-873e-80d7e57ebbd6
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # STEP 3 Configure DC1

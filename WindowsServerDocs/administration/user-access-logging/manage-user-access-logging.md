@@ -195,7 +195,7 @@ On the first day of the year, UAL will create a new *GUID.mdb*. The old *GUID.md
 4.  Use the Services console to stop and restart the User Access Logging Service.
 
 ## Deleting data logged by UAL
-UAL is not intended to be a mission critical component. Its design is intended to impact local system operations as little as possible while maintaining a high level of reliability. This also allows the administrator to manually delete UAL database and supporting files (every file in \Windows\System32\LogFilesSUM\ directory) to meet operational needs.
+UAL is not intended to be a mission critical component. Its design is intended to impact local system operations as little as possible while maintaining a high level of reliability. This also allows the administrator to manually delete UAL database and supporting files (every file in \Windows\System32\LogFiles\SUM\ directory) to meet operational needs.
 
 #### To delete data logged by UAL
 

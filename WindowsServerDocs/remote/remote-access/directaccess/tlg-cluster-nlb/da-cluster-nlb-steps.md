@@ -4,8 +4,8 @@ description: Learn how to configure the Remote Access infrastructure, configure 
 manager: brianlic
 ms.topic: article
 ms.assetid: e508d3ee-ffa6-463f-a3dd-9e35e745c005
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Steps for Configuring the DirectAccess Cluster-NLB Test Lab

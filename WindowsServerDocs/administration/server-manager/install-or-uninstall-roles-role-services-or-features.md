@@ -3,8 +3,8 @@ title: Install or Uninstall Roles, Role Services, or Features
 description: Learn how to install roles and features to local or remote servers, or offline virtual hard disks (VHDs).
 ms.topic: article
 ms.assetid: 04f16d84-45c2-4771-84c1-1cc973d0ee02
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -19,7 +19,7 @@ In Windows Server, the Server Manager console and Windows PowerShell cmdlets for
 
 You must be logged on to a server as an administrator to install or uninstall roles, role services, and features. If you are logged on to the local computer with an account that does not have administrator rights on your target server, right-click the target server in the **Servers** tile, and then click **Manage As** to provide an account that has administrator rights. The server on which you want to mount an offline VHD must be added to Server Manager, and you must have Administrator rights on that server.
 
-For more information about what roles, role services, and features are, see [Roles, Role Services, and Features](https://go.microsoft.com/fwlink/p/?LinkId=239558).
+For more information about what roles, role services, and features are, see [Roles, Role Services, and Features](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754923(v=ws.11)).
 
 This topic contains the following sections.
 
@@ -77,7 +77,7 @@ In a single session in the add Roles and Features Wizard, you can install roles,
 
     You can also export your selections to an XML-based configuration file that you can use for unattended installations with Windows PowerShell. To export the configuration you specified in this add Roles and Features Wizard session, click **Export configuration settings**, and then save the XML file to a convenient location.
 
-    The **Specify an alternate source path** command on the **Confirm installation selections** page lets you specify an alternate source path for the files that are required to install roles and features on the selected server. In  Windows Server 2012  and later releases of Windows Server, [Features on Demand](https://go.microsoft.com/fwlink/p/?LinkID=241573) lets you reduce the amount of disk space used by the operating system, by removing role and feature files from servers that are exclusively managed remotely. If you have removed role and feature files from a server by using the `Uninstall-WindowsFeature -remove` cmdlet, you can install roles and features on the server in the future by specifying an alternate source path, or a share on which required role and feature files are stored. The source path or file share must grant **Read** permissions either to the **Everyone** group (not recommended for security reasons), or to the computer account (*DOMAIN*\\*SERverNAME*$) of the destination server; granting user account access is not sufficient. For more information about Features on Demand, see [Windows Server Installation Options](https://go.microsoft.com/fwlink/p/?LinkId=241573).
+    The **Specify an alternate source path** command on the **Confirm installation selections** page lets you specify an alternate source path for the files that are required to install roles and features on the selected server. In  Windows Server 2012  and later releases of Windows Server, [Features on Demand](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831786(v=ws.11)) lets you reduce the amount of disk space used by the operating system, by removing role and feature files from servers that are exclusively managed remotely. If you have removed role and feature files from a server by using the `Uninstall-WindowsFeature -remove` cmdlet, you can install roles and features on the server in the future by specifying an alternate source path, or a share on which required role and feature files are stored. The source path or file share must grant **Read** permissions either to the **Everyone** group (not recommended for security reasons), or to the computer account (*DOMAIN*\\*SERverNAME*$) of the destination server; granting user account access is not sufficient. For more information about Features on Demand, see [Windows Server Installation Options](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831786(v=ws.11)).
 
     You can specify a WIM file as an alternate feature file source when you are installing roles, role services, and features on a running, physical server. The source path for a WIM file should be in the following format, with **WIM** as a prefix, and the index in which the feature files are located as a suffix: **WIM:e:\sources\install.wim:4**. However, you cannot use a WIM file directly as a source for installing roles, role services, and features to an offline VHD; you must either mount the offline VHD and point to its mount path for source files, or you must point to a folder that contains a copy of the contents of the WIM file.
 
@@ -402,9 +402,6 @@ The Group Policy setting described in this section specifies authorized source l
 6. Click **OK** when you are finished changing this policy setting, and then close the Group Policy editor.
 
 ## See Also
-[Windows Server Installation Options](https://go.microsoft.com/fwlink/p/?LinkId=241573)
-[Microsoft .NET Framework 3.5 Deployment Considerations](https://go.microsoft.com/fwlink/p/?LinkId=248869)
-[How to Enable or Disable Windows Features](https://go.microsoft.com/fwlink/p/?LinkId=246552)
-
-
-
+[Windows Server Installation Options](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831786(v=ws.11))
+[Microsoft .NET Framework 3.5 Deployment Considerations](/previous-versions/windows/it-pro/windows-8.1-and-8/dn482066(v=win.10))
+[How to Enable or Disable Windows Features](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824822(v=win.10))

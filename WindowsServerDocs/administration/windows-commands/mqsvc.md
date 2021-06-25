@@ -3,8 +3,8 @@ title: mqsvc
 description: Reference article for the mqsvc command, which enables apps running at different times to communicate across heterogeneous networks and systems that may be temporarily offline.
 ms.topic: reference
 ms.assetid: 8bfd7874-ccb4-453f-b908-3a5b9aee0ad6
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

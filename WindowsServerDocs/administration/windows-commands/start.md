@@ -3,8 +3,8 @@ title: start
 description: Reference article for the start command, which starts a separate Command Prompt window to run a specified program or command.
 ms.topic: reference
 ms.assetid: 0173f9b3-5cd7-4edb-b01e-d02193b4fadc
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -53,7 +53,7 @@ start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 
   Note that the syntax is the same as the PATH variable, with semicolons (;) separating each extension.
 
-- When searching for an executable file, if there is no match on any extension, **start** checks to see if the name matches a directory name. If it does, **start** opens Explorer.exe on that path.
+- **start** searches for a specified executable file, and if found the executable will launch regardless of the current working directory. When searching for an executable file, if there is no match on any extension, **start** checks to see if the name matches a directory name. If it does, **start** opens Explorer.exe on that path.
 
 ## Examples
 

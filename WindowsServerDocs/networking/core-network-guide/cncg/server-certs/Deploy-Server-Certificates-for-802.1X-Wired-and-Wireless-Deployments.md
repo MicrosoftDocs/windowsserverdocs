@@ -4,8 +4,8 @@ description: Learn how to deploy server certificates to your Remote Access and N
 manager: brianlic
 ms.topic: article
 ms.assetid: 0a39ecae-39cc-4f26-bd6f-b71ed02fc4ad
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Deploy Server Certificates for 802.1X Wired and Wireless Deployments

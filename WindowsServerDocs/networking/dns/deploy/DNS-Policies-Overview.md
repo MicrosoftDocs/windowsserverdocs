@@ -4,8 +4,8 @@ description: Learn how to use DNS Policy for Geo-Location based traffic manageme
 manager: brianlic
 ms.topic: article
 ms.assetid: 566bc270-81c7-48c3-a904-3cba942ad463
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 01/05/2021
 ---
 # DNS Policies Overview

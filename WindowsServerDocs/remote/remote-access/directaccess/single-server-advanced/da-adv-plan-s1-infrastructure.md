@@ -4,8 +4,8 @@ description: Learn how to plan the infrastructure that is required for the deplo
 manager: brianlic
 ms.topic: article
 ms.assetid: aa3174f3-42af-4511-ac2d-d8968b66da87
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Step 1 Plan the Advanced DirectAccess Infrastructure
@@ -317,6 +317,17 @@ Auto detection works as follows:
 
 -   If the corporate network is IPv6-based, the default address is the IPv6 address of DNS servers in the corporate network.
 
+> [!NOTE]
+> Starting with the Windows 10 May 2020 Update, a client no longer registers its IP addresses on DNS servers configured in a Name Resolution Policy Table (NRPT).
+> If DNS registration is needed, for example **Manage Out**, it can be explicitly enabled with this registry key on the client:
+>
+> Path: `HKLM\System\CurrentControlSet\Services\Dnscache\Parameters`<br/>
+> Type: `DWORD`<br/>
+> Value name: `DisableNRPTForAdapterRegistration`<br/>
+> Values:<br/>
+> `1` - DNS Registration disabled (default since the Windows 10 May 2020 Update)<br/>
+> `0` - DNS Registration enabled
+
 **Infrastructure servers**
 
 -   **Network location server**
@@ -577,7 +588,7 @@ GPOs can be configured in two ways:
 Whether you are using automatically or manually configured GPOs, you need to add a policy for slow link detection if your clients will use 3G networks. The path for **Policy: Configure Group Policy slow link detection** is: **Computer configuration/Polices/Administrative Templates/System/Group Policy**.
 
 > [!CAUTION]
-> Use the following procedure to back up all Remote Access GPOs before you run DirectAccess cmdlets: [Back up and Restore Remote Access Configuration](https://go.microsoft.com/fwlink/?LinkID=257928).
+> Use the following procedure to back up all Remote Access GPOs before you run DirectAccess cmdlets: [Back up and Restore Remote Access Configuration](/samples/browse/?redirectedfrom=TechNet-Gallery).
 
 If the correct permissions (which are listed in the following sections) for linking GPOs do not exist, a warning is issued. The Remote Access operation will continue but linking will not occur. If this warning is issued, links will not be created automatically, even when the permissions are added later. Instead the administrator needs to create the links manually.
 
@@ -628,7 +639,7 @@ If you want to manually modify GPO settings, consider the following:
 
 In addition, if you modify settings on a domain controller that is not the domain controller associated with the DirectAccess server (for the server GPO) or the PDC (for client and application server GPOs), consider the following:
 
--   Before you modify the settings, ensure that the domain controller is replicated with an up-to-date GPO, and back up your GPO settings. For more information, see [Back up and Restore Remote Access Configuration](https://go.microsoft.com/fwlink/?LinkID=257928). If the GPO is not updated, merge conflicts during replication might occur, which can result in a corrupt Remote Access configuration.
+-   Before you modify the settings, ensure that the domain controller is replicated with an up-to-date GPO, and back up your GPO settings. For more information, see [Back up and Restore Remote Access Configuration](/samples/browse/?redirectedfrom=TechNet-Gallery). If the GPO is not updated, merge conflicts during replication might occur, which can result in a corrupt Remote Access configuration.
 
 -   After you modify the settings, you must wait for changes to replicate to the domain controllers that are associated with the GPOs. Do not make additional changes by using the Remote Access Management console or Remote Access PowerShell cmdlets until replication is complete. If a GPO is edited on two domain controllers before replication is complete, merge conflicts might occur, which can result in a corrupt Remote Access configuration.
 
@@ -675,4 +686,3 @@ The Remote Access Management console will display the following error message: *
 ## Next steps
 
 -   [Step 2: Plan DirectAccess Deployments](da-adv-plan-s2-deployments.md)
-

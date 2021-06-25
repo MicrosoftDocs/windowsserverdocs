@@ -3,8 +3,8 @@ title: add-DriverPackage
 description: Reference article for the add-DriverPackage command, which adds a driver package to the server.
 ms.topic: reference
 ms.assetid: 3ac9e8d5-63ec-4ce8-86fc-85d28011050b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,7 +4,7 @@ description: Learn about the Uniform Resource Identifier scheme for Remote Deskt
 ms.topic: article
 ms.assetid: 0c3f1eb6-835c-4522-99ff-56c6ee4bb911
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
 ms.date: 06/01/2020
 ms.localizationpriority: medium

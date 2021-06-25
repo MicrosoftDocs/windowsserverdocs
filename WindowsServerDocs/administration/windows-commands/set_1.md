@@ -3,8 +3,8 @@ title: set
 description: Reference article for set, which displays, sets, or removes cmd.exe environment variables.
 ms.topic: reference
 ms.assetid: 5fdd60d6-addf-4574-8c92-8aa53fa73d76
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -80,7 +80,7 @@ set /a <variable>=<expression>
 
 ## Examples
 
-To set an environment variable named *TEST^1*, type:
+To set the value *TEST^1* for the environment variable named `testVar`, type:
 
 ```
 set testVar=test^^1
@@ -88,7 +88,7 @@ set testVar=test^^1
 
 The **set** command assigns everything that follows the equal sign (=) to the value of the variable. Therefore, if you type `set testVar=test^1`, you'll get the following result, `testVar=test^1`.
 
-To set an environment variable named *TEST&1*, type:
+To set the value *TEST&1* for the environment variable `testVar`, type:
 
 ```
 set testVar=test^&1

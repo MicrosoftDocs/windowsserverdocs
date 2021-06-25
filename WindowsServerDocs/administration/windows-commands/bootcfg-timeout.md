@@ -3,8 +3,8 @@ title: bootcfg timeout
 description: Reference article for the bootcfg timeout command, which changes the operating system time-out value.
 ms.topic: reference
 ms.assetid: aa858eac-2bb7-4a27-a9bc-3e4a6eb8b2c6
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

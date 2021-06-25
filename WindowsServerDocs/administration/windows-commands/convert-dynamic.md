@@ -3,8 +3,8 @@ title: convert dynamic
 description: Reference article for the convert dynamic command, which converts a basic disk into a dynamic disk.
 ms.topic: reference
 ms.assetid: 7b8fa4b1-850f-4e48-b05f-871c883ea33c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

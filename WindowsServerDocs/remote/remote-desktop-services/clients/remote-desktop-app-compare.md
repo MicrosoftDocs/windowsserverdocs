@@ -4,9 +4,9 @@ description: Learn how the different RD apps compare when it comes to redirectio
 ms.topic: article
 ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 12/16/2020
+ms.date: 02/04/2021
 ms.localizationpriority: medium
 ---
 

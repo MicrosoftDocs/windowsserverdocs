@@ -3,8 +3,8 @@ title: Set context
 description: Reference article for the set context command, which sets the context for shadow copy creation.
 ms.topic: reference
 ms.assetid: fc16c7dd-e8f0-4c2a-8742-0bddb2848bfd
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

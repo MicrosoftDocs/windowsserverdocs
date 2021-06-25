@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: 3c62f533-1815-4f08-96b1-dc271f5a2b36
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/24/2018
+ms.date: 06/25/2021
 ---
 # Create a VM and connect to a tenant virtual network or VLAN
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 In this topic, you create a tenant VM and connect it to either a virtual network that you created with Hyper-V Network Virtualization or to a virtual Local Area Network (VLAN). You can use Windows PowerShell Network Controller cmdlets to connect to a virtual network or NetworkControllerRESTWrappers to connect to a VLAN.
 
@@ -25,7 +25,7 @@ The sections in this topic include example Windows PowerShell commands that cont
 
 2. If the VM requires network access on startup, do not start the VM until after setting the interface ID on the VM network adapter port. If you start the VM before setting the interface ID, and the network interface does not exist, the VM cannot communicate on the network in the Network Controller, and all policies applied.
 
-3. If you require custom ACLs for this network interface, then create the ACL now by using instructions in the topic [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](./use-acls-for-traffic-flow.md)
+3. If you require custom ACLs for this network interface, then create the ACL now by using instructions in the topic [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](/azure-stack/hci/manage/use-datacenter-firewall-powershell)
 
 Ensure that you have already created a Virtual Network before using this example command. For more information, see [Create, Delete, or Update Tenant Virtual Networks](./create,-delete,-or-update-tenant-virtual-networks.md).
 
@@ -78,7 +78,7 @@ Ensure that you have already created a Virtual Network before using this example
 4. Get the InstanceId for the network interface from Network Controller.
 
    ```PowerShell
-    $nic = Get-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId "MyVM-Ethernet1"
+    $nic = Get-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId "MyVM_Ethernet1"
    ```
 
 5. Set the Interface ID on the Hyper-V VM network adapter port.

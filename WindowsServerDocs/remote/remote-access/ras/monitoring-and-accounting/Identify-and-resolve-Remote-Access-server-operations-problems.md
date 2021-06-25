@@ -4,8 +4,8 @@ description: Learn how to identify Remote Access server operations issues, their
 manager: brianlic
 ms.topic: article
 ms.assetid: 7ce84c9f-fd1f-4463-8fc7-d2f33344a2c9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Identify and resolve Remote Access server operations problems

@@ -5,7 +5,7 @@ manager: eldenc
 ms.author: nedpyle
 ms.topic: how-to
 author: nedpyle
-ms.date: 04/26/2019
+ms.date: 01/27/2021
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 ---
 # Stretch Cluster Replication Using Shared Storage
@@ -16,6 +16,9 @@ In this evaluation example, you will configure these computers and their storage
 
 > [!IMPORTANT]
 > In this evaluation, servers in different sites must be able to communicate with the other servers via a network, but not have any physical connectivity to the other site's shared storage. This scenario does not make use of Storage Spaces Direct.
+
+> [!NOTE]
+> You may also want to consider using an Azure Stack HCI solution to implement a stretch cluster. For more information, see [Stretched clusters overview in Azure Stack HCI](/azure-stack/hci/concepts/stretched-clusters).
 
 ## Terms
 This walkthrough uses the following environment as an example:
@@ -41,6 +44,9 @@ This walkthrough uses the following environment as an example:
 -   Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.
 -   A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.
 -   The replicated storage cannot be located on the drive containing the Windows operating system folder.
+
+> [!IMPORTANT]
+> While it is possible to attach a storage device to a single server and use this for replication, Windows Failover Clustering still relies on SCSI Persistent Reservations. Therefore, the storage must still be a Shared Storage type such as a SAN technology. Local disks or disks presented by a hypervisor might not be compatible. In Azure, the disks must be a Premium SSD size that supports sharing, even if only one VM is to be attached to it.
 
 Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the following steps.
 
@@ -793,8 +799,9 @@ Now you will manage and operate your stretch cluster. You can perform all of the
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
-- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 
 ## See Also
 - [Windows Server 2016](../../index.yml)
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
+- [Stretched Clusters in Azure Stack HCI](/azure-stack/hci/concepts/stretched-clusters)

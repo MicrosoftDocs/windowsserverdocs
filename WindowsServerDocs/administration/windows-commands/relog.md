@@ -3,8 +3,8 @@ title: relog
 description: Reference article for the relog command, which extracts performance counter information from the performance counter log files.
 ms.topic: reference
 ms.assetid: 7480f6c0-9953-4d70-9b1c-b27e09d8db13
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 07/11/2018
 ---

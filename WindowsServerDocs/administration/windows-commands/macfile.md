@@ -3,8 +3,8 @@ title: macfile
 description: Reference article for the macfile command, which manages File Server for Macintosh servers, volumes, directories, and files.
 ms.topic: reference
 ms.assetid: e2ce586c-b316-41d3-90f8-4be0d074cc0e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

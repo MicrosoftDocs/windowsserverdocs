@@ -1,11 +1,11 @@
 ---
 title: Troubleshooting Adding Entry Points
-description: Learn how to troubleshoot issues related to the Add-DAEntryPoint command. 
+description: Learn how to troubleshoot issues related to the Add-DAEntryPoint command.
 manager: brianlic
 ms.topic: article
 ms.assetid: dcc1037f-1a65-4497-99e6-0df9aef748a8
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Troubleshooting Adding Entry Points

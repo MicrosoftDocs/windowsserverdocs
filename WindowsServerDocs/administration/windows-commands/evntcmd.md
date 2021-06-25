@@ -3,8 +3,8 @@ title: evntcmd
 description: Reference article for the evntcmd command, which configures the translation of events to traps, trap destinations, or both based on information in a configuration file.
 ms.topic: reference
 ms.assetid: c1aabb74-76e7-4304-95a6-50ad87e92fd9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

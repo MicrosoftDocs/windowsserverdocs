@@ -3,8 +3,8 @@ title: ftp put
 description: Reference article for the ftp put command, which copies a local file to the remote computer using the current file transfer type.
 ms.topic: reference
 ms.assetid: 95cc1e3f-523d-4374-98b8-16e6c276b2ca
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 03/30/2020
 ---

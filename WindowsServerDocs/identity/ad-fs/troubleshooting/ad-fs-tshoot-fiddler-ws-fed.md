@@ -39,10 +39,10 @@ Request:
 
 Response:
 
-- The Response is a prompt for credentials.  This indicates that we are using forms authnetication
+- The Response is a prompt for credentials.  This indicates that we are using forms authentication
 - By clicking on the WebView of the Response you can see the credentials prompt.
 
-![Continuation of Fiddler trace](media/ad-fs-tshoot-fiddler-ws-fed/fiddler6.png)
+![Screenshot of the web view of the response showing the credentials prompt.](media/ad-fs-tshoot-fiddler-ws-fed/fiddler6.png)
 
 ## Step 5 and 6
 
@@ -59,7 +59,7 @@ Response:
 
 ## Step 7 and 8
 
-![Continuation of Fiddler trace](media/ad-fs-tshoot-fiddler-ws-fed/fiddler5.png)
+![Screenshot of the of Fiddler trace showing the H T T P Get request and the response to that request.](media/ad-fs-tshoot-fiddler-ws-fed/fiddler5.png)
 
 Request:
 
@@ -75,7 +75,7 @@ Response:
 
 ## Step 9 and 10
 
-![Continuation of Fiddler trace](media/ad-fs-tshoot-fiddler-ws-fed/fiddler7.png)
+![Screenshot of the of Fiddler trace showing the H T T P Post request and the response to that request.](media/ad-fs-tshoot-fiddler-ws-fed/fiddler7.png)
 
 Request:
 

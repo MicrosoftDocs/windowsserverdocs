@@ -20,7 +20,7 @@ If you are setting up a farm, be sure to perform this procedure identically—us
 > [!NOTE]
 > The AD FS Management snap\-in refers to server authentication certificates for federation servers as service communication certificates.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ### To import a server authentication certificate to the Default Web Site
 
@@ -46,5 +46,3 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 [Certificate Requirements for Federation Servers](../design/certificate-requirements-for-federation-servers.md)
 
 [Certificate Requirements for Federation Server Proxies](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dd807054(v=ws.11))
-
-

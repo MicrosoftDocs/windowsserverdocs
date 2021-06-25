@@ -3,8 +3,8 @@ title: wdsutil reject-autoadddevices
 description: Reference article for wdsutil reject-autoadddevices, which rejects computers that are pending administrative approval.
 ms.topic: reference
 ms.assetid: ea25a4b2-5fad-4360-9c47-c2c9df7ea31f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

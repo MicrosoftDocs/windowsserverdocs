@@ -4,8 +4,8 @@ description: This topic provides an overview of the Remote Access server role in
 manager: dougkim
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 05/18/2018
 ---
 
@@ -19,7 +19,7 @@ The Remote Access guide provides you with an overview of the Remote Access serve
 - [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol-BGP.md)
 - [RAS Gateway](ras-gateway/RAS-Gateway.md)
 - [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md)
-- [RAS Gateway for SDN](../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
+- [RAS Gateway for SDN](/azure-stack/hci/concepts/gateway-overview)
 - [Virtual Private Networking (VPN)](vpn/vpn-top.md)
 
 For more information about other networking technologies, see [Networking in Windows Server 2016](../../networking/index.yml).

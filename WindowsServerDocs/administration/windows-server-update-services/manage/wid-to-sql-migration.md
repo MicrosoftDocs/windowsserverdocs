@@ -3,8 +3,8 @@ title: Migrating the WSUS Database from (Windows Internal Database) WID to SQL
 description: Windows Server Update Service (WSUS) topic - How to migrate the WSUS database (SUSDB) from a Windows Internal Database instance to a Local or Remote instance of SQL Server.
 ms.topic: how-to
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09g7dr
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 07/25/2018
 ---
@@ -45,7 +45,7 @@ From PowerShell (elevated), run:
 #### Using Command Prompt
 
 > [!IMPORTANT]
-> These steps show how to detach the WSUS database (SUSDB) from the Windows Internal Database instance by using the **sqlcmd** utility. For more information about the **sqlcmd** utility, see [sqlcmd Utility](https://go.microsoft.com/fwlink/?LinkId=81183).
+> These steps show how to detach the WSUS database (SUSDB) from the Windows Internal Database instance by using the **sqlcmd** utility. For more information about the **sqlcmd** utility, see [sqlcmd Utility](/sql/tools/sqlcmd-utility).
 > 1. Open an elevated command prompt
 > 2. Run the following SQL command to detach the WSUS database (SUSDB) from the Windows Internal Database instance by using the **sqlcmd** utility:
 

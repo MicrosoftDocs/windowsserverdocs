@@ -4,8 +4,8 @@ description: Learn about the planning steps required in order to deploy  Windows
 manager: brianlic
 ms.topic: article
 ms.assetid: 8387eabe-7363-4367-b5b1-03c67baa2933
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Plan a Multisite Deployment

@@ -3,8 +3,8 @@ title: create partition logical
 description: Reference article for the create partition logical command, which creates a logical partition in an existing extended partition.
 ms.topic: reference
 ms.assetid: 1f59b79a-d690-4d0e-ad38-40df5a0ce38e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,8 +4,8 @@ description: Learn how to deploy BranchCache in distributed and hosted cache mod
 manager: brianlic
 ms.topic: how-to
 ms.assetid: 30b0a6d9-d6d5-4019-b8dc-ed5365d9921f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 01/05/2021
 ---
 # Deploy BranchCache
