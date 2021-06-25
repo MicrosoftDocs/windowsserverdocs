@@ -98,6 +98,12 @@ To use SMB over QUIC, you need the following things:
 
 1. Click on the **Files and File Sharing** menu option. Note your existing SMB shares or create a new one.
 
+For a demonstration of configuring and using SMB over QUIC, watch this video:
+
+
+> [!VIDEO https://www.youtube.com/embed/OslBSB8IkUw]
+
+
 ### Step 3: Connect to SMB shares
 
 1. Join your Windows Insider Dev Channel client to your domain.Be certain the names of the SMB over QUIC file server's certificate subject alternative names are published to DNS and are fully qualified **OR** added to the HOST files for your Windows Insider Dev Channel client.Ensure that the  server's certificate subject alternative names are published to DNS **OR** added to the HOSTS files for your Windows Insider Dev Channel client.
