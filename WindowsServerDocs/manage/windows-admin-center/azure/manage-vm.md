@@ -4,7 +4,7 @@ description: An overview of using Windows Admin Center in the Azure portal to ma
 ms.topic: overview
 author: jasongerend
 ms.author: jgerend
-ms.date: 05/28/2021
+ms.date: 06/25/2021
 ---
 # Use Windows Admin Center in the Azure portal to manage a Windows Server VM
 
@@ -193,6 +193,73 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
   - C:\WindowsAzure\Logs\Plugins\AdminCenter
   - C:\Packages\Plugins\AdminCenter
 - Network trace, if appropriate. Network traces can contain customer data and sensitive security details, such as passwords, so we recommend reviewing the trace and removing any sensitive details before sharing it.
+
+## Automate Windows Admin Center deployment in Azure portal
+
+To automate Windows Admin Center deployment in Azure portal, use this PowerShell script.
+
+```PowerShell
+const deploymentTemplate = {
+        "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+        "contentVersion": "1.0.0.0",
+        "parameters": {
+            "vmName": {
+                "type": "string"
+            },
+            "location": {
+                "type": "string"
+            },
+            "extensionName": {
+                "type": "string"
+            },
+            "extensionPublisher": {
+                "type": "string"
+            },
+            "extensionType": {
+                "type": "string"
+            },
+            "extensionVersion": {
+                "type": "string"
+            },
+            "port": {
+                "type": "string"
+            },
+            "salt": {
+                "type": "string"
+            }
+        },
+        "resources": [
+            {
+                "type": "Microsoft.Compute/virtualMachines/extensions",
+                "name": "[concat( parameters('vmName'), '/' , parameters('extensionName') )]",
+                "apiVersion": "2018-10-01",
+                "location": "[parameters('location')]",
+                "properties": {
+                    "publisher": "[parameters('extensionPublisher')]",
+                    "type": "[parameters('extensionType')]",
+                    "typeHandlerVersion": "[parameters('extensionVersion')]",
+                    "autoUpgradeMinorVersion": true,
+                    "settings": {
+                        "port": "[parameters('port')]",
+                        "salt": "[parameters('salt')]",
+                        "cspFrameAncestors": ["https://*.hosting.portal.azure.net", "https://localhost:1340", "https://ms.portal.azure.com", "https://portal.azure.com", "https://preview.portal.azure.com"],
+                        "corsOrigins": ["https://ms.portal.azure.com", "https://portal.azure.com", "https://preview.portal.azure.com", "https://waconazure.com"]
+                    }
+                }
+            }
+        ];
+
+const parameters = {
+	vmName: <!!!>,
+	location: <!!!>,
+	extensionName: "AdminCenter",
+	extensionPublisher: "Microsoft.AdminCenter",
+	extensionType: "AdminCenter",
+	extensionVersion: "0.0",
+	port: <!!!>,
+	salt: <!!!>
+}
+```
 
 ## Known issues
 
