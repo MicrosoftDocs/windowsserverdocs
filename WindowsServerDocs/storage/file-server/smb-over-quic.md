@@ -100,9 +100,7 @@ To use SMB over QUIC, you need the following things:
 
 For a demonstration of configuring and using SMB over QUIC, watch this video:
 
-
-> [!VIDEO https://www.youtube.com/embed/OslBSB8IkUw]
-
+ [!VIDEO https://www.youtube.com/embed/OslBSB8IkUw]
 
 ### Step 3: Connect to SMB shares
 
