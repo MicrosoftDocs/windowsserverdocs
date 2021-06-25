@@ -152,7 +152,7 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
 
 -   All AD FS servers within a farm must be deployed in the same domain.
 
--   AD FS farm first node installation depend on having the PDC available.
+-   AD FS farm first node installation depends on having the PDC available.
 
 **Multi Forest Requirements**
 
