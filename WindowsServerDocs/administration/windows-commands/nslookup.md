@@ -21,6 +21,8 @@ If you need to look up only a single piece of data, we recommend using the non-i
 
 If you need to look up more than one piece of data, you can use interactive mode. Type a hyphen (-) for the first parameter and the name or IP address of a DNS name server for the second parameter. If you omit both parameters, the tool uses the default DNS name server. While using the interactive mode, you can:
 
+- You can visit https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc725991(v=ws.11) for more information on how to use the noninteractive mode.
+
 - Interrupt interactive commands at any time, by pressing CTRL+B.
 
 - Exit, by typing **exit**.
