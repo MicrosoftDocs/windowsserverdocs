@@ -4,7 +4,7 @@ description: Describes the SMB compression feature in Windows Server 2022, Windo
 ms.product: windows-server
 ms.topic: article
 author: NedPyle
-ms.author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 06/25/2021
 ms.localizationpriority: medium
 ---
@@ -31,7 +31,7 @@ For a demonstration of SMB compression, watch this video:
 
 To use SMB compression in a traditional client-file server workload, you need the following:
 
-- A file server running Windows Server 2022 [on-premises](https://aka.ms/WS2022Preview) or [in Azure](http://aka.ms/ws2022azurepreview)
+- A file server running Windows Server 2022 [on-premises](https://aka.ms/WS2022Preview) or [in Azure](https://aka.ms/ws2022azurepreview)
 - A Windows Insider Dev Channel client - ([Windows Insider Dev Channel Preview Downloads](https://www.microsoft.com/software-download/windowsinsiderpreviewiso))
 - Windows Admin Center - ([Homepage](https://aka.ms/windowsadmincenter))
 
