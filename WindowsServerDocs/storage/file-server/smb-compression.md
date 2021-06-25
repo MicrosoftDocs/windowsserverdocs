@@ -25,7 +25,7 @@ SMB compression in Windows has the following characteristics
 
 For a demonstration of SMB compression, watch this video:
 
-:::video source="https://www.youtube.com/embed/zpMS6w33H7U":::
+> [!VIDEO https://www.youtube.com/embed/zpMS6w33H7U]
 
 ## Requirements
 
