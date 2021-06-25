@@ -20,20 +20,20 @@ The rest of this topic explains tools and a general methodology to fix Active Di
 
 Inbound or outbound replication failure causes Active Directory objects that represent the replication topology, replication schedule, domain controllers, users, computers, passwords, security groups, group memberships, and Group Policy to be inconsistent between domain controllers. Directory inconsistency and replication failure cause either operational failures or inconsistent results, depending on the domain controller that is contacted for the operation, and can prevent the application of Group Policy and access control permissions. Active Directory Domain Services (AD DS) depends on network connectivity, name resolution, authentication and authorization, the directory database, the replication topology, and the replication engine. When the root cause of a replication problem is not immediately obvious, determining the cause among the many possible causes requires systematic elimination of probable causes.
 
-For a UI-based tool to help monitor replication and diagnose errors, see [Active Directory Replication Status Tool](https://www.microsoft.com/download/details.aspx?id=30005)
+For a UI-based tool to help monitor replication and diagnose errors, download and run the [Microsoft Support and Recovery Assistant tool](https://aka.ms/sara-adreplication), **or** use the [Active Directory Replication Status Tool](https://www.microsoft.com/download/details.aspx?id=30005) if you only want to analyze the replication status.
 
-For a comprehensive document that describes how you can use the Repadmin tool to troubleshoot Active Directory replication is available; see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830).
+For a comprehensive document that describes how you can use the Repadmin tool to troubleshoot Active Directory replication is available; see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551(v=ws.10)).
 
 For information about how Active Directory replication works, see the following technical references:
 
-- [Active Directory Replication Model Technical Reference](https://go.microsoft.com/fwlink/?LinkId=65958)
-- [Active Director Replication Topology Technical Reference](https://go.microsoft.com/fwlink/?LinkId=93578)
+- [Active Directory Replication Model Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc782376(v=ws.10))
+- [Active Director Replication Topology Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc755326(v=ws.10))
 
 ## Event and tool solution recommendations
 
 Ideally, the red (Error) and yellow (Warning) events in the Directory Service event log suggest the specific constraint that is causing replication failure on the source or destination domain controller. If the event message suggests steps for a solution, try the steps that are described in the event. The Repadmin tool and other diagnostic tools also provide information that can help you resolve replication failures.
 
-For detailed information about using Repadmin for troubleshooting replication problems, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830).
+For detailed information about using Repadmin for troubleshooting replication problems, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551(v=ws.10)).
 
 ## Ruling out intentional disruptions or hardware failures
 
@@ -53,9 +53,9 @@ Periodic hardware upgrades can also cause domain controllers to be out of servic
 
 By default, Active Directory replication remote procedure calls (RPCs) occur dynamically over an available port through the RPC Endpoint Mapper (RPCSS) on port 135. Make sure that Windows Firewall with Advanced Security and other firewalls are configured properly to allow for replication. For information about specifying the port for Active Directory replication and port settings, see [article 224196 in the Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=22578).
 
-For information about the ports that Active Directory replication uses, see [Active Directory Replication Tools and Settings](https://go.microsoft.com/fwlink/?LinkId=123774).
+For information about the ports that Active Directory replication uses, see [Active Directory Replication Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc739941(v=ws.10)).
 
-For information about managing Active Directory replication over firewalls, see [Active Directory Replication over Firewalls](https://go.microsoft.com/fwlink/?LinkId=123775).
+For information about managing Active Directory replication over firewalls, see [Active Directory Replication over Firewalls](/previous-versions/windows/it-pro/windows-2000-server/bb727063(v=technet.10)).
 
 ## Responding to failure of an outdated server running Windows 2000 Server
 
@@ -86,13 +86,13 @@ Use the following general approach to fixing replication problems:
 
 1. Monitor replication health daily, or use Repadmin.exe to retrieve replication status daily.
 2. Attempt to resolve any reported failure in a timely manner by using the methods that are described in event messages and this guide. If software might be causing the problem, uninstall the software before you continue with other solutions.
-3. If the problem that is causing replication to fail cannot be resolved by any known methods, remove AD DS from the server and then reinstall AD DS. For more information about reinstalling AD DS, see [Decommissioning a Domain Controller](https://go.microsoft.com/fwlink/?LinkId=128290).
+3. If the problem that is causing replication to fail cannot be resolved by any known methods, remove AD DS from the server and then reinstall AD DS. For more information about reinstalling AD DS, see [Decommissioning a Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816644(v=ws.10)).
 4. If AD DS cannot be removed normally while the server is connected to the network, use one of the following methods to resolve the problem:
 
    - Force AD DS removal in Directory Services Restore Mode (DSRM), clean up server metadata, and then reinstall AD DS.
    - Reinstall the operating system, and rebuild the domain controller.
 
-For more information about forcing removal of AD DS, see [Forcing the Removal of a Domain Controller](https://go.microsoft.com/fwlink/?LinkId=128291).
+For more information about forcing removal of AD DS, see [Forcing the Removal of a Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794860(v=ws.10)).
 
 ## Using Repadmin to retrieve replication status</title>
 
@@ -174,7 +174,7 @@ The following table lists common events that might indicate problems with Active
 |2088 NTDS Replication |AD DS could not resolve the DNS host name of the source domain controller to an IP address, but replication succeeded.|Fixing Replication DNS Lookup Problems (Event IDs 1925, 2087, 2088)|
 |5805 Net Logon|A machine account failed to authenticate, which is usually caused by either multiple instances of the same computer name or the computer name not replicating to every domain controller.|Fixing Replication Security Problems|
 
-For more information about replication concepts, see [Active Directory Replication Technologies](https://go.microsoft.com/fwlink/?LinkId=41950).
+For more information about replication concepts, see [Active Directory Replication Technologies](/previous-versions/windows/it-pro/windows-server-2003/cc776877(v=ws.10)).
 
 ## Next steps
 

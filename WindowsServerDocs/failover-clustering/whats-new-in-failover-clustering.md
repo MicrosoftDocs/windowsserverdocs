@@ -2,30 +2,30 @@
 description: "Learn more about: What's new in Failover Clustering"
 ms.assetid: 350aa5a3-5938-4921-93dc-289660f26bad
 title: What's new in Failover Clustering in Windows Server
-ms.topic: get-started-article
+ms.topic: how-to
 manager: lizross
 author: JasonGerend
 ms.author: jgerend
-ms.date: 10/18/2018
+ms.date: 05/28/2021
 ---
 # What's new in Failover Clustering
 
-> Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
-This topic explains the new and changed functionality in Failover Clustering for Windows Server 2019 and Windows Server 2016.
+This topic explains the new and changed functionality in Failover Clustering for Azure Stack HCI, Windows Server 2019, and Windows Server 2016.
 
-## What's new in Windows Server 2019
+## What's new in Windows Server 2019 and Azure Stack HCI
 
 - **Cluster sets**
 
     Cluster sets enable you to increase the number of servers in a single software-defined datacenter (SDDC) solution beyond the current limits of a cluster. This is accomplished by grouping multiple clusters into a cluster set--a loosely-coupled grouping of multiple failover clusters: compute, storage and hyper-converged.
     With cluster sets, you can move online virtual machines (live migrate) between clusters within the cluster set.
 
-    For more info, see [Cluster sets](../storage/storage-spaces/cluster-sets.md).
+    For more info, see [Cluster sets](/azure-stack/hci/deploy/cluster-set).
 
 - **Azure-aware clusters**
 
-    Failover clusters now automatically detect when they're running in Azure IaaS virtual machines and optimize the configuration to provide proactive failover and logging of Azure planned maintenance events to achieve the highest levels of availability. Deployment is also simplified by removing the need to configure the load balancer with Dynamic Network Name for cluster name.
+    Failover clusters now automatically detect when they're running in Azure IaaS virtual machines and optimize the configuration to provide proactive failover and logging of Azure planned maintenance events to achieve the highest levels of availability. Deployment is also simplified by removing the need to configure the load balancer with Distributed Network Name for cluster name.
 
 - **Cross-domain cluster migration**
 
@@ -69,7 +69,7 @@ Cluster Operating System Rolling Upgrade enables an administrator to upgrade the
 
 **What value does this change add?**
 
-Upgrading a Hyper-V or Scale-Out File Server cluster from Windows Server 2012 R2 to Windows Server 2016 no longer requires downtime. The cluster will continue to function at a Windows Server 2012 R2 level until all of the nodes in the cluster are running Windows Server 2016. The cluster functional level is upgraded to Windows Server 2016 by using the Windows PowerShell cmdlt `Update-ClusterFunctionalLevel`.
+Upgrading a Hyper-V or Scale-Out File Server cluster from Windows Server 2012 R2 to Windows Server 2016 no longer requires downtime. The cluster will continue to function at a Windows Server 2012 R2 level until all of the nodes in the cluster are running Windows Server 2016. The cluster functional level is upgraded to Windows Server 2016 by using the Windows PowerShell cmdlet `Update-ClusterFunctionalLevel`.
 
 > [!WARNING]
 > - After you update the cluster functional level, you cannot go back to a  Windows Server 2012 R2 cluster functional level.
@@ -135,7 +135,7 @@ Using Cloud Witness as a Failover Cluster quorum witness provides the following 
 
 -   Uses the standard publicly available Microsoft Azure Blob Storage which eliminates the extra maintenance overhead of VMs hosted in a public cloud.
 
--   Same Microsoft Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique id used as blob file name).
+-   Same Microsoft Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique ID used as blob file name).
 
 -   Provides a very low on-going cost to the Storage Account (very small data written per blob file, blob file updated only once when cluster nodes' state changes).
 

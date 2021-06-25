@@ -1,15 +1,16 @@
 ---
-title: Hyper-V Network Virtualization Technical Details in Windows Server 2016
-description: This topic provides technical information about Hyper-V Network Virtualization in Windows Server 2016
+title: Hyper-V Network Virtualization Technical Details in Windows Server
+description: This topic provides technical information about Hyper-V Network Virtualization in Windows Server
 manager: grcusanz
 ms.topic: article
 ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 06/16/2021
 ---
-# Hyper-V Network Virtualization Technical Details in Windows Server 2016
+# Hyper-V Network Virtualization Technical Details in Windows Server
 
->Applies to:  Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Server virtualization enables multiple server instances to run concurrently on a single physical host; yet server instances are isolated from each other. Each virtual machine essentially operates as if it is the only server running on the physical computer.
 
@@ -37,7 +38,7 @@ There are two HNV implementations which will be available in  Windows Server 201
 
 -   **HNVv2**
 
-    A significant number of new features are included in HNVv2 which is implemented using the Azure Virtual Filtering Platform (VFP) forwarding extension in the Hyper-V Switch. HNVv2 is fully integrated with Microsoft Azure Stack which includes the new Network Controller in the Software Defined Networking (SDN) Stack.  Virtual network policy is defined through the Microsoft [Network Controller](../../../sdn/technologies/network-controller/Network-Controller.md) using a RESTful NorthBound (NB) API and plumbed to a Host Agent via multiple SouthBound Intefaces (SBI) including OVSDB. The Host Agent programs policy in the VFP extension of the Hyper-V Switch where it is enforced.
+    A significant number of new features are included in HNVv2 which is implemented using the Azure Virtual Filtering Platform (VFP) forwarding extension in the Hyper-V Switch. HNVv2 is fully integrated with Microsoft Azure Stack which includes the new Network Controller in the Software Defined Networking (SDN) Stack.  Virtual network policy is defined through the Microsoft [Network Controller](../../../sdn/technologies/network-controller/Network-Controller.md) using a RESTful NorthBound (NB) API and plumbed to a Host Agent via multiple SouthBound Interfaces (SBI) including OVSDB. The Host Agent programs policy in the VFP extension of the Hyper-V Switch where it is enforced.
 
     > [!IMPORTANT]
     > This topic focuses on HNVv2.
@@ -62,7 +63,7 @@ Figure 2: Customer networks and virtual subnets
 
 **Layer 2 Forwarding**
 
-In Figure 2, the virtual machines in VSID 5001 can have their packets forwarded to virtual machines that are also in VSID 5001 through the Hyper-V Switch. The incoming packets from a virtual machine in VSID 5001 are sent to a specific VPort on the Hyper-V Switch. Ingress rules (e.g. encap) and mappings (e.g. encapsulation header) are applied by the Hyper-V Switch for these packets. The packets are then  forwarded either to a different VPort on the Hyper-V Switch (if the destination virtual machine is attached to the same host) or to a different Hyper-V switch on a different host (if the destination virtual machine is located on a different host).
+In Figure 2, the virtual machines in VSID 5001 can have their packets forwarded to virtual machines that are also in VSID 5001 through the Hyper-V Switch. The incoming packets from a virtual machine in VSID 5001 are sent to a specific VPort on the Hyper-V Switch. Ingress rules (for example encap) and mappings (for example encapsulation header) are applied by the Hyper-V Switch for these packets. The packets are then  forwarded either to a different VPort on the Hyper-V Switch (if the destination virtual machine is attached to the same host) or to a different Hyper-V switch on a different host (if the destination virtual machine is located on a different host).
 
 **Layer 3 Routing**
 
@@ -199,7 +200,7 @@ When the Contoso Corp Web virtual machine (10.1.1.12) on Hyper-V Host 2 creates 
 
 -   The VFP forwarding extension in the vSwitch processes this packet through the VFP layers (described below) assigned to the source vSwitch port on which the packet was received and creates a new flow-entry in the VFP unified flow table
 
--   The VFP engine performs rule matching or flow-table lookup for each layer (e.g. virtual network layer) based on the IP and Ethernet headers.
+-   The VFP engine performs rule matching or flow-table lookup for each layer (for example virtual network layer) based on the IP and Ethernet headers.
 
 -   The matched rule in the virtual network layer references a CA-PA mapping space and performs encapsulation.
 
@@ -216,7 +217,7 @@ When the Contoso Corp Web virtual machine (10.1.1.12) on Hyper-V Host 2 creates 
 
 -   The VFP processes the packet through its VFP layers and create a new flow-entry in the VFP unified flow table.
 
--   The VFP engine matches the ingres rules in the virtual network layer and strips off the outer encapsulated packet's Ethernet, IP, and VXLAN headers.
+-   The VFP engine matches the ingress rules in the virtual network layer and strips off the outer encapsulated packet's Ethernet, IP, and VXLAN headers.
 
 -   The VFP engine then forwards the packet to the vSwitch port to which the destination VM is connected.
 
@@ -225,7 +226,7 @@ A similar process for traffic between the Fabrikam Corp **Web** and **SQL** virt
 The separate addresses (CAs and PAs), the policy settings of the Hyper-V hosts, and the address translation between the CA and the PA for inbound and outbound virtual machine traffic isolate these sets of servers using either the NVGRE Key or the VLXAN VNID. Furthermore, the virtualization mappings and transformation decouples the virtual network architecture from the physical network infrastructure. Although Contoso **SQL** and **Web** and Fabrikam **SQL** and **Web** reside in their own CA IP subnets (10.1.1/24), their physical deployment happens on two hosts in different PA subnets, 192.168.1/24 and 192.168.2/24, respectively. The implication is that cross-subnet virtual machine provisioning and live migration become possible with HNV.
 
 ## Hyper-V Network Virtualization architecture
-In  Windows Server 2016, HNVv2 is implemented using the Azure Virtual Filtering Platform (VFP) which is an NDIS filtering extension within the Hyper-V Switch. The key concept of VFP is that of a Match-Action flow engine with an internal API exposed to the SDN Host Agent for programming network policy. The SDN Host Agent itself receives network policy from the Network Controller over the OVSDB and WCF SouthBound communication channels. Not only is virtual network policy (e.g. CA-PA mapping) programmed using VFP but additional policy such as ACLs, QoS, and so on.
+In  Windows Server 2016, HNVv2 is implemented using the Azure Virtual Filtering Platform (VFP) which is an NDIS filtering extension within the Hyper-V Switch. The key concept of VFP is that of a Match-Action flow engine with an internal API exposed to the SDN Host Agent for programming network policy. The SDN Host Agent itself receives network policy from the Network Controller over the OVSDB and WCF SouthBound communication channels. Not only is virtual network policy (for example CA-PA mapping) programmed using VFP but additional policy such as ACLs, QoS, and so on.
 
 The object hierarchy for the vSwitch and VFP forwarding extension is the following:
 

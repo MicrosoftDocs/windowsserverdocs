@@ -1,18 +1,18 @@
 ---
 title: Deploy Network Controller using Windows PowerShell
-description: This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines (VMs) that are running Windows Server 2016.
-ms.topic: get-started-article
+description: This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more computers or virtual machines (VMs) that are running Windows Server 2019 or 2016.
+ms.topic: how-to
 ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
 ms.author: anpaul
 author: AnirbanPaul
 manager: grcusanz
-ms.date: 08/23/2018
+ms.date: 06/25/2021
 ---
 # Deploy Network Controller using Windows PowerShell
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
-This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more virtual machines (VMs) that are running Windows Server 2016.
+This topic provides instructions on using Windows PowerShell to deploy Network Controller on one or more virtual machines (VMs) that are running Windows Server 2019 or 2016.
 
 >[!IMPORTANT]
 >Do not deploy the Network Controller server role on physical hosts. To deploy Network Controller, you must install the Network Controller server role on a Hyper-V virtual machine \(VM\) that is installed on a Hyper-V host. After you have installed Network Controller on VMs on three different Hyper\-V hosts, you must enable the Hyper\-V hosts for Software Defined Networking \(SDN\) by adding the hosts to Network Controller using the Windows PowerShell command **New-NetworkControllerServer**. By doing so, you are enabling the SDN Software Load Balancer to function. For more information, see [New-NetworkControllerServer](https://technet.microsoft.com/itpro/powershell/windows/network-controller/new-networkcontrollerserver).

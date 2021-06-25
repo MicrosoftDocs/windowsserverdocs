@@ -1,6 +1,6 @@
 ---
 title: What's new in Credential Protection
-description: Windows Server Security
+description: Learn about Credential Guard for signed-in users, Remote Credential Guard for signed-in users, and domain protections.
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f297
 author: gitmichiko
@@ -52,7 +52,7 @@ Beginning with Windows Server 2016, KDCs can support the PKInit freshness extens
 
 ### Rolling public key only user's NTLM secrets
 
-Beginning with Windows Server 2016 domain functional level (DFL), DCs can support rolling a public key only user's NTLM secrets. This feature is unavailble in lower DFLs.
+Beginning with Windows Server 2016 domain functional level (DFL), DCs can support rolling a public key only user's NTLM secrets. This feature is unavailable in lower DFLs.
 
 > [!WARNING]
 > Adding a domain controller to a domain with rolling NTLM secrets enabled before the DC has been updated with at least the November 8, 2016 servicing runs the risk of the DC crashing.

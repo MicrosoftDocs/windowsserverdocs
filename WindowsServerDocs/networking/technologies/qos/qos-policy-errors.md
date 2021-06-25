@@ -4,8 +4,9 @@ description: This topic provides a list of error and event messages for Quality 
 ms.topic: article
 ms.assetid: 76974e10-6a57-4533-83be-cfd5a0d364a3
 manager: brianlic
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # QoS Policy Error and Event Messages
@@ -18,7 +19,7 @@ Following are the error and event messages that are associated with QoS Policy.
 
 Following is a list of QoS Policy informational messages.
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16500|
 |**Severity**|Informational|
@@ -26,7 +27,7 @@ Following is a list of QoS Policy informational messages.
 |**Language**|English|
 |**Message**|Computer QoS policies successfully refreshed. No changes detected.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16501|
 |**Severity**|Informational|
@@ -34,7 +35,7 @@ Following is a list of QoS Policy informational messages.
 |**Language**|English|
 |**Message**|Computer QoS policies successfully refreshed. Policy changes detected.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16502|
 |**Severity**|Informational|
@@ -42,7 +43,7 @@ Following is a list of QoS Policy informational messages.
 |**Language**|English|
 |**Message**|User QoS policies successfully refreshed. No changes detected.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16503|
 |**Severity**|Informational|
@@ -50,7 +51,7 @@ Following is a list of QoS Policy informational messages.
 |**Language**|English|
 |**Message**|User QoS policies successfully refreshed. Policy changes detected.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16504|
 |**Severity**|Informational|
@@ -58,7 +59,7 @@ Following is a list of QoS Policy informational messages.
 |**Language**|English|
 |**Message**|The Advanced QoS Setting for inbound TCP throughput level successfully refreshed. Setting value is not specified by any QoS policy. Local computer default will be applied.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16505|
 |**Severity**|Informational|
@@ -66,7 +67,7 @@ Following is a list of QoS Policy informational messages.
 |**Language**|English|
 |**Message**|The Advanced QoS Setting for inbound TCP throughput level successfully refreshed. Setting value is Level 0 (minimum throughput).|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16506|
 |**Severity**|Informational|
@@ -74,7 +75,7 @@ Following is a list of QoS Policy informational messages.
 |**Language**|English|
 |**Message**|The Advanced QoS Setting for inbound TCP throughput level successfully refreshed. Setting value is Level 1.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16507|
 |**Severity**|Informational|
@@ -82,7 +83,7 @@ Following is a list of QoS Policy informational messages.
 |**Language**|English|
 |**Message**|The Advanced QoS Setting for inbound TCP throughput level successfully refreshed. Setting value is Level 2.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16508|
 |**Severity**|Informational|
@@ -90,7 +91,7 @@ Following is a list of QoS Policy informational messages.
 |**Language**|English|
 |**Message**|The Advanced QoS Setting for inbound TCP throughput level successfully refreshed. Setting value is Level 3 (maximum throughput).|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16509|
 |**Severity**|Informational|
@@ -98,7 +99,7 @@ Following is a list of QoS Policy informational messages.
 |**Language**|English|
 |**Message**|The Advanced QoS Setting for DSCP marking overrides successfully refreshed. Setting value is not specified. Applications can set DSCP values independently of QoS policies.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16510|
 |**Severity**|Informational|
@@ -106,7 +107,7 @@ Following is a list of QoS Policy informational messages.
 |**Language**|English|
 |**Message**|The Advanced QoS Setting for DSCP marking overrides successfully refreshed. Application DSCP marking requests will be ignored. Only QoS policies can set DSCP values.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16511|
 |**Severity**|Informational|
@@ -114,7 +115,7 @@ Following is a list of QoS Policy informational messages.
 |**Language**|English|
 |**Message**|The Advanced QoS Setting for DSCP marking overrides successfully refreshed. Applications can set DSCP values independently of QoS policies.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16512|
 |**Severity**|Informational|
@@ -126,7 +127,7 @@ Following is a list of QoS Policy informational messages.
 
 Following is a list of QoS Policy warning messages.
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16600|
 |**Severity**|Warning|
@@ -134,7 +135,7 @@ Following is a list of QoS Policy warning messages.
 |**Language**|English|
 |**Message**|EQOS: ***Testing\*\*\*[, with one string] "%2".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16601|
 |**Severity**|Warning|
@@ -142,7 +143,7 @@ Following is a list of QoS Policy warning messages.
 |**Language**|English|
 |**Message**|EQOS: ***Testing\*\*\*[, with two strings, string1 is] "%2"[, string2 is] "%3".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16602|
 |**Severity**|Warning|
@@ -150,7 +151,7 @@ Following is a list of QoS Policy warning messages.
 |**Language**|English|
 |**Message**|The computer QoS policy "%2" has an invalid version number. This policy will not be applied.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16603|
 |**Severity**|Warning|
@@ -158,7 +159,7 @@ Following is a list of QoS Policy warning messages.
 |**Language**|English|
 |**Message**|The user QoS policy "%2" has an invalid version number. This policy will not be applied.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16604|
 |**Severity**|Warning|
@@ -166,7 +167,7 @@ Following is a list of QoS Policy warning messages.
 |**Language**|English|
 |**Message**|The computer QoS policy "%2" does not specify a DSCP value or throttle rate. This policy will not be applied.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16605|
 |**Severity**|Warning|
@@ -174,7 +175,7 @@ Following is a list of QoS Policy warning messages.
 |**Language**|English|
 |**Message**|The user QoS policy "%2" does not specify a DSCP value or throttle rate. This policy will not be applied.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16606|
 |**Severity**|Warning|
@@ -182,7 +183,7 @@ Following is a list of QoS Policy warning messages.
 |**Language**|English|
 |**Message**|Exceeded the maximum number of computer QoS policies. The QoS policy "%2" and subsequent computer QoS policies will not be applied.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16607|
 |**Severity**|Warning|
@@ -190,7 +191,7 @@ Following is a list of QoS Policy warning messages.
 |**Language**|English|
 |**Message**|Exceeded the maximum number of user QoS policies. The QoS policy "%2" and subsequent user QoS policies will not be applied.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16608|
 |**Severity**|Warning|
@@ -198,7 +199,7 @@ Following is a list of QoS Policy warning messages.
 |**Language**|English|
 |**Message**|The computer QoS policy "%2" potentially conflicts with other QoS policies. See documentation for rules about which policy will be applied.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16609|
 |**Severity**|Warning|
@@ -206,7 +207,7 @@ Following is a list of QoS Policy warning messages.
 |**Language**|English|
 |**Message**|The user QoS policy "%2" potentially conflicts with other QoS policies. See documentation for rules about which policy will be applied.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16610|
 |**Severity**|Warning|
@@ -214,7 +215,7 @@ Following is a list of QoS Policy warning messages.
 |**Language**|English|
 |**Message**|The computer QoS policy "%2" was ignored because the application path cannot be processed. The application path may be invalid, contain an invalid drive letter, or contain a network mapped drive.|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16611|
 |**Severity**|Warning|
@@ -226,7 +227,7 @@ Following is a list of QoS Policy warning messages.
 
 Following is a list of QoS Policy error messages.
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16700|
 |**Severity**|Error|
@@ -234,7 +235,7 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|Computer QoS policies failed to refresh. Error code: "%2".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16701|
 |**Severity**|Error|
@@ -242,7 +243,7 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|User QoS policies failed to refresh. Error code: "%2".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16702|
 |**Severity**|Error|
@@ -250,7 +251,7 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|QoS failed to open the machine-level root key for QoS policies. Error code: "%2".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16703|
 |**Severity**|Error|
@@ -258,7 +259,7 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|QoS failed to open the user-level root key for QoS policies. Error code: "%2".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16704|
 |**Severity**|Error|
@@ -266,7 +267,7 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|A computer QoS policy exceeds the maximum allowed name length. The offending policy is listed under the machine-level QoS policy root key, with index "%2".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16705|
 |**Severity**|Error|
@@ -274,7 +275,7 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|A user QoS policy exceeds the maximum allowed name length. The offending policy is listed under the user-level QoS policy root key, with index "%2".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16706|
 |**Severity**|Error|
@@ -282,7 +283,7 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|A computer QoS policy has a zero length name. The offending policy is listed under the machine-level QoS policy root key, with index "%2".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16707|
 |**Severity**|Error|
@@ -290,7 +291,7 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|A user QoS policy has a zero length name. The offending policy is listed under the user-level QoS policy root key, with index "%2".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16708|
 |**Severity**|Error|
@@ -298,7 +299,7 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|QoS failed to open the registry subkey for a computer QoS policy. The policy is listed under the machine-level QoS policy root key, with index "%2".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16709|
 |**Severity**|Error|
@@ -306,7 +307,7 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|QoS failed to open the registry subkey for a user QoS policy. The policy is listed under the user-level QoS policy root key, with index "%2".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16710|
 |**Severity**|Error|
@@ -314,7 +315,7 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|QoS failed to read or validate the "%2" field for the computer QoS policy "%3".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16711|
 |**Severity**|Error|
@@ -322,7 +323,7 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|QoS failed to read or validate the "%2" field for the user QoS policy "%3".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16712|
 |**Severity**|Error|
@@ -330,7 +331,7 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|QoS failed to read or set inbound TCP throughput level, error code: "%2".|
 
-|||
+|Attribute|Value|
 |-|-|
 |**MessageId**|16713|
 |**Severity**|Error|

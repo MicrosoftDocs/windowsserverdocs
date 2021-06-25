@@ -4,8 +4,8 @@ description: Reference article for the bitsadmin getmaxdownloadtime command, whi
 ms.prod: windows-server
 ms.topic: reference
 ms.assetid: cdce64f6-7125-489d-be3c-4af1dfc8c46a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -6,6 +6,7 @@ ms.assetid: a754b78c-048d-4be9-a846-cf41ff0bcbc4
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
+ms.date: 12/10/2020
 ---
 
 # Planning a Guarded Fabric

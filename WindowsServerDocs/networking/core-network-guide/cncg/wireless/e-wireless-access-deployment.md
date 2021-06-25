@@ -1,11 +1,12 @@
 ---
 title: Wireless Access Deployment
-description: This topic is part of the Windows Server 2016 Networking guide "Deploy Password-Based 802.1X Authenticated Wireless Access"
+description: Learn how to deploy wireless access in five steps.
 manager: brianlic
 ms.topic: article
 ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Wireless Access Deployment
 

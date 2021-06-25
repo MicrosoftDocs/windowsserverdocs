@@ -17,20 +17,20 @@ You can use additional authorization rules to further restrict access. Users who
 
 You can use the following procedures to create a claim rule with the AD FS Management snap\-in.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ## To create a rule to permit all users in Windows Server 2016
 
 1.  In Server Manager, click **Tools**, and then select **AD FS Management**.
 
 2.  In the console tree, under **AD FS**, click **Relying Party Trusts**.
-![create rule](media/Create-a-Rule-to-Permit-All-Users/permitall1.PNG)
+![Screenshot that shows where to select Relying Party Trusts.](media/Create-a-Rule-to-Permit-All-Users/permitall1.PNG)
 
 3.  Right-click the **Relying Party Trust** that you want to permit access to and select **Edit Access Control Policy**.
-![create rule](media/Create-a-Rule-to-Permit-All-Users/permitall2.PNG)
+![Screenshot that shows where to select Edit Access Control Policy.](media/Create-a-Rule-to-Permit-All-Users/permitall2.PNG)
 
 4. On the Access control policy select **Permit everyone** and then click **Apply** and **Ok**.
-![create rule](media/Create-a-Rule-to-Permit-All-Users/permitall3.PNG)
+![Screenshot that highlights the Permit everyone Access control policy.](media/Create-a-Rule-to-Permit-All-Users/permitall3.PNG)
 
 ## To create a rule to permit all users in Windows Server 2012 R2
 
@@ -39,10 +39,10 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 2.  In the console tree, under **AD FS\\Trust Relationships\\Relying Party Trusts**, click a specific trust in the list where you want to create this rule.
 
 3.  Right\-click the selected trust, and then click **Edit Claim Rules**.
-![create rule](media/Create-a-Rule-to-Permit-All-Users/permitall4.PNG)
+![Screenshot that shows where to select Edit Claim Rules.](media/Create-a-Rule-to-Permit-All-Users/permitall4.PNG)
 
 4.  In the **Edit Claim Rules** dialog box, click the **Issuance Authorization Rules** tab or the **Delegation Authorization Rules** tab \(based on the type of authorization rule you require\), and then click **Add Rule** to start the **Add Authorization Claim Rule Wizard**.
-![create rule](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
+![Screenshot that shows the Issuance Authorization Rules tab.](media/Create-a-Rule-to-Permit-All-Users/permitall5.PNG)
 5.  On the **Select Rule Template** page, under **Claim rule template**, select **Permit All Users** from the list, and then click **Next**.
 ![create rule](media/Create-a-Rule-to-Permit-All-Users/permitall6.PNG)
 6.  On the **Configure Rule** page, click **Finish**.

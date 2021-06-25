@@ -40,7 +40,7 @@ This section describes various considerations about the intended audience, benef
     > [!NOTE]
     > SQL Server supports many different data and application redundancy options including failover clustering, database mirroring, and several different types of SQL Server replication.
 
-The Microsoft Information Technology \(IT\) department uses SQL Server database mirroring in high\-safety \(synchronous\) mode and failover clustering to provide high\-availability support for the SQL Server instance. SQL Server transactional \(peer\-to\-peer\) and merge replication have not been tested by the AD FS product team at Microsoft. For more information about SQL Server, see [High Availability Solutions Overview](https://go.microsoft.com/fwlink/?LinkId=179853) or [Selecting the Appropriate Type of Replication](https://go.microsoft.com/fwlink/?LinkId=214648).
+The Microsoft Information Technology \(IT\) department uses SQL Server database mirroring in high\-safety \(synchronous\) mode and failover clustering to provide high\-availability support for the SQL Server instance. SQL Server transactional \(peer\-to\-peer\) and merge replication have not been tested by the AD FS product team at Microsoft. For more information about SQL Server, see [High Availability Solutions Overview](/sql/database-engine/sql-server-business-continuity-dr) or [Selecting the Appropriate Type of Replication](/previous-versions/sql/sql-server-2008-r2/ms152565(v=sql.105)).
 
 ### Supported SQL Server Versions
 The following SQL server versions are supported with AD FS in Windows Server 2012 R2:
@@ -56,7 +56,7 @@ Similar to the federation server farm with WID topology, all of the federation s
 
 The following illustration shows how the fictional Contoso Pharmaceuticals company deployed its federation server farm with SQL Server topology in the corporate network. It also shows how that company configured the perimeter network with access to a DNS server, an additional NLB host that uses the same cluster DNS name \(fs.contoso.com\) that is used on the corporate network NLB cluster, and with two web application proxies \(wap1 and wap2\).
 
-![server farm using SQL](media/SQLFarmADFSBlue.gif)
+![Illustration that shows how the fictional Contoso Pharmaceuticals company deployed its federation server farm with SQL Server topology in the corporate network.](media/SQLFarmADFSBlue.gif)
 
 For more information about how to configure your networking environment for use with federation servers or web application proxies, see "Name Resolution Requirements" section in [AD FS Requirements](AD-FS-Requirements.md) and [Plan the Web Application Proxy Infrastructure (WAP)](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)).
 
@@ -95,7 +95,7 @@ From the perspective of the nodes of an AD FS SQL Server farm, the AlwaysOn Avai
 
 The following diagram shows an AD FS SQL Server Farm with AlwaysOn Availability group.
 
-![server farm using SQL](media/alwaysonavailabilitygroups.jpg)
+![Diagram that shows an AD FS SQL Server Farm with AlwaysOn Availability group.](media/alwaysonavailabilitygroups.jpg)
 
 > [!NOTE]
 > AlwaysOn Availability groups require that the SQL Server instances reside on Windows Server Failover Clustering \(WSFC\) nodes.

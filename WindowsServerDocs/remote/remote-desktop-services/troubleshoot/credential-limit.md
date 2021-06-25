@@ -3,7 +3,7 @@ title: Credential limit per app
 description: Troubleshooting an issue where only twenty credentials can be used per app.
 ms.topic: troubleshooting
 author: HeidiLohr
-manager: lizross
+manager: femila
 ms.author: helohr
 ms.date: 12/14/2020
 ms.localizationpriority: medium

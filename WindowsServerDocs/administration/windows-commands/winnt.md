@@ -7,8 +7,8 @@ description: Reference article for winnt, which is deprecated, and is not guaran
 
 ms.topic: reference
 ms.assetid: 3bf6e792-befb-435c-8fa3-940a45a98adb
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

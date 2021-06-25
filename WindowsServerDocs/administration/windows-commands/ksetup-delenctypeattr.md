@@ -3,8 +3,8 @@ title: ksetup delenctypeattr
 description: Reference article for the ksetup delenctypeattr, which removes the encryption type attribute for the domain.
 ms.topic: reference
 ms.assetid: 4fc25ef3-e271-4229-a712-72c507df55aa
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

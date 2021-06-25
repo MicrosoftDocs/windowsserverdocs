@@ -4,8 +4,9 @@ description: You can use this topic to gain an understanding of Border Gateway P
 manager: brianlic
 ms.topic: article
 ms.assetid: 78cc2ce3-a48e-45db-b402-e480b493fab1
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Border Gateway Protocol (BGP)
 

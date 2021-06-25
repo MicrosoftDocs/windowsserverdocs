@@ -4,8 +4,9 @@ description: This topic provides information about using certificates with Netwo
 manager: brianlic
 ms.topic: article
 ms.assetid: 2af0a1df-5c44-496b-ab11-5bc340dc96f0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Configure Certificate Templates for PEAP and EAP Requirements
 

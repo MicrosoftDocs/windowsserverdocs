@@ -1,11 +1,12 @@
 ---
 title: STEP 3 Configure DC1
-description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID for Windows Server 2016
+description: Learn how to verify that User1 has a User Principal Name defined on DC1.
 manager: brianlic
 ms.topic: article
 ms.assetid: 836a2a08-3d22-48d2-873e-80d7e57ebbd6
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # STEP 3 Configure DC1
 

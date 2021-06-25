@@ -1,11 +1,12 @@
 ---
 title: Manage Different Domains in Active Directory Administrative Center
-description: Windows Server Security
+description: Learn how to manage different domains in Active Directory Administrative Center.
 ms.assetid: 166351c3-4076-48be-aa8f-797adf1e9d68
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
+ms.topic: article
 ---
 # Manage Different Domains in Active Directory Administrative Center
 
@@ -29,11 +30,11 @@ ms.date: 10/12/2016
 
 2.  To open **Add Navigation Nodes**, click **Manage**, then click **Add Navigation Nodes** as shown in the following illustration.
 
-     ![Screenshot showing **Add Navigation Nodes** UI](media/ADDS_ADACAddNavNode.gif)
+     ![Screenshot of the Active Directory Administrative Center showing the Manage drop-down list with the Add Navigation Nodes option available for selection.](media/ADDS_ADACAddNavNode.gif)
 
 3.  In **Add Navigation Nodes**, click **Connect to other domains** as shown in the following illustration.
 
-     ![Screenshot showing **Add Navigation Nodes** UI](media/ADDS_ADACConnectToDomain.gif)
+     ![Screenshot showing the Add Navigation Nodes dialog box showing the Connect to other domains option available for selection.](media/ADDS_ADACConnectToDomain.gif)
 
 4.  In **Connect to**, type the name of the foreign domain that you want to manage \(for example, **contoso.com**\), and then click **OK**.
 
@@ -48,7 +49,7 @@ ms.date: 10/12/2016
 
 2. To open **Add Navigation Nodes**, near the top of the Active Directory Administrative Center window, click **Add Navigation Nodes** as shown in the following illustration.
 
-    ![Screenshot showing **Add Navigation Nodes** UI](media/click_add_nav_nodes.gif)
+    ![Screenshot of the Active Directory Administrative Center with the Add Navigation Nodes option available for selection called out.](media/click_add_nav_nodes.gif)
 
    > [!NOTE]
    >  Another way to open **Add Navigation Nodes** is to right\-click anywhere in the empty space in the Active Directory Administrative Center navigation pane, and then click **Add Navigation Nodes**.

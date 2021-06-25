@@ -1,18 +1,19 @@
 ---
 title: High-performance networking
-description: This topic provides an overview of the Offload and Optimization Technologies in Windows Server 2016, and includes links to additional guidance about these technologies.
+description: Learn about high-performance networking and how hardware accelerations improve networking performance in conjunction with the software but are not intimately part of any software feature.
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
-ms.author: lizross
-author: eross-msft
-ms.date: 09/12/2018
+ms.author: jgerend
+author: JasonGerend
+ms.date: 06/15/2021
 ---
-
 
 # Hardware Only (HO) features and technologies
 
-These hardware accelerations improve networking performance in conjunction with the software but are not intimately part of any software feature. Examples of these include Interrupt Moderation, Flow Control, and Receive-side IPv4 Checksum Offload.
+> Applies to: Azure Stack HCI, version 20H2
+
+These hardware accelerations improve networking performance in conjunction with the software but are not intimately part of any software feature. Examples of these include Interrupt Moderation, Flow Control, and Receive-side IPv4 Checksum Offload. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
 
 >[!TIP]
 >SH and HO features are available if the installed NIC supports it. The feature descriptions below will cover how to tell if your NIC supports the feature.

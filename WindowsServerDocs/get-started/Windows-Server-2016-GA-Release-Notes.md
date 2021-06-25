@@ -1,6 +1,6 @@
 ---
 title: Release Notes - Important Issues in Windows Server 2016
-description: Summarizes critical issues requiring workaround to avoid crash, hang, installation failure, data loss.
+description: Learn about critical issues requiring workarounds to avoid crash, hang, installation failure, or data loss in Windows Server 2016.
 ms.date: 11/13/2018
 ms.topic: article
 ms.assetid: 134aab85-664f-4d44-87ef-9e5fd389071f

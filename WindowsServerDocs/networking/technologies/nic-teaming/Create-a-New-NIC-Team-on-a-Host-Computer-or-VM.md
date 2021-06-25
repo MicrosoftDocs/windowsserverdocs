@@ -3,9 +3,10 @@ title: Create a new NIC Team on a host computer or VM
 description: In this topic, you create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) running Windows Server 2016.
 manager: dougkim
 ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/13/2018
+ms.topic: article
 ---
 # Create a new NIC Team on a host computer or VM
 
@@ -39,39 +40,39 @@ You must have membership in **Administrators**, or equivalent.
 
 ### Procedure
 
-1.  On the Hyper-V host, open Hyper-V Manager, and under Actions, click **Virtual Switch Manager**.
+1. On the Hyper-V host, open Hyper-V Manager, and under Actions, click **Virtual Switch Manager**.
 
-   ![Virtual Switch Manager](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv.jpg)
+    ![Virtual Switch Manager](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv.jpg)
 
-2.  In Virtual Switch Manager, make sure **External** is selected, and then click **Create Virtual Switch**.
+2. In Virtual Switch Manager, make sure **External** is selected, and then click **Create Virtual Switch**.
 
-   ![Create Virtual Switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv_02.jpg)
+    ![Create Virtual Switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hv_02.jpg)
 
-3.  In Virtual Switch Properties, type a **Name** for the virtual switch, and add **Notes** as needed.
+3. In Virtual Switch Properties, type a **Name** for the virtual switch, and add **Notes** as needed.
 
-4.  In **Connection type**, in **External network**, select the physical network adapter to which you want to attach the virtual switch.
+4. In **Connection type**, in **External network**, select the physical network adapter to which you want to attach the virtual switch.
 
-5.  Configure additional switch properties for your deployment, and then click **OK**.
+5. Configure additional switch properties for your deployment, and then click **OK**.
 
-6.  Create a second external virtual switch by repeating the previous steps. Connect the second external switch to a different network adapter.
+6. Create a second external virtual switch by repeating the previous steps. Connect the second external switch to a different network adapter.
 
-7.  In Hyper-V Manager, under **Virtual Machines**, right-click the VM that you want to configure, and then click **Settings**.
+7. In Hyper-V Manager, under **Virtual Machines**, right-click the VM that you want to configure, and then click **Settings**.
 
-   The VM **Settings** dialog box opens.
+    The VM **Settings** dialog box opens.
 
-8.  Ensure that the VM is not started. If it is started, perform a shutdown before configuring the VM.
+8. Ensure that the VM is not started. If it is started, perform a shutdown before configuring the VM.
 
-8.  In **Hardware**, click **Network Adapter**.
+9. In **Hardware**, click **Network Adapter**.
 
-   ![Network Adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_01.jpg)
+    ![Network Adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_01.jpg)
 
-9. In **Network Adapter** properties, select one of the virtual switches that you created in previous steps, and then click **Apply**.
+10. In **Network Adapter** properties, select the first virtual switch that you created in previous steps, and then click **Apply**.
 
     ![Select a virtual switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_02.jpg)
 
-10. In **Hardware**, click to expand the plus sign (+) next to **Network Adapter**.
+11. In **Hardware**, click to expand the plus sign (+) next to **Network Adapter**.
 
-11. Click **Advanced Features** to enable NIC Teaming by using the graphical user interface.
+12. Click **Advanced Features** to enable NIC Teaming by using the graphical user interface.
 
     >[!TIP]
     >You can also enable NIC Teaming with a Windows PowerShell command:
@@ -96,11 +97,11 @@ You must have membership in **Administrators**, or equivalent.
 
 14. In **Add Hardware**, click **Network Adapter**, and then click **Add**.
 
-   ![Add a network adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_06.jpg)
+    ![Add a network adapter](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_06.jpg)
 
 15. In **Network Adapter** properties, select the second virtual switch that you created in previous steps, and then click **Apply**.
 
-   ![Apply a virtual switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_07.jpg)
+    ![Apply a virtual switch](../../media/Create-a-New-NIC-Team-in-a-VM/nict_hvs_07.jpg)
 
 16. In **Hardware**, click to expand the plus sign (+) next to **Network Adapter**.
 
@@ -159,7 +160,7 @@ You must have membership in **Administrators**, or equivalent.
      - **Switch Dependent.** [!INCLUDE [switch-dependent-shortdesc-include](../../includes/switch-dependent-shortdesc-include.md)]
 
 
-       |                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+       | Mode                                             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
        |----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
        |              **Static Teaming**              |                                                                                                                                              Requires you to manually configure both the switch and the host to identify which links form the team. Because this is a statically configured solution, there is no additional protocol to assist the switch and the host to identify incorrectly plugged cables or other errors that could cause the team to fail to perform. This mode is typically supported by server-class switches.                                                                                                                                              |
        | **Link Aggregation Control Protocol (LACP)** | Unlike Static Teaming, LACP Teaming mode dynamically identifies links that are connected between the host and the switch. This dynamic connection enables the automatic creation of a team and, in theory but rarely in practice, the expansion and reduction of a team simply by the transmission or receipt of LACP packets from the peer entity. All server-class switches support LACP, and all require the network operator to administratively enable LACP on the switch port. When you configure a Teaming mode of LACP, NIC Teaming always operates in LACP's Active mode.  By default, NIC Teaming uses a short timer (3 seconds), but you can configure a long timer (90 seconds) with `Set-NetLbfoTeam`. |

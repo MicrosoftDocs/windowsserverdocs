@@ -3,7 +3,7 @@ title: Server-to-server storage replication
 description: How to set up and use Storage Replica for server-to-server replication in Windows Server, including Windows Admin Center and PowerShell.
 manager: siroy
 ms.author: nedpyle
-ms.topic: get-started-article
+ms.topic: how-to
 author: nedpyle
 ms.date: 03/26/2020
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
@@ -455,5 +455,5 @@ The process is, at a high level:
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
-- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)

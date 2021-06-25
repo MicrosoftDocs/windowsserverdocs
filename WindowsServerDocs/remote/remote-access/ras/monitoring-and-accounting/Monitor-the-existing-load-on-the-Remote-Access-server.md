@@ -1,11 +1,12 @@
 ---
 title: Monitor the existing load on the Remote Access server
-description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
+description: Learn how to use the monitoring dashboard to view the load statistics for the server, or you can use Performance Monitor counters to track the statistics.
 manager: brianlic
 ms.topic: article
 ms.assetid: 62fa2895-62ae-42cf-817c-53e06ac2a26c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Monitor the existing load on the Remote Access server
 

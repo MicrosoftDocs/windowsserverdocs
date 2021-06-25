@@ -23,7 +23,7 @@ After reviewing its existing environment and identifying its deployment goals, C
 
 -   Enable advanced AD DS features by raising the domain and forest functional levels to  Windows Server 2008 .
 
--   Restructure the africa.concorp.contoso.com domain within the forest to consolidate that domain with the emea.concorp.contoso.con domain.
+-   Restructure the africa.concorp.contoso.com domain within the forest to consolidate that domain with the emea.concorp.contoso.com domain.
 
 Raising the forest functional level to Windows Server 2008 will enable Contoso to take full advantage of the new AD DS features. Restructuring the domains within the forest, as shown in the following illustration, will reduce the amount of administration that is necessary for managing the domains.
 

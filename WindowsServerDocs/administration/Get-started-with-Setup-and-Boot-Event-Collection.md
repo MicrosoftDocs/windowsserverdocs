@@ -1,10 +1,9 @@
 ---
 title: Get started with Setup and Boot Event Collection
 description: Setting up Setup and Boot Event Collection collectors and targets
-manager: DonGill
 ms.localizationpriority: medium
 ms.date: 10/16/2017
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: fc239aec-e719-47ea-92fc-d82a7247b3f8
 author: jaimeo
 ms.author: jaimeo
@@ -373,5 +372,5 @@ Alternately, if you don't want to save the result in a variable, you can use `Ge
 |--|--|--|
 | Target computer | Target is not connecting to the Collector | The target computer didn't get restarted after it was configured. Restart the target computer. The target computer has incorrect BCD settings. Check the settings in the Validate target computer settings section. Correct as necessary, and then restart the target computer.<p>The KDNET/EVENT-NET driver was not able to connect to a network adapter or connected to the wrong network adapter. In Windows PowerShell, run `gwmi Win32_NetworkAdapter` and check the output for one with the ServiceName **kdnic**. If the wrong network adapter is selected, re-do the steps in To specify a network adapter. If the network adapter doesn't appear at all, it could be that the driver doesn't support any of your network adapters.<p>**See also:** A suggested approach to troubleshooting the Collector above, especially Steps 5 through 8. |
 | Collector | I am no longer seeing events after migrating the VM my collector is hosted on. | Verify that the IP address of the collector computer has not changed. If it has, review To enable sending of ETW events through the transport remotely. |
-| Collector | The ETL files are not created. | `Get-SbecForwarding` shows that the target has connected, with no errors, but the ETL files are not created. | The target computer has probably not sent any data yet; ETL files are only created when data is received. |
+| Collector | The ETL files are not created. | `Get-SbecForwarding` shows that the target has connected, with no errors, but the ETL files are not created.<p>The target computer has probably not sent any data yet; ETL files are only created when data is received. |
 | Collector | An event is not showing in the ETL file. | The target computer has sent an event but when the ETL file is read with Event Viewer of Message Analyzer, the event is not present. The event could still be in the buffer. Events aren't written to the ETL file until a full 64 KB buffer is collected or a timeout of about 10-15 seconds with no new events has occurred. Either wait for the timeout to expire or flush the buffers with `Save-SbecInstance`.<p>The event manifest is not available on the collector computer or the computer where the Event Viewer or Message Analyzer runs.  In this case, the Collector might not be able to process the event (check the Collector log) or the viewer might not be able to show it.  It is a good practice to have all the manifests installed on the collector computer and install updates on the collector computer before installing them on the target computers. |

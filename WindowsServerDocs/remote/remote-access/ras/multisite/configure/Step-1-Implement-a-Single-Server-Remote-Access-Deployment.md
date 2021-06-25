@@ -1,11 +1,12 @@
 ---
 title: Step 1 Implement a Single Server Remote Access Deployment
-description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+description: Learn how to implement an advanced single server deployment and then plan to add servers to each multisite entry point.
 manager: brianlic
 ms.topic: article
 ms.assetid: f9086c4f-f950-44a9-93f1-7d03aecdaa60
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Step 1 Implement a Single Server Remote Access Deployment

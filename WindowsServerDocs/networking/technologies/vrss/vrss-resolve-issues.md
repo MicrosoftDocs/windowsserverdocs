@@ -4,8 +4,8 @@ description: Resolve vRSS issues if you do not see vRSS load balancing traffic t
 ms.topic: article
 ms.localizationpriority: medium
 manager: dougkim
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/04/2018
 ---
 
@@ -53,7 +53,7 @@ If you have completed all of the preparation steps and you still do not see vRSS
    - VmmqEnabled = **False**
    - VmmqEnabledRequested = **True**
 
-   ![vmmq-enabled](../../media/vmmq-enabled.png)
+   ![Screenshot of the PowerShell window showing the settings on each adapter attached to the virtual switch.](../../media/vmmq-enabled.png)
 
    **View the current settings:**
 

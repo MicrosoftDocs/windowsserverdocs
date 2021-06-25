@@ -3,8 +3,8 @@ title: fondue
 description: Reference article for the fondue command, which enables Windows optional features by downloading required files from Windows Update or another source specified by Group Policy.
 ms.topic: reference
 ms.assetid: fc4467f6-ddbb-4d6d-b51e-5a50a957b8c0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

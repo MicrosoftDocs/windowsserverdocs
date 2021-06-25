@@ -183,7 +183,7 @@ The policies described in this article should always be used with another authen
 
 11. To save the new rules, in the **Edit Claim Rules** dialog box, click **OK**. The resulting list should look like the following.
 
-    ![Issuance](media/Access-Control-Policies-W2K12/clientaccess3.png)
+    ![Screenshot that shows the Edit Claim Rules dialog box.](media/Access-Control-Policies-W2K12/clientaccess3.png)
 
 ###  <a name="scenario4"></a> Scenario 4: Block all external access to Office 365 except for designated Active Directory groups
  The following example enables access from internal clients based on IP address. It blocks access from clients residing outside the corporate network that have an external client IP address, except for those individuals in a specified Active Directory Group.Use the following steps to add the correct Issuance Authorization rules to the **Microsoft Office 365 Identity Platform** relying party trust using the Claim Rule Wizard:

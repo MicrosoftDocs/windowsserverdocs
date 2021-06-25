@@ -1,11 +1,12 @@
 ---
 title: BranchCache Hosted Cache Mode Deployment
-description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
+description: Learn about detailed procedural topics that guide you through the BranchCache hosted cache mode deployment process.
 manager: brianlic
 ms.topic: article
 ms.assetid: c635fa48-d064-4b8b-9dce-9f26abfbcfa4
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # BranchCache Hosted Cache Mode Deployment

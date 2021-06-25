@@ -1,11 +1,12 @@
 ---
 title: Step 1 Plan DirectAccess Infrastructure
-description: This topic is part of the guide Add DirectAccess to an Existing Remote Access (VPN) Deployment for Windows Server 2016
+description: Learn how to perform planning for the infrastructure required for the DirectAccess deployment.
 manager: brianlic
 ms.topic: article
 ms.assetid: 4ca50ea8-6987-4081-acd5-5bf9ead62acd
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Step 1 Plan DirectAccess Infrastructure
 
@@ -211,7 +212,7 @@ DirectAccess settings configured when you configure Remote Access are collected 
 GPOs are created automatically by the Enable DirectAccess Wizard and a default name is specified for each GPO.
 
 > [!CAUTION]
-> Use the following procedure to backup all Remote Access Group Policy Objects before executing DirectAccess cmdlets: [Back up and Restore Remote Access Configuration](https://go.microsoft.com/fwlink/?LinkID=257928)
+> Use the following procedure to backup all Remote Access Group Policy Objects before executing DirectAccess cmdlets: [Back up and Restore Remote Access Configuration](/samples/browse/?redirectedfrom=TechNet-Gallery)
 
 GPOs can be configured in two ways:
 

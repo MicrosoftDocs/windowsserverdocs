@@ -5,6 +5,7 @@ ms.topic: article
 ms.author: benarm
 author: BenjaminArmstrong
 ms.assetid: 1c36107e-78c9-4ec0-a313-6ed557ac0ffc
+ms.date: 09/17/2020
 ---
 # Deploy NVMe Storage Devices using Discrete Device Assignment
 

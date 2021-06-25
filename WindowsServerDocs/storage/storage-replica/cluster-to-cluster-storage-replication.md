@@ -2,7 +2,7 @@
 title: Cluster to cluster Storage Replication
 manager: siroy
 ms.author: nedpyle
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle
 ms.date: 04/26/2019
@@ -385,5 +385,5 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
 -   [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)
 -   [Server to Server Storage Replication](server-to-server-storage-replication.md)
 -   [Storage Replica: Known Issues](storage-replica-known-issues.md)
--   [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)
+-   [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 -   [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)

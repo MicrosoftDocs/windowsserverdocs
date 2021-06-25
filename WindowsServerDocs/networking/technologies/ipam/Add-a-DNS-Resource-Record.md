@@ -1,11 +1,12 @@
 ---
 title: Add a DNS Resource Record
-description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+description: Learn how to add one or more new DNS resource records by using the IPAM client console.
 manager: brianlic
 ms.topic: article
 ms.assetid: 5379373f-a3d9-4f51-b6fc-bf0f6df1d244
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Add a DNS Resource Record
 
@@ -39,7 +40,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 
 7.  In **New Resource Record,** in **Name**, type a resource record name. In **IP Address**, type an IP address, and then select the resource record properties that are appropriate for your deployment. Click **Add Resource Record**.
 
-    ![Add Resource Record](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_06.jpg)
+    ![Screenshot of the Resource record page of the Add Resource Record wizard showing the New Resource Record section.](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_06.jpg)
 
 8.  If you do not want to create additional new resource records, click **OK**. If you want to create additional new resource records, click **New**.
 
@@ -49,7 +50,7 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 
 10. In **New Resource Record,** in **Name**, type a resource record name. In **IP Address**, type an IP address, and then select the resource record properties that are appropriate for your deployment. Click **Add Resource Record**.
 
-    ![Add Resource Record](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_02.jpg)
+    ![Screenshot of the Resource record page of the Add Resource Record wizard with the Add Resource Record option highlighted.](../../media/Add-a-DNS-Resource-Record/ipam_DNSrr_r2_02.jpg)
 
 11. If you want to add more resource records, repeat the process for creating records. When you are done creating new resource records, click **Apply**.
 

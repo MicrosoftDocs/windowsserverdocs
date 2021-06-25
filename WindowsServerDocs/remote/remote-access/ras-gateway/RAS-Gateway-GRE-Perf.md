@@ -4,8 +4,9 @@ description: This topic, which is intended for Information Technology (IT) profe
 manager: brianlic
 ms.topic: article
 ms.assetid: c051b2ec-de0f-49d1-82b9-5742b259cd7c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # RAS Gateway GRE Tunnel Throughput and Performance
@@ -14,7 +15,7 @@ author: eross-msft
 
 You can use this topic to learn about Remote Access Server \(RAS\) Gateway Generic Routing Encapsulation \(GRE\) Tunnel performance on Windows Server, version 1709, in a non-Software Defined Networking \(SDN\) based test environment.
 
-RAS Gateway is a software router and gateway that you can use in either single tenant mode or multitenant mode. This topic discusses a single tenant mode, high availability configuration with Failover Clustering. The GRE tunnel performance statistics that are presented in this topic are valid for RAS Gateway in both singele tenant and multitenant modes.
+RAS Gateway is a software router and gateway that you can use in either single tenant mode or multitenant mode. This topic discusses a single tenant mode, high availability configuration with Failover Clustering. The GRE tunnel performance statistics that are presented in this topic are valid for RAS Gateway in both single tenant and multitenant modes.
 
 >[!NOTE]
 >Failover Clustering is a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster. For more information, see [Failover Clustering](../../../failover-clustering/failover-clustering-overview.md)
@@ -86,11 +87,11 @@ With multiple TCP sessions, the CPU utilization reaches 100% and the maximum thr
 
 The following illustration depicts CPU Utilization on both of the RAS Gateway VMs. The active VM, RAS Gateway VM #1, is on the left, while the passive VM, RAS Gateway VM #2, is on the right.
 
-![Gateway VM CPU utilization in Task Manager](../../media/GRE-Tunnel-Perf/Gre-Tunnel-01.jpg)
+![Screenshot of two Task Manager windows showing CPU Utilization on both of the RAS Gateway VMs when there are multiple TCP sessions.](../../media/GRE-Tunnel-Perf/Gre-Tunnel-01.jpg)
 
 The following illustration depicts Ethernet network throughput on the RAS Gateway VMs. The active VM, RAS Gateway VM #1, is on the left, while the passive VM, RAS Gateway VM #2, is on the right.
 
-![Gateway VM Ethernet network throughput in Task Manager](../../media/GRE-Tunnel-Perf/Gre-Tunnel-02.jpg)
+![Screenshot of two Task Manager windows showing the Ethernet network throughput on the RAS Gateway VMs when there are multiple TCP sessions.](../../media/GRE-Tunnel-Perf/Gre-Tunnel-02.jpg)
 
 
 ### GRE Tunnel Performance with One TCP Connection
@@ -101,11 +102,11 @@ The maximum throughput on the GRE tunnel is between 400-500 Mbps.
 
 The following illustration depicts CPU Utilization on both of the RAS Gateway VMs. The active VM, RAS Gateway VM #1, is on the left, while the passive VM, RAS Gateway VM #2, is on the right.
 
-![Gateway VM CPU utilization in Task Manager](../../media/GRE-Tunnel-Perf/Gre-Tunnel-03.jpg)
+![Screenshot of two Task Manager windows showing CPU Utilization on both of the RAS Gateway VMs when there is one TCP session.](../../media/GRE-Tunnel-Perf/Gre-Tunnel-03.jpg)
 
 
 The following illustration depicts Ethernet network throughput on the RAS Gateway VMs. The active VM, RAS Gateway VM #1, is on the left, while the passive VM, RAS Gateway VM #2, is on the right.
 
-![Gateway VM Ethernet network throughput in Task Manager](../../media/GRE-Tunnel-Perf/Gre-Tunnel-04.jpg)
+![Screenshot of two Task Manager windows showing the Ethernet network throughput on the RAS Gateway VMs when there is one TCP session.](../../media/GRE-Tunnel-Perf/Gre-Tunnel-04.jpg)
 
 For more information about RAS Gateway performance, see [HNV Gateway Performance Tuning in Software Defined Networks](../../../administration/performance-tuning/subsystem/software-defined-networking/hnv-gateway-performance.md).

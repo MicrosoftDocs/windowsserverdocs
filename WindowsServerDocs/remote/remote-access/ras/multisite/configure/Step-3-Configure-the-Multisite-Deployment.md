@@ -1,11 +1,12 @@
 ---
 title: Step 3 Configure the Multisite Deployment
-description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+description: Learn about the steps required to set up the  Remote Access multisite deployment.
 manager: brianlic
 ms.topic: article
 ms.assetid: ea7ecd52-4c12-4a49-92fd-b8c08cec42a9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Step 3 Configure the Multisite Deployment
 
@@ -24,7 +25,7 @@ After configuring the multisite infrastructure follow these steps to set up the 
 |3.7. Add entry points to the multisite deployment|Add additional entry points to the multisite deployment.|
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](/previous-versions//bb648607(v=vs.85)).
 
 ## <a name="BKMK_ConfigServer"></a>3.1. Configure Remote Access servers
 

@@ -4,8 +4,8 @@ description: In this topic, we provide you with the instructions to configure Co
 ms.topic: article
 ms.assetid: eed5c184-fa55-43a8-a879-b1610ebc70ca
 manager: dougkim
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/14/2018
 ---
 

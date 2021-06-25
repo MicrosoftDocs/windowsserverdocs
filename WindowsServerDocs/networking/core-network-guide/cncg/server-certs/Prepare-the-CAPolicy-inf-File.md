@@ -4,8 +4,9 @@ description:  The CAPolicy.inf contains various settings that are used when inst
 manager: alanth
 ms.topic: article
 ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # CAPolicy.inf Syntax

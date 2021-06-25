@@ -3,8 +3,8 @@ title: at
 description: Reference article for the at command, which schedules commands and programs to run on a computer at a specified time and date.
 ms.topic: reference
 ms.assetid: ff18fd16-9437-4c53-8794-bfc67f5256b3
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -1,10 +1,10 @@
 ---
 title: Configure remote Management in Server Manager
-description: Server Manager
+description: Learn how to add the server to the Server Manager server pool to perform management tasks on remote servers.
 ms.topic: article
 ms.assetid: 509182ed-c37d-4b81-84bc-aee43d006873
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -103,9 +103,9 @@ In Windows Server 2016, Server Manager relies on Windows remote Management (WinR
 
     -   To enable remote management on servers that are running  Windows Server 2012 , see [To enable Server Manager remote management by using the Windows interface](#to-enable-server-manager-remote-management-by-using-the-windows-interface) in this topic.
 
-    -   To enable remote management on servers that are running  Windows Server 2008 R2 , see [remote Management with Server Manager](https://go.microsoft.com/fwlink/?LinkID=137378) in the  Windows Server 2008 R2  help.
+    -   To enable remote management on servers that are running  Windows Server 2008 R2 , see [remote Management with Server Manager](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759202(v=ws.11)) in the  Windows Server 2008 R2  help.
 
-    -   To enable remote management on servers that are running  Windows Server 2008 , see [Enable and Use remote Commands in Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=242565).
+    -   To enable remote management on servers that are running  Windows Server 2008 , see [Enable and Use remote Commands in Windows PowerShell](/previous-versions/technet-magazine/ff700227(v=msdn.10)).
 
 ### To configure mmc or other tool remote management over DCOM
 

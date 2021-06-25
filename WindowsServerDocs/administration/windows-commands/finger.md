@@ -3,8 +3,8 @@ title: finger
 description: Reference article for the finger command, which displays information about users on a specified remote computer running the finger service or daemon.
 ms.topic: reference
 ms.assetid: 907ea637-5c6c-4752-84c2-46bbf2a68a33
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

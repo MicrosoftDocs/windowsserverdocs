@@ -1,11 +1,12 @@
 ---
 title: Deploy Remote Access with OTP Authentication
-description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
+description: Learn how to configure a Remote Access server with DirectAccess enabled to authenticate DirectAccess client users with two-factor one-time password authentication.
 manager: brianlic
 ms.topic: article
 ms.assetid: b1b2fe70-7956-46e8-a3e3-43848868df09
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Deploy Remote Access with OTP Authentication
 

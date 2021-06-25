@@ -2,10 +2,11 @@
 title: Enable Hash Publication for File Servers
 description: Learn how to enable BranchCache hash publication on one file server or on multiple file servers.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 5697aefe-1dd2-4ff9-82a9-da0afc182cb3
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # Enable Hash Publication for File Servers
 

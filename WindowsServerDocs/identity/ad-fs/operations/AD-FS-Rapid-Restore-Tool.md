@@ -72,7 +72,7 @@ The cmdlet takes the following parameters:
 
 Parameter Sets
 
-![AD FS Rapid Restore Tool](media/AD-FS-Rapid-Restore-Tool/parameter1.png)
+![Screenshot that shows the parameter sets that the cmdlet accepts.](media/AD-FS-Rapid-Restore-Tool/parameter1.png)
 
 ### Detailed description
 

@@ -1,10 +1,10 @@
 ---
 title: Security Support Provider Interface Architecture
-description: Windows Server Security
+description: Learn about the Windows authentication protocols that are used within the Security Support Provider Interface (SSPI) architecture.
 ms.topic: article
 ms.assetid: de09e099-5711-48f8-adbd-e7b8093a0336
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---
@@ -69,7 +69,7 @@ Because the Kerberos protocol has been the default authentication protocol since
 
 -   Certificate requests to Active Directory Certificate Services for domain users and computers
 
-Location: %windir%\Windows\System32\kerberos.dll
+Location: %Windir%\System32\kerberos.dll
 
 This provider is included by default in versions designated in the **Applies to** list at the beginning of this topic, plus Windows Server 2003 and Windows XP.
 
@@ -102,7 +102,7 @@ The supported Windows operating systems can use the NTLM SSP for the following:
 
 -   Secure Remote Procedure Call service or DCOM service
 
-Location: %windir%\Windows\System32\msv1_0.dll
+Location: %Windir%\System32\msv1_0.dll
 
 This provider is included by default in versions designated in the **Applies to** list at the beginning of this topic, plus Windows Server 2003 and Windows XP.
 
@@ -125,7 +125,7 @@ Digest SSP (Wdigest.dll) is used for the following:
 
 -   LDAP queries
 
-Location: %windir%\Windows\System32\Digest.dll
+Location: %Windir%\System32\Wdigest.dll
 
 This provider is included by default in versions designated in the **Applies to** list at the beginning of this topic, plus Windows Server 2003 and Windows XP.
 
@@ -158,7 +158,7 @@ The protocol that is selected is the preferred authentication protocol that the 
 
 DTLS is used when explicitly called by the application. For more information about DTLS and the other protocols that are used by the Schannel provider, see [Schannel Security Support Provider Technical Reference](../tls/schannel-security-support-provider-technical-reference.md).
 
-Location: %windir%\Windows\System32\Schannel.dll
+Location: %Windir%\System32\Schannel.dll
 
 This provider is included by default in versions designated in the **Applies to** list at the beginning of this topic, plus Windows Server 2003 and Windows XP.
 
@@ -174,13 +174,13 @@ This provider is included by default in versions designated in the **Applies to*
 -   [\[MS-TLSP\]: Transport Layer Security (TLS) Profile](/openspecs/windows_protocols/ms-tlsp/58aba05b-62b0-4cd1-b88b-dc8a24920346)
 
 ### <a name="BKMK_NegoSSP"></a>Negotiate Security Support Provider
-The Simple and Protected GSS-API Negotiation Mechanism (SPNEGO) forms the basis for the Negotiate SSP, whichcan be used to negotiate a specific authentication protocol. When an application calls into SSPI to log on to a network, it can specify an SSP to process the request. If the application specifies the Negotiate SSP, it analyzes the request and picks the appropriate provider to handle the request, based on customer-configured security policies.
+The Simple and Protected GSS-API Negotiation Mechanism (SPNEGO) forms the basis for the Negotiate SSP, which can be used to negotiate a specific authentication protocol. When an application calls into SSPI to log on to a network, it can specify an SSP to process the request. If the application specifies the Negotiate SSP, it analyzes the request and picks the appropriate provider to handle the request, based on customer-configured security policies.
 
 SPNEGO is specified in RFC 2478.
 
 In supported versions of the Windows operating systems, the Negotiate security support provider selects between the Kerberos protocol and NTLM. Negotiate selects the Kerberos protocol by default unless that protocol cannot be used by one of the systems involved in the authentication, or the calling application did not provide sufficient information to use the Kerberos protocol.
 
-Location: %windir%\Windows\System32\lsasrv.dll
+Location: %Windir%\System32\lsasrv.dll
 
 This provider is included by default in versions designated in the **Applies to** list at the beginning of this topic, plus Windows Server 2003 and Windows XP.
 
@@ -195,7 +195,7 @@ This provider is included by default in versions designated in the **Applies to*
 ### <a name="BKMK_CredSSP"></a>Credential Security Support Provider
 The Credential Security Service Provider (CredSSP) provides a single sign-on (SSO) user experience when starting new Terminal Services and Remote Desktop Services sessions. CredSSP enables applications to delegate users' credentials from the client computer (by using the client-side SSP) to the target server (through the server-side SSP), based on the client's policies. CredSSP policies are configured by using Group Policy, and the delegation of credentials is turned off by default.
 
-Location: %windir%\Windows\System32\credssp.dll
+Location: %Windir%\System32\credssp.dll
 
 This provider is included by default in versions designated in the **Applies to** list at the beginning of this topic.
 
@@ -222,14 +222,14 @@ The Windows Negotiate package treats the NegoExts SSP in the same manner as it d
 
 The SSPs supported by NegoExts are not stand-alone SSPs such as Kerberos and NTLM. Therefore, within the NegoExts SSP, when the authentication method fails for any reason, an authentication failure message will be displayed or logged. No renegotiation or fallback authentication methods are possible.
 
-Location: %windir%\Windows\System32\negoexts.dll
+Location: %Windir%\System32\negoexts.dll
 
 This provider is included by default in versions designated in the **Applies to** list at the beginning of this topic, excluding Windows Server 2008 and Windows Vista.
 
 ### <a name="BKMK_PKU2USSP"></a>PKU2U Security Support Provider
 The PKU2U protocol was introduced and implemented as an SSP in  Windows 7  and  Windows Server 2008 R2 . This SSP enables peer-to-peer authentication, particularly through the media and file sharing feature called HomeGroup, which was introduced in  Windows 7 . The feature permits sharing between computers that are not members of a domain.
 
-Location: %windir%\Windows\System32\pku2u.dll
+Location: %Windir%\System32\pku2u.dll
 
 This provider is included by default in versions designated in the **Applies to** list at the beginning of this topic, excluding Windows Server 2008 and Windows Vista.
 

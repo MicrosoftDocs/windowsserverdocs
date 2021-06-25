@@ -6,23 +6,23 @@ summary: Windows Server is the platform for building an infrastructure of connec
 metadata:
   title: Windows Server Documentation - Microsoft Docs
   description: Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center.
-  author: eross-msft
-  manager: daveba
+  author: JasonGerend
+  manager: femila
   ms.service: windows-server
   ms.topic: hub-page
-  ms.date: 06/06/2019
-  ms.author: lizross
+  ms.date: 06/23/2021
+  ms.author: jgerend
 
 highlightedContent:
   items:
-    - title: What's new in Windows Server 2019?
-      itemType: whats-new # controls the icon image and super-title text
-      url: ./get-started-19/whats-new-19.md
-    - title: Get started with Windows Server 2019
-      itemType: overview
-      url: ./get-started-19/get-started-19.md
+    - title: Get started with Windows Server 2022
+      itemType: get-started
+      url: ./windows-server-2022/get-started-with-windows-server-2022.md
+    - title: What's new in Windows Server 2022?
+      itemType: whats-new
+      url: ./windows-server-2022/get-started/whats-new.md
     - title: Windows Admin Center
-      itemType: how-to-guide
+      itemType: overview
       url: ./manage/windows-admin-center/overview.md
     - title: Hyper-converged infrastructure
       itemType: overview
@@ -30,15 +30,15 @@ highlightedContent:
     - title: Connect to Azure hybrid services
       itemType: how-to-guide
       url: ./manage/windows-admin-center/azure/index.md
-    - title: Get started with Windows Server 2016
-      itemType: how-to-guide
-      url: ./get-started/server-basics.md
+    - title: Get started with Windows Server 2019
+      itemType: get-started
+      url: ./get-started-19/get-started-19.md
     - title: Use Windows Server 2008 and 2008 R2 Extended Security Updates
       itemType: how-to-guide
       url: ./get-started/extended-security-updates.md
     - title: Windows Insider Program for Server
-      itemType: overview
-      url: /windows-insider/at-work/
+      itemType: get-started
+      url: /windows-insider/business/server-get-started
 
 conceptualContent:
   items:
@@ -68,7 +68,7 @@ conceptualContent:
         - url: ./identity/active-directory-federation-services.md
           itemType: overview
           text: Active Directory Federation Services (AD FS)
-        - url: ./identity/securing-privileged-access/securing-privileged-access.md
+        - url: /security/compass/overview
           itemType: concept
           text: Securing privileged access
       footerLink:
@@ -113,7 +113,7 @@ conceptualContent:
         - url: ./networking/sdn/index.yml
           itemType: overview
           text: Software-defined Networking (SDN) overview
-        - url: ./networking/sdn/technologies/network-controller/network-controller.md
+        - url: /azure-stack/hci/concepts/network-controller-overview
           itemType: overview
           text: Network controller
       footerLink:

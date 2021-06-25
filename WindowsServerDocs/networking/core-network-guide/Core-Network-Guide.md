@@ -4,8 +4,9 @@ description: This guide provides instructions on how to plan and deploy the core
 manager: brianlic
 ms.topic: article
 ms.assetid: b3cd60f7-d380-4712-9a78-0a8f551e1121
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Core network components
 

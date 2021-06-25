@@ -1,11 +1,12 @@
 ---
 title: Customize the Active Directory Administrative Center Navigation Pane
-description: Windows Server Security
+description: Learn how to customize the Active Directory Administrative Center navigation pane.
 ms.assetid: c9933d16-e153-435a-b5b7-3e594db42d5c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
+ms.topic: article
 ---
 # Customize the Active Directory Administrative Center Navigation Pane
 

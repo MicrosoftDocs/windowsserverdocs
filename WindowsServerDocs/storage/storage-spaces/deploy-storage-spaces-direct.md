@@ -2,7 +2,7 @@
 title: Deploy Storage Spaces Direct
 manager: eldenc
 ms.author: stevenek
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 20fee213-8ba5-4cd3-87a6-e77359e82bc0
 author: stevenek
 ms.date: 12/09/2020
@@ -43,7 +43,7 @@ Gather the following information:
 
 The first step is to install Windows Server on every server that will be in the cluster. Storage Spaces Direct requires Windows Server Datacenter Edition. You can use the Server Core installation option, or Server with Desktop Experience.
 
-When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Install Server Core](/windows-server/get-started/getting-started-with-server-core).
+When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Install Server Core](../../get-started/getting-started-with-server-core.md).
 
 ### Step 1.2: Connect to the servers
 

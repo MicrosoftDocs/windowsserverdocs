@@ -3,8 +3,8 @@ title: findstr
 description: Reference article for the findstr command, which searches for patterns of text in files.
 ms.topic: reference
 ms.assetid: c2d803fb-4cd2-46a1-a1b7-6f5e0249c418
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -89,7 +89,7 @@ findstr hello there x.y
 To search for *hello there* in file *x.y*, type:
 
 ```
-findstr /c:hello there x.y
+findstr /c:"hello there" x.y
 ```
 
 To find all occurrences of the word *Windows* (with an initial capital letter W) in the file *proposal.txt*, type:

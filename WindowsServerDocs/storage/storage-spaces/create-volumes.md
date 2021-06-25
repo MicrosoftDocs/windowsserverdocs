@@ -6,6 +6,7 @@ author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.date: 02/25/2020
+ms.topic: article
 ---
 # Creating volumes in Storage Spaces Direct
 

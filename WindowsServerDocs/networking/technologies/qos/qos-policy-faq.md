@@ -4,8 +4,9 @@ description: This topic provides answers to questions about Quality of Service (
 ms.topic: article
 ms.assetid: 74c97a14-b957-4568-b48e-8963a674fdb3
 manager: brianlic
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # QoS Policy Frequently Asked Questions

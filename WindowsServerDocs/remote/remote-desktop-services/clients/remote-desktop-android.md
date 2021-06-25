@@ -4,20 +4,20 @@ description: General information about the Android client.
 ms.topic: article
 ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 12/11/2020
+ms.date: 02/04/2020
 ms.localizationpriority: medium
 ms.custom: contperf-fy21q1
 ---
 
 # Get started with the Android client
 
->Applies to: Android 6.0 and later
+>Applies to: Android 7.0 and later
 
 You can use the Remote Desktop client for Android to work with Windows apps and desktops directly from your Android device or a Chromebook that supports the Google Play Store.
 
-This article will show you how to get started using the client. If you have any additional questions, make sure to check our [FAQ](remote-desktop-client-faq.md).
+This article will show you how to get started using the client. If you have any additional questions, make sure to check our [FAQ](remote-desktop-client-faq.yml).
 
 > [!NOTE]
 > - Curious about the new releases for the Android client? Check out [What's new for the Android client](android-whatsnew.md).

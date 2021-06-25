@@ -1,10 +1,11 @@
 ---
 title: Server Performance Advisor Pack Development Guide
 description: Server Performance Advisor Pack Development Guide
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
+ms.topic: article
 ---
 # Server Performance Advisor Pack Development Guide
 
@@ -229,7 +230,7 @@ Windows registry editor version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\db310065-829b-4671-9647-2261c00e86ef]
 "Description"=
- FriendlyName = Power Source Optimized 
+ FriendlyName = Power Source Optimized
 
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\User\PowerSchemes\db310065-829b-4671-9647-2261c00e86ef \0012ee47-9041-4b5d-9b77-535fba8b1442\6738e2c4-e8a5-4a42-b16a-e040e769756e
 "ACSettingIndex"=dword:000000b4
@@ -514,7 +515,7 @@ Continuing with the previous example, the user knows whether there is enough fre
 Name | Value
 ---- | ----
 Free Disk Size On System Drive (GB) | 100
-Total Disk Size Installed (GB) | 500 
+Total Disk Size Installed (GB) | 500
 
 if a user wants to see a list of all hard drives that are installed on the server and their disk size, we could call a list value, which has three columns and multiple rows, as shown here.
 
@@ -709,7 +710,7 @@ The **caption** attribute of &lt;column/&gt; is shown as a column name, and the 
 In some cases, a table may have a lot of columns and only a few rows, so swapping the columns and rows would make the table look much better. To swap the columns and rows, you can add the following style attribute:
 
 ``` syntax
-<listValue style="Transpose"  
+<listValue style="Transpose"
 ```
 
 ### Defining charting elements
@@ -729,7 +730,7 @@ SPA uses a single value group to support static statistics and a list value tabl
 As mentioned previously, a static statistic is a single value. Logically, any single value could be defined as a static statistic. However, it is meaningless to view a single value that cannot be cast to a number type. To define a static statistic, you can simply add the attribute **trendable** to the corresponding single value key as shown below:
 
 ``` syntax
-<value name="freediskSize" type="int" trendable="true"  
+<value name="freediskSize" type="int" trendable="true"
 ```
 
 ### Dynamic statistics
@@ -765,7 +766,7 @@ As the following example indicates multiple **Value** columns with multiple **Ke
 CounterName | InstanceName | Average | Sum
 --- | :---: | :---: | :---:
 % Processor time | _Total | 10 | 20
-% Processor time | CPU0 | 20 | 30 
+% Processor time | CPU0 | 20 | 30
 
 In this example, you have two **Key** columns and two **Value** columns. SPA generates two statistics keys for the Average column and another two keys for the Sum column. The statistics keys are:
 
@@ -806,7 +807,7 @@ After the provision metadata is defined, we can start to write the report script
 There are **name** and **reportScript** attributes in the provision metadata header, as shown here:
 
 ``` syntax
-<advisorPack name="Microsoft.ServerPerformanceAdvisor.CoreOS.V1" reportScript="ReportScript"  
+<advisorPack name="Microsoft.ServerPerformanceAdvisor.CoreOS.V1" reportScript="ReportScript"
 ```
 
 The main report script is named by combining the **name** and **reportScript** attributes. In the following example, it will be \[Microsoft.ServerPerformanceAdvisor.CoreOS.V2\].\[ReportScript\].
@@ -900,7 +901,7 @@ END
 ELSE
 BEGIN
     exec dbo.SetNotification N'freediskSize', N'SuccessAdvice'
-END 
+END
 ```
 
 ### Get threshold value
@@ -963,9 +964,9 @@ The following example shows some defined single values:
 You can then set the single value as shown here:
 
 ``` syntax
-exec dbo.SetSingleValue N OsName ,  Windows 7 
-exec dbo.SetSingleValue N Osversion ,  6.1.7601 
-exec dbo.SetSingleValue N OsLocation ,  c:\ 
+exec dbo.SetSingleValue N OsName ,  Windows 7
+exec dbo.SetSingleValue N Osversion ,  6.1.7601
+exec dbo.SetSingleValue N OsLocation ,  c:\
 ```
 
 In rare cases, you may want to remove the result that you previously set by using the \[dbo\].\[removeSingleValue\] API.
@@ -975,7 +976,7 @@ In rare cases, you may want to remove the result that you previously set by usin
 You can use the following script to remove the previously set value.
 
 ``` syntax
-exec dbo.removeSingleValue N Osversion 
+exec dbo.removeSingleValue N Osversion
 ```
 
 ### Get data collection information
@@ -1041,7 +1042,7 @@ VALUES (
 if there is any further information that you want to communicate to the system administrators, you can write logs. If there is any log for a particular report, a yellow banner will be shown in the report header. The following example shows how you can write a log:
 
 ``` syntax
-exec dbo.WriteSystemLog N'Any information you want to show to the system administrators , N Warning 
+exec dbo.WriteSystemLog N'Any information you want to show to the system administrators , N Warning
 ```
 
 The first parameter is the message you want show in the log. The second parameter is the log level. The valid input for the second parameter could be **Informational**, **Warning**, or **Error**.

@@ -4,6 +4,7 @@ description: Recommended settings and configuration to minimize overhead for Win
 ms.author: robsmi
 ms.topic: article
 author: jaimeo
+ms.date: 12/08/2020
 ---
 
 # Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role
@@ -409,7 +410,7 @@ The following settings specifically do not counter or conflict with any setting 
 | **Edge UI** | Turn off tracking of app usage |  | **Enabled** |
 | **File Explorer** | Turn off caching of thumbnail pictures |  | **Enabled** |
 | **File Explorer** | Turn off display of recent search entries in the File Explorer search box |  | **Enabled** |
-| **File Explorer** | Turn off the caching of thumbnails in hidden thumbs.db file |  | **Enabled** ||
+| **File Explorer** | Turn off the caching of thumbnails in hidden thumbs.db file |  | **Enabled** |
 
 ### Notes about Network Connectivity Status indicator
 

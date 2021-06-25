@@ -1,10 +1,10 @@
 ---
 title: Credentials Protection and Management
-description: Windows Server Security
+description: Learn about features and methods introduced in Windows Server 2012 R2 and Windows 8.1 for credential protection and domain authentication controls to reduce credential theft.
 ms.topic: article
 ms.assetid: e457229c-0126-40fe-948c-101c943e1b57
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---

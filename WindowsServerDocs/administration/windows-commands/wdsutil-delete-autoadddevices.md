@@ -3,8 +3,8 @@ title: wdsutil delete-autoadddevices
 description: Reference article for the wdsutil delete-autoadddevices command, which deletes computers that are pending, rejected, or approved from the Auto-add database.
 ms.topic: reference
 ms.assetid: 8dcaca6a-212e-4c36-98e3-00938eef6b9c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

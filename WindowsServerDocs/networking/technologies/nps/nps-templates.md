@@ -4,8 +4,9 @@ description: This topic provides an overview of Network Policy Server Templates 
 manager: brianlic
 ms.topic: article
 ms.assetid: fdfc0df1-21c7-492c-9fad-38fe9c7d935a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # NPS Templates

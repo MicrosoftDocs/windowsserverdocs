@@ -1,6 +1,21 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/administration/performance-tuning/powershell/index.md",
+      "redirect_url": "/powershell/scripting/dev-cross-plat/performance/script-authoring-considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/performance-tuning/powershell/module-authoring-considerations.md",
+      "redirect_url": "/powershell/scripting/dev-cross-plat/performance/module-authoring-considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/performance-tuning/powershell/script-authoring-considerationsscript-authoring-considerations.md",
+      "redirect_url": "/powershell/scripting/dev-cross-plat/performance/script-authoring-considerations",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/nict-vms.md",
       "redirect_url": "/windows-server/networking/technologies/nic-teaming/NIC-Teaming",
       "redirect_document_id": false
@@ -72,7 +87,7 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/securing-privileged-access/privileged-access-workstations.md",
-      "redirect_url": "/security/compass/concept-azure-managed-workstation",
+      "redirect_url": "/security/compass/privileged-access-devices",
       "redirect_document_id": false
     },
     {
@@ -1721,7 +1736,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-client-faq.md",
+      "source_path": "WindowsServerDocs/compute/remote-desktop-services/clients/remote-desktop-client-faq.yml",
       "redirect_url": "/windows-server/remote/remote-desktop-services/clients/remote-desktop-client-faq",
       "redirect_document_id": true
     },
@@ -7867,8 +7882,13 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs.md",
-      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-access/ras/multisite/troubleshoot/Troubleshooting-Web-Probe-URLs.md",
+      "redirect_url": "/windows-server/remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/remote-access/ras/otp/Deploy-RA-OTP.md",
@@ -9587,7 +9607,47 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/manage/Use-Access-Control-Lists--ACLs--to-Manage-Datacenter-Network-Traffic-Flow.md",
-      "redirect_url": "/windows-server/networking/sdn/manage/use-acls-for-traffic-flow",
+      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/manage/use-acls-for-traffic-flow.md",
+      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/manage/configure-datacenter-firewall-acls.md",
+      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/security/sdn-firewall-auditing.md",
+      "redirect_url": "/azure-stack/hci/manage/use-datacenter-firewall-powershell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/plan/plan-a-software-defined-network-infrastructure.md",
+      "redirect_url": "/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-controller/network-controller.md",
+      "redirect_url": "/azure-stack/hci/concepts/network-controller-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/plan/installation-and-preparation-requirements-for-deploying-network-controller.md",
+      "redirect_url": "/azure-stack/hci/concepts/network-controller",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/ras-gateway-for-sdn.md",
+      "redirect_url": "/azure-stack/hci/concepts/gateway-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/what-s-new-in-ras-gateway.md",
+      "redirect_url": "/azure-stack/hci/concepts/gateway-overview",
       "redirect_document_id": false
     },
     {
@@ -9597,7 +9657,17 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/Software-Load-Balancing--SLB--for-SDN.md",
-      "redirect_url": "/windows-server/networking/sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn",
+      "redirect_url": "/azure-stack/hci/concepts/software-load-balancer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md",
+      "redirect_url": "/azure-stack/hci/concepts/software-load-balancer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/network-function-virtualization/datacenter-firewall-overview.md",
+      "redirect_url": "/azure-stack/hci/concepts/datacenter-firewall-overview",
       "redirect_document_id": false
     },
     {
@@ -9938,6 +10008,46 @@
     {
       "source_path": "WindowsServerDocs/Windows-Server-2016.md",
       "redirect_url": "/windows-server/windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/vm-load-balancing-overview.md",
+      "redirect_url": "/azure-stack/hci/manage/vm-load-balancing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/vm-load-balancing-deep-dive.md",
+      "redirect_url": "/azure-stack/hci/manage/vm-load-balancing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/cluster-sets.md",
+      "redirect_url": "/azure-stack/hci/deploy/cluster-set",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/deploy-pmem.md",
+      "redirect_url": "/azure-stack/hci/concepts/deploy-persistent-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-comp.md",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-format.md",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-etl2txt",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-pcapng.md",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-etl2pcap",
       "redirect_document_id": false
     }
   ]

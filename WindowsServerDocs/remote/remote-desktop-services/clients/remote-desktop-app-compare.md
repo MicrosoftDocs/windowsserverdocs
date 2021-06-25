@@ -4,9 +4,9 @@ description: Learn how the different RD apps compare when it comes to redirectio
 ms.topic: article
 ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 12/16/2020
+ms.date: 02/04/2021
 ms.localizationpriority: medium
 ---
 
@@ -46,11 +46,11 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 
 | Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS         | macOS                           | Web client    |
 |---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
-| Cameras             | X                         | X                           |               |     X    |   X         | X                               |               |
+| Cameras             | X                         | X                           |               |          |   X         | X                               |               |
 | Clipboard           | X                         | X                           | X             | Text    | Text, images | X                               | text          |
 | Local drive/storage | X                         | X                           |               | X       |   X        | X                               |               |
 | Location            | X                         | X                           |               |         |             |                                 |               |
-| Microphones         | X                         | X                           | X             |         |  X          | X                               |               |
+| Microphones         | X                         | X                           | X             |    X    |  X          | X                               |               |
 | Printers            | X                         | X                           |               |         |             | X (CUPS only)                   | PDF print     |
 | Scanners            | X                         | X                           |               |         |             |                                 |               |
 | Smart Cards         | X                         | X                           |               |         |             | X (Windows logon not supported) |               |

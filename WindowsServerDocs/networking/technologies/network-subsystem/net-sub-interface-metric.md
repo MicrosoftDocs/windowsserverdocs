@@ -1,11 +1,12 @@
 ---
 title: Configure the Order of Network Interfaces
-description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
+description: Learn how to use the interface metric to configure the order of network interfaces.
 ms.topic: article
 ms.assetid: 3266328c-ca82-40d2-90ca-854b7088ccaa
 manager: dcscontentpm
 ms.author: v-tea
 author: Teresa-Motiv
+ms.date: 08/07/2020
 ---
 
 # Configure the Order of Network Interfaces
