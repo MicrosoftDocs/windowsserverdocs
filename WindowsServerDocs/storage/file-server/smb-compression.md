@@ -4,8 +4,8 @@ description: Describes the SMB compression feature in Windows Server 2022, Windo
 ms.product: windows-server
 ms.topic: article
 author: NedPyle
-ms.author: 
-ms.date: 06/017/2021
+ms.author: IngridAtMicrosoft
+ms.date: 06/25/2021
 ms.localizationpriority: medium
 ---
 
@@ -25,7 +25,7 @@ SMB compression in Windows has the following characteristics
 
 For a demonstration of SMB compression, watch this video:
 
-      -> Ingrid a youtube video goes here
+[!VIDEO https://www.youtube.com/embed/zpMS6w33H7U]
 
 ## Requirements
 
