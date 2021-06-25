@@ -3,8 +3,8 @@ title: shrink
 description: Reference article for the DiskPart shrink command, which reduces the size of the selected volume by the amount you specify.
 ms.topic: reference
 ms.assetid: ec87cc7c-9846-465e-a10d-4ee10db4f4e6
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

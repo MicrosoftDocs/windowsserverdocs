@@ -80,9 +80,9 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Ttcp](http://en.wikipedia.org/wiki/Ttcp)
 
--   [How to use NTttcp to Test Network Performance](https://msdn.microsoft.com/windows/hardware/gg463264.aspx)
+-   [How to use NTttcp to Test Network Performance](/samples/browse/?redirectedfrom=TechNet-Gallery)
 
--   [Using the File Server Capactiy Tool](/previous-versions/dn567658(v=vs.85))
+-   [Using the File Server Capacity Tool](/previous-versions/dn567658(v=vs.85))
 
 -   [Using the SPECsfs2008 File Server](/previous-versions/dn567653(v=vs.85))
 
@@ -90,9 +90,9 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Performance Tuning for Online Transaction Processing (OLTP)](/previous-versions/dn567642(v=vs.85))
 
--   [How to: Configure SQL Server to Use Soft-NUMA](https://go.microsoft.com/fwlink/?LinkId=98292)
+-   [How to: Configure SQL Server to Use Soft-NUMA](/sql/database-engine/configure-windows/soft-numa-sql-server)
 
--   [How to: Map TCP/IP Ports to NUMA Nodes](https://go.microsoft.com/fwlink/?LinkId=98293)
+-   [How to: Map TCP/IP Ports to NUMA Nodes](/sql/database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server)
 
 -   [ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql)
 
@@ -107,6 +107,8 @@ Use the links in this topic to learn more about the concepts that were discussed
 Use the performance tuning guidelines to improve performance for older versions of Windows Server.
 
 Here's a list of performance tuning guidelines for previous versions of Windows Server:
+
+-   [Performance Tuning Guidelines for Windows Server 2016](/windows-server/opbuildpdf/administration/performance-tuning/toc.pdf?branch=live)
 
 -   [Performance Tuning Guidelines for Windows Server 2012 R2](https://www.microsoft.com/download/details.aspx?id=51960)
 

@@ -18,7 +18,7 @@ Copying files is a common operation performed on a file server. Windows Server h
 ## SMB performance tuning
 
 
-File server performance and available tunings depend on the SMB protocol that is negotiated between each client and the server, and on the deployed file server features. The highest protocol version currently available is SMB 3.1.1 in Windows Server 2016 and Windows 10. You can check which version of SMB is in use on your network by using Windows PowerShell **Get-SMBConnection** on clients and **Get-SMBSession | FL** on servers.
+File server performance and available tunings depend on the SMB protocol that is negotiated between each client and the server, and on the deployed file server features. The highest protocol version currently available is SMB 3.1.1 in Windows Server 2022, Windows Server 2016 and Windows 10. You can check which version of SMB is in use on your network by using Windows PowerShell **Get-SMBConnection** on clients and **Get-SMBSession | FL** on servers.
 
 ### SMB 3.0 protocol family
 
@@ -125,7 +125,7 @@ The following REG\_DWORD registry settings can affect the performance of SMB fil
   > An indication that the value may need to be increased is if the SMB2 work queues are growing very large (performance counter ‘Server Work Queues\\Queue Length\\SMB2 NonBlocking \*'  is consistently above ~100).
 
   >[!Note]
-  >In Windows 10 and Windows Server 2016, MaxThreadsPerQueue is unavailable. The number of threads for a thread pool will be "20 * the number of processors in a NUMA node".
+  >In Windows 10, Windows Server 2016, and Windows Server 2022, MaxThreadsPerQueue is unavailable. The number of threads for a thread pool will be "20 * the number of processors in a NUMA node".
 
 
 - **AsynchronousCredits**

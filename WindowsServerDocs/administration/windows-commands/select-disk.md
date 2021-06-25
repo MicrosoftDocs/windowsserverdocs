@@ -3,8 +3,8 @@ title: select disk
 description: Reference article for the select disk command, which selects the specified disk and then shifts focus to it.
 ms.topic: reference
 ms.assetid: a0da614b-09d9-433b-b4eb-9127f84431cb
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

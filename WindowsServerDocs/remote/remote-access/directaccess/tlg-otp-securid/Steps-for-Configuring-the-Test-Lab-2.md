@@ -4,8 +4,8 @@ description: Learn about configuring the Remote Access infrastructure, configure
 manager: brianlic
 ms.topic: article
 ms.assetid: 0a40183c-afd1-43ca-b306-05745640a37d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Steps for Configuring the Test Lab with OTP Authentication and RSA SecurID

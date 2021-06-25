@@ -4,8 +4,8 @@ description: Learn how to create DNS policy for geo-location based traffic manag
 manager: brianlic
 ms.topic: article
 ms.assetid: a9ee7a56-f062-474f-a61c-9387ff260929
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 01/05/2021
 ---
 # Use DNS Policy for Geo-Location Based Traffic Management with Primary-Secondary Deployments

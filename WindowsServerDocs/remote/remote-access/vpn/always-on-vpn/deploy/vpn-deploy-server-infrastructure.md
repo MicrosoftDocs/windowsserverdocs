@@ -319,21 +319,19 @@ Domain-joined VPN servers
 
 10. Close the Certificate Templates console.
 
-11. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, click **New** and then click **Certificate Template to Issue**.
+11. Restart the Certificate Authority services.(*)
 
-12. Restart the Certificate Authority services.(*)
+12. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, select **New** and then select **Certificate Template to Issue**.
 
-13. In the navigation pane of the Certification Authority snap-in, right-click **Certificate Templates**, select **New** and then select **Certificate Template to Issue**.
+13. Select the name you chose in step 4 above, and click **OK**.
 
-14. Select the name you chose in step 4 above, and click **OK**.
-
-15. Close the Certification Authority snap-in.
+14. Close the Certification Authority snap-in.
 
 * **You can stop/start the CA service by running the following command in CMD:**
 
 ```
-Net Stop "certsvc"
-Net Start "certsvc"
+net stop "certsvc"
+net start "certsvc"
 ```
 
 ## Create the NPS Server Authentication template

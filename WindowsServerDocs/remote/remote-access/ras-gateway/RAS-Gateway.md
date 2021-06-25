@@ -4,8 +4,8 @@ description: This topic, which is intended for Information Technology (IT) profe
 manager: dougkim
 ms.topic: article
 ms.assetid: acaa46b7-09b1-4707-9562-116df8db17eb
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 05/23/2018
 ---
 
@@ -122,9 +122,9 @@ The following are the recommended deployment scenarios for RAS Gateway:
 
 The following are the management tools for RAS Gateway:
 
-- In  Windows Server 2016, to deploy an RAS Gateway router, you must use Windows PowerShell commands. For more information, see  [Remote Access Cmdlets](https://docs.microsoft.com/powershell/module/remoteaccess) for  Windows Server 2016 and Windows 10.
+- In  Windows Server 2016, to deploy an RAS Gateway router, you must use Windows PowerShell commands. For more information, see  [Remote Access Cmdlets](/powershell/module/remoteaccess) for  Windows Server 2016 and Windows 10.
 
-- In System Center 2012 R2 Virtual Machine Manager (VMM), the RAS Gateway is named Windows Server Gateway. A limited set of Border Gateway Protocol (BGP) configuration options are available in the VMM software interface, including **Local BGP IP Address** and **Autonomous System Numbers (ASN)**, **List of BGP Peer IP Addresses**, and **ASN values**. You can, however, use Remote Access Windows PowerShell BGP commands to configure all other features of Windows Server Gateway. For more information, see  [Virtual Machine Manager (VMM)](https://docs.microsoft.com/system-center/vmm/overview) and [Remote Access Cmdlets](https://docs.microsoft.com/powershell/module/remoteaccess) for  Windows Server 2016 and Windows 10.
+- In System Center 2012 R2 Virtual Machine Manager (VMM), the RAS Gateway is named Windows Server Gateway. A limited set of Border Gateway Protocol (BGP) configuration options are available in the VMM software interface, including **Local BGP IP Address** and **Autonomous System Numbers (ASN)**, **List of BGP Peer IP Addresses**, and **ASN values**. You can, however, use Remote Access Windows PowerShell BGP commands to configure all other features of Windows Server Gateway. For more information, see  [Virtual Machine Manager (VMM)](/system-center/vmm/overview) and [Remote Access Cmdlets](/powershell/module/remoteaccess) for  Windows Server 2016 and Windows 10.
 
 ## Related topics
 

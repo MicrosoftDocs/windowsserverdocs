@@ -4,8 +4,8 @@ description: Learn about the DirectAccess Cluster-NLB test lab configuration req
 manager: brianlic
 ms.topic: article
 ms.assetid: a09ec1a9-38e1-4c6c-8213-cf5b6ae44043
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # DirectAccess Cluster-NLB Test Lab Configuration Requirements

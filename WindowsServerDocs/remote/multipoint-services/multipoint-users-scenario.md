@@ -17,7 +17,7 @@ What do you need to do to implement the user account scenario that you chose for
 
 ## Single MultiPoint Services computer in a stand-alone environment (no network)
 
-|||
+|Scenario|Tasks|
 |-|-|
 |**My users do not need to log on.** The stations can be available to anyone who walks up to them. They do not need an individual Windows desktop experience that includes private folders for storing data or personalized desktops.|1.  Create a single local user account (For instructions, see [Create local user accounts](Create-local-user-accounts.md).)<br />2.  [Allow one account to have multiple sessions](Allow-one-account-to-have-multiple-sessions.md)<br />3.  [Configure stations for automatic logon](Configure-stations-for-automatic-logon.md)|
 |**My users can all share the same user logon.** They do not need an individual Windows desktop experience that includes private folders for storing data or personalized desktops.|1.  Create a single local user account (For instructions, see [Create local user accounts](Create-local-user-accounts.md).)<br />2.  [Allow one account to have multiple sessions](Allow-one-account-to-have-multiple-sessions.md)|
@@ -25,7 +25,7 @@ What do you need to do to implement the user account scenario that you chose for
 
 ## Multiple MultiPoint Services computers on a network, but with no domain
 
-|||
+|Scenario|Tasks|
 |-|-|
 |**My users do not need to log on.** The stations can be available to anyone who walks up to them. They do not need an individual Windows desktop experience that includes private folders for storing data or personalized desktops.|1.  Create a single local user account on each server. (For instructions, see [Create local user accounts](Create-local-user-accounts.md).)<br />2.  [Allow one account to have multiple sessions](Allow-one-account-to-have-multiple-sessions.md) on each server<br />3.  [Configure stations for automatic logon](Configure-stations-for-automatic-logon.md) on each server|
 |**My users can all share the same user logon.** They do not need an individual Windows desktop experience that includes private folders for storing data or personalized desktops.|1.  Create a single local user account on each server. (For instructions, see [Create local user accounts](Create-local-user-accounts.md).)<br />2.  [Allow one account to have multiple sessions](Allow-one-account-to-have-multiple-sessions.md) on each server.|
@@ -33,7 +33,7 @@ What do you need to do to implement the user account scenario that you chose for
 
 ## One or more MultiPoint Services computers in a domain network environment
 
-|||
+|Scenario|Tasks|
 |-|-|
 |**My users do not need to log on.** The stations can be available to anyone who walks up to them. They do not need an individual Windows desktop experience that includes private folders for storing data or personalized desktops.|1.  Create a domain account to log onto the servers.<br />2.  [Allow one account to have multiple sessions](Allow-one-account-to-have-multiple-sessions.md) on each server.<br />3.  [Configure stations for automatic logon](Configure-stations-for-automatic-logon.md) on each server.|
 |**My users can all share the same user logon.** They do not need an individual Windows desktop experience that includes private folders for storing data or personalized desktops.|1.  Create a domain account for a group or for each user.<br />2.  [Allow one account to have multiple sessions](Allow-one-account-to-have-multiple-sessions.md) on each server.|

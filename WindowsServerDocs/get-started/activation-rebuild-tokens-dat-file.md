@@ -38,7 +38,7 @@ To rebuild the Tokens.dat file, follow these steps:
    For Windows 10, Windows Server 2016 and later versions of Windows, enter the following commands in sequence:
    ```cmd
    net stop sppsvc
-   cd %windir%\system32\spp\store\2.0
+   cd %Systemdrive%\Windows\System32\spp\store\2.0\
    ren tokens.dat tokens.bar
    net start sppsvc
    cscript.exe %windir%\system32\slmgr.vbs /rilc
@@ -46,7 +46,7 @@ To rebuild the Tokens.dat file, follow these steps:
    For Windows 8.1, Windows Server 2012 and Windows Server 2012 R2, enter the following commands in sequence:
    ```cmd
    net stop sppsvc
-   cd %windir%\ServiceProfiles\LocalService\AppData\Local\Microsoft\WSLicense
+   cd %Systemdrive%\Windows\System32\spp\store\
    ren tokens.dat tokens.bar
    net start sppsvc
    cscript.exe %windir%\system32\slmgr.vbs /rilc
@@ -54,7 +54,7 @@ To rebuild the Tokens.dat file, follow these steps:
    For Windows 7, Windows Server 2008 and Windows Server 2008 R2, enter the following commands in sequence:
    ```cmd
    net stop sppsvc
-   cd %windir%\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\SoftwareProtectionPlatform
+   cd %Systemdrive%\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\SoftwareProtectionPlatform
    ren tokens.dat tokens.bar
    net start sppsvc
    cscript.exe %windir%\system32\slmgr.vbs /rilc

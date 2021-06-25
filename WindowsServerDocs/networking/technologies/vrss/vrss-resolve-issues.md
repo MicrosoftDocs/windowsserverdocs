@@ -4,8 +4,8 @@ description: Resolve vRSS issues if you do not see vRSS load balancing traffic t
 ms.topic: article
 ms.localizationpriority: medium
 manager: dougkim
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/04/2018
 ---
 

@@ -4,8 +4,8 @@ description: This topic provides an overview of the companion guides to the Wind
 manager: brianlic
 ms.topic: article
 ms.assetid: d57af0bd-9301-4f62-9888-f528cd10451d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 

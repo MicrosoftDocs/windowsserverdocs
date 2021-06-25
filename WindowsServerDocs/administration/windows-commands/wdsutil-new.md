@@ -3,8 +3,8 @@ title: wdsutil new
 description: Reference article for wdsutil new, which creates capture and discover images, multicast transmissions, and namespaces.
 ms.topic: reference
 ms.assetid: 0f06f310-c585-42f4-9d15-4680b4a3355d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

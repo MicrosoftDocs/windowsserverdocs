@@ -3,8 +3,8 @@ title: wbadmin delete systemstatebackup
 description: Reference article for the wbadmin delete systemstatebackup command, which deletes the system state backups that you specify.
 ms.topic: reference
 ms.assetid: 707d37cb-448d-4542-b6ac-1fc89e749788
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

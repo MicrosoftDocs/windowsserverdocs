@@ -4,8 +4,8 @@ description: This topic describes the IP Address Management (IPAM) functionality
 manager: brianlic
 ms.topic: how-to
 ms.assetid: f2f2f1a5-ac2f-41b7-a495-98ad0e2a9b20
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # What's New in IPAM

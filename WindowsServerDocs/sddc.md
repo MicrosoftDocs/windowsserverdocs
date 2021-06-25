@@ -3,8 +3,8 @@ title: Windows Server Software-Defined Datacenter
 description: Windows Server SDDC Overview
 ms.prod: windows-server
 ms.topic: how-to
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 06/04/2019
 ms.localizationpriority: medium
@@ -101,7 +101,7 @@ A centralized, programmable point of automation to manage, configure, monitor, a
 
 Administrators use a Management Tool that interacts directly with Network Controller. Network Controller provides information about the network infrastructure, including both virtual and physical infrastructure, to the Management Tool.
 
-![Learn icon, Learn more about Network Controller.](media/sddc/learn.png)**[Learn more about Network Controller](./networking/sdn/technologies/network-controller/network-controller.md)**
+![Learn icon, Learn more about Network Controller.](media/sddc/learn.png)**[Learn more about Network Controller](/azure-stack/hci/concepts/network-controller-overview)**
 
 ### Datacenter Firewall
 
@@ -113,7 +113,7 @@ When deployed and offered as a service, tenant administrators can install and co
 
 The service provider administrator or the tenant administrator can manage the Datacenter Firewall policies via the network controller.
 
-![Learn icon, Learn More about Datacenter Firewall.](media/sddc/learn.png)**[Learn More about Datacenter Firewall](./networking/sdn/technologies/network-function-virtualization/datacenter-firewall-overview.md)**
+![Learn icon, Learn More about Datacenter Firewall.](media/sddc/learn.png)**[Learn More about Datacenter Firewall](/azure-stack/hci/concepts/datacenter-firewall-overview)**
 
 ### Switch Embedded Teaming
 
@@ -133,7 +133,7 @@ SLB enables multiple servers to host the same workload, providing high availabil
 
 ![Software Load Balancing diagram spacer image.](media/sddc/spacer1.png)![Software Load Balancing diagram](media/sddc/balancer.png)
 
-![Learn icon, Learn more about Software Load Balancing.](media/sddc/learn.png)**[Learn more about Software Load Balancing](./networking/sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md)**
+![Learn icon, Learn more about Software Load Balancing.](media/sddc/learn.png)**[Learn more about Software Load Balancing](/azure-stack/hci/concepts/software-load-balancer)**
 
 ![storage diagram](media/sddc/storage.png)
 

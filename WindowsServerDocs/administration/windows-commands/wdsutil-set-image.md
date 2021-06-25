@@ -3,8 +3,8 @@ title: wdsutil set-image
 description: Reference article for wdsutil set-image, which changes the attributes of an image.
 ms.topic: reference
 ms.assetid: 2ae03c86-7a13-4e38-9182-32e55fffd504
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

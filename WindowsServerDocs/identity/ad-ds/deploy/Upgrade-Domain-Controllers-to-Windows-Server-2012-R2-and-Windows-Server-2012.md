@@ -116,14 +116,13 @@ Because Windows Update is a part of Automatic Maintenance in Windows 8 and Windo
 
 The following table lists some examples of how to configure these settings to provide desired restart behavior.
 
-|||
-|-|-|
 |**Scenario**|**Recommended configuration(s)**|
+|-|-|
 |**WSUS managed**<p>-   Install updates once per week<br />-   Reboot Fridays at 11PM|Set machines to auto-install, prevent auto-reboot until desired time<p>**Policy**: Configure Automatic Updates (Enabled)<p>Configure automatic updating: 4 - Auto download and schedule the install<p>**Policy**: No auto-restart with logged-on users (Disabled)<p>**WSUS deadlines**: set to Fridays at 11PM|
 |**WSUS managed**<p>-   Stagger installs across different hours/days|Set target groups for different groups of machines that should be updated together<p>Use above steps for previous scenario<p>Set different deadlines for different target groups|
 |**Not WSUS-managed - no support for deadlines**<p>-   Stagger installs at different times|**Policy**: Configure Automatic Updates (Enabled)<p>Configure automatic updating: 4 - Auto download and schedule the install<p>**Registry key:** Enable the registry key discussed in Microsoft KB article [2835627](https://support.microsoft.com/kb/2835627)<p>**Policy:** Automatic Maintenance Random Delay (Enabled)<p>Set **Regular maintenance random delay** to PT6H for 6-hour random delay to provide the following behavior:<p>-   Updates will install at the configured maintenance time plus a random delay<p>-   Restart for each machine will take place exactly 3 days later<p>Alternatively, set a different maintenance time for each group of machines|
 
-For more information about why the Windows engineering team implemented these changes, see [How to reduce your chances of being prompted to restart your computer](https://docs.microsoft.com/troubleshoot/windows-server/deployment/why-prompted-restart-computer#how-to-reduce-your-chances-of-being-prompted-to-restart-your-computer).
+For more information about why the Windows engineering team implemented these changes, see [How to reduce your chances of being prompted to restart your computer](/troubleshoot/windows-server/deployment/why-prompted-restart-computer#how-to-reduce-your-chances-of-being-prompted-to-restart-your-computer).
 
 ## <a name="BKMK_InstallationChanges"></a>AD DS server role installation changes
 
@@ -145,16 +144,16 @@ There are some changes related to AD DS:
 - **Deprecation of Dcpromo.exe**
    - Dcpromo is deprecated although in  Windows Server 2012  only it can still be run with an answer file or command line parameters to give organizations time to transition existing automation to the new Windows PowerShell installation options.
 - **LMHash is disabled on user accounts**
-  - Secure defaults in Security templates on Windows Server 2008, Windows Server 2008 R2 and Windows Server 2012 enable the NoLMHash policy which is disabled in the security templates of Windows 2000 and Windows Server 2003 domain controllers. Disable the NoLMHash policy for LMHash-dependent clients as required, using the steps described in the page [How to prevent Windows from storing a LAN manager hash of your password in Active Directory and local SAM databases](https://docs.microsoft.com/troubleshoot/windows-server/windows-security/prevent-windows-store-lm-hash-password).
+  - Secure defaults in Security templates on Windows Server 2008, Windows Server 2008 R2 and Windows Server 2012 enable the NoLMHash policy which is disabled in the security templates of Windows 2000 and Windows Server 2003 domain controllers. Disable the NoLMHash policy for LMHash-dependent clients as required, using the steps described in the page [How to prevent Windows from storing a LAN manager hash of your password in Active Directory and local SAM databases](/troubleshoot/windows-server/windows-security/prevent-windows-store-lm-hash-password).
 
 Beginning with  Windows Server 2008 , domain controllers also have the following secure default settings, compared to domain controllers that run Windows Server 2003 or Windows 2000:
 
 | Encryption type or policy | Windows Server 2008 default | Windows Server 2012 and Windows Server 2008 R2 default | Comment |
 |--|--|--|--|
 | AllowNT4Crypto | Disabled | Disabled | Third-party Server Message Block (SMB) clients may be incompatible with the secure default settings on domain controllers. In all cases, these settings can be relaxed to allow interoperability, but only at the expense of security. For more information, see [article 942564](https://go.microsoft.com/fwlink/?LinkId=164558) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=164558). |
-| DES | Enabled | Disabled | [Article 977321](https://go.microsoft.com/fwlink/?LinkId=177717) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=177717) |
-| CBT/Extended Protection for Integrated Authentication | N/A | Enabled | See [Microsoft Security Advisory (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=164559) and [article 976918](https://go.microsoft.com/fwlink/?LinkId=178251) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251).<p>Review and install the hotfix in [article 977073](https://go.microsoft.com/fwlink/?LinkId=186394) (https://go.microsoft.com/fwlink/?LinkId=186394) in the Microsoft Knowledge Base as required. |
-| LMv2 | Enabled | Disabled | [Article 976918](https://go.microsoft.com/fwlink/?LinkId=178251) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251) |
+| DES | Enabled | Disabled | [Article 977321](/troubleshoot/windows-server/windows-security/kdc-event-16-27-des-encryption-disabled) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=177717) |
+| CBT/Extended Protection for Integrated Authentication | N/A | Enabled | See [Microsoft Security Advisory (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=164559) and [article 976918](/troubleshoot/windows-server/windows-security/authentication-fails-non-windows-ntlm-kerberos-server) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251).<p>Review and install the hotfix in [article 977073](https://go.microsoft.com/fwlink/?LinkId=186394) (https://go.microsoft.com/fwlink/?LinkId=186394) in the Microsoft Knowledge Base as required. |
+| LMv2 | Enabled | Disabled | [Article 976918](/troubleshoot/windows-server/windows-security/authentication-fails-non-windows-ntlm-kerberos-server) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=178251) |
 
 ## <a name="BKMK_SysReqs"></a>Operating system requirements
 
@@ -204,7 +203,7 @@ Domain controllers that run 64-bit versions of Windows Server 2008 or Windows Se
 | Windows Server 2008 R2 Datacenter with SP1 | Windows Server 2012 Datacenter |
 | Windows Web Server 2008 R2 | Windows Server 2012 Standard |
 
-For more information about supported upgrade paths, see [Evaluation Versions and Upgrade Options for Windows Server 2012](https://go.microsoft.com/fwlink/?LinkId=260917). Note that you cannot convert a domain controller that runs an evaluation version of Windows Server 2012 directly to a retail version. Instead, install an additional domain controller on a server that runs a retail version and remove AD DS from the domain controller that runs on the evaluation version.
+For more information about supported upgrade paths, see [Evaluation Versions and Upgrade Options for Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574204(v=ws.11)). Note that you cannot convert a domain controller that runs an evaluation version of Windows Server 2012 directly to a retail version. Instead, install an additional domain controller on a server that runs a retail version and remove AD DS from the domain controller that runs on the evaluation version.
 
 Due to a known issue, you cannot upgrade a domain controller that runs a Server Core installation of Windows Server 2008 R2 to a Server Core installation of  Windows Server 2012 . The upgrade will hang on a solid black screen late in the upgrade process. Rebooting such DCs exposes an option in boot.ini file to roll back to the previous operating system version. An additional reboot triggers the automatic rollback to the previous operating system version. Until a solution is available, it is recommended that you install a new domain controller running a Server Core installation of  Windows Server 2012  instead of in-place upgrading an existing domain controller that runs a Server Core installation of Windows Server 2008 R2. For more information, see KB article [2734222](https://support.microsoft.com/kb/2734222).
 

@@ -3,8 +3,8 @@ title: chgusr
 description: Reference article for the chgusr command, which changes the install mode for the Remote Desktop Session Host server.
 ms.topic: reference
 ms.assetid: f119d9d3-ed8b-42da-81f7-77591d908c83
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,8 +4,8 @@ title: Best Practices for securing AD FS and Web Application Proxy
 description: Best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy.
 author: billmath
 ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+manager: mtillman
+ms.date: 05/20/2021
 ms.topic: article
 ---
 
@@ -13,25 +13,44 @@ ms.topic: article
 
 This document provides best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy.  It contains information about the default behaviors of these components and recommendations for additional security configurations for an organization with specific use cases and security requirements.
 
-This document applies to AD FS and WAP in Windows Server 2012 R2 and Windows Server 2016 (preview).  These recommendations can be used whether the infrastructure is deployed in an on premises network or in a cloud hosted environment such as Microsoft Azure.
+This document applies to AD FS and WAP in Windows Server 2012 R2, 2016, and 2019.  These recommendations can be used whether the infrastructure is deployed in an on premises network or in a cloud hosted environment such as Microsoft Azure.
 
 ## Standard deployment topology
 For deployment in on-premises environments, we recommend a standard deployment topology consisting of one or more AD FS servers on the internal corporate network, with one or more Web Application Proxy (WAP) servers in a DMZ or extranet network.  At each layer, AD FS and WAP, a hardware or software load balancer is placed in front of the server farm and handles traffic routing.  Firewalls are placed as required in front of the external IP address of the load balancer in front of each (FS and proxy) farm.
 
-![AD FS Standard topology](media/Best-Practices-Securing-AD-FS/adfssec1.png)
+![A diagram depicting a standard A D F S topology.](media/Best-Practices-Securing-AD-FS/adfssec1.png)
 
 >[!NOTE]
 > AD FS requires a full writable Domain Controller to function as opposed to a Read-Only Domain Controller. If a planned topology includes a Read-Only Domain controller, the Read-Only domain controller can be used for authentication but LDAP claims processing will require a connection to the writable domain controller.
+
+### Hardening your AD FS servers
+The following is a list of best practices and recommendations for hardening and securing your AD FS deployment.
+
+- Ensure only Active Directory Admins and AD FS Admins have admin rights to the AD FS system.
+- Reduce local Administrators group membership on all AD FS servers.
+- Require all cloud admins use Multi-Factor Authentication (MFA).
+- Minimal administration capability via agents.
+- Limit access on-network via host firewall.
+- Ensure AD FS Admins use Admin Workstations to protect their credentials.
+- Place AD FS server computer objects in a top-level OU that doesn’t also host other servers.
+- All GPOs that apply to AD FS servers should only apply to them and not other servers as well. This limits potential privilege escalation through GPO modification.
+- Ensure the installed certificates are protected against theft (don’t store these on a share on the network) and set a calendar reminder to ensure they get renewed before expiring (expired certificate breaks federation auth).  Additionally, we recommend protecting signing keys/certificates in a [hardware security module (HSM)](#hardware-security-module-hsm) attached to AD FS. 
+- Set logging to the highest level and send the AD FS (& security) logs to a SIEM to correlate with AD authentication as well as AzureAD (or similar).
+- Remove unnecessary protocols & Windows features
+- Use a long (>25 characters), complex password for the AD FS service account. We recommend using a [Group Managed Service Account (gMSA)](../../../security/group-managed-service-accounts/group-managed-service-accounts-overview.md) as the service account, as it removes the need for managing the service account password over time by managing it automatically. 
+- Update to the latest AD FS version for security and logging improvements (as always, test first).
 
 ## Ports required
 The below diagram depicts the firewall ports that must be enabled between and amongst the components of the AD FS and WAP deployment.  If the deployment does not include Azure AD / Office 365, the sync requirements can be disregarded.
 
 >Note that port 49443 is only required if user certificate authentication is used, which is optional for Azure AD and Office 365.
 
-![AD FS Standard topology](media/Best-Practices-Securing-AD-FS/adfssec2.png)
+![a diagram showing the required ports and protocols for an A D F S deployment.](media/Best-Practices-Securing-AD-FS/adfssec2.png)
 
 >[!NOTE]
-> Port 808 (Windows Server 2012R2) or port 1501 (Windows Server 2016+) is the Net.TCP port AD FS uses for the local WCF endpoint to transfer configuration data to the service process and Powershell. This port can be seen by running Get-AdfsProperties | select NetTcpPort. This is a local port that will not need to be opened in the firewall but will be displayed in a port scan.
+> Port 808 (Windows Server 2012R2) or port 1501 (Windows Server 2016+) is the Net.TCP port AD FS uses for the local WCF endpoint to transfer configuration data to the service process and PowerShell. This port can be seen by running Get-AdfsProperties | select NetTcpPort. This is a local port that will not need to be opened in the firewall but will be displayed in a port scan.
+
+
 
 ### Azure AD Connect and Federation Servers/WAP
 This table describes the ports and protocols that are required for communication between the Azure AD Connect server and Federation/WAP servers.
@@ -74,7 +93,7 @@ Below is the list of endpoints that must be enabled on the proxy in these scenar
 |/adfs/ls|Browser based authentication flows and current versions of Microsoft Office use this endpoint for Azure AD and Office 365 authentication |
 |/adfs/services/trust/2005/usernamemixed|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint. |
 |/adfs/services/trust/13/usernamemixed|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint. |
-|/adfs/oauth2|This one is used for any modern apps (on prem or in cloud) you have configured to authenticate directly to AD FS (i.e. not through AAD) |
+|/adfs/oauth2|This one is used for any modern apps (on-prem or in cloud) you have configured to authenticate directly to AD FS (i.e. not through AAD) |
 |/adfs/services/trust/mex|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint.|
 |/adfs/ls/federationmetadata/2007-06/federationmetadata.xml    |Requirement for any passive flows; and used by Office 365 / Azure AD to check AD FS certificates. |
 
@@ -128,6 +147,9 @@ The recommended way for Azure AD customers to monitor and keep current their inf
 
 Information on installing Azure AD Connect Health for AD FS can be found [here](/azure/active-directory/hybrid/how-to-connect-health-agent-install).
 
+## Best practice for securing and monitoring the AD FS trust with Azure AD
+When you federate your AD FS with Azure AD, it is critical that the federation configuration (trust relationship configured between AD FS and Azure AD) is monitored closely, and any unusual or suspicious activity is captured. To do so, we recommend setting up alerts and getting notified whenever any changes are made to the federation configuration. To learn how to setup alerts, see [Monitor changes to federation configuration](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-monitor-federation-changes). 
+
 ## Additional security configurations
 The following additional capabilities can be configured optionally to provide additional protections to those offered in the default deployment.
 
@@ -159,8 +181,10 @@ AD FS can be configured to require strong authentication (such as multi factor a
 
 Supported external MFA providers include those listed in [this](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn758113(v=ws.11)) page, as well as HDI Global.
 
+
+
 ### Hardware Security Module (HSM)
-In its default configuration, the keys AD FS uses to sign tokens never leave the federation servers on the intranet.  They are never present in the DMZ or on the proxy machines.  Optionally to provide additional protection, these keys can be protected in a hardware security module attached to AD FS.  Microsoft does not produce an HSM product, however there are several on the market that support AD FS.  In order to implement this recommendation, follow the vendor guidance to create the X509 certs for signing and encryption, then use the AD FS installation powershell commandlets, specifying your custom certificates as follows:
+In its default configuration, the keys AD FS uses to sign tokens never leave the federation servers on the intranet.  They are never present in the DMZ or on the proxy machines.  Optionally to provide additional protection, we recommend protecting these keys in a hardware security module (HSM) attached to AD FS.  Microsoft does not produce an HSM product, however there are several on the market that support AD FS.  In order to implement this recommendation, follow the vendor guidance to create the X509 certs for signing and encryption, then use the AD FS installation powershell commandlets, specifying your custom certificates as follows:
 
 ```powershell
 Install-AdfsFarm -CertificateThumbprint <String> -DecryptionCertificateThumbprint <String> -FederationServiceName <String> -ServiceAccountCredential <PSCredential> -SigningCertificateThumbprint <String>

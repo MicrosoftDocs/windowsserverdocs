@@ -4,8 +4,8 @@ description: Learn how to troubleshot issues related to the Enable-DAMultisite c
 manager: brianlic
 ms.topic: article
 ms.assetid: 570c81d6-c4f4-464c-bee9-0acbd4993584
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Troubleshooting Enabling Multisite

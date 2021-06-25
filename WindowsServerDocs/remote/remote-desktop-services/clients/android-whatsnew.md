@@ -3,14 +3,35 @@ title: What's new in the Android client
 description: Learn about recent changes to the Remote Desktop client for Android
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 12/02/2020
+ms.date: 04/02/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Android client
 
 We regularly update the [Remote Desktop client for Android](remote-desktop-android.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+
+## Updates for version 10.0.10
+
+*Date published: 3/24/2021*
+
+- Added support for client-side IMEs when using built-in and onscreen keyboards.
+- Added a prompt for credentials when subscribing to a workflow.
+- Improved Windows Virtual Desktop workspace download performance to prevent throttling.
+- Fixed an issue where incorrect command icons would appear in the UI.
+
+## Updates for version 10.0.9
+
+*Date published: 2/2/2021*
+
+- Support for dark mode on Android 10 and later.
+- Fixed clipboard redirection synchronization issues.
+- Added clipboard redirection to the Add/Edit PC UI.
+- The Android client now supports the DEL key on external keyboards.
+- Fixed a bug that caused workspace URL auto-complete to stop responding.
+- Addressed keyboard and screen reader-related accessibility bugs.
+- Addressed reliability issues identified by user reports.
 
 ## Updates for version 10.0.8
 

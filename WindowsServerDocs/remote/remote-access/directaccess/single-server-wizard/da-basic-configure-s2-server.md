@@ -1,11 +1,11 @@
 ---
 title: Step 2 Configure the Basic DirectAccess Server
-description: Learn how to configure the client and server settings required for a basic DirectAccess deployment. 
+description: Learn how to configure the client and server settings required for a basic DirectAccess deployment.
 manager: brianlic
 ms.topic: article
 ms.assetid: 82bf5fed-93b3-4fa6-8e71-522146eccdb1
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/07/2020
 ---
 # Step 2 Configure the Basic DirectAccess Server
@@ -21,7 +21,7 @@ This topic describes how to configure the client and server settings required fo
 |Update clients with the DirectAccess configuration|To receive the DirectAccess settings, clients must update group policy while connected to the intranet.|
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](/previous-versions//bb648607(v=vs.85)).
 
 ## <a name="BKMK_Role"></a>Install the Remote Access role
 To deploy Remote Access, you must install the Remote Access role on a server in your organization that will act as the Remote Access server.

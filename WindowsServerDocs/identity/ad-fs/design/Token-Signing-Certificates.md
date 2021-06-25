@@ -39,10 +39,6 @@ The Web server in the resource partner uses the public key of the token\-signing
 ## Deployment considerations for token\-signing certificates
 When you deploy the first federation server in a new AD FS installation, you must obtain a token\-signing certificate and install it in the local computer personal certificate store on that federation server. You can obtain a token\-signing certificate by requesting one from an enterprise CA or a public CA or by creating a self\-signed certificate.
 
-When you deploy an AD FS farm, token\-signing certificates are installed differently, depending on how you create the server farm.
-
-There are two server farm options that you can consider when you obtain token\-signing certificates for your deployment:
-
 -   A private key from one token\-signing certificate is shared among all the federation servers in a farm.
 
     In a federation server farm environment, we recommend that all federation servers share \(or reuse\) the same token\-signing certificate. You can install a single token\-signing certificate from a CA on a federation server and then export the private key, as long as the issued certificate is marked as exportable.
@@ -51,19 +47,12 @@ There are two server farm options that you can consider when you obtain token\-s
 
     ![Illustration that shows the private key from a single token\-signing certificate can be shared to all the federation servers in a farm.](media/adfs2_fedserver_certstory_3.gif)
 
--   There is a unique token\-signing certificate for each federation server in a farm.
 
-    When you use multiple, unique certificates throughout your farm, each server in that farm signs tokens with its own unique private key.
+For information about installing a certificate when you use Microsoft Certificate Services as your enterprise CA, see [IIS 7.0: Create a Domain Server Certificate in IIS 7.0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731014(v=ws.10)).
 
-    As shown in the following illustration, you can obtain a separate token\-signing certificate for every single federation server in the farm. This option is more expensive if you plan to obtain your token\-signing certificates from a public CA.
+For information about installing a certificate from a public CA, see [IIS 7.0: Request an Internet Server Certificate](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732906(v=ws.10)).
 
-    ![token signing](media/adfs2_fedserver_certstory_4.gif)
-
-For information about installing a certificate when you use Microsoft Certificate Services as your enterprise CA, see [IIS 7.0: Create a Domain Server Certificate in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=108548).
-
-For information about installing a certificate from a public CA, see [IIS 7.0: Request an Internet Server Certificate](https://go.microsoft.com/fwlink/?LinkId=108549).
-
-For information about installing a self\-signed certificate, see [IIS 7.0: Create a Self\-Signed Server Certificate in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=108271).
+For information about installing a self\-signed certificate, see [IIS 7.0: Create a Self\-Signed Server Certificate in IIS 7.0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753127(v=ws.10)).
 
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

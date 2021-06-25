@@ -1,4 +1,4 @@
-# [Performance tuning guidelines for Windows Server 2016](index.md)
+# [Performance tuning guidelines for Windows Server 2022](index.md)
 ## [Server Hardware Tuning](hardware/index.md)
 ### [Performance considerations](hardware/index.md)
 ### [Power considerations](hardware/power.md)
@@ -57,9 +57,6 @@
 #### [SLB gateway performance](subsystem/software-defined-networking/slb-gateway-performance.md)
 ### Storage subsystem tuning
 #### [Storage Spaces Direct tuning](subsystem/storage-spaces-direct/index.md)
-#### [Storage Replication FAQ](../../storage/storage-replica/storage-replica-frequently-asked-questions.md)
+#### [Storage Replication FAQ](../../storage/storage-replica/storage-replica-frequently-asked-questions.yml)
 #### [Data Deduplication advanced settings](../../storage/data-deduplication/advanced-settings.md)
-## [PowerShell tuning](powershell/index.md)
-### [Script authoring considerations](powershell/script-authoring-considerations.md)
-### [Module authoring considerations](powershell/module-authoring-considerations.md)
 ## [Additional tuning resources](additional-resources.md)

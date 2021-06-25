@@ -3,8 +3,8 @@ title: wdsutil progress
 description: Reference article for wdsutil progress, which displays progress while a command is running.
 ms.topic: reference
 ms.assetid: 8ce5e77b-e13f-4ac3-948d-31770a6c7e25
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
