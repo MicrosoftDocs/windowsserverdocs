@@ -166,7 +166,7 @@ By default, a Windows Insider Dev Channel client won't have access to an Active 
 
 - Windows Server 2022 Datacenter: Azure Edition Preview will also be available on Azure Stack HCI 21H2 Preview later this year, for customers not using Azure public cloud.
 - We recommend read-only domain controllers configured only with passwords of mobile users be made available to the file server.
-- Users should have strong passwords and be configured with Windows Hello for Business MFA. Configure an account lockout policy for mobile users through fine-grained password policy and you should deploy intrusion protection software to detect brute force or password spray attacks. 
+- Users should have strong passwords or, ideally, be configured using a [passwordless strategy](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/passwordless-strategy) with [Windows Hello for Business MFA](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/) or [smart cards](https://docs.microsoft.com/windows/security/identity-protection/smart-cards/smart-card-windows-smart-card-technical-reference). Configure an account lockout policy for mobile users through [fine-grained password policy](https://docs.microsoft.com/windows-server/identity/ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-#fine_grained_pswd_policy_mgmt) and you should deploy intrusion protection software to detect brute force or password spray attacks.  
 
 ## More references
 
