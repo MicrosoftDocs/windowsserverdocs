@@ -51,7 +51,7 @@ $certPassword = Read-Host -AsSecureString
 #### Install with a self-signed certificate:
 
 ```powershell
-.\Install-WindowsAdminCenterHA.ps1 -clusterStorage "C:\ClusterStorage\Volume1" -clientAccessPoint "contoso-ha-gateway" -msiPath ".\WindowsAdminCenter.msi" -generateSslCert -Verbose
+.\Install-WindowsAdminCenterHA.ps1 -clusterStorage "C:\ClusterStorage\Volume1" -clientAccessPoint "contoso-ha-gateway" -msiPath ".\WindowsAdminCenter.msi" -StaticAddress (local ip address) -generateSslCert -Verbose
 ```
 
 ## Update an existing high availability installation
