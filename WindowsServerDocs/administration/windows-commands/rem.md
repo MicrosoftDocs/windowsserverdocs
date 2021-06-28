@@ -75,7 +75,7 @@ create partition logical
 assign f:
 ```
 
-For multi-line comments use conditional execution:
+For multi-line comments, use conditional execution:
 
 ```
   Rem/||(
@@ -86,6 +86,6 @@ For multi-line comments use conditional execution:
   )
 ```
 
-## Additional References
+## Additional references
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
