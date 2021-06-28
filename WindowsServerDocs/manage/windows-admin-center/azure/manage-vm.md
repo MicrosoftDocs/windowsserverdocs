@@ -198,7 +198,7 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 
 You can automate Windows Admin Center deployment in Azure portal by using this Azure Resource Manager template.
 
-```PowerShell
+```json
 const deploymentTemplate = {
         "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
         "contentVersion": "1.0.0.0",
