@@ -4,7 +4,7 @@ description: An overview of using Windows Admin Center in the Azure portal to ma
 ms.topic: overview
 author: jasongerend
 ms.author: jgerend
-ms.date: 06/25/2021
+ms.date: 06/28/2021
 ---
 # Use Windows Admin Center in the Azure portal to manage a Windows Server VM
 
@@ -194,9 +194,9 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
   - C:\Packages\Plugins\AdminCenter
 - Network trace, if appropriate. Network traces can contain customer data and sensitive security details, such as passwords, so we recommend reviewing the trace and removing any sensitive details before sharing it.
 
-## Automate Windows Admin Center deployment in Azure portal
+## Automate Windows Admin Center deployment using an ARM template
 
-To automate Windows Admin Center deployment in Azure portal, use this PowerShell script.
+You can automate Windows Admin Center deployment in Azure portal by using this Azure Resource Manager template.
 
 ```PowerShell
 const deploymentTemplate = {
@@ -259,6 +259,30 @@ const parameters = {
 	port: <!!!>,
 	salt: <!!!>
 }
+```
+
+## Automate Windows Admin Center deployment using PowerShell
+
+You can also automate Windows Admin Center deployment in Azure portal by using this PowerShell script.
+
+```PowerShell
+$resourceGroupName = <get VM's resource group name>
+$vmLocation = <get VM location>
+$vmName = <get VM name>
+$vmNsg = <get VM's primary nsg>
+$salt = <unique string used for hashing>
+
+$wacPort = "6516"
+$Settings = @{"port" = $wacPort; "salt" = $salt}
+
+# Open outbound port rule for WAC service
+Get-AzNetworkSecurityGroup -Name $vmNsg -ResourceGroupName $resourceGroupName | Add-AzNetworkSecurityRuleConfig -Name "PortForWACService" -Access "Allow" -Direction "Outbound" -SourceAddressPrefix "VirtualNetwork" -SourcePortRange "*" -DestinationAddressPrefix "WindowsAdminCenter" -DestinationPortRange "443" -Priority 100 -Protocol Tcp | Set-AzNetworkSecurityGroup
+
+# Install VM extension
+Set-AzVMExtension -ResourceGroupName $resourceGroupName -Location $vmLocation -VMName $vmName -Name "AdminCenter" -Publisher "Microsoft.AdminCenter" -Type "AdminCenter" -TypeHandlerVersion "0.0" -settings $Settings
+
+# Open inbound port rule on VM to be able to connect to WAC
+Get-AzNetworkSecurityGroup -Name $vmNsg -ResourceGroupName $resourceGroupName | Add-AzNetworkSecurityRuleConfig -Name "PortForWAC" -Access "Allow" -Direction "Inbound" -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" -DestinationPortRange $wacPort -Priority 100 -Protocol Tcp | Set-AzNetworkSecurityGroup
 ```
 
 ## Known issues
