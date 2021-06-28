@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 
 > Applies to: Windows Server 2022, Windows Insider Dev Channel preview client
 
-SMB compression allows an administrator, user, or application to request compression of files as they transfer over the network. This removes the need to first manually deflate a file with an application, copy it, then inflate on the destination computer. Compressed files will consume less network bandwidth and take less time to transfer, at the cost of slightly increased CPU usage during transfers. SMB compression is most effective on networks with less bandwidth, such as a client's 1Gbs ethernet or Wi-Fi network; a file transfer over an uncongested 100Gbs ethernet network between two servers with flash storage may be just as fast without SMB compression in practice, but will still create less congestion for other applications.
+SMB compression allows an administrator, user, or application to request compression of files as they transfer over the network. This removes the need to first manually deflate a file with an application, copy it, then inflate on the destination computer. Compressed files will consume less network bandwidth and take less time to transfer, at the cost of slightly increased CPU usage during transfers. SMB compression is most effective on networks with less bandwidth, such as a client's 1Gbps ethernet or Wi-Fi network; a file transfer over an uncongested 100Gbps ethernet network between two servers with flash storage may be just as fast without SMB compression in practice, but will still create less congestion for other applications.
 
 SMB compression in Windows has the following characteristics
 
@@ -58,7 +58,7 @@ You can configure shares to always request compression when connected to by clie
 1. Open an elevated PowerShell command prompt as an administrator.
 1. Create a new share with compression using `New-SMBShare` with the `-CompressData $true` parameter and argument. For example:
 
-    `New-SmbShare -Name "Sales" -Path "C:\sales" -CompressData $true` 
+    `New-SmbShare -Name "Sales" -Path "C:\sales" -CompressData $true`
 
 1. Edit an existing share with compression using `Set-SMBShare` with the `-CompressData $true` parameter and argument. For example:
 
@@ -73,7 +73,7 @@ You can request that all data copied over a mapped drive to be compressed. This 
 1. Open a PowerShell command prompt
 1. Map a drive using `New-SMBMapping` with the `-CompressNetworkTraffic $true` parameter and argument. For example:
 
-    `New-SmbMapping -LocalPath "Z:" -RemotePath "\\fs1.corp.contoso.com\sales" -CompressNetworkTraffic $true` 
+    `New-SmbMapping -LocalPath "Z:" -RemotePath "\\fs1.corp.contoso.com\sales" -CompressNetworkTraffic $true`
 
 #### Using NET USE
 
@@ -84,21 +84,21 @@ You can request that all data copied over a mapped drive to be compressed. This 
 
 ### Requesting SMB compression with copy tools
 
-You can request that SMB compression is attempted for particular files using robocopy or xcopy. 
+You can request that SMB compression is attempted for particular files using robocopy or xcopy.
 
 > [!NOTE]
 > If you want File Explorer, third party copy tools, or applications to use compression, map drives with compression, enable compression on shares, or set SMB clients to always compress.
 
 #### Using Robocopy.exe
 
-1. Open a CMD prompt or PowerShell command prompt 
+1. Open a CMD prompt or PowerShell command prompt
 1. Copy with the /COMPRESS flag. For example:
 
     `ROBOCOPY c:\hypervdisks \\hypervcluster21.corp.contoso.com\disks$ *.vhdx /COMPRESS`  
 
 #### Using Xcopy.exe
 
-1. Open a CMD prompt or PowerShell command prompt 
+1. Open a CMD prompt or PowerShell command prompt
 1. Copy with the /COMPRESS flag. For example:
 
     `XCOPY c:\hypervdisks\*.vhdx \\hypervcluster21.corp.contoso.com\disks$\* /COMPRESS`  
@@ -207,6 +207,6 @@ A simple way to test your compression configuration is using VHDX files. You can
 
 You now have a large test file with very compressible contents.
 
-Testing SMB compression between a pair of VMs running on the same Hyper-V host may not show time savings because the vswitch is 10Gbs and has no congestion, plus modern hypervisors often use flash storage. Test your compression over the real networks you plan to use. You can also reduce the network bandwidth on Hyper-V VMs for testing purposes using [Set-VMNetworkAdapter](https://docs.microsoft.com/powershell/module/hyper-v/set-vmnetworkadapter?view=windowsserver2019-ps) with `-MaximumBandwidth` set to 1 Gb, for example.
+Testing SMB compression between a pair of VMs running on the same Hyper-V host may not show time savings because the virtual switch is 10Gbps and has no congestion, plus modern hypervisors often use flash storage. Test your compression over the real networks you plan to use. You can also reduce the network bandwidth on Hyper-V VMs for testing purposes using [Set-VMNetworkAdapter](/powershell/module/hyper-v/set-vmnetworkadapter) with `-MaximumBandwidth` set to `1Gb`, for example.
 
-To see how well compression is working, you can robocopy the same file to a server twice, once with the /compress flag and again without compression, deleting the server file between each test. If the file is compressing, you should see less network utilization in Task Manager and a lower copy time. You can also observe the SMB server's Performance Monitor object "SMB Server Shares" for its "Compressed requests/sec" and "Compressed receives/sec" counters.
+To see how well compression is working, you can robocopy the same file to a server twice, once with the `/compress` flag and again without compression, deleting the server file between each test. If the file is compressing, you should see less network utilization in Task Manager and a lower copy time. You can also observe the SMB server's Performance Monitor object "SMB Server Shares" for its "Compressed requests/sec" and "Compressed receives/sec" counters.
