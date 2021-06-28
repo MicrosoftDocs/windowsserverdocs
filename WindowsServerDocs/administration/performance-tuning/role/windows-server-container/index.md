@@ -1,21 +1,20 @@
 ---
 title: Performance Tuning Windows Server Containers
-description: Performance tuning recommendations for containers on Windows Server 16
+description: Performance tuning recommendations for containers on Windows Server 22
 ms.topic: landing-page
 ms.author: ericam
 author: akino
-ms.date: 10/16/2017
+ms.date: 06/21/2021
 ---
 
 # Performance tuning Windows Server containers
 
 ## Introduction
-Windows Server 2016 is the first version of Windows to ship support for container technology built in to the OS. In Server 2016, two types of containers are available: Windows Server Containers and Hyper-V Containers. Each container type supports either the Server Core or Nano Server SKU of Windows Server 2016.
+In Server 2022, two types of containers are available: Windows Server Containers and Hyper-V Containers. Each container type supports either the Server Core or Nano Server SKU of Windows Server 2022.
 
 These configurations have different performance implications which we detail below to help you understand which is right for your scenarios. In addition, we detail performance impacting configurations, and describe the tradeoffs with each of those options.
 
 ### Windows Server Container and Hyper-V Containers
-
 Windows Server Container and Hyper-V containers offer many of the same portability and consistency benefits but differ in terms of their isolation guarantees and performance characteristsics.
 
 **Windows Server Containers** provide application isolation through process and namespace isolation technology. A Windows Server container shares a kernel with the container host and all containers running on the host.
@@ -25,23 +24,21 @@ Windows Server Container and Hyper-V containers offer many of the same portabili
 The additional isolation provided by Hyper-V containers is achieved in large part by a hypervisor layer of isolation between the container and the container host. This affects container density as, unlike Windows Server Containers, less sharing of system files and binaries can occur, resulting in an overall larger storage and memory footprint. In addition there is the expected additional overhead in some network, storage io, and CPU paths.
 
 ### Nano Server and Server Core
+Windows Server Containers and Hyper-V containers offer support for Server Core and for a new installation option available in Windows Server 2022 : [Nano Server](https://docs.microsoft.com/en-us/windows-server/get-started/nano-server-quick-start).
 
-Windows Server Containers and Hyper-V containers offer support for Server Core and for a new installation option available in Windows Server 2016 : [Nano Server](https://technet.microsoft.com/windows-server-docs/compute/nano-server/getting-started-with-nano-server).
-
-Nano Server is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64-bit applications, tools, and agents. It takes up far less disk space and starts faster.
+Nano Server is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64-bit applications, tools, and agents. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than Windows Server. When it does restart, it restarts much faster. 
 
 ## Container Start Up Time
 Container start up time is a key metric in many of the scenarios that containers offer the greatest benefit. As such, understanding how to best optimize for container start up time is critical. Below are some tuning trade-offs to understand to achieve improved start up time.
 
 ### First Logon
-
 Microsoft ships a base image for both Nano Server and Server Core. The base image which ships for Server Core has been optimized by removing the start-up time overhead associated with first logon (OOBE). This is not the case with Nano Server base image. However, this cost can be removed from Nano Server based images by committing at least one layer to the container image. Subsequent container starts from the image will not incur the first logon cost.
 ### Scratch Space Location
 
 Containers, by default, use a temporary scratch space on the container host's system drive media for storage during the lifetime of the running container. This serves as the container's system drive, and as such many of the writes and reads done in container operation follow this path. For host systems where the system drive exists on spinning disk magnetic media (HDDs) but faster storage media is available (faster HDDs or SSDs), it is possible to move the container scratch space to a different drive. This is achieved by using the dockerd –g command. This command is global, and will affect all containers running on the system.
 
 ### Nested Hyper-V Containers
-Hyper-V for Windows Server 2016 introduces nested hypervisor support. That is, it is now possible to run a virtual machine from within a virtual machine. This opens up many useful scenarios but also exaggerates some performance impact that the hypervisor incurs, as there are two level of hypervisors running above the physical host.
+Hyper-V for Windows Server 2022 offers nested hypervisor support. That is, the capability to run a virtual machine from within a virtual machine. This opens up many useful scenarios but also exaggerates some performance impact that the hypervisor incurs, as there are two level of hypervisors running above the physical host.
 
 For containers, this has an impact when running a Hyper-V container inside a virtual machine. Since a Hyper-V Container offers isolation through a hypervisor layer between itself and the container host, when the container host is a Hyper-V based virtual machine, there is performance overhead associated in terms of container start-up time, storage io, network io and throughput, and CPU.
 
@@ -55,7 +52,6 @@ However, there are many scenarios in which having data persist independent of co
 ### Scratch Space
 
 Both Windows Server Containers and Hyper-V containers provide a 20GB dynamic VHD for the container scratch space by default. For both container types, the container OS takes up a portion of that space, and this is true for every container started. Thus it is important to remember that every container started has some storage impact, and depending on the workload can write up to 20GB of the backing storage media. Server storage configurations should be designed with this in mind.
-(can we configure scratch size)
 
 ## Networking
 Windows Server Containers and Hyper-V containers offer a variety of networking modes to best suit the needs of differing networking configurations. Each of these options present their own performance characteristics.
