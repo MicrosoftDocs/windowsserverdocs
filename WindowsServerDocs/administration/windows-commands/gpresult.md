@@ -48,7 +48,7 @@ gpresult [/s <system> [/u <username> [/p [<password>]]]] [/user [<targetdomain>\
 
 - Because **/v** and **/z** produce a lot of information, it's useful to redirect output to a text file (for example, `gpresult/z >policy.txt`).
 
-- On ARM64 versions of Windows, only the gpresult in SysWow64 will work with the /h parameter.
+- On ARM64 versions of Windows, only the `gpresult` in SysWow64 works with the `/h` parameter.
 
 ### Examples
 
