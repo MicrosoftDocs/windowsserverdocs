@@ -5,7 +5,7 @@ manager: grcusanz
 ms.topic: how-to
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 06/28/2021
+ms.date: 06/30/2021
 ---
 
 # Virtual network peering
