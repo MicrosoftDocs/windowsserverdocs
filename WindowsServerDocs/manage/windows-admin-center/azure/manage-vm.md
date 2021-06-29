@@ -4,7 +4,7 @@ description: An overview of using Windows Admin Center in the Azure portal to ma
 ms.topic: overview
 author: jasongerend
 ms.author: jgerend
-ms.date: 06/28/2021
+ms.date: 06/29/2021
 ---
 # Use Windows Admin Center in the Azure portal to manage a Windows Server VM
 
@@ -250,14 +250,14 @@ const deploymentTemplate = {
         ];
 
 const parameters = {
-	vmName: <!!!>,
-	location: <!!!>,
-	extensionName: "AdminCenter",
-	extensionPublisher: "Microsoft.AdminCenter",
-	extensionType: "AdminCenter",
-	extensionVersion: "0.0",
-	port: <!!!>,
-	salt: <!!!>
+    vmName: <VM name>, 
+    location: <VM location>, 
+    extensionName: "AdminCenter", 
+    extensionPublisher: "Microsoft.AdminCenter", 
+    extensionType: "AdminCenter", 
+    extensionVersion: "0.0", 
+    port: "6516", 
+    salt: <unique string used for hashing>
 }
 ```
 
