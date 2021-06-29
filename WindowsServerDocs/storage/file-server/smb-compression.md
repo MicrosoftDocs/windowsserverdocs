@@ -200,7 +200,7 @@ A simple way to test your compression configuration is using VHDX files. You can
 1. In Diskmgmt, right-click your VHDX now shown as "Not initialized" and click **Initialize disk** and click **OK**. Right-click the "unallocated" disk area and click **New simple volume**.
 1. Specify a file path, set the size to "25 GB", select **VHDX** and **Fixed Size**, then click **OK**. Right-click on the disks "Unallocated" section and click **New Simple Volume**, then **Next** for all menu prompts, then click **Finish**.
 
-:::image type="content" source="./media/smb-compression/diskmgmt.png" alt-text="disk management":::
+   :::image type="content" source="./media/smb-compression/diskmgmt.png" alt-text="disk management":::
 
 1. Right-click on the disk and click **Detach VHD**, then click **OK**.
 1. In File Explorer, double-click that VHDX file to mount it. Copy a few MB of uncompressible files, such as JPG format, then right-click the mounted disk and click **Eject**.
