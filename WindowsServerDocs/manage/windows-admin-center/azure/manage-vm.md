@@ -291,7 +291,7 @@ Get-AzNetworkSecurityGroup -Name $vmNsg -ResourceGroupName $resourceGroupName | 
 - If you just started your virtual machine, it takes about a minute for the IP address to be registered with Windows Admin Center and thus, it may not load.
 - The first load time of Windows Admin Center might be a little longer. Any subsequent load will be just a few seconds.
 - Chrome Incognito mode isn't supported.
-- Azure Portal desktop app is not supported.
+- Azure portal desktop app is not supported.
 
 ## Frequently asked questions
 
