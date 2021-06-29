@@ -6,11 +6,11 @@ ms.topic: how-to
 ms.assetid: 34d826c9-65bc-401f-889d-cf84e12f0144
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/07/2020
+ms.date: 06/16/2021
 ---
 # RAS Gateway High Availability
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn about high availability configurations for the RAS Multitenant Gateway for Software Defined Networking (SDN).
 

@@ -5,7 +5,7 @@ ms.author: helohr
 ms.date: 12/02/2019
 ms.topic: article
 author: Heidilohr
-manager: lizross
+manager: femila
 ---
 # Remote Desktop workloads
 

@@ -503,5 +503,5 @@ This is caused by a known code defect in Windows Server, version 1709. To resolv
 - [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
-- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 - [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)

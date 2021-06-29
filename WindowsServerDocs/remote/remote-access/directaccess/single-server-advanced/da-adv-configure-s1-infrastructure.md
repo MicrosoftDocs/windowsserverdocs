@@ -28,7 +28,7 @@ This topic describes how to configure the infrastructure that is required for an
 | 1.10 Configure the network location server | Configure the network location server, including installing the network location server website certificate. |
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](/previous-versions//bb648607(v=vs.85)).
 
 ## <a name="ConfigNetworkSettings"></a>1.1 Configure server network settings
 The following network interface settings are required for a single server deployment in an environment that is using IPv4 and IPv6. All IP addresses are configured by using **Change adapter settings** in the **Windows Networking and Sharing Center**.
@@ -545,4 +545,3 @@ The following are required for either type of certificate, if they do not alread
 ## <a name="BKMK_Links"></a>Next step
 
 -   [Step 2: Configure Advanced DirectAccess Servers](da-adv-configure-s2-servers.md)
-

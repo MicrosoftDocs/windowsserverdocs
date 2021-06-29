@@ -5,13 +5,13 @@ manager: eldenc
 ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar
-ms.date: 02/01/2019
+ms.date: 05/05/2021
 ---
 # Deploying a two-node clustered file server
 
-> Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
-A failover cluster is a group of independent computers that work together to increase the availability of applications and services. The clustered servers (called nodes) are connected by physical cables and by software. If one of the cluster nodes fails, another node begins to provide service (a process known as failover). Users experience a minimum of disruptions in service.
+A failover cluster is a group of independent computers that work together to increase the availability of applications and services. The clustered servers (called nodes) are connected by physical cables and by software. If one of the cluster nodes fails, another node begins to provide service (a process known as failover). Users experience a minimum of disruptions in service. For information about using a failover cluster in Azure Stack HCI, see [Update Azure Stack HCI clusters](/azure-stack/hci/manage/update-cluster).
 
 This guide describes the steps for installing and configuring a general purpose file server failover cluster that has two nodes. By creating the configuration in this guide, you can learn about failover clusters and familiarize yourself with the Failover Cluster Management snap-in interface in Windows Server 2019 or Windows Server 2016.
 

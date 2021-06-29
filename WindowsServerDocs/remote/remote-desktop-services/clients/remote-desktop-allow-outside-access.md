@@ -31,7 +31,7 @@ Before you map the port you'll need the following:
 - Admin access to your router.
 
    >[!WARNING]
-   > You're opening your PC up to the internet - make sure you have a strong password set for your PC.
+   > You're opening your PC up to the internet, which is not recommended. If you must, make sure you have a strong password set for your PC. It is preferable to [use a VPN](#use-a-vpn).
 
 After you map the port, you'll be able to connect to your host PC from outside the local network by connecting to the public IP address of your router (the second bullet above).
 

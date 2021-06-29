@@ -6,18 +6,18 @@ ms.topic: article
 ms.assetid: 7e2b4540-de56-4d5f-bb8e-9f81ca0ea4eb
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/26/2018
+ms.date: 06/25/2021
 ---
 # Manage SDN
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can use the topics in this section to manage Software Defined Networking, including tenant workloads and virtual networks.
 
 >[!NOTE]
 >For additional Software Defined Networking documentation, you can use the following library sections.
 >- [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md)
->- [Plan SDN](../plan/plan-a-software-defined-network-infrastructure.md)
+>- [Plan SDN](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure)
 >- [Deploy SDN](../deploy/deploy-a-software-defined-network-infrastructure.md)
 >- [Security for SDN](../security/sdn-security-top.md)
 >- [Troubleshoot SDN](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)

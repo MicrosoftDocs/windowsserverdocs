@@ -21,7 +21,7 @@ Once the RADIUS server has been configured with software distribution tokens, co
 |[3.3 Smart cards for additional authorization](#BKMK_Smartcard)|Additional information regarding the use of smart cards.|
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](/previous-versions//bb648607(v=vs.85)).
 
 ## <a name="BKMK_Exempt"></a>3.1 Exempt users from OTP authentication (optional)
 If specific users are to be exempted from OTP authentication, then these steps must be taken prior to the Remote Access configuration:
@@ -149,6 +149,3 @@ When you enable smart card authorization in Step 2 of the DirectAccess Setup Wiz
 2.  On the IPsec Settings tab, in IPsec tunnel authorization, click Customize.
 
 3.  Click the Users tab. You should see the "NT AUTHORITY\This Organization Certificate" as an authorized user.
-
-
-

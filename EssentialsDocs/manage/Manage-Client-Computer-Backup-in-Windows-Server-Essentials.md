@@ -122,7 +122,7 @@ manager: mtillman
 - You can only back up data from a local drive that is formatted as an NTFS file system. Drives formatted as FAT (including FAT32) or ReFS file systems do not appear in the list of drives to back up.
 
 > [!IMPORTANT]
->  Volume Shadow Copy Service (VSS) does not support creating a shadow copy of a virtual volume and the host volume in the same snapshot set. VSS does support creating snapshots of volumes on a virtual hard disk (VHD), if backup of the virtual volume is necessary. For more information, see [Servicing and Backing Up Virtual Hard Disks](https://go.microsoft.com/fwlink/p/?LinkId=256577).
+>  Volume Shadow Copy Service (VSS) does not support creating a shadow copy of a virtual volume and the host volume in the same snapshot set. VSS does support creating snapshots of volumes on a virtual hard disk (VHD), if backup of the virtual volume is necessary. For more information, see [Servicing and Backing Up Virtual Hard Disks](/previous-versions/windows/it-pro/windows-server-essentials-sbs/dn550731(v=ws.11)).
 
 ##  <a name="BKMK_4"></a> Change the time that backup is scheduled to run
  The backup process should be scheduled during a time when as few people as possible are using their networked computers. This is usually during the late evening or early morning hours. The default time for backup is 6:00 PM until 9:00 AM. The server attempts to back up client computers only during the scheduled window of time.
@@ -390,7 +390,7 @@ manager: mtillman
 -   On Sunday, Backup Cleanup runs.
 
 > [!IMPORTANT]
->  Volume Shadow Copy Service (VSS) does not support creating a shadow copy of a virtual volume and the host volume in the same snapshot set. VSS does support creating snapshots of volumes on a virtual hard disk (VHD), if backup of the virtual volume is necessary. For more information, see [Servicing and Backing Up Virtual Hard Disks](https://go.microsoft.com/fwlink/p/?LinkId=256577).
+>  Volume Shadow Copy Service (VSS) does not support creating a shadow copy of a virtual volume and the host volume in the same snapshot set. VSS does support creating snapshots of volumes on a virtual hard disk (VHD), if backup of the virtual volume is necessary. For more information, see [Servicing and Backing Up Virtual Hard Disks](/previous-versions/windows/it-pro/windows-server-essentials-sbs/dn550731(v=ws.11)).
 
 ##  <a name="BKMK_16"></a> Tips to help prevent data loss due to corruption of the client backup database
  If the client backup database becomes corrupt, you can lose critical data.
