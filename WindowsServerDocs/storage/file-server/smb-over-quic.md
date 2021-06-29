@@ -148,11 +148,11 @@ By default, a Windows Insider Dev Channel client won't have access to an Active 
 
     **Computers > Administrative templates > System > Kerberos > Specify KDC proxy servers for Kerberos clients**
 
-    The format of this group policy setting is a value name of your fully qualified Active Directory domain name and the value will be the external domain name you specified for the QUIC server. For example, where the Active Directory domain is named "corp.contoso.com" and the external DNS domain is named "contoso.com":
+    The format of this group policy setting is a value name of your fully qualified Active Directory domain name and the value will be the external  name you specified for the QUIC server. For example, where the Active Directory domain is named "corp.contoso.com" and the external DNS domain is named "contoso.com":
 
     `value name: corp.contoso.com`
 
-    `value: <https contoso.com:443:kdcproxy/>`
+    `value: <https fsedge1.contoso.com:443:kdcproxy />`
 
     This Kerberos realm mapping means that if user `ned@corp.contoso.com` tried to connect to a file server name `fs1edge.contoso.com"`, the KDC proxy will know to forward the kerberos tickets to a domain controller in the internal `corp.contoso.com` domain. The communication with the client will be over HTTPS/443 and user credentials aren't directly exposed on the client-file server network.
 1. Create a Windows Defender Firewall rule that inbound-enables TCP port 443 for the KDC Proxy service to receive authentication requests.  
