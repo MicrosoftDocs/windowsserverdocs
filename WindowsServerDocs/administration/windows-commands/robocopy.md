@@ -99,7 +99,7 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /xl | Excludes "lonely" files and directories. |
 | /im | Include modified files (differing change times). |
 | /is | Includes the same files. |
-| /it | Includes tweaked files. |
+| /it | Includes modified files. |
 | /max:`<n>` | Specifies the maximum file size (to exclude files bigger than *n* bytes). |
 | /min:`<n>` | Specifies the minimum file size (to exclude files smaller than *n* bytes). |
 | /maxage:`<n>` | Specifies the maximum file age (to exclude files older than *n* days or date). |
