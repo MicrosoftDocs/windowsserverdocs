@@ -203,7 +203,7 @@ If you are using CA based certificates for the Hyper-V hosts, you need to ensure
 
 The Software Load Balancer Multiplexor \(MUX\) and Network Controller communicate over the WCF protocol, using certificates for authentication.
 
-By default, SCVMM picks up the SSL certificate configured on the Network Controller and uses it for southbound communication with the Mux devices. This certificate is configured on the “NetworkControllerLoadBalancerMux” REST resource and can be viewed by executing the Powershell cmdlet **Get-NetworkControllerLoadBalancerMux**.
+By default, SCVMM picks up the SSL certificate configured on the Network Controller and uses it for southbound communication with the Mux devices. This certificate is configured on the “NetworkControllerLoadBalancerMux” REST resource and can be viewed by executing the PowerShell cmdlet **Get-NetworkControllerLoadBalancerMux**.
 
 Example of MUX REST resource \(partial\):
 
