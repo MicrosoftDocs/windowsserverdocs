@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: eea0aca9-8d89-48fb-8068-fca40c90d34b
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/07/2020
+ms.date: 06/16/2021
 ---
 # Post-Deployment Steps for Network Controller
 
-> Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 When you install Network Controller, you can choose Kerberos or non-Kerberos deployments.
 
@@ -40,4 +40,4 @@ If the computers or virtual machines \(VMs\) for Network Controller and the mana
 
     - The same certificate must be provisioned on all the Network Controller nodes. After creating the certificate on one node, you can export the certificate (with private key) and import it on the other nodes.
 
-For more information, see [Network Controller](Network-Controller.md).
+For more information, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).

@@ -582,7 +582,7 @@ Per-user services are services that are created when a user signs into Windows o
 
 [Per-user services in Windows 10 and Windows Server](/windows/application-management/per-user-services-in-windows)
 
-If you intend to change a service start value, the preferred method is to open an elevated .cmd prompt and run the Service Control Manager tool 'Sc.exe'. For more information on using 'Sc.exe' see [Sc](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754599(v=ws.11)).
+If you intend to change a service start value, the preferred method is to open an elevated .cmd prompt and run the Service Control Manager tool 'Sc.exe'. For more information on using 'Sc.exe' see [Sc](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754599(v=ws.11)).
 
 ### Scheduled tasks
 
@@ -757,9 +757,9 @@ You can configure many of these SMB settings by using the [Set-SmbClientConfigur
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" RequireSecuritySignature -Value 0 -Force
 ```
 
-Additional settings from the [Windows Restricted Traffic Limited Functionality Baseline](https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services) guidance.
+Additional settings from the [Windows Restricted Traffic Limited Functionality Baseline](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services) guidance.
 
-Microsoft has released a baseline, created using the same procedures as the [Windows Security Baselines](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines), for environments that are either not connected directly to the Internet, or wish to reduce data sent to Microsoft and other services.
+Microsoft has released a baseline, created using the same procedures as the [Windows Security Baselines](/windows/security/threat-protection/windows-security-baselines), for environments that are either not connected directly to the Internet, or wish to reduce data sent to Microsoft and other services.
 
 The Windows Restricted Traffic Limited Functionality Baseline settings are called out in the group policy table with an asterisk.
 

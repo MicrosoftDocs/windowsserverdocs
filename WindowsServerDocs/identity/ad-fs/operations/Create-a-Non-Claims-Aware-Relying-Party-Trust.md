@@ -19,7 +19,7 @@ A non\-claims\-aware relying party trust is a relying party trust which consists
 
 To add a new non\-claims\-aware relying party trust, by using the AD FS Management snap\-in, perform the following procedure.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ## To create a non-claims aware Relying Party Trust manually
 1. In Server Manager, click **Tools**, and then select **AD FS Management**.

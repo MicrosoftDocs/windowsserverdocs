@@ -5,7 +5,7 @@ manager: lizross
 ms.author: jgerend
 ms.topic: article
 author: JasonGerend
-ms.date: 01/18/2019
+ms.date: 05/28/2021
 description: How to use Microsoft Azure to host the witness for a Windows Server Failover Cluster in the cloud - also known as how to deploy a Cloud Witness.
 ---
 
@@ -154,7 +154,7 @@ Cloud Witness configuration is well integrated within the existing Quorum Config
 
 The existing Set-ClusterQuorum PowerShell command has new additional parameters corresponding to Cloud Witness.
 
-You can configure Cloud Witness with the cmdlet [`Set-ClusterQuorum`](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum) using the following PowerShell command:
+You can configure Cloud Witness with the cmdlet [`Set-ClusterQuorum`](/powershell/module/failoverclusters/set-clusterquorum) using the following PowerShell command:
 
 ```PowerShell
 Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>

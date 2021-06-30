@@ -33,7 +33,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 - Users can now move the minimized menu.
 - Improved support for 4K and ultra-wide monitors and fixed an issue where copying large amounts of data caused sessions to crash.
-- Improved support for using an Input Method Editor in the remote session. To learn more about using an Input Method Editor with the web client, check out [Connect to Windows Virtual Desktop with the web client](https://docs.microsoft.com/azure/virtual-desktop/connect-web).
+- Improved support for using an Input Method Editor in the remote session. To learn more about using an Input Method Editor with the web client, check out [Connect to Windows Virtual Desktop with the web client](/azure/virtual-desktop/connect-web).
 - Changed the **All Resources** page UI.
 - Fixed several connection sequence failures where web client returned a *General Protocol Error*.
 - Fixed keyboard input issues where specific key sequences were not handled appropriately.

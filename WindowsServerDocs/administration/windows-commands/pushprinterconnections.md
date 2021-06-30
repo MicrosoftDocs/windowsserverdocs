@@ -35,4 +35,4 @@ pushprinterconnections <-log> <-?>
 
 - [Print Command Reference](print-command-reference.md)
 
-- [Deploy Printers by Using Group Policy](https://go.microsoft.com/fwlink/?LinkId=230627)
+- [Deploy Printers by Using Group Policy](/previous-versions/windows/it-pro/windows-server-2003/cc722179(v=ws.10))

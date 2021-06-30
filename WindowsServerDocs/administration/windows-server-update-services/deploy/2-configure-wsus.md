@@ -341,7 +341,7 @@ You must consider the following limitations when you use SSL to secure a WSUS de
 
    - Move the remote database server and the WSUS server to a private network.
 
-   - Deploy Internet Protocol security (IPsec) to help secure network traffic. For more information about IPsec, see [Creating and Using IPsec Policies](https://go.microsoft.com/fwlink/?LinkID=203841).
+   - Deploy Internet Protocol security (IPsec) to help secure network traffic. For more information about IPsec, see [Creating and Using IPsec Policies](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730656(v=ws.10)).
 
 ### Configure SSL on the WSUS server
 
@@ -373,7 +373,7 @@ WSUS requires two ports for SSL: one port that uses HTTPS to send encrypted meta
 
 - The certificate of the certification authority (CA) must be imported into the local computer Trusted Root CA store, or the Windows Server Update Service Trusted Root CA store on downstream WSUS servers. If the certificate is only imported to the Local User Trusted Root CA store, the downstream WSUS server will not be authenticated on the upstream server.
 
-    For more information about how to use SSL certificates in IIS, see [Require Secure Sockets Layer (IIS 7)](https://go.microsoft.com/fwlink/?LinkID=203846).
+    For more information about how to use SSL certificates in IIS, see [Require Secure Sockets Layer (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732367(v=ws.10)).
 
 - You must import the certificate to all computers that will communicate with the WSUS server. This includes all client computers, downstream servers, and computers that run the WSUS Administration Console. The certificate should be imported into the local computer Trusted Root CA store or into the Windows Server Update Service Trusted Root CA store.
 
@@ -435,13 +435,13 @@ The following instructions configure a downstream server to synchronize to an up
 
 The steps that are required to set up a certification authority, bind the certificate to the WSUS website, and establish a trust between the client computers and the certificate are beyond the scope of this guide. For more information and for instructions about how to install certificates and set up this environment, see the following topics:
 
-- [Suite B PKI Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkID=203858)
+- [Suite B PKI Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff829847(v=ws.10))
 
-- [Implementing and Administering Certificate Templates](https://go.microsoft.com/fwlink/?LinkID=203859)
+- [Implementing and Administering Certificate Templates](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731256(v=ws.10))
 
-- [Active Directory Certificate Services Upgrade and Migration Guide](https://go.microsoft.com/fwlink/?LinkID=203860)
+- [Active Directory Certificate Services Upgrade and Migration Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc742515(v=ws.10))
 
-- [Configure Certificate Autoenrollment](https://go.microsoft.com/fwlink/?LinkID=203861)
+- [Configure Certificate Autoenrollment](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731522(v=ws.11))
 
 ### 2.6. Complete IIS Configuration
 
@@ -449,9 +449,9 @@ By default, anonymous read access is enabled for the default and all new IIS web
 
 To enable anonymous read access, follow the steps for the applicable version of IIS:
 
-1. [Enable Anonymous Authentication (IIS 7)](https://go.microsoft.com/fwlink/?LinkID=205316), as documented in the IIS 7 Operations Guide.
+1. [Enable Anonymous Authentication (IIS 7)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731244(v=ws.10)), as documented in the IIS 7 Operations Guide.
 
-2. [Enabling Anonymous Authentication (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=211391), as documented in the IIS 6.0 Operations Guide.
+2. [Enabling Anonymous Authentication (IIS 6.0)](/previous-versions/windows/it-pro/windows-server-2003/cc737887(v=ws.10)), as documented in the IIS 6.0 Operations Guide.
 
 ### 2.7. Configure a Signing Certificate
 

@@ -37,7 +37,7 @@ You can run the following commands in the Diskshadow command interpreter or thro
 
 | Command | Description |
 | --------- | ----------- |
-| [set command](set_2.md) | Sets the context, options, verbose mode, and metadata file for creating shadow copies. |
+| [set command](./set.md) | Sets the context, options, verbose mode, and metadata file for creating shadow copies. |
 | [load metadata command](load-metadata.md) | Loads a metadata .cab file prior to importing a transportable shadow copy or loads the writer metadata in the case of a restore. |
 | [writer command](writer.md) | verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure. |
 | [add command](add.md) | Adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment. |

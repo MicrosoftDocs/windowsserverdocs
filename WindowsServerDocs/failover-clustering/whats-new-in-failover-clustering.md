@@ -21,7 +21,7 @@ This topic explains the new and changed functionality in Failover Clustering for
     Cluster sets enable you to increase the number of servers in a single software-defined datacenter (SDDC) solution beyond the current limits of a cluster. This is accomplished by grouping multiple clusters into a cluster set--a loosely-coupled grouping of multiple failover clusters: compute, storage and hyper-converged.
     With cluster sets, you can move online virtual machines (live migrate) between clusters within the cluster set.
 
-    For more info, see [Cluster sets](../storage/storage-spaces/cluster-sets.md).
+    For more info, see [Cluster sets](/azure-stack/hci/deploy/cluster-set).
 
 - **Azure-aware clusters**
 
