@@ -123,3 +123,8 @@ User adjustable storage repair speed is a new feature in Storage Spaces Direct t
 #### Storage bus cache with Storage Spaces on standalone servers
 
 Storage bus cache is now available for standalone servers. It can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. Similar to its implementation for Storage Spaces Direct, this feature binds together faster media (for example, NVMe or SSD) with slower media (for example, HDD) to create tiers. A portion of the faster media tier is reserved for the cache.
+
+#### SMB compression
+
+Enhancement to SMB in Windows Server 2022 and Windows 11 allows a user or application to compress files as they transfer over the network. Users no longer have to manually zip files in order to transfer much faster on slower or more congested networks. For details, see [SMB Compression](https://aka.ms/smbcompression). 
+
