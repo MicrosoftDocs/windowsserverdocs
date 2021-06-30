@@ -153,13 +153,13 @@ The installation process tries to create the delegation to ensure that computers
 
 Delegations between the parent domain and the subdomain being promoted can be created and validated before or after the installation. There is no reason to delay the installation of a new domain controller because you cannot create or update the DNS delegation.
 
-For more information about delegation, see [Understanding Zone Delegation](https://go.microsoft.com/fwlink/?LinkId=164773) (https://go.microsoft.com/fwlink/?LinkId=164773). If zone delegation is not possible in your situation, you might consider other methods for providing name resolution from other domains to the hosts in your domain. For example, the DNS administrator of another domain could configure conditional forwarding, stub-zones, or secondary zones in order to resolve names in your domain. For more information, see the following topics:
+For more information about delegation, see [Understanding Zone Delegation](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771640(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkId=164773). If zone delegation is not possible in your situation, you might consider other methods for providing name resolution from other domains to the hosts in your domain. For example, the DNS administrator of another domain could configure conditional forwarding, stub-zones, or secondary zones in order to resolve names in your domain. For more information, see the following topics:
 
--   [Understanding zone types](https://go.microsoft.com/fwlink/?LinkID=157399) (https://go.microsoft.com/fwlink/?LinkID=157399)
+-   [Understanding zone types](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771898(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkID=157399)
 
--   [Understanding stub zones](https://go.microsoft.com/fwlink/?LinkId=164776) (https://go.microsoft.com/fwlink/?LinkId=164776)
+-   [Understanding stub zones](/previous-versions/windows/it-pro/windows-server-2003/cc779197(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkId=164776)
 
--   [Understanding forwarders](https://go.microsoft.com/fwlink/?LinkId=164778) (https://go.microsoft.com/fwlink/?LinkId=164778)
+-   [Understanding forwarders](/previous-versions/windows/it-pro/windows-server-2003/cc782142(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkId=164778)
 
 ## <a name="BKMK_RODCOptionsPage"></a>RODC Options
 The following options appear when you install a read-only domain controller (RODC).
@@ -302,4 +302,3 @@ For more information about removing AD DS, see [Remove Active Directory Domain S
 The **Review Options** page provides you the chance to export the configuration settings for demotion to a Windows PowerShell script so you can automate additional demotions. Click **Demote** to remove AD DS.
 
 ![Screenshot of the final Review Options page of the Active Directory Domain Services Configuration Wizard.](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_ReviewOptions.gif)
-

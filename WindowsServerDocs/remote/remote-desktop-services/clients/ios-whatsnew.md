@@ -3,9 +3,9 @@ title: What's new in the iOS client
 description: Learn about recent changes to the Remote Desktop client for iOS
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 03/12/2021
+ms.date: 03/29/2021
 ms.localizationpriority: medium
 ---
 # What's new in the iOS client
@@ -15,6 +15,19 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 ## How to report issues
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Help** > **Report an Issue**.
+
+## Updates for version 10.2.5
+
+*Date published: 03/29/2021*
+
+It's time for a small update to address some reported bugs. In this version, we made the following updates:
+
+- Fixed NETBIOS name resolution on iOS 14.
+- Updated the app to proactively request local network access to enable connections to PCs around you.
+- Fixed an issue where an RD Gateway connection would fail with a 0x3000064 error code.
+- Fixed a bug where workspace discovery and download would fail if the port number was included in HTTP GET requests.
+- Added examples of PC host names to the PC Name page in the Add/Edit PC UX.
+- Addressed some VoiceOver accessibility issues.
 
 ## Updates for version 10.2.4
 

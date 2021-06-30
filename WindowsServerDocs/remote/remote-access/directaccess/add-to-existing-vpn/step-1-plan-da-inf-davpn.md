@@ -212,7 +212,7 @@ DirectAccess settings configured when you configure Remote Access are collected 
 GPOs are created automatically by the Enable DirectAccess Wizard and a default name is specified for each GPO.
 
 > [!CAUTION]
-> Use the following procedure to backup all Remote Access Group Policy Objects before executing DirectAccess cmdlets: [Back up and Restore Remote Access Configuration](https://go.microsoft.com/fwlink/?LinkID=257928)
+> Use the following procedure to backup all Remote Access Group Policy Objects before executing DirectAccess cmdlets: [Back up and Restore Remote Access Configuration](/samples/browse/?redirectedfrom=TechNet-Gallery)
 
 GPOs can be configured in two ways:
 

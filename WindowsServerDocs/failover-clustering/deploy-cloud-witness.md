@@ -5,35 +5,35 @@ manager: lizross
 ms.author: jgerend
 ms.topic: article
 author: JasonGerend
-ms.date: 01/18/2019
-description: How to use Microsoft Azure to host the witness for a Windows Server Failover Cluster in the cloud - aka how to deploy a Cloud Witness.
+ms.date: 05/28/2021
+description: How to use Microsoft Azure to host the witness for a Windows Server Failover Cluster in the cloud - also known as how to deploy a Cloud Witness.
 ---
 
 # Deploy a Cloud Witness for a Failover Cluster
 
-> Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Cloud Witness is a type of Failover Cluster quorum witness that uses Microsoft Azure to provide a vote on cluster quorum. This topic provides an overview of the Cloud Witness feature, the scenarios that it supports, and instructions about how to configure a cloud witness for a Failover Cluster.
 
 ## <a name="CloudWitnessOverview"></a>Cloud Witness overview
 
-Figure 1 illustrates a multi-site stretched Failover Cluster quorum configuration with Windows Server 2016. In this example configuration (figure 1), there are 2 nodes in 2 datacenters (referred to as Sites). Note, it is possible for a cluster to span more than 2 datacenters. Also, each datacenter can have  more than 2 nodes. A typical cluster quorum configuration in this setup (automatic failover SLA) gives each node a vote. One extra vote is given to the quorum witness to allow cluster to keep running even if either one of the datacenter experiences a power outage. The math is simple - there are 5 total votes and you need 3 votes for the cluster to keep it running.
+Figure 1 illustrates a multi-site stretched Failover Cluster quorum configuration with Windows Server 2016. In this example configuration (figure 1), there are 2 nodes in 2 datacenters (referred to as Sites). Note, it is possible for a cluster to span more than 2 datacenters. Also, each datacenter can have  more than 2 nodes. A typical cluster quorum configuration in this setup (automatic failover SLA) gives each node a vote. One extra vote is given to the quorum witness to allow the cluster to keep running, even if either one of the datacenters experiences a power outage. The math is simple - there are 5 total votes and you need 3 votes for the cluster to keep it running.
 
 ![File Share Witness in a third separate site with 2 nodes in 2 other sites](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png "File Share Witness")
 **Figure 1: Using a File Share Witness as a quorum witness**
 
-In case of power outage in one datacenter, to give equal opportunity for the cluster in other datacenter to keep it running, it is recommended to host the quorum witness in a location other than the two datacenters. This typically means requiring a third separate datacenter (site) to host a File Server that is backing the File Share which is used as the quorum witness (File Share Witness).
+If there is a power outage in one datacenter, to give equal opportunity for the cluster in other datacenter to keep it running, it is recommended to host the quorum witness in a location other than the two datacenters. This typically means requiring a third separate datacenter (site) to host a File Server that is backing the File Share, which is used as the quorum witness (File Share Witness).
 
-Most organizations do not have a third separate datacenter that will host File Server backing the File Share Witness. This means organizations primarily host the File Server in one of the two datacenters, which by extension, makes that datacenter the primary datacenter. In a scenario where there is power outage in the primary datacenter, the cluster would go down as the other datacenter would only have 2 votes which is below the quorum majority of 3 votes needed. For the customers that have third separate datacenter to host the File Server, it is an overhead to maintain the highly available File Server backing the File Share Witness. Hosting virtual machines in the public cloud that have the File Server for File Share Witness running in Guest OS is a significant overhead in terms of both setup & maintenance.
+Most organizations do not have a third separate datacenter that will host File Server backing the File Share Witness. This means organizations primarily host the File Server in one of the two datacenters, which by extension, makes that datacenter the primary datacenter. In a scenario where there is power outage in the primary datacenter, the cluster would go down as the other datacenter would only have 2 votes which is below the quorum majority of 3 votes needed. For the customers that have third separate datacenter to host the File Server, it is an overhead to maintain the highly available File Server backing the File Share Witness. Hosting virtual machines in the public cloud that have the File Server for File Share Witness running in Guest OS is a significant overhead in terms of both setup and maintenance.
 
-Cloud Witness is a new type of Failover Cluster quorum witness that leverages Microsoft Azure as the arbitration point (figure 2). It uses Azure Blob Storage to read/write a blob file which is then used as an arbitration point in case of split-brain resolution.
+Cloud Witness is a new type of Failover Cluster quorum witness that uses Microsoft Azure as the arbitration point (figure 2). It uses Azure Blob Storage to read/write a blob file, which is then used as an arbitration point if there is a split-brain resolution.
 
 There are significant benefits which this approach:
-1. Leverages Microsoft Azure (no need for third separate datacenter).
-2. Uses standard available Azure Blob Storage (no extra maintenance overhead of virtual machines hosted in public cloud).
-3. Same Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique id used as blob file name).
-4. Very low on-going $cost to the Storage Account (very small data written per blob file, blob file updated only once when cluster nodes' state changes).
-5. Built-in Cloud Witness resource type.
+- Uses Microsoft Azure (no need for third separate datacenter).
+- Uses standard available Azure Blob Storage (no extra maintenance overhead of virtual machines hosted in public cloud).
+- Same Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique ID used as blob file name).
+- Low on-going $cost to the Storage Account (small data written per blob file, blob file updated only once when cluster nodes' state changes).
+- Built-in Cloud Witness resource type.
 
 ![Diagram illustrating a multi-site stretched cluster with Cloud Witness as a quorum witness](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_2.png)
 **Figure 2: Multi-site stretched clusters with Cloud Witness as a quorum witness**
@@ -70,7 +70,7 @@ When you use the same Azure Storage Account for configuring Cloud Witness for mu
 
 ### To create an Azure storage account
 
-1. Sign in to the [Azure Portal](https://portal.azure.com).
+1. Sign in to the [Azure portal](https://portal.azure.com).
 2. On the Hub menu, select New -> Data + Storage -> Storage account.
 3. In the Create a storage account page, do the following:
     1. Enter a name for your storage account.
@@ -89,7 +89,7 @@ When you create a Microsoft Azure Storage Account, it is associated with two Acc
 
 #### To view and copy storage access keys
 
-In the Azure Portal, navigate to your storage account, click **All settings** and then click **Access Keys** to view, copy, and regenerate your account access keys. The Access Keys blade also includes pre-configured connection strings using your primary and secondary keys that you can copy to use in your applications (see figure 4).
+In the Azure portal, navigate to your storage account, click **All settings** and then click **Access Keys** to view, copy, and regenerate your account access keys. The Access Keys blade also includes pre-configured connection strings using your primary and secondary keys that you can copy to use in your applications (see figure 4).
 
 ![Snapshot of the Manage Access Keys dialog in Microsoft Azure](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_4.png)
 **Figure 4: Storage Access Keys**
@@ -105,7 +105,7 @@ Cloud Witness always uses **Blob** as the storage type. Azure uses **.core.windo
 
 #### To view and copy endpoint URL links
 
-In the Azure Portal, navigate to your storage account, click **All settings** and then click **Properties** to view and copy your endpoint URLs (see figure 5).
+In the Azure portal, navigate to your storage account, click **All settings** and then click **Properties** to view and copy your endpoint URLs (see figure 5).
 
 ![Snapshot of the Cloud Witness endpoint links](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_5.png)
 **Figure 5: Cloud Witness endpoint URL links**
@@ -114,7 +114,7 @@ For more information about creating and managing Azure Storage Accounts, see [Ab
 
 ## Configure Cloud Witness as a quorum witness for your cluster
 
-Cloud Witness configuration is well-integrated within the existing Quorum Configuration Wizard built into the Failover Cluster Manager.
+Cloud Witness configuration is well integrated within the existing Quorum Configuration Wizard built into the Failover Cluster Manager.
 
 ### To configure Cloud Witness as a Quorum Witness
 
@@ -154,7 +154,7 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
 
 The existing Set-ClusterQuorum PowerShell command has new additional parameters corresponding to Cloud Witness.
 
-You can configure Cloud Witness with the cmdlet [`Set-ClusterQuorum`](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum) using the following PowerShell command:
+You can configure Cloud Witness with the cmdlet [`Set-ClusterQuorum`](/powershell/module/failoverclusters/set-clusterquorum) using the following PowerShell command:
 
 ```PowerShell
 Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>

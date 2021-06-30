@@ -30,12 +30,14 @@
 ## [DFS Replication](dfs-replication/dfsr-overview.md)
 ### [Migrate SYSVOL replication to DFS Replication](dfs-replication/migrate-sysvol-to-dfsr.md)
 ### [Use robocopy to preseed files for DFS Replication](dfs-replication/preseed-dfsr-with-robocopy.md)
-### [DFS Replication: Frequently Asked Questions (FAQ)](dfs-replication/dfsr-faq.md)
+### [DFS Replication FAQ](dfs-replication/dfsr-faq.yml)
 ### [How to determine the minimum staging area DFSR needs for a replicated folder](../troubleshoot/how-to-determine-the-minimum-staging-area-dfsr-needs-for-a-replicated-folder.md)
 ### [Understanding (the Lack of) Distributed File Locking in DFSR](../troubleshoot/understanding-the-lack-of-distributed-file-locking-in-dfsr.md)
 ## [Disk Management](disk-management/overview-of-disk-management.md)
 ## [File Server and SMB](file-server/file-server-smb-overview.md)
 ### [SMB Direct](file-server/smb-direct.md)
+### [SMB over QUIC](file-server/smb-over-quic.md)
+### [SMB compression](file-server/smb-compression.md)
 ### [SMB security enhancements](file-server/smb-security.md)
 ### [SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)
 ### [Network File System overview](nfs/nfs-overview.md)
@@ -110,7 +112,7 @@
 ### [Overview](storage-migration-service/overview.md)
 ### [Migrate a server](storage-migration-service/migrate-data.md)
 ### [How cutover works](storage-migration-service/cutover.md)
-### [Frequently asked questions (FAQ)](storage-migration-service/faq.md)
+### [Frequently asked questions (FAQ)](storage-migration-service/faq.yml)
 ### [Known issues](storage-migration-service/known-issues.md)
 
 ## [Storage Replica](storage-replica/storage-replica-overview.md)
@@ -120,7 +122,7 @@
 ### [Cluster to Cluster Storage Replica cross region in Azure](storage-replica/cluster-to-cluster-azure-cross-region.md)
 ### [Cluster to Cluster Storage Replica within the same region in Azure](storage-replica/cluster-to-cluster-azure-one-region.md)
 ### [Storage Replica: known issues](storage-replica/storage-replica-known-issues.md)
-### [Storage Replica: Frequently Asked Questions](storage-replica/storage-replica-frequently-asked-questions.md)
+### [Storage Replica: Frequently Asked Questions](storage-replica/storage-replica-frequently-asked-questions.yml)
 ## [Storage Spaces](storage-spaces/overview.md)
 ### [Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)
 ### [Health and operational states](storage-spaces/storage-spaces-states.md)
@@ -131,7 +133,7 @@
 #### [Drive symmetry considerations](storage-spaces/drive-symmetry-considerations.md)
 #### [Understand and monitor storage resync](storage-spaces/understand-storage-resync.md)
 #### [Cluster and pool quorum](storage-spaces/understand-quorum.md)
-#### [Cluster sets](storage-spaces/cluster-sets.md)
+#### [Cluster sets](/azure-stack/hci/deploy/cluster-set)
 ### Plan
 #### [Hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)
 #### [Using the CSV in-memory read cache](storage-spaces/csv-cache.md)
@@ -145,7 +147,8 @@
 #### [Nested resiliency](storage-spaces/nested-resiliency.md)
 #### [Configure quorum](../failover-clustering/manage-cluster-quorum.md)
 #### [Upgrade a Storage Spaces Direct cluster](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)
-#### [Understand and deploy persistent memory](storage-spaces/deploy-pmem.md)
+#### [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory)
+#### [Understand and configure DAX](storage-spaces/persistent-memory-direct-access.md)
 
 ### Manage
 #### [Manage with Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md)
@@ -185,4 +188,3 @@
 #### [Step 5, Set up clients](work-folders/deploy-work-folders-adfs-step5.md)
 ## [Storage QoS](storage-qos/storage-qos-overview.md)
 ## [Change history for Storage topics](storage-change-history.md)
-

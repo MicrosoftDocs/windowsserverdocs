@@ -11,7 +11,7 @@ ms.date: 8/16/2016
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -46,8 +46,3 @@ To use Server Manager, you must be logged on to the computer as an administrator
 
 1.  Open Server Manager by using shortcuts on the **Start** menu, on the Windows taskbar, or in Administrative Tools.
 2.   In the **Roles Summary** area of the Server Manager main window, click **Remove Roles**. Follow the instructions in the wizard to remove the role.
-
-
-
-
-

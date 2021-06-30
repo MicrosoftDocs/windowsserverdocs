@@ -66,6 +66,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
+          - text: SMB over QUIC
+            url: file-server/smb-over-quic.md
           - text: ReFS
             url: refs/refs-overview.md
           - text: Server Message Block (SMB) protocol

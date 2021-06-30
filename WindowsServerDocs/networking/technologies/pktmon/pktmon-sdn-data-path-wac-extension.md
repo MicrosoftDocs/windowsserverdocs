@@ -21,7 +21,7 @@ Windows Admin Center is a locally-deployed, browser-based management tool that l
 
 ## Before you start
 - To use the tool, the target server needs to be running Windows Server 2019 version 1903 (19H1) and above.
-- [Install Windows Admin Center](/windows-server/manage/windows-admin-center/deploy/install).
+- [Install Windows Admin Center](../../../manage/windows-admin-center/deploy/install.md).
 - Add a cluster to Windows Admin Center:
   1. Click **+ Add** under **All Connections**.
   2. Choose to add a Hyper-Converged Cluster Connection.

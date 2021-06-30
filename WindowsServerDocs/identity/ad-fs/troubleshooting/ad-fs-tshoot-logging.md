@@ -50,9 +50,9 @@ The table below explains the available auditing levels.
 
 |Audit Level|PowerShell syntax|Description|
 |----- | ----- | ----- |
-|None|Set-AdfsProperties -AuditLevel None|Auditing is disabled and no events will be logged.|
-|Basic (Default)|Set-AdfsProperties -AuditLevel Basic|No more than 5 events will be logged for a single request|
-|Verbose|Set-AdfsProperties -AuditLevel Verbose|All events will be logged.  This will log a significant amount of information per request.|
+|None|Set-AdfsProperties -LogLevel None|Auditing is disabled and no events will be logged.|
+|Basic (Default)|Set-AdfsProperties -LogLevel Basic|No more than 5 events will be logged for a single request|
+|Verbose|Set-AdfsProperties -LogLevel Verbose|All events will be logged.  This will log a significant amount of information per request.|
 
 To view the current auditing level, you can use the PowerShell cmdlt:  Get-AdfsProperties.
 
