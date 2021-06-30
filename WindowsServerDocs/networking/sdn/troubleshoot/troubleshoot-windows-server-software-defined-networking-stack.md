@@ -6,16 +6,16 @@ ms.topic: article
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/14/2018
+ms.date: 06/30/2021
 ---
 
 # Troubleshoot the Windows Server Software Defined Networking Stack
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 This guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that leverages the available diagnostic tools.
 
-For more information about Microsoft's Software Defined Networking, see [Software Defined Networking](../software-defined-networking.md).
+For more information about SDN, see [Software Defined Networking](../software-defined-networking.md).
 
 ## Error types
 The following list represents the class of problems most often seen with Hyper-V Network Virtualization (HNVv1) in Windows Server 2012 R2 from in-market production deployments and coincides in many ways with the same types of problems seen in Windows Server 2016 HNVv2 with the new Software Defined Network (SDN) Stack.
