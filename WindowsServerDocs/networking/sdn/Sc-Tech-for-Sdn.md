@@ -22,7 +22,7 @@ System Center includes the following technologies for use with Software Defined 
 ## <a name="bkmk_scom"></a>System Center Operations Manager
 System Center 2019 and 2016 Operations Manager provide infrastructure monitoring that is flexible and cost-effective, helps ensure the predictable performance and availability of vital applications, and offer comprehensive monitoring for your datacenter and cloud, both private and public.
 
-For more information, see [Operations Manager](/system-center/scom/welcome?view=sc-om-2019)
+For more information, see [Operations Manager](/system-center/scom/welcome?view=sc-om-2019&preserve-view=true)
 
 ## <a name="bkmk_scvmm"></a>System Center Virtual Machine Manager
 With System Center 2019 and 2016 Virtual Machine Manager (VMM), you can:
