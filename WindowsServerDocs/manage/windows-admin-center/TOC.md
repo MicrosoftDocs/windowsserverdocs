@@ -2,7 +2,7 @@
 
 ## Understand
 ### [What is Windows Admin Center?](understand/what-is.md)
-### [FAQ](understand/faq.md)
+### [FAQ](understand/faq.yml)
 ### [Case studies](understand/case-studies.md)
 ### [Related management products](understand/related-management.md)
 

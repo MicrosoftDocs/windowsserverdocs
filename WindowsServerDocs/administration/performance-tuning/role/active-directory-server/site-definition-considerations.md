@@ -74,4 +74,4 @@ For all trust scenarios, credentials are routed according to the domain specifie
 - [Hardware considerations](hardware-considerations.md)
 - [LDAP considerations](ldap-considerations.md)
 - [Troubleshooting ADDS performance](troubleshoot.md)
-- [Capacity Planning for Active Directory Domain Services](https://go.microsoft.com/fwlink/?LinkId=324566)
+- [Capacity Planning for Active Directory Domain Services](./capacity-planning-for-active-directory-domain-services.md)

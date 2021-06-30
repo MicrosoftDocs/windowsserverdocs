@@ -78,7 +78,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Securing Privileged Access
-            url: ../identity/securing-privileged-access/securing-privileged-access.md
+            url: /security/compass/overview
           - text: Just in Time Administration with Microsoft Identity Manager
             url: /microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services
           - text: Just Enough Administration Article

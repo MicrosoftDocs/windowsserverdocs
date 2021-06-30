@@ -90,7 +90,7 @@ When a backup has Unsuccessful status, no part of the backup succeeded and no da
 
 1. Make sure that the hard disk is connected to the computer, turned on, and functioning properly.
 
-2. Run **chkdsk /f /r** to fix any errors on the hard disk (**/f**) and recover readable information from any bad sectors (**/r**). For more information about running **chkdsk**, see [CHKDSK](https://go.microsoft.com/fwlink/?LinkId=206562).
+2. Run **chkdsk /f /r** to fix any errors on the hard disk (**/f**) and recover readable information from any bad sectors (**/r**). For more information about running **chkdsk**, see [CHKDSK](/previous-versions/orphan-topics/ws.10/cc755829(v=ws.10)).
 
 3. Make sure that the computer was not shut down or disconnected from the network while backup was running.
 

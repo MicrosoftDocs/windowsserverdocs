@@ -130,7 +130,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 - [Troubleshooting Enabling Multisite](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-enabling-multisite.md)
 - [Troubleshooting Adding Entry Points](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-adding-entry-points.md)
 - [Troubleshooting Setting the Entry Point Domain Controller](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller.md)
-- [Troubleshooting Web Probe URLs](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-web-probe-urls.md)
+- [Troubleshooting Web Probe URLs](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller.md)
 
 ## Troubleshoot Nano Server
 
@@ -207,4 +207,4 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 - [Windows Admin Center Common Troubleshooting Steps](../manage/windows-admin-center/support/troubleshooting.md)
 - [Windows Admin Center Known Issues](../manage/windows-admin-center/support/known-issues.md)
-- [Windows Admin Center Frequently Asked Questions](../manage/windows-admin-center/understand/faq.md)
+- [Windows Admin Center Frequently Asked Questions](../manage/windows-admin-center/understand/faq.yml)

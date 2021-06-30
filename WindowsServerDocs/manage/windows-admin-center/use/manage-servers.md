@@ -442,7 +442,7 @@ The following features are supported in Storage:
 ## Storage Migration Service
 
 **Storage Migration Service** allows you to migrate servers and file shares to Azure or Windows Server 2019—without requiring apps or users to change anything.
-[Get an overview of Storage Migration Service](https://go.microsoft.com/fwlink/?linkid=2016155)
+[Get an overview of Storage Migration Service](../../../storage/storage-migration-service/overview.md)
 
 >[!NOTE]
 >Storage Migration Service requires Windows Server 2019.

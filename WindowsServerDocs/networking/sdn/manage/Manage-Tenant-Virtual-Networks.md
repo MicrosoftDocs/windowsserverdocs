@@ -17,9 +17,7 @@ You can use the topics in this section to manage Tenant Hyper-V Network Virtuali
 This section contains the following topics.
 
 - [Understanding Usage of Virtual Networks and VLANs](Understanding-Usage-of-Virtual-Networks-and-VLANs.md)
-- [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](use-acls-for-traffic-flow.md)
+- [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](/azure-stack/hci/manage/use-datacenter-firewall-powershell)
 - [Create, Delete, or Update Tenant Virtual Networks](Create,-Delete,-or-Update-Tenant-Virtual-Networks.md)
 - [Add a Virtual Gateway to a Tenant Virtual Network](Add-a-Virtual-Gateway-to-a-Tenant-Virtual-Network.md)
 - [Connect container endpoints to a tenant virtual network](Connect-container-endpoints-to-a-Tenant-Virtual-Network.md)
-
-

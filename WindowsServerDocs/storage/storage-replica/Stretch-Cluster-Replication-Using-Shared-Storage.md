@@ -18,7 +18,7 @@ In this evaluation example, you will configure these computers and their storage
 > In this evaluation, servers in different sites must be able to communicate with the other servers via a network, but not have any physical connectivity to the other site's shared storage. This scenario does not make use of Storage Spaces Direct.
 
 > [!NOTE]
-> You may also want to consider using an Azure Stack HCI solution to implement a stretch cluster. For more information, see [Stretched clusters overview in Azure Stack HCI](https://docs.microsoft.com/azure-stack/hci/concepts/stretched-clusters).
+> You may also want to consider using an Azure Stack HCI solution to implement a stretch cluster. For more information, see [Stretched clusters overview in Azure Stack HCI](/azure-stack/hci/concepts/stretched-clusters).
 
 ## Terms
 This walkthrough uses the following environment as an example:
@@ -801,4 +801,4 @@ Now you will manage and operate your stretch cluster. You can perform all of the
 ## See Also
 - [Windows Server 2016](../../index.yml)
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
-- [Stretched Clusters in Azure Stack HCI](https://docs.microsoft.com/azure-stack/hci/concepts/stretched-clusters)
+- [Stretched Clusters in Azure Stack HCI](/azure-stack/hci/concepts/stretched-clusters)

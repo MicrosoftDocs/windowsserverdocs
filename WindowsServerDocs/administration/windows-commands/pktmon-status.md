@@ -1,40 +1,40 @@
 ---
-title: pktmon comp
-description: Reference article for the pktmon comp command.
+title: pktmon status
+description: Reference article for the pktmon status command.
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
-ms.date: 1/14/2021
+ms.date: 06/24/2021
 ---
 
-# pktmon comp
+# pktmon status
 
 > Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-Manage registered components.
+Query current Packet Monitor status.
 
 ## Syntax
 
 ```
-pktmon comp { list | counters } [OPTIONS | help]
+pktmon status [--buffer-info]
 ```
 
-### Commands
+### Parameters
 
-| **Command** | **Description** |
+| **Parameter** | **Description** |
 | ------------- | --------------- |
-| **list** | List all active components. |
-| **counters** | Display current per-component counters. |
+| **-b, --buffer-info** | Display ETW buffer information. |
 
 ## Additional References
 
 - [Pktmon](pktmon.md)
 - [Pktmon counters](pktmon-counters.md)
+- [Pktmon etl2pcap](pktmon-etl2pcap.md)
+- [Pktmon etl2txt](pktmon-etl2txt.md)
 - [Pktmon filter](pktmon-filter.md)
 - [Pktmon filter add](pktmon-filter-add.md)
-- [Pktmon format](pktmon-format.md)
+- [Pktmon hex2pkt](pktmon-hex2pkt.md)
 - [Pktmon list](pktmon-list.md)
-- [Pktmon pcapng](pktmon-pcapng.md)
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon start](pktmon-start.md)
 - [Pktmon unload](pktmon-unload.md)
