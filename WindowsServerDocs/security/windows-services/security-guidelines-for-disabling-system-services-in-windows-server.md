@@ -1224,7 +1224,7 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
 | **Recommendation** | OK to disable if not a print server or a DC |
-| **Comments** | On a domain controller, the installation of the DC role adds a thread to the spooler service that is responsible for performing print pruning – removing the stale print queue objects from the Active Directory. If the spooler service is not running on at least one DC in each site, then the AD has no means to remove old queues that no longer exist. [Ask the performance team blog](https://techcommunity.microsoft.com/t5/ask-the-performance-team/bg-p/AskPerf). |
+| **Comments** | On a domain controller, the installation of the DC role adds a thread to the spooler service that is responsible for performing print pruning – removing the stale print queue objects from the Active Directory. If the spooler service is not running on at least one DC in each site, then the AD has no means to remove old queues that no longer exist. ["Disabling Unnecessary Services? A Word to the Wise" - Microsoft Tech Community - Ask The Performance Team Blog](https://techcommunity.microsoft.com/t5/ask-the-performance-team/disabling-unnecessary-services-a-word-to-the-wise/ba-p/373444). |
 
 
 
