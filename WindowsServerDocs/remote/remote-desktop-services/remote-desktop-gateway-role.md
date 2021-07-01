@@ -1,5 +1,5 @@
 ---
-title: Deploy RD Gateway role Azure Virtual Desktop - Azure
+title: Deploy RD Gateway role Azure Virtual Desktop
 description: How to deploy the RD Gateway role in Azure Virtual Desktop.
 author: Heidilohr
 ms.topic: how-to
