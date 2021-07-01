@@ -9,7 +9,7 @@ manager: femila
 ---
 # Virtual machine sizing guidelines
 
-Whether you're running your virtual machine on Remote Desktop Services or Windows Virtual Desktop, different types of workloads require different session host virtual machine (VM) configurations. For the best possible experience, scale your deployment depending on your users' needs.
+Whether you're running your virtual machine on Remote Desktop Services or Azure Virtual Desktop, different types of workloads require different session host virtual machine (VM) configurations. For the best possible experience, scale your deployment depending on your users' needs.
 
 ## Multi-session recommendations
 
