@@ -13,7 +13,7 @@ ms.prod: windows-server
 
 >Applies to: Windows Server 2022
 
-Each release of Windows Server adds new features and functionality; we also occasionally remove features and functionality, usually because we've added a better option,. Here are the details about the features and functionalities that we removed in Windows Server 2022.
+Each release of Windows Server adds new features and functionality; we also occasionally remove features and functionality, usually because we've added a better option. Here are the details about the features and functionalities that we removed in Windows Server 2022.
 
 > [!TIP]
 > - You can get early access to Windows Server builds by joining the [Windows Insider Program for Business](https://insider.windows.com/for-business) - this is a great way to test feature changes.
