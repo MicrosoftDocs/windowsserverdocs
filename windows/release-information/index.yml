@@ -43,14 +43,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
-        - text: "Windows lifecycle and servicing update"
-          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-lifecycle-and-servicing-update/ba-p/2493043
-          itemType: whats-new
         - text: "A framework for Windows endpoint management transformation"
           url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/a-framework-for-windows-endpoint-management-transformation/ba-p/2460684
           itemType: whats-new
         - text: "Out-of-band update to address an issue in which IE11 and apps using the WebBrowser control might fail to open PDFs"
           url: https://support.microsoft.com/help/5004760
+          itemType: whats-new
+        - text: "Introducing Windows 11"
+          url: https://blogs.windows.com/windowsexperience/?p=175814
           itemType: whats-new
 
       footerLink:
