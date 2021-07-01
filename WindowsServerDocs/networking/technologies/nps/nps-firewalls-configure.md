@@ -22,7 +22,9 @@ You might need to configure two types of firewalls to allow RADIUS traffic:
 
 ## Windows Firewall on the local NPS
 
-By default, NPS sends and receives RADIUS traffic by using User Datagram Protocol \(UDP\) ports 1812, 1813, 1645, and 1646. Windows Defender Firewall on the NPS is automatically configured with exceptions, during the installation of NPS, to allow this RADIUS traffic to be sent and received.
+By default, NPS sends and receives RADIUS traffic by using User Datagram Protocol \(UDP\) ports 1812, 1813, 1645, and 1646. Windows Defender Firewall on the NPS should be automatically configured with exceptions, during the installation of NPS, to allow this RADIUS traffic to be sent and received.
+
+With Server 2019 this firewall exception requires a modification to the service account security identifier to effectively detect and allow RADIUS traffic. If this security identifier change is not executed, the firewall will drop RADIUS traffic. From an elevated command prompt, run `sc sidtype IAS unrestricted`. This command changes the IAS (RADIUS) service to use a unique SID instead of sharing with other NETWORK SERVICE services.
 
 Therefore, if you are using the default UDP ports, you do not need to change the Windows Defender Firewall configuration to allow RADIUS traffic to and from NPSs.
 
