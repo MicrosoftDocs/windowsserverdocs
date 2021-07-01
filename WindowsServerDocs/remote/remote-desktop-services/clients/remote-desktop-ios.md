@@ -65,7 +65,7 @@ To add a workspace:
 1. On the Connection Center screen, tap **+**, and then tap **Add workspace**.
 2. In the Feed URL field, enter the URL for the feed you want to add. This URL can be either a URL or an email address.
    - If you use a URL, use the one your admin gave you.
-      - This URL is usually a Azure Virtual Desktop URL. Which one you use depends on which version of Azure Virtual Desktop you're using.
+      - If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
         - For Azure Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
         - For Azure Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - If you use an email address, enter your email address. Entering your email address tells the client to search for a URL associated with your email address if your admin configured the server that way.
