@@ -35,7 +35,7 @@ Creating a new Azure VM from within Windows Admin Center requires that you have:
 - A [Windows Admin Center gateway registered with Azure](azure-integration.md)
 - An existing [Azure resource group](/azure/azure-resource-manager/management/overview) where you have Create permissions.
 - An existing [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview) and subnet.
-- An [Azure Express Route](https://azure.microsoft.com/services/expressroute/) or [Azure VPN solution](https://azure.microsoft.com/services/vpn-gateway/) tied to the virtual network and subnet that allows connectivity from Azure VMs to your on-premises clients, domain controllers, the Windows Admin Center computer, and any servers requiring communication with this VM as part of a workload deployment. For instance, to use the Storage Migration Service to migrate storage to an Azure VM, the orchestrator computer and the source computer must both be able to contact the destination Azure VM you are migrating to.
+- An [Azure ExpressRoute](https://azure.microsoft.com/services/expressroute/) circuit or [Azure VPN solution](https://azure.microsoft.com/services/vpn-gateway/) tied to the virtual network and subnet that allows connectivity from Azure VMs to your on-premises clients, domain controllers, the Windows Admin Center computer, and any servers requiring communication with this VM as part of a workload deployment. For instance, to use the Storage Migration Service to migrate storage to an Azure VM, the orchestrator computer and the source computer must both be able to contact the destination Azure VM you are migrating to.
 
 ## Usage
 
