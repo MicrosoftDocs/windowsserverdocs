@@ -9,3 +9,5 @@ items:
     href: get-started/system-requirements.md
   - name: Automatic Virtual Machine Activation
     href: get-started/vm-activation.md
+  - name: Features removed or no longer developed
+    href: get-started/removed-features.md
