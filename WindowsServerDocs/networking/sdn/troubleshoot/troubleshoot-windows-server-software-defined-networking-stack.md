@@ -1,21 +1,21 @@
 ---
 title: Troubleshoot the Windows Server Software Defined Networking Stack
-description: This Windows Server guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that leverages the available diagnostic tools.
+description: This Windows Server guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that uses the available diagnostic tools.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/14/2018
+ms.date: 06/30/2021
 ---
 
 # Troubleshoot the Windows Server Software Defined Networking Stack
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
-This guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that leverages the available diagnostic tools.
+This guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that uses the available diagnostic tools.
 
-For more information about Microsoft's Software Defined Networking, see [Software Defined Networking](../software-defined-networking.md).
+For more information about SDN, see [Software Defined Networking](../software-defined-networking.md).
 
 ## Error types
 The following list represents the class of problems most often seen with Hyper-V Network Virtualization (HNVv1) in Windows Server 2012 R2 from in-market production deployments and coincides in many ways with the same types of problems seen in Windows Server 2016 HNVv2 with the new Software Defined Network (SDN) Stack.
@@ -25,7 +25,7 @@ Most errors can be classified into a small set of classes:
    A user invokes the NorthBound API incorrectly or with invalid policy.
 
 * **Error in policy application**
-     Policy from Network Controller was not delivered to a Hyper-V Host, significantly delayed and / or not up to date on all Hyper-V hosts (for example, after a Live Migration).
+     Policy from Network Controller was not delivered to a Hyper-V Host, delayed, or not up to date on all Hyper-V hosts (for example, after a Live Migration).
 * **Configuration drift or software bug**
   Data-path issues resulting in dropped packets.
 
@@ -36,7 +36,7 @@ Most errors can be classified into a small set of classes:
 
 ## Diagnostic tools
 
-Before discussing the troubleshooting workflows for each of these type of errors, let's examine the diagnostic tools available.
+Before discussing the troubleshooting workflows for each of these types of errors, let's examine the diagnostic tools available.
 
 To use the Network Controller (control-path) diagnostic tools, you must first install the RSAT-NetworkController feature and import the ``NetworkControllerDiagnostics`` module:
 
@@ -55,15 +55,15 @@ Import-Module hnvdiagnostics
 ### Network controller diagnostics
 These cmdlets are documented on TechNet in the [Network Controller Diagnostics Cmdlet Topic](/powershell/module/networkcontrollerdiagnostics/). They help identify problems with network policy consistency in the control-path between Network Controller nodes and between the Network Controller and the NC Host Agents running on the Hyper-V hosts.
 
- The _Debug-ServiceFabricNodeStatus_ and _Get-NetworkControllerReplica_ cmdlets must be run from one of the Network Controller node virtual machines. All other NC Diagnostic cmdlets can be run from any host which has connectivity to the Network Controller and is in either in the Network Controller Management security group (Kerberos) or has access to the X.509 certificate for managing the Network Controller.
+ The _Debug-ServiceFabricNodeStatus_ and _Get-NetworkControllerReplica_ cmdlets must be run from one of the Network Controller node virtual machines. All other NC Diagnostic cmdlets can be run from any host, which has connectivity to the Network Controller and is in either in the Network Controller Management security group (Kerberos) or has access to the X.509 certificate for managing the Network Controller.
 
 ### Hyper-V host diagnostics
 These cmdlets are documented on TechNet in the [Hyper-V Network Virtualization (HNV) Diagnostics Cmdlet Topic](/powershell/module/hnvdiagnostics/). They help identify problems in the data-path between tenant virtual machines (East/West) and ingress traffic through an SLB VIP (North/South).
 
-The _Debug-VirtualMachineQueueOperation_, _Get-CustomerRoute_, _Get-PACAMapping_, _Get-ProviderAddress_, _Get-VMNetworkAdapterPortId_, _Get-VMSwitchExternalPortId_, and _Test-EncapOverheadSettings_ are all local tests which can be run from any Hyper-V host. The other cmdlets invoke data-path tests through the Network Controller and therefore need access to the Network Controller as descried above.
+The _Debug-VirtualMachineQueueOperation_, _Get-CustomerRoute_, _Get-PACAMapping_, _Get-ProviderAddress_, _Get-VMNetworkAdapterPortId_, _Get-VMSwitchExternalPortId_, and _Test-EncapOverheadSettings_ are all local tests that can be run from any Hyper-V host. The other cmdlets invoke data-path tests through the Network Controller and therefore need access to the Network Controller as described above.
 
 ### GitHub
-The [Microsoft/SDN GitHub Repo](https://github.com/Microsoft/SDN) has a number of sample scripts and workflows which build on top of these in-box cmdlets. In particular, diagnostic scripts can be found in the [Diagnostics](https://github.com/Microsoft/SDN/tree/master/Diagnostics) folder. Please help us contribute to these scripts by submitting Pull Requests.
+The [Microsoft/SDN GitHub Repo](https://github.com/microsoft/sdn) has many sample scripts and workflows that build on top of these in-box cmdlets. In particular, diagnostic scripts can be found in the [Diagnostics](https://github.com/Microsoft/sdn/diagnostics) folder. Help us contribute to these scripts by submitting Pull Requests.
 
 ## Troubleshooting Workflows and Guides
 
@@ -122,7 +122,7 @@ The table below shows the list of error codes, messages, and follow-up actions t
 | PAAddressConfigurationFailure | Failed to plumb PA addresses to the host | Check the Management network connectivity between Network Controller and Host. |
 | CertificateNotTrusted | Certificate is not trusted | Fix the certificates used for communication with the host. |
 | CertificateNotAuthorized | Certificate not authorized | Fix the certificates used for communication with the host. |
-| PolicyConfigurationFailureOnVfp | Failure in configuring VFP policies | This is a runtime failure.  No definite work arounds. Collect logs. |
+| PolicyConfigurationFailureOnVfp | Failure in configuring VFP policies | This is a runtime failure.  No definite workarounds. Collect logs. |
 | PolicyConfigurationFailure | Failure in pushing policies to the hosts, due to communication failures or others error in the NetworkController. | No definite actions.  This is due to failure in goal state processing in the Network Controller modules. Collect logs. |
 | HostNotConnectedToController | The Host is not yet connected to the Network Controller | Port Profile not applied on the host or the host is not reachable from the Network Controller. Validate that HostID registry key matches the Instance ID of the server resource |
 | MultipleVfpEnabledSwitches | There are multiple VFp enabled Switches on the host | Delete one of the switches, since Network Controller Host Agent only supports one vSwitch with the VFP extension enabled |
@@ -160,7 +160,7 @@ netstat -anp tcp |findstr 6640
 ```
 
 #### Check Host Agent services
-The network controller communicates with two host agent services on the Hyper-V hosts: SLB Host Agent and NC Host Agent. It is possible that one or both of these services is not running. Check their state and restart if they're not running.
+The network controller communicates with two host agent services on the Hyper-V hosts: SLB Host Agent and NC Host Agent. It is possible that one or both of these services are not running. Check their state and restart if they're not running.
 
 ```
 Get-Service SlbHostAgent
@@ -266,12 +266,12 @@ You can also check the following parameters of each cert to make sure the subjec
 - Trusted by Root Authority
 
 *Remediation*
-If multiple certificates have the same subject name on the Hyper-V host, the Network Controller Host Agent will randomly choose one to present to the Network Controller. This may not match the thumbprint of the server resource known to the Network Controller. In this case, delete one of the certificates with the same subject name on the Hyper-V host and then re-start the Network Controller Host Agent service. If a connection can still not be made, delete the other certificate with the same subject name on the Hyper-V Host and delete the corresponding server resource in VMM. Then, re-create the server resource in VMM which will generate a new X.509 certificate and install it on the Hyper-V host.
+If multiple certificates have the same subject name on the Hyper-V host, the Network Controller Host Agent will randomly choose one to present to the Network Controller. This may not match the thumbprint of the server resource known to the Network Controller. In this case, delete one of the certificates with the same subject name on the Hyper-V host and then restart the Network Controller Host Agent service. If a connection still cannot be made, delete the other certificate with the same subject name on the Hyper-V Host and delete the corresponding server resource in VMM. Then, recreate the server resource in VMM, which will generate a new X.509 certificate and install it on the Hyper-V host.
 
 #### Check the SLB Configuration State
 The SLB Configuration State can be determined as part of the output to the Debug-NetworkController cmdlet. This cmdlet will also output the current set of Network Controller resources in JSON files, all IP configurations from each Hyper-V host (server) and local network policy from Host Agent database tables.
 
-Additional traces will be collected by default. To not collect traces, add the -IncludeTraces:$false parameter.
+More traces will be collected by default. To not collect traces, add the -IncludeTraces:$false parameter.
 
 ```
 Debug-NetworkController -NetworkController <FQDN or IP> [-Credential <PS Credential>] [-IncludeTraces:$false]
@@ -292,14 +292,14 @@ The SLB Configuration State information can be found in the _diagnostics-slbstat
 This JSON file can be broken down into the following sections:
 
  * Fabric
-   * SlbmVips - This section lists the IP address of the SLB Manager VIP address which is used by the Network Controller to coodinate configuration and health between the SLB Muxes and SLB Host Agents.
+   * SlbmVips - This section lists the IP address of the SLB Manager VIP address, which is used by the Network Controller to coordinate configuration and health between the SLB Muxes and SLB Host Agents.
    * MuxState - This section will list one value for each SLB Mux deployed giving the state of the mux
    * Router Configuration - This section will list the Upstream Router's (BGP Peer) Autonomous System Number (ASN), Transit IP Address, and ID. It will also list the SLB Muxes ASN and Transit IP.
    * Connected Host Info - This section will list the Management IP address all of the Hyper-V hosts available to run load-balanced workloads.
    * Vip Ranges - This section will list the public and private VIP IP pool ranges. The SLBM VIP will be included as an allocated IP from one of these ranges.
    * Mux Routes - This section will list one value for each SLB Mux deployed containing all of the Route Advertisements for that particular mux.
  * Tenant
-   * VipConsolidatedState - This section will list the connectivity state for each Tenant VIP including advertised route prefix, Hyper-V Host and DIP endpoints.
+   * VipConsolidatedState - This section will list the connectivity state for each Tenant VIP including advertised route prefix, Hyper-V Host, and DIP endpoints.
 
 > [!NOTE]
 > SLB State can be ascertained directly by using the [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) script available on the [Microsoft SDN GitHub repository](https://github.com/microsoft/sdn).
@@ -604,7 +604,7 @@ PA Routing Information:
  <snip> ...
 ```
 
-1. [Tenant] Check that there is no distributed firewall policies specified on the virtual subnet or VM network interfaces which would block traffic.
+1. [Tenant] Check that there is no distributed firewall policies specified on the virtual subnet or VM network interfaces that would block traffic.
 
 Query the Network Controller REST API found in demo environment at sa18n30nc in the sa18.nttest.microsoft.com domain.
 
@@ -613,7 +613,7 @@ $uri = "https://sa18n30nc.sa18.nttest.microsoft.com"
 Get-NetworkControllerAccessControlList -ConnectionUri $uri
 ```
 
-## Look at IP Configuration and Virtual Subnets which are referencing this ACL
+## Look at IP Configuration and Virtual Subnets that are referencing this ACL
 
 1. [Hoster] Run ``Get-ProviderAddress`` on both Hyper-V hosts hosting the two tenant virtual machines in question and then run ``Test-LogicalNetworkConnection`` or ``ping -c <compartment>`` from the Hyper-V host to validate connectivity on the HNV Provider logical network
 2.  [Hoster] Ensure that the MTU settings are correct on the Hyper-V hosts and any Layer-2 switching devices in between the Hyper-V Hosts. Run ``Test-EncapOverheadValue`` on all Hyper-V hosts in question. Also check that all Layer-2 switches in between have MTU set to least 1674 bytes to account for maximum overhead of 160 bytes.
@@ -628,20 +628,20 @@ The following sections provide information on advanced diagnostics, logging, and
 
 ### Network controller centralized logging
 
-The Network Controller can automatically collect debugger logs and store them in a centralized location. Log collection can be enabled when you deploy the Network Controller for the first time or any time later. The logs are collected from the Network Controller, and network elements managed by Network Controller: host machines, software load balancers (SLB) and gateway machines.
+The Network Controller can automatically collect debugger logs and store them in a centralized location. Log collection can be enabled when you deploy the Network Controller for the first time or anytime later. The logs are collected from the Network Controller, and network elements managed by Network Controller: host machines, software load balancers (SLB) and gateway machines.
 
-These logs include debug logs for the Network Controller cluster, the Network Controller application, gateway logs, SLB, virtual networking and the distributed firewall. Whenever a new host/SLB/gateway is added to the Network Controller, logging is started on those machines.
+These logs include debug logs for the Network Controller cluster, the Network Controller application, gateway logs, SLB, virtual networking, and the distributed firewall. Whenever a new host/SLB/gateway is added to the Network Controller, logging is started on those machines.
 Similarly, when a host/SLB/gateway is removed from the Network Controller, logging is stopped on those machines.
 
 #### Enable logging
 
 Logging is automatically enabled when you install the Network Controller cluster using the  **Install-NetworkControllerCluster** cmdlet. By default, the logs are collected locally on the Network Controller nodes at *%systemdrive%\SDNDiagnostics*. It is **STRONGLY RECOMMENDED** that you change this location to be a remote file share (not local).
 
-The Network Controller cluster logs are stored at *%programData%\Windows Fabric\log\Traces*. You can specify a centralized location for log collection with the **DiagnosticLogLocation** parameter with the recommendation that this is also be a remote file share.
+The Network Controller cluster logs are stored at *%programData%\Windows Fabric\log\Traces*. You can specify a centralized location for log collection with the **DiagnosticLogLocation** parameter with the recommendation that this also be a remote file share.
 
 If you want to restrict access to this location, you can provide the access credentials with the **LogLocationCredential** parameter. If you provide the credentials to access the log location, you should also provide the **CredentialEncryptionCertificate** parameter, which is used to encrypt the credentials stored locally on the Network Controller nodes.
 
-With the default settings, it is recommended that you have at least 75 GB of free space in the central location, and 25 GB on the local nodes (if not using a central location) for a 3-node Network Controller cluster.
+With the default settings, it is recommended that you have at least 75 GB of free space in the central location, and 25 GB on the local nodes (if not using a central location) for a three-node Network Controller cluster.
 
 #### Change logging settings
 
@@ -652,7 +652,7 @@ You can change logging settings at any time using the ``Set-NetworkControllerDia
 - **Move to local logging**.  If you have provided centralized location to store logs, you can move back to logging locally on the Network Controller nodes with the ``UseLocalLogLocation`` parameter (not recommended due to large disk space requirements).
 - **Logging scope**.  By default, all logs are collected. You can change the scope to collect only Network Controller cluster logs.
 - **Logging level**.  The default logging level is Informational. You can change it to Error, Warning, or Verbose.
-- **Log Aging time**.  The logs are stored in a circular fashion. You will have 3 days of logging data by default, whether you use local logging or centralized logging. You can change this time limit with **LogTimeLimitInDays** parameter.
+- **Log Aging time**.  The logs are stored in a circular fashion. You have three days of logging data by default, whether you use local logging or centralized logging. You can change this time limit with the **LogTimeLimitInDays** parameter.
 - **Log Aging size**.  By default, you will have a maximum 75 GB of logging data if using centralized logging and 25 GB if using local logging. You can change this limit with the **LogSizeLimitInMBs** parameter.
 
 #### Collecting Logs and Traces
@@ -670,7 +670,7 @@ If a file location has not been specified, local logging will be used on each Ne
 
 The Network Controller uses (Azure) Service Fabric. Service Fabric logs may be required when troubleshooting certain issues. These logs can be found on each Network Controller node at C:\ProgramData\Microsoft\Service Fabric.
 
-If a user has run the _Debug-NetworkController_ cmdlet, additional logs will be available on each Hyper-V host which has been specified with a server resource in the Network Controller. These logs (and traces if enabled) are kept under C:\NCDiagnostics
+If a user has run the _Debug-NetworkController_ cmdlet, more logs will be available on each Hyper-V host, which has been specified with a server resource in the Network Controller. These logs (and traces if enabled) are kept under C:\NCDiagnostics
 
 ### SLB Diagnostics
 
@@ -679,11 +679,11 @@ If a user has run the _Debug-NetworkController_ cmdlet, additional logs will be 
 1.  Check that Software Load Balancer Manager (SLBM) is functioning and that the orchestration layers can talk to each other: SLBM -> SLB Mux and SLBM -> SLB Host Agents. Run [DumpSlbRestState](https://github.com/Microsoft/SDN/blob/master/Diagnostics/DumpSlbRestState.ps1) from any node with access to Network Controller REST Endpoint.
 2.  Validate the *SDNSLBMPerfCounters* in PerfMon on one of the Network Controller node VMs (preferably the primary Network Controller node - Get-NetworkControllerReplica):
     1.  Is Load Balancer (LB) engine connected to SLBM? (*SLBM LBEngine Configurations Total* > 0)
-    2.  Does SLBM at least know about its own endpoints? (*VIP Endpoints Total* >= 2 )
+    2.  Does SLBM at least know about its own endpoints? (*VIP Endpoints Total* >= 2)
     3.  Are Hyper-V (DIP) hosts connected to SLBM? (*HP clients connected*  == num servers)
     4.  Is SLBM connected to Muxes? (*Muxes Connected* == *Muxes Healthy on SLBM* == *Muxes reporting healthy* = # SLB Muxes VMs).
 3.  Ensure the BGP router configured is successfully peering with the SLB MUX
-    1.  If using RRAS with Remote Access (i.e. BGP virtual machine):
+    1.  If using RRAS with Remote Access (that is, BGP virtual machine):
         1.  Get-BgpPeer should show connected
         2.  Get-BgpRouteInformation should show at least a route for the SLBM self VIP
     2.  If using physical Top-of-Rack (ToR) switch as BGP Peer, consult your documentation
@@ -705,13 +705,13 @@ Based on the following diagnostic information presented, fix the following:
 * Ensure Host ID in the registry matches Server Instance ID in Server Resource (reference Appendix for *HostNotConnected* error code)
 * Collect logs
 
-#### SLBM Tenant errors (Hosting service provider  and tenant actions)
+#### SLBM Tenant errors (Hosting service provider and tenant actions)
 
 1.  [Hoster] Check *Debug-NetworkControllerConfigurationState* to see if any LoadBalancer resources are in an error state. Try to mitigate by following the Action items Table in the Appendix.
     1.  Check that a VIP endpoint is present and advertising routes
     2.  Check how many DIP endpoints have been discovered for the VIP endpoint
 2.  [Tenant] Validate Load Balancer Resources are correctly specified
-    1.  Validate DIP endpoints which are registered in SLBM are hosting tenant virtual machines which correspond to the LoadBalancer Back-end Address pool IP configurations
+    1.  Validate DIP endpoints that are registered in SLBM are hosting tenant virtual machines, which correspond to the LoadBalancer Back-end Address pool IP configurations
 3.  [Hoster] If DIP endpoints are not discovered or connected:
     1.  Check *Debug-NetworkControllerConfigurationState*
         1.  Validate that NC and SLB Host Agent is successfully connected to the Network Controller Event Coordinator using ``netstat -anp tcp |findstr 6640)``
@@ -724,14 +724,14 @@ Based on the following diagnostic information presented, fix the following:
 Information from the Software Load Balancer Muxes can also be determined through Event Viewer.
 1. Click on "Show Analytic and Debug Logs" under the Event Viewer View menu
 2. Navigate to "Applications and Services Logs" > Microsoft > Windows > SlbMuxDriver > Trace in Event Viewer
-3. Right click on it and select "Enable Log"
+3. Right-click it and select "Enable Log"
 
 >[!NOTE]
 >It is recommended that you only have this logging enabled for a short time while you are trying to reproduce a problem
 
 ### VFP and vSwitch Tracing
 
-From any Hyper-V host which is hosting a guest VM attached to a tenant virtual network, you can collected a VFP trace to determine where problems might lie.
+From any Hyper-V host that is hosting a guest VM attached to a tenant virtual network, you can collect a VFP trace to determine where problems might lie.
 
 ```
 netsh trace start provider=Microsoft-Windows-Hyper-V-VfpExt overwrite=yes tracefile=vfp.etl report=disable provider=Microsoft-Windows-Hyper-V-VmSwitch

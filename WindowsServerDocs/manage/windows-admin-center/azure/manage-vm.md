@@ -44,7 +44,7 @@ If you manually installed Windows Admin Center in the VM to manage multiple syst
 
 To use Windows Admin Center in the Azure portal, we install Windows Admin Center in each Azure VM that you want to use it to manage. The Azure VM has the following requirements:
 
-- Windows Server 2019 or Windows Server 2016
+- Windows Server 2022, Windows Server 2019 or Windows Server 2016
 - At least 3 GiB of memory
 - Be in any region of an Azure public cloud (it's not supported in Azure China, Azure Government, or other non-public clouds)
 
@@ -351,8 +351,8 @@ Yes, you can use Windows Admin Center on-premises to manage servers and virtual 
 
 ### Does Windows Admin Center in the Azure portal work with Azure Bastion?
 
-No, unfortunately not. 
+No, unfortunately not.
 
 ### Is Windows Admin Center supported for VMs behind a load balancer?
 
-Yes. 
+Yes.
