@@ -36,7 +36,7 @@ This section describes the new configuration options for this client.
 
 ### Configure update notifications
 
-By default, the client notifies you whenever there's an update and automatically updates itself when the client is closed and has no active connections. Even with no active connections, the msrdc.exe process runs in the background to allow you to reconnect quickly when you reopen the client. You can stop msrdc.exe by right-clicking on the Windows Virtual Desktop icon in the system tray area and selecting **Disconnect all sessions** in the drop-down menu.
+By default, the client notifies you whenever there's an update and automatically updates itself when the client is closed and has no active connections. Even with no active connections, the msrdc.exe process runs in the background to allow you to reconnect quickly when you reopen the client. You can stop msrdc.exe by right-clicking on the Azure Virtual Desktop icon in the system tray area and selecting **Disconnect all sessions** in the drop-down menu.
 
 To turn notifications off, set the following registry information:
 

@@ -115,7 +115,7 @@ We've put together some bug fixes and feature updates for the 10.1.3 release. He
 
 In this update, we've addressed issues that were reported in the version 10.1.1 update.
 
-- Fixed a crash that occurred for some users when subscribing to a Windows Virtual Desktop feed using non-brokered authentication.
+- Fixed a crash that occurred for some users when subscribing to a Azure Virtual Desktop feed using non-brokered authentication.
 - Fixed the layout of workspace icons on the iPhone X, iPhone XS, and iPhone 11 Pro.
 
 ## Updates for version 10.1.1
@@ -154,7 +154,7 @@ Here's what's new for this version:
 - Fixed an issue where the SwiftPoint middle mouse button didn't work in iPadOS version 13.3.1 or earlier and iOS.
 - Fixed some bugs that prevented the client from recognizing the "rdp:" URI.
 - Addressed an issue where the in-session Immersive Switcher UI showed outdated app entries if a disconnect was server-initiated.
-- The client now supports the Azure Resource Manager-integrated version of Windows Virtual Desktop.
+- The client now supports the Azure Resource Manager-integrated version of Azure Virtual Desktop.
 
 ## Updates for version 10.0.7
 
@@ -173,7 +173,7 @@ It's time for a quick update with some bug fixes. Here’s what's new for this r
 - Sessions displayed in the switcher UI are now ordered by when they were launched.
 - Selecting the Back button in the Connection Center now takes you back to the last active session.
 - Swiftpoint mice are now released when switching away from the client to another app.
-- Improved interoperability with the Windows Virtual Desktop service.
+- Improved interoperability with the Azure Virtual Desktop service.
 - Fixed crashes that were showing up in error reporting.
 
 We appreciate all the comments sent to us through the App Store, in-app feedback, and email. In addition, special thanks to everyone who worked with us to diagnose issues.
@@ -261,7 +261,7 @@ We've been working hard to fix bugs and add useful features. Here's what's new i
 
 Here's what new in this release:
 
-- Support for the Windows Virtual Desktop service.
+- Support for the Azure Virtual Desktop service.
 - Updated Connection Center UI.
 - Updated in-session UI.
 
@@ -271,7 +271,7 @@ Here's what new in this release:
 
 It's been well over a year since we last updated the Remote Desktop Client for iOS. However, we're back with an exciting new update, and there will be many more updates to come on a regular basis from here on out. Here's what's new in version 10.0.0:
 
-- Support for the Windows Virtual Desktop service.
+- Support for the Azure Virtual Desktop service.
 - A new Connection Center UI.
 - A new in-session UI that can switch between connected PCs and apps.
 - New layout for the auxiliary on-screen keyboard.

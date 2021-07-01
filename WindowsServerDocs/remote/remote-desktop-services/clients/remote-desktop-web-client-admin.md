@@ -261,7 +261,7 @@ By default, the user may select to enable or disable telemetry. A boolean value 
 ### Remote resource launch method
 
 >[!NOTE]
->This setting currently only works with the RDS web client, not the Windows Virtual Desktop web client.
+>This setting currently only works with the RDS web client, not the Azure Virtual Desktop web client.
 
 By default, users may choose to launch remote resources (1) in the browser or (2) by downloading an .rdp file to handle with another client installed on their machine. As an administrator, you can choose to restrict the remote resource launch method for your deployment with the following PowerShell command:
 
