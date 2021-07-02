@@ -147,7 +147,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 ## Troubleshoot QoS
 
-- [QoS Frequently Asked Questions](../networking/technologies/qos/qos-policy-faq.md)
+- [QoS Frequently Asked Questions](../networking/technologies/qos/qos-policy-faq.yml)
 
 ## Troubleshoot S2D
 

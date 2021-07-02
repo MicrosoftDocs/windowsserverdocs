@@ -241,7 +241,7 @@
 #### [QoS policy scenarios](technologies/qos/qos-policy-scenarios.md)
 ### [Manage QoS policy](technologies/qos/qos-policy-manage.md)
 #### [QoS policy events and errors](technologies/qos/qos-policy-errors.md)
-### [QoS policy FAQ](technologies/qos/qos-policy-faq.md)
+### [QoS policy FAQ](technologies/qos/qos-policy-faq.yml)
 
 ## [Software Defined Networking (SDN)](sdn/index.yml)
 
