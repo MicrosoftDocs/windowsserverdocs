@@ -46,6 +46,8 @@ Note that not all supported distributions are listed here. See the current suppo
 - SUSE Linux Enterprise Server 12<p>`sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm`
 
 - SUSE Linux Enterprise Server 15<p>`sudo rpm -Uvh https://packages.microsoft.com/config/sles/15/packages-microsoft-prod.rpm`
+ 
+ **NOTE:** There is currently an issue affecting the package for SLES15, the simple workaround after installing it is to just move the .repo file under the correct location on SLES15 with `sudo mv /etc/yum.repos.d/*.repo /etc/zypp/repos.d`
 
 ### Ubuntu
 
