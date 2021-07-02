@@ -8,7 +8,7 @@ ms.prod: windows-server
 ms.date: 07/02/2021
 ---
 
-# Install, upgrade, or migrate to Windows Server
+# Install, upgrade, or migrate to Windows Server 2022
 
 >Applies to: Windows Server 2022
 
