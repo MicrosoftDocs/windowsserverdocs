@@ -25,12 +25,12 @@ sections:
           For more information, see [Plan the Use of vRSS](vrss-plan.md).
           
       - question: |
-          Does vRSS work with hyper\-threaded processor cores?
+          Does vRSS work with hyper-threaded processor cores?
         answer: |
           No. Both vRSS and VMQ ignore hyper\-threaded processor cores.
 
       - question: |
-          Does vRSS work for host virtual NICs \(vNICs\)?
+          Does vRSS work for host virtual NICs (vNICs)?
         answer: |
           Yes. Use the **-ManagementOS** parameter instead of the virtual machine \(VM\) name on the **Set-VMNetworkAdapter** Windows PowerShell command, and **Enable-NetAdapterRss** on the host vNIC.
           
