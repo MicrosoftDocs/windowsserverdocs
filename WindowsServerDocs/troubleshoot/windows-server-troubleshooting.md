@@ -45,7 +45,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 ## Troubleshoot AD forest recovery
 
-- [AD Forest Recovery - FAQ](../identity/ad-ds/manage/ad-forest-recovery-faq.md)
+- [AD Forest Recovery - FAQ](../identity/ad-ds/manage/ad-forest-recovery-faq.yml)
 
 ## Troubleshoot AD replication
 

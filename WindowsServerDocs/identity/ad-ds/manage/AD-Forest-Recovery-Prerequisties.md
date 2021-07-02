@@ -64,7 +64,7 @@ In addition, you should have backed up and restored AD DS and SYSVOL in a lab en
 > [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
 
 > [!div class="nextstepaction"]
-> [AD Forest Recovery - Frequently Asked Questions](AD-Forest-Recovery-FAQ.md)
+> [AD Forest Recovery - Frequently Asked Questions](ad-forest-recovery-faq.yml)
 
 > [!div class="nextstepaction"]
 > [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
