@@ -79,7 +79,7 @@ After installing Windows Server, she uses vRSS to get parallel network traffic p
 - [Plan the Use of vRSS](vrss-plan.md)
 - [Enable vRSS on a Virtual Network Adapter](vrss-enable.md)
 - [Manage vRSS](vrss-manage.md)
-- [vRSS Frequently Asked Questions](vrss-faq.md)
+- [vRSS Frequently Asked Questions](vrss-faq.yml)
 - [Windows PowerShell Commands for RSS and vRSS](vrss-wps.md)
 
 ---

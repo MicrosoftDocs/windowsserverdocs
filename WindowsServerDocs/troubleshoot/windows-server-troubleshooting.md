@@ -197,7 +197,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 ## Troubleshoot vRSS
 
-- [vRSS Frequently Asked Questions](../networking/technologies/vrss/vrss-faq.md)
+- [vRSS Frequently Asked Questions](../networking/technologies/vrss/vrss-faq.yml)
 
 ## Troubleshoot WebProxy
 

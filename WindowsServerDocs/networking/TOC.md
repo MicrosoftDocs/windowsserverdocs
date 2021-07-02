@@ -127,7 +127,7 @@
 #### [Plan the use of vRSS](technologies/vrss/vrss-plan.md)
 #### [Enable vRSS on a virtual network adapter](technologies/vrss/vrss-enable.md)
 #### [Manage vRSS](technologies/vrss/vrss-manage.md)
-#### [vRSS FAQ](technologies/vrss/vrss-faq.md)
+#### [vRSS FAQ](technologies/vrss/vrss-faq.yml)
 #### [Windows PowerShell commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
 #### [Resolve vRSS issues](technologies/vrss/vrss-resolve-issues.md)
 
