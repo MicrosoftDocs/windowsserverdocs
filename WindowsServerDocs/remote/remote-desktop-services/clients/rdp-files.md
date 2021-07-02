@@ -13,11 +13,11 @@ ms.localizationpriority: medium
 
 The following table includes the list of supported RDP file settings that you can use with the Remote Desktop clients. When configuring settings, check [Client comparisons](./remote-desktop-app-compare.md) to see which redirections each client supports.
 
-The table also highlights which settings are supported as custom properties with Windows Virtual Desktop. You can refer to [this documentation](/azure/virtual-desktop/customize-rdp-properties/) detailing how to use PowerShell to customize RDP properties for Windows Virtual Desktop host pools.
+The table also highlights which settings are supported as custom properties with Azure Virtual Desktop. You can refer to [this documentation](/azure/virtual-desktop/customize-rdp-properties/) detailing how to use PowerShell to customize RDP properties for Azure Virtual Desktop host pools.
 
 ## Connection information
 
-| RDP setting                        | Description            | Values                 | Default value          | Windows Virtual Desktop support |
+| RDP setting                        | Description            | Values                 | Default value          | Azure Virtual Desktop support |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
 | full address:s:value | PC Name:</br>This setting specifies the name or IP address of the remote computer that you want to connect to.</br></br>This is the only required setting in an RDP file. | A valid name, IPv4 address, or IPv6 address. | | No |
 | alternate full address:s:value | Specifies an alternate name or IP address of the remote computer. | A valid name, IPv4 address, or IPv6 address. | | No |
@@ -35,7 +35,7 @@ The table also highlights which settings are supported as custom properties with
 
 ## Session behavior
 
-| RDP setting                        | Description            | Values                 | Default value          | Windows Virtual Desktop support |
+| RDP setting                        | Description            | Values                 | Default value          | Azure Virtual Desktop support |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
 | autoreconnection enabled:i:value | Determines whether the client will automatically try to reconnect to the remote computer if the connection is dropped, such as when there's a network connectivity interruption. | - 0: Client does not automatically try to reconnect</br>- 1: Client automatically tries to reconnect | 1 | Yes |
 | bandwidthautodetect:i:value | Determines whether or not to use automatic network bandwidth detection. Requires bandwidthautodetect to be set to 1. | - 0: Disable automatic network type detection</br>- 1: Enable automatic network type detection | 1 | Yes |
@@ -45,7 +45,7 @@ The table also highlights which settings are supported as custom properties with
 
 ## Device redirection
 
-| RDP setting                        | Description            | Values                 | Default value          | Windows Virtual Desktop support |
+| RDP setting                        | Description            | Values                 | Default value          | Azure Virtual Desktop support |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
 | audiocapturemode:i:value | Microphone redirection:</br>Indicates whether audio input redirection is enabled. | - 0: Disable audio capture from the local device</br>- 1: Enable audio capture from the local device and redirection to an audio application in the remote session | 0 | Yes |
 | encode redirected video capture:i:value | Enables or disables encoding of redirected video. | - 0: Disable encoding of redirected video</br>- 1: Enable encoding of redirected video | 1 | Yes |
@@ -63,7 +63,7 @@ The table also highlights which settings are supported as custom properties with
 
 ## Display settings
 
-| RDP setting                        | Description            | Values                 | Default value          | Windows Virtual Desktop support |
+| RDP setting                        | Description            | Values                 | Default value          | Azure Virtual Desktop support |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
 | use multimon:i:value | Determines whether the remote session will use one or multiple displays from the local computer. | - 0: Don't enable multiple display support</br>- 1: Enable multiple display support | 1 | Yes |
 | selectedmonitors:s:value | Specifies which local displays to use from the remote session. The selected displays must be contiguous. Requires use multimon to be set to 1.</br></br>Only available on the Windows Inbox (MSTSC) and Windows Desktop (MSRDC) clients. | Comma separated list of machine-specific display IDs. IDs can be retrieved by calling mstsc.exe /l. The first ID listed will be set as the primary display in the session. | All displays | Yes |
@@ -79,7 +79,7 @@ The table also highlights which settings are supported as custom properties with
 
 ## RemoteApp
 
-| RDP setting                        | Description            | Values                 | Default value          | Windows Virtual Desktop support |
+| RDP setting                        | Description            | Values                 | Default value          | Azure Virtual Desktop support |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
 | remoteapplicationcmdline:s:value | Optional command-line parameters for the RemoteApp. | Valid command-line parameters. | | No |
 | remoteapplicationexpandcmdline:i:value | Determines whether environment variables contained in the RemoteApp command-line parameter should be expanded locally or remotely. | - 0: Environment variables should be expanded to the values of the local computer</br>- 1: Environment variables should be expanded to the values of the remote computer | 1 | No |
