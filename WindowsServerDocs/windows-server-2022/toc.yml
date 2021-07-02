@@ -7,7 +7,11 @@ items:
     href: ./get-started/whats-new.md
   - name: System requirements
     href: get-started/system-requirements.md
+  - name: Install | Upgrade | Migrate
+    href: get-started/install-upgrade-migrate.md
   - name: Automatic Virtual Machine Activation
     href: get-started/vm-activation.md
+  - name: Editions comparison
+    href: get-started/editions-comparison.md
   - name: Features removed or no longer developed
     href: get-started/removed-features.md
