@@ -1,6 +1,6 @@
 ---
-title: Comparison of Standard and Datacenter editions of Windows Server 2022
-description: Comparison of Standard and Datacenter editions of Windows Server 2022.
+title: Comparison of Standard, Datacenter, and Datacenter Azure Edition editions of Windows Server 2022
+description: Comparison of Standard, Datacenter, and Datacenter Azure Edition editions of Windows Server 2022.
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
@@ -9,7 +9,7 @@ ms.date: 6/17/2021
 ms.prod: windows-server
 ---
 
-# Comparison of Standard and Datacenter editions of Windows Server 2022
+# Comparison of Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022
 
 >Applies to: Windows Server 2022
 
