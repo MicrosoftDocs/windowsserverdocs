@@ -210,3 +210,7 @@ You now have a large test file with very compressible contents.
 Testing SMB compression between a pair of VMs running on the same Hyper-V host may not show time savings because the virtual switch is 10Gbps and has no congestion, plus modern hypervisors often use flash storage. Test your compression over the real networks you plan to use. You can also reduce the network bandwidth on Hyper-V VMs for testing purposes using [Set-VMNetworkAdapter](/powershell/module/hyper-v/set-vmnetworkadapter) with `-MaximumBandwidth` set to `1Gb`, for example.
 
 To see how well compression is working, you can robocopy the same file to a server twice, once with the `/compress` flag and again without compression, deleting the server file between each test. If the file is compressing, you should see less network utilization in Task Manager and a lower copy time. You can also observe the SMB server's Performance Monitor object "SMB Server Shares" for its "Compressed requests/sec" and "Compressed receives/sec" counters.
+
+## RDMA and SMB Direct
+
+SMB compression doesn't support SMB Direct and RDMA. You shouldn't configure SMB compression when using SMB Direct and RDMA or you'll see a signficant performance impact. Support for SMB compression with SMB Direct and RDMA will come after the Windows Server 2022 and Windows 11 public previews.
