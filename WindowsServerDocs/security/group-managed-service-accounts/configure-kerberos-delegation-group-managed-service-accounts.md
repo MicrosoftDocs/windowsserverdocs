@@ -38,7 +38,7 @@ The more secure and convenient way is by using PowerShell commands to update tho
 - **Unconstrained Delegation/Trust This Computer for Delegation to any service**
 
   ```powershell
-  -ADAccountControl -Identity TestgMSA$ -TrustedForDelegation $true -TrustedToAuthForDelegation $false
+  Set-ADAccountControl -Identity TestgMSA$ -TrustedForDelegation $true -TrustedToAuthForDelegation $false
   Set-ADServiceAccount -Identity TestgMSA$ -Clear 'msDS-AllowedToDelegateTo'
   ```
 
