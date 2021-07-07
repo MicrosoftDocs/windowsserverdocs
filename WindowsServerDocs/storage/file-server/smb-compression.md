@@ -213,4 +213,4 @@ To see how well compression is working, you can robocopy the same file to a serv
 
 ## RDMA and SMB Direct
 
-SMB compression doesn't support SMB Direct and RDMA. You shouldn't configure SMB compression when using SMB Direct and RDMA or you'll see a signficant performance impact. Support for SMB compression with SMB Direct and RDMA will come after the Windows Server 2022 and Windows 11 public previews.
+SMB compression doesn't support SMB Direct and RDMA. This means that even if the client requests compression and the server supports it, compression will not be attempted with SMB Direct and RDMA. Support for SMB compression with SMB Direct and RDMA will come after the Windows Server 2022 and Windows 11 public previews.
