@@ -195,7 +195,7 @@ Cluster OS Rolling upgrade includes the following steps:
         **Figure 18: Verifying that all cluster groups (cluster roles) are running using the [`Get-ClusterGroup`](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet**
 
     2.  Check that all cluster nodes are online and running using the [`Get-ClusterNode`](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet.
-    3.  Run the [`Update-ClusterFunctionalLevel`](https://technet.microsoft.com/library/mt589702.aspx) cmdlet - no errors should be returned (see Figure 19).
+    3.  Run the [`Update-ClusterFunctionalLevel`](https://docs.microsoft.com/en-us/windows-server/failover-clustering/Cluster-Operating-System-Rolling-Upgrade) cmdlet - no errors should be returned (see Figure 19).
 
         ![Screencap showing the output of the Update-ClusterFunctionalLevel cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_SelectFunctionalLevel.png)
         **Figure 19: Updating the functional level of a cluster using PowerShell**
