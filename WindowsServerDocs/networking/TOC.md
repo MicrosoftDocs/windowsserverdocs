@@ -127,7 +127,7 @@
 #### [Plan the use of vRSS](technologies/vrss/vrss-plan.md)
 #### [Enable vRSS on a virtual network adapter](technologies/vrss/vrss-enable.md)
 #### [Manage vRSS](technologies/vrss/vrss-manage.md)
-#### [vRSS FAQ](technologies/vrss/vrss-faq.md)
+#### [vRSS FAQ](technologies/vrss/vrss-faq.yml)
 #### [Windows PowerShell commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
 #### [Resolve vRSS issues](technologies/vrss/vrss-resolve-issues.md)
 
@@ -241,7 +241,7 @@
 #### [QoS policy scenarios](technologies/qos/qos-policy-scenarios.md)
 ### [Manage QoS policy](technologies/qos/qos-policy-manage.md)
 #### [QoS policy events and errors](technologies/qos/qos-policy-errors.md)
-### [QoS policy FAQ](technologies/qos/qos-policy-faq.md)
+### [QoS policy FAQ](technologies/qos/qos-policy-faq.yml)
 
 ## [Software Defined Networking (SDN)](sdn/index.yml)
 
