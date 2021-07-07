@@ -13,6 +13,15 @@ ms.date: 09/09/2020
 
 >Applies To: Windows Server 2019, Windows Server 2016
 
+> [!NOTE]
+> It is highly recommended to implement ADBA (Active Directory-Based Activation) instead of KMS, as well as migrating existing KMS for modern products to ADBA.<br/>
+> ADBA supports Windows Server 2012 and newer, Windows 8.1 and newer, as well as Office 2013 and newer.<br/>
+> One exception is Microsoft 365 Office Apps for Business, which can only be activated via the Internet.
+>
+> References:<br/>
+> [How to implement ADBA](https://docs.microsoft.com/en-us/windows/deployment/volume-activation/activate-using-active-directory-based-activation-client)<br/>
+> [ADBA Overview & Scenarios](https://docs.microsoft.com/en-us/windows/deployment/volume-activation/active-directory-based-activation-overview)
+
 The following information outlines initial planning considerations that you need to review for Key Management Services (KMS) activation involving Windows Server 2019. For information about KMS activation involving operating systems older than those listed here, see [Step 1: Review and Select Activation Methods](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134256(v=ws.11)).
 
 KMS uses a client-server model to active clients. KMS clients connect to a KMS server, called the KMS host, for activation. The KMS host must reside on your local network.
@@ -65,6 +74,4 @@ If your organization needs more than six KMS hosts, you should request additiona
 Computers that are running volume licensing editions of Windows 10, Windows Server 2019, Windows Server 2016, Windows 8.1, Windows Server 2012 R2, Windows Server 2012, Windows 7, Windows Server 2008 R2 are, by default, KMS clients with no additional configuration needed.
 
 If you are converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, install the applicable KMS Client Setup Key. For more information, see [KMS Client Setup Keys](../get-started/KMSclientkeys.md).
-
-
 
