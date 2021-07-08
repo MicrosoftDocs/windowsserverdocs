@@ -111,7 +111,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 1. After the progress bar completes, restart the operating system.
 
-## Release notes and suggestions for the Server Core App Compatibility FOD and Internet Explorer 11 optional package
+## Release notes and suggestions
 
 - After installation of the App Compatibility FOD and reboot of the server, the command console window frame color will change to a different shade of blue.
 
@@ -121,7 +121,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 - As a general point of guidance, when installing apps on Server Core (with or without these optional packages) it is sometimes necessary to use silent install options and instructions.
 
-## Adding capabilities and optional packages to an offline WIM Server Core image
+## Adding to an offline WIM Server Core image
 
 1. Download the Windows Server and Server FOD ISO image files to a local folder on a Windows computer.
 
