@@ -29,11 +29,31 @@ hostname
 | ------- | -------- |
 | /? | Displays help at the command prompt. |
 
+Any parameter different than `/?` will produce an error message and will set the errorlevel to 1.
+
+### Notes
+
+- Environment variable `%COMPUTERNAME%` usually will print the same string as hostname but in uppercase
+- If environment variable `_CLUSTER_NETWORK_NAME_` is defend hostname will print its value.
+
 ### Examples
 
-To display the name of the computer, type:
+- To display the name of the computer, type:
 
 ```
+hostname
+```
+
+- To display the name of the computer in upper case:
+
+```
+echo %COMPUTERNAME%
+```
+
+- To alter the hostname output:
+
+```
+set "_CLUSTER_NETWORK_NAME_=Altered Computer Name"
 hostname
 ```
 
