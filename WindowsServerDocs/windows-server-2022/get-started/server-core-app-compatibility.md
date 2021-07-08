@@ -67,20 +67,20 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 1. Sign in with an administrator account on the Server Core computer that is connected to your local network and that you want to add the FOD to.
 
-1. Use **net use**, or some other method, to connect to the location of the FOD ISO.
+1. Use `net use`, or some other method, to connect to the location of the FOD ISO.
 
 1. Copy the FOD ISO to a local folder of your choosing.
 
-1. Mount it by using the following command in an elevated PowerShell session:
+1. Mount it by using the following command in an elevated PowerShell session, where E:\ is a drive letter not currently in use:
 
     ```PowerShell
-    Mount-DiskImage -ImagePath drive_letter:\folder_where_ISO_is_saved\ISO_filename.iso
+    Mount-DiskImage -ImagePath E:\folder_where_ISO_is_saved\ISO_filename.iso
     ```
 
 1. Run the following command:
 
     ```PowerShell
-    Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source <Mounted_Server_FOD_Drive_Letter>\LanguagesAndOptionalFeatures\ -LimitAccess
+    Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source E:\LanguagesAndOptionalFeatures\ -LimitAccess
      ```
 
 1. After the progress bar completes, restart the operating system.
@@ -95,16 +95,16 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 1. Sign in as Administrator on the Server Core computer that has the App Compatibility FOD already added and the Server FOD optional package ISO copied locally.
 
-1. Mount the FOD ISO by using the following command in an elevated PowerShell session:
+1. Mount the FOD ISO by using the following command in an elevated PowerShell session, where E:\ is a drive letter not currently in use:
 
     ```PowerShell
-    Mount-DiskImage -ImagePath drive_letter:\folder_where_ISO_is_saved\ISO_filename.iso
+    Mount-DiskImage -ImagePath E:\folder_where_ISO_is_saved\ISO_filename.iso
     ```
 
 1. Run the following command, using the `$package_path` variable as the path to the Internet Explorer cab file:
 
     ```PowerShell
-    $package_path = "D:\LanguagesAndOptionalFeatures\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
+    $package_path = "E:\LanguagesAndOptionalFeatures\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
 
     Add-WindowsPackage -Online -PackagePath $package_path
     ```
@@ -128,16 +128,16 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
    - If you have a volume license, you can download the Windows Server and Server FOD ISO image files from the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
    - The Server FOD ISO image file is also available for Long-Term Servicing Channel releases on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
-1. Open an elevated PowerShell session and then use the following commands to mount the image files as drives:
+1. Mount the FOD ISO and Windows Server ISO by using the following commands in an elevated PowerShell session, where E:\ and F:\ are drive letters not currently in use:
 
    ```PowerShell
-   Mount-DiskImage -ImagePath Path_To_ServerFOD_ISO
-   Mount-DiskImage -ImagePath Path_To_Windows_Server_ISO
+   Mount-DiskImage -ImagePath E:\folder_where_ISO_is_saved\FOD_ISO_filename.iso
+   Mount-DiskImage -ImagePath F:\folder_where_ISO_is_saved\Windows_Server_ISO_filename.iso
    ```
 
 1. Copy the contents of the Windows Server ISO file to a local folder (for example, *C:\SetupFiles\WindowsServer*).
 
-1. Get the image name you want to modify within the install.wim file by using the following command. Use the `$install_wim_path` variable to enter the path to the install.wim file, located inside the \sources folder of the ISO file.
+1. Get the image name you want to modify within the install.wim file by using the following command. Use the `$install_wim_path` variable to enter the path to the install.wim file, located inside the \sources folder of the Windows Server ISO file.
 
    ```PowerShell
    $install_wim_path = C:\SetupFiles\WindowsServer\sources\install.wim
@@ -165,8 +165,8 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
    ```PowerShell
    $capability_name = "ServerCore.AppCompatibility~~~~0.0.1.0"
-   $package_path = "D:\LanguagesAndOptionalFeatures\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
-   $fod_drive = "D:\"
+   $package_path = "E:\LanguagesAndOptionalFeatures\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
+   $fod_drive = "E:\"
 
    Add-WindowsCapability -Path $mount_folder -Name $capability_name -Source $fod_drive -LimitAccess
    Add-WindowsPackage -Path $mount_folder -PackagePath $package_path
