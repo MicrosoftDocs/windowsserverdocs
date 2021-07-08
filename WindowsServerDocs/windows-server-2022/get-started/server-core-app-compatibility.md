@@ -5,7 +5,7 @@ ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
 manager: femila
-ms.date: 6/17/2021
+ms.date: 7/08/2021
 ms.prod: windows-server
 ---
 
@@ -52,7 +52,7 @@ Operating system components that are available as part of the Server Core App Co
 
 ## Installing the App Compatibility FOD
 
-The App Compatibility FOD can only be installed on Server Core. Don't attempt to add the Server Core App Compatibility FOD to a Windows Server installation of Windows Server with Desktop Experience. The same FOD optional packages ISO can be used for either Windows Server 2019 Server Core installations, or Windows Server Semi-Annual Channel installations.
+The App Compatibility FOD can only be installed on Server Core. Don't attempt to add the Server Core App Compatibility FOD to a Windows Server installation of Windows Server with Desktop Experience.
 
 1. If the server can connect to Windows Update, all you have to do is run the following command from an elevated PowerShell session and then restart Windows Server after the command finishes running:
 
@@ -62,7 +62,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 1. If the server can't connect to Windows Update, instead download the Server FOD optional packages ISO, and copy the ISO to a shared folder on your local network:
 
-   - If you have a volume license you can download the Server FOD ISO image file from the same portal where the operating system ISO image file is obtained: [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
+   - If you have a volume license, you can download the Server FOD ISO image file from the same portal where the operating system ISO image file is obtained: [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
    - The Server FOD ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
 1. Sign in with an administrator account on the Server Core computer that is connected to your local network and that you want to add the FOD to.
@@ -115,9 +115,9 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 - After installation of the App Compatibility FOD and reboot of the server, the command console window frame color will change to a different shade of blue.
 
-- If you choose to also install the Internet Explorer 11 optional package, note that double clicking to open locally saved .htm files is not supported. However, you can **right-click** and choose **Open with IE**, or you can open it directly from Internet Explorer **File** -> **Open**.
+- If you choose to also install the Internet Explorer 11 optional package, note that double-clicking to open locally saved .htm files is not supported. However, you can **right-click** and choose **Open with IE**, or you can open it directly from Internet Explorer **File** -> **Open**.
 
-- To further enhance the app compatibility of Server Core with the App Compatibility FOD, the IIS Management Console has been added to Server Core as an optional component.  However, it is necessary to first add the App Compatibility FOD to use the IIS Management Console. IIS Management Console relies on the Microsoft Management Console (mmc.exe), which is only available on Server Core with the addition of the App Compatibility FOD.  Use Powershell [**Install-WindowsFeature**](/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) to add IIS Management Console.
+- To further enhance the app compatibility of Server Core with the App Compatibility FOD, the IIS Management Console has been added to Server Core as an optional component.  However, it is necessary to first add the App Compatibility FOD to use the IIS Management Console. IIS Management Console relies on the Microsoft Management Console (mmc.exe), which is only available on Server Core with the addition of the App Compatibility FOD.  Use PowerShell [**Install-WindowsFeature**](/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) to add IIS Management Console.
 
 - As a general point of guidance, when installing apps on Server Core (with or without these optional packages) it is sometimes necessary to use silent install options and instructions.
 
@@ -125,7 +125,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 1. Download the Windows Server and Server FOD ISO image files to a local folder on a Windows computer.
 
-   - If you have a volume license you can download the Windows Server and Server FOD ISO image files from the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
+   - If you have a volume license, you can download the Windows Server and Server FOD ISO image files from the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
    - The Server FOD ISO image file is also available for Long-Term Servicing Channel releases on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
 1. Open an elevated PowerShell session and then use the following commands to mount the image files as drives:
