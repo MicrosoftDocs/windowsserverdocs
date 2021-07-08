@@ -23,9 +23,9 @@ Starts a script to run in a command-line environment.
 cscript <scriptname.extension> [/b] [/d] [/e:<engine>] [{/h:cscript | /h:wscript}] [/i] [/job:<identifier>] [{/logo | /nologo}] [/s] [/t:<seconds>] [x] [/u] [/?] [<scriptarguments>]
 ```
 
-#### Parameters
+#### Options
 
-| Parameter | Description |
+| Option | Description |
 | --------- | ----------- |
 | scriptname.extension | Specifies the path and file name of the script file with optional file name extension. |
 | /b | Specifies batch mode, which does not display alerts, scripting errors, or input prompts. |
@@ -54,6 +54,53 @@ cscript <scriptname.extension> [/b] [/d] [/e:<engine>] [{/h:cscript | /h:wscript
 
 - if you double-click a script file with an extension that has no association, the **Open With** dialog box appears. Select wscript or cscript, and then select **Always use this program to open this file type**. This registers wscript.exe or cscript as the default script host for files of this file type.
 
+- All the options passed to cscript can start with double slash and is a good practice to use them with double slashes to distinguish them from the command line arguments.If an argument starting with double slash is passed it will be taken as an option.To avoid errors in this case use a trailing double slash after you've passed all the options (check the examples).
+
+- The script engines comming by default with Windows Script Host are vbscript and jscript.
+  
+## Examples  
+
+- Embedding cscript code into batch file
+
+```
+@echo off
+rem -- Save this this file with .bat extension -- 
+echo This is printed by cmd.exe
+cscript //nologo "%~f0?.wsf"
+pause
+exit /b
+
+<job>
+	
+	<script language="VBScript">
+	  WScript.Echo "This is printed by VBScript"
+	</script>
+	
+	<script language="JScript">
+	  WScript.Echo("This is printed by JScript");
+	</script>
+	
+</job>
+```
+- Using arguments starting with double slash
+
+``` 
+@if (@X)==(@Y) @end /* JScript comment
+    @echo off
+	
+	rem ---------------------------------------------
+	rem -- Save this in a file with .bat extension --
+	rem ---------------------------------------------
+	
+    cscript //E:JScript //nologo "%~f0" // //testArgument
+	rem -- this will print "//testArgument"
+    exit /b %errorlevel%
+@if (@X)==(@Y) @end JScript comment */
+
+WScript.Echo(WScript.Arguments.Item(0));
+```  
+
 ## Additional References
 
+- [wscript](wscript.md) - WScript can be used exactly like the cscript.exe ,but all the output will be shown in UI pop-ups. WScript is the default executable for Windows Script Host files.
 - [Command-Line Syntax Key](command-line-syntax-key.md)
