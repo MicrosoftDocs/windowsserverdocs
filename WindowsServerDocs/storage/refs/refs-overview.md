@@ -11,7 +11,7 @@ ms.date: 06/29/2019
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (Semi-Annual Channel)
 
-The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availability, scale efficiently to large data sets across diverse workloads, and provide data integrity by means of resiliency to corruption. It seeks to address an expanding set of storage scenarios and establish a foundation for future innovations.
+The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availability, scale efficiently to large data sets across diverse workloads, and provide data integrity with resiliency to corruption. It seeks to address an expanding set of storage scenarios and establish a foundation for future innovations.
 
 ## Key benefits
 
@@ -20,7 +20,7 @@ The Resilient File System (ReFS) is Microsoft's newest file system, designed to 
 ReFS introduces new features that can precisely detect corruptions and also fix those corruptions while remaining online, helping provide increased integrity and availability for your data:
 
 - **Integrity-streams** - ReFS uses checksums for metadata and optionally for file data, giving ReFS the ability to reliably detect corruptions.
-- **Storage Spaces integration** - when used in conjunction with a mirror or parity space, ReFS can automatically repair detected corruptions using the alternate copy of the data provided by Storage Spaces. Repair processes are both localized to the area of corruption and performed online, requiring no volume downtime.
+- **Storage Spaces integration** - when used with a mirror or parity space, ReFS can automatically repair detected corruptions using the alternate copy of the data provided by Storage Spaces. Repair processes are both localized to the area of corruption and performed online, requiring no volume downtime.
 - **Salvaging data** - if a volume becomes corrupted and an alternate copy of the corrupted data doesn't exist, ReFS removes the corrupt data from the namespace. ReFS keeps the volume online while it handles most non-correctable corruptions, but there are rare cases that require ReFS to take the volume offline.
 - **Proactive error correction** - in addition to validating data before reads and writes, ReFS introduces a data integrity scanner, known as a *scrubber*. This scrubber periodically scans the volume, identifying latent corruptions and proactively triggering a repair of corrupt data.
 
@@ -38,9 +38,9 @@ In addition to providing resiliency improvements, ReFS introduces new features f
   | Mirrored SSD | Parity SSD |
   | Mirrored SSD | Parity HDD |
 
-  Once these tiers are configured, ReFS use them to deliver fast storage for hot data and capacity-efficient storage for cold data:
+  Once these tiers are configured, ReFS uses them to deliver fast storage for hot data and capacity-efficient storage for cold data:
   
-  - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real-time.
+  - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real time.
   - If using a hybrid deployment (mixing flash and HDD drives), [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) helps accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads also occur in the performance tier.
 
   > [!NOTE]
@@ -79,7 +79,7 @@ Deploying ReFS on [Storage Spaces Direct](../storage-spaces/storage-spaces-direc
 
 Deploying ReFS on Storage Spaces with shared SAS enclosures is suitable for hosting archival data and storing user documents:
 
-- Integrity-streams, online repair, and alternate data copies enable ReFS and [Storage Spaces](../storage-spaces/overview.md) to jointly to detect and correct storage controller and storage media corruptions within both metadata and data.
+- Integrity-streams, online repair, and alternate data copies enable ReFS and [Storage Spaces](../storage-spaces/overview.md) to jointly detect and correct storage controller and storage media corruptions within both metadata and data.
 - Storage Spaces deployments can also utilize block-cloning and the scalability offered in ReFS.
 
 > [!NOTE]
@@ -89,16 +89,16 @@ Deploying ReFS on Storage Spaces with shared SAS enclosures is suitable for host
 
 Deploying ReFS on basic disks is best suited for applications that implement their own software resiliency and availability solutions:
 
-- Applications that introduce their own resiliency and availability software solutions can leverage integrity-streams, block-cloning, and the ability to scale and support large data sets.
+- Applications that introduce their own resiliency and availability software solutions can use integrity-streams, block-cloning, and the ability to scale and support large data sets.
 
 > [!NOTE]
 > Basic disks include local non-removable direct-attached via BusTypes SATA, SAS, NVME, or RAID. Basic disks do not include Storage Spaces.
 
 ### Backup target
 
-Deploying ReFS as a backup target is best suited for applications and hardware that implement their own resiliency and availability solutions:
+Deploying ReFS as a backup target is best suited for applications and hardware that implements its own resiliency and availability solutions:
 
-- Applications that introduce their own resiliency and availability software solutions can leverage integrity-streams, block-cloning, and the ability to scale and support large data sets.
+- Applications that introduce their own resiliency and availability software solutions can use integrity-streams, block-cloning, and the ability to scale and support large data sets.
 
 > [!NOTE]
 > Backup targets include the above supported configurations. Please contact application and storage array vendors for support details on Fiber Channel and iSCSI SANs. For SANs, if features such as thin provisioning, TRIM/UNMAP, or Offloaded Data Transfer (ODX) are required, NTFS must be used.
@@ -142,7 +142,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 
 1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
 2. Available on Windows Server 2012 R2 and later.
-3. CSV will not use Direct I/O in conjunction with Storage Spaces, Storage Spaces Direct (S2D) or SAN.
+3. CSV will not use Direct I/O with Storage Spaces, Storage Spaces Direct (S2D) or SAN.
 4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. Hardlink support is added for **newly formatted volumes** only. Hardlink can't be used on volumes that have been upgraded from previous versions.
 5. Storage Spaces only.
 
