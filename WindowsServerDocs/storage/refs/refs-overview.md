@@ -143,7 +143,8 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
 2. Available on Windows Server 2012 R2 and later.
 3. CSV will not use Direct I/O with Storage Spaces, Storage Spaces Direct (S2D) or SAN.
-4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. Hardlink support is added for **newly formatted volumes** only. Hardlink can't be used on volumes that have been upgraded from previous versions.
+4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. Hard-link support is added for **newly formatted volumes** only. Hard link can't be used on volumes that have been upgraded from previous versions.
+
 5. Storage Spaces only.
 
 #### The following features are only available with ReFS:
