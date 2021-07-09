@@ -33,7 +33,7 @@ In addition to providing resiliency improvements, ReFS introduces new features f
   To deliver both high performance and capacity efficient storage, ReFS divides a volume into two logical storage groups, known as tiers. These tiers can have their own drive and resiliency types, allowing each tier to optimize for either performance or capacity. Some example configurations include:
 
   | Performance tier | Capacity tier |
-  | ---------------- | ----------------- |
+  |--|--|
   | Mirrored SSD | Mirrored HDD |
   | Mirrored SSD | Parity SSD |
   | Mirrored SSD | Parity HDD |
@@ -44,7 +44,7 @@ In addition to providing resiliency improvements, ReFS introduces new features f
   - If using a hybrid deployment (mixing flash and HDD drives), [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) helps accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads also occur in the performance tier.
 
   > [!NOTE]
-  > For Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md). We recommend using mirror-accelerated parity with archival and backup workloads only. For virtualized and other high performance random workloads, we recommend using three-way mirrors for better performance.
+  > For Windows Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md). We recommend using mirror-accelerated parity with archival and backup workloads only. For virtualized and other high performance random workloads, we recommend using three-way mirrors for better performance.
 
 - **Accelerated VM operations** - ReFS introduces new functionality specifically targeted to improve the performance of virtualized workloads:
   - [Block cloning](./block-cloning.md) - block cloning accelerates copy operations, enabling quick, low-impact VM checkpoint merge operations.
@@ -58,10 +58,13 @@ ReFS is designed to support extremely large data sets - millions of terabytes - 
 
 ## Supported deployments
 
-Microsoft has developed NTFS specifically for general-purpose use with a wide range of configurations and workloads, however for customers specially requiring the availability, resiliency, and/or scale that ReFS provides, Microsoft supports ReFS for use under the following configurations and scenarios.
+Microsoft has developed NTFS specifically for general-purpose use with a wide range of configurations and workloads. For customers specially requiring the availability, resiliency, and/or scale that ReFS provides, Microsoft supports ReFS for use with the following configurations and scenarios:
 
 > [!NOTE]
 > All ReFS supported configurations must use [Windows Server Catalog](https://www.WindowsServerCatalog.com) certified hardware and meet application requirements.
+
+> [!IMPORTANT]
+> If you plan to use ReFS for Cluster Shared Volumes (CSVs), please see [Use Cluster Shared Volumes in a failover cluster](../../failover-clustering/failover-cluster-csvs.md) for important information.
 
 ### Storage Spaces Direct
 
@@ -87,10 +90,6 @@ Deploying ReFS on Storage Spaces with shared SAS enclosures is suitable for host
 Deploying ReFS on basic disks is best suited for applications that implement their own software resiliency and availability solutions:
 
 - Applications that introduce their own resiliency and availability software solutions can leverage integrity-streams, block-cloning, and the ability to scale and support large data sets.
-
-> [!IMPORTANT]
-> If you plan to use ReFS for CSV (Cluster Shared Volumes), please consider the limitations to pre-format your later CSV volumes with ReFS.
-> For CSV: NTFS should be used for traditional SANs. ReFS should be used for Storage Spaces Direct.
 
 > [!NOTE]
 > Basic disks include local non-removable direct-attached via BusTypes SATA, SAS, NVME, or RAID. Basic disks do not include Storage Spaces.
@@ -123,8 +122,9 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 |--|--|--|
 | BitLocker encryption | Yes | Yes |
 | Data Deduplication | Yes<sup>1</sup> | Yes |
-| Cluster Shared Volume (CSV) support | Yes<sup>2</sup> <sup>4</sup> | Yes |
+| Cluster Shared Volume (CSV) support | Yes<sup>2</sup> <sup>3</sup> | Yes |
 | Soft links | Yes | Yes |
+| Hard links | Yes<sup>4</sup> | Yes |
 | Failover cluster support | Yes | Yes |
 | Access-control lists | Yes | Yes |
 | USN journal | Yes | Yes |
@@ -137,13 +137,14 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Oplocks | Yes | Yes |
 | Sparse files | Yes | Yes |
 | Named streams | Yes | Yes |
-| Thin Provisioning | Yes<sup>3</sup> | Yes |
-| Trim/Unmap | Yes<sup>3</sup> | Yes |
+| Thin Provisioning | Yes<sup>5</sup> | Yes |
+| Trim/Unmap | Yes<sup>5</sup> | Yes |
 
 1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
 2. Available on Windows Server 2012 R2 and later.
-3. Storage Spaces only
-4. CSV will not use Direct I/O in junction with Storage Space, Storage Spaces Direct (S2D) or SAN
+3. CSV will not use Direct I/O in conjunction with Storage Spaces, Storage Spaces Direct (S2D) or SAN.
+4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. Hardlink support is added for **newly formatted volumes** only. Hardlink can't be used on volumes that have been upgraded from previous versions.
+5. Storage Spaces only.
 
 #### The following features are only available with ReFS:
 
@@ -163,7 +164,6 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | File system compression | No | Yes |
 | File system encryption | No | Yes |
 | Transactions | No | Yes |
-| Hard links | Yes<sup>1</sup> | Yes |
 | Object IDs | No | Yes |
 | Offloaded Data Transfer (ODX) | No | Yes |
 | Short names | No | Yes |
@@ -172,8 +172,6 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Bootable | No | Yes |
 | Page file support | No | Yes |
 | Supported on removable media | No | Yes |
-
-1. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536. Hardlink support is added for **newly formatted volumes. Hardlink can't be used on volumes that have been upgraded from previous versions**.
 
 ## Additional References
 
