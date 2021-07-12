@@ -55,7 +55,7 @@ Secure connections are at the heart of today’s interconnected systems. Transpo
 
 #### Secure DNS: Encrypted DNS name resolution requests with DNS-over-HTTPS
 
-Both DNS Server and DNS Client in Windows Server 2022 now support DNS-over-HTTPS (DoH) which encrypts DNS queries using the HTTPS protocol. This helps keep your traffic as private as possible by preventing eavesdropping and your DNS data being manipulated.
+DNS Client in Windows Server 2022 now supports DNS-over-HTTPS (DoH) which encrypts DNS queries using the HTTPS protocol. This helps keep your traffic as private as possible by preventing eavesdropping and your DNS data being manipulated.
 
 #### Server Message Block (SMB): SMB AES-256 encryption for the most security conscious
 
