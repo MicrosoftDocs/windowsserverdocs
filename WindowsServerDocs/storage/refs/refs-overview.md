@@ -123,7 +123,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | BitLocker encryption | Yes | Yes |
 | Data Deduplication | Yes<sup>1</sup> | Yes |
 | Cluster Shared Volume (CSV) support | Yes<sup>2</sup> <sup>3</sup> | Yes |
-| Soft links | Yes | Yes |
+| Junctions/Soft links | Yes | Yes |
 | Hard links | Yes<sup>4</sup> | Yes |
 | Failover cluster support | Yes | Yes |
 | Access-control lists | Yes | Yes |
@@ -143,7 +143,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
 2. Available on Windows Server 2012 R2 and later.
 3. CSV will not use Direct I/O with Storage Spaces, Storage Spaces Direct (S2D) or SAN.
-4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. Hard-link support is added for **newly formatted volumes** only. Hard link can't be used on volumes that have been upgraded from previous versions.
+4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. [Hard links](/windows/win32/fileio/hard-links-and-junctions) support is added for **newly formatted volumes** only. Hard links can't be used on volumes that have been upgraded from previous versions.
 
 5. Storage Spaces only.
 
