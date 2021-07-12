@@ -43,14 +43,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "Planning for Windows 11: best practices for organizations"
+          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/planning-for-windows-11-best-practices-for-organizations/ba-p/2493081
+          itemType: whats-new
         - text: "Clarified Guidance for CVE-2021-34527 Windows Print Spooler Vulnerability"
           url: https://msrc-blog.microsoft.com/2021/07/08/clarified-guidance-for-cve-2021-34527-windows-print-spooler-vulnerability/
           itemType: whats-new
         - text: "Skype for Business Online retires July 31, 2021"
           url: https://techcommunity.microsoft.com/t5/microsoft-teams-blog/skype-for-business-online-retires-july-31-2021-here-s-what-to/ba-p/2303300
-          itemType: whats-new
-        - text: "Take action: Out-of-band update to address a remote code execution exploit in the Windows Print Spooler service"
-          url: https://support.microsoft.com/help/5004945
           itemType: whats-new
 
       footerLink:
