@@ -6,7 +6,7 @@ ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: Heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/20/2020
+ms.date: 07/15/2021
 ms.localizationpriority: medium
 ---
 # Get started with the iOS client
@@ -68,6 +68,7 @@ To add a workspace:
       - If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
         - For Azure Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
         - For Azure Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
+        - If you're using Windows 365, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - If you use an email address, enter your email address. Entering your email address tells the client to search for a URL associated with your email address if your admin configured the server that way.
 3. Tap **Next**.
 4. Provide your credentials when prompted.

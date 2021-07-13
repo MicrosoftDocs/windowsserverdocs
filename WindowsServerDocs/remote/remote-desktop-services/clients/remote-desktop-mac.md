@@ -6,7 +6,7 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 08/20/2020
+ms.date: 07/15/2021
 ms.localizationpriority: medium
 ---
 # Get started with the macOS client
@@ -45,6 +45,7 @@ To subscribe to a feed:
    - If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
       - For Azure Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
       - For Azure Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
+      - If you're using Windows 365, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - To use email, enter your email address. This tells the client to search for a URL associated with your email address if your admin configured the server that way.
 3. Select **Subscribe**.
 4. Sign in with your user account when prompted.
