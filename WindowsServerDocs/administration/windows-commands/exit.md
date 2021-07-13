@@ -29,6 +29,10 @@ exit [/b] [<exitcode>]
 | `<exitcode>` | Specifies a numeric number. If **/b** is specified, the ERRORLEVEL environment variable is set to that number. If you are quitting the command interpreter, the process exit code is set to that number. |
 | /? | Displays help at the command prompt. |
 
+### Notes
+
+- If the extensions are disabled the /B switch will not work and will produce an error as it relies on the :EOF label
+
 ## Examples
 
 To close the command interpreter, type:
@@ -36,6 +40,16 @@ To close the command interpreter, type:
 ```
 exit
 ```
+
+Exit command can be used to remove the leading zeroes of a decimal number:
+
+```
+set "numberWithLeadingZeroes=0069"
+cmd /c exit /b %numberWithLeadingZeroes%
+set "withoutLeadingZeroes=%errorlevel%"
+echo %withoutLeadingZeroes%
+```
+
 
 ## Additional References
 
