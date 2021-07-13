@@ -31,7 +31,7 @@ The following sections contain information about these new networking features a
 
 Following are the new or improved SDN infrastructure technologies.
 
--   **Network Controller**. New in Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. For more information, see [Network Controller](sdn/technologies/network-controller/Network-Controller.md) and [Deploy Software Defined Networks using scripts](/previous-versions/windows/server/mt427380(v=ws.12)).
+-   **Network Controller**. New in Windows Server 2016, Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter. Using Network Controller, you can automate the configuration of network infrastructure instead of performing manual configuration of network devices and services. For more information, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview) and [Deploy Software Defined Networks using scripts](/previous-versions/windows/server/mt427380(v=ws.12)).
 
 -   **Hyper-V Virtual Switch**. The Hyper-V Virtual Switch runs on Hyper-V hosts, and allows you to create distributed switching and routing, and a policy enforcement layer that is aligned and compatible with Microsoft Azure. For more information, see [Hyper-V Virtual Switch](../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
@@ -39,14 +39,14 @@ Following are the new or improved SDN infrastructure technologies.
 
     -   **Datacenter Firewall**. This distributed firewall provides granular access control lists (ACLs),  enabling you to apply firewall policies at the VM interface level or at the subnet level.
 
-        For more information, see [Datacenter Firewall Overview](sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md).
+        For more information, see [Datacenter Firewall Overview](/azure-stack/hci/concepts/datacenter-firewall-overview).
 
     -   **RAS Gateway**. You can use RAS Gateway for routing traffic between virtual networks and physical networks, including site-to-site VPN connections from your cloud datacenter to your tenants' remote sites. Specifically, you can deploy  Internet Key Exchange version 2 (IKEv2) site-to-site virtual private networks (VPNs), Layer 3 (L3) VPN, and Generic Routing Encapsulation (GRE) gateways. In addition, gateway pools and M+N redundancy of gateways are now supported; and Border Gateway Protocol (BGP) with Route Reflector capabilities provides dynamic routing between networks for all gateway scenarios (IKEv2 VPN, GRE VPN, and L3 VPN).
 
-        For more information, see  [What's New in RAS Gateway](sdn/technologies/network-function-virtualization/What-s-New-in-RAS-Gateway.md) and [RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md).
+        For more information, see  [What's New in RAS Gateway](/azure-stack/hci/concepts/gateway-overview) and [RAS Gateway for SDN](/azure-stack/hci/concepts/gateway-overview).
 
     - **Software Load Balancer (SLB) and Network Address Translation (NAT)**. The north-south and east-west layer 4 load balancer and NAT enhances throughput by supporting Direct Server Return, with which the return network traffic can bypass the Load Balancing multiplexer.
-       For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](./sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md).
+       For more information, see [Software Load Balancing &#40;SLB&#41; for SDN](/azure-stack/hci/concepts/software-load-balancer).
 
     For more information, see [Network Function Virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md).
 
@@ -64,7 +64,7 @@ The following cloud scale fundamentals are now available.
 
 -   **Packet Direct**.  Packet Direct provides a high network traffic throughput and low-latency packet processing infrastructure.
 
--   **Switch Embedded Teaming (SET)**.        SET is a NIC Teaming solution that is integrated in the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICS into a single SET team, which improves availability and provides failover. In Windows Server 2016, you can create SET teams that are restricted to the use of Server Message Block (SMB) and RDMA. In addition, you can use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).
+-   **Switch Embedded Teaming (SET)**.        SET is a NIC Teaming solution that is integrated in the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICS into a single SET team, which improves availability and provides failover. In Windows Server 2016, you can create SET teams that are restricted to the use of Server Message Block (SMB) and RDMA. In addition, you can use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](/azure-stack/hci/concepts/host-network-requirements).
 
 ## <a name="bkmk_existing"></a>New Features for Additional Networking Technologies
 

@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: f66ee49a-1fd3-4927-a813-64a15017b63b
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 12/08/2020
+ms.date: 06/30/2021
 ---
 # System Center Technologies for SDN
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 System Center includes the following technologies for use with Software Defined Networking (SDN):
 
@@ -22,7 +22,7 @@ System Center includes the following technologies for use with Software Defined 
 ## <a name="bkmk_scom"></a>System Center Operations Manager
 System Center 2019 and 2016 Operations Manager provide infrastructure monitoring that is flexible and cost-effective, helps ensure the predictable performance and availability of vital applications, and offer comprehensive monitoring for your datacenter and cloud, both private and public.
 
-For more information, see [Operations Manager](/system-center/scom/welcome?view=sc-om-2019)
+For more information, see [Operations Manager](/system-center/scom/welcome?view=sc-om-2019&preserve-view=true)
 
 ## <a name="bkmk_scvmm"></a>System Center Virtual Machine Manager
 With System Center 2019 and 2016 Virtual Machine Manager (VMM), you can:

@@ -133,7 +133,7 @@ To configure a **QueryString** argument that installs only drivers:
 
 **QueryString\="IsInstalled\=0 and Type\='Driver' and IsHidden\=0"**
 
-For more information about query strings for the default plug\-in, **Microsoft.WindowsUpdatePlugin**, the search criteria \(such as **IsInstalled**\), and the syntax that you can include in the query strings, see the section about search criteria in the [Windows Update Agent (WUA) API Reference](https://go.microsoft.com/fwlink/p/?LinkId=223304).
+For more information about query strings for the default plug\-in, **Microsoft.WindowsUpdatePlugin**, the search criteria \(such as **IsInstalled**\), and the syntax that you can include in the query strings, see the section about search criteria in the [Windows Update Agent (WUA) API Reference](/windows/win32/api/wuapi/nf-wuapi-iupdatesearcher-search).
 
 ## <a name="BKMK_HFP"></a>Use the Microsoft.HotfixPlugin
 The plug\-in **Microsoft.HotfixPlugin** can be used to apply Microsoft limited distribution release \(LDR\) updates \(also called hotfixes, and formerly called QFEs\) that you download independently to address specific Microsoft software issues. The plug-in installs updates from a root folder on an SMB file share and can also be customized to apply non\-Microsoft driver, firmware, and BIOS updates.

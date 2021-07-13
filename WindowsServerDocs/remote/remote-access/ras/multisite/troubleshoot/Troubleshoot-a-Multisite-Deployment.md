@@ -20,9 +20,6 @@ This topic describes how to troubleshoot the most common errors that may occur w
 
 -   [Troubleshooting setting the entry point domain controller](Troubleshooting-Setting-the-Entry-Point-Domain-Controller.md)
 
--   [Troubleshooting web probe URLs](Troubleshooting-Web-Probe-URLs.md)
+-   [Troubleshooting web probe URLs](./troubleshooting-setting-the-entry-point-domain-controller.md)
 
 -   [Troubleshooting general issues](Troubleshooting-General-Issues.md)
-
-
-

@@ -13,7 +13,7 @@ ms.topic: article
 
 You can use the following procedure to install the AD FS role service on a computer that is running  Windows Server 2012 R2  to become the first federation server in a federation server farm or a federation server in an existing federation server farm.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum requirement to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum requirement to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ### To install the AD FS server role via the Add roles and features wizard
 
@@ -46,5 +46,3 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 [Windows Server 2012 R2 AD FS Deployment Guide](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
 
 [Deploying a Federation Server Farm](../../ad-fs/deployment/Deploying-a-Federation-Server-Farm.md)
-
-

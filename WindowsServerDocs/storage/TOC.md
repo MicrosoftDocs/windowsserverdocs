@@ -36,6 +36,8 @@
 ## [Disk Management](disk-management/overview-of-disk-management.md)
 ## [File Server and SMB](file-server/file-server-smb-overview.md)
 ### [SMB Direct](file-server/smb-direct.md)
+### [SMB over QUIC](file-server/smb-over-quic.md)
+### [SMB compression](file-server/smb-compression.md)
 ### [SMB security enhancements](file-server/smb-security.md)
 ### [SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)
 ### [Network File System overview](nfs/nfs-overview.md)
@@ -131,7 +133,7 @@
 #### [Drive symmetry considerations](storage-spaces/drive-symmetry-considerations.md)
 #### [Understand and monitor storage resync](storage-spaces/understand-storage-resync.md)
 #### [Cluster and pool quorum](storage-spaces/understand-quorum.md)
-#### [Cluster sets](storage-spaces/cluster-sets.md)
+#### [Cluster sets](/azure-stack/hci/deploy/cluster-set)
 ### Plan
 #### [Hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)
 #### [Using the CSV in-memory read cache](storage-spaces/csv-cache.md)
@@ -145,7 +147,7 @@
 #### [Nested resiliency](storage-spaces/nested-resiliency.md)
 #### [Configure quorum](../failover-clustering/manage-cluster-quorum.md)
 #### [Upgrade a Storage Spaces Direct cluster](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)
-#### [Understand and deploy persistent memory](storage-spaces/deploy-pmem.md)
+#### [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory)
 #### [Understand and configure DAX](storage-spaces/persistent-memory-direct-access.md)
 
 ### Manage
@@ -186,4 +188,3 @@
 #### [Step 5, Set up clients](work-folders/deploy-work-folders-adfs-step5.md)
 ## [Storage QoS](storage-qos/storage-qos-overview.md)
 ## [Change history for Storage topics](storage-change-history.md)
-

@@ -45,7 +45,7 @@ From PowerShell (elevated), run:
 #### Using Command Prompt
 
 > [!IMPORTANT]
-> These steps show how to detach the WSUS database (SUSDB) from the Windows Internal Database instance by using the **sqlcmd** utility. For more information about the **sqlcmd** utility, see [sqlcmd Utility](https://go.microsoft.com/fwlink/?LinkId=81183).
+> These steps show how to detach the WSUS database (SUSDB) from the Windows Internal Database instance by using the **sqlcmd** utility. For more information about the **sqlcmd** utility, see [sqlcmd Utility](/sql/tools/sqlcmd-utility).
 > 1. Open an elevated command prompt
 > 2. Run the following SQL command to detach the WSUS database (SUSDB) from the Windows Internal Database instance by using the **sqlcmd** utility:
 

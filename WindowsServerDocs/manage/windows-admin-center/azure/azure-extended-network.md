@@ -86,7 +86,7 @@ Deployment is driven through Windows Admin Center.
 
 ### Install and configure Windows Admin Center
 
-1. [Download and install Windows Admin Center](../understand/windows-admin-center.md) onto any computer capable of running Windows Admin Center, other than the two virtual appliances you created earlier.
+1. [Download and install Windows Admin Center](../overview.md) onto any computer capable of running Windows Admin Center, other than the two virtual appliances you created earlier.
 
 2. In Windows Admin Center, select **Settings** (from the upper-right corner of the page) > **Extensions**. Then select **Extensions**:
 

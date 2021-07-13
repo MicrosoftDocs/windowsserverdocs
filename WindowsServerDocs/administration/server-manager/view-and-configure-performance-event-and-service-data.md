@@ -157,9 +157,9 @@ By default, performance counters are turned off. Managed servers that are runnin
 ### Analyze performance data and solve problems
 for more information about analyzing performance counter data that you view in Server Manager, and solving performance problems on managed servers, see the following resources.
 
--   [Analyzing performance data](https://go.microsoft.com/fwlink/?LinkId=239829)
+-   [Analyzing performance data](/previous-versions/windows/it-pro/windows-server-2003/cc784871(v=ws.10))
 
--   [Solving performance problems](https://go.microsoft.com/fwlink/?LinkId=239831)
+-   [Solving performance problems](/previous-versions/windows/it-pro/windows-server-2003/cc757672(v=ws.10))
 
 for more information about advanced performance monitoring and analysis tools that are available for  Windows Server 2012  and later releases of Windows Server, including Server Performance Advisor 3.0, see [Performance](/previous-versions/windows/hardware/design/dn614608(v=vs.85)) on MSDN.
 

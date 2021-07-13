@@ -4,7 +4,7 @@ description: An overview of using Windows Admin Center in the Azure portal to ma
 ms.topic: overview
 author: jasongerend
 ms.author: jgerend
-ms.date: 05/28/2021
+ms.date: 06/29/2021
 ---
 # Use Windows Admin Center in the Azure portal to manage a Windows Server VM
 
@@ -44,7 +44,7 @@ If you manually installed Windows Admin Center in the VM to manage multiple syst
 
 To use Windows Admin Center in the Azure portal, we install Windows Admin Center in each Azure VM that you want to use it to manage. The Azure VM has the following requirements:
 
-- Windows Server 2019 or Windows Server 2016
+- Windows Server 2022, Windows Server 2019 or Windows Server 2016
 - At least 3 GiB of memory
 - Be in any region of an Azure public cloud (it's not supported in Azure China, Azure Government, or other non-public clouds)
 
@@ -194,13 +194,104 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
   - C:\Packages\Plugins\AdminCenter
 - Network trace, if appropriate. Network traces can contain customer data and sensitive security details, such as passwords, so we recommend reviewing the trace and removing any sensitive details before sharing it.
 
+## Automate Windows Admin Center deployment using an ARM template
+
+You can automate Windows Admin Center deployment in Azure portal by using this Azure Resource Manager template.
+
+```json
+const deploymentTemplate = {
+        "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+        "contentVersion": "1.0.0.0",
+        "parameters": {
+            "vmName": {
+                "type": "string"
+            },
+            "location": {
+                "type": "string"
+            },
+            "extensionName": {
+                "type": "string"
+            },
+            "extensionPublisher": {
+                "type": "string"
+            },
+            "extensionType": {
+                "type": "string"
+            },
+            "extensionVersion": {
+                "type": "string"
+            },
+            "port": {
+                "type": "string"
+            },
+            "salt": {
+                "type": "string"
+            }
+        },
+        "resources": [
+            {
+                "type": "Microsoft.Compute/virtualMachines/extensions",
+                "name": "[concat( parameters('vmName'), '/' , parameters('extensionName') )]",
+                "apiVersion": "2018-10-01",
+                "location": "[parameters('location')]",
+                "properties": {
+                    "publisher": "[parameters('extensionPublisher')]",
+                    "type": "[parameters('extensionType')]",
+                    "typeHandlerVersion": "[parameters('extensionVersion')]",
+                    "autoUpgradeMinorVersion": true,
+                    "settings": {
+                        "port": "[parameters('port')]",
+                        "salt": "[parameters('salt')]",
+                        "cspFrameAncestors": ["https://*.hosting.portal.azure.net", "https://localhost:1340", "https://ms.portal.azure.com", "https://portal.azure.com", "https://preview.portal.azure.com"],
+                        "corsOrigins": ["https://ms.portal.azure.com", "https://portal.azure.com", "https://preview.portal.azure.com", "https://waconazure.com"]
+                    }
+                }
+            }
+        ];
+
+const parameters = {
+    vmName: <VM name>, 
+    location: <VM location>, 
+    extensionName: "AdminCenter", 
+    extensionPublisher: "Microsoft.AdminCenter", 
+    extensionType: "AdminCenter", 
+    extensionVersion: "0.0", 
+    port: "6516", 
+    salt: <unique string used for hashing>
+}
+```
+
+## Automate Windows Admin Center deployment using PowerShell
+
+You can also automate Windows Admin Center deployment in Azure portal by using this PowerShell script.
+
+```PowerShell
+$resourceGroupName = <get VM's resource group name>
+$vmLocation = <get VM location>
+$vmName = <get VM name>
+$vmNsg = <get VM's primary nsg>
+$salt = <unique string used for hashing>
+
+$wacPort = "6516"
+$Settings = @{"port" = $wacPort; "salt" = $salt}
+
+# Open outbound port rule for WAC service
+Get-AzNetworkSecurityGroup -Name $vmNsg -ResourceGroupName $resourceGroupName | Add-AzNetworkSecurityRuleConfig -Name "PortForWACService" -Access "Allow" -Direction "Outbound" -SourceAddressPrefix "VirtualNetwork" -SourcePortRange "*" -DestinationAddressPrefix "WindowsAdminCenter" -DestinationPortRange "443" -Priority 100 -Protocol Tcp | Set-AzNetworkSecurityGroup
+
+# Install VM extension
+Set-AzVMExtension -ResourceGroupName $resourceGroupName -Location $vmLocation -VMName $vmName -Name "AdminCenter" -Publisher "Microsoft.AdminCenter" -Type "AdminCenter" -TypeHandlerVersion "0.0" -settings $Settings
+
+# Open inbound port rule on VM to be able to connect to WAC
+Get-AzNetworkSecurityGroup -Name $vmNsg -ResourceGroupName $resourceGroupName | Add-AzNetworkSecurityRuleConfig -Name "PortForWAC" -Access "Allow" -Direction "Inbound" -SourceAddressPrefix "*" -SourcePortRange "*" -DestinationAddressPrefix "*" -DestinationPortRange $wacPort -Priority 100 -Protocol Tcp | Set-AzNetworkSecurityGroup
+```
+
 ## Known issues
 
 - If you change any of your networking rules, it takes Windows Admin Center about a minute or so to update its networking. The connection may fail for a few minutes.
 - If you just started your virtual machine, it takes about a minute for the IP address to be registered with Windows Admin Center and thus, it may not load.
 - The first load time of Windows Admin Center might be a little longer. Any subsequent load will be just a few seconds.
 - Chrome Incognito mode isn't supported.
-- Azure Portal desktop app is not supported.
+- Azure portal desktop app is not supported.
 
 ## Frequently asked questions
 
@@ -260,8 +351,8 @@ Yes, you can use Windows Admin Center on-premises to manage servers and virtual 
 
 ### Does Windows Admin Center in the Azure portal work with Azure Bastion?
 
-No, unfortunately not. 
+No, unfortunately not.
 
 ### Is Windows Admin Center supported for VMs behind a load balancer?
 
-Yes. 
+Yes.

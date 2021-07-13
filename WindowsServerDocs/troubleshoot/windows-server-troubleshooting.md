@@ -130,7 +130,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 - [Troubleshooting Enabling Multisite](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-enabling-multisite.md)
 - [Troubleshooting Adding Entry Points](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-adding-entry-points.md)
 - [Troubleshooting Setting the Entry Point Domain Controller](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller.md)
-- [Troubleshooting Web Probe URLs](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-web-probe-urls.md)
+- [Troubleshooting Web Probe URLs](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller.md)
 
 ## Troubleshoot Nano Server
 
@@ -147,7 +147,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 ## Troubleshoot QoS
 
-- [QoS Frequently Asked Questions](../networking/technologies/qos/qos-policy-faq.md)
+- [QoS Frequently Asked Questions](../networking/technologies/qos/qos-policy-faq.yml)
 
 ## Troubleshoot S2D
 
@@ -197,7 +197,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 ## Troubleshoot vRSS
 
-- [vRSS Frequently Asked Questions](../networking/technologies/vrss/vrss-faq.md)
+- [vRSS Frequently Asked Questions](../networking/technologies/vrss/vrss-faq.yml)
 
 ## Troubleshoot WebProxy
 

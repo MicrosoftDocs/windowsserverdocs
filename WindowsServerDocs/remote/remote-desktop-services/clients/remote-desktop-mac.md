@@ -42,9 +42,9 @@ To subscribe to a feed:
 
 1. Select **Add feed** on the main page to connect to the service and retrieve your resources.
 2. Enter the feed URL. This can be a URL or email address:
-   - This URL is usually a Windows Virtual Desktop URL. Which one you use depends on which version of Windows Virtual Desktop you're using.
-      - For Windows Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
-      - For Windows Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
+   - This URL is usually a Azure Virtual Desktop URL. Which one you use depends on which version of Azure Virtual Desktop you're using.
+      - For Azure Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
+      - For Azure Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - To use email, enter your email address. This tells the client to search for a URL associated with your email address if your admin configured the server that way.
 3. Select **Subscribe**.
 4. Sign in with your user account when prompted.
