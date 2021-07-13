@@ -51,11 +51,11 @@ Enabling Secured-core functionality helps proactively defend against and disrupt
 
 #### Transport: HTTPS and TLS 1.3 enabled by default on Windows Server 2022
 
-Secure connections are at the heart of today’s interconnected systems. Transport Layer Security (TLS) 1.3 is the latest version of the internet’s most deployed security protocol, which encrypts data to provide a secure communication channel between two endpoints. HTTPS and TLS 1.3 is now enabled by default on Windows Server 2022, protecting the data of clients connecting to the server. It eliminates obsolete cryptographic algorithms, enhances security over older versions, and aims to encrypt as much of the handshake as possible. More information on supported TLS versions can be [found here](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-) and supported cipher suites can be [found here](/windows/win32/secauthn/tls-cipher-suites-in-windows-server-2022).
+Secure connections are at the heart of today’s interconnected systems. Transport Layer Security (TLS) 1.3 is the latest version of the internet’s most deployed security protocol, which encrypts data to provide a secure communication channel between two endpoints. HTTPS and TLS 1.3 is now enabled by default on Windows Server 2022, protecting the data of clients connecting to the server. It eliminates obsolete cryptographic algorithms, enhances security over older versions, and aims to encrypt as much of the handshake as possible. Learn more about [supported TLS versions](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-) and about [supported cipher suites](/windows/win32/secauthn/tls-cipher-suites-in-windows-server-2022).
 
 #### Secure DNS: Encrypted DNS name resolution requests with DNS-over-HTTPS
 
-Both DNS Server and DNS Client in Windows Server 2022 now support DNS-over-HTTPS (DoH) which encrypts DNS queries using the HTTPS protocol. This helps keep your traffic as private as possible by preventing eavesdropping and your DNS data being manipulated.
+DNS Client in Windows Server 2022 now supports DNS-over-HTTPS (DoH) which encrypts DNS queries using the HTTPS protocol. This helps keep your traffic as private as possible by preventing eavesdropping and your DNS data being manipulated.
 
 #### Server Message Block (SMB): SMB AES-256 encryption for the most security conscious
 
@@ -87,7 +87,11 @@ Hotpatch, part of Azure Automanage, is supported in Windows Server 2022 Datacent
 
 ## Application platform
 
-There are several platform improvements for Windows Containers, including application compatibility and the Windows Container experience with Kubernetes. A major improvement includes reducing the Windows Container image size by up to 40%, which leads to a 30% faster startup time and better performance. You can now also run applications that depend on Azure Active Directory with group Managed Services Accounts (gMSA) without domain joining the container host, and containers support Microsoft Distributed Transaction Control (MSDTC) and Microsoft Message Queuing (MSMQ). Furthermore, there are several other enhancements that simplify the Windows Container experience with Kubernetes. These enhancements include support for host-process containers for node configuration, IPv6, and consistent network policy implementation with Calico.
+There are several platform improvements for Windows Containers, including application compatibility and the Windows Container experience with Kubernetes. A major improvement includes reducing the Windows Container image size by up to 40%, which leads to a 30% faster startup time and better performance.
+
+You can now also run applications that depend on Azure Active Directory with group Managed Services Accounts (gMSA) [without domain joining the container host](/virtualization/windowscontainers/manage-containers/manage-serviceaccounts), and Windows Containers now support Microsoft Distributed Transaction Control (MSDTC) and Microsoft Message Queuing (MSMQ).
+
+There are several other enhancements that simplify the Windows Container experience with Kubernetes. These enhancements include support for host-process containers for node configuration, IPv6, and consistent network policy implementation with Calico.
 
 In addition to platform improvements, Windows Admin Center has been updated to make it easy to containerize .NET applications. Once the application is in a container, you can host it on Azure Container Registry to then deploy it to other Azure services, including Azure Kubernetes Service.
 
@@ -118,7 +122,7 @@ Enhancements to Storage Migration Service in Windows Server 2022 makes it easier
 
 #### Adjustable storage repair speed
 
-User adjustable storage repair speed is a new feature in Storage Spaces Direct that offers more control over the data resync process by allocating resources to either repair data copies (resiliency) or run active workloads (performance). This helps improve availability and allows you to service your clusters more flexibly and efficiently. More information can be found [here](/azure-stack/hci/manage/storage-repair-speed).
+[User adjustable storage repair speed](/azure-stack/hci/manage/storage-repair-speed) is a new feature in Storage Spaces Direct that offers more control over the data resync process by allocating resources to either repair data copies (resiliency) or run active workloads (performance). This helps improve availability and allows you to service your clusters more flexibly and efficiently.
 
 #### Storage bus cache with Storage Spaces on standalone servers
 
