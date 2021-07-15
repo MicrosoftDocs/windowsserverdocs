@@ -43,14 +43,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "The Windows release health site is now available in 10 languages"
+          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-release-health-now-localized-in-10-languages/ba-p/2530167
+          itemType: whats-new
         - text: "Take action: July 2021 security update available for all supported versions of Windows"
           url: https://support.microsoft.com/help/5004237
           itemType: whats-new
         - text: "Planning for Windows 11: best practices for organizations"
           url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/planning-for-windows-11-best-practices-for-organizations/ba-p/2493081
-          itemType: whats-new
-        - text: "Clarified Guidance for CVE-2021-34527 Windows Print Spooler Vulnerability"
-          url: https://msrc-blog.microsoft.com/2021/07/08/clarified-guidance-for-cve-2021-34527-windows-print-spooler-vulnerability/
           itemType: whats-new
 
       footerLink:
