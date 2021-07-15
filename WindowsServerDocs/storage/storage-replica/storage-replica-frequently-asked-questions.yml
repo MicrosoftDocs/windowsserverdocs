@@ -28,13 +28,13 @@ sections:
           - Server-to-server asynchronous replication between Azure and on-premises (using VPN or Azure ExpressRoute)
           - Cluster-to-cluster replication inside Azure (synchronously or asynchronously between IaaS VMs in one or two datacenter fault domains, or asynchronously between two separate regions)
           - Cluster-to-cluster asynchronous replication between Azure and on-premises (using VPN or Azure ExpressRoute)
+          - Stretch clustering using Azure Shared Disks (synchronously or asynchronously between IaaS VMs in one or two datacenter fault domains, or asynchronously between two separate regions)
           
           Further notes on guest clustering in Azure can be found at: [Deploying IaaS VM Guest Clusters in Microsoft Azure](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126).
           
           Important notes:
           
-          - Azure doesn't support shared VHDX guest clustering, so Windows Failover Cluster virtual machines must use iSCSI targets for classic shared-storage persistent disk reservation clustering or Storage Spaces Direct.
-          - There are Azure Resource Manager templates for Storage Spaces Direct-based Storage Replica clustering at [Create a Storage Spaces Direct  SOFS Clusters with Storage Replica for Disaster Recovery across Azure Regions](https://aka.ms/azure-storage-replica-cluster).
+                    - There are Azure Resource Manager templates for Storage Spaces Direct-based Storage Replica clustering at [Create a Storage Spaces Direct  SOFS Clusters with Storage Replica for Disaster Recovery across Azure Regions](https://aka.ms/azure-storage-replica-cluster).
           - Cluster to cluster RPC communication in Azure (required by the cluster APIs for granting access between cluster) requires configuring network access for the CNO. You must allow TCP port 135 and the dynamic range above TCP port 49152. Reference [Building Windows Server Failover Cluster on Azure IAAS VM – Part 2 Network and Creation](/archive/blogs/askcore/building-windows-server-failover-cluster-on-azure-iaas-vm-part-2-network-and-creation).
           - It's possible to use two-node guest clusters, where each node is using loopback iSCSI for an asymmetric cluster replicated by Storage Replica. But this will likely have very poor performance and should be used only for very limited workloads or testing.
           
