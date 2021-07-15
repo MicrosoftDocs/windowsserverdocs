@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 06/22/2021
+ms.date: 07/15/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -19,7 +19,17 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.2130        |1.2.1446                  |
-|Insider    |1.2.2130        |1.2.1446                  |
+|Insider    |1.2.2220        |1.2.1446                  |
+
+## Updates for version 1.2.2220 (Insider)
+
+*Date published: 07/14/2021*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- The client now updates in the background when the auto-update feature is enabled, no remote connection is active, and MSRDCW.exe isn't running.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Fixed an ICE inversion parameter issue that prevented some Teams calls from connecting.
 
 ## Updates for version 1.2.2130
 
