@@ -5,16 +5,17 @@ ms.topic: article
 manager: dougkim
 ms.author: jgerend
 author: JasonGerend
-ms.date: 08/07/2020
+ms.date: 07/16/2021
 ---
 
 # Netsh http commands
 
+Applies To: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Use **netsh http** to query and configure HTTP.sys settings and parameters.
 
 >[!TIP]
->If you are using Windows PowerShell on a computer running Windows Server 2016 or Windows 10, type **netsh** and press Enter. At the netsh prompt, type **http** and press Enter to get the netsh http prompt.
+>If you are using Windows PowerShell on a computer running Windows Server or Windows 10, type **netsh** and press Enter. At the netsh prompt, type **http** and press Enter to get the netsh http prompt.
 >
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netsh http\>
 
