@@ -332,8 +332,8 @@ flush logbuffer
 
 ## show cachestate
 
-Lists cached URI resources and their associated properties. This command lists
-all resources and their associated properties that are cached in HTTP response
+Lists cached URI resources and their associated properties. This command either lists
+all resources and associated properties cached in the HTTP response
 cache or displays a single resource and its associated properties.
 
 **Syntax**
@@ -387,7 +387,7 @@ show servicestate [ [ view= ] session | requestq ] [ [ verbose= ] yes | no ]
 
 |Parameter|Description|Requirement|
 |-------------|----------------------------------------------------------------------------------------------------------------------|----------|
-|  **View**   | Specifies whether to view a snapshot of the HTTP service state based on the server session or on the request queues. | Optional |
+|  **View**   | Specifies whether to view a snapshot of the HTTP service state based on the server session or the request queues.    | Optional |
 | **Verbose** |                Specifies whether to display verbose information that also shows property information.                | Optional |
 
 ---
