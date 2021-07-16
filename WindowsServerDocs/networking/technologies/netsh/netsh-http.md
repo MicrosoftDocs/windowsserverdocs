@@ -459,7 +459,7 @@ show urlacl [ [url= ] URL]
 
 |Parameter|Description|Requirement|
 |---------|------------------------------------------------------------------------------------------------|----------|
-| **url** | Specifies the fully qualified URL that you want to display. If not specfied, display all URLs. | Optional |
+| **url** | Specifies the fully qualified URL that you want to display. If not specified, display all URLs. | Optional |
 
 ---
 
