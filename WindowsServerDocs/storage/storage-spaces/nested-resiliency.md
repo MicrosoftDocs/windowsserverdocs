@@ -80,9 +80,14 @@ Notice that the capacity efficiency of classic two-way mirroring (about 50%) and
 
 You can use familiar storage cmdlets in PowerShell to create volumes with nested resiliency.
 
-### Step 1: Create storage tier templates (Windows Server 2019 only)
+### Step 1: Create storage tier templates
 
-Windows Server 2019 requires you to create new storage tier templates using the `New-StorageTier` cmdlet before creating volumes. You only need to do this once, and then every new volume you create can reference these template. Specify the `-MediaType` of your capacity drives and, optionally, the `-FriendlyName` of your choice. Do not modify the other parameters.
+Windows Server 2019 requires you to create new storage tier templates using the `New-StorageTier` cmdlet before creating volumes. You only need to do this once, and then every new volume you create can reference these template. 
+
+> [!NOTE]
+> If you're running Windows Server 2022, Azure Stack HCI 21H2, or Azure Stack HCI 20H2, you can skip this step.
+
+Specify the `-MediaType` of your capacity drives and, optionally, the `-FriendlyName` of your choice. Do not modify the other parameters.
 
 If your capacity drives are hard disk drives (HDD), launch PowerShell as Administrator and run:
 
