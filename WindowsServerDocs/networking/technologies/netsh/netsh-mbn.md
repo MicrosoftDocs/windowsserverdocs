@@ -365,7 +365,7 @@ set enterpriseapnparams interface="Cellular" profileset=mms mode=yes
 
 ### highestconncategory
 
-Sets the Mobile Broadband data highest connnection category for the given interface.
+Sets the Mobile Broadband data highest connection category for the given interface.
 
 **Syntax**
 
