@@ -5,7 +5,7 @@ ms.author: jgerend
 manager: dansimpspaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 03/15/2019
+ms.date: 07/16/2019
 ---
 
 # Nested resiliency for Storage Spaces Direct
@@ -82,7 +82,12 @@ You can use familiar storage cmdlets in PowerShell to create volumes with nested
 
 ### Step 1: Create storage tier templates
 
-First, create new storage tier templates using the `New-StorageTier` cmdlet. You only need to do this once, and then every new volume you create can reference these template. Specify the `-MediaType` of your capacity drives and, optionally, the `-FriendlyName` of your choice. Do not modify the other parameters.
+Windows Server 2019 requires you to create new storage tier templates using the `New-StorageTier` cmdlet before creating volumes. You only need to do this once, and then every new volume you create can reference these template. 
+
+> [!NOTE]
+> If you're running Windows Server 2022, Azure Stack HCI 21H2, or Azure Stack HCI 20H2, you can skip this step.
+
+Specify the `-MediaType` of your capacity drives and, optionally, the `-FriendlyName` of your choice. Do not modify the other parameters.
 
 If your capacity drives are hard disk drives (HDD), launch PowerShell as Administrator and run:
 
