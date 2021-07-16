@@ -117,6 +117,9 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 
 By default, a Windows Insider Dev Channel client won't have access to an Active Directory domain controller when connecting to an SMB over QUIC file server. This means authentication uses NTLMv2, where the file server authenticates on behalf of the client. No NTLMv2 authentication or authorization occurs outside the TLS 1.3-encrypted QUIC tunnel. However, we still recommend using Kerberos as a general security best practice and don't recommend creating new NTLMv2 dependencies in deployments. To allow this, you can configure the KDC proxy to forward ticket requests on the user's behalf, all while using an internet-friendly HTTPS encrypted communication channel.
 
+> [!NOTE]
+> You cannot configure the Windows Admin Center in gateway mode using TCP port 443 on a file server where you are configuring KDC Proxy. When configuring WAC on the file server, change the port to one that is not in use and is not 443. If you have already configured WAC on port 443, re-run the WAC setup MSI and choose a different port when prompted. 
+
 1. On the file server, in an elevated PowerShell prompt, run:
 
     `NETSH http add urlacl url=https://+:443/KdcProxy user="NT authority\Network Service"`
