@@ -119,7 +119,7 @@ In order for W32tm.exe to reset a computer clock, the computer clock time offset
 
 The values for `CurrentTimeOffset`, `SystemClockRate`, `PhaseCorrectRate`, and `MaxAllowedPhaseOffset` are all measured in clock ticks, where 1 ms = 10,000 clock ticks on a Windows system.
 
-To get the `SystemClockRate` value, you can use the following command and convert it from seconds to clock ticks by using the formula of (seconds &times; 1,000 &times; 10,0000):
+To get the `SystemClockRate` value, you can use the following command and convert it from seconds to clock ticks by using the formula of (seconds &times; 1,000 &times; 10,000):
 
 ```cmd
 W32tm /query /status /verbose
