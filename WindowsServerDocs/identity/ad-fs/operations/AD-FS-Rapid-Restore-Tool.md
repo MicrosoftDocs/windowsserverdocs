@@ -58,6 +58,8 @@ import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecrea
 
 - This tool works for AD FS in Windows Server 2012 R2 and later.
 - The required .NET framework is at least 4.0.
+  > [!NOTE]
+  > For version 1.0.82.3 or later, at least .NET Framework 4.6 is required.
 - The restore must be done on an AD FS server of the same version as the backup and that uses the same Active Directory account as the AD FS service account.
 
 ## Create a backup
