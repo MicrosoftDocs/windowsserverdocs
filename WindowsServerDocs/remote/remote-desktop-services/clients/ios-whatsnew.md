@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/16/2021
+ms.date: 07/19/2021
 ms.localizationpriority: medium
 ---
 # What's new in the iOS client
