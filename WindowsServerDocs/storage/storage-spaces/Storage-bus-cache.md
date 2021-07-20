@@ -23,7 +23,7 @@ The storage bus cache for standalone servers can significantly improve read and 
 
 If your system does not require resiliency or has external backups, the storage bus cache will support both read and write caching. For resilient systems, the storage bus cache will only serve as a read cache and it is recommended to pick ReFS [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md) as the volume resiliency. This combination improves random read performance as data is read from the parity tier and cached on the faster mirror tier. The mirror tier also provides write caching capabilities if the Provision Mode is set to Shared (default).
 
-:::image type="content" source="media/storage-bus-cache/SBCDoc.png" alt-text="Storage bus cache read and write paths":::
+:::image type="content" source="media/storage-bus-cache/sbc-map.png" alt-text="Storage bus cache read and write paths":::
 
 In this tutorial, you learn about:
 
@@ -122,7 +122,7 @@ This section is a step-by-step guide on how to enable the storage bus cache for 
 
     The output should resemble the image below, where the Number column shows values under 500 and the CanPool column shows True for all non-boot drives.
     
-    :::image type="content" source="media/storage-bus-cache/Get-PhysicalDisk.PNG" alt-text="Result from Get-PhysicalDisk before enabling the storage bus cache":::
+    :::image type="content" source="media/storage-bus-cache/get-physicaldisk.png" alt-text="Result from Get-PhysicalDisk before enabling the storage bus cache":::
 
 4. Enable storage bus cache
 
@@ -138,7 +138,7 @@ This section is a step-by-step guide on how to enable the storage bus cache for 
 
     You can run ``Get-StoragePool`` to see the name of the storage pool and ``Get-PhysicalDisk`` again to see the effects of enabling storage bus cache. The output should resemble the image below, where the Number column shows values over 500 (indicating the drive is claimed by the storage bus) and the CanPool column now shows False for all non-boot drives. If the ProvisionMode was set to Cache prior to enabling, the Usage column will show as Journal for the faster drives.  
     
-    :::image type="content" source="media/storage-bus-cache/Get-PhysicalDisk2.PNG" alt-text="Results of Get-StoragePool and Get-PhysicalDisk after enabling the storage bus cache":::
+    :::image type="content" source="media/storage-bus-cache/get-physicaldisk-2.png" alt-text="Results of Get-StoragePool and Get-PhysicalDisk after enabling the storage bus cache":::
 
 5. Check the storage bus cache state
 
@@ -206,4 +206,4 @@ Get-StorageBusBinding
 
 In the example below, the first column lists out capacity drives and the third column lists out the cache drives that they are bound to. Follow the instructions in Adding or replacing cache drives to balance, the existing cache will not be preserved.
 
-:::image type="content" source="media/storage-bus-cache/GetStorageBusBinding.PNG" alt-text="Output of Get-StorageBusBinding":::
+:::image type="content" source="media/storage-bus-cache/get-storagebusbinding.png" alt-text="Output of Get-StorageBusBinding":::
