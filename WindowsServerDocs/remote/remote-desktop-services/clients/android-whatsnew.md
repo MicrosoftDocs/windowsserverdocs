@@ -5,12 +5,18 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 04/02/2021
+ms.date: 07/19/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Android client
 
 We regularly update the [Remote Desktop client for Android](remote-desktop-android.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+
+## Updates for version 10.0.11
+
+Date published: July 13, 2021
+
+In this version, we made bug fixes and performance improvements.
 
 ## Updates for version 10.0.10
 

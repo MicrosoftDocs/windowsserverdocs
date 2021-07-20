@@ -6,7 +6,7 @@ ms.assetid: 64f038e1-40ec-4c67-938b-72edea49e5d8
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 02/04/2020
+ms.date: 07/15/2021
 ms.localizationpriority: medium
 ms.custom: contperf-fy21q1
 ---
@@ -67,15 +67,16 @@ Want to remove the connection? Again, tap the **More options** menu (**...**), a
 
 ## Add remote resources
 
-Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published by your admin. The Android client supports resources published from **Remote Desktop Services** and **Azure Virtual Desktop** deployments.
+Remote resources are RemoteApp programs, session-based desktops, and virtual desktops published by your admin. The Android client supports resources published from Remote Desktop Services, Windows 365, and Azure Virtual Desktop deployments.
 
 To add remote resources:
 
 1. In the Connection Center, tap **+**, and then tap **Remote Resource Feed**.
 2. Enter the **Feed URL**. This URL can be a URL or an email address:
-   - The **URL** is the RD Web Access server provided to you by your admin. If accessing resources from Azure Virtual Desktop, you can use one of the following URLs depending on which version you're using:
+   - The **URL** is the RD Web Access server provided to you by your admin. If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
      - If you're using Azure Virtual Desktop (classic), use: `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
      - If you're using Azure Virtual Desktop, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
+     - If you're using Windows 365, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - If you plan to use **Email**, enter your email address in this field. Filling out this field tells the client to search for an RD Web Access server associated with your email address if it was configured by your admin.
 3. Tap **Next**.
 4. Provide your sign-in information when prompted. The credentials you should use can vary based on the deployment and can include:
