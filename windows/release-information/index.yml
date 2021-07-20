@@ -46,11 +46,11 @@ conceptualContent:
         - text: "July 2021 Windows non-security preview \"C\" release is available for Windows 10, version 1809"
           url: https://support.microsoft.com/help/5004293
           itemType: whats-new
+        - text: "Join the Tech Community Live: Windows edition on July 21, 2021"
+          url: https://techcommunity.microsoft.com/t5/tech-community-live/tech-community-live-windows-edition/ev-p/2481262
+          itemType: whats-new
         - text: "Introducing Windows 10, version 21H2"
           url: https://blogs.windows.com/windowsexperience/?p=176019
-          itemType: whats-new
-        - text: "The Windows release health site is now available in 10 languages"
-          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-release-health-now-localized-in-10-languages/ba-p/2530167
           itemType: whats-new
 
       footerLink:
