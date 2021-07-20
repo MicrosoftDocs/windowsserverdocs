@@ -50,13 +50,13 @@ In this tutorial, you learn about:
 
 This section explains what each configurable field of the storage bus cache is and applicable values.
 
-```Powershell
+```PowerShell
 Get-StorageBusCache
 ```
 
 The output should resemble below when not enabled:
 
-```Powershell
+```PowerShell
 ProvisionMode                  : Shared
 SharedCachePercent             : 15
 CacheMetadataReserveBytes      : 34359738368
@@ -78,7 +78,7 @@ This field determines if the entire faster media tier or only a portion of it wi
 
 ### Shared cache percentage
 
-This field is only applicable when the Provision Mode is set to Shared. The default value is 15% and the field can be set from 5% to 90%. A value over 50% is not recommended as there needs to be a balance between the cache and the mirror tier of mirror accelerated parity volumes.
+This field is only applicable when the Provision Mode is set to Shared. The default value is 15% and the field can be set from 5% to 90%. A value over 50% is not recommended when using mirror accelerated parity volumes as there needs to be a balance between the cache and the mirror tier.
 
 ### Enabled
 
@@ -97,26 +97,26 @@ This field refers to the state of the storage bus cache and can either be True o
 
 - **Cache page size KBytes:** This field can be set to 8, 16 (default), 32 and 64.
 
-## Enable storage bus cache in Powershell
+## Enable storage bus cache in PowerShell
 
-This section is a step-by-step guide on how to enable the storage bus cache for your stand-alone server in Powershell.
+This section is a step-by-step guide on how to enable the storage bus cache for your stand-alone server in PowerShell.
 
 1. Import the module
 
-    ```Powershell
+    ```PowerShell
     Import-Module StorageBusCache 
     ```
 
 2. Configure storage bus cache settings
-
-    Default settings are recommended, skip this step to continue with the defaults.
     
+    Default settings are recommended, skip this step to continue with the defaults.
+
     > [!IMPORTANT]
     > If configuration is needed, do so before enabling the storage bus cache. Refer to Feature overview section for details of the fields.
-    
+
 3. Check the drive status
 
-    ```Powershell
+    ```PowerShell
     Get-PhysicalDisk
     ```
 
@@ -126,7 +126,7 @@ This section is a step-by-step guide on how to enable the storage bus cache for 
 
 4. Enable storage bus cache
 
-    ```Powershell
+    ```PowerShell
     Enable-StorageBusCache
     ```
 
@@ -144,13 +144,13 @@ This section is a step-by-step guide on how to enable the storage bus cache for 
 
     Check that the fields are correct and the Enabled field is now set to true.
     
-    ```Powershell
+    ```PowerShell
     Get-StorageBusCache 
     ```
 
     The output should resemble below:
     
-    ```Powershell
+    ```PowerShell
     ProvisionMode                  : Shared
     SharedCachePercent             : 15
     CacheMetadataReserveBytes      : 34359738368
@@ -165,16 +165,16 @@ Now the storage bus cache has been successfully enabled, the next step is to cre
 ## Create a volume
 
 ### Volumes with resiliency:
-The Powershell cmdlet below creates a 1TiB mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the recommended configuration for most workloads. For more information, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md).
+The PowerShell cmdlet below creates a 1TiB mirror-accelerated parity volume with a Mirror:Parity ratio of 20:80, which is the recommended configuration for most workloads. For more information, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md).
 
-```Powershell
+```PowerShell
 New-Volume –FriendlyName "TestVolume" -FileSystem ReFS -StoragePoolFriendlyName Storage* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 200GB, 800GB
 ```
 
 ### Volumes without resiliency:
-The Powershell cmdlet below creates a 1TB Simple volume that cannot tolerate any disk failure. Both read and write caching is supported.
+The PowerShell cmdlet below creates a 1TB Simple volume that cannot tolerate any disk failure. Both read and write caching is supported.
 
-```Powershell
+```PowerShell
 New-Volume -FriendlyName "TestVolume" -FileSystem ReFS -StoragePoolFriendlyName Storage* -ResiliencySettingName Simple -Size 1TB
 ```
 
@@ -185,14 +185,14 @@ After running ``Enable-StorageBusCache``, the Provision mode, Shared cache perce
 
 Once the drive has been manually added, run the cmdlet below to finish the intake process.
 
-```Powershell
+```PowerShell
 Update-StorageBusCache
 ```
 
 ### Adding or replacing cache drives (NVMes or SSDs)
 There is no cmdlet to unbind/rebind existing bindings and balance out the relationship. The steps below will cause the existing read cache to be lost.
 
-```Powershell
+```PowerShell
 Remove-StorageBusBinding
 New-StorageBusBinding 
 ```
@@ -200,7 +200,7 @@ New-StorageBusBinding
 ### Check and balance cache and capacity bindings 
 Use the following cmdlet to check the existing cache and capacity bindings.
 
-```Powershell
+```PowerShell
 Get-StorageBusBinding
 ```
 
