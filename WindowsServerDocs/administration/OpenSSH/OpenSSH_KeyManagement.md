@@ -43,7 +43,7 @@ By default the sshd service is set to start manually. To start it each time the 
 
 ```powershell
 # Set the sshd service to be started automatically
-Get-Service -Name ssh-agent | Set-Service -StartupType Automatic
+Get-Service -Name sshd | Set-Service -StartupType Automatic
 
 # Now start the sshd service
 Start-Service sshd
