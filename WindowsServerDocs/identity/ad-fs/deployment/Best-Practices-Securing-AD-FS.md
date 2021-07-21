@@ -172,6 +172,7 @@ WS-Trust Windows endpoints (*/adfs/services/trust/2005/windowstransport* and */a
 Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/2005/windowstransport -Proxy $false
 Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/13/windowstransport -Proxy $false
 ```
+Note: In case your AD FS farm runs on Windows Internal Databases (WID) and have a secondary AD FS server, after disabling the endpoints on primary server, wait for the SYNC to occur on secondary nodes before restarting the AD FS service on them. Use PowerShell command Get-AdfsSyncProperties on secondary node to track last SYNC process.
 
 ### Differentiate access policies for intranet and extranet access
 AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This can be done per application or globally.  For high business value applications or applications with sensitive or personally identifiable information, consider requiring multi factor authentication.  This can be done via the AD FS management snap-in.
