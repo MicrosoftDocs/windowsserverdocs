@@ -43,14 +43,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "Announcing Update Health Tools"
+          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/announcing-update-health-tools/ba-p/2566232
+          itemType: whats-new
         - text: "July 2021 Windows non-security preview \"C\" release is available for Windows 10, version 1809"
-          url: https://support.microsoft.com/help/5004293
+          url: https://support.microsoft.com/help/5004308
           itemType: whats-new
         - text: "Join the Tech Community Live: Windows edition on July 21, 2021"
           url: https://techcommunity.microsoft.com/t5/tech-community-live/tech-community-live-windows-edition/ev-p/2481262
-          itemType: whats-new
-        - text: "Introducing Windows 10, version 21H2"
-          url: https://blogs.windows.com/windowsexperience/?p=176019
           itemType: whats-new
 
       footerLink:
