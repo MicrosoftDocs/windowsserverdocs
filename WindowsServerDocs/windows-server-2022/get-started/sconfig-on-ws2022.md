@@ -116,4 +116,4 @@ Closes the Sconfig.cmd menu and provides a PowerShell prompt. To return to the S
 
 ## Disable Sconfig.cmd from automatically starting
 
-Sconfig.cmd automatically starts on Windows Server 2022 Server Core installations. You can stop Sconfig from launching automatically by running the PowerShell command "Set-Sconfig -AutoLaunch $False"
+Sconfig.cmd automatically starts on Windows Server 2022 Server Core installations. You can stop Sconfig from launching automatically by running the PowerShell command `Set-Sconfig -AutoLaunch $False`.
