@@ -82,7 +82,7 @@ You can use familiar storage cmdlets in PowerShell to create volumes with nested
 
 ### Step 1: Create storage tier templates
 
-Windows Server 2019 requires you to create new storage tier templates using the `New-StorageTier` cmdlet before creating volumes. You only need to do this once, and then every new volume you create can reference these template. 
+Windows Server 2019 requires you to create new storage tier templates using the `New-StorageTier` cmdlet before creating volumes. You only need to do this once, and then every new volume you create can reference these templates. 
 
 > [!NOTE]
 > If you're running Windows Server 2022, Azure Stack HCI 21H2, or Azure Stack HCI 20H2, you can skip this step.
