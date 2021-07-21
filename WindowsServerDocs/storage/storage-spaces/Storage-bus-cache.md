@@ -3,7 +3,7 @@ title: Storage bus cache on Storage Spaces
 description: Enable storage bus cache on standalone servers for better read and write performance
 author: TinaWu-Msft
 ms.author: tinawu
-ms.service: #Required; service per approved list. slug assigned by ACOM.
+ms.prod: windows-server
 ms.topic: tutorial #Required; leave this attribute/value as-is.
 ms.date: 05/25/2021
 ms.custom: template-tutorial #Required; leave this attribute/value as-is.
