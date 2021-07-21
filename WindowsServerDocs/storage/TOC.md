@@ -125,7 +125,7 @@
 ### [Storage Replica: Frequently Asked Questions](storage-replica/storage-replica-frequently-asked-questions.yml)
 ## [Storage Spaces](storage-spaces/overview.md)
 ### [Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)
-### [Enable storage bus cache with Storage Spaces on standalone servers](storage-spaces/Storage-bus-cache.md)
+### [Enable storage bus cache with Storage Spaces on standalone servers](storage-spaces/storage-spaces-storage-bus-cache.md)
 ### [Health and operational states](storage-spaces/storage-spaces-states.md)
 ## [Storage Spaces Direct](storage-spaces/storage-spaces-direct-overview.md)
 ### Understand
