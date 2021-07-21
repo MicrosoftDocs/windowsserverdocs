@@ -68,7 +68,7 @@ In this step you transfer data after specifying where to put it on the destinati
     > - A valid Azure subscription.
     > - An existing Azure Compute resource group where you have Create rights.
     > - An existing Azure Virtual Network and subnet.
-    > - An Azure Express Route or VPN solution tied to the Virtual Network and subnet that allows connectivity from this Azure IaaS VM to your on-premises clients, domain controllers, the Storage Migration Service orchestrator computer, the Windows Admin Center computer, and the source computer to be migrated.
+    > - An [Azure ExpressRoute](https://azure.microsoft.com/services/expressroute/) circuit or [Azure VPN solution](https://azure.microsoft.com/services/vpn-gateway/) tied to the Virtual Network and subnet that allows connectivity from this Azure IaaS VM to your on-premises clients, domain controllers, the Storage Migration Service orchestrator computer, the Windows Admin Center computer, and the source computer to be migrated.
 
     Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
     > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ]

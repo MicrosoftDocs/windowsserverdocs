@@ -195,7 +195,7 @@ New-ADCentralAccessRule "Finance Documents Rule" -CurrentAcl $currentAcl -Resour
 ```
 
 > [!IMPORTANT]
-> In the above cmdlet example, the security identifiers (SIDs) for the group FinanceAdmin and users is determined at creation time and will be different in your example. For example, the provided SID value (S-1-5-21-1787166779-1215870801-2157059049-1113) for the FinanceAdmins needs to be replaced with the actual SID for the FinanceAdmin group that you would need to create in your deployment. You can use Windows PowerShell to look up the SID value of this group, assign that value to a variable, and then use the variable here. For more information, see [Windows PowerShell Tip: Working with SIDs](https://go.microsoft.com/fwlink/?LinkId=253545).
+> In the above cmdlet example, the security identifiers (SIDs) for the group FinanceAdmin and users is determined at creation time and will be different in your example. For example, the provided SID value (S-1-5-21-1787166779-1215870801-2157059049-1113) for the FinanceAdmins needs to be replaced with the actual SID for the FinanceAdmin group that you would need to create in your deployment. You can use Windows PowerShell to look up the SID value of this group, assign that value to a variable, and then use the variable here. For more information, see [Windows PowerShell Tip: Working with SIDs](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730940(v=technet.10)).
 
 You should now have a central access rule that allows people to access documents from the same country and the same department. The rule allows the FinanceAdmin group to edit the documents, and it allows the FinanceException group to read the documents. This rule targets only documents classified as Finance.
 

@@ -163,3 +163,9 @@ ms.date: 12/10/2020
 |Server license logging|Yes|Yes|
 |Inherited activation|As guest if hosted on Datacenter| <strong>Can be a host or a guest</strong> |
 |Work Folders|Yes|Yes|
+
+## Known issues
+
+If the **Available Physical Memory** exceeds 24TB, **Task Manager** displays 24TB instead of the actual size.
+
+After installing Hyper-V, **Task Manager** displays 512 cores and 1024 logical processors instead of the actual numbers if there are more than 512 cores or more than 32 sockets.

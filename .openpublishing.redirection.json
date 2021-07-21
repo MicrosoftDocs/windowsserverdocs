@@ -87,7 +87,7 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/securing-privileged-access/privileged-access-workstations.md",
-      "redirect_url": "/security/compass/concept-azure-managed-workstation",
+      "redirect_url": "/security/compass/privileged-access-devices",
       "redirect_document_id": false
     },
     {
@@ -10023,7 +10023,7 @@
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/cluster-sets.md",
       "redirect_url": "/azure-stack/hci/deploy/cluster-set",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md",
@@ -10033,6 +10033,21 @@
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/deploy-pmem.md",
       "redirect_url": "/azure-stack/hci/concepts/deploy-persistent-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-comp.md",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-format.md",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-etl2txt",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-pcapng.md",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-etl2pcap",
       "redirect_document_id": false
     }
   ]

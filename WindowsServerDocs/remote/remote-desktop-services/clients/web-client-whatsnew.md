@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop web client](remote-desktop-web-client.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 > [!NOTE]
-> We've changed the versioning system for the web client. Starting with version 1.0.18.0, all web client release versions will contain numbers (in the format of "W.X.Y.Z"). Release numbers for the Remote Desktop web client will always end with a 0 (for example, W.X.Y.0). Each Windows Virtual Desktop web client release will change the last digit until the next Remote Desktop web client release (for example, 1.0.18.1).
+> We've changed the versioning system for the web client. Starting with version 1.0.18.0, all web client release versions will contain numbers (in the format of "W.X.Y.Z"). Release numbers for the Remote Desktop web client will always end with a 0 (for example, W.X.Y.0). Each Azure Virtual Desktop web client release will change the last digit until the next Remote Desktop web client release (for example, 1.0.18.1).
 
 ## Updates for 1.0.24.0
 *Date published: 1/6/2021*
@@ -33,7 +33,7 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 - Users can now move the minimized menu.
 - Improved support for 4K and ultra-wide monitors and fixed an issue where copying large amounts of data caused sessions to crash.
-- Improved support for using an Input Method Editor in the remote session. To learn more about using an Input Method Editor with the web client, check out [Connect to Windows Virtual Desktop with the web client](https://docs.microsoft.com/azure/virtual-desktop/connect-web).
+- Improved support for using an Input Method Editor in the remote session. To learn more about using an Input Method Editor with the web client, check out [Connect to Azure Virtual Desktop with the web client](/azure/virtual-desktop/connect-web).
 - Changed the **All Resources** page UI.
 - Fixed several connection sequence failures where web client returned a *General Protocol Error*.
 - Fixed keyboard input issues where specific key sequences were not handled appropriately.

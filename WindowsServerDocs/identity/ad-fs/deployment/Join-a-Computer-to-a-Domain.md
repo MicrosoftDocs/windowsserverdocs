@@ -15,7 +15,7 @@ For Active Directory Federation Services \(AD FS\) to function, each computer 
 
 You do not have to join a Web server to a domain if the Web server is hosting claims\-aware applications only.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ### To join a computer to a domain
 
@@ -35,5 +35,3 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)
 
 [Checklist: Setting Up a Federation Server Proxy](Checklist--Setting-Up-a-Federation-Server-Proxy.md)
-
-

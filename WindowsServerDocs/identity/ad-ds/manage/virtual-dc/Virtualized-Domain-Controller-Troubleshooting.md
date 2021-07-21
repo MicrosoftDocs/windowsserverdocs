@@ -878,7 +878,7 @@ The promotion process means that the cloning starts, the DC is scrubbed of its c
 >
 > For further explanation of the dcpromo.log see the Understand and Troubleshoot AD DS Simplified Administration in Windows Server 2012.
 >
-> [https://go.microsoft.com/fwlink/p/?LinkId=237244](https://go.microsoft.com/fwlink/p/?LinkId=237244)
+> [https://go.microsoft.com/fwlink/p/?LinkId=237244](../ad-ds-simplified-administration.md)
 
 - Start clone-based promotion
 

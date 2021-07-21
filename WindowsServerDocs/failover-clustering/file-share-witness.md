@@ -5,7 +5,7 @@ manager: eldenc
 ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar
-ms.date: 01/24/2019
+ms.date: 05/28/2021
 ms.localizationpriority: medium
 ---
 # Deploy a file share witness

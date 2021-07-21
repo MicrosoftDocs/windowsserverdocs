@@ -5,7 +5,7 @@ title: Simplified SMB Multichannel and Multi-NIC Cluster Networks
 ms.topic: article
 author: RobHindman
 ms.author: robhind
-ms.date: 09/15/2016
+ms.date: 05/28/2021
 ---
 # Simplified SMB Multichannel and Multi-NIC Cluster Networks
 

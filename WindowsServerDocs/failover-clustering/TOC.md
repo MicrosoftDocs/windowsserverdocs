@@ -6,7 +6,7 @@
 ### [Fault domain awareness](fault-domains.md)
 ### [Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md)
 ### [VM load balancing](/azure-stack/hci/manage/vm-load-balancing)
-### [Cluster sets](../storage/storage-spaces/cluster-sets.md)
+### [Cluster sets](/azure-stack/hci/deploy/cluster-set)
 ### [Cluster affinity](cluster-affinity.md)
 ## Plan
 ### [Hardware requirements](clustering-requirements.md)

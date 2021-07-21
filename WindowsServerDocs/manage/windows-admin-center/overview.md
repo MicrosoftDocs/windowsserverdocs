@@ -50,7 +50,7 @@ Here's a video to give you an overview, followed by a poster giving more details
             <h3>Understand</h3>
             <ul>
             <li><a href="understand/what-is.md">What is Windows Admin Center?</a>
-            <li><a href="understand/faq.md">FAQ</a>
+            <li><a href="understand/faq.yml">FAQ</a>
             <li><a href="understand/case-studies.md">Case studies</a>
             <li><a href="understand/related-management.md">Related management products</a>
             </ul>
