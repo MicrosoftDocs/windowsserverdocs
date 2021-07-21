@@ -17,7 +17,7 @@ Each release of Windows Server adds new features and functionality; we also occa
 
 > [!TIP]
 > - You can get early access to Windows Server builds by joining the [Windows Insider Program for Business](https://insider.windows.com/for-business) - this is a great way to test feature changes.
-> - Have questions about other releases? Check out [Features removed or planned for replacement in Windows Server](../../get-started-19/removed-features.md).
+> - Have questions about other releases? Check out [Features removed or planned for replacement in Windows Server 2019](../../get-started-19/removed-features.md).
 
 **The list is subject to change and might not include every affected feature or functionality.**
 
@@ -26,6 +26,12 @@ Each release of Windows Server adds new features and functionality; we also occa
 With Windows Server 2022 there is one primary release channel available, the Long-Term Servicing Channel. The Semi-Annual Channel in previous versions of Windows Server 2019 focused on containers and microservices, and that innovation will continue with [Azure Stack HCI](/azure-stack/hci/).
 
 With the Long-Term Servicing Channel, a new major version of Windows Server is released every 2-3 years. Users are entitled to 5 years of mainstream support and 5 years of extended support. This channel provides systems with a long servicing option and functional stability, and can be installed with Server Core or Server with Desktop Experience installation options. The Long-Term Servicing Channel will continue to receive security and non-security updates, but it will not receive the new features and functionality.
+
+## Features we've removed
+
+| Feature | Explanation |
+|--|--|
+| Internet Storage Name Service (iSNS) Server service | The iSNS Server service has now been removed from Windows Server 2022 after it was considered for removal in Windows Server, version 1709. You can still connect to iSNS servers or add iSCSI targets individually. |
 
 ## Features we're no longer developing
 
