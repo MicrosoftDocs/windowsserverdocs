@@ -122,7 +122,7 @@ This section is a step-by-step guide on how to enable the storage bus cache for 
 
     The output should resemble the image below, where the Number column shows values under 500 and the CanPool column shows True for all non-boot drives.
     
-    :::image type="content" source="media/storage-bus-cache/get-physicaldisk.png" alt-text="Result from Get-PhysicalDisk before enabling the storage bus cache":::
+    :::image type="content" source="media/storage-bus-cache/get-physical-disk.png" alt-text="Result from Get-PhysicalDisk before enabling the storage bus cache":::
 
 4. Enable storage bus cache
 
