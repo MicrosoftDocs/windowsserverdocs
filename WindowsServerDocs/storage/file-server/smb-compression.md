@@ -112,7 +112,7 @@ You can configure an SMB client to always request compression and to always reje
 1. On SMB client computer, start Regedit.exe.
 1. Navigate to the following registry subkey:
 
-    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation`
+    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\parameters`
 
 1. Create a new REG_DWORD value name:
 
@@ -133,7 +133,7 @@ You can configure an SMB client to always request compression and to always reje
 
      This sets
 
-    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation`
+    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\parameters`
 
     `DisableCompression [dword] = 1`
 
@@ -142,7 +142,7 @@ You can configure an SMB client to always request compression and to always reje
 1. On SMB server computer, start Regedit.exe.
 1. Navigate to the following registry subkey:
 
-    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManServer`
+    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManServer\parameters`
 
 1. Create a new REG_DWORD value name:
 
@@ -166,7 +166,7 @@ If you want SMB compression to aggressively compress no matter what the file siz
 1. On SMB client computer, start Regedit.exe.
 1. Navigate to the following registry subkey:
 
-    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation`
+    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\parameters`
 
 1. Create a new REG_DWORD value name:
 
