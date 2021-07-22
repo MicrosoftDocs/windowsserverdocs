@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Features removed or planned for replacement in Windows Server
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Applies to: Windows Server 2019, Windows Server 2016
 
 You can find the removed and deprecated features for each of these Windows Server releases.
 

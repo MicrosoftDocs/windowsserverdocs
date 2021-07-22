@@ -10,7 +10,7 @@ description: How to use Storage Replica to replicate volumes in one cluster to a
 ---
 # Cluster to cluster Storage Replication
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Applies to: Windows Server 2019, Windows Server 2016
 
 Storage Replica can replicate volumes between clusters, including the replication of clusters using Storage Spaces Direct. The management and configuration is similar to server-to-server replication.
 

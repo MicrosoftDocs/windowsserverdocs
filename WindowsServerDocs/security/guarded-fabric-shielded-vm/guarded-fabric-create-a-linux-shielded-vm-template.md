@@ -11,7 +11,7 @@ ms.date: 08/29/2018
 
 # Create a Linux shielded VM template disk
 
-> Applies To: Windows Server 2019, Windows Server (Semi-Annual Channel),
+> Applies To: Windows Server 2019
 
 This topic explains how to prepare a template disk for Linux shielded VMs that can be used to instantiate one or more tenant VMs.
 
