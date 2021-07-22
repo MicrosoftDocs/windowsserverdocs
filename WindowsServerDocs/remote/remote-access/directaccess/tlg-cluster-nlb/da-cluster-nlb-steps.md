@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Steps for Configuring the DirectAccess Cluster-NLB Test Lab
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 The following steps describe how to configure the Remote Access infrastructure, configure the Remote Access servers and clients, and test DirectAccess connectivity from the Internet and Homenet subnets.
 

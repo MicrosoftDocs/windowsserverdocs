@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # QoS Policy Scenarios
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic to review hypothetical scenarios that demonstrate how, when, and why to use QoS Policy.
 

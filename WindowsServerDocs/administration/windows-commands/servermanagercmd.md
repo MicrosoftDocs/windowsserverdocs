@@ -11,7 +11,7 @@ ms.date: 07/11/2018
 
 # servermanagercmd
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Installs and removes roles, role services, and features. Also displays the list of all roles, role services, and features available, and shows which are installed on this computer.
 

@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # fsutil tiering
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10
+> Applies to: Windows Server 2019, Windows Server 2016, Windows 10
 
 Enables management of storage tier functions, such as setting and disabling flags and listing of tiers.
 

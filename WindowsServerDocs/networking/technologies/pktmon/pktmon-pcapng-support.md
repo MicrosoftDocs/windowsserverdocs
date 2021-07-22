@@ -9,7 +9,7 @@ ms.date: 11/12/2020
 
 # Pktmon support for Wireshark (pcapng)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+>Applies to: Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
 Packet Monitor (Pktmon) can convert logs to pcapng format. These logs can be analyzed using Wireshark (or any pcapng analyzer); however, some of the critical information could be missing in the pcapng files. This topic explains the expected output, and how to take advantage of it.
 

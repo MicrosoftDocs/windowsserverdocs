@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Plan NPS as a RADIUS server
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 When you deploy Network Policy Server \(NPS\) as a Remote Authentication Dial-In User Service (RADIUS) server, NPS performs authentication, authorization, and accounting for connection requests for the local domain and for domains that trust the local domain. You can use these planning guidelines to simplify your RADIUS deployment.
 

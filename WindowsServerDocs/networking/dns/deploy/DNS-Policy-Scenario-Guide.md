@@ -10,7 +10,7 @@ ms.date: 01/05/2021
 ---
 # DNS Policy Scenario Guide
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 This guide is intended for use by DNS, network, and systems administrators.
 

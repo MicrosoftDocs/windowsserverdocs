@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Server Certificate Deployment
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 Follow these steps to install an enterprise root certification authority (CA) and to deploy server certificates for use with PEAP and EAP.
 

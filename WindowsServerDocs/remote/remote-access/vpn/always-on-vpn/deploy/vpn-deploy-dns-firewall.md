@@ -10,7 +10,7 @@ ms.date: 06/11/2018
 ---
 # Step 5. Configure DNS and firewall settings
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 4. Install and Configure the NPS Server](vpn-deploy-nps.md)
 - [**Next:** Step 6. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)

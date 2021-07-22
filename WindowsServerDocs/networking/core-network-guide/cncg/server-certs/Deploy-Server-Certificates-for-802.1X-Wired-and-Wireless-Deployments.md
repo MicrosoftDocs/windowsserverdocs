@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Deploy Server Certificates for 802.1X Wired and Wireless Deployments
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this guide to deploy server certificates to your Remote Access and Network Policy Server (NPS) infrastructure servers.
 

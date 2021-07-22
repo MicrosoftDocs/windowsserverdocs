@@ -10,7 +10,7 @@ manager: dongill
 
 # Add the RD Connection Broker server to the deployment and configure high availability
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 You can deploy a Remote Desktop Connection Broker (RD Connection Broker) cluster to improve the availability and scale of your Remote Desktop Services infrastructure.
 

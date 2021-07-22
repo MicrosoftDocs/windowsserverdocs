@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # create partition primary
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a primary partition on the basic disk with focus. After the partition has been created, the focus automatically shifts to the new partition.
 

@@ -10,7 +10,7 @@ ms.date: 01/05/2021
 ---
 # Configure the File Services server role
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can deploy BranchCache file server-based content servers on computers running Windows Server 2016 and the File Services server role with the **BranchCache for network files** role service installed.
 

@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # wdsutil new-namespace
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates and configures a new namespace. You should use this option when you have only the Transport Server role service installed. If you have both the Deployment Server role service and the Transport Server role service installed (which is the default), use [wdsutilnew-MulticastTransmission command](wdsutil-new-multicasttransmission.md). Note that you must register the content provider before you use this option.
 ## Syntax

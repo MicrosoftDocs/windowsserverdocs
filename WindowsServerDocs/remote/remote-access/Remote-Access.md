@@ -11,7 +11,7 @@ ms.date: 05/18/2018
 
 # Remote Access
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 The Remote Access guide provides you with an overview of the Remote Access server role in Windows Server 2016, and covers the following subjects:
 

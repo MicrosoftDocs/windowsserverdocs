@@ -10,7 +10,7 @@ ms.date: 05/16/2018
 
 # Manage Transport Layer Security (TLS)
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+> Applies to: Windows Server 2016, Windows 10
 
 ## Configuring TLS Cipher Suite Order
 

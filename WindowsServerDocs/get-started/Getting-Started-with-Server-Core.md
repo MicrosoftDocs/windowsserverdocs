@@ -23,7 +23,7 @@ When you install Windows Server for the first time, you have the following insta
 -    Windows Server Datacenter
 -    Windows Server Datacenter with Desktop Experience
 
-When you install Windows Server (Semi-Annual Channel), you have the following installation options:
+When you install you have the following installation options:
 
 -    Windows Server Standard
 -    Windows Server Datacenter

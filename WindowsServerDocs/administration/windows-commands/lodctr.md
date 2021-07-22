@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # lodctr
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Allows you to register or save performance counter name and registry settings in a file and designate trusted services.
 

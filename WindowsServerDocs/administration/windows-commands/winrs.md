@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # winrs
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows remote Management allows you to manage and execute programs remotely.
 ## Syntax

@@ -11,7 +11,7 @@ ms.reviewer: deverette
 
 # Step 3. Configure the Remote Access Server for Always On VPN
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 2. Configure the Server Infrastructure](vpn-deploy-server-infrastructure.md)
 - [**Previous:** Step 4. Install and configure the Network Policy Server (NPS)](vpn-deploy-nps.md)

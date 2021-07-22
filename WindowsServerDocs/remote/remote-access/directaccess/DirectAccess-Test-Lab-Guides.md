@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # DirectAccess Test Lab Guides
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 Following are links to the test lab guides for DirectAccess in Windows Server 2016, Windows Server 2012 R2 and Windows Server 2012.
 
