@@ -6,12 +6,12 @@ ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
 ms.author: jgerend
 author: JasonGerend
-ms.date: 06/15/2021
+ms.date: 07/22/2021
 ---
 
 # Hardware Only (HO) features and technologies
 
-> Applies to: Azure Stack HCI, version 20H2
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019
 
 These hardware accelerations improve networking performance in conjunction with the software but are not intimately part of any software feature. Examples of these include Interrupt Moderation, Flow Control, and Receive-side IPv4 Checksum Offload. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
 
