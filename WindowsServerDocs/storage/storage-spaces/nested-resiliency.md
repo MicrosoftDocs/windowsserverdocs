@@ -5,7 +5,7 @@ ms.author: jgerend
 manager: dansimpspaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 07/16/2019
+ms.date: 07/22/2021
 ---
 
 # Nested resiliency for Storage Spaces Direct
