@@ -93,13 +93,13 @@ If your capacity drives are hard disk drives (HDD), launch PowerShell as Adminis
 
 ```PowerShell
 # For mirror
-New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedMirror -ResiliencySettingName Mirror -MediaType HDD -NumberOfDataCopies 4
+New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedMirrorOnHDD -ResiliencySettingName Mirror -MediaType HDD -NumberOfDataCopies 4
 
 # For parity
-New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParity -ResiliencySettingName Parity -MediaType HDD -NumberOfDataCopies 2 -PhysicalDiskRedundancy 1 -NumberOfGroups 1 -FaultDomainAwareness StorageScaleUnit -ColumnIsolation PhysicalDisk
+New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParityOnHDD -ResiliencySettingName Parity -MediaType HDD -NumberOfDataCopies 2 -PhysicalDiskRedundancy 1 -NumberOfGroups 1 -FaultDomainAwareness StorageScaleUnit -ColumnIsolation PhysicalDisk
 ```
 
-If your capacity drives are solid-state drives (SSD), set the `-MediaType` to `SSD` instead. Do not modify the other parameters.
+If your capacity drives are solid-state drives (SSD), set the `-MediaType` to `SSD` instead and optionally set the `-FriendlyName` to `*OnSSD`. Do not modify the other parameters.
 
 > [!TIP]
 > Verify the tiers created successfully with `Get-StorageTier`.
