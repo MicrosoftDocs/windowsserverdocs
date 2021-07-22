@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # What's new in Windows Server
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Applies to: Windows Server 2019, Windows Server 2016
 
 You can find the new features for each of these Windows Server releases.
 
