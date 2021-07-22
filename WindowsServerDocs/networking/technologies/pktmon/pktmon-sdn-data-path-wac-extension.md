@@ -137,7 +137,7 @@ The save button allows you to save the log on your local machine for further ana
 
    - ETL format which can be analyzed using Microsoft Network Monitor. Note: [Check this page](pktmon-netmon-support.md) for more information.
    - Text format which can be analyzed using any text editor like TextAnalysisTool.NET.
-   - Pcapng fomat which can be analyzed using tools like Wireshark.
+   - Pcapng format which can be analyzed using tools like Wireshark.
       - Most of the Packet Monitor metadata will be lost during this conversion. Note: [Check this page](pktmon-pcapng-support.md) for more information.
 
 <center>

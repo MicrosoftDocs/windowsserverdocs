@@ -103,8 +103,8 @@ The save button allows you to save the log on your local machine, your remote ma
    - If the log is saved on your local machine, you will be able to save it in various formats:
       - Etl format which can be analyzed using Microsoft Network Monitor. Note: Check this page for more information.
       - Text format which can be analyzed using any text editor like TextAnalysisTool.NET.
-      - Pcapng fomat which can be analyzed using tools like Wireshark.
-         - Most of the Packet Monitor metadata will be lost during this conversion. [Check this page](pktmon-pcapng-support.md) for more information.
+      - Pcapng format which can be analyzed using tools like Wireshark.
+      - Most of the Packet Monitor metadata will be lost during this conversion. [Check this page](pktmon-pcapng-support.md) for more information.
 
    :::image type="content" source="media/packet-monitoring-save-feature.png" alt-text="Saving a local copy of the capture" border="true" lightbox="media/packet-monitoring-save-feature.png":::
 
