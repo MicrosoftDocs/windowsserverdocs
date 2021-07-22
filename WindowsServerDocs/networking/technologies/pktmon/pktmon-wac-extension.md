@@ -46,7 +46,7 @@ It's highly recommended to apply filters before starting any packet capture, bec
 
 2. Filtering by packet parameters
 
-   For the second step, the pane allows you to filter packets by their parameters. For a packet to be reported, it must match all conditions specified in at least one filter; up to 8 filters are supported at once. For each filter, you can specify packet parameters like MAC Addresses, IP Addresses, Ports, Ethertype, Transport Protocol, VLAN Id.
+   For the second step, the pane allows you to filter packets by their parameters. For a packet to be reported, it must match all conditions specified in at least one filter; up to 8 filters are supported at once. For each filter, you can specify packet parameters like MAC Addresses, IP Addresses, Ports, Ethertype, Transport Protocol, VLAN ID.
 
    - When two MACs, IPs, or ports are specified, the tool will not distinguish between source or destination; it will capture packets that have both values, whether as a destination or source. However, display filters can make that distinction; see the [Display filters](#display-filters) section below.
    - To further filter TCP packets, an optional list of TCP flags to match can be provided. Supported flags are FIN, SYN, RST, PSH, ACK, URG, ECE, and CWR.
