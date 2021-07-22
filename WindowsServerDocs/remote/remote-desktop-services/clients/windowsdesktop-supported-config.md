@@ -1,5 +1,12 @@
 ---
 title: Supported configurations for the Windows Desktop client
+description: Learn about which OS configurations the Remote Desktop web client supports.
+ms.topic: article
+author: heidilohr
+manager: femila
+ms.author: helohr
+ms.date: 07/23/2021
+ms.localizationpriority: medium
 ---
 
 # Supported configurations for the Windows Desktop client
@@ -10,13 +17,13 @@ This article lists which configurations the Windows Desktop client currently sup
 
 In order to run properly, your Windows Desktop client must meet the following requirements:
 
-- Client version must be at or above the minimum supported version. See [What's new in the Windows Desktop client](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/windowsdesktop-whatsnew)
+- Client version must be at or above the minimum supported version. See [What's new in the Windows Desktop client](windowsdesktop-whatsnew.md)
 
-- Client devices must have .NET Framework 4.6.1 or above. See [Lifecycle FAQ - .NET Framework](https://docs.microsoft.com/en-us/lifecycle/faq/dotnet-framework)
+- Client devices must have .NET Framework 4.6.1 or above. See [Lifecycle FAQ - .NET Framework](/lifecycle/faq/dotnet-framework)
 
 ## Supported OS versions
 
-The Windows Desktop Client is supported on the following Windows Operating Systems:
+The tables in this section list which versions of each Windows operating system (OS) is compatible with the Windows Desktop client.
 
 ### Windows client OS
 
@@ -42,4 +49,4 @@ The Windows Desktop Client is supported on the following Windows Operating Syste
 
 ## Other resources
 
-For information about Windows 10 releases see [Windows 10 - release information](https://docs.microsoft.com/en-us/windows/release-health/release-information)
+For more information about the latest Windows 10 releases, see [Windows 10 release information](/windows/release-health/release-information).
