@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 12/11/2020
+ms.date: 07/22/2021
 ms.localizationpriority: medium
 ---
 # Windows Desktop client for admins
@@ -44,6 +44,9 @@ To turn notifications off, set the following registry information:
 - **Type:** REG_DWORD
 - **Name:** AutomaticUpdates
 - **Data:** 0 = Disable notifications and turn off auto-update. 1 = Show notifications and turn off auto-update. 2 = Show notifications and auto-update on close.
+
+>[!NOTE]
+>The client doesn't update automatically while closed for per-machine installs.
 
 ### Configure user groups
 
