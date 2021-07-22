@@ -43,14 +43,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "Refresh your knowledge on monthly updates and learn how to improve patching efficiency"
+          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/achieving-world-class-windows-monthly-patching-efficiency/ba-p/2572945
+          itemType: whats-new
         - text: "Evolving the Microsoft Store for Business and Education"
           url: https://aka.ms/Windows/MSFB_Evolution
           itemType: whats-new
         - text: "Announcing Update Health Tools"
           url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/announcing-update-health-tools/ba-p/2566232
-          itemType: whats-new
-        - text: "July 2021 Windows non-security preview \"C\" release is available for Windows 10, version 1809"
-          url: https://support.microsoft.com/help/5004308
           itemType: whats-new
 
       footerLink:
