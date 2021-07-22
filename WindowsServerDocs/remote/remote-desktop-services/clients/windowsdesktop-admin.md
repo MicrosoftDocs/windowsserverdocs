@@ -46,7 +46,7 @@ To turn notifications off, set the following registry information:
 - **Data:** 0 = Disable notifications and turn off auto-update. 1 = Show notifications and turn off auto-update. 2 = Show notifications and auto-update on close.
 
 >[!NOTE]
->The system doesn't do automatic updates while the app is closed for per-machine installs.
+>The client doesn't update automatically while closed for per-machine installs.
 
 ### Configure user groups
 
