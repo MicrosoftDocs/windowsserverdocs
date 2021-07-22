@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Deploy Password\-Based 802.1X Authenticated Wireless Access
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 This is a companion guide to the Windows Server&reg; 2016 Core Network Guide. The Core Network Guide provides instructions for planning and deploying the components required for a fully functioning network and a new Active Directory® domain in a new forest.
 

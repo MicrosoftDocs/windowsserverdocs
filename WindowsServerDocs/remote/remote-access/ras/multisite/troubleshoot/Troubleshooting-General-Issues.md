@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Troubleshooting General Issues
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic contains troubleshooting information for general issues related to Remote Access.
 

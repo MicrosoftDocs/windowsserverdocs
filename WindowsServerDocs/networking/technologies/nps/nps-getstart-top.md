@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Getting Started with Network Policy Server
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use the topics in this section to learn about Network Policy Server features and capabilities.
 

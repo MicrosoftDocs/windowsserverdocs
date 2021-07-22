@@ -59,7 +59,7 @@ To make sure that Folder Redirection and Offline Files interact correctly with o
 
 ### Client requirements
 
-- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server (Semi-annual Channel), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
+- Client computers must run Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008.
 - Client computers must be joined to the Active Directory Domain Services (AD DS) domain that you are managing.
 - Client computers must run x64-based or x86-based processors. Folder Redirection is not supported on PCs powered by ARM processors. 
 > [!NOTE]  

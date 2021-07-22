@@ -10,7 +10,7 @@ ms.date: 10/12/2016
 ---
 # Windows Logon Scenarios
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This reference topic for the IT professional summarizes common Windows logon and sign-in scenarios.
 

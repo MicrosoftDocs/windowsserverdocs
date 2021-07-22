@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Deploy Remote Access in an Enterprise
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic provides an introduction to the DirectAccess scenario for the Enterprise.
 

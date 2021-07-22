@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # wdsutil new-multicasttransmission
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a new multicast transmission for an image. This command is equivalent to creating a transmission by using the Windows Deployment Services mmc snap-in (right-click the **Multicast Transmissions** node, and then click **create Multicast Transmission**). You should use this command when you have both the Deployment Server role service and the Transport Server role service installed (which is the default installation). If you have only the Transport Server role service installed, use [wdsutilnew-Namespace command](wdsutil-new-namespace.md).
 ## Syntax

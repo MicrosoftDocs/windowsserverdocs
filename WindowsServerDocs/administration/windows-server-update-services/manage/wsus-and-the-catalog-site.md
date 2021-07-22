@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # WSUS and the Catalog Site
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Catalog Site is the Microsoft location from which you can import hotfixes and hardware drivers.
 

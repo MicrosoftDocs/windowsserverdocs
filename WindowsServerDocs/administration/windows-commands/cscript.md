@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # cscript
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Starts a script to run in a command-line environment.
 

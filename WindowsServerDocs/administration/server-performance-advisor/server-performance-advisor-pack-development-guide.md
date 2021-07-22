@@ -9,7 +9,7 @@ ms.topic: article
 ---
 # Server Performance Advisor Pack Development Guide
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 8, Windows 10
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 8, Windows 10
 
 This development guide for Microsoft Server Performance Advisor (SPA) provides guidelines to help developers and system administrators develop advisor packs to analyze server performance.
 

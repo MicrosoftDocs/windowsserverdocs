@@ -9,7 +9,7 @@ ms.author: jgerend
 ---
 # Configure File Screen Audit
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 By using File Server Resource Manager, you can record file screening activity in an auditing database. The information saved in this database is used to generate the File Screening Audit report.
 

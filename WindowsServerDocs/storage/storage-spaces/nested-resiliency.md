@@ -5,7 +5,7 @@ ms.author: jgerend
 manager: dansimpspaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 07/16/2019
+ms.date: 07/22/2021
 ---
 
 # Nested resiliency for Storage Spaces Direct
@@ -82,7 +82,7 @@ You can use familiar storage cmdlets in PowerShell to create volumes with nested
 
 ### Step 1: Create storage tier templates
 
-Windows Server 2019 requires you to create new storage tier templates using the `New-StorageTier` cmdlet before creating volumes. You only need to do this once, and then every new volume you create can reference these template. 
+Windows Server 2019 requires you to create new storage tier templates using the `New-StorageTier` cmdlet before creating volumes. You only need to do this once, and then every new volume you create can reference these templates. 
 
 > [!NOTE]
 > If you're running Windows Server 2022, Azure Stack HCI 21H2, or Azure Stack HCI 20H2, you can skip this step.
@@ -93,13 +93,13 @@ If your capacity drives are hard disk drives (HDD), launch PowerShell as Adminis
 
 ```PowerShell
 # For mirror
-New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedMirror -ResiliencySettingName Mirror -MediaType HDD -NumberOfDataCopies 4
+New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedMirrorOnHDD -ResiliencySettingName Mirror -MediaType HDD -NumberOfDataCopies 4
 
 # For parity
-New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParity -ResiliencySettingName Parity -MediaType HDD -NumberOfDataCopies 2 -PhysicalDiskRedundancy 1 -NumberOfGroups 1 -FaultDomainAwareness StorageScaleUnit -ColumnIsolation PhysicalDisk
+New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParityOnHDD -ResiliencySettingName Parity -MediaType HDD -NumberOfDataCopies 2 -PhysicalDiskRedundancy 1 -NumberOfGroups 1 -FaultDomainAwareness StorageScaleUnit -ColumnIsolation PhysicalDisk
 ```
 
-If your capacity drives are solid-state drives (SSD), set the `-MediaType` to `SSD` instead. Do not modify the other parameters.
+If your capacity drives are solid-state drives (SSD), set the `-MediaType` to `SSD` instead and optionally set the `-FriendlyName` to `*OnSSD`. Do not modify the other parameters.
 
 > [!TIP]
 > Verify the tiers created successfully with `Get-StorageTier`.

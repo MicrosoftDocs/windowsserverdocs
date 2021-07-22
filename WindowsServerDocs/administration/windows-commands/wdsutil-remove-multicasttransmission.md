@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # wdsutil remove-multicasttransmission
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Disables multicast transmitting for an image. Unless you specify **/force**, existing clients will complete the image transfer but new clients will not be allowed to join.
 

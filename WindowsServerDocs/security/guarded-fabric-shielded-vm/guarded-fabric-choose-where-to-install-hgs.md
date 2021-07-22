@@ -10,7 +10,7 @@ ms.date: 08/29/2018
 
 # Choose whether to install HGS in its own dedicated forest or in an existing bastion forest
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 
 The Active Directory forest for HGS is sensitive because its administrators have access to the keys that control shielded VMs.

@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # create and Manage Server Groups
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes how to create custom, user-defined groups of servers in Server Manager in Windows Server.
 
