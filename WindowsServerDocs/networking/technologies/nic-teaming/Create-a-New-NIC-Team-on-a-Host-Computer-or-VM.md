@@ -5,12 +5,12 @@ manager: dougkim
 ms.assetid: a4caaa86-5799-4580-8775-03ee213784a3
 ms.author: jgerend
 author: JasonGerend
-ms.date: 09/13/2018
+ms.date: 07/23/2021
 ms.topic: article
 ---
 # Create a new NIC Team on a host computer or VM
 
->Applies to: Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 In this topic, you create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) running Windows Server 2016.
 
