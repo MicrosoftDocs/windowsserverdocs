@@ -12,7 +12,7 @@ ms.reviewer: deverette
 
 # Step 7.3. Configure the conditional access policy
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 - [**Next:** Step 7.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)

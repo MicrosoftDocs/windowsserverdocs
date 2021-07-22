@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Realm Names
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic for an overview of using realm names in Network Policy Server connection request processing.
 

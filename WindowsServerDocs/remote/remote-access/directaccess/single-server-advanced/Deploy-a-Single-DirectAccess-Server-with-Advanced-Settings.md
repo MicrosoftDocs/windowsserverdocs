@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Deploy a Single DirectAccess Server with Advanced Settings
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic provides an introduction to the DirectAccess scenario that uses a single DirectAccess server, and allows you to deploy DirectAccess with advanced settings.
 

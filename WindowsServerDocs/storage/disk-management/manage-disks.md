@@ -9,7 +9,7 @@ ms.author: jgerend
 ---
 # Manage disks
 
-> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic and its subtopics discuss using Disk Management to manage the disks in a computer, and includes information about initializing new disks, converting disks between different partition styles, and how Windows handles the online status of new disks.
 

@@ -9,7 +9,7 @@ manager: dongill
 ---
 # Scale out your Remote Desktop Services deployment by adding an RD Session Host farm
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 You can improve the availability and scale of your RDS deployment by adding a Remote Desktop Session Host (RDSH) farm.
 

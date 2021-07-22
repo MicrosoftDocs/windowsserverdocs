@@ -10,7 +10,7 @@ ms.date: 09/13/2018
 ---
 # Troubleshooting NIC Teaming
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 In this topic, we discuss ways to troubleshoot NIC Teaming, such as hardware and physical switch securities.  When hardware implementations of standard protocols don't conform to specifications, NIC Teaming performance might be affected. Also, depending on the configuration, NIC Teaming may send packets from the same IP address with multiple MAC addresses tripping up security features on the physical switch.
 

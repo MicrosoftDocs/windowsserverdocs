@@ -10,7 +10,7 @@ ms.date: 10/12/2016
 ---
 # Kerberos Authentication Overview
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 Kerberos is an authentication protocol that is used to verify the identity of a user or host. This topic contains information about Kerberos authentication in Windows Server 2012 and Windows 8.
 

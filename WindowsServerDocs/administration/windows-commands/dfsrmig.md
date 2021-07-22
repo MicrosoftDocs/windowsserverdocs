@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # dfsrmig
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The migration tool for the DFS Replication service, dfsrmig.exe, is installed with the DFS Replication service. This tool migrates SYSvol replication from File Replication Service (FRS) to Distributed File System (DFS) Replication. It also provides information about the progress of the migration and modifies Active Directory Domain Services (AD DS) objects to support the migration.
 

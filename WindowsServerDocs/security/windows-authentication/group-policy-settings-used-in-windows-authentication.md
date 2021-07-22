@@ -10,7 +10,7 @@ ms.date: 10/12/2016
 ---
 # Group Policy Settings Used in Windows Authentication
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This reference topic for the IT professional describes the use and impact of Group Policy settings in the authentication process.
 

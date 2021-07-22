@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # View DNS Zones
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic to view DNS zones in the IPAM client console.
 

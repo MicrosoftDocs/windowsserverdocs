@@ -11,7 +11,7 @@ ms.reviewer: deverette
 
 # Step 7.5. Create OMA-DM based VPNv2 profiles to Windows 10 devices
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 7.4. Deploy conditional access root certificates to on-premises AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
 - [**Next:** Learn how conditional access for VPN works](/windows/access-protection/vpn/vpn-conditional-access)

@@ -10,7 +10,7 @@ ms.date: 01/05/2021
 ---
 # Configure Windows Server Update Services (WSUS) Content Servers
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 After installing the BranchCache feature and starting the BranchCache service, WSUS servers must be configured to store update files on the local computer.
 

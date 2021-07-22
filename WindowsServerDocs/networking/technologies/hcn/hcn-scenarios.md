@@ -9,7 +9,7 @@ ms.topic: article
 
 # Common scenarios
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019
+> Applies to: Windows Server 2019
 
 ## Scenario: HCN
 

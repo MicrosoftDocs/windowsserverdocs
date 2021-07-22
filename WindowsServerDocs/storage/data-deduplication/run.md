@@ -10,7 +10,7 @@ ms.date: 09/15/2016
 ---
 # Running Data Deduplication
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2016
 
 ## <a id="running-dedup-jobs-manually"></a>Running Data Deduplication jobs manually
 

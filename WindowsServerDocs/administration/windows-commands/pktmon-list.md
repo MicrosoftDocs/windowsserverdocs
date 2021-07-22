@@ -9,7 +9,7 @@ ms.date: 06/24/2021
 
 # pktmon list
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+> Applies to: Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
 Lists all active networking components that can be monitored, allowing you to examine the networking stack layout. The command shows networking components (drivers) arranged by adapters bindings.
 

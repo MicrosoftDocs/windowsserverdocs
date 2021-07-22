@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Step 3 Verify Deployments
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic describes how to verify that you have correctly configured your basic DirectAccess deployment.
 

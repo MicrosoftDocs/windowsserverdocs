@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # automount
 
-Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
