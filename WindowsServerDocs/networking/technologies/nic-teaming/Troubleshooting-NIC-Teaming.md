@@ -12,7 +12,7 @@ ms.date: 07/23/2021
 
 >Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
-In this topic, we discuss ways to troubleshoot NIC Teaming, such as hardware and physical switch securities.  When hardware implementations of standard protocols don't conform to specifications, NIC Teaming performance might be affected. Also, depending on the configuration, NIC Teaming may send packets from the same IP address with multiple MAC addresses tripping up security features on the physical switch.
+In this topic, we discuss ways to troubleshoot NIC Teaming, such as hardware and physical switch securities.  When hardware implementations of standard protocols don't conform to specifications, NIC Teaming performance might be affected. Also, depending on the configuration, NIC Teaming may send packets from the same IP address with multiple MAC addresses that can trip security features on the physical switch.
 
 
 ## Hardware that doesn't conform to specification
@@ -43,7 +43,7 @@ Enable-NetAdapter *
 
 
 ## Related topics
-- [NIC Teaming](NIC-Teaming.md): In this topic, we give you an overview of Network Interface Card (NIC) Teaming in Windows Server 2016. NIC Teaming allows you to group between one and 32 physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.
+- [NIC Teaming](NIC-Teaming.md): In this topic, we give you an overview of Network Interface Card (NIC) Teaming in Windows Server 2016. NIC Teaming allows you to group between one and 32 physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance if a network adapter fails.
 
 - [NIC Teaming MAC address use and management](NIC-Teaming-MAC-Address-Use-and-Management.md): When you configure a NIC Team with switch independent mode and either address hash or dynamic load distribution, the team uses the media access control (MAC) address of the primary NIC Team member on outbound traffic. The primary NIC Team member is a network adapter that the operating system selects from the initial set of team members.
 
