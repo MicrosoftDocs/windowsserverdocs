@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 01/06/2021
+ms.date: 07/22/2021
 ms.localizationpriority: medium
 ---
 # What's new in the web client
@@ -14,6 +14,14 @@ We regularly update the [Remote Desktop web client](remote-desktop-web-client.md
 
 > [!NOTE]
 > We've changed the versioning system for the web client. Starting with version 1.0.18.0, all web client release versions will contain numbers (in the format of "W.X.Y.Z"). Release numbers for the Remote Desktop web client will always end with a 0 (for example, W.X.Y.0). Each Azure Virtual Desktop web client release will change the last digit until the next Remote Desktop web client release (for example, 1.0.18.1).
+
+## Updates for version 1.0.25.0
+
+*Date published: 7/22/2021*
+
+- Client now has web assembly on supported browsers. 
+- Added file transfer support.
+- Bug fixes.
 
 ## Updates for 1.0.24.0
 *Date published: 1/6/2021*
