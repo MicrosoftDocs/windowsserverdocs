@@ -11,7 +11,7 @@ ms.topic: conceptual
 ---
 # Roles, Role Services, and Features included in Windows Server - Server Core
 
-> Applies to: Windows Server 2019, Windows Server 2016, and Windows Server (Semi-Annual Channel)
+> Applies to: Windows Server 2019, Windows Server 2016
 
 We generally talk about [what's *not* in Server Core](server-core-removed-roles.md) - now we're going to try a different approach and tell you what's *included* and whether something is *installed by default*. The following roles, role services, and features are *in* the Server Core installation option of Windows Server. Use this information to help figure out if the Server Core option works for your environment. Because this is a large list, consider searching for the specific role or feature you're interested in - if that search doesn't return what you're looking for, it's not included in Server Core.
 
