@@ -398,3 +398,13 @@ sections:
           In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following Powershell command and remove token binding support.
           
           `Set-AdfsProperties -IgnoreTokenBinding $true`
+         
+      - question: |
+          I am seeing an Event 543 (System.ServiceModel.FaultException: The formatter threw an error while trying to deserialize the message: There was an error while trying to deserialize parameter schemas.microsoft.com/ws/2009/12/identityserver/protocols/policystore:maxBehaviorLevel. The InnerException message was 'Invalid enum value 'Win2019' cannot be deserialized into type 'Microsoft.IdentityServer.FarmBehavior'. Ensure that the necessary enum values are present and are marked with EnumMemberAttribute attribute if the type has DataContractAttribute attribute.'.  Please see InnerException for more details.
+          What is the mitigation for this event?
+        answer: |
+          The message above is expected when you have a mixed mode farm and AD FS 2019 provides the farm max behavior level information to the primary federation server and is not recognized by federation server version 2016. AD FS 2019 keeps trying to share in the farm the MaxBehaviorLevel value 'Win2019' until it becomes stale after 2 months and is automatically removed from the farm. To avoid receiving this message, migrate the primary federation role to the federation server with the latest version with instructions in this document https://docs.microsoft.com/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server?source=docs#to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level. 
+          
+          
+          
+          
