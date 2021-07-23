@@ -10,7 +10,7 @@ ms.date: 01/05/2021
 ---
 # Enable DirectAccess
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
  Windows Server 2016 and Windows Server 2012 combine DirectAccess and  Remote Access Service (RAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single  Windows Server 2016 or Windows Server 2012  Remote Access server with basic settings.
 

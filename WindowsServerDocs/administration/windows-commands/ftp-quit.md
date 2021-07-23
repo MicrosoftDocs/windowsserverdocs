@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # ftp quit
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends the ftp session with the remote computer, and then exits.
 

@@ -10,7 +10,7 @@ description: New and updated topics in the on-premises storage documentation for
 ---
 # Change history for storage topics in Windows Server
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Applies to: Windows Server 2019, Windows Server 2016
 
 This topic lists new and updated topics in the [Storage](storage.yml) documentation for Windows Server.
 

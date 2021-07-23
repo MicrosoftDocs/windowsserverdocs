@@ -10,7 +10,7 @@ ms.date: 10/12/2016
 ---
 # Windows Authentication Architecture
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This overview topic for the IT professional explains the basic architectural scheme for Windows authentication.
 

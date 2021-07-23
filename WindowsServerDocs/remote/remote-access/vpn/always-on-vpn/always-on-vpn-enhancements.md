@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Always On VPN enhancements
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+>Applies to: Windows Server 2016, Windows 10
 
 - [**Previous:** Learn about the Always On VPN features](../vpn-map-da.md)
 - [**Next:** Learn about the Always On VPN technology](always-on-vpn-technology-overview.md)

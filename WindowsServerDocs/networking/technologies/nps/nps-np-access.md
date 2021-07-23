@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Access Permission
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 Access permission is configured on the **Overview** tab of each network policy in Network Policy Server (NPS).
 

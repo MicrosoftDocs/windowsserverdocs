@@ -42,7 +42,7 @@ Cluster OS Rolling Upgrade is fully supported by System Center Virtual Machine M
 ## Requirements
 Complete the following requirements before you begin the Cluster OS Rolling Upgrade process:
 
-- Start with a Failover Cluster running Windows Server (Semi-Annual Channel), Windows Server 2016, or Windows Server 2012 R2.
+- Start with a Failover Cluster running Windows Server 2016, or Windows Server 2012 R2.
 - Upgrading a Storage Spaces Direct cluster to Windows Server, version 1709 isn't supported.
 - If the cluster workload is Hyper-V VMs, or Scale-Out File Server, you can expect zero-downtime upgrade.
 - Verify that the Hyper-V nodes have CPUs that support Second-Level Addressing Table (SLAT) using one of the following methods;

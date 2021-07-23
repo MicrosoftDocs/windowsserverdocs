@@ -9,7 +9,7 @@ ms.date: 01/05/2021
 ---
 # Choosing a BranchCache Design
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic to learn about BranchCache modes and to select the best modes for your deployment.
 

@@ -9,7 +9,7 @@ ms.date: 10/23/2020
 ---
 # Anycast DNS overview
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2016, Windows Server 2019
 
 This topic provides information about how Anycast DNS works.
 

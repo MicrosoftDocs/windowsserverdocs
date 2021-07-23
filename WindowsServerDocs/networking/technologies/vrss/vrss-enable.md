@@ -12,7 +12,7 @@ author: JasonGerend
 
 # Enable vRSS on a Virtual Network Adapter
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 Virtual RSS \(vRSS\) requires Virtual Machine Queue \(VMQ\) support from the physical adapter. If VMQ is disabled or is not supported then Virtual Receive-side scaling is disabled.
 

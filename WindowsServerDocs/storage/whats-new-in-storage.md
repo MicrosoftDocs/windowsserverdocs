@@ -10,7 +10,7 @@ ms.date: 05/29/2019
 ---
 # What's new in Storage in Windows Server
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2019, Windows Server 2016
 
 This topic explains the new and changed functionality in storage in Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
 

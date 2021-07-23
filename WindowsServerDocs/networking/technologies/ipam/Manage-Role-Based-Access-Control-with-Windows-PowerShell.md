@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Manage Role Based Access Control with Windows PowerShell
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic to learn how to use IPAM to manage role based access control with Windows PowerShell.
 

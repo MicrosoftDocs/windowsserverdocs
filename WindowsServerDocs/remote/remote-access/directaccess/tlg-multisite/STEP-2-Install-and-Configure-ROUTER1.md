@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # STEP 2 Install and Configure ROUTER1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 In this multisite test lab guide, the router computer provides an IPv4 and IPv6 bridge between the Corpnet and 2-Corpnet subnets, and acts as a router for IP-HTTPS and Teredo traffic.
 

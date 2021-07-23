@@ -10,7 +10,7 @@ ms.topic: article
 ---
 # Server Performance Advisor User's Guide
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8
 
 This user guide for Microsoft Server Performance Advisor (SPA) provides guidelines about how to use SPA to identify performance bottlenecks in systems deployed in various server roles.
 

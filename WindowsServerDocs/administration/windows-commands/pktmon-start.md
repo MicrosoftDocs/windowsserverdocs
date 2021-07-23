@@ -9,7 +9,7 @@ ms.date: 06/24/2021
 
 # pktmon start
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+> Applies to: Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
 Starts packet capture and event collection.
 
