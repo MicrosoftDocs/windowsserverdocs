@@ -29,8 +29,8 @@ Depending on attribute store placement and other requirements of your organizati
 ## Attribute stores that are supported by AD FS
 AD FS supports a wide range of directory and database stores that you can use for extracting administrator\-defined attribute values and populating claims with those values. AD FS supports any of the following directories or databases as attribute stores:
 
--   Active Directory in Windows Server 2003, Active Directory Domain Services \(AD DS\) in Windows Server 2008, AD DS in Windows Server 2012 and 2012 R2, and Windows Server 2016 and newer;
+-  AD DS in Windows Server 2012 and 2012 R2, and Windows Server 2016 and newer;
 
--   All editions of Microsoft SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, and SQL Server 2016 and newer;
+-   All editions of SQL Server 2012, SQL Server 2014, and SQL Server 2016 and newer;
 
 -   Custom attribute stores
