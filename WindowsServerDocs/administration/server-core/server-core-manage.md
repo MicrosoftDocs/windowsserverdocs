@@ -11,7 +11,7 @@ ms.topic: how-to
 ---
 # Manage a Server Core server
  
-> Applies to: Windows Server 2019, Windows Server 2016, and Windows Server (Semi-Annual Channel)
+> Applies to: Windows Server 2019, Windows Server 2016
 
 You can manage a Server Core server in the following ways:
 - Using [Windows Admin Center](../../manage/windows-admin-center/overview.md)
