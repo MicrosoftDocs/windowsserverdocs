@@ -4,12 +4,12 @@ description: Use this page to operate and consume Packet Monitor (Pktmon) throug
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/12/2020
+ms.date: 07/23/2021
 ---
 
 # Packet Monitoring Extension in Windows Admin Center
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows 10, Azure Stack Hub, Azure
 
 The Packet Monitoring extension allows you to operate and consume Packet Monitor through Windows Admin Center. The extension helps you diagnose your network by capturing and displaying network traffic through the networking stack in a log that is easy to follow and manipulate.
 
@@ -46,7 +46,7 @@ It's highly recommended to apply filters before starting any packet capture, bec
 
 2. Filtering by packet parameters
 
-   For the second step, the pane allows you to filter packets by their parameters. For a packet to be reported, it must match all conditions specified in at least one filter; up to 8 filters are supported at once. For each filter, you can specify packet parameters like MAC Addresses, IP Addresses, Ports, Ethertype, Transport Protocol, VLAN Id.
+   For the second step, the pane allows you to filter packets by their parameters. For a packet to be reported, it must match all conditions specified in at least one filter; up to 8 filters are supported at once. For each filter, you can specify packet parameters like MAC Addresses, IP Addresses, Ports, Ethertype, Transport Protocol, VLAN ID.
 
    - When two MACs, IPs, or ports are specified, the tool will not distinguish between source or destination; it will capture packets that have both values, whether as a destination or source. However, display filters can make that distinction; see the [Display filters](#display-filters) section below.
    - To further filter TCP packets, an optional list of TCP flags to match can be provided. Supported flags are FIN, SYN, RST, PSH, ACK, URG, ECE, and CWR.
@@ -103,8 +103,8 @@ The save button allows you to save the log on your local machine, your remote ma
    - If the log is saved on your local machine, you will be able to save it in various formats:
       - Etl format which can be analyzed using Microsoft Network Monitor. Note: Check this page for more information.
       - Text format which can be analyzed using any text editor like TextAnalysisTool.NET.
-      - Pcapng fomat which can be analyzed using tools like Wireshark.
-         - Most of the Packet Monitor metadata will be lost during this conversion. [Check this page](pktmon-pcapng-support.md) for more information.
+      - Pcapng format which can be analyzed using tools like Wireshark.
+      - Most of the Packet Monitor metadata will be lost during this conversion. [Check this page](pktmon-pcapng-support.md) for more information.
 
    :::image type="content" source="media/packet-monitoring-save-feature.png" alt-text="Saving a local copy of the capture" border="true" lightbox="media/packet-monitoring-save-feature.png":::
 

@@ -9,7 +9,7 @@ ms.date: 05/22/2019
 ---
 # Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server
 
->Applies To: Windows 10, Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies To: Windows 10, Windows Server 2019, Windows Server 2016
 
 Make the latest Hyper-V features available on your virtual machines by upgrading the configuration version. Don't do this until:
 

@@ -10,7 +10,7 @@ ms.date: 09/29/2020
 
 # tapicfg removescp
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Removes a service connection point for a TAPI application directory partition.
 

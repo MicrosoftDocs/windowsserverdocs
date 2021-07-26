@@ -10,7 +10,7 @@ ms.date: 08/08/2018
 ---
 # Schannel Security Support Provider Technical Reference
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+>Applies To: Windows Server 2016, Windows 10
 
 This reference for IT professionals contains information about the Transport Layer Security (TLS) protocol, the Secure Sockets Layer (SSL) protocol, and the Datagram Transport Layer Security (DTLS) protocol as implemented by the Schannel Security Support Provider (SSP).
 

@@ -23,7 +23,7 @@ Each release of Windows Server adds new features and functionality; we also occa
 
 ## Semi-Annual Channel
 
-With Windows Server 2022 there is one primary release channel available, the Long-Term Servicing Channel. The Semi-Annual Channel in previous versions of Windows Server 2019 focused on containers and microservices, and that innovation will continue with [Azure Stack HCI](/azure-stack/hci/).
+With Windows Server 2022 there is one primary release channel available, the Long-Term Servicing Channel. The Semi-Annual Channel in previous versions of Windows Server focused on containers and microservices, and that innovation will continue with [Azure Stack HCI](/azure-stack/hci/).
 
 With the Long-Term Servicing Channel, a new major version of Windows Server is released every 2-3 years. Users are entitled to 5 years of mainstream support and 5 years of extended support. This channel provides systems with a long servicing option and functional stability, and can be installed with Server Core or Server with Desktop Experience installation options. The Long-Term Servicing Channel will continue to receive security and non-security updates, but it will not receive the new features and functionality.
 

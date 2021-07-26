@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Configure the Server Certificate Template
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this procedure to configure the certificate template that Active Directory&reg; Certificate Services (AD CS) uses as the basis for server certificates that are enrolled to servers on your network.
 

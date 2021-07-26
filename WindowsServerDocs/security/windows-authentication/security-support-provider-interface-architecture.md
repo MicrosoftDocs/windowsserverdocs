@@ -10,7 +10,7 @@ ms.date: 10/12/2016
 ---
 # Security Support Provider Interface Architecture
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This reference topic for the IT professional describes the Windows authentication protocols that are used within the Security Support Provider Interface (SSPI) architecture.
 

@@ -11,7 +11,7 @@ ms.date: 06/07/2018
 
 # Migrate to Always On VPN and decommission DirectAccess
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+>Applies To: Windows Server 2016, Windows 10
 
 &#171; [**Previous:** Plan the DirectAccess to Always On VPN migration](da-always-on-migration-planning.md)<br>
 

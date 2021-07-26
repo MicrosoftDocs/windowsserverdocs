@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # Step 4: Configure Group Policy Settings for Automatic Updates
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In an active directory environment, you can use Group Policy to define how computers and users (referred to in this document as WSUS clients) can interact with Windows Updates to obtain automatic updates from Windows Server Update Services (WSUS).
 

@@ -10,7 +10,7 @@ ms.date: 10/12/2016
 ---
 # Authentication Policies and Authentication Policy Silos
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic for the IT professional describes authentication policy silos and the policies that can restrict accounts to those silos. It also explains how authentication policies can be used to restrict the scope of accounts.
 
