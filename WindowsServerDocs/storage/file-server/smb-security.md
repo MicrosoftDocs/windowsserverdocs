@@ -88,7 +88,7 @@ The secure dialect negotiation capability that is described in the next section 
 
 SMB 3.0 uses a more recent encryption algorithm for signing: Advanced Encryption Standard (AES)-cipher-based message authentication code (CMAC). SMB 2.0 used the older HMAC-SHA256 encryption algorithm. AES-CMAC and AES-CCM can significantly accelerate data encryption on most modern CPUs that have AES instruction support. For more information, see [The Basics of SMB Signing](/archive/blogs/josebda/the-basics-of-smb-signing-covering-both-smb1-and-smb2).
 
-Starting with Windows Server 2022, AES-256-GCM and AES-256-CCM cryptographic suites are supported for SMB Encryption and Signing. Windows will automatically negotiate this more advanced cipher method when connecting to another computer that supports it, and can also be mandated through Group Policy. AES-128 is still supported for down-level compatibility.
+Starting with Windows Server 2022, AES-256-GCM and AES-256-CCM cryptographic suites are supported for SMB Encryption and Signing. Windows will automatically negotiate this more advanced cipher method when connecting to another computer that supports it, and it can also be mandated through Group Policy. AES-128 is still supported for down-level compatibility.
 
 ## Disabling SMB 1.0
 
