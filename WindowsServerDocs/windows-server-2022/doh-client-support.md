@@ -1,10 +1,6 @@
 ---
 title: Secure DNS Client over HTTPS (DoH) on Windows Server 2022
-description: Windows Server 2022’s DNS client supports DNS-over-HTTPS (DoH). When DoH is
-enabled, DNS traffic between Windows Server’s DNS client and the DNS server is
-querying passes across a HTTPS connection rather than in plain text over the
-network. By passing the DNS query across an encrypted connection, it is
-protected from interception by untrusted third parties.
+description: Windows Server 2022’s DNS client supports DNS-over-HTTPS (DoH). When DoH is enabled, DNS traffic between Windows Server’s DNS client and the DNS server queries passes across an HTTPS connection rather than in plain text over the network. By passing the DNS query across an encrypted connection, it's protected from interception by untrusted third parties.
 ms.topic: conceptual
 author: IngridAtMicrosoft
 ms.author: orthomas
