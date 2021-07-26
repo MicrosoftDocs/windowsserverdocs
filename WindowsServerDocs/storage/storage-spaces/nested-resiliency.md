@@ -99,7 +99,7 @@ New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedMirrorOnHDD -R
 New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParityOnHDD -ResiliencySettingName Parity -MediaType HDD -NumberOfDataCopies 2 -PhysicalDiskRedundancy 1 -NumberOfGroups 1 -FaultDomainAwareness StorageScaleUnit -ColumnIsolation PhysicalDisk
 ```
 
-If your capacity drives are solid-state drives (SSD), set the `-MediaType` to `SSD` instead and optionally set the `-FriendlyName` to `*OnSSD`. Do not modify the other parameters.
+If your capacity drives are solid-state drives (SSD), set the `-MediaType` to `SSD` instead and change the `-FriendlyName` to `*OnSSD`. Do not modify the other parameters.
 
 > [!TIP]
 > Verify the tiers created successfully with `Get-StorageTier`.
@@ -113,16 +113,20 @@ Then, create new volumes using the `New-Volume` cmdlet.
 To use nested two-way mirror, reference the `NestedMirror` tier template and specify the size. For example:
 
 ```PowerShell
-New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume01 -StorageTierFriendlyNames NestedMirror -StorageTierSizes 500GB
+New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume01 -StorageTierFriendlyNames NestedMirrorOnHDD -StorageTierSizes 500GB
 ```
+
+If your capacity drives are solid-state drives (SSD), change `-StorageTierFriendlyNames` to `NestedMirrorOnSSD`.
 
 #### Nested mirror-accelerated parity
 
 To use nested mirror-accelerated parity, reference both the `NestedMirror` and `NestedParity` tier templates and specify two sizes, one for each part of the volume (mirror first, parity second). For example, to create one 500 GB volume that's 20% nested two-way mirror and 80% nested parity, run:
 
 ```PowerShell
-New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume02 -StorageTierFriendlyNames NestedMirror, NestedParity -StorageTierSizes 100GB, 400GB
+New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume02 -StorageTierFriendlyNames NestedMirrorOnHDD, NestedParityOnHDD -StorageTierSizes 100GB, 400GB
 ```
+
+If your capacity drives are solid-state drives (SSD), change `-StorageTierFriendlyNames` to `NestedMirrorOnSSD, NestedParityOnSSD`.
 
 ### Step 3: Continue in Windows Admin Center
 
