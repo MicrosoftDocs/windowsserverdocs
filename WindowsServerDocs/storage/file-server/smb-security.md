@@ -1,17 +1,18 @@
 ---
 title: SMB security enhancements
-description: An explanation of the SMB Encryption feature in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
+description: This topic explains the SMB security enhancements in Windows Server.
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.date: 07/09/2018
+ms.date: 07/26/2021
+ms.prod: windows-server
 ms.localizationpriority: medium
 ---
 # SMB security enhancements
 
->Applies to: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-This topic explains the SMB security enhancements in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
+This topic explains the SMB security enhancements in Windows Server.
 
 ## SMB Encryption
 
@@ -39,11 +40,13 @@ You can enable SMB Encryption for the entire file server or only for specific fi
     ```PowerShell
     Set-SmbShare –Name <sharename> -EncryptData $true
     ```
+
 2. To enable SMB Encryption for the entire file server, type the following script on the server:
 
     ```PowerShell
     Set-SmbServerConfiguration –EncryptData $true
     ```
+
 3. To create a new SMB file share with SMB Encryption enabled, type the following script:
 
     ```PowerShell
@@ -68,11 +71,12 @@ Set-SmbServerConfiguration –RejectUnencryptedAccess $false
 The secure dialect negotiation capability described in the next section prevents a man-in-the-middle attack from downgrading a connection from SMB 3.0 to SMB 2.0 (which would use unencrypted access). However, it does not prevent a downgrade to SMB 1.0, which would also result in unencrypted access. To guarantee that SMB 3.0 clients always use SMB Encryption to access encrypted shares, you must disable the SMB 1.0 server. (For instructions, see the section [Disabling SMB 1.0](#disabling-smb-10).) If the **–RejectUnencryptedAccess** setting is left at its default setting of **$true**, only encryption-capable SMB 3.0 clients are allowed to access the file shares (SMB 1.0 clients will also be rejected).
 
 >[!NOTE]
->* SMB Encryption uses the Advanced Encryption Standard (AES)-CCM algorithm to encrypt and decrypt the data. AES-CCM also provides data integrity validation (signing) for encrypted file shares, regardless of the SMB signing settings. If you want to enable SMB signing without encryption, you can continue to do this. For more information, see [The Basics of SMB Signing](/archive/blogs/josebda/the-basics-of-smb-signing-covering-both-smb1-and-smb2).
->* You may encounter issues when you attempt to access the file share or server if your organization uses wide area network (WAN) acceleration appliances.
->* With a default configuration (where there is no unencrypted access allowed to encrypted file shares), if clients that do not support SMB 3.0 attempt to access an encrypted file share, Event ID 1003 is logged to the Microsoft-Windows-SmbServer/Operational event log, and the client will receive an **Access denied** error message.
->* SMB Encryption and the Encrypting File System (EFS) in the NTFS file system are unrelated, and SMB Encryption does not require or depend on using EFS.
->* SMB Encryption and the BitLocker Drive Encryption are unrelated, and SMB Encryption does not require or depend on using BitLocker Drive Encryption.
+>
+>- SMB Encryption uses the Advanced Encryption Standard (AES)-CCM algorithm to encrypt and decrypt the data. AES-CCM also provides data integrity validation (signing) for encrypted file shares, regardless of the SMB signing settings. If you want to enable SMB signing without encryption, you can continue to do this. For more information, see [The Basics of SMB Signing](/archive/blogs/josebda/the-basics-of-smb-signing-covering-both-smb1-and-smb2).
+>- You may encounter issues when you attempt to access the file share or server if your organization uses wide area network (WAN) acceleration appliances.
+>- With a default configuration (where there is no unencrypted access allowed to encrypted file shares), if clients that do not support SMB 3.0 attempt to access an encrypted file share, Event ID 1003 is logged to the Microsoft-Windows-SmbServer/Operational event log, and the client will receive an **Access denied** error message.
+>- SMB Encryption and the Encrypting File System (EFS) in the NTFS file system are unrelated, and SMB Encryption does not require or depend on using EFS.
+>- SMB Encryption and the BitLocker Drive Encryption are unrelated, and SMB Encryption does not require or depend on using BitLocker Drive Encryption.
 
 ## Secure dialect negotiation
 
@@ -83,6 +87,8 @@ The secure dialect negotiation capability that is described in the next section 
 ## New signing algorithm
 
 SMB 3.0 uses a more recent encryption algorithm for signing: Advanced Encryption Standard (AES)-cipher-based message authentication code (CMAC). SMB 2.0 used the older HMAC-SHA256 encryption algorithm. AES-CMAC and AES-CCM can significantly accelerate data encryption on most modern CPUs that have AES instruction support. For more information, see [The Basics of SMB Signing](/archive/blogs/josebda/the-basics-of-smb-signing-covering-both-smb1-and-smb2).
+
+Starting with Windows Server 2022, AES-256-GCM and AES-256-CCM cryptographic suites are supported for SMB Encryption and Signing. Windows will automatically negotiate this more advanced cipher method when connecting to another computer that supports it, and can also be mandated through Group Policy. AES-128 is still supported for down-level compatibility.
 
 ## Disabling SMB 1.0
 
