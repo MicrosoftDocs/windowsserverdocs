@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/22/2021
+ms.date: 07/26/2021
 ms.localizationpriority: medium
 ---
 # What's new in the web client
