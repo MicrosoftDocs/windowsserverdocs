@@ -46,7 +46,7 @@ To turn notifications off, set the following registry information:
 - **Data:** 0 = Disable notifications and turn off auto-update. 1 = Show notifications and turn off auto-update. 2 = Show notifications and auto-update on close.
 
 >[!NOTE]
->The client doesn't automatically update for per-machine installations
+>The client doesn't automatically update for per-machine installations.
 
 ### Configure user groups
 
