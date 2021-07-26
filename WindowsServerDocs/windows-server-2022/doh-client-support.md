@@ -13,8 +13,6 @@ ms.date: 07/15/2021
 ms.prod: windows-server
 ---
 
-<!-- This article was written by Orin Thomas.  We cannot yet give him a by line.-->
-
 # Secure DNS Client over HTTPS (DoH)
 
 Windows Server 2022’s DNS client supports DNS-over-HTTPS (DoH). When DoH is
