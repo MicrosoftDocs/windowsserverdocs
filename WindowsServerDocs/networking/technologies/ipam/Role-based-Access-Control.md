@@ -1,15 +1,16 @@
 ---
 title: Role-based Access Control
-description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+description: Learn how to use role-based access control in IPAM.
 manager: brianlic
 ms.topic: article
 ms.assetid: ecdfc589-fa14-4bb3-ab7e-456ebc719385
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Role-based Access Control
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 This topic provides information about using role-based access control in IPAM.
 

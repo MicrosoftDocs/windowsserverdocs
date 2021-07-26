@@ -3,8 +3,8 @@ title: find
 description: Reference article for the find command, which searches for a string of text in files, displaying the specified text string in the file.
 ms.topic: reference
 ms.assetid: 2ca66b22-3b7c-4166-8503-eb75fc53ab46
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -71,7 +71,7 @@ for %f in (*.bat) do find PROMPT %f
 To search your hard disk to find and display the file names on drive C that contain the string CPU, use the pipe (|) to direct the output of the **dir** command to the **find** command as follows:
 
 ```
-dir c:\ /s /b | find CPU
+dir c:\ /s /b | find "CPU"
 ```
 
 Because **find** searches are case-sensitive and **dir** produces uppercase output, you must either type the string CPU in uppercase letters or use the **/i** command-line option with **find**.

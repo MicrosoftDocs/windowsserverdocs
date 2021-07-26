@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Configuring a Computer for Troubleshooting"
 ms.assetid: 155abe09-6360-4913-8dd9-7392d71ea4e6
 title: Configuring a Computer for Troubleshooting
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018
@@ -13,7 +14,7 @@ ms.topic: article
 
 Before you use advanced troubleshooting techniques to identify and fix Active Directory problems, configure your computers for troubleshooting. You should also have a basic understanding of troubleshooting concepts, procedures, and tools.
 
-For information about monitoring tools for Windows Server, see the Step-by-Step Guide for [Performance and Reliability Monitoring in Windows Server](https://go.microsoft.com/fwlink/?LinkId=123737)
+For information about monitoring tools for Windows Server, see the Step-by-Step Guide for [Performance and Reliability Monitoring in Windows Server](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771692(v=ws.10))
 
 ## Configuration tasks for troubleshooting
 

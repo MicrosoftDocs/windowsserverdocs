@@ -7,10 +7,11 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 12/18/2018
+ms.topic: how-to
 ---
 # Administer a Server Core server
 
->Applies to: Windows Server 2019, Windows Server 2016, and Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2019, Windows Server 2016
 
 Because Server Core doesn't have a UI, you need to use Windows PowerShell cmdlets, command line tools, or remote tools to perform basic administration tasks. The following sections outline the PowerShell cmdlets and commands used for basic tasks. You can also use [Windows Admin Center](../../manage/windows-admin-center/overview.md), a unified management portal currently in public preview, to administer your installation.
 
@@ -89,13 +90,13 @@ Run **slmgr.vbs –ipk\<productkey\>**. Then run **slmgr.vbs –ato**. If activa
 
 ### Configure Windows Firewall
 
-You can configure Windows Firewall locally on the Server Core computer using Windows PowerShell cmdlets and scripts. See [NetSecurity](/powershell/module/netsecurity/?view=win10-ps) for the cmdlets you can use to configure Windows Firewall.
+You can configure Windows Firewall locally on the Server Core computer using Windows PowerShell cmdlets and scripts. See [NetSecurity](/powershell/module/netsecurity/) for the cmdlets you can use to configure Windows Firewall.
 
 ### Enable Windows PowerShell remoting
 
 You can enable Windows PowerShell Remoting, in which commands typed in Windows PowerShell on one computer run on another computer. Enable Windows PowerShell Remoting with **Enable-PSRemoting**.
 
-For more information, see [About Remote FAQ](/powershell/module/microsoft.powershell.core/about/about_remote_faq?view=powershell-5.1).
+For more information, see [About Remote FAQ](/powershell/module/microsoft.powershell.core/about/about_remote_faq?view=powershell-5.1&preserve-view=true).
 
 ## Administrative tasks from the command line
 Use the following reference information to perform administrative tasks from the command line.

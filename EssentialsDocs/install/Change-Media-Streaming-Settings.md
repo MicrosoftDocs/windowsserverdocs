@@ -1,6 +1,6 @@
 ---
 title: "Change Media Streaming Settings"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to change media streaming settings to hide remote media streaming add-in, set the media library name, set video streaming quality, and enable or disable streaming.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: dec690d2-f80c-4b09-99d6-3bba41331972
@@ -55,7 +55,7 @@ mediaStreamingManager.SetMediaLibraryName(mediaLibraryName);
 
 ```
 
- For more information, see [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648).
+ For more information, see [Windows Server Solutions SDK](/previous-versions/windows/server-essentials/gg513988(v=msdn.10)).
 
 ##  <a name="BKMK_StreamingQuality"></a> Set video streaming quality
  You set the video streaming quality by obtaining the WinSAT CPU score and then creating and installing the .xml file that contains the WinSAT score information. If the .xml file that contains the WinSAT score information is installed before Initial Configuration runs, the user interface for setting video quality will not appear to the customer. For more information, see [Set the WinSAT Score on the Server](Set-the-WinSAT-Score-on-the-Server.md).

@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Deploying AD DS in a New Organization"
 ms.assetid: a589dda6-e05b-4b44-ae3e-b15dd3877617
 title: Deploying AD DS in a New Organization
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

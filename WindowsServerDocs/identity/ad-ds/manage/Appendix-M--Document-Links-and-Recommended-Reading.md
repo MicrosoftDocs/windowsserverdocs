@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Appendix M: Document Links and Recommended Reading"
 ms.assetid: 6785de86-4f7d-4ed1-9055-8de0871d59b5
 title: Appendix M - Document Links and Recommended Reading
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -41,7 +42,7 @@ The following table contains a list of links to external documents and their URL
 | [Authentication Mechanism Assurance for AD DS in Windows Server 2008 R2 Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378897(v=ws.10)) | [https://technet.microsoft.com/library/dd378897(WS.10).aspx](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378897(v=ws.10)) |
 | [Windows Server Update Services](/windows/deployment/deploy-whats-new) | [https://technet.microsoft.com/windowsserver/bb332157](/windows/deployment/deploy-whats-new) |
 | [Personal Virtual Desktops](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759174(v=ws.11)) | [https://technet.microsoft.com/library/dd759174.aspx](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759174(v=ws.11)) |
-| [Read-Only Domain Controller Planning and Deployment Guide](https://go.microsoft.com/fwlink/?LinkID=135993) | [https://technet.microsoft.com/library/cc771744(WS.10).aspx](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771744(v=ws.10)) |
+| [Read-Only Domain Controller Planning and Deployment Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771744(v=ws.10)) | [https://technet.microsoft.com/library/cc771744(WS.10).aspx](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771744(v=ws.10)) |
 | [Running Domain Controllers in Hyper-V](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363553(v=ws.10)) | [https://technet.microsoft.com/library/dd363553(v=ws.10).aspx](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363553(v=ws.10)) |
 | [Hyper-V Security Guide](https://www.microsoft.com/download/details.aspx?id=16650) | [https://www.microsoft.com/download/details.aspx?id=16650](https://www.microsoft.com/download/details.aspx?id=16650) |
 | [Ask the Directory Services Team](/archive/blogs/askds/managing-rid-pool-depletion) | [https://blogs.technet.com/b/askds/archive/2011/09/12/managing-rid-pool-depletion.aspx](/archive/blogs/askds/managing-rid-pool-depletion) |

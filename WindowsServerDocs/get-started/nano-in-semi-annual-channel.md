@@ -7,7 +7,7 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 05/21/2019
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544
 ---
 # Changes to Nano Server in Windows Server Semi-Annual Channel

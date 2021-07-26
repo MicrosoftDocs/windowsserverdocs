@@ -75,10 +75,9 @@ If you see more than one edition in the right column, upgrading to **either** ed
 For many additional options for moving to Windows Server 2016, such as license conversion among volume licensed editions, evaluation editions, and others, see details at [Upgrade Options](Supported-Upgrade-Paths.md).
 
 ### Migration
-**Migration** means moving from your existing operating system to Windows Server 2016 by performing a clean installation on a different set of hardware or virtual machine and then transferring the older server's workloads to the new server. Migration, which might vary considerably depending on the server roles you have installed, is discussed in detail at [Windows Server Installation, Upgrade,
-and Migration](./installation-and-upgrade.md).
+**Migration** means moving from your existing operating system to Windows Server 2016 by performing a clean installation on a different set of hardware or virtual machine and then transferring the older server's workloads to the new server. Migration, which might vary considerably depending on the server roles you have installed, is discussed in detail at [Windows Server Installation, Upgrade, and Migration](./installation-and-upgrade.md).
 
-The ability to migrate varies among different server roles. The follwogin grid explains your server role upgrade and migration options specifically for moving to Windows Server 2016. For individual role migration guides, visit [Migrating Roles and Features in Windows Server](./migrate-roles-and-features.md). For more information about installation and upgrades, see [Windows Server Installation, Upgrade, and Migration](./installation-and-upgrade.md).
+The ability to migrate varies among different server roles. The following grid explains your server role upgrade and migration options specifically for moving to Windows Server 2016. For individual role migration guides, visit [Migrating Roles and Features in Windows Server](./migrate-roles-and-features.md). For more information about installation and upgrades, see [Windows Server Installation, Upgrade, and Migration](./installation-and-upgrade.md).
 
 |Server Role|Upgradeable from Windows Server 2012 R2?|Upgradeable from Windows Server 2012?|Migration Supported?|Can migration be completed without downtime?|
 |-------------------|----------|--------------|--------------|----------|

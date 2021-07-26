@@ -1,23 +1,24 @@
 ---
 title: Network Function Virtualization
-description: You can use this topic to learn about Network Function Virtualization, which allows you to deploy virtual networking appliances like Datacenter Firewall, multitenant RAS Gateway, and Software Load Balancing (SLB) in Windows Server 2016.
+description: You can use this topic to learn about Network Function Virtualization, which allows you to deploy virtual networking appliances like Datacenter Firewall, multitenant RAS Gateway, and Software Load Balancing (SLB) in Windows Server 2019 and 2016.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 79df3bbe-48fd-4eff-8df6-35f6317566f3
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 06/16/2021
 ---
 # Network Function Virtualization
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn about Network Function Virtualization, which allows you to deploy virtual networking appliances such as Datacenter Firewall, multitenant RAS Gateway, and Software Load Balancing \(SLB\) multiplexer \(MUX\).
 
 >[!NOTE]
 >In addition to this topic, the following Network Function Virtualization documentation is available.
-> - [Datacenter Firewall Overview](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)
-> - [RAS Gateway for SDN](../../../sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
-> - [Software Load Balancing (SLB) for SDN](./software-load-balancing-for-sdn.md)
+> - [Datacenter Firewall Overview](/azure-stack/hci/concepts/datacenter-firewall-overview)
+> - [RAS Gateway for SDN](/azure-stack/hci/concepts/gateway-overview)
+> - [Software Load Balancing (SLB) for SDN](/azure-stack/hci/concepts/software-load-balancer)
 
 In today's software defined datacenters, network functions that are being performed by hardware appliances (such as load balancers, firewalls, routers, switches, and so on) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization. Virtual appliances are quickly emerging and creating a brand new market. They continue to generate interest and gain momentum in both virtualization platforms and cloud services.
 
@@ -84,7 +85,7 @@ The Microsoft platform has been engineered to be a great platform to build and d
 
 -   You can deploy a virtual appliance from the vendor of your choice.
 
--   You can deploy, configure, and manage your virtual appliances with the Microsoft Network Controller which comes with Windows Server 2016. For more information about the Network Controller, see [Network Controller](../../../sdn/technologies/network-controller/Network-Controller.md).
+-   You can deploy, configure, and manage your virtual appliances with the Microsoft Network Controller which comes with Windows Server 2016. For more information about the Network Controller, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).
 
 -   Hyper-V can host the top guest operating systems that you need.
 
@@ -117,4 +118,4 @@ Hyper-V Network Virtualization (HNV) Routing Control is the logical, centralized
 
 **Distributed multi-tenant firewall**
 
-The firewall protects the network layer of virtual networks. The policies are enforced at the SDN-vSwitch port of each tenant VM. It protects all traffic flows: east-west and north-south. The policies are pushed through the tenant portal and the Network Controller distributes them to all applicable hosts. For more information about the distributed multi-tenant firewall, see [Datacenter Firewall Overview](../../../sdn/technologies/network-function-virtualization/../../../sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md).
+The firewall protects the network layer of virtual networks. The policies are enforced at the SDN-vSwitch port of each tenant VM. It protects all traffic flows: east-west and north-south. The policies are pushed through the tenant portal and the Network Controller distributes them to all applicable hosts. For more information about the distributed multi-tenant firewall, see [Datacenter Firewall Overview](/azure-stack/hci/concepts/datacenter-firewall-overview).

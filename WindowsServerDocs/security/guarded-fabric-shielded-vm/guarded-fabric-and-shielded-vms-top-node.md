@@ -1,5 +1,6 @@
 ---
 title: Guarded fabric and shielded VMs
+description: "Learn more about: Guarded fabric and shielded VMs"
 ms.topic: article
 ms.assetid: 5c7ada81-2d97-41d4-87cf-1a7ccf06cd20
 manager: dongill
@@ -10,7 +11,7 @@ ms.date: 08/29/2018
 
 # Guarded fabric and shielded VMs
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 One of the most important goals of providing a hosted environment is to guarantee the security of the virtual machines running in the environment. As a cloud service provider or enterprise private cloud administrator, you can use a guarded fabric to provide a more secure environment for VMs. A guarded fabric consists of one Host Guardian Service (HGS) - typically, a cluster of three nodes - plus one or more guarded hosts, and a set of shielded virtual machines (VMs).
 
@@ -41,7 +42,7 @@ One of the most important goals of providing a hosted environment is to guarante
         - [Deploy a guarded host using AD mode](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)
         - [Deploy a guarded host using TPM mode](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md)
         - [Confirm guarded hosts can attest](guarded-fabric-confirm-hosts-can-attest-successfully.md)
-        - [Shielded VMs - Hosting service provider deploys guarded hosts in VMM](/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019)
+        - [Shielded VMs - Hosting service provider deploys guarded hosts in VMM](/system-center/vmm/guarded-deploy-host)
     - [Deploy shielded VMs](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
         - [Create a shielded VM template](guarded-fabric-create-a-shielded-vm-template.md)
         - [Prepare a VM Shielding helper VHD](guarded-fabric-vm-shielding-helper-vhd.md)

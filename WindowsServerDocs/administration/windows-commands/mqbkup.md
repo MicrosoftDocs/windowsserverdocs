@@ -3,15 +3,15 @@ title: mqbkup
 description: Reference article for the mqbkup command, which backs up MSMQ message files and registry settings to a storage device and restores previously-stored messages and settings.
 ms.topic: reference
 ms.assetid: 7bdd41c4-75ef-455f-b241-1d64a4c7acf5
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # mqbkup
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Backs up MSMQ message files and registry settings to a storage device and restores previously-stored messages and settings.
 
@@ -66,4 +66,4 @@ mqbkup /r c:\msmqbkup
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [MSMQ Powershell Reference](/powershell/module/msmq/?view=win10-ps)
+- [MSMQ Powershell Reference](/powershell/module/msmq/)

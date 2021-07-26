@@ -4,13 +4,14 @@ description: This topic provides information about configuring RADIUS Clients fo
 manager: brianlic
 ms.topic: article
 ms.assetid: cde37849-ce79-4c26-aa14-cd0ef31cae18
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Configure RADIUS Clients
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic to configure network access servers as RADIUS Clients in NPS.
 

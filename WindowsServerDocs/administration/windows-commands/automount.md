@@ -3,15 +3,15 @@ title: automount
 description: Reference article for the automount command, which enables or disables the automount feature.
 ms.topic: reference
 ms.assetid: 4635fc91-a477-4f17-8dcc-aa08854bfe45
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # automount
 
-Applies To: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 

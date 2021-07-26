@@ -2,16 +2,16 @@
 title: DHCP Subnet Selection Options
 description: This topic provides information about DHCP subnet selection options for Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016.
 manager: dougkim
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: ca19e7d1-e445-48fc-8cf5-e4c45f561607
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 08/17/2018
 ---
 
 # DHCP Subnet Selection Options
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic for information about new DHCP subnet selection options.
 

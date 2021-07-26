@@ -3,15 +3,15 @@ title: logman import and logman export
 description: Reference article for logman import and logman export, which imports a Data Collector Set from an XML file, or exports a Data Collector Set to an XML file.
 ms.topic: reference
 ms.assetid: c258daba-fb93-47c0-a53b-2fe83ed2c743
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # logman import and logman export
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Imports a Data Collector Set from an XML file, or exports a Data Collector Set to an XML file.
 

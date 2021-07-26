@@ -3,15 +3,15 @@ title: ftp mdelete
 description: Reference article for the ftp mdelete command, which deletes files on the remote computer.
 ms.topic: reference
 ms.assetid: 8a80a8f5-e880-40a8-abc9-29a41836844f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ftp mdelete
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Deletes files on the remote computer.
 

@@ -4,12 +4,13 @@ description: This topic provides a brief overview of Dynamic Host Configuration 
 manager: brianlic
 ms.topic: article
 ms.assetid: 0ff29ef3-c458-4432-9065-e50a7de5b4b9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Dynamic Host Configuration Protocol (DHCP)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic for a brief overview of DHCP in Windows Server 2016.
 

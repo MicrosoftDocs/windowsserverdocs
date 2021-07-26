@@ -17,10 +17,10 @@ Before you set up email discovery, do the following:
 - Create an RD Web feed URL (https://\<rdweb-dns-name\>.domain/RDWeb/Feed/webfeed.aspx, such as https://rdweb.contoso.com/RDWeb/Feed/webfeed.aspx)
 
 >[!NOTE]
->If you're using Windows Virtual Desktop instead of Remote Desktop, you'll want to use these URLs instead:
+>If you're using Azure Virtual Desktop instead of Remote Desktop, you'll want to use these URLs instead:
 >
->- If you're using Windows Virtual Desktop (classic): <https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfedddiscovery.aspx>
->- If you're using Windows Virtual Desktop: <https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery>
+>- If you're using Azure Virtual Desktop (classic): <https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx>
+>- If you're using Azure Virtual Desktop: <https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery>
 
 Now, follow these steps to set up email discovery:
 
@@ -29,7 +29,7 @@ Now, follow these steps to set up email discovery:
 3. Enter a new DNS record with the following properties:
    - **Host:** _msradc
    - **Text:** \<RD Web Feed URL\>
-   - **TTL:** 300
+   - **TTL:** 300 seconds
 
    The names of the DNS records fields vary by domain name registrar, but this process will result in a TXT record named _msradc.\<domain_name\> (such as _msradc.contoso.com) that has a value of the full RD Web feed.
 

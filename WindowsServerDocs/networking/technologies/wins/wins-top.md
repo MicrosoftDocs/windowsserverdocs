@@ -4,13 +4,14 @@ description: This topic provides information about decommissioning WINS and usin
 manager: brianlic
 ms.topic: article
 ms.assetid: 32eabe7d-1130-4001-a79a-8ddb31993e5b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 #  Windows Internet Name Service (WINS)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 Windows Internet Name Service (WINS) is a legacy computer name registration and resolution service that maps computer NetBIOS names to IP addresses.
 

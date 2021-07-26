@@ -1,6 +1,6 @@
 ---
 title:  TLS - SSL (Schannel SSP) Overview
-description: Windows Server Security
+description: Learn about the changes in functionality in the Schannel Security Support Provider (SSP).
 ms.topic: article
 ms.assetid: c8836345-16bb-4dcc-8d2b-2b9b687456a3
 author: justinha
@@ -10,7 +10,7 @@ ms.date: 05/16/2018
 ---
 # Overview of TLS - SSL (Schannel SSP)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+>Applies To: Windows Server 2016, Windows 10
 
 This topic for the IT professional describes the changes in functionality in the Schannel Security Support Provider (SSP), which includes the Transport Layer Security (TLS), the Secure Sockets Layer (SSL), and the Datagram Transport Layer Security (DTLS) authentication protocols, for  Windows Server 2012 R2 ,  Windows Server 2012 , Windows 8.1, and Windows 8.
 
@@ -86,7 +86,7 @@ If the  **Trusted Root Certifictation Authorities** store that was used contains
 
 The Schannel SSP architecture in Windows Server 2012 will by default use the stores as described above to manage the Trusted Issuers list. You can still use the existing certificate management commandlets of the PowerShell provider, as well as command line tools such as Certutil to manage certificates.
 
-For information about managing certificates using the PowerShell provider, see [AD CS Administration Cmdlets in Windows](/powershell/module/adcsadministration/?view=winserver2012-ps).
+For information about managing certificates using the PowerShell provider, see [AD CS Administration Cmdlets in Windows](/powershell/module/adcsadministration/?view=winserver2012-ps&preserve-view=true).
 
 For information about managing certificates using the certificate utility, see [certutil.exe](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732443(v=ws.11)).
 

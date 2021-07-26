@@ -3,8 +3,8 @@ title: bitsadmin cache and help
 description: Reference article for the bitsadmin cache and help command, which displays the command-line usage for the **cache** switches.
 ms.topic: reference
 ms.assetid: 0b14db49-84ac-4c2f-bf1f-f65e13cbfb35
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

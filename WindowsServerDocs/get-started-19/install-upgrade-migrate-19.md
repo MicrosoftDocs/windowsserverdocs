@@ -7,7 +7,9 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
+ms.date: 09/17/2020
 ---
+
 # Install, upgrade, or migrate to Windows Server
 
 > Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
@@ -19,7 +21,7 @@ Is it time to move to a newer version of Windows Server? Depending on what you'r
 
 ## Clean install
 
-The simplest way to install Windows Server is to perform a clean installation, where you install on a blank server or overwrite an existing operating system. That is the simplest way, but you will need to back up your data first and plan to reinstall your applications. There are a few things to be aware of, such as system requirements, so be sure to check the details for [Windows Server 2019](https://go.microsoft.com/fwlink/?linkid=2006124), [Windows Server 2016](https://go.microsoft.com/fwlink/?LinkID=825558), [Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303418(v=ws.11)), and [Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)).
+The simplest way to install Windows Server is to perform a clean installation, where you install on a blank server or overwrite an existing operating system. That is the simplest way, but you will need to back up your data first and plan to reinstall your applications. There are a few things to be aware of, such as system requirements, so be sure to check the details for [Windows Server 2019](./rel-notes-19.md), [Windows Server 2016](../get-started/windows-server-2016-ga-release-notes.md), [Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303418(v=ws.11)), and [Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)).
 
 ## In-place upgrade
 

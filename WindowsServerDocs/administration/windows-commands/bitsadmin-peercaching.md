@@ -3,14 +3,14 @@ title: bitsadmin peercaching
 description: Reference article for the bitsadmin peercaching command, which lists the /peercaching switches.
 ms.topic: reference
 ms.assetid: c2eaa3c7-9d30-4731-8a78-4b6e6041d29a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # bitsadmin peercaching
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Lists the /peercaching switches.
 

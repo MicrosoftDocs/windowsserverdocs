@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Read-Only Domain Controller Updates"
 ms.assetid: 38f6adb1-dfcf-456d-b631-2b1e96dc670b
 title: Read-Only Domain Controller Updates
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

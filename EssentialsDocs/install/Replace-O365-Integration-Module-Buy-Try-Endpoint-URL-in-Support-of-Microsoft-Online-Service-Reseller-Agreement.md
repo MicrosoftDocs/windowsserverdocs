@@ -1,6 +1,6 @@
 ---
 title: "Replace Microsoft 365 Integration Module Buy-Try Endpoint URL in Support of Microsoft Online Service Reseller Agreement"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to replace the endpoint URLs used by the Windows Server Essentials Microsoft 365 integration module.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 9860a6b9-baea-4bf0-9a9f-6f1a288f996e

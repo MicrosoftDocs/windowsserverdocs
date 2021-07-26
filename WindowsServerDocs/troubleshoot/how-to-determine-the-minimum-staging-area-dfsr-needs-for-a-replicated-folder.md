@@ -4,6 +4,7 @@ description: This article is a quick reference guide on how to calculate the min
 ms.date: 06/10/2020
 author: Deland-Han
 ms.author: delhan
+ms.topic: troubleshooting
 ---
 # How to determine the minimum staging area DFSR needs for a replicated folder
 

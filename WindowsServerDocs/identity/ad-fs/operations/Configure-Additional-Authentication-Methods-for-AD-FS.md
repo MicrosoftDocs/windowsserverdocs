@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Configure Additional Authentication Methods for AD FS"
 ms.assetid: ddfbbda3-30ca-4537-af12-667efc6f63ff
 title: Configure Additional Authentication Methods for AD FS
 author: billmath
@@ -46,7 +47,7 @@ Mideye | Mideye Authentication Provider for ADFS | [Mideye two-factor authentica
 
 
 ## Custom Authentication Method for AD FS in Windows Server 2012 R2
-We now provide instructions for building your own custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Build a Custom Authentication Method for AD FS in Windows Server 2012 R2](https://go.microsoft.com/fwlink/?LinkID=511980).
+We now provide instructions for building your own custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Build a Custom Authentication Method for AD FS in Windows Server 2012 R2](../development/ad-fs-build-custom-auth-method.md).
 
 ## See Also
 [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)

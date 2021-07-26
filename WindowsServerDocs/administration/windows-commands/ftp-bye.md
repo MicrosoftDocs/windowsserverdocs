@@ -3,15 +3,15 @@ title: ftp bye
 description: Reference article for the ftp bye command, which ends the ftp session on the remote computer, and then exits.
 ms.topic: reference
 ms.assetid: f20e2bf2-7d12-4606-942a-8ed555eb8e90
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ftp bye
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends the ftp session on the remote computer, and then exits.
 

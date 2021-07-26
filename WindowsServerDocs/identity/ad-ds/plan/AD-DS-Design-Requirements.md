@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: AD DS Design Requirements"
 ms.assetid: f6e76ef0-2217-4cdb-980f-22a780a85ebb
 title: AD DS Design Requirements
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -18,14 +19,14 @@ Before you deploy  Windows Server 2008  Active Directory Domain Services (AD DS)
 
 To design the AD DS logical structure, determine the number of forests that your organization requires, and then create designs for domains, Domain Name System (DNS) infrastructure, and organizational units (OUs). The following illustration shows the process for designing the logical structure.
 
-![AD DS design requirements](media/AD-DS-Design-Requirements/d5cebae6-a752-4063-a98f-473799c251bd.gif)
+![Illustration that shows the process for designing the logical structure.](media/AD-DS-Design-Requirements/d5cebae6-a752-4063-a98f-473799c251bd.gif)
 
 For more information, see [Designing the Logical Structure for Windows Server 2008 AD DS](Designing-the-Logical-Structure.md).
 
 ## Designing the site topology
 After you design the logical structure for your AD DS infrastructure, you must design the site topology for your network. The site topology is a logical representation of your physical network. It contains information about the location of AD DS sites, the AD DS domain controllers within each site, and the site links and site link bridges that support AD DS replication between sites. The following illustration shows the site topology design process.
 
-![AD DS design requirements](media/AD-DS-Design-Requirements/d34d43c0-437f-47cb-9b64-09c0f9ce6479.gif)
+![Illustration that shows the site topology design process.](media/AD-DS-Design-Requirements/d34d43c0-437f-47cb-9b64-09c0f9ce6479.gif)
 
 For more information, see [Designing the Site Topology for Windows Server 2008 AD DS](Designing-the-Site-Topology.md).
 

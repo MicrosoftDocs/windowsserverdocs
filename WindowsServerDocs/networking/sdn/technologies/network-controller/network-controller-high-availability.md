@@ -1,16 +1,17 @@
 ---
 title: Network Controller High Availability
-description: You can use this topic to learn about Network Controller high availability for Software Defined Networking (SDN) in Windows Server 2016.
+description: You can use this topic to learn about Network Controller high availability for Software Defined Networking (SDN) in Windows Server 2019 and 2016.
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 334b090d-bec4-4e67-8307-13831dbdd1d8
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 06/16/2021
 ---
 
 # Network Controller High Availability
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn about Network Controller high availability and scalability configuration for Software Defined Networking \(SDN\).
 
@@ -73,10 +74,10 @@ Service Fabric modularity uses service model schemas to maximize the ease of dev
 
 ## Network Controller Deployment Options
 
-To deploy Network Controller by using System Center Virtual Machine Manager \(VMM\), see [Set up an SDN network controller in the VMM fabric](/system-center/vmm/sdn-controller?view=sc-vmm-2019).
+To deploy Network Controller by using System Center Virtual Machine Manager \(VMM\), see [Set up an SDN network controller in the VMM fabric](/system-center/vmm/sdn-controller).
 
 To deploy Network Controller using scripts, see [Deploy a Software Defined Network Infrastructure Using Scripts](../../deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md).
 
 To deploy Network Controller using Windows PowerShell, see [Deploy Network Controller using Windows PowerShell](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md)
 
-For more information about Network Controller, see [Network Controller](Network-Controller.md).
+For more information about Network Controller, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).

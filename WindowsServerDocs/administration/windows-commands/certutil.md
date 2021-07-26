@@ -3,8 +3,8 @@ title: certutil
 description: Reference article for the certutil command, which is a command-line program that dumps and displays certification authority (CA) configuration information, configures Certificate Services, backup and restore CA components, and verifies certificates, key pairs, and certificate chains.
 ms.topic: reference
 ms.assetid: c264ccf0-ba1e-412b-9dd3-d77dd9345ad9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -391,7 +391,9 @@ Where:
 
 Gets a certificate revocation list (CRL).
 
+```
 certutil [options] -getcrl outfile [index] [delta]
+```
 
 Where:
 
@@ -1584,7 +1586,9 @@ Where:
 
 Deletes a Policy Server application and application pool, if necessary. This command does not remove binaries or packages.
 
+```
 certutil [options] -deletePolicyServer kerberos | username | clientcertificate [keybasedrenewal]
+```
 
 Where:
 

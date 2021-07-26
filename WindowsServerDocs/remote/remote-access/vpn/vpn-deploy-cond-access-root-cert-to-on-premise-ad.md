@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Step 7.4. Deploy conditional access root certificates to on-premises AD"
 title: Deploy Conditional Access root certificates to on-premises AD
 ms.topic: article
 ms.date: 06/28/2019
@@ -9,7 +10,7 @@ ms.reviewer: deverette
 ---
 # Step 7.4. Deploy conditional access root certificates to on-premises AD
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 In this step, you deploy the conditional access root certificate as trusted root certificate for VPN authentication to your on-premises AD.
 

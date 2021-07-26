@@ -4,14 +4,14 @@ description: In this topic, we provide you with instructions to deploy Converged
 ms.topic: article
 ms.assetid: f01546f8-c495-4055-8492-8806eee99862
 manager: dougkim
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/17/2018
 ---
 
 # Converged NIC in a Teamed NIC configuration (datacenter)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 In this topic, we provide you with instructions to deploy Converged NIC in a Teamed NIC configuration with Switch Embedded Teaming \(SET\).
 

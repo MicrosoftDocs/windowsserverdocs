@@ -1,15 +1,16 @@
 ---
 title: Step 1 Configure the DirectAccess Infrastructure
-description: This topic is part of the guide Add DirectAccess to an Existing Remote Access (VPN) Deployment for Windows Server 2016
+description: Learn how to configure the infrastructure required for enabling DirectAccess in an existing VPN deployment.
 manager: brianlic
 ms.topic: article
 ms.assetid: 5dc529f7-7bc3-48dd-b83d-92a09e4055c4
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Step 1 Configure the DirectAccess Infrastructure
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic describes how to configure the infrastructure required for enabling DirectAccess in an existing VPN deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Step 1: Plan DirectAccess Infrastructure](./step-1-plan-da-inf-davpn.md).
 

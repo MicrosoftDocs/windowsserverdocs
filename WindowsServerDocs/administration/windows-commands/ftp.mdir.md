@@ -3,15 +3,15 @@ title: ftp mdir
 description: Reference article for the ftp mdir command, which displays a directory list of files and subdirectories in a remote directory.
 ms.topic: reference
 ms.assetid: 90eec45b-558b-4b8d-bbe4-b56d98e1ca70
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ftp mdir
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays a directory list of files and subdirectories in a remote directory.
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Delimit the allocation of volumes in Storage Spaces Direct"
 title: Delimit the allocation of volumes in Storage Spaces Direct
 manager: eldenc
 ms.topic: article

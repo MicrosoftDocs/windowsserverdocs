@@ -1,15 +1,16 @@
 ---
 title: STEP 13 Test DirectAccess Connectivity from Behind a NAT Device
-description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
+description: Learn how to test Teredo connectivity and IP-HTTPS connectivity on both client computers.
 manager: brianlic
 ms.topic: article
 ms.assetid: 796825c3-5e3e-4745-a921-25ab90b95ede
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # STEP 13 Test DirectAccess Connectivity from Behind a NAT Device
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 When a DirectAccess client is connected to the Internet from behind a NAT device or a web proxy server, the DirectAccess client uses either Teredo or IP-HTTPS to connect to the Remote Access server. If the NAT device enables outbound UDP port 3544 to the Remote Access server's public IP address, then Teredo is used. If Teredo access is not available, the DirectAccess client falls back to IP-HTTPS over outbound TCP port 443, which enables access through firewalls or web proxy servers over the traditional SSL port. If the web proxy requires authentication, the IP-HTTPS connection will fail. IP-HTTPS connections also fail if the web proxy performs outbound SSL inspection, due to the fact that the HTTPS session is terminated at the web proxy instead of the Remote Access server.
 

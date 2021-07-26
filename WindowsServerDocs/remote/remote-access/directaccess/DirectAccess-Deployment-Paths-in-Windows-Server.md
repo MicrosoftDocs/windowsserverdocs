@@ -4,13 +4,14 @@ description: This topic provides a listing of the documentation for the two main
 manager: brianlic
 ms.topic: article
 ms.assetid: 22ccd5c3-0a26-484c-88c8-54119d1228cc
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # DirectAccess Deployment Paths in Windows Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic provides a listing of the documentation for the two main Remote Access deployment paths: **Basic** and **Advanced**.
 

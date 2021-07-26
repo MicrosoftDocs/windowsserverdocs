@@ -1,15 +1,16 @@
 ---
 title: DNS Responses Based on Time of Day with an Azure Cloud App Server
-description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
+description: Learn how to use DNS responses based on time of day with an Azure Cloud App Server.
 manager: brianlic
 ms.topic: article
 ms.assetid: 4846b548-8fbc-4a7f-af13-09e834acdec0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # DNS Responses Based on Time of Day with an Azure Cloud App Server
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic to learn how to distribute application traffic across different geographically distributed instances of an application by using DNS policies that are based on the time of day.
 
@@ -85,7 +86,7 @@ You can use the following example command to create a zone scope to host the Azu
 Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "AzureZoneScope"
 ```
 
-For more information, see [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
+For more information, see [Add-DnsServerZoneScope](/powershell/module/dnsserver/add-dnsserverzonescope)
 
 ### Add Records to the Zone Scopes
 The next step is to add the records representing the Web server host into the zone scopes.
@@ -104,7 +105,7 @@ Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -
 Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "192.68.30.2"
 ```
 
-For more information, see [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
+For more information, see [Add-DnsServerResourceRecord](/powershell/module/dnsserver/add-dnsserverresourcerecord).
 
 ### Create the DNS Policies
 After the zone scopes are created, you can create DNS policies that distribute the incoming queries across these scopes so that the following occurs.
@@ -120,7 +121,7 @@ You can use the following example command to create the DNS policy.
 Add-DnsServerQueryResolutionPolicy -Name "Contoso6To9Policy" -Action ALLOW -ZoneScope "contosogiftservices.com,7;AzureZoneScope,3" –TimeOfDay “EQ,18:00-21:00” -ZoneName "contosogiftservices.com" –ProcessingOrder 1
 ```
 
-For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
+For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy).
 
 Now the DNS server is configured with the required DNS policies to redirect traffic to the Azure Web server based on time of day.
 

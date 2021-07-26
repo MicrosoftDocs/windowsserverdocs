@@ -5,27 +5,27 @@ ms.topic: article
 ms.assetid: 49e93b9f-46d9-4cee-bcda-1c4634893ddd
 ms.localizationpriority: medium
 manager: dougkim
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/05/2018
 ---
 
 # Windows PowerShell Commands for RSS and vRSS
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 In this topic, you learn how to quickly locate technical reference information about Windows PowerShell commands for Receive Side Scaling \(RSS\) and virtual RSS \(vRSS\).
 
-Use the following RSS commands to configure RSS on a physical computer with multiple processors or multiple cores. You can use the same commands to configure vRSS on a virtual machine \(VM\) that is running a supported operating system. For more information, see [Network Adapter Cmdlets in Windows PowerShell](/powershell/module/netadapter/?view=win10-ps).
+Use the following RSS commands to configure RSS on a physical computer with multiple processors or multiple cores. You can use the same commands to configure vRSS on a virtual machine \(VM\) that is running a supported operating system. For more information, see [Network Adapter Cmdlets in Windows PowerShell](/powershell/module/netadapter/).
 
 ## Configure VMQ
 
 vRSS requires that VMQ is enabled and configured. You can use the following Windows PowerShell commands to manage VMQ settings.
 
-- [Disable-NetAdapterVmq](/powershell/module/netadapter/disable-netadaptervmq?view=win10-ps)
-- [Enable-NetAdapterVmq](/powershell/module/netadapter/enable-netadaptervmq?view=win10-ps)
-- [Get-NetAdapterVmq](/powershell/module/netadapter/get-netadaptervmq?view=win10-ps)
-- [Set-NetAdapterVmq](/powershell/module/netadapter/set-netadaptervmq?view=win10-ps)
+- [Disable-NetAdapterVmq](/powershell/module/netadapter/disable-netadaptervmq)
+- [Enable-NetAdapterVmq](/powershell/module/netadapter/enable-netadaptervmq)
+- [Get-NetAdapterVmq](/powershell/module/netadapter/get-netadaptervmq)
+- [Set-NetAdapterVmq](/powershell/module/netadapter/set-netadaptervmq)
 
 ## Enable and configure RSS on a native host
 
@@ -34,10 +34,10 @@ Use the following PowerShell commands to configure RSS on a native host as well 
 >[!IMPORTANT]
 >Enabling RSS in a VM or on a host vNIC is a prerequisite for enabling and using vRSS.
 
-- [Disable-NetAdapterRss](/powershell/module/netadapter/disable-netadapterrss?view=win10-ps)
-- [Enable-NetAdapterRss](/powershell/module/netadapter/enable-netadapterrss?view=win10-ps)
-- [Get-NetAdapterRss](/powershell/module/netadapter/get-netadapterrss?view=win10-ps)
-- [Set-NetAdapterRss](/powershell/module/netadapter/Set-NetAdapterRss?view=win10-ps)
+- [Disable-NetAdapterRss](/powershell/module/netadapter/disable-netadapterrss)
+- [Enable-NetAdapterRss](/powershell/module/netadapter/enable-netadapterrss)
+- [Get-NetAdapterRss](/powershell/module/netadapter/get-netadapterrss)
+- [Set-NetAdapterRss](/powershell/module/netadapter/Set-NetAdapterRss)
 
 ## Enable vRSS on the Hyper\-V Virtual Switch port
 
@@ -113,7 +113,7 @@ To determine the present scheduling mode or to modify the scheduling mode for a 
 ## Related topics
 For more information, see the following reference topics.
 
-- [Get-VMNetworkAdapter](/powershell/module/hyper-v/get-vmnetworkadapter?view=win10-ps)
-- [Set-VMNetworkAdapter](/powershell/module/hyper-v/set-vmnetworkadapter?view=win10-ps)
+- [Get-VMNetworkAdapter](/powershell/module/hyper-v/get-vmnetworkadapter)
+- [Set-VMNetworkAdapter](/powershell/module/hyper-v/set-vmnetworkadapter)
 
 For more information, see [Virtual Receive Side Scaling (vRSS)](vrss-top.md).

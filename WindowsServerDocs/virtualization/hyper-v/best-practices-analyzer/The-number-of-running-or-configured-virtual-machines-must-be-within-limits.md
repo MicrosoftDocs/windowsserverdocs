@@ -1,6 +1,6 @@
 ---
 title: The number of running or configured virtual machines must be within supported limits
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when more virtual machines are running or configured than are supported.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -11,7 +11,7 @@ ms.date: 8/16/2016
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -37,7 +37,7 @@ To move a virtual machine to another server, you can:
 
 - Export the virtual machine from the current server and then import it to a new server as described below.
 - Do a live migration:
-    - If this server belongs to a failover cluster, use the tools provided with the Failover Clustering feature. For instructions, see [Live Migrate, Quick Migrate, or Move a Virtual Machine from Node to Node](https://go.microsoft.com/fwlink/?LinkID=181519).
+    - If this server belongs to a failover cluster, use the tools provided with the Failover Clustering feature. For instructions, see [Live Migrate, Quick Migrate, or Move a Virtual Machine from Node to Node](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759225(v=ws.11)).
     - If this is a standalone server, see instructions in [Configure Live Migration and Migrating Virtual Machines without Failover Clustering](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134199(v=ws.11))
 
 ### To export a virtual machine
@@ -72,7 +72,7 @@ Membership in the **Domain Administrators** group is required to complete this p
 1.  On a computer that has the Active Directory Domain Services Tools feature installed, in **Administrative Tools**, open **Active Directory Users and Computers**, and then navigate to the computer account for the computer running Hyper-V.
 
     > [!NOTE]
-    > If **Active Directory Users and Computers** is not listed, install the Active Directory Domain Services Tools feature. For instructions, see [Installing Remote Server Administration Tools for AD DS](https://go.microsoft.com/fwlink/?LinkId=140463) (https://go.microsoft.com/fwlink/?LinkId=140463).
+    > If **Active Directory Users and Computers** is not listed, install the Active Directory Domain Services Tools feature. For instructions, see [Installing Remote Server Administration Tools for AD DS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816817(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkId=140463).
 
 2.  Right-click the computer account for the computer running Hyper-V, and then click **Properties**.
 

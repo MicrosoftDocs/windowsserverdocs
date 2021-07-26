@@ -3,14 +3,14 @@ title: chgusr
 description: Reference article for the chgusr command, which changes the install mode for the Remote Desktop Session Host server.
 ms.topic: reference
 ms.assetid: f119d9d3-ed8b-42da-81f7-77591d908c83
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # chgusr
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Changes the install mode for the Remote Desktop Session Host server.
 

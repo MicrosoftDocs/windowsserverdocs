@@ -4,12 +4,13 @@ description: This topic provides an overview of Hyper-V Virtual Switch in Window
 manager: brianlic
 ms.topic: article
 ms.assetid: 398440ac-5988-41ce-b91e-eab343a255d3
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 12/08/2020
 ---
 # Hyper-V Virtual Switch
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic provides an overview of Hyper-V Virtual Switch, which provides you with the ability to connect virtual machines \(VMs\) to networks that are external to the Hyper\-V host, including your organization's intranet and the Internet.
 
@@ -19,8 +20,8 @@ You can also connect to virtual networks on the server that is running Hyper\-V 
 > In addition to this topic, the following Hyper-V Virtual Switch documentation is available.
 >
 > - [Manage Hyper-V Virtual Switch](Manage-Hyper-V-Virtual-Switch.md)
-> - [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](RDMA-and-Switch-Embedded-Teaming.md)
-> - [Network Switch Team Cmdlets in Windows PowerShell](/powershell/module/netswitchteam/new-netswitchteam?view=win10-ps)
+> - [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements)
+> - [Network Switch Team Cmdlets in Windows PowerShell](/powershell/module/netswitchteam/new-netswitchteam)
 > - [What's New in VMM 2016](/system-center/vmm/whats-new#networking)
 > - [Set up the VMM networking fabric](/system-center/vmm/manage-networks)
 > - [Hyper-V forum](/answers/topics/windows-server-hyper-v.html)

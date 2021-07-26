@@ -4,12 +4,13 @@ description: You can use this topic to learn best practices for configuring and 
 manager: brianlic
 ms.topic: article
 ms.assetid: 69e0e28a-98ae-4ade-bd27-ce2ad7eb310f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 12/08/2020
 ---
 # Configure and View VLAN Settings on Hyper-V Virtual Switch Ports
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 You can use this topic to learn best practices for configuring and viewing virtual Local Area Network (VLAN) settings on a Hyper-V Virtual Switch port.
 
@@ -17,11 +18,11 @@ When you want to configure VLAN settings on Hyper-V Virtual Switch ports, you ca
 
 If you are using VMM, VMM uses the following Windows PowerShell command to configure the switch port.
 
-```
-Set-VMNetworkAdapterIsolation <VM-name|-managementOS> -IsolationMode VLAN -DefaultIsolationID <vlan-value> -AllowUntaggedTraffic $True
+```powershell
+Set-VMNetworkAdapterIsolation <VM-name|-ManagementOS -IsolationMode VLAN -DefaultIsolationID <vlan-value> -AllowUntaggedTraffic $True
 ```
 If you are not using VMM and are configuring the switch port in Windows Server, you can use the Hyper-V Manager console or the following Windows PowerShell command.
-```
+```powershell
 Set-VMNetworkAdapterVlan <VM-name|-managementOS> -Access -VlanID <vlan-value>
 ```
 
@@ -40,8 +41,8 @@ To configure and view VLAN switch port settings, you must do the following:
 
 If you do not follow these guidelines you might encounter the following issues.
 
-- In circumstances where you have deployed SDN and use VMM, Network Controller, or the **VMNetworkAdapterIsolation** cmdlets to configure VLAN settings on a Hyper-V Virtual Switch port: If you use Hyper-V Manager or **Get VMNetworkAdapterVlan** to view the configuration settings, the command output will not display your VLAN settings. Instead you must use the **Get-VMNetworkIsolation** cmdlet to view the VLAN settings.
-- In circumstances where you have not deployed SDN, and instead use Hyper-V Manager or the **VMNetworkAdapterVlan** cmdlets to configure VLAN settings on a Hyper-V Virtual Switch port: If you use the **Get-VMNetworkIsolation** cmdlet to view the configuration settings, the command output will not display your VLAN settings. Instead you must use the **Get VMNetworkAdapterVlan** cmdlet to view the VLAN settings.
+- In circumstances where you have deployed SDN and use VMM, Network Controller, or the **VMNetworkAdapterIsolation** cmdlets to configure VLAN settings on a Hyper-V Virtual Switch port: If you use Hyper-V Manager or **Get VMNetworkAdapterVlan** to view the configuration settings, the command output does not display your VLAN settings. Instead you must use the **Get-VMNetworkIsolation** cmdlet to view the VLAN settings.
+- In circumstances where you have not deployed SDN, and instead use Hyper-V Manager or the **VMNetworkAdapterVlan** cmdlets to configure VLAN settings on a Hyper-V Virtual Switch port: If you use the **Get-VMNetworkIsolation** cmdlet to view the configuration settings, the command output does not display your VLAN settings. Instead you must use the **Get VMNetworkAdapterVlan** cmdlet to view the VLAN settings.
 
 It is also important not to attempt to configure the same switch port VLAN settings by using both of these configuration methods. If you do this, the switch port is incorrectly configured, and the result might be a failure in network communication.
 
@@ -49,7 +50,7 @@ It is also important not to attempt to configure the same switch port VLAN setti
 
 For more information on the Windows PowerShell commands that are mentioned in this topic, see the following:
 
-- [Set-VmNetworkAdapterIsolation](/powershell/module/hyper-v/set-vmnetworkadapterisolation?view=win10-ps)
-- [Get-VmNetworkAdapterIsolation](/powershell/module/hyper-v/get-vmnetworkadapterisolation?view=win10-ps)
-- [Set-VMNetworkAdapterVlan](/powershell/module/hyper-v/set-vmnetworkadaptervlan?view=win10-ps)
-- [Get-VMNetworkAdapterVlan](/powershell/module/hyper-v/get-vmnetworkadaptervlan?view=win10-ps)
+- [Set-VmNetworkAdapterIsolation](/powershell/module/hyper-v/set-vmnetworkadapterisolation)
+- [Get-VmNetworkAdapterIsolation](/powershell/module/hyper-v/get-vmnetworkadapterisolation)
+- [Set-VMNetworkAdapterVlan](/powershell/module/hyper-v/set-vmnetworkadaptervlan)
+- [Get-VMNetworkAdapterVlan](/powershell/module/hyper-v/get-vmnetworkadaptervlan)

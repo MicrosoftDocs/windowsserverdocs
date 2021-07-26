@@ -4,12 +4,13 @@ description: You can use this topic for a brief overview of DirectAccess in Wind
 manager: brianlic
 ms.topic: article
 ms.assetid: 6b71d18e-1939-4fc0-bb42-29e0e5ffc8da
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # DirectAccess
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 You can use this topic for a brief overview of DirectAccess, including the server and client operating systems that support DirectAccess, and for links to additional DirectAccess documentation for Windows Server 2016.
 

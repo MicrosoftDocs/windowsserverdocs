@@ -14,7 +14,7 @@ ms.date: 07/14/2020
 > Applies to: Windows Server 2016, Microsoft Hyper-V Server 2016
 
 > [!NOTE]
-> Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update. To learn more, see [KB 4570006](https://support.microsoft.com/help/4570006).
+> Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update and removed starting with the April 13, 2021 Security Update. To learn more, see [KB 4570006](https://support.microsoft.com/help/4570006).
 
 The vGPU feature for RemoteFX makes it possible for multiple virtual machines to share a physical GPU. Rendering and compute resources are shared dynamically among virtual machines, making RemoteFX vGPU appropriate for high-burst workloads where dedicated GPU resources are not required. For example, in a VDI service, RemoteFX vGPU can be used to offload app rendering costs to the GPU, with the effect of decreasing CPU load and improving service scalability.
 
@@ -70,10 +70,10 @@ You can use either the Hyper-V Manager UI or PowerShell cmdlets to configure the
 
 Use the following PowerShell cmdlets to add, review, and configure the adapter:
 
-- [Add-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/add-vmremotefx3dvideoadapter?view=win10-ps)
-- [Get-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/get-vmremotefx3dvideoadapter?view=win10-ps)
-- [Set-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/set-vmremotefx3dvideoadapter?view=win10-ps)
-- [Get-VMRemoteFXPhysicalVideoAdapter](/powershell/module/hyper-v/get-vmremotefxphysicalvideoadapter?view=win10-ps)
+- [Add-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/add-vmremotefx3dvideoadapter)
+- [Get-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/get-vmremotefx3dvideoadapter)
+- [Set-VMRemoteFx3dVideoAdapter](/powershell/module/hyper-v/set-vmremotefx3dvideoadapter)
+- [Get-VMRemoteFXPhysicalVideoAdapter](/powershell/module/hyper-v/get-vmremotefxphysicalvideoadapter)
 
 ## Monitor performance
 

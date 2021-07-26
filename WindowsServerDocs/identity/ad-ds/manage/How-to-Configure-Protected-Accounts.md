@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Guidance about how to configure protected accounts"
 ms.assetid: 70c99703-ff0d-4278-9629-b8493b43c833
 title: Guidance about how to configure protected accounts
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -83,7 +84,7 @@ For more information about events in these logs, see [Authentication Policies an
 #### Troubleshoot TGT expiration
 Normally, the domain controller sets the TGT lifetime and renewal based on the domain policy as shown in the following Group Policy Management Editor window.
 
-![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TGTExpiration.png)
+![Screenshot that shows the Group Policy Management Editor window.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TGTExpiration.png)
 
 For **Protected Users**, the following settings are hard-coded:
 
@@ -94,7 +95,7 @@ For **Protected Users**, the following settings are hard-coded:
 #### Troubleshoot delegation issues
 Previously, if a technology that uses Kerberos delegation was failing, the client account was checked to see if **Account is sensitive and cannot be delegated** was set. However, if the account is a member of **Protected Users**, it might not have this setting configured in Active Directory Administrative Center (ADAC). As a result, check the setting and group membership when you troubleshoot delegation issues.
 
-![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TshootDelegation.gif)
+![Screenshot that highlights the Account is sensitive and cannot be delegated check box.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TshootDelegation.gif)
 
 ### <a name="BKMK_AuditAuthNattempts"></a>Audit authentication attempts
 To audit authentication attempts explicitly for the members of the **Protected Users** group, you can continue to collect security log audit events or collect the data in the new operational administrative logs. For more information about these events, see [Authentication Policies and Authentication Policy Silos](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486813(v=ws.11))
@@ -115,7 +116,7 @@ Accounts for services and computers cannot be members of **Protected Users**. Th
 
 -   Deny delegation with unconstrained or constrained delegation: To restrict an account, open Active Directory Administrative Center (ADAC) and select the **Account is sensitive and cannot be delegated** check box.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TshootDelegation.gif)
+    ![Screenshot that shows how to restrict an account.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TshootDelegation.gif)
 
 ## <a name="BKMK_CreateAuthNPolicies"></a>Authentication policies
 Authentication Policies is a new container in AD DS that contains authentication policy objects. Authentication policies can specify settings that help mitigate exposure to credential theft, such as restricting TGT lifetime for accounts or adding other claims-related conditions.
@@ -131,7 +132,7 @@ In  Windows Server 2012 , Dynamic Access Control introduced an Active Directory 
 ### Quick Kerberos refresher
 The Kerberos authentication protocol consists of three types of exchanges, also known as subprotocols:
 
-![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_KerbRefresher.gif)
+![Diagram that shows the three types of exchanges in the Kerberos authentication protocol.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_KerbRefresher.gif)
 
 -   The Authentication Service (AS) Exchange (KRB_AS_*)
 
@@ -156,7 +157,7 @@ You can restrict initial authentication or the AS exchange by configuring:
 
 -   Access control conditions to restrict user sign-on, which must be met by devices from which the AS exchange is coming
 
-![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictAS.gif)
+![Screenshot that shows how to restrict initial authentication or the AS exchange.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictAS.gif)
 
 You can restrict service ticket requests through a ticket-granting service (TGS) exchange by configuring:
 
@@ -182,14 +183,14 @@ The user's account domain must be at  Windows Server 2012 R2  domain functional 
 
 1.  In the Default Domain Controllers Policy, click **Enabled** to enable **Key Distribution Center (KDC) client support for claims, compound authentication and Kerberos armoring** in Computer Configuration | Administrative Templates | System | KDC.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_EnableKDCClaims.gif)
+    ![Screenshot that highlights the Enabled option.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_EnableKDCClaims.gif)
 
 2.  Under **Options**, in the drop-down list box, select **Always provide claims**.
 
     > [!NOTE]
     > **Supported** can also be configured, but because the domain is at  Windows Server 2012 R2  DFL, having the DCs always provide claims will allow user claims-based access checks to occur when using non-claims aware devices and hosts to connect to claims-aware services.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AlwaysProvideClaims.png)
+    ![Screenshot that highlights the Always provide claim menu option.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AlwaysProvideClaims.png)
 
     > [!WARNING]
     > Configuring **Fail unarmored authentication requests** will result in authentication failures from any operating system which does not support Kerberos armoring, such as  Windows 7  and previous operating systems, or operating systems beginning with Windows 8, which have not been explicitly configured to support it.
@@ -198,20 +199,20 @@ The user's account domain must be at  Windows Server 2012 R2  domain functional 
 
 1.  Open Active Directory Administrative Center (ADAC).
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_OpenADAC.gif)
+    ![Screenshot that shows the Authentication page.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_OpenADAC.gif)
 
     > [!NOTE]
     > The selected **Authentication** node is visible for domains which are at  Windows Server 2012 R2  DFL. If the node does not appear, then try again by using a domain administrator account from a domain that is at  Windows Server 2012 R2  DFL.
 
 2.  Click **Authentication Policies**, and then click **New** to create a new policy.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_NewAuthNPolicy.gif)
+    ![Screenshot that shows how to create a new policy.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_NewAuthNPolicy.gif)
 
     Authentications Policies must have a display name and are enforced by default.
 
 3.  To create an audit-only policy, click **Only audit policy restrictions**.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_NewAuthNPolicyAuditOnly.gif)
+    ![Screenshot that highlights the Only audit policy restrictions option.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_NewAuthNPolicyAuditOnly.gif)
 
     Authentication policies are applied based on the Active Directory account type. A single policy can apply to all three account types by configuring settings for each type. Account types are:
 
@@ -225,107 +226,107 @@ The user's account domain must be at  Windows Server 2012 R2  domain functional 
 
 4.  To configure a TGT lifetime for user accounts, select the **Specify a Ticket-Granting Ticket lifetime for user accounts** check box and enter the time in minutes.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TGTLifetime.gif)
+    ![Screenshot that highlights the Specify a Ticket-Granting Ticket lifetime for user accounts check box.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TGTLifetime.gif)
 
     For example, if you want a 10-hour maximum TGT lifetime, enter **600** as shown. If no TGT lifetime is configured, then if the account is a member of the **Protected Users** group, the TGT lifetime and renewal is 4 hours. Otherwise, TGT lifetime and renewal are based on the domain policy as seen in the following Group Policy Management Editor window for a domain with default settings.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TGTExpiration.png)
+    ![Screenshot that shows the default policy settings.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_TGTExpiration.png)
 
 5.  To restrict the user account to select devices, click **Edit** to define the conditions that are required for the device.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_EditAuthNPolicy.gif)
+    ![Screenshot that shows how to restrict the user account to select devices.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_EditAuthNPolicy.gif)
 
 6.  In the **Edit Access Control Conditions** window, click **Add a condition**.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCondition.png)
+    ![Screenshot that highlights Add a condition.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCondition.png)
 
 ##### Add computer account or group conditions
 
 1.  To configure computer accounts or groups, in the drop-down list, select the drop-down list box **Member of each** and change to **Member of any**.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompMember.png)
+    ![Screenshot that highlights the Member of each list box.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompMember.png)
 
     > [!NOTE]
     > This access control defines the conditions of the device or host from which the user signs on. In access control terminology, the computer account for the device or host is the user, which is why **User** is the only option.
 
 2.  Click **Add items**.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompAddItems.png)
+    ![Screenshot that highlights the Add items button.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompAddItems.png)
 
 3.  To change object types, click **Object Types**.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_ChangeObjects.gif)
+    ![Screenshot that highlights the Object Types button.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_ChangeObjects.gif)
 
 4.  To select computer objects in Active Directory, click **Computers**, and then click **OK**.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_ChangeObjectsComputers.gif)
+    ![Screenshot that highlights the Computers check box.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_ChangeObjectsComputers.gif)
 
 5.  Type the name of the computers to restrict the user, and then click **Check Names**.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_ChangeObjectsCompName.gif)
+    ![Screenshot that highlights Check Names.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_ChangeObjectsCompName.gif)
 
 6.  Click OK and create any other conditions for the computer account.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompAddConditions.png)
+    ![Screenshot that shows how to edit access control conditions.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompAddConditions.png)
 
 7.  When done, then click **OK** and the defined conditions will appear for the computer account.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompDone.png)
+    ![Screenshot that shows where to select OK when you're finished.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AddCompDone.png)
 
 ##### Add computer claim conditions
 
 1.  To configure computer claims, drop-down Group to select the claim.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_CompClaim.gif)
+    ![Screenshot that shows where to select the group.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_CompClaim.gif)
 
     Claims are only available if they are already provisioned in the forest.
 
 2.  Type the name of OU, the user account should be restricted to sign on.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_CompClaimOUName.gif)
+    ![Screenshot that shows where to type the name.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_CompClaimOUName.gif)
 
 3.  When done, then click OK and the box will show the conditions defined.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_CompClaimComplete.gif)
+    ![Screenshot that shows the defined conditions.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_CompClaimComplete.gif)
 
 ##### Troubleshoot missing computer claims
 If the claim has been provisioned, but is not available, it might only be configured for **Computer** classes.
 
 Let's say you wanted to restrict authentication based on the organizational unit (OU) of the computer, which was already configured, but only for **Computer** classes.
 
-![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictComputers.gif)
+![Screenshot that highlights the Computer check box.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictComputers.gif)
 
 For the claim to be available to restrict User sign-on to the device, select the **User** check box.
 
-![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictUsersComputers.gif)
+![Screenshot that highlights the User check box.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_RestrictUsersComputers.gif)
 
 #### Provision a user account with an authentication policy with ADAC
 
 1.  From the **User** account, click **Policy**.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_UserPolicy.gif)
+    ![Screenshot that shows where to select Policy.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_UserPolicy.gif)
 
 2.  Select the **Assign an authentication policy to this account** check box.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_UserPolicyAssign.gif)
+    ![Screenshot that highlights the Assign an authentication policy to this account check box.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_UserPolicyAssign.gif)
 
 3.  Then select the authentication policy to apply to the user.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_UserPolicySelect.png)
+    ![Screenshot that shows where to select the authentication policy to apply.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_UserPolicySelect.png)
 
 #### Configure Dynamic Access Control support on devices and hosts
 You can configure TGT lifetimes without configuring Dynamic Access Control (DAC). DAC is only needed for checking AllowedToAuthenticateFrom and AllowedToAuthenticateTo.
 
 Using either Group Policy or Local Group Policy Editor, enable **Kerberos client support for claims, compound authentication and Kerberos armoring** in Computer Configuration | Administrative Templates | System | Kerberos:
 
-![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_KerbClientDACSupport.gif)
+![Screenshot that shows where to select the Enabled option.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_KerbClientDACSupport.gif)
 
 ### <a name="BKMK_TroubleshootAuthnPolicies"></a>Troubleshoot Authentication Policies
 
 #### Determine the accounts that are directly assigned an Authentication Policy
 The accounts section in the Authentication Policy shows the accounts that have directly applied the policy.
 
-![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AccountsAssigned.gif)
+![Screenshot that shows how to determine the accounts that are directly assigned an Authentication Policy.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_AccountsAssigned.gif)
 
 #### Use the Authentication Policy Failures - Domain Controller administrative log
 A new **Authentication Policy Failures - Domain Controller** administrative log under **Applications and Services Logs** > **Microsoft** > **Windows** > **Authentication** has been created to make it easier to discover failures due to Authentication Policies. The log is disabled by default. To enable it, right-click the log name and click **Enable Log**. The new events are very similar in content to the existing Kerberos TGT and service ticket auditing events. For more information about these events, see [Authentication Policies and Authentication Policy Silos](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486813(v=ws.11)).
@@ -418,7 +419,7 @@ You can create an authentication policy silo by using Active Directory Administr
 
 2.  In **Display name**, type a name for the silo. In **Permitted Accounts**, click **Add**, type the names of the accounts, and then click **OK**. You can specify users, computers, or service accounts. Then specify whether to use a single policy for all principals or a separate policy for each type of principal, and the name of the policy or policies.
 
-    ![protected accounts](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_NewAuthNPolicySiloDisplayName.gif)
+    ![Screenshot that shows how to add a permitted account.](media/How-to-Configure-Protected-Accounts/ADDS_ProtectAcct_NewAuthNPolicySiloDisplayName.gif)
 
 ### <a name="BKMK_ManageAuthnSilosUsingPSH"></a>Manage authentication policy silos by using Windows PowerShell
 This command creates an authentication policy silo object and enforces it.

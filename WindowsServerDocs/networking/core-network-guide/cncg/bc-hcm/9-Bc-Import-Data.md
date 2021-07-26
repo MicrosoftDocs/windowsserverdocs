@@ -1,16 +1,17 @@
 ---
 title: Import Data Packages on the Hosted Cache Server (Optional)
-description: This guide provides instructions on deploying BranchCache in hosted cache mode on computers running Windows Server 2016 and Windows 10
+description: Learn how to import data packages and preload content on your hosted cache servers.
 manager: brianlic
 ms.topic: article
 ms.assetid: d6159e91-f77c-42ec-9180-14bbb230ad17
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Import Data Packages on the Hosted Cache Server \(Optional\)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use this procedure to import data packages and preload content on your hosted cache servers.
 

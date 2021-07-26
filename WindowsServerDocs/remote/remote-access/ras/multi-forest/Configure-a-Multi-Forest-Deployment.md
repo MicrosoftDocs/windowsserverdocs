@@ -1,15 +1,16 @@
 ---
 title: Configure a Multi-Forest Deployment
-description: This topic is part of the guide Deploy Remote Access in a Multi-Forest Environment in Windows Server 2016.
+description: Learn how to configure a Remote Access multi-forest deployment in several possible scenarios.
 manager: brianlic
 ms.topic: article
 ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Configure a Multi-Forest Deployment
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic describes how to configure a Remote Access multi-forest deployment in several possible scenarios. All of the scenarios assume that DirectAccess is currently deployed on a single forest called Forest1, and that you are configuring DirectAccess to work with a new forest called Forest2.
 
@@ -64,7 +65,7 @@ Note the following terms when configuring OTP in a multi-forest deployment:
 The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: PKISync.ps1 Script for Cross-forest Certificate Enrollment](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff961506(v=ws.10)).
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](/previous-versions//bb648607(v=vs.85)).
 
 ### <a name="BKMK_CertPub"></a>Configure CAs as certificate publishers
 
@@ -231,4 +232,3 @@ The automatic discovery process of infrastructure servers is required to allow a
 1.  In the Remote Access Management console, click **Configuration**, and then in the **Tasks** pane, click **Refresh Management Servers**.
 
 2.  On the **Refreshing Management Servers** dialog box, click **Close**.
-

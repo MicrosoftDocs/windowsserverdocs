@@ -3,9 +3,9 @@ title: Windows Desktop client for admins
 description: Information on the Windows Desktop client primarily useful to admins.
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 09/16/2019
+ms.date: 07/22/2021
 ms.localizationpriority: medium
 ---
 # Windows Desktop client for admins
@@ -36,12 +36,17 @@ This section describes the new configuration options for this client.
 
 ### Configure update notifications
 
-By default, the client notifies you whenever there's an update. To turn notifications off, set the following registry information:
+By default, the client notifies you whenever there's an update and automatically updates itself when the client is closed and has no active connections. Even with no active connections, the msrdc.exe process runs in the background to allow you to reconnect quickly when you reopen the client. You can stop msrdc.exe by right-clicking on the Azure Virtual Desktop icon in the system tray area and selecting **Disconnect all sessions** in the drop-down menu.
+
+To turn notifications off, set the following registry information:
 
 - **Key:** HKLM\Software\Microsoft\MSRDC\Policies
 - **Type:** REG_DWORD
 - **Name:** AutomaticUpdates
-- **Data:** 0 = Disable notifications. 1 = Show notifications.
+- **Data:** 0 = Disable notifications and turn off auto-update. 1 = Show notifications and turn off auto-update. 2 = Show notifications and auto-update on close.
+
+>[!NOTE]
+>The client doesn't update automatically while closed for per-machine installs.
 
 ### Configure user groups
 

@@ -2,15 +2,15 @@
 title: Microsoft Server Performance Advisor
 description: Microsoft Server Performance Advisor
 ms.assetid: 468ebcb3-9eaf-477c-ab10-e3f1b3ce63dc
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ms.topic: article
 ---
 # Microsoft Server Performance Advisor
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Download Microsoft Server Performance Advisor (SPA) to help diagnose performance issues in a Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008 deployment. SPA generates comprehensive diagnostic reports and charts and provides recommendations to help you quickly analyze issues and develop corrective actions.
 

@@ -1,15 +1,16 @@
 ---
 title: Configure Firewall Rules for Non-Domain Members to Allow BranchCache Traffic
-description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+description: Learn how to configure third party firewall products and to manually configure a client computer with firewall rules that allow BranchCache to run in distributed cache mode.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: da956be0-c92d-46ea-99eb-85e2bd67bf07
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # Configure Firewall Rules for Non-Domain Members to Allow BranchCache Traffic
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use the information in this topic to configure third party firewall products and to manually configure a client computer with firewall rules that allow BranchCache to run in distributed cache mode.
 

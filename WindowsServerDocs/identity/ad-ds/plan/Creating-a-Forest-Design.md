@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Creating a Forest Design"
 ms.assetid: e92bdf05-d888-4935-af6a-8ded6ad13fab
 title: Creating a Forest Design
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018

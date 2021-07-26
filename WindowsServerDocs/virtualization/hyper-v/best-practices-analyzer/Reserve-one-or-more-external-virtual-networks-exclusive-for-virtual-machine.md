@@ -1,6 +1,6 @@
 ---
 title: Reserve one or more external virtual networks for exclusive use by virtual machines
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when all external virtual networks are configured for use by both the management operating system and virtual machines.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -11,7 +11,7 @@ ms.date: 8/16/2016
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -45,6 +45,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 4.  In the **Connection type** area, under the name of the physical network adapter, clear the **Allow the management operating system to share this network adapter** check box.
 
 5.  Click **OK**.
-
-
-

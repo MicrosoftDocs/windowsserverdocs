@@ -1,15 +1,16 @@
 ---
 title: STEP 12 Test DirectAccess Connectivity
-description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
+description: Learn how to make sure client computers that are located on the Internet or Homenet networks have the correct group policy settings.
 manager: brianlic
 ms.topic: article
 ms.assetid: 65ac1c23-3a47-4e58-888d-9dde7fba1586
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # STEP 12 Test DirectAccess Connectivity
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 Before you can test connectivity from the client computers when they are located on the Internet or Homenet networks, you must make sure they have the correct group policy settings.
 

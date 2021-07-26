@@ -4,18 +4,18 @@ description: In this topic, we provide you with an overview of the Network Load 
 manager: dougkim
 ms.topic: article
 ms.assetid: 244a4b48-06e5-4796-8750-a50e4f88ac72
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/13/2018
 ---
 # Network Load Balancing
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 In this topic, we provide you with an overview of the Network Load Balancing \(NLB\) feature in Windows Server 2016. You can use NLB to manage two or more servers as a single virtual cluster. NLB enhances the availability and scalability of Internet server applications such as those used on web, FTP, firewall, proxy, virtual private network \(VPN\), and other mission\-critical servers.
 
 > [!NOTE]
-> Windows Server 2016 includes a new Azure-inspired Software Load Balancer \(SLB\) as a component of the Software Defined Networking \(SDN\) infrastructure. Use SLB instead of NLB if you are using SDN, are using non-Windows workloads, need outbound network address translation \(NAT\), or need Layer 3 \(L3\) or non-TCP based load balancing. You can continue to use NLB with Windows Server 2016 for non-SDN deployments. For more information about SLB, see [Software Load Balancing (SLB) for SDN](../sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md).
+> Windows Server 2016 includes a new Azure-inspired Software Load Balancer \(SLB\) as a component of the Software Defined Networking \(SDN\) infrastructure. Use SLB instead of NLB if you are using SDN, are using non-Windows workloads, need outbound network address translation \(NAT\), or need Layer 3 \(L3\) or non-TCP based load balancing. You can continue to use NLB with Windows Server 2016 for non-SDN deployments. For more information about SLB, see [Software Load Balancing (SLB) for SDN](/azure-stack/hci/concepts/software-load-balancer).
 
 The Network Load Balancing \(NLB\) feature distributes traffic across several servers by using the TCP\/IP networking protocol. By combining two or more computers that are running applications into a single virtual cluster, NLB provides reliability and performance for web servers and other mission\-critical servers.
 
@@ -135,7 +135,7 @@ Install-WindowsFeature NLB -IncludeManagementTools
 
 After installation is complete, no restart of the computer is required.
 
-For more information, see [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=win10-ps).
+For more information, see [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature).
 
 ### Network Load Balancing Manager
 To open Network Load Balancing Manager in Server Manager, click **Tools**, and then click **Network Load Balancing Manager**.
@@ -148,5 +148,5 @@ The following table provides links to additional information about the NLB featu
 |Deployment|[Network Load Balancing Deployment Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754833(v=ws.10)) &#124; [Configuring Network Load Balancing with Terminal Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771300(v=ws.10))|
 |Operations|[Managing Network Load Balancing Clusters](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753954(v=ws.10)) &#124; [Setting Network Load Balancing Parameters](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731619(v=ws.10)) &#124; [Controlling Hosts on Network Load Balancing Clusters](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770870(v=ws.10))|
 |Troubleshooting|[Troubleshooting Network Load Balancing Clusters](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732592(v=ws.10)) &#124; [NLB Cluster Events and Errors](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731678(v=ws.10))|
-|Tools and settings|[Network Load Balancing Windows PowerShell cmdlets](https://go.microsoft.com/fwlink/p/?LinkId=238123)|
+|Tools and settings|[Network Load Balancing Windows PowerShell cmdlets](/previous-versions/windows/powershell-scripting/hh801274(v=wps.630))|
 |Community resources|[High Availability \(Clustering\) Forum](https://go.microsoft.com/fwlink/p/?LinkId=230641)

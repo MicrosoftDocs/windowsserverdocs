@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Monitoring Active Directory for Signs of Compromise"
 ms.assetid: a7ef2fba-b05c-4be2-93b2-b9456244c3ad
 title: Monitoring Active Directory for Signs of Compromise
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -102,7 +103,7 @@ To get a list of currently configured auditing subcategories on a computer runni
 
 The following screenshot shows an example of auditpol.exe listing the current audit policy.
 
-![monitoring AD](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_5.gif)
+![Screenshot that shows an example of auditpol.exe listing the current audit policy.](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_5.gif)
 
 > [!NOTE]
 > Group Policy does not always accurately report the status of all enabled auditing policies, whereas auditpol.exe does. See [Getting the Effective Audit Policy in Windows 7 and 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731607(v=ws.10)) for more details.
@@ -321,7 +322,7 @@ To set audit policy using group policies, configure the appropriate audit catego
 
 Advanced Audit Policy can be set by using Active Directory or local group policies. To set Advanced Audit Policy, configure the appropriate subcategories located under **Computer Configuration\Windows Settings\Security Settings\Advanced Audit Policy** (see the following screenshot for an example from the Local Group Policy Editor (gpedit.msc)). Each audit policy subcategory can be enabled for **Success**, **Failure**, or **Success** and **Failure** events.
 
-![monitoring AD](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_7.gif)
+![Screenshot that shows an example from the Local Group Policy Editor (gpedit.msc).](media/Monitoring-Active-Directory-for-Signs-of-Compromise/SAD_7.gif)
 
 ### Setting Windows Audit Policy Using Auditpol.exe
 
@@ -371,7 +372,7 @@ Auditpol.exe can be used to save and restore a local audit policy, and to view o
 
 ## Enforcing Traditional Auditing or Advanced Auditing
 
-In Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7, and Windows Vista, administrators can choose to enable the nine traditional categories or to use the subcategories. It's a binary choice that must be made in each Windows system. Either the main categories can be enabled or the subcategoriesit cannot be both.
+In Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7, and Windows Vista, administrators can choose to enable the nine traditional categories or to use the subcategories. It's a binary choice that must be made in each Windows system. Either the main categories can be enabled or the subcategories, it cannot be both.
 
 To prevent the legacy traditional category policy from overwriting audit policy subcategories, you must enable the **Force audit policy subcategory settings(Windows Vista or later) to override audit policy category settings** policy setting located under **Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**.
 

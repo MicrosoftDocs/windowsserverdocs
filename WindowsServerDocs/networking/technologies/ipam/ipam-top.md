@@ -4,12 +4,13 @@ description: This topic provides links to information about IPAM in Windows Serv
 manager: brianlic
 ms.topic: article
 ms.assetid: 6a6291ba-0d39-4434-a8c5-0f0369860faa
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # IP Address Management (IPAM)
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2016
 
 IP Address Management (IPAM) is an integrated suite of tools to enable end-to-end planning, deploying, managing and monitoring of your IP address infrastructure, with a rich user experience. IPAM automatically discovers IP address infrastructure servers and Domain Name System (DNS) servers on your network and enables you to manage them from a central interface.
 
@@ -18,5 +19,5 @@ IP Address Management (IPAM) is an integrated suite of tools to enable end-to-en
 >
 > - [What's New in IPAM](../../technologies/ipam/What-s-New-in-IPAM.md)
 > - [Manage IPAM](../../technologies/ipam/Manage-IPAM.md)
-> - [IP Address Management (IPAM) Server Cmdlets in Windows PowerShell](/powershell/module/ipamserver/?view=win10-ps)
+> - [IP Address Management (IPAM) Server Cmdlets in Windows PowerShell](/powershell/module/ipamserver/)
 > - Video: [Windows Server 2016: DNS management in IPAM](https://channel9.msdn.com/Blogs/windowsserver/Windows-Server-2016-DNS-management-in-IPAM)

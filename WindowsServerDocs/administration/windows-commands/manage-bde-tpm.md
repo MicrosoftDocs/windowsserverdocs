@@ -3,15 +3,15 @@ title: manage-bde tpm
 description: Reference article for the manage-bde tpm command, which configures the computer's Trusted Platform Module (TPM).
 ms.topic: reference
 ms.assetid: 11a8530d-edd7-4fe3-ae81-b943766760fe
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # manage-bde tpm
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Configures the computer's Trusted Platform Module (TPM).
 

@@ -3,14 +3,14 @@ title: Viewing and Managing Updates
 description: Windows Server Update Service (WSUS) topic - How to view and manage updates in the WSUS console
 ms.topic: article
 ms.assetid: ac70192b-0309-4385-b697-2e8eda51911c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # Viewing and Managing Updates
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use the WSUS console to view and manage updates.
 
@@ -171,21 +171,21 @@ Update classifications represent the type of update. For any given product or pr
  There are no operational concerns.
 
 ### Superseding Icon
- ![icon](../../media/wsus/wsus-superseding.png) This update supersedes other updates.
+ :::image type="icon" source="../../media/wsus/wsus-superseding.png"::: This update supersedes other updates.
 
  **Operational Concerns:**
 
  There are no operational concerns.
 
 ### Superseded & Superseding Icon
- ![icon](../../media/wsus/wsus-superseded.png) This update is superseded by another update, and supersedes other updates.
+ :::image type="icon" source="../../media/wsus/wsus-superseded.png"::: This update is superseded by another update, and supersedes other updates.
 
  **Operational Concerns:**
 
  Replace these updates with the superseding updates when possible.
 
 ### Superseded Icon
- ![icon](../../media/wsus/wsus-superseded-leaf.png) This update is superseded by another update.
+ :::image type="icon" source="../../media/wsus/wsus-superseded-leaf.png"::: This update is superseded by another update.
 
  **Operational Concerns:**
 

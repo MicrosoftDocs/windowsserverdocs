@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Managing RID Issuance"
 ms.assetid: aac117a7-aa7a-4322-96ae-e3cc22ada036
 title: Managing RID Issuance
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -47,7 +48,7 @@ Assuming a default 30-bit global RID space, the first event logs when allocating
 > [!IMPORTANT]
 > This event is not expected; investigate the user, computer, and group creation processes immediately in the domain. Creating more than 100 million AD DS objects is quite out of the ordinary.
 
-![RID issuance](media/Managing-RID-Issuance/ADDS_RID_TR_EventWaypoints2.png)
+![Graph of event waypoints.](media/Managing-RID-Issuance/ADDS_RID_TR_EventWaypoints2.png)
 
 ### RID Pool Invalidation Events
 There are new event alerts that a local DC RID pool was discarded. These are Informational and could be expected, especially due to the new VDC functionality. See the event list below for details on the event.
@@ -79,7 +80,7 @@ Dcdiag.exe /TEST:RidManager /v | find /i "Available RID Pool for the Domain"
 
 If you increase the global RID pool, the available pool will change to 2,147,483,647 instead of the default 1,073,741,823. For example:
 
-![RID issuance](media/Managing-RID-Issuance/ADDS_RID_TR_Dcdiag.png)
+![Screenshot of a terminal window that shows the increase from the default.](media/Managing-RID-Issuance/ADDS_RID_TR_Dcdiag.png)
 
 > [!WARNING]
 > This unlock is intended *only* to prevent running out of RIDS and is to be used *only* in conjunction with RID Ceiling Enforcement (see next section). Do not "preemptively" set this in environments that have millions of remaining RIDs and low growth, as application compatibility issues potentially exist with SIDs generated from the unlocked RID pool.
@@ -120,7 +121,7 @@ To unlock the RID pool to the 31<sup>st</sup> bit after receiving the RID ceilin
 
 3. Select the **Synchronous** and **Extended** options, then click **Run**.
 
-    ![RID issuance](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModify.png)
+    ![Screenshot that shows where to select Run.](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModify.png)
 
 4. If successful, the LDP output window shows:
 
@@ -131,7 +132,7 @@ To unlock the RID pool to the 31<sup>st</sup> bit after receiving the RID ceilin
 
     ```
 
-    ![RID issuance](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModifySuccess.png)
+    ![Screenshot that shows the LDP output.](media/Managing-RID-Issuance/ADDS_RID_TR_LDPModifySuccess.png)
 
 5. Confirm the global RID pool increased by examining the System Event Log on that domain controller for Directory-Services-SAM Informational event 16655.
 
@@ -181,7 +182,7 @@ To remove the block once reaching the artificial ceiling, perform the following 
 
 9. Enable the **Synchronous** and **Extended** options, then click **Run**:
 
-    ![RID issuance](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeiling.png)
+    ![Screenshot that shows how to run the operation.](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeiling.png)
 
 10. If successful, the LDP output window shows:
 
@@ -192,7 +193,7 @@ To remove the block once reaching the artificial ceiling, perform the following 
 
     ```
 
-    ![RID issuance](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeilingSuccess.png)
+    ![Screenshot that shows the output from a successful operation.](media/Managing-RID-Issuance/ADDS_RID_TR_LDPRaiseCeilingSuccess.png)
 
 ### Other RID Fixes
 Previous Windows Server operating systems had a RID pool leak when missing rIDSetReferences attribute. To resolve this problem on domain controllers that run Windows Server 2008 R2, install the hotfix from [KB 2618669](https://support.microsoft.com/kb/2618669).

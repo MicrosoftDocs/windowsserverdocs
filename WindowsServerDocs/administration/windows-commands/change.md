@@ -3,15 +3,15 @@ title: change
 description: Reference article for the change command, which changes Remote Desktop Session Host server settings for logons, COM port mappings, and install mode.
 ms.topic: reference
 ms.assetid: 90012116-0fb3-4f34-a819-cf4d4b4f8981
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # change
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Changes Remote Desktop Session Host server settings for logons, COM port mappings, and install mode.
 

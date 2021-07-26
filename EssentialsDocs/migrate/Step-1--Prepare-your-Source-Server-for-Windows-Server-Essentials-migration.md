@@ -1,6 +1,6 @@
 ---
 title: "Step 1: Prepare your Source Server for Windows Server Essentials migration"
-description: Describes how to use Windows Server Essentials
+description: Learn how to back up the Source Server, evaluate the system health, install the most recent service packs and fixes, and verify the network configuration.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 244c8a06-04c6-4863-8b52-974786455373

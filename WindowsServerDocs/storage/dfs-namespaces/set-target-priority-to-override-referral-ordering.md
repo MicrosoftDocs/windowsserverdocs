@@ -9,7 +9,7 @@ ms.author: jgerend
 ---
 # Set target priority to override referral ordering
 
-> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 A referral is an ordered list of targets that a client computer receives from a domain controller or namespace server when the user accesses a namespace root or folder with targets in the namespace. Each target in a referral is ordered according to the ordering method for the namespace root or folder.
 
@@ -45,7 +45,7 @@ To set target priority on a folder target, use the following procedure:
 4.  On the **Advanced** tab, click **Override referral ordering**  and then click the priority that you want.
 
 > [!NOTE]
-> To set target priorities by using Windows PowerShell, use the  [Set-DfsnRootTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) and [Set-DfsnFolderTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) cmdlets with the **ReferralPriorityClass** and **ReferralPriorityRank** parameters. These cmdlets were introduced in Windows Server 2012.
+> To set target priorities by using Windows PowerShell, use the  [Set-DfsnRootTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad) and [Set-DfsnFolderTarget](/powershell/module/dfsr/update-dfsrconfigurationfromad) cmdlets with the **ReferralPriorityClass** and **ReferralPriorityRank** parameters. These cmdlets were introduced in Windows Server 2012.
 
 ## Additional References
 

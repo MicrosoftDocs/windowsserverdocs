@@ -3,11 +3,12 @@ title: Troubleshooting a Failover Cluster using Windows Error Reporting
 description: Troubleshooting a Failover Cluster using WER Reports, with specific details on how to gather reports and diagnose common issues.
 ms.author: johnmar
 author: JohnMarlin-MSFT
-ms.date: 03/27/2018
+ms.date: 05/28/2021
+ms.topic: troubleshooting
 ---
 # Troubleshooting a Failover Cluster using Windows Error Reporting
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server
 
 Windows Error Reporting (WER) is a flexible event-based feedback infrastructure designed to help advanced administrators or Tier 3 support gather information about the hardware and software problems that Windows can detect, report the information to Microsoft, and provide users with any available solutions. This [reference](/powershell/module/windowserrorreporting/) provides descriptions and syntax for all WindowsErrorReporting cmdlets.
 
@@ -71,7 +72,7 @@ After you have enabled event channels, you can use the **DumpLogQuery** to gathe
 
 When troubleshooting, if you need to collect additional event channels, you can a modify the **DumpLogQuery** property by adding additional queries or modifying the list.
 
-To do this, first test your XPATH query using the [get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent?view=powershell-5.1) PowerShell cmdlet:
+To do this, first test your XPATH query using the [get-WinEvent](/powershell/module/Microsoft.PowerShell.Diagnostics/Get-WinEvent?view=powershell-5.1&preserve-view=true) PowerShell cmdlet:
 
 ```powershell
 get-WinEvent -FilterXML "<QueryList><Query><Select Path='Microsoft-Windows-GroupPolicy/Operational'>*[System[TimeCreated[timediff(@SystemTime) &gt;= 600000]]]</Select></Query></QueryList>"
@@ -389,7 +390,7 @@ DynamicSig[29].Value=10008
 
 The list of services and processes that we collect in a dump is controlled by the following property: **PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpServicesSmphost**
 
-To identify why the hang happened, open the dum files. Then run the following query: **EventLog.EventData["LogString"] contains "Cluster Disk 10"**  This will give you give you the following output:
+To identify why the hang happened, open the dump files. Then run the following query: **EventLog.EventData["LogString"] contains "Cluster Disk 10"**  This will give you give you the following output:
 
 ![Output of running log query 2](media/troubleshooting-using-WER-reports/output-of-running-log-query-2.png)
 

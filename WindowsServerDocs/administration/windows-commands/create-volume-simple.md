@@ -3,14 +3,14 @@ title: create volume simple
 description: Reference article for the create volume simple command, which creates a simple volume on the specified dynamic disk.
 ms.topic: reference
 ms.assetid: da0f208d-7fda-471a-9db2-5de5ba5207c6
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # create volume simple
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a simple volume on the specified dynamic disk. After you create the volume, the focus automatically shifts to the new volume.
 

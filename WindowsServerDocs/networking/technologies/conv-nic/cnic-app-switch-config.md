@@ -4,14 +4,14 @@ description: In this topic, we provide you with guidelines for configuring your 
 ms.topic: article
 ms.assetid: 6d53c797-fb67-4b9e-9066-1c9a8b76d2aa
 manager: dougkim
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/14/2018
 ---
 
 # Physical switch configuration for Converged NIC
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 In this topic, we provide you with guidelines for configuring your physical switches.
 

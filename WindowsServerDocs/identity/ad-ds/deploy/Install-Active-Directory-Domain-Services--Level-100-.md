@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Install Active Directory Domain Services (Level 100)"
 ms.assetid: ae241ed8-ef19-40a9-b2d5-80b8391551ff
 title: Install Active Directory Domain Services (Level 100)
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -75,7 +76,7 @@ Get-Help Add-ADDSReadOnlyDomainControllerAccount
 
 Optional arguments appear in square brackets.
 
-You can also download the latest Help examples and concepts for Windows PowerShell cmdlets. For more information, see [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help?view=powershell-5.1).
+You can also download the latest Help examples and concepts for Windows PowerShell cmdlets. For more information, see [about_Updatable_Help](/powershell/module/microsoft.powershell.core/about/about_updatable_help?view=powershell-5.1&preserve-view=true).
 
 You can run Windows PowerShell cmdlets against remote servers:
 
@@ -354,12 +355,12 @@ Use the following procedures to install AD DS using the GUI method. The steps ca
 
 9. On the **Results** page, verify that the installation succeeded, and click **Promote this server to a domain controller** to start the Active Directory Domain Services Configuration Wizard.
 
-    ![Install AD DS](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_SMPromotes.gif)
+    ![Screenshot of the INstallation progress page of the Add Roles and Features Wizard with the Promote this server to a domain controller option called out.](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_SMPromotes.gif)
 
     > [!IMPORTANT]
     > If you close Add Roles Wizard at this point without starting the Active Directory Domain Services Configuration Wizard, you can restart it by clicking Tasks in Server Manager.
 
-    ![Install AD DS](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)
+    ![Screenshot of the Server Manager showing the Post-deployment Configuration Warning icon.](media/Install-Active-Directory-Domain-Services--Level-100-/ADDS_SMI_Tasks.gif)
 
 10. On the **Deployment Configuration** page, choose one of the following options:
 

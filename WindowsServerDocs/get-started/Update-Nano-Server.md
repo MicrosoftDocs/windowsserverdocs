@@ -1,9 +1,9 @@
 ---
 title: Updating Nano Server
-description:
+description: "Learn more about: Updating Nano Server"
 manager: DonGill
 ms.date: 09/06/2017
-ms.topic: get-started-article
+ms.topic: how-to
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium

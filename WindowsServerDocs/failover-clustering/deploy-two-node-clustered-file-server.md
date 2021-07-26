@@ -5,13 +5,13 @@ manager: eldenc
 ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar
-ms.date: 02/01/2019
+ms.date: 05/05/2021
 ---
 # Deploying a two-node clustered file server
 
-> Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
-A failover cluster is a group of independent computers that work together to increase the availability of applications and services. The clustered servers (called nodes) are connected by physical cables and by software. If one of the cluster nodes fails, another node begins to provide service (a process known as failover). Users experience a minimum of disruptions in service.
+A failover cluster is a group of independent computers that work together to increase the availability of applications and services. The clustered servers (called nodes) are connected by physical cables and by software. If one of the cluster nodes fails, another node begins to provide service (a process known as failover). Users experience a minimum of disruptions in service. For information about using a failover cluster in Azure Stack HCI, see [Update Azure Stack HCI clusters](/azure-stack/hci/manage/update-cluster).
 
 This guide describes the steps for installing and configuring a general purpose file server failover cluster that has two nodes. By creating the configuration in this guide, you can learn about failover clusters and familiarize yourself with the Failover Cluster Management snap-in interface in Windows Server 2019 or Windows Server 2016.
 
@@ -160,7 +160,7 @@ In this step, the file server role and failover cluster feature will be installe
 
 1. Open **Server Manager** and under the **Manage** drop down, select **Add Roles and Features**.
 
-   ![Add Feature](media/Cluster-File-Server/Cluster-FS-Add-Feature.png)
+   ![Screenshot of the Manage drop-down list in Server Manager with the Add Roles and Features option highlighted.](media/Cluster-File-Server/Cluster-FS-Add-Feature.png)
 
 2. If the **Before you begin** window opens, choose **Next**.
 
@@ -170,7 +170,7 @@ In this step, the file server role and failover cluster feature will be installe
 
 5. For the Server Role, from the list of roles, open **File Services**, select **File Server**, and **Next**.
 
-   ![Add Role](media/Cluster-File-Server/Cluster-FS-Add-FS-Role-1.png)
+   ![Screenshot of the Server Roles  page of the Add Roles and Features dialog box showing the File Server option selected and highlighted.](media/Cluster-File-Server/Cluster-FS-Add-FS-Role-1.png)
 
 6. For the Features, from the list of features, select **Failover Clustering**.  A popup dialog will show that lists the administration tools also being installed.  Keep all the selected, choose **Add Features** and **Next**.
 

@@ -3,8 +3,8 @@ title: bitsadmin setdisplayname
 description: Reference article for the bitsadmin setdisplayname command, which sets the display name of the specified job.
 ms.topic: reference
 ms.assetid: 13706c53-fb5f-4879-b5ca-82531361d6e1
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -4,13 +4,14 @@ description: This topic provides an overview of network policies for Network Pol
 manager: brianlic
 ms.topic: article
 ms.assetid: e4a9b134-6d1d-40d7-a49c-5f46d5fdb419
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Network Policies
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic for an overview of network policies in NPS.
 

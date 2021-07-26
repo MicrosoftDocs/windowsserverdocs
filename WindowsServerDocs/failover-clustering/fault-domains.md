@@ -1,19 +1,20 @@
 ---
+description: "Learn more about: Fault domain awareness"
 ms.assetid: 56fc7f80-9558-467e-a6e9-a04c9abbee33
 title: Fault domain awareness
 ms.author: cosdar
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
-ms.date: 09/16/2016
+ms.date: 05/28/2021
 ---
 # Fault domain awareness
 
-> Applies to: Windows Server 2019 and Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Failover Clustering enables multiple servers to work together to provide high availability – or put another way, to provide node fault tolerance. But today's businesses demand ever-greater availability from their infrastructure. To achieve cloud-like uptime, even highly unlikely occurrences such as chassis failures, rack outages, or natural disasters must be protected against. That's why Failover Clustering in Windows Server 2016 introduced chassis, rack, and site fault tolerance as well.
 
-## Fault domain awareness
+## Fault domains and fault tolerance
 
 Fault domains and fault tolerance are closely related concepts. A fault domain is a set of hardware components that share a single point of failure. To be fault tolerant to a certain level, you need multiple fault domains at that level. For example, to be rack fault tolerant, your servers and your data must be distributed across multiple racks.
 

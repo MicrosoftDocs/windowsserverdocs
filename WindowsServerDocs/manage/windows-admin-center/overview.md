@@ -12,7 +12,7 @@ ms.localizationpriority: high
 
 > Applies to: Windows Admin Center, Windows Admin Center Preview
 
-Windows Admin Center is a locally deployed, browser-based app for managing Windows servers, clusters, hyper-converged infrastructure, as well as Windows 10 PCs. It comes at no additional cost beyond Windows and is ready to use in production.
+Windows Admin Center is a locally deployed, browser-based app for managing Windows servers, clusters, hyper-converged infrastructure, as well as Windows 10 PCs. It is a free product and is ready to use in production.
 
 To find out what's new, see [Release history](support/release-history.md).
 
@@ -50,7 +50,7 @@ Here's a video to give you an overview, followed by a poster giving more details
             <h3>Understand</h3>
             <ul>
             <li><a href="understand/what-is.md">What is Windows Admin Center?</a>
-            <li><a href="understand/faq.md">FAQ</a>
+            <li><a href="understand/faq.yml">FAQ</a>
             <li><a href="understand/case-studies.md">Case studies</a>
             <li><a href="understand/related-management.md">Related management products</a>
             </ul>
@@ -160,12 +160,13 @@ And here are a few additional resources:
 
 ## See how customers are benefitting from Windows Admin Center
 
-|     |
-| --- |
-| "[Windows Admin Center] has decreased our time/effort in managing the management system by over 75%."<br> *- Rand Morimoto, President, Convergent Computing* |
-| "Thanks to [Windows Admin Center], we can manage our customers remotely from HTML5 portal without problem and with the full integration with Azure Active Directory, we are able to increase the security thanks to the Multi-Factor Authentication."<br/> *- Silvio Di Benedetto, Founder and Senior Consultant, Inside Technologies* |
-| “We have been able to deploy [Server Core] SKUs in a more effective way, improving resource efficiency, security and automation while still achieving a good degree of productivity and reducing errors that can happen when relying on scripting only.” <br/> *- Guglielmo Mengora, Founder and CEO, VaiSulWeb* |
-| “With [Windows Admin Center] customers especially in the SMB market now have an easy to use tool to manage their internal infrastructure. This minimizes administrative efforts and saves a lot of time. And the best of it: there are no additional license fees for [Windows Admin Center]!” <br/> *- Helmut Otto, Managing Director, SecureGUARD* |
+"[Windows Admin Center] has decreased our time/effort in managing the management system by over 75%."<br> *- Rand Morimoto, President, Convergent Computing* 
+
+"Thanks to [Windows Admin Center], we can manage our customers remotely from HTML5 portal without problem and with the full integration with Azure Active Directory, we are able to increase the security thanks to the Multi-Factor Authentication."<br/> *- Silvio Di Benedetto, Founder and Senior Consultant, Inside Technologies* 
+
+“We have been able to deploy [Server Core] SKUs in a more effective way, improving resource efficiency, security and automation while still achieving a good degree of productivity and reducing errors that can happen when relying on scripting only.” <br/> *- Guglielmo Mengora, Founder and CEO, VaiSulWeb*
+
+“With [Windows Admin Center] customers especially in the SMB market now have an easy to use tool to manage their internal infrastructure. This minimizes administrative efforts and saves a lot of time. And the best of it: there are no additional license fees for [Windows Admin Center]!” <br/> *- Helmut Otto, Managing Director, SecureGUARD*
 
 [Read more about companies using Windows Admin Center in their production environments.](understand/case-studies.md)
 

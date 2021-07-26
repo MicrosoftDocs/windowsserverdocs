@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: e9a8f2fd-48fe-4a90-9250-f6b32488b7a4
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/27/2018
+ms.date: 06/30/2021
 ---
 
 # Upgrade, backup, and restore SDN infrastructure
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 In this topic, you learn how to update, backup and restore an SDN infrastructure.
 
@@ -32,7 +32,7 @@ Install the same Windows updates on all of the operating system components of th
 
 When you update each component, you can use any of the standard methods for installing Windows updates. However, to ensure minimal downtime for workloads and the integrity of the Network Controller database, follow these steps:
 
-1. Update the management consoles.<p>Install the updates on each of the computers where you use the Network Controller Powershell module.  Including anywhere that you have the RSAT-NetworkController role installed by itself. Excluding the Network Controller VMs themselves; you update them in the next step.
+1. Update the management consoles.<p>Install the updates on each of the computers where you use the Network Controller PowerShell module.  Including anywhere that you have the RSAT-NetworkController role installed by itself. Excluding the Network Controller VMs themselves; you update them in the next step.
 
 2. On the first Network Controller VM, install all updates and restart.
 
@@ -76,7 +76,7 @@ Once you have updated all of the Network Controller nodes, the Network Controlle
 >You can trigger an immediate update using the `update-networkcontroller` cmdlet.
 
 
-```Powershell
+```powershell
 PS C:\> get-networkcontrollernode
 Name            : NCNode1.contoso.com
 Server          : NCNode1.Contoso.com
@@ -107,7 +107,7 @@ In this example, you see the output for the `update-networkcontroller` cmdlet to
 >Run this cmdlet when you have no more updates to install.
 
 
-```Powershell
+```powershell
 PS C:\> update-networkcontroller
 NetworkControllerClusterVersion NetworkControllerVersion
 ------------------------------- ------------------------
@@ -141,7 +141,7 @@ Regular backups of the Network Controller database ensures business continuity i
 
 ### Example: Backing up the Network Controller database
 
-```Powershell
+```powershell
 $URI = "https://NC.contoso.com"
 $Credential = Get-Credential
 
@@ -172,7 +172,7 @@ $Backup = New-NetworkControllerBackup -ConnectionURI $URI -Credential $Credentia
 
 ### Example: Checking the status of a Network Controller backup operation
 
-```Powershell
+```powershell
 PS C:\ > Get-NetworkControllerBackup -ConnectionUri $URI -Credential $Credential -ResourceId $Backup.ResourceId
 | ConvertTo-JSON -Depth 10
 {
@@ -289,7 +289,7 @@ When you restore all the necessary components from backup, the SDN environment r
 
 10. Check the health of your system with the debug-networkcontrollerconfigurationstate cmdlet.
 
-```Powershell
+```powershell
 $cred = Get-Credential
 Debug-NetworkControllerConfigurationState -NetworkController "https://NC.contoso.com" -Credential $cred
 
@@ -304,7 +304,7 @@ Fetching ResourceType:     Gateways
 
 ### Example: Restoring a Network Controller database
 
-```Powershell
+```powershell
 $URI = "https://NC.contoso.com"
 $Credential = Get-Credential
 
@@ -321,7 +321,7 @@ New-NetworkControllerRestore -ConnectionURI $URI -Credential $Credential -Proper
 
 ### Example: Checking the status of a Network Controller database restore
 
-```PowerShell
+```powershell
 PS C:\ > get-networkcontrollerrestore -connectionuri $uri -credential $cred -ResourceId $restoreTime | convertto-json -depth 10
 {
     "Tags":  null,

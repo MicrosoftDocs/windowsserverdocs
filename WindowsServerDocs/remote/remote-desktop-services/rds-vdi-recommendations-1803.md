@@ -4,6 +4,7 @@ description: Recommended settings and configuration to minimize overhead for Win
 ms.author: robsmi
 ms.topic: article
 author: jaimeo
+ms.date: 12/08/2020
 ---
 
 # Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role
@@ -157,7 +158,7 @@ preferred method because it makes the overall process of creating or maintaining
 
 [Windows 10 1607: Keeping apps from coming back when deploying the feature update](/archive/blogs/mniehaus/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update)
 
-Then run the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) PowerShell command to remove UWP app payloads:
+Then run the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage) PowerShell command to remove UWP app payloads:
 
 ```powershell
 Remove-AppxProvisionedPackage -Online -PackageName
@@ -202,8 +203,7 @@ Some decisions might be based on the specifics of the environment, for example:
 The following settings specifically do not counter or conflict with any setting that has anything to do with security. These settings were chosen to remove settings that might not be applicable to VDI environments.
 
 > [!NOTE]
-> In this table of group policy settings, items marked with an asterisk are from the [Windows Restricted Traffic Limited Functionality
-Baseline](https://go.microsoft.com/fwlink/?linkid=828887).
+> In this table of group policy settings, items marked with an asterisk are from the [Windows Restricted Traffic Limited Functionality Baseline](https://go.microsoft.com/fwlink/?linkid=828887).
 
 | Policy Setting | Item | Sub-item | Possible setting and comments |
 |--|--|--|--|
@@ -410,7 +410,7 @@ Baseline](https://go.microsoft.com/fwlink/?linkid=828887).
 | **Edge UI** | Turn off tracking of app usage |  | **Enabled** |
 | **File Explorer** | Turn off caching of thumbnail pictures |  | **Enabled** |
 | **File Explorer** | Turn off display of recent search entries in the File Explorer search box |  | **Enabled** |
-| **File Explorer** | Turn off the caching of thumbnails in hidden thumbs.db file |  | **Enabled** ||
+| **File Explorer** | Turn off the caching of thumbnails in hidden thumbs.db file |  | **Enabled** |
 
 ### Notes about Network Connectivity Status indicator
 

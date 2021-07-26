@@ -1,6 +1,6 @@
 ---
 title: "Preconfiguring a Router"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to preconfigure the Internet capable router to provide a better user experience.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 9153ac90-bb0c-4b8d-93b2-e2121ed13636

@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: How LDAP Server Cookies Are Handled"
 ms.assetid: 3acaa977-ed63-4e38-ac81-229908c47208
 title: How LDAP Server Cookies Are Handled
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

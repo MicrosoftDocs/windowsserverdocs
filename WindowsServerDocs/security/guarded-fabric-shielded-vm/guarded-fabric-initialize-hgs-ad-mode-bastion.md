@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Initialize the HGS cluster using AD mode in an existing bastion forest"
 title: Initialize the HGS cluster using AD mode in a bastion forest
 ms.topic: article
 manager: dongill
@@ -9,7 +10,7 @@ ms.date: 08/29/2018
 
 # Initialize the HGS cluster using AD mode in an existing bastion forest
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 
 >[!IMPORTANT]

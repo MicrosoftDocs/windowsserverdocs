@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Guidelines for troubleshooting DNS-related activation issues"
 title: Guidelines for troubleshooting DNS-related activation issues
 ms.topic: troubleshooting
 ms.date: 09/10/2019

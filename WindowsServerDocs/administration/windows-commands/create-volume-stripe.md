@@ -3,14 +3,14 @@ title: create volume stripe
 description: Reference article for the create volume stripe command, which creates a striped volume using two or more specified dynamic disks.
 ms.topic: reference
 ms.assetid: 20dce735-5f7c-4f83-a580-d087e2913a00
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # create volume stripe
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a striped volume using two or more specified dynamic disks. After you create the volume, the focus automatically shifts to the new volume.
 

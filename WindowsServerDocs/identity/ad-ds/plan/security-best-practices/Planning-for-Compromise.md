@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Planning for Compromise"
 ms.assetid: 6f50476c-a1f1-48fb-999b-76c4c3816496
 title: Planning for Compromise
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -53,7 +54,7 @@ Although you must defend every facet of your infrastructure, an attacker only ne
 
 However, we have found that the older, larger, and more complex the environment, the more likely it is that the recommendations in this document will be infeasible or even impossible to implement. It is much harder to secure an infrastructure after the fact than it is to start fresh and to construct an environment that is resistant to attack and compromise. But as previously noted, it is no small undertaking to rebuild an entire Active Directory forest. For these reasons, we recommend a more focused, targeted approach to secure your Active Directory forests.
 
-Rather than focusing on and trying to fix all of the things that are "broken," consider an approach in which you prioritize based on what is most important to your business and in your infrastructure. Instead of trying to remediate an environment filled with outdated, misconfigured systems and applications, consider creating a new small, secure environment into which you can safely port the users, systems, and information that are most critical to your business.
+Rather than focusing on and trying to fix all of the things that are "broken," consider an approach in which you prioritize based on what is most important to your business and in your infrastructure. Instead of trying to remediate an environment filled with outdated, misconfigured systems and applications, consider creating a new small, secure environment into which you can safely port the users, systems, and information that is most critical to your business.
 
 In this section, we describe an approach by which you can create a pristine AD DS forest that serves as a "life boat" or "secure cell" for your core business infrastructure. A pristine forest is simply a newly installed Active Directory forest that is typically limited in size and scope, and which is built by using current operating systems, applications, and with the principles described in [Reducing the Active Directory Attack Surface](../../../ad-ds/plan/security-best-practices/../../../ad-ds/plan/security-best-practices/Reducing-the-Active-Directory-Attack-Surface.md).
 
@@ -136,7 +137,7 @@ In most organizations, users who have access to the most sensitive information d
 
 For example, you may define a policy in which executives and other VIPs are required to use secure workstations to access sensitive data and systems, allowing them to use their other devices to access less sensitive data. This is a simple principle for users to remember, but you can implement a number of backend controls to help to enforce the approach.
 
-You can use [Authentication Mechanism Assurance](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd391847(v=ws.10)) to permit the users to access sensitive data only if they've logged on to their secure systems using their smart cards, and can use IPsec and user rights restrictions to control the systems from which they can connect to sensitive data repositories. You can use the [Microsoft Data Classification Toolkit](https://www.microsoft.com/download/details.aspx?id=27123) to build a robust file classification infrastructure, and you can implement [Dynamic Access Control](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd391847(v=ws.10)) to restrict access to data based on characteristics of an access attempt, translating business rules into technical controls.
+You can use [Authentication Mechanism Assurance](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd391847(v=ws.10)) to permit the users to access sensitive data only if they've logged on to their secure systems using their smart cards, and can use IPsec and user rights restrictions to control the systems from which they can connect to sensitive data repositories. You can implement [Dynamic Access Control](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd391847(v=ws.10)) to restrict access to data based on characteristics of an access attempt, translating business rules into technical controls.
 
 From the perspective of the user, accessing sensitive data from a secured system "just works," and attempting to do so from an unsecured system "just doesn't." However, from the perspective of monitoring and managing your environment, you're helping to create identifiable patterns in how users access sensitive data and systems, making it easier for you to detect anomalous access attempts.
 

@@ -3,14 +3,14 @@ title: atmadm
 description: Reference article for the atmadm command, which monitors connections and addresses that are registered by the atM call Manager on an asynchronous transfer mode (atM) network.
 ms.topic: reference
 ms.assetid: 37156c2e-c4d4-4fd8-a03d-245fb60bf996
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # atmadm
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Monitors connections and addresses that are registered by the atM call Manager on an asynchronous transfer mode (atM) network. You can use **atmadm** to display statistics for incoming and outgoing calls on atM adapters. Used without parameters, **atmadm** displays statistics for monitoring the status of active atM connections.
 

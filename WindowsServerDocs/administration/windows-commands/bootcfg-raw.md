@@ -3,14 +3,14 @@ title: bootcfg raw
 description: Reference article for the bootcfg raw command, which adds operating system load options, specified as a string, to an operating system entry in the operating system section of the Boot.ini file.
 ms.topic: reference
 ms.assetid: e3458749-b0a0-460f-a022-3ff199a71f27
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # bootcfg raw
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds operating system load options specified as a string to an operating system entry in the [operating systems] section of the Boot.ini file. This command overwrites any existing operating system entry options.
 

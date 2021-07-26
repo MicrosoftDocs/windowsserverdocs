@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Guarded fabric and shielded VMs overview"
 title: Guarded Fabric and Shielded VMs overview
 ms.topic: article
 manager: dongill
@@ -9,7 +10,7 @@ ms.date: 08/29/2018
 
 # Guarded fabric and shielded VMs overview
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 ## Overview of the guarded fabric
 
@@ -29,7 +30,7 @@ When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hos
 
 ## Video: Introduction to shielded virtual machines
 
-> [!VIDEO https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016]
+> [!VIDEO https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016/player]
 
 ## Attestation modes in the Guarded Fabric solution
 
@@ -76,7 +77,7 @@ The shielding data file (PDK file) provides assurances that the VM will be creat
 
 The following figure shows the shielding data file and related configuration elements.
 
-![Shielding data file](../media/Guarded-Fabric-Shielded-VM/shielded-vms-shielding-data-file.png)
+![Illustration that shows the shielding data file and related configuration elements.](../media/Guarded-Fabric-Shielded-VM/shielded-vms-shielding-data-file.png)
 
 ## What are the types of virtual machines that a guarded fabric can run?
 

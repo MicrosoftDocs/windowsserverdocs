@@ -4,13 +4,14 @@ description: This topic provides best practices for deploying and managing Netwo
 manager: brianlic
 ms.topic: article
 ms.assetid: 90e544bd-e826-4093-8c3b-6a6fc2dfd1d6
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 12/08/2020
 ---
 
 # Network Policy Server Best Practices
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic to learn about best practices for deploying and managing Network Policy Server \(NPS\).
 
@@ -42,7 +43,7 @@ To make the most effective use of NPS logging:
 
 For more information, see [Configure Network Policy Server Accounting](nps-accounting-configure.md).
 
-- To provide failover and redundancy with SQL Server logging, place two computers running SQL Server on different subnets. Use the SQL Server **Create Publication Wizard** to set up database replication between the two servers. For more information, see [SQL Server Technical Documentation](/sql/sql-server/?view=sql-server-ver15) and [SQL Server Replication](/sql/relational-databases/replication/sql-server-replication?view=sql-server-ver15).
+- To provide failover and redundancy with SQL Server logging, place two computers running SQL Server on different subnets. Use the SQL Server **Create Publication Wizard** to set up database replication between the two servers. For more information, see [SQL Server Technical Documentation](/sql/sql-server/) and [SQL Server Replication](/sql/relational-databases/replication/sql-server-replication).
 
 ## Authentication
 
@@ -66,7 +67,7 @@ Following are the best practices for installing NPS.
 
 - Before installing NPS, install and test each of your network access servers using local authentication methods before you configure them as RADIUS clients in NPS.
 
-- After you install and configure NPS, save the configuration by using the Windows PowerShell command [Export-NpsConfiguration](/powershell/module/nps/export-npsconfiguration?view=win10-ps). Save the NPS configuration with this command each time you reconfigure the NPS.
+- After you install and configure NPS, save the configuration by using the Windows PowerShell command [Export-NpsConfiguration](/powershell/module/nps/export-npsconfiguration). Save the NPS configuration with this command each time you reconfigure the NPS.
 
 >[!CAUTION]
 >- The exported NPS configuration file contains unencrypted shared secrets for RADIUS clients and members of remote RADIUS server groups. Because of this, make sure that you save the file to a secure location.

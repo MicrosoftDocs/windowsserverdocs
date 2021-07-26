@@ -1,16 +1,16 @@
 ---
 title: Datagram Transport Layer Security protocol
-description: Windows Server Security
+description: Learn about the Datagram Transport Layer Security protocol, which is part of the Schannel Security Support Provider.
 ms.topic: article
 ms.assetid: 57b8873a-ad9c-4f2c-93e0-a2af352c6965
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 05/16/2018
 ---
 # Datagram Transport Layer Security protocol
 
-Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+Windows Server 2016, Windows 10
 
 This reference topic for the IT professional describes the Datagram Transport Layer Security (DTLS) protocol, which is part of the Schannel Security Support Provider (SSP).
 

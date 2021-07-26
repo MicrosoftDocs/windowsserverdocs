@@ -4,9 +4,9 @@ description: Learn how to set up the Remote Desktop client for iOS
 ms.topic: article
 ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: Heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 08/20/2020
+ms.date: 07/15/2021
 ms.localizationpriority: medium
 ---
 # Get started with the iOS client
@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 
 You can use the Remote Desktop client for iOS to work with Windows apps, resources, and desktops from your iOS device (iPhones and iPads).
 
-Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
+Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.yml) if you have any questions.
 
 > [!NOTE]
 > - Curious about the new releases for the iOS client? Check out [What's new for Remote Desktop on iOS?](ios-whatsnew.md).
@@ -32,7 +32,7 @@ First you'll need to download the client and configure your PC to connect to rem
 To download the client:
 
 1. Download the Microsoft Remote Desktop client from the [iOS App Store](https://aka.ms/rdios) or [iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8).
-2. [Set up your PC to accept remote connections](remote-desktop-client-faq.md#how-do-i-set-up-a-pc-for-remote-desktop).
+2. [Set up your PC to accept remote connections](remote-desktop-client-faq.yml#how-do-i-set-up-a-pc-for-remote-desktop-).
 
 ### Add a PC
 
@@ -65,10 +65,11 @@ To add a workspace:
 1. On the Connection Center screen, tap **+**, and then tap **Add workspace**.
 2. In the Feed URL field, enter the URL for the feed you want to add. This URL can be either a URL or an email address.
    - If you use a URL, use the one your admin gave you.
-      - This URL is usually a Windows Virtual Desktop URL. Which one you use depends on which version of Windows Virtual Desktop you're using.
-        - For Windows Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
-        - For Windows Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
-   - If you use an email address, enter your email address. Entering your email address tells the client ot search for a URL associated with your email address if your admin configured the server that way.
+      - If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
+        - For Azure Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
+        - For Azure Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
+        - If you're using Windows 365, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
+   - If you use an email address, enter your email address. Entering your email address tells the client to search for a URL associated with your email address if your admin configured the server that way.
 3. Tap **Next**.
 4. Provide your credentials when prompted.
    - For **User name**, give the user name of an account with permission to access resources.

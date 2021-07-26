@@ -29,7 +29,7 @@ The Integration Services pane lists all integration services available on the Hy
 
 ### Turn an integration service on or off using PowerShell
 
-To do this in PowerShell, use [Enable-VMIntegrationService](/powershell/module/hyper-v/enable-vmintegrationservice?view=win10-ps) and [Disable-VMIntegrationService](/powershell/module/hyper-v/disable-vmintegrationservice?view=win10-ps).
+To do this in PowerShell, use [Enable-VMIntegrationService](/powershell/module/hyper-v/enable-vmintegrationservice) and [Disable-VMIntegrationService](/powershell/module/hyper-v/disable-vmintegrationservice).
 
 The following examples demonstrate turning the guest file copy integration service on and off for a virtual machine named "demovm".
 
@@ -120,7 +120,7 @@ In order for an integration service to be fully functional, its corresponding se
     Running  vmicvss            Hyper-V Volume Shadow Copy Requestor
     ```
 
-1. Run either [Start-Service](/powershell/module/microsoft.powershell.management/start-service?view=powershell-7) or [Stop-Service](/powershell/module/microsoft.powershell.management/stop-service?view=powershell-7). For example, to turn off Windows PowerShell Direct, run:
+1. Run either [Start-Service](/powershell/module/microsoft.powershell.management/start-service?view=powershell-7&preserve-view=true) or [Stop-Service](/powershell/module/microsoft.powershell.management/stop-service?view=powershell-7&preserve-view=true). For example, to turn off Windows PowerShell Direct, run:
 
     ```
     Stop-Service -Name vmicvmsession

@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: 3c361575-1050-46f4-ac94-fa42102f83c1
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/30/2018
+ms.date: 06/25/2021
 ---
 # Use network virtual appliances on a virtual network
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 In this topic, you learn how to deploy network virtual appliances on tenant virtual networks. You can add network virtual appliances to networks that perform user-defined routing and port mirroring functions.
 

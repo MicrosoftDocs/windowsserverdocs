@@ -1,16 +1,16 @@
 ---
 title: What's New for Managed Service Accounts
-description: Windows Server Security
+description: Learn about the changes in functionality for Managed Service Accounts with the introduction of the group Managed Service Account in Windows Server 2012 and Windows 8.
 ms.topic: article
 ms.assetid: 2f2a8b6b-c152-4c40-b712-bfabff0e408b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # What&#39;s New for Managed Service Accounts
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic for the IT professional describes the changes in functionality for Managed Service Accounts with the introduction of the group Managed Service Account (gMSA) in Windows Server 2012 and Windows 8.
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Data Deduplication interoperability"
 ms.assetid: 60fca6b2-f1c0-451f-858f-2f6ab350d220
 title: Data Deduplication interoperability
 ms.topic: article
@@ -9,7 +10,7 @@ ms.date: 09/16/2016
 ---
 # Data Deduplication interoperability
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2019
+> Applies to: Windows Server 2016, Windows Server 2019
 
 ## Supported
 

@@ -1,15 +1,16 @@
 ---
 title: Use DNS Policy for Applying Filters on DNS Queries
-description: This topic is part of the DNS Policy Scenario Guide for Windows Server 2016
+description: Learn how to configure DNS policy in Windows Server 2016 to create query filters that are based on criteria that you supply.
 manager: brianlic
 ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # Use DNS Policy for Applying Filters on DNS Queries
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic to learn how to configure DNS policy in Windows Server&reg; 2016 to create query filters that are based on criteria that you supply.
 
@@ -35,7 +36,7 @@ You can create query filters with any logical combination (AND/OR/NOT) of the fo
 The following examples show you how to create filters for DNS policy that either block or allow DNS name resolution queries.
 
 >[!NOTE]
->The example commands in this topic use the Windows PowerShell command **Add-DnsServerQueryResolutionPolicy**. For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
+>The example commands in this topic use the Windows PowerShell command **Add-DnsServerQueryResolutionPolicy**. For more information, see [Add-DnsServerQueryResolutionPolicy](/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy).
 
 ## <a name="bkmk_block1"></a>Block queries from a domain
 

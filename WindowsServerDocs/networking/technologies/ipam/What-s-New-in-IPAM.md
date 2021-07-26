@@ -2,14 +2,15 @@
 title: What's New in IPAM
 description: This topic describes the IP Address Management (IPAM) functionality that is new or changed in Windows Server 2016.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: f2f2f1a5-ac2f-41b7-a495-98ad0e2a9b20
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # What's New in IPAM
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 This topic describes the IP Address Management (IPAM) functionality that is new or changed in Windows Server 2016.
 

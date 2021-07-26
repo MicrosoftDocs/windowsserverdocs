@@ -3,15 +3,15 @@ title: logman delete
 description: Reference article for the logman delete command, which deletes an existing data collector.
 ms.topic: reference
 ms.assetid: 8f3b2422-3dce-4fb4-adbb-8536b1d7da2b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # logman delete
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Deletes an existing data collector.
 

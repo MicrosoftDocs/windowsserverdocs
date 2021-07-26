@@ -1,6 +1,6 @@
 ---
 title: Avoid alignment inconsistencies between virtual blocks and physical disk sectors on dynamic virtual hard disks or differencing disks
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when alignment inconsistencies were detected for one or more virtual hard disks.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -11,7 +11,7 @@ ms.date: 8/16/2016
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -32,6 +32,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Resolution
 *Use the Create Virtual Hard Disk Wizard to create a new VHD-format or VHDX-format virtual hard disk and specify the existing virtual hard disk as the source disk. The new virtual hard disk will be created with alignment between the virtual blocks and physical disk.*
-
-
-

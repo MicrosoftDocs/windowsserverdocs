@@ -1,15 +1,16 @@
 ---
 title: Plan a Multisite Deployment
-description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+description: Learn about the planning steps required in order to deploy  Windows Server 2016 or  Windows Server 2012  Remote Access in a multisite configuration.
 manager: brianlic
 ms.topic: article
 ms.assetid: 8387eabe-7363-4367-b5b1-03c67baa2933
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Plan a Multisite Deployment
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
  Windows Server 2016, Windows Server 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the planning steps required in order to deploy  Windows Server 2016 or  Windows Server 2012  Remote Access in a multisite configuration.
 

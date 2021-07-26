@@ -1,16 +1,16 @@
 ---
 title: Authentication Policies and Authentication Policy Silos
-description: Windows Server Security
+description: Learn about authentication policy silos and the policies that can restrict accounts to those silos.
 ms.topic: article
 ms.assetid: 7eb0e640-033d-49b5-ab44-3959395ad567
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # Authentication Policies and Authentication Policy Silos
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic for the IT professional describes authentication policy silos and the policies that can restrict accounts to those silos. It also explains how authentication policies can be used to restrict the scope of accounts.
 

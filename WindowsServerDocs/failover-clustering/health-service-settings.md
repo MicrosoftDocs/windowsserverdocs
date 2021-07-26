@@ -1,14 +1,15 @@
 ---
+description: "Learn more about: Health Service settings"
 title: Health Service settings
 manager: eldenc
 ms.author: cosdar
 ms.topic: article
 author: cosmosdarwin
-ms.date: 08/14/2017
+ms.date: 06/18/2021
 ---
 # Health Service settings
 
-> Applies to: Windows Server 2019, Windows Server 2016
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 The Health Service is a new feature in Windows Server 2016 that improves the day-to-day monitoring and operational experience for clusters running Storage Spaces Direct.
 

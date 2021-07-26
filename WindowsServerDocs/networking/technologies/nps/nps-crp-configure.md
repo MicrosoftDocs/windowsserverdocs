@@ -4,13 +4,14 @@ description: This topic provides information on how to configure Connection Requ
 manager: brianlic
 ms.topic: article
 ms.assetid: f62c6a67-4dda-47f8-8bdf-9b76c37953e6
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Configure Connection Request Policies
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic to create and configure connection request policies that designate whether the local NPS processes connection requests or forwards them to remote RADIUS server for processing.
 

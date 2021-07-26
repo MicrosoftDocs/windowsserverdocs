@@ -3,15 +3,15 @@ title: netcfg
 description: Reference article for the netcfg command, which installs the Windows Preinstallation Environment (WinPE), a lightweight version of Windows used to deploy workstations.
 ms.topic: reference
 ms.assetid: e2daaab7-12db-4e36-b70c-db8906d084f7
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # netcfg
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Installs the Windows Preinstallation Environment (WinPE), a lightweight version of Windows used to deploy workstations.
 

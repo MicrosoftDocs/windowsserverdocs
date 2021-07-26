@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: AD Forest Recovery - Invalidating the current RID pool"
 title: AD Forest Recovery - Invalidating the RID Pool
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018

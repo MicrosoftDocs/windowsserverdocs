@@ -1,16 +1,17 @@
 ---
 title: Netsh Command Syntax, Contexts, and Formatting
-description: You can use this topic to learn how to enter netsh contexts and subcontexts, understand netsh syntax and command formatting, and how to run netsh commands on local and remote computers that are running Windows Server 2016 or Windows 10.
+description: You can use this topic to learn how to enter netsh contexts and subcontexts, understand netsh syntax and command formatting, and how to run netsh commands on local and remote computers that are running Windows Server or Windows 10.
 ms.topic: article
 ms.assetid: 8cb9b59f-0255-4261-b49a-562c5ea50ee0
 manager: brianlic
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 07/16/2021
 ---
 
 # Netsh Command Syntax, Contexts, and Formatting
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to enter netsh contexts and subcontexts, understand netsh syntax and command formatting, and how to run netsh commands on local and remote computers.
 

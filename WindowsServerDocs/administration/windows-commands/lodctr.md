@@ -3,15 +3,15 @@ title: lodctr
 description: Reference article for the lodctr command, which allows you to register or save performance counter name and registry settings in a file and designate trusted services.
 ms.topic: reference
 ms.assetid: 5a849abd-6b31-4833-bc8a-306c05eca29a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # lodctr
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Allows you to register or save performance counter name and registry settings in a file and designate trusted services.
 

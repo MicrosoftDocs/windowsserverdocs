@@ -1,6 +1,6 @@
 ---
 title: Upgrading your Remote Desktop Session Host to Windows Server 2016
-description: This article describes how to upgrade your existing Remote Desktop Services deployments to Windows Server 2016.
+description: Learn how to upgrade your existing Remote Desktop Session Host to Windows Server 2016.
 ms.author: spatnaik
 ms.date: 08/01/2016
 ms.topic: article
@@ -10,7 +10,7 @@ manager: scottman
 ---
 # Upgrading your Remote Desktop Session Host to Windows Server 2016
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 > [!IMPORTANT]
 > All applications must be uninstalled before the upgrade and reinstalled after the upgrade to avoid any app compatibility issues that may rise because of the upgrade.

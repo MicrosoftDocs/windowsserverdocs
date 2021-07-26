@@ -3,15 +3,15 @@ title: nslookup ls
 description: Reference article for the nslookup ls command, which lists DNS domain information.
 ms.topic: reference
 ms.assetid: f15f06fe-67e7-41a9-93b5-192ab14ab380
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # nslookup ls
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Lists DNS domain information.
 

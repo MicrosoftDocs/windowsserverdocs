@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Deploy Automatic File Classification (Demonstration Steps)"
 ms.assetid: 01988844-df02-4952-8535-c87aefd8a38a
 title: Deploy Automatic File Classification (Demonstration Steps)
 author: billmath
@@ -29,7 +30,7 @@ This topic explains how to enable resource properties in Active Directory, creat
 -   [Step 4: Verify that the files are classified](Deploy-Automatic-File-Classification--Demonstration-Steps-.md#BKMK_Step4)
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](/previous-versions//bb648607(v=vs.85)).
 
 ## <a name="BKMK_Step1"></a>Step 1: Create resource property definitions
 The Impact and Personally Identifiable Information resource properties are enabled so that File Classification Infrastructure can use these resource properties to tag the files that are scanned on a network shared folder.
@@ -184,4 +185,3 @@ You can verify that the files are properly classified by viewing the properties 
 
 
 -   [Dynamic Access Control: Scenario Overview](Dynamic-Access-Control--Scenario-Overview.md)
-

@@ -1,6 +1,6 @@
 ---
 title: "Build Multi-Language Client Restore Media"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to build a multi-language client restore media for Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 2fdbc016-d464-43cb-bd75-8a63e61588a2

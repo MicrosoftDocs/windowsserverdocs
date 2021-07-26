@@ -1,7 +1,6 @@
 ---
 title: Recovery snapshots should be removed after failover
-description: Online version of the text for this Best Practices Analyzer rule.
-
+description: Learn what to do when a failed over virtual machine has one or more recovery snapshots.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -12,7 +11,7 @@ ms.date: 8/16/2016
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -33,6 +32,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## **Resolution**
 *For each failed over virtual machine, use the Complete-VMFailover cmdlet in Windows PowerShell to remove the recovery snapshots and indicate failover completion.*
-
-
-

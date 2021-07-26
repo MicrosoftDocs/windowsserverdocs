@@ -1,15 +1,16 @@
 ---
 title: Customize the Active Directory Administrative Center Navigation Pane
-description: Windows Server Security
+description: Learn how to customize the Active Directory Administrative Center navigation pane.
 ms.assetid: c9933d16-e153-435a-b5b7-3e594db42d5c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
+ms.topic: article
 ---
 # Customize the Active Directory Administrative Center Navigation Pane
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
   You can browse through the Active Directory Administrative Center navigation pane by using the tree view, which is similar to the Active Directory Users and Computers console tree, or by using the list view.
 

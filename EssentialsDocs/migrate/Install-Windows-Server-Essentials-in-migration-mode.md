@@ -1,6 +1,6 @@
 ---
 title: Install Windows Server Essentials in migration mode
-description: Describes how to use Windows Server Essentials
+description: Learn how to install Windows Server Essentials in migration mode.
 ms.date: 04/29/2020
 ms.topic: article
 ms.assetid: fd7196ac-cfa6-46a5-ba77-6962b47a825e
@@ -70,9 +70,9 @@ You can have only one server on your network that is running  Windows Server Ess
 
 |Tool|Description|
 |----------|-----------------|
-|Netdiag|Helps isolate networking and connectivity issues. For more information and to download, see [Netdiag](https://go.microsoft.com/fwlink/?LinkId=217388).|
-|Dcdiag.exe|Analyzes the state of domain controllers in a forest or enterprise, and reports issues to assist you in troubleshooting. For more information and to download, see [Dcdiag](https://go.microsoft.com/fwlink/?LinkId=217389).|
-|Repadmin.exe|Assists you in diagnosing replication issues between domain controllers. This tool requires command-line parameters to run. For more information and to download, see [Repadmin](https://go.microsoft.com/fwlink/?LinkId=217387).|
+|Netdiag|Helps isolate networking and connectivity issues. For more information and to download, see [Netdiag](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731434(v=ws.10)).|
+|Dcdiag.exe|Analyzes the state of domain controllers in a forest or enterprise, and reports issues to assist you in troubleshooting. For more information and to download, see [Dcdiag](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731968(v=ws.10)).|
+|Repadmin.exe|Assists you in diagnosing replication issues between domain controllers. This tool requires command-line parameters to run. For more information and to download, see [Repadmin](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770963(v=ws.10)).|
 
  You should correct all the issues that these tools report before you proceed with the migration.
 

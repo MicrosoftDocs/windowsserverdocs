@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Determine how to recover the forest"
 title: AD Forest Recovery - Determine how to recover the forest
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
@@ -42,7 +43,7 @@ If you need to restore Active Directory to different hardware, create full serve
 
 If the time of the occurrence of the failure is unknown, investigate further to identify backups that hold the last safe state of the forest. This approach is less desirable. Therefore, we strongly recommend that you keep detailed logs about the health state of AD DS on a daily basis so that, if there is a forest-wide failure, the approximate time of failure can be identified. You should also keep a local copy of backups to enable faster recovery.
 
-If Active Directory Recycle Bin is enabled, the backup lifetime is equal to the **deletedObjectLifetime** value or the **tombstoneLifetime** value, whichever is less. For more information, see [Active Directory Recycle Bin Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkId=178657) (https://go.microsoft.com/fwlink/?LinkId=178657).
+If Active Directory Recycle Bin is enabled, the backup lifetime is equal to the **deletedObjectLifetime** value or the **tombstoneLifetime** value, whichever is less. For more information, see [Active Directory Recycle Bin Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392261(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkId=178657).
 
 As an alternative, you can also use the Active Directory database mounting tool (Dsamain.exe) and a Lightweight Directory Access Protocol (LDAP) tool, such as Ldp.exe or Active Directory Users and Computers, to identify which backup has the last safe state of the forest. The Active Directory database mounting tool, which is included in Windows Server 2008 and later Windows Server operating systems, exposes Active Directory data that is stored in backups or snapshots as an LDAP server. Then, you can use an LDAP tool to browse the data. This approach has the advantage of not requiring you to restart any DC in Directory Services Restore Mode (DSRM) to examine the contents of the backup of AD DS.
 

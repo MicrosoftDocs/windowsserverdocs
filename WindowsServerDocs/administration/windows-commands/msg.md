@@ -3,15 +3,15 @@ title: msg
 description: Reference article for the msg command, which sends a message to a user on a Remote Desktop Session Host server
 ms.topic: reference
 ms.assetid: 9501cf3e-568e-4982-9987-8daecc6c17ff
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # msg
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sends a message to a user on a Remote Desktop Session Host server.
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Preventing Kerberos change password that uses RC4 secret keys"
 title: Preventing Kerberos change password that use RC4 secret keys
 ms.topic: article
 ms.assetid: de207d55-aa3d-4c16-bd3b-496db43663a4
@@ -9,7 +10,7 @@ ms.date: 11/09/2016
 
 # Preventing Kerberos change password that uses RC4 secret keys
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2008 R2, and Windows Server 2008
+>Applies To: Windows Server 2016, Windows Server 2008 R2, and Windows Server 2008
 
 This topic for the IT professional explains some limitations in the Kerberos protocol that could lead to a malicious user taking control of a user's account. There is a limitation in the Kerberos Network Authentication Service (V5) standard (RFC 4120), which is well-known within the industry, whereby an attacker can authenticate as a user or change that user's password if the attacker knows the user's secret key.
 

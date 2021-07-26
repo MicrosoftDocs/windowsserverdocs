@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Add a Claim Description"
 ms.assetid: 7d230527-f4fe-4572-8838-0b354ee0b06b
 title: Add a Claim Description
 author: billmath
@@ -17,14 +18,14 @@ In a resource partner organization, administrators create corresponding claims t
 
 You can use the following procedure to add a claim.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ## To add a claim description
 
 1. In Server Manager, click **Tools**, and then select **AD FS Management**.
 
 2. Expand **Service** and on the right click **Add Claim Description**.
-   ![add claim description](media/Add-a-Claim-Description/claimdesc1.png)
+   ![Screenshot that highlights Add Claim Description.](media/Add-a-Claim-Description/claimdesc1.png)
 
 3. On the Add a Claim Description dialog box, in **Display name**, type a unique name that identifies the group or role for this claim.
 

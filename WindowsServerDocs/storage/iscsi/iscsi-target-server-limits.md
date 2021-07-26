@@ -1,6 +1,7 @@
 ---
 title: iSCSI Target Server Scalability Limits
 TOCTitle: iSCSI Target Server Scalability Limits
+description: "Learn more about: iSCSI Target Server Scalability Limits"
 ms.topic: article
 author: JasonGerend
 manager: dougkim
@@ -437,7 +438,7 @@ The iSCSI Target Storage Provider is a role service in Windows Server 2016, Wind
 
 Note that if the iSCSI Target Server is hosted by a server running Windows Server 2012 R2 or newer and you want to use VSS or VDS from a remote server, the remote server has to also run the same version of Windows Server and have the iSCSI Target Storage Provider role service installed. Also note that on all versions of Windows you should install only one version of the iSCSI Target Storage Provider role service.
 
-For more info about the iSCSI Target Storage Provider, see [iSCSI Target Storage (VDS/VSS) Provider](/powershell/module/iscsi/?view=win10-ps).
+For more info about the iSCSI Target Storage Provider, see [iSCSI Target Storage (VDS/VSS) Provider](/powershell/module/iscsi/).
 
 ## Tested compatibility with iSCSI initiators
 

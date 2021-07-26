@@ -3,15 +3,15 @@ title: ftp close
 description: Reference article for the ftp close command, which ends the ftp session with the remote server and remains at the ftp prompt.
 ms.topic: reference
 ms.assetid: 1dc344a9-64f7-45bc-9d44-a48afc844e36
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ftp close
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends the ftp session with the remote server and remains at the `ftp>` prompt.
 

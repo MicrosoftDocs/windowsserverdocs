@@ -10,7 +10,7 @@ ms.date: 05/21/2019
 
 # Windows Server servicing channels: LTSC and SAC
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Applies to: Windows Server 2019, Windows Server 2016
 
 There are two primary release channels available to Windows Server customers, the Long-Term Servicing Channel and the Semi-Annual Channel.
 
@@ -158,7 +158,7 @@ OsVersion                     : 10.0.17763
 OsHardwareAbstractionLayer    : 10.0.17763.107
 ````
 
-To query if the new [Server Core App Compatibility FOD](./install-fod-19.md) is present on a server, use [Get-WindowsCapability](/powershell/module/dism/get-windowscapability?view=win10-ps) Cmdlet and look for:
+To query if the new [Server Core App Compatibility FOD](./install-fod-19.md) is present on a server, use [Get-WindowsCapability](/powershell/module/dism/get-windowscapability) Cmdlet and look for:
 ````
 Name    :     ServerCore.AppCompatibility~~~~0.0.1.0
 State   :     Installed

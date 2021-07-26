@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 # Configure a Server Core installation of Windows Server 2016 or Windows Server, version 1709, with Sconfig.cmd
 
-> Applies to: Windows Server (Semi-Annual Channel) and Windows Server 2016
+> Applies to: Windows Server 2016
 
 In Windows Server 2016 and Windows Server, version 1709, you can use the Server Configuration tool (Sconfig.cmd) to configure and manage several common aspects of Server Core installations. You must be a member of the Administrators group to use the tool.
 
@@ -51,7 +51,7 @@ To add additional users to the local administrators group, use the **Add Local A
 You can configure the IP address to be assigned automatically by a DHCP Server or you can assign a static IP address manually. This option allows you to configure DNS Server settings for the server as well.
 
 > [!NOTE]
-> These options and many more are now available using the Networking Windows PowerShell cmdlets. For more information, see [Network Adapter Cmdlets](/powershell/module/netadapter/?view=win10-ps) in the Windows Server Library.
+> These options and many more are now available using the Networking Windows PowerShell cmdlets. For more information, see [Network Adapter Cmdlets](/powershell/module/netadapter/) in the Windows Server Library.
 
 ## Windows Update settings
 

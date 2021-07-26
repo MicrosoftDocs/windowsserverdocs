@@ -2,15 +2,15 @@
 title: Server Performance Advisor User's Guide
 description: Server Performance Advisor User's Guide
 ms.assetid: be99a5a9-b9c0-436b-912c-e5c5839a533d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ms.topic: article
 ---
 # Server Performance Advisor User's Guide
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Windows 8
 
 This user guide for Microsoft Server Performance Advisor (SPA) provides guidelines about how to use SPA to identify performance bottlenecks in systems deployed in various server roles.
 

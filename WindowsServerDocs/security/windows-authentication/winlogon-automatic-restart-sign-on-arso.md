@@ -1,15 +1,16 @@
 ---
+description: "Learn more about: Winlogon Automatic Restart Sign-On (ARSO)"
 title: Winlogon Automatic Restart Sign-On (ARSO)
 ms.topic: article
 ms.assetid: 15cddcfa-8a8e-45e4-bb76-b8e1a14ceac0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # Winlogon Automatic Restart Sign-On (ARSO)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 

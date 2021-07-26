@@ -1,32 +1,36 @@
 ---
 title: showmount
-description: Reference article for showmount, which displays mounted directories.
+description: Reference article for the showmount command, which displays information about mounted file systems exported by Server for NFS on a specified computer.
 ms.topic: reference
 ms.assetid: a6dd562e-e3bd-4ee6-be3b-6d29e29fd20e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
+
 # showmount
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-You can use **showmount** to display mounted directories.
+You can use **showmount** to display information about mounted file systems exported by Server for NFS on a specified computer. If you don't specify a server, this command displays information about the computer on which the **showmount** command is run.
 
 ## Syntax
+
 ```
-showmount {-e|-a|-d} <Server>
+showmount {-e|-a|-d} <server>
 ```
 
-## Description
-The **showmount** command\-line utility displays information about mounted file systems exported by Server for NFS on the computer specified by *Server*. If *Server* is not provided, **showmount** displays information about the computer on which the **showmount** command is run.
+### Parameters
 
-You must provide one of the following options:
+| Parameter | Description |
+|--|--|
+| -e | Displays all the file systems exported on the server. |
+| -a | Displays all Network File System (NFS) clients and the directories on the server each has mounted. |
+| -d | Displays all directories on the server that are currently mounted by NFS clients. |
 
-- **\-e** - Displays all file systems exported on the server.
-- **\-a** - Displays all Network File System \(NFS\) clients and the directories on the server each has mounted.
-- **\-d** - Displays all directories on the server that are currently mounted by NFS clients.
+## Additional References
 
-## See Also
-[Services for Network File System Command Reference](services-for-network-file-system-command-reference.md)
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+
+- [Services for Network File System Command Reference](services-for-network-file-system-command-reference.md)

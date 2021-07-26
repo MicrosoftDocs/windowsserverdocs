@@ -3,14 +3,14 @@ title: attributes volume
 description: Reference article for the attributes volume command, which displays, sets, or clears the attributes of a volume.
 ms.topic: reference
 ms.assetid: e40e8284-3d57-4de8-a46c-e4ade34a0d53
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # attributes volume
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays, sets, or clears the attributes of a volume.
 

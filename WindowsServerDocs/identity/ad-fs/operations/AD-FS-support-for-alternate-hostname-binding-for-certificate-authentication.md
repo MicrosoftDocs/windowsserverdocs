@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD FS support for alternate hostname binding for certificate authentication"
 ms.assetid: 4b71b212-7e5b-4fad-81ee-75b3d1f27869
 title: AD FS support for alternate hostname binding for certificate authentication
 author: billmath
@@ -18,14 +19,14 @@ In AD FS on Windows Server 2016 this has changed. Now we support two modes, the 
 ## How to configure alternate host name binding for certificate authentication
 There are two ways that you can add the alternate host name binding for certificate authentication. The first is when setting up a new AD FS farm with AD FS for Windows Server 2016, if the certificate contains a subject alternative name (SAN), then it will automatically be setup to use the second method mentioned above. That is, it will automatically setup two different hosts (sts.contoso.com and certauth.sts.contoso.com with the same port. If the certificate does not contain a SAN, then you will see a warning telling you that certificate subject alternative names does not support certauth.*. See the screenshots below. The first one shows an installation where the certificate had a SAN and the second one shows a certificate that did not.
 
-![alternate hostname binding](media/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication/ADFS_CA_1.png)
+![Screenshot that shows an installation where the certificate had a SAN.](media/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication/ADFS_CA_1.png)
 
-![alternate hostname binding](media/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication/ADFS_CA_2.png)
+![Screenshot that shows a certificate that does not have a SAN.](media/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication/ADFS_CA_2.png)
 
 Likewise, once AD FS in Windows Server 2016 has been deployed you can use the PowerShell cmdlet: Set-AdfsAlternateTlsClientBinding.
 
 ```powershell
-Set-AdfsAlternateTlsClientBinding -Member DC1.contoso.com -Thumbprint '<thumbprint of cert>'
+Set-AdfsAlternateTlsClientBinding -Member ADFS1.contoso.com -Thumbprint '<thumbprint of cert>'
 ```
 
 When prompted, click Yes to confirm.  And that should  be it.

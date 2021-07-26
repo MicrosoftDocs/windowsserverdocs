@@ -1,15 +1,16 @@
 ---
 title: Troubleshooting Enabling Multisite
-description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+description: Learn how to troubleshot issues related to the Enable-DAMultisite command.
 manager: brianlic
 ms.topic: article
 ms.assetid: 570c81d6-c4f4-464c-bee9-0acbd4993584
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Troubleshooting Enabling Multisite
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic contains troubleshooting information for issues related to the `Enable-DAMultisite` command. To confirm that the error you received is related to enabling multisite, check in the Windows Event log for the event ID 10051.
 

@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: AD Forest Recovery - FAQ"
 title: AD Forest Recovery - FAQ
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
@@ -37,11 +38,11 @@ Other factors that affect the duration of the forest recovery process include th
 - When you rebuild DCs, it takes time to replicate data for network-based promotions.
    - You can decrease the time required for restoring DCs by performing the following steps:
 - Reduce the time for retrieving backup media by:
-   - Using the Active Directory Database Mounting Tool (Dsamain.exe) to identify the best backup to use for restore operations. For more information about using the Active Directory Database Mounting Tool, see the [Active Directory Database Mounting Tool Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkId=132577) (https://go.microsoft.com/fwlink/?LinkId=132577).
+   - Using the Active Directory Database Mounting Tool (Dsamain.exe) to identify the best backup to use for restore operations. For more information about using the Active Directory Database Mounting Tool, see the [Active Directory Database Mounting Tool Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753609(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkId=132577).
    - Labeling the backup media clearly and storing the media in an organized fashion at a convenient, yet secure, location that allows fast retrieval.
    - Using the Volume Shadow Copy Service with a storage area network (SAN) to maintain backups from different points in time. For more information, see [Windows Server 2003 Active Directory Fast Recovery with Volume Shadow Copy Service and Virtual Disk Service](https://go.microsoft.com/fwlink/?LinkId=70781) (https://go.microsoft.com/fwlink/?LinkId=70781).
 - Force the removal of AD DS from the DCs instead of reinstalling the operating system. If the cause of the forest-wide failure has been identified to be purely within the scope of AD DS, you do not have to reinstall the operating system on the DCs.
-   - For more information about forcing the removal of AD DS from a DC that runs Windows Server 2008 or later, see [Forcing the Removal of a Windows Server 2008 Domain Controller](https://go.microsoft.com/fwlink/?LinkId=132627) (https://go.microsoft.com/fwlink/?LinkId=132627). For more information about forcing the removal of AD DS from a DC that runs Windows Server 2003, see [article 332199](https://go.microsoft.com/fwlink/?LinkId=70780) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=70780).
+   - For more information about forcing the removal of AD DS from a DC that runs Windows Server 2008 or later, see [Forcing the Removal of a Windows Server 2008 Domain Controller](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731871(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkId=132627). For more information about forcing the removal of AD DS from a DC that runs Windows Server 2003, see [article 332199](https://go.microsoft.com/fwlink/?LinkId=70780) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=70780).
 - Use faster tape devices or disk backups to reduce the time that is required for restore operations.
 
 You can also help accelerate AD DS installations by using the Install from Media (IFM) feature to rebuild DCs in each domain. IFM reduces the replication latency that is incurred when you rebuild DCs in each domain.

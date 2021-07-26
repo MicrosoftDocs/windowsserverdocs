@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Scenario: Central Access Policy"
 ms.assetid: 7f285c9f-c3e8-4aae-9ff4-a9123815114e
 title: Scenario Central Access Policy
 author: billmath
@@ -46,11 +47,11 @@ A central access policy rule has the following logical parts:
 
 The following two figures show the workflow in central access and audit policies.
 
-![solution guides](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide.JPG)
+![Diagram that shows the central access and audit policy concepts.](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide.JPG)
 
 **Figure 1** Central access and audit policy concepts
 
-![solution guides](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide_2.JPG)
+![Diagram that shows the central access policy workflow.](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide_2.JPG)
 
 **Figure 2** Central access policy workflow
 

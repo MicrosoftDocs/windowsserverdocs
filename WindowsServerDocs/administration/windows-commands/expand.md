@@ -3,15 +3,15 @@ title: expand
 description: Reference article for the expand command, which expands one or more compressed files.
 ms.topic: reference
 ms.assetid: 66de0488-a0c4-40c2-9b03-e40c107ba343
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # expand
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Expands one or more compressed files. You can also use this command to retrieve compressed files from distribution disks.
 

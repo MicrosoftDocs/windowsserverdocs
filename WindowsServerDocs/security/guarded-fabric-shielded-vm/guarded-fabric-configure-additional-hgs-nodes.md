@@ -1,5 +1,6 @@
 ---
 title: Configure additional HGS nodes
+description: "Learn more about: Configure additional HGS nodes"
 ms.topic: article
 ms.assetid: 227f723b-acb2-42a7-bbe3-44e82f930e35
 manager: dongill
@@ -10,7 +11,7 @@ ms.date: 01/14/2020
 
 # Configure additional HGS nodes
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 In production environments, HGS should be set up in a high availability cluster to ensure that shielded VMs can be powered on even if an HGS node goes down. For test environments, secondary HGS nodes are not required.
 
@@ -110,7 +111,7 @@ If you want to secure HGS endpoints with an SSL certificate, you must configure 
 SSL certificates *are not* replicated by HGS and do not need to use the same keys for every node (i.e. you can have different SSL certs for each node).
 
 When requesting an SSL cert, ensure the cluster fully qualified domain name (as shown in the output of `Get-HgsServer`) is either the subject common name of the cert, or included as a subject alternative DNS name.
-When you've obtained a certificate from your certificate authority, you can configure HGS to use it with [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver?view=win10-ps).
+When you've obtained a certificate from your certificate authority, you can configure HGS to use it with [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver).
 
 ```powershell
 $sslPassword = Read-Host -AsSecureString -Prompt "SSL Certificate Password"

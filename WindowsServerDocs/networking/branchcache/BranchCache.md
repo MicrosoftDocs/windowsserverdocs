@@ -4,12 +4,13 @@ description: This topic provides an overview of BranchCache in Windows Server 20
 manager: brianlic
 ms.topic: article
 ms.assetid: a4587cff-c086-49f1-a0bf-cd74b8a44440
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # BranchCache
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 This topic, which is intended for Information Technology (IT) professionals, provides overview information about BranchCache, including BranchCache modes, features, capabilities, and the BranchCache functionality that is available in different operating systems.
 

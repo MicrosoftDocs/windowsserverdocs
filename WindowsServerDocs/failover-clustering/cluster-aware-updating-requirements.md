@@ -5,12 +5,12 @@ ms.topic: article
 manager: lizross
 author: JasonGerend
 ms.author: jgerend
-ms.date: 08/06/2018
+ms.date: 05/28/2021
 description: Requirements for using Cluster-Aware Updating to install updates on clusters running Windows Server.
 ---
 # Cluster-Aware Updating requirements and best practices
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This section describes the requirements and dependencies that are needed to use [Cluster-Aware Updating](cluster-aware-updating.md) (CAU) to apply updates to a failover cluster running Windows Server.
 
@@ -27,17 +27,17 @@ The following table summarizes the CAU feature installation requirements for the
 |Installed component|Self\-updating mode|Remote\-updating mode|
 |-----------------------|-----------------------|-------------------------|
 |Failover Clustering feature|Required on all cluster nodes|Required on all cluster nodes|
-|Failover Clustering Tools|Required on all cluster nodes|-   Required on remote\-updating computer<br />-   Required on all cluster nodes to run the [Save-CauDebugTrace](/powershell/module/clusterawareupdating/Save-CauDebugTrace?view=win10-ps) cmdlet|
+|Failover Clustering Tools|Required on all cluster nodes|-   Required on remote\-updating computer<br />-   Required on all cluster nodes to run the [Save-CauDebugTrace](/powershell/module/clusterawareupdating/Save-CauDebugTrace) cmdlet|
 |CAU clustered role|Required|Not required|
 
 ## Obtain an administrator account
 The following administrator requirements are necessary to use CAU features.
 
--   To preview or apply update actions by using the CAU user interface \(UI\) or the Cluster-Aware Updating cmdlets, you must use a domain account that has local administrator rights and permissions on all the cluster nodes. If the account doesn't have sufficient privileges on every node, you are prompted in the Cluster-Aware Updating window to supply the necessary credentials when you perform these actions. To use the [Cluster-Aware Updating](/powershell/module/clusterawareupdating/?view=win10-ps) cmdlets, you can supply the necessary credentials as a cmdlet parameter.
+-   To preview or apply update actions by using the CAU user interface \(UI\) or the Cluster-Aware Updating cmdlets, you must use a domain account that has local administrator rights and permissions on all the cluster nodes. If the account doesn't have sufficient privileges on every node, you are prompted in the Cluster-Aware Updating window to supply the necessary credentials when you perform these actions. To use the [Cluster-Aware Updating](/powershell/module/clusterawareupdating/) cmdlets, you can supply the necessary credentials as a cmdlet parameter.
 
 -   If you use CAU in remote\-updating mode when you are signed in with an account that doesn't have local administrator rights and permissions on the cluster nodes, you must run the CAU tools as an administrator by using a local administrator account on the Update Coordinator computer, or by using an account that has the **Impersonate a client after authentication** user right.
 
--   To run the CAU Best Practices Analyzer, you must use an account that has administrative privileges on the cluster nodes and local administrative privileges on the computer that is used to run the [Test-CauSetup](/powershell/module/clusterawareupdating/Test-CauSetup?view=win10-ps) cmdlet or to analyze cluster updating readiness using the Cluster-Aware Updating window. For more information, see [Test cluster updating readiness](#BKMK_BPA).
+-   To run the CAU Best Practices Analyzer, you must use an account that has administrative privileges on the cluster nodes and local administrative privileges on the computer that is used to run the [Test-CauSetup](/powershell/module/clusterawareupdating/Test-CauSetup) cmdlet or to analyze cluster updating readiness using the Cluster-Aware Updating window. For more information, see [Test cluster updating readiness](#BKMK_BPA).
 
 ## Verify the cluster configuration
 The following are general requirements for a failover cluster to support updates by using CAU. Additional configuration requirements for remote management on the nodes are listed in [Configure the nodes for remote management](#BKMK_NODE_CONFIG) later in this topic.
@@ -65,8 +65,8 @@ These requirements are in addition to the installation requirements for the [Ins
 |---------------|---|-----------------------|-------------------------|
 |[Enable a firewall rule to allow automatic restarts](#BKMK_FW)|Disabled|Required on all cluster nodes if a firewall is in use|Required on all cluster nodes if a firewall is in use|
 |[Enable Windows Management Instrumentation](#BKMK_WMI)|Enabled|Required on all cluster nodes|Required on all cluster nodes|
-|[Enable Windows PowerShell 3.0 or 4.0 and Windows PowerShell remoting](#BKMK_PS)|Enabled|Required on all cluster nodes|Required on all cluster nodes to run the following:<p>-   The [Save-CauDebugTrace](/powershell/module/clusterawareupdating/Save-CauDebugTrace?view=win10-ps) cmdlet<br />-    PowerShell pre\-update and post\-update scripts during an Updating Run<br />-   Tests of cluster updating readiness using the Cluster-Aware Updating window or the [Test\-CauSetup](/powershell/module/clusterawareupdating/Test-CauSetup?view=win10-ps) Windows PowerShell cmdlet|
-|[Install .NET Framework 4.6 or 4.5](#BKMK_NET)|Enabled|Required on all cluster nodes|Required on all cluster nodes to run the following:<p>-   The [Save-CauDebugTrace](/powershell/module/clusterawareupdating/Save-CauDebugTrace?view=win10-ps) cmdlet<br />-   PowerShell pre\-update and post\-update scripts during an Updating Run<br />-   Tests of cluster updating readiness using the Cluster-Aware Updating window or the [Test\-CauSetup](/powershell/module/clusterawareupdating/Test-CauSetup?view=win10-ps) Windows PowerShell cmdlet|
+|[Enable Windows PowerShell 3.0 or 4.0 and Windows PowerShell remoting](#BKMK_PS)|Enabled|Required on all cluster nodes|Required on all cluster nodes to run the following:<p>-   The [Save-CauDebugTrace](/powershell/module/clusterawareupdating/Save-CauDebugTrace) cmdlet<br />-    PowerShell pre\-update and post\-update scripts during an Updating Run<br />-   Tests of cluster updating readiness using the Cluster-Aware Updating window or the [Test\-CauSetup](/powershell/module/clusterawareupdating/Test-CauSetup) Windows PowerShell cmdlet|
+|[Install .NET Framework 4.6 or 4.5](#BKMK_NET)|Enabled|Required on all cluster nodes|Required on all cluster nodes to run the following:<p>-   The [Save-CauDebugTrace](/powershell/module/clusterawareupdating/Save-CauDebugTrace) cmdlet<br />-   PowerShell pre\-update and post\-update scripts during an Updating Run<br />-   Tests of cluster updating readiness using the Cluster-Aware Updating window or the [Test\-CauSetup](/powershell/module/clusterawareupdating/Test-CauSetup) Windows PowerShell cmdlet|
 
 ### <a name="BKMK_FW"></a>Enable a firewall rule to allow automatic restarts
 To allow automatic restarts after updates are applied \(if the installation of an update requires a restart\), if Windows Firewall or a non\-Microsoft firewall is in use on the cluster nodes, a firewall rule must be enabled on each node that allows the following traffic:
@@ -86,7 +86,7 @@ If Windows Firewall is used on the cluster nodes, you can do this by enabling th
 > [!NOTE]
 > The **Remote Shutdown** Windows Firewall rule group cannot be enabled when it will conflict with Group Policy settings that are configured for Windows Firewall.
 
-The **Remote Shutdown** firewall rule group is also enabled by specifying the **–EnableFirewallRules** parameter when running the following CAU cmdlets: [Add-CauClusterRole](/powershell/module/clusterawareupdating/Add-CauClusterRole?view=win10-ps), [Invoke-CauRun](/powershell/module/clusterawareupdating/Invoke-CauRun?view=win10-ps), and [SetCauClusterRole](/powershell/module/clusterawareupdating/Set-CauClusterRole?view=win10-ps).
+The **Remote Shutdown** firewall rule group is also enabled by specifying the **–EnableFirewallRules** parameter when running the following CAU cmdlets: [Add-CauClusterRole](/powershell/module/clusterawareupdating/Add-CauClusterRole), [Invoke-CauRun](/powershell/module/clusterawareupdating/Invoke-CauRun), and [SetCauClusterRole](/powershell/module/clusterawareupdating/Set-CauClusterRole).
 
 The following PowerShell example shows an additional method to enable automatic restarts on a cluster node.
 
@@ -101,7 +101,7 @@ To manually enable remote management, do the following:
 
 1.  In the Services console, start the **Windows Remote Management** service and set the startup type to **Automatic**.
 
-2.  Run the [Set-WSManQuickConfig](/powershell/module/Microsoft.WsMan.Management/Set-WSManQuickConfig?view=powershell-6) cmdlet, or run the following command from an elevated command prompt:
+2.  Run the [Set-WSManQuickConfig](/powershell/module/Microsoft.WsMan.Management/Set-WSManQuickConfig?view=powershell-6&preserve-view=true) cmdlet, or run the following command from an elevated command prompt:
 
     ```PowerShell
     winrm quickconfig -q
@@ -118,7 +118,7 @@ To enable PowerShell remoting, use one of the following methods:
 
 -   Configure a domain\-level Group Policy setting for Windows Remote Management \(WinRM\).
 
-For more information about enabling PowerShell remoting, see [About Remote Requirements](/powershell/module/microsoft.powershell.core/about/about_remote_requirements?view=powershell-6).
+For more information about enabling PowerShell remoting, see [About Remote Requirements](/powershell/module/microsoft.powershell.core/about/about_remote_requirements?view=powershell-6&preserve-view=true).
 
 ### <a name="BKMK_NET"></a>Install .NET Framework 4.6 or 4.5
 To enable self\-updating mode and certain CAU features in remote\-updating mode,.NET Framework 4.6, or .NET Framework 4.5 (on Windows Server 2012 R2) must be installed on all cluster nodes. By default, NET Framework is installed.

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Data Deduplication Overview"
 ms.assetid: 4b844404-36ba-4154-aa5d-237a3dd644be
 title: Data Deduplication Overview
 ms.topic: article
@@ -9,7 +10,7 @@ ms.date: 05/09/2017
 ---
 # Data Deduplication Overview
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel),
+> Applies to: Windows Server 2019, Windows Server 2016
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
 
@@ -35,6 +36,9 @@ The space savings that you can gain from Data Deduplication depend on the datase
 | Virtualization libraries | ISOs, virtual hard disk files, etc.  | 80-95%                |
 | General file share | All the above                           | 50-60%                |
 
+> [!NOTE]
+> If you're just looking to free up space on a volume, consider using Azure File Sync with cloud tiering enabled. This allows you to cache your most frequently accessed files locally and tier your least frequently accessed files to the cloud, saving local storage space while maintaining performance. For details, see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning).
+
 ## <a id="when-can-dedup-be-used"></a>When can Data Deduplication be used?
 <table>
     <tbody>
@@ -55,7 +59,7 @@ The space savings that you can gain from Data Deduplication depend on the datase
         <tr>
             <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-vdi.png" alt="Illustration of VDI servers" /></td>
             <td style="vertical-align:top">
-                <b>Virtualized Desktop Infrastructure (VDI) deployments</b><br />
+                <b>Virtual Desktop Infrastructure (VDI) deployments</b><br />
                 VDI servers, such as <a href="/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725560(v=ws.11)">Remote Desktop Services</a>, provide a lightweight option for organizations to provision desktops to users. There are many reasons for an organization to rely on such technology:
                 <ul>
                     <li><b>Application deployment</b>: You can quickly deploy applications across your enterprise. This is especially useful when you have applications that are frequently updated, infrequently used, or difficult to manage.</li>

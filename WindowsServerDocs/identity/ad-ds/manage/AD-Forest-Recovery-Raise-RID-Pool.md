@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: AD Forest Recovery - Raising the value of available RID pools"
 title: AD Forest Recovery - Raising RID pools
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
@@ -30,15 +31,15 @@ When you increase the value of the large integer, you increase the value of the 
 
 1. Open Server Manager, click **Tools** and click **ADSI Edit**.
 2. Right-click, select **Connect to** and connect do the Default Naming Context and click **OK**.
-   ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi1.png)
+   ![Screenshot that shows how to connect to the Default Naming Context](media/AD-Forest-Recovery-Raise-RID-Pool/adsi1.png)
 3. Browse to the following distinguished name path: **CN=RID Manager$,CN=System,DC=<domain name>**.
-   ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi2.png)
+   ![Screenshot that shows how to browse to the distinguished name path.](media/AD-Forest-Recovery-Raise-RID-Pool/adsi2.png)
 3. Right-click and select the properties of CN=RID Manager$.
 4. Select the attribute **rIDAvailablePool**, click **Edit**, and then copy the large integer value to the clipboard.
-   ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi3.png)
+   ![Screenshot that shows the selected rIDAvailablePool attribute.](media/AD-Forest-Recovery-Raise-RID-Pool/adsi3.png)
 5. Start calculator, and from the **View** menu, select **Scientific Mode**.
 6. Add 100,000 to the current value.
-   ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi4.png)
+   ![Screenshot that shows where to add 100,000 to the current value.](media/AD-Forest-Recovery-Raise-RID-Pool/adsi4.png)
 7. Using ctrl-c, or the **Copy** command from the **Edit** menu, copy the value to the clipboard.
 8. In the edit dialog of adsiedit, paste this new value.
    ![ADSI Edit](media/AD-Forest-Recovery-Raise-RID-Pool/adsi5.png)
@@ -49,17 +50,17 @@ When you increase the value of the large integer, you increase the value of the 
 1. At the command prompt, type the following command, and then press ENTER:
    **ldp**
 2. Click **Connection**, click **Connect**, type the name of RID manager, and then click **OK**.
-   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp1.png)
+   ![Screenshot that shows where to type the name of the RID manager.](media/AD-Forest-Recovery-Raise-RID-Pool/ldp1.png)
 3. Click **Connection**, click **Bind**, select **Bind with credentials** and type your administrative credentials, and then click **OK**.
-   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp2.png)
+   ![Screenshot that shows the Bind with credentials option.](media/AD-Forest-Recovery-Raise-RID-Pool/ldp2.png)
 4. Click **View**, click **Tree** and then type the following distinguished name path:  CN=RID Manager$,CN=System,DC=*domain name*
-   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp3.png)
+   ![Screenshot that shows where you type the distinguished name path.](media/AD-Forest-Recovery-Raise-RID-Pool/ldp3.png)
 5. Click **Browse**, and then click **Modify**.
 6. Add 100,000 to the current **rIDAvailablePool** value, and then type the sum into **Values**.
 7. In **Dn**, type `cn=RID Manager$,cn=System,dc=`*<domain name\>*.
 8. In **Edit Entry Attribute**, type `rIDAvailablePool`.
 9. Select **Replace** as the operation, and then click **Enter**.
-   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp4.png)
+   ![Screenshot that shows the Replace option.](media/AD-Forest-Recovery-Raise-RID-Pool/ldp4.png)
 10. Click **Run** to run the operation. Click **Close**.
 11. To validate the change, click **View**, click **Tree**, and then type the following distinguished name path:   CN=RID Manager$,CN=System,DC=*domain name*.   Check the **rIDAvailablePool** attribute.
    ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp5.png)

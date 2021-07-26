@@ -3,8 +3,8 @@ title: bcdedit
 description: Reference article for the bcdedit command, which creates new stores, modify existing stores, and add boot menu parameters.
 ms.topic: reference
 ms.assetid: ab2da47d-3aac-44a0-b7fd-bd9561d61553
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 03/27/2018
 ---
@@ -101,6 +101,4 @@ bcdedit /command [<argument1>] [<argument2>] ...
 
 For examples of how to use BCDEdit, see the [BCDEdit Options Reference](/windows-hardware/drivers/devtest/bcd-boot-options-reference) article.
 
-## Additional References
-
-- [Command-Line Syntax Key](command-line-syntax-key.md)
+To see the notation used to indicate command-line syntax, see  [Command-Line Syntax Key](command-line-syntax-key.md).

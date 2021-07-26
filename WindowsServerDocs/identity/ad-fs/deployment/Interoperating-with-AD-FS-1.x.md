@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Interoperating with AD FS 1.x"
 ms.assetid: 97999892-29c6-4076-be19-5e5259d8ada6
 title: Interoperating with AD FS 1.x
 author: billmath
@@ -33,5 +34,4 @@ Although most of the AD FS 1.*x* Federation Service settings work in a similar
 |Federation Service endpoint URL|WS\-Federation Passive Endpoint URL
 
 ## See Also
-[AD FS and AD FS 1.x Interoperability](https://go.microsoft.com/fwlink/?LinkId=200776)
-
+[AD FS and AD FS 1.x Interoperability](/archive/blogs/askds/ad-fs-2-0-and-ad-fs-1-x-interoperability)

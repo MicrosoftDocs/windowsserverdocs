@@ -6,7 +6,7 @@ ms.assetid: d4c6e8e9-fcb3-4a4a-9d04-2d8c367b6354
 author: jasongerend
 ms.author: jgerend
 manager: lizapo
-ms.date: 06/07/2020
+ms.date: 03/17/2021
 ---
 
 # robocopy
@@ -19,7 +19,7 @@ Copies file data from one location to another.
 robocopy <source> <destination> [<file>[ ...]] [<options>]
 ```
 
-For example, to copy a file named *yearly-report.mov* from *c:\reports* to a file share *\\marketing\videos* while enabling multi-threading for higher performance (with the **/mt** parameter) and the ability to restart the transfer in case it's interrupted (with the **/z** parameter), type:
+For example, to copy a file named *yearly-report.mov* from *c:\reports* to a file share *\\\\marketing\videos* while enabling multi-threading for higher performance (with the **/mt** parameter) and the ability to restart the transfer in case it's interrupted (with the **/z** parameter), type:
 
 ```dos
 robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
@@ -31,7 +31,7 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 |--|--|
 | `<source>` | Specifies the path to the source directory. |
 | `<destination>` | Specifies the path to the destination directory. |
-| `<file>` | Specifies the file or files to be copied. Wildcard characters (**&#42;** or **?**) are supported. If you don't specify this parameter, `*.` is used as the default value. |
+| `<file>` | Specifies the file or files to be copied. Wildcard characters (**&#42;** or **?**) are supported. If you don't specify this parameter, `*.*` is used as the default value. |
 | `<options>` | Specifies the options to use with the **robocopy** command, including **copy**, **file**, **retry**, **logging**, and **job** options. |
 
 #### Copy options
@@ -41,9 +41,10 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /s | Copies subdirectories. This option automatically excludes empty directories. |
 | /e | Copies subdirectories. This option automatically includes empty directories. |
 | /lev:`<n>` | Copies only the top *n* levels of the source directory tree. |
-| /z | Copies files in restartable mode. |
-| /b | Copies files in Backup mode. |
-| /zb | Uses restartable mode. If access is denied, this option uses Backup mode. |
+| /z | Copies files in restartable mode. In restartable mode, should a file copy be interrupted, Robocopy can pick up where it left off rather than re-copying the entire file. |
+| /b | Copies files in backup mode. Backup mode allows Robocopy to override file and folder permission settings (ACLs). This allows you to copy files you might otherwise not have access to, assuming it's being run under an account with sufficient privileges.|
+| /zb | Copies files in restartable mode. If file access is denied, switches to backup mode. |
+| /j | Copies using unbuffered I/O (recommended for large files). |
 | /efsraw | Copies all encrypted files in EFS RAW mode. |
 | /copy:`<copyflags>` | Specifies which file properties to copy. The valid values for this option are:<ul><li>**D** - Data</li><li>**A** - Attributes</li><li>**T** - Time stamps</li><li>**S** - NTFS access control list (ACL)</li><li>**O** - Owner information</li><li>**U** - Auditing information</li></ul>The default value for this option is **DAT** (data, attributes, and time stamps). |
 | /dcopy:`<copyflags>`| Specifies what to copy in directories. The valid values for this option are:<ul><li>**D** - Data</li><li>**A** - Attributes</li><li>**T** - Time stamps</li></ul>The default value for this option is **DA** (data and attributes). |
@@ -68,6 +69,9 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /pf | Checks run times on a per-file (not per-pass) basis. |
 | /ipg:n | Specifies the inter-packet gap to free bandwidth on slow lines. |
 | /sl | Don't follow symbolic links and instead create a copy of the link. |
+| /nodcopy | Copies no directory info (the default **/dcopy:DA** is done). |
+| /nooffload | Copies files without using the Windows Copy Offload mechanism. |
+| /compress | Requests network compression during file transfer, if applicable. |
 
 > [!IMPORTANT]
 > When using the **/secfix** copy option, specify the type of security information you want to copy, using one of these additional copy options:
@@ -88,13 +92,13 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /xa:`[RASHCNETO]` | Excludes files for which any of the specified attributes are set. The valid values for this option are: <ul><li>**R** - Read only</li><li>**A** - Archive</li><li>**S** - System</li><li>**H** - Hidden</li><li>**C** - Compressed</li><li>**N** - Not content indexed</li><li>**E** - Encrypted</li><li>**T** - Temporary</li><li>**O** - Offline</li></ul> |
 | /xf `<filename>[ ...]` | Excludes files that match the specified names or paths. Wildcard characters (**&#42;** and **?**) are supported. |
 | /xd `<directory>[ ...]` | Excludes directories that match the specified names and paths. |
-| /xc | Excludes changed files. |
-| /xn | Excludes newer files. |
-| /xo | Excludes older files. |
-| /xx | Excludes extra files and directories. |
-| /xl | Excludes "lonely" files and directories. |
-| /is | Includes the same files. |
-| /it | Includes modified files. |
+| /xc | Excludes existing files with the same timestamp, but different file sizes. |
+| /xn | Excludes existing files newer than the copy in the source directory. |
+| /xo | Excludes existing files older than the copy in the source directory. |
+| /xx | Excludes extra files and directories present in the destination but not the source. Excluding extra files will not delete files from the destination.  |
+| /xl | Excludes "lonely" files and directories present in the source but not the destination. Excluding lonely files prevents any new files from being added to the destination. |
+| /is | Includes the same files. Same files are identical in name, size, times, and all attributes. |
+| /it | Includes "tweaked" files. Tweaked files have the same name, size, and times, but different attributes. |
 | /max:`<n>` | Specifies the maximum file size (to exclude files bigger than *n* bytes). |
 | /min:`<n>` | Specifies the minimum file size (to exclude files smaller than *n* bytes). |
 | /maxage:`<n>` | Specifies the maximum file age (to exclude files older than *n* days or date). |

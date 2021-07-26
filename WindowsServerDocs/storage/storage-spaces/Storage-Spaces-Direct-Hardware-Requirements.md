@@ -5,7 +5,7 @@ ms.author: eldenc
 manager: eldenc
 ms.topic: article
 author: eldenchristensen
-ms.date: 07/24/2020
+ms.date: 09/24/2020
 ms.localizationpriority: medium
 ---
 # Storage Spaces Direct hardware requirements
@@ -21,11 +21,11 @@ For production, Microsoft recommends purchasing a validated hardware/software so
 
 ## Base requirements
 
-Systems, components, devices, and drivers must be **Windows Server 2016 Certified** per the [Windows Server Catalog](https://www.windowsservercatalog.com). In addition, we recommend that servers, drives, host bus adapters, and network adapters have the **Software-Defined Data Center (SDDC) Standard** and/or **Software-Defined Data Center (SDDC) Premium** additional qualifications (AQs), as pictured below. There are over 1,000 components with the SDDC AQs.
+Systems, components, devices, and drivers must be certified for the operating system you’re using in the [Windows Server Catalog](https://www.windowsservercatalog.com). In addition, we recommend that servers, drives, host bus adapters, and network adapters have the **Software-Defined Data Center (SDDC) Standard** and/or **Software-Defined Data Center (SDDC) Premium** additional qualifications (AQs), as pictured below. There are over 1,000 components with the SDDC AQs.
 
-![screenshot of the Windows Server catalog showing the SDDC AQs](media/hardware-requirements/sddc-aqs.png)
+![Screenshot of the Windows Server catalog showing a system that includes the Software-Defined Data Center (SDDC) Premium certification](media/hardware-requirements/sddc-aqs.png)
 
-The fully configured cluster (servers, networking, and storage) must pass all [cluster validation tests](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)) per the wizard in Failover Cluster Manager or with the `Test-Cluster` [cmdlet](/powershell/module/failoverclusters/test-cluster?view=win10-ps) in PowerShell.
+The fully configured cluster (servers, networking, and storage) must pass all [cluster validation tests](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)) per the wizard in Failover Cluster Manager or with the `Test-Cluster` [cmdlet](/powershell/module/failoverclusters/test-cluster) in PowerShell.
 
 In addition, the following requirements apply:
 
@@ -70,7 +70,7 @@ Switched or switchless node interconnects
 
 ## Drives
 
-Storage Spaces Direct works with direct-attached SATA, SAS, NVMe, or persistent memory (PMem) drives that are physically attached to just one server each. For more help choosing drives, see the [Choosing drives](choosing-drives.md) and [Understand and deploy persistent memory](deploy-pmem.md) topics.
+Storage Spaces Direct works with direct-attached SATA, SAS, NVMe, or persistent memory (PMem) drives that are physically attached to just one server each. For more help choosing drives, see the [Choosing drives](choosing-drives.md) and [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory) topics.
 
 - SATA, SAS, persistent memory, and NVMe (M.2, U.2, and Add-In-Card) drives are all supported
 - 512n, 512e, and 4K native drives are all supported
@@ -91,7 +91,7 @@ Here's how drives can be connected for Storage Spaces Direct:
 - SAS host-bus adapter (HBA) with SATA drives
 - **NOT SUPPORTED:** RAID controller cards or SAN (Fibre Channel, iSCSI, FCoE) storage. Host-bus adapter (HBA) cards must implement simple pass-through mode.
 
-![diagram of supported drive interconnects](media/hardware-requirements/drive-interconnect-support-1.png)
+![Diagram showing supported drive interconnects, with RAID cards not supported](media/hardware-requirements/drive-interconnect-support-1.png)
 
 Drives can be internal to the server, or in an external enclosure that is connected to just one server. SCSI Enclosure Services (SES) is required for slot mapping and identification. Each external enclosure must present a unique identifier (Unique ID).
 
@@ -99,7 +99,7 @@ Drives can be internal to the server, or in an external enclosure that is connec
 - Drives in an external enclosure ("JBOD") connected to one server
 - **NOT SUPPORTED:** Shared SAS enclosures connected to multiple servers or any form of multi-path IO (MPIO) where drives are accessible by multiple paths.
 
-![diagram of supported drive interconnects](media/hardware-requirements/drive-interconnect-support-2.png)
+![Diagram showing how internal and external drives connected directly to a server are supported, but shared SAS is not](media/hardware-requirements/drive-interconnect-support-2.png)
 
 ### Minimum number of drives (excludes boot drive)
 

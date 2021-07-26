@@ -1,6 +1,6 @@
 ---
 title: "Manage Digital Media in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about the media streaming features of your server, and learn how to set up and use media streaming on your network.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 9378bffa-487c-43ca-9ec3-7e7864d2dd9a
@@ -236,7 +236,7 @@ The following topics discuss the media streaming features of your server, and ex
 > [!NOTE]
 >  If you cannot use a file type that is listed in this table, the file may also be encoded with a codec that is not supported by Windows Media Player.
 
- For additional information about supported file formats, see [File types supported by Windows Media Player](https://go.microsoft.com/fwlink/p/?LinkID=196118) and [Supported media formats, protocols, and log fields](https://go.microsoft.com/fwlink/p/?LinkId=203339) for Silverlight.
+ For additional information about supported file formats, see [File types supported by Windows Media Player](https://go.microsoft.com/fwlink/p/?LinkID=196118) and [Supported media formats, protocols, and log fields](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc189080(v=vs.95)) for Silverlight.
 
 ## Additional References
 

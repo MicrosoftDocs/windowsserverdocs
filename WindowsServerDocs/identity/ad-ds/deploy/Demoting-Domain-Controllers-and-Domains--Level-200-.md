@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Demoting Domain Controllers and Domains"
 ms.assetid: 65ed5956-6140-4e06-8d99-8771553637d1
 title: Demoting Domain Controllers and Domains (Level 200)
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 11/14/2018
 ms.topic: article
@@ -186,7 +187,7 @@ Use the optional **Whatif** argument with the **Uninstall-ADDSDomainController**
 
 For example:
 
-![PowerShell Uninstall-ADDSDomainController Example](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstall.png)
+![Screenshot of a terminal window that shows the explicit and implicit values of a cmdlet's arguments.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstall.png)
 
 The prompt to restart is your last opportunity to cancel this operation when using ADDSDeployment Windows PowerShell. To override that prompt, use the **-force** or **confirm:$false** arguments.
 
@@ -214,7 +215,7 @@ To accept the reboot prompt automatically, use the **-force** or **-confirm:$fal
 
 Here is an example of forcibly demoting with its minimal required arguments of **-forceremoval** and **-demoteoperationmasterrole**. The **-credential** argument is not required because the user logged on as a member of the Enterprise Admins group:
 
-![PowerShell Uninstall-ADDSDomainController Example](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleForce.png)
+![Screenshot of a terminal window that shows an example of forcibly demoting with its minimal required arguments of -forceremoval and -demoteoperationmasterrole.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleForce.png)
 
 Here is an example of removing the last domain controller in the domain with its minimal required arguments of **-lastdomaincontrollerindomain** and **-removeapplicationpartitions**:
 

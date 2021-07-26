@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Assigning Domain Names"
 ms.assetid: 73897497-b189-4305-b234-e057ffda163a
 title: Assigning Domain Names
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

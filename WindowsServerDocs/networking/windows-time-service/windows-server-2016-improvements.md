@@ -9,7 +9,7 @@ ms.topic: article
 
 # Time accuracy improvements for Windows Server 2016
 
-Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC. NTP uses 4 values to calculate the time offset, based on the timestamps of the client request/response and server request/response. However, networks are noisy, and there can be spikes in the data from NTP due to network congestion and other factors that affect network latency. Windows 2016 algorithms average out this noise using a number of different techniques which results in a stable and accurate clock. Additionally, the source we use for accurate time references an improved API which gives us better resolution. With these improvements we are able to achieve 1 ms accuracy with regards to UTC across a domain.
+Windows Server 2016 has improved the algorithms it uses to correct time and condition the local clock to synchronize with UTC. NTP uses 4 values to calculate the time offset, based on the timestamps of the client request/response and server request/response. However, networks are noisy, and there can be spikes in the data from NTP due to network congestion and other factors that affect network latency. Windows 2016 algorithms average out this noise using a number of different techniques which results in a stable and accurate clock. Additionally, the source we use for accurate time references an improved API which gives us better resolution. With these improvements we are able to achieve 1 ms accuracy with regard to UTC across a domain.
 
 ## Hyper-V
 
@@ -18,7 +18,7 @@ Windows 2016 has improved the Hyper-V TimeSync service. Improvements include mor
 > [!NOTE]
 > Load was created using prime95 benchmark using balanced profile.
 
-Additionally, the stratum level that the Host reports to the guest is more transparent. Previously the Host would present a fixed stratum of 2, regardless of its accuracy. With the changes in Windows Server 2016, the host reports a stratum one greater than the host stratum, which results in better time for virtual guests. The host stratum is determined by w32time through normal means based on its source time. Domain joined Windows 2016 guests will find the most accurate clock, rather than defaulting to the host. It was for this reason that we advised to manually disable Hyper-V Time Provider setting for machines participating in a domain in Windows 2012R2 and below.
+Additionally, the Stratum level that the Host reports to the guest is more transparent. Previously the Host would present a fixed Stratum of 2, regardless of its accuracy. With the changes in Windows Server 2016, the host reports a Stratum one greater than the host Stratum, which results in better time for virtual guests. The host Stratum is determined by w32time through normal means based on its source time. Domain joined Windows 2016 guests will find the most accurate clock, rather than defaulting to the host. It was for this reason that we advised to manually disable Hyper-V Time Provider setting for machines participating in a domain in Windows 2012R2 and below.
 
 ## Monitoring
 
@@ -47,13 +47,13 @@ The following describes the changes in default configuration between Windows 201
 | |Polling Frequency|64 - 1024 seconds|NA|Once a week|
 | |Clock Update Frequency|Once a second|NA|Once a hour|
 |**Standalone Client**||||
-| |Time Server|NA|time.windows.com|time.windows.com|
-| |Polling Frequency|NA|Once a day|Once a week|
-| |Clock Update Frequency|NA|Once a day|Once a week|
+| |*Time Server*|NA|time.windows.com|time.windows.com|
+| |*Polling Frequency*|NA|Once a day|Once a week|
+| |*Clock Update Frequency*|NA|Once a day|Once an hour|
 |**Domain Controller**||||
-| |Time Server|PDC/GTIMESERV|NA|PDC/GTIMESERV|
-| |Polling Frequency|64 -1024 seconds|NA|1024 - 32768 seconds|
-| |Clock Update Frequency|Once a day|NA|Once a week|
+| |*Time Server*|PDC/GTIMESERV|NA|PDC/GTIMESERV|
+| |*Polling Frequency*|64 -1024 seconds|NA|1024 - 32768 seconds|
+| |*Clock Update Frequency*|Once a second|NA|Once an hour|
 |**Domain Member Server**||||
 | |Time Server|DC|NA|DC|
 | |Polling Frequency|64 -1024 seconds|NA|1024 - 32768 seconds|
@@ -63,7 +63,7 @@ The following describes the changes in default configuration between Windows 201
 | |Polling Frequency|NA|1204 - 32768 seconds|1024 - 32768 seconds|
 | |Clock Update Frequency|NA|Once every 5 minutes|Once every 5 minutes|
 |**Hyper-V Guest**||||
-| |Time Server|Chooses best option based on stratum of Host and Time server|Chooses best option based on stratum of Host and Time server|Defaults to Host|
+| |Time Server|Chooses best option based on Stratum of Host and Time server|Chooses best option based on Stratum of Host and Time server|Defaults to Host|
 | |Polling Frequency|Based on Role above|Based on Role above|Based on Role above|
 | |Clock Update Frequency|Based on Role above|Based on Role above|Based on Role above|
 
@@ -76,7 +76,7 @@ In order to provide more accurate time, the defaults for polling frequencies and
 
 For battery backed devices, increasing the polling frequency can cause issues. Battery devices don't store the time while turned off. When they resume, it may require frequent corrections to the clock. Increasing the polling frequency will cause the clock to become unstable and could also use more power. Microsoft recommends you do not change the client default settings.
 
-Domain Controllers should be minimally impacted even with the multiplied effect of the increased updates from NTP Clients in an AD Domain. NTP has a much smaller resource consumption as compared to other protocols and a marginal impact. You are more likely to reach limits for other domain functionality before being impacted by the increased settings for Windows Server 2016. Active Directory does use secure NTP, which tends to sync time less accurately than simple NTP, but we've verified it will scale up to clients two stratum away from the PDC.
+Domain Controllers should be minimally impacted even with the multiplied effect of the increased updates from NTP Clients in an AD Domain. NTP has a much smaller resource consumption as compared to other protocols and a marginal impact. You are more likely to reach limits for other domain functionality before being impacted by the increased settings for Windows Server 2016. Active Directory does use secure NTP, which tends to sync time less accurately than simple NTP, but we've verified it will scale up to clients two Stratum away from the PDC.
 
 As a conservative plan, you should reserve 100 NTP requests per second per core. For instance, a domain made up of 4 DCs with 4 cores each, you should be able to serve 1600 NTP requests per second. If you have 10k clients configured to sync time once every 64 seconds, and the requests are received uniformly over time, you would see 10,000/64 or around 160 requests/second, spread across all DCs. This falls easily within our 1600 NTP requests/sec based on this example. These are conservative planning recommendations and of course have a large dependency on your network, processor speeds and loads, so as always baseline and test in your environments.
 
@@ -108,33 +108,33 @@ The test results shown below are a subset of measurements we made in one of the 
 
 For comparison, we tested both a Windows Server 2012R2 and Windows Server 2016 based topology. Both topologies consist of two physical Hyper-V host machines that reference a Windows Server 2016 machine with GPS clock hardware installed. Each host runs 3 domain joined windows guests, which are arranged according to the following topology. The lines represent the time hierarchy, and the protocol/transport that is used.
 
-![Windows Time topology diagram](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology1.png)
+![Diagram of the Windows Time topology with only one Child Domain Client running in the first Hyper-V Host.](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology1.png)
 
-![Windows Time topology diagram](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology2.png)
+![Diagram of the Windows Time topology with two Child Domain Clients; one running in the first Hyper-V Host and another running in the second Hyper-V Host.](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology2.png)
 
 ### Graphical Results Overview
 
 The following two graphs represent the time accuracy for two specific members in a domain based on the topology above. Each graph displays both the Windows Server 2012R2 and 2016 results overlaid, which demonstrates the improvements visually. The accuracy was measure from with-in the guest machine compared to the host. The graphical data represents a subset of the entire set of tests we've done and shows the best case and worst case scenarios.
 
-![Windows Time topology diagram](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology3.png)
+![Diagram of the Windows Time topology with the Root Domain PDC server and the Child Domain Client servers in the first Hyper-V Host called out.](../media/Windows-Time-Service/Windows-2016-Accurate-Time/topology3.png)
 
 ### Performance of the Root Domain PDC
 
 The Root PDC is synchronized to the Hyper-V host (using VMIC) which is a Windows Server 2016 with GPS hardware that is proven to be both accurate and stable. This is a critical requirement for 1 ms accuracy, which is shown as the green shaded area.
 
-![Windows Time](../media/Windows-Time-Service/Windows-2016-Accurate-Time/chart1.png)
+![Diagram depicting the Root Domain.](../media/Windows-Time-Service/Windows-2016-Accurate-Time/chart1.png)
 
 ### Performance of the Child Domain Client
 
 The Child Domain Client is attached to a Child Domain PDC which communicates to the Root PDC. It time is also within the 1 ms requirement.
 
-![Windows Time](../media/Windows-Time-Service/Windows-2016-Accurate-Time/chart2.png)
+![Diagram depicting the Child Domain Client.](../media/Windows-Time-Service/Windows-2016-Accurate-Time/chart2.png)
 
 ### Long Distance Test
 
 The following chart compares 1 virtual network hop to 6 physical network hops with Windows Server 2016. Two charts are overlaid on each other with transparency to show overlapping data. Increasing network hops mean higher latency, and larger time deviations. The chart is magnified and so the 1 ms bounds, represented by the green area, is larger. As you can see, the time is still within 1 ms with multiple hops. It's negatively shifted, which demonstrates a network asymmetry. Of course, every network is different, and measurements depend on a multitude of environmental factors.
 
-![Windows Time](../media/Windows-Time-Service/Windows-2016-Accurate-Time/chart3.png)
+![Diagram depicting the Long Distance Test.](../media/Windows-Time-Service/Windows-2016-Accurate-Time/chart3.png)
 
 ## Best Practices for accurate timekeeping
 
@@ -323,7 +323,7 @@ If the Azure VM is not joined to a domain, nor is it a Domain Controller, the re
 
 ## Windows Application Requiring Accurate Time
 ### Time Stamp API
-Programs which require the greatest accuracy with regards to UTC, and not the passage of time, should use the [GetSystemTimePreciseAsFileTime API](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimepreciseasfiletime). This assures your application gets System Time, which is conditioned by the Windows Time service.
+Programs which require the greatest accuracy with regard to UTC, and not the passage of time, should use the [GetSystemTimePreciseAsFileTime API](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimepreciseasfiletime). This assures your application gets System Time, which is conditioned by the Windows Time service.
 
 ### UDP Performance
 If you have an application that uses UDP communication for transactions and it's important to minimize latency, there are some related registry entries you can use to configure a range of ports to be excluded from port the base filtering engine. This will improve both the latency and increase your throughput. However, changes to the registry should be limited to experienced administrators. Additionally, this work around excludes ports from being secured by the firewall. See the article reference below for more information.
@@ -331,7 +331,7 @@ If you have an application that uses UDP communication for transactions and it's
 For Windows Server 2012 and Windows Server 2008, you will need to install a Hotfix first. You can reference this KB article: [Datagram loss when you run a multicast receiver application in Windows 8 and in Windows Server 2012](https://support.microsoft.com/kb/2808584)
 
 ### Update Network Drivers
-Some network vendors have driver updates which improve performance with regards to driver latency and buffering UDP packets. Please contact your network vendor to see if there are updates to help with UDP throughput.
+Some network vendors have driver updates which improve performance with regard to driver latency and buffering UDP packets. Please contact your network vendor to see if there are updates to help with UDP throughput.
 
 ## Logging for Auditing Purposes
 To comply with time tracing regulations you can manually archive w32tm logs, event logs and performance monitor information. Later, the archived information can be used to attest compliance at a specific time in the past. The following factors are used to indicate the accuracy.

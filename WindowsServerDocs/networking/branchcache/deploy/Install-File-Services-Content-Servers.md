@@ -1,15 +1,16 @@
 ---
 title: Install File Services Content Servers
-description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+description: Learn how to install the BranchCache for network files role service of the File Services server role and enable BranchCache on file shares according to your requirements.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 74b0a5ed-dc20-4974-9d4b-2426987a01a1
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # Install File Services Content Servers
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 To deploy content servers that are running the File Services server role, you must install the BranchCache for network files role service of the File Services server role. In addition, you must enable BranchCache on file shares according to your requirements.
 

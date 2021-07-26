@@ -4,12 +4,13 @@ description: This topic provides an overview of new features in DNS Server in Wi
 manager: brianlic
 ms.topic: article
 ms.assetid: c9cecb94-3cd5-4da7-9a3e-084148b8226b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 12/18/2020
 ---
 # What's New in DNS Server in Windows Server
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 This topic describes the Domain Name System (DNS) server functionality that is new or changed in Windows Server 2016.
 
@@ -59,11 +60,11 @@ You can configure RRL settings to control how to respond to requests to a DNS cl
 
 -   **Maximum responses**. This is the maximum number of responses the server will issue to a client while responses are suspended.
 
--   **White list domains**. This is a list of domains to be excluded from RRL settings.
+-   **Allowlist domains**. This is a list of domains to be excluded from RRL settings.
 
--   **White list subnets**. This is a list of subnets to be excluded from RRL settings.
+-   **Allowlist subnets**. This is a list of subnets to be excluded from RRL settings.
 
--   **White list server interfaces**. This is a list of DNS server interfaces to be excluded from RRL settings.
+-   **Allowlist server interfaces**. This is a list of DNS server interfaces to be excluded from RRL settings.
 
 ## DANE support
 
@@ -139,8 +140,8 @@ The following new Windows PowerShell cmdlets and parameters are introduced in Wi
 
 For more information, see the following Windows Server 2016 Windows PowerShell command reference topics.
 
-- [DnsServer Module](/powershell/module/dnsserver/?view=win10-ps)
-- [DnsClient Module](/powershell/module/dnsclient/?view=win10-ps)
+- [DnsServer Module](/powershell/module/dnsserver/)
+- [DnsClient Module](/powershell/module/dnsclient/)
 
 ## Additional References
 

@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: Enabling Advanced Features for AD DS"
 ms.assetid: 530b3cf1-e907-4556-92ab-c9dc4aee7b56
 title: Enabling Advanced Features for AD DS
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article

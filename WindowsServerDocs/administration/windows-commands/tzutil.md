@@ -1,16 +1,16 @@
 ---
 title: tzutil
-description: Reference article for tzutil, which displays the Windows Time Zone utility.
+description: Reference article for the tzutil command, which displays the Windows Time Zone utility.
 ms.topic: reference
 ms.assetid: bcf6e007-c9b6-4df5-83c5-ed7b4b1b5913
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # tzutil
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the Windows Time Zone utility.
 

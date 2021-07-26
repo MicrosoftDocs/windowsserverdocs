@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot Software Restriction Policies
-description: Windows Server Security
+description: Learn about common problems and their solutions when troubleshooting Software Restriction Policies (SRP) beginning with Windows Server 2008 and Windows Vista.
 ms.topic: article
 ms.assetid: 4fd53736-03e7-4bf9-ba90-d1212d93e19a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---

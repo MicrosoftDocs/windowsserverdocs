@@ -1,14 +1,16 @@
 ---
+description: "Learn more about: Managing a Guarded Fabric"
 title: Managing a Guarded Fabric
 ms.topic: article
 ms.assetid: aee13964-d1d9-471a-bef3-3c76280b9a15
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
+ms.date: 12/10/2020
 ---
 # Managing a Guarded Fabric
 
-> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+> Applies to: Windows Server 2019, Windows Server 2016
 
 The following topics describe how to manage a guarded fabric.
 

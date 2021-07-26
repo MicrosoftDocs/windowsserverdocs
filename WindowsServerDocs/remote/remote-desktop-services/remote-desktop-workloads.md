@@ -5,11 +5,11 @@ ms.author: helohr
 ms.date: 12/02/2019
 ms.topic: article
 author: Heidilohr
-manager: lizross
+manager: femila
 ---
 # Remote Desktop workloads
 
-Users can run different types of workloads on the virtual machines managed by Remote Desktop Services or Windows Virtual Desktop. Scale your deployment depending on the expected need of each type of user. The following table provides examples of a range of workload types to help you estimate what size your virtual machines need to be. After you set up your virtual machines, you should continually monitor their actual usage and adjust their size accordingly. If you end up needing a bigger or smaller virtual machine, you can easily scale your existing deployment up or down in Azure.
+Users can run different types of workloads on the virtual machines managed by Remote Desktop Services or Azure Virtual Desktop. Scale your deployment depending on the expected need of each type of user. The following table provides examples of a range of workload types to help you estimate what size your virtual machines need to be. After you set up your virtual machines, you should continually monitor their actual usage and adjust their size accordingly. If you end up needing a bigger or smaller virtual machine, you can easily scale your existing deployment up or down in Azure.
 
 The following table describes each workload. "Example users" are the types of users that might find each workload most helpful. "Example apps" are the kinds of apps that work best for each workload.
 

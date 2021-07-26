@@ -3,15 +3,15 @@ title: ipxroute
 description: Reference article for the ipxroute command, which displays and modifies information about the routing tables used by the IPX protocol.
 ms.topic: reference
 ms.assetid: 3a30304f-655e-43d2-a4ac-7568abf8975c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ipxroute
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays and modifies information about the routing tables used by the IPX protocol. Used without parameters, **ipxroute** displays the default settings for packets that are sent to unknown, broadcast, and multicast addresses.
 

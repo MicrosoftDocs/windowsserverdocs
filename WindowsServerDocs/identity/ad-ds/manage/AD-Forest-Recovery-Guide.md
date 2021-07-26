@@ -2,7 +2,7 @@
 ms.assetid: 680e05ac-f9be-4b07-a9f4-cd6da5835952
 title: Active Directory Forest Recovery Guide
 description: This guide provides guidance on backing up, restoring and active directory disaster recovery.
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018

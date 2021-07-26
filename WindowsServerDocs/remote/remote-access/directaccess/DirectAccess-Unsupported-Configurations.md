@@ -4,12 +4,13 @@ description: This topic provides a list of unsupported DirectAccess configuratio
 manager: brianlic
 ms.topic: article
 ms.assetid: 23d05e61-95c3-4e70-aa83-b9a8cae92304
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # DirectAccess Unsupported Configurations
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 Review the following list of unsupported DirectAccess configurations before you start your deployment to avoid having to start your deployment again.
 

@@ -1,15 +1,17 @@
 ---
+description: "Learn more about: Planning a Guarded Fabric"
 title: Planning a guarded fabric and shielded VMs
 ms.topic: article
 ms.assetid: a754b78c-048d-4be9-a846-cf41ff0bcbc4
 manager: dongill
 author: rpsqrd
 ms.author: ryanpu
+ms.date: 12/10/2020
 ---
 
 # Planning a Guarded Fabric
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 The following topics cover planning for the deployment of a guarded fabric and shielded virtual machines (VMs):
 

@@ -3,15 +3,15 @@ title: ftp literal
 description: Reference article for the ftp literal command, which sends verbatim arguments to the remote ftp server.
 ms.topic: reference
 ms.assetid: fb81aa2d-07fa-4e79-bf44-1fb5526fdf14
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ftp literal
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sends verbatim arguments to the remote ftp server. A single ftp reply code is returned.
 

@@ -3,15 +3,15 @@ title: lpr
 description: Reference article for the lpr command, which sends a file to a computer or printer sharing device running the Line printer Daemon (LPD) service in preparation for printing.
 ms.topic: reference
 ms.assetid: afc8790b-8b52-45c4-acdf-be0ffa9da534
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # lpr
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sends a file to a computer or printer sharing device running the Line printer Daemon (LPD) service in preparation for printing.
 

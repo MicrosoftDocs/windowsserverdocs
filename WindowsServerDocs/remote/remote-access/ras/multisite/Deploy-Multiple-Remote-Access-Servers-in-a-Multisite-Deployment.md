@@ -1,15 +1,16 @@
 ---
 title: Deploy Multiple Remote Access Servers in a Multisite Deployment
-description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+description: Learn about the enterprise scenario for deploying Remote Access servers in a multisite configuration.
 manager: brianlic
 ms.topic: article
 ms.assetid: ac2f6015-50a5-4909-8f67-8565f9d332a2
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Deploy Multiple Remote Access Servers in a Multisite Deployment
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
  Windows Server 2016 and Windows Server 2012 combine DirectAccess and Remote Access Service (RAS) VPN into a single Remote Access role. Remote Access can be deployed in a number of enterprise scenarios. This overview provides an introduction to the enterprise scenario for deploying Remote Access servers in a multisite configuration.
 

@@ -1,16 +1,17 @@
 ---
 title: STEP 8 Configure INET1
-description: This topic is part of the Test Lab Guide - Demonstrate a DirectAccess Multisite Deployment for Windows Server 2016
+description: Learn how to configure a DNS entry for 2-EDGE1 on INET1.
 ms.topic: article
 ms.assetid: 693acb5c-dffc-4484-8286-163bb67724c9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
+ms.date: 08/07/2020
 ---
 
 # STEP 8: Configure INET1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 To enable client computers to connect to Remote Access servers over the Internet, you must configure a DNS entry for 2-EDGE1 on INET1.
 

@@ -3,15 +3,15 @@ title: repair
 description: Reference article for the repair command, which repairs RAID-5 volumes by replacing the failed disk region with a specified dynamic disk.
 ms.topic: reference
 ms.assetid: 9f84f661-f3cd-48c8-bf08-87819cf626fe
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # repair
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Repairs the RAID-5 volume with focus by replacing the failed disk region with the specified dynamic disk.
 

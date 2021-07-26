@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Guarded Fabric and Shielded VM Planning Guide for Hosters"
 title: Guarded Fabric and Shielded VM Planning Guide for Hosters
 ms.topic: article
 ms.assetid: 854defc8-99f8-4573-82c0-f484e0785859
@@ -10,7 +11,7 @@ ms.date: 08/29/2018
 
 # Guarded Fabric and Shielded VM Planning Guide for Hosters
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 This topic covers planning decisions that will need to be made to enable shielded virtual machines to run on your fabric. Whether you upgrade an existing Hyper-V fabric or create a new fabric, running shielded VMs consists of two main components:
 

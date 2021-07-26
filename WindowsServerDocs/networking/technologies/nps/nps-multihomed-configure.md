@@ -4,13 +4,14 @@ description: This topic provides instructions on configuring a server with multi
 manager: brianlic
 ms.topic: article
 ms.assetid: d9d9e9ac-4859-4522-89ed-a23092c9e12a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Configure NPS on a Multihomed Computer
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic to configure an NPS with multiple network adapters.
 

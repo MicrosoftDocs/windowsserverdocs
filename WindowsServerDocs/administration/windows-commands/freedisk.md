@@ -3,15 +3,15 @@ title: freedisk
 description: Reference article for the freedisk command, which checks to see if the specified amount of disk space is available before continuing with an installation process.
 ms.topic: reference
 ms.assetid: 91c15166-5baa-4b80-9e0c-4cd815d00530
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # freedisk
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Checks to see if the specified amount of disk space is available before continuing with an installation process.
 

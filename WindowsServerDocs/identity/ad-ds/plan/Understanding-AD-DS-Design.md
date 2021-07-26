@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Understanding AD DS Design"
 ms.assetid: d590c90e-9adf-4305-b226-eb2a5743337b
 title: Understanding AD DS Design
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/07/2018

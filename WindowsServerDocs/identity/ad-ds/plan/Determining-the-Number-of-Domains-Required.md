@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Determining the Number of Domains Required"
 ms.assetid: 87bca912-b912-4bbe-9533-2c34a7abc52d
 title: Determining the Number of Domains Required
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018

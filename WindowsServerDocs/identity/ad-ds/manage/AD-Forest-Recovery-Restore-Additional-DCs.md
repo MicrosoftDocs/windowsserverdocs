@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: AD Forest Recovery - Redeploy remaining DCs"
 title: AD Forest Recovery - Redeploy remaining DCs
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
@@ -29,7 +30,7 @@ Consider the following additional points for each replica DC that is recovered i
 
 - All software on a DC that is used as the source for cloning must be able to be cloned. Applications and services that cannot be cloned should be removed before cloning is initiated. If that is not possible, an alternative virtualized DC should be chosen as the source.
 - If you clone additional virtualized DCs from the first virtualized DC to be restored, the source DC will need to be shut down while its VHDX file is copied. Then it will need to be running and available online when the clone virtual DCs are first started. If the downtime required by the shutdown is not acceptable for the first recovered DC, deploy an additional virtualized DC by installing AD DS to act as the source for cloning.
-- There is no restriction on the host name of the cloned virtualized DC or the server on which you want to install AD DS. You can use a new host name or the host name that was in use previously. For more information about DNS host name syntax, see [Creating DNS Computer Names](/previous-versions/windows/it-pro/windows-server-2003/cc785282(v=ws.10)) ([https://go.microsoft.com/fwlink/?LinkId=74564](https://go.microsoft.com/fwlink/?LinkId=74564)).
+- There is no restriction on the host name of the cloned virtualized DC or the server on which you want to install AD DS. You can use a new host name or the host name that was in use previously. For more information about DNS host name syntax, see [Creating DNS Computer Names](/previous-versions/windows/it-pro/windows-server-2003/cc785282(v=ws.10)) ([https://go.microsoft.com/fwlink/?LinkId=74564](/previous-versions/windows/it-pro/windows-server-2003/cc785282(v=ws.10))).
 - Configure each server with the first DNS server in the forest (the first DC that was restored in the root domain) as the preferred DNS server in the TCP/IP properties of its network adapter. For more information, see [Configure TCP/IP to use DNS](/previous-versions/windows/it-pro/windows-server-2003/cc779282(v=ws.10)).
 - Redeploy all RODCs in the domain, either by virtualized DC cloning if several RODCs are deployed in a central location, or by the traditional method of rebuilding them by removing and reinstalling AD DS if they are deployed individually in isolated located locations such as branch offices.
    - Rebuilding RODCs ensures that they do not contain any lingering objects and can help prevent replication conflicts from occurring later. When you remove AD DS from an RODC, *choose the option to retain DC metadata*. Using this option retains the krbtgt account for the RODC and retains the permissions for the delegated RODC administrator account and the Password Replication Policy (PRP), and prevents you from having to use Domain Admin credentials to remove and reinstall AD DS on an RODC. It also retains the DNS server and global catalog roles if they are installed on the RODC originally.

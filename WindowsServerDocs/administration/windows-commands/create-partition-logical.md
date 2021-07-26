@@ -3,15 +3,15 @@ title: create partition logical
 description: Reference article for the create partition logical command, which creates a logical partition in an existing extended partition.
 ms.topic: reference
 ms.assetid: 1f59b79a-d690-4d0e-ad38-40df5a0ce38e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # create partition logical
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a logical partition on an existing extended partition. After the partition has been created, the focus automatically shifts to the new partition.
 

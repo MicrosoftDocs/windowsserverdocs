@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Required Updates for Active Directory Federation Services (AD FS) and Web Application Proxy (WAP)"
 ms.assetid: ed3206b4-bbfc-4bc7-a43c-981b0544a50d
 title: Required Updates for Active Directory Federation Services (AD FS)
 author: billmath
@@ -50,7 +51,7 @@ Below is the list of hotfixes and update rollups that have been released for Act
 |[4015547](https://support.microsoft.com/kb/4015547)|Fixed an issue with AD FS not authenticating External users and AD FS WAP randomly failing to forward request|April 2017 Security Update
 |[4012216](https://support.microsoft.com/kb/4009970)|MS17-019 This security update resolves a vulnerability in Active Directory Federation Services (ADFS). The vulnerability could allow information disclosure if an attacker sends a specially crafted request to an AD FS server, allowing the attacker to read sensitive information about the target system.|March 2017 Update Rollup
 |[3179574](https://support.microsoft.com/kb/3179574)|Fixed issue with AD FS extranet password update. |August 2016 Update Rollup
-|[3172614](https://support.microsoft.com/kb/3172614)|Introduced prompt=login [support](../overview/ad-fs-faq.md), fixed issue with the AD FS management console and AlwaysRequireAuthentication setting. |July 2016 Update Rollup
+|[3172614](https://support.microsoft.com/kb/3172614)|Introduced prompt=login [support](../overview/ad-fs-faq.yml), fixed issue with the AD FS management console and AlwaysRequireAuthentication setting. |July 2016 Update Rollup
 |[3163306](https://support.microsoft.com/kb/3163306)|Active Directory Federation Services (AD FS) 3.0 can't connect to Lightweight Directory Access Protocol (LDAP) attribute stores that are configured to use Secure Sockets Layer (SSL) port 636 or 3269 in connection string. |June 2016 Update Rollup
 |[3148533](https://support.microsoft.com/kb/3148533)|MFA fallback authentication fails through ADFS Proxy in Windows Server 2012 R2 |May 2016
 |[3134787](https://support.microsoft.com/kb/3134787)|AD FS logs don't contain client IP address for account lockout scenarios in Windows Server 2012 R2 |February 2016

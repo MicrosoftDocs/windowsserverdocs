@@ -3,14 +3,14 @@ title: bootcfg default
 description: Reference article for the bootcfg default command, which specifies the operating system entry to designate as the default.
 ms.topic: reference
 ms.assetid: e21824d7-8278-41d7-a2c5-ce09803d513a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # bootcfg default
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Specifies the operating system entry to designate as the default.
 

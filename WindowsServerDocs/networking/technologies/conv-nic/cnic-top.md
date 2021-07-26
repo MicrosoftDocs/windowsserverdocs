@@ -4,14 +4,14 @@ description: Converged network interface card (NIC) allows you to expose RDMA th
 ms.topic: article
 ms.assetid: d7642338-9b33-4dce-8100-8b2c38d7127a
 manager: dougkim
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 09/13/2018
 ---
 
 # Converged Network Interface Card \(NIC\) configuration guidance
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 Converged network interface card \(NIC\) allows you to expose RDMA through a host\-partition virtual NIC \(vNIC\) so that the host partition services can access Remote Direct Memory Access \(RDMA\) on the same NICs that the Hyper-V guests are using for TCP/IP traffic.
 
@@ -49,7 +49,7 @@ To perform the steps in this guide for datacenter Converged NIC configuration, y
 - Two servers that run Windows Server 2016 Datacenter edition or Windows Server 2016 Standard edition.
 - Two RDMA-capable, certified network adapters installed on each server.
 - Hyper-V server role installed on each server.
-- You must be familiar with Switch Embedded Teaming \(SET\), an alternative NIC Teaming solution used in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch. For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).
+- You must be familiar with Switch Embedded Teaming \(SET\), an alternative NIC Teaming solution used in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch. For more information, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
 
 ## Related topics
 - [Converged NIC Configuration with a Single Network Adapter](cnic-single.md)

@@ -1,15 +1,16 @@
 ---
 title: Enable Hash Publication for File Servers
-description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+description: Learn how to enable BranchCache hash publication on one file server or on multiple file servers.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 5697aefe-1dd2-4ff9-82a9-da0afc182cb3
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # Enable Hash Publication for File Servers
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can enable BranchCache hash publication on one file server or on multiple file servers.
 

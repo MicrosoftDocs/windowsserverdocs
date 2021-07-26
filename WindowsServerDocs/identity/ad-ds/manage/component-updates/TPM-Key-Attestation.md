@@ -1,8 +1,9 @@
 ---
+description: "Learn more about: TPM Key Attestation"
 ms.assetid: 16a344a9-f9a6-4ae2-9bea-c79a0075fd04
 title: TPM Key Attestation
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 05/31/2017
 ms.topic: article
@@ -106,23 +107,23 @@ To configure the certificate template for TPM key attestation, do the following 
 
     -   Ensure **Windows 8.1 / Windows Server 2012 R2** is selected for the **Certificate recipient**.
 
-    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_CompatibilityTab.gif)
+    ![Screenshot that highlights the Certificate recipient list.](media/TPM-Key-Attestation/GTR_ADDS_CompatibilityTab.gif)
 
 2.  **Cryptography** tab
 
     Ensure **Key Storage Provider** is selected for the **Provider Category** and **RSA** is selected for the **Algorithm name**. Ensure **Requests must use one of the following providers** is selected and the **Microsoft Platform Crypto Provider** option is selected under **Providers**.
 
-    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_CryptoTab.gif)
+    ![Screenshot that highlights the Provider Category and Algorithm name lists.](media/TPM-Key-Attestation/GTR_ADDS_CryptoTab.gif)
 
 3.  **Key Attestation** tab
 
     This is a new tab for Windows Server 2012 R2:
 
-    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_ConfigCertTemplate.gif)
+    ![Screenshot that shows the Key Attestation tab.](media/TPM-Key-Attestation/GTR_ADDS_ConfigCertTemplate.gif)
 
     Choose an attestation mode from the three possible options.
 
-    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_KeyModes.gif)
+    ![Screenshot that shows the attestation modes.](media/TPM-Key-Attestation/GTR_ADDS_KeyModes.gif)
 
     -   **None:** Implies that key attestation must not be used
 
@@ -132,7 +133,7 @@ To configure the certificate template for TPM key attestation, do the following 
 
     Then choose the TPM trust model. There are again three options:
 
-    ![TPM Key attestation](media/TPM-Key-Attestation/GTR_ADDS_KeyTypeToEnforce.gif)
+    ![Screenshot that shows the TPM trust models.](media/TPM-Key-Attestation/GTR_ADDS_KeyTypeToEnforce.gif)
 
     -   **User credentials:** Allow an authenticating user to vouch for a valid TPM by specifying their domain credentials.
 

@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: Planning Operations Master Role Placement"
 ms.assetid: bd64a766-5362-4f29-b963-5465c2bb79e7
 title: Planning Operations Master Role Placement
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/08/2018

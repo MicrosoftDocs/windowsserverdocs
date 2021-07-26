@@ -1,6 +1,6 @@
 ---
 title: Get Started with User Access Logging
-desctription: Describes the User Access Logging feature and how to start using it.
+description: Describes the User Access Logging feature and how to start using it.
 ms.topic: article
 ms.assetid: 5c395b8b-3b35-4042-b9cc-07e438f86d50
 author: brentfor
@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # Get Started with User Access Logging
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 User Access Logging (UAL) is feature in Windows Server that aggregates client usage data by role and products on a local server. It helps Windows server administrators quantify requests from client computers for roles and services on a local server.
 

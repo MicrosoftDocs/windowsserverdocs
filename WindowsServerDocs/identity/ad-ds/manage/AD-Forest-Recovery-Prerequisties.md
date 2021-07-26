@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Active Directory Forest Recovery Prerequisites"
 title: Prerequisites for planning for Active Directory Forest Recovery
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018

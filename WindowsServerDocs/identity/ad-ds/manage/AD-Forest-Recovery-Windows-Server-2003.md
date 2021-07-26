@@ -1,7 +1,8 @@
 ---
+description: "Learn more about: AD Forest Recovery - Windows Server 2003 Recovery"
 title: AD Forest Recovery - Windows Server 2003 Recovery
 author: iainfoulds
-ms.author: iainfou
+ms.author: daveba
 manager: daveba
 ms.date: 07/07/2017
 ms.topic: article
@@ -90,13 +91,13 @@ If the DC that you restored from backup is running Windows Server 2003, you can 
    After the installation, complete the following steps to configure the DNS server.
 
 5. Click **Start**, point to **All Programs**, point to **Administrative Tools**, and then click **DNS**.
-6. Create DNS zones for the same DNS domain names that were hosted on the DNS servers before the critical malfunction. For more information, see Add a Forward Lookup Zone ([https://go.microsoft.com/fwlink/?LinkId=74574](https://go.microsoft.com/fwlink/?LinkId=74574)).
+6. Create DNS zones for the same DNS domain names that were hosted on the DNS servers before the critical malfunction. For more information, see Add a Forward Lookup Zone ([https://go.microsoft.com/fwlink/?LinkId=74574](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771566(v=ws.11))).
 7. Configure the DNS data as it existed before the critical malfunction. For example:
 
-   - Configure DNS zones to be stored in AD DS. For more information, see Change the Zone Type ([https://go.microsoft.com/fwlink/?LinkId=74579](https://go.microsoft.com/fwlink/?LinkId=74579)).
-   - Configure the DNS zone that is authoritative for domain controller locator (DC Locator) resource records to allow secure dynamic update. For more information, see Allow Only Secure Dynamic Updates ([https://go.microsoft.com/fwlink/?LinkId=74580](https://go.microsoft.com/fwlink/?LinkId=74580)).
+   - Configure DNS zones to be stored in AD DS. For more information, see Change the Zone Type ([https://go.microsoft.com/fwlink/?LinkId=74579](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771150(v=ws.11))).
+   - Configure the DNS zone that is authoritative for domain controller locator (DC Locator) resource records to allow secure dynamic update. For more information, see Allow Only Secure Dynamic Updates ([https://go.microsoft.com/fwlink/?LinkId=74580](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753751(v=ws.11))).
 
-8. Ensure that the parent DNS zone contains delegation resource records (name server (NS) and glue host (A) resource records) for the child zone that is hosted on this DNS server. For more information, see Create a Zone Delegation ([https://go.microsoft.com/fwlink/?LinkId=74562](https://go.microsoft.com/fwlink/?LinkId=74562)).
+8. Ensure that the parent DNS zone contains delegation resource records (name server (NS) and glue host (A) resource records) for the child zone that is hosted on this DNS server. For more information, see Create a Zone Delegation ([https://go.microsoft.com/fwlink/?LinkId=74562](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753500(v=ws.11))).
 9. After you configure DNS, at the command prompt, type the following command, and then press ENTER:
 
    **net stop netlogon**

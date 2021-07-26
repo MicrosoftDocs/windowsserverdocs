@@ -10,7 +10,7 @@ manager: dougkim
 ---
 # Recommended settings for VDI desktops
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10
+>Applies to: Windows Server 2019, Windows Server 2016, Windows 10
 
 Microsoft Desktop Virtualization automatically detects device configurations and network conditions to get users up and running sooner by enabling the instant setup of corporate applications and desktops, and it equips IT to provide access to legacy applications during migration to Windows 10.
 
@@ -559,5 +559,5 @@ To remove the OneDrive app:
 4. Click or tap **Turn system icons on or off**, and then turn each system icon on or off as you prefer for the image.
 
 ### Delete downloaded updates
-1. Using File Explorer, navigate to **C:\Windows\Software Distribution\Download**.
+1. Using File Explorer, navigate to **C:\Windows\SoftwareDistribution\Download**.
 2. Delete all files and folders in that directory.

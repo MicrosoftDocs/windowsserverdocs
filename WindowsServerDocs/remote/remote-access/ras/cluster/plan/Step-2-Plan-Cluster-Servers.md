@@ -1,15 +1,16 @@
 ---
 title: Step 2 Plan Cluster Servers
-description: This topic is part of the guide Deploy Remote Access in a Cluster in Windows Server 2016.
+description: Learn how to plan to add additional servers to the cluster.
 manager: brianlic
 ms.topic: article
 ms.assetid: 673c5bfb-b590-4932-8e54-ca0a466d90cc
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Step 2 Plan Cluster Servers
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 After deploying a single Remote Access server, plan to add additional servers to the cluster.
 

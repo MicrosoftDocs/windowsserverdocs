@@ -1,15 +1,16 @@
 ---
 title: Troubleshooting Authentication Issues
-description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
+description: Learn how to troubleshoot issues related to problems users may have when attempting to connect to DirectAccess using OTP authentication.
 manager: brianlic
 ms.topic: article
 ms.assetid: 71307757-f8f4-4f82-b8b3-ffd4fd8c5d6d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Troubleshooting Authentication Issues
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic contains troubleshooting information for issues related to problems users may have when attempting to connect to DirectAccess using OTP authentication. DirectAccerss OTP related events are logged on the client computer in Event Viewer under **Applications and Services Logs/Microsoft/Windows/OtpCredentialProvider**. Make sure that this log is enabled when troubleshooting issues with DirectAccess OTP.
 

@@ -1,17 +1,17 @@
 ---
 title: Performance Tools for Network Workloads
-description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
+description: Learn about performance tools including the Client to Server Traffic tool, TCP/IP Window Size, and Microsoft Server Performance Advisor. 
 ms.topic: article
 ms.assetid: c7789781-87e8-464e-981b-af887d01badd
 manager: dcscontentpm
 ms.author: v-tea
 author: Teresa-Motiv
-ms.date: 07/16/2018
+ms.date: 07/22/2021
 ---
 
 # Performance Tools for Network Workloads
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic to learn about performance tools.
 
@@ -31,12 +31,4 @@ In contrast, for high-latency networks or for 10 GB adapters, the default TCP wi
 
 You can statically set the TCP window size to a large value by using the **-rb** option. This option disables TCP Window Auto-Tuning, and we recommend using it only if the user fully understands the resultant change in TCP/IP behavior. By default, the TCP window size is set at a sufficient value and adjusts only under heavy load or over high-latency links.
 
-##  <a name="bkmk_advisor"></a> Microsoft Server Performance Advisor
-
-Microsoft Server Performance Advisor \(SPA\) helps IT administrators collect metrics to identify, compare, and diagnose potential performance issues in a Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, or Windows Server 2008 deployment.
-
-SPA generates comprehensive diagnostic reports and charts, and it provides recommendations to help you quickly analyze issues and develop corrective actions.
-
- For more information and to download the advisor, see [Microsoft Server Performance Advisor](/previous-versions/dn481522(v=vs.85)) in the Windows Hardware Dev Center.
-
-For links to all topics in this guide, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).
+For more information, see [Network Subsystem Performance Tuning](net-sub-performance-top.md).

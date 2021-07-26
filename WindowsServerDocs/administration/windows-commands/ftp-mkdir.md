@@ -3,15 +3,15 @@ title: ftp mkdir
 description: Reference article for the ftp mkdir command, which creates a directory on the remote computer.
 ms.topic: reference
 ms.assetid: 5fac19fb-6835-4011-93cc-ac62f484d5d4
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ftp mkdir
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a directory on the remote computer.
 

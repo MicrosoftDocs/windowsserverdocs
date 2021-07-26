@@ -1,15 +1,16 @@
 ---
 title: Monitor connected remote clients for activity and status
-description: This topic is part of the guide for Remote Access Monitoring and Accounting in Windows Server 2016.
+description: Learn how to use the management console on the Remote Access server to monitor remote client activity and status.
 manager: brianlic
 ms.topic: article
 ms.assetid: beb94475-b21f-46a9-ac51-bf2bb28ca94e
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Monitor connected remote clients for activity and status
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 **Note:** Windows Server 2012 combines DirectAccess and Remote Access Service (RAS) into a single Remote Access role.
 

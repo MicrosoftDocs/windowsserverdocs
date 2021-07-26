@@ -1,15 +1,16 @@
 ---
 title: Troubleshooting Setting the Entry Point Domain Controller
-description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+description: Learn how to troubleshoot issues related to the Set-DAEntryPointDC command.
 manager: brianlic
 ms.topic: article
 ms.assetid: b12dd0e8-1d80-4d4b-bb45-586f19d17ef0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Troubleshooting Setting the Entry Point Domain Controller
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic contains troubleshooting information for issues related to the `Set-DAEntryPointDC` command. To confirm that the error you received is related to setting the entry point domain controller, check in the Windows Event log for the event ID 10065.
 

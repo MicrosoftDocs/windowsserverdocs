@@ -1,6 +1,6 @@
 ---
 title: Use RAM that provides error correction
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the RAM in use on this computer is not error-correcting (ECC) RAM.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -11,7 +11,7 @@ ms.date: 8/16/2016
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -35,6 +35,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 *Verify the server is listed in the Windows Server catalog and qualified for Hyper-V.*
 
 To check whether the server is listed,  see the [Windows Server catalog](https://www.windowsservercatalog.com/).
-
-
-

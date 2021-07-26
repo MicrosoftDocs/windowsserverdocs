@@ -4,13 +4,14 @@ description: This topic provides information about using server certificates wit
 manager: brianlic
 ms.topic: article
 ms.assetid: 204a4ef4-9d78-4a62-9940-43cc0e1c39d0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Manage Certificates Used with NPS
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 If you deploy a certificate-based authentication method, such as Extensible Authentication Protocol\-Transport Layer Security \(EAP\-TLS\), Protected Extensible Authentication Protocol\-Transport Layer Security \(PEAP\-TLS\), and PEAP\-Microsoft Challenge Handshake Authentication Protocol version 2 \(MS\-CHAP v2\), you must enroll a server certificate to all of your NPSs. The server certificate must:
 

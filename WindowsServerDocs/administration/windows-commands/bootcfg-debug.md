@@ -3,14 +3,14 @@ title: bootcfg debug
 description: Reference article for the bootcfg debug command, which adds or changes the debug settings for a specified operating system entry.
 ms.topic: reference
 ms.assetid: 28afa5fb-a236-46e2-b1a4-a3c43a49c437
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # bootcfg debug
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds or changes the debug settings for a specified operating system entry.
 

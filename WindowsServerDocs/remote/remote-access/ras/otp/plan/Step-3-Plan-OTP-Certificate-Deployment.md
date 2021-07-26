@@ -1,15 +1,16 @@
 ---
 title: Step 3 Plan OTP Certificate Deployment
-description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
+description: Learn how to plan for certification authority requirements, including the CA that will issue one-time password certificates, the OTP certificate template, and the registration authority certificate used by the Remote Access server to sign all DirectAccess client OTP certificate requests.
 manager: brianlic
 ms.topic: article
 ms.assetid: eca02eeb-d92d-463e-aae0-1f7038ba26fe
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Step 3 Plan OTP Certificate Deployment
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 After planning the RADIUS server, you must plan for certification authority (CA) requirements, including the CA that will issue one-time password (OTP) certificates, the OTP certificate template, and the registration authority certificate used by the Remote Access server to sign all DirectAccess client OTP certificate requests. These certificates are used as follows:
 

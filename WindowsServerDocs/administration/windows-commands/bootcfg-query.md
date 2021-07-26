@@ -3,14 +3,14 @@ title: bootcfg query
 description: Reference article for the bootcfg query command, which queries and displays the boot loader and operating system section entries from Boot.ini.
 ms.topic: reference
 ms.assetid: a4cacfd1-10a6-4a11-b0c5-f8abde72bfc8
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # bootcfg query
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Queries and displays the [boot loader] and [operating systems] section entries from Boot.ini.
 

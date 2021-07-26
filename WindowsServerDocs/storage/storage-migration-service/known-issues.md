@@ -4,7 +4,7 @@ description: Known issues and troubleshooting support for Storage Migration Serv
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 07/29/2020
+ms.date: 06/11/2021
 ms.topic: article
 ---
 # Storage Migration Service known issues
@@ -416,9 +416,15 @@ There are two solutions for this issue:
 
 ## Slower than expected re-transfer performance
 
-After completing a transfer, then running a subsequent re-transfer of the same data, you may not see much improvement in transfer time even when little data has changed in the meantime on the source server.
+After completing a transfer, then running a subsequent re-transfer of the same data, you may not see much improvement in transfer time even when little data has changed in the meantime on the source server. 
 
-This is expected behavior when transferring a very large number of files and nested folders. The size of the data isn't relevant. We first made improvements to this behavior in [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) and are continuing to optimize transfer performance. To tune performance further, review [Optimizing Inventory and Transfer Performance](./faq.md#optimizing-inventory-and-transfer-performance).
+This issue is resolved by [kb4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390). To tune performance further, review [Optimizing Inventory and Transfer Performance](./faq.yml#optimizing-inventory-and-transfer-performance).
+
+## Slower than expected inventory performance
+
+While inventorying a source server, you find the file inventory taking a very long time when there are many files or nested folders. Millions of files and folders may lead to inventories taking many hours even on fast storage configurations. 
+
+This issue is resolved by [kb4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390).
 
 ## Data does not transfer, user renamed when migrating to or from a domain controller
 
@@ -452,7 +458,7 @@ After starting the transfer from or to a domain controller:
         at Microsoft.StorageMigration.Service.DeviceHelper.MigrateSecurity(IDeviceRecord sourceDeviceRecord, IDeviceRecord destinationDeviceRecord, TransferConfiguration config, Guid proxyId, CancellationToken cancelToken)
     ```
 
-    This is expected behavior if you attempted to migrate from or to a domain controller with Storage Migration Service and used the "migrate users and groups" option to rename or reuse accounts. instead of selecting "Don't transfer users and groups". DC migration is [not supported with Storage Migration Service](faq.md). Because a DC doesn't have true local users and groups, Storage Migration Service treats these security principals as it would when migrating between two member servers and attempts to adjust ACLs as instructed, leading to the errors and mangled or copied accounts.
+    This is expected behavior if you attempted to migrate from or to a domain controller with Storage Migration Service and used the "migrate users and groups" option to rename or reuse accounts. instead of selecting "Don't transfer users and groups". DC migration is [not supported with Storage Migration Service](faq.yml). Because a DC doesn't have true local users and groups, Storage Migration Service treats these security principals as it would when migrating between two member servers and attempts to adjust ACLs as instructed, leading to the errors and mangled or copied accounts.
 
 If you have already run transfer one ore more times:
 
@@ -630,6 +636,102 @@ Guidance: Check the detailed error and make sure the inventory requirements are 
 ```
 
 This issue is caused by a code defect in the Storage Migration Service. The only workaround currently is to rename the computer to have the same name as the NetBIOS name, then use [NETDOM COMPUTERNAME /ADD](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11)) to add an alternate computer name that contains the longer name that was in use prior to starting Inventory. Storage Migration Service supports migrating alternate computer names.
+
+## Storage Migration Service inventory fails with "a parameter cannot be found that matches parameter name 'IncludeDFSN'" 
+
+When using the 2009 version of Windows Admin Center to manage a Windows Server 2019 orchestrator, you receive the following error when you attempt to inventory a source computer:
+
+```
+Remote exception : a parameter cannot be found that matches parameter name 'IncludeDFSN'" 
+```
+
+To resolve, update the Storage Migration Service extension to at least version 1.113.0 in Windows Admin Center. The update should automatically appear in the feed and prompt for installation.
+
+## Storage Migration Service transfer validation returns 'Error HRESULT E_FAIL has been returned from a call to a COM component'
+
+After installing the Windows Server 2019 November cumulative update [KB4586793](https://support.microsoft.com/office/november-10-2020%E2%80%94kb4586793-os-build-17763-1577-e6a24f90-5659-8b80-5a50-8752de3d90b7), some transfer validations may fail with:
+
+```
+Error HRESULT E_FAIL has been returned from a call to a COM component
+```
+
+It doesn't necessarily happen for all source computers. We are working to diagnose this issue. As a workaround, install the 1.115 or later Storage Migration Service tool in Windows Admin Center. The update should automatically appear in the Windows Admin Center feed and prompt for installation, and will allow you to ignore this error. To work around it:
+
+1. Navigate to the "Adjust Settings" step of the Transfer phase.
+2. Enable "Override Transfer Validation".
+3. Proceed with your transfer, either without running "Validate" or running it and ignoring the E_FAIL error.
+
+> [!IMPORTANT]
+> Don't uninstall [KB4586793](https://support.microsoft.com/office/november-10-2020%E2%80%94kb4586793-os-build-17763-1577-e6a24f90-5659-8b80-5a50-8752de3d90b7). This update upgrades the Storage Migration Service database and removing the update will require you to delete your database.
+
+## Transfer fails with "Failed to get file handle" and one or no shares transfer from a particular volume
+
+When you attempt to transfer data from a source computer, you find that no files for a particular volume transfer even though they do transfer for other volumes. You receive the following errors in Windows Admin Center and the event log:
+
+```
+"Couldn't transfer storage on any of the endpoints"
+
+========================
+
+SMS Admin log:
+06/11/2021 08:44:17  3515 Error Couldn't transfer all of the files in the endpoint on the computer.
+
+Job: test1
+Computer: nedsrv1.corp.contoso.com
+Destination Computer: nedsrv2.corp.contoso.com
+Endpoint: foo
+State: Failed
+Source File Count: 0
+Source File Size in KB: 0
+Succeeded File Count: 0
+Succeeded File Size in KB: 0
+New File Count: 0
+New File Size in KB: 0
+Failed File Count: 0
+Error: -2146233088
+Error Message: 
+
+Guidance: Check the detailed error and make sure the transfer requirements are met. This could be because the orchestrator computer couldn't reach a source or destination computer, possibly due to a firewall rule, or missing permissions.
+
+========================
+
+```
+If you dump the SMS debug logs with [Get-SMSLogs](https://aka.ms.smslogs) you also see:
+
+```
+SMS Debug log:
+
+06/11/2021-08:44:17.236 [Erro] End file transfer failed with -2146233088 exception:ErrorCode: -2146233088, Transfer failed
+    at Microsoft.StorageMigration.Service.EndpointHelper.TransferFiles(String source, String destination, String sourceOSVersion, IEndpointRecord endpointRecord, TransferConfiguration config, String sourcePath, String destinationPath, ProxyInformation transferProxyInformation, Int64& skippedSystemObjectCount, CancellationToken cancelToken, SourceType sourceType, Protocol protocol, String sourceClusterSharedVolumesRoot, String targetClusterSharedVolumesRoot, ServerType sourceServerType, ServerType targetServerType, Boolean isTieredAFSEnabled, Int32 volumeMinimumFreeSpace, String targetVolume, String[] mountedVolumes)    [d:\os\src\base\dms\service\OperationManager\EndpointHelper.cs::TransferFiles::510]
+
+SMS Proxy Debug log:
+
+14090 06/11/2021-08:44:17.123 [Crit] Failed to create root of the share \\nedsrv1.corp.contoso.com\D$ with error -2147467259 and message Failed to get file handle    [d:\os\src\base\dms\proxy\transfer\transferproxy\stages\DirectoryEnumerationStage.cs::ProcessItem::112]
+14091 06/11/2021-08:44:17.124 [Erro] Stage DirectoryEnumerationStage cancelled. Received error: Failed to get file handle    [d:\os\src\base\dms\proxy\transfer\transferproxy\stages\StageBase.cs::DoStage::50]
+14124 06/11/2021-08:44:17.141 [Erro] Failed pipeline execution. System.AggregateException: One or more errors occurred. ---> System.ComponentModel.Win32Exception: Failed to get file handle 
+14125    at Microsoft.StorageMigration.Proxy.Service.Transfer.DirectoryEnumerationStage.ProcessItem(DirEnumResultWithParent input)
+14126    at Microsoft.StorageMigration.Proxy.Service.Transfer.StageBase`3.DoStage(CancellationTokenSource cts)
+14127    at System.Threading.Tasks.Task.Execute()
+14128    --- End of inner exception stack trace ---
+14129    at System.Threading.Tasks.Task.WaitAll(Task[] tasks, Int32 millisecondsTimeout, CancellationToken cancellationToken)
+14130    at Microsoft.StorageMigration.Proxy.Service.Transfer.Pipeline.Run(CancellationToken token)
+14131    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Run()
+14132    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)
+14133 ---> (Inner Exception #0) System.ComponentModel.Win32Exception (0x80004005): Failed to get file handle
+14134    at Microsoft.StorageMigration.Proxy.Service.Transfer.DirectoryEnumerationStage.ProcessItem(DirEnumResultWithParent input)
+14135    at Microsoft.StorageMigration.Proxy.Service.Transfer.StageBase`3.DoStage(CancellationTokenSource cts)
+14136    at System.Threading.Tasks.Task.Execute()<---
+14137     [d:\os\src\base\dms\proxy\transfer\transferproxy\TransferRequestHandler.cs::ProcessRequest::132]
+
+```
+
+This issue is caused by a limitation in the Storage Migration Service Proxy service when an entire NTFS volume has been configured with the Compression flag. To work around this issue, remove the compression flag from the destination volume:
+
+1. Open File Explorer, right-click the destination drive letter, and click Properties.
+2. Uncheck "Compress this drive to save disk space"
+3. Rerun the transfer.
+
+Alternatively, you can perform the same steps on the source computer if its volume was compressed and if it has free space to hold the expanded files. NTFS-compressed files are always decompressed while copying or moving, compressing them won't reduce transfer time.
 
 ## See also
 

@@ -3,14 +3,14 @@ title: diantz
 description: Reference article for the diantz command, which packages existing files into a cabinet (.cab) file.
 ms.topic: reference
 ms.assetid: 218ed5d7-1203-4d68-ad9b-65cdd022d54f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # diantz
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Package existing files into a cabinet (.cab) file. This command performs the same actions as the updated [makecab command](makecab.md).
 

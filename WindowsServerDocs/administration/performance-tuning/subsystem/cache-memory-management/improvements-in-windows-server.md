@@ -28,4 +28,4 @@ Here are some examples of server roles where page combining is unlikely to give 
 
 -   Microsoft SQL Servers that are configured to use AWE or large pages (most of the memory is private but non-pageable)
 
-Page combining is disabled by default but can be enabled by using the [Enable-MMAgent](/powershell/module/mmagent/enable-mmagent?view=win10-ps) Windows PowerShell cmdlet. Page combining was added in Windows Server 2012.
+Page combining is disabled by default but can be enabled by using the [Enable-MMAgent](/powershell/module/mmagent/enable-mmagent) Windows PowerShell cmdlet. Page combining was added in Windows Server 2012.

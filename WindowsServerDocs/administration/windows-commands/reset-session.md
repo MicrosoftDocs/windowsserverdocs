@@ -3,15 +3,15 @@ title: reset session
 description: Reference article for reset session command, which enables you to reset a session on a Remote Desktop Session Host server.
 ms.topic: reference
 ms.assetid: 4f029ecc-874e-415a-95a8-8b731bae35f9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 07/11/2018
 ---
 
 # reset session
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables you to reset (delete) a session on a Remote Desktop Session Host server. You should reset a session only when it malfunctions or appears to have stopped responding.
 

@@ -1,15 +1,16 @@
 ---
 title: Step 4 Verify the Multisite Deployment
-description: This topic is part of the guide Deploy Multiple Remote Access Servers in a Multisite Deployment in Windows Server 2016.
+description: Learn how to verify that you have correctly configured your Remote Access multisite deployment.
 manager: brianlic
 ms.topic: article
 ms.assetid: 345b676a-a397-4d51-9973-8b25bc05fa55
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Step 4 Verify the Multisite Deployment
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic describes how to verify that you have correctly configured your Remote Access multisite deployment.
 

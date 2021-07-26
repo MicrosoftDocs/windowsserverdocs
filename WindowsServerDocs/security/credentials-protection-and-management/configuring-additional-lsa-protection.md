@@ -1,16 +1,16 @@
 ---
 title: Configuring Additional LSA Protection
-description: Windows Server Security
+description: Learn how to configure additional protection for the Local Security Authority (LSA) process to prevent code injection that could compromise credentials.
 ms.topic: article
 ms.assetid: 038e7c2b-c032-491f-8727-6f3f01116ef9
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # Configuring Additional LSA Protection
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies To: Windows Server 2016
 
 This topic for the IT professional explains how to configure additional protection for the Local Security Authority (LSA) process to prevent code injection that could compromise credentials.
 
@@ -25,7 +25,7 @@ For an LSA plug-in or driver to successfully load as a protected process, it mus
 
     LSA plug-ins that are drivers, such as smart card drivers, need to be signed by using the WHQL Certification. For more information, see [WHQL Release Signature](/windows-hardware/drivers/install/whql-release-signature).
 
-    LSA plug-ins that do not have a WHQL Certification process, must be signed by using the [file signing service for LSA](https://go.microsoft.com/fwlink/?LinkId=392590).
+    LSA plug-ins that do not have a WHQL Certification process, must be signed by using the [file signing service for LSA](/windows-hardware/drivers/dashboard/).
 
 2.  Adherence to the Microsoft Security Development Lifecycle (SDL) process guidance
 
@@ -187,4 +187,4 @@ To discover if LSA was started in protected mode when Windows started, search fo
 ## Additional resources
 [Credentials Protection and Management](credentials-protection-and-management.md)
 
-[File signing service for LSA](https://go.microsoft.com/fwlink/?LinkId=392590)
+[File signing service for LSA](/windows-hardware/drivers/dashboard/)

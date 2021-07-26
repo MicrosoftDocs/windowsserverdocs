@@ -3,15 +3,15 @@ title: detach vdisk
 description: Reference article for the detach vdisk command, which stops the selected virtual hard disk (VHD) from appearing as a local hard disk drive on the host computer.
 ms.topic: reference
 ms.assetid: 5f01dcb8-9237-4564-ad94-8a8dd0fd0cca
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # detach vdisk
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Stops the selected virtual hard disk (VHD) from appearing as a local hard disk drive on the host computer. When a VHD is detached, you can copy it to other locations. Before you begin, you must select a VHD for this operation to succeed. Use the [select vdisk](select-vdisk.md) command to select a VHD and shift the focus to it.
 

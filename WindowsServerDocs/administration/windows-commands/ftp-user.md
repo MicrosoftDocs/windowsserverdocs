@@ -3,15 +3,15 @@ title: ftp user
 description: Reference article for the ftp user command, which specifies a user to the remote computer.
 ms.topic: reference
 ms.assetid: 0a77bfeb-27a9-4f2f-a3c4-2fef529fb569
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ftp user
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Specifies a user to the remote computer.
 

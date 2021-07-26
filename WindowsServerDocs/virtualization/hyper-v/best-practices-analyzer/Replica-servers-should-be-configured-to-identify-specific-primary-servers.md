@@ -1,6 +1,6 @@
 ---
 title: Replica servers should be configured to identify specific primary servers authorized to send replication traffic
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when, as configured, your Replica server accepts replication traffic from all primary servers and stores them in a single location.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -11,7 +11,7 @@ ms.date: 8/16/2016
 
 >Applies To: Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -74,4 +74,4 @@ New-VMReplicationAuthorizationEntry server01.domain01.contoso.com D:\ReplicaVMSt
 ```
 
 ## See Also
-[New-VMReplicationAuthorizationEntry](/powershell/module/hyper-v/new-vmreplicationauthorizationentry?view=win10-ps)
+[New-VMReplicationAuthorizationEntry](/powershell/module/hyper-v/new-vmreplicationauthorizationentry)

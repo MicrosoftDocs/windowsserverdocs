@@ -31,7 +31,7 @@ Before you map the port you'll need the following:
 - Admin access to your router.
 
    >[!WARNING]
-   > You're opening your PC up to the internet - make sure you have a strong password set for your PC.
+   > You're opening your PC up to the internet, which is not recommended. If you must, make sure you have a strong password set for your PC. It is preferable to [use a VPN](#use-a-vpn).
 
 After you map the port, you'll be able to connect to your host PC from outside the local network by connecting to the public IP address of your router (the second bullet above).
 
@@ -39,7 +39,7 @@ The router's IP address can change - your internet service provider (ISP) can as
 
 With most routers you can define which source IP or source network can use port mapping. So, if you know you're only going to connect from work, you can add the IP address for your work network - that lets you avoid opening the port to the entire public internet. If the host you're using to connect uses dynamic IP address, set the source restriction to allow access from the whole range of that particular ISP.
 
-You might also consider setting up a [static IP address](/windows-hardware/customize/mobile/mcsf/enable-static-ip) on your PC so the internal IP address doesn't change. If you do that, then the router's port forwarding will always point to the correct IP address.
+You might also consider setting up a static IP address on your PC so the internal IP address doesn't change. If you do that, then the router's port forwarding will always point to the correct IP address.
 
 
 ## Use a VPN

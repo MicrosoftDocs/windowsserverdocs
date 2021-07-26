@@ -10,7 +10,7 @@ description: An overview of Work Folders - a server role in Windows Server that 
 ---
 # Work Folders overview
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 This topic discusses Work Folders, a role service for file servers running Windows Server that provides a consistent way for users to access their work files from their PCs and devices.
 
@@ -21,6 +21,9 @@ If you're looking to download or use Work Folders on Windows 10, Windows 7, or a
 - [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559)
 - [Work Folders for iOS](https://itunes.apple.com/app/work-folders/id950878067)
 - [Work Folders for Android](https://play.google.com/store/apps/details?id=com.microsoft.workfolders)
+
+> [!NOTE]
+>  The Work Folders application for Android and iOS is no longer being actively developed and will remain on the respective app stores if the application is functioning properly.
 
 ## Role description
 
@@ -107,6 +110,9 @@ Work Folders has the following software requirements for client computers:
 
     -   iOS 10.2 and later
 
+ > [!NOTE]
+ >  The Work Folders application for Android and iOS is no longer being actively developed and will remain on the respective app stores if the application is functioning properly.
+
 -   Windows 7 PCs must be running one of the following editions of Windows:
 
     -   Windows 7 Professional
@@ -162,7 +168,7 @@ To learn about how to get started with Windows Azure virtual machines, visit the
 | ------------------ | ---------------- |
 | **Product evaluation** | -   [Work Folders for Android – Released](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [Work Folders for iOS – iPad App Release](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [Introducing Work Folders on Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [Introduction to Work Folders](https://channel9.msdn.com/posts/Introduction-to-Work-Folders) (Channel 9 Video)<br />-   [Work Folders Test Lab Deployment](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [Work Folders for Windows 7](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post) |
 | **Deployment** | -   [Designing a Work Folders Implementation](plan-work-folders.md)<br />-   [Deploying Work Folders](deploy-work-folders.md)<br />-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Deploying Work Folders with Azure AD Application Proxy](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />- [Offline Files (CSC) to Work Folders Migration Guide](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Performance Considerations for Work Folders Deployments](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Work Folders for Windows 7 (64 bit download)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559) |
-| **Operations** | -   [Work Folders iPad app: FAQ](https://windows.microsoft.com/windows/work-folders-ipad-faq) (for users)<br />-   [Work Folders Certificate Management](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [Monitoring Windows Server 2012 R2 Work Folders Deployments](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [SyncShare (Work Folders) Cmdlets in Windows PowerShell](/powershell/module/syncshare/?view=win10-ps)<br />-   [Storage and File Services PowerShell Cmdlets Quick Reference Card For Windows Server 2012 R2 Preview Edition](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) |
+| **Operations** | -   [Work Folders iPad app: FAQ](https://windows.microsoft.com/windows/work-folders-ipad-faq) (for users)<br />-   [Work Folders Certificate Management](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [Monitoring Windows Server 2012 R2 Work Folders Deployments](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [SyncShare (Work Folders) Cmdlets in Windows PowerShell](/powershell/module/syncshare/)<br />-   [Storage and File Services PowerShell Cmdlets Quick Reference Card For Windows Server 2012 R2 Preview Edition](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) |
 | **Troubleshooting** | -   [Windows Server 2012 R2 – Resolving Port Conflict with IIS Websites and Work Folders](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [Common Errors in Work Folders](https://techcommunity.microsoft.com/t5/storage-at-microsoft/troubleshooting-work-folders-on-windows-client/ba-p/425627) |
 | **Community resources** | -   [File Services and Storage Forum](/answers/topics/windows-server-storage.html)<br />-   [The Storage Team at Microsoft - File Cabinet Blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Ask the Directory Services Team Blog](/archive/blogs/askds/) |
 | **Related technologies** | -   [Storage in Windows Server 2016](../storage.yml)<br>-   [File and Storage Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831487(v=ws.11))<br />-   [File Server Resource Manager](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831701(v=ws.11))<br />-   [Folder Redirection, Offline Files, and Roaming User Profiles](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh848267(v=ws.11))<br />-   [BranchCache](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11))<br />-   [DFS Namespaces and DFS Replication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)) |

@@ -4,12 +4,13 @@ description: This topic provides an overview of new features in DNS Client in Wi
 manager: brianlic
 ms.topic: article
 ms.assetid: 6edaba84-4595-4fd8-95d7-64d4d975a38a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # What's New in DNS Client in Windows Server 2016
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 This topic describes the Domain Name System (DNS) client functionality that is new or changed in Windows 10 and Windows Server 2016 and later versions of these operating systems.
 

@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: AD Forest Recovery - Configuring the DNS Server service"
 title: AD Forest Recovery - Configure DNS Server service
-ms.author: iainfou
+ms.author: daveba
 author: iainfoulds
 manager: daveba
 ms.date: 08/09/2018
@@ -30,20 +31,20 @@ Complete the installation and configuration steps below.
 5. On the **Server Roles** screen select **DNS Server**, if prompted click **Add Features** and click **Next**.
 6. On the **Features** screen click **Next**.
 7. Read the information on the **DNS Server** page, and then click **Next**.
-   ![DNS Server](media/AD-Forest-Recovery-Configure-DNS/dns1.png)
+   ![Screenshot that shows the DNS Server page.](media/AD-Forest-Recovery-Configure-DNS/dns1.png)
 8. On the **Confirmation** page, verify that the DNS Server role will be installed, and then click **Install**.
 
 ### To configure the DNS Server service
 
 1. Open Server Manager, click **Tools** and click **DNS**.
-   ![DNS Server](media/AD-Forest-Recovery-Configure-DNS/dns2.png)
-2. Create DNS zones for the same DNS domain names that were hosted on the DNS servers before the critical malfunction. For more information, see Add a Forward Lookup Zone ([https://go.microsoft.com/fwlink/?LinkId=74574](https://go.microsoft.com/fwlink/?LinkId=74574)).
+   ![Screenshot that shows the DNS object.](media/AD-Forest-Recovery-Configure-DNS/dns2.png)
+2. Create DNS zones for the same DNS domain names that were hosted on the DNS servers before the critical malfunction. For more information, see Add a Forward Lookup Zone ([https://go.microsoft.com/fwlink/?LinkId=74574](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771566(v=ws.11))).
 3. Configure the DNS data as it existed before the critical malfunction. For example:
 
-   - Configure DNS zones to be stored in AD DS. For more information, see Change the Zone Type ([https://go.microsoft.com/fwlink/?LinkId=74579](https://go.microsoft.com/fwlink/?LinkId=74579)).
-   - Configure the DNS zone that is authoritative for domain controller locator (DC Locator) resource records to allow secure dynamic update. For more information, see Allow Only Secure Dynamic Updates ([https://go.microsoft.com/fwlink/?LinkId=74580](https://go.microsoft.com/fwlink/?LinkId=74580)).
+   - Configure DNS zones to be stored in AD DS. For more information, see Change the Zone Type ([https://go.microsoft.com/fwlink/?LinkId=74579](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771150(v=ws.11))).
+   - Configure the DNS zone that is authoritative for domain controller locator (DC Locator) resource records to allow secure dynamic update. For more information, see Allow Only Secure Dynamic Updates ([https://go.microsoft.com/fwlink/?LinkId=74580](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753751(v=ws.11))).
 
-4. Ensure that the parent DNS zone contains delegation resource records (name server (NS) and glue host (A) resource records) for the child zone that is hosted on this DNS server. For more information, see Create a Zone Delegation ([https://go.microsoft.com/fwlink/?LinkId=74562](https://go.microsoft.com/fwlink/?LinkId=74562)).
+4. Ensure that the parent DNS zone contains delegation resource records (name server (NS) and glue host (A) resource records) for the child zone that is hosted on this DNS server. For more information, see Create a Zone Delegation ([https://go.microsoft.com/fwlink/?LinkId=74562](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753500(v=ws.11))).
 5. After you configure DNS, you can speed up registration of the NETLOGON Records.
 
    > [!NOTE]

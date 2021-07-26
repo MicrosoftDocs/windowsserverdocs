@@ -4,13 +4,14 @@ description: This topic provides an overview of Network Policy Server connection
 manager: brianlic
 ms.topic: article
 ms.assetid: 4ec45e0c-6b37-4dfb-8158-5f40677b0157
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Connection Request Policies
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 You can use this topic to learn how to use NPS connection request policies to configure the NPS as a RADIUS server, a RADIUS proxy, or both.
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Deploy guarded hosts"
 title: Deploy guarded hosts
 ms.topic: article
 ms.assetid: 2379ca26-b32d-4055-8b4b-99d1f2df37e1
@@ -10,7 +11,7 @@ ms.date: 08/29/2018
 
 # Deploy guarded hosts
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 The topics in this section describe the steps that a fabric administrator takes to configure Hyper-V hosts to work with the Host Guardian Service (HGS). Before you can start these steps, at least one node in the [HGS cluster must be set up](guarded-fabric-setting-up-the-host-guardian-service-hgs.md).
 

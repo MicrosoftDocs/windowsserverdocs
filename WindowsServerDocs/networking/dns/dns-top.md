@@ -4,12 +4,13 @@ description: This topic provides an overview of DNS in Windows Server 2016
 manager: brianlic
 ms.topic: article
 ms.assetid: 1324ba18-4e28-4b9d-bbe7-75707e6d30ab
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Domain Name System (DNS)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2016
 
 Domain Name System (DNS) is one of the industry-standard suite of protocols that comprise TCP/IP, and together the DNS Client and DNS Server provide computer name-to-IP address mapping name resolution services to computers and users.
 
