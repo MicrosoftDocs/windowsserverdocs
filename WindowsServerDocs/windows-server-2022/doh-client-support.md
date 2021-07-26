@@ -108,7 +108,7 @@ Windows Server 2022 ships with a list of servers that are known to support DoH.
 You can determine which DNS servers are on this list by using the
 `Get-DNSClientDohServerAddress` PowerShell command.
 
-![screenshot of powershell command](media/./media/doh-client-support/powershell.png)
+![screenshot of powershell command](media/doh-client-support/powershell.png)
 
 The list of known DoH servers is as follows:
 
