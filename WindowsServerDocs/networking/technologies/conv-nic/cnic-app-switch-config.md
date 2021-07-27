@@ -11,7 +11,7 @@ ms.date: 09/14/2018
 
 # Physical switch configuration for Converged NIC
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 In this topic, we provide you with guidelines for configuring your physical switches.
 

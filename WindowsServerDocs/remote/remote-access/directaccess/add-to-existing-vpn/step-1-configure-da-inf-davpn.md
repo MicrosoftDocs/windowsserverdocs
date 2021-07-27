@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Step 1 Configure the DirectAccess Infrastructure
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to configure the infrastructure required for enabling DirectAccess in an existing VPN deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Step 1: Plan DirectAccess Infrastructure](./step-1-plan-da-inf-davpn.md).
 

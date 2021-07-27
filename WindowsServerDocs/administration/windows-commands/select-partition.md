@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # select partition
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Selects the specified partition and shifts the focus to it. This command can also be used to display the partition that currently has the focus in the selected disk.
 

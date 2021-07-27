@@ -10,7 +10,7 @@ manager: dongill
 ---
 # Remote Desktop Services - Multi-Factor Authentication
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Leverage the power of Active Directory with Multi-Factor Authentication to enforce high security protection of your business resources.
 

@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Planning
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Before you deploy wireless access, you must plan the following items:
 

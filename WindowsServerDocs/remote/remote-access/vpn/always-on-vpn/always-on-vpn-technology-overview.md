@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # Always On VPN technology overview
 
->Applies to: Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Learn about the Always On VPN enhancements](always-on-vpn-enhancements.md)
 - [**Next:** Learn about the advanced features of Always On VPN](deploy/always-on-vpn-adv-options.md)

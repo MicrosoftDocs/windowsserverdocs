@@ -9,7 +9,7 @@ author: nirb-ms
 
 # Beginning your General Data Protection Regulation (GDPR) journey for Windows Server
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article provides info about the GDPR, including what it is, and the products Microsoft provides to help you to become compliant.
 

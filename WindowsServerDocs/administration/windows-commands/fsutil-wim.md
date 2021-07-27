@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # fsutil wim
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 Provides functions to discover and manage Windows Image (WIM)-backed files.
 

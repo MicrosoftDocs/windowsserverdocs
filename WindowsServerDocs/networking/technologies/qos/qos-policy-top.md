@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Quality of Service \(QoS\) Policy
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use QoS Policy as a central point of network bandwidth management across your entire Active Directory infrastructure by creating QoS profiles, whose settings are distributed with Group Policy.
 

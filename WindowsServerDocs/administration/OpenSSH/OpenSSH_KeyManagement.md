@@ -9,7 +9,7 @@ author: maertendmsft
 
 # OpenSSH key management
 
-> Applies to Windows Server 2019, Windows 10
+>Applies to Windows Server 2019, Windows 10: Windows Server 2022,
 
 Most authentication in Windows environments is done with a username-password pair, which works well for systems that share a common domain. When working across domains, such as between on-premises and cloud-hosted systems, it becomes vulnerable to brute force intrusions.
 

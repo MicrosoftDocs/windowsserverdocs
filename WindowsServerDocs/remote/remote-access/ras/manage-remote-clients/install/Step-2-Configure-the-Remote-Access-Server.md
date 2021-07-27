@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Step 2 Configure the Remote Access Server
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to configure the client and server settings that are required for remote management of DirectAccess clients. Before you begin the deployment steps, ensure that you have completed the planning steps that are described in [Step 2 Plan the Remote Access Deployment](../plan/Step-2-Plan-the-Remote-Access-Deployment.md).
 

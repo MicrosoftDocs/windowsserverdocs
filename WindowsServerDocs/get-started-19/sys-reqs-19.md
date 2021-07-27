@@ -12,7 +12,7 @@ ms.date: 08/07/2020
 
 # Windows Server 2019 System Requirements
 
-> Applies to: Windows Server 2019
+>Applies to: Windows Server 2019
 
 This topic outlines the minimum system requirements to run Windows Server&reg; 2019.
 

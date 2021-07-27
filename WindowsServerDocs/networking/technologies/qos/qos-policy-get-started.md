@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Getting Started with QoS Policy
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use the following topics to get started with Quality of Service \(QoS\) Policy.
 

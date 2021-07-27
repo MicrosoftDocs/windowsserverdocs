@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Deploy Network Policy Server
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic for information about deploying Network Policy Server.
 

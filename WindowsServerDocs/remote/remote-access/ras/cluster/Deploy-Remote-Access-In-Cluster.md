@@ -9,7 +9,7 @@ ms.date: 08/07/2020
 ---
 # Deploy Remote Access in a Cluster
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Windows Server 2016 and Windows Server 2012 combine DirectAccess and Remote Access Service \(RAS\) VPN into a single Remote Access role. You can deploy Remote Access in a number of enterprise scenarios. This overview provides an introduction to the enterprise scenario for deploying multiple Remote Access servers in a cluster load balanced with Windows Network Load Balancing \(NLB\) or with an external load balancer \(ELB\), such as F5 Big\-IP.
 

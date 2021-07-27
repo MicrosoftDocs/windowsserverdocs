@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Configure the Order of Network Interfaces
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 In Windows Server 2016 and Windows 10, you can use the interface metric to configure the order of network interfaces.
 

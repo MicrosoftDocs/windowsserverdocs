@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Install and Configure Basic DirectAccess
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This overview provides an introduction to the configuration steps required to deploy a single DirectAccess server running  Windows Server 2016, Windows Server 2012 R2, or Windows Server 2012 with basic settings.
 

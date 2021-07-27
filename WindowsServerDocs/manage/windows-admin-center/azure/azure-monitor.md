@@ -45,7 +45,7 @@ If you want to add another monitoring solution from within WAC on the same serve
 If you connect to a different server, but have already setup a Log Analytics workspace (either through WAC or manually in the Azure Portal), you can also install the MMA agent on the server and connect it up to an existing workspace. When you connect a server into a workspace, it automatically starts collecting data and reporting to solutions installed in that workspace.
 
 ## Azure Monitor for virtual machines (a.k.a. Virtual Machine insights)
->Applies To: Windows Admin Center Preview
+>Applies to: Windows Admin Center Preview
 
 When you set up Azure Monitor for VMs in server Settings, Windows Admin Center enables the Azure Monitor for VMs solution, also known as Virtual Machine insights. This solution allows you to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server.
 

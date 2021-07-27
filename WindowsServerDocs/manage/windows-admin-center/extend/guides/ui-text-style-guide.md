@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Windows Admin Center UI text and design style guide
 
->Applies To: Windows Admin Center
+>Applies to: Windows Admin Center
 
 This topic describes the general approach to writing user interface (UI) text for the Windows Admin Center, as well as some specific conventions and approaches we're taking.
 

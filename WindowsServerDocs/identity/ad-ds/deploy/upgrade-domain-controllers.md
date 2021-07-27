@@ -9,7 +9,7 @@ ms.topic: article
 ---
 # Upgrade Domain Controllers to Windows Server 2016
 
-Applies To: Windows Server
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server
 
 This topic provides background information about Active Directory Domain
 Services in Windows Server 2016 and explains the process for upgrading domain controllers from Windows Server 2012 or Windows Server 2012 R2.

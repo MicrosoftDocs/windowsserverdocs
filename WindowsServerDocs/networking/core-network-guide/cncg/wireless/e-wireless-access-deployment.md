@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Wireless Access Deployment
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Follow these steps to deploy wireless access:
 

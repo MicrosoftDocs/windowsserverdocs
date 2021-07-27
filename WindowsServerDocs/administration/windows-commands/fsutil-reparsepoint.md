@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # fsutil reparsepoint
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
 
 Queries or deletes reparse points.  The **fsutil reparsepoint** command is typically used by support professionals.
 

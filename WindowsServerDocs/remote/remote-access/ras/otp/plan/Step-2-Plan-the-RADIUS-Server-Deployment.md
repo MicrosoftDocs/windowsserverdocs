@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Step 2 Plan the RADIUS Server Deployment
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 After deploying a single Remote Access server, plan for the one-time password (OTP) authentication server.
 

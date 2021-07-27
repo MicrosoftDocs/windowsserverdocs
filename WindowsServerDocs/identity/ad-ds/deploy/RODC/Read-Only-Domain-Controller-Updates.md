@@ -11,6 +11,6 @@ ms.topic: article
 
 # Read-Only Domain Controller Updates
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 There are no changes to adprep /rodcprep in Windows Server 2012 R2 or in Windows Server 2012.

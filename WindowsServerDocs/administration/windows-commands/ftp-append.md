@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # ftp append
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Appends a local file to a file on the remote computer using the current file type setting.
 

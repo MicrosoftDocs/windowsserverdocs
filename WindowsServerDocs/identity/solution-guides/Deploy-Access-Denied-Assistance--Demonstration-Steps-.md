@@ -11,7 +11,7 @@ ms.topic: article
 
 # Deploy Access-Denied Assistance (Demonstration Steps)
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains how to configure access-denied assistance, and verify that it is working properly.
 

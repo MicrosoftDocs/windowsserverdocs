@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # ftp hash
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Toggles number sign (#) printing for each transferred data block. By default, the hash command is turned off. The size of a data block is 2048 bytes.
 

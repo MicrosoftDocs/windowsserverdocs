@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # shadow
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables you to remotely control an active session of another user on a Remote Desktop Session Host server.
 

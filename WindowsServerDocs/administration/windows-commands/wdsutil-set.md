@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # Using the set command
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets properties and attributes for Windows Deployment Services servers, prestaged computers, images, image groups, and Transport Servers.
 

@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # bitsadmin wrap
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Wraps any line of output text extending beyond the rightmost edge of the command window to the next line. You must specify this switch before any other switches.
 
