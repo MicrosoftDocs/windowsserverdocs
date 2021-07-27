@@ -11,7 +11,7 @@ ms.reviewer: deverette
 ---
 # Step 6. Configure Windows 10 client Always On VPN connections
 
->Applies to: Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 5. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)<br>
 - [**Next:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)

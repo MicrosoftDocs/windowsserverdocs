@@ -10,7 +10,7 @@ ms.assetid: ac9e5a3d-8b1e-41b7-8e02-f64b7acf1359
 ---
 # AD Forest Recovery - FAQ
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2, Windows Server 2003
 
 This document contains frequently asked questions (FAQs) regarding forest recovery:
 

@@ -10,7 +10,7 @@ manager: dougkim
 ---
 # Recommended settings for VDI desktops
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 Microsoft Desktop Virtualization automatically detects device configurations and network conditions to get users up and running sooner by enabling the instant setup of corporate applications and desktops, and it equips IT to provide access to legacy applications during migration to Windows 10.
 

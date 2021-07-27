@@ -9,7 +9,7 @@ ms.date: 5/23/2018
 ---
 # System Insights FAQ
 
->Applies To: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 ## How can you use System Insights with Azure Monitor or System Center Operations Manager?
 

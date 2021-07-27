@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # at
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Schedules commands and programs to run on a computer at a specified time and date. You can use **at** only when the Schedule service is running. Used without parameters, **at** lists scheduled commands. You must be a member of the local Administrators group to run this command.
 

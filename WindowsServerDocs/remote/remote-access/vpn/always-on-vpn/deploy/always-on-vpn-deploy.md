@@ -11,7 +11,7 @@ author: Teresa-MOTIV
 
 # Always On VPN deployment for Windows Server and Windows 10
 
->Applies to: Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Remote Access](../../../Remote-Access.md)<br>
 - [**Next:** Learn about the Always On VPN features and functionality](../../vpn-map-da.md)

@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Plan Remote Access with OTP Authentication
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
  Windows Server 2016 and Windows Server 2012 combine DirectAccess and Routing and Remote Access Service (RRAS) VPN into a single Remote Access role. This overview provides an introduction to the configuration steps required in order to deploy a single  Windows Server 2016 or  Windows Server 2012  Remote Access multisite deployment.
 

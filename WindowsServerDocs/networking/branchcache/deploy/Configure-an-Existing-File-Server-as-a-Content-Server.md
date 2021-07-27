@@ -10,7 +10,7 @@ ms.date: 01/05/2021
 ---
 # Configure an Existing File Server as a Content Server
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to install the **BranchCache for Network Files** role service of the File Services server role on a computer running Windows Server 2016.
 

@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # query termserver
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays a list of all Remote Desktop Session Host servers on the network. This command searches the network for all attached Remote Desktop Session Host servers and returns the following information:
 

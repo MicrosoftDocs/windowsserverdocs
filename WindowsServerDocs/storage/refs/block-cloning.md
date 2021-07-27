@@ -10,7 +10,7 @@ ms.topic: article
 ---
 # Block cloning on ReFS
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Block cloning instructs the file system to copy a range of file bytes on behalf of an application, where the destination file may be the same as, or different from, the source file. Copy operations, unfortunately, are expensive, since they trigger expensive read and writes to the underlying, physical data.
 

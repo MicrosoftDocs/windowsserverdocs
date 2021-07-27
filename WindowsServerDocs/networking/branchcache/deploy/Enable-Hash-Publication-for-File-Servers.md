@@ -10,7 +10,7 @@ ms.date: 01/05/2021
 ---
 # Enable Hash Publication for File Servers
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can enable BranchCache hash publication on one file server or on multiple file servers.
 

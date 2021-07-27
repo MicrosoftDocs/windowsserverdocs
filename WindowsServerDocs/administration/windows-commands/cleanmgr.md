@@ -11,7 +11,7 @@ ms.topic: reference
 
 # cleanmgr
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2008 R2
 
 Clears unnecessary files from your computer's hard disk. You can use command-line options to specify that **Cleanmgr** cleans up Temp files, Internet files, downloaded files, and Recycle Bin files. You can then schedule the task to run at a specific time by using the **Scheduled Tasks** tool.
 

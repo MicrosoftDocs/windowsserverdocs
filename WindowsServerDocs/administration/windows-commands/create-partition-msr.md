@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # create partition msr
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a Microsoft Reserved (MSR) partition on a GUID partition table (gpt) disk. A Microsoft Reserved partition is required on every gpt disk. The size of this partition depends on the total size of the gpt disk. The size of the gpt disk must be at least 32 MB to create a Microsoft Reserved partition.
 

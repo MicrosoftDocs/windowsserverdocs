@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # scwcmd rollback
 
-> Applies to: Windows Server 2012 R2 and Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2 and Windows Server 2012
 
 Applies the most recent rollback policy available, and then deletes that rollback policy.
 

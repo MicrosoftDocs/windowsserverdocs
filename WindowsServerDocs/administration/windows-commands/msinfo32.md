@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # msinfo32
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Opens the System Information tool to display a comprehensive view of the hardware, system components, and software environment on the local computer.
 

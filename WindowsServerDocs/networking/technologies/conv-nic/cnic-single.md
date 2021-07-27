@@ -11,7 +11,7 @@ ms.date: 09/14/2018
 
 # Converged NIC configuration with a single network adapter
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 In this topic, we provide you with the instructions to configure Converged NIC with a single NIC in your Hyper-V host.
 

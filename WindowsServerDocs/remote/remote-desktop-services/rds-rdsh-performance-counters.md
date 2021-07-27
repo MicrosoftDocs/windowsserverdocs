@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts
 
-> Applies to: Windows Server 2019, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10
 
 One of the most difficult problems to diagnose is poor application performance—the applications are running slow or don't respond. Traditionally, you start your diagnosis by collecting CPU, memory, disk input/output, and other metrics and then use tools like Windows Performance Analyzer to try to figure out what's causing the problem. Unfortunately, in most situations this data doesn't help you identify the root cause because resource consumption counters have frequent and large variations. This makes it hard to read the data and correlate it with the reported issue.
 

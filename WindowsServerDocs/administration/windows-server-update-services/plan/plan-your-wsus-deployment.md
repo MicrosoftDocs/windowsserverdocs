@@ -10,7 +10,7 @@ ms.date: 05/24/2018
 ---
 # Plan your WSUS deployment
 
->Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The first step in the deployment of Windows Server Update Services (WSUS) is to make important decisions, such as deciding the WSUS deployment scenario, choosing a network topology, and understanding the system requirements. The following checklist summarizes the steps that are involved in preparing for your deployment.
 

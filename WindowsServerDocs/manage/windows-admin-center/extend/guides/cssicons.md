@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Current list of icons in Windows Admin Center
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 ```
 .icon-win-globalNavButton:before { content: "\E700"; }

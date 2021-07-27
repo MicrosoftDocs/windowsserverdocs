@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # DirectAccess
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic for a brief overview of DirectAccess, including the server and client operating systems that support DirectAccess, and for links to additional DirectAccess documentation for Windows Server 2016.
 

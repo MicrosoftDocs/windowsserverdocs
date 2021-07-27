@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # BranchCache
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic, which is intended for Information Technology (IT) professionals, provides overview information about BranchCache, including BranchCache modes, features, capabilities, and the BranchCache functionality that is available in different operating systems.
 

@@ -10,7 +10,7 @@ ms.date: 12/08/2020
 ---
 # Network Policy Server Management with Administration Tools
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn about the tools that you can use to manage your NPSs.
 

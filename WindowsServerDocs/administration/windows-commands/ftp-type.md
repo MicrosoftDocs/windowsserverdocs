@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # ftp type
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets or displays the file transfer type. The **ftp** command supports both ASCII (default) and binary image file transfer types:
 

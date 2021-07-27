@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 #  Windows Internet Name Service (WINS)
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Windows Internet Name Service (WINS) is a legacy computer name registration and resolution service that maps computer NetBIOS names to IP addresses.
 

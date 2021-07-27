@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # Storage Spaces Direct hardware requirements
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes minimum hardware requirements for Storage Spaces Direct on Windows Server. For hardware requirements on Azure Stack HCI, our operating system designed for hyperconverged deployments with a connection to the cloud, see [Before you deploy Azure Stack HCI: Determine hardware requirements](/azure-stack/hci/deploy/before-you-start#determine-hardware-requirements).
 

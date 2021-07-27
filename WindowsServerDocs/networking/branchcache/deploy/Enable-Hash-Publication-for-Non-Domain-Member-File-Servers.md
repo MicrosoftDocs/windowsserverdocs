@@ -10,7 +10,7 @@ ms.date: 01/05/2021
 ---
 # Enable Hash Publication for Non-Domain Member File Servers
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to configure hash publication for BranchCache using local computer Group Policy on a file server that is running Windows Server 2016 with the **BranchCache for Network Files** role service of the File Services server role installed.
 

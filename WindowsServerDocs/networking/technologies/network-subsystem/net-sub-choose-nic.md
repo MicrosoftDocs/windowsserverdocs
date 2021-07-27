@@ -11,7 +11,7 @@ ms.date: 07/23/2021
 
 # Choosing a Network Adapter
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn some of the features of network adapters that might affect your purchasing choices.
 

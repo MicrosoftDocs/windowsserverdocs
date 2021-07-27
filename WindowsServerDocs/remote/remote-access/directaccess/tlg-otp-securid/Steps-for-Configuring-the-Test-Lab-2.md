@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Steps for Configuring the Test Lab with OTP Authentication and RSA SecurID
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The following steps describe how to configure the Remote Access infrastructure, configure the Remote Access server and client, and test DirectAccess connectivity from the Homenet and Internet subnets.
 

@@ -10,7 +10,7 @@ ms.topic: article
 ---
 # Create a new NIC Team on a host computer or VM
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 In this topic, you create a new NIC Team on a host computer or in a Hyper-V virtual machine (VM) running Windows Server 2016.
 

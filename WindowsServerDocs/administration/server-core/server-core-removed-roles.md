@@ -11,7 +11,7 @@ ms.topic: conceptual
 ---
 # Roles, Role Services, and Features not in Windows Server - Server Core
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The following roles, role services, and features have been removed from the Server Core installation option of Windows Server. Use this information to help figure out if the Server Core option works for your environment.
 

@@ -9,7 +9,7 @@ ms.topic: article
 
 # Host Compute Network (HCN) service API for VMs and containers
 
-> Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 Host Compute Network (HCN) service API is a public-facing Win32 API that provides platform-level access to manage the virtual networks, virtual network endpoints, and associated policies. Together this provides connectivity and security for virtual machines (VMs) and containers running on a Windows host.
 

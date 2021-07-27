@@ -10,7 +10,7 @@ ms.date: 01/05/2021
 ---
 # BranchCache Deployment Guide
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this guide to learn how to deploy BranchCache in Windows Server 2016.
 

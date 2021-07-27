@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 # Choosing drives for Storage Spaces Direct
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic provides guidance on how to choose drives for [Storage Spaces Direct](storage-spaces-direct-overview.md) to meet your performance and capacity requirements.
 

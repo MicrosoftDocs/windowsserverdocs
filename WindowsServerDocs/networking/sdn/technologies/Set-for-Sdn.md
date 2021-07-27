@@ -10,7 +10,7 @@ ms.date: 06/16/2021
 ---
 # Switch Embedded Teaming for SDN
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Switch Embedded Teaming (SET) is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2019 and 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch.
 

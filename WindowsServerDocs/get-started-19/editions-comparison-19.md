@@ -11,7 +11,7 @@ ms.date: 12/10/2020
 ---
 # Comparison of Standard and Datacenter editions of Windows Server 2019
 
-> Applies To: Windows Server 2019
+>Applies to: Windows Server 2019
 
 ## Locks and Limits
 

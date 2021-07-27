@@ -10,7 +10,7 @@ ms.date: 10/12/2016
 ---
 # Windows Authentication Technical Overview
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic for the IT professional provides links to topics for the Windows Authentication Technical Overview. Windows authentication is the process to prove the authenticity of a user or service attempting to access Windows.
 

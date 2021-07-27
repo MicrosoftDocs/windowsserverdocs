@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # System Requirements
 
-> Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
 This topic addresses the minimum system requirements to run Windows Server&reg; 2016 or Windows Server, version 1709.
 

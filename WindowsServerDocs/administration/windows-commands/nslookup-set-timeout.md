@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # nslookup set timeout
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Changes the initial number of seconds to wait for a reply to a lookup request. If a reply isn't received within the specified amount of time, the time-out period is doubled, and the request is resent. Use the [nslookup set retry](nslookup-set-retry.md) command to determine the number of times to try to send the request.
 

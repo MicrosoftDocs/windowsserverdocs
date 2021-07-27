@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # set id (Diskpart)
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Changes the partition type field for the partition with focus. This command doesn't work on dynamic disks or on Microsoft Reserved partitions.
 

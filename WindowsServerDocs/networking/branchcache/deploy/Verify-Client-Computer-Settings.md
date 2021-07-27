@@ -10,7 +10,7 @@ ms.date: 01/05/2021
 ---
 # Verify Client Computer Settings
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to verify that the client computer is correctly configured for BranchCache.
 

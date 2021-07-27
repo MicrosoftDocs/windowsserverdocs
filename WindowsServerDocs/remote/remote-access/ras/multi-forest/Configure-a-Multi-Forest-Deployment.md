@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Configure a Multi-Forest Deployment
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to configure a Remote Access multi-forest deployment in several possible scenarios. All of the scenarios assume that DirectAccess is currently deployed on a single forest called Forest1, and that you are configuring DirectAccess to work with a new forest called Forest2.
 

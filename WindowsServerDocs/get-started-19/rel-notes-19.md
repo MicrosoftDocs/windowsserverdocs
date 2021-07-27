@@ -11,7 +11,7 @@ ms.date: 06/07/2019
 ---
 # Release Notes - Important issues in Windows Server 2019
 
->Applies To: Windows Server 2019
+>Applies to: Windows Server 2019
 
 These release notes summarize the most critical issues in the Windows Server 2019 operating system, including ways to avoid or work around the issues, if known. For information about by-design changes, new features, and fixes in this release, see [What's New in Windows Server 2019](whats-new-19.md) and announcements from the specific feature teams. Unless otherwise specified, each reported issue applies to all editions and installation options of Windows Server 2019.
 

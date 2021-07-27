@@ -10,7 +10,7 @@ ms.assetid: 7fd996f5-1ea9-4b16-9776-85fb39a3aa34
 
 # Export and Import virtual machines
 
-> Applies To: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Applies to: Windows Server 2022, Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 This article shows you how to export and import a virtual machine, which is a quick way to move or copy them. This article also discusses some of the choices to make when doing an export or import.
 

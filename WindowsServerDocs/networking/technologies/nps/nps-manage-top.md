@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Manage Network Policy Server (NPS)
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use the topics in this section to manage Network Policy Server.
 

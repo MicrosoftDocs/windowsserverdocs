@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Configure WEB1 to Distribute Certificate Revocation Lists (CRLs)
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to configure the web server WEB1 to distribute CRLs.
 

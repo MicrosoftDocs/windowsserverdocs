@@ -9,7 +9,7 @@ ms.date: 6/05/2018
 ---
 # Understanding capabilities
 
->Applies To: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 This topic defines the concept of capabilities in System Insights and introduces the default capabilities available in Windows Server 2019.
 

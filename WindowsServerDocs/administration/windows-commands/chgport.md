@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # chgport
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Lists or changes the COM port mappings to be compatible with MS-DOS applications.
 
