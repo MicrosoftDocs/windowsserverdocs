@@ -3,7 +3,7 @@ title: Adding, removing, and updating capabilities
 description: System Insights enables you to create new capabilities that leverage the existing data collection and management functionality. It's important that you also have the platform support to manage the addition, removal, and updates of these capabilities. This topic describes the high-level functionality to add, remove, and update capabilities in System Insights.
 ms.topic: article
 author: gawatu
-ms.author: gawatu
+ms.author: daknappe
 manager: mallikarjun.chadalapaka
 ms.date: 7/31/2018
 ---

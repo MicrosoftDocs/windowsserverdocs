@@ -3,7 +3,7 @@ title: System Insights FAQ
 description: System Insights FAQ
 ms.topic: article
 author: gawatu
-ms.author: gawatu
+ms.author: daknappe
 manager: mallikarjun.chadalapaka
 ms.date: 5/23/2018
 ---
