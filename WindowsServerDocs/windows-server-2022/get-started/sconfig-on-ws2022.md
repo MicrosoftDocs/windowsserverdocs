@@ -2,7 +2,7 @@
 title: Configure a Server Core installation with Sconfig.cmd
 description: In Windows Server 2022 you can use the Server Configuration tool (Sconfig.cmd) to configure and manage several common aspects of Server Core installations including networking configuration, domain membership, installation of updates, and operating system activation.  
 ms.prod: windows-server
-ms.date: 10/17/2017
+ms.date: 07/27/2021
 ms.topic: article
 ms.assetid: e6cac074-c6fc-46dd-9664-fa0342c0a5e8
 author: Orin-Thomas
