@@ -59,7 +59,7 @@ After doing that, you should see the Add Counters dialog, where you can select *
 
 ![Remote Desktop - A screenshot showing how to add the User input Delay per process](./media/rds-user-delay-per-process.png)
 
-If you select **User Input Delay per Process**, you'll see the **Instances of the selected object** (in other words, the processes) in ```SessionID:ProcessID <Process Image>``` format.
+If you select **User Input Delay per Process**, you'll see the **Instances of the selected object** (in other words, the processes) in `SessionID:ProcessID <Process Image>` format.
 
 For example, if the Calculator app is running in a [Session ID 1](/previous-versions/iis/6.0-sdk/ms524326(v=vs.90)), you'll see ```1:4232 <Calculator.exe>```.
 
