@@ -17,5 +17,3 @@ items:
     href: get-started/server-core-app-compatibility.md
   - name: Features removed or no longer developed
     href: get-started/removed-features.md
-  - name: Secure DNS Client over HTTPS (DoH)
-    href: doh-client-support.md
