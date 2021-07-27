@@ -63,9 +63,6 @@
 
 ## Tune your Windows Server performance
 ### [Performance Tuning Guidelines](performance-tuning/index.md)
-### [Microsoft Server Performance Advisor](server-performance-advisor/microsoft-server-performance-advisor.md)
-#### [Server Performance Advisor User's Guide](server-performance-advisor/server-performance-advisor-users-guide.md)
-#### [Server Performance Advisor Pack Development Guide](server-performance-advisor/server-performance-advisor-pack-development-guide.md)
 
 ## Automate Windows Server management
 ### [Windows PowerShell scripting](/powershell/scripting/overview)

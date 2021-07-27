@@ -1,6 +1,6 @@
 ---
 title: Performance Tools for Network Workloads
-description: Learn about performance tools including the Client to Server Traffic tool, TCP/IP Window Size, and Microsoft Server Performance Advisor. 
+description: Learn about performance tools including the Client to Server Traffic tool and TCP/IP Window Size. 
 ms.topic: article
 ms.assetid: c7789781-87e8-464e-981b-af887d01badd
 manager: dcscontentpm
@@ -15,7 +15,7 @@ ms.date: 07/22/2021
 
 You can use this topic to learn about performance tools.
 
-This topic contains sections about the Client to Server Traffic tool, TCP/IP Window Size, and Microsoft Server Performance Advisor.
+This topic contains sections about the Client to Server Traffic tool and TCP/IP Window Size.
 
 ##  <a name="bkmk_tuning"></a> Client to Server Traffic tool
 
