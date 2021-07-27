@@ -11,7 +11,7 @@ ms.topic: article
 
 # Identifying Your AD DS Design and Deployment Requirements
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Performing a high-level assessment of your current environment and correctly identifying your Active Directory Domain Services (AD DS) deployment tasks is essential for the success of your AD DS deployment strategy.
 

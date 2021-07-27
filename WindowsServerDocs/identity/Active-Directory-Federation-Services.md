@@ -11,7 +11,7 @@ ms.topic: article
 
 # Active Directory Federation Services
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This document contains a list of all of the documentation areas for AD FS for Windows Server 2016, 2012 R2, and 2012.  This includes the following:
 

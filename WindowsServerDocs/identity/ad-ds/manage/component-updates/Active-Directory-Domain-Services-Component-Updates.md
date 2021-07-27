@@ -11,7 +11,7 @@ ms.assetid: a3a91034-a4da-4ad7-93f8-0cd2ec3e7824
 
 # Active Directory Domain Services Component Updates
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 This module introduces the components that received minor updates in the Directory Services and Identity spaces.
 

@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Core network companion guidance
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 While the Windows Server 2016 [Core Network Guide](../core-network-guide.md) provides instructions on how to deploy a new Active Directory&reg; forest with a new root domain and the supporting networking infrastructure, Companion Guides provide you with the ability to add features to your network.
 

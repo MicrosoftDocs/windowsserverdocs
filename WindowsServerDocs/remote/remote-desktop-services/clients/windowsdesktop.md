@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
 
->Applies to: Windows 10, Windows 10 IoT Enterprise, and Windows 7
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 10 IoT Enterprise, and Windows 7
 
 You can use the Remote Desktop client for Windows Desktop to access Windows apps and desktops remotely from a different Windows device.
 

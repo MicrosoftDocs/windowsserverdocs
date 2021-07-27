@@ -11,7 +11,7 @@ ms.topic: article
 
 # Securing Domain Controllers Against Attack
 
-> Applies To: Windows Server 2022 Preview, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022 Preview, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 *Law Number Three: If a bad guy has unrestricted physical access to your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](https://www.microsoft.com/en-us/msrc?rtc=1)
 

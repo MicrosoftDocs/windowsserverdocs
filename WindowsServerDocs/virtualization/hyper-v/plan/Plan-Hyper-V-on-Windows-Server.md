@@ -9,7 +9,7 @@ ms.date: 08/21/2019
 ---
 # Plan for Hyper-V on Windows Server
 
->Applies To: Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
 
 Use these resources to help you plan your Hyper-V deployment.
 

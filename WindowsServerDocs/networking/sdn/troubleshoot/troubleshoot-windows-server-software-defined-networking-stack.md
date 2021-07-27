@@ -11,7 +11,7 @@ ms.date: 06/30/2021
 
 # Troubleshoot the Windows Server Software Defined Networking Stack
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 This guide examines the common Software Defined Networking (SDN) errors and failure scenarios and outlines a troubleshooting workflow that uses the available diagnostic tools.
 

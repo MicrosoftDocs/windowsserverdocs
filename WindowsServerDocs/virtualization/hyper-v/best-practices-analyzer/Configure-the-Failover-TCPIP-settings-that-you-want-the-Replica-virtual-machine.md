@@ -8,7 +8,7 @@ ms.date: 8/16/2016
 ---
 # Configure the Failover TCP/IP settings that you want the Replica virtual machine to use in the event of a failover
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 

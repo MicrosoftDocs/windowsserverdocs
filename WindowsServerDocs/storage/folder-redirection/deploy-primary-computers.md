@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Deploy primary computers for Folder Redirection and Roaming User Profiles
 
->Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
 This topic describes how to enable primary computer support and designate primary computers for users. Doing so enables you to control which computers use Folder Redirection and Roaming User Profiles.
 

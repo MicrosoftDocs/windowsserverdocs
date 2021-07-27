@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 # Configure a Server Core installation of Windows Server 2016 or Windows Server, version 1709, with Sconfig.cmd
 
-> Applies to: Windows Server (Semi-Annual Channel) and Windows Server 2016
+>Applies to: Windows Server 2016
 
 In Windows Server 2016 and Windows Server, version 1709, you can use the Server Configuration tool (Sconfig.cmd) to configure and manage several common aspects of Server Core installations. You must be a member of the Administrators group to use the tool.
 

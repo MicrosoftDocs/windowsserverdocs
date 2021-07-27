@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Comparison of Standard and Datacenter editions of Windows Server 2016
 
-> Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
 ## Locks and Limits
 

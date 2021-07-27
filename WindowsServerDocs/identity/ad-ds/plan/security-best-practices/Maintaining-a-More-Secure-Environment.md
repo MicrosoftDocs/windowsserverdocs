@@ -11,7 +11,7 @@ ms.topic: article
 
 # Maintaining a More Secure Environment
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 *Law Number Ten: Technology is not a panacea.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 

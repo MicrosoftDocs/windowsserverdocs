@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Network-Related Performance Counters
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic lists the counters that are relevant to managing network performance, and contains the following sections.
 

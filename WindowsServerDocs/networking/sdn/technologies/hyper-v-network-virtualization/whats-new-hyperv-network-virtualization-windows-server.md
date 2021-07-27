@@ -10,7 +10,7 @@ ms.date: 06/16/2021
 ---
 # What's New in Hyper-V Network Virtualization in Windows Server 2016
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 This topic describes the Hyper-V Network Virtualization (HNV) functionality that is new or changed in Windows Server 2016.
 

@@ -9,7 +9,7 @@ ms.date: 10/16/2017
 ---
 # Monthly Delta update ISV support without WSUS
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 Windows 10 Update downloads can be large because every package contains all previously released fixes to ensure consistency and simplicity.
 

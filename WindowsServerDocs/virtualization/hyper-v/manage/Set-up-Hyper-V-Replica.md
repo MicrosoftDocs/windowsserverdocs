@@ -10,7 +10,7 @@ ms.date: 10/10/2016
 
 # Set up Hyper-V Replica
 
-> Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Hyper-V Replica is an integral part of the Hyper-V role. It contributes to your disaster recovery strategy by replicating virtual machines from one Hyper-V host server to another to keep your workloads available.  Hyper-V Replica creates a copy of a live virtual machine  to a replica offline virtual machine. Note the following:
 

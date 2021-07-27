@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # Understanding cluster and pool quorum
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 [Windows Server Failover Clustering](../../failover-clustering/failover-clustering-overview.md) provides high availability for workloads. These resources are considered highly available if the nodes that host resources are up; however, the cluster generally requires more than half the nodes to be running, which is known as having *quorum*.
 

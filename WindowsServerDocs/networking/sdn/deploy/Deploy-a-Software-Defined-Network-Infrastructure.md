@@ -10,7 +10,7 @@ manager: grcusanz
 ---
 # Deploy a Software Defined Network infrastructure
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Deploy Microsoft's Software Defined Networking (SDN) infrastructure.
 

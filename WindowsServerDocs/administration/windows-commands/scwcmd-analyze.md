@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # scwcmd analyze
 
-> Applies to: Windows Server 2012 R2 and Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2 and Windows Server 2012
 
 Determines whether a computer is in compliance with a policy. Results are returned in an .xml file.
 
