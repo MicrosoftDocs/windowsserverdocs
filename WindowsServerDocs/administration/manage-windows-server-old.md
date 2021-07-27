@@ -93,17 +93,12 @@ Use the following information to help tune your environment for performance.
 ### [Performance tuning guidelines](performance-tuning/index.md)
 Review a set of guidelines that you can use to tune the server settings in Windows Server 2016 and obtain incremental performance or energy efficiency gains, especially when the nature of the workload varies little over time.
 
-### [Microsoft Server Performance Advisor](server-performance-advisor/microsoft-server-performance-advisor.md)
-
-With Microsoft Server Performance Advisor (SPA), you can collect metrics to diagnose performance issues on Windows servers unobtrusively without adding software agents or reconfiguring production servers. SPA generates comprehensive performance reports and historical charts with recommendations.
-
-
 ## Automate Windows Server management
 
 Windows Server includes a set of commands and Windows PowerShell modules that you can use to automate management tasks.
 
 ### [Windows PowerShell](/powershell/scripting/powershell-scripting?view=powershell-5.1&preserve-view=true)
-Winows PowerShell is a command-line shell and scripting language designed to let you rapidly automate administrative tasks.
+Windows PowerShell is a command-line shell and scripting language designed to let you rapidly automate administrative tasks.
 
 ### [Windows Commands](windows-commands/windows-commands.md)
 

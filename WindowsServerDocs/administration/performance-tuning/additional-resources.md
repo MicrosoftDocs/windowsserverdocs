@@ -76,6 +76,9 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 ## Server Workload Tuning Resources
 
+   > [!NOTE]
+   > Microsoft Server Performance Advisor is no longer available. Please use the resources in this section instead.
+
 -   [Performance Tuning for NTttcp](/previous-versions/dn567663(v=vs.85))
 
 -   [Ttcp](http://en.wikipedia.org/wiki/Ttcp)
@@ -96,13 +99,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql)
 
-
-## Server Tuning Tools
-
--   [Microsoft Server Performance Advisor](/previous-versions/dn481522(v=vs.85))
-
 ## Performance Tuning Guidelines for previous versions of Windows Server
-
 
 Use the performance tuning guidelines to improve performance for older versions of Windows Server.
 
