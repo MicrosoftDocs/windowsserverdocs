@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/15/2021
+ms.date: 07/27/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -18,16 +18,16 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.2130        |1.2.1446                  |
-|Insider    |1.2.2220        |1.2.1446                  |
+|Public     |1.2.2222        |1.2.1672                  |
+|Insider    |1.2.2222        |1.2.1672                  |
 
-## Updates for version 1.2.2220 (Insider)
+## Updates for version 1.2.2222
 
-*Date published: 07/14/2021*
+*Date published: 07/27/2021*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
-- The client now updates in the background when the auto-update feature is enabled, no remote connection is active, and MSRDCW.exe isn't running.
+- The client also updates in the background when the auto-update feature is enabled, no remote connection is active, and MSRDCW.exe isn't running.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Fixed an ICE inversion parameter issue that prevented some Teams calls from connecting.
 
@@ -35,7 +35,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 
 *Date published: 06/22/2021*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4OV3W), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4OSuo), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4OV3V)
 
 - Azure Virtual Desktop has been renamed to Azure Virtual Desktop. Learn more about the name change at [our announcement on our blog](https://azure.microsoft.com/blog/azure-virtual-desktop-the-desktop-and-app-virtualization-platform-for-the-hybrid-workplace/).
 - Fixed an issue where the client would ask for authentication after the user ended their session and closed the window.
@@ -46,14 +46,18 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 
 *Date published: 05/25/2021*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWErE3), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWDZmj), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWDU5d)
-
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to Teams on Azure Virtual Desktop, including the following:
   - Resolved a black screen video issue that also fixed a mismatch in video resolutions with Teams Server.
   - Teams on Azure Virtual Desktop now changes resolution and bitrate in accordance with what Teams Server expects.
 
 ## Updates for version 1.2.1954
+
+*Date published: 05/13/2021*
+
+- Fixed the vulnerability known as [CVE-2021-31186](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31186).
+
+## Updates for version 1.2.1953
 
 *Date published: 05/06/2021*
 
