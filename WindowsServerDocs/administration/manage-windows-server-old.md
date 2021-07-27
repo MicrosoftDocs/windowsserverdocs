@@ -98,7 +98,7 @@ Review a set of guidelines that you can use to tune the server settings in Windo
 Windows Server includes a set of commands and Windows PowerShell modules that you can use to automate management tasks.
 
 ### [Windows PowerShell](/powershell/scripting/powershell-scripting?view=powershell-5.1&preserve-view=true)
-Winows PowerShell is a command-line shell and scripting language designed to let you rapidly automate administrative tasks.
+Windows PowerShell is a command-line shell and scripting language designed to let you rapidly automate administrative tasks.
 
 ### [Windows Commands](windows-commands/windows-commands.md)
 
