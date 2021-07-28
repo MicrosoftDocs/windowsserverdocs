@@ -48,7 +48,7 @@ The current Domain/Workgroup settings are displayed on the default Server Config
 > [NOTE]
 > You’ll only be able to join a domain if the computer is able to resolve the DNS address of a domain controller in the target domain's Active Directory Domain Services forest and you have the credentials of an account that has permission to perform a domain join operation. You have the option of changing the computer's name as a part of the domain join operation.
 
-To join a standalone server core instance to a domain with *Sconfig*, perform the following steps:
+To join a standalone server core instance to a domain with *Sconfig.cmd*, perform the following steps:
 
 1. From the main menu, type `1` and press `Enter` to enter the Change domain/workgroup membership menu.
 1. On the Change domain/workgroup membership menu, press `D`. 
