@@ -21,7 +21,6 @@ You can use the Server Configuration tool *Sconfig.cmd* to configure and manage 
 •	installation of updates
 •	operating system activation
 
-
 There are some things to keep in mind about *Sconfig.cmd*:
 
 •	On Server Core deployments of Windows Server 2022, it runs automatically after logon unless disabled.
@@ -46,11 +45,12 @@ There are some things to keep in mind about *Sconfig.cmd*:
 
 The current Domain/Workgroup settings are displayed on the default Server Configuration tool screen. You can join a domain or a workgroup by accessing the **Domain/Workgroup** settings page from the main menu and following the instructions, supplying any required information. 
 
-NOTE: You’ll only be able to join a domain if the computer is able to resolve the DNS address of a domain controller in the target domain's Active Directory Domain Services forest and you have the credentials of an account that has permission to perform a domain join operation. You have the option of changing the computer's name as a part of the domain join operation.
+> [NOTE]
+> You’ll only be able to join a domain if the computer is able to resolve the DNS address of a domain controller in the target domain's Active Directory Domain Services forest and you have the credentials of an account that has permission to perform a domain join operation. You have the option of changing the computer's name as a part of the domain join operation.
 
 To join a standalone server core instance to a domain with *Sconfig*, perform the following steps:
 
-1. From the Sconfig main menu, type `1` and press `Enter` to enter the Change domain/workgroup membership menu.
+1. From the main menu, type `1` and press `Enter` to enter the Change domain/workgroup membership menu.
 1. On the Change domain/workgroup membership menu, press `D`. 
 1. Press `Enter` to join a domain.
 1. Type the name of the domain to join and press `Enter`.
@@ -67,7 +67,7 @@ The current computer name is displayed in the default Server Configuration Tool 
 
 To change the computer name, perform the following steps:
 
-1. From the *Sconfig* main menu, type `2` and press `Enter` to enter the computer name menu.
+1. From the main menu, type `2` and press `Enter` to enter the computer name menu.
 1. At the prompt, provide the new computer name and press `Enter`.
 1. If changing the name of a computer that is domain joined, provide the credentials of a user with permissions to rename the computer account. Press `Enter` after username and then enter the password and press `Enter`.
 1. When prompted to restart the computer, press `Y` and press `Enter`.
@@ -91,13 +91,11 @@ You can enable various remote management scenarios from the **Configure Remote M
 - **Enable or disable response to ping** allows the use of remote ping to verify network connectivity. It is disabled by default.
 
 1. From the main menu, type `4` and press `Enter` to enter the **Configure remote management** menu.
-
 1. Type `1` and press `Enter` to enable remote management or type `2` and press `Enter` to disable remote management.
 
-###Configure server response to ping
+### Configure server response to ping
 
 1. From the main menu, type `4` and press `Enter` to enter the Configure remote management menu.
-
 1. To disable server response to ping, type `3` and press `Enter` to enable server response to ping or type `4` and press `Enter`.
 
 ## Update settings
@@ -114,11 +112,8 @@ The **Download Only** option will scan for updates, download any that are availa
 
 1. From the Sconfig main menu, type `5` and press `Enter` to enter the Update settings menu.
 1. Review the update configuration and then choose between the following options:
-
     - Type `A` and press `Enter` to select updates to be installed automatically.
-
     - Type `D` and press `Enter` to have updates periodically checked for and automatically downloaded, but not installed. You can install downloaded updates from the **Install updates** menu.
-
     - Type `M` and press `Enter` to require a manual update check. You can install updates from the **Install updates** menu.
 
 ### Install updates
@@ -126,9 +121,7 @@ The **Download Only** option will scan for updates, download any that are availa
 You can choose to search for updates from the following categories:
 
 - All quality updates
-
 - Recommended quality updates only
-
 - Feature updates
 
 The search returns any available updates within the category. You will be presented with the option of installing all available updates, a specific update, or none of the available updates.
@@ -157,9 +150,8 @@ The status of remote desktop settings is displayed in the default Server Configu
 1. From the Sconfig main menu, type `7` and press `Enter` to enter the Remote Desktop settings menu.
 1. On the Remote Desktop menu, type `E` and press `Enter` to enable Remote Desktop. Alternatively, press `D` and press `Enter` to disable Remote Desktop.
 1. When enabling Remote Desktop, choose between the following options:
-
-- To allow only clients running remote desktop with network level authentication (more secure) type `1` and press `Enter`.
-- To allow clients running any version of remote desktop (less secure) type `2` and press `Enter`.
+    - To allow only clients running remote desktop with network level authentication (more secure) type `1` and press `Enter`.
+    - To allow clients running any version of remote desktop (less secure) type `2` and press `Enter`.
 
 ## Configure network settings
 
@@ -168,7 +160,6 @@ You can configure the IPv4 address to be assigned automatically by a DHCP Server
 1. From the main menu, type `8` and press `Enter` to enter the XXXXXX settings menu.
 1. On the **Network settings** menu in this list of available interfaces, type the number of the Interface (such as `1`) and press `Enter` to select that interface.
 1. On the **Network adapter settings** page, choose one of the following options:
-
     1. Type `1` and press `Enter` to set the network adapter address.
     1. Press `D` and press `Enter` to configure DHCP or press `S` and press `Enter` to configure a static address.
     1. If you choose the static IP address option, provide the IPv4 address, subnet mask (in dotted quad notation (example 255.255.255.0)) and default gateway address, pressing `Enter` after each entry.
