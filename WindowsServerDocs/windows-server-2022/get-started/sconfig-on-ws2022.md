@@ -29,16 +29,16 @@ There are some things to keep in mind about *Sconfig.cmd*:
 •	You must be a member of the local Administrators group to use it. 
 •	You can’t use it through a remote PowerShell session. 
 •	You can use it when:
-o	You have signed on directly 
-o	Have established a Remote Desktop Connection session 
-o	Have an SSH connection after installing and configuring the SSH Server role on the Windows Server 2022 instance 
+    o	You have signed on directly 
+    o	Have established a Remote Desktop Connection session 
+    o	Have an SSH connection after installing and configuring the SSH Server role on the Windows Server 2022 instance 
 
 ## Start the Server Configuration Tool
 
 *Sconfig.cmd* starts automatically on Server Core installations. If you want to run it on a Desktop Experience installation, do these steps:
 
 1. Change to the system drive.
-2. Type `Sconfig.cmd`, and then press `Enter` The Server Configuration tool interface opens:
+1. Type `Sconfig.cmd`, and then press `Enter` The Server Configuration tool interface opens:
 
     ![Screenshot of Sconfig.cmd user interface](../media/sconfig-on-ws2022/2022-main-sconfig-page.png)
 
@@ -82,6 +82,7 @@ To add a domain user account to the local Administrators group, perform the foll
 1. At the prompt provide the username and press `Enter`. 
 
 The changes take effect immediately.
+
 ## Configure remote management settings
 
 You can enable various remote management scenarios from the **Configure Remote Management** main menu option:
@@ -109,7 +110,7 @@ When **Manual** updates are selected, the system will not check for updates auto
 
 The **Download Only** option will scan for updates, download any that are available, and then notify you in the Action Center that they are ready for installation. This is default option.
 
-###Configure update settings
+### Configure update settings
 
 1. From the Sconfig main menu, type `5` and press `Enter` to enter the Update settings menu.
 1. Review the update configuration and then choose between the following options:
@@ -142,9 +143,7 @@ The search returns any available updates within the category. You will be presen
 1. After you have made your selection, a list of available updates will be displayed. You can choose from the following options:
 
     - To install all available updates, type `A` and press `Enter`.
-
--	To install none of the available updates, type `N` and press `Enter`.
-
+    - To install none of the available updates, type `N` and press `Enter`.
     - To install a specific update from the list, type `S` and press `Enter` and then type the update number and press `Enter`.
 
 ## Configure Remote Desktop settings
@@ -152,9 +151,7 @@ The search returns any available updates within the category. You will be presen
 The status of remote desktop settings is displayed in the default Server Configuration Tool screen. You can configure the following Remote Desktop settings by accessing the **Remote Desktop** main menu option and following the instructions on screen.
 
 - Enable Remote Desktop for Clients running Remote Desktop with Network Level Authentication
-
 - Enable Remote Desktop for clients running any version of Remote Desktop
-
 - Disable Remote
 
 1. From the Sconfig main menu, type `7` and press `Enter` to enter the Remote Desktop settings menu.
@@ -162,7 +159,6 @@ The status of remote desktop settings is displayed in the default Server Configu
 1. When enabling Remote Desktop, choose between the following options:
 
 - To allow only clients running remote desktop with network level authentication (more secure) type `1` and press `Enter`.
-
 - To allow clients running any version of remote desktop (less secure) type `2` and press `Enter`.
 
 ## Configure network settings
@@ -173,19 +169,13 @@ You can configure the IPv4 address to be assigned automatically by a DHCP Server
 1. On the **Network settings** menu in this list of available interfaces, type the number of the Interface (such as `1`) and press `Enter` to select that interface.
 1. On the **Network adapter settings** page, choose one of the following options:
 
-- Type `1` and press `Enter` to set the network adapter address.
-
+    1. Type `1` and press `Enter` to set the network adapter address.
     1. Press `D` and press `Enter` to configure DHCP or press `S` and press `Enter` to configure a static address.
-
     1. If you choose the static IP address option, provide the IPv4 address, subnet mask (in dotted quad notation (example 255.255.255.0)) and default gateway address, pressing `Enter` after each entry.
-
-- Type `2` and press `Enter` to set the DNS server address
-
+2. Type `2` and press `Enter` to set the DNS server address
     1. Provide the IPv4 address of the preferred DNS server and press `Enter`.
-
     1. Provide the IPv4 address of the alternate DNS server and press `Enter`.
-
-- Type `3` and press `Enter` to clear current DNS server settings
+3. Type `3` and press `Enter` to clear current DNS server settings
 
 ## Date and time settings
 
@@ -196,15 +186,10 @@ Selecting the Date and Time option will open the Date and Time control panel whe
 This option lets you configure whether anonymized Windows Server telemetry is forwarded to Microsoft.
 
 1. From the Sconfig main menu, type `10` and press `Enter` to enter the Telemetry settings menu.
-
 1. To change the telemetry setting, type `Y` for Yes or `N` for No and press `Enter`.
-
 1. If you choose to change the telemetry settings, you can choose one of the following options:
-
     1. To disable telemetry, type `1` and press `Enter`.
-
     1. To set telemetry to Required, type `2` and press `Enter`.
-
     1. To set telemetry to Optional, type `3` and press `Enter`
 
 To understand more about telemetry options, see [Telemetry Options](https://go.microsoft.com/fwlink/?LinkID-811315).
@@ -214,29 +199,23 @@ To understand more about telemetry options, see [Telemetry Options](https://go.m
 This option lets you to display current license and activation status, install a product key, and activate windows. 
 
 1. From the Sconfig main menu, type `11` and press `Enter` to enter the **Windows Activation settings** menu.
-
-- Type `1` and press `Enter` to view the current Activation status.
-
-- Type `2` and press `Enter` to attempt Activation with the currently installed product key.
-
-- Type `3` and press `Enter` to add a new product key. At the prompt type the product key and press `Enter`. Press `Enter` again once the product key is installed and then return to this menu to perform activation.
+    - Type `1` and press `Enter` to view the current Activation status.
+    - Type `2` and press `Enter` to attempt Activation with the currently installed product key.
+    - Type `3` and press `Enter` to add a new product key. At the prompt type the product key and press `Enter`. Press `Enter` again once the product key is installed and then return to this menu to perform activation.
 
 ## Log off the current user
 
 1. From the main menu, type `12` and press Enter.
-
 1. At the prompt asking if you are sure, type `Y` and press Enter. The currently signed on account will be logged off. 
 
 ## Restart the server
 
-1. From the main menu, type `13` and press `Enter`. 
-
+1. From the main menu, type `13` and press `Enter`.
 1. At the prompt asking if you are sure, type `Y` and press Enter. The server will restart.
 
 ## Shut down the server
 
 1. From the main menu, type `14` and press `Enter`.
-
 1. At the prompt asking if you are sure, type `Y` and press Enter. The server will shut down.
 
 ## Exit to command line (PowerShell)
