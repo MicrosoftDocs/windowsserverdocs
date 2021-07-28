@@ -29,6 +29,10 @@ With SMB Multichannel, SMB detects whether a network adapter has the RDMA capabi
 >You should not team RDMA-capable network adapters if you intend to use the RDMA capability of the network adapters. When teamed, the network adapters will not support RDMA.
 >After at least one RDMA network connection is created, the TCP/IP connection used for the original protocol negotiation is no longer used. However, the TCP/IP connection is retained in case the RDMA network connections fail.
 
+## SMB Encryption with SMB Direct
+
+Beginning in Windows Server 2022 and Windows 11, SMB Direct now supports encryption. Previously, enabling SMB encryption disabled direct data placement, making RDMA performance as slow as TCP. Now data is encrypted before placement, leading to relatively minor performance degradation while adding AES-128 and AES-256 protected packet privacy. You can enable encryption using [Windows Admin Center](https://docs.microsoft.com/windows-server/manage/windows-admin-center/overview), [Set-SMbServerConfiguration](https://docs.microsoft.com/powershell/module/smbshare/set-smbserverconfiguration?view=windowsserver2022-ps), or [UNC Hardening group policy](https://support.microsoft.com/topic/ms15-011-vulnerability-in-group-policy-could-allow-remote-code-execution-february-10-2015-91b4bda2-945d-455b-ebbb-01d1ec191328). Furthermore, Windows Server failover clusters now support granular control of encrypting intra-node storage communications for Cluster Shared Volumes (CSV) and the storage bus layer (SBL). This means that when using Storage Spaces Direct and SMB Direct, you can decide to encrypt east-west communications within the cluster itself for higher security.
+
 ## Requirements
 
 SMB Direct requires the following:
