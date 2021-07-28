@@ -428,7 +428,7 @@ To configure this by using Group Policy, follow these steps:
 
    ![DependOnService Properties](media/detect-enable-and-disable-smbv1-v2-v3-6.png)
 
-   The default value includes **MRxSMB10** in many versions of Windows, so by replacing them with this multi-value string, it is in effect removing **MRxSMB10** as a dependency for **LanmanServer** and going from four default values down to just these three values above.
+   The default value includes **MRxSMB10** in many versions of Windows, so by replacing them with this multi-value string, it is in effect removing **MRxSMB10** as a dependency for **LanmanWorkstation** and going from four default values down to just these three values above.
 
    > [!NOTE]
    > When you use Group Policy Management Console, you don't have to use quotation marks or commas. Just type each entry on individual lines.
