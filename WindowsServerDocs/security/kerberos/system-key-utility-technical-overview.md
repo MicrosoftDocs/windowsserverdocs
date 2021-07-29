@@ -10,7 +10,7 @@ ms.date: 3/17/2021
 ---
 # System key utility technical overview
 
->Applies To: Windows 8.1, Windows Server 2012, Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 8.1, Windows Server 2012, Windows Server 2012 R2
 
 This topic for the IT professional describes the system key utility (Syskey), which protects the Security Accounts Manager (SAM) database in Windows operating systems.
 

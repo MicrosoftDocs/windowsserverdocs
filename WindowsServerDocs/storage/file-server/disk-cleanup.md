@@ -11,7 +11,7 @@ ms.date: 06/20/2019
 
 # Using Disk Cleanup on Windows Server
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 The Disk Cleanup tool clears unnecessary files in a Windows Server environment. This tool is available by default on Windows Server 2019 and Windows Server 2016, but you might have to take a few manual steps to enable it on earlier versions of Windows Server.
 

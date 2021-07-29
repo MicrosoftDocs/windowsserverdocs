@@ -49,8 +49,6 @@ landingContent:
         links:
           - text: Performance tuning guidelines
             url: performance-tuning/index.md
-          - text: Microsoft Server Performance Advisor
-            url: server-performance-advisor/microsoft-server-performance-advisor.md
 
   # Card
   - title: Automate Windows Server management

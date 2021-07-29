@@ -10,7 +10,7 @@ ms.date: 06/25/2021
 ---
 # Understand the usage of virtual networks and VLANs
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 In this topic, you learn about Hyper-V network virtualization virtual networks and how they differ from virtual local area networks (VLANs). With Hyper-V network virtualization, you create overlay virtual networks, also called virtual networks.
 

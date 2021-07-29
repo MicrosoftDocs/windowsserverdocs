@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # Run Best Practices Analyzer Scans and Manage Scan Results
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 In Windows management, *best practices* are guidelines that are considered the ideal way, under typical circumstances, to configure a server as defined by experts. For example, it is considered a best practice for most server applications to keep open only those ports required for the applications to communicate with other networked computers, and block unused ports. Although best practice violations, even crucial ones, are not necessarily problematic, they indicate server configurations that can result in poor performance, poor reliability, unexpected conflicts, increased security risks, or other potential problems.
 

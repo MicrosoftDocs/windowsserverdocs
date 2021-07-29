@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # Format
 
-> Applies to: Windows 10, Windows Server 2019
+>Applies to: Windows Server 2022, Windows 10, Windows Server 2019
 
 Formats a disk to accept Windows files. You must be a member of the Administrators group to format a hard drive.
 

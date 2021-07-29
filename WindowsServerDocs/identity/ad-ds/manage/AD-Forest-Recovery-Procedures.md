@@ -10,7 +10,7 @@ ms.assetid: 47a471fb-3b0b-4aa8-8525-1c92d0d51e93
 ---
 # AD Forest Recovery - Procedures
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 This section contains procedures related to the forest recovery process. The procedures are applicable for Windows Server 2016, 2012 R2, 2012 and are also applicable to Windows Server 2008 R2 and 2008 with some minor exceptions.
 

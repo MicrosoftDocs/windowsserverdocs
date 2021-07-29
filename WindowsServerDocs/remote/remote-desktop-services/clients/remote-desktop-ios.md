@@ -6,12 +6,13 @@ ms.assetid: 03ec5a3d-d3f2-4afd-9405-ae58b6ecc91c
 author: Heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/20/2020
+ms.date: 07/15/2021
 ms.localizationpriority: medium
 ---
+
 # Get started with the iOS client
 
->Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 You can use the Remote Desktop client for iOS to work with Windows apps, resources, and desktops from your iOS device (iPhones and iPads).
 
@@ -65,9 +66,10 @@ To add a workspace:
 1. On the Connection Center screen, tap **+**, and then tap **Add workspace**.
 2. In the Feed URL field, enter the URL for the feed you want to add. This URL can be either a URL or an email address.
    - If you use a URL, use the one your admin gave you.
-      - This URL is usually a Azure Virtual Desktop URL. Which one you use depends on which version of Azure Virtual Desktop you're using.
+      - If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
         - For Azure Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
         - For Azure Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
+        - If you're using Windows 365, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - If you use an email address, enter your email address. Entering your email address tells the client to search for a URL associated with your email address if your admin configured the server that way.
 3. Tap **Next**.
 4. Provide your credentials when prompted.
@@ -78,7 +80,7 @@ To add a workspace:
 
 After you've finished, the Connection Center should display the remote resources.
 
-Once subscribed to a feed, the feed's content will update automatically on a regular basis. Resources may be added, changed, or removed based on changes made by your administrator.
+Once subscribed to a feed, the feed content will update automatically on a regular basis. Resources may be added, changed, or removed based on changes made by your administrator.
 
 ## Manage your user accounts
 
@@ -154,14 +156,14 @@ The client uses standard touch gestures. You can also use touch gestures to repl
 > In Windows 8 or later, the native touch gestures are supported in Direct Touch mode. For more information on Windows 8 gestures, see [Touch: Swipe, tap, and beyond](https://windows.microsoft.com/windows-8/touch-swipe-tap-beyond).
 
 | Mouse mode    | Mouse operation      | Gesture                                                    |
-|---------------|----------------------|------------------------------------------------------------|
-| Direct touch  | Left-click           | Tap with one finger                                               |
-| Direct touch  | Right-click          | Tap and hold with one finger                                      |
-| Mouse pointer | Left-click           | Tap with one finger                                               |
-| Mouse pointer | Left-click and drag  | Tap and hold with one finger, then drag                   |
-| Mouse pointer | Right-click          | Tap with two fingers                                              |
-| Mouse pointer | Right-click and drag | Double-tap and hold with two fingers, then drag                    |
-| Mouse pointer | Mouse wheel          | Double-tap and hold with two fingers, then drag up or down                |
+|:------------- |:-------------------- |:---------------------------------------------------------- |
+| Direct touch  | Left-click           | Tap with one finger                                        |
+| Direct touch  | Right-click          | Tap and hold with one finger                               |
+| Mouse pointer | Left-click           | Tap with one finger                                        |
+| Mouse pointer | Left-click and drag  | Tap and hold with one finger, then drag                    |
+| Mouse pointer | Right-click          | Tap with two fingers                                       |
+| Mouse pointer | Right-click and drag | Double-tap and hold with two fingers, then drag            |
+| Mouse pointer | Mouse wheel          | Double-tap and hold with two fingers, then drag up or down |
 | Mouse pointer | Zoom                 | With two fingers, pinch to zoom out and spread fingers apart to zoom in |
 
 ## Supported input devices
@@ -179,7 +181,7 @@ You can use either an on-screen keyboard or physical keyboard in your remote ses
 
 For on-screen keyboards, use the button on the right edge of the bar above the keyboard to switch between the standard and additional keyboard.
 
-If Bluetooth is enabled for your iOS device, the client automatically detects the Bluetooth keyboard.
+If Bluetooth is enabled on your iOS device, the client automatically detects the Bluetooth keyboard.
 
 While certain key combinations might not work as expected in a remote session, many of the common Windows key combinations, such as CTRL+C, CTRL+V, and ALT+TAB will work.
 

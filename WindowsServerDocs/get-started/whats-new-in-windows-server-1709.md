@@ -11,7 +11,7 @@ ms.date: 06/03/2019
 
 # What's New in Windows Server version 1709
 
-> Applies To: Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server (Semi-Annual Channel)
 
 <img src=../media/landing-icons/new.png style='float:left; padding:.5em;' alt=Icon showing a newspaper>&nbsp;To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server, version 1709](https://cloudblogs.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
 

@@ -10,7 +10,7 @@ manager: dongill
 ms.localizationpriority: medium
 ---
 # What's New in the Windows Console in Windows Server 2016
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
 The console host (the underlying code that supports all character-mode applications including the Windows command prompt, the Windows PowerShell prompt, and others) has been updated in several ways to add a variety of new capabilities.
 

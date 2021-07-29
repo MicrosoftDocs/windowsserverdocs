@@ -10,7 +10,7 @@ ms.date: 06/25/2021
 ---
 # Deploy Software Defined Network technologies using Windows PowerShell
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can use the topics in this section to deploy individual SDN technologies using Windows PowerShell.
 

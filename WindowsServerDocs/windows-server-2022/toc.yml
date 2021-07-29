@@ -13,5 +13,7 @@ items:
     href: get-started/vm-activation.md
   - name: Editions comparison
     href: get-started/editions-comparison.md
+  - name: Server Core App Compatibility Feature on Demand
+    href: get-started/server-core-app-compatibility.md
   - name: Features removed or no longer developed
     href: get-started/removed-features.md

@@ -10,7 +10,7 @@ ms.localizationpriority: low
 
 # Backup your Windows Servers from Windows Admin Center with Azure Backup
 
->Applies To: Windows Admin Center Preview, Windows Admin Center
+>Applies to: Windows Admin Center Preview, Windows Admin Center
 
 [Learn more about Azure integration with Windows Admin Center.](./index.md)
 

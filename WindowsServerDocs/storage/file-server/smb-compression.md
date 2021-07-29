@@ -11,9 +11,9 @@ ms.localizationpriority: medium
 
 # SMB compression (PREVIEW)
 
-> Applies to: Windows Server 2022, Windows Insider Dev Channel preview client
+>Applies to: Windows Server 2022, Windows Insider Dev Channel preview client
 
-SMB compression allows an administrator, user, or application to request compression of files as they transfer over the network. This removes the need to first manually deflate a file with an application, copy it, then inflate on the destination computer. Compressed files will consume less network bandwidth and take less time to transfer, at the cost of slightly increased CPU usage during transfers. SMB compression is most effective on networks with less bandwidth, such as a client's 1Gbps ethernet or Wi-Fi network; a file transfer over an uncongested 100Gbps ethernet network between two servers with flash storage may be just as fast without SMB compression in practice, but will still create less congestion for other applications.
+SMB compression allows an administrator, user or application to request compression of files as they transfer over the network. This removes the need to first manually deflate a file with an application, copy it, then inflate on the destination computer. Compressed files will consume less network bandwidth and take less time to transfer, at the cost of slightly increased CPU usage during transfers. SMB compression is most effective on networks with less bandwidth, such as a client's 1Gbps ethernet or Wi-Fi network; a file transfer over an uncongested 100Gbps ethernet network between two servers with flash storage may be just as fast without SMB compression in practice, but will still create less congestion for other applications.
 
 SMB compression in Windows has the following characteristics
 
@@ -112,7 +112,7 @@ You can configure an SMB client to always request compression and to always reje
 1. On SMB client computer, start Regedit.exe.
 1. Navigate to the following registry subkey:
 
-    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation`
+    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\parameters`
 
 1. Create a new REG_DWORD value name:
 
@@ -133,7 +133,7 @@ You can configure an SMB client to always request compression and to always reje
 
      This sets
 
-    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation`
+    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\parameters`
 
     `DisableCompression [dword] = 1`
 
@@ -142,7 +142,7 @@ You can configure an SMB client to always request compression and to always reje
 1. On SMB server computer, start Regedit.exe.
 1. Navigate to the following registry subkey:
 
-    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManServer`
+    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManServer\parameters`
 
 1. Create a new REG_DWORD value name:
 
@@ -166,7 +166,7 @@ If you want SMB compression to aggressively compress no matter what the file siz
 1. On SMB client computer, start Regedit.exe.
 1. Navigate to the following registry subkey:
 
-    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation`
+    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanManWorkstation\parameters`
 
 1. Create a new REG_DWORD value name:
 
@@ -210,3 +210,7 @@ You now have a large test file with very compressible contents.
 Testing SMB compression between a pair of VMs running on the same Hyper-V host may not show time savings because the virtual switch is 10Gbps and has no congestion, plus modern hypervisors often use flash storage. Test your compression over the real networks you plan to use. You can also reduce the network bandwidth on Hyper-V VMs for testing purposes using [Set-VMNetworkAdapter](/powershell/module/hyper-v/set-vmnetworkadapter) with `-MaximumBandwidth` set to `1Gb`, for example.
 
 To see how well compression is working, you can robocopy the same file to a server twice, once with the `/compress` flag and again without compression, deleting the server file between each test. If the file is compressing, you should see less network utilization in Task Manager and a lower copy time. You can also observe the SMB server's Performance Monitor object "SMB Server Shares" for its "Compressed requests/sec" and "Compressed receives/sec" counters.
+
+## RDMA and SMB Direct
+
+SMB compression doesn't support SMB Direct and RDMA. This means that even if the client requests compression and the server supports it, compression will not be attempted with SMB Direct and RDMA. Support for SMB compression with SMB Direct and RDMA will come after the Windows Server 2022 and Windows 11 public previews.

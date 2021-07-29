@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 05/05/2021
+ms.date: 07/19/2021
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -13,6 +13,26 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+
+## Updates for version 10.6.7
+
+Date published: Jun 21, 2021
+
+In this release, we addressed three connectivity errors that users reported to us:
+
+- Worked around a 0x907 (mismatched certificate) error code that was caused by third-party infrastructure returning an incorrect certificate in redirection scenarios.
+- Fixed the root cause of a 0x207 (handshake failure) error code that appeared when users accidentally tried to connect with an incorrect password to a pre-Windows 8 server with Network Level Authentication (NLA) enabled.
+- Resolved a 0x1107 (invalid workstation) error code that appeared when Active Directory workstation logon restrictions were set.
+
+We also updated the default icon for published desktops and worked around an issue that caused smart card redirection to stop working with recently patched versions of Windows.
+
+Finally, we made some updates to improve compatibility and performance metrics when connecting to Azure Virtual Desktop (formerly known as Windows Virtual Desktop).
+
+## Updates for version 10.6.6
+
+Date published: May 4, 2021
+
+In this release, we enabled connections to Windows Server 2003 servers that have Transport Layer Security (TLS) enabled for Remote Desktop connections. We also addressed a 0x3000066 error message that appeared in gateway scenarios, and aligned TLS version usage with the Windows Remote Desktop client.
 
 ## Updates for version 10.6.5
 

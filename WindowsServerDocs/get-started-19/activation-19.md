@@ -11,7 +11,7 @@ ms.date: 09/09/2020
 ---
 # Windows Server 2019 Activation
 
->Applies To: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 The following information outlines initial planning considerations that you need to review for Key Management Services (KMS) activation involving Windows Server 2019. For information about KMS activation involving operating systems older than those listed here, see [Step 1: Review and Select Activation Methods](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134256(v=ws.11)).
 

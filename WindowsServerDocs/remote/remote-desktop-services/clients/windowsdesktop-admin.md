@@ -5,12 +5,12 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 12/11/2020
+ms.date: 07/22/2021
 ms.localizationpriority: medium
 ---
 # Windows Desktop client for admins
 
->Applies to: Windows 10 and Windows 7
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10 and Windows 7
 
 This topic has additional information about the Windows Desktop client that admins will find useful. For basic usage information, see [Get started with the Windows Desktop client](windowsdesktop.md).
 
@@ -44,6 +44,9 @@ To turn notifications off, set the following registry information:
 - **Type:** REG_DWORD
 - **Name:** AutomaticUpdates
 - **Data:** 0 = Disable notifications and turn off auto-update. 1 = Show notifications and turn off auto-update. 2 = Show notifications and auto-update on close.
+
+>[!NOTE]
+>The client doesn't automatically update for per-machine installations.
 
 ### Configure user groups
 

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Configuring Azure integration
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin Center supports several optional features that integrate with Azure services. [Learn about the Azure integration options available with Windows Admin Center.](./index.md)
 
