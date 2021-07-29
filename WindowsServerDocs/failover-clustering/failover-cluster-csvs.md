@@ -75,7 +75,7 @@ The server uses one of the following I/O redirection modes, depending on the sit
 - **File system redirection** Redirection is per volume—for example, when CSV snapshots are taken by a backup application when a CSV volume is manually placed in redirected I/O mode.
 - **Block redirection** Redirection is at the file-block level—for example, when storage connectivity is lost to a volume. Block redirection is significantly faster than file system redirection.
 
-In Windows Server 2012 R2 and higher, you can view the state of a CSV volume on a per node basis. For example, you can see whether I/O is direct or redirected, or whether the CSV volume is unavailable. If a CSV volume is in I/O redirected mode, you can also view the reason. Use the Windows PowerShell cmdlet [Get-ClusterSharedVolumeState](powershell/module/failoverclusters/get-clustersharedvolumestate) to view this information.
+In Windows Server 2012 R2 and higher, you can view the state of a CSV volume on a per node basis. For example, you can see whether I/O is direct or redirected, or whether the CSV volume is unavailable. If a CSV volume is in I/O redirected mode, you can also view the reason. Use the Windows PowerShell cmdlet [Get-ClusterSharedVolumeState](https://docs.microsoft.com/powershell/module/failoverclusters/get-clustersharedvolumestate) to view this information.
 
 > [!IMPORTANT]
 > * Please note that CSVs pre-formatted with **ReFS used on top of SANs will NOT use Direct I/O**, regardless of all other requirements for Direct I/O being met.
