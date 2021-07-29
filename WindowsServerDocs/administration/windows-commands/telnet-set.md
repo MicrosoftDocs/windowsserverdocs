@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # telnet: set
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets options. You can use the [telnet unset command](telnet-unset.md) to turn off an option that was previously set.
 

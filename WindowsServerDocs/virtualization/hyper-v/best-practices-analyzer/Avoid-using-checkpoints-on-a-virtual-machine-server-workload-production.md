@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # Avoid using checkpoints on a virtual machine that runs a server workload in a production environment
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 

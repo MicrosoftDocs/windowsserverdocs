@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # STEP 7 Test DirectAccess Connectivity from the Internet
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The DirectAccess one-time password (OTP) deployment has been tested from the Homenet subnet, and can now be tested from the Internet.
 

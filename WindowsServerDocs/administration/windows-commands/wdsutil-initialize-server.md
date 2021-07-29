@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # wdsutil initialize-server
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Configures a Windows Deployment Services server for initial use after the server role has been installed. After you run this command, you should use the [wdsutil add-Image command](wdsutil-add-image.md) command to add images to the server.
 ## Syntax

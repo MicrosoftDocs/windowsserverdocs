@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Step 1 Implement a Single Server Remote Access Deployment with OTP Authentication
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The first configuration step to deploy Remote Access with OTP is to implement an advanced single server deployment and then plan to add the RADIUS server.
 

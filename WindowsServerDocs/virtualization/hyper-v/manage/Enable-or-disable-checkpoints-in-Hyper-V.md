@@ -9,7 +9,7 @@ ms.date: 10/04/2016
 ---
 # Enable or disable checkpoints in Hyper-V
 
->Applies To: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Applies to: Windows Server 2022, Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 You can choose to enable or disable checkpoints for each virtual machine.
 

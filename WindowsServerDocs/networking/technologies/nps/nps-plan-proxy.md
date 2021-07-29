@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Plan NPS as a RADIUS proxy
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 When you deploy Network Policy Server (NPS) as a Remote Authentication Dial-In User Service \(RADIUS\) proxy, NPS receives connection requests from RADIUS clients, such as network access servers or other RADIUS proxies, and then forwards these connection requests to servers running NPS or other RADIUS servers. You can use these planning guidelines to simplify your RADIUS deployment.
 

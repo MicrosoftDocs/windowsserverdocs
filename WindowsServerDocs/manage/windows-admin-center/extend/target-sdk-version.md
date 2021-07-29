@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Target a different version of the Windows Admin Center SDK
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Keeping your extension up to date with SDK changes and platform changes is easy.  We use [NPM tags](https://www.npmjs.com/package/@microsoft/windows-admin-center-sdk) to organize the release of new features into SDK versions.
 

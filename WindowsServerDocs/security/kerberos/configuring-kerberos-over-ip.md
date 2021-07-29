@@ -9,7 +9,7 @@ ms.topic: article
 
 # Kerberos clients allow IPv4 and IPv6 address hostnames in Service Principal Names (SPNs)
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Beginning with Windows 10 version 1507 and Windows Server 2016, Kerberos clients can be configured to support IPv4 and IPv6 hostnames in SPNs.
 

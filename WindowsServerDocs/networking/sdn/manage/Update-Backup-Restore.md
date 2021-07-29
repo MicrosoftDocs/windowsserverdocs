@@ -11,7 +11,7 @@ ms.date: 06/30/2021
 
 # Upgrade, backup, and restore SDN infrastructure
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 In this topic, you learn how to update, backup and restore an SDN infrastructure.
 

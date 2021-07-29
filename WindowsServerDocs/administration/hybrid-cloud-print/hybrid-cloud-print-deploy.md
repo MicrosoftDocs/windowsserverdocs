@@ -11,7 +11,7 @@ ms.date: 05/25/2021
 
 # Deploy Windows Server Hybrid Cloud Print
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 > [!WARNING]
 > Hybrid Cloud Print is no longer supported. We recommend using [Universal Print](https://aka.ms/universalprint), which is a subscription-based cloud service offering with direct support from printer OEMs that provides a completely serverless print solution.

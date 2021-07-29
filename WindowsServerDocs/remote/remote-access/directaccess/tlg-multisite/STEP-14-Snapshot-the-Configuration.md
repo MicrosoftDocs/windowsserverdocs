@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # STEP 14 Snapshot the Configuration
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This completes the DirectAccess multisite test lab. To save this configuration so that you can quickly return to a working DirectAccess multisite configuration from which you can test other DirectAccess modular test lab guides, test lab guide extensions, or for your own experimentation and learning, do the following:
 

@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # What's New in IPAM
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes the IP Address Management (IPAM) functionality that is new or changed in Windows Server 2016.
 

@@ -12,7 +12,7 @@ ms.date: 09/05/2018
 
 # Windows PowerShell Commands for RSS and vRSS
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 In this topic, you learn how to quickly locate technical reference information about Windows PowerShell commands for Receive Side Scaling \(RSS\) and virtual RSS \(vRSS\).
 
@@ -74,7 +74,7 @@ Determine the present settings for vRSS, and enable or disable the feature for a
    ```
 
 ## Configure the scheduling mode on the Hyper-V virtual switch port
->Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 In Windows Server 2019, vRSS can update the logical processors used to process network traffic dynamically.  Devices with supported drivers have this scheduling mode enabled by default.
 
@@ -93,7 +93,7 @@ Determine the present scheduling mode on a system, or modify the scheduling mode
    ```
 
 ## Configure the scheduling mode on a host vNIC
->Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 To determine the present scheduling mode or to modify the scheduling mode for a host vNIC, use the following Windows PowerShell commands:
 

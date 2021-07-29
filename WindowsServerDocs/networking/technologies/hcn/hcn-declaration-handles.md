@@ -9,7 +9,7 @@ ms.topic: article
 
 # RPC context handles for HCN
 
-> Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 ## HCN_Network
 

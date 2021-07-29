@@ -10,7 +10,7 @@ ms.date: 07/22/2021
 
 # Nested resiliency for Storage Spaces Direct
 
-> Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 Nested resiliency is a new capability of [Storage Spaces Direct](storage-spaces-direct-overview.md) in Windows Server 2019 that enables a two-server cluster to withstand multiple hardware failures at the same time without loss of storage availability, so users, apps, and virtual machines continue to run without disruption. This topic explains how it works, provides step-by-step instructions to get started, and answers the most frequently asked questions.
 

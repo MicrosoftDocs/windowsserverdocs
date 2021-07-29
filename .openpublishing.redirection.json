@@ -10049,6 +10049,21 @@
       "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-pcapng.md",
       "redirect_url": "/windows-server/administration/windows-commands/pktmon-etl2pcap",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/server-performance-advisor/microsoft-server-performance-advisor.md",
+      "redirect_url": "/windows-server/administration/performance-tuning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/server-performance-advisor/server-performance-advisor-users-guide.md",
+      "redirect_url": "/windows-server/administration/performance-tuning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/server-performance-advisor/server-performance-advisor-pack-development-guide.md",
+      "redirect_url": "/windows-server/administration/performance-tuning",
+      "redirect_document_id": false
     }
   ]
 }

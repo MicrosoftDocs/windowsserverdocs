@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Manage IPAM
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This guide provides administration and troubleshooting information for the IP Address Management (IPAM) feature in  Windows Server 2016.
 

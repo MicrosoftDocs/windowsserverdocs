@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Wireless Access Deployment Overview
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The following illustration shows the components that are required to deploy 802.1X authenticated wireless access with PEAP\-MS\-CHAP v2.
 

@@ -11,7 +11,7 @@ ms.topic: article
 
 # Virtualized Domain Controller Additional Resources
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 -   [AD DS Virtualization (Cloning and Virtualization safe improvements)](https://go.microsoft.com/fwlink/p/?LinkID=238316)

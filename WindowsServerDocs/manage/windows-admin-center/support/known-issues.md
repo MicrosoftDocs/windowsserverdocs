@@ -9,7 +9,7 @@ ms.date: 06/07/2019
 ---
 # Windows Admin Center Known Issues
 
-> Applies to: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 If you encounter an issue not described on this page, please [let us know](https://aka.ms/WACfeedback).
 

@@ -10,7 +10,7 @@ ms.date: 09/15/2016
 ---
 # Understanding Data Deduplication
 
-> Applies to:  Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This document describes how [Data Deduplication](overview.md) works.
 

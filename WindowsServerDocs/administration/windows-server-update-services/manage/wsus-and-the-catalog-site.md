@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # WSUS and the Catalog Site
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The [Catalog Site](https://www.catalog.update.microsoft.com) is the Microsoft location from which you can import hotfixes and hardware drivers.
 

@@ -10,7 +10,7 @@ ms.date: 09/29/2020
 
 # tapicfg install
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a TAPI application directory partition.
 

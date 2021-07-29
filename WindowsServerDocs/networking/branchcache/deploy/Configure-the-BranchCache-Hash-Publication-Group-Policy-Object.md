@@ -10,7 +10,7 @@ ms.date: 01/05/2021
 ---
 # Configure the BranchCache Hash Publication Group Policy Object
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to configure the BranchCache hash publication Group Policy Object (GPO) so that all file servers that you added to your OU have the same hash publication policy setting applied to them.
 

@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Verify Server Enrollment of a Server Certificate
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to verify that your Network Policy Server (NPS) servers have enrolled a server certificate from the certification authority (CA).
 

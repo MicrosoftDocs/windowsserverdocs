@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # wdsutil get-autoadddevices
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays all computers that are in the Auto-add database on a Windows Deployment Services server.
 

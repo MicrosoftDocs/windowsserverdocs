@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # Install or Uninstall Roles, Role Services, or Features
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In Windows Server, the Server Manager console and Windows PowerShell cmdlets for Server Manager allow installation of roles and features to local or remote servers, or offline virtual hard disks (VHDs). You can install multiple roles and features on a single remote server or offline VHD in a single add Roles and Features Wizard or Windows PowerShell session.
 

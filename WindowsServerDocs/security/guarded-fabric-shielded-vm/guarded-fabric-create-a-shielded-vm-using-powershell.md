@@ -10,7 +10,7 @@ ms.date: 09/25/2019
 
 # Create a shielded VM using PowerShell
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 In production, you would typically use a fabric manager (e.g. VMM) to deploy shielded VMs.
 However, the steps illustrated below allow you to deploy and validate the entire scenario without a fabric manager.

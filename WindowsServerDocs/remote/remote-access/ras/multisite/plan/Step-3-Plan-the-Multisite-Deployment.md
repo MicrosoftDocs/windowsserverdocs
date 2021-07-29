@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Step 3 Plan the Multisite Deployment
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 After planning the multisite infrastructure, plan any additional certificate requirements, how client computers select entry points, and IPv6 addresses assigned in your deployment.
 

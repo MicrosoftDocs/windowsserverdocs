@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Purge Utilization Data
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to delete utilization data from the IPAM database.
 

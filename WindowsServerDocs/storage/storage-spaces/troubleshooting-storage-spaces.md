@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Troubleshoot Storage Spaces Direct
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Use the following information to troubleshoot your Storage Spaces Direct deployment.
 

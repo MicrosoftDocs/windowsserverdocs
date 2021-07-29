@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # Windows Desktop client for admins
 
->Applies to: Windows 10 and Windows 7
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10 and Windows 7
 
 This topic has additional information about the Windows Desktop client that admins will find useful. For basic usage information, see [Get started with the Windows Desktop client](windowsdesktop.md).
 

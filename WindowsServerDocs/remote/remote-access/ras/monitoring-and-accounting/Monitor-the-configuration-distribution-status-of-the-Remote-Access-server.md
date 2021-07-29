@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Monitor the configuration distribution status of the Remote Access server
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 **Note:** Windows Server 2012 combines DirectAccess and Remote Access Service (RAS) into a single Remote Access role.
 

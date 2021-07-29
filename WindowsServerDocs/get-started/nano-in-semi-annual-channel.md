@@ -12,7 +12,7 @@ ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544
 ---
 # Changes to Nano Server in Windows Server Semi-Annual Channel
 
->Applies To: Windows Server, Semi-Annual Channel
+>Applies to: Windows Server, Semi-Annual Channel
 
 If you're already running Nano Server, the [Window Server Semi-Annual Channel](../get-started-19/servicing-channels-19.md) servicing model will be familiar, since it was formerly serviced by the Current Branch for Business (CBB) model. Windows Server Semi-Annual Channel is just a new name for the same model. In this model, feature update releases of Nano Server are expected two to three times per year.
 
