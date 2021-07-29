@@ -43,14 +43,14 @@ conceptualContent:
   items:
     - title: Message center
       links:
+        - text: "The Intrazone: new podcast on Windows planning & deployment"
+          url: https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/windows-microsoft-365-from-chip-to-cloud-the-intrazone-podcast/ba-p/2467141
+          itemType: whats-new
         - text: "Refresh your knowledge on monthly updates and learn how to improve patching efficiency"
           url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/achieving-world-class-windows-monthly-patching-efficiency/ba-p/2572945
           itemType: whats-new
         - text: "Evolving the Microsoft Store for Business and Education"
           url: https://aka.ms/Windows/MSFB_Evolution
-          itemType: whats-new
-        - text: "Announcing Update Health Tools"
-          url: https://techcommunity.microsoft.com/t5/windows-it-pro-blog/announcing-update-health-tools/ba-p/2566232
           itemType: whats-new
 
       footerLink:
