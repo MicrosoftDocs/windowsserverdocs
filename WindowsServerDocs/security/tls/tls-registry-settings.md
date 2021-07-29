@@ -314,7 +314,9 @@ and "DisabledByDefault" with a non-zero value under the corresponding version-sp
 In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled** state, create a DWORD registry value named "Enabled", with a value of zero,
 under the corresponding version-specific subkey. The following example shows TLS 1.0 server set to the **Disabled** state:
 
-![TLS 1.0 server disabled](images/tls-10-server-disabled.png)
+The following example shows DTLS 1.2 disabled in the registry:
+
+![DTLS 1.2 disabled](https://user-images.githubusercontent.com/3296790/87178706-3598af00-c2fb-11ea-84a9-db3f7d0313c8.png)
 
 Switching a (D)TLS or SSL protocol version to **Disabled by default** or **Disabled** state may cause 
 [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls to fail due to the lack of protocol versions 
