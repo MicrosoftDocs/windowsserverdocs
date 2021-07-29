@@ -85,7 +85,7 @@ enabled, this policy can be configured with the following settings:
 - **Require DoH**. Will require that queries are performed using DoH. If
     configured DNS servers don't support DoH, name resolution will fail.
 
-![screenshot of dns configuration](../media/doh-client-support/dns-configuration.png)
+    ![screenshot of dns configuration](../media/doh-client-support/dns-configuration.png)
 
 Don't enable the Require DoH option for domain joined computers as
 Active Directory Domain Services is heavily reliant on DNS because the Windows
