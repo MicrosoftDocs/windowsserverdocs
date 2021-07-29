@@ -13,12 +13,14 @@ ms.localizationpriority: medium
 
 >Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
-Cluster Shared Volumes (CSV) enable multiple nodes in a failover cluster to simultaneously have read-write access to the same LUN (disk) that is provisioned as an NTFS volume. (In Windows Server 2012 R2, the disk can be provisioned as NTFS or Resilient File System (ReFS).) With CSV, clustered roles can fail over quickly from one node to another node without requiring a change in drive ownership, or dismounting and remounting a volume. CSV also help simplify the management of a potentially large number of LUNs in a failover cluster.
+Cluster Shared Volumes (CSV) enable multiple nodes in a Windows Server failover cluster or Azure Stack HCI to simultaneously have read-write access to the same LUN (disk) that is provisioned as an NTFS volume. The disk can be provisioned as Resilient File System (ReFS); however, the CSV drive will be in redirected mode meaning write access will be sent to the coordinator node. For more information, see [About I/O synchronization and I/O redirection in CSV communication](#about-io-synchronization-and-io-redirection-in-csv-communication) later in this document. With CSV, clustered roles can fail over quickly from one node to another node without requiring a change in drive ownership, or dismounting and remounting a volume. CSV also help simplify the management of a potentially large number of LUNs in a failover cluster.
 
-CSV provide a general-purpose, clustered file system, which is layered above NTFS (or ReFS in Windows Server 2012 R2). CSV applications include:
+CSV provides a general-purpose, clustered file system which is layered above NTFS or ReFS. CSV applications include:
 
-- Clustered virtual hard disk (VHD) files for clustered Hyper-V virtual machines
-- Scale-out file shares to store application data for the Scale-Out File Server clustered role. Examples of the application data for this role include Hyper-V virtual machine files and Microsoft SQL Server data. (Be aware that ReFS is not supported for a Scale-Out File Server.) For more information about Scale-Out File Server, see [Scale-Out File Server for Application Data](sofs-overview.md).
+- Clustered virtual hard disk (VHD/VHDX) files for clustered Hyper-V virtual machines
+- Scale-out file shares to store application data for the Scale-Out File Server clustered role. Examples of the application data for this role include Hyper-V virtual machine files and Microsoft SQL Server data. Be aware that ReFS is not supported for a Scale-Out File Server in Windows Server 2012 R2 and below. For more information about Scale-Out File Server, see [Scale-Out File Server for Application Data](sofs-overview.md).
+- Microsoft SQL Server 2014 (or higher) Failover Cluster Instance (FCI). Microsoft SQL Server clustered workload in SQL Server 2012 and earlier versions of SQL Server do not support the use of CSV.
+- Windows Server 2019 or higher Microsoft Distributed Transaction Control (MSDTC)
 
 > [!NOTE]
 > CSVs don't support the Microsoft SQL Server clustered workload in SQL Server 2012 and earlier versions of SQL Server.
@@ -46,12 +48,12 @@ Consider the following when you configure the networks that support CSV.
   - **Client for Microsoft Networks** and **File and Printer Sharing for Microsoft Networks**. These settings support Server Message Block (SMB) 3.0, which is used by default to carry CSV traffic between nodes. To enable SMB, also ensure that the Server service and the Workstation service are running and that they are configured to start automatically on each cluster node.
 
     > [!NOTE]
-    > In Windows Server 2012 R2, there are multiple Server service instances per failover cluster node. There is the default instance that handles incoming traffic from SMB clients that access regular file shares, and a second CSV instance that handles only inter-node CSV traffic. Also, if the Server service on a node becomes unhealthy, CSV ownership automatically transitions to another node.
+    > In Windows Server 2012 R2 and later, there are multiple Server service instances per failover cluster node. There is the default instance that handles incoming traffic from SMB clients that access regular file shares, and a second CSV instance that handles only inter-node CSV traffic. Also, if the Server service on a node becomes unhealthy, CSV ownership automatically transitions to another node.
 
     SMB 3.0 includes the SMB Multichannel and SMB Direct features, which enable CSV traffic to stream across multiple networks in the cluster and to leverage network adapters that support Remote Direct Memory Access (RDMA). By default, SMB Multichannel is used for CSV traffic. For more information, see [Server Message Block overview](../storage/file-server/file-server-smb-overview.md).
-  - **Microsoft Failover Cluster Virtual Adapter Performance Filter**. This setting improves the ability of nodes to perform I/O redirection when it is required to reach CSV, for example, when a connectivity failure prevents a node from connecting directly to the CSV disk. For more information, see [About I/O synchronization and I/O redirection in CSV communication](#about-io-synchronization-and-io-redirection-in-csv-communication) later in this topic.
+  - **Microsoft Failover Cluster Virtual Adapter Performance Filter**. This setting improves the ability of nodes to perform I/O redirection when it is required to reach CSV, for example, when a connectivity failure prevents a node from connecting directly to the CSV disk. The NetFT Virtual Adapter Performance Filter is disabled by default in all versions except Windows Server 2012 R2.  The filter is disabled because it can cause issues with Hyper-V clusters which have a Guest Cluster running in VMs running on top of them.  Issues have been seen where the NetFT Virtual Adapter Performance Filter in the host incorrectly routes NetFT traffic bound for a guest VM to the host.  This can result in communication issues with the guest cluster in the VM. If you are deploying any workload **other** than Hyper-V with guest clusters, enabling the NetFT Virtual Adapter Performance Filter will optimize and improve cluster performance. For more information, see [About I/O synchronization and I/O redirection in CSV communication](#about-io-synchronization-and-io-redirection-in-csv-communication) later in this topic.
 - **Cluster network prioritization**. We generally recommend that you do not change the cluster-configured preferences for the networks.
-- **IP subnet configuration**. No specific subnet configuration is required for nodes in a network that use CSV. CSV can support multi-subnet clusters.
+- **IP subnet configuration**. No specific subnet configuration is required for nodes in a network that use CSV. CSV can support multi-subnet stretch clusters.
 - **Policy-based Quality of Service (QoS)**. We recommend that you configure a QoS priority policy and a minimum bandwidth policy for network traffic to each node when you use CSV. For more information, see [Quality of Service (QoS)](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831679(v%3dws.11)>).
 - **Storage network**. For storage network recommendations, review the guidelines that are provided by your storage vendor. For additional considerations about storage for CSV, see [Storage and disk configuration requirements](#storage-and-disk-configuration-requirements) later in this topic.
 
@@ -62,7 +64,7 @@ For an overview of the hardware, network, and storage requirements for failover 
 - **I/O synchronization**: CSV enables multiple nodes to have simultaneous read-write access to the same shared storage. When a node performs disk input/output (I/O) on a CSV volume, the node communicates directly with the storage, for example, through a storage area network (SAN). However, at any time, a single node (called the coordinator node) "owns" the physical disk resource that is associated with the LUN. The coordinator node for a CSV volume is displayed in Failover Cluster Manager as **Owner Node** under **Disks**. It also appears in the output of the [Get-ClusterSharedVolume](/powershell/module/failoverclusters/get-clustersharedvolume) Windows PowerShell cmdlet.
 
   > [!NOTE]
-  > In Windows Server 2012 R2, CSV ownership is evenly distributed across the failover cluster nodes based on the number of CSV volumes that each node owns. Additionally, ownership is automatically rebalanced when there are conditions such as CSV failover, a node rejoins the cluster, you add a new node to the cluster, you restart a cluster node, or you start the failover cluster after it has been shut down.
+  > Starting in Windows Server 2012 R2, CSV ownership is evenly distributed across the failover cluster nodes based on the number of CSV volumes that each node owns. Additionally, ownership is automatically rebalanced when there are conditions such as CSV failover, a node rejoins the cluster, you add a new node to the cluster, you restart a cluster node, or you start the failover cluster after it has been shut down.
 
   When certain small changes occur in the file system on a CSV volume, this metadata must be synchronized on each of the physical nodes that access the LUN, not only on the single coordinator node. For example, when a virtual machine on a CSV volume is started, created, or deleted, or when a virtual machine is migrated, this information needs to be synchronized on each of the physical nodes that access the virtual machine. These metadata update operations occur in parallel across the cluster networks by using SMB 3.0. These operations do not require all the physical nodes to communicate with the shared storage.
 
@@ -73,7 +75,7 @@ The server uses one of the following I/O redirection modes, depending on the sit
 - **File system redirection** Redirection is per volume—for example, when CSV snapshots are taken by a backup application when a CSV volume is manually placed in redirected I/O mode.
 - **Block redirection** Redirection is at the file-block level—for example, when storage connectivity is lost to a volume. Block redirection is significantly faster than file system redirection.
 
-In Windows Server 2012 R2, you can view the state of a CSV volume on a per node basis. For example, you can see whether I/O is direct or redirected, or whether the CSV volume is unavailable. If a CSV volume is in I/O redirected mode, you can also view the reason. Use the Windows PowerShell cmdlet **Get-ClusterSharedVolumeState** to view this information.
+In Windows Server 2012 R2 and higher, you can view the state of a CSV volume on a per node basis. For example, you can see whether I/O is direct or redirected, or whether the CSV volume is unavailable. If a CSV volume is in I/O redirected mode, you can also view the reason. Use the Windows PowerShell cmdlet [Get-ClusterSharedVolumeState](powershell/module/failoverclusters/get-clustersharedvolumestate) to view this information.
 
 > [!IMPORTANT]
 > * Please note that CSVs pre-formatted with **ReFS used on top of SANs will NOT use Direct I/O**, regardless of all other requirements for Direct I/O being met.
@@ -84,7 +86,7 @@ In Windows Server 2012 R2, you can view the state of a CSV volume on a per node 
 > * You should plan your cluster networks to allow for the potential increase in network traffic to the coordinator node during I/O redirection.
 
 > [!NOTE]
-> * In Windows Server 2012, because of improvements in CSV design, CSV perform more operations in direct I/O mode than occurred in Windows Server 2008 R2.
+> * In Windows Server 2012, because of improvements in CSV design, CSV performs more operations in direct I/O mode than occurred in Windows Server 2008 R2.
 > * Because of the integration of CSV with SMB 3.0 features such as SMB Multichannel and SMB Direct, redirected I/O traffic can stream across multiple cluster networks.
 > * You should plan your cluster networks to allow for the potential increase in network traffic to the coordinator node during I/O redirection.
 
@@ -92,18 +94,17 @@ In Windows Server 2012 R2, you can view the state of a CSV volume on a per node 
 
 To use CSV, your storage and disks must meet the following requirements:
 
-- **File system format**. In Windows Server 2012 R2, a disk or storage space for a CSV volume must be a basic disk that is partitioned with NTFS or ReFS. In Windows Server 2012, a disk or storage space for a CSV volume must be a basic disk that is partitioned with NTFS.
+- **File system format**. In Windows Server 2012, a disk or storage space for a CSV volume must be a basic disk that is partitioned with NTFS. In Windows Server 2012 R2, a disk or storage space for a CSV volume must be a basic disk that is partitioned with NTFS or ReFS. In Windows Server 2016 or higher and Azure Stack HCI, a disk or storage space for a CSV volume must be either a basic disk or GUID Partition Table (GPT) disk that is partitioned with NTFS or ReFS.
 
   A CSV has the following additional requirements:
 
-  - In Windows Server 2012 R2, you cannot use a disk for a CSV that is formatted with FAT or FAT32.
   - In Windows Server 2012, you cannot use a disk for a CSV that is formatted with FAT, FAT32, or ReFS.
-  - If you want to use a storage space for a CSV, you can configure a simple space or a mirror space. In Windows Server 2012 R2, you can also configure a parity space. (In Windows Server 2012, CSV does not support parity spaces.)
+  - In Windows Server 2012 R2 and higher, you cannot use a disk for a CSV that is formatted with FAT or FAT32.
   - A CSV cannot be used as a quorum witness disk. For more information about the cluster quorum, see [Understanding Quorum in Storage Spaces Direct](../storage/storage-spaces/understand-quorum.md).
   - After you add a disk as a CSV, it is designated in the CSVFS format (for CSV File System). This allows the cluster and other software to differentiate the CSV storage from other NTFS or ReFS storage. Generally, CSVFS supports the same functionality as NTFS or ReFS. However, certain features are not supported. For example, in Windows Server 2012 R2, you cannot enable compression on CSV. In Windows Server 2012, you cannot enable data deduplication or compression on CSV.
 - **Resource type in the cluster**. For a CSV volume, you must use the Physical Disk resource type. By default, a disk or storage space that is added to cluster storage is automatically configured in this way.
-- **Choice of CSV disks or other disks in cluster storage**. When choosing one or more disks for a clustered virtual machine, consider how each disk will be used. If a disk will be used to store files that are created by Hyper-V, such as VHD files or configuration files, you can choose from the CSV disks or the other available disks in cluster storage. If a disk will be a physical disk that is directly attached to the virtual machine (also called a pass-through disk), you cannot choose a CSV disk, and you must choose from the other available disks in cluster storage.
-- **Path name for identifying disks**. Disks in CSV are identified with a path name. Each path appears to be on the system drive of the node as a numbered volume under the **\\ClusterStorage** folder. This path is the same when viewed from any node in the cluster. You can rename the volumes if needed.
+- **Choice of CSV disks or other disks in cluster storage**. When choosing one or more disks for a clustered virtual machine, consider how each disk will be used. If a disk will be used to store files that are created by Hyper-V, such as VHD/VHDX files or configuration files, you can choose from the CSV disks or the other available disks in cluster storage. If a disk will be a physical disk that is directly attached to the virtual machine (also called a pass-through disk), you cannot choose a CSV disk, and you must choose from the other available disks in cluster storage.
+- **Path name for identifying disks**. Disks in CSV are identified with a path name. Each path appears to be on the system drive of the node as a numbered volume under the **\\ClusterStorage** folder. This path is the same when viewed from any node in the cluster. You can rename the volumes if needed but is recommended done before any virtual machine (if Hyper-V) or application such as SQL Server is installed.  CSV cannot be renamed if there are any open handles (i.e. a virtual machine that is turned on or in a saved state).
 
 For storage requirements for CSV, review the guidelines that are provided by your storage vendor. For additional storage planning considerations for CSV, see [Plan to use CSV in a failover cluster](#plan-to-use-csv-in-a-failover-cluster) later in this topic.
 
@@ -112,11 +113,11 @@ For storage requirements for CSV, review the guidelines that are provided by you
 To use CSV, your nodes must meet the following requirements:
 
 - **Drive letter of system disk**. On all nodes, the drive letter for the system disk must be the same.
-- **Authentication protocol**. The NTLM protocol must be enabled on all nodes. This is enabled by default.
+- **Authentication protocol**. The NTLM protocol must be enabled on all nodes. This is enabled by default. Starting in Windows Server 2019 and Azure Stack HCI, NTLM dependencies have been removed as it uses certificates for authentication.
 
 ## Plan to use CSV in a failover cluster
 
-This section lists planning considerations and recommendations for using CSV in a failover cluster running Windows Server 2012 R2 or Windows Server 2012.
+This section lists planning considerations and recommendations for using CSV in a failover cluster.
 
 > [!IMPORTANT]
 > Ask your storage vendor for recommendations about how to configure your specific storage unit for CSV. If the recommendations from the storage vendor differ from information in this topic, use the recommendations from the storage vendor.
@@ -142,6 +143,7 @@ If you add another virtual machine, where possible, you should keep the same arr
 When you plan the storage configuration for a failover cluster that uses CSV, consider the following recommendations:
 
 - To decide how many LUNs to configure, consult your storage vendor. For example, your storage vendor may recommend that you configure each LUN with one partition and place one CSV volume on it.
+- Create at least one CSV per node. 
 - There are no limitations for the number of virtual machines that can be supported on a single CSV volume. However, you should consider the number of virtual machines that you plan to have in the cluster and the workload (I/O operations per second) for each virtual machine. Consider the following examples:
 
   - One organization is deploying virtual machines that will support a virtual desktop infrastructure (VDI), which is a relatively light workload. The cluster uses high-performance storage. The cluster administrator, after consulting with the storage vendor, decides to place a relatively large number of virtual machines per CSV volume.
@@ -248,7 +250,7 @@ You should consider the following factors when you select a backup application a
 - Volume-level backup of a CSV volume can be run from any node that connects to the CSV volume.
 - Your backup application can use software snapshots or hardware snapshots. Depending on the ability of your backup application to support them, backups can use application-consistent and crash-consistent Volume Shadow Copy Service (VSS) snapshots.
 - If you are backing up CSV that have multiple running virtual machines, you should generally choose a management operating system-based backup method. If your backup application supports it, multiple virtual machines can be backed up simultaneously.
-- CSV support backup requestors running Windows Server 2012 R2 Backup, Windows Server 2012 Backup or Windows Server 2008 R2 Backup. However, Windows Server Backup generally provides only a basic backup solution that may not be suited for organizations with larger clusters. Windows Server Backup does not support application-consistent virtual machine backup on CSV. It supports crash-consistent volume-level backup only. (If you restore a crash-consistent backup, the virtual machine will be in the same state it was if the virtual machine had crashed at the exact moment that the backup was taken.) A backup of a virtual machine on a CSV volume will succeed, but an error event will be logged indicating that this is not supported.
+- CSV support backup requestors running Windows Server Backup. However, Windows Server Backup generally provides only a basic backup solution that may not be suited for organizations with larger clusters. Windows Server Backup does not support application-consistent virtual machine backup on CSV. It supports crash-consistent volume-level backup only. (If you restore a crash-consistent backup, the virtual machine will be in the same state it was if the virtual machine had crashed at the exact moment that the backup was taken.) A backup of a virtual machine on a CSV volume will succeed, but an error event will be logged indicating that this is not supported.
 - You may require administrative credentials when backing up a failover cluster.
 
 > [!IMPORTANT]
