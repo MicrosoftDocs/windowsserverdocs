@@ -208,7 +208,7 @@ Detect:
 Get-Item HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEach-Object {Get-ItemProperty $_.pspath}
 ```
 
-Default configuration = Enabled (No registry key is created), so no SMB1 value will be returned
+Default configuration = Enabled (No registry named value is created), so no SMB1 value will be returned
 
 Disable:
 
