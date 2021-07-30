@@ -98,9 +98,9 @@ SMB 3.1.1 is capable of detecting interception attacks that attempt to downgrade
 
 ## New signing algorithm
 
-SMB 3.0 and 3.02 use a more recent encryption algorithm for signing: Advanced Encryption Standard (AES)-cipher-based message authentication code (CMAC). SMB 2.0 used the older HMAC-SHA256 encryption algorithm. AES-CMAC and AES-CCM can significantly accelerate data encryption on most modern CPUs that have AES instruction support. For more information, see [Configure SMB Signing with Confidence](https://aka.ms/smbsigning).
+SMB 3.0 and 3.02 use a more recent encryption algorithm for signing: Advanced Encryption Standard (AES)-cipher-based message authentication code (CMAC). SMB 2.0 used the older HMAC-SHA256 encryption algorithm. AES-CMAC and AES-CCM can significantly accelerate data encryption on most modern CPUs that have AES instruction support. 
 
-Windows Server 2022 and Windows 11 introduce AES-256-GMAC and AES-256-CMAC for signing for SMB 3.1.1 signing. Windows will automatically negotiate this more advanced cipher method when connecting to another computer that supports it, and can also be mandated through Group Policy. Windows still supports AES-128-GCM and AES-128-CCM. By default, AES-128-GCM is negotiated with SMB 3.1.1, bringing the best balance of security and performance.
+Windows Server 2022 and Windows 11 introduce AES-128-GMAC for signing for SMB 3.1.1 signing. Windows will automatically negotiate this better-performing cipher method when connecting to another computer that supports it. Windows still supports AES-128-CMAC. For more information, see [Configure SMB Signing with Confidence](https://aka.ms/smbsigning).
 
 ## Disabling SMB 1.0
 
