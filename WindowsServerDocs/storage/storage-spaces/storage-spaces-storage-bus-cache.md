@@ -73,7 +73,7 @@ Enabled                        : False
 This field determines if the entire faster media tier or only a portion of it will be used for caching. This field cannot be modified after enabling the storage bus cache.
 
 - Shared (default): The cache will only take up a portion of the faster media tier. The exact percentage is configurable by the Shared Cache Percentage field below.
-- Cache: Dedicate majority of the faster media tier to caching as opposed to only a portion. The implementation is similar to the [SBL cache in Storage Spaces Direct](understand-the-cache.md).
+- Cache: Dedicate majority of the faster media tier to caching as opposed to only a portion. The implementation is similar to the [storage bus cache in Storage Spaces Direct](understand-the-cache.md).
 
 ### Shared cache percentage
 
