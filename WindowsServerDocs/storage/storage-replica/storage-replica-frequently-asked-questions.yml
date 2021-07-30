@@ -270,7 +270,7 @@ sections:
       - question: |
           Can you place cluster disks in maintenance mode?
         answer: |
-          Storage Replica will block any cluster disks from entering maintenance mode.  For tasks such as enabling or disabling Bitlocker, the disks must be in maintenance mode.  In order to accomplish these type tasks, the partnership would need to be broken first and created again once it is complete.
+          Storage Replica will block any cluster disks from entering maintenance mode.  For tasks such as enabling or disabling Bitlocker, the disks must be in maintenance mode.  To perform tasks that require the disks to be in maintenance mode, the partnership would need to be broken first and created again once it is complete.
 
       - question: |
           Related topics
