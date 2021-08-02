@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/02/2021
+ms.date: 08/03/2021
 ms.localizationpriority: medium
 ---
 # Windows Desktop client for admins
@@ -50,10 +50,10 @@ The update behavior of the client depends on two factors:
 The Windows Desktop client offers three ways to update:
 
 - Notification-based updates, where a the client shows the user a notification in the client UI or a pop-up message in the taskbar. The user can choose to update the client by selecting the notification.
-- Silent on-close updates, where the client automatically updates after the user has closed the UI or the Microsoft Remote Desktop Connection Center.
+- Silent on-close updates, where the client automatically updates after the user has closed the UI of the Microsoft Remote Desktop Connection Center.
 - Silent background updates, where a background process checks for updates a few times a day and will update the client if a new update is available.
 
-To avoid interrupting your work, silent updates won't happen while you have the client open, have a remote connection active, or if you've disabled the feature. If the client is running while a silent background update occurs, the client will show a notification to let you know it's updating.
+To avoid interrupting your work, silent updates won't happen while you have the client open, have a remote connection active, or if you've disabled the feature. If the client is running while a silent background update occurs, the client will show a notification to let you know an update is available.
 
 You can set your update policy to one of the following values:
 
