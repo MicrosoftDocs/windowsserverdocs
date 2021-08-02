@@ -63,9 +63,6 @@ You can set your update policy to one of the following values:
 | 1 | Notification-based updates. | Notification-based updates. |
 | 2 (default) | Notification-based updates when the app is running. Otherwise, silent on-close and background updates. | Notification-based updates. No support for silent update mechanisms, as users may not have administrator access rights on the client device.  |
 
->[!NOTE]
->The client doesn't automatically update for per-machine installations.
-
 ### Configure user groups
 
 You can configure the client for one of the following types of user groups, which determines when the client receives updates.
