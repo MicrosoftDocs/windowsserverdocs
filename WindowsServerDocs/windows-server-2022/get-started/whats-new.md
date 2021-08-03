@@ -55,7 +55,7 @@ Secure connections are at the heart of today’s interconnected systems. Transpo
 
 #### Secure DNS: Encrypted DNS name resolution requests with DNS-over-HTTPS
 
-DNS Client in Windows Server 2022 now supports DNS-over-HTTPS (DoH) which encrypts DNS queries using the HTTPS protocol. This helps keep your traffic as private as possible by preventing eavesdropping and your DNS data being manipulated.
+DNS Client in Windows Server 2022 now supports DNS-over-HTTPS (DoH) which encrypts DNS queries using the HTTPS protocol. This helps keep your traffic as private as possible by preventing eavesdropping and your DNS data being manipulated. Learn more about [configuring the DNS client to use DoH](../../networking/dns/doh-client-support.md).
 
 #### Server Message Block (SMB): SMB AES-256 encryption for the most security conscious
 
@@ -126,7 +126,7 @@ Enhancements to Storage Migration Service in Windows Server 2022 makes it easier
 
 #### Storage bus cache with Storage Spaces on standalone servers
 
-Storage bus cache is now available for standalone servers. It can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. Similar to its implementation for Storage Spaces Direct, this feature binds together faster media (for example, NVMe or SSD) with slower media (for example, HDD) to create tiers. A portion of the faster media tier is reserved for the cache.
+Storage bus cache is now available for standalone servers. It can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. Similar to its implementation for Storage Spaces Direct, this feature binds together faster media (for example, NVMe or SSD) with slower media (for example, HDD) to create tiers. A portion of the faster media tier is reserved for the cache. To learn more, see [Enable storage bus cache with Storage Spaces on standalone servers](../../storage/storage-spaces/storage-spaces-storage-bus-cache.md).
 
 #### SMB compression
 

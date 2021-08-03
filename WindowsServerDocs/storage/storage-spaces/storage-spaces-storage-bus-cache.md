@@ -9,12 +9,11 @@ ms.date: 05/25/2021
 ms.custom: template-tutorial #Required; leave this attribute/value as-is.
 ---
 
-
 # Tutorial: Enable storage bus cache with Storage Spaces on standalone servers
 
 >Applies to: Windows Server 2022
 
-The storage bus cache for standalone servers can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. Similar to its implementation for Storage Spaces Direct, this feature binds together faster media (for example, SSD) with slower media (for example, HDD) to create tiers. By default, only a portion of the faster media tier is reserved for the cache.
+The storage bus cache for standalone servers can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. Similar to its [implementation for Storage Spaces Direct](understand-the-cache.md), this feature binds together faster media (for example, SSD) with slower media (for example, HDD) to create tiers. By default, only a portion of the faster media tier is reserved for the cache.
 
 |Resiliency  |Cache type  |
 |---------|---------|
@@ -37,7 +36,7 @@ In this tutorial, you learn about:
 ### ![Green checkmark icon.](media/storage-bus-cache/supported.png) Consider storage bus cache if:
 
 - Your server runs Windows Server 2022; and
-- Your server has 2 media/ drive types, one of which must be HDD (for example: SSD+HDD or NVMe+HDD); and 
+- Your server has 2 media/ drive types, one of which must be HDD (for example: SSD+HDD or NVMe+HDD); and
 - Your server has the Failover Clustering feature installed
 
 ### ![Red X icon.](media/storage-bus-cache/unsupported.png) You can't use storage bus cache if:
@@ -74,7 +73,7 @@ Enabled                        : False
 This field determines if the entire faster media tier or only a portion of it will be used for caching. This field cannot be modified after enabling the storage bus cache.
 
 - Shared (default): The cache will only take up a portion of the faster media tier. The exact percentage is configurable by the Shared Cache Percentage field below.
-- Cache: Dedicate majority of the faster media tier to caching as opposed to only a portion. The implementation is similar to the SBL cache in Storage Spaces Direct.
+- Cache: Dedicate majority of the faster media tier to caching as opposed to only a portion. The implementation is similar to the [storage bus cache in Storage Spaces Direct](understand-the-cache.md).
 
 ### Shared cache percentage
 

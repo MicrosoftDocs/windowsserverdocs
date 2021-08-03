@@ -161,7 +161,7 @@ for more information about analyzing performance counter data that you view in S
 
 -   [Solving performance problems](/previous-versions/windows/it-pro/windows-server-2003/cc757672(v=ws.10))
 
-for more information about advanced performance monitoring and analysis tools that are available for  Windows Server 2012  and later releases of Windows Server, including Server Performance Advisor 3.0, see [Performance](/previous-versions/windows/hardware/design/dn614608(v=vs.85)) on MSDN.
+for more information about advanced performance monitoring and analysis tools that are available for Windows Server 2012 and later releases of Windows Server, see [Performance](/previous-versions/windows/hardware/design/dn614608(v=vs.85)) on MSDN.
 
 ## <a name=BKMK_services></a>Manage services and configure service alerts
 In this section, learn how to start, stop, restart, pause, or resume services that are displayed in the **Services** tile on role and server group pages in Server Manager. You can also configure the services about which you are alerted in thumbnails on the Server Manager dashboard.
