@@ -16,18 +16,18 @@ manager: femila
 
 You can use the Server Configuration tool *Sconfig.cmd* to configure and manage Server Core and Server with Desktop Experience installations of Windows Server. The tool to configures and manages common aspects of Server Core installations including:
 
-•	networking configuration 
-•	domain membership
-•	installation of updates
-•	operating system activation
+-	networking configuration 
+-	domain membership
+-	installation of updates
+-	operating system activation
 
 There are some things to keep in mind about *Sconfig.cmd*:
 
-•	On Server Core deployments of Windows Server 2022, it runs automatically after logon unless disabled.
-•	A PowerShell window with *Sconfig.cmd* running will restart automatically if you accidentally close the existing PowerShell window. 
-•	You must be a member of the local Administrators group to use it. 
-•	You can’t use it through a remote PowerShell session. 
-•	You can use it when:
+-	On Server Core deployments of Windows Server 2022, it runs automatically after logon unless disabled.
+-	A PowerShell window with *Sconfig.cmd* running will restart automatically if you accidentally close the existing PowerShell window. 
+-	You must be a member of the local Administrators group to use it. 
+-	You can’t use it through a remote PowerShell session. 
+-	You can use it when:
     o	You have signed on directly 
     o	Have established a Remote Desktop Connection session 
     o	Have an SSH connection after installing and configuring the SSH Server role on the Windows Server 2022 instance 
