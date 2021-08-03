@@ -24,9 +24,8 @@ If command extensions are enabled and running on the Windows platform, inserting
 break=[on|off]
 ```
 
-## Notes
-
-As break has no effects it is often used to create empty files or clean the content of an existing file
+> [!NOTE]
+> Because the break command has no effect it is often used to create empty files or delete the content of an existing file as in the following example:
 
 ```
 rem -- cleans the content of the file --
