@@ -28,9 +28,9 @@ There are some things to keep in mind about *Sconfig.cmd*:
 -	You must be a member of the local Administrators group to use it. 
 -	You can’t use it through a remote PowerShell session. 
 -	You can use it when:
-    o	You have signed on directly 
-    o	Have established a Remote Desktop Connection session 
-    o	Have an SSH connection after installing and configuring the SSH Server role on the Windows Server 2022 instance 
+    - You have signed on directly 
+    - Have established a Remote Desktop Connection session 
+    - Have an SSH connection after installing and configuring the SSH Server role on the Windows Server 2022 instance 
 
 ## Start the Server Configuration Tool
 
@@ -45,7 +45,7 @@ There are some things to keep in mind about *Sconfig.cmd*:
 
 The current Domain/Workgroup settings are displayed on the default Server Configuration tool screen. You can join a domain or a workgroup by accessing the **Domain/Workgroup** settings page from the main menu and following the instructions, supplying any required information. 
 
-> [NOTE]
+> [!NOTE] 
 > You’ll only be able to join a domain if the computer is able to resolve the DNS address of a domain controller in the target domain's Active Directory Domain Services forest and you have the credentials of an account that has permission to perform a domain join operation. You have the option of changing the computer's name as a part of the domain join operation.
 
 To join a standalone server core instance to a domain with *Sconfig.cmd*, perform the following steps:
