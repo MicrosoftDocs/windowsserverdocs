@@ -29,7 +29,7 @@ Some solutions, like Azure Update Management, also depend on Azure Automation, w
 From within Windows Admin Center, you can enable two monitoring solutions:
 
 - [Azure Update Management](azure-update-management.md) (in the Updates tool)
-- Azure Monitor for VMs (in server Settings), a.k.a Virtual Machines insights
+- Azure Monitor for VMs (in server Settings), also known as Virtual Machines insights
 
 You can get started using Azure Monitor from either of these tools. If you've never used Azure Monitor before, Windows Admin Center will automatically provision a Log Analytics workspace (and Azure Automation account, if needed), and install and configure the Microsoft Monitoring Agent (MMA) on the target server. It will then install the corresponding solution into the workspace.
 
@@ -41,9 +41,9 @@ For instance, if you first go to the Updates tool to setup Azure Update Manageme
 
 If you want to add another monitoring solution from within Windows Admin Center on the same server, Windows Admin Center will simply install that solution into the existing workspace to which that server is connected. WAC will additionally install any other necessary agents.
 
-If you connect to a different server, but have already setup a Log Analytics workspace (either through Windows Admin Center or manually in the Azure Portal), you can also install the MMA agent on the server and connect it up to an existing workspace. When you connect a server into a workspace, it automatically starts collecting data and reporting to solutions installed in that workspace.
+If you connect to a different server, but have already setup a Log Analytics workspace (either through Windows Admin Center or manually in the Azure portal), you can also install the MMA agent on the server and connect it up to an existing workspace. When you connect a server into a workspace, it automatically starts collecting data and reporting to solutions installed in that workspace.
 
-## Azure Monitor for virtual machines (a.k.a. Virtual Machine insights)
+## Azure Monitor for virtual machines (also known as Virtual Machine insights)
 
 When you set up Azure Monitor for VMs in server Settings, Windows Admin Center enables the Azure Monitor for VMs solution, also known as Virtual Machine insights. This solution allows you to monitor server health and events, create email alerts, get a consolidated view of server performance across your environment, and visualize apps, systems, and services connected to a given server.
 
@@ -58,9 +58,9 @@ From the Overview page of a server connection, click the new button "Manage aler
 
 ### **Create email alerts**
 
-Once you've attached your server to Azure Monitor, you can use the intelligent hyperlinks within the Settings > Monitoring and alerts page to navigate to the Azure Portal. Windows Admin Center automatically enables performance counters to be collected, so you can easily [create a new alert](/azure/azure-monitor/platform/alerts-log) by customizing one of many pre-defined queries, or writing your own.
+Once you've attached your server to Azure Monitor, you can use the intelligent hyperlinks within the Settings > Monitoring and alerts page to navigate to the Azure portal. Windows Admin Center automatically enables performance counters to be collected, so you can easily [create a new alert](/azure/azure-monitor/platform/alerts-log) by customizing one of many pre-defined queries, or writing your own.
 
-### **Get a consolidated view across multiple servers **
+### **Get a consolidated view across multiple servers** 
 
 If you onboard multiple servers to a single Log Analytics workspace within Azure Monitor, you can get a consolidated view of all these servers from the [Virtual Machines Insights solution](/azure/azure-monitor/insights/vminsights-overview) within Azure Monitor.  (Note that only the Performance and Maps tabs of Virtual Machines Insights for Azure Monitor will work with on-premises servers – the health tab functions only with Azure VMs.) To view this in the Azure portal, go to Azure Monitor > Virtual Machines (under Insights), and navigate to the "Performance" or "Maps" tabs.
 
