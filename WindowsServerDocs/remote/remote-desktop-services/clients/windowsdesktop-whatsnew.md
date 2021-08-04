@@ -37,7 +37,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 
 Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4OV3W), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4OSuo), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4OV3V)
 
-- Azure Virtual Desktop has been renamed to Azure Virtual Desktop. Learn more about the name change at [our announcement on our blog](https://azure.microsoft.com/blog/azure-virtual-desktop-the-desktop-and-app-virtualization-platform-for-the-hybrid-workplace/).
+- Windows Virtual Desktop has been renamed to Azure Virtual Desktop. Learn more about the name change at [our announcement on our blog](https://azure.microsoft.com/blog/azure-virtual-desktop-the-desktop-and-app-virtualization-platform-for-the-hybrid-workplace/).
 - Fixed an issue where the client would ask for authentication after the user ended their session and closed the window.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Fixed an issue with Logitech C270 cameras where Teams only showed a black screen in the camera settings and while sharing images during calls.
