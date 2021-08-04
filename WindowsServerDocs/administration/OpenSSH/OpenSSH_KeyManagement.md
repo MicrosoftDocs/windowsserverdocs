@@ -158,7 +158,7 @@ The example below copies the public key to the server and configures the ACL (wh
 > This example shows the steps for creating the `administrators_authorized_keys file`. If it is run multiple times, it will overwrite this file each time. To add the public key for multiple administrative users, you need to append this file with each public key.
 
 ```powershell
-# Make sure that the .ssh directory exists in your server's user account home folder
+# Make sure that the global ssh state directory exists
 ssh user1@domain1@contoso.com mkdir C:\ProgramData\ssh\
 
 # Use scp to copy the public key file generated previously on your client to the authorized_keys file on your server
