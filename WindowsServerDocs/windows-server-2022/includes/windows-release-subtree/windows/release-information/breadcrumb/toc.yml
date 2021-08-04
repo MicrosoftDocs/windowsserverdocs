@@ -1,0 +1,12 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+    - name: Windows
+      tocHref: /windows
+      topicHref: /windows/windows-10
+      items:
+        - name: Release health
+          tocHref: /windows/release-health/
+          topicHref: /windows/release-health/index
+     
