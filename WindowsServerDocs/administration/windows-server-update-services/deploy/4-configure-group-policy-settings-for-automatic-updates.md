@@ -380,9 +380,6 @@ This setting enables you to specify a WSUS server on your network that will func
 To use this setting, you must set two server name values: the server from which the client detects and downloads updates, and the server to which updated workstations upload statistics. The values need not be different if both services are configured on the same server.
 
 > [!NOTE]
-> if the Configure Automatic Updates policy setting is disabled, this policy has no effect.
-
-> [!NOTE]
 > This policy is not supported on Windows RT. Enabling this policy will not have any effect on computers running Windows RT.
 
 |Policy setting state|Behavior|

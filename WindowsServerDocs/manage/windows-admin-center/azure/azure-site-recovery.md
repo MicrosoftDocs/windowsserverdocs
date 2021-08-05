@@ -9,7 +9,7 @@ ms.localizationpriority: low
 ---
 # Protect your Hyper-V Virtual Machines with Azure Site Recovery and Windows Admin Center
 
->Applies to: Windows Admin Center Preview, Windows Admin Center
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 [Learn more about Azure integration with Windows Admin Center.](./index.md)
 
