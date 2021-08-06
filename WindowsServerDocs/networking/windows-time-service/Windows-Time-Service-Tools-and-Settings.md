@@ -4,7 +4,7 @@ title: Windows Time service tools and settings
 author: Teresa-Motiv
 description: Describes the settings that are available for Windows Time Service (W32Time) and the tools that you can use to configure those settings
 ms.author: v-tea
-ms.date: 04/28/2021
+ms.date: 08/06/2021
 ms.topic: article
 ms.custom: contperf-fy21q4
 ---
