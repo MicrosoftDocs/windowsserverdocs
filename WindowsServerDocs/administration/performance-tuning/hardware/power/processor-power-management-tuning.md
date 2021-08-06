@@ -22,7 +22,7 @@ If you run a server system that has dramatically different workload characterist
 
 Workloads are selected to cover a best-effort set of "typical" Windows Server workloads. Obviously this set is not intended to be representative of the entire breadth of real-world server environments.
 
-The tuning in each power policy is data driven by the following five workloads:
+The tuning in each power policy is data driven by the following five workloads started from Windows Server 2008
 
 - **IIS Web Server workload**
 
@@ -44,7 +44,26 @@ The tuning in each power policy is data driven by the following five workloads:
 
     The [SAP-SD](http://global.sap.com/campaigns/benchmark/index.epx) benchmark is used to generate an application server workload. A two-tier setup is used, with the database and the application server on the same server host. This workload also utilizes response time as a performance metric, which differs from other tested workloads. Thus it is used to verify the impact of PPM parameters on responsiveness. Nevertheless, it is not intended to be representative of all latency-sensitive production workloads.
 
+
 All of the benchmarks except SPECpower were originally designed for performance analysis and were therefore created to run at peak load levels. However, medium to light load levels are more common for real-world production servers and are more interesting for **Balanced** plan optimizations. We intentionally run the benchmarks at varying load levels from 100% down to 10% (in 10% steps) by using various throttling methods (e.g., by reducing the number of active users/clients).
+
+The above workloads use throughput as the performance metric for tuning. During the steady state, throughput does not change with varying utilizations till the system is totally overloaded (~100% utilization). As a result, the Balanced power plan favors power quite a lot with minimizing processor frequency and maximizing utilization. Starting from Windows Server 2016, the requirement of quick response time has dramatically increased. Even though Microsoft suggested the users to switch to the High Performance power plan when they need quick response time, some users do not want to lose the power benefit during light to medium load levels. Hence, Windows Server PPM tuning also includes response time sensitive workloads for tuning.
+
+- **GeekBench 3**
+
+    [GeekBench 3](http://www.geekbench.com/geekbench3/) is a cross-platform processor benchmark that separates the scores for single-core and multi-core performance. It simulates a set of workloads including integer workloads (encryptions, compressions, image processing, etc.), floating point workloads (modeling, fractal, image sharpening, image blurring, etc.) and memory workloads (streaming).
+
+    **Response time** is a major measure in its score calculation. In our tested system, Windows Server 2008 default Balanced power plan has ~18% regression in single-core tests and ~40% regression in multi-core tests compared to the **High Performance** power plan. Windows Server 2016 removes these regressions.
+
+- **DiskSpd**
+
+    [Diskspd](https://en.wikipedia.org/wiki/Diskspd) is a command-line tool for storage benchmarking developed by Microsoft. It is widely used to generate a variety of requests against storage systems for the storage performance analysis.
+
+    We set up a [Failover Cluster], and used Diskspd to generate random and sequential, and read and write IOs to the local and remote storage systems with different IO sizes. Our tests show that the IO response time is very sensitive to processor frequency under different power plans. The default Windows Server 2008  Balanced power plan could double the response time of that from the **High Performance** power plan under certain workloads. Windows Server 2016 Balance power plan removes most of the regressions.
+
+>[!Important]
+>Starting from Intel [Broadwell] processors running Windows Server 2016, most of the processor power management decisions are made in the processor instead of OS level to achieve quicker adaption to the workload changes. The legacy PPM parameters used by OS have minimal impact on the actual frequency decisions, except telling the processor if it should favor power or performance, or capping the minimal and maximum frequencies. Hence, the PPM tuning results mentioned here are only observed on the pre-Broadwell systems.
+
 
 ### Hardware configurations
 
@@ -66,15 +85,45 @@ Therefore, the PPM tuning analysis also uses throughput as its performance metri
 Running the CPU cores at lower frequencies reduces energy consumption. However, lower frequencies typically decrease throughput and increase response time. For the **Balanced** power plan, there is an intentional tradeoff of responsiveness and power efficiency. The SAP workload tests, as well as the response time SLAs on the other workloads, make sure that the response time increase doesn't exceed certain threshold (5% as an example) for these specific workloads.
 
 > [!NOTE]
-> If the workload uses response time as the performance metric, the system should either switch to the **High Performance** power plan or change **Balanced** power plan as suggested in [Recommended Balanced Power Plan Parameters for Quick Response Time](recommended-balanced-plan-parameters.md).
+> If the workload is very sensitive to response time, the system should either switch to the **High Performance** power plan or change **Balanced** power plan to very aggressively increase frequency when it is running.
 
-### Tuning results
+## Windows Server Blanced Power Plan Default Parameters
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
 
-Starting with Windows Server 2008, Microsoft worked with Intel and AMD to optimize the PPM parameters for the most up-to-date server processors for each Windows release. A tremendous number of PPM parameter combinations were tested on each of the previously-discussed workloads to find the best power efficiency at different load levels. As software algorithms were refined and as hardware power architectures evolved, each new Windows Server always had better or equal power efficiency than its previous versions across the range of tested workloads.
+Starting from Intel Broadwell processors running Windows Server 2016, Windows Server power management uses Intel’s Hardware Controlled P-states (HWP) as default on Intel systems. HWP is a new capability for a cooperative hardware and software performance control. When HWP is enabled, CPU monitors activity and scalability, and selects frequency at hardware time scale. OS is no longer required to monitor activity and select frequency at regular intervals. Switching to HWP has several benefits such as quick response, better knowledge of the hardware power efficiency of processors as well as other compoenents under TDP. 
 
-The following figure gives an example of the power efficiency under different TPC-E load levels on a 4-socket production server running Windows Server 2008 R2. It shows an 8% improvement at medium load levels compared to Windows Server 2008.
+For HWP system, Windows still has the option to set the minimum and maximum processor states to provide constraints. It also can use **Energy performance preference (EPP)** parameter to set balance between power and performance. Lower value favors performance, and higher value favors power. The default value 50 that is to balance power and performance.
 
-![power efficiency comparison](../../media/serverperf-ppm-figure1.jpg)
+| |Windows Server 2012R2 and Before | Windows Server 2016 and After|
+|-|---------------------------------|:-----------------------------|
+| HWP Enabled                   | N/A | Intel Broadwell+ |
+| Energy performance preference | N/A | 50               |
+
+
+For Intel pre-Broadwell systems or any systems that don’t have HWP support (e.g., AMD servers), Windows is still in full control and determines processor frequency based on the PPM parameters. The default PPM parameters in Windows Server 2012R2 favor power too much that could significantly impact the workload performance, especially to bursty workload. Four PPM parameters were changed in Windows Server 2016 RS2 to let the frequency increase faster around medium load level. 
+
+| |Windows Server 2016 (RS1) and Before | Windows Server 2016 (RS2) and After|
+|-|:---------------------------------:|:-----------------------------:|
+| Processor performance increase threshold | 90 | 60 |
+| Processor performance decrease threshold | 80 | 40 |
+| Processor performance increase time      | 3  | 1  |
+| Processor performance increase policy    | Single | Ideal |
+
+
+The CPU utilization-based power management algorithms might hurt the latency of IO or network tensive workloads. A logical processor could be idle while waiting for IO completion or network packets, which makes the overall CPU utilization low. To resolve this issue, Windows Server 2019 automatically detects the IO responsiveness period and raises the frequency floor to a higher level. The behavior can be tuned by the following parameters no matter if the system uses HWP or not. 
+
+| |Before Windows Server 2019 | Windows Server 2019 and After|
+|-|:---------------------------------:|:-----------------------------:|
+| Processor responsiveness override enable threshold  | N/A | 10 |
+| Processor responsiveness override disable threshold | N/A | 5 |
+| Processor responsiveness override enable time       | N/A | 1 |
+| Processor responsiveness override disable time      | N/A | 3 |
+| Processor responsiveness override energy performance preference ceiling | N/A | 100 |
+| Processor responsiveness override performance floor | N/A | 100 |
 
 ## Customized Tuning Suggestions
 
@@ -83,6 +132,11 @@ If your primary workload characteristics differ significantly from the five work
 Due to the number and complexity of parameters, this may be a challenging task, but if you are looking for the best tradeoff between energy consumption and workload efficacy for your particular environment, it may be worth the effort.
 
  The complete set of tunable PPM parameters can be found in [Processor power management tuning](/previous-versions/windows/hardware/design/dn613983(v=vs.85)). Some of the simplest power parameters to start with could be:
+
+For HWP enabled system:
+-   **Energy performance preference** – larger values  favors power more than performance
+
+For Non-HWP system:
 
 -   **Processor Performance Increase Threshold and Processor Performance Increase Time** – larger values slow the perf response to increased activity
 
@@ -120,6 +174,4 @@ This is why Windows provides a **Balanced** power plan in the first place, becau
 ## See Also
 - [Server Hardware Performance Considerations](../index.md)
 - [Server Hardware Power Considerations](../power.md)
-- [Power and Performance Tuning](power-performance-tuning.md)
-- [Processor Power Management Tuning](processor-power-management-tuning.md)
-- [Recommended Balanced Plan Parameters](recommended-balanced-plan-parameters.md)
+- [Overview about power and performance tuning for the Windows Server](power-performance-tuning.md)

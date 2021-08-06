@@ -9,23 +9,22 @@ ms.date: 10/16/2017
 
 # Power and performance tuning
 
-Energy efficiency is increasingly important in enterprise and data center environments, and it adds another set of tradeoffs to the mix of configuration options.
+Energy efficiency is increasingly important in enterprise and data center environments, and it adds another set of tradeoffs to the mix of configuration options. When managing servers, it’s important to ensure that they are running as efficiently as possible while meeting the performance needs of their workloads. Windows Server is optimized for excellent energy efficiency with minimum performance impact across a wide range of customer workloads. [Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan](processor-power-management-tuning.md) describes the workloads used for tuning the default parameters in multiple Windows Server versions, and provides suggestions for customized tunings.
 
-Windows Server 2016 is optimized for excellent energy efficiency with minimum performance impact across a wide range of customer workloads. [Processor Power Management (PPM) Tuning for the Windows Server Balanced Power Plan](processor-power-management-tuning.md) describes the workloads used for tuning the default parameters in Windows Server 2016, and provides suggestions for customized tunings.
+This section expands on energy-efficiency tradeoffs to help you make informed decisions if you need to adjust the default power settings on your server. However, the majority of server hardware and workloads should not require administrator power tuning when running Windows Server.
 
-This section expands on energy-efficiency tradeoffs to help you make informed decisions if you need to adjust the default power settings on your server. However, the majority of server hardware and workloads should not require administrator power tuning when running Windows Server 2016.
-
-## Calculating server energy efficiency
+## Choosing the turning metrics
 
 When you tune your server for energy savings, you must also consider performance. Tuning affects performance and power, sometimes in disproportionate amounts. For each possible adjustment, consider your power budget and performance goals to determine whether the trade-off is acceptable.
 
-You can calculate your server's energy efficiency ratio for a useful metric that incorporates power and performance information. Energy efficiency is the ratio of work that is done to the average power that is required during a specified amount of time.
+Windows Server default parameter tuning uses Energy Efficiency as a key metric to balance power and performance. Energy efficiency is the ratio of work that is done to the average power that is required during a specified amount of time.
 
 ![energy efficiency formula](../../media/perftune-guide-power-formula.png)
 
 You can use this metric to set practical goals that respect the tradeoff between power and performance. In contrast, a goal of 10 percent energy savings across the data center fails to capture the corresponding effects on performance and vice versa.
 
 Similarly, if you tune your server to increase performance by 5 percent, and that results in 10 percent higher energy consumption, the total result might or might not be acceptable for your business goals. The energy efficiency metric allows for more informed decision making than power or performance metrics alone.
+
 
 ## Measuring system energy consumption
 
@@ -58,7 +57,7 @@ You need to thoroughly understand your workload requirements to choose an optima
 
 Shortened timer tick rates, drivers that lack power management support, and excessive CPU utilization are a few of the behavioral issues that are detected by the **powercfg /energy** command. This tool provides a simple way to identify and fix power management issues, potentially resulting in significant cost savings in a large datacenter.
 
-For more info about PowerCfg.exe, see [Using PowerCfg to Evaluate System Energy Efficiency](/previous-versions/windows/hardware/download/dn550976(v=vs.85)).
+For more info about PowerCfg.exe, see [Powercfg command-line options](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/powercfg-command-line-options).
 
 ## Using power plans in Windows Server
 
@@ -73,7 +72,7 @@ Windows Server 2016 has three built-in power plans designed to meet different s
 
 These power plans exist in Windows for alternating current (AC) and direct current (DC) powered systems, but we will assume that servers are always using an AC power source.
 
-For more info on power plans and power policy configurations, see [Power Policy Configuration and Deployment in Windows](/previous-versions/windows/hardware/design/dn642106(v=vs.85)).
+For more info on power plans and power policy configurations, see [Powercfg command-line options](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/powercfg-command-line-options).
 
 > [!Note]
 > Some server manufactures have their own power management options available through the BIOS settings. If the operating system does not have control over the power management, changing the power plans in Windows will not affect system power and performance.
@@ -82,11 +81,78 @@ For more info on power plans and power policy configurations, see [Power Policy 
 
 Each power plan represents a combination of numerous underlying power management parameters. The built-in plans are three collections of recommended settings that cover a wide variety of workloads and scenarios. However, we recognize that these plans will not meet every customer's needs.
 
-The following sections describe ways to tune some specific processor power management parameters to meet goals not addressed by the three built-in plans. If you need to understand a wider array of power parameters, see [Power Policy Configuration and Deployment in Windows](/previous-versions/windows/hardware/design/dn642106(v=vs.85)).
+The following sections describe ways to tune some specific processor power management parameters to meet goals not addressed by the three built-in plans. If you need to understand a wider array of power parameters, see [Powercfg command-line options](https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/powercfg-command-line-options).
+
+## Intel Hardware Controlled P-states (HWP) 
+Starting from Intel Broadwell processors running WS2016, Windows PPM uses Intel’s Hardware Controlled P-states (HWP). HWP is a new capability for a cooperative hardware and software performance control. When HWP is enabled, CPU monitors activity and scalability, and selects frequency at hardware time scale. OS is no longer required to monitor activity and select frequency at regular intervals. Switching to HWP has several benefits:
+*	Quickly respond to bursty workloads. Windows PPM check interval is set as 30ms as default and can be reduced as minimal as 15ms. However, HWP can adjust frequency at quick as every 1ms.
+*	CPU has better knowledge of the hardware power efficiency of each P-state. It can make a better choice of processor frequency to achieve the best power efficiency.
+*	CPU can take other hardware usage, e.g., memory, GPU, etc., into account to achieve best power efficiency under certain TDP (Thermal Design Power). 
+
+Windows can still set the minimum and maximum processor states to limit the range of frequencies that the processors can execute. It can also set the following Processor energy performance preference policy (EPP) parameter to indicate HWP to favor power or performance.  
+*	**Processor energy performance preference policy** to set balance between power and performance. Lower value favors performance, and higher value favors power. The value can be between 0 and 100. The default value 50 that is to balance power and performance. 
+
+The following commands decrease the EPP value to 0 on current power plan to totally favor performance over power:
+
+``` syntax
+Powercfg -setacvalueindex scheme_current sub_processor PERFEPP 0
+Powercfg -setactive scheme_current
+```
+
+## Minimum and maximum processor performance state
+
+Processors change between performance states (P-states) very quickly to match supply to demand, delivering performance where necessary and saving energy when possible. If your server has specific high-performance or minimum-power-consumption requirements, you might consider configuring the **Minimum Processor Performance State** parameter or the **Maximum Processor Performance State** parameter.
+
+The values for the **Minimum Processor Performance State** and **Maximum Processor Performance State** parameters are expressed as a percentage of maximum processor frequency, with a value in the range 0 – 100.
+
+If your server requires ultra-low latency, invariant CPU frequency (e.g., for repeatable testing), or the highest performance levels, you might not want the processors switching to lower-performance states. For such a server, you can cap the minimum processor performance state at 100 percent by using the following commands:
+
+``` syntax
+Powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMIN 100
+Powercfg -setactive scheme_current
+```
+
+If your server requires lower energy consumption, you might want to cap the processor performance state at a percentage of maximum. For example, you can restrict the processor to 75 percent of its maximum frequency by using the following commands:
+
+``` syntax
+Powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMAX 75
+Powercfg -setactive scheme_current
+```
+
+> [!Note]
+> Capping processor performance at a percentage of maximum requires processor support. Check the processor documentation to determine whether such support exists, or view the Performance Monitor counter **% of maximum frequency** in the **Processor** group to see if any frequency caps were applied.
+
+## Processor responsiveness override
+
+The CPU utilization-based power management algorithms typically uses a average CPU utilization within a time check window to determine if frequency needs to increase or decrease. That might hurt the latency of disk I/O or network heavy workloads. A logical processor could be idle while waiting for disk I/O completion or network packets, which makes the overall CPU utilization low. As a result, power management will choose a low frequency for this processor. This issue exists on HWP-based power management as well. The DPCs and threads handling the IO completion or network packets are in the critical path and shouldn not run at low speed. To resolve this issue, Windows PPM takes the number of DPCs into account. When the DPC count is above certain threshold in the past monitoring window, PPM will enter an IO responsiveness period and raises the frequency floor to a higher level. The frequency floor will be reset when the DPC count is low enough for some time. The behavior can be tuned by the following parameters.
+
+| **Parameter** | **Description** | **Default Value** | **Min Value** | **Max Value** | 
+|-|-|-|-|-|
+|**Processor responsiveness override enable threshold** | Count of DPCs within a perf check above which processor responsiveness overrides should be enabled | 10 | 0 | N/A |
+|**Processor responsiveness override disable threshold** | Count of DPCs within a perf check below which processor responsiveness overrides should be disabled | 5 | 0 | N/A |
+|**Processor responsiveness override enable time** | Count of consecutive perf checks which must meet the enable threshold before processor responsiveness overrides are enabled | 1 | 1 | 100 |
+|**Processor responsiveness override disable time** | Count of consecutive perf checks which must meet the disable threshold before processor responsiveness overrides are disabled | 3 | 1 | 100 | 
+|**Processor responsiveness override performance floor** | Minimum allowed processor performance when processor responsiveness overrides are enabled | 100 | 0 | 100 |
+|**Processor responsiveness override energy performance preference ceiling** | Maximum energy performance preference policy value when processor responsiveness overrides are enabled | 100 | 0 | 100 | 
+
+For example, if your server workload is not sensitive to the latency and wants to loose the responsiveness override to favor power, you can increase the Processor responsiveness override enable threshold and Processor responsiveness override enable time, decrease the Processor responsiveness override disable threshold and Processor responsiveness override disable time. Then the system will be hard to enter responsiveness override state. The default value of Processor responsiveness override performance floor is set as 100 so that the responsiveness override period will run at maximum frequency. You can also decrease the processor performance floor and reduce the Processor responsiveness override energy performance preference ceiling to let HWP to adjust the frequency. The following are the sample commands to set the parameters for current active power plan.
+
+``` syntax
+Powercfg -setacvalueindex scheme_current sub_processor RESPENABLETHRESHOLD 100
+Powercfg -setacvalueindex scheme_current sub_processor RESPDISABLETHRESHOLD 1
+Powercfg -setacvalueindex scheme_current sub_processor RESPENABLETIME 10
+Powercfg -setacvalueindex scheme_current sub_processor RESPDISABLETIME 1
+Powercfg -setacvalueindex scheme_current sub_processor RESPPERFFLOOR 5
+Powercfg -setacvalueindex scheme_current sub_processor RESPEPPCEILING 50
+Powercfg -setactive scheme_current
+```
+
 
 ## Processor performance boost mode
 
-Intel Turbo Boost and AMD Turbo CORE technologies are features that allow processors to achieve additional performance when it is most useful (that is, at high system loads). However, this feature increases CPU core energy consumption, so Windows Server 2016 configures Turbo technologies based on the power policy that is in use and the specific processor implementation.
+This paramter tunning only applies to Non-HWP systems. 
+
+Intel Turbo Boost and AMD Turbo CORE technologies are features that allow processors to achieve additional performance when it is most useful (that is, at high system loads). However, this feature increases CPU core energy consumption, so Windows Server 2016 configures Turbo technologies based on the power policy that is in use and the specific processor implementation. 
 
 Turbo is enabled for High Performance power plans on all Intel and AMD processors and it is disabled for Power Saver power plans. For Balanced power plans on systems that rely on traditional P-state-based frequency management, Turbo is enabled by default only if the platform supports the EPB register.
 
@@ -131,30 +197,9 @@ Powercfg -setacvalueindex scheme_max sub_processor PERFBOOSTMODE 1
 Powercfg -setactive scheme_max
 ```
 
-## Minimum and maximum processor performance state
-
-Processors change between performance states (P-states) very quickly to match supply to demand, delivering performance where necessary and saving energy when possible. If your server has specific high-performance or minimum-power-consumption requirements, you might consider configuring the **Minimum Processor Performance State** parameter or the **Maximum Processor Performance State** parameter.
-
-The values for the **Minimum Processor Performance State** and **Maximum Processor Performance State** parameters are expressed as a percentage of maximum processor frequency, with a value in the range 0 – 100.
-
-If your server requires ultra-low latency, invariant CPU frequency (e.g., for repeatable testing), or the highest performance levels, you might not want the processors switching to lower-performance states. For such a server, you can cap the minimum processor performance state at 100 percent by using the following commands:
-
-``` syntax
-Powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMIN 100
-Powercfg -setactive scheme_current
-```
-
-If your server requires lower energy consumption, you might want to cap the processor performance state at a percentage of maximum. For example, you can restrict the processor to 75 percent of its maximum frequency by using the following commands:
-
-``` syntax
-Powercfg -setacvalueindex scheme_current sub_processor PROCTHROTTLEMAX 75
-Powercfg -setactive scheme_current
-```
-
-> [!Note]
-> Capping processor performance at a percentage of maximum requires processor support. Check the processor documentation to determine whether such support exists, or view the Performance Monitor counter **% of maximum frequency** in the **Processor** group to see if any frequency caps were applied.
-
 ## Processor performance increase and decrease of thresholds and policies
+
+This paramter tunning only applies to Non-HWP systems. 
 
 The speed at which a processor performance state increases or decreases is controlled by multiple parameters. The following four parameters have the most visible impact:
 
@@ -217,5 +262,4 @@ Powercfg -setactive scheme_current
 
 - [Server Hardware Performance Considerations](../index.md)
 - [Server Hardware Power Considerations](../power.md)
-- [Processor Power Management Tuning](processor-power-management-tuning.md)
-- [Recommended Balanced Plan Parameters](recommended-balanced-plan-parameters.md)
+- [Processor Power Management (PPM) tuning for the Windows Server balanced power plan](processor-power-management-tuning.md)
