@@ -107,20 +107,20 @@ reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
 
 ### Configure computer clock reset
 
-In order for W32tm.exe to reset a computer clock, it first determines whether the computer clock time offset from the current time (`CurrentTimeOffset` or `Phase Offset`) is less than the `MaxAllowedPhaseOffset` value.  
+In order for W32tm.exe to reset a computer clock, it first checks the offset (`CurrentTimeOffset` or `Phase Offset`) between the current time and the computer clock time to determine whether the offset is less than the `MaxAllowedPhaseOffset` value.  
 
-- `CurrentTimeOffset` &lt; `MaxAllowedPhaseOffset`. Adjust the computer clock gradually by using the clock rate.  
-- `CurrentTimeOffset` &ge; `MaxAllowedPhaseOffset`. Set the computer clock immediately.  
+- `CurrentTimeOffset` &lt; `MaxAllowedPhaseOffset`: Adjust the computer clock gradually by using the clock rate.  
+- `CurrentTimeOffset` &ge; `MaxAllowedPhaseOffset`: Set the computer clock immediately.  
 
-Then, to adjust the computer clock by using the clock rate, w32tm.exe calculates a `PhaseCorrection` value. This algorithm varies depending on the version of Windows:  
+Then, to adjust the computer clock by using the clock rate, W32tm.exe calculates a `PhaseCorrection` value. This algorithm varies depending on the version of Windows:  
 
-- Windows Server 2016 and later:  
+- Windows Server 2016 and later versions:  
 
   > `PhaseCorrection_raw` = |`CurrentTimeOffset`| &divide; (16 &times; `PhaseCorrectRate` &times; `pollIntervalInSeconds`)  
   > `MaximumCorrection` = |`CurrentTimeOffset`| &divide; (`UpdateInterval` &times; 1,000 &times; 10,000)  
   > `PhaseCorrection` = min(`PhaseCorrection_raw`, `MaximumCorrection`)  
 
-- Windows Server 2012 R2 and earlier:  
+- Windows Server 2012 R2 and earlier versions:  
 
   > `PhaseCorrection` = |`CurrentTimeOffset`| &divide; (`PhaseCorrectRate` &times; `UpdateInterval`)  
 
@@ -130,10 +130,10 @@ All versions of Windows use the same final equation to check `PhaseCorrection`:
 
 > [!NOTE]  
 > - These equations use `PhaseCorrectRate`, `UpdateInterval`, `MaxAllowedPhaseOffset`, and `SystemClockRate` measured in units of clock ticks. On Windows systems, 1 ms = 10,000 clock ticks.
-> - `MaxAllowedPhaseOffset` is configurable in the registry, but the registry parameter is measured in seconds instead of clock ticks.
-> - You can see the `SystemClockRate` and `pollIntervalInSeconds` values, measured in seconds, by opening a Command Prompt window and then running `W32tm /query /status /verbose`. This command produces output such as the following:  
+> - `MaxAllowedPhaseOffset` is configurable in the registry. However, the registry parameter is measured in seconds instead of clock ticks.
+> - To see the `SystemClockRate` and `pollIntervalInSeconds` values (measured in seconds), open a Command Prompt window and then run `W32tm /query /status /verbose`. This command produces output that resembles the following.  
 >    :::image type="content" source="media/windows-time-service-tools-and-settings/windows-time-service-parameter-status.png" alt-text="Output of the w32tm /query /status /verbose command, that lists parameter values for the time service.":::  
->     The output presents two values for the poll interval; the equations use the value measured in seconds (the value in parentheses).  
+>     The output presents the poll interval in both clock ticks and in seconds. The equations use the value measured in seconds (the value in parentheses).  
 >    The output presents the clock rate in seconds. To see the `SystemClockRate` value in clock ticks, use the following formula:  
 >   > (`value in seconds`) &times; 1,000 &times; 10,000  
 >   
