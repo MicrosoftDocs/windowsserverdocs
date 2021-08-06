@@ -26,89 +26,91 @@ tpmdiagnostics parameter [<arguments>]
 ### Parameters
 
 | Group | Parameter | Description |
-|TpmInfo|GetLockoutInfo||
-||IsOwned||
-||PlatformType||
-||CheckFIPS||
-||ReadClock||
-||GetDeviceInformation||
-||IfxRsaKeygenVulnerability||
-||GatherLogs [output directory path]||
-||PssPadding||
-||IsReadyInformation||
+|TpmInfo| GetLockoutInfo |Prints TPM lockout information.|
+|| IsOwned | Returns true if any of the capabilities for 'OWNER_AUTH_SET','ENDORSEMENT_AUTH_SET', or 'LOCKOUT_AUTH_SET' are true. |
+|| PlatformType | On TPM 2.0: calls GetProperty on the TPM of the PT_FIXED section, and prints data for the TPM_PT_FAMILY_INDICATOR, TPM_PT_MANUFACTURER, TPM_PT_FIRMWARE_VERSION_1, TPM_PT_FIRMWARE_VERSION_2, TPM_PT_REVISION, and TPM_PT_LEVEL.<br/>
+On TPM 1.2: calls GetCapability of TPM_CAP_VERSION_VAL, and prints the TPM Version (major.minor), the Spec Level, the Errata revision, the Vendor ID, and the Major.Minor firmware revision version. |
+|| CheckFIPS | Checks if the TPM supports FIPS mode. |
+|| ReadClock | Reads clock information from the TPM 2.0, including total uptime, uptime since last reset, and the values of the TPM Reset and TPM Restart counters. |
+|| GetDeviceInformation | Prints extensive TPM information, as well as provision information, known vulnerabilities, if clearing the TPM is possible (or recommended to recover), and if the maintenance task finished. |
+|| IfxRsaKeygenVulnerability | Checks if this TPM is vulnerable to the RSA keygen attack. |
+|| GatherLogs `[output directory path]` | Collects the boot.dat for this boot, the event log, and TPM information into the directory provided. |
+|| PssPadding | Generates a RSA 2048 key pair using BCrypt, then performs Sign on the TPM with a SHA256 hash. Prints the length of both salt and the hash. It uses this to check if a TPM is compliant with FIPS 186-4. |
+|| IsReadyInformation | Parses TpmIsReadyInformation into human readable format based on descriptions from [Win32_Tpm::IsReadyInformation method parameters](/windows/win32/secprov/win32-tpm-isreadyinformation#parameters) |
 |--|--|--|
-|TpmTask|MaintenanceTaskStatus||
-||ShowTaskStatus||
-||IsEULAAccepted||
-||ProvisionTpm [force clear] [allow PPI prompt]||
+|TpmTask| MaintenanceTaskStatus | Retrieves the state of the maintenance task. |
+|| ShowTaskStatus | Shows the status and result of the Tpm-Maintenance task, KeyPreGenTask, and AikCertEnrollTask. |
+|| IsEULAAccepted | Checks if the EULA has been accepted. |
+|| ProvisionTpm `[force clear]` `[allow PPI prompt]` | Provisions the Tpm through the TpmCoreProvisioning library. |
 |--|--|--|
-|TpmProvisioning|PrepareTPM||
-||CanUseLockoutPolicyClear||
-||CanClearByPolicy||
+|TpmProvisioning| PrepareTPM | For Desktop SKUs: Runs an instance of TpmTask. Otherwise, provisions and installs an AIK. |
+|| CanUseLockoutPolicyClear | Checks if you can clear the TPM using Lockout Policy. |
 |--|--|--|
-|AutoProvisioning|IsAutoProvisioningEnabled||
-||EnableAutoProvisioning||
-||DisableAutoProvisioning [-o]||
+|AutoProvisioning| IsAutoProvisioningEnabled | Prints 'True' if auto provisioning is enabled and 'False' if auto provisioning is disabled. |
+|| EnableAutoProvisioning | Enables auto provisioning on startup. |
+|| DisableAutoProvisioning `[-o]` | Disables auto provisioning on startup. The -o or /o flag is optional, and will set auto provisioning disabled for next boot only. |
 |--|--|--|
-|EK|EkInfo||
-||ekchain||
-||EkCertStoreRegistry||
-||GetEkCertFromWeb [-ecc] [certificate file]||
-||GetEkCertFromNVR [-ecc] [certificate file]||
-||GetEkCertFromReg [-ecc] [certificate file]||
-||GetEk [-ecc] [key file]||
-||CheckEkCertState||
-||InstallEkCertFromWeb||
-||InstallEkCertFromNVR||
-||InstallEkCertThroughCoreProv||
-||EKCertificateURL||
+|EK| EkInfo | Display general information about the EK and EK Cert. |
+|| ekchain | Chain the EK Certificate up through the intermediate certs, and display information about each one. |
+|| EkCertStoreRegistry | Open up a Certificate Store using NCryptGetProperty. |
+|| GetEkCertFromWeb `[-ecc]` `[certificate file]` | Retrieves the EK Cert from the internet and then outputs it to the console or to a filename specified. Optionally gets the ECC EK cert. |
+|| GetEkCertFromNVR `[-ecc]` `[certificate file]` | Retrieves the EK Cert from NVRAM and then outputs it to the console or to a filename specified. Optionally gets the ECC EK cert. |
+|| GetEkCertFromReg `[-ecc]` `[certificate file]` | Retrieves the EK Cert from registry and then outputs it to the console or to a filename specified. Optionally gets the ECC EK cert. |
+|| GetEk `[-ecc]` `[key file]` | Retrieves the EK and then outputs the EK Pub to the console or to a filename specified. |
+|| CheckEkCertState | Checks if the EK Cert is present. |
+|| InstallEkCertFromWeb | Retrieves the EK Cert from the web and then installs it into the registry. |
+|| InstallEkCertFromNVR | Retrieves the EK Cert from NVRAM and then installs it into the registry. |
+|| InstallEkCertThroughCoreProv | Uses Core provisioning to retrieve and install the EK Cert. |
+|| EKCertificateURL | Only supported with fTPMs. Retrieves the URL used to fetch the EK Certificate. |
 |--|--|--|
-|WindowsAIK|InstallWindowsAIK [-skipCert]||
-||WinAikPersistedInTpm||
-||UninstallWindowsAIKCert||
-||GetWindowsAIKCert [cert file]||
-||IsWindowsAIKInstalledInNCrypt||
-||EnrollWindowsAIKCert||
-||GetWindowsAIKPlatformClaim ["fresh"] [output file]||
+|WindowsAIK| InstallWindowsAIK `[-skipCert]` | Installs the Windows AIK by invoking the TpmCheckCreateWindowsAIK function from the TpmCoreProvisioning library.<br/>
+Installs the Windows AIK certificate unless the -skipCert flag is passed. |
+|| WinAikPersistedInTpm | Checks if the Windows AIK is persistent in the TPM, and if it matches what is saved to disk. |
+|| UninstallWindowsAIKCert | Uninstalls the Windows AIK Cert by removing it from NCrypt. |
+|| GetWindowsAIKCert `[certificate file]` | Gets the Windows AIK. Optionally outputs to a file, otherwise prints to console. |
+|| IsWindowsAIKInstalledInNCrypt | Check if Windows AIK exists in the Ncrypt container. |
+|| EnrollWindowsAIKCert | Enroll Windows AIK Certificate. |
+|| GetWindowsAIKPlatformClaim `["fresh"]` `[output file]` | Requires TPM 2.0. Gets the saved or (optionally) fresh platform claim for the current state with the Windows AIK. Optionally writes to output file. |
 |--|--|--|
-|OtherKeys|PrintPublicInfo `[srk | aik | ek | handle] [-asBcryptBlob | -RsaKeyBitsOnly | -RsaSymKeyBitsOnly] [-ecc]`||
-||TestParms `[SYMCIPHER | RSA ] [algorithm specific arguments]`||
-||EnumerateKeys||
+|OtherKeys| PrintPublicInfo `<srk | aik | ek | handle>` `[-asBcryptBlob | -RsaKeyBitsOnly | -RsaSymKeyBitsOnly]` `[-ecc]` | Prints the public information of the provided handle. It accept known handles like SRK, AIK and EK, or values.<br/>
+If -RsaKeyBitsOnly or -RsaSymKeyBitsOnly is specified, prints the values if the key is an RSA key. |
+|| TestParms `[SYMCIPHER | RSA ]` `[algorithm specific arguments]` | Check to see if specific combinations of algorithm parameters are supported by the TPM. |
+|| EnumerateKeys | Impersonates the current user and the local system, local service, and network service users on a machine and enumerates all the Keys that the Platform Crypto Provider Key Storage Provider (PCPKSP) has saved for that user. |
 |--|--|--|
-|NVStorage|DefineIndex `[index] [size] [attribute flags]`||
-||UndefineIndex `[index]`||
-||ReadNVIndexPublic `[index]`||
-||WriteNVIndex `[index] [data in hex format | -file filename]`||
-||ReadNVIndex `[index]`||
-||NVSummary||
+|NVStorage| DefineIndex `<index>` `<size>` `[attribute flags]` | Defines an object at a particular NV index, of a specified size. The Attribute flags are optional. |
+|| UndefineIndex `<index>` | Undefines an existing NV index. |
+|| ReadNVIndexPublic `<index>` | Reads the public portion of an NV index and prints to console. |
+|| WriteNVIndex `<index>` `<data in hex format | -file filename>` | Given an NV index that has been defined, writes data to that index. |
+|| ReadNVIndex `<index>` | Reads the data at a given NV index. |
+|| NVSummary | Prints available NV information from a query of GetCapabilities for NV related information, including the number of currently in use NV indices, the maximum index the maximum NV buffer size, its measured write recovery speed, the current NV Counters, and full details of each current NV index. |
 |--|--|--|
-|NVBootCounter|CheckBootCounter||
-||ReadBootCounter `[/f]`||
+|NVBootCounter| CheckBootCounter | Requires TPM 2.0. Checks if the boot counter exists, and verifies it is ready for use. |
+|| ReadBootCounter `[/f]` | Requires TPM 2.0. Reads the data out of the boot counter. Optionally performs a full read of the index by passing argument /f. |
 |--|--|--|
-|PCRs|PrintPcrs||
+|PCRs| PrintPcrs | Prints the current values of the PCRs. |
 |--|--|--|
-|PhysicalPresence|GetPPTransition||
-||GetPPVersionInfo||
-||GetPPResponse||
-||GetPPRequest||
+|PhysicalPresence| GetPPTransition | Gets the transition from Physical Presence, and the return value. |
+|| GetPPVersionInfo | Gets the version of Physical Presence supported. |
+|| GetPPResponse | Prints the last Physical Presence request number sent and the response from the interface. |
+|| GetPPRequest | Gets the last set request to Physical presence. |
 |--|--|--|
-|TPMCommandsAndResponses|CommandCode `[hex command code]`||
-||ResponseCode `[hex response code]`||
+|TPMCommandsAndResponses| CommandCode `<hex command code>` | Given a command code in hex, prints the friendly name for that command. |
+|| ResponseCode `<hex response code>` | Given a response code in hex, prints the friendly name for that error. |
 |--|--|--|
-|Tracing|EnableDriverTracing||
-||DisableDriverTracing||
-||FormatTrace `[etl file] [output json file]`||
+|Tracing| EnableDriverTracing | Enables TPM driver tracing using the Autologger system, and prompts to restart the machine in order to start the traces. |
+|| DisableDriverTracing | Disables the automatic logger for TPM driver traces, and prompts to restart the machine in order to stop the traces. |
+|| FormatTrace `<etl file>` `[output json file]` | Parses an ETL file and either outputs to console or to file. |
 |--|--|--|
-|DRTM|DescribeMle `[MLE Binary File]`||
+|DRTM| DescribeMle `<MLE Binary File>` | Reads an MLE and prints the header and other general information about it. |
 |--|--|--|
-|Misc|Help `[command name]`||
-||DecodeBase64File `<file to decode from base 64>`||
-||EncodeToBase64File `<file to encode>`||
-||ReadFileAsHex `<file to read>`||
-||ConvertBinToHex `<file to read>` `<file to write to>`||
-||ConvertHexToBin `<file to read>` `<file to write to>`||
-||Hash `<hex bytes | raw value to hash>`||
-||GetCapabilities||
+|Misc| Help `<command name>` | Prints the list of commands, or gets more information about a command. |
+|| DecodeBase64File `<file to decode from base 64>` | Given a file encoded in base 64, this decodes the file and outputs it to console. |
+|| EncodeToBase64File `<file to encode>` | Encodes a given file to base64, and outputs to console. |
+|| ReadFileAsHex `<file to read>` | Reads a given file with ASCII values in base 16 (hexadecimal) if it were text, and outputs the result. |
+|| ConvertBinToHex `<file to read>` `<file to write to>` | Reads a given file and treats its content as binary, converts the content into base 16 (hexadecimal) representation, and outputs the result. Useful for converting a binary file into human readable format. |
+|| ConvertHexToBin `<file to read>` `<file to write to>` | Reads a given file and treats its base 16 (hexadecimal) representation of binary content, converts the content into binary format, and outputs the result. |
+|| Hash `<hex bytes | raw value to hash>` | Outputs the SHA 1, SHA 256, SHA 384, and SHA 512 hashes of the input. |
+|| GetCapabilities | Prints the full list of TPM PT capabilities. |
 
 ## Examples
 
