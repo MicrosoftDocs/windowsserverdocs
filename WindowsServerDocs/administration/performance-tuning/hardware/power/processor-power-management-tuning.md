@@ -89,7 +89,7 @@ Running the CPU cores at lower frequencies reduces energy consumption. However, 
 
 ## Windows Server Balanced Power Plan Default Parameters
 
-Starting from Intel Broadwell processors running Windows Server 2016, Windows Server power management uses Intel’s Hardware Controlled P-states (HWP) as default on Intel systems. HWP is a new capability for a cooperative hardware and software performance control. When HWP is enabled, CPU monitors activity and scalability, and selects frequency at hardware time scale. OS is no longer required to monitor activity and select frequency at regular intervals. Switching to HWP has several benefits such as quick response, better knowledge of the hardware power efficiency of processors as well as other compoenents under TDP. 
+Starting from Intel Broadwell processors running Windows Server 2016, Windows Server power management uses Intel’s Hardware Controlled P-states (HWP) as default on Intel systems. HWP is a new capability for a cooperative hardware and software performance control. When HWP is enabled, CPU monitors activity and scalability, and selects frequency at hardware time scale. OS is no longer required to monitor activity and select frequency at regular intervals. Switching to HWP has several benefits such as quick response, better knowledge of the hardware power efficiency of processors as well as other components under TDP. 
 
 For HWP system, Windows still has the option to set the minimum and maximum processor states to provide constraints. It also can use **Energy performance preference (EPP)** parameter to set balance between power and performance. Lower value favors performance, and higher value favors power. The default value 50 that is to balance power and performance.
 
