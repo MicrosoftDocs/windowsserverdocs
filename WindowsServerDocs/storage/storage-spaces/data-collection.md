@@ -1,6 +1,6 @@
 ---
 title: Collect diagnostic data with Storage Spaces Direct
-description: Understanding Storage Spaces Direct data collection tools, with specific examples of how to run and use them.
+description: Understanding Storage Spaces Direct diagnostic data collection tools, with specific examples of how to run and use them.
 ms.author: adagashe
 ms.topic: article
 author: adagashe
@@ -14,7 +14,7 @@ There are various diagnostic tools that can be used to collect the data needed t
 
 Because the logs and other information are dense, the information presented in this article is helpful for troubleshooting advanced issues that have been escalated and that may require data to be sent to Microsoft for triage.
 
-## Install and use diagnostics tools with Windows Admin Center
+## Install and use diagnostic tools with Windows Admin Center
 
 You can use Windows Admin Center (version 1812 onwards) to:
 
@@ -91,7 +91,7 @@ Import-Module $module -Force
 
 If you need to get this module on an offline cluster, download the zip, move it to your target server node, and install the module.
 
-## Gathering Logs with PowerShell
+## Gathering logs with PowerShell
 
 After you have enabled event channels and completed the installation process, you can use the `Get-SDDCDiagnosticInfo` PowerShell cmdlet in the module to get:
 
@@ -179,7 +179,7 @@ This report is being continually updated to include more useful information. For
 
 The script runs various log gathering scripts and saves the output as xml files. We collect cluster and health logs, system information (MSInfo32), unfiltered event logs (failover clustering, dis diagnostics, hyper-v, storage spaces, and more), and storage diagnostics information (operational logs). For the latest information on what information is collected, see the [GitHub README (what we collect)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include).
 
-## How to consume the XML files from Get-PCStorageDiagnosticInfo
+## How to consume XML files from Get-PCStorageDiagnosticInfo
 You can consume the data from the XML files provided in data collected by the `Get-PCStorageDiagnosticInfo` cmdlet. These files have information about the virtual disks, physical disks, basic cluster info and other PowerShell related outputs.
 
 To see the results of these outputs, open a PowerShell window and run the following steps.
