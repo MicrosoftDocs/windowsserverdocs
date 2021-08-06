@@ -26,11 +26,11 @@ To install SDDC diagnostic tools and begin collecting data, follow these steps:
 
 1. Launch Windows Admin Center and select **Tools > Diagnostics**. If diagnostics tools are not already installed, click the **Install** button.
 
-:::image type="content" source="/media/data-collection/install-diagnostic-tools.png" alt-text="Click Install to install SDDC diagnostic tools." lightbox="/media/data-collection/install-diagnostic-tools.png":::
+:::image type="content" source="media/data-collection/install-diagnostic-tools.png" alt-text="Click Install to install SDDC diagnostic tools." lightbox="media/data-collection/install-diagnostic-tools.png":::
 
 2. To begin collecting diagnostic data, click **Collect**. You should see a message that says "Collecting diagnostic information. This may take a few minutes." After the initial data collection, if you want to automatically collect data every 24 hours, change the slider to **On**.
 
-:::image type="content" source="/media/data-collection/collect-diagnostic-data.png" alt-text="Click Collect to being collecting diagnostic data." lightbox="/media/data-collection/collect-diagnostic-data.png":::
+:::image type="content" source="media/data-collection/collect-diagnostic-data.png" alt-text="Click Collect to being collecting diagnostic data." lightbox="media/data-collection/collect-diagnostic-data.png":::
 
 ## Installing Get-SDDCDiagnosticInfo with PowerShell
 
