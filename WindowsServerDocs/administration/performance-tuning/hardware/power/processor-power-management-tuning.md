@@ -87,7 +87,7 @@ Running the CPU cores at lower frequencies reduces energy consumption. However, 
 > [!NOTE]
 > If the workload is very sensitive to response time, the system should either switch to the **High Performance** power plan or change **Balanced** power plan to very aggressively increase frequency when it is running.
 
-## Windows Server Blanced Power Plan Default Parameters
+## Windows Server Balanced Power Plan Default Parameters
 <style>
 table, th, td {
   border: 1px solid black;
