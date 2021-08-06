@@ -107,7 +107,7 @@ reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
 
 ### Configure computer clock reset
 
-In order for W32tm.exe to reset a computer clock, it first checks the offset (`CurrentTimeOffset` or `Phase Offset`) between the current time and the computer clock time to determine whether the offset is less than the `MaxAllowedPhaseOffset` value.  
+In order for W32tm.exe to reset a computer clock, it first checks the offset (`CurrentTimeOffset`, also known as `Phase Offset`) between the current time and the computer clock time to determine whether the offset is less than the `MaxAllowedPhaseOffset` value.  
 
 - `CurrentTimeOffset` &lt; `MaxAllowedPhaseOffset`: Adjust the computer clock gradually by using the clock rate.  
 - `CurrentTimeOffset` &ge; `MaxAllowedPhaseOffset`: Set the computer clock immediately.  
