@@ -29,9 +29,9 @@ This topic contains two main sections:
 ## Group Policy settings for WSUS client updates
 This section provides information about three extensions of Group Policy. In these extensions you will find the settings that you can use to configure how WSUS clients can interact with Windows Update to receive automatic updates.
 
--   [computer Configuration &gt; Windows Update policy settings](#computer-configuration--windows-update-policy-settings)
+-   [Computer Configuration &gt; Windows Update policy settings](#computer-configuration--windows-update-policy-settings)
 
--   [computer Configuration &gt; Maintenance Scheduler policy settings](#computer-configuration--maintenance-scheduler-policy-settings)
+-   [Computer Configuration &gt; Maintenance Scheduler policy settings](#computer-configuration--maintenance-scheduler-policy-settings)
 
 -   [User Configuration &gt; Windows Update policy settings](#user-configuration--windows-update-policy-settings)
 
@@ -237,20 +237,18 @@ This policy setting enables you to specify whether the **Install Updates and Shu
 #### Do not connect to any Windows Update Internet locations
 Even when Windows Update is configured to receive updates from an intranet update service, it will periodically retrieve information from the public Windows Update service to enable future connections to Windows Update and other services, such as Microsoft Update or Microsoft Store.
 
-Enabling this policy will disable the functionality to periodically retrieve information from the public Windows Server Update Service, and it may cause connection to public services such as Microsoft Store to stop working.
+> [!NOTE]
+> This policy applies only when the computer is configured to connect to an intranet update service by using the Specify intranet Microsoft update service location policy setting.
 
 |Supported on:|Excluding:|
 |---------|-------|
 |starting with  Windows Server 2012 R2 , Windows 8.1 or Windows RT 8.1, Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|null|
 
-> [!NOTE]
-> This policy applies only when the computer is configured to connect to an intranet update service by using the Specify intranet Microsoft update service location policy setting.
-
 |Policy setting state|Behavior|
 |-|-|
-|**Not Configured**|The default behavior to retrieve information from the public Windows Server Update Service persists.|
-|**Enabled**|Specifies that computers will not retrieve information from the public Windows Server Update Service.|
-|**Disabled**|The default behavior to retrieve information from the public Windows Server Update Service persists.|
+|**Not Configured**|Specifies that computers may retrieve information from public update services such as Windows Update and the Microsoft Store.|
+|**Enabled**|Windows will no longer connect to public update services such as Windows Update or the Microsoft Store. This will cause most functionality of the Microsoft Store app to stop working.<br />Users who search for updates using the Settings app or Control Panel will only see updates from the intranet update service. They will not be presented with the option to "Check online for updates from Windows Update".<br />Programs using the Windows Update Agent APIs will be unable to search for updates against any service other than the intranet update service.|
+|**Disabled**|Specifies that computers may retrieve information from public update services.|
 
 **Options:** There are no options for this setting.
 
@@ -375,18 +373,18 @@ Specifies an intranet server to host updates from Microsoft Update. You can then
 |---------|-------|
 |Windows operating systems that are still within their [Microsoft Products Support Lifecycle](https://support.microsoft.com/gp/lifeselect).|Windows RT.|
 
-This setting enables you to specify a WSUS server on your network that will function as an internal update service. Instead of using Microsoft Updates on the Internet, WSUS clients will search this service for updates that apply.
+This setting enables you to specify a WSUS server on your network that will function as an internal update service. Instead of using the public Windows Update and Microsoft Update services on the Internet, WSUS clients will search this service for updates that apply. Enabling this setting means that end users in your organization do not have to go through a firewall to get updates, and it gives you the opportunity to test updates before deploying them.
 
-To use this setting, you must set two server name values: the server from which the client detects and downloads updates, and the server to which updated workstations upload statistics. The values need not be different if both services are configured on the same server.
+To use this setting, you must set two server name values: the server from which the client detects and downloads updates, and the server to which updated workstations upload statistics. The values need not be different if both services are configured on the same server. 
 
 > [!NOTE]
 > This policy is not supported on Windows RT. Enabling this policy will not have any effect on computers running Windows RT.
 
 |Policy setting state|Behavior|
 |-|-|
-|**Not Configured**|if Automatic Updates is not disabled by policy or user preference, this policy specifies that clients connect directly to the Windows Update site on the Internet.|
-|**Enabled**|Specifies that the client connects to the specified WSUS server, instead of Windows Update, to search for and download updates. Enabling this setting means that end users in your organization do not have to go through a firewall to get updates, and it gives you the opportunity to test updates before deploying them.|
-|**Disabled**|if Automatic Updates is not disabled by policy or user preference, this policy specifies that clients connect directly to the Windows Update site on the Internet.|
+|**Not Configured**|Specifies that clients connect directly to the Windows Update site on the Internet.|
+|**Enabled**|Specifies that the client connects to the specified WSUS server, instead of Windows Update, to search for and download updates.<br />If Automatic Updates is not disabled by policy or user preference, Automatic Updates will search for, download, and/or install updates from the specified WSUS server, instead of from Windows Update.<br />Users of the Windows Update Settings page (or the Windows Update Control Panel page on older versions of Windows) will normally see updates from the specified WSUS server, instead of from Windows Update. Users will also see a "Check online for updates from Windows Update" option that enables them to use the public update services on the Internet. This option may be removed using the Do not connect to any Windows Update Internet locations policy.<br />Applications using the Windows Update Agent APIs to search for, download, and/or install updates will normally operate against the specified WSUS server. Applications can specifically request to use the public update services on the Internet. This option may be removed using the Do not connect to any Windows Update Internet locations policy. |
+|**Disabled**|Specifies that clients connect directly to the Windows Update site on the Internet.|
 
 **Options:** When this policy setting is enabled, you must specify the intranet update service that WSUS clients will use when detecting updates, and the Internet statistics server to which updated WSUS clients will upload statistics. Example values:
 
