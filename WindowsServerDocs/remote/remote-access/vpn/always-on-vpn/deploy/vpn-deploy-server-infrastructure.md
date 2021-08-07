@@ -65,7 +65,7 @@ You manually enroll certificates on VPN servers.
 
 Since the RRAS server is not domain joined, autoenrollment cannot be used to enroll the VPN gateway certificate.  Therefore, use an offline certificate request procedure.
 
-1. On the RRAS server, generate a file called **VPNGateway.inf** based upon the [example certificate policy request](#example-vpngatewayinf-script) provided below and customize the following entries:
+1. On the RRAS server, generate a file called **VPNGateway.inf** based upon the [example certificate policy request](#example-vpngatewayinf-script) provided later in this article and customize the following entries:
 
    - In the [NewRequest] section, replace vpn.contoso.com used for the Subject Name with the chosen [_Customer_] VPN endpoint FQDN.
 
