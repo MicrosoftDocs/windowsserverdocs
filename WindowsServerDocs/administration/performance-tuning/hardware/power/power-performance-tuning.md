@@ -124,7 +124,7 @@ Powercfg -setactive scheme_current
 
 ## Processor responsiveness override
 
-The CPU utilization-based power management algorithms typically uses a average CPU utilization within a time check window to determine if frequency needs to increase or decrease. That might hurt the latency of disk I/O or network heavy workloads. A logical processor could be idle while waiting for disk I/O completion or network packets, which makes the overall CPU utilization low. As a result, power management will choose a low frequency for this processor. This issue exists on HWP-based power management as well. The DPCs and threads handling the IO completion or network packets are in the critical path and shouldn not run at low speed. To resolve this issue, Windows PPM takes the number of DPCs into account. When the DPC count is above certain threshold in the past monitoring window, PPM will enter an IO responsiveness period and raises the frequency floor to a higher level. The frequency floor will be reset when the DPC count is low enough for some time. The behavior can be tuned by the following parameters.
+The CPU utilization-based power management algorithms typically uses a average CPU utilization within a time check window to determine if frequency needs to increase or decrease. That might hurt the latency of disk I/O or network heavy workloads. A logical processor could be idle while waiting for disk I/O completion or network packets, which makes the overall CPU utilization low. As a result, power management will choose a low frequency for this processor. This issue exists on HWP-based power management as well. The DPCs and threads handling the IO completion or network packets are in the critical path and should not run at low speed. To resolve this issue, Windows PPM takes the number of DPCs into account. When the DPC count is above certain threshold in the past monitoring window, PPM will enter an IO responsiveness period and raises the frequency floor to a higher level. The frequency floor will be reset when the DPC count is low enough for some time. The behavior can be tuned by the following parameters.
 
 | **Parameter** | **Description** | **Default Value** | **Min Value** | **Max Value** | 
 |-|-|-|-|-|
@@ -150,7 +150,7 @@ Powercfg -setactive scheme_current
 
 ## Processor performance boost mode
 
-This paramter tunning only applies to Non-HWP systems. 
+This parameter tunning only applies to Non-HWP systems. 
 
 Intel Turbo Boost and AMD Turbo CORE technologies are features that allow processors to achieve additional performance when it is most useful (that is, at high system loads). However, this feature increases CPU core energy consumption, so Windows Server 2016 configures Turbo technologies based on the power policy that is in use and the specific processor implementation. 
 
@@ -199,7 +199,7 @@ Powercfg -setactive scheme_max
 
 ## Processor performance increase and decrease of thresholds and policies
 
-This paramter tunning only applies to Non-HWP systems. 
+This parameter tunning only applies to Non-HWP systems. 
 
 The speed at which a processor performance state increases or decreases is controlled by multiple parameters. The following four parameters have the most visible impact:
 
