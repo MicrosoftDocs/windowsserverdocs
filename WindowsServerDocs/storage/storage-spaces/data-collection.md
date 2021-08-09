@@ -25,17 +25,17 @@ You can use Windows Admin Center (version 1812 onwards) to:
 To install SDDC diagnostic tools and begin collecting data, follow these steps:
 
 1. Launch Windows Admin Center and select **Tools > Diagnostics**. If diagnostics tools are not already installed, click the **Install** button.
-
-:::image type="content" source="media/data-collection/install-diagnostic-tools.png" alt-text="Click Install to install SDDC diagnostic tools." lightbox="media/data-collection/install-diagnostic-tools.png":::
-
+   
+   :::image type="content" source="media/data-collection/install-diagnostic-tools.png" alt-text="Click Install to install SDDC diagnostic tools." lightbox="media/data-collection/install-diagnostic-tools.png":::
+   
 2. To begin collecting diagnostic data, click **Collect**. You should see a message that says "Collecting diagnostic information. This may take a few minutes." After the initial data collection, if you want to automatically collect data every 24 hours, change the slider to **On**.
-
-:::image type="content" source="media/data-collection/collect-diagnostic-data.png" alt-text="Click Collect to being collecting diagnostic data." lightbox="media/data-collection/collect-diagnostic-data.png":::
-
+   
+   :::image type="content" source="media/data-collection/collect-diagnostic-data.png" alt-text="Click Collect to being collecting diagnostic data." lightbox="media/data-collection/collect-diagnostic-data.png":::
+   
 3. Data collection is not complete until you see the screenshot below. To view collected diagnostic information, choose **Download (.zip)** or **Open in Files tool**.
-
-:::image type="content" source="media/data-collection/view-diagnostic-information.png" alt-text="To view diagnostic information, you can either download a .zip file or open in Files tool." lightbox="media/data-collection/view-diagnostic-information.png":::
-
+   
+   :::image type="content" source="media/data-collection/view-diagnostic-information.png" alt-text="To view diagnostic information, you can either download a .zip file or open in Files tool." lightbox="media/data-collection/view-diagnostic-information.png":::
+   
 ## Installing Get-SDDCDiagnosticInfo with PowerShell
 
 You can use the `Get-SDDCDiagnosticInfo` PowerShell cmdlet (a.k.a. `Get-PCStorageDiagnosticInfo`, previously known as `Test-StorageHealth`) to gather logs for and perform health checks for Failover Clustering (cluster, resources, networks, nodes), Storage Spaces (physical disks, enclosures, virtual disks), Cluster Shared Volumes, SMB file shares, and Deduplication.
