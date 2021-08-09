@@ -645,7 +645,7 @@ This article used the following terms:
 
 |Term|Definition|
 |----|-------|
-|Automatic Updates and automatic updates|**Automatic Updates**: The client computer component built into the Microsoft Windows Vista, Windows Server 2003, Windows XP, and Windows 2000 with SP3 operating systems to get updates from Microsoft Update or Windows Update.<p>**automatic updates**: The casual term used to describe when the Windows Update Agent automatically schedules and downloads updates.|
+|Automatic Updates and automatic updates|*Automatic Updates*: The client computer component built into the Microsoft Windows Vista, Windows Server 2003, Windows XP, and Windows 2000 with SP3 operating systems to get updates from Microsoft Update or Windows Update.<p>*automatic updates*: The casual term used to describe when the Windows Update Agent automatically schedules and downloads updates.|
 |autonomous server|A downstream WSUS server on which administrators can manage WSUS components.|
 |downstream server|A WSUS server that gets updates from another WSUS server rather than from Microsoft Update or Windows Update.|
 |Group Policy extension or extension of Group Policy|A collection of settings in Group Policy that control how users and computers (to whom the policies apply) can configure and use various Windows services and features. Administrators can use WSUS with Group Policy for client-side configuration of the Automatic Updates client, to help ensure that users can't disable or circumvent corporate update policies.<p>WSUS does not require the use of Active Directory or Group Policy. Client configuration can also be applied by using a local group policy or by modifying the Windows registry.|
