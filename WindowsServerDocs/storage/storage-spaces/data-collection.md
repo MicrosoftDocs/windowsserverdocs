@@ -38,7 +38,7 @@ To install SDDC diagnostic tools and begin collecting data, follow these steps:
    
 ## Installing Get-SDDCDiagnosticInfo with PowerShell
 
-You can use the `Get-SDDCDiagnosticInfo` PowerShell cmdlet (a.k.a. `Get-PCStorageDiagnosticInfo`, previously known as `Test-StorageHealth`) to gather logs for and perform health checks for Failover Clustering (cluster, resources, networks, nodes), Storage Spaces (physical disks, enclosures, virtual disks), Cluster Shared Volumes, SMB file shares, and Deduplication.
+You can use the `Get-SDDCDiagnosticInfo` PowerShell cmdlet (also known as `Get-PCStorageDiagnosticInfo`, previously known as `Test-StorageHealth`) to gather logs for and perform health checks for Failover Clustering (cluster, resources, networks, nodes), Storage Spaces (physical disks, enclosures, virtual disks), Cluster Shared Volumes, SMB file shares, and Deduplication.
 
 There are two methods of installing the script: PowerShell Gallery and GitHub. Both are outlined below.
 
@@ -181,7 +181,7 @@ This report is being continually updated to include more useful information. For
 
 ### Logs and XML files
 
-The script runs various log gathering scripts and saves the output as xml files. We collect cluster and health logs, system information (MSInfo32), unfiltered event logs (failover clustering, dis diagnostics, hyper-v, storage spaces, and more), and storage diagnostics information (operational logs). For the latest information on what information is collected, see the [GitHub README (what we collect)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include).
+The script runs various log gathering scripts and saves the output as xml files. We collect cluster and health logs, system information (MSInfo32), unfiltered event logs (failover clustering, dis diagnostics, Hyper-V, storage spaces, and more), and storage diagnostics information (operational logs). For the latest information on what information is collected, see the [GitHub README (what we collect)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include).
 
 ## How to consume XML files from Get-PCStorageDiagnosticInfo
 You can consume the data from the XML files provided in data collected by the `Get-PCStorageDiagnosticInfo` cmdlet. These files have information about the virtual disks, physical disks, basic cluster info and other PowerShell related outputs.
