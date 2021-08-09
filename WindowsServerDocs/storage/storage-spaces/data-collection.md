@@ -4,7 +4,7 @@ description: Understanding Storage Spaces Direct diagnostic data collection tool
 ms.author: adagashe
 ms.topic: article
 author: adagashe
-ms.date: 08/06/2021
+ms.date: 08/09/2021
 ---
 # Collect diagnostic data with Storage Spaces Direct
 
@@ -31,6 +31,10 @@ To install SDDC diagnostic tools and begin collecting data, follow these steps:
 2. To begin collecting diagnostic data, click **Collect**. You should see a message that says "Collecting diagnostic information. This may take a few minutes." After the initial data collection, if you want to automatically collect data every 24 hours, change the slider to **On**.
 
 :::image type="content" source="media/data-collection/collect-diagnostic-data.png" alt-text="Click Collect to being collecting diagnostic data." lightbox="media/data-collection/collect-diagnostic-data.png":::
+
+3. Data collection is not complete until you see the screenshot below. To view collected diagnostic information, choose **Download (.zip)** or **Open in Files tool**.
+
+:::image type="content" source="media/data-collection/view-diagnostic-information.png" alt-text="To view diagnostic information, you can either download a .zip file or open in Files tool." lightbox="media/data-collection/view-diagnostic-information.png":::
 
 ## Installing Get-SDDCDiagnosticInfo with PowerShell
 
