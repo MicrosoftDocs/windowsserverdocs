@@ -22,7 +22,7 @@ This article contains two main sections:
 
 -   [Accessing the Windows Update settings in Group Policy](#accessing-the-windows-update-settings-in-group-policy) provides general guidance about using the Group Policy Management Editor (GPME). It also has information about accessing the policy extensions and Maintenance Scheduler settings in Group Policy for update services.
 
--   [Changes to WSUS relevant to this guide](#changes-to-wsus-relevant-to-this-guide) gives a brief summary of key differences between the current and past versions of WSUS relevant to this guide. It's for administrators familiar with WSUS 3.2 and previous versions.
+-   [Changes to WSUS relevant to this guide](#changes-to-wsus) gives a brief summary of key differences between the current and past versions of WSUS relevant to this guide. It's for administrators familiar with WSUS 3.2 and previous versions.
 
 -   [Terms and definitions](#terms-and-definitions) defines terms that pertain to WSUS and update services.
 
