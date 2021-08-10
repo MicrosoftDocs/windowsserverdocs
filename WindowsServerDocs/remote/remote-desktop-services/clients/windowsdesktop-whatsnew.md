@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/27/2021
+ms.date: 08/10/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -18,14 +18,31 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.2222        |1.2.1672                  |
-|Insider    |1.2.2222        |1.2.1672                  |
+|Public     |1.2.2223        |1.2.1672                  |
+|Insider    |1.2.2319        |1.2.1672                  |
+
+## Updates for version 1.2.2319 (Insiders)
+
+*Date published: 08/10/2021*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Added updates to Teams on Azure Virtual Desktop, including:
+  - Fixed an issue that caused the screen to turn black when Direct X wasn't available for hardware decoding.
+  - Fixed a software decoding and camera preview issue that happened when falling back to software decode.
+
+## Updates for version 1.2.2223
+
+*Date published: 08/10/2021*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Fixed the security vulnerability known as [CVE-2021-34535](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34535).
 
 ## Updates for version 1.2.2222
 
 *Date published: 07/27/2021*
-
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - The client also updates in the background when the auto-update feature is enabled, no remote connection is active, and MSRDCW.exe isn't running.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
