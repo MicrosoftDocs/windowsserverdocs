@@ -44,7 +44,8 @@
       "extendBreadcrumb": true,
       "feedback_system": "None",
 	  "hide_comments": true,
-	  "searchScope": ["Windows-10"]
+	  "searchScope": ["Windows-10"],
+    "recommendations": true
     },
     "fileMetadata": {
       "open_to_public_contributors": {
