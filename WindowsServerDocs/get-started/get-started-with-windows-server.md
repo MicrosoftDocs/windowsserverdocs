@@ -13,7 +13,7 @@ ms.prod: windows-server
 
 Windows Server is the platform for building an infrastructure of connected applications, networks, and web services, from the workgroup to the data center. It bridges on-premises environments with Azure, adding additional layers of security while helping you modernize your applications and infrastructure.
 
-This collection of articles contains detailed information to help you understand and get the most from Windows Server, and help determine if you're ready to move to the latest version. First, learn Once you've checked the system requirements, upgrade options, and other information about Windows Server, you're ready to start down the path of installing the best edition and installation option for your needs.
+This collection of articles contains detailed information to help you understand and get the most from Windows Server, and help determine if you're ready to move to the latest version. Once you've checked the system requirements, upgrade options, and other information about Windows Server, you're ready to start down the path of installing the best edition and installation option for your needs.
 
 > [!TIP]
 > To download Windows Server, see [Windows Server evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server) in the Evaluation Center.
@@ -23,7 +23,7 @@ This collection of articles contains detailed information to help you understand
 
 ## Support and feedback
 
-For the latest news on Windows Server, visit the [Windows Server blog](https://cloudblogs.microsoft.com/windowsserver/) to stay up to date on announcements, features, events and other information from the Windows Server engineering teams. You can also visit the [Windows Server Community](hhttps://techcommunity.microsoft.com/t5/windows-server/ct-p/Windows-Server) to share best practices, get latest news, and learn from experts about Windows Server.
+For the latest news on Windows Server, visit the [Windows Server blog](https://cloudblogs.microsoft.com/windowsserver/) to stay up to date on announcements, features, events, and other information from the Windows Server engineering teams. You can also visit the [Windows Server Community](hhttps://techcommunity.microsoft.com/t5/windows-server/ct-p/Windows-Server) to share best practices, get latest news, and learn from experts about Windows Server.
 
 ## Learn
 
@@ -35,10 +35,10 @@ The Windows Insider Program for Windows Server provides preview builds of Window
 
 ## Next Steps
 
-To get started, find out more details from these resources.
+To get started, find out more from these resources.
 
 * [What's new in Windows Server 2022](../windows-server-2022/get-started/whats-new.md) provides an overview of the latest features Windows Server.
 * Learn about the [different servicing channels](../get-started-19/servicing-channels-19.md), which each is used for, and what it means for your workloads and support. After that, learn about the [different editions](../get-started-19/editions-comparison-19.md) available for those servicing channels.
 * Understand the [hardware requirements](../get-started-19/sys-reqs-19.md) to run Windows Server.
-* Follow the Microsoft Learn learning path on [Windows Server deployment, configuration, and administration](/learn/paths/windows-server-deployment-configuration-administration/)
+* Follow the Microsoft Learn learning path on [Windows Server deployment, configuration, and administration](/learn/paths/windows-server-deployment-configuration-administration/).
 * If you still need to use Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, or Windows Server 2012 R2, [extended security updates](extended-security-updates.md) are available to help keep you safe with security updates and bulletins rated critical and important.
