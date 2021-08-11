@@ -33,7 +33,7 @@ Browse several learning paths for Windows Server at [Microsoft Learn](/learn/bro
 
 The Windows Insider Program for Windows Server provides preview builds of Windows Server allowing you early access to learn, test, and help shape the future of Windows Server. To learn more, you can get started with the [Windows Insider Program for Windows Server](https://insider.windows.com/for-business-getting-started-server) and participate in the [Windows Server Insiders Community](https://techcommunity.microsoft.com/t5/windows-server-insiders/bd-p/WindowsServerInsiders).
 
-## Next Steps
+## Next steps
 
 To get started, find out more from these resources.
 
