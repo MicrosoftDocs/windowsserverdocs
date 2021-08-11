@@ -10064,6 +10064,11 @@
       "source_path": "WindowsServerDocs/administration/server-performance-advisor/server-performance-advisor-pack-development-guide.md",
       "redirect_url": "/windows-server/administration/performance-tuning",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/data-collection.md",
+      "redirect_url": "/azure-stack/hci/manage/collect-diagnostic-data",
+      "redirect_document_id": false
     }
   ]
 }
