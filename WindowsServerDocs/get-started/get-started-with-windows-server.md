@@ -23,7 +23,7 @@ This collection of articles contains detailed information to help you understand
 
 ## Support and feedback
 
-For the latest news on Windows Server, visit the [Windows Server blog](https://cloudblogs.microsoft.com/windowsserver/) to stay up to date on announcements, features, events, and other information from the Windows Server engineering teams. You can also visit the [Windows Server Community](hhttps://techcommunity.microsoft.com/t5/windows-server/ct-p/Windows-Server) to share best practices, get latest news, and learn from experts about Windows Server.
+For the latest news on Windows Server, visit the [Windows Server blog](https://cloudblogs.microsoft.com/windowsserver/) to stay up to date on announcements, features, events, and other information from the Windows Server engineering teams. You can also visit the [Windows Server Community](https://techcommunity.microsoft.com/t5/windows-server/ct-p/Windows-Server) to share best practices, get latest news, and learn from experts about Windows Server.
 
 ## Learn
 
