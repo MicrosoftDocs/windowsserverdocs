@@ -1,5 +1,5 @@
 # Get Started
-## [Get Started with Windows Server 2016](Server-Basics.md)
+## [Get started with Windows Server](get-started-with-windows-server.md)
 ## What's new in Windows Server
 ### [Windows Server 2022](whats-new-in-windows-server-2022.md)
 ### [Windows Server, version 2004 and 20H2](whats-new-in-windows-server-2004.md)
