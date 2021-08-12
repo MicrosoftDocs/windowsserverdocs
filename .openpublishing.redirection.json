@@ -10069,6 +10069,21 @@
       "source_path": "WindowsServerDocs/storage/storage-spaces/data-collection.md",
       "redirect_url": "/azure-stack/hci/manage/collect-diagnostic-data",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Server-Basics.md",
+      "redirect_url": "/windows-server/get-started/get-started-with-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-console.md",
+      "redirect_url": "/windows-server/administration/changes-to-the-windows-console",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
     }
   ]
 }
