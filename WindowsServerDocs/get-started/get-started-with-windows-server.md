@@ -19,7 +19,7 @@ This collection of articles contains detailed information to help you understand
 > To download Windows Server, see [Windows Server evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server) in the Evaluation Center.
 
 > [!NOTE]
-> If you're looking for information about earlier versions that are no longer in support, see the [Windows previous versions documentation](/previous-versions/windows/).
+> If you're looking for information about earlier versions that are no longer supported, see the [Windows previous versions documentation](/previous-versions/windows/).
 
 ## Support and feedback
 
