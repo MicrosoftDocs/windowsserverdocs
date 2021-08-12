@@ -45,6 +45,8 @@
 #### [Express update delivery ISV support](windows-server-update-services/deploy/express-update-delivery-isv-support.md)
 ##### [Monthly Delta-update ISV support without WSUS](windows-server-update-services/deploy/monthly-delta-update-isv-support-without-WSUS.md)
 #### [Migrating the WSUS database from Windows Internal Database (WID) to SQL](windows-server-update-services/manage/wid-to-sql-migration.md)
+### [Windows Console behavior in Windows Server](changes-to-the-windows-console.md)
+
 
 ## Collect information about your environment and systems
 ### [System Insights](..\manage\system-insights\overview.md)

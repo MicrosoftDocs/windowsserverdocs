@@ -55,7 +55,7 @@ Secure connections are at the heart of today’s interconnected systems. Transpo
 
 #### Secure DNS: Encrypted DNS name resolution requests with DNS-over-HTTPS
 
-DNS Client in Windows Server 2022 now supports DNS-over-HTTPS (DoH) which encrypts DNS queries using the HTTPS protocol. This helps keep your traffic as private as possible by preventing eavesdropping and your DNS data being manipulated. Learn more about [configuring the DNS client to use DoH](../../networking/dns/doh-client-support.md).
+DNS Client in Windows Server 2022 now supports DNS-over-HTTPS (DoH) which encrypts DNS queries using the HTTPS protocol. This helps keep your traffic as private as possible by preventing eavesdropping and your DNS data being manipulated. Learn more about [configuring the DNS client to use DoH](../networking/dns/doh-client-support.md).
 
 #### Server Message Block (SMB): SMB AES-256 encryption for the most security conscious
 
@@ -67,7 +67,7 @@ Windows Server failover clusters now support granular control of encrypting and 
 
 #### SMB over QUIC
 
-SMB over QUIC updates the SMB 3.1.1 protocol in Windows Server 2022 Datacenter: Azure Edition and supported Windows clients to use the QUIC protocol instead of TCP. By using SMB over QUIC along with TLS 1.3, users and applications can securely and reliably access data from edge file servers running in Azure. Mobile and telecommuter users no longer need a VPN to access their file servers over SMB when on Windows. More information can be found at the [SMB over QUIC documentation](../../storage/file-server/smb-over-quic.md).
+SMB over QUIC updates the SMB 3.1.1 protocol in Windows Server 2022 Datacenter: Azure Edition and supported Windows clients to use the QUIC protocol instead of TCP. By using SMB over QUIC along with TLS 1.3, users and applications can securely and reliably access data from edge file servers running in Azure. Mobile and telecommuter users no longer need a VPN to access their file servers over SMB when on Windows. More information can be found at the [SMB over QUIC documentation](../storage/file-server/smb-over-quic.md).
 
 ## Azure hybrid capabilities
 
@@ -79,7 +79,7 @@ Azure Arc enabled servers with Windows Server 2022 brings on-premises and multi-
 
 ### Windows Admin Center
 
-Improvements to Windows Admin Center to manage Windows Server 2022 include capabilities to both report on the current state of the Secured-core features mentioned above, and where applicable, allow customers to enable the features. More information on these and many more improvements to Windows Admin Center can be found at the [Windows Admin Center documentation](../../manage/windows-admin-center/understand/what-is.md).
+Improvements to Windows Admin Center to manage Windows Server 2022 include capabilities to both report on the current state of the Secured-core features mentioned above, and where applicable, allow customers to enable the features. More information on these and many more improvements to Windows Admin Center can be found at the [Windows Admin Center documentation](../manage/windows-admin-center/understand/what-is.md).
 
 ### Azure Automanage - Hotpatch
 
@@ -126,8 +126,8 @@ Enhancements to Storage Migration Service in Windows Server 2022 makes it easier
 
 #### Storage bus cache with Storage Spaces on standalone servers
 
-Storage bus cache is now available for standalone servers. It can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. Similar to its implementation for Storage Spaces Direct, this feature binds together faster media (for example, NVMe or SSD) with slower media (for example, HDD) to create tiers. A portion of the faster media tier is reserved for the cache. To learn more, see [Enable storage bus cache with Storage Spaces on standalone servers](../../storage/storage-spaces/storage-spaces-storage-bus-cache.md).
+Storage bus cache is now available for standalone servers. It can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. Similar to its implementation for Storage Spaces Direct, this feature binds together faster media (for example, NVMe or SSD) with slower media (for example, HDD) to create tiers. A portion of the faster media tier is reserved for the cache. To learn more, see [Enable storage bus cache with Storage Spaces on standalone servers](../storage/storage-spaces/storage-spaces-storage-bus-cache.md).
 
 #### SMB compression
 
-Enhancement to SMB in Windows Server 2022 and Windows 11 allows a user or application to compress files as they transfer over the network. Users no longer have to manually zip files in order to transfer much faster on slower or more congested networks. For details, see [SMB Compression](https://aka.ms/smbcompression).
+Enhancement to SMB in Windows Server 2022 and Windows 11 allows a user or application to compress files as they transfer over the network. Users no longer have to manually zip files in order to transfer much faster on slower or more congested networks. For details, see [SMB Compression](../storage/file-server/smb-compression.md).
