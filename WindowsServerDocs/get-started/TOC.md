@@ -1,12 +1,11 @@
 # Get Started
 ## [Get Started with Windows Server 2016](Server-Basics.md)
-## [What's New in Windows Server](whats-new-in-windows-server.md)
-### [What's new in Windows Server, version 2004 and 20H2](whats-new-in-windows-server-2004.md)
-### [What's new in Windows Server, version 1903 and 1909](..\get-started-19\whats-new-in-windows-server-1903-1909.md)
-### [What's New in Windows Server 2019](../get-started-19/whats-new-19.md)
-### [What's New in Windows Server 2016](whats-new-in-windows-server-2016.md)
-### [Express updates available for Windows Server 2016](express-updates.md)
-### [What's New in the Windows Console in Windows Server 2016](whats-new-in-console.md)
+## What's new in Windows Server
+### [Windows Server 2022](whats-new-in-windows-server-2022.md)
+### [Windows Server, version 2004 and 20H2](whats-new-in-windows-server-2004.md)
+### [Windows Server, version 1903 and 1909](..\get-started-19\whats-new-in-windows-server-1903-1909.md)
+### [Windows Server 2019](../get-started-19/whats-new-19.md)
+### [Windows Server 2016](whats-new-in-windows-server-2016.md)
 ## [Comparison of servicing channels](..\get-started-19\servicing-channels-19.md)
 ## [Installation and Upgrade of Windows Server Releases](Installation-and-Upgrade.md)
 ## [Upgrade Windows Server 2008 and Windows Server 2008 R2](modernize-windows-server-2008.md)
