@@ -1,0 +1,119 @@
+items:
+- name: Get started
+  expanded: true
+  items:
+    - name: Get started with Windows Server
+      href: get-started-with-windows-server.md
+    - name: Overview
+      expanded: true
+      items:
+        - name: What's new in Windows Server
+          items: 
+          - name: Windows Server 2022
+            href: whats-new-in-windows-server-2022.md
+          - name: Windows Server, version 2004 and 20H2
+            href: whats-new-in-windows-server-2004.md
+          - name: Windows Server, version 1903 and 1909
+            href: ..\get-started-19\whats-new-in-windows-server-1903-1909.md
+          - name: Windows Server 2019
+            href: ../get-started-19/whats-new-19.md
+          - name: Windows Server 2016
+            href: whats-new-in-windows-server-2016.md
+    - name: Comparison of servicing channels
+      href: ..\get-started-19\servicing-channels-19.md
+    - name: Installation and Upgrade of Windows Server Releases
+      href: Installation-and-Upgrade.md
+    - name: Upgrade Windows Server 2008 and Windows Server 2008 R2
+      href: modernize-windows-server-2008.md
+      items: 
+        - name: Windows Server 2008/2008 R2 Extended Security Updates
+          href: extended-security-updates.md
+        - name: Upload a Windows Server 2008/2008 R2 specialized image to Azure
+          href: uploading-specialized-WS08-image-to-azure.md
+    - name: Migration of Windows Server Roles and Features
+      href: Migrate-Roles-and-Features.md
+    - name: Windows Server 2016 System Requirements
+      href: System-Requirements.md
+    - name: "Release Notes: Important issues in Windows Server 2016"
+      href: Windows-Server-2016-GA-Release-Notes.md
+    - name: Recommendations for moving to Windows Server 2016
+      href: Recommendations-moving-to-Server2016.md
+    - name: Upgrade and Conversion Options for Windows Server 2016
+      href: Supported-Upgrade-paths.md
+    - name: Windows Server 2016 Role Upgrade and Migration
+      href: Server-Role-Upgradeability-Table.md
+    - name: Windows Server 2016 Application Compatibility Table
+      href: Server-Application-compatibility.md
+    - name: Features removed or planned for replacement in Windows Server
+      href: ../get-started-19/removed-features.md
+    - name: Features Removed or Deprecated in Windows Server 2016
+      href: Deprecated-Features.md
+    - name: Windows Server 2016 Edition Comparison
+      href: 2016-Edition-Comparison.md
+    - name: Azure Hybrid Benefit for Windows Server
+      href: azure-hybrid-benefit.md
+    - name: Windows Server 2016 Activation Guide
+      items: 
+        - name: Windows Server 2016 Activation Guide
+          href: Server-2016-activation.md
+        - name: KMS Client Setup Keys
+          href: KMSclientkeys.md
+    - name: Troubleshooting Windows volume activation
+      items: 
+        - name: Troubleshooting Windows volume activation
+          href: activation-troubleshooting-guide.md
+        - name: Guidelines for troubleshooting KMS
+          href: activation-troubleshoot-kms-general.md
+        - name: Slmgr.vbs options
+          href: activation-slmgr-vbs-options.md
+        - name: Solutions to common activation issues
+          items: 
+            - name: Resolve Windows activation error codes
+              href: activation-error-codes.md
+            - name: "KMS activation: known issues"
+              href: activation-troubleshoot-KMS-issues.md
+            - name: "MAK activation: known issues"
+              href: activation-troubleshoot-MAK-issues.md
+            - name: Guidelines for troubleshooting DNS-related activation issues
+              href: common-troubleshooting-procedures-kms-dns.md
+            - name: Rebuild the Tokens.dat file
+              href: activation-rebuild-tokens-dat-file.md
+        - name: "Example: Troubleshooting ADBA clients that do not activate"
+          href: activation-troubleshoot-adba-clients.md
+    - name: Install Nano Server
+      href: Getting-started-with-Nano-Server.md
+      items: 
+        - name: Changes to Nano Server in the next release of Windows Server
+          href: nano-in-semi-annual-channel.md
+        - name: Nano Server Quick Start
+          href: Nano-Server-Quick-start.md
+        - name: Deploy Nano Server
+          href: Deploy-Nano-Server.md
+          items: 
+            - name: IIS on Nano Server
+              href: IIS-on-Nano-Server.md
+            - name: MPIO on Nano Server
+              href: MPIO-on-Nano-Server.md
+        - name: Manage Nano Server
+          href: Manage-Nano-Server.md
+          items: 
+            - name: Service and Update Nano Server
+              href: Update-Nano-Server.md
+        - name: Developing on Nano Server
+          href: Developing-on-Nano-Server.md
+          items: 
+            - name: PowerShell on Nano Server
+              href: powershell-on-Nano-Server.md
+            - name: Developing PowerShell Cmdlets for Nano Server
+              href: Developing-powershell-Cmdlets-for-Nano-Server.md
+        - name: Troubleshooting Nano Server
+          href: Troubleshooting-Nano-Server.md
+    - name: Install Server Core
+      href: Getting-started-with-Server-Core.md
+      items: 
+        - name: Configure Server Core with Sconfig.cmd
+          href: Sconfig-on-WS2016.md
+    - name: Install Server with Desktop Experience
+      href: Getting-started-with-Server-with-Desktop-Experience.md
+    - name: Windows Server release information
+      href: windows-server-release-info.md
