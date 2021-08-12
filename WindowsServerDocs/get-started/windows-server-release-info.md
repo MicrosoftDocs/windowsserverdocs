@@ -8,4 +8,4 @@ ms.author: v-nishmi
 ms.prod: windows-server
 ms.localizationpriority: high
 ---
-[!INCLUDE[Windows Server release information](~/_rip/windows/release-information/windows-server-release-info.md)]
+[!INCLUDE[Window Release Information](~/../_rip/windows/release-information/release-information.md)]
