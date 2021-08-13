@@ -10,17 +10,17 @@ metadata:
   manager: femila
   ms.service: windows-server
   ms.topic: hub-page
-  ms.date: 06/23/2021
+  ms.date: 08/13/2021
   ms.author: jgerend
 
 highlightedContent:
   items:
-    - title: Get started with Windows Server 2022
+    - title: Get started with Windows Server
       itemType: get-started
-      url: ./windows-server-2022/get-started-with-windows-server-2022.md
+      url: ./get-started/get-started-with-windows-server.md
     - title: What's new in Windows Server 2022?
       itemType: whats-new
-      url: ./windows-server-2022/get-started/whats-new.md
+      url: ./get-started/whats-new-in-windows-server-2022.md
     - title: Windows Admin Center
       itemType: overview
       url: ./manage/windows-admin-center/overview.md
@@ -36,7 +36,7 @@ highlightedContent:
     - title: Use Windows Server 2008 and 2008 R2 Extended Security Updates
       itemType: how-to-guide
       url: ./get-started/extended-security-updates.md
-    - title: Windows Insider Program for Server
+    - title: Windows Insider Program for Windows Server
       itemType: get-started
       url: /windows-insider/business/server-get-started
 
