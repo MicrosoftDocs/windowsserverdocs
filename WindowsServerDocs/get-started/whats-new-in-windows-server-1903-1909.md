@@ -1,6 +1,6 @@
 ---
 title: What's new in Windows Server, version 1903 and version 1909
-description: This topic describes some of the new features in Windows Server, version 1903 and version 1909, which are Semi-Annual Channel releases.
+description: This article describes some of the new features in Windows Server, version 1903 and version 1909, which are Semi-Annual Channel releases.
 ms.topic: article
 author: dknappettmsft
 ms.author: daknappe
@@ -14,11 +14,11 @@ ms.prod: windows-server
 > [!IMPORTANT]
 > Windows Server, version 1903 has reached end of servicing as of December 8, 2020. Windows Server, version 1909 has reached end of servicing as of May 11, 2021.
 
-This topic describes some of the new features covering both Windows Server, version 1903 and version 1909, which are Semi-Annual Channel releases. These features include enhancements for running and managing containers, tools for working in Server Core installations, and the ability to migrate storage from Linux devices.
+This article describes some of the new features covering both Windows Server, version 1903, and Windows Server, version 1909, which are Semi-Annual Channel releases. These features include enhancements for running and managing containers, tools for working in Server Core installations, and the ability to migrate storage from Linux devices.
 
 Windows Server, version 1909 is focused on reliability, performance, and other general improvements, but has no new features. Like other Semi-Annual Channel releases, it’s supported for 18 months from its first availability. For more information on the support dates of Semi-Annual Channel releases, see [Windows Server release information](../get-started/windows-server-release-info.md).
 
-The system requirements for this release are the same as for Windows Server 2019 - see [System requirements](../get-started-19/sys-reqs-19.md) for more information. To see what's been removed recently, see [Features Removed or Planned for Replacement starting with Windows Server, version 1903 and version 1909](../get-started-19/removed-features-1903.md)
+The system requirements for this release are the same as for Windows Server 2019, for more information see [System requirements](../get-started-19/sys-reqs-19.md) . To see what's been removed recently, see [Features Removed or Planned for Replacement starting with Windows Server, version 1903 and version 1909](../get-started-19/removed-features-1903.md)
 
 > [!NOTE]
 > Windows containers must use the same version of Windows as the host server, or an **earlier** version. For example, a host server running the released version of Windows Server, version 1903 (build 18342) can run Windows Server containers with the same or earlier version and build number (even if the container uses an Insider Preview version of Windows). For more information, see [Windows container version compatibility](/virtualization/windowscontainers/deploy-containers/version-compatibility).
@@ -42,7 +42,7 @@ We added more examples and compatibility information to the [Group Managed Servi
 
 ## Add Task Scheduler and Hyper-V Manager to Server Core installations
 
-As you might know, we recommend using the Server Core installation option when using Windows Server, Semi-Annual Channel in production. However, Server Core by default omits a number of useful management tools. You can add many of the most commonly used tools by installing the App Compatibility Feature on Demand feature package, but previously there were some key tools missing.
+As you might know, we recommend using the Server Core installation option when using Windows Server, Semi-Annual Channel in production. However, Server Core by default omits several useful management tools. You can add many of the most commonly used tools by installing the App Compatibility Feature on Demand feature package, but previously there were some key tools missing.
 
 Based on customer feedback, we added two more tools to the App Compatibility Feature on Demand feature package in this version: Task Scheduler (taskschd.msc) and Hyper-V Manager (virtmgmt.msc). For more information, see [Server Core App Compatibility Feature on Demand](../get-started-19/install-fod-19.md).
 
@@ -62,7 +62,7 @@ For more information about Storage Migration Service, see [Storage Migration Ser
 
 ## System Insights disk anomaly detection
 
-[System Insights](../manage/system-insights/overview.md) is a predictive analytics feature that locally analyzes Windows Server system data and provides insight into the functioning of the server. It comes with a number of built-in capabilities, but we've added the ability to install additional capabilities via Windows Admin Center, starting with disk anomaly detection.
+[System Insights](../manage/system-insights/overview.md) is a predictive analytics feature that locally analyzes Windows Server system data and provides insight into the functioning of the server. It comes with many built-in capabilities, but we've added the ability to install additional capabilities via Windows Admin Center, starting with disk anomaly detection.
 
 Disk anomaly detection is a new capability that highlights when disks are behaving *differently* than usual. While different isn't necessarily a bad thing, seeing these anomalous moments can be helpful when troubleshooting issues on your systems.
 
@@ -97,7 +97,7 @@ Windows Server includes [Microsoft Defender Antivirus](/microsoft-365/security/d
   - Integrity enforcement capabilities – Enable remote runtime attestation.
   - Tamper-proofing capabilities – Uses virtualization-based security to isolate critical ATP security capabilities away from the OS and attackers.
 - Microsoft Defender ATP next-gen protection technologies include:
-  - **Advanced machine learning**: Improved with advanced machine learning and AI models that enable it to protect against apex attackers using innovative vulnerability exploit techniques, tools and malware.
-  - **Emergency outbreak protection**: Provides emergency outbreak protection which will automatically update devices with new intelligence when a new outbreak has been detected.
+  - **Advanced machine learning**: Improved with advanced machine learning and AI models that enable it to protect against apex attackers using innovative vulnerability exploit techniques, tools, and malware.
+  - **Emergency outbreak protection**: Provides emergency outbreak protection, which will automatically update devices with new intelligence when a new outbreak has been detected.
   - **Certified ISO 27001 compliance**: Ensures that the cloud service has analyzed for threats, vulnerabilities and impacts, and that risk management and security controls are in place.
   - **Geolocation support**: Support geolocation and sovereignty of sample data as well as configurable retention policies.
