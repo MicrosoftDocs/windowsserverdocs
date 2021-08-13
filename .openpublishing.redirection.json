@@ -10084,6 +10084,11 @@
       "source_path": "WindowsServerDocs/windows-server-2022/get-started/whats-new.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/whats-new-in-windows-server-1903-1909.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-1903-1909",
+      "redirect_document_id": false
     }
   ]
 }
