@@ -83,7 +83,7 @@ For a complete list of what's new in SDN see, [What's New in SDN for Windows Ser
 
 - **Branch office improvements**
 
-    You can now run shielded virtual machines on machines with intermittent connectivity to the Host Guardian Service by leveraging the new [fallback HGS](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#fallback-configuration) and [offline mode](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#offline-mode) features. Fallback HGS allows you to configure a second set of URLs for Hyper-V to try if it can't reach your primary HGS server.
+    You can now run shielded virtual machines on machines with intermittent connectivity to the Host Guardian Service by using the new [fallback HGS](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#fallback-configuration) and [offline mode](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#offline-mode) features. Fallback HGS allows you to configure a second set of URLs for Hyper-V to try if it can't reach your primary HGS server.
 
     Offline mode allows you to continue to start up your shielded VMs, even if HGS can't be reached, as long as the VM has started successfully once, and the host's security configuration has not changed.
 
@@ -159,7 +159,7 @@ It is now possible to run Windows and Linux-based containers on the same contain
 
 ### Built-in support for Kubernetes
 
-Windows Server 2019 continues the improvements to compute, networking and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details are available in upcoming Kubernetes releases.
+Windows Server 2019 continues the improvements to compute, networking, and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details are available in upcoming Kubernetes releases.
 
 - [Container Networking](../networking/sdn/technologies/containers/container-networking-overview.md) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins.
 
@@ -214,4 +214,4 @@ Now, with Windows Server 2019, it's easy to deploy and manage through a new depl
 
 ### Persistent Memory support for Hyper-V VMs
 
-To leverage the high throughput and low latency of persistent memory (a.k.a. storage class memory) in virtual machines, it can now be projected directly into VMs. This can help to drastically reduce database transaction latency or reduce recovery times for low latency in-memory databases on failure.
+To leverage the high throughput and low latency of persistent memory (also known as storage class memory) in virtual machines, it can now be projected directly into VMs. This can help to drastically reduce database transaction latency or reduce recovery times for low latency in-memory databases on failure.
