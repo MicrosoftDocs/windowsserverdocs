@@ -10089,6 +10089,11 @@
       "source_path": "WindowsServerDocs/get-started-19/whats-new-in-windows-server-1903-1909.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-1903-1909",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/whats-new-19.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
     }
   ]
 }
