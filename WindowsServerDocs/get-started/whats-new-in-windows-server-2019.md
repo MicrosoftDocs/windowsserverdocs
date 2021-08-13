@@ -1,6 +1,6 @@
 ---
 title: What's new in Windows Server 2019
-description: An overview of new features in Windows Server 2019, including Desktop Experience, Storage Migration Service, System Insights, Azure Network Adapter, improvements to Storage Spaces Direct, and other changes.
+description: This article describes some of the new features in Windows Server 2019.
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
@@ -9,11 +9,7 @@ ms.date: 06/04/2019
 ---
 # What's new in Windows Server 2019
 
->Applies to: Windows Server 2019
-
-This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid Cloud, Security, Application Platform, and Hyper-Converged Infrastructure (HCI).
-
-To find out what's new in Windows Server Semi-Annual Channel releases, see [What's New in Windows Server](../get-started/whats-new-in-windows-server.md).
+This article describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid Cloud, Security, Application Platform, and Hyper-Converged Infrastructure (HCI).
 
 ## General
 
