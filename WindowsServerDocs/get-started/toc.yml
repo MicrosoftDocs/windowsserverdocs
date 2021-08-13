@@ -16,7 +16,7 @@ items:
           - name: Windows Server, version 1903 and 1909
             href: whats-new-in-windows-server-1903-1909.md
           - name: Windows Server 2019
-            href: ../get-started-19/whats-new-19.md
+            href: whats-new-in-windows-server-2019.md
           - name: Windows Server 2016
             href: whats-new-in-windows-server-2016.md
     - name: Comparison of servicing channels
