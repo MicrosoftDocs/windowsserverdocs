@@ -19,8 +19,28 @@ items:
             href: whats-new-in-windows-server-2019.md
           - name: Windows Server 2016
             href: whats-new-in-windows-server-2016.md
-    - name: Comparison of servicing channels
-      href: ..\get-started-19\servicing-channels-19.md
+        - name: Servicing channels comparison
+          href: servicing-channels-comparison.md
+        - name: Editions comparison
+          items:
+          - name: Windows Server 2022
+            href: editions-comparison-windows-server-2022.md
+          - name: Windows Server 2019
+            href: editions-comparison-windows-server-2019.md
+          - name: Windows Server 2016
+            href: editions-comparison-windows-server-2016.md
+        - name: Hardware requirements
+          href: hardware-requirements.md
+        - name: Features removed or no longer developed
+          items: 
+          - name: Windows Server 2022
+            href: removed-deprecated-features-windows-server-2022.md 
+          - name: Windows Server, version 1903 and 1909
+            href: removed-deprecated-features-windows-server-1903-1909.md
+          - name: Windows Server 2019
+            href: removed-deprecated-features-windows-server-2019.md
+          - name: Windows Server 2016
+            href: removed-deprecated-features-windows-server-2016.md
     - name: Installation and Upgrade of Windows Server Releases
       href: Installation-and-Upgrade.md
     - name: Upgrade Windows Server 2008 and Windows Server 2008 R2
@@ -32,8 +52,6 @@ items:
           href: uploading-specialized-WS08-image-to-azure.md
     - name: Migration of Windows Server Roles and Features
       href: Migrate-Roles-and-Features.md
-    - name: Windows Server 2016 System Requirements
-      href: System-Requirements.md
     - name: "Release Notes: Important issues in Windows Server 2016"
       href: Windows-Server-2016-GA-Release-Notes.md
     - name: Recommendations for moving to Windows Server 2016
@@ -44,12 +62,6 @@ items:
       href: Server-Role-Upgradeability-Table.md
     - name: Windows Server 2016 Application Compatibility Table
       href: Server-Application-compatibility.md
-    - name: Features removed or planned for replacement in Windows Server
-      href: ../get-started-19/removed-features.md
-    - name: Features Removed or Deprecated in Windows Server 2016
-      href: Deprecated-Features.md
-    - name: Windows Server 2016 Edition Comparison
-      href: 2016-Edition-Comparison.md
     - name: Azure Hybrid Benefit for Windows Server
       href: azure-hybrid-benefit.md
     - name: Windows Server 2016 Activation Guide
@@ -115,5 +127,9 @@ items:
           href: Sconfig-on-WS2016.md
     - name: Install Server with Desktop Experience
       href: Getting-started-with-Server-with-Desktop-Experience.md
-    - name: Windows Server release information
-      href: windows-server-release-info.md
+    - name: Resources
+      items:
+      - name: Windows Server product page
+      href: https://www.microsoft.com/windows-server
+    - name: Windows Server license terms
+      href: ../windows-server-licensing/windows-server-licensing.md 
