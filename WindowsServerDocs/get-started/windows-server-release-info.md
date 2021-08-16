@@ -26,4 +26,4 @@ The Semi-Annual Channel in previous versions of Windows Server focused on contai
 | Windows Server 2016 (Long-Term Servicing Channel) (Datacenter, Essentials, Standard) | 1607 | 14393.0 | 10/15/2016 | 01/11/2022 | 01/11/2027 |
 
 >[!NOTE]
-> Windows Server, version 1803 and later are governed by the [Modern Lifecycle Policy](https://support.microsoft.com/help/30881). See the [Windows Lifecycle FAQ](https://support.microsoft.com/help/18581/lifecycle-faq-windows-products) and [Comparison of servicing channels](../get-started-19/servicing-channels-19.md) for details regarding servicing requirements and other important information.
+> Windows Server, version 1803 and later are governed by the [Modern Lifecycle Policy](https://support.microsoft.com/help/30881). See the [Windows Lifecycle FAQ](https://support.microsoft.com/help/18581/lifecycle-faq-windows-products) and [Comparison of servicing channels](../get-started/servicing-channels-comparison.md) for details regarding servicing requirements and other important information.
