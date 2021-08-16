@@ -79,7 +79,7 @@ You can then populate the results in the **Azure Hybrid Benefit for Windows Serv
 
 Be sure to perform an inventory in each subscription that you own to generate a comprehensive view of your licensing position.
 
-[Azure Hybrid Benefit WS SA Count Tool](https://download.microsoft.com/download/7/1/2/712FEFF0-155C-4ABF-96C0-CE4EC4DB0516/Azure_Hybrid_Benefit_Windows_Server_SA_Count_Tool.xlsx)
+> [Azure Hybrid Benefit WS SA Count Tool](https://download.microsoft.com/download/7/1/2/712FEFF0-155C-4ABF-96C0-CE4EC4DB0516/Azure_Hybrid_Benefit_Windows_Server_SA_Count_Tool.xlsx)
 
 If you performed the above and confirmed you are fully licensed for the number of Azure Hybrid Benefit instances you are running, there is no need for any further action. If you discovered you can cover incremental VMs with the benefit, you may want to optimize your costs further by switching to running instances with the benefit vs full cost.
 
