@@ -12,7 +12,7 @@ ms.date: 05/16/2018
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
-This topic for the IT professional describes how the Transport Layer Security (TLS) protocol works and provides links to the IETF RFCs for TLS 1.0, TLS 1.1, and TLS 1.2.
+This topic for the IT professional describes how the Transport Layer Security (TLS) protocol works and provides links to the IETF RFCs for TLS 1.0, TLS 1.1, TLS 1.2 and TLS 1.3.
 
 The TLS (and SSL) protocols are located between the application protocol layer and the TCP/IP layer, where they can secure and send application data to the transport layer. Because the protocols work between the application layer and the transport layer, TLS and SSL can support multiple application layer protocols.
 
@@ -42,6 +42,8 @@ The Schannel SSP implements the TLS and SSL protocols without modification. The 
 -   Mandatory Cipher Suites
 
 -   Application Data Protocol
+
+[RFC 8446 - The Transport Layer Security (TLS) Protocol Version 1.3](https://datatracker.ietf.org/doc/html/rfc8446)
 
 [RFC 5246 - The Transport Layer Security (TLS) Protocol Version 1.2](http://tools.ietf.org/html/rfc5246)
 
