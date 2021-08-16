@@ -130,6 +130,6 @@ items:
     - name: Resources
       items:
       - name: Windows Server product page
-      href: https://www.microsoft.com/windows-server
-    - name: Windows Server license terms
-      href: ../windows-server-licensing/windows-server-licensing.md 
+        href: https://www.microsoft.com/windows-server
+      - name: Windows Server license terms
+        href: ../windows-server-licensing/windows-server-licensing.md 
