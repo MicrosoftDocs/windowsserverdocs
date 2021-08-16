@@ -507,7 +507,7 @@
     },
     {
       "source_path": "WindowsServerDocs/get-started/semi-annual-channel-overview.md",
-      "redirect_url": "/windows-server/get-started-19/servicing-channels-19",
+      "redirect_url": "/windows-server/get-started/servicing-channels-comparison",
       "redirect_document_id": true
     },
     {

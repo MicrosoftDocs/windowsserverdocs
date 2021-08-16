@@ -21,7 +21,7 @@ Find out what's new in Windows Server 2019.
 
 :::row:::
    :::column span="":::
-      [**Servicing channels**](servicing-channels-19.md) <br>Better plan your deployment and patching schedules by understanding the difference between our Long Term Servicing Channel (LTSB) and Semi-Annual Channel (SAC) releases.
+      [**Servicing channels**](../get-started/servicing-channels-comparison.md) <br>Better plan your deployment and patching schedules by understanding the difference between our Long Term Servicing Channel (LTSB) and Semi-Annual Channel (SAC) releases.
    :::column-end:::
    :::column span="":::
       [**Install, Upgrade , Migrate**](install-upgrade-migrate-19.md) <br>You can move to Windows Server 2019 a number of ways. Whether you are newly installing, upgrading in-place, or migrating applications and Server Roles, discover the best approach here.
