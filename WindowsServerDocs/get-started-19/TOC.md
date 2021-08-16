@@ -1,7 +1,7 @@
 # [Get started with Windows Server](../get-started/get-started-with-windows-server.md)
 ## [What's new in Windows Server 2019](../get-started/whats-new-in-windows-server-2019.md)
 ## [What's new in Windows Server, versions 1903 and 1909](../get-started/whats-new-in-windows-server-1903-1909.md)
-## [Comparison of servicing channels](servicing-channels-19.md)
+## [Comparison of servicing channels](../get-started/servicing-channels-comparison.md)
 ## [Install | Upgrade | Migrate](install-upgrade-migrate-19.md)
 ## [Release notes: Important issues in Windows Server 2019](rel-notes-19.md)
 ## [System requirements](sys-reqs-19.md)

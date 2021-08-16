@@ -11,11 +11,11 @@ ms.prod: windows-server
 
 # Comparison of Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022
 
->Applies to: Windows Server 2022
+Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022 to see which will be most appropriate. See [Features available generally](#features-available-generally) to understand the difference in features.
 
 ## Locks and Limits
 
-| Locks and Limits                 | Windows Server 2022 Standard | Windows Server 2022 Datacenter |
+| Locks and Limits                 | Windows Server 2022 Standard | Windows Server 2022 Datacenter | Windows Server 2022 Datacenter: Azure Edition |
 | -------------------              | ---------------------------  | --------------------------- |
 | Maximum number of users          | Based on CALs                | Based on CALs |
 | Maximum SMB connections          | 16,777,216                   | 16,777,216 |
@@ -71,7 +71,7 @@ ms.prod: windows-server
 
 ## Features
 
-|Windows Server Features installable with Server Manager (or PowerShell)|Windows Server 2022 Standard|Windows Server 2022 Datacenter|
+|Windows Server Features available|Windows Server 2022 Standard|Windows Server 2022 Datacenter|
 |-------------------|----------|---------------------------|
 |.NET Framework 3.5 |Yes|Yes|
 |.NET Framework 4.8 |Yes|Yes|

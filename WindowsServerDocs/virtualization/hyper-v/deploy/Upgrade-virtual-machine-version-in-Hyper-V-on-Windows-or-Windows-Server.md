@@ -75,7 +75,7 @@ The following table lists the VM configuration versions that are supported on ho
 
 ### Supported VM configuration versions for semi-annual channel hosts
 
-The following table lists the VM configuration versions for hosts running a currently supported semi-annual channel version of Windows. To get more information on semi-annual channel versions of Windows, visit the following pages for [Windows Server](../../../get-started-19/servicing-channels-19.md) and [Windows 10](/windows/deployment/update/waas-overview#servicing-channels)
+The following table lists the VM configuration versions for hosts running a currently supported semi-annual channel version of Windows. To get more information on semi-annual channel versions of Windows, visit the following pages for [Windows Server](../../../get-started/servicing-channels-comparison.md) and [Windows 10](/windows/deployment/update/waas-overview#servicing-channels)
 
 | Hyper-V host Windows version | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
 | --- |---|---|---|---|---|---|---|---|---|---|

@@ -174,7 +174,7 @@
 ### Troubleshoot
 #### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
 #### [Health and operational states](storage-spaces/storage-spaces-states.md)
-#### [Collect data](storage-spaces/data-collection.md)
+#### [Collect data](/azure-stack/hci/manage/collect-diagnostic-data)
 #### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.yml)
 #### [Storage-class memory health management](storage-spaces/Storage-class-memory-health.md)
 

@@ -38,8 +38,9 @@ The Windows Insider Program for Windows Server provides preview builds of Window
 To get started, find out more from these resources.
 
 * [What's new in Windows Server 2022](../windows-server-2022/get-started/whats-new.md) provides an overview of the latest features in Windows Server.
-* Learn about the [different servicing channels](../get-started-19/servicing-channels-19.md), which each is used for, and what it means for your workloads and support. After that, learn about the [different editions](../get-started-19/editions-comparison-19.md) available for those servicing channels.
+* Learn about the [different servicing channels](../get-started/servicing-channels-comparison.md), which each is used for, and what it means for your workloads and support.
+* Compare the [differences in the editions in Windows Server 2022](../get-started/editions-comparison-windows-server-2022.md).
 * Choose the right installation option based on whether you want the [Desktop Experience](Getting-Started-with-Server-with-Desktop-Experience.md) or a [minimal Core interface](Getting-Started-with-Server-Core.md).
-* Understand the [hardware requirements](../get-started-19/sys-reqs-19.md) to run Windows Server.
+* Understand the [hardware requirements](../get-started/hardware-requirements.md) to run Windows Server.
 * Follow the Microsoft Learn learning path on [Windows Server deployment, configuration, and administration](/learn/paths/windows-server-deployment-configuration-administration/).
 * If you still need to use Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, or Windows Server 2012 R2, [extended security updates](extended-security-updates.md) are available to help keep you safe with security updates and bulletins rated critical and important.

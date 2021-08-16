@@ -17,7 +17,7 @@ When it comes to supported configurations for Remote Desktop Services environmen
 So with that in mind, here are basic guidelines for supported configurations of Remote Desktop Services in Windows Server.
 
 > [!NOTE]
-> Make sure to review the [system requirements for Windows Server 2016](../../get-started/system-requirements.md) and [system requirements for Windows Server 2019](../../get-started-19/sys-reqs-19.md).
+> Make sure to review the [system requirements for Windows Server](../../get-started/hardware-requirements.md).
 
 ## Best practices
 

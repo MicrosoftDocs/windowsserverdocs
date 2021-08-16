@@ -507,7 +507,7 @@
     },
     {
       "source_path": "WindowsServerDocs/get-started/semi-annual-channel-overview.md",
-      "redirect_url": "/windows-server/get-started-19/servicing-channels-19",
+      "redirect_url": "/windows-server/get-started/servicing-channels-comparison",
       "redirect_document_id": true
     },
     {
@@ -10093,6 +10093,51 @@
     {
       "source_path": "WindowsServerDocs/get-started-19/whats-new-19.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/system-requirements.md",
+      "redirect_url": "/windows-server/get-started/hardware-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/servicing-channels.md",
+      "redirect_url": "/windows-server/get-started/servicing-channels-comparison",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/editions-comparison.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/editions-comparison-19.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/2016-edition-comparison.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Deprecated-Features.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/removed-features-19.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/removed-features.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/removed-features-1903.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-1903-1909",
       "redirect_document_id": false
     }
   ]

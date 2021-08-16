@@ -1,17 +1,19 @@
 ---
-title: Windows Server 2016 Products and Editions
-description: Explains differences in the Windows Server Standard and Windows Server Datacenter editions
-ms.date: 10/04/2019
-ms.topic: article
-ms.assetid: c5ca3bfe-7ced-49f6-a932-80cab33f419e
+title: Comparison of Standard and Datacenter editions Windows Server 2016
+description: Comparison of Standard and Datacenter editions of Windows Server 2016.
+ms.topic: conceptual
 author: jasongerend
 ms.author: jgerend
-manager: dongill
+manager: femila
+ms.date: 08/16/2021
+ms.prod: windows-server
+ms.assetid: c5ca3bfe-7ced-49f6-a932-80cab33f419e
 ms.localizationpriority: medium
 ---
+
 # Comparison of Standard and Datacenter editions of Windows Server 2016
 
->Applies to: Windows Server 2016
+Use this article to compare Standard and Datacenter editions of Windows Server 2016 to see which will be most appropriate.
 
 ## Locks and Limits
 
@@ -25,7 +27,7 @@ ms.localizationpriority: medium
 | Maximum number of 64-bit sockets | 64     | 64                |
 | Maximum number of cores | unlimited       | unlimited      |
 | Maximum RAM             | 24 TB           | 24 TB             |
-| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; <strong>unlimited virtual machines</strong>, plus one Hyper-V host per license |
+| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
 | Server can join a domain | yes            | yes                |
 | Edge network protection/firewall | no     | no                 |
 | DirectAccess            | yes             | yes                |
@@ -57,9 +59,9 @@ ms.localizationpriority: medium
 | File and Storage Services|Work Folders|Yes|Yes|
 | File and Storage Services|Storage Services|Yes|Yes|
 | Host Guardian Service| |Yes|Yes|
-| Hyper-V| |Yes|Yes; <strong>including Shielded Virtual Machines</strong>|
+| Hyper-V| |Yes|Yes; **including Shielded Virtual Machines**|
 | MultiPoint Services| |Yes|Yes|
-| Network Controller| |No| <strong>Yes</strong> |
+| Network Controller| |No| **Yes** |
 | Network Policy and Access Services| |Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 | Print and Document Services| |Yes|Yes|
 | Remote Access| |Yes|Yes|
@@ -72,7 +74,7 @@ ms.localizationpriority: medium
 
 ## Features
 
-|Windows Server Features installable with Server Manager (or PowerShell)|Windows Server 2016 Standard|Windows Server 2016 Datacenter|
+|Windows Server Features available|Windows Server 2016 Standard|Windows Server 2016 Datacenter|
 |-------------------|----------|---------------------------|
 |.NET Framework 3.5|Yes|Yes|
 |.NET Framework 4.6|Yes|Yes|
@@ -87,7 +89,7 @@ ms.localizationpriority: medium
 |Enhanced Storage|Yes|Yes|
 |Failover Clustering|Yes|Yes|
 |Group Policy Management|Yes|Yes|
-|Host Guardian Hyper-V Support|No|<strong>Yes</strong> |
+|Host Guardian Hyper-V Support|No|**Yes** |
 |I/O Quality of Service|Yes|Yes|
 |IIS Hostable Web Core|Yes|Yes|
 |Internet Printing Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
@@ -113,7 +115,7 @@ ms.localizationpriority: medium
 |SMB Bandwidth Limit|Yes|Yes|
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
-|Software Load Balancer|No| <strong>Yes</strong> |
+|Software Load Balancer|No|**Yes** |
 |Storage Replica|No|Yes|
 |Telnet Client|Yes|Yes|
 |TFTP Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
@@ -150,15 +152,14 @@ ms.localizationpriority: medium
 |Nano Server installation option|Yes|Yes|
 |Server Manager|Yes|Yes|
 |SMB Direct and SMB over RDMA|Yes|Yes|
-| Software-defined Networking | No | <strong>Yes</strong> |
-|Storage Replica | No | <strong>Yes</strong> |
+| Software-defined Networking | No | **Yes** |
+|Storage Replica | No | **Yes** |
 |Storage Spaces|Yes|Yes|
-|Storage Spaces Direct|No| <strong>Yes</strong> |
+|Storage Spaces Direct|No| **Yes** |
 |Volume Activation Services|Yes|Yes|
 |VSS (Volume Shadow Copy Service) integration|Yes|Yes|
 |Windows Server Update Services|Yes|Yes|
 |Windows System Resource Manager|Yes|Yes|
 |Server license logging|Yes|Yes|
-|Inherited activation|As guest if hosted on Datacenter| <strong>Can be host or guest</strong> |
+|Inherited activation|As guest if hosted on Datacenter| **Can be host or guest** |
 |Work Folders|Yes|Yes|
-

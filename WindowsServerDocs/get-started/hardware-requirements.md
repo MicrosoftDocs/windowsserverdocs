@@ -1,24 +1,24 @@
 ---
-title: System requirements for Windows Server 2022
-description: This topic outlines the minimum system requirements to run Windows Server 2022.
-ms.topic: conceptual
+title: Hardware requirements for Windows Server
+description: What are the minimum hardware requirements for storage, CPU, network, memory, RAM for Windows Server.
+ms.topic: article
 author: dknappettmsft
 ms.author: daknappe
 manager: femila
-ms.date: 6/17/2021
+ms.date: 8/16/2021
 ms.prod: windows-server
+ms.localizationpriority: medium
+ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 ---
 
-# System requirements for Windows Server 2022
+# Hardware requirements for Windows Server
 
->Applies to: Windows Server 2022
+This article outlines the minimum hardware requirements to run Windows Server. If your computer has less than the minimum requirements, you will not be able to install this product correctly. Actual requirements will vary based on your system configuration and the applications and features you install.
 
-This topic outlines the minimum system requirements to run Windows Server 2022. If your computer has less than the minimum requirements, you will not be able to install this product correctly. Actual requirements will vary based on your system configuration and the applications and features you install.
-
-Unless otherwise specified, these minimum system requirements apply to all installation options (Server Core and Server with Desktop Experience) and both Standard and Datacenter editions.
+Unless otherwise specified, these minimum hardware requirements apply to all installation options (Server Core and Server with Desktop Experience) and both Standard and Datacenter editions.
 
 > [!IMPORTANT]
-> The highly diverse scope of potential deployments makes it unrealistic to state recommended system requirements that would be generally applicable. Consult documentation for each of the server roles you intend to deploy for more details about the resource needs of particular server roles. For the best results, conduct test deployments to determine appropriate system requirements for your particular deployment scenarios.
+> The highly diverse scope of potential deployments makes it unrealistic to state recommended hardware requirements that would be generally applicable. Consult documentation for each of the server roles you intend to deploy for more details about the resource needs of particular server roles. For the best results, conduct test deployments to determine appropriate hardware requirements for your particular deployment scenarios.
 
 ## Processor
 
@@ -53,7 +53,7 @@ The following are the estimated RAM requirements for this product:
 
 ## Storage controller and disk space requirements
 
-Computers that run Windows Server 2022 must include a storage adapter that is compliant with the PCI Express architecture specification. Persistent storage devices on servers classified as hard disk drives must not be PATA. Windows Server 2022 does not allow ATA/PATA/IDE/EIDE for boot, page, or data drives.
+Computers that run Windows Server  must include a storage adapter that is compliant with the PCI Express architecture specification. Persistent storage devices on servers classified as hard disk drives must not be PATA. Windows Server does not allow ATA/PATA/IDE/EIDE for boot, page, or data drives.
 
 The following are the estimated **minimum** disk space requirements for the system partition.
 
@@ -91,7 +91,7 @@ The following items are only required for certain features:
 - UEFI 2.3.1c-based system and firmware that supports secure boot
 - Trusted Platform Module
 - Graphics device and monitor capable of Super VGA (1024 x 768) or higher-resolution
-- Keyboard and Microsoft&reg; mouse (or other compatible pointing device)
+- Keyboard and Microsoft mouse (or other compatible pointing device)
 - Internet access (fees may apply)
 
 > [!NOTE]
