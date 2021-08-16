@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: 7e2b4540-de56-4d5f-bb8e-9f81ca0ea4eb
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/26/2018
+ms.date: 06/25/2021
 ---
 # Manage SDN
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can use the topics in this section to manage Software Defined Networking, including tenant workloads and virtual networks.
 

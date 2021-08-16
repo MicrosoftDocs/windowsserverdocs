@@ -11,7 +11,7 @@ ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
 
 # Managing Hyper-V hypervisor scheduler types
 
->Applies To: Windows 10, Windows Server 2016, Windows Server, version 1709, Windows Server, version 1803, Windows Server 2019
+>Applies to: Windows Server 2022, Windows 10, Windows Server 2016, Windows Server, version 1709, Windows Server, version 1803, Windows Server 2019
 
 This article describes new modes of virtual processor scheduling logic first introduced in Windows Server 2016. These modes, or scheduler types, determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors. A Hyper-V host administrator can select hypervisor scheduler types that are best suited for the guest virtual machines (VMs) and configure the VMs to take advantage of the scheduling logic.
 

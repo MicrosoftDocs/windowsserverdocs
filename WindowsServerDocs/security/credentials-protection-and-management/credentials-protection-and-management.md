@@ -10,7 +10,7 @@ ms.date: 10/12/2016
 ---
 # Credentials Protection and Management
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic for the IT professional discusses features and methods introduced in  Windows Server 2012 R2  and Windows 8.1 for credential protection and domain authentication controls to reduce credential theft.
 

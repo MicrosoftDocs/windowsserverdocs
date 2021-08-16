@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Develop an extension for Windows Admin Center
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin Center supports three types of extensions - tool extensions, solution extensions and gateway plugins. The SDK contains content and examples to guide you in building the different types of extensions/plugins.
 

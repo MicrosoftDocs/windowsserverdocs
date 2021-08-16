@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Get started with Windows Server 2019
 
-> Applies to: Windows Server 2019
+>Applies to: Windows Server 2019
 
 This collection contains detailed information to help you determine if you're ready to move to Windows Server 2019. Once you've checked the system requirements, upgrade options, and other information about moving to Windows Server 2019, you're ready to start down the path of installing the best edition and installation option for your needs. To download Windows Server 2019, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019).
 

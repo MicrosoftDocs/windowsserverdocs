@@ -10,7 +10,7 @@ ms.topic: article
 ---
 # Implementing Least-Privilege Administrative Models
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The following excerpt is from [The Administrator Accounts Security Planning Guide](/previous-versions/tn-archive/cc162797(v=technet.10)), first published on April 1, 1999:
 

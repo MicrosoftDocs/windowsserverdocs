@@ -9,7 +9,7 @@ ms.date: 01/15/2021
 ---
 # Troubleshooting Windows Admin Center
 
-> Applies to: Windows Admin Center, Windows Admin Center Preview, Azure Stack HCI, version v20H2
+>Applies to: Windows Admin Center, Windows Admin Center Preview, Azure Stack HCI, version v20H2
 
 > [!Important]
 > This guide will help you diagnose and resolve issues that are preventing you from using Windows Admin Center. If you are having an issue with a specific tool, please check to see if you are experiencing a [known issue.](./known-issues.md)

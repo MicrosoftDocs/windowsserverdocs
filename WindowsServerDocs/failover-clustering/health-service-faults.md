@@ -10,7 +10,7 @@ ms.date: 10/05/2017
 
 # Health Service faults
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 ## What are faults
 
@@ -362,7 +362,7 @@ In Windows Server 2016, the Health Service provides the following fault coverage
 
 #### FaultType: Microsoft.Health.FaultType.PhysicalDisk.UnrecognizedMetadata
 * Severity: Warning
-* Reason: *"The physical disk has unrecognised meta data."*
+* Reason: *"The physical disk has unrecognized meta data."*
 * RecommendedAction: *"This disk may contain data from an unknown storage pool. First make sure there is no useful data on this disk, then reset the disk."*
 
 #### FaultType: Microsoft.Health.FaultType.PhysicalDisk.FailedFirmwareUpdate
@@ -488,12 +488,12 @@ In Windows Server 2016, the Health Service provides the following fault coverage
 
 #### FaultType: Microsoft.Health.FaultType.FaultDomain.FirmwareVerifyVersionFaile
 * Severity: Warning
-* Reason: *"Firmware roll out was cancelled due to unreadable or unexpected firmware version information after applying a firmware update."*
+* Reason: *"Firmware roll out was canceled due to unreadable or unexpected firmware version information after applying a firmware update."*
 * RecommendedAction: *"Restart firmware roll out once the firmware issue has been resolved."*
 
 #### FaultType: Microsoft.Health.FaultType.FaultDomain.TooManyFailedUpdates
 * Severity: Warning
-* Reason: *"Firmware roll out was cancelled due to too many physical disks failing a firmware update attempt."*
+* Reason: *"Firmware roll out was canceled due to too many physical disks failing a firmware update attempt."*
 * RecommendedAction: *"Restart firmware roll out once the firmware issue has been resolved."*
 
 ### **Storage QoS (3)**<sup>2</sup>

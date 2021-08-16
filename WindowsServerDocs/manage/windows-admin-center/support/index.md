@@ -9,6 +9,6 @@ ms.date: 04/12/2019
 ---
 # Windows Admin Center support policy
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 [!INCLUDE [support-policy](../includes/support-policy.md)]

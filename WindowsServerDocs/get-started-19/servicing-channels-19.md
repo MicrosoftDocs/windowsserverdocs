@@ -10,7 +10,7 @@ ms.date: 05/21/2019
 
 # Windows Server servicing channels: LTSC and SAC
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2019, Windows Server 2016
 
 There are two primary release channels available to Windows Server customers, the Long-Term Servicing Channel and the Semi-Annual Channel.
 
@@ -32,9 +32,13 @@ Most of the features introduced in the Semi-Annual Channel will be rolled up int
 The Semi-Annual Channel is available to volume-licensed customers with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx), as well as via the Azure Marketplace or other cloud/hosting service providers and loyalty programs such as Visual Studio Subscriptions.
 
 > [!Note]
-> **The current Semi-Annual Channel release is Windows Server, version 2004**. If you want to put servers in this channel, you should install Windows Server, version 2004, which can be installed in Server Core mode or as Nano Server run in a container. In-place upgrades from a long-term servicing channel release aren't supported because they are in **different release channels**. Semi-Annual Channel releases aren't updates – it's the next Windows Server release in the Semi-Annual Channel.
+> **The current Semi-Annual Channel release is Windows Server, version 2004**. If you want to put servers in this channel, you should install Windows Server, version 2004, which can be installed in Server Core mode or as Nano Server run in a container. In-place upgrades from a long-term servicing channel release aren't supported because they are in **different release channels**. This applies vice versa. You cannot upgrade or change from Semi-Annual Channel to an LTSC channel without a clean installation.
+>
+> A Semi-Annual Channel release isn't an update – it's the next Windows Server release in the Semi-Annual Channel.
+> In-place upgrades from one Semi-Annual Channel release to a later Semi-Annual Channel release are possible. This makes it easier to keep up with the relatively short release cadence.
 
 In this model, Windows Server releases are identified by the year and month of release: for example, in 2017, a release in the 9th month (September) would be identified as **version 1709**. Fresh releases of Windows Server in the Semi-Annual Channel will occur twice each year. The support lifecycle for each release is 18 months.
+Starting with fall 2020 (20H2) releases, we changed the identification. Instead of a month, we will name the release based on the release cycle. For example: **version 20H2**, for a release in the second half of the year 2020, or **version 21H1**, for a release in the first half of the year 2021.
 
 ## Should you keep servers on the LTSC or move them to the Semi-Annual Channel?
 
@@ -54,6 +58,10 @@ The following table summarizes the key differences between the channels:
 | Editions | All available Windows Server editions | Standard and Datacenter editions |
 | Who can use | All customers through all channels | Software Assurance and cloud customers only |
 | Installation options | Server Core and Server with Desktop Experience | Server Core for container host and image and Nano Server container image |
+
+> [!IMPORTANT]
+> Please understand that the set of roles and features in Windows Server SAC, only available as Server Core installation option, differs from Windows Server LTSC installed with the Server Core installation option.
+> For example: You cannot use Windows Server SAC as a foundation for services like S2D (Storage Spaces Direct).
 
 ## Device compatibility
 
@@ -75,7 +83,7 @@ You've likely already chosen to use at least one of these options based on your 
 
 ## Where to obtain Semi-Annual Channel releases
 
-Semi-Annual Channel releases should be installed as a clean installation.
+Semi-Annual Channel releases should be installed as a clean installation. It is possible to use in-place upgrade via ISO from one SAC to a later version.
 
 - Volume Licensing Service Center (VLSC): Volume-licensed customers with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) can obtain this release by going to the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) and clicking **Sign In**. Then click **Downloads and Keys** and search for this release.
 
@@ -90,6 +98,10 @@ Microsoft depends on receiving feedback throughout the development process so th
 
 - If you're using Microsoft Azure, this release should automatically be activated.
 - If you've obtained this release from the Volume Licensing Service Center or Visual Studio Subscriptions, you can activate it by using your Windows Server 2019 CSVLK with your Key Management System (KMS) environment. For more info, see [KMS client setup keys](../get-started/kmsclientkeys.md).
+
+> [!Note]
+> For easier maintenance and management of activation, you can use ADBA (Active Directory-based activation) for Server 2012 or later, including Windows Server SAC.
+> In addition, you can manage your licenses using VAMT 3.x (Volume Activation Management Tool), which is part of the latest ADK.
 
 Semi-Annual Channel releases that were released before Windows Server 2019 use the Windows Server 2016 CSVLK.
 

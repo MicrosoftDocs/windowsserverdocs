@@ -11,7 +11,7 @@ ms.topic: article
 
 # Integrating AD DS into an Existing DNS Infrastructure
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 If your organization already has an existing Domain Name System (DNS) Server service, the DNS for Active Directory Domain Services (AD DS) owner must work with the DNS owner for your organization to integrate AD DS into the existing infrastructure. This involves creating a DNS server and DNS client configuration.
 

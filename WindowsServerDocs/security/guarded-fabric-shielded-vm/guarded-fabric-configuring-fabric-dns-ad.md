@@ -11,7 +11,7 @@ ms.date: 08/29/2018
 
 # Configure the fabric DNS for guarded hosts (AD)
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 >[!IMPORTANT]

@@ -36,6 +36,8 @@
 ## [Disk Management](disk-management/overview-of-disk-management.md)
 ## [File Server and SMB](file-server/file-server-smb-overview.md)
 ### [SMB Direct](file-server/smb-direct.md)
+### [SMB over QUIC](file-server/smb-over-quic.md)
+### [SMB compression](file-server/smb-compression.md)
 ### [SMB security enhancements](file-server/smb-security.md)
 ### [SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)
 ### [Network File System overview](nfs/nfs-overview.md)
@@ -123,6 +125,7 @@
 ### [Storage Replica: Frequently Asked Questions](storage-replica/storage-replica-frequently-asked-questions.yml)
 ## [Storage Spaces](storage-spaces/overview.md)
 ### [Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)
+### [Enable storage bus cache with Storage Spaces on standalone servers](storage-spaces/storage-spaces-storage-bus-cache.md)
 ### [Health and operational states](storage-spaces/storage-spaces-states.md)
 ## [Storage Spaces Direct](storage-spaces/storage-spaces-direct-overview.md)
 ### Understand

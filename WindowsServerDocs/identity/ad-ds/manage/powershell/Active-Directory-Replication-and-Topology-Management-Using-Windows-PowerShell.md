@@ -11,7 +11,7 @@ ms.topic: article
 
 # Active Directory Replication and Topology Management Using Windows PowerShell
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows PowerShell for Active Directory now includes support for replication and topology management. The following topics provide an introduction and additional details:
 

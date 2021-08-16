@@ -10039,6 +10039,61 @@
       "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-comp.md",
       "redirect_url": "/windows-server/administration/windows-commands/pktmon-list",
       "redirect_document_id": false
-    }    
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-format.md",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-etl2txt",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-pcapng.md",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-etl2pcap",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/server-performance-advisor/microsoft-server-performance-advisor.md",
+      "redirect_url": "/windows-server/administration/performance-tuning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/server-performance-advisor/server-performance-advisor-users-guide.md",
+      "redirect_url": "/windows-server/administration/performance-tuning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/server-performance-advisor/server-performance-advisor-pack-development-guide.md",
+      "redirect_url": "/windows-server/administration/performance-tuning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/data-collection.md",
+      "redirect_url": "/azure-stack/hci/manage/collect-diagnostic-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Server-Basics.md",
+      "redirect_url": "/windows-server/get-started/get-started-with-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-console.md",
+      "redirect_url": "/windows-server/administration/changes-to-the-windows-console",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/whats-new-in-windows-server-1903-1909.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-1903-1909",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/whats-new-19.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    }
   ]
 }

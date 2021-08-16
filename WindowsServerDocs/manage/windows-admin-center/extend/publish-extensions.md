@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Publishing Extensions
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Once you've developed your extension, you will want to publish it and make it available to others to test or use. Depending on your audience and purpose of publishing, there are a few options which we'll introduce below along with the steps and requirements for publishing.
 

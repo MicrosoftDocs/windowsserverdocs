@@ -10,7 +10,7 @@ ms.assetid: 267541be-2ea7-4af6-ab34-8b5a3fedee2d
 ---
 # AD Forest Recovery - Recovering a single domain in a multidomain forest
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 There can be times when it is necessary to recover only a single domain within a forest that has multiple domains, rather than a full forest recovery. This topic covers considerations for recovering a single domain and possible strategies for recovery.
 

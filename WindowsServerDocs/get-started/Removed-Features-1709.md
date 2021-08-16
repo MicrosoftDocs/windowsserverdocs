@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # Features removed or planned for replacement starting with Windows Server, version 1709
 
->Applies To: Windows Server, version 1709
+>Applies to: Windows Server, version 1709
 
 The following is a list of features and functionalities in Windows Server, version 1709 that have either been removed from the product in that release or are starting to be considered for potential replacement in subsequent releases. It is intended for IT professionals who are updating operating systems in a commercial environment. **This list is subject to change in subsequent releases and might not include every affected feature or functionality.**
 

@@ -3,13 +3,13 @@ title: System Insights overview
 description: System Insights is a new predictive analytics feature in Windows Server 2019. The System Insights predictive capabilities - each backed by a machine-learning model - locally analyze Windows Server system data, such as performance counters and events, providing insight into the functioning of your servers and helping you reduce the operational expenses associated with reactively managing issues in your deployments.
 ms.topic: article
 author: gawatu
-ms.author: gawatu
+ms.author: daknappe
 manager: mallikarjun.chadalapaka
 ms.date: 5/23/2018
 ---
 # System Insights overview
 
->Applies To: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 System Insights is a new predictive analytics feature in Windows Server 2019. The System Insights predictive capabilities - each backed by a machine-learning model - locally analyze Windows Server system data, such as performance counters and events, providing insight into the functioning of your servers and helping you reduce the operational expenses associated with reactively managing issues in your deployments.
 

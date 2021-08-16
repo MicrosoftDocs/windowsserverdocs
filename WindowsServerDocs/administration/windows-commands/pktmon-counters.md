@@ -4,12 +4,12 @@ description: Reference article for the pktmon counters command.
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
-ms.date: 06/18/2021
+ms.date: 06/24/2021
 ---
 
 # pktmon counters
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
 Pktmon counters allows you to query and display current packet counters from monitored components to confirm the presence of expected traffic and get a high-level view of how the traffic flowed in the machine.
 
@@ -34,12 +34,14 @@ pktmon counters [--type { all | flow | drop }] [--include-hidden] [--zero] [--dr
 ## Additional References
 
 - [Pktmon](pktmon.md)
+- [Pktmon etl2pcap](pktmon-etl2pcap.md)
+- [Pktmon etl2txt](pktmon-etl2txt.md)
 - [Pktmon filter](pktmon-filter.md)
 - [Pktmon filter add](pktmon-filter-add.md)
-- [Pktmon format](pktmon-format.md)
+- [Pktmon hex2pkt](pktmon-hex2pkt.md)
 - [Pktmon list](pktmon-list.md)
-- [Pktmon pcapng](pktmon-pcapng.md)
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon start](pktmon-start.md)
+- [Pktmon status](pktmon-status.md)
 - [Pktmon unload](pktmon-unload.md)
 - [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)

@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
 title: Windows Server Storage documentation
-summary: 'Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads. Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel).'
+summary: 'Storage in Windows Server provides new and improved features for software-defined datacenter (SDDC) customers focusing on virtualized workloads. Windows Server also provides extensive support for enterprise customers using file servers with existing workloads. Applies to: Windows Server 2019, Windows Server 2016.'
 
 metadata:
   title: Windows Server Storage documentation
@@ -66,6 +66,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
+          - text: SMB over QUIC
+            url: file-server/smb-over-quic.md
           - text: ReFS
             url: refs/refs-overview.md
           - text: Server Message Block (SMB) protocol

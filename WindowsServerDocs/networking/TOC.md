@@ -67,11 +67,12 @@
 ####### [Configure firewall rules for non-domain members to allow BranchCache traffic](branchcache/deploy/Configure-Firewall-Rules-for-Non-Domain-Members-to-Allow-BranchCache-Traffic.md)
 ###### [Verify client computer settings](branchcache/deploy/verify-Client-computer-Settings.md)
 
-## [DirectAccess](../remote/remote-access/directaccess/directaccess.md) 
+## [DirectAccess](../remote/remote-access/directaccess/directaccess.md)
 
 ## [Domain Name System (DNS)](dns/dns-top.md)
 ### [What's new in DNS client in Windows Server](dns/What-s-New-in-DNS-Client.md)
 ### [What's new in DNS server in Windows Server](dns/What-s-New-in-DNS-Server.md)
+### [Secure DNS Client over HTTPS (DoH)](dns/doh-client-support.md)
 ### [Anycast DNS](dns/deploy/anycast.md)
 ### [DNS policy scenario guidance](dns/deploy/DNS-Policy-Scenario-Guide.md)
 #### [DNS policies overview](dns/deploy/DNS-Policies-Overview.md)
@@ -127,7 +128,7 @@
 #### [Plan the use of vRSS](technologies/vrss/vrss-plan.md)
 #### [Enable vRSS on a virtual network adapter](technologies/vrss/vrss-enable.md)
 #### [Manage vRSS](technologies/vrss/vrss-manage.md)
-#### [vRSS FAQ](technologies/vrss/vrss-faq.md)
+#### [vRSS FAQ](technologies/vrss/vrss-faq.yml)
 #### [Windows PowerShell commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
 #### [Resolve vRSS issues](technologies/vrss/vrss-resolve-issues.md)
 
@@ -241,7 +242,7 @@
 #### [QoS policy scenarios](technologies/qos/qos-policy-scenarios.md)
 ### [Manage QoS policy](technologies/qos/qos-policy-manage.md)
 #### [QoS policy events and errors](technologies/qos/qos-policy-errors.md)
-### [QoS policy FAQ](technologies/qos/qos-policy-faq.md)
+### [QoS policy FAQ](technologies/qos/qos-policy-faq.yml)
 
 ## [Software Defined Networking (SDN)](sdn/index.yml)
 

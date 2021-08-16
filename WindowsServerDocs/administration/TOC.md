@@ -45,6 +45,7 @@
 #### [Express update delivery ISV support](windows-server-update-services/deploy/express-update-delivery-isv-support.md)
 ##### [Monthly Delta-update ISV support without WSUS](windows-server-update-services/deploy/monthly-delta-update-isv-support-without-WSUS.md)
 #### [Migrating the WSUS database from Windows Internal Database (WID) to SQL](windows-server-update-services/manage/wid-to-sql-migration.md)
+### [Windows Console behavior in Windows Server](windows-console-changes.md)
 
 ## Collect information about your environment and systems
 ### [System Insights](..\manage\system-insights\overview.md)
@@ -63,9 +64,6 @@
 
 ## Tune your Windows Server performance
 ### [Performance Tuning Guidelines](performance-tuning/index.md)
-### [Microsoft Server Performance Advisor](server-performance-advisor/microsoft-server-performance-advisor.md)
-#### [Server Performance Advisor User's Guide](server-performance-advisor/server-performance-advisor-users-guide.md)
-#### [Server Performance Advisor Pack Development Guide](server-performance-advisor/server-performance-advisor-pack-development-guide.md)
 
 ## Automate Windows Server management
 ### [Windows PowerShell scripting](/powershell/scripting/overview)
