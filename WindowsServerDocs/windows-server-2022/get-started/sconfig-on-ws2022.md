@@ -22,7 +22,9 @@ You can use the Server configuration tool *(SConfig)* to configure and manage a 
 -	operating system activation
 
 > [!NOTE] 
-> *SConfig* is a convenient tool which is especially helpful if you need to configure or troubleshoot a single server. However, it's not the only way to configure settings, and might not be efficient at large scale. If you need to setup more than a handful of servers, we recommend that you leverage automatic installation options using [Answer files](/windows-hardware/customize/desktop/wsim/answer-files-overview) (unattend.xml), [Microsoft Deployment Toolkit (MDT)](/mem/configmgr/mdt) or [System Center](/system-center). Similarly, for ongoing management across multiple server instances, we recommend remote management approaches using tools like [Windows Admin Center](/windows-server/manage/windows-admin-center/overview), [Server Manager](/windows-server/administration/server-manager/server-manager) or System Center. You may also use Group Policy to automatically configure numerous operating system settings, such as enabling remote management and setting up updates. Each of these tools work equally well with Server Core and Server with Desktop Experience, removing or greatly reducing the need for locally managing one server a time.
+> *SConfig* is a convenient tool which is especially helpful if you need to configure or troubleshoot a single server. However, it's not the only way to configure settings, and might not be efficient at large scale. If you need to setup more than a handful of servers, we recommend that you leverage automatic installation options using [Answer files](/windows-hardware/customize/desktop/wsim/answer-files-overview) (unattend.xml), [Microsoft Deployment Toolkit (MDT)](/mem/configmgr/mdt) or [System Center](/system-center).
+> 
+> Similarly, for ongoing management across multiple server instances, we recommend remote management approaches using tools like [Windows Admin Center](/windows-server/manage/windows-admin-center/overview), [Server Manager](/windows-server/administration/server-manager/server-manager) or System Center. You may also use Group Policy to automatically configure numerous operating system settings, such as enabling remote management and setting up updates. Each of these tools work equally well with Server Core and Server with Desktop Experience, removing or greatly reducing the need for locally managing one server a time.
 
 There are some things to keep in mind about *SConfig.*
 
@@ -48,7 +50,7 @@ There are some things to keep in mind about *SConfig.*
 > [!NOTE] 
 > Launching SConfig from a Command prompt (CMD) window by running `SConfig.cmd` works in the current versions of Windows Server and Azure Stack HCI, just like [it did in previous versions](/windows-server/get-started/sconfig-on-ws2016). (Except if PowerShell was uninstalled.) However, this functionality is [deprecated](/windows-server/windows-server-2022/get-started/removed-features#features-were-no-longer-developing) and may be removed in the future versions of the operating system. The recommended way to manually launch *SConfig* is by running `SConfig` in a PowerShell window.
 
-## Set the domain or workgroup settings
+## Join a domain or workgroup
 
 The current Active Directory domain or workgroup settings are displayed on the main screen of *SConfig.* You can join an Active Directory domain or a workgroup by accessing the **Domain/workgroup** settings page from the main menu and following the instructions, supplying any required information.
 
@@ -90,17 +92,17 @@ To add a domain user account to the local Administrators group, do the following
 
 The changes take effect immediately.
 
-## Configure remote management settings
+## Configure remote management
 
 You can enable various remote management scenarios from the **Configure remote management** main menu option:
 
 - **Enable or disable remote management** allows the use of remote PowerShell (also known as PowerShell remoting), Windows Admin Center, and certain Microsoft Management Console snap-ins. It is enabled by default for an authenticated domain network (if the server is joined to an Active Directory domain), or for the local subnet (for computers joined into a workgroup.)
-- **Enable or disable response to ping** allows the use of remote ICMP echo request (“ping”) to verify network connectivity. It is disabled by default.
+- **Enable or disable response to ping** allows the use of remote ICMP echo requests (“ping”) to verify network connectivity. It is disabled by default.
 
 1. From the main menu, type `4` and press `Enter` to enter the **Configure remote management** menu.
 1. Type `1` and press `Enter` to enable remote management or type `2` and press `Enter` to disable remote management.
 
-### Configure server response to ICMP echo request (“ping”)
+### Configure server response to ICMP echo requests (“ping”)
 
 1. From the main menu, type `4` and press `Enter` to enter the Configure remote management menu.
 1. To disable server response to ping, type `3` and press `Enter` to enable server response to ping or type `4` and press `Enter`.
@@ -118,7 +120,7 @@ The **Download only** option will scan for updates, download any that are availa
 > [!NOTE] 
 > Action center is only available on Windows Server with Desktop Experience, and it is only visible while you're signed in to the server. On Server Core and Azure Stack HCI, you won't receive any notifications.
 
-### Configure update settings
+### Configure updates
 
 1. From the *SConfig* main menu, type `5` and press `Enter` to enter the Update settings menu.
 1. Review the update configuration and then choose between the following options.
@@ -135,7 +137,7 @@ You can choose to search for updates from the following categories.
 - Feature updates
 
 > [!NOTE] 
-> [The terminology for update types](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) (but not necessarily release cadence and schedule) is unified with Windows 10 and Windows 11. Hence, Feature updates is another name for what used to be known as Operating system upgrades. Regular monthly updates are referred to as quality updates.
+> [The terminology for update types](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) (but not necessarily release cadence and schedule) is unified with Windows 10 and Windows 11. Hence, *Feature updates* is another name for what used to be known as Operating system upgrades. Regular monthly updates, including security updates, are referred to as *Quality updates.*
 >
 > [Feature updates from Microsoft Update](/azure-stack/hci/manage/preview-channel) are currently only available for Azure Stack HCI. If you want to [upgrade Windows Server](/windows-server/upgrade/upgrade-overview) to a newer version, you need to use traditional installation media (such as an ISO) for that. From there, you either [run Setup.exe](windows-hardware/manufacture/desktop/windows-setup-command-line-options) directly or leverage some automation solution such as System Center. *SConfig* does not specifically facilitate for these scenarios.
 
@@ -154,7 +156,7 @@ The search returns any available updates within the category. You will be presen
     - To install none of the available updates, type `N` and press `Enter`.
     - To install a specific update from the list, type `S` and press `Enter` and then type the update number and press `Enter`.
 
-## Configure Remote desktop settings
+## Configure Remote desktop
 
 The status of Remote desktop settings is displayed in the main *SConfig* screen. You can configure the following Remote desktop settings by accessing the **Remote desktop** main menu option and following the instructions on screen.
 
@@ -168,7 +170,7 @@ The status of Remote desktop settings is displayed in the main *SConfig* screen.
     - To allow only clients running Remote desktop with Network level authentication (more secure), type `1` and press `Enter`.
     - To allow clients running any version of Remote desktop (less secure), type `2` and press `Enter`.
 
-## Configure network settings
+## Configure network
 
 You can configure IPv4 address to be assigned automatically by a DHCP Server. Alternatively, you can assign a static IP address manually, and specify the subnet mask and default gateway. By default, the operating system will attempt to provision a network address from a DHCP server. If no DHCP server is available, it will assign an Automatic private IP address (APIPA) to the network interface. When configuring an IPv4 address, you can also use this menu to configure primary and secondary DNS servers.
 
@@ -187,17 +189,18 @@ You can configure IPv4 address to be assigned automatically by a DHCP Server. Al
 
 Selecting the Date and time option will open the Date and time Control panel applet. You can use this applet to set the date and time and to modify the time zone settings.
 
-## Configure telemetry settings
+## Configure Operating system diagnostic data (telemetry)
 
-This option lets you configure whether anonymized telemetry is forwarded to Microsoft.
+This option lets you configure whether anonymized diagnostic data is forwarded to Microsoft.
 
 1. From the *SConfig* main menu, type `10` and press `Enter` to enter the Telemetry settings menu.
-1. To change the telemetry setting, type `Y` for Yes or `N` for No and press `Enter`.
-1. If you choose to change the telemetry settings, you can choose one of the available options.
+1. To change the diagnostic data setting, type `Y` for Yes or `N` for No and press `Enter`.
+1. If you want to change the diagnostic data settings, you can choose one of the available options.
 
-To understand more about telemetry settings, see [Telemetry Options](https://go.microsoft.com/fwlink/?LinkID-811315).
+> [!NOTE] 
+> Windows Server and Azure Stack HCI have different default configuration regarding to diagnostic data. For information specific to Windows Server, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings). For Azure Stack HCI, see [Azure Stack HCI data collection](/azure-stack/hci/concepts/data-collection). Please note that you cannot configure the latter in *SConfig.* To learn more about Microsoft approach to privacy, see [Privacy at Microsoft](https://go.microsoft.com/fwlink/?LinkID=811315).
 
-## Configure Windows activation settings
+## Windows activation
 
 This option lets you display current license and activation status, install a product key, and activate Windows Server. 
 
