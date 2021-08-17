@@ -16,7 +16,7 @@ ms.localizationpriority: high
 
 Extended support for [Windows Server 2008](/lifecycle/products/windows-server-2008) and [Windows Server 2008 R2](/lifecycle/products/windows-server-2008-r2) ended on January 14, 2020, and extended support for [Windows Server 2012](/lifecycle/products/windows-server-2012) and [Windows Server 2012 R2](/lifecycle/products/windows-server-2012-r2) will be ending on October 10, 2023. There are two modernization paths available: on-premises upgrade, or migration by rehosting in Azure. **If you rehost in Azure, you can migrate your existing Server images free of charge**.
 
-After you understand these options, see e[how to use Windows Server Extended Security Updates](extended-security-updates-deploy.md).
+After you understand these options, see [how to use Windows Server Extended Security Updates](extended-security-updates-deploy.md).
 
 ![Flow chart describing upgrade paths from Windows Server](media/WS08_upgrade_paths.png)
 
