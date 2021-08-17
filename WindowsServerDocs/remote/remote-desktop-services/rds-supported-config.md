@@ -60,7 +60,7 @@ The following table shows the scenarios supported by different versions of RDSH 
 |Feature|Windows Server 2008 R2|Windows Server 2012 R2|Windows Server 2016|Windows Server 2019|
 |---|---|---|---|---|
 |Use of hardware GPU for all RDP sessions|No|Yes|Yes|Yes|
-|H.264/AVC hardware encoding (if suppported by the GPU)|No|No|Yes|Yes|
+|H.264/AVC hardware encoding (if supported by the GPU)|No|No|Yes|Yes|
 |Load balancing between multiple GPUs presented to the OS|No|No|No|Yes|
 |H.264/AVC encoding optimizations for minimizing bandwidth usage|No|No|No|Yes|
 |H.264/AVC support for 4K resolution|No|No|No|Yes|
@@ -72,7 +72,7 @@ The following table shows support for GPU scenarios in the client OS.
 |Feature|Windows 7 SP1|Windows 8.1|Windows 10|
 |---|---|---|---|
 |Use of hardware GPU for all RDP sessions|No|Yes|Yes|
-|H.264/AVC hardware encoding (if suppported by the GPU)|No|No|Windows 10 1703 and later|
+|H.264/AVC hardware encoding (if supported by the GPU)|No|No|Windows 10 1703 and later|
 |Load balancing between multiple GPUs presented to the OS|No|No|Windows 10 1803 and later|
 |H.264/AVC encoding optimizations for minimizing bandwidth usage|No|No|Windows 10 1803 and later|
 |H.264/AVC support for 4K resolution|No|No|Windows 10 1803 and later|

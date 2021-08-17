@@ -10139,6 +10139,16 @@
       "source_path": "WindowsServerDocs/get-started-19/removed-features-1903.md",
       "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-1903-1909",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/System-Requirements.md",
+      "redirect_url": "/windows-server/get-started/hardware-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server-2004.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2004-20h2",
+      "redirect_document_id": false
     }
   ]
 }

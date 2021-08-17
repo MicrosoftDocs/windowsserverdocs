@@ -159,7 +159,7 @@ It is now possible to run Windows and Linux-based containers on the same contain
 
 ### Built-in support for Kubernetes
 
-Windows Server 2019 continues the improvements to compute, networking, and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details are available in upcoming Kubernetes releases.
+Windows Server 2019 continues the improvements to compute, networking, and storage from the Semi-Annual Channel releases needed to support Kubernetes on Windows. More details are available in upcoming Kubernetes releases.
 
 - [Container Networking](../networking/sdn/technologies/containers/container-networking-overview.md) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins.
 
