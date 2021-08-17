@@ -35,7 +35,7 @@ highlightedContent:
       url: ./get-started-19/get-started-19.md
     - title: Use Windows Server 2008 and 2008 R2 Extended Security Updates
       itemType: how-to-guide
-      url: ./get-started/extended-security-updates.md
+      url: ./get-started/extended-security-updates-overview.md
     - title: Windows Insider Program for Windows Server
       itemType: get-started
       url: /windows-insider/business/server-get-started
