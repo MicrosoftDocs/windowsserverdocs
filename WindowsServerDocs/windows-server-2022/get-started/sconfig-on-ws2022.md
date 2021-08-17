@@ -172,7 +172,7 @@ The status of Remote desktop settings is displayed in the main *SConfig* screen.
 
 ## Configure network
 
-You can configure IPv4 address to be assigned automatically by a DHCP Server. Alternatively, you can assign a static IP address manually, and specify the subnet mask and default gateway. By default, the operating system will attempt to provision a network address from a DHCP server. If no DHCP server is available, it will assign an Automatic private IP address (APIPA) to the network interface. When configuring an IPv4 address, you can also use this menu to configure primary and secondary DNS servers.
+By default, the operating system will attempt to provision a network address from a DHCP server. If no DHCP server is available, it will assign an Automatic private IP address (APIPA) to the network interface. Alternatively, you can assign a static IPv4 address manually, and specify the subnet mask and default gateway. When configuring an IPv4 address, you can also use this menu to configure primary and secondary DNS servers.
 
 1. From the main menu, type `8` and press `Enter` to enter the Network settings menu.
 1. On the **Network settings** menu in this list of available interfaces, type the number of the Interface (such as `1`) and press `Enter` to select that interface.
