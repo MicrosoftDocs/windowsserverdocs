@@ -15,7 +15,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 
 ## Locks and Limits
 
-| Locks and Limits                 | Windows Server 2022 Standard | Windows Server 2022 Datacenter | Windows Server 2022 Datacenter: Azure Edition |
+| Locks and Limits                 | Windows Server 2022 Standard | Windows Server 2022 Datacenter |
 | -------------------              | ---------------------------  | --------------------------- |
 | Maximum number of users          | Based on CALs                | Based on CALs |
 | Maximum SMB connections          | 16,777,216                   | 16,777,216 |

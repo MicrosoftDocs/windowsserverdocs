@@ -24,7 +24,7 @@ To understand how this topic fits in the overall process of deploying shielded V
 
 The shielding process for existing VMs is only available for VMs that meet the following prerequisites:
 
-- The guest OS is Windows Server 2012, 2012 R2, 2016, or a semi-annual channel release. Existing Linux VMs cannot be converted to shielded VMs.
+- The guest OS is Windows Server 2012, 2012 R2, 2016, or a Semi-Annual Channel release. Existing Linux VMs cannot be converted to shielded VMs.
 - The VM is a generation 2 VM (UEFI firmware)
 - The VM does not use differencing disks for its OS volume.
 
