@@ -24,8 +24,3 @@ However, starting with Windows Server, version 1803, Nano Server is available on
 - There is no longer a servicing stack included in Nano Server. Microsoft publishes an updated Nano container to Docker Hub that you redeploy.
 - You troubleshoot the new Nano Container by using Docker.
 - You can now run Nano containers on IoT Core.
-
-## Related topics
-
-- [Windows Container Documentation](/virtualization/windowscontainers/)
-- [Window Server Semi-Annual Channel Overview](../get-started/servicing-channels-comparison.md)
