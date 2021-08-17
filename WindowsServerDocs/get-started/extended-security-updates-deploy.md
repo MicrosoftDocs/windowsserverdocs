@@ -47,20 +47,20 @@ For other environments, such as on-premises VMs or physical servers, you need to
 
 Once you've purchased Extended Security Updates, you can use one of the following methods to get your keys:
 
-* If you want to get Extended Security Update keys from the Azure Portal, you can [register for Extended Security Updates in the Azure Portal](#register-for-extended-security-updates-in-the-azure-portal).
-* You can also [sign in to the Microsoft Volume Licensing Service Center](#sign-in-to-the-microsoft-volume-licensing-service-center) to get your keys without using the Azure Portal.
+* If you want to get Extended Security Update keys from the Azure portal, you can [register for Extended Security Updates in the Azure portal](#register-for-extended-security-updates-in-the-azure-portal).
+* You can also [sign in to the Microsoft Volume Licensing Service Center](#sign-in-to-the-microsoft-volume-licensing-service-center) to get your keys without using the Azure portal.
 
-### Register for Extended Security Updates in the Azure Portal
+### Register for Extended Security Updates in the Azure portal
 
 To use Extended Security Updates on non-Azure VMs, create a multiple activation key (MAK) and apply it to Windows Server 2008 and 2008 R2 computers. The MAK key lets the Windows Update servers know that you can continue to receive security updates. You register for Extended Security Updates and manage these keys using the Azure portal, even if you only use on-premises computers.
 
 > [!NOTE]
 > You don't need to register for Extended Security Updates if you're running Windows Server 2008 and 2008 R2 on Azure VMs. For other environments, such as on-premises VMs or physical servers, [purchase Extended Security Updates](https://www.microsoft.com/licensing/how-to-buy/how-to-buy) before you try to register and use them.
 
-To register your VM for Extended Security Updates and create a key, open the Azure Portal and follow these instructions:
+To register your VM for Extended Security Updates and create a key, open the Azure portal and follow these instructions:
 
-1. Sign in to the [Azure Portal](https://portal.azure.com/).
-1. In the search box at the top of the Azure Portal, search for and select **Extended Security Updates**.
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+1. In the search box at the top of the Azure portal, search for and select **Extended Security Updates**.
 
     ![Search for Extended Security Updates in the Azure Portal](media/extended-security-updates/esu-portal-search.png)
 
@@ -74,7 +74,7 @@ To register your VM for Extended Security Updates and create a key, open the Azu
 
     ![Choose to create a key in the Azure Portal](media/extended-security-updates/get-key.png)
 
-    You need an Azure subscription associated with your account to create the Extended Security Update resource and key. If you don't have an Azure subscription associated with your account, sign in with a different user account or create an Azure subscription in the Azure Portal.
+    You need an Azure subscription associated with your account to create the Extended Security Update resource and key. If you don't have an Azure subscription associated with your account, sign in with a different user account or create an Azure subscription in the Azure portal.
 
     Your Azure subscription must also be assigned the Contributor role for the security update to work. To check your role, enter "Subscriptions" into the search box. You'll see a table that will show you your role next to your subscription ID and name.
 
@@ -131,7 +131,7 @@ Extended Security Updates registration is now available for use with your server
 
 ### Sign in to the Microsoft Volume Licensing Service Center
 
-If you don't have access to the Azure Portal, then you can use the Volume Licensing Service Center to view and download your activation keys.
+If you don't have access to the Azure portal, then you can use the Volume Licensing Service Center to view and download your activation keys.
 
 To get your keys from the Volume Licensing Service Center:
 

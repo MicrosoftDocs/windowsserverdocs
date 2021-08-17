@@ -4,7 +4,7 @@
 ## [Comparison of servicing channels](../get-started/servicing-channels-comparison.md)
 ## [Install | Upgrade | Migrate](../get-started/install-upgrade-migrate.md)
 ## [Release notes: Important issues in Windows Server 2019](rel-notes-19.md)
-## [System requirements](sys-reqs-19.md)
+## [System requirements](../get-started/hardware-requirements.md)
 ## [Windows Server 2019 activation](activation-19.md)
 ## [Windows Server 2019 VM activation](vm-activation-19.md)
 ## [Troubleshooting Windows volume activation](../get-started/activation-troubleshooting-guide.md)
