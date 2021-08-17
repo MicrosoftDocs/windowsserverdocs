@@ -15,6 +15,10 @@ Each release of Windows Server adds new features and functionality; we also occa
 
 **This list is subject to change in subsequent releases and might not include every affected feature or functionality.**
 
+## Features we've removed in this release
+
+We haven't removed any features in this release.
+
 ## Features we're no longer developing
 
 We're no longer actively developing these features and may remove them from a future update. Some features have been replaced with other features or functionality, while others are now available from different sources.
