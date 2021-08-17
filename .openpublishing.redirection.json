@@ -10149,6 +10149,36 @@
       "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server-2004.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2004-20h2",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/modernize-windows-server-2008.md",
+      "redirect_url": "/windows-server/get-started/extended-security-updates-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/install-upgrade-migrate.md",
+      "redirect_url": "/windows-server/get-started/install-upgrade-migrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/installation-and-upgrade.md",
+      "redirect_url": "/windows-server/get-started/install-upgrade-migrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/install-upgrade-migrate-19",
+      "redirect_url": "/windows-server/get-started/install-upgrade-migrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/uploading-specialized-ws08-image-to-azure",
+      "redirect_url": "/azure/virtual-machines/windows/upload-generalized-managed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/extended-security-updates",
+      "redirect_url": "/azure/virtual-machines/windows/extended-security-updates-deploy",
+      "redirect_document_id": false
     }
   ]
 }
