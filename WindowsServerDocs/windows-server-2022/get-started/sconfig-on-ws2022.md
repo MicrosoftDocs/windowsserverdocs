@@ -1,6 +1,6 @@
 ---
 title: Configure Server Core with SConfig
-description: In Windows Server 2022 and Azure Stack HCI, you can use the Server configuration tool (SConfig) to configure and manage several common aspects of server lifecycle. It includes including network configuration, Active Directory domain membership, installation of updates, and operating system activation
+description: In Windows Server 2022 and Azure Stack HCI, you can use the Server configuration tool (SConfig) to configure and manage several common aspects of server lifecycle. It includes network configuration, Active Directory domain membership, installation of updates, and operating system activation
 ms.prod: windows-server
 ms.date: 07/27/2021
 ms.topic: article
@@ -27,7 +27,7 @@ You can use the Server configuration tool *(SConfig)* to configure and manage a 
 There are some things to keep in mind about *SConfig.*
 
 -	On Windows Server 2022 (deployed in Server Core installation option) and Azure Stack HCI, *SConfig* runs automatically after user signs in, unless autolaunch is disabled.
--	Starting with Windows Server 2022 and Azure Stack HCI, *SConfig* is based on PowerShell. It means that if you uninstall PowerShell, *SConfig* won't run, either automatically, or if you try to launch it manually. You will only be able to use the legacy Command prompt (CMD) and related tools such as [netsh.exe](/windows-server/networking/technologies/netsh/netsh) and [diskpart.exe](/windows-server/administration/windows-commands/diskpart). (As a separate note, [diskpart is deprecated](/windows/compatibility/vds-is-transitioning-to-windows-storage-management-api) and might not provide full functionality. For example, it cannot manage Storage Spaces.)
+-	Starting with Windows Server 2022 and Azure Stack HCI, *SConfig* is based on PowerShell. It means that if you uninstall PowerShell, *SConfig* won't run, either automatically, or if you try to launch it manually. You will only be able to use the classic Command prompt (CMD) and related tools such as [netsh.exe](/windows-server/networking/technologies/netsh/netsh) and [diskpart.exe](/windows-server/administration/windows-commands/diskpart). (As a separate note, [diskpart is deprecated](/windows/compatibility/vds-is-transitioning-to-windows-storage-management-api) and might not provide full functionality. For example, it cannot manage Storage Spaces.)
 -	*SConfig* will restart automatically if you accidentally close the existing PowerShell window.
 -	You must be a member of the local Administrators group to use *SConfig.*
 -	You can use *SConfig* in the following scenarios:
@@ -83,7 +83,7 @@ To change the computer name, follow these steps.
 
 To add other users or groups to the local Administrators group, use the **Add local administrator** option on the main menu. 
 
-To add a domain user account to the local Administrators group, perform the following steps.
+To add a domain user account to the local Administrators group, do the following.
 
 1. From the main menu, type `3` and press `Enter` to enter the **Add local administrator** settings menu.
 1. At the prompt, provide the username and press `Enter`. 
