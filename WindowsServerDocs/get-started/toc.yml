@@ -41,15 +41,16 @@ items:
             href: removed-deprecated-features-windows-server-2019.md
           - name: Windows Server 2016
             href: removed-deprecated-features-windows-server-2016.md
-    - name: Installation and Upgrade of Windows Server Releases
-      href: Installation-and-Upgrade.md
-    - name: Upgrade Windows Server 2008 and Windows Server 2008 R2
-      href: modernize-windows-server-2008.md
-      items: 
-        - name: Windows Server 2008/2008 R2 Extended Security Updates
-          href: extended-security-updates.md
-        - name: Upload a Windows Server 2008/2008 R2 specialized image to Azure
-          href: uploading-specialized-WS08-image-to-azure.md
+        - name: Release information
+          href: windows-server-release-info.md
+        - name: Extended Security Updates
+          href: extended-security-updates-overview.md
+    - name: How-to guides
+      items:
+        - name: Install, upgrade, or migrate
+          href: install-upgrade-migrate.md
+        - name: Get Windows Server Extended Security Updates
+          href: extended-security-updates-deploy.md
     - name: Migration of Windows Server Roles and Features
       href: Migrate-Roles-and-Features.md
     - name: "Release Notes: Important issues in Windows Server 2016"
