@@ -20,15 +20,15 @@ End of support also means the end of security updates. This scenario can cause s
 If you haven't already upgraded your servers, the following options will help protect your apps and data during the transition:
 
 * Migrate existing Windows Server 2008 and 2008 R2 workloads as-is to Azure Virtual Machines (VMs).
-  * This migration to Azure automatically provides an additional three years of extended security updates (ESU). There's no additional charge for extended security updates on top of Azure VM's cost, and there's no additional configuration required.
+  * This migration to Azure automatically provides an additional three years of Extended Security Updates. There's no additional charge for Extended Security Updates on top of an Azure VM's cost, and there's no additional configuration required.
 * Purchase an extended security update subscription for your servers and remain protected until you're ready to upgrade to a newer Windows Server version.
   * These updates are provided for up to three years after the end of support lifecycle date.
 
-After the three year period of extended updates, we'll stop updating for Windows Server 2008 and 2008 R2. We recommend you update your version of Windows Server to a more recent version as soon as possible.
+After the three-year period of extended updates, we'll stop updating for Windows Server 2008 and 2008 R2. We recommend you update your version of Windows Server to a more recent version as soon as possible.
 
-## What are extended security updates for Windows Server?
+## What are Extended Security Updates for Windows Server?
 
-Extended Security Updates (ESUs) for Windows Server include security updates and bulletins rated **critical** and **important**, for a maximum of three years from the end of extended support dates (detailed on [Microsoft Lifecycle](/lifecycle/products/)). Extended Security Updates don't include the following:
+Extended Security Updates for Windows Server include security updates and bulletins rated **critical** and **important**, for a maximum of three years from the end of extended support dates (detailed on [Microsoft Lifecycle](/lifecycle/products/)). Extended Security Updates don't include the following:
 
 * New features
 * Customer-requested non-security hotfixes
@@ -64,7 +64,7 @@ To register your VM for Extended Security Updates and create a key, open the Azu
 
     ![Search for Extended Security Updates in the Azure Portal](media/extended-security-updates/esu-portal-search.png)
 
-    If you haven't use extended security updates before, select **+ Create** to create an Extended Security Updates resource first. Otherwise, select your resource from the list.
+    If you haven't used Extended Security Updates before, select **+ Create** to create an Extended Security Updates resource first. Otherwise, select your resource from the list.
 
 1. Under **Register for Extended Service Updates**, select **Get started**.
 
@@ -143,7 +143,7 @@ To learn more about how to get Extended Security Updates for eligible Windows de
 
 ## Download and apply Extended Security Updates
 
-Delivery, download and application of Extended Security Updates for Windows Server is no different than existing deployment processes. The updates provided through Extended Security Updates are only for *Security*.
+Delivery, download, and application of Extended Security Updates for Windows Server is no different than existing deployment processes. The updates provided through Extended Security Updates are only for *Security*.
 
 You can install the updates using whatever tools and processes you already have in place. The only difference is that the system must be registered using the key generated in the previous section for the updates to download and install.
 

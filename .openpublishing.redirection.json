@@ -10179,6 +10179,21 @@
       "source_path": "WindowsServerDocs/get-started/extended-security-updates",
       "redirect_url": "/azure/virtual-machines/windows/extended-security-updates-deploy",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/get-started-19.md",
+      "redirect_url": "/windows-server/get-started/get-started-with-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/get-started-with-windows-server-2022.md",
+      "redirect_url": "/windows-server/get-started/get-started-with-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/sys-reqs-19.md",
+      "redirect_url": "/windows-server/get-started/hardware-requirements",
+      "redirect_document_id": false
     }
   ]
 }

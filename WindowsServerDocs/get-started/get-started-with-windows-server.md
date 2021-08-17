@@ -43,4 +43,4 @@ To get started, find out more from these resources.
 * Choose the right installation option based on whether you want the [Desktop Experience](Getting-Started-with-Server-with-Desktop-Experience.md) or a [minimal Core interface](Getting-Started-with-Server-Core.md).
 * Understand the [hardware requirements](../get-started/hardware-requirements.md) to run Windows Server.
 * Follow the Microsoft Learn learning path on [Windows Server deployment, configuration, and administration](/learn/paths/windows-server-deployment-configuration-administration/).
-* If you still need to use Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, or Windows Server 2012 R2, [extended security updates](extended-security-updates.md) are available to help keep you safe with security updates and bulletins rated critical and important.
+* If you still need to use Windows Server 2008, Windows Server 2008 R2 (and in future Windows Server 2012, or Windows Server 2012 R2) [Extended Security Updates](extended-security-updates-overview.md) are available to help keep you safe with security updates and bulletins rated critical and important.
