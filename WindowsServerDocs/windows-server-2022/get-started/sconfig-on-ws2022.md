@@ -1,6 +1,6 @@
 ---
-title: Configure a Server Core installation with Sconfig.cmd
-description: In Windows Server 2022 you can use the Server Configuration tool (Sconfig.cmd) to configure and manage several common aspects of Server Core installations including networking configuration, domain membership, installation of updates, and operating system activation.  
+title: Configure Server Core with SConfig
+description: In Windows Server 2022 and Azure Stack HCI, you can use the Server configuration tool (SConfig) to configure and manage several common aspects of server lifecycle. It includes network configuration, Active Directory domain membership, installation of updates, and operating system activation
 ms.prod: windows-server
 ms.date: 07/27/2021
 ms.topic: article
@@ -10,62 +10,71 @@ ms.author: inhenkel
 manager: femila
 ---
 
-# Configure a Server Core installation of Windows Server 2022 with Sconfig.cmd
+# Configure Server Core in Windows Server 2022 and Azure Stack HCI with Server configuration tool (SConfig)
 
-> Applies to: Windows Server 2022
+> Applies to: Windows Server 2022, Azure Stack HCI
 
-You can use the Server Configuration tool *Sconfig.cmd* to configure and manage Server Core and Server with Desktop Experience installations of Windows Server. The tool to configures and manages common aspects of Server Core installations including:
+You can use the Server configuration tool *(SConfig)* to configure and manage a Windows Server instance or Azure Stack HCI. On Windows Server deployed in Server Core installation option, SConfig is the primary way to configure and manage common aspects of operating system, including the following.
 
--	networking configuration 
--	domain membership
+-	network configuration 
+-	Active Directory domain membership
 -	installation of updates
 -	operating system activation
 
-There are some things to keep in mind about *Sconfig.cmd*:
+> [!NOTE] 
+> *SConfig* is a convenient tool which is especially helpful if you need to configure or troubleshoot a single server. However, it's not the only way to configure settings, and might not be efficient at large scale. If you need to setup more than a handful of servers, we recommend that you leverage automatic installation options using [Answer files](/windows-hardware/customize/desktop/wsim/answer-files-overview) (unattend.xml), [Microsoft Deployment Toolkit (MDT)](/mem/configmgr/mdt) or [System Center](/system-center).
+> 
+> Similarly, for ongoing management across multiple server instances, we recommend remote management approaches using tools like [Windows Admin Center](/windows-server/manage/windows-admin-center/overview), [Server Manager](/windows-server/administration/server-manager/server-manager) or System Center. You may also use Group Policy to automatically configure numerous operating system settings, such as enabling remote management and setting up updates. Each of these tools work equally well with Server Core and Server with Desktop Experience, removing or greatly reducing the need for locally managing one server a time.
 
--	On Server Core deployments of Windows Server 2022, it runs automatically after logon unless disabled.
--	A PowerShell window with *Sconfig.cmd* running will restart automatically if you accidentally close the existing PowerShell window. 
--	You must be a member of the local Administrators group to use it. 
--	You can’t use it through a remote PowerShell session. 
--	You can use it when:
-    - You have signed on directly 
-    - Have established a Remote Desktop Connection session 
-    - Have an SSH connection after installing and configuring the SSH Server role on the Windows Server 2022 instance 
+There are some things to keep in mind about *SConfig.*
 
-## Start the Server Configuration Tool
+-	On Windows Server 2022 (deployed in Server Core installation option) and Azure Stack HCI, *SConfig* runs automatically after user signs in, unless autolaunch is disabled.
+-	Starting with Windows Server 2022 and Azure Stack HCI, *SConfig* is based on PowerShell. It means that if you uninstall PowerShell, *SConfig* won't run, either automatically, or if you try to launch it manually. You will only be able to use the classic Command prompt (CMD) and related tools such as [netsh.exe](/windows-server/networking/technologies/netsh/netsh) and [diskpart.exe](/windows-server/administration/windows-commands/diskpart). (As a separate note, [diskpart is deprecated](/windows/compatibility/vds-is-transitioning-to-windows-storage-management-api) and might not provide full functionality. For example, it cannot manage Storage Spaces.)
+-	*SConfig* will restart automatically if you accidentally close the existing PowerShell window.
+-	You must be a member of the local Administrators group to use *SConfig.*
+-	You can use *SConfig* in the following scenarios:
+    - you have signed in locally
+    - you are connected with Remote Desktop.
+-	You can’t use *SConfig* in a remote PowerShell session. If the server is already configured in such a way that it supports remote PowerShell connectivity, we recommend that you use more scalable and feature-rich tools to manage the server remotely.
 
-*Sconfig.cmd* starts automatically on Server Core installations. If you want to run it on a Desktop Experience installation, do these steps:
+    
+## Start the Server configuration tool (SConfig)
 
-1. Change to the system drive.
-1. Type `Sconfig.cmd`, and then press `Enter` The Server Configuration tool interface opens:
+*SConfig* starts automatically on Windows Server (deployed in Server Core installation option) and Azure Stack HCI. If you want to run it on Windows Server with Desktop Experience, follow these steps.
 
-    ![Screenshot of Sconfig.cmd user interface](../media/sconfig-on-ws2022/2022-main-sconfig-page.png)
+1. Launch PowerShell.
+1. Type `SConfig`, and then press `Enter`. The Server configuration tool interface opens.
 
-## Set the domain/workgroup settings
-
-The current Domain/Workgroup settings are displayed on the default Server Configuration tool screen. You can join a domain or a workgroup by accessing the **Domain/Workgroup** settings page from the main menu and following the instructions, supplying any required information. 
+    ![Screenshot of SConfig user interface](../media/sconfig-on-ws2022/2022-main-sconfig-page.png)
 
 > [!NOTE] 
-> You’ll only be able to join a domain if the computer is able to resolve the DNS address of a domain controller in the target domain's Active Directory Domain Services forest and you have the credentials of an account that has permission to perform a domain join operation. You have the option of changing the computer's name as a part of the domain join operation.
+> Launching SConfig from a Command prompt (CMD) window by running `SConfig.cmd` works in the current versions of Windows Server and Azure Stack HCI, just like [it did in previous versions](/windows-server/get-started/sconfig-on-ws2016). (Except if PowerShell was uninstalled.) However, this functionality is [deprecated](/windows-server/windows-server-2022/get-started/removed-features#features-were-no-longer-developing) and may be removed in the future versions of the operating system. The recommended way to manually launch *SConfig* is by running `SConfig` in a PowerShell window.
 
-To join a standalone server core instance to a domain with *Sconfig.cmd*, perform the following steps:
+## Join a domain or workgroup
+
+The current Active Directory domain or workgroup settings are displayed on the main screen of *SConfig.* You can join an Active Directory domain or a workgroup by accessing the **Domain/workgroup** settings page from the main menu and following the instructions, supplying any required information.
+
+> [!NOTE] 
+> You’ll only be able to join a domain if the computer is able to resolve the DNS address of a domain controller in the target domain's Active Directory Domain Services forest and you have the credentials of an account that has permission to perform a domain join operation. You may need to configure network settings and/or date and time before joining the domain. You have the option of changing the computer name as a part of the domain join operation.
+
+To join a standalone server instance to a domain with *SConfig,* follow these steps.
 
 1. From the main menu, type `1` and press `Enter` to enter the Change domain/workgroup membership menu.
 1. On the Change domain/workgroup membership menu, press `D`. 
 1. Press `Enter` to join a domain.
 1. Type the name of the domain to join and press `Enter`.
-1. Type the name of the domain user authorized to perform the domain join in the format of `DOMAIN\user` and press `Enter`.
-1. At the password prompt, provide the password for the authorized user and press `Enter`.
-1. At the prompt asking if you want to change the computer name press either `Y` or `N` and press `Enter`. 
-1. If you press `Y`, provide the new name for the computer and press `Enter`. You will need to reenter the password for the user account you used to join the computer to the domain.
+1. Type the name of the domain user authorized to join computers to domain. Use the format of `domain\user` or `user@domain.com` and press `Enter`.
+1. At the password prompt, provide the password for the specified user and press `Enter`.
+1. At the prompt asking if you want to change the computer name, press either `Y` or `N` and press `Enter`. 
+1. If you press `Y`, provide the new name for the computer and press `Enter`. You will need to reenter the password for the user account you specified when joining the computer to domain.
 1. You will be prompted to restart the computer. Press `Y` and press `Enter` to restart the computer.
 1. After the computer restarts, press `ESC` to switch users so you can sign in with a Domain account.
 
 ## Set the computer name
 
-The current computer name is displayed in the default Server Configuration Tool screen. You can change the computer name by accessing the **Computer Name** settings page from the main menu and following the instructions.
+The current computer name is displayed on the main screen of *SConfig*. You can change the computer name by accessing the **Computer Name** settings page from the main menu and following the instructions.
 
-To change the computer name, perform the following steps:
+To change the computer name, follow these steps.
 
 1. From the main menu, type `2` and press `Enter` to enter the computer name menu.
 1. At the prompt, provide the new computer name and press `Enter`.
@@ -74,127 +83,136 @@ To change the computer name, perform the following steps:
 
 ## Add a local administrator
 
-To add additional users to the local administrators group, use the **Add Local Administrator** option on the main menu. 
+To add other users or groups to the local Administrators group, use the **Add local administrator** option on the main menu. 
 
-To add a domain user account to the local Administrators group, perform the following steps:
+To add a domain user account to the local Administrators group, do the following.
 
-1. From the main menu, type `3` and press `Enter` to enter the **Add Local Administrator** settings menu.
-1. At the prompt provide the username and press `Enter`. 
+1. From the main menu, type `3` and press `Enter` to enter the **Add local administrator** settings menu.
+1. At the prompt, provide the username and press `Enter`. 
 
 The changes take effect immediately.
 
-## Configure remote management settings
+## Configure remote management
 
-You can enable various remote management scenarios from the **Configure Remote Management** main menu option:
+You can enable various remote management scenarios from the **Configure remote management** main menu option:
 
-- **Enable or disable remote management.** allows the use of Remote PowerShell, Windows Admin Center, and Microsoft Management Console connections. It is enabled by default.
-- **Enable or disable response to ping** allows the use of remote ping to verify network connectivity. It is disabled by default.
+- **Enable or disable remote management** allows the use of remote PowerShell (also known as PowerShell remoting), Windows Admin Center, and certain Microsoft Management Console snap-ins. It is enabled by default for an authenticated domain network (if the server is joined to an Active Directory domain), or for the local subnet (for computers joined into a workgroup.)
+- **Enable or disable response to ping** allows the use of remote ICMP echo requests (“ping”) to verify network connectivity. It is disabled by default.
 
 1. From the main menu, type `4` and press `Enter` to enter the **Configure remote management** menu.
 1. Type `1` and press `Enter` to enable remote management or type `2` and press `Enter` to disable remote management.
 
-### Configure server response to ping
+### Configure server response to ICMP echo requests (“ping”)
 
 1. From the main menu, type `4` and press `Enter` to enter the Configure remote management menu.
 1. To disable server response to ping, type `3` and press `Enter` to enable server response to ping or type `4` and press `Enter`.
 
 ## Update settings
 
-The Windows Update settings are displayed in the default Server Configuration Tool screen. You can configure the server to use automatic or manual updates on the **Windows Update Settings** configuration option on the main menu.
+The Microsoft Update settings are displayed in the main *SConfig* screen. You can configure the server to use automatic or manual updates on the **Update settings** configuration option on the main menu.
 
-When **Automatic** is selected, the system will check for and install updates every day at 3:00 AM. The settings take effect immediately. 
+When **Automatic** is selected, the system will check for and install updates every day at 3:00 AM. (Time is interpreted according to the effective time zone configured on the server, which may or may not be the same as the official time zone in the area.) The settings take effect immediately.
 
 When **Manual** updates are selected, the system will not check for updates automatically.
 
-The **Download Only** option will scan for updates, download any that are available, and then notify you in the Action Center that they are ready for installation. This is default option.
+The **Download only** option will scan for updates, download any that are available, and then notify you in the Action center that they are ready for installation. It is the default option.
 
-### Configure update settings
+> [!NOTE] 
+> Action center is only available on Windows Server with Desktop Experience, and it is only visible while you're signed in to the server. On Server Core and Azure Stack HCI, you won't receive any notifications.
 
-1. From the Sconfig main menu, type `5` and press `Enter` to enter the Update settings menu.
-1. Review the update configuration and then choose between the following options:
+### Configure updates
+
+1. From the *SConfig* main menu, type `5` and press `Enter` to enter the Update settings menu.
+1. Review the update configuration and then choose between the following options.
     - Type `A` and press `Enter` to select updates to be installed automatically.
     - Type `D` and press `Enter` to have updates periodically checked for and automatically downloaded, but not installed. You can install downloaded updates from the **Install updates** menu.
     - Type `M` and press `Enter` to require a manual update check. You can install updates from the **Install updates** menu.
 
 ### Install updates
 
-You can choose to search for updates from the following categories:
+You can choose to search for updates from the following categories.
 
 - All quality updates
 - Recommended quality updates only
 - Feature updates
 
+> [!NOTE] 
+> [The terminology for update types](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) (but not necessarily release cadence and schedule) is unified with Windows 10 and Windows 11. Hence, *Feature updates* is another name for what used to be known as Operating system upgrades. Regular monthly updates, including security updates, are referred to as *Quality updates.*
+>
+> [Feature updates from Microsoft Update](/azure-stack/hci/manage/preview-channel) are currently only available for Azure Stack HCI. If you want to [upgrade Windows Server](/windows-server/upgrade/upgrade-overview) to a newer version, you need to use traditional installation media (such as an ISO) for that. From there, you either [run Setup.exe](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) directly or leverage some automation solution such as System Center. *SConfig* does not specifically facilitate for these scenarios.
+
 The search returns any available updates within the category. You will be presented with the option of installing all available updates, a specific update, or none of the available updates.
 
-1. From the main menu, type `6` and press `Enter` to enter the **Install Updates** menu.
-1. From the **Install updates** menu, choose from one of the following options:
+1. From the main *SConfig* menu, type `6` and press `Enter` to enter the **Install updates** menu.
+1. From the **Install updates** menu, choose from one of the following options.
 
-    - To check for all updates that are currently applicable to the server, type `1` and press `Enter`.
-    - To check only for recommended updates that are applicable to the server, type `2` and press `Enter`.
+    - To check for all quality updates that are currently applicable to the server, type `1` and press `Enter`.
+    - To check only for recommended quality updates that are applicable to the server, type `2` and press `Enter`.
     - To check for feature updates that are applicable to the server, type `3` and press `Enter`.
 
-1. After you have made your selection, a list of available updates will be displayed. You can choose from the following options:
+1. After you have made your selection, a list of available updates will be displayed. You can choose from the following options.
 
     - To install all available updates, type `A` and press `Enter`.
     - To install none of the available updates, type `N` and press `Enter`.
     - To install a specific update from the list, type `S` and press `Enter` and then type the update number and press `Enter`.
 
-## Configure Remote Desktop settings
+## Configure Remote desktop
 
-The status of remote desktop settings is displayed in the default Server Configuration Tool screen. You can configure the following Remote Desktop settings by accessing the **Remote Desktop** main menu option and following the instructions on screen.
+The status of Remote desktop settings is displayed in the main *SConfig* screen. You can configure the following Remote desktop settings by accessing the **Remote desktop** main menu option and following the instructions on screen.
 
-- Enable Remote Desktop for Clients running Remote Desktop with Network Level Authentication
-- Enable Remote Desktop for clients running any version of Remote Desktop
-- Disable Remote
+- Enable Remote desktop for clients that support Network level authentication (NLA)
+- Enable Remote desktop for clients running any version of Remote desktop software
+- Disable Remote desktop
 
-1. From the Sconfig main menu, type `7` and press `Enter` to enter the Remote Desktop settings menu.
-1. On the Remote Desktop menu, type `E` and press `Enter` to enable Remote Desktop. Alternatively, press `D` and press `Enter` to disable Remote Desktop.
-1. When enabling Remote Desktop, choose between the following options:
-    - To allow only clients running remote desktop with network level authentication (more secure) type `1` and press `Enter`.
-    - To allow clients running any version of remote desktop (less secure) type `2` and press `Enter`.
+1. From the *SConfig* main menu, type `7` and press `Enter` to enter the Remote desktop settings menu.
+1. On the Remote desktop menu, type `E` and press `Enter` to enable Remote desktop. Alternatively, press `D` and press `Enter` to disable Remote desktop.
+1. When enabling Remote desktop, choose between the following options.
+    - To allow only clients running Remote desktop with Network level authentication (more secure), type `1` and press `Enter`.
+    - To allow clients running any version of Remote desktop (less secure), type `2` and press `Enter`.
 
-## Configure network settings
+## Configure network
 
-You can configure the IPv4 address to be assigned automatically by a DHCP Server or you can assign a static IP address manually as well as subnet mask and default gateway. By default, Windows Server will attempt to provision a network address from a DHCP server and will assign an APIPA address to network interfaces if no DHCP server is available. In addition to configuring an IPv4 address, you can also use this menu to configure a primary and secondary DNS server.
+By default, the operating system will attempt to provision a network address from a DHCP server. If no DHCP server is available, it will assign an Automatic private IP address (APIPA) to the network interface. Alternatively, you can assign a static IPv4 address manually, and specify the subnet mask and default gateway. When configuring an IPv4 address, you can also use this menu to configure primary and secondary DNS servers.
 
-1. From the main menu, type `8` and press `Enter` to enter the XXXXXX settings menu.
+1. From the main menu, type `8` and press `Enter` to enter the Network settings menu.
 1. On the **Network settings** menu in this list of available interfaces, type the number of the Interface (such as `1`) and press `Enter` to select that interface.
-1. On the **Network adapter settings** page, choose one of the following options:
+1. On the **Network adapter settings** page, choose one of the following options.
     1. Type `1` and press `Enter` to set the network adapter address.
-    1. Press `D` and press `Enter` to configure DHCP or press `S` and press `Enter` to configure a static address.
-    1. If you choose the static IP address option, provide the IPv4 address, subnet mask (in dotted quad notation (example 255.255.255.0)) and default gateway address, pressing `Enter` after each entry.
-2. Type `2` and press `Enter` to set the DNS server address
+    1. Press `D` and press `Enter` to configure DHCP or press `S` and press `Enter` to configure a static IP address.
+    1. If you choose the static IP address option, provide the IPv4 address, subnet mask (in dotted quad notation, such as `255.255.255.0`), and default gateway address, pressing `Enter` after each entry.
+2. Type `2` and press `Enter` to set the DNS server address.
     1. Provide the IPv4 address of the preferred DNS server and press `Enter`.
     1. Provide the IPv4 address of the alternate DNS server and press `Enter`.
-3. Type `3` and press `Enter` to clear current DNS server settings
+3. Type `3` and press `Enter` to clear current DNS server settings.
 
 ## Date and time settings
 
-Selecting the Date and Time option will open the Date and Time control panel when connected directly to the server or remotely through Remote Desktop. You can use this control panel to set the date and time and to modify the time zone settings.
+Selecting the Date and time option will open the Date and time Control panel applet. You can use this applet to set the date and time and to modify the time zone settings.
 
-## Configure telemetry settings
+## Configure Operating system diagnostic data (telemetry)
 
-This option lets you configure whether anonymized Windows Server telemetry is forwarded to Microsoft.
+This option lets you configure whether anonymized diagnostic data is forwarded to Microsoft.
 
-1. From the Sconfig main menu, type `10` and press `Enter` to enter the Telemetry settings menu.
-1. To change the telemetry setting, type `Y` for Yes or `N` for No and press `Enter`.
-1. If you choose to change the telemetry settings, you can choose one of the following options:
-    1. To disable telemetry, type `1` and press `Enter`.
-    1. To set telemetry to Required, type `2` and press `Enter`.
-    1. To set telemetry to Optional, type `3` and press `Enter`
+1. From the *SConfig* main menu, type `10` and press `Enter` to enter the Telemetry settings menu.
+1. To change the diagnostic data setting, type `Y` for Yes or `N` for No and press `Enter`.
+1. If you want to change the diagnostic data settings, you can choose one of the available options.
 
-To understand more about telemetry options, see [Telemetry Options](https://go.microsoft.com/fwlink/?LinkID-811315).
+> [!NOTE] 
+> Windows Server and Azure Stack HCI have different default configuration regarding to diagnostic data. For information specific to Windows Server, see [Configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings). For Azure Stack HCI, see [Azure Stack HCI data collection](/azure-stack/hci/concepts/data-collection). Please note that you cannot configure the latter in *SConfig.* To learn more about Microsoft approach to privacy, see [Privacy at Microsoft](https://go.microsoft.com/fwlink/?LinkID=811315).
 
-## Configure Windows activation settings
+## Windows activation
 
-This option lets you to display current license and activation status, install a product key, and activate windows. 
+This option lets you display current license and activation status, install a product key, and activate Windows Server. 
 
-1. From the Sconfig main menu, type `11` and press `Enter` to enter the **Windows Activation settings** menu.
+> [!NOTE] 
+> Activation is only needed for Windows Server. This menu item is not available on Azure Stack HCI. [Azure Stack HCI registration](/azure-stack/hci/manage/manage-azure-registration#unregister-azure-stack-hci-by-using-powershell) is a different process, and it is currently not integrated to *SConfig*.
+
+1. From the *SConfig* main menu, type `11` and press `Enter` to enter the **Windows activation settings** menu.
     - Type `1` and press `Enter` to view the current Activation status.
     - Type `2` and press `Enter` to attempt Activation with the currently installed product key.
-    - Type `3` and press `Enter` to add a new product key. At the prompt type the product key and press `Enter`. Press `Enter` again once the product key is installed and then return to this menu to perform activation.
+    - Type `3` and press `Enter` to add a new product key. At the prompt, type in the product key and press `Enter`. Press `Enter` again once the product key is installed and then return to this menu to perform activation.
 
-## Log off the current user
+## Log the current user off
 
 1. From the main menu, type `12` and press Enter.
 1. At the prompt asking if you are sure, type `Y` and press Enter. The currently signed on account will be logged off. 
@@ -211,10 +229,13 @@ This option lets you to display current license and activation status, install a
 
 ## Exit to command line (PowerShell)
 
-This closes the Sconfig.cmd menu and provides a PowerShell prompt. 
+This menu item closes the *SConfig* menu and returns to an interactive PowerShell prompt. You can use it to run arbitrary PowerShell commands and scripts for advanced configuration or troubleshooting. Many of these specialized options are not available natively in *SConfig.* For example, configure [storage](/powershell/module/storage), advanced [network adapter settings](/powershell/module/netadapter) (such as setting VLAN IDs) and [install device drivers](/windows-hardware/drivers/devtest/pnputil-command-syntax).
 
-To exit to PowerShell from the main menu, type `15` and press `Enter`. To return to the Server Configuration Tool, type `Sconfig.cmd`, and then press `Enter` or type `exit` which closes the current command prompt window and open a new instance of **Sconfig.cmd**.
+> [!NOTE] 
+> As a general rule, every setting available in the operating system can be controlled using command line tools or scripts. However, many of these settings are more conveniently managed remotely using graphical tools such as Windows Admin Center, Server Manager and System Center.
 
-## Disable *Sconfig.cmd* from automatically starting
+To exit to PowerShell from *SConfig* main menu, type `15` and press `Enter`. To return to Server configuration tool, type `SConfig` in PowerShell, and then press `Enter`. Alternatively, type `exit`. It will close the current PowerShell window and open a new instance of *SConfig* automatically.
 
-*Sconfig.cmd* automatically starts on Windows Server 2022 Server Core installations. You can stop *Sconfig.cmd* from launching automatically by running the PowerShell command `Set-Sconfig -AutoLaunch $False`.
+## Disable *SConfig* from starting automatically
+
+*SConfig* automatically starts on Windows Server 2022 (when deployed in Server Core installation option) and on Azure Stack HCI. You can stop *SConfig* from launching automatically by running the following command in PowerShell: `Set-SConfig -AutoLaunch $False`.
