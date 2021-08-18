@@ -10,7 +10,7 @@ ms.date: 08/18/2021
 ---
 # Configure Quality of Service (QoS) for a tenant VM network adapter
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can configure Software Defined Networking (SDN) Quality of Service (QoS) for a virtual machine (VM) network adapter to limit bandwidth on a virtual interface to prevent a high-traffic VM from blocking other users. You can also configure SDN QoS to reserve a specific amount of bandwidth for a VM to ensure that the VM can send traffic regardless of other traffic on the network. This can be applied to VMs attached to traditional VLAN networks as well as VMs attached to SDN overlay networks.
 
@@ -129,3 +129,5 @@ New-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId $NwInterfa
 
 >[!NOTE]
 >During live migration, it is possible that a VM moves to a host that does not support QoS Offload. In this scenario, live migration will succeed, but QoS will fallback to SDN QoS.
+=======
+---

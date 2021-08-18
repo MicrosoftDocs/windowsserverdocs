@@ -10,7 +10,7 @@ ms.date: 10/12/2016
 ---
 # Credentials Processes in Windows Authentication
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This reference topic for the IT professional describes how Windows authentication processes credentials.
 

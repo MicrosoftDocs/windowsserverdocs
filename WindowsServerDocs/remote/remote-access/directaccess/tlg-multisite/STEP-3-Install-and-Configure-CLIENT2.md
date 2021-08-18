@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # STEP 3 Install and Configure CLIENT2
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 CLIENT2 is a  Windows 7&reg;  computer that is used to demonstrate the backwards compatibility of Remote Access running on Windows Server 2016 servers.
 

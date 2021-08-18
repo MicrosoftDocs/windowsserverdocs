@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 03/29/2021
+ms.date: 07/19/2021
 ms.localizationpriority: medium
 ---
 # What's new in the iOS client
@@ -15,6 +15,23 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 ## How to report issues
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Help** > **Report an Issue**.
+
+## Updates for version 10.3.1
+
+Date published: June 28, 2021
+
+In this release we worked around a 0x907 (mismatched certificate) error code that was caused by third-party infrastructure returning an incorrect certificate in redirection scenarios. We also made some updates to improve compatibility and performance metrics when connecting to Azure Virtual Desktop (formerly known as Windows Virtual Desktop).
+
+## Updates for version 10.3.0
+
+Date published: May 27, 2021
+
+In this release, we've made some significant updates to the shared underlying code that powers the Remote Desktop experience across all our clients. We've also added some new features and addressed bugs and crashes that were showing up in error reporting.
+
+- You can now drag IME candidate window in the client.
+- Integrated Kerberos support in the CredSSP security protocol sequence.
+- Added support for HTTP proxies in Azure Virtual Desktop and on-prem scenarios.
+- Made updates to improve interoperability with current and upcoming features in the Azure Virtual Desktop service.
 
 ## Updates for version 10.2.5
 

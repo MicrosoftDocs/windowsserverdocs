@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Guides
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 ## Guides
 Here are some guides for developing with the Windows Admin Center SDK:

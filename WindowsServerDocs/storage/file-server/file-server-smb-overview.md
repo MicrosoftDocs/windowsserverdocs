@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Overview of file sharing using the SMB 3 protocol in Windows Server
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes the SMB 3 feature in Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012—practical uses for the feature, the most significant new or updated functionality in this version compared to previous versions, and the hardware requirements. SMB is also a fabric protocol used by [software-defined data center (SDDC)](../../sddc.md) solutions such as Storage Spaces Direct, Storage Replica, and others. SMB version 3.0 was introduced with Windows Server 2012 and has been incrementally improved in subsequent releases.
 

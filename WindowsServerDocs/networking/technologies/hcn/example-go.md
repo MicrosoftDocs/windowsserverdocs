@@ -9,7 +9,7 @@ ms.topic: article
 
 # Example of Go generated code
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 ```Go
 /*

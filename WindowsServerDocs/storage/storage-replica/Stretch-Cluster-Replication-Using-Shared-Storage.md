@@ -10,7 +10,7 @@ ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
 ---
 # Stretch Cluster Replication Using Shared Storage
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 In this evaluation example, you will configure these computers and their storage in a single stretch cluster, where two nodes share one set of storage and two nodes share another set of storage, then replication keeps both sets of storage mirrored in the cluster to allow immediate failover. These nodes and their storage should be located in separate physical sites, although it is not required. There are separate steps for creating Hyper-V and File Server clusters as sample scenarios.
 
@@ -44,6 +44,9 @@ This walkthrough uses the following environment as an example:
 -   Appropriate firewall and router rules to allow ICMP, SMB (port 445, plus 5445 for SMB Direct) and WS-MAN (port 5985) bi-directional traffic between all nodes.
 -   A network between servers with enough bandwidth to contain your IO write workload and an average of =5ms round trip latency, for synchronous replication. Asynchronous replication does not have a latency recommendation.
 -   The replicated storage cannot be located on the drive containing the Windows operating system folder.
+
+> [!IMPORTANT]
+> While it is possible to attach a storage device to a single server and use this for replication, Windows Failover Clustering still relies on SCSI Persistent Reservations. Therefore, the storage must still be a Shared Storage type such as a SAN technology. Local disks or disks presented by a hypervisor might not be compatible. In Azure, the disks must be a Premium SSD size that supports sharing, even if only one VM is to be attached to it.
 
 Many of these requirements can be determined by using the `Test-SRTopology` cmdlet. You get access to this tool if you install Storage Replica or the Storage Replica Management Tools features on at least one server. There is no need to configure Storage Replica to use this tool, only to install the cmdlet. More information is included in the following steps.
 

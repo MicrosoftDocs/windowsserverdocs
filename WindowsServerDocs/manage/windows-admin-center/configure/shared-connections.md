@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Configure shared connections for all users of the Windows Admin Center gateway
 
-> Applies To: Windows Admin Center Preview, Windows Admin Center
+>Applies to: Windows Admin Center Preview, Windows Admin Center
 
 With the ability to configure shared connections, gateway administrators can configure the connections list once for all users of a given Windows Admin Center gateway. This feature is only available on Windows Admin Center service mode.
 
