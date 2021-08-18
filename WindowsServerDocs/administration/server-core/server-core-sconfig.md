@@ -44,7 +44,7 @@ SConfig starts automatically starting with Windows Server 2022 (deployed in Serv
     ![Screenshot of SConfig user interface](/media/sconfig-main-page.png)
 
 > [!NOTE]
-> Launching SConfig from a Command prompt (CMD) window by running `SConfig.cmd` also works in Windows Server 2022 and Azure Stack HCI, just like it did in previous versions. However, this method is [no longer being developed](removed-deprecated-features-windows-server-2022.md) and may be removed in the future versions of the operating system. The recommended way to manually launch SConfig if required is by running `SConfig` in a PowerShell window.
+> Launching SConfig from a Command prompt (CMD) window by running `SConfig.cmd` also works in Windows Server 2022 and Azure Stack HCI, just like it did in previous versions. However, this method is [no longer being developed](../../get-started/removed-deprecated-features-windows-server-2022.md) and may be removed in the future versions of the operating system. The recommended way to manually launch SConfig if required is by running `SConfig` in a PowerShell window.
 
 ## Join a domain or workgroup
 
