@@ -250,12 +250,12 @@ However, if PowerShell was uninstalled, the default shell falls back to CMD. Unl
 > [!NOTE]
 > [Diskpart is deprecated](/windows/compatibility/vds-is-transitioning-to-windows-storage-management-api) and might not provide full functionality. For example, unlike PowerShell, it cannot manage Storage Spaces.
 
-The change in default shell should be transparent for most users because you can run all the same command-line tools in PowerShell as you could in CMD. Moreover, PowerShell is much more capable than CMD both in terms of interactive language features and number of commands being available. However, in some edge case scenarios, a command in PowerShell might behave differently from CMD. For example, you might notice that if you were using batch file syntax (such as `set x=y`) in an interactive session. (If you were running a batch file, i.e. a file with `.cmd` or `.bat` extension, it would be processed by CMD even if launched from PowerShell. In this scenario, so you won't observe any differences.)
+The change in default shell should be transparent for most users because you can run all the same command-line tools in PowerShell as you could in CMD. Moreover, PowerShell is much more capable than CMD both in terms of interactive language features and number of commands being available. However, in some edge case scenarios, a command in PowerShell might behave differently from CMD. For example, you might notice that if you were using batch file syntax (such as `set foo=bar`) in an interactive session. (If you were running a batch file, i.e. a file with `.cmd` or `.bat` extension, it would be processed by CMD even if launched from PowerShell. In this scenario, so you won't observe any differences.)
 
 You can explicitly transition to the classic Command prompt by simply typing `cmd` in PowerShell and pressing `Enter`. Alternatively, type `start cmd` if you prefer to launch a new window.
 
 > [!NOTE] 
-> If you intend to _reload_ an existing PowerShell session (e.g. for module updates to take effect), launching *SConfig* and exiting it won't be sufficient. The reason is SConfig itself being a PowerShell application which runs within an existing PowerShell session. Exiting SConfig will get you into the original session.
+> If you intend to _reload_ an existing PowerShell session (e.g. for module updates to take effect), launching *SConfig* and exiting it won't be sufficient. The reason is *SConfig* itself being a PowerShell application which runs within an existing PowerShell session. Exiting *SConfig* will get you into the original session.
 >
 > Instead, to reload a PowerShell session, type `exit` and press `Enter`. This will close the existing PowerShell window, and a new one will be started automatically. (The latter part is specific to Server Core and Azure Stack HCI. On Server with Desktop Experience, you will have to manually launch a new PowerShell window.)
 
