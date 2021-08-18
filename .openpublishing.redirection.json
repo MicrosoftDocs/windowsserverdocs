@@ -507,7 +507,7 @@
     },
     {
       "source_path": "WindowsServerDocs/get-started/semi-annual-channel-overview.md",
-      "redirect_url": "/windows-server/get-started-19/servicing-channels-19",
+      "redirect_url": "/windows-server/get-started/servicing-channels-comparison",
       "redirect_document_id": true
     },
     {
@@ -10068,6 +10068,131 @@
     {
       "source_path": "WindowsServerDocs/storage/storage-spaces/data-collection.md",
       "redirect_url": "/azure-stack/hci/manage/collect-diagnostic-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Server-Basics.md",
+      "redirect_url": "/windows-server/get-started/get-started-with-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-console.md",
+      "redirect_url": "/windows-server/administration/changes-to-the-windows-console",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/whats-new-in-windows-server-1903-1909.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-1903-1909",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/whats-new-19.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/system-requirements.md",
+      "redirect_url": "/windows-server/get-started/hardware-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/servicing-channels.md",
+      "redirect_url": "/windows-server/get-started/servicing-channels-comparison",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/editions-comparison.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/editions-comparison-19.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/2016-edition-comparison.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Deprecated-Features.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/removed-features-19.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/removed-features.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/removed-features-1903.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-1903-1909",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/System-Requirements.md",
+      "redirect_url": "/windows-server/get-started/hardware-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server-2004.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2004-20h2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/modernize-windows-server-2008.md",
+      "redirect_url": "/windows-server/get-started/extended-security-updates-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/install-upgrade-migrate.md",
+      "redirect_url": "/windows-server/get-started/install-upgrade-migrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/installation-and-upgrade.md",
+      "redirect_url": "/windows-server/get-started/install-upgrade-migrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/install-upgrade-migrate-19.md",
+      "redirect_url": "/windows-server/get-started/install-upgrade-migrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/uploading-specialized-ws08-image-to-azure.md",
+      "redirect_url": "/azure/virtual-machines/windows/upload-generalized-managed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/extended-security-updates.md",
+      "redirect_url": "/windows-server/get-started/extended-security-updates-deploy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/get-started-19.md",
+      "redirect_url": "/windows-server/get-started/get-started-with-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/get-started-with-windows-server-2022.md",
+      "redirect_url": "/windows-server/get-started/get-started-with-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/sys-reqs-19.md",
+      "redirect_url": "/windows-server/get-started/hardware-requirements",
       "redirect_document_id": false
     }
   ]

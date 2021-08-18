@@ -1,17 +1,19 @@
 ---
-description: "Learn more about: Comparison of Standard and Datacenter editions of Windows Server 2019"
-title: "Comparison of Standard and Datacenter editions of Windows Server 2019"
-ms.topic: article
-ms.assetid: c5ca3bfe-7ced-49f6-2932-80cab33fe914
+title: Comparison of Standard and Datacenter editions Windows Server 2019
+description: Comparison of Standard and Datacenter editions of Windows Server 2019.
+ms.topic: conceptual
 author: jasongerend
 ms.author: jgerend
-manager: jasgroce
+manager: femila
+ms.date: 8/16/2021
+ms.prod: windows-server
 ms.localizationpriority: medium
-ms.date: 12/10/2020
+ms.assetid: c5ca3bfe-7ced-49f6-2932-80cab33fe914
 ---
+
 # Comparison of Standard and Datacenter editions of Windows Server 2019
 
->Applies to: Windows Server 2019
+Use this article to compare Standard and Datacenter editions of Windows Server 2019 to see which will be most appropriate.
 
 ## Locks and Limits
 
@@ -25,7 +27,7 @@ ms.date: 12/10/2020
 | Maximum number of 64-bit sockets | 64                           | 64 |
 | Maximum number of cores          | unlimited                    | unlimited |
 | Maximum RAM                      | 24 TB                        | 24 TB |
-| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license|Yes; <strong>unlimited virtual machines</strong>, plus one Hyper-V host per license |
+| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license|Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
 | Server can join a domain        | yes                           | yes |
 | Edge network protection/firewall| no                            | no    |
 | DirectAccess                    | yes                           | yes |
@@ -58,7 +60,7 @@ ms.date: 12/10/2020
 |File and Storage Services|Storage Services|Yes|Yes|
 |Host Guardian Service| |Yes|Yes|
 |Hyper-V| |Yes|Yes; including Shielded Virtual Machines|
-|Network Controller| |No| <strong>Yes</strong> |
+|Network Controller| |No| **Yes** |
 |Network Policy and Access Services| |Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Print and Document Services| |Yes|Yes|
 |Remote Access| |Yes|Yes|
@@ -69,12 +71,11 @@ ms.date: 12/10/2020
 |Windows Server Essentials Experience| |No | No |
 |Windows Server Update Services| |Yes|Yes|
 
-*WDS Transport Server is new to Server Core installations in Windows Server 2019 (also in the semi-annual channel starting with Windows Server, version 1803)
-
+*WDS Transport Server is new to Server Core installations in Windows Server 2019 (also in the Semi-Annual Channel starting with Windows Server, version 1803)
 
 ## Features
 
-|Windows Server Features installable with Server Manager (or PowerShell)|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|Windows Server Features available|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
 |-------------------|----------|---------------------------|
 |.NET Framework 3.5 |Yes|Yes|
 |.NET Framework 4.7 |Yes|Yes|
@@ -83,13 +84,13 @@ ms.date: 12/10/2020
 |BitLocker Network Unlock|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |BranchCache|Yes|Yes|
 |Client for NFS|Yes|Yes|
-|Containers|Yes (unlimited Windows containers; up to two Hyper-V containers)|Yes (<strong>unlimited Windows and Hyper-V containers</strong>) |
+|Containers|Yes (unlimited Windows containers; up to two Hyper-V containers)|Yes (**unlimited Windows and Hyper-V containers**) |
 |Data Center Bridging|Yes|Yes|
 |Direct Play|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Enhanced Storage|Yes|Yes|
 |Failover Clustering|Yes|Yes|
 |Group Policy Management|Yes|Yes|
-|Host Guardian Hyper-V Support|No| <strong>Yes</strong> |
+|Host Guardian Hyper-V Support|No| **Yes** |
 |I/O Quality of Service|Yes|Yes|
 |IIS Hostable Web Core|Yes|Yes|
 |Internet Printing Client|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
@@ -151,21 +152,15 @@ ms.date: 12/10/2020
 |Server Core installation option|Yes|Yes|
 |Server Manager|Yes|Yes|
 |SMB Direct and SMB over RDMA|Yes|Yes|
-|Software-defined Networking|No| <strong>Yes</strong> |
+|Software-defined Networking|No| **Yes** |
 |Storage Migration  Service|Yes|Yes|
-| Storage Replica         | Yes, (1 partnership and 1 resource group with a single 2TB volume)    | Yes, <strong>unlimited</strong> |
+| Storage Replica         | Yes, (1 partnership and 1 resource group with a single 2TB volume)    | Yes, **unlimited** |
 |Storage Spaces|Yes|Yes|
-|Storage Spaces Direct|No| <strong>Yes</strong> |
+|Storage Spaces Direct|No| **Yes** |
 |Volume Activation Services|Yes|Yes|
 |VSS (Volume Shadow Copy Service) integration|Yes|Yes|
 |Windows Server Update Services|Yes|Yes|
 |Windows System Resource Manager|Yes|Yes|
 |Server license logging|Yes|Yes|
-|Inherited activation|As guest if hosted on Datacenter| <strong>Can be a host or a guest</strong> |
+|Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** |
 |Work Folders|Yes|Yes|
-
-## Known issues
-
-If the **Available Physical Memory** exceeds 24TB, **Task Manager** displays 24TB instead of the actual size.
-
-After installing Hyper-V, **Task Manager** displays 512 cores and 1024 logical processors instead of the actual numbers if there are more than 512 cores or more than 32 sockets.

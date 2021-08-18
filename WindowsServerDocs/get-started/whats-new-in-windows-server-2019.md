@@ -1,19 +1,18 @@
 ---
 title: What's new in Windows Server 2019
-description: An overview of new features in Windows Server 2019, including Desktop Experience, Storage Migration Service, System Insights, Azure Network Adapter, improvements to Storage Spaces Direct, and other changes.
+description: This article describes some of the new features in Windows Server 2019.
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
+manager: femila
+ms.date: 08/13/2021
+ms.prod: windows-server
 ms.localizationpriority: high
-ms.date: 06/04/2019
 ---
+
 # What's new in Windows Server 2019
 
->Applies to: Windows Server 2019
-
-This topic describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid Cloud, Security, Application Platform, and Hyper-Converged Infrastructure (HCI).
-
-To find out what's new in Windows Server Semi-Annual Channel releases, see [What's New in Windows Server](../get-started/whats-new-in-windows-server.md).
+This article describes some of the new features in Windows Server 2019. Windows Server 2019 is built on the strong foundation of Windows Server 2016 and brings numerous innovations on four key themes: Hybrid Cloud, Security, Application Platform, and Hyper-Converged Infrastructure (HCI).
 
 ## General
 
@@ -27,8 +26,7 @@ For more info, see [Windows Admin Center](../manage/windows-admin-center/overvie
 
 ### Desktop experience
 
-Because Windows Server 2019 is a Long-Term Servicing Channel (LTSC) release, it includes the <b>Desktop Experience</b>. (Semi-Annual Channel \(SAC\) releases don't include the Desktop Experience by design; they are strictly Server Core and Nano Server container image releases.)
-As with Windows Server 2016, during setup of the operating system you can choose between Server Core installations or Server with Desktop Experience installations.
+Because Windows Server 2019 is a Long-Term Servicing Channel (LTSC) release, it includes the **Desktop Experience**. (Semi-Annual Channel \(SAC\) releases don't include the Desktop Experience by design; they are strictly Server Core and Nano Server container image releases.) As with Windows Server 2016, during setup of the operating system you can choose between Server Core installations or Server with Desktop Experience installations.
 
 ### System Insights
 
@@ -36,9 +34,9 @@ System Insights is a new feature available in Windows Server 2019 that brings lo
 
 ## Hybrid Cloud
 
-### Server Core app compatibility feature on demand
+### Server Core App Compatibility Feature on Demand
 
-The [Server Core App Compatibility feature on demand (FOD)](./install-fod-19.md) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.
+The [Server Core App Compatibility Feature on Demand (FOD)](../get-started-19/install-fod-19.md) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.
 
 This optional feature on demand is available on a separate ISO and can be added to Windows Server Core installations and images only, using DISM.
 
@@ -48,35 +46,30 @@ This optional feature on demand is available on a separate ISO and can be added 
 
 ATP's deep platform sensors and response actions expose memory and kernel level attacks and respond by suppressing malicious files and terminating malicious processes.
 
--   For more information about Windows Defender ATP, see [Overview of Windows Defender ATP capabilities](/windows/security/threat-protection/windows-defender-atp/overview).
+- For more information about Windows Defender ATP, see [Overview of Windows Defender ATP capabilities](/windows/security/threat-protection/windows-defender-atp/overview).
 
--   For more information on onboarding servers, see [Onboard servers to Windows Defender ATP service](/windows/security/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection).
+- For more information on onboarding servers, see [Onboard servers to Windows Defender ATP service](/windows/security/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection).
 
 **Windows Defender ATP Exploit Guard** is a new set of host-intrusion prevention capabilities. The four components of Windows Defender Exploit Guard are designed to lock down the device against a wide variety of attack vectors and block behaviors commonly used in malware attacks, while enabling you to balance security risk and productivity requirements.
 
--   [Attack Surface Reduction(ASR)](/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc) is set of controls that enterprises can enable to prevent malware from
+- [Attack Surface Reduction(ASR)](/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc) is set of controls that enterprises can enable to prevent malware from
     getting on the machine by blocking suspicious malicious files (for example,
     Office files), scripts, lateral movement, ransomware behavior, and
     email-based threats.
 
--   [Network protection](/windows/security/threat-protection/microsoft-defender-atp/network-protection)
+- [Network protection](/windows/security/threat-protection/microsoft-defender-atp/network-protection)
     protects the endpoint against web-based threats by blocking any outbound
     process on the device to untrusted hosts/IP addresses through Windows
     Defender SmartScreen.
 
--   [Controlled folder access](https://cloudblogs.microsoft.com/microsoftsecure/2017/10/23/stopping-ransomware-where-it-counts-protecting-your-data-with-controlled-folder-access/?ocid=cx-blog-mmpc?source=mmpc)
+- [Controlled folder access](https://cloudblogs.microsoft.com/microsoftsecure/2017/10/23/stopping-ransomware-where-it-counts-protecting-your-data-with-controlled-folder-access/?ocid=cx-blog-mmpc?source=mmpc)
     protects sensitive data from ransomware by blocking untrusted processes from
     accessing your protected folders.
 
--   [Exploit protection](/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET)that can
+- [Exploit protection](/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) is a set of mitigations for vulnerability exploits (replacing EMET)that can
     be easily configured to protect your system and applications.
 
-[Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also
-known as Code Integrity (CI) policy) was released in Windows Server 2016.
-Customer feedback has suggested that it is a great concept, but hard to deploy.
-To address this, we have built default CI policies, which allows all Windows
-in-box files and Microsoft applications, such as SQL Server, and block known
-executables that can bypass CI. 
+- [Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (also known as Code Integrity (CI) policy) was released in Windows Server 2016. Customer feedback has suggested that it is a great concept, but hard to deploy. To address this, we have built default CI policies, which allows all Windows in-box files and Microsoft applications, such as SQL Server, and block known executables that can bypass CI.
 
 ### Security with Software Defined Networking (SDN)
 
@@ -90,7 +83,7 @@ For a complete list of what's new in SDN see, [What's New in SDN for Windows Ser
 
 - **Branch office improvements**
 
-    You can now run shielded virtual machines on machines with intermittent connectivity to the Host Guardian Service by leveraging the new [fallback HGS](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#fallback-configuration) and [offline mode](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#offline-mode) features. Fallback HGS allows you to configure a second set of URLs for Hyper-V to try if it can't reach your primary HGS server.
+    You can now run shielded virtual machines on machines with intermittent connectivity to the Host Guardian Service by using the new [fallback HGS](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#fallback-configuration) and [offline mode](../security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md#offline-mode) features. Fallback HGS allows you to configure a second set of URLs for Hyper-V to try if it can't reach your primary HGS server.
 
     Offline mode allows you to continue to start up your shielded VMs, even if HGS can't be reached, as long as the VM has started successfully once, and the host's security configuration has not changed.
 
@@ -124,16 +117,16 @@ Storage Migration Service is a new technology that makes it easier to migrate se
 
 Here's a list of what's new in Storage Spaces Direct. For details, see [What's new in Storage Spaces Direct](../storage/whats-new-in-storage.md#storage-spaces-direct). Also see [Azure Stack HCI](/azure-stack/operator/azure-stack-hci-overview) for info on acquiring validated Storage Spaces Direct systems.
 
-- **Deduplication and compression for ReFS volumes**
-- **Native support for persistent memory**
-- **Nested resiliency for two-node hyper-converged infrastructure at the edge**
-- **Two-server clusters using a USB flash drive as a witness**
-- **Windows Admin Center support**
-- **Performance history**
-- **Scale up to 4 PB per cluster**
-- **Mirror-accelerated parity is 2X faster**
-- **Drive latency outlier detection**
-- **Manually delimit the allocation of volumes to increase fault tolerance**
+- Deduplication and compression for ReFS volumes
+- Native support for persistent memory
+- Nested resiliency for two-node hyper-converged infrastructure at the edge
+- Two-server clusters using a USB flash drive as a witness
+- Windows Admin Center support
+- Performance history
+- Scale up to 4 PB per cluster
+- Mirror-accelerated parity is 2X faster
+- Drive latency outlier detection
+- Manually delimit the allocation of volumes to increase fault tolerance
 
 ### Storage Replica
 
@@ -148,15 +141,15 @@ Here's what's new in Storage Replica. For details, see [What's new in Storage Re
 
 Here's a list of what's new in Failover Clustering. For details, see [What's new in Failover Clustering](../failover-clustering/whats-new-in-failover-clustering.md).
 
-- **Cluster sets**
-- **Azure-aware clusters**
-- **Cross-domain cluster migration**
-- **USB witness**
-- **Cluster infrastructure improvements**
-- **Cluster Aware Updating supports Storage Spaces Direct**
-- **File share witness enhancements**
-- **Cluster hardening**
-- **Failover Cluster no longer uses NTLM authentication**
+- Cluster sets
+- Azure-aware clusters
+- Cross-domain cluster migration
+- USB witness
+- Cluster infrastructure improvements
+- Cluster Aware Updating supports Storage Spaces Direct
+- File share witness enhancements
+- Cluster hardening
+- Failover Cluster no longer uses NTLM authentication
 
 ## Application Platform
 
@@ -164,9 +157,9 @@ Here's a list of what's new in Failover Clustering. For details, see [What's new
 
 It is now possible to run Windows and Linux-based containers on the same container host, using the same docker daemon. This enables you to have a heterogeneous container host environment while providing flexibility to application developers.
 
-### Built-in Support for Kubernetes
+### Built-in support for Kubernetes
 
-Windows Server 2019 continues the improvements to compute, networking and storage from the semi-annual channel releases needed to support Kubernetes on Windows. More details are available in upcoming Kubernetes releases.
+Windows Server 2019 continues the improvements to compute, networking, and storage from the Semi-Annual Channel releases needed to support Kubernetes on Windows. More details are available in upcoming Kubernetes releases.
 
 - [Container Networking](../networking/sdn/technologies/containers/container-networking-overview.md) in Windows Server 2019 greatly improves usability of Kubernetes on Windows by enhancing platform networking resiliency and support of container networking plugins.
 
@@ -180,7 +173,7 @@ Windows Server 2019 continues the improvements to compute, networking and storag
 
 - **Better application compatibility**
 
-    Containerizing Windows-based applications just got easier: The app compatibility for the existing *windowsservercore* image has been increased. For applications with additional API dependencies, there is now a third base image: *windows*.
+    Containerizing Windows-based applications just got easier: The app compatibility for the existing **windowsservercore** image has been increased. For applications with additional API dependencies, there is now a third base image: **windows**.
 
 - **Reduced size and higher performance**
 
@@ -199,24 +192,21 @@ It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet 
 
 [Network performance improvements for virtual workloads](../networking/technologies/hpn/hpn-insider-preview.md) maximizes the network throughput to virtual machines without requiring you to constantly tune or over-provision your host. This lowers the operations and maintenance cost while increasing the available density of your hosts. These new features are:
 
-* Receive Segment Coalescing in the vSwitch
+- Receive Segment Coalescing in the vSwitch
 
-* Dynamic Virtual Machine Multi-Queue (d.VMMQ)
+- Dynamic Virtual Machine Multi-Queue (d.VMMQ)
 
 ### Low Extra Delay Background Transport
 
-Low Extra Delay Background Transport (LEDBAT) is a latency optimized, network congestion control provider designed to automatically yield bandwidth to users and applications, while consuming the entire bandwidth available when the network is not in use.
-This technology is intended for use in deploying large, critical updates across an IT environment without impacting customer facing services and associated bandwidth.
+Low Extra Delay Background Transport (LEDBAT) is a latency optimized, network congestion control provider designed to automatically yield bandwidth to users and applications, while consuming the entire bandwidth available when the network is not in use. This technology is intended for use in deploying large, critical updates across an IT environment without impacting customer facing services and associated bandwidth.
 
 ### Windows Time Service
 
 The [Windows Time Service](../networking/windows-time-service/insider-preview.md) includes true UTC-compliant leap second support, a new time protocol called Precision Time Protocol, and end-to-end traceability.
 
-
 ### High performance SDN gateways
 
 [High performance SDN gateways](../networking/sdn/gateway-performance.md) in Windows Server 2019 greatly improves the performance for IPsec and GRE connections, providing ultra-high-performance throughput with much less CPU utilization.
-<br/>
 
 ### New Deployment UI and Windows Admin Center extension for SDN
 
@@ -224,4 +214,4 @@ Now, with Windows Server 2019, it's easy to deploy and manage through a new depl
 
 ### Persistent Memory support for Hyper-V VMs
 
-To leverage the high throughput and low latency of persistent memory (a.k.a. storage class memory) in virtual machines, it can now be projected directly into VMs. This can help to drastically reduce database transaction latency or reduce recovery times for low latency in-memory databases on failure.
+To leverage the high throughput and low latency of persistent memory (also known as storage class memory) in virtual machines, it can now be projected directly into VMs. This can help to drastically reduce database transaction latency or reduce recovery times for low latency in-memory databases on failure.

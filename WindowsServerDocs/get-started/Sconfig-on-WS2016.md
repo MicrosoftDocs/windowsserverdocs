@@ -18,6 +18,9 @@ In Windows Server 2016 and Windows Server, version 1709, you can use the Server 
 
 You can use Sconfig.cmd in Server Core and Server with Desktop Experience (Windows Server 2016 only) installations.
 
+> [!NOTE]
+> SConfig is being actively developed, and it undergone some significant changes in Windows Server 2022 and Azure Stack HCI. For information on current versions, please read [Configure Server Core in Windows Server 2022 and Azure Stack HCI with Server configuration tool (SConfig)](/windows-server/windows-server-2022/get-started/sconfig-on-ws2022).
+
 ## Start the Server Configuration Tool
 
 1. Change to the system drive.

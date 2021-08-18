@@ -1,21 +1,21 @@
 ---
-title: What's New in the Windows Console in Windows Server 2016
-description: Lists the important new features in the Windows Server 2016 console.
-ms.date: 10/04/2016
+title: Changes to the Windows Console in Windows Server
+description: Starting with Windows Server 2016, the console host (the underlying code that supports all character-mode applications including the Windows command prompt, the Windows PowerShell prompt, and others) has been updated in several ways to add a variety of new capabilities.
+ms.date: 05/12/2021
 ms.topic: article
 ms.assetid: da9fc582-033b-4973-84e7-0c6024ecfcbc
-author: jaimeo
-ms.author: jaimeo
-manager: dongill
+author: dknappettmsft
+ms.author: daknappe
+manager: femila
 ms.localizationpriority: medium
 ---
-# What's New in the Windows Console in Windows Server 2016
->Applies to: Windows Server 2016
+# Changes to the Windows Console in Windows Server
 
-The console host (the underlying code that supports all character-mode applications including the Windows command prompt, the Windows PowerShell prompt, and others) has been updated in several ways to add a variety of new capabilities.
+Starting with Windows Server 2016, the console host (the underlying code that supports all character-mode applications including the Windows command prompt, the Windows PowerShell prompt, and others) has been updated in several ways to add a variety of new capabilities.
 
 ## Controlling the new features
-The new functionality is enabled by default, but you can switch each of the new features on and off or revert to the previous console host either through the Properties interface (mostly on the **Options** tab) or with these Registry keys (all keys are DWORD values under **HKEY_CURRENT_USER\Console**):
+
+The new functionality is enabled by default, but you can switch each of the new features on and off or revert to the previous console host either through the Properties interface (mostly on the **Options** tab) or with these registry keys (all keys are DWORD values under `HKEY_CURRENT_USER\Console`):
 
 |Registry key|Description|
 |----------------|---------------|
@@ -39,6 +39,7 @@ You can pre-configure or script these settings by configuring the Registry appro
 > If you encounter issues with the new console settings and cannot resolve them with any of the specific options listed here, you can always revert back to the original console by setting ForceV2 to 0 or with the **Use legacy console** control in **Options**.
 
 ## Console behavior
+
 You can now resize the console window at will by grabbing an edge with the mouse and dragging it. Scroll bars only appear if you set window dimensions manually (by using the **Layout** tab in **Properties**) or if the longest line of text in the buffer is wider than the current window size.
 
 The new console window now supports word wrapping. However, if you used console APIs to change text in a buffer, the console will leave the text as it was originally inserted.
@@ -52,13 +53,16 @@ Console windows now can be semi-transparent (to a minimum transparency of 30%). 
 |Toggle full-screen mode|ALT+ENTER|
 
 ## Selection
+
 There are many new options for selecting text and lines, as well as for marking text and using the buffer history. The console attempts to avoid clashes with applications that might be using the same keys.
 
-**For developers:** If a conflict occurs, you can typically control the behavior of the application's use of line input, processed input, and echo input modes with the SetConsoleMode() API. If you run in processed input mode, the shortcuts below apply, but in other modes, your application must handle them. Any key combinations not listed here function as they did in previous versions of the console. You can also try to resolve conflicts with various settings on the **Options** tab. If all else fails, you can always revert to the original console.
+### For developers
+
+If a conflict occurs, you can typically control the behavior of the application's use of line input, processed input, and echo input modes with the SetConsoleMode() API. If you run in processed input mode, the shortcuts below apply, but in other modes, your application must handle them. Any key combinations not listed here function as they did in previous versions of the console. You can also try to resolve conflicts with various settings on the **Options** tab. If all else fails, you can always revert to the original console.
 
 You can now use click-and-drag selection outside of QuickEdit mode, and this selection can select text across lines as in Notepad, rather than just a rectangular block. Copy operations no longer require you to remove line breaks. In addition to click-and-drag selection, these key combinations are available:
 
-**Text selection**
+### Text selection
 
 |To do this:|Use this key combination:|
 |---------------|-----------------------------|
@@ -78,7 +82,7 @@ You can now use click-and-drag selection outside of QuickEdit mode, and this sel
 |Select all text after the prompt, if the cursor is in the current line and the line is not empty|CTRL+A|
 |Select the entire buffer, if the cursor is **not** in the current line|CTRL+A|
 
-**Editing text**
+### Editing text
 
 You can copy and paste text in the console using keyboard commands. CTRL+C now serves two functions. If no text is selected when you use it, it sends the BREAK command as usual. If text is selected, the first use copies the text and clears the selection; the second use sends BREAK. Here are the other editing commands:
 
@@ -89,7 +93,7 @@ You can copy and paste text in the console using keyboard commands. CTRL+C now s
 |Copy selected text to the clipboard; send BREAK|CTRL+C|
 |Paste text into the command line|SHIFT+INS|
 
-**Mark mode**
+### Mark mode
 
 To enter mark mode at any time, right-click anywhere in the console title bar, point to **Edit**, and select **Mark** from the menu that opens. You can also type CTRL+M. While in mark mode, use the ALT key to identify the start of a line-wrapping selection. (If **Enable line wrapping selection** is disabled, mark mode selects text in a block.) While in mark mode, CTRL+SHIFT+ARROW selects by character and not by word as in normal mode. In addition to the selection keys in the **Editing text** section, these combinations are available in mark mode:
 
@@ -102,7 +106,7 @@ To enter mark mode at any time, right-click anywhere in the console title bar, p
 |Move cursor to beginning of buffer|CTRL+HOME|
 |Move cursor to end of buffer|CTRL+END|
 
-**Navigating history**
+### Navigating history
 
 |To do this:|Use this key combination:|
 |---------------|-----------------------------|
@@ -111,7 +115,7 @@ To enter mark mode at any time, right-click anywhere in the console title bar, p
 |Move viewport to top of buffer (if command line is empty) or delete all characters to the left of the cursor (if command line is not empty)|CTRL+HOME|
 |Move viewport to command line (if command line is empty) or delete all characters to the right of the cursor (if command line is not empty)|CTRL+END|
 
-**Additional keyboard commands**
+### Additional keyboard commands
 
 |To do this:|Use this key combination:|
 |---------------|-----------------------------|
