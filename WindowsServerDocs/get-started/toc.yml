@@ -21,7 +21,7 @@ items:
             href: whats-new-in-windows-server-2016.md
         - name: Servicing channels comparison
           href: servicing-channels-comparison.md
-        - name: Editions comparison
+        - name: Editions feature comparison
           items:
           - name: Windows Server 2022
             href: editions-comparison-windows-server-2022.md
@@ -49,6 +49,11 @@ items:
       items:
         - name: Install, upgrade, or migrate
           href: install-upgrade-migrate.md
+          items:
+          - name: Install Server Core
+            href: Getting-started-with-Server-Core.md
+          - name: Install Server with Desktop Experience
+            href: Getting-started-with-Server-with-Desktop-Experience.md
         - name: Get Windows Server Extended Security Updates
           href: extended-security-updates-deploy.md
     - name: Migration of Windows Server Roles and Features
@@ -121,13 +126,6 @@ items:
               href: Developing-powershell-Cmdlets-for-Nano-Server.md
         - name: Troubleshooting Nano Server
           href: Troubleshooting-Nano-Server.md
-    - name: Install Server Core
-      href: Getting-started-with-Server-Core.md
-      items: 
-        - name: Configure Server Core with Sconfig.cmd
-          href: Sconfig-on-WS2016.md
-    - name: Install Server with Desktop Experience
-      href: Getting-started-with-Server-with-Desktop-Experience.md
     - name: Resources
       items:
       - name: Windows Server product page

@@ -6,6 +6,7 @@
 ### [What is the Server Core installation option?](server-core/what-is-server-core.md)
 #### [What's included in the Server Core installation option?](server-core/server-core-roles-and-services.md)
 #### [Basic administration tasks in Server Core](server-core/server-core-administer.md)
+#### [Configure Server Core with SConfig](server-core/server-core-sconfig.md)
 #### [Manage Server Core](server-core/server-core-manage.md)
 #### [Configure memory dump files](server-core/server-core-memory-dump.md)
 #### [Patch your Server Core installation](server-core/server-core-servicing.md)
