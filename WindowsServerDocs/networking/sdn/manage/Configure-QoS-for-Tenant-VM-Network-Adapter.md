@@ -129,5 +129,3 @@ New-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId $NwInterfa
 
 >[!NOTE]
 >During live migration, it is possible that a VM moves to a host that does not support QoS Offload. In this scenario, live migration will succeed, but QoS will fallback to SDN QoS.
-=======
----
