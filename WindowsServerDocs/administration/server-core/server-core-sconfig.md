@@ -224,7 +224,7 @@ This option lets you display current license and activation status, install a pr
 
 ## Exit to command line (PowerShell)
 
-This menu item closes the SConfig menu and returns to an interactive PowerShell prompt (or Command Prompt (CMD) for Windows Server 2019 or Windows Server 2016). You can use it to run arbitrary PowerShell commands and scripts for advanced configuration or troubleshooting. Many of these specialized options are not available natively in SConfig. Examples of this are, configuring [storage](/powershell/module/storage), advanced [network adapter settings](/powershell/module/netadapter) (such as setting VLAN IDs) and [installing device drivers](/windows-hardware/drivers/devtest/pnputil-command-syntax).
+This menu item closes the SConfig menu and returns to an interactive PowerShell prompt (or Command Prompt (CMD) for Windows Server 2019 or Windows Server 2016). You can use it to run arbitrary PowerShell commands and scripts for advanced configuration or troubleshooting. Many of these specialized options are not available natively in SConfig. Examples of this are, configuring [storage](/powershell/module/storage), advanced [network adapter settings](/powershell/module/netadapter) (such as setting VLAN IDs), and [installing device drivers](/windows-hardware/drivers/devtest/pnputil-command-syntax).
 
 > [!NOTE]
 > As a general rule, every setting available in the operating system can be controlled using command line tools or scripts. However, many of these settings are more conveniently managed remotely using graphical tools such as Windows Admin Center, Server Manager and System Center.
@@ -236,18 +236,18 @@ To exit to PowerShell from SConfig main menu, type `15` and press `Enter`. To re
 
 ### PowerShell is the default shell on Server Core
 
-Before Windows Server 2022, the default shell on Server Core was Command Prompt (CMD). It launched by default when user signed in to Server Core. From there, you could either launch SConfig, or run arbitrary command line tools.
+Before Windows Server 2022, the default shell on Server Core was Command Prompt (CMD). It launched by default when user signed in to Server Core. From there, you could either launch SConfig, or run arbitrary command-line tools.
 
 Starting with Windows Server 2022 (when deployed with the Server Core installation option) and Azure Stack HCI, the default shell is PowerShell. It starts by default, and SConfig is launched automatically within the PowerShell window. If you exit SConfig by using menu option `15`, you get to the interactive PowerShell session.
 
-However, if PowerShell is uninstalled, the default shell falls back to CMD. Unlike in previous versions of the operating system, if PowerShell is uninstalled, SConfig won't run either automatically or manually. You will only be able to use the classic command line tools such as [netsh.exe](/windows-server/networking/technologies/netsh/netsh) and [diskpart.exe](/windows-server/administration/windows-commands/diskpart).
+However, if PowerShell is uninstalled, the default shell falls back to CMD. Unlike in previous versions of the operating system, if PowerShell is uninstalled, SConfig won't run either automatically or manually. You will only be able to use the classic command-line tools such as [netsh.exe](/windows-server/networking/technologies/netsh/netsh) and [diskpart.exe](/windows-server/administration/windows-commands/diskpart).
 
 > [!NOTE]
 > [Diskpart is deprecated](/windows/compatibility/vds-is-transitioning-to-windows-storage-management-api) and might not provide full functionality. For example, unlike PowerShell, it cannot manage Storage Spaces.
 
-The change in default shell should be transparent for most users because you can run all the same command line tools in PowerShell as you could in CMD. Moreover, PowerShell is much more capable than CMD both in terms of interactive language features and number of commands being available. However, in some edge case scenarios, a command in PowerShell might behave differently from CMD, such as if you were using batch file syntax (such as `set foo=bar`) in an interactive session. If you run a batch file instead, that is, a file with `.cmd` or `.bat` extension, it would be processed by CMD even if launched from PowerShell. In this scenario, you won't observe any differences.
+The change in default shell should be transparent for most users because you can run all the same command-line tools in PowerShell as you could in CMD. Moreover, PowerShell is much more capable than CMD both in terms of interactive language features and number of commands being available. However, in some edge case scenarios, a command in PowerShell might behave differently from CMD, such as if you were using batch file syntax (such as `set foo=bar`) in an interactive session. If you run a batch file instead, that is, a file with `.cmd` or `.bat` extension, it would be processed by CMD even if launched from PowerShell. In this scenario, you won't observe any differences.
 
-You can explicitly transition to Command Prompt by simply typing `cmd` in PowerShell and pressing `Enter`. Alternatively, type `start cmd` if you prefer to launch a new window.
+You can explicitly transition to Command Prompt by typing `cmd` in PowerShell and pressing `Enter`. Alternatively, type `start cmd` if you prefer to launch a new window.
 
 > [!NOTE]
 > If you intend to *reload* an existing PowerShell session (e.g. for module updates to take effect), launching SConfig and exiting it won't be sufficient. This is because SConfig itself is a PowerShell application which runs within an existing PowerShell session. Exiting SConfig will get you into the original session.
