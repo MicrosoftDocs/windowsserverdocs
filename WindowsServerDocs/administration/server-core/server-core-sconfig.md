@@ -41,7 +41,7 @@ SConfig starts automatically starting with Windows Server 2022 (deployed in Serv
 1. Launch PowerShell.
 1. Type `SConfig`, and then press `Enter`. The Server configuration tool interface opens.
 
-    ![Screenshot of SConfig user interface](/media/sconfig-main-page.png)
+   :::image type="content" source="../media/sconfig-main-page.png" alt-text="SConfig user interface":::
 
 > [!NOTE]
 > Launching SConfig from a Command prompt (CMD) window by running `SConfig.cmd` also works in Windows Server 2022 and Azure Stack HCI, just like it did in previous versions. However, this method is [no longer being developed](../../get-started/removed-deprecated-features-windows-server-2022.md) and may be removed in the future versions of the operating system. The recommended way to manually launch SConfig if required is by running `SConfig` in a PowerShell window.
