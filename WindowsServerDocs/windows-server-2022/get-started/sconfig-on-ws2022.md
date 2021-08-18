@@ -245,7 +245,7 @@ Before Windows Server 2022, the default shell on Server Core was classic Command
 
 Starting with Windows Server 2022 (when deployed in Server Core installation option) and Azure Stack HCI, the default shell is changed to PowerShell. It starts by default, and *SConfig* is launched automatically within the PowerShell window. If you exit *SConfig* by using menu option `15`, you get to the interactive PowerShell session.
 
-However, if PowerShell was uninstalled, the default shell falls back to CMD. Unlike in previous versions of the operating system, *SConfig* won't run in CMD, either automatically, or if you try to launch it manually. You will only be able to use the classic command line tools such as [netsh.exe](/windows-server/networking/technologies/netsh/netsh) and [diskpart.exe](/windows-server/administration/windows-commands/diskpart).
+However, if PowerShell was uninstalled, the default shell falls back to CMD. Unlike in previous versions of the operating system, if PowerShell is uninstalled, *SConfig* won't run either automatically, or if you try to launch it manually. You will only be able to use the classic command line tools such as [netsh.exe](/windows-server/networking/technologies/netsh/netsh) and [diskpart.exe](/windows-server/administration/windows-commands/diskpart).
 
 > [!NOTE]
 > [Diskpart is deprecated](/windows/compatibility/vds-is-transitioning-to-windows-storage-management-api) and might not provide full functionality. For example, unlike PowerShell, it cannot manage Storage Spaces.
