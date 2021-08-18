@@ -17,6 +17,3 @@ items:
     href: get-started/server-core-app-compatibility.md
   - name: Features removed or no longer developed
     href: get-started/removed-features.md
-  - name: Configure Server Core with SConfig
-    href: get-started/sconfig-on-ws2022.md
-    

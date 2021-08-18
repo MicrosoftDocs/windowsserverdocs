@@ -15,6 +15,34 @@ ms.assetid: c5ca3bfe-7ced-49f6-2932-80cab33fe914
 
 Use this article to compare Standard and Datacenter editions of Windows Server 2019 to see which will be most appropriate.
 
+## Features available generally
+
+|Features available generally|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
+|-------------------|----------|---------------------------|
+|Best Practices Analyzer|Yes|Yes|
+|Direct Access|Yes|Yes|
+|Dynamic Memory (in virtualization)|Yes|Yes|
+|Hot Add/Replace RAM|Yes|Yes|
+|Microsoft Management Console|Yes|Yes|
+|Minimal Server Interface|Yes|Yes|
+|Network Load Balancing|Yes|Yes|
+|Windows PowerShell|Yes|Yes|
+|Server Core installation option|Yes|Yes|
+|Server Manager|Yes|Yes|
+|SMB Direct and SMB over RDMA|Yes|Yes|
+|Software-defined Networking|No| **Yes** |
+|Storage Migration  Service|Yes|Yes|
+| Storage Replica         | Yes, (1 partnership and 1 resource group with a single 2TB volume)    | Yes, **unlimited** |
+|Storage Spaces|Yes|Yes|
+|Storage Spaces Direct|No| **Yes** |
+|Volume Activation Services|Yes|Yes|
+|VSS (Volume Shadow Copy Service) integration|Yes|Yes|
+|Windows Server Update Services|Yes|Yes|
+|Windows System Resource Manager|Yes|Yes|
+|Server license logging|Yes|Yes|
+|Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** |
+|Work Folders|Yes|Yes|
+
 ## Locks and Limits
 
 | Locks and Limits                 | Windows Server 2019 Standard | Windows Server 2019 Datacenter |
@@ -138,29 +166,3 @@ Use this article to compare Standard and Datacenter editions of Windows Server 2
 |Wireless LAN Service|Yes|Yes|
 |WoW64 support|Installed|Installed|
 |XPS Viewer|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-
-|Features available generally|Windows Server 2019 Standard|Windows Server 2019 Datacenter|
-|-------------------|----------|---------------------------|
-|Best Practices Analyzer|Yes|Yes|
-|Direct Access|Yes|Yes|
-|Dynamic Memory (in virtualization)|Yes|Yes|
-|Hot Add/Replace RAM|Yes|Yes|
-|Microsoft Management Console|Yes|Yes|
-|Minimal Server Interface|Yes|Yes|
-|Network Load Balancing|Yes|Yes|
-|Windows PowerShell|Yes|Yes|
-|Server Core installation option|Yes|Yes|
-|Server Manager|Yes|Yes|
-|SMB Direct and SMB over RDMA|Yes|Yes|
-|Software-defined Networking|No| **Yes** |
-|Storage Migration  Service|Yes|Yes|
-| Storage Replica         | Yes, (1 partnership and 1 resource group with a single 2TB volume)    | Yes, **unlimited** |
-|Storage Spaces|Yes|Yes|
-|Storage Spaces Direct|No| **Yes** |
-|Volume Activation Services|Yes|Yes|
-|VSS (Volume Shadow Copy Service) integration|Yes|Yes|
-|Windows Server Update Services|Yes|Yes|
-|Windows System Resource Manager|Yes|Yes|
-|Server license logging|Yes|Yes|
-|Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** |
-|Work Folders|Yes|Yes|
