@@ -29,7 +29,7 @@ You can use the Server configuration tool *(SConfig)* to configure and manage a 
 There are some things to keep in mind about *SConfig.*
 
 -	On Windows Server 2022 (deployed in Server Core installation option) and Azure Stack HCI, *SConfig* runs automatically after user signs in, unless autolaunch is disabled.
--	Starting with Windows Server 2022 and Azure Stack HCI, *SConfig* is based on PowerShell. It means that if you uninstall PowerShell, *SConfig* won't run, either automatically, or if you try to launch it manually. You will only be able to use the classic Command prompt (CMD) and related tools such as [netsh.exe](/windows-server/networking/technologies/netsh/netsh) and [diskpart.exe](/windows-server/administration/windows-commands/diskpart). (As a separate note, [diskpart is deprecated](/windows/compatibility/vds-is-transitioning-to-windows-storage-management-api) and might not provide full functionality. For example, it cannot manage Storage Spaces.)
+-	Starting with Windows Server 2022 and Azure Stack HCI, *SConfig* is based on PowerShell.
 -	*SConfig* will restart automatically if you accidentally close the existing PowerShell window.
 -	You must be a member of the local Administrators group to use *SConfig.*
 -	You can use *SConfig* in the following scenarios:
@@ -241,18 +241,23 @@ To exit to PowerShell from *SConfig* main menu, type `15` and press `Enter`. To 
 
 ### PowerShell is the default shell on Server Core
 
-Prior to Windows Server 2022, the default shell on Server Core was classic Command prompt (CMD). It launched by default when user signed in to Server Core. From there, you could either launch *SConfig,* or run arbitrary command-line tools.
+Before Windows Server 2022, the default shell on Server Core was classic Command prompt (CMD). It launched by default when user signed in to Server Core. From there, you could either launch *SConfig,* or run arbitrary command-line tools.
 
-In Windows Server 2022 (when deployed in Server Core installation option) and Azure Stack HCI, the default shell is now PowerShell. However, if PowerShell is uninstalled, the default shell falls back to CMD.
+Starting with Windows Server 2022 (when deployed in Server Core installation option) and Azure Stack HCI, the default shell is changed to PowerShell. It starts by default, and *SConfig* is launched automatically within the PowerShell window. If you exit *SConfig* by using menu option `15`, you get to the interactive PowerShell session.
 
-The change in default shell should be transparent for most users because you can run all the same command-line tools in PowerShell as you could in CMD. However, some edge case scenarios might behave differently. An example is if you were using batch file syntax (such as `set x=y`) in interactive session.
+However, if PowerShell was uninstalled, the default shell falls back to CMD. Unlike in previous versions of the operating system, *SConfig* won't run in CMD, either automatically, or if you try to launch it manually. You will only be able to use the classic command line tools such as [netsh.exe](/windows-server/networking/technologies/netsh/netsh) and [diskpart.exe](/windows-server/administration/windows-commands/diskpart).
 
-You can also explicitly transition to the classic Command prompt by simply typing `cmd` in PowerShell and pressing `Enter`. 
+> [!NOTE]
+> [Diskpart is deprecated](/windows/compatibility/vds-is-transitioning-to-windows-storage-management-api) and might not provide full functionality. For example, unlike PowerShell, it cannot manage Storage Spaces.
+
+The change in default shell should be transparent for most users because you can run all the same command-line tools in PowerShell as you could in CMD. Moreover, PowerShell is much more capable than CMD both in terms of interactive language features and number of commands being available. However, in some edge case scenarios, a command in PowerShell might behave differently from CMD. For example, you might notice that if you were using batch file syntax (such as `set x=y`) in an interactive session. (If you were running a batch file, i.e. a file with `.cmd` or `.bat` extension, it would be processed by CMD even if launched from PowerShell. In this scenario, so you won't observe any differences.)
+
+You can explicitly transition to the classic Command prompt by simply typing `cmd` in PowerShell and pressing `Enter`. Alternatively, type `start cmd` if you prefer to launch a new window.
 
 > [!NOTE] 
-> If you intend to _reload_ an existing PowerShell session (e.g. for module updates to take effect), simply launching *SConfig* and exiting won't do it. The reason is SConfig itself being a PowerShell application which runs within the existing PowerShell session. Exiting SConfig will get you into the original session.
+> If you intend to _reload_ an existing PowerShell session (e.g. for module updates to take effect), launching *SConfig* and exiting it won't be sufficient. The reason is SConfig itself being a PowerShell application which runs within an existing PowerShell session. Exiting SConfig will get you into the original session.
 >
-> Instead, to reload PowerShell session, type `exit` and press `Enter`. This will close the existing PowerShell window, and a new one will be started automatically. (The latter part is specific to Server Core and Azure Stack HCI. On Server with Desktop Experience, you will have to manually launch a new PowerShell window.)
+> Instead, to reload a PowerShell session, type `exit` and press `Enter`. This will close the existing PowerShell window, and a new one will be started automatically. (The latter part is specific to Server Core and Azure Stack HCI. On Server with Desktop Experience, you will have to manually launch a new PowerShell window.)
 
 ## Disable *SConfig* from starting automatically
 
