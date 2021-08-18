@@ -203,9 +203,10 @@ This option lets you display current license and activation status, install a pr
 > Activation is only needed for Windows Server. This menu item is not available on Azure Stack HCI as [Azure Stack HCI registration](/azure-stack/hci/manage/manage-azure-registration#unregister-azure-stack-hci-by-using-powershell) is a different process.
 
 1. From the SConfig main menu, type `11` and press `Enter` to enter the **Windows activation** settings page.
+2. Choose one of the following options:
     - Type `1` and press `Enter` to view the current Activation status.
     - Type `2` and press `Enter` to attempt Activation with the currently installed product key.
-    - Type `3` and press `Enter` to add a new product key. At the prompt, type in the product key and press `Enter`. Press `Enter` again once the product key is installed and then return to this menu to perform activation.
+    - Type `3` and press `Enter` to add a new product key. At the prompt, type in the product key and press `Enter`. Press `Enter` again once the product key is installed and then return to this menu and use option `2` to perform activation.
 
 ## Log off the current user
 
