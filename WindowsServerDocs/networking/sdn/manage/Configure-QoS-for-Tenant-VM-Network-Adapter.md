@@ -6,7 +6,7 @@ ms.topic: article
 ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/17/2021
+ms.date: 08/18/2021
 ---
 # Configure Quality of Service (QoS) for a tenant VM network adapter
 
