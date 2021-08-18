@@ -237,7 +237,7 @@ This menu item closes the *SConfig* menu and returns to an interactive PowerShel
 To exit to PowerShell from *SConfig* main menu, type `15` and press `Enter`. To return to Server configuration tool, type `SConfig` in PowerShell, and then press `Enter`. Alternatively, type `exit`. It will close the current PowerShell window and open a new instance of *SConfig* automatically.
 
 > [!NOTE] 
-> If you happened to manually launch SConfig from a Command prompt session (as opposite to a PowerShell session), then exited SConfig via menu option `15` will get you back to Command prompt. Even though the menu item says _“Exit to command line (PowerShell)”,_ in this specific case, there will be no interactive PowerShell session left.
+> If you happened to manually launch SConfig from a Command prompt session (as opposite to a PowerShell session), then exiting SConfig via menu option `15` will get you back to Command prompt. Even though the menu item says _“Exit to command line (PowerShell)”,_ in this specific case, there will be no interactive PowerShell session left.
 
 ### PowerShell is the default shell on Server Core
 
