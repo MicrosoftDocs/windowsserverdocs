@@ -119,7 +119,7 @@ When **Manual updates** is selected, the system will not check for updates autom
 ### Configure updates
 
 1. From the SConfig main menu, type `5` and press `Enter` to enter the **Update setting** settings page.
-1. Review the update configuration and then choose between the following options.
+1. Review the update configuration and then choose between the following options:
     - Type `A` and press `Enter` to select updates to be installed automatically.
     - Type `D` and press `Enter` to have updates periodically checked for and automatically downloaded, but not installed.
     - Type `M` and press `Enter` to require you to check manually for updates.
@@ -146,7 +146,7 @@ The search returns any available updates within the category. You will be presen
     - To check only for recommended quality updates that are applicable to the server, type `2` and press `Enter`.
     - To check for feature updates that are applicable to the server, type `3` and press `Enter`.
 
-1. After you have made your selection, a list of available updates will be displayed. You can choose from the following options:
+1. After you have made your selection, a list of available updates will be displayed. You can choose one the following options:
 
     - To install all available updates, type `A` and press `Enter`.
     - To install none of the available updates, type `N` and press `Enter`.
@@ -203,9 +203,10 @@ This option lets you display current license and activation status, install a pr
 > Activation is only needed for Windows Server. This menu item is not available on Azure Stack HCI as [Azure Stack HCI registration](/azure-stack/hci/manage/manage-azure-registration#unregister-azure-stack-hci-by-using-powershell) is a different process.
 
 1. From the SConfig main menu, type `11` and press `Enter` to enter the **Windows activation** settings page.
+2. Choose one of the following options:
     - Type `1` and press `Enter` to view the current Activation status.
     - Type `2` and press `Enter` to attempt Activation with the currently installed product key.
-    - Type `3` and press `Enter` to add a new product key. At the prompt, type in the product key and press `Enter`. Press `Enter` again once the product key is installed and then return to this menu to perform activation.
+    - Type `3` and press `Enter` to add a new product key. At the prompt, type in the product key and press `Enter`. Press `Enter` again once the product key is installed and then return to this menu and use option `2` to perform activation.
 
 ## Log off the current user
 
