@@ -146,7 +146,7 @@ The search returns any available updates within the category. You will be presen
     - To check only for recommended quality updates that are applicable to the server, type `2` and press `Enter`.
     - To check for feature updates that are applicable to the server, type `3` and press `Enter`.
 
-1. After you have made your selection, a list of available updates will be displayed. You can choose from the following options:
+1. After you have made your selection, a list of available updates will be displayed. You can choose one the following options:
 
     - To install all available updates, type `A` and press `Enter`.
     - To install none of the available updates, type `N` and press `Enter`.
