@@ -6,7 +6,7 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 02/04/2021
+ms.date: 08/18/2021
 ms.localizationpriority: medium
 ---
 
@@ -40,7 +40,7 @@ If you remote into your personal desktop, there are additional redirections that
 | Serial port | X                         | X                           |               |         |     |       |            |
 | USB         | X                         | X                           |               |         |     |       |            |
 
-When you enable USB port redirection, any USB devices attached to the USB port are automatically recognized in the remote session.
+When you enable USB port redirection, all USB devices attached to USB ports are automatically recognized in the remote session. For the devices to work as expected, you must make sure to install their required drivers on both the endpoint and host. Also, make sure the drivers are certified to run in remote scenarios. If you need more information about your USB device, talk to the device manufacturer.
 
 ### Other redirection (devices, etc.)
 
@@ -50,7 +50,7 @@ When you enable USB port redirection, any USB devices attached to the USB port a
 | Clipboard           | X                         | X                           | X             | Text    | Text, images | X                               | text          |
 | Local drive/storage | X                         | X                           |               | X       |   X        | X                               |               |
 | Location            | X                         | X                           |               |         |             |                                 |               |
-| Microphones         | X                         | X                           | X             | X       |  X          | X                               |               |
+| Microphones         | X                         | X                           | X             | X       |  X          | X                               |   X            |
 | Printers            | X                         | X                           |               |         |             | X (CUPS only)                   | PDF print     |
 | Scanners            | X                         | X                           |               |         |             |                                 |               |
 | Smart Cards         | X                         | X                           |               |         |             | X (Windows logon not supported) |               |
