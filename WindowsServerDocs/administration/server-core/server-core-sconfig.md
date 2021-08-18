@@ -119,7 +119,7 @@ When **Manual updates** is selected, the system will not check for updates autom
 ### Configure updates
 
 1. From the SConfig main menu, type `5` and press `Enter` to enter the **Update setting** settings page.
-1. Review the update configuration and then choose between the following options.
+1. Review the update configuration and then choose between the following options:
     - Type `A` and press `Enter` to select updates to be installed automatically.
     - Type `D` and press `Enter` to have updates periodically checked for and automatically downloaded, but not installed.
     - Type `M` and press `Enter` to require you to check manually for updates.
