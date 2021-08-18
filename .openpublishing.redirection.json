@@ -10194,6 +10194,16 @@
       "source_path": "WindowsServerDocs/get-started-19/sys-reqs-19.md",
       "redirect_url": "/windows-server/get-started/hardware-requirements",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/sconfig-on-ws2022.md",
+      "redirect_url": "/windows-server/administration/server-core/server-core-sconfig",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Sconfig-on-WS2016.md",
+      "redirect_url": "/windows-server/administration/server-core/server-core-sconfig",
+      "redirect_document_id": false
     }
   ]
 }
