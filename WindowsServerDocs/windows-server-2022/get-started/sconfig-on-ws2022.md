@@ -232,11 +232,16 @@ This option lets you display current license and activation status, install a pr
 This menu item closes the *SConfig* menu and returns to an interactive PowerShell prompt. You can use it to run arbitrary PowerShell commands and scripts for advanced configuration or troubleshooting. Many of these specialized options are not available natively in *SConfig.* For example, configure [storage](/powershell/module/storage), advanced [network adapter settings](/powershell/module/netadapter) (such as setting VLAN IDs) and [install device drivers](/windows-hardware/drivers/devtest/pnputil-command-syntax).
 
 > [!NOTE] 
-> In Windows Server 2022 (when deployed in Server Core installation option) and Azure Stack HCI, PowerShell replaces the classic Command prompt (CMD) as the **default shell.** If PowerShell is uninstalled, the default shell falls back to CMD. However, you can run all the same command-line tools in PowerShell as you could in CMD. You can also explicitly transition to the classic Command prompt by simply typing `cmd` in PowerShell and pressing `enter`. 
+> In Windows Server 2022 (when deployed in Server Core installation option) and Azure Stack HCI, PowerShell replaces the classic Command prompt (CMD) as the **default shell.** If PowerShell is uninstalled, the default shell falls back to CMD. However, you can run all the same command-line tools in PowerShell as you could in CMD. You can also explicitly transition to the classic Command prompt by simply typing `cmd` in PowerShell and pressing `Enter`. 
 > 
 > As a general rule, every setting available in the operating system can be controlled using command line tools or scripts. However, many of these settings are more conveniently managed remotely using graphical tools such as Windows Admin Center, Server Manager and System Center.
 
 To exit to PowerShell from *SConfig* main menu, type `15` and press `Enter`. To return to Server configuration tool, type `SConfig` in PowerShell, and then press `Enter`. Alternatively, type `exit`. It will close the current PowerShell window and open a new instance of *SConfig* automatically.
+
+> [!NOTE] 
+> If you intend to _reload_ an existing PowerShell session (e.g. for module updates to take effect), simply launching *SConfig* and exiting won't do it. The reason is SConfig itself being a PowerShell application which runs within the existing PowerShell session. Exiting SConfig will get you into the original session.
+>
+> Instead, to reload PowerShell session, type `exit` and press `Enter`. This will close the existing PowerShell window, and a new one will be started automatically. (The latter part is specific to Server Core and Azure Stack HCI. On Server with Desktop Experience, you will have to manually launch a new PowerShell window.)
 
 ## Disable *SConfig* from starting automatically
 
