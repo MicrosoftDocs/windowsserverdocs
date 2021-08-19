@@ -526,7 +526,7 @@ As mentioned previously, since the cluster database is a replicated store backed
 by the system volume on every cluster node, it is recommended the system volume
 on every cluster node should also be BitLocker protected. Failover Clustering
 will not enforce it as some solutions may not want or need to encrypt the system
-volume. If the system drive is not Bitlockered, Failover Cluster will flag this
+volume. If the system drive is not secured by BitLocker, Failover Cluster will flag this
 as an event during the unlock/online process. The event shown would be similar
 to:
 
