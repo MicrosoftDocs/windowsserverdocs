@@ -9,19 +9,19 @@ author: IngridAtMicrosoft
 ms.date: 08/19/2021
 ---
 
-# Use BitLocker with Cluster Shared Volumes
+# Use BitLocker with Cluster Shared Volumes (CSV)
 
 > Applies to: Windows Server 2022
 
-## BitLocker Overview
+## BitLocker overview
 
 BitLocker Drive Encryption is a data protection feature that integrates with the
 operating system and addresses the threats of data theft or exposure from lost,
-stolen, or inappropriately decommissioned computers.
+stolen, or inadequately decommissioned computers.
 
 BitLocker provides the most protection when used with a Trusted Platform Module
 (TPM) version 1.2 or later. The TPM is a hardware component installed in many
-newer computers by the computer manufacturers. It works with BitLocker to help
+newer computers by computer manufacturers. It works with BitLocker to help
 protect user data and to ensure that a computer hasn't been tampered with while
 the system was offline.
 
@@ -29,47 +29,37 @@ On computers that don't have a TPM version 1.2 or later, you can still use
 BitLocker to encrypt the Windows operating system drive. However, this
 implementation will require the user to insert a USB startup key to start the
 computer or resume from hibernation. Starting with Windows 8, you can use an
-operating system volume password to protect the operating system volume on a
+operating system volume password to protect the volume on a
 computer without TPM. Neither option provides the pre-startup system
 integrity verification offered by BitLocker with a TPM.
 
-In addition to the TPM, BitLocker offers the option to lock the normal startup
+In addition to the TPM, BitLocker gives you the option to lock the normal startup
 process until the user supplies a personal identification number (PIN) or
-inserts a removable device, such as a USB flash drive, that contains a startup
+inserts a removable device. This device could be a USB flash drive, that contains a startup
 key. These additional security measures provide multi-factor authentication and
 assurance that the computer won't start or resume from hibernation until the
 correct PIN or startup key is presented.
 
-## Cluster Shared Volumes Overview
+## Cluster Shared Volumes overview
 
-Cluster Shared Volumes (CSV) enable multiple nodes in a Windows Server Failover
-Cluster or Azure Stack HCI to simultaneously have read-write access to the same
-LUN (disk) that is provisioned as an NTFS volume. The disk can be provisioned as
-Resilient File System (ReFS); however, the CSV drive will be in redirected mode
-meaning write access will be sent to the coordinator node. With CSV, clustered
-roles can fail over quickly from one node to another node without requiring a
+Cluster Shared Volumes (CSV) enable multiple nodes in a Windows Server failover
+cluster or Azure Stack HCI to simultaneously have read-write access to the same logical unit number
+(LUN), or disk, that is provisioned as an NTFS volume. The disk can be provisioned as
+Resilient File System (ReFS). However, the CSV drive will be in redirected mode which means write access will be sent to the coordinator node. With CSV, clustered
+roles can fail over quickly from one node to another without requiring a
 change in drive ownership, or dismounting and remounting a volume. CSV also help
-simplify the management of a potentially large number of LUNs in a Failover
-Cluster.
+simplify the management of a potentially large number of LUNs in a failover
+cluster.
 
 CSV provides a general-purpose, clustered file system that is layered above
 NTFS or ReFS. CSV applications include:
 
-- Clustered virtual hard disk (VHD/VHDX) files for clustered Hyper-V virtual
-    machines
-- Scale out file shares to store application data for the Scale-Out File
-    Server clustered role. Examples of the application data for this role
-    include Hyper-V virtual machine files and Microsoft SQL Server data. ReFS is not supported for a Scale-Out File Server in Windows
-    Server 2012 R2 and below. For more information about Scale-Out File Server,
-    see Scale-Out File Server for Application Data.
-- Microsoft SQL Server 2014 (or higher) Failover Cluster Instance (FCI).
-    Microsoft SQL Server clustered workload in SQL Server 2012 and earlier
-    versions of SQL Server don't support the use of CSV.
+- Clustered virtual hard disk (VHD/VHDX) files for clustered Hyper-V virtual machines
+- Scale out file shares to store application data for the Scale-Out File Server clustered role. Examples of the application data for this role include Hyper-V virtual machine files and Microsoft SQL Server data. ReFS is not supported for a Scale-Out File Server in Windows Server 2012 R2 and below. For more information about Scale-Out File Server, see [Scale-Out File Server for Application Data](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831349(v=ws.11)).
+- Microsoft SQL Server 2014 (or higher) Failover Cluster Instance (FCI) Microsoft SQL Server clustered workload in SQL Server 2012 and earlier versions of SQL Server don't support the use of CSV.
+- Windows Server 2019 or higher Microsoft Distributed Transaction Control (MSDTC)
 
-- Windows Server 2019 or higher Microsoft Distributed Transaction Control
-    (MSDTC)
-
-## Using BitLocker with Cluster Shared Volumes
+## Use BitLocker with Cluster Shared Volumes
 
 BitLocker on volumes within a cluster are managed based on how the cluster
 service "views" the volume to be protected. The volume can be a physical disk
@@ -148,7 +138,7 @@ flag this as a warning event during the online and unlock process. Failover
 Cluster validation will log a message if it detects that this is an Active
 Directory-less or workgroup setup and the system volume is not encrypted.
 
-## Installing BitLocker Encryption
+## Installing BitLocker encryption
 
 BitLocker is a feature that must be added to all nodes of the Cluster.
 
@@ -197,7 +187,7 @@ BitLocker is a feature that must be added to all nodes of the Cluster.
     complete the feature installation, such as the restart of the computer, will
     be displayed in the results text.
 
-### Adding BitLocker using PowerShell
+### Add BitLocker using PowerShell
 
 Use the following command for each server:
 
@@ -240,7 +230,7 @@ $ServerList = "Node1", "Node2", "Node3", "Node4"
 $FeatureList = "BitLocker", “Failover-Clustering”, “FS-FileServer”
 ```
 
-## Provisioning an Encrypted Volume
+## Provision an encrypted volume
 
 Provisioning a drive with BitLocker encryption can be done either when then
 drive is a part of the Failover Cluster or outside before adding it. To create
@@ -257,7 +247,7 @@ Failover Clustering be able to create and use its own BitLocker keys.
 
 2. External recovery key file
 
-### Encrypting using Recovery Key
+### Encrypt using a recovery key
 
 Encrypting the drives using a recovery key will allow a BitLocker recovery key
 to be created and added into the Cluster database. As the drive is coming
@@ -457,7 +447,7 @@ Resume-ClusterPhysicalDiskResource -Name "Cluster Disk 2" -RecoveryKeyPath \\Ser
 Once the drive has been provisioned, the *.BEK file can be removed from share
 and is no longer needed.
 
-## New PowerShell Cmdlets
+## New PowerShell cmdlets
 
 With this new feature, two new cmdlets have been created to bring the resource
 online or resuming the resource manually using the recovery key or the recovery
@@ -491,7 +481,7 @@ key file.
      Resume-ClusterPhysicalDiskResource -Name "My Disk" -RecoveryKeyPath "path-to-external-key-file"
 ```
 
-## New Events
+## New events
 
 There are several new events that have been added that are in the
 Microsoft-Windows-FailoverClustering/Operational event channel.
