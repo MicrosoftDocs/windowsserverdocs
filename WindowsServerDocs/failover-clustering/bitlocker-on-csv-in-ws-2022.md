@@ -9,9 +9,9 @@ author: IngridAtMicrosoft
 ms.date: 08/19/2021
 ---
 
-> Applies to: Windows Server 2022
-
 # Use BitLocker with Cluster Shared Volumes
+
+> Applies to: Windows Server 2022
 
 ## Bitlocker Overview
 
@@ -70,7 +70,7 @@ NTFS or ReFS. CSV applications include:
 - Windows Server 2019 or higher Microsoft Distributed Transaction Control
     (MSDTC)
 
-# Using BitLocker with Cluster Shared Volumes
+## Using BitLocker with Cluster Shared Volumes
 
 BitLocker on volumes within a cluster are managed based on how the cluster
 service "views" the volume to be protected. The volume can be a physical disk
