@@ -13,7 +13,7 @@ ms.date: 08/19/2021
 
 > Applies to: Windows Server 2022
 
-## Bitlocker Overview
+## BitLocker Overview
 
 BitLocker Drive Encryption is a data protection feature that integrates with the
 operating system and addresses the threats of data theft or exposure from lost,
@@ -22,22 +22,22 @@ stolen, or inappropriately decommissioned computers.
 BitLocker provides the most protection when used with a Trusted Platform Module
 (TPM) version 1.2 or later. The TPM is a hardware component installed in many
 newer computers by the computer manufacturers. It works with BitLocker to help
-protect user data and to ensure that a computer has not been tampered with while
+protect user data and to ensure that a computer hasn't been tampered with while
 the system was offline.
 
-On computers that do not have a TPM version 1.2 or later, you can still use
+On computers that don't have a TPM version 1.2 or later, you can still use
 BitLocker to encrypt the Windows operating system drive. However, this
 implementation will require the user to insert a USB startup key to start the
 computer or resume from hibernation. Starting with Windows 8, you can use an
 operating system volume password to protect the operating system volume on a
-computer without TPM. Both options do not provide the pre-startup system
+computer without TPM. Neither option provides the pre-startup system
 integrity verification offered by BitLocker with a TPM.
 
 In addition to the TPM, BitLocker offers the option to lock the normal startup
 process until the user supplies a personal identification number (PIN) or
 inserts a removable device, such as a USB flash drive, that contains a startup
-key. These additional security measures provide multifactor authentication and
-assurance that the computer will not start or resume from hibernation until the
+key. These additional security measures provide multi-factor authentication and
+assurance that the computer won't start or resume from hibernation until the
 correct PIN or startup key is presented.
 
 ## Cluster Shared Volumes Overview
@@ -52,20 +52,19 @@ change in drive ownership, or dismounting and remounting a volume. CSV also help
 simplify the management of a potentially large number of LUNs in a Failover
 Cluster.
 
-CSV provides a general-purpose, clustered file system which is layered above
+CSV provides a general-purpose, clustered file system that is layered above
 NTFS or ReFS. CSV applications include:
 
 - Clustered virtual hard disk (VHD/VHDX) files for clustered Hyper-V virtual
     machines
-- Scale-out file shares to store application data for the Scale-Out File
+- Scale out file shares to store application data for the Scale-Out File
     Server clustered role. Examples of the application data for this role
-    include Hyper-V virtual machine files and Microsoft SQL Server data. Be
-    aware that ReFS is not supported for a Scale-Out File Server in Windows
+    include Hyper-V virtual machine files and Microsoft SQL Server data. ReFS is not supported for a Scale-Out File Server in Windows
     Server 2012 R2 and below. For more information about Scale-Out File Server,
     see Scale-Out File Server for Application Data.
 - Microsoft SQL Server 2014 (or higher) Failover Cluster Instance (FCI).
     Microsoft SQL Server clustered workload in SQL Server 2012 and earlier
-    versions of SQL Server do not support the use of CSV.
+    versions of SQL Server don't support the use of CSV.
 
 - Windows Server 2019 or higher Microsoft Distributed Transaction Control
     (MSDTC)
@@ -80,15 +79,15 @@ network attached storage (NAS).
 Alternatively, the volume can be a Cluster Shared Volume (CSV) within the
 cluster. When using BitLocker with volumes designated for a cluster, the volume
 can be enabled with BitLocker before its addition to the cluster or when in the
-cluster, put the resource into maintenance mode before enabling BitLocker.
+cluster. Put the resource into maintenance mode before enabling BitLocker.
 
 Windows PowerShell or the
 [Manage-BDE](../administration/windows-commands/manage-bde.md)
 command-line interface is the preferred method to manage BitLocker on CSV
 volumes. This method is recommended over the BitLocker Control Panel item
 because CSV volumes are mount points. Mount points are an NTFS object that is
-used to provide an entry point to other volumes. Mount points do not require the
-use of a drive letter. Volumes that lack drive letters do not appear in the
+used to provide an entry point to other volumes. Mount points don't require the
+use of a drive letter. Volumes that lack drive letters don't appear in the
 BitLocker Control Panel item.
 
 BitLocker will unlock protected volumes without user intervention by attempting
@@ -107,7 +106,7 @@ protectors in the following order:
 4. Registry-based auto-unlock key
 
 Failover Cluster requires the Active Directory-based protector option for
-cluster disk resource or CSV resources is not available in the Control Panel
+cluster disk resource. Otherwise, CSV resources are not available in the Control Panel
 item.
 
 An Active Directory Domain Services (AD DS) protector for protecting clustered
@@ -120,7 +119,7 @@ uses the BitLocker protect/unprotect APIs to unlock or deny the request.
 ## New functionality
 
 In previous versions of Windows Server and Azure Stack HCI, the only supported
-encryption protector is SID-based protector where the account being used is
+encryption protector is the SID-based protector where the account being used is
 Cluster Name Object (CNO) that is created in Active Directory as part of the
 Failover Clustering creation. This is a secure design because the protector is
 stored in Active Directory and protected by the CNO password. Also, it makes
@@ -132,14 +131,14 @@ The downside is three-fold:
 1. This method obviously does not work when a Failover Cluster is created
     without any access to an Active Directory controller in the datacenter.
 
-2. The volume unlock as part of failover may take too long (and possibly time
-    out) if the Active Directory controller is unresponsive or just slow.
+2. Volume unlock, as part of failover, may take too long (and possibly time
+    out) if the Active Directory controller is unresponsive or slow.
 
 3. The online process of the drive will fail if an Active Directory controller
     is not available.
 
 New functionality has been added that Failover Clustering will generate and
-maintain its own Bitlocker Key protector for a volume. This will be encrypted
+maintain its own BitLocker Key protector for a volume. It will be encrypted
 and saved in the local cluster database. Since the cluster database is a
 replicated store backed by the system volume on every cluster node, the system
 volume on every cluster node should be BitLocker protected as well. Failover
@@ -149,9 +148,9 @@ flag this as a warning event during the online and unlock process. Failover
 Cluster validation will log a message if it detects that this is an Active
 Directory-less or workgroup setup and the system volume is not encrypted.
 
-## Installing Bitlocker Encryption
+## Installing BitLocker Encryption
 
-Bitlocker is a feature that must be added to all nodes of the Cluster.
+BitLocker is a feature that must be added to all nodes of the Cluster.
 
 ### Adding BitLocker using Server Manager
 
@@ -176,10 +175,10 @@ Bitlocker is a feature that must be added to all nodes of the Cluster.
 
 7. Select the check box next to **BitLocker Drive Encryption** within the
     **Features** pane of the **Add Roles and Features** wizard. The wizard will
-    show the additional management features available for BitLocker. If you do
-    not want to install these features, deselect the **Include management
+    show the additional management features available for BitLocker. If you don't
+    want to install these features, deselect the **Include management
     tools** option and select **Add Features**. Once optional features selection
-    is complete, select **Next** to proceed in the wizard.
+    is complete, select **Next** to continue.
 
 > [!NOTE]
 > The **Enhanced Storage** feature is a required feature for enabling BitLocker. This feature enables support for Encrypted Hard Drives on capable systems.
@@ -206,7 +205,7 @@ Use the following command for each server:
 Install-WindowsFeature -ComputerName "Node1" -Name "BitLocker" -IncludeAllSubFeature -IncludeManagementTools
 ```
 
-To run the command on all servers in the cluster at the same time, use the
+To run the command on all cluster servers at the same time, use the
 following script, modifying the list of variables at the beginning to fit your
 environment:
 
@@ -232,9 +231,9 @@ Next, restart all the servers:
 $ServerList = "Node1", "Node2", "Node3", "Node4" Restart-Computer -ComputerName $ServerList -WSManAuthentication Kerberos
 ```
 
-Please note that multiple roles and features can be added at the same time. For
-example, to add Bitlocker, Failover Clustering, and the File Server role, the
-\$FeatureList would include all needed separated by a comma. For example:
+
+Multiple roles and features can be added at the same time. For
+example, to add BitLocker, Failover Clustering, and the File Server role, the $FeatureList would include all needed separated by a comma. For example:
 
 ```powershell
 $ServerList = "Node1", "Node2", "Node3", "Node4" 
@@ -243,16 +242,16 @@ $FeatureList = "BitLocker", “Failover-Clustering”, “FS-FileServer”
 
 ## Provisioning an Encrypted Volume
 
-Provisioning a drive with Bitlocker encryption can be done either when then
+Provisioning a drive with BitLocker encryption can be done either when then
 drive is a part of the Failover Cluster or outside before adding it. To create
 the External Key Protector automatically, the drive must be a resource in the
-Failover Cluster before enabling Bitlocker. If Bitlocker is enabled before
+Failover Cluster before enabling BitLocker. If BitLocker is enabled before
 adding the drive to the Failover Cluster, additional manual steps to create the
 External Key Protector must be accomplished.
 
 Provisioning encrypted volumes will require PowerShell commands run with
 administrative privileges. There are two options to encrypt the drives and have
-Failover Clustering be able to create and use its own Bitlocker keys.
+Failover Clustering be able to create and use its own BitLocker keys.
 
 1. Internal recovery key
 
@@ -260,11 +259,11 @@ Failover Clustering be able to create and use its own Bitlocker keys.
 
 ### Encrypting using Recovery Key
 
-Encrypting the drives using a recovery key will allow a Bitlocker recovery key
+Encrypting the drives using a recovery key will allow a BitLocker recovery key
 to be created and added into the Cluster database. As the drive is coming
 online, it only needs to consult the local cluster hive for the recovery key.
 
-Move the disk resource to the node where Bitlocker encryption will be enabled:
+Move the disk resource to the node where BitLocker encryption will be enabled:
 
 ```powershell
 Get-ClusterSharedVolume -Name "Cluster Disk 1" | Move-ClusterSharedVolume Resource -Node Node1
@@ -286,7 +285,7 @@ Are you sure that you want to turn on maintenance for Cluster Shared Volume ‘C
 
 To continue, press **Yes**.
 
-To enable Bitlocker encryption, run:
+To enable BitLocker encryption, run:
 
 ```powershell
 Enable-BitLocker -MountPoint "C:\\ClusterStorage\\Volume1" -RecoveryPasswordProtector
@@ -315,7 +314,7 @@ can be run:
 (Get-BitlockerVolume -MountPoint "C:\\ClusterStorage\\Volume1").KeyProtector
 ```
 
-This will display both the key protector id and the recovery password string.
+This will display both the key protector ID and the recovery password string.
 
 ```powershell
 KeyProtectorId : {26935AC3-8B17-482D-BA3F-D373C7954D29}
@@ -327,10 +326,10 @@ KeyCertificateType :
 Thumbprint :
 ```
 
-The key protector id and recovery password will be needed and saved into a new
+The key protector ID and recovery password will be needed and saved into a new
 physical disk private property called **BitLockerProtectorInfo**. This new
 property will be used when the resource comes out of Maintenance Mode. The
-format of the protector will be a string where the protector id and the password
+format of the protector will be a string where the protector ID and the password
 are separated by a ":".
 
 ```powershell
@@ -364,12 +363,12 @@ and encrypted under the resource in the cluster database.
 
 ### Encrypting using External Recovery Key file
 
-Encrypting the drives using a recovery key file will allow a Bitlocker recovery
+Encrypting the drives using a recovery key file will allow a BitLocker recovery
 key to be created and accessed from a location that all nodes have access to,
 such as a file server. As the drive is coming online, the owning node will
 connect to the recovery key.
 
-Move the disk resource to the node where Bitlocker encryption will be enabled:
+Move the disk resource to the node where BitLocker encryption will be enabled:
 
 ```powershell
 Get-ClusterSharedVolume -Name "Cluster Disk 2" | Move-ClusterSharedVolume Resource -Node Node2
@@ -391,9 +390,9 @@ Are you sure that you want to turn on maintenance for Cluster Shared Volume ‘C
 
 To continue, press **Yes**.
 
-To enable Bitlocker encryption and create the key protector file locally, run
-the following. It is recommended to create the file locally first and then move
-it to a location accessible to all nodes.
+To enable BitLocker encryption and create the key protector file locally, run
+the following command. Creating the file locally first and then move
+it to a location accessible to all nodes is recommended.
 
 ```powershell
 Enable-BitLocker -MountPoint "C:\ClusterStorage\Volume2" -RecoveryKeyProtector -RecoveryKeyPath C:\Windows\Cluster
@@ -406,7 +405,7 @@ can be run:
 (Get-BitlockerVolume -MountPoint "C:\ClusterStorage\Volume2").KeyProtector
 ```
 
-This will display both the key protector id and the key filename it creates.
+This will display both the key protector ID and the key filename it creates.
 
 ```powershell
 KeyProtectorId : {F03EB4C1-073C-4E41-B43E-B9298B6B27EC}
@@ -511,7 +510,7 @@ volume.
 `
 
 If there is a failure in creating the key protector or key protector file, the
-event shown would be simular to:
+event shown would be similar to:
 
 `
 Source: Microsoft-Windows-FailoverClustering
@@ -528,7 +527,7 @@ by the system volume on every cluster node, it is recommended the system volume
 on every cluster node should also be BitLocker protected. Failover Clustering
 will not enforce it as some solutions may not want or need to encrypt the system
 volume. If the system drive is not Bitlockered, Failover Cluster will flag this
-as an event during the unlock/online process. The event shown would be simular
+as an event during the unlock/online process. The event shown would be similar
 to:
 
 `
