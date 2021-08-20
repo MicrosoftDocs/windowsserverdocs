@@ -45,6 +45,12 @@ items:
           href: windows-server-release-info.md
         - name: Extended Security Updates
           href: extended-security-updates-overview.md
+    - name: Concepts
+      items:
+        - name: Server Core App Compatibility Feature on Demand
+          href: server-core-app-compatibility-feature-on-demand.md
+        - name: Automatic VM activation
+          href: automatic-vm-activation.md
     - name: How-to guides
       items:
         - name: Install, upgrade, or migrate
@@ -58,8 +64,6 @@ items:
           href: extended-security-updates-deploy.md
     - name: Migration of Windows Server Roles and Features
       href: Migrate-Roles-and-Features.md
-    - name: "Release Notes: Important issues in Windows Server 2016"
-      href: Windows-Server-2016-GA-Release-Notes.md
     - name: Recommendations for moving to Windows Server 2016
       href: Recommendations-moving-to-Server2016.md
     - name: Upgrade and Conversion Options for Windows Server 2016
@@ -128,6 +132,8 @@ items:
           href: Troubleshooting-Nano-Server.md
     - name: Resources
       items:
+      - name: Windows Server release health
+        href: https://docs.microsoft.com/windows/release-health/
       - name: Windows Server product page
         href: https://www.microsoft.com/windows-server
       - name: Windows Server license terms

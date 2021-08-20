@@ -10204,6 +10204,41 @@
       "source_path": "WindowsServerDocs/get-started/Sconfig-on-WS2016.md",
       "redirect_url": "/windows-server/administration/server-core/server-core-sconfig",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/rel-notes-19.md",
+      "redirect_url": "/windows/release-health",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/windows-server-2016-ga-release-notes.md",
+      "redirect_url": "/windows/release-health",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/server-core-app-compatibility.md",
+      "redirect_url": "/windows-server/get-started/server-core-app-compatibility-feature-on-demand",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/install-fod-19.md",
+      "redirect_url": "/windows-server/get-started/server-core-app-compatibility-feature-on-demand",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/vm-activation.md",
+      "redirect_url": "/windows-server/get-started/automatic-vm-activation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/vm-activation-19.md",
+      "redirect_url": "/windows-server/get-started/automatic-vm-activation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/removed-features.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2022",
+      "redirect_document_id": false
     }
   ]
 }
