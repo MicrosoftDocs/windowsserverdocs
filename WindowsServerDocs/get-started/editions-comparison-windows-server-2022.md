@@ -19,6 +19,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |--|--|--|--|
 |Azure Extended Network|No|No|**Yes**|
 |Best Practices Analyzer|Yes|Yes|Yes|
+|Containers|Yes|Yes|Yes|
 |Direct Access|Yes|Yes|Yes|
 |Dynamic Memory (in virtualization)|Yes|Yes|Yes|
 |Hot Add/Replace RAM|Yes|Yes|Yes|
@@ -56,7 +57,9 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 | Maximum number of 64-bit sockets | 64                           | 64 |
 | Maximum number of cores          | Unlimited                    | Unlimited |
 | Maximum RAM                      | 48 TB                        | 48 TB |
-| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license|Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
+| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
+| Windows Server Containers | Unlimited | Unlimited |
+| Virtual OSE/Hyper-V isolated Containers | 2 | Unlimited |
 | Server can join a domain        | Yes                           | Yes |
 | Edge network protection/firewall| No                            | No  |
 | DirectAccess                    | Yes                           | Yes |
@@ -111,7 +114,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |BitLocker Network Unlock|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |BranchCache|Yes|Yes|
 |Client for NFS|Yes|Yes|
-|Containers|Yes (unlimited Windows containers; up to two Hyper-V containers)|Yes (**unlimited Windows and Hyper-V containers**) |
+|Containers|Yes|Yes|
 |Data Center Bridging|Yes|Yes|
 |Direct Play|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Enhanced Storage|Yes|Yes|
