@@ -21,9 +21,9 @@ Each release of Windows Server adds new features and functionality; we also occa
 
 ## Semi-Annual Channel
 
-With Windows Server 2022 there is one primary release channel available, the Long-Term Servicing Channel. The Semi-Annual Channel in previous versions of Windows Server focused on containers and microservices, and that innovation will continue with [Azure Stack HCI](/azure-stack/hci/).
+As part of our customer-centric approach, we’ll move to the Long-Term Servicing Channel (LTSC) as our primary release channel. Current Semi-Annual Channel (SAC) releases will continue through their mainstream support end dates, which are May 10, 2022 for Windows Server version 20H2 and December 14, 2021 for Windows Server version 2004
 
-With the Long-Term Servicing Channel, a new major version of Windows Server is released every 2-3 years. Users are entitled to 5 years of mainstream support and 5 years of extended support. This channel provides systems with a long servicing option and functional stability, and can be installed with Server Core or Server with Desktop Experience installation options. The Long-Term Servicing Channel will continue to receive security and non-security updates, but it will not receive the new features and functionality.
+The focus on container and microservice innovation previously released in the Semi-Annual Channel will now continue with [Azure Kubernetes Service (AKS)](/azure/aks/), [AKS on Azure Stack HCI](/azure-stack/aks-hci/), and other platform improvements made in collaboration with the Kubernetes community. And with the Long-Term Servicing Channel, a major new version of Windows Server will be released every 2-3 years, so customers can expect both container host and container images to align with that cadence.
 
 ## Features we've removed in this release
 
