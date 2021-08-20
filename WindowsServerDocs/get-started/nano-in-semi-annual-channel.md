@@ -14,7 +14,7 @@ ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544
 
 >Applies to: Windows Server, Semi-Annual Channel
 
-If you're already running Nano Server, the [Window Server Semi-Annual Channel](../get-started-19/servicing-channels-19.md) servicing model will be familiar, since it was formerly serviced by the Current Branch for Business (CBB) model. Windows Server Semi-Annual Channel is just a new name for the same model. In this model, feature update releases of Nano Server are expected two to three times per year.
+If you're already running Nano Server, the [Window Server Semi-Annual Channel](../get-started/servicing-channels-comparison.md) servicing model will be familiar, since it was formerly serviced by the Current Branch for Business (CBB) model. Windows Server Semi-Annual Channel is just a new name for the same model. In this model, feature update releases of Nano Server are expected two to three times per year.
 
 However, starting with Windows Server, version 1803, Nano Server is available only as a **container base OS image**. You must run it as a container in a container host, such as a Server Core installation of Windows Server. Running a container based on Nano Server in this release differs from earlier releases in these ways:
 
@@ -24,8 +24,3 @@ However, starting with Windows Server, version 1803, Nano Server is available on
 - There is no longer a servicing stack included in Nano Server. Microsoft publishes an updated Nano container to Docker Hub that you redeploy.
 - You troubleshoot the new Nano Container by using Docker.
 - You can now run Nano containers on IoT Core.
-
-## Related topics
-
-- [Windows Container Documentation](/virtualization/windowscontainers/)
-- [Window Server Semi-Annual Channel Overview](../get-started-19/servicing-channels-19.md)

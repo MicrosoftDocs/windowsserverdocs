@@ -15,14 +15,14 @@ ms.localizationpriority: medium
 The following is a list of features and functionalities in Windows Server, version 1709 that have either been removed from the product in that release or are starting to be considered for potential replacement in subsequent releases. It is intended for IT professionals who are updating operating systems in a commercial environment. **This list is subject to change in subsequent releases and might not include every affected feature or functionality.**
 
 > [!TIP]
+>
 > - You can get early access to Windows Server builds by joining the [Windows Insider program](https://insider.windows.com) - this is a great way to test feature changes.
-> - Have questions about other releases? Check out [Features removed or planned for replacement in Windows Server](../get-started-19/removed-features.md).
 
 ## Features removed from Windows Server, version 1709
 
 Windows Server, version 1709 contains the same features present in Windows Server 2016. However, this release does offer different installation options than Windows Server 2016 does:
 
-- As a Semi-Annual Channel release, Windows Server, version 1709 offers only the Server Core installation option. For details, see [Comparison of servicing channels](../get-started-19/servicing-channels-19.md).
+- As a Semi-Annual Channel release, Windows Server, version 1709 offers only the Server Core installation option. For details, see [Comparison of servicing channels](../get-started/servicing-channels-comparison.md).
 - Starting with this release, Nano Server is not available as an installable host operating system. Instead, Nano Server is available as a container operating system. See [Changes to Nano Server in Windows Server, version 1709](nano-in-semi-annual-channel.md).
 - Starting with this release, Server Message Block (SMB) version 1 is no longer installed by default. For details, see [SMBv1 is not installed by default in Windows 10 Fall Creators Update and Windows Server, version 1709 and later versions](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows).
 

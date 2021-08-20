@@ -4,7 +4,7 @@ title: Windows Time service tools and settings
 author: Teresa-Motiv
 description: Describes the settings that are available for Windows Time Service (W32Time) and the tools that you can use to configure those settings
 ms.author: v-tea
-ms.date: 04/28/2021
+ms.date: 08/06/2021
 ms.topic: article
 ms.custom: contperf-fy21q4
 ---
@@ -107,49 +107,62 @@ reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
 
 ### Configure computer clock reset
 
-In order for W32tm.exe to reset a computer clock, the computer clock time offset from the current time (`CurrentTimeOffset`) must be less than the `MaxAllowedPhaseOffset` value while also satisfying the following at the same time:
+In order for W32tm.exe to reset a computer clock, it first checks the offset (`CurrentTimeOffset`, also known as `Phase Offset`) between the current time and the computer clock time to determine whether the offset is less than the `MaxAllowedPhaseOffset` value.  
 
-- Windows Server 2016 and later:
+- `CurrentTimeOffset` &lt; `MaxAllowedPhaseOffset`: Adjust the computer clock gradually by using the clock rate.  
+- `CurrentTimeOffset` &ge; `MaxAllowedPhaseOffset`: Set the computer clock immediately.  
 
-  > |`CurrentTimeOffset`| &divide; (16 &times; `PhaseCorrectRate` &times; `pollIntervalInSeconds`) &le; `SystemClockRate` &divide; 2
+Then, to adjust the computer clock by using the clock rate, W32tm.exe calculates a `PhaseCorrection` value. This algorithm varies depending on the version of Windows:  
 
-- Windows Server 2012 R2 and earlier:
+- Windows Server 2016 and later versions:  
 
-  > |`CurrentTimeOffset`| &divide; (`PhaseCorrectRate` &times; `UpdateInterval`) &le; `SystemClockRate` &divide; 2
+  > `PhaseCorrection_raw` = |`CurrentTimeOffset`| &divide; (16 &times; `PhaseCorrectRate` &times; `pollIntervalInSeconds`)  
+  > `MaximumCorrection` = |`CurrentTimeOffset`| &divide; (`UpdateInterval` &times; 1,000 &times; 10,000)  
+  > `PhaseCorrection` = min(`PhaseCorrection_raw`, `MaximumCorrection`)  
 
-The values for `CurrentTimeOffset`, `SystemClockRate`, `PhaseCorrectRate`, and `MaxAllowedPhaseOffset` are all measured in clock ticks, where 1 ms = 10,000 clock ticks on a Windows system.
+- Windows Server 2012 R2 and earlier versions:  
 
-To get the `SystemClockRate` value, you can use the following command and convert it from seconds to clock ticks by using the formula of (seconds &times; 1,000 &times; 10,0000):
+  > `PhaseCorrection` = |`CurrentTimeOffset`| &divide; (`PhaseCorrectRate` &times; `UpdateInterval`)  
 
-```cmd
-W32tm /query /status /verbose
+All versions of Windows use the same final equation to check `PhaseCorrection`:  
 
-ClockRate: 0.0156000s
-```
+   > `PhaseCorrection` &le; `SystemClockRate` &divide; 2  
 
-The following examples show how to apply these calculations for Windows Server 2012 R2 and earlier. Using 156,000 seconds as an example, the `SystemClockRate` value would be (0.0156000 &times; 1,000 &times; 10,000) = 156,000 clock ticks.
+> [!NOTE]  
+> - These equations use `PhaseCorrectRate`, `UpdateInterval`, `MaxAllowedPhaseOffset`, and `SystemClockRate` measured in units of clock ticks. On Windows systems, 1 ms = 10,000 clock ticks.
+> - `MaxAllowedPhaseOffset` is configurable in the registry. However, the registry parameter is measured in seconds instead of clock ticks.
+> - To see the `SystemClockRate` and `pollIntervalInSeconds` values (measured in seconds), open a Command Prompt window and then run `W32tm /query /status /verbose`. This command produces output that resembles the following.  
+>    :::image type="content" source="media/windows-time-service-tools-and-settings/windows-time-service-parameter-status.png" alt-text="Output of the w32tm /query /status /verbose command, that lists parameter values for the time service.":::  
+>     The output presents the poll interval in both clock ticks and in seconds. The equations use the value measured in seconds (the value in parentheses).  
+>    The output presents the clock rate in seconds. To see the `SystemClockRate` value in clock ticks, use the following formula:  
+>   > (`value in seconds`) &times; 1,000 &times; 10,000  
+>   
+>    For example, if `SystemClockRate` is 0.0156250 seconds, the value that the equation uses is 156,250 clock ticks.
+> For full descriptions of the configurable parameters and their default values, see [Config entries](#config) later in this article.
+
+The following examples show how to apply these calculations for Windows Server 2012 R2 and earlier versions.  
 
 #### Example: System clock rate off by four minutes
 
 Your computer clock time is 11:05 and the actual current time is 11:09:
 
-> PhaseCorrectRate = 1
+> `PhaseCorrectRate` = 1
 >
-> UpdateInterval = 30,000 clock ticks
+> `UpdateInterval` = 30,000 clock ticks
 >
-> SystemClockRate = 156,000 clock ticks
+> `SystemClockRate` = 156,000 clock ticks
 >
-> MaxAllowedPhaseOffset = 10 min = 600 seconds = 600 &times; 1,000 &times; 10,000 = 6,000,000,000 clock ticks
+> `MaxAllowedPhaseOffset` = 10 min = 600 seconds = 600 &times; 1,000 &times; 10,000 = 6,000,000,000 clock ticks
 >
-> |CurrentTimeOffset| = 4 min = 4 &times; 60 &times; 1,000 &times; 10,000 = 2,400,000,000 clock ticks
+> |`CurrentTimeOffset`| = 4 min = 4 &times; 60 &times; 1,000 &times; 10,000 = 2,400,000,000 clock ticks
 >
 Is `CurrentTimeOffset` &le; `MaxAllowedPhaseOffset`?
 
 > 2,400,000,000 &le; 6,000,000,000: TRUE
 
-AND does it satisfy the above equation?
+AND does it satisfy the following equation?
 
-> (|CurrentTimeOffset| &divide; (PhaseCorrectRate &times; UpdateInterval) &le; SystemClockRate &divide; 2)
+> (|`CurrentTimeOffset`| &divide; (`PhaseCorrectRate` &times; `UpdateInterval`) &le; `SystemClockRate` &divide; 2)
 
 Is 2,400,000,000 / (30,000 &times; 1) &le; 156,000 &divide; 2
 
@@ -164,23 +177,23 @@ Therefore, W32tm.exe would set the clock back immediately.
 
 Your computer clock time is 11:05 and the actual current time is 11:08:
 
-> PhaseCorrectRate = 1
+> `PhaseCorrectRate` = 1
 >
-> UpdateInterval = 30,000 clock ticks
+> `UpdateInterval` = 30,000 clock ticks
 >
-> SystemClockRate = 156,000 clock ticks
+> `SystemClockRate` = 156,000 clock ticks
 >
-> MaxAllowedPhaseOffset = 10 min = 600 seconds = 600 &times; 1,000 &times; 10,000 = 6,000,000,000 clock ticks
+> `MaxAllowedPhaseOffset` = 10 min = 600 seconds = 600 &times; 1,000 &times; 10,000 = 6,000,000,000 clock ticks
 >
-> |CurrentTimeOffset| = 3 mins = 3 &times; 60 &times; 1,000 &times; 10,000 = 1,800,000,000 clock ticks
+> |`CurrentTimeOffset`| = 3 mins = 3 &times; 60 &times; 1,000 &times; 10,000 = 1,800,000,000 clock ticks
 >
 Is `CurrentTimeOffset` &le; `MaxAllowedPhaseOffset`?
 >
 > 1,800,000,000 &le; 6,000,000,000: TRUE
 
-AND does it satisfy the above equation?
+AND does it satisfy the following equation?
 
-> (|CurrentTimeOffset| &divide; (PhaseCorrectRate &times; UpdateInterval) &le; SystemClockRate &divide; 2)
+> (|`CurrentTimeOffset`| &divide; (`PhaseCorrectRate` &times; `UpdateInterval`) &le; `SystemClockRate` &divide; 2)
 
  Is 3 mins &times; (1,800,000,000) &divide; (30,000 &times; 1) &le; 156,000 &divide; 2
 
