@@ -19,6 +19,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |--|--|--|--|
 |Azure Extended Network|No|No|**Yes**|
 |Best Practices Analyzer|Yes|Yes|Yes|
+|Containers|Yes|Yes|Yes|
 |Direct Access|Yes|Yes|Yes|
 |Dynamic Memory (in virtualization)|Yes|Yes|Yes|
 |Hot Add/Replace RAM|Yes|Yes|Yes|
@@ -111,7 +112,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |BitLocker Network Unlock|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |BranchCache|Yes|Yes|
 |Client for NFS|Yes|Yes|
-|Containers|Yes (unlimited Windows containers; up to two Hyper-V containers)|Yes (**unlimited Windows and Hyper-V containers**) |
+|Containers|Yes (unlimited Windows Server Containers; up to two Virtual OSEs/Hyper-V isolated containers)|Yes (**unlimited Windows Server Containers and Virtual OSEs/Hyper-V isolated containers**) |
 |Data Center Bridging|Yes|Yes|
 |Direct Play|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Enhanced Storage|Yes|Yes|
