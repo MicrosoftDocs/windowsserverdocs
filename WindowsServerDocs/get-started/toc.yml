@@ -60,7 +60,7 @@ items:
             href: Getting-started-with-Server-Core.md
           - name: Install Server with Desktop Experience
             href: Getting-started-with-Server-with-Desktop-Experience.md
-        - name: Get Windows Server Extended Security Updates
+        - name: Get Extended Security Updates
           href: extended-security-updates-deploy.md
     - name: Migration of Windows Server Roles and Features
       href: Migrate-Roles-and-Features.md
