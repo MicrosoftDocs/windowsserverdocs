@@ -10239,6 +10239,11 @@
       "source_path": "WindowsServerDocs/get-started-19/removed-features.md",
       "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2022",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
     }
   ]
 }
