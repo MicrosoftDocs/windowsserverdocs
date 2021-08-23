@@ -21,7 +21,7 @@ items:
             href: whats-new-in-windows-server-2016.md
         - name: Servicing channels comparison
           href: servicing-channels-comparison.md
-        - name: Editions comparison
+        - name: Editions feature comparison
           items:
           - name: Windows Server 2022
             href: editions-comparison-windows-server-2022.md
@@ -45,16 +45,25 @@ items:
           href: windows-server-release-info.md
         - name: Extended Security Updates
           href: extended-security-updates-overview.md
+    - name: Concepts
+      items:
+        - name: Server Core App Compatibility Feature on Demand
+          href: server-core-app-compatibility-feature-on-demand.md
+        - name: Automatic VM activation
+          href: automatic-vm-activation.md
     - name: How-to guides
       items:
         - name: Install, upgrade, or migrate
           href: install-upgrade-migrate.md
-        - name: Get Windows Server Extended Security Updates
+          items:
+          - name: Install Server Core
+            href: Getting-started-with-Server-Core.md
+          - name: Install Server with Desktop Experience
+            href: Getting-started-with-Server-with-Desktop-Experience.md
+        - name: Get Extended Security Updates
           href: extended-security-updates-deploy.md
     - name: Migration of Windows Server Roles and Features
       href: Migrate-Roles-and-Features.md
-    - name: "Release Notes: Important issues in Windows Server 2016"
-      href: Windows-Server-2016-GA-Release-Notes.md
     - name: Recommendations for moving to Windows Server 2016
       href: Recommendations-moving-to-Server2016.md
     - name: Upgrade and Conversion Options for Windows Server 2016
@@ -121,15 +130,10 @@ items:
               href: Developing-powershell-Cmdlets-for-Nano-Server.md
         - name: Troubleshooting Nano Server
           href: Troubleshooting-Nano-Server.md
-    - name: Install Server Core
-      href: Getting-started-with-Server-Core.md
-      items: 
-        - name: Configure Server Core with Sconfig.cmd
-          href: Sconfig-on-WS2016.md
-    - name: Install Server with Desktop Experience
-      href: Getting-started-with-Server-with-Desktop-Experience.md
     - name: Resources
       items:
+      - name: Windows Server release health
+        href: https://docs.microsoft.com/windows/release-health/
       - name: Windows Server product page
         href: https://www.microsoft.com/windows-server
       - name: Windows Server license terms

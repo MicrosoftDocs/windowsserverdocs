@@ -11,7 +11,39 @@ ms.prod: windows-server
 
 # Comparison of Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022
 
-Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022 to see which will be most appropriate. See [Features available generally](#features-available-generally) to understand the difference in features.
+Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition editions of Windows Server 2022 to see which will be most appropriate.
+
+## Features available generally
+
+|Features available generally|Windows Server 2022 Standard|Windows Server 2022 Datacenter|Windows Server 2022 Datacenter: Azure Edition|
+|--|--|--|--|
+|Azure Extended Network|No|No|**Yes**|
+|Best Practices Analyzer|Yes|Yes|Yes|
+|Containers|Yes|Yes|Yes|
+|Direct Access|Yes|Yes|Yes|
+|Dynamic Memory (in virtualization)|Yes|Yes|Yes|
+|Hot Add/Replace RAM|Yes|Yes|Yes|
+|Hotpatching|No|No|**Yes**|
+|Microsoft Management Console|Yes|Yes|Yes|
+|Minimal Server Interface|Yes|Yes|Yes|
+|Network Load Balancing|Yes|Yes|Yes|
+|Windows PowerShell|Yes|Yes|Yes|
+|Server Core installation option|Yes|Yes|Yes|
+|Server Manager|Yes|Yes|Yes|
+|SMB Direct and SMB over RDMA|Yes|Yes|Yes (not supported in Azure)|
+|SMB over QUIC|No|No|**Yes**|
+|Software-defined Networking|No|**Yes**|**Yes**|
+|Storage Migration Service|Yes|Yes|Yes|
+|Storage Replica| Yes, (1 partnership and 1 resource group with a single 2TB volume) | Yes, **unlimited** | Yes, **unlimited** |
+|Storage Spaces|Yes|Yes|Yes|
+|Storage Spaces Direct|No|**Yes**|**Yes**|
+|Volume Activation Services|Yes|Yes|Yes|
+|VSS (Volume Shadow Copy Service) integration|Yes|Yes|Yes|
+|Windows Server Update Services|Yes|Yes|Yes|
+|Windows System Resource Manager|Yes|Yes|Yes|
+|Server license logging|Yes|Yes|Yes|
+|Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** | **Can be a host or a guest** |
+|Work Folders|Yes|Yes|Yes|
 
 ## Locks and Limits
 
@@ -25,7 +57,9 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 | Maximum number of 64-bit sockets | 64                           | 64 |
 | Maximum number of cores          | Unlimited                    | Unlimited |
 | Maximum RAM                      | 48 TB                        | 48 TB |
-| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license|Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
+| Can be used as virtualization guest | Yes; 2 virtual machines, plus one Hyper-V host per license | Yes; **unlimited virtual machines**, plus one Hyper-V host per license |
+| Windows Server Containers | Unlimited | Unlimited |
+| Virtual OSE/Hyper-V isolated Containers | 2 | Unlimited |
 | Server can join a domain        | Yes                           | Yes |
 | Edge network protection/firewall| No                            | No  |
 | DirectAccess                    | Yes                           | Yes |
@@ -80,7 +114,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |BitLocker Network Unlock|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |BranchCache|Yes|Yes|
 |Client for NFS|Yes|Yes|
-|Containers|Yes (unlimited Windows containers; up to two Hyper-V containers)|Yes (**unlimited Windows and Hyper-V containers**) |
+|Containers|Yes|Yes|
 |Data Center Bridging|Yes|Yes|
 |Direct Play|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Enhanced Storage|Yes|Yes|
@@ -142,34 +176,3 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Wireless LAN Service|Yes|Yes|
 |WoW64 support|Installed|Installed|
 |XPS Viewer|Installed with Server with Desktop Experience|Installed with Server with Desktop Experience|
-
-## Features available generally
-
-|Features available generally|Windows Server 2022 Standard|Windows Server 2022 Datacenter|Windows Server 2022 Datacenter: Azure Edition|
-|--|--|--|--|
-|Azure Extended Network|No|No|**Yes**|
-|Best Practices Analyzer|Yes|Yes|Yes|
-|Direct Access|Yes|Yes|Yes|
-|Dynamic Memory (in virtualization)|Yes|Yes|Yes|
-|Hot Add/Replace RAM|Yes|Yes|Yes|
-|Hotpatching|No|No|**Yes**|
-|Microsoft Management Console|Yes|Yes|Yes|
-|Minimal Server Interface|Yes|Yes|Yes|
-|Network Load Balancing|Yes|Yes|Yes|
-|Windows PowerShell|Yes|Yes|Yes|
-|Server Core installation option|Yes|Yes|Yes|
-|Server Manager|Yes|Yes|Yes|
-|SMB Direct and SMB over RDMA|Yes|Yes|Yes (not supported in Azure)|
-|SMB over QUIC|No|No|**Yes**|
-|Software-defined Networking|No|**Yes**|**Yes**|
-|Storage Migration Service|Yes|Yes|Yes|
-|Storage Replica| Yes, (1 partnership and 1 resource group with a single 2TB volume) | Yes, **unlimited** | Yes, **unlimited** |
-|Storage Spaces|Yes|Yes|Yes|
-|Storage Spaces Direct|No|**Yes**|**Yes**|
-|Volume Activation Services|Yes|Yes|Yes|
-|VSS (Volume Shadow Copy Service) integration|Yes|Yes|Yes|
-|Windows Server Update Services|Yes|Yes|Yes|
-|Windows System Resource Manager|Yes|Yes|Yes|
-|Server license logging|Yes|Yes|Yes|
-|Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** | **Can be a host or a guest** |
-|Work Folders|Yes|Yes|Yes|
