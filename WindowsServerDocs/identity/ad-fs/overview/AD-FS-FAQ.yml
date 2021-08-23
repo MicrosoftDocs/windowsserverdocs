@@ -8,6 +8,7 @@ metadata:
   manager: mtillman
   ms.date: 11/02/2020
   ms.topic: article
+  ms.prod: windows-server
     
 title: AD FS Frequently Asked Questions (FAQ)
 summary: The following documentation is a home to frequently asked questions with regard to Active Directory Federation Services.  The document has been split into groups based on the type of question.
