@@ -9,7 +9,8 @@ ms.topic: article
 ---
 
 # AD FS OpenID Connect/OAuth Concepts
-Applies to AD FS 2016 and later
+
+>Applies to AD FS 2016 and later
 
 ## Modern Authentication Actors
 

@@ -11,7 +11,7 @@ ms.date: 07/14/2020
 
 # Deploy graphics devices using RemoteFX vGPU
 
-> Applies to: Windows Server 2016, Microsoft Hyper-V Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Microsoft Hyper-V Server 2016
 
 > [!NOTE]
 > Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update and removed starting with the April 13, 2021 Security Update. To learn more, see [KB 4570006](https://support.microsoft.com/help/4570006).

@@ -10,7 +10,7 @@ manager: dongill
 ---
 # Supported Windows 10 security configurations for Remote Desktop Services VDI
 
-> Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Windows 10 and Windows Server 2016 have new layers of protection built into the operating system to further safeguard against security breaches, help block malicious attacks and enhance the security of virtual machines, applications, and data.
 

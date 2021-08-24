@@ -9,7 +9,7 @@ ms.date: 09/28/2016
 ---
 # Plan for Hyper-V scalability in Windows Server 2016 and Windows Server 2019
 
-> Applies To: Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
 
 This article gives you details about the maximum configuration for components you can add and remove on a Hyper-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine, as well as those that apply to the Hyper-V host.
 

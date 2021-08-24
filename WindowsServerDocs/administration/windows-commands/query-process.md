@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # query process
 
-Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about processes that are running on a Remote Desktop Session Host server. You can use this command to find out which programs a specific user is running, and also which users are running a specific program. This command returns the following information:
 

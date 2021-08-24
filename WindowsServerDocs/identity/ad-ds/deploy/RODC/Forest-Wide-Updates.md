@@ -10,7 +10,7 @@ ms.topic: article
 ---
 # Forest-Wide Updates
 
->Applies To: Windows Server
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server
 
 You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /forestprep in Windows Server 2019.
 

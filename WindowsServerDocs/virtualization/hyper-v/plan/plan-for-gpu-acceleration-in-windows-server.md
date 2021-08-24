@@ -10,7 +10,7 @@ ms.date: 07/14/2020
 
 # Plan for GPU acceleration in Windows Server
 
-> Applies to: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 This article introduces the graphics virtualization capabilities available in Windows Server.
 

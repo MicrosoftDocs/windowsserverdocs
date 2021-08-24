@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 # What's New in Windows Server version 1809
 
->Applies To: Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server (Semi-Annual Channel)
 
 To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). This topic describes some of the new features in Windows Server, version 1809.
 

@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # Certificate-based authentication is configured, but the specified certificate is not installed on the Replica server or failover cluster nodes
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 

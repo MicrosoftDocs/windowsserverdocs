@@ -6,7 +6,7 @@ ms.assetid: ab2da47d-3aac-44a0-b7fd-bd9561d61553
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 03/27/2018
+ms.date: 05/27/2021
 ---
 
 # bcdedit
@@ -94,7 +94,7 @@ bcdedit /command [<argument1>] [<argument2>] ...
 | Parameter | Description |
 | ------ | ----------- |
 | /bootdebug | Enables or disables the boot debugger for a specified boot entry. Although this command works for any boot entry, it is effective only for boot applications. |
-| /dbgsettings | Specifies or displays the global debugger settings for the system. This command does not enablepose. To set an individual global debugger setting, use the **bcdedit /set** `<dbgsettings> <type> <value>` command. |
+| /dbgsettings | Specifies or displays the global debugger settings for the system. This command does not enable or disable the kernel debugger; use the **/debug** option for that purpose. To set an individual global debugger setting, use the **bcdedit /set** `<dbgsettings> <type> <value>` command. |
 | /debug | Enables or disables the kernel debugger for a specified boot entry. |
 
 ## Additional References

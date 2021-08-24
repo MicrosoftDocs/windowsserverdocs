@@ -26,7 +26,7 @@ For more information, see:
 
 ## Receive Segment Coalescing (RSC) in the vSwitch
 
->Applies to: Windows Server 2019 and Windows 10, version 1809
+>Applies to: Windows Server 2022, Windows Server 2019 and Windows 10, version 1809
 
 Receive Segment Coalescing (RSC) in the vSwitch is an enhancement that coalesces multiple TCP segments into a larger segment before data traversing the vSwitch. The large segment improves networking performance for virtual workloads.
 
