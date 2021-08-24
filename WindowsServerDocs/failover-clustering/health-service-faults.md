@@ -10,7 +10,7 @@ ms.date: 10/05/2017
 
 # Health Service faults
 
-> Applies to: Windows Server 2016
+> Applies to: Windows Server 2016 
 
 ## What are faults
 
