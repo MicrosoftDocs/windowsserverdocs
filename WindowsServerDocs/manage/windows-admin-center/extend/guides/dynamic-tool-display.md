@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Control your tool's visibility in a solution #
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 There might be times when you want to exclude (or hide) your extension or tool from the available tools list. For example, if your tool targets only Windows Server 2016 (not older versions), you might not want a user who connects to a Windows Server 2012 R2 server to see your tool at all. (Imagine the user experience - they click on it, wait for the tool to load, only to get a message that its features aren't available for their connection.) You can define when to show (or hide) your feature in the tool's manifest.json file.
 

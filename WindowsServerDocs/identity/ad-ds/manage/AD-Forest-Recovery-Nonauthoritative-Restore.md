@@ -10,7 +10,7 @@ ms.assetid: e4ce1d18-d346-492a-8bca-f85513aa3ac1
 ---
 # Performing a nonauthoritative restore of Active Directory Domain Services
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 To perform a nonauthoritative restore, complete the following procedure.
 

@@ -11,7 +11,7 @@ ms.topic: article
 
 # Active Directory Replication Concepts
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Before designing site topology, become familiar with some Active Directory replication concepts.
 

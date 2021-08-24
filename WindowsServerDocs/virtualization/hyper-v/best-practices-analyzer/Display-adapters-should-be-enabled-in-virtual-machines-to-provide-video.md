@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # Display adapters should be enabled in virtual machines to provide video capabilities
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 

@@ -13,7 +13,7 @@ ms.custom: contperf-fy21q1
 
 # Get started with the Android client
 
->Applies to: Android 7.0 and later
+>Applies to: Windows Server 2022, Windows Server 2019, Android 7.0 and later
 
 You can use the Remote Desktop client for Android to work with Windows apps and desktops directly from your Android device or a Chromebook that supports the Google Play Store.
 

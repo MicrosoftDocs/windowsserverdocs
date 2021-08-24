@@ -11,7 +11,7 @@ ms.date: 12/18/2020
 
 # Troubleshooting Converged NIC Configurations
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use the following script to verify whether the RDMA configuration is correct on the Hyper-V host.
 

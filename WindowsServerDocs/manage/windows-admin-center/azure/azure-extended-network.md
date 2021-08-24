@@ -12,7 +12,7 @@ ms.prod: windows-server
 
 # Extend your on-premises subnets into Azure using Azure Extended Network
 
-> Applies to: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 ## Overview
 

@@ -11,7 +11,7 @@ ms.assetid: 84eaba2c-c0af-49e1-bbbd-2ed2928e5e4b
 
 # fsutil behavior
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
 
 Queries or sets NTFS volume behavior, which includes:
 

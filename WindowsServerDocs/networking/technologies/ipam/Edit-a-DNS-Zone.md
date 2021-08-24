@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Edit a DNS Zone
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to edit a DNS zone in the IPAM client console.
 

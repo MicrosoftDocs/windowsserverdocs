@@ -11,7 +11,7 @@ ms.topic: article
 
 # Appendix H: Securing Local Administrator Accounts and Groups
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix H: Securing Local Administrator Accounts and Groups

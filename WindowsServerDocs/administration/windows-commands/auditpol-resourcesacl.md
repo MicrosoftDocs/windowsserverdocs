@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # auditpol resourceSACL
 
-> Applies to: Windows 7 and Windows Server 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 7 and Windows Server 2008 R2
 
 Configures global resource system access control lists (SACLs).
 

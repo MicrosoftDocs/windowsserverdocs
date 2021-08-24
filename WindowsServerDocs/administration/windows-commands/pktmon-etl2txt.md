@@ -9,7 +9,7 @@ ms.date: 06/24/2021
 
 # pktmon etl2txt
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
 Convert ETL log file to text format.
 

@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Troubleshoot user profiles with events
 
->Applies to: Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server (Semi-annual Channel).
+>Applies to: Windows Server 2022, Windows 10, Windows 8, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012.
 
 This topic discusses how to troubleshoot problems loading and unloading user profiles by using events and trace logs. The following sections describe how to use the three event logs that record user profile information.
 
@@ -65,8 +65,15 @@ Here's how to create and decode a trace for the User Profile Service:
 2. From an elevated command prompt enter the following commands, where *\<Path\>* is the path to a local folder that you have previously created, for example C:\\logs:
 
     ```PowerShell
-    logman create trace -n RUP -o <Path>\RUP.etl -ets
+    logman create trace -bs 1024 -nb 16 16 -n RUP -o <Path>\RUP.etl -ets
     logman update RUP -p {eb7428f5-ab1f-4322-a4cc-1f1a9b2c5e98} 0x7FFFFFFF 0x7 -ets
+    logman update RUP -p {9891e0a7-f966-547f-eb21-d98616bf72ee} 0xFFFFFFFF 0xFF -ets
+    logman update RUP -p {9959adbd-b5ac-5758-3ffa-ee0da5b8fe4b} 0xFFFFFFFF 0xFF -ets
+    logman update RUP -p {7f1bd045-965d-4f47-b3a7-acdbcfb11ca6} 0xFFFFFFFF 0xFF -ets
+    logman update RUP -p {40654520-7460-5c90-3c10-e8b6c8b430c1} 0xFFFFFFFF 0xFF -ets
+    logman update RUP -p {d5ee9312-a511-4c0e-8b35-b6d980f6ba25} 0xFFFFFFFF 0xFF -ets
+    logman update RUP -p {04a241e7-cea7-466d-95a1-87dcf755f1b0} 0xFFFFFFFF 0xFF -ets
+    logman update RUP -p {9aed307f-a41d-40e7-9539-b8d2742578f6} 0xFFFFFFFF 0xFF -ets
     ```
 3. From the Start screen, select the user name, and then select **Switch account**, being careful not to log off the administrator. If you are using Remote Desktop, close the Administrator session to establish the user session.
 4. Reproduce the problem. The procedure to reproduce the problem is typically to sign on as the user experiencing the issue, sign the user off, or both.
