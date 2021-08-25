@@ -31,7 +31,8 @@ The following per-requisites are required before you can begin with on-premises 
 |Windows 10 client|Build 10586 or newer, joined to the above domain is required for Windows 10 Domain Join and Microsoft Passport for Work scenarios only
 |Azure AD user account with Azure AD Premium license assigned|For registering the device
 
-
+> [!NOTE]
+> Windows 10 Enterprise PRT is used, only IE and/or Windows WebViews are supported. Firefox or any Chromium-based browsers are not supported.
 
 ## Upgrade your Active Directory Schema
 In order to use on-premises conditional access with registered devices, you must first upgrade your AD schema.  The following conditions must be met:
