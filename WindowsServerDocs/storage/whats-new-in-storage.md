@@ -12,7 +12,7 @@ ms.date: 05/29/2019
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This topic explains the new and changed functionality in storage in Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
+This topic explains the new and changed functionality in storage in Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
 
 ## What's new in storage in Windows Server, version 1903
 
