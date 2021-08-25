@@ -14,6 +14,43 @@ ms.date: 05/29/2019
 
 This topic explains the new and changed functionality in storage in Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
 
+## What's new in storage in Windows Server 2022
+
+### Server Message Block (SMB): SMB AES-256 encryption for the most security conscious
+
+Windows Server now supports AES-256-GCM and AES-256-CCM cryptographic suites for SMB encryption and signing. Windows will automatically negotiate this more advanced cipher method when connecting to another computer that also supports it, and it can also be mandated through Group Policy. Windows Server still supports AES-128 for down-level compatibility.
+
+### SMB: East-West SMB encryption controls for internal cluster communications
+
+Windows Server failover clusters now support granular control of encrypting and signing intra-node storage communications for Cluster Shared Volumes (CSV) and the storage bus layer (SBL). This means that when using Storage Spaces Direct, you can decide to encrypt or sign east-west communications within the cluster itself for higher security.
+
+### SMB over QUIC
+
+SMB over QUIC updates the SMB 3.1.1 protocol in Windows Server 2022 Datacenter: Azure Edition and supported Windows clients to use the QUIC protocol instead of TCP. By using SMB over QUIC along with TLS 1.3, users and applications can securely and reliably access data from edge file servers running in Azure. Mobile and telecommuter users no longer need a VPN to access their file servers over SMB when on Windows. More information can be found at the [SMB over QUIC documentation](./file-server/smb-over-quic.md).
+
+### Storage Migration Service Enhancements
+
+Enhancements to Storage Migration Service in Windows Server 2022 makes it easier to migrate storage to Windows Server or to Azure from more source locations. Here are the features that are available when running the Storage Migration Server orchestrator on Windows Server 2022:
+
+* Migrate local users and groups to the new server.
+* Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters.
+* Migrate storage from a Linux server that uses Samba.
+* More easily sync migrated shares into Azure by using Azure File Sync.
+* Migrate to new networks such as Azure.
+* Migrate NetApp CIFS servers from NetApp FAS arrays to Windows servers and clusters.
+
+### Adjustable storage repair speed
+
+[User adjustable storage repair speed](/azure-stack/hci/manage/storage-repair-speed) is a new feature in Storage Spaces Direct that offers more control over the data resync process by allocating resources to either repair data copies (resiliency) or run active workloads (performance). This helps improve availability and allows you to service your clusters more flexibly and efficiently.
+
+### Storage bus cache with Storage Spaces on standalone servers
+
+Storage bus cache is now available for standalone servers. It can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. Similar to its implementation for Storage Spaces Direct, this feature binds together faster media (for example, NVMe or SSD) with slower media (for example, HDD) to create tiers. A portion of the faster media tier is reserved for the cache. To learn more, see [Enable storage bus cache with Storage Spaces on standalone servers](./storage-spaces/storage-spaces-storage-bus-cache.md).
+
+### SMB compression
+
+Enhancement to SMB in Windows Server 2022 and Windows 11 allows a user or application to compress files as they transfer over the network. Users no longer have to manually zip files in order to transfer much faster on slower or more congested networks. For details, see [SMB Compression](./file-server/smb-compression.md).
+
 ## What's new in storage in Windows Server, version 1903
 
 This release of Windows Server adds the following changes and technologies.
@@ -291,4 +328,8 @@ ReFS introduces the following improvements:
 These capabilities are new in Windows Server 2016.
 
 ## Additional References
+
 * [What's New in Windows Server 2016](../get-started/whats-new-in-windows-server-2016.md)
+* [What's New in Windows Server 2019](../get-started/whats-new-in-windows-server-2019.md)
+* [What's New in Windows Server, versions 1903 and 909](../get-started/whats-new-in-windows-server-1903-1909.md)
+* [What's New in Windows Server 2022](../get-started/whats-new-in-windows-server-2022.md)
