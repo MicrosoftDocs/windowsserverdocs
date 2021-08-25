@@ -733,6 +733,37 @@ This issue is caused by a limitation in the Storage Migration Service Proxy serv
 
 Alternatively, you can perform the same steps on the source computer if its volume was compressed and if it has free space to hold the expanded files. NTFS-compressed files are always decompressed while copying or moving, compressing them won't reduce transfer time.
 
+## An error requires reset the SMS database
+
+Under rare circumstances you may need to reset the SMS database. To do this:
+
+1. Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
+
+     ```CMD
+     NET STOP SMS
+     NET STOP SMSPROXY
+     
+     TAKEOWN /d y /a /r /f c:\ProgramData\Microsoft\StorageMigrationService
+
+     MD c:\ProgramData\Microsoft\StorageMigrationService\backup
+
+     ICACLS c:\ProgramData\Microsoft\StorageMigrationService\* /grant Administrators:(GA)
+
+     XCOPY c:\ProgramData\Microsoft\StorageMigrationService\* .\backup\*
+
+     DEL c:\ProgramData\Microsoft\StorageMigrationService\* /q
+
+     ICACLS c:\ProgramData\Microsoft\StorageMigrationService  /GRANT networkservice:F /T /C
+
+     ICACLS c:\ProgramData\Microsoft\StorageMigrationService /GRANT networkservice:(GA) /T /C
+     ```
+
+2. Validate that there were no errors in the above commands. Start the Storage Migration Service service, which will create a new database.
+
+     ```CMD
+     NET START SMS
+     NET START SMSPROXY
+
 ## See also
 
 - [Storage Migration Service overview](overview.md)
