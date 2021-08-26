@@ -758,7 +758,7 @@ Under rare circumstances you may need to reset the Storage Migration Service dat
      ICACLS c:\ProgramData\Microsoft\StorageMigrationService /GRANT networkservice:(GA) /T /C
      ```
 
-2. Validate that there were no errors in the above commands. Start the Storage Migration Service service, which will create a new database.
+2. Validate that there were no errors in the above commands. Then start the Storage Migration Service service, which will create a new database.
 
      ```CMD
      NET START SMS
