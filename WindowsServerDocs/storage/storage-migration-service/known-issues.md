@@ -735,7 +735,7 @@ Alternatively, you can perform the same steps on the source computer if its volu
 
 ## An error requires resetting the Storage Migration Service database
 
-Under rare circumstances you may need to reset the SMS database. To do this:
+Under rare circumstances you may need to reset the Storage Migration Service database. To do this:
 
 1. Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
 
