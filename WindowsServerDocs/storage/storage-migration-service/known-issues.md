@@ -733,7 +733,7 @@ This issue is caused by a limitation in the Storage Migration Service Proxy serv
 
 Alternatively, you can perform the same steps on the source computer if its volume was compressed and if it has free space to hold the expanded files. NTFS-compressed files are always decompressed while copying or moving, compressing them won't reduce transfer time.
 
-## An error requires reset the SMS database
+## An error requires resetting the Storage Migration Service database
 
 Under rare circumstances you may need to reset the SMS database. To do this:
 
