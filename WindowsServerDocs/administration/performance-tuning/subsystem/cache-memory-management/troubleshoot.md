@@ -42,7 +42,7 @@ This situation has been mitigated to some extent by working set trimming improve
 
 Cache Manager, starting in Windows Server 2016 further mitigates this by ignoring FILE_FLAG_RANDOM_ACCESS when making trimming decisions, so it is treated just like any other file opened without the FILE_FLAG_RANDOM_ACCESS flag (Cache Manager still honors this flag to disable prefetching of file data). You can still cause system cache bloat if you have large number of files opened with this flag and accessed in truly random fashion. It is highly recommended that FILE_FLAG_RANDOM_ACCESS not be used by applications.
 
-## Remote File Dirty Page Threshold is Consistently Exceeded
+## Remote file dirty page threshold is consistently exceeded
 
 This problem is indicated if a system experiences occasional slowdowns during writes from a remote client. This issue may occur when a large amount of data is written from a fast remote client to a slow server destination. 
 
