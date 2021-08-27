@@ -135,6 +135,14 @@ The following REG\_DWORD registry settings can affect the performance of SMB fil
   ```
 
   The default is 512. This parameter limits the number of concurrent asynchronous SMB commands that are allowed on a single connection. Some cases (such as when there is a front-end server with a back-end IIS server) require a large amount of concurrency (for file change notification requests, in particular). The value of this entry can be increased to support these cases.
+  
+- **RemoteFileDirtyPageThreshold**
+
+```
+  HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\RemoteFileDirtyPageThreshold
+```
+
+  The default is 5GB. This value determines the maximum number of dirty pages in the cache (on a per-file basis) for a remote write before an inline flush will be performed. We do not recommend changing this value unless the system experiences consistent slowdowns during heavy remote writes. See [Troubleshoot Cache and Memory Manager Performance Issues](../../subsystem/cache-memory-management/troubleshoot.md) for more information.
 
 ### SMB server tuning example
 
