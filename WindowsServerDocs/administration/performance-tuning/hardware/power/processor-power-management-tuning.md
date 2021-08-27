@@ -93,7 +93,7 @@ Starting from Intel Broadwell processors running Windows Server 2016, Windows Se
 
 For HWP system, Windows still has the option to set the minimum and maximum processor states to provide constraints. It also can use **Energy performance preference (EPP)** parameter to set balance between power and performance. Lower value favors performance, and higher value favors power. The default value 50 that is to balance power and performance.
 
-|Parameter|Windows Server 2012R2 and Before | Windows Server 2016 and After|
+|Parameter|Windows Server 2012R2 and before | Windows Server 2016 and after|
 |-|---------------------------------|:-----------------------------|
 | HWP Enabled                   | N/A | Intel Broadwell+ |
 | Energy performance preference | N/A | 50               |
@@ -101,7 +101,7 @@ For HWP system, Windows still has the option to set the minimum and maximum proc
 
 For Intel pre-Broadwell systems or any systems that don’t have HWP support (for example, AMD servers), Windows is still in full control and determines processor frequency based on the PPM parameters. The default PPM parameters in Windows Server 2012R2 favor power too much that could significantly impact the workload performance, especially to bursty workload. Four PPM parameters were changed in Windows Server 2016 RS2 to let the frequency increase faster around medium load level. 
 
-|Parameter|Windows Server 2016 (RS1) and Before | Windows Server 2016 (RS2) and After|
+|Parameter|Windows Server 2016 (RS1) and before | Windows Server 2016 (RS2) and after|
 |-|:---------------------------------:|:-----------------------------:|
 | Processor performance increase threshold | 90 | 60 |
 | Processor performance decrease threshold | 80 | 40 |
@@ -111,7 +111,7 @@ For Intel pre-Broadwell systems or any systems that don’t have HWP support (fo
 
 The CPU utilization-based power management algorithms might hurt the latency of IO or network-intensive workloads. A logical processor could be idle while waiting for IO completion or network packets, which makes the overall CPU utilization low. To resolve this issue, Windows Server 2019 automatically detects the IO responsiveness period and raises the frequency floor to a higher level. The behavior can be tuned by the following parameters no matter if the system uses HWP or not. 
 
-|Parameter|Before Windows Server 2019 | Windows Server 2019 and After|
+|Parameter|Before Windows Server 2019 | Windows Server 2019 and after|
 |-|:---------------------------------:|:-----------------------------:|
 | Processor responsiveness override enable threshold  | N/A | 10 |
 | Processor responsiveness override disable threshold | N/A | 5 |
