@@ -63,7 +63,7 @@ The WID synchronization process also supports incremental transfers for more eff
 > The migration of an AD FS configuration database from WID to an instance of SQL Server is supported. For more information about how to do this, see [AD FS: Migrate Your AD FS Configuration Database to SQL Server](https://go.microsoft.com/fwlink/?LinkId=192232) on the TechNet Wiki site.
 
 ### How to managed the AD FS synchronization properties
-This Section describes how to view and edit the AD FS configuration database synchronization proerties.
+This Section describes how to view and edit the AD FS configuration database synchronization properties.
 .
 
 The **Get-ADFSSyncProperties** cmdlet gets the synchronization properties for the configuration database of Active Directory Federation Services (AD FS).
@@ -71,7 +71,7 @@ The **Get-ADFSSyncProperties** cmdlet gets the synchronization properties for th
 ```
 PS C:\> Get-ADFSSyncProperties
 ```
-On the Primary AD FS Server this cmdlet will only show that the Role is the Primary Computer. On a Secondary member it will show the rest of the configuration including Fully Quallified Domain Name of the Last Sync from the Primary Computer, Last Sync Status and Time, Poll duration, the currently configured Primary computername, the Primary Computer Port and the Role of the Secondary Computer. 
+On the Primary AD FS Server this cmdlet will only show that the Role is the Primary Computer. On a Secondary member it will show the rest of the configuration including Fully Qualified Domain Name of the Last Sync from the Primary Computer, Last Sync Status and Time, Poll duration, the currently configured Primary computername, the Primary Computer Port and the Role of the Secondary Computer. 
 
 The **Set-ADFSSyncProperties** cmdlet modifies the frequency of synchronization for the Active Directory Federation Services (AD FS) configuration database.
 The cmdlet also specifies which federation server is the primary server in the federation server farm. 
