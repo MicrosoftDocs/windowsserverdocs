@@ -140,10 +140,10 @@ You can use Windows PowerShell to set access scopes on IPAM objects.
 
 For more information, see [What's New in IPAM](technologies/ipam/What-s-New-in-IPAM.md) and [Manage IPAM](technologies/ipam/Manage-IPAM.md).
 
-# New HPN Features in Windows Server 2019
+## New HPN Features in Windows Server 2019
 The following provides information on new or enhanced networking technologies in Windows Server 2019.
 
-## Dynamic vRSS and VMMQ
+### Dynamic vRSS and VMMQ
 
 >Applies to: Azure Stack HCI, version 20H2; Windows Server 2019
 
@@ -156,7 +156,7 @@ For more information, see:
 - [Announcement blog](https://blogs.technet.microsoft.com/networking/2018/08/22/netperf4vw/)
 - [Validation Guide for the IT Pro](https://aka.ms/DVMMQ-Validation)
 
-## Receive Segment Coalescing (RSC) in the vSwitch
+### Receive Segment Coalescing (RSC) in the vSwitch
 
 >Applies to: Windows Server 2022, Windows Server 2019 and Windows 10, version 1809
 
