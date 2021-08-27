@@ -25,7 +25,7 @@ If Memory\\Available Mbytes is low and at the same time Memory\\System Cache Res
 ## System file cache contains NTFS metafile data structures
 
 
-This problem is indicated by a very high number of active Metafile pages in RAMMAP output, as shown in the following figure. This problem might have been observed on busy servers with millions of files being accessed, thereby resulting in caching NTFS metafile data not being released from the cache.
+This problem is indicated by a high number of active Metafile pages in RAMMAP output, as shown in the following figure. This problem might have been observed on busy servers with millions of files being accessed, thereby resulting in caching NTFS metafile data not being released from the cache.
 
 ![rammap view](../../media/perftune-guide-rammap.png)
 
@@ -34,7 +34,7 @@ The problem used to be mitigated by *DynCache* tool. In Windows Server 2012+, t
 ## System file cache contains memory mapped files
 
 
-This problem is indicated by very high number of active Mapped file pages in RAMMAP output. This usually indicates that some application on the server is opening a lot of large files using [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea) API with FILE\_FLAG\_RANDOM\_ACCESS flag set.
+This problem is indicated by a high number of active Mapped file pages in RAMMAP output. This usually indicates that some application on the server is opening numerous large files using [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea) API with FILE\_FLAG\_RANDOM\_ACCESS flag set.
 
 This issue is described in detail in KB article [2549369](https://support.microsoft.com/default.aspx?scid=kb;en-US;2549369). FILE\_FLAG\_RANDOM\_ACCESS flag is a hint for Cache Manager to keep mapped views of the file in memory as long as possible (until Memory Manager doesn't signal low memory condition). At the same time, this flag instructs Cache Manager to disable prefetching of file data.
 
@@ -46,16 +46,16 @@ Cache Manager, starting in Windows Server 2016 further mitigates this by ignorin
 
 This problem is indicated if a system experiences occasional slowdowns during writes from a remote client. This issue may occur when a large amount of data is written from a fast remote client to a slow server destination. 
 
-Prior to Windows Server 2016, in such a scenario, if the dirty page threshold in the cache is reached, further writes will behave as if there were write-through. This can cause a flush of a large amount of data to the disk which can lead to long delays if the storage is slow, resulting in timeouts for the remote connection.
+Prior to Windows Server 2016, in such a scenario, if the dirty page threshold in the cache is reached, further writes will behave as if there were write-through. This can cause a flush of a large amount of data to the disk, which can lead to long delays if the storage is slow, resulting in timeouts for the remote connection.
 
-In Window Server 2016 and forward, a mitigation is put in place to reduce the likelihood of timeouts. A separate dirty page threshold for remote writes is implemented, and an inline flush will be performed when it is exceeded. This can result on occasional slowdowns during heavy write activity, but eliminates the risk of a timeout in most cases. This remote dirty page threshold is **5GB per file** by default. For some configurations and workloads, a different number will perform better. 
+In Window Server 2016 and forward, a mitigation is put in place to reduce the likelihood of timeouts. A separate dirty page threshold for remote writes is implemented, and an inline flush will be performed when it is exceeded. This can result on occasional slowdowns during heavy write activity, but eliminates the risk of a timeout in most cases. This remote dirty page threshold is **5 GB per file** by default. For some configurations and workloads, a different number will perform better. 
 
-This threshold can be controlled with the following regkey: HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\RemoteFileDirtyPageThreshold. If the default size of 5GB does not work well for your configuration, it is recommended to try increasing the limit in 256MB increments until performance is satisfactory. Please note the following:
+This threshold can be controlled with the following regkey: HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\RemoteFileDirtyPageThreshold. If the default size of 5GB does not work well for your configuration, it is recommended to try increasing the limit in 256 MB increments until performance is satisfactory. Please note the following:
 
 -   A reboot is required for changes to this regkey to take effect.
 
 -   The units of RemoteFileDirtyPageThreshold are **number of pages** (with page size as managed by Cache Manager). This means it should be set to the desired size in bytes, divided by 4096.
 
--   Recommended values are 128MB <= N <= 50% of available memorys.
+-   Recommended values are 128MB <= N <= 50% of available memories.
 
 -   This threshold can be disabled completely by setting it to -1. **This is not recommended** as it can result in timeouts for remote connections.
