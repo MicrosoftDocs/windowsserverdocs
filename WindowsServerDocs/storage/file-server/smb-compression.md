@@ -1,6 +1,6 @@
 ---
 title: SMB Compression
-description: Describes the SMB compression feature in Windows Server 2022, Windows Insider Dev Channel client 
+description: Describes the SMB compression feature in Windows Server 2022, WWindows 11 Insider Preview
 ms.product: windows-server
 ms.topic: article
 author: NedPyle
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # SMB compression (PREVIEW)
 
->Applies to: Windows Server 2022, Windows Insider Dev Channel preview client
+>Applies to: Windows Server 2022, Windows 11 Insider Preview
 
 SMB compression allows an administrator, user or application to request compression of files as they transfer over the network. This removes the need to first manually deflate a file with an application, copy it, then inflate on the destination computer. Compressed files will consume less network bandwidth and take less time to transfer, at the cost of slightly increased CPU usage during transfers. SMB compression is most effective on networks with less bandwidth, such as a client's 1Gbps ethernet or Wi-Fi network; a file transfer over an uncongested 100Gbps ethernet network between two servers with flash storage may be just as fast without SMB compression in practice, but will still create less congestion for other applications.
 
@@ -32,12 +32,12 @@ For a demonstration of SMB compression, watch this video:
 To use SMB compression in a traditional client-file server workload, you need the following:
 
 - A file server running Windows Server 2022 [on-premises](https://aka.ms/WS2022Preview) or [in Azure](https://aka.ms/ws2022azurepreview)
-- A Windows Insider Dev Channel client - ([Windows Insider Dev Channel Preview Downloads](https://www.microsoft.com/software-download/windowsinsiderpreviewiso))
+- A Windows 11 Insider Preview ([Windows Insider Channels](https://insider.windows.com/))
 - Windows Admin Center - ([Homepage](https://aka.ms/windowsadmincenter))
 
 ## Configuring SMB compression
 
-You can configure SMB compression from both a client and server perspective. Client and server don't refer to a particular edition like Windows Server 2022 or Windows Insider Dev Channel but instead to the architecture of a file transfer between two computers. Both Windows Server 2022 and Windows Insider Dev Channel support being a client or server of SMB compression.
+You can configure SMB compression from both a client and server perspective. Client and server don't refer to a particular edition like Windows Server 2022 or Windows 11 Insider Preview but instead to the architecture of a file transfer between two computers. Both Windows Server 2022 and Windows 11 Insider Preview support being a client or server of SMB compression.
 
 ### Requesting SMB compression on file shares
 
@@ -156,7 +156,7 @@ You can configure an SMB client to always request compression and to always reje
 
 ## Understanding and controlling compression behaviors
 
-SMB compression in Windows Server 2022 preview and Windows Insider Dev Channel clients uses a default algorithm where it attempts to compress the first 524,288,000 bytes (500MiB) of a file during transfer and tracks that at least 104,857,600 bytes (100MiB) compressed within that 500-MB range. If fewer than 100 MiB is compressible, SMB compression stops trying to compress the rest of the file. If at least 100 MiB compresses, SMB compression attempts to compress the rest of the file. This means that very large files with compressible data - for instance, a multi-gigabyte virtual machine disk - are likely to compress but a relatively small file - even a very compressible one - will not compress.
+SMB compression in Windows Server 2022 preview and Windows 11 Insider Preview uses a default algorithm where it attempts to compress the first 524,288,000 bytes (500MiB) of a file during transfer and tracks that at least 104,857,600 bytes (100MiB) compressed within that 500-MB range. If fewer than 100 MiB is compressible, SMB compression stops trying to compress the rest of the file. If at least 100 MiB compresses, SMB compression attempts to compress the rest of the file. This means that very large files with compressible data - for instance, a multi-gigabyte virtual machine disk - are likely to compress but a relatively small file - even a very compressible one - will not compress.
 
 > [!NOTE]
 > This behavior will not remain the default in non-Preview Windows Server 2022 and Windows.

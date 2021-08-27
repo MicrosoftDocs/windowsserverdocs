@@ -41,7 +41,8 @@
             "depot_name": "MSDN.WindowsServerDocs-pr",
             "folder_relative_path_in_docset": "licensing/"
            }
-        }
+        },
+      "recommendations": true
       },
       "fileMetadata": {
         "feedback_product_url": {

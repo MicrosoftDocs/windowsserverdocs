@@ -6,6 +6,7 @@
 ### [What is the Server Core installation option?](server-core/what-is-server-core.md)
 #### [What's included in the Server Core installation option?](server-core/server-core-roles-and-services.md)
 #### [Basic administration tasks in Server Core](server-core/server-core-administer.md)
+#### [Configure Server Core with SConfig](server-core/server-core-sconfig.md)
 #### [Manage Server Core](server-core/server-core-manage.md)
 #### [Configure memory dump files](server-core/server-core-memory-dump.md)
 #### [Patch your Server Core installation](server-core/server-core-servicing.md)
@@ -45,6 +46,7 @@
 #### [Express update delivery ISV support](windows-server-update-services/deploy/express-update-delivery-isv-support.md)
 ##### [Monthly Delta-update ISV support without WSUS](windows-server-update-services/deploy/monthly-delta-update-isv-support-without-WSUS.md)
 #### [Migrating the WSUS database from Windows Internal Database (WID) to SQL](windows-server-update-services/manage/wid-to-sql-migration.md)
+### [Windows Console behavior in Windows Server](windows-console-changes.md)
 
 ## Collect information about your environment and systems
 ### [System Insights](..\manage\system-insights\overview.md)

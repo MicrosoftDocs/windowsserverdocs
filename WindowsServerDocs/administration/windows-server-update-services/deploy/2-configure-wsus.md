@@ -324,6 +324,9 @@ Because waiting for detection to start can be a time-consuming process, you can 
 
 You can use the Secure Sockets Layer (SSL) protocol to help secure the WSUS deployment. WSUS uses SSL to authenticate client computers and downstream WSUS servers to the WSUS server. WSUS also uses SSL to encrypt update metadata.
 
+> [!WARNING]
+> Securing WSUS using the SSL protocol is very important for the security of your network. If your WSUS server does not properly use SSL to secure its update metadata connections, then an attacker may be able to modify the metadata as it's sent from the server to the client computers. **This will allow the attacker to install malicious software on client computers.**
+
 > [!IMPORTANT]
 > Clients and downstream servers that are configured to use Transport Layer Security (TLS) or HTTPS must also be configured to use a fully qualified domain name (FQDN) for their upstream WSUS server.
 
