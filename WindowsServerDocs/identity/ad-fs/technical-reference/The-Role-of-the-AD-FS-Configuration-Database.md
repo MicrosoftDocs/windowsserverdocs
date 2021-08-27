@@ -102,7 +102,7 @@ PS C:\> Set-AdfsSyncProperties -Role "SecondaryComputer" -PrimaryComputerName "<
 This command changes a primary AD FS server in a WID farm to a secondary server. You must specify the fully qualified domain name of the primary so server. Not doing so may not all the secondary AD FS server to sync properly. 
 Note: The primary server must be accessible via HTTP on port 80 from the secondary server.
 
-For more information see: [Set-AdfsSyncProperties](https://docs.microsoft.com/en-us/powershell/module/adfs/set-adfssyncproperties?view=win10-ps)
+For more information see: [Set-AdfsSyncProperties](https://docs.microsoft.com/powershell/module/adfs/set-adfssyncproperties?view=win10-ps)
 
 
 ## Using SQL Server to store the AD FS configuration database
