@@ -4,7 +4,6 @@
 ### [Power considerations](hardware/power.md)
 #### [Power and performance tuning](hardware/power/power-performance-tuning.md)
 #### [Processor Power Management (PPM) tuning](hardware/power/processor-power-management-tuning.md)
-#### [Recommended balanced power plan parameters](hardware/power/recommended-balanced-plan-parameters.md)
 ## Server Role Tuning
 ### [Active Directory Server](role/active-directory-server/index.md)
 #### [Capacity planning for AD DS](role/active-directory-server/capacity-planning-for-active-directory-domain-services.md)
