@@ -142,7 +142,7 @@ The following REG\_DWORD registry settings can affect the performance of SMB fil
   HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\RemoteFileDirtyPageThreshold
 ```
 
-  The default is 5GB. This value determines the maximum number of dirty pages in the cache (on a per-file basis) for a remote write before an inline flush will be performed. We do not recommend changing this value unless the system experiences consistent slowdowns during heavy remote writes. See [Troubleshoot Cache and Memory Manager Performance Issues](../../subsystem/cache-memory-management/troubleshoot.md) for more information.
+  The default is 5GB. This value determines the maximum number of dirty pages in the cache (on a per-file basis) for a remote write before an inline flush will be performed. We do not recommend changing this value unless the system experiences consistent slowdowns during heavy remote writes. This slowdown behavior would typically be seen where the client has faster storage IO perfomance than the remote server. The setting change is applied to the server. Client and server refer to the distributed system architecture, not to particular operating systems; for example, a Windows Server copying data to another Windows Server over SMB would still involve an SMB client and an SMB server. See [Troubleshoot Cache and Memory Manager Performance Issues](../../subsystem/cache-memory-management/troubleshoot.md) for more information.
 
 ### SMB server tuning example
 
