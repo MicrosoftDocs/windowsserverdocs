@@ -11,7 +11,7 @@ ms.topic: article
 
 # Appendix B: Setting Up the Test Environment
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic outlines the steps to build a hands-on lab to test Dynamic Access Control. The instructions are meant to be followed sequentially because there are many components that have dependencies.
 

@@ -10,7 +10,7 @@ ms.date: 06/30/2021
 ---
 # Troubleshoot SDN
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 The topics in this section provide information about troubleshooting the Software Defined Networking (SDN) technologies that are included in Azure Stack HCI, Windows Server 2019, and Windows Server 2016.
 

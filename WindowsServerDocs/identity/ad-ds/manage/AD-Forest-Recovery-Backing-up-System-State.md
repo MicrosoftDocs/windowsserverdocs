@@ -11,7 +11,7 @@ ms.assetid: 9238cb27-0020-42f7-90d6-fcebf7e3c0bc
 
 # AD Forest Recovery - Backing up the System State data
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 Use the following procedure to perform a system state backup on a DC by using Windows Server Backup or wbadmin.exe.
 

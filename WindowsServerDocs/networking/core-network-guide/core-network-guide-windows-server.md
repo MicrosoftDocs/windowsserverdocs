@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Core network guidance for Windows Server
 
->Applies to: Windows Server, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server, Windows Server 2016
 
 This topic provides an overview of the Core network guidance for Windows Server&reg; 2016, and contains the following sections.
 

@@ -1,36 +1,131 @@
 ---
-title: Configure Quality of Service (QoS) for a tenant VM network adapter
-description: When you configure QoS for a tenant VM network adapter, you have a choice between Data Center Bridging \(DCB\)or Software Defined Networking \(SDN\) QoS.
+title: Configure Quality of Service (QoS) for a VM network adapter
+description: You can configure SDN QoS for a VM network adapter to limit bandwidth on a virtual interface to prevent a high-traffic VM from blocking other users.
 manager: grcusanz
 ms.topic: article
 ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 06/25/2021
+ms.date: 08/19/2021
 ---
-# Configure Quality of Service (QoS) for a tenant VM network adapter
+# Configure Quality of Service (QoS) for a VM network adapter
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
-When you configure QoS for a tenant VM network adapter, you have a choice between Data Center Bridging \(DCB\)or Software Defined Networking \(SDN\) QoS.
+You can configure Software Defined Networking (SDN) Quality of Service (QoS) for a virtual machine (VM) network adapter to limit bandwidth on a virtual interface to prevent a high-traffic VM from contending with other VM network traffic. You can also configure SDN QoS to reserve a specific amount of bandwidth for a VM to ensure that the VM can send traffic regardless of other traffic on the network. This can be applied to VMs attached to traditional VLAN networks as well as VMs attached to SDN overlay networks.
 
-1.    **DCB**. You can configure DCB by using the Windows PowerShell NetQoS cmdlets. For an example, see the section "Enable Data Center Bridging"  in the topic [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
+You can also configure ***QoS Offload*** to enforce QoS rules at the physical network adapter rather than at the virtual switch, resulting in lower CPU utilization and improved enforcement. QoS Offload is an optional capability found in Windows Server 2022 certified NICs that have achieved the Windows Server Software-Defined Data Center (SDDC) Premium Additional Qualification (AQ). For more information, see [Select a network adapter](/azure-stack/hci/concepts/host-network-requirements#select-a-network-adapter).
 
-2.    **SDN QoS**. You can enable SDN QoS by using Network Controller, which can be set to limit bandwidth on a virtual interface to prevent a high-traffic VM from blocking other users.  You can also configure SDN QoS to reserve a specific amount of bandwidth for a VM to ensure that the VM is accessible regardless of the amount of network traffic.
+## SDN QoS bandwidth limits
 
-Apply all SDN QoS settings through the Port settings of the Network Interface properties. Refer to the table below for more details.
+SDN QoS provides configuration of maximum permitted send-side or receive-side bandwidth for VMs. This is supported for VMs connected to a traditional VLAN network as well as VMs connected to an SDN virtual network. Once set, your VM will not be able to send or receive traffic above the configured maximum limits. For a VM, you can choose to configure either a send-side limit, a receive-side limit, or both.
 
-|Element name|Description|
-|------------|-----------|
-|macSpoofing| Allows VMs to change the source media access control \(MAC\) address in outgoing packets to a MAC address not assigned to the VM.<p>Allowed values:<ul><li>Enabled – Use a different MAC address.</li><li>Disabled – Use only the MAC address assigned to it.</li></ul>|
-|arpGuard| Allows ARP guard only addresses specified in ArpFilter to pass through the port.<p>Allowed values:<ul><li>Enabled - Allowed</li><li>Disabled – Not allowed</li></ul>|
-|dhcpGuard| Allows or drops any DHCP messages from a VM that claims to be a DHCP server. <p>Allowed values:<ul><li>Enabled – Drops DHCP messages because the virtualized DHCP server is considered untrusted.</li><li>Disabled – Allows the message to be received because the virtualized DHCP server is considered trustworthy.</li></ul>|
-|stormLimit| The number of packets (broadcast, multicast, and unknown unicast) per second a VM is allowed to send through the virtual network adapter. Packets beyond the limit during that one-second interval get dropped. A value of zero \(0\) means there is no limit..|
-|portFlowLimit| The maximum number of flows allowed to execute for the port. A value of blank or zero \(0\) means there is no limit. |
-|vmqWeight| The relative weight describes the affinity of the virtual network adapter to use virtual machine queue (VMQ). The range of value is 0 through 100.<p>Allowed values:<ul><li>0 – Disables the VMQ on the virtual network adapter.</li><li>1-100 – Enables the VMQ on the virtual network adapter.</li></ul>|
-|iovWeight| The relative weight sets the affinity of the virtual network adapter to the assigned single-root I/O virtualization \(SR-IOV\) virtual function. <p>Allowed values:<ul><li>0 – Disables SR-IOV on the virtual network adapter.</li><li>1-100 – Enables SR-IOV on the virtual network adapter.</li></ul>|
-|iovInterruptModeration|<p>Allowed values:<ul><li>default – The physical network adapter vendor's setting determines the value.</li><li>adaptive - </li><li>off </li><li>low</li><li>medium</li><li>high</li></ul><p>If you choose **default**, the physical network adapter vendor's setting determines the value.  If you choose, **adaptive**, the runtime traffic pattern determines the interrupt moderation rate.|
-|iovQueuePairsRequested| The number of hardware queue pairs allocated to an SR-IOV virtual function. If receive-side scaling \(RSS\) is required, and if the physical network adapter that binds to the virtual switch supports RSS on SR-IOV virtual functions, then more than one queue pair is required. <p>Allowed values: 1 to 4294967295.|
-|QosSettings| Configure the following Qos settings,all of which are optional: <ul><li>**outboundReservedValue** - If outboundReservedMode is "absolute" then the value indicates the bandwidth, in Mbps, guaranteed to the virtual port for transmission (egress). If outboundReservedMode is "weight" then the value indicates the weighted portion of the bandwidth guaranteed.</li><li>**outboundMaximumMbps** - Indicates the maximum permitted send-side bandwidth, in Mbps, for the virtual port (egress).</li><li>**InboundMaximumMbps** - Indicates the maximum permitted receive-side bandwidth for the virtual port (ingress) in Mbps.</li></ul> |
+The settings that can be configured through SDN QoS are:
 
----
+- **OutboundReservedValue** - If `outboundReservedMode` mode is "absolute", then the value indicates the bandwidth, in Mbps, guaranteed to the virtual port for transmission (egress). If `outboundReservedMode` mode is "weight", then the value indicates the weighted portion of the bandwidth guaranteed.
+
+- **OutboundMaximumMbps** - Indicates the maximum permitted send-side bandwidth, in Mbps, for the virtual port (egress).
+
+- **InboundMaximumMbps** - Indicates the maximum permitted receive-side bandwidth for the virtual port (ingress) in Mbps.
+
+## SDN QoS policies
+
+Once Network Controller for SDN is setup, you can go ahead and deploy your QoS policies. Today, you can do this using [Network Controller](/powershell/module/networkcontroller/?view=windowsserver2019-ps) PowerShell cmdlets.
+
+For all example scripts used below, `-ConnectionUri` is the REST URI of the Network Controller. For example: https://nc.contoso.com.
+
+### Step 1: Configure global QoS settings
+
+Run the following PowerShell command on a Network Controller computer or a management client of Network Controller. This will enable the global settings to configure QoS policies through Network Controller:
+
+~~~powershell
+$vswitchConfig=[Microsoft.Windows.NetworkController.VirtualSwitchManagerProperties]::new()
+$qos=[Microsoft.Windows.NetworkController.VirtualSwitchQosSettings]::new()
+$qos.EnableSoftwareReservations=$true
+$vswitchConfig.QosSettings =$qos
+Set-NetworkControllerVirtualSwitchConfiguration -ConnectionUri $uri -Properties $vswitchConfig
+~~~
+
+### Step 2: Configure QoS policies
+
+First, you will need to identify the workload VM network interface where you want to apply the policy:
+
+~~~powershell
+$NwInterface=Get-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId Vnet-VM2_Net_Adapter_0
+~~~
+
+Next, configure the inbound and outbound maximum throughput allowed on the network interface:
+
+~~~powershell
+$NwInterface.Properties.PortSettings.QosSettings= [Microsoft.Windows.NetworkController.VirtualNetworkInterfaceQosSettings]::new()
+$NwInterface.Properties.PortSettings.QosSettings.InboundMaximumMbps ="1000"
+New-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId $NwInterface.ResourceId -Properties $NwInterface.Properties
+~~~
+
+## QoS Offload (optional)
+
+You can configure the physical NIC to use QoS Offload. If your adapter supports QoS offload, ensure it is enabled using one of two methods:
+
+- Network ATC (recommended)
+- Manual enablement using the adapter properties
+
+### Use Network ATC
+
+QoS Offload is automatically enabled on all adapters with the `Compute` intent type. For more information, see [Simplify host networking with Network ATC](/azure-stack/hci/deploy/network-atc).
+
+>[!NOTE]
+>This option is only available to Azure Stack HCI subscribers.
+
+### Use manual enablement
+
+Manual enablement is done through the built-in cmdlets used to manage the physical adapter properties.
+
+>[!IMPORTANT]
+>You must ensure that `QosOffload` is enabled on every physical NIC in the team across every host. Without this, the QoS rule will be enforced via the virtual switch and result in lower efficiency.
+
+Use the following cmdlets to check if your adapters support `QosOffload` and then modify the adapter properties:
+
+~~~powershell
+Get-NetAdapterAdvancedProperty -Name <physical NIC Name> -RegistryKeyword *QosOffload
+Enable QosOffload for your adapters:
+Set-NetAdapterAdvancedProperty -Name  <physical NIC Name> -RegistryKeyword *QosOffload -RegistryValue 1
+~~~
+
+## Configure hardware QoS
+
+You can configure hardware QoS using settings and policies.
+
+### Step 1 - Configure global QoS settings
+
+Perform the below steps on a Network Controller computer or a management client of Network Controller. This will enable the global setting to configure QoS policies through Network Controller.
+
+~~~powershell
+$vswitchConfig=[Microsoft.Windows.NetworkController.VirtualSwitchManagerProperties]::new()
+$qos=[Microsoft.Windows.NetworkController.VirtualSwitchQosSettings]::new()
+$qos.EnableHardwareLimits=$true
+$vswitchConfig.QosSettings =$qos
+Set-NetworkControllerVirtualSwitchConfiguration -ConnectionUri $uri -Properties $vswitchConfig
+~~~
+
+### Step 2 - Configure QoS policies
+
+First, identify the workload VM network interface where you want to apply the policy:
+
+~~~powershell
+$NwInterface=Get-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId Vnet-VM2_Net_Adapter_0
+~~~
+
+Next, configure the outbound maximum throughput allowed on the network interface. The following example creates a QoS rule limiting the outbound traffic from a VM interface to 1 Gbps.
+
+>[!IMPORTANT]
+>Qos Offload only supports **OutboundMaximumMbps**. You cannot use **OutboundReservedValue** or **InboundMaximumMbps** with Qos Offload.
+
+~~~powershell
+$NwInterface.Properties.PortSettings.QosSettings= [Microsoft.Windows.NetworkController.VirtualNetworkInterfaceQosSettings]::new()
+$NwInterface.Properties.PortSettings.QosSettings. EnableHardwareLimits=$true
+$NwInterface.Properties.PortSettings.QosSettings.OutboundMaximumMbps ="1000"
+New-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId $NwInterface.ResourceId -Properties $NwInterface.Properties
+~~~
+
+>[!NOTE]
+>During live migration, it is possible that a VM moves to a host that does not support QoS Offload. In this scenario, live migration will succeed, but QoS will fallback to SDN QoS.

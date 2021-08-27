@@ -11,7 +11,7 @@ ms.topic: article
 
 # Appendix A: Locations and Subnet Prefixes
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Use the following table to assist in listing the IP version 6 (IPv6) subnet prefixes when you design the site topology for  Windows Server 2008  Active Directory Domain Services (AD DS).
 

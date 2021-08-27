@@ -152,7 +152,7 @@
 ##### [AD Forest Recovery - Identify the Problem](ad-ds/manage/AD-Forest-Recovery-Identify-the-Problem.md)
 ##### [AD Forest Recovery - Perform Initial Recovery](ad-ds/manage/AD-Forest-Recovery-Perform-initial-recovery.md)
 ##### [AD Forest Recovery - Procedures](ad-ds/manage/AD-Forest-Recovery-Procedures.md)
-##### [AD Forest Recovery - FAQ](ad-ds/manage/AD-Forest-Recovery-FAQ.md)
+##### [AD Forest Recovery - FAQ](ad-ds/manage/ad-forest-recovery-faq.yml)
 ##### [AD Forest Recovery - Recovering a single domain with multidomain forest](ad-ds/manage/AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
 ##### [AD Forest Recovery - Virtualization](ad-ds/manage/AD-Forest-Recovery-Virtualization.md)
 ##### [AD Forest Recovery - Windows Server 2003](ad-ds/manage/AD-Forest-Recovery-Windows-Server-2003.md)

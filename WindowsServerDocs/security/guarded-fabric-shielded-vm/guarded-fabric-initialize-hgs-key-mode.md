@@ -10,7 +10,7 @@ ms.date: 08/29/2018
 
 # Initialize HGS using host key attestation
 
->Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 This step depends on whether you are initializing HGS in a new forest or an existing bastion forest:
 

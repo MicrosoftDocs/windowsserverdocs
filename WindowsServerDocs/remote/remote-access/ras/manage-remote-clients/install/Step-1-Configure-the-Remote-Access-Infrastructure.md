@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Step 1 Configure the Remote Access Infrastructure
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 **Note:** Windows Server 2012 combines DirectAccess and Routing and Remote Access Service (RRAS) into a single Remote Access role.
 

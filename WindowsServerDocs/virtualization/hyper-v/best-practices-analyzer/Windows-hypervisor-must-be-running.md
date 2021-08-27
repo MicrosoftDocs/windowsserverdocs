@@ -9,7 +9,7 @@ ms.date: 10/03/2016
 ---
 # Windows hypervisor must be running
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 |Property|Details|
 |-|-|

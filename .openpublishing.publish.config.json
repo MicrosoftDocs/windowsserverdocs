@@ -54,6 +54,12 @@
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_rip",
+      "url": "https://github.com/MicrosoftDocs/windows-release-pr",
+      "branch": "live",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {

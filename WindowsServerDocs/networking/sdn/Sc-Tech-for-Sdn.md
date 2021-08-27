@@ -10,7 +10,7 @@ ms.date: 06/30/2021
 ---
 # System Center Technologies for SDN
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 System Center includes the following technologies for use with Software Defined Networking (SDN):
 

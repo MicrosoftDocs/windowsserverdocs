@@ -73,6 +73,7 @@
 #### [Get started with the Windows Desktop client](clients/windowsdesktop.md)
 #### [Windows Desktop client for admins](clients/windowsdesktop-admin.md)
 #### [What's new in the Windows Desktop client](clients/windowsdesktop-whatsnew.md)
+#### [Supported configurations](clients/windowsdesktop-supported-config.md)
 #### [Shortcut keys](/windows/win32/termserv/terminal-services-shortcut-keys)
 ### Microsoft Store client
 #### [Get started with the Microsoft Store client](clients/windows.md)

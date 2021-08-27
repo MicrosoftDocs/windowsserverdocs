@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Contact the Datacenter and Cloud Networking Team
 
-> Applies To: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Microsoft's **Software Defined Networking \(SDN\)** and **Container Networking** solutions are created by the Datacenter and Cloud Networking Team. Please use this page to be in touch with the team--to ask questions, provide feedback, report bugs or make feature requests.
 
