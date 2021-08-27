@@ -150,7 +150,7 @@ Powercfg -setactive scheme_current
 
 ## Processor performance boost mode
 
-This parameter tunning only applies to Non-HWP systems. 
+This parameter tuning only applies to Non-HWP systems. 
 
 Intel Turbo Boost and AMD Turbo CORE technologies are features that allow processors to achieve additional performance when it is most useful (that is, at high system loads). However, this feature increases CPU core energy consumption, so Windows Server 2016 configures Turbo technologies based on the power policy that is in use and the specific processor implementation. 
 
@@ -199,7 +199,7 @@ Powercfg -setactive scheme_max
 
 ## Processor performance increase and decrease of thresholds and policies
 
-This parameter tunning only applies to Non-HWP systems. 
+This parameter tuning only applies to Non-HWP systems. 
 
 The speed at which a processor performance state increases or decreases is controlled by multiple parameters. The following four parameters have the most visible impact:
 
