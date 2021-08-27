@@ -17,8 +17,6 @@ High-performance networks (HPNs) play a role in real-time data processing requir
 
 The high-performance networking topics include:
 
-- [Insider preview](hpn-insider-preview.md)
-
 - [Network offload and optimization technologies](network-offload-and-optimization.md)
 
   - [Software only (SO) features and technologies](hpn-software-only-features.md)
