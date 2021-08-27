@@ -139,5 +139,11 @@ IPAM provides highly customizable administrative and monitoring capabilities for
 
 -   **Windows PowerShell support for Role Based Access Control**.
      You can use Windows PowerShell to set access scopes on IPAM objects.
+     
+    **Networking Data Path and Transports**
+-        UDP performance improvements -- UDP is becoming a very popular protocol carrying more and more networking traffic. With the QUIC protocol built on top of UDP and the increasing popularity of RTP and custom (UDP) streaming and gaming protocols it is time to bring the performance of UDP to a level on par with TCP. In server 2021 we include the game changing UDP Segmentation Offload (USO). USO moves most of the work required to send UDP packets from the CPU to the NIC's specialized hardware. Complimenting USO in server 2021 we include UDP Receive Side Coalescing (UDP RSC) which coalesces packets and reduces CPU usage for UDP processing. To go along with these two game changers we have made hundreds of improvements to the UDP data path both transmit and receive.
+
+-        TCP performance improvements -- Server 2021 uses TCP HyStart++ to reduce packet loss during connection start up (especially in high speed networks) and SendTracker + RACK to reduce Retransmit TimeOuts (RTO). These features are enabled in the transport stack by default and provide a smoother network data flow with better performance at high speeds.
+
 
 For more information, see [What's New in IPAM](technologies/ipam/What-s-New-in-IPAM.md) and [Manage IPAM](technologies/ipam/Manage-IPAM.md).
