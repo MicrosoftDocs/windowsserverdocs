@@ -50,7 +50,7 @@ Prior to Windows Server 2016, in such a scenario, if the dirty page threshold in
 
 In Window Server 2016 and forward, a mitigation is put in place to reduce the likelihood of timeouts. A separate dirty page threshold for remote writes is implemented, and an inline flush will be performed when it is exceeded. This can result on occasional slowdowns during heavy write activity, but eliminates the risk of a timeout in most cases. This remote dirty page threshold is **5 GB per file** by default. For some configurations and workloads, a different number will perform better. 
 
-This threshold can be controlled with the following regkey: HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\RemoteFileDirtyPageThreshold. If the default size of 5GB does not work well for your configuration, it is recommended to try increasing the limit in 256 MB increments until performance is satisfactory. Please note the following:
+This threshold can be controlled with the following regkey: HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\RemoteFileDirtyPageThreshold. If the default size of 5 GB does not work well for your configuration, it is recommended to try increasing the limit in 256-MB increments until performance is satisfactory. Please note the following:
 
 -   A reboot is required for changes to this regkey to take effect.
 
