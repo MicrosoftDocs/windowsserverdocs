@@ -53,6 +53,13 @@ Enabling Secured-core functionality helps proactively defend against and disrupt
 
 Secure connections are at the heart of today’s interconnected systems. Transport Layer Security (TLS) 1.3 is the latest version of the internet’s most deployed security protocol, which encrypts data to provide a secure communication channel between two endpoints. HTTPS and TLS 1.3 is now enabled by default on Windows Server 2022, protecting the data of clients connecting to the server. It eliminates obsolete cryptographic algorithms, enhances security over older versions, and aims to encrypt as much of the handshake as possible. Learn more about [supported TLS versions](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-) and about [supported cipher suites](/windows/win32/secauthn/tls-cipher-suites-in-windows-server-2022).
 
+#### UDP performance improvements
+UDP is becoming a very popular protocol carrying more and more networking traffic. With the QUIC protocol built on top of UDP and the increasing popularity of RTP and custom (UDP) streaming and gaming protocols it is time to bring the performance of UDP to a level on par with TCP. In server 2021 we include the game changing UDP Segmentation Offload (USO). USO moves most of the work required to send UDP packets from the CPU to the NIC's specialized hardware. Complimenting USO in server 2021 we include UDP Receive Side Coalescing (UDP RSC) which coalesces packets and reduces CPU usage for UDP processing. To go along with these two game changers we have made hundreds of improvements to the UDP data path both transmit and receive.
+
+#### TCP performance improvements
+Server 2021 uses TCP HyStart++ to reduce packet loss during connection start up (especially in high speed networks) and SendTracker + RACK to reduce Retransmit TimeOuts (RTO). These features are enabled in the transport stack by default and provide a smoother network data flow with better performance at high speeds.
+
+
 #### Secure DNS: Encrypted DNS name resolution requests with DNS-over-HTTPS
 
 DNS Client in Windows Server 2022 now supports DNS-over-HTTPS (DoH) which encrypts DNS queries using the HTTPS protocol. This helps keep your traffic as private as possible by preventing eavesdropping and your DNS data being manipulated. Learn more about [configuring the DNS client to use DoH](../networking/dns/doh-client-support.md).
