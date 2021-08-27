@@ -17,7 +17,7 @@ This topic contains the following sections:
 - [New Networking Features and Technologies](#bkmk_features)
 - [New Features for Additional Networking Technologies](#bkmk_existing)
 
-## <a name="bkmk_features"></a>New Networking Features and Technologies
+## <a name="bkmk_features"></a>New networking features and technologies
 
 Networking is a foundational part of the Software Defined Datacenter (SDDC) platform, and Windows Server 2016 provides new and improved Software Defined Networking (SDN) technologies to help you move to a fully realized SDDC solution for your organization.
 
@@ -25,7 +25,7 @@ When you manage networks as a software defined resource, you can describe an app
 
 The following sections contain information about these new networking features and technologies.
 
-### Software Defined Networking Infrastructure
+### Software Defined Networking infrastructure
 
 The following are new or improved SDN infrastructure technologies:
 
@@ -48,13 +48,13 @@ The following are new or improved SDN infrastructure technologies:
 
     For more information, see [Network Function Virtualization](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md).
 
--   **Standardized Protocols**. Network Controller uses Representational State Transfer (REST) on its northbound interface with JavaScript Object Notation (JSON) payloads. The Network Controller southbound interface uses Open vSwitch Database Management Protocol (OVSDB).
+-   **Standardized protocols**. Network Controller uses Representational State Transfer (REST) on its northbound interface with JavaScript Object Notation (JSON) payloads. The Network Controller southbound interface uses Open vSwitch Database Management Protocol (OVSDB).
 
 -   **Flexible encapsulation technologies**. These technologies operate at the data plane, and support both Virtual Extensible LAN (VxLAN) and Network Virtualization Generic Routing Encapsulation (NVGRE). For more information, see [GRE Tunneling in  Windows Server 2016](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md).
 
 For more information about SDN, see [Software Defined Networking &#40;SDN&#41;](sdn/software-defined-networking.md).
 
-### Cloud Scale Fundamentals
+### Cloud scale fundamentals
 
 The following cloud scale fundamentals are now available:
 
@@ -64,7 +64,7 @@ The following cloud scale fundamentals are now available:
 
 - **Switch Embedded Teaming (SET)**. SET is a NIC Teaming solution that is integrated in the Hyper-V Virtual Switch. SET allows the teaming of up to eight physical NICS into a single SET team, which improves availability and provides failover. In Windows Server 2016, you can create SET teams that are restricted to the use of Server Message Block (SMB) and RDMA. In addition, you can use SET teams to distribute network traffic for Hyper-V Network Virtualization. For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](/azure-stack/hci/concepts/host-network-requirements).
 
-## <a name="bkmk_existing"></a>New Features for Additional Networking Technologies
+## <a name="bkmk_existing"></a>New features for additional networking technologies
 
 This section contains information about new features for familiar networking technologies.
 
@@ -110,7 +110,7 @@ New Windows PowerShell cmdlets are available for DNS Server.
 
 For more information, see [What's New in DNS Server in Windows Server 2016](dns/What-s-New-in-DNS-Server.md)
 
-## <a name="bkmk_GRE"></a>GRE Tunneling
+## <a name="bkmk_GRE"></a>GRE tunneling
 RAS Gateway now supports high availability Generic Routing Encapsulation (GRE) tunnels for site to site connections and M+N redundancy of gateways. GRE is a lightweight tunneling protocol that can encapsulate a wide variety of network layer protocols inside virtual point-to-point links over an Internet Protocol internetwork.
 
 For more information, see [GRE Tunneling in Windows Server 2016](../remote/remote-access/ras-gateway/gre-tunneling-windows-server.md).
@@ -140,7 +140,7 @@ You can use Windows PowerShell to set access scopes on IPAM objects.
 
 For more information, see [What's New in IPAM](technologies/ipam/What-s-New-in-IPAM.md) and [Manage IPAM](technologies/ipam/Manage-IPAM.md).
 
-## New HPN Features in Windows Server 2019
+## New HPN features in Windows Server 2019
 The following provides information on new or enhanced networking technologies in Windows Server 2019.
 
 ### Dynamic vRSS and VMMQ
