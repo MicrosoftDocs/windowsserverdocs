@@ -56,6 +56,6 @@ This threshold can be controlled with the following regkey: HKLM\SYSTEM\CurrentC
 
 -   The units of RemoteFileDirtyPageThreshold are **number of pages** (with page size as managed by Cache Manager). This means it should be set to the desired size in bytes, divided by 4096.
 
--   Recommended values are 128MB <= N <= 50% of available memories.
+-   Recommended values are 128MB <= N <= 50% of available memory.
 
 -   This threshold can be disabled completely by setting it to -1. **This is not recommended** as it can result in timeouts for remote connections.
