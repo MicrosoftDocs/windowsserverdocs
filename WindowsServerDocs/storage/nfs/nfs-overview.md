@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Network File System overview
 
->Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes the Network File System role service and features included with the File and Storage Services server role in Windows Server. Network File System (NFS) provides a file sharing solution for enterprises that have heterogeneous environments that include both Windows and non-Windows computers.
 

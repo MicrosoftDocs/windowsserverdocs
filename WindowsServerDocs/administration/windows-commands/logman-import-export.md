@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # logman import and logman export
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Imports a Data Collector Set from an XML file, or exports a Data Collector Set to an XML file.
 

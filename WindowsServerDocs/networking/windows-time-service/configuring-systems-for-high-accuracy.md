@@ -1,4 +1,4 @@
-﻿---
+---
 ms.assetid:
 title: Configuring Systems for High Accuracy
 description: Time synchronization in Windows 10 and Windows Server 2016 has been substantially improved.  Under reasonable operating conditions, systems can be configured to maintain 1ms (millisecond) accuracy or better (with respect to UTC).
@@ -9,7 +9,7 @@ ms.topic: article
 ---
 
 # Configuring Systems for High Accuracy
->Applies to: Windows Server 2016, and Windows 10 version 1607 or later
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows 10 version 1607 or later
 
 Time synchronization in Windows 10 and Windows Server 2016 has been substantially improved.  Under reasonable operating conditions, systems can be configured to maintain 1ms (millisecond) accuracy or better (with respect to UTC).
 
@@ -62,7 +62,7 @@ In the illustration shown below, the virtual machines requiring high accuracy ar
 
 ### System Configuration
 
-Reaching high accuracy targets requires system configuration.  There are a variety of ways to perform this configuration, including directly in the registry or through group policy.  More information for each of these settings can be found in the Windows Time Service Technical Reference – [Windows Time Service Tools](Windows-Time-Service-Tools-and-Settings.md#windows-time-service-tools).
+Reaching high accuracy targets requires system configuration.  There are a variety of ways to perform this configuration, including directly in the registry or through group policy.  More information for each of these settings can be found in the Windows Time Service Technical Reference � [Windows Time Service Tools](Windows-Time-Service-Tools-and-Settings.md#windows-time-service-tools).
 
 #### Windows Time service Startup Type
 

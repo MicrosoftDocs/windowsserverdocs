@@ -10,7 +10,7 @@ ms.author: nirb
 
 # Guidance on disabling system services on Windows Server 2016 with Desktop Experience
 
-Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The Windows operating system includes many system services that provide important functionality. Different services have different default startup policies: some are started by default (automatic), some when needed (manual), and some are disabled by default and must be explicitly enabled before they can run. These defaults were chosen carefully for each service to balance performance, functionality, and security for typical customers.
 
@@ -1223,8 +1223,8 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 | **Description** | This service spools print jobs and handles interaction with the printer. If you turn off this service, you won't be able to print or see your printers. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
-| **Recommendation** | OK to disable if not a print server or a DC |
-| **Comments** | On a domain controller, the installation of the DC role adds a thread to the spooler service that is responsible for performing print pruning – removing the stale print queue objects from the Active Directory. If the spooler service is not running on at least one DC in each site, then the AD has no means to remove old queues that no longer exist. [Ask the performance team blog](https://techcommunity.microsoft.com/t5/ask-the-performance-team/bg-p/AskPerf). |
+| **Recommendation** | OK to disable if not a print server or a DC (see comments below if a DC) |
+| **Comments** | On a domain controller, the installation of the DC role adds a thread to the spooler service that is responsible for performing print pruning – removing the stale print queue objects from the Active Directory. If the spooler service is not running on at least one DC in each site, then the AD has no means to remove old queues that no longer exist. For more information, see [Security assessment: Domain controllers with Print spooler service available](/defender-for-identity/cas-isp-print-spooler). |
 
 
 

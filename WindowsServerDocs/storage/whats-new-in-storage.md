@@ -10,7 +10,7 @@ ms.date: 05/29/2019
 ---
 # What's new in Storage in Windows Server
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic explains the new and changed functionality in storage in Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
 
@@ -159,7 +159,7 @@ Windows Server, version 1803 includes the ability to prevent the File Server Res
 
 Windows Server, version 1709 is the first Windows Server release in the Semi-Annual Channel. The Semi-Annual Channel is a Software Assurance benefit and is fully supported in production for 18 months, with a new version every six months.
 
-For more information, see [Windows Server Semi-annual Channel Overview](../get-started-19/servicing-channels-19.md).
+For more information, see [Windows Server Semi-annual Channel Overview](../get-started/servicing-channels-comparison.md).
 
 ### Storage Replica
 

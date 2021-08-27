@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # How QoS Policy Works
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 When starting up or obtaining updated user or computer configuration Group Policy settings for QoS, the following process occurs.
 

@@ -11,7 +11,7 @@ ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
 
 # Known issues with Storage Replica
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic discusses known issues with Storage Replica in Windows Server.
 

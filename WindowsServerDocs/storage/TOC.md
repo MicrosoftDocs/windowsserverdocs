@@ -125,6 +125,7 @@
 ### [Storage Replica: Frequently Asked Questions](storage-replica/storage-replica-frequently-asked-questions.yml)
 ## [Storage Spaces](storage-spaces/overview.md)
 ### [Deploy Storage Spaces on a stand-alone server](storage-spaces/deploy-standalone-storage-spaces.md)
+### [Enable storage bus cache with Storage Spaces on standalone servers](storage-spaces/storage-spaces-storage-bus-cache.md)
 ### [Health and operational states](storage-spaces/storage-spaces-states.md)
 ## [Storage Spaces Direct](storage-spaces/storage-spaces-direct-overview.md)
 ### Understand
@@ -173,8 +174,8 @@
 ### Troubleshoot
 #### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
 #### [Health and operational states](storage-spaces/storage-spaces-states.md)
-#### [Collect data](storage-spaces/data-collection.md)
-#### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.md)
+#### [Collect data](/azure-stack/hci/manage/collect-diagnostic-data)
+#### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.yml)
 #### [Storage-class memory health management](storage-spaces/Storage-class-memory-health.md)
 
 ## [Work Folders](work-folders/work-folders-overview.md)

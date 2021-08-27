@@ -10,7 +10,7 @@ ms.date: 12/10/2020
 
 # diskpart
 
-> Applies to: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2, Windows Server 2008
+>Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2, Windows Server 2008
 
 The diskpart command interpreter helps you manage your computer's drives (disks, partitions, volumes, or virtual hard disks).
 

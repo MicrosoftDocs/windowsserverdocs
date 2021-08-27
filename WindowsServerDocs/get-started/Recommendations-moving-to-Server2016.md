@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Recommendations for moving to Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
 
 |If you are running:|Windows Server 2012 R2 or Windows Server 2012|Windows Server 2008 R2 or Windows Server 2008|

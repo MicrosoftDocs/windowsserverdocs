@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # NPS Templates
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Network Policy Server \(NPS\) templates allow you to create configuration elements, such as Remote Authentication Dial-In User Service \(RADIUS\) clients or shared secrets, that you can reuse on the local NPS and export for use on other NPSs.
 

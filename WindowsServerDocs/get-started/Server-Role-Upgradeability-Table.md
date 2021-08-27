@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Server role upgrade and migration matrix for Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
 The grid on this page explains your server role upgrade and migration options specifically for moving to Windows Server 2016. For individual role migration guides, visit [Migrating Roles and Features in Windows Server](./migrate-roles-and-features.md). For more information about installation and upgrades, see [Windows Server Installation, Upgrade, and Migration](./installation-and-upgrade.md).
 

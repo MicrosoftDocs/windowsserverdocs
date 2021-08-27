@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Delete DNS Resource Records
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to delete one or more DNS resource records by using the IPAM client console.
 

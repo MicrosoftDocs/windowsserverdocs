@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # Configure VPN device tunnels in Windows 10
 
->Applies to: Windows 10 version 1709
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10 version 1709
 
 Always On VPN gives you the ability to create a dedicated VPN profile for device or machine. Always On VPN connections include two types of tunnels:
 

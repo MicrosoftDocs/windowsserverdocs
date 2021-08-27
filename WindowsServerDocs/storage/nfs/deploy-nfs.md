@@ -1,4 +1,4 @@
-﻿---
+---
 title: Deploy Network File System
 description: Describes how to deploy Network File System.
 ms.topic: article
@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Deploy Network File System
 
->Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Network File System (NFS) provides a file sharing solution that lets you transfer files between computers running Windows Server and UNIX operating systems using the NFS protocol. This topic describe the steps you should follow to deploy NFS.
 
@@ -108,7 +108,7 @@ You can create an NFS file share using either Server Manager or Windows PowerShe
 2. Server Manager will start automatically. If it does not automatically start, select **Start**, type **servermanager.exe**, and then select **Server Manager**.
 3. On the left, select **File and Storage Services**, and then select **Shares**.
 4. Select **To create a file share, start the New Share Wizard**.
-5. On the **Select Profile** page, select either **NFS Share – Quick** or **NFS Share - Advanced**, then select **Next**.
+5. On the **Select Profile** page, select either **NFS Share � Quick** or **NFS Share - Advanced**, then select **Next**.
 6. On the **Share Location** page, select a server and a volume, and select **Next**.
 7. On the **Share Name** page, specify a name for the new share, and select **Next**.
 8. On the **Authentication** page, specify the authentication method you want to use for this share.

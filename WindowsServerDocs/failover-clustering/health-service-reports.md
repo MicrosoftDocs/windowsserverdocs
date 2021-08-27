@@ -7,6 +7,7 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017
 ---
+
 # Health Service reports
 
 > Applies to: Windows Server 2016

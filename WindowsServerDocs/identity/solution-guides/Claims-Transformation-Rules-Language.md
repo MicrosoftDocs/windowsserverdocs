@@ -11,7 +11,7 @@ ms.topic: article
 
 # Claims Transformation Rules Language
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The across-forest claims transformation feature enables you to bridge claims for Dynamic Access Control across forest boundaries by setting claims transformation policies on across-forest trusts. The primary component of all policies is rules that are written in claims transformation rules language. This topic provides details about this language and provides guidance about authoring claims transformation rules.
 
