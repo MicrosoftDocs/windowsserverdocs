@@ -9,7 +9,7 @@ ms.date: 08/07/2020
 ---
 # What's new in networking
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2016 
 
 Following are the new or enhanced networking technologies in Windows Server 2016.
   Upd
