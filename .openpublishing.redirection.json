@@ -10259,6 +10259,11 @@
       "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server.md",
       "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/performance-tuning/hardware/power/recommended-balanced-plan-parameters.md",
+      "redirect_url": "/windows-server/administration/performance-tuning/hardware/power",
+      "redirect_document_id": false
     }
   ]
 }
