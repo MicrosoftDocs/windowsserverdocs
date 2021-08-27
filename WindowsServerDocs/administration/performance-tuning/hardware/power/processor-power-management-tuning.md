@@ -47,7 +47,7 @@ The tuning in each power policy is data driven by the following five workloads s
 
 All of the benchmarks except SPECpower were originally designed for performance analysis and were therefore created to run at peak load levels. However, medium to light load levels are more common for real-world production servers and are more interesting for **Balanced** plan optimizations. We intentionally run the benchmarks at varying load levels from 100% down to 10% (in 10% steps) by using various throttling methods (e.g., by reducing the number of active users/clients).
 
-The above workloads use throughput as the performance metric for tuning. During the steady state, throughput does not change with varying utilizations till the system is totally overloaded (~100% utilization). As a result, the Balanced power plan favors power quite a lot with minimizing processor frequency and maximizing utilization. Starting from Windows Server 2016, the requirement of quick response time has dramatically increased. Even though Microsoft suggested the users to switch to the High Performance power plan when they need quick response time, some users do not want to lose the power benefit during light to medium load levels. Hence, Windows Server PPM tuning also includes response time sensitive workloads for tuning.
+The above workloads use throughput as the performance metric for tuning. During the steady state, throughput does not change with varying utilizations till the system is totally overloaded (~100% utilization). As a result, the Balanced power plan favors power quite a lot with minimizing processor frequency and maximizing utilization. Starting from Windows Server 2016, the requirement of quick response time has dramatically increased. Even though Microsoft suggested the users switch to the High Performance power plan when they need quick response time, some users do not want to lose the power benefit during light to medium load levels. Hence, Windows Server PPM tuning also includes response time sensitive workloads for tuning.
 
 - **GeekBench 3**
 
@@ -109,7 +109,7 @@ For Intel pre-Broadwell systems or any systems that don’t have HWP support (e.
 | Processor performance increase policy    | Single | Ideal |
 
 
-The CPU utilization-based power management algorithms might hurt the latency of IO or network tensive workloads. A logical processor could be idle while waiting for IO completion or network packets, which makes the overall CPU utilization low. To resolve this issue, Windows Server 2019 automatically detects the IO responsiveness period and raises the frequency floor to a higher level. The behavior can be tuned by the following parameters no matter if the system uses HWP or not. 
+The CPU utilization-based power management algorithms might hurt the latency of IO or network-intensive workloads. A logical processor could be idle while waiting for IO completion or network packets, which makes the overall CPU utilization low. To resolve this issue, Windows Server 2019 automatically detects the IO responsiveness period and raises the frequency floor to a higher level. The behavior can be tuned by the following parameters no matter if the system uses HWP or not. 
 
 |Parameter|Before Windows Server 2019 | Windows Server 2019 and After|
 |-|:---------------------------------:|:-----------------------------:|
