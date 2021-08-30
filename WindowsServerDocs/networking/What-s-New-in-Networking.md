@@ -14,8 +14,8 @@ ms.date: 08/07/2020
 The following provides information on new or enhanced networking technologies in Windows Server 2016.
 
 This topic contains the following sections:
-- [New Networking Features and Technologies](#bkmk_features)
-- [New Features for Additional Networking Technologies](#bkmk_existing)
+- [New networking features and technologies](#bkmk_features)
+- [New features for additional networking technologies](#bkmk_existing)
 
 ## <a name="bkmk_features"></a>New networking features and technologies
 
