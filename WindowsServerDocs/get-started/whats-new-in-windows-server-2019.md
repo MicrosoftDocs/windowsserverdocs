@@ -190,11 +190,11 @@ It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet 
 
 ### Network performance improvements for virtual workloads
 
-[Network performance improvements for virtual workloads](../networking/technologies/hpn/hpn-insider-preview.md) maximizes the network throughput to virtual machines without requiring you to constantly tune or over-provision your host. This lowers the operations and maintenance cost while increasing the available density of your hosts. These new features are:
-
-- Receive Segment Coalescing in the vSwitch
+[Network performance improvements for virtual workloads](../networking/what-s-new-in-networking#new-hpn-features-in-windows-server-2019.md) maximizes the network throughput to virtual machines without requiring you to constantly tune or over-provision your host. This lowers the operations and maintenance cost while increasing the available density of your hosts. These new features are:
 
 - Dynamic Virtual Machine Multi-Queue (d.VMMQ)
+
+- Receive Segment Coalescing in the vSwitch
 
 ### Low Extra Delay Background Transport
 
