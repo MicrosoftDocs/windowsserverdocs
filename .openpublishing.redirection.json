@@ -10261,6 +10261,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/technologies/hpn/hpn-insider-preview.md",
+      "redirect_url": "/windows-server//networking/what-s-new-in-networking",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/administration/performance-tuning/hardware/power/recommended-balanced-plan-parameters.md",
       "redirect_url": "/windows-server/administration/performance-tuning/hardware/power",
       "redirect_document_id": false

@@ -111,7 +111,6 @@
 #### [Hardware Only (HO) features and technologies](technologies/hpn/hpn-hardware-only-features.md)
 #### [NIC advanced properties](technologies/hpn/hpn-nic-advanced-properties.md)
 
-### [Insider preview](technologies/hpn/hpn-insider-preview.md)
 ### [Receive Segment Coalescing (RSC) in the vSwitch](technologies/hpn/rsc-in-the-vswitch.md)
 
 ### [Converged NIC configuration guidance](technologies/conv-nic/cnic-top.md)
