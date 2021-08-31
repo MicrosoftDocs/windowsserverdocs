@@ -5,7 +5,7 @@ ms.author: anhansen
 manager: femila
 ms.topic: article
 author: anhansen
-ms.date: 06/29/2019
+ms.date: 8/31/2021
 ---
 # Resilient File System (ReFS) overview
 
