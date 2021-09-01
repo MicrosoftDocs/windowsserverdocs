@@ -8,6 +8,7 @@ metadata:
   author: JasonGerend
   ms.date: 05/28/2021
   description: Answers to frequently asked questions about Cluster-Aware Updating in Windows Server.
+  ms.prod: windows-server
     
 title: "Cluster-Aware Updating: Frequently Asked Questions"
 summary: |

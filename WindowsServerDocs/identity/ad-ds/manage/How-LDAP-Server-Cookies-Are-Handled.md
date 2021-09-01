@@ -11,7 +11,7 @@ ms.topic: article
 
 # How LDAP Server Cookies Are Handled
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In LDAP, some queries result in a large result set. Such queries pose some challenges to the Windows Server.
 

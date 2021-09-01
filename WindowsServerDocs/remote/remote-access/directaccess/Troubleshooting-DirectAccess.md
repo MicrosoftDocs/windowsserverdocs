@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Troubleshooting DirectAccess
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Follow these steps to troubleshoot Remote Access (DirectAccess) issues.
 

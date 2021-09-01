@@ -32,7 +32,8 @@
             "./": {
               "depot_name": "WS.HyperVServerDocs"
             }
-        }
+        },
+       "recommendations": true
     },
     "fileMetadata": {},
     "template": [

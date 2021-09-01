@@ -11,7 +11,7 @@ ms.date: 06/16/2021
 
 # Network Controller High Availability
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn about Network Controller high availability and scalability configuration for Software Defined Networking \(SDN\).
 

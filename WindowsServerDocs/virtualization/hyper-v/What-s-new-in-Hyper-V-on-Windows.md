@@ -9,7 +9,7 @@ ms.date: 09/21/2017
 ---
 # What's new in Hyper-V on Windows Server
 
->Applies To: Windows Server 2019, Microsoft Hyper-V Server 2016, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Microsoft Hyper-V Server 2016, Windows Server 2016
 
 This article explains the new and changed functionality of Hyper-V on Windows Server 2019, Windows Server 2016, and Microsoft Hyper-V Server 2016. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper-V on Windows Server 2019 or Windows Server 2016, you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
 

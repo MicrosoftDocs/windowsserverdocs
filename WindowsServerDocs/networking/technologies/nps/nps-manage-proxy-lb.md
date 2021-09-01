@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # NPS Proxy Server Load Balancing
 
-Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Remote Authentication Dial-In User Service (RADIUS) clients, which are network access servers such as virtual private network (VPN) servers and wireless access points, create connection requests and send them to RADIUS servers such as NPS. In some cases, an NPS might receive too many connection requests at one time, resulting in degraded performance or an overload. When an NPS is overloaded, it is a good idea to add more NPSs to your network and to configure load balancing. When you evenly distribute incoming connection requests among multiple NPSs to prevent the overloading of one or more NPSs, it is called load balancing.
 

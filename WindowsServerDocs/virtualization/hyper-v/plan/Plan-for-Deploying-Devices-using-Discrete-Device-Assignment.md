@@ -8,7 +8,7 @@ ms.date: 08/21/2019
 ---
 
 # Plan for Deploying Devices using Discrete Device Assignment
->Applies To: Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019
+>Applies to: Windows Server 2022, Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019
 
 Discrete Device Assignment allows physical PCIe hardware to be directly accessible from within a virtual machine.  This guide will discuss the type of devices that can use Discrete Device Assignment, host system requirements, limitations imposed on the virtual machines as well as security implications of Discrete Device Assignment.
 
@@ -20,7 +20,7 @@ To learn about other methods of GPU virtualization, see [Plan for GPU accelerati
 Discrete Device Assignment is supported for Generation 1 or 2 VMs.  Additionally, the guests supported include Windows 10, Windows Server 2019, Windows Server 2016, Windows Server 2012r2 with [KB 3133690](https://support.microsoft.com/kb/3133690) applied, and various distributions of the [Linux OS.](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md)
 
 ## System Requirements
-In addition to the [System Requirements for Windows Server](../../../get-started/system-requirements.md) and the [System Requirements for Hyper-V](../System-requirements-for-Hyper-V-on-Windows.md), Discrete Device Assignment requires server class hardware that is capable of granting the operating system control over configuring the PCIe fabric (Native PCI Express Control). In addition, the PCIe Root Complex has to support "Access Control Services" (ACS), which enables Hyper-V to force all PCIe traffic through the I/O MMU.
+In addition to the [System Requirements for Windows Server](../../../get-started/hardware-requirements.md) and the [System Requirements for Hyper-V](../System-requirements-for-Hyper-V-on-Windows.md), Discrete Device Assignment requires server class hardware that is capable of granting the operating system control over configuring the PCIe fabric (Native PCI Express Control). In addition, the PCIe Root Complex has to support "Access Control Services" (ACS), which enables Hyper-V to force all PCIe traffic through the I/O MMU.
 
 These capabilities usually aren't exposed directly in the BIOS of the server and are often hidden behind other settings.  For example, the same capabilities are required for SR-IOV support and in the BIOS you may need to set "Enable SR-IOV."  Please reach out to your system vendor if you are unable to identify the correct setting in your BIOS.
 

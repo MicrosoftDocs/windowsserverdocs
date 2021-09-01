@@ -11,7 +11,7 @@ ms.topic: article
 
 # Virtualized Domain Controller Troubleshooting
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides detailed methodology on troubleshooting the virtualized domain controller feature.
 

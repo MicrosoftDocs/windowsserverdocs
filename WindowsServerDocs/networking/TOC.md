@@ -67,11 +67,12 @@
 ####### [Configure firewall rules for non-domain members to allow BranchCache traffic](branchcache/deploy/Configure-Firewall-Rules-for-Non-Domain-Members-to-Allow-BranchCache-Traffic.md)
 ###### [Verify client computer settings](branchcache/deploy/verify-Client-computer-Settings.md)
 
-## [DirectAccess](../remote/remote-access/directaccess/directaccess.md) 
+## [DirectAccess](../remote/remote-access/directaccess/directaccess.md)
 
 ## [Domain Name System (DNS)](dns/dns-top.md)
 ### [What's new in DNS client in Windows Server](dns/What-s-New-in-DNS-Client.md)
 ### [What's new in DNS server in Windows Server](dns/What-s-New-in-DNS-Server.md)
+### [Secure DNS Client over HTTPS (DoH)](dns/doh-client-support.md)
 ### [Anycast DNS](dns/deploy/anycast.md)
 ### [DNS policy scenario guidance](dns/deploy/DNS-Policy-Scenario-Guide.md)
 #### [DNS policies overview](dns/deploy/DNS-Policies-Overview.md)
@@ -110,7 +111,6 @@
 #### [Hardware Only (HO) features and technologies](technologies/hpn/hpn-hardware-only-features.md)
 #### [NIC advanced properties](technologies/hpn/hpn-nic-advanced-properties.md)
 
-### [Insider preview](technologies/hpn/hpn-insider-preview.md)
 ### [Receive Segment Coalescing (RSC) in the vSwitch](technologies/hpn/rsc-in-the-vswitch.md)
 
 ### [Converged NIC configuration guidance](technologies/conv-nic/cnic-top.md)

@@ -8,7 +8,7 @@ ms.topic: article
 ---
 # Virtualizing Domain Controllers using Hyper-V
 
-> Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic will be updated in order to make the guidance applicable to Windows Server 2016. Windows Server 2012 introduces many improvements for virtualized domain controllers (DCs), including safeguards to prevent USN rollback on virtual DCs and the ability to clone virtual DCs. For more information about these improvements, see [Introduction to Active Directory Domain Services (AD DS) Virtualization (Level 100)](../../introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100.md).
 

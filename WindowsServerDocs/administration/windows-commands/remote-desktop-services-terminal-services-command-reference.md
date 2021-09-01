@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # Remote Desktop Services (Terminal Services) command-line tools reference
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Learn about the available Remote Desktop Services (Terminal Services) command-line tools, with descriptions and links for more detailed information.
 

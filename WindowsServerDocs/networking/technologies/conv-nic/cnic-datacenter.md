@@ -11,7 +11,7 @@ ms.date: 09/17/2018
 
 # Converged NIC in a Teamed NIC configuration (datacenter)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 In this topic, we provide you with instructions to deploy Converged NIC in a Teamed NIC configuration with Switch Embedded Teaming \(SET\).
 

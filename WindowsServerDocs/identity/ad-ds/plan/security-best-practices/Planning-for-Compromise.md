@@ -11,7 +11,7 @@ ms.topic: article
 
 # Planning for Compromise
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 *Law Number One: Nobody believes anything bad can happen to them, until it does.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))
 

@@ -11,13 +11,11 @@ ms.date: 06/15/2021
 
 # High-performance networking (HPN)
 
-> Applies to: Azure Stack HCI, version 20H2 
+> Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019
 
 High-performance networks (HPNs) play a role in real-time data processing requirements. For example, activities such as datacenter replication, datacenter disaster recovery, and high-performance distributed computing require high volume data transfer and low network latency. HPNs with dynamic connection capabilities make high-performance network resources more accessible and manageable. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
 
 The high-performance networking topics include:
-
-- [Insider preview](hpn-insider-preview.md)
 
 - [Network offload and optimization technologies](network-offload-and-optimization.md)
 
@@ -30,5 +28,3 @@ The high-performance networking topics include:
   - [NIC advanced properties](hpn-nic-advanced-properties.md)
 
 - [RSC in the vSwitch](rsc-in-the-vswitch.md)
-
----

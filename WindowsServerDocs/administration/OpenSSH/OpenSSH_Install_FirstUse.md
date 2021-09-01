@@ -10,7 +10,7 @@ ms.custom: contperf-fy21q4
 
 # Install OpenSSH
 
-> Applies to Windows Server 2019, Windows 10
+>Applies to Windows Server 2019, Windows 10: Windows Server 2022,
 
 OpenSSH is a connectivity tool for remote login that uses the SSH protocol. It encrypts all traffic between client and server to eliminate eavesdropping, connection hijacking, and other attacks.
 

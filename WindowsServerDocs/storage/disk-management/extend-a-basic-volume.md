@@ -9,7 +9,7 @@ ms.author: jgerend
 ---
 # Extend a basic volume
 
-> **Applies To:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Applies To:** Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can use Disk Management to add space to an existing volume, extending it into empty space on the drive, but only if the empty space doesn't have a volume on it (it's unallocated) and comes immediately after the volume you want to extend, with no other volumes in-between, as shown in the following image. The volume to extend also must be formatted with the NTFS or ReFS file systems.
 

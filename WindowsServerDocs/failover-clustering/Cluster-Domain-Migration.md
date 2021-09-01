@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # Failover Cluster domain migration
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic provides an overview for moving Windows Server failover clusters from one domain to another.
 

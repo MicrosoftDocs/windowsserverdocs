@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # Configure remote Management in Server Manager
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In Windows Server, you can use Server Manager to perform management tasks on remote servers. remote management is enabled by default on servers that are running Windows Server 2016. To manage a server remotely by using Server Manager, you add the server to the Server Manager server pool.
 

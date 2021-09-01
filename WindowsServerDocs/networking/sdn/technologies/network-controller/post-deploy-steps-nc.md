@@ -10,7 +10,7 @@ ms.date: 06/16/2021
 ---
 # Post-Deployment Steps for Network Controller
 
-> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 When you install Network Controller, you can choose Kerberos or non-Kerberos deployments.
 
