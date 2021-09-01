@@ -10,7 +10,7 @@ ms.assetid: f168292b-0dbc-44b9-965f-d480e5134a0c
 ---
 # Deploy Work Folders with AD FS and Web Application Proxy: Step 5, Set-up Clients
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes the fifth step in deploying Work Folders with Active Directory Federation Services (AD FS) and Web Application Proxy. You can find the other steps in this process in these topics:
 

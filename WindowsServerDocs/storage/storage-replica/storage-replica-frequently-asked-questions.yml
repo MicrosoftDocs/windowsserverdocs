@@ -4,14 +4,15 @@ metadata:
   title: Frequently asked questions about Storage Replica
   manager: siroy
   ms.author: nedpyle
-  ms.topic: how-to
+  ms.topic: article
   author: nedpyle
   ms.date: 04/15/2020
   ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
+  ms.prod: windows-server
     
 title: Frequently asked questions about Storage Replica
 summary: |
-  >Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+  >Applies to: Windows Server 2019, Windows Server 2016
   
   This topic contains answers to frequently asked questions (FAQs) about Storage Replica.
   
@@ -266,7 +267,12 @@ sections:
           
           - Server1 source drive M: with source log drive L: replicating to Server2 destination drive M: with destination log drive L:
           - Server2 source drive O: with source log drive N: replicating to Server1 destination drive O: with destination log drive N:
-          
+
+      - question: |
+          Can you place cluster disks in maintenance mode?
+        answer: |
+          Storage Replica will block any cluster disks from entering maintenance mode.  For tasks such as enabling or disabling Bitlocker, the disks must be in maintenance mode.  To perform tasks that require the disks to be in maintenance mode, the partnership would need to be broken first and created again once it is complete.
+
       - question: |
           Related topics
         answer: |

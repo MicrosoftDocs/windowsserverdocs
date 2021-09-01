@@ -11,7 +11,7 @@ ms.date: 08/29/2018
 
 # Review prerequisites for the Host Guardian Service
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 This topic covers HGS prerequisites and initial steps to prepare for the HGS deployment.

@@ -11,7 +11,7 @@ ms.date: 06/30/2021
 
 # Security for SDN
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can use the topics in this section to learn about security in Software Defined Networking \(SDN\).
 

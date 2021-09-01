@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Get started with the macOS client
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
 You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.yml) if you have questions.
 

@@ -10,7 +10,7 @@ ms.date: 06/16/2021
 ---
 # Internal DNS Service (iDNS) for SDN
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 If you work for a Cloud Service Provider \(CSP\) or Enterprise that is planning to deploy Software Defined Networking \(SDN\) in Windows Server, you can provide DNS services to your hosted tenant workloads by using Internal DNS \(iDNS\), which is integrated with SDN.
 

@@ -30,7 +30,8 @@
             "./": {
                "depot_name": "WS.EssentialsDocs"
             }
-         }
+         },
+         "recommendations": true
       },
       "fileMetadata": {
          "ms.prod": {

@@ -11,7 +11,7 @@ ms.reviewer: deverette
 
 # Step 7.1. Configure EAP-TLS to ignore Certificate Revocation List (CRL) checking
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](ad-ca-vpn-connectivity-windows10.md)
 - [**Next:** Step 7.2. Create root certificates for VPN authentication with Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)

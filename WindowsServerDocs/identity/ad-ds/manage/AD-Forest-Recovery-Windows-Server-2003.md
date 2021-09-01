@@ -10,7 +10,7 @@ ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ---
 # AD Forest Recovery - Windows Server 2003 Recovery
 
->Applies To: Windows Server 2003
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2003
 
 This topic includes forest recovery procedures for domain controllers (DCs) that run Windows Server 2003. The general process for forest recovery is no different with Windows Server 2003 DCs, but specific procedures can differ because of different tools. For example, Ntdsutil.exe can be used to backup and restore DCs that run Windows Server 2003 DCs, whereas Windows Server Backup or Wbadmin.exe is used for DCs that run Windows Server 2008 or later.
 
@@ -117,6 +117,6 @@ If the DC that you restored from backup is running Windows Server 2003, you can 
 - [AD Forest Recovery - Determine how to recover](AD-Forest-Recovery-Determine-how-to-Recover.md)
 - [AD Forest Recovery - Perform initial recovery](AD-Forest-Recovery-Perform-initial-recovery.md)
 - [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
-- [AD Forest Recovery - Frequently Asked Questions](AD-Forest-Recovery-FAQ.md)
+- [AD Forest Recovery - Frequently Asked Questions](ad-forest-recovery-faq.yml)
 - [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
 - [AD Forest Recovery - Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Windows-Server-2003.md)

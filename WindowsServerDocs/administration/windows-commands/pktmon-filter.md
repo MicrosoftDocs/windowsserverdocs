@@ -9,7 +9,7 @@ ms.date: 06/24/2021
 
 # pktmon filter
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
 Pktmon filter allows you to list, add, or remove packet filters.
 

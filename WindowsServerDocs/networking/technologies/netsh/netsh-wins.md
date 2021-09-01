@@ -11,7 +11,7 @@ ms.date: 07/16/2021
 
 # Network Shell (Netsh) Example Batch File
 
-Applies To: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to create a batch file that performs multiple tasks by using Netsh in Windows Server. In this example batch file, the **netsh wins** context is used.
 

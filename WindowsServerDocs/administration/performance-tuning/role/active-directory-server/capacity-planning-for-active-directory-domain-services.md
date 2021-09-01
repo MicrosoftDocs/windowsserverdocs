@@ -9,7 +9,7 @@ ms.date: 7/3/2019
 
 # Capacity planning for Active Directory Domain Services
 
-This topic is originally written by Ken Brumfield, Senior Premier Field Engineer at Microsoft, and provides recommendations for capacity planning for Active Directory Domain Services (AD DS).
+This topic is originally written by Ken Brumfield, Program Manager at Microsoft, and provides recommendations for capacity planning for Active Directory Domain Services (AD DS).
 
 ## Goals of capacity planning
 
@@ -290,13 +290,14 @@ In a scenario where multiple Virtual Hard Disk (VHD) files are being allocated o
 
 As the slowest component within any computer, storage can have the biggest adverse impact on client experience. For those environments large enough for which the RAM sizing recommendations are not feasible, the consequences of overlooking planning storage for performance can be devastating.  Also, the complexities and varieties of storage technology further increase the risk of failure as the relevance of long standing best practices of “put operating system, logs, and database” on separate physical disks is limited in it's useful scenarios.  This is because the long standing best practice is based on the assumption that is that a “disk” is a dedicated spindle and this allowed I/O to be isolated.  This assumptions that make this true are no longer relevant with the introduction of:
 
+- RAID
 - New storage types and virtualized and shared storage scenarios
 - Shared spindles on a Storage Area Network (SAN)
 - VHD file on a SAN or network-attached storage
 - Solid State Drives
 - Tiered storage architectures (i.e. SSD storage tier caching larger spindle based storage)
 
-In short, the end goal of all storage performance efforts, regardless of underlying storage architecture and design, is to ensure the needed amount of Input/Output Operations per Second (IOPS) are available and that those IOPS happen within an acceptable time frame. This section covers how to evaluate what AD DS demands of the underlying storage in order to ensure storage solutions are properly designed.  Given the variability of today's storage technologies, it is best to work with the storage vendors to ensure adequate IOPS.  For those scenarios with locally attached storage, reference the Appendix C for the basics in how to design traditional local storage scenarios.  This principals are generally applicable to more complex storage tiers and will also help in dialog with the vendors supporting backend storage solutions.
+Specifically, shared storage (RAID, SAN, NAS, JBOD (i.e. Storage Spaces), VHD) all have the ability to be oversubscribed/overloaded by other work loads that are placed on the back end storage. They also add in the challenge that SAN/network/driver issues (everything between the physical disk and the AD application) can cause throttling and/or delays. For clarification, these are not "bad" configurations, they are more complex configurations that require every component along the way to be working properly, thus requiring additional attention to ensure that performance is acceptable.  See Appendix C, subsection "Introducing SANs," and Appendix D later in this document for more detailed explanations. Also, whereas Solid State Drives do not have the limitation of spinning disks (Hard Drives) regarding only allowing one IO at a time to be processed, they do still have IO limitations, and overloading/oversubscribing of SSDs is possible. In short, the end goal of all storage performance efforts, regardless of underlying storage architecture and design, is to ensure that the needed amount of Input/output Operations Per Second (IOPS) is available and that those IOPS happen within an acceptable time frame (as specified elsewhere in this document). For those scenarios with locally attached storage, reference Appendix C for the basics in how to design traditional local storage scenarios. These principals are generally applicable to more complex storage tiers and will also help in dialog with the vendors supporting backend storage solutions.
 
 - Given the wide breadth of storage options available, it is recommended to engage the expertise of hardware support teams or vendors to ensure that the specific solution meets the needs of AD DS. The following numbers are the information that would be provided to the storage specialists.
 

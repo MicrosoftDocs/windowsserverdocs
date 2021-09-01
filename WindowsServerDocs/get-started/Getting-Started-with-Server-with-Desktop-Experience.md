@@ -10,7 +10,7 @@ manager: dongill
 ms.localizationpriority: medium
 ---
 # Install Server with Desktop Experience
-> Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
 
 When you install Windows Server 2016 using the Setup wizard, you can choose between **Windows Server 2016** and **Windows Server (Server with Desktop Experience)**. The Server with Desktop Experience option is the Windows Server 2016 equivalent of the Full installation option available in Windows Server 2012 R2 with the Desktop Experience feature installed. If you do not make a choice in the Setup wizard, **Windows Server 2016** is installed; this is the **Server Core** installation option.

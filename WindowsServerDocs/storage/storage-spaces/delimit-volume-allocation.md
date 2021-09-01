@@ -9,7 +9,7 @@ ms.date: 03/29/2018
 ---
 
 # Delimit the allocation of volumes in Storage Spaces Direct
-> Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 Windows Server 2019 introduces an option to manually delimit the allocation of volumes in Storage Spaces Direct. Doing so can significantly increase fault tolerance under certain conditions, but imposes some added management considerations and complexity. This topic explains how it works and gives examples in PowerShell.
 
