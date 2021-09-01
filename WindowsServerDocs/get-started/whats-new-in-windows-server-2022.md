@@ -107,7 +107,7 @@ Nested virtualization is a feature that allows you to run Hyper-V inside of a Hy
 
 ### Microsoft Edge browser
 
-Microsoft Edge is included with Windows Server 2022, replacing Internet Explorer. It is built on Chromium open source and backed by Microsoft security and innovation. It can be used with Server Core or Server with Desktop Experience installation options. More information can be found at the [Microsoft Edge Enterprise documentation](/DeployEdge/). Note that Microsoft Edge, unlike the rest of Windows Server, follows the Modern Lifecycle for its support lifecycle. For details, see [Microsoft Edge lifecycle documentation](/lifecycle/products/microsoft-edge).
+Microsoft Edge is included with Windows Server 2022, replacing Internet Explorer as the default browser. It is built on Chromium open source and backed by Microsoft security and innovation. It can be used with Server Core or Server with Desktop Experience installation options, and supports HTTP/3 which uses the QUIC protocol. More information can be found at the [Microsoft Edge Enterprise documentation](/DeployEdge/). Note that Microsoft Edge, unlike the rest of Windows Server, follows the Modern Lifecycle for its support lifecycle. For details, see [Microsoft Edge lifecycle documentation](/lifecycle/products/microsoft-edge).
 
 ### Storage
 
