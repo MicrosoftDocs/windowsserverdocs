@@ -97,6 +97,8 @@ In addition to platform improvements, Windows Admin Center has been updated to m
 
 With support for Intel Ice Lake processors, Windows Server 2022 supports business-critical and large-scale applications, such as SQL Server, that require up to 48 TB of memory and 2,048 logical cores running on 64 physical sockets. Confidential computing with Intel Secured Guard Extension (SGX) on Intel Ice Lake improves application security by isolating applications from each other with protected memory.
 
+You can read more about these and other improvements at [What’s new for Windows Containers in Windows Server 2022](/virtualization/windowscontainers/about/whats-new-ws2022-containers).
+
 ## Other key features
 
 ### Nested virtualization for AMD processors
