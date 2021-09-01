@@ -9,7 +9,7 @@ ms.date: 06/25/2021
 ms.localizationpriority: medium
 ---
 
-# SMB compression (PREVIEW)
+# SMB compression
 
 >Applies to: Windows Server 2022, Windows 11 Insider Preview
 
@@ -31,7 +31,7 @@ For a demonstration of SMB compression, watch this video:
 
 To use SMB compression in a traditional client-file server workload, you need the following:
 
-- A file server running Windows Server 2022 [on-premises](https://aka.ms/WS2022Preview) or [in Azure](https://aka.ms/ws2022azurepreview)
+- A file server running Windows Server 2022 [on-premises](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022) or [in Azure](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsserver.windowsserver?tab=Overview)
 - A Windows 11 Insider Preview ([Windows Insider Channels](https://insider.windows.com/))
 - Windows Admin Center - ([Homepage](https://aka.ms/windowsadmincenter))
 
@@ -156,10 +156,10 @@ You can configure an SMB client to always request compression and to always reje
 
 ## Understanding and controlling compression behaviors
 
-SMB compression in Windows Server 2022 preview and Windows 11 Insider Preview uses a default algorithm where it attempts to compress the first 524,288,000 bytes (500MiB) of a file during transfer and tracks that at least 104,857,600 bytes (100MiB) compressed within that 500-MB range. If fewer than 100 MiB is compressible, SMB compression stops trying to compress the rest of the file. If at least 100 MiB compresses, SMB compression attempts to compress the rest of the file. This means that very large files with compressible data - for instance, a multi-gigabyte virtual machine disk - are likely to compress but a relatively small file - even a very compressible one - will not compress.
+SMB compression in Windows Server 2022 and Windows 11 Insider Preview uses a default algorithm where it attempts to compress the first 524,288,000 bytes (500MiB) of a file during transfer and tracks that at least 104,857,600 bytes (100MiB) compressed within that 500-MB range. If fewer than 100 MiB is compressible, SMB compression stops trying to compress the rest of the file. If at least 100 MiB compresses, SMB compression attempts to compress the rest of the file. This means that very large files with compressible data - for instance, a multi-gigabyte virtual machine disk - are likely to compress but a relatively small file - even a very compressible one - will not compress.
 
 > [!NOTE]
-> This behavior will not remain the default in non-Preview Windows Server 2022 and Windows.
+> This behavior will not remain the default in non-Preview Windows Server 2022 and Windows. It was first changed in Windows 11 Insider Preview build 22449.
 
 If you want SMB compression to aggressively compress no matter what the file size is, you can override the defaults:
 
