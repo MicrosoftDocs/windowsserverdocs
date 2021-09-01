@@ -113,24 +113,6 @@
 
 ### [Receive Segment Coalescing (RSC) in the vSwitch](technologies/hpn/rsc-in-the-vswitch.md)
 
-### [Converged NIC configuration guidance](technologies/conv-nic/cnic-top.md)
-#### [Single network adapter configuration](technologies/conv-nic/cnic-single.md)
-#### [Datacenter network adapter configuration](technologies/conv-nic/cnic-datacenter.md)
-#### [Physical switch configuration](technologies/conv-nic/cnic-app-switch-config.md)
-#### [Troubleshooting Converged NIC](technologies/conv-nic/cnic-app-troubleshoot.md)
-
-### [Data Center Bridging \(DCB\)](technologies/dcb/dcb-top.md)
-#### [Install DCB](technologies/dcb/dcb-install.md)
-#### [Manage DCB](technologies/dcb/dcb-manage.md)
-
-### [Virtual Receive Side Scaling (vRSS)](technologies/vrss/vrss-top.md)
-#### [Plan the use of vRSS](technologies/vrss/vrss-plan.md)
-#### [Enable vRSS on a virtual network adapter](technologies/vrss/vrss-enable.md)
-#### [Manage vRSS](technologies/vrss/vrss-manage.md)
-#### [vRSS FAQ](technologies/vrss/vrss-faq.yml)
-#### [Windows PowerShell commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
-#### [Resolve vRSS issues](technologies/vrss/vrss-resolve-issues.md)
-
 ## [Host Compute Network (HCN) Service API](technologies/hcn/hcn-top.md)   
 ### [Common HCN scenarios](technologies/hcn/hcn-scenarios.md)
 ### [RPC context handles for HCN](technologies/hcn/hcn-declaration-handles.md)
