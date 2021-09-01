@@ -31,7 +31,7 @@ For a demonstration of SMB compression, watch this video:
 
 To use SMB compression in a traditional client-file server workload, you need the following:
 
-- A file server running Windows Server 2022 [on-premises](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022) or [in Azure](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsserver.windowsserver?tab=Overview)
+- A file server running Windows Server 2022 [on-premises](https://aka.ms/TryWS2022) or [in Azure](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsserver.windowsserver?tab=Overview)
 - A Windows 11 Insider Preview ([Windows Insider Channels](https://insider.windows.com/))
 - Windows Admin Center - ([Homepage](https://aka.ms/windowsadmincenter))
 
