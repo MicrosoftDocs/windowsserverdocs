@@ -65,6 +65,10 @@ Windows Server now supports AES-256-GCM and AES-256-CCM cryptographic suites for
 
 Windows Server failover clusters now support granular control of encrypting and signing intra-node storage communications for Cluster Shared Volumes (CSV) and the storage bus layer (SBL). This means that when using Storage Spaces Direct, you can decide to encrypt or sign east-west communications within the cluster itself for higher security.
 
+#### SMB Direct and RDMA encryption
+
+SMB Direct and RDMA supply high bandwidth, low latency networking fabric for workloads like Storage Spaces Direct, Storage Replica, Hyper-V, Scale-out File Server, and SQL Server. SMB Direct in Windows Server 2022 now supports encryption. Previously, enabling SMB encryption disabled direct data placement; this was intentional, but seriously impacted performance. Now data is encrypted data before placement, leading to far less performance degradation while adding AES-128 and AES-256 protected packet privacy.
+
 #### SMB over QUIC
 
 SMB over QUIC updates the SMB 3.1.1 protocol in Windows Server 2022 Datacenter: Azure Edition and supported Windows clients to use the QUIC protocol instead of TCP. By using SMB over QUIC along with TLS 1.3, users and applications can securely and reliably access data from edge file servers running in Azure. Mobile and telecommuter users no longer need a VPN to access their file servers over SMB when on Windows. More information can be found at the [SMB over QUIC documentation](../storage/file-server/smb-over-quic.md).
@@ -97,8 +101,6 @@ In addition to platform improvements, Windows Admin Center has been updated to m
 
 With support for Intel Ice Lake processors, Windows Server 2022 supports business-critical and large-scale applications, such as SQL Server, that require up to 48 TB of memory and 2,048 logical cores running on 64 physical sockets. Confidential computing with Intel Secured Guard Extension (SGX) on Intel Ice Lake improves application security by isolating applications from each other with protected memory.
 
-You can read more about these and other improvements at [What’s new for Windows Containers in Windows Server 2022](/virtualization/windowscontainers/about/whats-new-ws2022-containers).
-
 ## Other key features
 
 ### Nested virtualization for AMD processors
@@ -107,7 +109,21 @@ Nested virtualization is a feature that allows you to run Hyper-V inside of a Hy
 
 ### Microsoft Edge browser
 
-Microsoft Edge is included with Windows Server 2022, replacing Internet Explorer as the default browser. It is built on Chromium open source and backed by Microsoft security and innovation. It can be used with Server Core or Server with Desktop Experience installation options, and supports HTTP/3 which uses the QUIC protocol. More information can be found at the [Microsoft Edge Enterprise documentation](/DeployEdge/). Note that Microsoft Edge, unlike the rest of Windows Server, follows the Modern Lifecycle for its support lifecycle. For details, see [Microsoft Edge lifecycle documentation](/lifecycle/products/microsoft-edge).
+Microsoft Edge is included with Windows Server 2022, replacing Internet Explorer. It is built on Chromium open source and backed by Microsoft security and innovation. It can be used with Server Core or Server with Desktop Experience installation options. More information can be found at the [Microsoft Edge Enterprise documentation](/DeployEdge/). Note that Microsoft Edge, unlike the rest of Windows Server, follows the Modern Lifecycle for its support lifecycle. For details, see [Microsoft Edge lifecycle documentation](/lifecycle/products/microsoft-edge).
+
+### Networking performance
+
+#### UDP performance improvements
+
+UDP is becoming a very popular protocol carrying more and more network traffic. The increasing popularity of RTP and custom (UDP) streaming and gaming protocols The QUIC protocol, built on top of UDP, brings the performance of UDP to a level on par with TCP. Significantly, Windows Server 2022 includes UDP Segmentation Offload (USO). USO moves most of the work required to send UDP packets from the CPU to the network adapter's specialized hardware. Complimenting USO is UDP Receive Side Coalescing (UDP RSC), which coalesces packets and reduces CPU usage for UDP processing. In addition, we have also made hundreds of improvements to the UDP data path both transmit and receive. Windows Server 2022 and Windows 11 both have this new capability.
+
+#### TCP performance improvements
+
+Windows Server 2022 uses TCP [HyStart++](https://datatracker.ietf.org/doc/html/draft-ietf-tcpm-hystartplusplus-00) to reduce packet loss during connection start-up (especially in high-speed networks) and [RACK](https://datatracker.ietf.org/doc/html/rfc8985) to reduce Retransmit TimeOuts (RTO). These features are enabled in the transport stack by default and provide a smoother network data flow with better performance at high speeds. Windows Server 2022 and Windows 11 both have this new capability.
+
+#### Hyper-V virtual switch improvements
+
+Virtual switches in Hyper-V have been enhanced with updated Receive Segment Coalescing (RSC). This allows the hypervisor network to coalesce packets and process as one larger segment. CPU cycles are reduced and segments will remain coalesced across the entire data path until processed by the intended application. This means improved performance in both network traffic from an external host, received by a virtual NIC, as well as from a virtual NIC to another virtual NIC on the same host.
 
 ### Storage
 
@@ -118,7 +134,7 @@ Enhancements to Storage Migration Service in Windows Server 2022 makes it easier
 * Migrate local users and groups to the new server.
 * Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters.
 * Migrate storage from a Linux server that uses Samba.
-* More easily sync migrated shares into Azure by using Azure File Sync.
+* More easily synchronize migrated shares into Azure by using Azure File Sync.
 * Migrate to new networks such as Azure.
 * Migrate NetApp CIFS servers from NetApp FAS arrays to Windows servers and clusters.
 
