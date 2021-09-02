@@ -97,6 +97,8 @@ In addition to platform improvements, Windows Admin Center has been updated to m
 
 With support for Intel Ice Lake processors, Windows Server 2022 supports business-critical and large-scale applications, such as SQL Server, that require up to 48 TB of memory and 2,048 logical cores running on 64 physical sockets. Confidential computing with Intel Secured Guard Extension (SGX) on Intel Ice Lake improves application security by isolating applications from each other with protected memory.
 
+You can read more about these and other improvements at [What’s new for Windows Containers in Windows Server 2022](/virtualization/windowscontainers/about/whats-new-ws2022-containers).
+
 ## Other key features
 
 ### Nested virtualization for AMD processors
@@ -105,7 +107,7 @@ Nested virtualization is a feature that allows you to run Hyper-V inside of a Hy
 
 ### Microsoft Edge browser
 
-Microsoft Edge is included with Windows Server 2022, replacing Internet Explorer. It is built on Chromium open source and backed by Microsoft security and innovation. It can be used with Server Core or Server with Desktop Experience installation options. More information can be found at the [Microsoft Edge Enterprise documentation](/DeployEdge/). Note that Microsoft Edge, unlike the rest of Windows Server, follows the Modern Lifecycle for its support lifecycle. For details, see [Microsoft Edge lifecycle documentation](/lifecycle/products/microsoft-edge).
+Microsoft Edge is included with Windows Server 2022, replacing Internet Explorer as the default browser. It is built on Chromium open source and backed by Microsoft security and innovation. It can be used with Server Core or Server with Desktop Experience installation options, and supports HTTP/3 which uses the QUIC protocol. More information can be found at the [Microsoft Edge Enterprise documentation](/DeployEdge/). Note that Microsoft Edge, unlike the rest of Windows Server, follows the Modern Lifecycle for its support lifecycle. For details, see [Microsoft Edge lifecycle documentation](/lifecycle/products/microsoft-edge).
 
 ### Storage
 
