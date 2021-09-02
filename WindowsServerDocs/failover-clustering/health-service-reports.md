@@ -7,9 +7,10 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017
 ---
+
 # Health Service reports
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+> Applies to: Windows Server 2016
 
 ## What are reports
 
