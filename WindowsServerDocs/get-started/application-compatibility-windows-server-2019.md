@@ -23,8 +23,8 @@ If you are a software vendor partner looking for more information on Windows Ser
 | Exchange Server 2019 | Yes | Yes | Yes | [Exchange Server system requirements](/exchange/plan-and-deploy/system-requirements) |
 | Host Integration Server 2016, CU3 | Yes | Yes | Yes | [Host Integration Server system requirements](/host-integration-server/install-and-config-guides/system-requirements) |
 | Azure DevOps Server 2019 | Yes* | Yes | Yes | [Azure DevOps Server 2019](/azure/devops/server/requirements?view=azure-devops-2019&preserve-view=true) |
-| Azure DevOps Server 2020 | Yes* | Yes | Yes | [Azure DevOps Server 2020](/azure/devops/server/requirements?view=azure-devops-2020) |
-| Microsoft SQL Server 2014 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2014](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2014) |
+| Azure DevOps Server 2020 | Yes* | Yes | Yes | [Azure DevOps Server 2020](/azure/devops/server/requirements?view=azure-devops-2020&preserve-view=true) |
+| Microsoft SQL Server 2014 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2014](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2014&preserve-view=true) |
 | Microsoft SQL Server 2016 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2016](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2016&preserve-view=true) |
 | Microsoft SQL Server 2017 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2017](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2017&preserve-view=true) |
 | Microsoft SQL Server 2019 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2019](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15) |
@@ -38,5 +38,5 @@ If you are a software vendor partner looking for more information on Windows Ser
 | Project Server 2019 | No | Yes | Yes | [Software requirements for Project Server 2019](/project/software-requirements-for-project-server-2019) |
 | Skype for Business 2019 | No | Yes | Yes | [Install prerequisites for Skype for Business Server](/skypeforbusiness/deploy/install/install-prerequisites) |
 
-*May have limitations or may require the [Server Core App Compatibility Feature on Demand (FOD)](install-fod-19.md).
+*May have limitations or may require the [Server Core App Compatibility Feature on Demand (FOD)](server-core-app-compatibility-feature-on-demand.md).
 Please refer to specific product or FOD documentation.
