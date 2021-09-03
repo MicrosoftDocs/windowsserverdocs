@@ -16,9 +16,9 @@ ms.date: 9/30/2021
 **Windows Server Essentials** edition is a cloud-connected first server designed for small businesses with up to 25 users and 50 devices. However, if you are considering installing any version of Windows Server Essentials, we would encourage you to consider **Microsoft 365**. For more information about moving beyond Windows Server Essentials to Microsoft 365, see [What's New in Windows Server 2019 Essentials](what-s-new-19.md).
 
 > [!NOTE]
-> With Windows Server 2022, the Essentials edition is available to purchase from OEMs only. An Essentials edition product key is used to activate the Standard edition of Windows Server 2022 and means you get [all the same features](/windows-server/get-started/editions-comparison-windows-server-2022.md). Learn how to [get started with Windows Server 2022 Standard](/windows-server/get-started/get-started-with-windows-server.md).
+> With Windows Server 2022, the Essentials edition is available to purchase from OEMs only, however there is no specific installation media. Instead, an Essentials edition product key is used to activate the Standard edition of Windows Server 2022 and means you get [all the same features](/windows-server/get-started/editions-comparison-windows-server-2022.md). Learn how to [get started with Windows Server 2022](/windows-server/get-started/get-started-with-windows-server.md).
 >
->Please see the [Windows Server documentation](/windows-server/) for more information.
+>As a result, all the relevant documentation is found the [Windows Server documentation](/windows-server/) area.
 
 ## In this library
 
