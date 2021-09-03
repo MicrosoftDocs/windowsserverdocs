@@ -10275,5 +10275,30 @@
       "redirect_url": "/windows-server/storage/storage-spaces/",
       "redirect_document_id": false
     },
+    {
+      "source_path": "WindowsServerDocs/get-started/Recommendations-moving-to-Server2016.md",
+      "redirect_url": "/windows-server/get-started/get-started-with-windows-server/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/kmsclientkeys.md",
+      "redirect_url": "/windows-server/get-started/kms-client-activation-keys/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/activation-19.md",
+      "redirect_url": "/windows-server/get-started/kms-activation-planning/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/app-compat-19.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility-windows-server-2019/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Server-Application-Compatibility.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility-windows-server-2016/",
+      "redirect_document_id": false
+    }
   ]
 }

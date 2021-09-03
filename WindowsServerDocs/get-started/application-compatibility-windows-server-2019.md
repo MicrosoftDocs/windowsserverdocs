@@ -1,5 +1,5 @@
 ---
-title: Windows Server 2019 and Microsoft Server application compatibility
+title: Windows Server 2019 and Microsoft server application compatibility
 description: Compatibility table for Windows Server 2019 and Microsoft server applications
 ms.topic: article
 ms.assetid: 2afe7c32-1fda-4441-989b-4115dabdcd34

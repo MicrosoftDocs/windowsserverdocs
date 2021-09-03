@@ -1,6 +1,6 @@
 ---
-title: Windows Server 2019 Activation
-description: How to activate Windows Server 2019
+title: Key Management Services (KMS) activation planning
+description: Learn how to plan for Key Management Services (KMS) activation in Windows Server
 ms.topic: article
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a4d55cca754
 ms.author: jgerend
@@ -9,7 +9,8 @@ manager: mtillman
 ms.localizationpriority: medium
 ms.date: 09/09/2020
 ---
-# Windows Server 2019 Activation
+
+# Key Management Services (KMS) activation planning
 
 >Applies to: Windows Server 2019, Windows Server 2016
 
