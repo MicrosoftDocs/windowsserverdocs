@@ -1,5 +1,5 @@
 ---
-title: Microsoft Server Application Compatibility
+title: Windows Server 2016 and Microsoft server application compatibility
 description: Compatibility chart for Server 2016 and Microsoft server applications.
 ms.date: 08/01/2018
 ms.topic: article
@@ -19,11 +19,11 @@ For customers and software vendor partners looking for more information on Windo
 |Microsoft Server Application|    Released?|    Product Link|
 |-------------------------------------|--------------------------------------------|-------------------|
 |Microsoft SQL Server 2012|Yes| [Hardware and Software Requirements for Installing SQL Server 2012](/previous-versions/sql/sql-server-2012/ms143506(v=sql.110))|
-|Microsoft SQL Server 2014|Yes|[Hardware and Software Requirements for Installing SQL Server 2014](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2014)|
+|Microsoft SQL Server 2014|Yes|[Hardware and Software Requirements for Installing SQL Server 2014](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2014&preserve-view=true)|
 |Microsoft SQL Server 2016|    Yes|    [SQL Server 2016](https://www.microsoft.com/cloud-platform/sql-server)|
-|Microsoft System Center Virtual Machine Manager 2016|    Yes|    [What's New in System Center](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2014)|
-|Microsoft System Center Operations Manager 2016|    Yes|    [What's New in System Center](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2014)|
-|Microsoft System Center Data Protection Manager 2016|    Yes|    [What's New in System Center](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2014)|
+|Microsoft System Center Virtual Machine Manager 2016|    Yes|    [What's New in System Center](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2014&preserve-view=true)|
+|Microsoft System Center Operations Manager 2016|    Yes|    [What's New in System Center](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2014&preserve-view=true)|
+|Microsoft System Center Data Protection Manager 2016|    Yes|    [What's New in System Center](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2014&preserve-view=true)|
 |Configuration Manager (version 1606)|    Yes|    [What's new in version 1606 of Configuration Manager](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1606)|
 |SharePoint Server 2016|    Yes|    [Hardware and software requirements for SharePoint Server 2016](/SharePoint/install/hardware-and-software-requirements)|
 |Project Server 2016|    Yes|    [Software requirements for Project Server 2016](/project/software-requirements-for-project-server-2016)|
