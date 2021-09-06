@@ -19,7 +19,7 @@ KMS uses a client-server model to active clients and is used for volume activati
 
 KMS hosts do not need to be dedicated servers, and KMS can be cohosted with other services. You can run a KMS host on any physical or virtual system that is running a [supported](windows-server-release-info.md) Windows Server or Windows client operating system. A KMS host running on a Windows Server operating system can activate computers running both server and client operating systems, however a KMS host running on a Windows client operating system can only activate computers also running client operating systems.
 
-To use KMS, a KMS host needs a key that activates, or authenticates, the KMS host with Microsoft. This key is usually referred to as the KMS host key, but it is formally known as a Microsoft Customer Specific Volume License Key (CSVLK). You can get this key from the Product Keys section of the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) for the following agreements: Open, Open Value, Select, Enterprise, and Services Provider License. You can also get assitance by contacting your local [Microsoft Activation Center](https://www.microsoft.com/licensing/existing-customer/activation-centers).
+To use KMS, a KMS host needs a key that activates, or authenticates, the KMS host with Microsoft. This key is sometimes referred to as the KMS host key, but it is formally known as a Microsoft Customer Specific Volume License Key (CSVLK). You can get this key from the Product Keys section of the [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) for the following agreements: Open, Open Value, Select, Enterprise, and Services Provider License. You can also get assistance by contacting your local [Microsoft Activation Center](https://www.microsoft.com/licensing/existing-customer/activation-centers).
 
 ## Operational requirements
 
@@ -31,7 +31,7 @@ KMS activations are valid for 180 days, a period known as the activation validit
 
 A single KMS host can support an unlimited number of KMS clients. If you have more than 50 clients, we recommend that you have at least two KMS hosts in case one of your KMS hosts becomes unavailable. Most organizations can operate with as few as two KMS hosts for their entire infrastructure.
 
-Computers that are running volume licensing editions of Windows Server and Windows client are, by default, KMS clients with no additional configuration needed.
+Computers that are running volume licensing editions of Windows Server and Windows client are, by default, KMS clients with no extra configuration needed.
 
 If you are converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, you will need to install the applicable KMS client setup key. For more information, see [KMS client setup keys](../get-started/kms-client-activation-keys.md).
 
@@ -41,7 +41,7 @@ KMS activation requires TCP/IP connectivity. KMS hosts and clients are configure
 
 After the first KMS host is activated, the CSVLK that is used on the first host can be used to activate up to five more KMS hosts on your network for a total of six. After a KMS host is activated, administrators can reactivate the same host up to nine times with the same key.
 
-If your organization needs more than six KMS hosts, you can request additional activations for your organization's CSVLK - for example, if you have ten physical locations under one volume licensing agreement and you want each location to have a local KMS host.
+If your organization needs more than six KMS hosts, you can request additional activations for your organization's CSVLK - for example, if you have 10 physical locations under one volume licensing agreement and you want each location to have a local KMS host.
 
 > [!NOTE]
 > To request this exception, please contact your local [Microsoft Activation Center](https://www.microsoft.com/licensing/existing-customer/activation-centers).
