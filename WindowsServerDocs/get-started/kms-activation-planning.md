@@ -53,7 +53,7 @@ The following table summarizes KMS host and client versions for networks that in
 > [!NOTE]
 >
 > - Updates might be required on the KMS server to support activation of any of these newer clients. If you receive activation errors, check that you have the appropriate updates listed below this table.
-> - If you are working with virtual machines, see [Automatic Virtual Machine Activation](automatic-vm-activation.md) for information and AVMA keys.
+> - If you are working with virtual machines running on Hyper-V, see [Automatic Virtual Machine Activation](automatic-vm-activation.md) for information and AVMA keys.
 
 | CSVLK group | CSVLK can be hosted on | Windows editions activated by this KMS host |
 |--|--|--|
