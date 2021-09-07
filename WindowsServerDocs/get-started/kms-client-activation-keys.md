@@ -1,84 +1,87 @@
 ---
-title: KMS client setup keys
-description: Keys needed to activate Windows products from a KMS server
-ms.mktglfcycl: manage
-ms.sitesec: library
-author: jasongerend
-ms.author: jgerend
+title: Key Management Services (KMS) client product keys for Windows Server and Windows
+description: Get the product keys needed for setup and activation of Windows Server and other Windows products from a KMS host server.
+ms.topic: conceptual
+author: dknappettmsft
+ms.author: daknappe
+manager: femila
+ms.date: 9/7/2021
+ms.prod: windows-server
 ms.localizationpriority: medium
-ms.date: 04/30/2021
-ms.topic: how-to
 ---
-# KMS client setup keys
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
+# Key Management Services (KMS) client product keys
 
-Computers that are running volume licensed editions of Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008 are, by default, KMS clients with no additional configuration needed.
+To use KMS, you need to have a KMS host available on your local network. Computers that activate with a KMS host need to have a specific product key. This key is sometimes referred to as the KMS client key, but it is formally known as a Microsoft Generic Volume License Key (GVLK). Computers that are running volume licensing editions of Windows Server and Windows client are, by default, KMS clients with no extra configuration needed as the relevant GVLK is already there.
 
-> [!NOTE]
-> In the tables that follow, "LTSC" stands for "Long-Term Servicing Channel," while "LTSB" refers to the "Long-Term Servicing Branch."
+There are some scenarios, however, where you will need to add the GVLK to the computer you wish to activate against a KMS host, such as:
 
-**To use the keys listed here (which are GVLKs), you must first have a KMS host
-running in your deployment.** If you haven't already configured a KMS host, see
-[Deploy KMS Activation](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502531(v=ws.11)) for steps to set one up.
+- Converting a computer from using a Multiple Activation Key (MAK)
+- Converting a retail license of Windows to a KMS client
+- If the computer was previously a KMS host.
 
-If you are converting a computer from a KMS host, MAK, or retail edition of
-Windows to a KMS client, install the applicable setup key (GVLK) from the
-following tables. To install a client setup key, open an administrative command
-prompt on the client, type **slmgr /ipk \<setup key\>** and then press **Enter**.
+> [!IMPORTANT]
+> To use the keys listed here (which are GVLKs), you must first have a KMS host available on your local network. If you don't already have a KMS host, please see [Deploy KMS Activation](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502531(v=ws.11)) to learn how to set one up.
+>
+> If you want to activate Windows without a KMS host available and outside of a volume-activation scenario (for example, you're trying to activate a retail version of Windows client), **these keys will not work**. You will need to use another method of activating Windows, such as using a MAK, or purchasing a retail license. Get help to [find your Windows product key](https://support.microsoft.com/help/10749/windows-product-key) and learn about [genuine versions of Windows](https://support.microsoft.com/help/15087/windows-genuine).
 
-| If you want to…    | …use these resources   |
-|--------------------|------------------------|
-| Activate Windows outside of a volume-activation scenario (that is, you're trying to activate a retail version of Windows), **these keys will not work**. | Use these links for retail versions of Windows: |
-| Fix this error that you get when you try to activate a Windows 8.1, Windows Server 2012 R2 or newer system: “Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid”… | [Install this update](https://support.microsoft.com/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) on the KMS host if it is running Windows 8.1, Windows Server 2012 R2, Windows 8, or Windows Server 2012. |
+## Install a product key
 
--   [Get Windows 10](https://www.microsoft.com/windows/get-windows-10)
+If you are converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, install the applicable product key (GVLK) from the list below. To install a client product key, open an administrative command prompt on the client, and run the following command and then press `Enter`:
 
--   [Get a new Windows product key](https://support.microsoft.com/help/10749/windows-product-key)
+```
+slmgr /ipk <product key>
+```
 
--   [Genuine Windows Help & How-to](https://support.microsoft.com/help/15087/windows-genuine)
+For example, to install the product key for Windows Server 2022 Datacenter edition, run the following command and then press `Enter`:
 
+```
+slmgr /ipk WX4NM-KYWYW-QJJR4-XV3QB-6VM33
+```
 
->   If you are running Windows Server 2008 R2 or Windows 7, be on the lookout
->   for an update to support using those as KMS hosts for Windows 10 clients.
+## Generic Volume License Keys (GVLK)
 
-## Windows Server Semi-Annual Channel versions
+In the tables that follow, you will find the GVLKs for each version and edition of Windows. LTSC is *Long-Term Servicing Channel*, while LTSB is *Long-Term Servicing Branch*.
 
-### Windows Server, version 1909, version 1903, and version 1809
+### Windows Server (LTSC versions)
 
-| Operating system edition  | KMS Client Setup Key          |
-|---------------------------|-------------------------------|
-| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
-| Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
+#### Windows Server 2022
 
-## Windows Server LTSC/LTSB versions
-
-### Windows Server 2022
-| Operating system edition       | KMS Client Setup Key          |
+| Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
 | Windows Server 2022 Datacenter | WX4NM-KYWYW-QJJR4-XV3QB-6VM33 |
 | Windows Server 2022 Standard   | VDYBN-27WPP-V4HQT-9VMD4-VMK7H |
 
-### Windows Server 2019
-| Operating system edition       | KMS Client Setup Key          |
+#### Windows Server 2019
+
+| Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
 | Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG |
 | Windows Server 2019 Standard   | N69G4-B89J2-4G8F4-WWYCC-J464C |
 | Windows Server 2019 Essentials | WVDHN-86M7X-466P6-VHXV7-YY726 |
 
-### Windows Server 2016
+#### Windows Server 2016
 
-| Operating system edition       | KMS Client Setup Key          |
+| Operating system edition       | KMS Client Product Key        |
 |--------------------------------|-------------------------------|
 | Windows Server 2016 Datacenter | CB7KF-BWN84-R7R2Y-793K2-8XDDG |
 | Windows Server 2016 Standard   | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY |
 | Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B |
 
-## Windows 10, all supported Semi-Annual Channel versions
+### Windows Server (Semi-Annual Channel versions)
+
+#### Windows Server, versions 20H2, 2004, 1909, 1903, and 1809
+
+| Operating system edition  | KMS Client Product Key        |
+|---------------------------|-------------------------------|
+| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
+| Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
+
+### Windows 10 (Semi-Annual Channel versions)
 
 See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) for information about supported versions and end of service dates.
 
-| Operating system edition          | KMS Client Setup Key          |
+| Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
 | Windows 10 Pro                    | W269N-WFGWX-YVC9B-4J6C9-T83GX |
 | Windows 10 Pro N                  | MH37W-N47XK-V7XM9-C7227-GCQG9 |
@@ -93,70 +96,69 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows 10 Enterprise G           | YYVX9-NTFWV-6MDM3-9PT4T-4M68B |
 | Windows 10 Enterprise G N         | 44RPN-FTY23-9VTTB-MP9BX-T84FV |
 
-## Windows 10 LTSC/LTSB versions
+### Windows 10 (LTSC/LTSB versions)
 
-### Windows 10 LTSC 2019
+#### Windows 10 LTSC 2019
 
-| Operating system edition          | KMS Client Setup Key          |
+| Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
 | Windows 10 Enterprise LTSC 2019   | M7XTQ-FN8P6-TTKYV-9D4CC-J462D |
 | Windows 10 Enterprise N LTSC 2019 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
 
-### Windows 10 LTSB 2016
+#### Windows 10 LTSB 2016
 
-| Operating system edition          | KMS Client Setup Key          |
+| Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
 | Windows 10 Enterprise LTSB 2016   | DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ |
 | Windows 10 Enterprise N LTSB 2016 | QFFDN-GRT3P-VKWWX-X7T3R-8B639 |
 
-### Windows 10 LTSB 2015
+#### Windows 10 LTSB 2015
 
-| Operating system edition          | KMS Client Setup Key          |
+| Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
 | Windows 10 Enterprise 2015 LTSB   | WNMTR-4C88C-JK8YV-HQ7T2-76DF9 |
 | Windows 10 Enterprise 2015 LTSB N | 2F77B-TNFGY-69QQF-B8YKP-D69TJ |
 
-## Earlier versions of Windows Server
+### Earlier versions of Windows Server
 
-### Windows Server, version 1803
+#### Windows Server, version 1803
 
-| Operating system edition  | KMS Client Setup Key          |
+| Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG |
 | Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR |
 
-### Windows Server, version 1709
+#### Windows Server, version 1709
 
-| Operating system edition  | KMS Client Setup Key          |
+| Operating system edition  | KMS Client Product Key        |
 |---------------------------|-------------------------------|
 | Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6 |
 | Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4 |
 
-### Windows Server 2012 R2
+#### Windows Server 2012 R2
 
-| Operating system edition               | KMS Client Setup Key          |
+| Operating system edition               | KMS Client Product Key        |
 |----------------------------------------|-------------------------------|
-| Windows Server 2012 R2 Server Standard | D2N9P-3P6X9-2R39C-7RTCD-MDVJX |
+| Windows Server 2012 R2 Standard        | D2N9P-3P6X9-2R39C-7RTCD-MDVJX |
 | Windows Server 2012 R2 Datacenter      | W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9 |
 | Windows Server 2012 R2 Essentials      | KNC87-3J2TX-XB4WP-VCPJV-M4FWM |
 
-### Windows Server 2012
+#### Windows Server 2012
 
-| Operating system edition                | KMS Client Setup Key          |
+| Operating system edition                | KMS Client Product Key        |
 |-----------------------------------------|-------------------------------|
 | Windows Server 2012                     | BN3D2-R7TKB-3YPBD-8DRP2-27GG4 |
 | Windows Server 2012 N                   | 8N2M2-HWPGY-7PGT9-HGDD8-GVGGY |
 | Windows Server 2012 Single Language     | 2WN2H-YGCQR-KFX6K-CD6TF-84YXQ |
 | Windows Server 2012 Country Specific    | 4K36P-JN4VD-GDC6V-KDT89-DYFKP |
-| Windows Server 2012 Server Standard     | XC9B7-NBPP2-83J2H-RHMBY-92BT4 |
+| Windows Server 2012 Standard            | XC9B7-NBPP2-83J2H-RHMBY-92BT4 |
 | Windows Server 2012 MultiPoint Standard | HM7DN-YVMH3-46JC3-XYTG7-CYQJJ |
 | Windows Server 2012 MultiPoint Premium  | XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G |
 | Windows Server 2012 Datacenter          | 48HP8-DN98B-MYWDG-T2DCC-8W83P |
 
+#### Windows Server 2008 R2
 
-### Windows Server 2008 R2
-
-| Operating system edition                         | KMS Client Setup Key          |
+| Operating system edition                         | KMS Client Product Key        |
 |--------------------------------------------------|-------------------------------|
 | Windows Server 2008 R2 Web                       | 6TPJF-RBVHG-WBW2R-86QPH-6RTM4 |
 | Windows Server 2008 R2 HPC edition               | TT8MH-CG224-D3D7Q-498W2-9QCTX |
@@ -165,9 +167,9 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows Server 2008 R2 Datacenter                | 74YFP-3QFB3-KQT8W-PMXWJ-7M648 |
 | Windows Server 2008 R2 for Itanium-based Systems | GT63C-RJFQ3-4GMB6-BRFB9-CB83V |
 
-### Windows Server 2008
+#### Windows Server 2008
 
-| Operating system edition                       | KMS Client Setup Key          |
+| Operating system edition                       | KMS Client Product Key        |
 |------------------------------------------------|-------------------------------|
 | Windows Web Server 2008                        | WYR28-R7TFJ-3X2YQ-YCY4H-M249D |
 | Windows Server 2008 Standard                   | TM24T-X9RMF-VWXK6-X8JC9-BFGM2 |
@@ -179,30 +181,29 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows Server 2008 Datacenter without Hyper-V | 22XQ2-VRXRG-P8D42-K34TD-G3QQC |
 | Windows Server 2008 for Itanium-Based Systems  | 4DWFP-JF3DJ-B7DTH-78FJB-PDRHK |
 
-## Earlier versions of Windows
+### Earlier versions of Windows
 
-### Windows 8.1
+#### Windows 8.1
 
-| Operating system edition | KMS Client Setup Key          |
+| Operating system edition | KMS Client Product Key        |
 |--------------------------|-------------------------------|
 | Windows 8.1 Pro          | GCRJD-8NW9H-F2CDX-CCM8D-9D6T9 |
 | Windows 8.1 Pro N        | HMCNV-VVBFX-7HMBH-CTY9B-B4FXY |
 | Windows 8.1 Enterprise   | MHF9N-XY6XB-WVXMC-BTDCT-MKKG7 |
 | Windows 8.1 Enterprise N | TT4HM-HN7YT-62K67-RGRQJ-JFFXW |
 
-### Windows 8
+#### Windows 8
 
-| Operating system edition | KMS Client Setup Key          |
+| Operating system edition | KMS Client Product Key        |
 |--------------------------|-------------------------------|
 | Windows 8 Pro            | NG4HW-VH26C-733KW-K6F98-J8CK4 |
 | Windows 8 Pro N          | XCVCF-2NXM9-723PB-MHCB7-2RYQQ |
 | Windows 8 Enterprise     | 32JNW-9KQ84-P47T8-D8GGY-CWCK7 |
 | Windows 8 Enterprise N   | JMNMF-RHW7P-DMY6X-RF3DR-X2BQT |
 
+#### Windows 7
 
-### Windows 7
-
-| Operating system edition | KMS Client Setup Key          |
+| Operating system edition | KMS Client Product Key        |
 |--------------------------|-------------------------------|
 | Windows 7 Professional   | FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4 |
 | Windows 7 Professional N | MRPKT-YTG23-K7D7T-X2JMM-QY7MG |
@@ -210,8 +211,3 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows 7 Enterprise     | 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH |
 | Windows 7 Enterprise N   | YDRBP-3D83W-TY26F-D46B2-XCKRJ |
 | Windows 7 Enterprise E   | C29WB-22CC8-VJ326-GHFJW-H9DH4 |
-
-
-See also
-
-• [Plan for Volume Activation](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134042(v=ws.11))
