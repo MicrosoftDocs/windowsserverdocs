@@ -1,5 +1,5 @@
 ---
-title: Key Management Services (KMS) activation planning
+title: Key Management Services (KMS) activation planning for Windows Server
 description: Learn how to plan for Key Management Services (KMS) activation in Windows Server
 ms.topic: conceptual
 author: dknappettmsft
