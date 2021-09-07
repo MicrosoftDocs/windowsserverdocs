@@ -10299,6 +10299,11 @@
       "source_path": "WindowsServerDocs/get-started/Server-Application-Compatibility.md",
       "redirect_url": "/windows-server/get-started/application-compatibility-windows-server-2016/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/maintain-servers.md",
+      "redirect_url": "/azure-stack/hci/manage/maintain-servers/",
+      "redirect_document_id": false
     }
   ]
 }
