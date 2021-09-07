@@ -121,11 +121,6 @@ Network offload and optimization technologies in Windows Server 2016 include Sof
 
 The following offload and optimization technology documentation is also available.
 
-- [Converged Network Interface Card (NIC) Configuration Guide](technologies/conv-nic/cnic-top.md)
-- [Data Center Bridging (DCB)](technologies/dcb/dcb-top.md)
-- [Virtual Receive Side Scaling (vRSS)](technologies/vrss/vrss-top.md)
-
-
 ### [Network Policy Server](technologies/nps/nps-top.md)
 
 Network Policy Server (NPS) allows you to create and enforce organization-wide network access policies for connection request authentication and authorization.

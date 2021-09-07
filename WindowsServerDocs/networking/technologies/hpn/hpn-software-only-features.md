@@ -61,7 +61,7 @@ SET is an alternative NIC Teaming solution that you can use in environments that
 
 ## Virtual Receive Side Scaling (vRSS)
 
-Software vRSS is used to spread incoming traffic destined for a VM across multiple logical processors (LPs) of the VM. Software vRSS gives the VM the ability to handle more networking traffic than a single LP would be able to handle. For more information, see [Virtual Receive Side Scaling (vRSS)](../vrss/vrss-top.md).
+Software vRSS is used to spread incoming traffic destined for a VM across multiple logical processors (LPs) of the VM. Software vRSS gives the VM the ability to handle more networking traffic than a single LP would be able to handle.
 
 ## Virtual Machine Quality of Service (vmQoS)
 
