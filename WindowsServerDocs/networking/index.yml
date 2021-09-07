@@ -123,9 +123,3 @@ landingContent:
         links:
           - text: High-Performance Networking
             url: technologies/hpn/hpn-top.md
-          - text: Converged Network Interface Card (NIC)
-            url: technologies/conv-nic/cnic-top.md
-          - text: Data Center Bridging (DCB)
-            url: technologies/dcb/dcb-top.md
-          - text: Virtual Receive Side Scaling (vRSS)
-            url: technologies/vrss/vrss-top.md

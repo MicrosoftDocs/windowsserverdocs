@@ -10271,6 +10271,81 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-top.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-single.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-datacenter.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-app-switch-config.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-app-troubleshoot.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/dcb/dcb-top.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/dcb/dcb-install.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/dcb/dcb-manage.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-top.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-plan.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-enable.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-manage.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-faq.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-wps.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-resolve-issues.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/administration/performance-tuning/subsystem/storage-spaces-direct/index.md",
       "redirect_url": "/windows-server/storage/storage-spaces/",
       "redirect_document_id": false
@@ -10298,6 +10373,11 @@
     {
       "source_path": "WindowsServerDocs/get-started/Server-Application-Compatibility.md",
       "redirect_url": "/windows-server/get-started/application-compatibility-windows-server-2016/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/maintain-servers.md",
+      "redirect_url": "/azure-stack/hci/manage/maintain-servers/",
       "redirect_document_id": false
     }
   ]
