@@ -5,7 +5,7 @@ ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
 manager: femila
-ms.date: 6/23/2021
+ms.date: 9/07/2021
 ms.prod: windows-server
 ---
 
@@ -21,31 +21,21 @@ The new security capabilities in Windows Server 2022 combine other security capa
 
 ### Secured-core server
 
-Secured-core server provides protections that are useful against sophisticated attacks and can provide increased assurance when handling mission critical data in some of the most data sensitive industries.  It is built on three key pillars: simplified security, advanced protection, and preventative defense.
+Certified Secured-core server hardware from an OEM partner provides additional security protections that are useful against sophisticated attacks. This can provide increased assurance when handling mission critical data in some of the most data sensitive industries.  A Secured-core server uses hardware, firmware, and driver capabilities to enable advanced Windows Server security features. Many of these features are available in [Windows Secured-core PCs](/windows-hardware/design/device-experiences/oem-highly-secure) and are now also available with Secured-core server hardware and Windows Server 2022.
 
-#### Simplified security
+#### Hardware root-of-trust
 
-When you buy hardware from an OEM for Secured-core server, you have assurance that the OEM has provided a set of hardware, firmware, and drivers that satisfy the Secured-core promise. Windows Server systems will have easy configuration experiences in the Windows Admin Center to enable the security features of Secured-core.
+Trusted Platform Module 2.0 (TPM 2.0) secure crypto-processor chips provide a secure, hardware-based store for sensitive cryptographic keys and data, including systems integrity measurements. [TPM 2.0](/windows/security/information-protection/tpm/trusted-platform-module-top-node) can verify that the server has been started with legitimate code and can be trusted by subsequent code execution. This is known as a hardware root-of-trust and is used by features such as [BitLocker drive encryption.](/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10)
 
-#### Advanced protection
+#### Firmware protection
 
-Secured-core servers use hardware, firmware, and operating system capabilities to the fullest extent to provide protection against current and future threats. The protections enabled by a Secured-core server are targeted to create a secure platform for critical applications and data used on that server. The Secured-core functionality spans the following areas:
+Firmware executes with high privileges and is often invisible to traditional anti-virus solutions, which has lead to a rise in the number of firmware-based attacks. Secured-core server processors support measurement and verification of boot processes with [Dynamic Root of Trust for Measurement (DRTM) technology](/windows/security/threat-protection/windows-defender-system-guard/how-hardware-based-root-of-trust-helps-protect-windows#secure-launchthe-dynamic-root-of-trust-for-measurement-drtm) and isolation of driver access to memory with [Direct Memory Access (DMA) protection.](/windows/security/information-protection/kernel-dma-protection-for-thunderbolt)
 
-* **Hardware root-of-trust**
+#### Virtualization-based security (VBS)
 
-  Trusted Platform Module 2.0 (TPM 2.0) come standard with servers capable of using Secured-core servers. TPM 2.0 provides a secure store for sensitive keys and data, such as measurements of the components loaded during boot. This hardware root-of-trust raises the protection provided by capabilities like BitLocker, which uses TPM 2.0 and facilitates creating attestation-based workflows that can be incorporated into zero-trust security strategies.
+Secured-core servers support virtualization-based security (VBS) and hypervisor-based code integrity (HVCI). [VBS](/windows-hardware/design/device-experiences/oem-vbs) uses hardware virtualization features to create and isolate a secure region of memory from the normal operating system, protecting against an entire class of vulnerabilities used in cryptocurrency mining attacks. VBS also allows for the use of  [Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-how-it-works), where user credentials and secrets are stored in a virtual container that the operating system cannot access directly. 
 
-* **Firmware protection**
-
-  There is a clear rise in security vulnerabilities being reported in the firmware space given the high privileges that firmware runs with and the relative opacity of what happens in firmware to traditional anti-virus solutions. Recent reports show that malware and ransomware platforms are adding firmware capabilities raising the risk of firmware attacks that have already been seen targeting enterprise resources like Active Directory domain controllers. Using processor support for Dynamic Root of Trust of Measurement (DRTM) technology, along with DMA protection, Secured-core systems isolate the security critical hypervisor from attacks such as this.
-
-* **Virtualization-based security (VBS)**
-
-  Secured-core servers support VBS and hypervisor-based code integrity (HVCI). VBS and HVCI protect against the entire class of vulnerabilities used in cryptocurrency mining attacks given the isolation VBS provides between the privileged parts of the operating system such as the kernel and the rest of the system. VBS also provides more capabilities that customers can enable, such as Credential Guard, which better protects domain credentials.
-
-#### Preventative defense
-
-Enabling Secured-core functionality helps proactively defend against and disrupt many of the paths attackers may use to exploit a system. This set of defenses also enables IT and SecOps teams better utilize their time across the many areas that need their attention.
+[HVCI](/windows-hardware/design/device-experiences/oem-hvci-enablement) uses VBS to significantly strengthen code integrity policy enforcement, including kernel mode integrity which checks all kernel mode drivers and binaries in a virtualized environment before they are started, preventing unsigned drivers or system files from being loaded into system memory.
 
 ### Secure connectivity
 
