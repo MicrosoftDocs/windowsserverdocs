@@ -21,7 +21,7 @@ There are some scenarios, however, where you will need to add the GVLK to the co
 - If the computer was previously a KMS host.
 
 > [!IMPORTANT]
-> To use the keys listed here (which are GVLKs), you must first have a KMS host available on your local network. If you don't already have a KMS host, please see [Deploy KMS Activation](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502531(v=ws.11)) for steps to set one up.
+> To use the keys listed here (which are GVLKs), you must first have a KMS host available on your local network. If you don't already have a KMS host, please see [Deploy KMS Activation](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502531(v=ws.11)) to learn how to set one up.
 >
 > If you want to activate Windows without a KMS host available and outside of a volume-activation scenario (for example, you're trying to activate a retail version of Windows client), **these keys will not work**. You will need to use another method of activating Windows, such as using a MAK, or purchasing a retail license. Get help to [find your Windows product key](https://support.microsoft.com/help/10749/windows-product-key) and learn about [genuine versions of Windows](https://support.microsoft.com/help/15087/windows-genuine).
 
@@ -41,7 +41,7 @@ slmgr /ipk WX4NM-KYWYW-QJJR4-XV3QB-6VM33
 
 ## Generic Volume License Keys (GVLK)
 
-In the tables that follow, you will fine the GVLKs for each version and edition of Windows. LTSC is *Long-Term Servicing Channel*, while LTSB is *Long-Term Servicing Branch*.
+In the tables that follow, you will find the GVLKs for each version and edition of Windows. LTSC is *Long-Term Servicing Channel*, while LTSB is *Long-Term Servicing Branch*.
 
 ### Windows Server (LTSC versions)
 
