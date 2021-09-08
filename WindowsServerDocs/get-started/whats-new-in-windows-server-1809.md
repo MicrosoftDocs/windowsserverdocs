@@ -30,7 +30,8 @@ Simple buses can be assigned to process-isolated Windows Server containers.
 Applications running in containers that need to talk over SPI, I2C, GPIO, and UART/COM are now able to do so.
 
 ## Additional features
-In addition to features that are new in Windows Server version 1809, the following new features and capabilities for [Windows Server 2019](../get-started-19/get-started-19.md) also apply to Windows Server version 1809:
+
+In addition to features that are new in Windows Server version 1809, the following new features and capabilities for [Windows Server 2019](../get-started/whats-new-in-windows-server-2019.md) also apply to Windows Server version 1809:
 
 * Container improvements
 * HTTP/2
@@ -38,7 +39,7 @@ In addition to features that are new in Windows Server version 1809, the followi
 * Linux containers on Windows
 * [Low Extra Delay Background Transport (LEDBAT)](https://techcommunity.microsoft.com/t5/networking-blog/bg-p/NetworkingBlog)
 * Network performance improvements for virtual workloads
-* [Server Core App Compatibility feature on demand (FOD)](../get-started-19/install-fod-19.md)
+* [Server Core App Compatibility Feature on Demand (FOD)](../get-started/server-core-app-compatibility-feature-on-demand.md)
 * [Storage Migration Service (SMS)](../storage/whats-new-in-storage.md#storage-spaces-direct)
 * Storage Replica
 * System Insights
