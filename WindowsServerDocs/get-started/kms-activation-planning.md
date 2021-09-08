@@ -62,7 +62,7 @@ The following table summarizes KMS host and client versions for networks that in
 
 Depending on which operating system your KMS host is running and which operating systems you want to activate, you might need to install one or more of the updates below. This is required when you want to activate a version of Windows that is newer than the version your KMS host is running.
 
->[!TIP]
+>[!NOTE]
 >The updates listed below are the minimum required. Where later cumulative updates or monthly rollups are listed as an option, please install the latest available version for your operating system to benefit from additional security and other fixes.
 
 | KMS host OS version | KMS client OS version(s) to activate | Required update |
