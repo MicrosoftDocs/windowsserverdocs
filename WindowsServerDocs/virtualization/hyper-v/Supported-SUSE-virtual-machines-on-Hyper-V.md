@@ -1,13 +1,13 @@
 ---
-title: Supported SUSE virtual machines on Hyper-V
-description: Lists the SUSE/Linux integration services and features included in each version
+title: Supported SLES virtual machines on Hyper-V
+description: Lists the SLES/Linux integration services and features included in each version
 ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 01/08/2021
 ---
-# Supported SUSE virtual machines on Hyper-V
+# Supported SLES virtual machines on Hyper-V
 
 >Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
