@@ -737,7 +737,7 @@ dnscmd [<servername>] /zonedelete <zonename> [/dsdel] [/f]
 
 ## dnscmd /zoneexport command
 
-Creates a text file that lists the resource records of a specified zone. The **zoneexport** operation creates a file of resource records for an active directory integrated zone for troubleshooting purposes. By default, the file that this command creates is placed in the DNS directory, which is by default the `%systemroot%/System32/Dns` directory.
+Creates a text file that lists the resource records of a specified zone. The **zoneexport** operation creates a file of resource records for an active directory integrated zone for troubleshooting purposes. By default, the file that this command creates is placed in the DNS directory, which is by default the `%systemroot%\System32\Dns` directory.
 
 ### Syntax
 
