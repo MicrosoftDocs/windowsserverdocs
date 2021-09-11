@@ -23,7 +23,7 @@ This data store, also known as the directory, contains information about Active 
 Security is integrated with Active Directory through logon authentication and access control to objects in the directory. With a single network logon, administrators can manage directory data and organization throughout their network, and authorized network users can access resources anywhere on the network. Policy-based administration eases the management of even the most complex network. For more information about Active Directory security, see [Security overview](../../plan/security-best-practices/best-practices-for-securing-active-directory.md).
 
 Active Directory also includes:
-* A set of rules, **the schema**, that defines the classes of objects and attributes contained in the directory, the constraints and limits on instances of these objects, and the format of their names. For more information about the schema, see Schema.
+* A set of rules, **the schema**, that defines the classes of objects and attributes contained in the directory, the constraints and limits on instances of these objects, and the format of their names. For more information about the schema, see [Schema](/previous-versions/windows/it-pro/windows-server-2003/cc756876(v=ws.10)).
 
 
 * A **global catalog** that contains information about every object in the directory. This allows users and administrators to find directory information regardless of which domain in the directory actually contains the data. For more information about the global catalog, see The role of the global catalog.
