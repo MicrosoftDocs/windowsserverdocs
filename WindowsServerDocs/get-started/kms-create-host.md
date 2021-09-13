@@ -98,6 +98,8 @@ You should also disable publishing on all KMS hosts if your DNS service does not
 > [!TIP]
 > Manually created resource records can also coexist with resource records that KMS hosts automatically publish in other domains as long as all records are maintained to prevent conflicts.
 
+### Disable publishing of DNS records
+
 To disable publishing of DNS records by the KMS host:
 
 1. Launch the Volume Activation Tools wizard by running:
