@@ -77,7 +77,7 @@ You will need:
    :::image type="content" source="media/activation/kms-host-configure.png" alt-text="Configure Key Management Service options":::
 
 > [!NOTE]
-> For the KMS host to begin activating KMS clients, a network must have a minimum number of computers (called the activation threshold). KMS hosts count the most recent connections. When a client or server contacts the KMS host, the host adds the machine ID to its count and then returns the current count value in its response. The client or server will activate if the count is high enough. Clients will activate if the count is 25 or higher. Servers and volume editions of Microsoft Office products will activate if the count is five or greater. The KMS only counts unique connections from the past 30 days, and only stores the 50 most recent contacts.
+> You can now start [activating KMS clients](kms-client-activation-keys.md), however a network must have a minimum number of computers (called the activation threshold). KMS hosts count the number of recent connections and so when a client or server contacts the KMS host, the host adds the machine ID to its count and then returns the current count value in its response. The client or server will activate if the count is high enough. Windows clients will activate if the count is 25 or higher. Windows Server and volume editions of Microsoft Office products will activate if the count is five or greater. The KMS only counts unique connections from the past 30 days, and only stores the 50 most recent contacts.
 
 ## Manually create DNS records
 
