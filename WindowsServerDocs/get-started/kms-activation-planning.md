@@ -31,6 +31,10 @@ KMS activations are valid for 180 days, a period known as the activation validit
 
 A single KMS host can support an unlimited number of KMS clients. If you have more than 50 clients, we recommend that you have at least two KMS hosts in case one of your KMS hosts becomes unavailable. Most organizations can operate with as few as two KMS hosts for their entire infrastructure.
 
+After the first KMS host is activated, the CSVLK that is used on the first host can be used to activate up to five more KMS hosts on your network for a total of six. After a KMS host is activated, administrators can reactivate the same host up to nine times with the same key.
+
+If your organization needs more than six KMS hosts, you can request additional activations for your organization's CSVLK - for example, if you have 10 physical locations under one volume licensing agreement and you want each location to have a local KMS host. To request this exception, please contact your local [Microsoft Activation Center](https://www.microsoft.com/licensing/existing-customer/activation-centers).
+
 Computers that are running volume licensing editions of Windows Server and Windows client are, by default, KMS clients with no extra configuration needed.
 
 If you are converting a computer from a KMS host, MAK, or retail edition of Windows to a KMS client, you will need to install the applicable KMS client setup key. For more information, see [KMS client setup keys](../get-started/kms-client-activation-keys.md).
@@ -39,9 +43,7 @@ If you are converting a computer from a KMS host, MAK, or retail edition of Wind
 
 KMS activation requires TCP/IP connectivity. KMS hosts and clients are configured by default to use Domain Name System (DNS). KMS hosts use DNS dynamic updates to automatically publish the information that KMS clients need to find and connect to them. You can accept these default settings, or if you have special network and security configuration requirements, you can manually configure KMS hosts and clients.
 
-After the first KMS host is activated, the CSVLK that is used on the first host can be used to activate up to five more KMS hosts on your network for a total of six. After a KMS host is activated, administrators can reactivate the same host up to nine times with the same key.
-
-If your organization needs more than six KMS hosts, you can request additional activations for your organization's CSVLK - for example, if you have 10 physical locations under one volume licensing agreement and you want each location to have a local KMS host. To request this exception, please contact your local [Microsoft Activation Center](https://www.microsoft.com/licensing/existing-customer/activation-centers).
+By default, a KMS host is configured to use TCP on port 1688.
 
 ## Activation versions
 
