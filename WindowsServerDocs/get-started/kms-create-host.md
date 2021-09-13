@@ -81,7 +81,7 @@ You will need:
 
 ## Manually create DNS records
 
-If your DNS service does not support dynamic update, the resource records must be manually created to publish the KMS host. Create DNS resource records for KMS manually with the information below (altering the default port number if you changed this in the KMS host configuration):
+If your DNS service does not support dynamic update, the resource records must be manually created to publish the KMS host. Create DNS resource records for KMS manually with your DNS service using the information below (altering the default port number if you changed this in the KMS host configuration):
 
 | Property | Value |
 |--|--|
