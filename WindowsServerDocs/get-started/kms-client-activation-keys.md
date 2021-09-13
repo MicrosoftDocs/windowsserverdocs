@@ -1,16 +1,16 @@
 ---
-title: Key Management Services (KMS) client product keys for Windows Server and Windows
+title: Key Management Services (KMS) client activation and product keys for Windows Server and Windows
 description: Get the product keys needed for setup and activation of Windows Server and other Windows products from a KMS host server.
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
 manager: femila
-ms.date: 9/7/2021
+ms.date: 9/13/2021
 ms.prod: windows-server
 ms.localizationpriority: medium
 ---
 
-# Key Management Services (KMS) client product keys
+# Key Management Services (KMS) client activation and product keys
 
 To use KMS, you need to have a KMS host available on your local network. Computers that activate with a KMS host need to have a specific product key. This key is sometimes referred to as the KMS client key, but it is formally known as a Microsoft Generic Volume License Key (GVLK). Computers that are running volume licensing editions of Windows Server and Windows client are, by default, KMS clients with no extra configuration needed as the relevant GVLK is already there.
 
@@ -21,7 +21,7 @@ There are some scenarios, however, where you will need to add the GVLK to the co
 - If the computer was previously a KMS host.
 
 > [!IMPORTANT]
-> To use the keys listed here (which are GVLKs), you must first have a KMS host available on your local network. If you don't already have a KMS host, please see [Deploy KMS Activation](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502531(v=ws.11)) to learn how to set one up.
+> To use the keys listed here (which are GVLKs), you must first have a KMS host available on your local network. If you don't already have a KMS host, please see how to [create a KMS host](kms-create-host.md) to learn more.
 >
 > If you want to activate Windows without a KMS host available and outside of a volume-activation scenario (for example, you're trying to activate a retail version of Windows client), **these keys will not work**. You will need to use another method of activating Windows, such as using a MAK, or purchasing a retail license. Get help to [find your Windows product key](https://support.microsoft.com/help/10749/windows-product-key) and learn about [genuine versions of Windows](https://support.microsoft.com/help/15087/windows-genuine).
 
