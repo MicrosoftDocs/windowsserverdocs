@@ -19,7 +19,16 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.2322        |1.2.1672                  |
-|Insider    |1.2.2319        |1.2.1672                  |
+|Insider    |1.2.2452        |1.2.1672                  |
+
+## Updates for version 1.2.2452 (Insider)
+
+*Date published: 09/14/2021*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Fixed an issue that caused the client to prompt for credentials a second time after canceling during subscription.
 
 ## Updates for version 1.2.2322
 
