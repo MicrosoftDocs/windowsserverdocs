@@ -18,7 +18,7 @@ KMS uses a client-server model to active Windows clients and is used for volume 
 
 A single KMS host can support an unlimited number of KMS clients. If you have more than 50 clients, we recommend that you have at least two KMS hosts in case one of your KMS hosts becomes unavailable. Most organizations can operate with as few as two KMS hosts for their entire infrastructure.
 
-KMS hosts do not need to be dedicated servers, and KMS can be cohosted with other services. You can run a KMS host on any physical or virtual system that is running a supported Windows Server or Windows client operating system.
+KMS hosts do not need to be dedicated servers, and KMS can be co-hosted with other services. You can run a KMS host on any physical or virtual system that is running a supported Windows Server or Windows client operating system.
 
 The version of Windows you use for your KMS host determines the version of Windows you can activate for your KMS clients. Please see the [table of activation versions](kms-activation-planning.md#activation-versions) to help you decide which is right for your environment.
 
@@ -81,12 +81,24 @@ You will need:
 
 ## Manually create DNS records
 
-If your DNS service does not support dynamic update, the resource records must be manually created to publish the KMS host.  If this is the case, you should disable publishing on all KMS hosts to prevent event logs from collecting failed DNS publishing events.
+If your DNS service does not support dynamic update, the resource records must be manually created to publish the KMS host. Create DNS resource records for KMS manually with the information below (altering the default port number if you changed this in the KMS host configuration):
+
+| Property | Value |
+|--|--|
+| Type | SRV |
+| Service/Name | _vlmcs |
+| Protocol | _tcp |
+| Priority | 0 |
+| Weight | 0 |
+| Port number | 1688 |
+| Hostname | *FQDN of the KMS host* |
+
+You should also disable publishing on all KMS hosts if your DNS service does not support dynamic update to prevent event logs from collecting failed DNS publishing events.
 
 > [!TIP]
 > Manually created resource records can also coexist with resource records that KMS hosts automatically publish in other domains as long as all records are maintained to prevent conflicts.
 
-To disable publishing of DNS records:
+To disable publishing of DNS records by the KMS host:
 
 1. Launch the Volume Activation Tools wizard by running:
 
@@ -105,15 +117,3 @@ To disable publishing of DNS records:
 1. Uncheck the box for publish DNS records, then select **Commit**.
 
    :::image type="content" source="media/activation/kms-host-configure-publish.png" alt-text="Uncheck the box for publish DNS records":::
-
-To create DNS resource records for KMS manually, include the information below (altering the default port number if you changed this in the KMS host configuration):
-
-| Property | Value |
-|--|--|
-| Type | SRV |
-| Service/Name | _vlmcs |
-| Protocol | _tcp |
-| Priority | 0 |
-| Weight | 0 |
-| Port number | 1688 |
-| Hostname | *FQDN of the KMS host* |
