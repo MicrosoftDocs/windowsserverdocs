@@ -14,6 +14,9 @@ Remote Desktop Services (RDS) built on Windows Server 2016 is a virtualization p
 
 Also be sure to check out our session from Ignite 2016: [Harness RDS improvements in Windows Server 2016](https://channel9.msdn.com/Events/Ignite/2016/BRK3098). In this video, the product team reviews all of the new and improved features in Remote Desktop Services, including vGPU support.
 
+## Remote Desktop IP Virtualization on Windows Server 2019
+If you want to use IP virtualization on Windows Server 2019, please follow [these steps](/support/windows-server/remote/remote-desktop-ip-virtualization).
+
 ## App Compatibility - Windows Server 2016 and Windows 10
 Built on the same foundation of Windows 10, Windows Server 2016 not only has the same look and feel you expect out of a desktop but can also run many of the same applications. Pairing Windows Server 2016 with the graphics capabilities (below) gives you an environment for all users to be productive.
 
