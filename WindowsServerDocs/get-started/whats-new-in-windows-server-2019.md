@@ -36,7 +36,7 @@ System Insights is a new feature available in Windows Server 2019 that brings lo
 
 ### Server Core App Compatibility Feature on Demand
 
-The [Server Core App Compatibility Feature on Demand (FOD)](../get-started-19/install-fod-19.md) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.
+The [Server Core App Compatibility Feature on Demand (FOD)](../get-started/server-core-app-compatibility-feature-on-demand.md) significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and components from Windows Server with the Desktop Experience, without adding the Windows Server Desktop Experience graphical environment itself.  This is done to increase the functionality and compatibility of Server Core while keeping it as lean as possible.
 
 This optional feature on demand is available on a separate ISO and can be added to Windows Server Core installations and images only, using DISM.
 
