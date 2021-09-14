@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/24/2021
+ms.date: 09/14/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -19,7 +19,17 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.2322        |1.2.1672                  |
-|Insider    |1.2.2319        |1.2.1672                  |
+|Insider    |1.2.2453        |1.2.1672                  |
+
+## Updates for version 1.2.2453 (Insider)
+
+*Date published: 09/14/2021*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Fixed an issue that caused the client to prompt for credentials a second time after closing a credential prompt window while subscribing.
+- Fixed an issue in Teams for Azure Virtual Desktop that made the video screen turn black and crash during calls in the Chrome browser.
 
 ## Updates for version 1.2.2322
 
