@@ -35,7 +35,6 @@ Scheduled tasks:
 1. \Microsoft\XblGameSave\XblGameSaveTask
 2. \Microsoft\XblGameSave\XblGameSaveTaskLogon
 
-You can also access the information on all services detailed in this article by viewing the attached Microsoft Excel spreadsheet: [Guidance on Disabling System Services on Windows Server 2016 with Desktop Experience](https://msdnshared.blob.core.windows.net/media/2017/05/Service-management-WS2016.xlsx))
 
 ### Disabling services not installed by default
 
