@@ -18,7 +18,7 @@ This article describes some of the new features covering both Windows Server, ve
 
 Windows Server, version 1909 is focused on reliability, performance, and other general improvements, but has no new features. Like other Semi-Annual Channel releases, it’s supported for 18 months from its first availability. For more information on the support dates of Semi-Annual Channel releases, see [Windows Server release information](../get-started/windows-server-release-info.md).
 
-The system requirements for this release are the same as for Windows Server 2019, for more information see [System requirements](../get-started-19/sys-reqs-19.md) . To see what's been removed recently, see [Features Removed or Planned for Replacement starting with Windows Server, version 1903 and version 1909](../get-started-19/removed-features-1903.md)
+The system requirements for this release are the same as for Windows Server 2019, for more information see [hardware requirements](../get-started/hardware-requirements.md) . To see what's been removed recently, see [Features Removed or Planned for Replacement starting with Windows Server, version 1903 and version 1909](../get-started/removed-deprecated-features-windows-server-1903-1909.md)
 
 > [!NOTE]
 > Windows containers must use the same version of Windows as the host server, or an **earlier** version. For example, a host server running the released version of Windows Server, version 1903 (build 18342) can run Windows Server containers with the same or earlier version and build number (even if the container uses an Insider Preview version of Windows). For more information, see [Windows container version compatibility](/virtualization/windowscontainers/deploy-containers/version-compatibility).
@@ -44,7 +44,7 @@ We added more examples and compatibility information to the [Group Managed Servi
 
 As you might know, we recommend using the Server Core installation option when using Windows Server, Semi-Annual Channel in production. However, Server Core by default omits several useful management tools. You can add many of the most commonly used tools by installing the App Compatibility Feature on Demand feature package, but previously there were some key tools missing.
 
-Based on customer feedback, we added two more tools to the App Compatibility Feature on Demand feature package in this version: Task Scheduler (taskschd.msc) and Hyper-V Manager (virtmgmt.msc). For more information, see [Server Core App Compatibility Feature on Demand](../get-started-19/install-fod-19.md).
+Based on customer feedback, we added two more tools to the App Compatibility Feature on Demand feature package in this version: Task Scheduler (taskschd.msc) and Hyper-V Manager (virtmgmt.msc). For more information, see [Server Core App Compatibility Feature on Demand (FOD)](../get-started/server-core-app-compatibility-feature-on-demand.md).
 
 ## Storage Migration Service now migrates local accounts, clusters, and Linux servers
 

@@ -212,7 +212,7 @@ sections:
       - question: |
           How can I change the AD FS service account?
         answer: |
-          To change the AD FS service account, follow the instructions using the AD FS toolbox [Service Account Powershell Module](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule).
+          To change the AD FS service account, follow the instructions using the AD FS toolbox [Service Account PowerShell Module](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule).
           
       - question: |
           How can I configure browsers to use Windows Integrated Authentication (WIA) with AD FS?
@@ -374,7 +374,7 @@ sections:
       - question: |
           I am seeing an "Event 441: A token with a bad token binding key was found." What should I do to resolve this?
         answer: |
-          In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following Powershell command and remove token binding support.
+          In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following PowerShell command and remove token binding support.
           
           `Set-AdfsProperties -IgnoreTokenBinding $true`
           
@@ -389,13 +389,19 @@ sections:
           With ESL enabled, AD FS tracks the account activity and known locations for users in the ADFSArtifactStore database. This database scales in size relative to the number of users and known locations tracked. When planning to enable ESL, you can estimate the size for the ADFSArtifactStore database to grow at a rate of up to 1GB per 100,000 users. If the AD FS farm is using the Windows Internal Database (WID), the default location for the database files is C:\Windows\WID\Data. To prevent filling this drive, ensure you have a minimum of 5GB of free storage before enabling ESL. In addition to disk storage, plan for total process memory to grow after enabling ESL by up to an additional 1GB of RAM for user populations of 500,000 or less.
           
       - question: |
-          I am seeing Event 570 (Active Directory trust enumeration was unable to enumerate one of more domains due to the following error. Enumeration will continue but the Active Directory identifier list may not be correct. Validate that all expected Active Directory identifiers are present by running Get-ADFSDirectoryProperties) on AD FS 2019. What is the mitigation for this event?
+          I am seeing Event ID 570 "Active Directory trust enumeration was unable to enumerate one of more domains due to the following error. Enumeration will continue but the Active Directory identifier list may not be correct. Validate that all expected Active Directory identifiers are present by running Get-ADFSDirectoryProperties" on AD FS 2019. What is the mitigation for this event?
         answer: |
           This event occurs when forests are not trusted when AD FS attempts to enumerate all the forests in a chain of trusted forests and connect across all the forests. For example, if the AD FS Forest A and Forest B are trusted, and Forest B and Forest C are trusted, AD FS will enumerate all three forests and attempt to find a trust between Forest A and C. If users from the failing forest should be authenticated by AD FS, set up a trust between the AD FS forest and the failing forest. If the users from the failing forest should not be authenticated by AD FS, this error should be ignored.
 
       - question: |
-          I am seeing an "Event ID 364: Microsoft.IdentityServer.AuthenticationFailedException: MSIS5015: Authentication of the presented token failed. Token Binding claim in token must match the binding provided by the channel." What should I do to resolve this?
+          I am seeing an Event ID 364 "Microsoft.IdentityServer.AuthenticationFailedException: MSIS5015: Authentication of the presented token failed. Token Binding claim in token must match the binding provided by the channel". What should I do to resolve this?
         answer: |
-          In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following Powershell command and remove token binding support.
+          In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following PowerShell command and remove token binding support.
           
           `Set-AdfsProperties -IgnoreTokenBinding $true`
+         
+      - question: |
+          I am seeing an Event ID 543 "System.ServiceModel.FaultException: The formatter threw an error while trying to deserialize the message: There was an error while trying to deserialize parameter schemas.microsoft.com/ws/2009/12/identityserver/protocols/policystore:maxBehaviorLevel". The InnerException message was "Invalid enum value 'Win2019' cannot be deserialized into type 'Microsoft.IdentityServer.FarmBehavior'. Ensure that the necessary enum values are present and are marked with EnumMemberAttribute attribute if the type has DataContractAttribute attribute".
+          What is the mitigation for this event?
+        answer: |
+          The message above is expected when you have a mixed mode farm and AD FS 2019 provides the farm max behavior level information to the primary federation server and is not recognized by federation server version 2016. AD FS 2019 keeps trying to share in the farm the MaxBehaviorLevel value 'Win2019' until it becomes stale after 2 months and is automatically removed from the farm. To avoid receiving this message, migrate the primary federation role to the federation server with the latest version with instructions in this document https://docs.microsoft.com/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server?source=docs#to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level.
