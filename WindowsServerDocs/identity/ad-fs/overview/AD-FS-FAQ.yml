@@ -211,7 +211,7 @@ sections:
       - question: |
           How can I change the AD FS service account?
         answer: |
-          To change the AD FS service account, follow the instructions using the AD FS toolbox [Service Account Powershell Module](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule).
+          To change the AD FS service account, follow the instructions using the AD FS toolbox [Service Account PowerShell Module](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule).
           
       - question: |
           How can I configure browsers to use Windows Integrated Authentication (WIA) with AD FS?
@@ -373,7 +373,7 @@ sections:
       - question: |
           I am seeing an "Event 441: A token with a bad token binding key was found." What should I do to resolve this?
         answer: |
-          In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following Powershell command and remove token binding support.
+          In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following PowerShell command and remove token binding support.
           
           `Set-AdfsProperties -IgnoreTokenBinding $true`
           
@@ -395,7 +395,7 @@ sections:
       - question: |
           I am seeing an Event ID 364 "Microsoft.IdentityServer.AuthenticationFailedException: MSIS5015: Authentication of the presented token failed. Token Binding claim in token must match the binding provided by the channel". What should I do to resolve this?
         answer: |
-          In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following Powershell command and remove token binding support.
+          In AD FS 2016, token binding is automatically enabled and causes multiple known issues with proxy and federation scenarios which result in this error. To resolve this, run the following PowerShell command and remove token binding support.
           
           `Set-AdfsProperties -IgnoreTokenBinding $true`
          
