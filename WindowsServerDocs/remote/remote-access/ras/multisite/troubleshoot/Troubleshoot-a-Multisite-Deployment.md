@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Troubleshoot a Multisite Deployment
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to troubleshoot the most common errors that may occur when configuring a multisite Remote Access deployment.
 

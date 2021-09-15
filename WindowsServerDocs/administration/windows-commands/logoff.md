@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # logoff
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Logs off a user from a session on a Remote Desktop Session Host server and deletes the session.
 

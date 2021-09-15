@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Configure Network Policies
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to configure network policies in NPS.
 

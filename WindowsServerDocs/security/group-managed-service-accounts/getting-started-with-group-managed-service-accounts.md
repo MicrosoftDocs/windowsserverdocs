@@ -10,7 +10,7 @@ ms.date: 10/12/2016
 ---
 # Getting Started with Group Managed Service Accounts
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 This guide provides step-by-step instructions and background information for enabling and using group Managed Service Accounts in  Windows Server 2012 .

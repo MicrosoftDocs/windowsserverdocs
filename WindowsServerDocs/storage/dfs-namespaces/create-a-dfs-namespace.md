@@ -9,7 +9,7 @@ ms.author: jgerend
 ---
 # Create a DFS namespace
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 To create a new namespace, you can use Server Manager to create the namespace when you install the DFS Namespaces role service. You can also use the [New-DfsnRoot cmdlet](/powershell/module/dfsn/new-dfsnroot) from a Windows PowerShell session.
 

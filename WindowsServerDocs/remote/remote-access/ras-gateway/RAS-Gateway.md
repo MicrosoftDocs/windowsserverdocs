@@ -11,7 +11,7 @@ ms.date: 05/23/2018
 
 # RAS Gateway
 
-> Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 RAS Gateway is a software router and gateway that you can use in either single tenant mode or multitenant mode.
 

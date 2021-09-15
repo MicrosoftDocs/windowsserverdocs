@@ -11,7 +11,7 @@ ms.topic: article
 
 # Install a New Windows Server 2012 Active Directory Child or Tree Domain (Level 200)
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains how to add child and tree domains to an existing Windows Server 2012 forest, using Server Manager or Windows PowerShell.
 

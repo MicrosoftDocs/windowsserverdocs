@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Add a DNS Resource Record
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to add one or more new DNS resource records by using the IPAM client console.
 

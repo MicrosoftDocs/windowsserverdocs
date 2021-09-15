@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # View DNS Resource Records for a Specific IP Address
 
->Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to view the DNS resource records that are associated with the IP Address that you choose.
 

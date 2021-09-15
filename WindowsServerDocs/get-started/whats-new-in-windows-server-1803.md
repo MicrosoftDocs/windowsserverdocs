@@ -10,7 +10,7 @@ ms.date: 05/07/2018
 
 # What's New in Windows Server version 1803
 
-> Applies To: Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server (Semi-Annual Channel)
 
 <img src=../media/landing-icons/new.png style='float:left; padding:.5em;' alt=Icon showing a newspaper>&nbsp;To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server, version 1803. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server Semi-Annual Channel update](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update/).
 

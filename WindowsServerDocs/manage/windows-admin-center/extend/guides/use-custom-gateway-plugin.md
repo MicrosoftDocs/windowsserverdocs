@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Use a custom gateway plugin in your tool extension
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 In this article, we will use a custom gateway plugin in a new, empty tool extension we have created with the Windows Admin Center CLI.
 

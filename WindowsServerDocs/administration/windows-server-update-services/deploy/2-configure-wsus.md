@@ -11,7 +11,7 @@ ms.date: 9/18/2020
 
 # Step 2: Configure WSUS
 
-> Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 After installing the WSUS server role on your server, you need to properly configure it. The following checklist summarizes the steps involved in performing the initial configuration for your WSUS server.
 
@@ -323,6 +323,9 @@ Because waiting for detection to start can be a time-consuming process, you can 
 ## 2.5. Secure WSUS with the Secure Sockets Layer Protocol
 
 You can use the Secure Sockets Layer (SSL) protocol to help secure the WSUS deployment. WSUS uses SSL to authenticate client computers and downstream WSUS servers to the WSUS server. WSUS also uses SSL to encrypt update metadata.
+
+> [!WARNING]
+> Securing WSUS using the SSL protocol is very important for the security of your network. If your WSUS server does not properly use SSL to secure its update metadata connections, then an attacker may be able to modify the metadata as it's sent from the server to the client computers. **This will allow the attacker to install malicious software on client computers.**
 
 > [!IMPORTANT]
 > Clients and downstream servers that are configured to use Transport Layer Security (TLS) or HTTPS must also be configured to use a fully qualified domain name (FQDN) for their upstream WSUS server.

@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # STEP 4 Configure APP1
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Configure static IPv6 addressing and gateway settings to enable APP1 access to the 2-Corpnet subnet.
 

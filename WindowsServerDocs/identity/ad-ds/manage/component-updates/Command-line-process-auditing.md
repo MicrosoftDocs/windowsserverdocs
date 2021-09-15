@@ -11,7 +11,7 @@ ms.topic: article
 
 # Command line process auditing
 
->Applies To: Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 

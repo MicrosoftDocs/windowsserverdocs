@@ -12,7 +12,7 @@ ms.topic: conceptual
 
 # What is the Server Core installation option in Windows Server?
 
-> Applies to: Windows Server 2019, Windows Server 2016, and Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The Server Core option is a minimal installation option that is available when you are deploying the Standard or Datacenter edition of Windows Server. Server Core includes most but not all server roles. Server Core has a smaller disk footprint, and therefore a smaller attack surface due to a smaller code base.
 
@@ -39,7 +39,25 @@ In addition to no UI, Server Core also differs from the Server with Desktop Expe
 - No OOBE (out-of-box-experience) for setting up Server Core
 - No audio support
 
-The following table shows which applications are available *locally* on Server Core vs Server with Desktop Experience. **Important**: In most cases, applications that are listed as "not available" below can be run remotely from a Windows client computer and used to manage your Server Core installation.
+The following table shows which applications are available *locally* on Server Core vs Server with Desktop Experience. **Important**: In most cases, applications that are listed as "not available" below can be run remotely from a Windows client computer or [Windows Admin Center](../../manage/windows-admin-center/overview.md) to manage your Server Core installation. 
+
+### Versioning and Downloads of Feature on Demand for Server Core
+
+The list below reflects the FoD level as of Version 1809 (Server 2019 LTSC). 
+You can greatly enchance your Server Core compatibility by applying a FoD package, newer than 1809.
+
+#### Download locations
+
+Later Windows Server (SAC) FoD can be obtained from your specific [MS Licensing Center](https://businessaccount.microsoft.com/), if you have got active Software Assurance.
+You'll need a Microsoft Work or School Account enrolled to VLSC or Business Center to access the FoD download.
+
+Alternatively, you might have access to a [Visual Studio Subscription](https://my.visualstudio.com/).
+You'll need a Microsoft Home, Work or School account, enrolled to an active Visual Studio subscription, to access the FoD download.
+
+Latest Server Insider FoD. This is downloadable at the [Server Insider webpage](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver). 
+You'll need a Microsoft Home, Work or School account, enrolled to the Insider Program, to access the FoD download.
+
+### Feature on Demand - available features in Feature on Demand Package 1809
 
 > [!NOTE]
 > This list is intended for quick reference - it is not intended to be a complete list.

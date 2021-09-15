@@ -9,7 +9,7 @@ ms.date: 06/24/2021
 
 # pktmon etl2pcap
 
-> Applies to: Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
 Convert pktmon log file to pcapng format. Dropped packets are not included by default.
 

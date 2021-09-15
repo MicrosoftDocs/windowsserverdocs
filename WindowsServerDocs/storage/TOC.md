@@ -154,7 +154,7 @@
 ### Manage
 #### [Manage with Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md)
 #### [Add servers or drives](storage-spaces/add-nodes.md)
-#### [Taking a server offline for maintenance](storage-spaces/maintain-servers.md)
+#### [Take a server offline for maintenance](/azure-stack/hci/manage/maintain-servers)
 #### [Remove servers](storage-spaces/remove-servers.md)
 #### [Update drive firmware](update-firmware.md)
 #### [Extend volumes](storage-spaces/resize-volumes.md)
@@ -174,8 +174,8 @@
 ### Troubleshoot
 #### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
 #### [Health and operational states](storage-spaces/storage-spaces-states.md)
-#### [Collect data](storage-spaces/data-collection.md)
-#### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.md)
+#### [Collect data](/azure-stack/hci/manage/collect-diagnostic-data)
+#### [Frequently asked questions](storage-spaces/storage-spaces-direct-faq.yml)
 #### [Storage-class memory health management](storage-spaces/Storage-class-memory-health.md)
 
 ## [Work Folders](work-folders/work-folders-overview.md)

@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # taskkill
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends one or more tasks or processes. Processes can be ended by process ID or image name. You can use the [tasklist command](tasklist.md) command to determine the process ID (PID) for the process to be ended.
 

@@ -11,7 +11,7 @@ ms.topic: article
 
 # Dynamic Access Control Overview
 
->Applies To: Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2, Windows Server 2012
 
 This overview topic for the IT professional describes Dynamic Access Control and its associated elements, which were introduced in  Windows Server 2012  and Windows 8.
 

@@ -9,7 +9,7 @@ ms.date: 05/22/2019
 ---
 # Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server
 
->Applies To: Windows 10, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows 10, Windows Server 2019, Windows Server 2016
 
 Make the latest Hyper-V features available on your virtual machines by upgrading the configuration version. Don't do this until:
 
@@ -73,9 +73,9 @@ The following table lists the VM configuration versions that are supported on ho
 |Windows Server 2012 R2|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|
 |Windows 8.1|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|
 
-### Supported VM configuration versions for semi-annual channel hosts
+### Supported VM configuration versions for Semi-Annual Channel hosts
 
-The following table lists the VM configuration versions for hosts running a currently supported semi-annual channel version of Windows. To get more information on semi-annual channel versions of Windows, visit the following pages for [Windows Server](../../../get-started-19/servicing-channels-19.md) and [Windows 10](/windows/deployment/update/waas-overview#servicing-channels)
+The following table lists the VM configuration versions for hosts running a currently supported Semi-Annual Channel version of Windows. To get more information on Semi-Annual Channel versions of Windows, visit the following pages for [Windows Server](../../../get-started/servicing-channels-comparison.md) and [Windows 10](/windows/deployment/update/waas-overview#servicing-channels)
 
 | Hyper-V host Windows version | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
 | --- |---|---|---|---|---|---|---|---|---|---|

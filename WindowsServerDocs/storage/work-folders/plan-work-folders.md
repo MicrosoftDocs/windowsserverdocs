@@ -10,7 +10,7 @@ description: How to plan a Work Folders deployment including system requirements
 ---
 # Planning a Work Folders deployment
 
->Applies to: Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 This topic explains the design process for a Work Folders implementation, and assumes that you have the following background:
 
@@ -147,7 +147,7 @@ Work Folders supports using Web Application Proxy, Azure AD Application Proxy or
 
 - Load balancing – in large environments, storing user data on multiple servers can increase server performance and uptime.
 
-  For information on Work Folders server scaling and performance, see [Performance Considerations for Work Folders Deployments](../../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md).
+  For information on Work Folders server scaling and performance, see [Performance Considerations for Work Folders Deployments](https://techcommunity.microsoft.com/t5/storage-at-microsoft/performance-considerations-for-work-folders-deployments/ba-p/425037).
 
 > [!NOTE]
 >  When using multiple sync servers, we recommend setting up automatic server discovery for users. This process relies upon the configuration of an attribute on each user account in AD DS. The attribute is named **msDS-SyncServerURL** and becomes available on user accounts after a Windows Server 2012 R2 domain controller is added to the domain or the Active Directory schema updates are applied. This attribute should be set for each user to ensure that users connect to the appropriate sync server. By using automatic server discovery, organizations can publish Work Folders behind a "friendly" URL such as *https://workfolders.contoso.com*, regardless of the number of sync servers in operation.

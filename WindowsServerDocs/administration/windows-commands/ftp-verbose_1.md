@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # ftp verbose
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Toggles Verbose mode. By default, Verbose mode is turned on. When Verbose mode is on, all **ftp** command responses are displayed. When a file transfer is completed, statistics regarding the efficiency of the transfer are also displayed.
 

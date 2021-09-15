@@ -11,7 +11,7 @@ ms.assetid: cc7bb88e-ae75-4a54-9fb4-fc7c14964d67
 
 # Virtual Machine Resource Controls
 
-> Applies To: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 This article describes Hyper-V resource and isolation controls for virtual machines.  These capabilities, which we'll refer to as Virtual Machine CPU Groups, or just "CPU groups", were introduced in Windows Server 2016.  CPU groups allow Hyper-V administrators to better manage and allocate the host's CPU resources across guest virtual machines.  Using CPU groups, Hyper-V administrators can:
 

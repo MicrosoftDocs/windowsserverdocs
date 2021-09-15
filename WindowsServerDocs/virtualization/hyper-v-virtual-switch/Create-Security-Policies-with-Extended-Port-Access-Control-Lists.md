@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Create Security Policies with Extended Port Access Control Lists
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic provides information about extended port Access Control Lists (ACLs) in Windows Server 2016. You can configure extended ACLs on the Hyper-V Virtual Switch to allow and block network traffic to and from the virtual machines (VMs) that are connected to the switch via virtual network adapters.
 

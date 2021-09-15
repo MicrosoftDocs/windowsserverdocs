@@ -14,7 +14,7 @@ ms.date: 12/23/2019
 
 # Performance Tuning Network Adapters
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Use the information in this topic to tune the performance network adapters for computers that are running Windows Server 2016 and later versions. If your network adapters provide tuning options, you can use these options to optimize network throughput and resource usage.
 

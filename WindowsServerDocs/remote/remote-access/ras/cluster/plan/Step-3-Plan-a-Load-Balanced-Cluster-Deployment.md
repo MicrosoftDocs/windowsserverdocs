@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Step 3 Plan a Load-Balanced Cluster Deployment
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The next step is to plan the load-balancing configuration and cluster deployment.
 

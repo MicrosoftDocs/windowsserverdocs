@@ -10,7 +10,7 @@ ms.date: 09/10/2018
 ---
 # NIC Teaming
 
->Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 In this topic, we give you an overview of Network Interface Card (NIC) Teaming in Windows Server. NIC Teaming allows you to group between one and 32 physical Ethernet network adapters into one or more software-based virtual network adapters. These virtual network adapters provide fast performance and fault tolerance in the event of a network adapter failure.
 

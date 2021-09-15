@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # DirectAccess Unsupported Configurations
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Review the following list of unsupported DirectAccess configurations before you start your deployment to avoid having to start your deployment again.
 

@@ -1,6 +1,6 @@
 ---
 title: SMB over QUIC
-description: Describes the SMB over QUIC feature in Windows Server 2022 Datacenter Azure Edition Preview, Windows Insider Dev Channel client 
+description: Describes the SMB over QUIC feature in Windows Server 2022 Datacenter Azure Edition Preview, Windows 11 Insider Preview 
 ms.prod: windows-server
 ms.topic: article
 author: NedPyle
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # SMB over QUIC (PREVIEW)
 
->Applies to: Windows Server 2022 Datacenter: Azure Edition Preview, Windows Insider Dev Channel preview client
+>Applies to: Windows Server 2022 Datacenter: Azure Edition Preview, Windows 11 Insider Preview 
 
 SMB over QUIC (Preview) introduces an alternative to the TCP network transport, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. QUIC is an IETF-standardized protocol with many benefits when compared with TCP:
 
@@ -33,7 +33,7 @@ A file server administrator must opt in to enabling SMB over QUIC. It isn't on b
 To use SMB over QUIC, you need the following things:
 
 - A file server running Windows Server 2022 Datacenter: Azure Edition Preview ([Microsoft Server Operating Systems Preview](https://aka.ms/ws2022ae))
-- A Windows Insider Dev Channel client ([Windows Insider Dev Channel Preview Downloads](https://www.microsoft.com/software-download/windowsinsiderpreviewiso))
+- A Windows 11 Insider Preview ([Windows Insider Channels](https://insider.windows.com/))
 - Windows Admin Center ([Homepage](https://aka.ms/windowsadmincenter))
 - A Public Key Infrastructure to issue certificates like Active Directory Certificate Server or access to a trusted third party certificate issuer like Verisign, Digicert, Let's Encrypt, and so on.
 
@@ -83,7 +83,7 @@ To use SMB over QUIC, you need the following things:
 
 ### Step 2: Configure SMB over QUIC
 
-1. Deploy a [Windows Server 2022 Datacenter: Azure Edition](https://aka.ms/ws2022ae) preview in one of the following Azure regions: West Central US, South Central US, or North Europe.  
+1. Deploy a [Windows Server 2022 Datacenter: Azure Edition](https://aka.ms/ws2022ae) preview server.
 1. Install the latest version of Windows Admin Center on a management PC or the file server. You need the latest version of the *Files & File Sharing* extension. It's installed automatically by Windows Admin Center if *Automatically update extensions* is enabled in **Settings > Extensions**.
 1. Join your Windows Server 2022 Datacenter: Azure Edition file server to your Active Directory domain and make it accessible to Windows Insider clients on the Azure public interface by adding a firewall allow rule for UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
 1. Connect to the server with Windows Admin Center and click the **Settings** icon in the lower left. In the **File Shares (SMB server)** section, under **File sharing across the internet with SMB over QUIC**, click **Configure**.
@@ -103,8 +103,8 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 
 ### Step 3: Connect to SMB shares
 
-1. Join your Windows Insider Dev Channel client to your domain.Be certain the names of the SMB over QUIC file server's certificate subject alternative names are published to DNS and are fully qualified **OR** added to the HOST files for your Windows Insider Dev Channel client.Ensure that the  server's certificate subject alternative names are published to DNS **OR** added to the HOSTS files for your Windows Insider Dev Channel client.
-1. Move your Windows Insider Dev Channel client to an external network where it no longer has any network access to domain controllers or the file server's internal IP addresses.
+1. Join your Windows 11 Insider Preview to your domain.Be certain the names of the SMB over QUIC file server's certificate subject alternative names are published to DNS and are fully qualified **OR** added to the HOST files for your Windows 11 Insider Preview. Ensure that the server's certificate subject alternative names are published to DNS **OR** added to the HOSTS files for your Windows 11 Insider Preview.
+1. Move your Windows 11 Insider Preview to an external network where it no longer has any network access to domain controllers or the file server's internal IP addresses.
 1. In Windows File Explorer, in the Address Bar, type the UNC path to a share on the file server and confirm you can access data in the share. Alternatively, you can use *NET USE /TRANSPORT:QUIC* or *New-SmbMapping -TransportType QUIC* with a UNC path. Examples:
 
     `NET USE * \\fsedge1.contoso.com\sales` *(automatically tries TCP then QUIC)*
@@ -115,7 +115,7 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 
 ### Configure the KDC Proxy (Optional, but recommended)
 
-By default, a Windows Insider Dev Channel client won't have access to an Active Directory domain controller when connecting to an SMB over QUIC file server. This means authentication uses NTLMv2, where the file server authenticates on behalf of the client. No NTLMv2 authentication or authorization occurs outside the TLS 1.3-encrypted QUIC tunnel. However, we still recommend using Kerberos as a general security best practice and don't recommend creating new NTLMv2 dependencies in deployments. To allow this, you can configure the KDC proxy to forward ticket requests on the user's behalf, all while using an internet-friendly HTTPS encrypted communication channel.
+By default, a Windows 11 Insider Preview won't have access to an Active Directory domain controller when connecting to an SMB over QUIC file server. This means authentication uses NTLMv2, where the file server authenticates on behalf of the client. No NTLMv2 authentication or authorization occurs outside the TLS 1.3-encrypted QUIC tunnel. However, we still recommend using Kerberos as a general security best practice and don't recommend creating new NTLMv2 dependencies in deployments. To allow this, you can configure the KDC proxy to forward ticket requests on the user's behalf, all while using an internet-friendly HTTPS encrypted communication channel.
 
 1. On the file server, in an elevated PowerShell prompt, run:
 
@@ -143,7 +143,7 @@ By default, a Windows Insider Dev Channel client won't have access to an Active 
 
     `Start-Service -Name kpssvc`
 
-1. Configure the following group policy to apply to the Windows Insider Dev Channel client:
+1. Configure the following group policy to apply to the Windows 11 Insider Preview:
 
     **Computers > Administrative templates > System > Kerberos > Specify KDC proxy servers for Kerberos clients**
 
@@ -156,7 +156,7 @@ By default, a Windows Insider Dev Channel client won't have access to an Active 
     This Kerberos realm mapping means that if user `ned@corp.contoso.com` tried to connect to a file server name `fs1edge.contoso.com"`, the KDC proxy will know to forward the kerberos tickets to a domain controller in the internal `corp.contoso.com` domain. The communication with the client will be over HTTPS/443 and user credentials aren't directly exposed on the client-file server network.
 1. Create a Windows Defender Firewall rule that inbound-enables TCP port 443 for the KDC Proxy service to receive authentication requests.  
 1. Ensure that edge firewalls allow HTTPS/443 inbound to the file server.
-1. Apply the group policy and restart the Windows Insider Dev Channel client.  
+1. Apply the group policy and restart the Windows 11 Insider Preview.  
 
 > [!NOTE]
 > Automatic configuration of the KDC Proxy will come later in the SMB over QUIC Preview and these server steps will not be necessary.

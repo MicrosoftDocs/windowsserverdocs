@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Add a module to a tool extension
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 In this article, we will add an empty module to a tool extension we have created with the Windows Admin Center CLI.
 

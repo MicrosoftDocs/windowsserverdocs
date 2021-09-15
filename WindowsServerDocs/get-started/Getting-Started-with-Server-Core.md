@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Install Server Core
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 When you install Windows Server for the first time, you have the following installation options:
 
@@ -82,6 +82,6 @@ Installation steps for Windows Server (Semi-Annual Channel) are the same as inst
 - There's no evaluation version for Windows Server (Semi-Annual Channel)
 - There's no OEM or retail version. Windows Server (Semi-Annual Channel) can only be licensed through Software Assurance or loyalty programs.
 
-For more info about Semi-Annual Channel, see [Comparison of servicing channels](../get-started-19/servicing-channels-19.md).
+For more info about Semi-Annual Channel, see [Comparison of servicing channels](../get-started/servicing-channels-comparison.md).
 
 To see what's new in Windows Server Semi-Annual Channel, see [What's New in Windows Server](whats-new-in-windows-server.md)

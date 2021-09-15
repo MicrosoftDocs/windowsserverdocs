@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # STEP 10 Install and Configure 2-EDGE1
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 2-EDGE1 configuration consists of the following:
 

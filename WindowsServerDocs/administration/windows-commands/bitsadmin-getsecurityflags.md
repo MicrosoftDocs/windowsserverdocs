@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # bitsadmin getsecurityflags
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Reports the HTTP security flags for URL redirection and checks performed on the server certificate during the transfer.
 

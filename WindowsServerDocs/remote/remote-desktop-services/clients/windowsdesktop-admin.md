@@ -5,12 +5,12 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/22/2021
+ms.date: 08/03/2021
 ms.localizationpriority: medium
 ---
 # Windows Desktop client for admins
 
->Applies to: Windows 10 and Windows 7
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10 and Windows 7
 
 This topic has additional information about the Windows Desktop client that admins will find useful. For basic usage information, see [Get started with the Windows Desktop client](windowsdesktop.md).
 
@@ -34,19 +34,34 @@ msiexec.exe /i `<path to the MSI>` /qn ALLUSERS=2 MSIINSTALLPERUSER=1
 
 This section describes the new configuration options for this client.
 
-### Configure update notifications
+### Configure update behavior
 
-By default, the client notifies you whenever there's an update and automatically updates itself when the client is closed and has no active connections. Even with no active connections, the msrdc.exe process runs in the background to allow you to reconnect quickly when you reopen the client. You can stop msrdc.exe by right-clicking on the Azure Virtual Desktop icon in the system tray area and selecting **Disconnect all sessions** in the drop-down menu.
+Microsoft releases new versions of the client on a regular basis. You should always use the latest supported version of the client, so it's important that you configure your update policies to tell you when updates are ready. This section will show you how to configure your policies to enable or disable update notifications.
 
-To turn notifications off, set the following registry information:
+The update behavior of the client depends on two factors:
 
-- **Key:** HKLM\Software\Microsoft\MSRDC\Policies
-- **Type:** REG_DWORD
-- **Name:** AutomaticUpdates
-- **Data:** 0 = Disable notifications and turn off auto-update. 1 = Show notifications and turn off auto-update. 2 = Show notifications and auto-update on close.
+- Whether the app is installed for only the current user or for all users on the machine
+- The value of the following registry key:
 
->[!NOTE]
->The client doesn't update automatically while closed for per-machine installs.
+  - **Key:** HKLM\\Software\\Microsoft\\MSRDC\\Policies
+  - **Type:** REG_DWORD
+  - **Name:** AutomaticUpdates
+
+The Windows Desktop client offers three ways to update:
+
+- Notification-based updates, where a the client shows the user a notification in the client UI or a pop-up message in the taskbar. The user can choose to update the client by selecting the notification.
+- Silent on-close updates, where the client automatically updates after the user has closed the UI of the Microsoft Remote Desktop Connection Center.
+- Silent background updates, where a background process checks for updates a few times a day and will update the client if a new update is available.
+
+To avoid interrupting your work, silent updates won't happen while you have the client open, have a remote connection active, or if you've disabled the feature. If the client is running while a silent background update occurs, the client will show a notification to let you know an update is available.
+
+You can set your update policy to one of the following values:
+
+| AutomaticUpdates registry key | Update behavior (per user installation) | Update behavior (per machine installation) |
+|-------|------|-------|
+| 0  | Disable notifications and turn off auto-update. | Disable notifications and turn off auto-update. |
+| 1 | Notification-based updates. | Notification-based updates. |
+| 2 (default) | Notification-based updates when the app is running. Otherwise, silent on-close and background updates. | Notification-based updates. No support for silent update mechanisms, as users may not have administrator access rights on the client device.  |
 
 ### Configure user groups
 

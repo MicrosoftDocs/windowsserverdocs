@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # bootcfg delete
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Deletes an operating system entry in the [operating systems] section of the Boot.ini file.
 
