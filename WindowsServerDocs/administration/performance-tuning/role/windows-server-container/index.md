@@ -58,7 +58,7 @@ Windows Server Containers and Hyper-V containers offer various of networking mod
 
 ### Windows Network Address Translation (WinNAT)
 
-Each container will receive an IP address from an internal, private IP prefix (e.g. 172.16.0.0/12). Port forwarding / mapping from the container host to container endpoints is supported. Docker creates a NAT network by default when the dockerd first runs.
+Each container will receive an IP address from an internal, private IP prefix (for example 172.16.0.0/12). Port forwarding / mapping from the container host to container endpoints is supported. Docker creates a NAT network by default when the dockerd first runs.
 
 Of these three modes, the NAT configuration is the most expensive network IO path, but has the least amount of configuration needed.
 
