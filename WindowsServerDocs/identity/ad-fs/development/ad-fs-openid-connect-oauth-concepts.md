@@ -84,7 +84,7 @@ The claims present in any given security token are dependent upon the type of to
 
 1.	AD FS identifies the resource which the client wants to access through the resource parameter passed in the auth request. If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: *scope = [resource url]/[scope values e.g., openid]*.
 
-   If resource is not passed using resource or scope parameter, ADFS will use a default resource urn:microsoft:userinfo whose policies (e.g., MFA, issuance, or authorization policy) can't be configured.
+    If resource is not passed using resource or scope parameter, ADFS will use a default resource urn:microsoft:userinfo whose policies (e.g., MFA, issuance, or authorization policy) can't be configured.
 
 1.	Next AD FS validates whether client has the permissions to access the resource. AD FS also validates whether the scopes passed in the auth request match the scopes configured while registering the resource. If the client doesn't have the permissions or the right scopes are not sent in the auth request the auth flow is terminated.
 
@@ -117,16 +117,16 @@ Two types of libraries are used with AD FS:
 In certain scenarios, it is possible that the Web app (client) needs additional claims in an ID token to help in the functionality. This can be achieved by using one of the following options.
 
 **Option 1:** Should be used when using a public client and web app does not have a resource that it is trying to access. The option requires
-1.	Response_mode set as form_post
-1.	Relying party identifier (Web API identifier) is same as client identifier
+- Response_mode set as form_post
+- Relying party identifier (Web API identifier) is same as client identifier
 
 ![AD FS Customize Token Option 1](media/adfs-modern-auth-concepts/option1.png)
 
 **Option 2:** Should be used when web app has a resource that it is trying to access and needs to pass additional claims through ID token. Both public and confidential clients can be used. The option requires:
 
-1.	response_mode set as form_post
-1.	KB4019472 is installed on your AD FS servers
-1.	Scope allatclaims assigned to the client – RP pair. You can assign the scope by using the Grant-ADFSApplicationPermission (Use Set-AdfsApplicationPermission if already granted once) PowerShell cmdlet as indicated in the example below:
+- Response_mode set as form_post
+- KB4019472 is installed on your AD FS servers
+- Scope allatclaims assigned to the client – RP pair. You can assign the scope by using the Grant-ADFSApplicationPermission (Use Set-AdfsApplicationPermission if already granted once) PowerShell cmdlet as indicated in the example below:
 
     ```PowerShell
     Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient" -ServerRoleIdentifier "https://rp/fedpassive" -ScopeNames "allatclaims","openid"
