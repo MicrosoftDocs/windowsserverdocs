@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # vssadmin
 
-> Applies to: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Displays current volume shadow copy backups and all installed shadow copy writers and providers. Select a command name in the following table view its command syntax.
 

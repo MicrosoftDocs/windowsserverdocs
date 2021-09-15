@@ -17,7 +17,7 @@ You can use additional authorization rules to further restrict access. Users who
 
 You can use the following procedures to create a claim rule with the AD FS Management snap\-in.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ## To create a rule to permit all users in Windows Server 2016
 

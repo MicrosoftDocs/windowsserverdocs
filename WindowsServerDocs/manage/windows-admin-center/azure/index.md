@@ -9,6 +9,8 @@ ms.date: 05/31/2019
 ---
 # Connecting Windows Server to Azure hybrid services
 
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 You can extend on-premises deployments of Windows Server to the cloud by using Azure hybrid services. These cloud services provide an array of useful functions, both for extending on-premises into Azure, and for centrally managing from Azure.
 
 ![Diagram showing arrow from on-premises to cloud for extending on-premises into Azure, and arrow from cloud to on-premises for managing centrally with Azure](../media/azure-services/hybrid-framing.png)
@@ -41,7 +43,7 @@ From the Azure hybrid services tool, you can:
 - Apply governance policies to your on-premises servers through Azure Policy using [Azure Arc for servers](/azure/azure-arc/servers/overview)
 - Secure your servers and get advanced threat protection with [Azure Security Center](/azure/security-center/windows-admin-center-integration)
 - Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)
-- Make Azure VMs look like your on-premises network with [Azure Extended Network](https://docs.microsoft.com/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)
+- Make Azure VMs look like your on-premises network with [Azure Extended Network](/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)
 
 ## Back up and protect your on-premises servers and VMs
 
@@ -83,7 +85,7 @@ For more info, see [Deploy a Cloud Witness for a Failover Cluster](../../../fail
 - **Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)**
 Let Windows Admin Center simplify setting up a point-to-site VPN from an on-premises server into an Azure virtual network.
 
-- **Make Azure VMs look like your on-premises network with [Azure Extended Network](https://docs.microsoft.com/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)**
+- **Make Azure VMs look like your on-premises network with [Azure Extended Network](/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)**
 Windows Admin Center can set up a site-to-site VPN and extend your on-premises IP addresses into your Azure vNet to let you more easily migrate workloads into Azure without breaking dependencies on IP addresses.
 
 ## Centrally manage your hybrid environment from Azure
@@ -122,7 +124,7 @@ This is the complete list of Azure services that provide functionality to stand-
 - Apply governance policies to your on-premises servers through Azure Policy using [Azure Arc for servers](/azure/azure-arc/servers/overview)
 - Secure your servers and get advanced threat protection with [Azure Security Center](/azure/security-center/windows-admin-center-integration)
 - Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)
-- Make Azure VMs look like your on-premises network with [Azure Extended Network](https://docs.microsoft.com/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)
+- Make Azure VMs look like your on-premises network with [Azure Extended Network](/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)
 
 ### Services for clusters
 

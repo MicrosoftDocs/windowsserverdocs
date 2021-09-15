@@ -10,7 +10,7 @@ ms.author: jaimeo
 ---
 # Get started with Setup and Boot Event Collection
 
-> Applies To: Windows Server
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server
 
 ## Overview
 Setup and Boot Event Collection is a new feature in Windows Server 2016 that allows you to designate a collector computer that can gather a variety of important events that occur on other computers when they boot or go through the setup process. You can then later analyze the collected events with Event Viewer, Message Analyzer, Wevtutil, or Windows PowerShell cmdlets.

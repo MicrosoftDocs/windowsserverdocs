@@ -1,41 +1,45 @@
 ---
-title: What's New in Windows Server 2016
-description: What are the new features in compute, identity, management, automation, networking, security, and storage in Windows Server 2016.
-ms.date: 05/21/2019
+title: What's new in Windows Server 2016
+description: This article describes some of the new features in Windows Server 2016 that are the ones most likely to have the greatest impact as you work with this release.
 ms.topic: article
-ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 author: jasongerend
 ms.author: jgerend
-manager: dongill
+manager: femila
+ms.date: 08/13/2021
+ms.prod: windows-server
 ms.localizationpriority: medium
+ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
 ---
-# What's New in Windows Server 2016
 
->Applies to: Windows Server 2016
+# What's new in Windows Server 2016
 
-![Icon showing a newspaper](media/whats-new.png) To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server&reg; 2016. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release.
+This article describes some of the new features in Windows Server 2016 that are the ones most likely to have the greatest impact as you work with this release.
 
-## [Compute](../virtualization/virtualization.yml)
+## Compute
 
-The Virtualization area includes virtualization products and features for the IT professional to design, deploy, and maintain Windows Server.
+The [Virtualization area](../virtualization/virtualization.yml) includes virtualization products and features for the IT professional to design, deploy, and maintain Windows Server.
 
 ### General
-Physical and virtual machines benefit from greater time accuracy due to improvements in the Win32 Time and Hyper-V Time Synchronization Services. Windows Server can now host services that are compliant with upcoming regulations which require a 1ms accuracy with regards to UTC.
+
+Physical and virtual machines benefit from greater time accuracy due to improvements in the Win32 Time and Hyper-V Time Synchronization Services. Windows Server can now host services that are compliant with upcoming regulations that require a 1ms accuracy with regard to UTC.
 
 ### Hyper-V
--   [What's new in Hyper-V on Windows Server 2016](../virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows.md). This topic explains the new and changed functionality of the Hyper-V role in Windows Server 2016, Client Hyper-V running on Windows 10, and Microsoft Hyper-V Server 2016.
 
--   [Windows Containers](/virtualization/windowscontainers/):  Windows Server 2016 container support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For some additional information on containers, see [Containers: Docker, Windows and Trends](https://azure.microsoft.com/blog/2015/08/17/containers-docker-windows-and-trends/).
+- [What's new in Hyper-V on Windows Server 2016](../virtualization/hyper-v/What-s-new-in-Hyper-V-on-Windows.md). This topic explains the new and changed functionality of the Hyper-V role in Windows Server 2016, Client Hyper-V running on Windows 10, and Microsoft Hyper-V Server 2016.
+
+- [Windows Containers](/virtualization/windowscontainers/):  Windows Server 2016 container support adds performance improvements, simplified network management, and support for Windows containers on Windows 10. For some additional information on containers, see [Containers: Docker, Windows and Trends](https://azure.microsoft.com/blog/2015/08/17/containers-docker-windows-and-trends/).
 
 ### Nano Server
+
 What's New in [Nano Server](getting-started-with-nano-server.md). Nano Server now has an updated module for building Nano Server images, including more separation of physical host and guest virtual machine functionality as well as support for different Windows Server editions.
 
 There are also improvements to the Recovery Console, including separation of inbound and outbound firewall rules as well as the ability to repair the configuration of WinRM.
 
 ### Shielded Virtual Machines
+
 Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to protect any Generation 2 virtual machine from a compromised fabric. Among the features introduced in Windows Server 2016 are the following:
 
-- New "Encryption Supported" mode that offers more protections than for an ordinary virtual machine, but less than "Shielded" mode, while still supporting vTPM, disk encryption, Live Migration traffic encryption, and other features, including direct fabric administration conveniences such as virtual machine console connections and Powershell Direct.
+- A new **Encryption Supported** mode that offers more protections than for an ordinary virtual machine, but less than **Shielded** mode, while still supporting vTPM, disk encryption, Live Migration traffic encryption, and other features, including direct fabric administration conveniences such as virtual machine console connections and PowerShell Direct.
 
 - Full support for converting existing non-shielded Generation 2 virtual machines to shielded virtual machines, including automated disk encryption.
 
@@ -49,25 +53,31 @@ Windows Server 2016 provides a new Hyper-V-based Shielded Virtual Machine to pro
 
 - Host Guardian Service support for existing safe Active Directory – you can direct the Host Guardian Service to use an existing Active Directory forest as its Active Directory instead of creating its own Active Directory instance
 
-For more details and instructions for working with shielded virtual machines, see [Shielded VMs and Guarded Fabric Validation Guide for Windows Server 2016 (TPM)](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
+For more details and instructions for working with shielded virtual machines, see [Guarded Fabric and Shielded VMs](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md).
 
-## [Identity and Access](../identity/Identity-and-Access.yml)
-New features in Identity improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises.
+## Identity and Access
+
+New features in [Identity](../identity/Identity-and-Access.yml) improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises.
 
 ### Active Directory Certificate Services
+
 Active Directory Certificate Services (AD CS) in Windows Server 2016 increases support for TPM key attestation: You can now use Smart Card KSP for key attestation, and devices that are not joined to the domain can now use NDES enrollment to get certificates that can be attested for keys being in a TPM.
 
 ### Active Directory Domain Services
+
 Active Directory Domain Services includes improvements to help organizations secure Active Directory environments and provide better identity management experiences for both corporate and personal devices. For more information, see [What's new in Active Directory Domain Services (AD DS) in Windows Server 2016](../identity/whats-new-active-directory-domain-services.md).
 
 ### Active Directory Federation Services
+
 What's New in Active Directory Federation Services. Active Directory Federation Services (AD FS) in Windows Server 2016 includes new features that enable you to configure AD FS to authenticate users stored in Lightweight Directory Access Protocol (LDAP) directories. For more information, see [What's New in AD FS for Windows Server 2016](../identity/ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md).
 
 ### Web Application Proxy
-The latest version of Web Application Proxy focuses on new features that enable publishing and preauthentication for more applications and improved user experience. Check out the full list of new features that includes preauthentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [Web Application Proxy in Windows Server 2016](../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md).
 
-##  [Administration](../administration/manage-windows-server.yml)
-The Management and Automation area focuses on tool and reference information for IT pros who want to run and manage Windows Server 2016, including Windows PowerShell.
+The latest version of Web Application Proxy focuses on new features that enable publishing and pre-authentication for more applications and improved user experience. Check out the full list of new features that includes pre-authentication for rich client apps such as Exchange ActiveSync and wildcard domains for easier publishing of SharePoint apps. For more information, see [Web Application Proxy in Windows Server 2016](../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md).
+
+## Administration
+
+The [Management and Automation area](../administration/manage-windows-server.yml) focuses on tool and reference information for IT pros who want to run and manage Windows Server 2016, including Windows PowerShell.
 
 Windows PowerShell 5.1 includes significant new features, including support for developing with classes and new security features that extend its use, improve its usability, and allow you to control and manage Windows-based environments more easily and comprehensively. See [New Scenarios and Features in WMF 5.1](/powershell/wmf/5.1/scenarios-features) for details.
 
@@ -76,57 +86,68 @@ New additions for Windows Server 2016 include: the ability to run PowerShell.exe
 Here are some other new administration features:
 
 ### PowerShell Desired State Configuration (DSC) in Windows Management Framework (WMF) 5
+
 Windows Management Framework 5 includes updates to Windows PowerShell Desired State Configuration (DSC), Windows Remote Management (WinRM), and Windows Management Instrumentation (WMI).
 
 For more info about testing the DSC features of Windows Management Framework 5, see the series of blog posts discussed in [Validate features of PowerShell DSC](https://devblogs.microsoft.com/powershell/validate-features-of-powershell-dsc/). To download, see [Windows Management Framework 5.1](/powershell/scripting/wmf/setup/install-configure).
 
 ### PackageManagement unified package management for software discovery, installation, and inventory
+
 Windows Server 2016 and Windows 10 includes a new PackageManagement feature (formerly called OneGet) that enables IT Professionals or DevOps to automate software discovery, installation, and inventory (SDII), locally or remotely, no matter what the installer technology is and where the software is located.
 
 For more info, see [https://github.com/OneGet/oneget/wiki](https://github.com/OneGet/oneget/wiki).
 
 ### PowerShell enhancements to assist digital forensics and help reduce security breaches
+
 To help the team responsible for investigating compromised systems - sometimes known as the "blue team" - we've added additional PowerShell logging and other digital forensics functionality, and we've added functionality to help reduce vulnerabilities in scripts, such as constrained PowerShell, and secure CodeGeneration APIs.
 
-For more info, see [PowerShell ♥ the Blue Team](https://devblogs.microsoft.com/powershell/powershell-the-blue-team/).
+For more info, see the [PowerShell ♥ the Blue Team](https://devblogs.microsoft.com/powershell/powershell-the-blue-team/) blog post.
 
-## [Networking](../networking/index.yml)
-This area addresses networking products and features for the IT professional to design, deploy, and maintain Windows Server 2016.
+## Networking
+
+The [Networking area](../networking/index.yml) addresses networking products and features for the IT professional to design, deploy, and maintain Windows Server 2016.
 
 ### Software-Defined Networking
-You can now both mirror and route traffic to new or existing virtual appliances. Together with a distributed firewall and Network security groups, this enables you to dynamically segment and secure workloads in a manner similar to Azure. Second, you can deploy and manage the entire Software-defined networking (SDN) stack using System Center Virtual Machine Manager. Finally, you can use Docker to manage Windows Server container networking, and associate SDN policies not only with virtual machines but containers as well. For more information, see [Plan a Software Defined Network Infrastructure](../networking/sdn/plan/plan-a-software-defined-network-infrastructure.md).
+
+You can now both mirror and route traffic to new or existing virtual appliances. Together with a distributed firewall and Network security groups, this enables you to dynamically segment and secure workloads in a manner similar to Azure. Second, you can deploy and manage the entire Software-defined networking (SDN) stack using System Center Virtual Machine Manager. Finally, you can use Docker to manage Windows Server container networking, and associate SDN policies not only with virtual machines but containers as well. For more information, see [Plan a Software Defined Network Infrastructure](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure).
 
 ### TCP performance improvements
+
 The default Initial Congestion Window (ICW) has been increased from 4 to 10 and TCP Fast Open (TFO) has been implemented. TFO reduces the amount of time required to establish a TCP connection and the increased ICW allows larger objects to be transferred in the initial burst. This combination can significantly reduce the time required to transfer an Internet object between the client and the cloud.
 
-In order to improve TCP behavior when recovering from packet loss we have implemented TCP Tail Loss Probe (TLP) and Recent Acknowledgment (RACK). TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet. 
+In order to improve TCP behavior when recovering from packet loss we have implemented TCP Tail Loss Probe (TLP) and Recent Acknowledgment (RACK). TLP helps convert Retransmit TimeOuts (RTOs) to Fast Recoveries and RACK reduces the time required for Fast Recovery to retransmit a lost packet.
 
-## [Security and Assurance](../security/Security-and-Assurance.yml)
-Includes security solutions and features for the IT professional to deploy in your datacenter and cloud environment. For information about security in Windows Server 2016 generally, see [Security and Assurance](../security/Security-and-Assurance.yml).
+## Security and Assurance
+
+The [Security and Assurance area](../security/Security-and-Assurance.yml) Includes security solutions and features for the IT professional to deploy in your data center and cloud environment. For information about security in Windows Server 2016 generally, see [Security and Assurance](../security/Security-and-Assurance.yml).
 
 ### Just Enough Administration
+
 Just Enough Administration in Windows Server 2016 is security technology that enables delegated administration for anything that can be managed with Windows PowerShell. Capabilities include support for running under a network identity, connecting over PowerShell Direct, securely copying files to or from JEA endpoints, and configuring the PowerShell console to launch in a JEA context by default. For more details, see [JEA on GitHub](https://aka.ms/JEA).
 
 ### Credential Guard
+
 Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. See [Protect derived domain credentials with Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard).
 
-###  Remote Credential Guard
+### Remote Credential Guard
+
 Credential Guard includes support for RDP sessions so that the user credentials remain on the client side and are not exposed on the server side. This also provides Single Sign On for Remote Desktop. See [Protect derived domain credentials with Windows Defender Credential Guard](/windows/access-protection/credential-guard/credential-guard).
 
 ### Device Guard (Code Integrity)
+
 Device Guard provides kernel mode code integrity (KMCI) and user mode code integrity (UMCI) by creating policies that specify what code can run on the server. See [Introduction to Windows Defender Device Guard: virtualization-based security and code integrity policies](/windows/device-security/device-guard/introduction-to-device-guard-virtualization-based-security-and-code-integrity-policies).
 
-
 ### Windows Defender
+
 [Windows Defender Overview for Windows Server 2016](../security/windows-defender/windows-defender-overview-windows-server.md). Windows Server Antimalware is installed and enabled by default in Windows Server 2016, but the user interface for Windows Server Antimalware is not installed. However, Windows Server Antimalware will update antimalware definitions and protect the computer without the user interface. If you need the user interface for Windows Server Antimalware, you can install it after the operating system installation by using the Add Roles and Features Wizard.
 
 ### Control Flow Guard
+
 Control Flow Guard (CFG) is a platform security feature that was created to combat memory corruption vulnerabilities. See [Control Flow Guard](/windows/win32/secbp/control-flow-guard) for more information.
 
+## Storage
 
-## [Storage](../storage/storage.yml)
-
-Storage in Windows Server 2016 includes new features and enhancements for software-defined storage, as well as for traditional file servers. Below are a few of the new features, for more enhancements and further details, see [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md).
+[Storage](../storage/storage.yml) in Windows Server 2016 includes new features and enhancements for software-defined storage, as well as for traditional file servers. Below are a few of the new features, for more enhancements and further details, see [What's New in Storage in Windows Server 2016](../storage/whats-new-in-storage.md).
 
 ### Storage Spaces Direct
 
@@ -171,9 +192,10 @@ For more info, see [Health Service](../failover-clustering/health-service-overvi
 ## Application development
 
 ### Internet Information Services (IIS) 10.0
+
 New features provided by the IIS 10.0 web server in Windows Server 2016 include:
 
-- Support for HTTP/2 protocol in the Networking stack and integrated with IIS 10.0, allowing IIS 10.0 websites to automatically serve HTTP/2 requests for supported configurations. This allows numerous enhancements over HTTP/1.1 such as more efficient reuse of connections and decreased latency, improving load times for web pages.
+- Support for the HTTP/2 protocol in the Networking stack and integrated with IIS 10.0, allowing IIS 10.0 websites to automatically serve HTTP/2 requests for supported configurations. This allows numerous enhancements over HTTP/1.1 such as more efficient reuse of connections and decreased latency, improving load times for web pages.
 - Ability to run and manage IIS 10.0 in Nano Server. See [IIS on Nano Server](iis-on-nano-server.md).
 - Support for Wildcard Host Headers, enabling administrators to set up a web server for a domain and then have the web server serve requests for any subdomain.
 - A new PowerShell module (IISAdministration) for managing IIS.
@@ -181,6 +203,7 @@ New features provided by the IIS 10.0 web server in Windows Server 2016 include:
 For more details see [IIS](https://iis.net/learn).
 
 ### Distributed Transaction Coordinator (MSDTC)
+
 Three new features are added in Microsoft Windows 10 and Windows Server 2016:
 
 - A new interface for Resource Manager Rejoin can be used by a resource manager to determine the outcome of an in-doubt transaction after a database restarts due to an error. See [IResourceManagerRejoinable::Rejoin](/previous-versions/windows/desktop/mt203799(v=vs.85)) for details.
@@ -188,8 +211,3 @@ Three new features are added in Microsoft Windows 10 and Windows Server 2016:
 - The DSN name limit is enlarged from 256 bytes to 3072 bytes. See [IDtcToXaHelperFactory::Create](/previous-versions/windows/desktop/ms686861(v=vs.85)), [IDtcToXaHelperSinglePipe::XARMCreate](/previous-versions/windows/desktop/ms679248(v=vs.85)), or [IDtcToXaMapper::RequestNewResourceManager](/previous-versions/windows/desktop/ms680310(v=vs.85)) for details.
 
 - Improved tracing allowing you to set a registry key to include an image file path in the trace log file name so you can tell which trace log file to check. See [How to enable diagnostic tracing for MS DTC on a Windows-based computer](https://support.microsoft.com/kb/926099) for details on configuring tracing for MSDTC.
-
-
-
-## See Also
--   [Release Notes: Important Issues in Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)

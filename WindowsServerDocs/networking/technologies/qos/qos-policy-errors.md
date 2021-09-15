@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # QoS Policy Error and Event Messages
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Following are the error and event messages that are associated with QoS Policy.
 
@@ -339,6 +339,6 @@ Following is a list of QoS Policy error messages.
 |**Language**|English|
 |**Message**|QoS failed to read or set the DSCP marking override setting, error code: "%2".|
 
-For the next topic in this guide, see [QoS Policy Frequently Asked Questions](qos-policy-faq.md).
+For the next topic in this guide, see [QoS Policy Frequently Asked Questions](qos-policy-faq.yml).
 
 For the first topic in this guide, see [Quality of Service (QoS) Policy](qos-policy-top.md).

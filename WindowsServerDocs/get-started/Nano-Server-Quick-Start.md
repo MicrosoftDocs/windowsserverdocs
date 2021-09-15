@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # Nano Server Quick Start
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
 > [!IMPORTANT]
 > Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.

@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # Software Inventory Logging Aggregator
 
-> Applies To: Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2
 
 ## What is Software Inventory Logging Aggregator?
 

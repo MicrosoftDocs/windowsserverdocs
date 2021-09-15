@@ -11,7 +11,7 @@ ms.topic: article
 
 # Install a Windows Server 2012 Active Directory Read-Only Domain Controller (RODC) (Level 200)
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains how to create a staged RODC account and then attach a server to that account during RODC installation. This topic also explains how to install an RODC without performing a staged installation.
 

@@ -46,7 +46,7 @@ extract [/y] /c source destination
 
 > [!NOTE]
 > Extrac32.exe can be used from the command line, but does not display any output on the console.
-> Redirect the help output through the [more](https://docs.microsoft.com/windows-server/administration/windows-commands/more) command, like this: `extrac32.exe /? | more`
+> Redirect the help output through the [more](./more.md) command, like this: `extrac32.exe /? | more`
 
 ```
 Extrac32 [/Y] [/A] [/D | /E] [/L dir] cabinet [filename ...]

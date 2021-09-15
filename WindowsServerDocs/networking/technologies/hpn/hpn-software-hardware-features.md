@@ -6,12 +6,12 @@ ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
 ms.author: jgerend
 author: JasonGerend
-ms.date: 06/15/2021
+ms.date: 07/22/2021
 ---
 
 # Software and hardware (SH) integrated features and technologies
 
-> Applies to: Azure Stack HCI, version 20H2
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019
 
 These features have both software and hardware components. The software is intimately tied to hardware capabilities that are required for the feature to work. Examples of these include VMMQ, VMQ, Send-side IPv4 Checksum Offload, and RSS. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
 
@@ -34,15 +34,13 @@ To use the converged NIC capability:
 
 3.  Ensure to enable RDMA on the vNICs designated for RDMA in the host.
 
-For more details about RDMA and SET, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md).
+For more details about RDMA and SET, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
 
 ## Data Center Bridging (DCB)
 
-DCB is a suite of Institute of Electrical and Electronics Engineers (IEEE) standards that enable Converged Fabrics in data centers. DCB provides hardware queue-based bandwidth management in a host with cooperation from the adjacent switch. All traffic for storage, data networking, cluster Inter-Process Communication (IPC), and management share the same Ethernet network infrastructure. In Windows Server 2016, DCB can be applied to any NIC individually and to NICs bound to the Hyper-V switch.
+DCB is a suite of Institute of Electrical and Electronics Engineers (IEEE) standards that enable Converged Fabrics in data centers. DCB provides hardware queue-based bandwidth management in a host with cooperation from the adjacent switch. All traffic for storage, data networking, cluster Inter-Process Communication (IPC), and management share the same Ethernet network infrastructure. In Windows Server 2016, DCB can be applied to any NIC individually and NICs bound to the Hyper-V switch.
 
 For DCB, Windows Server uses Priority-based Flow Control (PFC), standardized in IEEE 802.1Qbb. PFC creates a (nearly) lossless network fabric by preventing overflow within traffic classes. Windows Server also uses Enhanced Transmission Selection (ETS), standardized in IEEE 802.1Qaz. ETS enables the division of the bandwidth into reserved portions for up to eight classes of traffic. Each traffic class has its own transmit queue and, through the use of PFC, can start and stop transmission within a class.
-
-For more information, see [Data Center Bridging (DCB)](../dcb/dcb-top.md).
 
 ## Hyper-V Network Virtualization
 
@@ -71,7 +69,7 @@ For details about PVLAN isolation, see [System Center: Virtual Machine Manager E
 
 RDMA is a networking technology that provides high-throughput, low-latency communication that minimizes CPU usage. RDMA supports zero-copy networking by enabling the network adapter to transfer data directly to or from application memory. RDMA-capable means the NIC (physical or virtual) is capable of exposing RDMA to an RDMA client. RDMA-enabled, on the other hand, means an RDMA-capable NIC is exposing the RDMA interface up the stack.
 
-For more details about RDMA, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../../../virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md).
+For more details about RDMA, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
 
 ## Receive Side Scaling (RSS)
 
@@ -102,7 +100,7 @@ VLAN is an extension to the Ethernet frame header to enable partitioning of a LA
 
 ## Virtual Machine Queue (VMQ)
 
-VMQs is a NIC feature that allocates a queue for each VM. Anytime you have Hyper-V enabled; you must also enable VMQ. In Windows Server 2016, VMQs use NIC Switch vPorts with a single queue assigned to the vPort to provide the same functionality. For more information, see [Virtual Receive Side Scaling (vRSS)](../vrss/vrss-top.md) and [NIC Teaming](../nic-teaming/nic-teaming.md).
+VMQs is a NIC feature that allocates a queue for each VM. Anytime you have Hyper-V enabled; you must also enable VMQ. In Windows Server 2016, VMQs use NIC Switch vPorts with a single queue assigned to the vPort to provide the same functionality. For more information, see [NIC Teaming](../nic-teaming/nic-teaming.md).
 
 ## Virtual Machine Multi-Queue (VMMQ)
 

@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Migrating roles and features in Windows Server
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This page contains links to information and tools that help guide you through the process of migrating roles and features to a newer version of Windows Server. You can migrate file servers and storage using [Storage Migration Service](../storage/storage-migration-service/overview.md), while many other roles and features can be migrated by using the Windows Server Migration Tools, a set of PowerShell cmdlets that were introduced in Windows Server 2008 R2 for migrating roles and features.
 

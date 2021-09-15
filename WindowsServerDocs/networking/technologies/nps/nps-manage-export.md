@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Export an NPS Configuration for Import on Another Server
 
-Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can export the entire NPS configuration — including RADIUS clients and servers, network policy, connection request policy, registry, and logging configuration — from one NPS for import on another NPS.
 

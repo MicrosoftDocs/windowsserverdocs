@@ -10,11 +10,11 @@ ms.date: 10/04/2016
 
 # Create a virtual switch for Hyper-V virtual machines
 
-> Applies To: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Applies to: Windows Server 2022, Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 A virtual switch allows virtual machines created on Hyper-V hosts to communicate with other computers. You can create a virtual switch when you first install the Hyper-V role on Windows Server. To create additional virtual switches, use Hyper-V Manager or Windows PowerShell. To learn more about virtual switches, see [Hyper-V Virtual Switch](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).
 
-Virtual machine networking can be a complex subject. And there are several new virtual switch features that you may want to use like [Switch Embedded Teaming (SET)](../../hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md#switch-embedded-teaming-set). But basic networking is fairly easy to do. This topic covers just enough so that you can create networked virtual machines in Hyper-V. To learn more about how you can set up your networking infrastructure, review the [Networking](../../../networking/index.yml) documentation.
+Virtual machine networking can be a complex subject. And there are several new virtual switch features that you may want to use like [Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements#switch-embedded-teaming-set). But basic networking is fairly easy to do. This topic covers just enough so that you can create networked virtual machines in Hyper-V. To learn more about how you can set up your networking infrastructure, review the [Networking](../../../networking/index.yml) documentation.
 
 ## Create a virtual switch by using Hyper-V Manager
 
@@ -61,13 +61,13 @@ Virtual machine networking can be a complex subject. And there are several new v
 
 2. Right-click Windows PowerShell and select **Run as Administrator**.
 
-3. Find existing network adapters by running the [Get-NetAdapter](https://docs.microsoft.com/powershell/module/netadapter/get-netadapter) cmdlet. Make a note of the network adapter name that you want to use for the virtual switch.
+3. Find existing network adapters by running the [Get-NetAdapter](/powershell/module/netadapter/get-netadapter) cmdlet. Make a note of the network adapter name that you want to use for the virtual switch.
 
     ```PowerShell
     Get-NetAdapter
     ```
 
-4. Create a virtual switch by using the [New-VMSwitch](https://docs.microsoft.com/powershell/module/hyper-v/new-vmswitch) cmdlet. For example, to create an external virtual switch named ExternalSwitch, using the ethernet network adapter, and with **Allow management operating system to share this network adapter** turned on, run the following command.
+4. Create a virtual switch by using the [New-VMSwitch](/powershell/module/hyper-v/new-vmswitch) cmdlet. For example, to create an external virtual switch named ExternalSwitch, using the ethernet network adapter, and with **Allow management operating system to share this network adapter** turned on, run the following command.
 
     ```PowerShell
     New-VMSwitch -name ExternalSwitch  -NetAdapterName Ethernet -AllowManagementOS $true
@@ -85,7 +85,7 @@ Virtual machine networking can be a complex subject. And there are several new v
     New-VMSwitch -name PrivateSwitch -SwitchType Private
     ```
 
-For more advanced Windows PowerShell scripts that cover improved or new virtual switch features in Windows Server 2016, see [Remote Direct Memory Access and Switch Embedded Teaming](../../hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).
+For more advanced Windows PowerShell scripts that cover improved or new virtual switch features in Windows Server 2016, see [Remote Direct Memory Access and Switch Embedded Teaming](/azure-stack/hci/concepts/host-network-requirements).
 
 
 ## Next step

@@ -10,6 +10,7 @@ metadata:
   author: JasonGerend
   ms.author: jgerend
   ms.date: 5/19/2020
+  ms.prod: windows-server
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -78,7 +79,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Securing Privileged Access
-            url: ../identity/securing-privileged-access/securing-privileged-access.md
+            url: /security/compass/overview
           - text: Just in Time Administration with Microsoft Identity Manager
             url: /microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services
           - text: Just Enough Administration Article

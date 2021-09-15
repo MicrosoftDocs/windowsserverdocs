@@ -144,7 +144,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 
 -   To download and install Microsoft Baseline Configuration Analyzer 2.0, see the [Microsoft Baseline Configuration Analyzer 2.0](https://go.microsoft.com/fwlink/p/?LinkId=241484) at the Microsoft Download Center.
 
--   To download and install the latest version of Windows Update Agent, see [article 949104](https://go.microsoft.com/fwlink/p/?LinkId=237493) in the Microsoft Knowledge Base.
+-   To download and install the latest version of Windows Update Agent, see [article 949104](/troubleshoot/windows-client/deployment/update-windows-update-agent) in the Microsoft Knowledge Base.
 
 ##### To install and run the Migration Preparation Tool on the Source Server
 
@@ -161,7 +161,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 3. In the Migration Preparation Tool, select **I have a backup and am ready to proceed**, and then click **Next**.
 
    > [!WARNING]
-   >  If you receive an error message relating to a hotfix installation, see Method 2: Rename the Catroot2 Folder in [article 822798](https://go.microsoft.com/FWLink/p/?LinkID=118672) in the Microsoft Knowledge Base.
+   >  If you receive an error message relating to a hotfix installation, see Method 2: Rename the Catroot2 Folder in [article 822798](/troubleshoot/windows-server/deployment/cannot-install-updates-programs) in the Microsoft Knowledge Base.
 
     The Migration Preparation Tool prepares the source domain for migration by extending the Active Directory schema. After the task is completed, click **Next** to continue.
 

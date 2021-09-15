@@ -9,9 +9,9 @@ ms.date: 8/16/2016
 ---
 # Serial ports should not be configured on generation 2 virtual machines
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -32,6 +32,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## **Resolution**
 *If this is intentional, no further action is required. Otherwise, consider using Hyper-V Manager or Windows PowerShell to remove the connection string from the serial ports on the virtual machine.*
-
-
-

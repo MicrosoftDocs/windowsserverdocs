@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Step 2 Configure the Basic DirectAccess Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to configure the client and server settings required for a basic DirectAccess deployment. Before beginning the deployment steps, ensure that you have completed the planning steps described in [Plan a Basic DirectAccess Deployment](Plan-a-Basic-DirectAccess-Deployment.md).
 
@@ -21,7 +21,7 @@ This topic describes how to configure the client and server settings required fo
 |Update clients with the DirectAccess configuration|To receive the DirectAccess settings, clients must update group policy while connected to the intranet.|
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](/previous-versions//bb648607(v=vs.85)).
 
 ## <a name="BKMK_Role"></a>Install the Remote Access role
 To deploy Remote Access, you must install the Remote Access role on a server in your organization that will act as the Remote Access server.

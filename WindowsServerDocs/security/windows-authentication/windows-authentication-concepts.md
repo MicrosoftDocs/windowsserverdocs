@@ -10,7 +10,7 @@ ms.date: 10/12/2016
 ---
 # Windows Authentication Concepts
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This reference overview topic describes the concepts on which Windows authentication is based.
 

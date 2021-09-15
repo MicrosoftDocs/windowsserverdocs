@@ -5,13 +5,13 @@ manager: lizross
 ms.author: jgerend
 ms.topic: article
 author: JasonGerend
-ms.date: 05/28/2021
+ms.date: 07/14/2021
 description: How to use Microsoft Azure to host the witness for a Windows Server Failover Cluster in the cloud - also known as how to deploy a Cloud Witness.
 ---
 
 # Deploy a Cloud Witness for a Failover Cluster
 
-> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Cloud Witness is a type of Failover Cluster quorum witness that uses Microsoft Azure to provide a vote on cluster quorum. This topic provides an overview of the Cloud Witness feature, the scenarios that it supports, and instructions about how to configure a cloud witness for a Failover Cluster.
 
@@ -154,7 +154,7 @@ Cloud Witness configuration is well integrated within the existing Quorum Config
 
 The existing Set-ClusterQuorum PowerShell command has new additional parameters corresponding to Cloud Witness.
 
-You can configure Cloud Witness with the cmdlet [`Set-ClusterQuorum`](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum) using the following PowerShell command:
+You can configure Cloud Witness with the cmdlet [`Set-ClusterQuorum`](/powershell/module/failoverclusters/set-clusterquorum) using the following PowerShell command:
 
 ```PowerShell
 Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>
@@ -175,7 +175,7 @@ When configuring a Cloud Witness as a quorum witness for your Failover Cluster, 
 
 ### Proxy considerations with Cloud Witness
 
-Cloud Witness uses HTTPS (default port 443) to establish communication with Azure blob service. Ensure that HTTPS port is accessible via network Proxy.
+Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Ensure that the HTTPS outbound port is accessible via network Proxy.
 
 ## See Also
 

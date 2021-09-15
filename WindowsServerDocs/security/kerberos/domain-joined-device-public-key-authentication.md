@@ -10,7 +10,7 @@ ms.date: 08/18/2017
 
 # Domain-joined Device Public Key Authentication
 
->Applies to: Windows Server 2016, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 Kerberos added support for domain-joined devices to sign-in using a certificate beginning with Windows Server 2012 and Windows 8. This change allows 3rd party vendors to create solutions to provision and initialize certificates for domain-joined devices to use for domain authentication.
 

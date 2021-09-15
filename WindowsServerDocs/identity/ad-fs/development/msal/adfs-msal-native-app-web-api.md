@@ -9,7 +9,7 @@ ms.topic: article
 ---
 
 # Scenario: Native App calling Web API
->Applies To: AD FS 2019 and later
+>Applies to: Windows Server 2022, Windows Server 2019, AD FS 2019 and later
 
 Learn how to build a native app signing-in users authenticated by AD FS 2019 and acquiring tokens using [MSAL library](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)  to call web APIs.
 

@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # Virtual Private Networking (VPN)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 ## RAS Gateway as a Single Tenant VPN Server
 
