@@ -12,16 +12,16 @@ ms.date: 06/21/2021
 ## Introduction
 Starting with Windows Server 2022, two types of containers are available: Windows Server Containers and Hyper-V Containers. Each container type supports either the Server Core or Nano Server SKU of Windows Server 2022.
 
-These configurations have different performance implications which we detail below to help you understand which is right for your scenarios. In addition, we detail performance impacting configurations, and describe the tradeoffs with each of those options.
+These configurations have different performance implications, which we detail below to help you understand which is right for your scenarios. In addition, we detail performance impacting configurations, and describe the tradeoffs with each of those options.
 
 ### Windows Server Container and Hyper-V Containers
-Windows Server Container and Hyper-V containers offer many of the same portability and consistency benefits but differ in terms of their isolation guarantees and performance characteristsics.
+Windows Server Container and Hyper-V containers offer many of the same portability and consistency benefits but differ in terms of their isolation guarantees and performance characteristics.
 
 **Windows Server Containers** provide application isolation through process and namespace isolation technology. A Windows Server container shares a kernel with the container host and all containers running on the host.
 
-**Hyper-V Containers** expand on the isolation provided by Windows Server Containers by running each container in a highly optimized virtual machine. In this configuration the kernel of the container host is not shared with the Hyper-V Containers.
+**Hyper-V Containers** expand on the isolation provided by Windows Server Containers by running each container in a highly optimized virtual machine. In this configuration, the kernel of the container host is not shared with the Hyper-V Containers.
 
-The additional isolation provided by Hyper-V containers is achieved in large part by a hypervisor layer of isolation between the container and the container host. This affects container density as, unlike Windows Server Containers, less sharing of system files and binaries can occur, resulting in an overall larger storage and memory footprint. In addition there is the expected additional overhead in some network, storage io, and CPU paths.
+The additional isolation provided by Hyper-V containers is achieved in large part by a hypervisor layer of isolation between the container and the container host. This affects container density as, unlike Windows Server Containers, less sharing of system files and binaries can occur, resulting in an overall larger storage and memory footprint. In addition, there is the expected additional overhead in some network, storage IO, and CPU paths.
 
 ### Nano Server and Server Core
 Windows Server Containers and Hyper-V containers offer support for Server Core and for a new installation option available in Windows Server 2022: [Nano Server](../../../../get-started/Nano-Server-Quick-Start.md).
@@ -32,7 +32,7 @@ Nano Server is a remotely administered server operating system optimized for pri
 Container start up time is a key metric in many of the scenarios that containers offer the greatest benefit. As such, understanding how to best optimize for container start up time is critical. Below are some tuning trade-offs to understand to achieve improved start up time.
 
 ### First Logon
-Microsoft ships a base image for both Nano Server and Server Core. The base image which ships for Server Core has been optimized by removing the start-up time overhead associated with first logon (OOBE). This is not the case with Nano Server base image. However, this cost can be removed from Nano Server based images by committing at least one layer to the container image. Subsequent container starts from the image will not incur the first logon cost.
+Microsoft ships a base image for both Nano Server and Server Core. The base image that ships for Server Core has been optimized by removing the start-up time overhead associated with first logon (OOBE). This is not the case with Nano Server base image. However, this cost can be removed from Nano Server based images by committing at least one layer to the container image. Subsequent container starts from the image will not incur the first logon cost.
 ### Scratch Space Location
 
 Containers, by default, use a temporary scratch space on the container host's system drive media for storage during the lifetime of the running container. This serves as the container's system drive, and as such many of the writes and reads done in container operation follow this path. For host systems where the system drive exists on spinning disk magnetic media (HDDs) but faster storage media is available (faster HDDs or SSDs), it is possible to move the container scratch space to a different drive. This is achieved by using the dockerd –g command. This command is global, and will affect all containers running on the system.
@@ -54,7 +54,7 @@ However, there are many scenarios in which having data persist independent of co
 Both Windows Server Containers and Hyper-V containers provide a 20GB dynamic VHD for the container scratch space by default. For both container types, the container OS takes up a portion of that space, and this is true for every container started. Thus it is important to remember that every container started has some storage impact, and depending on the workload can write up to 20GB of the backing storage media. Server storage configurations should be designed with this in mind.
 
 ## Networking
-Windows Server Containers and Hyper-V containers offer a variety of networking modes to best suit the needs of differing networking configurations. Each of these options present their own performance characteristics.
+Windows Server Containers and Hyper-V containers offer various of networking modes to best suit the needs of differing networking configurations. Each of these options presents their own performance characteristics.
 
 ### Windows Network Address Translation (WinNAT)
 
