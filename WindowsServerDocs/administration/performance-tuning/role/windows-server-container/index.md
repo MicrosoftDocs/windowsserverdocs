@@ -7,7 +7,7 @@ author: akino
 ms.date: 06/21/2021
 ---
 
-# Performance tuning Windows Server containers
+# Performance tuning Windows Server Containers
 
 ## Introduction
 Starting with Windows Server 2022, two types of containers are available: Windows Server Containers and Hyper-V Containers. Each container type supports either the Server Core or Nano Server SKU of Windows Server 2022.
