@@ -4,7 +4,7 @@ description: Learn about AD FS modern authentication concepts.
 author: billmath
 ms.author: billmath
 manager: daveba
-ms.date: 08/09/2019
+ms.date: 9/15/2021
 ms.topic: article
 ---
 
@@ -26,7 +26,6 @@ Following diagram provides the most basic relationship between the actors:
 
 ## Application Types
 
-
 |Application Type|Description|Role|
 |-----|-----|-----|
 |Native application|Sometimes called a **public client**, this is intended to be a client app that runs on a pc or device and with which the user interacts.|Requests tokens from the authorization server (AD FS) for user access to resources. Sends HTTP requests to protected resources, using the tokens as HTTP headers.|
@@ -45,11 +44,11 @@ Modern authentication uses following token types:
 - **refresh_token**: This is token issued by AD FS for client to use when it needs to refresh the id_token and access_token. The token is opaque to the client and can only be consumed by AD FS.
 
 ## Refresh Token Lifetimes
-•	**Simple logon (no KMSI, device *not* registered)**: AD FS will  apply the SsoLifetime + DeviceUsageWindowInDays, and the first refresh token will have lifetime=DeviceUsageWindowInDays or SsoLifetime  (based on which field is lower) but *no* further refresh tokens are issued.
-•	**KMSI logon (EnableKmsi=true in adfs conf and kmsi=true passed as parameter**): ADFS will apply KmsiLifetimeMins with DeviceUsageWindowInDays. The first refresh token will have lifetime=DeviceUsageWindowInDays and each subsequent grant_type=refresh_token request will get a new refresh_token. (This happens only with native clients or confidential client + device auth)
-•	**Registered devices (device auth)**: ADFS will use PersistentSsoLifetimeMins + DeviceUsageWindowInDays similar to KMSI. Both Native and Confidential Clients should get new refresh tokens (based on device auth).
+-	**Simple logon (no KMSI, device *not* registered)**: AD FS will  apply the SsoLifetime + DeviceUsageWindowInDays, and the first refresh token will have lifetime=DeviceUsageWindowInDays or SsoLifetime  (based on which field is lower) but *no* further refresh tokens are issued.
+-	**KMSI logon (EnableKmsi=true in adfs conf and kmsi=true passed as parameter**): ADFS will apply KmsiLifetimeMins with DeviceUsageWindowInDays. The first refresh token will have lifetime=DeviceUsageWindowInDays and each subsequent grant_type=refresh_token request will get a new refresh_token. (This happens only with native clients or confidential client + device auth)
+-	**Registered devices (device auth)**: ADFS will use PersistentSsoLifetimeMins + DeviceUsageWindowInDays similar to KMSI. Both Native and Confidential Clients should get new refresh tokens (based on device auth).
 
-Additional details in [AD FS Single Sign On documentation](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/ad-fs-single-sign-on-settings)_
+Additional details in [AD FS Single Sign On documentation](../operations/ad-fs-single-sign-on-settings.md)
 
 ## Scopes
 
@@ -67,46 +66,48 @@ While registering a resource in AD FS, scopes can be configured to allow AD FS t
 ## Claims
 
 Security tokens (access and ID tokens) issued by AD FS contain claims, or assertions of information about the subject that has been authenticated. Applications can use claims for various tasks, including:
+
 - Validate the token
 - Identify the subject's directory tenant
 - Display user information
 - Determine the subject's authorization
+
 The claims present in any given security token are dependent upon the type of token, the type of credential used to authenticate the user, and the application configuration.
 
 ## High level AD FS authentication flow
 
 ![AD FS Authentication Flow](media/adfs-modern-auth-concepts/adfsauthflow.png)
 
+1. AD FS receives auth request from the client.
 
- 1. AD FS receives auth request from the client.
+1.	AD FS validates the client ID in the auth request with the client ID obtained during client and resource registration in AD FS. If using confidential client, then AD FS also validates the client secret provided in the auth request. AD FS also validate the redirect uri of the Client.
 
- 2.	AD FS validates the client ID in the auth request with the client ID obtained during client and resource registration in AD FS. If using confidential client, then AD FS also validates the client secret provided in the auth request. AD FS also validate the redirect uri of the Client.
+1.	AD FS identifies the resource which the client wants to access through the resource parameter passed in the auth request. If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: *scope = [resource url]/[scope values e.g., openid]*.
 
- 3.	AD FS identifies the resource which the client wants to access through the resource parameter passed in the auth request. If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: *scope = [resource url]/[scope values e.g., openid]*.
+   If resource is not passed using resource or scope parameter, ADFS will use a default resource urn:microsoft:userinfo whose polices (e.g.,MFA, Issuance or authorization policy) can't be configured.
 
-    If resource is not passed using resource or scope parameter, ADFS will use a default resource urn:microsoft:userinfo whose polices (e.g.,MFA, Issuance or authorization policy) can't be configured.
+1.	Next AD FS validates whether client has the permissions to access the resource. AD FS also validates whether the scopes passed in the auth request matches the scopes configured while registering the resource. If the client doesn't have the permissions or the right scopes are not sent in the auth request the auth flow is terminated.
 
- 4.	Next AD FS validates whether client has the permissions to access the resource. AD FS also validates whether the scopes passed in the auth request matches the scopes configured while registering the resource. If the client doesn't have the permissions or the right scopes are not sent in the auth request the auth flow is terminated.
+1.	Once permissions and scopes are validated, AD FS authenticates the user using the configured [authentication method](../operations/configure-authentication-policies.md).
 
- 5.	Once permissions and scopes are validated, AD FS authenticates the user using the configured [authentication method](../operations/configure-authentication-policies.md).
+1.	If [additional authentication method](../operations/configure-additional-authentication-methods-for-ad-fs.md) is required as per the resource policy or the global auth policy, AD FS triggers the additional authentication.
 
- 6.	If [additional authentication method](../operations/configure-additional-authentication-methods-for-ad-fs.md) is required as per the resource policy or the global auth policy, AD FS triggers the additional authentication.
+1. AD FS uses [Azure MFA](../operations/configure-ad-fs-and-azure-mfa.md) or [3rd party MFA](../operations/additional-authentication-methods-ad-fs.md) to perform authentication.
 
- 7. AD FS uses [Azure MFA](../operations/configure-ad-fs-and-azure-mfa.md) or [3rd party MFA](../operations/additional-authentication-methods-ad-fs.md) to perform authentication.
+1.	Once user is authenticated, AD FS applies the [claim rules](../deployment/configuring-claim-rules.md) (determines the claims sent to resource as a part of the security tokens) and [access control polices](../operations/ad-fs-client-access-policies.md) (determines that user has met the required conditions to access the resource).
 
- 8.	Once user is authenticated, AD FS applies the [claim rules](../deployment/configuring-claim-rules.md) (determines the claims sent to resource as a part of the security tokens) and [access control polices](../operations/ad-fs-client-access-policies.md) (determines that user has met the required conditions to access the resource).
+1.	Next, AD FS generates the Access and Refresh Tokens.
 
- 9.	Next, AD FS generates the Access and Refresh Tokens..
+1. AD FS also generates the ID token.
 
- 10. AD FS also generates the ID token.
+1. If the scope = allatclaims is included in the auth request, [ID token is customized](custom-id-tokens-in-ad-fs.md) to include claims in the access token based on the defined claim rules.
 
- 11. If the scope = allatclaims is included in the auth request, [ID token is customized](custom-id-tokens-in-ad-fs.md) to include claims in the access token based on the defined claim rules.
-
- 12. Once the required tokens are generated and customized, AD FS responds to the client including the tokens. Only if the auth request includes scope = openid, ID token is included in the response. Client can always obtain the ID token post authentication using the token endpoint.
+1. Once the required tokens are generated and customized, AD FS responds to the client including the tokens. Only if the auth request includes scope = openid, ID token is included in the response. Client can always obtain the ID token post authentication using the token endpoint.
 
 ## Types of libraries
 
 Two types of libraries are used with AD FS:
+
 - **Client libraries**: Native clients and server apps use client libraries to acquire access tokens for calling a resource such as a Web API. Microsoft Authentication Library (MSAL) is the latest and recommended client library when using AD FS 2019. Active Directory Authentication Library (ADAL) is recommended for AD FS 2016.
 
 - **Server middleware libraries**: Web apps use server middleware libraries for user sign in. Web APIs use server middleware libraries to validate tokens that are sent by native clients or by other servers. OWIN (Open Web Interface for .NET) is the recommended middleware library.
@@ -116,17 +117,18 @@ Two types of libraries are used with AD FS:
 In certain scenarios it is possible that the Web app (client) needs additional claims in an ID token to help in the functionality. This can be achieved by using one of the following options.
 
 **Option 1:** Should be used when using a public client and web app does not have a resource that it is trying to access. The option requires
-1.	response_mode set as form_post
-2.	Relying party identifier (Web API identifier) is same as client identifier
+1.	Response_mode set as form_post
+1.	Relying party identifier (Web API identifier) is same as client identifier
 
 ![AD FS Customize Token Option 1](media/adfs-modern-auth-concepts/option1.png)
 
-**Option 2:** Should be used when web app has a resource that it is trying to access and needs to pass additional claims through ID token. Both public and confidential clients can be used. The option requires
-1.	response_mode set as form_post
-2.	KB4019472 is installed on your AD FS servers
-3.	Scope allatclaims assigned to the client – RP pair. You can assign the scope by using the Grant-ADFSApplicationPermission (Use Set-AdfsApplicationPermission if already granted once) PowerShell cmdlet as indicated in the example below:
+**Option 2:** Should be used when web app has a resource that it is trying to access and needs to pass additional claims through ID token. Both public and confidential clients can be used. The option requires:
 
-    ``` powershell
+1.	response_mode set as form_post
+1.	KB4019472 is installed on your AD FS servers
+1.	Scope allatclaims assigned to the client – RP pair. You can assign the scope by using the Grant-ADFSApplicationPermission (Use Set-AdfsApplicationPermission if already granted once) PowerShell cmdlet as indicated in the example below:
+
+    ```PowerShell
     Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient" -ServerRoleIdentifier "https://rp/fedpassive" -ScopeNames "allatclaims","openid"
     ```
 
@@ -137,7 +139,6 @@ To better understand how to configure a Web App in ADFS to acquire customized ID
 ## Single log-out
 
 Single logout results in ending all the client sessions using the session id. AD FS 2016 and later supports single log-out for OpenID Connect/OAuth. For more details see [Single log-out for OpenID Connect with AD FS](ad-fs-logout-openid-connect.md).
-
 
 ## AD FS Endpoints
 
