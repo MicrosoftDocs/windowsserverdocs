@@ -96,9 +96,7 @@ The claims present in any given security token are dependent upon the type of to
 
 1.	Once user is authenticated, AD FS applies the [claim rules](../deployment/configuring-claim-rules.md) (determines the claims sent to resource as a part of the security tokens) and [access control polices](../operations/ad-fs-client-access-policies.md) (determines that user has met the required conditions to access the resource).
 
-1.	Next, AD FS generates the Access and Refresh Tokens.
-
-1. AD FS also generates the ID token.
+1.	Next, AD FS generates the Access and Refresh Tokens. AD FS also generates the ID token.
 
 1. If the scope = allatclaims is included in the auth request, [ID token is customized](custom-id-tokens-in-ad-fs.md) to include claims in the access token based on the defined claim rules.
 
