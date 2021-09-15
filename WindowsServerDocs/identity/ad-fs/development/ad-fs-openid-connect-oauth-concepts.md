@@ -112,17 +112,17 @@ Two types of libraries are used with AD FS:
 
 ## Customize ID Token (additional claims in ID Token)
 
-In certain scenarios, it is possible that the Web app (client) needs additional claims in an ID token to help in the functionality. This can be achieved by using one of the following options.
+In certain scenarios, it is possible that the Web app (client) needs additional claims in an ID token to help in the functionality. This can be achieved by using one of the following options:
 
-**Option 1:** Should be used when using a public client and web app does not have a resource that it is trying to access. The option requires
-- Response_mode set as form_post
+**Option 1:** Should be used when using a public client and web app does not have a resource that it is trying to access. This option requires:
+- response_mode set as form_post
 - Relying party identifier (Web API identifier) is same as client identifier
 
 ![AD FS Customize Token Option 1](media/adfs-modern-auth-concepts/option1.png)
 
-**Option 2:** Should be used when web app has a resource that it is trying to access and needs to pass additional claims through ID token. Both public and confidential clients can be used. The option requires:
+**Option 2:** Should be used when web app has a resource that it is trying to access and needs to pass additional claims through ID token. Both public and confidential clients can be used. This option requires:
 
-- Response_mode set as form_post
+- response_mode set as form_post
 - KB4019472 is installed on your AD FS servers
 - Scope allatclaims assigned to the client – RP pair. You can assign the scope by using the Grant-ADFSApplicationPermission (Use Set-AdfsApplicationPermission if already granted once) PowerShell cmdlet as indicated in the example below:
 
