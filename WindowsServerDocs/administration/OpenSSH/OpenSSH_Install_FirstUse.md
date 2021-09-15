@@ -3,8 +3,8 @@ title:  Install OpenSSH
 description: Installing OpenSSH Client and Server for Windows.
 ms.date: 09/15/2021
 ms.topic: conceptual
-ms.author: IngridAtMicrosoft
-author: inhenkel
+ms.author: inhenkel
+author: IngridAtMicrosoft
 ms.custom: contperf-fy21q4
 ---
 
