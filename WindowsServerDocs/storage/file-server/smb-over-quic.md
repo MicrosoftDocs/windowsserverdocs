@@ -43,7 +43,7 @@ To use SMB over QUIC, you need the following things:
 
 1. Create a Certificate Authority-issued certificate with the following properties:
 
-    - Key usage: digital signature, non-repudiation
+    - Key usage: digital signature
     - Purpose: Server Authentication (EKU 1.3.6.1.5.5.7.3.1)
     - Signature algorithm: SHA256RSA *(or greater)*
     - Signature hash: SHA256 *(or greater)*
