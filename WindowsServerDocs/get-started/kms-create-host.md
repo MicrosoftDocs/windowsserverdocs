@@ -54,27 +54,15 @@ You will need:
 
 1. Select **Next** on the introduction screen. Select **Key Management Service (KMS)** as the activation type and enter `localhost` to configure the local server or the hostname of the server you want to configure.
 
-   :::image type="content" source="media/activation/kms-host-method.png" alt-text="Select Key Management Service (KMS) as the activation type":::
-
 1. Select **Install your KMS host key** and enter the product key for your organization, then select **Commit**.
-
-   :::image type="content" source="media/activation/kms-host-key-install.png" alt-text="Install your KMS host key":::
 
 1. Once the product key has been installed, you need to activate the product. Click **Next**.
 
-   :::image type="content" source="media/activation/kms-host-key-install-succeeded.png" alt-text="Product key installed successfully":::
-
-1. Select the product you want to activate from the dropdown menu, then select whether you want to activate online or by phone. In this example we select **Activate online** and then **Commit**.
-
-   :::image type="content" source="media/activation/kms-host-key-activate.png" alt-text="KMS host product key list to activate":::
+1. Select the product you want to activate from the dropdown menu, then select whether you want to activate online or by phone. In this example, select **Activate online** and then **Commit**.
 
 1. Once activation is successful, the KMS host configuration will be shown. If this is the configuration you want, you can select **Close** to exit the wizard. DNS records will be created and you can start [activating KMS clients](kms-client-activation-keys.md). See the section below if you need to [manually create DNS records](#manually-create-dns-records). If you want to change the configuration settings, select **Next**.
 
-   :::image type="content" source="media/activation/kms-host-key-activate-succeeded.png" alt-text="KMS host key activation succeeded":::
-
 1. **Optional**: Change the configuration values based on your requirements and select **Commit**.
-
-   :::image type="content" source="media/activation/kms-host-configure.png" alt-text="Configure Key Management Service options":::
 
 > [!NOTE]
 > You can now start [activating KMS clients](kms-client-activation-keys.md), however a network must have a minimum number of computers (called the activation threshold). KMS hosts count the number of recent connections and so when a client or server contacts the KMS host, the host adds the machine ID to its count and then returns the current count value in its response. The client or server will activate if the count is high enough. Windows clients will activate if the count is 25 or higher. Windows Server and volume editions of Microsoft Office products will activate if the count is five or greater. The KMS only counts unique connections from the past 30 days, and only stores the 50 most recent contacts.
@@ -110,12 +98,6 @@ To disable publishing of DNS records by the KMS host:
 
 1. Select **Next** on the introduction screen. Select **Key Management Service (KMS)** as the activation type and enter `localhost` to configure the local server or the hostname of the server you want to configure.
 
-   :::image type="content" source="media/activation/kms-host-method.png" alt-text="Select Key Management Service (KMS) as the activation type":::
-
 1. Select **Skip to Configuration**, then select **Next**.
 
-   :::image type="content" source="media/activation/kms-host-skip-configuration.png" alt-text="Skip to Configuration":::
-
 1. Uncheck the box for publish DNS records, then select **Commit**.
-
-   :::image type="content" source="media/activation/kms-host-configure-publish.png" alt-text="Uncheck the box for publish DNS records":::
