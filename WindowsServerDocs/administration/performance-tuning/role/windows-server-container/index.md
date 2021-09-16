@@ -21,15 +21,15 @@ Windows Server Container and Hyper-V containers offer many of the same portabili
 
 **Hyper-V Containers** expand on the isolation provided by Windows Server Containers by running each container in a highly optimized virtual machine. In this configuration, the kernel of the container host is not shared with the Hyper-V Containers.
 
-The additional isolation provided by Hyper-V containers is achieved in large part by a hypervisor layer of isolation between the container and the container host. This affects container density as, unlike Windows Server Containers, less sharing of system files and binaries can occur, resulting in an overall larger storage and memory footprint. In addition, there is the expected additional overhead in some network, storage IO, and CPU paths.
+The extra isolation provided by Hyper-V containers is achieved in large part by a hypervisor layer of isolation between the container and the container host. This affects container density as, unlike Windows Server Containers, less sharing of system files and binaries can occur, resulting in an overall larger storage and memory footprint. In addition, there is the expected further overhead in some network, storage IO, and CPU paths.
 
 ### Nano Server and Server Core
 Windows Server Containers and Hyper-V Containers offer support for Server Core and for a new installation option available in Windows Server 2022: [Nano Server](../../../../get-started/Nano-Server-Quick-Start.md).
 
 Nano Server is a remotely administered server operating system optimized for private clouds and datacenters. It is similar to Windows Server in Server Core mode, but significantly smaller, has no local logon capability, and only supports 64-bit applications, tools, and agents. It takes up far less disk space, sets up significantly faster, and requires far fewer updates and restarts than Windows Server. When it does restart, it restarts much faster. 
 
-## Container Start Up Time
-Container start up time is a key metric in many of the scenarios that containers offer the greatest benefit. As such, understanding how to best optimize for container start up time is critical. Below are some tuning trade-offs to understand to achieve improved start up time.
+## Container Start-Up Time
+Container start-up time is a key metric in many of the scenarios that containers offer the greatest benefit. As such, understanding how to best optimize for container start-up time is critical. Below are some tuning trade-offs to understand to achieve improved start-up time.
 
 ### First Logon
 Microsoft ships a base image for both Nano Server and Server Core. The base image that ships for Server Core has been optimized by removing the start-up time overhead associated with first logon (OOBE). This is not the case with Nano Server base image. However, this cost can be removed from Nano Server based images by committing at least one layer to the container image. Subsequent container starts from the image will not incur the first logon cost.
