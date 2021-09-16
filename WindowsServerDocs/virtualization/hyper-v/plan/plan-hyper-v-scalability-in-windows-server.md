@@ -11,7 +11,7 @@ ms.date: 9/16/2021
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This article gives you details about the maximum configuration for components you can add and remove on a Hyper-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine, as well as those that apply to the Hyper-V host. Maximums continue to grow where needed, in response to requests to support newer scenarios such as machine learning and data analytics.
+This article gives you details about the maximum configuration for components you can add and remove on a Hyper-V host or its virtual machines, such as virtual processors or checkpoints. As you plan your deployment, consider the maximums that apply to each virtual machine, as well as those that apply to the Hyper-V host. Maximums continue to grow in Windows Server versions, in response to requests to support newer scenarios such as machine learning and data analytics.
 
 > [!NOTE]
 > For information about System Center Virtual Machine Manager (VMM), see [Virtual Machine Manager](/system-center/vmm/overview). VMM is a Microsoft product for managing a virtualized data center that is sold separately.
