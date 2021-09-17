@@ -1,6 +1,6 @@
 ---
 title: Secured-core server from OEM partners in Windows Server
-description: Find out the advanced security features with Secured-core server hardware from OEM partners.
+description: Find out the advanced security features of Secured-core server with Windows Server hardware from OEM partners.
 author: SCuffy
 ms.author: socuff
 ms.topic: overview 
@@ -10,6 +10,8 @@ ms.custom: template-overview
 ---
 
 # What is Secured-core server?
+
+>Applies to: Windows Server 2022
 
 Secured-core server combines hardware, firmware, and driver capabilities to further protect the operating environment - from the boot process through to data in memory. It's built on three key pillars: simplified security, advanced protection, and preventative defense.
 
