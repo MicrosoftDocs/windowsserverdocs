@@ -49,7 +49,7 @@ DNS Client in Windows Server 2022 now supports DNS-over-HTTPS (DoH) which encryp
 
 #### Server Message Block (SMB): SMB AES-256 encryption for the most security conscious
 
-Windows Server now supports AES-256-GCM and AES-256-CCM cryptographic suites for SMB encryption and signing. Windows will automatically negotiate this more advanced cipher method when connecting to another computer that also supports it, and it can also be mandated through Group Policy. Windows Server still supports AES-128 for down-level compatibility.
+Windows Server now supports AES-256-GCM and AES-256-CCM cryptographic suites for SMB encryption. Windows will automatically negotiate this more advanced cipher method when connecting to another computer that also supports it, and it can also be mandated through Group Policy. Windows Server still supports AES-128 for down-level compatibility. AES-128-GMAC signing now also accelerates signing perfomance.
 
 #### SMB: East-West SMB encryption controls for internal cluster communications
 
@@ -58,6 +58,8 @@ Windows Server failover clusters now support granular control of encrypting and 
 #### SMB Direct and RDMA encryption
 
 SMB Direct and RDMA supply high bandwidth, low latency networking fabric for workloads like Storage Spaces Direct, Storage Replica, Hyper-V, Scale-out File Server, and SQL Server. SMB Direct in Windows Server 2022 now supports encryption. Previously, enabling SMB encryption disabled direct data placement; this was intentional, but seriously impacted performance. Now data is encrypted data before placement, leading to far less performance degradation while adding AES-128 and AES-256 protected packet privacy.
+
+More information on SMB encryption, signing acceleration, secure RDMA, and cluster support can be found at [SMB security enhancements](../storage/file-server/smb-security.md).
 
 #### SMB over QUIC
 
