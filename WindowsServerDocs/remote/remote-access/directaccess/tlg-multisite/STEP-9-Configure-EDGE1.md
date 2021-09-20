@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # STEP 9 Configure EDGE1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The following procedures are performed on the EDGE1 server:
 

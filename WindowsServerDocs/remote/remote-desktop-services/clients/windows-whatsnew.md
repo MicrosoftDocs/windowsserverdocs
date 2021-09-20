@@ -27,14 +27,14 @@ We regularly update the [Microsoft Store client](windows.md), adding new feature
 *Date published: 08/26/2020*
 
 - Rewrote the client to use the same underlying RDP core engine as the iOS, macOS, and Android clients.
-- Added support for the Azure Resource Manager-integrated version of Windows Virtual Desktop.
+- Added support for the Azure Resource Manager-integrated version of Azure Virtual Desktop.
 - Added support for x64 and ARM64.
 - Updated the side panel design to full screen.
 - Added support for light and dark modes.
 - Added functionality to subscribe and connect to sovereign cloud deployments.
 - Added functionality to enable backup and restore of workspaces (bookmarks) in release to manufacturing (RTM).
 - Updated functionality to use existing Azure Active Directory (Azure AD) tokens during the subscription process to reduce the number of times users must sign in.
-- Updated subscription can now detect whether you're using Windows Virtual Desktop or Windows Virtual Desktop (classic).
+- Updated subscription can now detect whether you're using Azure Virtual Desktop or Azure Virtual Desktop (classic).
 - Fixed issue with copying files to remote PCs.
 - Fixed commonly reported accessibility issues with buttons.
 - A limit of up to 20 credentials per app is allowed.
@@ -43,7 +43,7 @@ We regularly update the [Microsoft Store client](windows.md), adding new feature
 
 *Date published: 04/20/2020*
 
-- Updated the user agent string for Windows Virtual Desktop.
+- Updated the user agent string for Azure Virtual Desktop.
 
 ## Updates for version 10.1.1195
 

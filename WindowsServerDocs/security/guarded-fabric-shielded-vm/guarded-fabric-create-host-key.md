@@ -11,7 +11,7 @@ ms.date: 08/29/2018
 
 # Create a host key and add it to HGS
 
->Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 This topic covers how to prepare Hyper-V hosts to become guarded hosts using host key attestation (Key mode). You'll create a host key pair (or use an existing certificate) and add the public half of the key to HGS.
 

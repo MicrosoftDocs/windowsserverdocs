@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # Configure Features on Demand in Windows Server
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to remove feature files in a Features on Demand configuration by using the Uninstall-WindowsFeature cmdlet.
 

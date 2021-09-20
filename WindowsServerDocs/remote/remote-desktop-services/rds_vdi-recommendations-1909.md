@@ -24,7 +24,7 @@ A VDI environment presents a full desktop session, including applications, to a 
 
 The optimization settings would take place on a reference device. A VM would be an ideal place to build the image, because the state can be saved, checkpoints can be made, and backups can be done. A default OS installation is performed on the base VM. That base VM is then optimized by removing unnecessary apps, installing Windows updates, installing other updates, deleting temporary files, and applying settings.
 
-There are other types of VDI such as Remote Desktop Session (RDS) and the recently released [Windows Virtual Desktop](https://azure.microsoft.com/services/virtual-desktop/). An in-depth discussion regarding these technologies is outside the scope of this article. This article focuses on the Windows base image settings, without reference to other factors in the environment such as host optimization.
+There are other types of VDI such as Remote Desktop Session (RDS) and the recently released [Azure Virtual Desktop](https://azure.microsoft.com/services/virtual-desktop/). An in-depth discussion regarding these technologies is outside the scope of this article. This article focuses on the Windows base image settings, without reference to other factors in the environment such as host optimization.
 
 Security and stability are top priorities for Microsoft when it comes to products and services. Enterprise customers might choose to utilize the built-in Windows Security, a suite of services that work well with or without Internet. For those VDI environments not connected to the Internet, security signatures can be downloaded several times per day, as Microsoft might release more than one signature update per day. Those signatures can then be provided to the VDI VMs and scheduled to be installed during production, regardless of persistent or non-persistent. That way the VM protection is as current as possible.
 
@@ -382,6 +382,7 @@ The following settings were chosen to not counter or conflict with any setting t
 | Logon | Show first sign-in animation |  | Disabled |
 | Logon | Turn off app notifications on the lock screen |  | Enabled |
 | Logon | Turn  off Windows Startup sound |  | Enabled |
+|Logon|Show clear sign-in background| N/A |Enabled (This policy setting disables the acrylic blur effect on the sign-in page's background image. With this setting enabled, the background image shows without blur.)|
 | Power Management | Select an active power plan | High Performance | Enabled |
 | Recovery | Allow restore of system to default state |  | Disabled |
 | *Storage Health | Allow downloading updates to the Disk Failure Prediction Model |  | Disabled. Updates aren't downloaded for the Disk Failure Prediction Failure Model. |
@@ -582,7 +583,7 @@ Per-user services are services that are created when a user signs into Windows o
 
 [Per-user services in Windows 10 and Windows Server](/windows/application-management/per-user-services-in-windows)
 
-If you intend to change a service start value, the preferred method is to open an elevated .cmd prompt and run the Service Control Manager tool 'Sc.exe'. For more information on using 'Sc.exe' see [Sc](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754599(v=ws.11)).
+If you intend to change a service start value, the preferred method is to open an elevated .cmd prompt and run the Service Control Manager tool 'Sc.exe'. For more information on using 'Sc.exe' see [Sc](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc754599(v=ws.11)).
 
 ### Scheduled tasks
 
@@ -749,7 +750,7 @@ Applies to Windows 10. The default is **128**, with a valid range of 1 to 65536.
 
 `HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DormantFileLimit`
 
-Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.
+Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.: Windows Server 2022, Windows Server 2019,
 
 You can configure many of these SMB settings by using the [Set-SmbClientConfiguration](/powershell/module/smbshare/set-smbclientconfiguration) and [Set-SmbServerConfiguration](/powershell/module/smbshare/set-smbserverconfiguration) Windows PowerShell cmdlets. Registry-only settings can be configured by using Windows PowerShell as well, as in the following example:
 
@@ -757,9 +758,9 @@ You can configure many of these SMB settings by using the [Set-SmbClientConfigur
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" RequireSecuritySignature -Value 0 -Force
 ```
 
-Additional settings from the [Windows Restricted Traffic Limited Functionality Baseline](https://docs.microsoft.com/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services) guidance.
+Additional settings from the [Windows Restricted Traffic Limited Functionality Baseline](/windows/privacy/manage-connections-from-windows-operating-system-components-to-microsoft-services) guidance.
 
-Microsoft has released a baseline, created using the same procedures as the [Windows Security Baselines](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines), for environments that are either not connected directly to the Internet, or wish to reduce data sent to Microsoft and other services.
+Microsoft has released a baseline, created using the same procedures as the [Windows Security Baselines](/windows/security/threat-protection/windows-security-baselines), for environments that are either not connected directly to the Internet, or wish to reduce data sent to Microsoft and other services.
 
 The Windows Restricted Traffic Limited Functionality Baseline settings are called out in the group policy table with an asterisk.
 

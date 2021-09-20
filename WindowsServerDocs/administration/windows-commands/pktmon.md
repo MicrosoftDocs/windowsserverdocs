@@ -4,14 +4,14 @@ description: Reference article for the pktmon network diagnostics tool for Windo
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
-ms.date: 1/14/2021
+ms.date: 06/24/2021
 ---
 
 # pktmon
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, drop detection, filtering, and counting. Pktmon is especially helpful in virtualization scenarios such as container networking and SDN, because it provides visibility within the networking stack.
+Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for advanced packet capture and event collection, drop detection, filtering, and counting. Pktmon is especially helpful in virtualization scenarios such as container networking and SDN, because it provides visibility within the networking stack.
 
 ## Syntax
 
@@ -38,5 +38,5 @@ pktmon { filter | list | start | stop | status | unload | counters | reset | etl
 
 ## Additional References
 
-- [Packet Monitor overview](/windows-server/networking/technologies/pktmon/pktmon)
-- [Pktmon support for Microsoft Network Monitor (Netmon)](/windows-server/networking/technologies/pktmon/pktmon-netmon-support)
+- [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)
+- [Pktmon support for Microsoft Network Monitor (Netmon)](../../networking/technologies/pktmon/pktmon-netmon-support.md)

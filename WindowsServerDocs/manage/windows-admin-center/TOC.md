@@ -2,7 +2,7 @@
 
 ## Understand
 ### [What is Windows Admin Center?](understand/what-is.md)
-### [FAQ](understand/faq.md)
+### [FAQ](understand/faq.yml)
 ### [Case studies](understand/case-studies.md)
 ### [Related management products](understand/related-management.md)
 
@@ -37,6 +37,7 @@
 #### [Azure Site Recovery](azure/azure-site-recovery.md)
 #### [Azure File Sync](azure/azure-file-sync.md)
 #### [Azure Monitor](azure/azure-monitor.md)
+#### [Azure Network Adapter](azure/use-azure-network-adapter.md)
 #### [Azure Update Management](azure/azure-update-management.md)
 ### [Connect to Azure](azure/azure-integration.md)
 ### [Create Azure VMs](azure/create-azure-vms.md)

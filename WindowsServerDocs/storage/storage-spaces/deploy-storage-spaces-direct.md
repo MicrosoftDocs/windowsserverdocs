@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Deploy Storage Spaces Direct
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
 
@@ -43,7 +43,7 @@ Gather the following information:
 
 The first step is to install Windows Server on every server that will be in the cluster. Storage Spaces Direct requires Windows Server Datacenter Edition. You can use the Server Core installation option, or Server with Desktop Experience.
 
-When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Install Server Core](/windows-server/get-started/getting-started-with-server-core).
+When you install Windows Server using the Setup wizard, you can choose between *Windows Server* (referring to Server Core) and *Windows Server (Server with Desktop Experience)*, which is the equivalent of the *Full* installation option available in Windows Server 2012 R2. If you don't choose, you'll get the Server Core installation option. For more information, see [Install Server Core](../../get-started/getting-started-with-server-core.md).
 
 ### Step 1.2: Connect to the servers
 

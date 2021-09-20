@@ -9,7 +9,7 @@ ms.date: 12/05/2016
 ---
 # Hyper-V feature compatibility by generation and guest
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The tables in this article show you the generations and operating systems that are compatible with some of the Hyper-V features, grouped by categories. In general, you'll get the best availability of features with a generation 2 virtual machine that runs the newest operating system.
 

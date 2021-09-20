@@ -10,7 +10,7 @@ ms.date: 08/29/2018
 
 # Initialize the HGS cluster using key mode in an existing bastion forest
 
-> Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 >
 > [!div class="step-by-step"]
 > [« Install HGS in a new forest](guarded-fabric-install-hgs-in-a-bastion-forest.md)

@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # Format
 
-> Applies to: Windows 10, Windows Server 2016
+>Applies to: Windows Server 2022, Windows 10, Windows Server 2019
 
 Formats a disk to accept Windows files. You must be a member of the Administrators group to format a hard drive.
 
@@ -21,11 +21,11 @@ Formats a disk to accept Windows files. You must be a member of the Administrato
 ## Syntax
 
 ```
-format <volume> [/fs:{FAT|FAT32|NTFS}] [/v:<label>] [/q] [/a:<unitsize>] [/c] [/x] [/p:<passes>]
-format <volume> [/v:<label>] [/q] [/f:<size>] [/p:<passes>]
-format <volume> [/v:<label>] [/q] [/t:<tracks> /n:<sectors>] [/p:<passes>]
-format <volume> [/v:<label>] [/q] [/p:<passes>]
-format <volume> [/q]
+format volume [/FS:file-system] [/V:label] [/Q] [/L[:state]] [/A:size] [/C] [/I:state] [/X] [/P:passes] [/S:state]
+format volume [/V:label] [/Q] [/F:size] [/P:passes]
+format volume [/V:label] [/Q] [/T:tracks /N:sectors] [/P:passes]
+format volume [/V:label] [/Q] [/P:passes]
+format volume [/Q]
 ```
 
 ### Parameters
@@ -33,16 +33,25 @@ format <volume> [/q]
 | Parameter | Description |
 | --------- | ----------- |
 | `<volume>` | Specifies the mount point, volume name, or drive letter (followed by a colon) of the drive that you want to format. If you do not specify any of the following command-line options, **format** uses the volume type to determine the default format for the disk. |
-| /fs:{FAT \| FAT32 \| NTFS} | Specifies the type of file system (FAT, FAT32, NTFS). |
-| /v:`<label>` | Specifies the volume label. If you omit the **/v** command-line option or use it without specifying a volume label, **format** prompts you for the volume label after the formatting is complete. Use the syntax **/v:** to prevent the prompt for a volume label. If you use a single **format** command to format more than one disk, all of the disks will be given the same volume label. |
-| /a:`<unitsize>` | Specifies the allocation unit size to use on FAT, FAT32, or NTFS volumes. If you don't specify *unitsize*, it's chosen based on volume size. Default settings are strongly recommended for general use. The following list presents valid values for NTFS, FAT, and FAT32 *unitsize*:<ul><li>512</li><li>1024</li><li>2048</li><li>4096</li><li>8192</li><li>16K</li><li>32K</li><li>64K</li></ul>FAT and FAT32 also support 128K and 256K for a sector size greater than 512 bytes. |
-| /q | Performs a quick format. Deletes the file table and the root directory of a previously formatted volume, but does not perform a sector-by-sector scan for bad areas. You should use the **/q** command-line option to format only previously formatted volumes that you know are in good condition. Note that **/q** overrides **/p**. |
-| /f:`<size>` | Specifies the size of the floppy disk to format. When possible, use this command-line option instead of the **/t** and **/n** command-line options. Windows accepts the following values for size:<ul><li>1440 or 1440k or 1440kb</li><li>1.44 or 1.44m or 1.44mb</li><li>1.44-MB, double-sided, quadruple-density, 3.5-inch disk</li></ul> |
-| /t:`<tracks>` | Specifies the number of tracks on the disk. When possible, use the **/f** command-line option instead. If you use the **/t** option, you must also use the **/n** option. These options together provide an alternative method of specifying the size of the disk that is being formatted. This option is not valid with the **/f** option. |
-| /n:`<sectors>` | Specifies the number of sectors per track. When possible, use the **/f** command-line option instead of **/n**. If you use **/n**, you must also use **/t**. These two options together provide an alternative method of specifying the size of the disk that is being formatted. This option is not valid with the **/f** option. |
-| /p:`<passes>` | Zeros every sector on the volume for the number of passes specified. This option is not valid with the **/q** option. |
-| /c | NTFS only. Files created on the new volume will be compressed by default. |
-| /x | Causes the volume to dismount, if necessary, before it's formatted. Any open handles to the volume will no longer be valid. |
+| /FS:filesystem | Specifies the type of file system (FAT, FAT32, NTFS, exFAT, ReFS, or UDF). |
+| /V:`<label>` | Specifies the volume label. If you omit the **/V** command-line option or use it without specifying a volume label, **format** prompts you for the volume label after the formatting is complete. Use the syntax **/V:** to prevent the prompt for a volume label. If you use a single **format** command to format more than one disk, all of the disks will be given the same volume label. |
+| /A:`<size>` | Specifies the allocation unit size to use on FAT, FAT32, NTFS, exFAT, or ReFS volumes. If you don't specify *unit size*, it's chosen based on volume size. Default settings are strongly recommended for general use. The following list presents valid values for each type of file system *unit size*:<ul><li>**FAT and FAT32**: 512, 1024, 2048, 4096, 8192, 16K, 32K, 64K. Also 128K and 256K for a sector size greater than 512 bytes.</li><li>**NTFS**: 512, 1024, 2048, 4096, 8192, 16K, 32K, 64K, 128K, 256K, 512K, 1M, 2M</li><li>**exFAT**: 512, 1024, 2048, 4096, 8192, 16K, 32K, 64K, 128K, 256K, 512K, 1M, 2M, 4M, 8M, 16M, 32M</li><li>**ReFS**: 4096, 64K</li></ul>|
+| /Q | Performs a quick format. Deletes the file table and the root directory of a previously formatted volume, but does not perform a sector-by-sector scan for bad areas. You should use the **/Q** command-line option to format only previously formatted volumes that you know are in good condition. Note that **/Q** overrides **/Q**. |
+| /F:`<size>` | Specifies the size of the floppy disk to format. When possible, use this command-line option instead of the **/T** and **/T** command-line options. Windows accepts the following values for size:<ul><li>1440 or 1440k or 1440kb</li><li>1.44 or 1.44m or 1.44mb</li><li>1.44-MB, double-sided, quadruple-density, 3.5-inch disk</li></ul> |
+| /T:`<tracks>` | Specifies the number of tracks on the disk. When possible, use the **/F** command-line option instead. If you use the **/T** option, you must also use the **/N** option. These options together provide an alternative method of specifying the size of the disk that is being formatted. This option is not valid with the **/F** option. |
+| /N:`<sectors>` | Specifies the number of sectors per track. When possible, use the **/F** command-line option instead of **/N**. If you use **/N**, you must also use **/T**. These two options together provide an alternative method of specifying the size of the disk that is being formatted. This option is not valid with the **/F** option. |
+| /P:`<count>` | Zero every sector on the volume. After that, the volume will be overwritten **count** times using a different random number each time. If **count** is zero, no additional overwrites are made after zeroing every sector. This switch is ignored when **/Q** is specified. |
+| /C | NTFS only. Files created on the new volume will be compressed by default. |
+| /X | Forces the volume to dismount, if necessary, before it's formatted. Any open handles to the volume will no longer be valid. |
+| /R | NTFS only. Files created on the new volume will be compressed by default. |
+| /D | UDF 2.50 only. Metadata will be duplicated. |
+| /L:`<state>` | NTFS only. Overrides the default size of file record. By default, a non-tiered volume will be formatted with small size file records and a tiered volume will be formatted with large size file records. **/L** and **/L:enable** forces format to use large size file records and **/L:disable** forces format to use small size file records. |
+| /S:`<state>` | Specifies support for short filenames. State is either **enable** or **disable**. Short names are disabled by default. |
+| /TXF:`<state>` | Specifies TxF is enabled/disabled. State is either **enable** or **disable**. TxF is enabled by default |
+| /I:`<state>` | ReFS only. Specifies whether integrity should be enabled on the new volume. State is either **enable** or **disable**. Integrity is enabled on storage that supports data redundancy by default. |
+| /DAX:`<state>` | NTFS only. Enable direct access storage (DAX) mode for this volume. In DAX mode, the volume is accessed via the memory bus, boosting IO performance. A volume can be formatted with DAX mode only if the hardware is DAX capable. State is either **enable** or **disable**. **/DAX** is considered the same as **/DAX:enable**. |
+| /LogSize::`<size>` | NTFS only Specifies the size for NTFS log file in kilobytes. The minimum supported size is 2MB, so specifying a size smaller than 2MB will result in a 2MB log file. Zero indicates the default value, which generally depends on the volume size. |
+| /NoRepairLogs | NTFS only. Disables NTFS repair logs. If the **spotfix** flag for chkdsk is specified (i.e. chkdsk /spotfix), this will not work. |
 | /? | Displays help at the command prompt. |
 
 #### Remarks

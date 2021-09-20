@@ -4,12 +4,12 @@ description: Use this topic to automate Packet Monitor-based packet captures wit
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/12/2020
+ms.date: 07/23/2021
 ---
 
 # SDN Data Path Diagnostics Extension in Windows Admin Center
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows 10, Azure Stack Hub, Azure
 
 SDN Data Path Diagnostics is a tool within the SDN monitoring extension of Windows Admin Center that automates Packet Monitor-based packet captures according to various SDN scenarios, and presents the output in a single view that is easy to follow and manipulate.​
 
@@ -21,7 +21,7 @@ Windows Admin Center is a locally-deployed, browser-based management tool that l
 
 ## Before you start
 - To use the tool, the target server needs to be running Windows Server 2019 version 1903 (19H1) and above.
-- [Install Windows Admin Center](/windows-server/manage/windows-admin-center/deploy/install).
+- [Install Windows Admin Center](../../../manage/windows-admin-center/deploy/install.md).
 - Add a cluster to Windows Admin Center:
   1. Click **+ Add** under **All Connections**.
   2. Choose to add a Hyper-Converged Cluster Connection.
@@ -137,7 +137,7 @@ The save button allows you to save the log on your local machine for further ana
 
    - ETL format which can be analyzed using Microsoft Network Monitor. Note: [Check this page](pktmon-netmon-support.md) for more information.
    - Text format which can be analyzed using any text editor like TextAnalysisTool.NET.
-   - Pcapng fomat which can be analyzed using tools like Wireshark.
+   - Pcapng format which can be analyzed using tools like Wireshark.
       - Most of the Packet Monitor metadata will be lost during this conversion. Note: [Check this page](pktmon-pcapng-support.md) for more information.
 
 <center>

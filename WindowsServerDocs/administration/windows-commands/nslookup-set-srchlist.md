@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # nslookup set srchlist
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Changes the default Domain Name System (DNS) domain name and search list. This command overrides the default DNS domain name and search list of the [nslookup set domain](nslookup-set-domain.md) command.
 

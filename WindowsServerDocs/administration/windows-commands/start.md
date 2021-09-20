@@ -53,7 +53,7 @@ start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 
   Note that the syntax is the same as the PATH variable, with semicolons (;) separating each extension.
 
-- When searching for an executable file, if there is no match on any extension, **start** checks to see if the name matches a directory name. If it does, **start** opens Explorer.exe on that path.
+- **start** searches for a specified executable file, and if found the executable will launch regardless of the current working directory. When searching for an executable file, if there is no match on any extension, **start** checks to see if the name matches a directory name. If it does, **start** opens Explorer.exe on that path.
 
 ## Examples
 

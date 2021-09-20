@@ -5,12 +5,18 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 04/02/2021
+ms.date: 07/19/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Android client
 
 We regularly update the [Remote Desktop client for Android](remote-desktop-android.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+
+## Updates for version 10.0.11
+
+Date published: July 13, 2021
+
+In this version, we made bug fixes and performance improvements.
 
 ## Updates for version 10.0.10
 
@@ -18,7 +24,7 @@ We regularly update the [Remote Desktop client for Android](remote-desktop-andro
 
 - Added support for client-side IMEs when using built-in and onscreen keyboards.
 - Added a prompt for credentials when subscribing to a workflow.
-- Improved Windows Virtual Desktop workspace download performance to prevent throttling.
+- Improved Azure Virtual Desktop workspace download performance to prevent throttling.
 - Fixed an issue where incorrect command icons would appear in the UI.
 
 ## Updates for version 10.0.9
@@ -50,13 +56,13 @@ We regularly update the [Remote Desktop client for Android](remote-desktop-andro
 
 *Date Published: 07/24/2020*
 
-- Implemented full support for Windows Virtual Desktop.
+- Implemented full support for Azure Virtual Desktop.
 - Rewrote the client to use the same underlying RDP core engine as the iOS and macOS clients.
 - New Connection Center experience.
 - New Connection Progress UI.
 - New in-session Connection Bar.
 - Added support for Android TV devices.
-- Integration with Microsoft Authenticator to enable conditional access when subscribing to Windows Virtual Desktop feeds.
+- Integration with Microsoft Authenticator to enable conditional access when subscribing to Azure Virtual Desktop feeds.
 - Enabled the transfer of connections and settings from Remote Desktop 8.
 
 ## Updates for version 8.1.80

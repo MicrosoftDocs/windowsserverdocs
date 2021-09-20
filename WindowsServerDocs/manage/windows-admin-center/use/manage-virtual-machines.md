@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Managing Virtual Machines with Windows Admin Center
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 The Virtual Machines tool is available in [Server](manage-servers.md), [Failover Cluster](manage-failover-clusters.md) or [Hyper-Converged Cluster](manage-hyper-converged.md) connections if the Hyper-V role is enabled on the server or cluster. You can use the Virtual Machines tool to manage Hyper-V hosts running Windows Server 2012 or later, either installed with Desktop Experience or as Server Core. Hyper-V Server 2012, 2016 and 2019 are also supported.
 
@@ -74,7 +74,7 @@ NOTE: If you are connected to a cluster, the Virtual Machine tool will only disp
 5. Choose a path for the virtual machine files. Choose a volume from the dropdown list or click **Browse** to choose a folder using the folder picker. The virtual machine configuration files and virtual hard disk file will be saved in a single folder under the `\Hyper-V\\[virtual machine name]` path of the selected volume or path.
 
    >[!Tip]
-   > In the folder picker, you can browse to any available SMB share on the network by entering the path in the **Folder name** field as ```\\server\share```. Using a network share for VM storage will require [CredSSP](../understand/faq.md#does-windows-admin-center-use-credssp).
+   > In the folder picker, you can browse to any available SMB share on the network by entering the path in the **Folder name** field as ```\\server\share```. Using a network share for VM storage will require [CredSSP](../understand/faq.yml#does-windows-admin-center-use-credssp-).
 
 6. Choose the number of virtual processors, whether you want nested virtualization enabled, configure memory settings, network adapters, virtual hard disks and choose whether you want to install an operating system from an .iso image file or from the network.
 7. Click **Create** to create the virtual machine.

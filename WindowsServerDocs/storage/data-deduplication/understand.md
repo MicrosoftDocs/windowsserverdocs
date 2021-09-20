@@ -10,7 +10,7 @@ ms.date: 09/15/2016
 ---
 # Understanding Data Deduplication
 
-> Applies to:  Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This document describes how [Data Deduplication](overview.md) works.
 
@@ -31,15 +31,15 @@ Once enabled for a volume, Data Deduplication runs in the background to:
 
 This occurs in the following four steps:
 
-1. Scan the file system for files meeting the optimization policy.
+1. Scan the file system for files meeting the optimization policy.<br>
 ![Scan file system](media/understanding-dedup-how-dedup-works-1.gif)
-2. Break files into variable-size chunks.
+2. Break files into variable-size chunks.<br>
 ![Break files into chunks](media/understanding-dedup-how-dedup-works-2.gif)
-3. Identify unique chunks.
+3. Identify unique chunks.<br>
 ![Identify unique chunks](media/understanding-dedup-how-dedup-works-3.gif)
-4. Place chunks in the chunk store and optionally compress.
+4. Place chunks in the chunk store and optionally compress.<br>
 ![Move to Chunk Store](media/understanding-dedup-how-dedup-works-4.gif)
-5. Replace the original file stream of now optimized files with a reparse point to the chunk store.
+5. Replace the original file stream of now optimized files with a reparse point to the chunk store.<br>
 ![Replace file stream with reparse point](media/understanding-dedup-how-dedup-works-5.gif)
 
 When optimized files are read, the file system sends the files with a reparse point to the Data Deduplication file system filter (Dedup.sys). The filter redirects the read operation to the appropriate chunks that constitute the stream for that file in the chunk store. Modifications to ranges of a deduplicated files get written unoptimized to the disk and are optimized by the [Optimization job](understand.md#job-info) the next time it runs.

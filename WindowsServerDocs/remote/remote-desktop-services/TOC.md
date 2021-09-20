@@ -73,6 +73,7 @@
 #### [Get started with the Windows Desktop client](clients/windowsdesktop.md)
 #### [Windows Desktop client for admins](clients/windowsdesktop-admin.md)
 #### [What's new in the Windows Desktop client](clients/windowsdesktop-whatsnew.md)
+#### [Supported configurations](clients/windowsdesktop-supported-config.md)
 #### [Shortcut keys](/windows/win32/termserv/terminal-services-shortcut-keys)
 ### Microsoft Store client
 #### [Get started with the Microsoft Store client](clients/windows.md)
@@ -100,7 +101,7 @@
 #### [Compare the clients: redirections](clients/remote-desktop-app-compare.md)
 #### [Supported Remote Desktop RDP file settings](clients/rdp-files.md)
 #### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
-#### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
+#### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.yml)
 #### [Privacy settings for managed apps and desktops](clients/remote-privacy-settings.md)
 ### Known issues
 #### [General Remote Desktop connection troubleshooting](troubleshoot/rdp-error-general-troubleshooting.md)

@@ -10,7 +10,7 @@ ms.date: 12/10/2020
 
 # Branch office considerations
 
-> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel),
+>Applies to: Windows Server 2022, Windows Server 2019
 
 This article describes best practices for running shielded virtual machines in branch offices and other remote scenarios where Hyper-V hosts may have periods of time with limited connectivity to HGS.
 

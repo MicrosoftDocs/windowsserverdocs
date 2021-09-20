@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # Drive symmetry considerations for Storage Spaces Direct
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 [Storage Spaces Direct](storage-spaces-direct-overview.md) works best when every server has exactly the same drives.
 

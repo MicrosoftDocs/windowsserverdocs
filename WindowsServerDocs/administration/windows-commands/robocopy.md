@@ -92,6 +92,14 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /xa:`[RASHCNETO]` | Excludes files for which any of the specified attributes are set. The valid values for this option are: <ul><li>**R** - Read only</li><li>**A** - Archive</li><li>**S** - System</li><li>**H** - Hidden</li><li>**C** - Compressed</li><li>**N** - Not content indexed</li><li>**E** - Encrypted</li><li>**T** - Temporary</li><li>**O** - Offline</li></ul> |
 | /xf `<filename>[ ...]` | Excludes files that match the specified names or paths. Wildcard characters (**&#42;** and **?**) are supported. |
 | /xd `<directory>[ ...]` | Excludes directories that match the specified names and paths. |
+| /xc | Excludes changed files. |
+| /xn | Excludes newer files. |
+| /xo | Excludes older files. |
+| /xx | Excludes extra files and directories. |
+| /xl | Excludes "lonely" files and directories. |
+| /im | Include modified files (differing change times). |
+| /is | Includes the same files. |
+| /it | Includes tweaked files. |
 | /xc | Excludes existing files with the same timestamp, but different file sizes. |
 | /xn | Excludes existing files newer than the copy in the source directory. |
 | /xo | Excludes existing files older than the copy in the source directory. |
