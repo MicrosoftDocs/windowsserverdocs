@@ -9,6 +9,7 @@ metadata:
   ms.author: elizapo
   ms.date: 07/16/2018
   ms.localizationpriority: medium
+  ms.prod: windows-server
     
 title: Frequently asked questions about the Remote Desktop clients
 summary: |
@@ -270,4 +271,3 @@ sections:
           
           - The remote PC name is the same as the name of the gateway. Then, when you try to connect to the remote PC, the connection goes to the gateway instead, which you probably don't have permission to access. If you need to connect to the gateway, do not use the external gateway name as PC name. Instead use "localhost" or the IP address (127.0.0.1), or the internal server name.
           - Your user account isn't a member of the user group for remote access.
-          

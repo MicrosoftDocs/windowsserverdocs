@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/23/2018
+ms.date: 06/30/2021
 ---
 
 # Kerberos with Service Principal Name (SPN)
 
->Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019
 
 Network Controller supports multiple authentication methods for communication with management clients. You can use Kerberos based authentication, X509 certificate-based authentication. You also have the option to use no authentication for test deployments.
 

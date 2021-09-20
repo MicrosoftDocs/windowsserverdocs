@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Using PowerShell in your extension #
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Let's go more in-depth into the Windows Admin Center Extensions SDK - let's talk about adding PowerShell commands to your extension.
 

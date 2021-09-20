@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 # Windows Admin Center
 
-> Applies to: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin Center is a locally deployed, browser-based app for managing Windows servers, clusters, hyper-converged infrastructure, as well as Windows 10 PCs. It is a free product and is ready to use in production.
 
@@ -50,7 +50,7 @@ Here's a video to give you an overview, followed by a poster giving more details
             <h3>Understand</h3>
             <ul>
             <li><a href="understand/what-is.md">What is Windows Admin Center?</a>
-            <li><a href="understand/faq.md">FAQ</a>
+            <li><a href="understand/faq.yml">FAQ</a>
             <li><a href="understand/case-studies.md">Case studies</a>
             <li><a href="understand/related-management.md">Related management products</a>
             </ul>

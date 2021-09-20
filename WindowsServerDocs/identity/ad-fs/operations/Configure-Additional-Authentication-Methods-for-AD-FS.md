@@ -25,6 +25,7 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 
 |Provider|Offering|Link to learn more|
 |-|-|-|
+|Akamai Technologies|Akamai MFA|[Integrating Akamai MFA with Microsoft AD FS](https://techdocs.akamai.com/mfa/docs/adsf)|
 |aPersona|aPersona Adaptive Multi-Factor Authentication for Microsoft ADFS SSO|[aPersona ASM ADFS Adapter](https://www.apersona.com/adfs)|
 |Cyphercor Inc.|LoginTC Multi-Factor Authentication for AD FS|[LoginTC AD FS Connector](https://www.logintc.com/docs/connectors/adfs.html)|
 |Duo Security|Duo MFA Adapter for AD FS|[Duo Authentication for AD FS](https://duo.com/docs/adfs)|
@@ -47,7 +48,7 @@ Mideye | Mideye Authentication Provider for ADFS | [Mideye two-factor authentica
 
 
 ## Custom Authentication Method for AD FS in Windows Server 2012 R2
-We now provide instructions for building your own custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Build a Custom Authentication Method for AD FS in Windows Server 2012 R2](https://go.microsoft.com/fwlink/?LinkID=511980).
+We now provide instructions for building your own custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Build a Custom Authentication Method for AD FS in Windows Server 2012 R2](../development/ad-fs-build-custom-auth-method.md).
 
 ## See Also
 [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)

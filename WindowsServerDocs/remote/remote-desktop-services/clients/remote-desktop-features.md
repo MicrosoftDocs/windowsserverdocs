@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 03/31/2021
+ms.date: 06/02/2021
 ms.localizationpriority: medium
 ---
 
@@ -22,12 +22,12 @@ The following table compares the features of each client.
 | Remote Desktop sessions | X | X | X | X | X | X | X | Desktop of a remote computer presented in a full screen or windowed mode. |
 | Integrated RemoteApp sessions | X | X |||| X || Individual remote apps integrated into the local desktop as if they are running locally. |
 | Immersive RemoteApp sessions | | | X | X | X | | X | Individual remote apps presented in a window or maximized to a full screen. |
-| Multiple monitors | 16 monitor limit | 16 monitor limit | | | | 2 monitor limit | | Lets the user run Remote Desktop or remote apps on all local monitors. |
+| Multiple monitors | 16 monitor limit | 16 monitor limit | | | | 16 monitor limit | | Lets the user run Remote Desktop or remote apps on all local monitors. |
 | Dynamic resolution | X | X | X | | | X | X | Resolution and orientation of local monitors is dynamically reflected in the remote session. If the client is running in windowed mode, the remote desktop is resized dynamically to the size of the client window. |
 | Smart sizing | X | X | X || | X || Remote Desktop in Windowed mode is dynamically scaled to the window's size. |
 | Localization | X | X | X | English only | X | X | X | Client user interface is available in multiple languages. |
 | Multi-factor authentication || X | X | X | X | X | X | Supports multi-factor authentication for remote connections. |
-| Teams optimization for Windows Virtual Desktop || X |||||| Media optimizations for Microsoft Teams to provide high quality calls and screen sharing experiences. Learn more at [Use Microsoft Teams on Windows Virtual Desktop](/virtual-desktop/teams-on-wvd). |
+| Teams optimization for Azure Virtual Desktop || X |||||| Media optimizations for Microsoft Teams to provide high quality calls and screen sharing experiences. Learn more at [Use Microsoft Teams on Azure Virtual Desktop](/virtual-desktop/teams-on-wvd). |
 
 ## Other resources
 

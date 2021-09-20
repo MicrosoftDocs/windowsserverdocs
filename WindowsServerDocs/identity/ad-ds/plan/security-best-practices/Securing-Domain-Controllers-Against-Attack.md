@@ -11,7 +11,7 @@ ms.topic: article
 
 # Securing Domain Controllers Against Attack
 
-> Applies To: Windows Server 2022 Preview, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022 Preview, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 *Law Number Three: If a bad guy has unrestricted physical access to your computer, it's not your computer anymore.* - [Ten Immutable Laws of Security (Version 2.0)](https://www.microsoft.com/en-us/msrc?rtc=1)
 
@@ -36,7 +36,7 @@ In datacenters, physical domain controllers should be installed in dedicated sec
 If you implement virtual domain controllers, you should ensure that domain controllers run on separate physical hosts than other virtual machines in the environment. Even if you use a third-party virtualization platform, consider deploying virtual domain controllers on Hyper-V Server in Windows Server 2012 or Windows Server 2008 R2, which provides a minimal attack surface and can be managed with the domain controllers it hosts rather than being managed with the rest of the virtualization hosts. If you implement System Center Virtual Machine Manager (SCVMM) for management of your virtualization infrastructure, you can delegate administration for the physical hosts on which domain controller virtual machines reside and the domain controllers themselves to authorized administrators. You should also consider separating the storage of virtual domain controllers to prevent storage administrators from accessing the virtual machine files.
 
 > [!NOTE]
-> If you intend to co-locate virtualized domain controllers with other, less sensitive virtual machines on the same physical virtualization servers (hosts), consider implementing a solution which enforces role-based separation of duties, such as [Shielded VMs](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms) in Hyper-V. This technology provides comprehensive protection against malicious or clueless fabric administrators (including virtualization, network, storage and backup administrators.) It leverages physical root of trust with remote attestation and secure VM provisioning, and effectively ensures level of security which is on par with a dedicated physical server.
+> If you intend to co-locate virtualized domain controllers with other, less sensitive virtual machines on the same physical virtualization servers (hosts), consider implementing a solution which enforces role-based separation of duties, such as [Shielded VMs](../../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) in Hyper-V. This technology provides comprehensive protection against malicious or clueless fabric administrators (including virtualization, network, storage and backup administrators.) It leverages physical root of trust with remote attestation and secure VM provisioning, and effectively ensures level of security which is on par with a dedicated physical server.
 
 ### Branch Locations
 
@@ -57,7 +57,7 @@ If your infrastructure includes locations in which only a single physical server
 You should run all domain controllers on the newest version of Windows Server that is supported within your organization and prioritize decommissioning of legacy operating systems in the domain controller population. By keeping your domain controllers current and eliminating legacy domain controllers, you can often take advantage of new functionality and security that may not be available in domains or forests with domain controllers running legacy operating system. 
 
 > [!NOTE]
-> As for any security-sensitive and single-purpose configuration, we recommend that you deploy the operating system in [Server Core](/windows-server/administration/server-core/what-is-server-core) installation option. It provides multiple benefits, such as minimizing attack surface, improving performance and reducing the likelihood of human error. It is recommended that all operations and management are performed **remotely,** from dedicated highly secured endpoints such as [Privileged access workstations (PAW)](/security/compass/privileged-access-devices) or [Secure administrative hosts](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-secure-administrative-hosts).
+> As for any security-sensitive and single-purpose configuration, we recommend that you deploy the operating system in [Server Core](../../../../administration/server-core/what-is-server-core.md) installation option. It provides multiple benefits, such as minimizing attack surface, improving performance and reducing the likelihood of human error. It is recommended that all operations and management are performed **remotely,** from dedicated highly secured endpoints such as [Privileged access workstations (PAW)](/security/compass/privileged-access-devices) or [Secure administrative hosts](./implementing-secure-administrative-hosts.md).
 
 ## Secure Configuration of Domain Controllers
 

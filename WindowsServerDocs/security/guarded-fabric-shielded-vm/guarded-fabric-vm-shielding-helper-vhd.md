@@ -11,7 +11,7 @@ ms.date: 08/29/2018
 
 # Shielded VMs - Preparing a VM Shielding Helper VHD
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 > [!IMPORTANT]
 > Before beginning these procedures, ensure that you have installed the latest cumulative update for Windows Server 2016 or are using the latest Windows 10 [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520). Otherwise, the procedures will not work.
@@ -24,7 +24,7 @@ To understand how this topic fits in the overall process of deploying shielded V
 
 The shielding process for existing VMs is only available for VMs that meet the following prerequisites:
 
-- The guest OS is Windows Server 2012, 2012 R2, 2016, or a semi-annual channel release. Existing Linux VMs cannot be converted to shielded VMs.
+- The guest OS is Windows Server 2012, 2012 R2, 2016, or a Semi-Annual Channel release. Existing Linux VMs cannot be converted to shielded VMs.
 - The VM is a generation 2 VM (UEFI firmware)
 - The VM does not use differencing disks for its OS volume.
 

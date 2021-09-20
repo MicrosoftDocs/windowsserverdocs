@@ -9,7 +9,7 @@ ms.date: 10/07/2016
 ---
 # Hyper-V on Windows Server
 
->Applies To: Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
 
 The Hyper-V role in Windows Server lets you create a virtualized computing environment where you can create and manage virtual machines. You can run multiple operating systems on one physical computer and isolate the operating systems from each other. With this technology, you can improve the efficiency of your computing resources and free up your hardware resources.
 

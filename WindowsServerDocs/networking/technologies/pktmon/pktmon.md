@@ -4,14 +4,14 @@ description: This topic provides an overview of the Packet Monitor (Pktmon) netw
 ms.topic: overview
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/12/2020
+ms.date: 07/23/2021
 ---
 
 # Packet Monitor \(Pktmon\)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows 10, Azure Stack Hub, Azure
 
-Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack. It is available in-box via the pktmon.exe command and via Windows Admin Center extensions. 
+Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack. It is available in-box via the pktmon.exe command and via Windows Admin Center extensions.
 
 ## Overview
 
@@ -31,7 +31,7 @@ However, with the advent of network virtualization, the size of the networking s
 
 </center>
 
-Packet Monitor intercepts packets at multiple locations throughout the networking stack, exposing the packet route. If a packet was dropped by a supported component in the networking stack, Packet Monitor will report that packet drop. This allows users to differentiate between a component that is the intended destination for a packet and a component that is interfering with a packet. Additionally, Packet Monitor will report drop reasons; for example, MTU Mistmatch, or Filtered VLAN, etc. These drop reasons provide the root cause of the issue without the need to exhaust all the possibilities. Packet Monitor also provides packet counters for each intercept point, enabling a high-level packet flow examination without the need for time-consuming log analysis.
+Packet Monitor intercepts packets at multiple locations throughout the networking stack, exposing the packet route. If a packet was dropped by a supported component in the networking stack, Packet Monitor will report that packet drop. This allows users to differentiate between a component that is the intended destination for a packet and a component that is interfering with a packet. Additionally, Packet Monitor will report drop reasons; for example, MTU Mismatch, or Filtered VLAN, etc. These drop reasons provide the root cause of the issue without the need to exhaust all the possibilities. Packet Monitor also provides packet counters for each intercept point, enabling a high-level packet flow examination without the need for time-consuming log analysis.
 
 <center>
 
@@ -50,29 +50,16 @@ Use these best practices for streamlining your network analysis.
 
 ## Functionality
 
-Packet Monitor's functionality has evolved through Windows releases. The table below shows its major capabilities and corresponding Windows release.
+Packet Monitor offers the following functionality:
 
-| Capability                                                                  | V 1809 (B:17763) | V 1903 (B:18362) | V 2004 (B:19041) |
-|:---------------------------------------------------------------------------:|:----------------:|:----------------:|:----------------:|
-| Packet monitoring and counting at multiple locations along networking stack | &#x2611;         | &#x2611;         | &#x2611;         |
-| Packets drop detection at multiple stack locations                          | &#x2611;         | &#x2611;         | &#x2611;         |
-| Flexible runtime packet filtering                                           | &#x2611;         | &#x2611;         | &#x2611;         |
-| Encapsulation support                                                       | &#x2610;         | &#x2611;         | &#x2611;         |
-| Network analysis based on TcpDump packet parsing                            | &#x2610;         | &#x2611;         | &#x2611;         |
-| Packet metadata (OOB) analysis                                              | &#x2610;         | &#x2610;         | &#x2611;         |
-| Real-time on-screen packet monitoring                                       | &#x2610;         | &#x2610;         | &#x2611;         |
-| High volume in-memory logging                                               | &#x2610;         | &#x2610;         | &#x2611;         |
-| Wireshark and Network Monitor format support                                | &#x2610;         | &#x2610;         | &#x2611;         |
-
->[!NOTE]
->Azure Stack HCI and Azure Stack Hub customers should expect the Vibranium functionality.
-
-## Limitations
-
-Below are some of Packet Monitor's most significant limitations.
-
-- Only Ethernet traffic is supported for now. Wireless traffic support will be added in later releases.
-- Packet drops from Windows Firewall are not visible through Packet Monitor yet. 
+- Packet monitoring and counting at multiple locations along the networking stack
+- Packets drop detection at multiple stack locations
+- Flexible runtime packet filtering with encapsulation support
+- General logging and tracing support (ETW and WPP events)
+- TXT log analysis based on TcpDump packet parsing
+- Multiple logging modes: real-time, high volume in-memory, multi-file, circular
+- Ethernet, Wi-Fi, and mobile broadband media type support
+- PCAPNG format support
 
 ## Get started with Packet Monitor
 

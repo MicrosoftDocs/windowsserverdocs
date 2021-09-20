@@ -10,12 +10,12 @@ ms.date: 08/29/2018
 
 # Install HGS in an existing bastion forest
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 ## Join the HGS server to the root domain
 
-In an existing bastion forest, HGS must be added to the root domain. Use Server Manager or [Add-Computer](https://go.microsoft.com/fwlink/?LinkId=821564) to join your HGS server to the root domain.
+In an existing bastion forest, HGS must be added to the root domain. Use Server Manager or [Add-Computer](/powershell/module/Microsoft.PowerShell.Management/Add-Computer?viewFallbackFrom=powershell-5.0) to join your HGS server to the root domain.
 
 ## Add the HGS server role
 
@@ -28,7 +28,7 @@ You can also use these steps to configure 2 or more independent HGS clusters tha
 
 ## Join the HGS server to the desired domain
 
-Use Server Manager or [Add-Computer](https://go.microsoft.com/fwlink/?LinkId=821564) to join the HGS servers to the desired domain.
+Use Server Manager or [Add-Computer](/powershell/module/Microsoft.PowerShell.Management/Add-Computer?viewFallbackFrom=powershell-5.0) to join the HGS servers to the desired domain.
 
 ## Prepare Active Directory objects
 

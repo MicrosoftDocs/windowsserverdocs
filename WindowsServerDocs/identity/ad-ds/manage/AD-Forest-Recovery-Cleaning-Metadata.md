@@ -10,7 +10,7 @@ ms.assetid: e7543381-4081-407f-adad-a9de792c6616
 ---
 # AD Forest Recovery - Cleaning metadata of removed writable domain controllers
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 Metadata cleanup removes Active Directory data that identifies a DC to the replication system.
 

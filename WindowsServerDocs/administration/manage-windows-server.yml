@@ -10,6 +10,7 @@ metadata:
   author: lizap
   ms.author: elizapo
   ms.date: 06/09/2020
+  ms.prod: windows-server
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -49,8 +50,6 @@ landingContent:
         links:
           - text: Performance tuning guidelines
             url: performance-tuning/index.md
-          - text: Microsoft Server Performance Advisor
-            url: server-performance-advisor/microsoft-server-performance-advisor.md
 
   # Card
   - title: Automate Windows Server management

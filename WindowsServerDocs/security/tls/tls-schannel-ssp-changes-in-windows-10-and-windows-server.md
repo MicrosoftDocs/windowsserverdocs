@@ -11,7 +11,7 @@ ms.date: 05/16/2018
 
 # TLS (Schannel SSP) changes in Windows 10 and Windows Server 2016
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016 and Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016 and Windows 10
 
 ## Cipher Suite Changes
 

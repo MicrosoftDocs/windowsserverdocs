@@ -36,7 +36,7 @@ reset
 
 - [add command](add.md)
 
-- [set command](set_2.md)
+- [set command](./set.md)
 
 - [load command](reg-load.md)
 

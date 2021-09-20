@@ -10,7 +10,7 @@ ms.date: 01/05/2021
 ---
 # Use DNS Policy for Applying Filters on DNS Queries
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to configure DNS policy in Windows Server&reg; 2016 to create query filters that are based on criteria that you supply.
 

@@ -1,6 +1,21 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/administration/performance-tuning/powershell/index.md",
+      "redirect_url": "/powershell/scripting/dev-cross-plat/performance/script-authoring-considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/performance-tuning/powershell/module-authoring-considerations.md",
+      "redirect_url": "/powershell/scripting/dev-cross-plat/performance/module-authoring-considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/performance-tuning/powershell/script-authoring-considerationsscript-authoring-considerations.md",
+      "redirect_url": "/powershell/scripting/dev-cross-plat/performance/script-authoring-considerations",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/nict-vms.md",
       "redirect_url": "/windows-server/networking/technologies/nic-teaming/NIC-Teaming",
       "redirect_document_id": false
@@ -72,7 +87,7 @@
     },
     {
       "source_path": "WindowsServerDocs/identity/securing-privileged-access/privileged-access-workstations.md",
-      "redirect_url": "/security/compass/concept-azure-managed-workstation",
+      "redirect_url": "/security/compass/privileged-access-devices",
       "redirect_document_id": false
     },
     {
@@ -492,7 +507,7 @@
     },
     {
       "source_path": "WindowsServerDocs/get-started/semi-annual-channel-overview.md",
-      "redirect_url": "/windows-server/get-started-19/servicing-channels-19",
+      "redirect_url": "/windows-server/get-started/servicing-channels-comparison",
       "redirect_document_id": true
     },
     {
@@ -10004,6 +10019,366 @@
       "source_path": "WindowsServerDocs/failover-clustering/vm-load-balancing-deep-dive.md",
       "redirect_url": "/azure-stack/hci/manage/vm-load-balancing",
       "redirect_document_id": false
-    }    
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/cluster-sets.md",
+      "redirect_url": "/azure-stack/hci/deploy/cluster-set",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/deploy-pmem.md",
+      "redirect_url": "/azure-stack/hci/concepts/deploy-persistent-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-comp.md",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-list",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-format.md",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-etl2txt",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/health-service-overview.md",
+      "redirect_url": "https://docs.microsoft.com/azure-stack/hci/manage/health-service-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/health-service-actions.md",
+      "redirect_url": "https://docs.microsoft.com/azure-stack/hci/manage/health-service-actions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/failover-clustering/health-service-settings.md",
+      "redirect_url": "https://docs.microsoft.com/azure-stack/hci/manage/health-service-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/windows-commands/pktmon-pcapng.md",
+      "redirect_url": "/windows-server/administration/windows-commands/pktmon-etl2pcap",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/server-performance-advisor/microsoft-server-performance-advisor.md",
+      "redirect_url": "/windows-server/administration/performance-tuning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/server-performance-advisor/server-performance-advisor-users-guide.md",
+      "redirect_url": "/windows-server/administration/performance-tuning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/server-performance-advisor/server-performance-advisor-pack-development-guide.md",
+      "redirect_url": "/windows-server/administration/performance-tuning",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/data-collection.md",
+      "redirect_url": "/azure-stack/hci/manage/collect-diagnostic-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Server-Basics.md",
+      "redirect_url": "/windows-server/get-started/get-started-with-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-console.md",
+      "redirect_url": "/windows-server/administration/changes-to-the-windows-console",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/whats-new.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/whats-new-in-windows-server-1903-1909.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-1903-1909",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/whats-new-19.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/system-requirements.md",
+      "redirect_url": "/windows-server/get-started/hardware-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/servicing-channels.md",
+      "redirect_url": "/windows-server/get-started/servicing-channels-comparison",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/editions-comparison.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/editions-comparison-19.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/2016-edition-comparison.md",
+      "redirect_url": "/windows-server/get-started/editions-comparison-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Deprecated-Features.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2016",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/removed-features-19.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2019",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/removed-features.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/removed-features-1903.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-1903-1909",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/System-Requirements.md",
+      "redirect_url": "/windows-server/get-started/hardware-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server-2004.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2004-20h2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/modernize-windows-server-2008.md",
+      "redirect_url": "/windows-server/get-started/extended-security-updates-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/install-upgrade-migrate.md",
+      "redirect_url": "/windows-server/get-started/install-upgrade-migrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/installation-and-upgrade.md",
+      "redirect_url": "/windows-server/get-started/install-upgrade-migrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/install-upgrade-migrate-19.md",
+      "redirect_url": "/windows-server/get-started/install-upgrade-migrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/uploading-specialized-ws08-image-to-azure.md",
+      "redirect_url": "/azure/virtual-machines/windows/upload-generalized-managed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/extended-security-updates.md",
+      "redirect_url": "/windows-server/get-started/extended-security-updates-deploy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/get-started-19.md",
+      "redirect_url": "/windows-server/get-started/get-started-with-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/get-started-with-windows-server-2022.md",
+      "redirect_url": "/windows-server/get-started/get-started-with-windows-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/sys-reqs-19.md",
+      "redirect_url": "/windows-server/get-started/hardware-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/sconfig-on-ws2022.md",
+      "redirect_url": "/windows-server/administration/server-core/server-core-sconfig",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Sconfig-on-WS2016.md",
+      "redirect_url": "/windows-server/administration/server-core/server-core-sconfig",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/rel-notes-19.md",
+      "redirect_url": "/windows/release-health",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/windows-server-2016-ga-release-notes.md",
+      "redirect_url": "/windows/release-health",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/server-core-app-compatibility.md",
+      "redirect_url": "/windows-server/get-started/server-core-app-compatibility-feature-on-demand",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/install-fod-19.md",
+      "redirect_url": "/windows-server/get-started/server-core-app-compatibility-feature-on-demand",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-2022/get-started/vm-activation.md",
+      "redirect_url": "/windows-server/get-started/automatic-vm-activation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/vm-activation-19.md",
+      "redirect_url": "/windows-server/get-started/automatic-vm-activation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/removed-features.md",
+      "redirect_url": "/windows-server/get-started/removed-deprecated-features-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/whats-new-in-windows-server.md",
+      "redirect_url": "/windows-server/get-started/whats-new-in-windows-server-2022",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/technologies/hpn/hpn-insider-preview.md",
+      "redirect_url": "/windows-server//networking/what-s-new-in-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/performance-tuning/hardware/power/recommended-balanced-plan-parameters.md",
+      "redirect_url": "/windows-server/administration/performance-tuning/hardware/power",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-top.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-single.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-datacenter.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-app-switch-config.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/conv-nic/cnic-app-troubleshoot.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/dcb/dcb-top.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/dcb/dcb-install.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/dcb/dcb-manage.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-top.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-plan.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-enable.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-manage.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-faq.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-wps.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/vrss/vrss-resolve-issues.md",
+      "redirect_url": "/windows-server/networking/technologies/hpn/hpn-top",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/performance-tuning/subsystem/storage-spaces-direct/index.md",
+      "redirect_url": "/windows-server/storage/storage-spaces/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Recommendations-moving-to-Server2016.md",
+      "redirect_url": "/windows-server/get-started/get-started-with-windows-server/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/kmsclientkeys.md",
+      "redirect_url": "/windows-server/get-started/kms-client-activation-keys/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/activation-19.md",
+      "redirect_url": "/windows-server/get-started/kms-activation-planning/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/app-compat-19.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility-windows-server-2019/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Server-Application-Compatibility.md",
+      "redirect_url": "/windows-server/get-started/application-compatibility-windows-server-2016/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/maintain-servers.md",
+      "redirect_url": "/azure-stack/hci/manage/maintain-servers/",
+      "redirect_document_id": false
+    }
   ]
 }

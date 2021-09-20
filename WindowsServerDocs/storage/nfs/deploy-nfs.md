@@ -1,15 +1,15 @@
-﻿---
+---
 title: Deploy Network File System
 description: Describes how to deploy Network File System.
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.date: 07/09/2018
+ms.date: 05/12/2021
 ms.localizationpriority: medium
 ---
 # Deploy Network File System
 
->Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Network File System (NFS) provides a file sharing solution that lets you transfer files between computers running Windows Server and UNIX operating systems using the NFS protocol. This topic describe the steps you should follow to deploy NFS.
 
@@ -85,15 +85,16 @@ Import-Module NFS
 
 ## Configure NFS authentication
 
-When using the NFS version 4.1 and NFS version 3.0 protocols, you have the following authentication and security options.
+When using the NFS version 4.1 and NFS version 3.0 protocols, we recommend using Kerberos (RPCSEC_GSS). There are three options with increasing levels of security protection:
 
-- RPCSEC\_GSS
-  - **Krb5**. Uses the Kerberos version 5 protocol to authenticate users before granting access to the file share.
+  - **Krb5**. Uses the Kerberos version 5 protocol to authenticate users before granting access to the file share. 
   - **Krb5i**. Uses Kerberos version 5 protocol to authenticate with integrity checking (checksums), which verifies that the data has not been altered.
-  - **Krb5p** Uses Kerberos version 5 protocol, which authenticates NFS traffic with encryption for privacy.
-- AUTH\_SYS
+  - **Krb5p** Uses Kerberos version 5 protocol, which authenticates NFS traffic with encryption for privacy. This is the most secure Kerberos option.
 
-You can also choose not to use server authorization (AUTH\_SYS), which gives you the option to enable unmapped user access. When using unmapped user access, you can specify to allow unmapped user access by UID / GID, which is the default, or allow anonymous access.
+  > [!NOTE] 
+  > You can also choose not to use the Kerberos authentication methods above by enabling unmapped user access through AUTH_SYS. We *strongly discourage* using 
+  > this option as it removes all authentication protections and allows any user with access to the NFS server to access data. 
+  > When using unmapped user access, you can specify to allow unmapped user access by UID / GID, which is the default, or allow anonymous access. 
 
 Instructions for configuring NFS authentication on discussed in the following section.
 
@@ -107,7 +108,7 @@ You can create an NFS file share using either Server Manager or Windows PowerShe
 2. Server Manager will start automatically. If it does not automatically start, select **Start**, type **servermanager.exe**, and then select **Server Manager**.
 3. On the left, select **File and Storage Services**, and then select **Shares**.
 4. Select **To create a file share, start the New Share Wizard**.
-5. On the **Select Profile** page, select either **NFS Share – Quick** or **NFS Share - Advanced**, then select **Next**.
+5. On the **Select Profile** page, select either **NFS Share � Quick** or **NFS Share - Advanced**, then select **Next**.
 6. On the **Share Location** page, select a server and a volume, and select **Next**.
 7. On the **Share Name** page, specify a name for the new share, and select **Next**.
 8. On the **Authentication** page, specify the authentication method you want to use for this share.

@@ -48,11 +48,11 @@ When you deploy the first federation server in a new AD FS installation, you mus
     ![Illustration that shows the private key from a single token\-signing certificate can be shared to all the federation servers in a farm.](media/adfs2_fedserver_certstory_3.gif)
 
 
-For information about installing a certificate when you use Microsoft Certificate Services as your enterprise CA, see [IIS 7.0: Create a Domain Server Certificate in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=108548).
+For information about installing a certificate when you use Microsoft Certificate Services as your enterprise CA, see [IIS 7.0: Create a Domain Server Certificate in IIS 7.0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731014(v=ws.10)).
 
-For information about installing a certificate from a public CA, see [IIS 7.0: Request an Internet Server Certificate](https://go.microsoft.com/fwlink/?LinkId=108549).
+For information about installing a certificate from a public CA, see [IIS 7.0: Request an Internet Server Certificate](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732906(v=ws.10)).
 
-For information about installing a self\-signed certificate, see [IIS 7.0: Create a Self\-Signed Server Certificate in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=108271).
+For information about installing a self\-signed certificate, see [IIS 7.0: Create a Self\-Signed Server Certificate in IIS 7.0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753127(v=ws.10)).
 
 ## See Also
 [AD FS Design Guide in Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

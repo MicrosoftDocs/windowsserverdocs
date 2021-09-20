@@ -11,7 +11,7 @@ ms.topic: article
 
 # Forest Design Models
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can apply one of the following three forest design models in your Active Directory environment:
 

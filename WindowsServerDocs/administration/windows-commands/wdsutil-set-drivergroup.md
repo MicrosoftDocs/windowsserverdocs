@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # Subcommand: set-DriverGroup
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sets the properties of an existing driver group on a server.
 
@@ -36,4 +36,4 @@ wdsutil /Set-DriverGroup /DriverGroup:printerdrivers /Name:colorprinterdrivers /
 ```
 ## Additional References
 - [Command-Line Syntax Key](command-line-syntax-key.md)
-[Subcommand: set-DriverGroupFilter](subcommand-set-drivergroupfilter.md)
+[Subcommand: set-DriverGroupFilter](./wdsutil-set-drivergroupfilter.md)

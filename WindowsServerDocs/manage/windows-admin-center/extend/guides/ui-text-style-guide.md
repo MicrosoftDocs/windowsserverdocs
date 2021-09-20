@@ -4,13 +4,13 @@ description: Windows Admin Center UI text and design style guide SDK
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-ms.date: 01/17/2020
+ms.date: 05/12/2021
 ms.localizationpriority: medium
 ---
 
 # Windows Admin Center UI text and design style guide
 
->Applies To: Windows Admin Center
+>Applies to: Windows Admin Center
 
 This topic describes the general approach to writing user interface (UI) text for the Windows Admin Center, as well as some specific conventions and approaches we're taking.
 
@@ -21,6 +21,13 @@ Windows Admin Center and any extensions should follow [Microsoft's voice princip
 - Buttons should be one word whenever possible, especially if you plan to localize your tool. Two or three is OK but try to avoid longer. If you have four words or longer, it'd be better to use a link control.
 - Button labels should be concise, specific, and self-explanatory. Instead of a generic "Submit" button, use a verb corresponding to the user action, such as "Create", "Delete", "Add", "Format", etc.
 - If a button follows a question, its label should correspond clearly to the question (typically "Yes" or "No").
+- When launching a create flow, use the appropriate button label:
+
+  | Button  | Use  |
+  | ------- | ------|
+  | **Create**  | Create a new resource/object/etc.                |
+  | **Add**    | Add an existing resources/object/etc to the tool. |
+  | **Install** | Installing software/extensions.                  |
 
 ## Capitalization
 
@@ -28,7 +35,7 @@ We follow the Microsoft style for [Capitalization](/style-guide/capitalization) 
 
 | UI element              |Capitalization|Comments|
 |-------------------------|--------------|--------|
-|Badges (such as PREVIEW) |All caps      ||
+|Badges (such as PREVIEW) |All caps      |        |
 |Everything else          |Sentence-style|However, there are a few exceptions where we surface object properties from WMI or PowerShell that's outside of our control.|
 
 ## Colons
@@ -37,9 +44,9 @@ Use colons to introduce lists. For example:
 
 Choose one of the following:
 
-Cats
-Dogs
-Quokkas
+- Cats
+- Dogs
+- Quokkas
 
 Don't use colons in UI text when a label is on a different line from the thing it labels or when there's a clear distinction between the label and the thing it's labeling.
 
@@ -129,8 +136,8 @@ Microsoft developers should use an FWLink except when it's a help link that user
 - Use full sentences.
 - Do not include ending punctuation except for question marks.
 - You don't need to use the same text as the task title; use text that makes sense in the context of the UI, but make sure that there's a logical connection between the two. For example:
-- Help link: What are the risks of allowing exceptions?
-- Help topic title: "Allowing a program to communicate through Windows Firewall"
+  - Help link: What are the risks of allowing exceptions?
+  - Help topic title: "Allowing a program to communicate through Windows Firewall"
 - Be as specific as possible about the content of the help topic.
     - Our style
         - How does Windows Firewall help protect my computer?
@@ -144,6 +151,7 @@ Microsoft developers should use an FWLink except when it's a help link that user
         - [What are the risks of allowing exceptions?]()
     - Not our style
         - What are the [risks of allowing exceptions]()?
+- In some cases, it's OK to use a "Learn more" link if the context is clear what the user will be getting when they click the link.
 
 ## Error messages
 

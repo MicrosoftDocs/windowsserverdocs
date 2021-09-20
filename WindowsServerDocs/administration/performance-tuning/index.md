@@ -1,15 +1,15 @@
 ---
-title: Windows Server 2016 Performance Tuning Guidelines
-description: Performance tuning guidelines for Windows Server 2016
+title: Windows Server 2022 Performance Tuning Guidelines
+description: Performance tuning guidelines for Windows Server 2022
 ms.topic: landing-page
 ms.author: phstee
 author: phstee
 ms.date: 10/16/2017
 ---
 
-# Performance Tuning Guidelines for Windows Server 2016
+# Performance Tuning Guidelines for Windows Server 2022
 
-When you run a server system in your organization, you might have business needs not met using default server settings. For example, you might need the lowest possible energy consumption, or the lowest possible latency, or the maximum possible throughput on your server. This guide provides a set of guidelines that you can use to tune the server settings in Windows Server 2016 and obtain incremental performance or energy efficiency gains, especially when the nature of the workload varies little over time.
+When you run a server system in your organization, you might have business needs not met using default server settings. For example, you might need the lowest possible energy consumption, or the lowest possible latency, or the maximum possible throughput on your server. This guide provides a set of guidelines that you can use to tune the server settings in Windows Server 2022 and obtain incremental performance or energy efficiency gains, especially when the nature of the workload varies little over time.
 
 It is important that your tuning changes consider the hardware, the workload, the power budgets, and the performance goals of your server. This guide describes each setting and its potential effect to help you make an informed decision about its relevance to your system, workload, performance, and energy usage goals.
 
@@ -17,7 +17,7 @@ It is important that your tuning changes consider the hardware, the workload, th
 > Registry settings and tuning parameters changed significantly between versions of Windows Server. Be sure to use the latest tuning guidelines to avoid unexpected results.
 
 ## In this guide
-This guide organizes performance and tuning guidance for Windows Server 2016 across three tuning categories:
+This guide organizes performance and tuning guidance for Windows Server 2022 across three tuning categories:
 
 |Server Hardware | Server Role | Server Subsystem |
 |:---:|:---:|:---:|
@@ -53,7 +53,7 @@ This guide organizes performance and tuning guidance for Windows Server 2016 acr
 
 - Updates to [Hardware Power guidance](hardware/power.md) section
 
-- Updates to [PowerShell tuning guidance](powershell/index.md) section
+- Updates to [PowerShell tuning guidance](/powershell/scripting/dev-cross-plat/performance/script-authoring-considerations) section
 
 - Significant updates to the [Hyper-V guidance](role/hyper-v-server/index.md) section
 

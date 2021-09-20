@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # View and Configure Performance, Event, and Service Data
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes how to view and configure the event log entries, performance counters, and service alerts that are displayed for local and remote servers in Server Manager.
 
@@ -157,11 +157,11 @@ By default, performance counters are turned off. Managed servers that are runnin
 ### Analyze performance data and solve problems
 for more information about analyzing performance counter data that you view in Server Manager, and solving performance problems on managed servers, see the following resources.
 
--   [Analyzing performance data](https://go.microsoft.com/fwlink/?LinkId=239829)
+-   [Analyzing performance data](/previous-versions/windows/it-pro/windows-server-2003/cc784871(v=ws.10))
 
--   [Solving performance problems](https://go.microsoft.com/fwlink/?LinkId=239831)
+-   [Solving performance problems](/previous-versions/windows/it-pro/windows-server-2003/cc757672(v=ws.10))
 
-for more information about advanced performance monitoring and analysis tools that are available for  Windows Server 2012  and later releases of Windows Server, including Server Performance Advisor 3.0, see [Performance](/previous-versions/windows/hardware/design/dn614608(v=vs.85)) on MSDN.
+for more information about advanced performance monitoring and analysis tools that are available for Windows Server 2012 and later releases of Windows Server, see [Performance](/previous-versions/windows/hardware/design/dn614608(v=vs.85)) on MSDN.
 
 ## <a name=BKMK_services></a>Manage services and configure service alerts
 In this section, learn how to start, stop, restart, pause, or resume services that are displayed in the **Services** tile on role and server group pages in Server Manager. You can also configure the services about which you are alerted in thumbnails on the Server Manager dashboard.

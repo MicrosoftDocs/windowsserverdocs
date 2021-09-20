@@ -20,7 +20,7 @@ In the following illustration, you can see how this task is accomplished for a g
 
 ![name requirements](media/adfs2_deploy_single_fs.gif)
 
-For information about how to configure a cluster IP address or cluster FQDN using NLB, see [Specifying the Cluster Parameters](https://go.microsoft.com/fwlink/?LinkId=75282).
+For information about how to configure a cluster IP address or cluster FQDN using NLB, see [Specifying the Cluster Parameters](/previous-versions/windows/it-pro/windows-server-2003/cc781505(v=ws.10)).
 
 For information about how to configure corporate DNS for a federation server, see [Add a Host &#40;A&#41; Resource Record to Corporate DNS for a Federation Server](../../ad-fs/deployment/Add-a-Host--A--Resource-Record-to-Corporate-DNS-for-a-Federation-Server.md).
 

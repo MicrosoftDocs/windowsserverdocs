@@ -6,15 +6,16 @@ ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
 ms.author: jgerend
 author: JasonGerend
-ms.date: 09/20/2018
+ms.date: 07/22/2021
 ---
-
 
 # NIC advanced properties
 
-You can manage NICs and all the features via Windows PowerShell using the [NetAdapter](/powershell/module/netadapter/) cmdlet.  You can also manage NICs and all the features using Network Control Panel (ncpa.cpl).
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019
 
-1. In **Windows PowerShell**, run the `Get‑NetAdapterAdvancedProperties` cmdlet against two different make/model of NICs.
+You can manage NICs and all the features via Windows PowerShell using the [NetAdapter](/powershell/module/netadapter/) cmdlet.  You can also manage NICs and all the features using Network Control Panel (ncpa.cpl). To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
+
+1. In **Windows PowerShell**, run the `Get‑NetAdapterAdvancedProperty` cmdlet against two different make/model of NICs.
 
    ![Get-NetAdapterAdvancedProperty m1](../../media/network-offload-and-optimization/Get-NetAdapterAdvancedProperty-m1.png)
 

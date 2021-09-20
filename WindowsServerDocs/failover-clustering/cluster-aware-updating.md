@@ -5,12 +5,12 @@ ms.topic: article
 manager: lizross
 author: JasonGerend
 ms.author: jgerend
-ms.date: 08/06/2018
+ms.date: 05/28/2021
 ms.assetid: 3c2993b4-aa81-452b-a5c3-3724ad95d892
 ---
 # Cluster-Aware Updating overview
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides an overview of Cluster\-Aware Updating \(CAU\), a feature that automates the software updating process on clustered servers while maintaining availability.
 
@@ -72,7 +72,7 @@ To use CAU, install the Failover Clustering feature in Windows Server and create
 
 To install the Failover Clustering feature, you can use the following tools:
 - Add Roles and Features Wizard in Server Manager
-- [Install-WindowsFeature](/powershell/module/servermanager/Install-WindowsFeature?view=winserver2012r2-ps) Windows PowerShell cmdlet
+- [Install-WindowsFeature](/powershell/module/servermanager/Install-WindowsFeature) Windows PowerShell cmdlet
 - Deployment Image Servicing and Management (DISM) command-line tool
 
 For more information, see [Install the Failover Clustering feature](create-failover-cluster.md#install-the-failover-clustering-feature).
@@ -120,7 +120,7 @@ The following links provide more information about using Cluster-Aware Updating.
 
 -   [Requirements and Best Practices for Cluster\-Aware Updating](cluster-aware-updating.md)
 
--   [Cluster\-Aware Updating: Frequently Asked Questions](cluster-aware-updating-faq.md)
+-   [Cluster\-Aware Updating: Frequently Asked Questions](cluster-aware-updating-faq.yml)
 
 -   [Advanced Options and Updating Run Profiles for CAU](cluster-aware-updating-options.md)
 
