@@ -10,7 +10,7 @@ ms.reviewer: deverette
 ---
 # Step 2. Configure the server infrastructure
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 1. Plan the Always On VPN Deployment](always-on-vpn-deploy-planning.md)
 - [**Next:** Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)

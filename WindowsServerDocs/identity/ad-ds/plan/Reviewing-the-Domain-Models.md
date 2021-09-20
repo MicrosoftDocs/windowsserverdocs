@@ -11,7 +11,7 @@ ms.topic: article
 
 # Reviewing the Domain Models
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The following factors impact the domain design model that you select:
 

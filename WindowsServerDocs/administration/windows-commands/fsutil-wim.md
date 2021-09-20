@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # fsutil wim
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 Provides functions to discover and manage Windows Image (WIM)-backed files.
 
@@ -53,7 +53,7 @@ fsutil wim enumwims C:
 To see if a file is backed by WIM, type:
 
 ```
-fsutil wim C:\Windows\Notepad.exe
+fsutil wim queryFile C:\Windows\Notepad.exe
 ```
 
 To remove the WIM from backing files for volume C: and data source 2, type:

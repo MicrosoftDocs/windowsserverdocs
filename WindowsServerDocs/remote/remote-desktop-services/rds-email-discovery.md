@@ -17,10 +17,10 @@ Before you set up email discovery, do the following:
 - Create an RD Web feed URL (https://\<rdweb-dns-name\>.domain/RDWeb/Feed/webfeed.aspx, such as https://rdweb.contoso.com/RDWeb/Feed/webfeed.aspx)
 
 >[!NOTE]
->If you're using Windows Virtual Desktop instead of Remote Desktop, you'll want to use these URLs instead:
+>If you're using Azure Virtual Desktop instead of Remote Desktop, you'll want to use these URLs instead:
 >
->- If you're using Windows Virtual Desktop (classic): <https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx>
->- If you're using Windows Virtual Desktop: <https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery>
+>- If you're using Azure Virtual Desktop (classic): <https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx>
+>- If you're using Azure Virtual Desktop: <https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery>
 
 Now, follow these steps to set up email discovery:
 

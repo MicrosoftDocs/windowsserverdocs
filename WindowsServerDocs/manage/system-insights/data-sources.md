@@ -3,14 +3,14 @@ title: System Insights data sources
 description: When writing a new capability in System Insights, you can specify existing or new data sources to collect locally and analyze. This topic describes the data sources that you can choose when registering a new capability.
 ms.topic: article
 author: gawatu
-ms.author: gawatu
+ms.author: daknappe
 manager: mallikarjun.chadalapaka
 ms.date: 7/31/2018
 ---
 
 # System Insights data sources
 
->Applies To: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 System Insights introduces extensible data collection functionality. When writing a new capability, you can specify existing or new data sources to collect locally and analyze. This topic describes the data sources that you can choose when registering a new capability.
 

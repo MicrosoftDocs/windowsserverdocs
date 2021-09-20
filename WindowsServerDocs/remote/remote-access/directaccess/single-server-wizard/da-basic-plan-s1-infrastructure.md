@@ -203,7 +203,7 @@ Note that once DirectAccess is configured to use specific GPOs, it cannot be con
 > Whether you are using automatically or manually configured GPOs, you will need to add a policy for slow link detection if your clients will use 3G. The Group Policy path for **Policy: Configure Group Policy slow link detection** is: **Computer configuration / Polices / Administrative Templates / System / Group Policy**.
 
 > [!CAUTION]
-> Use the following procedure to backup all DirectAccess Group Policy Objects before executing DirectAccess cmdlets: [Back up and Restore DirectAccess Configuration](https://go.microsoft.com/fwlink/?LinkID=257928)
+> Use the following procedure to backup all DirectAccess Group Policy Objects before executing DirectAccess cmdlets: [Back up and Restore DirectAccess Configuration](/samples/browse/?redirectedfrom=TechNet-Gallery)
 
 #### Automatically-created GPOs
 Note the following when using automatically-created GPOs:

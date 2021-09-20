@@ -11,7 +11,7 @@ ms.topic: how-to
 ---
 # Configure memory dump files for Server Core installation
 
->Applies to: Windows Server 2019, Windows Server 2016, and Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Use the following steps to configure a memory dump for your Server Core installation.
 

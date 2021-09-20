@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # DirectAccess Known Issues
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
 
 ## DNS registration of DirectAccess client IPv6 addresses
 

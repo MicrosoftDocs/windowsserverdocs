@@ -9,7 +9,7 @@ ms.date: 12/05/2016
 ---
 # Should I create a generation 1 or 2 virtual machine in Hyper-V?
 
->Applies To: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Applies to: Windows Server 2022, Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 > [!NOTE]
 > If you plan to ever upload Windows virtual machines (VMs) from on-premises to Microsoft Azure, generation 1 and generation 2 VMs in the VHD file format and have a fixed sized disk are supported. See [Generation 2 VMs on Azure](/azure/virtual-machines/windows/generation-2) to learn more about generation 2 capabilities supported on Azure. For more information on uploading a Windows VHD or VHDX, see [Prepare a Windows VHD or VHDX to upload to Azure](/azure/virtual-machines/windows/prepare-for-upload-vhd-image).

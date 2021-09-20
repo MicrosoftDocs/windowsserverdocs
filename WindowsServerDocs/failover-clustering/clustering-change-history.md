@@ -10,7 +10,7 @@ ms.date: 01/07/2020
 ---
 # Change history for Failover Clustering topics
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic lists new and updated topics in the [Failover Clustering](failover-clustering-overview.md) documentation for Windows Server.
 
@@ -58,7 +58,7 @@ This topic lists new and updated topics in the [Failover Clustering](failover-cl
 
 |New or changed topic|Description|
 |---|---|
-|[Cluster sets](../storage/storage-spaces/cluster-sets.md)| New topic|
+|[Cluster sets](/azure-stack/hci/deploy/cluster-set)| New topic|
 
 ## May 2018
 

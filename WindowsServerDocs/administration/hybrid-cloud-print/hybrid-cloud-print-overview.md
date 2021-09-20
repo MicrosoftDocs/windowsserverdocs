@@ -4,12 +4,15 @@ description: Hybrid Cloud Print allows IT Pros to support print requirements for
 ms.topic: conceptual
 author: trudyha
 ms.author: trudyha
-ms.date: 10/16/2017
+ms.date: 05/25/2021
 ---
 
 # Windows Server Hybrid Cloud Print overview
 
-> Applies to: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
+> [!WARNING]
+> Hybrid Cloud Print is no longer supported. We recommend using [Universal Print](https://aka.ms/universalprint), which is a subscription-based cloud service offering with direct support from printer OEMs that provides a completely serverless print solution.
 
 ## What is Hybrid Cloud Print?
 

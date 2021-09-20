@@ -112,7 +112,7 @@ You can keep track of cutover progress through descriptions of each stage that a
 
 ### __Is domain controller migration supported?__
 
-Not currently, but see the [FAQ page](./faq.md#is-domain-controller-migration-supported) for a workaround.
+Not currently, but see the [FAQ page](./faq.yml#is-domain-controller-migration-supported-) for a workaround.
 
 
 ## Known issues
@@ -131,5 +131,5 @@ See the [known issues page](./known-issues.md) for more information on the follo
 
 - [Storage Migration Service overview](overview.md)
 - [Migrate a file server by using Storage Migration Service](migrate-data.md)
-- [Storage Migration Services frequently asked questions (FAQ)](faq.md)
+- [Storage Migration Services frequently asked questions (FAQ)](faq.yml)
 - [Storage Migration Service known issues](known-issues.md)

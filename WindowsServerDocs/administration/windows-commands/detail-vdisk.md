@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # detail vdisk
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the properties of the selected virtual hard disk (VHD). Before you begin, you must select a VHD for this operation to succeed. Use the [select vdisk](select-vdisk.md) command to select a VHD and shift the focus to it.
 

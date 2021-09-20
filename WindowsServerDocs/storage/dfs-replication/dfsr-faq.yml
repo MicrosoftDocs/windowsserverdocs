@@ -7,6 +7,7 @@ metadata:
   manager: elizapo
   ms.author: jgerend
   ms.topic: article
+  ms.prod: windows-server
     
 title: "DFS Replication FAQ"
 summary: |
@@ -52,7 +53,7 @@ sections:
         answer: |
           Yes. To migrate replication from FRS to DFS Replication, see the following documents:
           
-            - To migrate replication of folders other than the SYSVOL folder, see DFS Operations Guide: Migrating from FRS to DFS Replication and [FRS2DFSR – An FRS to DFSR Migration Utility](https://go.microsoft.com/fwlink/?linkid=195437) (https://go.microsoft.com/fwlink/?LinkID=195437).
+            - To migrate replication of folders other than the SYSVOL folder, see DFS Operations Guide: Migrating from FRS to DFS Replication and [FRS2DFSR – An FRS to DFSR Migration Utility](/samples/browse/) (https://go.microsoft.com/fwlink/?LinkID=195437).
           
             - To migrate replication of the SYSVOL folder to DFS Replication, see [Migrate SYSVOL replication to DFS Replication](./migrate-sysvol-to-dfsr.md).
           
@@ -107,7 +108,7 @@ sections:
       - question: |
           Is DFS Replication cluster aware?
         answer: |
-          Yes, DFS Replication in Windows Server 2012 R2, Windows Server 2012 and Windows Server 2008 R2 includes the ability to add a failover cluster as a member of a replication group. For more information, see [Add a Failover Cluster to a Replication Group](https://go.microsoft.com/fwlink/?linkid=155085) (https://go.microsoft.com/fwlink/?LinkId=155085). The DFS Replication service on versions of Windows prior to Windows Server 2008 R2 is not designed to coordinate with a failover cluster, and the service will not fail over to another node.
+          Yes, DFS Replication in Windows Server 2012 R2, Windows Server 2012 and Windows Server 2008 R2 includes the ability to add a failover cluster as a member of a replication group. For more information, see [Add a Failover Cluster to a Replication Group](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759137(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkId=155085). The DFS Replication service on versions of Windows prior to Windows Server 2008 R2 is not designed to coordinate with a failover cluster, and the service will not fail over to another node.
           
           
           > [!NOTE]
@@ -147,7 +148,7 @@ sections:
       - question: |
           Can DFS Replication replicate between branch offices without a VPN connection?
         answer: |
-          Yes—assuming that there is a private Wide Area Network (WAN) link (not the Internet) connecting the branch offices. However, you must open the proper ports in external firewalls. DFS Replication uses the RPC Endpoint Mapper (port 135) and a randomly assigned ephemeral port above 1024. You can use the **Dfsrdiag** command line tool to specify a static port instead of the ephemeral port. For more information about how to specify the RPC Endpoint Mapper, see [article 154596](https://go.microsoft.com/fwlink/?linkid=73991) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=73991).
+          Yes—assuming that there is a private Wide Area Network (WAN) link (not the Internet) connecting the branch offices. However, you must open the proper ports in external firewalls. DFS Replication uses the RPC Endpoint Mapper (port 135) and a randomly assigned ephemeral port above 1024. You can use the **Dfsrdiag** command line tool to specify a static port instead of the ephemeral port. For more information about how to specify the RPC Endpoint Mapper, see [article 154596](/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=73991).
           
       - question: |
           Can DFS Replication replicate files encrypted with the Encrypting File System?
@@ -159,7 +160,7 @@ sections:
         answer: |
           DFS Replication can safely replicate Microsoft Outlook personal folder files (.pst) and Microsoft Access files only if they are stored for archival purposes and are not accessed across the network by using a client such as Outlook or Access (to open .pst or Access files, first copy the files to a local storage device). The reasons for this are as follows:
           
-            - Opening .pst files over network connections could lead to data corruption in the .pst files. For more information about why .pst files cannot be safely accessed from across a network, see [article 297019](https://go.microsoft.com/fwlink/?linkid=125363) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=125363).
+            - Opening .pst files over network connections could lead to data corruption in the .pst files. For more information about why .pst files cannot be safely accessed from across a network, see [article 297019](/outlook/troubleshoot/data-files/limits-using-pst-files-over-lan-wan) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=125363).
           
             - .pst and Access files tend to stay open for long periods of time while being accessed by a client such as Outlook or Office Access. This prevents DFS Replication from replicating these files until they are closed.
           
@@ -221,7 +222,7 @@ sections:
         answer: |
           No. DFS Replication is a service that runs under the local system account, so you do not need to log in as administrator to replicate. However, you must be a domain administrator or local administrator of the affected file servers to make changes to the DFS Replication configuration.
           
-          For more information, see &quot;DFS Replication security requirements and delegation&quot; in the [Delegate the Ability to Manage DFS Replication](https://go.microsoft.com/fwlink/?linkid=182294) (https://go.microsoft.com/fwlink/?LinkId=182294).
+          For more information, see &quot;DFS Replication security requirements and delegation&quot; in the [Delegate the Ability to Manage DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771465(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkId=182294).
           
       - question: |
           How can I upgrade or replace a DFS Replication member?
@@ -276,7 +277,7 @@ sections:
           <br>
           
           
-          For a list of scalability guidelines that have been tested by Microsoft for Windows Server 2003 R2, see [DFS Replication scalability guidelines](https://go.microsoft.com/fwlink/?linkid=75043) (https://go.microsoft.com/fwlink/?LinkId=75043).
+          For a list of scalability guidelines that have been tested by Microsoft for Windows Server 2003 R2, see [DFS Replication scalability guidelines](/previous-versions/windows/it-pro/windows-server-2003/cc779936(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkId=75043).
           
       - question: |
           When should I not use DFS Replication?
@@ -288,7 +289,7 @@ sections:
       - question: |
           Why is a schema update required for DFS Replication?
         answer: |
-          DFS Replication uses new objects in the domain-naming context of Active Directory Domain Services to store configuration information. These objects are created when you update the Active Directory Domain Services schema. For more information, see [Review Requirements for DFS Replication](https://go.microsoft.com/fwlink/?linkid=182264) (https://go.microsoft.com/fwlink/?LinkId=182264).
+          DFS Replication uses new objects in the domain-naming context of Active Directory Domain Services to store configuration information. These objects are created when you update the Active Directory Domain Services schema. For more information, see [Review Requirements for DFS Replication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731545(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkId=182264).
           
   - name: Monitoring and management tools
     questions:
@@ -535,9 +536,9 @@ sections:
         answer: |
           No, you cannot configure which file attributes that DFS Replication replicates.
           
-          For a list of attribute values and their descriptions, see [File Attributes](https://go.microsoft.com/fwlink/?linkid=182268) on MSDN (https://go.microsoft.com/fwlink/?LinkId=182268).
+          For a list of attribute values and their descriptions, see [File Attributes](/previous-versions//ee332330(v=vs.85)) on MSDN (https://go.microsoft.com/fwlink/?LinkId=182268).
           
-          The following attribute values are set by using the `SetFileAttributes dwFileAttributes` function, and they are replicated by DFS Replication. Changes to these attribute values trigger replication of the attributes. The contents of the file are not replicated unless the contents change as well. For more information, see [SetFileAttributes Function](https://go.microsoft.com/fwlink/?linkid=182269) in the MSDN library (https://go.microsoft.com/fwlink/?LinkId=182269).
+          The following attribute values are set by using the `SetFileAttributes dwFileAttributes` function, and they are replicated by DFS Replication. Changes to these attribute values trigger replication of the attributes. The contents of the file are not replicated unless the contents change as well. For more information, see [SetFileAttributes Function](/windows/win32/api/fileapi/nf-fileapi-setfileattributesa) in the MSDN library (https://go.microsoft.com/fwlink/?LinkId=182269).
           
             - FILE\_ATTRIBUTE\_HIDDEN
           
@@ -592,7 +593,7 @@ sections:
         answer: |
           Yes. DFS Replication supports copying files to a replication group member before the initial replication. This "prestaging" can dramatically reduce the amount of data replicated during the initial replication.
           
-          The initial replication does not need to replicate contents when files differ only by real attributes or time stamps. A real attribute is an attribute that can be set by the Win32 function `SetFileAttributes`. For more information, see [SetFileAttributes Function](https://go.microsoft.com/fwlink/?linkid=182269) in the MSDN library (https://go.microsoft.com/fwlink/?LinkId=182269). If two files differ by other attributes, such as compression, then the contents of the file are replicated.
+          The initial replication does not need to replicate contents when files differ only by real attributes or time stamps. A real attribute is an attribute that can be set by the Win32 function `SetFileAttributes`. For more information, see [SetFileAttributes Function](/windows/win32/api/fileapi/nf-fileapi-setfileattributesa) in the MSDN library (https://go.microsoft.com/fwlink/?LinkId=182269). If two files differ by other attributes, such as compression, then the contents of the file are replicated.
           
           To prestage a replication group member, copy the files to the appropriate folder on the destination server(s), create the replication group, and then choose a primary member. Choose the member that has the most up-to-date files that you want to replicate because the primary member's content is considered "authoritative." This means that during initial replication, the primary member's files will always overwrite other versions of the files on other members of the replication group.
           
@@ -667,11 +668,11 @@ sections:
           
           For more information, see the following Microsoft Web sites:
           
-            - [RPC Technical Reference](https://go.microsoft.com/fwlink/?linkid=182278)
+            - [RPC Technical Reference](/previous-versions/windows/it-pro/windows-server-2003/cc759499(v=ws.10))
           
-            - [About Remote Differential Compression](https://go.microsoft.com/fwlink/?linkid=182279)
+            - [About Remote Differential Compression](/previous-versions/windows/desktop/rdc/about-remote-differential-compression)
           
-            - [Authentication-Level Constants](https://go.microsoft.com/fwlink/?linkid=182280)
+            - [Authentication-Level Constants](/windows/win32/rpc/authentication-level-constants)
           
           
       - question: |
@@ -694,7 +695,7 @@ sections:
       - question: |
           Is it possible to configure one-way replication with DFS Replication?
         answer: |
-          Yes. If you are using Windows Server 2012 or Windows Server 2008 R2, you can create a read-only replicated folder that replicates content through a one-way connection. For more information, see [Make a Replicated Folder Read-Only on a Particular Member](https://go.microsoft.com/fwlink/?linkid=156740) (https://go.microsoft.com/fwlink/?LinkId=156740).
+          Yes. If you are using Windows Server 2012 or Windows Server 2008 R2, you can create a read-only replicated folder that replicates content through a one-way connection. For more information, see [Make a Replicated Folder Read-Only on a Particular Member](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759239(v=ws.11)) (https://go.microsoft.com/fwlink/?LinkId=156740).
           
           We do not support creating a one-way replication connection with DFS Replication in Windows Server 2008 or Windows Server 2003 R2. Doing so can cause numerous problems including health-check topology errors, staging issues, and problems with the DFS Replication database.
           

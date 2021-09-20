@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Understand and monitor storage resync
 
->Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 Storage resync alerts are a new capability of [Storage Spaces Direct](storage-spaces-direct-overview.md) in Windows Server 2019 that allows the Health Service to throw a fault when your storage is resyncing. The alert is useful in notifying you when resync is happening, so that you don't accidentally take more servers down (which could cause multiple fault domains to be affected, resulting in your cluster going down).
 

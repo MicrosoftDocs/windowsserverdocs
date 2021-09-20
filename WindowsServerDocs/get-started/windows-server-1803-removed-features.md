@@ -11,13 +11,13 @@ ms.topic: article
 ---
 # Features removed or planned for replacement starting with Windows Server, version 1803
 
-> Applies to: Windows Server, version 1803
+>Applies to: Windows Server, version 1803
 
 Each release of Windows Server adds new features and functionality; we also occasionally remove features and functionality, usually because we've added a better option. Here are the details about the features and functionalities that we removed in Windows Server, version 1803.
 
 > [!TIP]
+>
 > - You can get early access to Windows Server builds by joining the [Windows Insider program](https://insider.windows.com) - this is a great way to test feature changes.
-> - Have questions about other releases? Check out [Features removed or planned for replacement in Windows Server](../get-started-19/removed-features.md).
 
 **The list is subject to change and might not include every affected feature or functionality.**
 

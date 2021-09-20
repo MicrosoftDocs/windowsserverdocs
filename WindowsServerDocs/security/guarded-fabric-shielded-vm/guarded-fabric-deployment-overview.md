@@ -11,7 +11,7 @@ ms.date: 01/30/2019
 
 # Quick start for guarded fabric deployment
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic explains what a guarded fabric is, its requirements, and a summary of the deployment process.
 For detailed deployment steps, see [Deploying the Host Guardian Service for guarded hosts and shielded VMs](./guarded-fabric-deploying-hgs-overview.md).

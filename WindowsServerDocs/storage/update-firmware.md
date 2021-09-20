@@ -9,7 +9,7 @@ author: toklima
 ms.date: 10/04/2016
 ---
 # Updating drive firmware
->Applies to: Windows Server 2019, Windows Server 2016, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 Updating the firmware for drives has historically been a cumbersome task with a potential for downtime, which is why we're making improvements to Storage Spaces, Windows Server, and Windows 10, version 1703 and newer. If you have drives that support the new firmware update mechanism included in Windows, you can update drive firmware of in-production drives without downtime. However, if you're going to update the firmware of a production drive, make sure to read our tips on how to minimize the risk while using this powerful new functionality.
 

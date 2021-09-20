@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Release Notes: Important Issues in Windows Server, version 1709
 
->Applies To: Windows Server Semi-Annual Channel
+>Applies to: Windows Server Semi-Annual Channel
 
 These release notes summarize the most critical issues in the Windows Server&reg; operating system, including ways to avoid or work around the issues, if known. For information about by-design changes, new features, and fixes in this release, see [What's New in Windows Server version 1709](whats-new-in-windows-server-1709.md) and announcements from the specific feature teams. Unless otherwise specified, each reported issue applies to all editions and installation options of Windows Server 2016.
 

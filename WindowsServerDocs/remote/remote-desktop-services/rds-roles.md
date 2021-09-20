@@ -9,7 +9,7 @@ manager: femila
 ---
 # Remote Desktop Services roles
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article describes the roles within a Remote Desktop Services environment.
 
@@ -31,7 +31,7 @@ For more information, see the following articles:
 
 * [Remote Desktop Services - Secure data storage](rds-plan-secure-data-storage.md)
 * [Upload a generalized VHD and use it to create new VMs in Azure](/azure/virtual-machines/windows/upload-generalized-managed?toc=/azure/virtual-machines/windows/toc.json)
-* [Update RDSH collection (ARM template)](https://azure.microsoft.com/resources/templates/rds-update-rdsh-collection/)
+* [Update RDSH collection (ARM template)](https://github.com/Azure/RDS-Templates/tree/master/rds-update-rdsh-collection/)
 
 ## Remote Desktop Connection Broker
 

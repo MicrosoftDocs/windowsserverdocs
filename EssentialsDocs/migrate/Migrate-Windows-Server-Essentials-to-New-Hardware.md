@@ -24,7 +24,7 @@ This guide describes how to migrate an existing  Windows Server&reg; 2012 Essent
 
 
 ## Additional resources
- For links to additional information, tools, and community resources to help guide you through the migration process, visit the [Windows Small Business Server Migration](https://go.microsoft.com/fwlink/?LinkId=217520) website.
+ For links to additional information, tools, and community resources to help guide you through the migration process, visit the [Windows Small Business Server Migration](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10)) website.
 
 ## Terms and definitions
  **Source Server:** The existing server from which you are migrating your settings and data.

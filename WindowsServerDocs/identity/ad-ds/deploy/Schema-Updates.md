@@ -10,7 +10,7 @@ ms.topic: article
 ---
 # Windows Server Active Directory schema updates
 
->Applies To: Windows Server
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server
 
 This topic lists the LDF files that include the changes that Adprep.exe makes.
 

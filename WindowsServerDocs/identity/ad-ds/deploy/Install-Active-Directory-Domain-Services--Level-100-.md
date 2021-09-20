@@ -11,7 +11,7 @@ ms.topic: article
 
 # Install Active Directory Domain Services (Level 100)
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains how to install AD DS in  Windows Server 2012  by using any of the following methods:
 

@@ -51,7 +51,7 @@ rem mycopy dir file1 file2 ...
 set todir=%1
 :getfile
 shift
-if %1== goto end
+if "%1"=="" goto end
 copy %1 %todir%
 goto getfile
 :end
