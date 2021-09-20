@@ -138,8 +138,8 @@ Cloud Witness configuration is well-integrated within the existing Quorum Config
 5. On the **Configure Cloud Witness** page, enter the following information:
    1. (Required parameter) Azure Storage Account Name.
    2. (Required parameter) Access Key corresponding to the Storage Account.
-       1. When creating for the first time, use Primary Access Key (see figure 4)
-       2. When rotating the Primary Access Key, use Secondary Access Key (see figure 4)
+       1. When creating for the first time, use Primary Access Key.
+       2. When rotating the Primary Access Key, use Secondary Access Key.
    3. (Optional parameter) If you intend to use a different Azure service endpoint (for example the Microsoft Azure service in China), then update the endpoint server name.
 
       ![Snapshot of the Cloud Witness configuration pane in the Cluster Quorum wizard](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)
