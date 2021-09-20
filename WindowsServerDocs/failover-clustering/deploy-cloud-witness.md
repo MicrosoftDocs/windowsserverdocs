@@ -26,7 +26,7 @@ If there is a power outage in one datacenter, to give equal opportunity for the 
 
 Most organizations do not have a third separate datacenter that will host File Server backing the File Share Witness. This means organizations primarily host the File Server in one of the two datacenters, which by extension, makes that datacenter the primary datacenter. In a scenario where there is power outage in the primary datacenter, the cluster would go down as the other datacenter would only have 2 votes which is below the quorum majority of 3 votes needed. For the customers that have third separate datacenter to host the File Server, it is an overhead to maintain the highly available File Server backing the File Share Witness. Hosting virtual machines in the public cloud that have the File Server for File Share Witness running in Guest OS is a significant overhead in terms of both setup and maintenance.
 
-Cloud Witness is a new type of Failover Cluster quorum witness that leverages Microsoft Azure as the arbitration point (see the following figure). It uses Azure Blob Storage to read/write a blob file which is then used as an arbitration point in case of split-brain resolution.
+Cloud Witness is a new type of Failover Cluster quorum witness that uses Microsoft Azure as the arbitration point (see the following figure). It uses Azure Blob Storage to read/write a blob file which is then used as an arbitration point in case of split-brain resolution.
 
 There are significant benefits which this approach:
 - Uses Microsoft Azure (no need for third separate datacenter).
