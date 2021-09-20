@@ -96,6 +96,12 @@ Once that completes run `adprep /domainprep`
 
 ![Screenshot that shows how to run adprep /domainprep.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)
 
+7b. Prior to running the next step, ensure that the farm behavior level can successfully be raised with the [Test Farm Behavior Level](https://docs.microsoft.com/powershell/module/adfs/test-adfsfarmbehaviorlevelraise?view=windowsserver2019-ps) command.
+
+```PowerShell
+Test-AdfsFarmBehaviorLevelRaise
+```
+
 8. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlet:
 
 
