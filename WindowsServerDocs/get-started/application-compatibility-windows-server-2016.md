@@ -10,11 +10,10 @@ ms.localizationpriority: medium
 ---
 # Windows Server 2016 and Microsoft Server Application Compatibility
 
->Applies to: Windows Server 2016
-
 This table lists Microsoft server applications that support installation and functionality on Window Server 2016. This information is for quick reference and is not intended to replace the individual product specifications, requirements, announcements, or general communications of each individual server application. Refer to official documentation for each product to fully understand compatibility and options.
 
-For customers and software vendor partners looking for more information on Windows Server compatibility with non-Microsoft applications, visit the [Commercial App Certification portal](https://commercialappcertification.microsoft.com/).
+> [!TIP]
+> If you are a software vendor partner looking for more information on Windows Server compatibility with non-Microsoft applications, visit the [Commercial App Certification portal](https://commercialappcertification.microsoft.com/).
 
 |Microsoft Server Application|    Released?|    Product Link|
 |-------------------------------------|--------------------------------------------|-------------------|
