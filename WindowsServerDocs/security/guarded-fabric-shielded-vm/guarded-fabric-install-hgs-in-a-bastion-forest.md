@@ -3,8 +3,8 @@ title: Install HGS in an existing bastion forest
 description: "Learn more about: Install HGS in an existing bastion forest"
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 08/29/2018
 ---
 

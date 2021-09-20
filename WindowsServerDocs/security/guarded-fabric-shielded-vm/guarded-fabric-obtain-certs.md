@@ -4,8 +4,8 @@ description: "Learn more about: Obtain certificates for HGS"
 ms.topic: article
 ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 09/25/2019
 ---
 

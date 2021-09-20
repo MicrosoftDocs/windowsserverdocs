@@ -4,8 +4,8 @@ description: "Learn more about: Troubleshooting Using the Guarded Fabric Diagnos
 ms.topic: article
 ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 01/14/2020
 ---
 

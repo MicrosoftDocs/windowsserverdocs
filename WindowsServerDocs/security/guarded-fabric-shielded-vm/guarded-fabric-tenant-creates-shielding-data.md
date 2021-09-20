@@ -4,8 +4,8 @@ description: "Learn more about: Shielded VMs for tenants - Creating shielding da
 ms.topic: article
 ms.assetid: 49f4e84d-c1f7-45e5-9143-e7ebbb2ef052
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 09/25/2019
 ---
 
