@@ -24,7 +24,7 @@ You can configure the Always On VPN client through PowerShell, Microsoft Endpoin
 >Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client.  However, you can use logon scripts.
 
 >[!NOTE]
->Auto-triggered VPN connections will not work if Folder Redirection for %appdata% (C:\Users\username\AppData\Roaming) is enabled. Either Folder Redirection must be disabled for %appdata% or the auto-triggered VPN profile must be deployed in system context, that changes the path the rasphone.pbk file is stored.
+>Auto-triggered VPN connections will not work if folder redirection for %appdata% (C:\Users\username\AppData\Roaming) is enabled. Either folder redirection must be disabled for %appdata%, or the auto-triggered VPN profile must be deployed, to change the path the rasphone.pbk file is stored.
 
 ## ProfileXML overview
 
