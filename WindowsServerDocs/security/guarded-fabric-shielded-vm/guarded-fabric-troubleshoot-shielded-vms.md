@@ -3,8 +3,8 @@ description: "Learn more about: Troubleshoot Shielded VMs"
 title: Troubleshoot Shielded VMs
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 10/3/2018
 ---
 

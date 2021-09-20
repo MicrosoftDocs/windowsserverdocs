@@ -4,8 +4,8 @@ description: "Learn more about: Shielded VMs for tenants - Deploying a shielded 
 ms.topic: article
 ms.assetid: 39d5e29c-835d-490a-b74d-798a0dcb3f39
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 08/29/2018
 ---
 
