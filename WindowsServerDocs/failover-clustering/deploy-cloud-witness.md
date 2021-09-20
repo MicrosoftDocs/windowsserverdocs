@@ -17,16 +17,16 @@ Cloud Witness is a type of Failover Cluster quorum witness that uses Microsoft A
 
 ## <a name="CloudWitnessOverview"></a>Cloud Witness overview
 
-Figure 1 illustrates a multi-site stretched Failover Cluster quorum configuration with Windows Server 2016. In this example configuration (figure 1), there are 2 nodes in 2 datacenters (referred to as Sites). Note, it is possible for a cluster to span more than 2 datacenters. Also, each datacenter can have  more than 2 nodes. A typical cluster quorum configuration in this setup (automatic failover SLA) gives each node a vote. One extra vote is given to the quorum witness to allow cluster to keep running even if either one of the datacenter experiences a power outage. The math is simple - there are 5 total votes and you need 3 votes for the cluster to keep it running.
+The following figure illustrates a multi-site stretched Failover Cluster quorum configuration with Windows Server 2016. In this example configuration (figure 1), there are 2 nodes in 2 datacenters (referred to as Sites). Note, it is possible for a cluster to span more than 2 datacenters. Also, each datacenter can have  more than 2 nodes. A typical cluster quorum configuration in this setup (automatic failover SLA) gives each node a vote. One extra vote is given to the quorum witness to allow cluster to keep running even if either one of the datacenter experiences a power outage. The math is simple - there are 5 total votes and you need 3 votes for the cluster to keep it running.
 
 ![File Share Witness in a third separate site with 2 nodes in 2 other sites](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png "File Share Witness")
-**Figure 1: Using a File Share Witness as a quorum witness**
+**Using a File Share Witness as a quorum witness**
 
 In case of power outage in one datacenter, to give equal opportunity for the cluster in other datacenter to keep it running, it is recommended to host the quorum witness in a location other than the two datacenters. This typically means requiring a third separate datacenter (site) to host a File Server that is backing the File Share which is used as the quorum witness (File Share Witness).
 
 Most organizations do not have a third separate datacenter that will host File Server backing the File Share Witness. This means organizations primarily host the File Server in one of the two datacenters, which by extension, makes that datacenter the primary datacenter. In a scenario where there is power outage in the primary datacenter, the cluster would go down as the other datacenter would only have 2 votes which is below the quorum majority of 3 votes needed. For the customers that have third separate datacenter to host the File Server, it is an overhead to maintain the highly available File Server backing the File Share Witness. Hosting virtual machines in the public cloud that have the File Server for File Share Witness running in Guest OS is a significant overhead in terms of both setup & maintenance.
 
-Cloud Witness is a new type of Failover Cluster quorum witness that leverages Microsoft Azure as the arbitration point (figure 2). It uses Azure Blob Storage to read/write a blob file which is then used as an arbitration point in case of split-brain resolution.
+Cloud Witness is a new type of Failover Cluster quorum witness that leverages Microsoft Azure as the arbitration point (see the following figure). It uses Azure Blob Storage to read/write a blob file which is then used as an arbitration point in case of split-brain resolution.
 
 There are significant benefits which this approach:
 1. Leverages Microsoft Azure (no need for third separate datacenter).
@@ -36,16 +36,16 @@ There are significant benefits which this approach:
 5. Built-in Cloud Witness resource type.
 
 ![Diagram illustrating a multi-site stretched cluster with Cloud Witness as a quorum witness](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_2.png)
-**Figure 2: Multi-site stretched clusters with Cloud Witness as a quorum witness**
+**Multi-site stretched clusters with Cloud Witness as a quorum witness**
 
-As shown in figure 2, there is no third separate site that is required. Cloud Witness, like any other quorum witness, gets a vote and can participate in quorum calculations.
+As shown in the preceding figure, there is no third separate site that is required. Cloud Witness, like any other quorum witness, gets a vote and can participate in quorum calculations.
 
 ## <a name="CloudWitnessSupportedScenarios"></a>Cloud Witness: Supported scenarios for single witness type
 
 If you have a Failover Cluster deployment, where all nodes can reach the internet (by extension of Azure), it is recommended that you configure a Cloud Witness as your quorum witness resource.
 
 Some of the scenarios that are supported use of Cloud Witness as a quorum witness are as follows:
-- Disaster recovery stretched multi-site clusters (see figure 2).
+- Disaster recovery stretched multi-site clusters (see preceding figure).
 - Failover Clusters without shared storage (SQL Always On etc.).
 - Failover Clusters running inside Guest OS hosted in Microsoft Azure Virtual Machine Role (or any other public cloud).
 - Failover Clusters running inside Guest OS of Virtual Machines hosted in private clouds.
