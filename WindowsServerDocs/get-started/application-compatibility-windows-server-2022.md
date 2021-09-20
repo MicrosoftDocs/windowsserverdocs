@@ -25,7 +25,7 @@ This table lists Microsoft server applications that support installation and fun
 | System Center Data Protection Manager 2019 | Yes | Yes | Yes | [Preparing your environment for System Center Data Protection Manager](/system-center/dpm/release-build-versions?view=sc-dpm-2019&preserve-view=true) |
 | SharePoint Server Subscription Edition | Yes | Yes | Public preview | [System requirements for SharePoint Server Subscription edition](/sharepoint/install/system-requirements-for-sharepoint-subscription-edition) |
 | SharePoint Server 2019 | No | Yes | Yes | [Hardware and software requirements for SharePoint Server 2019](/sharepoint/install/hardware-and-software-requirements-2019) |
-| Project Server Subscription Edition | No | Yes | Yes | [Software requirements for Project Server Subscription Edition](/project/software-requirements-project-server-subscription-edition) |
+| Project Server Subscription Edition | No | Yes | Public preview | [Software requirements for Project Server Subscription Edition](/project/software-requirements-project-server-subscription-edition) |
 
 *May have limitations or may require the [Server Core App Compatibility Feature on Demand (FOD)](server-core-app-compatibility-feature-on-demand.md).
 Please refer to specific product or Feature on Demand documentation.
