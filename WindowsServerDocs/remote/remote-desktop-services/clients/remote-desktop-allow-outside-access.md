@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # Remote Desktop - Allow access to your PC from outside your PC's network
 
->Applies to: Windows 10,  Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10,  Windows Server 2016
 
 When you connect to your PC by using a Remote Desktop client, you're creating a peer-to-peer connection. This means you need direct access to the PC (sometimes called "the host"). If you need to connect to your PC from outside of the network your PC is running on, you need to enable that access. You have a couple of options: use port forwarding or set up a VPN.
 
@@ -31,7 +31,7 @@ Before you map the port you'll need the following:
 - Admin access to your router.
 
    >[!WARNING]
-   > You're opening your PC up to the internet - make sure you have a strong password set for your PC.
+   > You're opening your PC up to the internet, which is not recommended. If you must, make sure you have a strong password set for your PC. It is preferable to [use a VPN](#use-a-vpn).
 
 After you map the port, you'll be able to connect to your host PC from outside the local network by connecting to the public IP address of your router (the second bullet above).
 

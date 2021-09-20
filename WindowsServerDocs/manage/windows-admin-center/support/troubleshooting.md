@@ -9,7 +9,7 @@ ms.date: 01/15/2021
 ---
 # Troubleshooting Windows Admin Center
 
-> Applies to: Windows Admin Center, Windows Admin Center Preview, Azure Stack HCI, version v20H2
+>Applies to: Windows Admin Center, Windows Admin Center Preview, Azure Stack HCI, version v20H2
 
 > [!Important]
 > This guide will help you diagnose and resolve issues that are preventing you from using Windows Admin Center. If you are having an issue with a specific tool, please check to see if you are experiencing a [known issue.](./known-issues.md)
@@ -83,7 +83,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 WinRM doesn't allow credential delegation by default. To allow delegation, the computer needs to have Credential Security Support Provider (CredSSP) enabled temporarily.
 
-If you're receiving WinRM error messages, try using the verification steps in the [Manual troubleshooting](https://docs.microsoft.com/azure-stack/hci/manage/troubleshoot-credssp#manual-troubleshooting) section of [Troubleshoot CredSSP](https://docs.microsoft.com/azure-stack/hci/manage/troubleshoot-credssp) to resolve them.
+If you're receiving WinRM error messages, try using the verification steps in the [Manual troubleshooting](/azure-stack/hci/manage/troubleshoot-credssp#manual-troubleshooting) section of [Troubleshoot CredSSP](/azure-stack/hci/manage/troubleshoot-credssp) to resolve them.
 
 ### Did you upgrade your server from 2016 to 2019?
 

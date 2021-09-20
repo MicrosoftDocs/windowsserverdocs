@@ -10,7 +10,7 @@ description: An overview of Work Folders - a server role in Windows Server that 
 ---
 # Work Folders overview
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1, Windows 7
 
 This topic discusses Work Folders, a role service for file servers running Windows Server that provides a consistent way for users to access their work files from their PCs and devices.
 
@@ -21,6 +21,9 @@ If you're looking to download or use Work Folders on Windows 10, Windows 7, or a
 - [Work Folders for Windows 7 (32 bit download)](https://www.microsoft.com/download/details.aspx?id=42559)
 - [Work Folders for iOS](https://itunes.apple.com/app/work-folders/id950878067)
 - [Work Folders for Android](https://play.google.com/store/apps/details?id=com.microsoft.workfolders)
+
+> [!NOTE]
+>  The Work Folders application for Android and iOS is no longer being actively developed and will remain on the respective app stores if the application is functioning properly.
 
 ## Role description
 
@@ -106,6 +109,9 @@ Work Folders has the following software requirements for client computers:
     -   Android 4.4 KitKat and later
 
     -   iOS 10.2 and later
+
+ > [!NOTE]
+ >  The Work Folders application for Android and iOS is no longer being actively developed and will remain on the respective app stores if the application is functioning properly.
 
 -   Windows 7 PCs must be running one of the following editions of Windows:
 

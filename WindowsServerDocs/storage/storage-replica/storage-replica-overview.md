@@ -10,7 +10,7 @@ ms.assetid: e9b18e14-e692-458a-a39f-d5b569ae76c5
 ---
 # Storage Replica overview
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Storage Replica is Windows Server technology that enables replication of volumes between servers or clusters for disaster recovery. It also enables you to create stretch failover clusters that span two sites, with all nodes staying in sync.
 
@@ -164,7 +164,7 @@ The **Test-Failover** cmdlet debuted in Windows Server, version 1709, and was al
 -   Storage Replica is not Hyper-V Replica or Microsoft SQL AlwaysOn Availability Groups. Storage Replica is a general purpose, storage-agnostic engine. By definition, it cannot tailor its behavior as ideally as application-level replication. This may lead to specific feature gaps that encourage you to deploy or remain on specific application replication technologies.
 
 > [!NOTE]
-> This document contains a list of [known issues](storage-replica-known-issues.md) and expected behaviors as well as [Frequently Asked Questions](storage-replica-frequently-asked-questions.md) section.
+> This document contains a list of [known issues](storage-replica-known-issues.md) and expected behaviors as well as [Frequently Asked Questions](storage-replica-frequently-asked-questions.yml) section.
 
 ### Storage Replica terminology
 This guide frequently uses the following terms:
@@ -187,6 +187,6 @@ For a list of new features in Storage Replica in Windows Server 2019, see [What'
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Known Issues](storage-replica-known-issues.md)
-- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)
+- [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 - [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
 - [Windows IT Pro Support](https://www.microsoft.com/itpro/windows/support)

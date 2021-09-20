@@ -11,7 +11,7 @@ ms.date: 04/01/2019
 
 # Authorize guarded hosts using TPM-based attestation
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 TPM mode uses a TPM identifier (also called a platform identifier or endorsement key \[EKpub\]) to begin determining whether a particular host is authorized as "guarded." This mode of attestation uses Secure Boot and code integrity measurements to ensure that a given Hyper-V host is in a healthy state and is running only trusted code. In order for attestation to understand what is and is not healthy, you must capture the following artifacts:
 
@@ -135,6 +135,10 @@ For more information about the available CI policy rule levels, see [Deploy code
     ```powershell
     Add-HgsAttestationCIPolicy -Path <Path> -Name '<PolicyName>'
     ```
+    
+    > [!NOTE]
+    > If you're using a signed code integrity policy, register an unsigned copy of the same policy with HGS. The signature on code integrity policies is used to control updates to the policy, but is not measured into the host TPM and therefore cannot be attested to by HGS.
+
 
     > [!NOTE]
     > If you're using a signed code integrity policy, register an unsigned copy of the same policy with HGS. The signature on code integrity policies is used to control updates to the policy, but is not measured into the host TPM and therefore cannot be attested to by HGS.

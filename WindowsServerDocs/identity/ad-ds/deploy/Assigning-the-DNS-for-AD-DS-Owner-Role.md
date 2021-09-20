@@ -11,7 +11,7 @@ ms.topic: article
 
 # Assigning the DNS for AD DS Owner Role
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The forest owner assigns a Domain Name System (DNS) for Active Directory Domain Services (AD DS) owner for the forest. The DNS for AD DS owner of the forest is a person (or group of people) who is responsible for overseeing the deployment of the DNS for AD DS infrastructure and for making sure that (if necessary) domain names are registered with the proper Internet authorities.
 

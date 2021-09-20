@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # scwcmd register
 
-> Applies to: Windows Server 2012 R2 and Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2 and Windows Server 2012
 
 Extends or customizes the Security Configuration Wizard (SCW) Security Configuration Database by registering a Security Configuration Database file that contains role, task, service, or port definitions.
 

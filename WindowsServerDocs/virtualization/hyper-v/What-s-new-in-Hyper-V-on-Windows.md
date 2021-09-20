@@ -9,7 +9,7 @@ ms.date: 09/21/2017
 ---
 # What's new in Hyper-V on Windows Server
 
->Applies To: Windows Server 2019, Microsoft Hyper-V Server 2016, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Microsoft Hyper-V Server 2016, Windows Server 2016
 
 This article explains the new and changed functionality of Hyper-V on Windows Server 2019, Windows Server 2016, and Microsoft Hyper-V Server 2016. To use new features on virtual machines created with Windows Server 2012 R2 and moved or imported to a server that runs Hyper-V on Windows Server 2019 or Windows Server 2016, you'll need to manually upgrade the virtual machine configuration version. For instructions, see [Upgrade virtual machine version](deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md).
 
@@ -23,7 +23,7 @@ As you might know, we recommend using the Server Core installation option when u
 
 So, based on customer feedback, we added one more tools to the App Compatibility feature in this version: Hyper-V Manager (virtmgmt.msc).
 
-For more info, see [Server Core app compatibility feature](../../get-started-19/install-fod-19.md).
+For more info, see [Server Core App Compatibility Feature on Demand (FOD)](../../get-started/server-core-app-compatibility-feature-on-demand.md).
 
 ## Windows Server 2019
 
@@ -118,7 +118,7 @@ For details and instructions, see [Run Hyper-V in a Virtual Machine with Nested 
 
 New networking features include:
 
--   **Remote direct memory access (RDMA) and switch embedded teaming (SET)**. You can set up RDMA on network adapters bound to a Hyper-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](../hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md).
+-   **Remote direct memory access (RDMA) and switch embedded teaming (SET)**. You can set up RDMA on network adapters bound to a Hyper-V virtual switch, regardless of whether SET is also used. SET provides a virtual switch with some of same capabilities as NIC teaming. For details, see [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements).
 
 -   **Virtual machine multi queues (VMMQ)**. Improves on VMQ throughput by allocating multiple hardware queues per virtual machine.  The default queue becomes a set of queues for a virtual machine, and traffic is spread between the queues.
 

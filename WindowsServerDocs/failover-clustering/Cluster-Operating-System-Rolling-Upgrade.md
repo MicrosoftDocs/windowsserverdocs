@@ -10,7 +10,7 @@ ms.date: 03/27/2018
 ---
 # Cluster operating system rolling upgrade
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Cluster OS Rolling Upgrade enables an administrator to upgrade the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. Using this feature, the downtime penalties against Service Level Agreements (SLA) can be avoided.
 
@@ -42,7 +42,7 @@ Cluster OS Rolling Upgrade is fully supported by System Center Virtual Machine M
 ## Requirements
 Complete the following requirements before you begin the Cluster OS Rolling Upgrade process:
 
-- Start with a Failover Cluster running Windows Server (Semi-Annual Channel), Windows Server 2016, or Windows Server 2012 R2.
+- Start with a Failover Cluster running Windows Server 2016, or Windows Server 2012 R2.
 - Upgrading a Storage Spaces Direct cluster to Windows Server, version 1709 isn't supported.
 - If the cluster workload is Hyper-V VMs, or Scale-Out File Server, you can expect zero-downtime upgrade.
 - Verify that the Hyper-V nodes have CPUs that support Second-Level Addressing Table (SLAT) using one of the following methods;
@@ -195,7 +195,7 @@ Cluster OS Rolling upgrade includes the following steps:
         **Figure 18: Verifying that all cluster groups (cluster roles) are running using the [`Get-ClusterGroup`](/powershell/module/failoverclusters/Get-ClusterGroup) cmdlet**
 
     2.  Check that all cluster nodes are online and running using the [`Get-ClusterNode`](/powershell/module/failoverclusters/Get-ClusterNode) cmdlet.
-    3.  Run the [`Update-ClusterFunctionalLevel`](https://technet.microsoft.com/library/mt589702.aspx) cmdlet - no errors should be returned (see Figure 19).
+    3.  Run the [`Update-ClusterFunctionalLevel`](/powershell/module/failoverclusters/Update-ClusterFunctionalLevel) cmdlet - no errors should be returned (see Figure 19).
 
         ![Screencap showing the output of the Update-ClusterFunctionalLevel cmdlet](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_SelectFunctionalLevel.png)
         **Figure 19: Updating the functional level of a cluster using PowerShell**

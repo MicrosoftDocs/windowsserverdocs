@@ -10,7 +10,7 @@ ms.date: 3/17/2021
 ---
 # Passwords technical overview
 
->Applies To: Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows 7, Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Vista
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows 7, Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Vista
 
 This topic for the IT professional explains how Windows implements passwords in versions of Windows beginning with Windows Server 2012 and Windows 8.1. It also discusses strong passwords, passphrases, and password policies.
 

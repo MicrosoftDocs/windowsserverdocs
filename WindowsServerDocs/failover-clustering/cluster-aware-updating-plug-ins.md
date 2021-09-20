@@ -6,18 +6,18 @@ ms.topic: article
 manager: lizross
 ms.author: jgerend
 author: JasonGerend
-ms.date: 04/28/2017
+ms.date: 05/28/2021
 ---
 # How Cluster-Aware Updating plug-ins work
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 [Cluster-Aware Updating](cluster-aware-updating.md) (CAU) uses plug-ins to coordinate the installation of updates across nodes in a failover cluster. This topic provides information about using the built\-in CAU plug\-ins or other plug\-ins that you install for CAU.
 
 ## <a name="BKMK_INSTALL"></a>Install a plug\-in
 A plug\-in other than the default plug\-ins that are installed with CAU \(**Microsoft.WindowsUpdatePlugin** and **Microsoft.HotfixPlugin**\) must be installed separately. If CAU is used in self\-updating mode, the plug\-in must be installed on all cluster nodes. If CAU is used in remote\-updating mode, the plug\-in must be installed on the remote Update Coordinator computer. A plug\-in that you install may have additional installation requirements on each node.
 
-To install a plug\-in, follow the instructions from the plug\-in publisher. To manually register a plug\-in with CAU, run the [Register-CauPlugin](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/register-cauplugin) cmdlet on each computer where the plug\-in is installed.
+To install a plug\-in, follow the instructions from the plug\-in publisher. To manually register a plug\-in with CAU, run the [Register-CauPlugin](/powershell/module/clusterawareupdating/register-cauplugin) cmdlet on each computer where the plug\-in is installed.
 
 ## Specify a plug\-in and plug\-in arguments
 
@@ -133,7 +133,7 @@ To configure a **QueryString** argument that installs only drivers:
 
 **QueryString\="IsInstalled\=0 and Type\='Driver' and IsHidden\=0"**
 
-For more information about query strings for the default plug\-in, **Microsoft.WindowsUpdatePlugin**, the search criteria \(such as **IsInstalled**\), and the syntax that you can include in the query strings, see the section about search criteria in the [Windows Update Agent (WUA) API Reference](https://go.microsoft.com/fwlink/p/?LinkId=223304).
+For more information about query strings for the default plug\-in, **Microsoft.WindowsUpdatePlugin**, the search criteria \(such as **IsInstalled**\), and the syntax that you can include in the query strings, see the section about search criteria in the [Windows Update Agent (WUA) API Reference](/windows/win32/api/wuapi/nf-wuapi-iupdatesearcher-search).
 
 ## <a name="BKMK_HFP"></a>Use the Microsoft.HotfixPlugin
 The plug\-in **Microsoft.HotfixPlugin** can be used to apply Microsoft limited distribution release \(LDR\) updates \(also called hotfixes, and formerly called QFEs\) that you download independently to address specific Microsoft software issues. The plug-in installs updates from a root folder on an SMB file share and can also be customized to apply non\-Microsoft driver, firmware, and BIOS updates.
@@ -304,7 +304,7 @@ The following tables describe the `<Template>` attributes and the possible `<Exi
 > Any exit code that is not explicitly defined in `<ExitConditions>` is interpreted as the update failed, and the node does not restart.
 
 ### <a name="BKMK_ACL"></a>Restrict access to the hotfix root folder
-You must perform several steps to configure the SMB file server and file share to help secure the hotfix root folder files and hofix configuration file for access only in the context of **Microsoft.HotfixPlugin**. These steps enable several features that help prevent possible tampering with the hotfix files in a way that might compromise the failover cluster.
+You must perform several steps to configure the SMB file server and file share to help secure the hotfix root folder files and hotfix configuration file for access only in the context of **Microsoft.HotfixPlugin**. These steps enable several features that help prevent possible tampering with the hotfix files in a way that might compromise the failover cluster.
 
 The general steps are as follows:
 

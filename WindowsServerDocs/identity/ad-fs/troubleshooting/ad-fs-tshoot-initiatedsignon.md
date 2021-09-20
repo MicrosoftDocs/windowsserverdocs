@@ -55,6 +55,10 @@ You can test the seamless logon experience by making sure that the URL for your 
 
     ![Screenshot of the Sign in page showing that the user wasn't prompted for credentials.](media/ad-fs-tshoot-initiatedsignon/idp6.png)
 
+## Known Issues
+
+The AD FS sign-on page cannot be used to initiate a sign-on with a claims provider trust that is configured with a WS-Federation passive endpoint only. Register a relying party such as [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) to verify that a WS-Federation claims provider trust works as intended.
+
 ## Next Steps
 
 - [AD FS Troubleshooting](ad-fs-tshoot-overview.md)

@@ -4,12 +4,12 @@ manager: eldenc
 ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar
-ms.date: 03/07/2019
+ms.date: 05/28/2021
 description: This article describes failover cluster affinity and antiaffinity levels
 ---
 # Cluster affinity
 
-> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 A failover cluster can hold many roles that can move between nodes and run. There are times when certain roles (that is, virtual machines, resource groups, and so on) should not run on the same node.  This could be because of resource consumption, memory usage, and so on.  For example, there are two virtual machines that are memory and CPU intensive and if the two virtual machines are running on the same node, one or both of the virtual machines could have performance impact issues.  This article will explain cluster antiaffinity levels and how you can use them.
 

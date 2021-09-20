@@ -9,7 +9,7 @@ ms.date: 10/04/2016
 ---
 # Manage Windows virtual machines with PowerShell Direct
 
->Applies To: Windows 10, Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2022, Windows 10, Windows Server 2016, Windows Server 2019
 
 You can use PowerShell Direct to remotely manage a Windows 10, Windows Server 2016, or Windows Server 2019 virtual machine from a Windows 10, Windows Server 2016, or Windows Server 2019 Hyper-V host. PowerShell Direct allows Windows PowerShell management inside a virtual machine regardless of the network configuration or remote management settings on either the Hyper-V host or the virtual machine. This makes it easier for Hyper-V Administrators to automate and script virtual machine management and configuration.
 

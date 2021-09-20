@@ -10,7 +10,7 @@ ms.date: 08/30/2018
 
 # Step 4. Install and configure the Network Policy Server (NPS)
 
-> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Next:** Step 3. Configure the Remote Access Server for Always On VPN](vpn-deploy-ras.md)
 - [**Next:** Step 5. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)

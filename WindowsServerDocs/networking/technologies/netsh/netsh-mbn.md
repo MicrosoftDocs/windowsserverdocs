@@ -4,11 +4,12 @@ description: Use netsh mbn to query and configure mobile broadband settings and 
 ms.topic: article
 author: apdutta
 ms.author: apdutta
-ms.date: 02/20/2020
+ms.date: 07/16/2021
 ---
 
 # Netsh mbn commands
 
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Use **netsh mbn** to query and configure mobile broadband settings and parameters.
 
@@ -104,7 +105,7 @@ connect [interface=]<string> [connmode=]tmp|name [name=]<string>
 | Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
-| **connmode**  | Specifies how connection parameters are being provided. The connection can be requested using a profile XML, or using profile name for the profile XML that has been previously stored in Mobile Broadband Profile Data Store using "netsh mbn add profile" command. In former case, the parameter connmode shall hold "tmp" as value. Whereas, it shall be "name" in the latter case                                       | Required |
+| **connmode**  | Specifies how connection parameters are being provided. You can request the connection either using a profile XML, or using a profile name for the profile XML that has been previously stored in the Mobile Broadband Profile Data Store using the "netsh mbn add profile" command. In former case, the parameter connmode shall hold "tmp" as value. Whereas, it shall be "name" in the latter case                                       | Required |
 | **name**      | Name of the profile XML file. It is the name of the XML file containing the profile data.     | Required |
 
 
@@ -325,7 +326,7 @@ set dataroamcontrol [interface=]<string> [profileset=]internet|mms|all [state=]n
 |----------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface**  | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
 | **profileset** | Name of the profile set.                                                                      | Required |
-| **mode**       | One of the following values:<br>none: Home carrier only.<br>partner: Home and partner carriers only.<br>all: Home, partner and roaming carriers.| Required |
+| **mode**       | One of the following values:<br>none: Home carrier only.<br>partner: Home and partner carriers only.<br>all: Home, partner, and roaming carriers.| Required |
 
 
 **Example**
@@ -350,9 +351,9 @@ set enterpriseapnparams [interface=]<string> [allowusercontrol=]yes|no|nc [allow
 | Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
-| **allowusercontrol** | One of the following values:<br>yes: allow end user control enterpriseAPN.<br>no: disallow end user control enterpriseAPN.<br>nc: no change. | Required |
-| **allowuserview** |One of the following values:<br>yes: allow end user view enterpriseAPN.<br>no: disallow end user view enterpriseAPN.<br>nc: no change. | Required |
-| **profileaction** | One of the following values:<br>add: an enterpriseAPN profile is just added.<br>delete: an enterpriseAPN profile is just deleted.<br>modify: an enterpriseAPN profile is just modified.<br>nc: no change. | Required |
+| **allowusercontrol** | One of the following values:<br>yes: allow user control enterpriseAPN.<br>no: disallow user control enterpriseAPN.<br>nc: no change. | Required |
+| **allowuserview** |One of the following values:<br>yes: allow user view enterpriseAPN.<br>no: disallow user view enterpriseAPN.<br>nc: no change. | Required |
+| **profileaction** | One of the following values:<br>add: an enterpriseAPN profile is added.<br>delete: an enterpriseAPN profile is deleted.<br>modify: an enterpriseAPN profile is modified.<br>nc: no change. | Required |
 
 
 **Example**
@@ -364,7 +365,7 @@ set enterpriseapnparams interface="Cellular" profileset=mms mode=yes
 
 ### highestconncategory
 
-Sets the Mobile Broadband data highest connnection category for the given interface.
+Sets the Mobile Broadband data highest connection category for the given interface.
 
 **Syntax**
 
@@ -377,7 +378,7 @@ set highestconncategory [interface=]<string> [highestcc=]admim|user|operator|dev
 | Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Required |
-| **highestcc** | One of the following values:<br>admin: admin provisioned profiles.<br>user: user proviioned profiles.<br>operator: operator proviioned profiles.<br>device: device proviioned profiles. | Required |
+| **highestcc** | One of the following values:<br>admin: admin provisioned profiles.<br>user: user provisioned profiles.<br>operator: operator provisioned profiles.<br>device: device provisioned profiles. | Required |
 
 
 **Example**
@@ -426,7 +427,7 @@ set profileparameter [name=]<string> [[interface=]<string>] [[cost]=default|unre
 
 | Parameter             | Description                                                                                             | Requirement         |
 |---------------|-----------------------------------------------------------------------------------------------|----------|
-| **name**      | Name of the profile to be  modified. If the interface is specified then only the profile on that interface is modified. | Required |
+| **name**      | Name of the profile to be  modified. If the interface is specified, then only the profile on that interface is modified. | Required |
 | **interface** | Interface name. It is one of the interface names shown by "netsh mbn show interfaces" command. | Optional |
 | **cost**      | Cost associated with the profile.                                                             | Optional |
 
@@ -665,9 +666,9 @@ show dmprofiles [[name=]<string>] [[interface=]<string>]
 
 Shows the profile data or lists the profiles on the system.
 
-If profile name is given then the content of the profile will be displayed. Otherwise profiles will be listed for the interface.
+If the profile name is given, then the content of the profile will be displayed. Otherwise profiles will be listed for the interface.
 
-If interface name is given, only the specified profile on the given interface will be listed. Otherwise, first matched profile will be displayed.
+If the interface name is given, only the specified profile on the given interface will be listed. Otherwise, the first matched profile will be displayed.
 
 **Example**
 
@@ -876,9 +877,9 @@ show profiles [[name=]<string>] [[interface=]<string>] [[purpose=]<string>]
 
 **Remarks**
 
-If profile name is given then the content of the profile will be displayed. Otherwise profiles will be listed for the interface.
+If the profile name is given, then the content of the profile will be displayed. Otherwise profiles will be listed for the interface.
 
-If interface name is given, only the specified profile on the given interface will be listed. Otherwise, first matched profile will be displayed.
+If the interface name is given, only the specified profile on the given interface will be listed. Otherwise, the first matched profile will be displayed.
 
 If the purpose is provided, only profiles with the matching purpose GUID will be displayed.  Otherwise, profiles will not be filtered by purpose.  The string can either be a GUID with curly brackets or one of the following strings: internet, supl, mms, ims, or allhost.
 
@@ -1157,7 +1158,7 @@ Supported feature areas are:
 - lte
 - bringup
 
-Some tests require additional test parameters that need to be provided in the `param` field.
+Some tests require additional parameters to be provided in the `param` field.
 The required parameters for the features are listed below.
 - **connectivity**: AccessString, UserName (If applicable), Password (If applicable)
 - **radio**: AccessString, UserName (If applicable), Password (If applicable)

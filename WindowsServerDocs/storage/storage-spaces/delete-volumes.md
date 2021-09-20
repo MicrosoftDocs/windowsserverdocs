@@ -10,7 +10,7 @@ ms.topic: article
 ---
 
 # Deleting volumes in Storage Spaces Direct
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic provides instructions for deleting volumes in on a [Storage Spaces Direct](storage-spaces-direct-overview.md) cluster by using Windows Admin Center.
 
