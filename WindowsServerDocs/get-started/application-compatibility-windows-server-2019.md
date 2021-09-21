@@ -35,9 +35,9 @@ This table lists Microsoft server applications that support installation and fun
 | SQL Server 2016 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2016](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2016&preserve-view=true) |
 | SQL Server 2017 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2017](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2017&preserve-view=true) |
 | SQL Server 2019 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2019](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15?view=sql-server-ver15&preserve-view=true) |
+| System Center Data Protection Manager 2019 | No | Yes | Yes | [Preparing your environment for System Center Data Protection Manager](/system-center/dpm/prepare-environment-for-dpm) |
 | System Center Operations Manager 2019 | Yes* | Yes | Yes | [System requirements for System Center Operations Manager](/system-center/scom/plan-system-requirements) |
 | System Center Virtual Machine Manager 2019 | Yes* | Yes | Yes | [System requirements for System Center Virtual Machine Manager](/system-center/vmm/system-requirements) |
-| System Center Data Protection Manager 2019 | No | Yes | Yes | [Preparing your environment for System Center Data Protection Manager](/system-center/dpm/prepare-environment-for-dpm) |
 
 *May have limitations or may require the [Server Core App Compatibility Feature on Demand (FOD)](server-core-app-compatibility-feature-on-demand.md).
 Please refer to specific product or FOD documentation.
