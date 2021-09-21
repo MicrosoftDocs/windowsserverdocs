@@ -18,7 +18,7 @@ This table lists Microsoft server applications that support installation and fun
 
 | Product | Released | Product Web Link |
 |--|--|--|--|--|
-| Biztalk Server 2016 | Yes | [Microsoft BizTalk Server](https://www.microsoft.com/cloud-platform/biztalk)|
+| BizTalk Server 2016 | Yes | [Microsoft BizTalk Server](https://www.microsoft.com/cloud-platform/biztalk)|
 | Configuration Manager (version 1606) | Yes | [What's new in version 1606 of Configuration Manager](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1606)|
 | Exchange Server 2016 | Yes | [Updates for Exchange 2016](/Exchange/new-features/updates)|
 | Host Integration Server 2016 | Yes | [What's New in HIS 2016](/host-integration-server/install-and-config-guides/what-s-new-in-his-2016)|

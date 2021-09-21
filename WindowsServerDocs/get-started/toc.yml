@@ -57,6 +57,8 @@ items:
               href: kms-activation-planning.md
         - name: Microsoft Server application compatibility
           items:
+          - name: Windows Server 2022
+            href: application-compatibility-windows-server-2022.md
           - name: Windows Server 2019
             href: application-compatibility-windows-server-2019.md
           - name: Windows Server 2016
