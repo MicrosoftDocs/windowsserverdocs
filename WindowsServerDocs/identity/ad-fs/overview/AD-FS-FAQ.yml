@@ -1,8 +1,8 @@
 ### YamlMime:FAQ
 metadata:
   ms.assetid: acc9101b-841c-4540-8b3c-62a53869ef7a
-  title: AD FS FAQ
-  description: Frequently asked questions for AD FS
+  title: Active Directory Federation Services (AD FS) FAQ
+  description: This article provides answers to frequently asked questions about Active Directory Federation Services (AD FS).
   author: billmath
   ms.author:  billmath
   manager: mtillman
@@ -10,47 +10,47 @@ metadata:
   ms.topic: article
   ms.prod: windows-server
     
-title: AD FS Frequently Asked Questions (FAQ)
-summary: The following documentation is a home to frequently asked questions with regard to Active Directory Federation Services.  The document has been split into groups based on the type of question.
+title: Frequently asked questions (FAQ) about AD FS
+summary: This article provides answers to frequently asked questions about Active Directory Federation Services (AD FS). It's divided into sections that are based on the type of question.
 
 
 sections:
   - name: Deployment
     questions:
       - question: |
-          How can I upgrade/migrate from previous versions of AD FS
+          How can I upgrade/migrate from previous versions of AD FS?
         answer: |
-          You can upgrade AD FS using one of the following:
+          You can upgrade/migrate AD FS by completing the steps in one of the following linked articles:
           
-          - Windows Server 2012 R2 AD FS to Windows Server 2016 AD FS or higher. Note that the methodology is the same if you are upgrading from Windows Server 2016 AD FS to Windows Server 2019 AD FS.
-              - [Upgrading to AD FS in Windows Server 2016 using a WID database](../deployment/upgrading-to-ad-fs-in-windows-server.md)
-              - [Upgrading to AD FS in Windows Server 2016 using a SQL database](../deployment/upgrading-to-ad-fs-in-windows-server-sql.md)
-          - Windows Server 2012 AD FS to Windows Server 2012 R2 AD FS
+          - Windows Server 2012 R2 AD FS to Windows Server 2016 AD FS or later. (Note that the process is the same if you're upgrading from Windows Server 2016 AD FS to Windows Server 2019 AD FS.)
+              - [Upgrading to AD FS in Windows Server 2016 by using a WID database](../deployment/upgrading-to-ad-fs-in-windows-server.md)
+              - [Upgrading to AD FS in Windows Server 2016 by using a SQL database](../deployment/upgrading-to-ad-fs-in-windows-server-sql.md)
+          - Windows Server 2012 AD FS to Windows Server 2012 R2 AD FS:
               - [Migrate to AD FS on Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn486815(v=ws.11))
-          - AD FS 2.0 to Windows Server 2012 AD FS
+          - AD FS 2.0 to Windows Server 2012 AD FS:
               - [Migrate to AD FS on Windows Server 2012](../deployment/migrate-ad-fs-role-services-to-windows-server-2012.md)
-          - AD FS 1.x to AD FS 2.0
-              - [Upgrade from AD FS 1.x to AD FS 2.0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff678035(v=ws.10))
+          - AD FS 1.*x* to AD FS 2.0:
+              - [Upgrade from AD FS 1.*x* to AD FS 2.0](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff678035(v=ws.10))
           
-          If you need to upgrade from AD FS 2.0 or 2.1 (Windows Server 2008 R2 or Windows Server 2012), you must use the in-box scripts (located in C:\Windows\ADFS).
+          If you need to upgrade from AD FS 2.0 or 2.1 (Windows Server 2008 R2 or Windows Server 2012), use the in-box scripts located in C:\Windows\ADFS.
           
       - question: |
-          Why does AD FS installation require a reboot of the server?
+          Why does AD FS installation require a server restart?
         answer: |
-          HTTP/2 support was added in Windows Server 2016, but HTTP/2 can't be used for client certificate authentication.  Because many AD FS scenarios make use of client certificate authentication, and a significant number of clients do not support retrying requests using HTTP/1.1, AD FS farm configuration re-configures the local server's HTTP settings to HTTP/1.1.  This requires a reboot of the server.
+          HTTP/2 support was added in Windows Server 2016, but HTTP/2 can't be used for client certificate authentication. Many AD FS scenarios use client certificate authentication. And many clients don't support retrying requests by using HTTP/1.1. So AD FS farm configuration reconfigures the local server's HTTP settings to HTTP/1.1. This reconfiguration requires a server restart.
 
       - question: |
-          Is using Windows 2016 WAP Servers to publish the AD FS farm to the internet without upgrading the back-end AD FS farm supported?
+          Can I use Windows Server 2016 Web Application Proxy servers to publish the AD FS farm to the internet without upgrading the back-end AD FS farm?
         answer: |
-          Yes, this configuration is supported, however no new AD FS 2016 features would be supported in this configuration.  This configuration is meant to be temporary during the migration phase from AD FS 2012 R2 to AD FS 2016 and should not be deployed for long periods of time.
+          This configuration is supported, but no new AD FS 2016 features would be supported in it. This configuration is meant to be temporary during the migration from AD FS 2012 R2 to AD FS 2016. It shouldn't be used for long periods of time.
 
       - question: |
-          Is it possible to deploy AD FS for Office 365 without publishing a proxy to Office 365?
+          Can I deploy AD FS for Office 365 without publishing a proxy to Office 365?
         answer: |
-          Yes, this is supported. However, as a side effect
+          Yes, but as a side effect:
           
-          1. You will need to manually manage updating token signing certificates because Azure AD will not be able to access the federation metadata. For more information on manually updating token signing certificate read [Renew federation certificates for Office 365 and Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect-o365-certs)
-          2. You will not be able to leverage legacy auth flows (e.g. ExO proxy auth flow)
+          - You'll need to manually manage updates of token signing certificates because Azure AD won't be able to access the federation metadata. For more information on manually updating token signing certificate read [Renew federation certificates for Office 365 and Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect-o365-certs)
+          - You will not be able to leverage legacy auth flows (e.g. ExO proxy auth flow)
           
       - question: |
           What are load balancing requirements for AD FS and WAP servers?
