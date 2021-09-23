@@ -22,7 +22,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Always On VPN features and funtionality
+          - text: Always On VPN features and functionality
             url: ../vpn-map-da.md
           - text: Technology overview
             url: ./always-on-vpn-technology-overview.md
