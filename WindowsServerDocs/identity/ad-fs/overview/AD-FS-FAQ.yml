@@ -134,7 +134,7 @@ sections:
           The lifetime of refresh token will be the lifetime of the token that AD FS got from the remote claims provider trust. The lifetime of the access token will be the token lifetime of the relying party for which the access token is being issued.
 
       - question: |
-          I need to return profile and email scopes in addition to the OpenId scope. Can I obtain more information by using scopes? How to do it in AD FS?
+          I need to return profile and email scopes in addition to the openid scope. Can I obtain more information by using scopes? How to do it in AD FS?
         answer: |
           You can use a customized id_token to add relevant information in the id_token itself. For more information, see [Customize claims to be emitted in id_token](../development/Custom-Id-Tokens-in-AD-FS.md).
           
@@ -158,23 +158,25 @@ sections:
       - question: |
           Can I pass a resource value as part of the scope value, in the same way that requests are made against Azure AD?
         answer: |
-          With AD FS on Windows Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. For example, **< create a valid sample request>**
+          With AD FS on Windows Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can be organized as a space-separated list where each entry is structured as resource/scope. For example, **<create a valid sample request>**.
           
       - question: |
-          Does AD FS support PKCE extension?
+          Does AD FS support the PKCE extension?
         answer: |
-          AD FS in Server 2019 supports Proof Key for Code Exchange (PKCE) for OAuth Authorization Code Grant flow
+          AD FS in Windows Server 2019 supports Proof Key for Code Exchange (PKCE) for the OAuth Authorization Code Grant flow.
 
       - question: |
           What permitted scopes are supported by AD FS?
         answer: |
-          - aza - If using [OAuth 2.0 Protocol Extensions for Broker Clients](/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) and if the scope parameter contains the scope "aza", the server issues a new primary refresh token and sets it in the refresh_token field of the response, as well as setting the refresh_token_expires_in field to the lifetime of the new primary refresh token if one is enforced.
-          - openid - Allows application to request use of the OpenID Connect authorization protocol.
-          - logon_cert - The logon_cert scope allows an application to request logon certificates, which can be used to interactively logon authenticated users. The AD FS server omits the access_token parameter from the response and instead provides a base64-encoded CMS certificate chain or a CMC full PKI response. More details available [here](/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e).
-          - user_impersonation - The user_impersonation scope is necessary to successfully request an on-behalf-of access token from AD FS. For details on how to use this scope refer [Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016](../../ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md).
-          - vpn_cert - The vpn_cert scope allows an application to request VPN certificates, which can be used to establish VPN connections using EAP-TLS authentication. This is not supported anymore.
-          - email - Allows application to request email claim for the signed in user. This is not supported anymore.
-          - profile - Allows application to request profile-related claims for the sign-in user. This is not supported anymore.
+        Supported: 
+          - aza. If you're using [OAuth 2.0 Protocol Extensions for Broker Clients](/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) and the scope parameter contains the scope aza, the server issues a new primary refresh token and sets it in the refresh_token field of the response. It also sets the refresh_token_expires_in field to the lifetime of the new primary refresh token, if one is enforced.
+          - openid. Allows an application to request the use of the OpenID Connect authorization protocol.
+          - logon_cert. Allows an application to request logon certificates, which can be used to interactively sign in authenticated users. The AD FS server omits the access_token parameter from the response and instead provides a Base64-encoded CMS certificate chain or a CMC full PKI response. For more information, see [Processing details](/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e).
+          - user_impersonation. Required if you want to request an on-behalf-of access token from AD FS. For more information on how to use this scope, see [Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016](../../ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md).
+        Not supported:
+          - vpn_cert. Allows an application to request VPN certificates, which can be used to establish VPN connections by using EAP-TLS authentication. This scope is no longer supported.
+          - email. Allows an application to request an email claim for the signed-in user. This scope is no longer supported.
+          - profile. Allows an application to request profile-related claims for the signed-in user. This scope is no longer supported.
           
           
   - name: Operations
@@ -182,23 +184,16 @@ sections:
       - question: |
           How do I replace the SSL certificate for AD FS?
         answer: |
-          The AD FS SSL certificate is not the same as the AD FS Service communications certificate found in the AD FS Management snap-in.  To change the AD FS SSL certificate, you'll need to use PowerShell. Follow the guidance in the article below:
-          
-          [Managing SSL Certificates in AD FS and WAP 2016](../operations/manage-ssl-certificates-ad-fs-wap.md)
+          The AD FS SSL certificate isn't the same as the AD FS Service Communications Certificate in the AD FS Management snap-in. To change the AD FS SSL certificate, you need to use PowerShell. Follow the guidance in [Managing SSL certificates in AD FS and WAP 2016](../operations/manage-ssl-certificates-ad-fs-wap.md).
           
       - question: |
-          How can I enable or disable TLS/SSL settings for AD FS
+          How can I enable or disable TLS/SSL settings for AD FS?
         answer: |
-          To disable or enable SSL protocols and cipher suites, use the following:
-          
-          [Manage SSL Protocols in AD FS](../operations/Manage-SSL-Protocols-in-AD-FS.md)
+          For information about disabling and enabling SSL protocols and cipher suites, see [Manage SSL protocols in AD FS](../operations/Manage-SSL-Protocols-in-AD-FS.md).
           
       - question: |
-          Does the proxy SSL certificate have to be the same as the AD FS SSL certificate?
+          Does the proxy SSL certificate need to be the same as the AD FS SSL certificate?
         answer: |
-          Use the following guidance with regards to the proxy SSL certificate and the AD FS SSL certificate:
-          
-          
           - If the proxy is used to proxy AD FS requests that use Windows Integrated Authentication, the proxy SSL certificate must be the same (use the same key) as the federation server SSL certificate
           - If the AD FS property "ExtendedProtectionTokenCheck" is enabled (the default setting in AD FS), the proxy SSL certificate must be the same (use the same key) as the federation server SSL certificate
           - Otherwise, the proxy SSL certificate can have a different key from the AD FS SSL certificate, but must meet the same [requirements](./ad-fs-requirements.md)
