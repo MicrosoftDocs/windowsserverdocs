@@ -126,7 +126,7 @@ sections:
       - question: |
           When AD FS generates an id_token for a user authenticated against Active Directory, how is the `sub` claim generated in the id_token?
         answer: |
-          The value of the `sub` claim is the hash of client ID + anchor claim value.
+          The value of the `sub` claim is the hash of the client ID and the anchor claim value.
 
       - question: |
           What is the lifetime of the refresh token/access token when the user logs in via a remote claims provider trust over WS-Fed/SAML-P?
