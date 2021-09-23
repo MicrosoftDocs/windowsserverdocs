@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Modify root navigation behavior for a solution extension
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 In this guide we will learn how to modify the root navigation behavior for your solution to have different connection list behavior, as well as how to hide or show the tools list.
 

@@ -9,7 +9,7 @@ ms.date: 12/06/2016
 ---
 # Use local resources on Hyper-V virtual machine with VMConnect
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2
 
 Virtual Machine Connection (VMConnect) lets you use a computer's local resources in a virtual machine, like a removable USB flash drive or a printer. Enhanced session mode also lets you resize the VMConnect window. This article shows you how configure the host and then give the virtual machine access to a local resource.
 

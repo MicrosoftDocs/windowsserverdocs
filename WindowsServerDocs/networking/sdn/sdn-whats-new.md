@@ -10,7 +10,7 @@ ms.date: 10/02/2018
 ---
 # What's New in SDN for Windows Server 2019
 
->Applies to: Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server (Semi-Annual Channel)
 
 
 |                         **Feature**                          |                                                                                                                                                                                         **Description**                                                                                                                                                                                         | **New/updated** |

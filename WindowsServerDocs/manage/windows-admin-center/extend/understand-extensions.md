@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Understanding Windows Admin Center Extensions
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 In case you're not yet familiar with how Windows Admin Center works, let's start with the high-level architecture. Windows Admin Center is comprised of two main components:
 

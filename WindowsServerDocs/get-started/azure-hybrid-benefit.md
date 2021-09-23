@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 # Azure Hybrid Benefit for Windows Server
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 ## Benefit description, rules, and use cases
 
@@ -56,8 +56,8 @@ Customers seeking to apply the Azure Hybrid Benefit to their Windows Server VMs 
 If you already have VMs running with the Azure Hybrid Benefit, you will need to perform an inventory of how many units you are running, and check against the active SA licenses you have.  Please contact your Microsoft Enterprise Agreement licensing specialist to validate your SA licensing position.
 To see and count all virtual machines deployed with Azure Hybrid Benefit for Windows Server in a subscription, you can do one of the below:
 
-1. Configure the Microsoft Azure Portal to show Azure Hybrid Benefit for Windows Server utilization
-Add the column “Azure Hybrid Benefit” in the list view of the virtual machines section in the Microsoft Azure Portal.
+1. Configure the Microsoft Azure Portal to show Azure Hybrid Benefit for Windows Server utilization.
+Add the column **OS licensing benefit** in the list view of the virtual machines section in the Microsoft Azure Portal.
 
     ![image 6](media/ahb06.png)
 

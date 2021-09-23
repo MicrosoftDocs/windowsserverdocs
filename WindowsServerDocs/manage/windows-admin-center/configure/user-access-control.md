@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Configure User Access Control and Permissions
 
-> Applies to: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 If you haven't already, familiarize yourself with the [user access control options in Windows Admin Center](../plan/user-access-options.md)
 

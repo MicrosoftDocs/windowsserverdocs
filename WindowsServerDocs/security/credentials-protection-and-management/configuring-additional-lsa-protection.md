@@ -10,7 +10,7 @@ ms.date: 10/12/2016
 ---
 # Configuring Additional LSA Protection
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic for the IT professional explains how to configure additional protection for the Local Security Authority (LSA) process to prevent code injection that could compromise credentials.
 
@@ -67,7 +67,7 @@ You can use the audit mode to identify LSA plug-ins and drivers that will fail t
 
 Analyze the results of event 3065 and event 3066.
 
-After this, you may see these events in Event Viewer: Microsoft-Windows-Codeintegrity/Operational:
+After this, you may see these events in Event Viewer in Applications and Services Logs/Microsoft/Windows/CodeIntegrity:
 
 -   **Event 3065**: This event records that a code integrity check determined that a process (usually lsass.exe) attempted to load a particular driver that did not meet the security requirements for Shared Sections. However, due to the system policy that is set, the image was allowed to load.
 

@@ -10,7 +10,7 @@ ms.date: 11/09/2016
 
 # What's New in Kerberos Authentication
 
->Applies To: Windows Server 2016 and Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016 and Windows 10
 
 ## KDC support for Public Key Trust-based client authentication
 

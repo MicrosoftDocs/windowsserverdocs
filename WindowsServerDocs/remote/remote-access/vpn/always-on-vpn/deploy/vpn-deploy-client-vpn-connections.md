@@ -11,7 +11,7 @@ ms.reviewer: deverette
 ---
 # Step 6. Configure Windows 10 client Always On VPN connections
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Step 5. Configure DNS and Firewall Settings](vpn-deploy-dns-firewall.md)<br>
 - [**Next:** Step 7. (Optional) Conditional access for VPN connectivity using Azure AD](../../ad-ca-vpn-connectivity-windows10.md)
@@ -22,6 +22,9 @@ You can configure the Always On VPN client through PowerShell, Microsoft Endpoin
 
 >[!NOTE]
 >Group Policy does not include administrative templates to configure the Windows 10 Remote Access Always On VPN client.  However, you can use logon scripts.
+
+>[!NOTE]
+>Auto-triggered VPN connections will not work if folder redirection for %appdata% (C:\Users\username\AppData\Roaming) is enabled. Either folder redirection must be disabled for %appdata%, or the auto-triggered VPN profile must be deployed in system context, to change the path in which the rasphone.pbk file is stored.
 
 ## ProfileXML overview
 

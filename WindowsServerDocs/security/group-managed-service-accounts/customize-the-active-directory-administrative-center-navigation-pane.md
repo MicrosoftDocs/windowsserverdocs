@@ -10,7 +10,7 @@ ms.topic: article
 ---
 # Customize the Active Directory Administrative Center Navigation Pane
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
   You can browse through the Active Directory Administrative Center navigation pane by using the tree view, which is similar to the Active Directory Users and Computers console tree, or by using the list view.
 

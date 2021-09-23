@@ -50,7 +50,10 @@ The below diagram depicts the firewall ports that must be enabled between and am
 >[!NOTE]
 > Port 808 (Windows Server 2012R2) or port 1501 (Windows Server 2016+) is the Net.TCP port AD FS uses for the local WCF endpoint to transfer configuration data to the service process and PowerShell. This port can be seen by running Get-AdfsProperties | select NetTcpPort. This is a local port that will not need to be opened in the firewall but will be displayed in a port scan.
 
+### Communication between Federation Servers
+Federation servers on an AD FS farm communicate with other servers in the farm and the Web Application Proxy (WAP) servers via HTTP port 80 for configuration synchronization. Making sure that only these servers can communicate with each other and no other is a measure of defense in depth. 
 
+Organizations can do this by setting up firewall rules on each server allowing inbound communication from the IP addresses from other servers in the farm and WAP servers. Please note that some Network Load Balancers (NLB) use HTTP port 80 for probing the health on individual federation servers. Please make sure that you include the IP addresses of the NLB in the configured firewall rules.
 
 ### Azure AD Connect and Federation Servers/WAP
 This table describes the ports and protocols that are required for communication between the Azure AD Connect server and Federation/WAP servers.
@@ -172,6 +175,8 @@ WS-Trust Windows endpoints (*/adfs/services/trust/2005/windowstransport* and */a
 Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/2005/windowstransport -Proxy $false
 Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/13/windowstransport -Proxy $false
 ```
+>[!NOTE]
+>If your AD FS farm runs on Windows Internal Databases (WID) and has a secondary AD FS server, after disabling the endpoints on primary server, wait for the SYNC to occur on secondary nodes before restarting the AD FS service on them. Use the PowerShell command **Get-AdfsSyncProperties** on the secondary node to track last SYNC process.
 
 ### Differentiate access policies for intranet and extranet access
 AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This can be done per application or globally.  For high business value applications or applications with sensitive or personally identifiable information, consider requiring multi factor authentication.  This can be done via the AD FS management snap-in.

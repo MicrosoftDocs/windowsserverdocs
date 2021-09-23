@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 # Windows Server software-defined datacenter
 
->Applies To: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 ![heading image](media/sddc/heading.png)
 

@@ -1,16 +1,16 @@
 ---
 title:  Install OpenSSH
 description: Installing OpenSSH Client and Server for Windows.
-ms.date: 04/19/2021
+ms.date: 09/15/2021
 ms.topic: conceptual
-ms.author: damaerte
-author: maertendmsft
+ms.author: inhenkel
+author: IngridAtMicrosoft
 ms.custom: contperf-fy21q4
 ---
 
 # Install OpenSSH
 
-> Applies to Windows Server 2019, Windows 10
+>Applies to Windows Server 2019, Windows 10: Windows Server 2022,
 
 OpenSSH is a connectivity tool for remote login that uses the SSH protocol. It encrypts all traffic between client and server to eliminate eavesdropping, connection hijacking, and other attacks.
 
@@ -43,7 +43,7 @@ To install OpenSSH using PowerShell, run PowerShell as an Administrator.
 To make sure that OpenSSH is available, run the following cmdlet:
 
 ```powershell
-Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
+Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 ```
 
 This should return the following output if neither are already installed:
@@ -85,12 +85,13 @@ Start-Service sshd
 # OPTIONAL but recommended:
 Set-Service -Name sshd -StartupType 'Automatic'
 
-# Confirm the firewall rule is configured. It should be created automatically by setup.
-Get-NetFirewallRule -Name *ssh*
-
-# There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled
-# If the firewall does not exist, create one
-New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+# Confirm the Firewall rule is configured. It should be created automatically by setup. Run the following to verify
+if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+    Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
+    New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+} else {
+    Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
+}
 ```
 
 ## Connect to OpenSSH Server
