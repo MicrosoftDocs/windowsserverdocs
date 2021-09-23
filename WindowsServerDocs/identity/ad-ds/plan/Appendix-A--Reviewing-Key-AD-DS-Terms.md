@@ -11,7 +11,7 @@ ms.topic: article
 
 # Appendix A: Reviewing Key AD DS Terms
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The following terms are relevant to the deployment process for  Windows Server 2008  Active Directory Domain Services (AD DS).
 

@@ -96,7 +96,13 @@ Once that completes run `adprep /domainprep`
 
 ![Screenshot that shows how to run adprep /domainprep.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)
 
-8. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlet:
+8. Ensure that the farm behavior level can successfully be raised with the [Test Farm Behavior Level](/powershell/module/adfs/test-adfsfarmbehaviorlevelraise?view=windowsserver2019-ps&preserve-view=true) command.
+
+```PowerShell
+Test-AdfsFarmBehaviorLevelRaise
+```
+
+9. Now on the Windows Server 2016 Server open PowerShell and run the following cmdlet:
 
 
 > [!NOTE]
@@ -108,19 +114,19 @@ Invoke-AdfsFarmBehaviorLevelRaise
 
 ![Screenshot of a terminal window that shows how to run the Invoke-AdfsFarmBehaviorLevelRaise cmdlet.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)
 
-9. When prompted, type Y. This will begin raising the level. Once this completes you have successfully raised the FBL.
+10. When prompted, type Y. This will begin raising the level. Once this completes you have successfully raised the FBL.
 
 ![Screenshot of a terminal window that shows when to type Y.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)
 
-10. Now, if you go to AD FS Management, you will see the new capabilities have been added for the later AD FS version
+11. Now, if you go to AD FS Management, you will see the new capabilities have been added for the later AD FS version
 
 ![Screenshot that shows the new capabilities that have been added.](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)
 
-11. Likewise, you can use the PowerShell cmdlet:  `Get-AdfsFarmInformation` to show you the current FBL.
+12. Likewise, you can use the PowerShell cmdlet:  `Get-AdfsFarmInformation` to show you the current FBL.
 
 ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)
 
-12. To upgrade the WAP servers to the latest level, on each Web Application Proxy, re-configure the WAP by executing the following PowerShell cmdlet in an elevated window:
+13. To upgrade the WAP servers to the latest level, on each Web Application Proxy, re-configure the WAP by executing the following PowerShell cmdlet in an elevated window:
 
 ```PowerShell
 $trustcred = Get-Credential -Message "Enter Domain Administrator credentials"

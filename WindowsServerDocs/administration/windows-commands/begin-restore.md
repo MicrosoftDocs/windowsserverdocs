@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # begin restore
 
-> Applies To: Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2, Windows Server 2012
 
 Starts a restore session and issues a **PreRestore** event to involved writers.
 

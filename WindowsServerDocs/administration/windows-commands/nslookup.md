@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # nslookup
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information that you can use to diagnose Domain Name System (DNS) infrastructure. Before using this tool, you should be familiar with how DNS works. The nslookup command-line tool is available only if you have installed the TCP/IP protocol.
 
@@ -25,7 +25,7 @@ If you need to look up more than one piece of data, you can use interactive mode
 
 - Exit, by typing **exit**.
 
-- Treat a built-in command as a computer name, by preceding it with the escape character (\). An unrecognized command is interpreted as a computer name.
+- Treat a built-in command as a computer name, by preceding it with the escape character (`\`). An unrecognized command is interpreted as a computer name.
 
 ## Syntax
 

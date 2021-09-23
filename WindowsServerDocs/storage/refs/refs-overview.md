@@ -1,15 +1,15 @@
 ---
 description: "Learn more about: Resilient File System (ReFS) overview"
 title: Resilient File System (ReFS) overview
-ms.author: gawatu
-manager: mchad
+ms.author: anhansen
+manager: femila
 ms.topic: article
-author: gawatu
-ms.date: 06/29/2019
+author: anhansen
+ms.date: 8/31/2021
 ---
 # Resilient File System (ReFS) overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Resilient File System (ReFS) is Microsoft's newest file system, designed to maximize data availability, scale efficiently to large data sets across diverse workloads, and provide data integrity with resiliency to corruption. It seeks to address an expanding set of storage scenarios and establish a foundation for future innovations.
 
@@ -123,7 +123,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | BitLocker encryption | Yes | Yes |
 | Data Deduplication | Yes<sup>1</sup> | Yes |
 | Cluster Shared Volume (CSV) support | Yes<sup>2</sup> <sup>3</sup> | Yes |
-| Soft links | Yes | Yes |
+| Junctions/Soft links | Yes | Yes |
 | Hard links | Yes<sup>4</sup> | Yes |
 | Failover cluster support | Yes | Yes |
 | Access-control lists | Yes | Yes |
@@ -143,7 +143,7 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 1. Available on Windows Server, version 1709 and later, Windows Server 2019 (1809) LTSC or later.
 2. Available on Windows Server 2012 R2 and later.
 3. CSV will not use Direct I/O with Storage Spaces, Storage Spaces Direct (S2D) or SAN.
-4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. Hard-link support is added for **newly formatted volumes** only. Hard link can't be used on volumes that have been upgraded from previous versions.
+4. Version ReFS 3.5 formatted by Windows 10 Enterprise Insider Preview build 19536 and later. [Hard links](/windows/win32/fileio/hard-links-and-junctions) support is added for **newly formatted volumes** only. Hard links can't be used on volumes that have been upgraded from previous versions.
 
 5. Storage Spaces only.
 

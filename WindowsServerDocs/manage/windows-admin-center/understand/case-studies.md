@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Windows Admin Center Case Studies
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 ## Learn about how our customers have used Windows Admin Center to improve their productivity and reduce costs.
 

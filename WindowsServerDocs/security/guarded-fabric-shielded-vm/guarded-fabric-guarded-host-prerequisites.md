@@ -3,14 +3,14 @@ description: "Learn more about: Prerequisites for guarded hosts"
 title: Guarded host prerequisites
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 08/29/2018
 ---
 
 # Prerequisites for guarded hosts
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Review the host prerequisites for the mode of attestation you've chosen, then click the next step to add guarded hosts.
 

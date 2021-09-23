@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Understanding the cache in Storage Spaces Direct
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 [Storage Spaces Direct](storage-spaces-direct-overview.md) features a built-in server-side cache to maximize storage performance. It is a large, persistent, real-time read *and* write cache. The cache is configured automatically when Storage Spaces Direct is enabled. In most cases, no manual management whatsoever is required.
 How the cache works depends on the types of drives present.

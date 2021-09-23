@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # SMB Direct
 
->Applies to: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016 include a feature called SMB Direct, which supports the use of network adapters that have Remote Direct Memory Access (RDMA) capability. Network adapters that have RDMA can function at full speed with very low latency, while using very little CPU. For workloads such as Hyper-V or Microsoft SQL Server, this enables a remote file server to resemble local storage. SMB Direct includes:
 
@@ -28,6 +28,12 @@ With SMB Multichannel, SMB detects whether a network adapter has the RDMA capabi
 >[!NOTE]
 >You should not team RDMA-capable network adapters if you intend to use the RDMA capability of the network adapters. When teamed, the network adapters will not support RDMA.
 >After at least one RDMA network connection is created, the TCP/IP connection used for the original protocol negotiation is no longer used. However, the TCP/IP connection is retained in case the RDMA network connections fail.
+
+## SMB Encryption with SMB Direct
+
+Beginning in Windows Server 2022 and Windows 11, SMB Direct now supports encryption. Previously, enabling SMB encryption disabled direct data placement, making RDMA performance as slow as TCP. Now data is encrypted before placement, leading to relatively minor performance degradation while adding AES-128 and AES-256 protected packet privacy. For more information on configuring SMB encryption, review [SMB security enhancements](smb-security.md).
+
+Furthermore, Windows Server failover clusters now support granular control of encrypting intra-node storage communications for Cluster Shared Volumes (CSV) and the storage bus layer (SBL). This means that when using Storage Spaces Direct and SMB Direct, you can decide to encrypt east-west communications within the cluster itself for higher security.
 
 ## Requirements
 

@@ -10,7 +10,7 @@ ms.date: 12/06/2016
 
 # Remotely manage Hyper-V hosts with Hyper-V Manager
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1
 
 This article lists the supported combinations of Hyper-V hosts and Hyper-V Manager versions and describes how to connect to remote and local Hyper-V hosts so you can manage them.
 

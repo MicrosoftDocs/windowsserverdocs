@@ -382,6 +382,7 @@ The following settings were chosen to not counter or conflict with any setting t
 | Logon | Show first sign-in animation |  | Disabled |
 | Logon | Turn off app notifications on the lock screen |  | Enabled |
 | Logon | Turn  off Windows Startup sound |  | Enabled |
+|Logon|Show clear sign-in background| N/A |Enabled (This policy setting disables the acrylic blur effect on the sign-in page's background image. With this setting enabled, the background image shows without blur.)|
 | Power Management | Select an active power plan | High Performance | Enabled |
 | Recovery | Allow restore of system to default state |  | Disabled |
 | *Storage Health | Allow downloading updates to the Disk Failure Prediction Model |  | Disabled. Updates aren't downloaded for the Disk Failure Prediction Failure Model. |
@@ -749,7 +750,7 @@ Applies to Windows 10. The default is **128**, with a valid range of 1 to 65536.
 
 `HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DormantFileLimit`
 
-Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.
+Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.: Windows Server 2022, Windows Server 2019,
 
 You can configure many of these SMB settings by using the [Set-SmbClientConfiguration](/powershell/module/smbshare/set-smbclientconfiguration) and [Set-SmbServerConfiguration](/powershell/module/smbshare/set-smbserverconfiguration) Windows PowerShell cmdlets. Registry-only settings can be configured by using Windows PowerShell as well, as in the following example:
 

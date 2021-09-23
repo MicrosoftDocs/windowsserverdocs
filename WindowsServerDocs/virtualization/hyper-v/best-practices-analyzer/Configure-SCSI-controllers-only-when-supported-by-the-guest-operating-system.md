@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # Configure SCSI controllers only when supported by the guest operating system
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 

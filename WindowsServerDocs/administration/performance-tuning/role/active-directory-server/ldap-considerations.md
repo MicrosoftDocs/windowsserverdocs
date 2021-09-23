@@ -32,7 +32,7 @@ Indexing attributes is useful when searching for objects that have the attribute
 
 ### Scenarios that benefit in adding indices
 
--   Client load in requesting the data is generating significant CPU usage and the client query behavior cannot be changed or optimized. By significant load, consider that it is showing itself in a Top 10 offender list in Server Performance Advisor or the built-in Active Directory Data Collector Set and is using more than 1% of CPU.
+-   Client load in requesting the data is generating significant CPU usage and the client query behavior cannot be changed or optimized.
 
 -   The client load is generating significant disk I/O on a server due to an unindexed attribute and the client query behavior cannot be changed or optimized.
 
@@ -54,8 +54,6 @@ These scenarios can be detected using one or more of the following approaches:
 -   [Tracking Expensive and Inefficient Searches](/previous-versions/ms808539(v=msdn.10))
 
 -   Active Directory Diagnostics Data Collector Set in Performance Monitor ([Son of SPA: AD Data Collector Sets in Win2008 and beyond](/archive/blogs/askds/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond))
-
--   [Microsoft Server Performance Advisor](../../../server-performance-advisor/microsoft-server-performance-advisor.md) Active Directory Advisor Pack
 
 -   Searches using any filter besides "(objectClass=\*)" that use the Ancestors Index.
 

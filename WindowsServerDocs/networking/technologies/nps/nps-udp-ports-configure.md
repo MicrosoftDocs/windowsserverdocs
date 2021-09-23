@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Configure NPS UDP Port Information
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use the following procedure to configure the ports that Network Policy Server (NPS) uses for Remote Authentication Dial-In User Service \(RADIUS\) authentication and accounting traffic.
 

@@ -6,12 +6,12 @@ ms.assetid: 7afc65f8-3158-49c9-9d48-4dab1c69afba
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 08/20/2020
+ms.date: 07/15/2021
 ms.localizationpriority: medium
 ---
 # Get started with the macOS client
 
->Applies To: Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows Server 2016
 
 You can use the Remote Desktop client for Mac to work with Windows apps, resources, and desktops from your Mac computer. Use the following information to get started - and check out the [FAQ](remote-desktop-client-faq.yml) if you have questions.
 
@@ -42,9 +42,10 @@ To subscribe to a feed:
 
 1. Select **Add feed** on the main page to connect to the service and retrieve your resources.
 2. Enter the feed URL. This can be a URL or email address:
-   - This URL is usually a Azure Virtual Desktop URL. Which one you use depends on which version of Azure Virtual Desktop you're using.
+   - If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
       - For Azure Virtual Desktop (classic), use `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`.
       - For Azure Virtual Desktop, use `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
+      - If you're using Windows 365, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - To use email, enter your email address. This tells the client to search for a URL associated with your email address if your admin configured the server that way.
 3. Select **Subscribe**.
 4. Sign in with your user account when prompted.

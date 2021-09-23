@@ -6,12 +6,12 @@ ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
 author: HeidiLohr
 manager: femila
 ms.author: helohr
-ms.date: 06/25/2021
+ms.date: 07/27/2021
 ms.localizationpriority: medium
 ---
 # Remote Desktop clients
 
->Applies to: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 Microsoft Remote Desktop clients let you use and control a remote PC. With a Remote Desktop client, you can do all the things with a remote PC that you can do with a physical PC, such as:
 
@@ -23,11 +23,11 @@ You can also use a Remote Desktop client to access your remote PC from almost an
 
 | Client | Get the app | Documentation | Latest version |
 |-----------------|-------------|------|---|
-| Windows Desktop | [Windows Desktop client](windowsdesktop.md#install-the-client) | [Get started](windowsdesktop.md), [What's new](windowsdesktop-whatsnew.md) | 1.2.2130  |
+| Windows Desktop | [Windows Desktop client](windowsdesktop.md#install-the-client) | [Get started](windowsdesktop.md), [What's new](windowsdesktop-whatsnew.md) | 1.2.2222  |
 | Microsoft Store   | [Windows 10 client in the Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=616709) | [Get started](windows.md), [What's new](windows-whatsnew.md)  | 1.2.1810  |
-| Android         | [Android client in Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)     | [Get started](remote-desktop-android.md), [What's new](android-whatsnew.md) | 10.0.10 |
-| iOS             | [iOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id714464092)     | [Get started](remote-desktop-ios.md), [What's new](ios-whatsnew.md)         | 10.2.5 |
-| macOS | [macOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Get started](remote-desktop-mac.md), [What's new](mac-whatsnew.md)       | 10.6.5 |
+| Android         | [Android client in Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)     | [Get started](remote-desktop-android.md), [What's new](android-whatsnew.md) | 10.0.11 |
+| iOS             | [iOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id714464092)     | [Get started](remote-desktop-ios.md), [What's new](ios-whatsnew.md)         | 10.3.1 |
+| macOS | [macOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Get started](remote-desktop-mac.md), [What's new](mac-whatsnew.md)       | 10.6.7 |
 
 Before you start using the client of your choice, there are a few things you'll need to do first.
 

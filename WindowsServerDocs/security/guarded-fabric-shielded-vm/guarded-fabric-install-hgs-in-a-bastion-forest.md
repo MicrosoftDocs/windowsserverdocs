@@ -3,14 +3,14 @@ title: Install HGS in an existing bastion forest
 description: "Learn more about: Install HGS in an existing bastion forest"
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 08/29/2018
 ---
 
 # Install HGS in an existing bastion forest
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 ## Join the HGS server to the root domain

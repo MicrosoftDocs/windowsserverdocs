@@ -4,14 +4,14 @@ title: Compatible hardware with Windows Server Virtualization-based protection o
 ms.topic: article
 ms.assetid: 15ded82c-f70f-4efb-9e26-2731127931af
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 08/29/2018
 ---
 
 # Compatible hardware with Windows Server Virtualization-based protection of Code Integrity
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Windows Server 2016 introduced a new Virtualization-based code protection to help protect physical and virtual machines from attacks that modify system code.
 To achieve this high protection level, Microsoft works in tandem with the computer hardware manufactures (Original Equipment Manufacturers, or OEMs) to prevent malicious writes into system execution code.
