@@ -129,19 +129,19 @@ sections:
           The value of the `sub` claim is the hash of the client ID and the anchor claim value.
 
       - question: |
-          What is the lifetime of the refresh token/access token when the user logs in via a remote claims provider trust over WS-Fed/SAML-P?
+          What are the lifetimes of the refresh token and the access token when the user logs in via a remote claims provider trust over WS-Fed/SAML-P?
         answer: |
-          The lifetime of refresh token will be the lifetime of the token that ADFS got from remote claims provider trust. The lifetime of the access token will be the token lifetime of the relying party for which access token is being issued.
+          The lifetime of refresh token will be the lifetime of the token that AD FS got from the remote claims provider trust. The lifetime of the access token will be the token lifetime of the relying party for which the access token is being issued.
 
       - question: |
-          I need to return profile and email scopes as well in addition to the OpenId scope. Can I obtain additional information using scopes? How to do it in AD FS?
+          I need to return profile and email scopes in addition to the OpenId scope. Can I obtain more information by using scopes? How to do it in AD FS?
         answer: |
-          You can use customized id_token to add relevant information in the id_token itself. For more information, see the article [Customize claims to be emitted in id_token](../development/Custom-Id-Tokens-in-AD-FS.md).
+          You can use a customized id_token to add relevant information in the id_token itself. For more information, see [Customize claims to be emitted in id_token](../development/Custom-Id-Tokens-in-AD-FS.md).
           
       - question: |
-          How to issue json blobs inside JWT tokens?
+          How do I issue JSON blobs in JWT tokens?
         answer: |
-          A special ValueType("<http://www.w3.org/2001/XMLSchema#json>") and escape character(\x22) for this was added in AD FS 2016. Please use the sample below for the issuance rule and also the final output from the access token.
+          A special ValueType (http://www.w3.org/2001/XMLSchema#json) and escape character (\x22) was added for this scenario in AD FS 2016. Use the following samples for the issuance rule and for the final output from the access token.
           
           Sample issuance rule:
           
@@ -149,16 +149,16 @@ sections:
           => issue(Type = "array_in_json", ValueType = "http://www.w3.org/2001/XMLSchema#json", Value = "{\x22Items\x22:[{\x22Name\x22:\x22Apple\x22,\x22Price\x22:12.3},{\x22Name\x22:\x22Grape\x22,\x22Price\x22:3.21}],\x22Date\x22:\x2221/11/2010\x22}");
           ```
           
-          Claim issued in Access token:
+          Claim issued in access token:
           
           ```
           "array_in_json":{"Items":[{"Name":"Apple","Price":12.3},{"Name":"Grape","Price":3.21}],"Date":"21/11/2010"}
           ```
           
       - question: |
-          Can I pass resource value as part of the scope value like how requests are done against Azure AD?
+          Can I pass a resource value as part of the scope value, in the same way that requests are made against Azure AD?
         answer: |
-          With AD FS on Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. For example, **< create a valid sample request>**
+          With AD FS on Windows Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can now be organized as a space separated list where each entry is structure as resource/scope. For example, **< create a valid sample request>**
           
       - question: |
           Does AD FS support PKCE extension?
