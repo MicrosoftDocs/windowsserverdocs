@@ -49,80 +49,84 @@ sections:
         answer: |
           Yes, but as a side effect:
           
-          - You'll need to manually manage updates of token signing certificates because Azure AD won't be able to access the federation metadata. For more information on manually updating token signing certificate read [Renew federation certificates for Office 365 and Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect-o365-certs)
-          - You will not be able to leverage legacy auth flows (e.g. ExO proxy auth flow)
+          - You'll need to manually manage updates of token signing certificates because Azure AD won't be able to access the federation metadata. For more information on manually updating token signing certificates, see [Renew federation certificates for Office 365 and Azure Active Directory](/azure/active-directory/connect/active-directory-aadconnect-o365-certs).
+          - You won't be able to use legacy auth flows (for example, the ExO proxy auth flow).
           
       - question: |
-          What are load balancing requirements for AD FS and WAP servers?
+          What are load balancing requirements for AD FS and Web Application Proxy servers?
         answer: |
-          AD FS is a stateless system. Hence, load balancing is fairly simple for logins. The following are key recommendations for load balancing systems.
+          AD FS is a stateless system, so load balancing is fairly simple for sign-ins. Here are some key recommendations for load balancing systems:
           
           
-          - Load balancers SHOULD not be configured with IP affinity. This may put undue load on a subset of your servers in certain Exchange Online scenarios.
-          - Load balancers MUST not terminate the HTTPS connections and reinitiate a new connection to the ADFS server.
-          - Load balancers SHOULD ensure that the connecting IP address should be translated as the source IP in the HTTP packet when being sent to ADFS. In the event that a load balancer cannot send the source IP in the HTTP packet, the load balancer MUST add (or append in case of existing) the IP address to the x-forwarded-for header. This is required for the correct handling of certain IP-related features (Banned IP, Extranet Smart Lockout,…) and could lead to reduced security if improperly configured.
-          - Load balancers SHOULD support SNI. In the event it does not, ensure that AD FS is configured to create HTTPS bindings to handle non-SNI capable clients.
-          - Load balancers SHOULD use the AD FS HTTP health probe endpoint to detect if the AD FS or WAP servers are up and running and exclude them if a 200 OK Is not returned.
+          - Load balancers shouldn't be configured with IP affinity. IP affinity might put undue load on a subset of your servers in certain Exchange Online scenarios.
+          - Load balancers must not terminate the HTTPS connections and initiate a new connection to the AD FS server.
+          - Load balancers should ensure that the connecting IP address should be translated as the source IP in the HTTP packet when it's being sent to AD FS. If a load balancer can't send the source IP in the HTTP packet, the load balancer must add the IP address to the X-Forwarded-For header. This step is required for the correct handling of certain IP-related features (like Banned IP, Extranet Smart Lockout). If this configuration isn't implemented correctly, security could be reduced.
+          - Load balancers should support SNI. If they don't, be sure AD FS is configured to create HTTPS bindings to handle clients that don't support SNI.
+          - Load balancers should use the AD FS HTTP health probe endpoint to detect whether the AD FS or Web Application Proxy servers are running and exclude them if a 200 OK isn't returned.
           
       - question: |
-          What multi-forest configurations are supported by AD FS?
+          What multiforest configurations are supported by AD FS?
         answer: |
-          AD FS supports multiple multi-forest configurations and relies on the underlying AD DS trust network to authenticate users across multiple trusted realms. We strongly  recommend 2-way forests trusts as this is a simpler setup to ensure that the trust subsystem works correctly without issues. Additionally,
+          AD FS supports multiple multiforest configurations. It relies on the underlying AD DS trust network to authenticate users across multiple trusted realms. We strongly recommend 2-way forest trusts because they're easier to set up, which helps ensure the trust system works correctly. 
           
-          - In the event of a one-way forest trust such as a DMZ forest containing partner identities, we recommend deploying ADFS in the corp forest and treating the DMZ forest as another local claims provider trust connected via LDAP. In this case Windows Integrated auth will not work for the DMZ forest users and they will be required to perform Password auth as that is the only supported mechanism for LDAP. In the event you cannot pursue this option, you would need to set up another ADFS in the DMZ forest and add that as Claims Provider Trust in the ADFS in the corp forest. Users will need to do Home realm discovery but both Windows Integrated auth and Password auth will work. Please make appropriate changes in the issuance rules in ADFS in DMZ forest as ADFS in the corp forest will not be able to get extra user information about the user from the DMZ forest.
-          - While domain level trusts are supported and can work, we highly recommend you moving to a forest level trust model. Additionally, you would need to ensure that UPN routing and NETBIOS name resolution of names need to work accurately.
+          Additionally:
+          
+          - If you have a one-way forest trust, like a perimeter network (also known as DMZ) forest that contains partner identities, we recommend that you deploy AD FS in the corporate forest. Treat the perimeter network forest as another local claims provider trust connected via LDAP. In this case, Integrated Windows authentication won't work for the perimeter network forest users. They'll need to use password authentication because it's the only supported mechanism for LDAP. 
+          
+          If can't use this option, you need to set up another AD FS server in the perimeter network forest. Add it as a claims provider trust in the AD FS server in the corporate forest. Users will need to do Home Realm Discovery, but both Integrated Windows authentication and password authentication will work. Make appropriate changes in the issuance rules in AD FS in the perimeter network forest because AD FS in the corporate forest won't be able to get more information about users from the perimeter network forest.
+          - Domain-level trusts are supported and can work, but we strongly recommend that you move to a forest-level trust model. You'd also need to ensure UPN routing and NetBIOS name resolution works correctly.
           
           >[!NOTE]
-          >If elective authentication is used with a two-way trust configuration, ensure the caller user is granted the "allow to authenticate" permission on the target service account.
+          >If you use elective authentication with a two-way trust configuration, be sure the caller user is granted the Allowed to Authenticate permission on the target service account.
           
       - question: |
           Does AD FS Extranet Smart Lockout support IPv6?
         answer: |
-          Yes, IPv6 addresses are considered for familiar/unknown locations.
+          Yes, IPv6 addresses are considered for familiar and unknown locations.
           
           
   - name: Design
     questions:
       - question: |
-          What third-party multi-factor authentication providers are available for AD FS?
+          What third-party multifactor authentication providers are available for AD FS?
         answer: |
-          AD FS provides an extensible mechanism for third party MFA providers to integrate. There is no set certification program for this. It is assumed that the vendor has performed the necessary validations prior to release.
+          AD FS provides an extensible mechanism for third-party multifactor authentication providers to integrate. There's no set certification program for this. It's assumed that the vendor has performed the necessary validations before release.
           
-          The list of vendors that have notified Microsoft are published at [MFA providers for AD FS](../operations/Configure-Additional-Authentication-Methods-for-AD-FS.md).  There may always be providers available that we do not know about and we will update the list as we learn about them.
+          The list of vendors that have notified Microsoft is available here: [Multifactor authentication providers for AD FS](../operations/Configure-Additional-Authentication-Methods-for-AD-FS.md). There might be providers available that we don't know about. We'll update the list as we discover new ones.
           
       - question: |
           Are third-party proxies supported with AD FS?
         answer: |
           Yes, third-party proxies can be placed in front of AD FS, but any third-party proxy must support the [MS-ADFSPIP protocol](/openspecs/windows_protocols/ms-adfspip/76deccb1-1429-4c80-8349-d38e61da5cbb) to be used in place of the Web Application Proxy.
           
-          Below is a list of third-party providers we are aware of.  There may always be providers available that we do not know about and we will update the list as we learn about them.
+          We're currently aware of the following third-party providers. There might be providers available that we don't know about. We'll update this list as we discover new ones.
           
           - [F5 Access Policy Manager](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-third-party-integration-13-1-0/12.html#guid-1ee8fbb3-1b33-4982-8bb3-05ae6868d9ee)
           - [Citrix Application Delivery Controller (ADC)](https://docs.citrix.com/en-us/citrix-adc/current-release/aaa-tm/adfs-proxy-wsfed.html)
           
           
       - question: |
-          Where is the capacity planning sizing spreadsheet for AD FS 2016?
+          Where's the capacity-planning sizing spreadsheet for AD FS 2016?
         answer: |
-          The AD FS 2016 version of the spreadsheet can be downloaded [here](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx).
-          This can also be used for AD FS in Windows Server 2012 R2.
+          You can [download the AD FS 2016 version of the spreadsheet](https://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx).
+          You can also use this spreadsheet for AD FS in Windows Server 2012 R2.
           
       - question: |
-          How can I ensure my AD FS and WAP servers support Apple's ATP requirements?
+          How can I ensure my AD FS and Web Application Proxy servers support Apple's ATP requirements?
         answer: |
-          Apple has released a set of requirements called App Transport Security (ATS) that may impact calls from iOS apps that authenticate to AD FS.  You can ensure your AD FS and WAP servers comply by making sure they support the [requirements for connecting using ATS](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).
-          In particular, you should verify that your AD FS and WAP servers support TLS 1.2 and that the TLS connection's negotiated cipher suite will support perfect forward secrecy.
+          Apple has released a set of requirements called App Transport Security (ATS) that might affect calls from iOS apps that authenticate to AD FS. You can ensure your AD FS and Web Application Proxy servers comply by making sure they support the [requirements for connecting by using ATS](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).
+          In particular, you should verify that your AD FS and Web Application Proxy servers support TLS 1.2 and that the TLS connection's negotiated cipher suite will support perfect forward secrecy.
           
-          You can enable and disable SSL 2.0 and 3.0 and TLS versions 1.0, 1.1, and 1.2 using [Manage SSL Protocols in AD FS](../operations/Manage-SSL-Protocols-in-AD-FS.md).
+          For information about enabling and disabling SSL 2.0 and 3.0 and TLS 1.0, 1.1, and 1.2, see [Manage SSL Protocols in AD FS](../operations/Manage-SSL-Protocols-in-AD-FS.md).
           
-          To ensure your AD FS and WAP servers negotiate only TLS cipher suites that support ATP, you can disable all cipher suites that are not in the [list of ATP compliant cipher suites](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).  To do this, use the [Windows TLS PowerShell cmdlets](/powershell/module/tls/).
+          To ensure your AD FS and Web Application Proxy servers negotiate only TLS cipher suites that support ATP, you can disable all cipher suites that aren't in the [list of ATP compliant cipher suites](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW57).  To disable them, use the [Windows TLS PowerShell cmdlets](/powershell/module/tls/).
           
   - name: Developer
     questions:
       - question: |
-          When generating an id_token with ADFS for a user authenticated against AD, how is the "sub" claim generated in the id_token?
+          When AD FS generates an id_token for a user authenticated against Active Directory, how is the `sub` claim generated in the id_token?
         answer: |
-          The value of "sub" claim is the hash of client ID + anchor claim value.
+          The value of the `sub` claim is the hash of client ID + anchor claim value.
 
       - question: |
           What is the lifetime of the refresh token/access token when the user logs in via a remote claims provider trust over WS-Fed/SAML-P?
