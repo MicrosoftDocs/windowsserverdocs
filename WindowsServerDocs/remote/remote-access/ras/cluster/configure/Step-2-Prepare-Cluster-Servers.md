@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Step 2 Prepare Cluster Servers
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Before you can configure a cluster deployment, you prepare additional servers to add to the cluster.
 

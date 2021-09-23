@@ -3,15 +3,15 @@ title: Troubleshooting the Host Guardian Service
 ms.topic: article
 ms.assetid: 424b8090-0692-49a6-9dc4-3c0e77d74b80
 manager: dongill
-author: rpsqrd
+author: IngridAtMicrosoft
 description: Resolutions to common problems encountered when deploying or operating a Host Guardian Service (HGS) server in a guarded fabric.
-ms.author: ryanpu
+ms.author: inhenkel
 ms.date: 10/12/2020
 ---
 
 # Troubleshooting the Host Guardian Service
 
-> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article describes resolutions to common problems encountered when deploying or operating a Host Guardian Service (HGS) server in a guarded fabric.
 If you are unsure of the nature of your problem, first try running the [guarded fabric diagnostics](guarded-fabric-troubleshoot-diagnostics.md) on your HGS servers and Hyper-V hosts to narrow down the potential causes.
@@ -204,7 +204,7 @@ A required privilege is not held by the client
 ```
 Additionally, you may notice that none of the Key Protection Service cmdlets (e.g. [Get-HgsKeyProtectionCertificate](/powershell/module/hgskeyprotection/get-hgskeyprotectioncertificate)) work and instead return errors.
 
-To resolve this issue, you need to grant gMSA the “Generate security audits” (SeAuditPrivilege). To do that, you may use either Local security policy `SecPol.msc` on every node of the HGS cluster, or Group Policy. Alternatively, you could use [SecEdit.exe](/windows-server/administration/windows-commands/secedit) tool to export the current Security policy, make the necessary edits in the configuration file (which is a plain text) and then import it back.
+To resolve this issue, you need to grant gMSA the “Generate security audits” (SeAuditPrivilege). To do that, you may use either Local security policy `SecPol.msc` on every node of the HGS cluster, or Group Policy. Alternatively, you could use [SecEdit.exe](../../administration/windows-commands/secedit.md) tool to export the current Security policy, make the necessary edits in the configuration file (which is a plain text) and then import it back.
 
 > [!NOTE]
 > When configuring this setting, the list of security principles defined for a privilege fully overrides the defaults (it does not concatenate). Hence, when defining this policy setting, be sure to include both default holders of this privilege (Network service and Local service) in addition to the gMSA that you are adding.

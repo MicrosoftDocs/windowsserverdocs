@@ -9,6 +9,8 @@ ms.localizationpriority: low
 ---
 # Use Windows Admin Center to manage operating system updates with Azure Update Management
 
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+
 [Learn more about Azure integration with Windows Admin Center.](./index.md)
 
 Azure Update Management is a solution in Azure Automation that allows you to manage updates and patches for multiple machines from a single place, rather than on a per-server basis. With Azure Update Management, you can quickly assess the status of available updates, schedule installation of required updates, and review deployment results to verify updates that apply successfully. This is possible whether your machines are Azure virtual machines (VMs), hosted by other cloud providers, or on premises. [Learn more about Azure Update Management](/azure/automation/update-management/overview).

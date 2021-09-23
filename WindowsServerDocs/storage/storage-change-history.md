@@ -10,7 +10,7 @@ description: New and updated topics in the on-premises storage documentation for
 ---
 # Change history for storage topics in Windows Server
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic lists new and updated topics in the [Storage](storage.yml) documentation for Windows Server.
 
@@ -20,7 +20,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 | New or changed topic | Description |
 | --- | --- |
-|[Understand and deploy persistent memory](storage-spaces/deploy-pmem.md) | Added known hardware issue. |
+|[Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory) | Added known hardware issue. |
 
 ## December 2019
 
@@ -57,7 +57,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |New or changed topic                                        |Description|
 |---                                                         |---           |
 | [Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md) | New |
-| [Understand and deploy persistent memory](storage-spaces/deploy-pmem.md) | New |
+| [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory) | New |
 | [Upgrade a Storage Spaces Direct cluster to Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| New        |
 | [DFS Replication](dfs-replication/dfsr-overview.md)        | Migrated from the [Previous Versions](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770278(v%3dws.11)) library|
 
@@ -115,7 +115,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |New or changed topic|Description|
 |---|---|
 |[Server-to-server storage replication](storage-replica/server-to-server-storage-replication.md)|Added info on using Azure VMs, including ExpressRoute.|
-|[Cluster sets](storage-spaces/cluster-sets.md)| New topic|
+|[Cluster sets](/azure-stack/hci/deploy/cluster-set)| New topic|
 
 ## May 2018
 

@@ -11,7 +11,7 @@ ms.date: 05/18/2018
 
 # Remote Access
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 The Remote Access guide provides you with an overview of the Remote Access server role in Windows Server 2016, and covers the following subjects:
 
@@ -19,7 +19,7 @@ The Remote Access guide provides you with an overview of the Remote Access serve
 - [Border Gateway Protocol &#40;BGP&#41;](bgp/Border-Gateway-Protocol-BGP.md)
 - [RAS Gateway](ras-gateway/RAS-Gateway.md)
 - [Remote Access Server Role Documentation](ras/Remote-Access-Server-Role-Documentation.md)
-- [RAS Gateway for SDN](../../networking/sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
+- [RAS Gateway for SDN](/azure-stack/hci/concepts/gateway-overview)
 - [Virtual Private Networking (VPN)](vpn/vpn-top.md)
 
 For more information about other networking technologies, see [Networking in Windows Server 2016](../../networking/index.yml).

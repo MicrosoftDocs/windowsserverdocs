@@ -11,7 +11,7 @@ ms.date: 08/06/2018
 
 # manage-bde protectors
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Manages the protection methods used for the BitLocker encryption key.
 

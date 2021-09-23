@@ -10,7 +10,7 @@ ms.date: 01/05/2021
 ---
 # DNS Responses Based on Time of Day with an Azure Cloud App Server
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to distribute application traffic across different geographically distributed instances of an application by using DNS policies that are based on the time of day.
 

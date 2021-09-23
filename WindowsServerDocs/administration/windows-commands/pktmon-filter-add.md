@@ -4,21 +4,21 @@ description: Reference article for the pktmon filter add command.
 ms.topic: reference
 author: khdownie
 ms.author: v-kedow
-ms.date: 1/14/2021
+ms.date: 06/24/2021
 ---
 
 # pktmon filter add
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
 
-Pktmon filter add allows you to add a filter to control which packets are reported. For a packet to be reported, it must match all conditions specified in at least one filter. Up to eight filters can be active at once.
+Pktmon filter add allows you to add a filter to control which packets are reported. For a packet to be reported, it must match all conditions specified in at least one filter. Up to 32 filters can be active at once.
 
 ## Syntax
 
 ```
-pktmon filter add <name> [-m mac [mac2]] [-v vlan] [-d { IPv4 | IPv6 | number }]
+pktmon filter add <name> [-m <mac> [mac2]] [-v <vlan>] [-d { IPv4 | IPv6 | number }]
                          [-t { TCP [flags...] | UDP | ICMP | ICMPv6 | number }]
-                         [-i ip [ip2]] [-p port [port2]] [-e [port]]
+                         [-i <ip> [ip2]] [-p <port> [port2]] [-b] [-e [port]]
 ```
 
 You may provide an optional name or description of the filter.
@@ -28,6 +28,8 @@ You may provide an optional name or description of the filter.
 
 ### Parameters
 
+You can supply parameters for Ethernet frame, IP header, TCP/UDP header, cluster heartbeat, and encapsulation.
+
 | **Parameter** | **Description** |
 | ------------- | --------------- |
 | **-m, --mac[-address]** | Match source or destination MAC address. See note above. |
@@ -36,7 +38,8 @@ You may provide an optional name or description of the filter.
 | **-t, --transport[-protocol], --ip-protocol** | Match by transport (layer 4) protocol. Can be TCP, UDP, ICMP, ICMPv6, or a protocol number. To further filter TCP packets, an optional list of TCP flags to match can be provided. Supported flags are FIN, SYN, RST, PSH, ACK, URG, ECE, and CWR. |
 | **-i, --ip[-address]** | Match source or destination IP address. See note above. To match by subnet, use CIDR notation with the prefix length. |
 | **-p, --port** | Match source or destination port number. See note above. |
-| **-e, --encap** | This filter also applies to encapsulated inner packets, in addition to the outer packet. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP. Custom VXLAN port is optional, and defaults to 4789. |
+| **-b, --heartbeat** | Match RCP heartbeat messages over UDP port 3343. |
+| **-e, --encap** | Apply above filtering parameters to both inner and outer encapsulation headers. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP. Custom VXLAN port is optional, and defaults to 4789. |
 
 ## Examples
 
@@ -74,13 +77,14 @@ C:\Test> pktmon filter add MySubnet -i 10.10.10.0/24
 ## Other references
 
 - [Pktmon](pktmon.md)
-- [Pktmon comp](pktmon-comp.md)
 - [Pktmon counters](pktmon-counters.md)
+- [Pktmon etl2pcap](pktmon-etl2pcap.md)
+- [Pktmon etl2txt](pktmon-etl2txt.md)
 - [Pktmon filter](pktmon-filter.md)
-- [Pktmon format](pktmon-format.md)
+- [Pktmon hex2pkt](pktmon-hex2pkt.md)
 - [Pktmon list](pktmon-list.md)
-- [Pktmon pcapng](pktmon-pcapng.md)
 - [Pktmon reset](pktmon-reset.md)
 - [Pktmon start](pktmon-start.md)
+- [Pktmon status](pktmon-status.md)
 - [Pktmon unload](pktmon-unload.md)
-- [Packet Monitor overview](/windows-server/networking/technologies/pktmon/pktmon)
+- [Packet Monitor overview](../../networking/technologies/pktmon/pktmon.md)

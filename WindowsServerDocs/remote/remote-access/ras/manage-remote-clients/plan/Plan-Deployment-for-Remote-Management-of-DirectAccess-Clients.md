@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Plan Deployment for Remote Management of DirectAccess Clients
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The following topics provide planning steps for deploying a single Remote Access server running that can be used for remote management of DirectAccess clients.
 

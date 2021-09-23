@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # merge vdisk
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Merges a differencing virtual hard disk (VHD) with its corresponding parent VHD. The parent VHD will be modified to include the modifications from the differencing VHD. This command modifies the parent VHD. As a result, other differencing VHDs that are dependent on the parent will no longer be valid.
 

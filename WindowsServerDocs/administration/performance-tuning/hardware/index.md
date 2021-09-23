@@ -100,6 +100,5 @@ In Windows Server 2022, Numa I/O enables PCIe storage adapters to dynamically r
 
 ## See Also
 - [Server Hardware Power Considerations](power.md)
-- [Power and Performance Tuning](power/power-performance-tuning.md)
-- [Processor Power Management Tuning](power/processor-power-management-tuning.md)
-- [Recommended Balanced Plan Parameters](power/recommended-balanced-plan-parameters.md)
+- [Overview about power and performance tuning for the Windows Server](power/power-performance-tuning.md)
+- [Processor Power Management (PPM) tuning for the Windows Server balanced power plan](power/processor-power-management-tuning.md)

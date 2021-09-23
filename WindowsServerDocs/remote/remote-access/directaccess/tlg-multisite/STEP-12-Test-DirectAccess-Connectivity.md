@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # STEP 12 Test DirectAccess Connectivity
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Before you can test connectivity from the client computers when they are located on the Internet or Homenet networks, you must make sure they have the correct group policy settings.
 

@@ -10,7 +10,7 @@ ms.date: 05/28/2021
 ---
 # How Cluster-Aware Updating plug-ins work
 
-> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 [Cluster-Aware Updating](cluster-aware-updating.md) (CAU) uses plug-ins to coordinate the installation of updates across nodes in a failover cluster. This topic provides information about using the built\-in CAU plug\-ins or other plug\-ins that you install for CAU.
 
@@ -133,7 +133,7 @@ To configure a **QueryString** argument that installs only drivers:
 
 **QueryString\="IsInstalled\=0 and Type\='Driver' and IsHidden\=0"**
 
-For more information about query strings for the default plug\-in, **Microsoft.WindowsUpdatePlugin**, the search criteria \(such as **IsInstalled**\), and the syntax that you can include in the query strings, see the section about search criteria in the [Windows Update Agent (WUA) API Reference](https://go.microsoft.com/fwlink/p/?LinkId=223304).
+For more information about query strings for the default plug\-in, **Microsoft.WindowsUpdatePlugin**, the search criteria \(such as **IsInstalled**\), and the syntax that you can include in the query strings, see the section about search criteria in the [Windows Update Agent (WUA) API Reference](/windows/win32/api/wuapi/nf-wuapi-iupdatesearcher-search).
 
 ## <a name="BKMK_HFP"></a>Use the Microsoft.HotfixPlugin
 The plug\-in **Microsoft.HotfixPlugin** can be used to apply Microsoft limited distribution release \(LDR\) updates \(also called hotfixes, and formerly called QFEs\) that you download independently to address specific Microsoft software issues. The plug-in installs updates from a root folder on an SMB file share and can also be customized to apply non\-Microsoft driver, firmware, and BIOS updates.

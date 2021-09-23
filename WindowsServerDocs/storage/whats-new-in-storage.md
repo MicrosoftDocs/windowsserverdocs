@@ -10,7 +10,7 @@ ms.date: 05/29/2019
 ---
 # What's new in Storage in Windows Server
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic explains the new and changed functionality in storage in Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
 
@@ -88,7 +88,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Scale up to 4 PB per cluster**
 
-    Achieve multi-petabyte scale – great for media, backup, and archival use cases. In Windows Server 2019, Storage Spaces Direct supports up to 4 petabytes (PB) = 4,000 terabytes of raw capacity per storage pool. Related capacity guidelines are increased as well: for example, you can create twice as many volumes (64 instead of 32), each twice as large as before (64 TB instead of 32 TB). Stitch multiple clusters together into a [cluster set](storage-spaces/cluster-sets.md) for even greater scale within one storage namespace. For more info, see the [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
+    Achieve multi-petabyte scale – great for media, backup, and archival use cases. In Windows Server 2019, Storage Spaces Direct supports up to 4 petabytes (PB) = 4,000 terabytes of raw capacity per storage pool. Related capacity guidelines are increased as well: for example, you can create twice as many volumes (64 instead of 32), each twice as large as before (64 TB instead of 32 TB). Stitch multiple clusters together into a [cluster set](/azure-stack/hci/deploy/cluster-set) for even greater scale within one storage namespace. For more info, see the [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
 
 - **Mirror-accelerated parity is 2X faster**
 
@@ -159,7 +159,7 @@ Windows Server, version 1803 includes the ability to prevent the File Server Res
 
 Windows Server, version 1709 is the first Windows Server release in the Semi-Annual Channel. The Semi-Annual Channel is a Software Assurance benefit and is fully supported in production for 18 months, with a new version every six months.
 
-For more information, see [Windows Server Semi-annual Channel Overview](../get-started-19/servicing-channels-19.md).
+For more information, see [Windows Server Semi-annual Channel Overview](../get-started/servicing-channels-comparison.md).
 
 ### Storage Replica
 

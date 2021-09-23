@@ -11,13 +11,13 @@ ms.localizationpriority: medium
 ---
 # Remote Desktop Services - planning poster
 
-## Windows Virtual Desktop
+## Azure Virtual Desktop
 
-You may have heard us talk about a new "modern infrastructure" for Remote Desktop. Maybe you've heard us use the phrase "RDmi." The phrase you need to know is "Windows Virtual Desktop." Learn more at our [Windows Virtual Desktop documentation page](/azure/virtual-desktop/).
+You may have heard us talk about a new "modern infrastructure" for Remote Desktop. Maybe you've heard us use the phrase "RDmi." The phrase you need to know is "Azure Virtual Desktop." Learn more at our [Azure Virtual Desktop documentation page](/azure/virtual-desktop/).
 
-The Remote Desktop Services team have created a poster to help you plan, build, and run your Windows Virtual Desktop environment.
+The Remote Desktop Services team have created a poster to help you plan, build, and run your Azure Virtual Desktop environment.
 
-![Windows Virtual Desktop poster](./media/wvd-poster-download.png)
+![Azure Virtual Desktop poster](./media/wvd-poster-download.png)
 
 You can get a copy of the poster by right-clicking the image and saving it to your local system.
 

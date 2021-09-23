@@ -9,7 +9,7 @@ manager: femila
 ---
 # Virtual machine sizing guidelines
 
-Whether you're running your virtual machine on Remote Desktop Services or Windows Virtual Desktop, different types of workloads require different session host virtual machine (VM) configurations. For the best possible experience, scale your deployment depending on your users' needs.
+Whether you're running your virtual machine on Remote Desktop Services or Azure Virtual Desktop, different types of workloads require different session host virtual machine (VM) configurations. For the best possible experience, scale your deployment depending on your users' needs.
 
 ## Multi-session recommendations
 
@@ -20,8 +20,8 @@ The following table shows an example of a smaller, proof-of-concept scenario wit
 | Workload type | Maximum users per vCPU | vCPU/RAM/OS storage minimum | Example Azure instances | Profile container storage minimum |
 | --- | --- | --- | --- | --- |
 | Light | 4 | 4 vCPUs, 16 GB RAM, 32 GB storage | D4s_v4, F4s_v2, D4as_v4 | 30 GB |
-| Medium | 4 | 4 vCPUs, 16 GB RAM, 32 GB storage | D4s_v4, F4s_v2, D4as_v4 | 30 GB |
-| Heavy | 2 | 4 vCPUs, 16 GB RAM, 32 GB storage | D8s_v4, F8s_v2, D8as_v4, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
+| Medium | 2 | 4 vCPUs, 16 GB RAM, 32 GB storage | D4s_v4, F4s_v2, D4as_v4 | 30 GB |
+| Heavy | 2 | 8 vCPUs, 32 GB RAM, 64 GB storage | D8s_v4, F8s_v2, D8as_v4, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
 | Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D4s_v4, F4s_v2, D4as_v4, NV12, NVv4 | 30 GB |
 
 This table shows examples of standard or larger user workloads with 20 or more users:

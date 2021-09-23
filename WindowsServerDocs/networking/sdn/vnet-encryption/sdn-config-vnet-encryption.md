@@ -6,11 +6,11 @@ ms.topic: how-to
 ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/08/2018
+ms.date: 06/25/2021
 ---
 # Configure Encryption for a Virtual Subnet
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Virtual network encryption allows for encryption of virtual network traffic between VMs that communicate with each other within subnets marked as ‘Encryption Enabled.' It also utilizes Datagram Transport Layer Security (DTLS) on the virtual subnet to encrypt packets. DTLS protects against eavesdropping, tampering, and forgery by anyone with access to the physical network.
 
@@ -25,7 +25,7 @@ Once you enable encryption on a subnet, all network traffic within that subnet i
 >When communicating with another VM on the same subnet, whether its currently connected or connected at a later time, the traffic gets encrypted automatically.
 
 >[!TIP]
->If you must restrict applications to only communicate on the encrypted subnet, you can use Access Control Lists (ACLs) only to allow communication within the current subnet. For more information, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](../manage/use-acls-for-traffic-flow.md).
+>If you must restrict applications to only communicate on the encrypted subnet, you can use Access Control Lists (ACLs) only to allow communication within the current subnet. For more information, see [Use Access Control Lists (ACLs) to Manage Datacenter Network Traffic Flow](/azure-stack/hci/manage/use-datacenter-firewall-powershell).
 
 
 ## Step 1. Create the Encryption Certificate

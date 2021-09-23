@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Sync your file server with the cloud by using Azure File Sync
 
->Applies to: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Use Azure File Sync to centralize your organization's file shares in Azure, while keeping the flexibility, performance, and compatibility of an on-premises file server. Azure File Sync transforms Windows Server into a quick cache of your Azure file share with the optional cloud tiering feature. You can use any protocol that's available on Windows Server to access your data locally, including SMB, NFS, and FTPS.
 

@@ -10,7 +10,7 @@ ms.assetid: a2fef55d-747b-4e20-8f21-5f8807e7ef87
 
 # Troubleshooting Web Application Proxy
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](/azure/active-directory/manage-apps/application-proxy).**
 

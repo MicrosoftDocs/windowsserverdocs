@@ -35,7 +35,7 @@ certutil [options] [-dump] file
 
 ### -asn
 
-Parse the ASN.1 file.
+Parse and display the contents of a file using Abstract Syntax Notation (ASN.1) syntax. File types include .CER, .DER and PKCS #7 formatted files.
 
 ```
 certutil [options] -asn file [type]

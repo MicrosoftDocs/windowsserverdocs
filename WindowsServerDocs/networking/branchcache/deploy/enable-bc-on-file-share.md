@@ -10,7 +10,7 @@ ms.date: 01/05/2021
 ---
 # Enable BranchCache on a File Share (Optional)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to enable BranchCache on a file share.
 

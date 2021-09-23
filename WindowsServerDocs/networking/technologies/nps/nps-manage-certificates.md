@@ -11,7 +11,7 @@ ms.date: 08/07/2020
 
 # Manage Certificates Used with NPS
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 If you deploy a certificate-based authentication method, such as Extensible Authentication Protocol\-Transport Layer Security \(EAP\-TLS\), Protected Extensible Authentication Protocol\-Transport Layer Security \(PEAP\-TLS\), and PEAP\-Microsoft Challenge Handshake Authentication Protocol version 2 \(MS\-CHAP v2\), you must enroll a server certificate to all of your NPSs. The server certificate must:
 

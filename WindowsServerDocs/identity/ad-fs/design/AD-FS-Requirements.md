@@ -207,7 +207,7 @@ For information on configuring corporate DNS for the federation service and Devi
 
 For information on configuring corporate DNS for Web Application proxies, see the "Configure DNS" section in [Step 1: Configure the Web Application Proxy Infrastructure](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383644(v=ws.11)).
 
-For information about how to configure a cluster IP address or cluster FQDN using NLB, see Specifying the Cluster Parameters at [http://go.microsoft.com/fwlink/?LinkId=75282](https://go.microsoft.com/fwlink/?LinkId=75282).
+For information about how to configure a cluster IP address or cluster FQDN using NLB, see Specifying the Cluster Parameters at [http://go.microsoft.com/fwlink/?LinkId=75282](/previous-versions/windows/it-pro/windows-server-2003/cc781505(v=ws.10)).
 
 ## <a name="BKMK_8"></a>Attribute store requirements
 AD FS requires at least one attribute store to be used for authenticating users and extracting security claims for those users. For a list of attribute stores that AD FS supports, see [The Role of Attribute Stores](../../ad-fs/technical-reference/The-Role-of-Attribute-Stores.md).
@@ -243,7 +243,7 @@ You can develop custom attribute stores to enable advanced scenarios.
 
 - All custom attribute stores must be built on top of .NET 4.0 or higher.
 
-When you work with a custom attribute store, you might also have to configure a connection string. In that case, you can enter a custom code of your choice that enables a connection to your custom attribute store. The connection string in this situation is a set of name/value pairs that are interpreted as implemented by the developer of the custom attribute store.For more information about developing and using custom attribute stores, see [Attribute Store Overview](https://go.microsoft.com/fwlink/?LinkId=190782).
+When you work with a custom attribute store, you might also have to configure a connection string. In that case, you can enter a custom code of your choice that enables a connection to your custom attribute store. The connection string in this situation is a set of name/value pairs that are interpreted as implemented by the developer of the custom attribute store.For more information about developing and using custom attribute stores, see [Attribute Store Overview](/previous-versions/adfs-2.0/ee895358(v=msdn.10)).
 
 ## <a name="BKMK_9"></a>Application requirements
 AD FS supports claims-aware applications that use the following protocols:

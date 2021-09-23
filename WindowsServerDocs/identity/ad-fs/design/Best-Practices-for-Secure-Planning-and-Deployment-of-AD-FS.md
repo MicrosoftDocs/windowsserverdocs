@@ -19,7 +19,7 @@ The following core best practices are common to all AD FS installations where yo
 
 -   **Secure AD FS as a "Tier 0" system**
 
-    AD FS is, fundamentally, an authentication system.  Thus, it should be treated as a "Tier 0" system like other identity system on your network.  [Microsoft Docs](../../securing-privileged-access/securing-privileged-access-reference-material.md) has more information on the Active Directory administrative tier model.
+    AD FS is, fundamentally, an authentication system.  Thus, it should be treated as a "Tier 0" system like other identity system on your network.  [Microsoft Docs](/security/compass/privileged-access-access-model) has more information on the Active Directory administrative tier model.
 
 
 -   **Use the Security Configuration Wizard to apply AD FS-specific security best practices to federation servers and federation server proxy computers**
@@ -110,11 +110,11 @@ The following core best practices are common to all AD FS installations where yo
 The following security best practices are specific to the use of Microsoft SQL Server&reg; or Windows Internal Database (WID) when these database technologies are used to manage data in AD FS design and deployment.
 
 > [!NOTE]
-> These recommendations are meant to extend, but not replace, SQL Server product security guidance. For more information about planning a secure SQL Server installation, see [Security Considerations for a Secure SQL Installation](https://go.microsoft.com/fwlink/?LinkID=139831) (https://go.microsoft.com/fwlink/?LinkID=139831).
+> These recommendations are meant to extend, but not replace, SQL Server product security guidance. For more information about planning a secure SQL Server installation, see [Security Considerations for a Secure SQL Installation](/sql/sql-server/install/security-considerations-for-a-sql-server-installation) (https://go.microsoft.com/fwlink/?LinkID=139831).
 
 -   **Always deploy SQL Server behind a firewall in a physically secure network environment.**
 
-    A SQL Server installation should never be exposed directly to the Internet. Only computers that are inside your datacenter should be able to reach your SQL server installation that supports AD FS. For more information, see [Security Best Practices Checklist](https://go.microsoft.com/fwlink/?LinkID=189229) (https://go.microsoft.com/fwlink/?LinkID=189229).
+    A SQL Server installation should never be exposed directly to the Internet. Only computers that are inside your datacenter should be able to reach your SQL server installation that supports AD FS. For more information, see [Security Best Practices Checklist](/previous-versions//cc966456(v=technet.10)) (https://go.microsoft.com/fwlink/?LinkID=189229).
 
 -   **Run SQL Server under a service account instead of using the built-in default system service accounts.**
 
@@ -122,7 +122,7 @@ The following security best practices are specific to the use of Microsoft SQL 
 
 -   **Minimize the surface area of SQL Server.**
 
-    Enable only those SQL Server endpoints that are necessary. By default, SQL Server provides a single built-in TCP endpoint that cannot be removed. For AD FS, you should enable this TCP endpoint for Kerberos authentication. To review the current TCP endpoints to see if additional user-defined TCP ports are added to a SQL installation, you can use the "SELECT * FROM sys.tcp_endpoints" query statement in a Transact-SQL (T-SQL) session. For more information about SQL Server endpoint configuration, see [How To: Configure the Database Engine to Listen on Multiple TCP Ports](https://go.microsoft.com/fwlink/?LinkID=189231) (https://go.microsoft.com/fwlink/?LinkID=189231).
+    Enable only those SQL Server endpoints that are necessary. By default, SQL Server provides a single built-in TCP endpoint that cannot be removed. For AD FS, you should enable this TCP endpoint for Kerberos authentication. To review the current TCP endpoints to see if additional user-defined TCP ports are added to a SQL installation, you can use the "SELECT * FROM sys.tcp_endpoints" query statement in a Transact-SQL (T-SQL) session. For more information about SQL Server endpoint configuration, see [How To: Configure the Database Engine to Listen on Multiple TCP Ports](/previous-versions/sql/sql-server-2005/ms189310(v=sql.90)) (https://go.microsoft.com/fwlink/?LinkID=189231).
 
 -   **Avoid using SQL-based authentication.**
 
@@ -136,7 +136,7 @@ The following security best practices are specific to the use of Microsoft SQL 
 
     If there is a concern that any SQL data might be seen or tampered with over your network, use Internet Protocol security (IPsec) or Secure Sockets Layer (SSL) to help secure your SQL connections. However, this might have a negative effect on SQL Server performance, which might affect or limit AD FS performance in some situations. For example, AD FS performance in token issuance might degrade when attribute lookups from a SQL-based attribute store are critical for token issuance. You can better eliminate a SQL tampering threat by having a strong perimeter security configuration. For example, a better solution for securing your SQL Server installation is to ensure that it remains inaccessible for Internet users and computers and that it remains accessible only by users or computers within your datacenter environment.
 
-    For more information, see [Encrypting Connections to SQL Server](https://go.microsoft.com/fwlink/?LinkID=189234) or [SQL Server Encryption](https://go.microsoft.com/fwlink/?LinkID=189233).
+    For more information, see [Encrypting Connections to SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)) or [SQL Server Encryption](/sql/relational-databases/security/encryption/sql-server-encryption).
 
 -   **Configure securely designed access by using stored procedures to perform all SQL-based lookups by AD FS of SQL-stored data.**
 

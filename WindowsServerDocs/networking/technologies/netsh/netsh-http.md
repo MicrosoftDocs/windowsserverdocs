@@ -5,16 +5,17 @@ ms.topic: article
 manager: dougkim
 ms.author: jgerend
 author: JasonGerend
-ms.date: 08/07/2020
+ms.date: 07/16/2021
 ---
 
 # Netsh http commands
 
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Use **netsh http** to query and configure HTTP.sys settings and parameters.
 
 >[!TIP]
->If you are using Windows PowerShell on a computer running Windows Server 2016 or Windows 10, type **netsh** and press Enter. At the netsh prompt, type **http** and press Enter to get the netsh http prompt.
+>If you are using Windows PowerShell on a computer running Windows Server or Windows 10, type **netsh** and press Enter. At the netsh prompt, type **http** and press Enter to get the netsh http prompt.
 >
 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;netsh http\>
 
@@ -331,8 +332,8 @@ flush logbuffer
 
 ## show cachestate
 
-Lists cached URI resources and their associated properties. This command lists
-all resources and their associated properties that are cached in HTTP response
+Lists cached URI resources and their associated properties. This command either lists
+all resources and associated properties cached in the HTTP response
 cache or displays a single resource and its associated properties.
 
 **Syntax**
@@ -386,7 +387,7 @@ show servicestate [ [ view= ] session | requestq ] [ [ verbose= ] yes | no ]
 
 |Parameter|Description|Requirement|
 |-------------|----------------------------------------------------------------------------------------------------------------------|----------|
-|  **View**   | Specifies whether to view a snapshot of the HTTP service state based on the server session or on the request queues. | Optional |
+|  **View**   | Specifies whether to view a snapshot of the HTTP service state based on the server session or the request queues.    | Optional |
 | **Verbose** |                Specifies whether to display verbose information that also shows property information.                | Optional |
 
 ---
@@ -458,7 +459,7 @@ show urlacl [ [url= ] URL]
 
 |Parameter|Description|Requirement|
 |---------|------------------------------------------------------------------------------------------------|----------|
-| **url** | Specifies the fully qualified URL that you want to display. If not specfied, display all URLs. | Optional |
+| **url** | Specifies the fully qualified URL that you want to display. If not specified, display all URLs. | Optional |
 
 ---
 

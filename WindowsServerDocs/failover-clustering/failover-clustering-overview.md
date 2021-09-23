@@ -11,7 +11,7 @@ ms.localizationpriority: high
 ---
 # Failover Clustering in Windows Server and Azure Stack HCI
 
-> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 A failover cluster is a group of independent computers that work together to increase the availability and scalability of clustered roles (formerly called clustered applications and services). The clustered servers (called nodes) are connected by physical cables and by software. If one or more of the cluster nodes fail, other nodes begin to provide service (a process known as failover). In addition, the clustered roles are proactively monitored to verify that they are working properly. If they are not working, they are restarted or moved to another node.
 
@@ -22,7 +22,7 @@ Failover Clustering has many practical applications, including:
 * Highly available or continuously available file share storage for applications such as Microsoft SQL Server and Hyper-V virtual machines
 * Highly available clustered roles that run on physical servers or on virtual machines that are installed on servers running Hyper-V
 
-To learn more about failover clustering in Azure Stack HCI, see [Understanding cluster and pool quorum](https://docs.microsoft.com/azure-stack/hci/concepts/quorum).
+To learn more about failover clustering in Azure Stack HCI, see [Understanding cluster and pool quorum](/azure-stack/hci/concepts/quorum).
 
 | **Understand**                                                               |  **Planning**                          |  **Deployment**       |
 | -------------                                                                |  --------------                        | --------------------- |
@@ -31,8 +31,8 @@ To learn more about failover clustering in Azure Stack HCI, see [Understanding c
 |  [Cluster and pool quorum](../storage/storage-spaces/understand-quorum.md)   |  [Using guest virtual machine clusters with Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-in-vm.md)       | [Prestage cluster computer objects in Active Directory Domain Services](prestage-cluster-adds.md) |
 | [Fault domain awareness](fault-domains.md)                                 |                                 | [Configuring cluster accounts in Active Directory](configure-ad-accounts.md) |
 | [Simplified SMB Multichannel and multi-NIC cluster networks](smb-multichannel.md) |                       | [Manage the quorum and witnesses](manage-cluster-quorum.md) |
-| [VM load balancing](vm-load-balancing-overview.md)                         |                             | [Deploy a cloud witness](deploy-cloud-witness.md) |
-| [Cluster sets](../storage/storage-spaces/cluster-sets.md)                  |                             |[Deploy a file share witness](file-share-witness.md) |
+| [VM load balancing](/azure-stack/hci/manage/vm-load-balancing)                         |                             | [Deploy a cloud witness](deploy-cloud-witness.md) |
+| [Cluster sets](/azure-stack/hci/deploy/cluster-set)                  |                             |[Deploy a file share witness](file-share-witness.md) |
 | [Cluster affinity](cluster-affinity.md)                                     |                            | [Cluster operating system rolling upgrades](cluster-operating-system-rolling-upgrade.md) |
 |                                                                             |                            | [Upgrading a failover cluster on the same hardware](upgrade-option-same-hardware.md) |
 |                                                                            |                             | [Deploy an Active Directory Detached Cluster](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\))

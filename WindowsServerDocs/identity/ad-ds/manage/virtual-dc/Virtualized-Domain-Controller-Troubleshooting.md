@@ -11,7 +11,7 @@ ms.topic: article
 
 # Virtualized Domain Controller Troubleshooting
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides detailed methodology on troubleshooting the virtualized domain controller feature.
 
@@ -878,7 +878,7 @@ The promotion process means that the cloning starts, the DC is scrubbed of its c
 >
 > For further explanation of the dcpromo.log see the Understand and Troubleshoot AD DS Simplified Administration in Windows Server 2012.
 >
-> [https://go.microsoft.com/fwlink/p/?LinkId=237244](https://go.microsoft.com/fwlink/p/?LinkId=237244)
+> [https://go.microsoft.com/fwlink/p/?LinkId=237244](../ad-ds-simplified-administration.md)
 
 - Start clone-based promotion
 

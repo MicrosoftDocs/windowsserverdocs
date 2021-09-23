@@ -13,7 +13,7 @@ ms.date: 09/24/2020
 
 # Optimizing Windows 10, version 2004 for a Virtual Desktop Infrastructure (VDI) role
 
-This article is intended to provide suggestions for configurations for Windows 10, build 2004, for optimal performance in Virtualized Desktop environments, including Virtual Desktop Infrastructure (VDI) and Windows Virtual Desktop. All settings in this guide are suggested optimization settings only and are in no way requirements.
+This article is intended to provide suggestions for configurations for Windows 10, build 2004, for optimal performance in Virtualized Desktop environments, including Virtual Desktop Infrastructure (VDI) and Azure Virtual Desktop. All settings in this guide are suggested optimization settings only and are in no way requirements.
 
 The information in this guide is pertinent to Windows 10, version 2004, operating system (OS) build 19041.
 
@@ -30,7 +30,7 @@ A "full" virtual desktop environment can present a complete desktop session, inc
 
 The optimization settings could take place on a reference machine. A virtual machine (VM) would be an ideal place to build the VM, because state can be saved, checkpoints can be made, backups can be made, and so on. A default OS installation is performed to the base VM. That base VM is then optimized by removing unneeded apps, installing Windows updates, installing other updates, deleting temporary files, applying settings, and so on.
 
-There are other types of virtual desktop technology such as Remote Desktop Session (RDS) and the recently released Microsoft Azure [Windows Virtual Desktop](https://azure.microsoft.com/services/virtual-desktop/). An in-depth discussion regarding these technologies is outside the scope of this article. This article focuses on the Windows base image settings, without reference to other factors in the environment such as host hardware optimization.
+There are other types of virtual desktop technology such as Remote Desktop Session (RDS) and the recently released Microsoft Azure [Azure Virtual Desktop](https://azure.microsoft.com/services/virtual-desktop/). An in-depth discussion regarding these technologies is outside the scope of this article. This article focuses on the Windows base image settings, without reference to other factors in the environment such as host hardware optimization.
 
 Security and stability are among the highest priorities for Microsoft when it comes to products and services. In the virtual desktop realm, security is not handled much differently than physical devices. Enterprise customers may choose to utilize the built-in to Windows services of Windows Security, which comprises a suite of services that work well connected or not connected to the Internet. For those virtual desktop environments not connected to the Internet, security signatures can be downloaded proactively several times per day, because Microsoft may release more than one signature update per day. Those signatures can then be provided to the virtual desktop devices and scheduled to be installed during production, regardless of persistent or non-persistent. That way the VM protection is as current as possible.
 
@@ -178,8 +178,8 @@ If you want to learn more, here are some resources that can help you:
 
 - [Removing Windows 10 in-box apps during a task sequence](/archive/blogs/mniehaus/removing-windows-10-in-box-apps-during-a-task-sequence)
 - [Removing Built-in apps from Windows 10 WIM-File with PowerShell - Version 1.3](https://gallery.technet.microsoft.com/Removing-Built-in-apps-65dc387b)
-- [Windows 10 1607: Keeping apps from coming back when deploying the feature update](https://blogs.technet.microsoft.com/mniehaus/2016/08/23/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update/)
-- [Removing Windows 10 in-box apps during a task sequence](https://blogs.technet.microsoft.com/mniehaus/2015/11/11/removing-windows-10-in-box-apps-during-a-task-sequence/)
+- [Windows 10 1607: Keeping apps from coming back when deploying the feature update](/archive/blogs/mniehaus/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update)
+- [Removing Windows 10 in-box apps during a task sequence](/archive/blogs/mniehaus/removing-windows-10-in-box-apps-during-a-task-sequence)
 
 Then run the following PowerShell command to remove UWP app payloads:
 
@@ -321,8 +321,6 @@ add "HKLM\Temp\Software\Microsoft\InputPersonalization" /v RestrictImplicitInkCo
 add "HKLM\Temp\Software\Microsoft\InputPersonalization" /v RestrictImplicitTextCollection /t REG_DWORD /d 1 /f
 add "HKLM\Temp\Software\Microsoft\Personalization\Settings" /v AcceptedPrivacyPolicy /t REG_DWORD /d 0 /f
 add "HKLM\Temp\Software\Microsoft\InputPersonalization\TrainedDataStore" /v HarvestContacts /t REG_DWORD /d 0 /f
-add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /v ScoobeSystemSettingEnabled /t REG_DWORD /d 0 /f
-add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /v ScoobeSystemSettingEnabled /t REG_DWORD /d 0 /f
 add "HKLM\Temp\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" /v ScoobeSystemSettingEnabled /t REG_DWORD /d 0 /f
 Unload HKLM\Temp
 ```
@@ -667,7 +665,7 @@ The following table lists some system traces that you should consider disabling 
 |---|--------|
 |Cellcore|[https://docs.microsoft.com/windows-hardware/drivers/network/cellular-architecture-and-driver-model](/windows-hardware/drivers/network/cellular-architecture-and-driver-model)|
 |CloudExperienceHostOOBE|Documented [here](/windows/security/identity-protection/hello-for-business/hello-how-it-works-technology#cloud-experience-host).|
-|DiagLog|A log generated by the Diagnostic Policy Service, which is documented [here](/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server)|
+|DiagLog|A log generated by the Diagnostic Policy Service, which is documented [here](../../security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server.md)|
 |RadioMgr|Documented [here](/windows-hardware/drivers/nfc/what-s-new-in-nfc-device-drivers)|
 |ReadyBoot|Documentation [here](/previous-versions/windows/desktop/xperf/readyboot-analysis).|
 |WDIContextLog|Wireless Local Area Network (WLAN) Device Driver Interface, and is documented here. |
@@ -718,7 +716,7 @@ Applies to Windows 10. The default is **128**, with a valid range of 1 to 65536.
 
 `HKLM\System\CurrentControlSet\Services\LanmanWorkstation\Parameters\DormantFileLimit`
 
-Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.
+Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.: Windows Server 2022, Windows Server 2019,
 
 You can configure many of these SMB settings by using the [Set-SmbClientConfiguration](/powershell/module/smbshare/set-smbclientconfiguration?view=win10-ps&preserve-view=true) and [Set-SmbServerConfiguration](/powershell/module/smbshare/set-smbserverconfiguration?view=win10-ps&preserve-view=true) Windows PowerShell cmdlets. Registry-only settings can be configured by using Windows PowerShell as well, as in the following example:
 
@@ -741,7 +739,7 @@ Disk cleanup can be especially helpful with gold/master image virtual desktop im
 >
 > To learn more about how to use Storage Sense with Azure custom VHD images, see [Prepare and customize a master VHD image](/azure/virtual-desktop/set-up-customize-master-image).
 >
-> For Windows Virtual Desktop session host that use Windows 10 Enterprise or Windows 10 Enterprise multi-session, we recommend disabling Storage Sense. You can disable Storage Sense in the Settings menu under **Storage**.
+> For Azure Virtual Desktop session host that use Windows 10 Enterprise or Windows 10 Enterprise multi-session, we recommend disabling Storage Sense. You can disable Storage Sense in the Settings menu under **Storage**.
 
 Here are suggestions for various disk cleanup tasks. These should all be tested before implementing:
 
@@ -813,6 +811,6 @@ If you would like to enable the use of Windows Update after disabling it, as in 
 
 ## Additional information
 
-Learn more about Microsoft's VDI architecture at our [Windows Virtual Desktop documentation](https://azure.microsoft.com/services/virtual-desktop/).
+Learn more about Microsoft's VDI architecture at our [Azure Virtual Desktop documentation](https://azure.microsoft.com/services/virtual-desktop/).
 
 If you need additional help with troubleshooting sysprep, check out [Sysprep fails after you remove or update Microsoft Store apps that include built-in Windows images](https://support.microsoft.com/help/2769827/sysprep-fails-after-you-remove-or-update-windows-store-apps-that-inclu).

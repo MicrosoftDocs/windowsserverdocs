@@ -68,7 +68,7 @@ The following support for building modern LOB apps has been added to AD FS 2019:
 
 ### Supportability improvements
 
-The following supportability improvements are not part of AD FS 2019:
+The following supportability improvements are now part of AD FS 2019:
 - **Send error details to AD FS admins** - Allows admins to configure end users to send debug logs relating to a failure in end user authentication to be stored as a zipped filed for easy consumption. Admins can also configure an SMTP connection to automail the zipped file to a triage email account or to auto create a ticket based on the email.
 
 
@@ -121,7 +121,7 @@ C. The client then sends the authorization code in the Access Token Request as u
 D. The AD FS transforms "code_verifier" and compares it to "t(code_verifier)" from (B).  Access is denied if they are not equal.
 
 #### How to choose additional auth providers in 2019 
-ADFS already supports triggering additional authentication based on claim rule policy. Those policies can be set on a particular RP or at global level. Additional auth policy for a particular RP could be set using the cmdlet [Set-AdfsRelyingPartyTrust (ADFS) | Microsoft Docs](https://docs.microsoft.com/powershell/module/adfs/set-adfsrelyingpartytrust) by passing either AdditionalAuthenticationRules or AdditionalAuthenticationRulesFile parameter. To set it globally admin can use the cmdlet [Set-AdfsAdditionalAuthenticationRule (ADFS) | Microsoft Docs](https://docs.microsoft.com/powershell/module/adfs/set-adfsadditionalauthenticationrule ).
+ADFS already supports triggering additional authentication based on claim rule policy. Those policies can be set on a particular RP or at global level. Additional auth policy for a particular RP could be set using the cmdlet [Set-AdfsRelyingPartyTrust (ADFS) | Microsoft Docs](/powershell/module/adfs/set-adfsrelyingpartytrust) by passing either AdditionalAuthenticationRules or AdditionalAuthenticationRulesFile parameter. To set it globally admin can use the cmdlet [Set-AdfsAdditionalAuthenticationRule (ADFS) | Microsoft Docs](/powershell/module/adfs/set-adfsadditionalauthenticationrule).
 
 For example, 2012 R2 onwards admin can already write the following rule to prompt additional authentication if the request comes from extranet. 
 
@@ -169,7 +169,7 @@ If none of the auth providers are returned by the claim evaluation, ADFS will fa
 
 To get all the additional authentication providers allowed, admin can use the cmdlet (Get-AdfsGlobalAuthenticationPolicy).AdditionalAuthenticationProvider. The value of https://schemas.microsoft.com/claims/authnmethodsproviders claim should be one of the provider names returned by above cmdlet. 
 
-There is no support to trigger particular additional auth provider if the RP is using [Access Control Policies in AD FS Windows Server 2016 | Microsoft Docs](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/access-control-policies-in-ad-fs). While moving an Application away from Access control policy, ADFS copies the corresponding policy from Access Control Policy to AdditionalAuthenticationRules and IssuanceAuthorizationRules. So if an admin wants to use particular auth provider, they can moves away from not using access control policy and then modify AdditionalAuthenticationRules to trigger particular additional auth provider. 
+There is no support to trigger particular additional auth provider if the RP is using [Access Control Policies in AD FS Windows Server 2016 | Microsoft Docs](../operations/access-control-policies-in-ad-fs.md). While moving an Application away from Access control policy, ADFS copies the corresponding policy from Access Control Policy to AdditionalAuthenticationRules and IssuanceAuthorizationRules. So if an admin wants to use particular auth provider, they can moves away from not using access control policy and then modify AdditionalAuthenticationRules to trigger particular additional auth provider. 
 
 #### FAQ
 

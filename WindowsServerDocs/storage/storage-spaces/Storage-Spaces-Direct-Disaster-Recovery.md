@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # Disaster recovery with Storage Spaces Direct
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic provides scenarios on how hyper-converged infrastructure (HCI) can be configured for disaster recovery.
 
