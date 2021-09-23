@@ -25,7 +25,7 @@ break=[on|off]
 ```
 
 > [!NOTE]
-> Because the break command has no effect it is often used to create empty files or delete the content of an existing file as in the following example:
+> Because the break command has no effect, it is often used to create empty files or delete the content of an existing file. For example:
 
 ```
 rem -- cleans the content of the file --
