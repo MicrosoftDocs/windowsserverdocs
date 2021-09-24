@@ -24,10 +24,10 @@ We use this example in the rest of this document. However, one can customize thi
 
 ##  Create the required groups necessary to grant users permissions
 1. Create a [Group Managed Service Account](../../../security/group-managed-service-accounts/group-managed-service-accounts-overview.md). The gMSA account is used to allow the JEA user to access network resources as other machines or web services. It provides a domain identity which can be used to authenticate against resources on any machine within the domain. The gMSA account is granted the necessary administrative rights later in the setup. For this example, we call the account **gMSAContoso**.
-2. Create an Active Directory group can be populated with users that need to be granted the rights to the delegated commands. In this example, help desk personnel are granted permissions to read, update, and reset the ADFS lockout state. We refer to this group throughout the example as **JEAContoso**.
+2. Create an Active Directory group can be populated with users that need to be granted the rights to the delegated commands. In this example, help desk personnel are granted permissions to read, update, and reset the AD FS lockout state. We refer to this group throughout the example as **JEAContoso**.
 
-### Install the gMSA account on the ADFS Server:
-Create a service account which has administrative rights to the ADFS servers. This can be performed on the domain controller or remotely as long as the AD RSAT package is installed.  The service account must be created in the same forest as the ADFS server.
+### Install the gMSA account on the AD FS Server:
+Create a service account which has administrative rights to the AD FS servers. This can be performed on the domain controller or remotely as long as the AD RSAT package is installed.  The service account must be created in the same forest as the AD FS server.
 Modify the example values to the configuration of your farm.
 
 ```powershell
@@ -44,7 +44,7 @@ $serviceaccount = New-ADServiceAccount gMSAcontoso -DNSHostName <FQDN of the dom
 Add-ADComputerServiceAccount -Identity server01.contoso.com -ServiceAccount $ServiceAccount
 ```
 
-Install the gMSA account on the ADFS server.  This needs to be run on every ADFS node in the farm.
+Install the gMSA account on the AD FS server.  This needs to be run on every AD FS node in the farm.
 
 ```powershell
 Install-ADServiceAccount gMSAcontoso
@@ -53,7 +53,7 @@ Install-ADServiceAccount gMSAcontoso
 ### Grant the gMSA Account Admin Rights
 If the farm is using delegated administration, grant the gMSA Account admin rights by adding it to the existing group which has delegated admin access.
 
-If the farm is not using delegated administration, grant the gMSA account admin rights by making it the local administration group on all of the ADFS servers.
+If the farm is not using delegated administration, grant the gMSA account admin rights by making it the local administration group on all of the AD FS servers.
 
 
 ### Create the JEA Role File
@@ -103,6 +103,7 @@ Install the JEA session configuration on the AD FS server
 ```powershell
 Register-PSSessionConfiguration -Path .\JEASessionConfig.pssc -name "AccountActivityAdministration" -force
 ```
+
 ## Operational Instructions
 Once set up, JEA logging and auditing can be used to determine the if the correct users have access to the JEA endpoint.
 
@@ -111,6 +112,4 @@ To use the delegated commands:
 ```powershell
 Enter-pssession -ComputerName server01.contoso.com -ConfigurationName "AccountActivityAdministration" -Credential <User Using JEA>
 Get-AdfsAccountActivity <User>
-
-
 ```

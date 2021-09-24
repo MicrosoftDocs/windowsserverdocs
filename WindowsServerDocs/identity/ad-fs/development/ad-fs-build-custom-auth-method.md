@@ -21,7 +21,7 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
 | Reference dll | Where to find it | Required for |
 |--|--|--|
-| Microsoft.IdentityServer.Web.dll | The dll is located in %windir%ADFS on a Windows Server 2012 R2 server on which AD FS has been installed.<p>This dll must be copied to the development machine and an explicit reference created in the project. | Interface types including IAuthenticationContext, IProofData |
+| Microsoft.IdentityServer.Web.dll | The dll is located in %windir%\ADFS on a Windows Server 2012 R2 server on which AD FS has been installed.<p>This dll must be copied to the development machine and an explicit reference created in the project. | Interface types including IAuthenticationContext, IProofData |
 
 ## Create the provider
 
@@ -31,7 +31,7 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
     ![Screenshot of the New Project dialog box showing the Class Library option selected.](media/ad-fs-build-custom-auth-method/Dn783423.71a57ae1-d53d-462b-a846-5b3c02c7d3f2(MSDN.10).jpg "create the provider")
 
-3. Make a copy of **Microsoft.IdentityServer.Web.dll** from %windir%ADFS on the Windows Server 2012 R2 server where AD FS has been installed and paste it in your Project folder on your development machine.
+3. Make a copy of **Microsoft.IdentityServer.Web.dll** from %windir%\ADFS on the Windows Server 2012 R2 server where AD FS has been installed and paste it in your Project folder on your development machine.
 
 4. In **Solution Explorer**, right click **References** and **Add Reference...**
 
@@ -119,7 +119,7 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
     {
 
     }
-    ```         
+    ```
 
 10. Next, you can add the required members for each.First, the metadata (with helpful inline comments)
 

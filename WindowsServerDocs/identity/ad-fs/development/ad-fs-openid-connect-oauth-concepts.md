@@ -46,8 +46,8 @@ Modern authentication uses following token types:
 
 ## Refresh Token Lifetimes
 -	**Simple logon (no KMSI, device *not* registered)**: AD FS will apply **SsoLifetime + DeviceUsageWindowInDays**, and the first refresh token will have lifetime=DeviceUsageWindowInDays or SsoLifetime (based on which field is lower), but *no* further refresh tokens are issued.
--	**KMSI logon (EnableKmsi=true in adfs conf and kmsi=true passed as parameter**): ADFS will apply **KmsiLifetimeMins with DeviceUsageWindowInDays**. The first refresh token will have lifetime=DeviceUsageWindowInDays and each subsequent grant_type=refresh_token request will get a new refresh_token. (This happens only with native clients or confidential client + device auth)
--	**Registered devices (device auth)**: ADFS will use PersistentSsoLifetimeMins + DeviceUsageWindowInDays similar to KMSI. Both Native and Confidential Clients should get new refresh tokens (based on device auth).
+-	**KMSI logon (EnableKmsi=true in AD FS conf and kmsi=true passed as parameter**): AD FS will apply **KmsiLifetimeMins with DeviceUsageWindowInDays**. The first refresh token will have lifetime=DeviceUsageWindowInDays and each subsequent grant_type=refresh_token request will get a new refresh_token. (This happens only with native clients or confidential client + device auth)
+-	**Registered devices (device auth)**: AD FS will use PersistentSsoLifetimeMins + DeviceUsageWindowInDays similar to KMSI. Both Native and Confidential Clients should get new refresh tokens (based on device auth).
 
 Additional details in [AD FS Single Sign On documentation](../operations/ad-fs-single-sign-on-settings.md)
 
@@ -85,7 +85,7 @@ The claims present in any given security token are dependent upon the type of to
 
 1.	AD FS identifies the resource which the client wants to access through the resource parameter passed in the auth request. If using MSAL client library, then resource parameter is not sent. Instead the resource url is sent as a part of the scope parameter: *scope = [resource url]/[scope values e.g., openid]*.
 
-    If resource is not passed using resource or scope parameter, ADFS will use a default resource urn:microsoft:userinfo whose policies (e.g., MFA, issuance, or authorization policy) can't be configured.
+    If resource is not passed using resource or scope parameter, AD FS will use a default resource urn:microsoft:userinfo whose policies (e.g., MFA, issuance, or authorization policy) can't be configured.
 
 1.	Next AD FS validates whether client has the permissions to access the resource. AD FS also validates whether the scopes passed in the auth request match the scopes configured while registering the resource. If the client doesn't have the permissions or the right scopes are not sent in the auth request the auth flow is terminated.
 
@@ -133,7 +133,7 @@ In certain scenarios, it is possible that the Web app (client) needs additional 
 
 ![AD FS Customize Token Option 2](media/adfs-modern-auth-concepts/option2.png)
 
-To better understand how to configure a Web App in ADFS to acquire customized ID token see [Customize claims to be emitted in id_token when using OpenID Connect or OAuth with AD FS 2016 or later](Custom-Id-Tokens-in-AD-FS.md).
+To better understand how to configure a Web App in AD FS to acquire customized ID token see [Customize claims to be emitted in id_token when using OpenID Connect or OAuth with AD FS 2016 or later](Custom-Id-Tokens-in-AD-FS.md).
 
 ## Single log-out
 
