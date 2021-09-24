@@ -126,7 +126,7 @@ git clone https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-op
    ```xml
    <add key="ida:ClientId" value="[Replace this Client Id from #3 above under section Create and configure an Application Group in AD FS 2016 or later]" />
    <add key="ida:ResourceID" value="[Replace this with the Web API Identifier from #5 above]"  />
-   <add key="ida:ADFSDiscoveryDoc" value="https://[Your ADFS hostname]/adfs/.well-known/openid-configuration" />
+   <add key="ida:ADFSDiscoveryDoc" value="https://[Your AD FS hostname]/adfs/.well-known/openid-configuration" />
    <!--<add key="ida:Tenant" value="[Enter tenant name, e.g. contoso.onmicrosoft.com]" />
    <add key="ida:AADInstance" value="https://login.microsoftonline.com/{0}" />-->
    <add key="ida:PostLogoutRedirectUri" value="[Replace this with the Redirect URI from #4 above]" />

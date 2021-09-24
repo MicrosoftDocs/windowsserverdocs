@@ -46,7 +46,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 ### Brute Force Password Attack
 In this form of attack, an attacker will attempt multiple password attempts against a targeted set of accounts. In many cases these accounts will be targeted against users that have a higher level of access within the organization. These could be executives within the organization or admins who manage critical infrastructure.
 
-This type of attack could also result in DOS patterns. This could be at the service level where ADFS is unable to process a large # of requests due to insufficient # of servers or could be at a user level where a user is locked out of their account.
+This type of attack could also result in DOS patterns. This could be at the service level where AD FS is unable to process a large # of requests due to insufficient # of servers or could be at a user level where a user is locked out of their account.
 
 ## Securing AD FS against password attacks
 
@@ -59,17 +59,17 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
 ## Level 1: Baseline
 
-1. If ADFS 2016, implement [extranet smart lockout](../../ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md) Extranet smart lockout tracks familiar locations and will allow a valid user to come through if they have previously logged in successfully from that location. By using extranet smart lockout, you can ensure that bad actors will not be able to brute force attack the users and at the same time will let legitimate user be productive.
+1. If AD FS 2016, implement [extranet smart lockout](../../ad-fs/operations/Configure-AD-FS-Extranet-Smart-Lockout-Protection.md) Extranet smart lockout tracks familiar locations and will allow a valid user to come through if they have previously logged in successfully from that location. By using extranet smart lockout, you can ensure that bad actors will not be able to brute force attack the users and at the same time will let legitimate user be productive.
     - If you are not on AD FS 2016, we strongly recommend you [upgrade](../../ad-fs/deployment/upgrading-to-ad-fs-in-windows-server.md) to AD FS 2016. It is a simple upgrade path from AD FS 2012 R2. If you are on AD FS 2012 R2, implement [extranet lockout](../../ad-fs/operations/Configure-AD-FS-Extranet-Soft-Lockout-Protection.md). One disadvantage of this approach is that valid users may be blocked from extranet access if you are in a brute force pattern. AD FS on Server 2016 does not have this disadvantage.
 
 2. Monitor & Block suspicious IP addresses
-    - If you have Azure AD Premium, implement Connect Health for ADFS and use the [Risky IP report](/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs#risky-ip-report-public-preview) notifications that it provides.
+    - If you have Azure AD Premium, implement Connect Health for AD FS and use the [Risky IP report](/azure/active-directory/connect-health/active-directory-aadconnect-health-adfs#risky-ip-report-public-preview) notifications that it provides.
 
-        a. Licensing is not for all users and requires 25 licenses/ADFS/WAP server which may be easy for a customer.
+        a. Licensing is not for all users and requires 25 licenses per AD FS/WAP server which may be easy for a customer.
 
         b. You can now investigate IP's that are generating large # of failed logins
 
-        c. This will require you to enable auditing on your ADFS servers.
+        c. This will require you to enable auditing on your AD FS servers.
 
 3.  Block suspicious IP's.  This potentially blocks DOS attacks.
 
@@ -109,7 +109,7 @@ But by taking a few steps to configure the AD FS and network correctly, AD FS en
 
 If the AD FS environment is under active attack, the following steps should be implemented at the earliest:
 
- - Disable U/P endpoint in ADFS and require everyone to VPN to get access or be inside your network. This requires you to have step **Level 2 #1a** completed. Otherwise, all internal Outlook requests will still be routed via the cloud via EXO proxy auth.
+ - Disable U/P endpoint in AD FS and require everyone to VPN to get access or be inside your network. This requires you to have step **Level 2 #1a** completed. Otherwise, all internal Outlook requests will still be routed via the cloud via EXO proxy auth.
  - If the attack is only coming via EXO, you can disable basic authentication for Exchange protocols (POP, IMAP, SMTP, EWS, etc) using Authentication Policies, these protocols and authentication methods are being used on the vast majority of these attacks. Additionally, Client Access Rules in EXO and per-mailbox protocol enablement are evaluated post-authentication and won't help on mitigating the attacks.
  - Selectively offer extranet access using Level 3 #1-3.
 
