@@ -267,25 +267,25 @@ WSUS requires two ports for connections to other WSUS servers and to client comp
 
 You should require SSL only for these IIS virtual roots:
 
-    - **SimpleAuthWebService**
+- **SimpleAuthWebService**
 
-    - **DSSAuthWebService**
+- **DSSAuthWebService**
 
-    - **ServerSyncWebService**
+- **ServerSyncWebService**
 
-    - **APIremoting30**
+- **APIremoting30**
 
-    - **ClientWebService**
+- **ClientWebService**
 
 You should not require SSL for these following virtual roots:
 
-    - **Content**
+- **Content**
 
-    - **Inventory**
+- **Inventory**
 
-    - **ReportingWebService**
+- **ReportingWebService**
 
-    - **SelfUpdate**
+- **SelfUpdate**
 
 The certificate of the certification authority (CA) must be imported into the each WSUS server's local computer Trusted Root CA store, or the Windows Server Update Service Trusted Root CA store if it exists. 
 
@@ -382,7 +382,7 @@ Assuming that you have configured the WSUS server to protect the client computer
 By default, your client computers would normally receive updates from Windows Update. They must be configured to receive updates from the WSUS server instead.
 
 > [!IMPORTANT]
-> This document presents one set of steps for configuring client computers using Group Policy. These steps are appropriate in many situations. But there are many other options available for configuring update behavior on client computers, including using Mobile Device Management (MDM) rather than Group Policy. These options are documented in [Manage additional Windows Update settings](https://docs.microsoft.com/en-us/windows/deployment/update/waas-wu-settings). 
+> This document presents one set of steps for configuring client computers using Group Policy. These steps are appropriate in many situations. But there are many other options available for configuring update behavior on client computers, including using Mobile Device Management (MDM) rather than Group Policy. These options are documented in [Manage additional Windows Update settings](/windows/deployment/update/waas-wu-settings). 
 
 ### 2.6.1. Choose the correct set of policies to edit
 
@@ -409,7 +409,7 @@ By default, your client computers would normally receive updates from Windows Up
 4. Click **Enabled**, and then select the desired option under the **Configure automatic updating** setting to manage how Automatic Updates will download and install approved updates.
     - We recommend using the **Auto download and schedule the install** setting. This insures that the updates you approve in WSUS will be downloaded and installed in a timely fashion, without the need for user intervention.
 
-5. If desired, edit other parts of the policy, as documented in [Manage additional Windows Update settings](https://docs.microsoft.com/en-us/windows/deployment/update/waas-wu-settings). 
+5. If desired, edit other parts of the policy, as documented in [Manage additional Windows Update settings](/windows/deployment/update/waas-wu-settings). 
 
 >[!NOTE]
 >The **Install updates from other Microsoft products** checkbox has no effect on client computers receiving updates from WSUS. The client computers will receive all updates approved for them on the WSUS server.
