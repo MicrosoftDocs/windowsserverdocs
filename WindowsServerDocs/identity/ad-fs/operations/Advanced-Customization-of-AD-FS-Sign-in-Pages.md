@@ -1,6 +1,7 @@
 ---
 ms.assetid: 882abec8-0189-4f73-99c5-792987168080
 title: Advanced Customization of AD FS Sign-in Pages
+description: How to make advanced customizations of the AD FS sign-in pages
 author: billmath
 ms.author: billmath
 manager: femila
