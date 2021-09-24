@@ -99,6 +99,6 @@ bcdedit /command [<argument1>] [<argument2>] ...
 
 ## Additional References
 
-For examples of how to use BCDEdit, see the [BCDEdit Options Reference](/windows-hardware/drivers/devtest/bcd-boot-options-reference) article.
+For examples of how to use BCDEdit, see the [BCDEdit Options Reference](/windows-hardware/drivers/devtest/bcd-boot-options-reference) [BCDEdit WindowsCMD.com](https://windowscmd.com/bcdedit/) article.
 
 To see the notation used to indicate command-line syntax, see  [Command-Line Syntax Key](command-line-syntax-key.md).
