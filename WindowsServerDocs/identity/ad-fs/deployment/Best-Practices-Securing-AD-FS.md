@@ -129,7 +129,7 @@ The federation service proxy (part of the WAP) provides congestion control to pr
 
 #### To verify the settings, you can do the following:
 1. On your Web Application Proxy computer, start an elevated command window.
-2. Navigate to the ADFS directory, at %WINDIR%\adfs\config.
+2. Navigate to the AD FS directory, at %WINDIR%\adfs\config.
 3. Change the congestion control settings from its default values to `<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />`.
 4. Save and close the file.
 5. Restart the AD FS service by running `net stop adfssrv` and then `net start adfssrv`.

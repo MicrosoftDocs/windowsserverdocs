@@ -26,7 +26,7 @@ In some cases, AD FS administrators may want to provide additional sign\-in expe
 
 -   AD FS ships with a built\-in web theme which is called Default. You cannot modify the onload.js of the Default web theme. To update onload.js, you have to create and use a custom web theme for AD FS sign\-in pages.  See [AD-FS user sign-in customization](AD-FS-user-sign-in-customization.md) for information on how to create a custom web theme.
 
--   The same onload.js will execute on all ADFS pages \(ex. form\-based logon page, home realm discovery page and etc.\). You need to make sure the code in your script only gets executed as it is designed and does not get executed unexpectedly.
+-   The same onload.js will execute on all AD FS pages \(ex. form\-based logon page, home realm discovery page and etc.\). You need to make sure the code in your script only gets executed as it is designed and does not get executed unexpectedly.
 
 -   When referencing any HTML element, ensure that you always check for the existence of the element prior to acting on the element. This provides robustness and ensures that the custom logic would not be executed on pages that do not contain this element. You can simply view the HTML source on the AD FS sign\-in pages to view the existing elements.
 

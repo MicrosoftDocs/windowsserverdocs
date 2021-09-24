@@ -28,7 +28,7 @@ Web Apps that calls Web APIs:
 - are confidential client applications.
 - that's why they've registered a secret (application shared secret, certificate or AD account) with AD FS. This secret is passed-in during the call to AD FS to get a token.
 
-To better understand how to register a Web App in ADFS and to configure it to acquire tokens to call a Web API, let's use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-webapp-to-webapi) and walkthrough the app registration and code configuration steps.
+To better understand how to register a Web App in AD FS and to configure it to acquire tokens to call a Web API, let's use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-webapp-to-webapi) and walkthrough the app registration and code configuration steps.
 
 
 ## Pre-requisites
