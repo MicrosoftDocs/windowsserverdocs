@@ -51,7 +51,7 @@ The remainder of the is document provides the steps for adding a Windows Server 
 > Before you can move to AD FS in Windows Server 2019 FBL, you must remove all of the Windows Server 2016 or 2012 R2 nodes. You cannot just upgrade a Windows Server 2016 or 2012 R2 OS to Windows Server 2019 and have it become a 2019 node. You will need to remove it and replace it with a new 2019 node.
 
 > [!NOTE]
-> If AlwaysOnAvailability groups or merge replication are configured in AD FS, remove all replication of any ADFS databases prior to upgrade and point all nodes to the Primary SQL database. After performing this, perform the farm upgrade as documented. After upgrade, add AlwaysOnAvailability groups or merge replication to the new databases.
+> If AlwaysOnAvailability groups or merge replication are configured in AD FS, remove all replication of any AD FS databases prior to upgrade and point all nodes to the Primary SQL database. After performing this, perform the farm upgrade as documented. After upgrade, add AlwaysOnAvailability groups or merge replication to the new databases.
 
 ##### To upgrade your AD FS farm to Windows Server 2019 Farm Behavior Level
 
@@ -157,7 +157,7 @@ This will complete the upgrade of the WAP servers.
 
 
 > [!NOTE]
-> A known PRT issue exists in AD FS 2019 if Windows Hello for Business with a Hybrid Certificate trust is performed. You may encounter this error in ADFS Admin event logs: Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'.
+> A known PRT issue exists in AD FS 2019 if Windows Hello for Business with a Hybrid Certificate trust is performed. You may encounter this error in AD FS Admin event logs: Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'.
 > To remediate this error:
 > 1. Launch AD FS management console. Brose to "Services > Scope Descriptions"
 > 2. Right click "Scope Descriptions" and select "Add Scope Description"
@@ -165,6 +165,6 @@ This will complete the upgrade of the WAP servers.
 > 4. Launch Powershell as Administrator
 > 5. Execute the command "Get-AdfsApplicationPermission". Look for the ScopeNames :{openid, aza} that has the ClientRoleIdentifier. Make a note of the ObjectIdentifier.
 > 6. Execute the command "Set-AdfsApplicationPermission -TargetIdentifier <ObjectIdentifier from step 5> -AddScope 'ugs'
-> 7. Restart the ADFS service.
+> 7. Restart the AD FS service.
 > 8. On the client: Restart the client. User should be prompted to provision WHFB.
 > 9. If the provisioning window does not pop up then need to collect NGC trace logs and further troubleshoot.

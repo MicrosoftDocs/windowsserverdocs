@@ -129,7 +129,7 @@ The federation service proxy (part of the WAP) provides congestion control to pr
 
 #### To verify the settings, you can do the following:
 1. On your Web Application Proxy computer, start an elevated command window.
-2. Navigate to the ADFS directory, at %WINDIR%\adfs\config.
+2. Navigate to the AD FS directory, at %WINDIR%\adfs\config.
 3. Change the congestion control settings from its default values to `<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />`.
 4. Save and close the file.
 5. Restart the AD FS service by running `net stop adfssrv` and then `net start adfssrv`.
@@ -151,7 +151,7 @@ The recommended way for Azure AD customers to monitor and keep current their inf
 Information on installing Azure AD Connect Health for AD FS can be found [here](/azure/active-directory/hybrid/how-to-connect-health-agent-install).
 
 ## Best practice for securing and monitoring the AD FS trust with Azure AD
-When you federate your AD FS with Azure AD, it is critical that the federation configuration (trust relationship configured between AD FS and Azure AD) is monitored closely, and any unusual or suspicious activity is captured. To do so, we recommend setting up alerts and getting notified whenever any changes are made to the federation configuration. To learn how to setup alerts, see [Monitor changes to federation configuration](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-monitor-federation-changes). 
+When you federate your AD FS with Azure AD, it is critical that the federation configuration (trust relationship configured between AD FS and Azure AD) is monitored closely, and any unusual or suspicious activity is captured. To do so, we recommend setting up alerts and getting notified whenever any changes are made to the federation configuration. To learn how to setup alerts, see [Monitor changes to federation configuration](/azure/active-directory/hybrid/how-to-connect-monitor-federation-changes).
 
 ## Additional security configurations
 The following additional capabilities can be configured optionally to provide additional protections to those offered in the default deployment.

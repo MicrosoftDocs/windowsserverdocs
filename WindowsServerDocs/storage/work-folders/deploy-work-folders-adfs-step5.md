@@ -74,7 +74,7 @@ To configure Work Folders on the client machine, follow these steps:
 
 3. On the **Enter your work email address** page, enter either the user's email address (for example, user@contoso.com) or the Work Folders URL (in the test example, https:\//workfolders.contoso.com), and then click **Next**.
 
-4. If the user is connected to the corporate network, the authentication is performed by Windows Integrated Authentication. If the user is not connected to the corporate network, the authentication is performed by ADFS (OAuth) and the user will be prompted for credentials. Enter your credentials and click **OK**.
+4. If the user is connected to the corporate network, the authentication is performed by Windows Integrated Authentication. If the user is not connected to the corporate network, the authentication is performed by AD FS (OAuth) and the user will be prompted for credentials. Enter your credentials and click **OK**.
 
 5. After you have authenticated, the **Introducing Work Folders** page is displayed, where you can optionally change the Work Folders directory location. Click **Next**.
 

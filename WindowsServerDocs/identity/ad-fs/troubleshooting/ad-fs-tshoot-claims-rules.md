@@ -12,7 +12,7 @@ ms.topic: article
 A claim is a statement that one subject makes about itself or another subject.  Claims are issued by a relying party, and they are given one or more values and then packaged in security tokens that are issued by the AD FS server.  This article deals with the claims syntax and creation.  For information on claims issuance see [AD FS Troubleshooting - Claims Issuance](ad-fs-tshoot-claims-issuance.md).
 
 >[!NOTE]
->You can use [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) on the [ADFS Help](https://adfshelp.microsoft.com) site to assist in troubleshooting claims issues.
+>You can use [ClaimsXRay](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) on the [AD FS Help](https://adfshelp.microsoft.com) site to assist in troubleshooting claims issues.
 
 ## How claim rules are processed
 Claim rules are processed through the [claims pipeline](../../ad-fs/technical-reference/The-Role-of-the-Claims-Pipeline.md) using the [claims engine](../../ad-fs/technical-reference/The-Role-of-the-Claims-Engine.md). The claims engine is a logical component of the Federation Service that examines the set of incoming claims presented by a user, and will then, depending on the logic in each rule, produce an output set of claims.

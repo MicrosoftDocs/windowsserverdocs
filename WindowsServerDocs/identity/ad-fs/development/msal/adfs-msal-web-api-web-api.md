@@ -24,7 +24,7 @@ Before reading this article, you should be familiar with the [AD FS concepts](..
 
      ![overview](media/adfs-msal-web-api-web-api/webapi1.png)
 
-To better understand how to configure on behalf of auth scenario in ADFS, let's use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-webapi-to-webapi-onbehalfof) and walkthrough the app registration and code configuration steps.
+To better understand how to configure on behalf of auth scenario in AD FS, let's use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-webapi-to-webapi-onbehalfof) and walkthrough the app registration and code configuration steps.
 
 ## Pre-requisites
 
