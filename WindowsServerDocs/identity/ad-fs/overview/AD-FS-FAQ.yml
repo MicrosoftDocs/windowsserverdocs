@@ -168,12 +168,12 @@ sections:
       - question: |
           What permitted scopes are supported by AD FS?
         answer: |
-        Supported: 
+          Supported: 
           - aza. If you're using [OAuth 2.0 Protocol Extensions for Broker Clients](/openspecs/windows_protocols/ms-oapxbc/2f7d8875-0383-4058-956d-2fb216b44706) and the scope parameter contains the scope aza, the server issues a new primary refresh token and sets it in the refresh_token field of the response. It also sets the refresh_token_expires_in field to the lifetime of the new primary refresh token, if one is enforced.
           - openid. Allows an application to request the use of the OpenID Connect authorization protocol.
           - logon_cert. Allows an application to request logon certificates, which can be used to interactively sign in authenticated users. The AD FS server omits the access_token parameter from the response and instead provides a Base64-encoded CMS certificate chain or a CMC full PKI response. For more information, see [Processing details](/openspecs/windows_protocols/ms-oapx/32ce8878-7d33-4c02-818b-6c9164cc731e).
           - user_impersonation. Required if you want to request an on-behalf-of access token from AD FS. For more information on how to use this scope, see [Build a multi-tiered application using On-Behalf-Of (OBO) using OAuth with AD FS 2016](../../ad-fs/development/ad-fs-on-behalf-of-authentication-in-windows-server.md).
-        Not supported:
+          Not supported:
           - vpn_cert. Allows an application to request VPN certificates, which can be used to establish VPN connections by using EAP-TLS authentication. This scope is no longer supported.
           - email. Allows an application to request an email claim for the signed-in user. This scope is no longer supported.
           - profile. Allows an application to request profile-related claims for the signed-in user. This scope is no longer supported.
