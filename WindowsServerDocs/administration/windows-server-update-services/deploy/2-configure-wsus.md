@@ -368,7 +368,7 @@ There are two approaches to assigning client computers to computer groups. The r
 
 Assuming that you have configured the WSUS server to protect the client computers' connections by using SSL, you must configure the client computers to trust those SSL connections.
 
-- The WSUS server's SSL certificate must be imported into the client computers' Trusted Root Certificate Authority store, or into the client copmputers' Automatic Update Service Trusted Root Certificate Authority store if it exists.
+- The WSUS server's SSL certificate must be imported into the client computers' Trusted Root Certificate Authority store, or into the client computers' Automatic Update Service Trusted Root Certificate Authority store if it exists.
 
 > [!IMPORTANT]
 > You must use the Local Computer certificate store. You cannot use a user's certificate store.
