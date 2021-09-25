@@ -71,9 +71,9 @@ sections:
           
           Additionally:
           
-          - If you have a one-way forest trust, like a perimeter network (also known as DMZ) forest that contains partner identities, we recommend that you deploy AD FS in the corporate forest. Treat the perimeter network forest as another local claims provider trust connected via LDAP. In this case, Integrated Windows authentication won't work for the perimeter network forest users. They'll need to use password authentication because it's the only supported mechanism for LDAP. 
+          - If you have a one-way forest trust, like a perimeter network (also known as DMZ) forest that contains partner identities, we recommend that you deploy AD FS in the corporate forest. Treat the perimeter network forest as another local claims provider trust connected via LDAP. In this case, Windows Integrated Authentication won't work for the perimeter network forest users. They'll need to use password authentication because it's the only supported mechanism for LDAP. 
           
-          If can't use this option, you need to set up another AD FS server in the perimeter network forest. Add it as a claims provider trust in the AD FS server in the corporate forest. Users will need to do Home Realm Discovery, but both Integrated Windows authentication and password authentication will work. Make appropriate changes in the issuance rules in AD FS in the perimeter network forest because AD FS in the corporate forest won't be able to get more information about users from the perimeter network forest.
+          If can't use this option, you need to set up another AD FS server in the perimeter network forest. Add it as a claims provider trust in the AD FS server in the corporate forest. Users will need to do Home Realm Discovery, but both Windows Integrated Authentication and password authentication will work. Make appropriate changes in the issuance rules in AD FS in the perimeter network forest because AD FS in the corporate forest won't be able to get more information about users from the perimeter network forest.
           - Domain-level trusts are supported and can work, but we strongly recommend that you move to a forest-level trust model. You'd also need to ensure UPN routing and NetBIOS name resolution works correctly.
           
           >[!NOTE]
@@ -194,148 +194,148 @@ sections:
       - question: |
           Does the proxy SSL certificate need to be the same as the AD FS SSL certificate?
         answer: |
-          - If the proxy is used to proxy AD FS requests that use Windows Integrated Authentication, the proxy SSL certificate must be the same (use the same key) as the federation server SSL certificate
-          - If the AD FS property "ExtendedProtectionTokenCheck" is enabled (the default setting in AD FS), the proxy SSL certificate must be the same (use the same key) as the federation server SSL certificate
-          - Otherwise, the proxy SSL certificate can have a different key from the AD FS SSL certificate, but must meet the same [requirements](./ad-fs-requirements.md)
+          - If the proxy is used to proxy AD FS requests that use Windows Integrated Authentication, the proxy SSL certificate must use the same key as the federation server SSL certificate.
+          - If the AD FS **ExtendedProtectionTokenCheck** property is enabled (the default setting in AD FS), the proxy SSL certificate must use the same key as the federation server SSL certificate.
+          - Otherwise, the proxy SSL certificate can have a different key than the AD FS SSL certificate. It must meet the same [requirements](./ad-fs-requirements.md).
           
       - question: |
-          Why do I only see a password login on AD FS and not my other authentication methods that I have configured?
+          Why do I see only a password sign in on AD FS and not the other authentication methods that I have configured?
         answer: |
-          AD FS only shows a single authentication method in the login screen when the application explicitly requires a specific authentication URI that maps to a configured and enabled authentication method. This is conveyed in the 'wauth' parameter for WS-Federation requests and the 'RequestedAuthnCtxRef' parameter in a SAML protocol request. As a result, only the requested authentication method is displayed (e.g. password login).
+          AD FS shows only one authentication method on the sign-in screen when an application explicitly requires a specific authentication URI that maps to a configured and enabled authentication method. The method is conveyed in the **wauth** parameter in WS-Federation requests. It's conveyed in the **RequestedAuthnCtxRef** parameter in SAML protocol requests. Only the requested authentication method is displayed. (For example, password sign in.)
           
-          When AD FS is used with Azure AD, it is common for applications to send the prompt=login parameter to Azure AD. Azure AD by default translates this to requesting a fresh password-based login to AD FS. This is the most common reason to see a password login on AD FS inside your network or not see an option to log in with your certificate. This can be easily remedied by making a change to the federated domain settings in Azure AD.
+          When you use AD FS with Azure AD, it's common for applications to send the **prompt=login** parameter to Azure AD. Azure AD by default translates this parameter to requesting a fresh password-based sign in to AD FS. This scenario is the most common reason you might see a password sign in on AD FS in your network or not see an option to sign in with your certificate. You can easily resolve this issue by making a change to the federated domain settings in Azure AD.
           
-          For information on how to configure this, see [Active Directory Federation Services prompt=login parameter support](../operations/AD-FS-Prompt-Login.md).
+          For more information, see [Active Directory Federation Services prompt=login parameter support](../operations/AD-FS-Prompt-Login.md).
           
       - question: |
           How can I change the AD FS service account?
         answer: |
-          To change the AD FS service account, follow the instructions using the AD FS toolbox [Service Account PowerShell Module](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule).
+          To change the AD FS service account, use the AD FS Toolbox Service Account PowerShell module. For instructions, see [Change AD FS Service Account](https://github.com/Microsoft/adfsToolbox/tree/master/serviceAccountModule).
           
       - question: |
           How can I configure browsers to use Windows Integrated Authentication (WIA) with AD FS?
         answer: |
-          For information on how to configure browsers see [Configure browsers to use Windows Integrated Authentication (WIA) with AD FS](../operations/Configure-AD-FS-Browser-WIA.md).
+          See [Configure browsers to use Windows Integrated Authentication (WIA) with AD FS](../operations/Configure-AD-FS-Browser-WIA.md).
           
       - question: |
-          Can I turn off BrowserSsoEnabled?
+          Can I turn off **BrowserSsoEnabled**?
         answer: |
-          If you don't have Access control policies based on device on AD FS or Windows Hello for Business Certificate enrollment using AD FS; you can turn off BrowserSsoEnabled. BrowserSsoEnabled allows AD FS to collect a PRT(Primary Refresh Token) from the client that contains device information. Without that device authentication of AD FS will not work on Windows 10 devices.
+          If you don't have access control policies based on the device on AD FS or Windows Hello for Business certificate enrollment via AD FS, you can turn off **BrowserSsoEnabled**. **BrowserSsoEnabled** allows AD FS to collect a Primary Refresh Token (PRT) from the client that contains device information. Without that token, device authentication of AD FS won't work on Windows 10 devices.
 
       - question: |
           How long are AD FS tokens valid?
         answer: |
-          Often this question means 'how long do users get single sign on (SSO) without having to enter new credentials, and how can I as an admin control that?'  This behavior, and the configuration settings that control it, are described in the article [AD FS Single Sign-On Settings](../operations/ad-fs-single-sign-on-settings.md).
+          Admins often wonder how long users get single sign-on (SSO) without having to enter new credentials, and how admins can control that behavior. This behavior, and the configuration settings that control it, are described in [AD FS single sign-on settings](../operations/ad-fs-single-sign-on-settings.md).
           
-          The default lifetimes of the various cookies and tokens are listed below (as well as the parameters that govern the lifetimes):
+          The default lifetimes of the various cookies and tokens are listed here (together with the parameters that govern the lifetimes):
           
-          **Registered Devices**
+          **Registered devices**
           
-          - PRT and SSO cookies: 90 days maximum, governed by PSSOLifeTimeMins. (Provided the device is used at least every 14 days, which is controlled by DeviceUsageWindow)
+          - PRT and SSO cookies: 90 days maximum, governed by **PSSOLifeTimeMins**. (If the device is used at least every 14 days. This time window is controlled by **DeviceUsageWindow**.)
           
-          - Refresh token: calculated based on the above to provide consistent behavior
+          - Refresh token: Calculated based on the preceding parameters to provide consistent behavior.
           
-          - access_token: 1 hour by default, based on the relying party
+          - access_token: One hour by default, based on the relying party.
           
-          - id_token: same as access token
+          - id_token: Same as access_token.
           
-          **Un-registered Devices**
+          **Un-registered devices**
           
-          - SSO cookies: 8 hours by default, governed by SSOLifetimeMins.  When Keep Me Signed in (KMSI) is enabled, default is 24 hours and configurable via KMSILifetimeMins.
+          - SSO cookies: Eight hours by default, governed by **SSOLifetimeMins**. When Keep me signed in (KMSI) is enabled, the default is 24 hours. This default is configurable via **KMSILifetimeMins**.
           
           
-          - Refresh token: 8 hours by default. 24 hours with KMSI enabled
+          - Refresh token: Eight hours by default. 24 hours if KMSI is enabled.
           
-          - access_token: 1 hour by default, based on the relying party
+          - access_token: One hour by default, based on the relying party.
           
-          - id_token: same as access token
+          - id_token: Same as access_token.
   
       - question: |
           Does AD FS support implicit flows for confidential client?
         answer: |
-          AD FS does not support implicit flows for confidential client. Client authentication is only enabled for token endpoint and AD FS will not issue an access token without client authentication. If confidential client needs an access token and also requires user authentication, it will need to use authorization code flow.
+          AD FS doesn't support implicit flows for confidential client. Client authentication is enabled only for token endpoint, and AD FS won't issue an access token without client authentication. If confidential client needs an access token and also requires user authentication, it will need to use authorization code flow.
 
       - question: |
           Does AD FS support HTTP Strict Transport Security (HSTS)?
         answer: |
-          HTTP Strict Transport Security (HSTS) is a web security policy mechanism that helps mitigate protocol downgrade attacks and cookie hijacking for services that have both HTTP and HTTPS endpoints. It allows web servers to declare that web browsers (or other complying user agents) should only interact with it using HTTPS and never via the HTTP protocol.
+          HSTS is a web security policy mechanism. It helps mitigate protocol downgrade attacks and cookie hijacking for services that have both HTTP and HTTPS endpoints. It allows web servers to declare that web browsers (or other complying user agents) should interact with them only by using HTTPS and never via the HTTP protocol.
           
-          All AD FS endpoints for web authentication traffic are opened exclusively over HTTPS.  As a result, AD FS effectively mitigates the threats that HTTP Strict Transport Security policy mechanism provides (by design there is no downgrade to HTTP since there are no listeners in HTTP). In addition, AD FS prevents the cookies from being sent to another server with HTTP protocol endpoints by marking all cookies with the secure flag.
+          All AD FS endpoints for web authentication traffic are opened exclusively over HTTPS. So AD FS mitigates the threats that HSTS policy mechanism creates. (By design, there's no downgrade to HTTP because there are no listeners in HTTP.) AD FS also prevents cookies from being sent to another server that has HTTP protocol endpoints by marking all cookies with the secure flag.
           
-          Therefore, implementing HSTS on an AD FS server is not required because it can never be downgraded.  For compliance purposes, AD FS servers meet these requirements because they can never use HTTP and all cookies are marked secure.
+          So you don't need HSTS on an AD FS server because HSTS can't be downgraded. AD FS servers meet compliance requirements because they can't use HTTP and because cookies are marked secure.
           
-          Additionally, AD FS 2016 (with the most up-to-date patches) and AD FS 2019 support emitting the HSTS header. To configure this, please see [Customize HTTP security response headers with AD FS](../operations/customize-http-security-headers-ad-fs.md)
-          
-      - question: |
-          X-ms-forwarded-client-ip does not contain the IP of the client but contains IP of the firewall in front of the proxy. Where can I get the right IP of the client?
-        answer: |
-          It is not recommended to do SSL termination before WAP. In case SSL termination is done in front of the WAP, the X-ms-forwarded-client-ip will contain the IP of the network device in front of WAP. Below is a brief description of the various IP-related claims that are supported by AD FS:
-           - x-ms-client-ip : Network IP of device which connected to the STS.  In the case of an extranet request, this always contains the IP of the WAP.
-           - x-ms-forwarded-client-ip : Multi-valued claim that will contain any values forwarded to AD FS by Exchange Online plus the IP address of the device which connected to the WAP.
-           - Userip: For extranet requests this claim will contain the value of x-ms-forwarded-client-ip.  For intranet requests, this claim will contain the same value as x-ms-client-ip.
-          
-           Additionally, in AD FS 2016 (with the most up to date patches) and higher versions also support capturing the x-forwarded-for header. Any load balancer or network device that does not forward at layer 3 (IP is preserved) should add the incoming client IP to the industry standard x-forwarded-for header.
+          Finally, AD FS 2016 (with the most up-to-date patches) and AD FS 2019 support emitting the HSTS header. To configure this behavior, see [Customize HTTP security response headers with AD FS](../operations/customize-http-security-headers-ad-fs.md).
           
       - question: |
-          I am trying to get additional claims on the user info endpoint, but it's only returning subject. How can I get additional claims?
+          X-MS-Forwarded-Client-IP doesn't contain the IP of the client. It contains the IP of the firewall in front of the proxy. Where can I get the IP of the client?
         answer: |
-          The AD FS userinfo endpoint always returns the subject claim as specified in the OpenID standards. AD FS does not provide additional claims requested via the UserInfo endpoint. If you need additional claims in ID token, refer to [Custom ID Tokens in AD FS](../development/custom-id-tokens-in-ad-fs.md).
+          We don't recommended that you do SSL termination before the Web Application Proxy server. If it is done in front of the Web Application Proxy server, the X-MS-Forwarded-Client-IP will contain the IP of the network device in front of the Web Application Proxy server. Here's a brief description of the various IP-related claims supported by AD FS:
+           - X-MS-Client-IP. Network IP of the device connected to the STS. For extranet requests, this claim always contains the IP of the Web Application Proxy server.
+           - X-MS-Forwarded-Client-IP. Multi-valued claim that contains any values forwarded to AD FS by Exchange Online. It also contains the IP address of the device connected to the Web Application Proxy server.
+           - Userip. For extranet requests, this claim contains the value of X-MS-Forwarded-Client-IP.  For intranet requests, this claim contains the same value as X-MS-Client-IP.
+          
+           AD FS 2016 (with the most up-to-date patches) and later versions also support capturing the X-Forwarded-For header. Any load balancer or network device that doesn't forward at layer 3 (IP is preserved) should add the incoming client IP to the industry-standard X-Forwarded-For header.
+          
+      - question: |
+          I'm trying to get more claims on the UserInfo endpoint, but it's only returning subject. How can I get more claims?
+        answer: |
+          The AD FS UserInfo endpoint always returns the subject claim as specified in the OpenID standards. AD FS doesn't support additional claims requested via the UserInfo endpoint. If you need more claims in an ID token, see [Custom ID tokens in AD FS](../development/custom-id-tokens-in-ad-fs.md).
           
       - question: |
           Why do I see a lot of 1021 errors on my AD FS servers?
         answer: |
-          This event is logged usually for an invalid resource access on AD FS for resource 00000003-0000-0000-c000-000000000000. This error is caused by an erroneous behavior of the client where it tries to get an access token for the Azure AD Graph service. Since the resource is not present on AD FS, this results in event ID 1021 on the AD FS servers. It's safe to ignore any warnings or errors for resource 00000003-0000-0000-c000-000000000000 on AD FS.
+          This event is usually logged for an invalid resource access on AD FS for resource 00000003-0000-0000-c000-000000000000. This error is caused when the client erroneously tries to get an access token for the Azure AD Graph service. Because the resource isn't on AD FS, event ID 1021 occurs on the AD FS servers. It's safe to ignore any warnings or errors for resource 00000003-0000-0000-c000-000000000000 on AD FS.
 
       - question: |
           Why am I seeing a warning for failure to add the AD FS service account to the Enterprise Key Admins group?
         answer: |
-          This group is only created when a Windows 2016 Domain Controller with the FSMO PDC role exists in the Domain. To resolve the error, you can create the Group manually and follow the below to give the required permission after adding the service account as member of the group.
+          This group is created only when a Windows Server 2016 domain controller with the FSMO PDC role exists in the domain. To resolve the error, you can create the group manually. Take these steps to add the required permissions after you add the service account as a member of the group:
           1.    Open **Active Directory Users and Computers**.
-          2.    **Right-click** your domain name from the navigation pane and click **Properties**.
-          3.    Click **Security** (if the Security tab is missing, turn on Advanced Features from the View menu).
-          4.    Click **Advanced**. **Click** Add. **Click** Select a principal.
-          5.    The Select User, Computer, Service Account, or Group dialog box appears.  In the Enter the object name to select text box, type Key Admin Group. Click **OK**.
-          6.    In the Applies to list box, select **Descendant User objects**.
-          7.    Using the scroll bar, scroll to the bottom of the page and click **Clear all**.
+          2.    Right-click your domain name in the left pane and then select **Properties**.
+          3.    Select **Security**. (If the **Security** tab is missing, turn on **Advanced Features** on the **View** menu.)
+          4.    Select **Advanced**, **Add**, and then **Select a principal**.
+          5.    The **Select User, Computer, Service Account, or Group** dialog appears. In the **Enter the object name to select** box, enter **Key Admin Group**. Select **OK**.
+          6.    In the **Applies to** box, select **Descendant User objects**.
+          7.    Scroll to the bottom of the page and select **Clear all**.
           8.    In the **Properties** section, select **Read msDS-KeyCredentialLink** and **Write msDS-KeyCredentialLink**.
           
       - question: |
-          Why does modern authentication from Android devices fail if the server does not send all the intermediate certificates in the chain with the SSL cert?
+          Why does modern authentication from Android devices fail if the server doesn't send all the intermediate certificates in the chain with the SSL cert?
         answer: |
-          Federated users may experience authentication to Azure AD for apps that use the Android ADAL library failing. The app will get an **AuthenticationException** when it tries to show the login page. In the Chrome browser, the AD FS login page might be called out as unsafe.
+          For apps that use the Android ADAL library, authentication to Azure AD might fail for federated users. The app will get an **AuthenticationException** when it tries to show the sign in page. In the Chrome browser, the AD FS sign in page might be described as unsafe.
           
-          Android - across all versions and all devices - does not support downloading additional certificates from the **authorityInformationAccess** field of the certificate. This is true of the Chrome browser as well. Any Server Authentication certificate that's missing intermediate certificates will result in this error if the entire certificate chain is not passed from AD FS.
+          For all versions and all devices, Android doesn't support downloading additional certificates from the **authorityInformationAccess** field of the certificate. This limitation applies to the Chrome browser as well. Any server authentication certificate that's missing intermediate certificates will cause this error if the entire certificate chain isn't passed from AD FS.
           
-          A proper solution to this problem is to configure the AD FS and WAP servers to send the necessary intermediate certificates along with the SSL certificate.
+          You can solve this problem by configuring the AD FS and Web Application Proxy servers to send the necessary intermediate certificates along with the SSL certificate.
           
-          When exporting the SSL certificate, from one machine, to be imported to the computer's personal store, of the AD FS and WAP server(s), make sure to export the Private key and select **Personal Information Exchange - PKCS #12**.
+          When you export the SSL certificate from one computer to be imported to the computer's personal store of the AD FS and Web Application Proxy servers, be sure to export the private key and select **Personal Information Exchange - PKCS #12**.
           
-          It is important that the check box to **Include all certificates in the certificate path if possible** is checked, as well as **Export all extended properties**.
+          Also, be sure to select **Include all certificates in the certificate path if possible** and **Export all extended properties**.
           
-          Run certlm.msc on the Windows servers and import the *.PFX into the Computer's Personal Certificate store. This will cause the server to pass the entire certificate chain to the ADAL library.
+          Run certlm.msc on the Windows servers and import *.pfx into the computer's personal certificate store. Doing so will cause the server to pass the entire certificate chain to the ADAL library.
           
           >[!NOTE]
-          > The certificate store of Network Load Balancers should also be updated to include the entire certificate chain if present
+          > The certificate store of network load balancers should also be updated to include the entire certificate chain, if present.
           
       - question: |
           Does AD FS support HEAD requests?
         answer: |
-          AD FS does not support HEAD requests.  Applications should not be using HEAD requests against AD FS endpoints.  This may cause HTTP error responses that are unexpected and/or delayed.  Additionally, you may see unexpected error events in the AD FS event log.
+          AD FS doesn't support HEAD requests. Applications shouldn't use HEAD requests against AD FS endpoints. Using these requests might cause HTTP error responses that are unexpected and/or delayed. You might also see unexpected error events in the AD FS event log.
 
       - question: |
-          Why am I not seeing a refresh token when I am logging in with a remote IdP?
+          Why don't I see a refresh token when I sign in with a remote IdP?
         answer: |
-          A refresh token is not issued if the token issued by IdP has a validity of less than 1 hour. To ensure a refresh token is issued, increase the validity of token issued by the IdP to more than 1 hour.
+          A refresh token isn't issued if the token issued by IdP has a validity of less than one hour. To ensure a refresh token is issued, increase the validity of the token issued by the IdP to more than one hour.
 
       - question: |
-          Do we have any way to change RP token encryption algorithm?
+          Is there any way to change the RP token encryption algorithm?
         answer: |
-          By default the RP token encryption is set to AES256 and it cannot be changed to any other value.
+          The RP token encryption is set to AES256. You can't change it to any other value.
 
       - question: |
-          On a mixed-mode farm, I get error when trying to set the new SSL certificate using Set-AdfsSslCertificate -Thumbprint. How can I update the SSL certificate in a mixed mode AD FS farm?
+          On a mixed-mode farm, I get an error when I try to set the new SSL certificate by using `Set-AdfsSslCertificate -Thumbprint`. How can I update the SSL certificate in a mixed-mode AD FS farm?
         answer: |
-          Mixed mode AD FS farms are meant to be a transitionary state. It is recommended during your planning to either roll over the SSL certificate prior to the upgrade process or complete the process and increase the farm behavior level prior to updating the SSL certificate. In the event that this was not done, the below instructions provide the ability to update the SSL certificate.
+          Mixed-mode AD FS farms are meant to be a transitionary state. It is recommended during your planning to either roll over the SSL certificate prior to the upgrade process or complete the process and increase the farm behavior level prior to updating the SSL certificate. In the event that this was not done, the below instructions provide the ability to update the SSL certificate.
           
           On WAP servers you can still use Set-WebApplicationProxySslCertificate. On the AD FS servers, you need to use netsh. Follow the steps as given below:
           
