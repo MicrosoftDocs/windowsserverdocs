@@ -20,7 +20,7 @@ In Windows Server, version 1803, we've [reduced the overall size of the Server C
 
 Here's the complete list of features and roles removed from the Server Core container image:
 
-<div style='font-size:9.0pt'>
+<div>
 
 <br>ADCertificateServicesRole
 <br>AuthManager
