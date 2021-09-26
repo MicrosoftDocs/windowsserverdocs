@@ -79,7 +79,7 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 >In a SQL based farm, the PowerShell command may be executed on any AD FS server that is a member of the farm.
 
 ### Step 5:  Add the claim description to AD FS
-1. Add the following Claim Description to the farm. This Claim Description is not present by default in ADFS 2012 R2 and needs to be manually added.
+1. Add the following Claim Description to the farm. This Claim Description is not present by default in AD FS 2012 R2 and needs to be manually added.
 2. In AD FS Management, under **Service**, right-click **Claim description** and select **Add claim description**
 3. Enter the following information in the claim description
    - Display Name: 'Windows device group'
@@ -110,16 +110,17 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 ``` powershell
 Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySupported:$true
 ```
-2. Restart the ADFS Service.
+
+2. Restart the AD FS Service.
 
 >[!NOTE]
 >Once ‘CompoundIdentitySupported' is set to true, installation of the same gMSA on new Servers (2012R2/2016) fails with the following error –
 **Install-ADServiceAccount : Cannot install service account. Error Message: 'The provided context did not match the target.'**.
 >
->**Solution**: Temporarily set CompoundIdentitySupported to $false. This step causes ADFS to stop issuing WindowsDeviceGroup claims.
+>**Solution**: Temporarily set CompoundIdentitySupported to $false. This step causes AD FS to stop issuing WindowsDeviceGroup claims.
 Set-ADServiceAccount -Identity 'ADFS Service Account' -CompoundIdentitySupported:$false
 Install the gMSA on the new Server and then enable CompoundIdentitySupported back to $True.
-Disabling CompoundIdentitySupported and then reenabling does not need ADFS service to be restarted.
+Disabling CompoundIdentitySupported and then reenabling does not need AD FS service to be restarted.
 
 ### Step 7: Update the AD FS Claims Provider Trust for Active Directory
 
@@ -184,16 +185,17 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 ``` powershell
 Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySupported:$true
 ```
-2. Restart the ADFS Service.
+
+2. Restart the AD FS Service.
 
 >[!NOTE]
 >Once ‘CompoundIdentitySupported' is set to true, installation of the same gMSA on new Servers (2012R2/2016) fails with the following error –
 **Install-ADServiceAccount : Cannot install service account. Error Message: 'The provided context did not match the target.'**.
 >
->**Solution**: Temporarily set CompoundIdentitySupported to $false. This step causes ADFS to stop issuing WindowsDeviceGroup claims.
+>**Solution**: Temporarily set CompoundIdentitySupported to $false. This step causes AD FS to stop issuing WindowsDeviceGroup claims.
 Set-ADServiceAccount -Identity 'ADFS Service Account' -CompoundIdentitySupported:$false
 Install the gMSA on the new Server and then enable CompoundIdentitySupported back to $True.
-Disabling CompoundIdentitySupported and then reenabling does not need ADFS service to be restarted.
+Disabling CompoundIdentitySupported and then reenabling does not need AD FS service to be restarted.
 
 ### Step 5: Update the AD FS Claims Provider Trust for Active Directory
 
@@ -214,8 +216,8 @@ Disabling CompoundIdentitySupported and then reenabling does not need ADFS servi
 
 ## Validation
 To validate the release of ‘WindowsDeviceGroup' claims, create a test Claims Aware Application using .Net 4.6. With WIF SDK 4.0.
-Configure the Application as a Relying Party in ADFS and update it with Claim Rule as specified in steps above.
-When authenticating to the Application using Windows Integrated Authentication provider of ADFS, the following claims are created.
+Configure the Application as a Relying Party in AD FS and update it with Claim Rule as specified in steps above.
+When authenticating to the Application using Windows Integrated Authentication provider of AD FS, the following claims are created.
 ![Validation](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc9.png)
 
 The Claims for the computer/device may now be consumed for richer access controls.

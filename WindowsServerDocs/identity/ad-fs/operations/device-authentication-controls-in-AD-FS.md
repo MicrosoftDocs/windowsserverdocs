@@ -49,7 +49,7 @@ PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
 ```
 
 >[!NOTE]
-> In ADFS 2019, `DeviceAuthenticationMethod` can be used with the `Set-AdfsRelyingPartyTrust` command.
+> In AD FS 2019, `DeviceAuthenticationMethod` can be used with the `Set-AdfsRelyingPartyTrust` command.
 
 ``` powershell
 PS:\>Set-AdfsRelyingPartyTrust -DeviceAuthenticationMethod ClientTLS
