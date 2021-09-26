@@ -29,7 +29,7 @@ freedisk [/s <computer> [/u [<domain>\]<user> [/p [<password>]]]] [/d <drive>] [
 | /u [`<domain>`\\]`<user>` | Runs the script with the permissions of the specified user account. The default is system permissions. |
 | /p [`<password>`] | Specifies the password of the user account that is specified in **/u**. |
 | /d `<drive>` | Specifies the drive for which you want to find out the availability of free space. You must specify `<drive>` for a remote computer. |
-| `<value>` | Checks for a specific amount of free disk space. You can specify `<value>` in bytes, KB, MB, GB, TB, PB, EB, ZB or YB. |
+| `<value>` | Checks for a specific amount of free disk space. You can specify `<value>` in bytes, KB, MB, GB, TB, PB, EB, ZB, or YB. |
 
 #### Remarks
 
@@ -41,13 +41,13 @@ freedisk [/s <computer> [/u [<domain>\]<user> [/p [<password>]]]] [/d <drive>] [
 
 ### Examples
 
-To determine whether there are at least 50 MB of free space available on drive C:, type:
+To determine whether there are at least 50 MB of free space available on drive C, type:
 
 ```
 freedisk 50mb
 ```
 
-Output similar to the following appears on the screen:
+Output similar to the following example appears on the screen:
 
 ```
 INFO: The specified 52,428,800 byte(s) of free space is available on current drive.
