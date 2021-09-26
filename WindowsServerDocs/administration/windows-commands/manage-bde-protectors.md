@@ -24,7 +24,7 @@ manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup
 ### Parameters
 
 | Parameter | Description |
-| ----------- | ----------- |
+| --------- | ----------- |
 | -get | Displays all the key protection methods enabled on the drive and provides their type and identifier (ID). |
 | -add | Adds key protection methods as specified by using additional **-add** parameters. |
 | -delete | Deletes key protection methods used by BitLocker. All key protectors will be removed from a drive unless the optional **-delete** parameters are used to specify which protectors to delete. When the last protector on a drive is deleted, BitLocker protection of the drive is disabled to ensure that access to data is not lost inadvertently. |
