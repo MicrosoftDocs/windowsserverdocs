@@ -26,14 +26,14 @@ freedisk [/s <computer> [/u [<domain>\]<user> [/p [<password>]]]] [/d <drive>] [
 | Parameter | Description |
 | --------- | ----------- |
 | /s `<computer>` | Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer. This parameter applies to all files and folders specified in the command. |
-| /u `[<domain>\]<user>` | Runs the script with the permissions of the specified user account. The default is system permissions. |
-| /p [<password>] | Specifies the password of the user account that is specified in **/u**. |
+| /u [`<domain>`\\]`<user>` | Runs the script with the permissions of the specified user account. The default is system permissions. |
+| /p [`<password>`] | Specifies the password of the user account that is specified in **/u**. |
 | /d `<drive>` | Specifies the drive for which you want to find out the availability of free space. You must specify `<drive>` for a remote computer. |
 | `<value>` | Checks for a specific amount of free disk space. You can specify `<value>` in bytes, KB, MB, GB, TB, PB, EB, ZB or YB. |
 
 #### Remarks
 
-- Using the **/s**, **/u**, and **/p** command-line options are available only when you use **/s**. You must use **/p** with **/u**to provide the user s password.
+- Using the **/s**, **/u**, and **/p** command-line options are available only when you use **/s**. You must use **/p** with **/u**to provide the user's password.
 
 - For unattended installations, you can use **freedisk** in installation batch files to check for the prerequisite amount free space before continuing with the installation.
 

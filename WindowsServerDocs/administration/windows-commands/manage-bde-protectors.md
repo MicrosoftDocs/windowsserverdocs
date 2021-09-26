@@ -60,7 +60,7 @@ manage-bde -protectors -add [<drive>] [-forceupgrade] [-recoverypassword <numeri
 | `<pathtoexternalkeydirectory>` | Represents the directory path to the startup key. |
 | -certificate | Adds a public key protector for a data drive. You can also use **-cert** as an abbreviated version of this command. |
 | -cf | Specifies that a certificate file will be used to provide the public key certificate. |
-| <pathtocertificatefile> | Represents the directory path to the certificate file. |
+| `<pathtocertificatefile>` | Represents the directory path to the certificate file. |
 | -ct | Specifies that a certificate thumbprint will be used to identify the public key certificate |
 | `<certificatethumbprint>` | Specifies the value of the thumbprint property of the certificate you want to use. For example, a certificate thumbprint value of a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b should be specified as a909502dd82ae41433e6f83886b00d4277a32a7b. |
 | -tpmandpin | Adds a Trusted Platform Module (TPM) and personal identification number (PIN) protector for the operating system drive. You can also use **-tp** as an abbreviated version of this command. |
