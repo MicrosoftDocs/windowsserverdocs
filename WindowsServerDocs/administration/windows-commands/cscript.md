@@ -32,16 +32,16 @@ cscript <scriptname.extension> [/b] [/d] [/e:<engine>] [{/h:cscript | /h:wscript
 | /d | Starts the debugger. |
 | /e:`<engine>` | Specifies the engine that is used to run the script. |
 | /h:cscript | Registers cscript.exe as the default script host for running scripts. |
-| /h:wscript | Registers wscript.exe as the default script host for running scripts. This is the default. |
-| /i | Specifies interactive mode, which displays alerts, scripting errors, and input prompts. This is the default and the opposite of `/b`. |
+| /h:wscript | Registers wscript.exe as the default script host for running scripts. The default. |
+| /i | Specifies interactive mode, which displays alerts, scripting errors, and input prompts. The default, and the opposite of `/b`. |
 | /job:`<identifier>` | Runs the job identified by *identifier* in a .wsf script file. |
-| /logo | Specifies that the Windows Script Host banner is displayed in the console before the script runs. This is the default and the opposite of `/nologo`. |
+| /logo | Specifies that the Windows Script Host banner is displayed in the console before the script runs. The default, and the opposite of `/nologo`. |
 | /nologo | Specifies that the Windows Script Host banner is not displayed before the script runs. |
 | /s | Saves the current command-prompt options for the current user. |
 | /t:`<seconds>` | Specifies the maximum time the script can run (in seconds). You can specify up to 32,767 seconds. The default is no time limit. |
 | /u | Specifies Unicode for input and output that is redirected from the console. |
 | /x | Starts the script in the debugger. |
-| /? | Displays available command parameters and provides help for using them. This is the same as typing **cscript.exe** with no parameters and no script. |
+| /? | Displays available command parameters and provides help for using them. The same as typing **cscript.exe** with no parameters and no script. |
 | scriptarguments | Specifies the arguments passed to the script. Each script argument must be preceded by a slash (**/**). |
 
 #### Remarks
