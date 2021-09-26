@@ -28,8 +28,8 @@ change port [<portX>=<portY| /d <portX | /query]
 
 | Parameter | Description |
 |-----------------|----------------------------------------|
-| <portX>=<portY> | Maps COM `<*portX*>` to `<*portY*>` |
-| /d <portX> | Deletes the mapping for COM `<*portX*>` |
+| `<portX>`=`<portY>` | Maps COM `<*portX*>` to `<*portY*>` |
+| /d `<portX>` | Deletes the mapping for COM `<*portX*>` |
 | /query | Displays the current port mappings. |
 | /? | Displays help at the command prompt. |
 
