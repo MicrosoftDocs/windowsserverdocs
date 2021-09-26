@@ -16,13 +16,18 @@ ms.date: 10/16/2017
 Displays information about the multicast transmission for a specified image.
 
 ## Syntax
+
 **Windows Server 2008**
+
 ```
 wdsutil [Options] /Get-MulticastTransmissiomedia:<Image name> [/Server:<Server name>mediatype:InstallmediaGroup:<Image group name>]
 [/Filename:<File name>] [/Show:Clients]
 ```
+
 **Windows Server 2008 R2**
+
 for boot image transmissions:
+
 ```
 wdsutil [Options] /Get-MulticastTransmissiomedia:<Image name>
     [/Server:<Server name>]
@@ -31,7 +36,9 @@ wdsutil [Options] /Get-MulticastTransmissiomedia:<Image name>
     /Architecture:{x86 | ia64 | x64}
         [/Filename:<File name>]
 ```
+
 for install image transmissions:
+
 ```
 wdsutil [Options] /Get-MulticastTransmissiomedia:<Image name>
          [/Server:<Server name>]
@@ -40,36 +47,49 @@ wdsutil [Options] /Get-MulticastTransmissiomedia:<Image name>
     mediaGroup:<Image Group>]
      [/Filename:<File name>]
 ```
+
 ### Parameters
+
 |Parameter|Description|
 |-------|--------|
-media:<Image name>|Displays the multicast transmission that is associated with this image.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
+media:\<Image name\>|Displays the multicast transmission that is associated with this image.|
+|[/Server:\<Server name\>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
 |/imagetype:Install|Specifies the image type. Note that this option must be set to **Install**.|
-|/imagegroup:<Image group name>]|Specifies the image group that contains the image. If no image group name is specified and only one image group exists on the server, that image group is used. If more than one image group exists on the server, you must use this option to specify an image group.|
-|/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the boot image that is associated with the transmission. Because it is possible to have the same image name for boot images in different architectures, you should specify the architecture to ensure                                   that the correct image is used.|
-|[/Filename:<File name>]|Specifies the file that contains the image. If the image cannot be uniquely identified by name, you must use this option to specify the file name.|
+|/imagegroup:\<Image group name\>]|Specifies the image group that contains the image. If no image group name is specified and only one image group exists on the server, that image group is used. If more than one image group exists on the server, you must use this option to specify an image group.|
+|/Architecture:{x86 \| ia64 \| x64}|Specifies the architecture of the boot image that is associated with the transmission. Because it is possible to have the same image name for boot images in different architectures, you should specify the architecture to ensure                                   that the correct image is used.|
+|[/Filename:\<File name\>]|Specifies the file that contains the image. If the image cannot be uniquely identified by name, you must use this option to specify the file name.|
 |[/Show:Clients]<p>or<p>[/details:Clients]|Displays information about client computers that are connected to the multicast transmission.|
+
 ## Examples
+
 **Windows Server 2008**
+
 To view information about the transmission for an image named  Vista with Office, type one of the following:
+
 ```
 wdsutil /Get-MulticastTransmission:Vista with Office imagetype:Install
 wdsutil /Get-MulticastTransmission /Server:MyWDSServer image:Vista with Office imagetype:Install imageGroup:ImageGroup1 /Filename:install.wim /Show:Clients
 ```
+
 **Windows Server 2008 R2**
+
 To view information about the transmission for an image named  Vista with Office, type one of the following:
+
 ```
 wdsutil /Get-MulticastTransmission:Vista with Office
  /Imagetype:Install
 ```
+
 ```
 wdsutil /Get-MulticastTransmission /Server:MyWDSServer image:Vista with Office imagetype:Install ImageGroup:ImageGroup1 /Filename:install.wim /details:Clients
 ```
+
 ```
 wdsutil /Get-MulticastTransmission /Server:MyWDSServer:X64 Boot Imagetype:Boot /Architecture:x64 /Filename:boot.wim /details:Clients
 ```
+
 ## Additional References
+
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil get-allmulticasttransmissions command](wdsutil-get-allmulticasttransmissions.md)
 - [wdsutil new-multicasttransmission command](wdsutil-new-multicasttransmission.md)
