@@ -140,7 +140,10 @@ conceptualContent:
         - url: ./security/windows-authentication/windows-authentication-overview.md
           itemType: overview
           text: Windows Authentication overview
-        - url: ./security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts.md
+        - url: ./security/windows-authentication/windows-authentication-overview.md
+          itemType: overview
+          text: Secured-core server
+        - url: ./security/secured-core-server.md
           itemType: how-to-guide
           text: Getting started with group-managed service accounts
         - url: ./security/windows-authentication/credentials-processes-in-windows-authentication.md

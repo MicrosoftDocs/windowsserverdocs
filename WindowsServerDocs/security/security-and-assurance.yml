@@ -68,6 +68,8 @@ landingContent:
             url: /windows/desktop/SecBP/control-flow-guard
           - text: Windows Defender
             url: ./windows-defender/windows-defender-overview-windows-server.md
+          - text: Secured-core server
+            url: secured-core-server.md
       - linkListType: video
         links:
           - text: Device Guard demo video
