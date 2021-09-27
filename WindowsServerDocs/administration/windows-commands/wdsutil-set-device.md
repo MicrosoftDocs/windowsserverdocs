@@ -20,19 +20,21 @@ wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [
 [/WdsClientUnattend:<Relative path>] [/User:<Domain\User | User@Domain>] [/JoinRights:{JoinOnly | Full}] [/JoinDomain:{Yes | No}] [/BootImagepath:<Relative path>] [/Domain:<Domain>] [/resetAccount]
 ```
 ### Parameters
+
 |Parameter|Description|
 |-------|--------|
-|/Device:<computer name>|Specifies the name of the computer (SAM-Account-Name).|
-|[/ID:<UUID &#124; MAC address>]|Specifies either the GUID/UUID or the MAC address of the computer. This value must be in one of the following three formats:<p>-   Binary string: **/ID:ACEFA3E81F20694E953EB2DAA1E8B1B6**<br />-   GUID/UUID string: /ID:**E8A3EFAC-201F-4E69-953E-B2DAA1E8B1B6**<br />-   MAC address: **00B056882FDC** (no dashes) or **00-B0-56-88-2F-DC** (with dashes)|
-|[/ReferralServer:<Server name>]|Specifies the name of the server to be contacted to download the network boot program and boot image using Trivial File Transfer Protocol (tftp).|
-|[/BootProgram:<Relative path>]|Specifies the relative path from the remoteInstall folder to the network boot program that the specified computer will receive. For example: **boot\x86\pxeboot.com**|
-|[/WdsClientUnattend:<Relative path>]|Specifies the relative path from the remoteInstall folder to the unattend file that automates the installation screens for the Windows Deployment Services client.|
-|[/User:<Domain\User &#124; User@Domain>]|Sets permissions on the computer account object to give the specified user the necessary rights to join the computer to the domain.|
-|[/JoinRights:{JoinOnly &#124; Full}]|Specifies the type of rights to be assigned to the user.<p>-   **JoinOnly** requires the administrator to reset the computer account before the user can join the computer to the domain.<br />-   **Full** gives full access to the user, including the right to join the computer to the domain.|
-|[/JoinDomain:{Yes &#124; No}]|Specifies whether or not the computer should be joined to the domain as this computer account during a Windows Deployment Services installation. The default setting is **Yes**.|
-|[/BootImagepath:<Relative path>]|Specifies the relative path from the remoteInstall folder to the boot image that the computer will use.|
-|[/Domain:<Domain>]|Specifies the domain to be searched for the prestaged computer. The default value is the local domain.|
+|/Device:\\<computer name\>|Specifies the name of the computer (SAM-Account-Name).|
+|[/ID:\<UUID \| MAC address\>]|Specifies either the GUID/UUID or the MAC address of the computer. This value must be in one of the following three formats:<p>-   Binary string: **/ID:ACEFA3E81F20694E953EB2DAA1E8B1B6**<br />-   GUID/UUID string: /ID:**E8A3EFAC-201F-4E69-953E-B2DAA1E8B1B6**<br />-   MAC address: **00B056882FDC** (no dashes) or **00-B0-56-88-2F-DC** (with dashes)|
+|[/ReferralServer:\<Server name\>]|Specifies the name of the server to be contacted to download the network boot program and boot image using Trivial File Transfer Protocol (tftp).|
+|[/BootProgram:\<Relative path\>]|Specifies the relative path from the remoteInstall folder to the network boot program that the specified computer will receive. For example: **boot\x86\pxeboot.com**|
+|[/WdsClientUnattend:\<Relative path\>]|Specifies the relative path from the remoteInstall folder to the unattend file that automates the installation screens for the Windows Deployment Services client.|
+|[/User:\<Domain\User \| User@Domain\>]|Sets permissions on the computer account object to give the specified user the necessary rights to join the computer to the domain.|
+|[/JoinRights:{JoinOnly \| Full}]|Specifies the type of rights to be assigned to the user.<p>-   **JoinOnly** requires the administrator to reset the computer account before the user can join the computer to the domain.<br />-   **Full** gives full access to the user, including the right to join the computer to the domain.|
+|[/JoinDomain:{Yes \| No}]|Specifies whether or not the computer should be joined to the domain as this computer account during a Windows Deployment Services installation. The default setting is **Yes**.|
+|[/BootImagepath:\<Relative path\>]|Specifies the relative path from the remoteInstall folder to the boot image that the computer will use.|
+|[/Domain:\<Domain\>]|Specifies the domain to be searched for the prestaged computer. The default value is the local domain.|
 |[/resetAccount]|resets the permissions on the specified computer so that anyone with the appropriate permissions can join the domain by using this account.|
+
 ## Examples
 To set the network boot program and referral server for a computer, type:
 ```
