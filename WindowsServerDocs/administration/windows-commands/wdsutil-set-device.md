@@ -23,7 +23,7 @@ wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [
 
 |Parameter|Description|
 |-------|--------|
-|/Device:\\<computer name\>|Specifies the name of the computer (SAM-Account-Name).|
+|/Device:\<computer name\>|Specifies the name of the computer (SAM-Account-Name).|
 |[/ID:\<UUID \| MAC address\>]|Specifies either the GUID/UUID or the MAC address of the computer. This value must be in one of the following three formats:<p>-   Binary string: **/ID:ACEFA3E81F20694E953EB2DAA1E8B1B6**<br />-   GUID/UUID string: /ID:**E8A3EFAC-201F-4E69-953E-B2DAA1E8B1B6**<br />-   MAC address: **00B056882FDC** (no dashes) or **00-B0-56-88-2F-DC** (with dashes)|
 |[/ReferralServer:\<Server name\>]|Specifies the name of the server to be contacted to download the network boot program and boot image using Trivial File Transfer Protocol (tftp).|
 |[/BootProgram:\<Relative path\>]|Specifies the relative path from the remoteInstall folder to the network boot program that the specified computer will receive. For example: **boot\x86\pxeboot.com**|
