@@ -10379,6 +10379,16 @@
       "source_path": "WindowsServerDocs/storage/storage-spaces/maintain-servers.md",
       "redirect_url": "/azure-stack/hci/manage/maintain-servers/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/windows-server-versions.md",
+      "redirect_url": "/windows-server/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/sddc.md",
+      "redirect_url": "/azure-stack/hci/overview/",
+      "redirect_document_id": false
     }
   ]
 }

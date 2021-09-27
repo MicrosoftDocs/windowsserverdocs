@@ -27,7 +27,7 @@ bootcfg /debug {on | off | edit}[/s <computer> [/u <domain>\<user> /p <password>
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{on | off | edit}` | Specifies the value for port debugging, including:<ul><li>**on.** Enables remote debugging support by adding the /debug option to the specified `<osentrylinenum>`.</li><li>**off.** Disables remote debugging support by removing the /debug option from the specified <osentrylinenum>.</li><li>**edit.** Allows changes to port and baud rate settings by changing the values associated with the /debug option for the specified <osentrylinenum>.</li></ul> |
+| `{on | off | edit}` | Specifies the value for port debugging, including:<ul><li>**on.** Enables remote debugging support by adding the /debug option to the specified `<osentrylinenum>`.</li><li>**off.** Disables remote debugging support by removing the /debug option from the specified `<osentrylinenum>`.</li><li>**edit.** Allows changes to port and baud rate settings by changing the values associated with the /debug option for the specified `<osentrylinenum>`.</li></ul> |
 | `/s <computer>` | Specifies the name or IP address of a remote computer (don't use backslashes). The default is the local computer. |
 | `/u <domain>\<user>`  | Runs the command with the account permissions of the user specified by `<user>` or `<domain>\<user>`. The default is the permissions of the current logged on user on the computer issuing the command. |
 | `/p <password>` | Specifies the password of the user account that is specified in the **/u** parameter. |
