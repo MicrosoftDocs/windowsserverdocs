@@ -39,7 +39,7 @@ wdsutil [Options] /New-Namespace [/Server:<Server name>]
 |/Namespace:\<Namespace name\>|Specifies the name of the namespace. Note that this is not the friendly name, and it must be unique.<p>-   **Deployment Server role service**: The syntax for this option is /Namespace:WDS:\<Image group\>/\<Image name\>/\<Index\>. For example: **WDS:ImageGroup1/install.wim/1**<br />-   **Transport Server role service**: This value should match the name given when the namespace was created on the server.|
 |/ContentProvider:\<Name\>]|Specifies the name of the content provider that will provide content for the namespace.|
 |[/ConfigString:\<Configuration string\>]|Specifies the configuration string for the content provider.|
-|/Namespacetype: {AutoCast \| ScheduledCast}|Specifies the settings for the transmission. You specify the settings using the following options:<p>-   [/time: <time>] - Sets the time that the transmission should start by using the following format: YYYY/MM/DD:hh:mm. This option applies only to Scheduled-Cast transmissions.<br />-   [/Clients: <Number of clients>] - Sets the minimum number of clients to wait for before the transmission starts. This option applies only to Scheduled-Cast transmissions.|
+|/Namespacetype: {AutoCast \| ScheduledCast}|Specifies the settings for the transmission. You specify the settings using the following options:<p>-   [/time: \<time\>] - Sets the time that the transmission should start by using the following format: YYYY/MM/DD:hh:mm. This option applies only to Scheduled-Cast transmissions.<br />-   [/Clients: \<Number of clients\>] - Sets the minimum number of clients to wait for before the transmission starts. This option applies only to Scheduled-Cast transmissions.|
 
 ## Examples
 
