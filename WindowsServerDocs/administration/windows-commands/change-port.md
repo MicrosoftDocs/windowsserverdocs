@@ -21,15 +21,15 @@ Lists or changes the COM port mappings to be compatible with MS-DOS applications
 ## Syntax
 
 ```
-change port [<portX>=<portY| /d <portX | /query]
+change port [<portX>=<portY>| /d <portX> | /query]
 ```
 
 ### Parameters
 
 | Parameter | Description |
 |-----------------|----------------------------------------|
-| <portX>=<portY> | Maps COM `<*portX*>` to `<*portY*>` |
-| /d <portX> | Deletes the mapping for COM `<*portX*>` |
+| `<portX>`=`<portY>` | Maps COM `<portX>` to `<portY>` |
+| /d `<portX>` | Deletes the mapping for COM `<portX>` |
 | /query | Displays the current port mappings. |
 | /? | Displays help at the command prompt. |
 

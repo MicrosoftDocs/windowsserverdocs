@@ -16,24 +16,34 @@ ms.date: 10/16/2017
 Displays information about a specified Transport Server.
 
 ## Syntax
+
 ```
 wdsutil [Options] /Get-TransportServer [/Server:<Server name>] /Show:{Config}
 ```
+
 ### Parameters
+
 |Parameter|Description|
 |-------|--------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
+|[/Server:\<Server name\>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
 |/Show:{Config}|Returns configuration information about the specified Transport Server.|
+
 ## Examples
+
 To view information about the server, type:
+
 ```
 wdsutil /Get-TransportServer /Show:Config
 ```
+
 To view configuration information, type:
+
 ```
 wdsutil /Get-TransportServer /Server:MyWDSServer /Show:Config
 ```
+
 ## Additional References
+
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 - [wdsutil disable-transportserver command](wdsutil-disable-transportserver.md)
 - [wdsutil enable-transportserver command](wdsutil-enable-transportserver.md)

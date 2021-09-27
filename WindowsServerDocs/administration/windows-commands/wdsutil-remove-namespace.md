@@ -20,11 +20,13 @@ Removes a custom namespace.
 wdsutil /remove-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/force]
 ```
 ### Parameters
+
 |Parameter|Description|
 |-------|--------|
-|/Namespace:<Namespace name>|Specifies the name of the namespace. This is not the friendly name, and it must be unique.<p>-   **Deployment Server role service**: The syntax for namespace name is /Namespace:WDS:<ImageGroup>/<ImageName>/<Index>. For example: **WDS:ImageGroup1/install.wim/1**<br />-   **Transport Server role service**: This value must match the name given to the namespace when it was created on the server.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
+|/Namespace:\<Namespace name\>|Specifies the name of the namespace. This is not the friendly name, and it must be unique.<p>-   **Deployment Server role service**: The syntax for namespace name is /Namespace:WDS:\<ImageGroup\>/\<ImageName\>/\<Index\>. For example: **WDS:ImageGroup1/install.wim/1**<br />-   **Transport Server role service**: This value must match the name given to the namespace when it was created on the server.|
+|[/Server:\<Server name\>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
 |[/force]|removes the namespace immediately and terminates all clients. Note that unless you specify **/force**, existing clients can complete the transfer, but new clients are not able to join.|
+
 ## Examples
 To stop a namespace (current clients can complete the transfer but new clients are not able to join), type:
 ```

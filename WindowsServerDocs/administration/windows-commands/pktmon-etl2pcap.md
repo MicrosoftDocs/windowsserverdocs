@@ -25,9 +25,9 @@ Where `<file>` is the ETL file to convert.
 
 | **Parameter** | **Description** |
 | ------------- | --------------- |
-| **-o, --out <name>** | Name of the formatted pcapng file. |
+| **-o, --out \<name\>** | Name of the formatted pcapng file. |
 | **-d, --drop-only** | Convert dropped packets only. |
-| **-c, --component-id <id>** | Filter packets by a specific component ID. |
+| **-c, --component-id \<id\>** | Filter packets by a specific component ID. |
 
 ## Additional References
 

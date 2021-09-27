@@ -25,7 +25,7 @@ cd <remotedirectory>
 
 | Parameter | Description |
 | --------- | ----------- |
-| <remotedirectory> | Specifies the directory on the remote computer to which you want to change. |
+| `<remotedirectory>` | Specifies the directory on the remote computer to which you want to change. |
 
 ### Examples
 
