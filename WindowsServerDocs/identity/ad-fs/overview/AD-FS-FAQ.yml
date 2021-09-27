@@ -399,30 +399,34 @@ sections:
       - question: |
           I'm getting Event ID 570 on AD FS 2019. How do I mitigate this event?
         answer: |
-          Here's the full text of the event:
+          Here's the text of the event:
 
-          Active Directory trust enumeration was unable to enumerate one of more domains due to the following error. Enumeration will continue but the Active Directory identifier list may not be correct. Validate that all expected Active Directory identifiers are present by running Get-ADFSDirectoryProperties.
+          `Active Directory trust enumeration was unable to enumerate one of more domains due to the following error. Enumeration will continue but the Active Directory identifier list may not be correct. Validate that all expected Active Directory identifiers are present by running Get-ADFSDirectoryProperties.`
 
           This event occurs when forests aren't trusted when AD FS attempts to enumerate all the forests in a chain of trusted forests and connect across all the forests. For example, assume AD FS Forest A and Forest B are trusted and that and Forest B and Forest C are trusted. AD FS will enumerate all three forests and attempt to find a trust between Forest A and Forest C. If users from the failing forest should be authenticated by AD FS, set up a trust between the AD FS forest and the failing forest. If users from the failing forest shouldn't be authenticated by AD FS, ignore this event.
 
       - question: |
-          I'm getting Event ID 364: 
-          Microsoft.IdentityServer.AuthenticationFailedException: MSIS5015: Authentication of the presented token failed. Token Binding claim in token must match the binding provided by the channel. 
-
-          What should I do to resolve this problem?
+          I'm getting Event ID 364. What should I do to resolve this problem?
+          
         answer: |
-          In AD FS 2016, token binding is automatically enabled and causes multiple known problems with proxy and federation scenarios. These problems cause this event. To resolve this event, run the following PowerShell command to remove token binding support:
+          Here's the  text of the event: 
+
+          `Microsoft.IdentityServer.AuthenticationFailedException: MSIS5015: Authentication of the presented token failed. Token Binding claim in token must match the binding provided by the channel.`
+
+          In AD FS 2016, token binding is automatically enabled and causes multiple known problems with proxy and federation scenarios. These problems cause this event. To resolve the event, run the following PowerShell command to remove token binding support:
           
           `Set-AdfsProperties -IgnoreTokenBinding $true`
          
       - question: |
-          I'm getting Event ID 543:
-           System.ServiceModel.FaultException: The formatter threw an error while trying to deserialize the message: There was an error while trying to deserialize parameter schemas.microsoft.com/ws/2009/12/identityserver/protocols/policystore:maxBehaviorLevel". The InnerException message was "Invalid enum value 'Win2019' cannot be deserialized into type 'Microsoft.IdentityServer.FarmBehavior'. Ensure that the necessary enum values are present and are marked with EnumMemberAttribute attribute if the type has DataContractAttribute attribute.
-
-          How do I mitigate this event?
-        answer: |
-          This event is expected when both of these statements are true:
-          - You have a mixed-mode farm. 
-          - AD FS 2019 provides the farm max behavior level information to the primary federation server and isn't recognized by federation server version 2016. 
+          I'm getting Event ID 543. How do I mitigate this event?
           
-          AD FS 2019 keeps trying to share in the farm the MaxBehaviorLevel value `Win2019` until it becomes stale after two months and is automatically removed from the farm. To avoid getting this event, migrate the primary federation role to the federation server with the latest version. Follow the instructions in [To upgrade your AD FS farm to Windows Server 2019 Farm Behavior Level](https://docs.microsoft.com/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server?source=docs#to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level).
+        answer: |
+           Here's the text of the event:
+
+           `System.ServiceModel.FaultException: The formatter threw an error while trying to deserialize the message: There was an error while trying to deserialize parameter schemas.microsoft.com/ws/2009/12/identityserver/protocols/policystore:maxBehaviorLevel". The InnerException message was "Invalid enum value 'Win2019' cannot be deserialized into type 'Microsoft.IdentityServer.FarmBehavior'. Ensure that the necessary enum values are present and are marked with EnumMemberAttribute attribute if the type has DataContractAttribute attribute.`
+
+           This event is expected when both of these statements are true:
+           - You have a mixed-mode farm. 
+           - AD FS 2019 provides the farm max behavior level information to the primary federation server and isn't recognized by federation server version 2016. 
+          
+           AD FS 2019 keeps trying to share in the farm the MaxBehaviorLevel value `Win2019` until it becomes stale after two months and is automatically removed from the farm. To avoid getting this event, migrate the primary federation role to the federation server with the latest version. Follow the instructions in [To upgrade your AD FS farm to Windows Server 2019 Farm Behavior Level](https://docs.microsoft.com/windows-server/identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server?source=docs#to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level).
