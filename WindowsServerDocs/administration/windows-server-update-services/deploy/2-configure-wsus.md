@@ -114,7 +114,7 @@ If the corporate network uses proxy servers, the proxy servers must support HTTP
 
 #### To set up WSUS to use two proxy servers
 
-1. Log on to the computer that will the WSUS server by using an account that's a member of the Local Administrators group.
+1. Log on to the computer that will be the WSUS server by using an account that's a member of the Local Administrators group.
 
 2. Install the WSUS server role. During the WSUS Configuration Wizard, don't specify a proxy server.
 
@@ -218,7 +218,7 @@ This procedure assumes that you're using the WSUS Configuration Wizard, which ap
 
 11. After you select the appropriate language options for your deployment, select **Next**.
 
-12. The **Choose Products** page allows you specify the products for which you want updates. Select product categories, such as Windows, or specific products, such as Windows Server 2012. Selecting a product category selects all the products in that category.
+12. The **Choose Products** page allows you to specify the products for which you want updates. Select product categories, such as Windows, or specific products, such as Windows Server 2012. Selecting a product category selects all the products in that category.
 
 13. Select the appropriate product options for your deployment, and then select **Next**.
 
@@ -385,7 +385,7 @@ The WSUS server's SSL certificate must be imported into the client computers' Tr
 
 The client computers must trust the certificate that you bind to the WSUS server. Depending on the type of certificate that's used, you might have to set up a service to enable the client computers to trust the certificate that's bound to the WSUS server.
 
-If you're using local publishing, you should also configure the client computers to trust the WSUS server's code-signing certificate. For instructions, see [Local publishing](previous-versions/windows/desktop/bb902470(v=vs.85)).
+If you're using local publishing, you should also configure the client computers to trust the WSUS server's code-signing certificate. For instructions, see [Local publishing](/previous-versions/windows/desktop/bb902470(v=vs.85)).
 
 ## 2.6. Configure client computers to receive updates from the WSUS server
 
