@@ -19,7 +19,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.2459        |1.2.1672                  |
-|Insider    |1.2.2453        |1.2.1672                  |
+|Insider    |1.2.2459        |1.2.1672                  |
 
 ## Updates for version 1.2.2459
 
