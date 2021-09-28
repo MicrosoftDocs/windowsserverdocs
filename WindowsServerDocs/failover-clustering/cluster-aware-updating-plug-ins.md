@@ -171,8 +171,8 @@ Configure the following settings. For more information, see the links to section
   > [!IMPORTANT]
   > You must perform additional configuration steps on the SMB server to enable SMB data integrity with SMB signing or SMB Encryption. For more information, see Step 4 in [Restrict access to the hotfix root folder](#BKMK_ACL). If you select the option to enforce the use of SMB Encryption, and the hotfix root folder is not configured for access by using SMB Encryption, the Updating Run will fail.
 - Optionally, disable the default checks for sufficient permissions for the hotfix root folder and the hotfix configuration file. In the CAU UI, select **Disable check for administrator access to the hotfix root folder and configuration file**, or configure the **DisableAclChecks\='True'** plug\-in argument.
-- Optionally, configure the **HotfixInstallerTimeoutMinutes\=<Integer>** argument to specify how long the hotfix plug\-in waits for the hotfix installer process to return. \(The default is 30 minutes.\) For example, to specify a timeout period of two hours, set **HotfixInstallerTimeoutMinutes\=120**.
-- Optionally, configure the **HotfixConfigFileName \= <name>** plug\-in argument to specify a name for the hotfix configuration file that is located in the hotfix root folder. If not specified, the default name DefaultHotfixConfig.xml is used.
+- Optionally, configure the **HotfixInstallerTimeoutMinutes\=\<Integer\>** argument to specify how long the hotfix plug\-in waits for the hotfix installer process to return. \(The default is 30 minutes.\) For example, to specify a timeout period of two hours, set **HotfixInstallerTimeoutMinutes\=120**.
+- Optionally, configure the **HotfixConfigFileName \= \<name\>** plug\-in argument to specify a name for the hotfix configuration file that is located in the hotfix root folder. If not specified, the default name DefaultHotfixConfig.xml is used.
 
 ### <a name="BKMK_HF_ROOT"></a>Configure a hotfix root folder structure
 
