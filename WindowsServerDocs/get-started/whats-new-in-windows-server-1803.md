@@ -54,10 +54,10 @@ The specific scenarios for the Semi-Annual Channel and the Long-Term Servicing C
 
 A smaller Server Core container with better application compatibility is now available. Detailed information is available [here](https://techcommunity.microsoft.com/t5/virtualization/bg-p/Virtualization).
 
-- Unused optional features and roles have been removed. For more information see [Roles, Role Services, and Features not in Server Core containers](../administration/server-core/server-core-container-removed-roles.md).
+- Unused optional features and roles have been removed. For more information, see [Roles, Role Services, and Features not in Server Core containers](../administration/server-core/server-core-container-removed-roles.md).
     - Decreased download size to 1.58 GB, 30% reduction from Windows Server, version 1709.
     - Decreased size on disk to 3.61 GB, 20% reduction from Windows Server, version 1709.
-- Nano Server container image is below 100MB
+- Nano Server container image is below 100 MB
 
 ### Windows Subsystem for Linux (WSL)
 
@@ -65,7 +65,7 @@ WSL enables server administrators to use existing tools and scripts from Linux o
 
 ### Kubernetes
 
-Kubernetes (commonly referred to as K8s) is an open source system for automating deployment, scaling and management of containerized applications developed under the stewardship of the [Cloud Native Computing Foundation](https://www.cncf.io).
+Kubernetes (commonly referred to as K8s) is an open-source system for automating deployment, scaling, and management of containerized applications developed under the stewardship of the [Cloud Native Computing Foundation](https://www.cncf.io).
 
 In Windows Server, version 1709 users were able to take advantage of Kubernetes on Windows networking features, including:
 - Shared pod compartments: Infrastructure and worker pods now share a network compartment (analogous to a Linux namespace).
@@ -80,9 +80,9 @@ With the release of Windows Server, version 1803 more features will be available
 ### Application compatibility and feature parity issues fixed
 
 - Microsoft Message Queuing (MSMQ) now installs in a Server Core container.
-- An issue that breaks ASP.net performance counters has been fixed.
+- An issue that breaks ASP.NET performance counters has been fixed.
 - An issue where services running in containers did not receive shutdown notification has been fixed.
-    - Specifically, the notification is changed to CTRL_SHUTDOWN_EVENT for both Server Core and Nano Server container based images. In addition, it extends the notification in Server Core container based images to affect all process running in the container, including sending service shutdown notifications to services running in the container.
+    - Specifically, the notification is changed to CTRL_SHUTDOWN_EVENT for both Server Core and Nano Server container-based images. In addition, it extends the notification in Server Core container-based images to affect all process running in the container, including sending service shutdown notifications to services running in the container.
 - An incompatibility of docker pull & docker load with the policy setting that determines whether BitLocker protection is required for fixed data drives to be writable (FDVDenyWriteAccess) has been fixed.
 
 ## Storage

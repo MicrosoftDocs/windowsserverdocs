@@ -56,7 +56,7 @@ In this release of Nano Server, the following IIS features are available:
 |**Management Tools**||
 |IISAdministration module for Windows PowerShell|x|
 
-A series of articles on other configurations of IIS (such as using ASP.NET, PHP, and Java), as well as other related content is published at [https://iis.net/learn](https://iis.net/learn).
+A series of articles on other configurations of IIS (such as using ASP.NET, PHP, and Java) and other related content is published at [https://iis.net/learn](https://iis.net/learn).
 
 ## Installing IIS on Nano Server
 You can install this server role either offline (with the Nano Server off) or online (with the Nano Server running); offline installation is the recommended option.
@@ -80,7 +80,7 @@ The following example steps assume that you are running from the directory speci
 > [!NOTE]
 > Note that Step 4 adds the language pack--this example installs EN-US.
 
-At this point you can start Nano Server with IIS.
+At this point, you can start Nano Server with IIS.
 
 ### Installing IIS on Nano Server online
 Though offline installation of the server role is recommended, you might need to install it online (with the Nano Server running) in container scenarios. To do this, follow these steps:
@@ -114,7 +114,7 @@ Though offline installation of the server role is recommended, you might need to
    **dism /online /apply-unattend:.\unattend.xml**
 
 
-5. Confirm that the IIS package and its associated language pack is installed correctly by running:
+5. Confirm that the IIS package and its associated language pack are installed correctly by running:
 
    **dism /online /get-packages**
 
@@ -142,7 +142,7 @@ Each feature of IIS exists as a set of configuration elements. For example, the 
 |`<modules>`|`<add name=WindowsAuthenticationModule lockItem=true \/>`|
 |`<windowsAuthentication>`|`<windowsAuthentication enabled=false authPersistNonNTLM\=true><providers><add value=Negotiate /><add value=NTLM /><br /></providers><br /></windowsAuthentication>`|
 
-The full set of IIS sub-features are included in Appendix 1 of this topic and their corresponding configuration elements is included in Appendix 2 of this topic.
+The full set of IIS sub-features is included in Appendix 1 of this topic and their corresponding configuration elements is included in Appendix 2 of this topic.
 
 
 ### Example: installing Windows authentication
