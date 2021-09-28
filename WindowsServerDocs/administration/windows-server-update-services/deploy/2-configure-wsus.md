@@ -182,17 +182,17 @@ This procedure assumes that you're using the WSUS Configuration Wizard, which ap
 
 3. Read the instructions on the **Join the Microsoft Update Improvement Program** page. Keep the default selection if you want to participate in the program, or clear the checkbox if you don't. Then select **Next**.
 
-4. On the **Choose Upstream Server** page, there are two options: **Synchronize the updates with Microsoft Update** or **Synchronize from another Windows Server Update Services server**.
+4. On the **Choose Upstream Server** page, select one of the two options: **Synchronize the updates with Microsoft Update** or **Synchronize from another Windows Server Update Services server**.
 
-    Depending on which option you choose, make the following selections:
+    If you choose to synchronize from another WSUS server:
     
-    - If you choose to synchronize from another WSUS server, specify the server name and the port on which this server will communicate with the upstream server.
+    - Specify the server name and the port on which this server will communicate with the upstream server.
 
     - To use SSL, select the **Use SSL when synchronizing update information** checkbox. The servers will use port 443 for synchronization. (Make sure that this server and the upstream server support SSL.)
 
     - If this is a replica server, select the **This is a replica of the upstream server** checkbox.
 
-5. After you select the proper options for your deployment, select **Next**.
+5. After you select the options for your deployment, select **Next**.
 
 6. On the **Specify Proxy Server** page, select the **Use a proxy server when synchronizing** checkbox. Then enter the proxy server name and port number (port 80 by default) in the corresponding boxes.
 
@@ -216,11 +216,11 @@ This procedure assumes that you're using the WSUS Configuration Wizard, which ap
     > [!WARNING]
     > If you select the option **Download updates only in these languages**, and this server has a downstream WSUS server connected to it, this option will force the downstream server to also use only the selected languages.
 
-11. After you select the appropriate language options for your deployment, select **Next**.
+11. After you select the language options for your deployment, select **Next**.
 
 12. The **Choose Products** page allows you to specify the products for which you want updates. Select product categories, such as Windows, or specific products, such as Windows Server 2012. Selecting a product category selects all the products in that category.
 
-13. Select the appropriate product options for your deployment, and then select **Next**.
+13. After you select the product options for your deployment, select **Next**.
 
 14. On the **Choose Classifications** page, select the update classifications that you want to get. Choose all the classifications or a subset of them, and then select **Next**.
 
@@ -252,7 +252,7 @@ You should use the SSL protocol to help secure your WSUS network. WSUS can use S
 
 ### 2.3.1. Enable SSL/HTTPS on the WSUS server's IIS service to use SSL/HTTPS
 
-To begin the process, you must enable SSL support on the WSUS server's IIS service. This involves creating an SSL certificate for the server.
+To begin the process, you must enable SSL support on the WSUS server's IIS service. This effort involves creating an SSL certificate for the server.
 
 The steps that are required to get an SSL certificate for the server are beyond the scope of this article and will depend on your network configuration. For more information and for instructions about how to install certificates and set up this environment, we suggest the following articles:
 
@@ -461,9 +461,9 @@ Client computers will not appear in the WSUS Administration Console until they c
 
 1. Wait for the policy changes to take effect on the client computer.
 
-   If you used an Active Directory-based Group Policy Object to configure the client computers, it will take some time for the Group Policy Update mechanism to deliver the changes to a client computer. If you want to speed this up, you can open a command prompt window with elevated privileges and then enter the command **gpupdate /force**.
+   If you used an Active Directory-based GPO to configure the client computers, it will take some time for the Group Policy Update mechanism to deliver the changes to a client computer. If you want to speed this up, you can open a command prompt window with elevated privileges and then enter the command **gpupdate /force**.
    
-   If you used the Local Group Policy editor to configure an individual client computer, the changes take effect immediately.
+   If you used the Local Group Policy Editor to configure an individual client computer, the changes take effect immediately.
 
 2. Restart the client computer. This step makes sure that the Windows Update software on the computer detects the policy changes.
 
