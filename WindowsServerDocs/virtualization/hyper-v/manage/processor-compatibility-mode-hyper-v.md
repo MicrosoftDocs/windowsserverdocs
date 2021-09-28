@@ -1,5 +1,5 @@
 ﻿---
-title: Processor Compatibility Mode in Hyper-V
+title: Processor compatibility mode in Hyper-V
 description: Describes how to use processor compatibility mode to move a running virtual machine or save state between virtualization hosts that use different generations of processors.
 ms.topic: how-to
 author: khdownie
@@ -7,11 +7,11 @@ ms.author: v-kedow
 ms.date: 09/29/2021
 ---
 
-# Processor Compatibility Mode in Hyper-V
+# Processor compatibility mode in Hyper-V
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Hyper-V Server 2019, Hyper-V Server 2016, Hyper-V Server 2012 R2
 
-Hyper-V offers processor compatibility mode, a feature that was first introduced in Windows Server 2008 R2. Processor compatibility mode allows you to move a running virtual machine (VM) or save state between virtualization hosts that use different generations of processors. This feature works by disabling many modern processor features, which can affect VM performance. This document provides details about processor compatibility mode for HyperV.
+Hyper-V offers processor compatibility mode, a feature that was first introduced in Windows Server 2008 R2. Processor compatibility mode allows you to move a running virtual machine (VM) or save state between virtualization hosts that use different generations of processors. This feature works by disabling many modern processor features, which can affect VM performance. This document provides details about processor compatibility mode for Hyper-V.
 
 ## When to use processor compatibility mode
 
@@ -29,7 +29,7 @@ The feature set that is available on a processor varies depending on its make, m
 
 However, VM mobility features allow a running VM to be migrated to a new virtualization host. If software in the VM has detected and started using a particular processor feature, and it gets moved to a new virtualization host that lacks that capability, the software is likely to fail. This could result in the VM crashing.
 
-To avoid these failures, Hyper-V performs “pre-flight” checks whenever a VM live migration or save/restore operation is initiated. These checks compare the set of processor features that are available to the VM on the source host against the set of features that are available on the target host. If these feature sets don’t match, the migration or restore operation is cancelled.
+To avoid these failures, Hyper-V performs “pre-flight” checks whenever a VM live migration or save/restore operation is initiated. These checks compare the set of processor features that are available to the VM on the source host against the set of features that are available on the target host. If these feature sets don’t match, the migration or restore operation is canceled.
 
 ## How processor compatibility mode works
 
