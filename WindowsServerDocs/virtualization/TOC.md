@@ -51,6 +51,7 @@
 #### [Manage Windows VMs with PowerShell Direct](hyper-v/manage/Manage-Windows-virtual-machines-with-powershell-direct.md)
 #### [Set up Hyper-V Replica](hyper-v/manage/Set-up-Hyper-V-Replica.md)
 #### [Enable Intel Performance Monitoring Hardware](hyper-v/manage/Performance-Monitoring-Hardware.md)
+#### [Enable processor compatibility mode](hyper-v/manage/processor-compatibility-mode-hyper-v.md)
 #### [Move VMs with live migration](hyper-v/manage/Live-migration-overview.md)
 ##### [Live Migration Overview](hyper-v/manage/Live-migration-overview.md)
 
