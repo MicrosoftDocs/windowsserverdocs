@@ -25,6 +25,7 @@ hostname
 ```
 
 ### Parameters
+
 | Parameter | Description |
 | ------- | -------- |
 | /? | Displays help at the command prompt. |
@@ -40,19 +41,19 @@ Any parameter different than `/?` produces an error message and sets the errorle
 
 - To display the name of the computer, type:
 
-```
+```shell
 hostname
 ```
 
 - To display the name of the computer in uppercase:
 
-```
+```shell
 echo %COMPUTERNAME%
 ```
 
 - To alter the hostname output:
 
-```
+```shell
 set "_CLUSTER_NETWORK_NAME_=Altered Computer Name"
 hostname
 ```
