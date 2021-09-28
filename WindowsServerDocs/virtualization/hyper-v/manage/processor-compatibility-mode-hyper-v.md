@@ -11,7 +11,7 @@ ms.date: 09/29/2021
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Hyper-V Server 2019, Hyper-V Server 2016, Hyper-V Server 2012 R2
 
-Hyper-V offers a feature called processor compatibility mode, which was first introduced in Windows Server 2008 R2. Processor compatibility mode allows you to move a running virtual machine (VM) or save state between virtualization hosts that use different generations of processors. This feature works by disabling a number of modern processor features, which can affect VM performance. This document provides details about processor compatibility mode for HyperV.
+Hyper-V offers processor compatibility mode, a feature that was first introduced in Windows Server 2008 R2. Processor compatibility mode allows you to move a running virtual machine (VM) or save state between virtualization hosts that use different generations of processors. This feature works by disabling a number of modern processor features, which can affect VM performance. This document provides details about processor compatibility mode for HyperV.
 
 ## When to use processor compatibility mode
 
