@@ -29,12 +29,12 @@ hostname
 | ------- | -------- |
 | /? | Displays help at the command prompt. |
 
-Any parameter different than `/?` will produce an error message and will set the errorlevel to 1.
+Any parameter different than `/?` produces an error message and sets the errorlevel to 1.
 
 ### Notes
 
-- Environment variable `%COMPUTERNAME%` usually will print the same string as hostname but in uppercase
-- If environment variable `_CLUSTER_NETWORK_NAME_` is defend hostname will print its value.
+- Environment variable `%COMPUTERNAME%` usually will print the same string as `hostname`, but in uppercase.
+- If environment variable `_CLUSTER_NETWORK_NAME_` is defined, `hostname` will print its value.
 
 ### Examples
 
@@ -44,7 +44,7 @@ Any parameter different than `/?` will produce an error message and will set the
 hostname
 ```
 
-- To display the name of the computer in upper case:
+- To display the name of the computer in uppercase:
 
 ```
 echo %COMPUTERNAME%
