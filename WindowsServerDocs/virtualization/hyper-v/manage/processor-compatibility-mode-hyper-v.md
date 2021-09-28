@@ -11,7 +11,7 @@ ms.date: 09/29/2021
 
 > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Hyper-V Server 2019, Hyper-V Server 2016, Hyper-V Server 2012 R2
 
-Hyper-V offers processor compatibility mode, a feature that was first introduced in Windows Server 2008 R2. Processor compatibility mode allows you to move a running virtual machine (VM) or save state between virtualization hosts that use different generations of processors. This feature works by disabling a number of modern processor features, which can affect VM performance. This document provides details about processor compatibility mode for HyperV.
+Hyper-V offers processor compatibility mode, a feature that was first introduced in Windows Server 2008 R2. Processor compatibility mode allows you to move a running virtual machine (VM) or save state between virtualization hosts that use different generations of processors. This feature works by disabling many modern processor features, which can affect VM performance. This document provides details about processor compatibility mode for HyperV.
 
 ## When to use processor compatibility mode
 
@@ -25,7 +25,7 @@ If you plan to move VMs, without rebooting them, between virtualization hosts th
 
 Instruction set architecture (ISA) extensions are optimizations and features that are introduced by processor manufacturers. These features often improve performance or security by using specialized hardware for a particular task. For example, many media applications make use of processor features to speed up vector calculations. These features are rarely required for applications to run; they simply boost performance.
 
-The feature set that is available on a processor varies depending on its make, model, and age. Operating systems and application software typically enumerate the system’s processor feature set and capabilities when they are first launched. Software doesn’t expect the available processor features to change during their lifetime—and of course, this could never happen when running on a physical computer because processor features are static.
+The feature set that is available on a processor varies depending on its make, model, and age. Operating systems and application software typically enumerate the system’s processor feature set and capabilities when they are first launched. Software doesn’t expect the available processor features to change during their lifetime—and this could never happen when running on a physical computer because processor features are static.
 
 However, VM mobility features allow a running VM to be migrated to a new virtualization host. If software in the VM has detected and started using a particular processor feature, and it gets moved to a new virtualization host that lacks that capability, the software is likely to fail. This could result in the VM crashing.
 
@@ -41,7 +41,7 @@ For a complete list of features that are hidden for processor compatibility mode
 
 ## Ramifications of using processor compatibility mode
 
-It is difficult to quantify the overall performance effects of processor compatibility mode. The performance loss is primarily dependent on the workload running in the VM. Some workloads will be completely unaffected, while others will show a noticeable difference. Software that heavily relies on hardware optimizations (such as encryption, compression, or intensive floating-point calculations) will be impacted the most.
+It is difficult to quantify the overall performance effects of processor compatibility mode. The performance loss is primarily dependent on the workload running in the VM. Some workloads will be unaffected, while others will show a noticeable difference. Software that heavily relies on hardware optimizations (such as encryption, compression, or intensive floating-point calculations) will be impacted the most.
 
 The following example describes how AES encryption is affected by using processor compatibility mode, and there are many more. If you are concerned about the performance impact of processor compatibility mode, it is best to compare VM workload performance with processor compatibility mode enabled and with it disabled.
 
@@ -61,7 +61,7 @@ There are important concepts to understand when using processor compatibility mo
 
   - Processor compatibility mode is not needed for VMs moves that involve a stop and restart of the VMs.
 
-  - Any time a VM is restarted, the guest operating system will enumerate the processor features that are available on the new host computer.
+  - Anytime a VM is restarted, the guest operating system will enumerate the processor features that are available on the new host computer.
 
 ## Enabling processor compatibility mode for a VM
 
