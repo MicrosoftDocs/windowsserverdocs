@@ -441,7 +441,7 @@ The errors shown when no Active Directory Web Services instances are available a
 |Error|Operation|
 | --- | --- |
 |"Cannot connect to any domain. Refresh or try again when connection is available"|Shown at start of the Active Directory Administrative Center application|
-|"Cannot find an available server in the *<NetBIOS domain name>* domain that is running the Active Directory Web Service (ADWS)"|Shown when trying to select a domain node in the Active Directory Administrative Center application|
+|"Cannot find an available server in the *\<NetBIOS domain name>* domain that is running the Active Directory Web Service (ADWS)"|Shown when trying to select a domain node in the Active Directory Administrative Center application|
 
 To troubleshoot this issue, use these steps:
 

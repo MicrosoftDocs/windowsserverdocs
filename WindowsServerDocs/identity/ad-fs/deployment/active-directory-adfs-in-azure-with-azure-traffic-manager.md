@@ -94,7 +94,7 @@ The easiest way to test AD FS is by using the IdpInitiatedSignon.aspx page. In o
 
 1. Run the below cmdlet on the AD FS server, using PowerShell, to set it to enabled.
    Set-AdfsProperties -EnableIdPInitiatedSignonPage $true
-2. From any external machine access https://<yourfederationservicedns>/adfs/ls/IdpInitiatedSignon.aspx
+2. From any external machine access https://\<yourfederationservicedns>/adfs/ls/IdpInitiatedSignon.aspx
 3. You should see the AD FS page like below:
 
     ![ADFS test - authentication challenge](./media/active-directory-adfs-in-azure-with-azure-traffic-manager/adfstest1.png)

@@ -179,7 +179,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
 | **Message**
-| The local *<COMPUTERNAME>* has found a virtual domain controller cloning configuration file.<p>The virtual domain controller cloning configuration file is found at: %1<p>The existence of the virtual domain controller cloning configuration file indicates that the local virtual domain controller is a clone of another virtual domain controller. The *<COMPUTERNAME>* will start to clone itself. |
+| The local *\<COMPUTERNAME>* has found a virtual domain controller cloning configuration file.<p>The virtual domain controller cloning configuration file is found at: %1<p>The existence of the virtual domain controller cloning configuration file indicates that the local virtual domain controller is a clone of another virtual domain controller. The *\<COMPUTERNAME>* will start to clone itself. |
  **Notes and resolution** | This is a success event and only an issue if unexpected. Examine the DSA Working Directory, %systemroot%\ntds, and root of any local or removable disks for the dcclconeconfig.xml file. |
 
 | Events | Description |
@@ -187,7 +187,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Event ID** | **2161** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message** | The local *<COMPUTERNAME>* did not find the virtual domain controller cloning configuration file. The local machine is not a cloned DC.| **Notes and resolution** | This is a success event and only an issue if unexpected. Examine the DSA Working Directory, %systemroot%\ntds, and root of any local or removable disks for the dcclconeconfig.xml file. |
+| **Message** | The local *\<COMPUTERNAME>* did not find the virtual domain controller cloning configuration file. The local machine is not a cloned DC.| **Notes and resolution** | This is a success event and only an issue if unexpected. Examine the DSA Working Directory, %systemroot%\ntds, and root of any local or removable disks for the dcclconeconfig.xml file. |
 
 | Events | Description |
 |--|--|
@@ -210,7 +210,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Event ID** | **2164** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Error |
-| **Message** | *<COMPUTERNAME>* failed to start the DsRoleSvc service to clone the local virtual domain controller. |
+| **Message** | *\<COMPUTERNAME>* failed to start the DsRoleSvc service to clone the local virtual domain controller. |
 | **Notes and resolution** | Examine the service settings for the DS Role Server service (DsRoleSvc) and ensure its start type is set to manual. Validate that no third party program is preventing the start of this service. |
 
 | Events | Description |
@@ -218,7 +218,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Event ID** | **2165** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Error |
-| **Message** | *<COMPUTERNAME>* failed to start a thread during the cloning of the local virtual domain controller.<p>Error code:%1<p>Error message:%2<p>Thread name:%3 |
+| **Message** | *\<COMPUTERNAME>* failed to start a thread during the cloning of the local virtual domain controller.<p>Error code:%1<p>Error message:%2<p>Thread name:%3 |
 | **Notes and resolution** | Contact Microsoft Product Support |
 
 | Events | Description |
@@ -226,7 +226,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Event ID** | **2166** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Error |
-| **Message** | *<COMPUTERNAME>* needs RPCSS service to initiate rebooting into DSRM. Waiting for RPCSS to initialize into a running state failed.<p>Error code:%1 |
+| **Message** | *\<COMPUTERNAME>* needs RPCSS service to initiate rebooting into DSRM. Waiting for RPCSS to initialize into a running state failed.<p>Error code:%1 |
 | **Notes and resolution** | Examine the System event log and service settings for the RPC Server service (Rpcss) |
 
 | Events | Description |
@@ -250,7 +250,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Event ID** | **2170** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Warning |
-| **Message** | A Generation ID change has been detected.<p>Generation ID cached in DS (old value):%1<p>Generation ID currently in VM (new value):%2<p>The Generation ID change occurs after the application of a virtual machine snapshot, after a virtual machine import operation or after a live migration operation. *<COMPUTERNAME>* will create a new invocation ID to recover the domain controller. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services aware backup application. |
+| **Message** | A Generation ID change has been detected.<p>Generation ID cached in DS (old value):%1<p>Generation ID currently in VM (new value):%2<p>The Generation ID change occurs after the application of a virtual machine snapshot, after a virtual machine import operation or after a live migration operation. *\<COMPUTERNAME>* will create a new invocation ID to recover the domain controller. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services aware backup application. |
 | **Notes and resolution** | This is a success event if intending to clone. Otherwise, examine the System event log. |
 
 | Events | Description |
@@ -346,7 +346,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Event ID** | **2183** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message** | Internal event: *<COMPUTERNAME>* completed the request to clone the remote Directory System Agent.<p>Original DC name:%3<p>Request clone DC name:%4<p>Request clone DC site:%5<p>Additional Data<p>Error value:%1 %2 |
+| **Message** | Internal event: *\<COMPUTERNAME>* completed the request to clone the remote Directory System Agent.<p>Original DC name:%3<p>Request clone DC name:%4<p>Request clone DC site:%5<p>Additional Data<p>Error value:%1 %2 |
 | **Notes and resolution** | This is a success event and only an issue if unexpected. |
 
 | Events | Description |
@@ -354,15 +354,15 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Event ID** | **2184** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Error |
-| **Message** | *<COMPUTERNAME>* failed to create a domain controller account for the cloned DC.<p>Original DC name:%1<p>Allowed number of cloned DC:%2<p>The limit on the number of domain controller accounts that can be generated by cloning <em><COMPUTERNAME></em>was exceeded. |
-| **Notes and resolution** | A single source domain controller name can only automatically generate 9999 times if domain controllers are not demoted, based on the naming convention. Use the <computername> element in the XML to generate a new unique name or clone from a differently named DC. |
+| **Message** | *\<COMPUTERNAME>* failed to create a domain controller account for the cloned DC.<p>Original DC name:%1<p>Allowed number of cloned DC:%2<p>The limit on the number of domain controller accounts that can be generated by cloning <em>\<COMPUTERNAME></em>was exceeded. |
+| **Notes and resolution** | A single source domain controller name can only automatically generate 9999 times if domain controllers are not demoted, based on the naming convention. Use the \<computername> element in the XML to generate a new unique name or clone from a differently named DC. |
 
 | Events | Description |
 |--|--|
 | **Event ID** | **2191** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message** | *<COMPUTERNAME>* set the following registry value to disable DNS updates.<p>Registry Key:%1<p>Registry Value: %2<p>Registry Value data: %3<p>During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. The cloning process will enable DNS updates again after cloning is completed. |
+| **Message** | *\<COMPUTERNAME>* set the following registry value to disable DNS updates.<p>Registry Key:%1<p>Registry Value: %2<p>Registry Value data: %3<p>During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. The cloning process will enable DNS updates again after cloning is completed. |
 | **Notes and resolution** | This is a success event and only an issue if unexpected. |
 
 | Events | Description |
@@ -370,7 +370,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Event ID** | **2192** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Error |
-| **Message** | *<COMPUTERNAME>* failed to set the following registry value to disable DNS updates.<p>Registry Key:%1<p>Registry Value: %2<p>Registry Value data: %3<p>Error code:%4<p>Error message:%5<p>During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. |
+| **Message** | *\<COMPUTERNAME>* failed to set the following registry value to disable DNS updates.<p>Registry Key:%1<p>Registry Value: %2<p>Registry Value data: %3<p>Error code:%4<p>Error message:%5<p>During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. |
 | **Notes and resolution** | Examine Application and System event logs. Investigate third party application that may be blocking registry updates. |
 
 | Events | Description |
@@ -378,7 +378,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Event ID** | **2193** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message** | *<COMPUTERNAME>* set the following registry value to enable DNS updates.<p>Registry Key:%1<p>Registry Value: %2<p>Registry Value data: %3<p>During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. |
+| **Message** | *\<COMPUTERNAME>* set the following registry value to enable DNS updates.<p>Registry Key:%1<p>Registry Value: %2<p>Registry Value data: %3<p>During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. |
 | **Notes and resolution** | This is a success event and only an issue if unexpected. |
 
 | Events | Description |
@@ -386,7 +386,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Event ID** | **2194** |
 |--|--|
 | **Severity** | Error |
-| **Message** | *<COMPUTERNAME>* failed to set the following registry value to enable DNS updates.<p>Registry Key:%1<p>Registry Value: %2<p>Registry Value data: %3<p>Error code:%4<p>Error message:%5<p>During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. |
+| **Message** | *\<COMPUTERNAME>* failed to set the following registry value to enable DNS updates.<p>Registry Key:%1<p>Registry Value: %2<p>Registry Value data: %3<p>Error code:%4<p>Error message:%5<p>During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. |
 | **Notes and resolution** | Examine Application and System event logs. Investigate third party application that may be blocking registry updates. |
 
 | Events | Description |
@@ -418,7 +418,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Event ID** | **2198** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Error |
-| **Message** | *<COMPUTERNAME>* failed to create or modify the following cloned DC object.<p>Additional data:<p>Object:<p>%1<p>Error value: %2<p>%3 |
+| **Message** | *\<COMPUTERNAME>* failed to create or modify the following cloned DC object.<p>Additional data:<p>Object:<p>%1<p>Error value: %2<p>%3 |
 | **Notes and resolution** | Lookup the specific error in MS TechNet, MS Knowledgebase, and MS blogs to determine its usual meaning, and then troubleshoot based on those results. |
 
 | Events | Description |
@@ -426,7 +426,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | **Event ID** | **2199** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Error |
-| **Message** | *<COMPUTERNAME>* failed to create the following cloned DC object because the object already exists.<p>Additional data:<p>Source DC:<p>%1<p>Object:<p>%2 |
+| **Message** | *\<COMPUTERNAME>* failed to create the following cloned DC object because the object already exists.<p>Additional data:<p>Source DC:<p>%1<p>Object:<p>%2 |
 | **Notes and resolution** | Validate the dccloneconfig.xml did not specify an existing domain controller or that copies of the dccloneconfig.xml have been used on multiple clones without editing the name. If the collision is still unexpected, determine which administrator promoted it; contact them to discuss if the existing domain controller should be demoted, the existing domain controller metadata cleaned, or if the clone should use a different name. |
 
 | Events | Description |
@@ -442,7 +442,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | Event ID | 2210 |
 | Source | Microsoft-Windows-ActiveDirectory_DomainService |
 | Severity | Error |
-| Message | <COMPUTERNAME> failed to create objects for clone domain controller.<p>Additional data:<p>Clone Id: %6<p>Clone domain controller name: %1<p>Retry loop: %2<p>Exception value: %3<p>Error value: %4<p>DSID: %5 |
+| Message | \<COMPUTERNAME> failed to create objects for clone domain controller.<p>Additional data:<p>Clone Id: %6<p>Clone domain controller name: %1<p>Retry loop: %2<p>Exception value: %3<p>Error value: %4<p>DSID: %5 |
 | Notes and resolution | Review the System and Directory Services event logs and the dcpromo.log for further details on why cloning failed. |
 
 | Events | Description |
@@ -450,7 +450,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | Event ID | 2211 |
 | Source | Microsoft-Windows-ActiveDirectory_DomainService |
 | Severity | Informational |
-| Message | <COMPUTERNAME> has created objects for clone domain controller.<p>Additional data:<p>Clone Id: %3<p>Clone domain controller name: %1<p>Retry loop: %2 |
+| Message | \<COMPUTERNAME> has created objects for clone domain controller.<p>Additional data:<p>Clone Id: %3<p>Clone domain controller name: %1<p>Retry loop: %2 |
 | Notes and resolution | This is a success event and only an issue if unexpected. |
 
 | Events | Description |
@@ -458,7 +458,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | Event ID | 2212 |
 | Source | Microsoft-Windows-ActiveDirectory_DomainService |
 | Severity | Informational |
-| Message | <COMPUTERNAME> started to create objects for the clone domain controller.<p>Additional data:<p>Clone Id: %1<p>Clone name: %2<p>Clone site: %3<p>Clone RODC: %4 |
+| Message | \<COMPUTERNAME> started to create objects for the clone domain controller.<p>Additional data:<p>Clone Id: %1<p>Clone name: %2<p>Clone site: %3<p>Clone RODC: %4 |
 | Notes and resolution | This is a success event and only an issue if unexpected. |
 
 | Events | Description |
@@ -466,7 +466,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | Event ID | 2213 |
 | Source | Microsoft-Windows-ActiveDirectory_DomainService |
 | Severity | Informational |
-| Message | <COMPUTERNAME> created a new KrbTgt object for Read-Only domain controller cloning.<p>Additional data:<p>Clone Id: %1<p>New KrbTgt Object Guid: %2 |
+| Message | \<COMPUTERNAME> created a new KrbTgt object for Read-Only domain controller cloning.<p>Additional data:<p>Clone Id: %1<p>New KrbTgt Object Guid: %2 |
 | Notes and resolution | This is a success event and only an issue if unexpected. |
 
 | Events | Description |
@@ -474,7 +474,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 |Event ID|2214|
 |Source|Microsoft-Windows-ActiveDirectory_DomainService|
 |Severity|Informational|
-|Message|<COMPUTERNAME> will create a computer object for the clone domain controller.<p>Additional data:<p>Clone Id: %1<p>Original domain controller: %2<p>Clone domain controller: %3|
+|Message|\<COMPUTERNAME> will create a computer object for the clone domain controller.<p>Additional data:<p>Clone Id: %1<p>Original domain controller: %2<p>Clone domain controller: %3|
 |Notes and resolution|This is a success event and only an issue if unexpected.|
 
 | Events | Description |
@@ -482,7 +482,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 |Event ID|2215|
 |Source|Microsoft-Windows-ActiveDirectory_DomainService|
 |Severity|Informational|
-|Message|<COMPUTERNAME> will add the clone domain controller in the following site.<p>Additional data:<p>Clone Id: %1<p>Site: %2|
+|Message|\<COMPUTERNAME> will add the clone domain controller in the following site.<p>Additional data:<p>Clone Id: %1<p>Site: %2|
 |Notes and resolution|This is a success event and only an issue if unexpected.|
 
 | Events | Description |
@@ -490,7 +490,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 |Event ID|2216|
 |Source|Microsoft-Windows-ActiveDirectory_DomainService|
 |Severity|Informational|
-|Message|<COMPUTERNAME> will create a servers container for the clone domain controller.<p>Additional data:<p>Clone Id: %1<p>Servers Container: %2|
+|Message|\<COMPUTERNAME> will create a servers container for the clone domain controller.<p>Additional data:<p>Clone Id: %1<p>Servers Container: %2|
 |Notes and resolution|This is a success event and only an issue if unexpected.|
 
 | Events | Description |
@@ -498,7 +498,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 |Event ID|2217|
 |Source|Microsoft-Windows-ActiveDirectory_DomainService|
 |Severity|Informational|
-|Message|<COMPUTERNAME> will create a server object for the clone domain controller.<p>Additional data:<p>Clone Id: %1<p>Server Object: %2|
+|Message|\<COMPUTERNAME> will create a server object for the clone domain controller.<p>Additional data:<p>Clone Id: %1<p>Server Object: %2|
 |Notes and resolution|This is a success event and only an issue if unexpected.|
 
 | Events | Description |
@@ -506,7 +506,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 |Event ID|2218|
 |Source|Microsoft-Windows-ActiveDirectory_DomainService|
 |Severity|Informational|
-|Message|<COMPUTERNAME> will create a NTDS Settings object for the clone domain controller.<p>Additional data:<p>Clone Id: %1<p>Object: %2|
+|Message|\<COMPUTERNAME> will create a NTDS Settings object for the clone domain controller.<p>Additional data:<p>Clone Id: %1<p>Object: %2|
 |Notes and resolution|This is a success event and only an issue if unexpected.|
 
 | Events | Description |
@@ -514,7 +514,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 |Event ID|2219|
 |Source|Microsoft-Windows-ActiveDirectory_DomainService|
 |Severity|Informational|
-|Message|<COMPUTERNAME> will create connection objects for the clone Read-Only domain controller.<p>Additional data:<p>Clone Id: %1|
+|Message|\<COMPUTERNAME> will create connection objects for the clone Read-Only domain controller.<p>Additional data:<p>Clone Id: %1|
 |Notes and resolution|This is a success event and only an issue if unexpected.|
 
 | Events | Description |
@@ -522,7 +522,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 |Event ID|2220|
 |Source|Microsoft-Windows-ActiveDirectory_DomainService|
 |Severity|Informational|
-|Message|<COMPUTERNAME> will create SYSVOL objects for the clone Read-Only domain controller.<p>Additional data:<p>Clone Id: %1|
+|Message|\<COMPUTERNAME> will create SYSVOL objects for the clone Read-Only domain controller.<p>Additional data:<p>Clone Id: %1|
 |Notes and resolution|This is a success event and only an issue if unexpected.|
 
 | Events | Description |
@@ -530,7 +530,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 |Event ID|2221|
 |Source|Microsoft-Windows-ActiveDirectory_DomainService|
 |Severity|Error|
-|Message|<COMPUTERNAME> failed to generate a random password for the cloned domain controller.<p>Additional data:<p>Clone Id: %1<p>Clone domain controller name: %2<p>Error: %3 %4|
+|Message|\<COMPUTERNAME> failed to generate a random password for the cloned domain controller.<p>Additional data:<p>Clone Id: %1<p>Clone domain controller name: %2<p>Error: %3 %4|
 |Notes and resolution|Examine the system event log for further details on why the machine account password could not be created.|
 
 | Events | Description |
@@ -538,7 +538,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 |Event ID|2222|
 |Source|Microsoft-Windows-ActiveDirectory_DomainService|
 |Severity|Error|
-|Message|<COMPUTERNAME> failed to set password for the cloned domain controller.<p>Additional data:<p>Clone Id: %1<p>Clone domain controller name: %2<p>Error: %3 %4|
+|Message|\<COMPUTERNAME> failed to set password for the cloned domain controller.<p>Additional data:<p>Clone Id: %1<p>Clone domain controller name: %2<p>Error: %3 %4|
 |Notes and resolution|Examine the system event log for further details on why the machine account password could not be set.|
 
 | Events | Description |
@@ -546,7 +546,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 |Event ID|2223|
 |Source|Microsoft-Windows-ActiveDirectory_DomainService|
 |Severity|Informational|
-|Message|<COMPUTERNAME> successfully set machine account password for the cloned domain controller.<p>Additional data:<p>Clone Id: %1<p>Clone domain controller name: %2<p>Total retry times: %3|
+|Message|\<COMPUTERNAME> successfully set machine account password for the cloned domain controller.<p>Additional data:<p>Clone Id: %1<p>Clone domain controller name: %2<p>Total retry times: %3|
 |Notes and resolution|This is a success event and only an issue if unexpected.|
 
 | Events | Description |
@@ -643,7 +643,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | Source | Microsoft-Windows-DirectoryServices-DSROLE-Server |
 | Severity | Error |
 | Message | Virtual domain controller cloning failed. The clone domain controller was unable to locate the primary domain controller (PDC) operations master in the cloned computer's home domain of the cloned machine.<p>The returned error code is %1 (%2).<p>Please verify that the primary domain controller in the home domain of the cloned machine is assigned to a live domain controller, is online, and is operational. Verify that the cloned machine has LDAP/RPC connectivity to the primary domain controller over the required ports and protocols. |
-| Notes and resolution | Validate the cloned domain controller IP and DNS information is set. Use Dcdiag.exe /test:locatorcheck to validate if the PDCE is online, use Nltest.exe /server:*<PDCE>* /dclist:*<domain>* to valid RPC, obtain a network capture from the PDCE while cloning fails and analyze the traffic. |
+| Notes and resolution | Validate the cloned domain controller IP and DNS information is set. Use Dcdiag.exe /test:locatorcheck to validate if the PDCE is online, use Nltest.exe /server:*\<PDCE>* /dclist:*\<domain>* to valid RPC, obtain a network capture from the PDCE while cloning fails and analyze the traffic. |
 
 | Events | Description |
 |--|--|
@@ -651,7 +651,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
 | Source | Microsoft-Windows-DirectoryServices-DSROLE-Server |
 | Severity | Error |
 | Message | Virtual domain controller cloning failed to bind to the primary domain controller %1.<p>The returned error code is %2 (%3).<p>Please verify that the primary domain controller %1 is online and is operational. Verify that the cloned machine has LDAP/RPC connectivity to the primary domain controller over the required ports and protocols. |
-| Notes and resolution | Validate the cloned domain controller IP and DNS information is set. Use Dcdiag.exe /test:locatorcheck to validate if the PDCE is online, use Nltest.exe /server:*<PDCE>* /dclist:*<domain>* to valid RPC, obtain a network capture from the PDCE while cloning fails and analyze the traffic. |
+| Notes and resolution | Validate the cloned domain controller IP and DNS information is set. Use Dcdiag.exe /test:locatorcheck to validate if the PDCE is online, use Nltest.exe /server:*\<PDCE>* /dclist:*\<domain>* to valid RPC, obtain a network capture from the PDCE while cloning fails and analyze the traffic. |
 
 | Events | Description |
 | -- |--|
@@ -744,7 +744,7 @@ The following are common issues seen during the Windows Server 2012 development 
 
 | **Issue** | **Cloning fails, boots into DSRM as a duplicate of the source DC** |
 | -- |--|
-| **Symptoms** | A new clone boots up without cloning. The dccloneconfig.xml is not renamed and the server starts in DS Restore Mode. The Directory Services event log shows Error 2164<p>*<COMPUTERNAME>* failed to start the DsRoleSvc service to clone the local virtual domain controller. |
+| **Symptoms** | A new clone boots up without cloning. The dccloneconfig.xml is not renamed and the server starts in DS Restore Mode. The Directory Services event log shows Error 2164<p>*\<COMPUTERNAME>* failed to start the DsRoleSvc service to clone the local virtual domain controller. |
 | **Resolution and Notes** | Examine the service settings for the DS Role Server service (DsRoleSvc) and ensure its start type is set to Manual. Validate that no third party program is preventing the start of this service.<p>For more information about how to reclaim this secondary DC while ensuring that updates get replicated outbound, see Microsoft KB article 2742970. |
 
 |**Issue**|**Cloning fails, boots into DSRM, error 8610**|
@@ -798,12 +798,12 @@ The Directory Services log contains the majority of event-based cloning operatio
 
 | **Event ID** | **Source** | **Message** |
 |--|--|--|
-| **2160** | ActiveDirectory_DomainService | The local Active Directory Domain Services has found a virtual domain controller cloning configuration file.<p>The virtual domain controller cloning configuration file is found at:<p>*<path>*\DCCloneConfig.xml<p>The existence of the virtual domain controller cloning configuration file indicates that the local virtual domain controller is a clone of another virtual domain controller. The Active Directory Domain Services will start to clone itself. |
+| **2160** | ActiveDirectory_DomainService | The local Active Directory Domain Services has found a virtual domain controller cloning configuration file.<p>The virtual domain controller cloning configuration file is found at:<p>*\<path>*\DCCloneConfig.xml<p>The existence of the virtual domain controller cloning configuration file indicates that the local virtual domain controller is a clone of another virtual domain controller. The Active Directory Domain Services will start to clone itself. |
 | **2191** | ActiveDirectory_DomainService | Active Directory Domain Services set the following registry value to disable DNS updates.<p>Registry Key:<p>SYSTEM\CurrentControlSet\Services\Netlogon\Parameters<p>Registry Value:<p>UseDynamicDns<p>Registry Value data:<p>0<p>During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. The cloning process will enable DNS updates again after cloning is completed. |
 | **2191** | ActiveDirectory_DomainService | Active Directory Domain Services set the following registry value to disable DNS updates.<p>Registry Key:<p>SYSTEM\CurrentControlSet\Services\Dnscache\Parameters<p>Registry Value:<p>RegistrationEnabled<p>Registry Value data:<p>0<p>During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. The cloning process will enable DNS updates again after cloning is completed.<p>"Information 2/7/2012 3:12:49 PM Microsoft-Windows-ActiveDirectory_DomainService 2191 Internal Configuration" Active Directory Domain Services set the following registry value to disable DNS updates.<p>Registry Key:<p>SYSTEM\CurrentControlSet\Services\Tcpip\Parameters<p>Registry Value:<p>DisableDynamicUpdate<p>Registry Value data:<p>1<p>During the cloning process, the local machine may have the same computer name as the clone source machine for a short time. DNS A and AAAA record registration are disabled during this period so clients cannot send requests to the local machine undergoing cloning. The cloning process will enable DNS updates again after cloning is completed. |
-| **2172** | ActiveDirectory_DomainService | Read the msDS-GenerationId attribute of the Domain Controller's computer object.<p>msDS-GenerationId attribute value:<p>*<Number>* |
-| **2170** | ActiveDirectory_DomainService | A Generation ID change has been detected.<p>Generation ID cached in DS (old value):<p>*<Number>*<p>Generation ID currently in VM (new value):<p>*<Number>*<p>The Generation ID change occurs after the application of a virtual machine snapshot, after a virtual machine import operation or after a live migration operation. Active Directory Domain Services will create a new invocation ID to recover the domain controller. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services aware backup application. |
-| **1109** | ActiveDirectory_DomainService | The invocationID attribute for this directory server has been changed. The highest update sequence number at the time the backup was created is as follows:<p>InvocationID attribute (old value):<p>*<GUID>*<p>InvocationID attribute (new value):<p>*<GUID>*<p>Update sequence number:<p>*<Number>*<p>The invocationID is changed when a directory server is restored from backup media, is configured to host a writeable application directory partition, has been resumed after a virtual machine snapshot has been applied, after a virtual machine import operation, or after a live migration operation. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services-aware backup application. |
+| **2172** | ActiveDirectory_DomainService | Read the msDS-GenerationId attribute of the Domain Controller's computer object.<p>msDS-GenerationId attribute value:<p>*\<Number>* |
+| **2170** | ActiveDirectory_DomainService | A Generation ID change has been detected.<p>Generation ID cached in DS (old value):<p>*\<Number>*<p>Generation ID currently in VM (new value):<p>*\<Number>*<p>The Generation ID change occurs after the application of a virtual machine snapshot, after a virtual machine import operation or after a live migration operation. Active Directory Domain Services will create a new invocation ID to recover the domain controller. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services aware backup application. |
+| **1109** | ActiveDirectory_DomainService | The invocationID attribute for this directory server has been changed. The highest update sequence number at the time the backup was created is as follows:<p>InvocationID attribute (old value):<p>*\<GUID>*<p>InvocationID attribute (new value):<p>*\<GUID>*<p>Update sequence number:<p>*\<Number>*<p>The invocationID is changed when a directory server is restored from backup media, is configured to host a writeable application directory partition, has been resumed after a virtual machine snapshot has been applied, after a virtual machine import operation, or after a live migration operation. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services-aware backup application. |
 | **1000** | ActiveDirectory_DomainService | Microsoft Active Directory Domain Services startup complete. |
 | **1394** | ActiveDirectory_DomainService | All problems preventing updates to the Active Directory Domain Services database have been cleared. New updates to the Active Directory Domain Services database are succeeding. The Net Logon service has restarted |
 | **2163** | ActiveDirectory_DomainService | DsRoleSvc service was started to clone the local virtual domain controller. |
@@ -815,18 +815,18 @@ The Directory Services log contains the majority of event-based cloning operatio
 | **102** | NTDS ISAM | NTDS (536) NTDSA: The database engine (6.02.8225.0000) is starting a new instance (0). |
 | **326** | NTDS ISAM | NTDS (536) NTDSA: The database engine attached a database (1, C:\Windows\NTDS\ntds.dit). (Time=0 seconds)<p>Internal Timing Sequence: [1] 0.000, [2] 0.015, [3] 0.016, [4] 0.000, [5] 0.031, [6] 0.000, [7] 0.000, [8] 0.000, [9] 0.000, [10] 0.000, [11] 0.000, [12] 0.000.<p>Saved Cache: 1 |
 | **105** | NTDS ISAM | NTDS (536) NTDSA: The database engine started a new instance (0). (Time=1 seconds)<p>Internal Timing Sequence: [1] 0.031, [2] 0.000, [3] 0.000, [4] 0.391, [5] 0.000, [6] 0.000, [7] 0.000, [8] 0.000, [9] 0.031, [10] 0.000, [11] 0.000. |
-| **1109** | ActiveDirectory_DomainService | The invocationID attribute for this directory server has been changed. The highest update sequence number at the time the backup was created is as follows:<p>InvocationID attribute (old value):<p>*<GUID>*<p>InvocationID attribute (new value):<p>*<GUID>*<p>Update sequence number:<p>*<Number>*<p>The invocationID is changed when a directory server is restored from backup media, is configured to host a writeable application directory partition, has been resumed after a virtual machine snapshot has been applied, after a virtual machine import operation, or after a live migration operation. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services-aware backup application. |
+| **1109** | ActiveDirectory_DomainService | The invocationID attribute for this directory server has been changed. The highest update sequence number at the time the backup was created is as follows:<p>InvocationID attribute (old value):<p>*\<GUID>*<p>InvocationID attribute (new value):<p>*\<GUID>*<p>Update sequence number:<p>*\<Number>*<p>The invocationID is changed when a directory server is restored from backup media, is configured to host a writeable application directory partition, has been resumed after a virtual machine snapshot has been applied, after a virtual machine import operation, or after a live migration operation. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services-aware backup application. |
 | **1168** | ActiveDirectory_DomainService | Internal error: An Active Directory Domain Services error has occurred.<p>Additional Data<p>Error value (decimal):<p>2<p>Error value (hexadecimal):<p>2<p>Internal ID:<p>7011658 |
 | **1110** | ActiveDirectory_DomainService | Promotion of this domain controller to a global catalog will be delayed for the following interval.<p>Interval (minutes):<p>5<p>This delay is necessary so that the required directory partitions can be prepared before the global catalog is advertised. In the registry, you can specify the number of seconds that the directory system agent will wait before promoting the local domain controller to a global catalog. For more information about the Global Catalog Delay Advertisement registry value, see the Resource Kit Distributed Systems Guide |
 | **103** | NTDS ISAM | NTDS (536) NTDSA: The database engine stopped the instance (0).<p>Dirty Shutdown: 0<p>Internal Timing Sequence: [1] 0.000, [2] 0.000, [3] 0.000, [4] 0.000, [5] 0.047, [6] 0.000, [7] 0.000, [8] 0.000, [9] 0.016, [10] 0.000, [11] 0.000, [12] 0.000, [13] 0.000, [14] 0.000, [15] 0.000. |
 | **1004** | ActiveDirectory_DomainService | Active Directory Domain Services was shut down successfully. |
 | **1539** | ActiveDirectory_DomainService | Active Directory Domain Services could not disable the software-based disk write cache on the following hard disk.<p>Hard disk:<p>c:<p>Data might be lost during system failures |
-| **2179** | ActiveDirectory_DomainService | The msDS-GenerationId attribute of the Domain Controller's computer object has been set to the following parameter:<p>GenerationID attribute:<p>*<Number>* |
+| **2179** | ActiveDirectory_DomainService | The msDS-GenerationId attribute of the Domain Controller's computer object has been set to the following parameter:<p>GenerationID attribute:<p>*\<Number>* |
 | **2173** | ActiveDirectory_DomainService | Failed to read the msDS-GenerationId attribute of the Domain Controller's computer object. This may be caused by database transaction failure, or the generation id does not exist in the local database. The msDS-GenerationId does not exist during the first reboot after dcpromo or the DC is not a virtual domain controller.<p>Additional Data<p>Failure code:<p>6 |
 | **1000** | ActiveDirectory_DomainService | Microsoft Active Directory Domain Services startup complete, version 6.2.8225.0 |
 | **1394** | ActiveDirectory_DomainService | All problems preventing updates to the Active Directory Domain Services database have been cleared. New updates to the Active Directory Domain Services database are succeeding. The Net Logon service has restarted. |
-| **1128** | ActiveDirectory_DomainService | 1128 Knowledge Consistency Checker "A replication connection was created from the following source directory service to the local directory service.<p>Source directory service:<p>CN=NTDS Settings,*<Domain Controller DN>*<p>Local directory service:<p>CN=NTDS Settings, *<Domain Controller DN>*<p>Additional Data<p>Reason Code:<p>0x2<p>Creation Point Internal ID:<p>f0a025d |
-| **1999** | ActiveDirectory_DomainService | The source directory service has optimized the update sequence number (USN) presented by the destination directory service. The source and destination directory services have a common replication partner. The destination directory service is up to date with the common replication partner, and the source directory service was installed using a backup of this partner.<p>Destination directory service ID:<p>*<GUID> (<FQDN>)*<p>Common directory service ID:<p>*<GUID>*<p>Common property USN:<p>*<Number>*<p>As a result, the up-to-dateness vector of the destination directory service has been configured with the following settings.<p>Previous object USN:<p>0<p>Previous property USN:<p>0<p>Database GUID:<p>*<GUID>*<p>Object USN:<p>*<Number>*<p>Property USN:<p>*<Number>* |
+| **1128** | ActiveDirectory_DomainService | 1128 Knowledge Consistency Checker "A replication connection was created from the following source directory service to the local directory service.<p>Source directory service:<p>CN=NTDS Settings,*\<Domain Controller DN>*<p>Local directory service:<p>CN=NTDS Settings, *\<Domain Controller DN>*<p>Additional Data<p>Reason Code:<p>0x2<p>Creation Point Internal ID:<p>f0a025d |
+| **1999** | ActiveDirectory_DomainService | The source directory service has optimized the update sequence number (USN) presented by the destination directory service. The source and destination directory services have a common replication partner. The destination directory service is up to date with the common replication partner, and the source directory service was installed using a backup of this partner.<p>Destination directory service ID:<p>*\<GUID> (\<FQDN>)*<p>Common directory service ID:<p>*\<GUID>*<p>Common property USN:<p>*\<Number>*<p>As a result, the up-to-dateness vector of the destination directory service has been configured with the following settings.<p>Previous object USN:<p>0<p>Previous property USN:<p>0<p>Database GUID:<p>*\<GUID>*<p>Object USN:<p>*\<Number>*<p>Property USN:<p>*\<Number>* |
 
 ##### System Event Log
 The next indications of cloning operations are in the System Event log. As the hypervisor tells the guest computer that it was cloned or restored from a snapshot, the domain controller immediately invalidates its RID pool to avoid duplicating security principals later. As cloning proceeds, various expected operations and messages appear, mostly around services starting and stopping and some expected errors caused by this. When completed the System event log notes overall cloning success.
@@ -1307,7 +1307,7 @@ Microsoft Active Directory Domain Services startup complete, version 6.2.8225.0
 15:15:18 [INFO] vDC Cloning: Set RegistrationEnabled reg value to 1 to enable dynamic update records registration.
 ```
 
-- Run the SYSPREP modules specified by the DefaultDCCloneAllowList.xml <SysprepInformation> element.
+- Run the SYSPREP modules specified by the DefaultDCCloneAllowList.xml \<SysprepInformation> element.
 
 ```
 15:15:18 [INFO] vDC Cloning: Running sysprep providers.
@@ -1345,9 +1345,9 @@ While cloning is occurring, the NTDS.DIT database is often offline for extended 
 |**1202**|ADWS Instance Events|This computer is now hosting the specified directory instance, but Active Directory Web Services could not service it. Active Directory Web Services will retry this operation periodically.<p>Directory instance: NTDS<p>Directory instance LDAP port: 389<p>Directory instance SSL port: 636|
 |**1000**|ADWS Instance Events|Active Directory Web Services is starting|
 |**1008**|ADWS Instance Events|Active Directory Web Services has successfully reduced its security privileges|
-|**1100**|ADWS Instance Events|The values specified in the <appsettings> section of the configuration file for Active Directory Web Services have been loaded without errors.|
-|**1400**|ADWS Instance Events|ADWS Certificate Events"Active Directory Web Services could not find a server certificate with the specified certificate name. A certificate is required to use SSL/TLS connections. To use SSL/TLS connections, verify that a valid server authentication certificate from a trusted Certification Authority (CA) is installed on the machine.<p>Certificate name: *<Server FQDN>*|
-|**1100**|ADWS Instance Events|The values specified in the <appsettings> section of the configuration file for Active Directory Web Services have been loaded without errors.|
+|**1100**|ADWS Instance Events|The values specified in the \<appsettings> section of the configuration file for Active Directory Web Services have been loaded without errors.|
+|**1400**|ADWS Instance Events|ADWS Certificate Events"Active Directory Web Services could not find a server certificate with the specified certificate name. A certificate is required to use SSL/TLS connections. To use SSL/TLS connections, verify that a valid server authentication certificate from a trusted Certification Authority (CA) is installed on the machine.<p>Certificate name: *\<Server FQDN>*|
+|**1100**|ADWS Instance Events|The values specified in the \<appsettings> section of the configuration file for Active Directory Web Services have been loaded without errors.|
 |**1200**|ADWS Instance Events|Active Directory Web Services is now servicing the specified directory instance.<p>Directory instance: NTDS<p>Directory instance LDAP port: 389<p>Directory instance SSL port: 636|
 
 ##### DNS Server Event Log
@@ -1375,11 +1375,11 @@ The File Replication Service synchronizes non-authoritatively from a partner dur
 | **13503** | NtFrs | The File Replication Service has stopped. |
 | **13565** | NtFrs | File Replication Service is initializing the system volume with data from another domain controller. Computer DC2 cannot become a domain controller until this process is complete. The system volume will then be shared as SYSVOL.<p>To check for the SYSVOL share, at the command prompt, type:<p>net share<p>When File Replication Service completes the initialization process, the SYSVOL share will appear.<p>The initialization of the system volume can take some time. The time is dependent on the amount of data in the system volume, the availability of other domain controllers, and the replication interval between domain controllers. |
 | **13501** | NtFrs | The File Replication Service is starting. |
-| **13553** | NtFrs | The File Replication Service successfully added this computer to the following replica set:<p>"DOMAIN SYSTEM VOLUME (SYSVOL SHARE)"<p>Information related to this event is shown below:<p>Computer DNS name is  *<Domain Controller FQDN>*<p>Replica set member name is *<Domain Controller>*<p>Replica set root path is *<path>*<p>Replica staging directory path is *<path>*<p>Replica working directory path is *<path>* |
-| **13520** | NtFrs | The File Replication Service moved the preexisting files in <path>to *<path>*\NtFrs_PreExisting___See_EventLog.<p>The File Replication Service may delete the files in *<path>*\NtFrs_PreExisting___See_EventLog at any time. Files can be saved from deletion by copying them out of *<path>*\NtFrs_PreExisting___See_EventLog. Copying the files into c:\windows\sysvol\domain may lead to name conflicts if the files already exist on some other replicating partner.<p>In some cases, the File Replication Service may copy a file from *<path>*\NtFrs_PreExisting___See_EventLog into *<path>* instead of replicating the file from some other replicating partner.<p>Space can be recovered at any time by deleting the files in *<path>*\NtFrs_PreExisting___See_EventLog." |
-| **13508** | NtFrs | he File Replication Service is having trouble enabling replication from *\\\\<Domain Controller FQDN>* to *<Domain Controller>* for *<path>* using the<p>DNS name *\\\\<Domain Controller FQDN>*. FRS will keep retrying.<p>Following are some of the reasons you would see this warning.<p>[1] FRS cannot correctly resolve the DNS name *\\\\<Domain Controller FQDN>* from this computer.<p>[2] FRS is not running on *\\\\<Domain Controller FQDN>*.<p>[3] The topology information in the Active Directory Domain Services for this replica has not yet replicated to all the Domain Controllers.<p>This event log message will appear once per connection, After the problem is fixed you will see another event log message indicating that the connection has been established. |
-| **13509** | NtFrs | The File Replication Service has enabled replication from *\\\\<Domain Controller FQDN>* to *<Domain Controller>* for *<Path>* after repeated retries. |
-| **13516** | NtFrs | The File Replication Service is no longer preventing the computer *<Domain Controller>* from becoming a domain controller. The system volume has been successfully initialized and the Netlogon service has been notified that the system volume is now ready to be shared as SYSVOL.<p>Type "net share" to check for the SYSVOL share." |
+| **13553** | NtFrs | The File Replication Service successfully added this computer to the following replica set:<p>"DOMAIN SYSTEM VOLUME (SYSVOL SHARE)"<p>Information related to this event is shown below:<p>Computer DNS name is  *\<Domain Controller FQDN>*<p>Replica set member name is *\<Domain Controller>*<p>Replica set root path is *\<path>*<p>Replica staging directory path is *\<path>*<p>Replica working directory path is *\<path>* |
+| **13520** | NtFrs | The File Replication Service moved the preexisting files in \<path> to *\<path>*\NtFrs_PreExisting___See_EventLog.<p>The File Replication Service may delete the files in *\<path>*\NtFrs_PreExisting___See_EventLog at any time. Files can be saved from deletion by copying them out of *\<path>*\NtFrs_PreExisting___See_EventLog. Copying the files into c:\windows\sysvol\domain may lead to name conflicts if the files already exist on some other replicating partner.<p>In some cases, the File Replication Service may copy a file from *\<path>*\NtFrs_PreExisting___See_EventLog into *\<path>* instead of replicating the file from some other replicating partner.<p>Space can be recovered at any time by deleting the files in *\<path>*\NtFrs_PreExisting___See_EventLog." |
+| **13508** | NtFrs | The File Replication Service is having trouble enabling replication from *\<Domain Controller FQDN>* to *\<Domain Controller>* for *\<path>* using the<p>DNS name *\<Domain Controller FQDN>*. FRS will keep retrying.<p>Following are some of the reasons you would see this warning.<p>[1] FRS cannot correctly resolve the DNS name *\<Domain Controller FQDN>* from this computer.<p>[2] FRS is not running on *\<Domain Controller FQDN>*.<p>[3] The topology information in the Active Directory Domain Services for this replica has not yet replicated to all the Domain Controllers.<p>This event log message will appear once per connection, After the problem is fixed you will see another event log message indicating that the connection has been established. |
+| **13509** | NtFrs | The File Replication Service has enabled replication from *\<Domain Controller FQDN>* to *\<Domain Controller>* for *\<Path>* after repeated retries. |
+| **13516** | NtFrs | The File Replication Service is no longer preventing the computer *\<Domain Controller>* from becoming a domain controller. The system volume has been successfully initialized and the Netlogon service has been notified that the system volume is now ready to be shared as SYSVOL.<p>Type "net share" to check for the SYSVOL share." |
 
 ##### DFS Replication Event Log
 The DFSR services synchronizes non-authoritatively from a partner during cloning. Cloning accomplishes this by deleting the DFSR database files and leaving the contents of SYSVOL untouched, for use as pre-seeded data. The two attempts to synchronize are expected.
@@ -1391,8 +1391,8 @@ The DFSR services synchronizes non-authoritatively from a partner during cloning
 | **6102** | DFSR | The DFS Replication service has successfully registered the WMI provider |
 | **1206** | DFSR | The DFS Replication service successfully contacted domain controller DC2.corp.contoso.com to access configuration information. |
 | **1210** | DFSR | The DFS Replication service successfully set up an RPC listener for incoming replication requests.<p>Additional Information:<p>Port: 0" |
-| **4614** | DFSR | The DFS Replication service initialized SYSVOL at local path C:\Windows\SYSVOL\domain and is waiting to perform initial replication. The replicated folder will remain in the initial synchronization state until it has replicated with its partner. If the server was in the process of being promoted to a domain controller, the domain controller will not advertise and function as a domain controller until this issue is resolved. This can occur if the specified partner is also in the initial synchronization state, or if sharing violations are encountered on this server or the synchronization partner. If this event occurred during the migration of SYSVOL from File Replication Service (FRS) to DFS Replication, changes will not replicate out until this issue is resolved. This can cause the SYSVOL folder on this server to become out of sync with other domain controllers.<p>Additional Information:<p>Replicated Folder Name: SYSVOL Share<p>Replicated Folder ID: *<GUID>*<p>Replication Group Name: Domain System Volume<p>Replication Group ID: *<GUID>*<p>Member ID: *<GUID>*<p>Read-Only: 0 |
-| **4604** | DFSR | The DFS Replication service successfully initialized the SYSVOL replicated folder at local path C:\Windows\SYSVOL\domain. This member has completed initial synchronization of SYSVOL with partner dc1.corp.contoso.com. To check for the presence of the SYSVOL share, open a command prompt window and then type ""net share"".<p>Additional Information:<p>Replicated Folder Name: SYSVOL Share<p>Replicated Folder ID: *<GUID>*<p>Replication Group Name: Domain System Volume<p>Replication Group ID: *<GUID>*<p>Member ID: *<GUID>*<p>Sync partner: *<domain controller FQDN>* |
+| **4614** | DFSR | The DFS Replication service initialized SYSVOL at local path C:\Windows\SYSVOL\domain and is waiting to perform initial replication. The replicated folder will remain in the initial synchronization state until it has replicated with its partner. If the server was in the process of being promoted to a domain controller, the domain controller will not advertise and function as a domain controller until this issue is resolved. This can occur if the specified partner is also in the initial synchronization state, or if sharing violations are encountered on this server or the synchronization partner. If this event occurred during the migration of SYSVOL from File Replication Service (FRS) to DFS Replication, changes will not replicate out until this issue is resolved. This can cause the SYSVOL folder on this server to become out of sync with other domain controllers.<p>Additional Information:<p>Replicated Folder Name: SYSVOL Share<p>Replicated Folder ID: *\<GUID>*<p>Replication Group Name: Domain System Volume<p>Replication Group ID: *\<GUID>*<p>Member ID: *\<GUID>*<p>Read-Only: 0 |
+| **4604** | DFSR | The DFS Replication service successfully initialized the SYSVOL replicated folder at local path C:\Windows\SYSVOL\domain. This member has completed initial synchronization of SYSVOL with partner dc1.corp.contoso.com. To check for the presence of the SYSVOL share, open a command prompt window and then type ""net share"".<p>Additional Information:<p>Replicated Folder Name: SYSVOL Share<p>Replicated Folder ID: *\<GUID>*<p>Replication Group Name: Domain System Volume<p>Replication Group ID: *\<GUID>*<p>Member ID: *\<GUID>*<p>Sync partner: *\<domain controller FQDN>* |
 
 ## <a name="BKMK_TshootVDCSafeRestore"></a>Troubleshooting virtualized domain controller safe restore
 
@@ -1455,7 +1455,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2170** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Warning |
-| **Message** | A Generation ID change has been detected.<p>Generation ID cached in DS (old value):%1<p>Generation ID currently in VM (new value):%2<p>The Generation ID change occurs after the application of a virtual machine snapshot, after a virtual machine import operation or after a live migration operation. *<COMPUTERNAME>* will create a new invocation ID to recover the domain controller. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services aware backup application. |
+| **Message** | A Generation ID change has been detected.<p>Generation ID cached in DS (old value):%1<p>Generation ID currently in VM (new value):%2<p>The Generation ID change occurs after the application of a virtual machine snapshot, after a virtual machine import operation or after a live migration operation. *\<COMPUTERNAME>* will create a new invocation ID to recover the domain controller. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services aware backup application. |
 | **Notes and resolution** | This is a success event if the snapshot was expected. If not, examine the Hyper-V-Worker event log or contact the hypervisor administrator. |
 
 | Events | Description |
@@ -1479,7 +1479,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2185** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message** | *<COMPUTERNAME>* stopped the FRS or DFSR service used to replicate the SYSVOL folder.<p>Service name:%1<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *<COMPUTERNAME>* must initialize a non-authoritative restore on the local SYSVOL replica. This is performed by stopping the FRS or DFSR service used to replicate the SYSVOL folder and starting it with the appropriate registry keys and values to trigger the restore. Event 2187 will be logged when FRS or DFSR service is restarted. |
+| **Message** | *\<COMPUTERNAME>* stopped the FRS or DFSR service used to replicate the SYSVOL folder.<p>Service name:%1<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *\<COMPUTERNAME>* must initialize a non-authoritative restore on the local SYSVOL replica. This is performed by stopping the FRS or DFSR service used to replicate the SYSVOL folder and starting it with the appropriate registry keys and values to trigger the restore. Event 2187 will be logged when FRS or DFSR service is restarted. |
 | **Notes and resolution** | Expected when restoring a snapshot. All SYSVOL data on this domain controller is replaced with a partner DC's copy. |
 
 | Event | Description |
@@ -1487,14 +1487,14 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | 2186 |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Error |
-| **Message** | *<COMPUTERNAME>* failed to stop the FRS or DFSR service used to replicate the SYSVOL folder.<p>Service name:%1<p>Error code:%2<p>Error message:%3<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *<COMPUTERNAME>* must initialize a non-authoritative restore on the local SYSVOL replica. This is done by stopping the FRS or DFSR replication service used to replicate the SYSVOL folder and then starting it with the appropriate registry keys and values to trigger the restore. *<COMPUTERNAME>* failed to stop the current running service and cannot complete the non-authoritative restore. Please perform a non-authoritative restore manually. |
+| **Message** | *\<COMPUTERNAME>* failed to stop the FRS or DFSR service used to replicate the SYSVOL folder.<p>Service name:%1<p>Error code:%2<p>Error message:%3<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *\<COMPUTERNAME>* must initialize a non-authoritative restore on the local SYSVOL replica. This is done by stopping the FRS or DFSR replication service used to replicate the SYSVOL folder and then starting it with the appropriate registry keys and values to trigger the restore. *\<COMPUTERNAME>* failed to stop the current running service and cannot complete the non-authoritative restore. Please perform a non-authoritative restore manually. |
 | **Notes and resolution** | Examine the System, FRS and DFSR event logs for further information. |
 
 | Event | Description |
 |--|--|
 | **Event ID** | **2187** |
 | **Severity** | Informational |
-| **Message** | *<COMPUTERNAME>* started the FRS or DFSR service used to replicate the SYSVOL folder.<p>Service name:%1<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *<COMPUTERNAME>* needed to initialize a non-authoritative restore on the local SYSVOL replica. This was done by stopping the FRS or DFSR service used to replicate the SYSVOL folder and starting it with the appropriate registry keys and values to trigger the restore. |
+| **Message** | *\<COMPUTERNAME>* started the FRS or DFSR service used to replicate the SYSVOL folder.<p>Service name:%1<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *\<COMPUTERNAME>* needed to initialize a non-authoritative restore on the local SYSVOL replica. This was done by stopping the FRS or DFSR service used to replicate the SYSVOL folder and starting it with the appropriate registry keys and values to trigger the restore. |
 | **Notes and resolution** | Expected when restoring a snapshot. All SYSVOL data on this domain controller is replaced with a partner DC's copy. |
 
 | Event | Description |
@@ -1502,7 +1502,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2188** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Error |
-| **Message** | *<COMPUTERNAME>* failed to start the FRS or DFSR service used to replicate the SYSVOL folder.<p>Service name:%1<p>Error code:%2<p>Error message:%3<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *<COMPUTERNAME>* needs to initialize a non-authoritative restore on the local SYSVOL replica. This is done by stopping the FRS or DFSR service used to replicate the SYSVOL and starting it with appropriate registry keys and values to trigger the restore. *<COMPUTERNAME>* failed to start the FRS or DFSR service used to replicate the SYSVOL folder and cannot complete the non-authoritative restore. Please perform a non-authoritative restore manually and restart the service. |
+| **Message** | *\<COMPUTERNAME>* failed to start the FRS or DFSR service used to replicate the SYSVOL folder.<p>Service name:%1<p>Error code:%2<p>Error message:%3<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *\<COMPUTERNAME>* needs to initialize a non-authoritative restore on the local SYSVOL replica. This is done by stopping the FRS or DFSR service used to replicate the SYSVOL and starting it with appropriate registry keys and values to trigger the restore. *\<COMPUTERNAME>* failed to start the FRS or DFSR service used to replicate the SYSVOL folder and cannot complete the non-authoritative restore. Please perform a non-authoritative restore manually and restart the service. |
 | **Notes and resolution** | Examine the System, FRS and DFSR event logs for further information. |
 
 | Event | Description |
@@ -1510,7 +1510,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2189** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message** | *<COMPUTERNAME>* set the following registry values to initialize SYSVOL replica during a non-authoritative restore:<p>Registry Key:%1<p>Registry Value: %2<p>Registry Value data: %3<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *<COMPUTERNAME>* needs to initialize a non-authoritative restore on the local SYSVOL replica. This is done by stopping the FRS or DFSR service used to replicate the SYSVOL folder and starting it with the appropriate registry keys and values to trigger the restore. |
+| **Message** | *\<COMPUTERNAME>* set the following registry values to initialize SYSVOL replica during a non-authoritative restore:<p>Registry Key:%1<p>Registry Value: %2<p>Registry Value data: %3<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *\<COMPUTERNAME>* needs to initialize a non-authoritative restore on the local SYSVOL replica. This is done by stopping the FRS or DFSR service used to replicate the SYSVOL folder and starting it with the appropriate registry keys and values to trigger the restore. |
 | **Notes and resolution** | Expected when restoring a snapshot. All SYSVOL data on this domain controller is replaced with a partner DC's copy. |
 
 | Event | Description |
@@ -1518,7 +1518,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2190** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Error |
-| **Message** | *<COMPUTERNAME>* failed to set the following registry values to initialize the SYSVOL replica during a non-authoritative restore:<p>Registry Key:%1<p>Registry Value: %2<p>Registry Value data: %3<p>Error code:%4<p>Error message:%5<p>Active Directory detected that the virtual machine that hosts the domain controller role was reverted to a previous state. *<COMPUTERNAME>* needs to initialize a non-authoritative restore on the local SYSVOL replica. This is done by stopping the FRS or DFSR service used to replicate the SYSVOL folder and starting it with the appropriate registry keys and values to trigger the restore. *<COMPUTERNAME>* failed to set the above registry values and cannot complete the non-authoritative restore. Please perform a non-authoritative restore manually. |
+| **Message** | *\<COMPUTERNAME>* failed to set the following registry values to initialize the SYSVOL replica during a non-authoritative restore:<p>Registry Key:%1<p>Registry Value: %2<p>Registry Value data: %3<p>Error code:%4<p>Error message:%5<p>Active Directory detected that the virtual machine that hosts the domain controller role was reverted to a previous state. *\<COMPUTERNAME>* needs to initialize a non-authoritative restore on the local SYSVOL replica. This is done by stopping the FRS or DFSR service used to replicate the SYSVOL folder and starting it with the appropriate registry keys and values to trigger the restore. *\<COMPUTERNAME>* failed to set the above registry values and cannot complete the non-authoritative restore. Please perform a non-authoritative restore manually. |
 | **Notes and resolution** | Examine Application and System event logs. Investigate third party applications that may be blocking registry updates. |
 
 | Event | Description |
@@ -1526,7 +1526,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2200** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message** | Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *<COMPUTERNAME>* initializes replication to bring the domain controller current. Event 2201 will be logged when the replication is finished. |
+| **Message** | Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *\<COMPUTERNAME>* initializes replication to bring the domain controller current. Event 2201 will be logged when the replication is finished. |
 | **Notes and resolution** | Expected when restoring a snapshot. Marks the beginning of inbound AD replication. |
 
 | Event | Description |
@@ -1534,7 +1534,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2201** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message** | Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *<COMPUTERNAME>* has finished replication to bring the domain controller current. |
+| **Message** | Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *\<COMPUTERNAME>* has finished replication to bring the domain controller current. |
 | **Notes and resolution** | Expected when restoring a snapshot. Marks the end of inbound AD replication. |
 
 | Event | Description |
@@ -1542,7 +1542,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2202** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Error |
-| **Message** | Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *<COMPUTERNAME>* failed replication to bring the domain controller up-to-date. The domain controller will be updated after next periodic replication. |
+| **Message** | Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *\<COMPUTERNAME>* failed replication to bring the domain controller up-to-date. The domain controller will be updated after next periodic replication. |
 | **Notes and resolution** | Examine the Directory Services and System event logs. Use repadmin.exe to attempt forcing replication and note any failures. |
 
 | Event | Description |
@@ -1550,7 +1550,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2204** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message** | *<COMPUTERNAME>* has detected a change of virtual machine generation ID. The change means that the virtual domain controller has been reverted to a previous state. *<COMPUTERNAME>* will perform the following operations to protect the reverted domain controller against possible data divergence  and to protect creation of security principals with duplicate SIDs:<p>Create a new invocation ID<p>Invalidate current RID pool<p>Ownership of the FSMO roles will be validated at next inbound replication. During this window if the domain controller held a FSMO role, that role will be unavailable.<p>Start SYSVOL replication service restore operation.<p>Start replication to bring the reverted domain controller  to the most current state.<p>Request a new RID pool. |
+| **Message** | *\<COMPUTERNAME>* has detected a change of virtual machine generation ID. The change means that the virtual domain controller has been reverted to a previous state. *\<COMPUTERNAME>* will perform the following operations to protect the reverted domain controller against possible data divergence  and to protect creation of security principals with duplicate SIDs:<p>Create a new invocation ID<p>Invalidate current RID pool<p>Ownership of the FSMO roles will be validated at next inbound replication. During this window if the domain controller held a FSMO role, that role will be unavailable.<p>Start SYSVOL replication service restore operation.<p>Start replication to bring the reverted domain controller  to the most current state.<p>Request a new RID pool. |
 | **Notes and resolution** | Expected when restoring a snapshot. This explains all the various reset operations that will occur as part of the safe restore process. |
 
 | Event | Description |
@@ -1558,7 +1558,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2205** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message** | *<COMPUTERNAME>* invalidated current RID pool after virtual domain controller was reverted to previous state. |
+| **Message** | *\<COMPUTERNAME>* invalidated current RID pool after virtual domain controller was reverted to previous state. |
 | **Notes and resolution** | Expected when restoring a snapshot. The local RID pool must be destroyed as the domain controller has time travelled and they may have already been issued. |
 
 | Event | Description |
@@ -1566,7 +1566,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2206** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | ERROR |
-| **Message** | *<COMPUTERNAME>* failed to invalidate current RID pool after virtual domain controller was reverted to previous state.<p>Additional data:<p>Error code: %1<p>Error value: %2 |
+| **Message** | *\<COMPUTERNAME>* failed to invalidate current RID pool after virtual domain controller was reverted to previous state.<p>Additional data:<p>Error code: %1<p>Error value: %2 |
 | **Notes and resolution** | Examine the Directory Services and System event logs. Validate that the RID Master is online can be reached from this server using Dcdiag.exe /test:ridmanager |
 
 | Event | Description |
@@ -1574,7 +1574,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2207** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | ERROR |
-| **Message** | *<COMPUTERNAME>* failed to restore after virtual domain controller was reverted to previous state. A reboot into DSRM was requested. Please check previous events for more information. |
+| **Message** | *\<COMPUTERNAME>* failed to restore after virtual domain controller was reverted to previous state. A reboot into DSRM was requested. Please check previous events for more information. |
 | **Notes and resolution** | Examine the Directory Services and System event logs. |
 
 | Event | Description |
@@ -1582,7 +1582,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2208** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |
-| **Message** | *<COMPUTERNAME>* deleted DFSR databases to initialize SYSVOL replica during a non-authoritative restore. |
+| **Message** | *\<COMPUTERNAME>* deleted DFSR databases to initialize SYSVOL replica during a non-authoritative restore. |
 | **Notes and resolution** | Expected when restoring a snapshot. This guarantees DFSR non-authoritatively synchronizes SYSVOL from a partner DC. Note that any other DFSR Replicated Folders on the same volume as SYSVOL will also non-authoritatively sync (domain controllers are not recommended to host custom DFSR sets on the same volume as SYSVOL). |
 
 | Event | Description |
@@ -1590,7 +1590,7 @@ Below are the Windows Server 2012 safe restore-specific events in the Directory 
 | **Event ID** | **2209** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Error |
-| **Message** | *<COMPUTERNAME>* failed to delete DFSR databases.<p>Additional data:<p>Error code: %1<p>Error value: %2<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *<COMPUTERNAME>* needs to initialize a non-authoritative restore on the local SYSVOL replica. For DFSR, this is done by stopping the DFSR service, deleting DFSR databases, and re-starting the service. Upon restarting DFSR will rebuild the databases and start the initial sync. |
+| **Message** | *\<COMPUTERNAME>* failed to delete DFSR databases.<p>Additional data:<p>Error code: %1<p>Error value: %2<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. *\<COMPUTERNAME>* needs to initialize a non-authoritative restore on the local SYSVOL replica. For DFSR, this is done by stopping the DFSR service, deleting DFSR databases, and re-starting the service. Upon restarting DFSR will rebuild the databases and start the initial sync. |
 | **Notes and resolution** | Examine the DFSR event log. |
 
 #### Error Messages
@@ -1619,25 +1619,25 @@ The Directory Services log contains the majority of safe restore operational inf
 
 | **Event ID** | **Source** | **Message** |
 |--|--|--|
-| **2170** | ActiveDirectory_DomainService | A Generation ID change has been detected.<p>Generation ID cached in DS (old value):<p>*<number>*<p>Generation ID currently in VM (new value):<p>*<number>*<p>The Generation ID change occurs after the application of a virtual machine snapshot, after a virtual machine import operation or after a live migration operation. Active Directory Domain Services will create a new invocation ID to recover the domain controller. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services aware backup application." |
+| **2170** | ActiveDirectory_DomainService | A Generation ID change has been detected.<p>Generation ID cached in DS (old value):<p>*\<number>*<p>Generation ID currently in VM (new value):<p>*\<number>*<p>The Generation ID change occurs after the application of a virtual machine snapshot, after a virtual machine import operation or after a live migration operation. Active Directory Domain Services will create a new invocation ID to recover the domain controller. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services aware backup application." |
 | **2181** | ActiveDirectory_DomainService | The transaction was aborted due to the virtual machine being reverted to a previous state. This occurs after the application of a virtual machine snapshot, after a virtual machine import operation, or after a live migration operation. |
 | **2204** | ActiveDirectory_DomainService | Active Directory Domain Services has detected a change of virtual machine generation ID. The change means that the virtual domain controller has been reverted to a previous state. Active Directory Domain Services will perform the following operations to protect the reverted domain controller against possible data divergence  and to protect creation of security principals with duplicate SIDs:<p>Create a new invocation ID<p>Invalidate current RID pool<p>Ownership of the FSMO roles will be validated at next inbound replication. During this window if the domain controller held a FSMO role, that role will be unavailable.<p>Start SYSVOL replication service restore operation.<p>Start replication to bring the reverted domain controller to the most current state.<p>Request a new RID pool." |
 | **2181** | ActiveDirectory_DomainService | The transaction was aborted due to the virtual machine being reverted to a previous state. This occurs after the application of a virtual machine snapshot, after a virtual machine import operation, or after a live migration operation. |
-| **1109** | ActiveDirectory_DomainService | The invocationID attribute for this directory server has been changed. The highest update sequence number at the time the backup was created is as follows:<p>InvocationID attribute (old value):<p>*<GUID>*<p>InvocationID attribute (new value):<p>*<GUID>*<p>Update sequence number:<p>*<number>*<p>The invocationID is changed when a directory server is restored from backup media, is configured to host a writeable application directory partition, has been resumed after a virtual machine snapshot has been applied, after a virtual machine import operation, or after a live migration operation. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services-aware backup application." |
-| **2179** | ActiveDirectory_DomainService | The msDS-GenerationId attribute of the Domain Controller's computer object has been set to the following parameter:<p>GenerationID attribute:<p>*<number>* |
+| **1109** | ActiveDirectory_DomainService | The invocationID attribute for this directory server has been changed. The highest update sequence number at the time the backup was created is as follows:<p>InvocationID attribute (old value):<p>*\<GUID>*<p>InvocationID attribute (new value):<p>*\<GUID>*<p>Update sequence number:<p>*\<number>*<p>The invocationID is changed when a directory server is restored from backup media, is configured to host a writeable application directory partition, has been resumed after a virtual machine snapshot has been applied, after a virtual machine import operation, or after a live migration operation. Virtualized domain controllers should not be restored using virtual machine snapshots. The supported method to restore or rollback the content of an Active Directory Domain Services database is to restore a system state backup made with an Active Directory Domain Services-aware backup application." |
+| **2179** | ActiveDirectory_DomainService | The msDS-GenerationId attribute of the Domain Controller's computer object has been set to the following parameter:<p>GenerationID attribute:<p>*\<number>* |
 | **2200** | ActiveDirectory_DomainService | Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. Active Directory Domain Services initializes replication to bring the domain controller current. Event 2201 will be logged when the replication is finished. |
 | **2201** | ActiveDirectory_DomainService | Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. Active Directory Domain Services has finished replication to bring the domain controller current. |
 | **2185** | ActiveDirectory_DomainService | Active Directory Domain Services stopped the FRS or DFSR service used to replicate the SYSVOL folder.<p>Service name:<p>DFSR<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. Active Directory Domain Services must initialize a non-authoritative restore on the local SYSVOL replica. This is performed by stopping the FRS or DFSR service used to replicate the SYSVOL folder and starting it with the appropriate registry keys and values to trigger the restore. Event 2187 will be logged when FRS or DFSR service is restarted." |
 | **2208** | ActiveDirectory_DomainService | Active Directory Domain Services deleted DFSR databases to initialize SYSVOL replica during a non-authoritative restore.<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. Active Directory Domain Services needs to initialize a non-authoritative restore on the local SYSVOL replica. For DFSR, this is done by stopping the DFSR service, deleting DFSR databases, and re-starting the service. Upon restarting DFSR will rebuild the databases and start the initial sync. " |
 | **2187** | ActiveDirectory_DomainService | Active Directory Domain Services started the FRS or DFSR service used to replicate the SYSVOL folder.<p>Service name:<p>DFSR<p>Active Directory detected that the virtual machine that hosts the domain controller was reverted to a previous state. Active Directory Domain Services needed to initialize a non-authoritative restore on the local SYSVOL replica. This was done by stopping the FRS or DFSR service used to replicate the SYSVOL folder and starting it with the appropriate registry keys and values to trigger the restore. " |
-| **1587** | ActiveDirectory_DomainService | This directory service has been restored or has been configured to host an application directory partition. As a result, its replication identity has changed. A partner has requested replication changes using our old identity. The starting sequence number has been adjusted.<p>The destination directory service corresponding to the following object GUID has requested changes starting at a USN that precedes the USN at which the local directory service was restored from backup media.<p>Object GUID:<p>*<GUID> (<FQDN of partner domain controller>)*<p>USN at the time of restore:<p>*<number>*<p>As a result, the up-to-dateness vector of the destination directory service has been configured with the following settings.<p>Previous database GUID:<p>*<GUID>*<p>Previous object USN:<p>*<number>*<p>Previous property USN:<p>*<number>*<p>New database GUID:<p>*<GUID>*<p>New object USN:<p>*<number>*<p>New property USN:<p>*<number>* |
+| **1587** | ActiveDirectory_DomainService | This directory service has been restored or has been configured to host an application directory partition. As a result, its replication identity has changed. A partner has requested replication changes using our old identity. The starting sequence number has been adjusted.<p>The destination directory service corresponding to the following object GUID has requested changes starting at a USN that precedes the USN at which the local directory service was restored from backup media.<p>Object GUID:<p>*\<GUID> (\<FQDN of partner domain controller>)*<p>USN at the time of restore:<p>*\<number>*<p>As a result, the up-to-dateness vector of the destination directory service has been configured with the following settings.<p>Previous database GUID:<p>*\<GUID>*<p>Previous object USN:<p>*\<number>*<p>Previous property USN:<p>*\<number>*<p>New database GUID:<p>*\<GUID>*<p>New object USN:<p>*\<number>*<p>New property USN:<p>*\<number>* |
 
 ##### System Event Log
 The System event log notes that the machine time that occurs when bringing an offline virtual machine back online and synchronizing with host time. The RID pool invalidates and the DFSR or FRS services are restarted.
 
 | **Event ID** | **Source** | **Message** |
 |--|--|--|
-| **1** | Kernel-General | The system time has changed to *?<now>* from *<snapshot time/date>*.<p>Change Reason: An application or system component changed the time. |
+| **1** | Kernel-General | The system time has changed to *?\<now>* from *<snapshot time/date>*.<p>Change Reason: An application or system component changed the time. |
 | **16654** | Directory-Services-SAM | A pool of account-identifiers (RIDs) has been invalidated. This may occur in the following expected cases:<p>1. A domain controller is restored from backup.<p>2. A domain controller running on a virtual machine is restored from snapshot.<p>3. An administrator has manually invalidated the pool.<p>See <https://go.microsoft.com/fwlink/?LinkId=226247> for more information. |
 | **7036** | Service Control Manager | The DFS Replication service entered the stopped state. |
 | **7036** | Service Control Manager | The DFS Replication service entered the running state. |
@@ -1647,10 +1647,10 @@ The Application event log notes the DFSR database stopping and starting.
 
 | **Event ID** | **Source** | **Message** |
 |--|--|--|
-| **103** | ESENT | DFSRs (1360) \\\\.\C:\System Volume Information\DFSR\database<em>_<GUID></em>\dfsr.db: The database engine stopped the instance (0).<p>Dirty Shutdown: 0<p>Internal Timing Sequence: [1] 0.000, [2] 0.000, [3] 0.000, [4] 0.000, [5] 0.141, [6] 0.000, [7] 0.000, [8] 0.000, [9] 0.000, [10] 0.000, [11] 0.016, [12] 0.000, [13] 0.000, [14] 0.000, [15] 0.000. |
-| **102** | ESENT | DFSRs (532) \\\\.\C:\System Volume Information\DFSR\database<em>_<GUID></em>\dfsr.db: The database engine (6.02.8189.0000) is starting a new instance (0). |
-| **105** | ESENT | DFSRs (532) \\\\.\C:\System Volume Information\DFSR\database<em>_<GUID></em>\dfsr.db: The database engine started a new instance (0). (Time=0 seconds)<p>Internal Timing Sequence: [1] 0.000, [2] 0.000, [3] 0.000, [4] 0.000, [5] 0.000, [6] 0.000, [7] 0.000, [8] 0.000, [9] 0.031, [10] 0.000, [11] 0.000. |
-|  |  | DFSRs (532) \\\\.\C:\System Volume Information\DFSR\database<em>_<GUID></em>\dfsr.db: The database engine created a new database (1, \\\\.\C:\System Volume Information\DFSR\database<em>_<GUID></em>\dfsr.db). (Time=0 seconds)<p>Internal Timing Sequence: [1] 0.000, [2] 0.000, [3] 0.016, [4] 0.062, [5] 0.000, [6] 0.016, [7] 0.000, [8] 0.000, [9] 0.015, [10] 0.000, [11] 0.000. |
+| **103** | ESENT | DFSRs (1360) \\\\.\C:\System Volume Information\DFSR\database<em>_\<GUID></em>\dfsr.db: The database engine stopped the instance (0).<p>Dirty Shutdown: 0<p>Internal Timing Sequence: [1] 0.000, [2] 0.000, [3] 0.000, [4] 0.000, [5] 0.141, [6] 0.000, [7] 0.000, [8] 0.000, [9] 0.000, [10] 0.000, [11] 0.016, [12] 0.000, [13] 0.000, [14] 0.000, [15] 0.000. |
+| **102** | ESENT | DFSRs (532) \\\\.\C:\System Volume Information\DFSR\database<em>_\<GUID></em>\dfsr.db: The database engine (6.02.8189.0000) is starting a new instance (0). |
+| **105** | ESENT | DFSRs (532) \\\\.\C:\System Volume Information\DFSR\database<em>_\<GUID></em>\dfsr.db: The database engine started a new instance (0). (Time=0 seconds)<p>Internal Timing Sequence: [1] 0.000, [2] 0.000, [3] 0.000, [4] 0.000, [5] 0.000, [6] 0.000, [7] 0.000, [8] 0.000, [9] 0.031, [10] 0.000, [11] 0.000. |
+|  |  | DFSRs (532) \\\\.\C:\System Volume Information\DFSR\database<em>_\<GUID></em>\dfsr.db: The database engine created a new database (1, \\\\.\C:\System Volume Information\DFSR\database<em>_\<GUID></em>\dfsr.db). (Time=0 seconds)<p>Internal Timing Sequence: [1] 0.000, [2] 0.000, [3] 0.016, [4] 0.062, [5] 0.000, [6] 0.016, [7] 0.000, [8] 0.000, [9] 0.015, [10] 0.000, [11] 0.000. |
 
 ##### DFS Replication Event Log
 The DFSR service is stopped and the database that contains SYSVOL is deleted, forcing a non-authoritative synchronization inbound.
@@ -1663,10 +1663,10 @@ The DFSR service is stopped and the database that contains SYSVOL is deleted, fo
 | **1004** | DFSR | The DFS Replication service has started. |
 | **1314** | DFSR | The DFS Replication service successfully configured the debug log files.<p>Additional Information:<p>Debug Log File Path: C:\Windows\debug |
 | **6102** | DFSR | The DFS Replication service has successfully registered the WMI provider. |
-| **1206** | DFSR | The DFS Replication service successfully contacted domain controller *<domain controller FQDN>* to access configuration information. |
+| **1206** | DFSR | The DFS Replication service successfully contacted domain controller *\<domain controller FQDN>* to access configuration information. |
 | **1210** | DFSR | The DFS Replication service successfully set up an RPC listener for incoming replication requests.<p>Additional Information:<p>Port: 0 |
-| **4614** | DFSR | The DFS Replication service initialized SYSVOL at local path C:\Windows\SYSVOL\domain and is waiting to perform initial replication. The replicated folder will remain in the initial synchronization state until it has replicated with its partner. If the server was in the process of being promoted to a domain controller, the domain controller will not advertise and function as a domain controller until this issue is resolved. This can occur if the specified partner is also in the initial synchronization state, or if sharing violations are encountered on this server or the synchronization partner. If this event occurred during the migration of SYSVOL from File Replication Service (FRS) to DFS Replication, changes will not replicate out until this issue is resolved. This can cause the SYSVOL folder on this server to become out of sync with other domain controllers.<p>Additional Information:<p>Replicated Folder Name: SYSVOL Share<p>Replicated Folder ID: *<GUID>*<p>Replication Group Name: Domain System Volume<p>Replication Group ID: *<GUID>*<p>Member ID: *<GUID>*<p>Read-Only: 0 |
-| **4604** | DFSR | The DFS Replication service successfully initialized the SYSVOL replicated folder at local path C:\Windows\SYSVOL\domain. This member has completed initial synchronization of SYSVOL with partner dc1.corp.contoso.com. To check for the presence of the SYSVOL share, open a command prompt window and then type "net share".<p>Additional Information:<p>Replicated Folder Name: SYSVOL Share<p>Replicated Folder ID: *<GUID>*<p>Replication Group Name: Domain System Volume<p>Replication Group ID: *<GUID>*<p>Member ID: *<GUID>*<p>Sync partner: *<partner domain controller FQDN>* |
+| **4614** | DFSR | The DFS Replication service initialized SYSVOL at local path C:\Windows\SYSVOL\domain and is waiting to perform initial replication. The replicated folder will remain in the initial synchronization state until it has replicated with its partner. If the server was in the process of being promoted to a domain controller, the domain controller will not advertise and function as a domain controller until this issue is resolved. This can occur if the specified partner is also in the initial synchronization state, or if sharing violations are encountered on this server or the synchronization partner. If this event occurred during the migration of SYSVOL from File Replication Service (FRS) to DFS Replication, changes will not replicate out until this issue is resolved. This can cause the SYSVOL folder on this server to become out of sync with other domain controllers.<p>Additional Information:<p>Replicated Folder Name: SYSVOL Share<p>Replicated Folder ID: *\<GUID>*<p>Replication Group Name: Domain System Volume<p>Replication Group ID: *\<GUID>*<p>Member ID: *\<GUID>*<p>Read-Only: 0 |
+| **4604** | DFSR | The DFS Replication service successfully initialized the SYSVOL replicated folder at local path C:\Windows\SYSVOL\domain. This member has completed initial synchronization of SYSVOL with partner dc1.corp.contoso.com. To check for the presence of the SYSVOL share, open a command prompt window and then type "net share".<p>Additional Information:<p>Replicated Folder Name: SYSVOL Share<p>Replicated Folder ID: *\<GUID>*<p>Replication Group Name: Domain System Volume<p>Replication Group ID: *\<GUID>*<p>Member ID: *\<GUID>*<p>Sync partner: *\<partner domain controller FQDN>* |
 
 #### Restoring a Domain Controller that Replicates SYSVOL Using FRS
 The File Replication Event log is used instead of the DFSR event log in this case. The Application event log also writes different FRS-related events. Otherwise, the Directory Services and System Event log messages are generally the same and in the same order as previously described.
@@ -1681,9 +1681,9 @@ The FRS service is stopped and restarted with a D2 BURFLAGS value to non-authori
 | **13501** | NTFRS | The File Replication Service is starting |
 | **13512** | NTFRS | The File Replication Service has detected an enabled disk write cache on the drive containing the directory c:\windows\ntfrs\jet on the computer DC4. The File Replication Service might not recover when power to the drive is interrupted and critical updates are lost. |
 | **13565** | NTFRS | File Replication Service is initializing the system volume with data from another domain controller. Computer DC4 cannot become a domain controller until this process is complete. The system volume will then be shared as SYSVOL.<p>To check for the SYSVOL share, at the command prompt, type:<p>net share<p>When File Replication Service completes the initialization process, the SYSVOL share will appear.<p>The initialization of the system volume can take some time. The time is dependent on the amount of data in the system volume, the availability of other domain controllers, and the replication interval between domain controllers." |
-| **13520** | NTFRS | The File Replication Service moved the preexisting files in *<path>* to *<path>*\NtFrs_PreExisting___See_EventLog.<p>The File Replication Service may delete the files in *<path>*\NtFrs_PreExisting___See_EventLog at any time. Files can be saved from deletion by copying them out of *<path>*\NtFrs_PreExisting___See_EventLog. Copying the files into *<path>* may lead to name conflicts if the files already exist on some other replicating partner.<p>In some cases, the File Replication Service may copy a file from *<path>*\NtFrs_PreExisting___See_EventLog into *<path>* instead of replicating the file from some other replicating partner.<p>Space can be recovered at any time by deleting the files in *<path>*\NtFrs_PreExisting___See_EventLog. |
-| **13553** | NTFRS | The File Replication Service successfully added this computer to the following replica set:<p>"DOMAIN SYSTEM VOLUME (SYSVOL SHARE)"<p>Information related to this event is shown below:<p>Computer DNS name is "*<domain controller FQDN>*"<p>Replica set member name is "*<domain controller name>*"<p>Replica set root path is "*<path>*"<p>Replica staging directory path is "*<path>* "<p>Replica working directory path is "*<path>*" |
-| **13554** | NTFRS | The File Replication Service successfully added the connections shown below to the replica set:<p>"DOMAIN SYSTEM VOLUME (SYSVOL SHARE)"<p>Inbound from    "*<partner domain controller FQDN>*"<p>Outbound to    "*<partner domain controller FQDN>*"<p>More information may appear in subsequent event log messages. |
+| **13520** | NTFRS | The File Replication Service moved the preexisting files in *\<path>* to *\<path>*\NtFrs_PreExisting___See_EventLog.<p>The File Replication Service may delete the files in *\<path>*\NtFrs_PreExisting___See_EventLog at any time. Files can be saved from deletion by copying them out of *\<path>*\NtFrs_PreExisting___See_EventLog. Copying the files into *\<path>* may lead to name conflicts if the files already exist on some other replicating partner.<p>In some cases, the File Replication Service may copy a file from *\<path>*\NtFrs_PreExisting___See_EventLog into *\<path>* instead of replicating the file from some other replicating partner.<p>Space can be recovered at any time by deleting the files in *\<path>*\NtFrs_PreExisting___See_EventLog. |
+| **13553** | NTFRS | The File Replication Service successfully added this computer to the following replica set:<p>"DOMAIN SYSTEM VOLUME (SYSVOL SHARE)"<p>Information related to this event is shown below:<p>Computer DNS name is "*\<domain controller FQDN>*"<p>Replica set member name is "*\<domain controller name>*"<p>Replica set root path is "*\<path>*"<p>Replica staging directory path is "*\<path>* "<p>Replica working directory path is "*\<path>*" |
+| **13554** | NTFRS | The File Replication Service successfully added the connections shown below to the replica set:<p>"DOMAIN SYSTEM VOLUME (SYSVOL SHARE)"<p>Inbound from    "*\<partner domain controller FQDN>*"<p>Outbound to    "*\<partner domain controller FQDN>*"<p>More information may appear in subsequent event log messages. |
 | **13516** | NTFRS | The File Replication Service is no longer preventing the computer DC4 from becoming a domain controller. The system volume has been successfully initialized and the Netlogon service has been notified that the system volume is now ready to be shared as SYSVOL.<p>Type "net share" to check for the SYSVOL share. |
 
 ##### Application Event Log

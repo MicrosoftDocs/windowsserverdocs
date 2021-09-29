@@ -186,8 +186,8 @@ To configure the certificate template for TPM key attestation, do the following 
 
         |Operation|Command syntax|
         |-------------|------------------|
-        |Add folder locations|certutil.exe -setreg CA\EndorsementKeyListDirectories +"<folder>"|
-        |Remove folder locations|certutil.exe -setreg CA\EndorsementKeyListDirectories -"<folder>"|
+        |Add folder locations|certutil.exe -setreg CA\EndorsementKeyListDirectories +"\<folder>"|
+        |Remove folder locations|certutil.exe -setreg CA\EndorsementKeyListDirectories -"\<folder>"|
 
         The EndorsementKeyListDirectories in certutil command is a registry setting as described in the following table.
 
@@ -195,7 +195,7 @@ To configure the certificate template for TPM key attestation, do the following 
         |--------------|--------|--------|
         |EndorsementKeyListDirectories|REG_MULTI_SZ|<LOCAL or UNC path to EKPUB allow list(s)><p>Example:<p>*\\\blueCA.contoso.com\ekpub*<p>*\\\bluecluster1.contoso.com\ekpub*<p>D:\ekpub|
 
-        HKLM\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\\<CA Sanitized Name>
+        HKLM\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration&#92;\<CA Sanitized Name>
 
         *EndorsementKeyListDirectories* will contain a list of UNC or local file system paths, each pointing to a folder that the CA has Read access to. Each folder may contain zero or more allow list entries, where each entry is a file with a name that is the SHA-2 hash of a trusted EKpub, with no file extension.
         Creating or editing this registry key configuration requires a restart of the CA, just like existing CA registry configuration settings. However, edits to the configuration setting will take effect immediately and will not require the CA to be restarted.

@@ -190,7 +190,7 @@ Realize that it may take some time for the cluster name to successfully replicat
 
 1.	Connect to the Windows Server Failover Cluster (WSFC) node that hosts the SQL Server instance where you want to enable Always On Availability Groups.
 2.	On the Start menu, point to All Programs, point to Microsoft SQL Server, point to Configuration Tools, and click SQL Server Configuration Manager.
-3.	In SQL Server Configuration Manager, click SQL Server Services, right-click SQL Server (<instance name>), where <instance name> is the name of a local server instance for which you want to enable Always On Availability Groups, and click Properties.
+3.	In SQL Server Configuration Manager, click SQL Server Services, right-click SQL Server (\<instance name>), where \<instance name> is the name of a local server instance for which you want to enable Always On Availability Groups, and click Properties.
 4.	Select the Always On High Availability tab.
 5.	Verify that Windows failover cluster name field contains the name of the local failover cluster. If this field is blank, this server instance currently does not support Always On availability groups. Either the local computer is not a cluster node, the WSFC cluster has been shut down, or this edition of SQL Server that does not support Always On availability groups.
 6.	Select the Enable Always On Availability Groups check box, and click OK.

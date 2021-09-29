@@ -48,7 +48,7 @@ operating system has been reinstalled with a different computer
 name or NTDSDSA object GUID, remove the source domain controller's
 metadata with ntdsutil.exe, using the steps outlined in MSKB article 216498.
 
-2) Confirm that the source domain controller is running Active Directory and is accessible on the network by typing "net view \\<source DC name>" or "ping <source DC name>".
+2) Confirm that the source domain controller is running Active Directory and is accessible on the network by typing "net view \<source DC name>" or "ping \<source DC name>".
 
 3) Verify that the source domain controller is using a valid DNS server for DNS services, and that the source domain controller's host record and CNAME record are correctly registered, using the DNS Enhanced version of DCDIAG.EXE available on <https://www.microsoft.com/dns>
 
@@ -67,7 +67,9 @@ dcdiag /test:dns
 Additional Data
 Error value:
 11004 The requested name is valid, but no data of the requested
-type was found</code>
+type was found
+```
+  </code>
   </introduction>
   <section>
     <title>Diagnosis</title>
@@ -83,3 +85,4 @@ type was found</code>
   </section>
   <relatedTopics />
 </developerConceptualDocument>
+```

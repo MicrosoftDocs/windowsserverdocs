@@ -133,7 +133,7 @@ Tools:
 8. Select the entire spreadsheet. On the Data tab, click Filter.
 9. In the Last Success Time column, click the down arrow, and then click Sort Ascending.
 10. In the Source DC column, click the filter down arrow, point to Text Filters, and then click Custom Filter.
-11. In the Custom AutoFilter dialog box, under Show rows where, click does not contain. In the adjacent text box, type <userInput>del</userInput> to eliminate from view the results for deleted domain controllers.
+11. In the Custom AutoFilter dialog box, under Show rows where, click does not contain. In the adjacent text box, type `del` to eliminate from view the results for deleted domain controllers.
 12. Repeat step 11 for the Last Failure Time column, but use the value does not equal, and then type the value 0.
 13. Resolve replication failures.
 
@@ -143,11 +143,11 @@ For every domain controller in the forest, the spreadsheet shows the source repl
 
 Replication problems are reported in event messages and in various error messages that occur when an application or service attempts an operation. Ideally, these messages are collected by your monitoring application or when you retrieve replication status.
 
-Most replication problems are identified in the event messages that are logged in the Directory Service event log. Replication problems might also be identified in the form of error messages in the output of the <system>repadmin /showrepl</system> command.
+Most replication problems are identified in the event messages that are logged in the Directory Service event log. Replication problems might also be identified in the form of error messages in the output of the `repadmin /showrepl` command.
 
 ### repadmin /showrepl error messages that indicate replication problems
 
-To identify Active Directory replication problems, use the <system>repadmin /showrepl</system> command, as described in the previous section. The following table shows error messages that this command generates, along with the root causes of the errors and links to topics that provide solutions for the errors.
+To identify Active Directory replication problems, use the `repadmin /showrepl` command, as described in the previous section. The following table shows error messages that this command generates, along with the root causes of the errors and links to topics that provide solutions for the errors.
 
 |Repadmin error|Root Cause|Solution|
 | --- | --- | --- |

@@ -26,7 +26,7 @@ The built-in logs are the most important instrument for troubleshooting issues w
 |--|--|
 | Server Manager or ADDSDeployment Windows PowerShell operations | -   %systemroot%\debug\dcpromoui.log<p>-   %systemroot%\debug\dcpromoui*.log |
 | Installation/Promotion of the domain controller | -   %systemroot%\debug\dcpromo.log<p>-   %systemroot%\debug\dcpromo*.log<p>-   Event viewer\Windows logs\System<p>-   Event viewer\Windows logs\Application<p>-   Event viewer\Applications and services logs\Directory Service<p>-   Event viewer\Applications and services logs\File Replication Service<p>-   Event viewer\Applications and services logs\DFS Replication |
-| Forest or domain upgrade | -   %systemroot%\debug\adprep\\<datetime>\adprep.log<p>-   %systemroot%\debug\adprep\\<datetime>\csv.log<p>-   %systemroot%\debug\adprep\\<datetime>\dspecup.log<p>-   %systemroot%\debug\adprep\\<datetime>\ldif.log* |
+| Forest or domain upgrade | -   %systemroot%\debug\adprep&#92;\<datetime>\adprep.log<p>-   %systemroot%\debug\adprep&#92;\<datetime>\csv.log<p>-   %systemroot%\debug\adprep&#92;\<datetime>\dspecup.log<p>-   %systemroot%\debug\adprep&#92;\<datetime>\ldif.log* |
 | Server Manager ADDSDeployment Windows PowerShell deployment engine | -   Event viewer\Applications and services logs\Microsoft\Windows\DirectoryServices-Deployment\Operational |
 | Windows Servicing | -   %systemroot%\Logs\CBS\\*<p>-   %systemroot%\servicing\sessions\sessions.xml<p>-   %systemroot%\winsxs\poqexec.log<p>-   %systemroot%\winsxs\pending.xml |
 
@@ -287,7 +287,7 @@ The following are common issues seen during the Windows Server 2012 development 
 
 | Issue | Prerequisite adprep check fails with error "Unable to perform Exchange schema conflict check" |
 |--|--|
-| Symptoms | When attempting to promote a Windows Server 2012 domain controller into an existing Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2 forest, prerequisite check fails with error:<p>Code - Verification of prerequisites for AD prep failed. Unable to perform Exchange schema conflict check for domain  *<domain name>* (Exception: the RPC server is unavailable)<p>The adprep.log shows error:<p>Code - Adprep could not retrieve data from the server *<domain controller>*<p>through Windows Management Instrumentation (WMI). |
+| Symptoms | When attempting to promote a Windows Server 2012 domain controller into an existing Windows Server 2003, Windows Server 2008, or Windows Server 2008 R2 forest, prerequisite check fails with error:<p>Code - Verification of prerequisites for AD prep failed. Unable to perform Exchange schema conflict check for domain  *\<domain name>* (Exception: the RPC server is unavailable)<p>The adprep.log shows error:<p>Code - Adprep could not retrieve data from the server *\<domain controller>*<p>through Windows Management Instrumentation (WMI). |
 | Resolution and Notes | The new domain controller cannot access WMI through DCOM/RPC protocols against the existing domain controllers. To date, there have been three causes for this:<p>-   A firewall rule blocks access to the existing domain controllers<p>-   The NETWORK SERVICE account is missing from the "Logon as a service" (SeServiceLogonRight) privilege on the existing domain controllers<p>-   NTLM is disabled on domain controllers, using security policies described in [Introducing the Restriction of NTLM Authentication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd560653(v=ws.10)) |
 
 | Issue | Creating a new AD DS forest always shows DNS warning |

@@ -97,17 +97,17 @@ For the built-in Administrator account in each domain in your forest, you should
 
 1.  In **Server Manager**, click **Tools**, and click **Group Policy Management**.
 
-2.  In the console tree, expand <Forest>\Domains\\<Domain>, and then **Group Policy Objects** (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to create the Group Policy).
+2.  In the console tree, expand \<Forest>\Domains&#92;\<Domain>, and then **Group Policy Objects** (where \<Forest> is the name of the forest and \<Domain> is the name of the domain where you want to create the Group Policy).
 
 3.  In the console tree, right-click **Group Policy Objects**, and click **New**.
 
     ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_27.gif)
 
-4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** (where <GPO Name> is the name of this GPO) as indicated in the following screenshot.
+4.  In the **New GPO** dialog box, type \<GPO Name>, and click **OK** (where \<GPO Name> is the name of this GPO) as indicated in the following screenshot.
 
     ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_28.gif)
 
-5.  In the details pane, right-click <GPO Name>, and click **Edit**.
+5.  In the details pane, right-click \<GPO Name>, and click **Edit**.
 
 6.  Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.
 
@@ -119,7 +119,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     2.  Click **Add User or Group** and click **Browse**.
 
-    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in <DomainName>\Username format as indicated in the following screenshot.
+    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in \<DomainName>\Username format as indicated in the following screenshot.
 
         ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_30.gif)
 
@@ -131,7 +131,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     2.  Click **Add User or Group** and click **Browse**.
 
-    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in <DomainName>\Username format as indicated in the following screenshot.
+    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in \<DomainName>\Username format as indicated in the following screenshot.
 
         ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_31.gif)
 
@@ -143,7 +143,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     2.  Click **Add User or Group** and click **Browse**.
 
-    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in <DomainName>\Username format as indicated in the following screenshot.
+    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in \<DomainName>\Username format as indicated in the following screenshot.
 
         ![securing built-in admin accounts](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_32.gif)
 
@@ -165,7 +165,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
 12. In **Group Policy Management**, link the GPO to the member server and workstation OUs by doing the following:
 
-    1.  Navigate to the <Forest>\Domains\\<Domain> (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).
+    1.  Navigate to the \<Forest>\Domains&#92;\<Domain> (where \<Forest> is the name of the forest and \<Domain> is the name of the domain where you want to set the Group Policy).
 
     2.  Right-click the OU that the GPO will be applied to and click **Link an existing GPO**.
 
@@ -230,7 +230,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 4.  Click **File** and click **Save As**.
 
-5.  In the **Filename** field, type **<Filename>.bat** (where <Filename> is the name of the new batch file).
+5.  In the **Filename** field, type **\<Filename>.bat** (where \<Filename> is the name of the new batch file).
 
 ###### Schedule a Task
 
@@ -243,7 +243,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 3.  On **Task Scheduler**, click **Action**, and click **Create Task**.
 
-4.  In the **Create Task** dialog box, type **<Task Name>** (where **<Task Name>** is the name of the new task).
+4.  In the **Create Task** dialog box, type **\<Task Name>** (where **\<Task Name>** is the name of the new task).
 
 5.  Click the **Actions** tab, and click **New**.
 

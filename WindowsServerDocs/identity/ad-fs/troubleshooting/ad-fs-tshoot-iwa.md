@@ -27,7 +27,7 @@ An example of an how an SPN is used with AD FS is as follows:
 
 If the AD FS service account has a misconfigured or the wrong SPN then this can cause issues.  Looking at network traces, you may see errors such as KRB Error: KRB5KDC_ERR_S_PRINCIPAL_UNKNOWN.
 
-Using network traces (such as Wireshark) you can determine what SPN the browser is trying to resolve and then using the command line tool, setspn - Q <spn>, you can do a lookup on that SPN.  It may not be found or it may be assigned to another account other than the AD FS service account.
+Using network traces (such as Wireshark) you can determine what SPN the browser is trying to resolve and then using the command line tool, setspn - Q \<spn>, you can do a lookup on that SPN.  It may not be found or it may be assigned to another account other than the AD FS service account.
 
 ![integrated](media/ad-fs-tshoot-iwa/iwa3.png)
 

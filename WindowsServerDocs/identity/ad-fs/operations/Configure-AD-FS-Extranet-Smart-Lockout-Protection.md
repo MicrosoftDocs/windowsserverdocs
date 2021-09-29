@@ -50,7 +50,7 @@ All secondary nodes will contact the master node on each fresh login through Por
 IPv4 and IPv6 addresses are supported.
 
 ### Anatomy of a transaction
-- **Pre-Auth Check**: During an authentication request, ESL checks all presented IPs. These IPs will be a combination of network IP, forwarded IP, and the optional x-forwarded-for IP. In the audit logs, these IPs are listed in the <IpAddress> field in the order of x-ms-forwarded-client-ip, x-forwarded-for, x-ms-proxy-client-ip.
+- **Pre-Auth Check**: During an authentication request, ESL checks all presented IPs. These IPs will be a combination of network IP, forwarded IP, and the optional x-forwarded-for IP. In the audit logs, these IPs are listed in the \<IpAddress> field in the order of x-ms-forwarded-client-ip, x-forwarded-for, x-ms-proxy-client-ip.
 
   Based on these IPs, ADFS determines if the request is from a familiar or unfamiliar location and then checks if the respective badPwdCount is less than the set threshold limit OR if the last **failed** attempt is happened longer than the observation window time frame. If one of these conditions is true, ADFS allows this transaction for further processing and credential validation. If both conditions are false, the account is already in a locked out state until the observation window passes. After the observation window passes, the user is allowed one attempt to authenticate. Note that in 2019, ADFS will check against the appropriate threshold limit based on if the IP address matches a familiar location or not.
 - **Successful Login**: If the log-in succeeds, then the IPs from the request are added to the user's familiar location IP list.
