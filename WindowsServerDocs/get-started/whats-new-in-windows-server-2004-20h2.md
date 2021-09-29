@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 # What's new in Windows Server, version 2004 and 20H2
 
-To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). This topic describes some of the new features in Windows Server, version 2004 and 20H2.
+To learn about the latest features in Windows, see [What's New in Windows Server](./whats-new-in-windows-server-2022.md). This topic describes some of the new features in Windows Server, version 2004 and 20H2.
 
 Windows Server, version 20H2 is the next Semi-Annual Channel release of Windows Server, version 2004. This version focuses on reliability, performance, and other general improvements, but has no new features. Like other Semi-Annual Channel releases, it’s supported for 18 months after its release. To learn more about the support dates for Semi-Annual Channel releases, see [Windows Server release information](windows-server-release-info.md).
 
