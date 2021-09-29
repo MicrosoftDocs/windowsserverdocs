@@ -272,7 +272,7 @@ sections:
       - question: |
           X-MS-Forwarded-Client-IP doesn't contain the IP of the client. It contains the IP of the firewall in front of the proxy. Where can I get the IP of the client?
         answer: |
-          We don't recommended that you do SSL termination before the Web Application Proxy server. If it is done in front of the Web Application Proxy server, the X-MS-Forwarded-Client-IP will contain the IP of the network device in front of the Web Application Proxy server. Here's a brief description of the various IP-related claims supported by AD FS:
+          We don't recommend that you do SSL termination before the Web Application Proxy server. If it is done in front of the Web Application Proxy server, the X-MS-Forwarded-Client-IP will contain the IP of the network device in front of the Web Application Proxy server. Here's a brief description of the various IP-related claims supported by AD FS:
            - X-MS-Client-IP. Network IP of the device connected to the STS. For extranet requests, this claim always contains the IP of the Web Application Proxy server.
            - X-MS-Forwarded-Client-IP. Multivalued claim that contains any values forwarded to AD FS by Exchange Online. It also contains the IP address of the device connected to the Web Application Proxy server.
            - Userip. For extranet requests, this claim contains the value of X-MS-Forwarded-Client-IP.  For intranet requests, this claim contains the same value as X-MS-Client-IP.
