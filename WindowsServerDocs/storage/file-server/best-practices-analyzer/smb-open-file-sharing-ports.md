@@ -18,8 +18,8 @@ Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, an
 
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col>
+<col>
 </colgroup>
 <tbody>
 <tr class="odd">

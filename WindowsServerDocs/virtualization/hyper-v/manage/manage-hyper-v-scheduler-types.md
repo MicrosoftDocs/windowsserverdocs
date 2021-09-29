@@ -111,8 +111,8 @@ To enable SMT in a guest virtual machine, open a PowerShell window with sufficie
 Set-VMProcessor -VMName <VMName> -HwThreadCountPerCore <n>
 ```
 
-Where <n> is the number of SMT threads per core the guest VM sees.
-Note that <n> = 0 sets the HwThreadCountPerCore value to match the host's SMT thread count per core value.
+Where \<n> is the number of SMT threads per core the guest VM sees.
+Note that \<n> = 0 sets the HwThreadCountPerCore value to match the host's SMT thread count per core value.
 
 > [!NOTE]
 > Setting HwThreadCountPerCore = 0 is supported beginning with Windows Server 2019.

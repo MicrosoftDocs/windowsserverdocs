@@ -232,7 +232,7 @@ Properties       : Microsoft.Windows.NetworkController.ServerProperties
 If using SDNExpress scripts or manual deployment, update the HostId key in the registry to match the Instance Id of the server resource. Restart the Network Controller Host Agent on the Hyper-V host (physical server)
 If using VMM, delete the Hyper-V Server from VMM and remove the HostId registry key. Then, re-add the server through VMM.
 
-Check that the thumbprints of the X.509 certificates used by the Hyper-V host (the hostname will be the cert's Subject Name) for (SouthBound) communication between the Hyper-V Host (NC Host Agent service) and Network Controller nodes are the same. Also check that the Network Controller's REST certificate has subject name of *CN=<FQDN or IP>*.
+Check that the thumbprints of the X.509 certificates used by the Hyper-V host (the hostname will be the cert's Subject Name) for (SouthBound) communication between the Hyper-V Host (NC Host Agent service) and Network Controller nodes are the same. Also check that the Network Controller's REST certificate has subject name of *CN=\<FQDN or IP>*.
 
 ```
 # On Hyper-V Host
@@ -690,8 +690,8 @@ If a user has run the _Debug-NetworkController_ cmdlet, additional logs will be 
         1.  For example: # show bgp instance
 4.  Validate the *SlbMuxPerfCounters* and *SLBMUX* counters in PerfMon on the SLB Mux VM
 5.  Check configuration state and VIP ranges in Software Load Balancer Manager Resource
-    1.  Get-NetworkControllerLoadBalancerConfiguration -ConnectionUri <https://<FQDN or IP>| convertto-json -depth 8 (check VIP ranges in IP Pools and ensure SLBM self-VIP (*LoadBalanacerManagerIPAddress*) and any tenant-facing VIPs are within these ranges)
-        1. Get-NetworkControllerIpPool -NetworkId "<Public/Private VIP Logical Network Resource ID>" -SubnetId "<Public/Private VIP Logical Subnet Resource ID>" -ResourceId "<IP Pool Resource Id>" -ConnectionUri $uri |convertto-json -depth 8
+    1.  Get-NetworkControllerLoadBalancerConfiguration -ConnectionUri <https://\<FQDN or IP>| convertto-json -depth 8 (check VIP ranges in IP Pools and ensure SLBM self-VIP (*LoadBalanacerManagerIPAddress*) and any tenant-facing VIPs are within these ranges)
+        1. Get-NetworkControllerIpPool -NetworkId "<Public/Private VIP Logical Network Resource ID>" -SubnetId "<Public/Private VIP Logical Subnet Resource ID>" -ResourceId "\<IP Pool Resource Id>" -ConnectionUri $uri |convertto-json -depth 8
     2.  Debug-NetworkControllerConfigurationState -
 
 If any of the checks above fail, the tenant SLB state will also be in a failure mode.

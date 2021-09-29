@@ -295,7 +295,7 @@ Use this procedure to configure EDGE1 to perform RSA authentication.
 
 5. Open an elevated command prompt and navigate to C:\Windows\SysWOW64.
 
-6. Type **agent_nsload.exe -f nodesecret.rec -p <password>** where <password> is the strong password that you created during the initial RSA configuration. Press Enter.
+6. Type **agent_nsload.exe -f nodesecret.rec -p \<password>** where \<password> is the strong password that you created during the initial RSA configuration. Press Enter.
 
 7. Copy C:\Windows\SysWOW64\securid to C:\Windows\System32.
 

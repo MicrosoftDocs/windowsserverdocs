@@ -90,7 +90,7 @@ If you use VMM, follow the steps in the remaining sections in this topic to inco
 
 If you use VMM, after you create a template disk, you need to copy it to a VMM library share so hosts can download and use the disk when provisioning new VMs. Use the following procedure to copy the template disk into the VMM library and then refresh the library.
 
-1. Copy the VHDX file to the VMM library share folder. If you used the default VMM configuration, copy the template disk to _\\<vmmserver>\MSSCVMMLibrary\VHDs_.
+1. Copy the VHDX file to the VMM library share folder. If you used the default VMM configuration, copy the template disk to _\\<\vmmserver>\MSSCVMMLibrary\VHDs_.
 
 2. Refresh the library server. Open the **Library** workspace, expand **Library Servers**, right-click on the library server that you want to refresh, and click **Refresh**.
 

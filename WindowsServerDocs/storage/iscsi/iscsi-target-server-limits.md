@@ -18,10 +18,10 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col>
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -75,10 +75,10 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col>
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -145,10 +145,10 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col>
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -226,10 +226,10 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col>
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -361,9 +361,9 @@ This topic provides the supported and tested Microsoft iSCSI Target Server limit
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -445,10 +445,10 @@ We've tested the iSCSI Target Server software with the following iSCSI initiator
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col>
+<col>
+<col>
+<col>
 </colgroup>
 <tbody>
 <tr class="odd">

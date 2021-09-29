@@ -52,9 +52,9 @@ The following table specifies the properties of the Protected Users group.
 
 |Attribute|Value|
 |-------|-----|
-|Well-known SID/RID|S-1-5-21-<domain>-525|
+|Well-known SID/RID|S-1-5-21-\<domain>-525|
 |Type|Domain Global|
-|Default container|CN=Users, DC=<domain>, DC=|
+|Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|None|
 |Default member of|None|
 |Protected by ADMINSDHOLDER?|No|
