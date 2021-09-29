@@ -65,7 +65,7 @@ sections:
           - Load balancers should use the AD FS HTTP health probe endpoint to detect whether the AD FS or Web Application Proxy servers are running. It should exclude them if 200 OK isn't returned.
           
       - question: |
-          What multiforest configurations are supported by AD FS?
+          What multiforest configurations does AD FS support?
         answer: |
           AD FS supports multiple multiforest configurations. It relies on the underlying AD DS trust network to authenticate users across multiple trusted realms. We strongly recommend two-way forest trusts because they're easier to set up, which helps ensure the trust system works correctly. 
           
@@ -73,7 +73,7 @@ sections:
           
           - If you have a one-way forest trust, like a perimeter network (also known as DMZ) forest that contains partner identities, we recommend that you deploy AD FS in the corporate forest. Treat the perimeter network forest as another local claims provider trust connected via LDAP. In this case, Windows Integrated Authentication won't work for the perimeter network forest users. They'll need to use password authentication because it's the only supported mechanism for LDAP. 
           
-          If you can't use this option, you need to set up another AD FS server in the perimeter network forest. Add it as a claims provider trust in the AD FS server in the corporate forest. Users will need to do Home Realm Discovery, but both Windows Integrated Authentication and password authentication will work. Make appropriate changes in the issuance rules in AD FS in the perimeter network forest because AD FS in the corporate forest won't be able to get more information about users from the perimeter network forest.
+            If you can't use this option, you need to set up another AD FS server in the perimeter network forest. Add it as a claims provider trust in the AD FS server in the corporate forest. Users will need to do Home Realm Discovery, but both Windows Integrated Authentication and password authentication will work. Make appropriate changes in the issuance rules in AD FS in the perimeter network forest because AD FS in the corporate forest won't be able to get more information about users from the perimeter network forest.
           - Domain-level trusts are supported and can work. But we strongly recommend that you move to a forest-level trust model. You'd also need to ensure UPN routing and NetBIOS name resolution work correctly.
           
           >[!NOTE]
