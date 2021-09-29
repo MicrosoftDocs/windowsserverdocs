@@ -160,7 +160,7 @@ sections:
       - question: |
           Can I pass a resource value as part of the scope value, in the same way that requests are made against Azure AD?
         answer: |
-          With AD FS on Windows Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can be organized as a space-separated list where each entry is structured as resource/scope. For example, **\<create a valid sample request>**.
+          With AD FS on Windows Server 2019, you can now pass the resource value embedded in the scope parameter. The scope parameter can be organized as a space-separated list where each entry is structured as resource/scope. 
           
       - question: |
           Does AD FS support the PKCE extension?
@@ -342,7 +342,7 @@ sections:
           
           On Web Application Proxy servers, you can still use `Set-WebApplicationProxySslCertificate`. On the AD FS servers, you need to use netsh. Complete these steps:
           
-          1. Select a subset of AD FS 2016 servers for maintenance (for example, remove from load balancer).
+          1. Select a subset of AD FS 2016 servers for maintenance.
           2. On the servers selected in the preceding step, import the new certificate via MMC.
           3. Delete the existing certificates:
           
@@ -375,7 +375,10 @@ sections:
       - question: |
           Is AD FS supported when Web Application Proxy servers are behind Azure Web Application Firewall (WAF)?
         answer: |
-          AD FS and Web Application servers support any firewall that doesn't perform SSL termination on the endpoint. Also, AD FS / Web Application Proxy servers have built-in mechanisms to help prevent common web attacks like cross-site scripting, AD FS proxy and to satisfy all requirements defined by the [MS-ADFSPIP protocol](/openspecs/windows_protocols/ms-adfspip/76deccb1-1429-4c80-8349-d38e61da5cbb).
+          AD FS and Web Application servers support any firewall that doesn't perform SSL termination on the endpoint. Also, AD FS / Web Application Proxy servers have built-in mechanisms to:
+          - Help prevent common web attacks like cross-site scripting.
+          - Perform AD FS proxy. 
+          - Satisfy all requirements defined by the [MS-ADFSPIP protocol](/openspecs/windows_protocols/ms-adfspip/76deccb1-1429-4c80-8349-d38e61da5cbb).
           
       - question: |
           I'm getting "Event 441: A token with a bad token binding key was found." What should I do to resolve this event?
