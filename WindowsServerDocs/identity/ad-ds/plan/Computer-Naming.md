@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Computer Naming"
 ms.assetid: f7002265-60fa-40b8-9dd7-4bf131d9320a
 title: Computer Naming
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Computer Naming
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 When a computer running the Windows 2000, Windows XP, Windows Server 2003,  Windows Server 2008 , or Windows Vista operating system joins a domain, by default the computer assigns itself a name. The name it assigns itself comprises the host name of the computer (that is, Computer Name in System Properties) and the Domain Name System (DNS) name of the Active Directory domain that the computer joined (that is, Primary DNS Suffix in System Properties). The concatenation of the host name and the DNS name of the domain is known as the fully qualified domain name (FQDN). For example, if a computer with host name Server1 joins the domain corp.contoso.com, the FQDN of the computer is server1.corp.contoso.com.
 

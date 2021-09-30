@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Disjoint Namespace"
 ms.assetid: d92731f1-e4d8-4223-9b07-ca1f40bb0e1f
 title: Disjoint Namespace
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Disjoint Namespace
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 A disjoint namespace occurs when one or more domain member computers have a primary Domain Name Service (DNS) suffix that does not match the DNS name of the Active Directory domain of which the computers are members. For example, a member computer that uses a primary DNS suffix of corp.fabrikam.com in an Active Directory domain named na.corp.fabrikam.com is using a disjoint namespace.
 

@@ -3,15 +3,15 @@ title: exit
 description: Reference article for exit, which exits the command interpreter.
 ms.topic: reference
 ms.assetid: d3cee4a2-6210-46f0-b8e4-7381c3c4e530
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # exit
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Exits the command interpreter or the current batch script.
 

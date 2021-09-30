@@ -11,7 +11,7 @@ ms.reviewer: deverette
 ---
 # Advanced features of Always On VPN
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Learn about the Always On VPN technology](../always-on-vpn-technology-overview.md)
 - [**Next:** Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md)

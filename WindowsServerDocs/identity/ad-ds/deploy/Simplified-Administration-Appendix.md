@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Simplified Administration Appendix"
 ms.assetid: c911d6c6-98c6-4532-b1db-5724e1ceb96c
 title: Simplified Administration Appendix
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Simplified Administration Appendix
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 -   [Server Manager Add Servers Dialog (Active Directory)](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_AddServers)
 
@@ -94,6 +95,6 @@ The following table describes the two new menu items:
 |Create Full NoDefrag %s|Create IFM media without defragmenting for a full AD DC or an AD/LDS instance into folder %s|
 |Create Sysvol Full NoDefrag %s|Create IFM media with SYSVOL and without defragmenting for a full AD DC into folder %s|
 
-![Simplified Administration](media/Simplified-Administration-Appendix/ADDS_PSIFM.png)
+![Screenshot of a terminal window that shows the the process for creating IFM media.](media/Simplified-Administration-Appendix/ADDS_PSIFM.png)
 
-![Simplified Administration](media/Simplified-Administration-Appendix/ADDS_PSIFMComplete.gif)
+![Screenshot of a terminal window that shows the IFM media was successfully created.](media/Simplified-Administration-Appendix/ADDS_PSIFMComplete.gif)

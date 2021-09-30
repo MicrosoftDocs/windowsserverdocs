@@ -2,7 +2,7 @@
 title: Cluster to cluster Storage Replication
 manager: siroy
 ms.author: nedpyle
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle
 ms.date: 04/26/2019
@@ -10,7 +10,7 @@ description: How to use Storage Replica to replicate volumes in one cluster to a
 ---
 # Cluster to cluster Storage Replication
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Storage Replica can replicate volumes between clusters, including the replication of clusters using Storage Spaces Direct. The management and configuration is similar to server-to-server replication.
 
@@ -385,5 +385,5 @@ Now you will manage and operate your cluster-to-cluster replication. You can per
 -   [Stretch Cluster Replication Using Shared Storage](stretch-cluster-replication-using-shared-storage.md)
 -   [Server to Server Storage Replication](server-to-server-storage-replication.md)
 -   [Storage Replica: Known Issues](storage-replica-known-issues.md)
--   [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.md)
+-   [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
 -   [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)

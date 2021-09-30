@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: What's new in Active Directory Domain Services for Windows Server 2016"
 ms.assetid: 6a852428-c1ec-4703-b3b3-a4bfdf8cbb9d
 title: What's new in Active Directory Domain Services in Windows Server 2016
 ms.author: joflore
@@ -10,7 +11,7 @@ ms.topic: article
 
 # What's new in Active Directory Domain Services for Windows Server 2016
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 The following new features in Active Directory Domain Services (AD DS) improve the ability for organizations to secure Active Directory environments and help them migrate to cloud-only deployments and hybrid deployments, where some applications and services are hosted in the cloud and others are hosted on premises. The improvements include:
 

@@ -152,7 +152,7 @@
 ##### [AD Forest Recovery - Identify the Problem](ad-ds/manage/AD-Forest-Recovery-Identify-the-Problem.md)
 ##### [AD Forest Recovery - Perform Initial Recovery](ad-ds/manage/AD-Forest-Recovery-Perform-initial-recovery.md)
 ##### [AD Forest Recovery - Procedures](ad-ds/manage/AD-Forest-Recovery-Procedures.md)
-##### [AD Forest Recovery - FAQ](ad-ds/manage/AD-Forest-Recovery-FAQ.md)
+##### [AD Forest Recovery - FAQ](ad-ds/manage/ad-forest-recovery-faq.yml)
 ##### [AD Forest Recovery - Recovering a single domain with multidomain forest](ad-ds/manage/AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
 ##### [AD Forest Recovery - Virtualization](ad-ds/manage/AD-Forest-Recovery-Virtualization.md)
 ##### [AD Forest Recovery - Windows Server 2003](ad-ds/manage/AD-Forest-Recovery-Windows-Server-2003.md)
@@ -471,15 +471,12 @@
 ##### [How URIs Are Used in AD FS](ad-fs/technical-reference/How-URIs-Are-Used-in-AD-FS.md)
 #### [Device registration Technical Reference](ad-fs/technical-reference/device-registration-technical-reference.md)
 #### [AD FS Password Attack Protection](ad-fs/technical-reference/ad-fs-password-protection.md)
-### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.md)
+### [AD FS 2016 FAQ](ad-fs/overview/AD-FS-FAQ.yml)
 
 ## Active Directory Rights Management Service
 ### [Upgrading AD RMS to Windows Server 2016](ad-rms/adrms-deploy.md)
 
-
-## [Securing Privileged Access](securing-privileged-access/securing-privileged-access.md)
-### [Privileged Access Workstations](securing-privileged-access/privileged-access-workstations.md)
-### [Securing Privileged Access Reference Material](securing-privileged-access/securing-privileged-access-reference-material.md)
+## [Administrative tools and logon types reference](securing-privileged-access/reference-tools-logon-types.md)
 
 ## [Software Restriction Policies](software-restriction-policies/software-restriction-policies.md)
 ### [Software Restriction Policies Technical Overview](software-restriction-policies/software-restriction-policies-technical-overview.md)

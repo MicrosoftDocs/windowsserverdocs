@@ -1,6 +1,6 @@
 ---
 title: The Hyper-V Virtual Machine Management service should be configured to start automatically
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when the Hyper-V Virtual Machine Management Service is not configured to start automatically.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -9,9 +9,9 @@ ms.date: 8/16/2016
 ---
 # The Hyper-V Virtual Machine Management service should be configured to start automatically
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-For more information about best practices and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -65,6 +65,3 @@ Virtual machines that are running will continue to run. However, you won't be ab
     ```
     start-service -name vmms
     ```
-
-
-

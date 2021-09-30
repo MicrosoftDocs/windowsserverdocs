@@ -3,14 +3,14 @@ title: Azure Hybrid Benefit for Windows Server
 description: Use your on-premises Windows Server licenses to save on Azure VMs
 ms.date: 11/10/2017
 ms.topic: article
-author: eross-msft
+author: JasonGerend
 ms.author: chrisrin
 ms.localizationpriority: high
 ---
 
 # Azure Hybrid Benefit for Windows Server
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+>Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 ## Benefit description, rules, and use cases
 

@@ -1,6 +1,6 @@
 ---
 title: Manage a personal desktop session collection in RDS
-description: Learn how to add and RDSH and RemoteApp programs to your RDS deployment.
+description: Learn how to manage a personal desktop session collection in Remote Desktop Services.
 ms.author: elizapo
 ms.date: 11/08/2016
 ms.topic: article
@@ -76,4 +76,4 @@ The **Export-RDPersonalPersonalDesktopAssignment** cmdlet exports the current as
 -Path \<string\>
 
 
-All new cmdlets support the common parameters: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, and -OutVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+All new cmdlets support the common parameters: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer, and -OutVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).

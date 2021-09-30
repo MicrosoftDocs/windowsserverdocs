@@ -1,16 +1,17 @@
 ---
 title: Network-Related Performance Counters
-description: This topic is part of the Network Subsystem Performance Tuning guide for Windows Server 2016.
+description: Learn about the counters that are relevant to managing network performance.
 ms.topic: article
 ms.assetid: 7ebaa271-2557-4c24-a679-c3d863e6bf9e
 manager: dcscontentpm
 ms.author: v-tea
 author: Teresa-Motiv
+ms.date: 08/07/2020
 ---
 
 # Network-Related Performance Counters
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic lists the counters that are relevant to managing network performance, and contains the following sections.
 

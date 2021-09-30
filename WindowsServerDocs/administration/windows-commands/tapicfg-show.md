@@ -2,15 +2,15 @@
 title: tapicfg show
 description: Reference article for the tapicfg show command, which displays the names and locations of the TAPI application directory partitions in the domain.
 ms.topic: reference
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 09/29/2020
 ---
 
 # tapicfg show
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays the names and locations of the TAPI application directory partitions in the domain.
 

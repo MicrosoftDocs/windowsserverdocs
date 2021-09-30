@@ -3,14 +3,14 @@ title: wdsutil stop-transportserver
 description: Reference article for stop-TransportServer
 ms.topic: reference
 ms.assetid: dc1b1eec-6893-445e-81dc-16b3fae287fa
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # wdsutil stop-transportserver
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Stops all services on a Transport Server.
 ## Syntax
@@ -18,9 +18,11 @@ Stops all services on a Transport Server.
 wdsutil [Options] /Stop-TransportServer [/Server:<Server name>]
 ```
 ### Parameters
+
 |Parameter|Description|
 |-------|--------|
-|[/Server:<Server name>]|Specifies the name of the Transport Server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no Transport Server is specified, the local server will be used.|
+|[/Server:\<Server name\>]|Specifies the name of the Transport Server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no Transport Server is specified, the local server will be used.|
+
 ## Examples
 To stop the services, type one of the following:
 ```

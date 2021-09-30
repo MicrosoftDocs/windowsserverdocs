@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Introducing Token Binding"
 title: Introducing Token Binding
 ms.topic: article
 ms.assetid: 4623a48c-cefd-4a27-9173-2af58ac212f2
@@ -9,7 +10,7 @@ ms.date: 11/09/2016
 
 # Introducing Token Binding
 
->Applies To: Windows Server 2016 and Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016 and Windows 10
 
 The Token Binding protocol allows applications and services to cryptographically bind their security tokens to the TLS layer to mitigate token theft and replay attacks.
 The long-lived, uniquely identifiable TLS [RFC5246] bindings can span multiple TLS sessions and connections.

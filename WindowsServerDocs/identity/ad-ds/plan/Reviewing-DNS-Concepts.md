@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Reviewing DNS Concepts"
 ms.assetid: 133474ee-316d-4b1c-acc6-ad5434a064d5
 title: Reviewing DNS Concepts
 ms.author: daveba
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Reviewing DNS Concepts
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Domain Name System (DNS) is a distributed database that represents a namespace. The namespace contains all of the information needed for any client to look up any name. Any DNS server can answer queries about any name within its namespace. A DNS server answers queries in one of the following ways:
 
@@ -47,7 +48,7 @@ In some configurations, DNS servers include root hints (that is, a list of names
 
 Root hints enable any DNS server to locate the DNS root servers. After a DNS server locates the DNS root server, it can resolve any query for that namespace. The following illustration describes how DNS resolves a name by using root hints.
 
-![DNS concepts](../../media/Reviewing-DNS-Concepts/1c044845-b104-4262-a7af-474ba3558a85.gif)
+![Illustration that shows how DNS resolves a name by using root hints.](../../media/Reviewing-DNS-Concepts/1c044845-b104-4262-a7af-474ba3558a85.gif)
 
 In this example, the following events occur:
 
@@ -62,7 +63,7 @@ In this example, the following events occur:
 
 Forwarding enables you to route name resolution through specific servers instead of using root hints. The following illustration describes how DNS resolves a name by using forwarding.
 
-![DNS concepts](../../media/Reviewing-DNS-Concepts/05bc2eb0-1033-4e53-ae30-244fa247d000.gif)
+![Illustration that shows how DNS resolves a name by using forwarding.](../../media/Reviewing-DNS-Concepts/05bc2eb0-1033-4e53-ae30-244fa247d000.gif)
 
 In this example, the following events occur:
 

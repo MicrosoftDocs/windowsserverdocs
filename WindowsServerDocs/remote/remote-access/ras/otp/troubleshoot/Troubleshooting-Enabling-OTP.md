@@ -1,15 +1,16 @@
 ---
 title: Troubleshooting Enabling OTP
-description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
+description: Learn how to troubleshoot issues related to enabling DirectAccess OTP authentication using either the Enable-DAOtpAuthentication PowerShell cmdlet or the Remote Access Management console.
 manager: brianlic
 ms.topic: article
 ms.assetid: b58252ca-4c1d-4664-a3c4-7301e2121517
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Troubleshooting Enabling OTP
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic contains troubleshooting information for issues related to enabling DirectAccess OTP authentication using either the **Enable-DAOtpAuthentication** PowerShell cmdlet or the Remote Access Management console.
 

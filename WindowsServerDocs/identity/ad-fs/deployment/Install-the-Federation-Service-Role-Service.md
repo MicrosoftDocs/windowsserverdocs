@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Install the Federation Service Role Service"
 ms.assetid: e33673ff-ea1c-4476-a549-3bf5899a47dd
 title: Install the Federation Service Role Service
 author: billmath
@@ -20,7 +21,7 @@ You can use the following procedure to install the Federation Service role servi
 ## Prerequisites
 Verify that an SSL certificate with the private key has already been installed or imported into the local certificate store (Personal store) before you start this procedure. If you will be using a token-signing certificate that is issued by a certification authority (CA), verify that a token-signing certificate with the private key has already been installed or imported into the local certificate store (Personal store) before you start this procedure. As an alternative, you can create a self-signed, token-signing certificate using the Add Roles Wizard, as described in this procedure. For more information about token-signing certificates, see [Certificate Requirements for Federation Servers](../design/certificate-requirements-for-federation-servers.md).
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 #### To install the Federation Service role service
 

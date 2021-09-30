@@ -3,15 +3,15 @@ title: wdsutil remove-multicasttransmission
 description: Reference article for wdsutil remove-multicasttransmission, which disables multicast transmitting for an image.
 ms.topic: reference
 ms.assetid: 9a7f5c31-bfbf-425d-9129-a6f9173fe83d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # wdsutil remove-multicasttransmission
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Disables multicast transmitting for an image. Unless you specify **/force**, existing clients will complete the image transfer but new clients will not be allowed to join.
 
@@ -38,15 +38,17 @@ wdsutil [Options] /remove-MulticastTransmissiomedia:<Image name>
         [/Filename:<File name>]
 ```
 ### Parameters
+
 |Parameter|Description|
 |-------|--------|
-|media:<Image name>|Specifies the name of the image.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
-mediatype:{Install&#124;Boot}|Specifies the image type. Note that this option must be set to **Install** for Windows Server 2008.|
-|/Architecture:{x86 &#124; ia64 &#124; x64}|Specifies the architecture of the boot image that is associated with the transmission to start. Because it is possible to have the same image name for boot images in different architectures, you should specify the architecture to ensure that the correct transmission is used.|
-|\mediaGroup:<Image group name>]|Specifies the image group that contains the image. If no image group name is specified and only one image group exists on the server, that image group is used. If more than one image group exists on the server, you must use this option to specify the image group name.|
-|[/Filename:<File name>]|Specifies the file name. If the source image cannot be uniquely identified by name, you must use this option to specify the file name.|
+|media:\<Image name\>|Specifies the name of the image.|
+|[/Server:\<Server name\>]|Specifies the name of the server. This can be the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server is used.|
+mediatype:{Install\|Boot}|Specifies the image type. Note that this option must be set to **Install** for Windows Server 2008.|
+|/Architecture:{x86 \| ia64 \| x64}|Specifies the architecture of the boot image that is associated with the transmission to start. Because it is possible to have the same image name for boot images in different architectures, you should specify the architecture to ensure that the correct transmission is used.|
+|\mediaGroup:\<Image group name\>]|Specifies the image group that contains the image. If no image group name is specified and only one image group exists on the server, that image group is used. If more than one image group exists on the server, you must use this option to specify the image group name.|
+|[/Filename:\<File name\>]|Specifies the file name. If the source image cannot be uniquely identified by name, you must use this option to specify the file name.|
 |[/force]|removes the transmission and terminates all clients. Unless you specify a value for the **/force** option, existing clients can complete the image transfer but new clients are not able to join.|
+
 ## Examples
 To stop a namespace (current clients will complete the transmission, but new clients will not be able to join), type:
 ```

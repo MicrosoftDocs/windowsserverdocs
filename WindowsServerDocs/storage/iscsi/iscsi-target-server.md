@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: iSCSI Target Server overview"
 title: iSCSI Target Server Overview
 TOCTitle: iSCSI Target Server
 ms.topic: article
@@ -10,7 +11,7 @@ ms.date: 09/11/2018
 
 # iSCSI Target Server overview
 
-Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides a brief overview of iSCSI Target Server, a role service in Windows Server that enables you to make storage available via the iSCSI protocol. This is useful for providing access to storage on your Windows server for clients that can't communicate over the native Windows file sharing protocol, SMB.
 

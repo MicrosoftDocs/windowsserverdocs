@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Single log-out for OpenID Connect with AD FS"
 title: Single log-out for OpenID Connect with AD FS
 author: billmath
 ms.author: billmath
@@ -84,7 +85,7 @@ Set-AdfsClient -LogoutUri <url>
 
 The `LogoutUri` is the url used by AF FS to "log off" the user. For implementing the `LogoutUri`, the client needs to ensure it clears the authentication state of the user in the application, for example, dropping the authentication tokens that it has. AD FS will browse to that URL, with the SID as the query parameter, signaling the relying party / application to log off the user.
 
-![ADFS log off user diagram](media/ad-fs-logout-openid-connect/adfs_single_logout2.png)
+![AD FS log off user diagram](media/ad-fs-logout-openid-connect/adfs_single_logout2.png)
 
 1.	**OAuth token with session ID**: AD FS includes session id in the OAuth token at the time of id_token token issuance. This will be used later by AD FS to identify the relevant SSO cookies to be cleaned up for the user.
 2.	**User initiates logout on App1**: The user can initiate a logout from any of the logged in applications. In this example scenario, a user initiates a logout from App1.

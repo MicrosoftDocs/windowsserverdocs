@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Determining the Schedule"
 ms.assetid: 28ecaf5c-9131-406c-b211-a230162e462e
 title: Determining the Schedule
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Determining the Schedule
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You can control site link availability by setting a schedule for site links. When replication between two sites traverses multiple site links, the intersection of the replication schedules on all the relevant links determines the connection schedule between the two sites.
 

@@ -1,6 +1,6 @@
 ---
 title: Ensure that all mandatory virtual switch extensions are available
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when one or more virtual network adapters are connected to a virtual switch with mandatory extensions that are disabled or not installed.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -9,9 +9,9 @@ ms.date: 8/16/2016
 ---
 # Ensure that all mandatory virtual switch extensions are available
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -32,6 +32,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Resolution
 *First, make sure that the mandatory extension has been installed on the host and install the extension if necessary. Then, if the mandatory extension is disabled, use Virtual Switch Manager or the Windows PowerShell cmdlet Enable-VMSwitchExtension to enable the extension.*
-
-
-

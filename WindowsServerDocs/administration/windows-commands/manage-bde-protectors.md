@@ -3,15 +3,15 @@ title: manage-bde protectors
 description: Reference article for the manage-bde protectors command, which manages the protection methods used for the BitLocker encryption key.
 ms.topic: reference
 ms.assetid: 1f9b22c5-cc93-45df-9165-bedee94998da
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 08/06/2018
 ---
 
 # manage-bde protectors
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Manages the protection methods used for the BitLocker encryption key.
 
@@ -24,14 +24,14 @@ manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup
 ### Parameters
 
 | Parameter | Description |
-| ----------- | ----------- |
+| --------- | ----------- |
 | -get | Displays all the key protection methods enabled on the drive and provides their type and identifier (ID). |
 | -add | Adds key protection methods as specified by using additional **-add** parameters. |
 | -delete | Deletes key protection methods used by BitLocker. All key protectors will be removed from a drive unless the optional **-delete** parameters are used to specify which protectors to delete. When the last protector on a drive is deleted, BitLocker protection of the drive is disabled to ensure that access to data is not lost inadvertently. |
 | -disable | Disables protection, which will allow anyone to access encrypted data by making the encryption key available unsecured on drive. No key protectors are removed. Protection will be resumed the next time Windows is booted unless the optional **-disable** parameters are used to specify the reboot count. |
 | -enable | Enables protection by removing the unsecured encryption key from the drive. All configured key protectors on the drive will be enforced. |
-| -adbackup | Backs up all recovery information for the drive specified to Active Directory Domain Services (AD DS). To back up only a single recovery key to AD DS, append the **-id** parameter and specify the ID of a specific recovery key to back up. |
-| -aadbackup | Backs up all recovery information for the drive specified to Azure Active Directory (Azure AD). To back up only a single recovery key to Azure AD, append the **-id** parameter and specify the ID of a specific recovery key to back up. |
+| -adbackup | Backs up recovery information for the drive specified to Active Directory Domain Services (AD DS). Append the **-id** parameter and specify the ID of a specific recovery key to back up. The **-id** parameter is required. |
+| -aadbackup | Backs up all recovery information for the drive specified to Azure Active Directory (Azure AD). Append the **-id** parameter and specify the ID of a specific recovery key to back up. The **-id** parameter is required. |
 | `<drive>` | Represents a drive letter followed by a colon. |
 | -computername | Specifies that manage-bde.exe will be used to modify BitLocker protection on a different computer. You can also use **-cn** as an abbreviated version of this command. |
 | `<name>` | Represents the name of the computer on which to modify BitLocker protection. Accepted values include the computer's NetBIOS name and the computer's IP address. |
@@ -60,7 +60,7 @@ manage-bde -protectors -add [<drive>] [-forceupgrade] [-recoverypassword <numeri
 | `<pathtoexternalkeydirectory>` | Represents the directory path to the startup key. |
 | -certificate | Adds a public key protector for a data drive. You can also use **-cert** as an abbreviated version of this command. |
 | -cf | Specifies that a certificate file will be used to provide the public key certificate. |
-| <pathtocertificatefile> | Represents the directory path to the certificate file. |
+| `<pathtocertificatefile>` | Represents the directory path to the certificate file. |
 | -ct | Specifies that a certificate thumbprint will be used to identify the public key certificate |
 | `<certificatethumbprint>` | Specifies the value of the thumbprint property of the certificate you want to use. For example, a certificate thumbprint value of a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b should be specified as a909502dd82ae41433e6f83886b00d4277a32a7b. |
 | -tpmandpin | Adds a Trusted Platform Module (TPM) and personal identification number (PIN) protector for the operating system drive. You can also use **-tp** as an abbreviated version of this command. |

@@ -1,15 +1,16 @@
 ---
 title: STEP 4 Install and Configure RSA and EDGE1
-description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess with OTP Authentication and RSA SecurID for Windows Server 2016
+description: Learn how to install and configure RSA and EDGE1.
 manager: brianlic
 ms.topic: article
 ms.assetid: d46ede6f-1a21-414d-b8c3-6b5c87344b9d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # STEP 4 Install and Configure RSA and EDGE1
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 RSA is the RADIUS and OTP server, and is installed prior to configuring RADIUS and OTP.
 

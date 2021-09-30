@@ -3,15 +3,15 @@ title: wdsutil remove
 description: Reference article for wdsutil remove, which removes various driver-related information.
 ms.topic: reference
 ms.assetid: e3f1644d-6028-4c47-a9fd-227bcdcc6123
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # wdsutil remove
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## Subcommands
 |Subommand|Description|

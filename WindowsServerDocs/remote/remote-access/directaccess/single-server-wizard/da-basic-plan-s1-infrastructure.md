@@ -1,10 +1,12 @@
 ---
 title: Step 1 Plan the Basic DirectAccess Infrastructure
-description: This topic is part of the guide Deploy a Single DirectAccess Server Using the Getting Started Wizard for Windows Server 2016
+description: Learn how to perform planning for the infrastructure required for the basic DirectAccess deployment.
 manager: brianlic
 ms.topic: article
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+
+ms.date: 08/07/2020
 ---
 # Step 1 Plan the Basic DirectAccess Infrastructure
 The first step for a basic DirectAccess deployment on a single server is to perform planning for the infrastructure required for the deployment. This topic describes the infrastructure planning steps:
@@ -108,6 +110,17 @@ In a DirectAccess deployment, DNS is required for the following:
 
     2.  If the corporate network is IPv6-based, the default address is the IPv6 address of DNS servers in the corporate network.
 
+> [!NOTE]
+> Starting with the Windows 10 May 2020 Update, a client no longer registers its IP addresses on DNS servers configured in a Name Resolution Policy Table (NRPT).
+> If DNS registration is needed, for example **Manage Out**, it can be explicitly enabled with this registry key on the client:
+>
+> Path: `HKLM\System\CurrentControlSet\Services\Dnscache\Parameters`<br/>
+> Type: `DWORD`<br/>
+> Value name: `DisableNRPTForAdapterRegistration`<br/>
+> Values:<br/>
+> `1` - DNS Registration disabled (default since the Windows 10 May 2020 Update)<br/>
+> `0` - DNS Registration enabled
+
 -   **Infrastructure servers**
 
     1.  **Network location server**. DirectAccess clients attempt to reach the network location server to determine if they are on the internal network. Clients on the internal network must be able to resolve the name of the network location server, but must be prevented from resolving the name when they are located on the Internet. To ensure this occurs, by default, the FQDN of the network location server is added as an exemption rule to the NRPT. In addition, when you configure DirectAccess, the following rules are created automatically:
@@ -190,7 +203,7 @@ Note that once DirectAccess is configured to use specific GPOs, it cannot be con
 > Whether you are using automatically or manually configured GPOs, you will need to add a policy for slow link detection if your clients will use 3G. The Group Policy path for **Policy: Configure Group Policy slow link detection** is: **Computer configuration / Polices / Administrative Templates / System / Group Policy**.
 
 > [!CAUTION]
-> Use the following procedure to backup all DirectAccess Group Policy Objects before executing DirectAccess cmdlets: [Back up and Restore DirectAccess Configuration](https://go.microsoft.com/fwlink/?LinkID=257928)
+> Use the following procedure to backup all DirectAccess Group Policy Objects before executing DirectAccess cmdlets: [Back up and Restore DirectAccess Configuration](/samples/browse/?redirectedfrom=TechNet-Gallery)
 
 #### Automatically-created GPOs
 Note the following when using automatically-created GPOs:
@@ -240,4 +253,3 @@ If a DirectAccess server, client, or application server GPO has been deleted by 
 ### <a name="BKMK_Links"></a>Next step
 
 -   [Step 2: Plan the Basic DirectAccess Deployment](da-basic-plan-s2-deployment.md)
-

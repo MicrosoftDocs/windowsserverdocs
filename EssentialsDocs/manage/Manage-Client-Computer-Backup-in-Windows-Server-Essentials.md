@@ -1,6 +1,6 @@
 ---
 title: "Manage Client Computer Backup in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about common backup tasks for client computers that you can accomplish by using the Windows Server Essentials Dashboard.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 1b4776e8-9504-4b98-ae80-11da797d9819
@@ -122,7 +122,7 @@ manager: mtillman
 - You can only back up data from a local drive that is formatted as an NTFS file system. Drives formatted as FAT (including FAT32) or ReFS file systems do not appear in the list of drives to back up.
 
 > [!IMPORTANT]
->  Volume Shadow Copy Service (VSS) does not support creating a shadow copy of a virtual volume and the host volume in the same snapshot set. VSS does support creating snapshots of volumes on a virtual hard disk (VHD), if backup of the virtual volume is necessary. For more information, see [Servicing and Backing Up Virtual Hard Disks](https://go.microsoft.com/fwlink/p/?LinkId=256577).
+>  Volume Shadow Copy Service (VSS) does not support creating a shadow copy of a virtual volume and the host volume in the same snapshot set. VSS does support creating snapshots of volumes on a virtual hard disk (VHD), if backup of the virtual volume is necessary. For more information, see [Servicing and Backing Up Virtual Hard Disks](/previous-versions/windows/it-pro/windows-server-essentials-sbs/dn550731(v=ws.11)).
 
 ##  <a name="BKMK_4"></a> Change the time that backup is scheduled to run
  The backup process should be scheduled during a time when as few people as possible are using their networked computers. This is usually during the late evening or early morning hours. The default time for backup is 6:00 PM until 9:00 AM. The server attempts to back up client computers only during the scheduled window of time.
@@ -328,7 +328,7 @@ manager: mtillman
 
     -   **Backup in progress**: Displays the percentage of backup completed.
 
-    -   **Backup was cancelled**: Displays the date and time that the backup started if you or the network administrator cancelled the backup.
+    -   **Backup was canceled**: Displays the date and time that the backup started if you or the network administrator canceled the backup.
 
     -   **Backup succeeded**: Displays the date and time that the backup started if the backup completed successfully.
 
@@ -352,7 +352,7 @@ manager: mtillman
 
 3.  In the **Backup Properties** dialog box, in the **Backup status** section, the **Start backup** button changes to **Stop backup** when the backup is in progress. Click **Stop backup**, and then click **Yes** to confirm. The backup will continue to run until you click **Yes**.
 
-4.  When you stop a backup in progress, the status changes to **Backup was cancelled** with the date and time that the backup started. If, instead, you see a status of **Successful**, **Incomplete**, or **Failed**, the last backup has already finished.
+4.  When you stop a backup in progress, the status changes to **Backup was canceled** with the date and time that the backup started. If, instead, you see a status of **Successful**, **Incomplete**, or **Failed**, the last backup has already finished.
 
 5.  Click **OK** to close the **Backup Properties** dialog box.
 
@@ -372,7 +372,7 @@ manager: mtillman
 
 4.  Type a description for the backup, and then click **OK**. The status changes to **Starting backup**, and then to **Backup in process** with a percentage complete.
 
-5.  After backup starts, the button changes to **Stop backup**. If the backup is in progress and you want to stop it, click **Stop backup**, and then click **Yes**. When you stop a backup in progress, the status changes to **Backup was cancelled** with the date and time that the backup was started.
+5.  After backup starts, the button changes to **Stop backup**. If the backup is in progress and you want to stop it, click **Stop backup**, and then click **Yes**. When you stop a backup in progress, the status changes to **Backup was canceled** with the date and time that the backup was started.
 
 6.  When the backup finishes successfully, the status changes to **Backup succeeded** with the date and time that the finished backup started.
 
@@ -390,7 +390,7 @@ manager: mtillman
 -   On Sunday, Backup Cleanup runs.
 
 > [!IMPORTANT]
->  Volume Shadow Copy Service (VSS) does not support creating a shadow copy of a virtual volume and the host volume in the same snapshot set. VSS does support creating snapshots of volumes on a virtual hard disk (VHD), if backup of the virtual volume is necessary. For more information, see [Servicing and Backing Up Virtual Hard Disks](https://go.microsoft.com/fwlink/p/?LinkId=256577).
+>  Volume Shadow Copy Service (VSS) does not support creating a shadow copy of a virtual volume and the host volume in the same snapshot set. VSS does support creating snapshots of volumes on a virtual hard disk (VHD), if backup of the virtual volume is necessary. For more information, see [Servicing and Backing Up Virtual Hard Disks](/previous-versions/windows/it-pro/windows-server-essentials-sbs/dn550731(v=ws.11)).
 
 ##  <a name="BKMK_16"></a> Tips to help prevent data loss due to corruption of the client backup database
  If the client backup database becomes corrupt, you can lose critical data.

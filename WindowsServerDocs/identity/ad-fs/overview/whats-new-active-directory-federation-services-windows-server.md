@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: What's new in Active Directory Federation Services"
 ms.assetid: aa892a85-f95a-4bf1-acbb-e3c36ef02b0d
 title: What's new in Active Directory Federation Services for Windows Server 2016
 author: billmath
@@ -17,20 +18,20 @@ ms.topic: article
 
 The following is a brief summary of updates to protected logins available in AD FS 2019:
 - **External Auth Providers as Primary** - Customers can now use 3rd party authentication products as the first factor and not expose passwords as the first factor. In the cases where an external auth provider can prove 2 factors it can claim MFA.
-- **Password Authentication as additional Authentication** - Customers have a fully supported inbox option to use password only for the additional factor after a password less option is used as the first factor. This improves the customer experience from ADFS 2016 where customers had to download a github adapter which is supported as is.
+- **Password Authentication as additional Authentication** - Customers have a fully supported inbox option to use password only for the additional factor after a password less option is used as the first factor. This improves the customer experience from AD FS 2016 where customers had to download a github adapter which is supported as is.
 - **Pluggable Risk Assessment Module** - Customers can now build their own plug in modules to block certain types of requests during pre-authentication stage. This makes it easier for customers to use cloud intelligence such as Identity protection to block logins for risky users or risky transactions.  For more information see [ Build Plug-ins with AD FS 2019 Risk Assessment Model](../../ad-fs/development/ad-fs-risk-assessment-model.md)
 - **ESL improvements** - Improves on the ESL QFE in 2016 by adding the following capabilities
-    - Enables customers to be in audit mode while being protected by 'classic' extranet lockout functionality available since ADFS 2012R2. Currently 2016 customers would have no protection while in audit mode.
+    - Enables customers to be in audit mode while being protected by 'classic' extranet lockout functionality available since AD FS 2012R2. Currently 2016 customers would have no protection while in audit mode.
     - Enables independent lockout threshold for familiar locations. This makes it possible for multiple instances of apps running with a common service account to roll over passwords with the least amount of impact.
 
 
 ### Additional security improvements
 
 The following additional security improvements are available in AD FS 2019:
-- **Remote PowerShell (PSH) using SmartCard Login** - Customers can now use smartcards to remote connect to ADFS via PSH and use that to manage all PSH functions include multi-node PSH cmdlets.
-- **HTTP Header customization** - Customers can now customize HTTP headers emitted during ADFS responses. This includes the following headers
-     - HSTS: This conveys that ADFS endpoints can only be used on HTTPS endpoints for a compliant browser to enforce
-     - x-frame-options: Allows ADFS admins to allow specific relying parties to embed iFrames for ADFS interactive login pages. This should be used with care and only on HTTPS hosts.
+- **Remote PowerShell (PSH) using SmartCard Login** - Customers can now use smartcards to remote connect to AD FS via PSH and use that to manage all PSH functions include multi-node PSH cmdlets.
+- **HTTP Header customization** - Customers can now customize HTTP headers emitted during AD FS responses. This includes the following headers
+     - HSTS: This conveys that AD FS endpoints can only be used on HTTPS endpoints for a compliant browser to enforce
+     - x-frame-options: Allows AD FS admins to allow specific relying parties to embed iFrames for AD FS interactive login pages. This should be used with care and only on HTTPS hosts.
      - Future header: Additional future headers can be configured as well.
 
 For more information see [Customize HTTP security response headers with AD FS 2019](../../ad-fs/operations/customize-http-security-headers-ad-fs.md)
@@ -43,18 +44,18 @@ The following authentication/policy capabilities are in AD FS 2019:
     - Customers are transitioning from one additional authentication provider to another. This way as they onboard users to a newer authentication provider they can use groups to control which additional authentication provider is called.
     - Customers have needs for a specific additional authentication provider (e.g. certificate) for certain applications.
 - **Restrict TLS based device auth only to applications that require it** - Customers can now restrict client TLS based device authentications to only applications performing device based conditional access. This prevents any unwanted prompts for device authentication (or failures if the client application cannot handle) for applications that do not require TLS based device authentication.
-- **MFA freshness support**    - AD FS now supports the ability to re-do 2nd factor credential based on the freshness of the 2nd factor credential. This allows customers to do an initial transaction with 2 factors and only prompt for the 2nd factor on a periodic basis. This is only available to applications that can provide an additional parameter in the request and is not a configurable setting in ADFS. This parameter is supported by Azure AD when "Remember my MFA for X days" is configured and the 'supportsMFA' flag is set to true on the federated domain trust settings in Azure AD.
+- **MFA freshness support**    - AD FS now supports the ability to re-do 2nd factor credential based on the freshness of the 2nd factor credential. This allows customers to do an initial transaction with 2 factors and only prompt for the 2nd factor on a periodic basis. This is only available to applications that can provide an additional parameter in the request and is not a configurable setting in AD FS. This parameter is supported by Azure AD when "Remember my MFA for X days" is configured and the 'supportsMFA' flag is set to true on the federated domain trust settings in Azure AD.
 
 
 ### Sign-in SSO improvements
 
 The following sign-in SSO improvements have been made in AD FS 2019:
 
-- [Paginated UX with Centered Theme](../operations/AD-FS-paginated-sign-in.md) - ADFS now has moved to a paginated UX flow that allows ADFS to validate and provide a more smoother sign-in experience. ADFS now uses a centered UI (instead of the right side of the screen). You may require newer logo and background images to align with this experience. This also mirrors functionality offered in Azure AD.
+- [Paginated UX with Centered Theme](../operations/AD-FS-paginated-sign-in.md) - AD FS now has moved to a paginated UX flow that allows AD FS to validate and provide a more smoother sign-in experience. AD FS now uses a centered UI (instead of the right side of the screen). You may require newer logo and background images to align with this experience. This also mirrors functionality offered in Azure AD.
 - **Bug fix: Persistent SSO state for Win10 devices when doing PRT auth**    This addresses an issue where MFA state was not persisted when using PRT authentication for Windows 10 devices. The result of the issue was that end users would get prompted for 2nd factor credential (MFA) frequently. The fix also makes the experience consistent when device auth is successfully performed via client TLS and via PRT mechanism.
 
 
-### Suppport for building modern line-of-business apps
+### Support for building modern line-of-business apps
 
 The following support for building modern LOB apps has been added to AD FS 2019:
 
@@ -119,11 +120,61 @@ C. The client then sends the authorization code in the Access Token Request as u
 
 D. The AD FS transforms "code_verifier" and compares it to "t(code_verifier)" from (B).  Access is denied if they are not equal.
 
+#### How to choose additional auth providers in 2019 
+AD FS already supports triggering additional authentication based on claim rule policy. Those policies can be set on a particular RP or at global level. Additional auth policy for a particular RP could be set using the cmdlet [Set-AdfsRelyingPartyTrust (AD FS) | Microsoft Docs](/powershell/module/adfs/set-adfsrelyingpartytrust) by passing either AdditionalAuthenticationRules or AdditionalAuthenticationRulesFile parameter. To set it globally admin can use the cmdlet [Set-AdfsAdditionalAuthenticationRule (AD FS) | Microsoft Docs](/powershell/module/adfs/set-adfsadditionalauthenticationrule).
+
+For example, 2012 R2 onwards admin can already write the following rule to prompt additional authentication if the request comes from extranet. 
+
+```
+Set-AdfsAdditionalAuthenticationRule -AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );' 
+```
+In 2019, customers can now use claims rules to decide which additional authentication provider to invoke for additional authentication. This is useful for 2 scenarios: 
+
+Customers are transitioning from one additional authentication provider to another. This way as they onboard users to a newer authentication provider they can use groups to control which additional authentication provider is called. 
+
+Customers have a need for a specific additional authentication provider (e.g. certificate) for certain applications but different method (AzureMFA) for other applications. 
+
+This could be achieved by issuing the claim https://schemas.microsoft.com/claims/authnmethodsproviders from additional authentication policies. The value of this claim should be the Name of the authentication provider. 
+
+Now in 2019 they can modify above claim rule to choose auth providers based on their scenarios.  
+
+Transitioning from one additional authentication provider to another: 
+We will modify the above rule to choose AzureMFA for users which are in group SID S-1-5-21-608905689-872870963-3921916988-12345 (say a group managed by enterprise which tracks the users which has registered for AzureMFA) and for rest of the users, admin wants to use certificate auth. 
+```
+'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
+
+ c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value == "S-1-5-21-608905689-872870963-3921916988-12345"] => issue(Type = "https://schemas.microsoft.com/claims/authnmethodsproviders", Value = "AzureMfaAuthentication"); 
+
+not exists([Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value=="S-1-5-21-608905689-872870963-3921916988-12345"]) => issue(Type = "https://schemas.microsoft.com/claims/authnmethodsproviders", Value = "CertificateAuthentication");’ 
+```
+ 
+Example to set 2 different auth providers for 2 different applications. 
+
+Application A to use Azure MFA as additional auth provider: 
+```
+Set-AdfsRelyingPartyTrust -TargetName AppA -AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" ); 
+
+c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "AzureMfaAuthentication");' 
+```
+Application B to use Certificate as additional auth provider: 
+```
+Set- Set-AdfsRelyingPartyTrust -TargetName AppB -AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" ); 
+
+c:[] => issue(Type = "http://schemas.microsoft.com/claims/authnmethodsproviders", Value = "CertificateAuthentication");' 
+ ```
+ 
+Admin can also make rules to allow more than one additional authentication provider in which case AD FS will show all the issued auth methods providers and user can choose any of them. For allowing multiple additional authentication provider they should issue multiple claim  https://schemas.microsoft.com/claims/authnmethodsproviders 
+
+If none of the auth providers are returned by the claim evaluation, AD FS will fall back to show all the additional auth providers configured by Admin on AD FS and user will need to select the appropriate auth provider. 
+
+To get all the additional authentication providers allowed, admin can use the cmdlet (Get-AdfsGlobalAuthenticationPolicy).AdditionalAuthenticationProvider. The value of https://schemas.microsoft.com/claims/authnmethodsproviders claim should be one of the provider names returned by above cmdlet. 
+
+There is no support to trigger particular additional auth provider if the RP is using [Access Control Policies in AD FS Windows Server 2016 | Microsoft Docs](../operations/access-control-policies-in-ad-fs.md). While moving an Application away from Access control policy, AD FS copies the corresponding policy from Access Control Policy to AdditionalAuthenticationRules and IssuanceAuthorizationRules. So if an admin wants to use particular auth provider, they can moves away from not using access control policy and then modify AdditionalAuthenticationRules to trigger particular additional auth provider. 
 
 #### FAQ
 
 > [!NOTE]
-> You may encounter this error in ADFS Admin event logs: Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'.
+> You may encounter this error in AD FS Admin event logs: Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'.
 > To remediate this error:
 > 1. Launch AD FS management console. Browse to "Services > Scope Descriptions"
 > 2. Right click "Scope Descriptions" and select "Add Scope Description"
@@ -131,7 +182,7 @@ D. The AD FS transforms "code_verifier" and compares it to "t(code_verifier)" fr
 > 4. Launch PowerShell as Administrator
 > 5. Execute the command "Get-AdfsApplicationPermission". Look for the ScopeNames :{openid, aza} that has the ClientRoleIdentifier. Make a note of the ObjectIdentifier.
 > 6. Execute the command "Set-AdfsApplicationPermission -TargetIdentifier <ObjectIdentifier from step 5> -AddScope 'ugs'
-> 7. Restart the ADFS service.
+> 7. Restart the AD FS service.
 > 8. On the client: Restart the client. User should be prompted to provision WHFB.
 > 9. If the provisioning window does not pop up then need to collect NGC trace logs and further troubleshoot.
 
@@ -146,7 +197,7 @@ D. The AD FS transforms "code_verifier" and compares it to "t(code_verifier)" fr
 ## What's new in Active Directory Federation Services for Windows Server 2016
 
 If you are looking for information on earlier versions of AD FS, see the following articles:
- [ADFS in Windows Server 2012 or 2012 R2](../../active-directory-federation-services.md) and [AD FS 2.0](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd727958(v=ws.10))
+ [AD FS in Windows Server 2012 or 2012 R2](../../active-directory-federation-services.md) and [AD FS 2.0](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd727958(v=ws.10))
 
  Active Directory Federation Services provides access control and single sign on across a wide variety of applications including Office 365, cloud based SaaS applications, and applications on the corporate network.
 * For the IT organization, it enables you to provide sign on and access control to both modern and legacy applications, on premises and in the cloud, based on the same set of credentials and policies.

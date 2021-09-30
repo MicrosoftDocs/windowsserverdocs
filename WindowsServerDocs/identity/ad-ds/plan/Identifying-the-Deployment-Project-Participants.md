@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Identifying the Deployment Project Participants"
 ms.assetid: 50bd2566-e03c-4884-b5c4-895c8aab80aa
 title: Identifying the Deployment Project Participants
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Identifying the Deployment Project Participants
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The first step in establishing a deployment project for Active Directory Domain Service (AD DS) is to establish the design and deployment project teams that will be responsible for managing the design phase and deployment phase of the Active Directory project cycle. In addition, you must identify the individuals and groups who will be responsible for owning and maintaining the directory after the deployment is completed.
 

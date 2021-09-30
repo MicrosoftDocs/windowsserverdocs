@@ -43,15 +43,12 @@ With the **Balanced** power plan, the highest power states (and lowest response 
 
 For customers, who are satisfied with the cost savings from reducing the number of physical servers and want to ensure they achieve maximum performance for their virtualized workloads, you should consider using the **High Performance** power plan.
 
-For additional recommendations and insight on leveraging power plans to optimize your infrastructure, read [Recommended Balanced Power Plan Parameters for Quick Response Times](../../hardware/power/recommended-balanced-plan-parameters.md)
-
-
 
 ## Server Core installation option
 
 Windows Server 2016 feature the Server Core installation option. Server Core offers a minimal environment for hosting a select set of server roles including Hyper-V. It features a smaller disk footprint for the host OS, and a smaller attack and servicing surface. Therefore, we highly recommend that Hyper-V virtualization servers use the Server Core installation option.
 
-A Server Core installation offers a console window only when the user is logged on, but Hyper-V exposes remote management features including [Windows Powershell](/powershell/module/hyper-v/?view=win10-ps) so administrators can manage it remotely.
+A Server Core installation offers a console window only when the user is logged on, but Hyper-V exposes remote management features including [Windows PowerShell](/powershell/module/hyper-v/) so administrators can manage it remotely.
 
 ## Dedicated server role
 

@@ -10,7 +10,7 @@ ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
 
 # Manage Hyper-V Integration Services
 
-> Applies To: Windows 10, Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2022, Windows 10, Windows Server 2012, Windows Server 2012R2, Windows Server 2016, Windows Server 2019
 
 Hyper-V Integration Services enhance virtual machine performance and provide convenience features by leveraging two-way communication with the Hyper-V host. Many of these services are conveniences, such as guest file copy, while others are important to the virtual machine's functionality, such as synthetic device drivers. This set of services and drivers are sometimes referred to as "integration components". You can control whether or not individual convenience services operate for any given virtual machine. The driver components are not intended to be serviced manually.
 
@@ -29,7 +29,7 @@ The Integration Services pane lists all integration services available on the Hy
 
 ### Turn an integration service on or off using PowerShell
 
-To do this in PowerShell, use [Enable-VMIntegrationService](/powershell/module/hyper-v/enable-vmintegrationservice?view=win10-ps) and [Disable-VMIntegrationService](/powershell/module/hyper-v/disable-vmintegrationservice?view=win10-ps).
+To do this in PowerShell, use [Enable-VMIntegrationService](/powershell/module/hyper-v/enable-vmintegrationservice) and [Disable-VMIntegrationService](/powershell/module/hyper-v/disable-vmintegrationservice).
 
 The following examples demonstrate turning the guest file copy integration service on and off for a virtual machine named "demovm".
 
@@ -120,7 +120,7 @@ In order for an integration service to be fully functional, its corresponding se
     Running  vmicvss            Hyper-V Volume Shadow Copy Requestor
     ```
 
-1. Run either [Start-Service](/powershell/module/microsoft.powershell.management/start-service?view=powershell-7) or [Stop-Service](/powershell/module/microsoft.powershell.management/stop-service?view=powershell-7). For example, to turn off Windows PowerShell Direct, run:
+1. Run either [Start-Service](/powershell/module/microsoft.powershell.management/start-service?view=powershell-7&preserve-view=true) or [Stop-Service](/powershell/module/microsoft.powershell.management/stop-service?view=powershell-7&preserve-view=true). For example, to turn off Windows PowerShell Direct, run:
 
     ```
     Stop-Service -Name vmicvmsession

@@ -4,6 +4,7 @@ description: Recommended settings and configuration to minimize overhead for Win
 ms.author: robsmi
 ms.topic: article
 author: jaimeo
+ms.date: 12/08/2020
 ---
 
 # Optimizing Windows 10, version 1803, for a Virtual Desktop Infrastructure (VDI) role
@@ -157,7 +158,7 @@ preferred method because it makes the overall process of creating or maintaining
 
 [Windows 10 1607: Keeping apps from coming back when deploying the feature update](/archive/blogs/mniehaus/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update)
 
-Then run the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage?view=win10-ps) PowerShell command to remove UWP app payloads:
+Then run the [Remove-AppxProvisionedPackage](/powershell/module/dism/remove-appxprovisionedpackage) PowerShell command to remove UWP app payloads:
 
 ```powershell
 Remove-AppxProvisionedPackage -Online -PackageName
@@ -409,7 +410,7 @@ The following settings specifically do not counter or conflict with any setting 
 | **Edge UI** | Turn off tracking of app usage |  | **Enabled** |
 | **File Explorer** | Turn off caching of thumbnail pictures |  | **Enabled** |
 | **File Explorer** | Turn off display of recent search entries in the File Explorer search box |  | **Enabled** |
-| **File Explorer** | Turn off the caching of thumbnails in hidden thumbs.db file |  | **Enabled** ||
+| **File Explorer** | Turn off the caching of thumbnails in hidden thumbs.db file |  | **Enabled** |
 
 ### Notes about Network Connectivity Status indicator
 
@@ -622,7 +623,7 @@ Applies to Windows 10. The default is **128**, with a valid range of 1 to 65536.
 
 HKLM\\System\\CurrentControlSet\\Services\\LanmanWorkstation\\Parameters\\DormantFileLimit
 
-Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.
+Applies to Windows 10. The default is **1023**. This parameter specifies the maximum number of files that should be left open on a shared resource after the application has closed the file. Where many thousands of clients are connecting to SMB servers, consider reducing this value to **256**.: Windows Server 2022, Windows Server 2019,
 
 You can configure many of these SMB settings by using the [Set-SmbClientConfiguration](/powershell/module/smbshare/set-smbclientconfiguration)
 and [Set-SmbServerConfiguration](/powershell/module/smbshare/set-smbserverconfiguration)

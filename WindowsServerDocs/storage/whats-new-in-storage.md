@@ -1,6 +1,7 @@
 ---
 ms.assetid: 0f2a7f7b-aca8-4e5d-ad67-4258e88bc52f
 title: What's new in storage in Windows Server
+description: "Learn more about: What's new in Storage in Windows Server"
 ms.author: jgerend
 manager: dongill
 ms.topic: article
@@ -9,7 +10,7 @@ ms.date: 05/29/2019
 ---
 # What's new in Storage in Windows Server
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic explains the new and changed functionality in storage in Windows Server 2019, Windows Server 2016, and Windows Server Semi-Annual Channel releases.
 
@@ -87,7 +88,7 @@ There are a number of improvements to Storage Spaces Direct in Windows Server 20
 
 - **Scale up to 4 PB per cluster**
 
-    Achieve multi-petabyte scale – great for media, backup, and archival use cases. In Windows Server 2019, Storage Spaces Direct supports up to 4 petabytes (PB) = 4,000 terabytes of raw capacity per storage pool. Related capacity guidelines are increased as well: for example, you can create twice as many volumes (64 instead of 32), each twice as large as before (64 TB instead of 32 TB). Stitch multiple clusters together into a [cluster set](storage-spaces/cluster-sets.md) for even greater scale within one storage namespace. For more info, see the [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
+    Achieve multi-petabyte scale – great for media, backup, and archival use cases. In Windows Server 2019, Storage Spaces Direct supports up to 4 petabytes (PB) = 4,000 terabytes of raw capacity per storage pool. Related capacity guidelines are increased as well: for example, you can create twice as many volumes (64 instead of 32), each twice as large as before (64 TB instead of 32 TB). Stitch multiple clusters together into a [cluster set](/azure-stack/hci/deploy/cluster-set) for even greater scale within one storage namespace. For more info, see the [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
 
 - **Mirror-accelerated parity is 2X faster**
 
@@ -120,7 +121,7 @@ To gain the increased performance, all members of the replication group must run
 
 #### Test failover
 
-You can now temporarily mount a snapshot of the replicated storage on a destination server for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](./storage-replica/storage-replica-frequently-asked-questions.md).
+You can now temporarily mount a snapshot of the replicated storage on a destination server for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](./storage-replica/storage-replica-frequently-asked-questions.yml).
 
 #### Windows Admin Center support
 
@@ -158,13 +159,13 @@ Windows Server, version 1803 includes the ability to prevent the File Server Res
 
 Windows Server, version 1709 is the first Windows Server release in the Semi-Annual Channel. The Semi-Annual Channel is a Software Assurance benefit and is fully supported in production for 18 months, with a new version every six months.
 
-For more information, see [Windows Server Semi-annual Channel Overview](../get-started-19/servicing-channels-19.md).
+For more information, see [Windows Server Semi-annual Channel Overview](../get-started/servicing-channels-comparison.md).
 
 ### Storage Replica
 
 The disaster recovery protection added by Storage Replica is now expanded to include:
 
-- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](./storage-replica/storage-replica-frequently-asked-questions.md).
+- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes. For more information, see [Frequently Asked Questions about Storage Replica](./storage-replica/storage-replica-frequently-asked-questions.yml).
 - **Windows Admin Center support**: Support for graphical management of replication is now available in Windows Admin Center via the Server Manager tool. This includes server-to-server replication, cluster-to-cluster, as well as stretch cluster replication.
 
 Storage Replica also contains the following improvements:

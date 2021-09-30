@@ -3,8 +3,8 @@ title: waitfor
 description: Reference article for the waitfor command, which sends or waits for a signal on a system.
 ms.topic: reference
 ms.assetid: a48ef70d-4d28-4035-b6b0-7d7b46ac2157
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

@@ -2,7 +2,7 @@
 title: Use performance counters to diagnose application responsiveness problems on Remote Desktop Session Hosts
 description: Is your app running slow on RDS? Learn about performance counters you can use to diagnose app performance problems on RDSH
 ms.author: elizapo
-ms.date: 07/11/2019
+ms.date: 01/19/2021
 ms.topic: article
 author: lizap
 manager: dougkim
@@ -11,9 +11,9 @@ ms.localizationpriority: medium
 
 # Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts
 
-> Applies to: Windows Server 2019, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10
 
-One of the most difficult problems to diagnose is poor application performance—the applications are running slow or don't respond. Traditionally, you start your diagnosis by collecting CPU, memory, disk input/output, and other metrics and then use tools like Windows Performance Analyzer to try to figure out what's causing the problem. Unfortunately, in most situations this data doesn't help you identify the root cause because resource consumption counters have frequent and large variations. This makes it hard to read the data and correlate it with the reported issue. To help you solve your app performance issues quickly, we've added some new performance counters (available [to download](#download-windows-server-insider-software) through the [Windows Insider Program](https://insider.windows.com)) that measure user input flows.
+One of the most difficult problems to diagnose is poor application performance—the applications are running slow or don't respond. Traditionally, you start your diagnosis by collecting CPU, memory, disk input/output, and other metrics and then use tools like Windows Performance Analyzer to try to figure out what's causing the problem. Unfortunately, in most situations this data doesn't help you identify the root cause because resource consumption counters have frequent and large variations. This makes it hard to read the data and correlate it with the reported issue.
 
 > [!NOTE]
 > The User Input Delay counter is only compatible with:
@@ -59,7 +59,7 @@ After doing that, you should see the Add Counters dialog, where you can select *
 
 ![Remote Desktop - A screenshot showing how to add the User input Delay per process](./media/rds-user-delay-per-process.png)
 
-If you select **User Input Delay per Process**, you'll see the **Instances of the selected object** (in other words, the processes) in ```SessionID:ProcessID <Process Image>``` format.
+If you select **User Input Delay per Process**, you'll see the **Instances of the selected object** (in other words, the processes) in `SessionID:ProcessID <Process Image>` format.
 
 For example, if the Calculator app is running in a [Session ID 1](/previous-versions/iis/6.0-sdk/ms524326(v=vs.90)), you'll see ```1:4232 <Calculator.exe>```.
 
@@ -130,12 +130,6 @@ This is what it looks like if you turn both keys on:
 
 Monitoring tools can consume this counter by [Using Performance Counters](/windows/win32/perfctrs/using-performance-counters).
 
-## Download Windows Server Insider software
-
-Registered Insiders can navigate directly to the [Windows Server Insider Preview download page](https://microsoft.com/en-us/software-download/windowsinsiderpreviewserver) to get the latest Insider software downloads.  To learn how to register as an Insider, see [Getting started with Server](https://insider.windows.com/en-us/for-business-getting-started-server/).
-
 ## Share your feedback
 
 You can submit feedback for this feature through the Feedback Hub. Select **Apps > All other apps** and include "RDS performance counters—performance monitor" in your post's title.
-
-For general feature ideas, visit the [RDS UserVoice page](https://aka.ms/uservoice-rds).

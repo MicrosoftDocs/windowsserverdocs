@@ -7,10 +7,11 @@ author: pronichkin
 ms.author: artemp
 ms.localizationpriority: medium
 ms.date: 10/17/2017
+ms.topic: how-to
 ---
 # Patch a Server Core installation
 
-> Applies to: Windows Server 2019, Windows Server 2016, and Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can patch a server running Server Core installation in the following ways:
 

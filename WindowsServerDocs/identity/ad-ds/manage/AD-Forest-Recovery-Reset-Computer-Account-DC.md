@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Resetting the computer account on the DC"
 title: AD Forest Recovery - Resetting the computer account on the DC
 ms.author: daveba
 author: iainfoulds
@@ -9,7 +10,7 @@ ms.assetid: 4e1a6070-df0a-4dfe-8773-899a010bfabd
 ---
 # AD Forest Recovery - Resetting the computer account on the DC
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
  Use the following procedure to reset the computer account password of the DC.
 

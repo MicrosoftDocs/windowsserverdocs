@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Device Health Attestation"
 title: Device Health Attestation
 ms.topic: article
 ms.assetid: 8e7b77a4-1c6a-4c21-8844-0df89b63f68d
@@ -8,7 +9,7 @@ ms.date: 10/12/2016
 ---
 # Device Health Attestation
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Introduced in Windows 10, version 1507, Device Health Attestation (DHA) included the following:
 

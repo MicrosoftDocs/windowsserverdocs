@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Forest-Wide Updates"
 ms.assetid: 3647b7e3-54a4-46c6-ab68-82fcf3bfacda
 title: Active Directory Forest-Wide Updates
 author: iainfoulds
@@ -9,7 +10,7 @@ ms.topic: article
 ---
 # Forest-Wide Updates
 
->Applies To: Windows Server
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server
 
 You can review the following set of changes to help understand and prepare for the schema updates that are performed by adprep /forestprep in Windows Server 2019.
 

@@ -1,6 +1,6 @@
 ---
 title: The team interface bound to a virtual switch should be in default mode
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when some virtual switches are bound to a team interface but the team interface doesn't pass traffic on all VLANs to the virtual switches.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -9,9 +9,9 @@ ms.date: 8/16/2016
 ---
 # The team interface bound to a virtual switch should be in default mode
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -30,6 +30,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## **Resolution**
 *Use Server Manager or the Windows PowerShell cmdlet Set-NetLbfoTeamNic to reset the team interface to the default mode.*
-
-
-

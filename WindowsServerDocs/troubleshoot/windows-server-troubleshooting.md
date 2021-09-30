@@ -4,6 +4,7 @@ description: Get links to troubleshooting articles for Windows Server issues
 ms.date: 1/24/2020
 author: kaushika-msft
 ms.author: kaushika
+ms.topic: troubleshooting
 ---
 # Troubleshooting Windows Server components
 
@@ -44,7 +45,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 ## Troubleshoot AD forest recovery
 
-- [AD Forest Recovery - FAQ](../identity/ad-ds/manage/ad-forest-recovery-faq.md)
+- [AD Forest Recovery - FAQ](../identity/ad-ds/manage/ad-forest-recovery-faq.yml)
 
 ## Troubleshoot AD replication
 
@@ -66,20 +67,16 @@ This section contains advanced troubleshooting topics and links to help you reso
 - [AD FS Troubleshooting - Claims Rules](../identity/ad-fs/troubleshooting/ad-fs-tshoot-claims-rules.md)
 - [AD FS Troubleshooting - Integrated Windows Authentication](../identity/ad-fs/troubleshooting/ad-fs-tshoot-iwa.md)
 - [AD FS Troubleshooting - Azure AD](../identity/ad-fs/troubleshooting/ad-fs-tshoot-azure.md)
-- [AD FS FAQ](../identity/ad-fs/overview/ad-fs-faq.md)
+- [AD FS FAQ](../identity/ad-fs/overview/ad-fs-faq.yml)
 - [AD FS Help Diagnostics Analyzer](../identity/ad-fs/troubleshooting/ad-fs-diagnostics-analyzer.md)
 
 ## Troubleshoot AoVPN
 
 - [Troubleshoot Always On VPN](../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
 
-## Troubleshoot converged NIC
-
-- [Troubleshooting Converged NIC Configurations](../networking/technologies/conv-nic/cnic-app-troubleshoot.md)
-
 ## Troubleshoot DFSR
 
-- [DFS Replication: Frequently Asked Questions (FAQ)](../storage/dfs-replication/dfsr-faq.md)
+- [DFS Replication: Frequently Asked Questions (FAQ)](../storage/dfs-replication/dfsr-faq.yml)
 
 ## Troubleshoot DirectAccess
 
@@ -99,10 +96,10 @@ This section contains advanced troubleshooting topics and links to help you reso
 ## Troubleshoot failover cluster
 
 - [Troubleshooting a Failover Cluster using Windows Error Reporting](../failover-clustering/troubleshooting-using-wer-reports.md)
-- [Cluster-Aware Updating - Frequently Asked Questions](../failover-clustering/cluster-aware-updating-faq.md)
+- [Cluster-Aware Updating - Frequently Asked Questions](../failover-clustering/cluster-aware-updating-faq.yml)
 - [Troubleshooting cluster issue with Event ID 1135](./troubleshooting-cluster-event-id-1135.md)
 - [Having a problem with nodes being removed from active Failover Cluster membership](./problem-nodes-failover-cluster.md)
-- [Nodes being removed from Failover Cluster membership on VMWare ESX](./nodes-failover-cluster-vmware.md)
+- [Nodes being removed from Failover Cluster membership on VMware ESX](./nodes-failover-cluster-vmware.md)
 - [IaaS with SQL AlwaysOn - Tuning Failover Cluster Network Thresholds](./iaas-sql-failover-cluster.md)
 
 ## Troubleshoot DHCP
@@ -129,7 +126,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 - [Troubleshooting Enabling Multisite](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-enabling-multisite.md)
 - [Troubleshooting Adding Entry Points](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-adding-entry-points.md)
 - [Troubleshooting Setting the Entry Point Domain Controller](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller.md)
-- [Troubleshooting Web Probe URLs](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-web-probe-urls.md)
+- [Troubleshooting Web Probe URLs](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller.md)
 
 ## Troubleshoot Nano Server
 
@@ -146,12 +143,12 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 ## Troubleshoot QoS
 
-- [QoS Frequently Asked Questions](../networking/technologies/qos/qos-policy-faq.md)
+- [QoS Frequently Asked Questions](../networking/technologies/qos/qos-policy-faq.yml)
 
 ## Troubleshoot S2D
 
 - [Storage Spaces Direct troubleshooting](../storage/storage-spaces/troubleshooting-storage-spaces.md)
-- [Storage Spaces Direct - Frequently asked questions](../storage/storage-spaces/storage-spaces-direct-faq.md)
+- [Storage Spaces Direct - Frequently asked questions](../storage/storage-spaces/storage-spaces-direct-faq.yml)
 - [Storage Spaces Direct health and operational states](../storage/storage-spaces/storage-spaces-states.md)
 - [Collect diagnostic data with Storage Spaces Direct](../storage/storage-spaces/data-collection.md)
 - [Storage-class Memory (NVDIMM-N) Health Management in Windows](../storage/storage-spaces/storage-class-memory-health.md)
@@ -183,20 +180,16 @@ This section contains advanced troubleshooting topics and links to help you reso
 ## Troubleshoot storage migration
 
 - [Storage Migration Service known issues](../storage/storage-migration-service/known-issues.md)
-- [Storage Migration Service frequently asked questions (FAQ)](../storage/storage-migration-service/faq.md)
+- [Storage Migration Service frequently asked questions (FAQ)](../storage/storage-migration-service/faq.yml)
 
 ## Troubleshoot Storage Replica
 
 - [Known issues with Storage Replica](../storage/storage-replica/storage-replica-known-issues.md)
-- [Frequently Asked Questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.md)
+- [Frequently Asked Questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.yml)
 
 ## Troubleshoot user profiles
 
 - [Troubleshoot user profiles with events](../storage/folder-redirection/troubleshoot-user-profiles-events.md)
-
-## Troubleshoot vRSS
-
-- [vRSS Frequently Asked Questions](../networking/technologies/vrss/vrss-faq.md)
 
 ## Troubleshoot WebProxy
 
@@ -206,4 +199,4 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 - [Windows Admin Center Common Troubleshooting Steps](../manage/windows-admin-center/support/troubleshooting.md)
 - [Windows Admin Center Known Issues](../manage/windows-admin-center/support/known-issues.md)
-- [Windows Admin Center Frequently Asked Questions](../manage/windows-admin-center/understand/faq.md)
+- [Windows Admin Center Frequently Asked Questions](../manage/windows-admin-center/understand/faq.yml)

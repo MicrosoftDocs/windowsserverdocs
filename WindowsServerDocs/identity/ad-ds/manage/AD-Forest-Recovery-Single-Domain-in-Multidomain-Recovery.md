@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Recovering a single domain in a multidomain forest"
 title: AD Forest Recovery - Recovering a single domain in a multidomain forest
 ms.author: daveba
 author: iainfoulds
@@ -9,7 +10,7 @@ ms.assetid: 267541be-2ea7-4af6-ab34-8b5a3fedee2d
 ---
 # AD Forest Recovery - Recovering a single domain in a multidomain forest
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 There can be times when it is necessary to recover only a single domain within a forest that has multiple domains, rather than a full forest recovery. This topic covers considerations for recovering a single domain and possible strategies for recovery.
 
@@ -47,6 +48,6 @@ For more information, see [Use Repadmin to remove lingering objects](/previous-v
 - [AD Forest Recovery - Determine how to recover](AD-Forest-Recovery-Determine-how-to-Recover.md)
 - [AD Forest Recovery - Perform initial recovery](AD-Forest-Recovery-Perform-initial-recovery.md)
 - [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
-- [AD Forest Recovery - Frequently Asked Questions](AD-Forest-Recovery-FAQ.md)
+- [AD Forest Recovery - Frequently Asked Questions](ad-forest-recovery-faq.yml)
 - [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
 - [AD Forest Recovery - Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Windows-Server-2003.md)

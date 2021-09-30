@@ -1,16 +1,17 @@
 ---
 title: NPS Proxy Server Load Balancing
-description: You can use this topic to learn about Windows Server 2016 and Windows 10 VPN features and functionality.
+description: Learn about NPS proxy server load balancing and the methods you can use to balance the load of connection requests sent to your NPSs.
 ms.topic: article
 ms.assetid: 528280e6-b47e-489f-b310-b257d434aa0d
 manager: brianlic
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # NPS Proxy Server Load Balancing
 
-Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Remote Authentication Dial-In User Service (RADIUS) clients, which are network access servers such as virtual private network (VPN) servers and wireless access points, create connection requests and send them to RADIUS servers such as NPS. In some cases, an NPS might receive too many connection requests at one time, resulting in degraded performance or an overload. When an NPS is overloaded, it is a good idea to add more NPSs to your network and to configure load balancing. When you evenly distribute incoming connection requests among multiple NPSs to prevent the overloading of one or more NPSs, it is called load balancing.
 

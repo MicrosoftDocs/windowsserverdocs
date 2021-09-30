@@ -1,17 +1,17 @@
 ---
 title: Windows 8 should be configured with at least the minimum amount of memory
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
-ms.author: benarm
+description: Learn what to do when a virtual machine running Windows 8 is configured with less than the minimum amount of RAM, which is 512 MB.
 author: BenjaminArmstrong
+ms.author: benarm
 ms.topic: article
 ms.assetid: 519d1091-fa4d-44d7-83ca-83f6aa71fb7d
 ms.date: 8/16/2016
 ---
 # Windows 8 should be configured with at least the minimum amount of memory
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -58,4 +58,4 @@ Set-VMMemory <MyVM> -StartupBytes 512MB
 ```
 
 ## See Also
-[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory?view=win10-ps)
+[Set-VMMemory](/powershell/module/hyper-v/set-vmmemory)

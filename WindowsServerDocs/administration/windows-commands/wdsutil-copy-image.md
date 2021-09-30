@@ -3,15 +3,15 @@ title: wdsutil copy-image
 description: Reference article for the wdsutil copy-image command, which copies images that are within the same image group.
 ms.topic: reference
 ms.assetid: bea41cf4-36e6-4181-afa5-00170ebd4fdc
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # wdsutil copy-image
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Copies images that are within the same image group. To copy images between image groups, use the [wdsutil Export-Image command](wdsutil-export-image.md) command and then the [wdsutil add-Image command](wdsutil-add-image.md) command.
 

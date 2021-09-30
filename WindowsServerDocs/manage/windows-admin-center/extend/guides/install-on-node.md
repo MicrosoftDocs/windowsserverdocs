@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Install extension payload on a managed node
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 ## Setup
 

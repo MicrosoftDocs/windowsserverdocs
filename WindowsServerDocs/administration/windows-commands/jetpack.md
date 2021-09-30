@@ -3,15 +3,15 @@ title: jetpack
 description: Reference article for the jetpack command, which compacts a Windows Internet Name Service (WINS) or Dynamic Host Configuration Protocol (DHCP) database.
 ms.topic: reference
 ms.assetid: 82a2b7ef-0db5-4575-a028-8acb0bf6c7ba
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # jetpack
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Compacts a Windows Internet Name Service (WINS) or Dynamic Host Configuration Protocol (DHCP) database. We recommend you compact the WINS database whenever it approaches 30 MB.
 

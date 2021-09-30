@@ -5,7 +5,7 @@ ms.author: helohr
 ms.date: 12/12/2019
 ms.topic: article
 author: Heidilohr
-manager: lizross
+manager: femila
 ---
 # Network guidelines
 
@@ -46,9 +46,9 @@ Different display resolutions require different available bandwidths. The follow
 | About 1920 × 1080 px                     | 5 Mbps                |
 | About 3840 × 2160 px (4K)                | 15 Mbps               |
 
-## Windows Virtual Desktop experience estimator
+## Azure Virtual Desktop experience estimator
 
-The Azure region you're in can affect user experience as much as network conditions. Check out the [Windows Virtual Desktop experience estimator](https://azure.microsoft.com/services/virtual-desktop/assessment/) to learn more.
+The Azure region you're in can affect user experience as much as network conditions. Check out the [Azure Virtual Desktop experience estimator](https://azure.microsoft.com/services/virtual-desktop/assessment/) to learn more.
 
 ## Assistive technologies
 

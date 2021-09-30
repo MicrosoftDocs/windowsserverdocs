@@ -1,6 +1,6 @@
 ---
 title: A Replica server must be configured to accept replication requests
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when your computer is designated as a Hyper-V Replica server but is not configured to accept incoming replication data from primary servers.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -8,9 +8,9 @@ ms.date: 8/16/2016
 ---
 # A Replica server must be configured to accept replication requests
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -71,6 +71,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 ```
 New-VMReplicationAuthorizationEntry server01.domain01.contoso.com D:\ReplicaVMStorage DEFAULT
 ```
-
-
-

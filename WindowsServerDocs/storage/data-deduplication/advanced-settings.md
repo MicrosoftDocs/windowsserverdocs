@@ -1,6 +1,7 @@
 ---
 ms.assetid: 01c8cece-66ce-4a83-a81e-aa6cc98e51fc
 title: Advanced Data Deduplication settings
+description: "Learn more about: Advanced Data Deduplication settings"
 ms.topic: article
 author: wmgries
 manager: klaasl
@@ -9,7 +10,7 @@ ms.date: 09/15/2016
 ---
 # Advanced Data Deduplication settings
 
-> Applies to Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This document describes how to modify advanced [Data Deduplication](overview.md) settings. For [recommended workloads](install-enable.md#enable-dedup-candidate-workloads), the default settings should be sufficient. The main reason to modify these settings is to improve Data Deduplication's performance with other kinds of workloads.
 
@@ -18,10 +19,10 @@ The [default Data Deduplication job schedules](understand.md#job-info) are desig
 
 ### <a id="modifying-job-schedules-change-schedule"></a>Changing a Data Deduplication schedule
 Data Deduplication jobs are scheduled via Windows Task Scheduler and can be viewed and edited there under the path Microsoft\Windows\Deduplication. Data Deduplication includes several cmdlets that make scheduling easy.
-* [`Get-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/get-dedupschedule?view=win10-ps) shows the current scheduled jobs.
-* [`New-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/new-dedupschedule?view=win10-ps) creates a new scheduled job.
-* [`Set-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/set-dedupschedule?view=win10-ps) modifies an existing scheduled job.
-* [`Remove-DedupSchedule`](https://docs.microsoft.com/powershell/module/deduplication/remove-dedupschedule?view=win10-ps) removes a scheduled job.
+* [`Get-DedupSchedule`](/powershell/module/deduplication/get-dedupschedule) shows the current scheduled jobs.
+* [`New-DedupSchedule`](/powershell/module/deduplication/new-dedupschedule) creates a new scheduled job.
+* [`Set-DedupSchedule`](/powershell/module/deduplication/set-dedupschedule) modifies an existing scheduled job.
+* [`Remove-DedupSchedule`](/powershell/module/deduplication/remove-dedupschedule) removes a scheduled job.
 
 The most common reason for changing when Data Deduplication jobs run is to ensure that jobs run during off hours. The following step-by-step example shows how to modify the Data Deduplication schedule for a *sunny day* scenario: a hyper-converged Hyper-V host that is idle on weekends and after 7:00 PM on weeknights. To change the schedule, run the following PowerShell cmdlets in an Administrator context.
 

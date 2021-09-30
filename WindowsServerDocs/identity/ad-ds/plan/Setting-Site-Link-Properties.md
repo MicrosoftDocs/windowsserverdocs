@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Setting Site Link Properties"
 ms.assetid: de054ac2-a386-43ec-a537-c0de21549741
 title: Setting Site Link Properties
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Setting Site Link Properties
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Intersite replication occurs according to the properties of the connection objects. When the Knowledge Consistency Checker (KCC) creates connection objects, it derives the replication schedule from properties of the site link objects. Each site link object represents the wide area network (WAN) connection between two or more sites.
 

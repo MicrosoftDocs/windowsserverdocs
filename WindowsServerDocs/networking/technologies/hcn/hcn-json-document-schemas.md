@@ -4,11 +4,12 @@ description: Information about HCN JSON document schemas.
 ms.author: daschott
 author: daschott
 ms.date: 11/05/2018
+ms.topic: article
 ---
 
 # HCN JSON document schemas
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 ## HCN schema
 

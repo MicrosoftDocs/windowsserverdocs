@@ -1,15 +1,16 @@
 ---
+description: "Learn more about: Publishing Applications using AD FS Preauthentication"
 ms.assetid: 5f733510-c96e-4d3a-85d2-4407de95926e
 title: Publishing Applications using AD FS Preauthentication
 ms.author: kgremban
-author: eross-msft
+author: JasonGerend
 ms.date: 07/13/2016
 ms.topic: article
 ---
 
 # Publishing Applications using AD FS Preauthentication
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](/azure/active-directory/manage-apps/application-proxy).**
 
@@ -62,7 +63,7 @@ The general AD FS preauthentication flow is as follows:
 > When configuring the external URL and the backend server URL, make sure you include the fully qualified domain name (FQDN), and not an IP address.
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [Using Cmdlets](/previous-versions//bb648607(v=vs.85)).
 
 ## <a name="BKMK_1.1"></a>Publish a Claims-based Application for Web Browser Clients
 To publish an application that uses claims for authentication, you must add a relying party trust for the application to the Federation Service.
@@ -446,4 +447,3 @@ Add-WebApplicationProxyApplication
 -   [Add-WebApplicationProxyApplication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280944(v=ws.11))
 
 -   [Set-WebApplicationProxyConfiguration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280944(v=ws.11))
-

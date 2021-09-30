@@ -3,8 +3,8 @@ title: Update-ServerFiles
 description: Reference article for Update-ServerFiles, which updates files in the REMINST shared folder by using the latest files that are stored in the server's %Windir%\System32\RemInst folder.
 ms.topic: reference
 ms.assetid: 23aa79df-38c6-401e-91bd-cd23811b30b4
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

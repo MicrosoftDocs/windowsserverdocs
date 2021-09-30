@@ -3,15 +3,15 @@ title: logman update trace
 description: Reference article for the logman update trace command, which updates the properties of an existing event trace data collector.
 ms.topic: reference
 ms.assetid: b7111f7f-4162-4d1a-8e53-d766db0ede1f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # logman update trace
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Updates the properties of an existing event trace data collector.
 

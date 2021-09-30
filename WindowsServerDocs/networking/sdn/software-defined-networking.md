@@ -10,15 +10,15 @@ ms.date: 08/09/2018
 ---
 # SDN in Windows Server overview
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 Software Defined Networking (SDN) provides a method to centrally configure and manage physical and virtual network devices such as routers, switches, and gateways in your datacenter. You can use your existing SDN-compatible devices to achieve deeper integration between the virtual network and the physical network. Virtual network elements such as Hyper-V Virtual Switch, Hyper-V Network Virtualization, and RAS Gateway are designed to be integral elements of your SDN infrastructure.
 
 >[!Note]
->Hyper-V hosts and virtual machines (VMs) running SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, must have Windows Server 2016 Datacenter edition installed.
+>Hyper-V hosts and virtual machines (VMs) running SDN infrastructure servers, such as Network Controller and Software Load Balancing nodes, must have Windows Server 2019 or 2016 Datacenter edition installed.
 >
->Hyper-V hosts containing only tenant workload VMs connected to SDN-controlled networks can use Windows Server 2016 Standard edition.
+>Hyper-V hosts containing only tenant workload VMs connected to SDN-controlled networks can use Windows Server 2019 or 2016 Standard edition.
 
 SDN is possible because network planes are no longer bound to the network devices themselves. However, other entities, such as datacenter management software like System Center 2016 use network planes. SDN allows you to manage your datacenter network dynamically, providing an automated, centralized way to meet the requirements of your applications and workloads.
 

@@ -73,10 +73,11 @@
 #### [Get started with the Windows Desktop client](clients/windowsdesktop.md)
 #### [Windows Desktop client for admins](clients/windowsdesktop-admin.md)
 #### [What's new in the Windows Desktop client](clients/windowsdesktop-whatsnew.md)
+#### [Supported configurations](clients/windowsdesktop-supported-config.md)
 #### [Shortcut keys](/windows/win32/termserv/terminal-services-shortcut-keys)
-### Microsoft Store Client
-#### [Get started with the Microsoft Store Client](clients/windows.md)
-#### [What's new in the Microsoft Store Client](clients/windows-whatsnew.md)
+### Microsoft Store client
+#### [Get started with the Microsoft Store client](clients/windows.md)
+#### [What's new in the Microsoft Store client](clients/windows-whatsnew.md)
 ### Android client
 #### [Get started with the Android client](clients/remote-desktop-android.md)
 #### [What's new in the Android client](clients/android-whatsnew.md)
@@ -94,14 +95,17 @@
 #### [Grant Remote Desktop access to your PC](clients/remote-desktop-allow-access.md)
 #### [Grant access to your PC from outside your network](clients/remote-desktop-allow-outside-access.md)
 #### [Change the RD listening port on your PC](clients/change-listening-port.md)
+#### [Configure the RD Gateway role](remote-desktop-gateway-role.md)
 ### Advanced information
-#### [Compare the clients](clients/remote-desktop-app-compare.md)
+#### [Compare the clients: features](clients/remote-desktop-features.md)
+#### [Compare the clients: redirections](clients/remote-desktop-app-compare.md)
 #### [Supported Remote Desktop RDP file settings](clients/rdp-files.md)
 #### [Remote Desktop URI scheme](clients/remote-desktop-uri.md)
-#### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.md)
+#### [Remote Desktop client FAQ](clients/remote-desktop-client-faq.yml)
 #### [Privacy settings for managed apps and desktops](clients/remote-privacy-settings.md)
 ### Known issues
 #### [General Remote Desktop connection troubleshooting](troubleshoot/rdp-error-general-troubleshooting.md)
+#### [Credential limit per app](troubleshoot/credential-limit.md)
 #### [Clients can't connect and get the "Class not registered" error](troubleshoot/rdp-error-class-not-registered.md)
 #### [Clients can't connect and see "No licenses available" error](troubleshoot/rdp-error-no-licenses-available.md)
 #### [User can't authenticate or must authenticate twice](troubleshoot/cannot-authenticate-or-must-authenticate-twice.md)

@@ -3,14 +3,14 @@ title: Nano Server Quick Start
 description: Steps to quickly deploy a basic Nano Server on physical or virtual machines
 manager: DonGill
 ms.date: 09/05/2017
-ms.topic: get-started-article
+ms.topic: how-to
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ---
 # Nano Server Quick Start
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
 > [!IMPORTANT]
 > Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.

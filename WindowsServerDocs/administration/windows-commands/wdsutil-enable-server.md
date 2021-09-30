@@ -3,15 +3,15 @@ title: wdsutil enable-server
 description: Reference article for the wdsutil enable-server command, which enables all services for Windows Deployment Services.
 ms.topic: reference
 ms.assetid: 939ffbfb-cf3c-4310-9627-6e7e0c0644d6
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # wdsutil enable-server
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables all services for Windows Deployment Services.
 

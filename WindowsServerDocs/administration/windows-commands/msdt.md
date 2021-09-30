@@ -3,8 +3,8 @@ title: msdt
 description: Reference article for the msdt command, which invokes a troubleshooting pack at the command line or as part of an automated script, and enables additional options without user input.
 ms.topic: reference
 ms.assetid: ead1b672-a120-4e16-94aa-a8e13602c1d0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -24,7 +24,7 @@ msdt </id <name> | /path <name> | /cab < name>> <</parameter> [options] … <par
 | Parameter | Description |
 | --------- | ----------- |
 | /id `<packagename>` | Specifies which diagnostic package to run. For a list of available packages, see [Available Troubleshooting packs](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)#available-troubleshooting-packs). |
-| /path `<directory|.diagpkg file|.diagcfg file>` | Specifies the full path to a diagnostic package. If you specify a directory, the directory must contain a diagnostic package. You cannot use the **/path** parameter in conjunction with the** /id**, **/dci**, or **/cab** parameters. |                                                                                   |
+| /path `<directory|.diagpkg file|.diagcfg file>` | Specifies the full path to a diagnostic package. If you specify a directory, the directory must contain a diagnostic package. You cannot use the **/path** parameter in conjunction with the** /id**, **/dci**, or **/cab** parameters. |
 | /dci `<passkey>` | Prepopulates the passkey field. This parameter is only used when a support provider has supplied a passkey. |
 | /dt `<directory>` | Displays the troubleshooting history in the specified directory. Diagnostic results are stored in the user’s **%LOCALAPPDATA%\Diagnostics** or **%LOCALAPPDATA%\ElevatedDiagnostics** directories. |
 | /af `<answerfile>` | Specifies an answer file in XML format that contains responses to one or more diagnostic interactions. |
@@ -51,4 +51,4 @@ Troubleshooting packs comprise a set of root causes, each of which describes a s
 
 - [Available troubleshooting packs](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/ee424379(v=ws.11)#available-troubleshooting-packs)
 
-- [TroubleshootingPack Powershell reference](/powershell/module/troubleshootingpack/?view=win10-ps)
+- [TroubleshootingPack Powershell reference](/powershell/module/troubleshootingpack/)

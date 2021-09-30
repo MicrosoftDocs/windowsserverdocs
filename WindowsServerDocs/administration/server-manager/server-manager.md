@@ -3,14 +3,14 @@ title: Server Manager
 description: Learn about the management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers from their desktops, without requiring either physical access to servers, or the need to enable Remote Desktop protocol (rdP) connections to each server.
 ms.topic: conceptual
 ms.assetid: d996ef40-8bcc-42b0-b6ae-806b828223f6
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # Server Manager
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Server Manager is a management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers from their desktops, without requiring either physical access to servers, or the need to enable Remote Desktop protocol (rdP) connections to each server. Although Server Manager is available in  Windows Server 2008 R2  and  Windows Server 2008, Server Manager was updated in  Windows Server 2012  to support remote, multi-server management, and help increase the number of servers an administrator can manage.
 
@@ -38,7 +38,7 @@ Server Manager is installed by default with all editions of Windows Server 2016.
 
 ### Software and configuration requirements
 
-Server Manager is installed by default with all editions of Windows Server 2016. You can use Server Manager in Windows Server 2016 to manage [Server Core installation options](https://go.microsoft.com/fwlink/p/?LinkID=241573) of Windows Server 2016,  Windows Server 2012 , and  Windows Server 2008 R2  that are running on remote computers. Server Manager does run on the Server Core installation option of Windows Server 2016.
+Server Manager is installed by default with all editions of Windows Server 2016. You can use Server Manager in Windows Server 2016 to manage [Server Core installation options](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831786(v=ws.11)) of Windows Server 2016,  Windows Server 2012 , and  Windows Server 2008 R2  that are running on remote computers. Server Manager does run on the Server Core installation option of Windows Server 2016.
 
 Server Manager runs in the Minimal Server Graphical Interface; that is, when the Server Graphical Shell feature is not installed. The Server Graphical Shell feature is not installed by default on Windows Server 2016. If you are not running Server Graphical Shell, the Server Manager console runs, but some applications or tools available from the console are not available. Internet browsers cannot run without Server Graphical Shell, so webpages and applications such as HTML help (The mmc F1 help, for example) cannot be opened. You cannot open dialog boxes for configuring Windows automatic updating and feedback when Server Graphical Shell is not installed; commands that open these dialog boxes in the Server Manager console are redirected to run **sconfig.cmd**.
 
@@ -54,7 +54,7 @@ To manage servers that are running Windows Server releases older than Windows Se
 
 The Server Manager console is included with [Remote Server Administration Tools](https://go.microsoft.com/fwlink/?LinkID=404281) for Windows 10. Note that when Remote Server Administration Tools is installed on a client computer, you cannot manage the local computer by using Server Manager; Server Manager cannot be used to manage computers or devices that are running a Windows client operating system. You can only use Server Manager to manage Windows-based servers.
 
-| Server Manager Source Operating System | Targeted at Windows Server 2016 | Targeted at  Windows Server 2012 R2 | Targeted at  Windows Server 2012 | Targeted at  Windows Server 2008 R2  or  Windows Server 2008 | Targeted at Windows Server 2003 | Targeted at Windows 10 Enterprise multi-session on Windows Virtual Desktop (WVD) |
+| Server Manager Source Operating System | Targeted at Windows Server 2016 | Targeted at  Windows Server 2012 R2 | Targeted at  Windows Server 2012 | Targeted at  Windows Server 2008 R2  or  Windows Server 2008 | Targeted at Windows Server 2003 | Targeted at Windows 10 Enterprise multi-session on Azure Virtual Desktop |
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | Windows 10 or Windows Server 2016 | Full support | Full support | Full support | After [Software and configuration requirements](#software-and-configuration-requirements) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation | Not supported | Not supported |
 | Windows 8.1 or Windows Server 2012 R2 | Not supported | Full support| Full support | After [Software and configuration requirements](#software-and-configuration-requirements) are satisfied, can perform most management tasks, but no role or feature installation or uninstallation | Limited support; online and offline status only | Not supported |
@@ -111,15 +111,15 @@ To perform management tasks on remote servers by using Server Manager, remote se
     > [!NOTE]
     > This command also works in a command prompt that has been opened with elevated user rights (Run as Administrator).
 
-    if enabling remote management fails, see [about_remote_Troubleshooting](https://go.microsoft.com/fwlink/p/?LinkID=135188) on Microsoft TechNet for troubleshooting tips and best practices.
+    if enabling remote management fails, see [about_remote_Troubleshooting](/powershell/module/microsoft.powershell.core/about/about_remote_troubleshooting) on Microsoft TechNet for troubleshooting tips and best practices.
 
 ##### To enable Server Manager and Windows PowerShell remote management on older operating systems
 
 -   Do one of the following.
 
-    -   To enable remote management on servers that are running  Windows Server 2008 R2 , see [remote Management with Server Manager](https://go.microsoft.com/fwlink/?LinkID=137378) in the  Windows Server 2008 R2  help.
+    -   To enable remote management on servers that are running  Windows Server 2008 R2 , see [remote Management with Server Manager](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759202(v=ws.11)) in the  Windows Server 2008 R2  help.
 
-    -   To enable remote management on servers that are running  Windows Server 2008 , see [Enable and Use remote Commands in Windows PowerShell](https://go.microsoft.com/fwlink/p/?LinkId=242565).
+    -   To enable remote management on servers that are running  Windows Server 2008 , see [Enable and Use remote Commands in Windows PowerShell](/previous-versions/technet-magazine/ff700227(v=msdn.10)).
 
 ## Tasks that you can perform in Server Manager
 
@@ -134,7 +134,7 @@ Administrators can use two Windows PowerShell cmdlets in the Server Manager cmdl
 |----------|----------------------------------|-------------|
 |add remote servers to a pool of servers that Server Manager can be used to manage.|Yes|No|
 |create and edit custom groups of servers, such as servers that are in a specific geographic location or serve a specific purpose.|Yes|Yes|
-|Install or uninstall roles, role services, and features on the local or on remote servers that are running  Windows Server 2012 R2  or  Windows Server 2012 . For definitions of roles, role services, and features, see [Roles, Role Services, and Features](https://go.microsoft.com/fwlink/p/?LinkId=239558).|Yes|No|
+|Install or uninstall roles, role services, and features on the local or on remote servers that are running  Windows Server 2012 R2  or  Windows Server 2012 . For definitions of roles, role services, and features, see [Roles, Role Services, and Features](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754923(v=ws.11)).|Yes|No|
 |View and make changes to server roles and features that are installed on either local or remote servers. **Note:** In Server Manager, role and feature data is displayed in the base language of the system, also called the system default GUI language, or the language selected during installation of the operating system.|Yes|Standard users can view and manage roles and features, and perform tasks such as viewing role events, but cannot add or remove role services.|
 |start management tools such as Windows PowerShell or mmc snap-ins. You can start a Windows PowerShell session targeted at a remote server by right-clicking the server in the **Servers** tile, and then clicking **Windows PowerShell**. You can start mmc snap-ins from the **Tools** menu of the Server Manager console, and then point the mmc toward a remote computer after the snap-in is open.|Yes|Yes|
 |Manage remote servers with different credentials by right-clicking a server in the **Servers** tile, and then clicking **Manage As**. You can use **Manage As** for general server and File and Storage Services management tasks.|Yes|No|

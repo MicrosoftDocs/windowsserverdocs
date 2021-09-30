@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Performance history for volumes"
 title: Performance history for volumes
 ms.author: cosdar
 manager: eldenc
@@ -10,7 +11,7 @@ ms.localizationpriority: medium
 
 # Performance history for volumes
 
-> Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for volumes. Performance history is available for every Cluster Shared Volume (CSV) in the cluster. However, it is not available for OS boot volumes nor any other non-CSV storage.
 

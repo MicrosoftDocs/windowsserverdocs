@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Performance history for virtual machines"
 title: Performance history for virtual machines
 ms.author: cosdar
 manager: eldenc
@@ -10,7 +11,7 @@ ms.localizationpriority: medium
 
 # Performance history for virtual machines
 
-> Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for virtual machines (VM). Performance history is available for every running, clustered VM.
 

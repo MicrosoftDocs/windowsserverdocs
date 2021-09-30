@@ -5,10 +5,11 @@ ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: greglin
 author: greg-lindsay
+ms.date: 10/23/2020
 ---
 # Anycast DNS overview
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
 
 This topic provides information about how Anycast DNS works.
 

@@ -3,8 +3,8 @@ title: select commands
 description: Reference article for the select commands, which shifts the focus to a disk, partition, volume, or virtual hard disk (VHD).
 ms.topic: reference
 ms.assetid: 9eeb40c0-4258-46e2-8dbc-94f63497e771
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

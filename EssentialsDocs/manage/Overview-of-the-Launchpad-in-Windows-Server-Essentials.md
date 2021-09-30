@@ -1,6 +1,6 @@
 ---
 title: "Overview of the Launchpad in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about Windows Server Essentials Launchpad, which provides authenticated users with access to key features of Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 198d16cb-3d07-4706-be89-ad14a5f7dc47

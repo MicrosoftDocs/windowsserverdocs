@@ -5,11 +5,12 @@ ms.topic: reference
 author: jasongerend
 manager: elizapo
 ms.author: jgerend
+ms.date: 12/10/2020
 ---
 
 # diskpart
 
-> Applies to: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2, Windows Server 2008
+>Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2, Windows Server 2008
 
 The diskpart command interpreter helps you manage your computer's drives (disks, partitions, volumes, or virtual hard disks).
 
@@ -75,7 +76,7 @@ You can run the following commands from the Diskpart command interpreter:
 | [format](format.md) | Formats a disk to accept Windows files. |
 | [gpt](gpt.md) | Assigns the gpt attribute(s) to the partition with focus on basic GUID partition table (gpt) disks. |
 | [help](help.md) | Displays a list of the available commands or detailed help information on a specified command. |
-| [import](import.md) | Imports a foreign disk group into the disk group of the local computer. |
+| [import](import_1.md) | Imports a foreign disk group into the disk group of the local computer. |
 | [inactive](inactive.md) | Marks the system partition or boot partition with focus as inactive on basic master boot record (MBR) disks. |
 | [list](list.md) | Displays a list of disks, of partitions in a disk, of volumes in a disk, or of virtual hard disks (VHDs). |
 | [merge vdisk](merge-vdisk.md) | Merges a differencing virtual hard disk (VHD) with its corresponding parent VHD. |

@@ -1,5 +1,6 @@
 ---
-ms.assetid: 341614c6-72c2-444f-8b92-d2663aab7070
+description: "Learn more about: Virtualized Domain Controller Architecture"
+s.assetid: 341614c6-72c2-444f-8b92-d2663aab7070
 title: Virtualized Domain Controller Architecture
 author: iainfoulds
 ms.author: daveba
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Virtualized Domain Controller Architecture
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic covers the architecture of virtualized domain controller cloning and safe restore. It shows the processes cloning and safe restore with flowcharts and then provides a detailed explanation of each step in the process.
 
@@ -32,7 +33,7 @@ The following diagram shows the architecture for an initial cloning operation an
 
 **Initial Cloning Operation**
 
-![Virtualized DC Architecture](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_InitialCloningProcess.png)
+![Diagram that shows the architecture for an initial cloning operation and for a cloning retry operation.](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_InitialCloningProcess.png)
 
 **Cloning retry operation**
 
@@ -150,7 +151,7 @@ The following sections explain safe restore in detail for each scenario.
 ### Safe Restore Detailed Processing
 The following flowchart shows how safe restore occurs when a virtual domain controller is started after a snapshot has been restored while it was shut down.
 
-![Virtualized DC Architecture](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringNormalBoot.png)
+![Flowchart that shows how safe restore occurs when a virtual domain controller is started after a snapshot has been restored while it was shut down.](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringNormalBoot.png)
 
 1.  When the virtual machine boots up after a snapshot restore, it will have new VM-Generation ID provided by the hypervisor host because of the snapshot restore.
 
@@ -167,7 +168,7 @@ The following flowchart shows how safe restore occurs when a virtual domain cont
 
 The following diagram shows how virtualization safeguards prevent divergence induced by USN rollback when a snapshot is restored on a running virtual domain controller.
 
-![Virtualized DC Architecture](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringSnapShotRestore.png)
+![Diagram that shows how virtualization safeguards prevent divergence induced by USN rollback when a snapshot is restored on a running virtual domain controller.](media/Virtualized-Domain-Controller-Architecture/ADDS_VDC_VirtualizationSafeguardsDuringSnapShotRestore.png)
 
 > [!NOTE]
 > The preceding illustration is simplified to explain the concepts.

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Multi-factor authentication and external authentication providers customization"
 title: Multi-factor authentication and external authentication providers customization
 author: billmath
 ms.author: billmath
@@ -20,7 +21,7 @@ Export-AdfsWebTheme -Name default -DirectoryPath C:\theme
 
 The following is an example of the sign\-in user interface, which is highlighted in RED, by an external authentication provider. The user interface uses the UI classes in the AD FS .css file.
 
-![AD FS and MFA](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom8.png)
+![Screenshot that shows an example of the sign-in user interface.](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom8.png)
 
 Before you write a new custom authentication method, we recommend that you study the AD FS theme and style definitions to understand the content authoring requirements.
 

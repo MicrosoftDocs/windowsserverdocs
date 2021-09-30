@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Adding servers or drives to Storage Spaces Direct
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to add servers or drives to Storage Spaces Direct.
 
@@ -192,7 +192,7 @@ Optimization uses two jobs - one called *Optimize* and one called *Rebalance* - 
 Get-StorageJob
 ```
 
-You can manually optimize a storage pool with the [Optimize-StoragePool](/powershell/module/storage/optimize-storagepool?view=win10-ps) cmdlet. Here's an example:
+You can manually optimize a storage pool with the [Optimize-StoragePool](/powershell/module/storage/optimize-storagepool) cmdlet. Here's an example:
 
 ```powershell
 Get-StoragePool <PoolName> | Optimize-StoragePool

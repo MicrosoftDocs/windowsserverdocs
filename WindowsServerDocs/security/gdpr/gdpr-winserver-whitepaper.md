@@ -9,7 +9,7 @@ author: nirb-ms
 
 # Beginning your General Data Protection Regulation (GDPR) journey for Windows Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article provides info about the GDPR, including what it is, and the products Microsoft provides to help you to become compliant.
 
@@ -236,7 +236,7 @@ Windows Server 2016 also includes built-in protection against some classes of me
 
 When the program calls through this function, it can then jump to an unintended location specified by the attacker. These attacks are also known as jump-oriented programming (JOP) attacks. Control Flow Guard prevents JOP attacks by placing tight restrictions on what application code can be executed – especially indirect call instructions. It adds lightweight security checks to identify the set of functions in the application that are valid targets for indirect calls. When an application runs, it verifies that these indirect call targets are valid.
 
-If the Control Flow Guard check fails at runtime, Windows Server 2016 immediately terminates the program, breaking any exploit that attempts to indirectly call an invalid address. Control Flow Guard provides an important additional layer of protection to Device Guard. If a white-listed application has been compromised, it would be able to run unchecked by Device Guard, because the Device Guard screening would see that the application has been signed and is considered trusted.
+If the Control Flow Guard check fails at runtime, Windows Server 2016 immediately terminates the program, breaking any exploit that attempts to indirectly call an invalid address. Control Flow Guard provides an important additional layer of protection to Device Guard. If an allowlisted application has been compromised, it would be able to run unchecked by Device Guard, because the Device Guard screening would see that the application has been signed and is considered trusted.
 
 But because Control Flow Guard can identify whether the application is executing in a non-predetermined, non-viable order, the attack would fail, preventing the compromised application from running. Together, these protections make it very difficult for attackers to inject malware into software running on Windows Server 2016.
 

@@ -3,14 +3,14 @@ title: defrag
 description: Reference article for the defrag command, which locates and consolidates fragmented files on local volumes to improve system performance.
 ms.topic: reference
 ms.assetid: aaf1d1ac-996a-4282-9b4d-1e8245ff162c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # defrag
 
-> Applies to: Windows 10, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Locates and consolidates fragmented files on local volumes to improve system performance.
 
@@ -131,4 +131,4 @@ The defragmentation process runs scheduled task as a maintenance task, which typ
 
 - [fsutil dirty](fsutil-dirty.md)
 
-- [Optimize-Volume Powershell](/powershell/module/storage/optimize-volume?view=win10-ps)
+- [Optimize-Volume Powershell](/powershell/module/storage/optimize-volume)

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: What's New in Kerberos Authentication"
 title: What's New in Kerberos Authentication
 ms.topic: article
 ms.assetid: 7bd17803-6e42-4a3b-803f-e47c74725813
@@ -9,7 +10,7 @@ ms.date: 11/09/2016
 
 # What's New in Kerberos Authentication
 
->Applies To: Windows Server 2016 and Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016 and Windows 10
 
 ## KDC support for Public Key Trust-based client authentication
 

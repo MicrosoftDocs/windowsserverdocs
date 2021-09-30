@@ -4,8 +4,8 @@ description: This topic provides information about text file and SQL Server logg
 manager: dougkim
 ms.topic: article
 ms.assetid: dfde2e21-f3d5-41e8-8492-cb3f0d028afb
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 05/25/2018
 ---
 

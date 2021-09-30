@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Determine how to recover the forest"
 title: AD Forest Recovery - Determine how to recover the forest
 ms.author: daveba
 author: iainfoulds
@@ -9,7 +10,7 @@ ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ---
 # Determine how to recover the forest
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 Recovering an entire Active Directory forest involves either restoring it from backup or reinstalling Active Directory Domain Services (AD DS) on every domain controller (DC) in the forest. Recovering the forest restores each domain in the forest to its state at the time of the last trusted backup. Consequently, the restore operation will result in the loss of at least the following Active Directory data:
 
@@ -42,7 +43,7 @@ If you need to restore Active Directory to different hardware, create full serve
 
 If the time of the occurrence of the failure is unknown, investigate further to identify backups that hold the last safe state of the forest. This approach is less desirable. Therefore, we strongly recommend that you keep detailed logs about the health state of AD DS on a daily basis so that, if there is a forest-wide failure, the approximate time of failure can be identified. You should also keep a local copy of backups to enable faster recovery.
 
-If Active Directory Recycle Bin is enabled, the backup lifetime is equal to the **deletedObjectLifetime** value or the **tombstoneLifetime** value, whichever is less. For more information, see [Active Directory Recycle Bin Step-by-Step Guide](https://go.microsoft.com/fwlink/?LinkId=178657) (https://go.microsoft.com/fwlink/?LinkId=178657).
+If Active Directory Recycle Bin is enabled, the backup lifetime is equal to the **deletedObjectLifetime** value or the **tombstoneLifetime** value, whichever is less. For more information, see [Active Directory Recycle Bin Step-by-Step Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd392261(v=ws.10)) (https://go.microsoft.com/fwlink/?LinkId=178657).
 
 As an alternative, you can also use the Active Directory database mounting tool (Dsamain.exe) and a Lightweight Directory Access Protocol (LDAP) tool, such as Ldp.exe or Active Directory Users and Computers, to identify which backup has the last safe state of the forest. The Active Directory database mounting tool, which is included in Windows Server 2008 and later Windows Server operating systems, exposes Active Directory data that is stored in backups or snapshots as an LDAP server. Then, you can use an LDAP tool to browse the data. This approach has the advantage of not requiring you to restart any DC in Directory Services Restore Mode (DSRM) to examine the contents of the backup of AD DS.
 
@@ -134,6 +135,6 @@ If you are using a hub-and-spoke network architecture, you can concentrate first
 - [AD Forest Recovery - Determine how to recover](AD-Forest-Recovery-Determine-how-to-Recover.md)
 - [AD Forest Recovery - Perform initial recovery](AD-Forest-Recovery-Perform-initial-recovery.md)
 - [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
-- [AD Forest Recovery - Frequently Asked Questions](AD-Forest-Recovery-FAQ.md)
+- [AD Forest Recovery - Frequently Asked Questions](ad-forest-recovery-faq.yml)
 - [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
 - [AD Forest Recovery - Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Windows-Server-2003.md)

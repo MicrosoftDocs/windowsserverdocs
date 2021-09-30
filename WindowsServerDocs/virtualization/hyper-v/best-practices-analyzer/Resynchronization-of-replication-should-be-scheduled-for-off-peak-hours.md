@@ -1,6 +1,6 @@
 ---
 title: Resynchronization of replication should be scheduled for off-peak hours
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when resynchronization of replication for the primary virtual machines is not scheduled for off-peak hours.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -9,9 +9,9 @@ ms.date: 8/16/2016
 ---
 # Resynchronization of replication should be scheduled for off-peak hours
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -32,6 +32,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Resolution
 *Use Hyper-V Manager to modify the replication settings for the virtual machine to perform resynchronization automatically during off-peak hours.*
-
-
-

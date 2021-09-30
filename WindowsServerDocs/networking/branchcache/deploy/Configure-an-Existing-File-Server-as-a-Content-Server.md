@@ -1,15 +1,16 @@
 ---
 title: Configure an Existing File Server as a Content Server
-description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices
+description: Learn how to install the BranchCache for Network Files role service of the File Services server role on a computer running Windows Server 2016.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: bdac7d2a-25b4-4f61-bed1-b290700c18f3
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # Configure an Existing File Server as a Content Server
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to install the **BranchCache for Network Files** role service of the File Services server role on a computer running Windows Server 2016.
 

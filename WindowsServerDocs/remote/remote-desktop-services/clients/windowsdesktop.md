@@ -3,20 +3,20 @@ title: Get started with the Windows Desktop client
 description: Basic information about the Windows Desktop client.
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 09/05/2020
+ms.date: 07/15/2021
 ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
 
->Applies to: Windows 10, Windows 10 IoT Enterprise, and Windows 7
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Windows 10 IoT Enterprise, and Windows 7
 
 You can use the Remote Desktop client for Windows Desktop to access Windows apps and desktops remotely from a different Windows device.
 
 > [!NOTE]
 > - This documentation is not for the Remote Desktop Connection (MSTSC) client that ships with Windows. It's for the new Remote Desktop (MSRDC) client.
-> - This client currently only supports accessing remote apps and desktops from [Windows Virtual Desktop](https://aka.ms/wvd).
+> - This client currently only supports accessing remote apps and desktops from [Azure Virtual Desktop](https://aka.ms/wvd) and Windows 365.
 > - Curious about the new releases for the Windows Desktop client? Check out [What's new in the Windows Desktop client](windowsdesktop-whatsnew.md)
 
 ## Install the client
@@ -44,7 +44,7 @@ You can also manually search for new updates for the client:
 
 ## Workspaces
 
-Get the list of managed resources you can access, such as apps and desktops, by subscribing to the Workspace your admin provided you. When you subscribe, the resources become available on your local PC. The Windows Desktop client currently supports resources published from Windows Virtual Desktop.
+Get the list of managed resources you can access, such as apps and desktops, by subscribing to the Workspace your admin provided you. When you subscribe, the resources become available on your local PC. The Windows Desktop client currently supports resources published from Azure Virtual Desktop and Windows 365.
 
 ### Subscribe to a Workspace
 
@@ -63,9 +63,10 @@ There are two ways you can subscribe to a Workspace. The client can try to disco
 
 1. From the main page of the client, tap **Subscribe with URL**.
 2. Enter the Workspace URL or your email address:
-   - If you use the **Workspace URL**, use the one your admin gave you. If accessing resources from Windows Virtual Desktop, you can use one of the following URLs:
-     - Windows Virtual Desktop (classic): `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`
-     - Windows Virtual Desktop: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`
+   - If you use the **Workspace URL**, use the one your admin gave you. If you're accessing resources from Azure Virtual Desktop or Windows 365, you can use one of the following URLs:
+     - Azure Virtual Desktop (classic): `https://rdweb.wvd.microsoft.com/api/feeddiscovery/webfeeddiscovery.aspx`
+     - Azure Virtual Desktop: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`
+     - If you're using Windows 365, use: `https://rdweb.wvd.microsoft.com/api/arm/feeddiscovery`.
    - To use **email**, enter your email address. This tells the client to search for a URL associated with your email address if your admin has setup [email discovery](../rds-email-discovery.md).
 3. Tap **Next**.
 4. Sign in with your user account when prompted.

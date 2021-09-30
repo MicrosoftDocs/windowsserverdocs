@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Manage Hyper-Converged Infrastructure with Windows Admin Center
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 ## What is Hyper-Converged Infrastructure
 

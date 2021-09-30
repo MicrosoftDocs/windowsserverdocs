@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Collecting Network Information"
 ms.assetid: 8be8c48d-790c-4199-b9d3-9f4a07d5ced2
 title: Collecting Network Information
 ms.author: daveba
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Collecting Network Information
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The first step in designing an effective site topology in Active Directory Domain Services (AD DS) is to consult your organization's networking group to collect information and communicate with them regularly about your physical network topology.
 

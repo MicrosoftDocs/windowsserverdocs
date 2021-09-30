@@ -4,12 +4,13 @@ description: You can use this topic to learn about the tools that you can use to
 manager: brianlic
 ms.topic: article
 ms.assetid: 5de80dc0-53be-42b7-8e5b-24d213bf2b25
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 12/08/2020
 ---
 # Network Policy Server Management with Administration Tools
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn about the tools that you can use to manage your NPSs.
 
@@ -122,7 +123,7 @@ For more information about Netsh NPS commands, see [Netsh Commands for Network P
 
 You can use Windows PowerShell commands to manage NPSs. For more information, see the following Windows PowerShell command reference topics.
 
-- [Network Policy Server (NPS) Cmdlets in Windows PowerShell](/powershell/module/nps/?view=win10-ps&viewFallbackFrom=winserverr2-ps). You can use these netsh commands in Windows Server 2012 R2 or later operating systems.
-- [NPS Module](/powershell/module/nps/?view=win10-ps). You can use these netsh commands in Windows Server 2016.
+- [Network Policy Server (NPS) Cmdlets in Windows PowerShell](/powershell/module/nps/). You can use these netsh commands in Windows Server 2012 R2 or later operating systems.
+- [NPS Module](/powershell/module/nps/). You can use these netsh commands in Windows Server 2016.
 
 For more information about NPS administration, see [Manage Network Policy Server (NPS)](nps-manage-top.md).

@@ -5,11 +5,11 @@ ms.topic: article
 ms.assetid: a9ee931d-91fc-40cf-9a15-ed6fa6965cb6
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 10/03/2016
+ms.date: 01/08/2021
 ---
 # Feature Descriptions for Linux and FreeBSD virtual machines on Hyper-V
 
->Applies To: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
+>Applies to: Windows Server 2022, Windows Server 2019, Azure Stack HCI, version 20H2; Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7.1, Windows 7
 
 This article describes features available in components such as core, networking, storage, and memory when using Linux and FreeBSD on a virtual machine.
 

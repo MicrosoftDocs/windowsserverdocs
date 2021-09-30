@@ -10,14 +10,14 @@ manager: dongill
 ---
 # Supported configurations for Remote Desktop Services
 
-> Applies To: Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
 
 When it comes to supported configurations for Remote Desktop Services environments, the largest concern tends to be version interoperability. Most environments include multiple versions of Windows Server - for example, you may have an existing Windows Server 2012 R2 RDS deployment but want to upgrade to Windows Server 2016 to take advantage of the new features (like support for OpenGL\OpenCL, Discrete Device Assignment, or Storage Spaces Direct). The question then becomes, which RDS components can work with different versions and which need to be the same?
 
 So with that in mind, here are basic guidelines for supported configurations of Remote Desktop Services in Windows Server.
 
 > [!NOTE]
-> Make sure to review the [system requirements for Windows Server 2016](../../get-started/system-requirements.md) and [system requirements for Windows Server 2019](../../get-started-19/sys-reqs-19.md).
+> Make sure to review the [system requirements for Windows Server](../../get-started/hardware-requirements.md).
 
 ## Best practices
 
@@ -60,7 +60,7 @@ The following table shows the scenarios supported by different versions of RDSH 
 |Feature|Windows Server 2008 R2|Windows Server 2012 R2|Windows Server 2016|Windows Server 2019|
 |---|---|---|---|---|
 |Use of hardware GPU for all RDP sessions|No|Yes|Yes|Yes|
-|H.264/AVC hardware encoding (if suppported by the GPU)|No|No|Yes|Yes|
+|H.264/AVC hardware encoding (if supported by the GPU)|No|No|Yes|Yes|
 |Load balancing between multiple GPUs presented to the OS|No|No|No|Yes|
 |H.264/AVC encoding optimizations for minimizing bandwidth usage|No|No|No|Yes|
 |H.264/AVC support for 4K resolution|No|No|No|Yes|
@@ -72,7 +72,7 @@ The following table shows support for GPU scenarios in the client OS.
 |Feature|Windows 7 SP1|Windows 8.1|Windows 10|
 |---|---|---|---|
 |Use of hardware GPU for all RDP sessions|No|Yes|Yes|
-|H.264/AVC hardware encoding (if suppported by the GPU)|No|No|Windows 10 1703 and later|
+|H.264/AVC hardware encoding (if supported by the GPU)|No|No|Windows 10 1703 and later|
 |Load balancing between multiple GPUs presented to the OS|No|No|Windows 10 1803 and later|
 |H.264/AVC encoding optimizations for minimizing bandwidth usage|No|No|Windows 10 1803 and later|
 |H.264/AVC support for 4K resolution|No|No|Windows 10 1803 and later|
@@ -80,7 +80,7 @@ The following table shows support for GPU scenarios in the client OS.
 ### RemoteFX 3D Video Adapter (vGPU) support
 
 > [!NOTE]
-> Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update. To learn more, see [KB 4570006](https://support.microsoft.com/help/4570006).
+> Because of security concerns, RemoteFX vGPU is disabled by default on all versions of Windows starting with the July 14, 2020 Security Update and removed starting with the April 13, 2021 Security Update. To learn more, see [KB 4570006](https://support.microsoft.com/help/4570006).
 
 Remote Desktop Services supports RemoteFX vGPUs when VM is running as a Hyper-V guest on Windows Server 2012 R2 or Windows Server 2016. The following guest operating systems have RemoteFX vGPU support:
 

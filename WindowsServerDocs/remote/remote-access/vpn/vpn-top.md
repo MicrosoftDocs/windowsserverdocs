@@ -1,17 +1,17 @@
 ---
 title: Virtual Private Networking (VPN)
-description: You can use this topic to learn about Windows Server 2016 and Windows 10 VPN features and functionality.
+description: Learn how you can use RAS Gateway as a single-tenant VPN server.
 ms.topic: article
 ms.assetid: cd4908f0-0d6f-4c02-8f98-4dc88c3dcb65
 ms.date: 11/05/2018
-ms.author: v-tea
-author: Teresa-MOTIV
+ms.author: jgerend
+author: JasonGerend
 ms.localizationpriority: medium
 ---
 
 # Virtual Private Networking (VPN)
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 ## RAS Gateway as a Single Tenant VPN Server
 

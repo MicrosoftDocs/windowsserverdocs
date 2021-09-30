@@ -3,15 +3,15 @@ title: ftp quote
 description: Reference article for the ftp quote command, which sends verbatim arguments to the remote ftp server.
 ms.topic: reference
 ms.assetid: 4500a1d3-c091-42c7-a909-f61df7f2e993
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # ftp quote
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Sends verbatim arguments to the remote ftp server. A single ftp reply code is returned.
 

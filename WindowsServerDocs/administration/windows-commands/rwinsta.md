@@ -3,15 +3,15 @@ title: rwinsta
 description: Reference article for the rwinsta command, which resets (deletes) a session on a Remote Desktop Session Host server.
 ms.topic: reference
 ms.assetid: 82bee0e4-1c2c-43fe-afd3-04a6ce0f4518
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # rwinsta
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Resets (deletes) a session on a Remote Desktop Session Host server.
 

@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Network File System overview
 
->Applies to: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes the Network File System role service and features included with the File and Storage Services server role in Windows Server. Network File System (NFS) provides a file sharing solution for enterprises that have heterogeneous environments that include both Windows and non-Windows computers.
 
@@ -83,7 +83,7 @@ Note that Server for NFS supports transparent failover only when manually initia
 
 Deploying and managing NFS has improved in the following ways:
 
-- Over forty new Windows PowerShell cmdlets make it easier to configure and manage NFS file shares. For more information, see [NFS Cmdlets in Windows PowerShell](/powershell/module/nfs/?view=win10-ps).
+- Over forty new Windows PowerShell cmdlets make it easier to configure and manage NFS file shares. For more information, see [NFS Cmdlets in Windows PowerShell](/powershell/module/nfs/).
 - Identity mapping is improved with a local flat file mapping store and new Windows PowerShell cmdlets for configuring identity mapping.
 - The Server Manager graphical user interface is easier to use.
 - The new WMI version 2 provider is available for easier management.
@@ -100,7 +100,7 @@ In Server Manager - or the newer [Windows Admin Center](../../manage/windows-adm
 - **Showmount** displays mounted file systems exported by Server for NFS.
 - **Umount** removes NFS-mounted drives.
 
-NFS in Windows Server 2012 introduces the NFS module for Windows PowerShell with several new cmdlets specifically for NFS. These cmdlets provide an easy way to automate NFS management tasks. For more information, see [NFS cmdlets in Windows PowerShell](/powershell/module/nfs/?view=win10-ps).
+NFS in Windows Server 2012 introduces the NFS module for Windows PowerShell with several new cmdlets specifically for NFS. These cmdlets provide an easy way to automate NFS management tasks. For more information, see [NFS cmdlets in Windows PowerShell](/powershell/module/nfs/).
 
 ## Additional information
 
@@ -109,5 +109,5 @@ The following table provides additional resources for evaluating NFS.
 |Content type|References|
 |---|---|
 |Deployment|[Deploy Network File System](deploy-nfs.md)|
-|Operations|[NFS cmdlets in Windows PowerShell](/powershell/module/nfs/?view=win10-ps)|
+|Operations|[NFS cmdlets in Windows PowerShell](/powershell/module/nfs/)|
 |Related technologies|[Storage in Windows Server](../storage.yml)|

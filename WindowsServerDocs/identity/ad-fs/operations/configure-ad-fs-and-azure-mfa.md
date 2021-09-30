@@ -1,10 +1,11 @@
 ---
 ms.assetid: 24c4b9bb-928a-4118-acf1-5eb06c6b08e5
 title: Configure AD FS 2016 and Azure MFA
+description: "Learn more about: Configure Azure MFA as authentication provider with AD FS"
 ms.author: billmath
 author: billmath
 manager: mtillman
-ms.date: 01/28/2019
+ms.date: 04/29/2021
 ms.topic: article
 ---
 # Configure Azure MFA as authentication provider with AD FS
@@ -40,7 +41,7 @@ As described above, any AD FS user who has not yet registered (configured MFA ve
 Because Azure MFA as primary is considered a single factor, after initial configuration users will need to provide an additional factor to manage or update their verification information in Azure AD, or to access other resources that require MFA.
 
 >[!NOTE]
-> With ADFS 2019, you are required to make a modification to the anchor claim type for the Active Directory Claims Provider trust and modify this from the windowsaccountname to UPN. Execute the PowerShell cmdlet provided below. This has no impact on the internal functioning of the AD FS farm. You may notice a few users may be re-prompted for credentials once this change is made. After logging in again, end users will see no difference.
+> With AD FS 2019, you are required to make a modification to the anchor claim type for the Active Directory Claims Provider trust and modify this from the windowsaccountname to UPN. Execute the PowerShell cmdlet provided below. This has no impact on the internal functioning of the AD FS farm. You may notice a few users may be re-prompted for credentials once this change is made. After logging in again, end users will see no difference.
 
 ```powershell
 Set-AdfsClaimsProviderTrust -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -TargetName "Active Directory"
@@ -48,8 +49,7 @@ Set-AdfsClaimsProviderTrust -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005
 
 ### Azure MFA as Additional authentication to Office 365
 
-Previously, if you wished to have Azure MFA as an additional authentication method in AD FS for Office 365 or other relying parties, the best option was to configure Azure AD to do compound MFA, in which primary authentication is performed on premises in AD FS and MFA is triggered by Azure AD.
-Now, you can use Azure MFA as additional authentication in AD FS when the domain SupportsMfa setting is set to $True.
+Azure MFA adapter for AD FS enables your users to do MFA on AD FS. To secure your Azure AD resource, it is recommended to require MFA through a [Conditional Access policy](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa), set the domain setting SupportsMfa to $True and [emit the multipleauthn claim](/azure/active-directory/authentication/howto-mfa-adfs#secure-azure-ad-resources-using-ad-fs) when a user performs two-step verification successfully. 
 
 As described above, any AD FS user who has not yet registered (configured MFA verification information) should be prompted via a customized AD FS error page to visit [https://aka.ms/mfasetup](https://aka.ms/mfasetup) to configure verification information, then re-attempt AD FS login.
 
@@ -69,7 +69,7 @@ The following pre-requisites are required when using Azure MFA for authenticatio
       - https://adnotifications.windowsazure.com
       - https://login.microsoftonline.com
 - Your on-premises environment is [federated with Azure AD.](/azure/active-directory/hybrid/how-to-connect-install-custom#configuring-federation-with-ad-fs)
-- [Windows Azure Active Directory Module for Windows PowerShell](/powershell/module/azuread/?view=azureadps-2.0).
+- [Windows Azure Active Directory Module for Windows PowerShell](/powershell/module/azuread/).
 - Global administrator permissions on your instance of Azure AD to configure it using Azure AD PowerShell.
 - Enterprise administrator credentials to configure the AD FS farm for Azure MFA.
 
@@ -84,12 +84,12 @@ In order to complete configuration for Azure MFA for AD FS, you need to configur
 
 The first thing you need to do is generate a certificate for Azure MFA to use.  This can be done using PowerShell.  The certificate generated can be found in the local machines certificate store, and it is marked with a subject name containing the TenantID for your Azure AD directory.
 
-![AD FS and MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA3.png)
+![Screenshot of the certificate store of a local machine showing the generated certificate.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA3.png)
 
 Note that TenantID is the name of your directory in Azure AD.  Use the following PowerShell cmdlet to generate the new certificate.
     `$certbase64 = New-AdfsAzureMfaTenantCertificate -TenantID <tenantID>`
 
-![AD FS and MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA1.PNG)
+![Screenshot of the PowerShell window showing the cmdlet above.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA1.PNG)
 
 ### Step 2: Add the new credentials to the Azure Multi-Factor Auth Client Service Principal
 
@@ -121,7 +121,7 @@ Open a PowerShell prompt and enter your own *tenantId* with the [Set-AdfsAzureMf
 Set-AdfsAzureMfaTenant -TenantId <tenant ID> -ClientId 981f26a1-7f43-403b-a875-f8b09b8cd720
 ```
 
-![AD FS and MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png)
+![Screenshot of the PowerShell window showing the warning message received after running the Set-AdfsAzureMfaTenant cmdlet.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA5.png)
 
 Windows Server without the latest service pack doesn't support the `-Environment` parameter for the [Set-AdfsAzureMfaTenant](/powershell/module/adfs/export-adfsauthenticationproviderconfigurationdata) cmdlet. If you use Azure Government cloud and the previous steps failed to configure your Azure tenant due to the missing `-Environment` parameter, complete the following steps to manually create the registry entries. Skip these steps if the previous cmdlet correctly registered your tenant information or you aren't in the Azure Government cloud:
 
@@ -138,7 +138,7 @@ Windows Server without the latest service pack doesn't support the `-Environment
 
 After this, you will see that Azure MFA is available as a primary authentication method for intranet and extranet use.
 
-![AD FS and MFA](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png)
+![Screenshot of the Edit Authentication Methods dialog box showing the Azure M F A option highlighted in both the Extranet and Intranet sections.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png)
 
 ## Renew and Manage AD FS Azure MFA Certificates
 

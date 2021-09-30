@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Identify the problem"
 title: AD Forest Recovery - Identify the Problem
 ms.author: daveba
 author: iainfoulds
@@ -9,7 +10,7 @@ ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ---
 # Identify the problem
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 When symptoms of a forest-wide failure appear, such as in event logs or other monitoring solutions, work with Microsoft Support to determine the cause of the failure, and evaluate any possible remedies.
 
@@ -36,6 +37,6 @@ When symptoms of a forest-wide failure appear, such as in event logs or other mo
 - [AD Forest Recovery - Determine how to recover](AD-Forest-Recovery-Determine-how-to-Recover.md)
 - [AD Forest Recovery - Perform initial recovery](AD-Forest-Recovery-Perform-initial-recovery.md)
 - [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
-- [AD Forest Recovery - Frequently Asked Questions](AD-Forest-Recovery-FAQ.md)
+- [AD Forest Recovery - Frequently Asked Questions](ad-forest-recovery-faq.yml)
 - [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
 - [AD Forest Recovery - Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Windows-Server-2003.md)

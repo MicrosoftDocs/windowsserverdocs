@@ -3,15 +3,15 @@ title: wdsutil add-drivergrouppackages
 description: Reference article for the wdsutil add-drivergrouppackages command, which add driver group packages.
 ms.topic: reference
 ms.assetid: 29022f53-ce14-4b2d-a81a-679c18e022b2
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # wdsutil add-drivergrouppackages
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Adds driver group packages.
 

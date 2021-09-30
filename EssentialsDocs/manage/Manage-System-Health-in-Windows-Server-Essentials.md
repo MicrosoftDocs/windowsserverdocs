@@ -1,6 +1,6 @@
 ---
 title: "Manage System Health in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to view and respond to all system health alerts in your network by using the Dashboard.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 3043f83b-389c-4f37-a1ff-85afe99314fa
@@ -340,7 +340,7 @@ manager: mtillman
 
 6.  In **Customize Health Report Settings**, for **Automatically send the health report to the following email recipients:**, type the email addresses of the persons that you would like to receive Health Reports by email. Ensure that you separate each email address with a semicolon (;).
 
-7.  To verify that you have configured your SMTP server settings correctly to send health reports via email, from the Helath Report tab on the Dashboard, select a report, and click **Email the health report** from the task pane.
+7.  To verify that you have configured your SMTP server settings correctly to send health reports via email, from the Health Report tab on the Dashboard, select a report, and click **Email the health report** from the task pane.
 
 ##  <a name="BKMK_Potential"></a> Potential computer alerts
  This section discusses understanding and managing alerts that are specific to your computer that is connected to the server and that appear in the Launchpad of your computer.

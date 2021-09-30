@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Performing a nonauthoritative restore of Active Directory Domain Services"
 title: AD Forest Recovery - Nonauthoritative restore
 ms.author: daveba
 author: iainfoulds
@@ -9,13 +10,13 @@ ms.assetid: e4ce1d18-d346-492a-8bca-f85513aa3ac1
 ---
 # Performing a nonauthoritative restore of Active Directory Domain Services
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 To perform a nonauthoritative restore, complete the following procedure.
 
 The following procedures use the Wbadmin.exe to perform a nonauthoritative restore of Active Directory or Active Directory Domain Services (AD DS). If you are using a different backup solution or if you intend to complete the authoritative restore of SYSVOL later in the forest recovery process, you can perform an authoritative restore of SYSVOL by using these alternative methods:
 
-- If you are using File Replication Service (FRS) to replicate SYSVOL, follow the steps in [article 290762](https://go.microsoft.com/fwlink/?LinkId=148443) in the Microsoft Knowledge Base, using the **BurFlags** registry key to reinitialize FRS replica sets, or if necessary, article 315457 [315457](https://support.microsoft.com/kb/315457)to rebuild the SYSVOL tree. To determine if SYSVOL is replicated by FRS, see [Determining Whether a Domain Controller's SYSVOL Folder is Replicated by DFSR or FRS](/windows/win32/vss/backing-up-and-restoring-an-frs-replicated-sysvol-folder#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs).
+- If you are using File Replication Service (FRS) to replicate SYSVOL, follow the steps in [article 290762](/troubleshoot/windows-server/networking/use-burflags-to-reinitialize-frs) in the Microsoft Knowledge Base, using the **BurFlags** registry key to reinitialize FRS replica sets, or if necessary, article 315457 [315457](https://support.microsoft.com/kb/315457)to rebuild the SYSVOL tree. To determine if SYSVOL is replicated by FRS, see [Determining Whether a Domain Controller's SYSVOL Folder is Replicated by DFSR or FRS](/windows/win32/vss/backing-up-and-restoring-an-frs-replicated-sysvol-folder#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs).
 - If you are using Distributed File System (DFS) Replication to replicate SYSVOL, see [Perform an authoritative synchronization of DFSR-replicated SYSVOL](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md).
 
 ## Performing a nonauthoritative restore

@@ -1,6 +1,6 @@
 ---
 title: Avoid installing RemoteFX on a computer that is configured as an Active Directory domain controller
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when RemoteFX is installed on a domain controller.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -9,9 +9,9 @@ ms.date: 8/16/2016
 ---
 # Avoid installing RemoteFX on a computer that is configured as an Active Directory domain controller
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -30,6 +30,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## **Resolution**
 *Decide if you want this server to be configured either with RemoteFX for Hyper-V or as an Active Directory Domain Controller, then reconfigure the server as necessary.*
-
-
-

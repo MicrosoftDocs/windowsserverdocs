@@ -2,14 +2,15 @@
 title: What's New in DHCP
 description: This topic provides an overview of new features for Dynamic Host Configuration Protocol (DHCP) in Windows Server 2016.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: c6f36998-5b64-45d1-b1f0-0f0d6604dbe3
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 12/09/2020
 ---
 # What's New in DHCP
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes the Dynamic Host Configuration Protocol (DHCP) functionality that is new or changed in Windows Server 2016.
 
@@ -22,6 +23,10 @@ The following sections provide information about new features and changes in fun
 The DHCP client in Windows 10 has been updated in the 10 May 2020 Update (also referred to as Windows 10, version 2004). When you're running a Windows client and connect to the internet via a tethered Android phone, the connection should be marked as "metered". Previously, the connections were marked as unmetered. Note that not all Android tethered phones will be detected as metered, and some other networks may also show up as metered.
 
 Additionally, the traditional Client Vendor Name has been updated for some Windows-based devices. This value used to be simply MSFT 5.0. Some devices will now show up as MSFT 5.0 XBOX.
+
+## New DHCP Client-side features in the Windows 10 April 2018 Update
+
+The DHCP client in Windows 10 has been updated in the Windows April 2018 Update (also referred to as Windows 10, version 1803) to read in and apply option 119, the Domain Search Option, from the DHCP server that your system connects to. The Domain Search Option provides DNS suffixes for DNS lookups of short names. DHCP option 119 is specified in [RFC 3397](https://tools.ietf.org/html/rfc3397).
 
 ## DHCP Subnet Selection Options
 

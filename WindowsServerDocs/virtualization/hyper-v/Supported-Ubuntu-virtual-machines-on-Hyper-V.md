@@ -1,15 +1,15 @@
 ---
 title: Supported Ubuntu virtual machines on Hyper-V
-description: Lists the Linux integration services and features included in each version
+description: Lists the Ubuntu/Linux integration services and features included in each version
 ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 08/29/2020
+ms.date: 01/08/2021
 ---
 # Supported Ubuntu virtual machines on Hyper-V
 
->Applies To: Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
 The following feature distribution map indicates the features in each version. The known issues and workarounds for each distribution are listed after the table.
 
@@ -137,6 +137,6 @@ The following feature distribution map indicates the features in each version. T
 
 * [Best Practices for running Linux on Hyper-V](Best-Practices-for-running-Linux-on-Hyper-V.md)
 
-* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware?view=win10-ps)
+* [Set-VMFirmware](/powershell/module/hyper-v/set-vmfirmware)
 
 * [Ubuntu 14.04 in a Generation 2 VM - Ben Armstrong's Virtualization Blog](/archive/blogs/virtual_pc_guy/ubuntu-14-04-in-a-generation-2-vm)

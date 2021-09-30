@@ -10,7 +10,7 @@ ms.date: 12/06/2016
 
 # Remotely manage Hyper-V hosts with Hyper-V Manager
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, Windows 8.1
 
 This article lists the supported combinations of Hyper-V hosts and Hyper-V Manager versions and describes how to connect to remote and local Hyper-V hosts so you can manage them.
 
@@ -114,7 +114,7 @@ To do this:
    Enable-WSManCredSSP -Role server
    ```
 
-    For details, see [Enable-PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7) and [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7).
+    For details, see [Enable-PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-7&preserve-view=true) and [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7&preserve-view=true).
 
 Next, configure the computer you'll use to manage the Hyper-V host.
 
@@ -139,7 +139,7 @@ Next, configure the computer you'll use to manage the Hyper-V host.
 > [!NOTE]
 > This will only work for Windows Server 2016 or Windows 10 **remote** hosts.
 
-For cmdlet details, see [Set-Item](/powershell/module/microsoft.powershell.management/set-item?view=powershell-7) and [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7).
+For cmdlet details, see [Set-Item](/powershell/module/microsoft.powershell.management/set-item?view=powershell-7&preserve-view=true) and [Enable-WSManCredSSP](/powershell/module/microsoft.wsman.management/enable-wsmancredssp?view=powershell-7&preserve-view=true).
 
 ## Install Hyper-V Manager
 

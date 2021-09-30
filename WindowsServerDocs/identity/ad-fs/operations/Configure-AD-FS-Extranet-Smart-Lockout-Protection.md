@@ -1,6 +1,7 @@
 ---
 ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: Configure AD FS Extranet Smart Lockout Protection
+description: "Learn more about: AD FS Extranet Lockout and Extranet Smart Lockout"
 author: billmath
 ms.author: billmath
 manager: mtilman
@@ -40,8 +41,8 @@ All secondary nodes will contact the master node on each fresh login through Por
 - **UnknownLocation**: If a request that comes in has at least one IP not present in the existing “FamiliarLocation” list, then the request will be treated as an “Unknown” location. This is to handle proxying scenarios such as Exchange Online legacy authentication where Exchange Online addresses handle both successful and failed requests.
 - **badPwdCount**: A value representing the number of times an incorrect password was submitted and the authentication was unsuccessful. For each user, separate counters are kept for Familiar Locations and Unknown Locations.
 - **UnknownLockout**: A boolean value per user if the user is locked out from accessing from unknown locations. This value is calculated based on the badPwdCountUnfamiliar and ExtranetLockoutThreshold values.
-- **ExtranetLockoutThreshold**: This value determines the maximum number of bad password attempts. When the threshold is reached, ADFS will reject requests from the extranet until the observation window has passed.
-- **ExtranetObservationWindow**: This value determines the duration that username and password requests from unknown locations are locked out. When the window has passed, ADFS will start to perform username and password authentication from unknown locations again.
+- **ExtranetLockoutThreshold**: This value determines the maximum number of bad password attempts. When the threshold is reached, AD FS will reject requests from the extranet until the observation window has passed.
+- **ExtranetObservationWindow**: This value determines the duration that username and password requests from unknown locations are locked out. When the window has passed, AD FS will start to perform username and password authentication from unknown locations again.
 - **ExtranetLockoutRequirePDC**: When enabled, extranet lockout requires a primary domain controller (PDC). When disabled, extranet lockout will fallback to another domain controller in case the PDC is unavailable.
 - **ExtranetLockoutMode**: Controls log only vs enforced mode of Extranet Smart Lockout
     - **ADFSSmartLockoutLogOnly**: Extranet Smart Lockout is enabled, but AD FS will only write admin and audit events, but will not reject authentication requests. This mode is intended to initially be enabled for FamiliarLocation to be populated before ‘ADFSSmartLockoutEnforce' is enabled.
@@ -50,13 +51,14 @@ All secondary nodes will contact the master node on each fresh login through Por
 IPv4 and IPv6 addresses are supported.
 
 ### Anatomy of a transaction
-- **Pre-Auth Check**: During an authentication request, ESL checks all presented IPs. These IPs will be a combination of network IP, forwarded IP, and the optional x-forwarded-for IP. In the audit logs, these IPs are listed in the \<IpAddress> field in the order of x-ms-forwarded-client-ip, x-forwarded-for, x-ms-proxy-client-ip.
 
-  Based on these IPs, ADFS determines if the request is from a familiar or unfamiliar location and then checks if the respective badPwdCount is less than the set threshold limit OR if the last **failed** attempt is happened longer than the observation window time frame. If one of these conditions is true, ADFS allows this transaction for further processing and credential validation. If both conditions are false, the account is already in a locked out state until the observation window passes. After the observation window passes, the user is allowed one attempt to authenticate. Note that in 2019, ADFS will check against the appropriate threshold limit based on if the IP address matches a familiar location or not.
+- **Pre-Auth Check**: During an authentication request, ESL checks all presented IPs. These IPs will be a combination of network IP, forwarded IP, and the optional x-forwarded-for IP. In the audit logs, these IPs are listed in the ```<IpAddress>``` field in the order of x-ms-forwarded-client-ip, x-forwarded-for, x-ms-proxy-client-ip.
+
+  Based on these IPs, AD FS determines if the request is from a familiar or unfamiliar location and then checks if the respective badPwdCount is less than the set threshold limit OR if the last **failed** attempt is happened longer than the observation window time frame. If one of these conditions is true, AD FS allows this transaction for further processing and credential validation. If both conditions are false, the account is already in a locked out state until the observation window passes. After the observation window passes, the user is allowed one attempt to authenticate. Note that in 2019, AD FS will check against the appropriate threshold limit based on if the IP address matches a familiar location or not.
 - **Successful Login**: If the log-in succeeds, then the IPs from the request are added to the user's familiar location IP list.
 - **Failed Login**: If the log-in fails the badPwdCount is increased. The user will go into a lockout state if the attacker sends more bad passwords to the system than the threshold allows. (badPwdCount > ExtranetLockoutThreshold)
 
-![configuration](media/configure-ad-fs-extranet-smart-lockout-protection/esl2.png)
+![Workflow diagram that shows the failed login process.](media/configure-ad-fs-extranet-smart-lockout-protection/esl2.png)
 
 The “UnknownLockout” value will equal to true when the account is locked out. This means that the user's badPwdCount is over than the threshold i.e. someone attempted more passwords than were allowed by the system. In this state, there are 2 ways that a valid user can login.
 - The user must wait for the ObservationWindow time to elapse or
@@ -65,7 +67,7 @@ The “UnknownLockout” value will equal to true when the account is locked out
 If no resets occur, the account will be allowed a single password attempt against AD for each observation window. The account will return to the locked out state after that attempt and the observation window will restart. The badPwdCount value will only reset automatically after a successful password login.
 
 ### Log-Only mode versus ‘Enforce' mode
-The AccountActivity table is populated both during ‘Log-Only' mode and ‘Enforce' mode. If ‘Log-Only' mode is bypassed and ESL is moved directly into ‘Enforce' mode without the recommended waiting period, the familiar IPs of the users will not be known to ADFS. In this case, ESL would behave like ‘ADBadPasswordCounter', potentially blocking legitimate user traffic if the user account is under an active brute force attack. If the ‘Log-Only' mode is bypassed and the user enters a locked out state with “UnknownLockout” = TRUE and attempts to sign in with a good password from an IP that is not in the “familiar” IP list, then they will not be able to sign in. Log-Only mode is recommended for 3-7 days to avoid this scenario. If accounts are actively under attack, a minimum of 24 hours of ‘Log-Only' mode is necessary to prevent lockouts to legitimate users.
+The AccountActivity table is populated both during ‘Log-Only' mode and ‘Enforce' mode. If ‘Log-Only' mode is bypassed and ESL is moved directly into ‘Enforce' mode without the recommended waiting period, the familiar IPs of the users will not be known to AD FS. In this case, ESL would behave like ‘ADBadPasswordCounter', potentially blocking legitimate user traffic if the user account is under an active brute force attack. If the ‘Log-Only' mode is bypassed and the user enters a locked out state with “UnknownLockout” = TRUE and attempts to sign in with a good password from an IP that is not in the “familiar” IP list, then they will not be able to sign in. Log-Only mode is recommended for 3-7 days to avoid this scenario. If accounts are actively under attack, a minimum of 24 hours of ‘Log-Only' mode is necessary to prevent lockouts to legitimate users.
 
 ## Extranet Smart Lockout Configuration
 
@@ -99,7 +101,7 @@ The AccountActivity table is populated both during ‘Log-Only' mode and ‘Enfo
 
     if (-not [System.IO.File]::Exists($fileLocation))
     {
-    write-error "Unable to open ADFS configuration file."
+    write-error "Unable to open AD FS configuration file."
     return
     }
 
@@ -137,7 +139,7 @@ The AccountActivity table is populated both during ‘Log-Only' mode and ‘Enfo
 This feature makes use of Security Audit logs, so auditing must be enabled in AD FS as well as the local policy on all AD FS servers.
 
 ### Configuration Instructions
-Extranet Smart Lockout uses the ADFS property **ExtranetLockoutEnabled**. This property was previously used to control “Extranet Soft Lockout” in Server 2012R2. If Extranet Soft Lockout was enabled, to view the current property configuration, run ` Get-AdfsProperties` .
+Extranet Smart Lockout uses the AD FS property **ExtranetLockoutEnabled**. This property was previously used to control “Extranet Soft Lockout” in Server 2012R2. If Extranet Soft Lockout was enabled, to view the current property configuration, run ` Get-AdfsProperties` .
 
 ### Configuration Recommendations
 When configuring the Extranet Smart Lockout, follow best practices for setting thresholds:
@@ -206,9 +208,9 @@ This behavior can be overridden by passing the -Server parameter.
 `Get-ADFSAccountActivity user@contoso.com`
 
   Properties:
-    - BadPwdCountFamiliar: Incremented when an authentication is successful from a known location.
+    - BadPwdCountFamiliar: Incremented when an authentication is unsuccessful from a known location.
     - BadPwdCountUnknown: Incremented when an authentication is unsuccessful from an unknown location
-    - LastFailedAuthFamiliar: If authentication was unsuccessful from a familiar location, LastFailedAuthUnknown is set to time of unsuccessful authentication
+    - LastFailedAuthFamiliar: If authentication was unsuccessful from a familiar location, LastFailedAuthFamiliar is set to time of unsuccessful authentication
     - LastFailedAuthUnknown: If authentication was unsuccessful from an unknown location, LastFailedAuthUnknown is set to time of unsuccessful authentication
     - FamiliarLockout: Boolean value which will be “True” if the “BadPwdCountFamiliar” > ExtranetLockoutThreshold
     - UnknownLockout: Boolean value which will be “True” if the “BadPwdCountUnknown” > ExtranetLockoutThreshold
@@ -236,7 +238,7 @@ The recommended way to monitor user account activity is through Connect Health. 
 >[!NOTE]
 > Troubleshoot Extranet Smart lockout with the [AD FS Help Extranet Lockout troubleshooting guide](https://adfshelp.microsoft.com/TroubleshootingGuides/Workflow/a73d5843-9939-4c03-80a1-adcbbf3ccec8)
 
-For Extranet Smart Lockout events to be written, ESL must be enabled in ‘log-only' or ‘enforce' mode and ADFS security auditing is enabled.
+For Extranet Smart Lockout events to be written, ESL must be enabled in ‘log-only' or ‘enforce' mode and AD FS security auditing is enabled.
 AD FS will write extranet lockout events to the security audit log:
 - When a user is locked out (reaches the lockout threshold for unsuccessful login attempts)
 - When AD FS receives a login attempt for a user who is already in lockout state
@@ -246,24 +248,24 @@ While in log only mode, you can check the security audit log for lockout events.
 
 |Event ID|Description|
 |-----|-----|
-|1203|This event is written for each bad password attempt. As soon as the badPwdCount reaches the value specified in ExtranetLockoutThreshold, the account will be locked out on ADFS for the duration specified in ExtranetObservationWindow.</br>Activity ID: %1</br>XML: %2|
+|1203|This event is written for each bad password attempt. As soon as the badPwdCount reaches the value specified in ExtranetLockoutThreshold, the account will be locked out on AD FS for the duration specified in ExtranetObservationWindow.</br>Activity ID: %1</br>XML: %2|
 |1201|This event is written each time a user is locked out. </br>Activity ID: %1</br>XML: %2|
-|557 (ADFS 2019)| An error occured while trying to communicate with the account store rest service on node %1. If this is a WID farm the primary node may be offline. If this is a SQL farm ADFS will automatically select a new node to host the User store master role.|
-|562 (ADFS 2019)|An error occurred when communcating with the account store endpoint on server %1.</br>Exception Message: %2|
-|563 (ADFS 2019)|An error occurred while calculating extranet lockout status. Due to the value of the %1 setting authentication will be allowed for this user and token issuance will continue. If this is a WID farm the primary node may be offline. If this is a SQL farm ADFS will automatically select a new node to host the User store master role.</br>Account store server name: %2</br>User Id: %3</br>Exception Message: %4|
+|557 (AD FS 2019)| An error occurred while trying to communicate with the account store rest service on node %1. If this is a WID farm the primary node may be offline. If this is a SQL farm AD FS will automatically select a new node to host the User store master role.|
+|562 (AD FS 2019)|An error occurred when communicating with the account store endpoint on server %1.</br>Exception Message: %2|
+|563 (AD FS 2019)|An error occurred while calculating extranet lockout status. Due to the value of the %1 setting authentication will be allowed for this user and token issuance will continue. If this is a WID farm the primary node may be offline. If this is a SQL farm AD FS will automatically select a new node to host the User store master role.</br>Account store server name: %2</br>User Id: %3</br>Exception Message: %4|
 |512|The account for the following user is locked out. A login attempt is being allowed due to the system configuration.</br>Activity ID: %1 </br>User: %2 </br>Client IP: %3 </br>Bad Password Count: %4  </br>Last Bad Password Attempt: %5|
 |515|The following user account was in a locked out state and the correct password was just provided. This account may be compromised.</br>Additional Data </br>Activity ID: %1 </br>User: %2 </br>Client IP: %3 |
 |516|The following user account has been locked out due to too many bad password attempts.</br>Activity ID: %1  </br>User: %2  </br>Client IP: %3  </br>Bad Password Count: %4  </br>Last Bad Password Attempt: %5|
 
 ## ESL Frequently Asked Questions
 
-**Will an ADFS farm using Extranet Smart Lockout in enforce mode ever see malicious user lockouts?** 
+**Will an AD FS farm using Extranet Smart Lockout in enforce mode ever see malicious user lockouts?** 
 
-A: If ADFS Smart Lockout is set to ‘enforce' mode then you will never see the legitimate user's account locked out by brute force or denial of service. The only way a malicious account lockout can prevent a user sign in is if the bad actor has the user password or can send requests from a known good (familiar) IP address for that user. 
+A: If AD FS Smart Lockout is set to ‘enforce' mode then you will never see the legitimate user's account locked out by brute force or denial of service. The only way a malicious account lockout can prevent a user sign in is if the bad actor has the user password or can send requests from a known good (familiar) IP address for that user.
 
 **What happens ESL is enabled and the bad actor has a user password?** 
 
-A: The typical goal of the brute force attack scenario is to guess a password and successfully sign in.  If a user is phished or if a password is guessed then the ESL feature will not block the access since the sign in will meet “successful” criteria of correct password plus new IP. The bad actors IP would then appear as a “familiar” one. The best mitigation in this scenario is to clear the user's activity in ADFS and to require Multi Factor Authentication for the users. We strongly recommend installing AAD Password Protection that ensures guessable passwords do not get into the system.
+A: The typical goal of the brute force attack scenario is to guess a password and successfully sign in.  If a user is phished or if a password is guessed then the ESL feature will not block the access since the sign in will meet “successful” criteria of correct password plus new IP. The bad actors IP would then appear as a “familiar” one. The best mitigation in this scenario is to clear the user's activity in AD FS and to require Multi Factor Authentication for the users. We strongly recommend installing AAD Password Protection that ensures guessable passwords do not get into the system.
 
 **If my user has never signed in successfully from an IP and then tries with wrong password a few times will they be able to login once they finally type their password correctly?** 
 
@@ -271,7 +273,7 @@ A: If a user submits multiple bad passwords (i.e. legitimately mis-typing) and o
 
 **Does ESL work on intranet too?**
 
-A: If the clients connect directly to the ADFS servers and not via Web Application Proxy servers then the ESL behavior will not apply. 
+A: If the clients connect directly to the AD FS servers and not via Web Application Proxy servers then the ESL behavior will not apply. 
 
 **I am seeing Microsoft IP addresses in the Client IP field. Does ESL block EXO proxied brute force attacks?**  
 
@@ -286,6 +288,6 @@ A: With ESL enabled, AD FS tracks the account activity and known locations for u
 ## Additional references
 [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
-[Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties?view=win10-ps)
+[Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties)
 
 [AD FS Operations](../ad-fs-operations.md)

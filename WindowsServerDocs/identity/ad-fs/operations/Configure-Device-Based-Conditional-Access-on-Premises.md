@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Configure On-Premises Conditional Access using registered devices"
 ms.assetid: 35de490f-c506-4b73-840c-b239b72decc2
 title: Configure Device-based Conditional Access on-Premises
 author: billmath
@@ -44,7 +45,7 @@ In order to use on-premises conditional access with registered devices, you must
 To verify your schema level, do the following:
 
 1.  You can use ADSIEdit or LDP and connect to the Schema Naming Context.
-2.  Using ADSIEdit, right-click on "CN=Schema,CN=Configuration,DC=\<domain>,DC=\<com> and select properties.  Relpace domain and the com portions with your forest information.
+2.  Using ADSIEdit, right-click on "CN=Schema,CN=Configuration,DC=\<domain>,DC=\<com> and select properties.  Replace domain and the com portions with your forest information.
 3.  Under the Attribute Editor locate the objectVersion attribute and it will tell you, your version.
 
 ![ADSI Edit](media/Configure-Device-Based-Conditional-Access-on-Premises/adsiedit.png)
@@ -77,13 +78,13 @@ To do this, follow the steps under [Setting up Azure AD Join in your organizatio
 ### Create AD objects for AD FS Device Authentication
 If your AD FS farm is not already configured for Device Authentication (you can see this in the AD FS Management console under Service -> Device Registration), use the following steps to create the correct AD DS objects and configuration.
 
-![Device Registration](media/Configure-Device-Based-Conditional-Access-on-Premises/device1.png)
+![Screenshot that shows the Device Registration Overview screen.](media/Configure-Device-Based-Conditional-Access-on-Premises/device1.png)
 
 >Note: The below commands require Active Directory administration tools, so if your federation server is not also a domain controller, first install the tools using step 1 below.  Otherwise you can skip step 1.
 
 1.  Run the **Add Roles & Features** wizard and select feature **Remote Server Administration Tools** -> **Role Administration Tools** -> **AD DS and AD LDS Tools** -> Choose both the **Active Directory module for Windows PowerShell** and the **AD DS Tools**.
 
-![Device Registration](media/Configure-Device-Based-Conditional-Access-on-Premises/device2.png)
+![Screenshot that highlights the Active Directory module for Windows PowerShell and the AD DS Tools options.](media/Configure-Device-Based-Conditional-Access-on-Premises/device2.png)
 
 2. On your AD FS primary server, ensure you are logged in as AD DS user with Enterprise Admin (EA ) privileges and open an elevated powershell prompt.  Then, execute the following PowerShell commands:
 
@@ -93,7 +94,7 @@ If your AD FS farm is not already configured for Device Authentication (you can 
 
 >Note: If your AD FS service is configured to use a GMSA account, enter the account name in the format "domain\accountname$"
 
-![Device Registration](media/Configure-Device-Based-Conditional-Access-on-Premises/device3.png)
+![Screenshot that shows how to use the listed PowerShell commands.](media/Configure-Device-Based-Conditional-Access-on-Premises/device3.png)
 
 The above PSH creates the following objects:
 
@@ -102,11 +103,11 @@ The above PSH creates the following objects:
 - Device Registration Service container and object under Configuration --> Services --> Device Registration Configuration
 - Device Registration Service DKM container and object under Configuration --> Services --> Device Registration Configuration
 
-![Device Registration](media/Configure-Device-Based-Conditional-Access-on-Premises/device4.png)
+![Screenshot that shows the progress of the objects being created.](media/Configure-Device-Based-Conditional-Access-on-Premises/device4.png)
 
 4. Once this is done, you will see a successful completion message.
 
-![Device Registration](media/Configure-Device-Based-Conditional-Access-on-Premises/device5.png)
+![Screenshot that shows the successful completion message.](media/Configure-Device-Based-Conditional-Access-on-Premises/device5.png)
 
 ###        Create Service Connection Point (SCP) in AD
 If you plan to use Windows 10 domain join (with automatic registration to Azure AD) as described here, execute the following commands to create a service connection point in AD DS
@@ -116,13 +117,13 @@ If you plan to use Windows 10 domain join (with automatic registration to Azure 
 
 >Note: if necessary, copy the AdSyncPrep.psm1 file from your Azure AD Connect server.  This file is located in Program Files\Microsoft Azure Active Directory Connect\AdPrep
 
-![Device Registration](media/Configure-Device-Based-Conditional-Access-on-Premises/device6.png)
+![Screenshot that shows the path to the AdSyncPrep file.](media/Configure-Device-Based-Conditional-Access-on-Premises/device6.png)
 
 2. Provide your Azure AD global administrator credentials
 
     `PS C:>$aadAdminCred = Get-Credential`
 
-![Device Registration](media/Configure-Device-Based-Conditional-Access-on-Premises/device7.png)
+![Screenshot that shows where to provide the Azure AD global administrator credentials.](media/Configure-Device-Based-Conditional-Access-on-Premises/device7.png)
 
 3. Run the following PowerShell command
 

@@ -1,6 +1,6 @@
 ---
 title: "Customize Disk Partitions"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to customize your disk partition configuration by pre-creating the image using an unattend.xml file.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 5a1ed009-81f0-4884-b6b1-5037fe873b13

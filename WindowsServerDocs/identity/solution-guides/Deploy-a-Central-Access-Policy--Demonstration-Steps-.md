@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Deploy a Central Access Policy (Demonstration Steps)"
 ms.assetid: 8738c03d-6ae8-49a7-8b0c-bef7eab81057
 title: Deploy a Central Access Policy (Demonstration Steps)
 author: billmath
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Deploy a Central Access Policy (Demonstration Steps)
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 In this scenario, the finance department security operations is working with central information security to specify the need for a central access policy so that they can protect archived finance information stored on file servers. The archived finance information from each country can be accessed as read-only by finance employees from the same country. A central finance admin group can access the finance information from all countries.
 
@@ -31,12 +32,12 @@ This section provides the high-level series of steps that aid in the planning ph
 
 |Step # | Step | Example |
 |--|--|--|
-| 1.1 | Business determines that a central access policy is needed | To protect finance information that is stored on file servers, the finance department security operations is working with central information security to specify the need for a central access policy. |  |
-| 1.2 | Express the access policy | Finance documents should only be read by members of the Finance department. Members of the Finance department should only access documents in their own country. Only Finance Administrators should have write-access. An exception will be allowed for members of the FinanceException group. This group will have Read access. |  |
-| 1.3 | Express the access policy in  Windows Server 2012  constructs | Targeting:<p>-   Resource.Department Contains Finance<p>Access rules:<p>-   Allow read User.Country=Resource.Country AND User.department = Resource.Department<br />-   Allow Full control User.MemberOf(FinanceAdmin)<p>Exception:<p>Allow read memberOf(FinanceException) |  |
-| 1.4 | Determine the file properties required for the policy | Tag files with:<p>-   Department<br />-   Country |  |
-| 1.5 | Determine the claim types and groups required for the policy | Claim types:<p>-   Country<br />-   Department<p>User groups:<p>-   FinanceAdmin<br />-   FinanceException |  |
-| 1.6 | Determine the servers on which to apply this policy | Apply the policy on all finance file servers. |  |
+| 1.1 | Business determines that a central access policy is needed | To protect finance information that is stored on file servers, the finance department security operations is working with central information security to specify the need for a central access policy.|
+| 1.2 | Express the access policy | Finance documents should only be read by members of the Finance department. Members of the Finance department should only access documents in their own country. Only Finance Administrators should have write-access. An exception will be allowed for members of the FinanceException group. This group will have Read access. |
+| 1.3 | Express the access policy in  Windows Server 2012  constructs | Targeting:<p>-   Resource.Department Contains Finance<p>Access rules:<p>-   Allow read User.Country=Resource.Country AND User.department = Resource.Department<br />-   Allow Full control User.MemberOf(FinanceAdmin)<p>Exception:<p>Allow read memberOf(FinanceException) |
+| 1.4 | Determine the file properties required for the policy | Tag files with:<p>-   Department<br />-   Country |
+| 1.5 | Determine the claim types and groups required for the policy | Claim types:<p>-   Country<br />-   Department<p>User groups:<p>-   FinanceAdmin<br />-   FinanceException |
+| 1.6 | Determine the servers on which to apply this policy | Apply the policy on all finance file servers. |
 
 ## <a name="BKMK_1.3"></a>Implement: Configure the components and policy
 This section presents an example that deploys a central access policy for finance documents.
@@ -194,7 +195,7 @@ New-ADCentralAccessRule "Finance Documents Rule" -CurrentAcl $currentAcl -Resour
 ```
 
 > [!IMPORTANT]
-> In the above cmdlet example, the security identifiers (SIDs) for the group FinanceAdmin and users is determined at creation time and will be different in your example. For example, the provided SID value (S-1-5-21-1787166779-1215870801-2157059049-1113) for the FinanceAdmins needs to be replaced with the actual SID for the FinanceAdmin group that you would need to create in your deployment. You can use Windows PowerShell to look up the SID value of this group, assign that value to a variable, and then use the variable here. For more information, see [Windows PowerShell Tip: Working with SIDs](https://go.microsoft.com/fwlink/?LinkId=253545).
+> In the above cmdlet example, the security identifiers (SIDs) for the group FinanceAdmin and users is determined at creation time and will be different in your example. For example, the provided SID value (S-1-5-21-1787166779-1215870801-2157059049-1113) for the FinanceAdmins needs to be replaced with the actual SID for the FinanceAdmin group that you would need to create in your deployment. You can use Windows PowerShell to look up the SID value of this group, assign that value to a variable, and then use the variable here. For more information, see [Windows PowerShell Tip: Working with SIDs](/previous-versions/windows/it-pro/windows-powershell-1.0/ff730940(v=technet.10)).
 
 You should now have a central access rule that allows people to access documents from the same country and the same department. The rule allows the FinanceAdmin group to edit the documents, and it allows the FinanceException group to read the documents. This rule targets only documents classified as Finance.
 

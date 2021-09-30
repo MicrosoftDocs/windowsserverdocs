@@ -3,8 +3,8 @@ title: bitsadmin getnotifycmdline
 description: Reference article for the bitsadmin getnotifycmdline command, which retrieves the command-line command that is run when the job finishes transferring data.
 ms.topic: reference
 ms.assetid: 90fa33e6-aca5-4a23-82bd-19a9f13f8416
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

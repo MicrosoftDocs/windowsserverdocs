@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Windows Server 2003 Recovery"
 title: AD Forest Recovery - Windows Server 2003 Recovery
 author: iainfoulds
 ms.author: daveba
@@ -9,7 +10,7 @@ ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ---
 # AD Forest Recovery - Windows Server 2003 Recovery
 
->Applies To: Windows Server 2003
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2003
 
 This topic includes forest recovery procedures for domain controllers (DCs) that run Windows Server 2003. The general process for forest recovery is no different with Windows Server 2003 DCs, but specific procedures can differ because of different tools. For example, Ntdsutil.exe can be used to backup and restore DCs that run Windows Server 2003 DCs, whereas Windows Server Backup or Wbadmin.exe is used for DCs that run Windows Server 2008 or later.
 
@@ -90,13 +91,13 @@ If the DC that you restored from backup is running Windows Server 2003, you can 
    After the installation, complete the following steps to configure the DNS server.
 
 5. Click **Start**, point to **All Programs**, point to **Administrative Tools**, and then click **DNS**.
-6. Create DNS zones for the same DNS domain names that were hosted on the DNS servers before the critical malfunction. For more information, see Add a Forward Lookup Zone ([https://go.microsoft.com/fwlink/?LinkId=74574](https://go.microsoft.com/fwlink/?LinkId=74574)).
+6. Create DNS zones for the same DNS domain names that were hosted on the DNS servers before the critical malfunction. For more information, see Add a Forward Lookup Zone ([https://go.microsoft.com/fwlink/?LinkId=74574](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771566(v=ws.11))).
 7. Configure the DNS data as it existed before the critical malfunction. For example:
 
-   - Configure DNS zones to be stored in AD DS. For more information, see Change the Zone Type ([https://go.microsoft.com/fwlink/?LinkId=74579](https://go.microsoft.com/fwlink/?LinkId=74579)).
-   - Configure the DNS zone that is authoritative for domain controller locator (DC Locator) resource records to allow secure dynamic update. For more information, see Allow Only Secure Dynamic Updates ([https://go.microsoft.com/fwlink/?LinkId=74580](https://go.microsoft.com/fwlink/?LinkId=74580)).
+   - Configure DNS zones to be stored in AD DS. For more information, see Change the Zone Type ([https://go.microsoft.com/fwlink/?LinkId=74579](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771150(v=ws.11))).
+   - Configure the DNS zone that is authoritative for domain controller locator (DC Locator) resource records to allow secure dynamic update. For more information, see Allow Only Secure Dynamic Updates ([https://go.microsoft.com/fwlink/?LinkId=74580](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753751(v=ws.11))).
 
-8. Ensure that the parent DNS zone contains delegation resource records (name server (NS) and glue host (A) resource records) for the child zone that is hosted on this DNS server. For more information, see Create a Zone Delegation ([https://go.microsoft.com/fwlink/?LinkId=74562](https://go.microsoft.com/fwlink/?LinkId=74562)).
+8. Ensure that the parent DNS zone contains delegation resource records (name server (NS) and glue host (A) resource records) for the child zone that is hosted on this DNS server. For more information, see Create a Zone Delegation ([https://go.microsoft.com/fwlink/?LinkId=74562](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753500(v=ws.11))).
 9. After you configure DNS, at the command prompt, type the following command, and then press ENTER:
 
    **net stop netlogon**
@@ -116,6 +117,6 @@ If the DC that you restored from backup is running Windows Server 2003, you can 
 - [AD Forest Recovery - Determine how to recover](AD-Forest-Recovery-Determine-how-to-Recover.md)
 - [AD Forest Recovery - Perform initial recovery](AD-Forest-Recovery-Perform-initial-recovery.md)
 - [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
-- [AD Forest Recovery - Frequently Asked Questions](AD-Forest-Recovery-FAQ.md)
+- [AD Forest Recovery - Frequently Asked Questions](ad-forest-recovery-faq.yml)
 - [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
 - [AD Forest Recovery - Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Windows-Server-2003.md)

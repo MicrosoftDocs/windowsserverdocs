@@ -9,7 +9,7 @@ ms.author: jgerend
 ---
 # Set the Ordering Method for Targets in Referrals
 
-> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 A referral is an ordered list of targets that a client computer receives from a domain controller or namespace server when the user accesses a namespace root or folder with targets. After the client receives the referral, the client attempts to access the first target in the list. If the target is not available, the client attempts to access the next target.
 Targets on the client's site are always listed first in a referral. Targets outside of the client's site are listed according to the ordering method.
@@ -27,7 +27,7 @@ Use the following procedure to set the ordering method on the namespace root:
 3.  On the **Referrals** tab, select an ordering method.
 
 > [!NOTE]
-> To use Windows PowerShell to set the ordering method for targets in namespace root referrals, use the [Set-DfsnRoot](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) cmdlet with one of the following parameters:
+> To use Windows PowerShell to set the ordering method for targets in namespace root referrals, use the [Set-DfsnRoot](/powershell/module/dfsr/update-dfsrconfigurationfromad) cmdlet with one of the following parameters:
 >    -   **EnableSiteCosting** specifies the **Lowest cost ordering** method
 >    -   **EnableInsiteReferrals** specifies the **Exclude targets outside of the client's site** ordering method
 >    -   Omitting either parameter specifies the **Random order** referral ordering method.
@@ -45,7 +45,7 @@ Folders with targets inherit the ordering method from the namespace root. You ca
 3.  On the **Referrals** tab, select the **Exclude targets outside of the client's site** check box.
 
 > [!NOTE]
-> To use Windows PowerShell to exclude folder targets outside of the client's site, use the [Set-DfsnFolder –EnableInsiteReferrals](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) cmdlet.
+> To use Windows PowerShell to exclude folder targets outside of the client's site, use the [Set-DfsnFolder –EnableInsiteReferrals](/powershell/module/dfsr/update-dfsrconfigurationfromad) cmdlet.
 
 ## Target referral ordering methods
 

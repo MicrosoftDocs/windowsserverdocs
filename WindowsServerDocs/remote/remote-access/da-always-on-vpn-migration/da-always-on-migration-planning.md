@@ -4,14 +4,14 @@ description: Migrating from DirectAccess to Always On VPN requires proper planni
 manager: dougkim
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 ms.date: 05/29/2018
 ---
 
 # Plan the DirectAccess to Always On VPN migration
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 &#171; [**Previous:** Overview of the DirectAccess to Always On VPN migration](da-always-on-migration-overview.md)<br>
 &#187; [**Next:** Migrate to Always On VPN and decommission DirectAccess](da-always-on-migration-deploy.md)

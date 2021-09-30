@@ -1,15 +1,16 @@
 ---
+description: "Learn more about: Nested resiliency for Storage Spaces Direct"
 title: Nested resiliency for Storage Spaces Direct
 ms.author: jgerend
 manager: dansimpspaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 03/15/2019
+ms.date: 07/22/2021
 ---
 
 # Nested resiliency for Storage Spaces Direct
 
-> Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 Nested resiliency is a new capability of [Storage Spaces Direct](storage-spaces-direct-overview.md) in Windows Server 2019 that enables a two-server cluster to withstand multiple hardware failures at the same time without loss of storage availability, so users, apps, and virtual machines continue to run without disruption. This topic explains how it works, provides step-by-step instructions to get started, and answers the most frequently asked questions.
 
@@ -73,7 +74,7 @@ Capacity efficiency is the ratio of usable space to [volume footprint](plan-volu
 
 Notice that the capacity efficiency of classic two-way mirroring (about 50%) and nested mirror-accelerated parity (up to 40%) are not very different. Depending on your requirements, the slightly lower capacity efficiency may be well worth the significant increase in storage availability. You choose resiliency per-volume, so you can mix nested resiliency volumes and classic two-way mirror volumes within the same cluster.
 
-![Tradeoff](media/nested-resiliency/tradeoff.png)
+![Diagram showing the tradeoff between a two-way mirror and nested mirror-accelerated parity.](media/nested-resiliency/tradeoff.png)
 
 ## Usage in PowerShell
 
@@ -81,19 +82,24 @@ You can use familiar storage cmdlets in PowerShell to create volumes with nested
 
 ### Step 1: Create storage tier templates
 
-First, create new storage tier templates using the `New-StorageTier` cmdlet. You only need to do this once, and then every new volume you create can reference these template. Specify the `-MediaType` of your capacity drives and, optionally, the `-FriendlyName` of your choice. Do not modify the other parameters.
+Windows Server 2019 requires you to create new storage tier templates using the `New-StorageTier` cmdlet before creating volumes. You only need to do this once, and then every new volume you create can reference these templates. 
+
+> [!NOTE]
+> If you're running Windows Server 2022, Azure Stack HCI 21H2, or Azure Stack HCI 20H2, you can skip this step.
+
+Specify the `-MediaType` of your capacity drives and, optionally, the `-FriendlyName` of your choice. Do not modify the other parameters.
 
 If your capacity drives are hard disk drives (HDD), launch PowerShell as Administrator and run:
 
 ```PowerShell
 # For mirror
-New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedMirror -ResiliencySettingName Mirror -MediaType HDD -NumberOfDataCopies 4
+New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedMirrorOnHDD -ResiliencySettingName Mirror -MediaType HDD -NumberOfDataCopies 4
 
 # For parity
-New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParity -ResiliencySettingName Parity -MediaType HDD -NumberOfDataCopies 2 -PhysicalDiskRedundancy 1 -NumberOfGroups 1 -FaultDomainAwareness StorageScaleUnit -ColumnIsolation PhysicalDisk
+New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParityOnHDD -ResiliencySettingName Parity -MediaType HDD -NumberOfDataCopies 2 -PhysicalDiskRedundancy 1 -NumberOfGroups 1 -FaultDomainAwareness StorageScaleUnit -ColumnIsolation PhysicalDisk
 ```
 
-If your capacity drives are solid-state drives (SSD), set the `-MediaType` to `SSD` instead. Do not modify the other parameters.
+If your capacity drives are solid-state drives (SSD), set the `-MediaType` to `SSD` instead and change the `-FriendlyName` to `*OnSSD`. Do not modify the other parameters.
 
 > [!TIP]
 > Verify the tiers created successfully with `Get-StorageTier`.
@@ -107,16 +113,20 @@ Then, create new volumes using the `New-Volume` cmdlet.
 To use nested two-way mirror, reference the `NestedMirror` tier template and specify the size. For example:
 
 ```PowerShell
-New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume01 -StorageTierFriendlyNames NestedMirror -StorageTierSizes 500GB
+New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume01 -StorageTierFriendlyNames NestedMirrorOnHDD -StorageTierSizes 500GB
 ```
+
+If your capacity drives are solid-state drives (SSD), change `-StorageTierFriendlyNames` to `NestedMirrorOnSSD`.
 
 #### Nested mirror-accelerated parity
 
 To use nested mirror-accelerated parity, reference both the `NestedMirror` and `NestedParity` tier templates and specify two sizes, one for each part of the volume (mirror first, parity second). For example, to create one 500 GB volume that's 20% nested two-way mirror and 80% nested parity, run:
 
 ```PowerShell
-New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume02 -StorageTierFriendlyNames NestedMirror, NestedParity -StorageTierSizes 100GB, 400GB
+New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume02 -StorageTierFriendlyNames NestedMirrorOnHDD, NestedParityOnHDD -StorageTierSizes 100GB, 400GB
 ```
+
+If your capacity drives are solid-state drives (SSD), change `-StorageTierFriendlyNames` to `NestedMirrorOnSSD, NestedParityOnSSD`.
 
 ### Step 3: Continue in Windows Admin Center
 

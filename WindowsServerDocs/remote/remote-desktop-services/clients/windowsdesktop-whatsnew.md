@@ -3,9 +3,9 @@ title: What's new in the Windows Desktop client
 description: Learn about recent changes to the Remote Desktop client for Windows Desktop
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 12/01/2020
+ms.date: 09/28/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -18,14 +18,124 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.1524        |1.2.945                   |
-|Insider    |1.2.1524        |1.2.945                   |
+|Public     |1.2.2459        |1.2.1672                  |
+|Insider    |1.2.2459        |1.2.1672                  |
 
-## Updates for version 1.2.1524
+## Updates for version 1.2.2459
 
-*Date published: 12/01/2020*
+*Date published: 09/28/2021*
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Fixed an issue that caused the client to prompt for credentials a second time after closing a credential prompt window while subscribing.
+- Updates to Teams for Azure Virtual Desktop, including the following:
+  - Fixed an issue in that made the video screen turn black and crash during calls in the Chrome browser.
+  - Reduced E2E latency and some performance issues by optimizing the GPU render path in the Windows Desktop client. To enable th new render path, add the registry key **HKEY_CURRENT_USER \SOFTWARE\Microsoft\Terminal Server Client\IsSwapChainRenderingEnabled** and set its value to **00000001**. To disable the new render path and revert to the original path, either set the key's value to **00000000** or delete the key.
+
+## Updates for version 1.2.2322
+
+*Date published: 08/24/2021*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWJDR5), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWJPB8), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWJPB6)
+
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Added updates to Teams on Azure Virtual Desktop, including:
+  - Fixed an issue that caused the screen to turn black when Direct X wasn't available for hardware decoding.
+  - Fixed a software decoding and camera preview issue that happened when falling back to software decode.
+- [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection) is now in public preview.
+
+## Updates for version 1.2.2223
+
+*Date published: 08/10/2021*
+
+- Fixed the security vulnerability known as [CVE-2021-34535](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34535).
+
+## Updates for version 1.2.2222
+
+*Date published: 07/27/2021*
+
+- The client also updates in the background when the auto-update feature is enabled, no remote connection is active, and MSRDCW.exe isn't running.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Fixed an ICE inversion parameter issue that prevented some Teams calls from connecting.
+
+## Updates for version 1.2.2130
+
+*Date published: 06/22/2021*
+
+- Windows Virtual Desktop has been renamed to Azure Virtual Desktop. Learn more about the name change at [our announcement on our blog](https://azure.microsoft.com/blog/azure-virtual-desktop-the-desktop-and-app-virtualization-platform-for-the-hybrid-workplace/).
+- Fixed an issue where the client would ask for authentication after the user ended their session and closed the window.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Fixed an issue with Logitech C270 cameras where Teams only showed a black screen in the camera settings and while sharing images during calls.
+
+## Updates for version 1.2.2061
+
+*Date published: 05/25/2021*
+
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams on Azure Virtual Desktop, including the following:
+  - Resolved a black screen video issue that also fixed a mismatch in video resolutions with Teams Server.
+  - Teams on Azure Virtual Desktop now changes resolution and bitrate in accordance with what Teams Server expects.
+
+## Updates for version 1.2.1954
+
+*Date published: 05/13/2021*
+
+- Fixed the vulnerability known as [CVE-2021-31186](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31186).
+
+## Updates for version 1.2.1953
+
+*Date published: 05/06/2021*
+
+- Fixed an issue that caused the client to crash when users selected "Disconnect all sessions" in the system tray.
+- Fixed an issue where the client wouldn't switch to full screen on a single monitor with a docking station.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams on Azure Virtual Desktop, including the following:
+  - Added hardware acceleration for video processing outgoing video streams for Windows 10-based clients.
+  - When joining a meeting with both a front-facing and rear-facing or external camera, the front-facing camera will be selected by default.
+  - Fixed an issue that made Teams on Azure Virtual Desktop crash while loading on x86-based machines.
+  - Fixed an issue that caused striations during screen sharing.
+  - Fixed an issue that prevented some people in meetings from seeing incoming video or screen sharing.
+
+## Updates for version 1.2.1844
+
+*Date published: 03/23/2021*
+
+- Updated background installation functionality to perform silently for the client auto-update feature.
+- Fixed an issue where the client forwarded multiple attempts to launch a desktop to the same session. Depending on your group policy configuration, the session host can now allow the creation of multiple sessions for the same user on the same session host or disconnect the previous connection by default. This behavior wasn't consistent before version 1.2.1755.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates for Teams on Azure Virtual Desktop, including the following:
+  - We've offloaded video processing (XVP) to reduce CPU utilization by 5-10% (depending on CPU generation). Combined with the hardware decode feature from February's update, we've now reduced the total CPU utilization by 10-20% (depending on CPU generation).
+  - We've added XVP and hardware decode, which allows older machines to display more incoming video streams smoothly in 2x2 mode.
+  - We've also updated the WebRTC stack from version M74 to M88. M88 has better reliability, AV sync performance, and fewer transient issues.
+  - We've replaced our software H264 encoder with OpenH264. OpenH264 is an open-source codec that increases video quality of the outgoing camera stream.
+  - The client now has simultaneous shipping with 2x2 mode. 2x2 mode shows up to four incoming video streams simultaneously.
+
+## Updates for version 1.2.1755
+
+*Date published: 02/23/2021*
+
+- Added the Experience Monitor access point to the system tray icon.
+- Fixed an issue where entering an email address into the "Subscribe to a Workplace" tab caused the application to stop responding.
+- Fixed an issue where the client sometimes didn't send EventHub and Diagnostics events.
+- Updates to Teams on Azure Virtual Desktop, including:
+  - Improved audio and video sync performance and added hardware accelerated decode that decreases CPU utilization on the client.
+  - Addressed the most prevalent causes of black screen issues when a user joins a call or meeting with their video turned on, when a user performs screen sharing, and when a user toggles their camera on and off.
+  - Improved quality of active speaker switching in single video view by reducing the time it takes for the video to appear and reducing intermittent black screens when switching video streams to another user.
+  - Fixed an issue where hardware devices with special characters would sometimes not be available in Teams.
+
+## Updates for version 1.2.1672
+
+*Date published: 01/26/2021*
+
+- Added support for the screen capture protection feature for Windows 10 endpoints. To learn more, see [Session host security best practices](/azure/virtual-desktop/security-guide#session-host-security-best-practices).
+- Added support for proxies that require authentication for feed subscription.
+- The client now shows a notification with an option to retry if an update didn't successfully download.
+- Addressed some accessibility issues with keyboard focus and high-contrast mode.
+
+## Updates for version 1.2.1525
+
+*Date published: 12/01/2020*
 
 - Added List view for remote resources so that longer app names are readable.
 - Added a notification icon that appears when an update for the client is available.
@@ -33,8 +143,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.1446
 
 *Date published: 10/27/2020*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Hq7C), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4HvgF), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Ho64)
 
 - Added the auto-update feature, which allows the client to install the latest updates automatically.
 - The client now distinguishes between different feeds in the Connection Center.
@@ -77,7 +185,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 *Date published: 06/23/2020*
 
-- Updated the automatic discovery logic for the **Subscribe** option to support the Azure Resource Manager-integrated version of Windows Virtual Desktop. Customers with only Windows Virtual Desktop resources should no longer need to provide consent for Windows Virtual Desktop (classic).
+- Updated the automatic discovery logic for the **Subscribe** option to support the Azure Resource Manager-integrated version of Azure Virtual Desktop. Customers with only Azure Virtual Desktop resources should no longer need to provide consent for Azure Virtual Desktop (classic).
 - Improved support for high-DPI devices with scale factor up to 400%.
 - Fixed an issue where the disconnect dialog didn't appear.
 - Fixed an issue where command bar tooltips would remain visible longer than expected.
@@ -89,7 +197,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 *Date published: 05/27/2020*
 
 - When subscribing, you can now choose your account instead of typing your email address.
-- Added a new **Subscribe with URL** option that allows you to specify the URL of the Workspace you are subscribing to or leverage [email discovery](../rds-email-discovery.md) when available in cases where we can't automatically find your resources. This is similar to the subscription process in the other Remote Desktop clients. This can be used to subscribe directly to Windows Virtual Desktop workspaces.
+- Added a new **Subscribe with URL** option that allows you to specify the URL of the Workspace you are subscribing to or leverage [email discovery](../rds-email-discovery.md) when available in cases where we can't automatically find your resources. This is similar to the subscription process in the other Remote Desktop clients. This can be used to subscribe directly to Azure Virtual Desktop workspaces.
 - Added support to subscribe to a Workspace using a new [URI scheme](remote-desktop-uri.md) that can be sent in an email to users or added to a support website.
 - Added a new **Connection information** dialog that provides client, network, and server details for desktop and app sessions. You can access the dialog from the connection bar in full screen mode or from the System menu when windowed.
 - Desktop sessions launched in windowed mode now always maximize instead of going full screen when maximizing the window. Use the **Full screen** option from the system menu to enter full screen.
@@ -139,7 +247,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 *Date published: 02/25/2020*
 
-- Connections to Windows Virtual Desktop are now blocked if the RDP file is missing the signature or one of the signscope properties has been modified.
+- Connections to Azure Virtual Desktop are now blocked if the RDP file is missing the signature or one of the signscope properties has been modified.
 - When a Workspace is empty or has been removed, the Connection Center no longer appears to be empty.
 - Added the activity ID and error code on disconnect messages to improve troubleshooting. You can copy the dialog message with **Ctrl+C**.
 - Fixed an issue that caused the desktop connection settings to not detect displays.

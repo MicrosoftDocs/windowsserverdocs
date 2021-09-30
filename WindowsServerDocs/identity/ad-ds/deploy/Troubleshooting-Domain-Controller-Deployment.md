@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Troubleshooting Domain Controller Deployment"
 ms.assetid: 5ab76733-804d-4f30-bee6-cb672ad5075a
 title: Troubleshooting Domain Controller Deployment
 author: iainfoulds
@@ -10,13 +11,13 @@ ms.topic: article
 
 # Troubleshooting Domain Controller Deployment
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic covers detailed methodology on troubleshooting domain controller configuration and deployment.
 
 ## Introduction to Troubleshooting
 
-![Troubleshooting](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)
+![Diagram that shows the workflow for troubleshooting domain controller deployment.](media/Troubleshooting-Domain-Controller-Deployment/adds_deploy_troubleshooting.png)
 
 ## Built-in logs for troubleshooting
 

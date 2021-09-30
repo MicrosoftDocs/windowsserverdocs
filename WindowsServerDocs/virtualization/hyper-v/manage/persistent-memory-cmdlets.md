@@ -5,17 +5,18 @@ ms.topic: article
 ms.assetid: b5715c02-a90f-4de9-a71e-0fc08039ba1d
 ms.author: benarm
 author: BenjaminArmstrong
+ms.date: 12/08/2020
 ---
 
 # Cmdlets for configuring persistent memory devices for Hyper-V VMs
 
->Applies To: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 This article provides system administrators and IT Pros with information about configuring Hyper-V VMs with persistent memory (aka storage class memory or NVDIMM). JDEC-compliant NVDIMM-N persistent memory devices are supported in Windows Server 2016 and Windows 10 and provide byte-level access to very low latency non-volatile devices. VM persistent memory devices are supported in Windows Server 2019.
 
 ## Create a persistent memory device for a VM
 
-Use the **[New-VHD](/powershell/module/hyper-v/new-vhd?view=win10-ps)** cmdlet to create a persistent memory device for a VM. The device must be created on an existing NTFS DAX volume.  The new filename extension (.vhdpmem) is used to specify that the device is a persistent memory device. Only the fixed VHD file format is supported.
+Use the **[New-VHD](/powershell/module/hyper-v/new-vhd)** cmdlet to create a persistent memory device for a VM. The device must be created on an existing NTFS DAX volume.  The new filename extension (.vhdpmem) is used to specify that the device is a persistent memory device. Only the fixed VHD file format is supported.
 
 **Example:** `New-VHD d:\VMPMEMDevice1.vhdpmem -Fixed -SizeBytes 4GB`
 
@@ -33,7 +34,7 @@ Add-VMPmemController ProductionVM1x
 
 ## Attach a persistent memory device to a VM
 
-Use **[Add-VMHardDiskDrive](/powershell/module/hyper-v/add-vmharddiskdrive?view=win10-ps)** to attach a persistent memory device to a VM
+Use **[Add-VMHardDiskDrive](/powershell/module/hyper-v/add-vmharddiskdrive)** to attach a persistent memory device to a VM
 
 **Example:** `Add-VMHardDiskDrive ProductionVM1 PMEM -ControllerLocation 1 -Path D:\VPMEMDevice1.vhdpmem`
 

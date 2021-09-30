@@ -1,6 +1,7 @@
 ---
 ms.assetid: 777aab65-c9c7-4dc9-a807-9ab73fac87b8
 title: Configure AD FS Extranet Soft Lockout Protection
+description: "Learn more about: Configure AD FS Extranet Lockout Protection"
 author: billmath
 ms.author: billmath
 manager: femila
@@ -60,7 +61,7 @@ Let's take a look at AD lockout policy first. There are three settings regarding
 Let's take a look at two examples and see how **badPwdCount** changes over time based on different settings and states. Let's assume in both examples **Account Lockout Threshold** = 4 and **ExtranetLockoutThreshold** = 2. The **red** arrow represents bad password attempt, the **green** arrow represents a good password attempt. In example #1, **ExtranetObservationWindow** &gt; **Reset Account Lockout Counter After**. In example #2, **ExtranetObservationWindow** &lt; **Reset Account Lockout Counter After**.
 
 ### Example 1
-![Example1](media/Configure-AD-FS-Extranet-Lockout-Protection/one.png)
+![Diagram that shows how badPwdCount changes over time based on different settings and states.](media/Configure-AD-FS-Extranet-Lockout-Protection/one.png)
 
 ### Example 2
 ![Example1](media/Configure-AD-FS-Extranet-Lockout-Protection/two.png)
@@ -86,8 +87,6 @@ There is a known issue where the AD user account cannot authenticate with AD FS 
 ## Additional references
 - [Best practices for securing Active Directory Federation Services](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 - [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](delegate-ad-fs-pshell-access.md)
-- [Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties?view=win10-ps)
+- [Set-AdfsProperties](/powershell/module/adfs/set-adfsproperties)
 
 [AD FS Operations](../ad-fs-operations.md)
-
-

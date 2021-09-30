@@ -1,46 +1,48 @@
 ---
-title: Pktmon command syntax and formatting
-description: Use this page to understand pktmon syntax, commands, formatting, and output for Windows Vibranium builds.
+title: Pktmon command formatting
+description: Use this page to understand pktmon command formatting and output.
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/12/2020
+ms.date: 07/23/2021
 ---
 
-# Pktmon command syntax and formatting
+# Pktmon command formatting
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows 10, Azure Stack Hub, Azure
 
-Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack. Packet Monitor is available in-box via pktmon.exe command on Vibranium OS (build 19041). You can use this topic to learn how to understand pktmon syntax, commands formatting, and output.
+Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack. Packet Monitor is available in-box via pktmon.exe command on Windows 10 and Windows Server 2019 (Version 1809 and later). You can use this topic to learn how to understand pktmon syntax, command formatting, and output. For a complete list of commands, see [pktmon syntax](../../../administration/windows-commands/pktmon.md). 
 
 ## Quick start
 
 Use the following steps to get started in generic scenarios:
 
-1. Identify the type of packets needed for the capture, i.e. specific IP addresses, ports, or protocols associated with the packet. Then, check the syntax to apply capture filters, and apply the filters for the packets identified in the previous step.
+1. Identify the type of packets needed for the capture, such as specific IP addresses, ports, or protocols associated with the packet.
+ 
+2. Check the syntax to apply capture filters, and apply the filters for the packets identified in the previous step.
 
    ```PowerShell
    C:\Test> pktmon filter add help
    C:\Test> pktmon filter add <filters>
    ```
 
-2. Start the capture and enable packet logging.
+3. Start the capture and enable packet logging.
 
    ```PowerShell
-   C:\Test> pktmon start --etw
+   C:\Test> pktmon start -c
    ```
 
-3. Reproduce the issue being diagnosed. Query counters to confirm the presence of expected traffic, and to get a high-level view of how the traffic flowed in the machine.
+4. Reproduce the issue being diagnosed. Query counters to confirm the presence of expected traffic, and to get a high-level view of how the traffic flowed in the machine.
 
    ```PowerShell
    C:\Test> pktmon counters
    ```
 
-4. Stop the capture and retrieve the logs in txt format for analysis.
+5. Stop the capture and retrieve the logs in txt format for analysis.
 
    ```PowerShell
    C:\Test> pktmon stop
-   C:\Test> pktmon format <etl file>
+   C:\Test> pktmon etl2txt <etl file>
    ```
 
 See [Analyze Packet Monitor output](#analyze-packet-monitor-output) for instructions on analyzing txt output.
@@ -58,7 +60,7 @@ C:\Test> pktmon filter add -p 53
 
 ### Filtering capability
 
-- Packet Monitor supports filtering by MAC addresses, IP addresses, ports, EtherType, transport protocol, and VLAN Id. 
+- Packet Monitor supports filtering by MAC addresses, IP addresses, ports, EtherType, transport protocol, and VLAN ID. 
 
 - Packet Monitor will not distinguish between source or destination when it comes to MAC address, IP address, or port filters. 
 
@@ -70,95 +72,34 @@ C:\Test> pktmon filter add -p 53
 C:\Test> pktmon filter add -i 10.0.0.10 -t tcp syn
 ```
 
-- Packet Monitor can apply a filter to encapsulated inner packets, in addition to the outer packet if the [-e] flag was added to any filter. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP. Custom VXLAN port is optional, and defaults to 4789.
+- Packet Monitor can apply a filter to encapsulated inner packets, in addition to the outer packet if the **[-e]** flag was added to any filter. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP. Custom VXLAN port is optional, and defaults to 4789.
 
-### Pktmon filters syntax
+For more information, see [pktmon filter syntax](../../../administration/windows-commands/pktmon-filter.md).
+
+## Packets and general events capture
+
+Packet Monitor can capture packets through the **[-c]** parameter with the start command. This will enable packet capture and logging as well as packet counters. To enable packet counters only without logging the packet, add the **[-o]** parameter to the start command. For more information about packet counters, see the [Packet counters](#packet-counters) section below.
+
+You can select components to monitor through the **[--comp]** parameter. It can be NICs only or a list of component IDs, and it defaults to all components. You can also filter by packet propagation status (dropped or flowing packets) by using the **[--type]** parameter.
+
+Along with capturing packets, Packet Monitor allows the capture of general events such as ETW and WPP events by declaring the **[-t]** parameter and specifying the providers through the **[-p]** parameter. Use "pktmon stop" to stop all data collection.
+
+For example, the following command will capture packets of only the network adapters:
 
 ```PowerShell
-C:\Test> pktmon filter help
-pktmon filter { list | add | remove } [OPTIONS | help]
-
-Commands
-    list      Display active packet filters.
-    add       Add a filter to control which packets are reported.
-    remove    Removes all filters.
-
-help
-    Show help text for a command.
-
-C:\Test> pktmon filter add help
-pktmon filter add <name> [-m mac [mac2]] [-v vlan] [-d { IPv4 | IPv6 | number }]
-                         [-t { TCP [flags...] | UDP | ICMP | ICMPv6 | number }]
-                         [-i ip [ip2]] [-p port [port2]] [-e [port]]
-    Add a filter to control which packets are reported. For a packet to be
-    reported, it must match all conditions specified in at least one filter.
-    Up to 8 filters can be active at once.
-
-    NOTE1: When two MACs (-m), IPs (-i), or ports (-p) are specified, the filter
-           matches packets that contain both. It will not distinguish between source
-           or destination for this purpose.
-
-name
-    Optional name or description of the filter.
-
-Ethernet frame
-    -m, --mac[-address]
-        Match source or destination MAC address. See NOTE1 above.
-
-    -v, --vlan
-        Match by VLAN Id (VID) in the 802.1Q header.
-
-    -d, --data-link[-protocol], --ethertype
-        Match by data link (layer 2) protocol. Can be IPv4, IPv6, ARP, or
-        a protocol number.
-
-IP header
-    -t, --transport[-protocol], --ip-protocol
-        Match by transport (layer 4) protocol. Can be TCP, UDP, ICMP, ICMPv6, or
-        a protocol number.
-        To further filter TCP packets, an optional list of TCP flags to match can
-        be provided. Supported flags are FIN, SYN, RST, PSH, ACK, URG, ECE, and CWR.
-
-    -i, --ip[-address]
-        Match source or destination IP address. See NOTE1 above.
-        To match by subnet, use CIDR notation with the prefix length.
-
-TCP/UDP header
-    -p, --port
-        Match source or destination port number. See NOTE1 above.
-
-Encapsulation
-    -e, --encap
-        This filter also applies to encapsulated inner packets, in addition to the outer
-        packet. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP.
-        Custom VXLAN port is optional, and defaults to 4789.
-
-Example 1: Ping filter
-        pktmon filter add MyPing -i 10.10.10.10 -t ICMP
-
-Example 2: TCP SYN filter for SMB traffic
-    pktmon filter add MySmbSyn -i 10.10.10.10 -t TCP SYN -p 445
-
-Example 3: Subnet filter
-    pktmon filter add MySubnet -i 10.10.10.0/24
+C:\Test> pktmon start -c --comp nics
 ```
 
-## Packet capture and logging
-
-Packet Monitor can capture networking traffic with or without packet logging. For more information about capturing traffic without packet logging, check the Packet Counters section below. To capture and log packets, add the **[--etw]** parameter to the start command.
-
-Select components to monitor through the **[-c]** parameter. It can be all components, NICs only, or a list of component ids. The default is to capture traffic at all components. Monitor dropped packets only with [-d] parameter. The default is to capture flowing and dropped packets.
-
-For example, the following command will capture packet counters of all the network adapters without logging packets:
+The following command will capture only the dropped packets that pass through components 4 and 5, and log them:
 
 ```PowerShell
-C:\Test> pktmon start -c nics
+C:\Test> pktmon start -c --comp 4,5 --type drop
 ```
 
-However, the following command will capture only the dropped packets that pass through components 4 and 5, and log them:
+This command will capture packets and log events from the provider "Microsoft-Windows-TCPIP":
 
 ```PowerShell
-C:\Test> pktmon start --etw -c 4,5 -d
+C:\Test> pktmon start --capture --trace -p Microsoft-Windows-TCPIP
 ```
 
 ### Packet logging capability
@@ -174,73 +115,7 @@ C:\Test> pktmon start --etw -c 4,5 -d
 
 - Specify the size of the log file through the **[-s]** parameter. This will be the maximum size of the file in a circular logging mode before Packet Monitor starts overwriting the older packets with the newer ones. This will also be the maximum size of each file in the multi-file logging mode before Packet Monitor creates a new file to log the next packets. You can also use this parameter to set the buffer size for the memory logging mode.
 
-### Pktmon start syntax
-
-```PowerShell
-C:\Test> pktmon start help
-pktmon start [-c { all | nics | [ids...] }] [-d] [--etw [-p size] [-k keywords]]
-             [-f] [-s] [--log-mode {circular | multi-file | real-time | memory}]
-    Start packet monitoring.
-
--c, --components
-    Select components to monitor. Can be all components, NICs only, or a
-    list of component ids. Defaults to all.
-
--d, --drop-only
-    Only report dropped packets. By default, successful packet propagation
-    is reported as well.
-
-ETW Logging
-    --etw
-        Start a logging session for packet capture.
-
-    -p, --packet-size
-        Number of bytes to log from each packet. To always log the entire
-        packet, set this to 0. Default is 128 bytes.
-
-    -k, --keywords
-        Hexadecimal bitmask (i.e. sum of the below flags) that controls
-        which events are logged. Default is 0x012.
-
-        Flags:
-        0x001 - Internal Packet Monitor errors.
-        0x002 - Information about components, counters and filters.
-                This information is added to the end of the log file.
-        0x004 - Source and destination information for the first
-                packet in NET_BUFFER_LIST group.
-        0x008 - Select packet metadata from NDIS_NET_BUFFER_LIST_INFO
-                enumeration.
-        0x010 - Raw packet, truncated to the size specified in
-                [--packet-size] parameter.
-
-    -f, --file-name
-        .etl log file. Default is PktMon.etl.
-
-    -s, --file-size
-        Maximum log file size in megabytes. Default is 512 MB.
-
-    -l, --log-mode
-        Select logging mode. Default is circular.
-
-        circular
-            New events overwrite the oldest ones when
-            when the maximum file size is reached.
-
-        multi-file
-            A new log file is created when the maximum file size is reached.
-            Log files are sequentially numbered. PktMon1.etl, PktMon2.etl, etc.
-
-        real-time
-            Display events and packets on screen at real time. No log file is created.
-            Press Ctrl+C to stop monitoring.
-
-        memory
-            Events are written to a circular memory buffer.
-            Buffer size is specified in [--file-size] parameter.
-            Buffer contents is written to a log file during stop operation.
-
-Example: pktmon start --etw -l real-time
-```
+For more information, see [pktmon start syntax](../../../administration/windows-commands/pktmon-start.md).
 
 ## Packet analysis and formatting
 
@@ -253,55 +128,7 @@ Packet Monitor generates log files in ETL format. There are multiple ways to for
 >[!NOTE]
 >*Use the hyperlinks above to learn how to parse and analyze Packet Monitor logs in **Wireshark** and **Network Monitor**.
 
-### Pktmon format syntax
-
-```PowerShell
-C:\Test> pktmon format help
-pktmon format log.etl [-o log.txt] [-b] [-v [level]] [-x] [-e] [-l [port]
-    Convert log file to text format.
-
--o, --out
-    Name of the formatted text file.
-
--s, --stats-only
-    Display log file statistical information.
-
-Network packet formatting options
-
-    -b, --brief
-        Abbreviated packet format.
-
-    -v, --verbose
-        Verbosity level [1..3].
-
-    -x, --hex
-        Hexadecimal format.
-
-    -e, --no-ethernet
-        Don't print ethernet header.
-
-    -l, --vxlan
-        Custom VXLAN port.
-
-
-Example: pktmon format C:\tmp\PktMon.etl
-
-C:\Test> pktmon pcapng help
-pktmon pcapng log.etl [-o log.pcapng]
-    Convert log file to pcapng format.
-    Dropped packets are not included by default.
-
--o, --out
-    Name of the formatted pcapng file.
-
--d, --drop-only
-    Convert dropped packets only.
-
--c, --component-id
-    Filter packets by a specific component ID.
-
-Example: pktmon pcapng C:\tmp\PktMon.etl -d -c nics
-```
+For more information, see [pktmon format syntax](../../../administration/windows-commands/pktmon-format.md).
 
 ### Analyze Packet Monitor output
 
@@ -316,7 +143,7 @@ Each of these packet snapshots is represented by a couple of lines (red and gree
 
 For correlating all snapshots of the same packets, monitor the PktGroupId and PktNumber values (highlighted in yellow); all snapshots of the same packet should have these 2 values in common. The Appearance value (highlighted in blue) acts as a counter for each subsequent snapshot of the same packet. For example, the first snapshot of the packet (where the packet first appeared in the networking stack) has the value 1 for appearance, the next snapshot has the value 2, and so on.
 
-Each packet snapshot has a component id (underlined in the image above) denoting the component associated with the snapshot. To resolve the component name, and parameters, search for this component id in the components list at the bottom of the log file. A portion of the components table is shown in the image below highlighting "Component 1" in yellow (this was the component where the last snapshot above was captured).
+Each packet snapshot has a component ID (underlined in the image above) denoting the component associated with the snapshot. To resolve the component name, and parameters, search for this component ID in the components list at the bottom of the log file. A portion of the components table is shown in the image below highlighting "Component 1" in yellow (this was the component where the last snapshot above was captured).
 Components with 2 edges will report 2 snapshots at each edge (like the snapshots with the Appearance 3 and Appearance 4 for example in the image above).
 
 At the bottom of each log file, the filters list is presented as shown in the image below (highlighted in blue). Each filter displays the parameter(s) specified (Protocol ICMP in the example below), and zeros for the rest of the parameters.
@@ -362,26 +189,7 @@ In the next example, drops are reported under the "Counter" column. Retrieve the
 
 As shown through these examples, the counters could provide a lot of information through a diagram that can be analyzed by just a quick look.
 
-### Pktmon counters syntax
-
-```PowerShell
-C:\Test> pktmon counters help
-pktmon [comp] counters [-t { all | drop | flow }] [-z] [--json]
-    Display current per-component counters.
-
--t, --counter-type
-    Select which types of counters to show.
-    Supported values are all counters (default), drops only, or flows only.
-
--z, --show-zeros
-    Show counters that are zero in both directions.
-
--i, --show-hidden
-    Show components that are hidden by default.
-
---json
-    Output the counters in JSON format.
-```
+For more information, see [pktmon counters syntax](../../../administration/windows-commands/pktmon-counters.md).
 
 ## Networking stack layout
 
@@ -402,16 +210,4 @@ Each component is uniquely identified by a Packet Monitor component ID, which ar
 >[!NOTE]
 >IDs are not persistent and may change across reboots and as Packet Monitor's driver restarts.
 
-### Pktmon list syntax
-
-```powershell
-C:\Test> pktmon list help
-pktmon [comp] list
-    List all active components.
-
--i, --show-hidden
-    Show components that are hidden by default.
-
---json
-    Output the list in JSON format.
-```
+For more information, see [pktmon list syntax](../../../administration/windows-commands/pktmon-list.md).

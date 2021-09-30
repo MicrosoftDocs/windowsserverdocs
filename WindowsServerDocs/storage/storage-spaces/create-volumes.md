@@ -6,10 +6,11 @@ author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.date: 02/25/2020
+ms.topic: article
 ---
 # Creating volumes in Storage Spaces Direct
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic describes how to create volumes on a Storage Spaces Direct cluster by using Windows Admin Center and PowerShell.
 

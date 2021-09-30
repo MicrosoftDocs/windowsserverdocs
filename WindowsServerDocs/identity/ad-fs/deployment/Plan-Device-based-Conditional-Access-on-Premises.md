@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Plan Device-based Conditional Access on-Premises"
 ms.assetid: c5eb3fa0-550c-4a2f-a0bc-698b690c4199
 title: Plan Device-based Conditional Access on-Premises
 author: billmath
@@ -24,7 +25,7 @@ There are three kinds of registered devices, all of which are represented as Dev
 | Description |Add Work or School Account  |Azure AD Join  |Windows 10 Domain Join |
 | --- | --- |--- | --- |
 |Description    |  Users add their work or school account to their BYOD device interactively.  **Note:** Add Work or School Account is the replacement for Workplace Join in Windows 8/8.1 | Users join their Windows 10 work device to Azure AD.|Windows 10 domain joined devices automatically register with Azure AD.|
-|How users log in to the device     |  No login to Windows as the work or school account.  Login using a Microsoft account. |      | Login to Windows as the (work or school) account that registered the device. | Login using AD account.|
+|How users log in to the device     |  No login to Windows as the work or school account.  Login using a Microsoft account.  | Login to Windows as the (work or school) account that registered the device. | Login using AD account.|
 |How devices are managed | MDM Policies (with additional Intune enrollment) | MDM Policies (with additional Intune enrollment) | Group Policy, Configuration Manager |
 |Azure AD Trust type|Workplace joined|Azure AD joined|Domain joined |
 |W10 Settings location | Settings > Accounts > Your account > Add a work or school account | Settings > System > About > Join Azure AD |   Settings > System > About > Join a domain |

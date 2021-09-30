@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Site Topology Owner Role"
 ms.assetid: af76ddbe-83a2-4a62-9989-873e3bb1c772
 title: Site Topology Owner Role
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Site Topology Owner Role
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The administrator who manages the site topology is known as the site topology owner. The site topology owner understands the conditions of the network between sites and has the authority to change settings in Active Directory Domain Services (AD DS) to implement changes to the site topology. Changes to the site topology affect changes in the replication topology. The site topology owner's responsibilities include:
 

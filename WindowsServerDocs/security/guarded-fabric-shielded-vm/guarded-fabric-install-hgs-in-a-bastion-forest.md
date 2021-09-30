@@ -1,20 +1,21 @@
 ---
 title: Install HGS in an existing bastion forest
+description: "Learn more about: Install HGS in an existing bastion forest"
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 08/29/2018
 ---
 
 # Install HGS in an existing bastion forest
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
-## Join the HGS server to the existing domain
+## Join the HGS server to the root domain
 
-In an existing bastion forest, HGS must be added to the root domain. Use Server Manager or [Add-Computer](https://go.microsoft.com/fwlink/?LinkId=821564) to join your HGS server to the root domain.
+In an existing bastion forest, HGS must be added to the root domain. Use Server Manager or [Add-Computer](/powershell/module/Microsoft.PowerShell.Management/Add-Computer?viewFallbackFrom=powershell-5.0) to join your HGS server to the root domain.
 
 ## Add the HGS server role
 
@@ -25,9 +26,9 @@ Run all commands in this topic in an elevated PowerShell session.
 If your datacenter has a secure bastion forest where you want to join HGS nodes, follow these steps.
 You can also use these steps to configure 2 or more independent HGS clusters that are joined to the same domain.
 
-## Join the HGS server to the existing domain
+## Join the HGS server to the desired domain
 
-Use Server Manager or [Add-Computer](https://go.microsoft.com/fwlink/?LinkId=821564) to join the HGS servers to the desired domain.
+Use Server Manager or [Add-Computer](/powershell/module/Microsoft.PowerShell.Management/Add-Computer?viewFallbackFrom=powershell-5.0) to join the HGS servers to the desired domain.
 
 ## Prepare Active Directory objects
 
@@ -36,7 +37,7 @@ You can also pre-stage the cluster objects if the account you are initializing H
 
 ## Group managed service account
 
-The group managed service account (gMSA) is the identity used by HGS to retrieve and use its certificates. Use [New-ADServiceAccount](/powershell/module/addsadministration/new-adserviceaccount?view=win10-ps) to create a gMSA.
+The group managed service account (gMSA) is the identity used by HGS to retrieve and use its certificates. Use [New-ADServiceAccount](/powershell/module/addsadministration/new-adserviceaccount) to create a gMSA.
 If this is the first gMSA in the domain, you will need to add a Key Distribution Service root key.
 
 Each HGS node will need to be permitted to access the gMSA password.
@@ -76,7 +77,7 @@ You are not required to use JEA to manage HGS, but it still must be configured w
 The configuration of the JEA endpoint consists of designating 2 security groups that contain your HGS admins and HGS reviewers.
 Users who belong to the admin group can add, change, or remove policies on HGS; reviewers can only view the current configuration.
 
-Create 2 security groups for these JEA groups using Active Directory admin tools or [New-ADGroup](/powershell/module/addsadministration/new-adgroup?view=win10-ps).
+Create 2 security groups for these JEA groups using Active Directory admin tools or [New-ADGroup](/powershell/module/addsadministration/new-adgroup).
 
 ```powershell
 New-ADGroup -Name 'HgsJeaReviewers' -GroupScope DomainLocal
@@ -135,7 +136,7 @@ Check your Group Policy objects for the following settings and follow the guidan
 
 **Policy Name:** Network Security: Configure encryption types allowed for Kerberos
 
-**Action**: If this policy is configured, you must update the gMSA account with [Set-ADServiceAccount](/powershell/module/addsadministration/set-adserviceaccount?view=win10-ps) to use only the supported encryption types in this policy. For instance, if your policy only allows AES128\_HMAC\_SHA1 and AES256\_HMAC\_SHA1, you should run `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256`.
+**Action**: If this policy is configured, you must update the gMSA account with [Set-ADServiceAccount](/powershell/module/addsadministration/set-adserviceaccount) to use only the supported encryption types in this policy. For instance, if your policy only allows AES128\_HMAC\_SHA1 and AES256\_HMAC\_SHA1, you should run `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256`.
 
 
 

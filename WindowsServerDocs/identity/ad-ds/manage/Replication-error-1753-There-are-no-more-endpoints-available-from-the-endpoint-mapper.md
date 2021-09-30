@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Replication error 1753 There are no more endpoints available from the endpoint mapper"
 ms.assetid: 0f21951c-b1bf-43bb-a329-bbb40c58c876
 title: Replication error 1753 There are no more endpoints available from the endpoint mapper
 author: iainfoulds
@@ -9,7 +10,7 @@ ms.topic: article
 ---
 # Replication error 1753 There are no more endpoints available from the endpoint mapper
 
->Applies To: Windows Server
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server
 
 This article describes symptoms, cause and resolution steps for Active Directory operations that fail with Win32 error 1753: "There are no more endpoints available from the endpoint mapper."
 

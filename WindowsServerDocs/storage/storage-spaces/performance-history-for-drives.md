@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Performance history for drives"
 title: Performance history for drives
 ms.author: cosdar
 manager: eldenc
@@ -10,7 +11,7 @@ ms.localizationpriority: medium
 
 # Performance history for drives
 
-> Applies to: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 This sub-topic of [Performance history for Storage Spaces Direct](performance-history.md) describes in detail the performance history collected for drives. Performance history is available for every drive in the cluster storage subsystem, regardless of bus or media type. However, it is not available for OS boot drives.
 

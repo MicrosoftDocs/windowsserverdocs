@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Creating a Domain Design"
 ms.assetid: 2a25bf86-a8ec-4b1a-9cbb-924d5b574481
 title: Creating a Domain Design
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Creating a Domain Design
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The forest owner is responsible for creating a domain design for the forest. Creating a domain design involves examining the replication requirements and the existing capacity of your network infrastructure and then building a domain structure that enables Active Directory Domain Services (AD DS) to function in the most efficient way. Domains are used to partition the directory so that the information in the directory can be distributed and managed efficiently throughout the enterprise. The goal for your domain design is to maximize the efficiency of the Active Directory replication topology while ensuring that replication does not use too much available network bandwidth and does not interfere with the daily operation of your network.
 

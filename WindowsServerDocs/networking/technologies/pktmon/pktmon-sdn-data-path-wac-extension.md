@@ -4,12 +4,12 @@ description: Use this topic to automate Packet Monitor-based packet captures wit
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 11/12/2020
+ms.date: 07/23/2021
 ---
 
 # SDN Data Path Diagnostics Extension in Windows Admin Center
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows 10, Azure Stack Hub, Azure
 
 SDN Data Path Diagnostics is a tool within the SDN monitoring extension of Windows Admin Center that automates Packet Monitor-based packet captures according to various SDN scenarios, and presents the output in a single view that is easy to follow and manipulate.​
 
@@ -21,7 +21,7 @@ Windows Admin Center is a locally-deployed, browser-based management tool that l
 
 ## Before you start
 - To use the tool, the target server needs to be running Windows Server 2019 version 1903 (19H1) and above.
-- [Install Windows Admin Center](/windows-server/manage/windows-admin-center/deploy/install).
+- [Install Windows Admin Center](../../../manage/windows-admin-center/deploy/install.md).
 - Add a cluster to Windows Admin Center:
   1. Click **+ Add** under **All Connections**.
   2. Choose to add a Hyper-Converged Cluster Connection.
@@ -34,7 +34,7 @@ The cluster will be added to the connections list. Click it to launch the Dashbo
 
 <center>
 
-:::image type="content" source="media/add-sdn-enabled-hci-connection.png" alt-text="Adding an SDN enabled HCI connection with Windows Admin Center" border="true":::
+:::image type="content" source="media/add-sdn-enabled-hci-connection.png" alt-text="Adding an SDN enabled HCI connection with Windows Admin Center" border="true" lightbox="media/add-sdn-enabled-hci-connection.png":::
 
 </center>
 
@@ -48,7 +48,7 @@ The first page lists all the SDN scenarios classified as Workload scenarios and 
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-main-page.png" alt-text="SDN monitoring - Diagnostic Scenarios page" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-main-page.png" alt-text="SDN monitoring - Diagnostic Scenarios page" border="true" lightbox="media/sdn-data-path-diagnostics-main-page.png":::
 
 </center>
 
@@ -58,7 +58,7 @@ After choosing the scenario, fill out a list of mandatory and optional parameter
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-scenario-parameters.png" alt-text="SDN monitoring - Capture Conditions page" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-scenario-parameters.png" alt-text="SDN monitoring - Capture Conditions page" border="true" lightbox="media/sdn-data-path-diagnostics-scenario-parameters.png":::
 
 </center>
 
@@ -68,7 +68,7 @@ After starting the capture, the extension will show a list of the machines where
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-loading-wheel2.png" alt-text="starting the packet capture" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-loading-wheel2.png" alt-text="starting the packet capture" border="true" lightbox="media/sdn-data-path-diagnostics-loading-wheel2.png":::
 
 </center>
 
@@ -76,7 +76,7 @@ After stopping the capture, the logs of all the machines will be shown in a sing
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-log.png" alt-text="Data Path Diagnostics log after stopping the capture" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-log.png" alt-text="Data Path Diagnostics log after stopping the capture" border="true" lightbox="media/sdn-data-path-diagnostics-log.png":::
 
 </center>
 
@@ -97,7 +97,7 @@ The information in this page is particularly valuable if you have incorrect pack
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-details-page.png" alt-text="Data Path Diagnostics Details page" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-details-page.png" alt-text="Data Path Diagnostics Details page" border="true" lightbox="media/sdn-data-path-diagnostics-details-page.png":::
 
 </center>
 
@@ -105,7 +105,7 @@ Select a hop to view more details. In encapsulation and NAT (Network Address Tra
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-details-page-with-pane1.png" alt-text="viewing details about a specific hop" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-details-page-with-pane1.png" alt-text="viewing details about a specific hop" border="true" lightbox="media/sdn-data-path-diagnostics-details-page-with-pane1.png":::
 
 </center>
 
@@ -113,7 +113,7 @@ Scroll down to view raw packet details:
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-details-page-with-pane-raw-packet1.png" alt-text="viewing raw packet details about a specific hop" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-details-page-with-pane-raw-packet1.png" alt-text="viewing raw packet details about a specific hop" border="true" lightbox="media/sdn-data-path-diagnostics-details-page-with-pane-raw-packet1.png":::
 
 </center>
 
@@ -127,7 +127,7 @@ The display filters allow you to filter the log after capturing the packets. For
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-display-filters.png" alt-text="filtering logs with display filters" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-display-filters.png" alt-text="filtering logs with display filters" border="true" lightbox="media/sdn-data-path-diagnostics-display-filters.png":::
 
 </center>
 
@@ -137,11 +137,11 @@ The save button allows you to save the log on your local machine for further ana
 
    - ETL format which can be analyzed using Microsoft Network Monitor. Note: [Check this page](pktmon-netmon-support.md) for more information.
    - Text format which can be analyzed using any text editor like TextAnalysisTool.NET.
-   - Pcapng fomat which can be analyzed using tools like Wireshark.
+   - Pcapng format which can be analyzed using tools like Wireshark.
       - Most of the Packet Monitor metadata will be lost during this conversion. Note: [Check this page](pktmon-pcapng-support.md) for more information.
 
 <center>
 
-:::image type="content" source="media/sdn-data-path-diagnostics-save.png" alt-text="saving logs locally" border="true":::
+:::image type="content" source="media/sdn-data-path-diagnostics-save.png" alt-text="saving logs locally" border="true" lightbox="media/sdn-data-path-diagnostics-save.png":::
 
 </center>

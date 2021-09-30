@@ -2,8 +2,8 @@
 title: bitsadmin getpriority
 description: Reference article for the bitsadmin getpriority command, which retrieves the priority of the specified job.
 ms.topic: reference
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 03/01/2019
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Hosted Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to deploy Microsoft Windows Server and offer Windows Server Essentials Experience as a service to your customers.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
@@ -31,7 +31,7 @@ This document includes information that is specific to hosters who intend to dep
  **Extensibility:** Windows Server Essentials builds on the extensibility model of Windows SBS 2011 Essentials, which allows other software vendors to add capabilities and features to the core product, and adds a new set of web services APIs. It also maintains compatibility with the existing [software development kit](/previous-versions/windows/server-essentials/gg513958(v=msdn.10)) (SDK) and [add-ins](https://pinpoint.microsoft.com/applications/search?fpt=300105&q=small+business+server+essentials) created for Windows SBS 2011 Essentials.
 
 ## How can I customize an image?
- Refer to the [Windows Server Essentials](https://go.microsoft.com/fwlink/p/?LinkID=249124), which is a standard Windows Server sysprep process with additional Windows Server Essentials customization steps. To finish the customization, follow the instructions in [Create a Simple Customized Image](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200117(v=ws.11)) and [Customize the Image](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10)), and then follow the instructions in [Preparing the Image for Deployment](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200142(v=ws.11)) to capture your final image.
+ Refer to the [Windows Server Essentials](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10)), which is a standard Windows Server sysprep process with additional Windows Server Essentials customization steps. To finish the customization, follow the instructions in [Create a Simple Customized Image](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200117(v=ws.11)) and [Customize the Image](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10)), and then follow the instructions in [Preparing the Image for Deployment](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200142(v=ws.11)) to capture your final image.
 
  You should pay attention to the following points:
 
@@ -48,11 +48,11 @@ This document includes information that is specific to hosters who intend to dep
    If you are using Virtual Machine Manager, you can create a template using the running instance. Creating a template will sysprep the instance and shut down the server. After you store it in your library, you can bring up the instance on a case-by-case basis.
 
 ##  <a name="BKMK_automatedeployment"></a> How do I automate the deployment?
- After you get the customized image, you can do the deployment with your own image. In order to do semiunattended installation, you need to provide/deploy unattend.xml for WinPE setup. To do a fully unattended installation, you also need to provide the cfg.ini file for Windows Server Essentials Initial Configuration.
+ After you get the customized image, you can do the deployment with your own image. In order to do semi-unattended installation, you need to provide/deploy unattend.xml for WinPE setup. To do a fully unattended installation, you also need to provide the cfg.ini file for Windows Server Essentials Initial Configuration.
 
 1. Perform only unattended WinPE setup. This will automate only the WinPE setup, and let the installation stop before Initial Configuration so that end users can provide Corp, Domain, and Administrator information by themselves after RDP into server session. To do this:
 
-   1.  Provide the Windows unattend.xml file. Follow the [Windows 8.1 ADK](https://go.microsoft.com/fwlink/?LinkId=248694) to generate the file, and provide all necessary information including server name, product keys, and administrator password. In the Microsoft-Windows-Setup section of the unattend.xml file, provide the information as below.
+   1.  Provide the Windows unattend.xml file. Follow the [Windows 8.1 ADK](/previous-versions/windows/hh825420(v=win.10)) to generate the file, and provide all necessary information including server name, product keys, and administrator password. In the Microsoft-Windows-Setup section of the unattend.xml file, provide the information as below.
 
        ```
        <InstallFrom>
@@ -249,7 +249,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
  Windows Server Essentials supports integration with two email solutions out of the box: Microsoft 365 and on-premises Exchange. If you are running your own hosted email solution, you will need to develop an add-in to integrate Windows Server Essentials with your hosted email solution.
 
 ## How do I migrate on-premises Windows SBS (2011/2008/2003) to the hosted Windows Server Essentials?
- Migration guides are available for on-premises Windows Small Business Server (Windows SBS) to Windows Server Essentials migrations. Some of the steps may not apply exactly the same to your hosted environment. However, the general tasks and the workloads to be migrated should be the same. We recommend that you refer to the [migration guides](https://go.microsoft.com/fwlink/p/?LinkID=254292) and make necessary customizations based on your hosting environment.
+ Migration guides are available for on-premises Windows Small Business Server (Windows SBS) to Windows Server Essentials migrations. Some of the steps may not apply exactly the same to your hosted environment. However, the general tasks and the workloads to be migrated should be the same. We recommend that you refer to the [migration guides](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10)) and make necessary customizations based on your hosting environment.
 
  It is recommended that you put the source server and the destination server in the same subnet. If this is not possible, you should make sure that:
 
@@ -258,7 +258,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 -   All the necessary ports are open.
 
 ## How can I upgrade Windows Server Essentials to Windows Server Standard?
- You can upgrade Windows Server Essentials to Windows Server Standard. Remove locks and limits, and add the packages that are missing from Windows Server Standard. For more information, [download the document](https://go.microsoft.com/fwlink/p/?LinkID=253181).
+ You can upgrade Windows Server Essentials to Windows Server Standard. Remove locks and limits, and add the packages that are missing from Windows Server Standard. For more information, [download the document](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj247582(v=ws.11)).
 
 ## What are the native tools for monitoring and management?
 
@@ -298,13 +298,13 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 
  **On-premises backup** allows you to perform block-level incremental backup on a regular basis to a separate disk. As a hoster, you could attach a virtual disk to the Windows Server Essentials VM and configure server backup to this virtual disk. The virtual disk should be located on a different physical disk than the Windows Server Essentials VM.
 
-- If you have another mechanism to back up the Windows Server Essentials VM, and you do not want your user to see the Windows Server Essentials native Server Backup feature, you could turn it off and remove all related user interface from the Windows Server Essentials Dashboard. For more information, refer to the Customize Server Backup section of the [ADK document](https://go.microsoft.com/fwlink/p/?LinkID=249124).
+- If you have another mechanism to back up the Windows Server Essentials VM, and you do not want your user to see the Windows Server Essentials native Server Backup feature, you could turn it off and remove all related user interface from the Windows Server Essentials Dashboard. For more information, refer to the Customize Server Backup section of the [ADK document](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10)).
 
   **Off-premises backup** allows you to periodically back up server data to a cloud service. You can download and install the  Microsoft Azure Backup Integration Module for Windows Server Essentials to leverage the  Azure Backup provided by Microsoft.
 
   If you or your users prefer another cloud service, you should:
 
-1.  Update the user interface of the Windows Server Essentials Dashboard so that it provides a link to your preferred cloud service, instead of the default  Azure Backup. For more information, refer to the Customize the Image section of the [ADK document](https://go.microsoft.com/fwlink/p/?LinkID=249124).
+1.  Update the user interface of the Windows Server Essentials Dashboard so that it provides a link to your preferred cloud service, instead of the default  Azure Backup. For more information, refer to the Customize the Image section of the [ADK document](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10)).
 
 2.  (Optional) Develop an add-in for Windows Server Essentials Dashboard to configure and manage the cloud backup service.
 
@@ -391,8 +391,8 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 ## Where can I get more support?
  You can get SDK and ADK documents from the links below:
 
-- [SDK](https://go.microsoft.com/fwlink/p/?LinkID=248648)
+- [SDK](/previous-versions/windows/server-essentials/gg513988(v=msdn.10))
 
-- [ADK](https://go.microsoft.com/fwlink/p/?LinkID=249124)
+- [ADK](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10))
 
   You can report a bug to the feature team through Connect. To generate logs, zip the folder on both the server and the clients joining the server: C:\ProgramData\Microsoft\Windows Server\Logs.

@@ -3,8 +3,8 @@ title: mqtgsvc
 description: Reference article for the mqtgsvc command, which monitors a queue for incoming messages and performs an action, in the form of an executable file or COM component, when the rules of a trigger are evaluated as true.
 ms.topic: reference
 ms.assetid: a6f78ffa-ad38-475b-8ed5-f5404b1658ab
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -23,4 +23,4 @@ mqtgsvc.exe
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [MSMQ Powershell Reference](/powershell/module/msmq/?view=win10-ps)
+- [MSMQ Powershell Reference](/powershell/module/msmq/)

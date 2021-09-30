@@ -3,15 +3,15 @@ title: tlntadmn
 description: Reference article for the tlntadmn command, which administers a local or remote computer, running the telnet Server Service.
 ms.topic: reference
 ms.assetid: 78b61e8d-b953-44bb-8d57-f3b42da9e7a8
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # tlntadmn
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Administers a local or remote computer that is running the telnet Server Service. If used without parameters, **tlntadmn** displays the current server settings.
 

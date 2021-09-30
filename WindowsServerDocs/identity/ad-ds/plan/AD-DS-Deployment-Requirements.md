@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD DS Deployment Requirements"
 ms.assetid: e02bb152-d0db-40b0-9942-846dce75f6c7
 title: AD DS Deployment Requirements
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # AD DS Deployment Requirements
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The structure of your existing environment determines your strategy for deploying Windows Server 2008 Active Directory Domain Services (AD DS). If you are creating an AD DS environment and you do not have an existing domain structure, complete your AD DS design before you begin creating your AD DS environment. Then, you can deploy a new forest root domain and deploy the rest of your domain structure according to your design.
 
@@ -19,7 +20,7 @@ Also, as part of your AD DS deployment, you might decide to upgrade and restruct
 ## Deploying a Windows Server 2008 forest root domain
 The forest root domain provides the foundation for your AD DS forest infrastructure. To deploy AD DS, you must first deploy a forest root domain. To do this, you must review your AD DS design; configure the DNS service for the forest root domain; create the forest root domain, which consists of deploying forest root domain controllers, configuring the site topology for the forest root domain, and configuring operations master roles (also known as flexible single master operations or FSMO); and raise the forest and domain functional levels. The following illustration shows the overall process of deploying a forest root domain.
 
-![AD DS requirements](media/AD-DS-Deployment-Requirements/033aad0b-25ff-4793-8825-88a6daa01a55.gif)
+![Illustration that shows the overall process of deploying a forest root domain.](media/AD-DS-Deployment-Requirements/033aad0b-25ff-4793-8825-88a6daa01a55.gif)
 
 For more information, see [Deploying a Windows Server 2008 Forest Root Domain](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
 

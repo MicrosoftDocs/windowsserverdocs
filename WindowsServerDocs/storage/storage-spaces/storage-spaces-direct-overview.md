@@ -11,18 +11,18 @@ ms.localizationpriority: medium
 ---
 # Storage Spaces Direct overview
 
->Applies to: Azure Stack HCI, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Storage Spaces Direct uses industry-standard servers with local-attached drives to create highly available, highly scalable software-defined storage at a fraction of the cost of traditional SAN or NAS arrays. Its converged or hyper-converged architecture radically simplifies procurement and deployment, while features such as caching, storage tiers, and erasure coding, together with the latest hardware innovations such as RDMA networking and NVMe drives, deliver unrivaled efficiency and performance.
 
-Storage Spaces Direct is included in [Azure Stack HCI](/azure-stack/hci/), Windows Server 2019 Datacenter, Windows Server 2016 Datacenter, and [Windows Server Insider Preview Builds](https://insider.windows.com/for-business-getting-started-server/).
+Storage Spaces Direct is included in Windows Server 2019 Datacenter, Windows Server 2016 Datacenter, and [Windows Server Insider Preview Builds](https://insider.windows.com/for-business-getting-started-server/). It also provides the software-defined storage layer for [Azure Stack HCI](/azure-stack/hci/).
 
 For other applications of Storage Spaces, such as shared SAS clusters and stand-alone servers, see [Storage Spaces overview](overview.md). If you're looking for info about using Storage Spaces on a Windows 10 PC, see [Storage Spaces in Windows 10](https://support.microsoft.com/help/12438/windows-10-storage-spaces).
 
 | Description | Documentation |
 |--|--|
-| **Understand**<br><ul><li>Overview (you are here)</li><li>[Understand the cache](understand-the-cache.md)</li><li>[Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)<li>[Drive symmetry considerations](drive-symmetry-considerations.md)</li><li>[Understand and monitor storage resync](understand-storage-resync.md)</li><li>[Understanding cluster and pool quorum](understand-quorum.md)</li><li>[Cluster sets](cluster-sets.md)</li> | **Plan**<br><ul><li>[Hardware requirements](storage-spaces-direct-hardware-requirements.md)</li><li>[Using the CSV in-memory read cache](csv-cache.md)</li><li>[Choose drives](choosing-drives.md)</li><li>[Plan volumes](plan-volumes.md)</li><li>[Using guest VM clusters](storage-spaces-direct-in-vm.md)</li><li>[Disaster recovery](storage-spaces-direct-disaster-recovery.md)</li> |
-| **Deploy**<br><ul><li>[Deploy Storage Spaces Direct](deploy-storage-spaces-direct.md)</li><li>[Create volumes](create-volumes.md)</li><li>[Nested resiliency](nested-resiliency.md)</li><li>[Configure quorum](../../failover-clustering/manage-cluster-quorum.md)</li><li>[Upgrade a Storage Spaces Direct cluster to Windows Server 2019](upgrade-storage-spaces-direct-to-windows-server-2019.md)</li><li>[Understand and deploy persistent memory](deploy-pmem.md)</li> | **Manage**<br><ul><li>[Manage with Windows Admin Center](../../manage/windows-admin-center/use/manage-hyper-converged.md)</li><li>[Add servers or drives](add-nodes.md)</li><li>[Taking a server offline for maintenance](maintain-servers.md)</li><li>[Remove servers](remove-servers.md)</li><li>[Extend volumes](resize-volumes.md)</li><li>[Delete volumes](delete-volumes.md)</li><li>[Update drive firmware](../update-firmware.md)</li><li>[Performance history](performance-history.md)</li><li>[Delimit the allocation of volumes](delimit-volume-allocation.md)</li><li>[Use Azure Monitor on a hyper-converged cluster](configure-azure-monitor.md)</li> |
+| **Understand**<br><ul><li>Overview (you are here)</li><li>[Understand the cache](understand-the-cache.md)</li><li>[Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)<li>[Drive symmetry considerations](drive-symmetry-considerations.md)</li><li>[Understand and monitor storage resync](understand-storage-resync.md)</li><li>[Understanding cluster and pool quorum](understand-quorum.md)</li><li>[Cluster sets](/azure-stack/hci/deploy/cluster-set)</li> | **Plan**<br><ul><li>[Hardware requirements](storage-spaces-direct-hardware-requirements.md)</li><li>[Using the CSV in-memory read cache](csv-cache.md)</li><li>[Choose drives](choosing-drives.md)</li><li>[Plan volumes](plan-volumes.md)</li><li>[Using guest VM clusters](storage-spaces-direct-in-vm.md)</li><li>[Disaster recovery](storage-spaces-direct-disaster-recovery.md)</li> |
+| **Deploy**<br><ul><li>[Deploy Storage Spaces Direct](deploy-storage-spaces-direct.md)</li><li>[Create volumes](create-volumes.md)</li><li>[Nested resiliency](nested-resiliency.md)</li><li>[Configure quorum](../../failover-clustering/manage-cluster-quorum.md)</li><li>[Upgrade a Storage Spaces Direct cluster to Windows Server 2019](upgrade-storage-spaces-direct-to-windows-server-2019.md)</li><li>[Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory)</li> | **Manage**<br><ul><li>[Manage with Windows Admin Center](../../manage/windows-admin-center/use/manage-hyper-converged.md)</li><li>[Add servers or drives](add-nodes.md)</li><li>[Taking a server offline for maintenance](maintain-servers.md)</li><li>[Remove servers](remove-servers.md)</li><li>[Extend volumes](resize-volumes.md)</li><li>[Delete volumes](delete-volumes.md)</li><li>[Update drive firmware](../update-firmware.md)</li><li>[Performance history](performance-history.md)</li><li>[Delimit the allocation of volumes](delimit-volume-allocation.md)</li><li>[Use Azure Monitor on a hyper-converged cluster](configure-azure-monitor.md)</li> |
 | **Troubleshooting**<br><ul><li>[Troubleshooting scenarios](troubleshooting-storage-spaces.md)</li><li>[Troubleshoot health and operational states](storage-spaces-states.md)</li><li>[Collect diagnostic data with Storage Spaces Direct](data-collection.md)</li><li>[Storage-class memory health management](Storage-class-memory-health.md)</li> | **Recent blog posts**<br><ul><li>[13.7 million IOPS with Storage Spaces Direct: the new industry record for hyper-converged infrastructure](https://techcommunity.microsoft.com/t5/storage-at-microsoft/the-new-hci-industry-record-13-7-million-iops-with-windows/ba-p/428314)</li><li>[Hyper-converged infrastructure in Windows Server 2019 - the countdown clock starts now!](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)</li><li>[Five big announcements from the Windows Server Summit](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)</li><li>[10,000 Storage Spaces Direct clusters and counting...](https://techcommunity.microsoft.com/t5/storage-at-microsoft/storage-spaces-direct-10-000-clusters-and-counting/ba-p/428185)</li></ul> |
 
 ## Videos
@@ -56,7 +56,10 @@ For other applications of Storage Spaces, such as shared SAS clusters and stand-
 
 ## Deployment options
 
-Storage Spaces Direct was designed for two distinct deployment options:
+Storage Spaces Direct was designed for two distinct deployment options: converged and hyper-converged.
+
+   > [!NOTE]
+   > Azure Stack HCI 20H2 supports only hyper-converged deployment, while Azure Stack HCI 2019 supports both converged and hyper-converged deployment.
 
 ### Converged
 
@@ -115,7 +118,7 @@ The following tools can be used to manage and/or monitor Storage Spaces Direct:
 | [Windows Admin Center](../../manage/windows-admin-center/overview.md)     | Graphical    | Included |
 | Server Manager & Failover Cluster Manager                                 | Graphical    | Included |
 | Windows PowerShell                                                        | Command-line | Included |
-| [System Center Virtual Machine Manager (SCVMM)](/system-center/vmm/s2d?view=sc-vmm-2019) <br>& [Operations Manager (SCOM)](https://www.microsoft.com/download/details.aspx?id=54700) | Graphical    | Paid     |
+| [System Center Virtual Machine Manager (SCVMM)](/system-center/vmm/s2d) <br>& [Operations Manager (SCOM)](https://www.microsoft.com/download/details.aspx?id=54700) | Graphical    | Paid     |
 
 ## Get started
 

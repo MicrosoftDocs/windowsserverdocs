@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Planning Forest Root Domain Controller Placement"
 ms.assetid: 2a2f493a-9796-454a-9721-e223b799dfa7
 title: Planning Forest Root Domain Controller Placement
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Planning Forest Root Domain Controller Placement
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Forest root domain controllers are needed to create trust paths for clients that need to access resources in domains other than their own. Place forest root domain controllers in hub locations and at locations that host datacenters. If users in a given location need to access resources from other domains in the same location, and the network availability between the datacenter and the user location is unreliable, you can either add a forest root domain controller in the location or create a shortcut trust between the two domains. It is more cost efficient to create a shortcut trust between the domains unless you have other reasons to place a forest root domain controller in that location.
 

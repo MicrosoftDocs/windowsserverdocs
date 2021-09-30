@@ -1,6 +1,6 @@
 ---
 title: "Customize Storage Spaces"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to run the Storage Spaces configuration script from PostIC.cmd to preconfigure Storage Spaces for a better user experience.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 3c96d66b-be4a-4572-9b9f-29555c00ae9a

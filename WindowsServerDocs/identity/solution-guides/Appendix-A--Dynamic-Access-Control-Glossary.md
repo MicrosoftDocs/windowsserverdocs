@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Appendix A: Dynamic Access Control Glossary"
 ms.assetid: 7f6b27e5-dc55-4ffc-8e76-6d57e65a870b
 title: Appendix A Dynamic Access Control Glossary
 author: billmath
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Appendix A: Dynamic Access Control Glossary
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Following are the list of terms and definitions that are included in the Dynamic Access Control scenario.
 

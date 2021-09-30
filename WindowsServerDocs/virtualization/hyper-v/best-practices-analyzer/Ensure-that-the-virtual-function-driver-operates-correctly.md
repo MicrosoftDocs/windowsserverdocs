@@ -1,6 +1,6 @@
 ---
 title: Ensure that the virtual function driver operates correctly when a virtual machine is configured to use SR-IOV
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the virtual function driver is not operating correctly in the guest operating system of one or more virtual machines.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -9,9 +9,9 @@ ms.date: 8/16/2016
 ---
 # Ensure that the virtual function driver operates correctly when a virtual machine is configured to use SR-IOV
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -32,6 +32,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 ## Resolution
 *In the guest operating system, do the following: Verify that appropriate drivers are installed and all networking devices are enabled, and check the Event log for errors or warnings.*
-
-
-

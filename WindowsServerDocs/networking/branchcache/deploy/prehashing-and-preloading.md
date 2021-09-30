@@ -1,15 +1,16 @@
 ---
 title: Prehashing and Preloading Content on Hosted Cache Servers (Optional)
-description: This topic is part of the BranchCache Deployment Guide for Windows Server 2016, which demonstrates how to deploy BranchCache in distributed and hosted cache modes to optimize WAN bandwidth usage in branch offices.
+description: Learn how to force the creation of content information - also called hashes - on BranchCache-enabled Web and file servers.
 manager: brianlic
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 5a09d9f1-1049-447f-a9bf-74adf779af27
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 01/05/2021
 ---
 # Prehashing and Preloading Content on Hosted Cache Servers (Optional)
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this procedure to force the creation of content information - also called hashes - on BranchCache-enabled Web and file servers. You can also gather the data on file and web servers into packages that can be transferred to remote hosted cache servers.  This provides you with the ability to preload content on remote hosted cache servers so that data is available for the first client access.
 

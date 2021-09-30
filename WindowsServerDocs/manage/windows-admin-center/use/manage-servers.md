@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Manage Servers with Windows Admin Center
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 > [!Tip]
 > New to Windows Admin Center?
@@ -208,6 +208,10 @@ The following features are supported in Events:
 - View event details
 - Clear events from the log
 - Export events from the log
+- Create workspaces (preview)
+- Save workspaces (preview)
+- Delete workspaces (preview)
+- View events in a stacked bar format (preview)
 
 [**View feedback and proposed features for Events**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BEvents%5D).
 
@@ -438,7 +442,7 @@ The following features are supported in Storage:
 ## Storage Migration Service
 
 **Storage Migration Service** allows you to migrate servers and file shares to Azure or Windows Server 2019—without requiring apps or users to change anything.
-[Get an overview of Storage Migration Service](https://go.microsoft.com/fwlink/?linkid=2016155)
+[Get an overview of Storage Migration Service](../../../storage/storage-migration-service/overview.md)
 
 >[!NOTE]
 >Storage Migration Service requires Windows Server 2019.

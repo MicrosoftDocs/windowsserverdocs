@@ -3,8 +3,8 @@ title: secedit import
 description: Reference article for the secedit import command, which imports security settings (.inf file), previously exported from the database configured with security templates.
 ms.topic: reference
 ms.assetid: 1dd59d4c-9d48-444a-871b-b957eb682597
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

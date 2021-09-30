@@ -1,15 +1,16 @@
 ---
+description: "Learn more about: Troubleshoot Shielded VMs"
 title: Troubleshoot Shielded VMs
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 10/3/2018
 ---
 
 # Troubleshoot Shielded VMs
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Beginning with Windows Server version 1803, Virtual Machine Connection (VMConnect) enhanced session mode and PS Direct are re-enabled for fully shielded VMs. The virtualization admin still requires VM guest credentials to get access to the VM, but this makes it easier for a hoster to troubleshoot a shielded VM when its network configuration is broken.
 

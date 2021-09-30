@@ -1,15 +1,16 @@
 ---
 title: Create an Access Policy
-description: This topic is part of the IP Address Management (IPAM) Management guide in Windows Server 2016.
+description: Learn how to create an access policy in the IPAM client console.
 manager: brianlic
 ms.topic: article
 ms.assetid: 854bd064-2f86-4678-a940-a04b3e48ae10
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Create an Access Policy
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to create an access policy in the IPAM client console.
 
@@ -24,11 +25,11 @@ Membership in **Administrators**, or equivalent, is the minimum required to perf
 
 2.  In the navigation pane, click **ACCESS CONTROL**. In the lower navigation pane, right-click **Access Policies**, and then click **Add Access Policy**.
 
-    ![Add Access Policy](../../media/Create-an-Access-Policy/ipam_CreateAP_01.jpg)
+    ![Screenshot of Server Manager showing the Access Policies optoin highlighted and the Add Access Policy option available for selection.](../../media/Create-an-Access-Policy/ipam_CreateAP_01.jpg)
 
 3.  The **Add Access Policy** dialog box opens. In **User Settings**, click **Add**.
 
-    ![Add Access Policy](../../media/Create-an-Access-Policy/ipam_CreateAP_02.jpg)
+    ![Screenshot of the Add Access Policy dialog box.](../../media/Create-an-Access-Policy/ipam_CreateAP_02.jpg)
 
 4.  The **Select User or Group** dialog box opens. Click **Locations**.
 

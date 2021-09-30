@@ -1,16 +1,16 @@
 ---
 title: NTLM Overview
-description: Windows Server Security
+description: Learn about NTLM, any changes in functionality, and find links to technical resources to Windows Authentication and NTLM for Windows Server 2012 and previous versions.
 ms.topic: article
 ms.assetid: 773909fd-c0bc-498a-95fc-bb452ec04d90
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # NTLM Overview
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic for the IT professional describes NTLM, any changes in functionality, and provides links to technical resources to Windows Authentication and NTLM for Windows Server 2012 and previous versions.
 

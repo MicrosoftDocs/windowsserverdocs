@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Scenario: Central Access Policy"
 ms.assetid: 7f285c9f-c3e8-4aae-9ff4-a9123815114e
 title: Scenario Central Access Policy
 author: billmath
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Scenario: Central Access Policy
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Central access policies for files enable organizations to centrally deploy and manage authorization policies that include conditional expressions that use user groups, user claims, device claims, and resource properties. (Claims are assertions about the attributes of the object with which they are associated). For example, to access high-business-impact (HBI) data, a user must be a full-time employee, obtain access from a managed device, and log on with a smart card. These policies are defined and hosted in Active Directory Domain Services (AD DS).
 
@@ -46,11 +47,11 @@ A central access policy rule has the following logical parts:
 
 The following two figures show the workflow in central access and audit policies.
 
-![solution guides](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide.JPG)
+![Diagram that shows the central access and audit policy concepts.](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide.JPG)
 
 **Figure 1** Central access and audit policy concepts
 
-![solution guides](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide_2.JPG)
+![Diagram that shows the central access policy workflow.](media/Scenario--Central-Access-Policy/DynamicAccessControl_RevGuide_2.JPG)
 
 **Figure 2** Central access policy workflow
 

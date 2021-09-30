@@ -3,8 +3,8 @@ title: delete shadows
 description: Reference article for the delete shadows command, which deletes shadow copies.
 ms.topic: reference
 ms.assetid: e29a84d2-04d1-4eb1-910a-5a47bddbc24d
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -28,7 +28,7 @@ delete shadows [all | volume <volume> | oldest <volume> | set <setID> | id <shad
 | oldest `<volume>` | Deletes the oldest shadow copy of the given volume. |
 | set `<setID>` | Deletes the shadow copies in the Shadow Copy Set of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment. |
 | id `<shadowID>` | Deletes a shadow copy of the given ID. You can specify an alias by using the **%** symbol if the alias exists in the current environment. |
-| exposed {`<drive> | <mountpoint>} |
+| exposed {`<drive>` \| `<mountpoint>`} | Deletes shadow copies exposed at the specified drive or mount point. |
 
 ## Additional References
 

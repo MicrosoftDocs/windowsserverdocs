@@ -1,6 +1,6 @@
 ---
 title: Display adapters should be enabled in virtual machines to provide video capabilities
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the Microsoft Virtual Machine Bus Video Device may be disabled in a virtual machine.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -9,11 +9,11 @@ ms.date: 8/16/2016
 ---
 # Display adapters should be enabled in virtual machines to provide video capabilities
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 
 
-*For more information about best practices and scans, see* [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+*For more information about best practices and scans, see* [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -41,6 +41,3 @@ Microsoft Virtual Machine Bus Video Device is a virtual video adapter optimized 
 *Use Device Manager in the guest operating system to enable the Microsoft Virtual Machine Bus Video Device.*
 
 The steps required to use Device Manager vary depending on the operating system. For instructions, see Help in the guest operating system.
-
-
-

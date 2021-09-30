@@ -3,15 +3,15 @@ title: scwcmd configure
 description: Reference article for the scwcmd configure command, which applies a Security Configuration Wizard (SCW)-generated security policy to a computer.
 ms.topic: reference
 ms.assetid: 6528b9dc-3d82-4228-b734-ed717458d74c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # scwcmd configure
 
-> Applies to: Windows Server 2012 R2 and Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2 and Windows Server 2012
 
 Applies a Security Configuration Wizard (SCW)-generated security policy to a computer. This command-line tool also accepts a list of computer names as input.
 

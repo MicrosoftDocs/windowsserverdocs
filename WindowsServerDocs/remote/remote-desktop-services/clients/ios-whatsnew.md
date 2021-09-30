@@ -3,9 +3,9 @@ title: What's new in the iOS client
 description: Learn about recent changes to the Remote Desktop client for iOS
 ms.topic: article
 author: heidilohr
-manager: lizross
+manager: femila
 ms.author: helohr
-ms.date: 12/02/2020
+ms.date: 07/19/2021
 ms.localizationpriority: medium
 ---
 # What's new in the iOS client
@@ -16,17 +16,68 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Help** > **Report an Issue**.
 
+## Updates for version 10.3.1
+
+Date published: June 28, 2021
+
+In this release we worked around a 0x907 (mismatched certificate) error code that was caused by third-party infrastructure returning an incorrect certificate in redirection scenarios. We also made some updates to improve compatibility and performance metrics when connecting to Azure Virtual Desktop (formerly known as Windows Virtual Desktop).
+
+## Updates for version 10.3.0
+
+Date published: May 27, 2021
+
+In this release, we've made some significant updates to the shared underlying code that powers the Remote Desktop experience across all our clients. We've also added some new features and addressed bugs and crashes that were showing up in error reporting.
+
+- You can now drag IME candidate window in the client.
+- Integrated Kerberos support in the CredSSP security protocol sequence.
+- Added support for HTTP proxies in Azure Virtual Desktop and on-prem scenarios.
+- Made updates to improve interoperability with current and upcoming features in the Azure Virtual Desktop service.
+
+## Updates for version 10.2.5
+
+*Date published: 03/29/2021*
+
+It's time for a small update to address some reported bugs. In this version, we made the following updates:
+
+- Fixed NETBIOS name resolution on iOS 14.
+- Updated the app to proactively request local network access to enable connections to PCs around you.
+- Fixed an issue where an RD Gateway connection would fail with a 0x3000064 error code.
+- Fixed a bug where workspace discovery and download would fail if the port number was included in HTTP GET requests.
+- Added examples of PC host names to the PC Name page in the Add/Edit PC UX.
+- Addressed some VoiceOver accessibility issues.
+
+## Updates for version 10.2.4
+
+*Date published: 02/01/2021*
+
+In this release, we've made the following changes to the connection bar and in-session user experience:
+
+- You can now collapse the connection bar by moving it into one of the four corners of the screen.
+- On iPads and large iPhones you can dock the connection bar to the left or right edge of the screen.
+- You can now see the zoom slider panel by pressing and holding the connection bar magnification button. The new zoom slider controls the magnification level of the session in both touch and mouse pointer mode.
+
+We also addressed some accessibility bugs and the following two issues:
+
+- The client now validates the PC name in the Add/Edit PC UI to make sure the name doesn't contain illegal characters.
+- Addressed an issue where the UI would stop resolving a workspace name during subscription.
+
+## Updates for version 10.2.3
+
+*Date published: 12/15/2020*
+
+In this release, we've fixed issues that caused crashes and interfered with the "Display Zoom View" setting. We've also tweaked the "Use Full Display" setting to only appear on applicable iPads and adjusted the available resolutions for iPhones and iPads.
+
 ## Updates for version 10.2.2
 
 *Date published: 11/23/2020*
 
-In this release we've addressed some bugs affecting users running iOS 14 and iPadOS 14.
+In this release, we've addressed some bugs affecting users running iOS 14 and iPadOS 14.
 
 ## Updates for version 10.2.1
 
 *Date published: 11/11/2020*
 
-It's time for a quick update. In this version we made the following fixes:
+It's time for a quick update. In this version, we made the following fixes:
 
 - Added support for newly released iPhone and iPad devices.
 - Addressed an issue where the client would return a 0x30000066 error when connecting using an RD Gateway server.
@@ -81,7 +132,7 @@ We've put together some bug fixes and feature updates for the 10.1.3 release. He
 
 In this update, we've addressed issues that were reported in the version 10.1.1 update.
 
-- Fixed a crash that occurred for some users when subscribing to a Windows Virtual Desktop feed using non-brokered authentication.
+- Fixed a crash that occurred for some users when subscribing to a Azure Virtual Desktop feed using non-brokered authentication.
 - Fixed the layout of workspace icons on the iPhone X, iPhone XS, and iPhone 11 Pro.
 
 ## Updates for version 10.1.1
@@ -120,7 +171,7 @@ Here's what's new for this version:
 - Fixed an issue where the SwiftPoint middle mouse button didn't work in iPadOS version 13.3.1 or earlier and iOS.
 - Fixed some bugs that prevented the client from recognizing the "rdp:" URI.
 - Addressed an issue where the in-session Immersive Switcher UI showed outdated app entries if a disconnect was server-initiated.
-- The client now supports the Azure Resource Manager-integrated version of Windows Virtual Desktop.
+- The client now supports the Azure Resource Manager-integrated version of Azure Virtual Desktop.
 
 ## Updates for version 10.0.7
 
@@ -139,7 +190,7 @@ It's time for a quick update with some bug fixes. Here’s what's new for this r
 - Sessions displayed in the switcher UI are now ordered by when they were launched.
 - Selecting the Back button in the Connection Center now takes you back to the last active session.
 - Swiftpoint mice are now released when switching away from the client to another app.
-- Improved interoperability with the Windows Virtual Desktop service.
+- Improved interoperability with the Azure Virtual Desktop service.
 - Fixed crashes that were showing up in error reporting.
 
 We appreciate all the comments sent to us through the App Store, in-app feedback, and email. In addition, special thanks to everyone who worked with us to diagnose issues.
@@ -227,7 +278,7 @@ We've been working hard to fix bugs and add useful features. Here's what's new i
 
 Here's what new in this release:
 
-- Support for the Windows Virtual Desktop service.
+- Support for the Azure Virtual Desktop service.
 - Updated Connection Center UI.
 - Updated in-session UI.
 
@@ -237,7 +288,7 @@ Here's what new in this release:
 
 It's been well over a year since we last updated the Remote Desktop Client for iOS. However, we're back with an exciting new update, and there will be many more updates to come on a regular basis from here on out. Here's what's new in version 10.0.0:
 
-- Support for the Windows Virtual Desktop service.
+- Support for the Azure Virtual Desktop service.
 - A new Connection Center UI.
 - A new in-session UI that can switch between connected PCs and apps.
 - New layout for the auxiliary on-screen keyboard.

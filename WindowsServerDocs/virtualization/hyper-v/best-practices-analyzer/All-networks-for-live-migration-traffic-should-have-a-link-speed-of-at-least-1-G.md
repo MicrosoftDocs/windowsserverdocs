@@ -1,6 +1,6 @@
 ---
 title: All networks for live migration traffic should have a link speed of at least 1 Gbps
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when none of the networks for live migration traffic have a link speed of at least 1 Gbps.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -9,7 +9,7 @@ ms.date: 8/16/2016
 ---
 # All networks for live migration traffic should have a link speed of at least 1 Gbps
 
-> Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 |Property|Details|
 |-|-|

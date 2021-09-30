@@ -3,15 +3,15 @@ title: scwcmd rollback
 description: Reference article for the scwcmd rollback command, which applies the most recent rollback policy available, and then deletes that rollback policy.
 ms.topic: reference
 ms.assetid: 4fd9f89b-0420-420a-ad20-4a328636b1e7
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # scwcmd rollback
 
-> Applies to: Windows Server 2012 R2 and Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2 and Windows Server 2012
 
 Applies the most recent rollback policy available, and then deletes that rollback policy.
 

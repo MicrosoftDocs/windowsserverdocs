@@ -1,17 +1,18 @@
 ---
+description: "Learn more about: Configuring cluster accounts in Active Directory"
 title: Configuring cluster accounts in Active Directory
-ms.date: 11/12/2012
+ms.date: 05/28/2021
 author: JasonGerend
 manager: lizross
 ms.author: jgerend
+ms.topic: how-to
 ---
 
 # Configuring cluster accounts in Active Directory
 
-Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008
 
 In Windows Server, when you create a failover cluster and configure clustered services or applications, the failover cluster wizards create the necessary Active Directory computer accounts (also called computer objects) and give them specific permissions. The wizards create a computer account for the cluster itself (this account is also called the cluster name object or CNO) and a computer account for most types of clustered services and applications, the exception being a Hyper-V virtual machine. The permissions for these accounts are set automatically by the failover cluster wizards. If the permissions are changed, they will need to be changed back to match cluster requirements. This guide describes these Active Directory accounts and permissions, provides background about why they are important, and describes steps for configuring and managing the accounts.
-
 
 ## Overview of Active Directory accounts needed by a failover cluster
 
@@ -32,11 +33,10 @@ This section describes the Active Directory computer accounts (also called Activ
 
 The following table describes the permissions required for these accounts.
 
-
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -82,7 +82,7 @@ The following diagram illustrates how problems can result if the cluster name ac
 
 ![Problems if cluster name is changed](media/configure-ad-accounts/Cc731002.beecc4f7-049c-4945-8fad-2cceafd6a4a5(WS.10).gif)
 
-If the type of problem shown in the diagram occurs, a certain event (1193, 1194, 1206, or 1207) is logged in Event Viewer. For more information about these events, see [https://go.microsoft.com/fwlink/?LinkId=118271](https://go.microsoft.com/fwlink/?linkid=118271).
+If the type of problem shown in the diagram occurs, a certain event (1193, 1194, 1206, or 1207) is logged in Event Viewer. For more information about these events, see [https://go.microsoft.com/fwlink/?LinkId=118271](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc756188(v=ws.10)).
 
 Note that a similar problem with creating an account for a clustered service or application can occur if the domain-wide quota for creating computer objects (by default, 10) has been reached. If it has, it might be appropriate to consult with the domain administrator about increasing the quota, although this is a domain-wide setting and should be changed only after careful consideration, and only after confirming that the preceding diagram does not describe your situation. For more information, see [Steps for troubleshooting problems caused by changes in cluster-related Active Directory accounts](#steps-for-troubleshooting-problems-caused-by-changes-in-cluster-related-active-directory-accounts), later in this guide.
 
@@ -111,52 +111,52 @@ The administrators of failover clusters might sometimes need to reset the passwo
 
 The account of the person who installs the cluster is important because it provides the basis from which a computer account is created for the cluster itself.
 
-The minimum group membership required to complete the following procedure depends on whether you are creating the domain account and assigning it the required permissions in the domain, or whether you are only placing the account (created by someone else) into the local **Administrators** group on the servers that will be nodes in the failover cluster. If the former, membership in **Account Operators** or equivalent, is the minimum required to complete this procedure. If the latter, membership in the local **Administrators** group on the servers that will be nodes in the failover cluster, or equivalent, is all that is required. Review details about using the appropriate accounts and group memberships at [https://go.microsoft.com/fwlink/?LinkId=83477](https://go.microsoft.com/fwlink/?linkid=83477).
+The minimum group membership required to complete the following procedure depends on whether you are creating the domain account and assigning it the required permissions in the domain, or whether you are only placing the account (created by someone else) into the local **Administrators** group on the servers that will be nodes in the failover cluster. If the former, membership in **Account Operators** or equivalent, is the minimum required to complete this procedure. If the latter, membership in the local **Administrators** group on the servers that will be nodes in the failover cluster, or equivalent, is all that is required. Review details about using the appropriate accounts and group memberships at [https://go.microsoft.com/fwlink/?LinkId=83477](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 #### To configure the account for the person who installs the cluster
 
-1.  Create or obtain a domain account for the person who installs the cluster. This account can be a domain user account or an **Account Operators** account. If you use a standard user account, you'll have to give it some extra permissions later in this procedure.
+1. Create or obtain a domain account for the person who installs the cluster. This account can be a domain user account or an **Account Operators** account. If you use a standard user account, you'll have to give it some extra permissions later in this procedure.
 
-2.  If the account that was created or obtained in step 1 isn't automatically included in the local **Administrators** group on computers in the domain, add the account to the local **Administrators** group on the servers that will be nodes in the failover cluster:
+2. If the account that was created or obtained in step 1 isn't automatically included in the local **Administrators** group on computers in the domain, add the account to the local **Administrators** group on the servers that will be nodes in the failover cluster:
 
-    1.  Click **Start**, click **Administrative Tools**, and then click **Server Manager**.
+    1. Click **Start**, click **Administrative Tools**, and then click **Server Manager**.
 
-    2.  In the console tree, expand **Configuration**, expand **Local Users and Groups**, and then expand **Groups**.
+    2. In the console tree, expand **Configuration**, expand **Local Users and Groups**, and then expand **Groups**.
 
-    3.  In the center pane, right-click **Administrators**, click **Add to Group**, and then click **Add**.
+    3. In the center pane, right-click **Administrators**, click **Add to Group**, and then click **Add**.
 
-    4.  Under **Enter the object names to select**, type the name of the user account that was created or obtained in step 1. If prompted, enter an account name and password with sufficient permissions for this action. Then click **OK**.
+    4. Under **Enter the object names to select**, type the name of the user account that was created or obtained in step 1. If prompted, enter an account name and password with sufficient permissions for this action. Then click **OK**.
 
-    5.  Repeat these steps on each server that will be a node in the failover cluster.
+    5. Repeat these steps on each server that will be a node in the failover cluster.
 
-> [!IMPORTANT]
-> These steps must be repeated on all servers that will be nodes in the cluster.
-<br>
+    > [!IMPORTANT]
+    > These steps must be repeated on all servers that will be nodes in the cluster.
+    <br>
 
 
 3. If the account that was created or obtained in step 1 is a domain administrator account, skip the rest of this procedure. Otherwise, give the account the **Create Computer objects** and **Read All Properties** permissions in the container that is used for computer accounts in the domain:
 
-   1.  On a domain controller, click **Start**, click **Administrative Tools**, and then click **Active Directory Users and Computers**. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Continue**.
+   1. On a domain controller, click **Start**, click **Administrative Tools**, and then click **Active Directory Users and Computers**. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Continue**.
 
-   2.  On the **View** menu, make sure that **Advanced Features** is selected.
+   2. On the **View** menu, make sure that **Advanced Features** is selected.
 
        When **Advanced Features** is selected, you can see the **Security** tab in the properties of accounts (objects) in **Active Directory Users and Computers**.
 
-   3.  Right-click the default **Computers** container or the default container in which computer accounts are created in your domain, and then click **Properties**. **Computers** is located in <b>Active Directory Users and Computers/</b><i>domain-node</i><b>/Computers</b>.
+   3. Right-click the default **Computers** container or the default container in which computer accounts are created in your domain, and then click **Properties**. **Computers** is located in <b>Active Directory Users and Computers/</b><i>domain-node</i><b>/Computers</b>.
 
-   4.  On the **Security** tab, click **Advanced**.
+   4. On the **Security** tab, click **Advanced**.
 
-   5.  Click **Add**, type the name of the account that was created or obtained in step 1, and then click **OK**.
+   5. Click **Add**, type the name of the account that was created or obtained in step 1, and then click **OK**.
 
-   6.  In the **Permission Entry for***container* dialog box, locate the **Create Computer objects** and **Read All Properties** permissions, and make sure that the **Allow** check box is selected for each one.
+   6. In the **Permission Entry for** *container* dialog box, locate the **Create Computer objects** and **Read All Properties** permissions, and make sure that the **Allow** check box is selected for each one.
 
-       ![Permission Entry dialog box](media/configure-ad-accounts/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
+       ![Screenshot that shows Create Computer objects option set to Allow. ](media/configure-ad-accounts/Cc731002.0a863ac5-2024-4f9f-8a4d-a419aff32fa0(WS.10).gif)
 
 ## Steps for prestaging the cluster name account
 
 It is usually simpler if you do not prestage the cluster name account, but instead allow the account to be created and configured automatically when you run the Create Cluster wizard. However, if it is necessary to prestage the cluster name account because of requirements in your organization, use the following procedure.
 
-Membership in the **Domain Admins** group, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [https://go.microsoft.com/fwlink/?LinkId=83477](https://go.microsoft.com/fwlink/?linkid=83477). Note that you can use the same account for this procedure as you will use when creating the cluster.
+Membership in the **Domain Admins** group, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [https://go.microsoft.com/fwlink/?LinkId=83477](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)). Note that you can use the same account for this procedure as you will use when creating the cluster.
 
 #### To prestage a cluster name account
 
@@ -202,13 +202,13 @@ Membership in the **Domain Admins** group, or equivalent, is the minimum require
 
     5.  Make sure that the user account that you just added is selected, and then, next to **Full Control**, select the **Allow** check box.
 
-        ![Permission Entry dialog box](media/configure-ad-accounts/Cc731002.fffaafe2-a494-498b-974c-8f9d70f7103b(WS.10).gif)
+        ![Screenshot that shows the Security tab in the Cluster1 Properties dialog box.](media/configure-ad-accounts/Cc731002.fffaafe2-a494-498b-974c-8f9d70f7103b(WS.10).gif)
 
 ## Steps for prestaging an account for a clustered service or application
 
 It is usually simpler if you do not prestage the computer account for a clustered service or application, but instead allow the account to be created and configured automatically when you run the High Availability wizard. However, if it is necessary to prestage accounts because of requirements in your organization, use the following procedure.
 
-Membership in the **Account Operators** group, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [https://go.microsoft.com/fwlink/?LinkId=83477](https://go.microsoft.com/fwlink/?linkid=83477).
+Membership in the **Account Operators** group, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [https://go.microsoft.com/fwlink/?LinkId=83477](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 ### To prestage an account for a clustered service or application
 
@@ -254,7 +254,7 @@ Event messages that fit the previous description indicate that the password for 
 
 For information about ensuring that cluster administrators have the correct permissions to perform the following procedure as needed, see Planning ahead for password resets and other account maintenance, earlier in this guide.
 
-Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure. In addition, your account must be given **Reset password** permission for the cluster name account (unless your account is a **Domain Admins** account or is the Creator Owner of the cluster name account). The account that was used by the person who installed the cluster can be used for this procedure. Review details about using the appropriate accounts and group memberships at [https://go.microsoft.com/fwlink/?LinkId=83477](https://go.microsoft.com/fwlink/?linkid=83477).
+Membership in the local **Administrators** group, or equivalent, is the minimum required to complete this procedure. In addition, your account must be given **Reset password** permission for the cluster name account (unless your account is a **Domain Admins** account or is the Creator Owner of the cluster name account). The account that was used by the person who installed the cluster can be used for this procedure. Review details about using the appropriate accounts and group memberships at [https://go.microsoft.com/fwlink/?LinkId=83477](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 #### To troubleshoot password problems with the cluster name account
 
@@ -268,9 +268,9 @@ Membership in the local **Administrators** group, or equivalent, is the minimum 
 
 ### Steps for troubleshooting problems caused by changes in cluster-related Active Directory accounts
 
-If the cluster name account is deleted or if permissions are taken away from it, problems will occur when you try to configure a new clustered service or application. To troubleshoot a problem where this might be the cause, use the Active Directory Users and Computers snap-in to view or change the cluster name account and other related accounts. For information about the events that are logged when this type of problem occurs (event 1193, 1194, 1206, or 1207), see [https://go.microsoft.com/fwlink/?LinkId=118271](https://go.microsoft.com/fwlink/?linkid=118271).
+If the cluster name account is deleted or if permissions are taken away from it, problems will occur when you try to configure a new clustered service or application. To troubleshoot a problem where this might be the cause, use the Active Directory Users and Computers snap-in to view or change the cluster name account and other related accounts. For information about the events that are logged when this type of problem occurs (event 1193, 1194, 1206, or 1207), see [https://go.microsoft.com/fwlink/?LinkId=118271](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc756188(v=ws.10)).
 
-Membership in the **Domain Admins** group, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [https://go.microsoft.com/fwlink/?LinkId=83477](https://go.microsoft.com/fwlink/?linkid=83477).
+Membership in the **Domain Admins** group, or equivalent, is the minimum required to complete this procedure. Review details about using the appropriate accounts and group memberships at [https://go.microsoft.com/fwlink/?LinkId=83477](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 #### To troubleshoot problems caused by changes in cluster-related Active Directory accounts
 
@@ -300,7 +300,7 @@ Membership in the **Domain Admins** group, or equivalent, is the minimum require
 
 9. For the cluster name account (also known as the cluster name object or CNO), ensure that **Allow** is selected for the **Create Computer objects** and **Read All Properties** permissions.
 
-   ![Permission Entry dialog box](media/configure-ad-accounts/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
+   ![Screenshot that shows the Permission Entry dialog box with the Create Computer objects option set to Allow.](media/configure-ad-accounts/Cc731002.f5977c4d-a62e-4b17-81e3-8c19ddca2078(WS.10).gif)
 
 10. Click **OK** until you have returned to the **Active Directory Users and Computers** snap-in.
 

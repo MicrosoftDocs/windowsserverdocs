@@ -3,8 +3,8 @@ title: rem
 description: Reference article for the rem command, which records comments in a script, batch, or config.sys file.
 ms.topic: reference
 ms.assetid: 1a45b585-a83c-4ff6-badd-ff40f34cec23
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -12,6 +12,9 @@ ms.date: 10/16/2017
 # rem
 
 Records comments in a script, batch, or config.sys file. If no comment is specified, **rem** adds vertical spacing.
+
+> [!NOTE]
+> This command is internal to the command-line interpreter, cmd.exe.
 
 ## Syntax
 
@@ -72,6 +75,17 @@ create partition logical
 assign f:
 ```
 
-## Additional References
+For multi-line comments, use conditional execution:
+
+```
+  Rem/||(
+    The REM statement evaluates to success,
+    so these lines will never be executed.
+    Keep in mind that you will need to escape closing parentheses
+    within multi-line comment blocks like shown in this example. ^)
+  )
+```
+
+## Additional references
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: "Manage Server Storage in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to manage all your server storage (including hard drives and storage spaces) from the Hard Drives pages on the Storage tab of the Dashboard.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 1836682e-c7bb-4dd5-a2b5-6ff032693574

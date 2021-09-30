@@ -3,15 +3,15 @@ title: tskill
 description: Reference article for the tskill command, which ends a process running in a session on a Remote Desktop Session Host server.
 ms.topic: reference
 ms.assetid: 08986e6a-6900-4ece-85a1-8f73b14db1b3
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # tskill
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ends a process running in a session on a Remote Desktop Session Host server.
 

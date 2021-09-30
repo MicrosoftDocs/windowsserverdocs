@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Active Directory Forest Recovery Virtualization"
 title: AD Forest Recovery Virtualization
 ms.author: daveba
 author: iainfoulds
@@ -9,7 +10,7 @@ ms.assetid: c49b40b2-598d-49aa-85b4-766bce960e0d
 ---
 # Active Directory Forest Recovery Virtualization
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 This topic describes the virtualized domain controller cloning feature in Windows Server 2016, 2012 R2, and 2012.
 
@@ -33,6 +34,6 @@ For step-by-step instructions about how to perform virtualized DC cloning, see [
 - [AD Forest Recovery - Determine how to recover](AD-Forest-Recovery-Determine-how-to-Recover.md)
 - [AD Forest Recovery - Perform initial recovery](AD-Forest-Recovery-Perform-initial-recovery.md)
 - [AD Forest Recovery - Procedures](AD-Forest-Recovery-Procedures.md)
-- [AD Forest Recovery - Frequently Asked Questions](AD-Forest-Recovery-FAQ.md)
+- [AD Forest Recovery - Frequently Asked Questions](ad-forest-recovery-faq.yml)
 - [AD Forest Recovery - Recovering a Single Domain within a Multidomain Forest](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)
 - [AD Forest Recovery - Forest Recovery with Windows Server 2003 Domain Controllers](AD-Forest-Recovery-Windows-Server-2003.md)

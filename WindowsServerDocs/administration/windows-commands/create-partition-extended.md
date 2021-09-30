@@ -3,15 +3,15 @@ title: create partition extended
 description: Reference article for the create partition extended command, which creates an extended partition on the disk with focus.
 ms.topic: reference
 ms.assetid: 4ad7cb66-9c66-4153-b94e-1030a7225070
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # create partition extended
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates an extended partition on the disk with focus. After the partition has been created, the focus automatically shifts to the new partition.
 

@@ -3,15 +3,15 @@ title: qwinsta
 description: Reference article for the qwinsta command, which displays information about sessions on a Remote Desktop Session Host server.
 ms.topic: reference
 ms.assetid: a793212a-7ecd-44cb-a77b-c5c2edb34979
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # qwinsta
 
-Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Displays information about sessions on a Remote Desktop Session Host server. The list includes information not only about active sessions but also about other sessions that the server runs.
 

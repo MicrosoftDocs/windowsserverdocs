@@ -10,7 +10,7 @@ ms.date: 02/15/2019
 
 # Get Started with Windows Admin Center
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 > [!Tip]
 > New to Windows Admin Center?
@@ -47,15 +47,15 @@ After you have completed the installation of Windows Admin Center, you can add s
 
 1. Click **+ Add** under **All Connections**.
 
-   ![Windows Admin Center - All Connections page](../media/launch/addserver0.png)
+   ![Windows Admin Center - All Connections page](../media/launch/use-get-started-4.png)
 
 2. Choose to add a server, cluster, Windows PC, or an Azure VM:
 
-   ![Windows Admin Center - Add resources page](../media/launch/ChooseConnectionType.png)
+   ![Windows Admin Center - Add resources page](../media/launch/use-get-started-5.png)
 
 3. Type the name of the server or cluster to manage and click **Submit**. The server or cluster will be added to your connection list on the overview page.
 
-   ![Windows Admin Center - Servers page](../media/launch/addserver2.png)
+   ![Windows Admin Center - Servers page](../media/launch/use-get-started-6.png)
 
    **-- OR --**
 
@@ -63,7 +63,7 @@ After you have completed the installation of Windows Admin Center, you can add s
 
  1. On the **Add Server Connection** page, choose the **Import Servers** tab.
 
-    ![Windows Admin Center - Import Servers tab](../media/launch/import-servers.png)
+    ![Windows Admin Center - Import Servers tab](../media/launch/use-get-started-7.png)
 
  2. Click **Browse** and select a text file that contains a comma, or new line separated, list of FQDNs for the servers you want to add.
 
@@ -76,7 +76,7 @@ After you have completed the installation of Windows Admin Center, you can add s
 
  1. On the **Add Server Connection** page, choose the **Search Active Directory** tab.
 
-    ![Windows Admin Center - Search Active Directory tab](../media/launch/search-ad.png)
+    ![Windows Admin Center - Search Active Directory tab](../media/launch/use-get-started-8.png)
 
  2. Enter your search criteria and click **Search**. Wildcards (*) are supported.
 
@@ -100,11 +100,11 @@ If you have installed Windows Admin Center on Windows Server, additional configu
 
 Under **All Connections**, select a server from the list and choose **Manage As** to specify the credentials that you will use to authenticate to the managed node:
 
-![All Connections, Manage As option](../media/launch-use-6.png)
+![All Connections, Manage As option](../media/launch/use-get-started-9.png)
 
 If Windows Admin Center is running in service mode on Windows Server, but you do not have Kerberos delegation configured, you must re-enter your Windows credentials:
 
-![Specify your credentials page](../media/launch-use-7.png)
+![Specify your credentials page](../media/launch/use-get-started-10.png)
 
 You may apply the credentials to all connections, which will cache them for that
 specific browser session. If you reload your browser, you must re-enter your
@@ -123,7 +123,7 @@ You can use tags to identify and filter related servers in your connection list.
 * Select a server or multiple servers in the All Connections list
 * Under **All Connections**, click **Edit Tags**
 
-![Windows Admin Center - Edit Tags option](../media/launch/tags-5.png)
+![Windows Admin Center - Edit Tags option](../media/launch/use-get-started-11.png)
 
 The **Edit Connection Tags** pane allows you to modify, add, or remove tags from your selected connection(s):
 
@@ -135,7 +135,7 @@ The **Edit Connection Tags** pane allows you to modify, add, or remove tags from
 
 * If a tag is applied to a subset of the selected connections, the check box is shown in an intermediate state. You can click the box to check it and apply the tag to all selected connections, or click again to uncheck it and remove the tag from all selected connections.
 
-![Windows Admin Center - Edit Connection Tags page](../media/launch/tags-6.png)
+![Windows Admin Center - Edit Connection Tags page](../media/launch/use-get-started-12.png)
 
 ### Filter connections by tag
 
@@ -143,11 +143,11 @@ Once tags have been added to one or more server connections, you can view the ta
 
 * To filter by a tag, select the filter icon next to the search box.
 
-   ![Windows Admin Center - Filter using the search box](../media/launch/tags-7.png)
+   ![Windows Admin Center - Filter using the search box](../media/launch/use-get-started-13.png)
 
    * You can select "or", "and", or "not" to modify the filter behavior of the selected tags.
 
-   ![Windows Admin Center - Filter Connections page](../media/launch/tags-8.png)
+   ![Windows Admin Center - Filter Connections page](../media/launch/use-get-started-14.png)
 
 ## Use PowerShell to import or export your connections (with tags)
 

@@ -1,15 +1,16 @@
 ---
+description: "Learn more about: Upgrade a guarded fabric to Windows Server 2019"
 title: Upgrade a guarded fabric to Windows Server 2019
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 11/21/2018
 ---
 
 # Upgrade a guarded fabric to Windows Server 2019
 
-> Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article describes the steps necessary to upgrade an existing guarded fabric from Windows Server 2016, Windows Server version 1709 or Windows Server version 1803 to Windows Server 2019.
 
@@ -50,7 +51,7 @@ To upgrade your HGS cluster, perform the following steps on each node of your cl
 
 1.  Remove the HGS server from your cluster by running `Clear-HgsServer` in an elevated PowerShell prompt. This cmdlet will remove the HGS replicated store, HGS websites, and node from the failover cluster.
 2.  If your HGS server is a domain controller (default configuration), you will need to run `adprep /forestprep` and `adprep /domainprep` on the first node being upgraded to prepare the domain for an OS upgrade. See the [Active Directory Domain Services upgrade documentation](../../identity/ad-ds/deploy/upgrade-domain-controllers.md#supported-in-place-upgrade-paths) for more information.
-3.  Perform an [in-place upgrade](../../get-started-19/install-upgrade-migrate-19.md) to Windows Server 2019.
+3.  Perform an [in-place upgrade](../../get-started/install-upgrade-migrate.md) to Windows Server 2019.
 4.  Run [Initialize-HgsServer](guarded-fabric-configure-additional-hgs-nodes.md) to join the node back to the cluster.
 
 Once all nodes have been upgraded to Windows Server 2019, you can optionally upgrade the HGS version to v2 to support new features such as Host Key Attestation.

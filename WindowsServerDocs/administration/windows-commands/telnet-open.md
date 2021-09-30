@@ -1,17 +1,17 @@
 ---
 title: telnet open
 description: Reference article for the telnet open command, which connects to a telnet server.
-s.topic: article
+ms.topic: article
 ms.assetid: e30ad68c-2366-4754-ac36-311a2392902a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # telnet: open
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Connects to a telnet server.
 

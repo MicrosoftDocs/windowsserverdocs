@@ -9,7 +9,7 @@ manager: mchad
 ---
 # Cluster to Cluster Storage Replica cross region in Azure
 
-> Applies to: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can configure Cluster to Cluster Storage Replicas for cross-region applications in Azure. In the examples below, we use a two-node cluster, but Cluster to Cluster storage replica isn't restricted to a two-node cluster. The illustration below is a two-node Storage Space Direct cluster that can communicate with each other, are in the same domain, and are cross-region.
 
@@ -157,7 +157,7 @@ Watch the video below for a complete walk-through of the process.
 
 14. Run [cluster validation tests](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) before moving on to the next step
 
-15. Start Windows PowerShell and use the [Test-SRTopology](/powershell/module/storagereplica/test-srtopology?view=win10-ps) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.
+15. Start Windows PowerShell and use the [Test-SRTopology](/powershell/module/storagereplica/test-srtopology) cmdlet to determine if you meet all the Storage Replica requirements. You can use the cmdlet in a requirements-only mode for a quick test as well as a long running performance evaluation mode.
 
 16. Configure cluster-to-cluster storage replica.
     Grant access from one cluster to another cluster in both directions:

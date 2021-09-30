@@ -4,13 +4,14 @@ description: You can use this topic to verify Windows Server 2016 Network Policy
 manager: brianlic
 ms.topic: article
 ms.assetid: fc77450e-2af1-47ba-bb23-1fd36d9efdbf
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 
 # Verify Configuration After NPS Changes
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to verify NPS configuration after an IP address or name change to the server.
 

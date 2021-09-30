@@ -1,15 +1,16 @@
 ---
 title: STEP 5 Test DirectAccess Connectivity from the Internet and Through the Cluster
-description: This topic is part of the Test Lab Guide - Demonstrate DirectAccess in a Cluster with Windows NLB for Windows Server 2016
+description: Learn how to test DirectAccess connectivity from the internet and through the cluster.
 manager: brianlic
 ms.topic: article
 ms.assetid: 8399bdfa-809a-45e4-9963-f9b6a631007f
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # STEP 5 Test DirectAccess Connectivity from the Internet and Through the Cluster
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 CLIENT1 is now ready for DirectAccess testing.
 

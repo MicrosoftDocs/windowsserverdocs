@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Add a Token-Decrypting Certificate"
 ms.assetid: 27e1e299-0beb-4e86-8143-1ba031dc3502
 title: Add a Token-Decrypting Certificate
 author: billmath
@@ -17,7 +18,7 @@ Federation servers use a token\-decryption certificate when a relying party fede
 
 You can use the following procedure to add the token\-decrypting certificate to the AD FS Management snap\-in from a file that you have exported.
 
-Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum required to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).
 
 ### To add a token\-decrypting certificate
 
@@ -33,4 +34,3 @@ Membership in **Administrators**, or equivalent, on the local computer is the mi
 [Checklist: Setting Up a Federation Server](Checklist--Setting-Up-a-Federation-Server.md)
 
 [Certificate Requirements for Federation Servers](../design/certificate-requirements-for-federation-servers.md)
-

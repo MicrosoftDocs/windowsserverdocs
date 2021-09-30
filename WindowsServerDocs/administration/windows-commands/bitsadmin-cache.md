@@ -3,14 +3,14 @@ title: bitsadmin cache
 description: Reference article for the bitsadmin cache command, which contains a list of the bitsadmin cache switches.
 ms.topic: reference
 ms.assetid: 9ae4a283-a187-4fe3-b05c-4b53732c27cb
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # bitsadmin cache
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Contains a list of the bitsadmin /cache switches.
 

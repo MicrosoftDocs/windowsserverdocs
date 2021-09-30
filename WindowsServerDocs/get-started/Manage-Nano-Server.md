@@ -3,7 +3,7 @@ title: Manage Nano Server
 description: updates, servicing packages, networking tracing, performance monitoring
 manager: DonGill
 ms.date: 09/06/2017
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
 author: jaimeo
 ms.author: jaimeo
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Manage Nano Server
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2016
 
 > [!IMPORTANT]
 > Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.
@@ -371,11 +371,11 @@ The command completed successfully.
 
 Other command-line options allow you to specify performance counter names of interest in a configuration file, redirecting output to a log file, among other things. See the [typeperf.exe documentation](/previous-versions/windows/it-pro/windows-xp/bb490960(v=technet.10)) for details.
 
-You can also use Perfmon.exe's graphical interface remotely with Nano Server targets. When adding performance counters to the view, specify the Nano Server target in the computer name instead of the default *<Local computer>*.
+You can also use Perfmon.exe's graphical interface remotely with Nano Server targets. When adding performance counters to the view, specify the Nano Server target in the computer name instead of the default *\<Local computer\>*.
 
 ### Interact with the Windows Event Log
 
-Nano Server supports the ```Get-WinEvent``` cmdlet, which provides Windows Event Log filtering and querying capabilities, both locally as well as on a remote computer. Detailed options and examples are available at the [Get-WinEvent documentation page](/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-5.1). This simple example retrieves the *Errors* noted in the *System* log during the past two days.
+Nano Server supports the ```Get-WinEvent``` cmdlet, which provides Windows Event Log filtering and querying capabilities, both locally as well as on a remote computer. Detailed options and examples are available at the [Get-WinEvent documentation page](/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-5.1&preserve-view=true). This simple example retrieves the *Errors* noted in the *System* log during the past two days.
 ```
 PS C:\> $StartTime = (Get-Date) - (New-TimeSpan -Day 2)
 PS C:\> Get-WinEvent -FilterHashTable @{LogName='System'; Level=2; StartTime=$StartTime} | select TimeCreated, Message

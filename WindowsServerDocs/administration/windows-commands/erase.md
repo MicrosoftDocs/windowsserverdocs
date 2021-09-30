@@ -3,8 +3,8 @@ title: erase
 description: Reference article for the erase command, which deletes one or more files.
 ms.topic: reference
 ms.assetid: 024a4d0f-8679-4e06-b46f-61fdaf5464bc
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -32,7 +32,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 | /f | Forces deletion of read-only files. |
 | /s | Deletes specified files from the current directory and all subdirectories. Displays the names of the files as they are being deleted. |
 | /q | Specifies quiet mode. You are not prompted for delete confirmation. |
-| /a[:]`<attributes>` | Deletes files based on the following file attributes:<ul><li>**r** Read-only files</li><li>**h** Hidden files</li><li>**i** Not content indexed files</li><li>**s** System files</li><li>**a** Files ready for archiving</li><li>**l** Reparse points</li><li>**-** Used as a prefix meaning 'not'</li></ul>. |
+| /a[:]`<attributes>` | Deletes files based on the following file attributes:<ul><li>**r** Read-only files</li><li>**h** Hidden files</li><li>**i** Not content indexed files</li><li>**s** System files</li><li>**a** Files ready for archiving</li><li>**l** Reparse points</li><li>**-** Used as a prefix meaning 'not'</li></ul> |
 | /? | Displays help at the command prompt. |
 
 #### Remarks

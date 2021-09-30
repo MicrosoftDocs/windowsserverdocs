@@ -3,15 +3,15 @@ title: wdsutil disable-transportserver
 description: Reference article for the wdsutil disable-transportserver command, which disables all services for a Transport Server.
 ms.topic: reference
 ms.assetid: a009706b-8e89-486b-8e3d-512cd9f4de74
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # wdsutil disable-transportserver
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Disables all services for a Transport Server.
 

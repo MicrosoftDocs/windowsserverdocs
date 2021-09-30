@@ -9,7 +9,7 @@ ms.date: 10/04/2016
 ---
 # Manage Windows virtual machines with PowerShell Direct
 
->Applies To: Windows 10, Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2022, Windows 10, Windows Server 2016, Windows Server 2019
 
 You can use PowerShell Direct to remotely manage a Windows 10, Windows Server 2016, or Windows Server 2019 virtual machine from a Windows 10, Windows Server 2016, or Windows Server 2019 Hyper-V host. PowerShell Direct allows Windows PowerShell management inside a virtual machine regardless of the network configuration or remote management settings on either the Hyper-V host or the virtual machine. This makes it easier for Hyper-V Administrators to automate and script virtual machine management and configuration.
 
@@ -25,7 +25,7 @@ If you're managing older virtual machines, use Virtual Machine Connection (VMCon
 
 1. On the Hyper-V host, open Windows PowerShell as Administrator.
 
-2. Use the [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession?view=powershell-7) cmdlet to connect to the virtual machine. Run one of the following commands to create a session by using the virtual machine name or GUID:
+2. Use the [Enter-PSSession](/powershell/module/microsoft.powershell.core/enter-pssession?view=powershell-7&preserve-view=true) cmdlet to connect to the virtual machine. Run one of the following commands to create a session by using the virtual machine name or GUID:
 
     ```
     Enter-PSSession -VMName <VMName>
@@ -38,7 +38,7 @@ If you're managing older virtual machines, use Virtual Machine Connection (VMCon
 3. Type your credentials for the virtual machine.
 4. Run whatever commands you need to. These commands run on the virtual machine that you created the session with.
 
-5.  When you're done, use the [Exit-PSSession](/powershell/module/microsoft.powershell.core/exit-pssession?view=powershell-7) to close the session.
+5.  When you're done, use the [Exit-PSSession](/powershell/module/microsoft.powershell.core/exit-pssession?view=powershell-7&preserve-view=true) to close the session.
 
     ```
     Exit-PSSession

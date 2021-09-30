@@ -3,14 +3,14 @@ title: Diskshadow
 description: Reference article for the Diskshadow command, which is a tool that exposes the functionality offered by the volume shadow copy service (VSS).
 ms.topic: reference
 ms.assetid: e962537d-b759-4368-b6f1-e8391cf7b221
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # Diskshadow
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Diskshadow.exe is a tool that exposes the functionality offered by the volume shadow copy Service (VSS). By default, Diskshadow uses an interactive command interpreter similar to that of Diskraid or Diskpart. Diskshadow also includes a scriptable mode.
 
@@ -37,7 +37,7 @@ You can run the following commands in the Diskshadow command interpreter or thro
 
 | Command | Description |
 | --------- | ----------- |
-| [set command](set_2.md) | Sets the context, options, verbose mode, and metadata file for creating shadow copies. |
+| [set command](./set.md) | Sets the context, options, verbose mode, and metadata file for creating shadow copies. |
 | [load metadata command](load-metadata.md) | Loads a metadata .cab file prior to importing a transportable shadow copy or loads the writer metadata in the case of a restore. |
 | [writer command](writer.md) | verifies that a writer or component is included or excludes a writer or component from the backup or restore procedure. |
 | [add command](add.md) | Adds volumes to the set of volumes that are to be shadow copied, or adds aliases to the alias environment. |

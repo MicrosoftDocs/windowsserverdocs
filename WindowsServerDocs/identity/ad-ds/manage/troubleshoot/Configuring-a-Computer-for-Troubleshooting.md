@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Configuring a Computer for Troubleshooting"
 ms.assetid: 155abe09-6360-4913-8dd9-7392d71ea4e6
 title: Configuring a Computer for Troubleshooting
 ms.author: daveba
@@ -9,11 +10,11 @@ ms.topic: article
 ---
 # Configuring a Computer for Troubleshooting
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Before you use advanced troubleshooting techniques to identify and fix Active Directory problems, configure your computers for troubleshooting. You should also have a basic understanding of troubleshooting concepts, procedures, and tools.
 
-For information about monitoring tools for Windows Server, see the Step-by-Step Guide for [Performance and Reliability Monitoring in Windows Server](https://go.microsoft.com/fwlink/?LinkId=123737)
+For information about monitoring tools for Windows Server, see the Step-by-Step Guide for [Performance and Reliability Monitoring in Windows Server](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771692(v=ws.10))
 
 ## Configuration tasks for troubleshooting
 
@@ -27,7 +28,7 @@ For information about installing RSAT, see the article [Remote Server Administra
 
 ### Configure Reliability and Performance Monitor
 
-Windows Server includes the Windows Reliability and Performance Monitor, which is a Microsoft Management Console (MMC) snap-in that combines the functionality of previous stand-alone tools, including Performance Logs and Alerts, Server Performance Advisor, and System Monitor. This snap-in provides a graphical user interface (GUI) for customizing Data Collector Sets and Event Trace Sessions.
+Windows Server includes the Windows Reliability and Performance Monitor, which is a Microsoft Management Console (MMC) snap-in that combines the functionality of previous stand-alone tools, including Performance Logs and Alerts and System Monitor. This snap-in provides a graphical user interface (GUI) for customizing Data Collector Sets and Event Trace Sessions.
 
 Reliability and Performance Monitor also includes Reliability Monitor, an MMC snap-in that tracks changes to the system and compares them to changes in system stability, providing a graphical view of their relationship.
 

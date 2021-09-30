@@ -1,9 +1,9 @@
 ---
 title: What's New in Windows Server, version 1709
-description: What are the new features in compute, identity, management, automation, networking, security, storage.
+description: What are the new features in compute, identity, management, automation, networking, security, and storage in Windows Server, version 1709.
 ms.topic: article
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.localizationpriority: medium
 ms.date: 06/03/2019
@@ -11,9 +11,7 @@ ms.date: 06/03/2019
 
 # What's New in Windows Server version 1709
 
-> Applies To: Windows Server (Semi-Annual Channel)
-
-<img src=../media/landing-icons/new.png style='float:left; padding:.5em;' alt=Icon showing a newspaper>&nbsp;To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server, version 1709](https://cloudblogs.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
+To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). The content in this section describes what's new and changed in Windows Server, version 1709. The new features and changes listed here are the ones most likely to have the greatest impact as you work with this release. Also see [Windows Server, version 1709](https://cloudblogs.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
 
 > [!IMPORTANT]
 > Windows Server, version 1709 is out of support as of April 9, 2019.
@@ -21,6 +19,7 @@ ms.date: 06/03/2019
 ## New cadence of releases
 
 Starting with this release, you have two options for receiving Windows Server feature updates:
+
 - **Long-Term Servicing Channel (LTSC)**: This is business as usual with 5 years of mainstream support and 5 years of extended support. You have the option to upgrade to the next LTSC release every 2-3 years in the same way that has been supported for the last 20 years.
 - **Semi-Annual Channel (SAC)**: This is a Software Assurance benefit and is fully supported in production. The difference is that it is supported for 18 months and there will be a new version every six months.
 
@@ -33,13 +32,13 @@ Release channels are summarized in the following table.
 | Availability | Software Assurance or Azure (cloud hosted) | All channels |
 | Naming convention | Windows Server, version YYMM | Windows Server YYYY |
 
-For more information, see [Comparison of servicing channels](../get-started-19/servicing-channels-19.md).
+For more information, see [Comparison of servicing channels](../get-started/servicing-channels-comparison.md).
 
 ## Application containers and micro-services
 
 - The Server Core container image has been further optimized for lift-and-shift scenarios where you can migrate existing code bases or applications into containers with minimal changes, and it's also 60% smaller.
 - The Nano Server container image is nearly 80% smaller.
-    - In the Windows Server Semi-Annual Channel, Nano Server as a container base OS image is decreased from 390 MB to 80 MB.
+  - In the Windows Server Semi-Annual Channel, Nano Server as a container base OS image is decreased from 390 MB to 80 MB.
 - Linux containers with Hyper-V isolation
 
 For more information, see [Changes to Nano Server in the next release of Windows Server](./nano-in-semi-annual-channel.md) and [Windows Server, version 1709 for developers](https://cloudblogs.microsoft.com/windowsserver/2017/09/13/sneak-peek-3-windows-server-version-1709-for-developers/).
@@ -85,15 +84,18 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
 ## Storage
 
 **Storage Replica**: The disaster recovery protection added by Storage Replica in Windows Server 2016 is now expanded to include:
-- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes.  For more information, see [Frequently Asked Questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.md).
+
+- **Test failover**: the option to mount the destination storage is now possible through the test failover feature. You can mount a snapshot of the replicated storage on destination nodes temporarily for testing or backup purposes.  For more information, see [Frequently Asked Questions about Storage Replica](../storage/storage-replica/storage-replica-frequently-asked-questions.yml).
 - **Project Honolulu support**: Support for graphical management of server to server replication is now available in Project Honolulu. This removes the requirement to use PowerShell to manage a common disaster protection workload.
 
 **SMB**:
+
 - **SMB1 and guest authentication removal**: Windows Server, version 1709 no longer installs the SMB1 client and server by default. Additionally, the ability to authenticate as a guest in SMB2 and later is off by default. For more information, review [SMBv1 is not installed by default in Windows 10, version 1709 and Windows Server, version 1709](https://support.microsoft.com/help/4034314/smbv1-is-not-installed-by-default-in-windows-10-rs3-and-windows-server).
 
 - **SMB2/SMB3 security and compatibility**: Additional options for security and application compatibility were added, including the ability to disable oplocks in SMB2+ for legacy applications, as well as require signing or encryption on per-connection basis from a client. For more information, review the SMBShare PowerShell module help.
 
 **Data Deduplication**:
+
 - **Data Deduplication now supports ReFS**: You no longer must choose between the advantages of a modern file system with ReFS and the Data Deduplication: now, you can enable Data Deduplication wherever you can enable ReFS. Increase storage efficiency by upwards of 95% with ReFS.
 - **DataPort API for optimized ingress/egress to deduplicated volumes**: Developers can now take advantage of the knowledge Data Deduplication has about how to store data efficiently to move data between volumes, servers, and clusters efficiently.
 
@@ -113,6 +115,7 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
 **Windows Networking at Parity with Linux for Kubernetes**: Windows is now on par with Linux in terms of networking. Customers can deploy mixed-OS, Kubernetes clusters in any environment including Azure, on-premises, and on 3rd-party cloud stacks with the same network primitives and topologies supported on Linux without the need for any workarounds or switch extensions.
 
 **Core network stack**: Several features of the core network stack are improved. For more information about these features, see [Core Network Stack Features in the Creators Update for Windows 10](https://techcommunity.microsoft.com/t5/networking-blog/bg-p/NetworkingBlog).
+
 - **TCP Fast Open (TFO)**: Support for TFO has been added to optimize the TCP 3-way handshake process. TFO establishes a secure TFO cookie in the first connection using a standard 3-way handshake.  Subsequent connections to the same server use the TFO cookie instead of a 3-way handshake to connect with zero round trip time.
 - **CUBIC**: Experimental Windows native implementation of CUBIC, a TCP congestion control algorithm is available. The following commands enable or disable CUBIC, respectively.
 
@@ -139,7 +142,7 @@ An issue, known as “SMBLoris”, which could result in denial of service, has 
 
   - **ISATAP and 6to4**: As a step towards future deprecation, the Creators Update will have these technologies disabled by default.
 - **Dead Gateway Detection (DGD)**: The DGD algorithm automatically transitions connections over to another gateway when the current gateway is unreachable. In this release, the algorithm is improved to periodically re-probe the network environment.
-- [Test-NetConnection](/powershell/module/nettcpip/test-netconnection?view=win10-ps) is a built-in cmdlet in Windows PowerShell that performs a variety of network diagnostics.  In this release we have enhanced the cmdlet to provide detailed information about both route selection as well as source address selection.
+- [Test-NetConnection](/powershell/module/nettcpip/test-netconnection) is a built-in cmdlet in Windows PowerShell that performs a variety of network diagnostics.  In this release we have enhanced the cmdlet to provide detailed information about both route selection as well as source address selection.
 
 **Software Defined Networking**
 

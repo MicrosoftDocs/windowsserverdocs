@@ -3,15 +3,15 @@ title: new-DiscoverImage
 description: Reference article for new-DiscoverImage, which creates a new discover image from an existing boot image.
 ms.topic: reference
 ms.assetid: ede9fbbb-0bba-4309-8c21-3cc13e1dc3cd
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # new-DiscoverImage
 
-Creates a new discover image from an existing boot image. Discover images are boot images that force the Setup.exe program to start in Windows Deployment Services mode and then discover a Windows Deployment Services server. Typically these images are used to deploy images to computers that are not capable of booting to PXE. For more information, see Creating Images ([https://go.microsoft.com/fwlink/?LinkId=115311](https://go.microsoft.com/fwlink/?LinkId=115311)).
+Creates a new discover image from an existing boot image. Discover images are boot images that force the Setup.exe program to start in Windows Deployment Services mode and then discover a Windows Deployment Services server. Typically these images are used to deploy images to computers that are not capable of booting to PXE. For more information, see Creating Images ([https://go.microsoft.com/fwlink/?LinkId=115311](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730907(v=ws.10))).
 
 ## Syntax
 

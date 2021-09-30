@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Networking
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 > [!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
@@ -47,15 +47,15 @@ You can use this topic to learn about the SDN technologies that are provided in 
 ### [Deploy a Software Defined Network infrastructure using scripts](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)
 This guide provides instructions on how to deploy Network Controller with virtual networks and gateways in a test lab environment.
 
-### [Network Controller](sdn/technologies/network-controller/Network-Controller.md)
+### [Network Controller](/azure-stack/hci/concepts/network-controller-overview)
 
 Network Controller provides a centralized, programmable point of automation to manage, configure, monitor, and troubleshoot virtual and physical network infrastructure in your datacenter.
 
-### [Software Load Balancing &#40;SLB&#41; for SDN](sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md)
+### [Software Load Balancing &#40;SLB&#41; for SDN](/azure-stack/hci/concepts/software-load-balancer)
 
 Cloud Service Providers \(CSPs\) and Enterprises that are deploying Software Defined Networking (SDN) in Windows Server 2016 can use Software Load Balancing \(SLB\) to evenly distribute tenant and tenant customer network traffic among virtual network resources. The Windows Server SLB enables multiple servers to host the same workload, providing high availability and scalability.
 
-### [RAS Gateway for SDN](sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md)
+### [RAS Gateway for SDN](/azure-stack/hci/concepts/gateway-overview)
 
 RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol \(BGP\) capable router in Windows Server 2016, is designed for Cloud Service Providers \(CSPs\) and Enterprises that host multiple tenant virtual networks using Hyper-V Network Virtualization.
 
@@ -63,7 +63,7 @@ RAS Gateway, which is a software-based, multitenant, Border Gateway Protocol \(B
 
 In software defined datacenters, network functions that are being performed by hardware appliances \(such as load balancers, firewalls, routers, switches, and so on\) are increasingly being virtualized as virtual appliances. This "network function virtualization" is a natural progression of server virtualization and network virtualization.
 
-### [Datacenter Firewall Overview](sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md)
+### [Datacenter Firewall Overview](/azure-stack/hci/concepts/datacenter-firewall-overview)
 
 Datacenter Firewall is a network layer, 5-tuple (protocol, source and destination port numbers, source and destination IP addresses), stateful, multitenant firewall.
 
@@ -120,11 +120,6 @@ Network Load Balancing \(NLB\) distributes traffic across several servers using 
 Network offload and optimization technologies in Windows Server 2016 include Software Only (SO) features and technologies, Software and Hardware (SH) integrated features and technologies, and Hardware Only (HO) features and technologies.
 
 The following offload and optimization technology documentation is also available.
-
-- [Converged Network Interface Card (NIC) Configuration Guide](technologies/conv-nic/cnic-top.md)
-- [Data Center Bridging (DCB)](technologies/dcb/dcb-top.md)
-- [Virtual Receive Side Scaling (vRSS)](technologies/vrss/vrss-top.md)
-
 
 ### [Network Policy Server](technologies/nps/nps-top.md)
 

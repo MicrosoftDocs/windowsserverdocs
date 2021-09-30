@@ -11,11 +11,11 @@ ms.localizationpriority: medium
 ---
 # Get started with the Microsoft Store Client
 
->Applies to: Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10
 
 You can use the Remote Desktop client for Windows to work with Windows apps and PCs remotely from a different Windows device.
 
-Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.md) if you have any questions.
+Use the following information to get started. Be sure to check out the [FAQ](remote-desktop-client-faq.yml) if you have any questions.
 
 > [!NOTE]
 > - Curious about the new releases for the Microsoft Store Client? Check out [What's new in the Microsoft Store Client](windows-whatsnew.md)

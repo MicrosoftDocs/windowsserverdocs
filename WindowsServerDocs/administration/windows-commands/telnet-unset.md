@@ -3,15 +3,15 @@ title: telnet unset
 description: Reference article for the telnet unset command, which turns off previously set options.
 ms.topic: reference
 ms.assetid: da9a0d99-1930-4858-93c7-0e9c3797ee09
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # telnet: unset
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Turns off previously set options.
 

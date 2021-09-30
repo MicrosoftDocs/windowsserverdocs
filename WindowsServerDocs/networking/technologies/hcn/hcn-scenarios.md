@@ -4,11 +4,12 @@ description: Sample showing how to use Host Compute Network Service API to creat
 ms.author: daschott
 author: daschott
 ms.date: 11/05/2018
+ms.topic: article
 ---
 
 # Common scenarios
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 ## Scenario: HCN
 

@@ -1,6 +1,6 @@
 ---
 title: "Add Entries to SETUP, ADD-INS, QUICK STATUS, and HELP Links"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to add tasks to the SETUP, ADD-INS, and QUICK STATUS task lists in Windows Server Essentials.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: c0a8f10d-fd85-4c8d-b9bb-176cb1db1f46
@@ -96,7 +96,7 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
    |id (Task)|The identifier of the task. This identifier must be a GUID. You create a new GUID for an **exe** task, but for a **global** task, you use the GUID that you created when you defined the task for the task pane of the sub-tab. For more information about creating a GUID, see [Create Guid (guidgen.exe)](https://go.microsoft.com/fwlink/?LinkId=116098).|
    |image|This field will be ignored.|
    |Name (Action)|Displays the name of the task.|
-   |Type (Action)|Describes the type of task. The task can one of the following:- **global** task, **exe**, or a url task. A **global** task is the same global task that you created when defining the tasks for the task pane in the sub-tab. For more information about creating a global task that can be used in both the tasks pane of the sub-tab and the Getting Started Tasks or Common Tasks lists of the home page, see œCreating the support classes? in œHow to: Create a Sub-Tab? of the [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648). An **exe** task can be used to run applications from the Getting Started Tasks or Common Tasks lists.|
+   |Type (Action)|Describes the type of task. The task can one of the following:- **global** task, **exe**, or a url task. A **global** task is the same global task that you created when defining the tasks for the task pane in the sub-tab. For more information about creating a global task that can be used in both the tasks pane of the sub-tab and the Getting Started Tasks or Common Tasks lists of the home page, see œCreating the support classes? in œHow to: Create a Sub-Tab? of the [Windows Server Solutions SDK](/previous-versions/windows/server-essentials/gg513988(v=msdn.10)). An **exe** task can be used to run applications from the Getting Started Tasks or Common Tasks lists.|
    |exelocation|The path to the application that is associated with the task. This attribute is only used for **exe** tasks.|
    |replaceid|The identifier of the task that is replaced with this task.|
    |assembly|The AssemblyName of the assembly which provides the class to implement quick status query. The assembly needs to be located in Program files\ windows server\bin\\.|
@@ -127,7 +127,7 @@ You can add tasks to the **SETUP**, **ADD-INS**, **QUICK STATUS** task lists, an
 
 10. Save the OEMHomePageContent.home file.
 
-    For how to implement a quick status query, please refer to documents and samples in the [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648).
+    For how to implement a quick status query, please refer to documents and samples in the [Windows Server Solutions SDK](/previous-versions/windows/server-essentials/gg513988(v=msdn.10)).
 
 #### Change the status of a SETUP/ADD-INS task
  The tasks that are listed in SETUP and ADD-INS can be toggled in states of completed (configured for Add-ins) and not completed (not configured for Add-ins).

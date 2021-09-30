@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Identity component updates"
 ms.assetid: 7e87ce2b-062e-479f-bcf2-585b6c42026a
 title: Identity component updates
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Identity component updates
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Lesson 1: Identity component updates

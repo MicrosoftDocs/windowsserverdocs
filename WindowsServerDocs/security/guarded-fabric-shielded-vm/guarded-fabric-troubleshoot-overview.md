@@ -1,10 +1,12 @@
 ---
+description: "Learn more about: Troubleshooting a Guarded Fabric"
 title: Troubleshooting a guarded fabric
-ms.topic: article
+ms.topic: troubleshooting
 ms.assetid: 55e954ec-6a5f-4b42-b6a7-1006f3e24556
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
+ms.date: 12/10/2020
 ---
 
 # Troubleshooting a Guarded Fabric

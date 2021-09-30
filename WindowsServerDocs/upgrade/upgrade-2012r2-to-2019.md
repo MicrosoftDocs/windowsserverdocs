@@ -1,7 +1,7 @@
 ---
 title: Upgrade Windows Server 2012 R2 to Windows Server 2019 | Microsoft Docs
 description: Learn how to perform an in-place upgrade to go from Windows Server 2012 R2 to Windows Server 2019.
-ms.topic: upgrade
+ms.topic: how-to
 author: RobHindman
 ms.author: robhind
 ms.date: 09/16/2019
@@ -82,7 +82,3 @@ After your upgrade completes, you must make sure the upgrade to Windows Server 2
 2. Make sure all of your applications are running and that your client connections to the applications are successful.
 
 If you think something might have gone wrong during your upgrade, copy and zip the `%SystemRoot%\Panther` (usually `C:\Windows\Panther`) directory and contact Microsoft support.
-
-## Related articles
-
-- For more details and information about Windows Server 2019, see [Get started with Windows Server 2019](../get-started-19/get-started-19.md).

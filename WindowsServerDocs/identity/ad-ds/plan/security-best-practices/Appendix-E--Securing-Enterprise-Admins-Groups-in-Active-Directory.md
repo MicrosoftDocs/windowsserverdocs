@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Appendix E: Securing Enterprise Admins Groups in Active Directory"
 ms.assetid: f643099e-f9c6-476f-9378-5a9228c39b33
 title: Appendix E - Securing Enterprise Admins Groups in Active Directory
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Appendix E: Securing Enterprise Admins Groups in Active Directory
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix E: Securing Enterprise Admins Groups in Active Directory
@@ -40,17 +41,17 @@ For the Enterprise Admins group in the forest:
 
 2.  If you are not managing the root domain for the forest, in the console tree, right-click \<Domain>, and then click **Change Domain** (where \<Domain> is the name of the domain you're currently administering).
 
-    ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_43.gif)
+    ![Screenshot that highlights the Change Domain menu option.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_43.gif)
 
 3.  In the **Change domain** dialog box, click **Browse**, select the root domain for the forest, and click **OK**.
 
-    ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_44.gif)
+    ![Screenshot that shows the OK button in the Change domain dialog box.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_44.gif)
 
 4.  To remove all members from the EA group:
 
     1.  Double-click the **Enterprise Admins** group and then click the **Members** tab.
 
-        ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_45.gif)
+        ![Screenshot that shows the Members tab within the Enterprise Admins group.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_45.gif)
 
     2.  Select a member of the group, click **Remove**, click **Yes**, and click **OK**.
 
@@ -60,24 +61,24 @@ For the Enterprise Admins group in the forest:
 
 1.  In **Server Manager**, click **Tools**, and click **Group Policy Management**.
 
-2.  In the console tree, expand \<Forest>\Domains&#92;\<Domain>, and then **Group Policy Objects** (where \<Forest> is the name of the forest and \<Domain> is the name of the domain where you want to set the Group Policy).
+2.  In the console tree, expandv \<Forest>\Domains&#92;\<Domain>, and then **Group Policy Objects** (where \<Forest> is the name of the forest and \<Domain> is the name of the domain where you want to set the Group Policy).
 
     > [!NOTE]
     > In a forest that contains multiple domains, a similar GPO should be created in each domain that requires that the Enterprise Admins group be secured.
 
 3.  In the console tree, right-click **Group Policy Objects**, and click **New**.
 
-    ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_46.gif)
+    ![Screenshot that shows the New menu option in the Group Policy Objects menu.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_46.gif)
 
 4.  In the **New GPO** dialog box, type \<GPO Name>, and click **OK** (where \<GPO Name> is the name of this GPO).
 
-    ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_47.gif)
+    ![Screenshot that shows where to type the GPO name and select the source starter GPO.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_47.gif)
 
 5.  In the details pane, right-click \<GPO Name>, and click **Edit**.
 
 6.  Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.
 
-    ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_48.gif)
+    ![Screenshot that shows where to select User Rights Assignment.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_48.gif)
 
 7.  Configure the user rights to prevent members of the Enterprise Admins group from accessing member servers and workstations over the network by doing the following:
 
@@ -87,7 +88,7 @@ For the Enterprise Admins group in the forest:
 
     3.  Type **Enterprise Admins**, click **Check Names**, and click **OK**.
 
-        ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_49.gif)
+        ![Screenshot that shows how to verify that you have configured the user rights to prevent members of the Enterprise Admins group from accessing member servers and workstations over the network.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_49.gif)
 
     4.  Click **OK**, and **OK** again.
 
@@ -102,7 +103,7 @@ For the Enterprise Admins group in the forest:
 
     3.  Type **Enterprise Admins**, click **Check Names**, and click **OK**.
 
-        ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_50.gif)
+        ![Screenshot that shows how to verify that you have configured the user rights to prevent members of the Enterprise Admins group from logging on as a batch job.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_50.gif)
 
     4.  Click **OK**, and **OK** again.
 
@@ -117,7 +118,7 @@ For the Enterprise Admins group in the forest:
 
     3.  Type **Enterprise Admins**, click **Check Names**, and click **OK**.
 
-        ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_51.gif)
+        ![Screenshot that shows how to verify that you have configured the user rights to prevent members of the EA group from logging on as a service.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_51.gif)
 
     4.  Click **OK**, and **OK** again.
 
@@ -132,7 +133,7 @@ For the Enterprise Admins group in the forest:
 
     3.  Type **Enterprise Admins**, click **Check Names**, and click **OK**.
 
-        ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_52.gif)
+        ![Screenshot that shows how to verify that you have configured user rights to prevent members of the Enterprise Admins group from logging on locally to member servers and workstations.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_52.gif)
 
     4.  Click **OK**, and **OK** again.
 
@@ -147,7 +148,7 @@ For the Enterprise Admins group in the forest:
 
     3.  Type **Enterprise Admins**, click **Check Names**, and click **OK**.
 
-        ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_53.gif)
+        ![Screenshot that shows how to verify that you have configured the user rights to prevent members of the Enterprise Admins group from accessing member servers and workstations via Remote Desktop Services.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_53.gif)
 
     4.  Click **OK**, and **OK** again.
 
@@ -159,11 +160,11 @@ For the Enterprise Admins group in the forest:
 
     2.  Right-click the OU that the GPO will be applied to and click **Link an existing GPO**.
 
-        ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_54.gif)
+        ![Screenshot that highlights the Link an existing GPO menu option.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_54.gif)
 
     3.  Select the GPO that you just created and click **OK**.
 
-        ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_55.gif)
+        ![Screenshot that shows where to select the GPO that you just created.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_55.gif)
 
     4.  Create links to all other OUs that contain workstations.
 
@@ -187,13 +188,13 @@ From any member server or workstation that is not affected by the GPO changes (s
 
 4.  When prompted to approve the elevation, click **Yes**.
 
-    ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_56.gif)
+    ![Screenshot that shows the dialog box where you approve the elevation.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_56.gif)
 
 5.  In the **Command Prompt** window, type **net use \\\\\<Server Name\>\c$**, where \<Server Name\> is the name of the member server or workstation you're attempting to access over the network.
 
-6.  The following screen shot shows the error message that should appear.
+6.  The following screenshot shows the error message that should appear.
 
-    ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_57.gif)
+    ![Screenshot that shows the error message that should appear.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_57.gif)
 
 #### Verify "Deny log on as a batch job" GPO Settings
 
@@ -248,7 +249,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 16. A dialog box similar to the following should appear.
 
-    ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_58.gif)
+    ![Screenshot that shows the Task Scheduler dialog box.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_58.gif)
 
 #### Verify "Deny log on as a service" GPO Settings
 
@@ -274,7 +275,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 11. When the service is restarted, a dialog box similar to the following should appear.
 
-    ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_59.gif)
+    ![Screenshot that shows a message that says that Windows could not start the Print Spooler server.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_59.gif)
 
 #### Revert Changes to the Printer Spooler Service
 
@@ -294,7 +295,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 1.  From any member server or workstation affected by the GPO changes, attempt to log on locally using an account that is a member of the EA group. A dialog box similar to the following should appear.
 
-    ![secure enterprise admin groups](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_60.gif)
+    ![Screenshot that shows a message that says that the sign-in method you're using isn't allowed.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_60.gif)
 
 #### Verify "Deny log on through Remote Desktop Services" GPO Settings
 

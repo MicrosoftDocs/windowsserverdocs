@@ -1,5 +1,6 @@
 ---
 title: Setting up an AD FS Deployment with AlwaysOn Availability Groups
+description: "Learn more about: Setting up an AD FS Deployment with AlwaysOn Availability Groups"
 author: billmath
 ms.author: billmath
 manager: daveba
@@ -9,15 +10,15 @@ ms.topic: article
 
 # Setting up an AD FS Deployment with AlwaysOn Availability Groups
 A highly available geo-distributed topology provides:
-* Elimination of a single point of failure: With failover capabilities, you can achieve a highly available ADFS infrastructure even if one of the data centers in a part of a globe goes down.
-* Improved performance: You can use the suggested deployment to provide a high-performance ADFS infrastructure
+* Elimination of a single point of failure: With failover capabilities, you can achieve a highly available AD FS infrastructure even if one of the data centers in a part of a globe goes down.
+* Improved performance: You can use the suggested deployment to provide a high-performance AD FS infrastructure
 
 AD FS can be configured for a highly available geo-distributed scenario.
 The following guide will walk through an overview of AD FS with SQL Always on Availability Groups and provide deployment considerations and guidance.
 
 ## Overview - AlwaysOn Availability Groups
 
-For more information on AlwaysOn Availability groups, see [Overview of AlwaysOn Availability Groups (SQL Server)](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver15)
+For more information on AlwaysOn Availability groups, see [Overview of AlwaysOn Availability Groups (SQL Server)](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)
 
 From the perspective of the nodes of an AD FS SQL Server farm, the AlwaysOn Availability group replaces the single SQL Server instance as the policy / artifact database.  The availability group listener is what the client (the AD FS security token service) uses to connect to SQL.
 The following diagram shows an AD FS SQL Server Farm with AlwaysOn Availability group.
@@ -33,7 +34,7 @@ At any given moment, only a single SQL Server instance may host the primary repl
 > [!NOTE]
 > If machines are running on Azure, set up the Azure virtual machines to enable the listener configuration to communicate with AlwaysOn Availability groups. For more information, [Virtual Machines: SQL Always On Listener](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener).
 
-For additional overview of AlwaysOn Availability Groups, see [Overview of Always On Availability Groups (SQL Server)](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server?view=sql-server-ver15).
+For additional overview of AlwaysOn Availability Groups, see [Overview of Always On Availability Groups (SQL Server)](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server).
 
 > [!NOTE]
 > If the organization requires failover across multiple datacenters, it is recommended to create an artifact database in each datacenter as well as enabling a background cache which reduces latency during request processing. Follow the instructions to do so in [Fine Tuning SQL and Reducing Latency](./adfs-sql-latency.md).
@@ -90,7 +91,7 @@ To deploy AD FS follow the initial links below to install the AD FS Role Service
 
 ## Configuring AD FS to use an AlwaysOn Availability group
 
-Configuring an AD FS farm with AlwaysOn Availability groups requires a slight modification to the AD FS deployment procedure. Ensure that each server instance is running the same version of SQL. To view the full list of prerequisites, restrictions, and recommendations for Always On availability groups, read [here](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability?view=sql-server-2017#PrerequisitesForDbs).
+Configuring an AD FS farm with AlwaysOn Availability groups requires a slight modification to the AD FS deployment procedure. Ensure that each server instance is running the same version of SQL. To view the full list of prerequisites, restrictions, and recommendations for Always On availability groups, read [here](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability?view=sql-server-2017&preserve-view=true#PrerequisitesForDbs).
 
 1.	The databases you wish to back up must be created before the AlwaysOn Availability groups can be configured.  AD FS creates its databases as part of the setup and initial configuration of the first federation service node of a new AD FS SQL Server farm.  Specify the database host name for the existing farm using SQL server. As part of the AD FS configuration, you must specify a SQL connection string, so you will have to configure the first AD FS farm to connect to a SQL instance directly (this is only temporary). For specific guidance on configuring an AD FS farm, including configuring an AD FS farm node with a SQL server connection string, see [Configure a Federation Server](../deployment/configure-a-federation-server.md).
 
@@ -190,7 +191,7 @@ Realize that it may take some time for the cluster name to successfully replicat
 
 1.	Connect to the Windows Server Failover Cluster (WSFC) node that hosts the SQL Server instance where you want to enable Always On Availability Groups.
 2.	On the Start menu, point to All Programs, point to Microsoft SQL Server, point to Configuration Tools, and click SQL Server Configuration Manager.
-3.	In SQL Server Configuration Manager, click SQL Server Services, right-click SQL Server (\<instance name>), where \<instance name> is the name of a local server instance for which you want to enable Always On Availability Groups, and click Properties.
+3.	In SQL Server Configuration Manager, click SQL Server Services, right-click SQL Server (```<instance name>```), where ```<instance name>``` is the name of a local server instance for which you want to enable Always On Availability Groups, and click Properties.
 4.	Select the Always On High Availability tab.
 5.	Verify that Windows failover cluster name field contains the name of the local failover cluster. If this field is blank, this server instance currently does not support Always On availability groups. Either the local computer is not a cluster node, the WSFC cluster has been shut down, or this edition of SQL Server that does not support Always On availability groups.
 6.	Select the Enable Always On Availability Groups check box, and click OK.
@@ -200,7 +201,7 @@ SQL Server Configuration Manager saves your change. Then, you must manually rest
 
 ## Back up AD FS Databases
 Back up the AD FS configuration and artifact databases with the full transaction logs. Place the back up in the chosen destination.
-Back up the ADFS Artifact and Configuration databases.
+Back up the AD FS Artifact and Configuration databases.
 - Tasks > Backup > Full > Add to a backup file > ok to create
 
 ![back up server](media/ad-fs-always-on/backUpADFS.png)
@@ -212,18 +213,18 @@ Back up the ADFS Artifact and Configuration databases.
 3.	To launch the New Availability Group Wizard, select the New Availability Group Wizard command.
 4.	The first time you run this wizard, an Introduction page appears. To bypass this page in the future, you can click Do not show this page again. After reading this page, click Next.
 5.	On the Specify Availability Group Options page, enter the name of the new availability group in the Availability group name field. This name must be a valid SQL Server identifier that is unique on the cluster and in your domain as a whole. The maximum length for an availability group name is 128 characters. e
-6.	Next, specify the cluster type. The possible cluster types depend on the SQL Server version and operating system. Choose either WSFC, EXTERNAL, or NONE. For details see [Specify Availability Group Name](/sql/database-engine/availability-groups/windows/specify-availability-group-name-page?view=sql-server-ver15) Page
+6.	Next, specify the cluster type. The possible cluster types depend on the SQL Server version and operating system. Choose either WSFC, EXTERNAL, or NONE. For details see [Specify Availability Group Name](/sql/database-engine/availability-groups/windows/specify-availability-group-name-page) Page
 
 ![name AoA Group and cluster](media/ad-fs-always-on/createAoAName.png)
 
 7.	On the Select Databases page, the grid lists user databases on the connected server instance that are eligible to become the availability databases. Select one or more of the listed databases to participate in the new availability group. These databases will initially be the initial primary databases.
-For each listed database, the Size column displays the database size, if known. The Status column indicates whether a given database meets the [prerequisites](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability?view=sql-server-ver15) for availability databases. It the prerequisites are not met, a brief status description indicates the reason that the database is ineligible; for example, if it does not use the full recovery model. For more information, click the status description.
+For each listed database, the Size column displays the database size, if known. The Status column indicates whether a given database meets the [prerequisites](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability) for availability databases. It the prerequisites are not met, a brief status description indicates the reason that the database is ineligible; for example, if it does not use the full recovery model. For more information, click the status description.
 If you change a database to make it eligible, click Refresh to update the databases grid.
 If the database contains a database master key, enter the password for the database master key in the Password column.
 
 ![select databases for AoA](media/ad-fs-always-on/createAoASelectDb.png)
 
-8.On the Specify Replicas page, specify and configure one or more replicas for the new availability group. This page contains four tabs. The following table introduces these tabs. For more information, see the [Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)](/sql/database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard?view=sql-server-ver15) topic.
+8.On the Specify Replicas page, specify and configure one or more replicas for the new availability group. This page contains four tabs. The following table introduces these tabs. For more information, see the [Specify Replicas Page (New Availability Group Wizard: Add Replica Wizard)](/sql/database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard) topic.
 
 | Tab      | Brief Description       |
 | ------------------ |:-------------:|
@@ -236,15 +237,15 @@ If the database contains a database master key, enter the password for the datab
 
 9. On the Select Initial Data Synchronization page, choose how you want your new secondary databases to be created and joined to the availability group. Choose one of the following options:
 - 	Automatic seeding
- - SQL Server automatically creates the secondary replicas for every database in the group. Automatic seeding requires that the data and log file paths are the same on every SQL Server instance participating in the group. Available on SQL Server 2016 (13.x) and later. See [Automatically initialize Always On Availability groups](/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group?view=sql-server-ver15).
+ - SQL Server automatically creates the secondary replicas for every database in the group. Automatic seeding requires that the data and log file paths are the same on every SQL Server instance participating in the group. Available on SQL Server 2016 (13.x) and later. See [Automatically initialize Always On Availability groups](/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group).
 - Full database and log backup
- - Select this option if your environment meets the requirements for automatically starting initial data synchronization (for more information, see [Prerequisites, Restrictions, and Recommendations, earlier in this topic)](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio?view=sql-server-ver15#Prerequisites).
+ - Select this option if your environment meets the requirements for automatically starting initial data synchronization (for more information, see [Prerequisites, Restrictions, and Recommendations, earlier in this topic)](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio#Prerequisites).
 If you select Full, after creating the availability group, the wizard will back up every primary database and its transaction log to a network share and restore the backups on every server instance that hosts an secondary replica. The wizard will then join every secondary database to the availability group.
 In the Specify a shared network location accessible by all replicas: field, specify a backup share to which all of the server instance that host replicas have read-write access. For more information, see Prerequisites, earlier in this topic. In the validation step, the wizard will perform a test to make sure the provided network location is valid, the test will create a database on the primary replica named "BackupLocDb_" followed by a Guid and perform backup to the provided network location, then restore it on the secondary replicas. It is safe to delete this database along with its backup history and backup file in case the wizard failed to delete them.
 - Join only
  - If you have manually prepared secondary databases on the server instances that will host the secondary replicas, you can select this option. The wizard will join the existing secondary databases to the availability group.
 - Skip initial data synchronization
- - Select this option if you want to use your own database and log backups of your primary databases. For more information, see [Start Data Movement on an Always On Secondary Database (SQL Server)](/sql/database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server?view=sql-server-ver15).
+ - Select this option if you want to use your own database and log backups of your primary databases. For more information, see [Start Data Movement on an Always On Secondary Database (SQL Server)](/sql/database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server).
 
 ![choose data sync option](media/ad-fs-always-on/createAoADataSync.png)
 
@@ -285,7 +286,7 @@ When the wizard completes, click Close to exit.
 
 ## Update the SQL Connection String
 Finally, use PowerShell to edit the AD FS properties to update the SQL connection string to use the DNS address of the AlwaysOn Availability group's listener.
-Run the configuration database change on each node and restart the ADFS service on all the ADFS nodes. The initial catalog value changes based on the farm version.
+Run the configuration database change on each node and restart the AD FS service on all the AD FS nodes. The initial catalog value changes based on the farm version.
 
 ```
 PS:\>$temp= Get-WmiObject -namespace root/ADFS -class SecurityTokenService

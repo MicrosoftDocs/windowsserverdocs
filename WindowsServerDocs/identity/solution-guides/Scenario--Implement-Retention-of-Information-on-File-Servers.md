@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Scenario: Implement Retention of Information on File Servers"
 ms.assetid: 81c55015-82e5-4ba1-b15e-cc7b49af28fc
 title: Scenario Implement Retention of Information on File Servers
 author: billmath
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Scenario: Implement Retention of Information on File Servers
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 A retention period is the amount of time that a document should be kept before it is expired. Depending on the organization, the retention period can be different. You can classify files in a folder as having a short, medium, or long-term retention period, and then assign a timeframe for each period. You may want to keep a file indefinitely by putting it on legal hold.
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Appendices"
 ms.assetid: 119881f6-637f-43de-8577-5f5eaf3281df
 title: Appendices
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Appendices
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Appendices are included in this document to augment the information contained in the body of the document. The list of appendices and a brief description of each in included the following table.
 

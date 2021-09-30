@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CA Backup and Restore Windows PowerShell cmdlets"
 ms.assetid: 7e195f5b-b194-40f3-a26d-5cf4ade5fc4d
 title: CA Backup and Restore Windows PowerShell cmdlets
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # CA Backup and Restore Windows PowerShell cmdlets
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 >
 > **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 >

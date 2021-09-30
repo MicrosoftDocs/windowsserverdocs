@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Develop a solution extension
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Solutions primarily define a unique type of object you wish to manage through Windows Admin Center.  These solutions/connection types are included with Windows Admin Center by default:
 
@@ -81,7 +81,7 @@ Next, build and side load your extension into Windows Admin Center.  Open a comm
 
     ```
     gulp build
-    gulp serve -p 4201
+    gulp serve --port 4201
     ```
 
 Note that you need to choose a port that is currently free. Make sure you do not attempt to use the port that Windows Admin Center is running on.

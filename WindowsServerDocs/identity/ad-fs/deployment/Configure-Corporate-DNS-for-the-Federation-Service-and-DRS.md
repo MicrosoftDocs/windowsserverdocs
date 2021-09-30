@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Configure Corporate DNS for the Federation Service and DRS"
 ms.assetid: aca4a4fa-b12c-4eed-a499-f9aedb7d2fd6
 title: Configure Corporate DNS for the Federation Service and DRS
 author: billmath
@@ -20,7 +21,7 @@ You must add the following resource records to corporate Domain Name System \(DN
 
 You can use the following procedure to add a host \(A\) and alias \(CNAME\) resource records to corporate DNS for the federation server and the Device Registration Service.
 
-Membership in **Administrators**, or equivalent, is the minimum requirement to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, is the minimum requirement to complete this procedure.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 #### To add a host \(A\) and alias \(CNAME\) resource records to DNS for your federation server
 
@@ -48,5 +49,3 @@ Membership in **Administrators**, or equivalent, is the minimum requirement to c
 [Windows Server 2012 R2 AD FS Deployment Guide](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
 
 [Deploying a Federation Server Farm](../../ad-fs/deployment/Deploying-a-Federation-Server-Farm.md)
-
-

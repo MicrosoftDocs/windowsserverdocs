@@ -1,16 +1,16 @@
 ---
 title: Kerberos Constrained Delegation Overview
-description: Windows Server Security
+description: Learn about the new capabilities for Kerberos constrained delegation in Windows Server 2012 R2 and Windows Server 2012.
 ms.topic: article
 ms.assetid: 51923b0a-0c1a-47b2-93a0-d36f8e295589
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # Kerberos Constrained Delegation Overview
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This overview topic for the IT professional describes new capabilities for Kerberos constrained delegation in  Windows Server 2012 R2  and  Windows Server 2012.
 

@@ -7,14 +7,14 @@ metadata:
   title: Virtualization documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Virtualization in Windows Server is one of the foundational technologies required to create your software defined infrastructure. # Required; article description that is displayed in search results. < 160 chars.
   ms.topic: landing-page # Required
-  author: eross-msft #Required; your GitHub user alias, with correct capitalization.
-  ms.author: lizross #Required; microsoft alias of author; optional team alias.
+  author: JasonGerend #Required; your GitHub user alias, with correct capitalization.
+  ms.author: jgerend #Required; microsoft alias of author; optional team alias.
   ms.prod: windows-server
   manager: brianlic
   ms.technology: compute
   ms.assetid: c248b41f-0de3-7136-9a25-b4b07e41ebf0
   ms.localizationpriority: high
- 
+
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
 landingContent:
@@ -22,7 +22,7 @@ landingContent:
 # Start card title with a verb
   # Card
   - title: Windows Containers
-    linkLists: 
+    linkLists:
       - linkListType: overview
         links:
           - text: Windows Containers

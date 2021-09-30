@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Identifying Your Functional Level Upgrade"
 ms.assetid: 231158d8-5e81-4630-b8d5-93fee16e0cd3
 title: Identifying Your Functional Level Upgrade
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Identifying Your Functional Level Upgrade
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Before you can raise domain and forest functional levels, you have to evaluate your current environment and identify the functional level requirement that best meets the needs of your organization. Assess your current environment by identifying the domains in your forest, the domain controllers that are located in each domain, the operating system and service packs that each domain controller is running, and the date that you plan to upgrade the domain controllers. If you plan to retire a domain controller, make sure that you understand the full impact that doing so will have on your environment.
 

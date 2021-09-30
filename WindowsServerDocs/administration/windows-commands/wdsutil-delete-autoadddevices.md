@@ -3,15 +3,15 @@ title: wdsutil delete-autoadddevices
 description: Reference article for the wdsutil delete-autoadddevices command, which deletes computers that are pending, rejected, or approved from the Auto-add database.
 ms.topic: reference
 ms.assetid: 8dcaca6a-212e-4c36-98e3-00938eef6b9c
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # wdsutil delete-autoadddevices
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Deletes computers that are pending, rejected, or approved from the auto-add database. This database stores information about these computers on the server.
 

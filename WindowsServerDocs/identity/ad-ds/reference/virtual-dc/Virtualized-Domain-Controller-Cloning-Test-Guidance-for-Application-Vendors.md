@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Virtualized Domain Controller Cloning Test Guidance for Application Vendors"
 ms.assetid: fde99b44-cb9f-49bf-b888-edaeabe6b88d
 title: Virtualized Domain Controller Cloning Test Guidance for Application Vendors
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Virtualized Domain Controller Cloning Test Guidance for Application Vendors
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains what application vendors should consider to help ensure their application continues to work as expected after the virtualized domain controller (DC) cloning process completes. It covers those aspects of the cloning process that interest application vendors and scenarios that may warrant additional testing. Application vendors who have validated that their application works on virtualized domain controllers that have been cloned are encouraged to list the name of the application in the Community Content at the bottom of this topic, along with a link to your organization's web site where users can learn more about the validation.
 

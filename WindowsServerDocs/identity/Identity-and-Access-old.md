@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Identity and Access in Windows Server 2016"
 ms.assetid: c248b41f-0de3-4247-9a25-b4b08e50ebf0
 title: Identity and Access
 author: billmath
@@ -11,7 +12,7 @@ ms.localizationpriority: medium
 
 # Identity and Access in Windows Server 2016
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.

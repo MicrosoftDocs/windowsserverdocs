@@ -1,6 +1,6 @@
 ---
 title: Windows hypervisor must be running
-description: Gives instructions to resolve the issue reported by this Best Practices Analyzer rule.
+description: Learn what to do when Windows hypervisor is not running.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -9,7 +9,7 @@ ms.date: 10/03/2016
 ---
 # Windows hypervisor must be running
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 |Property|Details|
 |-|-|

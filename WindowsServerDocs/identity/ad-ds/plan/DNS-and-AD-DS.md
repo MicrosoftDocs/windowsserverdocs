@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: DNS and AD DS"
 ms.assetid: c32606b4-2ee2-4df3-a704-8ac6723e188f
 title: DNS and AD DS
 ms.author: daveba
@@ -10,7 +11,7 @@ ms.topic: article
 
 # DNS and AD DS
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Active Directory Domain Services (AD DS) uses Domain Name System (DNS) name resolution services to make it possible for clients to locate domain controllers and for the domain controllers that host the directory service to communicate with each other.
 

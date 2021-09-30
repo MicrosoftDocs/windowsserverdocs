@@ -1,16 +1,16 @@
 ---
 title: Work with Software Restriction Policies Rules
-description: Windows Server Security
+description: Learn about procedures working with certificate, path, internet zone and hash rules using Software Restriction Policies.
 ms.topic: article
 ms.assetid: 4a8047d5-9bb9-4bed-bc8f-583a237731e2
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # Work with Software Restriction Policies Rules
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic describes procedures working with certificate, path, internet zone and hash rules using Software Restriction Policies.
 

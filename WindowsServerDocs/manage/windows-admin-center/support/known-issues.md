@@ -9,7 +9,7 @@ ms.date: 06/07/2019
 ---
 # Windows Admin Center Known Issues
 
-> Applies to: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 If you encounter an issue not described on this page, please [let us know](https://aka.ms/WACfeedback).
 
@@ -42,6 +42,10 @@ If you encounter an issue not described on this page, please [let us know](https
 
 - When you update Windows Admin Center, you must reinstall your extensions.
 - If you add an extension feed that is inaccessible, there is no warning. [14412861]
+
+## Partner extension issues
+
+- Dell's EMC OpenManage Integration extension utilizes APIs provided by Windows Admin Center to push files onto target nodes. This API only works when the user is a gateway administrator and does not support non-admin use.
 
 ## Browser Specific Issues
 

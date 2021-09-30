@@ -4,14 +4,14 @@ description: An overview of Security in Windows Server 2016
 ms.topic: article
 ms.date: 07/27/2018
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.localizationpriority: medium
 ---
 # Security and Assurance in Windows Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
@@ -62,7 +62,7 @@ This guide provides information about how to resolve issues you may encounter in
 This white paper provides an overview of how shielded VMs provide increased overall security to prevent tampering.
 
 ## Privileged Access Management
-### [Securing Privileged Access](../identity/securing-privileged-access/securing-privileged-access.md)
+### [Securing Privileged Access](/security/compass/overview)
 A road-map for how you can secure your privileged access. This road-map is built based on the combined expertise of the server security team, Microsoft IT, Azure team and the Microsoft Consulting Services
 
 ### [Just in Time Administration with Microsoft Identity Manager](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)

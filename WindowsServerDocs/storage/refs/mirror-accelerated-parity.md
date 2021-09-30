@@ -1,6 +1,7 @@
 ---
+description: "Learn more about: Mirror-accelerated parity"
 title: Mirror-accelerated parity
-ms.author: gawatu
+ms.author: daknappe
 manager: masriniv
 ms.topic: article
 author: gawatu
@@ -9,11 +10,11 @@ ms.assetid:
 ---
 # Mirror-accelerated parity
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 Storage Spaces can provide fault tolerance for data using two fundamental techniques: mirror and parity. In [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md), ReFS introduces mirror-accelerated parity, which enables you to create volumes that use both mirror and parity resiliencies. Mirror-accelerated parity offers inexpensive, space-efficient storage without sacrificing performance.
 
-![Mirror-Accelerated-Parity-Volume](media/mirror-accelerated-parity/Mirror-Accelerated-Parity-Volume.png)
+![Diagram depicting the mirror accelerated parity volume.](media/mirror-accelerated-parity/Mirror-Accelerated-Parity-Volume.png)
 
 ## Background
 
@@ -29,13 +30,13 @@ ReFS actively rotates data between mirror and parity, in real-time. This allows 
 
 To rotate data between mirror and parity, ReFS logically divides the volume into regions of 64 MiB, which are the unit of rotation. The image below depicts a mirror-accelerated parity volume divided into regions.
 
-![Mirror-Accelerated-Parity-Volume-with-Storage-Containers](media/mirror-accelerated-parity/Mirror-Accelerated-Parity-Volume-with-Storage-Containers.png)
+![Diagram depicting mirror accelerated parity volume with storage containers.](media/mirror-accelerated-parity/Mirror-Accelerated-Parity-Volume-with-Storage-Containers.png)
 
 ReFS begins rotating full regions from mirror to parity once the mirror tier has reached a specified capacity level. Instead of immediately moving data from mirror to parity, ReFS waits and retains data in mirror as long as possible, allowing ReFS to continue delivering optimal performance for the data (see “IO performance” below).
 
 When data is moved from mirror to parity, the data is read, parity encodings are computed, and then that data is written to parity. The animation below illustrates this using a three-way mirrored region that is converted into an erasure coded region during rotation:
 
-![Mirror-Accelerated-Parity-Rotation](media/mirror-accelerated-parity/Container-Rotation.gif)
+![Animation showing mirror accelerated parity rotation.](media/mirror-accelerated-parity/Container-Rotation.gif)
 
 ## IO on mirror-accelerated parity
 ### IO behavior
@@ -45,17 +46,17 @@ When data is moved from mirror to parity, the data is read, parity encodings are
 
     - **1a.** If the incoming write modifies existing data in mirror, ReFS will modify the data in place.
     - **1b.** If the incoming write is a new write, and ReFS can successfully find enough free space in mirror to service this write, ReFS will write to mirror.
-    ![Write-to-Mirror](media/mirror-accelerated-parity/Write-to-Mirror.png)
+    ![Screenshot showing how the ReFS service writes to mirror.](media/mirror-accelerated-parity/Write-to-Mirror.png)
 
 2. **Writes to Mirror, Reallocated from Parity:**
 
     If the incoming write modifies data that's in parity, and ReFS can successfully find enough free space in mirror to service the incoming write, ReFS will first invalidate the previous data in parity and then write to mirror. This invalidation is a quick and inexpensive metadata operation that helps meaningfully improve write performance made to parity.
-    ![Reallocated-Write](media/mirror-accelerated-parity/Reallocated-Write.png)
+    ![Screenshot showing how the ReFS service writes to mirror, reallocated from parity.](media/mirror-accelerated-parity/Reallocated-Write.png)
 
 3. **Writes to Parity:**
 
     If ReFS cannot successfully find enough free space in mirror, ReFS will write new data to parity or modify existing data in parity directly. The “Performance optimizations” section below provides guidance that helps minimize writes to parity.
-    ![Write-to-Parity](media/mirror-accelerated-parity/Write-to-Parity.png)
+    ![Screenshot showing how the ReFS service writes to parity.](media/mirror-accelerated-parity/Write-to-Parity.png)
 
 **Reads:** ReFS will read directly from the tier containing the relevant data. If parity is constructed with HDDs, the cache in Storage Spaces Direct will cache this data to accelerate future reads.
 

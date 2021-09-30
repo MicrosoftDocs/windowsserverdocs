@@ -1,16 +1,16 @@
 ---
 title: Windows Authentication Architecture
-description: Windows Server Security
+description: Learn about the basic architectural scheme for Windows authentication.
 ms.topic: article
 ms.assetid: 07c9d6bb-9b03-407d-89b6-97c7551b256b
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/12/2016
 ---
 # Windows Authentication Architecture
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This overview topic for the IT professional explains the basic architectural scheme for Windows authentication.
 

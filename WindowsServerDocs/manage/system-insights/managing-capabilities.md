@@ -3,13 +3,13 @@ title: Managing capabilities
 description: System Insights exposes a variety of settings that can be configured for each capability, and these settings can be tuned to address the specific needs of your deployment. This topic describes how to manage the various settings for each capability through Windows Admin Center or PowerShell, providing basic PowerShell examples and Windows Admin Center screenshots to demonstrate how to adjust these settings.
 ms.topic: article
 author: gawatu
-ms.author: gawatu
+ms.author: daknappe
 manager: mallikarjun.chadalapaka
 ms.date: 6/05/2018
 ---
 # Managing capabilities
 
->Applies To: Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 In Windows Server 2019, System Insights exposes a variety of settings that can be configured for each capability, and these settings can be tuned to address the specific needs of your deployment. This topic describes how to manage the various settings for each capability through Windows Admin Center or PowerShell, providing basic PowerShell examples and Windows Admin Center screenshots to demonstrate how to adjust these settings.
 
@@ -80,7 +80,7 @@ System Insights logs an event each time a capability finishes a prediction. Thes
 | None | 132 |
 
 >[!TIP]
->Use [Azure Monitor](https://azure.microsoft.com/services/monitor/) or [System Center Operations Manager](/system-center/scom/welcome?view=sc-om-1807) to aggregate these events and see prediction results across a group of machines.
+>Use [Azure Monitor](https://azure.microsoft.com/services/monitor/) or [System Center Operations Manager](/system-center/scom/welcome?view=sc-om-1807&preserve-view=true) to aggregate these events and see prediction results across a group of machines.
 
 
 ## Setting a capability schedule

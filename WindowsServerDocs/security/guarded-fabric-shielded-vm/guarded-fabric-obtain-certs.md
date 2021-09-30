@@ -1,16 +1,17 @@
 ---
 title: Obtain certificates for HGS
+description: "Learn more about: Obtain certificates for HGS"
 ms.topic: article
 ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 09/25/2019
 ---
 
 # Obtain certificates for HGS
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 When you deploy HGS, you will be asked to provide signing and encryption certificates that are used to protect the sensitive information needed to start up a shielded VM.
 These certificates never leave HGS, and are only used to decrypt shielded VM keys when the host on which they're running has proven it is healthy.
@@ -86,7 +87,7 @@ Subject name             | Address that HGS clients (that is, Guarded hosts) wil
 Subject alternative name | If you will be using a different DNS name to reach your HGS cluster (e.g. if it is behind a load balancer, or you are using different addresses for a subset of nodes in complex topology), be sure to include those DNS names in the SAN field of your certificate request. Note that if SAN extension is populated, the Subject name is ignored, and hence SAN should include all values, including the one you would normally put in Subject name.
 
 The options for specifying this certificate when initializing the HGS server are covered in [Configure the first HGS node](guarded-fabric-initialize-hgs.md).
-You can also add or change the SSL certificate at a later time using the [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver?view=win10-ps) cmdlet.
+You can also add or change the SSL certificate at a later time using the [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) cmdlet.
 
 ## Next step
 

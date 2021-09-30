@@ -3,14 +3,14 @@ title: bitsadmin util and getieproxy
 description: Reference article for the bitsadmin util and getieproxy command, which retrieves the proxy usage for the given service account.
 ms.topic: reference
 ms.assetid: 6d50c7e3-f4eb-4ca5-9f0c-4ed396087db6
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # bitsadmin util and getieproxy
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Retrieves the proxy usage for the given service account. This command shows the value for each proxy usage, not just the proxy usage you specified for the service account. For details about setting the proxy usage for specific service accounts, see the [bitsadmin util and setieproxy](bitsadmin-util-and-setieproxy.md) command.
 

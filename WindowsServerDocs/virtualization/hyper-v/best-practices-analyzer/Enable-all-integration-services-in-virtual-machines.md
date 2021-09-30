@@ -1,6 +1,6 @@
 ---
 title: Enable all integration services in virtual machines
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when one or more integration services are disabled or not working in a virtual machine.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -9,9 +9,9 @@ ms.date: 8/16/2016
 ---
 # Enable all integration services in virtual machines
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-For more information about best practices and scans, see [Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=122786).
+For more information about best practices and scans, see [Best Practices Analyzer](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759260(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -57,6 +57,3 @@ In the following sections, italics indicates UI text that appears in the Best Pr
     ```
     sc config <service-name> start=auto
     ```
-
-
-

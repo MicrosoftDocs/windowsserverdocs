@@ -1,15 +1,16 @@
 ---
 title: Configure server certificate auto-enrollment
-description: This topic is part of the guide Deploy Server Certificates for 802.1X Wired and Wireless Deployments
+description: Learn how to configure server certificate auto-enrollment and user certificate auto-enrollment.
 manager: brianlic
 ms.topic: article
 ms.assetid: c81e85cb-ecb8-442a-ad27-442c2f9e40df
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Configure certificate auto-enrollment
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 > [!NOTE]
 > Before you perform this procedure, you must configure a server certificate template by using the Certificate Templates Microsoft Management Console snap-in on a CA that is running AD CS.

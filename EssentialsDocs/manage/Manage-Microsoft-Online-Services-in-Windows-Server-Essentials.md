@@ -1,6 +1,6 @@
 ---
 title: "Manage Microsoft Online Services in Windows Server Essentials"
-description: "Describes how to use Windows Server Essentials"
+description: Learn about methods that you can use to manage online services for your organization.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 7e50886e-08b8-4c97-95cf-456ba3800ebf

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Appendix L: Events to Monitor"
 ms.assetid: 99a68050-8d19-4c58-ad86-e08a3dcdb4f7
 title: Appendix L - Events to Monitor
 ms.author: daveba
@@ -9,7 +10,7 @@ ms.topic: article
 ---
 # Appendix L: Events to Monitor
 
->Applies To: Windows Server
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server
 
 The following table lists events that you should monitor in your environment, according to the recommendations provided in [Monitoring Active Directory for Signs of Compromise](../../ad-ds/plan/security-best-practices/Monitoring-Active-Directory-for-Signs-of-Compromise.md). In the following table, the "Current Windows Event ID" column lists the event ID as it is implemented in versions of Windows and Windows Server that are currently in mainstream support.
 

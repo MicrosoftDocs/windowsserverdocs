@@ -4,11 +4,12 @@ description: Information about HCN Network entities, represented using HCN_NETWO
 ms.author: daschott
 author: daschott
 ms.date: 11/05/2018
+ms.topic: article
 ---
 
 # RPC context handles for HCN
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019
 
 ## HCN_Network
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: AD Forest Recovery - Steps for Restoring the forest"
 title: AD Forest Recovery - Steps for Restoring the forest
 ms.author: daveba
 author: iainfoulds
@@ -9,7 +10,7 @@ ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ---
 # AD Forest Recovery - Steps for Restoring the forest
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 This section provides an overview of the recommended path for recovering a forest. The forest recovery steps are described in detail later.
 

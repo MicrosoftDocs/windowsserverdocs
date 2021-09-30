@@ -3,15 +3,15 @@ title: bitsadmin create
 description: Reference article for the bitsadmin create command, which creates a transfer job with the given display name.
 ms.topic: reference
 ms.assetid: 9a8c53af-900b-4c24-9265-5b8b08213fac
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # bitsadmin create
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creates a transfer job with the given display name.
 

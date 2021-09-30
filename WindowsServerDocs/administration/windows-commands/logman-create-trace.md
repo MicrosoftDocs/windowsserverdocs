@@ -3,15 +3,15 @@ title: logman create trace
 description: Reference article for the logman create trace command, which creates an event trace data collector.
 ms.topic: reference
 ms.assetid: 1b4dfecd-6f56-4c51-b622-c2054b4aabd7
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # logman create trace
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Create an event trace data collector.
 

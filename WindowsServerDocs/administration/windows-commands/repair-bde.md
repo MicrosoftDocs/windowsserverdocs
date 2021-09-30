@@ -3,8 +3,8 @@ title: repair-bde
 description: Reference article for the repair-bde command, which can try to reconstruct critical parts of a severely damaged drive and salvage recoverable data if the drive was encrypted by using BitLocker.
 ms.topic: reference
 ms.assetid: 534dca1a-05f7-4ea8-ac24-4fe5f14f988a
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
@@ -24,10 +24,13 @@ Attempts to reconstruct critical parts of a severely damaged drive and salvage r
 repair-bde <inputvolume> <outputvolumeorimage> [-rk] [–rp] [-pw] [–kp] [–lf] [-f] [{-?|/?}]
 ```
 
+> [!WARNING]
+> The contents of the output volume will be **completely deleted and overwritten** by the decrypted contents from the damaged BitLocker drive. If you want to save any existing data on the selected target drive, move the existing data to other reliable backup media first, before running the `repair-bde` command.
+
 ### Parameters
 
 | Parameter | Description |
-|--|--|
+| --- | --- |
 | `<inputvolume>` | Identifies the drive letter of the BitLocker-encrypted drive that you want to repair. The drive letter must include a colon; for example: **C:**. If the path to a key package isn't specified, this command searches the drive for a key package. In the event that the hard drive is damaged, this command might not be able to find the package and will prompt you to provide the path. |
 | `<outputvolumeorimage>` | Identifies the drive on which to store the content of the repaired drive. All information on the output drive will be overwritten. |
 | -rk | Identifies the location of the recovery key that should be used to unlock the volume. This command can also be specified as **-recoverykey**. |
@@ -60,7 +63,7 @@ To attempt to repair drive C: and to write the content from drive C: to drive D:
 repair-bde C: D: -rp 111111-222222-333333-444444-555555-666666-777777-888888
 ```
 
->[!NOTE]
+> [!NOTE]
 > The recovery password should be typed in eight blocks of six digits with a hyphen separating each block.
 
 To force drive C: to dismount, attempt to repair drive C:, and then to write the content from drive C: to drive D: using the recovery key package and recovery key file (RecoveryKey.bek) stored on drive F:, type:

@@ -11,13 +11,13 @@ ms.localizationpriority: medium
 ---
 # Upgrade and conversion options for Windows Server 2016
 
->Applies To: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2019, Windows Server 2016
 
 This topic includes information about upgrading to Windows Server&reg; 2016 from a variety of previous operating systems using a variety of methods.
 
 The process of moving to Windows Server 2016 might vary greatly depending on which operating system you are starting with and the pathway you take. We use the following terms to distinguish among different actions, any of which could be involved in a new Windows Server 2016 deployment.
 
-- **Installation** is the basic concept of getting the new operating system on your hardware. Specifically, a **clean installation** requires deleting the previous operating system. For information about installing Windows Server 2016, see [System Requirements and Installation Information for Windows Server 2016](./system-requirements.md). For information about installing other versions of Windows Server, see [Windows Server Installation and Upgrade](./installation-and-upgrade.md).
+- **Installation** is the basic concept of getting the new operating system on your hardware. Specifically, a **clean installation** requires deleting the previous operating system. For information about installing Windows Server 2016, see [System Requirements and Installation Information for Windows Server 2016](./hardware-requirements.md). For information about installing other versions of Windows Server, see [Windows Server Installation and Upgrade](./installation-and-upgrade.md).
 
 - **Migration** means moving from your existing operating system to Windows Server 2016 by transferring to a different set of hardware or virtual machine. Migration, which might vary considerably depending on the server roles you have installed, is discussed in detail at [Windows Server Installation, Upgrade, and Migration](./installation-and-upgrade.md).
 
@@ -98,7 +98,7 @@ If the server is running an evaluation version of Windows Server 2016 Standard o
 For the evaluation version of Windows Server 2016 Standard, you can also convert to the retail version of Windows Server 2016 Datacenter in one step using this same command and the appropriate product key.
 
 > [!TIP]
-> For more information about Dism.exe, see [DISM Command-line options](https://go.microsoft.com/fwlink/?LinkId=192466).
+> For more information about Dism.exe, see [DISM Command-line options](/previous-versions/orphan-topics/ws.10/dd772580(v=ws.10)).
 
 ## Converting a current retail edition to a different current retail edition
 

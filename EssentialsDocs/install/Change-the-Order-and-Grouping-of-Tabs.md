@@ -1,6 +1,6 @@
 ---
 title: "Change the Order and Grouping of Tabs"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to change the order of tabs in the Dashboard so that your tab is the first one (on the left) in the row of tabs.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: 79a417fd-1b3e-47ab-ae33-bb1faf95c86d

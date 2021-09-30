@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Determining the Cost"
 ms.assetid: e3ea1f67-60d4-4566-b24c-37faa95c3b2a
 title: Determining the Cost
 author: iainfoulds
@@ -11,7 +12,7 @@ ms.topic: article
 
 # Determining the Cost
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 You assign cost values to site links to favor inexpensive connections over expensive connections. Certain applications and services, such as Domain Controller Locator (DCLocator) and Distributed File System Namespaces (DFSN), also use cost information to locate the nearest resources. Site link cost can be used to determine which domain controller is contacted by clients in one site if the domain controller for the specified domain does not exist at that site. The client contacts the domain controller by using the site link that has the lowest cost assigned to it.
 
@@ -34,7 +35,7 @@ The following table lists the speeds for different types of networks.
 |100BaseT|100 Mbps|
 |Gigabit Ethernet|1 gigabit per second (Gbps)|
 
-Use the following table to calculate the cost of each site link based on wide area network speed (WAN) link speed. For WAN link speed that is not listed in the table, you can calculate a relative cost factor by dividing 1,024 by the log of the available bandwidth, as measured in Kbps.
+Use the following table to calculate the cost of each site link based on wide area network speed (WAN) link speed. For WAN link speed that is not listed in the table, you can calculate a relative cost factor by dividing 1,024 by the logarithm of the available bandwidth, as measured in Kbps.
 
 |Available bandwidth (Kbps)|Cost|
 |--------------------------------|--------|
@@ -51,6 +52,5 @@ Use the following table to calculate the cost of each site link based on wide ar
 |4,096|283|
 
 These costs do not reflect differences in reliability between network links. Set higher costs on any failure-prone network links so that you do not have to rely on those links for replication. By setting higher site link costs, you can control replication failover when a site link fails.
-
 
 

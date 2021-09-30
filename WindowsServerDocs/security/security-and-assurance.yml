@@ -7,9 +7,10 @@ metadata:
   title: Windows Server Security documentation
   description: An overview of Security in Windows Server.
   ms.topic: landing-page # Required
-  author: eross-msft
-  ms.author: lizross
+  author: JasonGerend
+  ms.author: jgerend
   ms.date: 5/19/2020
+  ms.prod: windows-server
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -67,6 +68,8 @@ landingContent:
             url: /windows/desktop/SecBP/control-flow-guard
           - text: Windows Defender
             url: ./windows-defender/windows-defender-overview-windows-server.md
+          - text: Secured-core server
+            url: secured-core-server.md
       - linkListType: video
         links:
           - text: Device Guard demo video
@@ -78,7 +81,7 @@ landingContent:
       - linkListType: overview
         links:
           - text: Securing Privileged Access
-            url: ../identity/securing-privileged-access/securing-privileged-access.md
+            url: /security/compass/overview
           - text: Just in Time Administration with Microsoft Identity Manager
             url: /microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services
           - text: Just Enough Administration Article

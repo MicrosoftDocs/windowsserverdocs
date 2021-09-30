@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Active Directory Domain Services Overview"
 ms.assetid: f052dfcd-dace-4485-8d0a-cc7df5cf3751
 title: Active Directory Domain Services Overview
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Active Directory Domain Services Overview
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 A directory is a hierarchical structure that stores information about objects on the network. A directory service, such as Active Directory Domain Services (AD DS), provides the methods for storing directory data and making this data available to network users and administrators. For example, AD DS stores information about user accounts, such as names, passwords, phone numbers, and so on, and enables other authorized users on the same network to access this information.

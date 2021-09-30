@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Understanding Active Directory Site Topology"
 ms.assetid: 2971996b-7019-4a08-8e99-89b4b3f688a7
 title: Understanding Active Directory Site Topology
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Understanding Active Directory Site Topology
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Your site topology significantly affects the performance of your network and the ability of your users to access network resources. Before you begin to design your site topology, become familiar with the functions for sites in  Windows Server 2008 , the different network topologies that organizations commonly use, the role of the site topology owner, and some Active Directory replication concepts.
 

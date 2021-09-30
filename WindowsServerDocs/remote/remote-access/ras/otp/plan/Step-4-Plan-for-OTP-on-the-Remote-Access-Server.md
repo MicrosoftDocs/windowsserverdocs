@@ -1,15 +1,16 @@
 ---
 title: Step 4 Plan for OTP on the Remote Access Server
-description: This topic is part of the guide Deploy Remote Access with OTP Authentication in Windows Server 2016.
+description: Learn how to plan for client OTP settings on the Remote Access server.
 manager: brianlic
 ms.topic: article
 ms.assetid: 4b97b2fd-767a-45c1-a64e-5b3edd0c8a47
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
+ms.date: 08/07/2020
 ---
 # Step 4 Plan for OTP on the Remote Access Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 After planning for the one-time password (OTP) RADIUS server and certificate settings, the final step in planning a Remote Access OTP deployment is to plan for client OTP settings on the Remote Access server.
 

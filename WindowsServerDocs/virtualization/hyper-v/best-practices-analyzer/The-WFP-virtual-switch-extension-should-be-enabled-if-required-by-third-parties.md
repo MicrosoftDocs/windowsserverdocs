@@ -1,6 +1,6 @@
 ---
 title: The WFP virtual switch extension should be enabled if it is required by third party extensions
-description: Online version of the text for this Best Practices Analyzer rule.
+description: Learn what to do when the Windows Filtering Platform (WFP) virtual switch extension is disabled.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.topic: article
@@ -9,9 +9,9 @@ ms.date: 8/16/2016
 ---
 # The WFP virtual switch extension should be enabled if it is required by third party extensions
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](https://go.microsoft.com/fwlink/p/?LinkID=223177).
+For more information about best practices and scans, see [Run Best Practices Analyzer Scans and Manage Scan Results](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831400(v=ws.11)).
 
 |Property|Details|
 |-|-|
@@ -46,4 +46,4 @@ Enable-VMSwitchExtension -VMSwitchName External -Name Microsoft Windows Filterin
 ```
 
 ## See Also
-[Enable-VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension?view=win10-ps)
+[Enable-VMSwitchExtension](/powershell/module/hyper-v/enable-vmswitchextension)

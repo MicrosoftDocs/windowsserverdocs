@@ -3,8 +3,8 @@ title: wbadmin get disks
 description: Reference article for the wbadmin get disks command, which lists the internal and external disks that are currently online for the local computer.
 ms.topic: reference
 ms.assetid: 320edef1-df11-446b-a183-9f81811ef938
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---

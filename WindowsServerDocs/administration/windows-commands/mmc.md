@@ -3,15 +3,15 @@ title: mmc
 description: Reference article for the mmc command, which lets you open a specific mmc console, open mmc in author mode, or specify to open the 32-bit or 64-bit version of mmc.
 ms.topic: reference
 ms.assetid: 7bfa4030-ce42-40fb-922f-2f5145a80872
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 
 # mmc
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Using mmc command-line options, you can open a specific **mmc** console, open **mmc** in author mode, or specify that the 32-bit or 64-bit version of **mmc** is opened.
 

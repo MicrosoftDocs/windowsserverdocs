@@ -1,16 +1,17 @@
 ---
 title: Confirm guarded hosts can attest
+description: "Learn more about: Confirm guarded hosts can attest"
 ms.topic: article
 ms.assetid: 7485796b-b840-4678-9b33-89e9710fbbc7
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 09/25/2019
 ---
 
 # Confirm guarded hosts can attest
 
->Applies to: Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 A fabric administrator needs to confirm that Hyper-V hosts can run as guarded hosts. Complete the following steps on at least one guarded host:
 
@@ -32,7 +33,7 @@ A fabric administrator needs to confirm that Hyper-V hosts can run as guarded ho
 
         To configure a fallback HGS server, repeat this command and specify the fallback URLs for the Key Protection and Attestation services. For more information, see [Fallback configuration](guarded-fabric-manage-branch-office.md#fallback-configuration).
 
-    - **Through VMM**: If you are using System Center Virtual Machine Manager (VMM), you can configure Attestation and Key Protection URLs in VMM. For details, see [Configure global HGS settings](/system-center/vmm/guarded-deploy-host?view=sc-vmm-2019#configure-global-hgs-settings) in **Provision guarded hosts in VMM**.
+    - **Through VMM**: If you are using System Center Virtual Machine Manager (VMM), you can configure Attestation and Key Protection URLs in VMM. For details, see [Configure global HGS settings](/system-center/vmm/guarded-deploy-host#configure-global-hgs-settings) in **Provision guarded hosts in VMM**.
 
     >**Notes**
     > - If the HGS administrator [enabled HTTPS on the HGS server](guarded-fabric-configure-hgs-https.md), begin the URLs with `https://`.

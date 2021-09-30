@@ -1,15 +1,15 @@
 ---
 title: Monthly Delta update ISV support without WSUS
 description: Windows Server Update Service (WSUS) topic - How Independent Software Vendors (ISV) can temporarily use Monthly Delta update instead of WSUS Express update delivery to reduce package size
-ms.topic: get-started article
-ms.author: lizross
-author: eross-msft
+ms.topic: how-to
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 10/16/2017
 ---
 # Monthly Delta update ISV support without WSUS
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 Windows 10 Update downloads can be large because every package contains all previously released fixes to ensure consistency and simplicity.
 
@@ -17,7 +17,7 @@ Since version 7, Windows has been able to reduce the size of Windows Update down
 
 If you do not currently have WSUS installed, but you need smaller update package sizes in the interim, you can use Monthly Delta update. Delta update reduces package sizes substantially, but not as much as with WSUS Express update delivery. We recommend that you deploy WSUS Express update whenever possible for the greatest reduction in package sizes. Following is a chart comparing Delta, Cumulative and Express download sizes for Windows 10 version 1607:
 
-![Download size comparison](../../media/express-update-delivery-isv-support/delta-1.png)
+![Screenshot of a chart comparing Delta, Cumulative and Express download sizes for Windows 10 version 1607.](../../media/express-update-delivery-isv-support/delta-1.png)
 
 ## What is Monthly Delta update?
 
@@ -36,7 +36,7 @@ By using Monthly Delta update, packages will only contain one month's updates. M
 | **Application**    | Can only be applied if the previous month's update was applied (Cumulative or Delta)                                                                                                                                           | Can be applied at any time                                                                                                                                                                                                |
 | **Delivery**       | **Published only to Windows Update Catalog** where it can be downloaded for use with other tools or processes. Not offered to PCs that are connected to Windows Update                                                         | Published to Windows Update (where all consumer PCs will install it), WSUS, and the Windows Update Catalog                                                                                                                |
 
-Delta and Cumulative have the same KB number, with the same classification, and release at the same time. Updates can be distinguished by either the update title in the catalog, or by the name of the msu:
+Delta and Cumulative have the same KB number, with the same classification, and release at the same time. Updates can be distinguished by either the update title in the catalog, or by the MSU file name:
 
 - 2017-02 *\***Delta Update**\** for Windows 10 Version 1607 for x64-based Systems (KB1234567)
 - 2017-02 *\***Cumulative Update**\** for Windows 10 Version 1607 for x86-based Systems (KB1234567)
@@ -45,7 +45,7 @@ Delta and Cumulative have the same KB number, with the same classification, and 
 
 If size of the update to the client device is a concern, we recommend using Delta update on the devices that have the previous month's update, and Cumulative update on the devices that are falling behind. This way, all devices only require a single update to bring them up to date. This requires a small adjustment in the overall update management process, as you will have to deploy different updates based on how up-to-date the devices are in the organization:
 
-![Download size comparison](../../media/express-update-delivery-isv-support/delta-2.png)
+![Diagram showing how you will have to deploy different updates based on how up-to-date the devices are in the organization.](../../media/express-update-delivery-isv-support/delta-2.png)
 
 ### Prevent deployment of Delta and Cumulative updates in the same month
 

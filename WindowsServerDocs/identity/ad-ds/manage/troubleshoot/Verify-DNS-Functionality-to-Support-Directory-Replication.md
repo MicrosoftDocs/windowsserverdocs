@@ -1,13 +1,15 @@
 ---
+description: "Learn more about: Verify DNS Functionality to Support Directory Replication"
 ms.assetid: 709353b0-b913-4367-8580-44745183e2bc
 title: Verify DNS Functionality to Support Directory Replication
 ms.author: daveba
 ms.date: 05/31/2017
 author: Femila
+ms.topic: troubleshooting
 ---
 # Verify DNS Functionality to Support Directory Replication
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
  To check Domain Name System (DNS) settings that might interfere with Active Directory replication, you can begin by running the basic test that ensures that DNS is operating properly for your domain. After you run the basic test, you can test other aspects of DNS functionality, including resource record registration and dynamic update.
 

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Planning volumes in Storage Spaces Direct"
 ms.assetid: 342173ca-4e10-44f4-b2c9-02a6c26f7a4a
 title: Planning volumes in Storage Spaces Direct
 ms.author: cosdar
@@ -10,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Planning volumes in Storage Spaces Direct
 
-> Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic provides guidance for how to plan volumes in Storage Spaces Direct to meet the performance and capacity needs of your workloads, including choosing their filesystem, resiliency type, and size.
 
@@ -21,11 +22,11 @@ Volumes are where you put the files your workloads need, such as VHD or VHDX fil
    >[!NOTE]
    > Throughout documentation for Storage Spaces Direct, we use term "volume" to refer jointly to the volume and the virtual disk under it, including functionality provided by other built-in Windows features such as Cluster Shared Volumes (CSV) and ReFS. Understanding these implementation-level distinctions is not necessary to plan and deploy Storage Spaces Direct successfully.
 
-![what-are-volumes](media/plan-volumes/what-are-volumes.png)
+![Diagram depicting what volumes are.](media/plan-volumes/what-are-volumes.png)
 
 All volumes are accessible by all servers in the cluster at the same time. Once created, they show up at **C:\ClusterStorage\\** on all servers.
 
-![csv-folder-screenshot](media/plan-volumes/csv-folder-screenshot.png)
+![Screenshot of a File Explorer window showing the Cluster Storage volumes.](media/plan-volumes/csv-folder-screenshot.png)
 
 ## Choosing how many volumes to create
 
@@ -59,17 +60,17 @@ With two servers in the cluster, you can use two-way mirroring. If you're runnin
 
 Two-way mirroring keeps two copies of all data, one copy on the drives in each server. Its storage efficiency is 50%—to write 1 TB of data, you need at least 2 TB of physical storage capacity in the storage pool. Two-way mirroring can safely tolerate one hardware failure at a time (one server or drive).
 
-![two-way-mirror](media/plan-volumes/two-way-mirror.png)
+![Diagram depicting the concept of two-way mirror data storage.](media/plan-volumes/two-way-mirror.png)
 
 Nested resiliency (available only on Windows Server 2019) provides data resiliency between servers with two-way mirroring, then adds resiliency within a server with two-way mirroring or mirror-accelerated parity. Nesting provides data resilience even when one server is restarting or unavailable. Its storage efficiency is 25% with nested two-way mirroring and around 35-40% for nested mirror-accelerated parity. Nested resiliency can safely tolerate two hardware failures at a time (two drives, or a server and a drive on the remaining server). Because of this added data resilience, we recommend using nested resiliency on production deployments of two-server clusters, if you're running Windows Server 2019. For more info, see [Nested resiliency](nested-resiliency.md).
 
-![Nested mirror-accelerated parity](media/nested-resiliency/nested-mirror-accelerated-parity.png)
+![Diagram depicting the concept of nested mirror-accelerated parity.](media/nested-resiliency/nested-mirror-accelerated-parity.png)
 
 ### With three servers
 
 With three servers, you should use three-way mirroring for better fault tolerance and performance. Three-way mirroring keeps three copies of all data, one copy on the drives in each server. Its storage efficiency is 33.3% – to write 1 TB of data, you need at least 3 TB of physical storage capacity in the storage pool. Three-way mirroring can safely tolerate [at least two hardware problems (drive or server) at a time](storage-spaces-fault-tolerance.md#examples). If 2 nodes become unavailable the storage pool will lose quorum, since 2/3 of the disks are not available, and the virtual disks will be unaccessible. However, a node can be down and one or more disks on another node can fail and the virtual disks will remain online. For example, if you're rebooting one server when suddenly another drive or server fails, all data remains safe and continuously accessible.
 
-![three-way-mirror](media/plan-volumes/three-way-mirror.png)
+![Diagram depicting the concept of three-way mirror data storage.](media/plan-volumes/three-way-mirror.png)
 
 ### With four or more servers
 
@@ -77,7 +78,7 @@ With four or more servers, you can choose for each volume whether to use three-w
 
 Dual parity provides the same fault tolerance as three-way mirroring but with better storage efficiency. With four servers, its storage efficiency is 50.0%—to store 2 TB of data, you need 4 TB of physical storage capacity in the storage pool. This increases to 66.7% storage efficiency with seven servers, and continues up to 80.0% storage efficiency. The tradeoff is that parity encoding is more compute-intensive, which can limit its performance.
 
-![dual-parity](media/plan-volumes/dual-parity.png)
+![Diagram depicting the concept of dual-parity data storage.](media/plan-volumes/dual-parity.png)
 
 Which resiliency type to use depends on the needs of your workload. Here's a table that summarizes which workloads are a good fit for each resiliency type, as well as the performance and storage efficiency of each resiliency type.
 
@@ -135,7 +136,7 @@ Size is distinct from volume's *footprint*, the total physical storage capacity 
 
 The footprints of your volumes need to fit in the storage pool.
 
-![size-versus-footprint](media/plan-volumes/size-versus-footprint.png)
+![Diagram showing that the size of your volume has to fit in the storage pool.](media/plan-volumes/size-versus-footprint.png)
 
 ### Reserve capacity
 
@@ -143,7 +144,7 @@ Leaving some capacity in the storage pool unallocated gives volumes space to rep
 
 We recommend reserving the equivalent of one capacity drive per server, up to 4 drives. You may reserve more at your discretion, but this minimum recommendation guarantees an immediate, in-place, parallel repair can succeed after the failure of any drive.
 
-![reserve](media/plan-volumes/reserve.png)
+![Diagram depicting the concept of reserve capacity.](media/plan-volumes/reserve.png)
 
 For example, if you have 2 servers and you are using 1 TB capacity drives, set aside 2 x 1 = 2 TB of the pool as reserve. If you have 3 servers and 1 TB capacity drives, set aside 3 x 1 = 3 TB as reserve. If you have 4 or more servers and 1 TB capacity drives, set aside 4 x 1 = 4 TB as reserve.
 
@@ -180,7 +181,7 @@ We aren't required to make all volumes the same size, but for simplicity, let's 
 
 The four volumes fit exactly on the physical storage capacity available in our pool. Perfect!
 
-![example](media/plan-volumes/example.png)
+![Diagram showing an example of four volumes that fit exactly on the physical storage capacity available in the pool.](media/plan-volumes/example.png)
 
    >[!TIP]
    > You don't need to create all the volumes right away. You can always extend volumes or create new volumes later.

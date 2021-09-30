@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Executive Summary"
 ms.assetid: 85ca191c-0cc7-4453-a72c-42060ddf2ea2
 title: Executive Summary
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Executive Summary
 
->Applies To: Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012
 
 >[!IMPORTANT]
 >The following documentation was written in 2013 and is provided for historical purposes only.  Currently we are reviewing this documentation and it is subject to change.  It may not reflect current best practices.

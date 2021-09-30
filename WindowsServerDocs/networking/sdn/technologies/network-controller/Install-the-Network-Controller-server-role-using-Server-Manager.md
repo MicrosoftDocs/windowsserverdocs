@@ -1,20 +1,21 @@
 ---
 title: Install the Network Controller Server Role Using Server Manager
-description: This topic provides instructions on how to install the Network Controller server role by using Server Manager in Windows Server 2016.
+description: This topic provides instructions on how to install the Network Controller server role by using Server Manager in Windows Server 2019 and 2016.
 manager: grcusanz
-ms.topic: get-started-article
+ms.topic: how-to
 ms.assetid: 3a6e4352-ff62-4290-b8a4-5c83740070fc
 ms.author: anpaul
 author: AnirbanPaul
+ms.date: 06/16/2021
 ---
 # Install the Network Controller Server Role Using Server Manager
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 This topic provides instructions on how to install the Network Controller server role by using Server Manager.
 
 > [!IMPORTANT]
-> Do not deploy the Network Controller server role on physical hosts. To deploy Network Controller, you must install the Network Controller server role on a Hyper-V virtual machine \(VM\) that is installed on a Hyper-V host. After you have installed Network Controller on VMs on three different Hyper\-V hosts, you must enable the Hyper\-V hosts for Software Defined Networking \(SDN\) by adding the hosts to Network Controller using the Windows PowerShell command **New-NetworkControllerServer**. By doing so, you are enabling the SDN Software Load Balancer to function. For more information, see [New-NetworkControllerServer](https://docs.microsoft.com/powershell/module/networkcontroller/new-networkcontrollerserver).
+> Do not deploy the Network Controller server role on physical hosts. To deploy Network Controller, you must install the Network Controller server role on a Hyper-V virtual machine \(VM\) that is installed on a Hyper-V host. After you have installed Network Controller on VMs on three different Hyper\-V hosts, you must enable the Hyper\-V hosts for Software Defined Networking \(SDN\) by adding the hosts to Network Controller using the Windows PowerShell command **New-NetworkControllerServer**. By doing so, you are enabling the SDN Software Load Balancer to function. For more information, see [New-NetworkControllerServer](/powershell/module/networkcontroller/new-networkcontrollerserver).
 
 After you install Network Controller, you must use Windows PowerShell commands for additional Network Controller configuration. For more information, see [Deploy Network Controller using Windows PowerShell](../../deploy/Deploy-Network-Controller-using-Windows-PowerShell.md).
 
@@ -55,4 +56,4 @@ After you install Network Controller, you must use Windows PowerShell commands f
     ![Server Manager](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/nc_013.jpg)
 
 ## See Also
-[Network Controller](Network-Controller.md)
+[Network Controller](/azure-stack/hci/concepts/network-controller-overview)

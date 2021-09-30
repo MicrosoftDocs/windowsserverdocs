@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Virtualized Domain Controller Troubleshooting"
 ms.assetid: 249ba1be-b0d3-4a77-99af-3699074a2b6e
 title: Virtualized Domain Controller Troubleshooting
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Virtualized Domain Controller Troubleshooting
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic provides detailed methodology on troubleshooting the virtualized domain controller feature.
 

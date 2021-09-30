@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Support for using Hyper-V Replica for virtualized domain controllers"
 ms.assetid: 45a65504-70b5-46ea-b2e0-db45263fabaa
 title: Support for using Hyper-V Replica for virtualized domain controllers
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Support for using Hyper-V Replica for virtualized domain controllers
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic explains the supportability of using Hyper-V Replica to replicate a virtual machine (VM) that runs as a domain controller (DC). Hyper-V Replica is a new capability of Hyper-V beginning with Windows Server 2012 that provides a built-in replication mechanism at a VM level.
 

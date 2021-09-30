@@ -5,11 +5,11 @@ ms.topic: article
 ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
 ms.author: benarm
 author: BenjaminArmstrong
-ms.date: 01/08/2019
+ms.date: 12/09/2020
 ---
 # Supported Windows guest operating systems for Hyper-V on Windows Server
 
->Applies To: Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019, Azure Stack HCI, version 20H2
 
 Hyper-V supports several versions of Windows Server, Windows, and Linux distributions to run in virtual machines, as guest operating systems. This article covers supported Windows Server and Windows guest operating systems. For Linux and FreeBSD distributions, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md).
 
@@ -17,10 +17,11 @@ Some operating systems have the integration services built-in. Others require th
 
 ## Supported Windows Server guest operating systems
 
-Following are the versions of Windows Server that are supported as guest operating systems for Hyper-V in Windows Server 2016 and Windows Server 2019.
+Following are the versions of Windows Server that are supported as guest operating systems for Hyper-V on Windows Server.
 
 |Guest operating system (server)|Maximum number of virtual processors|Integration Services|Notes|
 |-------------------------------------|----------------------------------------|------------------------|---------|
+|Windows Server 2022 |240 for generation 2;<br>64 for generation 1|Built-in| Hosted on Windows Server 2019 or above, Azure Stack HCI, version 20H2 or above.|
 |Windows Server, version 1909 |240 for generation 2;<br>64 for generation 1|Built-in|Greater than 240 virtual processor support requires Windows Server, version 1903 or later guest operating systems.|
 |Windows Server, version 1903 |240 for generation 2;<br>64 for generation 1|Built-in||
 |Windows Server, version 1809 |240 for generation 2;<br>64 for generation 1|Built-in||
@@ -34,13 +35,14 @@ Following are the versions of Windows Server that are supported as guest operati
 
 ## Supported Windows client guest operating systems
 
-Following are the versions of Windows client that are supported as guest operating systems for Hyper-V in Windows Server 2016 and Windows Server 2019.
+Following are the versions of Windows client that are supported as guest operating systems for Hyper-V on Windows Server.
 
 |Guest operating system (client)|Maximum number of virtual processors|Integration Services|Notes|
 |-------------------------------------|----------------------------------------|------------------------|---------|
+|Windows 11|32|Built-in|Generation 2 virtual machine hosted on Windows Server 2019 or above, Azure Stack HCI, version 20H2 or above.|
 |Windows 10|32|Built-in||
 |Windows 8.1|32|Built-in||
-|Windows 7 with Service Pack 1 (SP 1)|4|Upgrade the integration services after you set up the guest operating system.|Ultimate, Enterprise, and Professional editions (32-bit and 64-bit).|
+|Windows 7 with Service Pack 1 (SP1)|4|Upgrade the integration services after you set up the guest operating system.|Ultimate, Enterprise, and Professional editions (32-bit and 64-bit).|
 
 ## Guest operating system support on other versions of Windows
 
@@ -57,14 +59,14 @@ The following table gives links to information about guest operating systems sup
 
 Microsoft provides support for guest operating systems in the following manner:
 
--   Issues found in Microsoft operating systems and in integration services are supported by Microsoft support.
+- Issues found in Microsoft operating systems and in integration services are supported by Microsoft support.
 
--   For issues found in other operating systems that have been certified by the operating system vendor to run on Hyper-V, support is provided by the vendor.
+- For issues found in other operating systems that have been certified by the operating system vendor to run on Hyper-V, support is provided by the vendor.
 
--   For issues found in other operating systems, Microsoft submits the issue to the multi-vendor support community, [TSANet](https://www.tsanet.org/).
+- For issues found in other operating systems, Microsoft submits the issue to the multi-vendor support community, [TSANet](https://www.tsanet.org/).
 
 ## Additional References
 
--   [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
+- [Linux and FreeBSD Virtual Machines on Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 
--   [Supported Guest Operating Systems for Client Hyper-V in Windows 10](/virtualization/hyper-v-on-windows/about/supported-guest-os)
+- [Supported Guest Operating Systems for Client Hyper-V in Windows 10](/virtualization/hyper-v-on-windows/about/supported-guest-os)

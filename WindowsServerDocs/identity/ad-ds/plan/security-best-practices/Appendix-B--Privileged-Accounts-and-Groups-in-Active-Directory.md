@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: Appendix B: Privileged Accounts and Groups in Active Directory"
 ms.assetid: 79b9c912-ea3e-4679-ab41-893e096c4d09
 title: Appendix B - Privileged Accounts and Groups in Active Directory
 author: iainfoulds
@@ -10,7 +11,7 @@ ms.topic: article
 
 # Appendix B: Privileged Accounts and Groups in Active Directory
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix B: Privileged Accounts and Groups in Active Directory

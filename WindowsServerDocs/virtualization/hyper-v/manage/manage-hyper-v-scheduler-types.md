@@ -1,6 +1,6 @@
 ---
 title: Understanding and using Hyper-V hypervisor scheduler types
-description: Provides information for Hyper-V host administrators on the use of Hyper-V's scheduler modes
+description: Learn about new modes of virtual processor scheduling logic that determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors.
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 08/14/2018
@@ -11,7 +11,7 @@ ms.assetid: 6cb13f84-cb50-4e60-a685-54f67c9146be
 
 # Managing Hyper-V hypervisor scheduler types
 
->Applies To: Windows 10, Windows Server 2016, Windows Server, version 1709, Windows Server, version 1803, Windows Server 2019
+>Applies to: Windows Server 2022, Windows 10, Windows Server 2016, Windows Server, version 1709, Windows Server, version 1803, Windows Server 2019
 
 This article describes new modes of virtual processor scheduling logic first introduced in Windows Server 2016. These modes, or scheduler types, determine how the Hyper-V hypervisor allocates and manages work across guest virtual processors. A Hyper-V host administrator can select hypervisor scheduler types that are best suited for the guest virtual machines (VMs) and configure the VMs to take advantage of the scheduling logic.
 
@@ -130,7 +130,7 @@ Windows Server 2016 Hyper-V uses the classic hypervisor scheduler model by defau
 
 ## Windows Server 2019 Hyper-V defaults to using the core scheduler
 
-To help ensure Hyper-V hosts are deployed in the optimal security configuration, Windows Server 2019 Hyper-V now uses the core hypervisor scheduler model by default. The host administrator may optionally configure the host to use the legacy classic scheduler. Administrators should carefully read, understand and consider the impacts each scheduler type has on the security and performance of virtualization hosts prior to overriding the scheduler type default settings. See [About Hyper-V hypervisor scheduler type selection](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/about-hyper-v-scheduler-type-selection) for more information.
+To help ensure Hyper-V hosts are deployed in the optimal security configuration, Windows Server 2019 Hyper-V now uses the core hypervisor scheduler model by default. The host administrator may optionally configure the host to use the legacy classic scheduler. Administrators should carefully read, understand and consider the impacts each scheduler type has on the security and performance of virtualization hosts prior to overriding the scheduler type default settings. See [About Hyper-V hypervisor scheduler type selection](./about-hyper-v-scheduler-type-selection.md) for more information.
 
 ### Required updates
 

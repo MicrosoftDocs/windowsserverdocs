@@ -3,15 +3,15 @@ title: servermanagercmd
 description: Reference article for the servermanagercmd command, which installs and removes roles, role services, and features.
 ms.topic: reference
 ms.assetid: 507c4b87-8e13-4872-8b34-0c7508eecbc1
-ms.author: lizross
-author: eross-msft
+ms.author: jgerend
+author: JasonGerend
 manager: mtillman
 ms.date: 07/11/2018
 ---
 
 # servermanagercmd
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Installs and removes roles, role services, and features. Also displays the list of all roles, role services, and features available, and shows which are installed on this computer.
 

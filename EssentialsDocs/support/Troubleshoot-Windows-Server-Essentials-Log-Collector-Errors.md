@@ -1,6 +1,6 @@
 ---
 title: "Troubleshoot Windows Server Essentials Log Collector Errors"
-description: "Describes how to use Windows Server Essentials"
+description: Learn how to troubleshoot issues encountered when you run the Log Collector.
 ms.date: 10/03/2016
 ms.topic: article
 ms.assetid: fa2e1685-31c0-4d4f-a10a-6c8885dfc493
@@ -31,7 +31,7 @@ When you run the Log Collector, you may encounter one of the following errors. T
 ###  <a name="BKMK_CannotCollectLogFiles"></a> Cannot collect log files for the computer
  **Cause:** The Log Collector may not be installed on the computer because the computer did not successfully connect to the server using Connect Computer to the Server wizard.
 
- **Solution:** For information about how to resolve issues regarding connections to your server, see [Troubleshoot connecting computers to the server](https://go.microsoft.com/fwlink/p/?LinkID=241492).
+ **Solution:** For information about how to resolve issues regarding connections to your server, see [Troubleshoot connecting computers to the server](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj635102(v=ws.11)).
 
  If you are still unable to connect the computer to the server, then you can copy the log files manually to a USB flash drive as follows:
 
