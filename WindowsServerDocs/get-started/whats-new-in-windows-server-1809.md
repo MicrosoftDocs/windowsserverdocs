@@ -12,7 +12,7 @@ ms.localizationpriority: high
 
 >Applies to: Windows Server (Semi-Annual Channel)
 
-To learn about the latest features in Windows, see [What's New in Windows Server](whats-new-in-windows-server.md). This topic describes some of the new features in Windows Server, version 1809.
+To learn about the latest features in Windows, see [What's New in Windows Server](./whats-new-in-windows-server-2022.md). This topic describes some of the new features in Windows Server, version 1809.
 
 ## Container networking with Kubernetes
 

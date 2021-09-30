@@ -55,7 +55,7 @@ When you add a federation server to the farm, the new computer that will become 
 
 ![AD FS configuration](media/adfs2_WID.png)
 
-Each secondary federation server polls the primary federation server every five minutes for changes. You can adjust this default five\-minute value or force an immediate synchronization anytime by using a Windows PowerShell cmdlet. For more information about how to do this, see [AD FS Administration with Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=179634).
+Each secondary federation server polls the primary federation server every five minutes for changes. You can adjust this default five\-minute value or force an immediate synchronization anytime by using a Windows PowerShell cmdlet. For more information about how to do this, see [AD FS Administration with Windows PowerShell](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee126138(v=ws.10)).
 
 The WID synchronization process also supports incremental transfers for more efficient transfers of intermediate changes. The incremental transfer process requires substantially less traffic on a network, and transfers are completed much faster.
 
@@ -102,7 +102,7 @@ PS C:\> Set-AdfsSyncProperties -Role "SecondaryComputer" -PrimaryComputerName "<
 This command changes a primary AD FS server in a WID farm to a secondary server. You must specify the fully qualified domain name of the primary so server. Not doing so may not all the secondary AD FS server to sync properly. 
 Note: The primary server must be accessible via HTTP on port 80 from the secondary server.
 
-For more information see: [Set-AdfsSyncProperties](https://docs.microsoft.com/powershell/module/adfs/set-adfssyncproperties?view=win10-ps)
+For more information see: [Set-AdfsSyncProperties](/powershell/module/adfs/set-adfssyncproperties?view=win10-ps)
 
 
 ## Using SQL Server to store the AD FS configuration database
@@ -120,13 +120,13 @@ The term "primary federation server" does not apply when the AD FS configuration
 
 You can use SQL Server to configure two or more servers to work together as a server cluster to ensure that AD FS is made highly available to service incoming client requests. High availability provides a scale\-out architecture in which you can increase server capacity by adding additional servers. Single points of failure are mitigated by automatic cluster failover.
 
-You can achieve high availability by using the network load\-balancing and failover services that SQL clustering technologies provide. For more information about how to configure SQL Server for high availability, see [High Availability Solutions Overview](https://go.microsoft.com/fwlink/?LinkId=179853).
+You can achieve high availability by using the network load\-balancing and failover services that SQL clustering technologies provide. For more information about how to configure SQL Server for high availability, see [High Availability Solutions Overview](/sql/database-engine/sql-server-business-continuity-dr).
 
 ### SAML artifact resolution
 Security Assertion Markup Language \(SAML\) artifact resolution is an endpoint based on the part of the SAML 2.0 protocol that describes how a relying party can retrieve a token directly from a claims provider. In the first stage of the resolution process, a browser client contacts a resource federation server and provides it with an artifact. In the second stage, resource federation servers send the artifact to a SAML artifact endpoint URL that is hosted somewhere in an account partner organization in order to resolve the artifact message. In the final stage, the account federation server issues the token to the federation server on behalf of the browser client.
 
 > [!NOTE]
-> If you are an administrator in an account partner organization, make sure to assign or bind an SSL certificate, which chains to a root certificate of a member of the Windows Root Certificate Program, to the federation passive Web site in IIS (\<ComputerName>\\Sites\\Default Web Site\\adfs\\ls\) on all the account federation servers in the farm. This is important to prevent resource federation servers from having to manually add the SSL certificate to the Local Computers Trusted People certificate store or from being unable to resolve the artifact that is published in your organization.
+> If you are an administrator in an account partner organization, make sure to assign or bind an SSL certificate, which chains to a root certificate of a member of the Windows Root Certificate Program, to the federation passive Web site in IIS \(\<ComputerName>\\Sites\\Default Web Site\\adfs\\ls\) on all the account federation servers in the farm. This is important to prevent resource federation servers from having to manually add the SSL certificate to the Local Computers Trusted People certificate store or from being unable to resolve the artifact that is published in your organization.
 
 ### SAML/WS - Federation token replay detection
 The term *token replay* refers to the act by which a browser client in an account partner organization attempts to send the same token it received from an account federation server multiple times to authenticate to a resource federation server.  This act occurs when a user clicks the **Back** button of their browser in an effort to resubmit the authentication page.
