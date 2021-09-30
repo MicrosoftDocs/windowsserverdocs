@@ -39,7 +39,7 @@ You can use the following documentation to deploy SDN scenarios with Windows Ser
 
 -   [Deploy a Software Defined Network infrastructure using scripts](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)
 
-For more information, see [Software Defined Networking &#40;SDN&#41;](sdn/software-defined-networking.md).
+For more information, see [Software Defined Networking \(SDN\)](sdn/software-defined-networking.md).
 
 #### <a name="bkmk_netc"></a>Network Controller scenarios
 
@@ -88,7 +88,7 @@ The network platform scenarios allow you to:
 
 -   Configure SET to spread SMB Direct and RDMA traffic flows between up to two network adapters.
 
-For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](/azure-stack/hci/concepts/host-network-requirements).
+For more information, see [Remote Direct Memory Access \(RDMA\) and Switch Embedded Teaming \(SET\)](/azure-stack/hci/concepts/host-network-requirements).
 
 #### <a name="bkmk_switch"></a>Hyper-V Virtual Switch Scenarios
 
@@ -102,7 +102,7 @@ The Hyper-V Virtual Switch scenarios allow you to:
 
 -   Manage a SET team by using Windows PowerShell commands
 
-For more information, see [Remote Direct Memory Access &#40;RDMA&#41; and Switch Embedded Teaming &#40;SET&#41;](/azure-stack/hci/concepts/host-network-requirements)
+For more information, see [Remote Direct Memory Access \(RDMA\) and Switch Embedded Teaming \(SET\)](/azure-stack/hci/concepts/host-network-requirements)
 
 ### <a name="bkmk_dns"></a>DNS Server scenarios
 
