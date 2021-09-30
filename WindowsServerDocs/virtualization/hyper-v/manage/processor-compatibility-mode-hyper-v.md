@@ -94,7 +94,7 @@ get-vm -name <name of VM> -ComputerName <target cluster or host> | Set-VMProcess
 Then restart the VM.
 
    > [!WARNING]
-   > You many see additional parameters for `Set-VMProcessor` that are intended for use with Azure Stack HCI. Do not attempt to use these with Windows Server, or you will get an error message. The default and only `CompatibilityForMigrationMode` available for Windows Server is `MinimumFeatureSet`. [Learn about dynamic CPU compatibility mode in Azure Stack HCI](/azure-stack/hci/manage/processor-compatibility-mode).
+   > You may see additional parameters for `Set-VMProcessor` that are intended for use with Azure Stack HCI. Do not attempt to use these with Windows Server, or you will get an error message. The default and only `CompatibilityForMigrationMode` available for Windows Server is `MinimumFeatureSet`. [Learn about dynamic CPU compatibility mode in Azure Stack HCI](/azure-stack/hci/manage/processor-compatibility-mode).
 
 ## Next steps
 
