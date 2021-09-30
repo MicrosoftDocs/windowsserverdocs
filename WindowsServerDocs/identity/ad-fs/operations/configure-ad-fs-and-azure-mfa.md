@@ -140,6 +140,8 @@ After this, you will see that Azure MFA is available as a primary authentication
 
 ![Screenshot of the Edit Authentication Methods dialog box showing the Azure M F A option highlighted in both the Extranet and Intranet sections.](media/Configure-AD-FS-2016-and-Azure-MFA/ADFS_AzureMFA6.png)
 
+If you want to use Azure MFA as an additional (secondary) method, click on the "Multi-factor" tab ("Additional" tab in AD FS 2019) and make sure it is enabled, otherwise you can face error messages such as "No valid strong authentication method found. Contact your administrator to configure and enable appropriate strong authentication provider".
+
 ## Renew and Manage AD FS Azure MFA Certificates
 
 The following guidance takes you through how to manage the Azure MFA certificates on your AD FS servers.
