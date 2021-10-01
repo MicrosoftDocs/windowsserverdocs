@@ -171,7 +171,6 @@ Deploying ReFS as a backup target is best suited for applications and hardware t
 | Extended attributes | No | Yes |
 | Disk quotas | No | Yes |
 | Bootable | No | Yes |
-| Page file support | No | Yes |
 | Supported on removable media | No | Yes |
 
 ## Additional References
