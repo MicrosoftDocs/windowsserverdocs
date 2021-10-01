@@ -17,8 +17,6 @@ manager: mtillman
 
  This document provides step-by-step instructions for installing and configuring  Windows Server Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server Essentials](Before-You-Install-Windows-Server-Essentials.md).
 
- This document provides step-by-step instructions for installing and configuring  Windows Server Essentials. Before you begin the installation, review and complete the tasks that are described in [Before You Install Windows Server Essentials](../install/Before-You-Install-Windows-Server-Essentials.md).
-
  You install and configure  Windows Server Essentials in two steps:
 
 
