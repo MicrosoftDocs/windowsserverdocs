@@ -29,7 +29,7 @@ manager: mtillman
 
     -   The UPnP framework is enabled on your router.
 
-    -   The Dynamic Host Configuration Protocol (DHCP) Server service for the LAN can be enabled or disabled.  Windows Server Essentials ensures that DHCP is not running on both the server and the router ? when DHCP is enabled on the router, DHCP is not enabled on the server during installation.
+    -   The Dynamic Host Configuration Protocol (DHCP) Server service for the LAN can be enabled or disabled.  Windows Server Essentials ensures that DHCP is not running on both the server and the router when DHCP is enabled on the router. DHCP is not enabled on the server during installation.
 
     -   You have an IP address for the external interface of your router, which is supplied by your Internet service provider (ISP). The IP address can be dynamically assigned by the DHCP Server service at your ISP, or you must manually configure a static IP address by using the router management console.
 
