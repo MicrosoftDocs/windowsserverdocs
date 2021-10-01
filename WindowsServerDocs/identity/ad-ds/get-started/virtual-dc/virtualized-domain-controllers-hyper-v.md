@@ -88,11 +88,11 @@ Lightweight Directory Access Protocol (LDAP) tests were run on a physical domain
 
 <table>
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
+<col>
+<col>
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
