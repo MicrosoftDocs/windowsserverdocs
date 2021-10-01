@@ -141,8 +141,8 @@ items:
     - name: Resources
       items:
       - name: Windows release health
-        href: https://docs.microsoft.com/windows/release-health/
+        href: /windows/release-health/
       - name: Windows Server product page
         href: https://www.microsoft.com/windows-server
       - name: Windows Server license terms
-        href: ../windows-server-licensing/windows-server-licensing.md 
+        href: ../windows-server-licensing/windows-server-licensing.md

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
 
-You can find more detailed information about the Windows Desktop client at [Get started with the Windows Desktop client](windowsdesktop.md). You'll find the latest updates to client in this article.
+You can find more detailed information about the Windows Desktop client at [Get started with the Windows Desktop client](windowsdesktop.md). You'll find the latest updates for the available clients in this article.
 
 ## Supported client versions
 
