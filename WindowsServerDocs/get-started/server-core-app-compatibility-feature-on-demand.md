@@ -203,7 +203,7 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
    ```PowerShell
    $capability_name = "ServerCore.AppCompatibility~~~~0.0.1.0"
    $package_path = "E:\LanguagesAndOptionalFeatures\Microsoft-Windows-InternetExplorer-Optional-Package~31bf3856ad364e35~amd64~~.cab"
-   $fod_drive = "E:\"
+   $fod_drive = "E:\LanguagesAndOptionalFeatures\"
 
    Add-WindowsCapability -Path $mount_folder -Name $capability_name -Source $fod_drive -LimitAccess
    Add-WindowsPackage -Path $mount_folder -PackagePath $package_path
