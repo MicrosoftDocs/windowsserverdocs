@@ -20,7 +20,7 @@ The location of the user attribute store and the location from which users authe
 
 - **Give your Active Directory users access to your claims-aware applications and services.** In this scenario, users in your organization access an application or service secured by AD FS when the users are signed in to Active Directory in the corporate intranet. The application or service can be your own or a partner's.
 
-- **Give your Active Directory users access to the applications and services of other organizations.** In this scenario, users in your organization access an application or service secured by AD FS when the users are signed in to an attribute store in the corporate intranet and when they sign on remotely from the internet. The application or service can be your own or a partner's.
+- **Give your Active Directory users access to the applications and services of other organizations.** In this scenario, users in your organization access an application or service secured by AD FS when the users are signed in to an attribute store in the corporate intranet and when they sign in remotely from the internet. The application or service can be your own or a partner's.
 
 - **Give users in another organization access to your claims-aware applications and services.** In this scenario, user accounts in another organization that are located in an attribute store on that organization's corporate intranet must access an application secured by AD FS in your organization. This scenario also works when you need to give consumer-based user accounts that are located in an attribute store in your organization's perimeter network access to an application secured by AD FS in your organization.
 
