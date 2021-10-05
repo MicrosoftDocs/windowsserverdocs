@@ -1,7 +1,7 @@
 ---
 ms.assetid: 4ddb927d-d65e-491d-840a-16049c083d13
-title: The Role of Attribute Stores
-description: "Learn more about: The Role of Attribute Stores"
+title: The role of attribute stores in AD FS
+description: This article describes the role of attribute stores in Active Directory Federation Services (AD FS).
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,27 +10,27 @@ ms.topic: article
 ---
 
 
-# The Role of Attribute Stores
-Active Directory Federation Services (AD FS) uses the term "attribute stores" to refer to directories or databases that an organization uses to store its user accounts and their associated attribute values. After it is configured in an identity provider organization, AD FS retrieves these attribute values from the store and creates claims based on that information so that a Web application or service that is hosted in a relying party organization can make the appropriate authorization decisions whenever a federated user \(a user whose account is stored in the identity provider organization\) attempts to access the application or service.
+# The role of attribute stores
+In Active Directory Federation Services (AD FS), the term *attribute stores* is used to refer to directories or databases that an organization uses to store its user accounts and their attribute values. After it's configured in an identity provider organization, AD FS retrieves these attribute values from the store. It creates claims based on that information so that a web application or service that's hosted in a relying party organization can make the appropriate authorization decisions when a federated user (a user whose account is stored in the identity provider organization) tries to access the application or service.
 
-For more information about how claims are generated, see [The Role of Claims](The-Role-of-Claims.md).
+For more information about how claims are generated, see [The role of claims](The-Role-of-Claims.md).
 
 ## How attribute stores fit in with your AD FS deployment goals
-The location of the user attribute store and the location from which users authenticate determine how you design AD FS to support the user identities. Depending on where the attribute store is located and where users will access the application \(in an intranet or on the Internet\), you can use one of the following deployment goals:
+The location of the user attribute store and the location from which users authenticate determine how you design AD FS to support the user identities. Depending on where the attribute store is located and where users will access the application (in an intranet or on the internet), you might have one of these deployment goals:
 
-- **Provide Your Active Directory Users Access to Your Claims-Aware Applications and Services** - In this goal, users in your organization access an AD FS–secured application or service \(either your own application or service or a partner's application or service\) when the users are logged on to Active Directory in the corporate intranet.
+- **Give your Active Directory users access to your claims-aware applications and services.** In this scenario, users in your organization access an application or service secured by AD FS when the users are signed in to Active Directory in the corporate intranet. The application or service can be your own or a partner's.
 
-- **Provide Your Active Directory Users Access to the Applications and Services of Other Organizations** - In this goal, users in your organization access an AD FS–secured application or service \(either your own application or service or a partner's application or service\) when the users are logged on to an attribute store in the corporate intranet and when they log on remotely from the Internet.
+- **Give your Active Directory users access to the applications and services of other organizations.** In this scenario, users in your organization access an application or service secured by AD FS when the users are signed in to an attribute store in the corporate intranet and when they sign on remotely from the internet. The application or service can be your own or a partner's.
 
-- **Provide Users in Another Organization Access to Your Claims-Aware Applications and Services** - In this goal, user accounts in another organization that are located in an attribute store on that organization's corporate intranet must access an AD FS–secured application in your organization. This goal also works when consumer\-based user accounts that are located in an attribute store in your organization's perimeter network must be provided with access to an AD FS–secured application in your organization.
+- **Give users in another organization access to your claims-aware applications and services.** In this scenario, user accounts in another organization that are located in an attribute store on that organization's corporate intranet must access an application secured by AD FS in your organization. This scenario also works when you need to give consumer-based user accounts that are located in an attribute store in your organization's perimeter network access to an application secured by AD FS in your organization.
 
 Depending on attribute store placement and other requirements of your organization, you can combine several of these deployment goals to complete the design of your AD FS deployment.
 
 ## Attribute stores that are supported by AD FS
-AD FS supports a wide range of directory and database stores that you can use for extracting administrator\-defined attribute values and populating claims with those values. AD FS supports any of the following directories or databases as attribute stores:
+AD FS supports a wide range of directory and database stores. You can use them to extract administrator-defined attribute values and populate claims with those values. AD FS supports any of these directories or databases as attribute stores:
 
-- Active Directory Domain Services (AD DS) in Windows Server 2012 and 2012 R2, and Windows Server 2016 and newer;
+- Active Directory Domain Services (AD DS) in Windows Server 2012 and 2012 R2, and in Windows Server 2016 and later.
 
-- All editions of SQL Server 2012, SQL Server 2014, and SQL Server 2016 and newer;
+- All editions of SQL Server 2012, SQL Server 2014, and SQL Server 2016 and later.
 
-- Custom attribute stores
+- Custom attribute stores.
