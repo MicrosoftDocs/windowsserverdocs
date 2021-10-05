@@ -10389,6 +10389,11 @@
       "source_path": "WindowsServerDocs/sddc.md",
       "redirect_url": "/azure-stack/hci/overview/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/set-for-sdn.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements#set/",
+      "redirect_document_id": false
     }
   ]
 }
