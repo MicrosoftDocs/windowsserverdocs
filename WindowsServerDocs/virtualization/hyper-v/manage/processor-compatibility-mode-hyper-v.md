@@ -4,7 +4,7 @@ description: Describes how to use processor compatibility mode to move a running
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 09/30/2021
+ms.date: 10/05/2021
 ---
 
 # Processor compatibility mode in Hyper-V
@@ -19,7 +19,7 @@ Processor compatibility mode is applicable to any VM mobility scenario that does
 
 VMs cannot be live migrated or saved and restored across virtualization hosts that use processors from different CPU manufacturers. For example, you cannot move running VMs or VM saved state from a host with Intel processors to a host with AMD processors. If you must move a VM in this case, the VM must first be shut down, then restarted on the new host.
 
-If you plan to move VMs, without rebooting them, between virtualization hosts that may use different generations of processors, you should enable processor compatibility mode. For example, you would enable processor compatibility mode to ensure that you can live migrate your VMs between cluster nodes that use different processor feature sets. You could also use processor compatibility mode to save a VM and restore it on a host computer that has a different processor feature set than the source host.
+If you plan to move VMs without rebooting them, between virtualization hosts that may use different generations of processors, you should enable processor compatibility mode. For example, you would enable processor compatibility mode to ensure that you can live migrate your VMs between cluster nodes that use different processor feature sets. You could also use processor compatibility mode to save a VM and restore it on a host computer that has a different processor feature set than the source host.
 
 ## Why processor compatibility mode is needed
 
