@@ -4,7 +4,7 @@ description: Describes how to use processor compatibility mode to move a running
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 10/05/2021
+ms.date: 10/06/2021
 ---
 
 # Processor compatibility mode in Hyper-V
