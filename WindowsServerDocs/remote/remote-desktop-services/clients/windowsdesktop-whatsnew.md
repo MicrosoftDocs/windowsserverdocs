@@ -31,7 +31,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 - Fixed an issue that caused the client to prompt for credentials a second time after closing a credential prompt window while subscribing.
 - Updates to Teams for Azure Virtual Desktop, including the following:
   - Fixed an issue in that made the video screen turn black and crash during calls in the Chrome browser.
-  - Reduced E2E latency and some performance issues by optimizing the GPU render path in the Windows Desktop client. To enable th new render path, add the registry key **HKEY_CURRENT_USER \SOFTWARE\Microsoft\Terminal Server Client\IsSwapChainRenderingEnabled** and set its value to **00000001**. To disable the new render path and revert to the original path, either set the key's value to **00000000** or delete the key.
+  - Reduced E2E latency and some performance issues by optimizing the GPU render path in the Windows Desktop client. To enable the new render path, add the registry key **HKEY_CURRENT_USER \SOFTWARE\Microsoft\Terminal Server Client\IsSwapChainRenderingEnabled** and set its value to **00000001**. To disable the new render path and revert to the original path, either set the key's value to **00000000** or delete the key.
 
 ## Updates for version 1.2.2322
 
