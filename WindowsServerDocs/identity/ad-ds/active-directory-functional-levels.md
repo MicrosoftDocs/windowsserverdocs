@@ -189,7 +189,7 @@ Supported Domain Controller Operating System:
       * The **lastLogonTimestamp** attribute is updated with the last logon time of the user or computer. This attribute is replicated within the domain.
    * The ability to set the **userPassword** attribute as the effective password on **inetOrgPerson** and user objects
    * The ability to redirect Users and Computers containers
-      * By default, two well-known containers are provided for housing computer and user accounts, namely, cn=Computers,<domain root> and cn=Users,<domain root>. This feature allows the definition of a new, well-known location for these accounts.
+      * By default, two well-known containers are provided for housing computer and user accounts, namely, cn=Computers,\<domain root> and cn=Users,\<domain root>. This feature allows the definition of a new, well-known location for these accounts.
    * The ability for Authorization Manager to store its authorization policies in AD DS
    * Constrained delegation
       * Constrained delegation makes it possible for applications to take advantage of the secure delegation of user credentials by means of Kerberos-based authentication.

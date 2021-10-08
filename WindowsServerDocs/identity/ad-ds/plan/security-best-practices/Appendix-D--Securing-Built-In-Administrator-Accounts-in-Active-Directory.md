@@ -61,11 +61,11 @@ For the built-in Administrator account in each domain in your forest, you should
         -   Deny log on through Remote Desktop Services
 
 > [!NOTE]
-> These settings will ensure that the domain's built-in Administrator account cannot be used to connect to a domain controller, although the account can log on locally to domain controllers. Because this account should only be used in disaster-recovery scenarios, it is anticipated that physical access to at least one domain controller will be available, or that other accounts with permissions to access domain controllers remotely can be used.
+> These settings will ensure that the domain's built-in Administrator account cannot be used to connect to a domain controller, although the account, if enabled, can log on locally to domain controllers. Because this account should only be enabled and used in disaster-recovery scenarios, it is anticipated that physical access to at least one domain controller will be available, or that other accounts with permissions to access domain controllers remotely can be used.
 
 -   Configure Auditing of Administrator Accounts
 
-    When you have secured each domain's Administrator account, you should configure auditing to monitor for usage of, or changes to, the account. If the account is logged in to, its password is reset, or any other modifications are made to the account, alerts should be sent to the users or teams responsible for administration of Active Directory, in addition to incident response teams in your organization.
+    When you have secured each domain's Administrator account and disabled it, you should configure auditing to monitor for changes to the account. If the account is enabled, its password is reset, or any other modifications are made to the account, alerts should be sent to the users or teams responsible for administration of Active Directory, in addition to incident response teams in your organization.
 
 #### Step-by-Step Instructions to Secure Built-in Administrator Accounts in Active Directory
 
@@ -98,17 +98,17 @@ For the built-in Administrator account in each domain in your forest, you should
 
 1.  In **Server Manager**, click **Tools**, and click **Group Policy Management**.
 
-2.  In the console tree, expand <Forest>\Domains\\<Domain>, and then **Group Policy Objects** (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to create the Group Policy).
+2.  In the console tree, expand \<Forest>\Domains&#92;\<Domain>, and then **Group Policy Objects** (where \<Forest> is the name of the forest and \<Domain> is the name of the domain where you want to create the Group Policy).
 
 3.  In the console tree, right-click **Group Policy Objects**, and click **New**.
 
     ![Screenshot that shows Group Policy Objects in the console tree.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_27.gif)
 
-4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** (where <GPO Name> is the name of this GPO) as indicated in the following screenshot.
+4.  In the **New GPO** dialog box, type \<GPO Name>, and click **OK** (where \<GPO Name> is the name of this GPO) as indicated in the following screenshot.
 
     ![Screenshot that shows the New GPO dialog box.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_28.gif)
 
-5.  In the details pane, right-click <GPO Name>, and click **Edit**.
+5.  In the details pane, right-click \<GPO Name>, and click **Edit**.
 
 6.  Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.
 
@@ -120,7 +120,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     2.  Click **Add User or Group** and click **Browse**.
 
-    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in <DomainName>\Username format as indicated in the following screenshot.
+    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in \<DomainName>\Username format as indicated in the following screenshot.
 
         ![Screenshot that shows the DomainName/Username format.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_30.gif)
 
@@ -132,7 +132,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     2.  Click **Add User or Group** and click **Browse**.
 
-    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in <DomainName>\Username format as indicated in the following screenshot.
+    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in \<DomainName>\Username format as indicated in the following screenshot.
 
         ![Screenshot that shows how to verify you have configured the user rights to prevent the Administrator account from logging on as a batch job.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_31.gif)
 
@@ -144,7 +144,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     2.  Click **Add User or Group** and click **Browse**.
 
-    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in <DomainName>\Username format as indicated in the following screenshot.
+    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in \<DomainName>\Username format as indicated in the following screenshot.
 
         ![Screenshot that shows how to verify you have configured the user rights to prevent the Administrator account from logging on as a service.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_32.gif)
 
@@ -156,7 +156,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
     2.  Click **Add User or Group** and click **Browse**.
 
-    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in <DomainName>\Username format as indicated in the following screenshot.
+    3.  Type **Administrator**, click **Check Names**, and click **OK**. Verify that the account is displayed in \<DomainName>\Username format as indicated in the following screenshot.
 
         ![Screenshot that shows how to verify you have configured the user rights to prevent the BA account from accessing member servers and workstations via Remote Desktop Services.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_33.gif)
 
@@ -166,7 +166,7 @@ For the built-in Administrator account in each domain in your forest, you should
 
 12. In **Group Policy Management**, link the GPO to the member server and workstation OUs by doing the following:
 
-    1.  Navigate to the <Forest>\Domains\\<Domain> (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).
+    1.  Navigate to the \<Forest>\Domains&#92;\<Domain> (where \<Forest> is the name of the forest and \<Domain> is the name of the domain where you want to set the Group Policy).
 
     2.  Right-click the OU that the GPO will be applied to and click **Link an existing GPO**.
 
@@ -191,6 +191,12 @@ The verification steps outlined here are specific to Windows 8 and Windows Serve
 1.  From any member server or workstation affected by the GPO changes, attempt to log on interactively to the domain by using the domain's built-in Administrator account. After attempting to log on, a dialog box similar to the following should appear.
 
 ![Screenshot that says you must use a smart card to sign in.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_36.gif)
+
+##### Verify "Account is disabled" Account Option
+
+1.  From any member server or workstation affected by the GPO changes, attempt to log on interactively to the domain by using the domain's built-in Administrator account. After attempting to log on, a dialog box similar to the following should appear.
+
+![Screenshot that says your account has been disabled.](media/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory/SAD_37.gif)
 
 ##### Verify "Deny access to this computer from the network" GPO Settings
 From any member server or workstation that is not affected by the GPO changes (such as a jump server), attempt to access a member server or workstation over the network that is affected by the GPO changes. To verify the GPO settings, attempt to map the system drive by using the **NET USE** command by performing the following steps:
@@ -225,7 +231,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 4.  Click **File** and click **Save As**.
 
-5.  In the **Filename** field, type **<Filename>.bat** (where <Filename> is the name of the new batch file).
+5.  In the **Filename** field, type **\<Filename>.bat** (where \<Filename> is the name of the new batch file).
 
 ###### Schedule a Task
 
@@ -238,7 +244,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 3.  On **Task Scheduler**, click **Action**, and click **Create Task**.
 
-4.  In the **Create Task** dialog box, type **<Task Name>** (where **<Task Name>** is the name of the new task).
+4.  In the **Create Task** dialog box, type **\<Task Name>** (where **\<Task Name>** is the name of the new task).
 
 5.  Click the **Actions** tab, and click **New**.
 

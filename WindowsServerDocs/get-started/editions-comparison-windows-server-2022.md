@@ -148,8 +148,8 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
 |Software Load Balancer|Yes|Yes|
-|Software Migration Service|Yes|Yes|
-|Software Migration Service Proxy|Yes|Yes|
+|Storage Migration Service|Yes|Yes|
+|Storage Migration Service Proxy|Yes|Yes|
 |Storage Replica|Yes|Yes|
 |System Data Archiver|Yes|Yes|
 |System Insights|Yes|Yes|

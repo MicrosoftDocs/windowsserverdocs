@@ -65,11 +65,11 @@ For the Administrators group in each domain in the forest:
 
     ![Screenshot that shows where to select New so you can secure Administrators Groups in Active Directory.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_80.gif)
 
-4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** (where *GPO Name* is the name of this GPO).
+4.  In the **New GPO** dialog box, type \<GPO Name>, and click **OK** (where *GPO Name* is the name of this GPO).
 
     ![Screenshot that shows where to name the G P O in the New GPO dialog box so you can secure Administrators Groups.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_81.gif)
 
-5.  In the details pane, right-click **<GPO Name>**, and click **Edit**.
+5.  In the details pane, right-click **\<GPO Name>**, and click **Edit**.
 
 6.  Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.
 
@@ -143,17 +143,17 @@ For the Administrators group in each domain in the forest:
 
 1.  In **Server Manager**, click **Tools**, and click **Group Policy Management**.
 
-2.  In the console tree, expand <Forest>\Domains\\<Domain>, and then **Group Policy Objects** (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).
+2.  In the console tree, expand \<Forest>\Domains&#92;\<Domain>, and then **Group Policy Objects** (where \<Forest> is the name of the forest and \<Domain> is the name of the domain where you want to set the Group Policy).
 
 3.  In the console tree, right-click **Group Policy Objects**, and click **New**.
 
     ![Screenshot that shows the menu that displays when you right-click Group Policy Objects.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_89.gif)
 
-4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** (where <GPO Name> is the name of this GPO).
+4.  In the **New GPO** dialog box, type \<GPO Name>, and click **OK** (where \<GPO Name> is the name of this GPO).
 
     ![Screenshot that shows where to name the G P O so you can secure Administrators Groups.](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_90.gif)
 
-5.  In the details pane, right-click **<GPO Name>**, and click **Edit**.
+5.  In the details pane, right-click **\<GPO Name>**, and click **Edit**.
 
 6.  Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.
 
@@ -199,7 +199,7 @@ For the Administrators group in each domain in the forest:
 
 11. In **Group Policy Management**, link the GPO to the domain controllers OU by doing the following:
 
-    1.  Navigate to the <Forest>\Domains\\<Domain> (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).
+    1.  Navigate to the \<Forest>\Domains&#92;\<Domain> (where \<Forest> is the name of the forest and \<Domain> is the name of the domain where you want to set the Group Policy).
 
     2.  Right-click the domain controllers OU and click **Link an existing GPO**.
 
@@ -243,7 +243,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 4.  Click **File**, and click **Save As**.
 
-5.  In the **File name** field, type **<Filename>.bat** (where <Filename> is the name of the new batch file).
+5.  In the **File name** field, type **\<Filename>.bat** (where \<Filename> is the name of the new batch file).
 
 ###### Schedule a Task
 
@@ -256,7 +256,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 3.  Click **Action**, and click **Create Task**.
 
-4.  In the **Create Task** dialog box, type **<Task Name>** (where <Task Name> is the name of the new task).
+4.  In the **Create Task** dialog box, type **\<Task Name>** (where \<Task Name> is the name of the new task).
 
 5.  Click the **Actions** tab, and click **New**.
 

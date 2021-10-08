@@ -89,7 +89,7 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
     certutil -config <Computer-Name>\<Root-CA-Name> -ca.cert <root-ca-cert-filename.cer>
     ```
 
-    (If you run the command on the root CA you can omit the connection information, -config <Computer-Name>\\<Root-CA-Name>)
+    (If you run the command on the root CA you can omit the connection information, -config \<Computer-Name>&#92;\<Root-CA-Name>)
 
     1.  Import the Root CA certificate from the previous step on the Account Forest CA by running the following command from an elevated command prompt:
 
@@ -97,7 +97,7 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
         certutil -dspublish -f <root-ca-cert-filename.cer> RootCA
         ```
 
-    2.  Grant Resource Forest certificate templates Read/Write permissions to the \<Account Forest\>\\<Administrator account\>.
+    2.  Grant Resource Forest certificate templates Read/Write permissions to the \<Account Forest\>&#92;\<Administrator account\>.
 
     3.  Extract all resource forest enterprise CA certificates by running the following command from an elevated command prompt:
 
@@ -105,7 +105,7 @@ The PowerShell script, PKISync.ps1, is required for this procedure. See [AD CS: 
         certutil -config <Computer-Name>\<Enterprise-CA-Name> -ca.cert <enterprise-ca-cert-filename.cer>
         ```
 
-        (If you run the command on the root CA you can omit the connection information, -config <Computer-Name>\\<Root-CA-Name>)
+        (If you run the command on the root CA you can omit the connection information, -config \<Computer-Name>&#92;\<Root-CA-Name>)
 
     4.  Import the Enterprise CA certificates from the previous step on the Account Forest CA by running the following commands from an elevated command prompt:
 

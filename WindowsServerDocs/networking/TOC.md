@@ -245,7 +245,6 @@
 ###### [RAS Gateway deployment architecture](sdn/technologies/network-function-virtualization/RAS-Gateway-Deployment-Architecture.md)
 ###### [RAS Gateway high availability](sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)
 ##### [Software Load Balancing (SLB) for SDN](/azure-stack/hci/concepts/software-load-balancer)
-#### [Switch Embedded Teaming (SET) for SDN](sdn/technologies/Set-for-Sdn.md)
 #### [Container networking](sdn/technologies/Containers/Container-networking-overview.md)
 
 ### [Plan for SDN](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure)
