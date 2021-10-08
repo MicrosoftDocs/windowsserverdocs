@@ -11,7 +11,7 @@ ms.assetid: 84eaba2c-c0af-49e1-bbbd-2ed2928e5e4b
 
 # fsutil behavior
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
 
 Queries or sets NTFS volume behavior, which includes:
 
@@ -45,7 +45,7 @@ fsutil behavior set {allowextchar {1|0} | bugcheckoncorrupt {1|0} | disable8dot3
 | set | Changes the file system behavior parameters. |
 | allowextchar `{1|0}` | Allows (**1**) or disallows (**0**) characters from the extended character set (including diacritic characters) to be used in 8.3 character-length short file names on NTFS volumes.<p>You must restart your computer for this parameter to take effect. |
 | Bugcheckoncorrupt `{1|0}` | Allows (**1**) or disallows (**0**) generation of a bug check when there is corruption on an NTFS volume. This feature can be used to prevent NTFS from silently deleting data when used with the Self-Healing NTFS feature.<p>You must restart your computer for this parameter to take effect. |
-| disable8dot3 [<volumepath>] `{1|0}` | Disables (**1**) or enables (**0**) the creation of 8.3 character-length file names on FAT- and NTFS-formatted volumes. Optionally, prefix with the *volumepath* specified as a drive name followed by a colon or GUID. |
+| disable8dot3 [`<volumepath>`] `{1|0}` | Disables (**1**) or enables (**0**) the creation of 8.3 character-length file names on FAT- and NTFS-formatted volumes. Optionally, prefix with the *volumepath* specified as a drive name followed by a colon or GUID. |
 | disablecompression `{1|0}` | Disables **(1)** or enables **(0)** NTFS compression.<p>You must restart your computer for this parameter to take effect. |
 | disablecompressionlimit `{1|0}` | Disables **(1)** or enables **(0)** NTFS compression limit on NTFS volume. When a compressed file reaches a certain level of fragmentation, rather than failing to extend the file, NTFS stops compressing additional extents of the file. This was done to allow compressed files to be larger than they normally would be. Setting this value to **TRUE** disables this feature which limits the size of compressed files on the system. We don't recommend disabling this feature.<p>You must restart your computer for this parameter to take effect. |
 | disableencryption `{1|0}` | Disables **(1)** or enables **(0)** the encryption of folders and files on NTFS volumes.<p>You must restart your computer for this parameter to take effect. |

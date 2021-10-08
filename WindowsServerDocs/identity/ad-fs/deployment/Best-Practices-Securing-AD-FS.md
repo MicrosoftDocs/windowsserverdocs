@@ -50,7 +50,10 @@ The below diagram depicts the firewall ports that must be enabled between and am
 >[!NOTE]
 > Port 808 (Windows Server 2012R2) or port 1501 (Windows Server 2016+) is the Net.TCP port AD FS uses for the local WCF endpoint to transfer configuration data to the service process and PowerShell. This port can be seen by running Get-AdfsProperties | select NetTcpPort. This is a local port that will not need to be opened in the firewall but will be displayed in a port scan.
 
+### Communication between Federation Servers
+Federation servers on an AD FS farm communicate with other servers in the farm and the Web Application Proxy (WAP) servers via HTTP port 80 for configuration synchronization. Making sure that only these servers can communicate with each other and no other is a measure of defense in depth. 
 
+Organizations can do this by setting up firewall rules on each server allowing inbound communication from the IP addresses from other servers in the farm and WAP servers. Please note that some Network Load Balancers (NLB) use HTTP port 80 for probing the health on individual federation servers. Please make sure that you include the IP addresses of the NLB in the configured firewall rules.
 
 ### Azure AD Connect and Federation Servers/WAP
 This table describes the ports and protocols that are required for communication between the Azure AD Connect server and Federation/WAP servers.
@@ -126,7 +129,7 @@ The federation service proxy (part of the WAP) provides congestion control to pr
 
 #### To verify the settings, you can do the following:
 1. On your Web Application Proxy computer, start an elevated command window.
-2. Navigate to the ADFS directory, at %WINDIR%\adfs\config.
+2. Navigate to the AD FS directory, at %WINDIR%\adfs\config.
 3. Change the congestion control settings from its default values to `<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />`.
 4. Save and close the file.
 5. Restart the AD FS service by running `net stop adfssrv` and then `net start adfssrv`.
@@ -146,6 +149,9 @@ The most important security recommendation for your AD FS infrastructure is to e
 The recommended way for Azure AD customers to monitor and keep current their infrastructure is via Azure AD Connect Health for AD FS, a feature of Azure AD Premium.  Azure AD Connect Health includes monitors and alerts that trigger if an AD FS or WAP machine is missing one of the important updates specifically for AD FS and WAP.
 
 Information on installing Azure AD Connect Health for AD FS can be found [here](/azure/active-directory/hybrid/how-to-connect-health-agent-install).
+
+## Best practice for securing and monitoring the AD FS trust with Azure AD
+When you federate your AD FS with Azure AD, it is critical that the federation configuration (trust relationship configured between AD FS and Azure AD) is monitored closely, and any unusual or suspicious activity is captured. To do so, we recommend setting up alerts and getting notified whenever any changes are made to the federation configuration. To learn how to setup alerts, see [Monitor changes to federation configuration](/azure/active-directory/hybrid/how-to-connect-monitor-federation-changes).
 
 ## Additional security configurations
 The following additional capabilities can be configured optionally to provide additional protections to those offered in the default deployment.

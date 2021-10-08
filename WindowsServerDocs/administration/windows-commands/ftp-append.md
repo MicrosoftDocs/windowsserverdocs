@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # ftp append
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Appends a local file to a file on the remote computer using the current file type setting.
 
@@ -26,7 +26,7 @@ append <localfile> [remotefile]
 | Parameter | Description |
 | --------- | ----------- |
 | `<localfile>` | Specifies the local file to add. |
-| [remotefile] | Specifies the file on the remote computer to which <localfile> is added. If you don't use this parameter, the `<localfile>` name is used in place of the remote file name. |
+| [remotefile] | Specifies the file on the remote computer to which `<localfile>` is added. If you don't use this parameter, the `<localfile>` name is used in place of the remote file name. |
 
 ### Examples
 

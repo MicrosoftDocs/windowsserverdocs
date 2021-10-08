@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # wdsutil stop-server
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Stops all services on a Windows Deployment Services server.
 
@@ -19,9 +19,11 @@ Stops all services on a Windows Deployment Services server.
 wdsutil [Options] /Stop-Server [/Server:<Server name>]
 ```
 ### Parameters
+
 |Parameter|Description|
 |-------|--------|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
+|[/Server:\<Server name\>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
+
 ## Examples
 To stop the services, type one of the following:
 ```

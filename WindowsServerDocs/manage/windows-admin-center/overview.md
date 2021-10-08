@@ -10,7 +10,7 @@ ms.localizationpriority: high
 
 # Windows Admin Center
 
-> Applies to: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Windows Admin Center is a locally deployed, browser-based app for managing Windows servers, clusters, hyper-converged infrastructure, as well as Windows 10 PCs. It is a free product and is ready to use in production.
 
@@ -46,16 +46,16 @@ Here's a video to give you an overview, followed by a poster giving more details
 <table>
     <tr></tr>
     <tr>
-        <td style="vertical-align: top;">
+        <td>
             <h3>Understand</h3>
             <ul>
             <li><a href="understand/what-is.md">What is Windows Admin Center?</a>
-            <li><a href="understand/faq.md">FAQ</a>
+            <li><a href="understand/faq.yml">FAQ</a>
             <li><a href="understand/case-studies.md">Case studies</a>
             <li><a href="understand/related-management.md">Related management products</a>
             </ul>
         </td>
-        <td style="vertical-align: top;">
+        <td>
             <h3>Plan</h3>
             <ul>
             <li><a href="plan/installation-options.md">What type of installation is right for you?</a>
@@ -65,7 +65,7 @@ Here's a video to give you an overview, followed by a poster giving more details
         </td>
     </tr>
     <tr>
-        <td style="vertical-align: top;">
+        <td>
             <h3>Deploy</h3>
             <ul>
             <li><a href="deploy/prepare-environment.md">Prepare your environment</a>
@@ -73,7 +73,7 @@ Here's a video to give you an overview, followed by a poster giving more details
             <li><a href="deploy/high-availability.md">Enable high availability</a>
          </ul>
         </td>
-        <td style="vertical-align: top;">
+        <td>
             <h3>Configure</h3>
             <ul>
             <li><a href="configure/settings.md">Windows Admin Center settings</a>
@@ -85,7 +85,7 @@ Here's a video to give you an overview, followed by a poster giving more details
         </td>
     </tr>
     <tr>
-        <td style="vertical-align: top;">
+        <td>
             <h3>Use</h3>
             <ul>
             <li><a href="use/get-started.md">Launch & add connections</a>
@@ -97,7 +97,7 @@ Here's a video to give you an overview, followed by a poster giving more details
             <li><a href="use/logging.md">Logging</a>
             </ul>
         </td>
-        <td style="vertical-align: top;">
+        <td>
             <h3>Connect to Azure</h3>
             <ul>
             <li><a href="azure/index.md">Azure hybrid services</a></li>
@@ -109,7 +109,7 @@ Admin Center to Azure</a></li>
         </td>
     </tr>
     <tr>
-            <td style="vertical-align: top;">
+            <td>
             <h3>Support</h3>
             <ul>
             <li><a href="support/release-history.md">Release history</a>
@@ -118,7 +118,7 @@ Admin Center to Azure</a></li>
             <li><a href="support/known-issues.md">Known issues</a>
             </ul>
         </td>
-            <td style="vertical-align: top;">
+            <td>
             <h3>Extend</h3>
             <ul>
             <li><a href="extend/extensibility-overview.md">Overview of extensions</a>

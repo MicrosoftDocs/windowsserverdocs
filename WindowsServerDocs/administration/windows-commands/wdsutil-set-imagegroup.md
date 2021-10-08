@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # wdsutil set-imagegroup
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Changes the attributes of an image group.
 
@@ -19,12 +19,14 @@ Changes the attributes of an image group.
 wdsutil [Options] /set-imagegroup:<Image group name> [/Server:<Server name>] [/Name:<New image group name>] [/Security:<SDDL>]
 ```
 ### Parameters
+
 |Parameter|Description|
 |-------|--------|
-|/set-imagegroup:<Image group name>|Specifies the name of the image group.|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If not specified, the local server will be used.|
-|[/Name:<New image group name>]|Specifies the new name of the image group.|
-|[/Security:<SDDL>]|Specifies the new Security Descriptor of the image group, in security descriptor definition language (SDDL) format.|
+|/set-imagegroup:\<Image group name\>|Specifies the name of the image group.|
+|[/Server:\<Server name\>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If not specified, the local server will be used.|
+|[/Name:\<New image group name\>]|Specifies the new name of the image group.|
+|[/Security:\<SDDL\>]|Specifies the new Security Descriptor of the image group, in security descriptor definition language (SDDL) format.|
+
 ## Examples
 To set the name for an image group, type:
 ```

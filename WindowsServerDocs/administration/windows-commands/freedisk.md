@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # freedisk
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Checks to see if the specified amount of disk space is available before continuing with an installation process.
 
@@ -26,14 +26,14 @@ freedisk [/s <computer> [/u [<domain>\]<user> [/p [<password>]]]] [/d <drive>] [
 | Parameter | Description |
 | --------- | ----------- |
 | /s `<computer>` | Specifies the name or IP address of a remote computer (do not use backslashes). The default is the local computer. This parameter applies to all files and folders specified in the command. |
-| /u `[<domain>\]<user>` | Runs the script with the permissions of the specified user account. The default is system permissions. |
-| /p [<password>] | Specifies the password of the user account that is specified in **/u**. |
+| /u [`<domain>`\\]`<user>` | Runs the script with the permissions of the specified user account. The default is system permissions. |
+| /p [`<password>`] | Specifies the password of the user account that is specified in **/u**. |
 | /d `<drive>` | Specifies the drive for which you want to find out the availability of free space. You must specify `<drive>` for a remote computer. |
-| `<value>` | Checks for a specific amount of free disk space. You can specify `<value>` in bytes, KB, MB, GB, TB, PB, EB, ZB or YB. |
+| `<value>` | Checks for a specific amount of free disk space. You can specify `<value>` in bytes, KB, MB, GB, TB, PB, EB, ZB, or YB. |
 
 #### Remarks
 
-- Using the **/s**, **/u**, and **/p** command-line options are available only when you use **/s**. You must use **/p** with **/u**to provide the user s password.
+- Using the **/s**, **/u**, and **/p** command-line options are available only when you use **/s**. You must use **/p** with **/u**to provide the user's password.
 
 - For unattended installations, you can use **freedisk** in installation batch files to check for the prerequisite amount free space before continuing with the installation.
 
@@ -41,13 +41,13 @@ freedisk [/s <computer> [/u [<domain>\]<user> [/p [<password>]]]] [/d <drive>] [
 
 ### Examples
 
-To determine whether there are at least 50 MB of free space available on drive C:, type:
+To determine whether there are at least 50 MB of free space available on drive C, type:
 
 ```
 freedisk 50mb
 ```
 
-Output similar to the following appears on the screen:
+Output similar to the following example appears on the screen:
 
 ```
 INFO: The specified 52,428,800 byte(s) of free space is available on current drive.

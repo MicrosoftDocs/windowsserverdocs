@@ -10,14 +10,14 @@ ms.date: 08/07/2020
 ---
 # Troubleshooting Authentication Issues
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic contains troubleshooting information for issues related to problems users may have when attempting to connect to DirectAccess using OTP authentication. DirectAccerss OTP related events are logged on the client computer in Event Viewer under **Applications and Services Logs/Microsoft/Windows/OtpCredentialProvider**. Make sure that this log is enabled when troubleshooting issues with DirectAccess OTP.
 
 ## Failed to access the CA that issues OTP certificates
 **Scenario**. User fails to authenticate using OTP with the error: "Authentication failed due to an internal error"
 
-**Error received** (client event log). OTP certificate enrollment for user <username> failed on CA server <CA_name>, request failed, possible reasons for failure: CA server name cannot be resolved, CA server cannot be accessed over the first DirectAccess tunnel or the connection to the CA server cannot be established.
+**Error received** (client event log). OTP certificate enrollment for user \<username> failed on CA server <CA_name>, request failed, possible reasons for failure: CA server name cannot be resolved, CA server cannot be accessed over the first DirectAccess tunnel or the connection to the CA server cannot be established.
 
 **Cause**
 
@@ -127,7 +127,7 @@ Make sure the latest settings are deployed on the client computer by running `gp
 ## Failed to generate the OTP logon certificate request
 **Scenario**. User fails to authenticate using OTP with the error: "Authentication failed due to an internal error"
 
-**Error received** (client event log). The certificate request for OTP authentication cannot be initialized. Either a private key cannot be generated, or user <username> cannot access certificate template <OTP_template_name> on the domain controller.
+**Error received** (client event log). The certificate request for OTP authentication cannot be initialized. Either a private key cannot be generated, or user \<username> cannot access certificate template <OTP_template_name> on the domain controller.
 
 **Cause**
 
@@ -165,7 +165,7 @@ There are two possible causes for this error:
 ## OTP provider requires challenge/response
 **Scenario**. User fails to authenticate using OTP with the error: "Authentication failed due to an internal error"
 
-**Error received** (client event log). OTP authentication with Remote Access server (<DirectAccess_server_name>) for user (<username>) required a challenge from the user.
+**Error received** (client event log). OTP authentication with Remote Access server (<DirectAccess_server_name>) for user (\<username>) required a challenge from the user.
 
 **Cause**
 
@@ -178,7 +178,7 @@ Configure the OTP provider to not require challenge/response in any scenario.
 ## Incorrect OTP logon template used
 **Scenario**. User fails to authenticate using OTP with the error: "Authentication failed due to an internal error"
 
-**Error received** (client event log). The CA template from which user <username> requested a certificate is not configured to issue OTP certificates.
+**Error received** (client event log). The CA template from which user \<username> requested a certificate is not configured to issue OTP certificates.
 
 **Cause**
 
@@ -220,13 +220,13 @@ To create the OTP signing certificate template see 3.3 Plan the registration aut
 
 One of the following errors:
 
--   User <username> cannot be authenticated with OTP. Ensure that a UPN is defined for the user name in Active Directory. Error code: <error_code>.
+-   User \<username> cannot be authenticated with OTP. Ensure that a UPN is defined for the user name in Active Directory. Error code: <error_code>.
 
--   User <username> cannot be authenticated with OTP. Ensure that a DN is defined for the user name in Active Directory. Error code: <error_code>.
+-   User \<username> cannot be authenticated with OTP. Ensure that a DN is defined for the user name in Active Directory. Error code: <error_code>.
 
 **Error received** (server event log)
 
-The user name <username> specified for OTP authentication does not exist.
+The user name \<username> specified for OTP authentication does not exist.
 
 **Cause**
 

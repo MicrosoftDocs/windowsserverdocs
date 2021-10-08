@@ -11,7 +11,7 @@ ms.topic: article
 
 # Virtualized Domain Controller Deployment and Configuration
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic covers:
 
@@ -260,7 +260,7 @@ You run the cmdlet on the proposed source domain controller that you intend to c
 
 |**ActiveDirectory**<p>**Cmdlet**|**Arguments**|**Explanation**|
 |--|--|--|
-|**New-ADDCCloneConfigFile**|*<no argument specified>*|Creates a blank DcCloneConfig.xml file in the DSA Working Directory (default: %systemroot%\ntds)|
+|**New-ADDCCloneConfigFile**|*\<no argument specified>*|Creates a blank DcCloneConfig.xml file in the DSA Working Directory (default: %systemroot%\ntds)|
 ||-CloneComputerName|Specifies the clone DC computer name. String data type.|
 ||-Path|Specifies the folder to create the DcCloneConfig.xml. If not specified, writes to the DSA Working Directory (default: %systemroot%\ntds). String data type.|
 ||-SiteName|Specifies the AD logical site name to join during cloned computer account creation. String data type.|

@@ -11,7 +11,7 @@ ms.topic: article
 
 # Event ID 2088: DNS lookup failure occurred with replication success
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 When a destination domain controller running Windows Server 2003 with Service Pack 1 (SP1) receives Event ID 2088 in the Directory Service event log, attempts to resolve the globally unique identifier (GUID) in the alias (CNAME) resource record to an IP address for the source domain controller failed. However, the destination domain controller tried other means to resolve the name and succeeded by using either the fully qualified domain name (FQDN) or the NetBIOS name of the source domain controller. Although replication was successful, the Domain Name System (DNS) problem should be diagnosed and resolved.
 
@@ -49,7 +49,7 @@ operating system has been reinstalled with a different computer
 name or NTDSDSA object GUID, remove the source domain controller's
 metadata with ntdsutil.exe, using the steps outlined in MSKB article 216498.
 
-2) Confirm that the source domain controller is running Active Directory and is accessible on the network by typing "net view \\<source DC name>" or "ping <source DC name>".
+2) Confirm that the source domain controller is running Active Directory and is accessible on the network by typing "net view \<source DC name>" or "ping \<source DC name>".
 
 3) Verify that the source domain controller is using a valid DNS server for DNS services, and that the source domain controller's host record and CNAME record are correctly registered, using the DNS Enhanced version of DCDIAG.EXE available on <https://www.microsoft.com/dns>
 
@@ -65,6 +65,7 @@ dcdiag /test:dns
 5) For further analysis of DNS error failures see KB 824449:
 <https://support.microsoft.com/?kbid=824449>
 
+```
 Additional Data
 Error value:
 11004 The requested name is valid, but no data of the requested
@@ -84,3 +85,5 @@ type was found</code>
   </section>
   <relatedTopics />
 </developerConceptualDocument>
+>>>>>>> d3d5e1df7545fc05a0fe34e8d31a7bf943b585ae
+```

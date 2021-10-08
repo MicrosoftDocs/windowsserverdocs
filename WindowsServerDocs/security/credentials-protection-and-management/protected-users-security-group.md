@@ -10,7 +10,7 @@ ms.date: 10/12/2016
 ---
 # Protected Users Security Group
 
-> Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic for the IT professional describes the Active Directory security group Protected Users, and explains how it works. This group was introduced in  Windows Server 2012 R2 domain controllers.
 
@@ -52,9 +52,9 @@ The following table specifies the properties of the Protected Users group.
 
 |Attribute|Value|
 |-------|-----|
-|Well-known SID/RID|S-1-5-21-<domain>-525|
+|Well-known SID/RID|S-1-5-21-\<domain>-525|
 |Type|Domain Global|
-|Default container|CN=Users, DC=<domain>, DC=|
+|Default container|CN=Users, DC=\<domain>, DC=|
 |Default members|None|
 |Default member of|None|
 |Protected by ADMINSDHOLDER?|No|

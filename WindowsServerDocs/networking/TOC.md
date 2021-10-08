@@ -67,11 +67,12 @@
 ####### [Configure firewall rules for non-domain members to allow BranchCache traffic](branchcache/deploy/Configure-Firewall-Rules-for-Non-Domain-Members-to-Allow-BranchCache-Traffic.md)
 ###### [Verify client computer settings](branchcache/deploy/verify-Client-computer-Settings.md)
 
-## [DirectAccess](../remote/remote-access/directaccess/directaccess.md) 
+## [DirectAccess](../remote/remote-access/directaccess/directaccess.md)
 
 ## [Domain Name System (DNS)](dns/dns-top.md)
 ### [What's new in DNS client in Windows Server](dns/What-s-New-in-DNS-Client.md)
 ### [What's new in DNS server in Windows Server](dns/What-s-New-in-DNS-Server.md)
+### [Secure DNS Client over HTTPS (DoH)](dns/doh-client-support.md)
 ### [Anycast DNS](dns/deploy/anycast.md)
 ### [DNS policy scenario guidance](dns/deploy/DNS-Policy-Scenario-Guide.md)
 #### [DNS policies overview](dns/deploy/DNS-Policies-Overview.md)
@@ -110,26 +111,7 @@
 #### [Hardware Only (HO) features and technologies](technologies/hpn/hpn-hardware-only-features.md)
 #### [NIC advanced properties](technologies/hpn/hpn-nic-advanced-properties.md)
 
-### [Insider preview](technologies/hpn/hpn-insider-preview.md)
 ### [Receive Segment Coalescing (RSC) in the vSwitch](technologies/hpn/rsc-in-the-vswitch.md)
-
-### [Converged NIC configuration guidance](technologies/conv-nic/cnic-top.md)
-#### [Single network adapter configuration](technologies/conv-nic/cnic-single.md)
-#### [Datacenter network adapter configuration](technologies/conv-nic/cnic-datacenter.md)
-#### [Physical switch configuration](technologies/conv-nic/cnic-app-switch-config.md)
-#### [Troubleshooting Converged NIC](technologies/conv-nic/cnic-app-troubleshoot.md)
-
-### [Data Center Bridging \(DCB\)](technologies/dcb/dcb-top.md)
-#### [Install DCB](technologies/dcb/dcb-install.md)
-#### [Manage DCB](technologies/dcb/dcb-manage.md)
-
-### [Virtual Receive Side Scaling (vRSS)](technologies/vrss/vrss-top.md)
-#### [Plan the use of vRSS](technologies/vrss/vrss-plan.md)
-#### [Enable vRSS on a virtual network adapter](technologies/vrss/vrss-enable.md)
-#### [Manage vRSS](technologies/vrss/vrss-manage.md)
-#### [vRSS FAQ](technologies/vrss/vrss-faq.md)
-#### [Windows PowerShell commands for RSS and vRSS](technologies/vrss/vrss-wps.md)
-#### [Resolve vRSS issues](technologies/vrss/vrss-resolve-issues.md)
 
 ## [Host Compute Network (HCN) Service API](technologies/hcn/hcn-top.md)   
 ### [Common HCN scenarios](technologies/hcn/hcn-scenarios.md)
@@ -241,7 +223,7 @@
 #### [QoS policy scenarios](technologies/qos/qos-policy-scenarios.md)
 ### [Manage QoS policy](technologies/qos/qos-policy-manage.md)
 #### [QoS policy events and errors](technologies/qos/qos-policy-errors.md)
-### [QoS policy FAQ](technologies/qos/qos-policy-faq.md)
+### [QoS policy FAQ](technologies/qos/qos-policy-faq.yml)
 
 ## [Software Defined Networking (SDN)](sdn/index.yml)
 
@@ -263,7 +245,6 @@
 ###### [RAS Gateway deployment architecture](sdn/technologies/network-function-virtualization/RAS-Gateway-Deployment-Architecture.md)
 ###### [RAS Gateway high availability](sdn/technologies/network-function-virtualization/RAS-Gateway-High-Availability.md)
 ##### [Software Load Balancing (SLB) for SDN](/azure-stack/hci/concepts/software-load-balancer)
-#### [Switch Embedded Teaming (SET) for SDN](sdn/technologies/Set-for-Sdn.md)
 #### [Container networking](sdn/technologies/Containers/Container-networking-overview.md)
 
 ### [Plan for SDN](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure)

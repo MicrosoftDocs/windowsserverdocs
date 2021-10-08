@@ -23,7 +23,7 @@ For more information about MFA and multi\-factor access control in Active Direct
 -   [Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 
 ## Configure authentication policies via the AD FS Management snap\-in
-Membership in **Administrators**, or equivalent, on the local computer is the minimum requirement to complete these procedures.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477).
+Membership in **Administrators**, or equivalent, on the local computer is the minimum requirement to complete these procedures.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)).
 
 In AD FS, in Windows Server 2012 R2, you can specify an authentication policy at a global scope that is applicable to all applications and services that are secured by AD FS. You can also set authentication policies for specific applications and services that rely on party trusts and are secured by AD FS. Specifying an authentication policy for a particular application per relying party trust does not override the global authentication policy. If either global or per relying party trust authentication policy requires MFA, MFA is triggered when the user tries to authenticate to this relying party trust. The global authentication policy is a fallback for relying party trusts for applications and services that do not have a specific configured authentication policy.
 
@@ -91,7 +91,7 @@ In AD FS, in Windows Server 2012 R2, you can specify an authentication policy at
 ## Configure authentication policies via Windows PowerShell
 Windows PowerShell enables greater flexibility in using various factors of access control and the authentication mechanism that are available in AD FS in  Windows Server 2012 R2  to configure authentication policies and authorization rules that are necessary to implement true conditional access for your AD FS \-secured resources.
 
-Membership in Administrators, or equivalent, on the local computer is the minimum requirement to complete these procedures.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).
+Membership in Administrators, or equivalent, on the local computer is the minimum requirement to complete these procedures.  Review details about using the appropriate accounts and group memberships at [Local and Domain Default Groups](/previous-versions/orphan-topics/ws.10/dd728026(v=ws.10)) \(http:\/\/go.microsoft.com\/fwlink\/?LinkId\=83477\).
 
 ### To configure an additional authentication method via Windows PowerShell
 

@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ---
 # Security and Assurance in Windows Server
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 >[!TIP]
 > Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](/search/index?dataSource=previousVersions&search=Windows+Server) for specific information.
 
-<img src="../media/landing-icons/security.png" style='float:left; padding:.5em;' alt="Icon representing a lock"> You can rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
+<img src="../media/landing-icons/security.png" alt="Icon representing a lock"> You can rely on new layers of protection built into the operating system to further safeguard against security breaches. Help block malicious attacks and enhance the security of your virtual machines, applications, and data.
 
 
 ### [Windows Server Security Blog Post](https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/)
@@ -62,7 +62,7 @@ This guide provides information about how to resolve issues you may encounter in
 This white paper provides an overview of how shielded VMs provide increased overall security to prevent tampering.
 
 ## Privileged Access Management
-### [Securing Privileged Access](../identity/securing-privileged-access/securing-privileged-access.md)
+### [Securing Privileged Access](/security/compass/overview)
 A road-map for how you can secure your privileged access. This road-map is built based on the combined expertise of the server security team, Microsoft IT, Azure team and the Microsoft Consulting Services
 
 ### [Just in Time Administration with Microsoft Identity Manager](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)

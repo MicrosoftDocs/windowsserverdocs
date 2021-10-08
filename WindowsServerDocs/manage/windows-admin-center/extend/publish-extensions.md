@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ---
 # Publishing Extensions
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Once you've developed your extension, you will want to publish it and make it available to others to test or use. Depending on your audience and purpose of publishing, there are a few options which we'll introduce below along with the steps and requirements for publishing.
 
@@ -22,7 +22,7 @@ There are three primary options for configurable package sources that Windows Ad
 
 ### Publishing to the Windows Admin Center extension feed
 
-By default, Windows Admin Center is connected to a NuGet feed maintained by the Windows Admin Center product team at Microsoft. Early preview versions of new extensions developed by Microsoft may be published to this feed and available to Windows Admin Center users. External developers planning to build and release extensions publicly may also [submit a request](#publishing-your-extension-to-the-windows-admin-center-feed) to publish to this feed. Prior to publishing to this feed, external developers will have to agree to Windows Admin Center's [Extension Publisher Agreement](https://docs.microsoft.com/legal/windows-server/windows-admin-center/extensions-publishers-agreement) and [Extension Participation Policy](https://docs.microsoft.com/legal/windows-server/windows-admin-center/extensions-participation-policy).
+By default, Windows Admin Center is connected to a NuGet feed maintained by the Windows Admin Center product team at Microsoft. Early preview versions of new extensions developed by Microsoft may be published to this feed and available to Windows Admin Center users. External developers planning to build and release extensions publicly may also [submit a request](#publishing-your-extension-to-the-windows-admin-center-feed) to publish to this feed. Prior to publishing to this feed, external developers will have to agree to Windows Admin Center's [Extension Publisher Agreement](/legal/windows-server/windows-admin-center/extensions-publishers-agreement) and [Extension Participation Policy](/legal/windows-server/windows-admin-center/extensions-participation-policy).
 
 ### Publishing to a different NuGet feed
 

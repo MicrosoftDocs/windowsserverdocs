@@ -45,7 +45,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 ## Troubleshoot AD forest recovery
 
-- [AD Forest Recovery - FAQ](../identity/ad-ds/manage/ad-forest-recovery-faq.md)
+- [AD Forest Recovery - FAQ](../identity/ad-ds/manage/ad-forest-recovery-faq.yml)
 
 ## Troubleshoot AD replication
 
@@ -73,10 +73,6 @@ This section contains advanced troubleshooting topics and links to help you reso
 ## Troubleshoot AoVPN
 
 - [Troubleshoot Always On VPN](../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
-
-## Troubleshoot converged NIC
-
-- [Troubleshooting Converged NIC Configurations](../networking/technologies/conv-nic/cnic-app-troubleshoot.md)
 
 ## Troubleshoot DFSR
 
@@ -130,7 +126,7 @@ This section contains advanced troubleshooting topics and links to help you reso
 - [Troubleshooting Enabling Multisite](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-enabling-multisite.md)
 - [Troubleshooting Adding Entry Points](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-adding-entry-points.md)
 - [Troubleshooting Setting the Entry Point Domain Controller](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller.md)
-- [Troubleshooting Web Probe URLs](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-web-probe-urls.md)
+- [Troubleshooting Web Probe URLs](../remote/remote-access/ras/multisite/troubleshoot/troubleshooting-setting-the-entry-point-domain-controller.md)
 
 ## Troubleshoot Nano Server
 
@@ -147,12 +143,12 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 ## Troubleshoot QoS
 
-- [QoS Frequently Asked Questions](../networking/technologies/qos/qos-policy-faq.md)
+- [QoS Frequently Asked Questions](../networking/technologies/qos/qos-policy-faq.yml)
 
 ## Troubleshoot S2D
 
 - [Storage Spaces Direct troubleshooting](../storage/storage-spaces/troubleshooting-storage-spaces.md)
-- [Storage Spaces Direct - Frequently asked questions](../storage/storage-spaces/storage-spaces-direct-faq.md)
+- [Storage Spaces Direct - Frequently asked questions](../storage/storage-spaces/storage-spaces-direct-faq.yml)
 - [Storage Spaces Direct health and operational states](../storage/storage-spaces/storage-spaces-states.md)
 - [Collect diagnostic data with Storage Spaces Direct](../storage/storage-spaces/data-collection.md)
 - [Storage-class Memory (NVDIMM-N) Health Management in Windows](../storage/storage-spaces/storage-class-memory-health.md)
@@ -195,10 +191,6 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 - [Troubleshoot user profiles with events](../storage/folder-redirection/troubleshoot-user-profiles-events.md)
 
-## Troubleshoot vRSS
-
-- [vRSS Frequently Asked Questions](../networking/technologies/vrss/vrss-faq.md)
-
 ## Troubleshoot WebProxy
 
 - [Troubleshooting Web Application Proxy](../remote/remote-access/web-application-proxy/troubleshooting-web-application-proxy.md)
@@ -207,4 +199,4 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 - [Windows Admin Center Common Troubleshooting Steps](../manage/windows-admin-center/support/troubleshooting.md)
 - [Windows Admin Center Known Issues](../manage/windows-admin-center/support/known-issues.md)
-- [Windows Admin Center Frequently Asked Questions](../manage/windows-admin-center/understand/faq.md)
+- [Windows Admin Center Frequently Asked Questions](../manage/windows-admin-center/understand/faq.yml)

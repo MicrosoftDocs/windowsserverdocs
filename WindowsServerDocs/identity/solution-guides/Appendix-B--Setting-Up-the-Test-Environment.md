@@ -11,7 +11,7 @@ ms.topic: article
 
 # Appendix B: Setting Up the Test Environment
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This topic outlines the steps to build a hands-on lab to test Dynamic Access Control. The instructions are meant to be followed sequentially because there are many components that have dependencies.
 
@@ -558,7 +558,7 @@ Configure Microsoft Exchange Server on this computer. For more information, see 
 > [!IMPORTANT]
 > Joining virtual machines to a domain and deploying claim types across forests require that the virtual machines be able to resolve the FQDNs of the relevant domains. You may have to manually configure the DNS settings on the virtual machines to accomplish this. For more information, see [Configuring a virtual network](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732470(v=ws.10)).
 >
-> All the virtual machine images (servers and clients) must be reconfigured to use a static IP version 4 (IPv4) address and Domain Name System (DNS) client settings. For more information, see [Configure a DNS Client for Static IP Address](https://go.microsoft.com/fwlink/?LinkId=150952).
+> All the virtual machine images (servers and clients) must be reconfigured to use a static IP version 4 (IPv4) address and Domain Name System (DNS) client settings. For more information, see [Configure a DNS Client for Static IP Address](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816762(v=ws.10)).
 
 ### <a name="BKMK_2.2"></a>Set up a new forest called adatum.com
 

@@ -28,7 +28,7 @@ To enable the new web theme use the following procedure:
 2. Create a new web theme using PowerShell:  `New-AdfsWebTheme –Name custom –StyleSheet @{path="c:\NewTheme.css"}`
 3. Set the new theme as the active theme using PowerShell:  `Set-AdfsWebConfig -ActiveThemeName custom`
    ![PowerShell](media/Azure-UX-Web-Theme-in-AD-FS/two.png)
-4. Test the sign-in by going to https://<AD FS name.domain>/adfs/ls/idpinitiatedsignon.htm
+4. Test the sign-in by going to https://\<AD FS name.domain>/adfs/ls/idpinitiatedsignon.htm
    ![Sign-on](media/Azure-UX-Web-Theme-in-AD-FS/three.png)
 
 > ![NOTE]

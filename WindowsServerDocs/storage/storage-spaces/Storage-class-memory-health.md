@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Storage-class Memory (NVDIMM-N) Health Management in Windows
 
-> Applies To: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel), Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 10
 
 This article provides system administrators and IT Pros with information about error handling and health management specific to storage-class memory (NVDIMM-N) devices in Windows, highlighting the differences between storage-class memory and traditional storage devices.
 
@@ -20,7 +20,7 @@ If you aren't familiar with Windows' support for storage-class memory devices, t
 - [Using Non-volatile Memory (NVDIMM-N) as Byte-Addressable Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P470)
 - [Accelerating SQL Server 2016 performance with Persistent Memory in Windows Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-Windows-Server-2016-SCM--FAST)
 
-Also see [Understand and deploy persistent memory in Storage Spaces Direct](deploy-pmem.md).
+Also see [Understand and deploy persistent memory in Storage Spaces Direct](/azure-stack/hci/concepts/deploy-persistent-memory).
 
 JEDEC-compliant NVDIMM-N storage-class memory devices are supported in Windows with native drivers, starting in Windows Server 2016 and Windows 10 (version 1607). While these devices behave similar to other disks (HDDs and SSDs), there are some differences.
 

@@ -4,14 +4,14 @@ description: Use this page to understand pktmon command formatting and output.
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 04/26/2021
+ms.date: 07/23/2021
 ---
 
 # Pktmon command formatting
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows 10, Azure Stack HCI, Azure Stack Hub, Azure
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows 10, Azure Stack Hub, Azure
 
-Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack. Packet Monitor is available in-box via pktmon.exe command on Windows 10 and Windows Server 2019 (Version 1809 and later). You can use this topic to learn how to understand pktmon syntax, command formatting, and output. For a complete list of commands, see [pktmon syntax](/windows-server/administration/windows-commands/pktmon). 
+Packet Monitor (Pktmon) is an in-box, cross-component network diagnostics tool for Windows. It can be used for packet capture, packet drop detection, packet filtering and counting. The tool is especially helpful in virtualization scenarios, like container networking and SDN, because it provides visibility within the networking stack. Packet Monitor is available in-box via pktmon.exe command on Windows 10 and Windows Server 2019 (Version 1809 and later). You can use this topic to learn how to understand pktmon syntax, command formatting, and output. For a complete list of commands, see [pktmon syntax](../../../administration/windows-commands/pktmon.md). 
 
 ## Quick start
 
@@ -74,7 +74,7 @@ C:\Test> pktmon filter add -i 10.0.0.10 -t tcp syn
 
 - Packet Monitor can apply a filter to encapsulated inner packets, in addition to the outer packet if the **[-e]** flag was added to any filter. Supported encapsulation methods are VXLAN, GRE, NVGRE, and IP-in-IP. Custom VXLAN port is optional, and defaults to 4789.
 
-For more information, see [pktmon filter syntax](/windows-server/administration/windows-commands/pktmon-filter).
+For more information, see [pktmon filter syntax](../../../administration/windows-commands/pktmon-filter.md).
 
 ## Packets and general events capture
 
@@ -115,7 +115,7 @@ C:\Test> pktmon start --capture --trace -p Microsoft-Windows-TCPIP
 
 - Specify the size of the log file through the **[-s]** parameter. This will be the maximum size of the file in a circular logging mode before Packet Monitor starts overwriting the older packets with the newer ones. This will also be the maximum size of each file in the multi-file logging mode before Packet Monitor creates a new file to log the next packets. You can also use this parameter to set the buffer size for the memory logging mode.
 
-For more information, see [pktmon start syntax](/windows-server/administration/windows-commands/pktmon-start).
+For more information, see [pktmon start syntax](../../../administration/windows-commands/pktmon-start.md).
 
 ## Packet analysis and formatting
 
@@ -128,7 +128,7 @@ Packet Monitor generates log files in ETL format. There are multiple ways to for
 >[!NOTE]
 >*Use the hyperlinks above to learn how to parse and analyze Packet Monitor logs in **Wireshark** and **Network Monitor**.
 
-For more information, see [pktmon format syntax](/windows-server/administration/windows-commands/pktmon-format).
+For more information, see [pktmon format syntax](../../../administration/windows-commands/pktmon-format.md).
 
 ### Analyze Packet Monitor output
 
@@ -189,7 +189,7 @@ In the next example, drops are reported under the "Counter" column. Retrieve the
 
 As shown through these examples, the counters could provide a lot of information through a diagram that can be analyzed by just a quick look.
 
-For more information, see [pktmon counters syntax](/windows-server/administration/windows-commands/pktmon-counters).
+For more information, see [pktmon counters syntax](../../../administration/windows-commands/pktmon-counters.md).
 
 ## Networking stack layout
 
@@ -210,4 +210,4 @@ Each component is uniquely identified by a Packet Monitor component ID, which ar
 >[!NOTE]
 >IDs are not persistent and may change across reboots and as Packet Monitor's driver restarts.
 
-For more information, see [pktmon list syntax](/windows-server/administration/windows-commands/pktmon-list).
+For more information, see [pktmon list syntax](../../../administration/windows-commands/pktmon-list.md).

@@ -19,7 +19,7 @@ We've been made aware of the following issues with the input method editor (IME)
 
 Affected platforms:
 
-- Windows Virtual Desktop
+- Azure Virtual Desktop
 - Remote Desktop Services (so far, this issue has only been reported for Windows Server 2019)
 
 We're currently working on a solution to help solve this issue.

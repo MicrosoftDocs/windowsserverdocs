@@ -11,7 +11,7 @@ ms.reviewer: deverette
 ---
 # Advanced features of Always On VPN
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Previous:** Learn about the Always On VPN technology](../always-on-vpn-technology-overview.md)
 - [**Next:** Start planning the Always On VPN deployment](always-on-vpn-deploy-planning.md)
@@ -105,7 +105,7 @@ To disable certificate revocation for these VPN connections, set **CertAuthFlags
    * Event ID: **41**
    * The event contains the following text: **subject="*Client FQDN*"** (*Client FQDN* represents the fully qualified domain name of the client that has the revoked certificate.)
 
-   The **<Result>** field of the event data should include **The certificate is revoked**. For example, see the following excerpts from an event:
+   The **\<Result>** field of the event data should include **The certificate is revoked**. For example, see the following excerpts from an event:
    ```xml
    Log Name:      Microsoft-Windows-CAPI2/Operational Microsoft-Windows-CAPI2/Operational
    Source:        Microsoft-Windows-CAPI2

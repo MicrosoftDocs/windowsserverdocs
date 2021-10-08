@@ -10,7 +10,7 @@ ms.date: 10/16/2017
 ---
 # bootcfg ems
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Enables the user to add or change the settings for redirection of the Emergency Management Services console to a remote computer. Enabling Emergency Management Services, adds a `redirect=Port#` line to the [boot loader] section of the Boot.ini file along with a /redirect option to the specified operating system entry line. The Emergency Management Services feature is enabled only on servers.
 
@@ -24,7 +24,7 @@ bootcfg /ems {on | off | edit}[/s <computer> [/u <domain>\<user> /p <password>]]
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{on | off | edit}` | Specifies the value for Emergency Management Services redirection, including:<ul><li>**on.** Enables remote output for the specified `<osentrylinenum>`. Also adds a /redirect option to the specified <osentrylinenum> and a `redirect=com<X>` setting to the [boot loader] section. The value of `com<X>` is set by the **/port** parameter.</li><li>**off.** Disables output to a remote computer. Also removes the /redirect option to the specified <osentrylinenum> and the `redirect=com<X>` setting from the [boot loader] section.</li><li>**edit.** Allows changes to port settings by changing the `redirect=com<X>` setting in the [boot loader] section. The value of `com<X>` is set by the **/port** parameter.</li></ul> |
+| `{on | off | edit}` | Specifies the value for Emergency Management Services redirection, including:<ul><li>**on.** Enables remote output for the specified `<osentrylinenum>`. Also adds a /redirect option to the specified `<osentrylinenum>` and a `redirect=com<X>` setting to the [boot loader] section. The value of `com<X>` is set by the **/port** parameter.</li><li>**off.** Disables output to a remote computer. Also removes the /redirect option to the specified `<osentrylinenum>` and the `redirect=com<X>` setting from the [boot loader] section.</li><li>**edit.** Allows changes to port settings by changing the `redirect=com<X>` setting in the [boot loader] section. The value of `com<X>` is set by the **/port** parameter.</li></ul> |
 | `/s <computer>` | Specifies the name or IP address of a remote computer (don't use backslashes). The default is the local computer. |
 | `/u <domain>\<user>`  | Runs the command with the account permissions of the user specified by `<user>` or `<domain>\<user>`. The default is the permissions of the current logged on user on the computer issuing the command. |
 | `/p <password>` | Specifies the password of the user account that is specified in the **/u** parameter. |

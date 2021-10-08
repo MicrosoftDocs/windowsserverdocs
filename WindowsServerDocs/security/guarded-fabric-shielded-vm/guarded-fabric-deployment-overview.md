@@ -11,7 +11,7 @@ ms.date: 01/30/2019
 
 # Quick start for guarded fabric deployment
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This topic explains what a guarded fabric is, its requirements, and a summary of the deployment process.
 For detailed deployment steps, see [Deploying the Host Guardian Service for guarded hosts and shielded VMs](./guarded-fabric-deploying-hgs-overview.md).
@@ -68,7 +68,7 @@ Let's imagine this scenario—you have an existing Hyper-V fabric, like Contoso.
 
 ## Step 1: Deploy the Hyper-V hosts running Windows Server 2016
 
-The Hyper-V hosts need to run Windows Server 2016 Datacenter edition or later. If you are upgrading hosts, you can [upgrade](../../get-started/installation-and-upgrade.md) from Standard edition to Datacenter edition.
+The Hyper-V hosts need to run Windows Server 2016 Datacenter edition or later. If you are upgrading hosts, you can [upgrade](../../get-started/install-upgrade-migrate.md) from Standard edition to Datacenter edition.
 
 ![Upgrade Hyper-V hosts](../../security/media/Guarded-Fabric-Shielded-VM/guarded-fabric-deployment-step-one-upgrade-hyper-v.png)
 

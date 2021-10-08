@@ -9,7 +9,7 @@ ms.topic: article
 
 # Support boundary for high-accuracy time
 
->Applies to: Windows Server 2016, and Windows 10 version 1607 or later
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows 10 version 1607 or later
 
 This article describes the support boundaries for the Windows Time service (W32Time) in environments that require highly accurate and stable system time.
 

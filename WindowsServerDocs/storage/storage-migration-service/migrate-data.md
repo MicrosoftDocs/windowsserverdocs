@@ -20,7 +20,7 @@ Before you get started, install Storage Migration Service and make sure that the
     ![Screenshot of the Storage Migration Service page showing the Install button](media/migrate/install.png)
      **Figure 1: Installing Storage Migration Service**
 4. Install the Storage Migration Service proxy on all destination servers running Windows Server 2019. This doubles the transfer speed when installed on destination servers. <br>To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, > **Features**, select **Storage Migration Service Proxy**, and then select **Install**.
-5. If you intend to migrate to or from Windows Failver Clusters, install the Failover Clustering tools on the orchestrator server. This happens automatically in the latest version of Windows Admin Center when you select **Migrate from failover clusters** in the **Job Settings** option of Inventory.  <br>To install outside of the Storage Migration Service Inventory phase, connect to the orchestrator server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, > **Features**, > **Remote Server Administration Tools**, > **Feature Administration Tools**, select **Failover Clustering Tools**, and then select **Install**. 
+5. If you intend to migrate to or from Windows Failover Clusters, install the Failover Clustering tools on the orchestrator server. This happens automatically in the latest version of Windows Admin Center when you select **Migrate from failover clusters** in the **Job Settings** option of Inventory.  <br>To install outside of the Storage Migration Service Inventory phase, connect to the orchestrator server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, > **Features**, > **Remote Server Administration Tools**, > **Feature Administration Tools**, select **Failover Clustering Tools**, and then select **Install**. 
     
     > [!NOTE]
     > If you're migrating from a NetApp FAS array, you must manually install the latest version of the NetApp PowerShell Toolkit onto the orchestrator. This toolkit is available to all licensed NetApp customers with an active NetApp support agreement from [mysupport.netapp.com](https://mysupport.netapp.com).  
@@ -68,7 +68,7 @@ In this step you transfer data after specifying where to put it on the destinati
     > - A valid Azure subscription.
     > - An existing Azure Compute resource group where you have Create rights.
     > - An existing Azure Virtual Network and subnet.
-    > - An Azure Express Route or VPN solution tied to the Virtual Network and subnet that allows connectivity from this Azure IaaS VM to your on-premises clients, domain controllers, the Storage Migration Service orchestrator computer, the Windows Admin Center computer, and the source computer to be migrated.
+    > - An [Azure ExpressRoute](https://azure.microsoft.com/services/expressroute/) circuit or [Azure VPN solution](https://azure.microsoft.com/services/vpn-gateway/) tied to the Virtual Network and subnet that allows connectivity from this Azure IaaS VM to your on-premises clients, domain controllers, the Storage Migration Service orchestrator computer, the Windows Admin Center computer, and the source computer to be migrated.
 
     Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
     > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ]

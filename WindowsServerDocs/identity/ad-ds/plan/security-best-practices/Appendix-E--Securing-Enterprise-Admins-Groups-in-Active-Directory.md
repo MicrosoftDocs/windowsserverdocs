@@ -11,7 +11,7 @@ ms.topic: article
 
 # Appendix E: Securing Enterprise Admins Groups in Active Directory
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 ## Appendix E: Securing Enterprise Admins Groups in Active Directory
@@ -39,7 +39,7 @@ For the Enterprise Admins group in the forest:
 
 1.  In **Server Manager**, click **Tools**, and click **Active Directory Users and Computers**.
 
-2.  If you are not managing the root domain for the forest, in the console tree, right-click <Domain>, and then click **Change Domain** (where <Domain> is the name of the domain you're currently administering).
+2.  If you are not managing the root domain for the forest, in the console tree, right-click \<Domain>, and then click **Change Domain** (where \<Domain> is the name of the domain you're currently administering).
 
     ![Screenshot that highlights the Change Domain menu option.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_43.gif)
 
@@ -61,7 +61,7 @@ For the Enterprise Admins group in the forest:
 
 1.  In **Server Manager**, click **Tools**, and click **Group Policy Management**.
 
-2.  In the console tree, expand <Forest>\Domains\\<Domain>, and then **Group Policy Objects** (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).
+2.  In the console tree, expandv \<Forest>\Domains&#92;\<Domain>, and then **Group Policy Objects** (where \<Forest> is the name of the forest and \<Domain> is the name of the domain where you want to set the Group Policy).
 
     > [!NOTE]
     > In a forest that contains multiple domains, a similar GPO should be created in each domain that requires that the Enterprise Admins group be secured.
@@ -70,11 +70,11 @@ For the Enterprise Admins group in the forest:
 
     ![Screenshot that shows the New menu option in the Group Policy Objects menu.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_46.gif)
 
-4.  In the **New GPO** dialog box, type <GPO Name>, and click **OK** (where <GPO Name> is the name of this GPO).
+4.  In the **New GPO** dialog box, type \<GPO Name>, and click **OK** (where \<GPO Name> is the name of this GPO).
 
     ![Screenshot that shows where to type the GPO name and select the source starter GPO.](media/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory/SAD_47.gif)
 
-5.  In the details pane, right-click <GPO Name>, and click **Edit**.
+5.  In the details pane, right-click \<GPO Name>, and click **Edit**.
 
 6.  Navigate to **Computer Configuration\Policies\Windows Settings\Security Settings\Local Policies**, and click **User Rights Assignment**.
 
@@ -156,7 +156,7 @@ For the Enterprise Admins group in the forest:
 
 13. In **Group Policy Management**, link the GPO to the member server and workstation OUs by doing the following:
 
-    1.  Navigate to the <Forest>\Domains\\<Domain> (where <Forest> is the name of the forest and <Domain> is the name of the domain where you want to set the Group Policy).
+    1.  Navigate to the \<Forest>\Domains&#92;\<Domain> (where \<Forest> is the name of the forest and \<Domain> is the name of the domain where you want to set the Group Policy).
 
     2.  Right-click the OU that the GPO will be applied to and click **Link an existing GPO**.
 
@@ -210,7 +210,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 4.  Click **File**, and click **Save As**.
 
-5.  In the **File** name box, type **<Filename>.bat** (where <Filename> is the name of the new batch file).
+5.  In the **File** name box, type **\<Filename>.bat** (where \<Filename> is the name of the new batch file).
 
 ##### Schedule a Task
 
@@ -223,7 +223,7 @@ From any member server or workstation affected by the GPO changes, log on locall
 
 3.  Click **Action**, and click **Create Task**.
 
-4.  In the **Create Task** dialog box, type **<Task Name>** (where <Task Name> is the name of the new task).
+4.  In the **Create Task** dialog box, type **\<Task Name>** (where \<Task Name> is the name of the new task).
 
 5.  Click the **Actions** tab, and click **New**.
 

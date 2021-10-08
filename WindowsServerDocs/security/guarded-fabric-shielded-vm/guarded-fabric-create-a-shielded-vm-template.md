@@ -4,14 +4,14 @@ description: "Learn more about: Create a Windows shielded VM template disk"
 ms.topic: article
 ms.assetid: 9c8b84e8-1f5a-47a1-83ca-b1dbd801cb0b
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 01/29/2019
 ---
 
 # Create a Windows shielded VM template disk
 
->Applies to: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2016, Windows Server 2019
 
 
 As with regular VMs, you can create a VM template (for example, a [VM template in Virtual Machine Manager (VMM)](/system-center/vmm/library-vm-templates)) to make it easy for tenants and administrators to deploy new VMs on the fabric using a template disk. Because shielded VMs are security-sensitive assets, there are additional steps to create a VM template that supports shielding. This topic covers the steps to create a shielded template disk and a VM template in VMM.
@@ -91,7 +91,7 @@ If you use VMM, follow the steps in the remaining sections in this topic to inco
 
 If you use VMM, after you create a template disk, you need to copy it to a VMM library share so hosts can download and use the disk when provisioning new VMs. Use the following procedure to copy the template disk into the VMM library and then refresh the library.
 
-1. Copy the VHDX file to the VMM library share folder. If you used the default VMM configuration, copy the template disk to _\\<vmmserver>\MSSCVMMLibrary\VHDs_.
+1. Copy the VHDX file to the VMM library share folder. If you used the default VMM configuration, copy the template disk to _\\<\vmmserver>\MSSCVMMLibrary\VHDs_.
 
 2. Refresh the library server. Open the **Library** workspace, expand **Library Servers**, right-click on the library server that you want to refresh, and click **Refresh**.
 

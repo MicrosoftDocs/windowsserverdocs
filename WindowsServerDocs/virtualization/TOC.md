@@ -51,6 +51,7 @@
 #### [Manage Windows VMs with PowerShell Direct](hyper-v/manage/Manage-Windows-virtual-machines-with-powershell-direct.md)
 #### [Set up Hyper-V Replica](hyper-v/manage/Set-up-Hyper-V-Replica.md)
 #### [Enable Intel Performance Monitoring Hardware](hyper-v/manage/Performance-Monitoring-Hardware.md)
+#### [Enable processor compatibility mode](hyper-v/manage/processor-compatibility-mode-hyper-v.md)
 #### [Move VMs with live migration](hyper-v/manage/Live-migration-overview.md)
 ##### [Live Migration Overview](hyper-v/manage/Live-migration-overview.md)
 
@@ -60,7 +61,7 @@
 
 ### [Hyper-V Performance Tuning](../administration/performance-tuning/role/hyper-v-server/index.md)
 ## [Hyper-V Virtual Switch](hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
-### [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](hyper-v-virtual-switch/rdMA-and-Switch-Embedded-Teaming.md)
+### [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/azure-stack/hci/concepts/host-network-requirements)
 ### [Manage Hyper-V Virtual Switch](hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md)
 #### [Configure and View VLAN Settings on Hyper-V Virtual Switch Ports](hyper-v-virtual-switch/Configure-and-View-VLAN-Settings-on-Hyper-V-Virtual-Switch-Ports.md)
 #### [Create Security Policies with extended Port Access Control lists](hyper-v-virtual-switch/create-Security-Policies-with-extended-Port-Access-Control-lists.md)

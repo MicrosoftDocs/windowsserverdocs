@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # Software Inventory Logging Aggregator
 
-> Applies To: Windows Server 2012 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2012 R2
 
 ## What is Software Inventory Logging Aggregator?
 
@@ -289,9 +289,9 @@ Run the following cmdlets in the PowerShell console as an administrator on each 
 
 You will need a valid client SSL certificate in .pfx format to use these steps.  The thumbprint of this certificate will need to be added to your SIL Aggregator using the `Set-SILAggregator –AddCertificateThumbprint` cmdlet. This client certificate does not need to match the name of your SIL Aggregator.
 
--   `$secpasswd = ConvertTo-SecureString "`**<password for the account with permissions to the network location holding your client pfx file>**`" -AsPlainText –Force`
+-   `$secpasswd = ConvertTo-SecureString "<password for the account with permissions to the network location holding your client pfx file>" -AsPlainText –Force`
 
--   `$mycreds = New-Object System.Management.Automation.PSCredential ("`**<user account with permissions to the network location holding your client  pfx file>**`", $secpasswd)`
+-   `$mycreds = New-Object System.Management.Automation.PSCredential ("<user account with permissions to the network location holding your client  pfx file>", $secpasswd)`
 
 -   `$driveLetters = ([int][char]'C')..([int][char]'Z') | % {[char]$_}`
 
@@ -301,20 +301,20 @@ You will need a valid client SSL certificate in .pfx format to use these steps. 
 
 -   `$firstAvailableDriveLetter = $availableDriveLetters[0]`
 
--   `New-PSDrive -Name $firstAvailableDriveLetter -PSProvider filesystem -root` **<\\server\path to share which holds your pfx certificate file>** `-credential $mycreds`
+-   `New-PSDrive -Name $firstAvailableDriveLetter -PSProvider filesystem -root <\\server\path to share which holds your pfx certificate file> -credential $mycreds`
 
--   `Copy-Item ${firstAvailableDriveLetter}:\`**<certificatename.pfx file in directory of new drive> c:\<location of your choice>**
+-   `Copy-Item ${firstAvailableDriveLetter}:\<certificatename.pfx file in directory of new drive> c:\<location of your choice>`
 
 -   `Remove-PSDrive –Name $firstAvailableDriveLetter`
 
--   `$mypwd = ConvertTo-SecureString -String "`**<password for the certificate pfx file>**`" -Force –AsPlainText`
+-   `$mypwd = ConvertTo-SecureString -String "<password for the certificate pfx file>" -Force –AsPlainText`
 
--   `Import-PfxCertificate -FilePath c:\`**<location\\certificatename.pfx>** `cert:\localMachine\my -Password $mypwd`
+-   `Import-PfxCertificate -FilePath c:\<location\\certificatename.pfx> cert:\localMachine\my -Password $mypwd`
 
--   `Set-sillogging –targeturi "https://`**<machinename of your SIL Aggregator>** `–certificatethumbprint`
+-   `Set-sillogging –targeturi "https://<machinename of your SIL Aggregator>" –certificatethumbprint`
 
-> [!NOTE]
-> Use the Certificate thumbprint from your client pfx file and added to your SIL Aggregator using the **Set-SilAggregator `-AddCertificateThumbprint** cmdlet.
+    > [!NOTE]
+    > Use the Certificate thumbprint from your client pfx file and added to your SIL Aggregator using the **Set-SilAggregator `-AddCertificateThumbprint** cmdlet.
 
 -   `Start-sillogging`
 

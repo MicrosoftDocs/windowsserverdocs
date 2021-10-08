@@ -41,7 +41,7 @@ As described above, any AD FS user who has not yet registered (configured MFA ve
 Because Azure MFA as primary is considered a single factor, after initial configuration users will need to provide an additional factor to manage or update their verification information in Azure AD, or to access other resources that require MFA.
 
 >[!NOTE]
-> With ADFS 2019, you are required to make a modification to the anchor claim type for the Active Directory Claims Provider trust and modify this from the windowsaccountname to UPN. Execute the PowerShell cmdlet provided below. This has no impact on the internal functioning of the AD FS farm. You may notice a few users may be re-prompted for credentials once this change is made. After logging in again, end users will see no difference.
+> With AD FS 2019, you are required to make a modification to the anchor claim type for the Active Directory Claims Provider trust and modify this from the windowsaccountname to UPN. Execute the PowerShell cmdlet provided below. This has no impact on the internal functioning of the AD FS farm. You may notice a few users may be re-prompted for credentials once this change is made. After logging in again, end users will see no difference.
 
 ```powershell
 Set-AdfsClaimsProviderTrust -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" -TargetName "Active Directory"
@@ -49,7 +49,7 @@ Set-AdfsClaimsProviderTrust -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005
 
 ### Azure MFA as Additional authentication to Office 365
 
-Azure MFA adapter for AD FS enables your users to do MFA on AD FS. To secure your Azure AD resource, it is recommended to require MFA through a [Conditional Access policy](https://docs.microsoft.com/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa), set the domain setting SupportsMfa to $True and [emit the multipleauthn claim](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-adfs#secure-azure-ad-resources-using-ad-fs) when a user performs two-step verification successfully. 
+Azure MFA adapter for AD FS enables your users to do MFA on AD FS. To secure your Azure AD resource, it is recommended to require MFA through a [Conditional Access policy](/azure/active-directory/conditional-access/howto-conditional-access-policy-all-users-mfa), set the domain setting SupportsMfa to $True and [emit the multipleauthn claim](/azure/active-directory/authentication/howto-mfa-adfs#secure-azure-ad-resources-using-ad-fs) when a user performs two-step verification successfully. 
 
 As described above, any AD FS user who has not yet registered (configured MFA verification information) should be prompted via a customized AD FS error page to visit [https://aka.ms/mfasetup](https://aka.ms/mfasetup) to configure verification information, then re-attempt AD FS login.
 

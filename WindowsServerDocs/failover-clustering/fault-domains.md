@@ -6,11 +6,11 @@ ms.author: cosdar
 manager: eldenc
 ms.topic: article
 author: cosmosdarwin
-ms.date: 09/16/2016
+ms.date: 05/28/2021
 ---
 # Fault domain awareness
 
-> Applies to: Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 Failover Clustering enables multiple servers to work together to provide high availability – or put another way, to provide node fault tolerance. But today's businesses demand ever-greater availability from their infrastructure. To achieve cloud-like uptime, even highly unlikely occurrences such as chassis failures, rack outages, or natural disasters must be protected against. That's why Failover Clustering in Windows Server 2016 introduced chassis, rack, and site fault tolerance as well.
 
@@ -41,7 +41,7 @@ To disable fault domain awareness in Windows 2019, go to the Windows Registry an
 - **Storage Spaces, including Storage Spaces Direct, uses fault domains to maximize data safety.**
     Resiliency in Storage Spaces is conceptually like distributed, software-defined RAID. Multiple copies of all data are kept in sync, and if hardware fails and one copy is lost, others are recopied to restore resiliency. To achieve the best possible resiliency, copies should be kept in separate fault domains.
 
-- **The [Health Service](health-service-overview.md) uses fault domains to provide more helpful alerts.**
+- **The [Health Service](/azure-stack/hci/manage/health-service-overview) uses fault domains to provide more helpful alerts.**
     Each fault domain can be associated with location metadata, which will automatically be included in any subsequent alerts. These descriptors can assist operations or maintenance personnel and reduce errors by disambiguating hardware.
 
 - **Stretch clustering uses fault domains for storage affinity.** Stretch clustering allows faraway servers to join a common cluster. For the best performance, applications or virtual machines should be run on servers that are nearby to those providing their storage. Fault domain awareness enables this storage affinity.
@@ -185,8 +185,3 @@ This guide presents just two examples, but the `<Site>`, `<Rack>`, `<Chassis>`, 
 You can provide optional **Location** or **Description** metadata for any fault domain. If provided, this information will be included in hardware alerting from the Health Service. This short video demonstrates the value of adding such descriptors.
 
 [![Click to see a short video demonstrating the value of adding location descriptors to fault domains](media/Fault-Domains-in-Windows-Server-2016/part-4-location-description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-Location-Description)
-
-## See Also
-- [Get started with Windows Server 2019](../get-started-19/get-started-19.md)
-- [Get started with Windows Server 2016](../get-started/server-basics.md)
--   [Storage Spaces Direct Overview](../storage/storage-spaces/storage-spaces-direct-overview.md)

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Strings and localization in Windows Admin Center #
 
->Applies To: Windows Admin Center, Windows Admin Center Preview
+>Applies to: Windows Admin Center, Windows Admin Center Preview
 
 Let's go more in-depth into the Windows Admin Center Extensions SDK and talk about strings and localization.
 

@@ -10,7 +10,7 @@ ms.date: 08/07/2020
 ---
 # Manage Hyper-V Virtual Switch
 
->Applies To: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 You can use this topic to access Hyper-V Virtual Switch management content.
 

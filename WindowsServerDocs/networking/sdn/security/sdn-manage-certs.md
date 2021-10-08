@@ -6,17 +6,17 @@ ms.topic: article
 ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/22/2018
+ms.date: 06/30/2021
 ---
 
 # Manage certificates for Software Defined Networking
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
 
 You can use this topic to learn how to manage certificates for Network Controller Northbound and Southbound communications when you deploy Software Defined Networking \(SDN\) in Windows Server 2019 or 2016 Datacenter and you are using System Center Virtual Machine Manager \(SCVMM\) as your SDN management client.
 
 >[!NOTE]
->For overview information about Network Controller, see [Network Controller](../technologies/network-controller/Network-Controller.md).
+>For overview information about Network Controller, see [Network Controller](/azure-stack/hci/concepts/network-controller-overview).
 
 If you are not using Kerberos for securing the Network Controller communication, you can use X.509 certificates for authentication, authorization, and encryption.
 
@@ -203,7 +203,7 @@ If you are using CA based certificates for the Hyper-V hosts, you need to ensure
 
 The Software Load Balancer Multiplexor \(MUX\) and Network Controller communicate over the WCF protocol, using certificates for authentication.
 
-By default, SCVMM picks up the SSL certificate configured on the Network Controller and uses it for southbound communication with the Mux devices. This certificate is configured on the “NetworkControllerLoadBalancerMux” REST resource and can be viewed by executing the Powershell cmdlet **Get-NetworkControllerLoadBalancerMux**.
+By default, SCVMM picks up the SSL certificate configured on the Network Controller and uses it for southbound communication with the Mux devices. This certificate is configured on the “NetworkControllerLoadBalancerMux” REST resource and can be viewed by executing the PowerShell cmdlet **Get-NetworkControllerLoadBalancerMux**.
 
 Example of MUX REST resource \(partial\):
 

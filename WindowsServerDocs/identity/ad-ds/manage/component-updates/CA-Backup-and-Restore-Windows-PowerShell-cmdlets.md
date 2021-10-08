@@ -11,7 +11,7 @@ ms.topic: article
 
 # CA Backup and Restore Windows PowerShell cmdlets
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 >
 > **Author**: Justin Turner, Senior Support Escalation Engineer with the Windows group
 >
@@ -40,7 +40,7 @@ The ADCSAdministration Windows PowerShell module was introduced in Window Server
 |-Incremental|-   Perform an incremental backup<p>Backup-CARoleService c:\adcsbackup7 -Incremental|
 |-KeepLog|1.  Instructs the command to keep log files. If the switch is not specified, log files are truncated by default except in the Incremental scenario<p>Backup-CARoleService c:\adcsbackup7 -KeepLog|
 
-### -Password <Secure String>
+### -Password \<Secure String>
 If the -Password parameter is used, the supplied password must be a secure string.  Use the **Read-Host** cmdlet to launch an interactive prompt for secure password entry, or use the **ConvertTo-SecureString** cmdlet to specify the password in-line.
 
 Review the following examples

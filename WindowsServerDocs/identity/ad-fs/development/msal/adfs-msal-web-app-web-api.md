@@ -10,7 +10,7 @@ ms.topic: article
 
 
 # Scenario: Web App (Server App) calling Web API
->Applies To: AD FS 2019 and later
+>Applies to: Windows Server 2022, Windows Server 2019, AD FS 2019 and later
 
 Learn how to build a web app signing-in users authenticated by AD FS 2019 and acquiring tokens using [MSAL library](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) to call web APIs.
 
@@ -28,7 +28,7 @@ Web Apps that calls Web APIs:
 - are confidential client applications.
 - that's why they've registered a secret (application shared secret, certificate or AD account) with AD FS. This secret is passed-in during the call to AD FS to get a token.
 
-To better understand how to register a Web App in ADFS and to configure it to acquire tokens to call a Web API, let's use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-webapp-to-webapi) and walkthrough the app registration and code configuration steps.
+To better understand how to register a Web App in AD FS and to configure it to acquire tokens to call a Web API, let's use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-webapp-to-webapi) and walkthrough the app registration and code configuration steps.
 
 
 ## Pre-requisites

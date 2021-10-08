@@ -203,7 +203,7 @@ Note that once DirectAccess is configured to use specific GPOs, it cannot be con
 > Whether you are using automatically or manually configured GPOs, you will need to add a policy for slow link detection if your clients will use 3G. The Group Policy path for **Policy: Configure Group Policy slow link detection** is: **Computer configuration / Polices / Administrative Templates / System / Group Policy**.
 
 > [!CAUTION]
-> Use the following procedure to backup all DirectAccess Group Policy Objects before executing DirectAccess cmdlets: [Back up and Restore DirectAccess Configuration](https://go.microsoft.com/fwlink/?LinkID=257928)
+> Use the following procedure to backup all DirectAccess Group Policy Objects before executing DirectAccess cmdlets: [Back up and Restore DirectAccess Configuration](/samples/browse/?redirectedfrom=TechNet-Gallery)
 
 #### Automatically-created GPOs
 Note the following when using automatically-created GPOs:
@@ -242,7 +242,7 @@ Note that if the correct permissions for linking GPOs do not exist, a warning is
 #### Recovering from a deleted GPO
 If a DirectAccess server, client, or application server GPO has been deleted by accident and there is no backup available, you must remove the configuration settings and re-configure again. If a backup is available, you can restore the GPO from the backup.
 
-**DirectAccess Management** will display the following error message: **GPO <GPO name> cannot be found**. To remove the configuration settings, take the following steps:
+**DirectAccess Management** will display the following error message: **GPO \<GPO name> cannot be found**. To remove the configuration settings, take the following steps:
 
 1.  Run the PowerShell cmdlet **Uninstall-remoteaccess**.
 

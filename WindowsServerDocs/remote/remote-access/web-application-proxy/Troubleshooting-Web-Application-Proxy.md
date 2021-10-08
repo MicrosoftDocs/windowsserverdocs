@@ -10,7 +10,7 @@ ms.assetid: a2fef55d-747b-4e20-8f21-5f8807e7ef87
 
 # Troubleshooting Web Application Proxy
 
->Applies To: Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 **This content is relevant for the on-premises version of Web Application Proxy. To enable secure access to on-premises applications over the cloud, see the [Azure AD Application Proxy content](/azure/active-directory/manage-apps/application-proxy).**
 
@@ -40,7 +40,7 @@ This section provides troubleshooting procedures for Web Application Proxy inclu
 
 |Event or symptom|Possible cause|Resolution|
 |--------------------|------------------|--------------|
-|The trust certificate ("ADFS ProxyTrust - <WAP machine name>") is not valid|This could be caused by any of the following:<p>-   The Application Proxy machine was down for too long.<br />-   Disconnections between the Web Application Proxy and AD FS<br />-   Certificate infrastructure issues<br />-   Changes on the AD FS machine, or the renew process between the Web Application Proxy and the AD FS did not run as planned every 8 hours, then they need to renew trust<br />-   The clock of the Web Application Proxy machine and the AD FS are not synchronized.|Make sure the clocks are synchronized. Run the Install-WebApplicationProxy cmdlet.|
+|The trust certificate ("ADFS ProxyTrust - \<WAP machine name>") is not valid|This could be caused by any of the following:<p>-   The Application Proxy machine was down for too long.<br />-   Disconnections between the Web Application Proxy and AD FS<br />-   Certificate infrastructure issues<br />-   Changes on the AD FS machine, or the renew process between the Web Application Proxy and the AD FS did not run as planned every 8 hours, then they need to renew trust<br />-   The clock of the Web Application Proxy machine and the AD FS are not synchronized.|Make sure the clocks are synchronized. Run the Install-WebApplicationProxy cmdlet.|
 |Configuration data was not found in AD FS|This may be because Web Application Proxy was not fully installed yet or because of changes in the AD FS database or corruption of the database.|Run the Install-WebApplicationProxy Cmdlet|
 |An error occurred when Web Application Proxy tried to read configuration from AD FS.|This may indicate that AD FS is not reachable, or that AD FS encountered an internal problem trying to read configuration from the AD FS database.|Verify that AD FS is reachable and working properly.|
 |The configuration data stored in AD FS is corrupted or Web Application Proxy was unable to parse it.<p>OR<p>Web Application Proxywas unable to retrieve the list of Relying Parties from AD FS.|This may occur if the configuration data was modified in AD FS.|Restart the Web Application Proxyservice. If the problem persists, run the Install-WebApplicationProxy Cmdlet.|

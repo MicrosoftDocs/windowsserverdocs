@@ -11,7 +11,7 @@ ms.topic: article
 
 # Creating a Site Design
 
-> Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Creating a site design involves deciding which locations will become sites, creating site objects, creating subnet objects, and associating the subnets with sites.
 
@@ -39,7 +39,7 @@ For more information about how to create site objects, see the article [Create a
 
 For every IP subnet and subnet mask associated with each location, plan to create subnet objects in AD DS representing all the IP addresses within the site.
 
-When creating an Active Directory subnet object, the information about network IP subnet and subnet mask is automatically translated into the network prefix length notation format <IP address>/<prefix length>. For example, the network IP version 4 (IPv4) address 172.16.4.0 with a subnet mask 255.255.252.0 appears as 172.16.4.0/22. In addition to IPv4 addresses,  Windows Server 2008  also supports IP version 6 (IPv6) subnet prefixes, for example, 3FFE:FFFF:0:C000::/64. For more information about IP subnets in each location, see the "Locations and Subnets" (DSSTOPO_2.doc) worksheet in [Collecting Network Information](../../ad-ds/plan/Collecting-Network-Information.md) and [Appendix A: Locations and Subnet Prefixes](Appendix-A--Locations-and-Subnet-Prefixes.md).
+When creating an Active Directory subnet object, the information about network IP subnet and subnet mask is automatically translated into the network prefix length notation format \<IP address>/\<prefix length>. For example, the network IP version 4 (IPv4) address 172.16.4.0 with a subnet mask 255.255.252.0 appears as 172.16.4.0/22. In addition to IPv4 addresses,  Windows Server 2008  also supports IP version 6 (IPv6) subnet prefixes, for example, 3FFE:FFFF:0:C000::/64. For more information about IP subnets in each location, see the "Locations and Subnets" (DSSTOPO_2.doc) worksheet in [Collecting Network Information](../../ad-ds/plan/Collecting-Network-Information.md) and [Appendix A: Locations and Subnet Prefixes](Appendix-A--Locations-and-Subnet-Prefixes.md).
 
 Associate each subnet object with a site object by referring to the "Associating Subnets with Sites" (DSSTOPO_6.doc) worksheet in "Deciding Which Locations Will Become Sites" section to determine which subnet is to be associated with which site. Document the Active Directory subnet object associated with each location in the "Associating Subnets with Sites" (DSSTOPO_6.doc) worksheet.
 

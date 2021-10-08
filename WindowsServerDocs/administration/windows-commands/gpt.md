@@ -11,7 +11,7 @@ ms.date: 10/16/2017
 
 # gpt
 
-> Applies to: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 On basic GUID partition table (gpt) disks, this command assigns the gpt attribute(s) to the partition with focus. Gpt partition attributes give additional information about the use of the partition. Some attributes are specific to the partition type GUID.
 

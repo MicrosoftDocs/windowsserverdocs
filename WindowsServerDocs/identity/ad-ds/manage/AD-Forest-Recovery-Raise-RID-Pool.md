@@ -10,7 +10,7 @@ ms.assetid: c37bc129-a5e0-4219-9ba7-b4cf3a9fc9a4
 ---
 # AD Forest Recovery - Raising the value of available RID pools
 
->Applies To: Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 and 2012 R2, Windows Server 2008 and 2008 R2
 
 Use the following procedure to raise the value of the relative ID (RID) pools that the RID operations master will allocate after that DC is restored. By raising the value of the available RID pools, you can ensure that no DC allocates a RID for a security principal that was created after the backup that was used to restore the domain.
 
@@ -32,7 +32,7 @@ When you increase the value of the large integer, you increase the value of the 
 1. Open Server Manager, click **Tools** and click **ADSI Edit**.
 2. Right-click, select **Connect to** and connect do the Default Naming Context and click **OK**.
    ![Screenshot that shows how to connect to the Default Naming Context](media/AD-Forest-Recovery-Raise-RID-Pool/adsi1.png)
-3. Browse to the following distinguished name path: **CN=RID Manager$,CN=System,DC=<domain name>**.
+3. Browse to the following distinguished name path: **CN=RID Manager$,CN=System,DC=\<domain name>**.
    ![Screenshot that shows how to browse to the distinguished name path.](media/AD-Forest-Recovery-Raise-RID-Pool/adsi2.png)
 3. Right-click and select the properties of CN=RID Manager$.
 4. Select the attribute **rIDAvailablePool**, click **Edit**, and then copy the large integer value to the clipboard.

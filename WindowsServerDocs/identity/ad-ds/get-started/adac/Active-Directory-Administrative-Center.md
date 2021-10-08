@@ -11,7 +11,7 @@ ms.topic: article
 
 # Active Directory Administrative Center
 
->Applies To: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 The Active Directory Administrative Center (ADAC) in Windows Server includes enhanced management experience features. These features ease the administrative burden for managing Active Directory Domain Services (AD DS). The following topics provide an introduction and additional details:
 

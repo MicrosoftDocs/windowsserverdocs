@@ -9,7 +9,7 @@ ms.topic: article
 ---
 
 # Scenario: Native App calling Web API
->Applies To: AD FS 2019 and later
+>Applies to: Windows Server 2022, Windows Server 2019, AD FS 2019 and later
 
 Learn how to build a native app signing-in users authenticated by AD FS 2019 and acquiring tokens using [MSAL library](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)  to call web APIs.
 
@@ -21,7 +21,7 @@ Before reading this article, you should be familiar with the [AD FS concepts](..
 
 In this flow you add authentication to your Native App (public client), which can therefore sign in users and calls a Web API. To call a Web API from a Native App that signs in users, you can use MSAL's [AcquireTokenInteractive](/dotnet/api/microsoft.identity.client.ipublicclientapplication.acquiretokeninteractive#Microsoft_Identity_Client_IPublicClientApplication_AcquireTokenInteractive_System_Collections_Generic_IEnumerable_System_String__) token acquisition method. To enable this interaction, MSAL leverages a web browser.
 
-To better understand how to configure a Native App in ADFS to acquire access token interactively, let's use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-native-to-webapi) and walkthrough the app registration and code configuration steps.
+To better understand how to configure a Native App in AD FS to acquire access token interactively, let's use a sample available [here](https://github.com/microsoft/adfs-sample-msal-dotnet-native-to-webapi) and walkthrough the app registration and code configuration steps.
 
 
 ## Pre-requisites

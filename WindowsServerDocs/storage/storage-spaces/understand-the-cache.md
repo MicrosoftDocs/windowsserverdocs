@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 ---
 # Understanding the cache in Storage Spaces Direct
 
->Applies to: Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 [Storage Spaces Direct](storage-spaces-direct-overview.md) features a built-in server-side cache to maximize storage performance. It is a large, persistent, real-time read *and* write cache. The cache is configured automatically when Storage Spaces Direct is enabled. In most cases, no manual management whatsoever is required.
 How the cache works depends on the types of drives present.
@@ -150,7 +150,7 @@ You may choose to use the CSV cache, or not – it's up to you. It does not conf
 
 For most deployments, manual configuration is not required. In case you do need it, see the following sections.
 
-If you need to make changes to the cache device model after setup, edit the Health Service's Support Components Document, as described in [Health Service overview](../../failover-clustering/health-service-overview.md#supported-components-document).
+If you need to make changes to the cache device model after setup, edit the Health Service's Support Components Document, as described in [Health Service overview](/azure-stack/hci/manage/health-service-overview#supported-components-document).
 
 ### Specify cache drive model
 
