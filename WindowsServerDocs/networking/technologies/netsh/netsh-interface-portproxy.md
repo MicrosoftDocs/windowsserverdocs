@@ -44,7 +44,9 @@ The available netsh interface portproxy commands are:
 
 -   [delete v6tov6](#delete-v6tov6)
 
--   [reset](#reset)
+-   [reset ipv4](#reset-ipv4)
+
+-   [reset ipv6](#reset-ipv6)
 
 -   [set v4tov4](#set-v4tov4)
 
@@ -218,13 +220,25 @@ delete v6tov6 listenport= {Integer | ServiceName} [[listenaddress=] {IPv6Address
 | **listenaddress** | Specifies the IPv6 address to delete. If an address isn't specified, the default is the local computer. |
 |   **protocol**    |                                      Specifies the protocol to use.                                      |
 
-## reset
+## reset-ipv4
+
+Resets the IPv4 configuration state.
+
+### Syntax
+
+```PowerShell
+netsh int ipv4 reset
+```
+
+## reset-ipv6
 
 Resets the IPv6 configuration state.
 
 ### Syntax
 
-`reset`
+```PowerShell
+netsh int ipv6 reset
+```
 
 ## set v4tov4
 

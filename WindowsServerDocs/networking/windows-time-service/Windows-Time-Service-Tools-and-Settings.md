@@ -122,6 +122,7 @@ Then, to adjust the computer clock by using the clock rate, W32tm.exe calculates
 
 - Windows Server 2012 R2 and earlier versions:  
 
+To get the `SystemClockRate` value, you can use the following command and convert it from seconds to clock ticks by using the formula of (seconds &times; 1,000 &times; 10,000):
   > `PhaseCorrection` = |`CurrentTimeOffset`| &divide; (`PhaseCorrectRate` &times; `UpdateInterval`)  
 
 All versions of Windows use the same final equation to check `PhaseCorrection`:  

@@ -24,6 +24,14 @@ If command extensions are enabled and running on the Windows platform, inserting
 break=[on|off]
 ```
 
+> [!NOTE]
+> Because the break command has no effect, it is often used to create empty files or delete the content of an existing file. For example:
+
+```
+rem -- cleans the content of the file --
+break>log
+```
+
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
