@@ -24,6 +24,7 @@ This table lists Microsoft server applications that support installation and fun
 | Configuration Manager (version 1806) | Yes as managed client, No as site server | Yes as managed client, No as site server | Yes | [What's new in version 1806 of Configuration Manager current branch](/configmgr/core/plan-design/changes/whats-new-in-version-1806) |
 | Exchange Server 2019 | Yes | Yes | Yes | [Exchange Server system requirements](/exchange/plan-and-deploy/system-requirements) |
 | Host Integration Server 2016, CU3 | Yes | Yes | Yes | [Host Integration Server system requirements](/host-integration-server/install-and-config-guides/system-requirements) |
+|Office Online Server|   Yes| Yes | Yes | [Plan Office Online Server](/officeonlineserver/plan-office-online-server)|
 | Project Server 2016 | No | Yes | Yes | [Software requirements for Project Server 2016](/project/software-requirements-for-project-server-2016) |
 | Project Server 2019 | No | Yes | Yes | [Software requirements for Project Server 2019](/project/software-requirements-for-project-server-2019) |
 | Project Server Subscription Edition | Yes | Yes | Public preview | [Software requirements for Project Server Subscription Edition](/project/software-requirements-project-server-subscription-edition) |
