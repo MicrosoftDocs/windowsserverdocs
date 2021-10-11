@@ -20,6 +20,7 @@ This table lists Microsoft server applications that support installation and fun
 |--|--|--|--|--|
 | Azure DevOps Server 2020.1 | Yes* | Yes | Yes | [Azure DevOps Server 2020.1 release notes](/azure/devops/server/release-notes/azuredevops2020u1?view=azure-devops&preserve-view=true) |
 | Configuration Manager (version 2107) | Yes as a managed client and distribution point.<br/>No as a site server. | Yes as a site server/site systems and a managed client. | Yes | [Support for Windows Server 2022](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2107#support-for-windows-server-2022-and-the-adk-for-windows-11) |
+|Office Online Server|   Yes| Yes | Yes | [Plan Office Online Server](/officeonlineserver/plan-office-online-server)|
 | Project Server Subscription Edition | Yes | Yes | Public preview | [Software requirements for Project Server Subscription Edition](/project/software-requirements-project-server-subscription-edition) |
 | Project Server 2019 | Yes | Yes | Yes | [Software requirements for Project Server 2019 - Project Server](/project/software-requirements-for-project-server-2019&preserve-view=true)|
 | SharePoint Server 2019 | No | Yes | Yes | [Hardware and software requirements for SharePoint Server 2019](/sharepoint/install/hardware-and-software-requirements-2019) |
