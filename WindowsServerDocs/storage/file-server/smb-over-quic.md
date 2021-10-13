@@ -1,6 +1,6 @@
 ---
 title: SMB over QUIC
-description: Describes the SMB over QUIC feature in Windows Server 2022 Datacenter Azure Edition Preview, Windows 11 Insider Preview 
+description: Describes the SMB over QUIC feature in Windows Server 2022 Datacenter: Azure Edition Preview, Windows 11 Insider Preview 
 ms.prod: windows-server
 ms.topic: article
 author: NedPyle
@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # SMB over QUIC (PREVIEW)
 
->Applies to: Windows Server 2022 Datacenter Azure Edition Preview, Windows 11 Insider Preview 
+>Applies to: Windows Server 2022 Datacenter: Azure Edition Preview, Windows 11 Insider Preview 
 
 SMB over QUIC (Preview) introduces an alternative to the TCP network transport, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. QUIC is an IETF-standardized protocol with many benefits when compared with TCP:
 
@@ -32,7 +32,7 @@ A file server administrator must opt in to enabling SMB over QUIC. It isn't on b
 
 To use SMB over QUIC, you need the following things:
 
-- A file server running Windows Server 2022 Datacenter Azure Edition Preview ([Microsoft Server Operating Systems Preview](https://aka.ms/ws2022ae))
+- A file server running Windows Server 2022 Datacenter: Azure Edition Preview ([Microsoft Server Operating Systems Preview](https://aka.ms/ws2022ae))
 - A Windows 11 Insider Preview ([Windows Insider Channels](https://insider.windows.com/))
 - Windows Admin Center ([Homepage](https://aka.ms/windowsadmincenter))
 - A Public Key Infrastructure to issue certificates like Active Directory Certificate Server or access to a trusted third party certificate issuer like Verisign, Digicert, Let's Encrypt, and so on.
@@ -83,9 +83,9 @@ To use SMB over QUIC, you need the following things:
 
 ### Step 2: Configure SMB over QUIC
 
-1. Deploy a [Windows Server 2022 Datacenter Azure Edition](https://aka.ms/ws2022ae) preview server.
+1. Deploy a [Windows Server 2022 Datacenter: Azure Edition](https://aka.ms/ws2022ae) preview server.
 1. Install the latest version of Windows Admin Center on a management PC or the file server. You need the latest version of the *Files & File Sharing* extension. It's installed automatically by Windows Admin Center if *Automatically update extensions* is enabled in **Settings > Extensions**.
-1. Join your Windows Server 2022 Datacenter Azure Edition file server to your Active Directory domain and make it accessible to Windows Insider clients on the Azure public interface by adding a firewall allow rule for UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
+1. Join your Windows Server 2022 Datacenter: Azure Edition file server to your Active Directory domain and make it accessible to Windows Insider clients on the Azure public interface by adding a firewall allow rule for UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
 1. Connect to the server with Windows Admin Center and click the **Settings** icon in the lower left. In the **File shares (SMB server)** section, under **File sharing across the internet with SMB over QUIC**, click **Configure**.
 1. Click a certificate under **Select a computer certificate for this file server**, click the server addresses clients can connect to or click **Select all**, and click **Enable**.
 
@@ -166,7 +166,7 @@ By default, a Windows 11 Insider Preview won't have access to an Active Director
 
 ## Notes
 
-- Windows Server 2022 Datacenter Azure Edition Preview will also be available on Azure Stack HCI 21H2 Preview later this year, for customers not using Azure public cloud.
+- Windows Server 2022 Datacenter: Azure Edition Preview will also be available on Azure Stack HCI 21H2 Preview later this year, for customers not using Azure public cloud.
 - We recommend read-only domain controllers configured only with passwords of mobile users be made available to the file server.
 - Users should have strong passwords or, ideally, be configured using a [passwordless strategy](/windows/security/identity-protection/hello-for-business/passwordless-strategy) with [Windows Hello for Business MFA](/windows/security/identity-protection/hello-for-business) or [smart cards](/windows/security/identity-protection/smart-cards/smart-card-windows-smart-card-technical-reference). Configure an account lockout policy for mobile users through [fine-grained password policy](../../identity/ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#fine_grained_pswd_policy_mgmt) and you should deploy intrusion protection software to detect brute force or password spray attacks.
 
