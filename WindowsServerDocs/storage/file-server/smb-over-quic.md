@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 # SMB over QUIC (PREVIEW)
 
->Applies to: Windows Server 2022 Datacenter: Azure Edition Preview, Windows 11 Insider Preview 
+>Applies to: Windows Server 2022 Datacenter Azure Edition Preview, Windows 11 Insider Preview 
 
 SMB over QUIC (Preview) introduces an alternative to the TCP network transport, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. QUIC is an IETF-standardized protocol with many benefits when compared with TCP:
 
@@ -32,7 +32,7 @@ A file server administrator must opt in to enabling SMB over QUIC. It isn't on b
 
 To use SMB over QUIC, you need the following things:
 
-- A file server running Windows Server 2022 Datacenter: Azure Edition Preview ([Microsoft Server Operating Systems Preview](https://aka.ms/ws2022ae))
+- A file server running Windows Server 2022 Datacenter Azure Edition Preview ([Microsoft Server Operating Systems Preview](https://aka.ms/ws2022ae))
 - A Windows 11 Insider Preview ([Windows Insider Channels](https://insider.windows.com/))
 - Windows Admin Center ([Homepage](https://aka.ms/windowsadmincenter))
 - A Public Key Infrastructure to issue certificates like Active Directory Certificate Server or access to a trusted third party certificate issuer like Verisign, Digicert, Let's Encrypt, and so on.
@@ -47,7 +47,7 @@ To use SMB over QUIC, you need the following things:
     - Purpose: Server Authentication (EKU 1.3.6.1.5.5.7.3.1)
     - Signature algorithm: SHA256RSA *(or greater)*
     - Signature hash: SHA256 *(or greater)*
-    - Public key algorithm: ECDCA_P256 *(or greater. Can also use RSA with at least 2048 length)*
+    - Public key algorithm: ECDSA_P256 *(or greater. Can also use RSA with at least 2048 length)*
     - Subject Alternative Name (SAN): *(A DNS name entry for each fully qualified DNS name used to reach the SMB server)*
     - Subject: *(CN= anything, but must exist)*
     - Private key included: yes
@@ -70,7 +70,7 @@ To use SMB over QUIC, you need the following things:
     1. Select **Active Directory Enrollment Policy**
     1. Click **Next**
     1. Select the certificate template for SMB over QUIC that was published in Active Directory.
-    1. Click **More information is required to enroll for this certificate. Click here to configure settings**
+    1. Click **More information is required to enroll for this certificate. Click here to configure settings.**
     1. So users can use to locate the file server, fill in the value **Subject** with a common name and **Subject Alternative Name** with one or more DNS names.
     1. Click **Ok** and click **Enroll**.
 
@@ -83,10 +83,10 @@ To use SMB over QUIC, you need the following things:
 
 ### Step 2: Configure SMB over QUIC
 
-1. Deploy a [Windows Server 2022 Datacenter: Azure Edition](https://aka.ms/ws2022ae) preview server.
+1. Deploy a [Windows Server 2022 Datacenter Azure Edition](https://aka.ms/ws2022ae) preview server.
 1. Install the latest version of Windows Admin Center on a management PC or the file server. You need the latest version of the *Files & File Sharing* extension. It's installed automatically by Windows Admin Center if *Automatically update extensions* is enabled in **Settings > Extensions**.
-1. Join your Windows Server 2022 Datacenter: Azure Edition file server to your Active Directory domain and make it accessible to Windows Insider clients on the Azure public interface by adding a firewall allow rule for UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
-1. Connect to the server with Windows Admin Center and click the **Settings** icon in the lower left. In the **File Shares (SMB server)** section, under **File sharing across the internet with SMB over QUIC**, click **Configure**.
+1. Join your Windows Server 2022 Datacenter Azure Edition file server to your Active Directory domain and make it accessible to Windows Insider clients on the Azure public interface by adding a firewall allow rule for UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
+1. Connect to the server with Windows Admin Center and click the **Settings** icon in the lower left. In the **File shares (SMB server)** section, under **File sharing across the internet with SMB over QUIC**, click **Configure**.
 1. Click a certificate under **Select a computer certificate for this file server**, click the server addresses clients can connect to or click **Select all**, and click **Enable**.
 
     :::image type="content" source="./media/smb-over-quic/wac1.png" alt-text="image showing the steps for configure SMB over QUIC1":::
@@ -103,7 +103,7 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 
 ### Step 3: Connect to SMB shares
 
-1. Join your Windows 11 Insider Preview to your domain.Be certain the names of the SMB over QUIC file server's certificate subject alternative names are published to DNS and are fully qualified **OR** added to the HOST files for your Windows 11 Insider Preview. Ensure that the server's certificate subject alternative names are published to DNS **OR** added to the HOSTS files for your Windows 11 Insider Preview.
+1. Join your Windows 11 Insider Preview to your domain.Be certain the names of the SMB over QUIC file server's certificate subject alternative names are published to DNS and are fully qualified **OR** added to the HOSTS files for your Windows 11 Insider Preview. Ensure that the server's certificate subject alternative names are published to DNS **OR** added to the HOSTS files for your Windows 11 Insider Preview.
 1. Move your Windows 11 Insider Preview to an external network where it no longer has any network access to domain controllers or the file server's internal IP addresses.
 1. In Windows File Explorer, in the Address Bar, type the UNC path to a share on the file server and confirm you can access data in the share. Alternatively, you can use *NET USE /TRANSPORT:QUIC* or *New-SmbMapping -TransportType QUIC* with a UNC path. Examples:
 
@@ -166,7 +166,7 @@ By default, a Windows 11 Insider Preview won't have access to an Active Director
 
 ## Notes
 
-- Windows Server 2022 Datacenter: Azure Edition Preview will also be available on Azure Stack HCI 21H2 Preview later this year, for customers not using Azure public cloud.
+- Windows Server 2022 Datacenter Azure Edition Preview will also be available on Azure Stack HCI 21H2 Preview later this year, for customers not using Azure public cloud.
 - We recommend read-only domain controllers configured only with passwords of mobile users be made available to the file server.
 - Users should have strong passwords or, ideally, be configured using a [passwordless strategy](/windows/security/identity-protection/hello-for-business/passwordless-strategy) with [Windows Hello for Business MFA](/windows/security/identity-protection/hello-for-business) or [smart cards](/windows/security/identity-protection/smart-cards/smart-card-windows-smart-card-technical-reference). Configure an account lockout policy for mobile users through [fine-grained password policy](../../identity/ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#fine_grained_pswd_policy_mgmt) and you should deploy intrusion protection software to detect brute force or password spray attacks.
 
