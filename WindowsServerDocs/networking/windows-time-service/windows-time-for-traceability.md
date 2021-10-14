@@ -76,7 +76,7 @@ This event is logged when the Windows Time Service (W32Time) is stopping and log
 
 # [259](#tab/259)
 
-This event periodically logs its current list of time sources and its chosen time source.  In addition, it logs the current tick count.  This event does not fire each time a time source changes.  Other events listed later in this document provide this functionality.
+This event periodically logs its current list of time sources and its chosen time source.  In addition, it logs the current tick count.  This event doesn't fire each time a time source changes.  Other events listed later in this document provide this functionality.
 
 |Event description |NTP Client Provider Periodic Status |
 |---|---|
@@ -117,7 +117,7 @@ This logs each instance when System Time is modified using SetSystemTime API.
 |Event description |System clock frequency adjusted |
 |---|---|
 |Details |System clock frequency is constantly modified by W32time when the clock is in close synchronization. We want to capture "reasonably significant" adjustments made to the clock frequency without overrunning the event log. |
-|Throttling mechanism  |All clock adjustments below TimeAdjustmentAuditThreshold (min = 128 part per million, default = 800 part per million) are not logged.<p>2 PPM change in clock frequency with current granularity yields 120 µsec/sec change in clock accuracy.<p>On a synchronized system, most of the adjustments are below this level. If you want finer tracking, this setting can be adjusted down or you can use PerfCounters, or you can do both. |
+|Throttling mechanism  |All clock adjustments below TimeAdjustmentAuditThreshold (min = 128 parts per million, default = 800 parts per million) aren't logged.<p>2 PPM change in clock frequency with current granularity yields 120 µsec/sec change in clock accuracy.<p>On a synchronized system, most of the adjustments are below this level. If you want finer tracking, this setting can be adjusted down or you can use PerfCounters, or you can do both. |
 
 # [263](#tab/263)
 
@@ -137,7 +137,7 @@ This logs each instance when System Time is modified using SetSystemTime API.
 
 |Event description |Time service source or stratum number changes |
 |---|---|
-|Details |W32time Time Source and Stratum Number are important factors in time traceability and any changes to these must be logged. If W32time has no source of time and you have not configured as a reliable time source, then it will stop advertising as a time server, and by-design respond to requests with some invalid parameters. This event is critical to track the state changes in an NTP topology. |
+|Details |W32time Time Source and Stratum Number are important factors in time traceability and any changes to them must be logged. If W32time has no source of time and you haven't configured as a reliable time source, then it will stop advertising as a time server, and by-design respond to requests with some invalid parameters. This event is critical to track the state changes in an NTP topology. |
 |Throttling mechanism  |None. |
 
 # [266](#tab/266)
@@ -145,4 +145,4 @@ This logs each instance when System Time is modified using SetSystemTime API.
 |Event description |Time resynchronization is requested |
 |---|---|
 |Details |This operation is triggered:<ul><li>When network changes occur</li><li>System returns from connected standby/hibernation</li><li>When we didn't sync for a long time</li><li>Admin issues the resync command</li></ul>This operation results in immediate loss of fine-grained time sync accuracy because it causes NTP client to clear its filters. |
-|Throttling mechanism  |Max frequency - once every 5 minutes.<br><br>It is possible that a bad network card (or a poor script) can trigger this operation repeatedly and result in logs getting overwhelmed. Hence the need to throttle this event.<br><br>Accurate time sync takes far more than 5 minutes to achieve, and throttling does not lose information about the original event that resulted in loss of time accuracy.  |
+|Throttling mechanism  |Max frequency - once every 5 minutes.<br><br>It's possible that a bad network card (or a poor script) can trigger this operation repeatedly and result in logs getting overwhelmed. Hence the need to throttle this event.<br><br>Accurate time sync takes far more than 5 minutes to achieve, and throttling doesn't lose information about the original event that resulted in loss of time accuracy.  |
