@@ -32,7 +32,7 @@ The following section outlines the events logged for use in traceability scenari
 
 # [257](#tab/257)
 
-This event is logged when the Windows Time Service (W32Time) is started and logs information about the current time, current tick count, runtime configuration, time providers, and current clock rate.
+This event is logged when the Windows Time Service (W32Time) starts and logs information about the current time, current tick count, runtime configuration, time providers, and current clock rate.
 
 |Event description |Service Start |
 |---|---|
@@ -76,7 +76,7 @@ This event is logged when the Windows Time Service (W32Time) is stopping and log
 
 # [259](#tab/259)
 
-This event periodically logs its current list of time sources and its chosen time source.  In addition, it logs the current tick count.  This event doesn't fire each time a time source changes.  Other events listed later in this document provide this functionality.
+This event periodically logs its current list of time sources and its chosen time source. It also logs the current tick count. This event doesn't fire each time a time source changes. Other events listed later in this document provide this functionality.
 
 |Event description |NTP Client Provider Periodic Status |
 |---|---|
@@ -106,11 +106,11 @@ This information can also be queried using the following commands
 
 # [261](#tab/261)
 
-This logs each instance when System Time is modified using SetSystemTime API.
+This event logs each instance when System Time is modified using the SetSystemTime API.
 
 |Event description |System Time is set |
 |---|---|
-|Throttling mechanism  |None.<p>This should happen rarely on systems with reasonable time synchronization, and we want to log it each time it occurs. We ignore TimeJumpAuditOffset setting while logging this event since that setting was meant to throttle events in the Windows System event log. |
+|Throttling mechanism  |None.<p>This event should happen rarely on systems with reasonable time synchronization, and we want to log it each time it occurs. We ignore TimeJumpAuditOffset setting while logging this event since that setting was meant to throttle events in the Windows System event log. |
 
 # [262](#tab/262)
 
