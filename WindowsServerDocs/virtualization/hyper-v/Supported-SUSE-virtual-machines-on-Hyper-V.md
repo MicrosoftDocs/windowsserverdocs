@@ -1,13 +1,13 @@
 ---
-title: Supported SUSE virtual machines on Hyper-V
-description: Lists the SUSE/Linux integration services and features included in each version
+title: Supported SUSE Linux Enterprise Server (SLES) virtual machines on Hyper-V
+description: Lists the SUSE Linux Enterprise Server (SLES)/Linux integration services and features included in each version
 ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 ms.author: benarm
 author: BenjaminArmstrong
 ms.date: 01/08/2021
 ---
-# Supported SUSE virtual machines on Hyper-V
+# Supported SUSE Linux Enterprise Server (SLES) virtual machines on Hyper-V
 
 >Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Hyper-V Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows 10, Windows 8.1
 
@@ -63,7 +63,7 @@ SLES12+ is 64-bit only.
 |Boot using UEFI|2019, 2016, 2012 R2|&#10004; Note 9|&#10004; Note 9|&#10004; Note 9|&#10004; Note 9|&#10004; Note 9|&#10004; Note 9||
 |Secure boot|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|||
 
-## <a name="BKMK_notes"></a>Notes
+## Notes
 
 1. Static IP injection may not work if **Network Manager** has been configured for a given Hyper-V-specific network adapter on the virtual machine. To ensure smooth functioning of static IP injection please ensure that Network Manager is turned off completely or has been turned off for a specific network adapter through its **ifcfg-ethX** file.
 
@@ -89,7 +89,6 @@ SLES12+ is 64-bit only.
 
    ```Powershell
    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
-
    ```
 
 ## See Also

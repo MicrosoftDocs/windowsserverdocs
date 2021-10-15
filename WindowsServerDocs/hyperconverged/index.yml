@@ -59,10 +59,4 @@ productDirectory:
       imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-azure-stack.svg
       links:
         - url: /windows-server/azure-stack-hci
-          text: Pairs Windows Server 2019 virtualization and clustering technologies with validated hardware solutions by the partner of your choice, helping to take the guesswork out of tuning a software-defined datacenter.
-    # Card
-    - title: Windows Server Software-Defined (WSSD)
-      imageSrc: https://docs.microsoft.com/media/common/i_data-collection.svg
-      links:
-        - url: https://www.microsoft.com/cloud-platform/software-defined-datacenter
-          text: Pairs Windows Server 2016 virtualization and clustering technologies with validated hardware solutions by the partner of your choice, helping to take the guesswork out of tuning a software-defined datacenter.
+          text: Pairs Windows Server virtualization and clustering technologies with validated hardware solutions by the partner of your choice, helping to take the guesswork out of tuning a software-defined datacenter.

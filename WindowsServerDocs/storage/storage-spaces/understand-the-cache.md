@@ -150,7 +150,7 @@ You may choose to use the CSV cache, or not – it's up to you. It does not conf
 
 For most deployments, manual configuration is not required. In case you do need it, see the following sections.
 
-If you need to make changes to the cache device model after setup, edit the Health Service's Support Components Document, as described in [Health Service overview](../../failover-clustering/health-service-overview.md#supported-components-document).
+If you need to make changes to the cache device model after setup, edit the Health Service's Support Components Document, as described in [Health Service overview](/azure-stack/hci/manage/health-service-overview#supported-components-document).
 
 ### Specify cache drive model
 

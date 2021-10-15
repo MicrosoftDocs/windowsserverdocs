@@ -55,10 +55,10 @@ items:
               href: automatic-vm-activation.md
             - name: KMS activation planning
               href: kms-activation-planning.md
-            - name: KMS client activation keys
-              href: kms-client-activation-keys.md
         - name: Microsoft Server application compatibility
           items:
+          - name: Windows Server 2022
+            href: application-compatibility-windows-server-2022.md
           - name: Windows Server 2019
             href: application-compatibility-windows-server-2019.md
           - name: Windows Server 2016
@@ -80,6 +80,12 @@ items:
             href: Getting-started-with-Server-Core.md
           - name: Install Server with Desktop Experience
             href: Getting-started-with-Server-with-Desktop-Experience.md
+        - name: Activation
+          items:
+            - name: Create KMS host
+              href: kms-create-host.md
+            - name: KMS client activation
+              href: kms-client-activation-keys.md
         - name: Get Extended Security Updates
           href: extended-security-updates-deploy.md
     - name: Install Nano Server
@@ -137,8 +143,8 @@ items:
     - name: Resources
       items:
       - name: Windows release health
-        href: https://docs.microsoft.com/windows/release-health/
+        href: /windows/release-health/
       - name: Windows Server product page
         href: https://www.microsoft.com/windows-server
       - name: Windows Server license terms
-        href: ../windows-server-licensing/windows-server-licensing.md 
+        href: ../windows-server-licensing/windows-server-licensing.md

@@ -6,12 +6,12 @@ ms.assetid: 7ebaa271-2557-4c24-a679-c3d863e6bf9e
 manager: dcscontentpm
 ms.author: v-tea
 author: Teresa-Motiv
-ms.date: 08/07/2020
+ms.date: 10/14/2021
 ---
 
 # Network-Related Performance Counters
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, version 20H2
 
 This topic lists the counters that are relevant to managing network performance, and contains the following sections.
 

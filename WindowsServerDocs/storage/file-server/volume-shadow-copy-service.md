@@ -124,9 +124,9 @@ In the copy-on-write method, when a change to the original volume occurs (but be
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -165,9 +165,9 @@ In the redirect-on-write method, whenever the original volume receives a change 
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -520,9 +520,9 @@ The following table lists the minimum supported operating system versions for VS
 
 <table>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col>
+<col>
+<col>
 </colgroup>
 <thead>
 <tr class="header">
@@ -567,7 +567,7 @@ The following table lists the minimum supported operating system versions for VS
 <div class="alert">
 <table>
 <colgroup>
-<col style="width: 100%" />
+<col>
 </colgroup>
 <thead>
 <tr class="header">
