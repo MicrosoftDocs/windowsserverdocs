@@ -11,7 +11,7 @@ ms.topic: article
 
 
 # The role of attribute stores
-In Active Directory Federation Services (AD FS), the term *attribute stores* is used to refer to directories or databases that an organization uses to store its user accounts and their attribute values. After it's configured in an identity provider organization, AD FS retrieves these attribute values from the store. It creates claims based on that information so that a web application or service that's hosted in a relying party organization can make the appropriate authorization decisions when a federated user (a user whose account is stored in the identity provider organization) tries to access the application or service.
+In Active Directory Federation Services (AD FS), the term *attribute stores* refers to directories or databases that an organization uses to store its user accounts and their attribute values. After it's configured in an identity provider organization, AD FS retrieves these attribute values from the store. It creates claims based on that information so that a web application or service that's hosted in a relying party organization can make the appropriate authorization decisions when a federated user (a user whose account is stored in the identity provider organization) tries to access the application or service.
 
 For more information about how claims are generated, see [The role of claims](The-Role-of-Claims.md).
 
@@ -26,11 +26,11 @@ The location of the user attribute store and the location from which users authe
 
 Depending on attribute store placement and other requirements of your organization, you can combine several of these deployment goals to complete the design of your AD FS deployment.
 
-## Attribute stores that are supported by AD FS
+## Attribute stores that AD FS supports
 AD FS supports a wide range of directory and database stores. You can use them to extract administrator-defined attribute values and populate claims with those values. AD FS supports any of these directories or databases as attribute stores:
 
-- Active Directory Domain Services (AD DS) in Windows Server 2012 and 2012 R2, and in Windows Server 2016 and later.
+- Azure Active Directory Domain Services (AD DS) in Windows Server 2012 and 2012 R2, and in Windows Server 2016 and later
 
-- All editions of SQL Server 2012, SQL Server 2014, and SQL Server 2016 and later.
+- All editions of SQL Server 2012, SQL Server 2014, and SQL Server 2016 and later
 
-- Custom attribute stores.
+- Custom attribute stores
