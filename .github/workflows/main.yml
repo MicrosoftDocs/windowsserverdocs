@@ -1,0 +1,16 @@
+name: "Close stale issues"
+on:
+  workflow_dispatch:
+    branches:
+    - master
+     
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/stale@v3
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        days-before-stale: 730
+        days-before-close: 0
+        stale-issue-message: 'Thanks for your dedication to our documentation. Unfortunately, at this time we have been unable to review your issue in a timely manner and we sincerely apologize for the delayed response. We are closing this issue for now, but if you feel that it's still a concern, please respond and let us know. If you determine another possible update to our documentation, please don't hesitate to reach out again. #please-close'
