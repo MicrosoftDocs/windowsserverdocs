@@ -42,8 +42,6 @@ DCB is a suite of Institute of Electrical and Electronics Engineers (IEEE) stand
 
 For DCB, Windows Server uses Priority-based Flow Control (PFC), standardized in IEEE 802.1Qbb. PFC creates a (nearly) lossless network fabric by preventing overflow within traffic classes. Windows Server also uses Enhanced Transmission Selection (ETS), standardized in IEEE 802.1Qaz. ETS enables the division of the bandwidth into reserved portions for up to eight classes of traffic. Each traffic class has its own transmit queue and, through the use of PFC, can start and stop transmission within a class.
 
-For more information, see [Data Center Bridging (DCB)](../dcb/dcb-top.md).
-
 ## Hyper-V Network Virtualization
 
 |Version|Description|
@@ -102,7 +100,7 @@ VLAN is an extension to the Ethernet frame header to enable partitioning of a LA
 
 ## Virtual Machine Queue (VMQ)
 
-VMQs is a NIC feature that allocates a queue for each VM. Anytime you have Hyper-V enabled; you must also enable VMQ. In Windows Server 2016, VMQs use NIC Switch vPorts with a single queue assigned to the vPort to provide the same functionality. For more information, see [Virtual Receive Side Scaling (vRSS)](../vrss/vrss-top.md) and [NIC Teaming](../nic-teaming/nic-teaming.md).
+VMQs is a NIC feature that allocates a queue for each VM. Anytime you have Hyper-V enabled; you must also enable VMQ. In Windows Server 2016, VMQs use NIC Switch vPorts with a single queue assigned to the vPort to provide the same functionality. For more information, see [NIC Teaming](../nic-teaming/nic-teaming.md).
 
 ## Virtual Machine Multi-Queue (VMMQ)
 

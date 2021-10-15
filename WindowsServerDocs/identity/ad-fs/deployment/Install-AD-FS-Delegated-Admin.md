@@ -74,7 +74,7 @@ PS:\>$adminConfig = @{"DKMContainerDn"="CN=8065f653-af9d-42ff-aec8-56e02be4d5f3,
 ```
 
 Next, create the farm:
-Note that the local computer account and the ADFS admin account need to be granted retrieve password and delegate to account rights on the gMSA.
+Note that the local computer account and the AD FS admin account need to be granted retrieve password and delegate to account rights on the gMSA.
 ```
 PS:\>$localadminobj = get-aduser "localadmin"
 PS:\>$adfsnodecomputeracct = get-adcomputer "contoso_adfs_node"
@@ -145,22 +145,22 @@ $ouPath = "CN=ADFS," + $initialPath
 $ou = "CN=" + $ouName + "," + $ouPath
 
 #######################################
-## Create DKM container and assign default ACE which allows adfs admin read access
+## Create DKM container and assign default ACE which allows AD FS admin read access
 #######################################
 
-if ($pscmdlet.ShouldProcess("$ou", "Creating DKM container and assinging access"))
+if ($pscmdlet.ShouldProcess("$ou", "Creating DKM container and assigning access"))
 {
     Write-Verbose ("Creating organizational unit with DN: " + $ou)
 
     if ($AdfsAdministratorAccount.EndsWith("$"))
     {
-        write-verbose "ADFS administrator account passed with $ suffix indicating a computer account"
+        write-verbose "AD FS administrator account passed with $ suffix indicating a computer account"
         $userNameSplit = $AdfsAdministratorAccount.Split("\");
         $strSID = (Get-ADServiceAccount -Identity $userNameSplit[1]).SID
     }
     else
     {
-        write-verbose "ADFS administrator account is a standard AD user"
+        write-verbose "AD FS administrator account is a standard AD user"
         $objUser = New-Object System.Security.Principal.NTAccount($AdfsAdministratorAccount)
         $strSID = $objUser.Translate([System.Security.Principal.SecurityIdentifier])
     }
@@ -240,13 +240,13 @@ if ($pscmdlet.ShouldProcess("$strSID", "Granting GenericRead, CreateChild, Write
 
 if ($AdfsAdministratorAccount.EndsWith("$"))
 {
-    write-verbose "ADFS administrator account passed with $ suffix indicating a gMSA"
+    write-verbose "AD FS administrator account passed with $ suffix indicating a gMSA"
     $userNameSplit = $AdfsAdministratorAccount.Split("\");
     $strSID = (Get-ADServiceAccount -Identity $userNameSplit[1]).SID
 }
 else
 {
-    write-verbose "ADFS administrator account is a standard AD user"
+    write-verbose "AD FS administrator account is a standard AD user"
     $objUser = New-Object System.Security.Principal.NTAccount($AdfsAdministratorAccount)
     $strSID = $objUser.Translate([System.Security.Principal.SecurityIdentifier])
 }

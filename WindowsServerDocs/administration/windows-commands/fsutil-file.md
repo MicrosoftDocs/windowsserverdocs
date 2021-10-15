@@ -48,7 +48,7 @@ fsutil file [setzerodata] offset=<offset> length=<length> <filename>
 | offset=`<offset>` | Specifies the start of the range that should be set to zeroes. |
 | length=`<length>` | Specifies the length of the range (in bytes). |
 | queryextents | Queries extents for a file. |
-| /r | If <filename> is a reparse point, open it rather than its target. |
+| /r | If `<filename>` is a reparse point, open it rather than its target. |
 | `<startingvcn>` | Specifies first VCN to query. If omitted, start at VCN 0. |
 | `<numvcns>` | Number of VCNs to query. If omitted or 0, query until EOF. |
 | queryfileid | Queries the file ID of a file on an NTFS volume. |

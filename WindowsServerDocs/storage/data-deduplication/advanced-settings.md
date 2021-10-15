@@ -61,7 +61,7 @@ You can toggle the following settings for new or scheduled Data Deduplication jo
 <table>
 	<thead>
 		<tr>
-			<th style="min-width:125px">Parameter name</th>
+			<th>Parameter name</th>
 			<th>Definition</th>
 			<th>Accepted values</th>
 			<th>Why would you want to set this value?</th>
@@ -192,7 +192,7 @@ The main reasons to modify the volume settings from the selected usage type are 
 <table>
 	<thead>
 		<tr>
-			<th style="min-width:125px">Setting name</th>
+			<th>Setting name</th>
 			<th>Definition</th>
 			<th>Accepted values</th>
 			<th>Why would you want to modify this value?</th>
@@ -288,7 +288,7 @@ For example, you may want to disable full Garbage Collection. More information a
 <table>
 	<thead>
 		<tr>
-			<th style="min-width:125px">Setting name</th>
+			<th>Setting name</th>
 			<th>Definition</th>
 			<th>Accepted values</th>
 			<th>Why would you want to change this?</th>

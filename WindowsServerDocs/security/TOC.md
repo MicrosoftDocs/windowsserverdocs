@@ -1,5 +1,6 @@
 # [Security and Assurance](security-and-assurance.yml)
 ## [Beginning your General Data Protection Regulation (GDPR) journey for Windows Server 2016](gdpr/gdpr-winserver-whitepaper.md)
+## [Secured-core server](secured-core-server.md)
 ## [Set up HGS for a guarded fabric and shielded VMs](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
 ### [Overview](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md)
 ### [Plan](guarded-fabric-shielded-vm/guarded-fabric-plan-overview.md)

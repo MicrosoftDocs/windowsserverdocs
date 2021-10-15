@@ -266,7 +266,7 @@ To find information about a specific command, in the following A-Z menu, click t
 - [cprofile](cprofile.md)
 - [create](create.md)
   - [create partition efi](create-partition-efi.md)
-  - [create [partition extended](create-partition-extended.md)
+  - [create partition extended](create-partition-extended.md)
   - [create partition logical](create-partition-logical.md)
   - [create partition msr](create-partition-msr.md)
   - [create partition primary](create-partition-primary.md)
