@@ -6,11 +6,11 @@ ms.topic: article
 author: wmgries
 manager: klaasl
 ms.author: wgries
-ms.date: 05/09/2017
+ms.date: 10/15/2021
 ---
 # Data Deduplication Overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, version 20H2
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
 
