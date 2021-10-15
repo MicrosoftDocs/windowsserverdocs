@@ -78,7 +78,7 @@ You can toggle the following settings for new or scheduled Data Deduplication jo
 					<li>Scrubbing</li>
 				</ul>
 			</td>
-			<td>This value is required because it is the type of job that you want to have be scheduled. This value cannot be changed after the task has been scheduled.</td>
+			<td>This value is required because it is the type of job that you want to schedule. This value cannot be changed after the task has been scheduled.</td>
 		</tr>
 		<tr>
 			<td>Priority</td>
@@ -227,7 +227,7 @@ The main reasons to modify the volume settings from the selected usage type are 
 			<td>MinimumFileAgeDays</td>
 			<td>Number of days after the file is created before the file is considered to be in-policy for optimization.</td>
 			<td>Positive integers (inclusive of zero)</td>
-            <td>The <strong>Default</strong> and <strong>HyperV</strong> usage types set this value to 3 to maximize performance on hot or recently created files. You may want to modify this if you want Data Deduplication to be more aggressive or if you do not care about the extra latency associated with deduplication.</td>
+            <td>The <strong>Default</strong> and <strong>Hyper-V</strong> usage types set this value to 3 to maximize performance on hot or recently created files. You may want to modify this if you want Data Deduplication to be more aggressive or if you do not care about the extra latency associated with deduplication.</td>
 		</tr>
 		<tr>
 			<td>MinimumFileSize</td>
@@ -320,7 +320,7 @@ Yes, [all jobs can be run manually](run.md#running-dedup-jobs-manually).
 <a id="faq-full-v-regular-gc"></a>**What is the difference between full and regular Garbage Collection?**
 There are two types of [Garbage Collection](understand.md#job-info-gc):
 
-- *Regular Garbage Collection* uses a statistical algorithm to find large unreferenced chunks that meet a certain criteria (low in memory and IOPs). Regular Garbage Collection compacts a chunk store container only if a minimum percentage of the chunks are unreferenced. This type of Garbage Collection runs much faster and uses fewer resources than full Garbage Collection. The default schedule of the regular Garbage Collection job is to run once a week.
+- *Regular Garbage Collection* uses a statistical algorithm to find large unreferenced chunks that meet a certain criteria (low in memory and IOPs). Regular Garbage Collection compacts a chunk store container only if a minimum percentage of the chunks is unreferenced. This type of Garbage Collection runs much faster and uses fewer resources than full Garbage Collection. The default schedule of the regular Garbage Collection job is to run once a week.
 - *Full Garbage Collection* does a much more thorough job of finding unreferenced chunks and freeing more disk space. Full Garbage Collection compacts every container even if just a single chunk in the container is unreferenced. Full Garbage Collection will also free space that may have been in use if there was a crash or power failure during an Optimization job. Full Garbage Collection jobs will recover 100 percent of the available space that can be recovered on a deduplicated volume at the cost of requiring more time and system resources compared to a regular Garbage Collection job. The full Garbage Collection job will typically find and release up to 5 percent more of the unreferenced data than a regular Garbage Collection job. The default schedule of the full Garbage Collection job is to run every fourth time Garbage Collection is scheduled.
 
 <a id="faq-why-disable-full-gc"></a>**Why would I want to disable full Garbage Collection?**
