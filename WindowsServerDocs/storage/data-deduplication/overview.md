@@ -6,11 +6,11 @@ ms.topic: article
 author: wmgries
 manager: klaasl
 ms.author: wgries
-ms.date: 05/09/2017
+ms.date: 10/15/2021
 ---
 # Data Deduplication Overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, version 20H2
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
 
@@ -43,8 +43,8 @@ The space savings that you can gain from Data Deduplication depend on the datase
 <table>
     <tbody>
         <tr>
-            <td><img src="media/overview-clustered-gpfs.png" alt="Illustration of file servers" /></td>
-            <td>
+            <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-clustered-gpfs.png" alt="Illustration of file servers" /></td>
+            <td style="vertical-align:top">
                 <b>General purpose file servers</b><br />
                 General purpose file servers are general use file servers that might contain any of the following types of shares:
                 <ul>
@@ -57,8 +57,8 @@ The space savings that you can gain from Data Deduplication depend on the datase
             </td>
         </tr>
         <tr>
-            <td><img src="media/overview-vdi.png" alt="Illustration of VDI servers" /></td>
-            <td>
+            <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-vdi.png" alt="Illustration of VDI servers" /></td>
+            <td style="vertical-align:top">
                 <b>Virtual Desktop Infrastructure (VDI) deployments</b><br />
                 VDI servers, such as <a href="/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725560(v=ws.11)">Remote Desktop Services</a>, provide a lightweight option for organizations to provision desktops to users. There are many reasons for an organization to rely on such technology:
                 <ul>
@@ -71,15 +71,15 @@ The space savings that you can gain from Data Deduplication depend on the datase
             </td>
         </tr>
         <tr>
-            <td><img src="media/overview-backup.png" alt="Illustration of backup applications" /></td>
-            <td>
+            <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-backup.png" alt="Illustration of backup applications" /></td>
+            <td style="vertical-align:top">
                 <b>Backup targets, such as virtualized backup applications</b><br />
                 Backup applications, such as <a href="/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)">Microsoft Data Protection Manager (DPM)</a>, are excellent candidates for Data Deduplication because of the significant duplication between backup snapshots.
             </td>
         </tr>
         <tr>
-            <td><img src="media/overview-other.png" alt="Illustration of other workloads" /></td>
-            <td>
+            <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-other.png" alt="Illustration of other workloads" /></td>
+            <td style="vertical-align:top">
                 <b>Other workloads</b><br />
                 <a href="install-enable.md#enable-dedup-candidate-workloads" data-raw-source="[Other workloads may also be excellent candidates for Data Deduplication](install-enable.md#enable-dedup-candidate-workloads)">Other workloads may also be excellent candidates for Data Deduplication</a>.
             </td>
