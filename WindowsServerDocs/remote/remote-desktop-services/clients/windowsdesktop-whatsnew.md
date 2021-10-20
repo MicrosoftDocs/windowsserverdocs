@@ -28,9 +28,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
-- Updates to Teams for Azure Virtual Desktop, including the following:
-  - Improved camera performance during video calls.
-  - Fixed issues with the Teams screen sharing feature.
+- Updates to Teams for Azure Virtual Desktop, including improvements to camera performance during video calls.
 
 ## Updates for version 1.2.2459
 
