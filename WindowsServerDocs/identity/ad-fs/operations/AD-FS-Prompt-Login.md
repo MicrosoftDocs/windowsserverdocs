@@ -42,7 +42,7 @@ The following is a list of AD FS versions that support the `prompt=login` parame
 Use the Azure AD PowerShell module to configure the setting.
 
 > [!NOTE]
-> The `prompt=login` capability (enabled by the `PromptLoginBehavior` property) is currently available only in the [version 1.0 of the Azure AD Powershell module](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185), in which the cmdlets have names that include “Msol”, such as Set-MsolDomainFederationSettings.  It is not currently available via ‘version 2.0' of the Azure AD PowerShell module, whose cmdlets have names like “Set-AzureAD\*”.
+> The `prompt=login` capability (enabled by the `PromptLoginBehavior` property) is currently available only in the [version 1.0 of the Azure AD Powershell module](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185), in which the cmdlets have names that include “Msol”, such as Set-MsolDomainFederationSettings.  It is not currently available via ‘version 2.0' of the Azure AD PowerShell module, whose cmdlets have names like “Set-AzureAD\*”. This is a per domain setting. If you have multiple domains federated with one single federation, it is required to apply the changes for each of the domains desired.
 
 1. First obtain the current values of `PreferredAuthenticationProtocol`, `SupportsMfa`, and `PromptLoginBehavior` for the federated domain by running the following PowerShell command:
 

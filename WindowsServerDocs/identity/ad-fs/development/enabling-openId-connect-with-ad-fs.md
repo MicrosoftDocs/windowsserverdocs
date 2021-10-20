@@ -64,7 +64,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-openid
 
     ```
     <add key="ida:ClientId" value="[Replace this Client Id from #3 in above section]" />
-    <add key="ida:ADFSDiscoveryDoc" value="https://[Your ADFS hostname]/adfs/.well-known/openid-configuration" />
+    <add key="ida:ADFSDiscoveryDoc" value="https://[Your AD FS hostname]/adfs/.well-known/openid-configuration" />
     <!--<add key="ida:Tenant" value="[Enter tenant name, e.g. contoso.onmicrosoft.com]" />
     <add key="ida:AADInstance" value="https://login.microsoftonline.com/{0}" />-->
     <add key="ida:PostLogoutRedirectUri" value="[Replace this with Redirect URI from #4 in the above section]" />
@@ -111,7 +111,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-openid
 
         -   Instead of using the Authority for communicating data about the trusted issuer, we specify the discovery doc location directly via MetadataAddress
 
-        -   Azure AD does not enforce the presence of a redirect_uri in the request, but ADFS does. So, we need to add it here
+        -   Azure AD does not enforce the presence of a redirect_uri in the request, but AD FS does. So, we need to add it here
 
 ## Verify the app is working
 Once the above changes have been made, hit F5.  This will bring up the sample page.  Click on sign in.

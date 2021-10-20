@@ -43,7 +43,7 @@ To use SMB over QUIC, you need the following things:
 
 1. Create a Certificate Authority-issued certificate with the following properties:
 
-    - Key usage: digital signature, non-repudiation
+    - Key usage: digital signature
     - Purpose: Server Authentication (EKU 1.3.6.1.5.5.7.3.1)
     - Signature algorithm: SHA256RSA *(or greater)*
     - Signature hash: SHA256 *(or greater)*
@@ -83,7 +83,7 @@ To use SMB over QUIC, you need the following things:
 
 ### Step 2: Configure SMB over QUIC
 
-1. Deploy a [Windows Server 2022 Datacenter: Azure Edition](https://aka.ms/ws2022ae) preview in one of the following Azure regions: West Central US, South Central US, or North Europe.  
+1. Deploy a [Windows Server 2022 Datacenter: Azure Edition](https://aka.ms/ws2022ae) preview server.
 1. Install the latest version of Windows Admin Center on a management PC or the file server. You need the latest version of the *Files & File Sharing* extension. It's installed automatically by Windows Admin Center if *Automatically update extensions* is enabled in **Settings > Extensions**.
 1. Join your Windows Server 2022 Datacenter: Azure Edition file server to your Active Directory domain and make it accessible to Windows Insider clients on the Azure public interface by adding a firewall allow rule for UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
 1. Connect to the server with Windows Admin Center and click the **Settings** icon in the lower left. In the **File Shares (SMB server)** section, under **File sharing across the internet with SMB over QUIC**, click **Configure**.
@@ -116,6 +116,9 @@ For a demonstration of configuring and using SMB over QUIC, watch this video:
 ### Configure the KDC Proxy (Optional, but recommended)
 
 By default, a Windows 11 Insider Preview won't have access to an Active Directory domain controller when connecting to an SMB over QUIC file server. This means authentication uses NTLMv2, where the file server authenticates on behalf of the client. No NTLMv2 authentication or authorization occurs outside the TLS 1.3-encrypted QUIC tunnel. However, we still recommend using Kerberos as a general security best practice and don't recommend creating new NTLMv2 dependencies in deployments. To allow this, you can configure the KDC proxy to forward ticket requests on the user's behalf, all while using an internet-friendly HTTPS encrypted communication channel.
+
+> [!NOTE]
+> You cannot configure the Windows Admin Center in gateway mode using TCP port 443 on a file server where you are configuring KDC Proxy. When configuring WAC on the file server, change the port to one that is not in use and is not 443. If you have already configured WAC on port 443, re-run the WAC setup MSI and choose a different port when prompted. 
 
 1. On the file server, in an elevated PowerShell prompt, run:
 

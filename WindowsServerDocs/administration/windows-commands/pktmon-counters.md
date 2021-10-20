@@ -28,7 +28,7 @@ pktmon counters [--type { all | flow | drop }] [--include-hidden] [--zero] [--dr
 | **-i, --include-hidden** | Show counters from components that are hidden by default. |
 | **-r, --drop-reason** | Show the most recent drop reason for each drop counter. |
 | **--live** | Automatically refresh the counters. Press **Ctrl+C** to stop. |
-| **--refresh-rate <n>** | Number of times to refresh the counters per second, from 1 to 30. Default is 10. |
+| **--refresh-rate \<n\>** | Number of times to refresh the counters per second, from 1 to 30. Default is 10. |
 | **--json** | Output the counters in JSON format. Implies -i and -r. |
 
 ## Additional References

@@ -189,7 +189,7 @@ Before you can enroll for certificates on 2-EDGE1, you must force the replicatio
 
 4.  On the **DEFAULTIPSITELINK Properties** dialog box, in **Cost**, type **1**, in **Replicate every**, type **15**, and then click **OK**. Wait for 15 minutes for replication to complete.
 
-5.  To force replication now in the console tree, expand **Sites\Default-First-Site-name\Servers\DC1\NTDS Settings**, in the details pane, right-click **<automatically generated>**, click **Replicate Now**, and then on the **Replicate Now** dialog box, click **OK**.
+5.  To force replication now in the console tree, expand **Sites\Default-First-Site-name\Servers\DC1\NTDS Settings**, in the details pane, right-click **\<automatically generated>**, click **Replicate Now**, and then on the **Replicate Now** dialog box, click **OK**.
 
 6.  To ensure replication has completed successfully do the following:
 

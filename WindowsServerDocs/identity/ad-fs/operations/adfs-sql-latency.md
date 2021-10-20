@@ -22,24 +22,24 @@ When the `backgroundCacheRefreshEnabled` is set to true, AD FS will enable the b
 When AD FS receives a request for an application, AD FS retrieves the application from SQL and adds it to the cache. At the `cacheRefreshIntervalSecs` value, the application in the cache is refreshed using the background thread. While an entry exists in the cache, incoming requests will use the cache while the background refresh is in progress. If an entry is not accessed for 5 * `cacheRefreshIntervalSecs`, it is dropped from the cache. The oldest entry can also be dropped from the cache once the configurable `maxRelyingPartyEntries` value is reached.
 
 >[!NOTE]
-> The cache's data will be refreshed outside of the `cacheRefreshIntervalSecs` value if ADFS receives a notification from SQL signifying that a change has occurred in the database. This notification will trigger the cache to be refreshed.
+> The cache's data will be refreshed outside of the `cacheRefreshIntervalSecs` value if AD FS receives a notification from SQL signifying that a change has occurred in the database. This notification will trigger the cache to be refreshed.
 
 ### Recommendations for setting the cache refresh
 The default value for the cache refresh is **five minutes**. It is recommended to set it to **1 hour** to reduce an unnecessary data refresh by AD FS because the cache data will be refreshed if any SQL changes occur.
 
-AD FS registers a callback for SQL changes, and upon a change, ADFS receives a notification. Through this method, ADFS receives each new change from SQL as soon as it occurs.
+AD FS registers a callback for SQL changes, and upon a change, AD FS receives a notification. Through this method, AD FS receives each new change from SQL as soon as it occurs.
 
 In the event of a network glitch which results in AD FS missing the SQL notification, AD FS will refresh at the interval specified by the cache refresh value. If any connectivity issues are suspected between AD FS and SQL, it is recommended to set the cache refresh value to lower than 1 hour.
 
 ### Configuration instructions
 The configuration file supports multiple cache entries. The following listed below can all be configured based on the needs of your organization.
 
-The following example enables the background cache refresh and sets the cache refresh period to 1800 seconds, or 30 minutes. This must be done on each ADFS node and the ADFS service must be restarted afterwards. The changes do not impact other nodes and test the first node before making the change in all the nodes.
+The following example enables the background cache refresh and sets the cache refresh period to 1800 seconds, or 30 minutes. This must be done on each AD FS node and the AD FS service must be restarted afterwards. The changes do not impact other nodes and test the first node before making the change in all the nodes.
 
-  1. Navigate to the AD FS config file and under the section "Microsoft.IdentityServer.Service" , add the below entry: 
+  1. Navigate to the AD FS config file and under the section "Microsoft.IdentityServer.Service", add the below entry:
 
   - `backgroundCacheRefreshEnabled`  - Specifies if the background cache feature is enabled. "true/false" values.
-  - `cacheRefreshIntervalSecs` - Value in seconds at which ADFS will refresh the cache. AD FS will refresh the cache if there is any change in SQL. AD FS will receive a SQL notification and refresh the cache.
+  - `cacheRefreshIntervalSecs` - Value in seconds at which AD FS will refresh the cache. AD FS will refresh the cache if there is any change in SQL. AD FS will receive a SQL notification and refresh the cache.
 
  >[!NOTE]
  > All the entries in the configuration file are case sensitive.
@@ -99,7 +99,7 @@ It is recommended to create failover artifact databases on the same datacenter a
 
     The Artifact database referenced to in the configuration file will be used for Extranet Lockout data. However, for the ESL feature, AD FS chooses a master which writes the data in the artifact DB. All the nodes make a REST API call to the master node to get and set the latest information about each user. If multiple artifact DB's are in use, the admin must select a master node for each artifact DB or datacenter.
 
-    To select one node to be the ESL master, navigate to the ADFS node's config file, and under the section "Microsoft.IdentityServer.Service", add the following:      
+    To select one node to be the ESL master, navigate to the AD FS node's config file, and under the section "Microsoft.IdentityServer.Service", add the following:      
 
     On the master add following entry. Note that all three keys are case sensitive.
 

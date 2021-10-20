@@ -4,8 +4,8 @@ title: Shielded VMs  for tenants - Deploying a shielded VM by using Windows Azur
 ms.topic: article
 ms.assetid: 095315e4-c4a7-4b80-91d8-528119b62c4c
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 08/29/2018
 ---
 

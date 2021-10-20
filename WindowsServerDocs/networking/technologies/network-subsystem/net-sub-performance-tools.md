@@ -6,12 +6,12 @@ ms.assetid: c7789781-87e8-464e-981b-af887d01badd
 manager: dcscontentpm
 ms.author: v-tea
 author: Teresa-Motiv
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ---
 
 # Performance Tools for Network Workloads
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, version 20H2
 
 You can use this topic to learn about performance tools.
 
