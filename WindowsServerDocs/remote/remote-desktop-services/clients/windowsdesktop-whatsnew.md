@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 09/28/2021
+ms.date: 10/20/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -19,7 +19,16 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.2459        |1.2.1672                  |
-|Insider    |1.2.2459        |1.2.1672                  |
+|Insider    |1.2.2599        |1.2.1672                  |
+
+## Updates for version 1.2.2599 (Insider)
+
+*Date published: 10/20/2021*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Updates to Teams for Azure Virtual Desktop, including improvements to camera performance during video calls.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 
 ## Updates for version 1.2.2459
 
