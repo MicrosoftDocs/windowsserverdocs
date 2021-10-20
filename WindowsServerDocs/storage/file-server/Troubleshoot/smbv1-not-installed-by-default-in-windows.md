@@ -39,7 +39,7 @@ SMBv1 has the following additional behaviors in Windows 10 starting in version 
 -  You do a clean install of Windows 10, version 1803.
 -  You upgrade Windows 10, version 1607 or Windows 10, version 1703 to Windows 10, version 1803 directly without first upgrading to Windows 10, version 1709.
 
-If you try to connect to devices that support only SMBv1, or if these devices try to connect to you, you may receive one of the following errors messages:
+If you try to connect to devices that support only SMBv1, or if these devices try to connect to you, you may receive one of the following error messages:
 
 ```
 You can't connect to the file share because it's not secure. This share requires the obsolete SMB1 protocol, which is unsafe and could expose your system to attack.
