@@ -115,12 +115,12 @@ This series only has 64-bit kernels.
 |--------------|---------------------------- |----------|----------------|--------------|-------------|----------|----------|----------|-----------|---------|---------|
 | LIS Availability   |  | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | Built in   | Built in  | Built in  | Built in  | Built in  | Built in  | Built in|
 | [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | 2019, 2016, 2012 R2 | ✔ | ✔  | ✔  | ✔ | ✔ | ✔ | ✔  | ✔ | ✔  | ✔   |
-| Windows Server 2016 Accurate Time  | 2019, 2016  | ✔  | ✔  | ✔ | ✔ | ✔ | ✔ |  |   |   |
+| Windows Server 2016 Accurate Time  | 2019, 2016  | ✔  | ✔  |  | ✔ | ✔ | ✔ |  |   |   |
 | \>256 vCPUs |  |  |  |  | ✔ Note 16 |  |  |  |  |  |  |
 | [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) | | |  |  | |  |   |  |  |  |   |
 | Jumbo frames | 2019, 2016, 2012 R2 | ✔ | ✔   | ✔ | ✔ | ✔ | ✔  | ✔ | ✔ | ✔ | ✔  |
 | VLAN tagging and trunking | 2019, 2016, 2012 R2 | ✔  | ✔  | ✔  | ✔  | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Live Migration | 2019, 2016, 2012 R2 | ✔ | ✔  | ✔  | ✔ Note 4 | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Live Migration | 2019, 2016, 2012 R2 | ✔ | ✔  | ✔  | ✔  | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Static IP Injection  | 2019, 2016, 2012 R2 | ✔ Note 2  | ✔ Note 2 | ✔ Note 2 | ✔ Note 2  | ✔ Note 2 | ✔ Note 2 | ✔ Note 2  | ✔ Note 2| ✔ Note 2 | ✔ Note 2  |
 | vRSS  | 2019, 2016, 2012 R2 | ✔ | ✔  | ✔ | ✔ | ✔            | ✔            | ✔            | ✔            | ✔            |                  |
 | TCP Segmentation and Checksum Offloads | 2019, 2016, 2012 R2   | ✔  | ✔  | ✔  | ✔  | ✔ | ✔  | ✔ | ✔  | ✔   |   |
