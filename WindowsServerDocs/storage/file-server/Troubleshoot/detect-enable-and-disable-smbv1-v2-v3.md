@@ -356,7 +356,7 @@ To use Group Policy to configure this, follow these steps:
 
 In the **New Registry Properties** dialog box, select the following:
 
-- **Action**: Create
+- **Action**: Update
 - **Hive**: HKEY_LOCAL_MACHINE
 - **Key Path**: SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
 - **Value name**: SMB1
