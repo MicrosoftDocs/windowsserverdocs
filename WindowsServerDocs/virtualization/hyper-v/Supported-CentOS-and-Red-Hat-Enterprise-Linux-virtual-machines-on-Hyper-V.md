@@ -113,14 +113,14 @@ This series only has 64-bit kernels.
 
 | **Feature**  | **Windows Server version**  | **7.5-7.7** | **7.3-7.4** | **7.0-7.2**  | **7.6-7.9** | **7.5**  | **7.4**  | **7.3**  | **7.2**  | **7.1** | **7.0** |
 |--------------|---------------------------- |----------|----------------|--------------|-------------|----------|----------|----------|-----------|---------|---------|
-| LIS Availability   |  | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | Built in   | Built in  | Built in  | Built in  | Built in  | Built in  |
+| LIS Availability   |  | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | [LIS 4.3](https://www.microsoft.com/download/details.aspx?id=55106) | Built in   | Built in  | Built in  | Built in  | Built in  | Built in  | Built in|
 | [Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core) | 2019, 2016, 2012 R2 | ✔ | ✔  | ✔  | ✔ | ✔ | ✔ | ✔  | ✔ | ✔  | ✔   |
-| Windows Server 2016 Accurate Time  | 2019, 2016  | ✔  | ✔  |  |  |  |  |  |   |   |
+| Windows Server 2016 Accurate Time  | 2019, 2016  | ✔  | ✔  | ✔ | ✔ | ✔ | ✔ |  |   |   |
 | \>256 vCPUs |  |  |  |  | ✔ Note 16 |  |  |  |  |  |  |
 | [Networking](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking) | | |  |  | |  |   |  |  |  |   |
 | Jumbo frames | 2019, 2016, 2012 R2 | ✔ | ✔   | ✔ | ✔ | ✔ | ✔  | ✔ | ✔ | ✔ | ✔  |
 | VLAN tagging and trunking | 2019, 2016, 2012 R2 | ✔  | ✔  | ✔  | ✔  | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Live Migration | 2019, 2016, 2012 R2 | ✔ | ✔  | ✔  | ✔ | ✔ | ✔            | ✔            | ✔            | ✔            | ✔               |
+| Live Migration | 2019, 2016, 2012 R2 | ✔ | ✔  | ✔  | ✔ Note 4 | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | Static IP Injection  | 2019, 2016, 2012 R2 | ✔ Note 2  | ✔ Note 2 | ✔ Note 2 | ✔ Note 2  | ✔ Note 2 | ✔ Note 2 | ✔ Note 2  | ✔ Note 2| ✔ Note 2 | ✔ Note 2  |
 | vRSS  | 2019, 2016, 2012 R2 | ✔ | ✔  | ✔ | ✔ | ✔            | ✔            | ✔            | ✔            | ✔            |                  |
 | TCP Segmentation and Checksum Offloads | 2019, 2016, 2012 R2   | ✔  | ✔  | ✔  | ✔  | ✔ | ✔  | ✔ | ✔  | ✔   |   |
@@ -128,19 +128,19 @@ This series only has 64-bit kernels.
 | [Storage](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)  |  |   |   |  |  |  |   |   |   |   |   |
 | VHDX resize | 2019, 2016, 2012 R2  | ✔  | ✔  | ✔   | ✔   | ✔  | ✔  | ✔ | ✔  |   | |
 | Virtual Fibre Channel | 2019, 2016, 2012 R2        | ✔ Note 3        | ✔ Note 3  | ✔ Note 3 | ✔ Note 3 | ✔ Note 3     | ✔ Note 3     | ✔ Note 3     | ✔ Note 3     | ✔ Note 3     | ✔ Note 3        |
-| Live virtual machine backup | 2019, 2016, 2012 R2        | ✔ Note 5        | ✔ Note 5  | ✔ Note 5 | ✔ Note 5 | ✔ Note 4,5   | ✔ Note 4, 5  | ✔ Note 4, 5  | ✔ Note 4, 5  | ✔ Note 4, 5  | ✔ Note 4, 5     |
+| Live virtual machine backup | 2019, 2016, 2012 R2 | ✔ Note 5 | ✔ Note 5  | ✔ Note 5 | ✔ Note 4,5 | ✔ Note 4,5   | ✔ Note 4, 5  | ✔ Note 4, 5  | ✔ Note 4, 5  | ✔ Note 4, 5  | ✔ Note 4, 5     |
 | TRIM support| 2019, 2016, 2012 R2 | ✔ | ✔   | ✔  | ✔ | ✔ | ✔  | ✔  | ✔   |    |
 | SCSI WWN | 2019, 2016, 2012 R2  | ✔  | ✔   | ✔ | ✔ |  |  |  |   |  |
 | [Memory](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory) | |  |  | |  | |  |  |     |               |                  |
 | PAE Kernel Support | 2019, 2016, 2012 R2        | N/A  | N/A | N/A  | N/A                                                                 | N/A           | N/A           | N/A           | N/A           | N/A           | N/A              |
 | Configuration of MMIO gap  | 2019, 2016, 2012 R2 | ✔  | ✔ | ✔ | ✔ | ✔| ✔  | ✔  | ✔ | ✔  | ✔  |
 | Dynamic Memory - Hot-Add | 2019, 2016, 2012 R2        | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10 | ✔ Note 8, 9, 10  | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 8, 9, 10 |
-| Dynamic Memory - Ballooning | 2019, 2016, 2012 R2        | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10  | ✔ Note 9, 10  | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 8, 9, 10 |
+| Dynamic Memory - Ballooning | 2019, 2016, 2012 R2        | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10  | ✔ Note 9, 10  | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note 9, 10 | ✔ Note  9, 10 |
 | Runtime Memory Resize   | 2019, 2016  | ✔  | ✔ | ✔  | |   |  |  |   | |
 | [Video](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video) | | |  | |  | | |   |  |  |                  |
 | Hyper-V-specific video device | 2019, 2016, 2012 R2 | ✔  | ✔ | ✔  | ✔  | ✔ | ✔ | ✔  | ✔ | ✔ | ✔   |
 | [Miscellaneous](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)  |  | | |  | | | |  || | |
-| Key-Value Pair  | 2019, 2016, 2012 R2  | ✔  | ✔  | ✔  | ✔  | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
+| Key-Value Pair  | 2019, 2016, 2012 R2  | ✔  | ✔  | ✔  | ✔ Note 4  | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 |
 | Non-Maskable Interrupt | 2019, 2016, 2012 R2| ✔  | ✔    | ✔| ✔ | ✔ | ✔  | ✔  | ✔  | ✔  | ✔      |
 | File copy from host to guest | 2019, 2016, 2012 R2 | ✔  | ✔  | ✔  | ✔ Note 4  | ✔ Note 4 | ✔ Note 4 | ✔ Note 4 | ✔ Note 4   | ✔ Note 4   |
 | lsvmbus command  | 2019, 2016, 2012 R2 | ✔ | ✔  | ✔  |  |  |  |  |  | |
@@ -268,7 +268,7 @@ Notes
 
     3. Reboot the system to enable Hot-Add support.
    
-   While the Linux Integration Services download creates this rule on installation, the rule is also removed when LIS is uninstalled, so the rule must be recreated if dynamic memory is needed after uninstallation.
+    While the Linux Integration Services download creates this rule on installation, the rule is also removed when LIS is uninstalled, so the rule must be recreated if dynamic memory is needed after uninstallation.
 
 9.  Dynamic memory operations can fail if the guest operating system is running too low on memory. The following are some best practices:
 
