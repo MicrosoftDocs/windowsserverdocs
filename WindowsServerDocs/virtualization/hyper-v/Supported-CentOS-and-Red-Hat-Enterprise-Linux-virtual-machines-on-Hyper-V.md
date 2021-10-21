@@ -272,10 +272,10 @@ Notes
 
 9.  Dynamic memory operations can fail if the guest operating system is running too low on memory. The following are some best practices:
 
-    *Startup memory and minimal memory should be equal to or greater than the
+    * Startup memory and minimal memory should be equal to or greater than the
     amount of memory that the distribution vendor recommends.
 
-    *Applications that tend to consume the entire available memory on a system
+    * Applications that tend to consume the entire available memory on a system
     are limited to consuming up to 80 percent of available RAM.
 
 10. If you are using Dynamic Memory on a Windows Server 2016 or Windows Server 2012 R2 operating system, specify **Startup memory**, **Minimum memory**, and **Maximum memory** parameters in multiples of 128 megabytes (MB). Failure to do so can lead to hot-add failures, and you may not see any memory increase in a guest operating system.
@@ -288,7 +288,7 @@ Notes
 
 13. The key/value pair (KVP) infrastructure might not function correctly without a Linux software update. Contact your distribution vendor to obtain the software update in case you see problems with this feature.
 
-14.  On Windows Server 2012 R2 Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using Powershell:
+14.  On Windows Server 2012 R2 Generation 2 virtual machines have secure boot enabled by default and some Linux virtual machines will not boot unless the secure boot option is disabled. You can disable secure boot in the **Firmware** section of the settings for the virtual machine in **Hyper-V Manager** or you can disable it using PowerShell:
 
         ```Powershell
         Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
