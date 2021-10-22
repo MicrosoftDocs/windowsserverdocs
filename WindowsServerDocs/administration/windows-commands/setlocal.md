@@ -40,8 +40,8 @@ setlocal [enableextensions | disableextensions] [enabledelayedexpansion | disabl
 - The **setlocal** command sets the ERRORLEVEL variable. If you pass {**enableextensions** | **disableextensions**} or {**enabledelayedexpansion** | **disabledelayedexpansion**}, the ERRORLEVEL variable is set to **0** (zero). Otherwise, it's set to **1**. You can use this information in batch scripts to determine whether the extensions are available, as shown in the following example:
 
     ```
-    setlocal enableextensions
     verify other 2>nul
+    setlocal enableextensions
     if errorlevel 1 echo Unable to enable extensions
     ```
 

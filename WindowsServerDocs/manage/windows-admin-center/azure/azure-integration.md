@@ -2,9 +2,9 @@
 title: Configuring Azure Integration
 description: Configuring Azure Integration Windows Admin Center (Project Honolulu). Connecting your Windows Admin Center gateway to Azure.
 ms.topic: article
-author: haley-rowland
-ms.author: harowl
-ms.date: 09/19/2018
+author: IngridAtMicrosoft
+ms.author: wscontent
+ms.date: 10/18/2021
 ms.localizationpriority: medium
 ---
 

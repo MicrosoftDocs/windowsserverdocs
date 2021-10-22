@@ -23,7 +23,7 @@ As you might know, we recommend using the Server Core installation option when u
 
 So, based on customer feedback, we added one more tools to the App Compatibility feature in this version: Hyper-V Manager (virtmgmt.msc).
 
-For more info, see [Server Core app compatibility feature](../../get-started-19/install-fod-19.md).
+For more info, see [Server Core App Compatibility Feature on Demand (FOD)](../../get-started/server-core-app-compatibility-feature-on-demand.md).
 
 ## Windows Server 2019
 

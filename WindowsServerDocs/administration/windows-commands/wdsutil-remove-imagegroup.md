@@ -20,10 +20,12 @@ Removes an image group from a server.
 wdsutil [Options] /remove-ImageGroup Group:<Image group name> [/Server:<Server name>]
 ```
 ### Parameters
+
 |Parameter|Description|
 |-------|--------|
-|imagegroup:<Image group name>|Specifies the name of the image group to be removed|
-|[/Server:<Server name>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
+|imagegroup:\<Image group name\>|Specifies the name of the image group to be removed|
+|[/Server:\<Server name\>]|Specifies the name of the server. This can be either the NetBIOS name or the fully qualified domain name (FQDN). If no server name is specified, the local server will be used.|
+
 ## Examples
 To remove the image group, type one of the following:
 ```

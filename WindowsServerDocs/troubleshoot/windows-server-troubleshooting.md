@@ -74,10 +74,6 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 - [Troubleshoot Always On VPN](../remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting.md)
 
-## Troubleshoot converged NIC
-
-- [Troubleshooting Converged NIC Configurations](../networking/technologies/conv-nic/cnic-app-troubleshoot.md)
-
 ## Troubleshoot DFSR
 
 - [DFS Replication: Frequently Asked Questions (FAQ)](../storage/dfs-replication/dfsr-faq.yml)
@@ -194,10 +190,6 @@ This section contains advanced troubleshooting topics and links to help you reso
 ## Troubleshoot user profiles
 
 - [Troubleshoot user profiles with events](../storage/folder-redirection/troubleshoot-user-profiles-events.md)
-
-## Troubleshoot vRSS
-
-- [vRSS Frequently Asked Questions](../networking/technologies/vrss/vrss-faq.yml)
 
 ## Troubleshoot WebProxy
 

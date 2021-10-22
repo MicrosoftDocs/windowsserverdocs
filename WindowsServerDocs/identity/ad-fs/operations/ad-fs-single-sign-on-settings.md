@@ -196,7 +196,7 @@ IF:
  - [x] User clicks the KMSI check box on the forms login page
 
   
-ADFS issues a new refresh token only if the validity of the newer refresh token is longer than the previous token. The maximum lifetime of a token is is 84 days, but AD FS keeps the token valid on a 14 day sliding window. If the refresh token is valid for 8 hours, which is the regular SSO time, a new refresh token will not be issued.
+AD FS issues a new refresh token only if the validity of the newer refresh token is longer than the previous token. The maximum lifetime of a token is is 84 days, but AD FS keeps the token valid on a 14 day sliding window. If the refresh token is valid for 8 hours, which is the regular SSO time, a new refresh token will not be issued.
  
 
 **Good to Know:** <br>

@@ -105,7 +105,7 @@ To disable certificate revocation for these VPN connections, set **CertAuthFlags
    * Event ID: **41**
    * The event contains the following text: **subject="*Client FQDN*"** (*Client FQDN* represents the fully qualified domain name of the client that has the revoked certificate.)
 
-   The **<Result>** field of the event data should include **The certificate is revoked**. For example, see the following excerpts from an event:
+   The **\<Result>** field of the event data should include **The certificate is revoked**. For example, see the following excerpts from an event:
    ```xml
    Log Name:      Microsoft-Windows-CAPI2/Operational Microsoft-Windows-CAPI2/Operational
    Source:        Microsoft-Windows-CAPI2

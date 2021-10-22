@@ -6,12 +6,12 @@ ms.assetid: 3266328c-ca82-40d2-90ca-854b7088ccaa
 manager: dcscontentpm
 ms.author: v-tea
 author: Teresa-Motiv
-ms.date: 08/07/2020
+ms.date: 10/14/2021
 ---
 
 # Configure the Order of Network Interfaces
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, version 20H2
 
 In Windows Server 2016 and Windows 10, you can use the interface metric to configure the order of network interfaces.
 

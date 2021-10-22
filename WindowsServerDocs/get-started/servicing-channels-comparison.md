@@ -99,7 +99,7 @@ One of the most important steps we take in planning each release of Windows Serv
 
 By focusing on the Server Core installation option, we're able to dedicate more resources toward those new innovations, while also maintaining traditional Windows Server platform functionality and application compatibility.
 
-Starting with Windows Server, version 1809 and Windows Server 2019, [Server Core App Compatibility FOD](../get-started-19/install-fod-19.md) is an optional feature package that significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and packages from Windows Server with Desktop Experience, without adding the Windows Server Desktop Experience graphical environment.
+Starting with Windows Server, version 1809 and Windows Server 2019, [Server Core App Compatibility Feature on Demand (FOD)](../get-started/server-core-app-compatibility-feature-on-demand.md) is an optional feature package that significantly improves the app compatibility of the Windows Server Core installation option by including a subset of binaries and packages from Windows Server with Desktop Experience, without adding the Windows Server Desktop Experience graphical environment.
 
 ## What about Nano Server?
 
@@ -159,7 +159,7 @@ OsVersion                     : 10.0.17763
 OsHardwareAbstractionLayer    : 10.0.17763.107
 ```
 
-To query if the new [Server Core App Compatibility FOD](../get-started-19/install-fod-19.md) is present on a server, use the [Get-WindowsCapability](/powershell/module/dism/get-windowscapability) cmdlet and look for:
+To query if the new [Server Core App Compatibility Feature on Demand (FOD)](../get-started/server-core-app-compatibility-feature-on-demand.md) is present on a server, use the [Get-WindowsCapability](/powershell/module/dism/get-windowscapability) cmdlet and look for:
 
 ```
 Name    :     ServerCore.AppCompatibility~~~~0.0.1.0
