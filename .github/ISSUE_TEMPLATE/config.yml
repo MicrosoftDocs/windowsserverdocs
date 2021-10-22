@@ -1,8 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: Windows Server Community Support
-    url: https://techcommunity.microsoft.com/t5/windows-server/ct-p/Windows-Server
-    about: Please ask and answer Windows Server implementation questions here.
-  - name: Open a Support Ticket
-    url: https://support.dev.serviceshub.microsoft.com/supportforbusiness/onboarding
-    about: Please open a support ticket here.
