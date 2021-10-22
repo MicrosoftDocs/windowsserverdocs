@@ -51,7 +51,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 2.  Right-click **Windows PowerShell** and click **Run as administrator**.
 
-3.  Run this command after replacing <MyVM> with the name  of your virtual machine:
+3.  Run this command after replacing \<MyVM> with the name  of your virtual machine:
 
 ```
 Set-VMMemory <MyVM> -StartupBytes 1GB

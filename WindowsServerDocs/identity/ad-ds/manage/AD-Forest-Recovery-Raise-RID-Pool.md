@@ -32,7 +32,7 @@ When you increase the value of the large integer, you increase the value of the 
 1. Open Server Manager, click **Tools** and click **ADSI Edit**.
 2. Right-click, select **Connect to** and connect do the Default Naming Context and click **OK**.
    ![Screenshot that shows how to connect to the Default Naming Context](media/AD-Forest-Recovery-Raise-RID-Pool/adsi1.png)
-3. Browse to the following distinguished name path: **CN=RID Manager$,CN=System,DC=<domain name>**.
+3. Browse to the following distinguished name path: **CN=RID Manager$,CN=System,DC=\<domain name>**.
    ![Screenshot that shows how to browse to the distinguished name path.](media/AD-Forest-Recovery-Raise-RID-Pool/adsi2.png)
 3. Right-click and select the properties of CN=RID Manager$.
 4. Select the attribute **rIDAvailablePool**, click **Edit**, and then copy the large integer value to the clipboard.

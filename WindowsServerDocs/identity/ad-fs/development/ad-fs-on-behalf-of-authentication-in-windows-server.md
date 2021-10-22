@@ -55,7 +55,7 @@ We will be working with a basic setup of:
 2. **AD FS Server**: The AD FS Server for the domain
 3. **Development Machine**: Machine where we have Visual Studio installed and will be developing our sample
 
-You can, if you want, use only two machines. One for DC/ADFS and the other for developing the sample.
+You can, if you want, use only two machines. One for DC/AD FS and the other for developing the sample.
 
 How to setup the domain controller and AD FS is beyond the scope of this article. For additional deployment information see:
 

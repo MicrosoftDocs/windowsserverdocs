@@ -45,7 +45,7 @@ Hardware and database software requirements are driven by the number of client c
 
 -   Software Requirements:
 
-    -   For viewing reports, WSUS requires the [Microsoft Report Viewer Redistributable 2008](https://www.microsoft.com/download/details.aspx?id=6576). On Windows Server 2016, WSUS requires [Microsoft Report Viewer Runtime 2012](https://www.microsoft.com/download/details.aspx?id=35747)
+    -   For viewing reports, WSUS requires the [Microsoft Report Viewer Redistributable 2008](https://www.microsoft.com/download/details.aspx?id=3203). On Windows Server 2016, WSUS requires [Microsoft Report Viewer Runtime 2012](https://www.microsoft.com/download/details.aspx?id=35747)
 
 -   If you install roles or software updates that require you to restart the server when installation is complete, restart the server before you enable the WSUS server role.
 

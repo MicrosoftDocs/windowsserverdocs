@@ -52,7 +52,7 @@ In the following sections, italics indicates UI text that appears in the Best Pr
 
 2.  Right-click **Windows PowerShell** and click **Run as administrator**.
 
-3.  Replace <service-name> with the name of the service, then type:
+3.  Replace \<service-name> with the name of the service, then type:
 
     ```
     sc config <service-name> start=auto

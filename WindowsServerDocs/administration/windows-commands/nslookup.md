@@ -25,7 +25,7 @@ If you need to look up more than one piece of data, you can use interactive mode
 
 - Exit, by typing **exit**.
 
-- Treat a built-in command as a computer name, by preceding it with the escape character (\). An unrecognized command is interpreted as a computer name.
+- Treat a built-in command as a computer name, by preceding it with the escape character (`\`). An unrecognized command is interpreted as a computer name.
 
 ## Syntax
 

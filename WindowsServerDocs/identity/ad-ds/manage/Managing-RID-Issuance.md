@@ -147,7 +147,7 @@ This ceiling is hard-coded at ten percent remaining of the available RID space. 
 
 When triggered, the RID master sets Active Directory attribute **msDS-RIDPoolAllocationEnabled** (common name **ms-DS-RID-Pool-Allocation-Enabled**) to FALSE on the object:
 
-CN=RID Manager$,CN=System,DC=*<domain>*
+CN=RID Manager$,CN=System,DC=*\<domain>*
 
 This writes the 16657 event and prevents further RID block issuance to all domain controllers. Domain controllers continue to consume any outstanding RID pools already issued to them.
 

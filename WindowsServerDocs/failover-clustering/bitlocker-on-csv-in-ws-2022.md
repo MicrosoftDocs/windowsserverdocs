@@ -6,12 +6,12 @@ ms.topic: article
 manager: femila
 ms.author: inhenkel
 author: IngridAtMicrosoft
-ms.date: 08/19/2021
+ms.date: 10/21/2021
 ---
 
 # Use BitLocker with Cluster Shared Volumes (CSV)
 
-> Applies to: Windows Server 2022
+> Applies to: Windows Server 2022, Azure Stack HCI, version 20H2
 
 ## BitLocker overview
 

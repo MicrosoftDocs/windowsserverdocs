@@ -3,8 +3,8 @@ description: "Learn more about: Create a shielded VM using PowerShell"
 title: Create a shielded VM using PowerShell
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 09/25/2019
 ---
 
