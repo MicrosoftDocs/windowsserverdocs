@@ -305,7 +305,7 @@ When using a shared secret, a service-to-service access token request contains t
 |-----|-----|-----|
 |grant_type|required|The type of token request. For a request using a JWT, the value must be urn:ietf:params:oauth:grant-type:jwt-bearer.|
 |client_id|required|The Client ID that you configure when registering your first Web API as a server app (middle tier app). This should be the same as the resource ID used in the 1st leg i.e. url of the first Web API.|
-|client_secret|required|The application secret that you created during sever app registration in AD FS.|
+|client_secret|required|The application secret that you created during server app registration in AD FS.|
 |assertion|required|The value of the token used in the request.|
 |requested_token_use|required|Specifies how the request should be processed. In the OBO flow, the value must be set to on_behalf_of|
 |resource|required|The resource ID provided while registering the first Web API as the server app (middle tier App). The resource ID should be the url of second Web API middle tier App will call on behalf of the client.|
