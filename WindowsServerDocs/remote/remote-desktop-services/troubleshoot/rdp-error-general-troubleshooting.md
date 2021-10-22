@@ -32,7 +32,7 @@ To check and change the status of the RDP protocol on a remote computer, use a n
 1. First, go to the **Start** menu, then select **Run**. In the text box that appears, enter **regedt32**.
 2. In the Registry Editor, select **File**, then select **Connect Network Registry**.
 3. In the **Select Computer** dialog box, enter the name of the remote computer, select **Check Names**, and then select **OK**.
-4. Navigate to **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server**.  
+4. Navigate to **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server** and to **HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services**.  
    ![Registry Editor, showing the fDenyTSConnections entry](../media/troubleshoot-remote-desktop-connections/RegEntry_fDenyTSConnections.png)
    - If the value of the **fDenyTSConnections** key is **0**, then RDP is enabled.
    - If the value of the **fDenyTSConnections** key is **1**, then RDP is disabled.

@@ -1222,8 +1222,8 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 | **Description** | This service spools print jobs and handles interaction with the printer. If you turn off this service, you won't be able to print or see your printers. |
 | **Installation** | Always installed |
 | **Startup type** | Automatic |
-| **Recommendation** | OK to disable if not a print server or a DC (see comments below if a DC) |
-| **Comments** | On a domain controller, the installation of the DC role adds a thread to the spooler service that is responsible for performing print pruning – removing the stale print queue objects from the Active Directory. If the spooler service is not running on at least one DC in each site, then the AD has no means to remove old queues that no longer exist. For more information, see [Security assessment: Domain controllers with Print spooler service available](/defender-for-identity/cas-isp-print-spooler). |
+| **Recommendation** | OK to disable if not a print server or a DC |
+| **Comments** | On a domain controller, the installation of the DC role adds a thread to the spooler service that is responsible for performing print pruning – removing the stale print queue objects from the Active Directory. If the spooler service is not running on at least one DC in each site, then the AD has no means to remove old queues that no longer exist. ["Disabling Unnecessary Services? A Word to the Wise" - Microsoft Tech Community - Ask The Performance Team Blog](https://techcommunity.microsoft.com/t5/ask-the-performance-team/disabling-unnecessary-services-a-word-to-the-wise/ba-p/373444). |
 
 
 

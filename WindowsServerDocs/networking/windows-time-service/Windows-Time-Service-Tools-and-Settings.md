@@ -4,14 +4,14 @@ title: Windows Time service tools and settings
 author: Teresa-Motiv
 description: Describes the settings that are available for Windows Time Service (W32Time) and the tools that you can use to configure those settings
 ms.author: v-tea
-ms.date: 08/06/2021
+ms.date: 10/14/2021
 ms.topic: article
 ms.custom: contperf-fy21q4
 ---
 
 # Windows Time service tools and settings
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Azure Stack HCI, version 20H2
 
 The Windows Time service (W32Time) synchronizes the date and time for all computers managed by Active Directory Domain Services (AD DS). This article covers the different tools and settings used to manage the Windows Time service.
 
@@ -122,6 +122,7 @@ Then, to adjust the computer clock by using the clock rate, W32tm.exe calculates
 
 - Windows Server 2012 R2 and earlier versions:  
 
+To get the `SystemClockRate` value, you can use the following command and convert it from seconds to clock ticks by using the formula of (seconds &times; 1,000 &times; 10,000):
   > `PhaseCorrection` = |`CurrentTimeOffset`| &divide; (`PhaseCorrectRate` &times; `UpdateInterval`)  
 
 All versions of Windows use the same final equation to check `PhaseCorrection`:  
