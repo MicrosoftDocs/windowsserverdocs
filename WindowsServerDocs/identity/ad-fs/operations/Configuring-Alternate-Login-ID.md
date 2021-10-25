@@ -166,9 +166,14 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 
 ## Additional Details & Considerations
 
-- The Alternate login ID feature is available for federated environments with AD FS deployed.  It is not supported in the following scenarios:
-    - Non-routable domains (e.g. Contoso.local) that cannot be verified by Azure AD.
-    - Managed environments that do not have AD FS deployed.
+- Azure AD offers different features realted to 'Alternate login ID'
+    - The ADFS Alternate Login ID [configuration](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#manually-configure-alternate-id) feature for Federated<sup>1</sup> identity infrastructure environments described in this article.
+    - The Azure AD Connect Sync [configuration](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-sign-in-configuration) that defines which on-premises attribute is used as Azure AD username (userPrincipalName) for Federated<sup>1</sup> OR Managed<sup>2</sup> identity infrastructure environments, which is partially covered in this article.
+    - The [Sign-in to Azure AD with email as an alternate login ID](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-use-email-signin) feature for Managed<sup>2</sup> identity infrastructure environments.
+
+- The Alternate login ID feature described in this article is available for Federated<sup>1</sup> identity infrastructure environments. It is not supported in the following scenarios:
+    - An AlternateLoginID attribute with non-routable domains (e.g. Contoso.local) that cannot be verified by Azure AD.
+    - Managed environments that do not have AD FS deployed. Please either refer to the Azure AD Connect Sync [documentation](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-sign-in-configuration) or to the [Sign-in to Azure AD with email as an alternate login ID](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-use-email-signin) documentation. If you decide to adjust the Azure AD Connect Sync configuration in a Managed<sup>2</sup> identity infrastructure environment, the [Applications and user experience after the additional configuration](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#applications-and-user-experience-after-the-additional-configuration) section of this articel may still be applicable while the specific ADFS configuration is no longer applicable since no ADFS is deployed in a Managed<sup>2</sup> identity infrastructure environment.
 
 - When enabled, the alternate login ID feature is only available for username/password authentication across all the user name/password authentication protocols supported by AD FS (SAML-P, WS-Fed, WS-Trust, and OAuth).
 
@@ -185,6 +190,10 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 - You may additionally want to customize the AD FS sign-in page to give end users some hint about the alternate login ID. You can do it by either adding the customized sign-in page description (for more information, see [Customizing the AD FS Sign-in Pages](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11)) or customizing "Sign in with organizational account" string above username field (for more information, see [Advanced Customization of AD FS Sign-in Pages](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn636121(v=ws.11)).
 
 - The new claim type that contains the alternate login ID value is **http:schemas.microsoft.com/ws/2013/11/alternateloginid**
+
+<sup>1</sup> A **Federated** identity infrastructure environment represents an environment with an identity provider such as AD FS or other third-party IDP.
+
+<sup>2</sup> A **Managed** identity infrastructure environment represents an environment with Azure AD as the identity provider deployed with either [password hash sync (PHS)](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-phs) or [pass-through authentication (PTA)](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-pta).
 
 ## Events and Performance Counters
 
