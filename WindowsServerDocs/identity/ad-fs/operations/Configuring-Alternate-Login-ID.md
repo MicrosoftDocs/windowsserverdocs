@@ -166,7 +166,7 @@ HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zo
 
 ## Additional Details & Considerations
 
-- Azure AD offers different features realted to 'Alternate login ID'
+- Azure AD offers different features related to 'Alternate login ID'
     - The ADFS Alternate Login ID [configuration](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#manually-configure-alternate-id) feature for Federated<sup>1</sup> identity infrastructure environments described in this article.
     - The Azure AD Connect Sync [configuration](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-sign-in-configuration) that defines which on-premises attribute is used as Azure AD username (userPrincipalName) for Federated<sup>1</sup> OR Managed<sup>2</sup> identity infrastructure environments, which is partially covered in this article.
     - The [Sign-in to Azure AD with email as an alternate login ID](https://docs.microsoft.com/azure/active-directory/authentication/howto-authentication-use-email-signin) feature for Managed<sup>2</sup> identity infrastructure environments.
