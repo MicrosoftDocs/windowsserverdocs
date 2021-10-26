@@ -5,12 +5,12 @@ manager: dougkim
 ms.topic: article
 ms.author: dacuo
 author: dcuomo
-ms.date: 06/15/2021
+ms.date: 10/25/2021
 ---
 
 # RSC in the vSwitch
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019, Azure Stack HCI, versions 21H2 and 20H2
 
 Receive Segment Coalescing (RSC) in the vSwitch is a feature in Windows Server 2019 and Windows 10 October 2018 Update that helps reduce host CPU utilization and increases throughput for virtual workloads by coalescing multiple TCP segments into fewer, but larger segments. Processing fewer, large segments (coalesced) is more efficient than processing numerous, small segments. To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
 
