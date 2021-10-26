@@ -21,7 +21,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |Public     |1.2.2600        |1.2.1672                  |
 |Insider    |1.2.2600        |1.2.1672                  |
 
-## Updates for version 11.2.2600 (Insider)
+## Updates for version 1.2.2600
 
 *Date published: 10/26/2021*
 
