@@ -5,12 +5,12 @@ ms.topic: article
 manager: dougkim
 ms.author: jgerend
 author: JasonGerend
-ms.date: 07/16/2021
+ms.date: 10/27/2021
 ---
 
 # Netsh interface portproxy commands
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Use the **netsh interface portproxy** commands to act as proxies between IPv4 and IPv6 networks and applications. You can use these commands to establish proxy service in the following ways:
 
