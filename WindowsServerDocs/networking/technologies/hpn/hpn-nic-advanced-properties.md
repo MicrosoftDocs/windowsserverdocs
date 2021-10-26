@@ -6,12 +6,12 @@ ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
 ms.author: jgerend
 author: JasonGerend
-ms.date: 07/22/2021
+ms.date: 10/26/2021
 ---
 
 # NIC advanced properties
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019
+>Applies to: Windows Server 2022, Windows Server 2019, Azure Stack HCI, versions 21H2 and 20H2
 
 You can manage NICs and all the features via Windows PowerShell using the [NetAdapter](/powershell/module/netadapter/) cmdlet.  You can also manage NICs and all the features using Network Control Panel (ncpa.cpl). To learn more, see [Host network requirements for Azure Stack HCI](/azure-stack/hci/concepts/host-network-requirements).
 
