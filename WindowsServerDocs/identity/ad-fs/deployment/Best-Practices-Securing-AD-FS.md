@@ -129,7 +129,7 @@ The federation service proxy (part of the WAP) provides congestion control to pr
 
 #### To verify the settings, you can do the following:
 1. On your Web Application Proxy computer, start an elevated command window.
-2. Navigate to the ADFS directory, at %WINDIR%\adfs\config.
+2. Navigate to the AD FS directory, at %WINDIR%\adfs\config.
 3. Change the congestion control settings from its default values to `<congestionControl latencyThresholdInMSec="8000" minCongestionWindowSize="64" enabled="true" />`.
 4. Save and close the file.
 5. Restart the AD FS service by running `net stop adfssrv` and then `net start adfssrv`.
@@ -151,7 +151,7 @@ The recommended way for Azure AD customers to monitor and keep current their inf
 Information on installing Azure AD Connect Health for AD FS can be found [here](/azure/active-directory/hybrid/how-to-connect-health-agent-install).
 
 ## Best practice for securing and monitoring the AD FS trust with Azure AD
-When you federate your AD FS with Azure AD, it is critical that the federation configuration (trust relationship configured between AD FS and Azure AD) is monitored closely, and any unusual or suspicious activity is captured. To do so, we recommend setting up alerts and getting notified whenever any changes are made to the federation configuration. To learn how to setup alerts, see [Monitor changes to federation configuration](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-monitor-federation-changes). 
+When you federate your AD FS with Azure AD, it is critical that the federation configuration (trust relationship configured between AD FS and Azure AD) is monitored closely, and any unusual or suspicious activity is captured. To do so, we recommend setting up alerts and getting notified whenever any changes are made to the federation configuration. To learn how to setup alerts, see [Monitor changes to federation configuration](/azure/active-directory/hybrid/how-to-connect-monitor-federation-changes).
 
 ## Additional security configurations
 The following additional capabilities can be configured optionally to provide additional protections to those offered in the default deployment.
@@ -175,6 +175,8 @@ WS-Trust Windows endpoints (*/adfs/services/trust/2005/windowstransport* and */a
 Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/2005/windowstransport -Proxy $false
 Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/13/windowstransport -Proxy $false
 ```
+>[!NOTE]
+>If your AD FS farm runs on Windows Internal Databases (WID) and has a secondary AD FS server, after disabling the endpoints on primary server, wait for the SYNC to occur on secondary nodes before restarting the AD FS service on them. Use the PowerShell command **Get-AdfsSyncProperties** on the secondary node to track last SYNC process.
 
 ### Differentiate access policies for intranet and extranet access
 AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This can be done per application or globally.  For high business value applications or applications with sensitive or personally identifiable information, consider requiring multi factor authentication.  This can be done via the AD FS management snap-in.

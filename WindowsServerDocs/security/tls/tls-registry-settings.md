@@ -2,10 +2,10 @@
 title: Transport Layer Security (TLS) registry settings
 description: Learn about supported registry setting information for the Windows implementation of the Transport Layer Security (TLS) protocol.
 ms.topic: article
-author: justinha
-ms.author: justinha
+author: PatAltimore
+ms.author: patricka
 manager: brianlic
-ms.date: 04/06/2021
+ms.date: 10/14/2021
 ---
 
 # Transport Layer Security (TLS) registry settings
@@ -312,7 +312,7 @@ and "DisabledByDefault" with a non-zero value under the corresponding version-sp
 ![TLS 1.0 server disabled by default](images/tls-10-server-disabledbydefault.png)
 
 In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled** state, create a DWORD registry value named "Enabled", with a value of zero,
-under the corresponding version-specific subkey. The following example shows TLS 1.0 server set to the **Disabled** state:
+under the corresponding version-specific subkey.
 
 The following example shows DTLS 1.2 disabled in the registry:
 

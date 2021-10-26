@@ -72,3 +72,5 @@ If the specified code page is invalid, the following error message appears: `Inv
 ## Additional References
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
+- [Code Page BitFields](https://docs.microsoft.com/windows/win32/intl/code-page-bitfields)
+- [Code Page Identifiers](https://docs.microsoft.com/windows/win32/intl/code-page-identifiers)

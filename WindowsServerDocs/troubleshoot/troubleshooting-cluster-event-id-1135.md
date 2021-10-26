@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting cluster issue with Event ID 1135
 description: Describes how to troubleshoot the Cluster Service Startup issue with Event ID 1135.
-ms.date: 05/07/2021
+ms.date: 10/21/2021
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
@@ -9,7 +9,7 @@ ms.topic: troubleshooting
 
 # Troubleshooting cluster issue with Event ID 1135
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 This article helps you diagnose and resolve Event ID 1135, which may be logged during the startup of the Cluster service in Failover Clustering environment.
 

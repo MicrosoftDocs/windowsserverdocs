@@ -107,7 +107,7 @@ Changing the KeySpec value does not require the certificate to be re-generated o
         2. Enter PFX password
     3. Once the above completes, do the following
         1. check the private key permissions
-        2. restart the adfs or wap service
+        2. restart the AD FS or WAP service
 
 
 

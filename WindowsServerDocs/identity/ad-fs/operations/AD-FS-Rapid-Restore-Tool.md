@@ -105,25 +105,25 @@ The following are backup examples for using the AD FS Rapid Restore Tool.
 ### Backup the AD FS configuration, with the DKM, to the File System, and has access to the DKM container contents (either domain admin or delegated)
 
 ```powershell
-Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)" -BackupDKM
+Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of AD FS (FS)" -BackupDKM
 ```
 
 ### Backup the AD FS configuration, with the DKM, to the file system with the service account credential, running as local admin
 
 ```powershell
-Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)" -BackupDKM -ServiceAccountCredential $cred
+Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of AD FS (FS)" -BackupDKM -ServiceAccountCredential $cred
 ```
 
 ### Backup the AD FS configuration without the DKM to the Azure Storage Container.
 
 ```powershell
-Backup-ADFS -StorageType "Azure" -AzureConnectionCredentials $cred -AzureStorageContainer "adfsbackups"  -EncryptionPassword "password" -BackupComment "Clean Install of ADFS"
+Backup-ADFS -StorageType "Azure" -AzureConnectionCredentials $cred -AzureStorageContainer "adfsbackups"  -EncryptionPassword "password" -BackupComment "Clean Install of AD FS"
 ```
 
 ### Backup the AD FS configuration without the DKM to the File System
 
 ```powershell
-Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of ADFS (FS)"
+Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testExport\" -EncryptionPassword "password" -BackupComment "Clean Install of AD FS (FS)"
 ```
 
 ## Restore from backup

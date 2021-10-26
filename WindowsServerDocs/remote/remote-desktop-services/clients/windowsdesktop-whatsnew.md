@@ -5,12 +5,12 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/24/2021
+ms.date: 10/26/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
 
-You can find more detailed information about the Windows Desktop client at [Get started with the Windows Desktop client](windowsdesktop.md). You'll find the latest updates to client in this article.
+You can find more detailed information about the Windows Desktop client at [Get started with the Windows Desktop client](windowsdesktop.md). You'll find the latest updates for the available clients in this article.
 
 ## Supported client versions
 
@@ -18,14 +18,33 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.2322        |1.2.1672                  |
-|Insider    |1.2.2319        |1.2.1672                  |
+|Public     |1.2.2600        |1.2.1672                  |
+|Insider    |1.2.2600        |1.2.1672                  |
+
+## Updates for version 1.2.2600
+
+*Date published: 10/26/2021*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Updates to Teams for Azure Virtual Desktop, including improvements to camera performance during video calls.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+
+## Updates for version 1.2.2459
+
+*Date published: 09/28/2021*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWLBme), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWLQYT), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWLE7z)
+
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Fixed an issue that caused the client to prompt for credentials a second time after closing a credential prompt window while subscribing.
+- Updates to Teams for Azure Virtual Desktop, including the following:
+  - Fixed an issue in that made the video screen turn black and crash during calls in the Chrome browser.
+  - Reduced E2E latency and some performance issues by optimizing the GPU render path in the Windows Desktop client. To enable the new render path, add the registry key **HKEY_CURRENT_USER \SOFTWARE\Microsoft\Terminal Server Client\IsSwapChainRenderingEnabled** and set its value to **00000001**. To disable the new render path and revert to the original path, either set the key's value to **00000000** or delete the key.
 
 ## Updates for version 1.2.2322
 
 *Date published: 08/24/2021*
-
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Added updates to Teams on Azure Virtual Desktop, including:
@@ -36,8 +55,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.2223
 
 *Date published: 08/10/2021*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWIH0j), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWIH0k), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWIJwJ)
 
 - Fixed the security vulnerability known as [CVE-2021-34535](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34535).
 
