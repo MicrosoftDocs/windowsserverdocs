@@ -371,7 +371,7 @@ The command completed successfully.
 
 Other command-line options allow you to specify performance counter names of interest in a configuration file, redirecting output to a log file, among other things. See the [typeperf.exe documentation](/previous-versions/windows/it-pro/windows-xp/bb490960(v=technet.10)) for details.
 
-You can also use Perfmon.exe's graphical interface remotely with Nano Server targets. When adding performance counters to the view, specify the Nano Server target in the computer name instead of the default *<Local computer>*.
+You can also use Perfmon.exe's graphical interface remotely with Nano Server targets. When adding performance counters to the view, specify the Nano Server target in the computer name instead of the default *\<Local computer\>*.
 
 ### Interact with the Windows Event Log
 

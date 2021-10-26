@@ -4,8 +4,8 @@ title: Planning a guarded fabric and shielded VMs
 ms.topic: article
 ms.assetid: a754b78c-048d-4be9-a846-cf41ff0bcbc4
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 12/10/2020
 ---
 

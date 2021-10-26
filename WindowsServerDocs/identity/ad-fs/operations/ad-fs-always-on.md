@@ -10,8 +10,8 @@ ms.topic: article
 
 # Setting up an AD FS Deployment with AlwaysOn Availability Groups
 A highly available geo-distributed topology provides:
-* Elimination of a single point of failure: With failover capabilities, you can achieve a highly available ADFS infrastructure even if one of the data centers in a part of a globe goes down.
-* Improved performance: You can use the suggested deployment to provide a high-performance ADFS infrastructure
+* Elimination of a single point of failure: With failover capabilities, you can achieve a highly available AD FS infrastructure even if one of the data centers in a part of a globe goes down.
+* Improved performance: You can use the suggested deployment to provide a high-performance AD FS infrastructure
 
 AD FS can be configured for a highly available geo-distributed scenario.
 The following guide will walk through an overview of AD FS with SQL Always on Availability Groups and provide deployment considerations and guidance.
@@ -191,7 +191,7 @@ Realize that it may take some time for the cluster name to successfully replicat
 
 1.	Connect to the Windows Server Failover Cluster (WSFC) node that hosts the SQL Server instance where you want to enable Always On Availability Groups.
 2.	On the Start menu, point to All Programs, point to Microsoft SQL Server, point to Configuration Tools, and click SQL Server Configuration Manager.
-3.	In SQL Server Configuration Manager, click SQL Server Services, right-click SQL Server (<instance name>), where <instance name> is the name of a local server instance for which you want to enable Always On Availability Groups, and click Properties.
+3.	In SQL Server Configuration Manager, click SQL Server Services, right-click SQL Server (```<instance name>```), where ```<instance name>``` is the name of a local server instance for which you want to enable Always On Availability Groups, and click Properties.
 4.	Select the Always On High Availability tab.
 5.	Verify that Windows failover cluster name field contains the name of the local failover cluster. If this field is blank, this server instance currently does not support Always On availability groups. Either the local computer is not a cluster node, the WSFC cluster has been shut down, or this edition of SQL Server that does not support Always On availability groups.
 6.	Select the Enable Always On Availability Groups check box, and click OK.
@@ -201,7 +201,7 @@ SQL Server Configuration Manager saves your change. Then, you must manually rest
 
 ## Back up AD FS Databases
 Back up the AD FS configuration and artifact databases with the full transaction logs. Place the back up in the chosen destination.
-Back up the ADFS Artifact and Configuration databases.
+Back up the AD FS Artifact and Configuration databases.
 - Tasks > Backup > Full > Add to a backup file > ok to create
 
 ![back up server](media/ad-fs-always-on/backUpADFS.png)
@@ -286,7 +286,7 @@ When the wizard completes, click Close to exit.
 
 ## Update the SQL Connection String
 Finally, use PowerShell to edit the AD FS properties to update the SQL connection string to use the DNS address of the AlwaysOn Availability group's listener.
-Run the configuration database change on each node and restart the ADFS service on all the ADFS nodes. The initial catalog value changes based on the farm version.
+Run the configuration database change on each node and restart the AD FS service on all the AD FS nodes. The initial catalog value changes based on the farm version.
 
 ```
 PS:\>$temp= Get-WmiObject -namespace root/ADFS -class SecurityTokenService

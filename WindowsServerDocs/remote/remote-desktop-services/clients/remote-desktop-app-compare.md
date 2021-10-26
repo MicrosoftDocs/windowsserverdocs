@@ -47,10 +47,10 @@ When you enable USB port redirection, all USB devices attached to USB ports are 
 | Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS         | macOS                           | Web client    |
 |---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
 | Cameras             | X                         | X                           |               |         |   X         | X                               |               |
-| Clipboard           | X                         | X                           | X             | Text    | Text, images | X                               | text          |
+| Clipboard           | X                         | X                           | X             | Text    | Text, images | X                               | Text          |
 | Local drive/storage | X                         | X                           |               | X       |   X        | X                               |               |
 | Location            | X                         | X                           |               |         |             |                                 |               |
-| Microphones         | X                         | X                           | X             | X       |  X          | X                               |   X            |
+| Microphones         | X                         | X                           | X             | X       |  X          | X                               | X            |
 | Printers            | X                         | X                           |               |         |             | X (CUPS only)                   | PDF print     |
 | Scanners            | X                         | X                           |               |         |             |                                 |               |
 | Smart Cards         | X                         | X                           |               |         |             | X (Windows logon not supported) |               |

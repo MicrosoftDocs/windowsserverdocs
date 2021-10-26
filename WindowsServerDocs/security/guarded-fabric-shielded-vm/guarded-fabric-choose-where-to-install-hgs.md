@@ -3,8 +3,8 @@ description: "Learn more about: Choose whether to install HGS in its own dedicat
 title: Choose whether to install HGS in its own new forest or in an existing bastion forest
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 08/29/2018
 ---
 

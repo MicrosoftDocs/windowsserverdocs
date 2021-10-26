@@ -26,7 +26,7 @@ append <localfile> [remotefile]
 | Parameter | Description |
 | --------- | ----------- |
 | `<localfile>` | Specifies the local file to add. |
-| [remotefile] | Specifies the file on the remote computer to which <localfile> is added. If you don't use this parameter, the `<localfile>` name is used in place of the remote file name. |
+| [remotefile] | Specifies the file on the remote computer to which `<localfile>` is added. If you don't use this parameter, the `<localfile>` name is used in place of the remote file name. |
 
 ### Examples
 

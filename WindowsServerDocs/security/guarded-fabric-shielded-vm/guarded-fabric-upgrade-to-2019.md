@@ -3,8 +3,8 @@ description: "Learn more about: Upgrade a guarded fabric to Windows Server 2019"
 title: Upgrade a guarded fabric to Windows Server 2019
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 11/21/2018
 ---
 

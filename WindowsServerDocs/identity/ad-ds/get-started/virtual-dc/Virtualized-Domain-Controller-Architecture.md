@@ -119,7 +119,7 @@ The following steps explain the process in more detail:
 
 22. The guest re-enables DNS client registration now that the computer is uniquely named and networked.
 
-23. The guest runs the SYSPREP modules specified by the DefaultDCCloneAllowList.xml <SysprepInformation> element in order to scrub out references to the previous computer name and SID.
+23. The guest runs the SYSPREP modules specified by the DefaultDCCloneAllowList.xml \<SysprepInformation> element in order to scrub out references to the previous computer name and SID.
 
 24. Cloning promotion is complete.
 
@@ -185,7 +185,7 @@ After the guest employs virtualization safeguards, NTDS replicates Active Direct
 
 -   If using FRS, the guest stops the NTFRS service and sets D2 BURFLAGS registry value. It then starts the NTFRS service, which non-authoritatively replicates inbound, re-using existing unchanged SYSVOL data when possible.
 
--   If using DFSR, the guest stops the DFSR service and deletes the DFSR database files (default location: %systemroot%\system volume information\dfsr\\*<database GUID>*). It then starts the DFSR service, which non-authoritatively replicates inbound, re-using existing unchanged SYSVOL data when possible.
+-   If using DFSR, the guest stops the DFSR service and deletes the DFSR database files (default location: %systemroot%\system volume information\dfsr&#92;*\<database GUID>*). It then starts the DFSR service, which non-authoritatively replicates inbound, re-using existing unchanged SYSVOL data when possible.
 
 > [!NOTE]
 > -   If the hypervisor does not provide a VM-Generation ID for comparison, the hypervisor does not support virtualization safeguards and the guest will operate like a virtualized domain controller that runs Windows Server 2008 R2 or earlier. The guest implements USN rollback quarantine protection if there is an attempt to start replicating with USNs that have not advanced past the last highest USN seen by the partner DC. For more information about USN rollback quarantine protection, see [USN and USN Rollback](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd363553(v=ws.10))

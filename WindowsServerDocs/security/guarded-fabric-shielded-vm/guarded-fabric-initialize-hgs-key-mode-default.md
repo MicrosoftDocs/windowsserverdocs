@@ -3,8 +3,8 @@ description: "Learn more about: Initialize the HGS cluster using key mode in a n
 title: Initialize the HGS cluster using key mode in a new dedicated forest (default)
 ms.topic: article
 manager: dongill
-author: rpsqrd
-ms.author: ryanpu
+author: IngridAtMicrosoft
+ms.author: inhenkel
 ms.date: 08/29/2018
 ---
 
