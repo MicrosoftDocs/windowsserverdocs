@@ -4,12 +4,12 @@ description: Use this topic to automate Packet Monitor-based packet captures wit
 ms.topic: how-to
 author: khdownie
 ms.author: v-kedow
-ms.date: 07/23/2021
+ms.date: 10/27/2021
 ---
 
 # SDN Data Path Diagnostics Extension in Windows Admin Center
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows 10, Azure Stack Hub, Azure
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10, Azure Stack Hub, Azure, Azure Stack HCI, versions 21H2 and 20H2
 
 SDN Data Path Diagnostics is a tool within the SDN monitoring extension of Windows Admin Center that automates Packet Monitor-based packet captures according to various SDN scenarios, and presents the output in a single view that is easy to follow and manipulate.​
 
