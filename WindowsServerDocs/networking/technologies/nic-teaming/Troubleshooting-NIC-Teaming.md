@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: fdee02ec-3a7e-473e-9784-2889dc1b6dbb
 ms.author: jgerend
 author: JasonGerend
-ms.date: 07/23/2021
+ms.date: 10/27/2021
 ---
 # Troubleshooting NIC Teaming
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 In this topic, we discuss ways to troubleshoot NIC Teaming, such as hardware and physical switch securities.  When hardware implementations of standard protocols don't conform to specifications, NIC Teaming performance might be affected. Also, depending on the configuration, NIC Teaming may send packets from the same IP address with multiple MAC addresses that can trip security features on the physical switch.
 

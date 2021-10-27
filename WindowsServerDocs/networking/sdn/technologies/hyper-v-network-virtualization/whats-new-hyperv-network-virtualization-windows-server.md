@@ -6,13 +6,13 @@ ms.topic: article
 ms.assetid: 0254275a-0a77-40a9-b68a-1029284c03fe
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 06/16/2021
+ms.date: 10/27/2021
 ---
-# What's New in Hyper-V Network Virtualization in Windows Server 2016
+# What's New in Hyper-V Network Virtualization in Windows Server
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
-This topic describes the Hyper-V Network Virtualization (HNV) functionality that is new or changed in Windows Server 2016.
+This topic describes the Hyper-V Network Virtualization (HNV) functionality that is new or changed in Windows Server.
 
 ## <a name="BKMK_IPAM2012R2"></a>Updates in HNV
 HNV offers enhanced support in the following areas:
