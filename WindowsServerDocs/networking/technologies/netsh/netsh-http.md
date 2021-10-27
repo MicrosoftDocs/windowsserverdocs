@@ -5,12 +5,12 @@ ms.topic: article
 manager: dougkim
 ms.author: jgerend
 author: JasonGerend
-ms.date: 07/16/2021
+ms.date: 10/27/2021
 ---
 
 # Netsh http commands
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Use **netsh http** to query and configure HTTP.sys settings and parameters.
 

@@ -4,12 +4,12 @@ description: Use netsh mbn to query and configure mobile broadband settings and 
 ms.topic: article
 author: apdutta
 ms.author: apdutta
-ms.date: 07/16/2021
+ms.date: 10/27/2021
 ---
 
 # Netsh mbn commands
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Use **netsh mbn** to query and configure mobile broadband settings and parameters.
 
