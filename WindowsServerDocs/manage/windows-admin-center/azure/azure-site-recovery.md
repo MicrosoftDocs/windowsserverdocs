@@ -4,12 +4,12 @@ description: Use Windows Admin Center (Project Honolulu) to protect Hyper-V VMs 
 ms.topic: article
 author: IngridAtMicrosoft
 ms.author: wscontent
-ms.date: 07/17/2018
+ms.date: 10/27/2021
 ms.localizationpriority: low
 ---
 # Protect your Hyper-V Virtual Machines with Azure Site Recovery and Windows Admin Center
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, version 21H2
 
 [Learn more about Azure integration with Windows Admin Center.](./index.md)
 
@@ -25,7 +25,6 @@ Azure Site Recovery consists of two components: **replication** and **failover**
 
 Completing setup for the replication component alone is sufficient to protect your VM in the case of disaster. However, you won't be able to start the VM in Azure until you configure the failover portion. You can set up the failover portion when you want to failover to an Azure VM - this isn't required as part of the initial setup. If the host server goes down and you haven't yet configured the failover component, you can configure it at that time and access the workloads of the protected VM. However, it's a good practice to configure the failover related settings before a disaster.
 
-
 ## Prerequisites and planning
 
 - The target servers hosting the VMs you want to protect must have Internet access to replicate to Azure.
@@ -40,7 +39,7 @@ Completing setup for the replication component alone is sufficient to protect yo
 1. Navigate to the server or cluster hosting VMs you want to protect (either with Server Manager or Hyper-Converged Cluster Manager).
 2. Go to **Virtual Machines** > **Inventory**.
 3. Select any VM (this doesn't need to be the VM you want to protect).
-4. Select **More** > **Set up VM Protection**.
+4. Select **Manage** > **Replicate using Azure Site Recovery**.
 5. Sign into your Azure Account.
 6. Enter the required information:
 
