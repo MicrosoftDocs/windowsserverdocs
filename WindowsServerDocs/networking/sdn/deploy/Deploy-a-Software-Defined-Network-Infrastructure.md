@@ -3,14 +3,14 @@ title: Deploy a Software Defined Network Infrastructure
 description: This topic provides links to topics on how to deploy a Microsoft Software Defined Network (SDN) infrastructure using scripts in Windows Server 2019 and 2016.
 ms.topic: how-to
 ms.assetid: 6c665c88-df28-4150-81d4-a47e9fa5255c
-ms.date: 06/25/2021
+ms.date: 10/28/2021
 ms.author: anpaul
 author: AnirbanPaul
 manager: grcusanz
 ---
 # Deploy a Software Defined Network infrastructure
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Deploy Microsoft's Software Defined Networking (SDN) infrastructure.
 
