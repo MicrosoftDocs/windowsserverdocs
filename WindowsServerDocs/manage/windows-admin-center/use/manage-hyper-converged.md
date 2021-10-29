@@ -273,7 +273,7 @@ You can also configure the virtual network when creating a virtual machine.
 ### GPU management 
 
 1. Select **GPUs** from the navigation on the left side. 
-2. View the available GPUs from your clustered VMs and provide GPU acceleration to workloads running in the clustered VMs through Discrete Device Assignment (DDA). [Learn more about using GPUs with clustered VMs.](https://docs.microsoft.com/en-us/azure-stack/hci/manage/use-gpu-with-clustered-vm)
+2. View the available GPUs from your clustered VMs and provide GPU acceleration to workloads running in the clustered VMs through Discrete Device Assignment (DDA). [Learn more about using GPUs with clustered VMs.](https://docs.microsoft.com/azure-stack/hci/manage/use-gpu-with-clustered-vm)
 
 ![Manage your GPUs](../media/manage-hyper-converged/gpu-tool.png)
 
