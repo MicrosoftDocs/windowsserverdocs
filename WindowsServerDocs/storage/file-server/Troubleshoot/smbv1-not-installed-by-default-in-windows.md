@@ -27,16 +27,13 @@ SMBv1 has the following behavior in Windows 10 and Windows Server starting in v
 - Because the Computer Browser service relies on SMBv1, the service is uninstalled if the SMBv1 client or server is uninstalled. This means that Explorer Network can no longer display Windows computers through the legacy NetBIOS datagram browsing method.
 - SMBv1 can still be reinstalled in all editions of Windows 10 and Windows Server 2016.
 
-SMBv1 has the following additional behaviors in Windows 10 starting in version 1809 (RS5). All other behaviors from version 1709 still apply:
-
-- Windows 10 Pro no longer contains the SMBv1 client by default after a clean installation.
-- In Windows 10 Enterprise, Windows 10 Education, and Windows 10 Pro for Workstations an administrator can activate automatic removal of SMBv1 by turning on the "SMB 1.0/CIFS Automatic Removal" feature.
+Starting in Windows 10, version 1809 (RS5), Windows 10 Pro no longer contains the SMBv1 client by default after a clean installation. All other behaviors from version 1709 still apply.
 
   > [!NOTE]
   > Windows 10, version 1803 (RS4) Pro handles SMBv1 in the same manner as Windows 10, version 1703 (RS2) and Windows 10, version 1607 (RS1). This issue was fixed in Windows 10, version 1809 (RS5). You can still uninstall SMBv1 manually. However, Windows will not automatically uninstall SMBv1 after 15 days in the following scenarios:
-
-- You do a clean install of Windows 10, version 1803.
-- You upgrade Windows 10, version 1607 or Windows 10, version 1703 to Windows 10, version 1803 directly without first upgrading to Windows 10, version 1709.
+  >
+  > - You do a clean install of Windows 10, version 1803.
+  > - You upgrade Windows 10, version 1607 or Windows 10, version 1703 to Windows 10, version 1803 directly without first upgrading to Windows 10, version 1709.
 
 If you try to connect to devices that support only SMBv1, or if these devices try to connect to you, you may receive one of the following errors messages:
 
@@ -65,7 +62,7 @@ The specified server cannot perform the requested operation.
 Error 58
 ```
 
-The following events appear when a remote server required an SMBv1 connection from this client, but SMBv1 is uninstalled or disabled on the client.
+When a remote server required an SMBv1 connection from this client, and the SMBv1 client is installed, the following event is logged. This audits use of SMB1 and is how the automatic uninstaller decides to set its timer for 15 days before it removes SMB1 for lack of use.
 
 ```output
 Log Name:      Microsoft-Windows-SmbClient/Security
@@ -87,6 +84,8 @@ Server name:
 Guidance:
 SMB1 is deprecated and should not be installed nor enabled. For more information, see https://go.microsoft.com/fwlink/?linkid=852747.
 ```
+
+When a remote server required an SMBv1 connection from this client, and the SMBv1 client is not installed, the following event is logged.
 
 ```output
 Log Name:      Microsoft-Windows-SmbClient/Security
