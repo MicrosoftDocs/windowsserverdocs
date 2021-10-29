@@ -40,7 +40,10 @@ Before you use Windows Admin Center, you must perform the following steps throug
 
 2. Configure a virtual network gateway to use a site-to-site or ExpressRoute connection to connect the virtual network to your on-premises network.
 
-3. Create a Windows Server 2019 VM in Azure that is capable of running nested virtualization. This is one of your two virtual appliances. Connect the primary network interface to the routable subnet, and the second network interface to the extended subnet.
+3. Create a Windows Server 2022 Azure Edition VM in Azure that is capable of running nested virtualization. This is one of your two virtual appliances. Connect the primary network interface to the routable subnet, and the second network interface to the extended subnet.
+
+> [!NOTE]
+> Extended network for Azure requires Windows Server 2022 Azure Edition for the VM that is running in Azure.   
 
 4. Start the VM, enable the Hyper-V role, and reboot. For example:
 
@@ -61,7 +64,7 @@ You must also perform some manual configuration in your on-premises infrastructu
 
 1. Make sure the subnets are available on the physical machine where you will deploy the on-premises VM (virtual appliance). This includes the subnet you want to extend and a second subnet that is unique and doesn't overlap with any subnets in the Azure virtual network.
 
-2. Create a Windows Server 2019 VM on any hypervisor that supports nested virtualization. This is the on-premises virtual appliance. We recommend that you create this as a highly available VM in a cluster. Connect a virtual network adapter to the routable subnet and a second virtual network adapter to the extended subnet.
+2. Create a Windows Server 2019 or 2022 VM on any hypervisor that supports nested virtualization. This is the on-premises virtual appliance. We recommend that you create this as a highly available VM in a cluster. Connect a virtual network adapter to the routable subnet and a second virtual network adapter to the extended subnet.
 
 3. Start the VM, then run this command from a PowerShell session in the VM to enable the Hyper-V role, and restart the VM:
 
@@ -137,6 +140,9 @@ Deployment is driven through Windows Admin Center.
 
     ![Azure Network gateway](../media/azure-extended-network/azure-network-gateway.png)
 
+> [!NOTE]
+> The VM list for the Azure virtual appliance only includes Azure VMs that contain Windows Server 2022 Azure Edition.  If you do not see your VM in the list, make sure it is the Azure Edition and re-create if it is not. 
+
 9. After selecting the VM, you will also need to select the Azure Extended-Network Gateway Subnet CIDR. Then click **Next: Deploy**.
 
 10. Review the summary information then click **Deploy** to begin the deployment process. Deployment will take approximately 5-10 minutes. When deployment is complete, you will see the following panel for managing the extended IP addresses, and the status should say **OK**:
@@ -172,7 +178,7 @@ If you no longer want to use extended network for Azure, click the **Remove Azur
 
 If you receive an error during the deployment of extended network for Azure, use the following steps:
 
-1. Verify that both virtual appliances are using Windows Server 2019.
+1. Verify that the on-premises virtual appliances is using Windows Server 2019 or 2022.  Verify that the Azure virtual appliance is using Windows Server 2022 Azure Edition.
 
 2. Verify that you are not running Windows Admin Center on one of the virtual appliances. We recommend that you run Windows Admin Center from an on-premises network.
 
