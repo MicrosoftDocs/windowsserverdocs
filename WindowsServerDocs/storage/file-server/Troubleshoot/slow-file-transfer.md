@@ -5,16 +5,16 @@ author: Deland-Han
 manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
-ms.date: 12/25/2019
+ms.date: 10/29/2021
 ---
 
 # Slow SMB files transfer speed
 
 This article provides suggested troubleshooting procedures for slow file transfer speeds through SMB.
 
-## Large file transfer is slow
+## File transfer is slow
 
-If you observe slow transfers of large files, consider the following
+If you observe slow transfers of files, consider the following
 steps:
 
 - Try the file copy command for unbuffered IO (**xcopy /J** or  **robocopy /J**).
