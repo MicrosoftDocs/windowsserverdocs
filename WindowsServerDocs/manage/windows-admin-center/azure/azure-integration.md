@@ -49,3 +49,5 @@ If you wish to configure an Azure AD app manually, rather than using the Azure A
             }
     ],
     ```
+
+[!NOTE] If you have Microsoft Defender Application Guard enabled, you will be unable to register your Windows Admin Center gateway with Azure or sign in to Azure.

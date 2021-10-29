@@ -270,6 +270,20 @@ You can also configure the virtual network when creating a virtual machine.
 
 ![Monitor SDN infrastructure](../media/manage-hyper-converged/sdn-monitoring.png)
 
+### GPU management 
+
+1. Select **GPUs** from the navigation on the left side. 
+2. View the available GPUs from your clustered VMs and provide GPU acceleration to workloads running in the clustered VMs through Discrete Device Assignment (DDA). [Learn more about using GPUs with clustered VMs.](https://docs.microsoft.com/en-us/azure-stack/hci/manage/use-gpu-with-clustered-vm)
+
+![Manage your GPUs](../media/manage-hyper-converged/gpu-tool.png)
+
+### Security tool
+
+1. Select **Security** from the navigation on the left side. 
+2. Select the **Secured-core** tab and enable or disable the available security features. 
+
+![Check the security of your tool](../media/manage-hyper-converged/security-tool.png)
+
 ## Give us feedback
 
 It's all about your feedback! The most important benefit of frequent updates is to hear what's working and what needs to be improved. Here are some ways to let us know what you're thinking:
