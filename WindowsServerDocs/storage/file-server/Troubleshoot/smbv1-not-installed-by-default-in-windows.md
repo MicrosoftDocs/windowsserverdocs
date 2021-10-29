@@ -62,7 +62,7 @@ The specified server cannot perform the requested operation.
 Error 58
 ```
 
-When a remote server required an SMBv1 connection from this client, and the SMBv1 client is installed, the following event is logged. This audits use of SMB1 and is how the automatic uninstaller decides to set its timer for 15 days before it removes SMB1 for lack of use.
+When a remote server required an SMBv1 connection from this client, and the SMBv1 client is installed, the following event is logged. This mechanism audits the use of SMBv1 and is also used by the automatic uninstaller to set the 15-day timer of removing SMBv1 because of lack of use.
 
 ```output
 Log Name:      Microsoft-Windows-SmbClient/Security
@@ -85,7 +85,7 @@ Guidance:
 SMB1 is deprecated and should not be installed nor enabled. For more information, see https://go.microsoft.com/fwlink/?linkid=852747.
 ```
 
-When a remote server required an SMBv1 connection from this client, and the SMBv1 client is not installed, the following event is logged.
+When a remote server required an SMBv1 connection from this client, and the SMBv1 client is not installed, the following event is logged. This event is to show why the connection fails.
 
 ```output
 Log Name:      Microsoft-Windows-SmbClient/Security
