@@ -78,10 +78,10 @@ Now that you've fixed all of the build errors in your extension, you're ready to
 
 1. Sideload the extension with `gulp serve --port <port> --prod --aot`.
 2. In the browser, look for any runtime issues with the extension, such as:
-    a. Extension page(s) not loading
-    b. Elements missing from the extension page(s)
-    c. Console errors
-    d. Anything else that looks off or behaves strange
+    - Extension page(s) not loading
+    - Elements missing from the extension page(s)
+    - Console errors
+    - Anything else that looks off or behaves strange
 3. Fix any runtime issues that you have discovered.
 4. When the extension has been stabilized, commit your changes.
 
