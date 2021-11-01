@@ -31,7 +31,7 @@ The settings that can be configured through SDN QoS are:
 
 ## SDN QoS policies
 
-Once Network Controller for SDN is setup, you can go ahead and deploy your QoS policies. Today, you can do this using [Network Controller](/powershell/module/networkcontroller/?view=windowsserver2019-ps) PowerShell cmdlets.
+Once Network Controller for SDN is setup, you can go ahead and deploy your QoS policies. Today, you can do this using [Network Controller](/powershell/module/networkcontroller/?view=windowsserver2019-ps&preserve-view=true) PowerShell cmdlets.
 
 For all example scripts used below, `-ConnectionUri` is the REST URI of the Network Controller. For example: https://nc.contoso.com.
 
