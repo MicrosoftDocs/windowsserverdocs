@@ -22,7 +22,7 @@ Before beginning the upgrade to Angular 11, you need to configure your developer
 1. Install the latest version of Windows Admin Center in dev mode (`msiexec /i WindowsAdminCenter<version>.msi DEV_MODE=1`) with the upgraded shell. Reach out to your Microsoft contact if this has not been provided to you.
 2. **(Recommended)** Create a `features/ng11` branch in the repo.
 3. **(Recommended)** Update `version.json` version to `(N+1).0.0`.
-4. In a PowerShell console, make sure to switch to the respective Node version for your Angular version (for more information, see [Working with two branches of shell](#Working-with-two-branches-of-shell) for more details). For Angular 11, run `nvm use 12.18.3`. Close the terminal for this change to take effect.
+4. In a PowerShell console, make sure to switch to the respective Node version for your Angular version (for more information, see [Working with two branches of shell](#working-with-two-branches-of-shell) for more details). For Angular 11, run `nvm use 12.18.3`. Close the terminal for this change to take effect.
 5. Clean up the `node_modules` folder to avoid npm conflicts.
 
 ## Automated upgrade process
@@ -60,7 +60,7 @@ Some of the errors you may receive while debugging in the build step may be hard
   - This type of error occurs at build time, typically before the upgraded repository has been successfully built at least once. To resolve, run `ng serve --prod`, after which these errors should no longer appear when building.
 
 - **Interface incorrectly extends another interface**
-![error.png](./../../media/extend-guides-angular11/error.png)
+![interface-incorrectly-extends-interface-error.png](./../../media/extend-guides-angular11/error.png)
   - This error occurs during the inlineCompile step of "gulp build" and occurs as the result of a mismatch in versions between the `@types/jasmine` package downloaded and what the `@types/jasminewd2` package requires. This error can be resolved by removing the `@types/jasminewd2` package.
 
 ### Output bundle file names
