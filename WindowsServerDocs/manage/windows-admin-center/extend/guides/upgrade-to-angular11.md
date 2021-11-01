@@ -33,7 +33,7 @@ Download and install WAC CLI tools by running `npm install -g @microsoft/windows
     
     If the library flag was used, edit the `name` property in `src/package.json` to something unique to the extension.
 
-2. [Conditional] If the extension repo has dependencies on any other extension package, you will have to manually pick the new angular version for that one (e.g. `msft-sme-certificate-manager` has a dependency on `msft-sme-event-viewer`. The automated tools will **not** update `msft-sme-event-viewer` version, it has to be manually updated.)
+2. **(Conditional)** If the extension repo has dependencies on any other extension package, you will have to manually pick the new angular version for that one (e.g. `msft-sme-certificate-manager` has a dependency on `msft-sme-event-viewer`. The automated tools will **not** update `msft-sme-event-viewer` version, it has to be manually updated.)
 Also be sure to specify the '/dist' folder level on any imports from extensions, any lower or higher level imports won't work (e.g. `import { foobar } from '@msft-sme/event-viewer'` would need to be changed to `import { foobar } from '@msft-sme/event-viewer/dist'`.) 
 3. Open `app-routing.module.ts` and change any appRoutes that have the format `./folder-name/file-name#ModuleClass` to `() => import('./folder-name/file-name').then(m => m.ModuleClass)`. If there are any other `routing.module.ts` files they will also need to be updated in this way.
 4. Remove `UpgradeAudit.txt` file. It's auto-generated for your reference but doesn't need to go in the repo.
@@ -60,8 +60,18 @@ Some of the errors you may receive while debugging in the build step may be hard
   - This type of error occurs at build time, typically before the upgraded repository has been successfully built at least once. To resolve, run `ng serve --prod`, after which these errors should no longer appear when building.
 
 - **Interface incorrectly extends another interface**
-![error.png](./../media/extend-guides-angular11/error.png)
+![error.png](./../../media/extend-guides-angular11/error.png)
   - This error occurs during the inlineCompile step of "gulp build" and occurs as the result of a mismatch in versions between the `@types/jasmine` package downloaded and what the `@types/jasminewd2` package requires. This can be resolved by removing the `@types/jasminewd2` package.
+
+### Output bundle file names
+When building your extension, you may run into issues as a result of the file names in your bundle. To avoid these issues, pay special attention to the following fields:
+
+- **Output hashing must be enabled**. When output hashing is enabled, unique file names will be generated for every build of the extension. If this is not enabled, you may be unable to see the changes to your extension when viewing in the browser due to duplicate file names.
+    - To enable from this field the command line, add the `--output-hashing` flag to an `ng build` command.
+    - To enable this field from your repo directly, navigate to your angular.json file and look for the `outputHashing` field under production configurations.
+- **Named chunks must be disabled**. When named chunks is enabled, each bundle file includes its original module file name. While that may seem useful, it often results in incredibly long file names that can result in errors in the Windows Admin Center extension feed. 
+    - To disable this field from the command line, add the `--named-chunks` flag to an `ng build` command.
+    - To disable this field from your repo directly, navigate to your angular.json file and look for the `namedChunks` field under production configurations. Set this field to false.
 
 ## Run steps
 Now that you've fixed all of the build errors in your extension, you're ready to run your extension and fix any runtime issues. Follow the steps below to run your extension:
