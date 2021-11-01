@@ -73,8 +73,8 @@
 #### [Using PowerShell in your extension](extend/guides/powershell.md)
 #### [CSS icon guide](extend/guides/cssicons.md)
 #### [Enable the extension discovery banner](extend/guides/extension-discovery-banner.md)
+#### [Upgrading extensions to Angular 11](extend/upgrading-to-angular-11.md)
 ### [Publishing extensions](extend/publish-extensions.md)
-### [Upgrading extensions to Angular 11](extend/upgrading-to-angular-11.md)
 ### Case Studies
 #### [BiitOps](extend/case-studies/biitops.md)
 #### [DataON](extend/case-studies/dataon.md)
