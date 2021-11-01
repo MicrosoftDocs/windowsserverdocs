@@ -164,7 +164,7 @@ To extend an address
 
 3. Use the **Add** button to manually add an address. Addresses that you add that are on-premises will be reachable by the Azure Addresses that you add to the Azure Address list, and vice versa.
 
-4. Extended ntwork for Azure scans the network to discover IP addresses, and populates the Suggestion lists based on this scan. To extend these addresses, you must use the dropdown list and select the checkbox next to the discovered address. Not all addresses will be discovered. Optionally, use the **Add** button to manually add addresses that are not discovered automatically.
+4. Extended network for Azure scans the network to discover IP addresses, and populates the Suggestion lists based on this scan. To extend these addresses, you must use the dropdown list and select the checkbox next to the discovered address. Not all addresses will be discovered. Optionally, use the **Add** button to manually add addresses that are not discovered automatically.
 
     ![Add ipv4 addresses panel with info](../media/azure-extended-network/add-ipv4-addresses-panel-filled.png)
 
