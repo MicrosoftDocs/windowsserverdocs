@@ -24,6 +24,10 @@ There are two roles for access to the Windows Admin Center gateway service:
 
 **Gateway administrators** can configure who gets access as well as how users authenticate to the gateway. Only gateway administrators can view and configure the Access settings in Windows Admin Center. Local administrators on the gateway machine are always administrators of the Windows Admin Center gateway service.
 
+There is also an additional role specific to the management of CredSSP:
+
+**Windows Admin Center CredSSP Administrators** are registered with the Windows Admin Center CredSSP endpoint and have permissions to perform predefined CredSSP operations. This group is especially useful for installations of Windows Admin Center in desktop mode, where only the user account which installed Windows Admin Center is given these permissions by default.
+
 > [!NOTE]
 > Access to the gateway doesn't imply access to managed servers visible by the gateway. To manage a target server, the connecting user must use credentials (either through their passed-through Windows credential or through credentials provided in the Windows Admin Center session using the **Manage as** action) that have administrative access to that target server.
 

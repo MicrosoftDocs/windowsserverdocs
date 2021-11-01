@@ -45,6 +45,26 @@ From the Azure hybrid services tool, you can:
 - Connect your on-premises servers to an Azure Virtual Network with [Azure Network Adapter](https://aka.ms/WACNetworkAdapter)
 - Make Azure VMs look like your on-premises network with [Azure Extended Network](/azure/virtual-network/subnet-extension#extend-your-subnet-to-azure)
 
+## Azure hybrid service regional support
+
+The Windows Admin Center gateway can be registered in both public and private Azure clouds. Today, we support gateway registration in Azure Global, Azure China, and Azure US Government. When your gateway is registered, Windows Admin Center assumes that all other Azure operations, including the use of Azure hybrid services, will be done in that cloud. 
+
+The regional support for each Azure hybrid service is different. Broadly, these are the clouds supported for each Azure hybrid service in Windows Admin Center:
+
+| Azure hybrid service | Azure global | Azure China | Azure US Government |
+| ------------- | ------ | ------ | ------ |
+| Azure Arc | yes | no | yes |
+| Azure Backup|yes|yes|yes|
+| Azure Extended Network|yes|yes|yes|
+| Azure File Sync|yes|yes|yes|
+| Azure Monitor|yes|yes|yes|
+| Azure Network Adapter|yes|yes|yes|
+| Azure Security Center|yes|yes|yes|
+| Azure Site Recovery |yes|yes|no|
+| Azure Update Management |yes|yes|no|
+
+For a more detailed regional support breakdown for each service, see [Azure products available by region](https://azure.microsoft.com/global-infrastructure/services/).
+
 ## Back up and protect your on-premises servers and VMs
 
 - **Back up your Windows servers with [Azure Backup](/azure/backup/backup-overview)**
