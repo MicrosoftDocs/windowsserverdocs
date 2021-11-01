@@ -100,7 +100,7 @@ After all linting, compilation, and runtime errors have been fixed, you're ready
 Once your extension has been tested in Windows Admin Center desktop and service mode, send an email to [wacextensionrequest@microsoft.com](mailto:wacextensionrequest@microsoft.com?subject=Windows%20Admin%20Center%20Extension%20Package%20Review) to coordinate the release of your upgraded extension.
 
 ## Working with two branches of shell
-There are a lot of environmental changes in the new shell. One such change is the use of Node 12.18.3 from the previous 10.22.0 version. These versions are incompatible and you must toggle your global version to run build commands in each environment. 
+Upgrading the Windows Admin Center shell has resulted in numerous environmental changes. One such change is the use of Node 12.18.3 from the previous 10.22.0 version. These versions are incompatible and you must toggle your global version to run build commands in each environment. 
 
 For this, we suggest using Node Version Manager:
 https://github.com/coreybutler/nvm-windows
