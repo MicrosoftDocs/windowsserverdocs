@@ -17,6 +17,7 @@ Windows Admin Center is upgrading to Angular 11.0! This brings in the latest in 
 If you run into any issues during this process, please reach out to your Microsoft contact and they will assist you in routing the request.
 
 ## Preliminary steps
+Before beginning the upgrade to Angular 11, you need to configure your developer environment with the latest Windows Admin Center shell and development tools. Complete the following steps before proceeding to the upgrade process:
 
 1. Install the latest version of Windows Admin Center in dev mode (`msiexec /i WindowsAdminCenter<version>.msi DEV_MODE=1`) with the upgraded shell. Please reach out to your Microsoft contact if this has not been provided to you.
 2. **(Recommended)** Create a `features/ng11` branch in the repo.
@@ -25,11 +26,10 @@ If you run into any issues during this process, please reach out to your Microso
 5. Cleanup the `node_modules` folder to avoid npm conflicts.
 
 ## Automated upgrade process
-
-Download and install WAC CLI tools by running `npm install -g @microsoft/windows-admin-center-sdk@experimental` if you have not already done so before proceeding through the following steps. 
+Download and install the Windows Admin Center CLI tools by running `npm install -g @microsoft/windows-admin-center-sdk@experimental` if you have not already done so before proceeding through the following steps. 
 
 1. At the root level of the repo, run `wac upgrade --audit=false --experimental`.
-    a. If working on an extension repository that is consumed by other extensions, include the `--library` flag as well.
+    - If working on an extension repository that is consumed by other extensions, include the `--library` flag as well.
     
     If the library flag was used, edit the `name` property in `src/package.json` to something unique to the extension.
 
