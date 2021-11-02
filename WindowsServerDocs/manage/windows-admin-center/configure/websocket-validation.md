@@ -20,7 +20,7 @@ User can configure WebSocket override setting at a Windows Admin Center registry
 
 Example of accepted formats are as follows:
 - Always allows origin host defined on current TLS certificate. (subject name, alternate DNS names)
-- Always allows origin port configured to WAC
+- Always allows origin port configured to Windows Admin Center
 - "`*`" - accept any origin host and origin port
 - "`*:9876`" - accept any origin host and origin port 9876
 - "`:9876`" - accept origin port 9876
