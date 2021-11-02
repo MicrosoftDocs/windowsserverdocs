@@ -10,7 +10,7 @@ ms.custom: contperf-fy21q2
 ---
 # How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows
 
->Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 This article describes how to enable and disable Server Message Block (SMB) version 1 (SMBv1), SMB version 2 (SMBv2), and SMB version 3 (SMBv3) on the SMB client and server components.
 
@@ -51,6 +51,9 @@ The SMBv2 protocol was introduced in Windows Vista and Windows Server 2008, whil
 ## How to remove SMBv1
 
 Here's how to remove SMBv1 in Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, and Windows 2012 R2.
+
+> [!NOTE]
+> The computer will restart after you run the PowerShell commands to disable or enable SMBv1.
 
 ### PowerShell methods
 
@@ -112,6 +115,9 @@ To remove SMBv1 from Windows Server:
   ```
 
 #### SMBv2/v3 Protocol (only disables SMBv2/v3 Server)
+
+> [!NOTE]
+> You don't have to restart the computer after you run the **Set-SMBServerConfiguration** cmdlet.
 
 - Detect:
 
