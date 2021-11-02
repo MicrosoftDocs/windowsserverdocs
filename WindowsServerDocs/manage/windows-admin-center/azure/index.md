@@ -161,7 +161,7 @@ You can use Windows Admin Center to manage your Azure VMs as well as on-premises
 For more info, see [Configure Windows Admin Center to manage VMs in Azure](manage-azure-vms.md).
 
 - **Add an layer of security to Windows Admin Center by adding [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/) authentication**
-You can add an additional layer of security to Windows Admin Center by requiring users to authenticate using Azure Active Directory (Azure AD) identities to access the gateway. Azure AD authentication also lets you take advantage of Azure AD’s security features like conditional access and multi-factor authentication.
+You can add an additional layer of security to Windows Admin Center by requiring users to authenticate using Azure Active Directory (Azure AD) identities to access the gateway. Azure AD authentication also lets you take advantage of Azure AD’s security features like conditional access and multifactor authentication.
 For more info, see [Configure Azure AD authentication for Windows Admin Center](../configure/user-access-control.md#azure-active-directory).
 
 - **Manage Azure resources directly through [Azure Cloud Shell](/azure/cloud-shell/overview) embedded in Windows Admin Center**
