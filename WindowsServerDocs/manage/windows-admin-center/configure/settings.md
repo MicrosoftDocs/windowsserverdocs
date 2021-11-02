@@ -23,6 +23,7 @@ User-level settings consist of the following sections:
 - Language/Region
 - Suggestions
 - Advanced
+- General
 
 In the **Account** tab, users can review the credentials they have used to authenticate to Windows Admin Center. If Azure AD is configured to be the identity provider, the user can log out of their Azure AD account from this tab.
 
@@ -34,6 +35,8 @@ In the **Suggestions** tab, users can toggle suggestions about Azure services an
 
 The **Advanced** tab gives Windows Admin Center extension developers additional capabilities.
 
+In the **General** tab, users can select to have their UI session of Windows Admin Center expire after some period of inactivity.
+
 ## Gateway settings
 
 Gateway-level settings consist of the following sections:
@@ -42,6 +45,7 @@ Gateway-level settings consist of the following sections:
 - Access
 - Azure
 - Shared Connections
+- WebSocket validation
 
 Only gateway administrators are able to see and change these settings. Changes to these settings change the configuration of the gateway and affect all users of the Windows Admin Center gateway.
 
@@ -52,3 +56,5 @@ The **Access** tab lets administrators configure who can access the Windows Admi
 From the **Azure** tab, administrators can register the gateway with Azure to enable [Azure integration features](../azure/azure-integration.md) in Windows Admin Center.
 
 Using the **Shared Connections** tab, administrators can configure a single list of connections to be shared across all users of the Windows Admin Center gateway. [Learn more about configuring connections once for all users of a gateway.](shared-connections.md)
+
+For **WebSocket validation**, administrators can now validate their WebSocket connections and customize these settings to various conditions. [Learn more about WebSocket validation](websocket-validation.md)
