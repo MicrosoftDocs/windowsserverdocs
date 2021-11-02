@@ -40,7 +40,8 @@ Use the same SSL certificate for all AD FS federation servers and Web Applicatio
 
 **Requirements:**
 
-SSL certificates on federation servers must meet the following requirements
+SSL certificates on federation servers must meet the following requirements:
+
 - Certificate is publicly trusted (for production deployments)
 - Certificate contains the Server Authentication Enhanced Key Usage (EKU) value
 - Certificate contains the federation service name, such as "fs.contoso.com" in the Subject or Subject Alternative Name (SAN)

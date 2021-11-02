@@ -21,6 +21,7 @@
 ### [Using extensions](configure/using-extensions.md)
 ### [Shared connections](configure/shared-connections.md)
 ### [Automate with PowerShell](configure/use-powershell.md)
+### [Websocket validation](configure/websocket-validation.md)
 
 ## Use
 ### [Get started](use/get-started.md)
