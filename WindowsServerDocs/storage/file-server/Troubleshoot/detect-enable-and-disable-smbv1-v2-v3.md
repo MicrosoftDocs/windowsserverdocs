@@ -52,49 +52,12 @@ The SMBv2 protocol was introduced in Windows Vista and Windows Server 2008, whil
 
 Here's how to remove SMBv1 in Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, and Windows 2012 R2.
 
-> [!NOTE]
-> The computer will restart after you run the PowerShell commands to disable or enable SMBv1.
-
 ### PowerShell methods
 
-#### SMBv1 (client and server)
+Here are the steps to detect, disable and enable SMBv1 client and server by using PowerShell commands.
 
-- Detect:
-
-  ```PowerShell
-  Get-WindowsOptionalFeature -Online -FeatureName smb1protocol
-  ```
-
-- Disable:
-
-  ```PowerShell
-  Disable-WindowsOptionalFeature -Online -FeatureName smb1protocol
-  ```
-
-- Enable:
-
-  ```PowerShell
-  Enable-WindowsOptionalFeature -Online -FeatureName smb1protocol
-  ```
-
-### Windows Server 2012 R2, Windows Server 2016, Windows Server 2019: Server Manager method for disabling SMB
-
-#### SMBv1
-
-![Server Manager - Dashboard method](media/detect-enable-and-disable-smbv1-v2-v3-1.png)
-
-To remove SMBv1 from Windows Server:
-
-1. On the Server Manager Dashboard of the server where you want to remove SMBv1, under **Configure this local server**, select **Add roles and features**.
-2. On the **Before you begin** page, select **Start the Remove Roles and Features Wizard**, and then on the following page, select **Next**.
-3. On the **Select destination server** page under **Server Pool**, ensure that the server you want to remove the feature from is selected, and then select **Next**.
-4. On the **Remove server roles** page, select **Next**.
-5. On the **Remove features** page, clear the check box for **SMB 1.0/CIFS File Sharing Support** and select **Next**.
-6. On the **Confirm removal selections** page, confirm that the feature is listed, and then select **Remove**.
-
-### Windows 8.1 and Windows 10: PowerShell method
-
-#### SMBv1 Protocol
+> [!NOTE]
+> The computer will restart after you run the PowerShell commands to disable or enable SMBv1.
 
 - Detect:
 
@@ -113,6 +76,34 @@ To remove SMBv1 from Windows Server:
   ```PowerShell
   Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
+
+### Windows Server 2012 R2, Windows Server 2016, Windows Server 2019: Server Manager method for disabling SMB
+
+![Server Manager - Dashboard method](media/detect-enable-and-disable-smbv1-v2-v3-1.png)
+
+To remove SMBv1 from Windows Server:
+
+1. On the Server Manager Dashboard of the server where you want to remove SMBv1, under **Configure this local server**, select **Add roles and features**.
+2. On the **Before you begin** page, select **Start the Remove Roles and Features Wizard**, and then on the following page, select **Next**.
+3. On the **Select destination server** page under **Server Pool**, ensure that the server you want to remove the feature from is selected, and then select **Next**.
+4. On the **Remove server roles** page, select **Next**.
+5. On the **Remove features** page, clear the check box for **SMB 1.0/CIFS File Sharing Support** and select **Next**.
+6. On the **Confirm removal selections** page, confirm that the feature is listed, and then select **Remove**.
+
+### Windows 8.1 and Windows 10: Add or Remove Programs method
+
+![Add-Remove Programs client method](media/detect-enable-and-disable-smbv1-v2-v3-2.png)
+
+To disable SMBv1 on Windows 8.1 and Windows 10:
+
+1. In **Control Panel**, select **Programs and Features**.
+2. Under **Control Panel Home**, select **Turn Windows features on or off** to open the **Windows Features** box.
+3. In the **Windows Features** box, scroll down the list, clear the check box for **SMB 1.0/CIFS File Sharing Support** and select **OK**.
+4. After Windows applies the change, on the confirmation page, select **Restart now**.
+
+## How to detect status, enable, and disable SMB protocols on the SMB Server
+
+### For Windows 10
 
 #### SMBv2/v3 Protocol (only disables SMBv2/v3 Server)
 
@@ -136,19 +127,6 @@ To remove SMBv1 from Windows Server:
   ```PowerShell
   Set-SmbServerConfiguration -EnableSMB2Protocol $true
   ```
-
-### Windows 8.1 and Windows 10: Add or Remove Programs method
-
-![Add-Remove Programs client method](media/detect-enable-and-disable-smbv1-v2-v3-2.png)
-
-To disable SMBv1 on Windows 8.1 and Windows 10:
-
-1. In **Control Panel**, select **Programs and Features**.
-2. Under **Control Panel Home**, select **Turn Windows features on or off** to open the **Windows Features** box.
-3. In the **Windows Features** box, scroll down the list, clear the check box for **SMB 1.0/CIFS File Sharing Support** and select **OK**.
-4. After Windows applies the change, on the confirmation page, select **Restart now**.
-
-## How to detect status, enable, and disable SMB protocols on the SMB Server
 
 ### For Windows 8 and Windows Server 2012
 
