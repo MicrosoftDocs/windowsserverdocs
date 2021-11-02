@@ -174,7 +174,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 - When managing the virtual machines on a Windows Server 2012 host, the in-browser VM connect tool will fail to connect to the VM. Downloading the .rdp file to connect to the VM should still work. [20258278]
 
-- Azure Site Recovery – If Azure Site Recovery is set up on the host outside of WAC, you will be unable to protect a VM from within WAC [18972276]
+- Azure Site Recovery – If Azure Site Recovery is set up on the host outside of Windows Admin Center, you will be unable to protect a VM from within Windows Admin Center [18972276]
 
 - Advanced features available in Hyper-V Manager such as Virtual SAN Manager, Move VM, Export VM, VM Replication are currently not supported.
 
