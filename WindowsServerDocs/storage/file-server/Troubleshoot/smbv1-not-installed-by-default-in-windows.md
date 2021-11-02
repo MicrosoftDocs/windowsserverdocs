@@ -5,7 +5,7 @@ author: Deland-Han
 manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
-ms.date: 10/29/2021
+ms.date: 11/02/2021
 ---
 # SMBv1 is not installed by default in Windows 10 version 1709, Windows Server version 1709 and later versions
 
