@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Customize WebSocket validation for Windows Admin Center gateway
 
-To protect WebSocket access, WebScocket connection will now validate **origin** state from the browser so not any external application could get access the WebSocket API defined on the gateway.
+To protect WebSocket access, WebSocket connection will now validate **origin** state from the browser so not any external application could get access the WebSocket API defined on the gateway.
 
 ## Customization of validation
 
