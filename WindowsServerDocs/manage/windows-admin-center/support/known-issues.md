@@ -174,7 +174,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 - When managing the virtual machines on a Windows Server 2012 host, the in-browser VM connect tool will fail to connect to the VM. Downloading the .rdp file to connect to the VM should still work. [20258278]
 
-- Azure Site Recovery – If ASR is setup on the host outside of WAC, you will be unable to protect a VM from within WAC [18972276]
+- Azure Site Recovery – If Azure Site Recovery is setup on the host outside of WAC, you will be unable to protect a VM from within WAC [18972276]
 
 - Advanced features available in Hyper-V Manager such as Virtual SAN Manager, Move VM, Export VM, VM Replication are currently not supported.
 
@@ -254,7 +254,7 @@ Enter-PSSession -computername <node fqdn>
 ```
 
 ### Nested Virtualization
-When validating Azure Stack HCI OS cluster deployment on virtual machines, nested virtualization needs to be turned on before roles/features are enabled using the below powershell command:
+When validating Azure Stack HCI OS cluster deployment on virtual machines, nested virtualization needs to be turned on before roles/features are enabled using the below PowerShell command:
 
 ```PowerShell
 Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
@@ -291,13 +291,13 @@ The cluster deployment wizard in Windows Admin Center version 2007 does not prov
 ### Azure login and gateway registration
 In the 2009 release, you may run into issues logging into Azure or registering your Windows Admin Center gateway with Azure. The guidance below should help you mitigate these issues: 
 
-* Before using any Azure capabilities within Windows Admin Center, including gateway registration, make sure you are signed into your Azure account in a different tab or window. We suggest signing in through the [Azure Portal](https://portal.azure.com/).  
+* Before using any Azure capabilities within Windows Admin Center, including gateway registration, make sure you are signed into your Azure account in a different tab or window. We suggest signing in through the [Azure portal](https://portal.azure.com/).  
 
 * If you successfully sign into Azure during gateway registration but do not see visual confirmation on the **Azure** page of your Windows Admin Center settings, try navigating to a different page in settings before navigating back to the **Azure** page. 
 
 * The Azure sign-in pop-up may appear more frequently in this build and may require administrators to grant Windows Admin Center permissions more frequently. 
 
-* If you have already given admin approval for Windows Admin Center in the Azure Portal and you are still seeing an error message saying “Need admin approval”, try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page. 
+* If you have already given admin approval for Windows Admin Center in the Azure portal and you are still seeing an error message saying “Need admin approval”, try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page. 
 
 ### Azure File Sync permissions
 
