@@ -77,7 +77,7 @@ Here are the steps to detect, disable and enable SMBv1 client and server by usin
   Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
 
-### Windows Server 2012 R2, Windows Server 2016, Windows Server 2019: Server Manager method for disabling SMB
+### Windows Server 2012 R2, Windows Server 2016, Windows Server 2019: Server Manager method
 
 ![Server Manager - Dashboard method](media/detect-enable-and-disable-smbv1-v2-v3-1.png)
 
@@ -103,34 +103,9 @@ To disable SMBv1 on Windows 8.1 and Windows 10:
 
 ## How to detect status, enable, and disable SMB protocols on the SMB Server
 
-### For Windows 10
+### For Windows 10, Windows Server 2019, Windows 8 and Windows Server 2012
 
-#### SMBv2/v3 Protocol (only disables SMBv2/v3 Server)
-
-> [!NOTE]
-> You don't have to restart the computer after you run the **Set-SMBServerConfiguration** cmdlet.
-
-- Detect:
-
-  ```PowerShell
-  Get-SmbServerConfiguration | Select EnableSMB2Protocol
-  ```
-
-- Disable:
-
-  ```PowerShell
-  Set-SmbServerConfiguration -EnableSMB2Protocol $false
-  ```
-
-- Enable:
-
-  ```PowerShell
-  Set-SmbServerConfiguration -EnableSMB2Protocol $true
-  ```
-
-### For Windows 8 and Windows Server 2012
-
-Windows 8 and Windows Server 2012 introduced the new **Set-SMBServerConfiguration** Windows PowerShell cmdlet. The cmdlet enables you to enable or disable the SMBv1, SMBv2, and SMBv3 protocols on the server component. 
+Windows 8 and Windows Server 2012 introduced the new **Set-SMBServerConfiguration** Windows PowerShell cmdlet. The cmdlet enables you to enable or disable the SMBv1, SMBv2, and SMBv3 protocols on the server component.
 
 > [!NOTE]
 > When you enable or disable SMBv2 in Windows 8 or Windows Server 2012, SMBv3 is also enabled or disabled. This behavior occurs because these protocols share the same stack.
@@ -320,6 +295,7 @@ For more information, see [Server storage at Microsoft](https://techcommunity.mi
   ```
 
 > [!NOTE]
+>
 > - You must run these commands at an elevated command prompt.
 > - You must restart the computer after you make these changes.
 
