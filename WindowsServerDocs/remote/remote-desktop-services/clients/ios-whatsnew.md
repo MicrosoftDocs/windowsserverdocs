@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/19/2021
+ms.date: 11/04/2021
 ms.localizationpriority: medium
 ---
 # What's new in the iOS client
@@ -14,7 +14,13 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 
 ## How to report issues
 
-We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Help** > **Report an Issue**.
+We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Settings** > **Submit Feedback**.
+
+## Updates for version 10.3.5
+
+Date published: October 28, 2021
+
+In this release we've added support for time zone redirection. The addition of this feature addresses a defect in the Windows 11 Shell that causes flickering and makes the remote session unusable.
 
 ## Updates for version 10.3.1
 
