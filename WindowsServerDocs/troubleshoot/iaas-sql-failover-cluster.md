@@ -72,62 +72,7 @@ By default Windows Server 2016 sets the **SameSubnetThreshold** to 10 and **Same
 
 ## Resolution
 
-In an IaaS environment, relax the Cluster network configuration settings.
-
-### Steps to verify current configuration
-
-Check the current Cluster network configuration settings use the get-cluster command:
-
-```powershell
-C:\Windows\system32> get-cluster | fl *subnet*
-```
-
-Default, minimum, maximum, and recommended values for each support OS
-
-| Description | OS | Min | Max | Default | Recommended |
-|--|--|--|--|--|--|
-| CrossSubnetThreshold | 2008 R2 | 3 | 20 | 5 | 20 |
-| CrossSubnet Threshold | 2012 | 3 | 120 | 5 | 20 |
-| CrossSubnet Threshold | 2012 R2 | 3 | 120 | 5 | 20 |
-| CrossSubnet Threshold | 2016 | 3 | 120 | 20 | 20 |
-| SameSubnet Threshold | 2008 R2 | 3 | 10 | 5 | 10 |
-| SameSubnet Threshold | 2012 | 3 | 120 | 5 | 10 |
-| SameSubnet Threshold | 2012 R2 | 3 | 120 | 5 | 10 |
-| SameSubnetThreshold | 2016 | 3 | 120 | 10 | 10 |
-
-The values for Threshold reflect the current recommendations regarding the scope of  deployment as described in the following article:
-
-[Fine tuning failover cluster network thresholds in Windows Server 2012 R2](https://support.microsoft.com/en-us/help/3153887/fine-tuning-failover-cluster-network-thresholds-in-windows-server-2012)
-
-The **Threshold** defines the number of heartbeats, which are missed before the cluster takes recovery action.  The threshold is a number of heartbeats.  Within the same cluster, there can be different thresholds between nodes on the same subnet and between nodes, which are on different subnets.
-
-## Recommendations for changing to more relaxed settings for multi-tenant environments like Azure (IaaS)
-
-> [!NOTE]
-> Increasing the resiliency of your Cluster environment by adjusting the Cluster network configuration settings can result in increased downtime. For more information, see [Tuning Failover Cluster Network Thresholds](https://techcommunity.microsoft.com/t5/failover-clustering/tuning-failover-cluster-network-thresholds/ba-p/371834).
-
-1. Modify to more relaxed settings:
-
-    > [!NOTE]
-    > Changing the cluster threshold will take effect immediately, you don't have to restart the cluster or any resources.
-
-    The following settings are recommended for both same subnet and cross-region deployments of availability groups.
-
-    ```powershell
-    C:\Windows\system32> (get-cluster).SameSubnetThreshold = 20
-    ```
-
-    ```powershell
-    C:\Windows\system32> (get-cluster).CrossSubnetThreshold = 20
-    ```
-
-2. Verify the changes:
-
-    ```powershell
-    C:\Windows\system32> get-cluster | fl *subnet*
-    ```
-
-    :::image type="content" source="media/iaas-sql-failover-cluster/cmd.png" alt-text="Screenshot of the PowerShell window showing the results of the command." border="false":::
+In an IaaS environment, relax the Cluster network configuration settings. See [Heartbeat and threshold](/azure/azure-sql/virtual-machines/windows/hadr-cluster-best-practices#heartbeat-and-threshold)
 
 ## References
 
