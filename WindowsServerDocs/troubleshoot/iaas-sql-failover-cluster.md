@@ -72,7 +72,7 @@ By default Windows Server 2016 sets the **SameSubnetThreshold** to 10 and **Same
 
 ## Resolution
 
-In an IaaS environment, relax the Cluster network configuration settings. See [Heartbeat and threshold](/azure/azure-sql/virtual-machines/windows/hadr-cluster-best-practices#heartbeat-and-threshold)
+To resolve this issue, relax the Cluster network configuration settings. See [Heartbeat and threshold](/azure/azure-sql/virtual-machines/windows/hadr-cluster-best-practices#heartbeat-and-threshold)
 
 ## References
 
