@@ -27,10 +27,10 @@ This table lists Microsoft server applications that support installation and fun
 |Office Online Server|  No| Yes | Yes | [Plan Office Online Server](/officeonlineserver/plan-office-online-server)|
 | Project Server 2016 | No | Yes | Yes | [Software requirements for Project Server 2016](/project/software-requirements-for-project-server-2016) |
 | Project Server 2019 | No | Yes | Yes | [Software requirements for Project Server 2019](/project/software-requirements-for-project-server-2019) |
-| Project Server Subscription Edition | Yes | Yes | Public preview | [Software requirements for Project Server Subscription Edition](/project/software-requirements-project-server-subscription-edition) |
+| Project Server Subscription Edition | Yes | Yes | Yes | [Software requirements for Project Server Subscription Edition](/project/software-requirements-project-server-subscription-edition) |
 | SharePoint Server 2016 | No | Yes | Yes | [Hardware and software requirements for SharePoint Server 2016](/sharepoint/install/hardware-and-software-requirements) |
 | SharePoint Server 2019 | No | Yes | Yes | [Hardware and software requirements for SharePoint Server 2019](/sharepoint/install/hardware-and-software-requirements-2019) |
-| SharePoint Server Subscription Edition | Yes | Yes | Public preview | [System requirements for SharePoint Server Subscription edition](/sharepoint/install/system-requirements-for-sharepoint-subscription-edition) |
+| SharePoint Server Subscription Edition | Yes | Yes | Yes | [System requirements for SharePoint Server Subscription edition](/sharepoint/install/system-requirements-for-sharepoint-subscription-edition) |
 | Skype for Business 2019 | No | Yes | Yes | [Install prerequisites for Skype for Business Server](/skypeforbusiness/deploy/install/install-prerequisites) |
 | SQL Server 2014 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2014](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2014&preserve-view=true) |
 | SQL Server 2016 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2016](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2016&preserve-view=true) |
