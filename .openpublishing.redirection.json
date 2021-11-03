@@ -10358,7 +10358,7 @@
     {
       "source_path": "WindowsServerDocs/get-started/kmsclientkeys.md",
       "redirect_url": "/windows-server/get-started/kms-client-activation-keys/",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/get-started-19/activation-19.md",
