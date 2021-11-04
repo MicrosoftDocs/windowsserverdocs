@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/07/2020
+ms.date: 11/04/2020
 ---
 # Contact the Datacenter and Cloud Networking Team
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Microsoft's **Software Defined Networking \(SDN\)** and **Container Networking** solutions are created by the Datacenter and Cloud Networking Team. Please use this page to be in touch with the team--to ask questions, provide feedback, report bugs or make feature requests.
 
