@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 08/07/2020
+ms.date: 11/04/2020
 ---
 # Contact the Datacenter and Cloud Networking Team
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Microsoft's **Software Defined Networking \(SDN\)** and **Container Networking** solutions are created by the Datacenter and Cloud Networking Team. Please use this page to be in touch with the team--to ask questions, provide feedback, report bugs or make feature requests.
 
@@ -36,7 +36,7 @@ Our [Container Networking documentation](/virtualization/windowscontainers/manag
 ## Container-Specific Forums
 Feel free to use any avenue on this page to provide feedback related to containers and container networking. However, if you're looking for Microsoft's primary forums for the container community specifically, refer to the following:
 - [User voice](https://windowsserver.uservoice.com/forums/304624-containers) - best for *feature requests*
-- [Github (Virtualization repo)](https://github.com/Microsoft/Virtualization-Documentation) - best for seeking *troubleshooting help* and *reporting bugs*
+- [GitHub (Virtualization repo)](https://github.com/Microsoft/Virtualization-Documentation) - best for seeking *troubleshooting help* and *reporting bugs*
 
 ### Not seeing the forum for you?
 Whenever possible, we encourage use of our public forums so that the broader community can benefit from access to the questions and comments that come our way. However, we also recognize that there are situations where email is simply the preferred way to get in touch with us. If you're in one of those situations, please send us an email at sdn_feedback@microsoft.com and we'll be happy to hear from you.
