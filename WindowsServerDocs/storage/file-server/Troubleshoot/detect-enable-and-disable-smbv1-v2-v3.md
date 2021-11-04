@@ -301,7 +301,7 @@ For more information, see [Server storage at Microsoft](https://techcommunity.mi
 
 ## Disable SMBv1 by using Group Policy
 
-This section introduce how to use Group Policy on clients to disable SMBv1 by modifying registry keys. You can use this method on different versions of Windows.
+This section introduces how to use Group Policy to disable SMBv1. You can use this method on different versions of Windows.
 
 ### Disable SMBv1 server
 
