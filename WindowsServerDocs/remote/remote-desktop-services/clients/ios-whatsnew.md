@@ -20,7 +20,7 @@ We're committed to making the Remote Desktop client for iOS the best it can be, 
 
 Date published: October 28, 2021
 
-In this release we've added support for time zone redirection. The addition of this feature addresses a defect in the Windows 11 Shell that causes flickering and makes the remote session unusable.
+In this release, we've added support for time zone redirection. This new feature fixes an issue in in Windows 11 remote sessions that caused the screen to flicker, making the session unusable.
 
 ## Updates for version 10.3.1
 
