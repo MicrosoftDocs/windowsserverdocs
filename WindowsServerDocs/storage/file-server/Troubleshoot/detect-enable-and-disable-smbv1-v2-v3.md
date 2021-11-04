@@ -243,53 +243,53 @@ Default: 1 = Enabled (No registry key is created)
 
 ## How to detect status, enable, and disable SMB protocols on the SMB Client
 
-### For Windows 10, Windows Server 2019, Windows 8.1, Windows Server 2016, Windows Server 2012
+Here is how to detect status, enable, and disable SMB protocols on the SMB Client that is running Windows 10, Windows Server 2019, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012.
 
 > [!NOTE]
 > When you enable or disable SMBv2 in Windows 8 or in Windows Server 2012, SMBv3 is also enabled or disabled. This behavior occurs because these protocols share the same stack.
 
-#### SMBv1 on SMB Client
+### SMBv1 on SMB Client
 
 - Detect
 
-  ```cmd
+  ```console
   sc.exe qc lanmanworkstation
   ```
 
 - Disable:
 
-  ```cmd
+  ```console
   sc.exe config lanmanworkstation depend= bowser/mrxsmb20/nsi
   sc.exe config mrxsmb10 start= disabled
   ```
 
 - Enable:
 
-  ```cmd
+  ```console
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi
   sc.exe config mrxsmb10 start= auto
   ```
 
 For more information, see [Server storage at Microsoft](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858)
 
-#### SMBv2/v3 on SMB Client
+### SMBv2/v3 on SMB Client
 
 - Detect:
 
-  ```cmd
+  ```console
   sc.exe qc lanmanworkstation
   ```
 
 - Disable:
 
-  ```cmd
+  ```console
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/nsi
   sc.exe config mrxsmb20 start= disabled
   ```
 
 - Enable:
 
-  ```cmd
+  ```console
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi
   sc.exe config mrxsmb20 start= auto
   ```
@@ -299,7 +299,9 @@ For more information, see [Server storage at Microsoft](https://techcommunity.mi
 > - You must run these commands at an elevated command prompt.
 > - You must restart the computer after you make these changes.
 
-## Disable SMBv1 with Group Policy
+## Disable SMBv1 by using Group Policy
+
+This section introduce how to use Group Policy on clients to disable SMBv1 by modifying registry keys. You can use this method on different versions of Windows.
 
 ### Disable SMBv1 server
 
