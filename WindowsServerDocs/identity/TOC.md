@@ -421,6 +421,7 @@
 #### [Customize HTTP security response headers with AD FS](ad-fs/operations/customize-http-security-headers-ad-fs.md)
 #### [Delegate AD FS Powershell Commandlet Access to Non-Admin Users](ad-fs/operations/delegate-ad-fs-pshell-access.md)
 #### [Device Authentication Controls in AD FS](ad-fs/operations/device-authentication-controls-in-AD-FS.md)
+#### [What is KDFv2?](ad-fs/operations/what-is-kdfv2.md)
 
 #### [Improved interoperability with SAML 2.0](ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
 #### [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across company Applications](ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-company-Applications.md)

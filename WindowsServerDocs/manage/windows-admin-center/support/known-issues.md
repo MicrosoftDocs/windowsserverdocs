@@ -36,7 +36,7 @@ If you encounter an issue not described on this page, please [let us know](https
 
 - If you leave the tool open and idle for a long period of time, you may get several **Error: The runspace state is not valid for this operation** errors. If this occurs, refresh your browser. If you encounter this, [send us feedback](https://aka.ms/WACfeedback).
 
-- There may be minor variance between version numbers of OSS running in Windows Admin Center modules, and what is listed within the 3rd Party Software Notice.
+- There may be minor variance between version numbers of OSS running in Windows Admin Center modules, and what is listed within the third Party Software Notice.
 
 ### Extension Manager
 
@@ -51,13 +51,13 @@ If you encounter an issue not described on this page, please [let us know](https
 
 ### Microsoft Edge
 
-- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding https://login.microsoftonline.com, https://login.live.com, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azure-features-dont-work-properly-in-edge). [17990376]
+- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding https://login.microsoftonline.com, https://login.live.com, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client-side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azure-features-dont-work-properly-in-edge). [17990376]
 
 ### Google Chrome
 
-- Prior to version 70 (released late October, 2018) Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the WebSockets protocol and NTLM authentication. This effects the following tools: Events, PowerShell, Remote Desktop.
+- Prior to version 70 (released late October 2018) Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the WebSockets protocol and NTLM authentication. This effects the following tools: Events, PowerShell, Remote Desktop.
 
-- Chrome may pop-up multiple credential prompts, especially during the add connection experience in a **workgroup** (non-domain) environment.
+- Chrome may pop up multiple credential prompts, especially during the add connection experience in a **workgroup** (non-domain) environment.
 
 - If you have Windows Admin Center deployed as a service, popups from the gateway URL need to be enabled for any Azure integration functionality to work.
 
@@ -65,11 +65,11 @@ If you encounter an issue not described on this page, please [let us know](https
 
 Windows Admin Center is not tested with Mozilla Firefox, but most functionality should work.
 
-- Windows 10 Installation: Mozilla Firefox has it's own certificate store, so you must import the ```Windows Admin Center Client``` certificate into Firefox to use Windows Admin Center on Windows 10.
+- Windows 10 Installation: Mozilla Firefox has its own certificate store, so you must import the ```Windows Admin Center Client``` certificate into Firefox to use Windows Admin Center on Windows 10.
 
 ## WebSocket compatibility when using a proxy service
 
-Remote Desktop, PowerShell, and Events modules in Windows Admin Center utilize the WebSocket protocol, which is often not supported when using a proxy service.
+Remote Desktop, PowerShell, Packet Monitoring, and Events modules in Windows Admin Center utilize the WebSocket protocol, which is often not supported when using a proxy service.
 
 ## Support for Windows Server versions before 2016 (2012 R2, 2012, 2008 R2)
 
@@ -97,7 +97,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### Events
 
-- Events is effected by [websocket compatibility when using a proxy service.](#websocket-compatibility-when-using-a-proxy-service)
+- Events are effected by [websocket compatibility when using a proxy service.](#websocket-compatibility-when-using-a-proxy-service)
 
 - You may get an error that references “packet size” when exporting large log files.
 
@@ -109,13 +109,13 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ### PowerShell
 
-- PowerShell is effected by [websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service)
+- PowerShell is affected by [websocket compatibility when using a proxy service](#websocket-compatibility-when-using-a-proxy-service)
 
 - Pasting with a single right-click as in the desktop PowerShell console does not work. Instead you will get the browser's context menu, where you can select paste. Ctrl-V works as well.
 
 - Ctrl-C to copy does not work, it will always send the Ctrl-C break command to the console. Copy from the right-click context menu works.
 
-- When you make the Windows Admin Center window smaller, the terminal content will reflow, but when you make it larger again, the content may not return to it's previous state. If things get jumbled, you can try Clear-Host, or disconnect and reconnect using the button above the terminal.
+- When you make the Windows Admin Center window smaller, the terminal content will reflow, but when you make it larger again, the content may not return to its previous state. If things get jumbled, you can try Clear-Host, or disconnect and reconnect using the button above the terminal.
 
 ### Registry Editor
 
@@ -131,11 +131,11 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 - Some configurations can block Windows Admin Center's remote desktop client with group policy. If you encounter this, enable ```Allow users to connect remotely by using Remote Desktop Services``` under ```Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
 
-- Remote Desktop is effected by [websocket compatibility.](#websocket-compatibility-when-using-a-proxy-service)
+- Remote Desktop is affected by [websocket compatibility.](#websocket-compatibility-when-using-a-proxy-service)
 
 - The Remote Desktop tool does not currently support any text, image, or file copy/paste between the local desktop and the remote session.
 
-- To do any copy/paste within the remote session, you can copy as normal (right click + copy or Ctrl+C), but paste requires right click + paste (Ctrl+V does NOT work)
+- To do any copy/paste within the remote session, you can copy as normal (right-click + copy or Ctrl+C), but paste requires right-click + paste (Ctrl+V does NOT work)
 
 - You cannot send the following key commands to the remote session
   - Alt+Tab
@@ -174,7 +174,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 - When managing the virtual machines on a Windows Server 2012 host, the in-browser VM connect tool will fail to connect to the VM. Downloading the .rdp file to connect to the VM should still work. [20258278]
 
-- Azure Site Recovery – If ASR is setup on the host outside of WAC, you will be unable to protect a VM from within WAC [18972276]
+- Azure Site Recovery – If Azure Site Recovery is set up on the host outside of Windows Admin Center, you will be unable to protect a VM from within Windows Admin Center [18972276]
 
 - Advanced features available in Hyper-V Manager such as Virtual SAN Manager, Move VM, Export VM, VM Replication are currently not supported.
 
@@ -184,7 +184,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 ## Computer Management Solution
 
-The Computer Management solution contains a subset of the tools from the Server Manager solution, so the same known issues apply, as well as the following Computer Management solution specific issues:
+The Computer Management solution contains a subset of the tools from the Server Manager solution, so the same known issues apply, and the following Computer Management solution-specific issues:
 
 - If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Azure Active Directory (AAD) to log on to you Windows 10 machine, you must use "manage-as" to provide credentials for a local administrator account [16568455]
 
@@ -254,7 +254,7 @@ Enter-PSSession -computername <node fqdn>
 ```
 
 ### Nested Virtualization
-When validating Azure Stack HCI OS cluster deployment on virtual machines, nested virtualization needs to be turned on before roles/features are enabled using the below powershell command:
+When validating Azure Stack HCI OS cluster deployment on virtual machines, nested virtualization needs to be turned on before roles/features are enabled using the below PowerShell command:
 
 ```PowerShell
 Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
@@ -291,13 +291,13 @@ The cluster deployment wizard in Windows Admin Center version 2007 does not prov
 ### Azure login and gateway registration
 In the 2009 release, you may run into issues logging into Azure or registering your Windows Admin Center gateway with Azure. The guidance below should help you mitigate these issues: 
 
-* Before using any Azure capabilities within Windows Admin Center, including gateway registration, make sure you are signed into your Azure account in a different tab or window. We suggest signing in through the [Azure Portal](https://portal.azure.com/).  
+* Before using any Azure capabilities within Windows Admin Center, including gateway registration, make sure you are signed into your Azure account in a different tab or window. We suggest signing in through the [Azure portal](https://portal.azure.com/).  
 
 * If you successfully sign into Azure during gateway registration but do not see visual confirmation on the **Azure** page of your Windows Admin Center settings, try navigating to a different page in settings before navigating back to the **Azure** page. 
 
 * The Azure sign-in pop-up may appear more frequently in this build and may require administrators to grant Windows Admin Center permissions more frequently. 
 
-* If you have already given admin approval for Windows Admin Center in the Azure Portal and you are still seeing an error message saying “Need admin approval”, try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page. 
+* If you have already given admin approval for Windows Admin Center in the Azure portal and you are still seeing an error message saying “Need admin approval”, try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page. 
 
 ### Azure File Sync permissions
 

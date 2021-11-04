@@ -24,6 +24,10 @@ There are two roles for access to the Windows Admin Center gateway service:
 
 **Gateway administrators** can configure who gets access as well as how users authenticate to the gateway. Only gateway administrators can view and configure the Access settings in Windows Admin Center. Local administrators on the gateway machine are always administrators of the Windows Admin Center gateway service.
 
+There is also an additional role specific to the management of CredSSP:
+
+**Windows Admin Center CredSSP Administrators** are registered with the Windows Admin Center CredSSP endpoint and have permissions to perform predefined CredSSP operations. This group is especially useful for installations of Windows Admin Center in desktop mode, where only the user account which installed Windows Admin Center is given these permissions by default.
+
 > [!NOTE]
 > Access to the gateway doesn't imply access to managed servers visible by the gateway. To manage a target server, the connecting user must use credentials (either through their passed-through Windows credential or through credentials provided in the Windows Admin Center session using the **Manage as** action) that have administrative access to that target server.
 
@@ -43,7 +47,7 @@ On the **Administrators** tab you can control who can access Windows Admin Cente
 
 ## Azure Active Directory
 
-If your organization uses Azure Active Directory (Azure AD), you can choose to add an **additional** layer of security to Windows Admin Center by requiring Azure AD authentication to access the gateway. In order to access Windows Admin Center, the user's **Windows account** must also have access to gateway server (even if Azure AD authentication is used). When you use Azure AD, you'll manage Windows Admin Center user and administrator access permissions from the Azure Portal, rather than from within the Windows Admin Center UI.
+If your organization uses Azure Active Directory (Azure AD), you can choose to add an **additional** layer of security to Windows Admin Center by requiring Azure AD authentication to access the gateway. In order to access Windows Admin Center, the user's **Windows account** must also have access to gateway server (even if Azure AD authentication is used). When you use Azure AD, you'll manage Windows Admin Center user and administrator access permissions from the Azure portal, rather than from within the Windows Admin Center UI.
 
 ### Accessing Windows Admin Center when Azure AD authentication is enabled
 
@@ -91,9 +95,9 @@ Users will be prompted to sign in using their Azure Active Directory identity wh
 
 Using the **Azure** tab of Windows Admin Center general settings, users and administrators can view their currently logged-in account and as well as sign-out of this Azure AD account.
 
-### Conditional access and multi-factor authentication
+### Conditional access and multifactor authentication
 
-One of the benefits of using Azure AD as an additional layer of security to control access to the Windows Admin Center gateway is that you can leverage Azure AD's powerful security features like conditional access and multi-factor authentication.
+One of the benefits of using Azure AD as an additional layer of security to control access to the Windows Admin Center gateway is that you can leverage Azure AD's powerful security features like conditional access and multifactor authentication.
 
 [Learn more about configuring conditional access with Azure Active Directory.](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
 

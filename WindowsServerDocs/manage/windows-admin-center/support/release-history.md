@@ -10,7 +10,9 @@ ms.date: 01/06/2020
 
 Here's a listing of our latest released features:
 
-- Version [2103](https://aka.ms/wac2103) is the most recent GA release - it introduces automatic platform an extension updates and includes updates to several of our core tools like the VM tool and Events.
+- Version [2110](https://aka.ms/wac2110) is the most recent GA release - it includes Angular 11 upgrades, performance and security enhancements. It also includes updated developer SDK for extension development using Angular 11 or upgrading of existing extensions, CredSSP enhancements, a better Virtual Machine tool, and two brand new tools for Security and GPU management.
+- Version [2103.2](https://aka.ms/wac2103.2) includes key bug fixes and feature updates to the Azure sign in process, support for Azure China, support for seamless over-the-air updates for Azure Stack HCI as well as additional updates to the Events and Remote Desktop tool experience.
+- Version [2103](https://aka.ms/wac2103) introduces automatic platform an extension updates and includes updates to several of our core tools like the VM tool and Events.
 - Version [2009](https://aka.ms/wac2009) includes support for Azure Kubernetes Service on Azure Stack HCI and major updates to the Virtual machines, File shares, and Containers tools.
 - Version [2007](https://aka.ms/wac2007) includes support for the new Azure Stack HCI and new features for several tools.
 - Version [1910.2](https://aka.ms/wac1910.2) includes updates to the platform’s accessibility and numerous bug fixes
