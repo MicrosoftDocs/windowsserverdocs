@@ -99,7 +99,7 @@ Two key principles have guided and continue to guide the development of Windows:
 
 - **Privacy.** Users should be in control of how their data is used. Policies for information use should be clear to the user. Users should be in control of when and if they receive information to make best use of their time. It should be easy for users to specify appropriate use of their information including controlling the use of email they send.
 
-Microsoft has remained steadfast against these principles as recently noted by Microsoft's CEO, Satya Nadella,
+Microsoft supports these principles as recently noted by Microsoft's CEO, Satya Nadella,
 
 > “_As the world continues to change and business requirements evolve, some things are consistent: a customer's demand for security and privacy._”
 
