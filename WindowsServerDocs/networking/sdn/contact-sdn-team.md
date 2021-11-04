@@ -36,7 +36,7 @@ Our [Container Networking documentation](/virtualization/windowscontainers/manag
 ## Container-Specific Forums
 Feel free to use any avenue on this page to provide feedback related to containers and container networking. However, if you're looking for Microsoft's primary forums for the container community specifically, refer to the following:
 - [User voice](https://windowsserver.uservoice.com/forums/304624-containers) - best for *feature requests*
-- [Github (Virtualization repo)](https://github.com/Microsoft/Virtualization-Documentation) - best for seeking *troubleshooting help* and *reporting bugs*
+- [GitHub (Virtualization repo)](https://github.com/Microsoft/Virtualization-Documentation) - best for seeking *troubleshooting help* and *reporting bugs*
 
 ### Not seeing the forum for you?
 Whenever possible, we encourage use of our public forums so that the broader community can benefit from access to the questions and comments that come our way. However, we also recognize that there are situations where email is simply the preferred way to get in touch with us. If you're in one of those situations, please send us an email at sdn_feedback@microsoft.com and we'll be happy to hear from you.

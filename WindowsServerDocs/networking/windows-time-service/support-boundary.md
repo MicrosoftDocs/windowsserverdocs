@@ -3,13 +3,13 @@ title: Support boundary for high-accuracy time
 description: This article describes the support boundary for the Windows Time (W32Time) service in environments that require highly accurate and stable system time.
 author: dahavey
 ms.author: dahavey
-ms.date: 10/14/2021
+ms.date: 11/04/2021
 ms.topic: article
 ---
 
 # Support boundary for high-accuracy time
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows 10 version 1607 or later, Azure Stack HCI, version 20H2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows 10 version 1607 or later, Azure Stack HCI, versions 21H2 and 20H2
 
 This article describes the support boundaries for the Windows Time service (W32Time) in environments that require highly accurate and stable system time.
 
