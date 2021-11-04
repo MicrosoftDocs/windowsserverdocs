@@ -25,7 +25,11 @@ The guided in-product steps will create an Azure AD app in your directory, which
 The Azure AD app created is used for all points of Azure integration in Windows Admin Center, including [Azure AD authentication to the gateway](../configure/user-access-control.md#azure-active-directory). Windows Admin Center automatically configures the permissions needed to create and manage Azure resources on your behalf:
 
 - Azure Active Directory Graph
+    - Application.Read.All
+    - Application.ReadWrite.All
     - Directory.AccessAsUser.All
+    - Directory.Read.All
+    - Directory.ReadWrite.All
     - User.Read
 - Azure Service Management
     - user_impersonation
@@ -45,3 +49,13 @@ If you wish to configure an Azure AD app manually, rather than using the Azure A
             }
     ],
     ```
+
+> [!NOTE]
+> If you have Microsoft Defender Application Guard enabled for your browser, you won't be able to register Windows Admin Center with Azure or sign into Azure.
+
+
+## Stay updated
+
+[Follow us on Twitter](https://twitter.com/servermgmt)
+
+[Read our Blogs](https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog)
