@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/19/2021
+ms.date: 11/04/2021
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -13,6 +13,23 @@ ms.localizationpriority: medium
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+
+## Updates for version 10.7.0
+
+Date published: October 21, 2021
+
+It's time for another update. Thanks to everyone who reported bugs and worked with us to diagnose and fix issues. In this version we made the following changes:
+
+- Addressed issues brought up by users in crash reports and general feedback.
+- Invertible cursors, such as the text cursor, are now outlined to make them visible on dark backgrounds.
+- Made improvements to the code for the Connection Center for both PCs and workspaces.
+- Added support for moving the local window while using RemoteApps.
+  - By default, local window movement in RemoteApp scenarios is disabled. To enable local window movement, set the **EnableRemoteAppLocalMove** policy to **True**.
+- Updated the Connection Information prompt that appears when you go to **Connections** > **Show Connection Information**.
+- Added [screen capture protection for Azure Virtual Desktop scenarios](/azure/virtual-desktop/screen-capture-protection).
+- Addressed an issue that allowed folders to be redirected multiple times.
+- Added a link to the new support forum at **Help** > **Submit feedback**.
+- Updates improving security, connectivity and performance while connecting to Azure Virtual Desktop.
 
 ## Updates for version 10.6.7
 

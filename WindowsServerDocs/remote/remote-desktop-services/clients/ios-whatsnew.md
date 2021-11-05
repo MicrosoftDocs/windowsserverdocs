@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/19/2021
+ms.date: 11/04/2021
 ms.localizationpriority: medium
 ---
 # What's new in the iOS client
@@ -14,7 +14,13 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 
 ## How to report issues
 
-We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Help** > **Report an Issue**.
+We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Settings** > **Submit Feedback**.
+
+## Updates for version 10.3.5
+
+Date published: October 28, 2021
+
+In this release, we've added support for time zone redirection. This new feature fixes an issue in in Windows 11 remote sessions that caused the screen to flicker, making the session unusable.
 
 ## Updates for version 10.3.1
 
@@ -119,7 +125,7 @@ We've put together some bug fixes and feature updates for the 10.1.3 release. He
 - The input mode (Mouse Pointer or Touch mode) is now global across all active PC and remote app connections.
 - Fixed an issue that prevented microphone redirection from working consistently.
 - Fixed a bug that caused audio output to play from the iPhone earpiece instead of the internal speaker.
-- The client now supports automatically switching audio output between the iPhone or iPad internal speakers, bluetooth speakers, and Airpods.
+- The client now supports automatically switching audio output between the iPhone or iPad internal speakers, bluetooth speakers, and AirPods.
 - Audio now continues to play in the background when switching away from the client or locking the device.
 - The input mode automatically switches to Touch mode when using a SwiftPoint mouse on iPhones or iPads (not running iPadOS, version 13.4 or later).
 - Addressed graphics output issues that occurred when the server was configured to use AVC444 full screen mode.
