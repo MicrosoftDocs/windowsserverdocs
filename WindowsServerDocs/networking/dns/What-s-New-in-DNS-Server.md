@@ -1,5 +1,5 @@
 ---
-title: What's New in DNS Server in Windows Server
+title: What's New in DNS Server in Windows Server 2016
 description: This topic provides an overview of new features in DNS Server in Windows Server 2016 and later versions
 manager: brianlic
 ms.topic: article
@@ -48,17 +48,17 @@ For more information, see the [DNS Policy Scenario Guide](deploy/DNS-Policies-Ov
 
 You can configure RRL settings to control how to respond to requests to a DNS client when your server receives several requests targeting the same client. By doing this, you can prevent someone from sending a Denial of Service (Dos) attack using your DNS servers. For instance, a bot net can send requests to your DNS server using the IP address of a third computer as the requestor. Without RRL, your DNS servers might respond to all the requests, flooding the third computer. When you use RRL, you can configure the following settings:
 
--   **Responses per second**. This is the maximum number of times the same response will be given to a client within one second.
+-   **Responses per second**. This is the maximum number of times the same response is given to a client within one second.
 
--   **Errors per second**. This is the maximum number of times an error response will be sent to the same client within one second.
+-   **Errors per second**. This is the maximum number of times an error response is sent to the same client within one second.
 
--   **Window**. This is the number of seconds for which responses to a client will be suspended if too many requests are made.
+-   **Window**. This is the number of seconds for which responses to a client are suspended if too many requests are made.
 
--   **Leak rate**. This is how frequently the DNS server will respond to a query during the time responses are suspended. For instance, if the server suspends responses to a client for 10 seconds, and the leak rate is 5, the server will still respond to one query for every 5 queries sent. This allows the legitimate clients to get responses even when the DNS server is applying response rate limiting on their subnet or FQDN.
+-   **Leak rate**. This is how frequently the DNS server responds to a query during the time responses are suspended. For instance, if the server suspends responses to a client for 10 seconds, and the leak rate is 5, the server still responds to one query for every 5 queries sent. This allows the legitimate clients to get responses even when the DNS server is applying response rate limiting on their subnet or FQDN.
 
--   **TC rate**. This is used to tell the client to try connecting with TCP when responses to the client are suspended. For instance, if the TC rate is 3, and the server suspends responses to a given client, the server will issue a request for TCP connection for every 3 queries received. Make sure the value for TC rate is lower than the leak rate, to give the client the option to connect via TCP before leaking responses.
+-   **TC rate**. This is used to tell the client to try connecting with TCP when responses to the client are suspended. For instance, if the TC rate is 3, and the server suspends responses to a given client, the server issues a request for TCP connection for every 3 queries received. Make sure the value for TC rate is lower than the leak rate, to give the client the option to connect via TCP before leaking responses.
 
--   **Maximum responses**. This is the maximum number of responses the server will issue to a client while responses are suspended.
+-   **Maximum responses**. This is the maximum number of responses the server issues to a client while responses are suspended.
 
 -   **Allowlist domains**. This is a list of domains to be excluded from RRL settings.
 
@@ -70,15 +70,15 @@ You can configure RRL settings to control how to respond to requests to a DNS cl
 
 You can use DANE support \(RFC 6394 and 6698\) to specify to your DNS clients what CA they should expect certificates to be issued from for domains names hosted in your DNS server. This prevents a form of man-in-the-middle attack where someone is able to corrupt a DNS cache and point a DNS name to their own IP address.
 
-For instance, imagine you host a secure website that uses SSL at www.contoso.com by using a certificate from a well-known authority named CA1. Someone might still be able to get a certificate for www.contoso.com from a different, not-so-well-known, certificate authority named CA2. Then, the entity hosting the fake www.contoso.com website might be able to corrupt the DNS cache   of a client or server to point www.contoto.com to their fake site. The end user will be presented a certificate from CA2, and may simply acknowledge it and connect to the fake site. With DANE, the client would make a request to the DNS server for contoso.com asking for the TLSA record and learn that the certificate for www.contoso.com was issues by CA1. If presented with a certificate from another CA, the connection is aborted.
+For instance, imagine you host a secure website that uses SSL at www.contoso.com by using a certificate from a well-known authority named CA1. Someone might still be able to get a certificate for www.contoso.com from a different, not-so-well-known, certificate authority named CA2. Then, the entity hosting the fake www.contoso.com website might be able to corrupt the DNS cache   of a client or server to point www.contoto.com to their fake site. The end user is presented a certificate from CA2, and may simply acknowledge it and connect to the fake site. With DANE, the client would make a request to the DNS server for contoso.com asking for the TLSA record and learn that the certificate for www.contoso.com was issues by CA1. If presented with a certificate from another CA, the connection is aborted.
 
 ## Unknown record support
 
-An "Unknown Record" is an RR whose RDATA format is not known to the DNS server. The newly added support for unknown record (RFC 3597) types means that you can add the unsupported record types into the Windows DNS server zones in the binary on-wire format. The windows caching resolver already has the ability to process unknown record types. Windows DNS server will not do any record specific processing for the unknown records, but will send it back in responses if queries are received for it.
+An "Unknown Record" is an RR whose RDATA format is not known to the DNS server. The newly added support for unknown record (RFC 3597) types means that you can add the unsupported record types into the Windows DNS server zones in the binary on-wire format. The Windows caching resolver already has the ability to process unknown record types. Windows DNS server does not do any record specific processing for the unknown records, but sends it back in responses if queries are received for it.
 
 ## IPv6 root hints
 
-The IPV6 root hints, as published by IANA, have been added to the windows DNS server. The internet name queries can now use IPv6 root servers for performing name resolutions.
+The IPV6 root hints, as published by IANA, have been added to the Windows DNS server. The internet name queries can now use IPv6 root servers for performing name resolutions.
 
 ## Windows PowerShell support
 

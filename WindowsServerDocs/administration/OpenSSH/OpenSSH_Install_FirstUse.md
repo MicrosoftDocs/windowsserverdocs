@@ -14,7 +14,7 @@ ms.custom: contperf-fy21q4
 
 OpenSSH is a connectivity tool for remote login that uses the SSH protocol. It encrypts all traffic between client and server to eliminate eavesdropping, connection hijacking, and other attacks.
 
-OpenSSH can be used to connect Window 10 (build 1809 and later) or Windows Server 2019 devices with OpenSSH Client installed to those devices with OpenSSH Server installed.
+An OpenSSH-compatible client can be used to connect to Windows 10 (build 1809 and later) and Windows Server 2019 devices.
 
 > [!IMPORTANT]
 > If you downloaded OpenSSH from the GitHub repo at [PowerShell/openssh-portable](https://github.com/PowerShell/OpenSSH-Portable), follow the instructions listed there, not the ones in this article.

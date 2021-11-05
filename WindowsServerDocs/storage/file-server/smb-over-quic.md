@@ -44,7 +44,7 @@ To use SMB over QUIC, you need the following things:
     - Purpose: Server Authentication (EKU 1.3.6.1.5.5.7.3.1)
     - Signature algorithm: SHA256RSA *(or greater)*
     - Signature hash: SHA256 *(or greater)*
-    - Public key algorithm: ECDCA_P256 *(or greater. Can also use RSA with at least 2048 length)*
+    - Public key algorithm: ECDSA_P256 *(or greater. Can also use RSA with at least 2048 length)*
     - Subject Alternative Name (SAN): *(A DNS name entry for each fully qualified DNS name used to reach the SMB server)*
     - Subject: *(CN= anything, but must exist)*
     - Private key included: yes
@@ -67,7 +67,7 @@ To use SMB over QUIC, you need the following things:
     1. Select **Active Directory Enrollment Policy**
     1. Click **Next**
     1. Select the certificate template for SMB over QUIC that was published in Active Directory.
-    1. Click **More information is required to enroll for this certificate. Click here to configure settings**
+    1. Click **More information is required to enroll for this certificate. Click here to configure settings.**
     1. So users can use to locate the file server, fill in the value **Subject** with a common name and **Subject Alternative Name** with one or more DNS names.
     1. Click **Ok** and click **Enroll**.
 
@@ -83,7 +83,7 @@ To use SMB over QUIC, you need the following things:
 1. Deploy a [Windows Server 2022 Datacenter: Azure Edition](https://aka.ms/ws2022ae) server.
 1. Install the latest version of Windows Admin Center on a management PC or the file server. You need the latest version of the *Files & File Sharing* extension. It's installed automatically by Windows Admin Center if *Automatically update extensions* is enabled in **Settings > Extensions**.
 1. Join your Windows Server 2022 Datacenter: Azure Edition file server to your Active Directory domain and make it accessible to Windows Insider clients on the Azure public interface by adding a firewall allow rule for UDP/443 inbound. Do **not** allow TCP/445 inbound to the file server. The file server must have access to at least one domain controller for authentication, but no domain controller requires any internet access.
-1. Connect to the server with Windows Admin Center and click the **Settings** icon in the lower left. In the **File Shares (SMB server)** section, under **File sharing across the internet with SMB over QUIC**, click **Configure**.
+1. Connect to the server with Windows Admin Center and click the **Settings** icon in the lower left. In the **File shares (SMB server)** section, under **File sharing across the internet with SMB over QUIC**, click **Configure**.
 1. Click a certificate under **Select a computer certificate for this file server**, click the server addresses clients can connect to or click **Select all**, and click **Enable**.
 
     :::image type="content" source="./media/smb-over-quic/wac1.png" alt-text="image showing the steps for configure SMB over QUIC1":::

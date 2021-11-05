@@ -60,11 +60,10 @@ To enable Isolated User Mode on the Hyper-V host that run earlier versions of Wi
 
 2.  Run the following commands:
 
-    ```
+    ```powershell
     Enable-WindowsOptionalFeature -Feature IsolatedUserMode -Online
     New-Item -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Force
     New-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name EnableVirtualizationBasedSecurity -Value 1 -PropertyType DWord -Force
-
     ```
 
 You can migrate a virtual machine with virtual TPM enabled to any host that runs Windows Server 2016, Windows 10 build 10586 or higher versions. But if you migrate it to another host, you may not be able to start it. You must update the Key Protector for that virtual machine to authorize the new host to run the virtual machine. For more information, see [Guarded Fabric and Shielded VMs](../../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) and [System requirements for Hyper-V on Windows Server](../System-requirements-for-Hyper-V-on-Windows.md).

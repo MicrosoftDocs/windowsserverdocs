@@ -171,7 +171,7 @@ Detect:
 Get-Item HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEach-Object {Get-ItemProperty $_.pspath}
 ```
 
-Default configuration = Enabled (No registry key is created), so no SMB1 value will be returned
+Default configuration = Enabled (No registry named value is created), so no SMB1 value will be returned
 
 Disable:
 
@@ -324,7 +324,7 @@ To use Group Policy to configure this, follow these steps:
 
 In the **New Registry Properties** dialog box, select the following:
 
-- **Action**: Create
+- **Action**: Update
 - **Hive**: HKEY_LOCAL_MACHINE
 - **Key Path**: SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
 - **Value name**: SMB1
@@ -396,7 +396,7 @@ To configure this by using Group Policy, follow these steps:
 
    ![DependOnService Properties](media/detect-enable-and-disable-smbv1-v2-v3-6.png)
 
-   The default value includes **MRxSMB10** in many versions of Windows, so by replacing them with this multi-value string, it is in effect removing **MRxSMB10** as a dependency for **LanmanServer** and going from four default values down to just these three values above.
+   The default value includes **MRxSMB10** in many versions of Windows, so by replacing them with this multi-value string, it is in effect removing **MRxSMB10** as a dependency for **LanmanWorkstation** and going from four default values down to just these three values above.
 
    > [!NOTE]
    > When you use Group Policy Management Console, you don't have to use quotation marks or commas. Just type each entry on individual lines.
