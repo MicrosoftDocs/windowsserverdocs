@@ -125,7 +125,7 @@ We've put together some bug fixes and feature updates for the 10.1.3 release. He
 - The input mode (Mouse Pointer or Touch mode) is now global across all active PC and remote app connections.
 - Fixed an issue that prevented microphone redirection from working consistently.
 - Fixed a bug that caused audio output to play from the iPhone earpiece instead of the internal speaker.
-- The client now supports automatically switching audio output between the iPhone or iPad internal speakers, bluetooth speakers, and Airpods.
+- The client now supports automatically switching audio output between the iPhone or iPad internal speakers, bluetooth speakers, and AirPods.
 - Audio now continues to play in the background when switching away from the client or locking the device.
 - The input mode automatically switches to Touch mode when using a SwiftPoint mouse on iPhones or iPads (not running iPadOS, version 13.4 or later).
 - Addressed graphics output issues that occurred when the server was configured to use AVC444 full screen mode.
