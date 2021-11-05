@@ -3,12 +3,12 @@ title: Windows Time for Traceability
 description: Regulations in many sectors require systems to be traceable to UTC.  This means that a system's offset can be attested with respect to UTC.
 author: dahavey
 ms.author: dahavey
-ms.date: 10/14/2021
+ms.date: 11/04/2021
 ms.topic: article
 ---
 
 # Windows Time for Traceability
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016 version 1709 or later, and Windows 10 version 1703 or later, Azure Stack HCI, version 20H2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016 version 1709 or later, and Windows 10 version 1703 or later, Azure Stack HCI, versions 21H2 and 20H2
 
 Regulations in many sectors require systems to be traceable to UTC.  This means that a system's offset can be attested with respect to UTC.  To enable regulatory compliance scenarios, Windows 10 (version 1703 or higher) and Windows Server 2016 (version 1709 or higher) provides new event logs to provide a picture from the perspective of the Operating System to form an understanding of the actions taken on the system clock.  These event logs are generated continuously for Windows Time service and can be examined or archived for later analysis.
 

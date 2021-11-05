@@ -5,7 +5,7 @@ author: Deland-Han
 manager: dcscontentpm
 ms.topic: how-to
 ms.author: delhan
-ms.date: 11/02/2021
+ms.date: 11/04/2021
 ms.custom: contperf-fy21q2
 ---
 # How to detect, enable and disable SMBv1, SMBv2, and SMBv3 in Windows
@@ -20,7 +20,7 @@ While disabling or removing SMBv1 might cause some compatibility issues with old
 
 We recommend keeping SMBv2 and SMBv3 enabled, but you might find it useful to disable one temporarily for troubleshooting. For more information, see [How to detect status, enable, and disable SMB protocols on the SMB Server](detect-enable-and-disable-smbv1-v2-v3.md#how-to-detect-status-enable-and-disable-smb-protocols-on-the-smb-server).
 
-In Windows 10, Windows 8.1, and Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012, disabling SMBv3 deactivates the following functionality:
+In Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012, disabling SMBv3 deactivates the following functionality:
 
 - Transparent Failover - clients reconnect without interruption to cluster nodes during maintenance or failover
 - Scale Out - concurrent access to shared data on all file cluster nodes 
@@ -52,49 +52,12 @@ The SMBv2 protocol was introduced in Windows Vista and Windows Server 2008, whil
 
 Here's how to remove SMBv1 in Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, and Windows 2012 R2.
 
-> [!NOTE]
-> The computer will restart after you run the PowerShell commands to disable or enable SMBv1.
-
 ### PowerShell methods
 
-#### SMBv1 (client and server)
+Here are the steps to detect, disable and enable SMBv1 client and server by using PowerShell commands.
 
-- Detect:
-
-  ```PowerShell
-  Get-WindowsOptionalFeature -Online -FeatureName smb1protocol
-  ```
-
-- Disable:
-
-  ```PowerShell
-  Disable-WindowsOptionalFeature -Online -FeatureName smb1protocol
-  ```
-
-- Enable:
-
-  ```PowerShell
-  Enable-WindowsOptionalFeature -Online -FeatureName smb1protocol
-  ```
-
-### Windows Server 2012 R2, Windows Server 2016, Windows Server 2019: Server Manager method for disabling SMB
-
-#### SMBv1
-
-![Server Manager - Dashboard method](media/detect-enable-and-disable-smbv1-v2-v3-1.png)
-
-To remove SMBv1 from Windows Server:
-
-1. On the Server Manager Dashboard of the server where you want to remove SMBv1, under **Configure this local server**, select **Add roles and features**.
-2. On the **Before you begin** page, select **Start the Remove Roles and Features Wizard**, and then on the following page, select **Next**.
-3. On the **Select destination server** page under **Server Pool**, ensure that the server you want to remove the feature from is selected, and then select **Next**.
-4. On the **Remove server roles** page, select **Next**.
-5. On the **Remove features** page, clear the check box for **SMB 1.0/CIFS File Sharing Support** and select **Next**.
-6. On the **Confirm removal selections** page, confirm that the feature is listed, and then select **Remove**.
-
-### Windows 8.1 and Windows 10: PowerShell method
-
-#### SMBv1 Protocol
+> [!NOTE]
+> The computer will restart after you run the PowerShell commands to disable or enable SMBv1.
 
 - Detect:
 
@@ -114,28 +77,18 @@ To remove SMBv1 from Windows Server:
   Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
 
-#### SMBv2/v3 Protocol (only disables SMBv2/v3 Server)
+### Windows Server 2012 Windows Server 2012 R2, Windows Server 2016, Windows Server 2019: Server Manager method
 
-> [!NOTE]
-> You don't have to restart the computer after you run the **Set-SMBServerConfiguration** cmdlet.
+![Server Manager - Dashboard method](media/detect-enable-and-disable-smbv1-v2-v3-1.png)
 
-- Detect:
+To remove SMBv1 from Windows Server:
 
-  ```PowerShell
-  Get-SmbServerConfiguration | Select EnableSMB2Protocol
-  ```
-
-- Disable:
-
-  ```PowerShell
-  Set-SmbServerConfiguration -EnableSMB2Protocol $false
-  ```
-
-- Enable:
-
-  ```PowerShell
-  Set-SmbServerConfiguration -EnableSMB2Protocol $true
-  ```
+1. On the Server Manager Dashboard of the server where you want to remove SMBv1, under **Configure this local server**, select **Add roles and features**.
+2. On the **Before you begin** page, select **Start the Remove Roles and Features Wizard**, and then on the following page, select **Next**.
+3. On the **Select destination server** page under **Server Pool**, ensure that the server you want to remove the feature from is selected, and then select **Next**.
+4. On the **Remove server roles** page, select **Next**.
+5. On the **Remove features** page, clear the check box for **SMB 1.0/CIFS File Sharing Support** and select **Next**.
+6. On the **Confirm removal selections** page, confirm that the feature is listed, and then select **Remove**.
 
 ### Windows 8.1 and Windows 10: Add or Remove Programs method
 
@@ -150,9 +103,9 @@ To disable SMBv1 on Windows 8.1 and Windows 10:
 
 ## How to detect status, enable, and disable SMB protocols on the SMB Server
 
-### For Windows 8 and Windows Server 2012
+### For Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows 10, and Windows Server 2019
 
-Windows 8 and Windows Server 2012 introduced the new **Set-SMBServerConfiguration** Windows PowerShell cmdlet. The cmdlet enables you to enable or disable the SMBv1, SMBv2, and SMBv3 protocols on the server component. 
+Windows 8 and Windows Server 2012 introduced the new **Set-SMBServerConfiguration** Windows PowerShell cmdlet. The cmdlet enables you to enable or disable the SMBv1, SMBv2, and SMBv3 protocols on the server component.
 
 > [!NOTE]
 > When you enable or disable SMBv2 in Windows 8 or Windows Server 2012, SMBv3 is also enabled or disabled. This behavior occurs because these protocols share the same stack.
@@ -290,62 +243,67 @@ Default: 1 = Enabled (No registry key is created)
 
 ## How to detect status, enable, and disable SMB protocols on the SMB Client
 
-### For Windows Vista, Windows Server 2008, Windows 7, Windows Server 2008 R2, Windows 8, and Windows Server 2012
+Here is how to detect status, enable, and disable SMB protocols on the SMB Client that is running Windows 10, Windows Server 2019, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012.
 
 > [!NOTE]
 > When you enable or disable SMBv2 in Windows 8 or in Windows Server 2012, SMBv3 is also enabled or disabled. This behavior occurs because these protocols share the same stack.
 
-#### SMBv1 on SMB Client
+### SMBv1 on SMB Client
 
 - Detect
 
-  ```cmd
+  ```console
   sc.exe qc lanmanworkstation
   ```
 
 - Disable:
 
-  ```cmd
+  ```console
   sc.exe config lanmanworkstation depend= bowser/mrxsmb20/nsi
   sc.exe config mrxsmb10 start= disabled
   ```
 
 - Enable:
 
-  ```cmd
+  ```console
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi
   sc.exe config mrxsmb10 start= auto
   ```
 
 For more information, see [Server storage at Microsoft](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858)
 
-#### SMBv2/v3 on SMB Client
+### SMBv2/v3 on SMB Client
 
 - Detect:
 
-  ```cmd
+  ```console
   sc.exe qc lanmanworkstation
   ```
 
 - Disable:
 
-  ```cmd
+  ```console
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/nsi
   sc.exe config mrxsmb20 start= disabled
   ```
 
 - Enable:
 
-  ```cmd
+  ```console
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi
   sc.exe config mrxsmb20 start= auto
   ```
 
 > [!NOTE]
+>
 > - You must run these commands at an elevated command prompt.
 > - You must restart the computer after you make these changes.
 
-## Disable SMBv1 Server with Group Policy
+## Disable SMBv1 by using Group Policy
+
+This section introduces how to use Group Policy to disable SMBv1. You can use this method on different versions of Windows.
+
+### Disable SMBv1 server
 
 This procedure configures the following new item in the registry:
 
@@ -383,7 +341,7 @@ This procedure disables the SMBv1 Server components. This Group Policy must be 
 > [!IMPORTANT]
 > Be careful when you make these changes on domain controllers on which legacy Windows XP or older Linux and third-party systems (that don't support SMBv2 or SMBv3) require access to SYSVOL or other file shares where SMB v1 is being disabled.
 
-## Disable SMBv1 Client with Group Policy
+### Disable SMBv1 client
 
 To disable the SMBv1 client, the services registry key needs to be updated to disable the start of **MRxSMB10** and then the dependency on **MRxSMB10** needs to be removed from the entry for **LanmanWorkstation** so that it can start normally without requiring **MRxSMB10** to first start.
 

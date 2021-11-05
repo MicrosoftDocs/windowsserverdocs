@@ -4,12 +4,12 @@ title: Configuring Systems for High Accuracy
 description: Time synchronization in Windows 10 and Windows Server 2016 has been substantially improved.  Under reasonable operating conditions, systems can be configured to maintain 1ms (millisecond) accuracy or better (with respect to UTC).
 author: dahavey
 ms.author: dahavey
-ms.date: 10/14/2021
+ms.date: 11/04/2021
 ms.topic: article
 ---
 
 # Configuring Systems for High Accuracy
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows 10 version 1607 or later, Azure Stack HCI, version 20H2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, and Windows 10 version 1607 or later, Azure Stack HCI, versions 21H2 and 20H2
 
 Time synchronization in Windows 10 and Windows Server 2016 has been substantially improved.  Under reasonable operating conditions, systems can be configured to maintain 1ms (millisecond) accuracy or better (with respect to UTC).
 
