@@ -26,8 +26,8 @@ SMB Multichannel is the feature responsible for detecting the RDMA capabilities 
 With SMB Multichannel, SMB detects whether a network adapter has the RDMA capability, and then creates multiple RDMA connections for that single session (two per interface). This allows SMB to use the high throughput, low latency, and low CPU utilization offered by RDMA-capable network adapters. It also offers fault tolerance if you are using multiple RDMA interfaces.
 
 >[!NOTE]
->You should not team RDMA-capable network adapters if you intend to use the RDMA capability of the network adapters. When teamed, the network adapters will not support RDMA.
->After at least one RDMA network connection is created, the TCP/IP connection used for the original protocol negotiation is no longer used. However, the TCP/IP connection is retained in case the RDMA network connections fail.
+>You should not team RDMA-capable network adapters in a Load Balancing/Failover (LBFO) if you intend to use the RDMA capability of the network adapters. When teamed, the network adapters will not support RDMA.
+>After at least one RDMA network connection is created, the TCP/IP connection used for the original protocol negotiation is no longer used. However, the TCP/IP connection is retained in case the RDMA network connections fail. Switch Embedded Teaming (SET) is the only teaming technology that enables teaming of RDMA adapters. 
 
 ## SMB Encryption with SMB Direct
 
