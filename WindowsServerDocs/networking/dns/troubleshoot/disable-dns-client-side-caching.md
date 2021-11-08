@@ -4,7 +4,7 @@ description: This article introduces how to disable DNS client-side caching on D
 manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
-ms.date: 8/8/2019
+ms.date: 11/09/2021
 author: Deland-Han
 ---
 
@@ -14,18 +14,15 @@ Windows contains a client-side DNS cache. The client-side DNS caching feature ma
 
 ## How to disable client-side caching
 
-To stop DNS caching, run either of the following commands:
+> [!IMPORTANT]
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-```cmd
-net stop dnscache
-```
+To stop DNS caching, follow these steps:
 
-```cmd
-sc servername stop dnscache
-```
-
-
-To disable the DNS cache permanently in Windows, use the Service Controller tool or the Services tool to set the DNS Client service startup type to **Disabled**. Note that the name of the Windows DNS Client service may also appear as "Dnscache."
+1. Run *regedit* to start Registry Editor.
+2. Navigate to **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\Dnscache**.
+3. Locate the **Start** registry value and change it from **2** (Automatic) to **4** (Disabled).
+4. Restart the computer.
 
 > [!NOTE]
 > If the DNS resolver cache is deactivated, the overall performance of the client computer decreases and the network traffic for DNS queries increases.
@@ -36,7 +33,7 @@ When the Windows resolver receives a response, either positive or negative, to a
 
 You can use the ipconfig tool to view and flush the DNS resolver cache. To view the DNS resolver cache, run the following command at a command prompt:
 
-```cmd
+```console
 ipconfig /displaydns
 ```
 
