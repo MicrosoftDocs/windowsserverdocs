@@ -41,9 +41,6 @@ This command displays the contents of the DNS resolver cache, including the DNS 
 
 ## Using the registry to control the caching time
 
-> [!IMPORTANT]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
-
 The length of time for which a positive or negative response is cached depends on the values of entries in the following registry key:
 
 **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DNSCache\Parameters**
@@ -54,10 +51,12 @@ The TTL for positive responses is the lesser of the following values:
 
 - The value of the **MaxCacheTtl** registry setting.
 
->[!Note]
->- The default TTL for positive responses is 86,400 seconds (1 day).
->- The TTL for negative responses is the number of seconds specified in the MaxNegativeCacheTtl registry setting.
->- The default TTL for negative responses is 5 seconds; prior to Windows 10, version 1703 the default was 900 seconds (15 minutes).
+> [!Note]
+>
+> - The default TTL for positive responses is 86,400 seconds (1 day).
+> - The TTL for negative responses is the number of seconds specified in the MaxNegativeCacheTtl registry setting.
+> - The default TTL for negative responses is 5 seconds; prior to Windows 10, version 1703 the default was 900 seconds (15 minutes).
+
 If you do not want negative responses to be cached, set the MaxNegativeCacheTtl registry setting to 0.
 
 To set the caching time on a client computer:
