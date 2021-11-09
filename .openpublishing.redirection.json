@@ -10394,6 +10394,11 @@
       "source_path": "WindowsServerDocs/networking/sdn/technologies/set-for-sdn.md",
       "redirect_url": "/azure-stack/hci/concepts/host-network-requirements#set/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/servicing-channels-19.md",
+      "redirect_url": "/windows-server/get-started/servicing-channels-comparison",
+      "redirect_document_id": false
     }
   ]
 }
