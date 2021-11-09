@@ -10396,6 +10396,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/rdp-error-no-licenses-available.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/cannot-connect-rds-no-license-server",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/get-started-19/servicing-channels-19.md",
       "redirect_url": "/windows-server/get-started/servicing-channels-comparison",
       "redirect_document_id": false
