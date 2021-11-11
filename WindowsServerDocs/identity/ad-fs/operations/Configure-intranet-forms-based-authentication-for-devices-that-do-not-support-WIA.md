@@ -70,7 +70,6 @@ Confirm that the user agent string for Chrome is now set in the AD FS properties
 Get-AdfsProperties | Select -ExpandProperty WIASupportedUserAgents
 ```
 
-(You would need a new screenshot here)
 ![configure auth](media/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA/chrome1.png)
 
 >[!NOTE]
