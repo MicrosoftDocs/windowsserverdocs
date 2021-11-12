@@ -223,7 +223,7 @@ It is recommended to use servers that are domain-joined when creating a stretch 
 ### Undo and start over
 When using same machines repeatedly for cluster deployment, cleanup of previous cluster entities is important to get a successful cluster deployment in the same set of machines. See the page on [deploying hyper-converged infrastructure](../use/deploy-hyperconverged-infrastructure.md#undo-and-start-over) for instructions on how to clean up your cluster.
 
-### CredSSP
+### CredSSP in cluster creation
 The Windows Admin Center cluster deployment wizard uses CredSSP in several places. You run into this error message during the wizard (this occurs most frequently in the Validate cluster step):
 
 ![Screenshot of cluster create CredSSP error](../media/cluster-create-credssp-error.jpg)
@@ -252,6 +252,20 @@ gpupdate /force
 ```PowerShell
 Enter-PSSession -computername <node fqdn>
 ```
+
+## CredSSP
+
+- The **Updates** tool will sometimes throws the CredSSP error seen below:
+
+    ![Screenshot of Updates tool using Cluster-Aware Updating with CredSSP error](../media/updates-tool-credssp-error.png)
+
+    This error was widely seen when new clusters are created and then the user tries to access the **Updates** tool for these clusters in Windows Admin Center. This issue is fixed in Windows Admin Center v2110. [36734941]
+
+- The CredSSP session endpoint permission issue is an common CredSSP error that can be seen when Windows Admin Center is ran on Windows client machines. This issue is widely seen when the user who is using Windows Admin Center is not the same user who installed Windows Admin Center on the client machine.
+
+    To mitigate this problem, we have introduced a Windows Admin Center CredSSP administrators' group. The user facing this problem should be added to this group and then relogin to the desktop computer running Windows Admin Center. Below is an image of what the error notification was before (left) and after (right) the modification:
+
+    ![A side by side comparison of the error notification for CredSSP](../media/notification-credssp-error.png)
 
 ### Nested Virtualization
 When validating Azure Stack HCI OS cluster deployment on virtual machines, nested virtualization needs to be turned on before roles/features are enabled using the below PowerShell command:
