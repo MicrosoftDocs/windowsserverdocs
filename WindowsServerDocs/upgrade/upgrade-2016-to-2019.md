@@ -3,8 +3,8 @@ title: Upgrade Windows Server 2016 to Windows Server 2019 | Microsoft Docs
 description: Learn how to perform an in-place upgrade to go from Windows Server 2016 to Windows Server 2019.
 ms.topic: how-to
 author: RobHindman
-ms.author: robhind
-ms.date: 09/16/2019
+ms.author: inhenkel
+ms.date: 11/16/2021
 ---
 
 # Upgrade Windows Server 2016 to Windows Server 2019
@@ -29,7 +29,7 @@ After you've collected all of your Windows Server-related information, we highly
 
 ## To perform the upgrade
 
-1. Make sure the **BuildLabEx** value says you're running Windows Server 2016.
+1. Make sure the **ProductName** value says you're running Windows Server 2016.
 
 2. Locate the Windows Server 2019 Setup media, and then select **setup.exe**.
 
