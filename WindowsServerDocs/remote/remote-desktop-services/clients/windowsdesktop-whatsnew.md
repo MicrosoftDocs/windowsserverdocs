@@ -39,7 +39,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
    - Fixed a multi-monitor screen sharing issue where screen sharing didn't appear correctly when moving from one monitor to the other.
    - Resolved a black screen issue that caused screen sharing to incorrectly show a black screen sometimes.
    - Increased the reliability of the camera stack when resizing the Teams app or turning the camera on or off.
-   - Fixed a memory leak that caused issues like high memory usage or video freezing when reconnecting with Azure Virutal Desktop.
+   - Fixed a memory leak that caused issues like high memory usage or video freezing when reconnecting with Azure Virtual Desktop.
 
 ## Updates for version 1.2.2606
 
