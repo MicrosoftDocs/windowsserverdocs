@@ -217,7 +217,7 @@ This section answers frequently asked questions about the storage bus cache on W
 This feature is designed for standalone servers but built on top of the storage bus layer (SBL) cache for Storage Spaces Direct. The Failover Clustering feature needs to be installed as clustering components are needed.
 
 ### Will the storage bus cache work with an all flash configuration? 
-No, this feature will only work when there are two media types, one of which must be HDD. This will not work with JBOD/ SAS, SAN, or all flash systems.
+No, this feature will only work when there are two media types, one of which must be HDD. This will not work with RAID, SAN, or all flash systems.
 
 ### How can the storage bus cache settings be change? 
 See example below for changing the Provision mode from Shared (default) to Cache. Note that default settings are recommended and any changes should be made before the storage bus cache is enabled.
