@@ -182,6 +182,9 @@ In this section, you can configure Remote Access VPN to allow IKEv2 VPN connecti
 
     d. In **End IP address**, enter the ending IP address in the range you want to assign to VPN clients, or in **Number of addresses**, enter the number of the address you want to make available. If you're using DHCP for this subnet, ensure that you configure a corresponding address exclusion on your DHCP servers.
 
+    > [!NOTE]
+    > For optimal network performance, the VPN server itself should not have a network interface in the same IPv4 subnet that assigns IPv4 addresses to the clients. If the VPN server does have a network interface in that subnet, a broadcast or multicast that is sent to that subnet could cause a latency spike.
+
     e. (Optional) If you are using DHCP, select **Adapter**, and in the list of results, select the Ethernet adapter connected to your internal perimeter network.
 
 16. (Optional) *If you are configuring conditional access for VPN connectivity*, from the **Certificate** drop-down list, under **SSL Certificate Binding**, select the VPN server authentication.
