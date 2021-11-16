@@ -65,7 +65,8 @@
       "path_to_root": "_azurestack",
       "url": "https://github.com/MicrosoftDocs/azure-stack-docs",
       "branch": "main",
-      "branch_mapping": {}
+      "branch_mapping": {},
+      "include_in_build": true
     }
   ],
   "branch_target_mapping": {
