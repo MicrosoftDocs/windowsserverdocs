@@ -8,7 +8,7 @@ manager: dongill
 ms.author: elizapo
 ms.date: 02/10/2017
 ---
-# Seamlessly deploy RDS with ARM and Azure Marketplace
+# Seamlessly deploy RDS with Azure Resource Manager(ARM) and Azure Marketplace
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
