@@ -24,7 +24,7 @@ TLS and SSL assume that a connection-oriented transport, typically TCP, is in us
 
 -   Message forgery
 
-The TLS and SSL protocols can be divided into two layers. The first layer consists of the application protocol and the three handshaking protocols: the handshake protocol, the change cipher spec protocol, and the alert protocol. The second layer is the record protocol. The following image illustrates the various layers and their elements.
+The TLS and SSL protocols can be divided into two layers. The first layer consists of the application protocol and the three handshaking protocols: the handshake protocol, the change cipher spec protocol, and the alert protocol. The second layer is the record protocol.
 
 **TLS and SSL protocol layers**
 
