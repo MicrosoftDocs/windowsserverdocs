@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/09/2021
+ms.date: 11/17/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -19,11 +19,11 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.2606        |1.2.1672                  |
-|Insider    |1.2.2677        |1.2.1672                  |
+|Insider    |1.2.2679        |1.2.1672                  |
 
-## Updates for version 1.2.2677 (Insider)
+## Updates for version 1.2.2679 (Insider)
 
-*Date published: 11/9/2021*
+*Date published: 11/17/2021*
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
@@ -32,6 +32,14 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 - Fixed the vulnerability known as [CVE-2021-38665](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38665).
 - Fixed the vulnerability known as [CVE-2021-38666](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38666).
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Fixed a usability issue where the Windows Desktop client would sometimes prompt for a password (Azure Active Directory prompt) after the device went into sleep mode.
+- Updates to Teams for Azure Virtual Desktop, including the following:
+   - The notification volume level on the client device is now the same as the host device.
+   - Fixed an issue where the device volume was low in Azure Virtual Desktop sessions
+   - Fixed a multi-monitor screen sharing issue where screen sharing didn't appear correctly when moving from one monitor to the other.
+   - Resolved a black screen issue that caused screen sharing to incorrectly show a black screen sometimes.
+   - Increased the reliability of the camera stack when resizing the Teams app or turning the camera on or off.
+   - Fixed a memory leak that caused issues like high memory usage or video freezing when reconnecting with Azure Virtual Desktop.
 
 ## Updates for version 1.2.2606
 
