@@ -10358,7 +10358,7 @@
     {
       "source_path": "WindowsServerDocs/get-started/kmsclientkeys.md",
       "redirect_url": "/windows-server/get-started/kms-client-activation-keys/",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/get-started-19/activation-19.md",
@@ -10393,6 +10393,16 @@
     {
       "source_path": "WindowsServerDocs/networking/sdn/technologies/set-for-sdn.md",
       "redirect_url": "/azure-stack/hci/concepts/host-network-requirements#set/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/troubleshoot/rdp-error-no-licenses-available.md",
+      "redirect_url": "/troubleshoot/windows-server/remote/cannot-connect-rds-no-license-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started-19/servicing-channels-19.md",
+      "redirect_url": "/windows-server/get-started/servicing-channels-comparison",
       "redirect_document_id": false
     }
   ]

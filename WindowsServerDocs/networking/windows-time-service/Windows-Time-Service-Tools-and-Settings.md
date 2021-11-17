@@ -1,17 +1,17 @@
 ---
 ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Windows Time service tools and settings
-author: Teresa-Motiv
+author: v-tappelgate
 description: Describes the settings that are available for Windows Time Service (W32Time) and the tools that you can use to configure those settings
-ms.author: v-tea
-ms.date: 10/14/2021
+ms.author: v-tappelgate
+ms.date: 11/04/2021
 ms.topic: article
 ms.custom: contperf-fy21q4
 ---
 
 # Windows Time service tools and settings
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Azure Stack HCI, version 20H2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Azure Stack HCI, versions 21H2 and 20H2
 
 The Windows Time service (W32Time) synchronizes the date and time for all computers managed by Active Directory Domain Services (AD DS). This article covers the different tools and settings used to manage the Windows Time service.
 
@@ -109,15 +109,15 @@ reg query HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
 
 In order for W32tm.exe to reset a computer clock, it first checks the offset (`CurrentTimeOffset`, also known as `Phase Offset`) between the current time and the computer clock time to determine whether the offset is less than the `MaxAllowedPhaseOffset` value.  
 
-- `CurrentTimeOffset` &lt; `MaxAllowedPhaseOffset`: Adjust the computer clock gradually by using the clock rate.  
-- `CurrentTimeOffset` &ge; `MaxAllowedPhaseOffset`: Set the computer clock immediately.  
+- `CurrentTimeOffset` &le; `MaxAllowedPhaseOffset`: Adjust the computer clock gradually by using the clock rate.  
+- `CurrentTimeOffset` &gt; `MaxAllowedPhaseOffset`: Set the computer clock immediately.  
 
 Then, to adjust the computer clock by using the clock rate, W32tm.exe calculates a `PhaseCorrection` value. This algorithm varies depending on the version of Windows:  
 
 - Windows Server 2016 and later versions:  
 
   > `PhaseCorrection_raw` = |`CurrentTimeOffset`| &divide; (16 &times; `PhaseCorrectRate` &times; `pollIntervalInSeconds`)  
-  > `MaximumCorrection` = |`CurrentTimeOffset`| &divide; (`UpdateInterval` &times; 1,000 &times; 10,000)  
+  > `MaximumCorrection` = |`CurrentTimeOffset`| &divide; (`UpdateInterval` &divide; 100)  
   > `PhaseCorrection` = min(`PhaseCorrection_raw`, `MaximumCorrection`)  
 
 - Windows Server 2012 R2 and earlier versions:  

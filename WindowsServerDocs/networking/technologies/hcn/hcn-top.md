@@ -214,9 +214,7 @@ You can use tools, such as [Swagger](https://swagger.io/), to generate language-
 
 In addition to code generation and validation, you can use tools to simplify the work with JSON documents—that is, [Visual Studio Code](https://code.visualstudio.com/Docs/languages/json).
 
-### Top-level objects defined in the HCN.Schemas.mars file
-As mentioned above, you can find the document schema for documents used by the HCN APIs in a set of .mars files under:
-onecore/vm/dv/net/hns/schema/mars/Schema
+### Top-level objects defined in the HCN schema
 
 The top-level objects are:
 - [HostComputeNetwork](hcn-scenarios.md#scenario-hcn)

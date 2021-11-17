@@ -1,10 +1,11 @@
 ---
 title: Tuning IIS 10.0
 description: Performance tuning recommendations for IIS 10.0 web servers on Windows Server 16
-ms.topic: landing-page
+ms.topic: conceptual
 ms.author: ericam
 author: phstee
 ms.date: 10/16/2017
+ms.custom: contperf-fy22q2
 ---
 
 # Tuning IIS 10.0

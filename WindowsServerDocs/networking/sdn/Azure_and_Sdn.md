@@ -6,11 +6,11 @@ ms.topic: article
 ms.assetid: 79e87013-7f27-4031-8383-288bcb291731
 ms.author: anpaul
 author: AnirbanPaul
-ms.date: 06/30/2021
+ms.date: 11/04/2021
 ---
 # Microsoft Azure and Software Defined Networking
 
->Applies to: Windows Server 2022, Azure Stack HCI, version 20H2; Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 Microsoft Azure is Microsoft's cloud platform: a growing collection of integrated services - compute, storage, data, networking, and app - that help you move faster, do more, and save money.
 
