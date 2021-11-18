@@ -103,7 +103,6 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /xc | Excludes existing files with the same timestamp, but different file sizes. |
 | /xn | Excludes existing files newer than the copy in the source directory. |
 | /xo | Excludes existing files older than the copy in the source directory. |
-| /xx | Excludes extra files and directories present in the destination but not the source. Excluding extra files will not delete files from the destination.  |
 | /xl | Excludes "lonely" files and directories present in the source but not the destination. Excluding lonely files prevents any new files from being added to the destination. |
 | /is | Includes the same files. Same files are identical in name, size, times, and all attributes. |
 | /it | Includes "tweaked" files. Tweaked files have the same name, size, and times, but different attributes. |
