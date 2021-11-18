@@ -248,7 +248,7 @@ If the KMS host and KMS clients use different DNS zones, you must configure the 
 1. In the **Edit Multi-String** dialog box, type each DNS domain suffix that KMS publishes on a separate line, and then select **OK**.
    > [!NOTE]
    > For Windows Server 2008 R2, the format for **DnsDomainPublishList** differs. For more information, see the Volume Activation Technical Reference Guide.
-1. Use the Services administrative tool to restart the Software Protection service. This operation creates the SRV records.
+1. Use the Services administrative tool to restart the Software Protection service (previously the Software Licensing service in Windows Server 2008 and Windows Vista). This operation creates the SRV records.
 1. Verify that by using a typical method, the KMS client can contact the KMS host that you configured. Verify that the KMS client correctly identifies the KMS host both by name and by IP address. If either of these verifications fails, investigate this DNS client resolver issue.
 1. To clear any previously cached KMS host names on the KMS client, open an elevated Command Prompt window on the KMS client, and then run the following command:
    ```cmd
