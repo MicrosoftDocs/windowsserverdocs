@@ -85,7 +85,7 @@ Check the registry of the KMS host server to determine whether it is registering
 
 To check this setting, follow these steps:
 1. Start Registry Editor. To do this, right-click **Start**, select **Run**, type **regedit**, and then press Enter.
-1. Locate the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL** subkey, and check the value of the **DisableDnsPublishing** entry. This entry has the following possible values:
+1. Locate the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform** subkey (previously **SL** instead of **SoftwareProtectionPlatform** in Windows Server 2008 and Windows Vista), and check the value of the **DisableDnsPublishing** entry. This entry has the following possible values:
    - **0** or undefined (default): The KMS host server registers a SRV record once every 24 hours.
    - **1**: The KMS host server does not automatically register SRV records. If your implementation does not support dynamic updates, see [Manually create a KMS SRV record](#manually-create-a-kms-srv-record).
 1. If the **DisableDnsPublishing** entry is missing, create it (the type is DWORD). If dynamic registration is acceptable, leave the value undefined or set it to **0**.
@@ -241,7 +241,7 @@ By default, a KMS host registers its SRV records in the DNS zone that correspond
 If the KMS host and KMS clients use different DNS zones, you must configure the KMS host to automatically publish its SRV records in multiple DNS domains. To do this, follow these steps:
 
 1. On the KMS host, start Registry Editor.
-1. Locate and then select the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SL** subkey.
+1. Locate and then select the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform** subkey (previously **SL** instead of **SoftwareProtectionPlatform** in Windows Server 2008 and Windows Vista).
 1. In the **Details** pane, right-click a blank area, select **New**, and then select **Multi-String Value**.
 1. For the name of the new entry, enter **DnsDomainPublishList**.
 1. Right-click the new **DnsDomainPublishList** entry, and then select **Modify**.
