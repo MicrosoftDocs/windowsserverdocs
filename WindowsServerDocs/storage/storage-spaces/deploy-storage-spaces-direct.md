@@ -353,8 +353,7 @@ To create file shares by using PowerShell scripts, do the following:
 
     # Start of the script itself
     CD $ScriptFolder
-    Get-ClusterSharedVolume -Cluster $StorageClusterName | ForEach-Object
-    {
+    Get-ClusterSharedVolume -Cluster $StorageClusterName | ForEach-Object {
         $ShareName = $SharePrefix + $_.SharedVolumeInfo.friendlyvolumename.trimstart("C:\ClusterStorage\Volume")
         Write-host "Creating share $ShareName on "$_.name "on Volume: " $_.SharedVolumeInfo.friendlyvolumename
         .\FileShareSetup.ps1 -HyperVClusterName $StorageClusterName -CSVVolumeNumber $_.SharedVolumeInfo.friendlyvolumename.trimstart("C:\ClusterStorage\Volume") -ScaleOutFSName $SOFSName -ShareName $ShareName -HyperVObjectADGroupSamName $HyperVObjectADGroupSamName
