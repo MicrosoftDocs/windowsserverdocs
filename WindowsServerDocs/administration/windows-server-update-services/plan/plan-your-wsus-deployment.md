@@ -41,7 +41,7 @@ Hardware and database software requirements are driven by the number of client c
     -   **Network adapter:** 100 megabits per second (Mbps) or greater (1GB is recommended)
 
 > [!NOTE]
-> These guidelines assume that WSUS clients are synchronizing with the server every eight hours for a rullup of 30,000 clients. If they sychronize more often, there will be a corresponding increment in the server load.
+> These guidelines assume that WSUS clients are synchronizing with the server every eight hours for a rollup of 30,000 clients. If they sychronize more often, there will be a corresponding increment in the server load.
 
 -   Software Requirements:
 
