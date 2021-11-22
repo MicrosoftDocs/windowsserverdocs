@@ -63,7 +63,7 @@ $nwConnectionProperties.IpSecConfiguration.MainMode.DiffieHellmanGroup = "Group2
 $nwConnectionProperties.IpSecConfiguration.MainMode.IntegrityAlgorithm = "SHA256"
 $nwConnectionProperties.IpSecConfiguration.MainMode.EncryptionAlgorithm = "AES256"
 $nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeSeconds = 28800
-$nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeKiloBytes = 2000000
+$nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeKiloBytes = 500
 
 # L3 specific configuration (leave blank for IPSec)
 $nwConnectionProperties.IPAddresses = @()
