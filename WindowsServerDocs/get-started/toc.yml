@@ -64,7 +64,7 @@ items:
           - name: Windows Server 2016
             href: application-compatibility-windows-server-2016.md
         - name: Upgrade or migrate Windows Server Roles and Features
-          href: upgrade-migrate-roles-and-features.md
+          href: upgrade-migrate-roles-features.md
         - name: Upgrade and Conversion Options for Windows Server 2016
           href: Supported-Upgrade-paths.md
         - name: Azure Hybrid Benefit for Windows Server
