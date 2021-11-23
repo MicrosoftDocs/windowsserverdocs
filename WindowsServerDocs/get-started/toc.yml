@@ -63,8 +63,8 @@ items:
             href: application-compatibility-windows-server-2019.md
           - name: Windows Server 2016
             href: application-compatibility-windows-server-2016.md
-        - name: Migration of Windows Server Roles and Features
-          href: Migrate-Roles-and-Features.md
+        - name: Upgrade or migrate Windows Server Roles and Features
+          href: upgrade-migrate-roles-and-features.md
         - name: Upgrade and Conversion Options for Windows Server 2016
           href: Supported-Upgrade-paths.md
         - name: Windows Server 2016 Role Upgrade and Migration

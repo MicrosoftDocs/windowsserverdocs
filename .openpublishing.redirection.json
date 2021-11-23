@@ -10404,6 +10404,16 @@
       "source_path": "WindowsServerDocs/get-started-19/servicing-channels-19.md",
       "redirect_url": "/windows-server/get-started/servicing-channels-comparison",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Migrate-Roles-and-Features.md",
+      "redirect_url": "/windows-server/get-started/upgrade-migrate-roles-and-features",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Server-Role-Upgradeability-Table.md",
+      "redirect_url": "/windows-server/get-started/upgrade-migrate-roles-and-features",
+      "redirect_document_id": false
     }
   ]
 }
