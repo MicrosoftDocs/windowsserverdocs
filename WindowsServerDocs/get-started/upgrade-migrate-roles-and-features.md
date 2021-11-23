@@ -13,9 +13,9 @@ ms.localizationpriority: medium
 
 # Upgrade and migrate roles and features in Windows Server
 
-You can update roles and features to later versions of Windows Server by migrating to a new server,  or many also support in-place upgrade where you install the new version of of Windows Server over the top of the current one. This article contains links to migration guides as well a table with migration and in-place upgrade information to help you decide which method to use.
+You can update roles and features to later versions of Windows Server by migrating to a new server,  or many also support in-place upgrade where you install the new version of Windows Server over the top of the current one. This article contains links to migration guides as well a table with migration and in-place upgrade information to help you decide which method to use.
 
-You can migrate many roles and features by using Windows Server Migration Tools, a feature built-in to Windows Server for migrating roles and features, whereas file servers and storage can be migrated using [Storage Migration Service](../storage/storage-migration-service/overview.md).
+You can migrate many roles and features by using Windows Server Migration Tools, a feature built in to Windows Server for migrating roles and features, whereas file servers and storage can be migrated using [Storage Migration Service](../storage/storage-migration-service/overview.md).
 
 The migration guides support migrations of specified roles and features from one server to another (not in-place upgrades). Unless otherwise noted in the guides, migrations are supported between physical and virtual computers, and between installation options of Windows Server with either Server with Desktop Experience or Server Core.
 
@@ -117,10 +117,10 @@ Below you can find links to migration guides for specific Windows Roles and Feat
 |DHCP Server|    Yes|    Yes|    Yes|
 |DNS Server|    Yes|    Yes|    No|
 |Failover Clustering|Yes with [Cluster OS Rolling Upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md) process (Windows Server 2012 R2 and later) or when the server is removed by the cluster for upgrade and then added to a different cluster.|Yes|Yes for Failover Clusters with Hyper-V VMs or Failover Clusters running the Scale-out File Server role. See [Cluster OS Rolling Upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md) (Windows Server 2012 R2 and later).|
-|File and Storage Services|    Yes|    Varies by sub-feature|    No|
+|File and Storage Services|    Yes|    Varies by subfeature|    No|
 |Hyper-V| Yes with [Cluster OS Rolling Upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md) process (Windows Server 2012 R2 and later)|   Yes|Yes for Failover Clusters with Hyper-V VMs or Failover Clusters running the Scale-out File Server role. See [Cluster OS Rolling Upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md) (Windows Server 2012 R2 and later).|
 |Print and Fax Services|    No|    Yes (using Printbrm.exe)|    No|
-|Remote Desktop Services|    Yes, for all sub-roles, but mixed mode farm is not supported|    Yes|    No|
+|Remote Desktop Services|    Yes, for all subroles, but mixed mode farm is not supported|    Yes|    No|
 |Web Server (IIS)|    Yes|    Yes|    No|
 |Windows Server Essentials Experience|    Yes|    Yes|    No|
 |Windows Server Update Services|    Yes|    Yes|    No|
