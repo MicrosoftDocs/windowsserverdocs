@@ -231,32 +231,32 @@ The Windows Admin Center cluster deployment wizard uses CredSSP in several place
 You can use the following steps to troubleshoot:
 
 1. Disable CredSSP settings on all nodes and the Windows Admin Center gateway machine. Run the first command on your gateway machine and the second command on all of the nodes in your cluster:
-
-  ```PowerShell
-  Disable-WsmanCredSSP -Role Client
-  ```
-
-  ```PowerShell
-  Disable-WsmanCredSSP -Role Server
-  ```
+   
+   ```PowerShell
+   Disable-WsmanCredSSP -Role Client
+   ```
+   
+   ```PowerShell
+   Disable-WsmanCredSSP -Role Server
+   ```
 
 2. Repair the trust on all nodes. Run the following command on all nodes:
-
-  ```PowerShell
-  Test-ComputerSecureChannel -Verbose -Repair -Credential <account name>
-  ```
+   
+   ```PowerShell
+   Test-ComputerSecureChannel -Verbose -Repair -Credential <account name>
+   ```
 
 3. Reset group policy propagated data by running the following command on all nodes:
-
-  ```Command Line
-  gpupdate /force
-  ```
+   
+   ```Command Line
+   gpupdate /force
+   ```
 
 4. Reboot each nodes. After reboot, test the connectivity between your gateway machine and target nodes, as well as your connectivity between nodes, using the following command:
-
-  ```PowerShell
-  Enter-PSSession -computername <node fqdn>
-  ```
+   
+   ```PowerShell
+   Enter-PSSession -computername <node fqdn>
+   ```
 
 ## CredSSP
 
