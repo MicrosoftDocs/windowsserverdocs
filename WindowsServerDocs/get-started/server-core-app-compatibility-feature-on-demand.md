@@ -11,9 +11,9 @@ ms.prod: windows-server
 
 # Server Core App Compatibility Feature on Demand (FOD)
 
-The Server Core App Compatibility Feature on Demand is an optional feature package that can be added to Server Core installations of Windows Server (starting with Windows Server 2019) or Windows Server Semi-Annual Channel installations at any time.
+The Server Core App Compatibility Feature on Demand (FOD) is an optional feature package that can be added to Server Core installations of Windows Server (starting with Windows Server 2019) or Windows Server Semi-Annual Channel installations at any time.
 
-For more information on other Features on Demand (FOD), see [Features On Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
+For more information on other Features on Demand, see [Features On Demand](/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities).
 
 ## Why install the App Compatibility FOD?
 
@@ -60,6 +60,9 @@ Starting with Windows Server, version 1903, the following components are also av
 ## Installing the App Compatibility Feature on Demand
 
 The App Compatibility FOD can only be installed on Server Core. Don't attempt to add the Server Core App Compatibility FOD to the Server with Desktop Experience installation option.
+
+> [!CAUTION]
+> There is currently a known issue with App Compatibility FOD for Windows Server 2022. Once installed, if you try to connect to the server using Remote Desktop Protocol (RDP), you can be presented with a black screen and disconnected. This issue will be fixed in a future Cumulative Update. Windows Server 2019 is not affected.
 
 1. If the server can connect to Windows Update, all you have to do is run the following command from an elevated PowerShell session and then restart Windows Server after the command finishes running:
 
