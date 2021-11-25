@@ -10414,6 +10414,11 @@
       "source_path": "WindowsServerDocs/get-started/Server-Role-Upgradeability-Table.md",
       "redirect_url": "/windows-server/get-started/upgrade-migrate-roles-features",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Supported-Upgrade-Paths.md",
+      "redirect_url": "/windows-server/get-started/upgrade-conversion-options",
+      "redirect_document_id": true
     }
   ]
 }
