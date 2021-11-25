@@ -18,9 +18,13 @@ Functional levels determine the available Active Directory Domain Services (AD D
 
 When you deploy AD DS, set the domain and forest functional levels to the highest value that your environment can support. This way, you can use as many AD DS features as possible. When you deploy a new forest, you are prompted to set the forest functional level and then set the domain functional level. You can set the domain functional level to a value that is higher than the forest functional level, but you cannot set the domain functional level to a value that is lower than the forest functional level.
 
-With the end of life of Windows Server 2003, 2008, and 2008 R2, these domain controllers (DCs) need to be updated to Windows Server 2012, 2012 R2, 2016, or 2019. As a result, any domain controller that runs Windows Server 2008 R2 and older should be removed from the domain.
+With the end of life of Windows Server 2003, 2008, and 2008 R2, these domain controllers (DCs) need to be updated to Windows Server 2012, 2012 R2, 2016, 2019, or 2022. As a result, any domain controller that runs Windows Server 2008 R2 and older should be removed from the domain.
 
-At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](../../storage/dfs-replication/migrate-sysvol-to-dfsr.md) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx). Windows Server 2016 RS1 is the last Windows Server release that includes FRS.
+At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](../../storage/dfs-replication/migrate-sysvol-to-dfsr.md) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx). Windows Server 2016 (version 1607, build 14393.0) is [the last Windows Server release that supports FRS](https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/windows-server-version-1709-no-longer-supports-frs).
+
+## Windows Server 2022
+
+There are no new forest or domain functional levels added in this release.
 
 ## Windows Server 2019
 
@@ -37,19 +41,19 @@ Supported Domain Controller Operating System:
 
 ### Windows Server 2016 forest functional level features
 
-* All of the features that are available at the Windows Server 2012R2 forest functional level, and the following features, are available:
+* All of the features that are available at the Windows Server 2012 R2 forest functional level, and the following features, are available:
    * [Privileged access management (PAM) using Microsoft Identity Manager (MIM)](../whats-new-active-directory-domain-services.md#privileged-access-management)
 
 ### Windows Server 2016 domain functional level features
 
-* All default Active Directory features, all features from the Windows Server 2012R2 domain functional level, plus the following features:
+* All default Active Directory features, all features from the Windows Server 2012 R2 domain functional level, plus the following features:
    * DCs can support automatic rolling of the NTLM and other password-based secrets on a user account configured to require PKI authentication. This configuration is also known as "Smart card required for interactive logon"
    * DCs can support allowing network NTLM when a user is restricted to specific domain-joined devices.
    * Kerberos clients successfully authenticating with the PKInit Freshness Extension will get the fresh public key identity SID.
 
     For more information see [What's New in Kerberos Authentication](../../security/kerberos/whats-new-in-kerberos-authentication.md) and [What's new in Credential Protection](../../security/credentials-protection-and-management/whats-new-in-credential-protection.md)
 
-## Windows Server 2012R2
+## Windows Server 2012 R2
 
 Supported Domain Controller Operating System:
 
@@ -57,11 +61,11 @@ Supported Domain Controller Operating System:
 * Windows Server 2016
 * Windows Server 2012 R2
 
-### Windows Server 2012R2 forest functional level features
+### Windows Server 2012 R2 forest functional level features
 
 * All of the features that are available at the Windows Server 2012 forest functional level, but no additional features.
 
-### Windows Server 2012R2 domain functional level features
+### Windows Server 2012 R2 domain functional level features
 
 * All default Active Directory features, all features from the Windows Server 2012 domain functional level, plus the following features:
    * DC-side protections for Protected Users. Protected Users authenticating to a Windows Server 2012 R2 domain can no longer:
