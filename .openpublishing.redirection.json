@@ -10414,6 +10414,21 @@
       "source_path": "WindowsServerDocs/get-started/Server-Role-Upgradeability-Table.md",
       "redirect_url": "/windows-server/get-started/upgrade-migrate-roles-features",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Supported-Upgrade-Paths.md",
+      "redirect_url": "/windows-server/get-started/upgrade-conversion-options",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Getting-Started-with-Server-Core.md",
+      "redirect_url": "/windows-server/get-started/install-options-server-core-desktop-experience",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Getting-Started-with-Server-with-Desktop-Experience.md",
+      "redirect_url": "/windows-server/get-started/install-options-server-core-desktop-experience",
+      "redirect_document_id": false
     }
   ]
 }

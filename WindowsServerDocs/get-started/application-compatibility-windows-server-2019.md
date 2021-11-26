@@ -1,6 +1,6 @@
 ---
-title: Windows Server 2019 and Microsoft server application compatibility
-description: Compatibility table for Windows Server 2019 and Microsoft server applications
+title: Windows Server 2019 and Microsoft server applications compatibility
+description: Compatibility table for Windows Server 2019 and Microsoft server applications.
 ms.topic: article
 ms.assetid: 2afe7c32-1fda-4441-989b-4115dabdcd34
 ms.author: jgerend
@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 ms.date: 01/04/2021
 ---
 
-# Windows Server 2019 and Microsoft Server application compatibility
+# Windows Server 2019 and Microsoft server applications compatibility
 
 This table lists Microsoft server applications that support installation and functionality on Window Server 2019. This information is for quick reference and is not intended to replace the individual product specifications, requirements, announcements, or general communications of each individual server application. Refer to official documentation for each product to fully understand compatibility and options.
 
