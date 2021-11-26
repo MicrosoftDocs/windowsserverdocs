@@ -64,7 +64,7 @@ items:
               href: kms-activation-planning.md
         - name: Server Core App Compatibility Feature on Demand
           href: server-core-app-compatibility-feature-on-demand.md
-        - name: Microsoft Server application compatibility
+        - name: Microsoft server applications compatibility
           items:
           - name: Windows Server 2022
             href: application-compatibility-windows-server-2022.md
