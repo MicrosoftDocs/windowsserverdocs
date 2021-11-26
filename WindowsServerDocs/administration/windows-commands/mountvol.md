@@ -42,7 +42,7 @@ mountvol <drive>: /s
 
 ## Remarks
 
-- Typing `mountvol` with no parameters lists the available volumes, along with the current mount points for each. This is the only way to show the inverse of the grouping shown by the **/l** parameter.
+- Typing `mountvol` with no parameters lists the available volumes, along with the current mount points for each. This is the only way to display the inverse of the grouping shown by the **/l** parameter.
 
 - If you dismount your volume while using the **/p** parameter, the volume list will show the volume as not mounted until a volume mount point is created.
 
