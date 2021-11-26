@@ -1,6 +1,6 @@
 ---
 title: Upgrade and Conversion Options for Windows Server
-description: Explains how to upgrade or convert Windows Server to newer versions, different editions, or switch between licensing options, such as evaluation, retail and volume licensed.
+description: Explains how to upgrade or convert Windows Server to newer versions, different editions, or switch between licensing options, such as evaluation, retail, and volume licensed.
 ms.date: 11/25/2021
 ms.topic: conceptual
 ms.assetid: 74aa1da3-7076-4a1f-ad5b-9e17bd46dba2
@@ -11,13 +11,13 @@ ms.localizationpriority: medium
 ---
 # Upgrade and conversion options for Windows Server
 
-You can upgrade or convert installations of Windows Server to newer versions, different editions, or switch between licensing options, such as evaluation, retail and volume licensed. This topic helps explain what the options are to help with your planning.
+You can upgrade or convert installations of Windows Server to newer versions, different editions, or switch between licensing options, such as evaluation, retail, and volume licensed. This article helps explain what the options are to help with your planning.
 
 The process of upgrading or converting installations of Windows Server might vary greatly depending on which version and edition you have installed, how it is licensed, and the pathway you take. We use the following terms to distinguish between different actions, any of which could be involved in a new deployment of Windows Server.
 
-- **Clean install** is simplest way to install Windows Server is to perform a clean installation, where you install on a blank server or overwrite an existing operating system. That is the simplest way, but you will need to back up your data first and plan to reinstall your applications. There are a few things to be aware of, such as [hardware requirements](hardware-requirements.md), so be sure to check the details for Windows Server.
+- **Clean install** is simplest way to install Windows Server, where you install on a blank server or overwrite an existing operating system, but you will need to back up your data first and plan to reinstall your applications. There are a few things to be aware of, such as [hardware requirements](hardware-requirements.md), so be sure to check the details for Windows Server.
 
-- **In-place upgrade** enables you to keep the same hardware and all the server roles you have set up without wiping and reinstalling the operating system, by which you go from an older operating system to a newer one, keeping your settings, server roles and features, and data intact. For example, if your server is running Windows Server 2019, you can upgrade it to Windows Server 2022. However, not every older operating system has a pathway to every newer one and some roles or features don't support this or need you to take additional steps.  In-place upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade.
+- **In-place upgrade** enables you to keep the same hardware and all the server roles you have set up without wiping and reinstalling the operating system, by which you go from an older operating system to a newer one, keeping your settings, server roles and features, and data intact. For example, if your server is running Windows Server 2019, you can upgrade it to Windows Server 2022. However, not every older operating system has a pathway to every newer one and some roles or features don't support this or need you to take extra steps.  In-place upgrade works best in virtual machines where specific OEM hardware drivers are not needed for a successful upgrade.
 
   For step-by-step guidance and more information on upgrading, review the [Windows Server upgrade content](../upgrade/upgrade-overview.md) and [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
 
@@ -58,7 +58,7 @@ If you haven't already activated Windows, the bottom right-hand corner of the de
 
 If the server is running an evaluation version of Windows Server Standard edition or Windows Server Datacenter edition, you can convert it to a retail version as follows:
 
-1. From an elevated command prompt or PowerShell session, run the following command to save the Microsoft Software License Terms for Windows Server which you can then review:
+1. From an elevated command prompt or PowerShell session, run the following command to save the Microsoft Software License Terms for Windows Server, which you can then review:
 
    ```
    DISM /online /Set-Edition:ServerDatacenter /GetEula:C:\eula.rtf
