@@ -63,6 +63,8 @@ items:
             href: application-compatibility-windows-server-2019.md
           - name: Windows Server 2016
             href: application-compatibility-windows-server-2016.md
+        - name: Install, upgrade, or migrate
+          href: install-upgrade-migrate.md
         - name: Upgrade or migrate Windows Server Roles and Features
           href: upgrade-migrate-roles-features.md
         - name: Upgrade and Conversion Options for Windows Server 2016
@@ -71,8 +73,7 @@ items:
           href: azure-hybrid-benefit.md
     - name: How-to guides
       items:
-        - name: Install, upgrade, or migrate
-          href: install-upgrade-migrate.md
+        - name: Installation options
           items:
           - name: Install Server Core
             href: Getting-started-with-Server-Core.md
