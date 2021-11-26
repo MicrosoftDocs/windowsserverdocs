@@ -10428,7 +10428,7 @@
     {
       "source_path": "WindowsServerDocs/get-started/Getting-Started-with-Server-with-Desktop-Experience.md",
       "redirect_url": "/windows-server/get-started/install-options-server-core-desktop-experience",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
