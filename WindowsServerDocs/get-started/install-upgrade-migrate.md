@@ -29,7 +29,7 @@ In-place upgrade enables you to keep the same hardware and all the server roles 
 
   For step-by-step guidance and more information on upgrading, review the [Windows Server upgrade content](../upgrade/upgrade-overview.md) and [Upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
 
-## Cluster Operating System Rolling Upgrade
+## Cluster Operating System rolling upgrade
 
 Cluster Operating System (OS) rolling upgrade gives an administrator the ability to upgrade the operating system of the cluster nodes without stopping the Hyper-V or the Scale-Out File Server workloads. For example, if nodes in your cluster are running Windows Server 2019 you can install Windows Server 2022 on them avoiding downtime to the cluster, which would otherwise impact Service Level Agreements. This feature is discussed in more detail at [Cluster OS rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md).
 
