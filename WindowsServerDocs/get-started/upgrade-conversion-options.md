@@ -1,5 +1,5 @@
 ---
-title: Upgrade and Conversion Options for Windows Server
+title: Upgrade and conversion options for Windows Server
 description: Explains how to upgrade or convert Windows Server to newer versions, different editions, or switch between licensing options, such as evaluation, retail, and volume licensed.
 ms.date: 11/25/2021
 ms.topic: conceptual

@@ -41,3 +41,8 @@ There are some key differences between Server Core and Server with Desktop Exper
 
 > [!NOTE]
 > For RSAT, you must use the version included with Windows 10 or later.
+
+## Next steps
+
+- Install, upgrade, or migrate to Windows Server
+- Learn about Server Core App Compatibility Feature on Demand (FOD) in Windows Server
