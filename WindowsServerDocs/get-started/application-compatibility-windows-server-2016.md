@@ -1,6 +1,6 @@
 ---
-title: Windows Server 2016 and Microsoft server application compatibility
-description: Compatibility chart for Server 2016 and Microsoft server applications.
+title: Windows Server 2016 and Microsoft server applications compatibility
+description: Compatibility table for Windows Server 2016 and Microsoft server applications.
 ms.date: 08/01/2018
 ms.topic: article
 ms.assetid: 2afe7c32-1fda-4441-989b-1415dabddc72
@@ -9,7 +9,7 @@ ms.author: jaimeo
 ms.localizationpriority: medium
 ---
 
-# Windows Server 2016 and Microsoft Server Application Compatibility
+# Windows Server 2016 and Microsoft server applications compatibility
 
 This table lists Microsoft server applications that support installation and functionality on Window Server 2016. This information is for quick reference and is not intended to replace the individual product specifications, requirements, announcements, or general communications of each individual server application. Refer to official documentation for each product to fully understand compatibility and options.
 
