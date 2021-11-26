@@ -67,7 +67,7 @@ items:
           href: install-upgrade-migrate.md
         - name: Upgrade or migrate Windows Server Roles and Features
           href: upgrade-migrate-roles-features.md
-        - name: Upgrade and Conversion Options for Windows Server 2016
+        - name: Upgrade and conversion options
           href: upgrade-conversion-options.md
         - name: Azure Hybrid Benefit for Windows Server
           href: azure-hybrid-benefit.md
