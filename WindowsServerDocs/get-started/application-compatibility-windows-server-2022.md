@@ -29,7 +29,7 @@ This table lists Microsoft server applications that support installation and fun
 | SQL Server 2019 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2019](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15?view=sql-server-ver15&preserve-view=true) |
 | System Center Data Protection Manager 2019 | Yes as a backup workload.<br/>No as a DPM server. | Yes as a backup workload.<br/>No as a DPM server. | Yes | [Preparing your environment for System Center Data Protection Manager](/system-center/dpm/prepare-environment-for-dpm?view=sc-dpm-2019&preserve-view=true) |
 | System Center Data Protection Manager 2022 | Yes* | Yes | No |  |
-| System Center Operations Manager 2019 | Yes as an agent.<br/>No as a Management Server** | Yes as an agent.<br/>No as a Management Server** | Yes | [System requirements for System Center Operations Manager](/system-center/scom/system-requirements?view=sc-om-2019&preserve-view=true) |
+| System Center Operations Manager 2019 | Yes as an agent.<br/>No as a Management Server** | Yes as an agent.<br/>No as a Management Server**. | Yes | [System requirements for System Center Operations Manager](/system-center/scom/system-requirements?view=sc-om-2019&preserve-view=true) |
 | System Center Operations Manager 2022 | Yes* | Yes | No |  |
 | System Center Virtual Machine Manager 2022 | Yes* | Yes | No |  |
 
