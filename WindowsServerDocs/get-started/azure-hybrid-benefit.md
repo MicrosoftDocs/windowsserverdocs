@@ -12,7 +12,7 @@ ms.localizationpriority: medium
 
 Azure Hybrid Benefit for Windows Server allows you to save up to 40% on Windows Server virtual machines (VMs) in Azure by using your on-premises Windows Server licenses with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-by-benefits) or subscription license. With this benefit, you only need to pay for the infrastructure costs of the virtual machine because the license for Windows Server is covered by the Software Assurance benefit.  The benefit is applicable to both Standard and Datacenter editions of Windows Server for Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, and Windows Server 2022. This benefit is available across all regions and sovereign clouds.
 
-:::image type="content" source="media/ahb01.png" alt-text="Windows VM cost structure":::
+:::image type="content" source="media/ahb01.png" alt-text="Windows V M cost structure":::
 
 ## Rules and use cases
 
@@ -35,7 +35,7 @@ The image below illustrates examples of Azure Hybrid Benefit for Windows Server 
 
 Below is a reference table to assist you with understanding the benefit rules with more granularity. The green column shows the quantity of same-type VMs, and the blue row shows the core density of each VM. The yellow cells show the number of two-processor licenses (or sets of 16 cores) you must have to deploy a certain number of VMs of a certain core density:
 
-:::image type="content" source="media/ahb03.png" alt-text="Windows Server with SA or subscription requirements reference table":::
+:::image type="content" source="media/ahb03.png" alt-text="Windows Server with S A or subscription requirements reference table":::
 
 ## Example configurations
 
