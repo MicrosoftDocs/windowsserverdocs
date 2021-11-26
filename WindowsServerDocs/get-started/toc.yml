@@ -102,14 +102,14 @@ items:
       - name: Manage Nano Server
         href: Manage-Nano-Server.md
         items: 
-          - name: Service and Update Nano Server
+          - name: Service and update Nano Server
             href: Update-Nano-Server.md
       - name: Developing on Nano Server
         href: Developing-on-Nano-Server.md
         items: 
           - name: PowerShell on Nano Server
             href: powershell-on-Nano-Server.md
-          - name: Developing PowerShell Cmdlets for Nano Server
+          - name: Developing PowerShell cmdlets for Nano Server
             href: Developing-powershell-Cmdlets-for-Nano-Server.md
     - name: Troubleshooting
       items:
