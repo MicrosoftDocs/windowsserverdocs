@@ -14,7 +14,7 @@ Azure Hybrid Benefit for Windows Server allows you to save up to 40% on Windows 
 
 :::image type="content" source="media/ahb01.png" alt-text="Windows VM cost structure":::
 
-## Rules, and use cases
+## Rules and use cases
 
 All you need to qualify for the benefit is an active Software Assurance (SA) or a subscription license such as EAS, SCE subscription or Open Value Subscription on your Windows Server licenses.
 
