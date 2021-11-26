@@ -41,9 +41,9 @@ Below is a reference table to assist you with understanding the benefit rules wi
 
 Azure Hybrid Benefit for Windows Server also allows flexibility to run different VM configurations and combining VMs of different types. The examples below show configurations for some licensing scenarios:
 
-:::image type="content" source="media/ahb04.png" alt-text="An example configuration for 16 cores or one 2-processor license, or for 24 cores":::
+:::image type="content" source="media/ahb04.png" alt-text="An example configuration for 16 cores or one two-processor license, or for 24 cores":::
 
-:::image type="content" source="media/ahb05.png" alt-text="An example configuration for 32 cores or two 2-processor licenses (stacking the licenses)":::
+:::image type="content" source="media/ahb05.png" alt-text="An example configuration for 32 cores or two two-processor licenses (stacking the licenses)":::
 
 ## How to use Azure Hybrid Benefit for Windows Server
 
