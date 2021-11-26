@@ -1,6 +1,6 @@
 ---
-title: Windows Server 2022 and Microsoft server application compatibility
-description: Compatibility table for Windows Server 2022 and Microsoft server applications
+title: Windows Server 2022 and Microsoft server applications compatibility
+description: Compatibility table for Windows Server 2022 and Microsoft server applications.
 ms.topic: article
 ms.author: daknappe
 author: dknappettmsft
@@ -9,7 +9,7 @@ ms.date: 9/20/2021
 ms.localizationpriority: medium
 ---
 
-# Windows Server 2022 and Microsoft Server application compatibility
+# Windows Server 2022 and Microsoft server applications compatibility
 
 This table lists Microsoft server applications that support installation and functionality on Window Server 2022. This information is for quick reference and is not intended to replace the individual product specifications, requirements, announcements, or general communications of each individual server application. Refer to official documentation for each product to fully understand compatibility and options.
 
