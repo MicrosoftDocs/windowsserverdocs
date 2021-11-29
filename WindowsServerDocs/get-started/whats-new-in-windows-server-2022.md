@@ -35,7 +35,7 @@ Firmware executes with high privileges and is often invisible to traditional ant
 
 Secured-core servers support virtualization-based security (VBS) and hypervisor-based code integrity (HVCI). [VBS](/windows-hardware/design/device-experiences/oem-vbs) uses hardware virtualization features to create and isolate a secure region of memory from the normal operating system, protecting against an entire class of vulnerabilities used in cryptocurrency mining attacks. VBS also allows for the use of [Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-how-it-works), where user credentials and secrets are stored in a virtual container that the operating system cannot access directly. 
 
-[HVCI](/windows-hardware/design/device-experiences/oem-hvci-enablement) uses VBS to significantly strengthen code integrity policy enforcement, including kernel mode integrity which checks all kernel mode drivers and binaries in a virtualized environment before they are started, preventing unsigned drivers or system files from being loaded into system memory.
+[HVCI](/windows-hardware/design/device-experiences/oem-hvci-enablement) uses VBS to significantly strengthen code integrity policy enforcement, including kernel mode integrity that checks all kernel mode drivers and binaries in a virtualized environment before they are started, preventing unsigned drivers or system files from being loaded into system memory.
 
 ### Secure connectivity
 
@@ -43,7 +43,7 @@ Secured-core servers support virtualization-based security (VBS) and hypervisor-
 
 Secure connections are at the heart of today’s interconnected systems. Transport Layer Security (TLS) 1.3 is the latest version of the internet’s most deployed security protocol, which encrypts data to provide a secure communication channel between two endpoints. HTTPS and TLS 1.3 is now enabled by default on Windows Server 2022, protecting the data of clients connecting to the server. It eliminates obsolete cryptographic algorithms, enhances security over older versions, and aims to encrypt as much of the handshake as possible. Learn more about [supported TLS versions](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-) and about [supported cipher suites](/windows/win32/secauthn/tls-cipher-suites-in-windows-server-2022).
 
-Note that although TLS 1.3 in the protocol layer is now enabled by default, applications and services also need to actively support it. Please see documentation for those applications and services for more information. The Microsoft Security blog has more detail in the post [Taking Transport Layer Security (TLS) to the next level with TLS 1.3](https://www.microsoft.com/security/blog/2020/08/20/taking-transport-layer-security-tls-to-the-next-level-with-tls-1-3/).
+Although TLS 1.3 in the protocol layer is now enabled by default, applications and services also need to actively support it. Please see documentation for those applications and services for more information. The Microsoft Security blog has more detail in the post [Taking Transport Layer Security (TLS) to the next level with TLS 1.3](https://www.microsoft.com/security/blog/2020/08/20/taking-transport-layer-security-tls-to-the-next-level-with-tls-1-3/).
 
 #### Secure DNS: Encrypted DNS name resolution requests with DNS-over-HTTPS
 
@@ -51,7 +51,7 @@ DNS Client in Windows Server 2022 now supports DNS-over-HTTPS (DoH) which encryp
 
 #### Server Message Block (SMB): SMB AES-256 encryption for the most security conscious
 
-Windows Server now supports AES-256-GCM and AES-256-CCM cryptographic suites for SMB encryption. Windows will automatically negotiate this more advanced cipher method when connecting to another computer that also supports it, and it can also be mandated through Group Policy. Windows Server still supports AES-128 for down-level compatibility. AES-128-GMAC signing now also accelerates signing perfomance.
+Windows Server now supports AES-256-GCM and AES-256-CCM cryptographic suites for SMB encryption. Windows will automatically negotiate this more advanced cipher method when connecting to another computer that also supports it, and it can also be mandated through Group Policy. Windows Server still supports AES-128 for down-level compatibility. AES-128-GMAC signing now also accelerates signing performance.
 
 #### SMB: East-West SMB encryption controls for internal cluster communications
 
