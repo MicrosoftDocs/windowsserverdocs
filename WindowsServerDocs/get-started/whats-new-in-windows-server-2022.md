@@ -136,9 +136,17 @@ Enhancements to Storage Migration Service in Windows Server 2022 makes it easier
 
 [User adjustable storage repair speed](/azure-stack/hci/manage/storage-repair-speed) is a new feature in Storage Spaces Direct that offers more control over the data resync process by allocating resources to either repair data copies (resiliency) or run active workloads (performance). This helps improve availability and allows you to service your clusters more flexibly and efficiently.
 
+#### Faster repair and resynchronization
+
+Storage repair and resynchronization after events such as node reboots and disk failures are now twice as fast. Repairs have less variance in time taken so you can be more sure of how long the repairs will take, which has been achieved through adding more granularity to data tracking. This only moves the data that needs to be moved, and reduces the system resources used and the time taken.
+
 #### Storage bus cache with Storage Spaces on standalone servers
 
 Storage bus cache is now available for standalone servers. It can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. Similar to its implementation for Storage Spaces Direct, this feature binds together faster media (for example, NVMe or SSD) with slower media (for example, HDD) to create tiers. A portion of the faster media tier is reserved for the cache. To learn more, see [Enable storage bus cache with Storage Spaces on standalone servers](../storage/storage-spaces/storage-spaces-storage-bus-cache.md).
+
+#### ReFS file-level snapshots
+
+Microsoft’s Resilient File System (ReFS) now includes the ability to snapshot files using a quick metadata operation. Snapshots are different than [ReFS block cloning](../storage/refs/block-cloning.md) in that clones are writable, whereas snapshots are read-only. This functionality is especially useful in virtual machine backup scenarios with VHD/VHDX files. ReFS snapshots are unique in that they take a constant time irrespective of file size. Support for snapshots is available in [ReFSUtil](../administration/windows-commands/refsutil.md) or as an API.
 
 #### SMB compression
 
