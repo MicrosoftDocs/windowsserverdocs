@@ -138,7 +138,7 @@ Enhancements to Storage Migration Service in Windows Server 2022 makes it easier
 
 #### Faster repair and resynchronization
 
-Storage repair and resynchronization after events such as node reboots and disk failures are now twice as fast. Repairs have less variance in time taken so you can be more sure of how long the repairs will take, which has been achieved through adding more granularity to data tracking. This moves only the data that needs to be moved, and reduces the system resources used and the time taken.
+Storage repair and resynchronization after events such as node reboots and disk failures are now twice as fast. Repairs have less variance in time taken so you can be more sure of how long the repairs will take, which has been achieved through adding more granularity to data tracking. This only moves the data that needs to be moved, and reduces the system resources used and the time taken.
 
 #### Storage bus cache with Storage Spaces on standalone servers
 
