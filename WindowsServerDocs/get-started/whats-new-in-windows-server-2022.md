@@ -43,6 +43,8 @@ Secured-core servers support virtualization-based security (VBS) and hypervisor-
 
 Secure connections are at the heart of today’s interconnected systems. Transport Layer Security (TLS) 1.3 is the latest version of the internet’s most deployed security protocol, which encrypts data to provide a secure communication channel between two endpoints. HTTPS and TLS 1.3 is now enabled by default on Windows Server 2022, protecting the data of clients connecting to the server. It eliminates obsolete cryptographic algorithms, enhances security over older versions, and aims to encrypt as much of the handshake as possible. Learn more about [supported TLS versions](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-) and about [supported cipher suites](/windows/win32/secauthn/tls-cipher-suites-in-windows-server-2022).
 
+Note that although TLS 1.3 in the protocol layer is now enabled by default, applications and services also need to actively support it. Please see documentation for those applications and services for more information. The Microsoft Security blog has more detail in the post [Taking Transport Layer Security (TLS) to the next level with TLS 1.3](https://www.microsoft.com/security/blog/2020/08/20/taking-transport-layer-security-tls-to-the-next-level-with-tls-1-3/).
+
 #### Secure DNS: Encrypted DNS name resolution requests with DNS-over-HTTPS
 
 DNS Client in Windows Server 2022 now supports DNS-over-HTTPS (DoH) which encrypts DNS queries using the HTTPS protocol. This helps keep your traffic as private as possible by preventing eavesdropping and your DNS data being manipulated. Learn more about [configuring the DNS client to use DoH](../networking/dns/doh-client-support.md).
