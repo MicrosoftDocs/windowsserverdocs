@@ -99,12 +99,12 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 
 ### Windows 10 (LTSC/LTSB versions)
 
-#### Windows 10 LTSC 2019
+#### Windows 10 LTSC 2021 and 2019
 
 | Operating system edition          | KMS Client Product Key        |
 |-----------------------------------|-------------------------------|
-| Windows 10 Enterprise LTSC 2019   | M7XTQ-FN8P6-TTKYV-9D4CC-J462D |
-| Windows 10 Enterprise N LTSC 2019 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
+| Windows 10 Enterprise LTSC 2021<br/>Windows 10 Enterprise LTSC 2019   | M7XTQ-FN8P6-TTKYV-9D4CC-J462D |
+| Windows 10 Enterprise N LTSC 2021<br/>Windows 10 Enterprise N LTSC 2019 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
 
 #### Windows 10 LTSB 2016
 
