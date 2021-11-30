@@ -59,16 +59,21 @@ Starting with Windows Server, version 1903, the following components are also av
 
 ## Installing the App Compatibility Feature on Demand
 
-The App Compatibility FOD can only be installed on Server Core. Don't attempt to add the Server Core App Compatibility FOD to the Server with Desktop Experience installation option.
+> [!IMPORTANT]
+> The App Compatibility FOD can only be installed on Server Core. Don't attempt to add the Server Core App Compatibility FOD to the Server with Desktop Experience installation option.
 
 > [!CAUTION]
-> There is currently a known issue with App Compatibility FOD for Windows Server 2022. Once installed, if you try to connect to the server using Remote Desktop Protocol (RDP), you can be presented with a black screen and disconnected. This issue will be fixed in a future Cumulative Update. Windows Server 2019 is not affected.
+> There is currently a known issue with App Compatibility FOD for Windows Server 2022. Once installed, if you try to connect to the server using Remote Desktop Protocol (RDP), you can be presented with a black screen and disconnected. This issue will be fixed in a future Cumulative Update. Windows Server 2019 and previous versions are not affected.
+
+### Connected to the internet
 
 1. If the server can connect to Windows Update, all you have to do is run the following command from an elevated PowerShell session and then restart Windows Server after the command finishes running:
 
     ```PowerShell
     Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0
     ```
+
+### Disconnected from the internet
 
 1. If the server can't connect to Windows Update, instead download the Windows Server Languages and Optional Features ISO image file, and copy the ISO to a shared folder on your local network:
 
@@ -80,28 +85,46 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 1. Sign in with an administrator account on the Server Core computer that is connected to your local network and that you want to add the App Compatibility FOD to.
 
-1. Use `New-PSDrive` from PowerShell, `net use` from Command Prompt, or some other method, to connect to the location of the FOD ISO.
+#### Mount the FOD ISO
 
-1. Copy the FOD ISO to a local folder of your choosing.
-
-1. Mount it by using the following command in an elevated PowerShell session, where E:\ is a drive letter not currently in use:
+1. Use `New-PSDrive` from PowerShell, `net use` from Command Prompt, or some other method, to connect to the location of the FOD ISO. For example in an elevated PowerShell session run the following command:
 
     ```PowerShell
-    Mount-DiskImage -ImagePath E:\folder_where_ISO_is_saved\ISO_filename.iso
+    $credential = Get-Credential
+    New-PSDrive -Name FODShare -PSProvider FileSystem -Root \\server\share -Credential $credential
     ```
 
-1. Run the following command (depending on the version):
+1. Copy the FOD ISO to a local folder of your choosing, for example:
+
+    ```PowerShell
+    cd C:\
+    Copy-Item -Path FODShare:\ISO_filename.iso C:\
+    ```
+
+1. Mount the FOD ISO by using the following command:
+
+    ```PowerShell
+    $FODISO = Mount-DiskImage -ImagePath C:\ISO_filename.iso
+    ```
+
+1. Run the following command to get the drive letter that the FOD ISO has been mounted to:
+
+    ```PowerShell
+    $FODDriveLetter = ($FODISO | Get-Volume).DriveLetter
+    ```
+
+1. Run the following command (depending on the operating system version):
 
     For Windows Server 2022:
 
     ```PowerShell
-    Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source E:\LanguagesAndOptionalFeatures\ -LimitAccess
+    Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source ${FODDriveLetter}:\LanguagesAndOptionalFeatures\ -LimitAccess
      ```
 
     For previous versions of Windows Server:
 
     ```PowerShell
-    Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source E:\ -LimitAccess
+    Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source ${FODDriveLetter}:\ -LimitAccess
      ```
 
 1. After the progress bar completes, restart the operating system.
@@ -116,13 +139,19 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 1. Sign in as Administrator on the Server Core computer that has the App Compatibility FOD already added and the Server FOD optional package ISO copied locally.
 
-1. Mount the FOD ISO by using the following command in an elevated PowerShell session, where E:\ is a drive letter not currently in use:
+1. Mount the FOD ISO by using the command below. This step assumes that you have already copied the FOD ISO locally. If not, please complete steps 1 and 2 from [Mount the FOD ISO](#mount-the-fod-iso) above. The commands below follow on from these two steps:
 
     ```PowerShell
-    Mount-DiskImage -ImagePath E:\folder_where_ISO_is_saved\ISO_filename.iso
+    $FODISO = Mount-DiskImage -ImagePath C:\ISO_filename.iso
     ```
 
-1. Run the following commands (depending on the version), using the `$package_path` variable as the path to the Internet Explorer cab file:
+1. Run the following command to get the drive letter that the FOD ISO has been mounted to:
+
+    ```PowerShell
+    $FODDriveLetter = ($FODISO | Get-Volume).DriveLetter
+    ```
+
+1. Run the following commands (depending on the version), using the `$package_path` variable as the path to the Internet Explorer .cab file:
 
     For Windows Server 2022:
 
@@ -166,16 +195,28 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
    - If you have a volume license, you can download the Windows Server Languages and Optional Features ISO image file from the same portal where the operating system ISO image file is obtained: [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
    - The Windows Server Languages and Optional Features ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
 
-1. Mount the Languages and Optional Features ISO and Windows Server ISO by using the following commands in an elevated PowerShell session, where E:\ and F:\ are drive letters not currently in use:
+1. Mount the Languages and Optional Features ISO and the Windows Server ISO by using the following commands in an elevated PowerShell session:
 
-   ```PowerShell
-   Mount-DiskImage -ImagePath E:\folder_where_ISO_is_saved\Languages_and_Optional_Features_ISO_filename.iso
-   Mount-DiskImage -ImagePath F:\folder_where_ISO_is_saved\Windows_Server_ISO_filename.iso
-   ```
+    ```PowerShell
+    $FODISO = Mount-DiskImage -ImagePath C:\folder_where_ISO_is_saved\Languages_and_Optional_Features_ISO_filename.iso
+    $WSISO = Mount-DiskImage -ImagePath C:\folder_where_ISO_is_saved\Windows_Server_ISO_filename.iso
+    ```
 
-1. Copy the contents of the Windows Server ISO file to a local folder (for example, **C:\SetupFiles\WindowsServer**).
+1. Run the following command to get the drive letters that the FOD ISO and Windows Server ISO have been mounted to:
 
-1. Get the image name you want to modify within the install.wim file by using the following command. Use the `$install_wim_path` variable to enter the path to the install.wim file, located inside the \sources folder of the Windows Server ISO file.
+    ```PowerShell
+    $FODDriveLetter = ($FODISO | Get-Volume).DriveLetter
+    $WSDriveLetter = ($WSISO | Get-Volume).DriveLetter
+    ```
+
+1. Copy the contents of the Windows Server ISO file to a local folder (for example, **C:\SetupFiles\WindowsServer**). This may take some time:
+
+    ```powershell
+    $WSISOFiles = "C:\Temp\WindowsServer\"
+    Copy-Item -Path ${WSDriveLetter}:\* -Destination $WSISOFiles -Recurse
+    ```
+
+1. Get the image name you want to modify within the install.wim file by using the following command. Add your path to the install.wim file to the `$install_wim_path` variable, located inside the \sources folder of the Windows Server ISO file.
 
    ```PowerShell
    $install_wim_path = C:\SetupFiles\WindowsServer\sources\install.wim
@@ -185,14 +226,14 @@ The App Compatibility FOD can only be installed on Server Core. Don't attempt to
 
 1. Mount the install.wim file in a new folder by using the following command replacing the sample variable values with your own, and reusing the `$install_wim_path` variable from the previous command.
 
-   - `$image_name` - Enter the name of the image you want to mount.
+   - `$image_name` - Enter the name of the image you want to mount. The example here uses **Windows Server 2022 Datacenter**.
    - `$mount_folder` - Specify the folder to use when accessing the contents of the install.wim file.
 
    ```PowerShell
-   $image_name = "Windows Server Datacenter"
+   $image_name = "Windows Server 2022 Datacenter"
    $mount_folder = c:\test\offline
 
-   Mount-WindowsImage -ImagePath $install_wim_path -Name $image_name -path $mount_folder
+   Mount-WindowsImage -ImagePath $install_wim_path -Name $image_name -Path $mount_folder
    ```
 
 1. Add capabilities and packages you want to the mounted install.wim image by using the following commands (depending on the version), replacing the sample variable values with your own.
