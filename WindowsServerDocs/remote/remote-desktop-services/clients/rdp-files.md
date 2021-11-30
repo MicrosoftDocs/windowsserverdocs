@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 09/14/2020
+ms.date: 11/30/2021
 ms.localizationpriority: medium
 ---
 
@@ -72,10 +72,10 @@ The table also highlights which settings are supported as custom properties with
 | screen mode id:i:value | Determines whether the remote session window appears full screen when you launch the connection. | - 1: The remote session will appear in a window</br>- 2: The remote session will appear full screen | 2 | Yes |
 | smart sizing:i:value | Determines whether or not the local computer scales the content of the remote session to fit the window size. | - 0: The local window content won't scale when resized</br>- 1: The local window content will scale when resized | 0 | Yes |
 | dynamic resolution:i:value | Determines whether the resolution of the remote session is automatically updated when the local window is resized. | - 0: Session resolution remains static for the duration of the session</br>- 1: Session resolution updates as the local window resizes | 1 | Yes |
-| desktop size id:i:value | Specifies the dimensions of the remote session desktop from a set of pre-defined options. This setting is overridden if desktopheight and desktopwidth are specified.| -0: 640×480</br>- 1: 800×600</br>- 2: 1024×768</br>- 3: 1280×1024</br>- 4: 1600×1200 | 1 | Yes |
+| desktop size id:i:value | Specifies the dimensions of the remote session desktop from a set of pre-defined options. This setting is overridden if desktopheight and desktopwidth are specified.| -0: 640×480</br>- 1: 800×600</br>- 2: 1024×768</br>- 3: 1280×1024</br>- 4: 1600×1200 | Match the local computer | Yes |
 | desktopheight:i:value | Specifies the resolution height (in pixels) of the remote session. | Numerical value between 200 and 8192 | Match the local computer | Yes |
 | desktopwidth:i:value | Specifies the resolution width (in pixels) of the remote session. | Numerical value between 200 and 8192 | Match the local computer | Yes |
-| desktopscalefactor:i:value | Specifies the scale factor of the remote session to make the content appear larger. | Numerical value from the following list: 100, 125, 150, 175, 200, 250, 300, 400, 500 | 100 | Yes |
+| desktopscalefactor:i:value | Specifies the scale factor of the remote session to make the content appear larger. | Numerical value from the following list: 100, 125, 150, 175, 200, 250, 300, 400, 500 | Match the local computer | Yes |
 
 ## RemoteApp
 
