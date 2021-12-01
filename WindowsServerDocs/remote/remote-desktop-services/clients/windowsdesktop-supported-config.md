@@ -17,9 +17,9 @@ This article lists which configurations the Windows Desktop client currently sup
 
 In order to run properly, your Windows Desktop client must meet the following requirements:
 
-- Client version must be at or above the minimum supported version. See [What's new in the Windows Desktop client](windowsdesktop-whatsnew.md)
+- Client version must be at or above the minimum supported version. For more information, see [What's new in the Windows Desktop client](windowsdesktop-whatsnew.md).
 
-- Client devices must have .NET Framework 4.6.1 or above. See [Lifecycle FAQ - .NET Framework](/lifecycle/faq/dotnet-framework)
+- Client devices must have .NET Framework 4.6.1 or above. For more information, [Lifecycle FAQ - .NET Framework](/lifecycle/faq/dotnet-framework).
 
 ## Supported OS versions
 
