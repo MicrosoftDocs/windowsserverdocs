@@ -49,7 +49,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 
 *Date published: 11/9/2021*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWOzKx), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWOzKy), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWOzKw)
 
 - Fixed the vulnerability known as [CVE-2021-38665](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38665).
 - Fixed the vulnerability known as [CVE-2021-38666](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38666).
@@ -58,8 +58,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.2600
 
 *Date published: 10/26/2021*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWOfxV), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWNXem), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWNXek)
 
 - Updates to Teams for Azure Virtual Desktop, including improvements to camera performance during video calls.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
