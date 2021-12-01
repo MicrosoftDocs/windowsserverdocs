@@ -87,7 +87,7 @@ Starting with Windows Server, version 1903, the following components are also av
 
 #### Mount the FOD ISO
 
-1. Use `New-PSDrive` from PowerShell, `net use` from Command Prompt, or some other method, to connect to the location of the FOD ISO. For example in an elevated PowerShell session run the following command:
+1. Use `New-PSDrive` from PowerShell, `net use` from Command Prompt, or some other method, to connect to the location of the FOD ISO. For example, in an elevated PowerShell session run the following command:
 
     ```PowerShell
     $credential = Get-Credential
