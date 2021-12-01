@@ -35,7 +35,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Fixed a usability issue where the Windows Desktop client would sometimes prompt for a password (Azure Active Directory prompt) after the device went into sleep mode.
 - Fixed an issue where the client didn't automatically expand and display interactive sign-in messages set by admins when a user signs in to their virtual machine.
-- Fixed a reliability issue where the client stopped responding when users tried to make new connections.
+- Fixed a reliability issue that appeared in version 1.2.2686 where the client stopped responding when users tried to launch new connections.
 - Updates to Teams for Azure Virtual Desktop, including the following:
    - The notification volume level on the client device is now the same as the host device.
    - Fixed an issue where the device volume was low in Azure Virtual Desktop sessions
