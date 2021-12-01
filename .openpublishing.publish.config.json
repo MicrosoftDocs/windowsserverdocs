@@ -60,6 +60,12 @@
       "url": "https://github.com/MicrosoftDocs/windows-release-pr",
       "branch": "live",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_azurestack",
+      "url": "https://github.com/MicrosoftDocs/azure-stack-docs",
+      "branch": "main",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {
