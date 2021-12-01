@@ -95,19 +95,20 @@ Starting with Windows Server, version 1903, the following components are also av
     New-PSDrive -Name FODShare -PSProvider FileSystem -Root "\\server\share" -Credential $credential
     ```
 
-1. Copy the FOD ISO to a local folder of your choosing, for example:
+1. Copy the FOD ISO to a local folder of your choosing (this may take some time). Edit the variables below with your folder location and ISO filename, and run the following commands, for example:
 
     ```PowerShell
     $isoFolder = "C:\SetupFiles\WindowsServer\ISOs"
+    $fodIsoFilename = "FOD_ISO_filename.iso"
 
     New-Item -ItemType Directory -Path $isoFolder
-    Copy-Item -Path "FODShare:\FOD_ISO_filename.iso" -Destination $isoFolder
+    Copy-Item -Path "FODShare:\$fodIsoFilename" -Destination $isoFolder -Verbose
     ```
 
 1. Mount the FOD ISO by using the following command:
 
     ```PowerShell
-    $fodIso = Mount-DiskImage -ImagePath "$isoFolder\FOD_ISO_filename.iso"
+    $fodIso = Mount-DiskImage -ImagePath "$isoFolder\$fodIsoFilename"
     ```
 
 1. Run the following command to get the drive letter that the FOD ISO has been mounted to:
@@ -122,13 +123,13 @@ Starting with Windows Server, version 1903, the following components are also av
 
     ```PowerShell
     Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source ${fodDriveLetter}:\LanguagesAndOptionalFeatures\ -LimitAccess
-     ```
+    ```
 
     For previous versions of Windows Server:
 
     ```PowerShell
     Add-WindowsCapability -Online -Name ServerCore.AppCompatibility~~~~0.0.1.0 -Source ${fodDriveLetter}:\ -LimitAccess
-     ```
+    ```
 
 1. After the progress bar completes, restart the operating system.
 
@@ -142,10 +143,13 @@ Starting with Windows Server, version 1903, the following components are also av
 
 1. Sign in as Administrator on the Server Core computer that already has the App Compatibility FOD added and the FOD optional package ISO copied locally.
 
-1. Mount the FOD ISO by using the command below. This step assumes that you have already copied the FOD ISO locally. If not, please complete steps 1 and 2 from [Mount the FOD ISO](#mount-the-fod-iso) above. The commands below follow on from these two steps:
+1. Mount the FOD ISO by using the command below. This step assumes that you have already copied the FOD ISO locally. If not, please complete steps 1 and 2 from [Mount the FOD ISO](#mount-the-fod-iso) above. The commands below follow on from these two steps. Edit the variables below with your folder location and ISO filename, and run the following commands, for example:
 
     ```PowerShell
-    $fodIso = Mount-DiskImage -ImagePath "$isoFolder\FOD_ISO_filename.iso"
+    $isoFolder = "C:\SetupFiles\WindowsServer\ISOs"
+    $fodIsoFilename = "FOD_ISO_filename.iso"
+
+    $fodIso = Mount-DiskImage -ImagePath "$isoFolder\$fodIsoFilename"
     ```
 
 1. Run the following command to get the drive letter that the FOD ISO has been mounted to:
@@ -154,7 +158,7 @@ Starting with Windows Server, version 1903, the following components are also av
     $fodDriveLetter = ($fodIso | Get-Volume).DriveLetter
     ```
 
-1. Run the following commands (depending on the version), using the `$packagePath` variable as the path to the Internet Explorer .cab file:
+1. Run the following commands (depending on your operating system version), using the `$packagePath` variable as the path to the Internet Explorer .cab file:
 
     For Windows Server 2022:
 
@@ -193,7 +197,7 @@ Starting with Windows Server, version 1903, the following components are also av
 
 ## Adding to an offline WIM Server Core image
 
-1. Download both the Languages and Optional Features ISO and the Windows Server ISO image files to a local folder on a Windows computer.
+1. Download both the Languages and Optional Features ISO and the Windows Server ISO image files to a local folder on a Windows computer. This can be a desktop Windows PC and does not need to be running Windows Server with the Server Core installation option.
 
    - If you have a volume license, you can download the Windows Server Languages and Optional Features ISO image file from the same portal where the operating system ISO image file is obtained: [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
    - The Windows Server Languages and Optional Features ISO image file is also available on the [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server) or on the [Visual Studio portal](https://visualstudio.microsoft.com) for subscribers.
@@ -201,14 +205,15 @@ Starting with Windows Server, version 1903, the following components are also av
     > [!NOTE]
     > The Languages and Optional Features ISO image file is new for Windows Server 2022. Previous versions of Windows Server use the Features on Demand (FOD) ISO.
 
-1. Mount both the Languages and Optional Features ISO and the Windows Server ISO by running the following commands in an elevated PowerShell session:
+1. Mount both the Languages and Optional Features ISO and the Windows Server ISO by running the commands below in an elevated PowerShell session. Edit the variables below with your folder location and ISO filename, and run the following commands, for example::
 
     ```PowerShell
     $isoFolder = "C:\SetupFiles\WindowsServer\ISOs"
+    $fodIsoFilename = "FOD_ISO_filename.iso"
+    $wsIsoFilename = "Windows_Server_ISO_filename.iso"
 
-    New-Item -ItemType Directory -Path $isoFolder # skip this line if the directory already exists
-    $fodIso = Mount-DiskImage -ImagePath "$isoFolder\FOD_ISO_filename.iso"
-    $wsIso = Mount-DiskImage -ImagePath "$isoFolder\Windows_Server_ISO_filename.iso"
+    $fodIso = Mount-DiskImage -ImagePath "$isoFolder\$fodIsoFilename"
+    $wsIso = Mount-DiskImage -ImagePath "$isoFolder\$wsIsoFilename"
     ```
 
 1. Run the following command to get the drive letters that the FOD ISO and Windows Server ISO have been mounted to:
@@ -218,16 +223,16 @@ Starting with Windows Server, version 1903, the following components are also av
     $wsDriveLetter = ($wsIso | Get-Volume).DriveLetter
     ```
 
-1. Copy the contents of the Windows Server ISO file to a local folder (for example, **C:\Temp\WindowsServer\Files**). This may take some time:
+1. Copy the contents of the Windows Server ISO file to a local folder, for example, **C:\SetupFiles\WindowsServer\Files**. This may take some time:
 
     ```powershell
-    $wsIsoFiles = "C:\SetupFiles\WindowsServer\Files"
-    New-Item -ItemType Directory -Path $wsIsoFiles
+    $wsFiles = "C:\SetupFiles\WindowsServer\Files"
+    New-Item -ItemType Directory -Path $wsFiles
 
-    Copy-Item -Path ${wsDriveLetter}:\* -Destination $wsIsoFiles -Recurse
+    Copy-Item -Path ${wsDriveLetter}:\* -Destination $wsFiles -Recurse
     ```
 
-1. Get the image name you want to modify within the install.wim file by using the following command. Add your path to the install.wim file to the `$installWimPath` variable, located inside the \sources folder of the Windows Server ISO file. Note the names of the images available in this install.wim file from the output.
+1. Get the image name you want to modify within the install.wim file by using the following command. Add your path to the install.wim file to the `$installWimPath` variable, located inside the **sources** folder of the Windows Server ISO file. Note the names of the images available in this install.wim file from the output.
 
     ```PowerShell
     $installWimPath = "C:\SetupFiles\WindowsServer\Files\sources\install.wim"
@@ -280,4 +285,4 @@ Starting with Windows Server, version 1903, the following components are also av
    Dismount-WindowsImage -Path $wimMountFolder -Save
    ```
 
-You can now upgrade your server by running setup.exe from the folder you created for the Windows Server installation files (in this example: **C:\SetupFiles\WindowsServer\Files**). This folder now contains the Windows Server installation files with the additional capabilities and optional packages included.
+You can now upgrade your server by running setup.exe from the folder you created for the Windows Server installation files, in this example: **C:\SetupFiles\WindowsServer\Files**. This folder now contains the Windows Server installation files with the additional capabilities and optional packages included.
