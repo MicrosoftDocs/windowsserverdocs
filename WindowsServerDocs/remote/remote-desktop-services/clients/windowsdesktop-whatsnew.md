@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/17/2021
+ms.date: 12/02/2021
 ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
@@ -18,21 +18,24 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.2606        |1.2.1672                  |
-|Insider    |1.2.2679        |1.2.1672                  |
+|Public     |1.2.2687        |1.2.1672                  |
+|Insider    |1.2.2687        |1.2.1672                  |
 
-## Updates for version 1.2.2679 (Insider)
+## Updates for version 1.2.2687
 
-*Date published: 11/17/2021*
+*Date published: 12/02/2021*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Improved manual refresh functionality to acquire new user tokens, which ensures the service can accurately update user access to resources.
 - Fixed an issue where the service sometimes pasted empty frames when a user tried to copy an image from a remotely running Internet Explorer browser to a locally running Word document.
 - Fixed the vulnerability known as [CVE-2021-38665](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38665).
 - Fixed the vulnerability known as [CVE-2021-38666](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38666).
+- Fixed the vulnerability known as [CVE-2021-1669](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-1669).
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Fixed a usability issue where the Windows Desktop client would sometimes prompt for a password (Azure Active Directory prompt) after the device went into sleep mode.
+- Fixed an issue where the client didn't automatically expand and display interactive sign-in messages set by admins when a user signs in to their virtual machine.
+- Fixed a reliability issue where the client stopped responding when users tried to make new connections.
 - Updates to Teams for Azure Virtual Desktop, including the following:
    - The notification volume level on the client device is now the same as the host device.
    - Fixed an issue where the device volume was low in Azure Virtual Desktop sessions
@@ -40,6 +43,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
    - Resolved a black screen issue that caused screen sharing to incorrectly show a black screen sometimes.
    - Increased the reliability of the camera stack when resizing the Teams app or turning the camera on or off.
    - Fixed a memory leak that caused issues like high memory usage or video freezing when reconnecting with Azure Virtual Desktop.
+   - Fixed an issue that caused Remote Desktop connections to stop responding.
 
 ## Updates for version 1.2.2606
 
