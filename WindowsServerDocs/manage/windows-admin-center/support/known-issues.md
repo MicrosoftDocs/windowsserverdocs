@@ -262,7 +262,7 @@ You can use the following steps to troubleshoot:
 
 - The **Updates** tool will sometimes throws the CredSSP error **You can't use Cluster-Aware updating tool without enabling CredSSP and providing explicit credentials**:
 
-    :::image type="content" source="../media/updates-tool-credssp-error.png" alt-text="Screenshot of Updates tool using Cluster-Aware Updating with CredSSP error.":::
+    :::image type="content" source="../media/updates-tool-credssp-error.png" alt-text="Screenshot of Updates tool using Cluster-Aware Updating with Cred S S P error.":::
 
     This error was widely seen when new clusters are created and then you try to access the **Updates** tool for these clusters in Windows Admin Center. This issue is fixed in Windows Admin Center v2110. [36734941]
 
@@ -270,7 +270,7 @@ You can use the following steps to troubleshoot:
 
     To mitigate this problem, we have introduced the Windows Admin Center CredSSP administrators' group. The user facing this problem should be added to this group and then relogin to the desktop computer running Windows Admin Center. Below is an image of what the error notification was before (left) and after (right) the modification:
 
-    :::image type="content" source="../media/notification-credssp-error.png" alt-text="A side by side comparison of the error notification for CredSSP.":::
+    :::image type="content" source="../media/notification-credssp-error.png" alt-text="A side by side comparison of the error notification for Cred S S P.":::
 
 ### Nested Virtualization
 When validating Azure Stack HCI OS cluster deployment on virtual machines, nested virtualization needs to be turned on before roles/features are enabled using the below PowerShell command:
