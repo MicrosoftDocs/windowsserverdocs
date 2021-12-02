@@ -186,7 +186,7 @@ If it is not installed, you can [download and install WMF 5.1](https://www.micro
 
 The Computer Management solution contains a subset of the tools from the Server Manager solution, so the same known issues apply, and the following Computer Management solution-specific issues:
 
-- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Azure Active Directory (AAD) to log on to you Windows 10 machine, you must use "manage-as" to provide credentials for a local administrator account [16568455]
+- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Azure Active Directory (AAD) to log on to you Windows 10 machine, you must use "manage-as" to provide credentials for a local administrator account. [16568455]
 
 - When you try to manage the localhost, you will be prompted to elevate the gateway process. If you click **no** in the User Account Control popup that follows, you must cancel the connection attempt and start over.
 
@@ -194,7 +194,7 @@ The Computer Management solution contains a subset of the tools from the Server 
 
   - To enable management of the Windows 10 Client, you must issue the command ```Enable-PSRemoting``` from an elevated PowerShell prompt.
 
-  - You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any```. For more restrictive networks scenarios, please refer to [this documentation](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1&preserve-view=true).
+  - You may also need to update your firewall to allow connections from outside the local subnet with ```Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any```. For more restrictive networks scenarios, please see how to [enable PSRemoting](/powershell/module/microsoft.powershell.core/enable-psremoting?view=powershell-5.1&preserve-view=true).
 
 ## Cluster Deployment
 
@@ -223,35 +223,54 @@ It is recommended to use servers that are domain-joined when creating a stretch 
 ### Undo and start over
 When using same machines repeatedly for cluster deployment, cleanup of previous cluster entities is important to get a successful cluster deployment in the same set of machines. See the page on [deploying hyper-converged infrastructure](../use/deploy-hyperconverged-infrastructure.md#undo-and-start-over) for instructions on how to clean up your cluster.
 
-### CredSSP
-The Windows Admin Center cluster deployment wizard uses CredSSP in several places. You run into this error message during the wizard (this occurs most frequently in the Validate cluster step):
+### CredSSP in cluster creation
+The Windows Admin Center cluster deployment wizard uses CredSSP in several places. You run into the error message **There was an error during the validation. Review error and try again** (this occurs most frequently in the Validate cluster step):
 
-![Screenshot of cluster create CredSSP error](../media/cluster-create-credssp-error.jpg)
+:::image type="content" source="../media/cluster-create-credssp-error.jpg" alt-text="Screenshot of cluster create CredSSP error.":::
 
 You can use the following steps to troubleshoot:
 
 1. Disable CredSSP settings on all nodes and the Windows Admin Center gateway machine. Run the first command on your gateway machine and the second command on all of the nodes in your cluster:
+   
+   ```PowerShell
+   Disable-WsmanCredSSP -Role Client
+   ```
+   
+   ```PowerShell
+   Disable-WsmanCredSSP -Role Server
+   ```
 
-```PowerShell
-Disable-WsmanCredSSP -Role Client
-```
-```PowerShell
-Disable-WsmanCredSSP -Role Server
-```
 2. Repair the trust on all nodes. Run the following command on all nodes:
-```PowerShell
-Test-ComputerSecureChannel -Verbose -Repair -Credential <account name>
-```
+   
+   ```PowerShell
+   Test-ComputerSecureChannel -Verbose -Repair -Credential <account name>
+   ```
 
-3. Reset group policy propagated data using the command
-```Command Line
-gpupdate /force
-```
+3. Reset group policy propagated data by running the following command on all nodes:
+   
+   ```Command Line
+   gpupdate /force
+   ```
 
-4. Reboot the nodes. After reboot, test the connectivity between your gateway machine and target nodes, as well as your connectivity between nodes, using the following command:
-```PowerShell
-Enter-PSSession -computername <node fqdn>
-```
+4. Reboot each nodes. After reboot, test the connectivity between your gateway machine and target nodes, as well as your connectivity between nodes, using the following command:
+   
+   ```PowerShell
+   Enter-PSSession -computername <node fqdn>
+   ```
+
+## CredSSP
+
+- The **Updates** tool will sometimes throws the CredSSP error **You can't use Cluster-Aware updating tool without enabling CredSSP and providing explicit credentials**:
+
+    :::image type="content" source="../media/updates-tool-credssp-error.png" alt-text="Screenshot of Updates tool using Cluster-Aware Updating with CredSSP error.":::
+
+    This error was widely seen when new clusters are created and then you try to access the **Updates** tool for these clusters in Windows Admin Center. This issue is fixed in Windows Admin Center v2110. [36734941]
+
+- The CredSSP session endpoint permission issue is an common CredSSP error that can be seen when Windows Admin Center runs on Windows client machines. This issue is widely seen when the user who is using Windows Admin Center is not the same user who installed Windows Admin Center on the client machine.
+
+    To mitigate this problem, we have introduced the Windows Admin Center CredSSP administrators' group. The user facing this problem should be added to this group and then relogin to the desktop computer running Windows Admin Center. Below is an image of what the error notification was before (left) and after (right) the modification:
+
+    :::image type="content" source="../media/notification-credssp-error.png" alt-text="A side by side comparison of the error notification for CredSSP.":::
 
 ### Nested Virtualization
 When validating Azure Stack HCI OS cluster deployment on virtual machines, nested virtualization needs to be turned on before roles/features are enabled using the below PowerShell command:
@@ -261,7 +280,7 @@ Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
 ```
 
   > [!Note]
-  > For virtual switch teaming to be successful in a virtual machine environment, the following command needs to be run in PowerShell on the host soon after the virtual machines are created: Get-vm | %{ set-VMNetworkAdapter -VMName $_.Name -MacAddressSpoofing On -AllowTeaming on }
+  > For virtual switch teaming to be successful in a virtual machine environment, the following command needs to be run in PowerShell on the host soon after the virtual machines are created: Get-VM | %{ set-VMNetworkAdapter -VMName $_.Name -MacAddressSpoofing On -AllowTeaming on }
 
 If you are a deploying a cluster using the Azure Stack HCI OS, there is an additional requirement. The VM boot virtual hard drive must be preinstalled with Hyper-V features. To do this, run the following command before creating the virtual machines:
 
