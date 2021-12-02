@@ -17,7 +17,7 @@ Windows 10, version 1703 and newer include the capability to update firmware of 
 You can find more information about this feature here:
 
 - [Updating drive firmware in Windows Server 2016](update-firmware.md)
-- [Update Drive Firmware Without Downtime in Storage Spaces Direct](https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct)
+- Update Drive Firmware Without Downtime in Storage Spaces Direct
 
 Firmware updates may fail for various reasons. The purpose of this article is to help with advanced troubleshooting.
 

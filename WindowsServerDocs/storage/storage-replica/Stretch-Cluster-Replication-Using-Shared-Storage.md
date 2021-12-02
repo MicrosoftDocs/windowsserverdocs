@@ -220,7 +220,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 5.  **(Optional)** Configure cluster networking and Active Directory for faster DNS site failover. You can utilize Hyper-V software defined networking, stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.
 
-    For more information, review the Microsoft Ignite session: [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](https://channel9.msdn.com/Events/Ignite/2015/BRK3487) and the [Enable Change Notifications between Sites - How and Why?](/archive/blogs/qzaidi/enable-change-notifications-between-sites-how-and-why) blog post.
+    For more information, review the Microsoft Ignite session: Stretching Failover Clusters and Using Storage Replica in Windows Server vNext and the [Enable Change Notifications between Sites - How and Why?](/archive/blogs/qzaidi/enable-change-notifications-between-sites-how-and-why) blog post.
 
 6.  **(Optional)** Configure VM resiliency so that guests do not pause for long during node failures. Instead, they failover to the new replication source storage within 10 seconds.
 
@@ -287,7 +287,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 9. **(Optional)** Configure cluster networking and Active Directory for faster DNS site failover. You can utilize Hyper-V software defined networking, stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.
 
-   For more information, review the Microsoft Ignite session: [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](https://channel9.msdn.com/Events/Ignite/2015/BRK3487) and [Enable Change Notifications between Sites - How and Why](/archive/blogs/qzaidi/enable-change-notifications-between-sites-how-and-why).
+   For more information, review the Microsoft Ignite session: Stretching Failover Clusters and Using Storage Replica in Windows Server vNext and [Enable Change Notifications between Sites - How and Why](/archive/blogs/qzaidi/enable-change-notifications-between-sites-how-and-why).
 
 10. **(Optional)** Configure VM resiliency so that guests do not pause for long periods during node failures. Instead, they failover to the new replication source storage within 10 seconds.
 
@@ -366,7 +366,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 16. (Optional) Configure cluster networking and Active Directory for faster DNS site failover. You can utilize stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.
 
-For more information, review the Microsoft Ignite session [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](https://channel9.msdn.com/events/ignite/2015/brk3487) and the blog post [Enable Change Notifications between Sites - How and Why](/archive/blogs/qzaidi/enable-change-notifications-between-sites-how-and-why).
+For more information, review the Microsoft Ignite session Stretching Failover Clusters and Using Storage Replica in Windows Server vNext and the blog post [Enable Change Notifications between Sites - How and Why](/archive/blogs/qzaidi/enable-change-notifications-between-sites-how-and-why).
 
 #### PowerShell Method
 
@@ -435,7 +435,7 @@ For more information, review the Microsoft Ignite session [Stretching Failover C
 
 8.  (Optional) Configure cluster networking and Active Directory for faster DNS site failover. You can utilize stretched VLANs, network abstraction devices, lowered DNS TTL, and other common techniques.
 
-    For more information, review the Microsoft Ignite session [Stretching Failover Clusters and Using Storage Replica in Windows Server vNext](https://channel9.msdn.com/events/ignite/2015/brk3487) and the blog post [Enable Change Notifications between Sites - How and Why](/archive/blogs/qzaidi/enable-change-notifications-between-sites-how-and-why).
+    For more information, review the Microsoft Ignite session Stretching Failover Clusters and Using Storage Replica in Windows Server vNext and the blog post [Enable Change Notifications between Sites - How and Why](/archive/blogs/qzaidi/enable-change-notifications-between-sites-how-and-why).
 
 ### Configure a stretch cluster
 Now you will configure the stretch cluster, using either Failover Cluster Manager or Windows PowerShell. You can perform all of the steps below on the cluster nodes directly or from a remote management computer that contains the Windows Server Remote Server Administration Tools.

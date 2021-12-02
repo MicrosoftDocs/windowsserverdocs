@@ -18,9 +18,6 @@ How the cache works depends on the types of drives present.
 
 The following video goes into details on how caching works for Storage Spaces Direct, as well as other design considerations.
 
-<strong>Storage Spaces Direct design considerations</strong><br>(20 minutes)<br>
-<iframe src="https://channel9.msdn.com/Blogs/windowsserver/Design-Considerations-for-Storage-Spaces-Direct/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
-
 ## Drive types and deployment options
 
 Storage Spaces Direct currently works with four types of storage devices:

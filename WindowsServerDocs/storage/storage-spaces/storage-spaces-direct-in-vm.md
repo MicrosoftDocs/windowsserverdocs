@@ -23,8 +23,6 @@ To instead use Azure Shared Disks for guest virtual machines, see [Azure Shared 
 
 [Azure templates](https://github.com/robotechredmond/301-storage-spaces-direct-md) have been published to decrease complexity, configure best practices, and speed your Storage Spaces Direct deployments in an Azure Iaas VM. This is the recommended solution for deploying in Azure.
 
-<iframe src="https://channel9.msdn.com/Series/Microsoft-Hybrid-Cloud-Best-Practices-for-IT-Pros/Step-by-Step-Deploy-Windows-Server-2016-Storage-Spaces-Direct-S2D-Cluster-in-Microsoft-Azure/player" width="960" height="540" allowfullscreen></iframe>
-
 ## Requirements for guest clusters
 
 The following considerations apply when deploying Storage Spaces Direct in a virtualized environment.
