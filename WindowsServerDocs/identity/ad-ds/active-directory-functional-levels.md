@@ -37,12 +37,12 @@ The minimum requirement to add one a domain controller of one of these versions 
 
 ### Windows Server 2016 forest functional level features
 
-* All of the features that are available at the Windows Server 2012R2 forest functional level, and the following features, are available:
+* All of the features that are available at the Windows Server 2012 R2 forest functional level, and the following features, are available:
    * [Privileged access management (PAM) using Microsoft Identity Manager (MIM)](../whats-new-active-directory-domain-services.md#privileged-access-management)
 
 ### Windows Server 2016 domain functional level features
 
-* All default Active Directory features, all features from the Windows Server 2012R2 domain functional level, plus the following features:
+* All default Active Directory features, all features from the Windows Server 2012 R2 domain functional level, plus the following features:
    * DCs can support automatic rolling of the NTLM and other password-based secrets on a user account configured to require PKI authentication. This configuration is also known as "Smart card required for interactive logon"
    * DCs can support allowing network NTLM when a user is restricted to specific domain-joined devices.
    * Kerberos clients successfully authenticating with the PKInit Freshness Extension will get the fresh public key identity SID.
@@ -91,7 +91,7 @@ Supported domain controller operating systems:
 
 ### Windows Server 2012 domain functional level features
 
-* All default Active Directory features, all features from the Windows Server 2008R2 domain functional level, plus the following features:
+* All default Active Directory features, all features from the Windows Server 2008 R2 domain functional level, plus the following features:
    * The KDC support for claims, compound authentication, and Kerberos armoring KDC administrative template policy has two settings (Always provide claims and Fail unarmored authentication requests) that require Windows Server 2012 domain functional level. For more information, see [What's New in Kerberos Authentication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831747(v=ws.11))
 
 ## Windows Server 2008 R2 functional levels
