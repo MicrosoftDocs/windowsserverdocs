@@ -65,7 +65,7 @@ sections:
           - Share State
           - Availability Type
           - Share Type
-          - Folder Enumeration Mode *(aka Access-Based Enumeration or ABE)*
+          - Folder Enumeration Mode *(also known as Access-Based Enumeration or ABE)*
           - Caching Mode
           - Leasing Mode
           - Smb Instance
