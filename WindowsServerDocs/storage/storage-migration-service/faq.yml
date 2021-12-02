@@ -45,7 +45,7 @@ sections:
       - question: |
           Are destinations other than Windows Server supported?
         answer: |
-          The Storage Migration Service supports migrating to Windows Server 2019, Windows Server 2022, and Windows Failover Clusters running those operating systems. It does not support migration to Samba, NetApp, or Azure Files. The Storage Migration Services does support migration to a Windows Server or cluster running Azure File Sync with cloud tiering when using the latest version of Windows Admin Center and Windows Server 2022 or Windows Server 2019 after installation of cumulative update [KB5006746](https://support.microsoft.com/topic/october-21-2021-kb5006746-os-build-22000-282-preview-03190705-0960-4ba4-9ee8-af40bef057d3)
+          The Storage Migration Service supports migrating to Windows Server 2022, Windows Server 2019, and Windows Failover Clusters running those operating systems. It does not support migration to Samba, NetApp, or Azure Files. The Storage Migration Services does support migration to a Windows Server or cluster running Azure File Sync with cloud tiering when using the latest version of Windows Admin Center and Windows Server 2022, or Windows Server 2019 after installation of cumulative update [KB5006746](https://support.microsoft.com/topic/october-21-2021-kb5006746-os-build-22000-282-preview-03190705-0960-4ba4-9ee8-af40bef057d3)
 
       - question: |
           Do local groups and local users migrate?
@@ -144,7 +144,7 @@ sections:
           
           - **Enable high-performance processing.** Ensure that BIOS/UEFI settings for servers enable high performance, such as disabling C-State, setting QPI speed, enabling NUMA, and setting highest memory frequency. Ensure power management in Windows Server is set to High Performance. Restart as required. Don't forget to return these to appropriate states after completing migration.
           
-          - **Tune hardware** Review the [Performance Tuning Guidelines for Windows Server 2016](../../administration/performance-tuning/index.md) for tuning the orchestrator and destination computers running Windows Server 2022, Windows Server 2019, Windows Server 2016. The [Network Subsystem Performance Tuning](../../networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md) section contains especially valuable information. There is an updated guide for Windows Server 2022 named (Performance Tuning Guidelines for Windows Server 2022)[https://docs.microsoft.com/windows-server/administration/performance-tuning/].
+          - **Tune hardware** Review the [Performance Tuning Guidelines for Windows Server 2016](../../administration/performance-tuning/index.md) for tuning the orchestrator and destination computers running Windows Server 2022, Windows Server 2019, or Windows Server 2016. The [Network Subsystem Performance Tuning](../../networking/technologies/network-subsystem/net-sub-performance-tuning-nics.md) section contains especially valuable information. There is an updated guide for Windows Server 2022 named (Performance Tuning Guidelines for Windows Server 2022)[https://docs.microsoft.com/windows-server/administration/performance-tuning/].
           
           - **Use faster storage.** While it may be difficult to upgrade the source computer storage speed, you should ensure the destination storage is at least as fast at write IO performance as the source is at read IO performance in order to ensure there is no unnecessary  bottleneck in transfers. If the destination is a VM, ensure that, at least for the purposes of migration, it runs in the fastest storage layer of your hypervisor hosts, such as on the flash tier or with Storage Spaces Direct HCI clusters utilizing mirrored all-flash or hybrid spaces. When the SMS migration is complete the VM can be live migrated to a slower tier or host.
           
@@ -153,9 +153,9 @@ sections:
           - **Update antivirus.** Always ensure your source and destination are running the latest patched version of antivirus software to ensure minimal performance overhead. As a test, you can *temporarily* exclude scanning of folders you're inventorying or migrating on the source and destination servers. If your transfer performance is improved, contact your antivirus software vendor for instructions or for an updated version of the antivirus software or an explanation of expected performance degradation.          
           
       - question: |
-          Can I migrate from NTFS to REFS?
+          Can I migrate from NTFS to ReFS?
         answer: |
-          The Storage Migration Service version shipped in Windows Server 2019 and Windows Server 2022 doesn't support migrating from the NTFS to REFS file systems. You can migrate from NTFS to NTFS and REFS to ReFS. This is by design, due to the many differences in functionality, metadata, and other aspects that ReFS doesn't duplicate from NTFS. ReFS is intended as an application workload file system, not a general file system. For more information, see [Resilient File System (ReFS) overview](../refs/refs-overview.md)
+          The Storage Migration Service version shipped in Windows Server 2019 and Windows Server 2022 doesn't support migrating from the NTFS to ReFS file systems. You can migrate from NTFS to NTFS, and ReFS to ReFS. This is by design, due to the many differences in functionality, metadata, and other aspects that ReFS doesn't duplicate from NTFS. ReFS is intended as an application workload file system, not a general file system. For more information, see [Resilient File System (ReFS) overview](../refs/refs-overview.md)
           
       - question: |
           Can I move the Storage Migration Service database?
