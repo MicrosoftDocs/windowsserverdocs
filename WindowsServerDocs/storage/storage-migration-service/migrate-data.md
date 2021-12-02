@@ -61,19 +61,19 @@ In this step, you specify what servers to migrate and then scan them to collect 
 In this step you transfer data after specifying where to put it on the destination servers.
 
 1. On the **Transfer data** > **Enter credentials** page, type admin credentials that work on the destination servers you want to migrate to, and then select **Next**.
-2. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server or clustered file server to which you want to migrate and then select **Scan device**. If migrating from a domain-joined source computer, the destination server must be joined to the same domain. You can also click "Create a new Azure VM" then use the wizard to deploy a new destination server in Azure. This will automatically size your VM, provision storage, format disks, join the domain, and add the Storage Migration Service proxy to a Windows Server 2019 or Windows Server 2022 destination. You can choose from Windows Server 2022 (recommended), Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2 VMs of any size and use managed disks.
+2. On the **Add a destination device and mappings** page, the first source server is listed. Type the name of the server or clustered file server to which you want to migrate and then select **Scan device**. If migrating from a domain-joined source computer, the destination server must be joined to the same domain. You can also click **Create a new Azure VM** then use the wizard to deploy a new destination server in Azure. This will automatically size your VM, provision storage, format disks, join the domain, and add the Storage Migration Service proxy to a Windows Server 2019 or Windows Server 2022 destination. You can choose from Windows Server 2022 (recommended), Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2 VMs of any size and use managed disks.
 
     > [!NOTE]
-    > Using "Create a new Azure VM" requires that you have:
+    > Using **Create a new Azure VM** requires that you have:
     > - A valid Azure subscription.
-    > - An existing Azure Compute resource group where you have Create rights.
+    > - An existing Azure Compute resource group where you have *Create* rights.
     > - An existing Azure Virtual Network and subnet.
     > - An [Azure ExpressRoute](https://azure.microsoft.com/services/expressroute/) circuit or [Azure VPN solution](https://azure.microsoft.com/services/vpn-gateway/) tied to the Virtual Network and subnet that allows connectivity from this Azure IaaS VM to your on-premises clients, domain controllers, the Storage Migration Service orchestrator computer, the Windows Admin Center computer, and the source computer to be migrated.
 
     Here's a video showing how to use Storage Migration Service to migrate to Azure VMs.
     > [!VIDEO https://www.youtube-nocookie.com/embed/k8Z9LuVL0xQ]
 
-3. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder) and ensuring that the Azure Files Sync checkbox is set for any volumes or shares that are cloud tiering with AFS, and then select **Next**.
+3. Map the source volumes to destination volumes, clear the **Include** checkbox for any shares you don't want to transfer (including any administrative shares located in the Windows system folder) and ensuring that the Azure Files Sync checkbox is set for any volumes or shares that are cloud tiering with Azure File Sync, and then select **Next**.
 
     > [!NOTE]
     > When migrating NetApp CIFS servers, source volumes don't show drive letters. You can map these volumes to any destination volumes, and you can map multiple NetApp CIFS volumes to the same destination volume. New root folder paths are created to avoid any folder overwrites or collisions, and then shares are created at the correct level. The **Shares** detail pane shows the folder structure you're about to create.
