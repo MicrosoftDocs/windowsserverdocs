@@ -114,5 +114,6 @@
 #### [Remote laptop disconnects from wireless network](troubleshoot/remote-laptop-disconnects-wireless-network.md)
 #### [Poor performance or application problems during remote desktop connection](troubleshoot/poor-performance-or-application-problems.md)
 #### [Input method editor issue in RemoteApp scenarios](troubleshoot/input-method-editor-error.md)
+#### ["Out of memory" error](troubleshoot/out-of-memory-error.md)
 
 ## [Additional resources](rds-get-support.md)
