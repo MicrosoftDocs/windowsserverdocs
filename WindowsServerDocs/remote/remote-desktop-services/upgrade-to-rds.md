@@ -10,10 +10,10 @@ manager: scottman
 ---
 # Upgrading your Remote Desktop Services deployments to Windows Server 2016
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Windows Server 2016
 
 ## Supported OS upgrades with RDS role installed
-Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2 and Windows Server 2016.
+Upgrades to Windows Server 2016 are supported only from Windows Server 2012 R2.
 
 ## Flow for deployment upgrades
 In order to keep the down-time to a minimum, it is best to follow the steps below:

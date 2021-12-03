@@ -77,7 +77,7 @@ When data is moved from mirror to parity, the data is read, parity encodings are
 
 ## ReFS compaction
 
-In this Fall's semi-annual release, ReFS introduces compaction, which substantially improves performance for mirror-accelerated parity volumes that are 90+% full.
+Compaction for ReFS is available with Windows Server 2019 and later versions, which substantially improves performance for mirror-accelerated parity volumes that are 90+% full.
 
 **Background:** Previously, as mirror-accelerated parity volumes became full, the performance of these volumes could degrade. The performance degrades because hot and cold data become mixed throughout the volume overtime. This means less hot data can be stored in mirror since cold data occupies space in mirror that could otherwise be used by hot data. Storing hot data in mirror is critical to maintaining high performance because writes directly to mirror are much faster than reallocated writes and orders of magnitude faster than writes directly to parity. Thus, having cold data in mirror is bad for performance, as it reduces the likelihood that ReFS can make writes directly to mirror.
 
