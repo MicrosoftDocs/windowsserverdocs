@@ -4,7 +4,7 @@ description: How to secure SMB Traffic in Windows
 ms.topic: article
 author: PatAltimore
 ms.author: patricka
-ms.date: 11/17/2021
+ms.date: 12/03/2021
 ms.prod: windows-server
 ms.localizationpriority: medium
 # Intent: As a network administrator I want to configure ports to secure SMB Traffic in Windows
@@ -93,11 +93,42 @@ The support article includes templates for:
 - Outbound rules that contain an override *allow list* for domain controllers and file servers
   called *Allow the connection if secure*.
 
-To use the null encapsulation IPSEC authentication and have the rules actually work, you must create a Security Connection rule on all computers in your network that will be participating in these allow/blow rules, or the firewall exceptions above will not work and you'll only be arbitrarily blocking.
+To use the null encapsulation IPSEC authentication, you must create a Security Connection rule on
+all computers in your network that are participating in the rules. Otherwise, the firewall
+exceptions won't work and you'll only be arbitrarily blocking.
+
+To create a *Connection Security* rule, use Windows Defender Firewall with Advanced Security control
+panel or snap-in:
+
+1. In Windows Defender Firewall, select *Connection Security Rules* and choose a **New rule**.
+1. In *Rule Type*, select **Isolation** then select **Next**.
+1. In *Requirements*, select **Request authentication for inbound and outbound connections** then select **Next**.
+1. In *Authentication Method*, select **Computer and User (Kerberos V5)** then select **Next**.
+1. In *Profile*, check all profiles (*Domain, Private, Public*) then select **Next**.
+1. Enter a name your rule then select **Finish**.
+
+Remember, the Connection Security rule must be created on all clients and servers participating in
+your inbound and outbound rules or they will be blocked from connecting SMB outbound. These rules
+may already be in place from other security efforts in your environment and like the firewall
+inbound/outbound rules, can be deployed via group policy.
+
+When configure rules based on the templates in the [Preventing SMB traffic from lateral connections and entering or leaving the network](https://support.microsoft.com/en-us/topic/preventing-smb-traffic-from-lateral-connections-and-entering-or-leaving-the-network-c0541db7-2244-0dce-18fd-14a3ddeb282a) support article, set the following to customize the *Allow the connection if secure* action:
+
+1. In the *Action* step, select **Allow the connection if it is secure** then select **Customize**.
+1. In *Customize Allow if Secure Settings*, select **Allow the connection to use null encapsulation**.
+
+The *Allow the connection if is secure* option allows override of a global block rule. You can use
+the easy but least secure *Allow the connection to use null encapsulation* with *override block
+rules* which relies on Kerberos and domain membership for authentication. Windows Defender Firewall
+allows for more secure options like IPSEC.
 
 For more information configuring the firewall, see [Windows Defender Firewall with Advanced Security deployment overview](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide).
 
-## Disable SMB Server if truly unused
+## Disable SMB Server if unused
 
-## Test at a small scale by hand. Deploy in waves, using policy
+Windows clients and some of your Windows Servers on your network may not require the SMB Server service to be running. If the SMB Server service isn't required, you can disable the service. Before disabling SMB Server service, be sure no applications and processes on the computer require the service.
+
+## Test and deploy using policy
+
+Begin by testing using small-scale, hand-made deployments on select servers and clients. Use phased group policy rollouts to make these changes. For example, start with the heaviest user of SMB such as your own IT team. If your team's laptops and apps and file share access work well after deploying your inbound and outbound firewall rules, create test group policy within your broad test and QA environments. Based on results, start sampling some departmental machines, then expand out.
 
