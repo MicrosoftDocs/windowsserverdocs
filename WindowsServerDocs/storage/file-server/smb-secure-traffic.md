@@ -31,20 +31,20 @@ SMB traffic prevents devices inside your network from sending data using SMB to 
 It is unlikely you need to allow any outbound SMB to the internet unless you require it as part of a
 public cloud offering. If you are using Azure Files SMB, use a VPN for outbound VPN traffic. By
 using a VPN, you restrict the outbound traffic to the required service IP ranges. For more
-information on Azure Cloud and Office 365 IP address ranges see:
-- Azure IP ranges and service tags: [public cloud](https://www.microsoft.com/en-us/download/details.aspx?id=56519),[US government cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57063), [Germany cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064), and [China cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064). The JSON files are updated weekly and include versioning both for the full file and each individual service tag. The *AzureCloud* tag provides the IP ranges for the cloud (Public, US government, Germany, or China) and is broken out by region within that cloud. Service tags in the file will increase as Azure services are added.
+information about Azure Cloud and Office 365 IP address ranges, see:
+- Azure IP ranges and service tags: [public cloud](https://www.microsoft.com/en-us/download/details.aspx?id=56519),[US government cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57063), [Germany cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064), and [China cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064). The JSON files are updated weekly and include versioning both for the full file and each individual service tag. The *AzureCloud* tag provides the IP ranges for the cloud (Public, US government, Germany, or China) and is grouped by region within that cloud. Service tags in the file will increase as Azure services are added.
 - [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 ## Inventory SMB usage and shares
 
 By inventorying your network's SMB traffic, you get an understanding of traffic that is occurring
-and can determine if it is necessary.
+and can determine if it's necessary.
 
 Use the following checklist of questions to help identify unnecessary SMB traffic.
 
 For server endpoints:
 
-1. Which server endpoints require inbound SMB access to perform their role? Do they need inbound
+1. Which server endpoints require inbound SMB access to do their role? Do they need inbound
    access from all clients, certain networks, or certain nodes?
 1. Of the remaining server endpoints, is inbound SMB access necessary?
 
@@ -58,7 +58,7 @@ For client endpoints:
 For all endpoints, determine if you allow outbound SMB in the safest and most minimal fashion.
 
 Review server built-in roles and features that require SMB inbound. For example, file servers and
-domain controllers require SMB inbound to perform their role. For more information on built-in roles
+domain controllers require SMB inbound to do their role. For more information on built-in roles
 and feature network port requirements, see
 [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements).
 
@@ -75,7 +75,7 @@ decide if an endpoint's shares are in use and understand which to exist.
 
 ## Configure Windows Defender Firewall
 
-Use firewall rules to add additional connection security. Configure rules to block both inbound and
+Use firewall rules to add extra connection security. Configure rules to block both inbound and
 outbound communications that include exceptions. An outbound firewall policy that prevents use of
 SMB connections both outside and inside your managed network while allowing access to the minimum
 set of servers and no other devices is a lateral defense-in-depth measure.
@@ -88,9 +88,9 @@ The support article includes templates for:
 - Outbound rules for private/domain (trusted) networks.
 - Outbound rules for guest/public (untrusted) networks. This template is important to enforce on
   mobile devices and home-based telecommuters that are not behind your firewall that is blocking
-  outbound traffic. Enforcing these rules on laptops reduces the odds of phishing attacks sending
+  outbound traffic. Enforcing these rules on laptops reduces the odds of phishing attacks that send
   users to malicious servers to harvest credentials or run attack code.
-- Outbound rules that contain an override *allow list* for domain controllers and file servers
+- Outbound rules that contain an override *allowlist* for domain controllers and file servers
   called *Allow the connection if secure*.
 
 To use the null encapsulation IPSEC authentication, you must create a Security Connection rule on
@@ -117,9 +117,9 @@ When configure rules based on the templates in the [Preventing SMB traffic from 
 1. In the *Action* step, select **Allow the connection if it is secure** then select **Customize**.
 1. In *Customize Allow if Secure Settings*, select **Allow the connection to use null encapsulation**.
 
-The *Allow the connection if is secure* option allows override of a global block rule. You can use
+The *Allow the connection if it is secure* option allows override of a global block rule. You can use
 the easy but least secure *Allow the connection to use null encapsulation* with *override block
-rules* which relies on Kerberos and domain membership for authentication. Windows Defender Firewall
+rules, which relies on Kerberos and domain membership for authentication. Windows Defender Firewall
 allows for more secure options like IPSEC.
 
 For more information configuring the firewall, see [Windows Defender Firewall with Advanced Security deployment overview](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide).
