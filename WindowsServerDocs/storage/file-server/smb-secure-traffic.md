@@ -67,7 +67,7 @@ file servers likely need to be access anywhere in the network. However, applicat
 may be limited to a set of other application servers on the same subnet. You can use the following
 tools and features to help you inventory SMB access:
 
-- Use [Get-FileShares](https://www.powershellgallery.com/packages/AZSBTools script) to examine shares on servers and clients.
+- Use [Get-FileShares](https://www.powershellgallery.com/packages/AZSBTools) script to examine shares on servers and clients.
 - Enable an [audit trail of SMB inbound access](/windows/security/threat-protection/auditing/event-5140) using the registry key `Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\File Share`. Since the number of events may be large, consider enabling for a specified amount of time or use [Azure Monitor](https://azure.microsoft.com/services/monitor).
 
 Examining SMB logs lets you know which nodes are communicating with endpoints over SMB. You can
