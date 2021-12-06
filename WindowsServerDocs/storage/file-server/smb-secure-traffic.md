@@ -4,7 +4,7 @@ description: How to secure SMB Traffic in Windows
 ms.topic: article
 author: PatAltimore
 ms.author: patricka
-ms.date: 12/03/2021
+ms.date: 12/06/2021
 ms.prod: windows-server
 ms.localizationpriority: medium
 # Intent: As a network administrator I want to configure ports to secure SMB Traffic in Windows
@@ -31,9 +31,9 @@ SMB traffic prevents devices inside your network from sending data using SMB to 
 It is unlikely you need to allow any outbound SMB to the internet unless you require it as part of a
 public cloud offering. If you are using Azure Files SMB, use a VPN for outbound VPN traffic. By
 using a VPN, you restrict the outbound traffic to the required service IP ranges. For more
-information on configuring a VPN for Azure Files SMB, see [Azure datacenter IP addresses],
-[Azure remote apps], and
-[Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges)
+information on Azure Cloud and Office 365 IP address ranges see:
+- Azure IP ranges and service tags: [public cloud](https://www.microsoft.com/en-us/download/details.aspx?id=56519),[US government cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57063), [Germany cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064), and [China cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064). The JSON files are updated weekly and include versioning both for the full file and each individual service tag. The *AzureCloud* tag provides the IP ranges for the cloud (Public, US government, Germany, or China) and is broken out by region within that cloud. Service tags in the file will increase as Azure services are added.
+- [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 ## Inventory SMB usage and shares
 
@@ -68,7 +68,7 @@ may be limited to a set of other application servers on the same subnet. You can
 tools and features to help you inventory SMB access:
 
 - Use [Get-FileShares](https://www.powershellgallery.com/packages/AZSBTools script) to examine shares on servers and clients.
-- Enable an [audit trail of SMB inbound access](/windows/security/threat-protection/auditing/event-5140) using the registry key `Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\File Share`. Since the number of events may be large, consider enabling for a specified amount of time or use [Azure Monitor](https://azure.microsoft.com/en-us/services/monitor).
+- Enable an [audit trail of SMB inbound access](/windows/security/threat-protection/auditing/event-5140) using the registry key `Security Settings\Advanced Audit Policy Configuration\Audit Policies\Object Access\File Share`. Since the number of events may be large, consider enabling for a specified amount of time or use [Azure Monitor](https://azure.microsoft.com/services/monitor).
 
 Examining SMB logs lets you know which nodes are communicating with endpoints over SMB. You can
 decide if an endpoint's shares are in use and understand which to exist.
@@ -132,3 +132,6 @@ Windows clients and some of your Windows Servers on your network may not require
 
 Begin by testing using small-scale, hand-made deployments on select servers and clients. Use phased group policy rollouts to make these changes. For example, start with the heaviest user of SMB such as your own IT team. If your team's laptops and apps and file share access work well after deploying your inbound and outbound firewall rules, create test group policy within your broad test and QA environments. Based on results, start sampling some departmental machines, then expand out.
 
+## Next steps
+
+[How to defend users from SMB interception attacks]()
