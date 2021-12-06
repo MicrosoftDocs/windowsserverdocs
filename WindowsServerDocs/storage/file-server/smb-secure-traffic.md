@@ -11,12 +11,14 @@ ms.localizationpriority: medium
 ---
 # Secure SMB Traffic in Windows Server
 
-As a defense in depth measure, you can configure ports to secure SMB traffic and prevent outbound
-and lateral network communications.
+As a defense in depth measure, you can use segmentation and isolation techniques to secure SMB
+traffic and reduce threats between devices on your network.
 
-SMB is used for file sharing, network browsing, printing, and inter-process communication such as
-named pipes and RPC. Use the following sections to configure SMB traffic segmentation and endpoint
-isolation to reduce threats between devices on your network.
+SMB is used for file sharing, printing, and inter-process communication such as named pipes and RPC.
+It's also used as a network data fabric for technologies such as Storage Spaces Direct, Storage
+Replica, Hyper-V Live Migration, and Cluster Shared Volumes. Use the following sections to configure
+SMB traffic segmentation and endpoint isolation to help prevent outbound and lateral network
+communications.
 
 ## Block inbound SMB access
 
