@@ -32,15 +32,13 @@ It is unlikely you need to allow any outbound SMB to the internet unless you req
 public cloud offering. If you are using Azure Files SMB, use a VPN for outbound VPN traffic. By
 using a VPN, you restrict the outbound traffic to the required service IP ranges. For more
 information about Azure Cloud and Office 365 IP address ranges, see:
-- Azure IP ranges and service tags: [public cloud](https://www.microsoft.com/en-us/download/details.aspx?id=56519),[US government cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57063), [Germany cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064), and [China cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064). The JSON files are updated weekly and include versioning both for the full file and each individual service tag. The *AzureCloud* tag provides the IP ranges for the cloud (Public, US government, Germany, or China) and is grouped by region within that cloud. Service tags in the file will increase as Azure services are added.
+- Azure IP ranges and service tags: [public cloud](https://www.microsoft.com/en-us/download/details.aspx?id=56519),[US government cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57063), [Germany cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064), or [China cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064). The JSON files are updated weekly and include versioning both for the full file and each individual service tag. The *AzureCloud* tag provides the IP ranges for the cloud (Public, US government, Germany, or China) and is grouped by region within that cloud. Service tags in the file will increase as Azure services are added.
 - [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 ## Inventory SMB usage and shares
 
 By inventorying your network's SMB traffic, you get an understanding of traffic that is occurring
-and can determine if it's necessary.
-
-Use the following checklist of questions to help identify unnecessary SMB traffic.
+and can determine if it's necessary. Use the following checklist of questions to help identify unnecessary SMB traffic.
 
 For server endpoints:
 
@@ -122,7 +120,7 @@ the easy but least secure *Allow the connection to use null encapsulation* with 
 rules, which relies on Kerberos and domain membership for authentication. Windows Defender Firewall
 allows for more secure options like IPSEC.
 
-For more information configuring the firewall, see [Windows Defender Firewall with Advanced Security deployment overview](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide).
+For more information about configuring the firewall, see [Windows Defender Firewall with Advanced Security deployment overview](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide).
 
 ## Disable SMB Server if unused
 
