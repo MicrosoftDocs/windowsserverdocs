@@ -117,6 +117,26 @@ By default, a Windows 11 won't have access to an Active Directory domain control
 > [!NOTE]
 > You cannot configure the Windows Admin Center in gateway mode using TCP port 443 on a file server where you are configuring KDC Proxy. When configuring WAC on the file server, change the port to one that is not in use and is not 443. If you have already configured WAC on port 443, re-run the WAC setup MSI and choose a different port when prompted. 
 
+**Windows Admin Center method**
+
+1. Ensure you are using at least Windows Admin Center version 2110.
+2. Configure SMb over QUIC normally. Starting in Windows Admin Center 2110, the option to configure KDC proxy in SMB over QUIC is automatically enabled and you don't need to perform extra steps on the file servers.
+3. Configure the following group policy to apply to the Windows 11:
+
+    **Computers > Administrative templates > System > Kerberos > Specify KDC proxy servers for Kerberos clients**
+
+    The format of this group policy setting is a value name of your fully qualified Active Directory domain name and the value will be the external name you specified for the QUIC server. For example, where the Active Directory domain is named "corp.contoso.com" and the external DNS domain is named "contoso.com":
+
+    `value name: corp.contoso.com`
+
+    `value: <https fsedge1.contoso.com:443:kdcproxy />`
+
+    This Kerberos realm mapping means that if user `ned@corp.contoso.com` tried to connect to a file server name `fs1edge.contoso.com"`, the KDC proxy will know to forward the kerberos tickets to a domain controller in the internal `corp.contoso.com` domain. The communication with the client will be over HTTPS/443 and user credentials aren't directly exposed on the client-file server network.
+4. Ensure that edge firewalls allow HTTPS/443 inbound to the file server.
+5. Apply the group policy and restart the Windows 11.  
+
+**Manual Method**
+
 1. On the file server, in an elevated PowerShell prompt, run:
 
     `NETSH http add urlacl url=https://+:443/KdcProxy user="NT authority\Network Service"`
@@ -147,7 +167,7 @@ By default, a Windows 11 won't have access to an Active Directory domain control
 
     **Computers > Administrative templates > System > Kerberos > Specify KDC proxy servers for Kerberos clients**
 
-    The format of this group policy setting is a value name of your fully qualified Active Directory domain name and the value will be the external  name you specified for the QUIC server. For example, where the Active Directory domain is named "corp.contoso.com" and the external DNS domain is named "contoso.com":
+    The format of this group policy setting is a value name of your fully qualified Active Directory domain name and the value will be the external name you specified for the QUIC server. For example, where the Active Directory domain is named "corp.contoso.com" and the external DNS domain is named "contoso.com":
 
     `value name: corp.contoso.com`
 
@@ -160,6 +180,9 @@ By default, a Windows 11 won't have access to an Active Directory domain control
 
 > [!NOTE]
 > Automatic configuration of the KDC Proxy will come later in the SMB over QUIC and these server steps will not be necessary.
+
+## Certificate expiration and renewal
+An expired SMB over QUIC certificate that you replace with a new certificate from the issuer will contain a new thumbprint. While you can automatically renew SMB over QUIC certificates when they expire using Active Directory Certificate Services, a renewed certificate gets a new thumbprint as well. This effectively means that SMB over QUIC must be reconfigured when the certificate expires, as a new thumbprint must be mapped. You can simply select your new certificate in Windows Admin Center for the existing SMB over QUIC configuration or use the Set-SMBServerCertificateMapping powershell command to update the mapping for the new certificate. You can use Azure Automanage for Windows Server to detect impending certificate expiration and prevent an outage. For more information, review [Azure Automanage for Windows Server](https://docs.microsoft.com/en-us/azure/automanage/automanage-windows-server-services-overview). 
 
 ## Notes
 
