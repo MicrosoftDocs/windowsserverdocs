@@ -4,7 +4,7 @@ description: How to secure SMB Traffic in Windows
 ms.topic: article
 author: PatAltimore
 ms.author: patricka
-ms.date: 12/06/2021
+ms.date: 12/07/2021
 ms.prod: windows-server
 ms.localizationpriority: medium
 # Intent: As a network administrator I want to configure ports to secure SMB Traffic in Windows
@@ -25,17 +25,37 @@ communications.
 Block TCP port 445 inbound from the internet at your corporate hardware firewalls. Blocking inbound
 SMB traffic protects devices inside your network by preventing access from the internet.
 
+If you want users to access their files inbound at the edge of your network, you can use SMB over
+QUIC. This uses TCP port 443 by default and provides a TLS 1.3-encrypted security tunnel like a VPN
+for SMB traffic. The solution requires Windows 11 and Windows Server 2022 Datacenter: Azure
+Edition file servers running on Azure Stack HCI. For more information, see [SMB over QUIC](https://aka.ms/smboverquic).
+
 ## Block outbound SMB access
 
 Block TCP port 445 outbound to the internet at your corporate firewall. Blocking outbound
 SMB traffic prevents devices inside your network from sending data using SMB to the internet.
 
-It is unlikely you need to allow any outbound SMB to the internet unless you require it as part of a
-public cloud offering. If you are using Azure Files SMB, use a VPN for outbound VPN traffic. By
+It is unlikely you need to allow any outbound SMB using TCP port 445 to the internet unless you
+require it as part of a public cloud offering. The following are scenarios and solutions for using
+SMB with public cloud offerings.
+
+If you are using Azure Files SMB, use a VPN for outbound VPN traffic. By
 using a VPN, you restrict the outbound traffic to the required service IP ranges. For more
 information about Azure Cloud and Office 365 IP address ranges, see:
-- Azure IP ranges and service tags: [public cloud](https://www.microsoft.com/en-us/download/details.aspx?id=56519),[US government cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57063), [Germany cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064), or [China cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064). The JSON files are updated weekly and include versioning both for the full file and each individual service tag. The *AzureCloud* tag provides the IP ranges for the cloud (Public, US government, Germany, or China) and is grouped by region within that cloud. Service tags in the file will increase as Azure services are added.
+- Azure IP ranges and service tags:
+  [public cloud](https://www.microsoft.com/en-us/download/details.aspx?id=56519),[US government cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57063),
+  [Germany cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064), or
+  [China cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57064). The JSON files are
+  updated weekly and include versioning both for the full file and each individual service tag. The
+  *AzureCloud* tag provides the IP ranges for the cloud (Public, US government, Germany, or China)
+  and is grouped by region within that cloud. Service tags in the file will increase as Azure
+  services are added.
 - [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
+
+With Windows 11 and Windows Server 2022 Datacenter: Azure Edition, you can use SMB over QUIC to
+connect to file servers in Azure. This uses TCP port 443 by default and provides a TLS 1.3-encrypted
+security tunnel like a VPN for the SMB traffic. For more information, see
+[SMB over QUIC](https://aka.ms/smboverquic).
 
 ## Inventory SMB usage and shares
 
@@ -63,7 +83,7 @@ and feature network port requirements, see
 [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements).
 
 Review servers that need to be accessed from inside the network. For example, domain controllers and
-file servers likely need to be access anywhere in the network. However, application server access
+file servers likely need to be accessed anywhere in the network. However, application server access
 may be limited to a set of other application servers on the same subnet. You can use the following
 tools and features to help you inventory SMB access:
 
@@ -97,6 +117,9 @@ To use the null encapsulation IPSEC authentication, you must create a Security C
 all computers in your network that are participating in the rules. Otherwise, the firewall
 exceptions won't work and you'll only be arbitrarily blocking.
 
+> [!CAUTION] You should test the Security Connection rule before broad deployment. An incorrect rule
+> could prevent users from accessing their data.
+
 To create a *Connection Security* rule, use Windows Defender Firewall with Advanced Security control
 panel or snap-in:
 
@@ -112,7 +135,7 @@ your inbound and outbound rules or they will be blocked from connecting SMB outb
 may already be in place from other security efforts in your environment and like the firewall
 inbound/outbound rules, can be deployed via group policy.
 
-When configure rules based on the templates in the [Preventing SMB traffic from lateral connections and entering or leaving the network](https://support.microsoft.com/en-us/topic/preventing-smb-traffic-from-lateral-connections-and-entering-or-leaving-the-network-c0541db7-2244-0dce-18fd-14a3ddeb282a) support article, set the following to customize the *Allow the connection if secure* action:
+When configuring rules based on the templates in the [Preventing SMB traffic from lateral connections and entering or leaving the network](https://support.microsoft.com/en-us/topic/preventing-smb-traffic-from-lateral-connections-and-entering-or-leaving-the-network-c0541db7-2244-0dce-18fd-14a3ddeb282a) support article, set the following to customize the *Allow the connection if secure* action:
 
 1. In the *Action* step, select **Allow the connection if it is secure** then select **Customize**.
 1. In *Customize Allow if Secure Settings*, select **Allow the connection to use null encapsulation**.
@@ -126,12 +149,22 @@ For more information about configuring the firewall, see [Windows Defender Firew
 
 ## Disable SMB Server if unused
 
-Windows clients and some of your Windows Servers on your network may not require the SMB Server service to be running. If the SMB Server service isn't required, you can disable the service. Before disabling SMB Server service, be sure no applications and processes on the computer require the service.
+Windows clients and some of your Windows Servers on your network may not require the SMB Server
+service to be running. If the SMB Server service isn't required, you can disable the service. Before
+disabling SMB Server service, be sure no applications and processes on the computer require the
+service.
+
+You can use Group Policy Preferences to disable the service on a large number of machines when you are ready to implement. For more information about configuring Group Policy Preferences, see [Configure a Service Item](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732482%28v%3Dws.10%29)
 
 ## Test and deploy using policy
 
-Begin by testing using small-scale, hand-made deployments on select servers and clients. Use phased group policy rollouts to make these changes. For example, start with the heaviest user of SMB such as your own IT team. If your team's laptops and apps and file share access work well after deploying your inbound and outbound firewall rules, create test group policy within your broad test and QA environments. Based on results, start sampling some departmental machines, then expand out.
+Begin by testing using small-scale, hand-made deployments on select servers and clients. Use phased
+group policy rollouts to make these changes. For example, start with the heaviest user of SMB such
+as your own IT team. If your team's laptops and apps and file share access work well after deploying
+your inbound and outbound firewall rules, create test group policy within your broad test and QA
+environments. Based on results, start sampling some departmental machines, then expand out.
 
 ## Next steps
 
-[How to defend users from SMB interception attacks]()
+- Watch Jessica Payne's Ignite conference session [Demystifying the Windows Firewall](https://www.youtube.com/watch?v=2VioHFDBWJE)
+- Read [How to defend users from SMB interception attacks]()
