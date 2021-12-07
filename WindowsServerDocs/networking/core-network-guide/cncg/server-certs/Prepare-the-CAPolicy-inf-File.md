@@ -41,16 +41,16 @@ In the example below, **[Version]** is the section, **Signature** is the key, an
 
 Example:
 
-```PowerShell
-[Version]                     #section
-Signature="$Windows NT$"      #key=value
+```
+[Version]
+Signature="$Windows NT$"
 ```
 
-###  Version
+### Version
 
 Identifies the file as an .inf file. Version is the only required section and must be at the beginning of your CAPolicy.inf file.
 
-###  PolicyStatementExtension
+### PolicyStatementExtension
 
 Lists the policies that have been defined by the organization, and whether they are optional or mandatory. Multiple policies are separated by commas. The names have meaning in the context of a specific deployment, or in relation to custom applications that check for the presence of these policies.
 
@@ -61,7 +61,7 @@ If you are going to have descriptive text in the policy statement, then the next
 ```
 [InternalPolicy]
 OID=1.1.1.1.1.1.1
-Notice=”Legal policy statement text”
+Notice="Legal policy statement text"
 ```
 
 If you are going to use a URL to host the CA policy statement, then next three lines would instead look like:
@@ -87,7 +87,7 @@ An example of multiple notices and URLs in a policy section would look like:
 OID=1.1.1.1.1.1.1
 URL=https://pki.wingtiptoys.com/policies/legalpolicy.asp
 URL=ftp://ftp.wingtiptoys.com/pki/policies/legalpolicy.asp
-Notice=”Legal policy statement text”
+Notice="Legal policy statement text"
 ```
 
 ### CRLDistributionPoint
