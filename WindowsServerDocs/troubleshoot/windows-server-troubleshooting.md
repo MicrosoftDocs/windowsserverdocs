@@ -90,7 +90,6 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 - [Troubleshooting Domain Name System (DNS) issues](../networking/dns/troubleshoot/troubleshoot-dns-data-collection.md)
 - [Troubleshooting DNS clients](../networking/dns/troubleshoot/troubleshoot-dns-client.md)
-- [Disable DNS client-side caching on DNS clients](../networking/dns/troubleshoot/disable-dns-client-side-caching.md)
 - [Troubleshooting DNS Servers](../networking/dns/troubleshoot/troubleshoot-dns-server.md)
 
 ## Troubleshoot failover cluster
