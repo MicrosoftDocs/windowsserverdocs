@@ -162,7 +162,7 @@ service.
 
 You can use Group Policy Preferences to disable the service on a large number of machines when you
 are ready to implement. For more information about configuring Group Policy Preferences, see
-[Configure a Service Item](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732482%28v%3Dws.10%29)
+[Configure a Service Item](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732482%28v%3Dws.10%29).
 
 ## Test and deploy using policy
 
