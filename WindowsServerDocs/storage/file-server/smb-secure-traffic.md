@@ -60,7 +60,8 @@ security tunnel like a VPN for the SMB traffic. For more information, see
 ## Inventory SMB usage and shares
 
 By inventorying your network's SMB traffic, you get an understanding of traffic that is occurring
-and can determine if it's necessary. Use the following checklist of questions to help identify unnecessary SMB traffic.
+and can determine if it's necessary. Use the following checklist of questions to help identify
+unnecessary SMB traffic.
 
 For server endpoints:
 
@@ -100,7 +101,9 @@ outbound communications that include exceptions. An outbound firewall policy tha
 SMB connections both outside and inside your managed network while allowing access to the minimum
 set of servers and no other devices is a lateral defense-in-depth measure.
 
-For information on the SMB firewall rules you need to set for inbound and outbound connections, see the support article [Preventing SMB traffic from lateral connections and entering or leaving the network](https://support.microsoft.com/en-us/topic/preventing-smb-traffic-from-lateral-connections-and-entering-or-leaving-the-network-c0541db7-2244-0dce-18fd-14a3ddeb282a).
+For information on the SMB firewall rules you need to set for inbound and outbound connections, see
+the support article
+[Preventing SMB traffic from lateral connections and entering or leaving the network](https://support.microsoft.com/en-us/topic/preventing-smb-traffic-from-lateral-connections-and-entering-or-leaving-the-network-c0541db7-2244-0dce-18fd-14a3ddeb282a).
 
 The support article includes templates for:
 
@@ -117,7 +120,8 @@ To use the null encapsulation IPSEC authentication, you must create a Security C
 all computers in your network that are participating in the rules. Otherwise, the firewall
 exceptions won't work and you'll only be arbitrarily blocking.
 
-> [!CAUTION] You should test the Security Connection rule before broad deployment. An incorrect rule
+> [!CAUTION]
+> You should test the Security Connection rule before broad deployment. An incorrect rule
 > could prevent users from accessing their data.
 
 To create a *Connection Security* rule, use Windows Defender Firewall with Advanced Security control
@@ -135,7 +139,9 @@ your inbound and outbound rules or they will be blocked from connecting SMB outb
 may already be in place from other security efforts in your environment and like the firewall
 inbound/outbound rules, can be deployed via group policy.
 
-When configuring rules based on the templates in the [Preventing SMB traffic from lateral connections and entering or leaving the network](https://support.microsoft.com/en-us/topic/preventing-smb-traffic-from-lateral-connections-and-entering-or-leaving-the-network-c0541db7-2244-0dce-18fd-14a3ddeb282a) support article, set the following to customize the *Allow the connection if secure* action:
+When configuring rules based on the templates in the
+[Preventing SMB traffic from lateral connections and entering or leaving the network](https://support.microsoft.com/en-us/topic/preventing-smb-traffic-from-lateral-connections-and-entering-or-leaving-the-network-c0541db7-2244-0dce-18fd-14a3ddeb282a)
+support article, set the following to customize the *Allow the connection if secure* action:
 
 1. In the *Action* step, select **Allow the connection if it is secure** then select **Customize**.
 1. In *Customize Allow if Secure Settings*, select **Allow the connection to use null encapsulation**.
@@ -154,7 +160,9 @@ service to be running. If the SMB Server service isn't required, you can disable
 disabling SMB Server service, be sure no applications and processes on the computer require the
 service.
 
-You can use Group Policy Preferences to disable the service on a large number of machines when you are ready to implement. For more information about configuring Group Policy Preferences, see [Configure a Service Item](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732482%28v%3Dws.10%29)
+You can use Group Policy Preferences to disable the service on a large number of machines when you
+are ready to implement. For more information about configuring Group Policy Preferences, see
+[Configure a Service Item](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732482%28v%3Dws.10%29)
 
 ## Test and deploy using policy
 
