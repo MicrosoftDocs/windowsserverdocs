@@ -44,7 +44,7 @@ For more information, see the following topics.
 
 You can help protect the data and state of the virtual machine by selecting the following encryption support options.
 
-- **Enable Trusted Platform Module** - This setting makes a virtualized Trusted Platform Module (TPM) chip available to your virtual machine. This allows the guest to encrypt the virtual machine disk by using BitLocker.
+- **Enable Trusted Platform Module** - This setting makes a virtualized Trusted Platform Module (TPM) chip available to your virtual machine. This allows the guest to encrypt the virtual machine disk by using BitLocker. You can enable this by opening the VM settings, click on **Security**, then in the *Encryption Support* section, tick the box to **Enable Trusted Platform Module**. You can also use the [Enable-VMTPM](/powershell/module/hyper-v/enable-vmtpm?view=windowsserver2019-ps&preserved=true) PowerShell cmdlet.
   - If your Hyper-V host is running Windows 10 1511, you have to enable Isolated User Mode.
 - **Encrypt State and VM migration traffic** - Encrypts the virtual machine saved state and live migration traffic.
 
