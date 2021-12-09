@@ -36,8 +36,8 @@ Block TCP port 445 outbound to the internet at your corporate firewall. Blocking
 SMB traffic prevents devices inside your network from sending data using SMB to the internet.
 
 It is unlikely you need to allow any outbound SMB using TCP port 445 to the internet unless you
-require it as part of a public cloud offering. The following are scenarios and solutions for using
-SMB with public cloud offerings.
+require it as part of a public cloud offering. The primary scenarios include Azure Files and Office
+365.
 
 If you are using Azure Files SMB, use a VPN for outbound VPN traffic. By
 using a VPN, you restrict the outbound traffic to the required service IP ranges. For more
