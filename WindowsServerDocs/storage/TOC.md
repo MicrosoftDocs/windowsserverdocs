@@ -40,6 +40,7 @@
 ### [SMB compression](file-server/smb-compression.md)
 ### [SMB security enhancements](file-server/smb-security.md)
 ### [SMB: File and printer sharing ports should be open](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)
+### [Secure SMB traffic](file-server/smb-secure-traffic.md)
 ### [Network File System overview](nfs/nfs-overview.md)
 ### [Deploy Network File System](nfs/deploy-nfs.md)
 ### [NTFS overview](file-server/ntfs-overview.md)
