@@ -175,4 +175,3 @@ environments. Based on results, start sampling some departmental machines, then 
 ## Next steps
 
 - Watch Jessica Payne's Ignite conference session [Demystifying the Windows Firewall](https://www.youtube.com/watch?v=2VioHFDBWJE)
-- Read [How to defend users from SMB interception attacks]()
