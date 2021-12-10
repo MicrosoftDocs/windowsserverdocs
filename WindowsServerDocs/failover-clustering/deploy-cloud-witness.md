@@ -175,7 +175,7 @@ When configuring a Cloud Witness as a quorum witness for your Failover Cluster, 
 
 ### Proxy considerations with Cloud Witness
 
-Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Ensure that the HTTPS outbound port is accessible via network Proxy.
+Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Ensure that the HTTPS outbound port is accessible via network Proxy. Azure uses **.core.windows.net** as the Endpoint. You need to ensure that it is included in any firewall allow lists you're using between the cluster and Azure Storage.
 
 ## See Also
 
