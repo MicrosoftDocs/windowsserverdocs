@@ -5,7 +5,7 @@ ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
 manager: femila
-ms.date: 9/07/2021
+ms.date: 12/13/2021
 ms.prod: windows-server
 ---
 
@@ -37,11 +37,13 @@ Secured-core servers support virtualization-based security (VBS) and hypervisor-
 
 [HVCI](/windows-hardware/design/device-experiences/oem-hvci-enablement) uses VBS to significantly strengthen code integrity policy enforcement, including kernel mode integrity that checks all kernel mode drivers and binaries in a virtualized environment before they are started, preventing unsigned drivers or system files from being loaded into system memory.
 
+Kernel Data Protection (KDP) provides read-only memory protection of kernel memory containing non-executable data where memory pages are protected by Hypervisor. KDP protects key structures in the Windows Defender System Guard runtime from being tampered.
+
 ### Secure connectivity
 
 #### Transport: HTTPS and TLS 1.3 enabled by default on Windows Server 2022
 
-Secure connections are at the heart of today’s interconnected systems. Transport Layer Security (TLS) 1.3 is the latest version of the internet’s most deployed security protocol, which encrypts data to provide a secure communication channel between two endpoints. HTTPS and TLS 1.3 is now enabled by default on Windows Server 2022, protecting the data of clients connecting to the server. It eliminates obsolete cryptographic algorithms, enhances security over older versions, and aims to encrypt as much of the handshake as possible. Learn more about [supported TLS versions](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-) and about [supported cipher suites](/windows/win32/secauthn/tls-cipher-suites-in-windows-server-2022).
+Secure connections are at the heart of today's interconnected systems. Transport Layer Security (TLS) 1.3 is the latest version of the internet's most deployed security protocol, which encrypts data to provide a secure communication channel between two endpoints. HTTPS and TLS 1.3 is now enabled by default on Windows Server 2022, protecting the data of clients connecting to the server. It eliminates obsolete cryptographic algorithms, enhances security over older versions, and aims to encrypt as much of the handshake as possible. Learn more about [supported TLS versions](/windows/win32/secauthn/protocols-in-tls-ssl--schannel-ssp-) and about [supported cipher suites](/windows/win32/secauthn/tls-cipher-suites-in-windows-server-2022).
 
 Although TLS 1.3 in the protocol layer is now enabled by default, applications and services also need to actively support it. Please see documentation for those applications and services for more information. The Microsoft Security blog has more detail in the post [Taking Transport Layer Security (TLS) to the next level with TLS 1.3](https://www.microsoft.com/security/blog/2020/08/20/taking-transport-layer-security-tls-to-the-next-level-with-tls-1-3/).
 
@@ -81,7 +83,7 @@ Improvements to Windows Admin Center to manage Windows Server 2022 include capab
 
 ### Azure Automanage - Hotpatch
 
-Hotpatch, part of Azure Automanage, is supported in Windows Server 2022 Datacenter: Azure Edition. Hotpatching is a new way to install updates on new Windows Server Azure Edition virtual machines (VMs) that doesn’t require a reboot after installation. More information can be found at the [Azure Automanage documentation](/azure/automanage/automanage-hotpatch).
+Hotpatch, part of Azure Automanage, is supported in Windows Server 2022 Datacenter: Azure Edition. Hotpatching is a new way to install updates on new Windows Server Azure Edition virtual machines (VMs) that doesn't require a reboot after installation. More information can be found at the [Azure Automanage documentation](/azure/automanage/automanage-hotpatch).
 
 ## Application platform
 
@@ -146,7 +148,7 @@ Storage bus cache is now available for standalone servers. It can significantly 
 
 #### ReFS file-level snapshots
 
-Microsoft’s Resilient File System (ReFS) now includes the ability to snapshot files using a quick metadata operation. Snapshots are different than [ReFS block cloning](../storage/refs/block-cloning.md) in that clones are writable, whereas snapshots are read-only. This functionality is especially useful in virtual machine backup scenarios with VHD/VHDX files. ReFS snapshots are unique in that they take a constant time irrespective of file size. Support for snapshots is available in [ReFSUtil](../administration/windows-commands/refsutil.md) or as an API.
+Microsoft's Resilient File System (ReFS) now includes the ability to snapshot files using a quick metadata operation. Snapshots are different than [ReFS block cloning](../storage/refs/block-cloning.md) in that clones are writable, whereas snapshots are read-only. This functionality is especially useful in virtual machine backup scenarios with VHD/VHDX files. ReFS snapshots are unique in that they take a constant time irrespective of file size. Support for snapshots is available in [ReFSUtil](../administration/windows-commands/refsutil.md) or as an API.
 
 #### SMB compression
 
