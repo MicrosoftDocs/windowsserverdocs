@@ -10,7 +10,7 @@ author: Deland-Han
 
 # Support policy for DNS client-side caching on DNS clients
 
-Windows contains a client-side DNS cache. Microsoft recommends not to disable DNS client-side caching on DNS clients. A configuration in which DNS client-side caching is disabled is not supported.
+Windows contains a client-side DNS cache. Microsoft recommends not to disable DNS client-side caching on DNS clients. A configuration in which DNS client-side caching is disabled isn't supported.
 
 ## Support policy
 
