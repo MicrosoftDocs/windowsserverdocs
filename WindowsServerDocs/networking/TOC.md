@@ -87,7 +87,7 @@
 #### [Use DNS policy for app load balancing with geo-location awareness](dns/deploy/app-lb-geo.md)
 ### [Troubleshooting DNS issues](dns/troubleshoot/troubleshoot-dns-data-collection.md)
 #### [Troubleshooting DNS clients](dns/troubleshoot/troubleshoot-dns-client.md)
-##### [Disable DNS client-side caching on DNS clients](dns/troubleshoot/disable-dns-client-side-caching.md)
+##### [Support policy for DNS client-side caching on DNS clients](dns/troubleshoot/support-policy-for-dns-client-side-caching.md)
 #### [Troubleshooting DNS servers](dns/troubleshoot/troubleshoot-dns-server.md)
 
 ## [Dynamic Host Configuration Protocol (DHCP)](technologies/dhcp/dhcp-top.md)
