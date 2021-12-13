@@ -55,6 +55,9 @@ The VM also has the following networking requirements, which we step through dur
 - An inbound port rule if using a public IP address to connect to the VM (not recommended)
 <br>Just like with Remote Desktop, we recommend connecting to the VM using a private IP address in the VM's virtual network to increase security. Using a private IP address doesn't require an inbound port rule, though it does require access to the virtual network (which we discuss next).
 
+> [!NOTE]
+> Inbound connectivity being redirected by another service (i.e. Azure Firewall) is not supported. You must have inbound connectivity from the Azure portal to one of the direct IP addresses of your VM (as seen on the "Networking" tab of your Azure VM in the Azure portal) on the port Windows Admin Center is installed.
+
 The management PC or other system that you use to connect to the Azure portal has the following requirements:
 
 - The [Microsoft Edge](https://www.microsoft.com/edge) or Google Chrome web browser

@@ -18,14 +18,22 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.2687        |1.2.1672                  |
-|Insider    |1.2.2687        |1.2.1672                  |
+|Public     |1.2.2688        |1.2.1672                  |
+|Insider    |1.2.2688        |1.2.1672                  |
+
+## Updates for version 1.2.2688
+
+*Date published: 12/09/2021*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Fixed an issue where some users were unable to subscribe using the "subscribe with URL" option after updating to version 1.2.2687.0.
 
 ## Updates for version 1.2.2687
 
 *Date published: 12/02/2021*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWQcdc), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWQ9C1), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWQcdd)
 
 - Improved manual refresh functionality to acquire new user tokens, which ensures the service can accurately update user access to resources.
 - Fixed an issue where the service sometimes pasted empty frames when a user tried to copy an image from a remotely running Internet Explorer browser to a locally running Word document.
