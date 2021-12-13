@@ -371,7 +371,7 @@ Function Format-Trend {
             $Sign = "-"
         }
         # Return
-        $Sign + $(Format-Bytes [Math]::Abs($RawValue)) + "/day"
+        $Sign + $(Format-Bytes ([Math]::Abs($RawValue))) + "/day"
     }
 }
 
