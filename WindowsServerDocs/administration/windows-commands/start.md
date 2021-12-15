@@ -29,9 +29,9 @@ start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 | `{/min | /max}` | Specifies to minimize (**/min**) or maximize (**/max**) the new **Command Prompt** window. |
 | `{/separate | /shared}` | Starts 16-bit programs in a separate memory space (**/separate**) or shared memory space (**/shared**). These options are not supported on 64-bit platforms. |
 | `{/low | /normal | /high | /realtime | /abovenormal | belownormal}` | Starts an application in the specified priority class. |
+| /node `<NUMA node>` | Specifies the preferred Non-Uniform Memory Architecture (NUMA) node as a decimal integer. |
 | /affinity `<hexaffinity>` | Applies the specified processor affinity mask (expressed as a hexadecimal number) to the new application. |
 | /wait | Starts an application and waits for it to end. |
-| /elevate | Runs application as administrator. |
 | /b | Starts an application without opening a new **Command Prompt** window. CTRL+C handling is ignored unless the application enables CTRL+C processing. Use CTRL+BREAK to interrupt the application. |
 | `[<command> [<parameter>... ] | <program> [<parameter>... ]]` | Specifies the command or program to start. |
 | `<parameter>` | Specifies parameters to pass to either the command or the program. |
