@@ -2,10 +2,10 @@
 description: "Learn more about: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)"
 ms.assetid: fe05e52c-cbf8-428b-8176-63407991042f
 title: Advanced Active Directory Replication and Topology Management Using Windows PowerShell (Level 200)
-author: iainfoulds
+author: wscontent
 ms.author: daveba
 manager: daveba
-ms.date: 05/31/2017
+ms.date: 12/15/2021
 ms.topic: article
 ---
 
@@ -13,7 +13,7 @@ ms.topic: article
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-This topic explains the new AD DS replication and topology management cmdlets in more detail, and provides additional examples. For an introduction, see [Introduction to Active Directory Replication and Topology Management Using Windows PowerShell &#40;Level 100&#41;](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md).
+This topic explains the AD DS replication and topology management cmdlets in more detail, and provides additional examples. For an introduction, see [Introduction to Active Directory Replication and Topology Management Using Windows PowerShell &#40;Level 100&#41;](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md).
 
 1. [Introduction](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_Intro)
 
@@ -32,11 +32,8 @@ This topic explains the new AD DS replication and topology management cmdlets in
 8. [Topology](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_Topo)
 
 ## <a name="BKMK_Intro"></a>Introduction
-Windows Server 2012 extends the Active Directory module for Windows PowerShell with twenty-five new cmdlets to manage replication and forest topology. Prior to this, you were forced to use the generic **\*-AdObject** nouns or call .NET functions.
 
-Like all Active Directory Windows PowerShell cmdlets, this new functionality requires installing the [Active Directory Management Gateway Service](https://www.microsoft.com/download/details.aspx?displaylang=en&id=2852) on at least one domain controller (and preferably, all domain controllers).
-
-The following table lists new replication and topology cmdlets added to the Active Directory Windows PowerShell module.
+The following table lists replication and topology cmdlets added to the Active Directory Windows PowerShell module:
 
 | Cmdlet | Explanation |
 |--|--|
@@ -78,7 +75,6 @@ For a complete list of all Active Directory Windows PowerShell cmdlet arguments,
 
 ```
 Get-help New-ADReplicationSite
-
 ```
 
 Use the `Update-Help` cmdlet to download and install help files
@@ -96,7 +92,7 @@ Additionally, the following cmdlets implement a new parameter set of **Target**,
 
 The **Target** argument accepts a comma-separated list of strings that identify the target servers, sites, domains, or forests specified by the **Scope** argument. An asterisk (\*) is also permissible and means all servers within the specified scope. If no scope is specified, it implies all servers in the current user's forest. The **Scope** argument specifies the latitude of the search. Acceptable values are **Server**, **Site**, **Domain**, and **Forest**. The **EnumerationServer** specifies the server that enumerates the list of domain controllers specified in **Target** and **Scope**. It operates the same as the **Server** argument and requires the specified server run the Active Directory Web Service.
 
-To introduce the new cmdlets, here are some sample scenarios showing capabilities impossible to repadmin.exe; armed with these illustrations, the administrative possibilities become obvious. Review the cmdlet help for specific usage requirements.
+To introduce the cmdlets, here are some sample scenarios showing capabilities impossible to repadmin.exe; armed with these illustrations, the administrative possibilities become obvious. Review the cmdlet help for specific usage requirements.
 
 ### <a name="BKMK_ReplAttrMD"></a>Get-ADReplicationAttributeMetadata
 This cmdlet is similar to **repadmin.exe /showobjmeta**. It enables you to return replication metadata, such as when an attribute changed, the originating domain controller, the version and USN information, and attribute data. This cmdlet is useful for auditing where and when a change occurred.
@@ -261,4 +257,3 @@ get-adreplicationsite -filter * -property subnets | where-object {!$_.subnets -e
 
 ## See Also
 [Introduction to Active Directory Replication and Topology Management Using Windows PowerShell &#40;Level 100&#41;](../../../ad-ds/manage/powershell/Introduction-to-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-100-.md)
-
