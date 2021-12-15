@@ -16,7 +16,7 @@ Starts a separate Command Prompt window to run a specified program or command.
 ## Syntax
 
 ```
-start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/affinity <hexaffinity>] [/wait] [/elevate] [/b] [<command> [<parameter>... ] | <program> [<parameter>... ]]
+start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/node <NUMA node>] [/affinity <hexaffinity>] [/wait] [/b] [<command> [<parameter>... ] | <program> [<parameter>... ]]
 ```
 
 ### Parameters
