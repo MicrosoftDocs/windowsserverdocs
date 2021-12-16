@@ -1,13 +1,13 @@
 ---
-title: OpenSSH Server Configuration for Windows
-description: Configuration information about OpenSSH Server for Windows 10 1809 and Windows Server 2019.
+title: OpenSSH Server configuration for Windows
+description: Configuration information about OpenSSH Server for Windows Server and Windows.
 ms.date: 09/27/2018
 ms.topic: conceptual
 ms.author: damaerte
 author: maertendmsft
 ---
 
-# OpenSSH Server Configuration for Windows 10 1809 and Windows Server 2019
+# OpenSSH Server configuration for Windows Server and Windows
 
 This topic covers the Windows-specific configuration for OpenSSH Server (sshd).
 
