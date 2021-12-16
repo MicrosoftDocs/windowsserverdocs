@@ -25,7 +25,7 @@
 ### [Manage Server Core and remote systems Remote Server Administration Tools](../remote/remote-server-administration-tools.md)
 ### [Manage Windows with OpenSSH](OpenSSH/OpenSSH_Overview.md)
 #### [Getting started with OpenSSH](OpenSSH/OpenSSH_Install_FirstUse.md)
-#### [Configuring Windows for OpenSSH](OpenSSH/OpenSSH_Server_Configuration.md)
+#### [OpenSSH Server configuration](OpenSSH/OpenSSH_Server_Configuration.md)
 #### [Managing OpenSSH Keys](OpenSSH/OpenSSH_KeyManagement.md)
 ### [Windows Server Update Services (WSUS)](windows-server-update-services/get-started/windows-server-update-services-wsus.md)
 #### [Deploy Windows Server Update Services](windows-server-update-services/deploy/deploy-windows-server-update-services.md)
