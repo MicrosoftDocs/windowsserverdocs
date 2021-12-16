@@ -1,5 +1,5 @@
 ---
-title:  Install OpenSSH
+title:  Get started with OpenSSH
 description: Installing OpenSSH Client and Server for Windows.
 ms.date: 09/15/2021
 ms.topic: conceptual
@@ -8,7 +8,7 @@ author: IngridAtMicrosoft
 ms.custom: contperf-fy21q4
 ---
 
-# Install OpenSSH
+# Get started with OpenSSH
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows 10 (build 1809 and later)
 
