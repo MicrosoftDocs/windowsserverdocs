@@ -1,5 +1,5 @@
 ---
-title:  Install OpenSSH
+title:  Get started with OpenSSH
 description: Installing OpenSSH Client and Server for Windows.
 ms.date: 09/15/2021
 ms.topic: conceptual
@@ -8,13 +8,13 @@ author: IngridAtMicrosoft
 ms.custom: contperf-fy21q4
 ---
 
-# Install OpenSSH
+# Get started with OpenSSH
 
->Applies to Windows Server 2019, Windows 10: Windows Server 2022,
+>Applies to: Windows Server 2022, Windows Server 2019, Windows 10 (build 1809 and later)
 
 OpenSSH is a connectivity tool for remote login that uses the SSH protocol. It encrypts all traffic between client and server to eliminate eavesdropping, connection hijacking, and other attacks.
 
-An OpenSSH-compatible client can be used to connect to Windows 10 (build 1809 and later) and Windows Server 2019 devices.
+An OpenSSH-compatible client can be used to connect to Windows Server and Windows client devices.
 
 > [!IMPORTANT]
 > If you downloaded OpenSSH from the GitHub repo at [PowerShell/openssh-portable](https://github.com/PowerShell/OpenSSH-Portable), follow the instructions listed there, not the ones in this article.
@@ -119,6 +119,18 @@ Once connected, you will see the Windows command shell prompt:
 ```
 domain\username@SERVERNAME C:\Users\username>
 ```
+
+## OpenSSH configuration files
+
+OpenSSH has configuration files for both server and client settings. OpenSSH is open-source and is added to Windows Server and Windows Client operating systems, starting with Windows Server 2019 and Windows 10 (build 1809). As a result, documentation for OpenSSH configuration files is not repeated here. Client configuration files and can be found on the [ssh_config manual page](https://man.openbsd.org/ssh_config) and for OpenSSH Server configuration files can be found on the [sshd_config manual page](https://man.openbsd.org/sshd_config). Further Windows-specific OpenSSH Server configuration is detailed in [OpenSSH Server configuration for Windows](OpenSSH_Server_Configuration.md#windows-configurations-in-sshd_config).
+
+In Windows, the OpenSSH Client (ssh) reads configuration data from a configuration file in the following order:
+
+1. By launching ssh.exe with the -F parameter, specifying a path to a configuration file and an entry name from that file.
+2. A user's configuration file at %userprofile%\\.ssh\config.
+3. The system-wide configuration file at %programdata%\ssh\ssh_config.
+
+Open SSH Server (sshd) reads configuration data from %programdata%\ssh\sshd_config by default, or a different configuration file may be specified by launching sshd.exe with the -f parameter. If the file is absent, sshd generates one with the default configuration when the service is started.
 
 ## Uninstall OpenSSH using Windows Settings
 

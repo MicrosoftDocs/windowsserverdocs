@@ -10432,7 +10432,17 @@
     },
     {
       "source_path": "WindowsServerDocs/networking/dns/troubleshoot/disable-dns-client-side-caching.md",
-      "redirect_url": "/windows-server/networking/dns/troubleshoot/troubleshoot-dns-client",
+      "redirect_url": "/troubleshoot/windows-client/networking/support-policy-for-dns-client-side-caching",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/hybrid-cloud-print/hybrid-cloud-print-deploy.md",
+      "redirect_url": "/universal-print/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/administration/hybrid-cloud-print/hybrid-cloud-print-overview.md",
+      "redirect_url": "/universal-print/",
       "redirect_document_id": false
     }
   ]
