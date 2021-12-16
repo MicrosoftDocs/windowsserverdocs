@@ -21,7 +21,7 @@ The recommended way to upgrade a domain is to promote domain controllers that ru
 1. Verify the target server meets system requirements.
 1. Verify Application compatibility.
 1. Review Recommendations for moving to latest version of Windows Server.
-1. Verify security settings. For more information, see [Deprecated features and behavior changes related to AD DS in Windows Server](../../../get-started/deprecated-features-windows-server-2019.md).
+1. Verify security settings. For more information, see [Features removed or no longer developed starting with Windows Server 2019](../../../get-started/removed-deprecated-features-windows-server-2019.md).
 1. Check connectivity to the target server from the computer where you plan to run the installation.
 1. Check for availability of necessary operation master roles:
    - To install the first DC that runs the latest Windows Server version in an existing domain and forest, the machine where you run the installation needs connectivity to the **schema master** in order to run `adprep /forestprep` and the infrastructure master in order to run `adprep /domainprep`.
