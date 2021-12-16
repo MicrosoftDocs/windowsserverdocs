@@ -9,7 +9,7 @@ author: maertendmsft
 
 # OpenSSH Server configuration for Windows Server and Windows
 
-This topic covers the Windows-specific configuration for OpenSSH Server (sshd).
+This article covers the Windows-specific configuration for OpenSSH Server (sshd).
 
 OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html), which is not duplicated in this documentation set.
 
@@ -20,8 +20,8 @@ The initial default Windows is the Windows Command shell (cmd.exe).
 Windows also includes PowerShell and Bash, and third-party command shells are also available for Windows and may be configured as the default shell for a server.
 
 To set the default command shell, first confirm that the OpenSSH installation folder is on the system path.
-For Windows, the default installation folder is SystemDrive:WindowsDirectory\System32\openssh.
-The following command shows the current path setting, and add the default OpenSSH installation folder to it.
+For Windows, the default installation folder is %systemdrive%\WindowsDirectory\System32\openssh.
+The following command shows the current path setting, and adds the default OpenSSH installation folder to it.
 
 Command shell | Command to use
 ------------- | --------------
@@ -46,7 +46,7 @@ There are other configuration settings possible in that are not listed here, as 
 
 ### AllowGroups, AllowUsers, DenyGroups, DenyUsers
 
-Controlling which users and groups can connect to the server is done using the AllowGroups, AllowUsers, DenyGroups and DenyUsers directives.
+Controlling which users and groups can connect to the server is done using the AllowGroups, AllowUsers, DenyGroups, and DenyUsers directives.
 The allow/deny directives are processed in the following order: DenyUsers, AllowUsers, DenyGroups, and finally AllowGroups.
 All account names must be specified in lower case.
 See PATTERNS in ssh_config for more information on patterns for wildcards.
@@ -81,7 +81,7 @@ For Windows OpenSSH, the only available authentication methods are "password" an
 
 ### AuthorizedKeysFile
 
-The default is ".ssh/authorized_keys .ssh/authorized_keys2". If the path is not absolute, it is taken relative to user's home directory (or profile image path). Ex. c:\users\user. Note that if the user belongs to the administrator group, %programdata%/ssh/administrators_authorized_keys is used instead.
+The default is ".ssh/authorized_keys .ssh/authorized_keys2". If the path is not absolute, it is taken relative to user's home directory (or profile image path), e.g. C:\Users\username. Note that if the user belongs to the administrator group, %programdata%/ssh/administrators_authorized_keys is used instead.
 
 ### ChrootDirectory (Support added in v7.7.0.0)
 
