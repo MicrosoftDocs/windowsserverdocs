@@ -15,7 +15,7 @@ ms.date: 11/11/2021
 ## Supported
 
 ### ReFS
-Data Deduplication is supported as of Windows Server 2019.
+Data Deduplication is supported starting with Windows Server 2019.
 
 ### Failover Clustering
 
