@@ -77,7 +77,7 @@ The **Set-ADFSSyncProperties** cmdlet modifies the frequency of synchronization 
 The cmdlet also specifies which federation server is the primary server in the federation server farm. 
 
 > [!NOTE]
-> If a primary federation server crashes and is offline, all secondary federation servers continue to process requests as normal. However, no new changes can be made to the Federation Service until the primary federation server has been brought back online. You can also nominate a secondary federation server to become the primary federation server by using Windows PowerShell. If nominate a new primary server the remain servers must be modified to reflect the new primary server. Having 2 primaries with a WID farm will impact the stableness of the farm and has the passibility of losing data.
+> If a primary federation server crashes and is offline, all secondary federation servers continue to process requests as normal. However, no new changes can be made to the Federation Service until the primary federation server has been brought back online. You can also nominate a secondary federation server to become the primary federation server by using Windows PowerShell. If nominate a new primary server the remain servers must be modified to reflect the new primary server. Having 2 primaries with a WID farm will impact the stableness of the farm and has the possibility of losing data.
 
 #### Modify the poll duration for a farm
 ```
