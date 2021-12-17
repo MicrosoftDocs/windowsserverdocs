@@ -5,7 +5,7 @@ title: Securing Domain Controllers Against Attack
 ms.author: daveba
 author: iainfoulds
 manager: daveba
-ms.date: 06/18/2017
+ms.date: 12/17/2021
 ms.topic: article
 ---
 
@@ -84,10 +84,6 @@ Launching web browsers on domain controllers should be prohibited not only by po
 ### Perimeter Firewall Restrictions
 
 Perimeter firewalls should be configured to block outbound connections from domain controllers to the Internet. Although domain controllers may need to communicate across site boundaries, perimeter firewalls can be configured to allow intersite communication by following the guidelines provided in [How to configure a firewall for Active Directory domains and trusts](https://support.microsoft.com/kb/179442) on the Microsoft Support website.
-
-### DC Firewall Configurations
-
-As described earlier, you should use the Security Configuration Wizard to capture configuration settings for the Windows Firewall with Advanced Security on domain controllers. You should review the output of Security Configuration Wizard to ensure that the firewall configuration settings meet your organization's requirements, and then use GPOs to enforce configuration settings.
 
 ### Preventing Web Browsing from Domain Controllers
 
