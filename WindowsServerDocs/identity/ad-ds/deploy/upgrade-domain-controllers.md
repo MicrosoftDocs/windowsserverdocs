@@ -18,7 +18,7 @@ Services in Windows Server and explains the process for upgrading domain control
 
 The recommended way to upgrade a domain is to promote new servers to domain controllers (DCs) that run a newer version of Windows Server and demote the older domain controllers as needed. This method is preferable to upgrading the operating system of an existing domain controller, also known as an in-place upgrade. This list covers general steps to follow before you promote a server to a domain controller that runs a newer version of Windows Server:
 
-1. Verify the target server meets the [system requirements](../../../get-started/hardware-requirements).
+1. Verify the target server meets the [system requirements](../../../get-started/hardware-requirements.md).
 1. Verify application compatibility.
 1. Review recommendations for moving to a newer version of Windows Server.
 1. Verify security settings.
@@ -65,7 +65,7 @@ For more information on running adprep see [Running Adprep](/previous-versions/w
 
 ## Functional level features and requirements
 
-Windows Server 2019 or later requires a Windows Server 2008 forest functional level as a minimum. Windows Server 2016 requires a Windows Server 2003 forest functional level as a minimum. If the forest contains domain controllers running an older forest functional level than the operating system supports, the installation is blocked. Those domain controllers must be removed and the forest functional level raised to a version that is supported prior to adding newer Windows Server domain controllers to your forest. See [Forest and domain functional levels](../active-directory-functional-levels) for more information about supported functional levels.
+Windows Server 2019 or later requires a Windows Server 2008 forest functional level as a minimum. Windows Server 2016 requires a Windows Server 2003 forest functional level as a minimum. If the forest contains domain controllers running an older forest functional level than the operating system supports, the installation is blocked. Those domain controllers must be removed and the forest functional level raised to a version that is supported prior to adding newer Windows Server domain controllers to your forest. See [Forest and domain functional levels](../active-directory-functional-levels.md) for more information about supported functional levels.
 
 ### Rolling back functional levels
 
@@ -139,7 +139,7 @@ The following is a simple example of upgrading the Contoso forest from a previou
     ![Screenshot of the Active Directory Module for Windows PowerShell window showing the results of the Get-ADForest cmdlet with the Domain Naming Master and Schema Master values called out.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade9.png)
 
 1. Demote and remove the earlier Windows Server domain controller. For information on demoting a DC, see [Demoting Domain Controllers and Domains](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md)
-1. Once the server is demoted and removed you can [raise the forest functional and domain functional levels](../../raise-active-directory-domain-forest-functional-levels) to the latest version of Windows Server.
+1. Once the server is demoted and removed you can [raise the forest functional and domain functional levels](/troubleshoot/windows-server/identity/raise-active-directory-domain-forest-functional-levels) to the latest version of Windows Server.
 
 ## Next Steps
 
