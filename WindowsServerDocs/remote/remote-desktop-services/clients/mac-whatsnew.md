@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/04/2021
+ms.date: 12/17/2021
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
@@ -14,7 +14,7 @@ We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md)
 
 If you encounter any issues, you can always contact us by navigating to **Help** > **Submit Feedback**.
 
-## Updates for version 10.7.2, build 1965
+## Updates for version 10.7.2 (1965)
 
 Date published: December 13, 2021
 
