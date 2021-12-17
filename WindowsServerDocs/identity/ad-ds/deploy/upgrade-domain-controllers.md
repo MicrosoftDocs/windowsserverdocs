@@ -123,7 +123,7 @@ The following is a simple example of upgrading the Contoso forest from a previou
 1. On the **Domain Controller options** screen, enter the **Directory Services Restore Mode (DSRM)** password and click next.
 1. For the remainder of the screens click **Next**.
 1. On the **Prerequisite Check** screen, click **install**. Once the restart has completed you can sign back in.
-1. On the earlier verion of Windows Server, in **Server Manager**, under tools, select **Active Directory Module for Windows PowerShell**.
+1. On the earlier version of Windows Server, in **Server Manager**, under tools, select **Active Directory Module for Windows PowerShell**.
 
    ![Screenshot of the Tools drop-down list in the Server Manager with the Active Directory Module for Windows PowerShell option called out.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade6.png)
 
