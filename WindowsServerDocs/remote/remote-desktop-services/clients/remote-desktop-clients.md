@@ -26,8 +26,8 @@ You can also use a Remote Desktop client to access your remote PC from almost an
 | Windows Desktop | [Windows Desktop client](windowsdesktop.md#install-the-client) | [Get started](windowsdesktop.md), [What's new](windowsdesktop-whatsnew.md) | 1.2.2688  |
 | Microsoft Store   | [Windows 10 client in the Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=616709) | [Get started](windows.md), [What's new](windows-whatsnew.md)  | 1.2.1810  |
 | Android         | [Android client in Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)     | [Get started](remote-desktop-android.md), [What's new](android-whatsnew.md) | 10.0.12.1148 |
-| iOS             | [iOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id714464092)     | [Get started](remote-desktop-ios.md), [What's new](ios-whatsnew.md)         | 10.3.5 |
-| macOS | [macOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Get started](remote-desktop-mac.md), [What's new](mac-whatsnew.md)       | 10.7.0 |
+| iOS             | [iOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id714464092)     | [Get started](remote-desktop-ios.md), [What's new](ios-whatsnew.md)         | 10.3.5, build 5090 |
+| macOS | [macOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Get started](remote-desktop-mac.md), [What's new](mac-whatsnew.md)       | 10.7.2 |
 
 Before you start using the client of your choice, there are a few things you'll need to do first.
 
