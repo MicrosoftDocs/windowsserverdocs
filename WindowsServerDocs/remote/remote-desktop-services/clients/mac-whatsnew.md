@@ -5,14 +5,31 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/04/2021
+ms.date: 12/17/2021
 ms.localizationpriority: medium
 ---
 # What's new in the macOS client
 
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
-If you encounter any issues, you can always contact us by navigating to **Help** > **Report an Issue**.
+If you encounter any issues, you can always contact us by navigating to **Help** > **Submit Feedback**.
+
+## Updates for version 10.7.2 (1965)
+
+Date published: December 13, 2021
+
+It's time for the final update of 2021. In this release we've worked on the following fixes and features:
+
+- Added support for the Touch Bar on MacBook Pro devices.
+- Refreshed the look and feel of the PCs and Apps tabs in the Connection Center.
+- Added a new SHIFT+COMMAND+K hotkey that opens the Connection Center.
+- Improved compatibility with third-party network devices and load balancers for workspace download and RD Gateway-based connections.
+- Support for the ms-rd URI scheme.
+- Improved support for invertible mouse cursors that straddle the image boundary.
+- Support for .RDPW files produced by the Azure Virtual Desktop web client.
+- Fixed an issue that caused the workspace subfolder to remain expanded even if you've collapsed the root folder.
+- Updates and enhancements to Teams redirection (only available in Azure Virtual Desktop scenarios).
+- Addressed reliability issues identified through crash reporting and feedback.
 
 ## Updates for version 10.7.0
 
