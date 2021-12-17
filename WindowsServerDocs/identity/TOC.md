@@ -85,7 +85,7 @@
 ####### [Active Directory-Integrated DNS Zones](ad-ds/plan/active-directory-Integrated-DNS-Zones.md)
 ####### [Computer Naming](ad-ds/plan/computer-Naming.md)
 ####### [Disjoint Namespace](ad-ds/plan/Disjoint-Namespace.md)
-###### [Assigning the DNS for AD DS Owner Role](ad-ds/deploy/assigning-the-DNS-for-AD-DS-Owner-Role.md)
+###### [DNS for AD DS Owner Role](ad-ds/deploy/assigning-the-DNS-for-AD-DS-Owner-Role.md)
 ###### [Integrating AD DS into an Existing DNS Infrastructure](ad-ds/plan/Integrating-AD-DS-into-an-Existing-DNS-Infrastructure.md)
 ###### [Appendix A: DNS Inventory](ad-ds/plan/appendix-A--DNS-Inventory.md)
 ##### [Creating an Organizational Unit Design](ad-ds/plan/Creating-an-Organizational-Unit-Design.md)
