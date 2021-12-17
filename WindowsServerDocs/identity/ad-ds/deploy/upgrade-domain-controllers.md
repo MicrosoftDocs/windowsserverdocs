@@ -67,6 +67,9 @@ For more information on running adprep see [Running Adprep](/previous-versions/w
 
 Windows Server 2019 or later requires a Windows Server 2008 forest functional level as a minimum. Windows Server 2016 requires a Windows Server 2003 forest functional level as a minimum. If the forest contains domain controllers running an older forest functional level than the operating system supports, the installation is blocked. Those domain controllers must be removed and the forest functional level raised to a version that is supported prior to adding newer Windows Server domain controllers to your forest. See [Forest and domain functional levels](../active-directory-functional-levels.md) for more information about supported functional levels.
 
+> [!NOTE]
+> There have been no new forest or domain functional levels added since Windows Server 2016. Later operating system versions can and should be used for domain controllers, however they use Windows Server 2016 as the most recent functional levels.
+
 ### Rolling back functional levels
 
 After you set the forest functional level to a certain value, you cannot roll back or lower the forest functional level, with the following exceptions:
@@ -76,7 +79,7 @@ After you set the forest functional level to a certain value, you cannot roll ba
 
 After you set the domain functional level to a certain value, you cannot roll back or lower the domain functional level, with the following exceptions:
 
-- When you raise the domain functional level to Windows Server 2016 or later and if the forest functional level is Windows Server 2012 or lower, you have the option of rolling the domain functional level back to Windows Server 2012 or Windows Server 2012 R2.
+- When you raise the domain functional level to Windows Server 2016 and if the forest functional level is Windows Server 2012 or lower, you have the option of rolling the domain functional level back to Windows Server 2012 or Windows Server 2012 R2.
 
 For more information about features that are available at each of the functional levels, see [Forest and domain functional levels](../active-directory-functional-levels.md).
 
