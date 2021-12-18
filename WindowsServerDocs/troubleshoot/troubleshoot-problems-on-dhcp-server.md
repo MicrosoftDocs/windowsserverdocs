@@ -57,11 +57,11 @@ For more information, see [Analyze DHCP Server Log Files](/previous-versions/win
 
 A correlating network trace may indicate what the DHCP server was doing at the time that the event was logged. To create such a trace, follow these steps:
 
-1.  Go to [GitHub](https://github.com/CSS-Windows/WindowsDiag/tree/master/ALL/TSS), and download the [tss\_tools.zip](https://github.com/CSS-Windows/WindowsDiag/blob/master/ALL/TSS/tss_tools.zip) file.
+1.  Click [download TSS in zip file](https://aka.ms/getTSS).
 
-2.  Copy the Tss\_tools.zip file, and expand it to a location on the local disk, such as to the C:\\tools folder.
+2.  Copy the **TSS.zip** file, and expand it to a location on the local disk, such as to the **C:\\tools** folder.
 
-3.  Run the following command from C:\\tools in an elevated Command Prompt window:
+3.  Run the following command from **C:\\tools** in an elevated Command Prompt window:
     ```console
     TSS Ron Trace <Stop:Evt:>20321:<Other:>DhcpAdminEvents NoSDP NoPSR NoProcmon NoGPresult
     ```
