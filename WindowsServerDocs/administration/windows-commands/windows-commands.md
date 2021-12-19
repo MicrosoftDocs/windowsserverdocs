@@ -19,6 +19,7 @@ This set of documentation describes the Windows Commands you can use to automate
 
 The information that is contained in this topic applies to:
 
+- Windows Server 2022
 - Windows Server 2019
 - Windows Server (Semi-Annual Channel)
 - Windows Server 2016
@@ -26,6 +27,7 @@ The information that is contained in this topic applies to:
 - Windows Server 2012
 - Windows Server 2008 R2
 - Windows Server 2008
+- Windows 11
 - Windows 10
 - Windows 8.1
 
@@ -46,11 +48,15 @@ For the most robust, up-to-date Windows automation, we recommend using PowerShel
 > Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.
 
 > [!NOTE]
-> To enable or disable file and directory name completion in the Command shell on a computer or user logon session, run **regedit.exe** and set the following **reg_DWOrd value**:
->
-> HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\completionChar\reg_DWOrd
->
-> To set the **reg_DWOrd** value, use the hexadecimal value of a control character for a particular function (for example, **0 9** is Tab and **0 08** is Backspace). User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
+> To enable or disable file and directory name completion in the Command shell on a computer or user logon session, run **regedit.exe** and set the following **REG_DWORD**:
+> 
+> Value :: **CompletionChar**
+> 
+> Key Path :: **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\\**
+> 
+> Type :: **REG_DWORD**
+> 
+> To set the **REG_DWORD** value, use the hexadecimal value of a control character for a particular function (for example, **0 9** is Tab and **0 08** is Backspace). User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
 ## Command-line reference A-Z
 
