@@ -25,8 +25,8 @@ To begin developing with the SDK, download and install the following prerequisit
 
 * [Windows Admin Center](../overview.md) (GA or preview version)
 * Visual Studio or [Visual Studio Code](https://code.visualstudio.com)
-* [Node.js](https://nodejs.org/en/download/releases/) (version 10.3.0)
-* [Node Package Manager](https://npmjs.com/get-npm) (8.12.0 or later)
+* [Node.js](https://nodejs.org/en/download/releases/) (version 12.18.2)
+* [Node Package Manager](https://npmjs.com/get-npm) (6.14.5 or later)
 * [Nuget](https://www.nuget.org/downloads) (for publishing extensions)
 
 > [!NOTE]
@@ -43,16 +43,16 @@ Next, install or update dependencies required for your projects, with Node Packa
 ```
 npm install -g npm
 
-npm install -g @angular/cli@7.1.2
+npm install -g @angular/cli@11.2.14
 
 npm install -g gulp
 npm install -g typescript
 npm install -g tslint
-npm install -g windows-admin-center-cli
+npm install -g windows-admin-center-sdk
 ```
 
 >[!NOTE]
->You can install a later version of @angular/cli, however be aware that if you install a version greater than 7.1.2, you will receive a warning during the gulp build step that the local cli version does not match the installed version.
+>You can install a later version of @angular/cli, however be aware that if you install a version greater than 11.2.14, you will receive a warning during the gulp build step that the local cli version does not match the installed version.
 
 ## Next steps
 
