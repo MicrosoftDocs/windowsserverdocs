@@ -26,7 +26,7 @@ Here's the value you can bring to your product and customers by developing exten
 
 ## Start developing with the Windows Admin Center SDK
 
-Getting started with Windows Admin Center development is easy!  Sample code can be found for [tool](develop-tool.md), [solution](develop-solution.md), and [gateway plugin](develop-gateway-plugin.md) extension types in our SDK documentation. There you will leverage the Windows Admin Center CLI to build a new extension project, then follow the individual guides to customize your project to meet your needs.
+Getting started with Windows Admin Center development is easy!  Sample code can be found for [tool](develop-tool.md), [solution](develop-solution.md), and [gateway plugin](develop-gateway-plugin.md) extension types in our SDK documentation. There you will leverage the Windows Admin Center SDK to build a new extension project, then follow the individual guides to customize your project to meet your needs.
 
 We've made a Windows Admin Center [SDK design toolkit](https://github.com/Microsoft/windows-admin-center-sdk/blob/master/WindowsAdminCenterDesignToolkit.zip) available to help you rapidly mock up extensions in PowerPoint using Windows Admin Center styles, controls, and page templates. See what your extension can look like in Windows Admin Center before you start coding!
 
