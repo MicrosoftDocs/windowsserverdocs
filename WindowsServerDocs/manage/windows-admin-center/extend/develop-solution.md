@@ -30,9 +30,9 @@ If you would like to build a management GUI for services not defined by the defa
 
 If you haven't already, [prepare your environment](prepare-development-environment.md) by installing dependencies and global prerequisites required for all projects.
 
-## Create a new solution extension with the Windows Admin Center CLI ##
+## Create a new solution extension with the Windows Admin Center SDK ##
 
-Once you have all the dependencies installed, you are ready to create your new solution extension.  Create or browse to a folder that contains your project files, open a command prompt, and set that folder as the working directory.  Using the Windows Admin Center CLI that was installed previously, create a new extension with the following syntax:
+Once you have all the dependencies installed, you are ready to create your new solution extension.  Create or browse to a folder that contains your project files, open a command prompt, and set that folder as the working directory.  Using the Windows Admin Center SDK that was installed previously, create a new extension with the following syntax:
 
 ```
 wac create --company "{!Company Name}" --solution "{!Solution Name}" --tool "{!Tool Name}"
@@ -62,7 +62,7 @@ Once this completes, you've set up everything you need to load your new extensio
 
 ## Add content to your extension
 
-Now that you've created an extension with the Windows Admin Center CLI, you are ready to customize content.  See these guides for examples of what you can do:
+Now that you've created an extension with the Windows Admin Center SDK, you are ready to customize content.  See these guides for examples of what you can do:
 
 - Add an [empty module](guides/add-module.md)
 - Add an [iFrame](guides/add-iframe.md)
