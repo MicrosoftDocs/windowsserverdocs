@@ -2,8 +2,8 @@
 title: Prepare your development environment
 description: Preparing your development environment Windows Admin Center SDK (Project Honolulu)
 ms.topic: article
-author: nwashburn-ms
-ms.author: niwashbu
+author: davannaw-msft
+ms.author: dawhite
 ms.localizationpriority: medium
 ms.date: 09/18/2018
 ---
