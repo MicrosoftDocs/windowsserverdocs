@@ -6,7 +6,6 @@ ms.author: daknappe
 author: dknappettmsft
 manager: femila
 ms.date: 9/20/2021
-ms.localizationpriority: medium
 ---
 
 # Windows Server 2022 and Microsoft server applications compatibility

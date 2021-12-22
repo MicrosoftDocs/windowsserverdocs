@@ -6,7 +6,6 @@ manager: eldenc
 ms.topic: article
 author: eldenchristensen
 ms.date: 10/20/2021
-ms.localizationpriority: medium
 ---
 
 # Using Storage Spaces Direct in guest virtual machine clusters

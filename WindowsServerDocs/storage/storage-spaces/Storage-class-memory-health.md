@@ -7,7 +7,6 @@ manager: dongill
 ms.topic: article
 author: JasonGerend
 ms.date: 06/25/2019
-ms.localizationpriority: medium
 ---
 # Storage-class Memory (NVDIMM-N) Health Management in Windows
 

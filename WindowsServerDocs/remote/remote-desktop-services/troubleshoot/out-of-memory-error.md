@@ -7,7 +7,6 @@ author: Heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 12/03/2021
-ms.localizationpriority: medium
 ---
 # "Out of memory" error when connecting to Azure Virtual Desktop
 

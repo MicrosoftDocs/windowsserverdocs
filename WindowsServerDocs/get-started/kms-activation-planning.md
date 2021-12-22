@@ -7,7 +7,6 @@ ms.author: daknappe
 manager: femila
 ms.date: 9/6/2021
 ms.prod: windows-server
-ms.localizationpriority: medium
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a4d55cca754
 ---
 

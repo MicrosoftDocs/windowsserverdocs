@@ -6,7 +6,6 @@ ms.topic: article
 author: lizap
 ms.author: elizapo
 manager: dougkim
-ms.localizationpriority: medium
 ---
 # Release Notes: Important Issues in Windows Server, version 1803
 

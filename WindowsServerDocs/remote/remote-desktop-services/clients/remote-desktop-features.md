@@ -6,7 +6,6 @@ author: heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 06/02/2021
-ms.localizationpriority: medium
 ---
 
 # Compare the clients: features

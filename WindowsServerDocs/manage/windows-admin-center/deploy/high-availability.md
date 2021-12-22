@@ -4,7 +4,6 @@ description: Deploy Windows Admin Center with High Availability (Project Honolul
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.localizationpriority: medium
 ms.date: 08/07/2020
 ---
 

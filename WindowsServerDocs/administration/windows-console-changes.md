@@ -7,7 +7,6 @@ ms.assetid: da9fc582-033b-4973-84e7-0c6024ecfcbc
 author: dknappettmsft
 ms.author: daknappe
 manager: femila
-ms.localizationpriority: medium
 ---
 # Changes to the Windows Console in Windows Server
 

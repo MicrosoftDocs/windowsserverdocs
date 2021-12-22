@@ -6,7 +6,6 @@ ms.date: 10/3/2019
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm
-ms.localizationpriority: medium
 ---
 
 # KMS activation: known issues

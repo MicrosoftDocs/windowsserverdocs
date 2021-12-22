@@ -6,7 +6,6 @@ ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar
 ms.date: 02/28/2019
-ms.localizationpriority: medium
 ---
 
 # Upgrading Failover Clusters on the same hardware

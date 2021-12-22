@@ -6,7 +6,6 @@ author: heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 11/30/2021
-ms.localizationpriority: medium
 ---
 
 # Supported Remote Desktop RDP file settings

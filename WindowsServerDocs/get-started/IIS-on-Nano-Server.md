@@ -7,7 +7,6 @@ ms.date: 09/06/2017
 ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
 author: jaimeo
 ms.author: jaimeo
-ms.localizationpriority: medium
 ---
 
 # IIS on Nano Server

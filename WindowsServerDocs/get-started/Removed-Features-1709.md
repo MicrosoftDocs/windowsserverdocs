@@ -6,7 +6,6 @@ ms.date: 08/22/2019
 author: jasongerend
 ms.author: jgerend
 manager: dougkim
-ms.localizationpriority: medium
 ---
 # Features removed or planned for replacement starting with Windows Server, version 1709
 

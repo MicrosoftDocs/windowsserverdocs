@@ -5,7 +5,6 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 06/18/2018
-ms.localizationpriority: medium
 ---
 # Managing Virtual Machines with Windows Admin Center
 

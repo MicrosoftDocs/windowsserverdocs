@@ -5,7 +5,6 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 08/07/2018
-ms.localizationpriority: medium
 ---
 
 # Modify root navigation behavior for a solution extension

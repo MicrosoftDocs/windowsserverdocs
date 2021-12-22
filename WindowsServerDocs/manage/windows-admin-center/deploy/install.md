@@ -5,7 +5,6 @@ ms.topic: article
 author: jwwool
 ms.author: jeffrew
 ms.date: 07/17/2019
-ms.localizationpriority: medium
 ---
 # Install Windows Admin Center
 

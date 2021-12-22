@@ -5,7 +5,6 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.date: 09/10/2018
-ms.localizationpriority: medium
 ---
 # Enable Always Offline mode for faster access to files
 

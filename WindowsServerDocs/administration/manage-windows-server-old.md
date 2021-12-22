@@ -5,7 +5,6 @@ ms.topic: article
 author: lizap
 ms.author: elizapo
 ms.date: 03/16/2018
-ms.localizationpriority: medium
 ---
 # Manage Windows Server
 
