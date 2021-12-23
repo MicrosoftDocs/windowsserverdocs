@@ -4,7 +4,6 @@ description: Install and Manage Extensions in Windows Admin Center (Project Hono
 ms.topic: article
 author: daniellee-msft
 ms.author: jol
-ms.localizationpriority: medium
 ms.date: 01/14/2021
 ---
 # Install and manage extensions

@@ -5,7 +5,6 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
-ms.localizationpriority: medium
 ms.date: 05/21/2019
 ms.topic: how-to
 ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544

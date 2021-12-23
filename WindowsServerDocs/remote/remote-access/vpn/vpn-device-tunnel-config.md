@@ -6,7 +6,6 @@ ms.topic: article
 ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: v-tea
 author: Teresa-MOTIV
-ms.localizationpriority: medium
 ---
 # Configure VPN device tunnels in Windows 10
 

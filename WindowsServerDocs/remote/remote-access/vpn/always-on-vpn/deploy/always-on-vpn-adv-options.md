@@ -6,7 +6,6 @@ ms.topic: article
 ms.date: 07/24/2019
 ms.author: v-tea
 author: Teresa-MOTIV
-ms.localizationpriority: medium
 ms.reviewer: deverette
 ---
 # Advanced features of Always On VPN

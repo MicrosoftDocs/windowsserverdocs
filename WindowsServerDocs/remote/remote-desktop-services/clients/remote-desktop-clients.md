@@ -7,7 +7,6 @@ author: HeidiLohr
 manager: femila
 ms.author: helohr
 ms.date: 12/17/2021
-ms.localizationpriority: medium
 ---
 # Remote Desktop clients
 

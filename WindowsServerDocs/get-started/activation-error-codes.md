@@ -5,7 +5,6 @@ ms.topic: troubleshooting
 ms.date: 9/18/2019
 author: kaushika-msft
 ms.author: kaushika
-ms.localizationpriority: medium
 ms.custom:
   - CI ID 116803
   - CSSTroubleshoot

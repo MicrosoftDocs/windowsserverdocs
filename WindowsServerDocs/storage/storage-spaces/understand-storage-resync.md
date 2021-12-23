@@ -5,7 +5,6 @@ ms.author: adagashe
 ms.topic: article
 author: adagashe
 ms.date: 01/14/2019
-ms.localizationpriority: medium
 ---
 # Understand and monitor storage resync
 

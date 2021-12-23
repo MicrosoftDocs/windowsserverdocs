@@ -5,7 +5,6 @@ ms.topic: article
 ms.author: v-tea
 author: Teresa-MOTIV
 ms.date: 11/05/2018
-ms.localizationpriority: medium
 ---
 
 # Always On VPN enhancements

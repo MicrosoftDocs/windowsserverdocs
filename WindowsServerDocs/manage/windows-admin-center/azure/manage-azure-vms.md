@@ -5,7 +5,6 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.date: 02/18/2021
-ms.localizationpriority: medium
 ---
 # Manage Azure virtual machines with Windows Admin Center
 

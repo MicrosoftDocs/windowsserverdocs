@@ -5,7 +5,6 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.date: 09/30/2020
-ms.localizationpriority: medium
 ---
 # NTFS overview
 

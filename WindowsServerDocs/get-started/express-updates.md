@@ -4,7 +4,6 @@ description: Provides information about Express Updates in Windows Server 2016
 ms.topic: article
 author: lizap
 ms.author: elizapo
-ms.localizationpriority: medium
 ms.date: 08/07/2020
 ---
 

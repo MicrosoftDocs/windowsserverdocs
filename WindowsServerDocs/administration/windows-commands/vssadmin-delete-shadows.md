@@ -5,7 +5,6 @@ ms.topic: reference
 author: JasonGerend
 ms.author: jgerend
 ms.date: 05/18/2018
-ms.localizationpriority: medium
 ---
 
 # vssadmin delete shadows

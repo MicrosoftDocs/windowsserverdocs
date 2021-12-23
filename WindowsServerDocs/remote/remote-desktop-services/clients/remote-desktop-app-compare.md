@@ -7,7 +7,6 @@ author: heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 08/23/2021
-ms.localizationpriority: medium
 ---
 
 # Compare the clients: redirections

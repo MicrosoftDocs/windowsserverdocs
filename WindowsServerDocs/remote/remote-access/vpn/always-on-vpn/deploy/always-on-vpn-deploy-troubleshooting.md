@@ -3,7 +3,6 @@ title: Troubleshoot Always On VPN
 description: This topic provides instructions for verifying and troubleshooting Always On VPN deployment in Windows Server 2016.
 ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
-ms.localizationpriority: medium
 ms.date: 11/15/2021
 ms.author: inhenkel
 author: Teresa-MOTIV

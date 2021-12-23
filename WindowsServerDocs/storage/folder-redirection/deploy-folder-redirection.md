@@ -5,7 +5,6 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.date: 03/12/2021
-ms.localizationpriority: medium
 ---
 
 # Deploy Folder Redirection with Offline Files

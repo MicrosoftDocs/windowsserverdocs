@@ -5,7 +5,6 @@ ms.date: 11/26/2021
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
-ms.localizationpriority: medium
 ---
 
 # Azure Hybrid Benefit for Windows Server

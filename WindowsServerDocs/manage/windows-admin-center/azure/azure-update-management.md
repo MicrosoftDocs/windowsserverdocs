@@ -5,7 +5,6 @@ ms.topic: article
 author: IngridAtMicrosoft
 ms.author: wscontent
 ms.date: 10/18/2021
-ms.localizationpriority: low
 ---
 # Use Windows Admin Center to manage operating system updates with Azure Update Management
 

@@ -5,7 +5,6 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.date: 05/21/2019
-ms.localizationpriority: high
 ---
 
 # What's New in Windows Server version 1809

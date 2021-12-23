@@ -5,7 +5,6 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 05/09/2019
-ms.localizationpriority: medium
 ---
 
 # Using PowerShell in your extension #

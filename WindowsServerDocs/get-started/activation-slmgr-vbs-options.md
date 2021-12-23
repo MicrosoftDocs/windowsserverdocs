@@ -6,7 +6,6 @@ ms.topic: article
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm
-ms.localizationpriority: medium
 appliesto:
 - Windows Server 2012 R2
 - Windows 10

@@ -7,7 +7,6 @@ ms.author: daknappe
 manager: femila
 ms.date: 08/17/2021
 ms.prod: windows-server
-ms.localizationpriority: high
 ms.mktglfcycl: manage
 ---
 

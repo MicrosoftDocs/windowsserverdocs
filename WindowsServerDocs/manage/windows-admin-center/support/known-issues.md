@@ -4,7 +4,6 @@ description: Windows Admin Center Known Issues (Project Honolulu)
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.localizationpriority: medium
 ms.date: 06/07/2019
 ---
 # Windows Admin Center Known Issues

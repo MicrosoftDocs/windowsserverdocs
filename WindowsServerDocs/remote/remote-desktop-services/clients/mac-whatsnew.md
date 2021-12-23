@@ -6,7 +6,6 @@ author: heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 12/17/2021
-ms.localizationpriority: medium
 ---
 # What's new in the macOS client
 

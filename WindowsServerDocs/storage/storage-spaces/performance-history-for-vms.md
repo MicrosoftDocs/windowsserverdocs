@@ -6,7 +6,6 @@ manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 09/07/2018
-ms.localizationpriority: medium
 ---
 
 # Performance history for virtual machines

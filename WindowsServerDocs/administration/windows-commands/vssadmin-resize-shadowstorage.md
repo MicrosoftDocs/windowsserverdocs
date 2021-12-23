@@ -5,7 +5,6 @@ ms.topic: reference
 author: JasonGerend
 ms.author: jgerend
 ms.date: 03/05/2020
-ms.localizationpriority: medium
 ---
 
 # vssadmin resize shadowstorage

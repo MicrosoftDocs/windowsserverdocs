@@ -5,7 +5,6 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.date: 02/18/2021
-ms.localizationpriority: medium
 ---
 # Manually deploy Windows Admin Center in Azure for managing multiple servers
 

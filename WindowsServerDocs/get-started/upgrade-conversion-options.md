@@ -7,7 +7,6 @@ ms.assetid: 74aa1da3-7076-4a1f-ad5b-9e17bd46dba2
 author: dknappettmsft
 ms.author: daknappe
 manager: femila
-ms.localizationpriority: medium
 ---
 
 # Upgrade and conversion options for Windows Server

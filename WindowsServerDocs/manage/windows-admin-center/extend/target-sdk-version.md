@@ -5,7 +5,6 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
-ms.localizationpriority: medium
 ---
 
 # Target a different version of the Windows Admin Center SDK

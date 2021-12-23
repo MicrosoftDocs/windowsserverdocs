@@ -6,7 +6,6 @@ ms.date: 09/24/2019
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm
-ms.localizationpriority: medium
 ---
 
 # Example: Troubleshooting Active Directory Based Activation (ADBA) clients that do not activate
