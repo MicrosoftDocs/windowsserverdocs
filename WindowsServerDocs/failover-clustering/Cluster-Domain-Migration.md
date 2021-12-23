@@ -6,7 +6,6 @@ ms.topic: article
 author: johnmarlin-msft
 ms.author: johnmar
 ms.date: 01/18/2019
-ms.localizationpriority: medium
 ---
 # Failover Cluster domain migration
 

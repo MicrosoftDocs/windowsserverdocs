@@ -5,7 +5,6 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.date: 06/06/2019
-ms.localizationpriority: medium
 ---
 # Deploy primary computers for Folder Redirection and Roaming User Profiles
 

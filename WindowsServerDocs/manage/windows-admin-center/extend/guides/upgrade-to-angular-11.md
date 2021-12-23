@@ -6,7 +6,6 @@ ms.topic: article
 author: davannaw-msft
 ms.author: dawhite
 ms.date: 11/01/2021
-ms.localizationpriority: medium
 ms.prod: windows-server
 ---
 

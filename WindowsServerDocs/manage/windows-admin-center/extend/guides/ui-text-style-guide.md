@@ -5,7 +5,6 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.date: 05/12/2021
-ms.localizationpriority: medium
 ---
 
 # Windows Admin Center UI text and design style guide

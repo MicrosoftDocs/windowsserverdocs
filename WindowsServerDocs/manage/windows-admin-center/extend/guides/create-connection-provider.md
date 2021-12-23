@@ -5,7 +5,6 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/06/2019
-ms.localizationpriority: medium
 ---
 # Create a connection provider for a solution extension
 

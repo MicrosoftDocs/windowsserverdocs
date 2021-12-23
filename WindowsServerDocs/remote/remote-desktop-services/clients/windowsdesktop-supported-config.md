@@ -6,7 +6,6 @@ author: heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 08/04/2021
-ms.localizationpriority: medium
 ---
 
 # Supported configurations for the Windows Desktop client

@@ -6,7 +6,6 @@ ms.date: 9/24/2019
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm
-ms.localizationpriority: medium
 ---
 
 # Guidelines for troubleshooting the Key Management Service (KMS)

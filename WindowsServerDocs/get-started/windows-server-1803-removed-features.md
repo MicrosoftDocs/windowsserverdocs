@@ -2,7 +2,6 @@
 title: Windows Server, version 1803 - Features that have been removed
 description: Learn about features that will be removed or deprecated in Windows Server, version 1803, or a future release
 ms.mktglfcycl: plan
-ms.localizationpriority: medium
 ms.sitesec: library
 author: jasongerend
 ms.author: jgerend

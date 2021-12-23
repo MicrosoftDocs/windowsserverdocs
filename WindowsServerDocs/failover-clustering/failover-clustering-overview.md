@@ -7,7 +7,6 @@ manager: lizross
 author: JasonGerend
 ms.author: jgerend
 ms.date: 10/20/2021
-ms.localizationpriority: high
 ---
 # Failover Clustering in Windows Server and Azure Stack HCI
 

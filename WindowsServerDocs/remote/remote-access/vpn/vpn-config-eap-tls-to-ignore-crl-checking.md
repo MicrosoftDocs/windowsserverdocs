@@ -5,7 +5,6 @@ ms.topic: article
 ms.date: 07/13/2018
 ms.author: v-tea
 author: Teresa-MOTIV
-ms.localizationpriority: medium
 ms.reviewer: deverette
 ---
 

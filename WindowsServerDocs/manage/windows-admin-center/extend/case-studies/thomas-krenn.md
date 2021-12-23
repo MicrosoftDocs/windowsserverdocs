@@ -5,7 +5,6 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 06/24/2019
-ms.localizationpriority: medium
 ---
 # Thomas-Krenn.AG Extension
 

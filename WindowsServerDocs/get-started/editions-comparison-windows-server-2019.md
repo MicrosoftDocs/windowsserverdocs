@@ -7,7 +7,6 @@ ms.author: jgerend
 manager: femila
 ms.date: 8/16/2021
 ms.prod: windows-server
-ms.localizationpriority: medium
 ms.assetid: c5ca3bfe-7ced-49f6-2932-80cab33fe914
 ---
 

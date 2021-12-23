@@ -5,7 +5,6 @@ ms.author: helohr
 ms.date: 09/19/2019
 ms.topic: article
 author: Heidilohr
-ms.localizationpriority: medium
 ---
 # Set up the Remote Desktop web client for your users
 

@@ -5,7 +5,6 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 09/17/2018
-ms.localizationpriority: medium
 ---
 # Extensions for Windows Admin Center
 

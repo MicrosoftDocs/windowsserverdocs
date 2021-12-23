@@ -4,7 +4,6 @@ description: Preparing your development environment Windows Admin Center SDK (Pr
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.localizationpriority: medium
 ms.date: 09/18/2018
 ---
 

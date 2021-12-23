@@ -6,7 +6,6 @@ author: heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 11/04/2021
-ms.localizationpriority: medium
 ---
 # What's new in the Android client
 

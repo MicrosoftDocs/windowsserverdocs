@@ -7,7 +7,6 @@ author: Heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 10/06/2020
-ms.localizationpriority: medium
 ---
 # Input method editor issue in RemoteApp scenarios
 

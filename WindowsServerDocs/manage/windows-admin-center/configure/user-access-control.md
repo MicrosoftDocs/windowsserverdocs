@@ -5,7 +5,6 @@ ms.topic: article
 author: IngridAtMicrosoft
 ms.author: wscontent
 ms.date: 10/18/2021
-ms.localizationpriority: medium
 ---
 # Configure User Access Control and Permissions
 

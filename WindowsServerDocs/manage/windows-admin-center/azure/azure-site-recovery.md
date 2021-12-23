@@ -5,7 +5,6 @@ ms.topic: article
 author: IngridAtMicrosoft
 ms.author: wscontent
 ms.date: 10/27/2021
-ms.localizationpriority: low
 ---
 
 [!INCLUDE[Protect your Hyper-V Virtual Machines with Azure Site Recovery and Windows Admin Center](~/../_azurestack/azure-stack/hci/manage/azure-site-recovery.md)]

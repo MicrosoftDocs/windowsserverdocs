@@ -5,7 +5,6 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 05/23/2018
-ms.localizationpriority: medium
 ---
 # Fujitsu ServerView Health and RAID extensions
 

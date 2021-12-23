@@ -6,7 +6,6 @@ ms.date: 04/10/2017
 ms.topic: article
 author: lizap
 manager: dongill
-ms.localizationpriority: medium
 ---
 # Deploy your Remote Desktop environment
 

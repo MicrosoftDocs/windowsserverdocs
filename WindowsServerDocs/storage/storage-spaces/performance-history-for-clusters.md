@@ -6,7 +6,6 @@ manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
-ms.localizationpriority: medium
 ---
 
 # Performance history for clusters

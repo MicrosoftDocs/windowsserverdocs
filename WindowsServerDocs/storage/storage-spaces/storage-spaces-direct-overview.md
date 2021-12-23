@@ -7,7 +7,6 @@ author: cosmosdarwin
 ms.date: 07/24/2020
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server and Azure Stack HCI that enables you to cluster servers with internal storage into a software-defined storage solution.
-ms.localizationpriority: medium
 ---
 # Storage Spaces Direct overview
 

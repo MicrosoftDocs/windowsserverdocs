@@ -6,7 +6,6 @@ author: JasonGerend
 ms.author: jgerend
 ms.date: 07/26/2021
 ms.prod: windows-server
-ms.localizationpriority: medium
 ---
 # SMB security enhancements
 

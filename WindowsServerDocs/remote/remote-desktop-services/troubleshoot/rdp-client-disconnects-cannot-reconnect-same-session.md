@@ -7,7 +7,6 @@ author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
-ms.localizationpriority: medium
 ---
 
 # Remote Desktop client disconnects and can't reconnect to the same session

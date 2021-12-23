@@ -6,7 +6,6 @@ ms.date: 06/22/2021
 author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm
-ms.localizationpriority: medium
 ---
 
 # Rebuild the Tokens.dat file

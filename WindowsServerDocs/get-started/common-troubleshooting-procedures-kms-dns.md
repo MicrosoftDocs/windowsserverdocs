@@ -5,7 +5,6 @@ ms.topic: troubleshooting
 ms.date: 09/10/2019
 author: Teresa-Motiv
 ms.author: v-tea
-ms.localizationpriority: medium
 ---
 
 # Guidelines for troubleshooting DNS-related activation issues
