@@ -48,7 +48,7 @@ The following table provides a summary of the installation actions and the permi
 | ----- | ----- |
 |Install a new forest.|Local admin on the target server|
 |Install a new domain in an existing forest.|Enterprise admins|
-|Install an additional DC in an existing domain.|Domain admins|
+|Install another DC in an existing domain.|Domain admins|
 |Run `adprep /forestprep`.|Schema admins, enterprise admins, and domain admins|
 |Run `adprep /domainprep`.|Domain admins|
 |Run `adprep /domainprep /gpprep.`|Domain admins|
@@ -68,7 +68,7 @@ For more information on running adprep, see [Running Adprep](/previous-versions/
 
 ## Functional-level features and requirements
 
-Windows Server 2019 or later requires a Windows Server 2008 forest functional level as a minimum. Windows Server 2016 requires a Windows Server 2003 forest functional level as a minimum. If the forest contains DCs running an older forest functional level than the operating system supports, the installation is blocked. Those DCs must be removed and the forest functional level raised to a version that's supported prior to adding newer Windows Server DCs to your forest. For more information about supported functional levels, see [Forest and domain functional levels](../active-directory-functional-levels.md).
+Windows Server 2019 or later requires a Windows Server 2008 forest functional level as a minimum. Windows Server 2016 requires a Windows Server 2003 forest functional level as a minimum. If the forest contains DCs running an older forest functional level than the operating system supports, the installation is blocked. Those DCs must be removed and the forest functional level raised to a version that's supported before you add newer Windows Server DCs to your forest. For more information about supported functional levels, see [Forest and domain functional levels](../active-directory-functional-levels.md).
 
 > [!NOTE]
 > No new forest or domain functional levels have been added since Windows Server 2016. Later operating system versions can and should be used for domain controllers. They use Windows Server 2016 as the most recent functional levels.
@@ -124,7 +124,7 @@ The following example shows how to upgrade the Contoso forest from a previous ve
    ![Screenshot of the Deployment Configuration page of the Active Directory Domain Services Configuration Wizard showing the Add a domain controller to an existing forest option selected.](media/Upgrade-Domain-Controllers-to-Windows-Server-2016/upgrade5.png)
 
 1. On the **Domain Controller options** screen, enter the **Directory Services Restore Mode (DSRM)** password and select **Next**.
-1. For the remainder of the screens, select **Next**.
+1. For the rest of the screens, select **Next**.
 1. On the **Prerequisite Check** screen, select **Install**. After the restart has completed, sign in again.
 1. On the earlier version of Windows Server, in **Server Manager**, under **Tools**, select **Active Directory Module for Windows PowerShell**.
 
