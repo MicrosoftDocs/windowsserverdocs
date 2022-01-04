@@ -47,7 +47,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\PathCompletionChar
 
 Set these values to that of the control character you wish to use. See [virtual key codes](/windows/win32/inputdev/virtual-key-codes) for a complete list. To disable a particular completion character in the registry, use the value for **space** (0x20) as it is not a valid control character. The type of value for this registry entry is [REG_DWORD](/windows/win32/sysinfo/registry-value-types), and can be specified by hexadecimal or decimal value.
 
-You can also enable or disable file and directory name completion per instance of a Command shell by running `cmd.exe` with the parameter `/F:ON` or `/F:OFF`. If name completion is enabled with the `/F:ON` switch, the two control characters used are `Ctrl-D` for directory name completion and `Ctrl-F` for file name completion. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
+You can also enable or disable file and directory name completion per instance of a Command shell by running `cmd.exe` with the parameter and switch `/F:ON` or `/F:OFF`. If name completion is enabled with the `/F:ON` parameter and switch, the two control characters used are `Ctrl-D` for directory name completion and `Ctrl-F` for file name completion. User-specified settings take precedence over computer settings, and command-line options take precedence over registry settings.
 
 ## Command-line reference A-Z
 
