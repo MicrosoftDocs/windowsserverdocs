@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 12/17/2021
+ms.date: 01/04/2022
 ---
 # What's new in the macOS client
 
@@ -27,7 +27,7 @@ It's time for the final update of 2021. In this release we've worked on the foll
 - Improved support for invertible mouse cursors that straddle the image boundary.
 - Support for .RDPW files produced by the Azure Virtual Desktop web client.
 - Fixed an issue that caused the workspace subfolder to remain expanded even if you've collapsed the root folder.
-- Updates and enhancements to Teams redirection (only available in Azure Virtual Desktop scenarios).
+- Updates and enhancements to Teams redirection (only available in Azure Virtual Desktop scenarios). For more information, see [Teams on Azure Virtual Desktop](/azure/virtual-desktop/teams-on-avd).
 - Addressed reliability issues identified through crash reporting and feedback.
 
 ## Updates for version 10.7.0
