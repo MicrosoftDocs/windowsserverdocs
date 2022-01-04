@@ -1,6 +1,6 @@
 # [Windows Commands](windows-commands.md)
 ## [Command-Line Syntax Key](command-line-syntax-key.md)
-## [Reference]
+## Reference
 ### [Commands by Server Role](commands-by-server-role.md)
 #### [Print Command Reference](print-command-reference.md)
 #### [Services for Network File System Command Reference](services-for-network-file-system-command-reference.md)
