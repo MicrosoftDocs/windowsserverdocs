@@ -6,22 +6,20 @@ ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: jasongerend
 ms.author: jgerend
 manager: dongill
-ms.date: 06/29/2020
+ms.date: 01/04/2022
 ---
 
 # Windows Commands
 
-All supported versions of Windows and Windows Server have a set of Win32 console commands built in.
-
-This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.
+All supported versions of Windows and Windows Server have a set of Win32 console commands built in. This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.
 
 ## Command-line shells
 
 Windows has two command-line shells: the Command shell and [PowerShell](/powershell/scripting/overview). Each shell is a software program that provides direct communication between you and the operating system or application, providing an environment to automate IT operations.
 
-The Command shell was the first shell built into Windows to automate routine tasks, like user account management or nightly backups, with batch (.bat) files. With Windows Script Host you could run more sophisticated scripts in the Command shell. For more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all commands that are available at the command-line.
+The Command shell was the first shell built into Windows to automate routine tasks, like user account management or nightly backups, with batch (.bat) files. With Windows Script Host, you could run more sophisticated scripts in the Command shell. For more information, see [cscript](cscript.md) or [wscript](wscript.md). You can perform operations more efficiently by using scripts than you can by using the user interface. Scripts accept all commands that are available at the command line.
 
-PowerShell was designed to extend the capabilities of the Command shell to run PowerShell commands called cmdlets. Cmdlets are similar to Windows Commands but provide a more extensible scripting language. You can run both Windows Commands and PowerShell cmdlets in Powershell, but the Command shell can only run Windows Commands and not PowerShell cmdlets.
+PowerShell was designed to extend the capabilities of the Command shell to run PowerShell commands called cmdlets. Cmdlets are similar to Windows Commands but provide a more extensible scripting language. You can run both Windows Commands and PowerShell cmdlets in PowerShell, but the Command shell can only run Windows Commands and not PowerShell cmdlets.
 
 For the most robust, up-to-date Windows automation, we recommend using PowerShell instead of Windows Commands or Windows Script Host for Windows automation.
 
@@ -32,7 +30,7 @@ A reference of exit and error codes for Windows Commands can be found in the [De
 
 ## Command shell file and directory name automatic completion
 
-You can configure the Command shell to automatically complete file and directory names on a computer or user logon session when a specified key is pressed.  By default this is configured to be the **tab** key for both file and directory names, although they can be different. To change this, run `regedit.exe` and navigate to either of the following registry keys and entries below, depending on whether you wish to change the value for the current user only, or for all users of the computer.
+You can configure the Command shell to automatically complete file and directory names on a computer or user session when a specified key is pressed. By default this key is configured to be the **tab** key for both file and directory names, although they can be different. To change this key, run `regedit.exe` and navigate to either of the following registry keys and entries below, depending on whether you wish to change the value for the current user only, or for all users of the computer.
 
 > [!CAUTION]
 > Incorrectly editing the registry may severely damage your system. Before making the following changes to the registry, you should back up any valued data on the computer.
@@ -53,7 +51,7 @@ You can also enable or disable file and directory name completion per instance o
 
 ## Command-line reference A-Z
 
-To find information about a specific command, in the following A-Z menu, click the letter that the command starts with, and then click the command name.
+To find information about a specific command, in the following A-Z menu, select the letter that the command starts with, and then select the command name.
 
 [A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [J](#j) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [O](#o) | [P](#p) | [Q](#q) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w) | [X](#x) | Y | Z
 
