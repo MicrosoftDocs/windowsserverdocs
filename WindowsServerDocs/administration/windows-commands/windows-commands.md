@@ -1,5 +1,5 @@
 ---
-title: Windows Commands
+title: Windows commands
 description: Reference
 ms.topic: reference
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
