@@ -38,7 +38,7 @@ Duplicate UPN values break synchronization between on-premises AD and Office 365
 For more information about uniqueness requirements for UPNs and SPNs, see [Uniqueness Constraints](/openspecs/windows_protocols/ms-adts/3c154285-454c-4353-9a99-fb586e806944).
 
 ## Symptoms
-Error codes 8467 or 8468 or their hex, symbolic or string equivalents are logged in various on-screen dialogues and in event ID 2974 in the Directory Services event log. The attempt to create a duplicate UPN or SPN is blocked only under the following circumstances:
+Error codes 8647 or 8648 or their hex, symbolic or string equivalents are logged in various on-screen dialogues and in event ID 2974 in the Directory Services event log. The attempt to create a duplicate UPN or SPN is blocked only under the following circumstances:
 
 -   The write is processed by a Windows Server 2012 R2 DC
 
@@ -46,7 +46,7 @@ Error codes 8467 or 8468 or their hex, symbolic or string equivalents are logged
 
 |Decimal|Hex|Symbolic|String|
 |-----------|-------|------------|----------|
-|8467|21C7|ERROR_DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST|The operation failed because SPN value provided for addition/modification is not unique forest-wide.|
+|8647|21C7|ERROR_DS_SPN_VALUE_NOT_UNIQUE_IN_FOREST|The operation failed because SPN value provided for addition/modification is not unique forest-wide.|
 |8648|21C8|ERROR_DS_UPN_VALUE_NOT_UNIQUE_IN_FOREST|The operation failed because UPN value provided for addition/modification is not unique forest-wide.|
 
 ## New user creation fails if UPN is not unique
