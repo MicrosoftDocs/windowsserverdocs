@@ -1,7 +1,7 @@
 ---
 description: "Learn more about: DFS Replication overview"
 title: DFS Replication overview
-ms.date: 03/08/2019
+ms.date: 01/05/2022
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
@@ -18,6 +18,9 @@ is an efficient, multiple-master replication engine that you can use to keep fol
 DFS Replication uses a compression algorithm known as remote differential compression (RDC). RDC detects changes to the data in a file and enables DFS Replication to replicate only the changed file blocks instead of the entire file.
 
 For more information about replicating SYSVOL using DFS Replication, see [Migrate the SYSVOL replication to DFS Replication](migrate-sysvol-to-dfsr.md).
+
+> [!TIP]
+> Consider using [Azure File Sync](/azure/storage/file-sync/file-sync-introduction) to reduce your on-premises storage footprint. Azure File Sync can keep multiple Windows file servers in sync and each one only needs to keep a cache on-premises while the full copy of the data is in the cloud. Azure File Sync also has the additional benefit of cloud backup with integrated snapshots. For more details, see [Planning for an Azure File Sync deployment](/azure/storage/file-sync/file-sync-planning).
 
 To use DFS Replication, you must create replication groups and add replicated folders to the groups. Replication groups, replicated folders, and members are illustrated in the following figure.
 
@@ -75,7 +78,7 @@ Install DFS Replication by using [Windows Admin Center](../../manage/windows-adm
 
 ### To install DFS Replication by using Windows PowerShell
 
-Open a Windows PowerShell session with elevated user rights, and then type the following command, where <name\> is the role service or feature that you want to install (see the following table for a list of relevant role service or feature names):
+Open a Windows PowerShell session with elevated user rights, and then type the following command, where `<name\>` is the role service or feature that you want to install (see the following table for a list of relevant role service or feature names):
 
 ```PowerShell
 Install-WindowsFeature <name>
