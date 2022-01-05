@@ -13,11 +13,9 @@ ms.topic: article
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 DFS Replication is a role service in Windows Server that enables you to efficiently replicate folders (including those referred to by a DFS namespace path) across multiple servers and sites. DFS Replication
-is an efficient, multiple-master replication engine that you can use to keep folders synchronized between servers across limited bandwidth network connections. It replaces the File Replication Service (FRS) as the replication engine for DFS Namespaces, as well as for replicating the Active Directory Domain Services (AD DS) SYSVOL folder in domains that use the Windows Server 2008 or later domain functional level.
+is an efficient, multiple-master replication engine that you can use to keep folders synchronized between servers across limited bandwidth network connections. It replaces the File Replication Service (FRS) as the replication engine for DFS Namespaces, as well as for replicating the Active Directory Domain Services (AD DS) SYSVOL folder in domains that use the Windows Server 2008 or later domain functional level. For more information about replicating SYSVOL using DFS Replication, see [Migrate the SYSVOL replication to DFS Replication](migrate-sysvol-to-dfsr.md).
 
 DFS Replication uses a compression algorithm known as remote differential compression (RDC). RDC detects changes to the data in a file and enables DFS Replication to replicate only the changed file blocks instead of the entire file.
-
-For more information about replicating SYSVOL using DFS Replication, see [Migrate the SYSVOL replication to DFS Replication](migrate-sysvol-to-dfsr.md).
 
 > [!TIP]
 > Consider using [Azure File Sync](/azure/storage/file-sync/file-sync-introduction) to reduce your on-premises storage footprint. Azure File Sync can keep multiple Windows file servers in sync and each one only needs to keep a cache on-premises while the full copy of the data is in the cloud. Azure File Sync also has the additional benefit of cloud backup with integrated snapshots. For more information, see [Planning for an Azure File Sync deployment](/azure/storage/file-sync/file-sync-planning).
