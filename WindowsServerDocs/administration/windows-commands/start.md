@@ -45,7 +45,7 @@ start [<title>] [/d <path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low 
 
 - If you run a 32-bit graphical user interface (GUI) application, **cmd** does not wait for the application to quit before returning to the command prompt. This behavior does not occur if you run the application from a command script.
 
-- If you run a command that uses a first token that does not contain an extension, Cmd.exe uses the value of the PATHEXT environment variable to determine which extensions to look for and in what order. The default value for the PATHEXT variable is:
+- If you run a command that uses a first token that is not a command or the file path to an existing file with an extension, Cmd.exe uses the value of the PATHEXT environment variable to determine which extensions to look for and in what order. The default value for the PATHEXT variable is:
 
   ```
   .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
