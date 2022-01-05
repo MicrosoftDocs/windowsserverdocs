@@ -288,7 +288,7 @@ We made this update with the help of everyone who reported issues. In this versi
 
 We've been hard at work listening to your feedback and have put together a collection of bug fixes and feature updates.
 
-- When connecting via an RD Gateway with multifactor authentication, the gateway connection will be held open to avoid multiple MFA prompts.
+- When connecting via an RD Gateway with multi-factor authentication, the gateway connection will be held open to avoid multiple MFA prompts.
 - All the client UI is now fully keyboard-accessible with Voiceover support.
 - Files copied to the clipboard in the remote session are now only transferred when pasting to the local computer.
 - URLs copied to the clipboard in the remote session now paste correctly to the local computer.
