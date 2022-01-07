@@ -22,7 +22,7 @@ c1:[Type == "http://schemas.microsoft.com/ws/2012/01/passwordexpirationtime"]
 ```
 
 > [!NOTE]
-> Password expiry claims are only available for username and password and Microsoft Passport for Work authentication types.  If the user authenticates using Windows integrated authentication and Passport is not configured, the claims will not be available and the users will not see password expiry notifications.
+> Password expiry claims are only available for username and password and Windows Hello for Business authentication types.  If the user authenticates using Windows integrated authentication and Passport is not configured, the claims will not be available and the users will not see password expiry notifications.
 
 > [!NOTE]
 > There is a 14 days window so the sent claims will only be populated if the password is expiring within 14 days.
