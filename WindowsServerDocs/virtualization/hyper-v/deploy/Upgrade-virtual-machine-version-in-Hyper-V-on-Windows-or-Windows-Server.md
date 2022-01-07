@@ -56,7 +56,8 @@ If you need to create a virtual machine that you can move to a Hyper-V Host that
 New-VM -Name "WindowsCV5" -Version 5.0
 ```
 
->[!NOTE]>You can only import a virtual machine if the Hyper-V host supports that configuration version. Typically, this means that you can import a virtual machine to a Hyper-V host running a newer version of Hyper-V, but you cannot import a virtual machine created on a newer version of Hyper-V to an older version of Hyper-V.
+>[!NOTE]
+>You can only import a virtual machine if the Hyper-V host supports that configuration version. Typically, this means that you can import a virtual machine to a Hyper-V host running a newer version of Hyper-V, but you cannot import a virtual machine created on a newer version of Hyper-V to an older version of Hyper-V.
 >
 >If the VM's configuration version is not listed as supported for your Hyper-V host OS in the table below, you either have to upgrade the VM configuration version to a newer version or create a new VM of the same generation using the existing virtual hard disks before you can start the VM.
 
