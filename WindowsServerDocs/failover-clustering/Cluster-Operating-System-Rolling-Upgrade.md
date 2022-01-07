@@ -16,20 +16,20 @@ Cluster OS Rolling Upgrade enables an administrator to upgrade the operating sys
 
 Cluster OS Rolling Upgrade provides the following benefits:
 
-- Failover clusters running Hyper-V virtual machine and Scale-out File Server (SOFS) workloads can be upgraded from a version of Windows Server, starting with Windows Server 2012 R2, to a newer version of Windows Server, for example upgrading Windows Server 2016 (running on all cluster nodes of the cluster) to Windows Server 2019 (running on all nodes in the cluster) without downtime.
-- It doesn't require any additional hardware. Although, you can add additional cluster nodes temporarily to small clusters to improve availability of the cluster during the Cluster OS Rolling Upgrade process.
+- Failover clusters running Hyper-V virtual machine and Scale-out File Server (SOFS) workloads can be upgraded from a version of Windows Server, starting with Windows Server 2012 R2, to a newer version of Windows Server. For example you can upgrade Windows Server 2016 (running on all cluster nodes of the cluster) to Windows Server 2019 (running on all nodes in the cluster) without downtime.
+- It doesn't require any additional hardware. In small clusters, you can add additional cluster nodes temporarily to improve availability of the cluster during the Cluster OS Rolling Upgrade process.
 - The cluster doesn't need to be stopped or restarted.
 - A new cluster is not required. The existing cluster is upgraded. In addition, existing cluster objects stored in Active Directory are used.
 - The upgrade process is reversible until the final step, when all cluster nodes are running the newer version of Windows Server and the `Update-ClusterFunctionalLevel` PowerShell cmdlet is run.
 - The cluster can support patching and maintenance operations while running in the mixed-OS mode.
 - It supports automation via PowerShell and WMI.
-- The cluster public property *ClusterFunctionalLevel* property indicates the state of the cluster on Windows Server 2016 and later cluster nodes. This property can be queried using the PowerShell cmdlet from a Windows Server 2016 or later cluster node that belongs to a failover cluster:
+- The cluster public property *ClusterFunctionalLevel* property indicates the state of the cluster on Windows Server 2016 and later cluster nodes. This property can be queried using the PowerShell cmdlet from a cluster node that belongs to a failover cluster:
 
     ```PowerShell
     Get-Cluster | Select ClusterFunctionalLevel
     ```
 
-    The table below shows the current value and its corresponding functional level:
+    The table below shows the values and each corresponding functional level:
 
     | Value | Functional level |
     |--|--|
@@ -66,7 +66,7 @@ In order to keep the cluster workloads running during the Cluster OS Rolling Upg
 ![Illustration showing the three stages of a cluster OS rolling upgrade: all nodes Windows Server 2012 R2, mixed-OS mode, and all nodes Windows Server 2016](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_RollingUpgrade_Overview.png)
 **Figure 1: Cluster operating system state transitions**
 
-A Windows Server cluster enters mixed-OS mode when a node running a newer version of Windows Server is added to the cluster. The process is fully reversible at this point - newer Windows Server nodes can be removed from the cluster and nodes running the existing version of Windows Server can be added to the cluster in this mode. The process is not reversible once the Update-ClusterFunctionalLevel PowerShell cmdlet is run on the cluster. In order for this cmdlet to succeed, all nodes must be running the newer version of Windows Server, and all nodes must be online.
+A Windows Server cluster enters mixed-OS mode when a node running a newer version of Windows Server is added to the cluster. The process is fully reversible at this point - newer Windows Server nodes can be removed from the cluster and nodes running the existing version of Windows Server can be added to the cluster in this mode. The process is not reversible once the `Update-ClusterFunctionalLevel` PowerShell cmdlet is run on the cluster. In order for this cmdlet to succeed, all nodes must be running the newer version of Windows Server, and all nodes must be online.
 
 ## Transition states of a four-node cluster while performing Rolling OS Upgrade
 
@@ -82,15 +82,15 @@ In "Stage 2", two nodes have been paused, drained, evicted, reformatted, and ins
 ![Illustration showing the cluster in mixed-OS mode: out of the example 4-node cluster, two nodes are running Windows Server 2016, and two nodes are running Windows Server 2012 R2](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage2.png)
 **Figure 3: Intermediate State: Mixed-OS mode: Windows Server 2012 R2 and Windows Server 2016 Failover cluster (Stage 2)**
 
-At "Stage 3", all of the nodes in the cluster have been upgraded to Windows Server 2016, and the cluster is ready to be upgraded with Update-ClusterFunctionalLevel PowerShell cmdlet.
+At "Stage 3", all of the nodes in the cluster have been upgraded to Windows Server 2016, and the cluster is ready to be upgraded with `Update-ClusterFunctionalLevel` PowerShell cmdlet.
 
 > [!NOTE]
 > At this stage, the process can be fully reversed, and  Windows Server 2012 R2  nodes can be added to this cluster.
 
-![Illustration showing that the cluster has been fully upgraded to Windows Server 2016, and is ready for the Update-ClusterFunctionalLevel cmdlet to bring the cluster functional level up to Windows Server 2016](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage3.png)
+![Illustration showing that the cluster has been fully upgraded to Windows Server 2016, and is ready for the `Update-ClusterFunctionalLevel` cmdlet to bring the cluster functional level up to Windows Server 2016](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage3.png)
 **Figure 4: Intermediate State: All nodes upgraded to Windows Server 2016, ready for Update-ClusterFunctionalLevel (Stage 3)**
 
-After the Update-ClusterFunctionalLevelcmdlet is run, the cluster enters "Stage 4", where new Windows Server 2016 cluster features can be used.
+After the `Update-ClusterFunctionalLevel` cmdlet is run, the cluster enters "Stage 4", where new Windows Server 2016 cluster features can be used.
 
 ![Illustration showing that the cluster rolling OS upgrade has been successfully completed; all nodes have been upgraded to Windows Server 2016, and the cluster is running at the Windows Server 2016 cluster functional level](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_Stage4.png)
 **Figure 5: Final State: Windows Server 2016 Failover Cluster (Stage 4)**
