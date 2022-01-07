@@ -19,7 +19,7 @@ The following new features in Active Directory Domain Services (AD DS) improve t
 
 - [Connecting domain-joined devices to Azure AD for Windows 10 experiences](/azure/active-directory/devices/hybrid-azuread-join-plan)
 
-- [Enable Microsoft Passport for Work in your organization](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
+- [Enable Windows Hello for Business in your organization](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
 
 -  [Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels](ad-ds/active-directory-functional-levels.md)
 
@@ -49,7 +49,7 @@ Privileged access management (PAM) helps mitigate security concerns for Active D
 -   Active Directory forest functional level of Windows Server 2012 R2 or higher.
 
 ## <a name="BKMK_AzureADJoin"></a>Azure AD Join
-Azure Active Directory Join enhances identity experiences for enterprise, business and EDU customers- with improved capabilities for corporate and personal devices.
+Azure Active Directory Join enhances identity experiences for enterprise, business, and EDU customers- with improved capabilities for corporate and personal devices.
 
 Benefits:
 
@@ -63,11 +63,11 @@ Benefits:
 
     -   Live tiles and notifications
 
--   **Access organizational resources** on mobile devices (phones, phablets) that can't be joined to a Windows Domain, whether they are corp-owned or BYOD
+-   **Access organizational resources** on mobile devices (phones, tablets) that can't be joined to a Windows Domain, whether they are corp-owned or BYOD
 
--   **Single-Sign On** to Office 365 and other organizational apps, websites and resources.
+-   **Single-Sign On** to Office 365 and other organizational apps, websites, and resources.
 
--   **On BYOD devices**, add a work account (from an on-premises domain or Azure AD) to a personally-owned device and enjoy SSO to work resources, via apps and on the web, in a way that helps ensure compliance with new capabilities such as Conditional Account Control and Device Health attestation.
+-   **On BYOD devices**, add a work account (from an on-premises domain or Azure AD) to a personally owned device and enjoy SSO to work resources, via apps and on the web, in a way that helps ensure compliance with new capabilities such as Conditional Account Control and Device Health attestation.
 
 -   **MDM integration** lets you auto-enroll devices to your MDM (Intune or third-party)
 
@@ -77,25 +77,24 @@ Benefits:
 
 -   **Imaging** option lets you choose between imaging and allowing your users to configure corp-owned devices directly during the first-run experience.
 
-For more information see, [Windows 10 for the enterprise: Ways to use devices for work](/azure/active-directory/devices/overview).
+For more information, see [Windows 10 for the enterprise: Ways to use devices for work](/azure/active-directory/devices/overview).
 
-## <a name="BKMK_IDLocker"></a>Microsoft Passport
-Microsoft Passport is a new key-based authentication approach organizations and consumers, that goes beyond passwords. This form of authentication relies on breach, theft, and phish-resistant credentials.
+## <a name="BKMK_IDLocker"></a>Windows Hello for Business
+Windows Hello for Business is a new key-based authentication approach for organizations and consumers that goes beyond passwords. This form of authentication relies on breach, theft, and phish-resistant credentials.
 
-The user logs on to the device with a biometric or PIN log on information that is linked to a certificate or an asymmetrical key pair. The Identity Providers (IDPs) validate the user by mapping the public key of the user to IDLocker and provides log on information through One Time Password (OTP), Phonefactor or a different notification mechanism.
+The user logs on to the device with a biometric or PIN logon information that is linked to a certificate or an asymmetrical key pair. The Identity Providers (IDPs) validate the user by mapping the public key of the user to IDLocker and provides log on information through One Time Password (OTP), Phonefactor or a different notification mechanism.
 
-For more information see, [Authenticating identities without passwords through Microsoft Passport](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
+For more information, see [Authenticating identities without passwords through Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
 
 ## <a name="BKMK_FRSDeprecation"></a>Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels
 Although File Replication Service (FRS) and the Windows Server 2003 functional levels were deprecated in previous versions of Windows Server, it bears repeating that the Windows Server 2003 operating system is no longer supported. As a result, any domain controller that runs Windows Server 2003 should be removed from the domain. The domain and forest functional level should be raised to at least Windows Server 2008 to prevent a domain controller that runs an earlier version of Windows Server from being added to the environment.
 
-At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate SYSVOL. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for SYSVOL. For migration steps, you can either follow the [procedures on TechNet](../storage/dfs-replication/migrate-sysvol-to-dfsr.md) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
+At the Windows Server 2008 and higher domain functional levels, Distributed File Service (DFS) Replication is used to replicate SYSVOL folder contents between domain controllers. If you create a new domain at the Windows Server 2008 domain functional level or higher, DFS Replication is automatically used to replicate the SYSVOL folder. If you created the domain at a lower functional level, you will need to migrate from using FRS to DFS replication for the SYSVOL folder. For migration steps, you can either follow the [procedures on TechNet](../storage/dfs-replication/migrate-sysvol-to-dfsr.md) or you can refer to the [streamlined set of steps on the Storage Team File Cabinet blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
 
-The Windows Server 2003 domain and forest functional levels continue to be supported, but organizations should raise the functional level to Windows Server 2008 (or higher if possible) to ensure SYSVOL replication compatibility and support in the future. In addition, there are many other benefits and features available at the higher functional levels higher. See the following resources for more information:
+The Windows Server 2003 domain and forest functional levels continue to be supported, but organizations should raise the functional level to Windows Server 2008 (or higher if possible) to ensure SYSVOL replication compatibility and support in the future. In addition, there are many other benefits and features available at the higher functional levels higher. For more information, see the following resources:
 
 -   [Understanding Active Directory Domain Services (AD DS) Functional Levels](ad-ds/active-directory-functional-levels.md)
 
 -   [Raise the Domain Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753104(v=ws.11))
 
 -   [Raise the Forest Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730985(v=ws.11))
-
