@@ -6,7 +6,6 @@ author: heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 07/15/2021
-ms.localizationpriority: medium
 ---
 # Get started with the Windows Desktop client
 

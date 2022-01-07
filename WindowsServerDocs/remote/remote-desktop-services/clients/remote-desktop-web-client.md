@@ -5,7 +5,6 @@ ms.author: helohr
 ms.date: 04/20/2021
 ms.topic: article
 author: Heidilohr
-ms.localizationpriority: medium
 ---
 # Get started with the web client
 

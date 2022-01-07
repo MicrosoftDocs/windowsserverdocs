@@ -5,7 +5,6 @@ ms.mktglfcycl: manage
 ms.sitesec: library
 author: pronichkin
 ms.author: artemp
-ms.localizationpriority: medium
 ms.date: 10/17/2017
 ms.topic: how-to
 ---

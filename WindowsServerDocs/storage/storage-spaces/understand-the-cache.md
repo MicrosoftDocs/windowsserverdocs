@@ -7,7 +7,6 @@ manager: dongill
 ms.topic: article
 author: cosmosdarwin
 ms.date: 09/21/2020
-ms.localizationpriority: medium
 ---
 # Understanding the cache in Storage Spaces Direct
 

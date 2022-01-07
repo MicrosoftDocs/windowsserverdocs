@@ -5,7 +5,6 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.date: 04/05/2018
-ms.localizationpriority: medium
 ---
 # Troubleshoot user profiles with events
 

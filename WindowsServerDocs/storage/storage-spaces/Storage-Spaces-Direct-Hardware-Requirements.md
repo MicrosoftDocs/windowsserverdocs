@@ -6,7 +6,6 @@ manager: eldenc
 ms.topic: article
 author: eldenchristensen
 ms.date: 09/24/2020
-ms.localizationpriority: medium
 ---
 # Storage Spaces Direct hardware requirements
 

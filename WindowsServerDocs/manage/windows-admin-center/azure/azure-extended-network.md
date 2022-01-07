@@ -6,7 +6,6 @@ ms.topic: article
 author: grcusanz
 ms.author: grcusanz
 ms.date: 12/17/2019
-ms.localizationpriority: medium
 ms.prod: windows-server
 ---
 

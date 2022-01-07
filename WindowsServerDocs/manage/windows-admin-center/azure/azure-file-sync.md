@@ -5,7 +5,6 @@ ms.topic: article
 author: fauhse
 ms.author: fauhse
 ms.date: 04/12/2019
-ms.localizationpriority: medium
 ---
 # Sync your file server with the cloud by using Azure File Sync
 

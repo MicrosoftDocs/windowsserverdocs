@@ -5,7 +5,6 @@ ms.topic: article
 author: trungtran-msft
 ms.author: wscontent
 ms.date: 10/22/2021
-ms.localizationpriority: medium
 ---
 
 # Customize WebSocket validation for Windows Admin Center gateway

@@ -5,7 +5,6 @@ ms.author: kaushika
 ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
-ms.localizationpriority: medium
 ---
 
 # Troubleshoot Storage Spaces Direct

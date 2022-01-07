@@ -6,7 +6,6 @@ author: heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 12/02/2021
-ms.localizationpriority: medium
 ---
 # What's new in the Windows Desktop client
 

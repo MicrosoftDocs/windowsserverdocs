@@ -6,7 +6,6 @@ ms.date: 09/05/2017
 ms.topic: how-to
 author: jaimeo
 ms.author: jaimeo
-ms.localizationpriority: medium
 ---
 # Nano Server Quick Start
 

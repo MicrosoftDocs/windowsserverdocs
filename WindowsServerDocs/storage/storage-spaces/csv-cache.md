@@ -6,7 +6,6 @@ manager: siroy
 ms.topic: article
 author: eldenchristensen
 ms.date: 09/21/2020
-ms.localizationpriority: medium
 ---
 # Using Storage Spaces Direct with the CSV in-memory read cache
 

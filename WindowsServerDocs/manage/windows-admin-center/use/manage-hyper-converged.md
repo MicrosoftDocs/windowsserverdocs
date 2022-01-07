@@ -5,7 +5,6 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 03/01/2019
-ms.localizationpriority: medium
 ---
 # Manage Hyper-Converged Infrastructure with Windows Admin Center
 

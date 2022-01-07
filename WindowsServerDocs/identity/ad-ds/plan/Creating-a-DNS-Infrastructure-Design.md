@@ -31,5 +31,5 @@ Before you design your DNS infrastructure to support AD DS, it can be helpful to
 
 - [Reviewing DNS Concepts](../../ad-ds/plan/Reviewing-DNS-Concepts.md)
 - [DNS and AD DS](../../ad-ds/plan/DNS-and-AD-DS.md)
-- [Assigning the DNS for AD DS Owner Role](../../ad-ds/deploy/Assigning-the-DNS-for-AD-DS-Owner-Role.md)
+- [DNS for AD DS Owner Role](../../ad-ds/deploy/Assigning-the-DNS-for-AD-DS-Owner-Role.md)
 - [Integrating AD DS into an Existing DNS Infrastructure](../../ad-ds/plan/../../ad-ds/plan/Integrating-AD-DS-into-an-Existing-DNS-Infrastructure.md)

@@ -5,8 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/04/2021
-ms.localizationpriority: medium
+ms.date: 01/04/2022
 ---
 # What's new in the iOS client
 
@@ -15,6 +14,12 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 ## How to report issues
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Settings** > **Submit Feedback**.
+
+## Updates for version 10.3.6 (5090)
+
+Date published: November 11, 2021
+
+It's time for a quick update. In this release we added support for the iPad Mini 6 and addressed an issue with Slide Over windows and keyboard interaction. Thanks for all the feedback. We're working hard to make this app great!
 
 ## Updates for version 10.3.5
 

@@ -5,7 +5,6 @@ ms.topic: article
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.localizationpriority: medium
 ms.date: 06/03/2019
 ---
 

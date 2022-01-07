@@ -4,7 +4,6 @@ description: This topic describes the different installation options for Windows
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.localizationpriority: medium
 ms.date: 12/11/2019
 ---
 # What type of installation is right for you?

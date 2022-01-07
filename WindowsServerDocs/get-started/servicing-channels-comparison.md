@@ -7,7 +7,6 @@ ms.author: jgerend
 manager: femila
 ms.date: 8/16/2021
 ms.prod: windows-server
-ms.localizationpriority: high
 ---
 
 # Windows Server servicing channels

@@ -5,7 +5,6 @@ ms.topic: article
 author: IngridAtMicrosoft
 ms.author: wscontent
 ms.date: 03/07/2019
-ms.localizationpriority: medium
 ---
 
 # User access options with Windows Admin Center

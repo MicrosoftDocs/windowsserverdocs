@@ -8,7 +8,6 @@ manager: femila
 ms.date: 08/16/2021
 ms.prod: windows-server
 ms.assetid: c5ca3bfe-7ced-49f6-a932-80cab33f419e
-ms.localizationpriority: medium
 ---
 
 # Comparison of Standard and Datacenter editions of Windows Server 2016

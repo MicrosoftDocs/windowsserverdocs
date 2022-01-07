@@ -5,7 +5,6 @@ ms.author: chrimo
 ms.date: 10/02/2017
 ms.topic: article
 author: christianmontoya
-ms.localizationpriority: medium
 ---
 # Integrate Azure AD Domain Services with your RDS deployment
 

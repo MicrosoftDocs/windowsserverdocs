@@ -6,7 +6,6 @@ author: JasonGerend
 ms.author: jgerend
 manager: lizross
 ms.date: 10/20/2021
-ms.localizationpriority: medium
 ---
 # Create a failover cluster
 
