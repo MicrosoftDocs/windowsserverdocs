@@ -15,7 +15,7 @@ This document describes conditional access policies based on devices in a hybrid
 
 ## AD FS and Hybrid conditional access
 
-AD FS provides the on premises component of conditional access policies in a hybrid scenario.  When you register devices with Azure AD for conditional access to cloud resources, the Azure AD Connect device write back capability makes device registration information available on premises for AD FS policies to consume and enforce.  This way, you have a consistent approach to access control policies for both on premises and cloud resources.
+AD FS provides the on premises component of conditional access policies in a hybrid scenario.  When you register devices with Azure AD for conditional access to cloud resources, the Azure AD Connect device write-back capability makes device registration information available on premises for AD FS policies to consume and enforce.  This way, you have a consistent approach to access control policies for both on premises and cloud resources.
 
 ![conditional access](media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)
 
@@ -25,7 +25,7 @@ There are three kinds of registered devices, all of which are represented as Dev
 | Description |Add Work or School Account  |Azure AD Join  |Windows 10 Domain Join |
 | --- | --- |--- | --- |
 |Description    |  Users add their work or school account to their BYOD device interactively.  **Note:** Add Work or School Account is the replacement for Workplace Join in Windows 8/8.1 | Users join their Windows 10 work device to Azure AD.|Windows 10 domain joined devices automatically register with Azure AD.|
-|How users log in to the device     |  No login to Windows as the work or school account.  Login using a Microsoft account.  | Login to Windows as the (work or school) account that registered the device. | Login using AD account.|
+|How users log in to the device     |  No log in to Windows as the work or school account.  Log in using a Microsoft account.  | Log in to Windows as the (work or school) account that registered the device. | Log in using AD account.|
 |How devices are managed | MDM Policies (with additional Intune enrollment) | MDM Policies (with additional Intune enrollment) | Group Policy, Configuration Manager |
 |Azure AD Trust type|Workplace joined|Azure AD joined|Domain joined |
 |W10 Settings location | Settings > Accounts > Your account > Add a work or school account | Settings > System > About > Join Azure AD |   Settings > System > About > Join a domain |
@@ -36,8 +36,8 @@ For more information on the different ways to register devices, see also:
 * [Setting up Windows 10 devices for work](https://jairocadena.com/2016/01/18/setting-up-windows-10-devices-for-work-domain-join-azure-ad-join-and-add-work-or-school-account/)
 [Join Windows 10 Mobile to Azure Active Directory](/windows/client-management/join-windows-10-mobile-to-azure-active-directory)
 
-### How Windows 10 User and Device Sign on is different from previous versions
-For Windows 10 and AD FS 2016 there are some new aspects of device registration and authentication you should know about (especially if you are very familiar with device registration and "workplace join" in previous releases).
+### How Windows 10 User and Device Sign-on is different from previous versions
+For Windows 10 and AD FS 2016, there are some new aspects of device registration and authentication you should know about (especially if you are familiar with device registration and "workplace join" in previous releases).
 
 First, in Windows 10 and AD FS in Windows Server 2016, device registration and authentication is no longer based solely on an X509 user certificate.  There is a new and more robust protocol that provides better security and a more seamless user experience.  The key differences are that, for Windows 10 Domain Join and Azure AD Join, there is an X509 computer certificate and a new credential called a PRT.  You can read all about it [here](https://jairocadena.com/2016/01/18/how-domain-join-is-different-in-windows-10-with-azure-ad/) and [here](https://jairocadena.com/2016/02/01/azure-ad-join-what-happens-behind-the-scenes/).
 
@@ -48,20 +48,20 @@ AD FS 2016 provides seamless device and user SSO based on both PRT and Passport 
 ### Device Access Control Policies
 Devices can be used in simple AD FS access control rules such as:
 
-- allow access only from a registered device
-- require multi factor authentication when a device is not registered
+- Allow access only from a registered device
+- Require multifactor authentication when a device is not registered
 
-These rules can then be combined with other factors such as network access location and multi factor authentication, creating rich conditional access policies such as:
+These rules can then be combined with other factors such as network access location and multifactor authentication, creating rich conditional access policies such as:
 
 
-- require multi factor authentication for unregistered devices accessing from outside the corporate network, except for members of a particular group or groups
+- Require multifactor authentication for unregistered devices accessing from outside the corporate network, except for members of a particular group or groups
 
 With AD FS 2016, these policies can be configured specifically to require a particular device trust level as well: either **authenticated**, **managed**, or **compliant**.
 
 For more information on configuring AD FS access control policies, see [Access control policies in AD FS](../../ad-fs/operations/Access-Control-Policies-in-AD-FS.md).
 
 #### Authenticated devices
-Authenticated devices are registered devices that are not enrolled in MDM (Intune and 3rd party MDMs for Windows 10, Intune only for iOS and Android).
+Authenticated devices are registered devices that are not enrolled in MDM (Intune and third party MDMs for Windows 10, Intune only for iOS and Android).
 
 Authenticated devices will have the **isManaged** AD FS claim with value **FALSE**. (Whereas devices that are not registered at all will lack this claim.)  Authenticated devices (and all registered devices) will have the isKnown AD FS claim with value **TRUE**.
 
