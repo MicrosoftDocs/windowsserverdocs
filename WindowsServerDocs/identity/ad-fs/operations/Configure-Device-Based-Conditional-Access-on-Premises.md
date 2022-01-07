@@ -28,7 +28,7 @@ The following per-requisites are required before you can begin with on-premises 
 |Windows Server 2016|Build 10586 or newer for AD FS
 |Windows Server 2016 Active Directory schema|Schema level 85 or higher is required.
 |Windows Server 2016 domain controller|This is only required for Hello For Business key-trust deployments.  Additional information can be found at [here](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
-|Windows 10 client|Build 10586 or newer, joined to the above domain is required for Windows 10 Domain Join and Microsoft Passport for Work scenarios only
+|Windows 10 client|Build 10586 or newer, joined to the above domain is required for Windows 10 Domain Join and Windows Hello for Business scenarios only
 |Azure AD user account with Azure AD Premium license assigned|For registering the device
 
 
@@ -185,7 +185,7 @@ For your reference, below is a comprehensive list of the AD DS devices, containe
 ### See it work
 To evaluate the new claims and policies, first register a device.  For example, you can Azure AD Join a Windows 10 computer using the Settings app under System -> About, or you can setup Windows 10 domain join with automatic device registration following the additional steps [here](/azure/active-directory/devices/hybrid-azuread-join-plan).  For information on joining Windows 10 mobile devices, see the document [here](/windows/client-management/join-windows-10-mobile-to-azure-active-directory).
 
-For easiest evaluation, sign on to AD FS using a test application that shows a list of claims. You will be able to see new claims including isManaged, isCompliant, and trusttype.  If you enable Microsoft Passport for work, you will also see the prt claim.
+For easiest evaluation, sign on to AD FS using a test application that shows a list of claims. You will be able to see new claims including *isManaged*, *isCompliant*, and *trusttype*.  If you enable Windows Hello for Business, you will also see the *prt* claim.
 
 
 ## Configure Additional Scenarios
@@ -198,8 +198,8 @@ This will help you achieve the following:
 3. Ensure your AD FS system has the correct endpoints enabled and claim rules configured
 4. Configure the group policy settings required for automatic device registration of domain joined computers
 
-### Microsoft Passport for Work
-For information on enabling Windows 10 with Microsoft Passport for Work, see [Enable Microsoft Passport for Work in your organization.](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
+### Windows Hello for Business
+For information on enabling Windows 10 with Windows Hello for Business, see [Enable Windows Hello for Business in your organization.](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
 
 ### Automatic MDM enrollment
 To enable automatic MDM enrollment of registered devices so that you can use the isCompliant claim in your access control policy, follow the steps [here.](/windows/client-management/join-windows-10-mobile-to-azure-active-directory)

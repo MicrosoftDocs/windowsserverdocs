@@ -19,7 +19,7 @@ The following new features in Active Directory Domain Services (AD DS) improve t
 
 - [Connecting domain-joined devices to Azure AD for Windows 10 experiences](/azure/active-directory/devices/hybrid-azuread-join-plan)
 
-- [Enable Microsoft Passport for Work in your organization](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
+- [Enable Windows Hello for Business in your organization](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
 
 -  [Deprecation of File Replication Service (FRS) and Windows Server 2003 functional levels](ad-ds/active-directory-functional-levels.md)
 

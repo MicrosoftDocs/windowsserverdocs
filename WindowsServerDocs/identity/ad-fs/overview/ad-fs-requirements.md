@@ -117,7 +117,7 @@ If you are using SQL Server for your AD FS configuration database, size the SQL 
 
 - AD FS requires Domain controllers running Windows Server 2008 or later.
 
-- At least one Windows Server 2016 domain controller is required for Microsoft Passport for Work.
+- At least one Windows Server 2016 domain controller is required for Windows Hello for Business.
 
 > [!NOTE]
 > All support for environments with Windows Server 2003 domain controllers has ended. Visit [this page](https://support.microsoft.com/lifecycle/search/default.aspx?sort=PN&alpha=Windows+Server+2003&Filter=FilterNO) for additional information on the Microsoft Support Lifecycle.

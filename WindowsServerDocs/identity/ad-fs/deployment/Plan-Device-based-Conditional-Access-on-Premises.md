@@ -41,7 +41,7 @@ For Windows 10 and AD FS 2016 there are some new aspects of device registration 
 
 First, in Windows 10 and AD FS in Windows Server 2016, device registration and authentication is no longer based solely on an X509 user certificate.  There is a new and more robust protocol that provides better security and a more seamless user experience.  The key differences are that, for Windows 10 Domain Join and Azure AD Join, there is an X509 computer certificate and a new credential called a PRT.  You can read all about it [here](https://jairocadena.com/2016/01/18/how-domain-join-is-different-in-windows-10-with-azure-ad/) and [here](https://jairocadena.com/2016/02/01/azure-ad-join-what-happens-behind-the-scenes/).
 
-Second, Windows 10 and AD FS 2016 support user authentication using Microsoft Passport for Work, which you can read about [here](https://jairocadena.com/2016/03/09/azure-ad-and-microsoft-passport-for-work-in-windows-10/) and [here](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+Second, Windows 10 and AD FS 2016 support user authentication using Windows Hello for Business, which you can read about [here](https://jairocadena.com/2016/03/09/azure-ad-and-microsoft-passport-for-work-in-windows-10/) and [here](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
 AD FS 2016 provides seamless device and user SSO based on both PRT and Passport credentials.  Using the steps in this document, you can enable these capabilities and see them work.
 
