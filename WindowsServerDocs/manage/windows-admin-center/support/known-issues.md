@@ -356,6 +356,8 @@ In the 2009 release, you may run into issues logging into Azure or registering y
 * The Azure sign-in pop-up may appear more frequently in this build and may require administrators to grant Windows Admin Center permissions more frequently. 
 
 * If you have already given admin approval for Windows Admin Center in the Azure portal and you are still seeing an error message saying “Need admin approval”, try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page. 
+   
+* If your proxy is mis-configured, then you may get the error message "Error: Value cannot be null. Parameter name: httpClientFactory." Please ensure that your proxy is configured correctly by going to **Settings** page. 
 
 ### Azure File Sync permissions
 
