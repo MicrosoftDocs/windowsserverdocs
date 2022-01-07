@@ -213,7 +213,8 @@ This article describes what is new in AD FS in Windows Server 2016 (AD FS 2016).
 AD FS 2016 enables three new options for sign on without passwords, enabling organizations to avoid risk of network compromise from phished, leaked, or stolen passwords.
 
 
-### Sign in with Azure Multi-factor Authentication
+### Sign in with Azure Multi-Factor Authentication
+
 
 AD FS 2016 builds upon the multi-factor authentication (MFA) capabilities of AD FS in Windows Server 2012 R2 by allowing sign on using only an Azure MFA code, without first entering a username and password.
 
