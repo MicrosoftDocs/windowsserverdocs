@@ -245,8 +245,8 @@ You will now create a normal failover cluster. After configuration, validation, 
 2. Create the File Server for General Use storage cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, than an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
    ```PowerShell
    New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>
-   Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”
-   Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Cluster IP Address] or [NewIPAddress]”
+   Add-ClusterResource -Name NewIPAddress -ResourceType "IP Address" -Group "Cluster Group"
+   Set-ClusterResourceDependency -Resource "Cluster Name" -Dependency "[Cluster IP Address] or [NewIPAddress]"
    ```
 
 3. Configure a File Share Witness or Cloud (Azure) witness in the cluster that points to a share hosted on the domain controller or some other independent server. For example:
@@ -384,9 +384,9 @@ For more information, review the Microsoft Ignite session [Stretching Failover C
     ```PowerShell
     New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>
 
-    Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”
+    Add-ClusterResource -Name NewIPAddress -ResourceType "IP Address" -Group "Cluster Group"
 
-    Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Cluster IP Address] or [NewIPAddress]”
+    Set-ClusterResourceDependency -Resource "Cluster Name" -Dependency "[Cluster IP Address] or [NewIPAddress]"
     ```
 
 
