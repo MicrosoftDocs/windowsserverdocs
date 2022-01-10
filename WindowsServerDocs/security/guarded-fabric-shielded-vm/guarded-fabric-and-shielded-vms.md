@@ -30,8 +30,6 @@ When a tenant creates shielded VMs that run on a guarded fabric, the Hyper-V hos
 
 ## Video: Introduction to shielded virtual machines
 
-> [!VIDEO https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016/player]
-
 ## Attestation modes in the Guarded Fabric solution
 
 The HGS supports different attestation modes for a guarded fabric:
@@ -161,5 +159,5 @@ Both shielded VMs and encryption-supported VMs continue to support commonplace f
 
 - [Guarded fabric and shielded VMs](guarded-fabric-and-shielded-vms-top-node.md)
 - Blog: [Datacenter and Private Cloud Security Blog](/archive/blogs/datacentersecurity/)
-- Video: [Introduction to Shielded Virtual Machines](https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
-- Video: [Dive into Shielded VMs with Windows Server 2016 Hyper-V](https://channel9.msdn.com/events/Ignite/2016/BRK3124)
+- Video: Introduction to Shielded Virtual Machines
+- Video: Dive into Shielded VMs with Windows Server 2016 Hyper-V
