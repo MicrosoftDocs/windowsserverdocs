@@ -154,7 +154,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 4. Configure a File Share Witness or Cloud Witness to provide quorum in the event of site loss.
 
    > [!NOTE]
-   > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.
+   > Windows Server now includes an option for [Cloud (Azure)-based Witness](../../failover-clustering/deploy-cloud-witness.md). You can choose this quorum option instead of the file share witness.
 
    > [!WARNING]
    > For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612870(v=ws.11)). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
@@ -245,8 +245,8 @@ You will now create a normal failover cluster. After configuration, validation, 
 2. Create the File Server for General Use storage cluster (you must specify your own static IP address the cluster will use). Ensure that the cluster name is 15 characters or fewer.  If the nodes reside in different subnets, than an IP Address for the additional site must be created using the “OR” dependency. More information can be found at [Configuring IP Addresses and Dependencies for Multi-Subnet Clusters – Part III](https://techcommunity.microsoft.com/t5/Failover-Clustering/Configuring-IP-Addresses-and-Dependencies-for-Multi-Subnet/ba-p/371698).
    ```PowerShell
    New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>
-   Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”
-   Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Cluster IP Address] or [NewIPAddress]”
+   Add-ClusterResource -Name NewIPAddress -ResourceType "IP Address" -Group "Cluster Group"
+   Set-ClusterResourceDependency -Resource "Cluster Name" -Dependency "[Cluster IP Address] or [NewIPAddress]"
    ```
 
 3. Configure a File Share Witness or Cloud (Azure) witness in the cluster that points to a share hosted on the domain controller or some other independent server. For example:
@@ -256,7 +256,7 @@ You will now create a normal failover cluster. After configuration, validation, 
    ```
 
    > [!NOTE]
-   > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.
+   > Windows Server now includes an option for [Cloud (Azure)-based Witness](../../failover-clustering/deploy-cloud-witness.md). You can choose this quorum option instead of the file share witness.
 
    For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612870(v=ws.11)). For more information on the `Set-ClusterQuorum` cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
 
@@ -318,7 +318,7 @@ You will now create a normal failover cluster. After configuration, validation, 
 
 4. Configure a File Share Witness or Cloud Witness to provide quorum in the event of site loss.
    >[!NOTE]
-   > WIndows Server now includes an option for Cloud (Azure)-based Witness. You can choose this quorum option instead of the file share witness.
+   > Windows Server now includes an option for [Cloud (Azure)-based Witness](../../failover-clustering/deploy-cloud-witness.md). You can choose this quorum option instead of the file share witness.
    >[!NOTE]
    >  For more information about quorum configuration, see the [Configure and Manage the Quorum in a Windows Server 2012 Failover Cluster guide's Witness Configuration](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612870(v=ws.11)). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
 
@@ -384,9 +384,9 @@ For more information, review the Microsoft Ignite session [Stretching Failover C
     ```PowerShell
     New-Cluster -Name SR-SRVCLUS -Node SR-SRV01, SR-SRV02, SR-SRV03, SR-SRV04 -StaticAddress <your IP here>
 
-    Add-ClusterResource -Name NewIPAddress -ResourceType “IP Address” -Group “Cluster Group”
+    Add-ClusterResource -Name NewIPAddress -ResourceType "IP Address" -Group "Cluster Group"
 
-    Set-ClusterResourceDependency -Resource “Cluster Name” -Dependency “[Cluster IP Address] or [NewIPAddress]”
+    Set-ClusterResourceDependency -Resource "Cluster Name" -Dependency "[Cluster IP Address] or [NewIPAddress]"
     ```
 
 
@@ -413,7 +413,7 @@ For more information, review the Microsoft Ignite session [Stretching Failover C
     Get-ClusterResource
     Add-ClusterFileServerRole -Name SR-CLU-FS2 -Storage "Cluster Disk 4"
 
-    MD e:\share01
+    MD f:\share01
 
     New-SmbShare -Name Share01 -Path f:\share01 -ContinuouslyAvailable $false
     ```
