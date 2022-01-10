@@ -11,7 +11,7 @@ ms.author: jgerend
 
 > **Applies To:** Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-This topic describes how to delete everything on a dynamic disk and then convert it back to a basic disk. Dynamic disks have been deprecated from Windows and we don't recommend using them anymore. Instead, we recommend using basic disks or using the newer [Storage Spaces](https://support.microsoft.com/help/12438/windows-10-storage-spaces) technology when you want to pool disks together into larger volumes. If you want to mirror the volume from which Windows boots, you might want to use a hardware RAID controller, such as the one included on many motherboards.
+This topic describes how to delete everything on a dynamic disk and then convert it back to a basic disk. Dynamic disks have been deprecated from Windows and we don't recommend using them anymore. Instead, we recommend using basic disks or using the newer [Storage Spaces](../storage-spaces/overview.md) technology when you want to pool disks together into larger volumes. If you want to mirror the volume from which Windows boots, you might want to use a hardware RAID controller, such as the one included on many motherboards.
 
 > [!WARNING]
 > To convert a dynamic disk back to a basic disk you must delete all volumes from the disk, permanently erasing all data on the disk. Make sure you back up any data you want to keep before proceeding.
