@@ -413,7 +413,7 @@ For more information, review the Microsoft Ignite session [Stretching Failover C
     Get-ClusterResource
     Add-ClusterFileServerRole -Name SR-CLU-FS2 -Storage "Cluster Disk 4"
 
-    MD e:\share01
+    MD f:\share01
 
     New-SmbShare -Name Share01 -Path f:\share01 -ContinuouslyAvailable $false
     ```
