@@ -5,7 +5,7 @@ ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
 manager: femila
-ms.date: 12/13/2021
+ms.date: 01/07/2022
 ms.prod: windows-server
 ---
 
@@ -30,6 +30,10 @@ Trusted Platform Module 2.0 (TPM 2.0) secure crypto-processor chips provide a se
 #### Firmware protection
 
 Firmware executes with high privileges and is often invisible to traditional anti-virus solutions, which has lead to a rise in the number of firmware-based attacks. Secured-core server processors support measurement and verification of boot processes with [Dynamic Root of Trust for Measurement (DRTM) technology](/windows/security/threat-protection/windows-defender-system-guard/how-hardware-based-root-of-trust-helps-protect-windows#secure-launchthe-dynamic-root-of-trust-for-measurement-drtm) and isolation of driver access to memory with [Direct Memory Access (DMA) protection](/windows/security/information-protection/kernel-dma-protection-for-thunderbolt).
+
+#### UEFI secure boot
+
+[UEFI secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) is a security standard that protects your servers from malicious rootkits. Secure boot ensures the server boots only firmware and software trusted by the hardware manufacturer. When the server is started, the firmware checks the signature of each boot component including firmware drivers and the OS. If the signatures are valid, the server boots and the firmware gives control to the OS.
 
 #### Virtualization-based security (VBS)
 
