@@ -1,5 +1,5 @@
 ---
-title: Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server
+title: Upgrade virtual machine version in Hyper-V on Windows or Windows Server
 description: Gives instructions and considerations for upgrading the version of a virtual machine
 ms.topic: article
 ms.assetid: 897f2454-5aee-445c-a63e-f386f514a0f6
@@ -7,7 +7,7 @@ author: jasongerend
 ms.author: jgerend
 ms.date: 05/22/2019
 ---
-# Upgrade virtual machine version in Hyper-V on Windows 10 or Windows Server
+# Upgrade virtual machine version in Hyper-V on Windows or Windows Server
 
 >Applies to: Windows Server 2022, Windows 10, Windows Server 2019, Windows Server 2016
 
@@ -44,54 +44,70 @@ Update-VMVersion <vmname>
 
 ## Supported virtual machine configuration versions
 
-Run the PowerShell cmdlet [Get-VMHostSupportedVersion](/powershell/module/hyper-v/get-vmhostsupportedversion) to see what virtual machine configuration versions your Hyper-V Host supports. When you create a virtual machine, it's created with the default configuration version. To see what the default is, run the following command.
+Using the PowerShell cmdlet [Get-VMHostSupportedVersion](/powershell/module/hyper-v/get-vmhostsupportedversion) you can see what virtual machine configuration versions your Hyper-V Host supports. When you create a virtual machine, it's created with the default configuration version. To see which virtual machine configuration versions your Hyper-V Host supports and what the default is, run the following command.
 
 ```PowerShell
-Get-VMHostSupportedVersion -Default
+Get-VMHostSupportedVersion
 ```
 
-If you need to create a virtual machine that you can move to a Hyper-V Host that runs an older version of Windows, use the [New-VM](/powershell/module/hyper-v/new-vm) cmdlet with the -version parameter. For example, to create a virtual machine that you can move to a Hyper-V host that runs Windows Server 2012 R2 , run the following command. This command will create a virtual machine named "WindowsCV5" with a configuration version 5.0.
+If you need to create a virtual machine that you can move to a Hyper-V Host that runs an older version of Windows, use the [New-VM](/powershell/module/hyper-v/new-vm) cmdlet with the `-Version` parameter. For example, to create a virtual machine named "WindowsCV5" with configuration version 5.0, run the following command:
 
 ```PowerShell
 New-VM -Name "WindowsCV5" -Version 5.0
 ```
 
 >[!NOTE]
->You can import virtual machines that have been created for a Hyper-V host running an older version of Windows or restore them from backup. If the VM's configuration version is not listed as supported for your Hyper-V host OS in the table below, you have to update the VM configuration version before you can start the VM.
+>You can only import a virtual machine if the Hyper-V host supports that configuration version. Typically, this means that you can import a virtual machine to a Hyper-V host running a newer version of Hyper-V, but you cannot import a virtual machine created on a newer version of Hyper-V to an older version of Hyper-V.
+>
+>If the VM's configuration version is not listed as supported for your Hyper-V host OS in the table below, you either have to upgrade the VM configuration version to a newer version or create a new VM of the same generation using the existing virtual hard disks before you can start the VM.
 
 ### Supported VM configuration versions for long-term servicing hosts
 
-The following table lists the VM configuration versions that are supported on hosts running a long-term servicing version of Windows.
+The following table lists the VM configuration versions for hosts running a long-term servicing version of Windows.
 
-| Hyper-V host Windows version | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
-| --- |---|---|---|---|---|---|---|---|---|---|
-|Windows Server 2019|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows 10 Enterprise LTSC 2019|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows Server 2016|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows 10 Enterprise 2016 LTSB|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows 10 Enterprise 2015 LTSB|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|
-|Windows Server 2012 R2|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|
-|Windows 8.1|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|
+| Hyper-V host Windows version | 10.0 | 9.3 | 9.2 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Windows Server 2022|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10006;|&#10006;|&#10006;|&#10006;|
+|Windows 10 Enterprise LTSC 2021|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10006;|&#10006;|&#10006;|&#10006;|
+|Windows Server 2019|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows 10 Enterprise LTSC 2019|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows Server 2016|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows 10 Enterprise 2016 LTSB|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows 10 Enterprise 2015 LTSB|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|
+|Windows Server 2012 R2|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|
+|Windows 8.1|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|
 
 ### Supported VM configuration versions for Semi-Annual Channel hosts
 
-The following table lists the VM configuration versions for hosts running a currently supported Semi-Annual Channel version of Windows. To get more information on Semi-Annual Channel versions of Windows, visit the following pages for [Windows Server](../../../get-started/servicing-channels-comparison.md) and [Windows 10](/windows/deployment/update/waas-overview#servicing-channels)
+The following table lists the VM configuration versions for hosts running a Semi-Annual Channel version of Windows. To get more information on Semi-Annual Channel versions of Windows, visit the following pages for [Windows Server](../../../get-started/servicing-channels-comparison.md) and [Windows](/windows/deployment/update/waas-overview#servicing-channels).
 
-| Hyper-V host Windows version | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
-| --- |---|---|---|---|---|---|---|---|---|---|
-| Windows 10 May 2019 Update (version 1903) |&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;| &#10004;|
-| Windows Server, version 1903 |&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;| &#10004;|
-|Windows Server, version 1809|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows 10 October 2018 Update (version 1809)|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows Server, version 1803|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows 10 April 2018 Update (version 1803)|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows 10 Fall Creators Update (version 1709)|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows 10 Creators Update (version 1703)|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|Windows 10 Anniversary Update (version 1607)|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+| Hyper-V host Windows version | 10.0 | 9.3 | 9.2 | 9.1 | 9.0 | 8.3 | 8.2 | 8.1 | 8.0 | 7.1 | 7.0 | 6.2 | 5.0 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Windows 11 (version 21H2)|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10006;|&#10006;|&#10006;|&#10006;|
+|Windows 10 November 2021 Update (version 21H2)|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10006;|&#10006;|&#10006;|&#10006;|
+|Windows 10 May 2021 Update (version 21H1)|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10006;|&#10006;|&#10006;|&#10006;|
+|Windows Server, version 20H2|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10006;|&#10006;|&#10006;|&#10006;|
+|Windows 10 October 2020 Update (version 20H2)|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10006;|&#10006;|&#10006;|&#10006;|
+|Windows Server, version 2004|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10006;|&#10006;|&#10006;|&#10006;|
+|Windows 10 May 2020 Update (version 2004)|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10006;|&#10006;|&#10006;|&#10006;|
+|Windows Server, version 1909|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows 10 November 2019 Update (version 1909)|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows Server, version 1903|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows 10 May 2019 Update (version 1903)|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows Server, version 1809|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows 10 October 2018 Update (version 1809)|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows Server, version 1803|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows 10 April 2018 Update (version 1803)|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows 10 Fall Creators Update (version 1709)|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows 10 Creators Update (version 1703)|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Windows 10 Anniversary Update (version 1607)|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10006;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 
 ## Why should I upgrade the virtual machine configuration version?
 
-When you move or import a virtual machine to a computer that runs Hyper-V on Windows Server 2019, Windows Server 2016, or Windows 10, the virtual machine"s configuration isn't automatically updated. This means that you can move the virtual machine back to a Hyper-V host that runs a previous version of Windows or Windows Server. But, this also means that you can't use some of the new virtual machine features until you manually update the configuration version. You can't downgrade the virtual machine configuration version after you've upgraded it.
+When you move or import a virtual machine to a computer that runs Hyper-V on Windows Server 2019, Windows Server 2016, or Windows 10, the virtual machine's configuration isn't automatically updated. This means that you can move the virtual machine back to a Hyper-V host that runs a previous version of Windows or Windows Server. But, this also means that you can't use some of the new virtual machine features until you manually update the configuration version.
+
+> [!IMPORTANT]
+> You can't downgrade a virtual machine configuration version after you've upgraded it.
 
 The virtual machine configuration version represents the compatibility of the virtual machine's configuration, saved state, and snapshot files with the version of Hyper-V. When you update the configuration version, you change the file structure that is used to store the virtual machines configuration and the checkpoint files. You also update the configuration version to the latest version supported by that Hyper-V host. Upgraded virtual machines use a new configuration file format, which is designed to increase the efficiency of reading and writing virtual machine configuration data. The upgrade also reduces the potential for data corruption in the event of a storage failure.
 
@@ -118,22 +134,22 @@ The following table shows the minimum virtual machine configuration version requ
 
 |Feature|Minimum VM configuration version|
 |---|---|
-|Hot Add/Remove Memory|6.2|
-|Secure Boot for Linux VMs|6.2|
-|Production Checkpoints|6.2|
-|PowerShell Direct |6.2|
-|Virtual Machine Grouping|6.2|
-|Virtual Trusted Platform Module (vTPM)|7.0|
-|Virtual machine multi queues (VMMQ)|7.1|
-|XSAVE support|8.0|
-|Key storage drive|8.0|
-|Guest virtualization-based security support (VBS)|8.0|
-|Nested virtualization|8.0|
-|Virtual processor count|8.0|
-|Large memory VMs|8.0|
-|Increase the default maximum number for virtual devices to 64 per device (e.g. networking and assigned devices)|8.3|
 |Allow additional processor features for Perfmon|9.0|
 |Automatically expose [simultaneous multithreading](../manage/manage-hyper-v-scheduler-types.md#background) configuration for VMs running on hosts using the [Core Scheduler](../manage/manage-hyper-v-scheduler-types.md#windows-server-2019-hyper-v-defaults-to-using-the-core-scheduler)|9.0|
 |Hibernation support|9.0|
+|Increase the default maximum number for virtual devices to 64 per device (e.g. networking and assigned devices)|8.3|
+|Guest Virtualization-Based Security support (VBS)|8.0|
+|Key storage drive|8.0|
+|Large memory VMs|8.0|
+|Nested Virtualization|8.0|
+|Virtual processor count|8.0|
+|XSAVE support|8.0|
+|Virtual Machine Multi Queues (VMMQ)|7.1|
+|Virtual Trusted Platform Module (vTPM)|7.0|
+|Hot Add/Remove Memory|6.2|
+|PowerShell Direct |6.2|
+|Production Checkpoints|6.2|
+|Secure Boot for Linux VMs|6.2|
+|Virtual Machine Grouping|6.2|
 
 For more information about these features, see [What's new in Hyper-V on Windows Server](../What-s-new-in-Hyper-V-on-Windows.md).

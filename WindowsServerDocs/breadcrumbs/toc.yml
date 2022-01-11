@@ -3,3 +3,16 @@
   items:
     - name: Windows Server
       href: /windows-server/
+      
+### For linking to Azure Stack HCI topic and keeping the context in Windows Server TOC      
+- name: Windows Server
+  tocHref: /azure-stack/
+  topicHref: /windows-server/index
+  items:
+  - name: Failover Clustering              # Original doc set name
+    tocHref: /azure-stack/hci/             # Destination doc set route
+    topicHref: /windows-server/failover-clustering/failover-clustering-overview      # Original doc set route
+    items:
+    - name: Manage                         # Destination doc set name
+      tocHref: /azure-stack/hci/manage/      # Destination doc set route
+      topicHref: /windows-server/failover-clustering/cluster-aware-updating    # Original doc set route

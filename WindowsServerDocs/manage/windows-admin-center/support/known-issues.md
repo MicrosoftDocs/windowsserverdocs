@@ -44,7 +44,7 @@ If you encounter an issue not described on this page, please [let us know](https
 
 ## Partner extension issues
 
-- Dell's EMC OpenManage Integration extension utilizes APIs provided by Windows Admin Center to push files onto target nodes. This API only works when the user is a gateway administrator and does not support non-admin use.
+- Dell's EMC OpenManage Integration extension utilizes APIs provided by Windows Admin Center to push files onto target nodes. This API (e.g. NodeExtensionInstall) only works when the user is a gateway administrator and does not support non-admin use. 
 
 ## Browser Specific Issues
 
@@ -216,6 +216,46 @@ Sometimes servers take longer than expected to restart after updates are install
 
 If you would like to restart the server manually, exit the current wizard session. After you have restarted the server, you may restart the wizard.
 
+### Stage 4 Storage
+In stage 4, an error can occur if a user has deleted a cluster and has not cleared the storage pools from the cluster. That means the storage pools that are on the system are locked by the old cluster object and only the user can manually clear them. 
+
+To clear the configuration, the user needs to run:
+
+1. On all nodes run: ```Clear-ClusterNode```
+2. Remove all previous storage pools, you can then run: 
+    ```PowerShell
+    get-storagepool
+    get-storagepool -IsPrimordial 0 | remove-storagepool
+    ```
+  > [!Note]
+  > If the storage pools are set as readonly which can sometimes happen if the cluster is improperly destroyed, then the user needs to first make sure the storage pools are changed to editable before removing. Run the following before the commands above: ```
+  Get-StoragePool <PoolName> | Set-StoragePool -IsReadOnly $false```
+
+To avoid this scenario in the first place, the user will need to run the following: 
+
+1. Remove virtual disk:
+    ```PowerShell
+    get-virtualdisk | Remove-VirtualDisk
+    ```
+2. Remove storage pools:
+    ```PowerShell
+    get-storagepool
+    get-storagepool -IsPrimordial 0 | remove-storagepool
+    ```
+3. Remove cluster resources:
+    ```PowerShell
+    Get-ClusterResource | ? ResourceType -eq "virtual machine" | Remove-ClusterResource
+    Get-ClusterResource | ? ResourceType -like "*virtual machine*" | Remove-ClusterResource
+    ```
+4. Cleaning up:
+    ```PowerShell
+    Remove-Cluster -CleanupAD
+    ```
+5. On all nodes run: 
+    ```PowerShell
+    Clear-ClusterNode
+    ```
+
 ### Stretch cluster creation
 It is recommended to use servers that are domain-joined when creating a stretch cluster. There is a network segmentation issue when trying to use workgroup machines for stretch cluster deployment due to WinRM limitations.
 
@@ -316,6 +356,8 @@ In the 2009 release, you may run into issues logging into Azure or registering y
 * The Azure sign-in pop-up may appear more frequently in this build and may require administrators to grant Windows Admin Center permissions more frequently. 
 
 * If you have already given admin approval for Windows Admin Center in the Azure portal and you are still seeing an error message saying “Need admin approval”, try signing into Azure using one of the banners around Windows Admin Center instead of in the **Settings** page. 
+   
+* If your proxy is mis-configured, then you may get the error message "Error: Value cannot be null. Parameter name: httpClientFactory." Please ensure that your proxy is configured correctly by going to **Settings** page. 
 
 ### Azure File Sync permissions
 

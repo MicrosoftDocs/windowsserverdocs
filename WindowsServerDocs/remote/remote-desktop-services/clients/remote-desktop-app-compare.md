@@ -6,7 +6,7 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/23/2021
+ms.date: 01/07/2022
 ---
 
 # Compare the clients: redirections
@@ -54,6 +54,7 @@ When you enable USB port redirection, all USB devices attached to USB ports are 
 | Scanners            | X                         | X                           |               |         |             |                                 |               |
 | Smart Cards         | X                         | X                           |               |         |             | X (Windows logon not supported) |               |
 | Speakers            | X                         | X                           | X             | X       | X           | X                               | X (except IE) |
+|Third-party virtual channel plugins| X                         | X                           |               |               |
 
 *For printer redirection - the macOS app supports the Publisher Imagesetter printer driver by default. They do not support redirecting native printer drivers.
 

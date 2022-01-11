@@ -29,7 +29,7 @@ reg query <keyname> [{/v <Valuename> | /ve}] [/s] [/se <separator>] [/f <data>] 
 | /s | Specifies to query all subkeys and value names recursively. |
 | /se `<separator>` | Specifies the single value separator to search for in the value name type **REG_MULTI_SZ**. If *separator* isn't specified, **\0** is used. |
 | /f `<data>` | Specifies the data or pattern to search for. Use double quotes if a string contains spaces. If not specified, a wildcard (**&#42;**) is used as the search pattern. |
-| /k | Specifies to search in key names only. |
+| /k | Specifies to search in key names only. Must be used with /f. |
 | /d | Specifies to search in data only. |
 | /c | Specifies that the query is case sensitive. By default, queries are not case sensitive. |
 | /e | Specifies to return only exact matches. By default, all the matches are returned. |
@@ -76,6 +76,18 @@ To display the key, value, and data that match **0F** in the data under the HKCU
 
 ```
 reg query HKCU /f 0F /d /t REG_BINARY
+```
+
+To display the keys, values, and data that match **asp.net** under the key HKLM\SOFTWARE\Microsoft and all subkeys, type:
+
+```
+reg query HKLM\SOFTWARE\Microsoft /s /f asp.net
+```
+
+To display the only the keys that match **asp.net** under the key HKLM\SOFTWARE\Microsoft and all subkeys, type:
+
+```
+reg query HKLM\SOFTWARE\Microsoft /s /f asp.net /k
 ```
 
 To display the value and data for value names of null (default) under HKLM\SOFTWARE, type:
