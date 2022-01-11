@@ -9,22 +9,20 @@ ms.date: 4/14/2017
 # Performance tuning for SMB file servers
 
 ## SMB configuration considerations
+
 Do not enable any services or features that your file server and clients do not require. These might include SMB signing, client-side caching, file system mini-filters, search service, scheduled tasks, NTFS encryption, NTFS compression, IPSEC, firewall filters, Teredo, and SMB encryption.
 
 Ensure that the BIOS and operating system power management modes are set as needed, which might include High Performance mode or altered C-State. Ensure that the latest, most resilient, and fastest storage and networking device drivers are installed.
 
-Copying files is a common operation performed on a file server. Windows Server has several built-in file copy utilities that you can run by using a command prompt. Robocopy is recommended. Introduced in Windows Server 2008 R2, the **/mt** option of Robocopy can significantly improve speed on remote file transfers by using multiple threads when copying multiple small files. We also recommend using the **/log** option to reduce console output by redirecting logs to a NUL device or to a file. When you use Xcopy, we recommend adding the **/q** and **/k** options to your existing parameters. The former option reduces CPU overhead by reducing console output and the latter reduces network traffic.
+Copying files is a common operation performed on a file server. Windows Server has several built-in file copy utilities that you can run by using a command prompt. Robocopy is recommended. Introduced in Windows Server 2008 R2, the **/mt** option of Robocopy can significantly improve speed on remote file transfers by using multiple threads when copying multiple small files. We also recommend using the **/log** option to reduce console output by redirecting logs to a NUL device or to a file. When you use Xcopy, we recommend adding the **/q** and **/k** options to your existing parameters. The former option reduces CPU overhead by reducing console output and the latter reduces network traffic.
 
 ## SMB performance tuning
-
 
 File server performance and available tunings depend on the SMB protocol that is negotiated between each client and the server, and on the deployed file server features. The highest protocol version currently available is SMB 3.1.1 in Windows Server 2022, Windows Server 2016 and Windows 10. You can check which version of SMB is in use on your network by using Windows PowerShell **Get-SMBConnection** on clients and **Get-SMBSession | FL** on servers.
 
 ### SMB 3.0 protocol family
 
-SMB 3.0 was introduced in Windows Server 2012 and further enhanced in Windows Server 2012 R2 (SMB 3.02) and Windows Server 2016 (SMB 3.1.1). This version introduced technologies that may significantly improve performance and availability of the file server. For more info, see [SMB in Windows Server 2012 and 2012 R2 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11)) and [What's new in SMB 3.1.1](https://aka.ms/smb311).
-
-
+SMB 3.0 was introduced in Windows Server 2012 and further enhanced in Windows Server 2012 R2 (SMB 3.02) and Windows Server 2016 (SMB 3.1.1). This version introduced technologies that may significantly improve performance and availability of the file server. For more info, see [SMB in Windows Server 2012 and 2012 R2 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11)) and [What's new in SMB 3.1.1](https://aka.ms/smb311).
 
 ### SMB Direct
 
@@ -46,11 +44,11 @@ For more info about SMB Multichannel, see [Deploy SMB Multichannel](/previous-ve
 
 SMB Scale-out allows SMB 3.0 in a cluster configuration to show a share in all nodes of a cluster. This active/active configuration makes it possible to scale file server clusters further, without a complex configuration with multiple volumes, shares and cluster resources. The maximum share bandwidth is the total bandwidth of all file server cluster nodes. The total bandwidth is no longer limited by the bandwidth of a single cluster node, but rather depends on the capability of the backing storage system. You can increase the total bandwidth by adding nodes.
 
-For more info about SMB Scale-Out, see [Scale-Out File Server for Application Data Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831349(v=ws.11)) and the blog post [To scale out or not to scale out, that is the question](https://blogs.technet.com/b/filecab/archive/2013/12/05/to-scale-out-or-not-to-scale-out-that-is-the-question.aspx).
+For more info about SMB Scale-Out, see [Scale-Out File Server for Application Data Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831349(v=ws.11)) and the blog post [To scale out or not to scale out, that is the question](https://aka.ms/scaleoutornot).
 
 ### Performance counters for SMB 3.0
 
-The following SMB performance counters were introduced in Windows Server 2012, and they are considered a base set of counters when you monitor the resource usage of SMB 2 and higher versions. Log the performance counters to a local, raw (.blg) performance counter log. It is less expensive to collect all instances by using the wildcard character (\*), and then extract particular instances during post-processing by using Relog.exe.
+The following SMB performance counters were introduced in Windows Server 2012, and they are considered a base set of counters when you monitor the resource usage of SMB 2 and higher versions. Log the performance counters to a local, raw (.blg) performance counter log. It is less expensive to collect all instances by using the wildcard character (\*), and then extract particular instances during post-processing by using Relog.exe.
 
 -   **SMB Client Shares**
 
@@ -78,7 +76,7 @@ The following SMB performance counters were introduced in Windows Server 2012, 
 
 -   **Physical Disk, SMB, CSV FS performance counters relationships**
 
-    For more info on how Physical Disk, SMB, and CSV FS (file system) counters are related, see the following blog post: [Cluster Shared Volume Performance Counters](https://blogs.msdn.com/b/clustering/archive/2014/06/05/10531462.aspx).
+    For more info on how Physical Disk, SMB, and CSV FS (file system) counters are related, see the following blog post: [Cluster Shared Volume Performance Counters](https://aka.ms/clusterperfcount).
 
 ## Tuning parameters for SMB file servers
 
