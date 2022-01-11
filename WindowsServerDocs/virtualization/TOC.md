@@ -23,6 +23,8 @@
 #### [Create a virtual switch](hyper-v/get-started/create-a-virtual-switch-for-Hyper-V-virtual-machines.md)
 #### [Create a virtual machine](hyper-v/get-started/create-a-virtual-machine-in-Hyper-V.md)
 ### [Plan](hyper-v/plan/Plan-Hyper-V-on-Windows-Server.md)
+#### Compatibility
+##### [Guest operating system or application supportability](hyper-v/plan/guest-operating-system-or-application-supportability.md)
 #### [VM Generation](hyper-v/plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
 #### [Networking](hyper-v/plan/plan-hyper-v-networking-in-windows-server.md)
 #### [Scalability](hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md)
