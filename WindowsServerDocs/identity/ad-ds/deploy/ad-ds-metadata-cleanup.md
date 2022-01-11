@@ -56,18 +56,18 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 
 ## Clean up server metadata using the command line
 
-As an alternative, you can clean up metadata by using Ntdsutil.exe, a command-line tool that is installed automatically on all domain controllers and servers that have Active Directory Lightweight Directory Services (AD LDS) installed. Ntdsutil.exe is also available on computers that have RSAT installed. To clean up server metadata by using Ntdsutil do the following:
+As an alternative, you can clean up metadata by using ntdsutil.exe, a command-line tool that is installed automatically on all domain controllers and servers that have Active Directory Lightweight Directory Services (AD LDS) installed. ntdsutil.exe is also available on computers that have RSAT installed. To clean up server metadata by using ntdsutil do the following:
 
 1. Open a command prompt as an administrator: On the **Start** menu, right-click **Command Prompt**, and then click **Run as administrator**. If the **User Account Control** dialog box appears, provide credentials of an Enterprise Administrator if required, and then click **Continue**.
-2. At the command prompt, type the following command, and then press ENTER:
+2. At the command prompt, type the following command, and then press **Enter**:
 
    `ntdsutil`
 
-3. At the `ntdsutil:` prompt, type the following command, and then press ENTER:
+3. At the `ntdsutil:` prompt, type the following command, and then press **Enter**:
 
    `metadata cleanup`
 
-4. At the `metadata cleanup:` prompt, type the following command, and then press ENTER:
+4. At the `metadata cleanup:` prompt, type the following command, and then press **Enter**:
 
    `remove selected server <ServerName>`
 
@@ -75,7 +75,7 @@ As an alternative, you can clean up metadata by using Ntdsutil.exe, a command-li
 
    At this point, Ntdsutil confirms that the domain controller was removed successfully. If you receive an error message that indicates that the object cannot be found, the domain controller might have been removed earlier.
 
-6. At the `metadata cleanup:` and `ntdsutil:` prompts, type `quit`, and then press ENTER.
+6. At the `metadata cleanup:` and `ntdsutil:` prompts, type `quit`, and then press **Enter**.
 
 7. To confirm removal of the domain controller:
 
