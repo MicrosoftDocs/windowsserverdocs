@@ -44,7 +44,7 @@ To use telnet to connect to the computer running the telnet Server Service at *t
 telnet telnet.microsoft.com
 ```
 
-To use telnet to connect to the computer running the telnet Server Service at *telnet.microsoft.com on TCP port 44* and ro log the session activity in a local file called *telnetlog.txt*, type:
+To use telnet to connect to the computer running the telnet Server Service at *telnet.microsoft.com on TCP port 44* and to log the session activity in a local file called *telnetlog.txt*, type:
 
 ```
 telnet /f telnetlog.txt telnet.microsoft.com 44
