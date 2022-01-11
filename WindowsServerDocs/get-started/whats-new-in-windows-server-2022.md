@@ -29,7 +29,7 @@ Trusted Platform Module 2.0 (TPM 2.0) secure crypto-processor chips provide a se
 
 #### Firmware protection
 
-Firmware executes with high privileges and is often invisible to traditional anti-virus solutions, which has lead to a rise in the number of firmware-based attacks. Secured-core server processors support measurement and verification of boot processes with [Dynamic Root of Trust for Measurement (DRTM) technology](/windows/security/threat-protection/windows-defender-system-guard/how-hardware-based-root-of-trust-helps-protect-windows#secure-launchthe-dynamic-root-of-trust-for-measurement-drtm) and isolation of driver access to memory with [Direct Memory Access (DMA) protection](/windows/security/information-protection/kernel-dma-protection-for-thunderbolt).
+Firmware executes with high privileges and is often invisible to traditional anti-virus solutions, which has led to a rise in the number of firmware-based attacks. Secured-core server processors support measurement and verification of boot processes with [Dynamic Root of Trust for Measurement (DRTM) technology](/windows/security/threat-protection/windows-defender-system-guard/how-hardware-based-root-of-trust-helps-protect-windows#secure-launchthe-dynamic-root-of-trust-for-measurement-drtm) and isolation of driver access to memory with [Direct Memory Access (DMA) protection](/windows/security/information-protection/kernel-dma-protection-for-thunderbolt).
 
 #### UEFI secure boot
 
@@ -65,7 +65,7 @@ Windows Server failover clusters now support granular control of encrypting and 
 
 #### SMB Direct and RDMA encryption
 
-SMB Direct and RDMA supply high bandwidth, low latency networking fabric for workloads like Storage Spaces Direct, Storage Replica, Hyper-V, Scale-out File Server, and SQL Server. SMB Direct in Windows Server 2022 now supports encryption. Previously, enabling SMB encryption disabled direct data placement; this was intentional, but seriously impacted performance. Now data is encrypted data before placement, leading to far less performance degradation while adding AES-128 and AES-256 protected packet privacy.
+SMB Direct and RDMA supply high bandwidth, low latency networking fabric for workloads like Storage Spaces Direct, Storage Replica, Hyper-V, Scale-out File Server, and SQL Server. SMB Direct in Windows Server 2022 now supports encryption. Previously, enabling SMB encryption disabled direct data placement; this was intentional, but seriously impacted performance. Now data is encrypted before data placement, leading to far less performance degradation while adding AES-128 and AES-256 protected packet privacy.
 
 More information on SMB encryption, signing acceleration, secure RDMA, and cluster support can be found at [SMB security enhancements](../storage/file-server/smb-security.md).
 
