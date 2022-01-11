@@ -15,7 +15,7 @@ Hyper-V is a hypervisor that is broadly used in many Microsoft server products, 
 
 Although the different products that include Hyper-V could contain variations in features, the common codebase provides a consistent platform for guest operating systems and applications running inside of a virtual machine to run on compatible products that share the same Hyper-V build number. This means that any support or compatibility statements for a guest operating system or application that is certified for specific builds of Hyper-V is compatible with all products that share the same build number for Hyper-V.
 
-The table below shows which Hyper-V build number is available in which compatible products:
+The table below shows which Hyper-V build numbers are available in which compatible products:
 
 | Hyper-V build | Compatible products |
 |--|--|
