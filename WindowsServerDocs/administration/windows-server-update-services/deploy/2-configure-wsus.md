@@ -256,13 +256,13 @@ To begin the process, you must enable SSL support on the WSUS server's IIS servi
 
 The steps that are required to get an SSL certificate for the server are beyond the scope of this article and will depend on your network configuration. For more information and for instructions about how to install certificates and set up this environment, we suggest the following articles:
 
-- [Suite B PKI step-by-step guide](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff829847(v=ws.10))
+- [Suite B PKI step-by-step guide](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff829847(v=ws.10))
 
-- [Implementing and administering certificate templates](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731256(v=ws.10))
+- [Implementing and administering certificate templates](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731256(v=ws.10))
 
-- [Active Directory Certificate Services upgrade and migration guide](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc742515(v=ws.10))
+- [Active Directory Certificate Services upgrade and migration guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc742515(v=ws.10))
 
-- [Configure certificate autoenrollment](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731522(v=ws.11))
+- [Configure certificate autoenrollment](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731522(v=ws.11))
 
 ### 2.3.2. Configure the WSUS server's IIS web server to use SSL for some connections
 
