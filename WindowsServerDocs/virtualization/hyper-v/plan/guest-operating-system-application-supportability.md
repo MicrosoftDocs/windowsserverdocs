@@ -1,5 +1,5 @@
 ---
-title: Guest operating system or application supportability on Hyper-V
+title: Guest operating system and application supportability on Hyper-V
 description: Understand which versions of Windows Server or Azure Stack HCI are compatible products for a guest operating system or application that has been validated for Hyper-V.
 ms.topic: conceptual
 author: dknappettmsft
@@ -9,7 +9,7 @@ ms.date: 01/11/2022
 ms.prod: windows-server
 ---
 
-# Guest operating system or application supportability on Hyper-V
+# Guest operating system and application supportability on Hyper-V
 
 Hyper-V is a hypervisor which is broadly used in many Microsoft server products, including the Windows Server family (Datacenter, Standard, and Essentials editions) and Azure Stack HCI. Hyper-V provides a platform with broad ecosystem support and compatibility. This article clarifies which versions of Windows Server or Azure Stack HCI map to which Hyper-V build numbers to help understand supported scenarios where a guest operating system or application has been validated for Hyper-V.
 
