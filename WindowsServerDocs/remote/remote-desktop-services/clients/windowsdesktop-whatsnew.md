@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/11/2022
+ms.date: 11/12/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -22,7 +22,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 ## Updates for version 1.2.2851 (Insider)
 
-Date published: 01/11/2022
+*Date published: 01/12/2022*
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
@@ -35,7 +35,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 
 ## Updates for version 1.2.2691
 
-Date published: 01/11/2022
+*Date published: 01/12/2022*
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
