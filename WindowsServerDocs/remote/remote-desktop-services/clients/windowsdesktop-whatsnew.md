@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/12/2022
+ms.date: 01/12/2021
 ---
 # What's new in the Windows Desktop client
 
