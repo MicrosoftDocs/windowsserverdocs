@@ -10,17 +10,17 @@ ms.topic: article
 
 # Upgrade a Storage Spaces Direct cluster to Windows Server 2019
 
-To upgrade a Storage Spaces Direct cluster from Windows Server 2016 to Windows Server 2019, you have four options using the [cluster OS rolling upgrade process](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md). Two options involve keeping the VMs running, and two options involve stopping all VMs. Each option has strengths and weaknesses, so select the option that best suits the needs of your organization.
+To upgrade a Storage Spaces Direct cluster from Windows Server 2016 to Windows Server 2019, you have four options using the [cluster OS rolling upgrade process](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md). Two options involve keeping the virtual machines (VMs) running, and two options involve stopping all VMs. Each option has strengths and weaknesses, so select the option that best suits the needs of your organization.
 
 To read more about an upgrade option, select a link:
 
-- **[In-place upgrade while VMs are running](#in-place-upgrade-while-vms-are-running)** on each server in the cluster. This option incurs no VM downtime, but you must wait for storage jobs (mirror repair) to finish after each server is upgraded.
+- [In-place upgrade while VMs are running](#in-place-upgrade-while-vms-are-running) on each server in the cluster. This option incurs no VM downtime, but you must wait for storage jobs (mirror repair) to finish after each server is upgraded.
 
-- **[Clean OS installation while VMs are running](#clean-os-installation-while-vms-are-running)** on each server in the cluster. This option incurs no VM downtime, but you must wait for storage jobs (mirror repair) to finish after each server is upgraded, and you must set up each server and all its apps and roles again. We recommend this option over an in-place upgrade.
+- [Clean OS installation while VMs are running](#clean-os-installation-while-vms-are-running) on each server in the cluster. This option incurs no VM downtime, but you must wait for storage jobs (mirror repair) to finish after each server is upgraded, and you must set up each server and all its apps and roles again. We recommend this option over an in-place upgrade.
 
-- **[In-place upgrade while VMs are stopped](#in-place-upgrade-while-vms-are-stopped)** on each server in the cluster. This option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair), so it's faster.
+- [In-place upgrade while VMs are stopped](#in-place-upgrade-while-vms-are-stopped) on each server in the cluster. This option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair), so it's faster.
 
-- **[Clean OS installation while VMs are stopped](#clean-os-installation-while-vms-are-stopped)** on each server in the cluster. This option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair), so it's faster. We recommend this option over an in-place upgrade.
+- [Clean OS installation while VMs are stopped](#clean-os-installation-while-vms-are-stopped) on each server in the cluster. This option incurs VM downtime, but you don't need to wait for storage jobs (mirror repair), so it's faster. We recommend this option over an in-place upgrade.
 
 ## Prerequisites and limitations
 
@@ -135,7 +135,7 @@ This option incurs no VM downtime, but you must wait for storage jobs (mirror re
     Set-ClusterParameter  SkipMigrationDestinationCheck -Value 0
     ```
 
-9. Verify that the upgraded cluster works as expected. Roles should fail over correctly and, if VM live migration is used on the cluster, VMs should successfully live-migrate.
+9. Verify that the upgraded cluster works as expected. Roles should fail over correctly. If VM live migration is used on the cluster, VMs should successfully live-migrate.
 
 10. Validate the cluster by running cluster validation and examining the cluster validation report. In an elevated PowerShell session, run the following command:
 
@@ -241,7 +241,7 @@ This option incurs no VM downtime, but you must wait for storage jobs (mirror re
     Set-ClusterParameter SkipMigrationDestinationCheck -Value 0
     ```
 
-9. Verify that the upgraded cluster works as expected. Roles should fail over correctly and, if VM live migration is used on the cluster, VMs should successfully live-migrate.
+9. Verify that the upgraded cluster works as expected. Roles should fail over correctly. If VM live migration is used on the cluster, VMs should successfully live-migrate.
 
 10. Validate the cluster by running Cluster Validation and examining the cluster validation report. In an elevated PowerShell session, run the following command:
 
@@ -325,7 +325,7 @@ This option incurs VM downtime, but it might take less time than if you kept the
 
 8. Optionally, upgrade VM configuration levels by stopping each VM, using the `Update-VMVersion` cmdlet, and then starting the VMs again.
 
-9. Verify that the upgraded cluster works as expected. Roles should fail over correctly and, if VM live migration is used on the cluster, VMs should successfully live-migrate.
+9. Verify that the upgraded cluster works as expected. Roles should fail over correctly. If VM live migration is used on the cluster, VMs should successfully live-migrate.
 
 10. Validate the cluster by running Cluster Validation and examining the cluster validation report. In an elevated PowerShell session, run the following command:
 
@@ -419,7 +419,7 @@ This option incurs VM downtime, but it might take less time than if you kept the
 
 8. Optionally, upgrade VM configuration levels by stopping each VM, using the `Update-VMVersion` cmdlet, and then starting the VMs again.
 
-9. Verify that the upgraded cluster works as expected. Roles should fail over correctly and, if VM live migration is used on the cluster, VMs should successfully live-migrate.
+9. Verify that the upgraded cluster works as expected. Roles should fail over correctly. If VM live migration is used on the cluster, VMs should successfully live-migrate.
 
 10. Validate the cluster by running Cluster Validation and examining the cluster validation report. In an elevated PowerShell session, run the following command:
 
