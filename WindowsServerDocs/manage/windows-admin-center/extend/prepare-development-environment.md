@@ -27,7 +27,7 @@ To begin developing with the SDK, download and install the following prerequisit
 * Visual Studio or [Visual Studio Code](https://code.visualstudio.com)
 * [Node.js](https://nodejs.org/en/download/releases/) (version 12.18.2)
 * [Node Package Manager](https://npmjs.com/get-npm) (6.14.5 or later)
-* [Nuget](https://www.nuget.org/downloads) (for publishing extensions)
+* [NuGet](https://www.nuget.org/downloads) (for publishing extensions)
 
 > [!NOTE]
 > You need to install and run Windows Admin Center in Dev Mode to follow the steps below. Dev Mode allows Windows Admin Center to load unsigned extension packages. Windows Admin Center can only be installed in Dev Mode on a Windows 10 machine.
