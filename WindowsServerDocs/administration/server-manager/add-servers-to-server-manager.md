@@ -6,7 +6,6 @@ ms.assetid: aab895f2-fe4d-4408-b66b-cdeadbd8969e
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.localizationpriority: medium
 ms.date: 02/01/2018
 ---
 

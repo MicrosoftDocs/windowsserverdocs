@@ -4,7 +4,6 @@ description: Learn about how often to install the latest version of Windows Admi
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
-ms.localizationpriority: medium
 ms.date: 04/12/2019
 ---
 # Windows Admin Center support policy

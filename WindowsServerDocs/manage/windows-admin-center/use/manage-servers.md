@@ -5,7 +5,6 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 11/21/2019
-ms.localizationpriority: medium
 ---
 # Manage Servers with Windows Admin Center
 

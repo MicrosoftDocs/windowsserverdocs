@@ -5,7 +5,6 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.date: 09/10/2018
-ms.localizationpriority: medium
 ---
 # Disable Offline Files on individual redirected folders
 

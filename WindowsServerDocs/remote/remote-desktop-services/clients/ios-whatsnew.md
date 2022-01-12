@@ -5,8 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 12/17/2021
-ms.localizationpriority: medium
+ms.date: 01/04/2022
 ---
 # What's new in the iOS client
 
@@ -16,7 +15,7 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Settings** > **Submit Feedback**.
 
-## Updates for version 10.3.5 (5090)
+## Updates for version 10.3.6 (5090)
 
 Date published: November 11, 2021
 

@@ -63,7 +63,7 @@ Configuration: For new domains, this feature is enabled by default. For existing
 
     ![Domain properties](../media/Credentials-Protection-And-Management/domain-properties.png)
 
-2. Select **Enable rolling of expiring NTLM secrets during sign on, for users who are required to use Microsoft Passport or smart card for interactive logon**.
+2. Select **Enable rolling of expiring NTLM secrets during sign on, for users who are required to use Windows Hello for Business or smart card for interactive logon**.
 
     ![Autoroll expiring NTLM secrets](../media/Credentials-Protection-And-Management/autoroll-ntlm.png)
 

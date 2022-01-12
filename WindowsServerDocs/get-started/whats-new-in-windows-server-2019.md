@@ -7,7 +7,6 @@ ms.author: jgerend
 manager: femila
 ms.date: 08/13/2021
 ms.prod: windows-server
-ms.localizationpriority: high
 ---
 
 # What's new in Windows Server 2019

@@ -4,7 +4,6 @@ description: In this step, you learn about the ProfileXML options and schema, an
 ms.topic: article
 ms.date: 05/29/2018
 ms.assetid: d165822d-b65c-40a2-b440-af495ad22f42
-ms.localizationpriority: medium
 ms.author: v-tea
 author: Teresa-MOTIV
 ms.reviewer: deverette

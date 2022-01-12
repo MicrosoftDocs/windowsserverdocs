@@ -6,7 +6,6 @@ author: nedpyle
 ms.author: nedpyle
 manager: jgerend
 ms.date: 01/28/2020
-ms.localizationpriority: medium
 ---
 
 # Deploy Azure virtual machines from within Windows Admin Center

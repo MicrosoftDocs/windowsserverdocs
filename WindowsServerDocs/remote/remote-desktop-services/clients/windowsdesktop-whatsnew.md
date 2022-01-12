@@ -5,8 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 12/02/2021
-ms.localizationpriority: medium
+ms.date: 01/12/2021
 ---
 # What's new in the Windows Desktop client
 
@@ -18,22 +17,44 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.2688        |1.2.1672                  |
-|Insider    |1.2.2688        |1.2.1672                  |
+|Public     |1.2.2691        |1.2.1672                  |
+|Insider    |1.2.2851        |1.2.1672                  |
+
+## Updates for version 1.2.2851 (Insider)
+
+*Date published: 01/12/2022*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Fixed an issue that caused a redirected camera to give incorrect error codes when camera access was restricted in the Privacy settings on the client device. This update should give accurate error messages in apps using the redirected camera.
+- Fixed an issue where the Azure Active Directory credential prompt appeared in the wrong monitor.
+- Fixed an issue where the background refresh and update tasks were registered with the task scheduler, which caused the the background and update task times to change without user input.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams for Azure Virtual Desktop, including the following:
+    - In September 2021 we released a preview of our GPU render path optimizations but defaulted them off. After extensive testing, we've now enabled them by default. These GPU render path optimizations reduce endpoint-to-endpoint latency and solve some performance issues. You can manually disable these optimizations c by setting the registry key **HKEY_CURRENT_USER \SOFTWARE\Microsoft\Terminal Server Client\IsSwapChainRenderingEnabled** to **00000000**.
+
+## Updates for version 1.2.2691
+
+*Date published: 01/12/2022*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Fixed the vulnerability known as [CVE-2019-0887](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2019-0887).
+- Fixed the vulnerability known as [CVE-2022-21850](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-21850).
+- Fixed the vulnerability known as [CVE-2022-21851](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-21851).
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 
 ## Updates for version 1.2.2688
 
 *Date published: 12/09/2021*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWQvmX), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWQvmV), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWQvmY)
 
 - Fixed an issue where some users were unable to subscribe using the "subscribe with URL" option after updating to version 1.2.2687.0.
 
 ## Updates for version 1.2.2687
 
 *Date published: 12/02/2021*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWQcdc), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWQ9C1), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWQcdd)
 
 - Improved manual refresh functionality to acquire new user tokens, which ensures the service can accurately update user access to resources.
 - Fixed an issue where the service sometimes pasted empty frames when a user tried to copy an image from a remotely running Internet Explorer browser to a locally running Word document.
@@ -56,8 +77,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.2606
 
 *Date published: 11/9/2021*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWOzKx), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWOzKy), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWOzKw)
 
 - Fixed the vulnerability known as [CVE-2021-38665](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38665).
 - Fixed the vulnerability known as [CVE-2021-38666](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-38666).

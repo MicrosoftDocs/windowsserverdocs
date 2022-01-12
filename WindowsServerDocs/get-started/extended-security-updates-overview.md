@@ -9,7 +9,6 @@ ms.date: 08/17/2021
 ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.localizationpriority: high
 ---
 
 # Extended Security Updates for Windows Server

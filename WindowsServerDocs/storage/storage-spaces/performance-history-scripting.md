@@ -6,7 +6,6 @@ manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 05/15/2018
-ms.localizationpriority: medium
 ---
 
 # Scripting with PowerShell and Storage Spaces Direct performance history

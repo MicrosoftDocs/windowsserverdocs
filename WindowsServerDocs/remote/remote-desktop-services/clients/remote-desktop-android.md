@@ -7,7 +7,6 @@ author: heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 07/15/2021
-ms.localizationpriority: medium
 ms.custom: contperf-fy21q1
 ---
 

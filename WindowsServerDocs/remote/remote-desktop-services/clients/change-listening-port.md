@@ -5,7 +5,6 @@ ms.topic: article
 author: lizap
 ms.author: elizapo
 ms.date: 07/19/2018
-ms.localizationpriority: medium
 ---
 # Change the listening port for Remote Desktop on your computer
 

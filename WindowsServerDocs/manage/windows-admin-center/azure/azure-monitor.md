@@ -4,7 +4,6 @@ description: Windows Admin Center integrates with Azure Monitor
 ms.topic: article
 author: IngridAtMicrosoft
 ms.author: wscontent
-ms.localizationpriority: medium
 ms.date: 10/18/2021
 ---
 

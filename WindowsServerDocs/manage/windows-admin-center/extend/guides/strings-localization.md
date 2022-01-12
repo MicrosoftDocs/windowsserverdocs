@@ -5,7 +5,6 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/18/2018
-ms.localizationpriority: medium
 ---
 
 # Strings and localization in Windows Admin Center #

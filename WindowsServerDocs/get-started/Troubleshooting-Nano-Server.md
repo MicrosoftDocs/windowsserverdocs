@@ -7,7 +7,6 @@ ms.topic: article
 ms.assetid: e427c66f-9571-4b8c-b65d-e7370d91544d
 author: jaimeo
 ms.author: jaimeo
-ms.localizationpriority: medium
 ---
 # Troubleshooting Nano Server
 

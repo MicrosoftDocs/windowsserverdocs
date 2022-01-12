@@ -21,10 +21,9 @@ If you are a Microsoft partner and want to be included in the list of partners w
 
 Already a Microsoft Partner and have questions? Contact the Remote Desktop team at <rdhostingpartners@microsoft.com>.
 
-
 ## Partners who have passed the learning path assessment
 
-If you are a customer looking for a partner to help you host Windows desktops and applications in Azure for your users, we have compiled a list of partners who have passed the assessment. Here is a [list of those partners](rds-hosting-partners.md), as of 03/28/2017, that you can download.
+If you are a customer looking for a partner to help you host Windows desktops and applications in Azure for your users, we have compiled a list of partners who have passed the assessment.
 
 You can find more information on each partner using these steps:
 

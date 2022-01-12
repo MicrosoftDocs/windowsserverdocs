@@ -6,7 +6,6 @@ author: heidilohr
 manager: femila
 ms.author: helohr
 ms.date: 08/03/2021
-ms.localizationpriority: medium
 ---
 # Windows Desktop client for admins
 

@@ -8,7 +8,6 @@ manager: femila
 ms.date: 11/22/2021
 ms.prod: windows-server
 ms.assetid: 0f78ef4c-dd12-4b1b-8c6e-251dd803c5d1
-ms.localizationpriority: medium
 ---
 
 # Upgrade and migrate roles and features in Windows Server

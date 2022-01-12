@@ -5,7 +5,7 @@ ms.topic: article
 author: davannaw-msft
 ms.author: dawhite
 ms.localizationpriority: medium
-ms.date: 09/18/2018
+ms.date: 12/20/2021
 ---
 
 # Prepare your development environment

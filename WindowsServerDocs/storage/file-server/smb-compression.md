@@ -6,7 +6,6 @@ ms.topic: article
 author: NedPyle
 ms.author: inhenkel
 ms.date: 06/25/2021
-ms.localizationpriority: medium
 ---
 
 # SMB compression

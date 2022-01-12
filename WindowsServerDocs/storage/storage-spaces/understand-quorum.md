@@ -6,7 +6,6 @@ manager: eldenc
 ms.topic: article
 author: adagashe
 ms.date: 10/20/2021
-ms.localizationpriority: medium
 ---
 # Understanding cluster and pool quorum
 

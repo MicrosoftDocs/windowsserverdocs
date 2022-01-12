@@ -4,7 +4,6 @@ description: Windows Admin Center Common Troubleshooting Steps (Project Honolulu
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
-ms.localizationpriority: medium
 ms.date: 01/15/2021
 ---
 # Troubleshooting Windows Admin Center

@@ -5,7 +5,6 @@ ms.topic: article
 author: daniellee-msft
 ms.author: jol
 ms.date: 1/7/2019
-ms.localizationpriority: medium
 ---
 # Lenovo XClarity Integrator Extension
 

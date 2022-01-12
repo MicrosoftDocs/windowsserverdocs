@@ -6,7 +6,6 @@ manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/08/2018
-ms.localizationpriority: medium
 ---
 
 # Drive symmetry considerations for Storage Spaces Direct

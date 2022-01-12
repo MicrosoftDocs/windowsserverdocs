@@ -6,7 +6,6 @@ ms.date: 01/19/2021
 ms.topic: article
 author: lizap
 manager: dougkim
-ms.localizationpriority: medium
 ---
 
 # Use performance counters to diagnose app performance problems on Remote Desktop Session Hosts

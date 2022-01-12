@@ -7,7 +7,6 @@ manager: eldenc
 ms.topic: article
 author: cosmosdarwin
 ms.date: 07/01/2020
-ms.localizationpriority: medium
 ---
 
 # Choosing drives for Storage Spaces Direct
