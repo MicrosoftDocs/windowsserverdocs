@@ -249,11 +249,11 @@ The following tables offer Microsoft guidance on disabling system services on Wi
 
 | Name | Description |
 |--|--|
-| **Service name** | KeyIso
-| **Description** | The CNG key isolation service is hosted in the LSA process. The service provides key process isolation to private keys and associated cryptographic operations as required by the Common Criteria. The service stores and uses long-lived keys in a secure process complying with Common Criteria requirements.
-| **Installation** | Always installed
-| **Startup type** | Manual
-| **Recommendation** | No guidance
+| **Service name** | KeyIso |
+| **Description** | The CNG key isolation service is hosted in the LSA process. The service provides key process isolation to private keys and associated cryptographic operations as required by the Common Criteria. The service stores and uses long-lived keys in a secure process complying with Common Criteria requirements. |
+| **Installation** | Always installed |
+| **Startup type** | Manual |
+| **Recommendation** | No guidance |
 | **Comments** | None |
 
 ## COM+ Event System
