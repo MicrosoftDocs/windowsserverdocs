@@ -48,7 +48,7 @@ npm install -g @angular/cli@11.2.14
 npm install -g gulp
 npm install -g typescript
 npm install -g tslint
-npm install -g windows-admin-center-sdk
+npm install -g @microsoft/windows-admin-center-sdk
 ```
 
 >[!NOTE]
