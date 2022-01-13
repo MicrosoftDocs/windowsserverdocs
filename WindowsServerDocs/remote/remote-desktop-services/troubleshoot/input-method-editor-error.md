@@ -10,7 +10,7 @@ ms.date: 10/06/2020
 ---
 # Input method editor issue in RemoteApp scenarios
 
-We've been made aware of the following issues with the input method editor (IME) through user feedback:
+We have fixed the following issues on Windows 10+ operating systems.
 
 - Users have reported being unable to change IME mode from their applications.
 - Users couldn't change IME mode using the keyboard.
@@ -19,6 +19,6 @@ We've been made aware of the following issues with the input method editor (IME)
 Affected platforms:
 
 - Azure Virtual Desktop
-- Remote Desktop Services (so far, this issue has only been reported for Windows Server 2019)
+- Remote Desktop Services
 
-We're currently working on a solution to help solve this issue.
+Windows 8.1 and below are out of service and remain affected.
