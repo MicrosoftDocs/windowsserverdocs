@@ -171,6 +171,7 @@
 ##### [Scripting samples](storage-spaces/performance-history-scripting.md)
 #### [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md)
 #### [Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md)
+#### [Adjustable storage repair speed](storage-spaces/storage-spaces-adjustable-repair-speed.md)
 
 ### Troubleshoot
 #### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
