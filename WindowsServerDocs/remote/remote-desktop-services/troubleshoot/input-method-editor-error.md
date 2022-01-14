@@ -10,7 +10,8 @@ ms.date: 10/06/2020
 ---
 # Input method editor issue in RemoteApp scenarios
 
-The following issues have been addressed in Windows 10+ operating systems as of October 2021.
+The following issues have been addressed in Windows 10 and later as of October 2021.
+
 
 - Users have reported being unable to change IME mode from their applications.
 - Users couldn't change IME mode using the keyboard.
