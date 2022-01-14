@@ -26,4 +26,5 @@ Please Note:
 
 > - Windows 8.1 and earlier are out of service and remain affected.
 
-- Fix must be applied on both the Remote Desktop Server and Client machines
+> - You must apply the update to both the Remote Desktop server and the client devices.
+
