@@ -24,5 +24,6 @@ Affected platforms:
 
 Please Note:
 
-- Windows 8.1 and below are out of service and remain affected
+> - Windows 8.1 and earlier are out of service and remain affected.
+
 - Fix must be applied on both the Remote Desktop Server and Client machines
