@@ -14,7 +14,7 @@ ms.mktglfcycl: manage
 
 Extended Security Updates (ESU) for Windows Server include security updates and bulletins rated *critical* and *important*. Before using Extended Security Updates, you should read [Extended Security Updates for Windows Server Overview](extended-security-updates-overview.md) to understand what Extended Security Updates are and what your options are.
 
-How you get Extended Security Updates depends on where your server is hosted. Applicable virtual machines (VM's) hosted in Azure are automatically enabled for Extended Security Updates and these updates are provided free of charge.
+How you get Extended Security Updates depends on where your server is hosted. Applicable virtual machines (VMs) hosted in Azure are automatically enabled for Extended Security Updates and these updates are provided free of charge.
 
 For other environments, such as on-premises VMs or physical servers, you need to manually request and configure Extended Security Updates. You can purchase Extended Security Updates through Volume Licensing Programs such as Enterprise Agreement (EA), Enterprise Agreement Subscription (EAS), Enrollment for Education Solutions (EES), or Server and Cloud Enrollment (SCE).
 
@@ -22,7 +22,7 @@ To use Extended Security Updates on non-Azure VMs, you create a Multiple Activat
 
 ## Azure virtual machines
 
-Applicable virtual machines (VM's) hosted in Azure are automatically enabled for Extended Security Updates and these updates are provided free of charge. You don't need to configure anything, and there's no additional charge for using Extended Security Updates with Azure VMs. Extended Security Updates are automatically delivered to Azure VMs if they're configured to receive updates.
+Applicable virtual machines (VMs) hosted in Azure are automatically enabled for Extended Security Updates and these updates are provided free of charge. You don't need to configure anything, and there's no additional charge for using Extended Security Updates with Azure VMs. Extended Security Updates are automatically delivered to Azure VMs if they're configured to receive updates.
 
 > [!NOTE]
 > Azure Classic VMs (Microsoft.ClassicCompute) require additional configuration to receive Extended Security Updates since they don't have access to the [Azure Instance Metadata Service](/azure/virtual-machines/windows/instance-metadata-service) that determines Extended Security Updates eligibility. Please contact [Microsoft Support](https://support.microsoft.com/contactus?PID=17336) for more help with this.
