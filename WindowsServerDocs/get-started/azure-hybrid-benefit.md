@@ -1,7 +1,7 @@
 ---
 title: Azure Hybrid Benefit for Windows Server
 description: Azure Hybrid Benefit for Windows Server allows you to save up to 40% on Windows Server virtual machines (VMs) in Azure by using your on-premises Windows Server licenses with Software Assurance or subscription license
-ms.date: 11/26/2021
+ms.date: 01/17/2022
 ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
@@ -9,9 +9,11 @@ ms.author: daknappe
 
 # Azure Hybrid Benefit for Windows Server
 
-Azure Hybrid Benefit for Windows Server allows you to make significant savings on Windows Server virtual machines (VMs) running in Azure by using your on-premises Windows Server licenses with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-by-benefits) or a subscription license. With this benefit, you only need to pay for the infrastructure costs of the virtual machine because the license for Windows Server is covered by the Software Assurance benefit. The benefit is applicable to both Standard and Datacenter editions of Windows Server and is available across all Azure regions and sovereign clouds. It also includes VMs with additional software such as SQL Server or third-party marketplace software. You can save further on the infrastructure costs with [Azure Reserved Virtual Machine Instances](https://azure.microsoft.com/pricing/reserved-vm-instances/) by reserving virtual machines in advance.
+Azure Hybrid Benefit for Windows Server allows you to make significant savings on Windows Server virtual machines (VMs) running in Azure by using your on-premises Windows Server licenses with [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-by-benefits). With Azure Hybrid Benefit, you only need to pay for the infrastructure costs of the virtual machine because the license for Windows Server is covered by Software Assurance. Software Assurance is only available as part of a commercial licensing agreement. To learn more about Software Assurance and with which agreements it is available, see [Benefits of Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-by-benefits).
 
 :::image type="content" source="media/ahb01.png" alt-text="Windows V M cost structure":::
+
+Azure Hybrid Benefit is applicable to both Standard and Datacenter editions of Windows Server and is available across all Azure regions and sovereign clouds. It also includes VMs with additional software such as SQL Server or third-party marketplace software. You can save further on the infrastructure costs with [Azure Reserved Virtual Machine Instances](https://azure.microsoft.com/pricing/reserved-vm-instances/) by reserving VMs in advance.
 
 ## Rules and use cases
 
@@ -29,7 +31,7 @@ There are differences in how Windows Server licenses can be used depending wheth
 | Unlimited Virtualization Rights | N/A | You may use your Windows Server licenses for any number of VMs on an Azure Dedicated Host, provided you allocate Windows Server Datacenter Licenses with SA for all of the physical cores available to you on that Azure server. |
 
 > [!TIP]
-> If your licenses qualify for use in Azure, you can run either Datacenter edition or Standard edition in Azure VMs, regardless of which edition the license is for.
+> If your licenses qualify for use in Azure, you can run either Datacenter edition or Standard edition of Windows Server in Azure VMs, regardless of which edition the license is for.
 
 > [!IMPORTANT]
 > Windows Server VMs using Azure Hybrid Benefit can run in Azure only during the SA or subscription term. When the SA or subscription is nearing expiry, you need to either renew your SA or subscription, disable the hybrid benefit functionality, or de-provision those VMs that are using Azure Hybrid Benefit.
@@ -60,14 +62,7 @@ Please note that billing does not apply in real time. There will be a delay of s
 
 Be sure to perform an inventory in each Azure subscription that you own to generate a comprehensive view of your licensing position. Once you have confirmed you are fully licensed for the number of Windows Server VMs you are running with Azure Hybrid Benefit, there is no need for any further action. You should perform an inventory regularly to ensure you are using any license benefits you are entitled to in order to reduce your costs, but also to ensure that you always have enough licenses to cover the number of Windows Server VMs you have deployed with Azure Hybrid Benefit.
 
-If you do not have enough eligible Windows Server licenses for the number of VMs already deployed, you either need to purchase extra Windows Server licenses covered with SA or a subscription through one of the channels listed in the table below, purchase Windows Server VMs at regular Azure hourly rates by disabling Azure Hybrid Benefit for some VMs, or deallocate some VMs. Please note that you may buy core licenses in increments of eight cores, to qualify for each additional Windows Server VM with Azure Hybrid Benefit.
-
-Windows Server Software Assurance or subscriptions are available for purchase through one of a combination of the following Microsoft licensing channels:
-
-| Channel                     | Open     | OVS      | Select/ Select Plus | MPSA     | EA/EAS   |
-|-----------------------------|----------|----------|---------------------|----------|----------|
-| Typical size (# of devices) | 5-250    | 5-250    | >250                | >250     | >500     |
-| SA / Subscription           | Optional | Included | Optional            | Optional | Included |
+If you do not have enough eligible Windows Server licenses for the number of VMs already deployed, you either need to purchase extra Windows Server licenses covered with SA or a subscription through one of the commercial licensing agreements, purchase Windows Server VMs at regular Azure hourly rates by disabling Azure Hybrid Benefit for some VMs, or deallocate some VMs. Please note that you may buy core licenses in increments of eight cores, to qualify for each additional Windows Server VM with Azure Hybrid Benefit.
 
 > [!NOTE]
 > Microsoft reserves the right to audit customers at any time to verify eligibility for Azure Hybrid Benefit utilization.
