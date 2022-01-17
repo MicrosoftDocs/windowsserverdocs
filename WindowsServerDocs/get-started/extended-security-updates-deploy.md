@@ -5,14 +5,15 @@ ms.topic: how-to
 author: dknappettmsft
 ms.author: daknappe
 manager: femila
-ms.date: 01/14/2022
+ms.date: 01/17/2022
 ms.prod: windows-server
 ms.mktglfcycl: manage
+ms.custom: contperf-fy23q3
 ---
 
 # How to get Extended Security Updates (ESU) for Windows Server
 
-Extended Security Updates (ESU) for Windows Server include security updates and bulletins rated *critical* and *important*. Before using Extended Security Updates, you should read [Extended Security Updates for Windows Server Overview](extended-security-updates-overview.md) to understand what Extended Security Updates are and what your options are.
+Extended Security Updates (ESU) for Windows Server include security updates and bulletins rated *critical* and *important*. Before using Extended Security Updates, you should read [Extended Security Updates for Windows Server Overview](extended-security-updates-overview.md) to understand what Extended Security Updates are, how long they are available for, and what your options are.
 
 How you get Extended Security Updates depends on where your server is hosted. Applicable virtual machines (VMs) hosted in Azure are automatically enabled for Extended Security Updates and these updates are provided free of charge.
 
@@ -76,7 +77,7 @@ To register your server for Extended Security Updates and create a key, open the
     If the team doesn't approve your request, you'll see the following error:
 
     ```
-        The resource type could not be found in the namespace 'Microsoft.WindowsESU'
+    The resource type could not be found in the namespace 'Microsoft.WindowsESU'
     ```
 
 1. Under **Azure details**, select your Azure subscription, a resource group, and location for your key.

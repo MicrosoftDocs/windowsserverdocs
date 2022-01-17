@@ -1,14 +1,15 @@
 ---
 title: Overview of Extended Security Updates for Windows Server 2008, 2008 R2, 2012, and 2012 R2
 description: Learn about Extended Security Updates (ESU) for Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2, and how to upgrade on-premises servers or rehost to Azure.
-ms.topic: article
+ms.topic: conceptual
 author: dknappettmsft
 ms.author: daknappe
 manager: femila
-ms.date: 01/14/2022
+ms.date: 01/17/2022
 ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
+ms.custom: contperf-fy23q3
 ---
 
 # Extended Security Updates for Windows Server Overview
@@ -39,10 +40,12 @@ The period of time Extended Security Updates will be provided depends on the ver
 
 | Product version | Hosted | ESU duration | ESU end date |
 |--|--|--|--|
-| Windows Server 2008<br />Windows Server 2008 R2 | Azure | Four years | January 9, 2024 |
+| Windows Server 2008<br />Windows Server 2008 R2 | Azure* | Four years | January 9, 2024 |
 | Windows Server 2008<br />Windows Server 2008 R2 | Not in Azure | Three years | January 10, 2023 |
-| Windows Server 2012<br />Windows Server 2012 R2 | Azure | Three years | October 13, 2026 |
+| Windows Server 2012<br />Windows Server 2012 R2 | Azure* | Three years | October 13, 2026 |
 | Windows Server 2012<br />Windows Server 2012 R2 | Not in Azure | Three years | October 13, 2026 |
+
+\* Includes the [Azure Stack portfolio of products](https://azure.microsoft.com/overview/azure-stack/) that extend Azure services and capabilities to your environment of choice.
 
 > [!WARNING]
 > After the period of Extended Security Updates, we'll stop providing updates. We recommend you update your version of Windows Server to a more recent version as soon as possible.
