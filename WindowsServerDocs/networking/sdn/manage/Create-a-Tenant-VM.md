@@ -18,7 +18,6 @@ Use the processes described in this topic to deploy virtual appliances. With a f
 
 The sections in this topic include example Windows PowerShell commands that contain example values for many parameters. Ensure that you replace example values in these commands with values that are appropriate for your deployment before you run these commands.
 
-
 ## Prerequisites
 
 1. VM network adapters created with static MAC addresses for the lifetime of the VM.<p>If the MAC address changes during the VM lifetime, Network Controller cannot configure the necessary policy for the network adapter. Not configuring the policy for the network prevents the network adapter from processing network traffic, and all communication with the network fails.
@@ -30,7 +29,6 @@ The sections in this topic include example Windows PowerShell commands that cont
 Ensure that you have already created a Virtual Network before using this example command. For more information, see [Create, Delete, or Update Tenant Virtual Networks](./create,-delete,-or-update-tenant-virtual-networks.md).
 
 ## Create a VM and connect to a Virtual Network by using the Windows PowerShell Network Controller cmdlets
-
 
 1. Create a VM with a VM network adapter that has a static MAC address.
 
@@ -95,27 +93,24 @@ Ensure that you have already created a Virtual Network before using this example
 
    $CurrentFeature = Get-VMSwitchExtensionPortFeature -FeatureId $FeatureId -VMNetworkAdapter $vmNics
 
-   if ($CurrentFeature -eq $null)
-   {
-   $Feature = Get-VMSystemSwitchExtensionPortFeature -FeatureId $FeatureId
+   if ($CurrentFeature -eq $null) {
+       $Feature = Get-VMSystemSwitchExtensionPortFeature -FeatureId $FeatureId
 
-   $Feature.SettingData.ProfileId = "{$($nic.InstanceId)}"
-   $Feature.SettingData.NetCfgInstanceId = "{56785678-a0e5-4a26-bc9b-c0cba27311a3}"
-   $Feature.SettingData.CdnLabelString = "TestCdn"
-   $Feature.SettingData.CdnLabelId = 1111
-   $Feature.SettingData.ProfileName = "Testprofile"
-   $Feature.SettingData.VendorId = "{1FA41B39-B444-4E43-B35A-E1F7985FD548}"
-   $Feature.SettingData.VendorName = "NetworkController"
-   $Feature.SettingData.ProfileData = 1
-
-   Add-VMSwitchExtensionPortFeature -VMSwitchExtensionFeature  $Feature -VMNetworkAdapter $vmNics
-   }
-   else
-   {
-   $CurrentFeature.SettingData.ProfileId = "{$($nic.InstanceId)}"
-   $CurrentFeature.SettingData.ProfileData = 1
-
-   Set-VMSwitchExtensionPortFeature -VMSwitchExtensionFeature $CurrentFeature  -VMNetworkAdapter $vmNics
+       $Feature.SettingData.ProfileId = "{$($nic.InstanceId)}"
+       $Feature.SettingData.NetCfgInstanceId = "{56785678-a0e5-4a26-bc9b-c0cba27311a3}"
+       $Feature.SettingData.CdnLabelString = "TestCdn"
+       $Feature.SettingData.CdnLabelId = 1111
+       $Feature.SettingData.ProfileName = "Testprofile"
+       $Feature.SettingData.VendorId = "{1FA41B39-B444-4E43-B35A-E1F7985FD548}"
+       $Feature.SettingData.VendorName = "NetworkController"
+       $Feature.SettingData.ProfileData = 1
+    
+       Add-VMSwitchExtensionPortFeature -VMSwitchExtensionFeature  $Feature -VMNetworkAdapter $vmNics
+   } else {
+       $CurrentFeature.SettingData.ProfileId = "{$($nic.InstanceId)}"
+       $CurrentFeature.SettingData.ProfileData = 1
+    
+       Set-VMSwitchExtensionPortFeature -VMSwitchExtensionFeature $CurrentFeature  -VMNetworkAdapter $vmNics
    }
    ```
 
@@ -183,8 +178,7 @@ You have successfully created a VM, connected the VM to a tenant Virtual Network
 
    $CurrentFeature = Get-VMSwitchExtensionPortFeature -FeatureId $FeatureId -VMNetworkAdapter $vmNics
 
-   if ($CurrentFeature -eq $null)
-   {
+   if ($CurrentFeature -eq $null) {
        $Feature = Get-VMSystemSwitchExtensionFeature -FeatureId $FeatureId
 
        $Feature.SettingData.ProfileId = "{$InstanceId}"
@@ -197,9 +191,7 @@ You have successfully created a VM, connected the VM to a tenant Virtual Network
        $Feature.SettingData.ProfileData = 1
 
        Add-VMSwitchExtensionFeature -VMSwitchExtensionFeature  $Feature -VMNetworkAdapter $vmNic
-   }
-   else
-   {
+   } else {
        $CurrentFeature.SettingData.ProfileId = "{$InstanceId}"
        $CurrentFeature.SettingData.ProfileData = 1
 
