@@ -104,7 +104,7 @@ In order for an integration service to be fully functional, its corresponding se
 1. To get a list of integration services, run:
 
     ```powershell
-    Get-Service -Name vm* | FT -AutoSize
+    Get-Service -Name vmic* | FT -AutoSize
     ```
 
 1.  The output should look similar to this:
@@ -113,7 +113,6 @@ In order for an integration service to be fully functional, its corresponding se
     ```powershell
     Status  Name               DisplayName
     ------  ----               -----------
-    Running vmcompute          Hyper-V Host Compute Service
     Running vmicguestinterface Hyper-V Guest Service Interface
     Running vmicheartbeat      Hyper-V Heartbeat Service
     Running vmickvpexchange    Hyper-V Data Exchange Service
@@ -122,7 +121,6 @@ In order for an integration service to be fully functional, its corresponding se
     Running vmictimesync       Hyper-V Time Synchronization Service
     Stopped vmicvmsession      Hyper-V PowerShell Direct Service
     Running vmicvss            Hyper-V Volume Shadow Copy Requestor
-    Running vmms               Hyper-V Virtual Machine Management
     ```
 
 1. Run either [Start-Service](/powershell/module/microsoft.powershell.management/start-service?view=powershell-7&preserve-view=true) or [Stop-Service](/powershell/module/microsoft.powershell.management/stop-service?view=powershell-7&preserve-view=true). For example, to turn off Windows PowerShell Direct, run:
