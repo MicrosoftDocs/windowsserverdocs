@@ -21,9 +21,9 @@ For details about each integration service, see [Hyper-V Integration Services](/
 
 ## Turn an integration service on or off using Hyper-V Manager
 
-1. From the center pane, right-click the virtual machine and click **Settings**.
+1. From the center pane, right-click the virtual machine and select **Settings**.
 
-2. From the left pane of the **Settings** window, under **Management**, click **Integration Services**.
+2. From the left pane of the **Settings** window, under **Management**, select **Integration Services**.
 
 The Integration Services pane lists all integration services available on the Hyper-V host, and whether the host has enabled the virtual machine to use them.
 
@@ -72,7 +72,7 @@ The following examples demonstrate turning the guest file copy integration servi
 
 ## Checking the guest's integration services version
 
-Some features may not work correctly or at all if the guest's integration services are not current. To get the version information for Windows, log on to the guest operating system, open a command prompt, and run this command:
+Some features may not work correctly or at all if the guest's integration services are not current. To get the version information for Windows, sign in to the guest operating system, open a command prompt, and run this command:
 
 ```
 REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesVersion
@@ -97,7 +97,7 @@ In order for an integration service to be fully functional, its corresponding se
 
 1. Find the services that start with "Hyper-V".
 
-1. Right-click the service you want start or stop. Click the desired action.
+1. Right-click the service you want start or stop. Select the desired action.
 
 ### Use PowerShell to start or stop an integration service within a Windows guest
 
@@ -200,7 +200,7 @@ These examples demonstrate stopping and starting the KVP daemon, named `hv_kvp_d
     sudo kill -15 `pidof hv_kvp_daemon`
     ```
 
-1. To verify that all `hv_kvp_daemon` process are gone, run:
+1. To verify that all `hv_kvp_daemon` processes are gone, run:
 
     ```bash
     ps -ef | hv
@@ -220,7 +220,7 @@ These examples demonstrate stopping and starting the KVP daemon, named `hv_kvp_d
 
 ## Keep integration services up to date
 
-We recommend that you keep integration services up to date to get the best performance and most recent features for your virtual machines. This happens for Windows guests by default if they are set up to get important updates from Windows Update. Linux guests using current kernels contain integration services built in, but there may be optional updates available. You will receive the latest integration components when you update the kernel. For more details about Linux guests, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md).
+We recommend that you keep integration services up to date to get the best performance and most recent features for your virtual machines. This happens for Windows guests by default if they are set up to get important updates from Windows Update. Linux guests using current kernels contain integration services built in, but there may be optional updates available. You will receive the latest integration components when you update the kernel. For more information about Linux guests, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md).
 
 > [!NOTE]
 > The image file *Integration Services disk* (vmguest.iso) isn't included with Hyper-V starting with Windows Server 2016 and Windows 10 because it's no longer needed. Windows Server 2012 and older require the Data Exchange integration service. If the Data Exchange integration service can't be enabled, integration services for these guests are available from the [Download Center](https://support.microsoft.com/kb/3071740) as a cabinet (cab) file. Instructions for applying a cab are available in this [Microsoft TechCommunity blog post](https://techcommunity.microsoft.com/t5/virtualization/integration-components-available-for-virtual-machines-not/ba-p/382247). If your Hyper-V host is running Windows Server 2012 R2 and older, see the next section for how to install or update integration services.
@@ -236,8 +236,8 @@ To manually install or update the integration services:
 
 1. Open Hyper-V Manager.
 
-2. Connect to the virtual machine. Right-click the virtual machine and click **Connect**.
+2. Connect to the virtual machine. Right-click the virtual machine and select **Connect**.
 
-3. From the Action menu of Virtual Machine Connection, click **Insert Integration Services Setup Disk**. This action loads the setup disk in the virtual DVD drive. Depending on the guest operating system, you might need to start the installation manually from File Explorer.
+3. From the Action menu of Virtual Machine Connection, select **Insert Integration Services Setup Disk**. This action loads the setup disk in the virtual DVD drive. Depending on the guest operating system, you might need to start the installation manually from File Explorer.
 
 4. After the installation finishes, integration services are available for use.
