@@ -35,7 +35,7 @@ Ensure that you have already created a Virtual Network before using this example
 1. Create a VM with a VM network adapter that has a static MAC address.
 
    ```PowerShell
-   New-VM -Generation 2 -Name "MyVM" -Path "C:\VMs\MyVM" -MemoryStartupBytes 4GB -VHDPath "c:\VMs\MyVM\Virtual Hard Disks\WindowsServer2016.vhdx" -SwitchName "SDNvSwitch"
+   New-VM -Generation 2 -Name "MyVM" -Path "C:\VMs\MyVM" -MemoryStartupBytes 4GB -VHDPath "C:\VMs\MyVM\Virtual Hard Disks\WindowsServer2016.vhdx" -SwitchName "SDNvSwitch"
 
    Set-VM -Name "MyVM" -ProcessorCount 4
 
@@ -45,7 +45,7 @@ Ensure that you have already created a Virtual Network before using this example
 2. Get the virtual network that contains the subnet to which you want to connect the network adapter.
 
    ```Powershell
-   $vnet = get-networkcontrollervirtualnetwork -connectionuri $uri -ResourceId "Contoso_WebTier"
+   $vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "Contoso_WebTier"
    ```
 
 3. Create a network interface object in Network Controller.
@@ -54,21 +54,21 @@ Ensure that you have already created a Virtual Network before using this example
    >In this step, you use the custom ACL.
 
    ```PowerShell
-   $vmnicproperties = new-object Microsoft.Windows.NetworkController.NetworkInterfaceProperties
+   $vmnicproperties = New-Object Microsoft.Windows.NetworkController.NetworkInterfaceProperties
    $vmnicproperties.PrivateMacAddress = "001122334455"
    $vmnicproperties.PrivateMacAllocationMethod = "Static"
    $vmnicproperties.IsPrimary = $true
 
-   $vmnicproperties.DnsSettings = new-object Microsoft.Windows.NetworkController.NetworkInterfaceDnsSettings
+   $vmnicproperties.DnsSettings = New-Object Microsoft.Windows.NetworkController.NetworkInterfaceDnsSettings
    $vmnicproperties.DnsSettings.DnsServers = @("24.30.1.11", "24.30.1.12")
 
-   $ipconfiguration = new-object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfiguration
+   $ipconfiguration = New-Object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfiguration
    $ipconfiguration.resourceid = "MyVM_IP1"
-   $ipconfiguration.properties = new-object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfigurationProperties
+   $ipconfiguration.properties = New-Object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfigurationProperties
    $ipconfiguration.properties.PrivateIPAddress = "24.30.1.101"
    $ipconfiguration.properties.PrivateIPAllocationMethod = "Static"
 
-   $ipconfiguration.properties.Subnet = new-object Microsoft.Windows.NetworkController.Subnet
+   $ipconfiguration.properties.Subnet = New-Object Microsoft.Windows.NetworkController.Subnet
    $ipconfiguration.properties.subnet.ResourceRef = $vnet.Properties.Subnets[0].ResourceRef
 
    $vmnicproperties.IpConfigurations = @($ipconfiguration)
@@ -129,11 +129,10 @@ You have successfully created a VM, connected the VM to a tenant Virtual Network
 
 ## Create a VM and connect to a VLAN by using NetworkControllerRESTWrappers
 
-
 1. Create the VM and assign a static MAC address to the VM.
 
    ```PowerShell
-   New-VM -Generation 2 -Name "MyVM" -Path "C:\VMs\MyVM" -MemoryStartupBytes 4GB -VHDPath "c:\VMs\MyVM\Virtual Hard Disks\WindowsServer2016.vhdx" -SwitchName "SDNvSwitch"
+   New-VM -Generation 2 -Name "MyVM" -Path "C:\VMs\MyVM" -MemoryStartupBytes 4GB -VHDPath "C:\VMs\MyVM\Virtual Hard Disks\WindowsServer2016.vhdx" -SwitchName "SDNvSwitch"
 
    Set-VM -Name "MyVM" -ProcessorCount 4
 
@@ -149,23 +148,23 @@ You have successfully created a VM, connected the VM to a tenant Virtual Network
 3. Get the logical network subnet and create the network interface.
 
    ```PowerShell
-    $logicalnet = get-networkcontrollerLogicalNetwork -connectionuri $uri -ResourceId "00000000-2222-1111-9999-000000000002"
+    $logicalnet = Get-NetworkControllerLogicalNetwork -ConnectionUri $uri -ResourceId "00000000-2222-1111-9999-000000000002"
 
-    $vmnicproperties = new-object Microsoft.Windows.NetworkController.NetworkInterfaceProperties
+    $vmnicproperties = New-Object Microsoft.Windows.NetworkController.NetworkInterfaceProperties
     $vmnicproperties.PrivateMacAddress = "00-1D-C8-B7-01-02"
     $vmnicproperties.PrivateMacAllocationMethod = "Static"
     $vmnicproperties.IsPrimary = $true
 
-    $vmnicproperties.DnsSettings = new-object Microsoft.Windows.NetworkController.NetworkInterfaceDnsSettings
+    $vmnicproperties.DnsSettings = New-Object Microsoft.Windows.NetworkController.NetworkInterfaceDnsSettings
     $vmnicproperties.DnsSettings.DnsServers = $logicalnet.Properties.Subnets[0].DNSServers
 
-    $ipconfiguration = new-object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfiguration
+    $ipconfiguration = New-Object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfiguration
     $ipconfiguration.resourceid = "MyVM_Ip1"
-    $ipconfiguration.properties = new-object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfigurationProperties
+    $ipconfiguration.properties = New-Object Microsoft.Windows.NetworkController.NetworkInterfaceIpConfigurationProperties
     $ipconfiguration.properties.PrivateIPAddress = "10.127.132.177"
     $ipconfiguration.properties.PrivateIPAllocationMethod = "Static"
 
-    $ipconfiguration.properties.Subnet = new-object Microsoft.Windows.NetworkController.Subnet
+    $ipconfiguration.properties.Subnet = New-Object Microsoft.Windows.NetworkController.Subnet
     $ipconfiguration.properties.subnet.ResourceRef = $logicalnet.Properties.Subnets[0].ResourceRef
 
     $vmnicproperties.IpConfigurations = @($ipconfiguration)
@@ -182,7 +181,7 @@ You have successfully created a VM, connected the VM to a tenant Virtual Network
 
    $vmNics = Get-VMNetworkAdapter -VMName "MyVM"
 
-   $CurrentFeature = Get-VMSwitchExtensionPortFeature -FeatureId $FeatureId -VMNetworkAdapter $vmNic
+   $CurrentFeature = Get-VMSwitchExtensionPortFeature -FeatureId $FeatureId -VMNetworkAdapter $vmNics
 
    if ($CurrentFeature -eq $null)
    {
