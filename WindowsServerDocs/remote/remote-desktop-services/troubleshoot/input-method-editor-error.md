@@ -21,6 +21,6 @@ Affected platforms:
 - Azure Virtual Desktop
 - Remote Desktop Services
 
-[!NOTE]
+> [!NOTE]
 > - Windows 8.1 and earlier are out of service and remain affected.
 > - You must apply the update to bother the Remote Desktop server and client device
