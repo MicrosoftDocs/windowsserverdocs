@@ -373,3 +373,99 @@ Azure management services including Azure Monitor, Azure Update Management, and 
 
 1. Go to the Control Panel > Microsoft Monitoring Agent to [disconnect your server from the existing Azure management solutions](/azure/azure-monitor/platform/log-faq#q-how-do-i-stop-an-agent-from-communicating-with-log-analytics) (like Azure Monitor or Azure Security Center). Then set up Azure Update Management in Windows Admin Center. After that, you can go back to set up your other Azure management solutions through Windows Admin Center without issues.
 2. You can [manually set up the Azure resources needed for Azure Update Management](/azure/automation/automation-update-management) and then [manually update the Microsoft Monitoring Agent](/azure/azure-monitor/platform/agent-manage#adding-or-removing-a-workspace) (outside of Windows Admin Center) to add the new workspace corresponding to the Update Management solution you wish to use.
+   
+## Windows Remote Management Errors
+### General Connection Error
+A sample error message is as follows:
+  
+```
+Cluster wasn't created
+
+Connecting to remote server tk5-3wp13r1131.cfdev.nttest.microsoft.com failed with the following error message: WinRM cannot complete the operation. Verify that the specified computer name is valid, that the computer is accessible over the network, and that a firewall exception for the WinRM service is enabled and allows access from this computer. By default, the WinRM firewall exception for public profiles limits access to remote computers within the same local subnet. For more information, see the about_Remote_Troubleshooting Help topic.
+```
+
+This error is the most common when connecting via WinRM. There are possible reasons for this:
+
+- DNS could not be resolved. Ensure that you use the correct server name.
+- The server name could not be reached at all (likely a connectivity issue) for example due to a network disruption.
+- Firewall rules are not configured for the WINRM service. Firewall rules should be configured for domain and private profiles at the very least.
+- WinRM service is not running or disabled. Enable the service and make sure its always running.
+   
+### Authentication Error
+A sample error message is as follows:
+```
+Connecting to remote server ack failed with the following error message : WinRM cannot process the request. The following error with error code 0x8009030e occurred while using Negotiate authentication: A specified logon session does not exist. It may already have been terminated. \r\n This can occur if the provided credentials are not valid on the target server, or if the server identity could not be verified. If you trust the server identity add the server name to the TrustedHosts list, and then retry the request. User winrm.cmd to view or edit the TrustedHosts list. Note that computers in the TrustedHosts list might not be authenticated. For more information about how to edit the TrustedHosts list, run the following command: winrm help config. For more information, see the about_Remote_Troubleshooting Help topic.
+```
+This error mostly occurs on cluster connections, this signifies that WinRM could not connect possibly because of the following reasons:
+
+-	An attempt is being made to do a remote connection to a domain connected machine when logged in as a local user administrator account.
+-  The user is in domain but can’t contact the domain, even though they can reach the server. WinRM will assume user is not in domain but connection is being made to a domain account.
+   
+Possible mitigations include:
+Possible mitigations would be: 
+
+- Always check the domain can be contacted all times and after a network operation.
+- All computers you are connecting to should be added in the trusted hosts. (FQDNS) i.e. '@{TrustedHosts="VS1.contoso.com,VS2.contoso.com,my2012cluster.contoso.com"}'.
+- All the validations in the General connection error should pass as well.
+
+   
+### WinRM Service
+A sample error message is as follows:
+```
+We cannot display the changes right now: Connecting to remote server localhost failed with the following error message : The client cannot connect to the destination specified in the request. Verify that the service on the destination is running and is accepting requests. Consult the logs and documentation for the WS-Management services running on the destination, mostly commonly IIS or WinRM. If the destination is the WinRM service, run the following command on the destination to analyze and configure the WinRM service: "winrm quickconfig". For more information, see the about_Remote_Troubleshooting Help topic."
+```
+Possible reasons could be:
+- The WinRM service is not running. The service could be temporarily disabled or not running completely. Ensure the WinRM service is always running.
+- Another problem could be that the WinRM listener is not configured or somehow corrupted. The quickest way to solve this problem is to run WinRM quickconfig which will help you create a listener. In addition to that, WinRM has two listerners for https and http conections, for https connection server and client should have same valid certificates.
+   
+### Security Error
+A sample error message is as follows:
+```
+Connecting to remote server dc1.root.contoso.com failed with the following error message: WinRM cannot process the request. The following error with errorcode 0x80090322 occurred while using Kerberos authentication. An unknown security error occurred.
+
+At line:1 char:1
++ Enter-PSSession dc1.root.contoso.com
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++ CategoryInfo	:InvalidArgument:(dc1.root.contoso.com:String)[Enter-PSSession], PSRemotingTransportException
++ FullyQualifiedErrorId : CreateRemoteRunspaceFailed
+  
+```
+This error is uncommon. The problem is usually the account trying to do a remote connection. In most cases, the default HTTP SPN(s) are registered to a service account, causing Kerberos authentication to fail. Usually, this happens because some software installed on the server needs the SPN(s) to function properly (e.g: SQL Server Reporting Services, Microsoft Dynamics, SharePoint, etc).
+
+Be aware that one SPN (e.g: HTTP/fully.qualified.domain.name) might be registered to a service account and another one might not be (e.g: HTTP/servername). In that case, the WinRM connection will succeed when trying to start a session with the servername (e.g: Enter-PSSession servername) but it will fail when trying to start a session with the FQDN (e.g: Enter-PSSession fully.qualified.domain.name).
+
+Check if the default HTTP SPN(s) are registered to a service account:
+
+```powershell
+setspn -q HTTP/servername.or.fqdn
+```
+
+If the SPN is found and the server name is not in the highlighted field as seen in the error message above, go ahead to the resolution section, because that is likely why the WinRM connection fails.
+
+The resolution is as follows:
+
+Set up dedicated SPN(s) for WinRM, by specifying the port number and the machine account:
+
+```powershell
+setspn -s HTTP/servername.or.fqdn:5985 servername
+```
+Use the -IncludePortInSPN session option switch when connecting remotely via powershell:
+
+```powershell
+Enter-PSSession -ComputerName servername.or.fqdn -SessionOption (New-PSSessionOption -IncludePortInSPN)
+```
+
+### WinRM Status 500.
+A sample error message is as follows:
+```
+Error: Connecting to remote server YAZSHCISIIH01.ad.yara.com failed with the following error message : The WinRM client received an HTTP server error status (500), but the remote service did not include any other information about the cause of the failure. For more information, see the about_Remote_Troubleshooting Help topic. 
+```
+This error occurs rarely, this usually means WinRM has failed to process the request. This could be caused by various reasons and its usually based on context. 
+The solution for this would be to make sure remoting is enabled and that WinRM listerner is configured to accept requests, checking the event logs for other errors might help too, for example some of the files in the file system might only have read permissions and WinRM is trying to access those for the connection to be fully actualized.
+
+
+
+
+
+   
+
