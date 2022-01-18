@@ -12,12 +12,12 @@ ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows 11. Windows 10
 
-Hyper-V Integration Services enhance virtual machine performance and provide convenience features by leveraging two-way communication with the Hyper-V host. Many of these services are conveniences, such as guest file copy, while others are important to the virtual machine's functionality, such as synthetic device drivers. This set of services and drivers are sometimes referred to as "integration components". You can control whether or not individual convenience services operate for any given virtual machine. The driver components are not intended to be serviced manually.
+Hyper-V Integration Services enhance virtual machine performance and provide convenience features by leveraging two-way communication with the Hyper-V host. Many of these services are conveniences, such as guest file copy, while others are important to the virtual machine's functionality, such as synthetic device drivers. This set of services and drivers are sometimes referred to as *integration components*. You can control whether or not individual convenience services operate for any given virtual machine. The driver components are not intended to be serviced manually.
 
 For details about each integration service, see [Hyper-V Integration Services](/virtualization/hyper-v-on-windows/reference/integration-services).
 
 > [!IMPORTANT]
-> Each service you want to use must be enabled in both the host and guest in order to function. All integration services except "Hyper-V Guest Service Interface" are on by default on Windows guest operating systems. The services can be turned on and off individually. The next sections show you how.
+> Each service you want to use must be enabled in both the host and guest in order to function. All integration services except *Hyper-V Guest Service Interface* are on by default on Windows guest operating systems. The services can be turned on and off individually. The next sections show you how.
 
 ## Turn an integration service on or off using Hyper-V Manager
 
@@ -31,7 +31,7 @@ The Integration Services pane lists all integration services available on the Hy
 
 To do this in PowerShell, use [Enable-VMIntegrationService](/powershell/module/hyper-v/enable-vmintegrationservice) and [Disable-VMIntegrationService](/powershell/module/hyper-v/disable-vmintegrationservice).
 
-The following examples demonstrate turning the guest file copy integration service on and off for a virtual machine named *demovm*.
+The following examples demonstrate turning the guest file copy integration service on and off for a virtual machine named *DemoVM*.
 
 1. Get a list of running integration services:
 
@@ -78,7 +78,7 @@ Some features may not work correctly or at all if the guest's integration servic
 REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesVersion
 ```
 
-Earlier guest operating systems will not have all available services. For example, Windows Server 2008 R2 guests cannot have the "Hyper-V Guest Service Interface".
+Earlier guest operating systems will not have all available services. For example, Windows Server 2008 R2 guests cannot have the Hyper-V Guest Service Interface.
 
 ## Start and stop an integration service from a Windows guest
 
@@ -95,7 +95,7 @@ In order for an integration service to be fully functional, its corresponding se
 
     ![Screen shot that shows the Windows Services pane](media/HVServices.png)
 
-1. Find the services that start with "Hyper-V".
+1. Find the services that start with **Hyper-V**.
 
 1. Right-click the service you want start or stop. Select the desired action.
 
