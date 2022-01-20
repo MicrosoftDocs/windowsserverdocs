@@ -220,6 +220,20 @@ Please send us an email at wacFeedbackAzure@microsoft.com with the following inf
 * Is the machine you are trying to manage an Azure VM?
 * Is Windows Admin Center installed on an Azure VM?
 
+## Collecting HAR files
+
+A HTTP Archive Format (HAR) file is a log of a web browser's interaction with a site. This information is crucial for troubleshooting and debugging.
+To collect a HAR file in Microsoft Edge or Google Chrome, please follow the steps below:
+
+1. Press **F12** to open Developer Tools window, and then click the **Network** tab. 
+2. Select the **Clear** icon to clean up network log.
+3. Click to select the **Preserve Log** check box.
+4. Reproduce the issue.
+5. After reproducing the issue, click on **Export HAR**.
+6. Specify where to save the log and click **Save**.
+
+    ![The points users have to click on to collect a HAR file are displayed and highlighted based on the numbered bullets.](../media/collect-har.PNG)
+
 ## Providing feedback on issues
 
 Go to Event Viewer > Application and Services > Microsoft-ServerManagementExperience and look for any errors or warnings.

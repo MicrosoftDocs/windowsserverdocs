@@ -40,7 +40,6 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Volume Activation Services|Yes|Yes|Yes|
 |VSS (Volume Shadow Copy Service) integration|Yes|Yes|Yes|
 |Windows Server Update Services|Yes|Yes|Yes|
-|Windows System Resource Manager|Yes|Yes|Yes|
 |Server license logging|Yes|Yes|Yes|
 |Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** | **Can be a host or a guest** |
 |Work Folders|Yes|Yes|Yes|
@@ -72,8 +71,8 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Active Directory Certificate Services| |Yes|Yes|
 |Active Directory Domain Services| |Yes|Yes|
 |Active Directory Federation Services| |Yes|Yes|
-|AD Lightweight Directory Services| |Yes|Yes|
-|AD Rights Management Services| |Yes|Yes|
+|Active Directory Lightweight Directory Services| |Yes|Yes|
+|Active Directory Rights Management Services| |Yes|Yes|
 |Device Health Attestation| |Yes|Yes|
 |DHCP Server| |Yes|Yes|
 |DNS Server| |Yes|Yes|
@@ -100,7 +99,6 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Volume Activation Services| |Yes|Yes|
 |Web Services (IIS)| |Yes|Yes|
 |Windows Deployment Services| |Yes|Yes|
-|Windows Server Essentials Experience| |No | No |
 |Windows Server Update Services| |Yes|Yes|
 
 ## Features
@@ -129,7 +127,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Management OData IIS Extension|Yes|Yes|
 |Media Foundation|Yes|Yes|
 |Message Queueing|Yes|Yes|
-|Microsoft Defender Antivirus|Installed|Installed|
+|Microsoft Defender Antivirus|Yes|Yes|
 |Multipath I/O|Yes|Yes|
 |MultiPoint Connector|Yes|Yes|
 |Network Load Balancing|Yes|Yes|
@@ -143,7 +141,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |RPC over HTTP Proxy|Yes|Yes|
 |Setup and Boot Event Collection|Yes|Yes|
 |Simple TCP/IP Services|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
-|SMB 1.0/CIFS File Sharing Support|Installed|Installed|
+|SMB 1.0/CIFS File Sharing Support|Yes|Yes|
 |SMB Bandwidth Limit|Yes|Yes|
 |SMTP Server|Yes|Yes|
 |SNMP Service|Yes|Yes|
@@ -160,10 +158,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Windows Biometric Framework|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Identity Foundation 3.5|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Internal Database|Yes|Yes|
-|Windows PowerShell 5.1|Installed|Installed|
-|Windows PowerShell 2.0 Engine|Yes|Yes|
-|Windows PowerShell Desired State Configuration Service|Yes|Yes|
-|Windows PowerShell Web Access|Yes|Yes|
+|Windows PowerShell|Yes|Yes|
 |Windows Process Activation Service|Yes|Yes|
 |Windows Search Service|Yes, when installed as Server with Desktop Experience|Yes, when installed as Server with Desktop Experience|
 |Windows Server Backup|Yes|Yes|
@@ -174,5 +169,5 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |WinRM IIS Extension|Yes|Yes|
 |WINS Server|Yes|Yes|
 |Wireless LAN Service|Yes|Yes|
-|WoW64 support|Installed|Installed|
-|XPS Viewer|Installed with Server with Desktop Experience|Installed with Server with Desktop Experience|
+|WoW64 support|Yes|Yes|
+|XPS Viewer|Yes, installed with Server with Desktop Experience|Yes, installed with Server with Desktop Experience|
