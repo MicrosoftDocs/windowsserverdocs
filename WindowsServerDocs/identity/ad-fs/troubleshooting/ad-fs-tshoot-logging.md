@@ -83,7 +83,7 @@ Security auditing of the AD FS service account can sometimes assist in tracking 
 
 ### To enable security auditing
 1. Click Start, point to **Programs**, point to **Administrative Tools**, and then click **Local Security Policy**.
-2. Navigate to the **Security Settings\Local Policies\User Rights Management** folder, and then double-click **Generate security audits**.
+2. Navigate to the **Security Settings\Local Policies\User Rights Assignment** folder, and then double-click **Generate security audits**.
 3. On the **Local Security Setting** tab, verify that the AD FS service account is listed. If it is not present, click Add User or Group and add it to the list, and then click OK.
 4. Open a command prompt with elevated privileges and run the following command to enable auditing
    auditpol.exe /set /subcategory:"Application Generated" /failure:enable /success:enable
