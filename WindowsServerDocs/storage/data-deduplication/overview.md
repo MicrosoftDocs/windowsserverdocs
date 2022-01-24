@@ -12,14 +12,14 @@ ms.date: 10/15/2021
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, version 20H2
 
-## [What is Data Deduplication?](#what-is-dedup)
+## <a href="#what-is-dedup">What is Data Deduplication?</a>
 
 Data Deduplication, often called Dedup for short, is a feature that can help reduce the impact of redundant data on storage costs. When enabled, Data Deduplication optimizes free space on a volume by examining the data on the volume by looking for duplicated portions on the volume. Duplicated portions of the volume's dataset are stored once and are (optionally) compressed for additional savings. Data Deduplication optimizes redundancies without compromising data fidelity or integrity. More information about how Data Deduplication works can be found in the '[How does Data Deduplication work?](understand.md#how-does-dedup-work)' section of the [Understanding Data Deduplication](understand.md) page.
 
 > [!Important]
 > [KB4025334](https://support.microsoft.com/kb/4025334) contains a roll up of fixes for Data Deduplication, including important reliability fixes, and we strongly recommend installing it when using Data Deduplication with Windows Server 2016 and Windows Server 2019.
 
-## [Why is Data Deduplication useful?](#why-is-dedup-useful)
+## <a href="#why-is-dedup-useful">Why is Data Deduplication useful?</a>
 
 Data Deduplication helps storage administrators reduce costs that are associated with duplicated data. Large datasets often have **a lot** of duplication, which increases the costs of storing the data. For example:
 
@@ -39,7 +39,7 @@ The space savings that you can gain from Data Deduplication depend on the datase
 > [!NOTE]
 > If you're just looking to free up space on a volume, consider using Azure File Sync with cloud tiering enabled. This allows you to cache your most frequently accessed files locally and tier your least frequently accessed files to the cloud, saving local storage space while maintaining performance. For details, see [Planning for an Azure File Sync deployment](/azure/storage/files/storage-sync-files-planning).
 
-## [When can Data Deduplication be used?](#when-can-dedup-be-used)
+## <a href ="#when-can-dedup-be-use">When can Data Deduplication be used?</a>
 |                                                                     |                                                                                           |
 |---------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
 | ![Illustration of file servers.](media/overview-clustered-gpfs.png) | **General purpose file servers**: General purpose file servers are general use file servers that might contain any of the following types of shares: <ul><li>Team shares</li><li>User home folders</li><li>[Work folders](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265974(v=ws.11))</li><li>Software development shares</li></ul>General purpose file servers are a good candidate for Data Deduplication because multiple users tend to have many copies or versions of the same file. Software development shares benefit from Data Deduplication because many binaries remain essentially unchanged from build to build.  |
