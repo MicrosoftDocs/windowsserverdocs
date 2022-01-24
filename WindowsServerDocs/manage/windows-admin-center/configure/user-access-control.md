@@ -140,6 +140,9 @@ Configuring a machine with support for role-based access control will result in 
     -   Windows Admin Center Hyper-V Administrators
     -   Windows Admin Center Readers
 
+> [!NOTE]
+> Role-based access control is not supported for cluster management (i.e. features that are dependent on RBAC such as CredSSP will fail).
+
 To enable support for role-based access control on a single machine, follow these steps:
 
 1.  Open Windows Admin Center and connect to the machine you wish to configure with role-based access control using an account with local administrator privileges on the target machine.
