@@ -25,7 +25,7 @@ There are two roles for access to the Windows Admin Center gateway service:
 
 There is also an additional role specific to the management of CredSSP:
 
-**Windows Admin Center CredSSP Administrators** are registered with the Windows Admin Center CredSSP endpoint and have permissions to perform predefined CredSSP operations. This group is especially useful for installations of Windows Admin Center in desktop mode, where only the user account which installed Windows Admin Center is given these permissions by default.
+**Windows Admin Center CredSSP Administrators** are registered with the Windows Admin Center CredSSP endpoint and have permissions to perform predefined CredSSP operations. This group is especially useful for installations of Windows Admin Center in desktop mode, where only the user account that installed Windows Admin Center is given these permissions by default.
 
 > [!NOTE]
 > Access to the gateway doesn't imply access to managed servers visible by the gateway. To manage a target server, the connecting user must use credentials (either through their passed-through Windows credential or through credentials provided in the Windows Admin Center session using the **Manage as** action) that have administrative access to that target server.
@@ -34,7 +34,7 @@ There is also an additional role specific to the management of CredSSP:
 
 By default, Active Directory or local machine groups are used to control gateway access. If you have an Active Directory domain, you can manage gateway user and administrator access from within the Windows Admin Center interface.
 
-On the **Users** tab you can control who can access Windows Admin Center as a gateway user. By default, and if you don't specify a security group, any user that accesses the gateway URL has access. Once you add one or more security groups to the users list, access is restricted to the members of those groups.
+On the **Users**, tab you can control who can access Windows Admin Center as a gateway user. By default, and if you don't specify a security group, any user that accesses the gateway URL has access. Once you add one or more security groups to the users list, access is restricted to the members of those groups.
 
 If you don't use an Active Directory domain in your environment, access is controlled by the `Users` and `Administrators` local groups on the Windows Admin Center gateway machine.
 
@@ -42,7 +42,7 @@ If you don't use an Active Directory domain in your environment, access is contr
 
 You can enforce **smartcard authentication** by specifying an additional _required_ group for smartcard-based security groups. Once you have added a smartcard-based security group, a user can only access the Windows Admin Center service if they are a member of any security group AND a smartcard group included in the users list.
 
-On the **Administrators** tab you can control who can access Windows Admin Center as a gateway administrator. The local administrators group on the computer will always have full administrator access and cannot be removed from the list. By adding security groups, you give members of those groups privileges to change Windows Admin Center gateway settings. The administrators list supports smartcard authentication in the same way as the users list: with the AND condition for a security group and a smartcard group.
+On the **Administrators**, tab you can control who can access Windows Admin Center as a gateway administrator. The local administrators group on the computer will always have full administrator access and cannot be removed from the list. By adding security groups, you give members of those groups privileges to change Windows Admin Center gateway settings. The administrators list supports smartcard authentication in the same way as the users list: with the AND condition for a security group and a smartcard group.
 
 ## Azure Active Directory
 
@@ -118,7 +118,7 @@ To remove this relationship, run the following cmdlet:
 Set-ADComputer -Identity (Get-ADComputer node01) -PrincipalsAllowedToDelegateToAccount $null
 ```
 
-## Role-based access control
+## Role-based access control (RBAC)
 
 Role-based access control enables you to provide users with limited access to the machine instead of making them full local administrators.
 [Read more about role-based access control and the available roles.](../plan/user-access-options.md#role-based-access-control)
