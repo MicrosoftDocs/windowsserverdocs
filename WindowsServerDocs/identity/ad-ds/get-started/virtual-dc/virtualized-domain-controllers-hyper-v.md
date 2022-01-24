@@ -143,7 +143,7 @@ This also helps avoiding problems with hardware or platform-related problems P2V
 > To prevent issues with Active Directory replication, ensure that only one instance (physical or virtual) of a given domain controller exists on a given network at any point in time.
 > You can lower the likelihood of the old clone being a problem:
 >
-> - When the new virtual DC is running, change the computer account password twice using: netdom resetpwd /Server:<domain-controller> …
+> - When the new virtual DC is running, change the computer account password twice using: netdom resetpwd /Server:\<domain-controller\> …
 > - Export and import the new virtual guest to force it becoming a new Generation ID and hence a database invocation ID.
 
 ## Using P2V Migration to Create Test Environments

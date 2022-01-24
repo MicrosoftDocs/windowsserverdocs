@@ -429,7 +429,6 @@ sections:
       - question: |
           Cross-file RDC availability in editions of the Windows operating system
         answer: |
-          
           | Operating System Version | Standard Edition | Enterprise Edition | Datacenter Edition |
           |--------------------------|------------------|--------------------|--------------------|
           | Windows Server 2012 R2   | Yes              | Not available      | Yes                |
