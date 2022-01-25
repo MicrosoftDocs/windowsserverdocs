@@ -1,6 +1,6 @@
 ---
 title: Improve performance of a file server with SMB Direct
-description: Describes the SMB Direct feature in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2016.
+description: Describes the SMB Direct feature in Windows Server 2012 R2, Windows Server 2012, Windows Server 2016, and Azure Stack HCI, version 21H2.
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
@@ -8,7 +8,7 @@ ms.date: 04/05/2018
 ---
 # SMB Direct
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, version 21H2
 
 Windows Server includes a feature called SMB Direct, which supports the use of network adapters that have Remote Direct Memory Access (RDMA) capability. Network adapters that have RDMA can function at full speed with very low latency, while using very little CPU. For workloads such as Hyper-V or Microsoft SQL Server, this enables a remote file server to resemble local storage. SMB Direct includes:
 
