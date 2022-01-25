@@ -1,16 +1,16 @@
 ---
 title: Managing Virtual Machines with Windows Admin Center
-description: Managing Hyper-V hosts and virtual machines with Windows Admin Center (Project Honolulu)
+description: Managing Hyper-V hosts and virtual machines with Windows Admin Center
 ms.topic: article
-author: daniellee-msft
-ms.author: jol
-ms.date: 06/18/2018
+author: PatAltimore
+ms.author: patricka
+ms.date: 01/24/2022
 ---
 # Managing Virtual Machines with Windows Admin Center
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
-The Virtual Machines tool is available in [Server](manage-servers.md), [Failover Cluster](manage-failover-clusters.md) or [Hyper-Converged Cluster](manage-hyper-converged.md) connections if the Hyper-V role is enabled on the server or cluster. You can use the Virtual Machines tool to manage Hyper-V hosts running Windows Server 2012 or later, either installed with Desktop Experience or as Server Core. Hyper-V Server 2012, 2016 and 2019 are also supported.
+The Virtual Machines tool is available in [Server](manage-servers.md), [Failover Cluster](manage-failover-clusters.md) or [Hyper-Converged Cluster](manage-hyper-converged.md) connections if the Hyper-V role is enabled on the server or cluster. You can use the Virtual Machines tool to manage Hyper-V hosts running Windows Server 2012 or later, either installed with Desktop Experience or as Server Core. Hyper-V Server 2012, 2016, 2019, and 2022 are also supported.
 
 ## Key features
 
@@ -67,7 +67,7 @@ NOTE: If you are connected to a cluster, the Virtual Machine tool will only disp
 ![Create new virtual machine screen](../media/manage-virtual-machines/new-vm.png)
 
 1. Click the **Virtual Machines** tool from the left side navigation pane.
-2. At the top of the Virtual Machines tool, choose the **Inventory** tab, then click **New** to create a new virtual machine.
+2. At the top of the Virtual Machines tool, choose the **Inventory** tab, then click **Add** > **New** to create a new virtual machine.
 3. Enter the virtual machine name and choose between generation 1 and 2 virtual machines.
 4. If you are creating a virtual machine on a cluster, you can choose which host to initially create the virtual machine on. If you are running Windows Server 2016 or later, the tool will provide a host recommendation for you.
 5. Choose a path for the virtual machine files. Choose a volume from the dropdown list or click **Browse** to choose a folder using the folder picker. The virtual machine configuration files and virtual hard disk file will be saved in a single folder under the `\Hyper-V\\[virtual machine name]` path of the selected volume or path.
@@ -78,14 +78,14 @@ NOTE: If you are connected to a cluster, the Virtual Machine tool will only disp
 6. Choose the number of virtual processors, whether you want nested virtualization enabled, configure memory settings, network adapters, virtual hard disks and choose whether you want to install an operating system from an .iso image file or from the network.
 7. Click **Create** to create the virtual machine.
 8. Once the virtual machine is created and appears in the virtual machine list, you can start the virtual machine.
-9. Once the virtual machine is started, you can connect to the virtual machine's console via VMConnect to install the operating system. Select the virtual machine from the list, click **More** > **Connect** to download the .rdp file. Open the .rdp file in the Remote Desktop Connection app. Since this is connecting to the virtual machine's console, you will need to enter the Hyper-V host's admin credentials.
+9. Once the virtual machine is started, you can connect to the virtual machine's console via VMConnect to install the operating system. Select the virtual machine from the list, click **Connect** > **Download RDP file** to download the .rdp file. Open the .rdp file in the Remote Desktop Connection app. Since this is connecting to the virtual machine's console, you will need to enter the Hyper-V host's admin credentials.
 
 ## Change virtual machine settings
 
 ![Virtual machine settings screen](../media/manage-virtual-machines/vm-settings.png)
 
 1. Click the **Virtual Machines** tool from the left side navigation pane.
-2. At the top of the Virtual Machines tool, choose the **Inventory** tab. Choose a virtual machine from the list and click **More** > **Settings**.
+2. At the top of the Virtual Machines tool, choose the **Inventory** tab. Choose a virtual machine from the list and click **Settings**.
 3. Switch between the **General**, **Security**, **Memory**, **Processors**, **Disks**, **Networks**, **Boot order** and **Checkpoints** tab, configure the necessary settings, then click **Save** to save the current tab's settings. The settings available will vary depending on the virtual machine's generation. Also, some settings cannot be changed for running virtual machines and you will need to stop the virtual machine first.
 
 ## Live migrate a virtual machine to another cluster node
@@ -93,7 +93,7 @@ NOTE: If you are connected to a cluster, the Virtual Machine tool will only disp
 If you are connected to a cluster, you can live migrate a virtual machine to another cluster node.
 
 1. From a Failover Cluster or Hyper-converged cluster connection, click the **Virtual Machines** tool from the left side navigation pane.
-2. At the top of the Virtual Machines tool, choose the **Inventory** tab. Choose a virtual machine from the list and click **More** > **Move**.
+2. At the top of the Virtual Machines tool, choose the **Inventory** tab. Choose a virtual machine from the list and click **Manage** > **Move**.
 3. Choose a server from the list of available cluster nodes and click **Move**.
 4. Notifications for the move progress will be displayed in the upper right corner of Windows Admin Center. If the move is successful, you will see the Host server name changed in the virtual machine list.
 
@@ -107,7 +107,7 @@ You can view detailed information and performance charts for a single virtual ma
 2. At the top of the Virtual Machines tool, choose the **Inventory** tab. Click on the name of a virtual machine from the virtual machine list.
 3. From the single virtual machine page, you can:
     - View detailed information for the virtual machine.
-    - View Live and historical data line charts for CPU, memory, network, IOPS and IO throughput (Historical data is only available for hyper-converged clusters running Windows Server 2019)
+    - View Live and historical data line charts for CPU, memory, network, IOPS and IO throughput (Historical data is only available for hyper-converged clusters running Windows Server 2019 or later)
     - View, create, apply, rename and delete checkpoints.
     - View details for the virtual machine's virtual hard disk (.vhd) files, network adapters and host server.
     - Delete, start, turn off, shut down, pause, resume, reset or rename the virtual machine. Also save the virtual machine, delete a saved state, or create a checkpoint.
@@ -120,7 +120,7 @@ You can view detailed information and performance charts for a single virtual ma
 ![VM Connect through your web browser](../media/manage-virtual-machines/vm-connect.png)
 
 1. Click the **Virtual Machines** tool from the left side navigation pane.
-2. At the top of the Virtual Machines tool, choose the **Inventory** tab. Choose a virtual machine from the list and click **More** > **Connect** or **Download RDP file**. **Connect** will allow you to interact with the guest VM through the Remote Desktop web console, integrated in to Windows Admin Center. **Download RDP file** will download an .rdp file that you can open with the Remote Desktop Connection application (mstsc.exe). Both options will use VMConnect to connect to the guest VM through the Hyper-V host and will require you to enter administrator credentials for the Hyper-V host server.
+2. At the top of the Virtual Machines tool, choose the **Inventory** tab. Choose a virtual machine from the list and select **Connect** or **Download RDP file**. **Connect** will allow you to interact with the guest VM through the Remote Desktop web console, integrated in to Windows Admin Center. **Download RDP file** will download an .rdp file that you can open with the Remote Desktop Connection application (mstsc.exe). Both options will use VMConnect to connect to the guest VM through the Hyper-V host and will require you to enter administrator credentials for the Hyper-V host server.
 
 ## Change Hyper-V host settings
 
@@ -140,25 +140,9 @@ You can view detailed information and performance charts for a single virtual ma
 You can view Hyper-V event logs directly from the Virtual Machines tool.
 
 1. Click the **Virtual Machines** tool from the left side navigation pane.
-2. At the top of the Virtual Machines tool, choose the **Summary** tab. In the top right Events section, click **VIEW ALL EVENTS**.
+2. At the top of the Virtual Machines tool, choose the **Summary** tab. In the top right Events section, click **View all events**.
 3. The Event Viewer tool will show the Hyper-V event channels in the left pane. Choose a channel to view the events in the right pane. If you are managing a failover cluster or hyper-converged cluster, the event logs will display events for all cluster nodes, displaying the host server in the Machine column.
 
 ## Protect virtual machines with Azure Site Recovery
 
 You can use Windows Admin Center to configure Azure Site Recovery and replicate your on-premises virtual machines to Azure. [Learn more](../azure/azure-site-recovery.md)
-
-## More coming
-
-Virtual machine management in Windows Admin Center is actively under development and new features will be added in the near future. You can view the status and vote for features in UserVoice:
-
-- [Import/Export virtual machines](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31481971--virtual-machines-import-export-vms)
-- [Sort virtual machines in folders](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31494712--virtual-machines-ability-to-sort-vm-into-folder)
-- [Support additional virtual machine settings](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31915264--virtual-machines-expose-all-configurable-setting)
-- [Hyper-V Replica support](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/32040253--virtual-machines-setup-and-manage-hyper-v-replic)
-- [Delegate virtual machine ownership](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31663837--virtual-machines-owner-delegation)
-- [Clone virtual machine](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31783288--virtual-machines-add-a-button-to-clone-a-vm)
-- [Create a template from an existing virtual machine](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31494649--virtual-machines-create-a-template-from-an-exist)
-- [View virtual machines across Hyper-V hosts](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31734559--virtual-machines-find-vms-on-host-screen)
-- [Configure VLAN in New Virtual Machine pane](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31710979--virtual-machines-new-new-vm-pane-need-vlan-opt)
-
-[See all or propose new features](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5Bvirtual%20machines%5D).
