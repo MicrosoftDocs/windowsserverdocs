@@ -28,7 +28,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 
 - Fixed an issue that caused a redirected camera to give incorrect error codes when camera access was restricted in the Privacy settings on the client device. This update should give accurate error messages in apps using the redirected camera.
 - Fixed an issue where the Azure Active Directory credential prompt appeared in the wrong monitor.
-- Fixed an issue where the background refresh and update tasks were repeatedly registered with the task scheduler, which caused the the background and update task times to change without user input.
+- Fixed an issue where the background refresh and update tasks were repeatedly registered with the task scheduler, which caused the background and update task times to change without user input.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to Teams for Azure Virtual Desktop, including the following:
     - In September 2021 we released a preview of our GPU render path optimizations but defaulted them off. After extensive testing, we've now enabled them by default. These GPU render path optimizations reduce endpoint-to-endpoint latency and solve some performance issues. You can manually disable these optimizations by setting the registry key **HKEY_CURRENT_USER \SOFTWARE\Microsoft\Terminal Server Client\IsSwapChainRenderingEnabled** to **00000000**.
@@ -179,7 +179,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 - Added the Experience Monitor access point to the system tray icon.
 - Fixed an issue where entering an email address into the "Subscribe to a Workplace" tab caused the application to stop responding.
-- Fixed an issue where the client sometimes didn't send EventHub and Diagnostics events.
+- Fixed an issue where the client sometimes didn't send Event Hubs and Diagnostics events.
 - Updates to Teams on Azure Virtual Desktop, including:
   - Improved audio and video sync performance and added hardware accelerated decode that decreases CPU utilization on the client.
   - Addressed the most prevalent causes of black screen issues when a user joins a call or meeting with their video turned on, when a user performs screen sharing, and when a user toggles their camera on and off.
