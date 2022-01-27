@@ -30,7 +30,10 @@ rem [<comment>]
 
 - The **rem** command doesn't display comments on the screen. To display comments on the screen, you must include the **echo on** command in your file.
 
-- You can't use a redirection character (`<` or `>`) or pipe (`|`) in a batch file comment.
+- You can't use a redirection character (`<` or `>`) or pipe (`|`) in a batch file comment. If you have to use such characters, consider using **::** to write the comments:
+  ```
+  :: This is a comment that uses <, > and |.
+  ```
 
 - Although you can use **rem** without a comment to add vertical spacing to a batch file, you can also use blank lines. Blank lines are ignored when a batch program is processed.
 
