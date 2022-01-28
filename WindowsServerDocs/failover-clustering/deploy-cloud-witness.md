@@ -101,7 +101,7 @@ When you create a Storage Account, the following URLs are generated using the fo
 Cloud Witness always uses **Blob** as the file storage type in a general purpose storage account. Azure uses **.core.windows.net** as the Endpoint. When configuring Cloud Witness, it is possible that you configure it with a different endpoint as per your scenario (for example the Microsoft Azure datacenter in China has a different endpoint).
 
 > [!NOTE]
-> The endpoint URL is generated automatically by Cloud Witness resource and there is no extra step of configuration necessary for the URL.
+> The endpoint URL is generated automatically by the Cloud Witness resource. Make sure that port 443 is open in your firewalls and that `*.core.windows.net` is included in any firewall allow lists you're using between the cluster and Azure Storage.
 
 #### To view and copy endpoint URL links
 
@@ -175,7 +175,7 @@ When configuring a Cloud Witness as a quorum witness for your Failover Cluster, 
 
 ### Proxy considerations with Cloud Witness
 
-Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Ensure that the HTTPS outbound port is accessible via network Proxy.
+Cloud Witness uses HTTPS (default port 443) to establish outbound communication with the Azure blob service. Ensure that the HTTPS outbound port is accessible via network Proxy. Azure uses **.core.windows.net** as the Endpoint. You need to ensure that it is included in any firewall allow lists you're using between the cluster and Azure Storage.
 
 ## See Also
 

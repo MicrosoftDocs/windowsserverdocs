@@ -1,6 +1,6 @@
 ---
 title: SMB security enhancements
-description: This topic explains the SMB security enhancements in Windows Server.
+description: This topic explains the SMB security enhancements in Windows Server and Azure Stack HCI, version 21H2.
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
@@ -9,7 +9,7 @@ ms.prod: windows-server
 ---
 # SMB security enhancements
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, version 21H2
 
 This topic explains the SMB security enhancements in Windows Server.
 

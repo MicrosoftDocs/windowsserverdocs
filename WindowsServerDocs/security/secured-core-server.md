@@ -11,7 +11,7 @@ ms.custom: template-overview
 
 # What is Secured-core server?
 
->Applies to: Windows Server 2022
+>Applies to: Windows Server 2022, Azure Stack HCI, version 21H2
 
 Secured-core server combines hardware, firmware, and driver capabilities to further protect the operating environment - from the boot process through to data in memory. It's built on three key pillars: simplified security, advanced protection, and preventative defense.
 
