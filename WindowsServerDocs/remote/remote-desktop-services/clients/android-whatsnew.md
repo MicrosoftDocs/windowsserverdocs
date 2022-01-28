@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/04/2021
+ms.date: 01/29/2022
 ---
 # What's new in the Android client
 
@@ -13,9 +13,17 @@ We regularly update the [Remote Desktop client for Android](remote-desktop-andro
 
 ## Updates for version 10.0.12.1148
 
-Date published: August 31, 2021
+Date published: December 15, 2021
 
-In this version, we made bug fixes and performance improvements.
+Here are the changes for the latest version of the Android client:
+
+- We've made an in-session UI that switches between remote apps and PCs.
+- Updated language support for Input Method Editors (IME) and external keyboards.
+- Added support for Azure Virtual Desktop workspace subscriptions that use multiple identities for the same URL.
+- We added a warning message that says you shouldn't use the RD Gateway for local addresses.
+- Added support for the NumLock and ScrLock keys on external keyboards.
+- Fixed bugs that appeared in dark mode.
+- The minimum required version of Android is now Android 8.
 
 ## Updates for version 10.0.11
 
