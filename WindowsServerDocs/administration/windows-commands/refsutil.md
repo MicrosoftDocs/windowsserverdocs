@@ -1,9 +1,9 @@
 ---
 title: ReFSUtil
-description: Reference article for the ReFSUtil tool, which attempts to diagnose heavily damaged ReFS volumes, identify remaining files,and copy those files to another volume.
+description: Reference article for the ReFSUtil tool, which attempts to diagnose heavily damaged ReFS volumes, identify remaining files, and copy those files to another volume.
 author: laknight5
 ms.author: laknight
-ms.date: 6/29/2020
+ms.date: 1/28/2022
 ms.topic: reference
 ---
 
@@ -55,7 +55,7 @@ refsutil salvage -D <source volume> <working directory> <options>
 
 ### Quick Scan phase command line usage
 
-Performs a Quick Scan of the `<source volume>` for any recoverable files. This mode runs quicker as it assumes some critical structures of the volume are not corrupted and so there's no need to scan the entire volume to locate them. This also reduces the recovery of stale files/directories/volumes. Discovered files are logged to the `foundfiles.<volume signature>.txt` file, located in your `<working directory>`. If the Scan Phase was previously stopped, running with the **-QS** flag again resumes the scan from where it left off.
+Performs a Quick Scan of the `<source volume>` for any recoverable files. This mode runs quicker as it assumes some critical structures of the volume aren't corrupted and so there's no need to scan the entire volume to locate them. This also reduces the recovery of stale files/directories/volumes. Discovered files are logged to the `foundfiles.<volume signature>.txt` file, located in your `<working directory>`. If the Scan Phase was previously stopped, running with the **-QS** flag again resumes the scan from where it left off.
 
 ```
 refsutil salvage -QS <source volume> <working directory> <options>
@@ -71,7 +71,7 @@ refsutil salvage -FS <source volume> <working directory> <options>
 
 ### Copy phase command line usage
 
-Copies all files described in the `foundfiles.<volume signature>.txt` file to your `<target directory>`. If you stop the Scan Phase too early, it's possible that the the `foundfiles.<volume signature>.txt` file might not yet exist, so no file is copied to the `<target directory>`.
+Copies all files described in the `foundfiles.<volume signature>.txt` file to your `<target directory>`. If you stop the Scan Phase too early, it's possible that the `foundfiles.<volume signature>.txt` file might not yet exist, so no file is copied to the `<target directory>`.
 
 ```
 refsutil salvage -C <source volume> <working directory> <target directory> <options>
