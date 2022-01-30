@@ -48,7 +48,7 @@ See how to check for a valid KeySpec value below.
 ### Example
 An example of a legacy CSP is the Microsoft Enhanced Cryptographic Provider.
 
-Microsoft RSA CSP key blob format includes an algorithm identifier, either **CALG_RSA_KEYX** or **CALG_RSA_SIGN**, respectively, to service requests for either <strong>AT_KEYEXCHANGE **or **AT_SIGNATURE</strong> keys.
+Microsoft RSA CSP key blob format includes an algorithm identifier, either **CALG_RSA_KEYX** or **CALG_RSA_SIGN**, respectively, to service requests for either **AT_KEYEXCHANGE** or **AT_SIGNATURE** keys.
 
 The RSA key algorithm identifiers map to KeySpec values as follows
 
