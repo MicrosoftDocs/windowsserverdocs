@@ -25,9 +25,9 @@ You can add individual servers running Windows Server 2012 or later to Windows A
 To add a server to Windows Admin Center:
 
 1. Click **+ Add** under All Connections.
-2. Choose to add a **Server Connection**.
+2. Choose to add **Servers**.
 3. Type the name of the server and, if prompted, the credentials to use.
-4. Click **Submit** to finish.
+4. Click **Add** to finish.
 
 The server will be added to your connection list on the Overview page. Click it to connect to the server.
 
@@ -89,8 +89,6 @@ The following features are supported in Server Manager Overview:
 - Enable disk metrics on server
 - Edit Computer ID on server
 - View BMC IP address with hyperlink (requires IPMI-compatible BMC).
-
-[**View feedback and proposed features for Server Overview**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BOverview%5D).
 
 ## Active Directory (Preview)
 
