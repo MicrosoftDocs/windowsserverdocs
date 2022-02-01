@@ -2,10 +2,10 @@
 title: tpmtool
 description: Reference article for the tpmtool command, which gets information about the Trusted Platform Module.
 ms.topic: reference
-author: ashleytqy
-ms.author: asteoh
-manager: raigner
-ms.date: 05/07/2019
+author: ronaldai
+ms.author: raigner
+manager: kedard
+ms.date: 02/02/2022
 ---
 
 # tpmtool
@@ -13,12 +13,12 @@ ms.date: 05/07/2019
 This utility can be used to get information about the [Trusted Platform Module (TPM)](/windows/security/information-protection/tpm/trusted-platform-module-overview).
 
 >[!IMPORTANT]
->Some information may relate to the pre-released product, which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+>This tool is available in Windows 11 and some versions of Windows 10.
 
 ## Syntax
 
 ```
-tpmtool /parameter [<arguments>]
+tpmtool parameter [<arguments>]
 ```
 
 ### Parameters
@@ -28,6 +28,7 @@ tpmtool /parameter [<arguments>]
 | getdeviceinformation | Displays the basic information of the TPM. See the [Win32_Tpm::IsReadyInformation method parameters](/windows/win32/secprov/win32-tpm-isreadyinformation#parameters) article for details about the information flag values. |
 | gatherlogs [output directory path] | Collects TPM logs and places them in the specified directory. If that directory doesn't exist, it's created. By default, the log files are placed in the current directory. The possible files generated are:<ul><li>TpmEvents.evtx</li><li>TpmInformation.txt</li><li>SRTMBoot.dat</li><li>SRTMResume.dat</li><li>DRTMBoot.dat</li><li>DRTMResume.dat</li></ul> |
 | drivertracing `[start | stop]` | Starts or stops collecting TPM driver traces. The trace log, *TPMTRACE.etl*, is created and placed in the current directory. |
+| optionalcomponent `[add | remove]` | Add or remove an optional Windows feature that contains a TPM diagnostics tool. (Available in Windows 11 only.) |
 | /? | Displays help at the command prompt. |
 
 ## Examples
@@ -56,6 +57,12 @@ To collect TPM driver traces, type:
 tpmtool drivertracing start
 # Run scenario
 tpmtool drivertracing stop
+```
+
+To install the optional Windows component for TpmDiagnostics.exe, type:
+
+```
+tpmtool oc add
 ```
 
 ## Additional References
