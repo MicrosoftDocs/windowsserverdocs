@@ -33,7 +33,7 @@ This table lists Microsoft server applications that support installation and fun
 | System Center Operations Manager 2022 | Yes* | Yes | No |  |
 | System Center Virtual Machine Manager 2022 | Yes* | Yes | No |  |
 
-*May have limitations or may require the [Server Core App Compatibility Feature on Demand (FOD)](server-core-app-compatibility-feature-on-demand.md).
-Please refer to specific product or Feature on Demand documentation.
+\* May have limitations or may require the [Server Core App Compatibility Feature on Demand (FOD)](server-core-app-compatibility-feature-on-demand.md).
+For more information, see specific product or Feature on Demand documentation.
 
 ** Refer to Product Web Link
