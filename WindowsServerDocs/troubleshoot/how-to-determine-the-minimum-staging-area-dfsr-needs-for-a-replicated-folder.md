@@ -20,7 +20,7 @@ Initial Replication will make much more use of the staging area than day-to-day 
 
 ## How do you find these X largest files?
 
-Use a PowerShell script to find the 32 or 9 largest files and determine how many gigabytes they add up to. Before beginning, enable maximum path length support, first added in Windows Server 2016 using [Maximum Path Length Limitation](https://docs.microsoft.com/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd)
+Use a PowerShell script to find the 32 or 9 largest files and determine how many gigabytes they add up to. Before beginning, enable maximum path length support, first added in Windows Server 2016 using [Maximum Path Length Limitation](/windows/win32/fileio/maximum-file-path-limitation?tabs=cmd)
 
 1. Run the following command:
    ```Powershell
