@@ -14,6 +14,8 @@ description: An overview of Storage Spaces Direct, a feature of Windows Server a
 
 This article provides an overview of Storage Spaces Direct. It describes the features and components of the Storage Spaces Direct stack, the available deployment modes, and the key benefits it offers. This article also includes videos from Storage Spaces Direct experts at Microsoft and links to real-world customer stories.
 
+## What is Storage Spaces Direct?
+
 Storage Spaces Direct is a software-defined storage solution for your converged or hyperconverged infrastructure. It enables you to combine multiple internal storage devices on a cluster of physical servers (between 2 and 16) into a software-defined pool of storage. You can then access this pool of storage from any server in that cluster. This pool has cache, tiers, resiliency, erasure coding across columns—all configured and managed automatically. To your network users, this pool appears as a single storage device and they don't need to worry about the physical storage location of their data. If you want to scale out the storage capacity of your cluster, you can add additional nodes to your existing cluster and then combine its storage devices with the existing storage pool.  
 
 Storage Spaces Direct enables you to create a highly available and scalable storage solution, which results in significant cost reductions as compared to using storage area network (SAN) or network-attached storage (NAS) technologies.
@@ -22,7 +24,7 @@ You can deploy Storage Spaces Direct by connecting the servers in the cluster ov
 
 Storage Spaces Direct is a core technology of Azure Stack HCI, versions 21H2 and 20H2. It is also included in Windows Server 2019 Datacenter, Windows Server 2016 Datacenter, and [Windows Server Insider Preview Builds](https://insider.windows.com/for-business-getting-started-server/).
 
-You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine (VM) guest clusters. If deploying on a cluster of physical servers, we recommend using Azure stack HCI servers. However, you can still Windows Server for physical server deployment if you want. 
+You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine (VM) guest clusters. If deploying on a cluster of physical servers, we recommend using Azure stack HCI servers. However, you can still use Windows Server for physical server deployment if you want. 
 
 Deploying Storage Spaces Direct on VM guest clusters delivers virtual shared storage across a set of VMs on top of a private or public cloud. This type of deployment is supported only in Windows Server. For more information about guest VM deployment, see [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
 
