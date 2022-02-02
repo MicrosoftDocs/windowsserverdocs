@@ -14,21 +14,23 @@ description: An overview of Storage Spaces Direct, a feature of Windows Server a
 
 Storage Spaces Direct is a feature of Azure Stack HCI and Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 
-This article provides an overview of Storage Spaces Direct, how it works, when to use it, and its key benefits. It also includes videos by Storage Spaces Direct experts at Microsoft and real-world stories of Storage Spaces Direct customers.
+This article provides an overview of Storage Spaces Direct, how it works, when to use it, and its key benefits. You can also watch videos by Storage Spaces Direct experts at Microsoft and read real-world stories of Storage Spaces Direct customers.
 
-To get started, try [Storage Spaces Direct](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) in Microsoft Azure, or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://go.microsoft.com/fwlink/?linkid=842602).
+To get started, try [Storage Spaces Direct](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) in Microsoft Azure, or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://go.microsoft.com/fwlink/?linkid=842602). To know the minimum hardware requirements for Storage Spaces Direct, see [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md).
 
 To find answers to frequently asked questions about Storage Spaces Direct, see [FAQs](storage-spaces-direct-faq.yml).
 
 ## What is Storage Spaces Direct?
 
-Storage Spaces Direct is a software-defined storage solution that allows you to share storage resources in your converged and hyperconverged IT infrastructure. It enables you to combine internal storage drives on a cluster of physical servers (2 and up to 16) into a software-defined pool of storage. This storage pool appears and acts like a network share that is always accessible from any server within the cluster. This storage pool has cache, tiers, resiliency, and erasure coding across columns—all configured and managed automatically.
+Storage Spaces Direct is a software-defined storage solution that allows you to share storage resources in your converged and hyperconverged IT infrastructure. It enables you to combine internal storage drives on a cluster of physical servers (2 and up to 16) into a software-defined pool of storage.
+
+This storage pool appears and acts like a network share that is always accessible from any server within the cluster. This storage pool has cache, tiers, resiliency, and erasure coding across columns—all configured and managed automatically.
 
 You can scale out the storage capacity of your cluster by adding more drives or adding more servers in the cluster. Storage Spaces Direct automatically onboards the new drives and rebalances the storage pool. The storage pool automatically uses the fastest storage media present to provide built-in and always-on cache.
 
 Storage Spaces Direct is a core technology of Azure Stack HCI, versions 21H2 and 20H2. It’s also included in Windows Server 2019 Datacenter, Windows Server 2016 Datacenter, and [Windows Server Insider Preview Builds](https://insider.windows.com/for-business-getting-started-server/).
 
-You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine (VM) guest clusters. If deploying it on a cluster of physical servers, we recommend using Azure Stack HCI servers. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview). However, you can still use Windows Server for physical server deployment if you want.
+You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine (VM) guest clusters. If deploying it on a cluster of physical servers, we recommend using Azure Stack HCI servers. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [Deployment process for Azure Stack HCI](/azure-stack/hci/deploy/deployment-overview). However, you can still use Windows Server for physical server deployment if you want.
 
 Deploying Storage Spaces Direct on VM guest clusters delivers virtual shared storage across a set of VMs on top of a private or public cloud. This deployment is supported only in Windows Server. To deploy Storage Spaces Direct on VM guest clusters, see [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
 
@@ -36,7 +38,14 @@ Deploying Storage Spaces Direct on VM guest clusters delivers virtual shared sto
 
 Storage Spaces Direct is the evolution of Storage Spaces, first introduced in Windows Server 2012. It applies many of the features in Windows Server, such as Failover Clustering, the Cluster Shared Volume (CSV) file system, Server Message Block (SMB) 3, and Storage Spaces. It also introduces a new technology called Software Storage Bus.
 
-Storage Spaces Direct creates a software-defined storage solution by combining the internal storage drives on a cluster of industry-standard servers. You start by connecting your servers mounted with internal storage drives over Ethernet to form a cluster—no special cable or storage fabric is required. When you enable Storage Spaces Direct on this cluster, it combines the storage media from each of those servers into one software-defined pool of virtually-shared storage. You can then create volumes from that pool of storage and into which you can store whatever data you want. These volumes run Cluster Shared Volumes (CSV) file system. This means that to each server these volumes look as if they're mounted locally. These volumes also have built-in fault tolerance. If a drive fails, or the entire node goes offline, all data stays online and accessible. Storage Spaces Direct solutions works great as a Scale-out File Server (SoFS) or in a hyperconverged configuration where VMs sit directly on top of the volumes.  
+Storage Spaces Direct creates a software-defined storage solution by combining the internal storage drives on a cluster of industry-standard servers. You start by connecting your servers with internal drives over Ethernet to form a cluster—no special cable or storage fabric is required. When you enable Storage Spaces Direct on this cluster, it combines the storage media from each of those servers into one software-defined pool of virtually shared storage.
+
+You then create volumes from that pool of storage, into which you can store whatever data you want. These volumes run Cluster Shared Volumes (CSV) file system. This means that to each server these volumes look and act as if they're mounted locally. With built-in fault tolerance in these volumes, even if a drive fails, or the entire node goes offline, all data stays online and accessible.
+
+In these volumes, you can place your files, such as .vhd and .vhdx for VMs. You can then use the cluster running Storage Spaces Direct as:
+
+- Scale-out File Server (SoFS) by exposing the volumes over the network as SMB3 File Shares.
+- Hyperconverged infrastructure by enabling Hyper-V on the cluster and placing your VMs directly on top of the volumes.
 
 The following section describes the features and components of a Storage Spaces Direct stack.
 
@@ -81,11 +90,9 @@ Storage Spaces Direct provides an ideal network storage solution when you want t
 
 - Scale up or scale out your network storage capacity. You can add more drives or add more servers to expand your network storage capacity, still keeping your data secured and accessible. If a drive within the storage pool fails or the entire node goes offline, all data stays online and accessible.
 - Share the same set of data from different locations at the same time. The storage pool that Storage Spaces Direct creates looks and acts like a network share. Your network users can access the stored data anytime from any location, without worrying about the physical location of their stored data.
-- Use a mix of storage media. With Storage Spaces Direct, you can combine different types of storage media in your server cluster to form the software-defined storage pool. The software automatically decides which media to use based on data—stores all active data on faster media and other infrequently used data on slower media.
+- Use a mix of storage media. With Storage Spaces Direct, you can combine different types of storage media in your server cluster to form the software-defined storage pool. The software automatically decides which media to use based on data—active data on faster media and other infrequently used data on slower media.
 
 ## Deployment options
-
-You can deploy Storage Spaces Direct by connecting the servers in the cluster over Ethernet. The servers in the cluster can have traditional drive types, such as PMem (persistent memory), NVMe (non-volatile memory express), SSD (solid-state drive), and HDD (hard disk drive). For more information about the minimum hardware requirements for Storage Spaces Direct, see [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md).
 
 Storage Spaces Direct supports the following two deployment options:
 
