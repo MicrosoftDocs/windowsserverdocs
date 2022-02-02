@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 01/29/2022
+ms.date: 02/02/2022
 ---
 # What's new in the Android client
 
