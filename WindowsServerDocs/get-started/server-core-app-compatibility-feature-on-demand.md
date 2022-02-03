@@ -62,8 +62,8 @@ Starting with Windows Server, version 1903, the following components are also av
 > [!IMPORTANT]
 > The App Compatibility FOD can only be installed on Server Core. Don't attempt to add the Server Core App Compatibility FOD to the Server with Desktop Experience installation option.
 
-> [!CAUTION]
-> There is currently a known issue with App Compatibility FOD for Windows Server 2022. Once installed, if you try to connect to the server using Remote Desktop Protocol (RDP), you can be presented with a black screen and disconnected. This issue will be fixed in a future Cumulative Update. Windows Server 2019 and previous versions are not affected.
+> [!IMPORTANT]
+> For servers running Windows Server 2022, ensure you have installed the *[2022-01 Cumulative Update Preview for Microsoft server operating system version 21H2 for x64-based Systems (KB5009608)](https://support.microsoft.com/topic/january-25-2022-kb5009608-os-build-20348-502-preview-54285445-4a79-4bc1-9c9c-fbe7299e1c29)* or later cumulative update before you install the App Compatibility FOD. You can verify this by checking that the operating system build number is 20348.502 or greater. Prior to this, if you tried to connect to the server using Remote Desktop Protocol (RDP), you could be presented with a black screen and disconnected.
 
 ### Connected to the internet
 
