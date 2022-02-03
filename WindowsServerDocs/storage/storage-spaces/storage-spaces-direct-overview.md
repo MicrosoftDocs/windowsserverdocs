@@ -14,7 +14,7 @@ description: An overview of Storage Spaces Direct, a feature of Windows Server a
 
 Storage Spaces Direct is a feature of Azure Stack HCI and Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 
-This article provides an overview of Storage Spaces Direct, how it works, when to use it, and its key benefits. This article also includes videos by Storage Spaces Direct experts at Microsoft and real-world stories of Storage Spaces Direct customers.
+This article provides an overview of Storage Spaces Direct, how it works, when to use it, and its key benefits. To learn more about Storage Spaces Direct, watch the videos and read real-world customer stories included in this article.
 
 To get started, try [Storage Spaces Direct](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) in Microsoft Azure, or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://go.microsoft.com/fwlink/?linkid=842602). To know the minimum hardware requirements for Storage Spaces Direct, see [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md).
 
