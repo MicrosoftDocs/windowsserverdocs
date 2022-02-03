@@ -4,7 +4,7 @@ ms.author: cosdar
 manager: dongill
 ms.topic: article
 author: cosmosdarwin
-ms.date: 07/24/2020
+ms.date: 02/02/2022
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: An overview of Storage Spaces Direct, a feature of Windows Server and Azure Stack HCI that enables you to cluster servers with internal storage into a software-defined storage solution.
 ---
@@ -14,7 +14,7 @@ description: An overview of Storage Spaces Direct, a feature of Windows Server a
 
 Storage Spaces Direct is a feature of Azure Stack HCI and Windows Server that enables you to cluster servers with internal storage into a software-defined storage solution.
 
-This article provides an overview of Storage Spaces Direct, how it works, when to use it, and its key benefits. You can also watch videos by Storage Spaces Direct experts at Microsoft and read real-world stories of Storage Spaces Direct customers.
+This article provides an overview of Storage Spaces Direct, how it works, when to use it, and its key benefits. Also watch videos by Storage Spaces Direct experts at Microsoft and read real-world stories of Storage Spaces Direct customers.
 
 To get started, try [Storage Spaces Direct](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) in Microsoft Azure, or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://go.microsoft.com/fwlink/?linkid=842602). To know the minimum hardware requirements for Storage Spaces Direct, see [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md).
 
@@ -34,7 +34,7 @@ You can deploy Storage Spaces Direct on a cluster of physical servers or on virt
 
 Deploying Storage Spaces Direct on VM guest clusters delivers virtual shared storage across a set of VMs on top of a private or public cloud. This deployment is supported only in Windows Server. To deploy Storage Spaces Direct on VM guest clusters, see [Using Storage Spaces Direct in guest virtual machine clusters](storage-spaces-direct-in-vm.md).
 
-## How does it work?
+## How it works
 
 Storage Spaces Direct is the evolution of Storage Spaces, first introduced in Windows Server 2012. It applies many of the features in Windows Server, such as Failover Clustering, the Cluster Shared Volume (CSV) file system, Server Message Block (SMB) 3, and Storage Spaces. It also introduces a new technology called Software Storage Bus.
 
@@ -71,7 +71,7 @@ The following section describes the features and components of a Storage Spaces 
 
 **Scale-Out File Server.** This final layer is necessary only in converged deployments. It provides remote file access by using the SMB3 access protocol to clients, such as another cluster running Hyper-V, over the network, effectively turning Storage Spaces Direct into network-attached storage (NAS).
 
-## What are its benefits?
+## Key benefits
 
 Storage Spaces Direct offers the following key benefits:
 
@@ -84,7 +84,7 @@ Storage Spaces Direct offers the following key benefits:
 | ![Manageability](media/storage-spaces-direct-in-windows-server-2016/manageability-icon.png) | **Manageability**. Use [Storage QoS Controls](../storage-qos/storage-qos-overview.md) to keep busy VMs in check with minimum and maximum per-VM IOPS limits. The [Health Service](../../failover-clustering/health-service-overview.md) provides continuous built-in monitoring and alerting. New APIs make it easy to collect rich, cluster-wide performance and capacity metrics. |
 | ![Scalability](media/storage-spaces-direct-in-windows-server-2016/scalability-icon.png) | **Scalability**. Go up to 16 servers and over 400 drives, for up to 1 petabyte (1,000 terabytes) of storage per cluster. To scale out, add more drives or add more servers; Storage Spaces Direct automatically onboards new drives and begin using them. Storage efficiency and performance improve predictably at scale. |
 
-## When to use it?
+## When to use it
 
 Storage Spaces Direct provides an ideal network storage solution when you want to:
 
@@ -96,17 +96,11 @@ Storage Spaces Direct provides an ideal network storage solution when you want t
 
 Storage Spaces Direct supports the following two deployment options:
 
-- Converged
 - Hyperconverged
+- Converged
 
 > [!NOTE]
 > Azure Stack HCI supports only hyperconverged deployment.
-
-### Converged deployment
-
-In a converged deployment, you use separate clusters for storage and compute. The converged deployment option, also known as 'disaggregated,' layers a Scale-out File Server (SoFS) atop Storage Spaces Direct to provide network-attached storage over SMB3 file shares. This allows for scaling compute and workload independently from the storage cluster, essential for larger-scale deployments such as Hyper-V IaaS (Infrastructure as a Service) for service providers and enterprises.
-
-![Storage Spaces Direct serves storage using the Scale-Out File Server feature to Hyper-V VMs in another server or cluster](media/storage-spaces-direct-in-windows-server-2016/converged-minimal.png)
 
 ### Hyperconverged deployment
 
@@ -114,7 +108,13 @@ In a hyperconverged deployment, you use single cluster for both compute and stor
 
 ![Storage Spaces Direct serves storage to Hyper-V VMs in the same cluster](media/storage-spaces-direct-in-windows-server-2016/hyper-converged-minimal.png)
 
-## Manage and monitor Storage Spaces Direct
+### Converged deployment
+
+In a converged deployment, you use separate clusters for storage and compute. The converged deployment option, also known as 'disaggregated,' layers a Scale-out File Server (SoFS) atop Storage Spaces Direct to provide network-attached storage over SMB3 file shares. This allows for scaling compute and workload independently from the storage cluster, essential for larger-scale deployments such as Hyper-V IaaS (Infrastructure as a Service) for service providers and enterprises.
+
+![Storage Spaces Direct serves storage using the Scale-Out File Server feature to Hyper-V VMs in another server or cluster](media/storage-spaces-direct-in-windows-server-2016/converged-minimal.png)
+
+## Manage and monitor
 
 You can use the following tools to manage and monitor Storage Spaces Direct:
 
