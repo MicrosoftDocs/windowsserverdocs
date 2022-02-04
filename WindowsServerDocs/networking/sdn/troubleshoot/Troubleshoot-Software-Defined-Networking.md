@@ -18,7 +18,7 @@ The topics in this section provide information about troubleshooting the Softwar
 > For additional Software Defined Networking documentation, you can use the following library sections.
 >
 > - [SDN Technologies](../technologies/Software-Defined-Networking-Technologies.md)
-> - [Plan SDN](/windows-server/networking/sdn/plan/Deploy-a-Software-Defined-Network-Infrastructure)
+> - [Plan SDN](/azure-stack/hci/concepts/plan-software-defined-networking-infrastructure.md)
 > - [Deploy SDN](../deploy/deploy-a-software-defined-network-infrastructure.md)
 > - [Manage SDN](../manage/manage-sdn.md)
 > - [Security for SDN](../security/sdn-security-top.md)
