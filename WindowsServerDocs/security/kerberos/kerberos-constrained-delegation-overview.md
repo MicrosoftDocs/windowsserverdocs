@@ -1,6 +1,6 @@
 ---
 title: Kerberos Constrained Delegation Overview
-description: Learn about the new capabilities for Kerberos constrained delegation in Windows Server 2012 R2 and Windows Server 2012.
+description: Learn about the new capabilities for Kerberos constrained delegation in Windows Server.
 ms.topic: article
 ms.assetid: 51923b0a-0c1a-47b2-93a0-d36f8e295589
 ms.author: jgerend
@@ -12,7 +12,7 @@ ms.date: 10/12/2016
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This overview topic for the IT professional describes new capabilities for Kerberos constrained delegation in  Windows Server 2012 R2  and  Windows Server 2012.
+This overview topic for the IT professional describes capabilities for Kerberos constrained delegation in Windows Server.
 
 **Feature description**
 
@@ -20,11 +20,11 @@ Kerberos constrained delegation was introduced in Windows Server 2003 to provide
 
 In earlier operating systems where the domain administrator configured the service, the service administrator had no useful way to know which front-end services delegated to the resource services they owned. And any front-end service that could delegate to a resource service represented a potential attack point. If a server that hosted a front-end service was compromised, and it was configured to delegate to resource services, the resource services could also be compromised.
 
-In Windows Server 2012 R2 and Windows Server 2012 , ability to configure constrained delegation for the service has been transferred from the domain administrator to the service administrator. In this way, the back-end service administrator can allow or deny front-end services.
+In Windows Server the ability to configure constrained delegation for the service has been transferred from the domain administrator to the service administrator. In this way, the back-end service administrator can allow or deny front-end services.
 
 For detailed information about constrained delegation as introduced in Windows Server 2003, see [Kerberos Protocol Transition and Constrained Delegation](/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10)).
 
-The Windows Server 2012 R2  and Windows Server 2012 implementation of the Kerberos protocol includes extensions specifically for constrained delegation.  Service for User to Proxy (S4U2Proxy)  allows a service to use its Kerberos service ticket for a user to obtain a service ticket from the Key Distribution Center (KDC) to a back-end service. These extensions allow constrained delegation to be configured on the back-end service's account, which can be in another domain. For more information about these extensions, see [\[MS-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94) in the MSDN Library.
+The Windows Server 2012 and later implementation of the Kerberos protocol includes extensions specifically for constrained delegation.  Service for User to Proxy (S4U2Proxy)  allows a service to use its Kerberos service ticket for a user to obtain a service ticket from the Key Distribution Center (KDC) to a back-end service. These extensions allow constrained delegation to be configured on the back-end service's account, which can be in another domain. For more information about these extensions, see [\[MS-SFU\]: Kerberos Protocol Extensions: Service for User and Constrained Delegation Protocol Specification](/openspecs/windows_protocols/ms-sfu/3bff5864-8135-400e-bdd9-33b552051d94) in the MSDN Library.
 
 **Practical applications**
 
