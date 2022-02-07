@@ -119,7 +119,7 @@ For a TCP receive window that has a particular size, you can use the following e
 
 For example, for a connection that has a latency of 10 ms, the total achievable throughput is only 51 Mbps. This value is reasonable for a large corporate network infrastructure. However, by using autotuning to adjust the receive window, the connection can achieve the full line rate of a 1-Gbps connection.
 
-Some applications define the size of the TCP receive window using SO_RCVBUF socket option. If the application does not define the receive window size, the link speed determines the starting value of the receive window as follows:
+Some applications define the size of the TCP receive window using the SO_RCVBUF socket option. If the application does not define the receive window size, the link speed determines the starting value of the receive window as follows:
 
 - Lower than 100 Mbps: 64 KB
 - 100 Mbps to lower than 1 Gbps: 132 KB
