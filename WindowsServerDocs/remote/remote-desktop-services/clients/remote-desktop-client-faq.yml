@@ -7,7 +7,7 @@ metadata:
   author: lizap
   manager: dongill
   ms.author: elizapo
-  ms.date: 07/16/2018
+  ms.date: 02/07/2022
   ms.localizationpriority: medium
   ms.prod: windows-server
     
@@ -139,7 +139,7 @@ sections:
       - question: |
           Which browsers can I use?
         answer: |
-          The web client supports Microsoft Edge, Internet Explorer 11, Mozilla Firefox (v55.0 and later), Safari, and Google Chrome.
+          The web client supports Microsoft Edge, Mozilla Firefox (v55.0 and later), Safari, and Google Chrome.
 
       - question: |
           What PCs can I use to access the web client?
