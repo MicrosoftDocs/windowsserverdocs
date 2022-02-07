@@ -127,7 +127,7 @@ Some applications define the size of the TCP receive window using SO_RCVBUF sock
 - 40 Gbps to lower than 100 Gbps: 524 KB
 - 100 Gbps or faster: 1572 KB
 
-For example, on a computer that has a 1-Gbps network adapter installed, the window size will be initialized to 64 KB. As the connection progresses, the receive window autotuning algorithm will grow the window size as long as sending and receiving application can sustain increasing throughput.
+For example, on a computer that has a 1-Gbps network adapter installed, the window size will be initialized to 262 KB. As the connection progresses, the receive window autotuning algorithm will grow the window size as long as sending and receiving application can sustain increasing throughput.
 
 This feature also makes full use of other features to improve network performance. These features include the rest of the TCP options that are defined in [RFC 1323](https://tools.ietf.org/html/rfc1323). By using these features, Windows-based computers can negotiate TCP receive window sizes that are smaller but are scaled at a defined value, depending on the configuration. This behavior the sizes easier to handle for networking devices.
 
