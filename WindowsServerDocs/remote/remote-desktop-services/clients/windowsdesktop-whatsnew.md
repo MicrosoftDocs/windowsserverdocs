@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 01/25/2022
+ms.date: 02/09/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -18,7 +18,20 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.2851        |1.2.1672                  |
-|Insider    |1.2.2851        |1.2.1672                  |
+|Insider    |1.2.2923        |1.2.1672                  |
+
+## Updates for version 1.2.2923 (Insider)
+
+*Date published: 02/09/2022*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- The Desktop client now supports CTRL+ALT+arrow key keyboard shortcuts during desktop sessions.
+- Improved stability of Azure Active Directory authentication.
+- Fixed an issue that was preventing users from opening more than one Remote Desktop Protocol Windows (RDPW) file.
+- Updated clarity of wording for alert message that appers when the client needs to update while remote resources are open.
+- Improved graphics performance when user drags a RemoteApp window with certain types of mouse.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 
 ## Updates for version 1.2.2851
 
