@@ -28,9 +28,8 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 
 - The Desktop client now supports CTRL+ALT+arrow key keyboard shortcuts during desktop sessions.
 - Improved stability of Azure Active Directory authentication.
-- Fixed an issue that was preventing users from opening more than one Remote Desktop Protocol Windows (RDPW) file.
-- Updated clarity of wording for alert message that appers when the client needs to update while remote resources are open.
-- Improved graphics performance when user drags a RemoteApp window with certain types of mouse.
+- Fixed an issue that was preventing users from opening more than one .RDPW file.
+- Improved graphics performance with certain mouse types.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 
 ## Updates for version 1.2.2851
