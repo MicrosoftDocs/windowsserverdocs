@@ -73,10 +73,10 @@ The following table shows support for GPU scenarios in the client OS.
 |Feature|Windows 7 SP1|Windows 8.1|Windows 10|
 |---|---|---|---|
 |Use of hardware GPU for all RDP sessions|No|Yes|Yes|
-|H.264/AVC hardware encoding (if supported by the GPU)|No|No|Windows 10 1703 and later|
-|Load balancing between multiple GPUs presented to the OS|No|No|Windows 10 1803 and later|
-|H.264/AVC encoding optimizations for minimizing bandwidth usage|No|No|Windows 10 1803 and later|
-|H.264/AVC support for 4K resolution|No|No|Windows 10 1803 and later|
+|H.264/AVC hardware encoding (if supported by the GPU)|No|No|Windows 10 1703 or later|
+|Load balancing between multiple GPUs presented to the OS|No|No|Windows 10 1803 or later|
+|H.264/AVC encoding optimizations for minimizing bandwidth usage|No|No|Windows 10 1803 or later|
+|H.264/AVC support for 4K resolution|No|No|Windows 10 1803 or later|
 
 ### RemoteFX 3D Video Adapter (vGPU) support
 
@@ -92,12 +92,11 @@ Remote Desktop Services supports RemoteFX vGPUs when VM is running as a Hyper-V 
 
 ### Discrete Device Assignment support
 
-Remote Desktop Services supports Physical GPUs presented with Discrete Device Assignment from Hyper-V hosts running Windows Server 2016 or newer. See [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md) for more details.
-
+Remote Desktop Services supports Physical GPUs presented with Discrete Device Assignment from Hyper-V hosts running Windows Server 2016 or later. See [Plan for deploying Discrete Device Assignment](../../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md) for more details.
 
 ## VDI deployment – supported guest OSes
 
-Windows Server 2016 and newer RD Virtualization Host servers support the following guest OSes:
+Windows Server 2016 or later RD Virtualization Host servers support the following guest OSes:
 
 - Windows 10 Enterprise
 - Windows 8.1 Enterprise
@@ -110,7 +109,7 @@ Windows Server 2016 and newer RD Virtualization Host servers support the followi
 
 ## Single sign-on
 
-RDS in Windows Server 2016 and newer supports two main SSO experiences:
+RDS in Windows Server 2016 or later supports two main SSO experiences:
 
 - In-app (Remote Desktop application on Windows, iOS, Android, and Mac)
 - Web SSO
