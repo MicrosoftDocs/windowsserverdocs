@@ -1,10 +1,10 @@
 ---
 description: "Learn more about: Drive symmetry considerations for Storage Spaces Direct"
 title: Drive symmetry considerations for Storage Spaces Direct
-ms.author: cosdar
+ms.author: v-mandhiman
 manager: eldenc
 ms.topic: article
-author: cosmosdarwin
+author: ManikaDhiman
 ms.date: 10/08/2018
 ---
 

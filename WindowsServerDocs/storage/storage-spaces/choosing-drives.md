@@ -2,10 +2,10 @@
 title: Choosing drives for Storage Spaces Direct
 description: Learn more about how to choose drives for Storage Spaces Direct.
 ms.assetid: 1368bc83-9121-477a-af09-4ae73ac16789
-ms.author: cosdar
+ms.author: v-mandhiman
 manager: eldenc
 ms.topic: article
-author: cosmosdarwin
+author: ManikaDhiman
 ms.date: 07/01/2020
 ---
 
