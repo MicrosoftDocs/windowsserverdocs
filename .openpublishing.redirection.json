@@ -10444,6 +10444,11 @@
       "source_path": "WindowsServerDocs/administration/hybrid-cloud-print/hybrid-cloud-print-overview.md",
       "redirect_url": "/universal-print/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/understand-the-cache.md",
+      "redirect_url": "/azure-stack/hci/concepts/cache.md",
+      "redirect_document_id": false
     }
   ]
 }

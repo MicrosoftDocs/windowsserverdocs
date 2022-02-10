@@ -41,7 +41,7 @@ In addition to providing resiliency improvements, ReFS introduces new features f
   Once these tiers are configured, ReFS uses them to deliver fast storage for hot data and capacity-efficient storage for cold data:
   
   - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real time.
-  - If using a hybrid deployment (mixing flash and HDD drives), [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) helps accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads also occur in the performance tier.
+  - If using a hybrid deployment (mixing flash and HDD drives), [the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache) helps accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads also occur in the performance tier.
 
   > [!NOTE]
   > For Windows Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md). We recommend using mirror-accelerated parity with archival and backup workloads only. For virtualized and other high performance random workloads, we recommend using three-way mirrors for better performance.

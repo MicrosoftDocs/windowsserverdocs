@@ -375,7 +375,7 @@ CD $ScriptFolder
 ## Additional References
 
 -   [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
--   [Understand the cache in Storage Spaces Direct](understand-the-cache.md)
+-   [Understand the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)
 -   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 -   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)

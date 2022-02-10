@@ -73,7 +73,7 @@ The number of servers, the resiliency, the severity of the capacity imbalance, a
 
 Storage Spaces Direct is robust to cache imbalance across drives and across servers. Even if the imbalance is severe, everything will continue to work. Moreover, Storage Spaces Direct always uses all available cache to the fullest.
 
-However, using cache drives of different sizes may not improve cache performance uniformly or predictably: only IO to [drive bindings](understand-the-cache.md#server-side-architecture) with larger cache drives may see improved performance. Storage Spaces Direct distributes IO evenly across bindings and doesn't discriminate based on cache-to-capacity ratio.
+However, using cache drives of different sizes may not improve cache performance uniformly or predictably: only IO to [drive bindings](/azure-stack/hci/concepts/cache.md#server-side-architecture) with larger cache drives may see improved performance. Storage Spaces Direct distributes IO evenly across bindings and doesn't discriminate based on cache-to-capacity ratio.
 
 ![Cache imbalance](media/drive-symmetry-considerations/Cache-Asymmetry.png)
 

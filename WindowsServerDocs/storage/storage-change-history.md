@@ -202,7 +202,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |---|---|
 |[DFS Namespaces](dfs-namespaces/dfs-overview.md)|Published 20 new topics for Windows Server 2016.|
 |[File Server Resource Manager](fsrm/fsrm-overview.md)|Published 33 new topics for Windows Server 2016.|
-|[Understanding the cache in Storage Spaces Direct](storage-spaces/understand-the-cache.md)|Added a Storage Spaces Direct design considerations video.|
+|[Understanding the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)|Added a Storage Spaces Direct design considerations video.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)|Added more best practices around log volumes.|
 
 ## June 2017
@@ -258,7 +258,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |[Creating volumes](storage-spaces/create-volumes.md)|New topic.|
 |[Extending volumes in Storage Spaces Direct](storage-spaces/resize-volumes.md)|New topic.|
 |[ReFS Overview](refs/refs-overview.md)|New topic.|
-|[Understanding Storage Spaces Direct](./storage-spaces/understand-the-cache.md)|New list of links.|
+|[Understanding Storage Spaces Direct](/azure-stack/hci/concepts/cache)|New list of links.|
 |[Planning Storage Spaces Direct](./storage-spaces/storage-spaces-direct-hardware-requirements.md)|New list of links.|
 |[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|New list of links.|
 |[Managing Storage Spaces Direct](./storage-spaces/storage-spaces-direct-overview.md)|New topic.|

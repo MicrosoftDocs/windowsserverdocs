@@ -30,7 +30,7 @@ Storage Spaces Direct currently works with four types of drives:
 
 Storage Spaces Direct features a built-in server-side cache. It is a large, persistent, real-time read and write cache. In deployments with multiple types of drives, it is configured automatically to use all drives of the "fastest" type. The remaining drives are used for capacity.
 
-For more information, check out [Understanding the cache in Storage Spaces Direct](understand-the-cache.md).
+For more information, check out [Understanding the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache).
 
 ## Option 1 – Maximizing performance
 
@@ -40,11 +40,11 @@ There are currently three ways to do so:
 
 ![All-flash deployment options to maximize performance](media/choosing-drives-and-resiliency-types/All-Flash-Deployment-Possibilities.png)
 
-1. **All NVMe.** Using all NVMe provides unmatched performance, including the most predictable low latency. If all your drives are the same model, there is no cache. You can also mix higher-endurance and lower-endurance NVMe models, and configure the former to cache writes for the latter ([requires set-up](understand-the-cache.md#manual-configuration)).
+1. **All NVMe.** Using all NVMe provides unmatched performance, including the most predictable low latency. If all your drives are the same model, there is no cache. You can also mix higher-endurance and lower-endurance NVMe models, and configure the former to cache writes for the latter ([requires set-up](/azure-stack/hci/concepts/cache.md#manual-configuration)).
 
 2. **NVMe + SSD.** Using NVMe together with SSDs, the NVMe will automatically cache writes to the SSDs. This allows writes to coalesce in cache and be de-staged only as needed, to reduce wear on the SSDs. This provides NVMe-like write characteristics, while reads are served directly from the also-fast SSDs.
 
-3. **All SSD.** As with All-NVMe, there is no cache if all your drives are the same model. If you mix higher-endurance and lower-endurance models, you can configure the former to cache writes for the latter ([requires set-up](understand-the-cache.md#manual-configuration)).
+3. **All SSD.** As with All-NVMe, there is no cache if all your drives are the same model. If you mix higher-endurance and lower-endurance models, you can configure the former to cache writes for the latter ([requires set-up](/azure-stack/hci/concepts/cache.md#manual-configuration)).
 
 	> [!NOTE]
 	> An advantage to using all-NVMe or all-SSD with no cache is that you get usable storage capacity from every drive. There is no capacity "spent" on caching, which may be appealing at smaller scale.
@@ -92,7 +92,7 @@ We recommend limiting the total storage capacity per server to approximately 400
 ## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
-- [Understand the cache in Storage Spaces Direct](understand-the-cache.md)
+- [Understand the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)
 - [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md)
 - [Planning volumes in Storage Spaces Direct](plan-volumes.md)
 - [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)
