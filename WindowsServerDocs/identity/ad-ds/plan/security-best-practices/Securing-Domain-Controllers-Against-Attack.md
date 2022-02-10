@@ -7,6 +7,7 @@ author: MicrosoftGuyJFlo
 manager: karenhoran
 ms.date: 02/09/2022
 ms.topic: article
+ms.reviewer: rickys
 ---
 # Securing Domain Controllers Against Attack
 
