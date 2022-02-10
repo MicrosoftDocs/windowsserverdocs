@@ -1,10 +1,10 @@
 ---
 description: "Learn more about: Using Storage Spaces Direct with the CSV in-memory read cache"
 title: Storage Spaces Direct in-memory read cache
-ms.author: eldenc
+ms.author: v-mandhiman
 manager: siroy
 ms.topic: article
-author: eldenchristensen
+author: ManikaDhiman
 ms.date: 09/21/2020
 ---
 # Using Storage Spaces Direct with the CSV in-memory read cache

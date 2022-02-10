@@ -130,7 +130,7 @@
 ### [Health and operational states](storage-spaces/storage-spaces-states.md)
 ## [Storage Spaces Direct](storage-spaces/storage-spaces-direct-overview.md)
 ### Understand
-#### [Understand the cache](storage-spaces/understand-the-cache.md)
+#### [Understand the cache](/azure-stack/hci/concepts/cache)
 #### [Fault tolerance and storage efficiency](storage-spaces/Storage-Spaces-Fault-Tolerance.md)
 #### [Drive symmetry considerations](storage-spaces/drive-symmetry-considerations.md)
 #### [Understand and monitor storage resync](storage-spaces/understand-storage-resync.md)

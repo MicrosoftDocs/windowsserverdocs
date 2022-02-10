@@ -73,7 +73,7 @@ When data is moved from mirror to parity, the data is read, parity encodings are
 
 **Reads:** There is no meaningful, negative performance impact when reading from parity:
 - If mirror and parity are constructed with the same media type, read performance will be equivalent.
-- If mirror and parity are constructed with different media types—Mirrored SSDs, Parity HDDs, for example—[the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) will help cache hot data to accelerate any reads from parity.
+- If mirror and parity are constructed with different media types—Mirrored SSDs, Parity HDDs, for example—[the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache) will help cache hot data to accelerate any reads from parity.
 
 ## ReFS compaction
 

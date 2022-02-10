@@ -2,8 +2,8 @@
 title: Extending volumes in Storage Spaces Direct
 description: How to resize volumes in Storage Spaces Direct using Windows Admin Center and PowerShell.
 ms.reviewer: cosmosdarwin
-author: cosmosdarwin
-ms.author: cosdar
+author: ManikaDhiman
+ms.author: v-mandhiman
 manager: eldenc
 ms.date: 03/10/2020
 ms.topic: article
