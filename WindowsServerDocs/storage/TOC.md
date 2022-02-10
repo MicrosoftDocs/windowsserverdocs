@@ -131,7 +131,7 @@
 ## [Storage Spaces Direct](storage-spaces/storage-spaces-direct-overview.md)
 ### Understand
 #### [Understand the cache](/azure-stack/hci/concepts/cache)
-#### [Fault tolerance and storage efficiency](storage-spaces/Storage-Spaces-Fault-Tolerance.md)
+#### [Fault tolerance and storage efficiency](/azure-stack/hci/concepts/fault-tolerance)
 #### [Drive symmetry considerations](storage-spaces/drive-symmetry-considerations.md)
 #### [Understand and monitor storage resync](storage-spaces/understand-storage-resync.md)
 #### [Cluster and pool quorum](storage-spaces/understand-quorum.md)
