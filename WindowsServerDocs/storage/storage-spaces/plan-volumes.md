@@ -2,10 +2,10 @@
 description: "Learn more about: Planning volumes in Storage Spaces Direct"
 ms.assetid: 342173ca-4e10-44f4-b2c9-02a6c26f7a4a
 title: Planning volumes in Storage Spaces Direct
-ms.author: cosdar
+ms.author: v-mandhiman
 manager: eldenc
 ms.topic: article
-author: cosmosdarwin
+author: ManikaDhiman
 ms.date: 06/28/2019
 ---
 # Planning volumes in Storage Spaces Direct
@@ -109,7 +109,7 @@ The resulting storage efficiency depends on the proportions you choose. See [thi
 
 ### About deployments with NVMe, SSD, and HDD
 
-In deployments with two types of drives, the faster drives provide caching while the slower drives provide capacity. This happens automatically – for more information, see [Understanding the cache in Storage Spaces Direct](understand-the-cache.md). In such deployments, all volumes ultimately reside on the same type of drives – the capacity drives.
+In deployments with two types of drives, the faster drives provide caching while the slower drives provide capacity. This happens automatically – for more information, see [Understanding the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache). In such deployments, all volumes ultimately reside on the same type of drives – the capacity drives.
 
 In deployments with all three types of drives, only the fastest drives (NVMe) provide caching, leaving two types of drives (SSD and HDD) to provide capacity. For each volume, you can choose whether it resides entirely on the SSD tier, entirely on the HDD tier, or whether it spans the two.
 

@@ -41,7 +41,7 @@ In addition to providing resiliency improvements, ReFS introduces new features f
   Once these tiers are configured, ReFS uses them to deliver fast storage for hot data and capacity-efficient storage for cold data:
   
   - All writes will occur in the performance tier, and large chunks of data that remain in the performance tier will be efficiently moved to the capacity tier in real time.
-  - If using a hybrid deployment (mixing flash and HDD drives), [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) helps accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads also occur in the performance tier.
+  - If using a hybrid deployment (mixing flash and HDD drives), [the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache) helps accelerate reads, reducing the effect of data fragmentation characteristic of virtualized workloads. Otherwise, if using an all-flash deployment, reads also occur in the performance tier.
 
   > [!NOTE]
   > For Windows Server deployments, mirror-accelerated parity is only supported on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md). We recommend using mirror-accelerated parity with archival and backup workloads only. For virtualized and other high performance random workloads, we recommend using three-way mirrors for better performance.
@@ -70,7 +70,7 @@ Microsoft has developed NTFS specifically for general-purpose use with a wide ra
 
 Deploying ReFS on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md) is recommended for virtualized workloads or network-attached storage:
 
-- Mirror-accelerated parity and [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) deliver high performance and capacity-efficient storage.
+- Mirror-accelerated parity and [the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache) deliver high performance and capacity-efficient storage.
 - The introduction of block clone and sparse VDL dramatically accelerates .vhdx file operations, such as creation, merge, and expansion.
 - Integrity-streams, online repair, and alternate data copies enable ReFS and Storage Spaces Direct to jointly detect and correct storage controller and storage media corruptions within both metadata and data.
 - ReFS provides the functionality to scale and support large data sets.
