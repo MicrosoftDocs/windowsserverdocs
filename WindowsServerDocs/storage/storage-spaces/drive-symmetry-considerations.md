@@ -78,7 +78,7 @@ However, using cache drives of different sizes may not improve cache performance
 ![Cache imbalance](media/drive-symmetry-considerations/Cache-Asymmetry.png)
 
    > [!TIP]
-   > See [Understanding the cache](understand-the-cache.md) to learn more about cache bindings.
+   > See [Understanding the cache](/azure-stack/hci/concepts/cache) to learn more about cache bindings.
 
 ## Example configurations
 

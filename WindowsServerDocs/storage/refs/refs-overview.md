@@ -70,7 +70,7 @@ Microsoft has developed NTFS specifically for general-purpose use with a wide ra
 
 Deploying ReFS on [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md) is recommended for virtualized workloads or network-attached storage:
 
-- Mirror-accelerated parity and [the cache in Storage Spaces Direct](../storage-spaces/understand-the-cache.md) deliver high performance and capacity-efficient storage.
+- Mirror-accelerated parity and [the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache) deliver high performance and capacity-efficient storage.
 - The introduction of block clone and sparse VDL dramatically accelerates .vhdx file operations, such as creation, merge, and expansion.
 - Integrity-streams, online repair, and alternate data copies enable ReFS and Storage Spaces Direct to jointly detect and correct storage controller and storage media corruptions within both metadata and data.
 - ReFS provides the functionality to scale and support large data sets.
