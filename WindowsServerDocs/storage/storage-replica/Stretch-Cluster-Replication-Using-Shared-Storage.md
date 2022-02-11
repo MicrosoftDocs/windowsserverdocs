@@ -399,7 +399,7 @@ For more information, review the Microsoft Ignite session Stretching Failover Cl
     >[!NOTE]
     > Windows Server now includes an option for cloud witness using Azure. You can choose this quorum option instead of the file share witness.
 
-   For more information about quorum configuration, see the [Understanding cluster and pool quorum](../storage-spaces/understand-quorum.md). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
+   For more information about quorum configuration, see the [Understanding cluster and pool quorum](/azure-stack/hci/concepts/quorum). For more information on the Set-ClusterQuorum cmdlet, see [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
 
 4.  If you're creating a two-node stretch cluster, you must add all storage before continuing. To do so, open a PowerShell session with administrative permissions on the cluster nodes, and run the following command: `Get-ClusterAvailableDisk -All | Add-ClusterDisk`.
 

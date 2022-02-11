@@ -147,7 +147,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |New or changed topic|Description|
 |---|---|
 |[Disaster recovery with Storage Spaces Direct](storage-spaces/storage-spaces-direct-disaster-recovery.md)| New topic.|
-|[Understanding Quorum in Storage Spaces Direct](storage-spaces/understand-quorum.md)| New topic.|
+|[Understanding Quorum in Storage Spaces Direct](/azure-stack/hci/concepts/quorum)| New topic.|
 |[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)| Heavily revised to include both converged and hyper-converged scenarios.|
 |[Deploying Roaming User Profiles](folder-redirection/deploy-roaming-user-profiles.md)|Moved from Previous Versions library and updated.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)|Added [Is CSV required to replicate in a stretch cluster or between clusters?](storage-replica/storage-replica-frequently-asked-questions.yml).|
@@ -163,7 +163,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 |New or changed topic|Description|
 |---|---|
-|[Drive symmetry considerations in Storage Spaces Direct](storage-spaces/drive-symmetry-considerations.md)| New topic.|
+|[Drive symmetry considerations in Storage Spaces Direct](/azure-stack/hci/concepts/drive-symmetry-considerations)| New topic.|
 |[Using Storage Replica with Project Honolulu](./storage-replica/server-to-server-storage-replication.md)|New topic.|
 
 ## December 2017
