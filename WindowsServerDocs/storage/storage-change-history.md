@@ -157,7 +157,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |New or changed topic|Description|
 |---|---|
 |[Storage Spaces health and operational states](storage-spaces/storage-spaces-states.md)| New topic.|
-|[Using Storage Spaces Direct with the CSV in-memory read cache](storage-spaces/csv-cache.md)| New topic. |
+|[Using Storage Spaces Direct with the CSV in-memory read cache](/azure-stack/hci/manage/use-csv-cache)| New topic. |
 
 ## January 2018
 
@@ -173,7 +173,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |[Change a drive letter](disk-management/change-a-drive-letter.md)|New topic.|
 |[Troubleshooting Disk Management](disk-management/troubleshooting-disk-management.md)|Rewrote the [A disk's status is Not Initialized or the disk is missing entirely](disk-management/troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps) section to add extensive troubleshooting steps, based on customer requests.|
 |[Initialize new disks](disk-management/initialize-new-disks.md)|Rewrote to attempt to make it easier to understand and address customer questions.|
-|[Planning volumes in Storage Spaces Direct](storage-spaces/plan-volumes.md)|Added a table summarizing the resiliency types available on four-node and larger clusters.|
+|[Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)|Added a table summarizing the resiliency types available on four-node and larger clusters.|
 |[ReFS overview](refs/refs-overview.md)|Clarified recommended workloads for mirror-accelerated parity and corrected the supported file and volume sizes for ReFS and NTFS.|
 |[Mirror-accelerated parity](refs/mirror-accelerated-parity.md)|Clarified recommendation to place write-heavy files in separate directories.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
@@ -254,7 +254,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 |New or changed topic|Description|
 |---|---|
-|[Planning volumes](storage-spaces/plan-volumes.md)|New topic.|
+|[Planning volumes](/azure-stack/hci/concepts/plan-volumes)|New topic.|
 |[Creating volumes](storage-spaces/create-volumes.md)|New topic.|
 |[Extending volumes in Storage Spaces Direct](storage-spaces/resize-volumes.md)|New topic.|
 |[ReFS Overview](refs/refs-overview.md)|New topic.|

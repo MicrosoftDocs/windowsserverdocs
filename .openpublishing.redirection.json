@@ -10464,6 +10464,21 @@
       "source_path": "WindowsServerDocs/storage/storage-spaces/understand-quorum.md",
       "redirect_url": "/azure-stack/hci/concepts/quorum",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/choosing-drives.md",
+      "redirect_url": "/azure-stack/hci/concepts/choose-drives",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/csv-cache.md",
+      "redirect_url": "/azure-stack/hci/manage/use-csv-cache",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/plan-volumes.md",
+      "redirect_url": "/azure-stack/hci/concepts/plan-volumes",
+      "redirect_document_id": false
     }
   ]
 }

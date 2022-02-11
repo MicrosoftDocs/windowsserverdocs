@@ -272,7 +272,7 @@ $CSVCurrentCacheSize = (Get-Cluster $ClusterName).BlockCacheSize
 Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
 ```
 
-For more info, see [Using the CSV in-memory read cache](csv-cache.md).
+For more info, see [Using the CSV in-memory read cache](/azure-stack/hci/manage/use-csv-cache).
 
 ### Step 3.8: Deploy virtual machines for hyper-converged deployments
 
@@ -376,7 +376,7 @@ CD $ScriptFolder
 
 -   [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 -   [Understand the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)
--   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
+-   [Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
 -   [Storage Spaces Fault Tolerance](/azure-stack/hci/concepts/fault-tolerance)
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)
 -   [To RDMA, or not to RDMA – that is the question](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)

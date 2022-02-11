@@ -63,7 +63,7 @@ Delimited allocation imposes some added management considerations and complexity
 
 1. The administrator is responsible for delimiting the allocation of each volume to balance storage utilization across servers and uphold high probability of survival, as described in the [Best practices](#best-practices) section.
 
-2. With delimited allocation, reserve the equivalent of **one capacity drive per server (with no maximum)**. This is more than the [published recommendation](plan-volumes.md#choosing-the-size-of-volumes) for regular allocation, which maxes out at four capacity drives total.
+2. With delimited allocation, reserve the equivalent of **one capacity drive per server (with no maximum)**. This is more than the [published recommendation](/azure-stack/hci/concepts/plan-volumes.md#choosing-the-size-of-volumes) for regular allocation, which maxes out at four capacity drives total.
 
 3. If a server fails and needs to be replaced, as described in [Remove a server and its drives](remove-servers.md#remove-a-server-and-its-drives), the administrator is responsible for updating the delimitation of affected volumes by adding the new server and removing the failed one – example below.
 

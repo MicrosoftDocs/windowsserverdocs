@@ -69,7 +69,7 @@ Switched or switchless node interconnects
 
 ## Drives
 
-Storage Spaces Direct works with direct-attached SATA, SAS, NVMe, or persistent memory (PMem) drives that are physically attached to just one server each. For more help choosing drives, see the [Choosing drives](choosing-drives.md) and [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory) topics.
+Storage Spaces Direct works with direct-attached SATA, SAS, NVMe, or persistent memory (PMem) drives that are physically attached to just one server each. For more help choosing drives, see the [Choosing drives](/azure-stack/hci/concepts/choose-drives) and [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory) topics.
 
 - SATA, SAS, persistent memory, and NVMe (M.2, U.2, and Add-In-Card) drives are all supported
 - 512n, 512e, and 4K native drives are all supported

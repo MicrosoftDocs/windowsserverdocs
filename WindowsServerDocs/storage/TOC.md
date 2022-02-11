@@ -138,9 +138,9 @@
 #### [Cluster sets](/azure-stack/hci/deploy/cluster-set)
 ### Plan
 #### [Hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)
-#### [Using the CSV in-memory read cache](storage-spaces/csv-cache.md)
-#### [Choose drives](storage-spaces/choosing-drives.md)
-#### [Plan volumes](storage-spaces/plan-volumes.md)
+#### [Using the CSV in-memory read cache](/azure-stack/hci/manage/use-csv-cache)
+#### [Choose drives](/azure-stack/hci/concepts/choose-drives)
+#### [Plan volumes](/azure-stack/hci/concepts/plan-volumes)
 #### [Guest VM clusters](storage-spaces/storage-spaces-direct-in-vm.md)
 #### [Disaster recovery](storage-spaces/storage-spaces-direct-disaster-recovery.md)
 ### Deploy

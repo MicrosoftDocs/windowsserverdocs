@@ -15,7 +15,7 @@ ms.topic: article
 This topic describes how to create volumes on a Storage Spaces Direct cluster by using Windows Admin Center and PowerShell.
 
 > [!TIP]
-> If you haven't already, check out [Planning volumes in Storage Spaces Direct](plan-volumes.md) first.
+> If you haven't already, check out [Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes) first.
 
 ## Create a three-way mirror volume
 
@@ -147,6 +147,6 @@ You're done! Repeat as needed to create more than one volume.
 ## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
-- [Planning volumes in Storage Spaces Direct](plan-volumes.md)
+- [Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
 - [Extending volumes in Storage Spaces Direct](resize-volumes.md)
 - [Deleting volumes in Storage Spaces Direct](delete-volumes.md)
