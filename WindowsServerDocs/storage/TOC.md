@@ -145,7 +145,7 @@
 #### [Disaster recovery](storage-spaces/storage-spaces-direct-disaster-recovery.md)
 ### Deploy
 #### [Deploy Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)
-#### [Create volumes](storage-spaces/create-volumes.md)
+#### [Create volumes](/azure-stack/hci/manage/create-volumes)
 #### [Nested resiliency](storage-spaces/nested-resiliency.md)
 #### [Configure quorum](../failover-clustering/manage-cluster-quorum.md)
 #### [Upgrade a Storage Spaces Direct cluster](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)
@@ -158,8 +158,8 @@
 #### [Take a server offline for maintenance](/azure-stack/hci/manage/maintain-servers)
 #### [Remove servers](storage-spaces/remove-servers.md)
 #### [Update drive firmware](update-firmware.md)
-#### [Extend volumes](storage-spaces/resize-volumes.md)
-#### [Delete volumes](storage-spaces/delete-volumes.md)
+#### [Extend volumes](/azure-stack/hci/manage/extend-volumes)
+#### [Delete volumes](/azure-stack/hci/manage/delete-volumes)
 #### [Performance history](storage-spaces/performance-history.md)
 ##### [Drives](storage-spaces/performance-history-for-drives.md)
 ##### [Network adapters](storage-spaces/performance-history-for-network-adapters.md)
@@ -171,7 +171,7 @@
 ##### [Scripting samples](storage-spaces/performance-history-scripting.md)
 #### [Delimit the allocation of volumes](storage-spaces/delimit-volume-allocation.md)
 #### [Monitor with Azure Monitor](storage-spaces/configure-azure-monitor.md)
-#### [Adjustable storage repair speed](storage-spaces/storage-spaces-adjustable-repair-speed.md)
+#### [Adjustable storage repair speed](/azure-stack/hci/manage/storage-repair-speed)
 
 ### Troubleshoot
 #### [Troubleshooting scenarios](storage-spaces/troubleshooting-storage-spaces.md)
