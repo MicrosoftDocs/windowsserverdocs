@@ -137,6 +137,6 @@ When you resize the **Partition**, the **Volume** and **ClusterSharedVolume** fo
 ## Additional References
 
 - [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
-- [Planning volumes in Storage Spaces Direct](plan-volumes.md)
+- [Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
 - [Creating volumes in Storage Spaces Direct](create-volumes.md)
 - [Deleting volumes in Storage Spaces Direct](delete-volumes.md)
