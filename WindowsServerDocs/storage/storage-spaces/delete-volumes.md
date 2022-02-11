@@ -28,6 +28,6 @@ To delete a volume in Windows Admin Center:
 ## Additional References
 
 - [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
-- [Planning volumes in Storage Spaces Direct](plan-volumes.md)
+- [Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
 - [Creating volumes in Storage Spaces Direct](create-volumes.md)
 - [Extending volumes in Storage Spaces Direct](resize-volumes.md)

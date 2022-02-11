@@ -56,7 +56,7 @@ Storage Spaces Direct in Windows Server 2019 offers two new resiliency options i
 
 ### Capacity efficiency
 
-Capacity efficiency is the ratio of usable space to [volume footprint](plan-volumes.md#choosing-the-size-of-volumes). It describes the capacity overhead attributable to resiliency, and depends on the resiliency option you choose. As a simple example, storing data without resiliency is 100% capacity efficient (1 TB of data takes up 1 TB of physical storage capacity), while two-way mirroring is 50% efficient (1 TB of data takes up 2 TB of physical storage capacity).
+Capacity efficiency is the ratio of usable space to [volume footprint](/azure-stack/hci/concepts/plan-volumes.md#choosing-the-size-of-volumes). It describes the capacity overhead attributable to resiliency, and depends on the resiliency option you choose. As a simple example, storing data without resiliency is 100% capacity efficient (1 TB of data takes up 1 TB of physical storage capacity), while two-way mirroring is 50% efficient (1 TB of data takes up 2 TB of physical storage capacity).
 
 - **Nested two-way mirror** writes four copies of everything, meaning to store 1 TB of data, you need 4 TB of physical storage capacity. Although its simplicity is appealing, nested two-way mirror's capacity efficiency of 25% is the lowest of any resiliency option in Storage Spaces Direct.
 
@@ -191,5 +191,5 @@ For details see the [Remove servers](remove-servers.md) topic.
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Understand fault tolerance in Storage Spaces Direct](/azure-stack/hci/concepts/fault-tolerance)
-- [Plan volumes in Storage Spaces Direct](plan-volumes.md)
+- [Plan volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
 - [Create volumes in Storage Spaces Direct](create-volumes.md)
