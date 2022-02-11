@@ -132,9 +132,9 @@
 ### Understand
 #### [Understand the cache](/azure-stack/hci/concepts/cache)
 #### [Fault tolerance and storage efficiency](/azure-stack/hci/concepts/fault-tolerance)
-#### [Drive symmetry considerations](storage-spaces/drive-symmetry-considerations.md)
+#### [Drive symmetry considerations](/azure-stack/hci/concepts/drive-symmetry-considerations)
 #### [Understand and monitor storage resync](storage-spaces/understand-storage-resync.md)
-#### [Cluster and pool quorum](storage-spaces/understand-quorum.md)
+#### [Cluster and pool quorum](/azure-stack/hci/concepts/quorum)
 #### [Cluster sets](/azure-stack/hci/deploy/cluster-set)
 ### Plan
 #### [Hardware requirements](storage-spaces/storage-spaces-direct-hardware-requirements.md)

@@ -7,7 +7,7 @@
     - name: Scale-Out File Server for application data
       href: sofs-overview.md
     - name: Cluster and pool quorum
-      href: ../storage/storage-spaces/understand-quorum.md
+      href: /azure-stack/hci/concepts/quorum
     - name: Fault domain awareness
       href: fault-domains.md
     - name: Simplified SMB Multichannel and multi-NIC cluster networks
