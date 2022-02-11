@@ -377,6 +377,6 @@ CD $ScriptFolder
 -   [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 -   [Understand the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)
 -   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
--   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)
+-   [Storage Spaces Fault Tolerance](/azure-stack/hci/concepts/fault-tolerance)
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)
 -   [To RDMA, or not to RDMA – that is the question](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)

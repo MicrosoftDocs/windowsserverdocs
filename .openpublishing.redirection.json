@@ -10446,8 +10446,23 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/storage/understand-the-cache.md",
+      "source_path": "WindowsServerDocs/storage/storage-spaces/understand-the-cache.md",
       "redirect_url": "/azure-stack/hci/concepts/cache",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-fault-tolerance.md",
+      "redirect_url": "/azure-stack/hci/concepts/fault-tolerance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/drive-symmetry-considerations.md",
+      "redirect_url": "/azure-stack/hci/concepts/drive-symmetry-considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/understand-quorum.md",
+      "redirect_url": "/azure-stack/hci/concepts/quorum",
       "redirect_document_id": false
     }
   ]

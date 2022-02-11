@@ -84,7 +84,7 @@ New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName 
 
 ![adding a fourth server to a three-node cluster](media/add-nodes/Scaling-3-to-4.png)
 
-With four servers, you can use dual parity, also commonly called erasure coding (compare to distributed RAID-6). This provides the same fault tolerance as three-way mirroring, but with better storage efficiency. To learn more, see [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md).
+With four servers, you can use dual parity, also commonly called erasure coding (compare to distributed RAID-6). This provides the same fault tolerance as three-way mirroring, but with better storage efficiency. To learn more, see [Fault tolerance and storage efficiency](/azure-stack/hci/concepts/fault-tolerance).
 
 If you're coming from a smaller deployment, you have several good options to begin creating dual parity volumes. You can use whichever you prefer.
 
@@ -135,7 +135,7 @@ As you scale beyond four servers, new volumes can benefit from ever-greater pari
 
 However, any pre-existing volumes will *not* be "converted" to the new, wider encoding. One good reason is that to do so would require a massive calculation affecting literally *every single bit* in the entire deployment. If you would like pre-existing data to become encoded at the higher efficiency, you can migrate it to new volume(s).
 
-For more details, see [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md).
+For more details, see [Fault tolerance and storage efficiency](/azure-stack/hci/concepts/fault-tolerance).
 
 ### Adding servers when using chassis or rack fault tolerance
 

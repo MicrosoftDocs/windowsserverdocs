@@ -95,4 +95,4 @@ We recommend limiting the total storage capacity per server to approximately 400
 - [Understand the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)
 - [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md)
 - [Planning volumes in Storage Spaces Direct](plan-volumes.md)
-- [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)
+- [Fault tolerance and storage efficiency](/azure-stack/hci/concepts/fault-tolerance)

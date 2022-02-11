@@ -21,12 +21,12 @@ Windows Server 2019 introduces an option to manually delimit the allocation of v
 ### ![Green checkmark icon.](media/delimit-volume-allocation/supported.png) Consider using this option if:
 
 - Your cluster has six or more servers; and
-- Your cluster uses only [three-way mirror](storage-spaces-fault-tolerance.md#mirroring) resiliency
+- Your cluster uses only [three-way mirror](/azure-stack/hci/concepts/fault-tolerance.md#mirroring) resiliency
 
 ### ![Red X icon.](media/delimit-volume-allocation/unsupported.png) Do not use this option if:
 
 - Your cluster has fewer than six servers; or
-- Your cluster uses [parity](storage-spaces-fault-tolerance.md#parity) or [mirror-accelerated parity](storage-spaces-fault-tolerance.md#mirror-accelerated-parity) resiliency
+- Your cluster uses [parity](/azure-stack/hci/concepts/fault-tolerance.md#parity) or [mirror-accelerated parity](/azure-stack/hci/concepts/fault-tolerance.md#mirror-accelerated-parity) resiliency
 
 ## Understand
 
@@ -36,7 +36,7 @@ With regular three-way mirroring, the volume is divided into many small "slabs" 
 
 ![Diagram showing the volume being divided into three stacks of slabs and distributed evenly across every server.](media/delimit-volume-allocation/regular-allocation.png)
 
-This default allocation maximizes parallel reads and writes, leading to better performance, and is appealing in its simplicity: every server is equally busy, every drive is equally full, and all volumes stay online or go offline together. Every volume is guaranteed to survive up to two concurrent failures, as [these examples](storage-spaces-fault-tolerance.md#examples) illustrate.
+This default allocation maximizes parallel reads and writes, leading to better performance, and is appealing in its simplicity: every server is equally busy, every drive is equally full, and all volumes stay online or go offline together. Every volume is guaranteed to survive up to two concurrent failures, as [these examples](/azure-stack/hci/concepts/fault-tolerance.md#examples) illustrate.
 
 However, with this allocation, volumes can't survive three concurrent failures. If three servers fail at once, or if drives in three servers fail at once, volumes become inaccessible because at least some slabs were (with very high probability) allocated to the exact three drives or servers that failed.
 
@@ -202,7 +202,7 @@ No, it's the same as with regular allocation.
 ## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
-- [Fault tolerance in Storage Spaces Direct](storage-spaces-fault-tolerance.md)
+- [Fault tolerance in Storage Spaces Direct](/azure-stack/hci/concepts/fault-tolerance)
 
 ## Appendix
 
