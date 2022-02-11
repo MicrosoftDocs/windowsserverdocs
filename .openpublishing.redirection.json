@@ -10496,7 +10496,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-adjustable-repair-speed",
+      "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-adjustable-repair-speed.md",
       "redirect_url": "/azure-stack/hci/manage/storage-repair-speed",
       "redirect_document_id": false
     }
