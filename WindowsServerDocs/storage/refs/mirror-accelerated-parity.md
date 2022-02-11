@@ -20,7 +20,7 @@ Storage Spaces can provide fault tolerance for data using two fundamental techni
 
 Mirror and parity resiliency schemes have fundamentally different storage and performance characteristics:
 - Mirror resiliency allows users to attain fast write performance, but replicating the data for each copy isn't space efficient.
-- Parity, on the other hand, must re-compute parity for every write, causing random write performance to suffer. Parity does, however, allow users to store their data with greater space efficiency. For more info, see [Storage Spaces fault tolerance](../storage-spaces/Storage-Spaces-Fault-Tolerance.md).
+- Parity, on the other hand, must re-compute parity for every write, causing random write performance to suffer. Parity does, however, allow users to store their data with greater space efficiency. For more info, see [Storage Spaces fault tolerance](/azure-stack/hci/concepts/fault-tolerance).
 
 Thus, mirror is predisposed to deliver performance-sensitive storage while parity offers improved storage capacity utilization. In mirror-accelerated parity, ReFS leverages the benefits of each resiliency type to deliver both capacity-efficient and performance-sensitive storage by combining both resiliency schemes within a single volume.
 
