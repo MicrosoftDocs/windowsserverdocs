@@ -28,7 +28,7 @@ Nested resiliency is a new capability of [Storage Spaces Direct](storage-spaces-
 
 ## Why nested resiliency
 
-Volumes that use nested resiliency can **stay online and accessible even if multiple hardware failures happen at the same time**, unlike classic [two-way mirroring](storage-spaces-fault-tolerance.md) resiliency. For example, if two drives fail at the same time, or if a server goes down and a drive fails, volumes that use nested resiliency stay online and accessible. For hyper-converged infrastructure, this increases uptime for apps and virtual machines; for file server workloads, this means users enjoy uninterrupted access to their files.
+Volumes that use nested resiliency can **stay online and accessible even if multiple hardware failures happen at the same time**, unlike classic [two-way mirroring](/azure-stack/hci/concepts/fault-tolerance) resiliency. For example, if two drives fail at the same time, or if a server goes down and a drive fails, volumes that use nested resiliency stay online and accessible. For hyper-converged infrastructure, this increases uptime for apps and virtual machines; for file server workloads, this means users enjoy uninterrupted access to their files.
 
 ![Storage availability](media/nested-resiliency/storage-availability.png)
 
@@ -50,13 +50,13 @@ Storage Spaces Direct in Windows Server 2019 offers two new resiliency options i
 
   ![Nested two-way mirror](media/nested-resiliency/nested-two-way-mirror.png)
 
-- **Nested mirror-accelerated parity.** Combine nested two-way mirroring, from above, with nested parity. Within each server, local resiliency for most data is provided by single [bitwise parity arithmetic](storage-spaces-fault-tolerance.md#parity), except new recent writes which use two-way mirroring. Then, further resiliency for all data is provided by two-way mirroring between the servers. For more information about how mirror-accelerated parity works, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md).
+- **Nested mirror-accelerated parity.** Combine nested two-way mirroring, from above, with nested parity. Within each server, local resiliency for most data is provided by single [bitwise parity arithmetic](/azure-stack/hci/concepts/fault-tolerance.md#parity), except new recent writes which use two-way mirroring. Then, further resiliency for all data is provided by two-way mirroring between the servers. For more information about how mirror-accelerated parity works, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md).
 
   ![Nested mirror-accelerated parity](media/nested-resiliency/nested-mirror-accelerated-parity.png)
 
 ### Capacity efficiency
 
-Capacity efficiency is the ratio of usable space to [volume footprint](plan-volumes.md#choosing-the-size-of-volumes). It describes the capacity overhead attributable to resiliency, and depends on the resiliency option you choose. As a simple example, storing data without resiliency is 100% capacity efficient (1 TB of data takes up 1 TB of physical storage capacity), while two-way mirroring is 50% efficient (1 TB of data takes up 2 TB of physical storage capacity).
+Capacity efficiency is the ratio of usable space to [volume footprint](/azure-stack/hci/concepts/plan-volumes.md#choosing-the-size-of-volumes). It describes the capacity overhead attributable to resiliency, and depends on the resiliency option you choose. As a simple example, storing data without resiliency is 100% capacity efficient (1 TB of data takes up 1 TB of physical storage capacity), while two-way mirroring is 50% efficient (1 TB of data takes up 2 TB of physical storage capacity).
 
 - **Nested two-way mirror** writes four copies of everything, meaning to store 1 TB of data, you need 4 TB of physical storage capacity. Although its simplicity is appealing, nested two-way mirror's capacity efficiency of 25% is the lowest of any resiliency option in Storage Spaces Direct.
 
@@ -136,7 +136,7 @@ Volumes that use nested resiliency appear in [Windows Admin Center](../../manage
 
 ### Optional: Extend to cache drives
 
-With its default settings, nested resiliency protects against the loss of multiple capacity drives at the same time, or one server and one capacity drive at the same time. To extend this protection to [cache drives](understand-the-cache.md) has an additional consideration: because cache drives often provide read *and write* caching for *multiple* capacity drives, the only way to ensure you can tolerate the loss of a cache drive when the other server is down is to simply not cache writes, but that impacts performance.
+With its default settings, nested resiliency protects against the loss of multiple capacity drives at the same time, or one server and one capacity drive at the same time. To extend this protection to [cache drives](/azure-stack/hci/concepts/cache) has an additional consideration: because cache drives often provide read *and write* caching for *multiple* capacity drives, the only way to ensure you can tolerate the loss of a cache drive when the other server is down is to simply not cache writes, but that impacts performance.
 
 To address this scenario, Storage Spaces Direct offers the option to automatically disable write caching when one server in a two-server cluster is down, and then re-enable write caching once the server is back up. To allow routine restarts without performance impact, write caching isn't disabled until the server has been down for 30 minutes. Once write caching is disabled, the contents of the write cache is written to capacity devices. After this, the server can tolerate a failed cache device in the online server, though reads from the cache might be delayed or fail if a cache device fails.
 
@@ -190,6 +190,6 @@ For details see the [Remove servers](remove-servers.md) topic.
 ## Additional References
 
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
-- [Understand fault tolerance in Storage Spaces Direct](storage-spaces-fault-tolerance.md)
-- [Plan volumes in Storage Spaces Direct](plan-volumes.md)
+- [Understand fault tolerance in Storage Spaces Direct](/azure-stack/hci/concepts/fault-tolerance)
+- [Plan volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
 - [Create volumes in Storage Spaces Direct](create-volumes.md)

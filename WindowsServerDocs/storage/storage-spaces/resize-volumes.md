@@ -2,8 +2,8 @@
 title: Extending volumes in Storage Spaces Direct
 description: How to resize volumes in Storage Spaces Direct using Windows Admin Center and PowerShell.
 ms.reviewer: cosmosdarwin
-author: cosmosdarwin
-ms.author: cosdar
+author: ManikaDhiman
+ms.author: v-mandhiman
 manager: eldenc
 ms.date: 03/10/2020
 ms.topic: article
@@ -137,6 +137,6 @@ When you resize the **Partition**, the **Volume** and **ClusterSharedVolume** fo
 ## Additional References
 
 - [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
-- [Planning volumes in Storage Spaces Direct](plan-volumes.md)
+- [Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
 - [Creating volumes in Storage Spaces Direct](create-volumes.md)
 - [Deleting volumes in Storage Spaces Direct](delete-volumes.md)

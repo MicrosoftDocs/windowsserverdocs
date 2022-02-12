@@ -161,7 +161,7 @@ conceptualContent:
         - url: ./storage/disk-management/overview-of-disk-management.md
           itemType: overview
           text: Disk management overview
-        - url: ./storage/storage-spaces/understand-quorum.md
+        - url: /azure-stack/hci/concepts/quorum
           itemType: overview
           text: Understanding cluster and pool quorum
       footerLink:

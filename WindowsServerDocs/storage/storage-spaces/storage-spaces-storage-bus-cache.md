@@ -13,7 +13,7 @@ ms.custom: template-tutorial #Required; leave this attribute/value as-is.
 
 >Applies to: Windows Server 2022
 
-The storage bus cache for standalone servers can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. Similar to its [implementation for Storage Spaces Direct](understand-the-cache.md), this feature binds together faster media (for example, SSD) with slower media (for example, HDD) to create tiers. By default, only a portion of the faster media tier is reserved for the cache.
+The storage bus cache for standalone servers can significantly improve read and write performance, while maintaining storage efficiency and keeping the operational costs low. Similar to its [implementation for Storage Spaces Direct](/azure-stack/hci/concepts/cache), this feature binds together faster media (for example, SSD) with slower media (for example, HDD) to create tiers. By default, only a portion of the faster media tier is reserved for the cache.
 
 |Resiliency  |Cache type  |
 |---------|---------|
@@ -76,7 +76,7 @@ Enabled                        : False
 This field determines if the entire faster media tier or only a portion of it will be used for caching. This field cannot be modified after enabling the storage bus cache.
 
 - Shared (default): The cache will only take up a portion of the faster media tier. The exact percentage is configurable by the Shared Cache Percentage field below.
-- Cache: Dedicate majority of the faster media tier to caching as opposed to only a portion. The implementation is similar to the [storage bus cache in Storage Spaces Direct](understand-the-cache.md).
+- Cache: Dedicate majority of the faster media tier to caching as opposed to only a portion. The implementation is similar to the [storage bus cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache).
 
 ### Shared cache percentage
 

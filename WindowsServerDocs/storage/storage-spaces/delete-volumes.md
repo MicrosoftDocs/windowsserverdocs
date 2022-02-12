@@ -2,8 +2,8 @@
 title: Deleting volumes in Storage Spaces Direct
 description: How to delete volumes in Storage Spaces Direct using Windows Admin Center.
 ms.reviewer: cosmosdarwin
-author: iangpgh
-ms.author: jgerend
+author: ManikaDhiman
+ms.author: v-mandhiman
 manager: daveba
 ms.date: 05/07/2019
 ms.topic: article
@@ -28,6 +28,6 @@ To delete a volume in Windows Admin Center:
 ## Additional References
 
 - [Storage Spaces Direct in Windows Server 2016](storage-spaces-direct-overview.md)
-- [Planning volumes in Storage Spaces Direct](plan-volumes.md)
+- [Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
 - [Creating volumes in Storage Spaces Direct](create-volumes.md)
 - [Extending volumes in Storage Spaces Direct](resize-volumes.md)

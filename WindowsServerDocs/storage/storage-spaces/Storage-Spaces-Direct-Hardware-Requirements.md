@@ -69,12 +69,12 @@ Switched or switchless node interconnects
 
 ## Drives
 
-Storage Spaces Direct works with direct-attached SATA, SAS, NVMe, or persistent memory (PMem) drives that are physically attached to just one server each. For more help choosing drives, see the [Choosing drives](choosing-drives.md) and [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory) topics.
+Storage Spaces Direct works with direct-attached SATA, SAS, NVMe, or persistent memory (PMem) drives that are physically attached to just one server each. For more help choosing drives, see the [Choosing drives](/azure-stack/hci/concepts/choose-drives) and [Understand and deploy persistent memory](/azure-stack/hci/concepts/deploy-persistent-memory) topics.
 
 - SATA, SAS, persistent memory, and NVMe (M.2, U.2, and Add-In-Card) drives are all supported
 - 512n, 512e, and 4K native drives are all supported
 - Solid-state drives must provide [power-loss protection](https://techcommunity.microsoft.com/t5/storage-at-microsoft/don-t-do-it-consumer-grade-solid-state-drives-ssd-in-storage/ba-p/425914)
-- Same number and types of drives in every server – see [Drive symmetry considerations](drive-symmetry-considerations.md)
+- Same number and types of drives in every server – see [Drive symmetry considerations](/azure-stack/hci/concepts/drive-symmetry-considerations)
 - Cache devices must be 32 GB or larger
 - Persistent memory devices are used in block storage mode
 - When using persistent memory devices as cache devices, you must use NVMe or SSD capacity devices (you can't use HDDs)

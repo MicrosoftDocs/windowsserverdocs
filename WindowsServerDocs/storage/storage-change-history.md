@@ -147,7 +147,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |New or changed topic|Description|
 |---|---|
 |[Disaster recovery with Storage Spaces Direct](storage-spaces/storage-spaces-direct-disaster-recovery.md)| New topic.|
-|[Understanding Quorum in Storage Spaces Direct](storage-spaces/understand-quorum.md)| New topic.|
+|[Understanding Quorum in Storage Spaces Direct](/azure-stack/hci/concepts/quorum)| New topic.|
 |[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)| Heavily revised to include both converged and hyper-converged scenarios.|
 |[Deploying Roaming User Profiles](folder-redirection/deploy-roaming-user-profiles.md)|Moved from Previous Versions library and updated.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)|Added [Is CSV required to replicate in a stretch cluster or between clusters?](storage-replica/storage-replica-frequently-asked-questions.yml).|
@@ -157,13 +157,13 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |New or changed topic|Description|
 |---|---|
 |[Storage Spaces health and operational states](storage-spaces/storage-spaces-states.md)| New topic.|
-|[Using Storage Spaces Direct with the CSV in-memory read cache](storage-spaces/csv-cache.md)| New topic. |
+|[Using Storage Spaces Direct with the CSV in-memory read cache](/azure-stack/hci/manage/use-csv-cache)| New topic. |
 
 ## January 2018
 
 |New or changed topic|Description|
 |---|---|
-|[Drive symmetry considerations in Storage Spaces Direct](storage-spaces/drive-symmetry-considerations.md)| New topic.|
+|[Drive symmetry considerations in Storage Spaces Direct](/azure-stack/hci/concepts/drive-symmetry-considerations)| New topic.|
 |[Using Storage Replica with Project Honolulu](./storage-replica/server-to-server-storage-replication.md)|New topic.|
 
 ## December 2017
@@ -173,7 +173,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |[Change a drive letter](disk-management/change-a-drive-letter.md)|New topic.|
 |[Troubleshooting Disk Management](disk-management/troubleshooting-disk-management.md)|Rewrote the [A disk's status is Not Initialized or the disk is missing entirely](disk-management/troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps) section to add extensive troubleshooting steps, based on customer requests.|
 |[Initialize new disks](disk-management/initialize-new-disks.md)|Rewrote to attempt to make it easier to understand and address customer questions.|
-|[Planning volumes in Storage Spaces Direct](storage-spaces/plan-volumes.md)|Added a table summarizing the resiliency types available on four-node and larger clusters.|
+|[Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)|Added a table summarizing the resiliency types available on four-node and larger clusters.|
 |[ReFS overview](refs/refs-overview.md)|Clarified recommended workloads for mirror-accelerated parity and corrected the supported file and volume sizes for ReFS and NTFS.|
 |[Mirror-accelerated parity](refs/mirror-accelerated-parity.md)|Clarified recommendation to place write-heavy files in separate directories.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added new information.|
@@ -202,7 +202,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |---|---|
 |[DFS Namespaces](dfs-namespaces/dfs-overview.md)|Published 20 new topics for Windows Server 2016.|
 |[File Server Resource Manager](fsrm/fsrm-overview.md)|Published 33 new topics for Windows Server 2016.|
-|[Understanding the cache in Storage Spaces Direct](storage-spaces/understand-the-cache.md)|Added a Storage Spaces Direct design considerations video.|
+|[Understanding the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)|Added a Storage Spaces Direct design considerations video.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)|Added more best practices around log volumes.|
 
 ## June 2017
@@ -254,11 +254,11 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 |New or changed topic|Description|
 |---|---|
-|[Planning volumes](storage-spaces/plan-volumes.md)|New topic.|
+|[Planning volumes](/azure-stack/hci/concepts/plan-volumes)|New topic.|
 |[Creating volumes](storage-spaces/create-volumes.md)|New topic.|
 |[Extending volumes in Storage Spaces Direct](storage-spaces/resize-volumes.md)|New topic.|
 |[ReFS Overview](refs/refs-overview.md)|New topic.|
-|[Understanding Storage Spaces Direct](./storage-spaces/understand-the-cache.md)|New list of links.|
+|[Understanding Storage Spaces Direct](/azure-stack/hci/concepts/cache)|New list of links.|
 |[Planning Storage Spaces Direct](./storage-spaces/storage-spaces-direct-hardware-requirements.md)|New list of links.|
 |[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|New list of links.|
 |[Managing Storage Spaces Direct](./storage-spaces/storage-spaces-direct-overview.md)|New topic.|

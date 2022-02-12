@@ -10444,6 +10444,41 @@
       "source_path": "WindowsServerDocs/administration/hybrid-cloud-print/hybrid-cloud-print-overview.md",
       "redirect_url": "/universal-print/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/understand-the-cache.md",
+      "redirect_url": "/azure-stack/hci/concepts/cache",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-fault-tolerance.md",
+      "redirect_url": "/azure-stack/hci/concepts/fault-tolerance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/drive-symmetry-considerations.md",
+      "redirect_url": "/azure-stack/hci/concepts/drive-symmetry-considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/understand-quorum.md",
+      "redirect_url": "/azure-stack/hci/concepts/quorum",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/choosing-drives.md",
+      "redirect_url": "/azure-stack/hci/concepts/choose-drives",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/csv-cache.md",
+      "redirect_url": "/azure-stack/hci/manage/use-csv-cache",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/plan-volumes.md",
+      "redirect_url": "/azure-stack/hci/concepts/plan-volumes",
+      "redirect_document_id": false
     }
   ]
 }

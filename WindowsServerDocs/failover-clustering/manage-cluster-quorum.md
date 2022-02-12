@@ -15,7 +15,7 @@ This topic provides background and steps to configure and manage the quorum in a
 
 ## Understanding quorum
 
-The quorum for a cluster is determined by the number of voting elements that must be part of active cluster membership for that cluster to start properly or continue running. For a more detailed explanation, see the [understanding cluster and pool quorum doc](../storage/storage-spaces/understand-quorum.md).
+The quorum for a cluster is determined by the number of voting elements that must be part of active cluster membership for that cluster to start properly or continue running. For a more detailed explanation, see the [understanding cluster and pool quorum doc](/azure-stack/hci/concepts/quorum).
 
 ## Quorum configuration options
 
@@ -73,7 +73,7 @@ The vote assignment for all cluster nodes can be verified by using the **Validat
 
 ### Dynamic quorum management
 
-In Windows Server 2012, as an advanced quorum configuration option, you can choose to enable dynamic quorum management by cluster. For more details on how dynamic quorum works, see [this explanation](../storage/storage-spaces/understand-quorum.md#dynamic-quorum-behavior).
+In Windows Server 2012, as an advanced quorum configuration option, you can choose to enable dynamic quorum management by cluster. For more details on how dynamic quorum works, see [this explanation](/azure-stack/hci/concepts/quorum).
 
 With dynamic quorum management, it is also possible for a cluster to run on the last surviving cluster node. By dynamically adjusting the quorum majority requirement, the cluster can sustain sequential node shutdowns to a single node.
 
@@ -86,7 +86,7 @@ The vote assignment for all cluster nodes can be verified by using the **Validat
 - Dynamic quorum management does not allow the cluster to sustain a simultaneous failure of a majority of voting members. To continue running, the cluster must always have a quorum majority at the time of a node shutdown or failure.
 
 - If you have explicitly removed the vote of a node, the cluster cannot dynamically add or remove that vote.
-- When Storage Spaces Direct is enabled, the cluster can only support two node failures. This is explained more in the [pool quorum section](../storage/storage-spaces/understand-quorum.md)
+- When Storage Spaces Direct is enabled, the cluster can only support two node failures. This is explained more in the [pool quorum section](/azure-stack/hci/concepts/quorum)
 
 ## General recommendations for quorum configuration
 
@@ -318,4 +318,4 @@ The following table summarizes considerations and recommendations for this confi
 
 * [Failover Clustering](./failover-clustering-overview.md)
 * [Failover Clusters Windows PowerShell cmdlets](/powershell/module/failoverclusters/)
-* [Understanding Cluster and Pool Quorum](../storage/storage-spaces/understand-quorum.md)
+* [Understanding Cluster and Pool Quorum](/azure-stack/hci/concepts/quorum)
