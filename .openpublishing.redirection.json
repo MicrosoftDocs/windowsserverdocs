@@ -10479,6 +10479,26 @@
       "source_path": "WindowsServerDocs/storage/storage-spaces/plan-volumes.md",
       "redirect_url": "/azure-stack/hci/concepts/plan-volumes",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/create-volumes.md",
+      "redirect_url": "/azure-stack/hci/manage/create-volumes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/resize-volumes.md",
+      "redirect_url": "/azure-stack/hci/manage/extend-volumes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/delete-volumes.md",
+      "redirect_url": "/azure-stack/hci/manage/delete-volumes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-adjustable-repair-speed.md",
+      "redirect_url": "/azure-stack/hci/manage/storage-repair-speed",
+      "redirect_document_id": false
     }
   ]
 }
