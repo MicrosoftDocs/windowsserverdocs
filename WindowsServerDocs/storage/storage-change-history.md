@@ -48,9 +48,9 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 |New or changed topic                                        |Description|
 |---                                                         |---           |
-|[Delete volumes](storage-spaces/delete-volumes.md)| New        |
-|[Create volumes](storage-spaces/create-volumes.md)| Added steps and videos for creating a volume in Windows Admin Center.|
-|[Extend volumes](storage-spaces/resize-volumes.md)| Added steps and video for resizing a volume in Windows Admin Center.|
+|[Delete volumes](/azure-stack/hci/manage/delete-volumes)| New        |
+|[Create volumes](/azure-stack/hci/manage/create-volumes)| Added steps and videos for creating a volume in Windows Admin Center.|
+|[Extend volumes](/azure-stack/hci/manage/extend-volumes)| Added steps and video for resizing a volume in Windows Admin Center.|
 
 ## March 2019
 
@@ -255,8 +255,8 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |New or changed topic|Description|
 |---|---|
 |[Planning volumes](/azure-stack/hci/concepts/plan-volumes)|New topic.|
-|[Creating volumes](storage-spaces/create-volumes.md)|New topic.|
-|[Extending volumes in Storage Spaces Direct](storage-spaces/resize-volumes.md)|New topic.|
+|[Creating volumes](/azure-stack/hci/manage/create-volumes)|New topic.|
+|[Extending volumes in Storage Spaces Direct](/azure-stack/hci/manage/extend-volumes)|New topic.|
 |[ReFS Overview](refs/refs-overview.md)|New topic.|
 |[Understanding Storage Spaces Direct](/azure-stack/hci/concepts/cache)|New list of links.|
 |[Planning Storage Spaces Direct](./storage-spaces/storage-spaces-direct-hardware-requirements.md)|New list of links.|

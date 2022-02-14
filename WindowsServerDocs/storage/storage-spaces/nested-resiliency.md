@@ -192,4 +192,4 @@ For details see the [Remove servers](remove-servers.md) topic.
 - [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
 - [Understand fault tolerance in Storage Spaces Direct](/azure-stack/hci/concepts/fault-tolerance)
 - [Plan volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
-- [Create volumes in Storage Spaces Direct](create-volumes.md)
+- [Create volumes in Storage Spaces Direct](/azure-stack/hci/manage/create-volumes)
