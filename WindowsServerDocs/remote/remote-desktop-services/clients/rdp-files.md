@@ -5,14 +5,17 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/30/2021
+ms.date: 02/15/2022
 ---
 
 # Supported Remote Desktop RDP file settings
 
 The following table includes the list of supported RDP file settings that you can use with the Remote Desktop clients. When configuring settings, check [Client comparisons](./remote-desktop-app-compare.md) to see which redirections each client supports.
 
-The table also highlights which settings are supported as custom properties with Azure Virtual Desktop. You can refer to [this documentation](/azure/virtual-desktop/customize-rdp-properties/) detailing how to use PowerShell to customize RDP properties for Azure Virtual Desktop host pools.
+These tables also highlight which settings are supported as custom properties with Azure Virtual Desktop. You can refer to [this documentation](/azure/virtual-desktop/customize-rdp-properties/) detailing how to use PowerShell to customize RDP properties for Azure Virtual Desktop host pools.
+
+>[!IMPORTANT]
+>These tables list the Remote Desktop client app's default settings when not configured in Windows Virtual Desktop.
 
 ## Connection information
 
