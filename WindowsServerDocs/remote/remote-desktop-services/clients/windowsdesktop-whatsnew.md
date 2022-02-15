@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 02/09/2022
+ms.date: 02/15/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -27,16 +27,23 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
 - The Desktop client now supports CTRL+ALT+arrow key keyboard shortcuts during desktop sessions.
-- Improved stability of Azure Active Directory authentication.
-- Fixed an issue that was preventing users from opening more than one .RDPW file.
 - Improved graphics performance with certain mouse types.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+
+## Updates for version 1.2.2860
+
+*Date published: 02/15/2022*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Improved stability of Azure Active Directory authentication.
+- Fixed an issue that was preventing users from opening more than one .RDPW file.
 
 ## Updates for version 1.2.2851
 
 *Date published: 01/25/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWRIT4), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWRIT5), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWRIT3)
 
 - Fixed an issue that caused a redirected camera to give incorrect error codes when camera access was restricted in the Privacy settings on the client device. This update should give accurate error messages in apps using the redirected camera.
 - Fixed an issue where the Azure Active Directory credential prompt appeared in the wrong monitor.
