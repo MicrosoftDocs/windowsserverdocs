@@ -1,5 +1,5 @@
 ---
-title: Storage Spaces Direct Hardware Requirements
+title: Storage Spaces Direct Hardware Requirements for Windows Server
 description: Minimum hardware requirements for testing Storage Spaces Direct.
 ms.author: eldenc
 manager: eldenc
@@ -7,7 +7,7 @@ ms.topic: article
 author: eldenchristensen
 ms.date: 09/24/2020
 ---
-# Storage Spaces Direct hardware requirements
+# Storage Spaces Direct hardware requirements for Windows Server
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 

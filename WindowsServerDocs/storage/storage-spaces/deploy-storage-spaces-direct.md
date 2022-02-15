@@ -1,5 +1,5 @@
 ---
-title: Deploy Storage Spaces Direct
+title: Deploy Storage Spaces Direct on Windows Server
 manager: femil
 ms.author: inhenkel
 ms.topic: how-to
@@ -8,7 +8,7 @@ author: stevenek
 ms.date: 11/16/2021
 description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyperconverged infrastructure or converged (also known as disaggregated) infrastructure.
 ---
-# Deploy Storage Spaces Direct
+# Deploy Storage Spaces Direct on Windows Server
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
