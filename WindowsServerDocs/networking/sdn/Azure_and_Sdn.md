@@ -4,8 +4,8 @@ description: You can use this topic to learn about the Software Defined Networki
 manager: grcusanz
 ms.topic: article
 ms.assetid: 79e87013-7f27-4031-8383-288bcb291731
-ms.author: anpaul
-author: AnirbanPaul
+ms.author: v-mandhiman
+author: ManikaDhiman
 ms.date: 11/04/2021
 ---
 # Microsoft Azure and Software Defined Networking

@@ -4,8 +4,8 @@ description: You can use this topic to learn about the Software Defined Networki
 manager: grcusanz
 ms.topic: article
 ms.assetid: f66ee49a-1fd3-4927-a813-64a15017b63b
-ms.author: anpaul
-author: AnirbanPaul
+ms.author: v-mandhiman
+author: ManikaDhiman
 ms.date: 11/04/2021
 ---
 # System Center Technologies for SDN

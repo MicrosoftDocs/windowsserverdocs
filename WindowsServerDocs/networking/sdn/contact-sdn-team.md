@@ -4,8 +4,8 @@ description: This page is designed to inform customers on the best methods for r
 manager: grcusanz
 ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
-ms.author: anpaul
-author: AnirbanPaul
+ms.author: v-mandhiman
+author: ManikaDhiman
 ms.date: 11/04/2020
 ---
 # Contact the Datacenter and Cloud Networking Team

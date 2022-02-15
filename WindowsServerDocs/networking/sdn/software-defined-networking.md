@@ -4,8 +4,8 @@ description: Software Defined Networking (SDN) provides a method to centrally co
 manager: grcusanz
 ms.topic: article
 ms.assetid: 9a1ea73c-20cd-42c5-95ad-b003b9cc6d64
-ms.author: anpaul
-author: AnirbanPaul
+ms.author: v-mandhiman
+author: ManikaDhiman
 ms.date: 08/09/2018
 ---
 # SDN in Windows Server overview
