@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 02/15/2022
+ms.date: 02/16/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,7 +17,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.2851        |1.2.1672                  |
+|Public     |1.2.2860        |1.2.1672                  |
 |Insider    |1.2.2923        |1.2.1672                  |
 
 ## Updates for version 1.2.2923 (Insider)
