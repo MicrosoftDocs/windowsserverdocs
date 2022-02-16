@@ -10499,6 +10499,26 @@
       "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-adjustable-repair-speed.md",
       "redirect_url": "/azure-stack/hci/manage/storage-repair-speed",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/software-defined-networking.md",
+      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/networking/sdn/contact-sdn-team.md",
+      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/networking/sdn/azure_and_sdn.md",
+      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/networking/sdn/sc-tech-for-sdn.md",
+      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_document_id": false
     }
   ]
 }
