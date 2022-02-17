@@ -287,7 +287,7 @@ You can also configure the virtual network when creating a virtual machine.
 
 It's all about your feedback! The most important benefit of frequent updates is to hear what's working and what needs to be improved. Here are some ways to let us know what you're thinking:
 
-- [Submit and vote for feature requests on UserVoice](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5Bhci%5D)
+- [Submit ideas for feature requests and provide feedback](https://aka.ms/wacfeedback)
 - [Join the Windows Admin Center forum on Microsoft Tech Community](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
 - Tweet to `@servermgmt`
 
