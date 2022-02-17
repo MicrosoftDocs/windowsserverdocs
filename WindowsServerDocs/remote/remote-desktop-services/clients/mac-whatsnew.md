@@ -299,9 +299,6 @@ We made this update with the help of everyone who reported issues. In this versi
 - Updated UI for the tiles in PC view.
 - Fixes to address crashes sent to us via application telemetry.
 
-> [!NOTE]
-> In this release, we now accept feedback for the Mac client only through [UserVoice](https://remotedesktop.uservoice.com/forums/287834-remote-desktop-for-mac).
-
 ## Updates for version 10.3.4
 
 *Date published: 11/18/19*

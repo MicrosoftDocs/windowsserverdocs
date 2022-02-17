@@ -49,15 +49,3 @@ The following tools are available for failover cluster connections:
 | Updates | Manage Cluster-Aware Updates (requires [CredSSP](../understand/faq.yml#does-windows-admin-center-use-credssp-)) |
 | [Virtual Machines](manage-virtual-machines.md) | View and manage virtual machines |
 | Virtual Switches | View and manage virtual switches |
-
-## More Coming
-
-Failover cluster management in Windows Admin Center is actively under development and new features will be added in the near future. You can view the status and vote for features in UserVoice:
-
-|Feature Request|
-|-------|
-| [Show more clustered disk info](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31740424--cluster-more-disk-info-in-failover-cluster-manag) |
-| [Support additional cluster actions](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/33558076--fcm-full-csv-management-cycle-in-one-place) |
-| [Support converged clusters running Hyper-V and Scale-Out File Server on different clusters](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31729741--cluster-support-for-converged-architecture) |
-| [View CSV block cache](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31669477--cluster-csv-block-cache) |
-| [See all or propose new feature](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5Bcluster%5D) |
