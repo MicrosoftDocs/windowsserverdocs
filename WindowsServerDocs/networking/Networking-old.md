@@ -36,7 +36,7 @@ The following sections provide information about SDN technologies and Network Pl
 
 ## Software Defined Networking technologies
 
-### [Software Defined Networking &#40;SDN&#41;](sdn/software-defined-networking.md)
+### [Software Defined Networking &#40;SDN&#41;](/azure-stack/hci/concepts/software-defined-networking)
 
 You can use this topic to learn about the SDN technologies that are provided in Windows Server, System Center, and Microsoft Azure.
 

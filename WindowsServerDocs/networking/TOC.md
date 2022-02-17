@@ -226,8 +226,6 @@
 
 ## [Software Defined Networking (SDN)](sdn/index.yml)
 
-### [SDN in Windows Server overview](sdn/software-defined-networking.md)
-
 ### [SDN technologies](sdn/technologies/Software-Defined-Networking-Technologies.md)
 #### [Hyper-V network virtualization](sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
 ##### [Hyper-V network virtualization overview](sdn/technologies/hyper-v-network-virtualization/hyperv-network-virtualization-overview-windows-server.md)
@@ -288,10 +286,6 @@
 
 ### [Troubleshoot SDN](sdn/troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 #### [Troubleshoot the Windows Server Software Defined Networking Stack](sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack.md)
-
-### [System Center Technologies for SDN](sdn/Sc-Tech-for-Sdn.md)
-### [Microsoft Azure and SDN](sdn/Azure_and_Sdn.md)
-### [Contact the Datacenter and Cloud Networking Team](sdn/contact-sdn-team.md)
 
 ## [Virtual Private Networking (VPN)](../remote/remote-access/vpn/vpn-top.md)
 

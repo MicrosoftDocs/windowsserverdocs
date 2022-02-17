@@ -27,6 +27,7 @@ You can also use a Remote Desktop client to access your remote PC from almost an
 | Android         | [Android client in Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)     | [Get started](remote-desktop-android.md), [What's new](android-whatsnew.md) | 10.0.12.1148 |
 | iOS             | [iOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id714464092)     | [Get started](remote-desktop-ios.md), [What's new](ios-whatsnew.md)         | 10.3.6 |
 | macOS | [macOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Get started](remote-desktop-mac.md), [What's new](mac-whatsnew.md)       | 10.7.5 |
+| Web | [Web client](remote-desktop-web-client.md#what-youll-need-to-use-the-web-client) | [Get started](remote-desktop-web-client.md), [What's new](web-client-whatsnew.md) | N/A |
 
 Before you start using the client of your choice, there are a few things you'll need to do first.
 
