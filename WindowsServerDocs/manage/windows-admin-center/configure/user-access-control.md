@@ -73,7 +73,7 @@ Once you turn on Azure AD authentication, the gateway service restarts and you m
 
 Users will be prompted to sign in using their Azure Active Directory identity when they attempt to access the Windows Admin Center gateway URL. Remember that users must also be a member of the local Users on the gateway server to access Windows Admin Center.
 
-Users and administrators can view their currently logged-in account and as well as sign-out of this Azure AD account from the **Account** tab of Windows Admin Center Settings.
+Users and administrators can view their currently logged-in account and as well as sign out of this Azure AD account from the **Account** tab of Windows Admin Center Settings.
 
 ### Configuring Azure Active Directory authentication for Windows Admin Center
 
@@ -92,11 +92,11 @@ Once you save the Azure AD access control in the **Change access control** pane,
 
 Users will be prompted to sign in using their Azure Active Directory identity when they attempt to access the Windows Admin Center gateway URL. Remember that users must also be a member of the local Users on the gateway server to access Windows Admin Center.
 
-Using the **Azure** tab of Windows Admin Center general settings, users and administrators can view their currently logged-in account and as well as sign-out of this Azure AD account.
+Using the **Azure** tab of Windows Admin Center general settings, users and administrators can view their currently logged-in account and as well as sign out of this Azure AD account.
 
-### Conditional access and multifactor authentication
+### Conditional access and multi-factor authentication
 
-One of the benefits of using Azure AD as an additional layer of security to control access to the Windows Admin Center gateway is that you can leverage Azure AD's powerful security features like conditional access and multifactor authentication.
+One of the benefits of using Azure AD as an additional layer of security to control access to the Windows Admin Center gateway is that you can leverage Azure AD's powerful security features like conditional access and multi-factor authentication.
 
 [Learn more about configuring conditional access with Azure Active Directory.](/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
 
@@ -123,7 +123,7 @@ Set-ADComputer -Identity (Get-ADComputer node01) -PrincipalsAllowedToDelegateToA
 Role-based access control enables you to provide users with limited access to the machine instead of making them full local administrators.
 [Read more about role-based access control and the available roles.](../plan/user-access-options.md#role-based-access-control)
 
-Setting up RBAC consists of 2 steps: enabling support on the target computer(s) and assigning users to the relevant roles.
+Setting up RBAC consists of two steps: enabling support on the target computer(s) and assigning users to the relevant roles.
 
 > [!TIP]
 > Make sure you have local administrator privileges on the machines where you are configuring support for role-based access control.
@@ -134,8 +134,8 @@ The single machine deployment model is ideal for simple environments with only a
 Configuring a machine with support for role-based access control will result in the following changes:
 
 -   PowerShell modules with functions required by Windows Admin Center will be installed on your system drive, under `C:\Program Files\WindowsPowerShell\Modules`. All modules will start with **Microsoft.Sme**
--   Desired State Configuration will run a one-time configuration to configure a Just Enough Administration endpoint on the machine, named **Microsoft.Sme.PowerShell**. This endpoint defines the 3 roles used by Windows Admin Center and will run as a temporary local administrator when a user connects to it.
--   3 new local groups will be created to control which users are assigned access to which roles:
+-   Desired State Configuration will run a one-time configuration to configure a Just Enough Administration endpoint on the machine, named **Microsoft.Sme.PowerShell**. This endpoint defines the three roles used by Windows Admin Center and will run as a temporary local administrator when a user connects to it.
+-   Three new local groups will be created to control which users are assigned access to which roles:
     -   Windows Admin Center Administrators
     -   Windows Admin Center Hyper-V Administrators
     -   Windows Admin Center Readers
@@ -154,7 +154,7 @@ Once the configuration is applied, you can assign users to the roles:
 
 1.  Open the **Local Users and Groups** tool and navigate to the **Groups** tab.
 2.  Select the **Windows Admin Center Readers** group.
-3.  In the *Details* pane at the bottom, select **Add User** and enter the name of a user or security group which should have read-only access to the server through Windows Admin Center. The users and groups can come from the local machine or your Active Directory domain.
+3.  In the *Details* pane at the bottom, select **Add User** and enter the name of a user or security group that should have read-only access to the server through Windows Admin Center. The users and groups can come from the local machine or your Active Directory domain.
 4.  Repeat steps 2-3 for the **Windows Admin Center Hyper-V Administrators** and **Windows Admin Center Administrators** groups.
 
 You can also fill these groups consistently across your domain by configuring a Group Policy Object with the [Restricted Groups Policy Setting](/previous-versions/windows/it-pro/windows-server-2003/cc756802%28v=ws.10%29).
