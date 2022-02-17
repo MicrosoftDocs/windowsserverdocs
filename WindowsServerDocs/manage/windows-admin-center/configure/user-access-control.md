@@ -36,7 +36,7 @@ By default, Active Directory or local machine groups are used to control gateway
 
 On the **Users** tab, you can control who can access Windows Admin Center as a gateway user. By default, and if you don't specify a security group, any user that accesses the gateway URL has access. Once you add one or more security groups to the users list, access is restricted to the members of those groups.
 
-If you don't use an Active Directory domain in your environment, access is controlled by the `Users` and `Administrators` local groups on the Windows Admin Center gateway machine.
+If you don't use an Active Directory domain in your environment, access is controlled by the **Users** and **Administrators** local groups on the Windows Admin Center gateway machine.
 
 ### Smartcard authentication
 
@@ -154,7 +154,7 @@ Once the configuration is applied, you can assign users to the roles:
 
 1.  Open the **Local Users and Groups** tool and navigate to the **Groups** tab.
 2.  Select the **Windows Admin Center Readers** group.
-3.  In the *Details* pane at the bottom, select **Add User** and enter the name of a user or security group that should have read-only access to the server through Windows Admin Center. The users and groups can come from the local machine or your Active Directory domain.
+3.  In the **Details** pane at the bottom, select **Add User** and enter the name of a user or security group that should have read-only access to the server through Windows Admin Center. The users and groups can come from the local machine or your Active Directory domain.
 4.  Repeat steps 2-3 for the **Windows Admin Center Hyper-V Administrators** and **Windows Admin Center Administrators** groups.
 
 You can also fill these groups consistently across your domain by configuring a Group Policy Object with the [Restricted Groups Policy Setting](/previous-versions/windows/it-pro/windows-server-2003/cc756802%28v=ws.10%29).
@@ -193,9 +193,9 @@ When you expand the zip archive, you'll see the following folder structure:
 
 To configure support for role-based access control on a node, you need to perform the following actions:
 
-1.  Copy the JustEnoughAdministration, Microsoft.SME.\*, and WindowsAdminCenter.Jea modules to the PowerShell module directory on the target machine. Typically, this is located at `C:\Program Files\WindowsPowerShell\Modules`.
+1.  Copy the **JustEnoughAdministration**, **Microsoft.SME.\***, and **WindowsAdminCenter.Jea** modules to the PowerShell module directory on the target machine. Typically, this is located at `C:\Program Files\WindowsPowerShell\Modules`.
 2.  Update **InstallJeaFeature.ps1** file to match your desired configuration for the RBAC endpoint.
-3.  Run InstallJeaFeature.ps1 to compile the DSC resource.
+3.  Run `InstallJeaFeature.ps1` to compile the DSC resource.
 4.  Deploy your DSC configuration to all of your machines to apply the configuration.
 
 The following section explains how to do this using PowerShell Remoting.
