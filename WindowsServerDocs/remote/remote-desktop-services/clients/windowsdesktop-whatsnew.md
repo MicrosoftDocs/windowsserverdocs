@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 02/16/2022
+ms.date: 02/17/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -37,7 +37,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Improved stability of Azure Active Directory authentication.
-- Fixed an issue that was preventing users from opening more than one .RDPW file.
+- Fixed an issue that was preventing users from opening multiple .RDP files from different host pools.
 
 ## Updates for version 1.2.2851
 
