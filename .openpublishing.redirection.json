@@ -10511,12 +10511,12 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/networking/sdn/azure_and_sdn.md",
+      "source_path": "WindowsServerDocs/networking/sdn/Azure_and_Sdn.md",
       "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
       "redirect_document_id": false
     },
     {
-      "source_path": "WindowsServerDocs/networking/sdn/sc-tech-for-sdn.md",
+      "source_path": "WindowsServerDocs/networking/sdn/Sc-Tech-for-Sdn.md",
       "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
       "redirect_document_id": false
     }
