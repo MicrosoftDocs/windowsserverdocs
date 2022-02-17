@@ -34,7 +34,7 @@ There is also an additional role specific to the management of CredSSP:
 
 By default, Active Directory or local machine groups are used to control gateway access. If you have an Active Directory domain, you can manage gateway user and administrator access from within the Windows Admin Center interface.
 
-On the **Users**, tab you can control who can access Windows Admin Center as a gateway user. By default, and if you don't specify a security group, any user that accesses the gateway URL has access. Once you add one or more security groups to the users list, access is restricted to the members of those groups.
+On the **Users** tab, you can control who can access Windows Admin Center as a gateway user. By default, and if you don't specify a security group, any user that accesses the gateway URL has access. Once you add one or more security groups to the users list, access is restricted to the members of those groups.
 
 If you don't use an Active Directory domain in your environment, access is controlled by the `Users` and `Administrators` local groups on the Windows Admin Center gateway machine.
 
@@ -42,7 +42,7 @@ If you don't use an Active Directory domain in your environment, access is contr
 
 You can enforce **smartcard authentication** by specifying an additional _required_ group for smartcard-based security groups. Once you have added a smartcard-based security group, a user can only access the Windows Admin Center service if they are a member of any security group AND a smartcard group included in the users list.
 
-On the **Administrators**, tab you can control who can access Windows Admin Center as a gateway administrator. The local administrators group on the computer will always have full administrator access and cannot be removed from the list. By adding security groups, you give members of those groups privileges to change Windows Admin Center gateway settings. The administrators list supports smartcard authentication in the same way as the users list: with the AND condition for a security group and a smartcard group.
+On the **Administrators** tab, you can control who can access Windows Admin Center as a gateway administrator. The local administrators group on the computer will always have full administrator access and cannot be removed from the list. By adding security groups, you give members of those groups privileges to change Windows Admin Center gateway settings. The administrators list supports smartcard authentication in the same way as the users list: with the AND condition for a security group and a smartcard group.
 
 ## Azure Active Directory
 
@@ -64,7 +64,7 @@ By default, all members of the Azure AD tenant have user access to the Windows A
 If you want to give specific Azure AD users or groups gateway user or gateway administrator access to the Windows Admin Center service, you must do the following:
 
 1.	Go to your Windows Admin Center Azure AD application in the Azure portal by using the hyperlink provided in Access Settings. Note this hyperlink is only available when Azure Active Directory authentication is enabled.
-    -	You can also find your application in the Azure portal by going to **Azure Active Directory** > **Enterprise applications** > **All applications** and searching **WindowsAdminCenter** (the Azure AD app will be named WindowsAdminCenter-\<gateway name>). If you don't get any search results, ensure **Show** is set to **all applications**, **application status** is set to **any** and click Apply, then try your search. Once you've found the application, go to **Users and groups**
+    -	You can also find your application in the Azure portal by going to **Azure Active Directory** > **Enterprise applications** > **All applications** and searching **WindowsAdminCenter** (the Azure AD app will be named WindowsAdminCenter-\<gateway name>). If you don't get any search results, ensure **Show** is set to **all applications**, **application status** is set to **any** and select Apply, then try your search. Once you've found the application, go to **Users and groups**
 2.	In the Properties tab, set **User assignment required** to Yes.
     Once you've done this, only members listed in the **Users and groups** tab will be able to access the Windows Admin Center gateway.
 3.	In the Users and groups tab, select **Add user**. You must assign a gateway user or gateway administrator role for each user/group added.
@@ -82,8 +82,8 @@ Users and administrators can view their currently logged-in account and as well 
 If you want to give specific Azure AD users or groups gateway user or gateway administrator access to the Windows Admin Center service, you must do the following:
 
 1.	Go to your SME Azure AD application in the Azure portal.
-    -	When you click **Change access control** and then select **Azure Active Directory** from the Windows Admin Center Access settings, you can use the hyperlink provided in the UI to access your Azure AD application in the Azure portal. This hyperlink is also available in the Access settings after you click save and have selected Azure AD as your access control identity provider.
-    -	You can also find your application in the Azure portal by going to **Azure Active Directory** > **Enterprise applications** > **All applications** and searching **SME** (the Azure AD app will be named SME-\<gateway>). If you don't get any search results, ensure **Show** is set to **all applications**, **application status** is set to **any** and click Apply, then try your search. Once you've found the application, go to **Users and groups**
+    -	When you select **Change access control** and then select **Azure Active Directory** from the Windows Admin Center Access settings, you can use the hyperlink provided in the UI to access your Azure AD application in the Azure portal. This hyperlink is also available in the Access settings after you select save and have selected Azure AD as your access control identity provider.
+    -	You can also find your application in the Azure portal by going to **Azure Active Directory** > **Enterprise applications** > **All applications** and searching **SME** (the Azure AD app will be named SME-\<gateway>). If you don't get any search results, ensure **Show** is set to **all applications**, **application status** is set to **any** and select Apply, then try your search. Once you've found the application, go to **Users and groups**
 2.	In the Properties tab, set **User assignment required** to Yes.
     Once you've done this, only members listed in the **Users and groups** tab will be able to access the Windows Admin Center gateway.
 3.	In the Users and groups tab, select **Add user**. You must assign a gateway user or gateway administrator role for each user/group added.
@@ -146,15 +146,15 @@ Configuring a machine with support for role-based access control will result in 
 To enable support for role-based access control on a single machine, follow these steps:
 
 1.  Open Windows Admin Center and connect to the machine you wish to configure with role-based access control using an account with local administrator privileges on the target machine.
-2.  On the **Overview** tool, click **Settings** > **Role-based access control**.
-3.  Click **Apply** at the bottom of the page to enable support for role-based access control on the target computer. The application process involves copying PowerShell scripts and invoking a configuration (using PowerShell Desired State Configuration) on the target machine. It may take up to 10 minutes to complete, and will result in WinRM restarting. This will temporarily disconnect Windows Admin Center, PowerShell, and WMI users.
+2.  On the **Overview** tool, select **Settings** > **Role-based access control**.
+3.  Select **Apply** at the bottom of the page to enable support for role-based access control on the target computer. The application process involves copying PowerShell scripts and invoking a configuration (using PowerShell Desired State Configuration) on the target machine. It may take up to 10 minutes to complete, and will result in WinRM restarting. This will temporarily disconnect Windows Admin Center, PowerShell, and WMI users.
 4.  Refresh the page to check the status of role-based access control. When it is ready for use, the status will change to **Applied**.
 
 Once the configuration is applied, you can assign users to the roles:
 
 1.  Open the **Local Users and Groups** tool and navigate to the **Groups** tab.
 2.  Select the **Windows Admin Center Readers** group.
-3.  In the *Details* pane at the bottom, click **Add User** and enter the name of a user or security group which should have read-only access to the server through Windows Admin Center. The users and groups can come from the local machine or your Active Directory domain.
+3.  In the *Details* pane at the bottom, select **Add User** and enter the name of a user or security group which should have read-only access to the server through Windows Admin Center. The users and groups can come from the local machine or your Active Directory domain.
 4.  Repeat steps 2-3 for the **Windows Admin Center Hyper-V Administrators** and **Windows Admin Center Administrators** groups.
 
 You can also fill these groups consistently across your domain by configuring a Group Policy Object with the [Restricted Groups Policy Setting](/previous-versions/windows/it-pro/windows-server-2003/cc756802%28v=ws.10%29).
