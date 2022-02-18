@@ -6,11 +6,11 @@ ms.topic: article
 author: IngridAtMicrosoft
 manager: klaasl
 ms.author: inhenkel
-ms.date: 11/11/2021
+ms.date: 02/18/2022
 ---
 # Data Deduplication interoperability
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, version 20H2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 ## Supported
 

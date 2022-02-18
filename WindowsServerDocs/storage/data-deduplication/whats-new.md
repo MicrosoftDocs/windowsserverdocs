@@ -6,11 +6,11 @@ ms.topic: article
 author: wmgries
 manager: klaasl
 ms.author: wgries
-ms.date: 10/15/2021
+ms.date: 02/18/2022
 ---
 # What's New in Data Deduplication
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, version 20H2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 [Data Deduplication](overview.md) in Windows Server has been optimized to be highly performant, flexible, and manageable at private cloud scale. For more information about the software-defined storage stack in Windows Server, please see [What's New in Storage in Windows Server](../whats-new-in-storage.md).
 
