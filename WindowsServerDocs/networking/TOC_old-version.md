@@ -1,3 +1,11 @@
+---
+ms.author: v-mandhiman
+manager: femila
+ms.topic: article
+author: ManikaDhiman
+ms.date: 02/18/2022
+---
+
 # [Networking documentation](index.yml)
 ## [Windows Server supported networking scenarios](windows-server-supported-networking-scenarios.md)
 
