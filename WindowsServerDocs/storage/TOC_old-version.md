@@ -1,3 +1,13 @@
+---
+title: storage toc
+description: it's backup.
+ms.author: v-mandhiman
+manager: femila
+ms.topic: article
+author: ManikaDhiman
+ms.date: 02/18/2022
+---
+
 # [Storage](storage.yml)
 ## [What's new in Storage](whats-new-in-storage.md)
 ## [Data Deduplication](data-deduplication/overview.md)
