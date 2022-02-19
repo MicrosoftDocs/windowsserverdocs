@@ -22,7 +22,7 @@ Suppose you want to store the string "HELLO".
 
 ![ASCII of string "hello"](media/understand-storage-resync/hello.png)
 
-Assuming that you have three-way mirror resiliency, you have three copies of this string. If you take down server #1 temporarily (for maintenance), then you cannot access copy #1.
+Assuming that you have three-way mirror resiliency, you have three copies of this string. If you take down server #1 temporarily (for maintenance), then you can't access copy #1.
 
 ![Can't access copy #1](media/understand-storage-resync/copy1.png)
 
@@ -30,7 +30,7 @@ Suppose you update the string from "HELLO" to "HELP!" at this time.
 
 ![ASCII of string "help!"](media/understand-storage-resync/help.png)
 
-After you update the string, copy #2 and #3 are updated successfully. However, copy #1 cannot be accessed because server #1 is down temporarily (for maintenance).
+After you update the string, copy #2 and #3 are updated successfully. However, copy #1 can't be accessed because server #1 is down temporarily (for maintenance).
 
 ![Gif of writing to copy #2 and #2"](media/understand-storage-resync/write.gif)
 
@@ -82,9 +82,9 @@ By showing the overall storage resync progress, you can accurately know how much
 
 ![Image of alert in Windows Admin Center"](media/understand-storage-resync/alert.png)
 
-The alert is useful in notifying you when resync is happening, so that you don't accidentally take more servers down (which could cause multiple fault domains to be affected, resulting in your cluster going down).
+The alert is useful in notifying you when resync is happening, so that you don't accidentally take down more servers (which could cause multiple fault domains to be affected, resulting in your cluster going down).
 
-To get a detailed view of how storage resync appears on a per-server basis in Windows Admin Center, navigate to the **Servers** page, click **Inventory**, and then choose a specific server. Navigate to your server and look at the **Storage** chart to see the amount of data that needs to be repaired in a *purple* line with an exact number right above it. This amount increases when the server is down (more data needs to be resynced), and decreases gradually when the server comes back online (data is being synced). When the amount of data that needs to be repaired is 0, your storage is done resyncing—you are now free to take down a server if you need to.
+To get a detailed view of how storage resync appears on a per-server basis in Windows Admin Center, navigate to the **Servers** page, click **Inventory**, and then choose a specific server. Navigate to your server and look at the **Storage** chart to see the amount of data that needs to be repaired in a *purple* line with an exact number right above it. This amount increases when the server is down (more data needs to be resynced), and decreases gradually when the server comes back online (data is being synced). When the amount of data that needs to be repaired is 0, your storage is done resyncing—you're now free to take down a server if you need to.
 
 The following screenshot displays the server view in Windows Admin Center:
 
