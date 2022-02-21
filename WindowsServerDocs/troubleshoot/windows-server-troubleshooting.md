@@ -131,10 +131,6 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 - [Troubleshooting Nano Server](../get-started/troubleshooting-nano-server.md)
 
-## Troubleshoot NIC teaming
-
-- [Troubleshooting NIC Teaming](../networking/technologies/nic-teaming/troubleshooting-nic-teaming.md)
-
 ## Troubleshoot OTP authentication
 
 - [Troubleshooting Authentication Issues](../remote/remote-access/ras/otp/troubleshoot/troubleshooting-authentication-issues.md)

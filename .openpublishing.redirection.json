@@ -38,7 +38,7 @@
     {
       "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md",
       "redirect_url": "/windows-server/networking/technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/technologies/hpn/network-offload-optimization-technologies.md",

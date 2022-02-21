@@ -159,8 +159,6 @@ The NIC Teaming scenarios allow you to:
 > [!NOTE]
 > In Windows Server 2016, you can use NIC Teaming in Hyper-V, however in some cases Virtual Machine Queues (VMQ) might not automatically enable on the underlying network adapters when you create a NIC Team. If this occurs, you can use the following Windows PowerShell command to ensure that VMQ is enabled on the NIC team member adapters: `Set-NetAdapterVmq -Name <NetworkAdapterName> -Enable`
 
-For more information, see [NIC Teaming](technologies/nic-teaming/NIC-Teaming.md).
-
 ### <a name="bkmk_set"></a>Switch Embedded Teaming \(SET\) scenarios
 
 SET is an alternative NIC Teaming solution that you can use in environments that include Hyper-V and the Software Defined Networking (SDN) stack in Windows Server 2016. SET integrates some NIC Teaming functionality into the Hyper-V Virtual Switch.
