@@ -10519,6 +10519,31 @@
       "source_path": "WindowsServerDocs/networking/sdn/Sc-Tech-for-Sdn.md",
       "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming-mac-address-use-and-management.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/create-a-new-nic-team-on-a-host.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/troubleshooting-nic-teaming.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming-settings.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
     }
   ]
 }

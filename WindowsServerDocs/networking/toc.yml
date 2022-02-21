@@ -1,3 +1,4 @@
+items:
 - name: Networking documentation
   href: index.yml
   items:
@@ -417,14 +418,7 @@
     - name: Performance tools for network workloads
       href: technologies/network-subsystem/net-sub-performance-tools.md
   - name: NIC Teaming
-    href: technologies/nic-teaming/NIC-Teaming.md
-    items:
-    - name: NIC Teaming MAC address use and management
-      href: technologies/nic-teaming/NIC-Teaming-MAC-address-Use-and-Management.md
-    - name: Create a New NIC Team on a host computer or VM
-      href: technologies/nic-teaming/create-a-New-NIC-Team-on-a-Host-computer-or-VM.md
-    - name: Troubleshooting NIC Teaming
-      href: technologies/nic-teaming/Troubleshooting-NIC-Teaming.md
+    href: /azure-stack/hci/concepts/host-network-requirements
   - name: Packet Monitor (Pktmon)
     href: technologies/pktmon/pktmon.md
     items:
