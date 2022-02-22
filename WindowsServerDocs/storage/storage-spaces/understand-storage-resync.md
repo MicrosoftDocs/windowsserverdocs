@@ -64,7 +64,7 @@ Get-ClusterNode | Get-ClusterPerf -ClusterNodeSeriesName ClusterNode.Storage.Deg
 
 Here's an example of the output:
 
-```
+```PowerShell
 Object Description: ClusterNode Server1
 
 Series                       Time                Value Unit
@@ -100,7 +100,7 @@ Get-StorageJob
 
 Here's an example output:
 
-```
+```PowerShell
 Name                  ElapsedTime           JobState              PercentComplete       IsBackgroundTask
 ----                  -----------           --------              ---------------       ----------------
 Regeneration          00:01:19              Running               50                    True
