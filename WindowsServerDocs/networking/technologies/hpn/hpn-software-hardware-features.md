@@ -96,11 +96,11 @@ TCP Chimney Offload, also known as TCP Engine Offload (TOE), is a technology tha
 
 ## Virtual Local Area Network (VLAN)
 
-VLAN is an extension to the Ethernet frame header to enable partitioning of a LAN into multiple VLANs, each using its own address space. In Windows Server 2016, VLANs are set on ports of the Hyper-V switch or by setting team interfaces on NIC Teaming teams. For more information, see [NIC Teaming and Virtual Local Area Networks (VLANs)](../nic-teaming/nic-teaming.md).
+VLAN is an extension to the Ethernet frame header to enable partitioning of a LAN into multiple VLANs, each using its own address space. In Windows Server 2016, VLANs are set on ports of the Hyper-V switch or by setting team interfaces on NIC Teaming teams.
 
 ## Virtual Machine Queue (VMQ)
 
-VMQs is a NIC feature that allocates a queue for each VM. Anytime you have Hyper-V enabled; you must also enable VMQ. In Windows Server 2016, VMQs use NIC Switch vPorts with a single queue assigned to the vPort to provide the same functionality. For more information, see [NIC Teaming](../nic-teaming/nic-teaming.md).
+VMQs is a NIC feature that allocates a queue for each VM. Anytime you have Hyper-V enabled; you must also enable VMQ. In Windows Server 2016, VMQs use NIC Switch vPorts with a single queue assigned to the vPort to provide the same functionality.
 
 ## Virtual Machine Multi-Queue (VMMQ)
 
