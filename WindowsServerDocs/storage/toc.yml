@@ -280,27 +280,27 @@ items:
     - name: Understand
       items:
       - name: Understand the cache
-        href: /azure-stack/hci/concepts/cache
+        href: /azure-stack/hci/concepts/cache?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Fault tolerance and storage efficiency
-        href: /azure-stack/hci/concepts/fault-tolerance
+        href: /azure-stack/hci/concepts/fault-tolerance?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Drive symmetry considerations
-        href: /azure-stack/hci/concepts/drive-symmetry-considerations
+        href: /azure-stack/hci/concepts/drive-symmetry-considerations?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Understand and monitor storage resync
         href: storage-spaces/understand-storage-resync.md
       - name: Cluster and pool quorum
-        href: /azure-stack/hci/concepts/quorum
+        href: /azure-stack/hci/concepts/quorum?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Cluster sets
-        href: /azure-stack/hci/deploy/cluster-set
+        href: /azure-stack/hci/deploy/cluster-set?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Plan
       items:
       - name: Hardware requirements
         href: storage-spaces/storage-spaces-direct-hardware-requirements.md
       - name: Using the CSV in-memory read cache
-        href: /azure-stack/hci/manage/use-csv-cache
+        href: /azure-stack/hci/manage/use-csv-cache?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Choose drives
-        href: /azure-stack/hci/concepts/choose-drives
+        href: /azure-stack/hci/concepts/choose-drives?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Plan volumes
-        href: /azure-stack/hci/concepts/plan-volumes
+        href: /azure-stack/hci/concepts/plan-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Guest VM clusters
         href: storage-spaces/storage-spaces-direct-in-vm.md
       - name: Disaster recovery
@@ -310,7 +310,7 @@ items:
       - name: Deploy Storage Spaces Direct
         href: storage-spaces/deploy-storage-spaces-direct.md
       - name: Create volumes
-        href: /azure-stack/hci/manage/create-volumes
+        href: /azure-stack/hci/manage/create-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Nested resiliency
         href: storage-spaces/nested-resiliency.md
       - name: Configure quorum
@@ -318,7 +318,7 @@ items:
       - name: Upgrade a Storage Spaces Direct cluster
         href: storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md
       - name: Understand and deploy persistent memory
-        href: /azure-stack/hci/concepts/deploy-persistent-memory
+        href: /azure-stack/hci/concepts/deploy-persistent-memory?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Understand and configure DAX
         href: storage-spaces/persistent-memory-direct-access.md
     - name: Manage
@@ -328,15 +328,15 @@ items:
       - name: Add servers or drives
         href: storage-spaces/add-nodes.md
       - name: Take a server offline for maintenance
-        href: /azure-stack/hci/manage/maintain-servers
+        href: /azure-stack/hci/manage/maintain-servers?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Remove servers
         href: storage-spaces/remove-servers.md
       - name: Update drive firmware
         href: update-firmware.md
       - name: Extend volumes
-        href: /azure-stack/hci/manage/extend-volumes
+        href: /azure-stack/hci/manage/extend-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Delete volumes
-        href: /azure-stack/hci/manage/delete-volumes
+        href: /azure-stack/hci/manage/delete-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Performance history
         href: storage-spaces/performance-history.md
         items:
@@ -361,7 +361,7 @@ items:
       - name: Monitor with Azure Monitor
         href: storage-spaces/configure-azure-monitor.md
       - name: Adjustable storage repair speed
-        href: /azure-stack/hci/manage/storage-repair-speed
+        href: /azure-stack/hci/manage/storage-repair-speed?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
     - name: Troubleshoot
       items:
       - name: Troubleshooting scenarios
@@ -369,7 +369,7 @@ items:
       - name: Health and operational states
         href: storage-spaces/storage-spaces-states.md
       - name: Collect data
-        href: /azure-stack/hci/manage/collect-diagnostic-data
+        href: /azure-stack/hci/manage/collect-diagnostic-data?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Frequently asked questions
         href: storage-spaces/storage-spaces-direct-faq.yml
       - name: Storage-class memory health management
