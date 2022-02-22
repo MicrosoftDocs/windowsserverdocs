@@ -10544,6 +10544,16 @@
       "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming-settings.md",
       "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/Networking-old.md",
+      "redirect_url": "/windows-server/networking",
+      "redirect_document_id": false
     }
   ]
 }
