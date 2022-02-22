@@ -92,7 +92,7 @@ The following screenshot displays the server view in Windows Admin Center:
 
 ## How to monitor storage resync in Windows Server 2016
 
-The alert in Windows Server 2019 is helpful in getting a holistic view of what is happening at the storage layer. It summarizes the information that you can get from the ```Get-StorageJob``` cmdlet. This cmdlet returns information about long-running storage module jobs, such as a repair operation on a storage space, as shown in the following example output.
+The alert in Windows Server 2019 is helpful in getting a holistic view of what is happening at the storage layer. It summarizes the information that you can get from the `Get-StorageJob` cmdlet. This cmdlet returns information about long-running storage module jobs, such as a repair operation on a storage space, as shown in the following example output.
 
 ```PowerShell
 Get-StorageJob
