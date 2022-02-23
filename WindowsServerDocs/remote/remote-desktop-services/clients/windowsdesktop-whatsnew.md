@@ -22,16 +22,16 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 ## Updates for version 1.2.2924
 
-*Date published: 02/22/2022*
+*Date published: 02/23/2022*
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
-- The Desktop client now supports CTRL+ALT+arrow key keyboard shortcuts during desktop sessions.
+- The Desktop client now supports Ctrl+Alt+arrow key keyboard shortcuts during desktop sessions.
 - Improved graphics performance with certain mouse types.
+- Fixed an issue that caused the client to randomly crash when the client ends a RemoteApp connection.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
-- Fixed an issue that caused the client to randomly crash when the user disconnects from a RemoteApp.
 - Updates to Teams for Azure Virtual Desktop, including the following:
-  - The background blur feature is now available on Windows clients.
+  - The background blur feature is rolling out this week for Windows endpoints.
   - Fixed an issue that caused the screen to turn black during Teams video calls.
 
 ## Updates for version 1.2.2860
