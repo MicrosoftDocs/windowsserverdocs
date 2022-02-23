@@ -12,7 +12,7 @@ ms.date: 02/18/2022
 
 Storage resync alert is a capability of [Storage Spaces Direct](storage-spaces-direct-overview.md) in Azure Stack HCI and Windows Server. It allows the Health Service to throw a fault, notifying you about the resync. This helps prevent you from accidentally taking down more servers, which could affect multiple fault domains resulting in your cluster going down.
 
-This article provides an overview of storage resync and how you can monitor it in a Windows Server failover cluster with Storage Spaces Direct.
+This article provides an overview of storage resync and how you can monitor it in a failover cluster with Storage Spaces Direct.
 
 ## About storage resync
 
@@ -44,9 +44,9 @@ The following GIF shows how storage resync works in a hyper-converged cluster:
 
 ![Gif of admin view of resync"](media/understand-storage-resync/admin.gif)
 
-## How to monitor storage resync in Windows Server 2019
+## How to monitor storage resync
 
-Let's see how storage resync appears in Windows Server 2019. We added a new fault to the [Health Service](../../failover-clustering/health-service-overview.md) that shows up when your storage is resyncing.
+Starting with Windows Server 2019, we added a new fault to the [Health Service](../../failover-clustering/health-service-overview.md) that shows up when your storage is resyncing.
 
 To view this fault in PowerShell, run the following cmdlet:
 
@@ -54,7 +54,7 @@ To view this fault in PowerShell, run the following cmdlet:
 Get-HealthFault
 ```
 
-In Windows Server 2019, this new fault appears in PowerShell, in the cluster validation report, and anywhere else that builds on Health faults.
+This new fault appears in PowerShell, in the cluster validation report, and anywhere else that builds on Health faults.
 
 To get a deeper view, you can query the time series database in PowerShell, as follows:
 
@@ -92,7 +92,7 @@ The following screenshot displays the server view in Windows Admin Center:
 
 ## How to monitor storage resync in Windows Server 2016
 
-The alert in Windows Server 2019 is helpful in getting a holistic view of what is happening at the storage layer. It summarizes the information that you can get from the `Get-StorageJob` cmdlet. This cmdlet returns information about long-running storage module jobs, such as a repair operation on a storage space, as shown in the following example output.
+The alert available in Windows Server 2019 and later is helpful in getting a holistic view of what is happening at the storage layer. It summarizes the information that you can get from the `Get-StorageJob` cmdlet. This cmdlet returns information about long-running storage module jobs, such as a repair operation on a storage space, as shown in the following example output.
 
 ```PowerShell
 Get-StorageJob
