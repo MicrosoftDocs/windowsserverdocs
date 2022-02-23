@@ -28,7 +28,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 
 - The Desktop client now supports Ctrl+Alt+arrow key keyboard shortcuts during desktop sessions.
 - Improved graphics performance with certain mouse types.
-- Fixed an issue that caused the client to randomly crash when the client ends a RemoteApp connection.
+- Fixed an issue that caused the client to randomly crash when something ends a RemoteApp connection.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to Teams for Azure Virtual Desktop, including the following:
   - The background blur feature is rolling out this week for Windows endpoints.
