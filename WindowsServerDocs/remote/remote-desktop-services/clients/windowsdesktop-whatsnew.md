@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 02/17/2022
+ms.date: 02/23/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,24 +17,28 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.2860        |1.2.1672                  |
-|Insider    |1.2.2923        |1.2.1672                  |
+|Public     |1.2.2924        |1.2.1672                  |
+|Insider    |1.2.2924        |1.2.1672                  |
 
-## Updates for version 1.2.2923 (Insider)
+## Updates for version 1.2.2924
 
-*Date published: 02/09/2022*
+*Date published: 02/23/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
-- The Desktop client now supports CTRL+ALT+arrow key keyboard shortcuts during desktop sessions.
+- The Desktop client now supports Ctrl+Alt+arrow key keyboard shortcuts during desktop sessions.
 - Improved graphics performance with certain mouse types.
+- Fixed an issue that caused the client to randomly crash when something ends a RemoteApp connection.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams for Azure Virtual Desktop, including the following:
+  - The background blur feature is rolling out this week for Windows endpoints.
+  - Fixed an issue that caused the screen to turn black during Teams video calls.
 
 ## Updates for version 1.2.2860
 
 *Date published: 02/15/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWVhzA), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWVhzB), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWVhzz)
 
 - Improved stability of Azure Active Directory authentication.
 - Fixed an issue that was preventing users from opening multiple .RDP files from different host pools.
@@ -42,8 +46,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.2851
 
 *Date published: 01/25/2022*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWRIT4), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWRIT5), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWRIT3)
 
 - Fixed an issue that caused a redirected camera to give incorrect error codes when camera access was restricted in the Privacy settings on the client device. This update should give accurate error messages in apps using the redirected camera.
 - Fixed an issue where the Azure Active Directory credential prompt appeared in the wrong monitor.
@@ -55,8 +57,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 ## Updates for version 1.2.2691
 
 *Date published: 01/12/2022*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWRLOX), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWRBAy), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWRLOW)
 
 - Fixed the vulnerability known as [CVE-2019-0887](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2019-0887).
 - Fixed the vulnerability known as [CVE-2022-21850](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-21850).
