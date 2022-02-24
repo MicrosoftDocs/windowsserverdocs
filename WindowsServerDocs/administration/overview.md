@@ -22,19 +22,19 @@ Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Azure Arc-enabled servers enables you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider. This management experience is designed to be consistent with how you manage native Azure virtual machines. This allows you to manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more.
 
-### Example scenarios for Azure Arc
-
-- You want to proactively monitor the OS and workloads running on the machine.
-- Manage it using Automation runbooks or solutions like Update Management
-- Secure your Windows Server using Microsoft Defender for Cloud.
-- Govern your Windows Server machines using Azure Policy Guest Configuration
-
 | Details | Description |
 | --------------- | --------------- |
 | Scope | limitless scale, Windows Server + Linux server |
 | Interface | web browser, REST APIs, command line tools |
 | Disconnected mode | limited support |
 | Focus | at-scale governance, security, and monitoring |
+
+### Example scenarios for Azure Arc
+
+- You want to proactively monitor the OS and workloads running on the machine.
+- Manage it using Automation runbooks or solutions like Update Management
+- Secure your Windows Server using Microsoft Defender for Cloud.
+- Govern your Windows Server machines using Azure Policy Guest Configuration
 
 Learn more about Azure Arc-enabled server at [What is Azure Arc-enabled server](/azure/azure-arc/servers/overview).
 
@@ -44,12 +44,6 @@ Windows Admin Center is a locally-deployed, browser-based management tool set th
 
 Windows Admin Center is the modern evolution of "in-box" management tools, like Server Manager and MMC, and complements other management solutions.
 
-### Example scenarios for Windows Admin Center
-
-- Simplify server management Manage your servers and clusters with modernized versions of familiar tools such as Server Manager.
-- Work with hybrid solutions Integration with Azure helps you optionally connect your on-premises servers with relevant cloud services in combination with Azure Arc.
-- Streamline hyperconverged management Streamline management of Azure Stack HCI or Windows Server hyperconverged clusters. Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking and more.
-
 | Details | Description |
 | --------------- | --------------- |
 | Scope | single Windows Server or hyperconverged clusters |
@@ -57,17 +51,17 @@ Windows Admin Center is the modern evolution of "in-box" management tools, like 
 | Disconnected mode | supported |
 | Focus | general server management, role configuration and troubleshooting |
 
+### Example scenarios for Windows Admin Center
+
+- Simplify server management Manage your servers and clusters with modernized versions of familiar tools such as Server Manager.
+- Work with hybrid solutions Integration with Azure helps you optionally connect your on-premises servers with relevant cloud services in combination with Azure Arc.
+- Streamline hyperconverged management Streamline management of Azure Stack HCI or Windows Server hyperconverged clusters. Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking and more.
+
 Learn more about Windows Admin Center at [What is Windows Admin Center](../manage/windows-admin-center/understand/what-is.md).
 
 ## Datacenter-scale management with System Center
 
 System Center allows you to stay in control of your IT infrastructure across your environment and platforms. It allows you to simplify the deployment, configuration, management, and monitoring of your infrastructure and virtualized software-defined datacenter, while increasing agility and performance.
-
-### Example scenarios for System Center
-
-- Operations Manager provides infrastructure monitoring that is flexible and cost-effective, helps ensure the predictable performance and availability of vital applications, and offers comprehensive monitoring for your datacenter and private cloud.
-- Data Protection Manager is a robust enterprise backup and recovery system that contributes to your BCDR strategy by facilitating the backup and recovery of enterprise data.
-- Virtual Machine Manager enables you to configure, manage and transform traditional datacenters, and helping to provide a unified management experience across on-premises and service provider for your virtualization workloads.
 
 | Details | Description |
 | --------------- | --------------- |
@@ -76,17 +70,17 @@ System Center allows you to stay in control of your IT infrastructure across you
 | Disconnected mode | supported |
 | Focus | day to day operations |
 
+### Example scenarios for System Center
+
+- Operations Manager provides infrastructure monitoring that is flexible and cost-effective, helps ensure the predictable performance and availability of vital applications, and offers comprehensive monitoring for your datacenter and private cloud.
+- Data Protection Manager is a robust enterprise backup and recovery system that contributes to your BCDR strategy by facilitating the backup and recovery of enterprise data.
+- Virtual Machine Manager enables you to configure, manage and transform traditional datacenters, and helping to provide a unified management experience across on-premises and service provider for your virtualization workloads.
+
 Learn more about System Center at [System Center Documenation](/system-center).
 
 ## Local Management Tools
 
 Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, troubleshooting, and eventually automate many management tasks.
-
-### Example scenarios Local Management Tools
-
-- Server Manager is a management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers.
-- All supported versions of Windows and Windows Server have a set of Win32 console commands built in. This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.
-- As a scripting language, PowerShell is commonly used for automating the management of Windows Server and other systems.
 
 | Details | Description |
 | --------------- | --------------- |
@@ -94,6 +88,12 @@ Windows Server includes a number of tools to help you understand your Windows Se
 | Interface | GUI and command line |
 | Disconnected mode | supported |
 | Focus | general server management, role configuration and troubleshooting |
+
+### Example scenarios Local Management Tools
+
+- Server Manager is a management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers.
+- All supported versions of Windows and Windows Server have a set of Win32 console commands built in. This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.
+- As a scripting language, PowerShell is commonly used for automating the management of Windows Server and other systems.
 
 Learn more about local Windows Server management tools such as:
 - [Server Manager](server-manager/server-manager.md)
