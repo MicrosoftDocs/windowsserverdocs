@@ -14,6 +14,10 @@ Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 :::image type="content" source="media/windows-server-mangement-overview.png" alt-text="Windows Server Management Overview":::
 
+| Azure Arc | Windows Admin Center | System Center |
+| --------------- | --------------- | --------------- |
+| [Onboard server to Azure Arc](azure/azure-arc/servers/learn/quick-enable-hybrid-vm) | [Download Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center) | [Get System Center](https://www.microsoft.com/en-us/system-center)
+
 ## Cloud-based management using Azure Arc
 
 Azure Arc-enabled servers enables you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider. This management experience is designed to be consistent with how you manage native Azure virtual machines. This allows you to manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more.
@@ -36,7 +40,7 @@ Azure Arc-enabled servers enables you to manage your Windows and Linux physical 
 
 Learn more about Azure Arc-enabled server at [What is Azure Arc-enabled server](/azure/azure-arc/servers/overview).
 
-## Deep Windows Server and Cluster management with Windows Admin Center
+## Deep Windows Server and cluster management with Windows Admin Center
 
 Windows Admin Center is a locally-deployed, browser-based management tool set that lets you manage your Windows Servers with no Azure or cloud dependency. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for managing servers on private networks that are not connected to the Internet.
 
