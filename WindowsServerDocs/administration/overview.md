@@ -16,7 +16,7 @@ Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 | Azure Arc | Windows Admin Center | System Center |
 | --------------- | --------------- | --------------- |
-| [Onboard server to Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) | [Download Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center) | [Get System Center](https://www.microsoft.com/system-center)
+| [Onboard server to Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) | [Download Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center) | [Get System Center](https://www.microsoft.com/en-us/system-center)
 
 ## Cloud-based management using Azure Arc
 
@@ -53,9 +53,9 @@ Windows Admin Center is the modern evolution of "in-box" management tools, like 
 
 ### Example scenarios for Windows Admin Center
 
-- Simplify server management Manage your servers and clusters with modernized versions of familiar tools such as Server Manager.
-- Work with hybrid solutions Integration with Azure helps you optionally connect your on-premises servers with relevant cloud services in combination with Azure Arc.
-- Streamline hyperconverged management Streamline management of Azure Stack HCI or Windows Server hyperconverged clusters. Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking and more.
+- Manage your servers and clusters with modernized versions of familiar tools such as Server Manager.
+- Integration with Azure helps you optionally connect your on-premises servers with relevant cloud services in combination with Azure Arc.
+- Streamline management of Azure Stack HCI or Windows Server hyperconverged clusters. Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking and more.
 
 Learn more about Windows Admin Center at [What is Windows Admin Center](../manage/windows-admin-center/understand/what-is.md).
 
