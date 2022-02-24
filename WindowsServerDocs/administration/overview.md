@@ -82,4 +82,25 @@ Learn more about System Center at [System Center Documenation](/system-center).
 
 ## Local Management Tools
 
-Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, troubleshooting, and eventually automate many management tasks.
+
+### Example scenarios Local Management Tools
+
+- Server Manager is a management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers.
+- All supported versions of Windows and Windows Server have a set of Win32 console commands built in. This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.
+- As a scripting language, PowerShell is commonly used for automating the management of Windows Server and other systems.
+
+### Details Local Management Tools
+
+|  |  |
+| --------------- | --------------- |
+| Scope | single to few servers |
+| Interface | GUI and command line |
+| Disconnected mode | supported |
+| Focus | general server management, role configuration and troubleshooting |
+
+Learn more about local Windows Server management tools such as:
+- [Server Manager](server-manager/server-manager.md)
+- [PowerShell](/powershell/scripting/overview)
+- [Windows Commands](windows-commands/windows-commands.md)
+- [Remote Server Administration Tools](../remote/remote-server-administration-tools.md)
