@@ -16,7 +16,7 @@ Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 | Azure Arc | Windows Admin Center | System Center |
 | --------------- | --------------- | --------------- |
-| [Onboard server to Azure Arc](azure/azure-arc/servers/learn/quick-enable-hybrid-vm) | [Download Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center) | [Get System Center](https://www.microsoft.com/en-us/system-center)
+| [Onboard server to Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) | [Download Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center) | [Get System Center](https://www.microsoft.com/en-us/system-center)
 
 ## Cloud-based management using Azure Arc
 
@@ -31,7 +31,7 @@ Azure Arc-enabled servers enables you to manage your Windows and Linux physical 
 
 ### Details Azure Arc
 
-|  |  |
+|  | Description |
 | --------------- | --------------- |
 | Scope | limitless scale, Windows Server + Linux server |
 | Interface | web browser, REST APIs, command line tools |
@@ -54,7 +54,7 @@ Windows Admin Center is the modern evolution of "in-box" management tools, like 
 
 ### Details Windows Admin Center
 
-|  |  |
+|  | Description |
 | --------------- | --------------- |
 | Scope | single Windows Server or hyperconverged clusters |
 | Interface | web browser |
@@ -75,7 +75,7 @@ System Center allows you to stay in control of your IT infrastructure across you
 
 ### Details System Center
 
-|  |  |
+|  | Description |
 | --------------- | --------------- |
 | Scope | entire datacenter (multi-server management) |
 | Interface | GUI and command line tools |
@@ -96,7 +96,7 @@ Windows Server includes a number of tools to help you understand your Windows Se
 
 ### Details Local Management Tools
 
-|  |  |
+|  | Description |
 | --------------- | --------------- |
 | Scope | single to few servers |
 | Interface | GUI and command line |
