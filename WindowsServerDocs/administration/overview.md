@@ -16,7 +16,7 @@ Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 | Azure Arc | Windows Admin Center | System Center |
 | --------------- | --------------- | --------------- |
-| [Onboard server to Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) | [Download Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center) | [Get System Center](https://www.microsoft.com/en-us/system-center)
+| [Onboard server to Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) | [Download Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center) | [Get System Center](https://www.microsoft.com/system-center)
 
 ## Cloud-based management using Azure Arc
 
@@ -96,6 +96,7 @@ Windows Server includes a number of tools to help you understand your Windows Se
 - As a scripting language, PowerShell is commonly used for automating the management of Windows Server and other systems.
 
 Learn more about local Windows Server management tools such as:
+
 - [Server Manager](server-manager/server-manager.md)
 - [PowerShell](/powershell/scripting/overview)
 - [Windows Commands](windows-commands/windows-commands.md)
