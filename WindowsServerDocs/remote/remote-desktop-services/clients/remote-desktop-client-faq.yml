@@ -2,7 +2,7 @@
 metadata:
   title: Remote Desktop clients FAQ
   description: Frequently asked questions about the Remote Desktop clients
-  ms.topic: article
+  ms.topic: faq
   ms.assetid: 785a18cf-a5d0-4bc2-95e4-9ef53ee8f65a
   author: lizap
   manager: dongill
@@ -10,7 +10,6 @@ metadata:
   ms.date: 02/07/2022
   ms.localizationpriority: medium
   ms.prod: windows-server
-    
 title: Frequently asked questions about the Remote Desktop clients
 summary: |
   >Applies to: Windows 11, Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
