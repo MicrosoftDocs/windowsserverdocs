@@ -29,9 +29,7 @@ Azure Arc-enabled servers enables you to manage your Windows and Linux physical 
 - Secure your Windows Server using Microsoft Defender for Cloud.
 - Govern your Windows Server machines using Azure Policy Guest Configuration
 
-### Details Azure Arc
-
-|  | Description |
+| Details | Description |
 | --------------- | --------------- |
 | Scope | limitless scale, Windows Server + Linux server |
 | Interface | web browser, REST APIs, command line tools |
@@ -52,9 +50,7 @@ Windows Admin Center is the modern evolution of "in-box" management tools, like 
 - Work with hybrid solutions Integration with Azure helps you optionally connect your on-premises servers with relevant cloud services in combination with Azure Arc.
 - Streamline hyperconverged management Streamline management of Azure Stack HCI or Windows Server hyperconverged clusters. Use simplified workloads to create and manage VMs, Storage Spaces Direct volumes, Software-Defined Networking and more.
 
-### Details Windows Admin Center
-
-|  | Description |
+| Details | Description |
 | --------------- | --------------- |
 | Scope | single Windows Server or hyperconverged clusters |
 | Interface | web browser |
@@ -73,9 +69,7 @@ System Center allows you to stay in control of your IT infrastructure across you
 - Data Protection Manager is a robust enterprise backup and recovery system that contributes to your BCDR strategy by facilitating the backup and recovery of enterprise data.
 - Virtual Machine Manager enables you to configure, manage and transform traditional datacenters, and helping to provide a unified management experience across on-premises and service provider for your virtualization workloads.
 
-### Details System Center
-
-|  | Description |
+| Details | Description |
 | --------------- | --------------- |
 | Scope | entire datacenter (multi-server management) |
 | Interface | GUI and command line tools |
@@ -94,9 +88,7 @@ Windows Server includes a number of tools to help you understand your Windows Se
 - All supported versions of Windows and Windows Server have a set of Win32 console commands built in. This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.
 - As a scripting language, PowerShell is commonly used for automating the management of Windows Server and other systems.
 
-### Details Local Management Tools
-
-|  | Description |
+| Details | Description |
 | --------------- | --------------- |
 | Scope | single to few servers |
 | Interface | GUI and command line |
