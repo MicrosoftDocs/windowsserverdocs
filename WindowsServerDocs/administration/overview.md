@@ -76,7 +76,7 @@ System Center allows you to stay in control of your IT infrastructure across you
 - Data Protection Manager is a robust enterprise backup and recovery system that contributes to your BCDR strategy by facilitating the backup and recovery of enterprise data.
 - Virtual Machine Manager enables you to configure, manage and transform traditional datacenters, and helping to provide a unified management experience across on-premises and service provider for your virtualization workloads.
 
-Learn more about System Center at [System Center Documenation](/system-center).
+Learn more about System Center at [System Center Documentation](/system-center).
 
 ## Local Management Tools
 
