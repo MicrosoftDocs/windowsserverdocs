@@ -22,6 +22,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
+          - text: Windows Server Management Overview
+            url: overview.md
           - text: Manage on-premises systems, remote systems, and systems without UI with Windows Admin Center
             url: ../manage/windows-admin-center/overview.md
           - text: Manage on-premises systems with Server Manager

@@ -2,7 +2,11 @@ items:
 - name: Management
   href: manage-windows-server.yml
   items: 
-    - name: Use Windows Admin Center to manage your environment (New!)
+    - name: Overview
+      items: 
+        - name: Windows Server Management Overview
+          href: overview.md
+    - name: Use Windows Admin Center to manage your environment
       href: ../manage/windows-admin-center/overview.md
     - name: Manage Windows Server systems and environments
       items: 
