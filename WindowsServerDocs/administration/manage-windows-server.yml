@@ -52,7 +52,11 @@ landingContent:
             url: /azure/azure-arc/servers/onboard-service-principal
           - text: Connect machines to Azure with Windows Admin Center
             url: /azure/azure-arc/servers/onboard-windows-admin-center
-
+      - linkListType: learn
+        links:
+          - text: Microsoft Learn learning path
+            url: /learn/paths/manage-hybrid-infrastructure-with-azure-arc
+        
   # Card
   - title: Windows Admin Center
     linkLists:
