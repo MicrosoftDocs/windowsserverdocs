@@ -160,3 +160,12 @@ items:
           href: /powershell/scripting/overview
         - name: Windows Commands
           href: windows-commands/windows-commands.md
+    - name: Learn
+      items: 
+        - name: Manage hybrid infrastructure with Azure Arc
+          href: /learn/paths/manage-hybrid-infrastructure-with-azure-arc
+        - name: Windows Server deployment, configuration, and administration
+          href: /learn/paths/windows-server-deployment-configuration-administration/
+        - name: Manage Windows Servers and workloads in a hybrid environment
+          href: /learn/paths/manage-windows-servers-workloads-hybrid-environment/
+      
