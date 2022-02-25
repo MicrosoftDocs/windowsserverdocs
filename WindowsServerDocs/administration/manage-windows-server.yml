@@ -38,6 +38,8 @@ landingContent:
         links:
           - text: What is Azure Arc-enabled servers?
             url: /azure/azure-arc/servers/overview
+          - text: Azure Automanage for Azure Arc-enabled servers
+            url: /azure/automanage/automanage-arc
       - linkListType: deploy
         links:
           - text: Plan for deployment

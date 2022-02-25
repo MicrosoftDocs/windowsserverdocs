@@ -10,6 +10,8 @@ items:
       items:
         - name: What is Azure Arc-enabled servers?
           href: /azure/azure-arc/servers/overview
+        - name: Azure Automanage for Azure Arc-enabled servers
+          href: /azure/automanage/automanage-arc
     - name: Windows Admin Center
       items:
         - name: Windows Admin Center Overview
