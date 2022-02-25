@@ -71,7 +71,7 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 
 |New or changed topic                                        |Description|
 |---                                                         |---           |
-|[Understand and monitor storage resync](storage-spaces/understand-storage-resync.md)|New topic|
+|[Understand and monitor storage resync](/azure-stack/hci/concepts/understand-storage-resync)|New topic|
 
 ## December 2018
 

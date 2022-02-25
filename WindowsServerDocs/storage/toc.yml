@@ -286,7 +286,7 @@ items:
       - name: Drive symmetry considerations
         href: /azure-stack/hci/concepts/drive-symmetry-considerations?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Understand and monitor storage resync
-        href: storage-spaces/understand-storage-resync.md
+        href: /azure-stack/hci/concepts/understand-storage-resync?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Cluster and pool quorum
         href: /azure-stack/hci/concepts/quorum?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Cluster sets
