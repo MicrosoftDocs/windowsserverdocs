@@ -154,7 +154,7 @@ items:
       items: 
         - name: Performance Tuning Guidelines
           href: performance-tuning/index.md
-    - name: Automate Windows Server management
+    - name: Command line and scripting
       items: 
         - name: Windows PowerShell scripting
           href: /powershell/scripting/overview
