@@ -6,8 +6,18 @@ items:
       items: 
         - name: Windows Server Management Overview
           href: overview.md
-    - name: Use Windows Admin Center to manage your environment
-      href: ../manage/windows-admin-center/overview.md
+    - name: Azure Arc enabled server
+      items:
+        - name: What is Azure Arc-enabled servers?
+          href: /azure/azure-arc/servers/overview
+    - name: Windows Admin Center
+      items:
+        - name: Windows Admin Center Overview
+          href: ../manage/windows-admin-center/overview.md
+    - name: System Center
+      items:
+        - name: System Center Overview
+          href: /system-center/
     - name: Manage Windows Server systems and environments
       items: 
         - name: What is the Server Core installation option?
