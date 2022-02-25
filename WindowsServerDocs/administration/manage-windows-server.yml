@@ -32,6 +32,26 @@ landingContent:
             url: ../remote/remote-server-administration-tools.md
           - text: Manage updates to Windows Server systems
             url: windows-server-update-services/get-started/windows-server-update-services-wsus.md
+  
+  # Card
+  - title: Cloud-based management with Azure Arc
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Azure Arc-enabled servers?
+            url: /azure/azure-arc/servers/overview
+      - linkListType: deploy
+        links:
+          - text: Plan for deployment
+            url: /azure/azure-arc/servers/plan-at-scale-deployment
+      - linkListType: get-started
+        links:
+          - text: Connect machines to Azure Arc using a deployment script
+            url: /azure/azure-arc/servers/onboard-portal
+          - text: Connect machines at scale using a service principal
+            url: /azure/azure-arc/servers/onboard-service-principal
+          - text: Connect machines to Azure with Windows Admin Center
+            url: /azure/azure-arc/servers/onboard-windows-admin-center
 
   # Card
   - title: Gather information about your environment
