@@ -54,6 +54,42 @@ landingContent:
             url: /azure/azure-arc/servers/onboard-windows-admin-center
 
   # Card
+  - title: Windows Admin Center
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Windows Admin Center Overview
+            url: ../manage/windows-admin-center/overview.md
+      - linkListType: deploy
+        links:
+          - text: Install Windows Admin Center
+            url: ../manage/windows-admin-center/deploy/install.md
+      - linkListType: get-started
+        links:
+          - text: Get Started with Windows Admin Center
+            url: ../manage/windows-admin-center/use/get-started.md
+          - text: Manage Servers with Windows Admin Center
+            url: ../manage/windows-admin-center/use/manage-servers.md
+          - text: Connecting Windows Server to Azure hybrid services
+            url: ../manage/windows-admin-center/azure/index.md
+
+  # Card
+  - title: System Center
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: System Center Overview
+            url: /system-center
+      - linkListType: get-started
+        links:
+          - text: Connect machines to Azure Arc using a deployment script
+            url: /azure/azure-arc/servers/onboard-portal
+          - text: Connect machines at scale using a service principal
+            url: /azure/azure-arc/servers/onboard-service-principal
+          - text: Connect machines to Azure with Windows Admin Center
+            url: /azure/azure-arc/servers/onboard-windows-admin-center
+
+  # Card
   - title: Gather information about your environment
     linkLists:
       - linkListType: overview
