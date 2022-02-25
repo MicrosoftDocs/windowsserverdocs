@@ -80,12 +80,14 @@ landingContent:
             url: /system-center
       - linkListType: get-started
         links:
-          - text: Connect machines to Azure Arc using a deployment script
-            url: /azure/azure-arc/servers/onboard-portal
-          - text: Connect machines at scale using a service principal
-            url: /azure/azure-arc/servers/onboard-service-principal
-          - text: Connect machines to Azure with Windows Admin Center
-            url: /azure/azure-arc/servers/onboard-windows-admin-center
+          - text: Virtual Machine Manager
+            url: /system-center/vmm/overview
+          - text: Operations Manager
+            url: /system-center/scom/welcome
+          - text: Data Protection Manager
+            url: /system-center/dpm/dpm-overview
+          - text: Get System Center
+            url: https://www.microsoft.com/system-center
 
   # Card
   - title: Gather information about your environment
