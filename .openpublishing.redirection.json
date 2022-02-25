@@ -10554,6 +10554,11 @@
       "source_path": "WindowsServerDocs/networking/Networking-old.md",
       "redirect_url": "/windows-server/networking",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/understand-storage-resync.md",
+      "redirect_url": "/azure-stack/hci/concepts/understand-storage-resync",
+      "redirect_document_id": false
     }
   ]
 }
