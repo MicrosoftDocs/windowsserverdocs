@@ -96,6 +96,8 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
+          - text: System Insights
+            url: ..\manage\system-insights\overview.md
           - text: Setup and Boot Event Collection
             url: get-started-with-setup-and-boot-event-collection.md
           - text: Software Inventory Logging (SIL)
@@ -112,7 +114,7 @@ landingContent:
             url: performance-tuning/index.md
 
   # Card
-  - title: Automate Windows Server management
+  - title: Command line and scripting
     linkLists:
       - linkListType: overview
         links:
@@ -120,8 +122,6 @@ landingContent:
             url: /powershell/scripting/overview
           - text: Windows Commands
             url: windows-commands/windows-commands.md
-          - text: System Insights
-            url: ..\manage\system-insights\overview.md
 
   # Card
   - title: Access on-premises, remote, and virtual servers
