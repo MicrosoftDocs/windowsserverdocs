@@ -20,7 +20,7 @@ items:
       items:
         - name: System Center Overview
           href: /system-center/
-    - name: Manage Windows Server systems and environments
+    - name: Built-in management tools
       items: 
         - name: What is the Server Core installation option?
           href: server-core/what-is-server-core.md
@@ -118,38 +118,38 @@ items:
               href: windows-server-update-services/manage/wid-to-sql-migration.md
         - name: Windows Console behavior in Windows Server
           href: windows-console-changes.md
-    - name: Collect information about your environment and systems
-      items: 
-        - name: System Insights
-          href: ..\manage\system-insights\overview.md
+        - name: Collect information about your environment and systems
           items: 
-            - name: Understanding capabilities
-              href: ..\manage\system-insights\understanding-capabilities.md
-            - name: Managing capabilities
-              href: ..\manage\system-insights\managing-capabilities.md
-            - name: Adding and developing capabilities
-              href: ..\manage\system-insights\adding-and-developing-capabilities.md
+            - name: System Insights
+              href: ..\manage\system-insights\overview.md
               items: 
-                - name: Adding, removing, and updating capabilities
-                  href: ..\manage\system-insights\add-remove-update-capabilities.md
-                - name: Choosing capability data sources
-                  href: ..\manage\system-insights\data-sources.md
-            - name: FAQ
-              href: ..\manage\system-insights\faq.md
-        - name: Collect events with Setup and Boot Event Collection
-          href: Get-started-with-Setup-and-Boot-Event-Collection.md
-        - name: Collect information about software Software Inventory Logging (SIL)
-          href: software-inventory-logging/get-started-with-software-inventory-logging.md
-          items: 
-            - name: Manage Software Inventory Logging
-              href: software-inventory-logging/manage-software-inventory-logging.md
-            - name: Software Inventory Logging Aggregator
-              href: software-inventory-logging/software-inventory-logging-aggregator.md
-        - name: Collect user information with User Access Logging (UAL)
-          href: user-access-logging/get-started-with-user-access-logging.md
-          items: 
-            - name: Manage User Access Logging
-              href: user-access-logging/manage-user-access-logging.md
+                - name: Understanding capabilities
+                  href: ..\manage\system-insights\understanding-capabilities.md
+                - name: Managing capabilities
+                  href: ..\manage\system-insights\managing-capabilities.md
+                - name: Adding and developing capabilities
+                  href: ..\manage\system-insights\adding-and-developing-capabilities.md
+                  items: 
+                    - name: Adding, removing, and updating capabilities
+                      href: ..\manage\system-insights\add-remove-update-capabilities.md
+                    - name: Choosing capability data sources
+                      href: ..\manage\system-insights\data-sources.md
+                - name: FAQ
+                  href: ..\manage\system-insights\faq.md
+            - name: Collect events with Setup and Boot Event Collection
+              href: Get-started-with-Setup-and-Boot-Event-Collection.md
+            - name: Collect information about software Software Inventory Logging (SIL)
+              href: software-inventory-logging/get-started-with-software-inventory-logging.md
+              items: 
+                - name: Manage Software Inventory Logging
+                  href: software-inventory-logging/manage-software-inventory-logging.md
+                - name: Software Inventory Logging Aggregator
+                  href: software-inventory-logging/software-inventory-logging-aggregator.md
+            - name: Collect user information with User Access Logging (UAL)
+              href: user-access-logging/get-started-with-user-access-logging.md
+              items: 
+                - name: Manage User Access Logging
+                  href: user-access-logging/manage-user-access-logging.md
     - name: Tune your Windows Server performance
       items: 
         - name: Performance Tuning Guidelines
