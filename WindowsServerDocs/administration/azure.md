@@ -41,6 +41,8 @@ When you connect your machine to Azure, it enables the ability for you to perfor
 | Azure File Sync | . |
 | Storage Replica | . |
 
+Learn more about Azure Arc-enabled server at [What is Azure Arc-enabled server](/azure/azure-arc/servers/overview) and how to connect Windows Server to [Azure hybrid services using Windows Admin Center](../manage/windows-admin-center/azure/index.md).
+
 ## Cloud operations for Windows Server on Azure
 
 When you run your machine in Azure, it enables the ability for you to perform the following operational functions as described in the following table.
@@ -66,3 +68,5 @@ When you run your machine in Azure, it enables the ability for you to perform th
 | Azure Monitor | Monitor the connected machine guest operating system performance, and discover application components to monitor their processes and dependencies with other resources using [VM insights](../../azure-monitor/vm/vminsights-overview.md). Collect other log data, such as performance data and events, from the operating system or workload(s) running on the machine with the [Log Analytics agent](../../azure-monitor/agents/agents-overview.md#log-analytics-agent). This data is stored in a [Log Analytics workspace](../../azure-monitor/logs/design-logs-deployment.md). |
 |**Extend and connect**|
 | Azure Active Directory | Azure AD + Managed Identity + Login|
+
+Learn more about Windows Server on Azure at [Windows virtual machines in Azure](/azure/virtual-machines/windows/overview) and how to migrate Windows Server to Azure at [Azure Migrate](/azure/migrate/migrate-services-overview).
