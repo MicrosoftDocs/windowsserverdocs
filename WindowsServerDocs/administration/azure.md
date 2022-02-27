@@ -12,6 +12,8 @@ ms.date: 02/27/2022
 
 Windows Server together with Microsoft Azure cloud management capabilities allows you to get even more out of your Windows Server investments.
 
+:::image type="content" source="media/windows-server-azure.png" alt-text="Windows Server Management Overview":::
+
 ## Cloud operations for Windows Server in a hybrid and multicloud environment
 
 When you connect your machine to Azure, it enables the ability for you to perform the following operational functions as described in the following table.
