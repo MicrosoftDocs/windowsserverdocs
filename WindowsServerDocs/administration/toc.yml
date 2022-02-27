@@ -6,6 +6,8 @@ items:
       items: 
         - name: Windows Server Management Overview
           href: overview.md
+        - name: Windows Server Azure Management
+          href: azure.md
     - name: Azure Arc enabled server
       items:
         - name: What is Azure Arc-enabled servers?
