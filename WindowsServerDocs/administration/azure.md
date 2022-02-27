@@ -18,7 +18,7 @@ Windows Server together with Microsoft Azure cloud management capabilities allow
 
 When you connect your machine to Azure, it enables the ability for you to perform the following operational functions as described in the following table.
 
-|Operations function |Description | 
+|Operations function |Description |
 |--------------------|------------|
 |**Govern** ||
 | Azure Policy |Assign [Azure Policy guest configurations](../../governance/policy/concepts/guest-configuration.md) to audit settings inside the machine. To understand the cost of using Azure Policy Guest Configuration policies with Arc-enabled servers, see Azure Policy [pricing guide](https://azure.microsoft.com/pricing/details/azure-policy/)|
@@ -26,8 +26,8 @@ When you connect your machine to Azure, it enables the ability for you to perfor
 |**Protect** ||
 | Microsoft Defender for Cloud | Protect non-Azure servers with [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint), included through [Microsoft Defender for Cloud](../../security-center/defender-for-servers-introduction.md), for threat detection, for vulnerability management, and to proactively monitor for potential security threats. Microsoft Defender for Cloud presents the alerts and remediation suggestions from the threats detected. |
 | Microsoft Sentinel | Machines connected to Arc-enabled servers can be [configured with Microsoft Sentinel](scenario-onboard-azure-sentinel.md) to collect security-related events and correlate them with other data sources. |
-| Azure Backup| Backup |
-| Azure Site Recovery| DR |
+| Azure Backup| Azure Backup service uses the [Microsoft Azure Recovery Services (MARS)](/azure/backup/backup-azure-about-mars) agent to back up and restore files, folders, and the volume or system state from an on-premises computer to Azure. |
+| Azure Site Recovery| [Site Recovery](/azure/site-recovery/site-recovery-overview) replicates workloads running on physical and virtual machines (VMs) from a primary site to a secondary location or Microsoft Azure. When an outage occurs at your primary site, you fail over to secondary location, and access apps from there. After the primary location is running again, you can fail back to it. |
 |**Configure** ||
 | Azure Automation |Automate frequent and time-consuming management tasks using PowerShell and Python [runbooks](../../automation/automation-runbook-execution.md).<br> Assess configuration changes about installed software, Microsoft services, Windows registry and files, and Linux daemons using [Change Tracking and Inventory](../../automation/change-tracking/overview.md).<br> Use [Update Management](../../automation/update-management/overview.md) to manage operating system updates for your Windows and Linux servers. |
 | Azure Automanage (preview) | Automate onboarding and configuration of a set of Azure services when you use [Automanage Machine for Arc-enabled servers](../../automanage/automanage-arc.md).|
@@ -35,7 +35,7 @@ When you connect your machine to Azure, it enables the ability for you to perfor
 |**Monitor**|
 | Azure Monitor | Monitor the connected machine guest operating system performance, and discover application components to monitor their processes and dependencies with other resources using [VM insights](../../azure-monitor/vm/vminsights-overview.md). Collect other log data, such as performance data and events, from the operating system or workload(s) running on the machine with the [Log Analytics agent](../../azure-monitor/agents/agents-overview.md#log-analytics-agent). This data is stored in a [Log Analytics workspace](../../azure-monitor/logs/design-logs-deployment.md). |
 |**Extend and connect**|
-| Azure Active Directory | Azure AD + Managed Identity |
+| Azure Active Directory | Connect your on-premises Windows Server Active Directory to Azure Active Directory to create a [hybrid identity](azure/active-directory/hybrid/whatis-hybrid-identity). <br>[Managed identities](/azure/azure-arc/servers/managed-identity-authentication) for Azure Arc-enabled servers provides servers with an automatically managed identity in Azure Active Directory. You can use this identity to authenticate to any service that supports Azure AD authentication, without having credentials in your code.|
 | Azure Extended Network | . |
 | Azure Network Adapter | . |
 | Azure File Sync | . |
@@ -55,18 +55,18 @@ When you run your machine in Azure, it enables the ability for you to perform th
 |**Protect** ||
 | Microsoft Defender for Cloud | Protect non-Azure servers with [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint), included through [Microsoft Defender for Cloud](../../security-center/defender-for-servers-introduction.md), for threat detection, for vulnerability management, and to proactively monitor for potential security threats. Microsoft Defender for Cloud presents the alerts and remediation suggestions from the threats detected. |
 | Microsoft Sentinel | Machines connected to Arc-enabled servers can be [configured with Microsoft Sentinel](scenario-onboard-azure-sentinel.md) to collect security-related events and correlate them with other data sources. |
-| Azure Backup| Backup |
-| Azure Site Recovery| DR |
-| Azure confidential computing| CC |
+| Azure Backup| [Azure Backup](/azure/backup/backup-azure-vms-introduction) provides independent and isolated backups to guard against unintended destruction of the data on your VMs. Backups are stored in a Recovery Services vault with built-in management of recovery points. |
+| Azure Site Recovery| [Site Recovery](/azure/site-recovery/site-recovery-overview) replicates workloads running on Azure virtual machines (VMs) from the primary Azure region to another Azure region. When an outage occurs at the primary Azure region, you fail over to the other Azure region, and access apps from there. After the primary Azure region is running again, you can fail back to it. |
+| Azure confidential computing| Azure confidential computing offers [confidential VMs](/azure/confidential-computing/confidential-vm-overview). Confidential VMs are for tenants with high security and confidentiality requirements. These VMs provide a strong, hardware-enforced boundary to help meet your security needs. You can use confidential VMs for migrations without making changes to your code, with the platform protecting your VM's state from being read or modified. |
 |**Configure** ||
 | Azure Automation |Automate frequent and time-consuming management tasks using PowerShell and Python [runbooks](../../automation/automation-runbook-execution.md).<br> Assess configuration changes about installed software, Microsoft services, Windows registry and files, and Linux daemons using [Change Tracking and Inventory](../../automation/change-tracking/overview.md).<br> Use [Update Management](../../automation/update-management/overview.md) to manage operating system updates for your Windows and Linux servers. |
 | Azure Automanage (preview) | Automate onboarding and configuration of a set of Azure services when you use [Automanage Machine for Arc-enabled servers](../../automanage/automanage-arc.md). <br> Hotpatching is a new way to install updates on supported Windows Server Azure Edition virtual machines (VMs) that doesn’t require a reboot after installation <br> SMB over QUIC offers an "SMB VPN" for telecommuters, mobile device users, and branch offices, providing secure, reliable connectivity to edge file servers over untrusted networks like the Internet. To learn more about SMB over QUIC and how to configure SMB over QUIC, see SMB over QUIC.|
 | VM extensions | Provides post-deployment configuration and automation tasks using supported [Arc-enabled servers VM extensions](manage-vm-extensions.md) for your non-Azure Windows or Linux machine. |
-| Windows Admin Center in the Azure Portal | Windows Admin Center in the Azure Portal |
+| Windows Admin Center in the Azure Portal | Use [Windows Admin Center (preview) in the Azure portal](../manage/windows-admin-center/azure/manage-vm.md) to manage the Windows Server operating system inside an Azure VM. Manage operating system functions from the Azure portal as well as work with files in the VM without using Remote Desktop or PowerShell. |
 | VM Run Command | The Run Command feature uses the virtual machine (VM) agent to run PowerShell scripts within an Azure Windows VM.  |
 |**Monitor**|
 | Azure Monitor | Monitor the connected machine guest operating system performance, and discover application components to monitor their processes and dependencies with other resources using [VM insights](../../azure-monitor/vm/vminsights-overview.md). Collect other log data, such as performance data and events, from the operating system or workload(s) running on the machine with the [Log Analytics agent](../../azure-monitor/agents/agents-overview.md#log-analytics-agent). This data is stored in a [Log Analytics workspace](../../azure-monitor/logs/design-logs-deployment.md). |
 |**Extend and connect**|
-| Azure Active Directory | Azure AD + Managed Identity + Login|
+| Azure Active Directory | Connect your on-premises Windows Server Active Directory to Azure Active Directory to create a [hybrid identity](azure/active-directory/hybrid/whatis-hybrid-identity). <br>[Managed identities](/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm) for Azure virtual machines provides Azure services with an automatically managed identity in Azure Active Directory. You can use this identity to authenticate to any service that supports Azure AD authentication, without having credentials in your code. <br> Improve the security of Windows virtual machines (VMs) in Azure by integrating with [Azure Active Directory (AD) authentication](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows). You can now use Azure AD as a core authentication platform to RDP into a Windows Server 2019 Datacenter edition and later or Windows 10 1809 and later.|
 
 Learn more about Windows Server on Azure at [Windows virtual machines in Azure](/azure/virtual-machines/windows/overview) and how to migrate Windows Server to Azure at [Azure Migrate](/azure/migrate/migrate-services-overview).
