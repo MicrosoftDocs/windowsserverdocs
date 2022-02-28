@@ -47,7 +47,7 @@ Learn more about Azure Arc-enabled server at [What is Azure Arc-enabled server](
 
 When you run your Windows Server on Azure, it enables the ability for you to perform the following operational functions as described in the following table.
 
-|Operations function |Description | 
+|Operations function |Description |
 |--------------------|------------|
 |**Govern** ||
 | Azure Policy |Assign [Azure Policy guest configurations](/azure/governance/policy/concepts/guest-configuration.md) to audit settings inside the machine. To understand the cost of using Azure Policy Guest Configuration policies with Azure virtual machines, see Azure Policy [pricing guide](https://azure.microsoft.com/pricing/details/azure-policy/)|
