@@ -47,7 +47,19 @@ items:
     - name: System Center
       items:
         - name: System Center Overview
-          href: /system-center/
+          href: /system-center/?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+        - name: Data Protection Manager
+          href: /system-center/dpm/dpm-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+        - name: Operations Manager
+          href: /system-center/scom/welcome/?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+        - name: Virtual Machine Manager
+          href: /system-center/vmm/overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+        - name: Orchestrator
+          href: /system-center/orchestrator/learn-about-orchestrator/?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+        - name: Service Management Automation
+          href: /system-center/sma/overview-of-service-management-automation/?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+        - name: Service Provider Foundation
+          href: /system-center/spf/overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
     - name: Built-in management tools
       items: 
         - name: What is the Server Core installation option?
@@ -185,7 +197,7 @@ items:
     - name: Command line and scripting
       items: 
         - name: Windows PowerShell scripting
-          href: /powershell/scripting/overview
+          href: /powershell/scripting/overview?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
         - name: Windows Commands
           href: windows-commands/windows-commands.md
     - name: Microsoft Learn
