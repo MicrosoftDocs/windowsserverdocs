@@ -162,7 +162,7 @@ items:
           href: /powershell/scripting/overview
         - name: Windows Commands
           href: windows-commands/windows-commands.md
-    - name: Learn
+    - name: Microsoft Learn
       items: 
         - name: Manage hybrid infrastructure with Azure Arc
           href: /learn/paths/manage-hybrid-infrastructure-with-azure-arc

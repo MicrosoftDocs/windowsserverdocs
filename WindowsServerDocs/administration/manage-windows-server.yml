@@ -30,6 +30,8 @@ landingContent:
             url: ../remote/remote-server-administration-tools.md
           - text: Manage updates to Windows Server systems
             url: windows-server-update-services/get-started/windows-server-update-services-wsus.md
+          - text: Manage Windows Server systems with Azure
+            url: azure.md
   
   # Card
   - title: Cloud-based management with Azure Arc
