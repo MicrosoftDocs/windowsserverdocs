@@ -200,13 +200,13 @@ items:
           href: /azure/virtual-machines/windows/overview?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
         - name: Create Windows VM on Azure
           href: /azure/virtual-machines/windows/quick-create-portal?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
-        - name: Azure Virtual Machines security overview
+        - name: Security
           href: /azure/security/fundamentals/virtual-machines-overview?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
-        - name: Updates and maintenance overview
+        - name: Updates and maintenance
           href: /azure/virtual-machines/updates-maintenance-overview?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
-        - name: Monitor Azure virtual machines
+        - name: Monitoring
           href: /azure/virtual-machines/monitor-vm?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
-        - name: Backup and restore options for virtual machines in Azure
+        - name: Backup and restore options
           href: /azure/virtual-machines/backup-recovery?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
         - name: Infrastructure automation tools
           href: /azure/virtual-machines/infrastructure-automation?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
@@ -214,7 +214,7 @@ items:
           href: /azure/virtual-machines/managed-disks-overview?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
         - name: Networking
           href: /azure/virtual-network/network-overview?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
-        - name: Availability options for Azure Virtual Machines
+        - name: Availability options
           href: /azure/virtual-machines/availability?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
     - name: Command line and scripting
       items: 
