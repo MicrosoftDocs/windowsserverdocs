@@ -19,10 +19,6 @@ items:
       topicHref: /windows-server/failover-clustering/cluster-aware-updating    # Original doc set route
 
 ### For linking to Azure topic and keeping the context in Windows Server TOC      
-- name: Windows Server
-  tocHref: /azure/
-  topicHref: /windows-server/index
-  items:
   - name: Management                       # Original doc set name
     tocHref: /azure/azure-arc/             # Destination doc set route
     topicHref: /windows-server/administration/      # Original doc set route
