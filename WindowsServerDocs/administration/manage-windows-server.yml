@@ -129,6 +129,14 @@ landingContent:
           - text: Windows Commands
             url: windows-commands/windows-commands.md
 
+# Card
+  - title: Access on-premises, remote, and virtual servers
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Remote Desktop Services
+            url: ../remote/remote-desktop-services/welcome-to-rds.md
+
   # Card
   - title: Manage Windows Server on Azure
     linkLists:
@@ -154,14 +162,6 @@ landingContent:
             url: /azure/virtual-network/network-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
           - text: Availability options
             url: /azure/virtual-machines/availability/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
-
-  # Card
-  - title: Access on-premises, remote, and virtual servers
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Remote Desktop Services
-            url: ../remote/remote-desktop-services/welcome-to-rds.md
 
   # Card
   - title: Older versions of Windows Server
