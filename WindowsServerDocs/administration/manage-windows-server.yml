@@ -39,21 +39,21 @@ landingContent:
       - linkListType: overview
         links:
           - text: What is Azure Arc-enabled servers?
-            url: /azure/azure-arc/servers/overview
+            url: /azure/azure-arc/servers/overview?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
           - text: Azure Automanage for Azure Arc-enabled servers
-            url: /azure/automanage/automanage-arc
+            url: /azure/automanage/automanage-arc?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - linkListType: deploy
         links:
           - text: Plan for deployment
-            url: /azure/azure-arc/servers/plan-at-scale-deployment
+            url: /azure/azure-arc/servers/plan-at-scale-deployment?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - linkListType: get-started
         links:
           - text: Connect machines to Azure Arc using a deployment script
-            url: /azure/azure-arc/servers/onboard-portal
+            url: /azure/azure-arc/servers/onboard-portal?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
           - text: Connect machines at scale using a service principal
-            url: /azure/azure-arc/servers/onboard-service-principal
+            url: /azure/azure-arc/servers/onboard-service-principal?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
           - text: Connect machines to Azure with Windows Admin Center
-            url: /azure/azure-arc/servers/onboard-windows-admin-center
+            url: /azure/azure-arc/servers/onboard-windows-admin-center?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - linkListType: learn
         links:
           - text: Microsoft Learn learning path
@@ -65,19 +65,19 @@ landingContent:
       - linkListType: overview
         links:
           - text: Windows Admin Center Overview
-            url: ../manage/windows-admin-center/overview.md
+            url: ../manage/windows-admin-center/overview.md?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - linkListType: deploy
         links:
           - text: Install Windows Admin Center
-            url: ../manage/windows-admin-center/deploy/install.md
+            url: ../manage/windows-admin-center/deploy/install.md?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - linkListType: get-started
         links:
           - text: Get Started with Windows Admin Center
-            url: ../manage/windows-admin-center/use/get-started.md
+            url: ../manage/windows-admin-center/use/get-started.md?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
           - text: Manage Servers with Windows Admin Center
-            url: ../manage/windows-admin-center/use/manage-servers.md
+            url: ../manage/windows-admin-center/use/manage-servers.md?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
           - text: Connecting Windows Server to Azure hybrid services
-            url: ../manage/windows-admin-center/azure/index.md
+            url: ../manage/windows-admin-center/azure/index.md?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
 
   # Card
   - title: System Center
@@ -85,15 +85,15 @@ landingContent:
       - linkListType: overview
         links:
           - text: System Center Overview
-            url: /system-center
+            url: /system-center/
       - linkListType: get-started
         links:
           - text: Virtual Machine Manager
-            url: /system-center/vmm/overview
+            url: /system-center/vmm/overview?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
           - text: Operations Manager
-            url: /system-center/scom/welcome
+            url: /system-center/scom/welcome?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
           - text: Data Protection Manager
-            url: /system-center/dpm/dpm-overview
+            url: /system-center/dpm/dpm-overview?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
           - text: Get System Center
             url: https://www.microsoft.com/system-center
 
@@ -128,6 +128,32 @@ landingContent:
             url: /powershell/scripting/overview
           - text: Windows Commands
             url: windows-commands/windows-commands.md
+
+  # Card
+  - title: Manage Windows Server on Azure
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Windows virtual machine on Azure overview
+            url: /azure/virtual-machines/windows/overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          - text: Azure Automanage
+            url: /azure/automanage/automanage-windows-server/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          - text: Security
+            url: /azure/security/fundamentals/virtual-machines-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          - text: Updates and maintenance
+            url: /azure/virtual-machines/updates-maintenance-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          - text: Monitoring
+            url: /azure/virtual-machines/monitor-vm/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          - text: Backup and restore options
+            url: /azure/virtual-machines/backup-recovery/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          - text: Infrastructure automation tools
+            url: /azure/virtual-machines/infrastructure-automation/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          - text: Disks
+            url: /azure/virtual-machines/managed-disks-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          - text: Networking
+            url: /azure/virtual-network/network-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          - text: Availability options
+            url: /azure/virtual-machines/availability/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
 
   # Card
   - title: Access on-premises, remote, and virtual servers
