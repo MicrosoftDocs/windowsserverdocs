@@ -11,7 +11,7 @@ items:
     - name: Azure Arc enabled server
       items:
         - name: What is Azure Arc-enabled servers?
-          href: /azure/azure-arc/servers/overview?bc=/windows-server/administration/_bread/toc.json&toc=/windows-server/administration/toc.json
+          href: /azure/azure-arc/servers/overview
         - name: Azure Automanage for Azure Arc-enabled servers
           href: /azure/automanage/automanage-arc
     - name: Windows Admin Center
