@@ -194,6 +194,28 @@ items:
       items: 
         - name: Performance Tuning Guidelines
           href: performance-tuning/index.md
+    - name: Windows Server on Azure
+      items: 
+        - name: Windows virtual machines in Azure overview
+          href: /azure/virtual-machines/windows/overview
+        - name: Create Windows VM on Azure
+          href: /azure/virtual-machines/windows/quick-create-portal
+        - name: Azure Virtual Machines security overview
+          href: /azure/security/fundamentals/virtual-machines-overview
+        - name: Updates and maintenance overview
+          href: /azure/virtual-machines/updates-maintenance-overview
+        - name: Monitor Azure virtual machines
+          href: /azure/virtual-machines/monitor-vm
+        - name: Backup and restore options for virtual machines in Azure
+          href: /azure/virtual-machines/backup-recovery
+        - name: Infrastructure automation tools
+          href: /azure/virtual-machines/infrastructure-automation
+        - name: Disks
+          href: /azure/virtual-machines/managed-disks-overview
+        - name: Networking
+          href: /azure/virtual-network/network-overview
+        - name: Availability options for Azure Virtual Machines
+          href: /azure/virtual-machines/availability
     - name: Command line and scripting
       items: 
         - name: Windows PowerShell scripting
