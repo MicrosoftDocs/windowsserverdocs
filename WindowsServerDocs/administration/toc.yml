@@ -50,6 +50,155 @@ items:
           href: ../manage/windows-admin-center/understand/case-studies.md
         - name: Related management products
           href: ../manage/windows-admin-center/understand/related-management.md
+        - name: Plan
+          items: 
+            - name: What type of installation is right for you?
+              href: ../manage/windows-admin-center/plan/installation-options.md
+            - name: User access options
+              href: ../manage/windows-admin-center/plan/user-access-options.md
+        - name: Deploy
+          items: 
+            - name: Prepare your environment
+              href: ../manage/windows-admin-center/deploy/prepare-environment.md
+            - name: Install Windows Admin Center
+              href: ../manage/windows-admin-center/deploy/install.md
+            - name: High availability
+              href: ../manage/windows-admin-center/deploy/high-availability.md
+        - name: Configure
+          items: 
+            - name: Windows Admin Center settings
+              href: ../manage/windows-admin-center/configure/settings.md
+            - name: User access control and permissions
+              href: ../manage/windows-admin-center/configure/user-access-control.md
+            - name: Using extensions
+              href: ../manage/windows-admin-center/configure/using-extensions.md
+            - name: Shared connections
+              href: ../manage/windows-admin-center/configure/shared-connections.md
+            - name: Automate with PowerShell
+              href: ../manage/windows-admin-center/configure/use-powershell.md
+            - name: Websocket validation
+              href: ../manage/windows-admin-center/configure/websocket-validation.md
+        - name: Use
+          items: 
+            - name: Get started
+              href: ../manage/windows-admin-center/use/get-started.md
+            - name: Manage servers
+              href: ../manage/windows-admin-center/use/manage-servers.md
+            - name: Deploy hyperconverged infrastructure
+              href: ../manage/windows-admin-center/use/deploy-hyperconverged-infrastructure.md
+            - name: Manage hyper-converged infrastructure
+              href: ../manage/windows-admin-center/use/manage-hyper-converged.md
+            - name: Manage failover clusters
+              href: ../manage/windows-admin-center/use/manage-failover-clusters.md
+            - name: Manage Hyper-V virtual machines
+              href: ../manage/windows-admin-center/use/manage-virtual-machines.md
+            - name: Logging
+              href: ../manage/windows-admin-center/use/logging.md
+        - name: Connect to Azure
+          items: 
+            - name: Azure hybrid services
+              href: ../manage/windows-admin-center/azure/index.md
+              items: 
+                - name: Azure Backup
+                  href: ../manage/windows-admin-center/azure/azure-backup.md
+                - name: Azure Site Recovery
+                  href: ../manage/windows-admin-center/azure/azure-site-recovery.md
+                - name: Azure File Sync
+                  href: ../manage/windows-admin-center/azure/azure-file-sync.md
+                - name: Azure Monitor
+                  href: ../manage/windows-admin-center/azure/azure-monitor.md
+                - name: Azure Network Adapter
+                  href: ../manage/windows-admin-center/azure/use-azure-network-adapter.md
+                - name: Azure Update Management
+                  href: ../manage/windows-admin-center/azure/azure-update-management.md
+            - name: Connect to Azure
+              href: ../manage/windows-admin-center/azure/azure-integration.md
+            - name: Create Azure VMs
+              href: ../manage/windows-admin-center/azure/create-azure-vms.md
+            - name: Manage Azure VMs
+              href: ../manage/windows-admin-center/azure/manage-azure-vms.md
+            - name: Manage a VM from within Azure
+              href: ../manage/windows-admin-center/azure/manage-vm.md
+            - name: Manually deploy a Windows Admin Center server in Azure
+              href: ../manage/windows-admin-center/azure/deploy-wac-in-azure.md
+        - name: Support
+          items: 
+            - name: Release history
+              href: ../manage/windows-admin-center/support/release-history.md
+            - name: Support policy
+              href: ../manage/windows-admin-center/support/index.md
+            - name: Common troubleshooting steps
+              href: ../manage/windows-admin-center/support/troubleshooting.md
+            - name: Known issues
+              href: ../manage/windows-admin-center/support/known-issues.md
+            - name: Windows Admin Center license terms
+              href: ../windows-server-licensing/windows-admin-center-licensing.md
+        - name: Extend
+          items: 
+            - name: Overview of extensions
+              href: ../manage/windows-admin-center/extend/extensibility-overview.md
+            - name: Understanding extensions
+              href: ../manage/windows-admin-center/extend/understand-extensions.md
+            - name: Develop an extension
+              href: ../manage/windows-admin-center/extend/developing-extensions.md
+              items: 
+                - name: Prepare your development environment
+                  href: ../manage/windows-admin-center/extend/prepare-development-environment.md
+                - name: Develop a tool extension
+                  href: ../manage/windows-admin-center/extend/develop-tool.md
+                - name: Develop a solution extension
+                  href: ../manage/windows-admin-center/extend/develop-solution.md
+                - name: Develop a gateway plugin
+                  href: ../manage/windows-admin-center/extend/develop-gateway-plugin.md
+                - name: Target an SDK version
+                  href: ../manage/windows-admin-center/extend/target-sdk-version.md
+            - name: Guides
+              href: ../manage/windows-admin-center/extend/guides.md
+              items: 
+                - name: Add a module to a tool extension
+                  href: ../manage/windows-admin-center/extend/guides/add-module.md
+                - name: Add an iFrame to a tool extension
+                  href: ../manage/windows-admin-center/extend/guides/add-iFrame.md
+                - name: Use a custom gateway plugin in your tool extension
+                  href: ../manage/windows-admin-center/extend/guides/use-custom-gateway-plugin.md
+                - name: Create a connection provider
+                  href: ../manage/windows-admin-center/extend/guides/create-connection-provider.md
+                - name: Modify root navigation behavior
+                  href: ../manage/windows-admin-center/extend/guides/modify-root-navigation.md
+                - name: Control your tool's visibility
+                  href: ../manage/windows-admin-center/extend/guides/dynamic-tool-display.md
+                - name: Strings and localization
+                  href: ../manage/windows-admin-center/extend/guides/strings-localization.md
+                - name: UI text and design style guide
+                  href: ../manage/windows-admin-center/extend/guides/ui-text-style-guide.md
+                - name: Using PowerShell in your extension
+                  href: ../manage/windows-admin-center/extend/guides/powershell.md
+                - name: CSS icon guide
+                  href: ../manage/windows-admin-center/extend/guides/cssicons.md
+                - name: Enable the extension discovery banner
+                  href: ../manage/windows-admin-center/extend/guides/extension-discovery-banner.md
+                - name: Upgrade extensions to Angular 11
+                  href: ../manage/windows-admin-center/extend/guides/upgrade-to-angular-11.md
+            - name: Publishing extensions
+              href: ../manage/windows-admin-center/extend/publish-extensions.md
+            - name: Case Studies
+              items: 
+                - name: BiitOps
+                  href: ../manage/windows-admin-center/extend/case-studies/biitops.md
+                - name: DataON
+                  href: ../manage/windows-admin-center/extend/case-studies/dataon.md
+                - name: Fujitsu
+                  href: ../manage/windows-admin-center/extend/case-studies/fujitsu.md
+                - name: Lenovo
+                  href: ../manage/windows-admin-center/extend/case-studies/lenovo.md
+                - name: NEC
+                  href: ../manage/windows-admin-center/extend/case-studies/nec.md
+                - name: Pure Storage
+                  href: ../manage/windows-admin-center/extend/case-studies/purestorage.md
+                - name: QCT
+                  href: ../manage/windows-admin-center/extend/case-studies/qct.md
+                - name: Thomas-Krenn
+                  href: ../manage/windows-admin-center/extend/case-studies/thomas-krenn.md
     - name: System Center
       items:
         - name: System Center Overview
