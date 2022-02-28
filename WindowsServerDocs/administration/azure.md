@@ -16,7 +16,7 @@ Windows Server together with Microsoft Azure cloud management capabilities allow
 
 ## Cloud operations for Windows Server in a hybrid and multicloud environment
 
-When you connect your machine to Azure, it enables the ability for you to perform the following operational functions as described in the following table.
+When you connect your non-Azure Windows Server machine to Azure, it enables the ability for you to perform the following operational functions as described in the following table.
 
 |Operations function |Description |
 |--------------------|------------|
@@ -45,7 +45,7 @@ Learn more about Azure Arc-enabled server at [What is Azure Arc-enabled server](
 
 ## Cloud operations for Windows Server on Azure
 
-When you run your machine in Azure, it enables the ability for you to perform the following operational functions as described in the following table.
+When you run your Windows Server on Azure, it enables the ability for you to perform the following operational functions as described in the following table.
 
 |Operations function |Description | 
 |--------------------|------------|
