@@ -45,11 +45,11 @@ items:
         - name: Windows Admin Center Overview
           href: ../manage/windows-admin-center/overview.md
         - name: FAQ
-          href: ../manage/understand/faq.yml
+          href: ../manage/windows-admin-center/understand/faq.yml
         - name: Case studies
-          href: ../manage/understand/case-studies.md
+          href: ../manage/windows-admin-center/understand/case-studies.md
         - name: Related management products
-          href: ../manage/understand/related-management.md
+          href: ../manage/windows-admin-center/understand/related-management.md
     - name: System Center
       items:
         - name: System Center Overview
