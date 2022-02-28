@@ -13,7 +13,33 @@ items:
         - name: What is Azure Arc-enabled servers?
           href: /azure/azure-arc/servers/overview?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
         - name: Azure Automanage for Azure Arc-enabled servers
-          href: /azure/automanage/automanage-arc
+          href: /azure/automanage/automanage-arc?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+        - name: Deploy
+          items:
+          - name: Connected Machine agent overview
+            href:  /azure/azure-arc/servers/agent-overview?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+          - name: Plan for deployment
+            href:  /azure/azure-arc/servers/plan-at-scale-deployment?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+          - name: Connect machines interactively
+            items:
+            - name: Connect machines using a deployment script
+              href:  /azure/azure-arc/servers/onboard-portal?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+            - name: Connect machines from Windows Admin Center
+              href:  /azure/azure-arc/servers/onboard-windows-admin-center?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+            - name: Connect machines to Azure Arc with PowerShell
+              href:  /azure/azure-arc/servers/onboard-powershell?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+            - name: Connect machines to Azure Arc with PowerShell DSC
+              href:  /azure/azure-arc/servers/onboard-dsc?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+          - name: Connect machines at scale
+            items:
+            - name: Connect machines using a service principal
+              href:  /azure/azure-arc/servers/onboard-service-principal?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+            - name: Connect machines using Configuration Manager script
+              href:  /azure/azure-arc/servers/onboard-configuration-manager-powershell?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+            - name: Connect machines using Configuration Manager custom task sequence
+              href:  /azure/azure-arc/servers/onboard-configuration-manager-custom-task?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
+            - name: Connect machines from Automation Update Management
+              href:  /azure/azure-arc/servers/onboard-update-management-machines?toc=/windows-server/administration/toc.json&bc=/windows-server/_bread/toc.json
     - name: Windows Admin Center
       items:
         - name: Windows Admin Center Overview
