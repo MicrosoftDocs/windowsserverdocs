@@ -1,5 +1,5 @@
 ---
-title: Deploy Storage Spaces Direct
+title: Deploy Storage Spaces Direct on Windows Server
 manager: femil
 ms.author: inhenkel
 ms.topic: how-to
@@ -8,7 +8,7 @@ author: stevenek
 ms.date: 11/16/2021
 description: Step-by-step instructions to deploy software-defined storage with Storage Spaces Direct in Windows Server as either hyperconverged infrastructure or converged (also known as disaggregated) infrastructure.
 ---
-# Deploy Storage Spaces Direct
+# Deploy Storage Spaces Direct on Windows Server
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
@@ -251,7 +251,7 @@ When this command is finished, which may take several minutes, the system will b
 
 We recommend using the `New-Volume` cmdlet as it provides the fastest and most straightforward experience. This single cmdlet automatically creates the virtual disk, partitions and formats it, creates the volume with matching name, and adds it to cluster shared volumes – all in one easy step.
 
-For more information, check out [Creating volumes in Storage Spaces Direct](create-volumes.md).
+For more information, check out [Creating volumes in Storage Spaces Direct](/azure-stack/hci/manage/create-volumes).
 
 ### Step 3.7: Optionally enable the CSV cache
 
@@ -272,7 +272,7 @@ $CSVCurrentCacheSize = (Get-Cluster $ClusterName).BlockCacheSize
 Write-Output "$ClusterName CSV cache size: $CSVCurrentCacheSize MB"
 ```
 
-For more info, see [Using the CSV in-memory read cache](csv-cache.md).
+For more info, see [Using the CSV in-memory read cache](/azure-stack/hci/manage/use-csv-cache).
 
 ### Step 3.8: Deploy virtual machines for hyper-converged deployments
 
@@ -375,8 +375,8 @@ CD $ScriptFolder
 ## Additional References
 
 -   [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
--   [Understand the cache in Storage Spaces Direct](understand-the-cache.md)
--   [Planning volumes in Storage Spaces Direct](plan-volumes.md)
--   [Storage Spaces Fault Tolerance](storage-spaces-fault-tolerance.md)
+-   [Understand the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)
+-   [Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
+-   [Storage Spaces Fault Tolerance](/azure-stack/hci/concepts/fault-tolerance)
 -   [Storage Spaces Direct Hardware Requirements](Storage-Spaces-Direct-Hardware-Requirements.md)
 -   [To RDMA, or not to RDMA – that is the question](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)

@@ -3,17 +3,16 @@ metadata:
   description: "Learn more about"
   title: DFS Replication - FAQ
   ms.date: 4/30/2021
-  author: JasonGerend
-  manager: elizapo
-  ms.author: jgerend
-  ms.topic: article
+  author: nedpyle
+  manager: brianm
+  ms.author: nedpyle
+  ms.topic: faq
   ms.prod: windows-server
-    
 title: "DFS Replication FAQ"
 summary: |
-  Updated: April 30, 2019
+  Updated: January 30, 2019
   
-  Applies To: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+  Applies To: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
   
   This FAQ answers questions about Distributed File System (DFS) Replication (also known as DFS-R or DFSR) for Windows Server.
   
@@ -188,7 +187,7 @@ sections:
       - question: |
           Does DFS Replication support replicating an entire volume?
         answer: |
-          Yes. However, you must first install Windows Server 2003 Service Pack 2 or the hotfix. For more information, see [article 920335](https://go.microsoft.com/fwlink/?linkid=76776) in the Microsoft Knowledge Base (https://go.microsoft.com/fwlink/?LinkId=76776). Additionally, replicating an entire volume can cause the following problems:
+          Yes. However, replicating an entire volume can cause the following problems:
           
             - If the volume contains a Windows paging file, replication fails and logs DFSR event 4312 in the system event log.
           

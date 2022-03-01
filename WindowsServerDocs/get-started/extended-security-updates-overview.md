@@ -9,7 +9,7 @@ ms.date: 01/17/2022
 ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
-ms.custom: contperf-fy23q3
+ms.custom: contperf-fy22q3
 ---
 
 # Extended Security Updates for Windows Server Overview

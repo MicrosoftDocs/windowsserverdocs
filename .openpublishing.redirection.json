@@ -38,7 +38,7 @@
     {
       "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/Create-a-New-NIC-Team-in-a-VM.md",
       "redirect_url": "/windows-server/networking/technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/networking/technologies/hpn/network-offload-optimization-technologies.md",
@@ -10443,6 +10443,121 @@
     {
       "source_path": "WindowsServerDocs/administration/hybrid-cloud-print/hybrid-cloud-print-overview.md",
       "redirect_url": "/universal-print/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/understand-the-cache.md",
+      "redirect_url": "/azure-stack/hci/concepts/cache",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-fault-tolerance.md",
+      "redirect_url": "/azure-stack/hci/concepts/fault-tolerance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/drive-symmetry-considerations.md",
+      "redirect_url": "/azure-stack/hci/concepts/drive-symmetry-considerations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/understand-quorum.md",
+      "redirect_url": "/azure-stack/hci/concepts/quorum",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/choosing-drives.md",
+      "redirect_url": "/azure-stack/hci/concepts/choose-drives",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/csv-cache.md",
+      "redirect_url": "/azure-stack/hci/manage/use-csv-cache",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/plan-volumes.md",
+      "redirect_url": "/azure-stack/hci/concepts/plan-volumes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/create-volumes.md",
+      "redirect_url": "/azure-stack/hci/manage/create-volumes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/resize-volumes.md",
+      "redirect_url": "/azure-stack/hci/manage/extend-volumes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/delete-volumes.md",
+      "redirect_url": "/azure-stack/hci/manage/delete-volumes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-adjustable-repair-speed.md",
+      "redirect_url": "/azure-stack/hci/manage/storage-repair-speed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/software-defined-networking.md",
+      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/contact-sdn-team.md",
+      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/Azure_and_Sdn.md",
+      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/Sc-Tech-for-Sdn.md",
+      "redirect_url": "/azure-stack/hci/concepts/software-defined-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming-mac-address-use-and-management.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/create-a-new-nic-team-on-a-host.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/troubleshooting-nic-teaming.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/sdn/technologies/nic-teaming/nic-teaming-settings.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/technologies/nic-teaming/Create-a-New-NIC-Team-on-a-Host-Computer-or-VM.md",
+      "redirect_url": "/azure-stack/hci/concepts/host-network-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/networking/Networking-old.md",
+      "redirect_url": "/windows-server/networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/understand-storage-resync.md",
+      "redirect_url": "/azure-stack/hci/concepts/understand-storage-resync",
       "redirect_document_id": false
     }
   ]

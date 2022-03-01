@@ -5,13 +5,33 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 01/14/2022
+ms.date: 02/02/2022
 ---
 # What's new in the macOS client
 
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
-If you encounter any issues, you can always contact us by navigating to **Help** > **Submit Feedback**.
+If you encounter any issues, you can always contact us by navigating to **Help** > **Report an issue**.
+
+## Updates for version 10.7.5 (1969)
+
+Date published: January 25, 2022
+
+In this release, we've addressed an issue that caused display configuration to not work properly when using the client on 2021 MacBook Pro 14" and 16" devices with multiple monitors. This issue mainly affected devices with external monitors positioned above the MacBook display. We also addressed an issue that caused the client to crash when used on earlier versions of macOS 12, and fixed customer-reported smart card and folder redirection issues.
+
+## Updates for version 10.7.4
+
+Date published: January 13, 2022
+
+It's time for the first update of the new year! In this release, we addressed full screen display issues with 2021 MacBook Pro 14" and 16" models.
+
+We also updated the client to better handle load-balanced RD Gateway configurations.
+
+## Updates for version 10.7.3
+
+Date published: December 17, 2021
+
+Unfortunately, the 10.7.2 update disabled smart card redirection for some users when they'd try to reconnect to their sessions. As a result, we've made one last update this year to address the issue.
 
 ## Updates for version 10.7.2 (1965)
 
@@ -278,9 +298,6 @@ We made this update with the help of everyone who reported issues. In this versi
 - The client no longer shows the "Saved Desktops" group if there are no user-created groups.
 - Updated UI for the tiles in PC view.
 - Fixes to address crashes sent to us via application telemetry.
-
-> [!NOTE]
-> In this release, we now accept feedback for the Mac client only through [UserVoice](https://remotedesktop.uservoice.com/forums/287834-remote-desktop-for-mac).
 
 ## Updates for version 10.3.4
 

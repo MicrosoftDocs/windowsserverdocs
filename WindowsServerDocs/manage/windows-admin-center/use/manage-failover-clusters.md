@@ -4,7 +4,7 @@ description: Manage Failover Clusters with Windows Admin Center
 ms.topic: article
 author: PatAltimore
 ms.author: patricka
-ms.date: 01/31/2022
+ms.date: 02/28/2022
 ---
 # Manage Failover Clusters with Windows Admin Center
 
@@ -49,4 +49,3 @@ The following tools are available for failover cluster connections:
 | Updates | Manage Cluster-Aware Updates (requires [CredSSP](../understand/faq.yml#does-windows-admin-center-use-credssp-)) |
 | [Virtual Machines](manage-virtual-machines.md) | View and manage virtual machines |
 | Virtual Switches | View and manage virtual switches |
-
