@@ -1,10 +1,10 @@
 ---
 title: Manage Failover Clusters with Windows Admin Center
-description: Manage Failover Clusters with Windows Admin Center (Project Honolulu)
+description: Manage Failover Clusters with Windows Admin Center
 ms.topic: article
-author: daniellee-msft
-ms.author: jol
-ms.date: 06/18/2018
+author: PatAltimore
+ms.author: patricka
+ms.date: 02/28/2022
 ---
 # Manage Failover Clusters with Windows Admin Center
 
@@ -17,7 +17,7 @@ ms.date: 06/18/2018
 ## Managing failover clusters
 [Failover clustering](../../../failover-clustering/failover-clustering-overview.md) is a Windows Server feature that enables you to group multiple servers together into a fault-tolerant cluster to increase availability and scalability of applications and services such as Scale-Out File Server, Hyper-V and Microsoft SQL Server.
 
-While you can manage failover cluster nodes as individual servers by adding them as [Server connections](manage-servers.md) in Windows Admin Center, you can also add them as Failover clusters to view and manage cluster resources, storage, network, nodes, roles, virtual machines and virtual switches.
+While you can manage failover cluster nodes as individual servers by adding them with [Server Manager](manage-servers.md) in Windows Admin Center, you can also add them as Failover clusters to view and manage cluster resources, storage, network, nodes, roles, virtual machines and virtual switches.
 
 ![Failover cluster Overview screen](../media/manage-failover-clusters/fcm-overview.png)
 
@@ -25,10 +25,10 @@ While you can manage failover cluster nodes as individual servers by adding them
 To add a cluster to Windows Admin Center:
 
 1. Click **+ Add** under All Connections.
-2. Choose to add a **Failover Connection**.
+2. Choose to add **Server clusters**.
 3. Type the name of the cluster and, if prompted, the credentials to use.
 4. You will have the option to add the cluster nodes as individual server connections in Windows Admin Center.
-5. Click **Submit** to finish.
+5. Click **Add** to finish.
 
 The cluster will be added to your connection list on the Overview page. Click it to connect to the cluster.
 

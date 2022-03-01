@@ -25,9 +25,9 @@ You can add individual servers running Windows Server 2012 or later to Windows A
 To add a server to Windows Admin Center:
 
 1. Click **+ Add** under All Connections.
-2. Choose to add a **Server Connection**.
+2. Choose to add **Servers**.
 3. Type the name of the server and, if prompted, the credentials to use.
-4. Click **Submit** to finish.
+4. Click **Add** to finish.
 
 The server will be added to your connection list on the Overview page. Click it to connect to the server.
 
