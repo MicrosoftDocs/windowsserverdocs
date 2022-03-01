@@ -2,10 +2,9 @@
 description: "Learn more about: Appendix L: Events to Monitor"
 ms.assetid: 99a68050-8d19-4c58-ad86-e08a3dcdb4f7
 title: Appendix L - Events to Monitor
-ms.author: daveba
-author: iainfoulds
-manager: daveba
-ms.date: 07/30/2018
+ms.author: patricka
+author: PatAltimore
+ms.date: 02/28/2022
 ms.topic: article
 ---
 # Appendix L: Events to Monitor
@@ -93,6 +92,8 @@ A potential criticality of High means that one occurrence of the event should be
 |5483|N/A|Medium|IPsec Services failed to initialize RPC server. IPsec Services could not be started.|
 |5484|N/A|Medium|IPsec Services has experienced a critical failure and has been shut down. The shutdown of IPsec Services can put the computer at greater risk of network attack or expose the computer to potential security risks.|
 |5485|N/A|Medium|IPsec Services failed to process some IPsec filters on a plug-and-play event for network interfaces. This poses a potential security risk because some of the network interfaces may not get the protection provided by the applied IPsec filters. Use the IP Security Monitor snap-in to diagnose the problem.|
+|5827|N/A|Medium|The Netlogon service denied a vulnerable Netlogon secure channel connection from a machine account.
+|5828|N/A|Medium|The Netlogon service denied a vulnerable Netlogon secure channel connection using a trust account.
 |6145|N/A|Medium|One or more errors occurred while processing security policy in the Group Policy objects.|
 |6273|N/A|Medium|Network Policy Server denied access to a user.|
 |6274|N/A|Medium|Network Policy Server discarded the request for a user.|
