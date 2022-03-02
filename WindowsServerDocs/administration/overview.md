@@ -1,6 +1,6 @@
 ---
-title: Windows Server Management
-description: Learn about more about your different Windows Server Management capabilities and solutions.
+title: Windows Server management overview
+description: Learn about more about the different capabilities and solutions to manage Windows Server.
 author: thomasmaurer
 ms.author: thmaure
 manager: rclaus
@@ -8,9 +8,9 @@ ms.reviewer: rclaus
 ms.topic: overview
 ms.date: 02/24/2022
 ---
-# Windows Server Management
+# Windows Server management overview
 
-Windows Server is the platform for building an infrastructure of connected applications, networks, and web services. As a Windows Server administrator, you've probably used many of the native Windows Server Microsoft Management Consoles (MMC) to keep the infrastructure secure and available. As the foundation of many on-premises, hybrid, and cloud native applications, the Windows Server teams have continued to invest in making the management and adminstration of your Windows Server instances easier by offering tools like Azure Arc, Windows Admin Center, and System Center. These tools are designed to work together, and each have capabilities to meet you where you are in your server management needs.
+Windows Server is the platform for building an infrastructure of connected applications, networks, and web services. As a Windows Server administrator, you've probably used many of the native Windows Server Microsoft Management Consoles (MMC) to keep the infrastructure secure and available. As the foundation of many on-premises, hybrid, and cloud native applications, the Windows Server teams have continued to invest in making the management and adminstration of your Windows Server instances easier by offering management tools like Azure Arc, Windows Admin Center, and System Center. These tools are designed to work together, and each have capabilities to meet you where you are in your server management needs.
 
 :::image type="content" source="media/windows-server-management-overview.png" alt-text="Windows Server Management Overview":::
 
@@ -24,10 +24,10 @@ Azure Arc-enabled servers enables you to manage your Windows and Linux physical 
 
 | Details | Description |
 | --------------- | --------------- |
-| Scope | limitless scale, Windows Server + Linux server |
-| Interface | web browser, REST APIs, command line tools |
-| Disconnected mode | limited support |
-| Focus | at-scale governance, security, and monitoring |
+| Scope | Limitless scale, Windows Server + Linux server |
+| Interface | Web browser, REST APIs, command line tools |
+| Disconnected mode | Limited support |
+| Focus | At-scale governance, security, and monitoring |
 
 ### Example scenarios for Azure Arc
 
@@ -46,10 +46,10 @@ Windows Admin Center is the modern evolution of "in-box" management tools, like 
 
 | Details | Description |
 | --------------- | --------------- |
-| Scope | single Windows Server or hyperconverged clusters |
-| Interface | web browser |
-| Disconnected mode | supported |
-| Focus | general server management, role configuration and troubleshooting |
+| Scope | Single Windows Server or hyperconverged clusters |
+| Interface | Web browser |
+| Disconnected mode | Supported |
+| Focus | General server management, role configuration and troubleshooting |
 
 ### Example scenarios for Windows Admin Center
 
@@ -65,34 +65,34 @@ System Center allows you to stay in control of your IT infrastructure across you
 
 | Details | Description |
 | --------------- | --------------- |
-| Scope | entire datacenter (multi-server management) |
+| Scope | Entire datacenter (multi-server management) |
 | Interface | GUI and command line tools |
-| Disconnected mode | supported |
-| Focus | day to day operations |
+| Disconnected mode | Supported |
+| Focus | Day to day operations |
 
 ### Example scenarios for System Center
 
 - Operations Manager provides infrastructure monitoring that is flexible and cost-effective, helps ensure the predictable performance and availability of vital applications, and offers comprehensive monitoring for your datacenter and private cloud.
-- Data Protection Manager is a robust enterprise backup and recovery system that contributes to your BCDR strategy by facilitating the backup and recovery of enterprise data.
+- Data Protection Manager is a robust enterprise backup and recovery system that contributes to your Business Continuity/Disaster Recovery (BCDR) strategy by facilitating the backup and recovery of enterprise data.
 - Virtual Machine Manager enables you to configure, manage and transform traditional datacenters, and helping to provide a unified management experience across on-premises and service provider for your virtualization workloads.
 
 Learn more about System Center at [System Center Documentation](/system-center).
 
-## Local Management Tools
+## Local management tools
 
 Windows Server includes a number of tools to help you understand your Windows Server environment, manage specific servers, fine-tune performance, troubleshooting, and eventually automate many management tasks.
 
 | Details | Description |
 | --------------- | --------------- |
-| Scope | single to few servers |
+| Scope | Single to few servers |
 | Interface | GUI and command line |
-| Disconnected mode | supported |
-| Focus | general server management, role configuration and troubleshooting |
+| Disconnected mode | Supported |
+| Focus | General server management, role configuration and troubleshooting |
 
-### Example scenarios Local Management Tools
+### Example scenarios of local management tools
 
 - Server Manager is a management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers.
-- All supported versions of Windows and Windows Server have a set of Win32 console commands built in. This set of documentation describes the Windows Commands you can use to automate tasks by using scripts or scripting tools.
+- All supported versions of Windows and Windows Server have a set of Win32 console commands built in. You can use these to automate tasks by using scripts or scripting tools.
 - As a scripting language, PowerShell is commonly used for automating the management of Windows Server and other systems.
 
 Learn more about local Windows Server management tools such as:
