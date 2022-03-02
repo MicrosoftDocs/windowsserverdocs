@@ -20,7 +20,7 @@ SMB Encryption provides end-to-end encryption of SMB data and protects data from
 >[!NOTE]
 >SMB Encryption does not cover security at rest, which is typically handled by BitLocker Drive Encryption.
 
-SMB Encryption should be considered for any scenario in which sensitive data needs to be protected from man-in-the-middle attacks. Possible scenarios include:
+SMB Encryption should be considered for any scenario in which sensitive data needs to be protected from interception attacks. Possible scenarios include:
 
 - An information worker's sensitive data is moved by using the SMB protocol. SMB Encryption offers an end-to-end privacy and integrity assurance between the file server and the client, regardless of the networks traversed, such as wide area network (WAN) connections that are maintained by non-Microsoft providers.
 - SMB 3.0 enables file servers to provide continuously available storage for server applications, such as SQL Server or Hyper-V. Enabling SMB Encryption provides an opportunity to protect that information from snooping attacks. SMB Encryption is simpler to use than the dedicated hardware solutions that are required for most storage area networks (SANs).

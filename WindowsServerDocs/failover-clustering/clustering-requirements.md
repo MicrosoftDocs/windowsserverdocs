@@ -41,7 +41,7 @@ You need the following hardware to create a failover cluster. To be supported by
 
   - For the partition style of the disk, you can use either master boot record (MBR) or GUID partition table (GPT).
 
-    A disk witness is a disk in the cluster storage that's designated to hold a copy of the cluster configuration database. A failover cluster has a disk witness only if this is specified as part of the quorum configuration. For more information, see [Understanding Quorum in Storage Spaces Direct](../storage/storage-spaces/understand-quorum.md).
+    A disk witness is a disk in the cluster storage that's designated to hold a copy of the cluster configuration database. A failover cluster has a disk witness only if this is specified as part of the quorum configuration. For more information, see [Understanding Quorum in Storage Spaces Direct](/azure-stack/hci/concepts/quorum).
 
 ## Hardware requirements for Hyper-V
 
@@ -59,8 +59,6 @@ When deploying a storage area network (SAN) with a failover cluster, follow thes
 - **Confirm compatibility of the storage**: Confirm with manufacturers and vendors that the storage, including drivers, firmware, and software used for the storage, are compatible with failover clusters in the version of Windows Server that you are running.
 - **Isolate storage devices, one cluster per device**: Servers from different clusters must not be able to access the same storage devices. In most cases, a LUN used for one set of cluster servers should be isolated from all other servers through LUN masking or zoning.
 - **Consider using multipath I/O software or teamed network adapters**: In a highly available storage fabric, you can deploy failover clusters with multiple host bus adapters by using multipath I/O software or network adapter teaming (also called load balancing and failover, or LBFO). This provides the highest level of redundancy and availability. For Windows Server 2012 R2 or Windows Server 2012, your multipath solution must be based on Microsoft Multipath I/O (MPIO). Your hardware vendor will typically supply an MPIO device-specific module (DSM) for your hardware, although Windows Server includes one or more DSMs as part of the operating system.
-
-    For more information about LBFO, see [NIC Teaming Overview](../networking/technologies/nic-teaming/nic-teaming.md) in the Windows Server Technical Library.
 
     >[!IMPORTANT]
     >Host bus adapters and multipath I/O software can be very version sensitive. If you are implementing a multipath solution for your cluster, work closely with your hardware vendor to choose the correct adapters, firmware, and software for the version of Windows Server that you are running.

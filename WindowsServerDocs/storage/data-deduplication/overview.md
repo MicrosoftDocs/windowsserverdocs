@@ -6,11 +6,11 @@ ms.topic: article
 author: wmgries
 manager: klaasl
 ms.author: wgries
-ms.date: 10/15/2021
+ms.date: 02/18/2022
 ---
 # Data Deduplication Overview
 
->Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, version 20H2
+>Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Azure Stack HCI, versions 21H2 and 20H2
 
 ## <a name="what-is-dedup"></a>What is Data Deduplication?
 
@@ -41,8 +41,8 @@ The space savings that you can gain from Data Deduplication depend on the datase
 
 ## <a name ="when-can-dedup-be-use"></a>When can Data Deduplication be used?
 
-|                                                                     |                                                                                           |
-|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| Scenario illustration    | Description |
+|---------------- | -----------------------------------------------|
 | ![Illustration of file servers.](media/overview-clustered-gpfs.png) | **General purpose file servers**: General purpose file servers are general use file servers that might contain any of the following types of shares: <ul><li>Team shares</li><li>User home folders</li><li>[Work folders](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265974(v=ws.11))</li><li>Software development shares</li></ul>General purpose file servers are a good candidate for Data Deduplication because multiple users tend to have many copies or versions of the same file. Software development shares benefit from Data Deduplication because many binaries remain essentially unchanged from build to build.  |
 | ![Illustration of VDI servers.](media/overview-vdi.png)            | **Virtual Desktop Infrastructure (VDI) deployments**: VDI servers, such as [Remote Desktop Services](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725560(v=ws.11)), provide a lightweight option for organizations to provision desktops to users. There are many reasons for an organization to rely on such technology: <ul><li>**Application deployment**: You can quickly deploy applications across your enterprise. This is especially useful when you have applications that are frequently updated, infrequently used, or difficult to manage.</li><li>**Application consolidation**: When you install and run applications from a set of centrally managed virtual machines, you eliminate the need to update applications on client computers. This option also reduces the amount of network bandwidth that is required to access applications.</li><li>**Remote Access**: Users can access enterprise applications from devices such as home computers, kiosks, low-powered hardware, and operating systems other than Windows.</li><li>**Branch office access**: VDI deployments can provide better application performance for branch office workers who need access to centralized data stores. Data-intensive applications sometimes do not have client/server protocols that are optimized for low-speed connections.</li></ul> VDI deployments are great candidates for Data Deduplication because the virtual hard disks that drive the remote desktops for users are essentially identical. Additionally, Data Deduplication can help with the so-called *VDI boot storm*, which is the drop in storage performance when many users simultaneously sign in to their desktops to start the day.     |
 | ![Illustration of backup applications.](media/overview-backup.png) | **Backup targets, such as virtualized backup applications**: Backup applications, such as [Microsoft Data Protection Manager (DPM)](/previous-versions/system-center/system-center-2012-R2/hh758173(v=sc.12)), are excellent candidates for Data Deduplication because of the significant duplication between backup snapshots.   |

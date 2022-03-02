@@ -151,7 +151,7 @@ Visit [Microsoft.com/HCI](https://www.microsoft.com/hci) to read their stories.
 
 ## Additional references
 
-- [Fault tolerance and storage efficiency](storage-spaces-fault-tolerance.md)
+- [Fault tolerance and storage efficiency](/azure-stack/hci/concepts/fault-tolerance)
 - [Storage Replica](../storage-replica/storage-replica-overview.md)
 - [Storage at Microsoft blog](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)
 - [Storage Spaces Direct throughput with iWARP](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (TechNet blog)

@@ -97,8 +97,6 @@ landingContent:
             url: technologies/netsh/netsh.md
           - text: Network Subsystem Performance Tuning
             url: technologies/network-subsystem/net-sub-performance-top.md
-          - text: NIC Teaming
-            url: technologies/nic-teaming/NIC-Teaming.md
           - text: Quality of Service (QoS) Policy
             url: technologies/qos/qos-policy-top.md
           - text: Windows Internet Name Service (WINS)

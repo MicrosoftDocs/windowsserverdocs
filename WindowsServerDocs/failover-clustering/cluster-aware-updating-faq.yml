@@ -2,14 +2,13 @@
 metadata:
   ms.assetid: 6416d125-bcaf-433d-971a-2f0283bca2c2
   title: Cluster-Aware Updating - Frequently Asked Questions
-  ms.topic: article
+  ms.topic: faq
   manager: lizross
   ms.author: jgerend
   author: JasonGerend
   ms.date: 10/21/2021
   description: Answers to frequently asked questions about Cluster-Aware Updating in Windows Server.
   ms.prod: windows-server
-    
 title: "Cluster-Aware Updating: Frequently Asked Questions"
 summary: |
   > Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, versions 21H2 and 20H2

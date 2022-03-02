@@ -44,7 +44,7 @@ These maximums apply to each Hyper-V host.
 |-------------|-----------|---------|
 |Logical processors|512|Both of these must be enabled in the firmware:<ul><li>Hardware-assisted virtualization</li><li>Hardware-enforced Data Execution Prevention (DEP)</li></ul>The host OS (root partition) will only see maximum 320 logical processors|
 |Memory|48 TB (Windows Server 2022 and Azure Stack HCI 21H2);<br/>24 TB (Windows Server 2016 and 2019)|None.|
-|Network adapter teams (NIC Teaming)|No limits imposed by Hyper-V.|For details, see [NIC Teaming](../../../networking/technologies/nic-teaming/NIC-Teaming.md).|
+|Network adapter teams (NIC Teaming)|No limits imposed by Hyper-V.|None.|
 |Physical network adapters|No limits imposed by Hyper-V.|None.|
 |Running virtual machines per server|1024|None.|
 |Storage|Limited by what is supported by the host operating system. No limits imposed by Hyper-V.|**Note:** Microsoft supports network-attached storage (NAS) when using SMB 3.0. NFS-based storage is not supported.|

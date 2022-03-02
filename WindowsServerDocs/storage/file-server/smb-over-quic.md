@@ -201,4 +201,4 @@ An expired SMB over QUIC certificate that you replace with a new certificate fro
 
 [TLS 1.3 Working Group homepage](https://tlswg.org/)
 
-[Microsoft TLS 1.3 Support Reference](https://devblogs.microsoft.com/premier-developer/microsoft-tls-1-3-support-reference/)
+[Taking Transport Layer Security (TLS) to the next level with TLS 1.3](https://www.microsoft.com/security/blog/2020/08/20/taking-transport-layer-security-tls-to-the-next-level-with-tls-1-3/)

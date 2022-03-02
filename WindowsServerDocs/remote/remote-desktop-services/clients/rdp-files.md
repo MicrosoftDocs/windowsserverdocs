@@ -5,14 +5,17 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 11/30/2021
+ms.date: 02/15/2022
 ---
 
 # Supported Remote Desktop RDP file settings
 
 The following table includes the list of supported RDP file settings that you can use with the Remote Desktop clients. When configuring settings, check [Client comparisons](./remote-desktop-app-compare.md) to see which redirections each client supports.
 
-The table also highlights which settings are supported as custom properties with Azure Virtual Desktop. You can refer to [this documentation](/azure/virtual-desktop/customize-rdp-properties/) detailing how to use PowerShell to customize RDP properties for Azure Virtual Desktop host pools.
+These tables also highlight which settings are supported as custom properties with Azure Virtual Desktop. You can refer to [this documentation](/azure/virtual-desktop/customize-rdp-properties/) detailing how to use PowerShell to customize RDP properties for Azure Virtual Desktop host pools.
+
+>[!IMPORTANT]
+>These tables list the Remote Desktop client app's default settings when not configured in Windows Virtual Desktop.
 
 ## Connection information
 
@@ -53,7 +56,7 @@ The table also highlights which settings are supported as custom properties with
 | camerastoredirect:s:value | Camera redirection:</br>Configures which cameras to redirect. This setting uses a semicolon-delimited list of KSCATEGORY_VIDEO_CAMERA interfaces of cameras enabled for redirection. | - * : Redirect all cameras</br> - List of cameras, such as camerastoredirect:s:\\?\usb#vid_0bda&pid_58b0&mi</br>- One can exclude a specific camera by prepending the symbolic link string with "-" | Don't redirect any cameras | Yes |
 | devicestoredirect:s:value | Plug and play device redirection:</br>Determines which devices on the local computer will be redirected and available in the remote session. | - *: Redirect all supported devices, including ones that are connected later</br> - Valid hardware ID for one or more devices</br> - DynamicDevices: Redirect all supported devices that are connected later | Don't redirect any devices | Yes |
 | drivestoredirect:s:value | Drive/storage redirection:</br>Determines which disk drives on the local computer will be redirected and available in the remote session. | - No value specified: don't redirect any drives</br>- * : Redirect all disk drives, including drives that are connected later</br>- DynamicDrives: redirect any drives that are connected later</br>- The drive and labels for one or more drives, such as "drivestoredirect:s:C\:;E\:;": redirect the specified drive(s) | Don't redirect any drives | Yes |
-| keyboardhook:i:value | Determines when Windows key combinations (WIN key, ALT+TAB) are applied to the remote session for desktop connections. | - 0: Windows key combinations are applied on the local computer</br>- 1: Windows key combinations are applied on the remote computer when in focus</br>- 2: Windows key combinations are applied on the remote computer in full screen mode only | 2 | Yes |
+| keyboardhook:i:value | Determines when Windows key combinations (WIN key, ALT+TAB) are applied to the remote session for desktop and RemoteApp connections. | - 0: Windows key combinations are applied on the local computer</br>- 1: (Desktop only) Windows key combinations are applied on the remote computer when in focus</br>- 2: (Desktop only) Windows key combinations are applied on the remote computer in full screen mode only</br>- 3: (RemoteApp only) Windows key combinations are applied on the RemoteApp when in focus. Recommended to use this value only when publishing the Remote Desktop Connection app (mstsc.exe) from the host pool on Azure Virtual Desktop. This value is only supported when using the [Windows Desktop client](windowsdesktop.md) (MSRDC). | 2 | Yes |
 | redirectclipboard:i:value | Clipboard redirection:</br>Determines whether clipboard redirection is enabled. | - 0: Clipboard on local computer isn't available in remote session</br>- 1: Clipboard on local computer is available in remote session | 1 | Yes |
 | redirectcomports:i:value | COM ports redirection:</br>Determines whether COM (serial) ports on the local computer will be redirected and available in the remote session. | - 0: COM ports on the local computer are not available in the remote session</br>- 1: COM ports on the local computer are available in the remote session | 0 | Yes |
 | redirectprinters:i:value | Printer redirection:</br>Determines whether printers configured on the local computer will be redirected and available in the remote session | - 0: The printers on the local computer are not available in the remote session</br>- 1: The printers on the local computer are available in the remote session | 1 | Yes |
