@@ -2,9 +2,45 @@ items:
 - name: Management
   href: manage-windows-server.yml
   items: 
-    - name: Use Windows Admin Center to manage your environment (New!)
-      href: ../manage/windows-admin-center/overview.md
-    - name: Manage Windows Server systems and environments
+    - name: Overview
+      items: 
+        - name: Windows Server Management Overview
+          href: overview.md
+        - name: Windows Server Azure Management
+          href: azure.md
+    - name: Azure Arc enabled server
+      items:
+        - name: What is Azure Arc-enabled servers?
+          href: /azure/azure-arc/servers/overview?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Azure Automanage for Azure Arc-enabled servers
+          href: /azure/automanage/automanage-arc?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Connected Machine agent overview
+          href:  /azure/azure-arc/servers/agent-overview?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Plan for deployment
+          href:  /azure/azure-arc/servers/plan-at-scale-deployment?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Windows Admin Center 
+      items:
+        - name: Windows Admin Center Overview
+          href: ../manage/windows-admin-center/overview.md?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: FAQ
+          href: ../manage/windows-admin-center/understand/faq.yml?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: System Center
+      items:
+        - name: System Center Overview
+          href: /system-center/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Data Protection Manager
+          href: /system-center/dpm/dpm-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Operations Manager
+          href: /system-center/scom/welcome/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Virtual Machine Manager
+          href: /system-center/vmm/overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Orchestrator
+          href: /system-center/orchestrator/learn-about-orchestrator/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Service Management Automation
+          href: /system-center/sma/overview-of-service-management-automation/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Service Provider Foundation
+          href: /system-center/spf/overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Built-in management tools
       items: 
         - name: What is the Server Core installation option?
           href: server-core/what-is-server-core.md
@@ -102,45 +138,76 @@ items:
               href: windows-server-update-services/manage/wid-to-sql-migration.md
         - name: Windows Console behavior in Windows Server
           href: windows-console-changes.md
-    - name: Collect information about your environment and systems
-      items: 
-        - name: System Insights
-          href: ..\manage\system-insights\overview.md
+        - name: Collect information about your environment and systems
           items: 
-            - name: Understanding capabilities
-              href: ..\manage\system-insights\understanding-capabilities.md
-            - name: Managing capabilities
-              href: ..\manage\system-insights\managing-capabilities.md
-            - name: Adding and developing capabilities
-              href: ..\manage\system-insights\adding-and-developing-capabilities.md
+            - name: System Insights
+              href: ..\manage\system-insights\overview.md
               items: 
-                - name: Adding, removing, and updating capabilities
-                  href: ..\manage\system-insights\add-remove-update-capabilities.md
-                - name: Choosing capability data sources
-                  href: ..\manage\system-insights\data-sources.md
-            - name: FAQ
-              href: ..\manage\system-insights\faq.md
-        - name: Collect events with Setup and Boot Event Collection
-          href: Get-started-with-Setup-and-Boot-Event-Collection.md
-        - name: Collect information about software Software Inventory Logging (SIL)
-          href: software-inventory-logging/get-started-with-software-inventory-logging.md
-          items: 
-            - name: Manage Software Inventory Logging
-              href: software-inventory-logging/manage-software-inventory-logging.md
-            - name: Software Inventory Logging Aggregator
-              href: software-inventory-logging/software-inventory-logging-aggregator.md
-        - name: Collect user information with User Access Logging (UAL)
-          href: user-access-logging/get-started-with-user-access-logging.md
-          items: 
-            - name: Manage User Access Logging
-              href: user-access-logging/manage-user-access-logging.md
+                - name: Understanding capabilities
+                  href: ..\manage\system-insights\understanding-capabilities.md
+                - name: Managing capabilities
+                  href: ..\manage\system-insights\managing-capabilities.md
+                - name: Adding and developing capabilities
+                  href: ..\manage\system-insights\adding-and-developing-capabilities.md
+                  items: 
+                    - name: Adding, removing, and updating capabilities
+                      href: ..\manage\system-insights\add-remove-update-capabilities.md
+                    - name: Choosing capability data sources
+                      href: ..\manage\system-insights\data-sources.md
+                - name: FAQ
+                  href: ..\manage\system-insights\faq.md
+            - name: Collect events with Setup and Boot Event Collection
+              href: Get-started-with-Setup-and-Boot-Event-Collection.md
+            - name: Collect information about software Software Inventory Logging (SIL)
+              href: software-inventory-logging/get-started-with-software-inventory-logging.md
+              items: 
+                - name: Manage Software Inventory Logging
+                  href: software-inventory-logging/manage-software-inventory-logging.md
+                - name: Software Inventory Logging Aggregator
+                  href: software-inventory-logging/software-inventory-logging-aggregator.md
+            - name: Collect user information with User Access Logging (UAL)
+              href: user-access-logging/get-started-with-user-access-logging.md
+              items: 
+                - name: Manage User Access Logging
+                  href: user-access-logging/manage-user-access-logging.md
     - name: Tune your Windows Server performance
       items: 
         - name: Performance Tuning Guidelines
           href: performance-tuning/index.md
-    - name: Automate Windows Server management
+    - name: Windows Server on Azure
+      items: 
+        - name: Windows virtual machines in Azure overview
+          href: /azure/virtual-machines/windows/overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Azure Automanage
+          href: /azure/automanage/automanage-windows-server/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Security
+          href: /azure/security/fundamentals/virtual-machines-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Updates and maintenance
+          href: /azure/virtual-machines/updates-maintenance-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Monitoring
+          href: /azure/virtual-machines/monitor-vm/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Backup and restore options
+          href: /azure/virtual-machines/backup-recovery/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Infrastructure automation tools
+          href: /azure/virtual-machines/infrastructure-automation/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Disks
+          href: /azure/virtual-machines/managed-disks-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Networking
+          href: /azure/virtual-network/network-overview/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+        - name: Availability options
+          href: /azure/virtual-machines/availability/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    - name: Command line and scripting
       items: 
         - name: Windows PowerShell scripting
-          href: /powershell/scripting/overview
+          href: /powershell/scripting/overview?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
         - name: Windows Commands
           href: windows-commands/windows-commands.md
+    - name: Microsoft Learn
+      items: 
+        - name: Manage hybrid infrastructure with Azure Arc
+          href: /learn/paths/manage-hybrid-infrastructure-with-azure-arc
+        - name: Windows Server deployment, configuration, and administration
+          href: /learn/paths/windows-server-deployment-configuration-administration/
+        - name: Manage Windows Servers and workloads in a hybrid environment
+          href: /learn/paths/manage-windows-servers-workloads-hybrid-environment/
+      
