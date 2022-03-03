@@ -24,14 +24,17 @@ landingContent:
         links:
           - text: Windows Server Management Overview
             url: overview.md
+          - text: Manage Windows Server with Azure
+            url: azure.md
+          - text: Manage Windows Server with Windows Admin Center
+            url: ../manage/windows-admin-center/overview.md?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
+          - text: Manage Windows Server with System Center
+            url: /system-center/?toc=/windows-server/administration/toc.json&bc=/windows-server/breadcrumbs/toc.json
           - text: Manage local systems with Server Manager
             url: server-manager/server-manager.md
           - text: Manage remote systems and systems without UI with Remote Server Administration Tools (RSAT)
             url: ../remote/remote-server-administration-tools.md
-          - text: Manage updates to Windows Server systems
-            url: windows-server-update-services/get-started/windows-server-update-services-wsus.md
-          - text: Manage Windows Server systems with Azure
-            url: azure.md
+          
   
   # Card
   - title: Cloud-based management with Azure Arc

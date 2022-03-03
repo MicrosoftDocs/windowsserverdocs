@@ -94,6 +94,7 @@ Windows Server includes a number of tools to help you understand your Windows Se
 - Server Manager is a management console in Windows Server that helps IT professionals provision and manage both local and remote Windows-based servers.
 - All supported versions of Windows and Windows Server have a set of Win32 console commands built in. You can use these to automate tasks by using scripts or scripting tools.
 - As a scripting language, PowerShell is commonly used for automating the management of Windows Server and other systems.
+- Using Sconfig to manage Windows Server Core.
 
 Learn more about local Windows Server management tools such as:
 
