@@ -7,6 +7,8 @@ ms.author: orthomas
 manager: femila
 ms.date: 07/15/2021
 ms.prod: windows-server
+ms.custom: team=cloud_advocates
+ms.contributors: orthomas-08202021
 ---
 
 # Secure DNS Client over HTTPS (DoH)

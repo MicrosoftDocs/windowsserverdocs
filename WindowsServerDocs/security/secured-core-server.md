@@ -6,7 +6,8 @@ ms.author: socuff
 ms.topic: overview 
 ms.date: 09/07/2021
 ms.prod: windows-server
-ms.custom: template-overview 
+ms.custom: template-overview, team=cloud_advocates
+ms.contributors: socuff-01282022
 ---
 
 # What is Secured-core server?
