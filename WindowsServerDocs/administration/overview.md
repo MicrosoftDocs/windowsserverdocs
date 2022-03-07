@@ -10,7 +10,7 @@ ms.date: 02/24/2022
 ---
 # Windows Server management overview
 
-Windows Server is the platform for building an infrastructure of connected applications, networks, and web services. As a Windows Server administrator, you've probably used many of the native Windows Server Microsoft Management Consoles (MMC) to keep the infrastructure secure and available. As the foundation of many on-premises, hybrid, and cloud native applications, the Windows Server teams have continued to invest in making the management and adminstration of your Windows Server instances easier by offering management tools like Azure Arc, Windows Admin Center, and System Center. These tools are designed to work together, and each have capabilities to meet you where you are in your server management needs.
+Windows Server is the platform for building an infrastructure of connected applications, networks, and web services. As a Windows Server administrator, you've probably used many of the native Windows Server Microsoft Management Consoles (MMC) to keep the infrastructure secure and available. As the foundation of many on-premises, hybrid, and cloud native applications, the Windows Server teams have continued to invest in making the management and administration of your Windows Server instances easier by offering management tools like Azure Arc, Windows Admin Center, and System Center. These tools are designed to work together, and each have capabilities to meet you where you are in your server management needs.
 
 :::image type="content" source="media/windows-server-management-overview.png" alt-text="Windows Server Management Overview":::
 
