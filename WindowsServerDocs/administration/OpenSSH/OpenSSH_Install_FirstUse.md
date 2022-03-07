@@ -25,14 +25,14 @@ Both OpenSSH components can be installed using Windows Settings on Windows Serve
 
 To install the OpenSSH components:
 
-1. Open **Settings**, select **Apps > Apps & Features**, then select **Optional Features**.
+1. Open **Settings**, select **Apps**, then select **Optional Features**.
 
 2. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
 
     - Find **OpenSSH Client**, then click **Install**
     - Find **OpenSSH Server**, then click **Install**
 
-Once setup completes, return to **Apps > Apps & Features** and **Optional Features** and you should see OpenSSH listed.
+Once setup completes, return to **Apps** and **Optional Features** and you should see OpenSSH listed.
 
 > [!NOTE]
 > Installing OpenSSH Server will create and enable a firewall rule named `OpenSSH-Server-In-TCP`. This allows inbound SSH traffic on port 22. If this rule is not enabled and this port is not open, connections will be refused or reset.
