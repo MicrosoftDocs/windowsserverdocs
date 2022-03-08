@@ -48,8 +48,6 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 
 *Date published: 02/15/2022*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWVhzA), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWVhzB), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWVhzz)
-
 - Improved stability of Azure Active Directory authentication.
 - Fixed an issue that was preventing users from opening multiple .RDP files from different host pools.
 
