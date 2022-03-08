@@ -34,7 +34,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 
 *Date published: 02/23/2022*
 
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWWcHG9), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWWfe6), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWWn7j)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWWcHG), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWWfe6), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWWn7j)
 
 - The Desktop client now supports Ctrl+Alt+arrow key keyboard shortcuts during desktop sessions.
 - Improved graphics performance with certain mouse types.
