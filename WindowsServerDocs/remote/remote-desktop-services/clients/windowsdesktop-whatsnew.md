@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 02/23/2022
+ms.date: 03/08/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,14 +17,24 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.2924        |1.2.1672                  |
-|Insider    |1.2.2924        |1.2.1672                  |
+|Public     |1.2.2925        |1.2.1672                  |
+|Insider    |1.2.2925        |1.2.1672                  |
+
+## Updates for version 1.2.2925
+
+*Date published: 03/08/2022*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Fixed the vulnerability known as [CVE-2022-21990](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-21990).
+- Fixed the vulnerability known as [CVE-2022-24503](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24503).
+- Fixed an issue where background updates could close active remote connections.
 
 ## Updates for version 1.2.2924
 
 *Date published: 02/23/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWWcHG9), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWWfe6), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWWn7j)
 
 - The Desktop client now supports Ctrl+Alt+arrow key keyboard shortcuts during desktop sessions.
 - Improved graphics performance with certain mouse types.
@@ -37,8 +47,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.2860
 
 *Date published: 02/15/2022*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWVhzA), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWVhzB), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWVhzz)
 
 - Improved stability of Azure Active Directory authentication.
 - Fixed an issue that was preventing users from opening multiple .RDP files from different host pools.
