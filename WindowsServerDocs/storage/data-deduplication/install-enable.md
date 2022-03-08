@@ -72,21 +72,23 @@ To determine whether a workload works well with deduplication, answer the follow
 	&nbsp;
 	Running DDPEval.exe will return an output similar to the following:
 	&nbsp;
-	`Data Deduplication Savings Evaluation Tool`
-	`Copyright 2011-2012 Microsoft Corporation.  All Rights Reserved.`
-	&nbsp;
-	`Evaluated folder: E:\Test`
-	`Processed files: 34`
-	`Processed files size: 12.03MB`
-	`Optimized files size: 4.02MB`
-	`Space savings: 8.01MB`
-	`Space savings percent: 66`
-	`Optimized files size (no compression): 11.47MB`
-	`Space savings (no compression): 571.53KB`
-	`Space savings percent (no compression): 4`
-	`Files with duplication: 2`
-	`Files excluded by policy: 20`
-	`Files excluded by error: 0`
+   ```
+   Data Deduplication Savings Evaluation Tool
+   Copyright 2011-2012 Microsoft Corporation.  All Rights Reserved.
+   
+   Evaluated folder: E:\Test
+   Processed files: 34
+   Processed files size: 12.03MB
+   Optimized files size: 4.02MB
+   Space savings: 8.01MB
+   Space savings percent: 66
+   Optimized files size (no compression): 11.47MB
+   Space savings (no compression): 571.53KB
+   Space savings percent (no compression): 4
+   Files with duplication: 2
+   Files excluded by policy: 20
+   Files excluded by error: 0
+   ```
 
 2. **What do my workload's I/O patterns to its dataset look like? What performance do I have for my workload?**
 	 Data Deduplication optimizes files as a periodic job, rather than when the file is written to disk. As a result, it is important to examine is a workload's expected read patterns to the deduplicated volume. Because Data Deduplication moves file content into the Chunk Store and attempts to organize the Chunk Store by file as much as possible, read operations perform best when they are applied to sequential ranges of a file.
