@@ -55,13 +55,13 @@ You can add Chrome or other user agents to the AD FS configuration that supports
 In AD FS configuration, add a user agent string for Chrome on Windows-based platforms:
 
 ```powershell
-Set-AdfsProperties -WIASupportedUserAgents (Get-ADFSProperties | Select -ExpandProperty WIASupportedUserAgents) + "Mozilla/5.0 (Windows NT)"
+Set-AdfsProperties -WIASupportedUserAgents (Get-ADFSProperties | Select -ExpandProperty WIASupportedUserAgents) + "Mozilla/5.0 (Windows NT"
 ```
 
 And similarly for Chrome on Apple macOS, add the following user agent string to the AD FS configuration:
 
 ```powershell
-Set-AdfsProperties -WIASupportedUserAgents (Get-ADFSProperties | Select -ExpandProperty WIASupportedUserAgents) + "Mozilla/5.0 (Macintosh; Intel Mac OS X)"
+Set-AdfsProperties -WIASupportedUserAgents (Get-ADFSProperties | Select -ExpandProperty WIASupportedUserAgents) + "Mozilla/5.0 (Macintosh; Intel Mac OS X"
 ```
 
 Confirm that the user agent string for Chrome is now set in the AD FS properties:
