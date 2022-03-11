@@ -5,11 +5,29 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 02/02/2022
+ms.date: 03/11/2022
 ---
 # What's new in the Android client
 
 We regularly update the [Remote Desktop client for Android](remote-desktop-android.md), adding new features and fixing issues. Here's where you'll find the latest updates.
+
+## Updates for version 10.0.13.1174
+
+Date published: February 22, 2022
+
+Here's what's changed in the latest version of the Android client:
+
+- Client-side time zone redirection.
+- HTTP proxy support.
+- Fixed an issue where input from the ENTER key was sent twice when using IME on Samsung devices.
+- Updates to improve Azure Virtual Desktop connection reliability and performance.
+- UI fixes and fine-tuning.
+- Enhanced Chromebook experience:
+  - Windowed mode support.
+  - Support for launching connections in separate windows.
+  - ​High DPI support.
+  - Addressed Chromebook compatibility bugs.
+- Minimum required version of Android is now Android 9.
 
 ## Updates for version 10.0.12.1148
 
