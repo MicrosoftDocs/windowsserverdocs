@@ -20,7 +20,7 @@ Windows Server is the platform for building an infrastructure of connected appli
 
 ## Cloud-based management using Azure Arc
 
-Azure Arc-enabled servers enables you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider. This management experience is designed to be consistent with how you manage native Azure virtual machines. This allows you to manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more.
+Azure Arc-enabled servers enables you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider. This management experience is designed to be consistent with how you manage native Azure virtual machines. This allows you to manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more. In combination with Azure Automanage you eliminate the need for discovery, enrollment, and configuration of Azure services that support server management best practices.
 
 | Details | Description |
 | --------------- | --------------- |
@@ -35,6 +35,7 @@ Azure Arc-enabled servers enables you to manage your Windows and Linux physical 
 - Manage it using Automation runbooks or solutions like Update Management
 - Secure your Windows Server using Microsoft Defender for Cloud.
 - Govern your Windows Server machines using Azure Policy Guest Configuration
+- Use Azure Automanage to enrollment and configuration Azure services that support server management best practices.
 
 Learn more about Azure Arc-enabled server at [What is Azure Arc-enabled server](/azure/azure-arc/servers/overview).
 
