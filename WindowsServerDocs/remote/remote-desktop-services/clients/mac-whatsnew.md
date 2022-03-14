@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 03/11/2022
+ms.date: 03/14/2022
 ---
 # What's new in the macOS client
 
