@@ -26,13 +26,13 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
-- Fixed a bug where the narrator incorrectly announced the client was in grid view or list view when the user selected view mode.
+- Fixed an issue where the narrator incorrectly announced the client was in grid view or list view when the user selected view mode.
 - Fixed an issue where the msrdc.exe process might take a long time to exit after closing the last Azure Virtual Desktop connection if customers have set a very short token expiration policy.
 - Updated the error message that appears when users are unable to subscribe to their feed.
 - Updated the dialog boxes that appear when the user locks their remote session or puts their local computer in sleep mode to be only informational.
 - Fixed an issue where the number pad did not work on initial focus.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
-- Multimedia redirection for Azure Virtual Desktop public preview has been refreshed with more site and media control compatibility.
+- [Multimedia redirection for Azure Virtual Desktop (preview)](/azure/virtual-desktop/multimedia-redirection) now has an update that gives it more site and media control compatibility.
 
 ## Updates for version 1.2.2925
 
