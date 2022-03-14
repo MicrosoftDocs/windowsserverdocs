@@ -5,13 +5,23 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 02/02/2022
+ms.date: 03/14/2022
 ---
 # What's new in the macOS client
 
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
-If you encounter any issues, you can always contact us by navigating to **Help** > **Report an issue**.
+If you encounter any issues, you can always contact us by navigating to **Help** > **Submit Feedback**.
+
+## The macOS beta client
+
+If you're feeling adventurous, you can help us test out new features by running the beta version of the macOS client. To join the beta, just go to <https://aka.ms/rdmacbeta>.
+
+## Updates for version 10.7.6 (1972)
+
+Date Published: February 3, 2022
+
+In this release, we made some changes to improve connection reliability for Azure Virtual Desktop scenarios.
 
 ## Updates for version 10.7.5 (1969)
 
