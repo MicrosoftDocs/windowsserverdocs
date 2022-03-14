@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 03/08/2022
+ms.date: 03/15/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -18,7 +18,21 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.2925        |1.2.1672                  |
-|Insider    |1.2.2925        |1.2.1672                  |
+|Insider    |1.2.3000        |1.2.1672                  |
+
+## Updates for version 1.2.3000 (Insider)
+
+*Date published: 3/15/2022*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Fixed a bug where the narrator incorrectly announced the client was in grid view or list view when the user selected view mode.
+- Fixed an issue where the msrdc.exe process might take a long time to exit after closing the last Azure Virtual Desktop connection if customers have set a very short token expiration policy.
+- Updated the error message that appears when users are unable to subscribe to their feed.
+- Updated the dialog boxes that appear when the user locks their remote session or puts their local computer in sleep mode to be only informational.
+- Fixed an issue where the number pad did not work on initial focus.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Multimedia redirection for Azure Virtual Desktop public preview has been refreshed with more site and media control compatibility.
 
 ## Updates for version 1.2.2925
 
