@@ -30,7 +30,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 - Fixed an issue where the msrdc.exe process might take a long time to exit after closing the last Azure Virtual Desktop connection if customers have set a very short token expiration policy.
 - Updated the error message that appears when users are unable to subscribe to their feed.
 - Updated the disconnect dialog boxes that appear when the user locks their remote session or puts their local computer in sleep mode to be only informational.
-- Fixed an issue where the number pad did not work on initial focus.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - [Multimedia redirection for Azure Virtual Desktop (preview)](/azure/virtual-desktop/multimedia-redirection) now has an update that gives it more site and media control compatibility.
 
