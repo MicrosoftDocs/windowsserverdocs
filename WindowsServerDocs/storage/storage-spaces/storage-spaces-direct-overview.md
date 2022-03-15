@@ -18,8 +18,6 @@ This article provides an overview of Storage Spaces Direct, how it works, when t
 
 To get started, try [Storage Spaces Direct](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) in Microsoft Azure, or download a 180-day-licensed evaluation copy of Windows Server from [Windows Server Evaluations](https://go.microsoft.com/fwlink/?linkid=842602). To know the minimum hardware requirements for Storage Spaces Direct, see [Storage Spaces Direct hardware requirements](storage-spaces-direct-hardware-requirements.md). To deploy Storage Spaces Direct as part of Azure Stack HCI, see [Deploy the Azure Stack HCI operating system](/azure-stack/hci/deploy/operating-system).
 
-To find answers to frequently asked questions about Storage Spaces Direct, see [FAQs](storage-spaces-direct-faq.yml).
-
 ## What is Storage Spaces Direct?
 
 Storage Spaces Direct is a software-defined storage solution that allows you to share storage resources in your converged and hyperconverged IT infrastructure. It enables you to combine internal storage drives on a cluster of physical servers (2 and up to 16) into a software-defined pool of storage. This storage pool has cache, tiers, resiliency, and erasure coding across columns—all configured and managed automatically.

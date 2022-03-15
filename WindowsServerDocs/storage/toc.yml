@@ -370,8 +370,6 @@ items:
         href: storage-spaces/storage-spaces-states.md
       - name: Collect data
         href: /azure-stack/hci/manage/collect-diagnostic-data?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
-      - name: Frequently asked questions
-        href: storage-spaces/storage-spaces-direct-faq.yml
       - name: Storage-class memory health management
         href: storage-spaces/Storage-class-memory-health.md
   - name: Work Folders

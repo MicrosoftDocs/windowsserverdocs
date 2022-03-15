@@ -10559,6 +10559,11 @@
       "source_path": "WindowsServerDocs/storage/storage-spaces/understand-storage-resync.md",
       "redirect_url": "/azure-stack/hci/concepts/understand-storage-resync",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/storage-spaces-direct-faq.yml",
+      "redirect_url": "/windows-server/storage/storage-spaces/storage-spaces-direct-overview",
+      "redirect_document_id": false
     }
   ]
 }
