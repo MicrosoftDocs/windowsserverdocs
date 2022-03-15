@@ -45,4 +45,4 @@ wbadmin start systemstatebackup -backupTarget:f:
 
 - [wbadmin command](wbadmin.md)
 
-- [Start-WBBackup](/powershell/module/windowserverbackup/Start-WBBackup)
+- [Start-WBBackup](/powershell/module/windowsserverbackup/Start-WBBackup)

@@ -54,4 +54,4 @@ wbadmin restore catalog -backupTarget:\\servername\share -machine:server01
 
 - [wbadmin delete catalog command](wbadmin-delete-catalog.md)
 
-- [Restore-WBCatalog](/powershell/module/windowserverbackup/Restore-WBCatalog)
+- [Restore-WBCatalog](/powershell/module/windowsserverbackup/Restore-WBCatalog)

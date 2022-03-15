@@ -32,4 +32,4 @@ wbadmin get status
 
 - [wbadmin stop job command](wbadmin-stop-job.md)
 
-- [Get-WBJob](/powershell/module/windowserverbackup/Get-WBJob)
+- [Get-WBJob](/powershell/module/windowsserverbackup/Get-WBJob)

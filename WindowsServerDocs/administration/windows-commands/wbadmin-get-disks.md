@@ -27,4 +27,4 @@ wbadmin get disks
 
 - [wbadmin command](wbadmin.md)
 
-- [Get-WBDisk](/powershell/module/windowserverbackup/Get-WBDisk)
+- [Get-WBDisk](/powershell/module/windowsserverbackup/Get-WBDisk)
