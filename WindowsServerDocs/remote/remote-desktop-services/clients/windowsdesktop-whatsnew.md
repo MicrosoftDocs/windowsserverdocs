@@ -17,7 +17,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.2925        |1.2.1672                  |
+|Public     |1.2.2927        |1.2.1672                  |
 |Insider    |1.2.3000        |1.2.1672                  |
 
 ## Updates for version 1.2.3000 (Insider)
@@ -34,11 +34,19 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - [Multimedia redirection for Azure Virtual Desktop (preview)](/azure/virtual-desktop/multimedia-redirection) now has an update that gives it more site and media control compatibility.
 
+## Updates for version 1.2.2927
+
+*Date published: 3/15/2022*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+Fixed an issue where the number pad didn't work on initial focus.
+
 ## Updates for version 1.2.2925
 
 *Date published: 03/08/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Pe79), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Pe7c), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Pjd5)
 
 - Fixed the vulnerability known as [CVE-2022-21990](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-21990).
 - Fixed the vulnerability known as [CVE-2022-24503](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24503).
@@ -47,8 +55,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.2924
 
 *Date published: 02/23/2022*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWWcHG), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWWfe6), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWWn7j)
 
 - The Desktop client now supports Ctrl+Alt+arrow key keyboard shortcuts during desktop sessions.
 - Improved graphics performance with certain mouse types.
