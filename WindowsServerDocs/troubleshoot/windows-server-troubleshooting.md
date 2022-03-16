@@ -140,10 +140,9 @@ This section contains advanced troubleshooting topics and links to help you reso
 
 - [QoS Frequently Asked Questions](../networking/technologies/qos/qos-policy-faq.yml)
 
-## Troubleshoot S2D
+## Troubleshoot Storage Spaces Direct
 
 - [Storage Spaces Direct troubleshooting](../storage/storage-spaces/troubleshooting-storage-spaces.md)
-- [Storage Spaces Direct - Frequently asked questions](../storage/storage-spaces/storage-spaces-direct-faq.yml)
 - [Storage Spaces Direct health and operational states](../storage/storage-spaces/storage-spaces-states.md)
 - [Collect diagnostic data with Storage Spaces Direct](../storage/storage-spaces/data-collection.md)
 - [Storage-class Memory (NVDIMM-N) Health Management in Windows](../storage/storage-spaces/storage-class-memory-health.md)
