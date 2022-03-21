@@ -43,7 +43,7 @@ The period of time Extended Security Updates will be provided depends on the ver
 | Windows Server 2008<br />Windows Server 2008 R2 | Azure* | Four years | January 9, 2024 |
 | Windows Server 2008<br />Windows Server 2008 R2 | Not in Azure | Three years | January 10, 2023 |
 | Windows Server 2012<br />Windows Server 2012 R2 | Azure* | Three years | October 13, 2026 |
-| Windows Server 2012<br />Windows Server 2012 R2 | Not in Azure | Three years | October 13, 2026 |
+| Windows Server 2012<br />Windows Server 2012 R2 | Not in Azure | Three years | October 10, 2023 |
 
 \* Includes the [Azure Stack portfolio of products](https://azure.microsoft.com/overview/azure-stack/) that extend Azure services and capabilities to your environment of choice.
 
