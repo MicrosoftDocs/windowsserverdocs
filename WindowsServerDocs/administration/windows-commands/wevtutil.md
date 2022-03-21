@@ -141,6 +141,10 @@ Clear all of the events from the Application log after saving them to C:\admin\b
 ```
 wevtutil cl Application /bu:C:\admin\backups\a10306.evtx
 ```
+Archive the specified (*.evtx*) log file in a self-contained format. A subdirectory (LocaleMetaData) is created and all locale-specific information is saved in that subdirectory:
+```
+wevtutil archive-log "C:\backup\Application.evtx" /locale:en-us
+```
 
 #### Additional References
 
