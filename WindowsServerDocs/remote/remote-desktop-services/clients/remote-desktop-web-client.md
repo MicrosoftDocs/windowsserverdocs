@@ -2,7 +2,7 @@
 title: Get started with the web client
 description: Describes how to sign in to the Remote Desktop web client.
 ms.author: helohr
-ms.date: 04/20/2021
+ms.date: 03/23/2022
 ms.topic: article
 author: Heidilohr
 ---
@@ -70,8 +70,9 @@ To download files from the remote session to your local computer:
 
 1. Connect to the remote session.
 2. Open the file explorer in your remote session.
-3. Copy the files you want to download to **Remote Desktop Virtual Drive** > **Downloads**.
-4. Your files will be downloaded to your local default downloads folder.
+3. Copy the file or files you want to download to **Remote Desktop Virtual Drive** > **Downloads**.
+4. A prompt will ask if you want to download the file or files you selected. At this point, you can confirm the download by selecting **Confirm** or cancel it by selecting **Cancel**. If you don't want to see this prompt every time you download files from the current browser, select the check box labeled **Don’t ask me again on this browser** before confirming.
+5. Your files will be downloaded to your local default downloads folder.
 
 ## Copy and paste from the Remote Desktop web client
 
