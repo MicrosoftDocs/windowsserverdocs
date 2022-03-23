@@ -15,7 +15,7 @@ The Remote Desktop web client lets you use a compatible web browser to access yo
 
 ## What you'll need to use the web client
 
-* For the web client, you'll need a PC running Windows, macOS, ChromeOS, or Linux. Mobile devices are not supported at this time.
+* For the web client, you'll need a PC running Windows, macOS, ChromeOS, or Linux. Mobile devices aren't supported at this time.
 * A modern browser like Microsoft Edge, Google Chrome, Apple Safari, or Mozilla Firefox (v55.0 and later).
 * The URL your admin sent you.
 
@@ -25,7 +25,7 @@ The Remote Desktop web client lets you use a compatible web browser to access yo
 
 ## Start using the Remote Desktop client
 
-To sign in to the client, go to the URL your admin sent you. At the sign in page, enter your domain and user name in the format ```DOMAIN\username```, enter your password, and then select **Sign in**.
+To sign in to the client, go to the URL your admin sent you. At the sign-in page, enter your domain and user name in the format ```DOMAIN\username```, enter your password, and then select **Sign in**.
 
 >[!NOTE]
 >By signing in to the web client, you agree that your PC complies with your organization's security policy.
@@ -89,7 +89,7 @@ To enable IME input using the web client:
 3. In the drop-down menu, select the keyboard you want to use in the remote session.
 4. Connect to the remote session.
 
-The web client will suppress the local IME window when you are focused on the remote session. If you change the IME settings after you've already connected to the remote session, the setting changes won't have any effect. The web client doesn't support IME input while using a private browsing window.
+The web client will suppress the local IME window when you're focused on the remote session. If you change the IME settings after you've already connected to the remote session, the setting changes won't have any effect. The web client doesn't support IME input while using a private browsing window.
 
 >[!NOTE]
 >If the language pack isn't installed on the host virtual machine, the remote session will default to the English (United States) keyboard.
