@@ -44,8 +44,8 @@ The following table describes alternate key combinations to inject standard Wind
 |-------------|------------|
 |(Windows) Ctrl+Alt+End</br>(MacOS) fn+control+option+delete|Inject Ctrl+Alt+Del in the remote session.|
 |Alt+F3       |Injects Windows key in the remote session.|
-|Alt+Page up|Switches between programs from left to right. (Windows shortcut is Alt+Tab.)|
-|Alt+Page down|Switches between programs from right to left. (Windows shortcut is Alt+Shift+Tab.) |
+|Alt+Page up|Switches between programs from left to right in the remote session. (Windows shortcut is Alt+Tab.)|
+|Alt+Page down|Switches between programs from right to left in the remote session. (Windows shortcut is Alt+Shift+Tab.) |
 
 ## Printing from the Remote Desktop web client
 
