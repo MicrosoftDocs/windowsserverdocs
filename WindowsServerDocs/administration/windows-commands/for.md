@@ -94,7 +94,7 @@ for {%% | %}<variable> in (<set>) do <command> [<commandlineoptions>]
 
     ```
     for /f [usebackq <parsingkeywords>] {%%|%}<variable> in (<set>) do <command> [<commandlineoptions>]
-    for /f [usebackq <parsingkeywords>] {%%|%}<variable> in ('<literalString>') do <command> [<commandlineoptions>]
+    for /f [usebackq <parsingkeywords>] {%%|%}<variable> in ('<literalstring>') do <command> [<commandlineoptions>]
     for /f [usebackq <parsingkeywords>] {%%|%}<variable> in (`<command>`) do <command> [<commandlineoptions>]
     ```
 
