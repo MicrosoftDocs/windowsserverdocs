@@ -55,7 +55,7 @@ The following table shows which 64-bit versions of Windows you can use as a gues
 | Windows Server 2012 |&#10004;|&#10004;|
 | Windows Server 2008 R2 |&#10004;| &#10006;|
 | Windows Server 2008 |&#10004;| &#10006;|
-| Windows 11 |&#10004;|&#10004;|
+| Windows 11 |&#10006;|&#10004;|
 | Windows 10 |&#10004;|&#10004;|
 | Windows 8.1 |&#10004;|&#10004;|
 | Windows 8 |&#10004;|&#10004;|
