@@ -2,7 +2,7 @@
 title: Get started with the web client
 description: Describes how to sign in to the Remote Desktop web client.
 ms.author: helohr
-ms.date: 03/23/2022
+ms.date: 03/24/2022
 ms.topic: article
 author: Heidilohr
 ---
@@ -18,10 +18,6 @@ The Remote Desktop web client lets you use a compatible web browser to access yo
 * For the web client, you'll need a PC running Windows, macOS, ChromeOS, or Linux. Mobile devices aren't supported at this time.
 * A modern browser like Microsoft Edge, Google Chrome, Apple Safari, or Mozilla Firefox (v55.0 and later).
 * The URL your admin sent you.
-
->[!NOTE]
->The Internet Explorer version of the web client does not have audio at this time.
->Safari may display a gray screen if the browser is resized or enters fullscreen multiple times.
 
 ## Start using the Remote Desktop client
 
@@ -95,6 +91,18 @@ The web client will suppress the local IME window when you're focused on the rem
 
 >[!NOTE]
 >If the language pack isn't installed on the host virtual machine, the remote session will default to the English (United States) keyboard.
+
+## Enable native display resolution in remote sessions
+
+The web client supports using native display resolution during remote sessions. In sessions running on a high-DPI display, native resolution can provide higher-fidelity graphics and improved text clarity.
+
+>[!NOTE]
+>Enabling native display resolution with a high-DPI display may cause increased CPU or network usage.
+
+Native resolution is set to off by default. To turn native resolution on:
+
+1. In your session, go to the upper-right corner of the taskbar and select **Settings**.
+2. Set **Enable native display resolution** to **On**.
 
 ## Get help with the web client
 
