@@ -186,7 +186,34 @@ AD FS can be configured to require strong authentication (such as multi factor a
 
 Supported external MFA providers include those listed in [this](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn758113(v=ws.11)) page, as well as HDI Global.
 
+### Enable protection to prevent by-passing of cloud Azure MFA when federated with Azure AD 
 
+Enable protection against any attack vector trying to by-pass cloud Azure MFA via a new security setting `federatedIdpMfaBehavior`. 
+
+When used with a federated domain, Azure AD will always trigger Azure MFA when a federated user accesses an application with a Conditional Access policy that requires MFA. This behavior ensures that an attacker cannot by-pass Azure MFA by pretending that MFA has already been performed by the identity provider.  
+
+>[!Important]
+> This protection should only be enabled for a federated domain if you are not using AD FS or any third-party providers with MFA offerings for multi-factor authentication. Additonally, please ensure that you have reviewed the `federatedIdpMfaBehavior`property behavior here before updating the setting.  
+
+You can enable protection by setting `federatedIdpMfaBehavior` to `rejectMfaByFederatedIdp` using the following command.  
+
+MS GRAPH API
+```
+
+ PATCH /domains/{domainsId}/federationConfiguration/{internalDomainFederationId} 
+
+{ 
+
+" federatedIdpMfaBehavior ": "rejectMfaByFederatedIdp" 
+
+} 
+```
+ 
+PowerShell
+
+```powershell
+Update-MgDomainFederationConfiguration -DomainId <domainsId> -InternalDomainFederationId <internalDomainFederationId> federatedIdpMfaBehavior "rejectMfaByFederatedIdp" 
+```
 
 ### Hardware Security Module (HSM)
 In its default configuration, the keys AD FS uses to sign tokens never leave the federation servers on the intranet.  They are never present in the DMZ or on the proxy machines.  Optionally to provide additional protection, we recommend protecting these keys in a hardware security module (HSM) attached to AD FS.  Microsoft does not produce an HSM product, however there are several on the market that support AD FS.  In order to implement this recommendation, follow the vendor guidance to create the X509 certs for signing and encryption, then use the AD FS installation powershell commandlets, specifying your custom certificates as follows:
