@@ -127,7 +127,7 @@ Many of these requirements can be determined by using the `Test-SRTopology` cmdl
 
 -   **For Storage Spaces Direct:**
 
-1. Ensure that each cluster can see that site's storage enclosures only by deploying Storage Spaces Direct. (https://docs.microsoft.com/windows-server/storage/storage-spaces/hyper-converged-solution-using-storage-spaces-direct)
+1. Ensure that each cluster can see that site's storage enclosures only by [deploying Storage Spaces Direct](../storage-spaces/deploy-storage-spaces-direct.md).
 
 2. Ensure that the SR log volumes will always be on the fastest flash storage and the data volumes on slower high capacity storage.
 
