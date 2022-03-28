@@ -28,7 +28,7 @@ productDirectory:
     - title: Storage Spaces Direct
       imageSrc: https://docs.microsoft.com/en-us/windows-server/media/i-store.svg
       links:
-        - url: ../storage/storage-spaces/storage-spaces-direct-overview.md
+        - url: /azure-stack/hci/concepts/storage-spaces-direct-overview
           text: Virtualizes storage hardware, enabling you to create volumes on top of a virtualized pool of drives spread across servers in a hyper-converged cluster.
     # Card
     - title: Failover Clustering

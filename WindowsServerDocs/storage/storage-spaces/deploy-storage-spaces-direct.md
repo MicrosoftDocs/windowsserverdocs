@@ -12,7 +12,7 @@ description: Step-by-step instructions to deploy software-defined storage with S
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-This topic provides step-by-step instructions to deploy [Storage Spaces Direct](storage-spaces-direct-overview.md) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
+This topic provides step-by-step instructions to deploy [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) on Windows Server. To deploy Storage Spaces Direct as part of Azure Stack HCI, see [What is the deployment process for Azure Stack HCI?](/azure-stack/hci/deploy/deployment-overview)
 
 > [!Tip]
 > Looking to acquire hyperconverged infrastructure? Microsoft recommends purchasing a validated hardware/software Azure Stack HCI solution from our partners. These solutions are designed, assembled, and validated against our reference architecture to ensure compatibility and reliability, so you get up and running quickly. To peruse a catalog of hardware/software solutions that work with Azure Stack HCI, see the [Azure Stack HCI Catalog](https://aka.ms/azurestackhcicatalog).
@@ -26,7 +26,7 @@ Review the [Storage Spaces Direct hardware requirements](Storage-Spaces-Direct-H
 
 Gather the following information:
 
-- **Deployment option.** Storage Spaces Direct supports [two deployment options: hyper-converged and converged](storage-spaces-direct-overview.md#deployment-options), also known as disaggregated. Familiarize yourself with the advantages of each to decide which is right for you. Steps 1-3 below apply to both deployment options. Step 4 is only needed for converged deployment.
+- **Deployment option.** Storage Spaces Direct supports [two deployment options: hyper-converged and converged](/azure-stack/hci/concepts/storage-spaces-direct-overview#deployment-options), also known as disaggregated. Familiarize yourself with the advantages of each to decide which is right for you. Steps 1-3 below apply to both deployment options. Step 4 is only needed for converged deployment.
 
 - **Server names.** Get familiar with your organization's naming policies for computers, files, paths, and other resources. You'll need to provision several servers, each with unique names.
 
@@ -374,7 +374,7 @@ CD $ScriptFolder
 
 ## Additional References
 
--   [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
+-   [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 -   [Understand the cache in Storage Spaces Direct](/azure-stack/hci/concepts/cache)
 -   [Planning volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
 -   [Storage Spaces Fault Tolerance](/azure-stack/hci/concepts/fault-tolerance)

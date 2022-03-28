@@ -803,5 +803,5 @@ Now you will manage and operate your stretch cluster. You can perform all of the
 
 ## See Also
 - [Windows Server 2016](../../index.yml)
-- [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
+- [Storage Spaces Direct in Windows Server 2016](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 - [Stretched Clusters in Azure Stack HCI](/azure-stack/hci/concepts/stretched-clusters)

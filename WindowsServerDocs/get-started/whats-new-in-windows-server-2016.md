@@ -152,7 +152,7 @@ Control Flow Guard (CFG) is a platform security feature that was created to comb
 
 Storage Spaces Direct enables building highly available and scalable storage using servers with local storage. It simplifies the deployment and management of software-defined storage systems and unlocks use of new classes of disk devices, such as SATA SSD and NVMe disk devices, that were previously not possible with clustered Storage Spaces with shared disks.
 
-For more info, see [Storage Spaces Direct](../storage/storage-spaces/storage-spaces-direct-overview.md).
+For more info, see [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview).
 
 ### Storage Replica
 
