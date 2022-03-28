@@ -911,4 +911,4 @@ IOPSNormalizationSize
 
 - [Windows Server 2016](../../index.yml)
 - [Storage Replica in Windows Server 2016](../storage-replica/storage-replica-overview.md)
-- [Storage Spaces Direct in Windows Server 2016](../storage-spaces/storage-spaces-direct-overview.md)
+- [Storage Spaces Direct in Windows Server 2016](/azure-stack/hci/concepts/storage-spaces-direct-overview)

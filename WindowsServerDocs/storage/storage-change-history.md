@@ -261,8 +261,8 @@ This topic lists new and updated topics in the [Storage](storage.yml) documentat
 |[Understanding Storage Spaces Direct](/azure-stack/hci/concepts/cache)|New list of links.|
 |[Planning Storage Spaces Direct](./storage-spaces/storage-spaces-direct-hardware-requirements.md)|New list of links.|
 |[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|New list of links.|
-|[Managing Storage Spaces Direct](./storage-spaces/storage-spaces-direct-overview.md)|New topic.|
+|[Managing Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)|New topic.|
 |[Storage Replica frequently asked questions](storage-replica/storage-replica-frequently-asked-questions.yml)|Updated port requirements and clarified how extending replicated volumes works.|
 |[Storage Replica known issues](storage-replica/storage-replica-known-issues.md)|Added info about a fix in the December 9, 2016 Cumulative Update and added info about how to resolve an error when extending a replicated volume.|
-|[Storage Spaces Direct overview](storage-spaces/storage-spaces-direct-overview.md)|Added visually-oriented Understand/Plan/Deploy/Manage section to serve as a learning map for our topics.|
+|[Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)|Added visually-oriented Understand/Plan/Deploy/Manage section to serve as a learning map for our topics.|
 |[Deploying Storage Spaces Direct](storage-spaces/deploy-storage-spaces-direct.md)|Removed some obsolete content and added new links.|

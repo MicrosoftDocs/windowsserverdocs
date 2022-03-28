@@ -12,7 +12,7 @@ ms.date: 07/22/2021
 
 >Applies to: Windows Server 2022, Windows Server 2019
 
-Nested resiliency is a new capability of [Storage Spaces Direct](storage-spaces-direct-overview.md) in Windows Server 2019 that enables a two-server cluster to withstand multiple hardware failures at the same time without loss of storage availability, so users, apps, and virtual machines continue to run without disruption. This topic explains how it works, provides step-by-step instructions to get started, and answers the most frequently asked questions.
+Nested resiliency is a new capability of [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview) in Windows Server 2019 that enables a two-server cluster to withstand multiple hardware failures at the same time without loss of storage availability, so users, apps, and virtual machines continue to run without disruption. This topic explains how it works, provides step-by-step instructions to get started, and answers the most frequently asked questions.
 
 ## Prerequisites
 
@@ -189,7 +189,7 @@ For details see the [Remove servers](remove-servers.md) topic.
 
 ## Additional References
 
-- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
+- [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 - [Understand fault tolerance in Storage Spaces Direct](/azure-stack/hci/concepts/fault-tolerance)
 - [Plan volumes in Storage Spaces Direct](/azure-stack/hci/concepts/plan-volumes)
 - [Create volumes in Storage Spaces Direct](/azure-stack/hci/manage/create-volumes)

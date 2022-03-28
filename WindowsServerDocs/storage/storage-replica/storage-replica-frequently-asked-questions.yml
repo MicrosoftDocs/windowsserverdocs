@@ -285,4 +285,4 @@ sections:
           See also
         answer: |
           - [Storage Overview](../storage.yml)
-          - [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
+          - [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
