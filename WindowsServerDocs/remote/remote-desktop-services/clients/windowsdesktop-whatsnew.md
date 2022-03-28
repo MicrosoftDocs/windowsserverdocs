@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 03/15/2022
+ms.date: 03/28/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,14 +17,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.2927        |1.2.1672                  |
-|Insider    |1.2.3000        |1.2.1672                  |
+|Public     |1.2.3004        |1.2.1672                  |
+|Insider    |1.2.3004        |1.2.1672                  |
 
-## Updates for version 1.2.3000 (Insider)
+## Updates for version 1.2.3004
 
-*Date published: 3/15/2022*
+*Date published: 3/28/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Fixed an issue where Narrator didn't announce grid or list views correctly.
 - Fixed an issue where the msrdc.exe process might take a long time to exit after closing the last Azure Virtual Desktop connection if customers have set a very short token expiration policy.
@@ -32,20 +32,19 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 - Updated the disconnect dialog boxes that appear when the user locks their remote session or puts their local computer in sleep mode to be only informational.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - [Multimedia redirection for Azure Virtual Desktop (preview)](/azure/virtual-desktop/multimedia-redirection) now has an update that gives it more site and media control compatibility.
+- Updates to Teams for Azure Virtual Desktop, including improved connection reliability for Teams on Azure Virtual Desktop.
 
 ## Updates for version 1.2.2927
 
 *Date published: 3/15/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4QWr2), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Rhps), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4RbZL)
 
 Fixed an issue where the number pad didn't work on initial focus.
 
 ## Updates for version 1.2.2925
 
 *Date published: 03/08/2022*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Pe79), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Pe7c), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Pjd5)
 
 - Fixed the vulnerability known as [CVE-2022-21990](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-21990).
 - Fixed the vulnerability known as [CVE-2022-24503](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24503).
