@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 03/28/2022
+ms.date: 03/29/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -22,7 +22,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 ## Updates for version 1.2.3004
 
-*Date published: 3/28/2022*
+*Date published: 3/29/2022*
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
@@ -32,7 +32,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 - Updated the disconnect dialog boxes that appear when the user locks their remote session or puts their local computer in sleep mode to be only informational.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - [Multimedia redirection for Azure Virtual Desktop (preview)](/azure/virtual-desktop/multimedia-redirection) now has an update that gives it more site and media control compatibility.
-- Updates to Teams for Azure Virtual Desktop, including improved connection reliability for Teams on Azure Virtual Desktop.
+- Improved connection reliability for Teams on Azure Virtual Desktop.
 
 ## Updates for version 1.2.2927
 
