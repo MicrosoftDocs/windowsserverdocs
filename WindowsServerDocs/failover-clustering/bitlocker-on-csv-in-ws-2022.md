@@ -534,3 +534,5 @@ ResourceName: Cluster Disk 1
 
 Failover Cluster validation will log a message if it detects that this is an
 Active Directory-less or workgroup setup and the system volume is not encrypted.
+
+FAQ
