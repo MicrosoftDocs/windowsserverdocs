@@ -275,7 +275,7 @@ items:
     - name: Health and operational states
       href: storage-spaces/storage-spaces-states.md
   - name: Storage Spaces Direct
-    href: /azure-stack/hci/concepts/storage-spaces-direct-overview/toc.json&bc=/windows-server/breadcrumbs/toc.json
+    href: /azure-stack/hci/concepts/storage-spaces-direct-overview?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
     items:
     - name: Understand
       items:
