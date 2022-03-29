@@ -51,4 +51,4 @@ wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -ma
 
 - [wbadmin get versions command](wbadmin-get-versions.md)
 
-- [Get-WBBackupSet](powershell/module/windowsserverbackup/get-wbbackupset)
+- [Get-WBBackupSet](/powershell/module/windowsserverbackup/get-wbbackupset)
