@@ -429,7 +429,7 @@ The following features are supported in Updates:
 - View a list of update history
 - Install Updates
 - Check online for updates from Microsoft Update
-- Manage [Azure Update Management](/azure/automation/automation-update-management) integration
+- Manage [Azure Update Management](/azure/automation/update-management/overview) integration
 
 ## Virtual Machines
 
