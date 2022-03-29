@@ -201,7 +201,7 @@ No, it's the same as with regular allocation.
 
 ## Additional References
 
-- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
+- [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 - [Fault tolerance in Storage Spaces Direct](/azure-stack/hci/concepts/fault-tolerance)
 
 ## Appendix

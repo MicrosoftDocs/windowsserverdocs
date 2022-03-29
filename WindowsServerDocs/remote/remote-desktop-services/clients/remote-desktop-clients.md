@@ -6,7 +6,7 @@ ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
 author: HeidiLohr
 manager: femila
 ms.author: helohr
-ms.date: 03/24/2022
+ms.date: 03/29/2022
 ---
 # Remote Desktop clients
 
@@ -22,7 +22,7 @@ You can also use a Remote Desktop client to access your remote PC from almost an
 
 | Client | Get the app | Documentation | Latest version |
 |-----------------|-------------|------|---|
-| Windows Desktop | [Windows Desktop client](windowsdesktop.md#install-the-client) | [Get started](windowsdesktop.md), [What's new](windowsdesktop-whatsnew.md) | 1.2.2927  |
+| Windows Desktop | [Windows Desktop client](windowsdesktop.md#install-the-client) | [Get started](windowsdesktop.md), [What's new](windowsdesktop-whatsnew.md) | 1.2.3004   |
 | Microsoft Store   | [Windows 10 client in the Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=616709) | [Get started](windows.md), [What's new](windows-whatsnew.md)  | 1.2.1810  |
 | Android         | [Android client in Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)     | [Get started](remote-desktop-android.md), [What's new](android-whatsnew.md) | 10.0.13.1174 |
 | iOS             | [iOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id714464092)     | [Get started](remote-desktop-ios.md), [What's new](ios-whatsnew.md)         | 10.3.6 |

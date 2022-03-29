@@ -1,9 +1,9 @@
 ---
 title: Understand and Configure Azure Monitor
 description: Detailed setup information on what Azure Monitor is and how to configure email and sms alerts for your storage spaces direct cluster in Windows Server 2016 and 2019.
-ms.author: adagashe
+ms.author: jgerend
 ms.topic: article
-author: adagashe
+author: jasongerend
 ms.date: 01/10/2020
 ---
 # Use Azure Monitor to send emails for Health Service Faults
@@ -242,6 +242,6 @@ Below is an example of the email that you will be send by Azure Monitor:
 
 ## Additional References
 
-- [Storage Spaces Direct overview](storage-spaces-direct-overview.md)
+- [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)
 - For more detailed information, read the [Azure Monitor documentation](/azure/azure-monitor/learn/tutorial-viewdata).
 - Read this for an overview on how to [connect to other Azure hybrid services](../../manage/windows-admin-center/azure/index.md).
