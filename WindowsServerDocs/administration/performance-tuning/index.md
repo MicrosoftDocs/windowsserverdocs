@@ -37,7 +37,7 @@ This guide organizes performance and tuning guidance for Windows Server 2022 acr
 
 - [Software Defined Networking](subsystem/software-defined-networking/index.md), including [HNV](subsystem/software-defined-networking/hnv-gateway-performance.md) and [SLB gateway configuration guidance](subsystem/software-defined-networking/slb-gateway-performance.md)
 
-- [Storage Spaces Direct](subsystem/storage-spaces-direct/index.md)
+- [Storage Spaces Direct](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
 
 - [HTTP1.1 and HTTP2](role/web-server/http-performance.md)
 
