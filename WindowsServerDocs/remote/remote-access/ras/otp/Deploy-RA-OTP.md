@@ -41,7 +41,7 @@ The OTP authentication scenario includes a number of steps:
 
 3.  [Configure DirectAccess with OTP Authentication](./configure/Configure-RA-with-OTP-Authentication.md). OTP deployment consists of a number of configuration steps, including preparing the infrastructure for OTP authentication, configuring the OTP server, configuring OTP settings on the Remote Access server, and updating DirectAccess client settings.
 
-4.  [Troubleshoot an OTP Deployment](/troubleshoot/Troubleshoot-an-OTP-Deployment.md). This troubleshooting section describes a number of the most common errors that can occur when deploying Remote Access with OTP authentication.
+4.  [Troubleshoot an OTP Deployment](./troubleshoot/Troubleshoot-an-OTP-Deployment.md). This troubleshooting section describes a number of the most common errors that can occur when deploying Remote Access with OTP authentication.
 
 ## <a name="BKMK_APP"></a>Practical applications
 Increase security-Using OTP increases the security of your DirectAccess deployment. A user requires OTP credentials in order to gain access to the internal network. A user supplies OTP credentials via the Workplace Connections available in the network connections on the Windows 10 or Windows 8 client computer, or by using DirectAccess Connectivity Assistant \(DCA\) on client computers running Windows 7. The OTP authentication process works as follows:
