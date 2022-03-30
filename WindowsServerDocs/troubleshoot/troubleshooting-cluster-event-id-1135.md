@@ -18,7 +18,7 @@ This article helps you diagnose and resolve Event ID 1135, which may be logged d
 Event ID 1135 indicates that one or more Cluster nodes were removed from the active failover cluster membership. It may be accompanied by the following symptoms:
 
 - Cluster Failover\nodes being removed from active Failover Cluster membership:
- [Having a problem with nodes being removed from active Failover Cluster membership](/problem-nodes-failover-cluster.md)
+ [Having a problem with nodes being removed from active Failover Cluster membership](/windows-server/troubleshoot/problem-nodes-failover-cluster)
 - Event ID 1069
  [Event ID 1069 — Clustered Service or Application Availability](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc756225(v=ws.10))
 - Event ID 1177 for Quorum loss
