@@ -203,4 +203,4 @@ You can also give us feedback by selecting the ellipsis button (**...**) in the 
 > ![A screenshot showing the ellipsis button highlighted in red. A drop-down menu has opened beneath the button, and the "Feedback" option is also highlighted in red.](../media/ellipsis-icon.png)
 
 >[!NOTE]
->To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/at-home/feedback#add-new-feedback).
+>To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/feedback).
