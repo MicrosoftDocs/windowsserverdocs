@@ -80,7 +80,7 @@ Log in to the Azure portal at [https://portal.azure.com](https://azure.microsoft
 
 #### Create a workspace
 
-For more details on the steps listed below, see the [Azure Monitor documentation](/azure/azure-monitor/learn/quick-collect-windows-computer).
+For more details on the steps listed below, see the [Azure Monitor documentation](/azure/azure-monitor/logs/log-analytics-tutorial).
 
 1. In the Azure portal, click **All services**. In the list of resources, type **Log Analytics**. As you begin typing, the list filters based on your input. Select **Log Analytics**.<br><br>
 
