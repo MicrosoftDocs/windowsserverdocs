@@ -50,9 +50,9 @@ Run the following PS command: [`Get-ClusterResource`](/powershell/module/failove
 
 Is the cluster service continuously running and available on all the nodes?
 
-## Solution for cluster service is failing
+<!---## Solution for cluster service is failing--->
 
-If the cluster service is failing, troubleshoot using this article: [Windows Server 2008 and 2008R2 Failover Cluster Startup Switches](/archive/blogs/askcore/windows-server-2008-and-2008r2-failover-cluster-startup-switches).
+<!---If the cluster service is failing, troubleshoot using this article: [Windows Server 2008 and 2008R2 Failover Cluster Startup Switches](/archive/blogs/askcore/windows-server-2008-and-2008r2-failover-cluster-startup-switches).--->
 
 ## Several scenarios of Event ID 1135
 
