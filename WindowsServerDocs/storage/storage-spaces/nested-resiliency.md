@@ -50,13 +50,13 @@ Storage Spaces Direct in Windows Server 2019 offers two new resiliency options i
 
   ![Nested two-way mirror](media/nested-resiliency/nested-two-way-mirror.png)
 
-- **Nested mirror-accelerated parity.** Combine nested two-way mirroring, from above, with nested parity. Within each server, local resiliency for most data is provided by single [bitwise parity arithmetic](/azure-stack/hci/concepts/fault-tolerance.md#parity), except new recent writes which use two-way mirroring. Then, further resiliency for all data is provided by two-way mirroring between the servers. For more information about how mirror-accelerated parity works, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md).
+- **Nested mirror-accelerated parity.** Combine nested two-way mirroring, from above, with nested parity. Within each server, local resiliency for most data is provided by single [bitwise parity arithmetic](/azure-stack/hci/concepts/fault-tolerance#parity), except new recent writes which use two-way mirroring. Then, further resiliency for all data is provided by two-way mirroring between the servers. For more information about how mirror-accelerated parity works, see [Mirror-accelerated parity](../refs/mirror-accelerated-parity.md).
 
   ![Nested mirror-accelerated parity](media/nested-resiliency/nested-mirror-accelerated-parity.png)
 
 ### Capacity efficiency
 
-Capacity efficiency is the ratio of usable space to [volume footprint](/azure-stack/hci/concepts/plan-volumes.md#choosing-the-size-of-volumes). It describes the capacity overhead attributable to resiliency, and depends on the resiliency option you choose. As a simple example, storing data without resiliency is 100% capacity efficient (1 TB of data takes up 1 TB of physical storage capacity), while two-way mirroring is 50% efficient (1 TB of data takes up 2 TB of physical storage capacity).
+Capacity efficiency is the ratio of usable space to [volume footprint](/azure-stack/hci/concepts/plan-volumes#choosing-the-size-of-volumes). It describes the capacity overhead attributable to resiliency, and depends on the resiliency option you choose. As a simple example, storing data without resiliency is 100% capacity efficient (1 TB of data takes up 1 TB of physical storage capacity), while two-way mirroring is 50% efficient (1 TB of data takes up 2 TB of physical storage capacity).
 
 - **Nested two-way mirror** writes four copies of everything, meaning to store 1 TB of data, you need 4 TB of physical storage capacity. Although its simplicity is appealing, nested two-way mirror's capacity efficiency of 25% is the lowest of any resiliency option in Storage Spaces Direct.
 
