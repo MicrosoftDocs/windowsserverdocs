@@ -69,4 +69,4 @@ If you want to install only the management tools, such as Hyper-V Manager, see [
 
 ## Additional References
 
-- [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=windowsserver2022-ps)
+- [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature?view=windowsserver2022-ps&preserve-view=true)
