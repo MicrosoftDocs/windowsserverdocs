@@ -23,7 +23,7 @@ This guide organizes performance and tuning guidance for Windows Server 2022 acr
 |:---:|:---:|:---:|
 |[Hardware performance considerations](hardware/index.md) |[Active Directory Servers](role/active-directory-server/index.md) |[Cache and memory management](subsystem/cache-memory-management/index.md)|
 |[Hardware power considerations](hardware/power.md)|[File Servers](role/file-server/index.md)|[Networking subsystem](../../networking/technologies/network-subsystem/net-sub-performance-top.md)|
-||[Hyper-V Servers](role/hyper-v-server/index.md)|[Storage Spaces Direct](subsystem/storage-spaces-direct/index.md)|
+||[Hyper-V Servers](role/hyper-v-server/index.md)|[Storage Spaces Direct](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)|
 ||[Remote Desktop Services](role/remote-desktop/session-hosts.md)|[Software Defined Networking (SDN)](subsystem/software-defined-networking/index.md)|
 ||[Web Servers](role/web-server/index.md)||
 ||[Windows Server Containers](role/windows-server-container/index.md)||
@@ -59,6 +59,6 @@ This guide organizes performance and tuning guidance for Windows Server 2022 acr
 
 - *Performance Tuning for Workloads removed*, pointers to relevant resources added to [Additional Tuning Resources article](additional-resources.md)
 
-- *Removal of dedicated storage sections*, in favor of new [Storage Spaces Direct](subsystem/storage-spaces-direct/index.md) section and canonical Technet content
+- *Removal of dedicated storage sections*, in favor of new [Storage Spaces Direct](/windows-server/storage/storage-spaces/storage-spaces-direct-overview) section and canonical Technet content
 
 - *Removal of dedicated networking section*, in favor of canonical Technet content
