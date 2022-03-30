@@ -21,7 +21,7 @@ Windows Server 2019 introduces an option to manually delimit the allocation of v
 ### ![Green checkmark icon.](media/delimit-volume-allocation/supported.png) Consider using this option if:
 
 - Your cluster has six or more servers; and
-- Your cluster uses only [three-way mirror](/azure-stack/hci/concepts/fault-tolerance.md#mirroring) resiliency
+- Your cluster uses only [three-way mirror](/azure-stack/hci/concepts/fault-tolerance#mirroring) resiliency
 
 ### ![Red X icon.](media/delimit-volume-allocation/unsupported.png) Do not use this option if:
 
