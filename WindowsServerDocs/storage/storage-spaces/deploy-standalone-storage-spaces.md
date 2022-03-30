@@ -29,7 +29,7 @@ The following figure illustrates the Storage Spaces workflow.
 **Figure 1: Storage Spaces workflow**
 
 > [!NOTE]
-> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [PowerShell](/powershell/scripting/powershell-scripting?view=powershell-6).
+> This topic includes sample Windows PowerShell cmdlets that you can use to automate some of the procedures described. For more information, see [PowerShell](/powershell/scripting/overview?view=powershell-7.2).
 
 ## Prerequisites
 
