@@ -136,7 +136,7 @@ You can also give us feedback by selecting the button that looks like a smiley f
 > ![A screenshot of the smiley face icon that takes you to the feedback hub.](../media/smiley-face-icon.png)
 
 >[!NOTE]
->To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/feedback).
+>To best help you, we need you to give us as detailed information about the issue as possible. For example, you can include screenshots or a recording of the actions you took leading up to the issue. For more tips about how to provide helpful feedback, see [Feedback](/windows-insider/feedback#add-new-feedback).
 
 ### Access client logs
 
