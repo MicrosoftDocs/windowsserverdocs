@@ -128,7 +128,7 @@ In Windows, the OpenSSH Client (ssh) reads configuration data from a configurati
 
 1. By launching ssh.exe with the -F parameter, specifying a path to a configuration file and an entry name from that file.
 2. A user's configuration file at %userprofile%\\.ssh\config.
-3. The system-wide configuration file at %programdata%\ssh\ssh_config.
+3. The system-wide configuration file at %programdata%\ssh\sshd_config.
 
 Open SSH Server (sshd) reads configuration data from %programdata%\ssh\sshd_config by default, or a different configuration file may be specified by launching sshd.exe with the -f parameter. If the file is absent, sshd generates one with the default configuration when the service is started.
 
