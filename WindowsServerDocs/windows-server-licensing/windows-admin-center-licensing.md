@@ -23,4 +23,4 @@ Review our Windows Admin Center license terms.
 
 - [Windows Admin Center for Microsoft Windows Server and Microsoft Windows operating system (Version 10)](/legal/windows-server/windows-admin-center/wac-product-ga-eula)
 
-- [Windows Server-related license terms](/legal/windows-server/windows-server-licensing)
+- [Windows Server-related license terms](/legal/windows-server/winserver2016licenseterms)
