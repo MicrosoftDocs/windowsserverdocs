@@ -45,6 +45,8 @@ Set-ADResourceProperty -Enabled:$true -Identity:'CN=RetentionPeriod_MS,CN=Resour
 Set-ADResourceProperty -Enabled:$true -Identity:'CN=Discoverability_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com'
 ```
 
+---
+
 ## Step 2: Configure notifications
 
 In this step, you use the File Server Resource Manager console to configure the SMTP server, the default administrator email address, and the default email address that the reports are sent from.
@@ -78,6 +80,8 @@ From an elevated PowerShell prompt, run the following commands:
 ```powershell
 Set-FsrmSetting -SmtpServer <IP address of SMTP server> -FromEmailAddress "<FromEmailAddress>" -AdminEmailAddress "<AdministratorEmailAddress>"
 ```
+
+---
 
 ## Step 3: Create a file management task
 
@@ -137,6 +141,8 @@ $date = Get-Date
 $schedule = New-FsrmScheduledTask -Time $date -Monthly @(-1)
 $fmj1 = New-FsrmFileManagementJob -Name "Retention Task" -Namespace @('<folder>') -Action $fmjexpiration -Schedule $schedule -Notification @($fmjNotification) -Condition @( $fmjCondition1, $fmjCondition2, $fmjCondition3)
 ```
+
+---
 
 ## Step 4: Classify a file manually
 
