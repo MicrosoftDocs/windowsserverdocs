@@ -25,7 +25,7 @@ Block TCP port 445 inbound from the internet at your corporate hardware firewall
 SMB traffic protects devices inside your network by preventing access from the internet.
 
 If you want users to access their files inbound at the edge of your network, you can use SMB over
-QUIC. This uses TCP port 443 by default and provides a TLS 1.3-encrypted security tunnel like a VPN
+QUIC. This uses UDP port 443 by default and provides a TLS 1.3-encrypted security tunnel like a VPN
 for SMB traffic. The solution requires Windows 11 and Windows Server 2022 Datacenter: Azure
 Edition file servers running on Azure Stack HCI. For more information, see [SMB over QUIC](https://aka.ms/smboverquic).
 
@@ -52,7 +52,7 @@ information about Azure Cloud and Office 365 IP address ranges, see:
 - [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
 With Windows 11 and Windows Server 2022 Datacenter: Azure Edition, you can use SMB over QUIC to
-connect to file servers in Azure. This uses TCP port 443 by default and provides a TLS 1.3-encrypted
+connect to file servers in Azure. This uses UDP port 443 by default and provides a TLS 1.3-encrypted
 security tunnel like a VPN for the SMB traffic. For more information, see
 [SMB over QUIC](https://aka.ms/smboverquic).
 
