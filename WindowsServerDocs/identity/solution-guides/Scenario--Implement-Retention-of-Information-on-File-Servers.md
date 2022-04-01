@@ -23,7 +23,7 @@ You can find planning information for configuring retention in [Plan for Retenti
 You can find steps for classifying files for legal hold and configuring a retention period in [Deploy Implementing Retention of Information on File Servers (Demonstration Steps)](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md).
 
 > [!NOTE]
-> That scenario only discusses how to manually classify a document for legal hold. However, it is possible in  Windows Server 2012  to automatically classify documents for legal hold. One way to do this is to create a Windows PowerShell classifier that compares the file owner to a list of user accounts that are under legal hold. If the file owner is a part of the user account list, the file is classified for legal hold.
+> That scenario only discusses how to manually classify a document for legal hold. However, it is possible to automatically classify documents for legal hold. One way to do this is to create a Windows PowerShell classifier that compares the file owner to a list of user accounts that are under legal hold. If the file owner is a part of the user account list, the file is classified for legal hold.
 
 ## In this scenario
 

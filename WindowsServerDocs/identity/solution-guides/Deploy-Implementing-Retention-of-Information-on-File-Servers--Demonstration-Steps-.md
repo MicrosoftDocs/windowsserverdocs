@@ -12,7 +12,7 @@ ms.topic: how-to
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-You can set retention periods for folders and put files on legal hold by using File Classification Infrastructure and File Server Resource Manager.
+You can set retention periods for folders and put files on legal hold by using the File Classification Infrastructure and File Server Resource Manager.
 
 ## Prerequisites
 
