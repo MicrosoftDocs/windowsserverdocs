@@ -247,7 +247,7 @@ AllocationSize: n/a
 Impersonating: CONTOSO\ServiceAccount
 OpenResult: PRIVILEGE_NOT_HELD
 ```
-The actual operation being performed needs the "Open For Backup"-privileges on the source file server. Verify that your service account is granted the necessary permissions via the following Local Security Policy on this server or using a Group Policy Object:
+The actual operation being performed needs the "Open For Backup"-privileges on the source file server. Verify that your user account used to access the source file server is granted the necessary permissions via the following Local Security Policy on this server or using a Group Policy Object:
     `Security Settings > Local Policies > User Rights Assignment > Back up files and directories`
 
 ## Error 0x80005000 when running inventory
