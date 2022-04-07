@@ -197,7 +197,7 @@ When AD FS authentication is performed via a browser or browser control, your br
 - For user certificate & device certificate authentication, the browser must support SSL client certificate authentication
 
 - For seamless sign-on using Windows Integrated Authentication, the federation service name (such as https:\/\/fs.contoso.com) must be configured in local intranet zone or trusted sites zone.
-  ## <a name="BKMK_7"></a>Network requirements
+## <a name="BKMK_7"></a>Network requirements
 
 **Firewall Requirements**
 
