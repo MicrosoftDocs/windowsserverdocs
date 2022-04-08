@@ -12,7 +12,7 @@ ms.assetid:
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Storage Spaces can provide fault tolerance for data using two fundamental techniques: mirror and parity. In [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md), ReFS introduces mirror-accelerated parity, which enables you to create volumes that use both mirror and parity resiliencies. Mirror-accelerated parity offers inexpensive, space-efficient storage without sacrificing performance.
+Storage Spaces can provide fault tolerance for data using two fundamental techniques: mirror and parity. In [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview), ReFS introduces mirror-accelerated parity, which enables you to create volumes that use both mirror and parity resiliencies. Mirror-accelerated parity offers inexpensive, space-efficient storage without sacrificing performance.
 
 ![Diagram depicting the mirror accelerated parity volume.](media/mirror-accelerated-parity/Mirror-Accelerated-Parity-Volume.png)
 
@@ -151,4 +151,4 @@ New-Volume – FriendlyName “TestVolume” -FileSystem CSVFS_ReFS -StoragePool
 -   [ReFS overview](refs-overview.md)
 -   [ReFS block cloning](block-cloning.md)
 -   [ReFS integrity streams](integrity-streams.md)
--   [Storage Spaces Direct overview](../storage-spaces/storage-spaces-direct-overview.md)
+-   [Storage Spaces Direct overview](/azure-stack/hci/concepts/storage-spaces-direct-overview)

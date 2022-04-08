@@ -58,4 +58,4 @@ wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\serv
 
 - [wbadmin command](wbadmin.md)
 
-- [Start-WBSystemStateRecovery](/powershell/module/windowserverbackup/Start-WBSystemStateRecovery)
+- [Start-WBSystemStateRecovery](/powershell/module/windowsserverbackup/start-wbsystemstaterecovery)

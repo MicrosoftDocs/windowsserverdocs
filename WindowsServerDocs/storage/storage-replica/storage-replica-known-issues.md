@@ -504,4 +504,4 @@ This is caused by a known code defect in Windows Server, version 1709. To resolv
 - [Server to Server Storage Replication](server-to-server-storage-replication.md)
 - [Cluster to Cluster Storage Replication](cluster-to-cluster-storage-replication.md)
 - [Storage Replica: Frequently Asked Questions](storage-replica-frequently-asked-questions.yml)
-- [Storage Spaces Direct](../storage-spaces/storage-spaces-direct-overview.md)
+- [Storage Spaces Direct](/azure-stack/hci/concepts/storage-spaces-direct-overview)
