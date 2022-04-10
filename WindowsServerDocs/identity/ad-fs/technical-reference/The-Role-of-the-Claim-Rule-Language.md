@@ -43,9 +43,9 @@ Conditions are optional in rules. For example, the following rule does not have 
 
 There are three types of conditions:
 
--   Single condition—This is the simplest form of a condition. Checks are made for only one expression; for example, windows account name  = domain user.
+-   Single condition—This is the simplest form of a condition. Checks are made for only one expression; for example, windows account name = domain user.
 
--   Multiple condition—This condition requires additional checks to process multiple expressions in the rule body; for example, windows account name  = domain user and group = contosopurchasers.
+-   Multiple condition—This condition requires additional checks to process multiple expressions in the rule body; for example, windows account name = domain user and group = contosopurchasers.
 
 > [!NOTE]
 > Another condition exists, but it is a subset of either the single condition or the multiple condition. It is referred to as a regular expression (Regex) condition. It is used to take an input expression and match the expression with a given pattern. An example of how it is can be used is shown below.
@@ -69,14 +69,14 @@ The following table provides an example of multiple -expression conditions.
 
 |                                                                                                                   Condition description                                                                                                                    |                                        Condition syntax example                                        |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
-| This rule has a condition to check for two input claims, each with a specified claim type ("<http://test/name>" and "<http://test/email>"). If the two matching claims are in the input claims, the rule copies the name claim to the output claims set. | ```c1: [type  == "http://test/name"] && c2: [type == "http://test/email"] => issue (claim  = c1);``` |
+| This rule has a condition to check for two input claims, each with a specified claim type ("<http://test/name>" and "<http://test/email>"). If the two matching claims are in the input claims, the rule copies the name claim to the output claims set. | ```c1: [type == "http://test/name"] && c2: [type == "http://test/email"] => issue (claim = c1);``` |
 
 #### Regular -condition examples
 The following table provides an example of a regular, expression -based condition.
 
 |Condition description|Condition syntax example|
 |-------------------------|----------------------------|
-|This rule has a condition that uses a regular expression to check for an e -mail claim ending in “@fabrikam.com”. If a matching claim is found in the input claims, the rule copies the matching claim to the output claims set.|```c: [type  == "http://test/email", value  =~ "^. +@fabrikam.com$" ] => issue (claim  = c);```|
+|This rule has a condition that uses a regular expression to check for an e -mail claim ending in “@fabrikam.com”. If a matching claim is found in the input claims, the rule copies the matching claim to the output claims set.|```c: [type == "http://test/email", value =~ "^. +@fabrikam.com$" ] => issue (claim = c);```|
 
 ### Issuance statements
 Custom rules are processed based on the issuance statements (*issue* or *add*) that you program into the claim rule. Depending on the desired outcome, either the issue statement or add statement can be written into the rule to populate the input claim set or the output claim set. A custom rule that uses the add statement explicitly populates claim values only to the input claim set while a custom claim rule that uses the issue statement populates claim values in both the input claim set and in the output claim set. This can be useful when a claim value is intended to be used only by future rules in the set of claim rules.
@@ -113,7 +113,7 @@ The following table describes some common syntax constructions for both types of
 |Normal|The following rule always emits the same claim whenever a user has the specified claim type and value:|```c: [type == "http://test/employee", value == "true"] => issue (type = "http://test/role", value = "employee");```|
 |Normal|The following rule converts one claim type into another. Notice that the value of the claim that matches the condition "c" is used in the issuance statement.|```c: [type == "http://test/group" ] => issue (type = "http://test/role", value = c.Value);```|
 |Attribute store|The following rule uses the value of an incoming claim to query the Active Directory attribute store:|```c: [Type == "http://test/name" ] => issue (store = "Enterprise AD Attribute Store", types = ("http://test/email"), query = ";mail;{0}", param = c.Value)```|
-|Attribute store|The following rule uses the value of an incoming claim to query a previously configured Structured Query Language (SQL) attribute store:|```c: [type  == "http://test/name"] => issue (store = "Custom SQL store", types = ("http://test/email","http://test/displayname"), query = "SELECT mail, displayname FROM users WHERE name = {0}", param = c.value);```|
+|Attribute store|The following rule uses the value of an incoming claim to query a previously configured Structured Query Language (SQL) attribute store:|```c: [type == "http://test/name"] => issue (store = "Custom SQL store", types = ("http://test/email","http://test/displayname"), query = "SELECT mail, displayname FROM users WHERE name = {0}", param = c.value);```|
 
 #### Expressions
 Expressions are used on the right side for both claims selector constraints and issuance statement parameters. There are various kinds of expressions that the language supports. All expressions in the language are string based, which means that they take strings as input and produce strings. Numbers or other data types, such as date/time, in expressions are not supported. The following are the types of expressions that the language supports:
