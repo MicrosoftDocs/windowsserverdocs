@@ -130,6 +130,7 @@ All versions of Windows use the same final equation to check `PhaseCorrection`:
    > `PhaseCorrection` &le; `SystemClockRate` &divide; 2  
 
 > [!NOTE]  
+> - Windows Server 2019 and Windows 10 1809 have the same formula as [Windows Server 2016 and later versions] described above by applying cumulative updates from KB5006744 onwards.
 > - These equations use `PhaseCorrectRate`, `UpdateInterval`, `MaxAllowedPhaseOffset`, and `SystemClockRate` measured in units of clock ticks. On Windows systems, 1 ms = 10,000 clock ticks.
 > - `MaxAllowedPhaseOffset` is configurable in the registry. However, the registry parameter is measured in seconds instead of clock ticks.
 > - To see the `SystemClockRate` and `pollIntervalInSeconds` values (measured in seconds), open a Command Prompt window and then run `W32tm /query /status /verbose`. This command produces output that resembles the following.  
