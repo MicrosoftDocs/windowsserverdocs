@@ -62,7 +62,7 @@ The WID synchronization process also supports incremental transfers for more eff
 > [!NOTE]
 > The migration of an AD FS configuration database from WID to an instance of SQL Server is supported. For more information about how to do this, see [AD FS: Migrate Your AD FS Configuration Database to SQL Server](https://go.microsoft.com/fwlink/?LinkId=192232) on the TechNet Wiki site.
 
-### How to managed the AD FS synchronization properties
+### How to manage the AD FS synchronization properties
 This Section describes how to view and edit the AD FS configuration database synchronization properties.
 .
 
