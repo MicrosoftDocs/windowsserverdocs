@@ -187,7 +187,7 @@ Where:
 
   - **8. CRL_REASON_REMOVE_FROM_CRL** - Remove From CRL
 
-  - **1. Unrevoke** - Unrevoke
+  - **-1. Unrevoke** - Unrevoke
 
 ```
 [-config Machine\CAName]
