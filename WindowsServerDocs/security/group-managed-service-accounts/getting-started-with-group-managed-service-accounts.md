@@ -43,14 +43,14 @@ When a client computer connects to a service which is hosted on a server farm us
 
 Services have the following principals from which to choose, and each has certain limitations.
 
-|Principals|Scope|Services supported|Password management|
-|-------|-----|-----------|------------|
-|Computer Account of Windows system|Domain|Limited to one domain joined server|Computer manages|
-|Computer Account without Windows system|Domain|Any domain joined server|None|
-|Virtual Account|Local|Limited to one server|Computer manages|
-|Windows 7 standalone Managed Service Account|Domain|Limited to one domain joined server|Computer manages|
-|User Account|Domain|Any domain joined server|None|
-|Group Managed Service Account|Domain|Any Windows Server 2012 domain-joined server|The domain controller manages, and the host retrieves|
+|Principals|Services supported|Password management|
+|-------|-----------|------------|
+|Computer Account of Windows system|Limited to one domain joined server|Computer manages|
+|Computer Account without Windows system|Any domain joined server|None|
+|Virtual Account|Limited to one server|Computer manages|
+|Windows 7 standalone Managed Service Account|Limited to one domain joined server|Computer manages|
+|User Account|Any domain joined server|None|
+|Group Managed Service Account|Any Windows Server 2012 domain-joined server|The domain controller manages, and the host retrieves|
 
 A Windows computer account, a Windows 7 standalone Managed Service Account (sMSA), or virtual accounts cannot be shared across multiple systems. In the case of virtual accounts, the identity is also local to the machine and not recognized by the domain. If you configure one account for services on server farms to share, you would have to choose a user account or a computer account apart from a Windows system. Either way, these accounts do not have the capability of single-point-of-control password management. This creates problem where each organization needs to create an expensive solution to update keys for the service in Active Directory and then distribute the keys to all instances of those services.
 
