@@ -8,7 +8,9 @@ ms.date: 04/14/2022
 ---
 # Use Windows Admin Center in the Azure Portal to manage Azure Stack HCI clusters from anywhere
 
-You can now use Windows Admin Center (preview) in the Azure portal to manage the Azure Stack HCI operating system of your cluster. Using this functionality, you can securely manage your cluster from anywhere – without needing a VPN, public IP address or other inbound connectivity to your machine. The Windows Admin Center extension provides Azure users with granular management, configuration, troubleshooting, and maintenance functionality for managing your Azure Stack HCI cluster in the Azure Portal. Azure Stack HCI cluster and workload management will no longer require you to establish line-of-sight or RDP – it can all be done natively from the Azure Portal. Windows Admin Center provides tools that you would normally find in Failover cluster manager, Device Manager, Task Manager, Hyper-V Manager and most other MMC tools.
+You can now use Windows Admin Center (preview) in the Azure portal to manage the Azure Stack HCI operating system of your cluster. Using this functionality, you can securely manage your cluster from anywhere – without needing a VPN, public IP address or other inbound connectivity to your machine. 
+
+The Windows Admin Center extension provides Azure users with granular management, configuration, troubleshooting, and maintenance functionality for managing your Azure Stack HCI cluster in the Azure Portal. Azure Stack HCI cluster and workload management will no longer require you to establish line-of-sight or RDP – it can all be done natively from the Azure Portal. Windows Admin Center provides tools that you would normally find in Failover cluster manager, Device Manager, Task Manager, Hyper-V Manager and most other MMC tools.
 
 This article provides an overview of the functionality provided, requirements, and how to install Windows Admin Center and use it to manage your cluster. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
 
@@ -61,9 +63,9 @@ To use Windows Admin Center in the Azure portal, we install a small Windows Admi
 Every node of the cluster has the following networking requirements:
 
 - Outbound internet access or an outbound port rule allowing HTTPS traffic to the following endpoints:
-<br>- *.wac.azure.com
-<br>- pas.windows.net
-<br>- azgn*.servicebus.windows.net
+<br>- `*.wac.azure.com`
+<br>- `pas.windows.net`
+<br>- `azgn*.servicebus.windows.net`
 
 
 > [!NOTE]
