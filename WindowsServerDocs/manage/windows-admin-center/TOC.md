@@ -47,8 +47,8 @@
 
 ## Windows Admin Center in Azure
 ### [Azure IaaS VMs](wacinazure/manage-vm.md)
-### [Arc-enabled Servers](wacinazure/deploy-wac-for-arc.md)
-### [Azure Stack HCI](wacinzure/deploy-wac-for-hci.md)
+### [Azure Arc-enabled Servers](wacinazure/deploy-wac-for-arc.md)
+### [Azure Stack HCI](wacinazure/deploy-wac-for-hci.md)
 
 ## Support
 ### [Release history](support/release-history.md)

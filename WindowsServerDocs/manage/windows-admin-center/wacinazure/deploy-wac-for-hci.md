@@ -127,8 +127,8 @@ Here are some tips to try in case something isn't working. For general help trou
 
 1. Check that your installation is in a good state
     1. RDP into each node of your cluster
-    1. Open a browser and type https://localhost:<port> replacing <port> with the port on which you installed Windows Admin Center. Not sure what port you installed it on? Check out the Frequently Asked Questions below.
-    1. If this doesn’t load, open Task Manager > Details and end the Sme.exe process. Try loading https://localhost:<port> on your browser again.
+    1. Open a browser and type `https://localhost:<port>` replacing `<port>` with the port on which you installed Windows Admin Center. Not sure what port you installed it on? Check out the Frequently Asked Questions below.
+    1. If this doesn’t load, open Task Manager > Details and end the Sme.exe process. Try loading `https://localhost:<port>` on your browser again.
     1. If this still doesn’t load, there might be something wrong with your installation. Please go back to the Azure Portal, navigate to “Extensions”, and uninstall the Admin Center extension. Navigate back to “Windows Admin Center (preview)” and reinstall the extension.
 
 1. Check that the port is enabled for reverse proxy session
