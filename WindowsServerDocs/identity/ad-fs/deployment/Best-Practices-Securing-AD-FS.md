@@ -5,7 +5,7 @@ description: Best practices for the secure planning and deployment of Active Dir
 author: billmath
 ms.author: billmath
 manager: mtillman
-ms.date: 05/20/2021
+ms.date: 04/08/2022
 ms.topic: article
 ---
 
@@ -187,6 +187,58 @@ AD FS can be configured to require strong authentication (such as multi factor a
 Supported external MFA providers include those listed in [this](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn758113(v=ws.11)) page, as well as HDI Global.
 
 
+### Enable protection to prevent by-passing of cloud Azure MFA when federated with Azure AD 
+
+
+Enable protection to prevent bypassing of cloud Azure MFA when federated with Azure AD and using Azure MFA as your multi factor authentication for your federated users.  
+
+Enabling the protection for a federated domain in your Azure AD tenant will ensure that Azure MFA is always performed when a federated user accesses an application that is governed by a conditional access policy requiring MFA. This includes performing Azure MFA even when federated identity provider has indicated (via federated token claims) that on-prem MFA has been performed. Enforcing Azure MFA every time assures that a compromised on-prem account cannot bypass Azure MFA by imitating that a multi factor authentication has already been performed by the identity provider, and is highly recommended unless you perform MFA for your federated users using a third party MFA provider.  
+
+The protection can be enabled using a new security setting, [`federatedIdpMfaBehavior`](https://docs.microsoft.com/graph/api/resources/federatedidentitycredentials-overview?view=graph-rest-beta) which is exposed as a part of the [Internal Federation MS Graph API](https://docs.microsoft.com/graph/api/resources/internaldomainfederation) or [MS Graph PowerShell cmdlets](https://docs.microsoft.com/powershell/module/microsoft.graph.identity.directorymanagement/update-mgdomainfederationconfiguration?view=graph-powershell-beta). The `federatedIdpMfaBehavior` setting determines whether Azure AD accepts the MFA performed by the federated identity provider when a federated user accesses an application that is governed by a conditional access policy that requires MFA. Administrators can choose one of the following values:  
+
+Administrators can choose one of the following values: 
+
+|Property|Description|
+|-----|-----|  
+|acceptIfMfaDoneByFederatedIdp|Azure AD accepts MFA if performed by identity provider. If not, performs Azure MFA.|  
+|enforceMfaByFederatedIdp|Azure AD accepts MFA if performed by identity provider. If not, it redirects request to identity provider to perform MFA.|   
+|rejectMfaByFederatedIdp|Azure AD always performs Azure MFA and rejects MFA if performed by identity provider.|  
+
+
+You can enable protection by setting `federatedIdpMfaBehavior` to `rejectMfaByFederatedIdp` using the following command.  
+
+MS GRAPH API
+```
+
+ PATCH /domains/{domainsId}/federationConfiguration/{internalDomainFederationId} 
+
+{ 
+
+"federatedIdpMfaBehavior": "rejectMfaByFederatedIdp" 
+
+} 
+```
+Example:
+
+```
+PATCH /domains/contoso.com/federationConfiguration/2a8ce608-bb34-473f-9e0f-f373ee4cbc5a 
+
+{ 
+
+"federatedIdpMfaBehavior": "rejectMfaByFederatedIdp" 
+``` 
+
+PowerShell
+
+```powershell
+Update-MgDomainFederationConfiguration -DomainId <domainsId> -InternalDomainFederationId <internalDomainFederationId> federatedIdpMfaBehavior "rejectMfaByFederatedIdp" 
+```
+
+Example:
+
+```powershell
+Update-MgDomainFederationConfiguration -DomainId “contoso.com” -InternalDomainFederationId “2a8ce608-bb34-473f-9e0f-f373ee4cbc5a” federatedIdpMfaBehavior "rejectMfaByFederatedIdp" 
+```
 
 ### Hardware Security Module (HSM)
 In its default configuration, the keys AD FS uses to sign tokens never leave the federation servers on the intranet.  They are never present in the DMZ or on the proxy machines.  Optionally to provide additional protection, we recommend protecting these keys in a hardware security module (HSM) attached to AD FS.  Microsoft does not produce an HSM product, however there are several on the market that support AD FS.  In order to implement this recommendation, follow the vendor guidance to create the X509 certs for signing and encryption, then use the AD FS installation powershell commandlets, specifying your custom certificates as follows:
