@@ -18,7 +18,7 @@ The following document will guide you through installing and configuring on-prem
 ![conditional access](media/Using-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)
 
 ## Infrastructure pre-requisites
-The following per-requisites are required before you can begin with on-premises conditional access.
+The following pre-requisites are required before you can begin with on-premises conditional access.
 
 |Requirement|Description
 |-----|-----
