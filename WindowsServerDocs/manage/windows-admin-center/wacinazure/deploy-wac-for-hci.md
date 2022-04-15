@@ -6,7 +6,7 @@ author: prasidharora
 ms.author: praror
 ms.date: 04/14/2022
 ---
-# Use Windows Admin Center in the Azure Portal to manage Azure Stack HCI clusters from anywhere
+# Use Windows Admin Center to manage your Azure Stack HCI clusters from the Azure Portal
 
 You can now use Windows Admin Center (preview) in the Azure portal to manage the Azure Stack HCI operating system of your cluster. Using this functionality, you can securely manage your cluster from anywhere – without needing a VPN, public IP address or other inbound connectivity to your machine. 
 

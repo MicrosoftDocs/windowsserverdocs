@@ -80,9 +80,9 @@ Before you can use Windows Admin Center in the Azure portal, you must deploy the
 ## Connecting
 
 After you've installed Windows Admin Center on your hybrid machine, here's how to connect to it and use it to manage Windows Server:
-1.	Open the Azure portal and navigate to your Arc-enabled server, then Windows Admin Center.
-2.	Select Connect.
-3.	Enter credentials for an account with local Administrator permissions on the hybrid machine’s operating system, and then select Sign in.
+1.	Open the Azure portal and navigate to your Arc-enabled server, then **Windows Admin Center (preview)**.
+2.	Select **Connect**.
+3.	Enter credentials for an account with local Administrator permissions on the hybrid machine’s operating system, and then select **Sign in**.
 <br> Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
 :::image type="content" source="../../media/manage-vm/wac-in-azure-arc-connect.png" alt-text="Screenshot showing the Connect button for Windows Admin Center on an Arc-enabled server." lightbox="../../media/manage-vm/wac-in-azure-arc-connect.png":::
@@ -131,8 +131,8 @@ Here are some tips to try in case something isn't working. For general help trou
 1. Check that the port is enabled for reverse proxy session
     1. RDP into your server
     1. This should return a list of ports under the incomingconnections.ports (preview) configuration that are enabled to be connected from Azure. Confirm that the port on which you installed Windows Admin Center is on this list. For example, if Windows Admin Center was installed on port 443, the result would be:
-           `Local configuration setting`
-            `incomingconnections.ports (preview): 443`
+        `Local configuration setting`
+        `incomingconnections.ports (preview): 443`
     1. In the event it is not on this list, run
         ```powershell
         azcmagent config set incomingconnections.ports <port>
