@@ -189,15 +189,10 @@ Supported external MFA providers include those listed in [this](/previous-versio
 
 ### Enable protection to prevent by-passing of cloud Azure MFA when federated with Azure AD 
 
-Enable protection against any attack vector trying to by-pass cloud Azure MFA via a new security setting `federatedIdpMfaBehavior`. 
-
-The `federatedIdpMfaBehavior` is exposed as a part of the new Internal Federation MS Graph API.
-
-The setting determines whether Azure AD accepts the MFA performed by the federated identity provider when a federated user accesses an application that is governed by a conditional access policy that requires MFA. 
 
 Enable protection to prevent bypassing of cloud Azure MFA when federated with Azure AD and using Azure MFA as your multi factor authentication for your federated users.  
 
-Enabling the protection for a federated domain in your Azure AD tenant will ensure that Azure MFA is always performed when a federated user accesses an application that is governed by a conditional access policy requiring MFA. This includes performing Azure MFA even when federated identity provider has indicated (via federated token claims) that on-prem MFA has been performed. Enforcing Azure MFA every time assures that a bad actor cannot bypass Azure MFA by imitating that a multi factor authentication has already been performed by the identity provider, and is highly recommended unless you perform MFA for your federated users using a third party MFA provider.  
+Enabling the protection for a federated domain in your Azure AD tenant will ensure that Azure MFA is always performed when a federated user accesses an application that is governed by a conditional access policy requiring MFA. This includes performing Azure MFA even when federated identity provider has indicated (via federated token claims) that on-prem MFA has been performed. Enforcing Azure MFA every time assures that a compromised on-prem account cannot bypass Azure MFA by imitating that a multi factor authentication has already been performed by the identity provider, and is highly recommended unless you perform MFA for your federated users using a third party MFA provider.  
 
 The protection can be enabled using a new security setting, [`federatedIdpMfaBehavior`](https://docs.microsoft.com/graph/api/resources/federatedidentitycredentials-overview?view=graph-rest-beta) which is exposed as a part of the [Internal Federation MS Graph API](https://docs.microsoft.com/graph/api/resources/internaldomainfederation) or [MS Graph PowerShell cmdlets](https://docs.microsoft.com/powershell/module/microsoft.graph.identity.directorymanagement/update-mgdomainfederationconfiguration?view=graph-powershell-beta). The `federatedIdpMfaBehavior` setting determines whether Azure AD accepts the MFA performed by the federated identity provider when a federated user accesses an application that is governed by a conditional access policy that requires MFA. Administrators can choose one of the following values:  
 
@@ -209,8 +204,6 @@ Administrators can choose one of the following values:
 |enforceMfaByFederatedIdp|Azure AD accepts MFA if performed by identity provider. If not, it redirects request to identity provider to perform MFA.|   
 |rejectMfaByFederatedIdp|Azure AD always performs Azure MFA and rejects MFA if performed by identity provider.|  
 
->[!Important]
-> This protection should only be enabled for a federated domain if you are not using AD FS or any third-party providers with MFA offerings for multi-factor authentication. Additonally, please ensure that you have reviewed the `federatedIdpMfaBehavior`property behavior here before updating the setting.  
 
 You can enable protection by setting `federatedIdpMfaBehavior` to `rejectMfaByFederatedIdp` using the following command.  
 
