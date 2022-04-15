@@ -6,7 +6,7 @@ author: prasidharora
 ms.author: praror
 ms.date: 04/14/2022
 ---
-# Use Windows Admin Center in the Azure portal to manage Arc-enabled Windows Server machines from anywhere
+# Use Windows Admin Center to manage your Arc-enabled servers from the Azure Portal
 
 You can now use Windows Admin Center (preview) in the Azure portal to manage the Windows Server operating system of your on-premises Arc-enabled infrastructure (hereby referred to as “hybrid machine”). Using this functionality, you can securely manage the Windows Server operating system from anywhere – without needing a VPN, public IP address or other inbound connectivity to your machine. 
 
