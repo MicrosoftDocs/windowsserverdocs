@@ -218,13 +218,27 @@ MS GRAPH API
 
 } 
 ```
- 
+Example:
+
+```
+PATCH /domains/contoso.com/federationConfiguration/2a8ce608-bb34-473f-9e0f-f373ee4cbc5a 
+
+{ 
+
+" federatedIdpMfaBehavior ": "rejectMfaByFederatedIdp" 
+``` 
+
 PowerShell
 
 ```powershell
 Update-MgDomainFederationConfiguration -DomainId <domainsId> -InternalDomainFederationId <internalDomainFederationId> federatedIdpMfaBehavior "rejectMfaByFederatedIdp" 
 ```
 
+Example:
+
+```powershell
+Update-MgDomainFederationConfiguration -DomainId “contoso.com” -InternalDomainFederationId “2a8ce608-bb34-473f-9e0f-f373ee4cbc5a” federatedIdpMfaBehavior "rejectMfaByFederatedIdp" 
+```
 
 ### Hardware Security Module (HSM)
 In its default configuration, the keys AD FS uses to sign tokens never leave the federation servers on the intranet.  They are never present in the DMZ or on the proxy machines.  Optionally to provide additional protection, we recommend protecting these keys in a hardware security module (HSM) attached to AD FS.  Microsoft does not produce an HSM product, however there are several on the market that support AD FS.  In order to implement this recommendation, follow the vendor guidance to create the X509 certs for signing and encryption, then use the AD FS installation powershell commandlets, specifying your custom certificates as follows:
