@@ -214,7 +214,7 @@ MS GRAPH API
 
 { 
 
-" federatedIdpMfaBehavior ": "rejectMfaByFederatedIdp" 
+"federatedIdpMfaBehavior": "rejectMfaByFederatedIdp" 
 
 } 
 ```
@@ -225,7 +225,7 @@ PATCH /domains/contoso.com/federationConfiguration/2a8ce608-bb34-473f-9e0f-f373e
 
 { 
 
-" federatedIdpMfaBehavior ": "rejectMfaByFederatedIdp" 
+"federatedIdpMfaBehavior": "rejectMfaByFederatedIdp" 
 ``` 
 
 PowerShell
