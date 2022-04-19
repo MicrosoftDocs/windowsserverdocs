@@ -55,9 +55,9 @@ The below diagram depicts the firewall ports that must be enabled between and am
 > Port 808 (Windows Server 2012R2) or port 1501 (Windows Server 2016+) is the Net.TCP port AD FS uses for the local WCF endpoint to transfer configuration data to the service process and PowerShell. This port can be seen by running Get-AdfsProperties | select NetTcpPort. This is a local port that will not need to be opened in the firewall but will be displayed in a port scan.
 
 ### Communication between Federation Servers
-Federation servers on an AD FS farm communicate with other servers in the farm and the Web Application Proxy (WAP) servers via HTTP port 80 for configuration synchronization. Making sure that only these servers can communicate with each other and no other is a measure of defense in depth. 
+Federation servers on an AD FS farm communicate with other servers in the farm and the Web Application Proxy (WAP) servers via HTTP port 80 for configuration synchronization. Make sure that only these servers can communicate with each other and no other is a measure of defense in depth. 
 
-Organizations can do this by setting up firewall rules on each server allowing inbound communication from the IP addresses from other servers in the farm and WAP servers. Please note that some Network Load Balancers (NLB) use HTTP port 80 for probing the health on individual federation servers. Please make sure that you include the IP addresses of the NLB in the configured firewall rules.
+Organizations can do achieve this state, by setting up firewall rules on each server.  The rules should only allow inbound communication from the IP addresses of the servers in the farm and WAP servers. Note that some Network Load Balancers (NLB) use HTTP port 80 for probing the health on individual federation servers. Make sure that you include the IP addresses of the NLB in the configured firewall rules.
 
 ### Azure AD Connect and Federation Servers/WAP
 This table describes the ports and protocols that are required for communication between the Azure AD Connect server and Federation/WAP servers.
@@ -83,7 +83,7 @@ Protocol |Ports |Description
 HTTPS|443(TCP/UDP)|Used for device authentication.
 TCP|49443 (TCP)|Used for certificate authentication.
 
-For additional information on required ports and protocols required for hybrid deployments see the document [here](/azure/active-directory/hybrid/reference-connect-ports).
+For additional information on required ports and protocols required for hybrid deployments, see the document [here](/azure/active-directory/hybrid/reference-connect-ports).
 
 For detailed information about ports and protocols required for an Azure AD and Office 365 deployment, see the document [here](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US).
 
@@ -100,7 +100,7 @@ Below is the list of endpoints that must be enabled on the proxy in these scenar
 |/adfs/ls|Browser based authentication flows and current versions of Microsoft Office use this endpoint for Azure AD and Office 365 authentication |
 |/adfs/services/trust/2005/usernamemixed|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint. |
 |/adfs/services/trust/13/usernamemixed|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint. |
-|/adfs/oauth2|This one is used for any modern apps (on-prem or in cloud) you have configured to authenticate directly to AD FS (i.e. not through AAD) |
+|/adfs/oauth2|Used for any modern apps (on-prem or in cloud) you have configured to authenticate directly to AD FS (i.e. not through AAD) |
 |/adfs/services/trust/mex|Used for Exchange Online with Office clients older than Office 2013 May 2015 update.  Later clients use the passive \adfs\ls endpoint.|
 |/adfs/ls/federationmetadata/2007-06/federationmetadata.xml    |Requirement for any passive flows; and used by Office 365 / Azure AD to check AD FS certificates. |
 
@@ -183,7 +183,7 @@ Set-AdfsEndpoint -TargetAddressPath /adfs/services/trust/13/windowstransport -Pr
 >If your AD FS farm runs on Windows Internal Databases (WID) and has a secondary AD FS server, after disabling the endpoints on primary server, wait for the SYNC to occur on secondary nodes before restarting the AD FS service on them. Use the PowerShell command **Get-AdfsSyncProperties** on the secondary node to track last SYNC process.
 
 ### Differentiate access policies for intranet and extranet access
-AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This can be done per application or globally.  For high business value applications or applications with sensitive or personally identifiable information, consider requiring multi factor authentication.  This can be done via the AD FS management snap-in.
+AD FS has the ability to differentiate access policies for requests that originate in the local, corporate network vs requests that come in from the internet via the proxy.  This differentiation can be done per application or globally.  For high business value applications or applications with sensitive or personally identifiable information, consider requiring multi factor authentication.  MFA can be setup via the AD FS management snap-in.
 
 ### Require Multi factor authentication (MFA)
 AD FS can be configured to require strong authentication (such as multi factor authentication) specifically for requests coming in via the proxy, for individual applications, and for conditional access to both Azure AD / Office 365 and on premises resources.  Supported methods of MFA include both Microsoft Azure MFA and third party providers.  The user is prompted to provide the additional information (such as an SMS text containing a one time code), and AD FS works with the provider specific plug-in to allow access.
