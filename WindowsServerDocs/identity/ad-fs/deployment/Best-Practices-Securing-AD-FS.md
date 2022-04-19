@@ -11,7 +11,7 @@ ms.topic: article
 
 # Best practices for securing Active Directory Federation Services
 
-This document provides best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy.  It contains information about the default behaviors of these components and recommendations for additional security configurations.  It also contains specific use cases and security requirements.
+This document provides best practices for the secure planning and deployment of Active Directory Federation Services (AD FS) and Web Application Proxy.  It contains recommendations for additional security configurations,specific use cases, and security requirements.
 
 This document applies to AD FS and WAP in Windows Server 2012 R2, 2016, and 2019.  These recommendations can be used for either an on-premises network or in a cloud hosted environment such as Microsoft Azure.
 
@@ -20,7 +20,7 @@ For deployment in on-premises environments, we recommend a standard deployment t
  - one or more AD FS servers on the internal corporate network
  - one or more Web Application Proxy (WAP) servers in a DMZ or extranet network.  
 
-At each layer, AD FS and WAP, a hardware or software load balancer is placed in front of the server farm and handles traffic routing.  Firewalls are placed as required in front of the external IP address of the load balancer in front of each (FS and proxy) farm.
+At each layer, AD FS and WAP, a hardware or software load balancer is placed in front of the server farm, and handles traffic routing.  Firewalls are placed, in front of the external IP address, of the load balancer as needed.
 
 ![A diagram depicting a standard A D F S topology.](media/Best-Practices-Securing-AD-FS/adfssec1.png)
 
