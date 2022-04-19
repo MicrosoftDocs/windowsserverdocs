@@ -18,11 +18,11 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.3004        |1.2.1672                  |
-|Insider    |1.2.300x        |1.2.1672                  |
+|Insider    |1.2.3126        |1.2.1672                  |
 
-## Updates for version 1.2.300x (Insider)
+## Updates for version 1.2.3126 (Insider)
 
-Date published: 4/19/2022
+*Date published: 4/19/2022*
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
