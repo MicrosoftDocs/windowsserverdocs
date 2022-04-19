@@ -16,7 +16,11 @@ This document provides best practices for the secure planning and deployment of 
 This document applies to AD FS and WAP in Windows Server 2012 R2, 2016, and 2019.  These recommendations can be used for either an on-premises network or in a cloud hosted environment such as Microsoft Azure.
 
 ## Standard deployment topology
-For deployment in on-premises environments, we recommend a standard deployment topology consisting of one or more AD FS servers on the internal corporate network, with one or more Web Application Proxy (WAP) servers in a DMZ or extranet network.  At each layer, AD FS and WAP, a hardware or software load balancer is placed in front of the server farm and handles traffic routing.  Firewalls are placed as required in front of the external IP address of the load balancer in front of each (FS and proxy) farm.
+For deployment in on-premises environments, we recommend a standard deployment topology consisting of:
+ - one or more AD FS servers on the internal corporate network
+ - one or more Web Application Proxy (WAP) servers in a DMZ or extranet network.  
+
+At each layer, AD FS and WAP, a hardware or software load balancer is placed in front of the server farm and handles traffic routing.  Firewalls are placed as required in front of the external IP address of the load balancer in front of each (FS and proxy) farm.
 
 ![A diagram depicting a standard A D F S topology.](media/Best-Practices-Securing-AD-FS/adfssec1.png)
 
