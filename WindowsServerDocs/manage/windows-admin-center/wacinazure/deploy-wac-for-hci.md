@@ -47,20 +47,20 @@ Windows Admin Center in the Azure portal provides the essential set of managemen
 - Virtual Machine
 - Virtual Switches
 
-We don't support additional extensions to Windows Admin Center in the Azure portal at this time.
+We don't support additional extensions for Windows Admin Center in the Azure portal at this time.
 
 If you manually installed Windows Admin Center on your cluster to manage multiple systems, enabling this capability will replace your existing instance of Windows Admin Center and removes the capability to manage other machines. You will lose access to your previously deployed instance of Windows Admin Center.
 
 ## Requirements
 
-To use Windows Admin Center in the Azure portal, we install a small Windows Admin Center agent on every node of your cluster via an Azure VM extension. Each node of the cluster has the following requirements:
+To use Windows Admin Center in the Azure portal, we install a small Windows Admin Center agent on every node of your cluster via an Azure VM extension. Each node of the cluster should meet the following requirements:
 - Arc-enabled
 - Azure Stack HCI 21H2 or higher
 - At least 3 GiB of memory
-- Be in any region of an Azure public cloud (it's not supported in Azure China, Azure Government, or other non-public clouds)
+- Be in any region of an Azure public cloud (Windows Admin Center is not supported in Azure China, Azure Government, or other non-public clouds)
 - Running the latest Azure Arc agent
 
-Every node of the cluster has the following networking requirements:
+Every node of the cluster should meet the following networking requirements:
 
 - Outbound internet access or an outbound port rule allowing HTTPS traffic to the following endpoints:
 <br>- `*.wac.azure.com`
@@ -69,7 +69,7 @@ Every node of the cluster has the following networking requirements:
 
 
 > [!NOTE]
-> No Inbound ports or connectivity is required
+> No Inbound ports are required in order to use Windows Admin Center.
 
 The management PC or other system that you use to connect to the Azure portal has the following requirements:
 
@@ -78,9 +78,9 @@ The management PC or other system that you use to connect to the Azure portal ha
 
 ## Setting up
 
-Before you can use Windows Admin Center in the Azure portal, you must deploy the Windows Admin Center VM extension:
-1.	Open the Azure portal and navigate to your Azure Stack HCI cluster
-2.	Navigate to **Windows Admin Center** (found in the **Settings** group).
+Before you can use Windows Admin Center in the Azure portal, you must deploy the Windows Admin Center VM extension using the following steps:
+1.	Open the Azure portal and navigate to your Azure Stack HCI cluster.
+2.	Navigate to **Windows Admin Center** which can be found in the **Settings** group.
 3.	Specify the port on which you wish to install Windows Admin Center and select **Install**.
 
 :::image type="content" source="../../media/manage-vm/wac-in-azure-hci-install.png" alt-text="Screenshot showing the install button for Windows Admin Center on an Azure Stack HCI cluster." lightbox="../../media/manage-vm/wac-in-azure-hci-install.png":::
@@ -106,12 +106,12 @@ The agent communicates to an external service that manages certificates so that 
 Clicking “Install” does the following 3 actions:
 1. Registers the new “Hybrid Connectivity” RP on your subscription. The Hybrid Connectivity RP hosts the proxy used for communication to your Arc-enabled cluster.
 2. Deploys an Azure “endpoint” resource on top of each of your Arc-enabled resources in your cluster that enables a reverse proxy connection on the specified port. Note that this is simply a logical resource in Azure, and does not deploy anything on your server itself.
-3. Installs the Windows Admin Center agent on your hybrid machine with a valid TLS certificate
+3. Installs the Windows Admin Center agent on your hybrid machine with a valid TLS certificate.
 
 Clicking “Connect” does the following actions:
-1. The Azure Portal asks the Hybrid Connectivity RP for access to the Arc-enabled server
-2. The Hybrid Connectivity RP communicates with an L4 SNI proxy to establish a short-lived session-specific access to one of your Arc-enabled nodes of the cluster on the Windows Admin Center port
-3. A unique short-lived URL is generated and connection to Windows Admin Center is established from the Portal
+1. The Azure Portal asks the Hybrid Connectivity RP for access to the Arc-enabled server.
+2. The Hybrid Connectivity RP communicates with an L4 SNI proxy to establish a short-lived session-specific access to one of your Arc-enabled nodes of the cluster on the Windows Admin Center port.
+3. A unique short-lived URL is generated and connection to Windows Admin Center is established from the Portal.
 
 Connection to Windows Admin Center is end-to-end encrypted with SSL termination happening on your cluster.
 
@@ -121,20 +121,20 @@ Here are some tips to try in case something isn't working. For general help trou
 
 ### Failed to connect error
 
-1. Make sure that the Windows Admin Center service is running on your cluster
-    1. RDP into each node of your cluster
-    1. Open Task Manager (Ctrl+Shift+Esc) and navigate to “Services”
+1. Make sure that the Windows Admin Center service is running on your cluster.
+    1. RDP into each node of your cluster.
+    1. Open Task Manager (Ctrl+Shift+Esc) and navigate to “Services”.
     1. Make sure ServerManagementGateway / Windows Admin Center is Running.
     1. If it is not, please start the service.
 
-1. Check that your installation is in a good state
-    1. RDP into each node of your cluster
+1. Check that your installation is in a good state.
+    1. RDP into each node of your cluster.
     1. Open a browser and type `https://localhost:<port>` replacing `<port>` with the port on which you installed Windows Admin Center. Not sure what port you installed it on? Check out the Frequently Asked Questions below.
     1. If this doesn’t load, open Task Manager > Details and end the Sme.exe process. Try loading `https://localhost:<port>` on your browser again.
     1. If this still doesn’t load, there might be something wrong with your installation. Please go back to the Azure Portal, navigate to “Extensions”, and uninstall the Admin Center extension. Navigate back to “Windows Admin Center (preview)” and reinstall the extension.
 
-1. Check that the port is enabled for reverse proxy session
-    1. RDP into each node of your cluster
+1. Check that the port is enabled for reverse proxy session.
+    1. RDP into each node of your cluster.
     1. This should return a list of ports under the incomingconnections.ports (preview) configuration that are enabled to be connected from Azure. Confirm that the port on which you installed Windows Admin Center is on this list. For example, if Windows Admin Center was installed on port 443, the result would be:
            `Local configuration setting`
             `incomingconnections.ports (preview): 443`
@@ -142,8 +142,8 @@ Here are some tips to try in case something isn't working. For general help trou
         ```powershell
         azcmagent config set incomingconnections.ports <port>
         ```
-    1. Note that if you are using another experience (like SSH) using this solution, you can specify multiple ports separated by a comma
-1. Ensure you have outbound connectivity to the necessary ports
+    1. Note that if you are using another experience (like SSH) using this solution, you can specify multiple ports separated by a comma.
+1. Ensure you have outbound connectivity to the necessary ports.
     1. Each node of your cluster should have outbound connectivity to the following endpoints:
         a. *.wac.azure.com
         b. pas.windows.net
@@ -158,7 +158,7 @@ If no other tool is loading, there might be a problem with your network connecti
 ### The Windows Admin Center extension failed to install
 
 1. Double-check to make sure that the cluster meets the [requirements](#requirements).
-1. Make sure that outbound traffic to Windows Admin Center is allowed on each node of your cluster
+1. Make sure that outbound traffic to Windows Admin Center is allowed on each node of your cluster.
     1. Test connectivity by running the following command using PowerShell inside of your virtual machine:
 
         ```powershell
@@ -168,7 +168,7 @@ If no other tool is loading, there might be a problem with your network connecti
         This should return:
 
         `You've found the Windows Admin Center in Azure APIs' home page. Please use the Azure portal to manage your virtual machines with Windows Admin Center.`
-1. If you have allowed all outbound traffic, and are getting an error from the command above, check that there are no firewall rules blocking the connection.
+1. If you have allowed all outbound traffic and are getting an error from the command above, check that there are no firewall rules blocking the connection.
 
 If nothing seems wrong and Windows Admin Center still won't install, open a support request with the following information:
 
@@ -182,9 +182,9 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 
 ## Known issues
 
-- Chrome incognito mode isn't supported
-- Azure portal desktop app is not supported
-- Detailed error messages for a failed connection is not available yet
+- Chrome incognito mode isn't supported.
+- Azure portal desktop app is not supported.
+- Detailed error messages for a failed connection is not available yet.
 
 ## Frequently asked questions
 
