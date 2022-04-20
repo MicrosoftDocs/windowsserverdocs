@@ -95,6 +95,8 @@ See the [Windows lifecycle fact sheet](https://support.microsoft.com/help/13853/
 | Windows 11 Enterprise N<br/>Windows 10 Enterprise N | DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 |
 | Windows 11 Enterprise G<br/>Windows 10 Enterprise G | YYVX9-NTFWV-6MDM3-9PT4T-4M68B |
 | Windows 11 Enterprise G N<br/>Windows 10 Enterprise G N | 44RPN-FTY23-9VTTB-MP9BX-T84FV |
+| Windows 11 Enterprise for Virtual Desktops<br/>Windows 10 Enterprise for Virtual Desktops | CPWHC-NT2C7-VYW78-DHDB2-PG3GK |
+			
 
 ### Windows 10 (LTSC/LTSB versions)
 
