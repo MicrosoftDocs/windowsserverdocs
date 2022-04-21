@@ -30,6 +30,7 @@ You can **install** Windows Admin Center on the following Windows operating syst
 | Windows Server Semi-Annual Channel | Gateway sever, managed server, failover cluster |
 | Windows Server 2016                | Gateway sever, managed server, failover cluster |
 | Windows Server 2019                | Gateway sever, managed server, failover cluster |
+| Windows Server 2022                | Gateway sever, managed server, failover cluster |
 
 To operate Windows Admin Center:
 
@@ -51,6 +52,7 @@ You can **manage** the following Windows operating systems using Windows Admin C
 | ------------------------- |--------------- | ----- |
 | Windows 10 | Yes (via Computer Management) | N/A |
 | Windows Server Semi-Annual Channel | Yes | Yes |
+| Windows Server 2022 | Yes | Yes |
 | Windows Server 2019 | Yes | Yes |
 | Windows Server 2016 | Yes | Yes, with [latest cumulative update](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
 | Microsoft Hyper-V Server 2016 | Yes | Yes |
