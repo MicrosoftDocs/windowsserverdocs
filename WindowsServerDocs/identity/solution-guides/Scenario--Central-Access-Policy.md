@@ -72,7 +72,7 @@ The following figure demonstrates how you can combine policies into policy lists
 ## In this scenario
 The following guidance is available to you for central access policies:
 
--   [Plan a Central Access Policy deployment](assetId:///0311a76d-d66c-4ddb-ade6-af586a2ad82f)
+-   [Plan a Central Access Policy deployment](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md#BKMK_1.2)
 
 -   [Deploy a Central Access Policy &#40;Demonstration Steps&#41;](Deploy-a-Central-Access-Policy--Demonstration-Steps-.md)
 
