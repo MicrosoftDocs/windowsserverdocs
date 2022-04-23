@@ -27,6 +27,7 @@ You can **install** Windows Admin Center on the following Windows operating syst
 | **Platform**                       | **Installation mode** |
 | -----------------------------------| --------------------- |
 | Windows 10                         | Local client |
+| Windows 11                         | Local client |
 | Windows Server Semi-Annual Channel | Gateway sever, managed server, failover cluster |
 | Windows Server 2016                | Gateway sever, managed server, failover cluster |
 | Windows Server 2019                | Gateway sever, managed server, failover cluster |
@@ -40,6 +41,9 @@ To operate Windows Admin Center:
 > [!WARNING]
 > Installing Windows Admin Center on a Domain controller is not supported. [Read more about domain controller security best practices](../../../identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack.md).
 
+> [!NOTE]
+> Windows Admin Center supports both Server Core and Desktop Experience installation.
+
 ## Installation: Supported web browsers
 
 Microsoft Edge (including [Microsoft Edge insider](https://microsoftedgeinsider.com)) and Google Chrome are tested and supported on Windows 10. Other web browsers—including Internet Explorer and Firefox—are not currently part of our test matrix and are therefore not *officially* supported. These browsers may have problems running Windows Admin Center. For example, Firefox has it’s own certificate store, so you must import the `Windows Admin Center Client` certificate into Firefox to use Windows Admin Center on Windows 10. For more details, see [browser-specific known issues](../support/known-issues.md#browser-specific-issues).
@@ -50,7 +54,9 @@ You can **manage** the following Windows operating systems using Windows Admin C
 
 | Version | Manage *node* via *Server Manager* | Manage via *Cluster Manager* |
 | ------------------------- |--------------- | ----- |
+| Windows 11 | Yes (via Computer Management) | N/A |
 | Windows 10 | Yes (via Computer Management) | N/A |
+| Azure Stack HCI | Yes | Yes |
 | Windows Server Semi-Annual Channel | Yes | Yes |
 | Windows Server 2022 | Yes | Yes |
 | Windows Server 2019 | Yes | Yes |
@@ -59,6 +65,9 @@ You can **manage** the following Windows operating systems using Windows Admin C
 | Windows Server 2012 R2 | Yes | Yes |
 | Microsoft Hyper-V Server 2012 R2 | Yes | Yes |
 | Windows Server 2012 | Yes | Yes |
+
+> [!NOTE]
+> Windows Admin Center supports both Server Core and Desktop Experience installation.
 
 > [!NOTE]
 > Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 and 2012 R2. If you will manage these with Windows Admin Center, you will need to install Windows Management Framework (WMF) version 5.1 or higher on those servers.
