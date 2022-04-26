@@ -58,7 +58,7 @@ auditpol /list /subcategory:* /r
 To list the subcategories of the detailed Tracking and DS Access categories, type:
 
 ```
-auditpol /list /subcategory:detailed Tracking,DS Access
+auditpol /list /subcategory:"detailed Tracking","DS Access"
 ```
 
 ## Additional References
