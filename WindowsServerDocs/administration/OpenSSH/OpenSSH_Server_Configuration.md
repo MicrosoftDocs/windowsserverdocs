@@ -20,7 +20,7 @@ The initial default Windows is the Windows Command shell (cmd.exe).
 Windows also includes PowerShell, and third-party command shells are also available for Windows and may be configured as the default shell for a server.
 
 To set the default command shell, first confirm that the OpenSSH installation folder is on the system path.
-For Windows, the default installation folder is %systemdrive%\WindowsDirectory\System32\openssh.
+For Windows, the default installation folder is %systemdrive%\Windows\System32\openssh.
 The following command shows the current path setting, and adds the default OpenSSH installation folder to it.
 
 Command shell | Command to use
