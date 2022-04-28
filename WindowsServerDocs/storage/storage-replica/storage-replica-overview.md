@@ -74,7 +74,7 @@ You can deploy Storage Replica in a stretch cluster, between cluster-to-cluster,
 
 * **Network Constraint**. Storage Replica can be limited to individual networks by server and by replicated volumes, in order to provide application, backup, and management software bandwidth.
 
-* **Thin provisioning**. Support for thin provisioning in Storage Spaces and SAN devices is supported, in order to provide near-instantaneous initial replication times under many circumstances.
+* **Thin provisioning**. Support for thin provisioning in Storage Spaces and SAN devices is supported in order to provide near-instantaneous initial replication times under many circumstances. Once initial replication is initiated, the volume will not be able to shrink or trim.
 
 Storage Replica includes the following features:
 
