@@ -76,11 +76,15 @@ The management PC or other system that you use to connect to the Azure portal ha
 - The [Microsoft Edge](https://www.microsoft.com/edge) or Google Chrome web browser
 
 ## Access Requirements
-1. A new Resource Provider (RP), HybridConnectivity RP, is required to use Windows Admin Center. If this RP is not registered on your subscription, Windows Admin Center will attempt to do so. Registering an RP on your subscription requires **Contributor** or **Owner** permissions at the **subscription** level. Note that this is a one time task per subscription.
+1. A new Resource Provider (RP), HybridConnectivity RP, is required to use Windows Admin Center. If the HybridConnectivity RP is not registered on your subscription, Windows Admin Center will attempt to do so during deployment. Registering an RP requires **Contributor** or **Owner** permissions at the **subscription level**. 
 
-1. Connection to Windows Admin Center is controlled by a new Azure RBAC role called **Windows Admin Center Administrator Login** at the **Arc-resource level**.
+> [!NOTE] 
+> Note that this is a one time task per subscription.
 
-[Assign Azure roles using the Azure Portal](/azure/role-based-access-control/role-assignments-portal)
+1. Connecting to Windows Admin center requires **Windows Admin Center Administrator Login** permissions at the Arc-resource level.
+
+[Learn more about assigning Azure roles using the Azure Portal](/azure/role-based-access-control/role-assignments-portal)
+
 
 ## Setting up
 
