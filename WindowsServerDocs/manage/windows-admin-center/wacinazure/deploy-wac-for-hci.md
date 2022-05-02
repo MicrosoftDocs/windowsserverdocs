@@ -75,6 +75,12 @@ The management PC or other system that you use to connect to the Azure portal ha
 
 - The [Microsoft Edge](https://www.microsoft.com/edge) or Google Chrome web browser
 
+## Access Requirements
+1. A new Resource Provider (RP), HybridConnectivity RP, is required to use Windows Admin Center. If this RP is not registered on your subscription, Windows Admin Center will attempt to do so. Registering an RP on your subscription requires "Contributor" or "Owner" permissions at the subscription level. Note that this is a one time task per subscription.
+
+1. Connection to Windows Admin Center is controlled by a new Azure RBAC role called "Windows Admin Center Administrator Login" at the Arc-resource level.
+
+[Assign Azure roles using the Azure Portal](/azure/role-based-access-control/role-assignments-portal)
 
 ## Setting up
 
@@ -135,6 +141,10 @@ Here are some tips to try in case something isn't working. For general help trou
 
 1. Check that the port is enabled for reverse proxy session.
     1. RDP into each node of your cluster.
+    1. Open PowerShell as an administrator and run:
+        ```powershell
+        azcmagent config list
+        ```
     1. This should return a list of ports under the incomingconnections.ports (preview) configuration that are enabled to be connected from Azure. Confirm that the port on which you installed Windows Admin Center is on this list. For example, if Windows Admin Center was installed on port 443, the result would be:
            `Local configuration setting`
             `incomingconnections.ports (preview): 443`
@@ -145,9 +155,9 @@ Here are some tips to try in case something isn't working. For general help trou
     1. Note that if you are using another experience (like SSH) using this solution, you can specify multiple ports separated by a comma.
 1. Ensure you have outbound connectivity to the necessary ports.
     1. Each node of your cluster should have outbound connectivity to the following endpoints:
-        a. *.wac.azure.com
-        b. pas.windows.net
-        c. azgn*.servicebus.windows.net
+<br>- `*.wac.azure.com` or the WindowsAdminCenter ServiceTag
+<br>- `pas.windows.net`
+<br>- `azgn*.servicebus.windows.net`
 
 ### One of the Windows Admin Center tools isn’t loading or gives an error
 
