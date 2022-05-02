@@ -113,12 +113,12 @@ Windows Admin Center is currently implemented in the Azure Portal in the form of
 
 The agent communicates to an external service that manages certificates so that you can easily connect to your cluster.
 
-Clicking “Install” does the following 3 actions:
-1. Registers the new “Hybrid Connectivity” RP on your subscription. The Hybrid Connectivity RP hosts the proxy used for communication to your Arc-enabled cluster.
-2. Deploys an Azure “endpoint” resource on top of each of your Arc-enabled resources in your cluster that enables a reverse proxy connection on the specified port. Note that this is simply a logical resource in Azure, and does not deploy anything on your server itself.
+Clicking **Install** does the following 3 actions:
+1. Registers the new **Hybrid Connectivity** RP on your subscription. The Hybrid Connectivity RP hosts the proxy used for communication to your Arc-enabled cluster.
+2. Deploys an Azure **endpoint** resource on top of each of your Arc-enabled resources in your cluster that enables a reverse proxy connection on the specified port. Note that this is simply a logical resource in Azure, and does not deploy anything on your server itself.
 3. Installs the Windows Admin Center agent on your hybrid machine with a valid TLS certificate.
 
-Clicking “Connect” does the following actions:
+Clicking **Connect** does the following actions:
 1. The Azure Portal asks the Hybrid Connectivity RP for access to the Arc-enabled server.
 2. The Hybrid Connectivity RP communicates with an L4 SNI proxy to establish a short-lived session-specific access to one of your Arc-enabled nodes of the cluster on the Windows Admin Center port.
 3. A unique short-lived URL is generated and connection to Windows Admin Center is established from the Portal.
