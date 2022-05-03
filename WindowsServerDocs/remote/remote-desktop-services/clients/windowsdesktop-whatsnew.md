@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 04/19/2022
+ms.date: 05/03/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,14 +17,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.3004        |1.2.1672                  |
-|Insider    |1.2.3126        |1.2.1672                  |
+|Public     |1.2.3128        |1.2.1672                  |
+|Insider    |1.2.3128        |1.2.1672                  |
 
-## Updates for version 1.2.3126 (Insider)
+## Updates for version 1.2.3128
 
-*Date published: 4/19/2022*
+*Date published: 5/03/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Improved Narrator application experience.
 - Accessibility improvements.
@@ -37,7 +37,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 
 *Date published: 3/29/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4SWGP), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4SBQB), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4SWGO)
 
 - Fixed an issue where Narrator didn't announce grid or list views correctly.
 - Fixed an issue where the msrdc.exe process might take a long time to exit after closing the last Azure Virtual Desktop connection if customers have set a very short token expiration policy.
@@ -50,8 +50,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.2927
 
 *Date published: 3/15/2022*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4QWr2), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Rhps), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4RbZL)
 
 Fixed an issue where the number pad didn't work on initial focus.
 
