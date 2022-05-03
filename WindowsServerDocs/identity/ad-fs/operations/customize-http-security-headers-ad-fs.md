@@ -157,7 +157,7 @@ By default, CORS functionality will not be enabled; however, admins can enable t
 Set-AdfsResponseHeaders -EnableCORS $true
  ```
 
-One enabled, admins will be able to enumerate a list of trusted origins using the same cmdlet. For instance, the following command would allow CORS requests from the origins **https&#58;//example1.com** and **https&#58;//example1.com**.
+Once enabled, admins will be able to enumerate a list of trusted origins using the same cmdlet. For instance, the following command would allow CORS requests from the origins **https&#58;//example1.com** and **https&#58;//example1.com**.
 
 ```PowerShell
 Set-AdfsResponseHeaders -CORSTrustedOrigins https://example1.com,https://example2.com
