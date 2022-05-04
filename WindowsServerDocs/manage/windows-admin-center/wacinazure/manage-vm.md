@@ -350,7 +350,7 @@ Yes, for our initial implementation, Windows Admin Center must be installed on e
 
 ### Can I use Windows Admin Center to manage all servers and virtual machines?
 
-Yes, you can use Windows Admin Center on-premises to manage servers and virtual machines on-premises and in Azure. For details, see [Manage Azure VMs with Windows Admin Center](manage-azure-vms.md).
+Yes, you can use Windows Admin Center on-premises to manage servers and virtual machines on-premises and in Azure. For details, see [Manage Azure VMs with Windows Admin Center](../azure/manage-azure-vms.md).
 
 ### Does Windows Admin Center in the Azure portal work with Azure Bastion?
 

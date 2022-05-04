@@ -43,8 +43,12 @@
 ### [Connect to Azure](azure/azure-integration.md)
 ### [Create Azure VMs](azure/create-azure-vms.md)
 ### [Manage Azure VMs](azure/manage-azure-vms.md)
-### [Manage a VM from within Azure](azure/manage-vm.md)
 ### [Manually deploy a Windows Admin Center server in Azure](azure/deploy-wac-in-azure.md)
+
+## Windows Admin Center in Azure
+### [Azure IaaS VMs](wacinazure/manage-vm.md)
+### [Azure Arc-enabled Servers](wacinazure/deploy-wac-for-arc.md)
+### [Azure Stack HCI](wacinazure/deploy-wac-for-hci.md)
 
 ## Support
 ### [Release history](support/release-history.md)
