@@ -100,7 +100,7 @@ The hybrid machine should also meet the following networking requirements:
 
   - `*.wac.azure.com` or the `WindowsAdminCenter` [service tag](/azure/virtual-network/service-tags-overview) when using hybrid machines in Azure
   - `pas.windows.net`
-  - `azgn*.servicebus.windows.net`
+  - `*.servicebus.windows.net`
 
 > [!NOTE]
 > No Inbound ports are required in order to use Windows Admin Center.
@@ -199,7 +199,7 @@ Here are some tips to try in case something isn't working. For general help trou
     1. The hybrid machine should have outbound connectivity to the following endpoints:
        - `*.wac.azure.com` or the WindowsAdminCenter ServiceTag
        - `pas.windows.net`
-       - `azgn*.servicebus.windows.net`
+       - `*.servicebus.windows.net`
 
 ### One of the Windows Admin Center tools isn’t loading or gives an error
 
