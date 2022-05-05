@@ -161,22 +161,22 @@ Connection to Windows Admin Center is end-to-end encrypted with SSL termination 
 ## <a name="automatePowerShell"></a> Automate Windows Admin Center deployment using PowerShell
 You can also automate Windows Admin Center deployment in Azure portal by using this PowerShell script.
 
-        ```powershell
-        $location = "<location_of_hybrid_machine>"
-        $machineName = "<name_of_hybrid_machine>"
-        $resourceGroup = "<resource_group>"
-        $subscription = "<subscription_id>"
-        $port = "6516"
+```powershell
+$location = "<location_of_hybrid_machine>"
+$machineName = "<name_of_hybrid_machine>"
+$resourceGroup = "<resource_group>"
+$subscription = "<subscription_id>"
+$port = "6516"
         
-        #Deploy Windows Admin Center
-        $Setting = @{ "port" = $port }
-        New-AzConnectedMachineExtension -Name "AdminCenter" -ResourceGroupName $resourceGroup -MachineName $machineName -Location $location -Publisher "Microsoft.AdminCenter" -Settings $Setting -ExtensionType "AdminCenter" -SubscriptionId $subscription
+#Deploy Windows Admin Center
+$Setting = @{ "port" = $port }
+New-AzConnectedMachineExtension -Name "AdminCenter" -ResourceGroupName $resourceGroup -MachineName $machineName -Location $location -Publisher "Microsoft.AdminCenter" -Settings $Setting -ExtensionType "AdminCenter" -SubscriptionId $subscription
         
-        #Allow connectivity
+#Allow connectivity
         
-        $putPayload = "{'properties': {'type': 'default'}}"
-        Invoke-AzRestMethod -Method PUT -Uri "https://management.azure.com/subscriptions/${subscription}/resourceGroups/${resourceGroup}/providers/Microsoft.HybridCompute/machines/${machineName}/providers/Microsoft.HybridConnectivity/endpoints/default?api-version=2021-10-06-preview" -Payload $putPayload
-        ```
+$putPayload = "{'properties': {'type': 'default'}}"
+Invoke-AzRestMethod -Method PUT -Uri "https://management.azure.com/subscriptions/${subscription}/resourceGroups/${resourceGroup}/providers/Microsoft.HybridCompute/machines/${machineName}/providers/Microsoft.HybridConnectivity/endpoints/default?api-version=2021-10-06-preview" -Payload $putPayload
+```
 
 ## Troubleshooting
 
