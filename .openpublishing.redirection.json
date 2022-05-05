@@ -10574,6 +10574,11 @@
       "source_path": "WindowsServerDocs/get-started/Server-2016-activation.md",
       "redirect_url": "/windows-server/get-started/kms-activation-planning",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/manage/windows-admin-center/azure/manage-vm.md",
+      "redirect_url": "/windows-server/manage/windows-admin-center/wacinazure/manage-vm",
+      "redirect_document_id": true
     }
   ]
 }

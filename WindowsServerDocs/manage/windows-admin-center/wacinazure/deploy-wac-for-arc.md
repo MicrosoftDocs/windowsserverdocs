@@ -1,6 +1,6 @@
 ---
-title: Use Windows Admin Center in the Azure portal to manage Arc-enabled Windows Server machines from anywhere
-description: An overview of using Windows Admin Center in the Azure portal to manage the Windows Server OS on an Arc-enabled server. Includes the functionality provided, requirements, and how to install Windows Admin Center and use it to manage your Arc-enabled server. Also provides troubleshooting tips.
+title: Manage Azure Arc-enabled Servers using Windows Admin Center in Azure
+description: Learn how to deploy and troubleshoot Windows Admin Center in the Azure portal to connect and manage Arc-enabled Windows Server
 ms.topic: overview
 author: prasidharora
 ms.author: praror
@@ -34,13 +34,13 @@ Using Windows Admin Center in the Azure portal you can manage:
 - Processes
 - Registry
 - Remote Desktop
-- Roles and features
+- Roles and Features
 - Scheduled tasks
 - Services
 - Storage
 - Updates
-- Virtual Machine
-- Virtual Switches
+- Virtual machines
+- Virtual switches
 
 We don't support other extensions for Windows Admin Center in the Azure portal at this time.
 
@@ -58,10 +58,10 @@ You'll need an Azure account with an active subscription to deploy Azure Virtual
 During the deployment of Windows Admin Center will attempt to register the *Microsoft.HybridConnectivity* resource provider for your subscription.  
 
 > [!IMPORTANT]
-> You must have permission to register a resource provider, which requires the `*/register/action` operation. This is included if you are assigned the [contributor or owner role](../role-based-access-control/built-in-roles.md) on your subscription.
+> You must have permission to register a resource provider, which requires the `*/register/action` operation. This is included if you are assigned the [contributor or owner role](/azure/role-based-access-control/built-in-roles) on your subscription.
 
 > [!NOTE]
-> Note that this is a one time task per subscription.
+> Resource provider registration is a one time task per subscription.
 
 To check the status of the resource provider and register if needed:
 
@@ -75,9 +75,9 @@ To check the status of the resource provider and register if needed:
 
 #### Azure permissions required
 
-- To install the Windows Admin Center extension for an Arc-enabled server resource, your account must be granted the **Owner**, **Contributor**, or **Windows Admin Center Administrator Login** role in Azure.
+To install the Windows Admin Center extension for an Arc-enabled server resource, your account must be granted the **Owner**, **Contributor**, or **Windows Admin Center Administrator Login** role in Azure.
 
-- Connecting to Windows Admin center requires **Windows Admin Center Administrator Login** permissions at the Arc-enabled server resource.
+Connecting to Windows Admin center requires **Windows Admin Center Administrator Login** permissions at the Arc-enabled server resource.
 
 [Learn more about assigning Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal)
 
@@ -133,22 +133,23 @@ Windows Admin Center opens in the portal, giving you access to the same tools yo
 
 This feature provides connectivity to your hybrid machine via Windows Admin Center without requiring any inbound port to be enabled on the firewall. Windows Admin Center, via the Arc agent, is able to securely establish a reverse proxy session connection with the Azure Arc service in an outbound manner.
 
-For each hybrid machine that you want to manage with Windows Admin Center in the Azure portal an agent must be deployed.
+For each hybrid machine that you want to manage with Windows Admin Center in the Azure portal, an agent must be deployed.
 
 The agent communicates to an external service that manages certificates so that you can easily connect to your hybrid machine.
+
 Clicking **Install** does the following actions:
 
 1. Registers the *Microsoft.HybridConnectivity* resource provider on your subscription. The resource provider hosts the proxy used for communication to your Arc-enabled server.
-2. Deploys an Azure “endpoint” resource on top of your Arc-enabled resource that enables a reverse proxy connection on the specified port. This is simply a logical resource in Azure, and doesn't deploy anything on your server itself.
+2. Deploys an Azure *endpoint* resource on top of your Arc-enabled resource that enables a reverse proxy connection on the specified port. This is simply a logical resource in Azure, and doesn't deploy anything on your server itself.
 3. Installs the Windows Admin Center agent on your hybrid machine with a valid TLS certificate.
 
 > [!NOTE]
-> Uninstalling Windows Admin Center does not delete the logical Azure “endpoint” resource. This is kept for other experiences that might leverage this resource, such as SSH.
+> Uninstalling Windows Admin Center does not delete the logical Azure endpoint resource. This is kept for other experiences that might leverage this resource, such as SSH.
 
 Clicking **Connect** does the following actions:
 
 1. The Azure portal asks the *Microsoft.HybridConnectivity* resource provider for access to the Arc-enabled server.
-2. The resource provide communicates with a Layer 4 SNI proxy to establish a short-lived session-specific access to your Arc-enabled server on the Windows Admin Center port.
+2. The resource provider communicates with a Layer 4 SNI proxy to establish a short-lived session-specific access to your Arc-enabled server on the Windows Admin Center port.
 3. A unique short-lived URL is generated and connection to Windows Admin Center is established from the Portal.
 
 Connection to Windows Admin Center is end-to-end encrypted with SSL termination happening on your hybrid machine.
@@ -179,7 +180,7 @@ Here are some tips to try in case something isn't working. For general help trou
         azcmagent config list
         ```
 
-    1. This should return a list of ports under the incomingconnections.ports (preview) configuration that are enabled to be connected from Azure. Confirm that the port on which you installed Windows Admin Center is on this list. For example, if Windows Admin Center was installed on port 443, the result would be:
+    1. This should return a list of ports under the incomingconnections.ports (preview) configuration that are enabled to be connected from Azure. Confirm that the port on which you installed Windows Admin Center is on this list. For example, if Windows Admin Center is installed on port 443, the result would be:
 
         ```Output
         Local configuration setting
@@ -216,7 +217,7 @@ Here are some tips to try in case something isn't working. For general help trou
         Invoke-RestMethod -Method GET -Uri https://wac.azure.com
         ```
 
-        ```Output
+        ```Expected output
         You've found the Windows Admin Center in Azure APIs' home page. Please use the Azure portal to manage your virtual machines with Windows Admin Center.
         ```
 
@@ -251,7 +252,7 @@ You can install the Hyper-V role using the Roles and Features extension. Once in
 
 ### What servers can I manage using this extension?
 
-You can use the capability to manage Arc-enabled Windows Server 2016 and higher. You can also manage Azure Stack HCI, see [Use Windows Admin Center in Azure to manage Azure Stack HCI](../wacinazure/deploy-wac-for-hci.md).
+You can use the capability to manage Arc-enabled Windows Server 2016 and later. You can also [use Windows Admin Center in Azure to manage Azure Stack HCI](../wacinazure/deploy-wac-for-hci.md).
 
 ### How does Windows Admin Center handle security?
 
@@ -306,7 +307,7 @@ Learn more about how to [enable Azure VM extensions using the Azure CLI](/azure/
 
 Yes. You can follow the same steps outlined in this document.
 
-> [!CAUTION]
+> [!WARNING]
 > Enabling this capability will replace your existing instance of Windows Admin Center and removes the capability to manage other machines. Your previously deployed instance of Windows Admin Center will no longer be usable. Please don’t do this if you use your instance of Admin Center to manage multiple servers.
 
 ### Is there any documentation on the general functionality of Windows Admin Center and its tools?
