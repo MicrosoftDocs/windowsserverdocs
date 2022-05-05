@@ -1,14 +1,18 @@
 ---
-title: Manage Azure Stack HCI clusters with Windows Admin Center in Azure
+title: Manage Azure Stack HCI clusters with Windows Admin Center in Azure preview
 description: Learn how to deploy and troubleshoot Windows Admin Center in the Azure portal to connect and manage Azure Stack HCI
 ms.topic: overview
 author: prasidharora
 ms.author: praror
 ms.date: 04/14/2022
 ---
-# Use Windows Admin Center to manage your Azure Stack HCI clusters from the Azure portal
+# Use Windows Admin Center to manage your Azure Stack HCI clusters from the Azure portal (preview)
 
-Using Windows Admin Center (preview) in the Azure portal you can manage the Azure Stack HCI operating system of your cluster. You can securely manage your cluster from anywhere – without needing a VPN, public IP address or other inbound connectivity to your machine.
+> [!IMPORTANT]
+> Windows Admin Center in the Azure portal is currently in preview.
+> See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+
+Using Windows Admin Center in the Azure portal you can manage the Azure Stack HCI operating system of your cluster. You can securely manage your cluster from anywhere – without needing a VPN, public IP address or other inbound connectivity to your machine.
 
 The Windows Admin Center extension provides Azure users with granular management, configuration, troubleshooting, and maintenance functionality for managing your Azure Stack HCI cluster in the Azure portal. Azure Stack HCI cluster and workload management will no longer require you to establish line-of-sight or RDP – it can all be done natively from the Azure portal. Windows Admin Center provides tools that you would normally find in Failover cluster manager, Device Manager, Task Manager, Hyper-V Manager and most other MMC tools.
 
@@ -103,7 +107,7 @@ Every node of the cluster should meet the following networking requirements:
 
 - Outbound internet access or an outbound port rule allowing HTTPS traffic to the following endpoints:
 
-  - `*.wac.azure.com`
+  - `*.wac.azure.com` or the `WindowsAdminCenter` [service tag](/azure/virtual-network/service-tags-overview) when using hybrid machines in Azure
   - `pas.windows.net`
   - `*.servicebus.windows.net`
 
@@ -147,6 +151,9 @@ Clicking **Install** does the following 3 actions:
 1. Registers the *Microsoft.HybridConnectivity* resource provider on your subscription. The resource provider hosts the proxy used for communication to your Arc-enabled cluster.
 2. Deploys an Azure *endpoint* resource on top of each of your Arc-enabled resources in your cluster that enables a reverse proxy connection on the specified port. This is simply a logical resource in Azure, and doesn't deploy anything on your server itself.
 3. Installs the Windows Admin Center agent on your hybrid machine with a valid TLS certificate.
+
+> [!NOTE]
+> Uninstalling Windows Admin Center does not delete the logical Azure endpoint resource. This is kept for other experiences that might leverage this resource, such as SSH.
 
 Clicking **Connect** does the following actions:
 

@@ -1,14 +1,18 @@
 ---
-title: Manage Azure Arc-enabled Servers using Windows Admin Center in Azure
+title: Manage Azure Arc-enabled Servers using Windows Admin Center in Azure preview
 description: Learn how to deploy and troubleshoot Windows Admin Center in the Azure portal to connect and manage Arc-enabled Windows Server
 ms.topic: overview
 author: prasidharora
 ms.author: praror
 ms.date: 04/14/2022
 ---
-# Use Windows Admin Center to manage your Arc-enabled servers from the Azure portal
+# Use Windows Admin Center to manage your Arc-enabled servers from the Azure portal (preview)
 
-Using Windows Admin Center (preview) in the Azure portal you can manage the Windows Server operating system of your Arc-enabled servers, known as hybrid machines. You can securely manage hybrid machines from anywhere – without needing a VPN, public IP address or other inbound connectivity to your machine.
+> [!IMPORTANT]
+> Windows Admin Center in the Azure portal is currently in preview.
+> See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+
+Using Windows Admin Center in the Azure portal you can manage the Windows Server operating system of your Arc-enabled servers, known as hybrid machines. You can securely manage hybrid machines from anywhere – without needing a VPN, public IP address or other inbound connectivity to your machine.
 
 The Windows Admin Center extension provides Azure users with granular management, configuration, troubleshooting, and maintenance functionality for managing your Arc-enabled servers in the Azure portal. Windows Server infrastructure and workload management will no longer require you to establish line-of-sight or RDP – it can all be done natively from the Azure portal. Windows Admin Center provides tools that you would normally find in Server Manager, Device Manager, Task Manager, and Hyper-V Manager and most other MMC tools.
 
