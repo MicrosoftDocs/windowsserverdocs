@@ -1,30 +1,32 @@
 ---
-title: Manage Azure Stack HCI clusters with Windows Admin Center in Azure preview
-description: Learn how to deploy and troubleshoot Windows Admin Center in the Azure portal to connect and manage Azure Stack HCI
+title: Manage Azure Stack HCI clusters with Windows Admin Center in Azure (preview)
+description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Azure Stack HCI.
 ms.topic: overview
 author: prasidharora
 ms.author: praror
-ms.date: 04/14/2022
+ms.date: 05/06/2022
 ---
-# Use Windows Admin Center to manage your Azure Stack HCI clusters from the Azure portal (preview)
+# Manage Azure Stack HCI clusters using Windows Admin Center in Azure (preview)
+
+>Applies to Azure Stack HCI, version 21H2 and later
 
 > [!IMPORTANT]
 > Windows Admin Center in the Azure portal is currently in preview.
 > See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
-Using Windows Admin Center in the Azure portal you can manage the Azure Stack HCI operating system of your cluster. You can securely manage your cluster from anywhere – without needing a VPN, public IP address or other inbound connectivity to your machine.
+Using Windows Admin Center in the Azure portal you can manage the Azure Stack HCI operating system of your cluster. You can securely manage your cluster from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
 
-The Windows Admin Center extension provides Azure users with granular management, configuration, troubleshooting, and maintenance functionality for managing your Azure Stack HCI cluster in the Azure portal. Azure Stack HCI cluster and workload management will no longer require you to establish line-of-sight or RDP – it can all be done natively from the Azure portal. Windows Admin Center provides tools that you would normally find in Failover cluster manager, Device Manager, Task Manager, Hyper-V Manager and most other MMC tools.
+With Windows Admin Center extension in Azure, you get the management, configuration, troubleshooting, and maintenance functionality for managing your Azure Stack HCI cluster in the Azure portal. Azure Stack HCI cluster and workload management no longer requires you to establish line-of-sight or Remote Desktop Protocol (RDP)–it can all be done natively from the Azure portal. Windows Admin Center provides tools that you'd normally find in Failover cluster manager, Device Manager, Task Manager, Hyper-V Manager, and most other Microsoft Management Console (MMC) tools.
 
-This article provides an overview of the functionality provided, requirements, and how to install Windows Admin Center and use it to manage your cluster. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
+This article provides an overview of using Windows Admin Center in the Azure portal, requirements, and how to install Windows Admin Center and use it to manage your cluster. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
 
 :::image type="content" source="../../media/manage-vm/wac-in-azure-hci-dashboard.png" alt-text="Screenshot showing Windows Admin Center in the Azure portal for an Azure Stack HCI cluster, displaying the Windows Admin Center Dashboard page." lightbox="../../media/manage-vm/wac-in-azure-hci-dashboard.png":::
 
-## Overview of functionality
+## Overview of Windows Admin Center in Azure
 
-Windows Admin Center in the Azure portal provides essential tools for managing your Azure Stack HCI cluster. Clusters can be managed without the need to open any inbound port on your firewall.
+Windows Admin Center in the Azure portal provides essential tools for managing your Azure Stack HCI cluster. You can manage clusters without the need to open any inbound port on your firewall.
 
-Using Windows Admin Center in the Azure portal you can manage:
+Using Windows Admin Center in the Azure portal, you can manage:
 
 - Servers
 - Volumes
@@ -55,17 +57,22 @@ Using Windows Admin Center in the Azure portal you can manage:
 We don't support other extensions for Windows Admin Center in the Azure portal at this time.
 
 > [!WARNING]
-> If you manually installed Windows Admin Center on your cluster to manage multiple systems, enabling this capability will replace your existing instance of Windows Admin Center and removes the capability to manage other machines. You will lose access to your previously deployed instance of Windows Admin Center.
+> If you manually installed Windows Admin Center on your cluster to manage multiple systems, enabling Windows Admin Center in Azure will replace your existing instance of Windows Admin Center and removes the capability to manage other machines. You will lose access to your previously deployed instance of Windows Admin Center.
 
 ## Requirements
 
-Before you can start using the Windows Admin Center in the Azure portal to manage a hybrid machine, there are a few things that you'll need.
+This section provides the requirments for using Windows Admin Center in the Azure portal to manage a hybrid machine:
+
+- [Azure account with an active subscription](#azure-account-with-an-active-subscription)
+- [Azure permissions](#azure-permissions]
+- [Azure Stack HCI requirements](#azure-stack-hci-requirements]
+- [Networking requirements](#networking-requirements]
 
 ### Azure account with an active subscription
 
 You'll need an Azure account with an active subscription to deploy Azure Virtual Desktop. If you don't have one already, you can [create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 
-During the deployment of Windows Admin Center will attempt to register the *Microsoft.HybridConnectivity* resource provider for your subscription.  
+During the deployment of Windows Admin Center,  you'll register the *Microsoft.HybridConnectivity* resource provider for your subscription.  
 
 > [!IMPORTANT]
 > You must have permission to register a resource provider, which requires the `*/register/action` operation. This is included if you are assigned the [contributor or owner role](/azure/role-based-access-control/built-in-roles) on your subscription.
@@ -73,23 +80,23 @@ During the deployment of Windows Admin Center will attempt to register the *Micr
 > [!NOTE]
 > Resource provider registration is a one time task per subscription.
 
-To check the status of the resource provider and register if needed:
+To check the status of the resource provider, and register if needed:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Select **Subscriptions**.
 1. Select the name of your subscription.
 1. Select **Resource providers**.
 1. Search for **Microsoft.HybridConnectivity**.
-1. If the status is *NotRegistered*, select **Microsoft.HybridConnectivity**, and then select **Register**.
 1. Verify that the status of Microsoft.DesktopVirtualization is **Registered**.
+    1. If the status is *NotRegistered*, select **Microsoft.HybridConnectivity**, and then select **Register**.
 
-#### Azure permissions required
+### Azure permissions
 
 Connecting to Windows Admin center requires **Windows Admin Center Administrator Login** permissions at the Arc-enable Azure Stack HCI resource.
 
-[Learn more about assigning Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal)
+[Learn more about assigning Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
-### Azure Stack HCI
+### Azure Stack HCI requirements
 
 To use Windows Admin Center in the Azure portal, the Windows Admin Center agent must be installed on every node of your cluster via an Azure VM extension. Each node of the cluster should meet the following requirements:
 
@@ -99,11 +106,11 @@ To use Windows Admin Center in the Azure portal, the Windows Admin Center agent 
 - Azure Arc agent version 1.13.21320.014 or later
 
 > [!NOTE]
-> Windows Admin Center isn't supported in Azure China 21Vianet, Azure Government, or other non-public clouds
+> Windows Admin Center isn't supported in Azure China 21Vianet, Azure Government, or other non-public clouds.
 
-## Networking
+### Networking requirements
 
-Every node of the cluster should meet the following networking requirements:
+Every node of the Azure Stack HCI cluster must meet the following networking requirements:
 
 - Outbound internet access or an outbound port rule allowing HTTPS traffic to the following endpoints:
 
@@ -112,25 +119,25 @@ Every node of the cluster should meet the following networking requirements:
   - `*.servicebus.windows.net`
 
 > [!NOTE]
-> No Inbound ports are required in order to use Windows Admin Center.
+> No inbound ports are required in order to use Windows Admin Center.
 
 Make sure you review the [supported devices and recommended browsers](/azure/azure-portal/azure-portal-supported-browsers-devices) before accessing the Azure portal from the management machine or system.
 
-## Deployment
+## Install Windows Admin Center in the Azure portal
 
 Before you can use Windows Admin Center in the Azure portal, you must deploy the Windows Admin Center VM extension using the following steps:
 
 1. Open the Azure portal and navigate to your Azure Stack HCI cluster.
-2. Navigate to **Windows Admin Center** which can be found in the **Settings** group.
-3. Specify the port on which you wish to install Windows Admin Center and select **Install**.
+2. Under the **Settings** group, select **Windows Admin Center**.
+3. Specify the port on which you wish to install Windows Admin Center, and then select **Install**.
 
 :::image type="content" source="../../media/manage-vm/wac-in-azure-hci-install.png" alt-text="Screenshot showing the install button for Windows Admin Center on an Azure Stack HCI cluster." lightbox="../../media/manage-vm/wac-in-azure-hci-install.png":::
 
-## Connecting
+## Connect to Windows Admin Center in the Azure portal
 
-After you've installed Windows Admin Center on your cluster, here's how to connect to it and use it to manage Azure Stack HCI:
+After you've installed Windows Admin Center on your cluster, perform the following steps to connect to it and use it to manage Azure Stack HCI:
 
-1. Open the Azure portal and navigate to your Azure Stack HCI cluster, then **Windows Admin Center** in the **Settings** group.
+1. Open the Azure portal and navigate to your Azure Stack HCI cluster, and then under the **Settings** group, select **Windows Admin Center**.
 2. Select **Connect**.
 3. Enter credentials for an account with local Administrator permissions on the cluster's operating system, and then select **Sign in**.
 
@@ -140,13 +147,13 @@ Windows Admin Center opens in the portal, giving you access to the same tools yo
 
 ## How it works
 
-This feature provides connectivity to your cluster via Windows Admin Center without requiring any inbound port to be enabled on the firewall. Windows Admin Center, via the Arc agent, is able to securely establish a reverse proxy session connection with the Azure Arc service in an outbound manner.
+By using Windows Admin Center in Azure, you can connect to your cluster without requiring any inbound port to be enabled on the firewall. Windows Admin Center, via the Arc agent, is able to securely establish a reverse proxy session connection with the Azure Arc service in an outbound manner.
 
-For each Azure Stack HCI cluster that you want to manage with Windows Admin Center in the Azure portal, an agent must be deployed to all cluster nodes.
+For each Azure Stack HCI cluster that you want to manage with Windows Admin Center in the Azure portal, you must deply an agent to all the nodes in the cluster.
 
 The agent communicates to an external service that manages certificates so that you can easily connect to your cluster.
 
-Clicking **Install** does the following 3 actions:
+Clicking **Install** performs the following actions:
 
 1. Registers the *Microsoft.HybridConnectivity* resource provider on your subscription. The resource provider hosts the proxy used for communication to your Arc-enabled cluster.
 2. Deploys an Azure *endpoint* resource on top of each of your Arc-enabled resources in your cluster that enables a reverse proxy connection on the specified port. This is simply a logical resource in Azure, and doesn't deploy anything on your server itself.
@@ -155,17 +162,17 @@ Clicking **Install** does the following 3 actions:
 > [!NOTE]
 > Uninstalling Windows Admin Center does not delete the logical Azure endpoint resource. This is kept for other experiences that might leverage this resource, such as SSH.
 
-Clicking **Connect** does the following actions:
+Clicking **Connect** performs the following actions:
 
 1. The Azure portal asks the Microsoft.HybridConnectivity resource provider for access to the Arc-enabled server.
 2. The resource provider communicates with a Layer 4 SNI proxy to establish a short-lived session-specific access to one of your Arc-enabled nodes of the cluster on the Windows Admin Center port.
-3. A unique short-lived URL is generated and connection to Windows Admin Center is established from the Portal.
+3. A unique short-lived URL is generated and connection to Windows Admin Center is established from the Azure portal.
 
 Connection to Windows Admin Center is end-to-end encrypted with SSL termination happening on your cluster.
 
 ## Troubleshooting
 
-Here are some tips to try in case something isn't working. For general help troubleshooting Windows Admin Center (not specifically in Azure), see [Troubleshooting Windows Admin Center](../support/troubleshooting.md).
+Here are some tips to try in case something isn't working. For general Windows Admin Center troubleshooting (not specifically in Azure), see [Troubleshooting Windows Admin Center](../support/troubleshooting.md).
 
 ### Failed to connect error
 
@@ -234,7 +241,7 @@ Here are some tips to try in case something isn't working. For general help trou
 
 If nothing seems wrong and Windows Admin Center still won't install, open a support request with the following information:
 
-- Logs in the Azure portal. This can be found under **Settings > Extensions > AdminCenter > View Detailed Status**
+- Logs in the Azure portal. This can be found under **Settings** > **Extensions** > **AdminCenter** > **View Detailed Status**.
 - Logs on each node of the cluster. Run the following PowerShell command and share the resulting .zip file.
 
     ```powershell
@@ -250,10 +257,11 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 - Detailed error messages for failed connections aren't available yet.
 
 ## Frequently asked questions
+Find answers to the frequently asked questions about using Windows Admin Center in Azure.
 
 ### How much does it cost to use Windows Admin Center?
 
-There's no cost to using the Windows Admin Center in the Azure portal.
+There's no cost associated to use the Windows Admin Center in the Azure portal.
 
 ### Can I use Windows Admin Center to manage the virtual machines running on my cluster?
 
@@ -281,10 +289,10 @@ Furthermore, accessing Windows Admin Center from Azure requires no inbound port 
 
 To verify the value of SmePort registry setting:
 
-1. RDP into your server
-1. Open the **Registry Editor**
-1. Navigate to the key `\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ServerManagementGateway`
-1. Read the value of `SmePort` to find the port used
+1. RDP into your server.
+1. Open the **Registry Editor**.
+1. Navigate to the key `\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ServerManagementGateway`.
+1. Read the value of `SmePort` to find the port used.
 
 ### I already have Windows Admin Center installed on one or all nodes of my cluster. Can I access it from the portal?
 
@@ -296,3 +304,7 @@ Yes. You can follow the same steps outlined in this document.
 ### Is there any documentation on the general functionality of Windows Admin Center and its tools?
 
 Yes, see [Windows Admin Center overview](../overview.md) and [Manage Clusters](../use/manage-hyper-converged.md).
+
+## Next steps
+
+- [Azure Stack HCI overview](/azure-stack/hci/overview)
