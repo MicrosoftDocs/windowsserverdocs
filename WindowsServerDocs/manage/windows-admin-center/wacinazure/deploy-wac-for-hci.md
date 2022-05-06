@@ -64,9 +64,9 @@ We don't support other extensions for Windows Admin Center in the Azure portal a
 This section provides the requirments for using Windows Admin Center in the Azure portal to manage a hybrid machine:
 
 - [Azure account with an active subscription](#azure-account-with-an-active-subscription)
-- [Azure permissions](#azure-permissions]
-- [Azure Stack HCI requirements](#azure-stack-hci-requirements]
-- [Networking requirements](#networking-requirements]
+- [Azure permissions](#azure-permissions)
+- [Azure Stack HCI requirements](#azure-stack-hci-requirements)
+- [Networking requirements](#networking-requirements)
 
 ### Azure account with an active subscription
 
