@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 05/03/2022
+ms.date: 05/10/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,14 +17,25 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.3128        |1.2.1672                  |
-|Insider    |1.2.3128        |1.2.1672                  |
+|Public     |1.2.3130        |1.2.1672                  |
+|Insider    |1.2.3130        |1.2.1672                  |
+
+## Updates for version 1.2.3130
+
+*Date published: 05/10/2022*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Fixed the vulnerability known as [CVE-2022-22017](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-22017).
+- Fixed the vulnerability known as [CVE-2022-26940](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26940).
+- Fixed the vulnerability known as [CVE-2022-22015](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-22015).
+- Fixed an issue where the [Class Identifier (CLSID)-based registration of the dynamic veritual channel (DVC) plug-in](/windows/win32/termserv/dvc-plug-in-registration) wasn't working.
 
 ## Updates for version 1.2.3128
 
 *Date published: 5/03/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4VuRI), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4V9Rq), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4VpnG)
 
 - Improved Narrator application experience.
 - Accessibility improvements.
@@ -36,8 +47,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.3004
 
 *Date published: 3/29/2022*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4SWGP), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4SBQB), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4SWGO)
 
 - Fixed an issue where Narrator didn't announce grid or list views correctly.
 - Fixed an issue where the msrdc.exe process might take a long time to exit after closing the last Azure Virtual Desktop connection if customers have set a very short token expiration policy.
