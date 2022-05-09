@@ -61,7 +61,7 @@ We don't support other extensions for Windows Admin Center in the Azure portal a
 
 ## Requirements
 
-This section provides the requirments for using Windows Admin Center in the Azure portal to manage a hybrid machine:
+This section provides the requirements for using Windows Admin Center in the Azure portal to manage a hybrid machine:
 
 - [Azure account with an active subscription](#azure-account-with-an-active-subscription)
 - [Azure permissions](#azure-permissions)
@@ -257,6 +257,7 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 - Detailed error messages for failed connections aren't available yet.
 
 ## Frequently asked questions
+
 Find answers to the frequently asked questions about using Windows Admin Center in Azure.
 
 ### How much does it cost to use Windows Admin Center?
@@ -301,10 +302,9 @@ Yes. You can follow the same steps outlined in this document.
 > [!WARNING]
 > Enabling this capability will replace your existing instance of Windows Admin Center and removes the capability to manage other machines. Your previously deployed instance of Windows Admin Center will no longer be usable.
 
-### Is there any documentation on the general functionality of Windows Admin Center and its tools?
-
-Yes, see [Windows Admin Center overview](../overview.md) and [Manage Clusters](../use/manage-hyper-converged.md).
-
 ## Next steps
 
-- [Azure Stack HCI overview](/azure-stack/hci/overview)
+- Learn about [Windows Admin Center](../overview.md)
+- Learn about [managing servers with Windows Admin Center](../use/manage-servers.md)
+- Learn about [Azure Stack HCI](/azure-stack/hci/overview)
+- Learn about [connecting Azure Stack HCI to Azure](/azure-stack/hci/deploy/register-with-azure)
