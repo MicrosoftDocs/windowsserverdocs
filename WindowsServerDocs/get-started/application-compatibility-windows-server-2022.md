@@ -2,10 +2,10 @@
 title: Windows Server 2022 and Microsoft server applications compatibility
 description: Compatibility table for Windows Server 2022 and Microsoft server applications.
 ms.topic: article
-ms.author: daknappe
-author: dknappettmsft
+ms.author: roharwoo
+author: robinharwood
 manager: femila
-ms.date: 9/20/2021
+ms.date: 5/10/2021
 ---
 
 # Windows Server 2022 and Microsoft server applications compatibility
@@ -29,7 +29,7 @@ This table lists Microsoft server applications that support installation and fun
 | SQL Server 2017 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2017](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server?view=sql-server-2017&preserve-view=true) |
 | SQL Server 2019 | Yes* | Yes | Yes | [Hardware and Software Requirements for Installing SQL Server 2019](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15?view=sql-server-ver15&preserve-view=true) |
 | System Center Data Protection Manager 2019 | Yes as a backup workload.<br/>No as a DPM server. | Yes as a backup workload.<br/>No as a DPM server. | Yes | [Preparing your environment for System Center Data Protection Manager](/system-center/dpm/prepare-environment-for-dpm?view=sc-dpm-2019&preserve-view=true) |
-| System Center Data Protection Manager 2022 | Yes* | Yes | Yes | [Preparing your environment for System Center Data Protection Manager](/system-center/dpm/prepare-environment-for-dpm?view=sc-dpm-2022) |
+| System Center Data Protection Manager 2022 | Yes* | Yes | Yes | [Preparing your environment for System Center Data Protection Manager](/system-center/dpm/prepare-environment-for-dpm?view=sc-dpm-2022&preserve-view=true) |
 | System Center Operations Manager 2019 | Yes as an agent.<br/>No as a Management Server** | Yes as an agent.<br/>No as a Management Server**. | Yes | [System requirements for System Center Operations Manager](/system-center/scom/system-requirements?view=sc-om-2019&preserve-view=true) |
 | System Center Operations Manager 2022 | Yes* | Yes | Yes | [System requirements for System Center Operations Manager](/system-center/scom/system-requirements?view=sc-om-2022&preserve-view=true) |
 | System Center Virtual Machine Manager 2022 | Yes* | Yes | Yes | [System requirements for System Center Virtual Machine Manager](/system-center/vmm/system-requirements?view=sc-vmm-2022&preserve-view=true) |
