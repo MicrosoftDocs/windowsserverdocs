@@ -29,7 +29,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 - Fixed the vulnerability known as [CVE-2022-22017](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-22017).
 - Fixed the vulnerability known as [CVE-2022-26940](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26940).
 - Fixed the vulnerability known as [CVE-2022-22015](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-22015).
-- Fixed an issue where the [Class Identifier (CLSID)-based registration of the dynamic veritual channel (DVC) plug-in](/windows/win32/termserv/dvc-plug-in-registration) wasn't working.
+- Fixed an issue where the [Class Identifier (CLSID)-based registration of the dynamic virtual channel (DVC) plug-in](/windows/win32/termserv/dvc-plug-in-registration) wasn't working.
 
 ## Updates for version 1.2.3128
 
