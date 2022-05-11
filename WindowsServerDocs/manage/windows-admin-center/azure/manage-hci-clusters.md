@@ -16,7 +16,7 @@ ms.date: 05/06/2022
 
 Using Windows Admin Center in the Azure portal you can manage the Azure Stack HCI operating system of your cluster. You can securely manage your cluster from anywhere–without needing a VPN, public IP address, or other inbound connectivity to your machine.
 
-With Windows Admin Center extension in Azure, you get the management, configuration, troubleshooting, and maintenance functionality for managing your Azure Stack HCI cluster in the Azure portal. Azure Stack HCI cluster and workload management no longer requires you to establish line-of-sight or Remote Desktop Protocol (RDP)–it can all be done natively from the Azure portal. Windows Admin Center provides tools that you'd normally find in Failover cluster manager, Device Manager, Task Manager, Hyper-V Manager, and most other Microsoft Management Console (MMC) tools.
+With Windows Admin Center extension in Azure, you get the management, configuration, troubleshooting, and maintenance functionality for managing your Azure Stack HCI cluster in the Azure portal. Azure Stack HCI cluster and workload management no longer require you to establish line-of-sight or Remote Desktop Protocol (RDP)–it can all be done natively from the Azure portal. Windows Admin Center provides tools that you'd normally find in Failover cluster manager, Device Manager, Task Manager, Hyper-V Manager, and most other Microsoft Management Console (MMC) tools.
 
 This article provides an overview of using Windows Admin Center in the Azure portal, requirements, and how to install Windows Admin Center and use it to manage your cluster. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
 
@@ -92,7 +92,7 @@ To check the status of the resource provider, and register if needed:
 
 ### Azure permissions
 
-Connecting to Windows Admin center requires **Windows Admin Center Administrator Login** permissions at the Arc-enable Azure Stack HCI resource.
+Connecting to Windows Admin center requires you to have **Reader** and **Windows Admin Center Administrator Login** permissions at the Arc-enable Azure Stack HCI resource.
 
 [Learn more about assigning Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
@@ -270,7 +270,7 @@ You can install the Hyper-V role using the Roles and Features extension. Once in
 
 ### What clusters can I manage using this extension?
 
-You can use the capability to manage Arc-enabled Azure Stack HCI clusters, version 21H2 or later. You can also [use Windows Admin Center to manage your Arc-enabled servers](../wacinazure/deploy-wac-for-arc.md)
+You can use the capability to manage Arc-enabled Azure Stack HCI clusters, version 21H2 or later. You can also [use Windows Admin Center to manage your Arc-enabled servers](manage-arc-hybrid-machines.md)
 
 ### How does Windows Admin Center handle security?
 

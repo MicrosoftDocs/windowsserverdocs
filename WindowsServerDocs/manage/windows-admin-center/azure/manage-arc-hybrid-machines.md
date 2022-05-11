@@ -86,7 +86,7 @@ To check the status of the resource provider and register if needed:
 
 To install the Windows Admin Center extension for an Arc-enabled server resource, your account must be granted the **Owner**, **Contributor**, or **Windows Admin Center Administrator Login** role in Azure.
 
-Connecting to Windows Admin center requires **Windows Admin Center Administrator Login** permissions at the Arc-enabled server resource.
+Connecting to Windows Admin center requires you to have **Reader** and **Windows Admin Center Administrator Login** permissions at the Arc-enabled server resource.
 
 [Learn more about assigning Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal)
 
@@ -140,7 +140,7 @@ Windows Admin Center opens in the portal, giving you access to the same tools yo
 
 ## How it works
 
-By using Windows Admin Center in Azure, you can to your hybrid machine without requiring any inbound port to be enabled on the firewall. Windows Admin Center, via the Arc agent, is able to securely establish a reverse proxy session connection with the Azure Arc service in an outbound manner.
+By using Windows Admin Center in Azure, you can connect to your hybrid machine without requiring any inbound port to be enabled on the firewall. Windows Admin Center, via the Arc agent, is able to securely establish a reverse proxy session connection with the Azure Arc service in an outbound manner.
 
 For each hybrid machine that you want to manage with Windows Admin Center in the Azure portal, you must deploy an agent to each machine.
 
@@ -283,7 +283,7 @@ You can install the Hyper-V role using the Roles and Features extension. Once in
 
 ### What servers can I manage using this extension?
 
-You can use the capability to manage Arc-enabled Windows Server 2016 and later. You can also [use Windows Admin Center in Azure to manage Azure Stack HCI](../wacinazure/deploy-wac-for-hci.md).
+You can use the capability to manage Arc-enabled Windows Server 2016 and later. You can also [use Windows Admin Center in Azure to manage Azure Stack HCI](manage-hci-clusters.md).
 
 ### How does Windows Admin Center handle security?
 
