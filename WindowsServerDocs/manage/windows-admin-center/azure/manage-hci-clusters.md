@@ -20,7 +20,7 @@ With Windows Admin Center extension in Azure, you get the management, configurat
 
 This article provides an overview of using Windows Admin Center in the Azure portal, requirements, and how to install Windows Admin Center and use it to manage your cluster. It also answers frequently asked questions, and provides a list of known issues and tips for troubleshooting in case something doesn't work.
 
-:::image type="content" source="../../media/manage-vm/wac-in-azure-hci-dashboard.png" alt-text="Screenshot showing Windows Admin Center in the Azure portal for an Azure Stack HCI cluster, displaying the Windows Admin Center Dashboard page." lightbox="../../media/manage-vm/wac-in-azure-hci-dashboard.png":::
+:::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-hci-dashboard.png" alt-text="Screenshot showing Windows Admin Center in the Azure portal for an Azure Stack HCI cluster, displaying the Windows Admin Center Dashboard page." lightbox="../../media/manage-vm/windows-admin-center-in-azure-hci-dashboard.png":::
 
 ## Overview of Windows Admin Center in Azure
 
@@ -131,7 +131,7 @@ Before you can use Windows Admin Center in the Azure portal, you must deploy the
 2. Under the **Settings** group, select **Windows Admin Center**.
 3. Specify the port on which you wish to install Windows Admin Center, and then select **Install**.
 
-:::image type="content" source="../../media/manage-vm/wac-in-azure-hci-install.png" alt-text="Screenshot showing the install button for Windows Admin Center on an Azure Stack HCI cluster." lightbox="../../media/manage-vm/wac-in-azure-hci-install.png":::
+:::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-hci-install.png" alt-text="Screenshot showing the install button for Windows Admin Center on an Azure Stack HCI cluster." lightbox="../../media/manage-vm/windows-admin-center-in-azure-hci-install.png":::
 
 ## Connect to Windows Admin Center in the Azure portal
 
@@ -143,7 +143,7 @@ After you've installed Windows Admin Center on your cluster, perform the followi
 
 Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
-:::image type="content" source="../../media/manage-vm/wac-in-azure-hci-connect.png" alt-text="Screenshot showing the Connect button for Windows Admin Center on an Azure Stack HCI cluster." lightbox="../../media/manage-vm/wac-in-azure-hci-connect.png":::
+:::image type="content" source="../../media/manage-vm/windows-admin-center-in-azure-hci-connect.png" alt-text="Screenshot showing the Connect button for Windows Admin Center on an Azure Stack HCI cluster." lightbox="../../media/manage-vm/windows-admin-center-in-azure-hci-connect.png":::
 
 ## How it works
 
