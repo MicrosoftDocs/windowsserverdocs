@@ -2,7 +2,7 @@
 title: Configure the Server Infrastructure
 description: In this step, you install and configure the server-side components necessary to support the VPN. The server-side components include configuring PKI to distribute the certificates used by users, the VPN server, and the NPS server.
 ms.topic: article
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-MOTIV
 ms.date: 08/30/2018
 ms.reviewer: deverette
