@@ -184,7 +184,7 @@ Below are the Windows Server 2012 cloning-specific events in the Directory Servi
  **Notes and resolution** | This is a success event and only an issue if unexpected. Examine the DSA Working Directory, %systemroot%\ntds, and root of any local or removable disks for the dcclconeconfig.xml file. |
 
 | Events | Description |
-| -- |--|
+|--|--|
 | **Event ID** | **2161** |
 | **Source** | Microsoft-Windows-ActiveDirectory_DomainService |
 | **Severity** | Informational |

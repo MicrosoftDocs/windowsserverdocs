@@ -285,6 +285,6 @@ Below are two examples of what the output on the PowerShell console would look l
 ## See Also
 [Get Started with Software Inventory Logging](get-started-with-software-inventory-logging.md)
 [Software Inventory Logging Aggregator](software-inventory-logging-aggregator.md)
-[Software Inventory Logging Cmdlets in Windows PowerShell](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps)
+[Software Inventory Logging Cmdlets in Windows PowerShell](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps&preserve-view=true)
 [Import-BinaryMiLog](https://technet.microsoft.com/library/dn262592.aspx)
 [Export-BinaryMiLog](https://technet.microsoft.com/library/dn262591.aspx)
