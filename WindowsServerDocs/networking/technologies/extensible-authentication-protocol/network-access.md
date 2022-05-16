@@ -2,7 +2,7 @@
 title: Extensible Authentication Protocol (EAP) for network access
 description: This topic presents information about the Extensible Authentication Protocol (EAP) default settings that you can use to configure Windows-based computers.
 author: khdownie
-ms.author: v-kedow
+ms.author: kendownie
 ms.topic: conceptual
 ms.date: 12/28/2020
 ---

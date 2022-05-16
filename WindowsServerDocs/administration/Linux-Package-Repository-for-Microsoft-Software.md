@@ -1,10 +1,10 @@
 ---
 title: Linux Software Repository for Microsoft Products
-description: This document describes how to use and install Linux software packages for Microsoft products.
+description: This document describes how to use, install, and configure Linux software packages for Microsoft products.
 ms.topic: article
 ms.assetid: b5387444-595f-4f38-abb7-163a70ea1895
 author: victorcheng7
-ms.author: vichen
+ms.author: sethm
 ms.date: 08/14/2020
 ---
 

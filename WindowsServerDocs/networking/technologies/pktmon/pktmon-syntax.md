@@ -1,9 +1,9 @@
 ---
 title: Pktmon command formatting
-description: Use this page to understand pktmon command formatting and output.
+description: Provides an overview of Pktmon command formatting with a quick start guide and provides guidance on usage.
 ms.topic: how-to
 author: khdownie
-ms.author: v-kedow
+ms.author: kendownie
 ms.date: 10/27/2021
 ---
 

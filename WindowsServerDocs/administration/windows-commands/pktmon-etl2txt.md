@@ -1,9 +1,9 @@
 ---
 title: pktmon etl2txt
-description: Reference article for the pktmon etl2txt command.
+description: Reference article for the pktmon etl2txt command that provides a listing of parameters and what they do.
 ms.topic: reference
 author: khdownie
-ms.author: v-kedow
+ms.author: kendownie
 ms.date: 06/24/2021
 ---
 
