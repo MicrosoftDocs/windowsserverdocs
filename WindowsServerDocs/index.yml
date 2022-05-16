@@ -44,18 +44,18 @@ conceptualContent:
   items:
     - title: Upgrade Windows Server
       links:
-        - url: ./upgrade/upgrade-2016-to-2019.md
-          itemType: how-to-guide
+        - url: ./get-started/upgrade-2016-to-2019.md
+          itemType: overview
           text: Upgrade Windows Server 2016
-        - url: ./upgrade/upgrade-2012r2-to-2019.md
+        - url: ./get-started/upgrade-2012r2-to-2019.md
           itemType: how-to-guide
           text: Upgrade Windows Server 2012 R2
-        - url: ./upgrade/upgrade-2012-to-2016.md
+        - url: ./get-started/upgrade-2012-to-2016.md
           itemType: how-to-guide
           text: Upgrade Windows Server 2012
-        - url: ./upgrade/upgrade-2008r2-to-2012r2.md
+        - url: ./get-started/upgrade-2008r2-to-2012r2.md
           itemType: how-to-guide
-          text: Upgrade Windows Server 2008 R2
+          text: get-started Windows Server 2008 R2
       footerLink:
         url: ./upgrade/upgrade-overview.md
         text: See more

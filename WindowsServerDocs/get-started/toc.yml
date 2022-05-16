@@ -45,6 +45,8 @@ items:
           href: windows-server-release-info.md
         - name: Extended Security Updates
           href: extended-security-updates-overview.md
+        - name: Upgrade Windows Server
+          href: upgrade-overview.md
     - name: Concepts
       items:
         - name: Install, upgrade, or migrate
@@ -84,6 +86,16 @@ items:
               href: kms-client-activation-keys.md
         - name: Get Extended Security Updates
           href: extended-security-updates-deploy.md
+        - name: Upgrade
+          items:
+            - name: Upgrade from Windows Server 2016
+              href: upgrade-2016-to-2019.md
+            - name: Upgrade from Windows Server 2012 R2
+              href: upgrade-2012r2-to-2019.md
+            - name: Upgrade from Windows Server 2012
+              href: upgrade-2012-to-2016.md
+            - name: Upgrade from Windows Server 2008 R2
+              href: upgrade-2008r2-to-2012r2.md
     - name: Nano Server
       items: 
       - name: Install Nano Server
