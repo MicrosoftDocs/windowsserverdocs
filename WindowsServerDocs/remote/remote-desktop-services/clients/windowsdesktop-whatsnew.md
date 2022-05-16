@@ -27,7 +27,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
 - Reduced flicker when application is restored to full-screen mode from minimized state in single-monitor configuration.
-- New error message when a user opens a resource in the UI but the application can't launch.
+- New error message for when a user opens a resource in the user interface but the launch stops working without user feedback.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 
 ## Updates for version 1.2.3130
