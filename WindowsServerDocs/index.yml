@@ -44,8 +44,11 @@ conceptualContent:
   items:
     - title: Upgrade Windows Server
       links:
+        - url: ./get-started/upgrade-to-2022.md
+          itemType: how-to-guide
+          text: Upgrade to Windows Server 2022
         - url: ./get-started/upgrade-2016-to-2019.md
-          itemType: overview
+          itemType: how-to-guide
           text: Upgrade Windows Server 2016
         - url: ./get-started/upgrade-2012r2-to-2019.md
           itemType: how-to-guide
@@ -55,9 +58,9 @@ conceptualContent:
           text: Upgrade Windows Server 2012
         - url: ./get-started/upgrade-2008r2-to-2012r2.md
           itemType: how-to-guide
-          text: get-started Windows Server 2008 R2
+          text: Upgrade Windows Server 2008 R2
       footerLink:
-        url: ./upgrade/upgrade-overview.md
+        url: ./get-started/upgrade-overview.md
         text: See more
 
     - title: Identity and access
