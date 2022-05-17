@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 05/17/2022
+ms.date: 05/18/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -27,7 +27,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
 - Reduced flicker when application is restored to full-screen mode from minimized state in single-monitor configuration.
-- New error message for when a user attempts to launch a resource in the user interface that doesn't respond.
+- The client now shows an error message when the user tries to open a connection from the UI, but the connection doesn't launch.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 
 ## Updates for version 1.2.3130
