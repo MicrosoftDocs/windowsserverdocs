@@ -4,7 +4,7 @@ description: Use this article to understand what GDPR is and about the products 
 ms.topic: article
 ms.date: 09/25/2017
 ms.author: nirb
-author: nirb-ms
+author: wscontent
 ---
 
 # Beginning your General Data Protection Regulation (GDPR) journey for Windows Server
