@@ -2,7 +2,7 @@
 title: Capacity planning for Active Directory Domain Services
 description: Provides a detailed discussion of the factors to consider during capacity planning for Active Directory Domain Services.
 ms.topic: article
-ms.author: lizross
+wscontent: lizross
 author: teresa-motiv
 ms.date: 7/3/2019
 ---

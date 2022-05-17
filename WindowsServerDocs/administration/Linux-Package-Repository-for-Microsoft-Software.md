@@ -4,7 +4,7 @@ description: This document describes how to use, install, and configure Linux so
 ms.topic: article
 ms.assetid: b5387444-595f-4f38-abb7-163a70ea1895
 author: victorcheng7
-ms.author: sethm
+wscontent: sethm
 ms.date: 08/14/2020
 ---
 
