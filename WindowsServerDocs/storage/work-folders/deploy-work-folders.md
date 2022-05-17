@@ -289,4 +289,4 @@ If you have a large number of domain-joined PCs to which you want to deploy Work
 |**Understanding**|-   [Work Folders](work-folders-overview.md)|
 |**Planning**|-   [Designing a Work Folders Implementation](plan-work-folders.md)|
 |**Deployment**|-   [Deploying Work Folders with AD FS and Web Application Proxy (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Work Folders Test Lab Deployment](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)<br />-   [A new user attribute for Work Folders server Url](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (blog post)|
-|**Technical Reference**|-   [Interactive logon: Machine account lockout threshold](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj966264&preserve-view=true)<br />-   [Sync Share Cmdlets](/powershell/module/syncshare/?&preserve-view=true)|
+|**Technical Reference**|-   [Interactive logon: Machine account lockout threshold](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj966264<br />-   [Sync Share Cmdlets](/powershell/module/syncshare/)|
