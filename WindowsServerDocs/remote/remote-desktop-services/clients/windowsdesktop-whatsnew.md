@@ -53,6 +53,7 @@ Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/bi
 - Added an error message for when a user selects a credential type for smart card or Windows Hello for Business but the required smart card redirection is disabled in the RDP file.
 - Improved diagnostic for User Data Protocol (UDP)-based Remote Desktop Protocol (RDP) transport protocols.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams for Azure Virtual Desktop, including updating the WebRTC stack from version M88 to M98. M98 provides better reliability and performances when making audio and video calls.
 
 ## Updates for version 1.2.3004
 
