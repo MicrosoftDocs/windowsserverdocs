@@ -3,8 +3,8 @@ title: Beginning your General Data Protection Regulation (GDPR) journey for Wind
 description: Use this article to understand what GDPR is and about the products Microsoft provides to help you get started towards compliance.
 ms.topic: article
 ms.date: 09/25/2017
-ms.author: nirb
-author: wscontent
+ms.author: wscontent
+author: nirb-ms
 ---
 
 # Beginning your General Data Protection Regulation (GDPR) journey for Windows Server
@@ -343,17 +343,17 @@ You can use ATA to help detect attackers attempting to compromise privileged ide
 
 ## Related content for associated Windows Server 2016 solutions
 
-- **Windows Defender Antivirus:** https://www.youtube.com/watch?v=P1aNEy09NaI and https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10
+- **Windows Defender Antivirus:** https://www.youtube.com/watch?v=P1aNEy09NaI and [https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10](/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10)
 
-- **Windows Defender Advanced Threat Protection:** https://www.youtube.com/watch?v=qxeGa3pxIwg and https://docs.microsoft.com/windows/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection
+- **Windows Defender Advanced Threat Protection:** https://www.youtube.com/watch?v=qxeGa3pxIwg and [https://docs.microsoft.com/windows/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection](/windows/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection)
 
-- **Windows Defender Device Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and https://docs.microsoft.com/windows/device-security/device-guard/device-guard-deployment-guide
+- **Windows Defender Device Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and [https://docs.microsoft.com/windows/device-security/device-guard/device-guard-deployment-guide](/windows/device-security/device-guard/device-guard-deployment-guide)
 
-- **Windows Defender Credential Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard
+- **Windows Defender Credential Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and [https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard](/windows/access-protection/credential-guard/credential-guard)
 
 - **Control Flow Guard:** https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx
 
-- **Security and Assurance:** https://docs.microsoft.com/windows-server/security/security-and-assurance
+- **Security and Assurance:** [https://docs.microsoft.com/windows-server/security/security-and-assurance](/windows-server/security/security-and-assurance)
 
 ## Disclaimer
 This article is a commentary on the GDPR, as Microsoft interprets it, as of the date of publication. We've spent a lot of time with GDPR and like to think we've been thoughtful about its intent and meaning. But the application of GDPR is highly fact-specific, and not all aspects and interpretations of GDPR are well-settled.
