@@ -2,10 +2,10 @@
 title: How to get Extended Security Updates (ESU) for Windows Server 2008, 2008 R2, 2012, and 2012 R2
 description: Learn how to get Extended Security Updates (ESU) for Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2 after the end of their support lifecycle.
 ms.topic: how-to
-author: dknappettmsft
-ms.author: daknappe
+author: robinharwood
+ms.author: roharwoo
 manager: femila
-ms.date: 01/17/2022
+ms.date: 05/16/2022
 ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.custom: contperf-fy22q3
@@ -20,6 +20,9 @@ How you get Extended Security Updates depends on where your server is hosted. Ap
 For other environments, such as on-premises VMs or physical servers, you need to manually request and configure Extended Security Updates. You can purchase Extended Security Updates through Volume Licensing Programs such as Enterprise Agreement (EA), Enterprise Agreement Subscription (EAS), Enrollment for Education Solutions (EES), or Server and Cloud Enrollment (SCE).
 
 To use Extended Security Updates on non-Azure VMs, you create a Multiple Activation Key (MAK) and apply it to the relevant servers running Windows Server. This MAK key lets the Windows Update servers know that you can continue to receive security updates.
+
+> [!NOTE]
+> It may take 3-5 business days for your Multiple Activation Key to become available after purchasing Extended Security Updates for on-premises VMs or physical servers. Your organization may also require time to plan and deploy the new keys. Before purchasing Extended Security Updates, you should keep these timelines in mind.
 
 ## Azure virtual machines
 
