@@ -3,7 +3,7 @@ title: Pktmon support for Wireshark (pcapng)
 description: Describes how to convert Pktmon logs to pcapng format for analysis in Wireshark or any other pcapng analyer.
 ms.topic: how-to
 author: khdownie
-wscontent: kendownie
+ms.author: wscontent
 ms.date: 10/27/2021
 ---
 
