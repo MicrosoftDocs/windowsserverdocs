@@ -682,6 +682,39 @@ Where:
 [-f] [-config Machine\CAName] [-p password]
 ```
 
+### -exportpfx
+
+Export the certificate and private key. For more info, see the `-store` parameter in this article.
+
+```
+certutil [options] -exportpfx [certificatestorename] certid pfxfile [modifiers]
+```
+
+Where:
+
+- **certificatestorename** is the name of the certificate store.
+
+- **modifiers** are the comma-separated list, which can include one or more of the following:
+
+  1. **CryptoAlgorithm=AlgorithmString** - Cryptographic Algorithm
+
+  2. **EncryptCert** - Encrypt the certificates
+
+  3. **ExportParameters** - Export Parameters
+
+  4. **ExtendedProperties** - Include extended properties
+
+  5. **NoChain** - Doesn't export the certificate chain
+
+  6. **NoEncryptCert** - Do not encrypt the certificates
+
+  7. **NoRoot** - Doesn't emport the root certificate
+
+#### Remarks
+
+- Defaults to personal machine store.
+
+
 ### -importpfx
 
 Import the certificate and private key. For more info, see the `-store` parameter in this article.
