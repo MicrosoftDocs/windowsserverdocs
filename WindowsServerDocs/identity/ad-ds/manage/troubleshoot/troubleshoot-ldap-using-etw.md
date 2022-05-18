@@ -4,7 +4,7 @@ description: How to turn on and use ETW to trace LDAP connections between AD DS 
 author: Teresa-Motiv
 manager: dcscontentpm-dev
 audience: Admin
-ms.author: v-tea
+ms.author: wscontent
 ms.topic: article
 ms.date: 11/22/2019
 ---

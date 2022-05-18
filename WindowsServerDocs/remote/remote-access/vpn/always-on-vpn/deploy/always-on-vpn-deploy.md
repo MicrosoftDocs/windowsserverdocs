@@ -4,7 +4,7 @@ description: You can use this deployment to deploy Always On Virtual Private Net
 ms.topic: article
 ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
 ms.date: 12/20/2018
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-MOTIV
 ---
 
