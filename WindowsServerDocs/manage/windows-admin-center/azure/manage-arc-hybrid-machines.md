@@ -90,15 +90,7 @@ Connecting to Windows Admin center requires you to have **Reader** and **Windows
 
 [Learn more about assigning Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal)
 
-### Hybrid machine requirements
-
-To use Windows Admin Center in the Azure portal, the Windows Admin Center agent must be installed on each hybrid machine you wish to manage via an Azure VM extension. The hybrid machine should meet the following requirements:
-
-- Windows Server 2016 or later
-- 3 GB of RAM or more
-- Azure Arc agent version 1.13.21320.014 or later
-
-### Region availability
+#### Region availability
 Windows Admin Center is supported in the following Azure regions:
 
 - West Central US
@@ -124,6 +116,15 @@ Windows Admin Center is supported in the following Azure regions:
 
 > [!NOTE]
 > Windows Admin Center isn't supported in Azure China 21Vianet, Azure Government, or other non-public clouds
+
+
+### Hybrid machine requirements
+
+To use Windows Admin Center in the Azure portal, the Windows Admin Center agent must be installed on each hybrid machine you wish to manage via an Azure VM extension. The hybrid machine should meet the following requirements:
+
+- Windows Server 2016 or later
+- 3 GB of RAM or more
+- Azure Arc agent version 1.13.21320.014 or later
 
 ### Networking requirements
 
