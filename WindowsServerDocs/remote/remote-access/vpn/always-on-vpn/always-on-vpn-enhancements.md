@@ -2,7 +2,7 @@
 title: Always On VPN enhancements
 description: Always On VPN has many benefits over the Windows VPN solutions of the past. Key improvements in integration, security, connectivity, networking control, and compatibility align Always On VPN with Microsoft's cloud-first, mobile-first vision.
 ms.topic: article
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-MOTIV
 ms.date: 11/05/2018
 ---

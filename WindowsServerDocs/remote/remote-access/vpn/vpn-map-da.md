@@ -4,7 +4,7 @@ description: In this topic, you learn about the features and functionality of Al
 ms.topic: article
 ms.date: 11/05/2018
 ms.assetid: 8fe1c810-4599-4493-b4b8-73fa9aa18535
-ms.author: v-tea
+ms.author: wscontent
 author: Teresa-MOTIV
 ---
 
