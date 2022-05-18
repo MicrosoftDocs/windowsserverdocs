@@ -2,7 +2,7 @@
 title: Hyper-V Memory Performance
 description: Memory considerations in performance tuning Hyper-V
 ms.topic: article
-ms.author: asmahi
+ms.author: wscontent
 author: phstee
 ms.date: 10/16/2017
 ---
