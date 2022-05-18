@@ -1,11 +1,11 @@
 ---
-description: "Learn more about: Guarded Fabric and Shielded VM Planning Guide for Hosters"
+description: Describes the two major decisions that are needed to enable shielded virtual machines on a Hyper-V fabric setup.
 title: Guarded Fabric and Shielded VM Planning Guide for Hosters
 ms.topic: article
 ms.assetid: 854defc8-99f8-4573-82c0-f484e0785859
 manager: dongill
 author: nirb-ms
-ms.author: nirb
+ms.author: wscontent
 ms.date: 08/29/2018
 ---
 
@@ -18,7 +18,7 @@ This topic covers planning decisions that will need to be made to enable shielde
 - The Host Guardian Service (HGS) provides attestation and key protection so that you can make sure that shielded VMs will run only on approved and healthy Hyper-V hosts. 
 - Approved and healthy Hyper-V hosts on which shielded VMs (and regular VMs) can run — these are known as guarded hosts.
 
-![HGS and a guarded host](../media/Guarded-Fabric-Shielded-VM/guarded-host-hgs-plus-host-diagram-basic.png)
+![Diagram showing the H G S's attestation and key protection services are linked to the shielded virtual machine's guarded Hyper V hosts.](../media/Guarded-Fabric-Shielded-VM/guarded-host-hgs-plus-host-diagram-basic.png)
 
 ## Decision #1: Trust level in the fabric
 
