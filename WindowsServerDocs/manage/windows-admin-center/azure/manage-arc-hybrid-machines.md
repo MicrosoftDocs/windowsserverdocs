@@ -57,6 +57,7 @@ This section provides the requirements for using Windows Admin Center in the Azu
 
 - [Azure account with an active subscription](#azure-account-with-an-active-subscription)
 - [Azure permissions](#azure-permissions)
+- [Azure region availability](#azure-region-availability)
 - [Hybrid machine requirements](#hybrid-machine-requirements)
 - [Networking requirements](#networking-requirements)
 
@@ -90,14 +91,15 @@ Connecting to Windows Admin center requires you to have **Reader** and **Windows
 
 [Learn more about assigning Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal)
 
-#### Region availability
+### Azure region availability
+
 Windows Admin Center is supported in the following Azure regions:
 
 - West Central US
 - West US 2
 - West Europe
 - Southeast Asia
-- East US 
+- East US
 - Australia East
 - South Central US
 - East US 2
@@ -116,7 +118,6 @@ Windows Admin Center is supported in the following Azure regions:
 
 > [!NOTE]
 > Windows Admin Center isn't supported in Azure China 21Vianet, Azure Government, or other non-public clouds
-
 
 ### Hybrid machine requirements
 

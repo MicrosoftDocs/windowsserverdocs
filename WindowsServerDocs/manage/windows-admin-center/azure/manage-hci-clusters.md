@@ -65,6 +65,7 @@ This section provides the requirements for using Windows Admin Center in the Azu
 
 - [Azure account with an active subscription](#azure-account-with-an-active-subscription)
 - [Azure permissions](#azure-permissions)
+- [Azure region availability](#azure-region-availability)
 - [Azure Stack HCI requirements](#azure-stack-hci-requirements)
 - [Networking requirements](#networking-requirements)
 
@@ -96,6 +97,34 @@ Connecting to Windows Admin center requires you to have **Reader** and **Windows
 
 [Learn more about assigning Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
+### Azure region availability
+
+Windows Admin Center is supported in the following Azure regions:
+
+- West Central US
+- West US 2
+- West Europe
+- Southeast Asia
+- East US
+- Australia East
+- South Central US
+- East US 2
+- North Europe
+- France Central
+- Japan East
+- UK South
+- East Asia
+- Canada Central
+- Korea Central
+- North Central US
+- West US
+- West US 3
+- Central US
+- UK West
+
+> [!NOTE]
+> Windows Admin Center isn't supported in Azure China 21Vianet, Azure Government, or other non-public clouds
+
 ### Azure Stack HCI requirements
 
 To use Windows Admin Center in the Azure portal, the Windows Admin Center agent must be installed on every node of your cluster via an Azure VM extension. Each node of the cluster should meet the following requirements:
@@ -104,9 +133,6 @@ To use Windows Admin Center in the Azure portal, the Windows Admin Center agent 
 - 3 GB of memory or more
 - The Azure Stack HCI cluster must be [connected to Azure using Azure Arc](/azure-stack/hci/deploy/register-with-azure)
 - Azure Arc agent version 1.13.21320.014 or later
-
-> [!NOTE]
-> Windows Admin Center isn't supported in Azure China 21Vianet, Azure Government, or other non-public clouds.
 
 ### Networking requirements
 
