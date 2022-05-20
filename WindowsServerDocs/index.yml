@@ -44,9 +44,9 @@ conceptualContent:
   items:
     - title: Upgrade Windows Server
       links:
-        - url: ./get-started/upgrade-to-2022.md
+        - url: ./get-started/perform-in-place-upgrade.md
           itemType: how-to-guide
-          text: Upgrade to Windows Server 2022
+          text: Perform an in-place upgrade
         - url: ./get-started/upgrade-2016-to-2019.md
           itemType: how-to-guide
           text: Upgrade Windows Server 2016

@@ -88,8 +88,8 @@ items:
           href: extended-security-updates-deploy.md
         - name: Upgrade
           items:
-            - name: Upgrade to Windows Server 2022
-              href: upgrade-to-2022.md
+            - name: Perform an in-place upgrade
+              href: perform-in-place-upgrade.md
             - name: Upgrade from Windows Server 2016
               href: upgrade-2016-to-2019.md
             - name: Upgrade from Windows Server 2012 R2

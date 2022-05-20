@@ -1,25 +1,28 @@
 ---
-title: Upgrade to Windows Server 2022 | Microsoft Docs
-description: Learn how to perform an in-place upgrade to Windows Server 2022.
+title: Perform an in-place upgrade of Windows Server | Microsoft Docs
+description: Learn how to perform an in-place upgrade to Windows Server.
 ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 05/19/2022
+#Customer intent: As a server administrator, I want upgrade Windows Server, so that my server remains supported.
 ---
 
-# Upgrade to Windows Server 2022
+# Perform an in-place upgrade of Windows Server
 
-An in-place upgrade allows you to go from an older operating system to a newer one while keeping your settings, server roles, and data intact. This article will teach you how to move to Windows Server 2022 using an in-place upgrade.
+An in-place upgrade allows you to go from an older operating system to a newer one while keeping your settings, server roles, and data intact. This article will teach you how to move to a later version of Windows Server using an in-place upgrade.
 
 ## Prerequisites
 
 Before you start upgrading, your computer must meet the following requirements:
 
+- You have determined [which version of Windows Server should I upgrade to](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to).
 - The hardware meets or exceeds the [hardware requirements for Windows Server](hardware-requirements.md).
-- The operating system is Windows Server 2016 or later.
 - You have the install media ready to use.
 - You have the product key and an available activation method. Keys and methods may depend based on the distribution channel that you received Windows Server media from, for example, a Commercial Licensing program, Retail, Original Equipment Manufacturer (OEM), and so on.
 - You've reviewed [upgrade and migrate roles and features in Windows Server](upgrade-migrate-roles-features.md).
+- You've reviewed [Microsoft server applications compatibility](application-compatibility-windows-server-2022.md).
+- You've reviewed any 3rd party application vendors support requirements.
 
 ## Before you begin your in-place upgrade
 
@@ -45,51 +48,54 @@ To perform the in-place upgrade:
 
 1. Open the Registry Editor, go to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** key, and confirm the **ProductName** is Windows Server 2016 or later.
 
-1. Locate the Windows Server 2022 Setup media, and then select **setup.exe**.
+1. Using File Explorer, navigate to the Windows Server Setup media. Then select **setup.exe**. For example, if you are using removal media this might be D:\setup.exe.
 
-    ![Windows Explorer showing the setup.exe file](media/upgrade-2022/setup-2022-file-structure.png)
+    ![Windows Explorer showing the setup.exe file](media/upgrade/setup-2022-file-structure.png)
+
+    > [!IMPORTANT]
+    >  Depending on your security settings, User Account Control may prompt you to allow setup to make changes to your device. If you're happy to continue select **Yes**.
 
 1. By default, setup will automatically download updates for the installation. If you're okay with the default settings, select **Next** to continue. If you don't want Setup to automatically download updates, select **Change how Setup downloads updates**.
 
-    ![Install Windows Server setup screen](media/upgrade-2022/install-windows-server.png)
+    ![Install Windows Server setup screen](media/upgrade/install-windows-server.png)
 
     If you selected **Change how Setup downloads updates**, choose the option appropriate to your environment, then select **Next**.
 
-    ![Screen to choose to go online to get important Windows updates](media/upgrade-2022/download-updates-drivers-win-setup.png)
+    ![Screen to choose to go online to get important Windows updates](media/upgrade/download-updates-drivers-win-setup.png)
 
 1. Next, Setup will download any required updates, and will check your device configuration. Depending on the distribution channel that you received Windows Server media from (Retail, Volume License, OEM, ODM, etc.) and the license for the server, you may be prompted to enter a product key to continue.
 
-    ![Screen to enter your product key](media/upgrade-2022/product-key.png)
+    ![Screen to enter your product key](media/upgrade/product-key.png)
 
-1. Select the edition of Windows Server 2022 you want to install, then select **Next**.
+1. Select the edition of Windows Server you want to install, then select **Next**.
 
-    ![Screen to choose which Windows Server 2019 edition to install](media/upgrade-2022/select-os-edition.png)
+    ![Screen to choose which Windows Server edition to install](media/upgrade/select-os-edition.png)
 
 1. Select **Accept** to agree to the terms of your licensing agreement. The agreement may vary based on your distribution channel (such as a Commercial Licensing program, Retail, OEM, and so on.).
 
-    ![Screen to accept your license agreement](media/upgrade-2022/license-terms.png)
+    ![Screen to accept your license agreement](media/upgrade/license-terms.png)
 
 1. Select **Keep personal files and apps** to choose to do an in-place upgrade, then select **Next**.
 
-    ![Screen to choose your installation type](media/upgrade-2022/choose-install-upgrade.png)
+    ![Screen to choose your installation type](media/upgrade/choose-install-upgrade.png)
 
 1. After Setup finishes analyzing your device, select **Install** to continue the upgrade.
 
-    ![Screen showing you're ready to start the upgrade](media/upgrade-2022/ready-to-install.png)
+    ![Screen showing you're ready to start the upgrade](media/upgrade/ready-to-install.png)
 
     1. The in-place upgrade will start, and you should see a progress bar. After the upgrade finishes, your server will restart.
 
-    ![Screen showing your upgrade progress](media/upgrade-2022/upgrading-windows-with-progress.png)
+    ![Screen showing your upgrade progress](media/upgrade/upgrading-windows-with-progress.png)
 
 ## Checking if your upgrade was successful
 
-After the upgrade to Windows Server 2022 is done, you must make sure the upgrade was successful.
+After the upgrade to Windows Server is done, you must make sure the upgrade was successful.
 
 To make sure your upgrade was successful:
 
-1. Open the Registry Editor, then go to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** key and view the **ProductName** value. You should see your edition of Windows Server 2022. For example, if you installed Windows Server 2022 Datacenter, you should see "Windows Server 2022 Datacenter" in the value.
+1. Open the Registry Editor, then go to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** key and view the **ProductName** value. Verify the version and edition match the media and values you selected during setup. For example, if you installed Windows Server 2022 Datacenter, you should see "Windows Server 2022 Datacenter" in the value.
 
-2. Make sure all of your applications are running and that your client connections to the applications are successful.
+1. Make sure all of your applications are running and that your client connections to the applications are successful.
 
 If your machine isn't working as expected after the upgrade, copy and zip the **%SystemRoot%\Panther** (usually located at **C:\Windows\Panther**) directory and contact Microsoft support.
 
