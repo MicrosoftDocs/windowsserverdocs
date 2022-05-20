@@ -12,7 +12,7 @@ ms.topic: article
 Integrated Windows authentication enables users to log in with their Windows credentials and experience single-sign on (SSO), using Kerberos or NTLM.
 
 ## Reason integrated windows authentication fails
-There are three main reason why integrated windows authentication will fail. They are:
+There are three main reasons why integrated windows authentication will fail. They are:
 	- Service Principal Name(SPN) misconfiguration
 	- Channel Binding Token
 	- Internet Explorer configuration
@@ -53,7 +53,7 @@ For more information on this see [Best Practices for Secure Planning and Deploym
 
 ## Internet Explorer configuration
 
-By default, Internet explorer will be have the following way:
+By default, Internet explorer will behave the following way:
 
 1. Internet explorer will receive a 401 response from AD FS with the word NEGOTIATE in the header.
 2. This tells the web browser to get a Kerberos or NTLM ticket to send back to AD FS.
