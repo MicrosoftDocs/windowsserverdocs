@@ -40,14 +40,14 @@ Currently, when a client application authenticates itself to the server using Ke
 
 The Channel Binding Token is a property of the TLS-secured outer channel, and is used to bind the outer channel to a conversation over the client-authenticated inner channel.
 
-If there is a "man-in-the-middle" attack occurring and they are decrypting and re-encrypting the SSL traffic, then the key will not match.  AD FS will determine that there is something sitting in the middle between the web browse r and itself.  This will cause the Kerberos authentication to fail and the user will be prompted with a 401 dialog instead of an SSO experience.
+If there is a "man-in-the-middle" attack occurring and they are decrypting and re-encrypting the SSL traffic, then the key will not match.  AD FS will determine that there is something sitting in the middle between the web browser and itself. This will cause the Kerberos authentication to fail and the user will be prompted with a 401 dialog instead of an SSO experience.
 
-This can be cause by:
- - anything sitting in between the browser and AD FS
+This can be caused by:
+ - Anything sitting in between the browser and AD FS
  - Fiddler
  - Reverse proxies performing SSL bridging
 
-By default, AD FS has this set to "None".  You can change this setting using the PowerShell cmdlet `Set-ADFSProperties -ExtendedProtectionTokenCheck`
+By default, AD FS has this set to "Allow".  You can change this setting using the PowerShell cmdlet `Set-ADFSProperties -ExtendedProtectionTokenCheck`
 
 For more information on this see [Best Practices for Secure Planning and Deployment of AD FS](../../ad-fs/design/best-practices-for-secure-planning-and-deployment-of-ad-fs.md).
 
