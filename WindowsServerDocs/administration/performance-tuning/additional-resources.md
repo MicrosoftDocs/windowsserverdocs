@@ -26,7 +26,7 @@ Use the links in this topic to learn more about the concepts that were discussed
 
 -   [Using PowerCfg to Evaluate System Energy Efficiency](/previous-versions/windows/it-pro/windows-vista/cc748940(v=ws.10))
 
--   [Interrupt-Affinity Policy Tool](https://support.microsoft.com/kb/252867)
+-   [Interrupt-Affinity Policy Tool](/windows-hardware/drivers/kernel/interrupt-affinity-and-priority)
 
 ## Networking Subsystem Tuning Resources
 
