@@ -215,6 +215,12 @@ Here are some tips to try in case something isn't working. For general  Windows 
 
 ### Failed to connect error
 
+1. Check that your Extension version is 0.0.0.169 or higher
+    1. Navigate to the Azure Portal
+    1. Nvigate to "Extensions"
+    1. Check that the "AdminCenter" extension version is 0.0.0.169 or higher
+    1. If not, uninstall the extension and reinstall it
+    
 1. Make sure that the Windows Admin Center service is running on your machine.
     1. RDP into your server.
     1. Open **Task Manager (Ctrl+Shift+Esc)** and navigate to **Services**.
