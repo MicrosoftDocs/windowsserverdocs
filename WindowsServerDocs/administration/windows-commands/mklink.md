@@ -49,4 +49,4 @@ del \MyFile.file
 
 - [rd command](rd.md)
 
-- [New-Item in Windows PowerShell](/powershell/module/microsoft.powershell.management/new-item?view=powershell-6)
+- [New-Item in Windows PowerShell](/powershell/module/microsoft.powershell.management/new-item?view=powershell-6&preserve-view=true)
