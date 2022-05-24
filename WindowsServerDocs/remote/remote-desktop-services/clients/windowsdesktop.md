@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/15/2021
+ms.date: 05/24/2022
 ---
 # Get started with the Windows Desktop client
 
@@ -20,7 +20,7 @@ You can use the Remote Desktop client for Windows Desktop to access Windows apps
 
 ## Install the client
 
-Choose the client that matches the version of Windows. The new Remote Desktop client (MSRDC) supports Windows 10, Windows 10 IoT Enterprise, and Windows 7 client devices.
+Choose the client that matches the version of Windows. The new Remote Desktop client (MSRDC) supports Windows 11, Windows 10, Windows 10 IoT Enterprise, and Windows 7 client devices.
 
 - [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2068602)
 - [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2098960)
