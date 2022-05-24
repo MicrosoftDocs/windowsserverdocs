@@ -47,7 +47,7 @@ When you enable USB port redirection, all USB devices attached to USB ports are 
 |---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
 | Cameras             | X                         | X                           |               |         |   X         | X                               |               |
 | Clipboard           | X                         | X                           | X             | Text    | Text, images | X                               | Text          |
-| Local drive/storage | X                         | X                           |               | X       |   X        | X                               |               |
+| Local drive/storage | X                         | X                           |               | X       |   X        | X                               | X              |
 | Location            | X                         | X                           |               |         |             |                                 |               |
 | Microphones         | X                         | X                           | X             | X       |  X          | X                               | X            |
 | Printers            | X                         | X                           |               |         |             | X (CUPS only)                   | PDF print     |
