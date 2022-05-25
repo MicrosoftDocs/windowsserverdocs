@@ -38,15 +38,20 @@ To collect your info:
 
 1. Next, enter **ipconfig /all** into the command prompt, then copy and paste the resulting configuration information into the same location you used in step 2.
 
-1. Open the Registry Editor, go to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** key, and then copy and paste the Windows Server **BuildLabEx** and **EditionID** values into the same location you used in steps 2 and 3.
+1. Open an elevated PowerShell prompt, run the following command, and then copy and paste the **WindowsBuildLabEx** and **WindowsEditionID** values into the same location you used in steps 2 and 3.
 
-After you've collected all of your Windows Server-related information, we highly recommend that you backup your server operating system, apps, and virtual machines. You must also **Shut down**, **Quick migrate**, or **Live migrate** any virtual machines currently running on the server. You can't have any virtual machines running during the in-place upgrade.
+   ```powershell
+   Get-ComputerInfo -Property "WindowsProductName"
+   ```
+
+> [!TIP]
+> Get-ComputerInfo requires PowerShell 5.1 or later. If your Windows Server version doesn't include Powershell you can find this information in the registry. Open Registry Editor, go to the  **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** key, and then copy and paste the Windows Server **BuildLabEx** and **EditionID** values.
+
+After you've collected all of your Windows Server-related information, we highly recommend that you backup your server operating system, apps, and virtual machines. You must also shut down, quick migrate, or live migrate any virtual machines currently running on the server. You can't have any virtual machines running during the in-place upgrade.
 
 ## Perform the upgrade
 
 To perform the in-place upgrade:
-
-1. Open the Registry Editor, go to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** key, and confirm the **ProductName** is Windows Server 2016 or later.
 
 1. Using File Explorer, navigate to the Windows Server Setup media. Then select **setup.exe**. For example, if you are using removal media this might be D:\setup.exe.
 
@@ -71,7 +76,7 @@ To perform the in-place upgrade:
 
     ![Screen to choose which Windows Server edition to install](media/upgrade/select-os-edition.png)
 
-1. Select **Accept** to agree to the terms of your licensing agreement. The agreement may vary based on your distribution channel (such as a Commercial Licensing program, Retail, OEM, and so on.).
+1. To upgrade, you must accept the applicable notices and license terms by selecting **Accept**. The agreement may vary based on your distribution channel (such as a Commercial Licensing program, Retail, OEM, and so on.).
 
     ![Screen to accept your license agreement](media/upgrade/license-terms.png)
 
@@ -93,7 +98,11 @@ After the upgrade to Windows Server is done, you must make sure the upgrade was 
 
 To make sure your upgrade was successful:
 
-1. Open the Registry Editor, then go to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** key and view the **ProductName** value. Verify the version and edition match the media and values you selected during setup. For example, if you installed Windows Server 2022 Datacenter, you should see "Windows Server 2022 Datacenter" in the value.
+1. Open an elevated PowerShell prompt, run the following command to verify the version and edition matches the media and values you selected during setup. For example, if you installed Windows Server 2022 Datacenter, you should see "Windows Server 2022 Datacenter" in the output.
+
+   ```powershell
+   Get-ComputerInfo -Property "WindowsProductName"
+   ```
 
 1. Make sure all of your applications are running and that your client connections to the applications are successful.
 
@@ -101,7 +110,7 @@ If your machine isn't working as expected after the upgrade, copy and zip the **
 
 ## Next steps
 
-Now that you've installed Windows Server 2022, here are some articles that might help you as you use the new version:
+Now that you've upgraded Windows Server, here are some articles that might help you as you use the new version:
 
 - [Install or Uninstall Roles, Role Services, or Features](../administration/server-manager/install-or-uninstall-roles-role-services-or-features.md)
 - [Windows Server management overview](../administration/overview.md)

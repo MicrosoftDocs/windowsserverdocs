@@ -86,18 +86,8 @@ items:
               href: kms-client-activation-keys.md
         - name: Get Extended Security Updates
           href: extended-security-updates-deploy.md
-        - name: Upgrade
-          items:
-            - name: Perform an in-place upgrade
-              href: perform-in-place-upgrade.md
-            - name: Upgrade from Windows Server 2016
-              href: upgrade-2016-to-2019.md
-            - name: Upgrade from Windows Server 2012 R2
-              href: upgrade-2012r2-to-2019.md
-            - name: Upgrade from Windows Server 2012
-              href: upgrade-2012-to-2016.md
-            - name: Upgrade from Windows Server 2008 R2
-              href: upgrade-2008r2-to-2012r2.md
+        - name: Perform an in-place upgrade
+          href: perform-in-place-upgrade.md
     - name: Nano Server
       items: 
       - name: Install Nano Server
