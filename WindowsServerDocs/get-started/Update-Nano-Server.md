@@ -39,7 +39,7 @@ After downloading the .msu files from the Microsoft Update Catalog, save them to
 Now you can use the extracted .cab files to apply the updates to a Nano Server image in a few different ways, depending on your needs. The following options are presented in no particular order of preference - use the option that makes the most sense for your environment.
 
 > [!NOTE]
-> When using the DISM tools to service Nano Server, you must use a version of DISM that is the same as or newer than the version of Nano Server you're servicing. You can achieve this by running DISM from a matching version of Windows, installing a matching version of the [Windows Asssessment and Deployment Kit (ADK)](https://developer.microsoft.comwindows/hardware/windows-assessment-deployment-kit), or running DISM on Nano Server itself.
+> When using the DISM tools to service Nano Server, you must use a version of DISM that is the same as or newer than the version of Nano Server you're servicing. You can achieve this by running DISM from a matching version of Windows, installing a matching version of the [Windows Asssessment and Deployment Kit (ADK)](/windows-server-essentials/install/assessment-and-deployment-kit-for-windows-server-essentials), or running DISM on Nano Server itself.
 
 ## Option 1: Integrate a cumulative update into a new image
 If you are building a new Nano Server image, you can integrate the latest cumulative update directly into the image so that it's fully patched on first boot.

@@ -219,7 +219,7 @@ Currently, the way to automate update installation is to convert the steps above
 [comment]: # (from Venkat Yalla.)
 Nano Server fully supports the [Event Tracing for Windows](/windows/win32/etw/event-tracing-portal) (ETW) framework, but some familiar tools used to manage tracing and performance counters are not currently available on Nano Server. However, Nano Server has tools and cmdlets to accomplish most common performance analysis scenarios.
 
-The high-level workflow remains the same as on any Window Server installation -- low-overhead tracing is performed on the target (Nano Server) computer, and the resulting trace files and/or logs are post-processed offline on a separate computer using tools such as [Windows Performance Analyzer](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10)), [Message Analyzer](https://www.microsoft.com/download/details.aspx?id=44226), or others.
+The high-level workflow remains the same as on any Window Server installation -- low-overhead tracing is performed on the target (Nano Server) computer, and the resulting trace files and/or logs are post-processed offline on a separate computer using tools such as [Windows Performance Analyzer](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10)), [Message Analyzer](/message-analyzer/installing-and-upgrading-message-analyzer), or others.
 
 > [!NOTE]
 > Refer to [How to copy files to and from Nano Server](/previous-versions/windows/desktop/legacy/mt708806(v=vs.85)) for a refresher on how to transfer files using PowerShell remoting.
