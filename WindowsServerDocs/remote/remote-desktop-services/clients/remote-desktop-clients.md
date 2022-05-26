@@ -6,7 +6,7 @@ ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
 author: HeidiLohr
 manager: femila
 ms.author: helohr
-ms.date: 05/25/2022
+ms.date: 05/26/2022
 ---
 # Remote Desktop clients
 
