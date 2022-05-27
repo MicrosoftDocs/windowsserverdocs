@@ -138,7 +138,7 @@ If you're using the storage pool cache, there must be at least 2 more drives con
 
 #### Virtual deployment
 
-This table shows the minimum number of drives by type for virtual deployments such as Windows Server guest VM and Windows Server Azure Edition.
+This table shows the minimum number of drives by type for virtual deployments such as Windows Server guest VMs or Windows Server Azure Edition.
 
 | Drive type present (capacity only) | Minimum drives required |
 |------------------------------------|-------------------------|
