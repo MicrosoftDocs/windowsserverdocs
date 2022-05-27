@@ -101,26 +101,10 @@ Connecting to Windows Admin center requires you to have **Reader** and **Windows
 
 Windows Admin Center is supported in the following Azure regions:
 
-- West Central US
-- West US 2
+- East US
 - West Europe
 - Southeast Asia
-- East US
 - Australia East
-- South Central US
-- East US 2
-- North Europe
-- France Central
-- Japan East
-- UK South
-- East Asia
-- Canada Central
-- Korea Central
-- North Central US
-- West US
-- West US 3
-- Central US
-- UK West
 
 > [!NOTE]
 > Windows Admin Center isn't supported in Azure China 21Vianet, Azure Government, or other non-public clouds
@@ -140,7 +124,7 @@ Every node of the Azure Stack HCI cluster must meet the following networking req
 
 - Outbound internet access or an outbound port rule allowing HTTPS traffic to the following endpoints:
 
-  - `*.wac.azure.com` or the `WindowsAdminCenter` [service tag](/azure/virtual-network/service-tags-overview) when using hybrid machines in Azure
+  - `*.wac.azure.com` or the `WindowsAdminCenter` [service tag](/azure/azure-arc/servers/network-requirements#service-tags) when using hybrid machines in Azure
   - `pas.windows.net`
   - `*.servicebus.windows.net`
 

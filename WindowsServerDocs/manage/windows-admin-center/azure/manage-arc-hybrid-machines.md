@@ -63,9 +63,9 @@ This section provides the requirements for using Windows Admin Center in the Azu
 
 ### Azure account with an active subscription
 
-You'll need an Azure account with an active subscription to deploy Azure Virtual Desktop. If you don't have one already, you can [create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+You'll need an Azure account with an active subscription to deploy Windows Admin Center. If you don't have one already, you can [create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 
-During the deployment of Windows Admin Center will attempt to register the *Microsoft.HybridConnectivity* resource provider for your subscription.  
+During the deployment of Windows Admin Center, we will attempt to register the *Microsoft.HybridConnectivity* resource provider for your subscription.
 
 > [!IMPORTANT]
 > You must have permission to register a resource provider, which requires the `*/register/action` operation. This is included if you are assigned the [contributor or owner role](/azure/role-based-access-control/built-in-roles) on your subscription.
@@ -133,7 +133,7 @@ The hybrid machine must meet the following networking requirements:
 
 - Outbound internet access or an outbound port rule allowing HTTPS traffic to the following endpoints:
 
-  - `*.wac.azure.com` or the `WindowsAdminCenter` [service tag](/azure/virtual-network/service-tags-overview) when using hybrid machines in Azure
+  - `*.wac.azure.com` or the `WindowsAdminCenter` [service tag](/azure/azure-arc/servers/network-requirements#service-tags) when using hybrid machines in Azure
   - `pas.windows.net`
   - `*.servicebus.windows.net`
 
