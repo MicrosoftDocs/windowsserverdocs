@@ -71,7 +71,7 @@ This section provides the requirements for using Windows Admin Center in the Azu
 
 ### Azure account with an active subscription
 
-You'll need an Azure account with an active subscription to deploy Azure Virtual Desktop. If you don't have one already, you can [create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
+You'll need an Azure account with an active subscription to deploy Windows Admin Center. If you don't have one already, you can [create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
 
 During the deployment of Windows Admin Center,  you'll register the *Microsoft.HybridConnectivity* resource provider for your subscription.  
 
