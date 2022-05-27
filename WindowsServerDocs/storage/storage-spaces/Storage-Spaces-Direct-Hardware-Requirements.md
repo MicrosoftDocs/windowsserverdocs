@@ -138,7 +138,7 @@ If you're using the storage pool cache, there must be at least 2 more drives con
 
 #### Virtual deployment
 
-This table shows the minimum number of drives by type for hardware deployments such as Azure Stack HCI, Windows Server, and Windows Server Azure Edition.
+This table shows the minimum number of drives by type for virtual deployments such as Windows Server guest VM and Windows Server Azure Edition.
 
 | Drive type present (capacity only) | Minimum drives required |
 |------------------------------------|-------------------------|
@@ -149,7 +149,7 @@ This table shows the minimum number of drives by type for hardware deployments s
 
 If you're using Storage Spaces Direct in a virtual environment, you must consider:
 
-- Virtual disks aren't susceptible to failures like physical, however you're dependent on the performance and reliability of the public or private cloud
+- Virtual disks aren't susceptible to failures like physical drives are, however you're dependent on the performance and reliability of the public or private cloud
 - It's recommended to use a single tier of low latency / high performance storage
 - Virtual disks must be used for capacity only
 
