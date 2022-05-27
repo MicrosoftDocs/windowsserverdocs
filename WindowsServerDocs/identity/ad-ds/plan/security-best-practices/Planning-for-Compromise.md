@@ -25,7 +25,7 @@ Whether your infrastructure has never been attacked, has resisted attempted brea
 
 To create effective defenses while still providing services to the users and businesses that depend on your infrastructure and applications, you may need to consider novel ways to prevent, detect, and contain compromise in your environment, and then recover from the compromise. The approaches and recommendations in this document may not help you repair a compromised Active Directory installation, but can help you secure your next one.
 
-Recommendations for recovering an Active Directory forest are presented in [Windows Server 2012: Planning for Active Directory Forest Recovery](https://www.microsoft.com/download/details.aspx?id=16506). You may be able to prevent your new environment from being completely compromised, but even if you can't, you will have tools to recover and regain control of your environment.
+Recommendations for recovering an Active Directory forest are presented in [Windows Server 2012: Planning for Active Directory Forest Recovery](/windows-server/identity/ad-ds/manage/ad-forest-recovery-steps-for-restoring). You may be able to prevent your new environment from being completely compromised, but even if you can't, you will have tools to recover and regain control of your environment.
 
 ## Rethinking the Approach
 *Law Number Eight: The difficulty of defending a network is directly proportional to its complexity.* - [10 Immutable Laws of Security Administration](/previous-versions/cc722488(v=technet.10))

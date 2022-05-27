@@ -34,7 +34,7 @@ There are three kinds of registered devices, all of which are represented as Dev
 For more information on the different ways to register devices, see also:
 * [Using Windows 10 devices in your workplace](/azure/active-directory/devices/overview)
 * [Setting up Windows 10 devices for work](https://jairocadena.com/2016/01/18/setting-up-windows-10-devices-for-work-domain-join-azure-ad-join-and-add-work-or-school-account/)
-[Join Windows 10 Mobile to Azure Active Directory](/windows/client-management/join-windows-10-mobile-to-azure-active-directory)
+[Join Windows 10 Mobile to Azure Active Directory](/azure/active-directory/devices/azuread-joined-devices-frx)
 
 ### How Windows 10 User and Device Sign-on is different from previous versions
 For Windows 10 and AD FS 2016, there are some new aspects of device registration and authentication you should know about (especially if you are familiar with device registration and "workplace join" in previous releases).
@@ -80,26 +80,28 @@ For complete list of AD FS 2016 device and conditional access claims, see [Refer
 
 
 ## Reference
-#### Complete list of new AD FS 2016 and device claims
+#### [Updates and breaking changes - Microsoft identity platform | Microsoft Docs](/azure/active-directory/develop/reference-breaking-changes)
+
+<!--#### Complete list of new AD FS 2016 and device claims
 
 * https://schemas.microsoft.com/ws/2014/01/identity/claims/anchorclaimtype
-* http://schemas.xmlsoap.org/ws/2005/05/identity/claims/implicitupn
+* https://schemas.xmlsoap.org/ws/2005/05/identity/Identity_Selector_Interoperability_Profile_V1.5.pdf
 * https://schemas.microsoft.com/2014/03/psso
 * https://schemas.microsoft.com/2015/09/prt
 * http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn
 * https://schemas.microsoft.com/ws/2008/06/identity/claims/primarygroupsid
 * https://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid
-* http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name
+* https://schemas.xmlsoap.org/ws/2005/05/identity/Identity_Selector_Interoperability_Profile_V1.5_Web_Guide.pdf
 * https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname
 * https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid
 * https://schemas.microsoft.com/2012/01/devicecontext/claims/registrationid
-* https://schemas.microsoft.com/2012/01/devicecontext/claims/displayname
+* /dotnet/api/system.security.claims.claimtypes.windowsdeviceclaim
 * https://schemas.microsoft.com/2012/01/devicecontext/claims/identifier
 * https://schemas.microsoft.com/2012/01/devicecontext/claims/ostype
 * https://schemas.microsoft.com/2012/01/devicecontext/claims/osversion
 * https://schemas.microsoft.com/2012/01/devicecontext/claims/ismanaged
 * https://schemas.microsoft.com/2012/01/devicecontext/claims/isregistereduser
-* https://schemas.microsoft.com/2014/02/devicecontext/claims/isknown
+* /dotnet/api/system.security.claims.claimtypes.windowsdeviceclaim
 * https://schemas.microsoft.com/2014/02/deviceusagetime
 * https://schemas.microsoft.com/2014/09/devicecontext/claims/iscompliant
 * https://schemas.microsoft.com/2014/09/devicecontext/claims/trusttype
@@ -111,4 +113,4 @@ For complete list of AD FS 2016 device and conditional access claims, see [Refer
 * https://schemas.microsoft.com/2012/01/requestcontext/claims/relyingpartytrustid
 * https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-ip
 * https://schemas.microsoft.com/2014/09/requestcontext/claims/userip
-* https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod
+* https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod-->
