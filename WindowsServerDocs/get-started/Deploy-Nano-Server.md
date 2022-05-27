@@ -67,7 +67,7 @@ This table shows the roles and features that are available in this release of Na
 | Internet Information Server (IIS) | -Package Microsoft-NanoServer-IIS-Package<p>**Note:** See [IIS on Nano Server](IIS-on-Nano-Server.md) for details about working with IIS. |
 | Host support for Windows Containers | -Containers |
 | System Center Virtual Machine Manager agent | -Package Microsoft-NanoServer-SCVMM-Package<p>-Package Microsoft-NanoServer-SCVMM-Compute-Package<p>**Note:** Use the SCVMM Compute package only if you are monitoring Hyper-V. For hyper-converged deployments in VMM, you should also specify the -Storage parameter. For more details, see the [VMM documentation](/system-center/vmm/hyper-v-nano?view=sc-vmm-2016&preserve-view=true). |
-| System Center Operations Manager agent | Installed separately. See the System Center Operations Manager documentation for more details at /system-center/scom/manage-deploy-windows-agent-nano?view=sc-om-2016&preserve-view=true |
+| System Center Operations Manager agent | Installed separately. See the System Center Operations Manager documentation for more details at [Install Agent on Nano Server](/system-center/scom/manage-deploy-windows-agent-nano?view=sc-om-2016&preserve-view=true )|
 | Data Center Bridging (including DCBQoS) | -Package Microsoft-NanoServer-DCB-Package |
 | Deploying on a virtual machine | -Package Microsoft-NanoServer-Guest-Package |
 | Deploying on a physical machine | - Package Microsoft-NanoServer-Host-Package |
