@@ -5,6 +5,7 @@ ms.topic: overview
 author: prasidharora
 ms.author: praror
 ms.date: 04/09/2022
+ms.custom: references_regions
 ---
 # Manage Azure Arc-enabled Servers using Windows Admin Center in Azure (preview)
 
