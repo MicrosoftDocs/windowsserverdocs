@@ -90,7 +90,7 @@ There are a number of requirements for this scenario:
 
     3.  Security group-To exempt users from strong authentication, an Active Directory security group containing these users is required.
 
-    4.  Client\-side requirements-For Windows 10 and Windows 8 client computers, the Network Connectivity Assistant \(NCA\) service is used to detect whether OTP credentials are required. If they are, the DirectAccess Media Manager prompts for credentials.  NCA is included in the operating system, and no installation or deployment is required. For Windows 7 client computers, DirectAccess Connectivity Assistant \(DCA\) 2.0 is required. This is available as a download on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29039).
+    4.  Client\-side requirements-For Windows 10 and Windows 8 client computers, the Network Connectivity Assistant \(NCA\) service is used to detect whether OTP credentials are required. If they are, the DirectAccess Media Manager prompts for credentials.  NCA is included in the operating system, and no installation or deployment is required. For Windows 7 client computers, DirectAccess Connectivity Assistant \(DCA\) 2.0 is required. This is available as a download on the [Microsoft Download Center](/windows-server/remote/remote-access/directaccess/single-server-advanced/install-and-configure-advanced-directaccess).
 
     5.  Note the following:
 

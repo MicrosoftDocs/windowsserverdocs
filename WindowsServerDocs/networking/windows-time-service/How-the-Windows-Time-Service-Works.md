@@ -257,4 +257,4 @@ The Windows Time service communicates on a network to identify reliable time sou
 ## See Also
 [Windows Time Service Technical Reference](windows-time-service-tech-ref.md)
 [Windows Time Service Tools and Settings](Windows-Time-Service-Tools-and-Settings.md)
-[Microsoft Knowledge Base article 902229](https://go.microsoft.com/fwlink/?LinkId=186066)
+[Microsoft Knowledge Base article 902229](/windows-server/networking/windows-time-service/windows-time-service-top)
