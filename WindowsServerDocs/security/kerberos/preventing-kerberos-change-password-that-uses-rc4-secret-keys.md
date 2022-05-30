@@ -34,4 +34,4 @@ In the Windows operating systems designated in the Applies To list at the beginn
 
 - For information about how to prevent the usage of the RC4 encryption type in Windows Server 2012 R2 domains, see [Protected Users Security Group](../credentials-protection-and-management/protected-users-security-group.md).
 
-- For explanations about RFC 4120 and RFC 4757, see [IETF Documents](http://tools.ietf.org/html/).
+- For explanations about RFC 4120 and RFC 4757, see [IETF Documents](https://www.ietf.org/standards/rfcs/).
