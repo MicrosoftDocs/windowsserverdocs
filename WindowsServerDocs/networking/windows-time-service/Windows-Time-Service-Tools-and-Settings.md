@@ -71,7 +71,7 @@ w32tm /config /manualpeerlist:"ntpserver.contoso.com clock.adatum.com" /syncfrom
 
 ### Set client to sync time automatically from a domain source
 
-To configure a client computer that is currently synchronizing time using a manually-specified computer to synchronize time automatically from the AD domain hierarchy, run the following following:
+To configure a client computer that is currently synchronizing time using a manually-specified computer to synchronize time automatically from the AD domain hierarchy, run the following command:
 
 ```cmd
 w32tm /config /syncfromflags:domhier /update
