@@ -159,7 +159,7 @@ Windows Admin Center opens in the portal, giving you access to the same tools yo
 
 By using Windows Admin Center in Azure, you can connect to your cluster without requiring any inbound port to be enabled on the firewall. Windows Admin Center, via the Arc agent, is able to securely establish a reverse proxy session connection with the Azure Arc service in an outbound manner.
 
-For each Azure Stack HCI cluster that you want to manage with Windows Admin Center in the Azure portal, you must deply an agent to all the nodes in the cluster.
+For each Azure Stack HCI cluster that you want to manage with Windows Admin Center in the Azure portal, you must deploy an agent to all the nodes in the cluster.
 
 The agent communicates to an external service that manages certificates so that you can easily connect to your cluster.
 
