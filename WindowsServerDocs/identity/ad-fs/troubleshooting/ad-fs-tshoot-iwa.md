@@ -47,7 +47,7 @@ This can be caused by:
  - Fiddler
  - Reverse proxies performing SSL bridging
 
-By default, AD FS has this set to "Allow".  You can change this setting using the PowerShell cmdlet `Set-ADFSProperties -ExtendedProtectionTokenCheck`
+By default, AD FS has this set to "Allow".  You can change this setting using the PowerShell cmdlet `Set-ADFSProperties -ExtendedProtectionTokenCheck None`
 
 For more information on this, see [Best Practices for Secure Planning and Deployment of AD FS](../../ad-fs/design/best-practices-for-secure-planning-and-deployment-of-ad-fs.md).
 
