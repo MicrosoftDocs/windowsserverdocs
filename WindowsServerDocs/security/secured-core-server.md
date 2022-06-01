@@ -4,25 +4,26 @@ description: Find out the advanced security features of Secured-core server with
 author: SCuffy
 ms.author: socuff
 ms.topic: overview 
-ms.date: 09/07/2021
+ms.date: 06/01/2022
 ms.prod: windows-server
 ms.custom: template-overview, team=cloud_advocates
 ms.contributors: socuff-01282022
+ms.custom: kr2b-contr-experiment
 ---
 
 # What is Secured-core server?
 
 >Applies to: Windows Server 2022, Azure Stack HCI, version 21H2
 
-Secured-core server combines hardware, firmware, and driver capabilities to further protect the operating environment - from the boot process through to data in memory. It's built on three key pillars: simplified security, advanced protection, and preventative defense.
+Secured-core server provides higher levels of operating environment protection from the boot process right through to data in memory. This is achieved by leveraging a combination of hardware, firmware, and driver capabilities. Secured-core server is built on three key pillars: simplified security, advanced protection, and preventative defense.
 
-## Simplified security
+## 1. Simplified security
 
-Certified OEM hardware for Secured-core server gives you the assurance that the hardware, firmware, and drivers meet the requirements for Secured-core server capabilities. Windows Server systems can be easily configured in Windows Admin Center to enable these capabilities.
+Certified OEM hardware for Secured-core server provides assurance that all hardware, firmware, and drivers meet the requirements for Secured-core server capabilities. You can easily enable these capabilities by configuring Windows Server systems in Windows Admin Center.
 
-## Advanced protection
+## 2. Advanced protection
 
-The protections enabled by a Secured-core server are targeted to create a secure platform for critical applications and data used on that server. The Secured-core functionality spans the following areas:
+Secured-core server protections are designed to provide secure platforms for critical applications and data. The Secured-core functionality spans the following areas:
 
 - **Hardware root-of-trust**
 
@@ -48,6 +49,6 @@ The protections enabled by a Secured-core server are targeted to create a secure
 
     [Hypervisor-based code integrity.](/windows-hardware/design/device-experiences/oem-hvci-enablement) (HVCI) uses VBS to check the integrity of kernel mode drivers and binaries before they are started and prevents unsigned drivers or system files from being loaded into system memory. User-mode configurable code integrity policy checks applications before they're loaded and will only start executables that are signed by known, approved signers. As VBS runs these checks in an isolated environment, the code does not gain access to the hypervisor or system memory until it has been checked and verified inside the VBS environment.
 
-## Preventative defense
+## 3. Preventative defense
 
 Enabling Secured-core functionality helps proactively defend against and disrupt many of the paths attackers may use to exploit a system. Secured-core server enables advanced security features at the bottom layers of the technology stack, protecting the most privileged areas of the system before many security tools would be aware of exploits with no additional tasks or monitoring needed by the IT and SecOps teams.
