@@ -24,13 +24,13 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 *Date published: 5/18/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Reduced flicker when application is restored to full-screen mode from minimized state in single-monitor configuration.
 - The client now shows an error message when the user tries to open a connection from the UI, but the connection doesn't launch.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to Teams for Azure Virtual Desktop, including the following:
-  - The new hardware encoding feature increases the video quality (resolution and bitrate) of the outgoing camera during Teams calls. Because this feature uses the underlying hardware on the PC and not just software, we're being extra careful to ensure broad compatibility before turning the feature on by default for all users. Therefore, this feature is currently off by default. To get an early preview of the feature, you can enable it on your local machine by setting the registry key at **Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Terminal Server** to **1**. To disable the feature, set the key to **0**.
+  - The new hardware encoding feature increases the video quality (resolution and framerate) of the outgoing camera during Teams calls. Because this feature uses the underlying hardware on the PC and not just software, we're being extra careful to ensure broad compatibility before turning the feature on by default for all users. Therefore, this feature is currently off by default. To get an early preview of the feature, you can enable it on your local machine by setting the registry key at **Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Terminal Server** to **1**. To disable the feature, set the key to **0**.
 
 ## Updates for version 1.2.3130
 
