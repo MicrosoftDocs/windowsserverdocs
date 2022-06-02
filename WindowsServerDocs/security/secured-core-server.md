@@ -35,7 +35,7 @@ Secured-core server protections are designed to deliver platforms that are secur
 
 - **Secure Boot with Dynamic Root of Trust for Measurement (DRTM)**
 
-    Root of Trust for Measurement (RTM) doesn't live solely inside the TPM chip. It is a software capability that is helped by the TPM. The booting environment is measured and compared to verify that it hasn't been tampered with. Many different processes occur during a boot. This is known as the boot chain. These processes can change over time, including and the order in which they load. Dynamic Root of Trust for Measurement allows the components to load first and then be measured. Root of trust is another security check that system components (the boot chain) have not been tampered with.
+    Root of Trust for Measurement (RTM) doesn't live solely inside the TPM chip. It is a software capability that is helped by the TPM. The booting environment is measured and compared to verify that it hasn't been tampered with. Many different processes occur during a boot. This is known as the boot chain. These processes can change over time, including and the order in which they load. Dynamic Root of Trust for Measurement allows the components to load first and then be measured. Root of trust is another security check to ensure that system components (the boot chain) haven't been tampered with.
 
 - **System Guard with Kernel Direct Memory Access (DMA) protection**
 
