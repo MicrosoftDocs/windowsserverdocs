@@ -5,17 +5,17 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 02/15/2022
+ms.date: 07/19/2022
 ---
 
 # Supported Remote Desktop RDP file settings
 
-The following table includes the list of supported RDP file settings that you can use with the Remote Desktop clients. When configuring settings, check [Client comparisons](./remote-desktop-app-compare.md) to see which redirections each client supports.
+The following table includes the list of supported RDP file settings that you can use with the Remote Desktop clients. When configuring settings, check [Client comparisons](./remote-desktop-app-compare.md) to see which redirection each client supports.
 
 These tables also highlight which settings are supported as custom properties with Azure Virtual Desktop. You can refer to [this documentation](/azure/virtual-desktop/customize-rdp-properties/) detailing how to use PowerShell to customize RDP properties for Azure Virtual Desktop host pools.
 
 >[!IMPORTANT]
->These tables list the Remote Desktop client app's default settings when not configured in Windows Virtual Desktop.
+>These tables list the Remote Desktop client app's default settings when not configured in Azure Virtual Desktop.
 
 ## Connection information
 
@@ -61,6 +61,7 @@ These tables also highlight which settings are supported as custom properties wi
 | redirectcomports:i:value | COM ports redirection:</br>Determines whether COM (serial) ports on the local computer will be redirected and available in the remote session. | - 0: COM ports on the local computer are not available in the remote session</br>- 1: COM ports on the local computer are available in the remote session | 0 | Yes |
 | redirectprinters:i:value | Printer redirection:</br>Determines whether printers configured on the local computer will be redirected and available in the remote session | - 0: The printers on the local computer are not available in the remote session</br>- 1: The printers on the local computer are available in the remote session | 1 | Yes |
 | redirectsmartcards:i:value | Smart card redirection:</br>Determines whether smart card devices on the local computer will be redirected and available in the remote session. |- 0: The smart card device on the local computer is not available in the remote session</br>- 1: The smart card device on the local computer is available in the remote session | 1 | Yes |
+| redirectwebauthn:i:value | WebAuthn redirection:</br>Determines whether WebAuthn requests on the remote computer will be redirected to the local computer allowing the use of local authenticators (e.g., Windows Hello for Business, security key, or other). |- 0: WebAuthn requests in the remote session are not sent to the local computer for authentication and must be completed in the remote session</br>- 1: WebAuthn requests in the remote session are sent to the local computer for authentication | 1 | Yes |
 | usbdevicestoredirect:s:value | USB redirection | - *: Redirect all USB devices that are not already redirected by another high-level redirection</br> - {Device Setup Class GUID}: Redirect all devices that are members of the specified [device setup class](/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors/)</br> - USBInstanceID: Redirect a specific USB device identified by the instance ID| Don't redirect any USB devices | Yes |
 
 ## Display settings

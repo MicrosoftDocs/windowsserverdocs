@@ -6,7 +6,7 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 01/07/2022
+ms.date: 07/19/2022
 ---
 
 # Compare the clients: redirections
@@ -44,17 +44,18 @@ When you enable USB port redirection, all USB devices attached to USB ports are 
 ### Other redirection (devices, etc.)
 
 | Redirection         | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS         | macOS                           | Web client    |
-|---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
-| Cameras             | X                         | X                           |               |         |   X         | X                               |               |
+|---------------------|---------------------------|-----------------------------|---------------|---------|--------------|---------------------------------|---------------|
+| Cameras             | X                         | X                           |               |         |   X          | X                               |               |
 | Clipboard           | X                         | X                           | X             | Text    | Text, images | X                               | Text          |
-| Local drive/storage | X                         | X                           |               | X       |   X        | X                               |               |
-| Location            | X                         | X                           |               |         |             |                                 |               |
-| Microphones         | X                         | X                           | X             | X       |  X          | X                               | X            |
-| Printers            | X                         | X                           |               |         |             | X (CUPS only)                   | PDF print     |
-| Scanners            | X                         | X                           |               |         |             |                                 |               |
-| Smart Cards         | X                         | X                           |               |         |             | X (Windows logon not supported) |               |
-| Speakers            | X                         | X                           | X             | X       | X           | X                               | X (except IE) |
-|Third-party virtual channel plugins| X                         | X                           |               |               |
+| Local drive/storage | X                         | X                           |               | X       | X            | X                               |               |
+| Location            | X                         | X                           |               |         |              |                                 |               |
+| Microphones         | X                         | X                           | X             | X       |  X           | X                               | X             |
+| Printers            | X                         | X                           |               |         |              | X (CUPS only)                   | PDF print     |
+| Scanners            | X                         | X                           |               |         |              |                                 |               |
+| Smart Cards         | X                         | X                           |               |         |              | X (Windows logon not supported) |               |
+| Speakers            | X                         | X                           | X             | X       | X            | X                               | X (except IE) |
+| Third-party virtual channel plugins | X         | X                           |               |         |              |                                 |               |
+| WebAuthn            | X                         | X                           |               |         |              |                                 |               |
 
 *For printer redirection - the macOS app supports the Publisher Imagesetter printer driver by default. They do not support redirecting native printer drivers.
 
