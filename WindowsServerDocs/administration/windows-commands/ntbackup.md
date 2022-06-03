@@ -14,7 +14,7 @@ ms.date: 10/16/2017
 Backs up and restores your computer and files from a command prompt. This command has been replaced by the [wbadmin command](wbadmin.md).
 
 > [!IMPORTANT]
-> The **wbadmin** command can't recover backups created using the **ntbackup** command. However, a version of **ntbackup** is available as a download from [Windows NT Backup - Restore Utility](/windows/win32/w8cookbook/windows-7-backup-and-restore-deprecated). This downloadable version helps you to perform recoveries of legacy backups, but it can't create new backups.
+> The **wbadmin** command can't recover backups created using the **ntbackup** command. However, a version of **ntbackup** is available as a download from [Windows NT Backup - Restore Utility](/windows/win32/vss/custom-backups-and-restores). This downloadable version helps you to perform recoveries of legacy backups, but it can't create new backups.
 
 ## Additional References
 
