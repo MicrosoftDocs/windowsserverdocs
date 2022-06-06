@@ -66,7 +66,7 @@ sections:
           
           **Self\-updating** Enables the cluster to update itself according to a defined profile and a regular schedule, such as during a monthly maintenance window. You can also start a Self\-Updating Run on demand at any time. To enable self\-updating mode, you must add the CAU clustered role to the cluster. The CAU self\-updating feature performs like any other clustered workload, and it can work seamlessly with the planned and unplanned failovers of an update coordinator computer.
           
-          **Remote\-updating** Enables you to start an Updating Run at any time from a computer running Windows or Windows Server. You can start an Updating run through the Cluster-Aware Updating window or by using the **Invoke\-CauRun** PowerShell cmdlet. Remote\-updating is the default updating mode for CAU. You can use Task Scheduler to run the [Invoke-CauRun](https://technet.microsoft.com/itpro/powershell/windows/cluster-aware-updating/invoke-caurun) cmdlet on a desired schedule from a remote computer that is not one of the cluster nodes.
+          **Remote\-updating** Enables you to start an Updating Run at any time from a computer running Windows or Windows Server. You can start an Updating run through the Cluster-Aware Updating window or by using the **Invoke\-CauRun** PowerShell cmdlet. Remote\-updating is the default updating mode for CAU. You can use Task Scheduler to run the [Invoke-CauRun](/powershell/module/clusterawareupdating/invoke-caurun) cmdlet on a desired schedule from a remote computer that is not one of the cluster nodes.
           
       - question: |
           Can I schedule updates to apply during a backup?
