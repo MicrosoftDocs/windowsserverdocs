@@ -51,7 +51,7 @@ Additional information:
 Azure Active Directory Application Proxy is a service provided in paid-SKUs of Azure Active Directory that allow users to connect to internal applications through Azure's own reverse-proxy service. This allows the RD Web and RD Gateway endpoints to be hidden inside of the virtual network, eliminating the need to be exposed to the internet via a public IP address. This further allows hosters to condense the number of virtual machines in the tenant's environment while still maintaining a full deployment.
 
 Additional information:
-[Enabling Azure AD Application Proxy](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application)
+[Enabling Azure AD Application Proxy](/azure/active-directory/app-proxy/application-proxy-config-how-to)
 
 ## File server
 The file server provides shared folders by using the Server Message Block (SMB) 3.0 protocol. The shared folders are used to create and store user profile disk files (.vhdx), to backup data, and to allow users a place to share data with other users in the tenant's virtual network.
