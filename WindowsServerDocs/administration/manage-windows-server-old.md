@@ -15,7 +15,7 @@ ms.date: 03/16/2018
 
  <ul class="cardse panelContent cols cols3">
     <li>
-        <a href="https://docs.microsoft.com/windows/deployment/update/wip4biz-intro">
+        <a href="/windows/deployment/update/wip4biz-intro">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
