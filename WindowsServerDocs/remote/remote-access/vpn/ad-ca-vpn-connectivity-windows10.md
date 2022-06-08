@@ -4,7 +4,7 @@ description: In this optional step, you can fine-tune how authorized VPN users a
 ms.topic: article
 ms.author: wscontent
 author: Teresa-MOTIV
-ms.date: 06/28/2019
+ms.date: 06/08/2022
 ms.reviewer: deverette
 ---
 # Step 7. (Optional) Conditional access for VPN connectivity using Azure AD
