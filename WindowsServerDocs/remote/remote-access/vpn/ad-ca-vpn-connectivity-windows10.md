@@ -48,6 +48,9 @@ To configure conditional access for VPN connectivity, you need to:
 > [!IMPORTANT]
 > Once a VPN certificate is created in the Azure portal, Azure AD will start using it immediately to issue short lived certificates to the VPN client. It is critical that the VPN certificate be deployed immediately to the VPN server to avoid any issues with credential validation of the VPN client.
 
+> [!NOTE]
+> To create a VPN certificate in the Azure portal, you will need to sign in as Global Administrator. VPN certficate information such as certificatethumprint and certificate expiration information, is stored as a service principal named "VPN Server" in Azure AD. A user with least privileged role can view, but not modify service principal information. Only the following roles Global Administrator, Application Administrator, Cloud Application Administrator, Hybrid Identity Administrator, Directory Synchronization Accounts and Service Principal owners are premitted to update or delete service principal information including "VPN Server".
+
 ## [Step 7.3. Configure the Conditional Access policy](vpn-config-conditional-access-policy.md)
 
 In this step, you configure the conditional access policy for VPN connectivity.
