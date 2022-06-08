@@ -32,9 +32,9 @@ There are three kinds of registered devices, all of which are represented as Dev
 |Also available for iOS and Android Devices? | Yes | No | No |
 
 For more information on the different ways to register devices, see also:
-* [Using Windows 10 devices in your workplace](/azure/active-directory/devices/overview)
-* [Setting up Windows 10 devices for work](https://docs.microsoft.com/en-gb/azure/active-directory/devices/concept-azure-ad-register)
-* [Join Windows 10 Mobile to Azure Active Directory](https://github.com/azure/active-directory/devices/concept-azure-ad-join)
+* [Using Windows devices in your workplace](/azure/active-directory/devices/overview)
+* [Azure AD registered devices](/azure/active-directory/devices/concept-azure-ad-register)
+* [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join)
 
 ### How Windows 10 User and Device Sign-on is different from previous versions
 For Windows 10 and AD FS 2016, there are some new aspects of device registration and authentication you should know about (especially if you are familiar with device registration and "workplace join" in previous releases).
