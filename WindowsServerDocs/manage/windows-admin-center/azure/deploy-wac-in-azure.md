@@ -8,7 +8,7 @@ ms.date: 02/18/2021
 ---
 # Manually deploy Windows Admin Center in Azure for managing multiple servers
 
-This article describes how to manually deploy Windows Admin Center in an Azure VM for use in managing multiple Azure VMs. To manage a single VM, instead use the Windows Admin Center functionality built into the Azure portal, as described in [Use Windows Admin Center in the Azure portal](manage-vm.md).
+This article describes how to manually deploy Windows Admin Center in an Azure VM for use in managing multiple Azure VMs. To manage a single VM, instead use the Windows Admin Center functionality built into the Azure portal, as described in [Use Windows Admin Center in the Azure portal](manage-vm.md)).
 
 ## Deploy using script
 
