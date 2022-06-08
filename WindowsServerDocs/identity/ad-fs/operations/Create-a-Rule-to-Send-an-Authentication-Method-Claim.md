@@ -220,10 +220,10 @@ Depending on the requirements of your organization, use one of the following pro
 
 9. In **Outgoing claim value**, type one of the default uniform resource identifier \(URI\) values in the following table, depending on your preferred authentication method, click **Finish**, and then click **OK** to save the rule.
 
-|                            Actual Authentication method                             |                                Corresponding URI                                 |
+|                           Actual Authentication Method                         |                                Corresponding URI                                 |
 |-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-|                        User name and password authentication                        | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password``  |
-|                               Windows authentication                                |  https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`  |
+|                        User name and password authentication                        | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`  |
+|                               Windows authentication                                |  `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`  |
 | Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient` |
 |                  X.509\-based authentication that does not use TLS                  |   `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`    |
 
