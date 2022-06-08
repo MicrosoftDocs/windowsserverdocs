@@ -64,4 +64,4 @@ servermanagercmd -inputpath install.xml -whatif
 
 - [Command-Line Syntax Key](command-line-syntax-key.md)
 
-- [Server Manager overview](/administration/server-manager/server-manager)
+- [Server Manager overview](/windows-server/administration/server-manager/server-manager)
