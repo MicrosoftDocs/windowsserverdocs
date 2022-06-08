@@ -39,7 +39,7 @@ Before you write a new custom authentication method, we recommend that you study
 
     -   **form factor styles** \- These are styles for different form factors. You should understand this section to ensure that your content works with different form factors, for example, phones and tablets.
 
-For additional information, see [Solution Guide: Manage Risk with Multi\-factor Access Control](./manage-risk-with-conditional-access-control.md) and [Solution Guide: Manage Risk with Additional Multi\-Factor Authentication for Sensitive Applications](https://tnstage.redmond.corp.microsoft.com/library/dn280949.aspx).
+For additional information, see [Solution Guide: Manage Risk with Multi\-factor Access Control](./manage-risk-with-conditional-access-control.md) and [Solution Guide: Manage Risk with Additional Multi\-Factor Authentication for Sensitive Applications](/manage-risk-with-conditional-access-control.md).
 
 ## Additional references
 [AD FS User Sign-in Customization](AD-FS-user-sign-in-customization.md)

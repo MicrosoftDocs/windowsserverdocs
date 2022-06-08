@@ -49,10 +49,10 @@ Depending on the requirements of your organization, use one of the following pro
 
 |                            Actual Authentication method                             |                                Corresponding URI                                 |
 |-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-|                        User name and password authentication                        | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password  |
-|                               Windows authentication                                |  https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows  |
-| Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient |
-|                  X.509\-based authentication that does not use TLS                  |   https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509    |
+|                        User name and password authentication                        | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`  |
+|                               Windows authentication                                |  `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`  |
+| Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient` |
+|                  X.509\-based authentication that does not use TLS                  |   `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`    |
 
 ![Screenshot that shows where to select Finish when you create a rule by using the Send Group Membership as Claims rule template in Windows Server 2016.](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth2.PNG)
 
@@ -82,10 +82,10 @@ Depending on the requirements of your organization, use one of the following pro
 
 |                            Actual Authentication method                             |                                Corresponding URI                                 |
 |-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-|                        User name and password authentication                        | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password  |
-|                               Windows authentication                                |  https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows  |
-| Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient |
-|                  X.509\-based authentication that does not use TLS                  |   https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509    |
+|                        User name and password authentication                        | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`  |
+|                               Windows authentication                                |  `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`  |
+| Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient` |
+|                  X.509\-based authentication that does not use TLS                  |   `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`    |
 
 ![Screenshot that shows where to select Finish when you create a rule by using the Send Group Membership as Claims rule template in Windows Server 2016.](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth2.PNG)
 
@@ -120,10 +120,10 @@ Depending on the requirements of your organization, use one of the following pro
 
 |              Actual authentication method              |                                Corresponding URI                                 |
 |--------------------------------------------------------|----------------------------------------------------------------------------------|
-|         User name and password authentication          | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password  |
-|                 Windows authentication                 |  https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows  |
-| TLS mutual authentication that uses X.509 certificates | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient |
-|   X.509\-based authentication that does not use TLS    |   https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509    |
+|         User name and password authentication          | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`  |
+|                 Windows authentication                 |  `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`  |
+| TLS mutual authentication that uses X.509 certificates | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient` |
+|   X.509\-based authentication that does not use TLS    |   `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`    |
 
 ![Screenshot that shows where to select Finish when you create a rule by using the transform an incoming claim rule template.](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth4.PNG)
 
@@ -160,10 +160,10 @@ Depending on the requirements of your organization, use one of the following pro
 
 |              Actual authentication method              |                                Corresponding URI                                 |
 |--------------------------------------------------------|----------------------------------------------------------------------------------|
-|         User name and password authentication          | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password  |
-|                 Windows authentication                 |  https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows  |
-| TLS mutual authentication that uses X.509 certificates | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient |
-|   X.509\-based authentication that does not use TLS    |   https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509    |
+|         User name and password authentication          | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`  |
+|                 Windows authentication                 |  `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`  |
+| TLS mutual authentication that uses X.509 certificates | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient` |
+|   X.509\-based authentication that does not use TLS    |   `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`    |
 
 ![Screenshot that shows where to select Finish when you create a rule by using the transform an incoming claim rule template in Windows Server 2016.](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth4.PNG)
 
@@ -222,10 +222,10 @@ Depending on the requirements of your organization, use one of the following pro
 
 |                            Actual Authentication method                             |                                Corresponding URI                                 |
 |-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-|                        User name and password authentication                        | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password  |
-|                               Windows authentication                                |  https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows  |
-| Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient |
-|                  X.509\-based authentication that does not use TLS                  |   https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509    |
+|                        User name and password authentication                        | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password``  |
+|                               Windows authentication                                |  https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`  |
+| Transport Layer Security \(TLS\) Mutual authentication that uses X.509 certificates | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient` |
+|                  X.509\-based authentication that does not use TLS                  |   `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`    |
 
 ![Screenshot that shows where to select Finish when you create a rule by using the Send Group Membership as Claims rule template.](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth1.PNG)
 
@@ -271,10 +271,10 @@ Depending on the requirements of your organization, use one of the following pro
 
 |              Actual authentication method              |                                Corresponding URI                                 |
 |--------------------------------------------------------|----------------------------------------------------------------------------------|
-|         User name and password authentication          | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password  |
-|                 Windows authentication                 |  https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows  |
-| TLS mutual authentication that uses X.509 certificates | https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient |
-|   X.509\-based authentication that does not use TLS    |   https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509    |
+|         User name and password authentication          | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`  |
+|                 Windows authentication                 |  `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`  |
+| TLS mutual authentication that uses X.509 certificates | `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/tlsclient` |
+|   X.509\-based authentication that does not use TLS    |   `https://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`    |
 
 ![create rule](media/Create-a-Rule-to-Send-an-Authentication-Method-Claim/auth3.PNG)
 
