@@ -121,7 +121,7 @@ For more information, check out the [Windows Event Forwarding documentation](/wi
 You can also use System Center 2016 - Operations Manager to monitor HGS and your guarded hosts.
 The guarded fabric management pack has event monitors to check for common misconfigurations that can lead to datacenter downtime, including hosts not passing attestation and HGS servers reporting errors.
 
-To get started, [install and configure SCOM 2016](https://technet.microsoft.com/system-center-docs/om/welcome-to-operations-manager) and [download the guarded fabric management pack](https://www.microsoft.com/download/details.aspx?id=52764).
+To get started, [install and configure SCOM 2016](/services-hub/premier/health/setup-config-log-analytics-scom) and [download the guarded fabric management pack](https://www.microsoft.com/download/details.aspx?id=52764).
 The included management pack guide explains how to configure the management pack and understand the scope of its monitors.
 
 ## Backing up and restoring HGS
@@ -256,7 +256,7 @@ You will be prompted to enter the password you specified when creating the backu
 Import-HgsServerState -Path C:\Temp\HGSBackup.xml
 ```
 
-If you only want to import admin-trusted attestation policies or TPM-trusted attestation policies, you can do so by specifying the `-ImportActiveDirectoryModeState` or `-ImportTpmModeState` flags to [Import-HgsServerState](https://technet.microsoft.com/library/mt652168.aspx).
+If you only want to import admin-trusted attestation policies or TPM-trusted attestation policies, you can do so by specifying the `-ImportActiveDirectoryModeState` or `-ImportTpmModeState` flags to [Import-HgsServerState](/powershell/module/hgsserver/import-hgsserverstate).
 
 Ensure the latest cumulative update for Windows Server 2016 is installed before running `Import-HgsServerState`.
 Failure to do so may result in an import error.
@@ -437,7 +437,7 @@ On a reference host, which serves as a master image for the trusted Hyper-V mach
 We encourage you to use the **FilePublisher** level and **Hash** fallback for Hyper-V host CI policies.
 You should first create a CI policy in audit mode to ensure that everything is working as expected.
 After validating a sample workload on the system, you can enforce the policy and copy the enforced version to HGS.
-For a complete list of code integrity policy configuration options, consult the [Device Guard documentation](https://technet.microsoft.com/itpro/windows/keep-secure/deploy-device-guard-deploy-code-integrity-policies).
+For a complete list of code integrity policy configuration options, consult the [Device Guard documentation](/windows/security/identity-protection/credential-guard/dg-readiness-tool).
 
 ```powershell
 # Capture a new CI policy with the FilePublisher primary level and Hash fallback and enable user mode code integrity protections
@@ -765,15 +765,15 @@ These tasks add extra operational burden, however they are required for HSM-back
 
 **SSL Certificates** are never replicated in any form.
 It is your responsibility to initialize each HGS server with the same SSL certificate and update each server whenever you choose to renew or replace the SSL certificate.
-When replacing the SSL certificate, it is recommended that you do so using the [Set-HgsServer](https://technet.microsoft.com/library/mt652180.aspx) cmdlet.
+When replacing the SSL certificate, it is recommended that you do so using the [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) cmdlet.
 
 ## Unconfiguring HGS
 
-If you need to decommission or significantly reconfigure an HGS server, you can do so using the [Clear-HgsServer](https://technet.microsoft.com/library/mt652176.aspx) or [Uninstall-HgsServer](https://technet.microsoft.com/library/mt652182.aspx) cmdlets.
+If you need to decommission or significantly reconfigure an HGS server, you can do so using the [Clear-HgsServer](/powershell/module/hgsserver/clear-hgsserver) or [Uninstall-HgsServer](/powershell/module/hgsserver/uninstall-hgsserver) cmdlets.
 
 ### Clearing the HGS configuration
 
-To remove a node from the HGS cluster, use the [Clear-HgsServer](https://technet.microsoft.com/library/mt652176.aspx) cmdlet.
+To remove a node from the HGS cluster, use the [Clear-HgsServer](/powershell/module/hgsserver/clear-hgsserver) cmdlet.
 This cmdlet will make the following changes on the server where it is run:
 
 - Unregisters the attestation and key protection services
@@ -787,12 +787,12 @@ If the server is the last HGS node in the cluster, the cluster and its correspon
 Clear-HgsServer
 ```
 
-After the clear operation completes, the HGS server can be re-initialized with [Initialize-HgsServer](https://technet.microsoft.com/library/mt652185.aspx).
-If you used [Install-HgsServer](https://technet.microsoft.com/library/mt652169.aspx) to set up an Active Directory Domain Services domain, that domain will remain configured and operational after the clear operation.
+After the clear operation completes, the HGS server can be re-initialized with [Initialize-HgsServer](/powershell/module/hgsserver/initialize-hgsserver).
+If you used [Install-HgsServer](/powershell/module/hgsserver/install-hgsserver) to set up an Active Directory Domain Services domain, that domain will remain configured and operational after the clear operation.
 
 ### Uninstalling HGS
 
-If you wish to remove a node from the HGS cluster **and** demote the Active Directory Domain Controller running on it, use the [Uninstall-HgsServer](https://technet.microsoft.com/library/mt652182.aspx) cmdlet.
+If you wish to remove a node from the HGS cluster **and** demote the Active Directory Domain Controller running on it, use the [Uninstall-HgsServer](/powershell/module/hgsserver/uninstall-hgsserver) cmdlet.
 This cmdlet will make the following changes on the server where it is run:
 
 - Unregisters the attestation and key protection services
@@ -808,7 +808,7 @@ $newLocalAdminPassword = Read-Host -AsSecureString -Prompt "Enter a new password
 Uninstall-HgsServer -LocalAdministratorPassword $newLocalAdminPassword -Restart
 ```
 
-After the uninstall operation is complete and the computer has been restarted, you can reinstall ADDC and HGS using [Install-HgsServer](https://technet.microsoft.com/library/mt652169.aspx) or join the computer to a domain and initialize the HGS server in that domain with [Initialize-HgsServer](https://technet.microsoft.com/library/mt652185.aspx).
+After the uninstall operation is complete and the computer has been restarted, you can reinstall ADDC and HGS using [Install-HgsServer](/powershell/module/hgsserver/install-hgsserver) or join the computer to a domain and initialize the HGS server in that domain with [Initialize-HgsServer](/powershell/module/hgsserver/initialize-hgsserver).
 
 If you no longer intend to use the computer as a HGS node, you can remove the role from Windows.
 
