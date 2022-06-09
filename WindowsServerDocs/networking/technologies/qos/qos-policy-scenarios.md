@@ -139,7 +139,7 @@ All the following URLs are valid and can be specified in QoS Policy and applied 
 
 - https://video
 
-- https://training.hr.mycompany.com
+- `https://training.hr.mycompany.com`
 
 - https://10.1.10.249:8080/tech
 

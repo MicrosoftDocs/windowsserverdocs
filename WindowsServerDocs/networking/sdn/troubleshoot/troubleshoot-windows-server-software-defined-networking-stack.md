@@ -63,7 +63,7 @@ These cmdlets are documented on TechNet in the [Hyper-V Network Virtualization (
 The _Debug-VirtualMachineQueueOperation_, _Get-CustomerRoute_, _Get-PACAMapping_, _Get-ProviderAddress_, _Get-VMNetworkAdapterPortId_, _Get-VMSwitchExternalPortId_, and _Test-EncapOverheadSettings_ are all local tests that can be run from any Hyper-V host. The other cmdlets invoke data-path tests through the Network Controller and therefore need access to the Network Controller as described above.
 
 ### GitHub
-The [Microsoft/SDN GitHub Repo](https://github.com/microsoft/sdn) has many sample scripts and workflows that build on top of these in-box cmdlets. In particular, diagnostic scripts can be found in the [Diagnostics](https://github.com/Microsoft/sdn/diagnostics) folder. Help us contribute to these scripts by submitting Pull Requests.
+The [Microsoft/SDN GitHub Repo](https://github.com/microsoft/sdn) has many sample scripts and workflows that build on top of these in-box cmdlets. In particular, diagnostic scripts can be found in the [Diagnostics](https://github.com/microsoft/SDN/tree/master/Diagnostics) folder. Help us contribute to these scripts by submitting Pull Requests.
 
 ## Troubleshooting Workflows and Guides
 
