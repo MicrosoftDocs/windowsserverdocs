@@ -11,20 +11,20 @@ ms.date: 06/12/2022
 
 >Applies to: Windows Admin Center, Windows Admin Center Preview
 
-This topic described the networking requirements for using Windows Admin center to manage your servers and clusters. 
+This topic describes the networking requirements for using Windows Admin center to manage your servers and clusters. 
 
 ## Networking configuration
-Windows Admin Center communicates outbound securely to various endpoints over TCP port 443. By default, the Windows Admin Center gateway and browser uses the default route to the internet to perform actions. You can optionally configure the gateway to use a proxy server  if your network requires it.
+Windows Admin Center communicates outbound securely to endpoints over TCP port 443. By default, the Windows Admin Center gateway and browser uses the default route to the internet to perform actions. You can optionally configure the gateway to use a proxy server if your network requires it.
+
+Endpoints need to be opened on two sources:
+
+1.	The gateway - this is the server or client machine where the Windows Admin Center gateway (.msi) is installed
+2.	The browser - this is the machine where the Windows Admin Center web service is being accessed from 
 
 If outbound connectivity is restricted by your firewall or proxy server, make sure the URLs listed below are not blocked. 
 
-Note that endpoints need to be opened on a few sources:
-
-1.	The gateway: this is the server or client machine where the Windows Admin Center gateway (.msi) is installed
-2.	The browser: this is the machine where the Windows Admin Center web service is being accessed from 
-
 ## URLs
-### The gateway
+### Gateway URLs
 | URL | Description | When required |
 | ------------------------- |--------------- | ----- |
 | `aka.ms` | Acquiring and maintaining Windows Admin Center | Always |
@@ -44,7 +44,7 @@ Note that endpoints need to be opened on a few sources:
 | `graph.chinacloudapi.cn` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure China Cloud |
 | `management.core.chinacloudapi.cn` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure China Cloud |
 
-### The browser
+### Browser URLs
 | URL | Description | When required |
 | ------------------------- |--------------- | ----- |
 | `winadmincenterassets.blob.core.windows.net` | Extension management | Always |
