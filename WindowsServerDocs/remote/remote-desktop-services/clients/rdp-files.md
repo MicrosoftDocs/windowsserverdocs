@@ -47,6 +47,9 @@ These tables also highlight which settings are supported as custom properties wi
 
 ## Device redirection
 
+>[!IMPORTANT]
+>You can only enable redirections with binary settings that apply to both to and from the remote machine. The service doesn't currently support one-way blocking of redirections from only one side of the connection.
+
 | RDP setting                        | Description            | Values                 | Default value          | Azure Virtual Desktop support |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
 | audiocapturemode:i:value | Microphone redirection:</br>Indicates whether audio input redirection is enabled. | - 0: Disable audio capture from the local device</br>- 1: Enable audio capture from the local device and redirection to an audio application in the remote session | 0 | Yes |
