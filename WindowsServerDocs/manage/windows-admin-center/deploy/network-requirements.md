@@ -23,6 +23,7 @@ Note that endpoints need to be opened on a few sources:
 1.	The gateway: this is the server or client machine where the Windows Admin Center gateway (.msi) is installed
 2.	The browser: this is the machine where the Windows Admin Center web service is being accessed from 
 
+## URLs
 ### The gateway
 | URL | Description | When required |
 | ------------------------- |--------------- | ----- |
