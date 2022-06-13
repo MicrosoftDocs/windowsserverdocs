@@ -30,7 +30,7 @@ Note that endpoints need to be opened on a few sources:
 | `aka.ms` | Acquiring and maintaining Windows Admin Center | Always |
 | `download.microsoft.com` | Acquiring and maintaining Windows Admin Center | Always |
 | `pkgs.dev.azure.com` | Extension management | Always |
-| `*.vsblob.vsassets.io*` | Extension management | Always |
+| `*.vsblob.vsassets.io` | Extension management | Always |
 | `login.microsoftonline.com` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure Public Cloud |
 | `graph.microsoft.com` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure Public Cloud |
 | `graph.windows.net` | Azure endpoints for communication | When using Azure Hybrid Services in the Azure Public Cloud |
