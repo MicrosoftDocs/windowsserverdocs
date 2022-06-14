@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 02/15/2022
+ms.date: 06/14/2022
 ---
 
 # Supported Remote Desktop RDP file settings
@@ -46,6 +46,9 @@ These tables also highlight which settings are supported as custom properties wi
 | videoplaybackmode:i:value| Determines if the connection will use RDP-efficient multimedia streaming for video playback.|- 0: Don't use RDP efficient multimedia streaming for video playback</br>- 1: Use RDP-efficient multimedia streaming for video playback when possible | 1 | Yes |
 
 ## Device redirection
+
+>[!IMPORTANT]
+>You can only enable redirections with binary settings that apply to both to and from the remote machine. The service doesn't currently support one-way blocking of redirections from only one side of the connection.
 
 | RDP setting                        | Description            | Values                 | Default value          | Azure Virtual Desktop support |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
