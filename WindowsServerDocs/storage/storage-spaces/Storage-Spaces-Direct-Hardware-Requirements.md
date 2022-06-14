@@ -5,7 +5,7 @@ ms.author: eldenc
 manager: eldenc
 ms.topic: article
 author: eldenchristensen
-ms.date: 05/24/2022
+ms.date: 06/14/2022
 ---
 # Storage Spaces Direct hardware requirements
 
@@ -108,9 +108,9 @@ Drives can be internal to the server, or in an external enclosure that is connec
 
 ### Minimum number of drives (excludes boot drive)
 
-The minimum number of capacity (non-cache) drives you require varies with your deployment scenario. If you're planning to use the storage pool cache, there must be at least 2 cache devices per server.
+The minimum number of capacity drives you require varies with your deployment scenario. If you're planning to use the storage pool cache, there must be at least 2 cache devices per server.
 
-You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine (VM) guest clusters. You can fully customize your Storage Spaces Direct design for performance, capacity, and balanced scenarios based on the selection of physical or virtual storage devices. Virtualized deployments take advantage of the private or public cloud's underlying storage performance and resilience. Storage Spaces Direct deployed on VM guest clusters allows you to use high availability solutions your virtual environment.
+You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine (VM) guest clusters. You can configure your Storage Spaces Direct design for performance, capacity, or balanced scenarios based on the selection of physical or virtual storage devices. Virtualized deployments take advantage of the private or public cloud's underlying storage performance and resilience. Storage Spaces Direct deployed on VM guest clusters allows you to use high availability solutions within virtual environment.
 
 The following sections describe the minimum drive requirements for physical and virtual deployments.
 
