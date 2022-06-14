@@ -9,7 +9,7 @@ ms.date: 05/24/2022
 ---
 # Storage Spaces Direct hardware requirements
 
->Applies to: Azure Stack Hub, Azure Stack HCI, version 20H2; Windows Server 2022, Windows Server 2019, Windows Server 2016
+>Applies to: Azure Stack Hub, Azure Stack HCI version 21H2, Azure Stack HCI version 20H2, Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 This article describes minimum hardware requirements for Storage Spaces Direct. For hardware requirements on Azure Stack HCI, our operating system designed for hyperconverged deployments with a connection to the cloud, see [Before you deploy Azure Stack HCI: Determine hardware requirements](/azure-stack/hci/deploy/before-you-start#determine-hardware-requirements).
 
@@ -108,15 +108,15 @@ Drives can be internal to the server, or in an external enclosure that is connec
 
 ### Minimum number of drives (excludes boot drive)
 
-The minimum number of capacity (non-cache) drives you require varies with your deployment scenario. If there are drives used as cache, there must be at least 2 per server.
+The minimum number of capacity (non-cache) drives you require varies with your deployment scenario. If you're planning to use the storage pool cache, there must be at least 2 cache devices per server.
 
-You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine (VM) guest clusters. Using Storage Spaces Direct in a physical deployment enables you to fully customize your design for performance, capacity, and balanced scenarios. Virtualized deployments use the private or public cloud's underlying storage performance and resilience. Storage Spaces Direct deployed on VM guest clusters allows you to use high availability solutions your virtual environment.
+You can deploy Storage Spaces Direct on a cluster of physical servers or on virtual machine (VM) guest clusters. You can fully customize your Storage Spaces Direct design for performance, capacity, and balanced scenarios based on the selection of physical or virtual storage devices. Virtualized deployments take advantage of the private or public cloud's underlying storage performance and resilience. Storage Spaces Direct deployed on VM guest clusters allows you to use high availability solutions your virtual environment.
 
 The following sections describe the minimum drive requirements for physical and virtual deployments.
 
 #### Physical deployments
 
-This table shows the minimum number of capacity drives by type for hardware deployments such as Azure Stack HCI, version 21H2 or later, or Windows Server.
+This table shows the minimum number of capacity drives by type for hardware deployments such as Azure Stack HCI version 21H2 or later, and Windows Server.
 
 | Drive type present (capacity only) | Minimum drives required (Windows Server) | Minimum drives required (Azure Stack HCI) |
 |------------------------------------|------------------------------------------|-------------------------------------------|
@@ -124,7 +124,7 @@ This table shows the minimum number of capacity drives by type for hardware depl
 | All NVMe (same model)              | 4 NVMe                                   | 2 NVMe                                    |
 | All SSD (same model)               | 4 SSD                                    | 2 SSD                                     |
 
-If you're using the storage pool cache, there must be at least 2 additional drives configured for the cache. The table shows the minimum numbers of drives required for both Windows Server and Azure Stack HCI deployments.
+If you're using the storage pool cache, there must be at least 2 more drives configured for the cache. The table shows the minimum numbers of drives required for both Windows Server and Azure Stack HCI deployments using 2 or more nodes.
 
 | Drive type present              | Minimum drives required             |
 |---------------------------------|-------------------------------------|
@@ -132,7 +132,9 @@ If you're using the storage pool cache, there must be at least 2 additional driv
 | NVMe + SSD                      | 2 NVMe + 4 SSD                      |
 | NVMe + HDD                      | 2 NVMe + 4 HDD                      |
 | SSD + HDD                       | 2 SSD + 4 HDD                       |
-| NVMe + SSD + HDD                | 2 NVMe + 4 others (SSD + HDD)       |
+
+> [!IMPORTANT]
+> The storage pool cache cannot be used with Azure Stack HCI in a single node deployment.
 
 #### Virtual deployment
 
