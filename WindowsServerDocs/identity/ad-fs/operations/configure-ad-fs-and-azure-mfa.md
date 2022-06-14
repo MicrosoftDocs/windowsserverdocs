@@ -68,7 +68,6 @@ The following pre-requisites are required when using Azure MFA for authenticatio
    - The server needs to be able to communicate with the following URLs over port 443.
       - https://adnotifications.windowsazure.com
       - https://login.microsoftonline.com
-- Your on-premises environment is [federated with Azure AD.](/azure/active-directory/hybrid/how-to-connect-install-custom#configuring-federation-with-ad-fs)
 - [Windows Azure Active Directory Module for Windows PowerShell](/powershell/module/azuread/).
 - Global administrator permissions on your instance of Azure AD to configure it using Azure AD PowerShell.
 - Enterprise administrator credentials to configure the AD FS farm for Azure MFA.
