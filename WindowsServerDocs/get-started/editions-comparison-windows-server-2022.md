@@ -44,7 +44,7 @@ Use this article to compare Standard, Datacenter, and Datacenter: Azure Edition 
 |Inherited activation|As guest if hosted on Datacenter| **Can be a host or a guest** | **Can be a host or a guest** |
 |Work Folders|Yes|Yes|Yes|
 
-<sup>1</sup> - Support may be limited to on-premises installations with compatible networking hardware. Windows Server 2002 Datacenter: Azure Edition has RDMA support but can only be run in Azure and Azure Stack HCI. Please refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/hpc/enable-infiniband) for current RDMA support requirements. RDMA can be used in Azure Stack HCI when following network [switch](https://docs.microsoft.com/en-us/azure-stack/hci/concepts/physical-network-requirements) and [host](https://docs.microsoft.com/en-us/azure-stack/hci/concepts/host-network-requirements) requirements and [best practices](https://docs.microsoft.com/en-us/azure-stack/hci/concepts/network-atc-overview). 
+<sup>1</sup> - Support may be limited to on-premises installations with compatible networking hardware. Windows Server 2022 Datacenter: Azure Edition has RDMA support but can only be run in Azure and Azure Stack HCI. Please refer to [Azure documentation](https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/hpc/enable-infiniband) for current RDMA support requirements. RDMA can be used in Azure Stack HCI when following network [switch](https://docs.microsoft.com/en-us/azure-stack/hci/concepts/physical-network-requirements) and [host](https://docs.microsoft.com/en-us/azure-stack/hci/concepts/host-network-requirements) requirements and [best practices](https://docs.microsoft.com/en-us/azure-stack/hci/concepts/network-atc-overview). 
 
 ## Locks and Limits
 
