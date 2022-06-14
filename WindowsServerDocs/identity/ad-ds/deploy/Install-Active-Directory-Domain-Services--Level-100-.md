@@ -290,7 +290,7 @@ Install-ADDSDomainController -DomainName <string> [-SkipPreChecks] -SafeModeAdmi
 For example, to create an RODC account named RODC1:
 
 ```
-Add-ADDSReadOnlyDomainControllerAccount -DomainControllerAccountName RODC1 -DomainName corp.contoso.com -SiteName Boston DelegatedAdministratoraccountName PilarA
+Add-ADDSReadOnlyDomainControllerAccount -DomainControllerAccountName RODC1 -DomainName corp.contoso.com -SiteName Boston DelegatedAdministratoraccountName AdminUser
 ```
 
 Then run the following commands on the server that you want to attach to the RODC1 account. The server cannot be joined to the domain. First, install the AD DS server role and management tools:
@@ -302,7 +302,7 @@ Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 The run the following command to create the RODC:
 
 ```
-Install-ADDSDomainController -DomainName corp.contoso.com -SafeModeAdministratorPassword (Read-Host -Prompt "DSRM Password:" -AsSecureString) -Credential (Get-Credential Corp\PilarA) -UseExistingAccount
+Install-ADDSDomainController -DomainName corp.contoso.com -SafeModeAdministratorPassword (Read-Host -Prompt "DSRM Password:" -AsSecureString) -Credential (Get-Credential Corp\AdminUser) -UseExistingAccount
 ```
 
 Press **Y** to confirm or include the **"confirm** argument to prevent the confirmation prompt.
