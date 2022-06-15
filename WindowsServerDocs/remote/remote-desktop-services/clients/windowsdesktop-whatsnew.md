@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 06/02/2022
+ms.date: 06/16/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -18,7 +18,21 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.3213        |1.2.1672                  |
-|Insider    |1.2.3213        |1.2.1672                  |
+|Insider    |1.2.3297        |1.2.1672                  |
+
+## Updates for version 1.2.3297 (Insider)
+
+*Date published: 6/16/2022*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Fixed an issue where the service couldn't render RemoteApp windows while RemoteFX Advanced Graphics were disabled.
+- Fixed an issue that happened when a user tried to connect to an Azure Virtual Desktop endpoint while using the Remote Desktop Services Transport Layer Security protocol (RDSTLS) with CredSSP disabled, which caused the Windows Desktop client not prompt the user for credentials. Because the client couldn't authenticate, it would get stuck in an infinite loop of failed connection attempts.
+- Fixed an issue that happened when users tried to connect to an Azure Active Directory (Azure AD)-joined Azure Virtual Desktop endpoint from a client machine joined to the same Azure AD tenant while the Credential Security Support Provider protocol (CredSSP) was disabled. During this issue, the Windows Desktop client would try to use the Transport Layer Security (TLS) protocol instead of RDSTLS. This change made the Windows Desktop client use TLS instead of RDSTLS, which isn't ideal for security.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams for Azure Virtual Desktop, including the following:
+  - Better noise suppression during calls.
+  - A diagnostic overlay now appears when you press Shift+Ctrl+; during calls. The diagnostic overlay only works with version 1.17.2205.23001 or later of the Remote Desktop WebRTC Redirector Service. You can download the latest version of the service [here](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4YM8L).
 
 ## Updates for version 1.2.3213
 
