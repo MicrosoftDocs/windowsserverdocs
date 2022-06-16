@@ -18,9 +18,9 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.3213        |1.2.1672                  |
-|Insider    |1.2.3297        |1.2.1672                  |
+|Insider    |1.2.3308        |1.2.1672                  |
 
-## Updates for version 1.2.3297 (Insider)
+## Updates for version 1.2.3308 (Insider)
 
 *Date published: 6/16/2022*
 
