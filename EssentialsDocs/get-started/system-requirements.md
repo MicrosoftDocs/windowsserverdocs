@@ -1,7 +1,7 @@
 ---
-title: "System Requirements for Windows Server Essentials"
-description: Learn about the system requirements for Windows Server Essentials.
-ms.date: 10/31/2013
+title: "Hardware limits for Windows Server Essentials"
+description: Learn about the hardware limits for Windows Server Essentials.
+ms.date: 7/1/2022
 ms.topic: article
 ms.assetid: 0951a67d-492f-41ad-9ae5-8e4cd25e3041
 author: nnamuhcs
@@ -9,44 +9,33 @@ ms.author: wscontent
 manager: mtillman
 ---
 
-# System Requirements for Windows Server Essentials
+# Hardware limits for Windows Server Essentials
 
->Applies To: Windows Server 2019 Essentials, Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Applies To: Windows Server 2022 Essentials, Windows Server 2019 Essentials, Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-  Windows Server Essentials server software is a 64-bit only operating system. Table 1 defines the recommended minimum hardware requirements for  Windows Server Essentials. Table 2 defines additional hardware and software requirements for the server.
+Use this article to learn about the hardware limits for Windows Server Essentials. The table below summarizes the hardware limits for Windows Server Essentials.
 
+| Limits | Windows Server 2022 Essentials or later | Windows Server 2019 Essentials and earlier |
+|--|--|--|
+| Maximum number of users  | 25 | 25 |
+| Maximum number of 64-bit sockets | 1 sockets | 2 sockets |
+| Maximum number of CPU cores | 10 cores | No limit |
+| Maximum RAM | 128 GB | 64 GB |
+| Can be used as virtualization guest | Yes;  one instance of the physical operating system environment and one instance of a virtual operating system environment on the licensed server. | Yes;  one instance of the physical operating system environment and one instance of a virtual operating system environment on the licensed server. |
 
-## Table 1. System requirements for Windows Server Essentials
+For more information, see the [Microsoft Software Licensing Terms](https://www.microsoft.com/useterms/). For Windows Server 2022 Essentials, the limits are contained within the Window Server 2022 Datacenter and Standard license terms.
 
-|Component|Minimum|Recommended*|Maximum|
-|---------------|-------------|-------------------|-------------|
-|CPU socket|1.4 GHz (64-bit processor) or faster for single core<br /><br /> 1.3 GHz (64-bit processor) or faster for multi-core|3.1 GHz (64-bit processor) or faster multi-core|2 sockets|
-|Memory (RAM)|2 GB<br /><br /> 4 GB if you deploy Windows Server Essentials as a virtual machine|16 GB|64 GB|
-|Hard disks and available storage space|160-GB hard disk with a 60-GB system partition||No limit|
+> [!NOTE]
+> The licensing terms may vary based on the distribution channel, for example, a Commercial Licensing program, Retail, Original Equipment Manufacturer (OEM), and so on.
 
- *The recommended hardware requirements support maximum user and device limits.
-
-## Table 2. Additional hardware and software requirements for Windows Server Essentials
-
-|Component|Description|
-|---------------|-----------------|
-|Network adapter|Gigabit Ethernet adapter (10/100/1000baseT PHY/MAC)|
-|Internet|Some functionality may require Internet access (fees may apply) or a Microsoft account|
-|Supported Client operating systems| Windows 10, Windows 8.1, Windows 8, Windows 7, Macintosh OS X versions 10.5 to 10.8.<br /><br /> **Note:** Some features require professional or higher editions.<br /><br /> 1 GB of available hard drive space (a portion of this disk will be freed after installation)|
-|Router|A router or firewall that supports IPv4 NAT or IPv6|
-|Additional requirements|DVD-ROM drive|
-
- Actual requirements will vary based on your system configuration and the applications and features you choose to install. Processor performance depends not only on the clock frequency of the processor, but also on the number of cores and the size of the processor cache. Storage space requirements for the system partition are approximate. Additional available storage space may be required if you are installing over a network.
-
- For more information about the hardware requirements, see the [Windows Server Catalog](https://www.windowsservercatalog.com/).
-
- All server hardware should meet the requirements established for the  Windows Server 2012 R2 Logo Program for Systems. For more information, see [Windows Logo Program](/previous-versions/windows/hardware/hck/dn641155(v=vs.85)).
+To learn more about certified and compatible hardware, see the [Windows Server Catalog](https://www.windowsservercatalog.com/) to verify the status of tested products.
 
 > [!IMPORTANT]
 > Dynamic disks are not supported on Windows Server Essentials.
 
-## Additional References
+## Next steps
 
--   [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
+Now you understand the system requirements for Windows Server Essentials, here are some articles to help you get started:
 
--   [System Requirements for Windows Server Essentials](system-requirements.md)
+- [Before You Install Windows Server Essentials](../install/Before-You-Install-Windows-Server-Essentials.md)
+- [Install Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
