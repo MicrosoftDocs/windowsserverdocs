@@ -19,7 +19,7 @@ Secured-core server provides higher levels of protection for operating environme
 
 ## 1. Simplified security
 
-Certified OEM hardware for Secured-core server assures that all hardware, firmware, and drivers meet the requirements for Secured-core server capabilities. You can enable these capabilities easily by configuring Windows Server systems in the Windows Admin Center.
+Certified OEM hardware for Secured-core server gives you the assurance that the hardware, firmware, and drivers meet the requirements for Secured-core server capabilities. You can enable these capabilities easily by configuring Windows Server systems in the Windows Admin Center.
 
 ## 2. Advanced protection
 
@@ -35,7 +35,7 @@ Secured-core server protections are designed to deliver platforms that are secur
 
 - **Secure Boot with Dynamic Root of Trust for Measurement (DRTM)**
 
-Root of Trust for Measurement (RTM) is a security check that ensures that system components (the boot chain) haven't been tampered with. This software feature is assisted by the TPM, however it doesn't live solely inside the TPM chip. Many different processes occur during a boot. This is known as the boot chain. RTM measures and compares the booting environment to verify that it hasn't been tampered with. The boot chain can change over time, including the order in which components load. Dynamic Root of Trust for Measurement allows components to load first and then be measured.
+Root of Trust for Measurement (RTM) is a security check that ensures that system components haven't been tampered with. This software feature is assisted by the TPM, however it doesn't live solely inside the TPM chip. Many different processes occur during a boot. This is known as the boot chain. RTM measures and compares the booting environment to verify that it hasn't been tampered with. The boot chain can change over time, including the order in which components load. Dynamic Root of Trust for Measurement allows components to load first and then be measured.
 
 - **System Guard with Kernel Direct Memory Access (DMA) protection**
 
