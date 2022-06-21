@@ -2,10 +2,9 @@
 description: "Learn more about: CA Backup and Restore Windows PowerShell cmdlets"
 ms.assetid: 7e195f5b-b194-40f3-a26d-5cf4ade5fc4d
 title: CA Backup and Restore Windows PowerShell cmdlets
-author: iainfoulds
-ms.author: daveba
-manager: daveba
-ms.date: 05/31/2017
+author: xelu86
+ms.author: alalve
+ms.date: 06/21/2022
 ms.topic: article
 ---
 
@@ -26,7 +25,6 @@ The ADCSAdministration Windows PowerShell module was introduced in Window Server
 -   Restore-CARoleService
 
 ## Backup-CARoleService
-**Table  SEQ Table \\\* ARABIC 17: Backup and Restore Windows PowerShell Cmdlets**
 
 **ADCSAdministration Cmdlet: Backup-CARoleService**
 
@@ -73,7 +71,7 @@ A non-password protected backup is taken if the ConvertTo-SecureString function 
 
 ![CA backup and restore](media/CA-Backup-and-Restore-Windows-PowerShell-cmdlets/GTR_ADDS_BackupCARole.gif)
 
-**Table  SEQ Table \\\* ARABIC 18: Common Errors**
+### Common errors
 
 |Action|Error|Comment|
 |----------|---------|-----------|
