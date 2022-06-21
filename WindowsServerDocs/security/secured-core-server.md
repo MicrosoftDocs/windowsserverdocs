@@ -6,9 +6,8 @@ ms.author: socuff
 ms.topic: conceptual 
 ms.date: 06/01/2022
 ms.prod: windows-server
-ms.custom: template-overview, team=cloud_advocates
+ms.custom: template-overview, team=cloud_advocates, kr2b-contr-experiment
 ms.contributors: socuff-01282022
-ms.custom: kr2b-contr-experiment
 ---
 
 # What is Secured-core server?
