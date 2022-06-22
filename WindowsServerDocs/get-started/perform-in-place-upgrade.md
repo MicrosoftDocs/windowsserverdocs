@@ -5,8 +5,8 @@ ms.topic: how-to
 author: robinharwood
 ms.author: roharwoo
 ms.date: 05/19/2022
-#Customer intent: As a server administrator, I want upgrade Windows Server, so that my server
-remains supported and I can use the latest features.
+# Customer intent: As a server administrator, I want upgrade Windows Server, so that my server
+# remains supported and I can use the latest features.
 ---
 
 # Perform an in-place upgrade of Windows Server
@@ -58,7 +58,10 @@ To collect your information:
    USB flash drive or network location off of your computer.
 
 > [!TIP]
-> Get-ComputerInfo requires PowerShell 5.1 or later. If your Windows Server version doesn't include Powershell you can find this information in the registry. Open Registry Editor, go to the  **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** key, and then copy and paste the Windows Server **BuildLabEx** and **EditionID** values.
+> Get-ComputerInfo requires PowerShell 5.1 or later. If your Windows Server version doesn't include
+> Powershell you can find this information in the registry. Open Registry Editor, go to the
+> **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion** key, and then copy and paste
+> the Windows Server **BuildLabEx** and **EditionID** values.
 
 After you've collected all of your Windows Server-related information, we recommend that you backup
 your server operating system, apps, and virtual machines. You must also shut down, quick migrate, or
@@ -78,7 +81,8 @@ To perform the in-place upgrade:
    For example, if you're using removal media the file path might be _D:\setup.exe_.
 
     > [!IMPORTANT]
-    >  Depending on your security settings, User Account Control may prompt you to allow setup to make changes to your device. If you're happy to continue select **Yes**.
+    > Depending on your security settings, User Account Control may prompt you to allow setup to
+    > make changes to your device. If you're happy to continue select **Yes**.
 
 1. By default, setup will automatically download updates for the installation. If you're okay with
    the default settings, select **Next** to continue. If you don't want Setup to automatically
