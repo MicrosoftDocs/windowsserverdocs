@@ -179,21 +179,21 @@
       href: migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md
     - name: Run the Windows Server Essentials Best Practices Analyzer
       href: migrate/Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md
-    - name: Step 1: Prepare your Source Server for Windows Server Essentials migration
+    - name: Step 1&#58; Prepare your Source Server for Windows Server Essentials migration
       href: migrate/Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md
-    - name: Step 2: Install Windows Server Essentials as a new replica domain controller
+    - name: Step 2&#58; Install Windows Server Essentials as a new replica domain controller
       href: migrate/Step-2--Install-Windows-Server-Essentials-as-a-new-replica-domain-controller.md
-    - name: Step 3: Join computers to the new Windows Server Essentials server
+    - name: Step 3&#58; Join computers to the new Windows Server Essentials server
       href: migrate/Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md
-    - name: Step 4: Move settings and data to the Destination Server for Windows Server Essentials migration
+    - name: Step 4&#58; Move settings and data to the Destination Server for Windows Server Essentials migration
       href: migrate/Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md
-    - name: Step 5: Enable folder redirection on the Destination Server for Windows Server Essentials migration
+    - name: Step 5&#58; Enable folder redirection on the Destination Server for Windows Server Essentials migration
       href: migrate/Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration.md
-    - name: Step 6: Demote and remove the Source Server from the new Windows Server Essentials network
+    - name: Step 6&#58; Demote and remove the Source Server from the new Windows Server Essentials network
       href: migrate/Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md
-    - name: Step 7: Perform post-migration tasks for the Windows Server Essentials migration
+    - name: Step 7&#58; Perform post-migration tasks for the Windows Server Essentials migration
       href: migrate/Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md
-    - name: Step 8: Run the Windows Server Essentials Best Practices Analyzer
+    - name: Step 8&#58; Run the Windows Server Essentials Best Practices Analyzer
       href: migrate/Step-8--Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md
     - name: Transition from Windows Server Essentials to Windows Server 2012 Standard
       href: migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md
