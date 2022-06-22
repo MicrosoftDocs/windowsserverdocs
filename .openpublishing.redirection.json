@@ -10588,17 +10588,17 @@
     {
       "source_path": "WindowsServerDocs/upgrade/upgrade-2008r2-to-2012r2.md",
       "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/upgrade/upgrade-2012r2-to-2019.md",
       "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/upgrade/upgrade-2012-to-2016.md",
       "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/upgrade/upgrade-2016-to-2019.md",
