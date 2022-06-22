@@ -93,8 +93,8 @@ To perform the in-place upgrade:
 
 1. Next, Setup will download any required updates, and will check your device configuration.
    Depending on the distribution channel that you received Windows Server media from (Retail, Volume
-   License, OEM, ODM, etc.), you may be prompted to enter a product key to continue. If prompted,
-   enter your _product key_, then select **Next**.
+   License, OEM, ODM, etc.), you may be prompted to enter a _product key_ to continue. If prompted,
+   enter your product key, then select **Next**.
 
 1. Select the edition of Windows Server you want to install, then select **Next**.
 
