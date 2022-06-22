@@ -1,5 +1,6 @@
 - name: Get started with Windows Server Essentials
   href: get-started/get-started.md
+  expanded: true
   items:
   - name: What's New in Windows Server 2019 Essentials
     href: get-started/what-s-new-19.md
