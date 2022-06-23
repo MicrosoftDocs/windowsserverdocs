@@ -49,7 +49,7 @@ Before you install Windows Server Essentials or the Essentials Experience role, 
 ## Before you begin
  Before you begin the installation, review the following documentation:
 
--   [Windows Server Essentials Product Overview](https://www.microsoft.com/server-cloud/windows-server-essentials/windows-server-2012-r2-essentials.aspx)
+-   [Get started with Windows Server Essentials](/windows-server-essentials/get-started/get-started)
 
 
 -   [System Requirements for Windows Server Essentials](../get-started/system-requirements.md)
