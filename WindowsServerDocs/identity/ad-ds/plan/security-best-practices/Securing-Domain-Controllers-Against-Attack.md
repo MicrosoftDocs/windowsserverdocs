@@ -5,7 +5,7 @@ title: Securing Domain Controllers Against Attack
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: karenhoran
-ms.date: 04/12/2022
+ms.date: 06/23/2022
 ms.topic: article
 ms.reviewer: rickys
 ---
@@ -83,7 +83,7 @@ Launching web browsers on domain controllers should be restricted by policy and 
 
 Microsoft encourages all organizations to move to a cloud-based approach to identity and access management and migrate from Active Directory to Azure Active Directory (Azure AD). Azure AD is a complete cloud identity and access management solution for managing directories, enabling access to on-premises and cloud apps, and protecting identities from security threats. Azure AD also offers a robust and granular set of security controls to help protect identities, such as multi-factor authentication, Conditional Access policies, Identity Protection, identity governance, and Privileged Identity Management.
 
-Most organizations will operate in a hybrid identity model during their transition to the cloud, where some element of their on-premises Active Directory will be synchronized using Azure AD Connect. Whilst this hybrid model exists in any organization, Microsoft recommends cloud powered protection of those on-premises identities using Microsoft Defender for Identity. The configuration of the Defender for Identity sensor on domain controllers and AD FS servers allows for a highly secured, one-way connection to the cloud service through a proxy and to specific endpoints. A complete explanation on how to configure this proxy connection can be found in the technical documentation for Defender for Identity. This tightly controlled configuration ensures that the risk of connecting these servers to the cloud service is mitigated, and organizations benefit from the increase in protection capabilities Defender for Identity offers. Microsoft also recommends that these servers are protected with cloud powered endpoint detection like Azure Defender for Servers.
+Most organizations will operate in a hybrid identity model during their transition to the cloud, where some element of their on-premises Active Directory will be synchronized using Azure AD Connect. Whilst this hybrid model exists in any organization, Microsoft recommends cloud powered protection of those on-premises identities using Microsoft Defender for Identity. The configuration of the Defender for Identity sensor on domain controllers and AD FS servers allows for a highly secured, one-way connection to the cloud service through a proxy and to specific endpoints. A complete explanation on how to configure this proxy connection can be found in the technical documentation for Defender for Identity. This tightly controlled configuration ensures that the risk of connecting these servers to the cloud service is mitigated, and organizations benefit from the increase in protection capabilities Defender for Identity offers. Microsoft also recommends that these servers are protected with cloud powered endpoint detection like Microsoft Defender for Servers.
 
 For those organizations that have regulatory or other policy driven requirements to maintain an on-premises only implementation of Active Directory, Microsoft recommends entirely restricting internet access to and from domain controllers.
 
