@@ -2,7 +2,7 @@
 title: Virtual machine sizing
 description: Size recommendations for each workload type.
 ms.author: helohr
-ms.date: 02/16/2021
+ms.date: 06/24/2022
 ms.topic: article
 author: Heidilohr
 manager: femila
@@ -15,23 +15,23 @@ Whether you're running your virtual machine on Remote Desktop Services or Azure 
 
 The examples in this section are generic guidelines and you should only use them for initial performance estimates. The following tables list the maximum suggested number of users per virtual central processing unit (vCPU) and the minimum VM configuration for each workload. These recommendations are based on [Remote Desktop workloads](remote-desktop-workloads.md).
 
-The following table shows an example of a smaller, proof-of-concept scenario with a user workload of less than 20 users:
+The following table shows examples of standard or larger user workloads with 20 or more users:
 
 | Workload type | Maximum users per vCPU | vCPU/RAM/OS storage minimum | Example Azure instances | Profile container storage minimum |
 | --- | --- | --- | --- | --- |
-| Light | 4 | 4 vCPUs, 16 GB RAM, 32 GB storage | D4s_v4, F4s_v2, D4as_v4 | 30 GB |
-| Medium | 2 | 4 vCPUs, 16 GB RAM, 32 GB storage | D4s_v4, F4s_v2, D4as_v4 | 30 GB |
-| Heavy | 2 | 8 vCPUs, 32 GB RAM, 64 GB storage | D8s_v4, F8s_v2, D8as_v4, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
-| Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D4s_v4, F4s_v2, D4as_v4, NV12, NVv4 | 30 GB |
+| Light | 6 | 8 vCPUs, 16 GB RAM, 16 GB storage | D8s_v4, D8s_v5, F8s_v2, D8as_v4, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
+| Medium | 4 | 8 vCPUs, 16 GB RAM, 32 GB storage | D8s_v4, D8s_v5, F8s_v2, D8as_v4, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
+| Heavy | 2 | 8 vCPUs, 16 GB RAM, 32 GB storage | D8s_v4, D8s_v5, F8s_v2, D8as_v4, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
+| Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D16s_v4, D16as_v4, D16ds_v5, NV6, NV16as_v4 | 30 GB |
 
-This table shows examples of standard or larger user workloads with 20 or more users:
+This table shows an example of a smaller user workload (such as a proof-of-concept) with a user workload of fewer than 20 users:
 
 | Workload type | Maximum users per vCPU | vCPU/RAM/OS storage minimum | Example Azure instances | Profile container storage minimum |
 | --- | --- | --- | --- | --- |
-| Light | 6 | 8 vCPUs, 16 GB RAM, 16 GB storage | D8s_v4, F8s_v2, D8as_v4, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
-| Medium | 4 | 8 vCPUs, 16 GB RAM, 32 GB storage | D8s_v4, F8s_v2, D8as_v4, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
-| Heavy | 2 | 8 vCPUs, 16 GB RAM, 32 GB storage | D8s_v4, F8s_v2, D8as_v4, D16s_v4, F16s_v2, D16as_v4 | 30 GB |
-| Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D8s_v4, F8s_v2, D8as_v4, D16s_v4, F16s_v2, D16as_v4, NV12, NVv4 | 30 GB |
+| Light | 4 | 4 vCPUs, 16 GB RAM, 32 GB storage | D4s_v4, D4s_v5, F4s_v2, D4as_v4 | 30 GB |
+| Medium | 2 | 4 vCPUs, 16 GB RAM, 32 GB storage | D4s_v4, D4s_v5, F4s_v2, D4as_v4 | 30 GB |
+| Heavy | 2 | 8 vCPUs, 32 GB RAM, 64 GB storage | D8s_v4, D8s_v5, F8s_v2, D8as_v4, D16s_v4, D16ds_v5, F16s_v2, D16as_v4 | 30 GB |
+| Power | 1 | 6 vCPUs, 56 GB RAM, 340 GB storage | D4s_v4, D4s_v5, F4s_v2, D4as_v4, NV12, NVv4 | 30 GB |
 
 ## Recommended VM sizes for standard or larger environments
 
@@ -54,6 +54,14 @@ It's better to use a large number of smaller VMs instead of a few large VMs beca
 ## Single-session recommendations
 
 For VM sizing recommendations for single-session scenarios, we recommend at least two physical CPU cores per VM (typically four vCPUs with hyperthreading). If you need more specific VM sizing recommendations for single-session scenarios, ask the software vendors specific to your workload. VM sizing for single-session VMs will likely align with physical device guidelines.
+
+The following table shows examples of typical workloads:
+
+| Workload type | vCPU/RAM/OS storage minimum | Example Azure instances | Profile container storage minimum |
+|--|--|--|--|
+| Light | 2 vCPUs, 8 GB RAM, 32 GB storage | D2s_v4, D2s_v5 | 30 GB |
+| Knowledge workers | 4 vCPUs, 16 GB RAM, 32 GB storage | D4s_v4, D4s_v5 | 30 GB |
+| Advanced knowledge worker<br />Developer | 8 vCPUs, 32 GB RAM, 32 GB storage | D8s_v4, D8s_v5 | 30 GB |
 
 ## General virtual machine recommendations
 
