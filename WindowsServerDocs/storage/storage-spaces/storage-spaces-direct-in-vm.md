@@ -43,7 +43,7 @@ The following considerations apply when deploying Storage Spaces Direct in a vir
 
     - VMware – Configure the VM-VM Anti-Affinity rule by creating a DRS Rule of type "Separate Virtual Machines" to separate the VMs across ESX hosts. Disks presented for use with Storage Spaces Direct should use the Paravirtual SCSI (PVSCSI) adapter. For PVSCSI support with Windows Server, consult https://kb.vmware.com/s/article/1010398.
 
-- Use low latency / high performance storage - Azure Premium Storage managed disks are required
+- Use low latency / high performance storage such as [Azure Premium SSD managed disks or faster](/azure/virtual-machines/disks-types)
 
 - Deploy a flat storage design with no caching devices configured
 
