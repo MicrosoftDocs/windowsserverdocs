@@ -98,7 +98,7 @@ This topic explains how to back up the Source Server, evaluate the Source Server
    |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
    |                     Windows SBS 2003                     | [Microsoft Windows Small Business Server 2003 Best Practices Analyzer website](https://www.microsoft.com/download/details.aspx?id=5334) |
    |                     Windows SBS 2008                     | [Microsoft Windows Small Business Server 2008 Best Practices Analyzer website](https://www.microsoft.com/download/details.aspx?id=6231) |
-   | Windows SBS 2011 Essentials or Windows SBS 2011 Standard |          [Windows Server Solutions Best Practices Analyzer website](https://www.microsoft.com/download/details.aspx?id=15556)           |
+   | Windows SBS 2011 Essentials or Windows SBS 2011 Standard |          [Windows Server Solutions Best Practices Analyzer website](https://www.microsoft.com/en-us/download/details.aspx?id=102918)           |
    |     Windows Server Essentials or Windows Server 2012     |                                                          The server dashboard                                                           |
 
 
