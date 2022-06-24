@@ -14,11 +14,11 @@ Windows Server is the platform for building an infrastructure of connected appli
 
 :::image type="content" source="media/windows-server-management-overview.png" alt-text="Windows Server Management Overview":::
 
-| Azure Arc | Windows Admin Center | System Center |
+| Azure Arc + Azure Automanage | Windows Admin Center | System Center |
 | --------------- | --------------- | --------------- |
 | [Onboard server to Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm) | [Download Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center) | [Get System Center](https://www.microsoft.com/system-center)
 
-## Cloud-based management using Azure Arc
+## Cloud-based management using Azure Arc + Azure Automanage
 
 Azure Arc-enabled servers enables you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider. This management experience is designed to be consistent with how you manage native Azure virtual machines. This allows you to manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more. In combination with Azure Automanage you eliminate the need for discovery, enrollment, and configuration of Azure services that support server management best practices.
 
@@ -29,7 +29,7 @@ Azure Arc-enabled servers enables you to manage your Windows and Linux physical 
 | Disconnected mode | Limited support |
 | Focus | At-scale governance, security, and monitoring |
 
-### Example scenarios for Azure Arc
+### Example scenarios for Azure Arc and Azure Automanage
 
 - You want to proactively monitor the OS and workloads running on the machine.
 - Manage it using Automation runbooks or solutions like Update Management
@@ -37,7 +37,7 @@ Azure Arc-enabled servers enables you to manage your Windows and Linux physical 
 - Govern your Windows Server machines using Azure Policy Guest Configuration
 - Use Azure Automanage to enrollment and configuration Azure services that support server management best practices.
 
-Learn more about Azure Arc-enabled server at [What is Azure Arc-enabled server](/azure/azure-arc/servers/overview).
+Learn more about Azure Arc-enabled server at [What is Azure Arc-enabled server](/azure/azure-arc/servers/overview) and Azure Automanage at [Azure Automanage for machine best practices](/azure/automanage/automanage-virtual-machines).
 
 ## Deep Windows Server and cluster administration with Windows Admin Center
 
