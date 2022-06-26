@@ -19,7 +19,8 @@ Calls one batch program from another without stopping the parent batch program. 
 ## Syntax
 
 ```
-call [drive:][path]<filename> [<batchparameters>] [:<label> [<arguments>]]
+call [drive:][path]<filename> [<batchparameters>]
+call :<label> [<arguments>]
 ```
 
 ### Parameters
