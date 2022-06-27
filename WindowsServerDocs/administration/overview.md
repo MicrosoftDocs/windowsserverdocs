@@ -37,7 +37,7 @@ Azure Arc-enabled servers enables you to manage your Windows and Linux physical 
 - Govern your Windows Server machines using Azure Policy Guest Configuration
 - Use Azure Automanage to automatically, enroll, configure and monitor Azure services that conform to server management best practices.
 
-Learn more about Azure Arc-enabled server at [What is Azure Arc-enabled server](/azure/azure-arc/servers/overview) and Azure Automanage at [Azure Automanage for machine best practices](/azure/automanage/automanage-virtual-machines).
+Learn more about Azure Arc-enabled server at [What is Azure Arc-enabled server](/azure/azure-arc/servers/overview) and Azure Automanage at [Azure Automanage machine best practices](/azure/automanage/automanage-virtual-machines).
 
 ## Deep Windows Server and cluster administration with Windows Admin Center
 
