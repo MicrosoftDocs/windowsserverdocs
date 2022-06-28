@@ -64,13 +64,13 @@ To install the Hyper-V Management tools:
 3.  To reconfigure the service, type:
 
     ```
-    sc config vmms start=auto
+    sc.exe config vmms start=auto
     ```
 
 4.  To start the service, type:
 
     ```
-    sc start vmms
+    sc.exe start vmms
     ```
 
 If the service is already configured to start automatically and you just need to restart the service, you can do that from Hyper-V Manager, or from the sc start vmms command shown above.
