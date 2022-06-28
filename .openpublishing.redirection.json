@@ -10047,17 +10047,17 @@
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/health-service-overview.md",
-      "redirect_url": "https://docs.microsoft.com/azure-stack/hci/manage/health-service-overview",
+      "redirect_url": "/azure-stack/hci/manage/health-service-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/health-service-actions.md",
-      "redirect_url": "https://docs.microsoft.com/azure-stack/hci/manage/health-service-actions",
+      "redirect_url": "/azure-stack/hci/manage/health-service-actions",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/health-service-settings.md",
-      "redirect_url": "https://docs.microsoft.com/azure-stack/hci/manage/health-service-settings",
+      "redirect_url": "/azure-stack/hci/manage/health-service-settings",
       "redirect_document_id": false
     },
     {
