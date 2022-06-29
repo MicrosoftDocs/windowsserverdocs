@@ -17,6 +17,10 @@ items:
     - name: Manage                         # Destination doc set name
       tocHref: /azure-stack/hci/manage/      # Destination doc set route
       topicHref: /windows-server/failover-clustering/cluster-aware-updating    # Original doc set route
+- name: Windows Server
+  tocHref: /azure-stack/
+  topicHref: /windows-server/index
+  items:
   - name: Storage
     tocHref: /azure-stack/hci/
     topicHref: /windows-server/storage/storage
