@@ -17,13 +17,13 @@ items:
     - name: Manage                         # Destination doc set name
       tocHref: /azure-stack/hci/manage/      # Destination doc set route
       topicHref: /windows-server/failover-clustering/cluster-aware-updating    # Original doc set route
-   - name: Storage
-     tocHref: /azure-stack/hci/
-     topicHref: /windows-server/storage/storage
-     items: 
-     - name: Storage and clusters
-       tocHref: /azure-stack/hci/concepts/
-       topicHref: /windows-server/storage/storage-spaces
+  - name: Storage
+    tocHref: /azure-stack/hci/
+    topicHref: /windows-server/storage/storage
+    items: 
+    - name: Storage and clusters
+      tocHref: /azure-stack/hci/concepts/
+      topicHref: /windows-server/storage/storage-spaces
 
 ### For linking to Azure topic and keeping the context in Windows Server TOC      
 - name: Windows Server
