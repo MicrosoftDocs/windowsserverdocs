@@ -10571,6 +10571,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/nested-resiliency.md",
+      "redirect_url": "/azure-stack/hci/concepts/nested-resiliency",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/get-started/Server-2016-activation.md",
       "redirect_url": "/windows-server/get-started/kms-activation-planning",
       "redirect_document_id": false
