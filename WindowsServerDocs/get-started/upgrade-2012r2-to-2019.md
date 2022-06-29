@@ -4,12 +4,12 @@ description: Learn how to perform an in-place upgrade to go from Windows Server 
 ms.topic: how-to
 author: RobHindman
 ms.author: inhenkel
-ms.date: 11/16/2021
+ms.date: 6/28/2022
 ---
 
 # Upgrade Windows Server 2012 R2 to Windows Server 2019
 
-If you want to keep the same hardware and all the server roles you've already set up without flattening the server, you'll want to do an in-place upgrade. An in-place upgrade allows you to go from an older operating system to a newer one, while keeping your settings, server roles, and data intact. This article helps you to move from Windows Server 2012 R2 to Windows Server 2019.
+If you want to keep the same hardware, and all the server roles you've already set up without flattening the server, you'll want to do an in-place upgrade. An in-place upgrade allows you to go from an older operating system to a newer one, while keeping your settings, server roles, and data intact. This article helps you to move from Windows Server 2012 R2 to Windows Server 2019.
 
 ## Before you begin your in-place upgrade
 
@@ -23,7 +23,7 @@ Before you start your Windows Server upgrade, we recommend that you collect some
 
 3. Type **ipconfig /all** into the command prompt, and then copy and paste the resulting configuration information into the same location as above.
 
-4. Open the Registry Editor, go to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion hive, and then copy and paste the Windows Server **BuildLabEx** (version) and **EditionID** (edition) into the same location as above.
+4. Open the Registry Editor, go to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion hive, and then copy and paste the Windows Server **BuildLabEx** (version) and **EditionID** (edition) into the same location as above.
 
 After you've collected all of your Windows Server-related information, we highly recommend that you backup your operating system, apps, and virtual machines. You must also **Shut down**, **Quick migrate**, or **Live migrate** any virtual machines currently running on the server. You can't have any virtual machines running during the in-place upgrade.
 
@@ -77,8 +77,8 @@ After your upgrade completes, you must make sure the upgrade to Windows Server 2
 
 ### To make sure your upgrade was successful
 
-1. Open the Registry Editor, go to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion hive, and view the **ProductName**. You should see your edition of Windows Server 2019, for example **Windows Server 2019 Datacenter**.
+1. Open the Registry Editor, go to the HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion hive, and view the **ProductName**. You should see your edition of Windows Server 2019, for example **Windows Server 2019 Datacenter**.
 
 2. Make sure all of your applications are running and that your client connections to the applications are successful.
 
-If you think something might have gone wrong during your upgrade, copy and zip the `%SystemRoot%\Panther` (usually `C:\Windows\Panther`) directory and contact Microsoft support.
+If you think something might have gone wrong during your upgrade, copy,, and zip the `%SystemRoot%\Panther` (usually `C:\Windows\Panther`) directory and contact Microsoft support.
