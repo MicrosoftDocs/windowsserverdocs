@@ -6,7 +6,7 @@ ms.assetid: 751efb33-a08e-4e90-9208-6f2bc319e029
 ms.author: jgerend
 author: JasonGerend
 manager: mtillman
-ms.date: 10/12/2016
+ms.date: 06/28/2022
 ---
 # Windows Defender Antivirus for Windows Server
 
