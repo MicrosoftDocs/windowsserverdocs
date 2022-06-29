@@ -4,6 +4,7 @@ description: Learn about the workflow for deploying Always On VPN connections fo
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
 ms.date: 06/29/2022
+ms.author: wscontent
 author: Teresa-MOTIV
 ---
 
