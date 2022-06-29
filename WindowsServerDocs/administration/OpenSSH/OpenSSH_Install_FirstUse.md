@@ -1,10 +1,10 @@
 ---
 title:  Get started with OpenSSH
 description: Installing OpenSSH Client and Server for Windows.
-ms.date: 09/15/2021
+ms.date: 06/27/2022
 ms.topic: conceptual
-ms.author: inhenkel
-author: IngridAtMicrosoft
+ms.author: roharwoo
+author: robinharwood
 ms.custom: contperf-fy21q4
 ---
 
@@ -18,6 +18,26 @@ An OpenSSH-compatible client can be used to connect to Windows Server and Window
 
 > [!IMPORTANT]
 > If you downloaded OpenSSH from the GitHub repo at [PowerShell/openssh-portable](https://github.com/PowerShell/OpenSSH-Portable), follow the instructions listed there, not the ones in this article.
+
+## Prerequisites
+
+Before you start, your computer must meet the following requirements:
+
+- A device running at least Windows Server 2019 or Windows 10 (build 1809).
+- PowerShell 5.1 or later.
+- An account that is a member of the built-in administrator group.
+
+### Prerequisites check
+
+To validate your environment, you can:
+
+- From the Start Menu search bar, type _winver.exe_ and press enter to see the version details for your Windows device.
+- Open a PowerShell prompt, then run `$PSVersionTable.PSVersion`. Verify your major version is at least 5, and your minor version at least 1. Learn more about [installing PowerShell on Windows](/powershell/scripting/install/installing-powershell-on-windows).
+- From an elevated PowerShell session, run the following command. The output will show `True` when you are a member of the local administrator group.
+
+  ```powershell
+  (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)`
+  ```
 
 ## Install OpenSSH using Windows Settings
 
@@ -48,7 +68,7 @@ Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 
 This should return the following output if neither are already installed:
 
-```
+```Output
 Name  : OpenSSH.Client~~~~0.0.1.0
 State : NotPresent
 
@@ -68,7 +88,7 @@ Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 
 Both of these should return the following output:
 
-```
+```Output
 Path          :
 Online        : True
 RestartNeeded : False
@@ -76,7 +96,7 @@ RestartNeeded : False
 
 ## Start and configure OpenSSH Server
 
-To start and configure OpenSSH Server for initial use, open PowerShell as an administrator, then run the following commands to start the `sshd service`:
+To start and configure OpenSSH Server for initial use, open an elevated PowerShell prompt (right click, Run as an administrator), then run the following commands to start the `sshd service`:
 
 ```powershell
 # Start the sshd service
@@ -96,15 +116,18 @@ if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyCon
 
 ## Connect to OpenSSH Server
 
-Once installed, you can connect to OpenSSH Server from a Windows 10 or Windows Server 2019 device with the OpenSSH client installed using PowerShell as follows. Be sure to run PowerShell as an administrator:
+Once installed, you can connect to OpenSSH Server from a Windows or Windows Server device with the OpenSSH client installed. From a PowerShell prompt run the following command.
 
 ```powershell
-ssh username@servername
+ssh domain\username@servername
 ```
+
+> [!IMPORTANT]
+> Add links to key based login.
 
 Once connected, you get a message similar to the following:
 
-```
+```Output
 The authenticity of host 'servername (10.00.00.001)' can't be established.
 ECDSA key fingerprint is SHA256:(<a large string>).
 Are you sure you want to continue connecting (yes/no)?
@@ -116,7 +139,7 @@ You are prompted for the password at this point. As a security precaution, your 
 
 Once connected, you will see the Windows command shell prompt:
 
-```
+```Output
 domain\username@SERVERNAME C:\Users\username>
 ```
 
@@ -154,3 +177,11 @@ Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 
 You may need to restart Windows afterwards if the service was in use at the time it was uninstalled.
+
+## Next steps
+
+Now that you've installed OpenSSH Server for Windows, here are some articles that might help you as you use it:
+
+- Learn more about using key paris for authentication in [OpenSSH key management](OpenSSH_KeyManagement.md)
+- Learn more about the [OpenSSH Server configuration for Windows Server and Windows](OpenSSH_Server_Configuration.md)
+- Win32/OpenSSH

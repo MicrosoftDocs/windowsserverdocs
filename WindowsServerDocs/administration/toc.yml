@@ -86,8 +86,9 @@ items:
         - name: Manage Server Core and remote systems Remote Server Administration Tools
           href: ../remote/remote-server-administration-tools.md
         - name: Manage Windows with OpenSSH
-          href: OpenSSH/OpenSSH_Overview.md
           items: 
+            - name: OpenSSH in Windows Overview
+              href: OpenSSH/OpenSSH_Overview.md
             - name: Get started with OpenSSH
               href: OpenSSH/OpenSSH_Install_FirstUse.md
             - name: OpenSSH Server configuration

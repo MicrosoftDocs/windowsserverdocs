@@ -9,7 +9,7 @@ author: maertendmsft
 
 # OpenSSH key management
 
->Applies to Windows Server 2019, Windows 10: Windows Server 2022,
+>Applies to Windows Server 2022, Windows Server 2019, Windows 10 (build 1809 and later)
 
 Most authentication in Windows environments is done with a username-password pair, which works well for systems that share a common domain. When working across domains, such as between on-premises and cloud-hosted systems, it becomes vulnerable to brute force intrusions.
 
@@ -63,22 +63,22 @@ ssh-keygen -t ed25519
 
 This should display the following (where "username" is replaced by your user name):
 
-```
+```Output
 Generating public/private ed25519 key pair.
-Enter file in which to save the key (C:\Users\username\.ssh\id_ed25519):
+Enter file in which to save the key (C:\Users\username/.ssh/id_ed25519):
 ```
 
 You can press Enter to accept the default, or specify a path and/or filename where you would like your keys to be generated.
 At this point, you'll be prompted to use a passphrase to encrypt your private key files. This can be empty but is not recommended.
 The passphrase works with the key file to provide two-factor authentication. For this example, we are leaving the passphrase empty.
 
-```
+```Output
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in C:\Users\username\.ssh\id_ed25519.
-Your public key has been saved in C:\Users\username\.ssh\id_ed25519.pub.
+Your identification has been saved in C:\Users\username/.ssh/id_ed25519.
+Your public key has been saved in C:\Users\username/.ssh/id_ed25519.pub.
 The key fingerprint is:
-SHA256:OIzc1yE7joL2Bzy8!gS0j8eGK7bYaH1FmF3sDuMeSj8 username@server@LOCAL-HOSTNAME
+SHA256:OIzc1yE7joL2Bzy8!gS0j8eGK7bYaH1FmF3sDuMeSj8 username@LOCAL-HOSTNAME
 
 The key's randomart image is:
 +--[ED25519 256]--+
@@ -94,9 +94,9 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-Now you have a public/private Ed25519 key pair in the location specified. The .pub files are public keys, and files without an extension are private keys:
+Now you have a public/private ed25519 key pair in the location specified. The .pub files are public keys, and files without an extension are private keys:
 
-```
+```Output
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
 -a----         6/3/2021   2:55 PM            464 ed25519
@@ -104,12 +104,12 @@ Mode                LastWriteTime         Length Name
 ```
 
 Remember that private key files are the equivalent of a password should be protected the same way you protect your password.
-To help with that, use ssh-agent to securely store the private keys within a Windows security context, associated with your Windows login. To do that, start the ssh-agent service as Administrator and use ssh-add to store the private key.
+To help with that, use ssh-agent to securely store the private keys within a Windows security context, associated with your Windows login. To start the ssh-agent service each time your computer is rebooted, and use ssh-add to store the private key run the following commands from an elevated PowerShell prompt on your server:
 
 ```powershell
 # By default the ssh-agent service is disabled. Allow it to be manually started for the next step to work.
 # Make sure you're running as an Administrator.
-Get-Service ssh-agent | Set-Service -StartupType Manual
+Get-Service ssh-agent | Set-Service -StartupType Automatic
 
 # Start the service
 Start-Service ssh-agent
@@ -118,7 +118,7 @@ Start-Service ssh-agent
 Get-Service ssh-agent
 
 # Now load your key files into ssh-agent
-ssh-add ~\.ssh\id_ed25519
+ssh-add $env:USERPROFILE\.ssh\id_ed25519
 ```
 
 After completing these steps, whenever a private key is needed for authentication from this client, ssh-agent will automatically retrieve the local private key and pass it to your SSH client.
@@ -155,12 +155,9 @@ The contents of your public key (~\\.ssh\id_ed25519.pub) needs to be placed on t
 The example below copies the public key to the server and configures the ACL (where "username" is replaced by your user name). You will need to use the password for the user account for the server initially.
 
 > [!NOTE]
-> This example shows the steps for creating the `administrators_authorized_keys file`. If it is run multiple times, it will overwrite this file each time. To add the public key for multiple administrative users, you need to append this file with each public key.
+> This example shows the steps for creating the `administrators_authorized_keys` file. If it is run multiple times, it will overwrite this file each time. To add the public key for multiple administrative users, you need to append this file with each public key.
 
 ```powershell
-# Make sure that the .ssh directory exists in your server's user account home folder
-ssh user1@domain1@contoso.com mkdir C:\ProgramData\ssh\
-
 # Use scp to copy the public key file generated previously on your client to the authorized_keys file on your server
 scp C:\Users\username\.ssh\id_ed25519.pub user1@domain1@contoso.com:C:\ProgramData\ssh\administrators_authorized_keys
 

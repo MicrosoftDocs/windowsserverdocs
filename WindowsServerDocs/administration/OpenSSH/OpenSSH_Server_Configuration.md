@@ -9,6 +9,8 @@ author: maertendmsft
 
 # OpenSSH Server configuration for Windows Server and Windows
 
+>Applies to Windows Server 2022, Windows Server 2019, Windows 10 (build 1809 and later)
+
 This article covers the Windows-specific configuration for OpenSSH Server (sshd).
 
 OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html), which is not duplicated in this documentation set.
@@ -20,7 +22,7 @@ The initial default Windows is the Windows Command shell (cmd.exe).
 Windows also includes PowerShell, and third-party command shells are also available for Windows and may be configured as the default shell for a server.
 
 To set the default command shell, first confirm that the OpenSSH installation folder is on the system path.
-For Windows, the default installation folder is %systemdrive%\Windows\System32\openssh.
+For Windows, the default installation folder is _%systemdrive%\Windows\System32\openssh_.
 The following command shows the current path setting, and adds the default OpenSSH installation folder to it.
 
 Command shell | Command to use
@@ -28,7 +30,7 @@ Command shell | Command to use
 Command | path
 PowerShell | $env:path
 
-Configuring the default ssh shell is done in the Windows registry by adding the full path to the shell executable to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH in the string value DefaultShell.
+Configuring the default ssh shell is done in the Windows registry by adding the full path to the shell executable to `HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH` in the string value `DefaultShell`.
 
 As an example, the following PowerShell command sets the default shell to be powershell.exe:
 
@@ -38,7 +40,7 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Wi
 
 ## Windows Configurations in sshd_config
 
-In Windows, sshd reads configuration data from %programdata%\ssh\sshd_config by default, or a different configuration file may be specified by launching sshd.exe with the -f parameter.
+In Windows, sshd reads configuration data from _%programdata%\ssh\sshd_config_ by default, or a different configuration file may be specified by launching _sshd.exe_ with the -f parameter.
 If the file is absent, sshd generates one with the default configuration when the service is started.
 
 The elements listed below provide Windows-specific configuration possible through entries in sshd_config.
@@ -51,7 +53,7 @@ The allow/deny directives are processed in the following order: DenyUsers, Allow
 All account names must be specified in lower case.
 See PATTERNS in ssh_config for more information on patterns for wildcards.
 
-When configuring user/group based rules with a domain user or group, use the following format: ``` user?domain* ```.
+When configuring user/group based rules with a domain user or group, use the following format: `user?domain*`.
 Windows allows multiple of formats for specifying domain principals, but many conflict with standard Linux patterns.
 For that reason, * is added to cover FQDNs.
 Also, this approach uses "?", instead of @, to avoid conflicts with the username@host format.
@@ -81,7 +83,10 @@ For Windows OpenSSH, the only available authentication methods are "password" an
 
 ### AuthorizedKeysFile
 
-The default is ".ssh/authorized_keys .ssh/authorized_keys2". If the path is not absolute, it is taken relative to user's home directory (or profile image path), e.g. C:\Users\username. Note that if the user belongs to the administrator group, %programdata%/ssh/administrators_authorized_keys is used instead.
+The default is `.ssh/authorized_keys`. If the path is not absolute, it is taken relative to user's home directory (or profile image path), e.g. _C:\Users\username_. Note that if the user belongs to the administrator group, _%programdata%/ssh/administrators_authorized_keys_ is used instead.
+
+> [!TIP]
+> The _administrators_authorized_keys_ file requires the BUILTIN\Administrators security group and NT Authority\SYSTEM account to explicitly granted full control. You can do this by opening an elevated PowerShell prompt, and running the command `icacls.exe "C:\ProgramData\ssh\administrators_authorized_keys" /inheritance:r /grant "Administrators:F" /grant "SYSTEM:F"`.
 
 ### ChrootDirectory (Support added in v7.7.0.0)
 
@@ -89,7 +94,9 @@ This directive is only supported with sftp sessions. A remote session into cmd.e
 
 ### HostKey
 
-The defaults are %programdata%/ssh/ssh_host_ecdsa_key, %programdata%/ssh/ssh_host_ed25519_key, %programdata%/ssh/ssh_host_dsa_key, and %programdata%/ssh/ssh_host_rsa_key. If the defaults are not present, sshd automatically generates these on a service start.
+The defaults are %programdata%/ssh/ssh_host_ecdsa_key, %programdata%/ssh/ssh_host_ed25519_key, %programdata%/ssh/ssh_host_dsa_key, and %programdata%/ssh/ssh_host_rsa_key. 
+
+If the defaults are not present, sshd automatically generates these on a service start.
 
 ### Match
 
@@ -101,7 +108,7 @@ Not applicable in Windows. To prevent administrator login, use Administrators wi
 
 ### SyslogFacility
 
-If you need file based logging, use LOCAL0. Logs are generated under %programdata%\ssh\logs.
+If you need file based logging, use LOCAL0. Logs are generated under _%programdata%\ssh\logs_.
 For any other value, including the default value, AUTH directs logging to ETW. For more info, see [Logging Facilities in Windows](https://github.com/PowerShell/Win32-OpenSSH/wiki/Logging-Facilities).
 
 ### Not supported
