@@ -20,7 +20,7 @@ Windows Server is the platform for building an infrastructure of connected appli
 
 ## Cloud-based management using Azure Arc + Azure Automanage
 
-Azure Arc-enabled servers enables you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider. This management experience is designed to be consistent with how you manage native Azure virtual machines. This allows you to manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more. In conjunction with Azure Automanage, you eliminate the need for service discovery, enrollment, configuration and monitoring of the Azure services that conform to server management best practices.
+Azure Arc-enabled server enables you to manage your Windows and Linux physical servers and virtual machines hosted outside of Azure, on your corporate network, or other cloud provider. This management experience is designed to be consistent with how you manage native Azure virtual machines. This allows you to manage, govern, and secure your Windows Servers with services such as Azure Policy, Microsoft Defender for Cloud, Azure Monitor, Azure Update Management, and more. In conjunction with Azure Automanage, you eliminate the need for service discovery, enrollment, configuration and monitoring of the Azure services that conform to server management best practices.
 
 | Details | Description |
 | --------------- | --------------- |
@@ -41,7 +41,7 @@ Learn more about Azure Arc-enabled server at [What is Azure Arc-enabled server](
 
 ## Deep Windows Server and cluster administration with Windows Admin Center
 
-Windows Admin Center is a browser-based server adminstration tool set that lets you manage your Windows Servers. It can be locally-deployed with no Azure or cloud dependency, or can be used directly integrated within the Azure Portal. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for managing servers on private networks that are not connected to the Internet.
+Windows Admin Center is a browser-based server administration tool set that lets you manage your Windows Servers. It can be locally deployed with no Azure or cloud dependency, or can be used directly integrated within the Azure portal. Windows Admin Center gives you full control over all aspects of your server infrastructure and is particularly useful for managing servers on private networks that are not connected to the Internet.
 
 Windows Admin Center is the modern evolution of "in-box" management tools, like Server Manager and MMC, and complements other management solutions.
 
