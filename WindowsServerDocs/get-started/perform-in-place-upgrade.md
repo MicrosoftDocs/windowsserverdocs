@@ -20,7 +20,7 @@ version of Windows Server using an in-place upgrade.
 Before you start upgrading, your computer must meet the following requirements:
 
 - Determine
-  [which version of Windows Server should I upgrade to](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to).
+  [which version of Windows Server to upgrade to](upgrade-overview.md#which-version-of-windows-server-should-i-upgrade-to).
 - The hardware meets or exceeds the [hardware requirements for Windows Server](hardware-requirements.md).
 - The install media is ready to use.
 - A valid product key and activation method are available. Keys and methods may depend based on the
@@ -45,7 +45,7 @@ you can get to even if you can't access your device.
 
 To collect your information:
 
-1. Open an elevated PowerShell prompt, make a note of your current directory, and **run** the
+1. Open an elevated PowerShell prompt, make a note of your current directory, and run the
    following commands.
 
    ```powershell
@@ -77,7 +77,7 @@ during which time your computer will restart several times.
 
 To perform the in-place upgrade:
 
-1. Using **File Explorer**, navigate to the Windows Server Setup media. Then select **setup.exe**.
+1. Using **File Explorer**, navigate to the Windows Server Setup media. Then open **setup.exe**.
    For example, if you're using removal media the file path might be _D:\setup.exe_.
 
     > [!IMPORTANT]
@@ -85,28 +85,25 @@ To perform the in-place upgrade:
     > make changes to your device. If you're happy to continue select **Yes**.
 
 1. By default, setup will automatically download updates for the installation. If you're okay with
-   the default settings, select **Next** to continue. If you don't want Setup to automatically
-   download updates, select **Change how Setup downloads updates**.
+   the default settings, to continue select **Next**.
 
-    1. If you selected **Change how Setup downloads updates**, choose the option appropriate to your
-       environment, then select **Next**.
+   If you don't want Setup to automatically
+   download updates:
 
-1. Next, Setup will download any required updates, and will check your device configuration.
-   Depending on the distribution channel that you received Windows Server media from (Retail, Volume
-   License, OEM, ODM, etc.), you may be prompted to enter a _product key_ to continue. If prompted,
-   enter your product key, then select **Next**.
+   - Select **Change how Setup downloads updates**, choose the option appropriate to your
+     environment, then select **Next**.
+
+1. If prompted, enter your product key, then select **Next**.
 
 1. Select the edition of Windows Server you want to install, then select **Next**.
 
-1. Review the applicable notices and license terms, if you agree to the terms select **Accept** to
-   upgrade. The agreement may vary based on your distribution channel (such as a Commercial
-   Licensing program, Retail, OEM, and so on.).
+1. Review the applicable notices and license terms, if you agree to the terms, select **Accept**.
 
 1. Select **Keep personal files and apps** to choose to do an in-place upgrade, then select
    **Next**.
 
-1. After Setup finishes analyzing your device, setup will display the Ready to install screen,
-   select **Install** to continue the upgrade.
+1. After Setup finishes analyzing your device, setup will display the Ready to install screen, to
+   continue the upgrade select **Install**.
 
 The in-place upgrade will start, and you should see a progress bar. After the upgrade finishes, your
 server will restart.
@@ -118,8 +115,7 @@ After the upgrade to Windows Server is done, you must make sure the upgrade was 
 To make sure your upgrade was successful:
 
 1. Open an elevated PowerShell prompt, run the following command to verify the version and edition
-   matches the media and values you selected during setup. For example, if you installed Windows
-   Server 2022 Datacenter, you should see "Windows Server 2022 Datacenter" in the output.
+   matches the media and values you selected during setup.
 
    ```powershell
    Get-ComputerInfo -Property WindowsProductName
