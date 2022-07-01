@@ -1,0 +1,11 @@
+items:
+- name: Docs
+  href: /
+  items:
+    - name: Windows Server Essentials
+      href: /windows-server-essentials/
+      
+### For linking to Windows Server topic and keeping the context in the Windows Server Essentials TOC      
+- name: Windows Server Essentials # New breadcrumb name
+  tocHref: /windows-server/ # Original breadcrumb path
+  topicHref: /windows-server-essentials # New breadcrumb path
