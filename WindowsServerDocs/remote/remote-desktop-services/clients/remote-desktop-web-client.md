@@ -104,7 +104,7 @@ Native resolution is set to off by default. To turn native resolution on:
 1. In your session, go to the upper-right corner of the taskbar and select **Settings**.
 2. Set **Enable native display resolution** to **On**.
 
-## Open resources in your Azure Virtual Desktop client
+## Open resources in your installed Azure Virtual Desktop client
 
 The web client supports opening resources in your installed Azure Virtual Desktop client instead of the browser by downloading the Remote Desktop Protocol (RDP) file. To learn how to install a Remote Desktop client, check out [Remote Desktop clients](remote-desktop-clients.md).
 
