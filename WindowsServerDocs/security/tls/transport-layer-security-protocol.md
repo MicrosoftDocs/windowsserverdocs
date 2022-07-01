@@ -65,7 +65,7 @@ For information about stateless TLS session resumption, see the IETF document [R
 ## <a name="BKMK_AppProtocolNego"></a>Application protocol negotiation
  Windows Server 2012 R2  and Windows 8.1 introduced support that allows client-side TLS application protocol negotiation. Applications can leverage protocols as part of the HTTP 2.0 standard development, and users can access online services such as Google and Twitter by using apps running the SPDY protocol.
 
-For information about how application protocol negotiation works, see [Transport Layer Security (TLS) Application Layer Protocol Negotiation Extension](/windows-server/security/tls/transport-layer-security-protocol).
+For information about how application protocol negotiation works, see [Transport Layer Security (TLS) Application Layer Protocol Negotiation Extension](https://datatracker.ietf.org/doc/html/rfc7301).
 
 ## <a name="BKMK_SNI"></a>TLS support for Server Name Indication extensions
 The Server Name Indication (SNI) feature extends the SSL and TLS protocols to allow proper identification of the server when numerous virtual images are running on a single server. In a virtual hosting scenario, several domains (each with its own potentially distinct certificate) are hosted on one server. In this case, the server has no way of knowing beforehand which certificate to send to the client. SNI allows the client to inform the target domain earlier in the protocol, and this allows the server to correctly select the proper certificate.

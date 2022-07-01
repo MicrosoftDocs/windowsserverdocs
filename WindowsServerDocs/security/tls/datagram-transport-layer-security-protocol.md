@@ -23,4 +23,4 @@ The cipher suites that are available for configuration are patterned after those
 
 ## Additional References
 
-[IETF RFC 4347 Datagram Transport Layer Security](/windows-server/security/tls/datagram-transport-layer-security-protocol)
+[IETF RFC 4347 Datagram Transport Layer Security](https://datatracker.ietf.org/doc/html/rfc4347)
