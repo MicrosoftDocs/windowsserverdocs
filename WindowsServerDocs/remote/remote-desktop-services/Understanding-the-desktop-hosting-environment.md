@@ -37,7 +37,7 @@ There are multiple ways to connect to and manage Active Directory Domain Service
 With Remote Desktop Services, the tenant must have an Active Directory to manage access into the environment, user profile storage, and monitoring within the deployment. When using the standard (non-Azure) AD DS, the tenant's forest does not require any trust relationship with the provider's management forest. A domain administrator account may be set up in the tenant's domain to allow the provider's technical personnel to perform administrative tasks in the tenant's environment (such as monitoring system status and applying software updates) and to assist with troubleshooting and configuration.
 
 Additional information:
-[Azure Active Directory Domain Services Documentation](https://azure.microsoft.com/documentation/services/active-directory-ds/)
+[Azure Active Directory Domain Services Documentation](/azure/active-directory-domain-services/)
 [Install a new Active Directory forest on an Azure virtual network](../../identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100.md)
 [Create a resource manager VNet with a Site-to-Site VPN connection using the Azure Portal](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 
@@ -51,7 +51,7 @@ Additional information:
 Azure Active Directory Application Proxy is a service provided in paid-SKUs of Azure Active Directory that allow users to connect to internal applications through Azure's own reverse-proxy service. This allows the RD Web and RD Gateway endpoints to be hidden inside of the virtual network, eliminating the need to be exposed to the internet via a public IP address. This further allows hosters to condense the number of virtual machines in the tenant's environment while still maintaining a full deployment.
 
 Additional information:
-[Enabling Azure AD Application Proxy](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application)
+[Enabling Azure AD Application Proxy](/azure/active-directory/app-proxy/application-proxy-config-how-to)
 
 ## File server
 The file server provides shared folders by using the Server Message Block (SMB) 3.0 protocol. The shared folders are used to create and store user profile disk files (.vhdx), to backup data, and to allow users a place to share data with other users in the tenant's virtual network.
@@ -62,7 +62,7 @@ For small tenants, the cost can be reduced by combining the file server with the
 
 Additional information
 [File and Storage Services Overview](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831487(v=ws.11))
-[How to Attach a Data Disk to a Virtual Machine](https://www.windowsazure.com/manage/windows/how-to-guides/attach-a-disk/)
+[How to Attach a Data Disk to a Virtual Machine](/shows/azure-documentation-shorts/attaching-data-disk-to-windows-vm)
 
 ### User Profile Disks
 User profile disks allow users to save personal settings and files when they are signed in to a session on an RD Session Host server in a collection, and then have access to the same settings and files when signing in to a different RD Session Host server in the collection. When the user first signs in, a user profile disk is created on the tenant's file server, and that disk is mounted to the RD Session Host server to which the user is connected. For each subsequent sign-in, the user profile disk is mounted to the appropriate RD Session host server, and with each sign-out, it is un-mounted. The contents of the profile disk can only be accessed by that user.

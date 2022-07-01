@@ -12,6 +12,7 @@
 
 ## Deploy
 ### [Prepare your environment](deploy/prepare-environment.md)
+### [Network requirements](deploy/network-requirements.md)
 ### [Install Windows Admin Center](deploy/install.md)
 ### [High availability](deploy/high-availability.md)
 

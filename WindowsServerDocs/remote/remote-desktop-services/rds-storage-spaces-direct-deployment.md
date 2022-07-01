@@ -15,7 +15,7 @@ manager: scottman
 Remote Desktop Services (RDS) requires a domain-joined file server for user profile disks (UPDs). To deploy a high availability domain-joined scale-out file server (SOFS) in Azure, use Storage Spaces Direct with Windows Server 2016. If you're not familiar with UPDs or Remote Desktop Services, check out [Welcome to Remote Desktop Services](welcome-to-rds.md).
 
 > [!NOTE]
-> Microsoft just published an [Azure template to deploy a Storage Spaces Direct scale-out file server](https://azure.microsoft.com/documentation/templates/301-storage-spaces-direct/)! You can use the template to create your deployment, or use the steps in this article.
+> Microsoft just published an [Azure template to deploy a Storage Spaces Direct scale-out file server](https://azure.microsoft.com/resources/templates/storage-spaces-direct/)! You can use the template to create your deployment, or use the steps in this article.
 
 We recommend deploying your SOFS with DS-series VMs and premium storage data disks, where there are the same number and size of data disks on each VM. You will need a minimum of two storage accounts. 
 

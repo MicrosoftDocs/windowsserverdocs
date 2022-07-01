@@ -10047,17 +10047,17 @@
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/health-service-overview.md",
-      "redirect_url": "https://docs.microsoft.com/azure-stack/hci/manage/health-service-overview",
+      "redirect_url": "/azure-stack/hci/manage/health-service-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/health-service-actions.md",
-      "redirect_url": "https://docs.microsoft.com/azure-stack/hci/manage/health-service-actions",
+      "redirect_url": "/azure-stack/hci/manage/health-service-actions",
       "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/failover-clustering/health-service-settings.md",
-      "redirect_url": "https://docs.microsoft.com/azure-stack/hci/manage/health-service-settings",
+      "redirect_url": "/azure-stack/hci/manage/health-service-settings",
       "redirect_document_id": false
     },
     {
@@ -10571,6 +10571,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "WindowsServerDocs/storage/storage-spaces/nested-resiliency.md",
+      "redirect_url": "/azure-stack/hci/concepts/nested-resiliency",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/get-started/Server-2016-activation.md",
       "redirect_url": "/windows-server/get-started/kms-activation-planning",
       "redirect_document_id": false
@@ -10582,23 +10587,43 @@
     },
     {
       "source_path": "WindowsServerDocs/upgrade/upgrade-2008r2-to-2012r2.md",
-      "redirect_url": "/windows-server/get-started/upgrade-2008r2-to-2012r2",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/upgrade/upgrade-2012r2-to-2019.md",
-      "redirect_url": "/windows-server/get-started/upgrade-2012r2-to-2019",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/upgrade/upgrade-2012-to-2016.md",
-      "redirect_url": "/windows-server/get-started/upgrade-2012-to-2016",
-      "redirect_document_id": true
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
+      "redirect_document_id": false
     },
     {
       "source_path": "WindowsServerDocs/upgrade/upgrade-2016-to-2019.md",
-      "redirect_url": "/windows-server/get-started/upgrade-2016-to-2019",
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/upgrade-2008r2-to-2012r2.md",
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/upgrade-2012r2-to-2019.md",
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/upgrade-2012-to-2016.md",
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/upgrade-2016-to-2019.md",
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
+      "redirect_document_id": false
     }
   ]
 }

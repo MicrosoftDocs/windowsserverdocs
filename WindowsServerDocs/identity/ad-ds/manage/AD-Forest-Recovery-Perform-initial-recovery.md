@@ -45,7 +45,7 @@ Then perform the following steps. Procedures for performing certain steps are in
 
       **HKLM\System\CurrentControlSet\Services\NTDS\Parameters\Repl Perform Initial Synchronizations**
 
-      Create the entry with the data type **REG_DWORD** and a value of **0**. After the forest is recovered completely, you can reset the value of this entry to **1**, which requires a domain controller that restarts and holds operations master roles to have successful AD DS inbound and outbound replication with its known replica partners before it advertises itself as domain controller and starts providing services to clients. For more information about initial synchronization requirements, see KB article [305476](https://support.microsoft.com/kb/305476).
+      Create the entry with the data type **REG_DWORD** and a value of **0**. After the forest is recovered completely, you can reset the value of this entry to **1**, which requires a domain controller that restarts and holds operations master roles to have successful AD DS inbound and outbound replication with its known replica partners before it advertises itself as domain controller and starts providing services to clients. For more information about initial synchronization requirements, see [How synchronization works in Azure AD Domain Services](/azure/active-directory-domain-services/synchronization).
 
       Continue to the next steps only after you restore and verify the data and before you join this computer to the production network.
 

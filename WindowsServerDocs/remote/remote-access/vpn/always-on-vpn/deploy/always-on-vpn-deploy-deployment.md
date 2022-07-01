@@ -3,7 +3,7 @@ title: Deploy Always On VPN
 description: Learn about the workflow for deploying Always On VPN connections for remote domain-joined Windows 10 client computers.
 ms.topic: article
 ms.assetid: ad748de2-d175-47bf-b05f-707dc48692cf
-ms.date: 11/05/2018
+ms.date: 06/29/2022
 ms.author: wscontent
 author: Teresa-MOTIV
 ---
@@ -26,7 +26,7 @@ The following diagram illustrates the workflow process for the different scenari
 
 ## [Step 1. Plan the Always On VPN Deployment](always-on-vpn-deploy-planning.md)
 
-In this step, you start to plan and prepare your Always On VPN deployment. Before you install the Remote Access server role on the computer you're planning on using as a VPN server. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.
+In this step, you'll plan and prepare your Always On VPN deployment. Before you begin, you'll need to install the Remote Access server role on the computer you're planning on using as the VPN server. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.
 
 ## [Step 2. Configure the Always On VPN Server Infrastructure](vpn-deploy-server-infrastructure.md)
 
@@ -61,7 +61,7 @@ To configure NPS, you must perform the following tasks:
 
 ## [Step 5. Configure DNS and Firewall Settings for Always On VPN](vpn-deploy-dns-firewall.md)
 
-In this step, you configure DNS and Firewall settings. When remote VPN clients connect, they use the same DNS servers that your internal clients use, which allows them to resolve names in the same manner as the rest of your internal workstations.
+In this step, you configure DNS and Firewall settings. When remote VPN clients connect, they use the same DNS servers that your internal clients use which allows them to resolve names in the same manner as the rest of your internal workstations.
 
 ## [Step 6. Configure Windows 10 Client Always On VPN Connections](vpn-deploy-client-vpn-connections.md)
 
@@ -73,4 +73,4 @@ In this optional step, you can fine-tune how authorized VPN users access your re
 
 ## Next step
 
-[Step 1. Plan the Always On VPN deployment](always-on-vpn-deploy-planning.md): Before you install the Remote Access server role on the computer you're planning on using as a VPN server. After proper planning, you can deploy Always On VPN, and optionally configure conditional access for VPN connectivity using Azure AD.
+[Plan the Always On VPN deployment](always-on-vpn-deploy-planning.md): This section will guide you on the next steps to take in preparing your Remote Access Server.

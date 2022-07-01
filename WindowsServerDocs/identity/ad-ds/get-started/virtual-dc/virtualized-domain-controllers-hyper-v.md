@@ -352,7 +352,7 @@ USN rollback can be caused in many ways, for example, when old virtual hard disk
    - When not running Windows Server 2012 or newer, do not export the virtual machine that is running a domain controller.
    - Do not restore a domain controller or attempt to roll back the contents of an Active Directory database by any other means than a supported backup solution, such as Windows Server Backup.
 
-In some cases, USN rollback may go undetected. In other cases, it may cause other replication errors. In these cases, it is necessary to identify the extent of the problem and take care of it in a timely manner. For information about how to remove lingering objects that may occur as a result of USN rollback, see [Outdated Active Directory objects generate event ID 1988 in Windows Server 2003](https://go.microsoft.com/fwlink/?linkid=137185) in the Microsoft Knowledge Base.
+In some cases, USN rollback may go undetected. In other cases, it may cause other replication errors. In these cases, it is necessary to identify the extent of the problem and take care of it in a timely manner. For information about how to remove lingering objects that may occur as a result of USN rollback, see [Outdated Active Directory objects generate event ID 1988 in Windows Server 2003](/troubleshoot/windows-server/identity/active-directory-replication-event-id-1388-1988) in the Microsoft Knowledge Base.
 
 ## USN rollback detection
 
