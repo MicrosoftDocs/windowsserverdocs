@@ -8411,6 +8411,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "EssentialsDocs/get-started/system-requirements.md",
+      "redirect_url": "/windows-server-essentials/get-started/hardware-limits",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "WindowsServerDocs/identity/ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Only-the-Perimeter-Network.md",
       "redirect_url": "/windows-server/identity/ad-fs/deployment/Configure-Name-Resolution-for-Federation-Server-Proxy-in-DNS-Zone-Serving-Only-Perimeter-Network",
       "redirect_document_id": true

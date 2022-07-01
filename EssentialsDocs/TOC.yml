@@ -19,7 +19,7 @@ items:
     - name: Hardware requirements
       href: /windows-server/get-started/hardware-requirements?toc=/windows-server-essentials/toc.json&bc=/windows-server-essentials/breadcrumbs/toc.json
     - name: Hardware limits
-      href: get-started/system-requirements.md
+      href: get-started/hardware-limits.md
     - name: Release Notes for Windows Server Essentials
       href: get-started/release-notes.md
 - name: Before You Install Windows Server Essentials
