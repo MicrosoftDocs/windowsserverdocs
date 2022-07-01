@@ -109,7 +109,7 @@ Native resolution is set to off by default. To turn native resolution on:
 The web client supports opening resources in your installed Azure Virtual Desktop client instead of the browser by downloading the Remote Desktop Protocol (RDP) file. To learn how to install a Remote Desktop client, check out [Remote Desktop clients](remote-desktop-clients.md).
 
 >[!NOTE]
->RDP files have a limited lifespan. We recommend you download the file again after you use its resources.
+>RDP files have a limited lifespan. We recommend you download the RDP file every time you need to use a resource
 
 To download the RDP file:
 
