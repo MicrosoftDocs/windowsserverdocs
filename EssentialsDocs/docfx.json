@@ -30,7 +30,7 @@
       "overwrite": [],
       "externalReference": [],
       "globalMetadata": {
-         "breadcrumb_path": "/EssentialsDocs/breadcrumbs/toc.json",
+         "breadcrumb_path": "/windows-server-essentials/breadcrumbs/toc.json",
          "_op_documentIdPathDepotMapping": {
             "./": {
                "depot_name": "WS.EssentialsDocs"

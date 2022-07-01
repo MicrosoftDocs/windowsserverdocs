@@ -1,6 +1,27 @@
 items:
 - name: Get started
-  href: get-started/toc.yml
+  expanded: true
+  items:
+  - name: Get started with Windows Server Essentials
+    href: get-started/get-started.md
+    items:
+    - name: What's New in Windows Server 2019 Essentials
+      href: get-started/what-s-new-19.md
+    - name: What's New in Windows Server 2016 Essentials
+      href: get-started/what-s-new.md
+      items:
+      - name: Azure Site Recovery Services integration
+        href: get-started/azure-site-recovery-services-integration.md
+      - name: Azure virtual network integration
+        href: get-started/azure-virtual-network-integration.md
+      - name: Support for larger deployments
+        href: get-started/support-for-larger-deployments.md
+    - name: Hardware requirements
+      href: /windows-server/get-started/hardware-requirements?toc=/windows-server-essentials/toc.json&bc=/windows-server-essentials/breadcrumbs/toc.json
+    - name: Hardware limits
+      href: get-started/system-requirements.md
+    - name: Release Notes for Windows Server Essentials
+      href: get-started/release-notes.md
 - name: Before You Install Windows Server Essentials
   href: install/Before-You-Install-Windows-Server-Essentials.md
 - name: Install Windows Server Essentials

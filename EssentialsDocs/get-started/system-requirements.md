@@ -17,7 +17,6 @@ Use this article to learn about the hardware limits for Windows Server Essential
 
 | Limits | Windows Server 2022 Essentials or later | Windows Server 2019 Essentials and earlier |
 |--|--|--|
-| Maximum number of users  | 25 | 25 |
 | Maximum number of 64-bit sockets | 1 sockets | 2 sockets |
 | Maximum number of CPU cores | 10 cores | No limit |
 | Maximum RAM | 128 GB | 64 GB |
