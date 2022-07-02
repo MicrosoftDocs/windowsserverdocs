@@ -55,7 +55,7 @@ The following table specifies which settings are applicable on devices with the 
 |PostAuthenticationResetDelay|Yes|Yes|Yes|
 |PostAuthenticationActions|Yes|Yes|Yes|
 
-For the most part all settings can be administered via any policy management mechanism. The [LAPS CSP](https://docs.microsoft.com/windows/client-management/mdm/laps-csp) has two exceptions to this. The LAPS CSP supports two settings not in the above table, ResetPassword and ResetPasswordStatus, and it doesn't support the ADBackupDSRMPassword setting (AD domain controllers are generally never managed via CSP). See the LAPS CSP documentation for more info.
+For the most part all settings can be administered via any policy management mechanism. The [LAPS CSP](/windows/client-management/mdm/laps-csp.md) has two exceptions to this. The LAPS CSP supports two settings not in the above table, ResetPassword and ResetPasswordStatus, and it doesn't support the ADBackupDSRMPassword setting (AD domain controllers are generally never managed via CSP). See the LAPS CSP documentation for more info.
 
 ## LAPS Group Policy
 
@@ -69,7 +69,7 @@ For example:
 
 ## LAPS Configuration Service Provider
 
-Windows LAPS includes a new Configuration Service Provider (CSP) that can be used to administer policy settings on Azure-joined devices. The Windows [LAPS CSP](https://docs.microsoft.com/windows/client-management/mdm/laps-csp) is managed using [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview). Please refer to those links for more information.
+Windows LAPS includes a new Configuration Service Provider (CSP) that can be used to administer policy settings on Azure-joined devices. The Windows [LAPS CSP](/windows/client-management/mdm/laps-csp.md) is managed using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md). Please refer to those links for more information.
 
 ## Policy setting details
 
@@ -237,4 +237,4 @@ If not specified, this setting will default to 3.
 
 ## Related articles
 
-[LAPS CSP](https://docs.microsoft.com/windows/client-management/mdm/laps-csp)
+[LAPS CSP](/windows/client-management/mdm/laps-csp.md)

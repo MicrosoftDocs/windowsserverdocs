@@ -23,7 +23,7 @@ Let's get started on backing up some passwords to Azure AD!
 
 The first step is to choose how you're going to apply policy to your devices.
 
-The preferred option for Azure-joined devices is to use [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) in combination with the [LAPS CSP](https://docs.microsoft.com/windows/client-management/mdm/laps-csp).
+The preferred option for Azure-joined devices is to use [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) in combination with the [LAPS CSP](/windows/client-management/mdm/laps-csp.md).
 
 If your devices are also hybrid-joined to on-premises Active Directory, you may deploy policy using [LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy).
 
@@ -55,7 +55,7 @@ If you don't configure AdministratorAccountName setting, Windows LAPS will defau
 If you want to configure a custom local admin account, you should configure the AdministratorAccountName setting with the name of that account.
 
 > [!IMPORTANT]
-> If you configure Windows LAPS to manage a custom local admin account, you must ensure that the account is created - LAPS doesn't support creation of the account. Microsoft recommends using the [RestrictedGroups CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-restrictedgroups) for this purpose.
+> If you configure Windows LAPS to manage a custom local admin account, you must ensure that the account is created - LAPS doesn't support creation of the account. Microsoft recommends using the [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups.md) for this purpose.
 
 Finally, feel free to configure the other settings as needed or desired, for example PasswordLength, etc.
 
@@ -85,7 +85,7 @@ You may need to configure the PSGallery repository as Trusted for the above comm
 
 The next step is to create an Azure registered app configured with the necessary permissions. The basic instructions for creating an Azure registered app can be found here:
 
-[Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app)
+[Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app.md)
 
 The app needs to be configured with two permissions, first `Devices.Read.All`, and second either `Device.LocalCredentials.Read` or `Device.LocalCredentials.ReadAll`.
 

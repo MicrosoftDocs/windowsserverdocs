@@ -60,7 +60,7 @@ The first step is to choose how you're going to apply policy to your devices.
 
 Most environments will use [LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy) to deploy the necessary settings to their AD-domain-joined devices.
 
-If your devices are also hybrid-joined to Azure AD, you may deploy policy using [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) in combination with the [LAPS CSP](https://docs.microsoft.com/windows/client-management/mdm/laps-csp).
+If your devices are also hybrid-joined to Azure AD, you may deploy policy using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) in combination with the [LAPS CSP](/windows/client-management/mdm/laps-csp.md).
 
 ### Configure specific policies
 
@@ -71,7 +71,7 @@ If you don't configure AdministratorAccountName setting, Windows LAPS will defau
 If you want to configure a custom local admin account, you should configure the AdministratorAccountName setting with the name of that account.
 
 > [!IMPORTANT]
-> If you configure Windows LAPS to manage a custom local admin account, you must ensure that the account is created - LAPS does not support creation of the account. Microsoft recommends using the [RestrictedGroups CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-restrictedgroups) for this purpose.
+> If you configure Windows LAPS to manage a custom local admin account, you must ensure that the account is created - LAPS does not support creation of the account. Microsoft recommends using the [RestrictedGroups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups.md) for this purpose.
 
 Finally, feel free to configure the other settings as needed or desired, for example PasswordLength, ADPasswordEncryptionEnabled, etc.
 

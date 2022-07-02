@@ -33,7 +33,7 @@ The above picture has many moving parts - let's break it down piece by piece.
 
 ### Basic Windows LAPS use case flow
 
-The IT admin must first configure the Windows LAPS policy as desired. The preferred policy configuration option is [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) for Azure AD-joined devices, or Group Policy for AD-joined devices.
+The IT admin must first configure the Windows LAPS policy as desired. The preferred policy configuration option is [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) for Azure AD-joined devices, or Group Policy for AD-joined devices.
 
 After the managed device has been configured with a policy that enables Windows LAPS, the device will start to manage the configured local account's password. Whenever the password has expired, the device will generate a random new password that is compliant with the current policy's length and complexity settings, and validated against the local device's password complexity policy. Once the password is validated, the device stores it in the configured directory (either AD or Azure AD). An associated password expiration time (based on the current policy's password age setting) is also computed and stored in the directory. The device will rotate this password automatically once the password expiration time has been reached.
 
@@ -42,7 +42,7 @@ Once the password has been stored in the directory (again, either AD or Azure AD
 The password may also be rotated prior to the normally expected expiration time. Earlier-than-scheduled password rotations can be accomplished via various ways:
 
 * Manual admin intervention on the managed device itself (for example, using the `Reset-LapsPassword` cmdlet).
-* Invoking the ResetPassword Execute action in the [LAPS CSP](https://docs.microsoft.com/windows/client-management/mdm/laps-csp).
+* Invoking the ResetPassword Execute action in the [LAPS CSP](/windows/client-management/mdm/laps-csp.md).
 * Modification of the password expiration time in the directory (applies to Active Directory only).
 * Automatic rotation after the managed account is used to authenticate to the managed device.
 
