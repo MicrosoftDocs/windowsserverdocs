@@ -25,7 +25,7 @@ The first step is to choose how you're going to apply policy to your devices.
 
 The preferred option for Azure-joined devices is to use [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) in combination with the [LAPS CSP](https://docs.microsoft.com/windows/client-management/mdm/laps-csp).
 
-If your devices are also hybrid-joined to on-premises Active Directory, you may deploy policy using [LAPS Group Policy](../laps/laps-management-policysettings#laps-group-policy).
+If your devices are also hybrid-joined to on-premises Active Directory, you may deploy policy using [LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy).
 
 If your devices aren't hybrid-joined and you're not using Microsoft Endpoint Manager, then it's still possible to deploy Windows LAPS for Azure AD. In this case though you must deploy policy manually (for example, either using direct registry modification or Local Computer Group Policy). See the [Supported policy settings](../laps/laps-management-policysettings.md) article for specific details.
 

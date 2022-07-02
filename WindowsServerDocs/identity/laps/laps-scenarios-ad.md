@@ -58,7 +58,7 @@ In this example we can see that only very privileged entities (SYSTEM, Domain Ad
 
 The first step is to choose how you're going to apply policy to your devices.
 
-Most environments will use [LAPS Group Policy](../laps/laps-management-policysettings#laps-group-policy) to deploy the necessary settings to their AD-domain-joined devices.
+Most environments will use [LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy) to deploy the necessary settings to their AD-domain-joined devices.
 
 If your devices are also hybrid-joined to Azure AD, you may deploy policy using [Microsoft Endpoint Manager](https://docs.microsoft.com/mem/endpoint-manager-overview) in combination with the [LAPS CSP](https://docs.microsoft.com/windows/client-management/mdm/laps-csp).
 

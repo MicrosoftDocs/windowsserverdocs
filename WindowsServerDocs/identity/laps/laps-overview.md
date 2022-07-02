@@ -9,7 +9,7 @@ ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# Windows Local Administrator Password Solution
+# Windows LAPS
 
 ## Overview
 

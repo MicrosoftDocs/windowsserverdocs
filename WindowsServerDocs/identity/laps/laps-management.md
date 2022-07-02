@@ -15,16 +15,16 @@ ms.topic: article
 
 Windows LAPS offers multiple ways to manage the solution.
 
-There is a large number of configuration settings that be configured via both Group Policy and CSP:
+There's a large number of configuration settings that be configured via both Group Policy and CSP:
 
-[Policy settings](../laps/laps-management-policysettings.md)
+[LAPS policy settings](../laps/laps-management-policysettings.md)
 
 A dedicated event log channel is used to track all activity performed by the Windows LAPS client:
 
-[Event log](../laps/laps-management-eventlog.md)
+[LAPS event log](../laps/laps-management-eventlog.md)
 
 The Get-LapsDiagnostic cmdlet can be used to collect traces and other data necessary for troubleshooting issues:
 
-[Powershell](../laps/laps-management-powershell.md)
+[LAPS PowerShell](../laps/laps-management-powershell.md)
 
 ## Related articles
