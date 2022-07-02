@@ -9,7 +9,7 @@ ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# LAPS Policy Settings
+# Windows LAPS Policy Settings
 
 ## Overview
 

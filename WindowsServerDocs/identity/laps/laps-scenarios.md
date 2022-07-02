@@ -9,9 +9,9 @@ ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# Scenario guides
+# Windows LAPS Scenario Guides
 
-## Overview
+## Scenarios
 
 Windows LAPS supports several primary scenarios:
 

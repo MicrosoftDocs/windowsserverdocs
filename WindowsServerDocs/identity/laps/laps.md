@@ -19,7 +19,8 @@ Windows Local Administrator Password Solution (LAPS) is a Windows feature that a
 
 You'll find links to Windows LAPS content on this page.
 
-* [LAPS Overview](../laps/laps-overview.md)
-* [LAPS Concepts](../laps/laps-concepts.md)
-* [LAPS Scenario guides](../laps/laps-scenarios.md)
-* [LAPS Management](../laps/laps-management.md)
+* [Windows LAPS Overview](../laps/laps-overview.md)
+* [Windows LAPS Concepts](../laps/laps-concepts.md)
+* [Windows LAPS Scenario guides](../laps/laps-scenarios.md)
+* [Windows LAPS Management](../laps/laps-management.md)
+* [Windows LAPS Technical Reference](../laps/laps-technicalreference.md)

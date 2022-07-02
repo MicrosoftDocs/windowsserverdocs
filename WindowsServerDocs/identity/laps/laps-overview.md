@@ -9,7 +9,7 @@ ms.date: 07/04/2022
 ms.topic: article
 ---
 
-# Windows LAPS
+# Windows LAPS Overview
 
 ## Overview
 
@@ -77,10 +77,10 @@ Learn more about basic concepts by checking out [LAPS Concepts](../laps/laps-con
 
 ## Related articles
 
-[LAPS Concepts](../laps/laps-concepts.md)
+[Windows LAPS Concepts](../laps/laps-concepts.md)
 
-[LAPS Scenario guides](..\laps\laps-scenarios.md)
+[Windows LAPS Scenario guides](..\laps\laps-scenarios.md)
 
-[LAPS Management](..\laps\laps-management.md)
+[Windows LAPS Management](..\laps\laps-management.md)
 
 [Legacy LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
