@@ -195,4 +195,4 @@ Error code: 80070032
 
 ### Related articles
 
-[Windows LAPS Management](..\laps\laps-management.md)
+[Windows LAPS Management](../laps/laps-management.md)

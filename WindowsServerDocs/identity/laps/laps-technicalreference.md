@@ -168,4 +168,3 @@ Legacy LAPS also required extension of the Active Directory schema. For comparis
 ## Related articles
 
 [Windows LAPS Concepts](../laps/laps-concepts.md)
-

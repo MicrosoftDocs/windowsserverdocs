@@ -19,10 +19,10 @@ Windows Local Administrator Password Solution (LAPS) is a Windows feature that a
 
 Using Windows LAPS to regularly rotate and manage local administrator account passwords provides many benefits:
 
-* Protection against pass-the-hash\lateral-traversal attacks.
+* Protection against pass-the-hash and lateral-traversal attacks.
 * Improved security for remote help-desk scenarios.
 * Log into and recover devices that are otherwise inaccessible.
-* Supports fine-grained security model (ACLs, per-user\group encryption) for securing passwords stored in Active Directory.
+* Supports fine-grained security model (ACLs, per-user or per-group encryption) for securing passwords stored in Active Directory.
 * Supports Azure role-based access control model for securing passwords stored in Azure AD.
 
 ## Supported SKUs
@@ -57,7 +57,7 @@ Options include an Active Directory Users and Computers property page, a dedicat
 
 In addition to these in-Windows options, there are Azure-based monitoring and reporting solutions available when you're backing passwords up to Azure AD.
 
-For more information, see [Windows LAPS Management](..\laps\laps-management.md).
+For more information, see [Windows LAPS Management](../laps/laps-management.md).
 
 ## Relationship to original version of LAPS
 

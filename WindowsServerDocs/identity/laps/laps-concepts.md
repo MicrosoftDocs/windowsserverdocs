@@ -23,7 +23,7 @@ The above picture has many moving parts - let's break it down piece by piece.
 
 <ins>IT admin</ins>: this entity represents collectively the various IT admin roles that may be involved in a Windows LAPS deployment. The IT admin roles are involved with policy configuration, expiration or retrieval of stored passwords, and interacting with managed devices.
 
-<ins>Managed device:</ins> this entity is the Azure AD-joined or AD-joined device on which we want to manage a local administrator account. The feature is composed of a few key binaries: laps.dll (core logic), lapscsp.dll (Configuration Service Provider logic), and lapspsh.dll (PowerShell cmdlet logic). Windows LAPS may also be configured using Group Policy and will respond to GPO change notifications. The managed device may also be an AD domain controller (which can be configured to backup DSRM account passwords).
+<ins>Managed device:</ins> this entity is the Azure AD-joined or AD-joined device on which we want to manage a local administrator account. The feature is composed of a few key binaries: laps.dll (core logic), lapscsp.dll (Configuration Service Provider logic), and lapspsh.dll (PowerShell cmdlet logic). Windows LAPS may also be configured using Group Policy and will respond to GPO change notifications. The managed device may also be an AD domain controller, which can be configured to back up DSRM account passwords.
 
 <ins>Active Directory:</ins> this entity is your on-premises Active Directory deployment.
 
@@ -121,13 +121,34 @@ When encrypted password history is enabled and it's time to rotate the password,
 > [!IMPORTANT]
 > Microsoft recommends that managed devices are never granted permission to decrypt encrypted passwords (whether their own or any other device's encrypted passwords).
 
+#### Active Directory DSRM password support
+
+Windows LAPS supports backing up the Directory Services Repair Mode (DSRM) account password on AD domain controllers. DSRM account passwords can only be backed up to Active Directory (backing up passwords to Azure AD isn't supported), and also requires that AD password encryption is enabled. Otherwise this feature works almost identically to how encrypted password support works for AD domain-joined clients.
+
+> [!IMPORTANT]
+> When DSRM password back up is enabled, the current DSRM password for any domain controller is retrievable as long at least one AD domain controller in that domain is accessible.
+>
+> However, consider a catastrophic situation where all of the domain controllers in a given domain are down. None of the DSRM passwords will be available. For this reason, Microsoft recommends using Windows LAPS DSRM support as only the first component of a larger AD recovery strategy. It is strongly recommended that the DSRM passwords be regularly extracted from the directory, and then backed up to a secure store outside of Active Directory. Such an external store backup strategy is currently outside of the scope of Windows LAPS.
+
+### Password reset after authentication
+
+Windows LAPS supports automatically rotating the password after detecting that the local administrator account was used for authentication. This feature is intended to bound the amount of time that the clear-text password is usable. A grace period can be configured to give the person time to complete the intended actions.
+
+### Account password tampering protection
+
+Once Windows LAPS has been configured to manage a local administrator account's password, that account will be protected against accidental and/or careless tampering. This protection also extends to the DSRM account when it's being managed by Windows LAPS on an AD domain controller.
+
+### Disabled during safe-mode
+
+Windows LAPS is disabled (no passwords will be backed up) whenever Windows is booted into safe mode, DSRM mode, or any other non-default boot mode.
+
 ### Next steps
 
 Now that you're aware of the basic concepts that Windows LAPS is designed around, get started by checking out the [scenario guides](..\laps\laps-scenarios.md).
 
 ## Related articles
 
-[Windows LAPS Scenario guides](..\laps\laps-scenarios.md)
+[Windows LAPS Scenario guides](../laps/laps-scenarios.md)
 
 [Legacy LAPS](https://www.microsoft.com/download/details.aspx?id=46899).
 
