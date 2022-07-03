@@ -43,22 +43,24 @@ The date-time control can be used to modify the password expiration time. For ex
 
 :::image type="content" source="../laps/laps-management-userinterface-aduc-modify-password-expiration.png" alt-text="Active Directory and Users LAPS property page modifying the password expiration time":::
 
-Once modified, click OK or Apply to apply the changes.
+Once modified, select OK or Apply to apply the changes.
 
 ### Expire the password expiration time
 
-If you just want to immediately expire the password, click the "Expire now" button:
+If you just want to immediately expire the password, select the "Expire now" button:
 
 :::image type="content" source="../laps/laps-management-userinterface-aduc-expire-password-now.png" alt-text="Active Directory and Users LAPS property page immediately expiring the password expiration time":::
 
-Then click OK or Apply to apply the changes.
+Then select OK or Apply to apply the changes.
 
 ### View the current account name and password
 
-If you are granted sufficient permissions to read the computer's current LAPS password attribute, the Account Name and Password fields will be populated. You can copy the password to the clipboard using the Copy button, or you can display the password using the Show Password button.
+The Account Name and Password fields will be populated assuming you're granted permissions to read (and decrypt) the computer's current LAPS password attribute. You can copy the password to the clipboard using the Copy button, or you can display the password using the Show Password button.
 
 :::image type="content" source="../laps/laps-management-userinterface-aduc-copy-show-password.PNG" alt-text="Active Directory and Users LAPS property page copy or view passwords":::
 
+A warning dialog will appear if you don't have permission to read or decrypt the current password information.
+
 ## Related articles
 
-[LAPS Management](..\laps\laps-management.md)
+[Windows LAPS Management](..\laps\laps-management.md)

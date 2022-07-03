@@ -17,17 +17,17 @@ In this article, we're going to go over the basic procedures for using Windows L
 
 Let's get started on backing up some passwords to Azure AD!
 
-## Configure Windows LAPS device policy
+## Configure device policy
 
 ### Choose policy deployment mechanism
 
 The first step is to choose how you're going to apply policy to your devices.
 
-The preferred option for Azure-joined devices is to use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) in combination with the [LAPS CSP](/windows/client-management/mdm/laps-csp.md).
+The preferred option for Azure-joined devices is to use [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) in combination with the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md).
 
-If your devices are also hybrid-joined to on-premises Active Directory, you may deploy policy using [LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy).
+If your devices are also hybrid-joined to on-premises Active Directory, you may deploy policy using [Windows LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy).
 
-If your devices aren't hybrid-joined and you're not using Microsoft Endpoint Manager, then it's still possible to deploy Windows LAPS for Azure AD. In this case though you must deploy policy manually (for example, either using direct registry modification or Local Computer Group Policy). See the [Supported policy settings](../laps/laps-management-policysettings.md) article for specific details.
+If your devices aren't hybrid-joined and you're not using Microsoft Endpoint Manager, then it's still possible to deploy Windows LAPS for Azure AD. In this case though you must deploy policy manually (for example, either using direct registry modification or Local Computer Group Policy). See [Windows LAPS Policy Settings](../laps/laps-management-policysettings.md) article for specific details.
 
 ### Policies applicable to Azure AD mode
 
@@ -109,7 +109,7 @@ Once you've decided which Device.LocalCredentials permission to configure, manua
 
 `https://login.microsoftonline.com/YOUR_TENANT_NAME_OR_ID_HERE/oauth2/v2.0/authorize?client_id=YOUR_CLIENT_APPID_HERE&response_type=code&scope=https://graph.microsoft.com/DeviceLocalCredential.Read.All`
 
-Using the appropriate URL template above, replace `YOUR_CLIENT_APPID_HERE` with the application ID of the Azure registered app you created above, and replace `YOUR_TENANT_NAME_OR_ID_HERE` with your Azure tenant name or id.
+Using the appropriate URL template above, replace `YOUR_CLIENT_APPID_HERE` with the application ID of the Azure registered app you created above, and replace `YOUR_TENANT_NAME_OR_ID_HERE` with your Azure tenant name or ID.
 
 Once the final URL is ready, paste it into a browser and navigate to it. The browser will then display a permission consent dialog, which you should say ok to. For example:
 
@@ -119,7 +119,7 @@ Once the final URL is ready, paste it into a browser and navigate to it. The bro
 
 We're almost there! First we need to login into Microsoft Graph, and then we can use the `Get-LapsAADPassword` cmdlet to retrieve the password.
 
-Logging into Microsoft Graph is done using the `Connect-MgGraph` cmdlet. You must know your Azure tenant id, plus the application ID of the Azure registered app you created above. Run the cmdlet once to do the login, for example:
+Logging into Microsoft Graph is done using the `Connect-MgGraph` cmdlet. You must know your Azure tenant ID, plus the application ID of the Azure registered app you created above. Run the cmdlet once to do the login, for example:
 
 `Connect-MgGraph -Environment PROD -TenantId c754bc06-12e1-4508-b3b1-653a220c62cc -ClientId 71f6c060-e966-4d7e-b068-7ea116e131ed`
 
@@ -162,7 +162,7 @@ PasswordUpdateTime     : 7/1/2022 11:34:39 AM
 
 Note: the password above is returned in a SecureString object.
 
-Finally, for testing or ad-hoc purposes we can request that the password be returned in clear-text using the -AsPlainText parameter:
+Finally, for testing or ad-hoc purposes you can request that the password is displayed in clear-text using the -AsPlainText parameter:
 
 ```PowerShell
 PS C:\> Get-LapsAADPassword -DeviceIds myAzureDevice -IncludePasswords -AsPlainText
@@ -197,6 +197,6 @@ PasswordUpdateTime     : 7/1/2022 12:16:16 PM
 
 ## Related articles
 
-[LAPS Concepts](../laps/laps-concepts.md)
+[Windows LAPS Concepts](../laps/laps-concepts.md)
 
-[Supported policy settings](../laps/laps-management-policysettings.md)
+[Windows LAPS Policy Settings](../laps/laps-management-policysettings.md)

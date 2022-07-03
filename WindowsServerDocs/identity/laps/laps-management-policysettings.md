@@ -13,11 +13,11 @@ ms.topic: article
 
 ## Overview
 
-Windows LAPS supports a variety of policy-controllable settings. This article describes the various settings and ways to administer them.
+Windows LAPS supports various policy-controllable settings. This article describes the various settings and ways to administer them.
 
 ## Supported policy roots
 
-While not a recommended practice, it is possible for a device to be administered via multiple policy management mechanisms. To support this situation in an understandable and predictable way, each LAPS policy mechanism is assigned a distinct registry root key:
+While not a recommended practice, it's possible for a device to be administered via multiple policy management mechanisms. To support this situation in an understandable and predictable way, each LAPS policy mechanism is assigned a distinct registry root key:
 
 |Policy name|Policy registry key root|
 |---|---|
@@ -26,7 +26,7 @@ While not a recommended practice, it is possible for a device to be administered
 |LAPS Local Configuration|HKLM\Software\Microsoft\Windows\CurrentVersion\LAPS\Config|
 |Legacy LAPS|HKLM\Software\Policies\Microsoft Services\AdmPwd|
 
-When determining for the currently active policy, Windows LAPS will query all known registry key policy roots starting at the top and moving down. If no settings are found under a given root, that root will be skipped and the query will proceed to the next root. As soon as a root is found with at least one explicitly defined setting, that root will be used as the active policy. If the chosen root is missing any settings, those settings will be assigned their default values.
+Windows LAPS will query all known registry key policy roots starting at the top and moving down. If no settings are found under a given root, that root will be skipped and the query will proceed to the next root. As soon as a root is found with at least one explicitly defined setting, that root will be used as the active policy. If the chosen root is missing any settings, those settings will be assigned their default values.
 
 > [!IMPORTANT]
 > Policy settings are never shared or inherited across policy key roots.
@@ -55,7 +55,7 @@ The following table specifies which settings are applicable on devices with the 
 |PostAuthenticationResetDelay|Yes|Yes|Yes|
 |PostAuthenticationActions|Yes|Yes|Yes|
 
-For the most part all settings can be administered via any policy management mechanism. The [LAPS CSP](/windows/client-management/mdm/laps-csp.md) has two exceptions to this. The LAPS CSP supports two settings not in the above table, ResetPassword and ResetPasswordStatus, and it doesn't support the ADBackupDSRMPassword setting (AD domain controllers are generally never managed via CSP). See the LAPS CSP documentation for more info.
+Almost all settings can be administered via any policy management mechanism. The [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md) has two exceptions to this rule. The LAPS CSP supports two settings not in the above table, ResetPassword and ResetPasswordStatus, and it doesn't support the ADBackupDSRMPassword setting (AD domain controllers are never managed via CSP). See the LAPS CSP documentation for more info.
 
 ## LAPS Group Policy
 
@@ -69,7 +69,7 @@ For example:
 
 ## LAPS Configuration Service Provider
 
-Windows LAPS includes a new Configuration Service Provider (CSP) that can be used to administer policy settings on Azure-joined devices. The Windows [LAPS CSP](/windows/client-management/mdm/laps-csp.md) is managed using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md). Please refer to those links for more information.
+Windows LAPS includes a new Configuration Service Provider (CSP) that can be used to administer policy settings on Azure-joined devices. The [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md) is managed using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md).
 
 ## Policy setting details
 
@@ -77,7 +77,7 @@ This section specifies the details of the various settings.
 
 ### BackupDirectory
 
-Use this this setting to control which directory the password for the managed account is backed up to.
+Use this setting to control which directory the password for the managed account is backed up to.
 
 |Value|Description of setting|
 |--- |--- |
@@ -124,14 +124,14 @@ If not specified, this setting will default to 4.
 
 ### PasswordExpirationProtectionEnabled
 
-Use this setting to configure additional enforcement of maximum password age for the managed local administrator account.
+Use this setting to configure enforcement of maximum password age for the managed local administrator account.
 
 Supported values are either 1 (True) or 0 (False).
 
 If not specified, this setting will default to 1 (True).
 
 > [!TIP]
-> In legacy LAPS mode this setting will default to 0 (False).
+> In legacy LAPS mode this setting will default to 0 (False) for backwards compatibility.
 
 ### AdministratorAccountName
 
@@ -209,7 +209,7 @@ This setting defaults to 0 (False).
 
 Use this setting to specify the amount of time (in hours) to wait after an authentication before executing the specified post-authentication actions (see the PostAuthenticationActions setting below).
 
-This setting has a minimum allowed value of 0 hours (this disables all post-authentication actions).
+This setting has a minimum allowed value of 0 hours (setting this value to 0 disables all post-authentication actions).
 
 This setting has a maximum allowed value of 24 hours.
 
@@ -237,4 +237,4 @@ If not specified, this setting will default to 3.
 
 ## Related articles
 
-[LAPS CSP](/windows/client-management/mdm/laps-csp.md)
+[Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md)

@@ -50,7 +50,7 @@ ObjectDN                  ExtendedRightHolders
 OU=NewLAPS,DC=laps,DC=com {NT AUTHORITY\SYSTEM, LAPS\Domain Admins}
 ```
 
-In this example we can see that only very privileged entities (SYSTEM, Domain Admins) have the privilege so no other action is required.
+In this example we can see that only trusted entities (SYSTEM, Domain Admins) have the privilege so no other action is required.
 
 ## Configure device policy
 
@@ -58,9 +58,9 @@ In this example we can see that only very privileged entities (SYSTEM, Domain Ad
 
 The first step is to choose how you're going to apply policy to your devices.
 
-Most environments will use [LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy) to deploy the necessary settings to their AD-domain-joined devices.
+Most environments will use [Windows LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy) to deploy the necessary settings to their AD-domain-joined devices.
 
-If your devices are also hybrid-joined to Azure AD, you may deploy policy using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) in combination with the [LAPS CSP](/windows/client-management/mdm/laps-csp.md).
+If your devices are also hybrid-joined to Azure AD, you may deploy policy using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) in combination with the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md).
 
 ### Configure specific policies
 
@@ -125,6 +125,6 @@ Finally, you can also use the `Reset-LapsPassword` cmdlet to locally force an im
 
 ## Related articles
 
-[LAPS Concepts](../laps/laps-concepts.md)
+[Windows LAPS Concepts](../laps/laps-concepts.md)
 
-[Supported policy settings](../laps/laps-management-policysettings.md)
+[Windows LAPS Policy Settings](../laps/laps-management-policysettings.md)

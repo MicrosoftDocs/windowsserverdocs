@@ -43,9 +43,9 @@ Windows LAPS supports backing up the managed account password to either Azure AD
 
 Windows LAPS supports multiple policy management mechanisms:
 
-[CSP](/windows/client-management/mdm/laps-csp.md)
+[Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md)
 
-[Group Policy](../laps/laps-management-policysettings.md#laps-group-policy)
+[Windows LAPS Group Policy](../laps/laps-management-policysettings.md#laps-group-policy)
 
 [Legacy LAPS](https://www.microsoft.com/download/details.aspx?id=46899)
 
@@ -57,7 +57,7 @@ Options include an Active Directory Users and Computers property page, a dedicat
 
 In addition to these in-Windows options, there are Azure-based monitoring and reporting solutions available when you're backing passwords up to Azure AD.
 
-For more information, see [LAPS Management](..\laps\laps-management.md).
+For more information, see [Windows LAPS Management](..\laps\laps-management.md).
 
 ## Relationship to original version of LAPS
 
@@ -66,21 +66,23 @@ Microsoft previously shipped an earlier version of this feature with the same na
 > [!TIP]
 > For brevity, the original version of LAPS will be referred to as "legacy LAPS".
 
-Windows LAPS inherits many design concepts from legacy LAPS. So if you're familiar with legacy LAPS, many Windows LAPS features will look familiar to you. The first key difference is that Windows LAPS is an entirely separate, native-to-Windows implementation. Windows LAPS also adds many new features that weren't present in legacy LAPS. Examples include the ability to back up passwords to Azure AD, and the ability to encrypt passwords in Active Directory.
+Windows LAPS inherits many design concepts from legacy LAPS. So if you're familiar with legacy LAPS, many Windows LAPS features will look familiar to you. The first key difference is that Windows LAPS is an entirely separate, native-to-Windows implementation. Windows LAPS also adds many new features that weren't present in legacy LAPS. Examples include the ability to back up passwords to Azure AD, the ability to encrypt passwords in Active Directory, and password history support.
 
 > [!IMPORTANT]
 > Windows LAPS doesn't require installation of legacy LAPS. You can fully deploy and use all Windows LAPS features with no need to ever install or even refer to legacy LAPS. However Windows LAPS does support a legacy LAPS "emulation mode" which will be discussed later.
 
 ## Next steps
 
-Learn more about basic concepts by checking out [LAPS Concepts](../laps/laps-concepts.md).
+Learn more about basic concepts by checking out [Windows LAPS Concepts](../laps/laps-concepts.md).
 
 ## Related articles
 
 [Windows LAPS Concepts](../laps/laps-concepts.md)
 
-[Windows LAPS Scenario guides](..\laps\laps-scenarios.md)
+[Windows LAPS Scenario guides](../laps/laps-scenarios.md)
 
-[Windows LAPS Management](..\laps\laps-management.md)
+[Windows LAPS Management](../laps/laps-management.md)
+
+[Windows LAPS Technical Reference](../laps/laps-technicalreference.md)
 
 [Legacy LAPS](https://www.microsoft.com/download/details.aspx?id=46899)

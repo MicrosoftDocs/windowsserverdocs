@@ -35,10 +35,30 @@ Windows LAPS includes a new PowerShell module named 'LAPS'. This article provide
 > [!TIP]
 > The `Invoke-LapsPolicyProcessing` and `Reset-LapsPassword` cmdlets are agnostic as to whether the password is currently being backed up to Azure AD or Active Directory. They are supported in both cases.
 
-## Use -Verbose for detailed output
+> [!TIP]
+> All cmdlets in the Windows LAPS PowerShell module support detailed logging when the -Verbose parameter is specified.
 
-All cmdlets in the Windows LAPS PowerShell module support detailed logging when the -Verbose parameter is specified.
+## Comparison with legacy LAPS PowerShell
+
+Legacy LAPS included a PowerShell module named `AdmPwd.PS`. There are many functional similarities across the two modules, but also many differences. This table provides a mapping between the two modules.
+
+|Windows LAPS cmdlet|Legacy LAPS cmdlet|
+|---|---|
+|`Get-LapsAADPassword`|N\A|
+|`Get-LapsDiagnostics`|N\A|
+|`Find-LapsADExtendedRights`|`Find-AdmPwdExtendedRights`|
+|`Get-LapsADPassword`|`Get-AdmPwdPassword`|
+|`Invoke-LapsPolicyProcessing`|N\A|
+|`Reset-LapsPassword`|N\A|
+|`Set-LapsADAuditing`|`Set-AdmPwdAuditing`|
+|`Set-LapsADComputerSelfPermission`|`Set-AdmPwdComputerSelfPermission`|
+|`Set-LapsADPasswordExpirationTime`|`Reset-AdmPwdPassword`|
+|`Set-LapsADReadPasswordPermission`|`Set-AdmPwdReadPasswordPermission`|
+|`Set-LapsADResetPasswordPermission`|`Set-AdmPwdResetPasswordPermission`|
+|`Update-LapsADSchema`|`Update-AdmPwdADSchema`|
+
+In addition to naming-related changes, the Windows LAPS Active Directory-related cmdlets operate over an entirely different set of AD schema extensions. For more information, see [Active Directory Schema Extensions](../laps/laps-technicalreference.md#active-directory-schema-extensions).
 
 ## Related articles
 
-[LAPS Management](..\laps\laps-management.md)
+[Windows LAPS Management](..\laps\laps-management.md)

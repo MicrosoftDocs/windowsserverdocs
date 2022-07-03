@@ -23,7 +23,7 @@ The above picture has many moving parts - let's break it down piece by piece.
 
 <ins>IT admin</ins>: this entity represents collectively the various IT admin roles that may be involved in a Windows LAPS deployment. The IT admin roles are involved with policy configuration, expiration or retrieval of stored passwords, and interacting with managed devices.
 
-<ins>Managed device:</ins> this entity is the Azure AD-joined or AD-joined device on which we want to manage a local administrator account. The feature is composed of a few key binaries: laps.dll (core logic), lapscsp.dll (Configuration Service Provider logic), and lapspsh.dll (PowerShell cmdlet logic). Windows LAPS may also be configured using Group Policy and will respond to GPO change notifications. The managed device may also be an AD domain controller.
+<ins>Managed device:</ins> this entity is the Azure AD-joined or AD-joined device on which we want to manage a local administrator account. The feature is composed of a few key binaries: laps.dll (core logic), lapscsp.dll (Configuration Service Provider logic), and lapspsh.dll (PowerShell cmdlet logic). Windows LAPS may also be configured using Group Policy and will respond to GPO change notifications. The managed device may also be an AD domain controller (which can be configured to backup DSRM account passwords).
 
 <ins>Active Directory:</ins> this entity is your on-premises Active Directory deployment.
 
@@ -31,7 +31,7 @@ The above picture has many moving parts - let's break it down piece by piece.
 
 <ins>Microsoft Endpoint Manager</ins>: this entity is the preferred Microsoft device policy management solution, also running in the cloud.
 
-### Basic Windows LAPS use case flow
+### Basic Windows LAPS scenario flow
 
 The IT admin must first configure the Windows LAPS policy as desired. The preferred policy configuration option is [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) for Azure AD-joined devices, or Group Policy for AD-joined devices.
 
@@ -42,7 +42,7 @@ Once the password has been stored in the directory (again, either AD or Azure AD
 The password may also be rotated prior to the normally expected expiration time. Earlier-than-scheduled password rotations can be accomplished via various ways:
 
 * Manual admin intervention on the managed device itself (for example, using the `Reset-LapsPassword` cmdlet).
-* Invoking the ResetPassword Execute action in the [LAPS CSP](/windows/client-management/mdm/laps-csp.md).
+* Invoking the ResetPassword Execute action in the [Windows LAPS CSP](/windows/client-management/mdm/laps-csp.md).
 * Modification of the password expiration time in the directory (applies to Active Directory only).
 * Automatic rotation after the managed account is used to authenticate to the managed device.
 
@@ -63,19 +63,21 @@ gpupdate.exe /target:computer /force
 A better (more scoped) way to kick off the policy processing cycle is by running the `Initiate-LapsPolicyProcessing` cmdlet.
 
 > [!TIP]
-> Legacy LAPS was built as a Group Policy Client Side Extension (CSE). GPO CSEs are loaded and invoked every time there's a GP refresh cycle, so the frequency of the legacy LAPS AD polling cycle was the same as the frequency of the GP refresh cycle. Windows LAPS is not built as a CSE, so its AD polling cycle is hardcoded (once per hour) and is unaffected by the GP refresh cycle.
+> Legacy LAPS was built as a Group Policy Client Side Extension (CSE). GPO CSEs are loaded and invoked every time there's a GP refresh cycle, therefore the frequency of the legacy LAPS AD polling cycle is the same as the frequency of the GP refresh cycle. Windows LAPS is not built as a CSE, so its AD polling cycle is hardcoded (once per hour) and is unaffected by the GP refresh cycle.
 
-### Azure AD password security
+### Azure AD concepts
 
-When backing up passwords to Azure AD, managed local account passwords are stored on the Azure AD device object. For extra protection, the password is encrypted prior to being persisted. Windows LAPS authenticates to Azure AD using the Azure AD device identity of the managed device.
+When backing up passwords to Azure AD, managed local account passwords are stored on the Azure AD device object. Windows LAPS authenticates to Azure AD using the Azure AD device identity of the managed device. Data stored in Azure AD is highly secure, but for extra protection the password is further encrypted prior to being persisted. This extra encryption layer is removed before the password is returned to authorized clients.
 
 By default retrieval of the clear-text password is limited to members of the Global Admins, Device Admins, and Intune Admins roles.
 
-### Active Directory password security
+### Active Directory concepts
+
+#### Active Directory password security
 
 When backing up passwords to Active Directory, managed local account passwords are stored on the computer object. These passwords are secured using two mechanisms. The first line of security is the Active Directory access control lists (ACLs) that are configured on the computer object's containing Organizational Unit (OU), and then inherited onto the computer object itself. You can specify who can read the various password attributes using the `Set-LapsADReadPasswordPermission` cmdlet. (Similarly, you can specify who can read and set the password expiration time attribute using the `Set-LapsADResetPasswordPermission` cmdlet.)
 
-The second line of password security uses the AD password encryption feature. AD password encryption does require that your Active Directory domain is running at Windows Server 2016 Domain Functional Level (DFL) or later. Once enabled, the password is first encrypted so that only a specified group (or user) is able to decrypt it. This encryption process happens on the managed device itself prior to sending the password to Active Directory.
+The second line of password security uses the AD password encryption feature. AD password encryption does require that your Active Directory domain is running at Windows Server 2016 Domain Functional Level (DFL) or later. Once enabled, the password is first encrypted so that only a specified group (or user) is able to decrypt it. The encryption of the password occurs on the managed device itself prior to sending the password to Active Directory.
 
 > [!IMPORTANT]
 > Microsoft highly recommends that you enable password encryption when storing your Windows LAPS passwords in Active Directory.
@@ -86,13 +88,38 @@ Consider the following diagram when designing your password retrieval security m
 
 This diagram illustrates the suggested AD password security layers and how you should think about their relationship to each other.
 
-The outermost layer is composed of those groups (or users) that have been granted permission to read or set the password expiration time attribute on computer objects in AD. This ability is a sensitive permission but is considered non-destructive (an attacker who acquires this permission can force managed devices to rotate their managed devices more frequently).
+The outermost circle is composed of those groups (or users) that have been granted permission to read or set the password expiration time attribute on computer objects in AD. This ability is a sensitive permission but is considered non-destructive (an attacker who acquires this permission can force managed devices to rotate their managed devices more frequently).
 
-The middle layer is composed of those groups (or users) that have been granted permission to read or set the password attribute(s) on computer objects in AD. This ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for Domain Admins.
+The middle circle is composed of those groups (or users) that have been granted permission to read or set the password attribute(s) on computer objects in AD. This ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for Domain Admins.
 
-The inner layer is only applicable when AD password encryption is enabled. It's composed of those groups (or users) that have been granted decryption permissions for the encrypted password attribute(s) on computer objects in AD. Like with the middle layer, this ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for Domain Admins.
+The inner circle is only applicable when AD password encryption is enabled. It's composed of those groups (or users) that have been granted decryption permissions for the encrypted password attribute(s) on computer objects in AD. As with the middle circle, this ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for Domain Admins.
 
-Finally, consider customizing the above layers differently depending on the sensitivity of the machines being managed. For example, it may be acceptable for front line IT worker devices to be accessible by help-desk administrators, but you may want to set tighter boundaries for corporate executive laptops.
+> [!IMPORTANT]
+> Consider customizing the above security layers differently depending on the sensitivity of the machines being managed. For example, it may be acceptable for front line IT worker devices to be accessible by help-desk administrators, but you may want to set tighter boundaries for corporate executive laptops.
+
+#### Active Directory password encryption details
+
+The Windows LAPS password encryption feature is based on [CNG DPAPI](/windows/win32/seccng/cng-dpapi) functionality. CNG DPAPI supports multiple encryption modes, but Windows LAPS only supports encrypting passwords against a single Active Directory security principal (user or group).
+
+The ADPasswordEncryptionPrincipal policy setting can be used to specify a specific AD security principal for encrypting the password. If ADPasswordEncryptionPrincipal isn't specified, Windows LAPS will encrypt the password against the Domain Admins group of the managed device's domain. Prior to encrypting a password, the managed device will always verify that the specified user or group is resolvable.
+
+> [!TIP]
+> Windows LAPS only supports encrypting passwords against a single AD security principal. CNG DPAPI does support encryption against multiple AD security principals, but this mode is not supported by Windows LAPS because it causes size bloat of the encrypted password buffers. If you need to grant decryption permissions to multiple AD security principals, one workaround is to create a wrapper AD group that has all of those security principals as members.
+
+> [!TIP]
+> The AD security principal authorized to decrypt the password cannot be changed once a password is encrypted.
+
+#### Active Directory encrypted password history
+
+Windows LAPS supports a password history feature for Active Directory domain-joined clients and domain controllers. Password history is only supported when password encryption has been enabled. Password history isn't supported when storing clear-text passwords in Active Directory.
+
+When encrypted password history is enabled and it's time to rotate the password, the managed device will first read the current version of the encrypted password from Active Directory. The current password is then added to the password history, deleting older versions in the history as needed to comply with the configured max-history limitation.
+
+> [!TIP]
+> In order for the password history feature to work, the managed device must be granted SELF permission to read the current version of the encrypted password from Active Directory. This requirement is handled automatically for you when you run the `Set-LapsADComputerSelfPermission` cmdlet.
+
+> [!IMPORTANT]
+> Microsoft recommends that managed devices are never granted permission to decrypt encrypted passwords (whether their own or any other device's encrypted passwords).
 
 ### Next steps
 
@@ -100,6 +127,8 @@ Now that you're aware of the basic concepts that Windows LAPS is designed around
 
 ## Related articles
 
-[LAPS Scenario guides](..\laps\laps-scenarios.md)
+[Windows LAPS Scenario guides](..\laps\laps-scenarios.md)
 
 [Legacy LAPS](https://www.microsoft.com/download/details.aspx?id=46899).
+
+[CNG DPAPI](/windows/win32/seccng/cng-dpapi)
