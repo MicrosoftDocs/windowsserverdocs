@@ -77,7 +77,7 @@ The first step is to install the Microsoft Graph PowerShell library:
 
 `Install-Module Microsoft.Graph -Scope AllUsers`
 
-You may need to configure the PSGallery repository as Trusted for the above command to succeed:
+You may need to configure the repository as Trusted for the above command to succeed:
 
 `Set-PSRepository PSGallery -InstallationPolicy Trusted`
 
