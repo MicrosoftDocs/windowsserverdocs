@@ -100,7 +100,7 @@ conceptualContent:
           text: System Insights overview
         - url: ./administration/performance-tuning/index.md
           itemType: overview
-          text: Performance tuning guidelines for Windows Server 2016
+          text: Performance tuning guidelines for Windows Server
       footerLink:
         url: ./administration/manage-windows-server.yml
         text: See more
