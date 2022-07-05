@@ -33,18 +33,19 @@ To install Data Deduplication, run the following PowerShell command as an admini
 
 To install Data Deduplication:
 
-From a server running Windows Server 2016 or later, or from a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the server name (replace 'MyServer' with the real name of the server instance):
-	```PowerShell
-	Install-WindowsFeature -ComputerName <MyServer> -Name FS-Data-Deduplication
-    ```
-	<br />
-    <strong>-- OR --</strong>
-	<br />
-	Connect remotely to the server instance with PowerShell remoting and install Data Deduplication by using DISM:
+- From a server running Windows Server 2016 or later, or from a Windows PC with the [Remote Server Administration Tools](https://www.microsoft.com/download/details.aspx?id=45520) (RSAT) installed, install Data Deduplication with an explicit reference to the server name (replace 'MyServer' with the real name of the server instance):
 
-	```PowerShell
-	Enter-PSSession -ComputerName MyServer
-	dism /online /enable-feature /featurename:dedup-core /all
+    ```powershell
+    Install-WindowsFeature -ComputerName <MyServer> -Name FS-Data-Deduplication
+    ```
+
+    Or
+
+    Connect remotely to the server instance with PowerShell remoting and install Data Deduplication by using DISM:
+
+    ```powershell
+    Enter-PSSession -ComputerName MyServer
+    dism /online /enable-feature /featurename:dedup-core /all
     ```
 
 ## <a id="enable-dedup"></a>Enable Data Deduplication
