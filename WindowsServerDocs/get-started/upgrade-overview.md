@@ -34,7 +34,7 @@ deployment.
 - **Cluster OS Rolling Upgrade.** You upgrade the operating system of your cluster nodes without
   stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid
   downtime which could impact Service Level Agreements. For more information, see
-  [Cluster OS rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md)
+  [Cluster OS Rolling Upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md)
 
 - **License conversion.** Convert a particular edition of the release to another edition of the same
   release in a single step with a simple command and the appropriate license key. We call this
@@ -49,8 +49,8 @@ delivers the best performance.
 
 > [!TIP]
 > You can upgrade to a newer version of Windows Server by up to two versions at a time. For example, Windows Server 2016 can be upgraded to Windows Server 2019 or Windows Server
-> 2022. If you are using
-> [Cluster OS rolling upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md#requirements)
+> 2022. If you are using the
+> [Cluster OS Rolling Upgrade process](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md#requirements)
 > you can only one version at at time.
 
 In this table you can see the supported upgrade paths, based on the version you're currently on.
