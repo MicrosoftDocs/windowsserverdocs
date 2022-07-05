@@ -34,7 +34,7 @@ deployment.
 - **Cluster OS Rolling Upgrade.** You upgrade the operating system of your cluster nodes without
   stopping the Hyper-V or the Scale-Out File Server workloads. This feature allows you to avoid
   downtime which could impact Service Level Agreements. For more information, see
-  [Cluster operating system rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md)
+  [Cluster OS rolling upgrade](../failover-clustering/cluster-operating-system-rolling-upgrade.md)
 
 - **License conversion.** Convert a particular edition of the release to another edition of the same
   release in a single step with a simple command and the appropriate license key. We call this
@@ -48,8 +48,10 @@ Windows Server allows you to use the latest features – including the latest se
 delivers the best performance.
 
 > [!TIP]
-> You can upgrade to a newer version of Windows Server by up to two versions at a time. For example,
-> Windows Server 2016 can be upgraded to Windows Server 2019 or Windows Server 2022.
+> You can upgrade to a newer version of Windows Server by up to two versions at a time. For example, Windows Server 2016 can be upgraded to Windows Server 2019 or Windows Server
+> 2022. If you are using
+> [Cluster OS rolling upgrade](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md#requirements)
+> you can only one version at at time.
 
 In this table you can see the supported upgrade paths, based on the version you're currently on.
 
@@ -66,7 +68,7 @@ You can also upgrade from an evaluation version of the operating system to a ret
 older retail version to a newer version, or, in some cases, from a volume-licensed edition of the
 operating system to an ordinary retail edition. For more information about upgrade options other
 than in-place upgrade, see
-[Upgrade and conversion options for Windows Server](../get-started/supported-upgrade-paths.md).
+[Upgrade and conversion options for Windows Server](../get-started/upgrade-conversion-options.md).
 
 > [!NOTE]
 > Support for [Windows Server 2008](/lifecycle/products/windows-server-2008) and
