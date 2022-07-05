@@ -41,7 +41,7 @@ To install Data Deduplication:
 
     Or
 
-    Connect remotely to the server instance with PowerShell remoting and install Data Deduplication by using DISM:
+    - Connect remotely to the server instance with PowerShell remoting and install Data Deduplication by using DISM:
 
     ```powershell
     Enter-PSSession -ComputerName MyServer
