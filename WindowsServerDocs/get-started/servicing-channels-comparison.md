@@ -102,7 +102,7 @@ Starting with Windows Server, version 1809 and Windows Server 2019, [Server Core
 
 ## What about Nano Server?
 
-Nano Server is available as a container operating system in the Semi-Annual Channel. See [Changes to Nano Server in Windows Server Semi-Annual Channel](../get-started/nano-in-semi-annual-channel.md) for details.
+Nano Server is available only as a container operating system. Learn more about [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image)
 
 ## How to tell whether a server is running an LTSC or SAC release
 

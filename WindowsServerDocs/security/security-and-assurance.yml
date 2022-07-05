@@ -39,7 +39,7 @@ landingContent:
           - text: Shielded VM Demo
             url: https://www.youtube.com/watch?v=xip5Qtk-7d8
           - text: Shielded Virtual Machines in Windows Server video walkthrough
-            url: http://microsoft-cloud.cloudguides.com/Guides/Shielded%Virtual%Machines%in%Windows%Server.htm
+            url: /shows/oemtv/1758
       - linkListType: how-to-guide
         links:
           - text: Guarded Fabric Deployment Guide

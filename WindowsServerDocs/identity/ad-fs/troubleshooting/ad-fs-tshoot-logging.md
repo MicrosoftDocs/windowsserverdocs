@@ -133,17 +133,17 @@ This activity ID remains the same for the entire duration of the request, and is
 ![Screenshot of the Details tab of the event Properties dialog box with the client request I D value called out.](media/ad-fs-tshoot-logging/activityid2.png)
 
 To aid in the troubleshooting process, AD FS also logs the caller ID event whenever the token-issuance process fails on an AD FS server. This event contains the claim type and value of one of the following claim types, assuming that this information was passed to the Federation Service as part of a token request:
-- https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountnameh
-- http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier
-- http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upnh
-- https://schemas.microsoft.com/ws/2008/06/identity/claims/upn
-- http://schemas.xmlsoap.org/claims/UPN
-- http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddressh
-- https://schemas.microsoft.com/ws/2008/06/identity/claims/emailaddress
-- http://schemas.xmlsoap.org/claims/EmailAddress
-- http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name
-- https://schemas.microsoft.com/ws/2008/06/identity/claims/name
-- http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier
+- `https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountnameh`
+- `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier`
+- `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upnh`
+- `https://schemas.microsoft.com/ws/2008/06/identity/claims/upn`
+- `http://schemas.xmlsoap.org/claims/UPN`
+- `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddressh`
+- `https://schemas.microsoft.com/ws/2008/06/identity/claims/emailaddress`
+- `http://schemas.xmlsoap.org/claims/EmailAddress`
+- `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`
+- `https://schemas.microsoft.com/ws/2008/06/identity/claims/name`
+- `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier`
 
 The caller ID event also logs the activity ID to allow you to use that activity ID to filter or search the event logs for a particular request.
 
