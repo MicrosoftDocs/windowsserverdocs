@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.assetid: 2c2fa45b-6f3b-4663-b421-2da6ecc463bf
 author: jaimeo
 ms.author: jaimeo
+ROBOTS: NOINDEX,NOFOLLOW
 ---
 # Install Nano Server
 
