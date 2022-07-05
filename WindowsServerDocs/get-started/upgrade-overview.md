@@ -50,7 +50,7 @@ delivers the best performance.
 > [!TIP]
 > You can upgrade to a newer version of Windows Server by up to two versions at a time. For example, Windows Server 2016 can be upgraded to Windows Server 2019 or Windows Server
 > 2022. If you are using the
-> [Cluster OS Rolling Upgrade process](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md#requirements)
+> [Cluster OS Rolling Upgrade feature](../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md#requirements)
 > you can only one version at at time.
 
 In this table you can see the supported upgrade paths, based on the version you're currently on.
