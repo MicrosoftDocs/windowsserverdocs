@@ -91,7 +91,7 @@ If not specified, this setting will default to 0 (Disabled).
 
 This setting controls the length of the password. Supported values are:
 
-  Minimum: 1 day (7 days when backup directory is configured to be Azure AD)
+  Minimum: One day (seven days when backup directory is configured to be Azure AD)
 
   Maximum: 365 days
 
@@ -101,7 +101,7 @@ If not specified, this setting will default to 30 days.
 
 Use this setting to configure the length of the password of the managed local administrator account. Supported values are:
 
-  Minimum: 8 characters
+  Minimum: eight (8) characters
   Maximum: 64 characters
 
 If not specified, this setting will default to 14 characters.
@@ -112,12 +112,12 @@ Use this setting to configure password complexity of the managed local administr
 
 |Value|Description of setting|
 |--- |--- |
-|1|Large letters|
-|2|Large letters + small letters|
-|3|Large letters + small letters + numbers|
-|4|Large letters + small letters + numbers + special characters|
+|One (1) |Large letters|
+|Two (2)|Large letters + small letters|
+|Three (3)|Large letters + small letters + numbers|
+|Four (4)|Large letters + small letters + numbers + special characters|
 
-If not specified, this setting will default to 4.
+If not specified, this setting will default to four (4).
 
 > [!IMPORTANT]
 > Windows supports the lower password complexity settings (1, 2, and 3) only for backwards compatibility with older versions of LAPS. Microsoft recommends that this setting always be configured to 4.
@@ -126,12 +126,12 @@ If not specified, this setting will default to 4.
 
 Use this setting to configure enforcement of maximum password age for the managed local administrator account.
 
-Supported values are either 1 (True) or 0 (False).
+Supported values are either one (True) or zero (False).
 
-If not specified, this setting will default to 1 (True).
+If not specified, this setting will default to one (True).
 
 > [!TIP]
-> In legacy LAPS mode this setting will default to 0 (False) for backwards compatibility.
+> In legacy LAPS mode this setting will default to zero (False) for backward compatibility.
 
 ### AdministratorAccountName
 
@@ -146,7 +146,7 @@ If not specified, this setting will default to managing the built-in local admin
 
 Use this setting to enable encryption of passwords in AD.
 
-Supported values are either 1 (True) or 0 (False).
+Supported values are either one (True) or zero (False).
 
 > [!IMPORTANT]
 > Enabling this setting requires that your Active Directory domain be running at Domain Functional Level 2016 or later.
@@ -182,11 +182,11 @@ If specified, the specified user or group will be able to decrypt the password s
 
 Use this setting to configure how many previous encrypted passwords will be remembered in Active Directory.
 
-This setting has a minimum allowed value of 0 passwords.
+This setting has a minimum allowed value of zero (0) passwords.
 
 This setting has a maximum allowed value of 12 passwords.
 
-If not specified, this setting will default to 0 passwords (disabled).
+If not specified, this setting will default to zero (0) passwords (disabled).
 
 > [!IMPORTANT]
 > This setting is ignored unless ADPasswordEncryptionEnabled is configured to True and all other prerequisites are met.
@@ -224,7 +224,7 @@ This setting can have ONE of the following values:
 |Value|Name|Action(s) taken upon expiry of the grace period|
 |--- |--- |--- |
 |1|Reset password|The managed account password will be reset|
-|3|Reset password and log off|The managed account password will be reset and any interactive logon sessions using the managed account will be terminated|
+|3|Reset password and sign out|The managed account password will be reset and any interactive sign-in sessions using the managed account will be terminated|
 |5|Reset password and reboot|The managed account password will be reset and the managed device will be immediately rebooted.|
 
 If not specified, this setting will default to 3.

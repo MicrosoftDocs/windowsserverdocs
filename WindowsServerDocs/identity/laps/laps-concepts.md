@@ -77,7 +77,7 @@ By default retrieval of the clear-text password is limited to members of the Glo
 
 When backing up passwords to Active Directory, managed local account passwords are stored on the computer object. These passwords are secured using two mechanisms. The first line of security is the Active Directory access control lists (ACLs) that are configured on the computer object's containing Organizational Unit (OU), and then inherited onto the computer object itself. You can specify who can read the various password attributes using the `Set-LapsADReadPasswordPermission` cmdlet. (Similarly, you can specify who can read and set the password expiration time attribute using the `Set-LapsADResetPasswordPermission` cmdlet.)
 
-The second line of password security uses the AD password encryption feature. AD password encryption does require that your Active Directory domain is running at Windows Server 2016 Domain Functional Level (DFL) or later. Once enabled, the password is first encrypted so that only a specified group (or user) is able to decrypt it. The encryption of the password occurs on the managed device itself prior to sending the password to Active Directory.
+The second line of password security uses the AD password encryption feature. AD password encryption does require that your Active Directory domain is running at Windows Server 2016 Domain Functional Level (DFL) or later. Once enabled, the password is first encrypted so that only a specific AD security principal (a group or user) is able to decrypt it. The encryption of the password occurs on the managed device itself prior to sending the password to Active Directory.
 
 > [!IMPORTANT]
 > Microsoft highly recommends that you enable password encryption when storing your Windows LAPS passwords in Active Directory.
@@ -88,18 +88,18 @@ Consider the following diagram when designing your password retrieval security m
 
 This diagram illustrates the suggested AD password security layers and how you should think about their relationship to each other.
 
-The outermost circle is composed of those groups (or users) that have been granted permission to read or set the password expiration time attribute on computer objects in AD. This ability is a sensitive permission but is considered non-destructive (an attacker who acquires this permission can force managed devices to rotate their managed devices more frequently).
+The outermost circle is composed of those AD security principals that have been granted permission to read or set the password expiration time attribute on computer objects in Active Directory. This ability is a sensitive permission but is considered non-destructive (an attacker who acquires this permission can force managed devices to rotate their managed devices more frequently).
 
-The middle circle is composed of those groups (or users) that have been granted permission to read or set the password attribute(s) on computer objects in AD. This ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for Domain Admins.
+The middle circle is composed of those AD security principals that have been granted permission to read or set the password attribute(s) on computer objects in AD. This ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for Domain Admins.
 
 The inner circle is only applicable when AD password encryption is enabled. It's composed of those groups (or users) that have been granted decryption permissions for the encrypted password attribute(s) on computer objects in AD. As with the middle circle, this ability is a sensitive permission and should be carefully monitored. The most secure approach is to reserve this level of permission for Domain Admins.
 
 > [!IMPORTANT]
-> Consider customizing the above security layers differently depending on the sensitivity of the machines being managed. For example, it may be acceptable for front line IT worker devices to be accessible by help-desk administrators, but you may want to set tighter boundaries for corporate executive laptops.
+> Consider customizing the above security layers differently depending on the sensitivity of the machines being managed. For example, it may be acceptable for front line IT worker devices to be accessible by help-desk administrators, but you will likely want to set tighter boundaries for corporate executive laptops.
 
 #### Active Directory password encryption details
 
-The Windows LAPS password encryption feature is based on [CNG DPAPI](/windows/win32/seccng/cng-dpapi) functionality. CNG DPAPI supports multiple encryption modes, but Windows LAPS only supports encrypting passwords against a single Active Directory security principal (user or group).
+The Windows LAPS password encryption feature is based on [CNG DPAPI](/windows/win32/seccng/cng-dpapi). CNG DPAPI supports multiple encryption modes, but Windows LAPS only supports encrypting passwords against a single Active Directory security principal (user or group). The underlying encryption is based on AES256.
 
 The ADPasswordEncryptionPrincipal policy setting can be used to specify a specific AD security principal for encrypting the password. If ADPasswordEncryptionPrincipal isn't specified, Windows LAPS will encrypt the password against the Domain Admins group of the managed device's domain. Prior to encrypting a password, the managed device will always verify that the specified user or group is resolvable.
 

@@ -17,7 +17,7 @@ This article describes the Active Directory Users and Computers LAPS property pa
 
 ## Active Directory Users and Computers LAPS property page
 
-The Active Directory Users and Computers management now includes a LAPS property page available on AD computer objects:
+The Active Directory Users and Computers management snap-in now includes a LAPS property page available on AD computer objects:
 
 :::image type="content" source="../laps/laps-management-userinterface-aduc-proppage.png" alt-text="Active Directory and Users LAPS property page.":::
 
