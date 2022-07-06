@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 06/23/2022
+ms.date: 07/06/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,14 +17,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.3213        |1.2.1672                  |
-|Insider    |1.2.3313        |1.2.1672                  |
+|Public     |1.2.3316        |1.2.1672                  |
+|Insider    |1.2.3316        |1.2.1672                  |
 
-## Updates for version 1.2.3313 (Insider)
+## Updates for version 1.2.3316
 
-*Date published: 6/23/2022*
+*Date published: 7/06/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Fixed an issue where the service couldn't render RemoteApp windows while RemoteFX Advanced Graphics were disabled.
 - Fixed an issue that happened when a user tried to connect to an Azure Virtual Desktop endpoint while using the Remote Desktop Services Transport Layer Security protocol (RDSTLS) with CredSSP disabled, which caused the Windows Desktop client to not prompt the user for credentials. Because the client couldn't authenticate, it would get stuck in an infinite loop of failed connection attempts.
@@ -38,7 +38,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 
 *Date published: 6/02/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4YfFO), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4YfFP), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4YfFN)
 
 - Reduced flicker when application is restored to full-screen mode from minimized state in single-monitor configuration.
 - The client now shows an error message when the user tries to open a connection from the UI, but the connection doesn't launch.
@@ -49,8 +49,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.3130
 
 *Date published: 05/10/2022*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4X1UX), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Xafz), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Xafx)
 
 - Fixed the vulnerability known as [CVE-2022-22017](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-22017).
 - Fixed the vulnerability known as [CVE-2022-26940](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26940).
