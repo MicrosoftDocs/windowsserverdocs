@@ -28,7 +28,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 
 - Fixed an issue where the service couldn't render RemoteApp windows while RemoteFX Advanced Graphics were disabled.
 - Fixed an issue that happened when a user tried to connect to an Azure Virtual Desktop endpoint while using the Remote Desktop Services Transport Layer Security protocol (RDSTLS) with CredSSP disabled, which caused the Windows Desktop client to not prompt the user for credentials. Because the client couldn't authenticate, it would get stuck in an infinite loop of failed connection attempts.
-- Fixed an issue that happened when users tried to connect to an Azure Active Directory (Azure AD)-joined Azure Virtual Desktop endpoint from a client machine joined to the same Azure AD tenant while the Credential Security Support Provider protocol (CredSSP) was disabled. During this issue, the Windows Desktop client would try to use the Transport Layer Security (TLS) protocol instead of RDSTLS. This change made the Windows Desktop client use TLS instead of RDSTLS, which isn't ideal for security.
+- Fixed an issue that happened when users tried to connect to an Azure Active Directory (Azure AD)-joined Azure Virtual Desktop endpoint from a client machine joined to the same Azure AD tenant while the Credential Security Support Provider protocol (CredSSP) was disabled.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to Teams for Azure Virtual Desktop, including the following:
   - Better noise suppression during calls.
