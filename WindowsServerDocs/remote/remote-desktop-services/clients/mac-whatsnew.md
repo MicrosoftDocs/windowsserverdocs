@@ -11,7 +11,7 @@ ms.date: 07/07/2022
 
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
-If you encounter any issues, you can contact us by selecting **Help > Submit Feedback** in the client..
+If you encounter any issues, you can contact us by selecting **Help > Submit Feedback** in the client.
 
 ## The macOS beta client
 
