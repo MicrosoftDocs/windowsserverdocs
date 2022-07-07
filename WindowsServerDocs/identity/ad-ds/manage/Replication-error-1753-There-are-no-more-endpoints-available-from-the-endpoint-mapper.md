@@ -295,7 +295,7 @@ Summary: This example failed because an invalid host-to-IP mapping (in the HOST 
 ## Related Topics
 
 * [Troubleshooting Active Directory operations that fail with error 1753: There are no more endpoints available from the endpoint mapper.](https://support.microsoft.com/kb/2089874)
-* [KB article 839880 Troubleshooting RPC Endpoint Mapper errors using the Windows Server 2003 Support Tools from the product CD](https://support.microsoft.com/kb/839880)
+* [KB article 839880 Troubleshooting RPC Endpoint Mapper errors using the Windows Server 2003 Support Tools from the product CD](/windows/client-management/troubleshoot-tcpip-rpc-errors)
 * [KB article 832017 Service overview and network port requirements for the Windows Server system](https://support.microsoft.com/kb/832017/)
 * [KB article 224196 Restricting Active Directory replication traffic and client RPC traffic to a specific port](https://support.microsoft.com/kb/224196/)
 * [KB article 154596 How to configure RPC dynamic port allocation to work with firewalls](https://support.microsoft.com/kb/154596)

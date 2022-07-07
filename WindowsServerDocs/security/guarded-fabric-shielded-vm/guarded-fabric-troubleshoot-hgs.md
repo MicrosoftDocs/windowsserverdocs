@@ -141,7 +141,7 @@ Alternatively, you can manually run the scheduled task by opening **Task Schedul
 
 ## Switching Attestation Modes
 
-If you switch HGS from TPM mode to Active Directory mode or vice versa using the [Set-HgsServer](https://technet.microsoft.com/library/mt652180.aspx) cmdlet, it may take up to 10 minutes for every node in your HGS cluster to start enforcing the new attestation mode.
+If you switch HGS from TPM mode to Active Directory mode or vice versa using the [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) cmdlet, it may take up to 10 minutes for every node in your HGS cluster to start enforcing the new attestation mode.
 This is normal behavior.
 It is advised that you do not remove any policies allowing hosts from the previous attestation mode until you have verified that all hosts are attesting successfully using the new attestation mode.
 
@@ -151,7 +151,7 @@ If you initialized your HGS cluster in TPM mode and later switch to Active Direc
 To ensure all HGS servers are enforcing the correct attestation mode, run `Set-HgsServer -TrustActiveDirectory` **on each node** of your HGS cluster.
 This issue does not apply if you are switching from TPM mode to AD mode *and* the cluster was originally set up in AD mode.
 
-You can verify the attestation mode of your HGS server by running [Get-HgsServer](https://technet.microsoft.com/library/mt652162.aspx).
+You can verify the attestation mode of your HGS server by running [Get-HgsServer](/powershell/module/hgsserver/get-hgsserver).
 
 ## Memory dump encryption policies
 

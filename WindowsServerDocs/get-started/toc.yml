@@ -45,6 +45,8 @@ items:
           href: windows-server-release-info.md
         - name: Extended Security Updates
           href: extended-security-updates-overview.md
+        - name: Upgrade Windows Server
+          href: upgrade-overview.md
     - name: Concepts
       items:
         - name: Install, upgrade, or migrate
@@ -84,6 +86,8 @@ items:
               href: kms-client-activation-keys.md
         - name: Get Extended Security Updates
           href: extended-security-updates-deploy.md
+        - name: Perform an in-place upgrade
+          href: perform-in-place-upgrade.md
     - name: Nano Server
       items: 
       - name: Install Nano Server

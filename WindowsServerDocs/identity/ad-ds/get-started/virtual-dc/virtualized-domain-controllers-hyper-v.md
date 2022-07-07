@@ -34,9 +34,9 @@ To install and use the Hyper-V role, you must have the following:
 You should attempt to avoid creating potential single points of failure when you plan your virtual domain controller deployment. You can avoid introducing potential single points of failure by implementing system redundancy. For example, consider the following recommendations while keeping in mind the potential for increases in the cost of administration:
 
 1. Run at least two virtualized domain controllers per domain on different virtualization hosts, which reduces the risk of losing all domain controllers if a single virtualization host fails.
-2. As recommended for other technologies, diversify the hardware (using different CPUs, motherboards, network adapters, or other hardware) on which the domain controllers are running. Hardware diversification limits the damage that might be caused by a malfunction that is specific to a vendor configuration, a driver, or a single piece or type of hardware.
-3. If possible, domain controllers should be running on hardware that is located in different regions of the world. This helps to reduce the impact of a disaster or failure that affects a site at which the domain controllers are hosted.
-4. Maintain physical domain controllers in each of your domains. This mitigates the risk of a virtualization platform malfunction that affects all host systems that use that platform.
+1. As recommended for other technologies, diversify the hardware (using different CPUs, motherboards, network adapters, or other hardware) on which the domain controllers are running. Hardware diversification limits the damage that might be caused by a malfunction that is specific to a vendor configuration, a driver, or a single piece or type of hardware.
+1. If possible, domain controllers should be running on hardware that is located in different regions of the world. This helps to reduce the impact of a disaster or failure that affects a site at which the domain controllers are hosted.
+1. Maintain physical domain controllers in each of your domains. This mitigates the risk of a virtualization platform malfunction that affects all host systems that use that platform.
 
 ## Security considerations
 
@@ -47,7 +47,7 @@ Be sure to keep the following security considerations in mind when you are plann
    - The local administrator of a computer that hosts virtual, writeable domain controllers should be considered equivalent in credentials to the default domain administrator of all the domains and forests that those domain controllers belong to.
    - The recommended configuration to avoid security and performance issues is a host running a Server Core installation of Windows Server 2008 or later, with no applications other than Hyper-V. This configuration limits the number of applications and services that are installed on the server, which should result in increased performance and fewer applications and services that could be maliciously exploited to attack the computer or network. The effect of this type of configuration is known as a reduced attack surface. In a branch office or other locations that cannot be satisfactorily secured, a read-only domain controller (RODC) is recommended. If a separate management network exists, we recommend that the host be connected only to the management network.
    - You can use Bitlocker with your domain controllers, since Windows Server 2016 you can use the virtual TPM feature to also give the guest key material to unlock the system volume.
-   - [Guarded fabric and shielded VMs](/it-server/WindowsServerDocs/virtualization/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) can provide additional controls to protect your domain controllers.
+   - [Guarded fabric and shielded VMs](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node) can provide additional controls to protect your domain controllers.
 
 For information about RODCs, see [Read-Only Domain Controller Planning and Deployment Guide](../../deploy/rodc/read-only-domain-controller-updates.md).
 
@@ -86,82 +86,16 @@ To get a general idea of the performance of virtualized domain controllers, the 
 
 Lightweight Directory Access Protocol (LDAP) tests were run on a physical domain controller with ADTest.exe and then on a virtual machine that was hosted on a server that was identical to the physical domain controller. Only one logical processor was used for the physical computer, and only one virtual processor was used for the virtual machine to easily reach 100-percent CPU utilization. In the following table, the letter and number in parenthesis after each test indicate the specific test in ADTest.exe. As this data shows, virtualized domain controller performance was 88 to 98 percent of the physical domain controller performance.
 
-<table>
-<colgroup>
-<col>
-<col>
-<col>
-<col>
-<col>
-</colgroup>
-<thead>
-<tr class="header">
-<th>Measurement</th>
-<th>Test</th>
-<th>Physical</th>
-<th>Virtual</th>
-<th>Delta</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Searches/sec</p></td>
-<td><p>Search for common name in base scope (L1)</p></td>
-<td><p>11508</p></td>
-<td><p>10276</p></td>
-<td><p>-10.71%</p></td>
-</tr>
-<tr class="even">
-<td><p>Searches/sec</p></td>
-<td><p>Search for a set of attributes in base scope (L2)</p></td>
-<td><p>10123</p></td>
-<td><p>9005</p></td>
-<td><p>-11.04%</p></td>
-</tr>
-<tr class="odd">
-<td><p>Searches/sec</p></td>
-<td><p>Search for all attributes in base scope (L3)</p></td>
-<td><p>1284</p></td>
-<td><p>1242</p></td>
-<td><p>-3.27%</p></td>
-</tr>
-<tr class="even">
-<td><p>Searches/sec</p></td>
-<td><p>Search for common name in subtree scope (L6)</p></td>
-<td><p>8613</p></td>
-<td><p>7904</p></td>
-<td><p>-8.23%</p></td>
-</tr>
-<tr class="odd">
-<td><p>Successful binds/sec</p></td>
-<td><p>Perform fast binds (B1)</p></td>
-<td><p>1438</p></td>
-<td><p>1374</p></td>
-<td><p>-4.45%</p></td>
-</tr>
-<tr class="even">
-<td><p>Successful binds/sec</p></td>
-<td><p>Perform simple binds (B2)</p></td>
-<td><p>611</p></td>
-<td><p>550</p></td>
-<td><p>-9.98%</p></td>
-</tr>
-<tr class="odd">
-<td><p>Successful binds/sec</p></td>
-<td><p>Use NTLM to perform binds (B5)</p></td>
-<td><p>1068</p></td>
-<td><p>1056</p></td>
-<td><p>-1.12%</p></td>
-</tr>
-<tr class="even">
-<td><p>Writes/sec</p></td>
-<td><p>Write multiple attributes (W2)</p></td>
-<td><p>6467</p></td>
-<td><p>5885</p></td>
-<td><p>-9.00%</p></td>
-</tr>
-</tbody>
-</table>
+| Measurement  | Test                                              | Physical | Virtual | Delta |
+|--------------|---------------------------------------------------|----------|---------|-------|
+| Searches/sec | Search for common name in base scope (L1)         | 11508 | 10276 | -10.71% |
+| Searches/sec | Search for a set of attributes in base scope (L2) | 10123 | 9005 | -11.04%  |
+| Searches/sec | Search for all attributes in base scope (L3)      | 1284  | 1242 | -3.27% |
+| Searches/sec | Search for common name in subtree scope (L6)      | 8613 | 7904 | -8.23% |
+| Successful binds/sec | Perform fast binds (B1) | 1438 | 1374 | -4.45% |
+| Successful binds/sec | Perform simple binds (B2) | 611 | 550 | -9.98% |
+| Successful binds/sec | Use NTLM to perform binds (B5) | 1068 | 1056 | -1.12% |
+|Writes/sec | Write multiple attributes (W2) | 6467 | 5885 | -9.00% |
 
 To ensure satisfactory performance, integration components (IC) were installed to allow the guest operating system to use “enlightenments,” or hypervisor-aware synthetic drivers. During the installation process, it may be necessary to use emulated Integrated Drive Electronics (IDE) or network adapter drivers. In production environments, you should replace these emulated drivers with synthetic drivers to increase performance.
 
@@ -209,7 +143,7 @@ This also helps avoiding problems with hardware or platform-related problems P2V
 > To prevent issues with Active Directory replication, ensure that only one instance (physical or virtual) of a given domain controller exists on a given network at any point in time.
 > You can lower the likelihood of the old clone being a problem:
 >
-> - When the new virtual DC is running, change the computer account password twice using: netdom resetpwd /Server:<domain-controller> …
+> - When the new virtual DC is running, change the computer account password twice using: netdom resetpwd /Server:\<domain-controller\> …
 > - Export and import the new virtual guest to force it becoming a new Generation ID and hence a database invocation ID.
 
 ## Using P2V Migration to Create Test Environments
@@ -418,7 +352,7 @@ USN rollback can be caused in many ways, for example, when old virtual hard disk
    - When not running Windows Server 2012 or newer, do not export the virtual machine that is running a domain controller.
    - Do not restore a domain controller or attempt to roll back the contents of an Active Directory database by any other means than a supported backup solution, such as Windows Server Backup.
 
-In some cases, USN rollback may go undetected. In other cases, it may cause other replication errors. In these cases, it is necessary to identify the extent of the problem and take care of it in a timely manner. For information about how to remove lingering objects that may occur as a result of USN rollback, see [Outdated Active Directory objects generate event ID 1988 in Windows Server 2003](https://go.microsoft.com/fwlink/?linkid=137185) in the Microsoft Knowledge Base.
+In some cases, USN rollback may go undetected. In other cases, it may cause other replication errors. In these cases, it is necessary to identify the extent of the problem and take care of it in a timely manner. For information about how to remove lingering objects that may occur as a result of USN rollback, see [Outdated Active Directory objects generate event ID 1988 in Windows Server 2003](/troubleshoot/windows-server/identity/active-directory-replication-event-id-1388-1988) in the Microsoft Knowledge Base.
 
 ## USN rollback detection
 

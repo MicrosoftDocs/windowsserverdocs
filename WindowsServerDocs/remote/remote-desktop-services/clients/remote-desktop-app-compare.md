@@ -6,7 +6,7 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 01/07/2022
+ms.date: 06/14/2022
 ---
 
 # Compare the clients: redirections
@@ -20,6 +20,9 @@ We're often asked how the different Remote Desktop clients compare to each other
 The following tables compare support for device and other redirections across the different clients. These tables cover the redirections that you can access once in a remote session.
 
 If you remote into your personal desktop, there are additional redirections that you can configure in the **Additional Settings** for the session. If your remote desktop or apps are managed by your organization, your admin can enable or disable redirections through Group Policy settings or RDP properties.
+
+>[!IMPORTANT]
+>You can only enable redirections with binary settings that apply to both to and from the remote machine. The service doesn't currently support one-way blocking of redirections from only one side of the connection.
 
 ### Input redirection
 

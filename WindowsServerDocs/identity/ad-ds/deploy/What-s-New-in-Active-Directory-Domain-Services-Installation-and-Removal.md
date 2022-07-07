@@ -92,7 +92,7 @@ Adprep.exe requires /userdomain if /user is specified. For smartcard credentials
 
 ### Adprep /domainprep /gpprep command is not run automatically
 
-The adprep /domainprep /gpprep command is not run as part of AD DS installation. This command sets permissions that are required for Resultant Set of Policy (RSOP) planning mode functionality. For more information about this command, see [Microsoft Knowledge Base article 324392](https://support.microsoft.com/kb/324392). If the command needs to be run in your Active Directory domain, you can run it separately from the AD DS installation. If the command has already been run in preparation of deploying domain controllers that run Windows Server 2003 SP1 or later, the command does not need to be run again.
+The adprep /domainprep /gpprep command is not run as part of AD DS installation. This command sets permissions that are required for Resultant Set of Policy (RSOP) planning mode functionality. For more information about this command, see [Microsoft Knowledge Base article 324392](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731728(v=ws.11)). If the command needs to be run in your Active Directory domain, you can run it separately from the AD DS installation. If the command has already been run in preparation of deploying domain controllers that run Windows Server 2003 SP1 or later, the command does not need to be run again.
 
 You can safely add domain controllers that run Windows Server 2012 to an existing domain without running adprep /domainprep /gpprep, but RSOP planning mode will not function properly.
 

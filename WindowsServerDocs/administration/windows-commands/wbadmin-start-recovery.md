@@ -82,10 +82,10 @@ wbadmin start recovery -version:04/30/2020-09:00 -backupTarget:\\servername\shar
 
 - [wbadmin command](wbadmin.md)
 
-- [Start-WBFileRecovery](/powershell/module/windowserverbackup/Start-WBFileRecovery)
+- [Start-WBFileRecovery](/powershell/module/windowsserverbackup/start-wbfilerecovery)
 
-- [Start-WBHyperVRecovery](/powershell/module/windowserverbackup/Start-WBHyperVRecovery)
+- [Start-WBHyperVRecovery](/powershell/module/windowsserverbackup/start-wbhypervrecovery)
 
-- [Start-WBSystemStateRecovery](/powershell/module/windowserverbackup/Start-WBSystemStateRecovery)
+- [Start-WBSystemStateRecovery](/powershell/module/windowsserverbackup/start-wbsystemstaterecovery)
 
-- [Start-WBVolumeRecovery](/powershell/module/windowserverbackup/Start-WBVolumeRecovery)
+- [Start-WBVolumeRecovery](/powershell/module/windowsserverbackup/start-wbvolumerecovery)

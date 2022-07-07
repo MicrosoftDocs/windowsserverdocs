@@ -14,6 +14,7 @@
 #### [Scenario: Get Insight into Your Data by Using Classification](solution-guides/Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)
 ##### [Deploy Automatic File Classification (Demonstration Steps)](solution-guides/Deploy-Automatic-File-Classification--Demonstration-Steps-.md)
 #### [Scenario: Implement Retention of Information on File Servers](solution-guides/Scenario--Implement-Retention-of-Information-on-File-Servers.md)
+##### [Plan for retention of information on file servers](solution-guides/plan-retention-information-file-servers.md)
 ##### [Deploy Implementing Retention of Information on File Servers Demonstration Steps](solution-guides/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md)
 #### [Deploy Claims Across Forests](solution-guides/Deploy-Claims-Across-forests.md)
 ##### [Deploy Claims Across forests (Demonstration Steps)](solution-guides/Deploy-Claims-Across-forests--Demonstration-Steps-.md)

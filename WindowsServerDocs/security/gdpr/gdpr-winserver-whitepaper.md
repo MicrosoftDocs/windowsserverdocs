@@ -3,7 +3,7 @@ title: Beginning your General Data Protection Regulation (GDPR) journey for Wind
 description: Use this article to understand what GDPR is and about the products Microsoft provides to help you get started towards compliance.
 ms.topic: article
 ms.date: 09/25/2017
-ms.author: nirb
+ms.author: wscontent
 author: nirb-ms
 ---
 
@@ -298,7 +298,7 @@ One way to improve protection in virtualized environments is to segment the netw
 ### Other GDPR considerations for servers
 The GDPR includes explicit requirements for breach notification where a personal data breach means, “_a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed._”  Obviously, you can't begin to move forward to meet the stringent GDPR notification requirements within 72 hours if you cannot detect the breach in the first place.
 
-As noted in the Windows Security Center white paper, [Post Breach: Dealing with Advanced Threats](https://wincom.blob.core.windows.net/documents/Post_Breach_Dealing_with_Advanced_Threats_Whitepaper.pdf)
+As noted in the Windows Security Center white paper, [Post Breach: Dealing with Advanced Threats](/events/build-2016/b890)
 
 > “_Unlike pre-breach, post-breach assumes a breach has already occurred – acting as a flight recorder and Crime Scene Investigator (CSI). Post-breach provides security teams the information and toolset needed to identify, investigate, and respond to attacks that otherwise will stay undetected and below the radar._”
 
@@ -343,17 +343,17 @@ You can use ATA to help detect attackers attempting to compromise privileged ide
 
 ## Related content for associated Windows Server 2016 solutions
 
-- **Windows Defender Antivirus:** https://www.youtube.com/watch?v=P1aNEy09NaI and https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10
+- **Windows Defender Antivirus:** https://www.youtube.com/watch?v=P1aNEy09NaI and [https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10](/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10)
 
-- **Windows Defender Advanced Threat Protection:** https://www.youtube.com/watch?v=qxeGa3pxIwg and https://docs.microsoft.com/windows/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection
+- **Windows Defender Advanced Threat Protection:** https://www.youtube.com/watch?v=qxeGa3pxIwg and [https://docs.microsoft.com/windows/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection](/windows/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection)
 
-- **Windows Defender Device Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and https://docs.microsoft.com/windows/device-security/device-guard/device-guard-deployment-guide
+- **Windows Defender Device Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and [https://docs.microsoft.com/windows/device-security/device-guard/device-guard-deployment-guide](/windows/device-security/device-guard/device-guard-deployment-guide)
 
-- **Windows Defender Credential Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard
+- **Windows Defender Credential Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and [https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard](/windows/access-protection/credential-guard/credential-guard)
 
 - **Control Flow Guard:** https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx
 
-- **Security and Assurance:** https://docs.microsoft.com/windows-server/security/security-and-assurance
+- **Security and Assurance:** [https://docs.microsoft.com/windows-server/security/security-and-assurance](/windows-server/security/security-and-assurance)
 
 ## Disclaimer
 This article is a commentary on the GDPR, as Microsoft interprets it, as of the date of publication. We've spent a lot of time with GDPR and like to think we've been thoughtful about its intent and meaning. But the application of GDPR is highly fact-specific, and not all aspects and interpretations of GDPR are well-settled.

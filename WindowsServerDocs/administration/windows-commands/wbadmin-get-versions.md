@@ -52,4 +52,4 @@ wbadmin get versions -backupTarget:\\servername\share -machine:server01
 
 - [wbadmin get items command](wbadmin-get-items.md)
 
-- [Get-WBBackupTarget](/powershell/module/windowserverbackup/Get-WBBackupTarget)
+- [Get-WBBackupTarget](/powershell/module/windowsserverbackup/get-wbbackuptarget)

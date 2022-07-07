@@ -4,7 +4,7 @@ description: How to create a new Active Directory forest on a virtual machine (V
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 12/16/2021
+ms.date: 6/28/2022
 ms.topic: article
 ---
 
@@ -15,14 +15,14 @@ AD DS can run on an Azure virtual machine (VM) in the same way it runs in many o
 ## Components
 
 * A resource group to put everything in.
-* An [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview.md), subnet, network security group, and rule to allow RDP access to VMs.
-* An Azure virtual machine [availability set](/azure/virtual-machines/windows/regions-and-availability#availability-sets) to put two Active Directory Domain Services (AD DS) domain controllers in.
+* An [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview), subnet, network security group, and rule to allow RDP access to VMs.
+* An Azure virtual machine [availability set](/azure/virtual-machines/availability-set-overview) to put two Active Directory Domain Services (AD DS) domain controllers in.
 * Two Azure virtual machines to run AD DS and DNS.
 
 ### Items that are not covered
 
-* [Creating a site-to-site VPN connection](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal.md) from an on-premises location
-* [Securing network traffic in Azure](/azure/security/azure-security-network-security-best-practices.md)
+* [Creating a site-to-site VPN connection](/azure/vpn-gateway/tutorial-site-to-site-portal) from an on-premises location
+* [Securing network traffic in Azure](/azure/security/azure-security-network-security-best-practices)
 * [Designing the site topology](../../plan/designing-the-site-topology.md)
 * [Planning operations master role placement](../../plan/planning-operations-master-role-placement.md)
 * [Deploying Azure AD Connect to synchronize identities to Azure AD](/azure/active-directory/hybrid/how-to-connect-install-express)

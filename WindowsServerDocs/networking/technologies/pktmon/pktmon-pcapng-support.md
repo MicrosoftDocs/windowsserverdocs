@@ -1,9 +1,9 @@
 ---
 title: Pktmon support for Wireshark (pcapng)
-description: Use this topic to analyze Packet Monitor-generated pcapng logs with Wireshark.
+description: Describes how to convert Pktmon logs to pcapng format for analysis in Wireshark or any other pcapng analyer.
 ms.topic: how-to
 author: khdownie
-ms.author: v-kedow
+ms.author: wscontent
 ms.date: 10/27/2021
 ---
 

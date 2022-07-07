@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/04/2021
+ms.date: 06/16/2022
 ---
 
 # Supported configurations for the Windows Desktop client
@@ -14,17 +14,19 @@ This article lists which configurations the Windows Desktop client currently sup
 
 ## Client requirements
 
-In order to run properly, your Windows Desktop client must meet the following requirements:
+In order to run properly, you must meet the following requirements:
 
 - Client version must be at or above the minimum supported version. For more information, see [What's new in the Windows Desktop client](windowsdesktop-whatsnew.md).
 
 - Client devices must have .NET Framework 4.6.1 or above. For more information, [Lifecycle FAQ - .NET Framework](/lifecycle/faq/dotnet-framework).
 
-## Supported OS versions
+- You cannot sign-in using the built-in Administrator user account.
 
-The tables in this section list which versions of each Windows operating system (OS) is compatible with the Windows Desktop client.
+## Supported operating system versions
 
-### Windows client OS
+The tables in this section list which versions of Windows and Windows Server are compatible with the Windows Desktop client.
+
+### Windows
 
 | Operating system         | Edition  | Minimum version             |
 |-------------|---------|---------------------------------|
@@ -37,7 +39,7 @@ The tables in this section list which versions of each Windows operating system 
 |Windows 7|Enterprise, Home Basic, Home Premium, Professional, Starter, Ultimate|Extended security update (Year 2)|
 |Windows 7 Embedded Standard|Professional for Embedded Systems, Ultimate for Embedded Systems|Extended security update (Year 1)|
 
-### Windows Server OS
+### Windows Server
 
 | Operating system         | Edition  | Minimum version             |
 |-------------|---------|---------------------------------|

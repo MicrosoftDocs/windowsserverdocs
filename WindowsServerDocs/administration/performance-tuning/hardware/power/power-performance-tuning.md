@@ -13,7 +13,7 @@ Energy efficiency is increasingly important in enterprise and data center enviro
 
 This section expands on energy-efficiency tradeoffs to help you make informed decisions if you need to adjust the default power settings on your server. However, the majority of server hardware and workloads should not require administrator power tuning when running Windows Server.
 
-## Choosing the turning metrics
+## Choosing the tuning metrics
 
 When you tune your server for energy savings, you must also consider performance. Tuning affects performance and power, sometimes in disproportionate amounts. For each possible adjustment, consider your power budget and performance goals to determine whether the trade-off is acceptable.
 

@@ -6,6 +6,7 @@ ms.date: 09/05/2017
 ms.topic: how-to
 author: jaimeo
 ms.author: jaimeo
+ROBOTS: NOINDEX,NOFOLLOW
 ---
 # Nano Server Quick Start
 

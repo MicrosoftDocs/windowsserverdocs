@@ -5,17 +5,19 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 manager: lizross
-ms.date: 10/20/2021
+ms.date: 02/28/2022
 ---
 # Configure and manage quorum
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Azure Stack HCI, versions 21H2 and 20H2
 
-This topic provides background and steps to configure and manage the quorum in a failover cluster. For information about cluster and storage pool quorums on Azure Stack HCI, see [Understanding cluster and pool quorum](/azure-stack/hci/concepts/quorum).
+This article provides background and steps to configure and manage the quorum in a failover cluster.
+
+For information about cluster and storage pool quorums in Storage Spaces Direct on Azure Stack HCI and Windows Server clusters, see [Understanding cluster and pool quorum](/azure-stack/hci/concepts/quorum).
 
 ## Understanding quorum
 
-The quorum for a cluster is determined by the number of voting elements that must be part of active cluster membership for that cluster to start properly or continue running. For a more detailed explanation, see the [understanding cluster and pool quorum doc](../storage/storage-spaces/understand-quorum.md).
+The quorum for a cluster is determined by the number of voting elements that must be part of active cluster membership for that cluster to start properly or continue running. For a more detailed explanation, see the [understanding cluster and pool quorum doc](/azure-stack/hci/concepts/quorum).
 
 ## Quorum configuration options
 
@@ -62,7 +64,7 @@ As an advanced quorum configuration option, you can choose to assign or remove q
 
 You might want to remove votes from nodes in certain disaster recovery configurations. For example, in a multisite cluster, you could remove votes from the nodes in a backup site so that those nodes do not affect quorum calculations. This configuration is recommended only for manual failover across sites. For more information, see [Quorum considerations for disaster recovery configurations](#quorum-considerations-for-disaster-recovery-configurations) later in this topic.
 
-The configured vote of a node can be verified by looking up the **NodeWeight** common property of the cluster node by using the [Get-ClusterNode](https://technet.microsoft.com/library/hh847268.aspx) Windows PowerShell cmdlet. A value of 0 indicates that the node does not have a quorum vote configured. A value of 1 indicates that the quorum vote of the node is assigned, and it is managed by the cluster. For more information about management of node votes, see [Dynamic quorum management](#dynamic-quorum-management) later in this topic.
+The configured vote of a node can be verified by looking up the **NodeWeight** common property of the cluster node by using the [Get-ClusterNode](/powershell/module/failoverclusters/get-clusternode) Windows PowerShell cmdlet. A value of 0 indicates that the node does not have a quorum vote configured. A value of 1 indicates that the quorum vote of the node is assigned, and it is managed by the cluster. For more information about management of node votes, see [Dynamic quorum management](#dynamic-quorum-management) later in this topic.
 
 The vote assignment for all cluster nodes can be verified by using the **Validate Cluster Quorum** validation test.
 
@@ -73,7 +75,7 @@ The vote assignment for all cluster nodes can be verified by using the **Validat
 
 ### Dynamic quorum management
 
-In Windows Server 2012, as an advanced quorum configuration option, you can choose to enable dynamic quorum management by cluster. For more details on how dynamic quorum works, see [this explanation](../storage/storage-spaces/understand-quorum.md#dynamic-quorum-behavior).
+In Windows Server 2012, as an advanced quorum configuration option, you can choose to enable dynamic quorum management by cluster. For more details on how dynamic quorum works, see [this explanation](/azure-stack/hci/concepts/quorum).
 
 With dynamic quorum management, it is also possible for a cluster to run on the last surviving cluster node. By dynamically adjusting the quorum majority requirement, the cluster can sustain sequential node shutdowns to a single node.
 
@@ -86,11 +88,11 @@ The vote assignment for all cluster nodes can be verified by using the **Validat
 - Dynamic quorum management does not allow the cluster to sustain a simultaneous failure of a majority of voting members. To continue running, the cluster must always have a quorum majority at the time of a node shutdown or failure.
 
 - If you have explicitly removed the vote of a node, the cluster cannot dynamically add or remove that vote.
-- When Storage Spaces Direct is enabled, the cluster can only support two node failures. This is explained more in the [pool quorum section](../storage/storage-spaces/understand-quorum.md)
+- When Storage Spaces Direct is enabled, the cluster can only support two node failures. This is explained more in the [pool quorum section](/azure-stack/hci/concepts/quorum)
 
 ## General recommendations for quorum configuration
 
-The cluster software automatically configures the quorum for a new cluster, based on the number of nodes configured and the availability of shared storage. This is usually the most appropriate quorum configuration for that cluster. However, it is a good idea to review the quorum configuration after the cluster is created, before placing the cluster into production. To view the detailed cluster quorum configuration, you can you use the Validate a Configuration Wizard, or the [Test-Cluster](/powershell/module/failoverclusters/test-cluster) Windows PowerShell cmdlet, to run the **Validate Quorum Configuration** test. In Failover Cluster Manager, the basic quorum configuration is displayed in the summary information for the selected cluster, or you can review the information about quorum resources that returns when you run the [Get-ClusterQuorum](/powershell/module/failoverclusters/get-clusterquorum) Windows PowerShell cmdlet.
+The cluster software automatically configures the quorum for a new cluster, based on the number of nodes configured and the availability of shared storage. This is usually the most appropriate quorum configuration for that cluster. However, it is a good idea to review the quorum configuration after the cluster is created, before placing the cluster into production. To view the detailed cluster quorum configuration, you can use the Validate a Configuration Wizard, or the [Test-Cluster](/powershell/module/failoverclusters/test-cluster) Windows PowerShell cmdlet, to run the **Validate Quorum Configuration** test. In Failover Cluster Manager, the basic quorum configuration is displayed in the summary information for the selected cluster, or you can review the information about quorum resources that returns when you run the [Get-ClusterQuorum](/powershell/module/failoverclusters/get-clusterquorum) Windows PowerShell cmdlet.
 
 At any time, you can run the **Validate Quorum Configuration** test to validate that the quorum configuration is optimal for your cluster. The test output indicates if a change to the quorum configuration is recommended and the settings that are optimal. If a change is recommended, you can use the Configure Cluster Quorum Wizard to apply the recommended settings.
 
@@ -318,4 +320,3 @@ The following table summarizes considerations and recommendations for this confi
 
 * [Failover Clustering](./failover-clustering-overview.md)
 * [Failover Clusters Windows PowerShell cmdlets](/powershell/module/failoverclusters/)
-* [Understanding Cluster and Pool Quorum](../storage/storage-spaces/understand-quorum.md)
