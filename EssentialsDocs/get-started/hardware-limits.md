@@ -13,7 +13,11 @@ manager: mtillman
 
 >Applies To: Windows Server 2022 Essentials, Windows Server 2019 Essentials, Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Use this article to learn about the hardware limits for Windows Server Essentials. The table below summarizes the hardware limits for Windows Server Essentials.
+Use this article to learn about the hardware limits for Windows Server Essentials.
+
+## Limits
+
+The table below summarizes the hardware limits for Windows Server Essentials.
 
 | Limits | Windows Server 2022 Essentials or later | Windows Server 2019 Essentials and earlier |
 |--|--|--|
