@@ -149,8 +149,8 @@ You might need to use a non-Microsoft website or app to find the public IP addre
 ## Configuring role assignments for the VM
 Access to Windows Admin Center is controlled by the **Windows Admin Center Administrator Login** Azure role. There are multiple ways you can configure role assignments for VM:
 
-- Using the Azure AD Portal experience
-- Using the Azure Cloud Shell experience
+- [Using the Azure AD Portal experience](#using-azure-ad-portal-experience)
+- [Using the Azure Cloud Shell experience](#using-the-azure-cloud-shell-experience)
 
 > [!NOTE]
 > The Windows Admin Center Administrator Login role uses dataActions and thus cannot be assigned at management group scope. Currently these roles can only be assigned at the subscription, resource group or resource scope.
@@ -171,8 +171,6 @@ To configure role assignments for your VMs:
     | --- | --- |
     | Role | **Windows Admin Center Administrator Login** |
     | Assign access to | User, group, service principal, or managed identity |
-
- 
 
 ### Using the Azure Cloud Shell experience
 
