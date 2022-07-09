@@ -58,7 +58,7 @@ You'll need an Azure account with an active subscription to deploy Windows Admin
 
 To install the Windows Admin Center extension on your IaaS VM, your account must be granted the **Owner** or **Contributor** role in Azure.
 
-Connecting to Windows Admin center requires you to have **Reader** and **Windows Admin Center Administrator Login** permissions at the virtual machine resource level.
+Connecting to Windows Admin Center requires you to have **Reader** and **Windows Admin Center Administrator Login** permissions at the virtual machine resource level.
 
 Learn more about [configuring role assignment for your VM](#configuring-role-assignments-for-the-vm).
 
