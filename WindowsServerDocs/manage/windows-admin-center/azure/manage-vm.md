@@ -95,10 +95,11 @@ Before you can use Windows Admin Center in the Azure portal, you must install it
 1. Open the Azure portal and navigate to your VM's settings.
 2. If the VM has all outbound internet traffic blocked, create an outbound port rule to connect to the Windows Admin Center service.
 
-    To do so, navigate to Windows Admin Center (found in the Settings group) and select the checkbox titled "Open an outbound port for Windows Admin Center to install" on the Install screen of Windows Admin Center. Alternatively, you can run the following PowerShell command:
+    To do so, navigate to Windows Admin Center (found in the Settings group) and select the checkbox titled "Open an outbound port for Windows Admin Center to install" on the Install screen of Windows Admin Center. Alternatively, you can run the following PowerShell commands:
     
     ```powershell-interactive
     $allowWindowsAdminCenter = New-AzNetworkSecurityRuleConfig  -Name "PortForWACService"  -Access Allow -Protocol Tcp -Direction Outbound -Priority 100 -DestinationAddressPrefix WindowsAdminCenter -SourcePortRange * -SourceAddressPrefix * -DestinationPortRange 443
+    $allowAAD = New-AzNetworkSecurityRuleConfig  -Name "PortForAADService"  -Access Allow -Protocol Tcp -Direction Outbound -Priority 101 -DestinationAddressPrefix AzureActiveDirectory -SourcePortRange * -SourceAddressPrefix * -DestinationPortRange 443
     ```
 
 3. In the virtual machine settings, navigate to **Windows Admin Center** (found in the **Settings** group).
@@ -219,7 +220,7 @@ Here are some tips to try in case something isn't working. For general help trou
     1. In the Azure portal, navigate to “Connection troubleshoot” to test that your connection is working and the port can be reached.
 1. Make sure that outbound traffic to Windows Admin Center is allowed on your virtual machine
     1. In the Azure portal, navigate to “Networking” and “Outbound port rules”.
-    1. Create a new port rule for Windows Admin Center
+    1. Create a new port rule for Windows Admin Center and Azure Active Directory
     1. You can test this by running the following command using PowerShell inside of your virtual machine:
 
        ```powershell
@@ -327,7 +328,7 @@ const deploymentTemplate = {
                         "port": "[parameters('port')]",
                         "salt": "[parameters('salt')]",
                         "cspFrameAncestors": ["https://*.hosting.portal.azure.net", "https://localhost:1340", "https://ms.portal.azure.com", "https://portal.azure.com", "https://preview.portal.azure.com"],
-                        "corsOrigins": ["https://ms.portal.azure.com", "https://portal.azure.com", "https://preview.portal.azure.com", "https://waconazure.com"]
+                        "corsOrigins": ["https://ms.portal.azure.com", "https://portal.azure.com", "https://portal-s1.site.wac.azure.com", "https://portal-s1.site.waconazure.com" ,"https://portal-s2.site.wac.azure.com", "https://portal-s2.site.waconazure.com", "https://portal-s3.site.wac.azure.com", "https://portal-s3.site.waconazure.com", "https://portal-s4.site.wac.azure.com", "https://portal-s4.site.waconazure.com", "https://portal-s5.site.wac.azure.com", "https://portal-s5.site.waconazure.com", "https://preview.portal.azure.com", "https://waconazure.com"]
                     }
                 }
             }
@@ -361,6 +362,9 @@ $Settings = @{"port" = $wacPort; "salt" = $salt}
 
 # Open outbound port rule for WAC service
 Get-AzNetworkSecurityGroup -Name $vmNsg -ResourceGroupName $resourceGroupName | Add-AzNetworkSecurityRuleConfig -Name "PortForWACService" -Access "Allow" -Direction "Outbound" -SourceAddressPrefix "VirtualNetwork" -SourcePortRange "*" -DestinationAddressPrefix "WindowsAdminCenter" -DestinationPortRange "443" -Priority 100 -Protocol Tcp | Set-AzNetworkSecurityGroup
+
+# Open outbound port rule for AAD
+Get-AzNetworkSecurityGroup -Name $vmNsg -ResourceGroupName $resourceGroupName | Add-AzNetworkSecurityRuleConfig -Name "PortForAADService" -Access "Allow" -Direction "Outbound" -SourceAddressPrefix "VirtualNetwork" -SourcePortRange "*" -DestinationAddressPrefix "AzureActiveDirectory" -DestinationPortRange "443" -Priority 101 -Protocol Tcp | Set-AzNetworkSecurityGroup
 
 # Install VM extension
 Set-AzVMExtension -ResourceGroupName $resourceGroupName -Location $vmLocation -VMName $vmName -Name "AdminCenter" -Publisher "Microsoft.AdminCenter" -Type "AdminCenter" -TypeHandlerVersion "0.0" -settings $Settings
