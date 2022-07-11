@@ -69,7 +69,7 @@ Complete the following preliminary steps to ensure that the settings and data on
 
 ###### To use the Windows Server Solutions BPA to analyze your Source Server
 
-1. Download and install the [Windows Server Solutions Best Practices Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=102918) at the Microsoft Download Center.
+1. Download and install the Windows Server Solutions Best Practices Analyzer at the Microsoft Download Center.
 
 2. After the download is complete, click **Start**, point to **All Programs**, and then click **SBS Best Practices Analyzer Tool**.
 

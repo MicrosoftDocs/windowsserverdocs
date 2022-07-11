@@ -38,7 +38,7 @@ This topic provides troubleshooting for issues that occur when installing  Windo
 
 1.  Verify that your server hardware meets the minimum requirements. For information about hardware requirements, see [System Requirements for Windows Server Essentials](../get-started/system-requirements.md).
 
-2.  If you received the  Windows Server Essentials installation DVD from MSDN, verify that the DVD is valid by checking the SHA1 sum. For more information.
+2.  If you received the  Windows Server Essentials installation DVD from MSDN, verify that the DVD is valid by checking the SHA1 sum.
 
 3.  Verify that the network adapter on the server is connected to a router by a network cable.
 
