@@ -7,6 +7,7 @@ ms.topic: how-to
 ms.assetid: 57079470-a1c1-4fdc-af15-1950d3381860
 author: jaimeo
 ms.author: jaimeo
+ROBOTS: NOINDEX,NOFOLLOW
 ---
 # Developing for Nano Server
 
