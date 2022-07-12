@@ -111,7 +111,7 @@ Remember that private key files are the equivalent of a password should be prote
 Use ssh-agent to securely store the private keys within a Windows security context, associated with your Windows account. To start the ssh-agent service each time your computer is rebooted, and use ssh-add to store the private key run the following commands from an elevated PowerShell prompt on your server:
 
 ```powershell
-# By default the ssh-agent service is disabled. Allow it to be manually started for the next step to work.
+# By default the ssh-agent service is disabled. Configure it to start automatically.
 # Make sure you're running as an Administrator.
 Get-Service ssh-agent | Set-Service -StartupType Automatic
 
