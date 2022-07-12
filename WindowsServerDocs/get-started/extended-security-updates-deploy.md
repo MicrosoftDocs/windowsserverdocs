@@ -29,7 +29,7 @@ To use Extended Security Updates on non-Azure VMs, you create a Multiple Activat
 Applicable virtual machines (VMs) hosted in Azure are automatically enabled for Extended Security Updates and these updates are provided free of charge. You don't need to configure anything, and there's no additional charge for using Extended Security Updates with Azure VMs. Extended Security Updates are automatically delivered to Azure VMs if they're configured to receive updates.
 
 > [!NOTE]
-> Azure Classic VMs (Microsoft.ClassicCompute) require additional configuration to receive Extended Security Updates since they don't have access to the [Azure Instance Metadata Service](/azure/virtual-machines/windows/instance-metadata-service) that determines Extended Security Updates eligibility. Please contact [Microsoft Support](https://support.microsoft.com/contactus?PID=17336) for more help with this.
+> Azure Classic VMs (Microsoft.ClassicCompute) require additional configuration to receive Extended Security Updates since they don't have access to the [Azure Instance Metadata Service](/azure/virtual-machines/windows/instance-metadata-service) that determines Extended Security Updates eligibility. This includes other Azure products such as Azure Dedicated Host, Azure VMWare Solution, Azure Nutanix Solution, and Azure Stack (Hub, Edge, and HCI). Please contact [Microsoft Support](https://support.microsoft.com/contactus?PID=17336) for more help with this.
 
 ## Register for Extended Security Updates for non-Azure servers and obtain your Multiple Activation Key
 
