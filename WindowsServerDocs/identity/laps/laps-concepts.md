@@ -11,11 +11,11 @@ ms.topic: article
 
 # Windows LAPS Concepts
 
-## Concepts
+## Overview
 
 This article provides information about the basic design and security concepts that Windows LAPS is based on.
 
-### Architecture diagram
+## Architecture diagram
 
 :::image type="content" source="../laps/laps-concepts-architecture-diagram.PNG" alt-text="Windows LAPS Architecture Diagram":::
 
@@ -31,7 +31,7 @@ The above picture has many moving parts - let's break it down piece by piece.
 
 <ins>Microsoft Endpoint Manager</ins>: this entity is the preferred Microsoft device policy management solution, also running in the cloud.
 
-### Basic Windows LAPS scenario flow
+## Basic Windows LAPS scenario flow
 
 The IT admin must first configure the Windows LAPS policy as desired. The preferred policy configuration option is [Microsoft Endpoint Manager](/mem/endpoint-manager-overview.md) for Azure AD-joined devices, or Group Policy for AD-joined devices.
 
@@ -46,7 +46,7 @@ The password may also be rotated prior to the normally expected expiration time.
 * Modification of the password expiration time in the directory (applies to Active Directory only).
 * Automatic rotation after the managed account is used to authenticate to the managed device.
 
-### Background policy processing cycle
+## Background policy processing cycle
 
 Windows LAPS uses a background task that wakes up every hour to process the currently active policy. Note, this task isn't implemented using Windows Task Scheduler. Whenever the background task runs, it executes the following basic flow:
 
@@ -65,15 +65,15 @@ A better (more scoped) way to kick off the policy processing cycle is by running
 > [!TIP]
 > Legacy LAPS was built as a Group Policy Client Side Extension (CSE). GPO CSEs are loaded and invoked every time there's a GP refresh cycle, therefore the frequency of the legacy LAPS AD polling cycle is the same as the frequency of the GP refresh cycle. Windows LAPS is not built as a CSE, so its AD polling cycle is hardcoded (once per hour) and is unaffected by the GP refresh cycle.
 
-### Azure AD concepts
+## Azure AD concepts
 
 When backing up passwords to Azure AD, managed local account passwords are stored on the Azure AD device object. Windows LAPS authenticates to Azure AD using the Azure AD device identity of the managed device. Data stored in Azure AD is highly secure, but for extra protection the password is further encrypted prior to being persisted. This extra encryption layer is removed before the password is returned to authorized clients.
 
 By default retrieval of the clear-text password is limited to members of the Global Admins, Device Admins, and Intune Admins roles.
 
-### Active Directory concepts
+## Active Directory concepts
 
-#### Active Directory password security
+### Active Directory password security
 
 When backing up passwords to Active Directory, managed local account passwords are stored on the computer object. These passwords are secured using two mechanisms. The first line of security is the Active Directory access control lists (ACLs) that are configured on the computer object's containing Organizational Unit (OU), and then inherited onto the computer object itself. You can specify who can read the various password attributes using the `Set-LapsADReadPasswordPermission` cmdlet. (Similarly, you can specify who can read and set the password expiration time attribute using the `Set-LapsADResetPasswordPermission` cmdlet.)
 
@@ -100,7 +100,7 @@ The inner circle is only applicable when AD password encryption is enabled. It's
 > [!IMPORTANT]
 > Consider customizing the above security layers differently depending on the sensitivity of the machines being managed. For example, it may be acceptable for front line IT worker devices to be accessible by help-desk administrators, but you will likely want to set tighter boundaries for corporate executive laptops.
 
-#### Active Directory password encryption details
+### Active Directory password encryption details
 
 The Windows LAPS password encryption feature is based on [CNG DPAPI](/windows/win32/seccng/cng-dpapi). CNG DPAPI supports multiple encryption modes, but Windows LAPS only supports encrypting passwords against a single Active Directory security principal (user or group). The underlying encryption is based on AES256.
 
@@ -112,7 +112,7 @@ The ADPasswordEncryptionPrincipal policy setting can be used to specify a specif
 > [!TIP]
 > The AD security principal authorized to decrypt the password cannot be changed once a password is encrypted.
 
-#### Active Directory encrypted password history
+### Active Directory encrypted password history
 
 Windows LAPS supports a password history feature for Active Directory domain-joined clients and domain controllers. Password history is only supported when password encryption has been enabled. Password history isn't supported when storing clear-text passwords in Active Directory.
 
@@ -124,7 +124,7 @@ When encrypted password history is enabled and it's time to rotate the password,
 > [!IMPORTANT]
 > Microsoft recommends that managed devices are never granted permission to decrypt encrypted passwords (whether their own or any other device's encrypted passwords).
 
-#### Active Directory DSRM password support
+### Active Directory DSRM password support
 
 Windows LAPS supports backing up the Directory Services Repair Mode (DSRM) account password on AD domain controllers. DSRM account passwords can only be backed up to Active Directory (backing up passwords to Azure AD isn't supported), and also requires that AD password encryption is enabled. Otherwise this feature works almost identically to how encrypted password support works for AD domain-joined clients.
 
@@ -133,23 +133,23 @@ Windows LAPS supports backing up the Directory Services Repair Mode (DSRM) accou
 >
 > However, consider a catastrophic situation where all of the domain controllers in a given domain are down. None of the DSRM passwords will be available. For this reason, Microsoft recommends using Windows LAPS DSRM support as only the first component of a larger AD recovery strategy. It is strongly recommended that the DSRM passwords be regularly extracted from the directory, and then backed up to a secure store outside of Active Directory. Such an external store backup strategy is currently outside of the scope of Windows LAPS.
 
-### Password reset after authentication
+## Password reset after authentication
 
 Windows LAPS supports automatically rotating the password after detecting that the local administrator account was used for authentication. This feature is intended to bound the amount of time that the clear-text password is usable. A grace period can be configured to give the person time to complete the intended actions.
 
-### Account password tampering protection
+## Account password tampering protection
 
 Once Windows LAPS has been configured to manage a local administrator account's password, that account will be protected against accidental and/or careless tampering. This protection also extends to the DSRM account when it's being managed by Windows LAPS on an AD domain controller.
 
-### Disabled during safe-mode
+## Disabled during safe-mode
 
 Windows LAPS is disabled (no passwords will be backed up) whenever Windows is booted into safe mode, DSRM mode, or any other non-default boot mode.
 
-### Next steps
+## Next steps
 
 Now that you're aware of the basic concepts that Windows LAPS is designed around, get started by checking out the [scenario guides](..\laps\laps-scenarios.md).
 
-## Related articles
+# Related articles
 
 [Windows LAPS Scenario guides](../laps/laps-scenarios.md)
 
