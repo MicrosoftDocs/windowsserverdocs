@@ -296,10 +296,10 @@ In the on-start schedule type, the **/sc onstart** parameter is required. The **
 
 ### Example
 
-- To schedule the MyApp program to run every time the system starts, beginning on March 15, 2001, type:
+- To schedule the MyApp program to run every time the system starts, type:
 
     ```
-    schtasks /create /tn MyApp /tr c:\apps\myapp.exe /sc onstart /sd 03/15/2001
+    schtasks /create /tn MyApp /tr c:\apps\myapp.exe /sc onstart
     ```
 
     In this example, the local computer uses the **English (United States)** option in **Regional and Language Options**, the format for the start date is MM/DD/YYYY.
