@@ -17,10 +17,10 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.3316        |1.2.1672                  |
-|Insider    |1.2.3316        |1.2.1672                  |
+|Public     |1.2.3317        |1.2.1672                  |
+|Insider    |1.2.3317        |1.2.1672                  |
 
-## Updates for version
+## Updates for version 1.2.3317
 
 *Date published: 7/12/2022*
 
