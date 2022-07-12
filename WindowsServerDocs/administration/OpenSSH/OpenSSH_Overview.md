@@ -22,13 +22,13 @@ OpenSSH for Windows has the below commands built in.
 - ssh-keygen generates, manages and converts authentication keys for SSH
 - ssh-agent stores private keys used for public key authentication
 - ssh-add adds private keys to the list allowed by the server
-- ssh-keyscan aids in collecting the public SSH host keys from a number of hosts
+- ssh-keyscan aids in collecting the public SSH host keys from hosts
 - sftp is the service that provides the Secure File Transfer Protocol, and runs over SSH
 - scp is a file copy utility that runs on SSH
 
 > [!TIP]
-> Documentation in this section focuses on how OpenSSH is used on Windows, including installation,
-> and Windows-specific configuration, commands, and use cases. Additional detailed documentation for
+> The documentation focuses on how OpenSSH is used on Windows, including installation, and
+> Windows-specific configuration, commands, and use cases. Additional detailed documentation for
 > common OpenSSH features is available online at
 > [OpenSSH.com](https://www.openssh.com/manual.html).
 

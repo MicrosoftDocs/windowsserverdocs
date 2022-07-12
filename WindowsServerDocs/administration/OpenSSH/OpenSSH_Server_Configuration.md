@@ -15,6 +15,27 @@ This article covers the Windows-specific configuration for OpenSSH Server (sshd)
 
 OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html), which isn't duplicated in this documentation set.
 
+## OpenSSH configuration files
+
+OpenSSH has configuration files for both server and client settings. OpenSSH is open-source and is
+added to Windows Server and Windows Client operating systems, starting with Windows Server 2019 and
+Windows 10 (build 1809). As a result, open-source documentation for OpenSSH configuration files
+isn't repeated here. Client configuration files and can be found on the
+[ssh_config manual page](https://man.openbsd.org/ssh_config) and for OpenSSH Server configuration
+files can be found on the [sshd_config manual page](https://man.openbsd.org/sshd_config).
+
+Open SSH Server (sshd) reads configuration data from _%programdata%\ssh\sshd\_config_ by default, or
+a different configuration file may be specified by launching `sshd.exe` with the `-f` parameter. If
+the file is absent, sshd generates one with the default configuration when the service is started.
+
+In Windows, the OpenSSH Client (ssh) reads configuration data from a configuration file in the
+following order:
+
+1. By launching ssh.exe with the -F parameter, specifying a path to a configuration file and an
+   entry name from that file.
+2. A user's configuration file at _%userprofile%\\.ssh\config_.
+3. The system-wide configuration file at _%programdata%\ssh\ssh\_config_.
+
 ## Configuring the default shell for OpenSSH in Windows
 
 The default command shell provides the experience a user sees when connecting to the server using SSH.
@@ -40,7 +61,7 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Wi
 
 ## Windows Configurations in sshd_config
 
-In Windows, sshd reads configuration data from _%programdata%\ssh\sshd\_config_ by default, or a different configuration file may be specified by launching _sshd.exe_ with the -f parameter.
+In Windows, sshd reads configuration data from _%programdata%\ssh\sshd\_config_ by default, or a different configuration file may be specified by launching `sshd.exe` with the `-f` parameter.
 If the file is absent, sshd generates one with the default configuration when the service is started.
 
 The elements listed below provide Windows-specific configuration possible through entries in sshd_config.
@@ -112,8 +133,9 @@ The `GSSAPIAuthentication` configuration argument specifies whether GSSAPI based
 default for `GSSAPIAuthentication` is no.
 
 GSSAPI authentication also requires the use of the `-K` switch specifying the hostname when using
-the OpenSSH client. Alternatively, you can create corresponding entry in the SSH client
-configuration. In Windows, ssh reads configuration data from _%userprofile%\.ssh\config_ by default.
+the OpenSSH client. Alternatively, you can create a corresponding entry in the SSH client
+configuration. In Windows, the OpenSSH client reads configuration data from
+_%userprofile%\.ssh\config_ by default.
 
 You can see an example GSSAPI OpenSSH client configuration below.
 
@@ -132,8 +154,14 @@ Host SERVER01.contoso.com
 
 ### HostKey
 
-The defaults are %programdata%/ssh/ssh_host_ecdsa_key, %programdata%/ssh/ssh_host_ed25519_key,
-%programdata%/ssh/ssh_host_dsa_key, and %programdata%/ssh/ssh_host_rsa_key.
+The defaults are:
+
+```sshd_config
+#HostKey __PROGRAMDATA__/ssh/ssh_host_rsa_key
+#HostKey __PROGRAMDATA__/ssh/ssh_host_dsa_key
+#HostKey __PROGRAMDATA__/ssh/ssh_host_ecdsa_key
+#HostKey __PROGRAMDATA__/ssh/ssh_host_ed25519_key
+```
 
 If the defaults aren't present, sshd automatically generates them on a service start.
 
