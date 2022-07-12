@@ -82,6 +82,9 @@ The second line of password security uses the AD password encryption feature. AD
 > [!IMPORTANT]
 > Microsoft highly recommends that you enable password encryption when storing your Windows LAPS passwords in Active Directory.
 
+> [!IMPORTANT]
+> Microsoft does not support retrieval of previously decrypted LAPS passwords in a domain which has been configured below Windows Server 2016 Domain Functional Level (DFL).
+
 Consider the following diagram when designing your password retrieval security model:
 
 :::image type="content" source="../laps/laps-concepts-password-security_layers.png" alt-text="Windows LAPS AD Password Security Layers":::
