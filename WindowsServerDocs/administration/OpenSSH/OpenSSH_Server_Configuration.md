@@ -13,7 +13,7 @@ author: maertendmsft
 
 This article covers the Windows-specific configuration for OpenSSH Server (sshd).
 
-OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html), which is not duplicated in this documentation set.
+OpenSSH maintains detailed documentation for configuration options online at [OpenSSH.com](https://www.openssh.com/manual.html), which isn't duplicated in this documentation set.
 
 ## Configuring the default shell for OpenSSH in Windows
 
@@ -27,12 +27,12 @@ The following command shows the current path setting, and adds the default OpenS
 
 Command shell | Command to use
 ------------- | --------------
-Command | path
-PowerShell | $env:path
+Command | `path`
+PowerShell | `$env:path`
 
 Configuring the default ssh shell is done in the Windows registry by adding the full path to the shell executable to `HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH` in the string value `DefaultShell`.
 
-As an example, the following PowerShell command sets the default shell to be powershell.exe:
+As an example, the following elevated PowerShell command sets the default shell to be powershell.exe:
 
 ```powershell
 New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force
@@ -40,21 +40,25 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Wi
 
 ## Windows Configurations in sshd_config
 
-In Windows, sshd reads configuration data from _%programdata%\ssh\sshd_config_ by default, or a different configuration file may be specified by launching _sshd.exe_ with the -f parameter.
+In Windows, sshd reads configuration data from _%programdata%\ssh\sshd\_config_ by default, or a different configuration file may be specified by launching _sshd.exe_ with the -f parameter.
 If the file is absent, sshd generates one with the default configuration when the service is started.
 
 The elements listed below provide Windows-specific configuration possible through entries in sshd_config.
-There are other configuration settings possible in that are not listed here, as they are covered in detail in the online [Win32 OpenSSH documentation](https://github.com/powershell/win32-openssh/wiki).
+There are other configuration settings possible that aren't listed here, as they're covered in detail in the online [Win32 OpenSSH documentation](https://github.com/powershell/win32-openssh/wiki).
+
+> [!TIP]
+> The OpenSSH Server (sshd) reads the configuration file when the service starts. Any changes to the
+> configuration file requires the service to be restarted.
 
 ### AllowGroups, AllowUsers, DenyGroups, DenyUsers
 
 Controlling which users and groups can connect to the server is done using the AllowGroups, AllowUsers, DenyGroups, and DenyUsers directives.
 The allow/deny directives are processed in the following order: DenyUsers, AllowUsers, DenyGroups, and finally AllowGroups.
 All account names must be specified in lower case.
-See PATTERNS in ssh_config for more information on patterns for wildcards.
+For more information about PATTERNS and wildcard in the ssh_config, see the [sshd_config OpenBSD manual page](https://man.openbsd.org/ssh_config#PATTERNS).
 
 When configuring user/group based rules with a domain user or group, use the following format: `user?domain*`.
-Windows allows multiple of formats for specifying domain principals, but many conflict with standard Linux patterns.
+Windows allows multiple formats for specifying domain principals, but many conflict with standard Linux patterns.
 For that reason, * is added to cover FQDNs.
 Also, this approach uses "?", instead of @, to avoid conflicts with the username@host format.
 
@@ -62,58 +66,101 @@ Work group users/groups and internet-connected accounts are always resolved to t
 Domain users and groups are strictly resolved to [NameSamCompatible](/windows/desktop/api/secext/ne-secext-extended_name_format) format - domain_short_name\user_name.
 All user/group based configuration rules need to adhere to this format.
 
-Examples for domain users and groups
+The following example denies contoso\admin from the host 192.168.2.23, and blocks all users from contoso domain. It also allows users who are a member of the contoso\sshusers and contoso\serveroperators groups.
 
-```
-DenyUsers contoso\admin@192.168.2.23 : blocks contoso\admin from 192.168.2.23
-DenyUsers contoso\* : blocks all users from contoso domain
-AllowGroups contoso\sshusers : only allow users from contoso\sshusers group
+```sshd_config
+DenyUsers contoso\admin@192.168.2.23
+DenyUsers contoso\*
+AllowGroups contoso\sshusers contoso\serveroperators
 ```
 
-Examples for local users and groups
+The example below allow the user localusers to sign-in from the host 192.168.2.23 and allows members of the group sshusers.
 
-```
+```sshd_config
 AllowUsers localuser@192.168.2.23
 AllowGroups sshusers
 ```
 
 ### AuthenticationMethods
 
-For Windows OpenSSH, the only available authentication methods are "password" and "publickey".
+For Windows OpenSSH, the only available authentication methods are `password` and `publickey`.
+
+> [!IMPORTANT]
+> Authentication using an Azure AD account is not currently supported.
 
 ### AuthorizedKeysFile
 
-The default is `.ssh/authorized_keys`. If the path is not absolute, it is taken relative to user's home directory (or profile image path), e.g. _C:\Users\username_. Note that if the user belongs to the administrator group, _%programdata%/ssh/administrators_authorized_keys_ is used instead.
+The default is `.ssh/authorized_keys`. If the path isn't absolute, it's taken relative to user's
+home directory (or profile image path), for example, _C:\Users\username_. If the user belongs to
+the administrator group, _%programdata%/ssh/administrators\_authorized\_keys_ is used instead.
 
-> [!TIP]
-> The _administrators_authorized_keys_ file requires the BUILTIN\Administrators security group and NT Authority\SYSTEM account to explicitly granted full control. You can do this by opening an elevated PowerShell prompt, and running the command `icacls.exe "C:\ProgramData\ssh\administrators_authorized_keys" /inheritance:r /grant "Administrators:F" /grant "SYSTEM:F"`.
+> [!TIP] 
+> The _administrators_authorized_keys_ file requires the BUILTIN\Administrators security
+> group and NT Authority\SYSTEM account to explicitly granted full control. You can grant permissions by
+> opening an elevated PowerShell prompt, and running the command
+> `icacls.exe "C:\ProgramData\ssh\administrators_authorized_keys" /inheritance:r /grant "Administrators:F" /grant "SYSTEM:F"`.
 
 ### ChrootDirectory (Support added in v7.7.0.0)
 
-This directive is only supported with sftp sessions. A remote session into cmd.exe wouldn't honor this. To set up a sftp-only chroot server, set ForceCommand to internal-sftp. You may also set up scp with chroot, by implementing a custom shell that would only allow scp and sftp.
+This directive is only supported with sftp sessions. A remote session into cmd.exe wouldn't honor
+the `ChrootDirectory`. To set up a sftp-only chroot server, set ForceCommand to internal-sftp. You may also set up
+scp with chroot, by implementing a custom shell that would only allow scp and sftp.
+
+### GSSAPIAuthentication
+
+The `GSSAPIAuthentication` configuration argument specifies whether GSSAPI based user authentication is allowed. The
+default for `GSSAPIAuthentication` is no.
+
+GSSAPI authentication also requires the use of the `-K` switch specifying the hostname when using
+the OpenSSH client. Alternatively, you can create corresponding entry in the SSH client
+configuration. In Windows, ssh reads configuration data from _%userprofile%\.ssh\config_ by default.
+
+You can see an example GSSAPI OpenSSH client configuration below.
+
+```config
+# Specify a set of configuration arguments for a host matching the pattern SERVER01.contoso.com
+# Patterns are case sensitive
+Host SERVER01.contoso.com
+    # Enables GSSAPI authentication
+    GSSAPIAuthentication yes
+    # Forward (delegate) credentials to the server.
+    GSSAPIDelegateCredentials yes
+```
+
+> [!IMPORTANT]
+> GSSAPI is only available starting in Windows Server 2022, Windows 11, and Windows 10 xxxx.
 
 ### HostKey
 
-The defaults are %programdata%/ssh/ssh_host_ecdsa_key, %programdata%/ssh/ssh_host_ed25519_key, %programdata%/ssh/ssh_host_dsa_key, and %programdata%/ssh/ssh_host_rsa_key. 
+The defaults are %programdata%/ssh/ssh_host_ecdsa_key, %programdata%/ssh/ssh_host_ed25519_key,
+%programdata%/ssh/ssh_host_dsa_key, and %programdata%/ssh/ssh_host_rsa_key.
 
-If the defaults are not present, sshd automatically generates these on a service start.
+If the defaults aren't present, sshd automatically generates them on a service start.
 
 ### Match
 
-Note that pattern rules in this section. User and group names should be in lower case.
+Matches conditions using one or more criteria. Upon a match, the subsequent configuration arguments are applied. Matches uses the pattern rules covered in the [AllowGroups, AllowUsers, DenyGroups, DenyUsers](#allowgroups-allowusers-denygroups-denyusers) section. User and group names should be in lower case.
 
 ### PermitRootLogin
 
-Not applicable in Windows. To prevent administrator login, use Administrators with DenyGroups directive.
+Not applicable in Windows. To prevent administrators signing in, use Administrators with DenyGroups
+directive.
 
 ### SyslogFacility
 
-If you need file based logging, use LOCAL0. Logs are generated under _%programdata%\ssh\logs_.
-For any other value, including the default value, AUTH directs logging to ETW. For more info, see [Logging Facilities in Windows](https://github.com/PowerShell/Win32-OpenSSH/wiki/Logging-Facilities).
+If you need file based logging, use LOCAL0. Logs are generated under _%programdata%\ssh\logs_. For
+any other value, including the default value, AUTH directs logging to ETW. For more info, see
+[Logging Facilities in Windows](https://github.com/PowerShell/Win32-OpenSSH/wiki/Logging-Facilities).
 
-### Not supported
+### Configuration arguments
 
-The following configuration options are not available in the OpenSSH version that ships in Windows Server 2019 and Windows 10 build 1809:
+The following configuration argument is available starting in Windows Server 2022, Windows 11, and
+Windows 10 xxxx:
+
+* GSSAPIAuthentication
+
+The following configuration arguments aren't available in the OpenSSH version that ships in Windows
+Server and the Windows client:
 
 * AcceptEnv
 * AllowStreamLocalForwarding
@@ -123,7 +170,6 @@ The following configuration options are not available in the OpenSSH version tha
 * AuthorizedPrincipalsCommandUser
 * Compression
 * ExposeAuthInfo
-* GSSAPIAuthentication
 * GSSAPICleanupCredentials
 * GSSAPIStrictAcceptorCheck
 * HostbasedAcceptedKeyTypes

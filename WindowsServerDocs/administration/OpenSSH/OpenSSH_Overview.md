@@ -17,8 +17,8 @@ SSH is based on a client-server architecture where the system the user is workin
 
 OpenSSH for Windows has the below commands built in.
 
-- sshd which is the SSH server component that must be running on the system being managed remotely
-- ssh which is the SSH client component that runs on the user's local system
+- sshd is the SSH server component that must be running on the system being managed remotely
+- ssh is the SSH client component that runs on the user's local system
 - ssh-keygen generates, manages and converts authentication keys for SSH
 - ssh-agent stores private keys used for public key authentication
 - ssh-add adds private keys to the list allowed by the server
@@ -32,7 +32,7 @@ OpenSSH for Windows has the below commands built in.
 > common OpenSSH features is available online at
 > [OpenSSH.com](https://www.openssh.com/manual.html).
 
-Feedback on Windows OpenSSH is welcomed and can be provided by creating GitHub issues in our [OpenSSH GitHub repo](https://github.com/PowerShell/openssh-portable). The master [OpenSSH open source project](https://www.openssh.com) is managed by developers at the OpenBSD Project. The Microsoft fork of this project is in [GitHub](https://github.com/PowerShell/openssh-portable).
+Feedback on Windows OpenSSH is welcomed and can be provided by creating GitHub issues in our [OpenSSH GitHub repo](https://github.com/PowerShell/openssh-portable). The [OpenSSH open source project](https://www.openssh.com) is managed by developers at the OpenBSD Project. The Microsoft fork of this project is in [GitHub](https://github.com/PowerShell/openssh-portable).
 
 ## Next steps
 

@@ -12,7 +12,7 @@ ms.custom: contperf-fy21q4
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows 10 (build 1809 and later)
 
-OpenSSH is a connectivity tool for remote login that uses the SSH protocol. It encrypts all traffic between client and server to eliminate eavesdropping, connection hijacking, and other attacks.
+OpenSSH is a connectivity tool for remote sign-in that uses the SSH protocol. It encrypts all traffic between client and server to eliminate eavesdropping, connection hijacking, and other attacks.
 
 An OpenSSH-compatible client can be used to connect to Windows Server and Windows client devices.
 
@@ -33,7 +33,7 @@ To validate your environment, you can:
 
 - From the Start Menu search bar, type _winver.exe_ and press enter to see the version details for your Windows device.
 - Open a PowerShell prompt, then run `$PSVersionTable.PSVersion`. Verify your major version is at least 5, and your minor version at least 1. Learn more about [installing PowerShell on Windows](/powershell/scripting/install/installing-powershell-on-windows).
-- From an elevated PowerShell session, run the following command. The output will show `True` when you are a member of the local administrator group.
+- From an elevated PowerShell session, run the following command. The output will show `True` when you're a member of the local administrator group.
 
   ```powershell
   (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)`
@@ -49,8 +49,8 @@ To install the OpenSSH components:
 
 2. Scan the list to see if the OpenSSH is already installed. If not, at the top of the page, select **Add a feature**, then:
 
-    - Find **OpenSSH Client**, then click **Install**
-    - Find **OpenSSH Server**, then click **Install**
+    - Find **OpenSSH Client**, then select **Install**
+    - Find **OpenSSH Server**, then select **Install**
 
 Once setup completes, return to **Apps** and **Optional Features** and you should see OpenSSH listed.
 
@@ -66,7 +66,7 @@ To make sure that OpenSSH is available, run the following cmdlet:
 Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 ```
 
-This should return the following output if neither are already installed:
+The command should return the following output if neither are already installed:
 
 ```Output
 Name  : OpenSSH.Client~~~~0.0.1.0
@@ -86,7 +86,7 @@ Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 
-Both of these should return the following output:
+Both commands should return the following output:
 
 ```Output
 Path          :
@@ -116,7 +116,7 @@ if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyCon
 
 ## Connect to OpenSSH Server
 
-Once installed, you can connect to OpenSSH Server from a Windows or Windows Server device with the OpenSSH client installed. From a PowerShell prompt run the following command.
+Once installed, you can connect to OpenSSH Server from a Windows or Windows Server device with the OpenSSH client installed. From a PowerShell prompt, run the following command.
 
 ```powershell
 ssh domain\username@servername
@@ -125,7 +125,7 @@ ssh domain\username@servername
 > [!IMPORTANT]
 > Add links to key based login.
 
-Once connected, you get a message similar to the following:
+Once connected, you get a message similar to the following output.
 
 ```Output
 The authenticity of host 'servername (10.00.00.001)' can't be established.
@@ -135,9 +135,9 @@ Are you sure you want to continue connecting (yes/no)?
 
 Selecting **yes** adds that server to the list of known SSH hosts on your Windows client.
 
-You are prompted for the password at this point. As a security precaution, your password will not be displayed as you type.
+You're prompted for the password at this point. As a security precaution, your password won't be displayed as you type.
 
-Once connected, you will see the Windows command shell prompt:
+Once connected, you'll see the Windows command shell prompt:
 
 ```Output
 domain\username@SERVERNAME C:\Users\username>
@@ -145,7 +145,7 @@ domain\username@SERVERNAME C:\Users\username>
 
 ## OpenSSH configuration files
 
-OpenSSH has configuration files for both server and client settings. OpenSSH is open-source and is added to Windows Server and Windows Client operating systems, starting with Windows Server 2019 and Windows 10 (build 1809). As a result, documentation for OpenSSH configuration files is not repeated here. Client configuration files and can be found on the [ssh_config manual page](https://man.openbsd.org/ssh_config) and for OpenSSH Server configuration files can be found on the [sshd_config manual page](https://man.openbsd.org/sshd_config). Further Windows-specific OpenSSH Server configuration is detailed in [OpenSSH Server configuration for Windows](OpenSSH_Server_Configuration.md#windows-configurations-in-sshd_config).
+OpenSSH has configuration files for both server and client settings. OpenSSH is open-source and is added to Windows Server and Windows Client operating systems, starting with Windows Server 2019 and Windows 10 (build 1809). As a result, documentation for OpenSSH configuration files isn't repeated here. Client configuration files and can be found on the [ssh_config manual page](https://man.openbsd.org/ssh_config) and for OpenSSH Server configuration files can be found on the [sshd_config manual page](https://man.openbsd.org/sshd_config). Further Windows-specific OpenSSH Server configuration is detailed in [OpenSSH Server configuration for Windows](OpenSSH_Server_Configuration.md#windows-configurations-in-sshd_config).
 
 In Windows, the OpenSSH Client (ssh) reads configuration data from a configuration file in the following order:
 
@@ -182,6 +182,6 @@ You may need to restart Windows afterwards if the service was in use at the time
 
 Now that you've installed OpenSSH Server for Windows, here are some articles that might help you as you use it:
 
-- Learn more about using key paris for authentication in [OpenSSH key management](OpenSSH_KeyManagement.md)
+- Learn more about using key pairs for authentication in [OpenSSH key management](OpenSSH_KeyManagement.md)
 - Learn more about the [OpenSSH Server configuration for Windows Server and Windows](OpenSSH_Server_Configuration.md)
 - Win32/OpenSSH
