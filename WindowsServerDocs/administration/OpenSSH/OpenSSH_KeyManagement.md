@@ -1,13 +1,13 @@
 ---
-title: OpenSSH key management for Windows
-description: OpenSSH Server key management for Windows using the Windows tools or PowerShell.
-ms.date: 06/03/2021
+title: OpenSSH key-based authentication for Windows
+description: Learn about OpenSSH Server key-based authentication, generation and deployment for Windows using built-in Windows tools or PowerShell.
+ms.date: 07/12/2022
 ms.topic: conceptual
 ms.author: damaerte
 author: maertendmsft
 ---
 
-# OpenSSH key management
+# OpenSSH key-based authentication
 
 >Applies to Windows Server 2022, Windows Server 2019, Windows 10 (build 1809 and later)
 

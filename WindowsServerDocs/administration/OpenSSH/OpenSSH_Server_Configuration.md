@@ -1,7 +1,7 @@
 ---
 title: OpenSSH Server configuration for Windows
-description: Configuration information about OpenSSH Server for Windows Server and Windows.
-ms.date: 09/27/2018
+description: Learn about the Windows-specific configuration options for OpenSSH Server on Windows Server and Windows.
+ms.date: 07/12/2022
 ms.topic: conceptual
 ms.author: damaerte
 author: maertendmsft
@@ -187,6 +187,7 @@ Server and the Windows client:
 * PermitUserRC
 * PidFile
 * PrintLastLog
+* PrintMotd
 * RDomain
 * StreamLocalBindMask
 * StreamLocalBindUnlink
