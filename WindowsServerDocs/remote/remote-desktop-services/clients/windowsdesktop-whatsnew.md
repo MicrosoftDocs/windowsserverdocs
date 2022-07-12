@@ -26,7 +26,7 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
-- Fixed the vulnerability known as CVE-2022-30221
+- Fixed the vulnerability known as [CVE-2022-30221](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-30221).
 
 ## Updates for version 1.2.3316
 
