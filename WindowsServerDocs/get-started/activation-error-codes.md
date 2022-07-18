@@ -32,7 +32,10 @@ For more information about volume activation for older versions of Windows, seeÂ
 > This tool is intended to help fix Windows activation problems on computers that run Enterprise, Professional, or Server edition of Windows.
 
 
-Microsoft Support and Recovery Assistant (SaRA) simplifies Windows KMS Activation troubleshooting. Download the diagnostic tool from [here](https://aka.ms/SaRA-WindowsActivation).
+Microsoft Support and Recovery Assistant (SaRA) simplifies Windows KMS Activation troubleshooting. 
+
+> [!div class="nextstepaction"]
+> [Download the Assistant](https://aka.ms/SaRA-WindowsActivation).
 
 This tool will try to activate Windows. If it returns an activation error code, the tool will display targeted solutions for known error codes.
 
