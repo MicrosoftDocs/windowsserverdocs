@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/12/2022
+ms.date: 07/19/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -18,7 +18,17 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.3317        |1.2.1672                  |
-|Insider    |1.2.3317        |1.2.1672                  |
+|Insider    |1.2.3401        |1.2.1672                  |
+
+## Updates for version 1.2.3401 (Insider)
+
+Date published: 7/19/2022
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Fixed an issue where the narrator was announcing the Tenant Expander button as "on" or "off" instead of "expanded" or “collapsed."
+- Fixed an issue where the text size didn't change when the user adjusted the text size system setting.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 
 ## Updates for version 1.2.3317
 
