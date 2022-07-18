@@ -15,6 +15,18 @@ We regularly update the [Remote Desktop client for iOS](remote-desktop-ios.md), 
 
 We're committed to making the Remote Desktop client for iOS the best it can be, so we value your feedback. You can report any issues at **Settings** > **Submit Feedback**.
 
+## Updates for version 10.4.2 (5170)
+
+Date Published: July 11, 2022
+
+It's time for a quick update. In this release, we resolved some bugs that impacted Azure Virtual Desktop deployment connectivity. We also fixed an issue that caused external keyboard input to stop working when you press **Command+Tab** to switch out of and return to the app.
+
+## Updates for version 10.4.1
+
+Date Published: June 27, 2022
+
+In this release, we added thumbnail snapshots for published PC resources to the Workspaces tab of the Connection Center. We also created an in-app highlights user interface (UI) to advertise new features. The UI automatically appears when you first turn your machine on after an update. You can also access it by going to **Settings** > **About** > **Version Highlights**. Finally, we fixed an issue where the mouse cursor would temporarily get stuck at the bottom of the screen.
+
 ## Updates for version 10.4.0 (5155)
 
 Date published: May 17, 2022
