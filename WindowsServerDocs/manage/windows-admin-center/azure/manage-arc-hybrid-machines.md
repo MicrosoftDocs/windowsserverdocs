@@ -216,6 +216,14 @@ Here are some tips to try in case something isn't working. For general  Windows 
 
 ### Failed to connect error
 
+1. Restart the HIMDS service
+    1. RDP into your server.
+    1. Open PowerShell as an administrator and run:
+
+        ```powershell
+        Restart-Service -Name himds
+        ```
+
 1. Check that your Extension version is 0.0.0.169 or higher
     1. Navigate to the Azure Portal
     1. Navigate to "Extensions"
