@@ -186,6 +186,14 @@ Here are some tips to try in case something isn't working. For general Windows A
 
 ### Failed to connect error
 
+1. Restart the HIMDS service.
+    1. RDP into each node of your cluster.
+    1. Open PowerShell as an administrator and run:
+
+        ```powershell
+        Restart-Service -Name himds
+        ```
+        
 1. Make sure that the Windows Admin Center service is running on your cluster.
     1. RDP into each node of your cluster.
     1. Open **Task Manager (Ctrl+Shift+Esc)** and navigate to **Services**.
