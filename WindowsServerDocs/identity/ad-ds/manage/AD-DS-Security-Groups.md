@@ -1,7 +1,6 @@
 ---
 title: Active Directory Security Groups (Windows Server)
 description: Active Directory Security Groups
-ms.prod: Windows-Server
 author: dansimp
 ms.author: dansimp
 ms.topic: article
