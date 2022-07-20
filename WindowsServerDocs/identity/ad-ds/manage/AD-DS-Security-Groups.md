@@ -1,7 +1,7 @@
 ---
 title: Active Directory Security Groups (Windows Server)
 description: Active Directory Security Groups
-ms.prod: Windows Server
+ms.prod: Windows-Server
 author: dansimp
 ms.author: dansimp
 ms.topic: article
@@ -105,7 +105,7 @@ The following tables provide descriptions of the default groups that are located
 |--- |--- |--- |--- |--- |
 |[Access Control Assistance Operators](#access-control-assistance-operators)|Yes|Yes|Yes||
 |[Account Operators](#account-operators)|Yes|Yes|Yes|Yes|
-|[Administrators](#administrator)|Yes|Yes|Yes|Yes|
+|[Administrators](#administrators)|Yes|Yes|Yes|Yes|
 |[Allowed RODC Password Replication Group](#allowed-rodc-password-replication-group)|Yes|Yes|Yes|Yes|
 |[Backup Operators](#backup-operators)|Yes|Yes|Yes|Yes|
 |[Certificate Service DCOM Access](#certificate-service-dcom-access)|Yes|Yes|Yes|Yes|
@@ -115,8 +115,8 @@ The following tables provide descriptions of the default groups that are located
 |[Denied RODC Password Replication Group](#denied-rodc-password-replication-group)|Yes|Yes|Yes|Yes|
 |[Device Owners](#device-owners)|Yes|Yes|Yes|Yes|
 |[Distributed COM Users](#distributed-com-users)|Yes|Yes|Yes|Yes|
-|[DnsUpdateProxy](#dns-update-proxy)|Yes|Yes|Yes|Yes|
-|[DnsAdmins](#dns-admins)|Yes|Yes|Yes|Yes|
+|[DnsUpdateProxy](#dnsupdateproxy)|Yes|Yes|Yes|Yes|
+|[DnsAdmins](#dnsadmins)|Yes|Yes|Yes|Yes|
 |[Domain Admins](#domain-admins)|Yes|Yes|Yes|Yes|
 |[Domain Computers](#domain-computers)|Yes|Yes|Yes|Yes|
 |[Domain Controllers](#domain-controllers)|Yes|Yes|Yes|Yes|
