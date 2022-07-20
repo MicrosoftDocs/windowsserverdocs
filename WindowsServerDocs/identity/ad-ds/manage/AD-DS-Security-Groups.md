@@ -134,7 +134,7 @@ The following tables provide descriptions of the default groups that are located
 |[Network Configuration Operators](#network-configuration-operators)|Yes|Yes|Yes|Yes|
 |[Performance Log Users](#performance-log-users)|Yes|Yes|Yes|Yes|
 |[Performance Monitor Users](#performance-monitor-users)|Yes|Yes|Yes|Yes|
-|[Pre–Windows 2000 Compatible Access](#pre–windows-2000-compatible-access)|Yes|Yes|Yes|Yes|
+|[Pre–Windows 2000 Compatible Access](#prewindows-2000-compatible-access)|Yes|Yes|Yes|Yes|
 |[Print Operators](#print-operators)|Yes|Yes|Yes|Yes|
 |[Protected Users](#protected-users)|Yes|Yes|||
 |[RAS and IAS Servers](#ras-and-ias-servers)|Yes|Yes|Yes|Yes|
@@ -538,11 +538,11 @@ The Enterprise Admins group applies to versions of the Windows Server operating 
 |Type|Universal (if Domain is in Native-Mode) else Global|
 |Default container|CN=Users, DC=&lt;domain&gt;, DC=|
 |Default members|Administrator|
-|Default member of|[Administrators](#administrator)<p>[Denied RODC Password Replication Group](#denied-rodc-password-replication-group)|
+|Default member of|[Administrators](#administrators)<p>[Denied RODC Password Replication Group](#denied-rodc-password-replication-group)|
 |Protected by ADMINSDHOLDER?|Yes|
 |Safe to move out of default container?|Yes|
 |Safe to delegate management of this group to non-Service admins?|No|
-|Default User Rights|See [Administrators](#administrator)<p>See [Denied RODC Password Replication Group](#denied-rodc-password-replication-group)|
+|Default User Rights|See [Administrators](#administrators)<p>See [Denied RODC Password Replication Group](#denied-rodc-password-replication-group)|
 
 ### Enterprise Key Admins
 
@@ -1264,8 +1264,8 @@ In Windows Server 2012, the Access Denied Assistance functionality adds the Auth
 
 ## See also
 
-- [Security Principals](security-principals.md)
+- [Security Principals](/windows/security/identity-protection/access-control/security-principals)
 
-- [Special Identities](special-identities.md)
+- [Special Identities](ad-ds-special-identities.md)
 
-- [Access Control Overview](access-control.md)
+- [Access Control Overview](/windows/security/identity-protection/access-control/access-control)

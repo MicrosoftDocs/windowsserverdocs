@@ -1,7 +1,6 @@
 ---
 title: Active Directory Accounts (Windows Server)
 description: Active Directory Accounts
-ms.prod: Windows Server
 author: dansimp
 ms.author: dansimp
 ms.topic: article
@@ -12,7 +11,7 @@ ms.date: 07/20/2022
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
-Windows Server operating systems are installed with default local accounts. In addition, you can create user accounts to meet the requirements of your organization. This reference article describes the Windows Server default local accounts that are stored locally on the domain controller and used in Active Directory. It does not describe default local user accounts for: a member, standalone server, or a Windows client. For more information, see [Local Accounts](local-accounts.md).
+Windows Server operating systems are installed with default local accounts. In addition, you can create user accounts to meet the requirements of your organization. This reference article describes the Windows Server default local accounts that are stored locally on the domain controller and used in Active Directory. It does not describe default local user accounts for: a member, standalone server, or a Windows client. For more information, see [Local Accounts](/windows/security/identity-protection/access-control/local-accounts).
 
 ## About Active Directory accounts
 
@@ -62,9 +61,9 @@ Default local accounts perform the following:
 
 In Active Directory, default local accounts are used by administrators to manage domain and member servers directly and from dedicated administrative workstations. Active Directory accounts provide access to network resources. Active Directory User accounts and Computer accounts can represent a physical entity, such as a computer or person, or act as dedicated service accounts for some applications.
 
-Each default local account is automatically assigned to a security group that is preconfigured with the appropriate rights and permissions to perform specific tasks. Active Directory security groups collect user accounts, computer accounts, and other groups into manageable units. For more information, see [Active Directory Security Groups](active-directory-security-groups.md).
+Each default local account is automatically assigned to a security group that is preconfigured with the appropriate rights and permissions to perform specific tasks. Active Directory security groups collect user accounts, computer accounts, and other groups into manageable units. For more information, see [Active Directory Security Groups](ad-ds-security-groups.md).
 
-On an Active Directory domain controller, each default local account is referred to as a security principal. A security principal is a directory object that is used to secure and manage Active Directory services that provide access to domain controller resources. A security principal includes objects such as user accounts, computer accounts, security groups, or the threads or processes that run in the security context of a user or computer account. For more information, see [Security Principals](security-principals.md).
+On an Active Directory domain controller, each default local account is referred to as a security principal. A security principal is a directory object that is used to secure and manage Active Directory services that provide access to domain controller resources. A security principal includes objects such as user accounts, computer accounts, security groups, or the threads or processes that run in the security context of a user or computer account. For more information, see [Security Principals](/windows/security/identity-protection/access-control/security-principals).
 
 A security principal is represented by a unique security identifier (SID). The SIDs that are related to each of the default local accounts in Active Directory are described in the sections below.
 
@@ -520,7 +519,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
 11. Link all other OUs that contain workstations.
 
-    However, do not create a link to the Administrative Workstation OU if it is created for administrative workstations that are dedicated to administration duties only, and that are without Internet or email access. For more information, see [Create dedicated workstation hosts for administrators](#task2-admin-workstations).
+    However, do not create a link to the Administrative Workstation OU if it is created for administrative workstations that are dedicated to administration duties only, and that are without Internet or email access. For more information, see [Create dedicated workstation hosts without Internet and email access](#create-dedicated-workstation-hosts-without-internet-and-email-access).
 
     > [!IMPORTANT]
     > If you later extend this solution, do not deny logon rights for the **Domain Users** group. The **Domain Users** group includes all user accounts in the domain, including Users, Domain Administrators, and Enterprise Administrators.
@@ -555,6 +554,6 @@ In addition, installed applications and management agents on domain controllers 
 
 ## See also
 
-- [Security Principals](security-principals.md)
+- [Security Principals](/windows/security/identity-protection/access-control/security-principals)
 
-- [Access Control Overview](access-control.md)
+- [Access Control Overview](/windows/security/identity-protection/access-control/access-control)

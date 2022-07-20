@@ -1,10 +1,9 @@
 ---
 title: Special Identities (Windows Server)
 description: Special Identities for Windows Server
-ms.prod: Windows Server
 author: dansimp
 ms.author: dansimp
-manager: dansimp
+ms.topic: article
 ms.date: 7/20/2022
 ---
 
@@ -448,8 +447,8 @@ Any user accessing the system through Terminal Services has the Terminal Server 
 
 ## See also
 
-- [Active Directory Security Groups](active-directory-security-groups.md)
+- [Active Directory Security Groups](ad-ds-security-groups.md)
 
-- [Security Principals](security-principals.md)
+- [Security Principals](/windows/security/identity-protection/access-control/security-principals)
 
-- [Access Control Overview](access-control.md)
+- [Access Control Overview](/windows/security/identity-protection/access-control/)

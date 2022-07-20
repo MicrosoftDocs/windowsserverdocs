@@ -193,6 +193,9 @@
 ###### [CA Backup and Restore Windows powershell cmdlets](ad-ds/manage/component-updates/CA-Backup-and-Restore-Windows-powershell-cmdlets.md)
 ###### [Command line process auditing](ad-ds/manage/component-updates/Command-line-process-auditing.md)
 ##### [Directory Services component updates](ad-ds/manage/component-updates/directory-Services-component-updates.md)
+#### [Active Directory Accounts](ad-ds/manage/AD-DS-Accounts.md)
+#### [Special Identities](ad-ds/manage/AD-DS-Special-Identities.md)
+#### [Active Directory Security Groups](ad-ds/manage/AD-DS-Security-Groups.md)
 #### [How to Configure Protected Accounts](ad-ds/manage/how-to-configure-protected-accounts.md)
 #### [How LDAP Server Cookies Are Handled](ad-ds/manage/How-LDAP-Server-Cookies-Are-Handled.md)
 
