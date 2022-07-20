@@ -180,7 +180,8 @@ Members of the Account Operators group cannot manage the Administrator user acco
 
 The Account Operators group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups](#active-directory-default-security-groups-by-operating-system-version) table.
 
-> [!NOTE] By default, this built-in group has no members, and it can create and manage users and groups in the domain, including its own membership and that of the Server Operators group. This group is considered a service administrator group because it can modify Server Operators, which in turn can modify domain controller settings. As a best practice, leave the membership of this group empty, and do not use it for any delegated administration. This group cannot be renamed, deleted, or moved.
+> [!NOTE] 
+> By default, this built-in group has no members, and it can create and manage users and groups in the domain, including its own membership and that of the Server Operators group. This group is considered a service administrator group because it can modify Server Operators, which in turn can modify domain controller settings. As a best practice, leave the membership of this group empty, and do not use it for any delegated administration. This group cannot be renamed, deleted, or moved.
 
 |Attribute|Value|
 |--- |--- |
