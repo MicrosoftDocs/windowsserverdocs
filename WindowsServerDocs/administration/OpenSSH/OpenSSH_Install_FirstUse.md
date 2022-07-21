@@ -36,7 +36,7 @@ To validate your environment, open an elevated PowerShell session and do the fol
 - Run the command below. The output will show `True` when you're a member of the built-in Administrators group.
 
   ```powershell
-  (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)`
+  (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
   ```
 
 ## Install OpenSSH for Windows
@@ -96,10 +96,6 @@ Online        : True
 RestartNeeded : False
 ```
 
----
-
-## Start and configure OpenSSH Server
-
 To start and configure OpenSSH Server for initial use, open an elevated PowerShell prompt (right click, Run as an administrator), then run the following commands to start the `sshd service`:
 
 ```powershell
@@ -117,6 +113,8 @@ if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyCon
     Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
 }
 ```
+
+---
 
 ## Connect to OpenSSH Server
 

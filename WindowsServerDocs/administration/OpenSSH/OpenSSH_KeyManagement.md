@@ -122,7 +122,7 @@ Start-Service ssh-agent
 Get-Service ssh-agent
 
 # Now load your key files into ssh-agent
-ssh-add $env:USERPROFILE\.ssh\id_ed25519.pub
+ssh-add $env:USERPROFILE\.ssh\id_ed25519
 ```
 
 Once you've added the key to the ssh-agent on your client, the ssh-agent will automatically retrieve the local private key and pass it to your SSH client.
