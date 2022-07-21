@@ -218,7 +218,7 @@ For example, suppose you edit policy settings in the **Time Providers\Configure 
 
 Then Windows uses the policy settings to configure the related Windows Time service registry entries under the following subkey:
 
-> `HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Time Providers\NTPClient\\`
+> `HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NTPClient\`
 
 The following table lists the policies that you can configure for the Windows Time service, and the registry subkeys that those policies affect.
 

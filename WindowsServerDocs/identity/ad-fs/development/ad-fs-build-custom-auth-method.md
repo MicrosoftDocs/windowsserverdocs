@@ -10,14 +10,14 @@ ms.topic: article
 
 # Build a Custom Authentication Method for AD FS in Windows Server
 
-This walkthrough provides instructions for implementing a custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Additional Authentication Methods](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)).
+This walkthrough provides instructions for implementing a custom authentication method for AD FS in Windows Server 2012 R2. For more information, see [Additional Authentication Methods](/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs).
 
 > [!WARNING]
 > The example that you can build here is&nbsp;for educational purposes only. &nbsp;These instructions are for the simplest, most minimal implementation possible to expose the required elements of the model.&nbsp; There is no authentication back end, error processing, or configuration data.
 
 ## Setting up the development box
 
-This walk-through uses Visual Studio 2012. The project can be built using any development environment that can create a .NET class for Windows. The project must target .NET 4.5 because the **BeginAuthentication** and **TryEndAuthentication** methods use the type **System.Security.Claims.Claim**, part of .NET Framework version 4.5.There is one reference required for the project:
+This walk-through uses Visual Studio 2012. The project can be built using any development environment that can create a .NET class for Windows. The project must target .NET 4.5 because the **BeginAuthentication** and **TryEndAuthentication** methods use the type **System.Security.Claims.Claim**, part of .NET Framework version 4.5. There is one reference required for the project:
 
 | Reference dll | Where to find it | Required for |
 |--|--|--|
@@ -201,7 +201,7 @@ This walk-through uses Visual Studio 2012. The project can be built using any de
 
     Now you should be able to F12 (right click – Go To Definition) on IAuthenticationAdapter to see the set of required interface members.
 
-    Next, you can do a simple implementation of these.
+    Next, you can perform an implementation of these.
 
 11. Replace the entire contents of your class with the following:
 
@@ -394,11 +394,11 @@ Copy files and add to GAC.
 
 2. Install the AD FS role service and configure a farm with at least one node.
 
-    For detailed steps to setup a federation server in a lab environment, see the [Windows Server 2012 R2 AD FS Deployment Guide](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)).
+    For detailed steps to set up a federation server in a lab environment, see the [Windows Server 2012 R2 AD FS Deployment Guide](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11)).
 
 3. Copy the Gacutil.exe tools to the server.
 
-    Gacutil.exe can be found in **%homedrive%Program Files (x86)Microsoft SDKsWindowsv8.0AbinNETFX 4.0 Tools** on a Windows 8 machine. You will need the **gacutil.exe** file itself as well as the **1033**, **en-US**, and the other localized resource folder below the **NETFX 4.0 Tools** location.
+    Gacutil.exe can be found in **%homedrive%Program Files (x86)Microsoft SDKsWindowsv8.0AbinNETFX 4.0 Tools** on a Windows 8 machine. You will need the **gacutil.exe** file itself and the **1033**, **en-US**, and the other localized resource folder below the **NETFX 4.0 Tools** location.
 
 4. Copy your provider file(s) (one or more strong name signed .dll files) to the same folder location as **gacutil.exe** (the location is just for convenience)
 
@@ -513,7 +513,7 @@ Finally, perform the steps below to test your adapter:
 
     ![Screenshot of the the M F A choice page.](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "authenticate with adapter")
 
-You now have a working implementation of the interface and you have the knowledge of how the model works. You can try as an extra example to set break points in the BeginAuthentication as well as the TryEndAuthentication. Notice how BeginAuthentication is executed when the user first enters the MFA form, whereas TryEndAuthentication is triggered at each Submit of the form.
+You now have a working implementation of the interface and you have the knowledge of how the model works. You can try as an extra example to set break points in the BeginAuthentication and the TryEndAuthentication. Notice how BeginAuthentication is executed when the user first enters the MFA form, whereas TryEndAuthentication is triggered at each Submit of the form.
 
 ## Update the adapter for successful authentication
 
@@ -593,11 +593,11 @@ Clear all MFA related checkboxes in the MFA UI, shown below, then click OK.
 
 Example:`PS C:> Unregister-AdfsAuthenticationProvider –Name “MyMFAAdapter”`
 
-Note that the value you pass for “Name” is the same value as “Name” you provided to the Register-AdfsAuthenticationProvider cmdlet. It is also the “Name” property that is output from Get-AdfsAuthenticationProvider.
+The value you pass for “Name” is the same value as “Name” you provided to the Register-AdfsAuthenticationProvider cmdlet. It is also the “Name” property that is output from Get-AdfsAuthenticationProvider.
 
-Note that before you unregister a provider, you must remove the provider from the AdfsGlobalAuthenticationPolicy (either by clearing the checkboxes you checked in AD FS management snap-in or by using Windows PowerShell.)
+Before you unregister a provider, you must remove the provider from the AdfsGlobalAuthenticationPolicy (either by clearing the checkboxes you checked in AD FS management snap-in or by using Windows PowerShell.)
 
-Note that the AD FS service must be restarted after this operation.
+The AD FS service must be restarted after this operation.
 
 ### Remove assembly from GAC
 
@@ -667,5 +667,5 @@ You should see a successful sign-in when entering _adfabric_ at the MFA authenti
 
 #### Other Resources
 
-[Additional Authentication Methods](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11))
-[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](/previous-versions/orphan-topics/ws.11/dn383648(v=ws.11))
+[Additional Authentication Methods](/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs)
+[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](/identity/ad-fs/operations/manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications)
