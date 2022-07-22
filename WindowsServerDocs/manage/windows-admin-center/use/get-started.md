@@ -29,7 +29,7 @@ Follow these steps to start Windows Admin Center:
 
    A prompt for selecting a certificate for authentication is displayed.
 
-1. Select the certificate labeled **Windows Admin Center Client** and then select **OK**. You can optionally select the **Certificate information** link to see more details about the certificate.
+1. Select the certificate labeled **Windows Admin Center Client**, then select **OK**. You can also select the **Certificate information** link to see more details about the certificate.
 
    :::image type="content" source="../media/launch-cert-prompt.png" alt-text="Screenshot of the prompt showing options to select a certificate.":::
 
