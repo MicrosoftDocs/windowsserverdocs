@@ -8,10 +8,11 @@ ms.date: 01/15/2021
 ---
 # Troubleshooting Windows Admin Center
 
->Applies to: Windows Admin Center, Windows Admin Center Preview, Azure Stack HCI, version v20H2
+>Applies to: Windows Admin Center, Windows Admin Center Preview, Azure Stack HCI, versions 21H2 and 20H2
 
-> [!Important]
-> This guide will help you diagnose and resolve issues that are preventing you from using Windows Admin Center. If you are having an issue with a specific tool, please check to see if you are experiencing a [known issue.](./known-issues.md)
+> [!IMPORTANT]
+
+> This guide will help you diagnose and resolve issues that are preventing you from using Windows Admin Center. If you are having an issue with a specific tool, check to see if you are experiencing a [known issue.](./known-issues.md)
 
 ## Installer fails with message: **_The Module 'Microsoft.PowerShell.LocalAccounts' could not be loaded._**
 
@@ -70,7 +71,7 @@ This can happen if your default PowerShell module path has been modified or remo
 
 * If you are using Windows 10 version 1703 or below, Windows Admin Center is not supported on your version of Microsoft Edge. Either upgrade to a recent version of Windows 10 or use Chrome.
 
-* If you are using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows had a bug which caused Windows Admin Center to fail. Please use a current supported version of Windows.
+* If you are using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows had a bug, which caused Windows Admin Center to fail. Use a current supported version of Windows.
 
 ### Make sure the Windows Remote Management (WinRM) service is running on both the gateway machine and managed node
 
@@ -200,13 +201,13 @@ To do this:
 
 1. Search for **Internet Options** in the Windows Start Menu
 2. Go to the **Security** tab
-3. Under the **Trusted Sites** option, click on the **sites** button and add the URLs in the dialog box that opens. You'll need to add your gateway URL as well as `https://login.microsoftonline.com` and `https://login.live.com`.
+3. Under the **Trusted Sites** option, click on the **sites** button and add the URLs in the dialog box that opens. You'll need to add your gateway URL as `https://login.microsoftonline.com` and `https://login.live.com`.
 4. Go to the **Pop-up Blocker** settings in Microsoft Edge via edge://settings/content/popups?search=pop-up
-5. You'll need to add your gateway URL as well as `https://login.microsoftonline.com` and `https://login.live.com` to the **Allow list**.
+5. You'll need to add your gateway URL as `https://login.microsoftonline.com` and `https://login.live.com` to the **Allow list**.
 
 ## Having an issue with an Azure-related feature?
 
-Please send us an email at wacFeedbackAzure@microsoft.com with the following information:
+Send us an email at wacFeedbackAzure@microsoft.com with the following information:
 
 * General issue information from the [questions listed below](#providing-feedback-on-issues).
 * Describe your issue and the steps you took to reproduce the issue.
@@ -223,7 +224,8 @@ Please send us an email at wacFeedbackAzure@microsoft.com with the following inf
 ## Collecting HAR files
 
 A HTTP Archive Format (HAR) file is a log of a web browser's interaction with a site. This information is crucial for troubleshooting and debugging.
-To collect a HAR file in Microsoft Edge or Google Chrome, please follow the steps below:
+
+To collect a HAR file in Microsoft Edge or Google Chrome, follow the steps below:
 
 1. Press **F12** to open Developer Tools window, and then click the **Network** tab. 
 2. Select the **Clear** icon to clean up network log.
@@ -240,7 +242,7 @@ Go to Event Viewer > Application and Services > Microsoft-ServerManagementExperi
 
 File a bug on [GitHub](https://aka.ms/wacfeedback) that describes your issue.
 
-Please include any errors or warning you find in the event log, as well as the following information:
+Include any errors or warning you find in the event log, as well as the following information:
 
 * Platform where Windows Admin Center is **installed** (Windows 10 or Windows Server):
   * If installed on Server, what is the Windows [version](#check-the-windows-version) of **the machine running the browser** to access Windows Admin Center:
