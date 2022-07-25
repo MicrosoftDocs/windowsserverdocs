@@ -1,6 +1,6 @@
 ---
 title: Active Directory Accounts (Windows Server)
-description: Active Directory Accounts
+description: Windows Server Active Directory Accounts
 author: dansimp
 ms.author: dansimp
 ms.topic: article
@@ -224,7 +224,7 @@ For information about how to help mitigate the risks associated with a potential
 
 ### Read-only domain controllers and the KRBTGT account
 
-Windows Server 2008 introduced the read-only domain controller (RODC). The RODC is advertised as the Key Distribution Center (KDC) for the branch office. The RODC uses a different KRBTGT account and password than the KDC on a writable domain controller when it signs or encrypts ticket-granting ticket (TGT) requests. After an account is successfully authenticated, the RODC determines if a user's credentials or a computer's credentials can be replicated from the writable domain controller to the RODC by using the Password Replication Policy.
+Windows Server 2008 introduced the read-only domain controller (RODC). The RODC is advertised as the Key Distribution Center (KDC) for the branch office. The RODC uses a different KRBTGT account and password than the KDC on a writable domain controller when it signs or encrypts ticket-granting ticket (TGT) requests. After an account is successfully authenticated, the RODC determines if a user's credentials or a computer's credentials, can be replicated from the writable domain controller to the RODC by using the Password Replication Policy.
 
 After the credentials are cached on the RODC, the RODC can accept that user's sign-in requests until the credentials change. When a TGT is signed with the KRBTGT account of the RODC, the RODC recognizes that it has a cached copy of the credentials. If another domain controller signs the TGT, the RODC forwards requests to a writable domain controller.
 
@@ -317,124 +317,7 @@ Restrict Domain Admins accounts and other sensitive accounts to prevent them fro
 > [!IMPORTANT]
 > Ensure that sensitive administrator accounts cannot access email or browse the Internet as described in the following section.
 
-### Create dedicated workstation hosts without Internet and email access
-
-Administrators need to manage job responsibilities that require sensitive administrator rights from a dedicated workstation because they do not have easy physical access to the servers. A workstation that is connected to the Internet and has email and web browsing access is regularly exposed to compromise through phishing, downloading, and other types of Internet attacks. Because of these threats, it is a best practice to set up these administrators by using workstations that are dedicated to administrative duties only, and not provide access to the Internet including email and web browsing. For more information, see [Separate administrator accounts from user accounts](#separate-administrator-accounts-from-user-accounts).
-
-> [!NOTE]
-> If the administrators in your environment can sign in locally to managed servers and perform all tasks without elevated rights or domain rights from their workstation, you can skip this task.
-
-- **Minimum**. Build dedicated administrative workstations and block Internet access on those workstations including web browsing and email. Use the following ways to block Internet access:
-
-  - Configure authenticating boundary proxy services, if they are deployed, to disallow administrator accounts from accessing the Internet.
-
-  - Configure boundary firewall or proxy services to disallow Internet access for the IP addresses that are assigned to dedicated administrative workstations.
-
-  - Block outbound access to the boundary proxy servers in the Windows Firewall.
-
-The instructions for meeting this minimum requirement are described in the following procedure:
-
-- **Better**. Do not grant administrators membership in the local Administrator group on the computer in order to restrict the administrator from bypassing these protections.
-
-- **Ideal**. Restrict workstations from having any network connectivity, except for the domain controllers and servers that the administrator accounts are used to manage. Alternately, use AppLocker application control policies to restrict all applications from running, except for the operating system and approved administrative tools and applications. For more information about AppLocker, see [AppLocker](/windows/device-security/applocker/applocker-overview).
-
-The following procedure describes how to block Internet access by creating a Group Policy Object (GPO) that configures an invalid proxy address on administrative workstations. These instructions apply only to computers running Internet Explorer and other Windows components that use these proxy settings.
-
-> [!NOTE]
-> In this procedure, the workstations are dedicated to domain administrators. By simply modifying the administrator accounts to grant permission to administrators to sign in locally, you can create additional OUs to manage administrators that have fewer administrative rights to use the instructions described in the following procedure.
-
-### To install administrative workstations in a domain and block Internet and email access (minimum)
-
-1. As a domain administrator on a domain controller, open Active Directory Users and Computers, and create a new OU for administrative workstations.
-
-2. Create computer accounts for the new workstations.
-
-    > [!NOTE]
-    > You might have to delegate permissions to join computers to the domain if the account that joins the workstations to the domain does not already have them. For more information, see [Delegation of Administration in Active Directory](https://social.technet.microsoft.com/wiki/contents/articles/20292.delegation-of-administration-in-active-directory.aspx).
-
-    ![Active Directory local accounts](images/adlocalaccounts-proc1-sample1.gif)
-
-3. Close Active Directory Users and Computers.
-
-4. Start the **Group Policy Management** Console (GPMC).
-
-5. Right-click the new OU, and &gt; **Create a GPO in this domain, and Link it here**.
-
-    ![Active Directory's local accounts](images/adlocalaccounts-proc1-sample2.png)
-
-6. Name the GPO, and &gt; **OK**.
-
-7. Expand the GPO, right-click the new GPO, and &gt; **Edit**.
-
-    ![Active Directory (AD) local accounts](images/adlocalaccounts-proc1-sample3.png)
-
-8. Configure which members of accounts can log on locally to these administrative workstations as follows:
-
-    1. Navigate to **Computer Configuration > Policies > Windows Settings > Local Policies**, and then click **User Rights Assignment**.
-
-    2. Double-click **Allow log on locally**, and then select the **Define these policy settings** check box.
-
-    3. Click **Add User or Group** &gt; **Browse**, type **Enterprise Admins**, and &gt; **OK**.
-
-    4. Click **Add User or Group** &gt; **Browse**, type **Domain Admins**, and &gt; **OK**.
-
-        > [!IMPORTANT]
-        > These instructions assume that the workstation is to be dedicated to domain administrators.
-
-    5. Click **Add User or Group**, type **Administrators**, and &gt; **OK**.
-
-        ![AD local accounts](images/adlocalaccounts-proc1-sample4.png)
-
-9. Configure the proxy configuration:
-
-    1. Navigate to **User Configuration > Policies > Windows Settings > Internet Explorer**, and &gt; **Connection**.
-
-    2. Double-click **Proxy Settings**, select the **Enable proxy settings** check box, type **127.0.0.1** (the network Loopback IP address) as the proxy address, and &gt; **OK**.
-
-        ![AD's local accounts](images/adlocalaccounts-proc1-sample5.png)
-
-10. Configure the loopback processing mode to enable the user Group Policy proxy setting to apply to all users on the computer as follows:
-
-    1. Navigate to **Computer Configuration > Policies > Administrative Templates > System**, and &gt; **Group Policy**.
-
-    2. Double-click **User Group Policy loopback policy processing mode**, and &gt; **Enabled**.
-
-    3. Select **Merge Mode**, and &gt; **OK**.
-
-11. Configure software updates as follows:
-
-    1. Navigate to **Computer Configuration > Policies > Administrative Templates > Windows Components**, and then click **Windows Update**.
-
-    2. Configure Windows Update settings as described in the following table:
-
-        |Windows Update Setting|Configuration|
-        |--- |--- |
-        |Allow Automatic Updates immediate installation|Enabled|
-        |Configure Automatic Updates|Enabled4 - Auto download and schedule the installation0 - Every day 03:00|
-        |Enable Windows Update Power Management to automatically wake up the system to install scheduled updates|Enabled|
-        |Specify intranet Microsoft Update service location|Enabled `http://<WSUSServername> http://<WSUSServername>` Where `<WSUSServername>` is the DNS name or IP address of the Windows Server Update Services (WSUS) in the environment.|
-        |Automatic Updates detection frequency|6 hours|
-        |Re-prompt for restart with scheduled installations|1 minute|
-        |Delay restart for scheduled installations|5 minutes|
-
-        > [!NOTE]
-        > This step assumes that Windows Server Update Services (WSUS) is installed and configured in the environment. You can skip this step if you use another tool to deploy software updates. Also, if the public Microsoft Windows Update service only is used on the Internet, then these administrative workstations no longer receive updates.
-
-12. Configure the inbound firewall to block all connections as follows:
-
-    1. Right-click **Windows Firewall with Advanced Security LDAP://path**, and &gt; **Properties**.
-
-        ![Local accounts for Active Directory](images/adlocalaccounts-proc1-sample6.png)
-
-    2. On each profile, ensure that the firewall is enabled and that inbound connections are set to **Block all connections**.
-
-        ![Local accounts for an AD](images/adlocalaccounts-proc1-sample7.png)
-
-    3. Click **OK** to complete the configuration.
-
-13. Close the Group Policy Management Console.
-
-14. Install the Windows operating system on the workstations, give each workstation the same names as the computer accounts assigned to them, and then join them to the domain.
+To learn more about privileged access, see [Privileged Access Devices](/security/compass/privileged-access-devices).
 
 ### Restrict administrator logon access to servers and workstations
 
