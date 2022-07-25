@@ -23,7 +23,7 @@ Servers that are running the supported Windows Server operating systems designat
 
 Although the special identity groups can be assigned rights and permissions to resources, the memberships cannot be modified or viewed. Group scopes do not apply to special identity groups. Users are automatically assigned to these special identity groups whenever they sign in or access a particular resource.
 
-For information about security groups and group scope, see [Active Directory Security Groups](ad-ds-security-groups.md).
+For information about security groups and group scope, see [Active Directory Security Groups](understand-security-groups.md).
 
 The special identity groups are described in the following tables:
 
@@ -447,7 +447,7 @@ Any user accessing the system through Terminal Services has the Terminal Server 
 
 ## See also
 
-- [Active Directory Security Groups](ad-ds-security-groups.md)
+- [Active Directory Security Groups](understand-security-groups.md)
 
 - [Security Principals](/windows/security/identity-protection/access-control/security-principals)
 

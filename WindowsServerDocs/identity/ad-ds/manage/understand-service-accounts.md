@@ -102,4 +102,4 @@ The following table provides links to other resources that are related to standa
 |---------------|-------------|
 | **Product evaluation** | [What's New for Managed Service Accounts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831451(v=ws.11))<p>[Getting Started with Group Managed Service Accounts](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj128431(v=ws.11)) |
 | **Deployment** | [Windows Server 2012: Group Managed Service Accounts - Ask Premier Field Engineering (PFE) Platforms - Site Home - TechNet Blogs](https://blogs.technet.com/b/askpfeplat/archive/2012/12/17/windows-server-2012-group-managed-service-accounts.aspx) |
-| **Related technologies** | [Security Principals](security-principals.md)<p>[What's new in Active Directory Domain Services](/windows-server/identity/whats-new-active-directory-domain-services) |
+| **Related technologies** | [Security Principals](understand-security-principals.md)<p>[What's new in Active Directory Domain Services](/windows-server/identity/whats-new-active-directory-domain-services) |

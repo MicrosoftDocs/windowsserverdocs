@@ -80,7 +80,7 @@ The following table lists the three group scopes and more information about each
 
 Special identities are referred to as groups. Special identity groups do not have specific memberships that can be modified, but they can represent different users at different times, depending on the circumstances. Some of these groups include Creator Owner, Batch, and Authenticated User.
 
-For information about all the special identity groups, see [Special Identities](ad-ds-special-identities.md).
+For information about all the special identity groups, see [Special Identities](understand-special-identities-groups.md).
 
 ## Default security groups
 
@@ -1266,6 +1266,6 @@ In Windows Server 2012, the Access Denied Assistance functionality adds the Auth
 
 - [Security Principals](/windows/security/identity-protection/access-control/security-principals)
 
-- [Special Identities](ad-ds-special-identities.md)
+- [Special Identities](understand-special-identities-groups.md)
 
 - [Access Control Overview](/windows/security/identity-protection/access-control/access-control)

@@ -29,7 +29,7 @@ The following diagram illustrates the Windows authorization and access control 
 
 ### Authorization and access control process
 
-![authorization and access control process chart](images/authorization-and-access-control-process.png)
+![authorization and access control process chart](media/authorization-and-access-control-process.png)
 
 Security principals are closely related to the following components and technologies:
 

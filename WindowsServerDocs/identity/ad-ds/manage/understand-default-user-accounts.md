@@ -35,8 +35,6 @@ This article describes the following:
 
   - [Separate administrator accounts from user accounts](#separate-administrator-accounts-from-user-accounts)
 
-  - [Create dedicated workstation hosts without Internet and email access](#create-dedicated-workstation-hosts-without-internet-and-email-access)
-
   - [Restrict administrator logon access to servers and workstations](#restrict-administrator-logon-access-to-servers-and-workstations)
 
   - [Disable the account delegation right for sensitive administrator accounts](#disable-the-account-delegation-right-for-sensitive-administrator-accounts)
@@ -61,7 +59,7 @@ Default local accounts perform the following:
 
 In Active Directory, default local accounts are used by administrators to manage domain and member servers directly and from dedicated administrative workstations. Active Directory accounts provide access to network resources. Active Directory User accounts and Computer accounts can represent a physical entity, such as a computer or person, or act as dedicated service accounts for some applications.
 
-Each default local account is automatically assigned to a security group that is preconfigured with the appropriate rights and permissions to perform specific tasks. Active Directory security groups collect user accounts, computer accounts, and other groups into manageable units. For more information, see [Active Directory Security Groups](ad-ds-security-groups.md).
+Each default local account is automatically assigned to a security group that is preconfigured with the appropriate rights and permissions to perform specific tasks. Active Directory security groups collect user accounts, computer accounts, and other groups into manageable units. For more information, see [Active Directory Security Groups](understand-security-groups.md).
 
 On an Active Directory domain controller, each default local account is referred to as a security principal. A security principal is a directory object that is used to secure and manage Active Directory services that provide access to domain controller resources. A security principal includes objects such as user accounts, computer accounts, security groups, or the threads or processes that run in the security context of a user or computer account. For more information, see [Security Principals](/windows/security/identity-protection/access-control/security-principals).
 
@@ -292,8 +290,6 @@ Implementing these best practices is separated into the following tasks:
 
 - [Separate administrator accounts from user accounts](#separate-administrator-accounts-from-user-accounts)
 
-- [Create dedicated workstation hosts without Internet and email access](#create-dedicated-workstation-hosts-without-internet-and-email-access)
-
 - [Restrict administrator logon access to servers and workstations](#restrict-administrator-logon-access-to-servers-and-workstations)
 
 - [Disable the account delegation right for sensitive administrator accounts](#disable-the-account-delegation-right-for-sensitive-administrator-accounts)
@@ -335,7 +331,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 - **Ideal**. Restrict server administrators from signing in to workstations, in addition to domain administrators.
 
 > [!NOTE]
-> For this procedure, do not link accounts to the OU that contain workstations for administrators that perform administration duties only, and do not provide Internet or email access. For more information, see [Create dedicated workstation hosts without Internet and email access](#create-dedicated-workstation-hosts-without-internet-and-email-access)
+> For this procedure, do not link accounts to the OU that contain workstations for administrators that perform administration duties only, and do not provide Internet or email access.
 
 #### To restrict domain administrators from workstations (minimum)
 
@@ -402,7 +398,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
 11. Link all other OUs that contain workstations.
 
-    However, do not create a link to the Administrative Workstation OU if it is created for administrative workstations that are dedicated to administration duties only, and that are without Internet or email access. For more information, see [Create dedicated workstation hosts without Internet and email access](#create-dedicated-workstation-hosts-without-internet-and-email-access).
+    However, do not create a link to the Administrative Workstation OU if it is created for administrative workstations that are dedicated to administration duties only, and that are without Internet or email access.
 
     > [!IMPORTANT]
     > If you later extend this solution, do not deny logon rights for the **Domain Users** group. The **Domain Users** group includes all user accounts in the domain, including Users, Domain Administrators, and Enterprise Administrators.
@@ -417,7 +413,7 @@ It is a best practice to configure the user objects for all sensitive accounts i
 
 As with any configuration change, test this enabled setting fully to ensure that it performs correctly before you implement it.
 
-![An Active Directory local accounts' presentation](images/adlocalaccounts-proc3-sample1.png)
+![Setting Active Directory local account properties to not be delegated](media/active-directory-account-properties.png)
 
 ## Secure and manage domain controllers
 
