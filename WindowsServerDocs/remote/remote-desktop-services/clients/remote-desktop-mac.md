@@ -51,7 +51,7 @@ To subscribe to a feed:
 
 After you've signed in, you should see a list of available resources.
 
-Once you've subscribed to a feed, the feed's content will update automatically on a regular basis. Resources may be added, changed, or removed based on changes made by your administrator.
+Once you've subscribed to a feed, the feed's content will update automatically regularly. Resources may be added, changed, or removed based on changes made by your administrator.
 
 ### Export and import connections
 
@@ -144,7 +144,7 @@ Mac keyboard layouts differ from the Windows keyboard layouts.
 - The function keys can be activated in the session by pressing additionally the FN key (for example, FN+F1).
 - The Alt key to the right of the space bar on the Mac keyboard equals the Alt Gr/right Alt key in Windows.
 
-By default, the remote session will use the same keyboard locale as the OS you're running the client on. (If your Mac is running an en-us OS, that will be used for the remote sessions as well.) If the OS keyboard locale is not used, check the keyboard setting on the remote PC and change it manually. See the [Remote Desktop Client FAQ](remote-desktop-client-faq.yml) for more information about keyboards and locales.
+By default, the remote session will use the same keyboard locale as the OS you're running the client on. (If your Mac is running an en-us OS, it will be used for the remote sessions as well.) If the OS keyboard locale is not used, check the keyboard setting on the remote PC and change it manually. See the [Remote Desktop Client FAQ](remote-desktop-client-faq.yml) for more information about keyboards and locales.
 
 ## Support for Remote Desktop gateway pluggable authentication and authorization
 
@@ -153,4 +153,4 @@ Windows Server 2012 R2 introduced support for a new authentication method, Remot
 > [!IMPORTANT]
 > Custom authentication and authorization models before Windows 8.1 aren't supported, although the article above discusses them.
 
-To learn more about this feature, check out [https://aka.ms/paa-sample](/samples/browse/?redirectedfrom=MSDN-samples).
+To learn more about this feature, check out [Remote Desktop Gateway Pluggable Authentication and Authorization Sample](https://github.com/microsoftarchive/msdn-code-gallery-community-m-r/blob/master/Remote%20Desktop%20Gateway%20Pluggable%20Authentication%20and%20Authorization%20Sample/README.md).
