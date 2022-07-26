@@ -1,12 +1,12 @@
 ---
-title: Use Windows Admin Center in the Azure portal to manage a Windows Server VM
-description: An overview of using Windows Admin Center in the Azure portal to manage the Windows Server OS in an Azure VM. Includes the functionality provided, requirements, and how to install Windows Admin Center and use it to manage a VM. Also provides troubleshooting tips.
+title: Manage a Windows Server VM using Windows Admin Center in Azure
+description: Learn how to use Windows Admin Center in the Azure portal to connect and manage Windows Server VMs in an Azure VM
 ms.topic: overview
-author: jasongerend
-ms.author: jgerend
-ms.date: 06/29/2021
+author: prasidharora
+ms.author: praror
+ms.date: 07/26/2022
 ---
-# Use Windows Admin Center in the Azure portal to manage a Windows Server VM
+# Manage a Windows Server VM using Windows Admin Center in Azure
 
 You can now use Windows Admin Center (preview) in the Azure portal to manage the Windows Server operating system inside an Azure VM. Manage operating system functions from the Azure portal as well as work with files in the VM without using Remote Desktop or PowerShell.
 
@@ -74,10 +74,11 @@ To use Windows Admin Center in the Azure portal, we install Windows Admin Center
 
 The VM also has the following networking requirements, which we step through during the installation procedure:
 
-- Outbound internet access or an outbound port rule allowing HTTPS traffic to the WindowsAdminCenter and AzureActiveDirectory service tag
+- Outbound internet access or an outbound port rule allowing HTTPS traffic to the `WindowsAdminCenter` and `AzureActiveDirectory` service tag
 
 - An inbound port rule if using a public IP address to connect to the VM (not recommended)
-<br>Just like with Remote Desktop, we recommend connecting to the VM using a private IP address in the VM's virtual network to increase security. Using a private IP address doesn't require an inbound port rule, though it does require access to the virtual network (which we discuss next).
+
+Just like with Remote Desktop, we recommend connecting to the VM using a private IP address in the VM's virtual network to increase security. Using a private IP address doesn't require an inbound port rule, though it does require access to the virtual network (which we discuss next).
 
 > [!NOTE]
 > Inbound connectivity being redirected by another service (i.e. Azure Firewall) is not supported. You must have inbound connectivity from the Azure portal to one of the direct IP addresses of your VM (as seen on the "Networking" tab of your Azure VM in the Azure portal) on the port Windows Admin Center is installed.
@@ -115,15 +116,16 @@ After you've installed Windows Admin Center in an Azure VM, here's how to connec
 
 1. Open the Azure portal and navigate to your VM, then Windows Admin Center.
 2. Ensure that your account is a member of the **Windows Admin Center Administrator Login** role on the VM resource.
-3. If you're connecting using a private IP address, select the IP address you want to use when connecting to the VM, and then select **Connect**.
-<br>Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
+3. Select the IP address you want to use when connecting to the VM, and then select **Connect**.
+
+Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
 > [!NOTE]
-> Starting August 2022, Windows Admin Center no longer prompts for the credentials of a local administrator account. Your AAD identity authenticates you to your Azure IaaS VM.
+> Starting August 2022, Windows Admin Center now allows you to use Azure AD-based authentication for your Azure IaaS VM. You will no longer be prompted for the credentials of a local administrator account.
 
 :::image type="content" source="../../media/manage-vm/connect-to-vm.png" alt-text="Screenshot showing a VM's settings and connecting to Windows Admin Center by private IP address. "lightbox="../../media/manage-vm/connect-to-vm.png":::
 
-If you see a "Failed to connect" message, please ensure your account is a member of the **Windows Admin Center Administrator Login** role on the VM resource.
+If you see a "Failed to connect" message, ensure your account is a member of the **Windows Admin Center Administrator Login** role on the VM resource.
 
 ## Creating an inbound port rule for connecting from specific public IP addresses
 
@@ -196,7 +198,6 @@ For more information on how to use Azure RBAC to manage access to your Azure sub
 - [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal)
 - [Assign Azure roles using Azure PowerShell](/azure/role-based-access-control/role-assignments-powershell).
 
-
 ## Implementation details
 
 Windows Admin Center is currently implemented in the Azure portal in the form of an extension that we install on each Azure VM with which you want to use Windows Admin Center.
@@ -205,7 +206,7 @@ This extension connects to an external service that manages certificates and DNS
 
 Each Azure VM that uses the Windows Admin Center extension gets a public DNS record that Microsoft maintains in Azure DNS. We hash the record name with a salt to anonymize the VM's IP address when saving it in DNS - the IP addresses aren't saved in plain text in DNS. This DNS record is used to issue a certificate for Windows Admin Center on the VM, enabling encrypted communication with the VM.
 
-Connecting to Windows Admin Center deploys a virtual account in the administrators group, giving you full administrator access on your VM. Access to your VM is controlled by the **Windows Admin Center Administrator Login** role in Azure. An Azure user with the Owner or Contributor roles assigned for a VM does not automatically have privileges to log into the VM.
+Connecting an Azure VM to Windows Admin Center deploys a virtual account in the administrators group, giving you full administrator access on your VM. Access to your VM is controlled by the **Windows Admin Center Administrator Login** role in Azure. An Azure user with the **Owner** or **Contributor** roles assigned for a VM does not automatically have privileges to log into the VM.
 
 ## Troubleshooting
 
@@ -220,7 +221,7 @@ Here are some tips to try in case something isn't working. For general help trou
     1. In the Azure portal, navigate to “Connection troubleshoot” to test that your connection is working and the port can be reached.
 1. Make sure that outbound traffic to Windows Admin Center is allowed on your virtual machine
     1. In the Azure portal, navigate to “Networking” and “Outbound port rules”.
-    1. Create a new port rule for Windows Admin Center and Azure Active Directory
+    1. Create a new port rule for the `Windows Admin Center` and `Azure Active Directory` service tags.
     1. You can test this by running the following command using PowerShell inside of your virtual machine:
 
        ```powershell

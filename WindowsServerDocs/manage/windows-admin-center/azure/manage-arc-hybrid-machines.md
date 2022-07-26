@@ -160,7 +160,7 @@ After you've installed Windows Admin Center on your hybrid machine, perform the 
 2. Select **Connect**.
 
 > [!NOTE]
-> Starting August 2022, Windows Admin Center no longer prompts for the credentials of a local administrator account. Your AAD identity authenticates you to your hybrid machine.
+> Starting August 2022, Windows Admin Center now allows you to use Azure AD-based authentication for your hybrid machine. You will no longer be prompted for the credentials of a local administrator account.
 
 Windows Admin Center opens in the portal, giving you access to the same tools you might be familiar with from using Windows Admin Center in an on-premises deployment.
 
