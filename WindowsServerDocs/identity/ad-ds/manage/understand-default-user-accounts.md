@@ -341,11 +341,11 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
 3. Right-click **Group Policy Objects**, and &gt; **New**.
 
-    ![Local account's representation - Active Directory](media/default-user-account-restrict1.png)
+    ![Local active directory account restriction](media/default-user-account-restrict1.png)
 
 4. In the **New GPO** dialog box, name the GPO that restricts administrators from signing in to workstations, and &gt; **OK**.
 
-    ![Local account's representation - AD](media/default-user-account-restrict2.png)
+    ![Local active directory account restriction](media/default-user-account-restrict2.png)
 
 5. Right-click **New GPO**, and &gt; **Edit**.
 
@@ -359,7 +359,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
    3. Click **Add User or Group**, click **Browse**, type **Domain Admins**, and &gt; **OK**.
 
-        ![An Active Directory's local accounts](media/default-user-account-restrict3.png)
+        ![Local active directory account restriction](media/default-user-account-restrict3.png)
 
         > [!NOTE]
         > You can optionally add any groups that contain server administrators who you want to restrict from signing in to workstations.
@@ -377,7 +377,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
     3. Click **Add User or Group** &gt; **Browse**, type **Domain Admins**, and &gt; **OK**.
 
-        ![An AD's local accounts](media/default-user-account-restrict3.png)
+        ![Local active directory account restriction](media/default-user-account-restrict3.png)
 
         > [!NOTE]
         > You can optionally add any groups that contain server administrators who you want to restrict from signing in to workstations.
@@ -388,11 +388,11 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
     1. Right-click the workstation OU, and then &gt; **Link an Existing GPO**.
 
-        ![Local accounts representation for an Active Directory](media/default-user-account-restrict4.png)
+        ![Local active directory account restriction](media/default-user-account-restrict4.png)
 
     2. Select the GPO that you just created, and &gt; **OK**.
 
-        ![Active Directory's local accounts' presentation](media/default-user-account-restrict5.png)
+        ![Local active directory account restriction](media/default-user-account-restrict5.png)
 
 10. Test the functionality of enterprise applications on workstations in the first OU and resolve any issues caused by the new policy.
 
