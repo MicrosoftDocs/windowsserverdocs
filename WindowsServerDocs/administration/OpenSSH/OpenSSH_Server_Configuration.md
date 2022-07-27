@@ -115,10 +115,12 @@ The default is `.ssh/authorized_keys`. If the path isn't absolute, it's taken re
 home directory (or profile image path), for example, _C:\Users\username_. If the user belongs to
 the administrator group, _%programdata%/ssh/administrators\_authorized\_keys_ is used instead.
 
-> [!TIP] 
-> The _administrators_authorized_keys_ file requires the BUILTIN\Administrators security
-> group and NT Authority\SYSTEM account to explicitly granted full control. You can grant permissions by
-> opening an elevated PowerShell prompt, and running the command
+> [!TIP]
+> The _administrators_authorized_keys_ file must only have permission entries for the NT
+> Authority\SYSTEM account and BUILTIN\Administrators security group. The NT Authority\SYSTEM
+> account must be granted full control. The BUILTIN\Administrators security group is required for
+> administrators to manage the authorized keys, you can choose the required access. To grant
+> permissions you can open an elevated PowerShell prompt, and running the command
 > `icacls.exe "C:\ProgramData\ssh\administrators_authorized_keys" /inheritance:r /grant "Administrators:F" /grant "SYSTEM:F"`.
 
 ### ChrootDirectory (Support added in v7.7.0.0)
