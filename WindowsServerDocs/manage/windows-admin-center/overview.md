@@ -111,9 +111,9 @@ Admin Center to Azure</a></li>
             <td>
             <h3>Windows Admin Center in Azure</h3>
             <ul>
-            <li>[Manage a Windows Server VM using Windows Admin Center in Azure (preview)](azure/manage-vm.md)
-            <li>[Manage Azure Arc-enabled Servers using Windows Admin Center in Azure (preview)](azure/manage-arc-hybrid-machines.md)
-            <li>[Manage Azure Stack HCI clusters using Windows Admin Center in Azure (preview)](azure/manage-hci-clusters.md)
+            <li><a href="azure/manage-vm.md">Manage a Windows Server VM using Windows Admin Center in Azure (preview)]</a>
+            <li><a href="azure/manage-arc-hybrid-machines.md">Manage Azure Arc-enabled Servers using Windows Admin Center in Azure (preview)</a>
+            <li><a href="azure/manage-hci-clusters.md">Manage Azure Stack HCI clusters using Windows Admin Center in Azure (preview)</a>
             </ul>
         </td>
             <td>
