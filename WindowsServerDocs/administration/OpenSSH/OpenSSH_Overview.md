@@ -11,14 +11,14 @@ ms.topic: overview
 
 >Applies to Windows Server 2022, Windows Server 2019, Windows 10 (build 1809 and later)
 
-OpenSSH is the open-source version of the Secure Shell (SSH) tools used by administrators of Linux and other non-Windows for cross-platform management of remote systems. OpenSSH has been added to Windows (as of autumn 2018), and is included in Windows 10 and Windows Server 2019.
+OpenSSH is the open-source version of the Secure Shell (SSH) tools used by administrators of Linux and other non-Windows for cross-platform management of remote systems. OpenSSH has been added to Windows (as of autumn 2018), and is included in Windows Server and Windows client.
 
 SSH is based on a client-server architecture where the system the user is working on is the client and the remote system being managed is the server. OpenSSH includes a range of components and tools designed to provide a secure and straightforward approach to remote system administration.
 
 OpenSSH for Windows has the below commands built in.
 
-- sshd is the SSH server component that must be running on the system being managed remotely
 - ssh is the SSH client component that runs on the user's local system
+- sshd is the SSH server component that must be running on the system being managed remotely
 - ssh-keygen generates, manages and converts authentication keys for SSH
 - ssh-agent stores private keys used for public key authentication
 - ssh-add adds private keys to the list allowed by the server
