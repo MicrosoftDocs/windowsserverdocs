@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 06/02/2022
+ms.date: 07/19/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,14 +17,44 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.3213        |1.2.1672                  |
-|Insider    |1.2.3213        |1.2.1672                  |
+|Public     |1.2.3317        |1.2.1672                  |
+|Insider    |1.2.3401        |1.2.1672                  |
+
+## Updates for version 1.2.3401 (Insider)
+
+Date published: 7/19/2022
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+
+- Fixed an issue where the narrator was announcing the Tenant Expander button as "on" or "off" instead of "expanded" or “collapsed."
+- Fixed an issue where the text size didn't change when the user adjusted the text size system setting.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+
+## Updates for version 1.2.3317
+
+*Date published: 7/12/2022*
+
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+
+- Fixed the vulnerability known as [CVE-2022-30221](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-30221).
+
+## Updates for version 1.2.3316
+
+*Date published: 7/06/2022*
+
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE50Mp8), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE50uqL), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE50uqM)
+
+- Fixed an issue where the service couldn't render RemoteApp windows while RemoteFX Advanced Graphics were disabled.
+- Fixed an issue that happened when a user tried to connect to an Azure Virtual Desktop endpoint while using the Remote Desktop Services Transport Layer Security protocol (RDSTLS) with CredSSP disabled, which caused the Windows Desktop client to not prompt the user for credentials. Because the client couldn't authenticate, it would get stuck in an infinite loop of failed connection attempts.
+- Fixed an issue that happened when users tried to connect to an Azure Active Directory (Azure AD)-joined Azure Virtual Desktop endpoint from a client machine joined to the same Azure AD tenant while the Credential Security Support Provider protocol (CredSSP) was disabled.
+- Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
+- Updates to Teams for Azure Virtual Desktop, including the following:
+  - Better noise suppression during calls.
+  - A diagnostic overlay now appears when you press **Shift+Ctrl+Semicolon (;)** during calls. The diagnostic overlay only works with version 1.17.2205.23001 or later of the Remote Desktop WebRTC Redirector Service. You can download the latest version of the service [here](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4YM8L).
 
 ## Updates for version 1.2.3213
 
 *Date published: 6/02/2022*
-
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Reduced flicker when application is restored to full-screen mode from minimized state in single-monitor configuration.
 - The client now shows an error message when the user tries to open a connection from the UI, but the connection doesn't launch.
@@ -35,8 +65,6 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Wi
 ## Updates for version 1.2.3130
 
 *Date published: 05/10/2022*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4X1UX), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Xafz), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Xafx)
 
 - Fixed the vulnerability known as [CVE-2022-22017](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-22017).
 - Fixed the vulnerability known as [CVE-2022-26940](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26940).

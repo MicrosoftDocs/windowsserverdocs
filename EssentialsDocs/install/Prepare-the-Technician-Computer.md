@@ -17,7 +17,7 @@ The technician computer contains the tools and documentation in the Windows Asse
 
 -   Prepare a computer with the Windows 7, Windows 8 or Windows 10.
 
--   Install Windows ADK on the computer running Windows 7, Windows 8 or Windows 10 from the [Microsoft website](https://go.microsoft.com/fwlink/?LinkID=248647).
+-   Install Windows ADK on the computer running Windows 7, Windows 8 or Windows 10 from the [Microsoft website](/windows-hardware/get-started/adk-install).
 
 ## See Also
 

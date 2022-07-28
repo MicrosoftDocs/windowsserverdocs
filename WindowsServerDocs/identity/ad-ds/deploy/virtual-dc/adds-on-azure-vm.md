@@ -4,7 +4,7 @@ description: How to create a new Active Directory forest on a virtual machine (V
 author: iainfoulds
 ms.author: daveba
 manager: daveba
-ms.date: 12/16/2021
+ms.date: 6/28/2022
 ms.topic: article
 ---
 
@@ -16,7 +16,7 @@ AD DS can run on an Azure virtual machine (VM) in the same way it runs in many o
 
 * A resource group to put everything in.
 * An [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview), subnet, network security group, and rule to allow RDP access to VMs.
-* An Azure virtual machine [availability set](/azure/virtual-machines/availability-set-overview#availability-sets) to put two Active Directory Domain Services (AD DS) domain controllers in.
+* An Azure virtual machine [availability set](/azure/virtual-machines/availability-set-overview) to put two Active Directory Domain Services (AD DS) domain controllers in.
 * Two Azure virtual machines to run AD DS and DNS.
 
 ### Items that are not covered

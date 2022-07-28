@@ -110,7 +110,7 @@ The next step is to install server roles on every server. You can do this by usi
 - RSAT-Clustering-PowerShell
 - Hyper-V-PowerShell
 
-To install via PowerShell, use the [Install-WindowsFeature](/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) cmdlet. You can use it on a single server like this:
+To install via PowerShell, use the [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature) cmdlet. You can use it on a single server like this:
 
 ```PowerShell
 Install-WindowsFeature -Name "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "RSAT-Clustering-PowerShell", "Hyper-V-PowerShell", "FS-FileServer"

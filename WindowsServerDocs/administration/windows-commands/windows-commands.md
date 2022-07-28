@@ -598,6 +598,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [pentnt](pentnt.md)
 - [perfmon](perfmon.md)
 - [ping](ping.md)
+- [pktmon](pktmon.md)
 - [pnpunattend](pnpunattend.md)
 - [pnputil](pnputil.md)
 - [popd](popd.md)

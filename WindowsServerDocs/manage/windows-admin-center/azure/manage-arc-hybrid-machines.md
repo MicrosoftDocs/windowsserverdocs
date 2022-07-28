@@ -81,8 +81,8 @@ To check the status of the resource provider and register if needed:
 1. Select the name of your subscription.
 1. Select **Resource providers**.
 1. Search for **Microsoft.HybridConnectivity**.
-1. If the status is *NotRegistered*, select **Microsoft.HybridConnectivity**, and then select **Register**.
-1. Verify that the status of Microsoft.DesktopVirtualization is **Registered**.
+1. Verify that the status of Microsoft.HybridConnectivity is **Registered**.
+    1. If the status is *NotRegistered*, select **Microsoft.HybridConnectivity**, and then select **Register**.
 
 ### Azure permissions
 
@@ -216,7 +216,15 @@ Here are some tips to try in case something isn't working. For general  Windows 
 
 ### Failed to connect error
 
-1. Check that your Extension version is 0.0.0.169 or higher
+1. Restart the HIMDS service.
+    1. RDP into your server.
+    1. Open PowerShell as an administrator and run:
+
+        ```powershell
+        Restart-Service -Name himds
+        ```
+        
+1. Check that your Extension version is 0.0.0.169 or higher.
     1. Navigate to the Azure Portal
     1. Navigate to "Extensions"
     1. Check that the "AdminCenter" extension version is 0.0.0.169 or higher
@@ -227,12 +235,6 @@ Here are some tips to try in case something isn't working. For general  Windows 
     1. Open **Task Manager (Ctrl+Shift+Esc)** and navigate to **Services**.
     1. Make sure **ServerManagementGateway / Windows Admin Center** is running.
     1. If it isn't running, start the service.
-
-1. Check that your installation is in a good state.
-    1. RDP into your server.
-    1. Open a browser and type `https://localhost:<port>` replacing `<port>` with the port on which you installed Windows Admin Center. Not sure what port you installed it on? Check out the Frequently Asked Questions below.
-    1. If this doesn’t load, open Task Manager > Details and end the Sme.exe process. Try loading `https://localhost:<port>` on your browser again.
-    1. If this still doesn’t load, there might be something wrong with your installation. Go back to the Azure portal, navigate to “Extensions”, and uninstall the Admin Center extension. Navigate back to “Windows Admin Center (preview)” and reinstall the extension.
 
 1. Check that the port is enabled for reverse proxy session.
     1. RDP into your server.

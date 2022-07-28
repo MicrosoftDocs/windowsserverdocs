@@ -312,7 +312,7 @@ items:
       - name: Create volumes
         href: /azure-stack/hci/manage/create-volumes?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Nested resiliency
-        href: storage-spaces/nested-resiliency.md
+        href: /azure-stack/hci/concepts/nested-resiliency?toc=/windows-server/storage/toc.json&bc=/windows-server/breadcrumbs/toc.json
       - name: Configure quorum
         href: ../failover-clustering/manage-cluster-quorum.md
       - name: Upgrade a Storage Spaces Direct cluster

@@ -61,7 +61,7 @@ After the Windows Admin process restarts, you will be able to exercise the APIs 
 
 ### Optional: Attach to plugin for debugging
 
-In Visual Studio 2017, from the Debug menu, select "Attach to Process". In the next window, scroll through the Available Processes list and select SMEDesktop.exe, then click "Attach". Once the debugger starts, you can place a breakpoint in your feature code and then exercise through the above URL format. For our sample project (feature name: "Sample Uno") the URL is: "<http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno>"
+In Visual Studio 2017, from the Debug menu, select "Attach to Process". In the next window, scroll through the Available Processes list and select SMEDesktop.exe, then click "Attach". Once the debugger starts, you can place a breakpoint in your feature code and then exercise through the above URL format. For our sample project (feature name: "Sample Uno") the URL is: `"<http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno>"`
 
 ## Create a tool extension with the Windows Admin Center SDK ##
 

@@ -7,6 +7,7 @@ ms.assetid: 7b4267f0-1c91-4a40-9262-5daf4659f686
 author: jaimeo
 ms.author: jaimeo
 ms.date: 09/06/2017
+ROBOTS: NOINDEX,NOFOLLOW
 ---
 # Developing PowerShell Cmdlets for Nano Server
 

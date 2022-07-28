@@ -3,7 +3,7 @@ title: Host Compute Network (HCN) scenarios
 description: Sample showing how to use Host Compute Network Service API to create a Host Compute Network on the host that can be used to connect Virtual NICS to Virtual Machines or Containers.
 ms.author: daschott
 author: daschott
-ms.date: 11/05/2018
+ms.date: 6/28/2022
 ms.topic: article
 ---
 
@@ -13,7 +13,7 @@ ms.topic: article
 
 ## Scenario: HCN
 
-### Create an HCN
+### Create a HCN
 
 This sample shows how to use Host Compute Network Service API to create a Host Compute Network on the host that can be used to connect Virtual NICS to Virtual Machines or Containers.
 
@@ -101,7 +101,7 @@ void CreateHcnNetwork()
     }
 }
 ```
-### Delete an HCN
+### Delete a HCN
 This sample shows how to use Host Compute Network Service API to Open & Delete a Host Compute Network
 ```C++
     wil::unique_cotaskmem_string errorRecord;
@@ -155,8 +155,8 @@ This sample shows how to use Host Compute Network Service API to query network p
     }
 ```
 ## Scenario: HCN endpoint
-### Create an HCN endpoint
-This sample shows how to use Host Compute Network Service API to create a Host Compute Network Endpoint and then hot add it to the  Virtual Machine or a Container.
+### Create a HCN endpoint
+This sample shows how to use Host Compute Network Service API to create a Host Compute Network Endpoint and then hot add it to the Virtual Machine or a Container.
 ```C++
 using unique_hcn_endpoint = wil::unique_any<
     HCN_ENDPOINT,
@@ -227,7 +227,7 @@ This sample shows how to use Host Compute Network Service API to delete  a Host 
         THROW_HR(hr);
     }
 ```
-### Modify and endpoint
+### Modify an endpoint
 This sample shows how to use Host Compute Network Service API to modify a Host Compute Network Endpoint.
 ```C++
     unique_hcn_endpoint hcnendpoint;
@@ -256,7 +256,7 @@ This sample shows how to use Host Compute Network Service API to modify a Host C
         THROW_HR(hr);
     }
 ```
-### Enumerate all enpoints
+### Enumerate all endpoints
 This sample shows how to use Host Compute Network Service API to enumerate all Host Compute Network Endpoints.
 ```C++
     wil::unique_cotaskmem_string errorRecord;
@@ -298,7 +298,7 @@ This sample shows how to use Host Compute Network Service API to query all prope
     }
 ```
 ## Scenario: HCN namespace
-### Create an HCN namespace
+### Create a HCN namespace
 This sample shows how to use Host Compute Network Service API to create a Host Compute Network Namespace on the host that can be used to connect Endpoint and  Containers.
 ```C++
 using unique_hcn_namespace = wil::unique_any<
@@ -348,7 +348,7 @@ void CreateHcnNamespace()
     }
 }
 ```
-### Delete an HCN namespace
+### Delete a HCN namespace
 This sample shows how to use Host Compute Network Service API to delete a Host Compute Network Namespace.
 ```C++
     wil::unique_cotaskmem_string errorRecord;
@@ -360,7 +360,7 @@ This sample shows how to use Host Compute Network Service API to delete a Host C
         THROW_HR(hr);
     }
 ```
-### Modify an HCN namespace
+### Modify a HCN namespace
 This sample shows how to use Host Compute Network Service API to modify a Host Compute Network Namespace.
 ```C++
     unique_hcn_namespace handle;
@@ -375,7 +375,7 @@ This sample shows how to use Host Compute Network Service API to modify a Host C
     static std::wstring  ModifySettingAddEndpointJson = LR"(
     {
         "ResourceType" : 1,
-        "ResourceType" : 0,
+        "RequestType" : 0,
         "Settings" : {
             "EndpointId" : "87fdcf16-d210-426e-959d-2a1d4f41d6d1"
         }
@@ -435,7 +435,7 @@ This sample shows how to use Host Compute Network Service API to query Host Comp
     }
 ```
 ## Scenario: HCN load balancer
-### Create an HCN load balancer
+### Create a HCN load balancer
 This sample shows how to use Host Compute Network Service API to create a Host Compute Network Load Balancer on the host that can be used to load balance Endpoint across compute.
 ```C++
 using unique_hcn_loadbalancer = wil::unique_any<
@@ -497,8 +497,8 @@ void CreateHcnLoadBalancer()
     }
 }
 ```
-### Delete an HCN load balancer
-This sample shows how to use Host Compute Network Service API to delete a Host Compute Network LoadBalancer.
+### Delete a HCN load balancer
+This sample shows how to use Host Compute Network Service API to delete a Host Compute Network Load Balancer.
 ```C++
     wil::unique_cotaskmem_string errorRecord;
     GUID lbGuid; // Initialize it to appropriate loadbalancer guid value
@@ -509,8 +509,8 @@ This sample shows how to use Host Compute Network Service API to delete a Host C
         THROW_HR(hr);
     }
 ```
-### Modify an HCN load balancer
-This sample shows how to use Host Compute Network Service API to modify a Host Compute Network Namespace.
+### Modify a HCN load balancer
+This sample shows how to use Host Compute Network Service API to modify a Host Compute Network Load Balancer.
 ```C++
     unique_hcn_loadbalancer handle;
     GUID lbGuid; // Initialize it to appropriate loadbalancer guid value
@@ -524,7 +524,7 @@ This sample shows how to use Host Compute Network Service API to modify a Host C
     static std::wstring  ModifySettingAddEndpointJson = LR"(
     {
         "ResourceType" : 1,
-        "ResourceType" : 0,
+        "RequestType" : 0,
         "Settings" : {
             "EndpointId" : "87fdcf16-d210-426e-959d-2a1d4f41d6d1"
         }
@@ -560,7 +560,7 @@ This sample shows how to use Host Compute Network Service API to enumerate all H
     }
 ```
 ### Query load balancer properties
-This sample shows how to use Host Compute Network Service API to query Host Compute Network LoadBalancer properties.
+This sample shows how to use Host Compute Network Service API to query Host Compute Network Load Balancer properties.
 ```C++
     unique_hcn_loadbalancer handle;
     GUID lbGuid; // Initialize it to appropriate loadbalancer guid value
