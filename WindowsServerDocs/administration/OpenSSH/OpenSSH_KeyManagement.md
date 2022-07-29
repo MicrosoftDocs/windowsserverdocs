@@ -165,7 +165,7 @@ ssh user1@domain1@contoso.com mkdir C:\ProgramData\ssh\
 scp C:\Users\username\.ssh\id_ed25519.pub user1@domain1@contoso.com:C:\ProgramData\ssh\administrators_authorized_keys
 
 # Appropriately ACL the authorized_keys file on your server
-ssh --% user1@domain1@contoso.com icacls.exe "C:\ProgramData\ssh\administrators_authorized_keys" /inheritance:r /grant "Administrators:F" /grant "SYSTEM:F"
+ssh --% user1@domain1@contoso.com icacls.exe "C:\ProgramData\ssh\administrators_authorized_keys" /inheritance:r /grant "Administrators:F" /grant "SYSTEM:F" /remove "Authenticated Users"
 ```
 
 These steps complete the configuration required to use key-based authentication with OpenSSH on Windows.
