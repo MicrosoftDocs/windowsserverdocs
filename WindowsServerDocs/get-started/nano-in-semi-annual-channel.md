@@ -14,6 +14,9 @@ ROBOTS: NOINDEX,NOFOLLOW
 
 >Applies to: Windows Server, Semi-Annual Channel
 
+> [!IMPORTANT]
+> On October 9, 2018, support for the [Nano Server installation option ended](/lifecycle/products/windows-server-2016-nano-server-installation-option). Starting in Windows Server, version 1709, Nano Server is available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.
+
 If you're already running Nano Server, the [Window Server Semi-Annual Channel](../get-started/servicing-channels-comparison.md) servicing model will be familiar, since it was formerly serviced by the Current Branch for Business (CBB) model. Windows Server Semi-Annual Channel is just a new name for the same model. In this model, feature update releases of Nano Server are expected two to three times per year.
 
 However, starting with Windows Server, version 1803, Nano Server is available only as a **container base OS image**. You must run it as a container in a container host, such as a Server Core installation of Windows Server. Running a container based on Nano Server in this release differs from earlier releases in these ways:
