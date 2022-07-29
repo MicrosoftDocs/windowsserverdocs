@@ -41,6 +41,7 @@ Below is an alphabetical list of Microsoft and third-party providers with MFA of
 |inWebo Technologies|inWebo Enterprise Authentication service|[inWebo Enterprise Authentication](http://www.inwebo.com)|
 |Microsoft Corp.|Microsoft Azure MFA|[Configure Azure MFA as authentication provider with AD FS](configure-ad-fs-and-azure-mfa.md)|
 Mideye | Mideye Authentication Provider for AD FS | [Mideye two-factor authentication with Microsoft Active Directory Federation Service](https://www.mideye.com/support/administrators/documentation/integration/microsoft-adfs/)|
+|miniOrange | miniOrange MFA for AD FS | [Steps to Enable Multi-factor Authentication (MFA) for AD FS](https://idp.miniorange.com/steps-to-enable-2fa-on-top-of-adfs-authentication/#:~:text=The%20miniOrange%20ADFS%20MFA%20connector,and%20password%20of%20ADFS%20Deployment.) |
 |Okta | Okta MFA for Active Directory Federation Services | [Okta MFA for Active Directory Federation Services (AD FS)](https://help.okta.com/en/prod/Content/Topics/integrations/adfs-okta-int.htm)|
 |One Identity| Defender AD FS|[Defender AD FS Adapter](https://www.oneidentity.com/products/defender/)|
 |Ping Identity|PingID MFA Adapter for AD FS|[PingID MFA Adapter for AD FS](https://documentation.pingidentity.com/pingid/pingidAdminGuide/index.shtml#pid_c_PingIDforADFSSSO.html)|
