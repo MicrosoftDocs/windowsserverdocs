@@ -95,6 +95,9 @@ conceptualContent:
         - url: ./manage/windows-admin-center/overview.md
           itemType: overview
           text: Use Windows Admin Center to manage your environment
+        - url: ./administration/OpenSSH/OpenSSH_Overview.md
+          itemType: overview
+          text: OpenSSH in Windows Overview
         - url: ./manage/system-insights/overview.md
           itemType: overview
           text: System Insights overview
