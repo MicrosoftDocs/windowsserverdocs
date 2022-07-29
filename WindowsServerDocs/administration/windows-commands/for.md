@@ -23,7 +23,7 @@ for {%% | %}<variable> in (<set>) do <command> [<commandlineoptions>]
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{%% | %}<variable>` | Required. Represents a replaceable parameter. Use a single percent sign (`%`) to carry out the **for** command at the command prompt. Use double percent signs (`%%`) to carry out the **for** command within a batch file. Variables are case sensitive, and they must be represented with an alphabetical value such as **%a**, **%b**, or **%c**. |
+| `{%% \| %}<variable>` | Required. Represents a replaceable parameter. Use a single percent sign (`%`) to carry out the **for** command at the command prompt. Use double percent signs (`%%`) to carry out the **for** command within a batch file. Variables are case sensitive, and they must be represented with an alphabetical value such as **%a**, **%b**, or **%c**. |
 | (`<set>`) | Required. Specifies one or more files, directories, or text strings, or a range of values on which to run the command. The parentheses are required. |
 | `<command>` | Required. Specifies the command that you want to carry out on each file, directory, or text string, or on the range of values included in *set*. |
 | `<commandlineoptions>` | Specifies any command-line options that you want to use with the specified command. |
@@ -76,7 +76,7 @@ for {%% | %}<variable> in (<set>) do <command> [<commandlineoptions>]
     for /l {%%|%}<variable> in (<start#>,<step#>,<end#>) do <command> [<commandlinepptions>]
     ```
 
-  - **Iterating and file parsing:** Use file parsing to process command output, strings, and file content. Use iterative variables to define the content or strings that you want to examine, and use the various *parsingkeywords* options to further modify the parsing.  Use the *parsingkeywords* token option to specify which tokens should be passed as iterative variables. Note that when used without the token option, **/f** will only examine the first token.
+  - **Iterating and file parsing:** Use file parsing to process command output, strings, and file content. Use iterative variables to define the content or strings that you want to examine, and use the various *parsingkeywords* options to further modify the parsing.  Use the *parsingkeywords* token option to specify which tokens should be passed as iterative variables. When used without the token option, **/f** will only examine the first token.
 
     File parsing consists of reading the output, string, or file content, and then breaking it into individual lines of text and parsing each line into zero or more tokens. The **for** loop is then called with the iterative variable value set to the token. By default, **/f** passes the first blank separated token from each line of each file. Blank lines are skipped.
 
@@ -138,7 +138,7 @@ for {%% | %}<variable> in (<set>) do <command> [<commandlineoptions>]
 
     By using uppercase variable names such as `%I`, you can make your code more readable and avoid confusion with the modifiers, which are not case sensitive.
 
-- **Parsing a string:** You can use the `for /f` parsing logic on an immediate string by wrapping `<literalstring>` in either: double quotes (*without* usebackq) or in single quotes (*with* usebackq) --for example, (MyString) or ('MyString'). `<literalstring>` is treated as a single line of input from a file. When parsing `<literalstring>` in double-quotes, command symbols (such as, `\ & | > < ^`) are treated as ordinary characters.
+- **Parsing a string:** You can use the `for /f` parsing logic on an immediate string by wrapping `<literalstring>` in either: double quotes (*without* usebackq) or in single quotes (*with* usebackq) --for example, (MyString) or ('MyString'). `<literalstring>` is treated as a single line of input from a file. When parsing `<literalstring>` in double-quotes, command symbols such as (`\ & | > < ^`) are treated as ordinary characters.
 
 - **Parsing output:** You can use the `for /f` command to parse the output of a command by placing a back-quoted `<command>` between the parentheses. It is treated as a command line, which is passed to a child Cmd.exe. The output is captured into memory and parsed as if it is a file.
 
@@ -171,7 +171,7 @@ This command parses each line in *myfile.txt*. It ignores lines that begin with 
 To parse the output of a command by placing *set* between the parentheses, type:
 
 ```
-for /f usebackq delims== %i in ('set') do @echo %i
+for /f "usebackq delims==" %i in (`set`) do @echo %i
 ```
 
 ## Additional References
