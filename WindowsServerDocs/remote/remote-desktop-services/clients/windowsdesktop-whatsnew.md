@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/19/2022
+ms.date: 08/02/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -17,14 +17,14 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
-|Public     |1.2.3317        |1.2.1672                  |
+|Public     |1.2.3401        |1.2.1672                  |
 |Insider    |1.2.3401        |1.2.1672                  |
 
-## Updates for version 1.2.3401 (Insider)
+## Updates for version 1.2.3401
 
-Date published: 7/19/2022
+Date published: 8/02/2022
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
+Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
 
 - Fixed an issue where the narrator was announcing the Tenant Expander button as "on" or "off" instead of "expanded" or “collapsed."
 - Fixed an issue where the text size didn't change when the user adjusted the text size system setting.
@@ -34,15 +34,13 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 
 *Date published: 7/12/2022*
 
-Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139369), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139456), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139370)
+Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE518ld), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE50W7f), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE50W7e)
 
 - Fixed the vulnerability known as [CVE-2022-30221](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-30221).
 
 ## Updates for version 1.2.3316
 
 *Date published: 7/06/2022*
-
-Download: [Windows 64-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE50Mp8), [Windows 32-bit](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE50uqL), [Windows ARM64](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE50uqM)
 
 - Fixed an issue where the service couldn't render RemoteApp windows while RemoteFX Advanced Graphics were disabled.
 - Fixed an issue that happened when a user tried to connect to an Azure Virtual Desktop endpoint while using the Remote Desktop Services Transport Layer Security protocol (RDSTLS) with CredSSP disabled, which caused the Windows Desktop client to not prompt the user for credentials. Because the client couldn't authenticate, it would get stuck in an infinite loop of failed connection attempts.
