@@ -1,6 +1,6 @@
 ---
 title: Security Principals for Windows Server
-description: Security Principals for Windows Server accounts and security groups
+description: Security Principals for Windows Server accounts and security groups and how they work in Active Directory
 author: dansimp
 ms.author: dansimp
 ms.topic: article

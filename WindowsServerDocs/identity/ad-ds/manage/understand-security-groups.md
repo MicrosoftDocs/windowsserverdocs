@@ -1,6 +1,6 @@
 ---
 title: Active Directory Security Groups (Windows Server)
-description: Active Directory Security Groups
+description: Windows Server Active Directory security groups, scope, and functions
 author: dansimp
 ms.author: dansimp
 ms.topic: article
@@ -202,8 +202,7 @@ Members of the Administrators group have complete and unrestricted access to the
 The Administrators group applies to versions of the Windows Server operating system listed in the [Active Directory Default Security Groups](#active-directory-default-security-groups-by-operating-system-version) table.
 
 > [!NOTE]
-> The Administrators group has built-in capabilities that give its members full control over the system. This group cannot be renamed, deleted, or moved. This built-in group controls access to all the domain controllers in its domain, and it can change the membership of all administrative groups.
-Membership can be modified by members of the following groups: the default service Administrators, Domain Admins in the domain, or Enterprise Admins. This group has the special privilege to take ownership of any object in the directory or any resource on a domain controller. This account is considered a service administrator group because its members have full access to the domain controllers in the domain.
+> The Administrators group has built-in capabilities that give its members full control over the system. This group cannot be renamed, deleted, or moved. This built-in group controls access to all the domain controllers in its domain, and it can change the membership of all administrative groups. Membership can be modified by members of the following groups: the default service Administrators, Domain Admins in the domain, or Enterprise Admins. This group has the special privilege to take ownership of any object in the directory or any resource on a domain controller. This account is considered a service administrator group because its members have full access to the domain controllers in the domain.
 
 This security group includes the following changes since Windows Server 2008:
 

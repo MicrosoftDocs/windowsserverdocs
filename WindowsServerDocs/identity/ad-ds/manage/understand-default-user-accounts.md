@@ -1,6 +1,6 @@
 ---
 title: Active Directory Accounts (Windows Server)
-description: Windows Server Active Directory Accounts
+description: Creating default local Windows Server Active Directory accounts on a domain controller
 author: dansimp
 ms.author: dansimp
 ms.topic: article
@@ -341,11 +341,11 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
 3. Right-click **Group Policy Objects**, and &gt; **New**.
 
-    ![Local active directory account restriction](media/default-user-account-restrict1.png)
+    ![Object being added into Group Policy Management Console (GPMC) window](media/default-user-account-restrict1.png)
 
 4. In the **New GPO** dialog box, name the GPO that restricts administrators from signing in to workstations, and &gt; **OK**.
 
-    ![Local active directory account restriction](media/default-user-account-restrict2.png)
+    ![A Group Policy Object (GPO) window where a new object is created](media/default-user-account-restrict2.png)
 
 5. Right-click **New GPO**, and &gt; **Edit**.
 
@@ -359,44 +359,31 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
    3. Click **Add User or Group**, click **Browse**, type **Domain Admins**, and &gt; **OK**.
 
-        ![Local active directory account restriction](media/default-user-account-restrict3.png)
+        ![User Rights Management window showing domain account policy](media/default-user-account-restrict3.png)
+
+        > [!TIP]
+        > You can optionally add any groups that contain server administrators who you want to restrict from signing in to workstations.
 
         > [!NOTE]
-        > You can optionally add any groups that contain server administrators who you want to restrict from signing in to workstations.
+        > Completing this step might cause issues with administrator tasks that run as scheduled tasks or services with accounts in the Domain Admins group. The practice of using domain administrator accounts to run services and tasks on workstations creates a significant risk of credential theft attacks and therefore should be replaced with alternative means to run scheduled tasks or services.
 
    4. Click **OK** to complete the configuration.
 
-8. Configure the user rights to deny batch and service logon rights for domain administrators as follows:
-
-    > [!NOTE]
-    > Completing this step might cause issues with administrator tasks that run as scheduled tasks or services with accounts in the Domain Admins group. The practice of using domain administrator accounts to run services and tasks on workstations creates a significant risk of credential theft attacks and therefore should be replaced with alternative means to run scheduled tasks or services.
-
-    1. Double-click **Deny logon as a batch job**, and &gt; **Define these policy settings**.
-
-    2. Click **Add User or Group** &gt; **Browse**, type **Enterprise Admins**, and &gt; **OK**.
-
-    3. Click **Add User or Group** &gt; **Browse**, type **Domain Admins**, and &gt; **OK**.
-
-        ![Local active directory account restriction](media/default-user-account-restrict3.png)
-
-        > [!NOTE]
-        > You can optionally add any groups that contain server administrators who you want to restrict from signing in to workstations.
-
-9. Link the GPO to the first Workstations OU.
+8. Link the GPO to the first Workstations OU.
 
     Navigate to the *&lt;forest&gt;*\\Domains\\`<domain>`\\OU Path, and then:
 
     1. Right-click the workstation OU, and then &gt; **Link an Existing GPO**.
 
-        ![Local active directory account restriction](media/default-user-account-restrict4.png)
+        ![A Group Policy Object (GPO) being linked to an organizational unit](media/default-user-account-restrict4.png)
 
     2. Select the GPO that you just created, and &gt; **OK**.
 
-        ![Local active directory account restriction](media/default-user-account-restrict5.png)
+        ![Group Policy Object (GPO) window linking a restricted admin account](media/default-user-account-restrict5.png)
 
-10. Test the functionality of enterprise applications on workstations in the first OU and resolve any issues caused by the new policy.
+9. Test the functionality of enterprise applications on workstations in the first OU and resolve any issues caused by the new policy.
 
-11. Link all other OUs that contain workstations.
+10. Link all other OUs that contain workstations.
 
     However, do not create a link to the Administrative Workstation OU if it is created for administrative workstations that are dedicated to administration duties only, and that are without Internet or email access.
 
@@ -413,7 +400,7 @@ It is a best practice to configure the user objects for all sensitive accounts i
 
 As with any configuration change, test this enabled setting fully to ensure that it performs correctly before you implement it.
 
-![Setting Active Directory local account properties to not be delegated](media/active-directory-account-properties.png)
+![Active Directory properties window setting local account(s) to not be delegated](media/active-directory-account-properties.png)
 
 ## Secure and manage domain controllers
 

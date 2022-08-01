@@ -1,6 +1,6 @@
 ---
 title: Security identifiers for Windows Server
-description: Security identifiers for Windows Server accounts and groups
+description: Security identifiers (SID) for Windows Server accounts and groups and unique identifiers
 author: dansimp
 ms.author: dansimp
 ms.topic: article

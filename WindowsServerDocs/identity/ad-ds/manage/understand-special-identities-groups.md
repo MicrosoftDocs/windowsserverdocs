@@ -1,6 +1,6 @@
 ---
 title: Special Identities (Windows Server)
-description: Special Identities for Windows Server
+description: Windows Server special identities groups usage in Windows access control 
 author: dansimp
 ms.author: dansimp
 ms.topic: article
