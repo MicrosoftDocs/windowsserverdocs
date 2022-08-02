@@ -58,7 +58,7 @@ Credential information is encrypted twice. The first encryption is based on the 
 
     User data does not roam over a wireless wide area network (WWAN) by default, thereby protecting profile data. All data and settings that leave a device are transmitted through the TLS/SSL protocol.
 
-**Microsoft account security information is added**.
+### Microsoft account security information
 
 Users can add security information to their Microsoft accounts through the **Accounts** interface on computers running the supported versions of Windows. This feature allows the user to update the security information that they provided when they created their accounts. This security information includes an alternate email address or phone number so if their password is compromised or forgotten, a verification code can be sent to verify their identity. Users can potentially use their Microsoft accounts to store corporate data on a personal OneDrive or email app, so it is safe practice for the account owner to keep this security information up-to-date.
 
@@ -68,21 +68,13 @@ Although the Microsoft account was designed to serve consumers, you might find s
 
 - **Download Microsoft Store apps**. If your enterprise chooses to distribute software through the Microsoft Store, your users can use their Microsoft accounts to download and use them on up to five devices running any version of Windows 10, Windows 8.1, Windows 8, or Windows RT.
 
-- **Single sign-on**:
+- **Single sign-on**. Your users can use Microsoft account credentials to sign in to devices running Windows 10, Windows 8.1, Windows 8 or Windows RT. When they do this, Windows works with your Microsoft Store app to provide authenticated experiences for them. Users can associate a Microsoft account with their sign-in credentials for Microsoft Store apps or websites, so that these credentials roam across any devices running these supported versions.
 
-    Your users can use Microsoft account credentials to sign in to devices running Windows 10, Windows 8.1, Windows 8 or Windows RT. When they do this, Windows works with your Microsoft Store app to provide authenticated experiences for them. Users can associate a Microsoft account with their sign-in credentials for Microsoft Store apps or websites, so that these credentials roam across any devices running these supported versions.
+- **Personalized settings synchronization**. Users can associate their most commonly used operating-system settings with a Microsoft account. These settings are available whenever a user signs in with that account on any device that is running a supported version of Windows and is connected to the cloud. After a user signs in, the device automatically attempts to get the user's settings from the cloud and apply them to the device.
 
-- **Personalized settings synchronization**:
+- **App synchronization**. Microsoft Store apps can store user-specific settings so that these settings are available to any device. As with operating system settings, these user-specific app settings are available whenever the user signs in with the same Microsoft account on any device that is running a supported version of Windows and is connected to the cloud. After the user signs in, that device automatically downloads the settings from the cloud and applies them when the app is installed.
 
-    Users can associate their most commonly used operating-system settings with a Microsoft account. These settings are available whenever a user signs in with that account on any device that is running a supported version of Windows and is connected to the cloud. After a user signs in, the device automatically attempts to get the user's settings from the cloud and apply them to the device.
-
-- **App synchronization**:
-
-    Microsoft Store apps can store user-specific settings so that these settings are available to any device. As with operating system settings, these user-specific app settings are available whenever the user signs in with the same Microsoft account on any device that is running a supported version of Windows and is connected to the cloud. After the user signs in, that device automatically downloads the settings from the cloud and applies them when the app is installed.
-
-- **Integrated social media services**:
-
-    Contact information and status for your users’ friends and associates automatically stay up-to-date from sites such as Hotmail, Outlook, Facebook, Twitter, and LinkedIn. Users can also access and share photos, documents, and other files from sites such as OneDrive, Facebook, and Flickr.
+- **Integrated social media services**. Contact information and status for your users’ friends and associates automatically stay up-to-date from sites such as Hotmail, Outlook, Facebook, Twitter, and LinkedIn. Users can also access and share photos, documents, and other files from sites such as OneDrive, Facebook, and Flickr.
 
 ### Managing the Microsoft account in the domain
 
@@ -105,43 +97,39 @@ Depending on your IT and business models, introducing Microsoft accounts into yo
 The following Group Policy settings help control the use of Microsoft accounts in the enterprise:
 
 - [Block all consumer Microsoft account user authentication](#block-all-consumer-microsoft-account-user-authentication)
+
 - [Accounts: Block Microsoft accounts](#accounts-block-microsoft-accounts)
 
-#### Block all consumer Microsoft account user authentication
+### Block all consumer Microsoft account user authentication
 
 This setting controls whether users can provide Microsoft accounts for authentication for applications or services.
 
 If this setting is enabled, all applications and services on the device are prevented from using Microsoft accounts for authentication. This applies both to existing users of a device and new users who may be added.
 
-However, any application or service that has already authenticated a user will not be affected by enabling this setting until the authentication cache expires.
-It is recommended to enable this setting before any user signs in to a device to prevent cached tokens from being present.
+However, any application or service that has already authenticated a user will not be affected by enabling this setting until the authentication cache expires. It is recommended to enable this setting before any user signs in to a device to prevent cached tokens from being present.
 
 If this setting is disabled or not configured, applications and services can use Microsoft accounts for authentication. This setting is **Disabled** by default.
 
 This setting does not affect whether users can sign in to devices by using Microsoft accounts, or the ability for users to provide Microsoft accounts via the browser for authentication with web-based applications.
 
-The path to this setting is:
+The path to this setting is: **Computer Configuration\Administrative Templates\Windows Components\Microsoft account**.
 
-**Computer Configuration\Administrative Templates\Windows Components\Microsoft account**
-
-#### Accounts: Block Microsoft accounts
+### Accounts: Block Microsoft accounts
 
 This setting prevents using the **Settings** app to add a Microsoft account for single sign-on (SSO) authentication for Microsoft services and some background services, or using a Microsoft account for single sign-on to other applications or services.
 
 There are two options if this setting is enabled:
 
-- **Users can’t add Microsoft accounts** means that existing connected accounts can still sign in to the device (and appear on the Sign in screen). However, users cannot use the **Settings** app to add new connected accounts (or connect local accounts to Microsoft accounts).
-- **Users can’t add or log on with Microsoft accounts** means that users cannot add new connected accounts (or connect local accounts to Microsoft accounts) or use existing connected accounts through **Settings**.
+- **Users can’t add Microsoft accounts**. Existing connected accounts can still sign in to the device (and appear on the Sign in screen). However, users cannot use the **Settings** app to add new connected accounts or connect local accounts to Microsoft accounts.
+- **Users can’t add or log on with Microsoft accounts**. Users cannot add new connected accounts (or connect local accounts to Microsoft accounts) or use existing connected accounts through **Settings**.
 
 This setting does not affect adding a Microsoft account for application authentication. For example, if this setting is enabled, a user can still provide a Microsoft account for authentication with an application such as **Mail**, but the user cannot use the Microsoft account for single sign-on authentication for other applications or services (in other words, the user will be prompted to authenticate for other applications or services).
 
 This setting is **Not defined** by default.
 
-The path to this setting is:
+The path to this setting is: **Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**.
 
-**Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**
-
-### Configure connected accounts
+## Configure connected accounts
 
 Users can connect a Microsoft account to their domain account and synchronize the settings and preferences between them. This enables users to see the same desktop background, app settings, browser history and favorites, and other Microsoft account settings on their other devices.
 
