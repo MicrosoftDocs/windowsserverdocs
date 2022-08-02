@@ -202,67 +202,61 @@ If nothing seems wrong and Windows Admin Center still won't install, open a supp
 You can automate Windows Admin Center deployment in Azure portal by using this Azure Resource Manager template.
 
 ```json
-const deploymentTemplate = {
-        "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-        "contentVersion": "1.0.0.0",
-        "parameters": {
-            "vmName": {
-                "type": "string"
-            },
-            "location": {
-                "type": "string"
-            },
-            "extensionName": {
-                "type": "string"
-            },
-            "extensionPublisher": {
-                "type": "string"
-            },
-            "extensionType": {
-                "type": "string"
-            },
-            "extensionVersion": {
-                "type": "string"
-            },
-            "port": {
-                "type": "string"
-            },
-            "salt": {
-                "type": "string"
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vmName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the already created Virtual Machine"
             }
         },
-        "resources": [
-            {
-                "type": "Microsoft.Compute/virtualMachines/extensions",
-                "name": "[concat( parameters('vmName'), '/' , parameters('extensionName') )]",
-                "apiVersion": "2018-10-01",
-                "location": "[parameters('location')]",
-                "properties": {
-                    "publisher": "[parameters('extensionPublisher')]",
-                    "type": "[parameters('extensionType')]",
-                    "typeHandlerVersion": "[parameters('extensionVersion')]",
-                    "autoUpgradeMinorVersion": true,
-                    "settings": {
-                        "port": "[parameters('port')]",
-                        "salt": "[parameters('salt')]",
-                        "cspFrameAncestors": ["https://*.hosting.portal.azure.net", "https://localhost:1340", "https://ms.portal.azure.com", "https://portal.azure.com", "https://preview.portal.azure.com"],
-                        "corsOrigins": ["https://ms.portal.azure.com", "https://portal.azure.com", "https://preview.portal.azure.com", "https://waconazure.com"]
-                    }
+        "location": {
+            "type": "string",
+            "metadata": {
+                "description": "The location of the Virtual Machine"
+            }
+        },
+        "port": {
+            "type": "string",
+            "defaultValue": "6516",
+            "metadata": {
+                "description": "The Port used by Windows Admin Center"
+            }
+        },
+        "salt": {
+            "type": "string",
+            "defaultValue": "[uniquestring(resourceGroup().id,parameters('vmName'))]"
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "name": "[concat( parameters('vmName'), '/' , 'AdminCenter' )]",
+            "apiVersion": "2018-10-01",
+            "location": "[parameters('location')]",
+            "properties": {
+                "publisher": "Microsoft.AdminCenter",
+                "type": "AdminCenter",
+                "typeHandlerVersion": "0.0",
+                "autoUpgradeMinorVersion": true,
+                "settings": {
+                    "port": "[parameters('port')]",
+                    "salt": "[parameters('salt')]",
+                    "cspFrameAncestors": [ "https://*.hosting.portal.azure.net", "https://localhost:1340", "https://ms.portal.azure.com", "https://portal.azure.com", "https://preview.portal.azure.com" ],
+                    "corsOrigins": [ "https://ms.portal.azure.com", "https://portal.azure.com", "https://preview.portal.azure.com", "https://waconazure.com" ]
                 }
             }
-        ];
-
-const parameters = {
-    vmName: <VM name>, 
-    location: <VM location>, 
-    extensionName: "AdminCenter", 
-    extensionPublisher: "Microsoft.AdminCenter", 
-    extensionType: "AdminCenter", 
-    extensionVersion: "0.0", 
-    port: "6516", 
-    salt: <unique string used for hashing>
+        }
+    ]
 }
 ```
+
+An example to deploy a template of a [Windows VM with Windows Admin Center](https://github.com/Azure/azure-quickstart-templates/blob/master/quickstarts/microsoft.compute/vm-windows-admincenter/) is available in the Quick Start Templates. To directly deploy the configured VM from the Azure portal, select the **Deploy to Azure** button.
+
+[![Deploy to Azure](/azure/media/template-deployments/deploy-to-azure.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.compute%2Fvm-windows-admincenter%2Fazuredeploy.json)
+
 
 ## Automate Windows Admin Center deployment using PowerShell
 
