@@ -4,7 +4,7 @@ description: Windows Server special identities groups usage in Windows access co
 author: dansimp
 ms.author: dansimp
 ms.topic: article
-ms.date: 7/20/2022
+ms.date: 08/02/2022
 ---
 
 # Special Identities
@@ -43,6 +43,8 @@ The special identity groups are described in the following tables:
 
 - [Enterprise Domain Controllers](#enterprise-domain-controllers)
 
+- [Enterprise Read-only Domain Controllers](#enterprise-read-only-domain-controllers)
+
 - [Everyone](#everyone)
 
 - [Interactive](#interactive)
@@ -60,6 +62,8 @@ The special identity groups are described in the following tables:
 - [Other Organization](#other-organization)
 
 - [Principal Self](#principal-self)
+
+- [Read-only Domain Controller](#read-only-domain-controller)
 
 - [Remote Interactive Logon](#remote-interactive-logon)
 
@@ -195,6 +199,17 @@ This group includes all domain controllers in an Active Directory forest. Domain
 |Object Class|  Foreign Security Principal|
 |Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
 |Default User Rights| [Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight<p>[Allow log on locally](/windows/device-security/security-policy-settings/allow-log-on-locally): SeInteractiveLogonRight|
+
+## Enterprise Read-only Domain Controllers
+
+This group includes all domain controllers in an Active Directory forest. Domain controllers with enterprise-wide roles and responsibilities have the Enterprise Domain Controllers identity. Except for account passwords, a Read-only domain controller holds all the Active Directory objects and attributes that a writable domain controller holds. Membership is controlled by the operating system.
+
+| Attribute | Value |
+|  :--: | :--: |
+| Well-Known SID/RID | S-1-5-21-\<RootDomain>|
+|Object Class|  Foreign Security Principal|
+|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+|Default User Rights|None|
 
 ## Everyone
 
@@ -362,6 +377,20 @@ Identifies a SECURITY_NT_AUTHORITY Proxy.
 |Object Class|  Foreign Security Principal|
 |Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
 |Default User Rights|None|
+
+## Read-only Domain Controller
+
+This group includes all read-only domain controllers in the forest with read-only rights within the Active Directory database. It allows for domain controller deployment in situations where physical security is scare or not guaranteed. Membership is controlled by the operating system.
+
+| Attribute | Value |
+|  :--: | :--: |
+| Well-Known SID/RID | S-1-5-21-\<domain>|
+|Object Class|  Foreign Security Principal|
+|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+|Default User Rights|None|
+
+> [!NOTE]
+> The Denied RODC (Read-only Domain Controller) Replication group is created automatically when a RODC account is created in the forest. Passwords cannot be replicated in the Denied Read-only domain controller group.
 
 ## Remote Interactive Logon
 

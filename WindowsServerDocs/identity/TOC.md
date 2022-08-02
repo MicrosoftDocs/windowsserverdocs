@@ -197,6 +197,7 @@
 #### [Understand Special Identities](ad-ds/manage/understand-special-identities-groups.md)
 #### [Understand Active Directory Security Groups](ad-ds/manage/understand-security-groups.md)
 #### [Understand Service Accounts](ad-ds/manage/understand-service-accounts.md)
+#### [Understand Microsoft Accounts](ad-ds/manage/understand-microsoft-accounts.md)
 #### [Understand Security Principals](ad-ds/manage/understand-security-principals.md)
 #### [Understand Security Identifiers](ad-ds/manage/understand-security-identifiers.md)
 #### [How to Configure Protected Accounts](ad-ds/manage/how-to-configure-protected-accounts.md)
