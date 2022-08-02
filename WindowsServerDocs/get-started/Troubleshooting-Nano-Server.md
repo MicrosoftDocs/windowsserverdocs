@@ -7,13 +7,14 @@ ms.topic: article
 ms.assetid: e427c66f-9571-4b8c-b65d-e7370d91544d
 author: jaimeo
 ms.author: jaimeo
+ROBOTS: NOINDEX,NOFOLLOW
 ---
 # Troubleshooting Nano Server
 
 >Applies to: Windows Server 2016
 
 > [!IMPORTANT]
-> Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.
+> On October 9, 2018, support for the [Nano Server installation option ended](/lifecycle/products/windows-server-2016-nano-server-installation-option). Starting in Windows Server, version 1709, Nano Server is available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.
 
 This topic includes information about tools you can use to connect to, diagnose, and repair Nano Server installations.
 

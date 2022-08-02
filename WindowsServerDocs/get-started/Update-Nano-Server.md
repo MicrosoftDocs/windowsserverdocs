@@ -6,11 +6,12 @@ ms.date: 09/06/2017
 ms.topic: how-to
 author: jaimeo
 ms.author: jaimeo
+ROBOTS: NOINDEX,NOFOLLOW
 ---
 # Updating Nano Server
 
 > [!IMPORTANT]
-> Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.
+> On October 9, 2018, support for the [Nano Server installation option ended](/lifecycle/products/windows-server-2016-nano-server-installation-option). Starting in Windows Server, version 1709, Nano Server is available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.
 
 Nano Server offers a variety of methods for staying up to date. Compared to other installation options of Windows Server, Nano Server follows a more active servicing model similar to that of Windows 10. These periodic releases are known as **Current Branch for Business (CBB)** releases. This approach supports customers who want to innovate more quickly and move at a cloud cadence of rapid development lifecycles. More information about CBB is available on the [Windows Server Blog](https://cloudblogs.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
 
@@ -39,7 +40,7 @@ After downloading the .msu files from the Microsoft Update Catalog, save them to
 Now you can use the extracted .cab files to apply the updates to a Nano Server image in a few different ways, depending on your needs. The following options are presented in no particular order of preference - use the option that makes the most sense for your environment.
 
 > [!NOTE]
-> When using the DISM tools to service Nano Server, you must use a version of DISM that is the same as or newer than the version of Nano Server you're servicing. You can achieve this by running DISM from a matching version of Windows, installing a matching version of the [Windows Asssessment and Deployment Kit (ADK)](https://developer.microsoft.comwindows/hardware/windows-assessment-deployment-kit), or running DISM on Nano Server itself.
+> When using the DISM tools to service Nano Server, you must use a version of DISM that is the same as or newer than the version of Nano Server you're servicing. You can achieve this by running DISM from a matching version of Windows, installing a matching version of the [Windows Asssessment and Deployment Kit (ADK)](/windows-hardware/get-started/adk-install), or running DISM on Nano Server itself.
 
 ## Option 1: Integrate a cumulative update into a new image
 If you are building a new Nano Server image, you can integrate the latest cumulative update directly into the image so that it's fully patched on first boot.

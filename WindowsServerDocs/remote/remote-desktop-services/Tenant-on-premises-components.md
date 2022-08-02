@@ -22,7 +22,7 @@ Additional information:
 [Microsoft Remote Desktop Clients](./clients/remote-desktop-clients.md)
 [Remote Desktop app for Windows in Microsoft Store](https://apps.microsoft.com/windows/app/remote-desktop/051f560e-5e9b-4dad-8b2e-fa5e0b05a480)
 [Microsoft Remote Desktop - Android Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android)
-[Mac App Store - Microsoft Remote Desktop](https://itunes.apple.com/app/microsoft-remote-desktop/id715768417?mt=12)
+[Mac App Store - Microsoft Remote Desktop](https://apps.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12)
 [Microsoft Remote Desktop in the App Store](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8)
 
 ##  Active Directory Domain Services

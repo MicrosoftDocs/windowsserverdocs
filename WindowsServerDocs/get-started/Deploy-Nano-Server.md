@@ -7,6 +7,7 @@ ms.topic: conceptual
 ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
 author: jaimeo
 ms.author: jaimeo
+ROBOTS: NOINDEX,NOFOLLOW
 ---
 
 # Deploy Nano Server
@@ -14,7 +15,7 @@ ms.author: jaimeo
 >Applies to: Windows Server 2016
 
 > [!IMPORTANT]
-> Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.
+> On October 9, 2018, support for the [Nano Server installation option ended](/lifecycle/products/windows-server-2016-nano-server-installation-option). Starting in Windows Server, version 1709, Nano Server is available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.
 
 This topic covers information you need to deploy Nano Server images that are more customized to your needs compared to the simple examples in the Nano Server Quick Start topic. You'll find information about making a custom Nano Server image with exactly the features you want, installing Nano Server images from VHD or WIM, editing files, working with domains, dealing with packages by several methods, and working with server roles.
 
@@ -24,7 +25,7 @@ The Nano Server Image Builder is a tool that helps you create a custom Nano Serv
 
 Obtain the tool from the [Download Center](https://www.microsoft.com/download/details.aspx?id=54065).
 
-The tool also requires [Windows Assessment and Deployment Kit (ADK)](https://developer.microsoft.comwindows/hardware/windows-assessment-deployment-kit).
+The tool also requires [Windows Assessment and Deployment Kit (ADK)](/windows-hardware/get-started/adk-install).
 
 Nano Server Image Builder creates customized Nano Server images in VHD, VHDX, or ISO formats and can create bootable USB media to deploy Nano server or detect the hardware configuration of a server. It also can do the following:
 
@@ -67,7 +68,7 @@ This table shows the roles and features that are available in this release of Na
 | Internet Information Server (IIS) | -Package Microsoft-NanoServer-IIS-Package<p>**Note:** See [IIS on Nano Server](IIS-on-Nano-Server.md) for details about working with IIS. |
 | Host support for Windows Containers | -Containers |
 | System Center Virtual Machine Manager agent | -Package Microsoft-NanoServer-SCVMM-Package<p>-Package Microsoft-NanoServer-SCVMM-Compute-Package<p>**Note:** Use the SCVMM Compute package only if you are monitoring Hyper-V. For hyper-converged deployments in VMM, you should also specify the -Storage parameter. For more details, see the [VMM documentation](/system-center/vmm/hyper-v-nano?view=sc-vmm-2016&preserve-view=true). |
-| System Center Operations Manager agent | Installed separately. See the System Center Operations Manager documentation for more details at https://technet.microsoft.com/system-center-docs/om/manage/install-agent-on-nano-server. |
+| System Center Operations Manager agent | Installed separately. See the System Center Operations Manager documentation for more details at [Install Agent on Nano Server](/system-center/scom/manage-deploy-windows-agent-nano?view=sc-om-2016&preserve-view=true )|
 | Data Center Bridging (including DCBQoS) | -Package Microsoft-NanoServer-DCB-Package |
 | Deploying on a virtual machine | -Package Microsoft-NanoServer-Guest-Package |
 | Deploying on a physical machine | - Package Microsoft-NanoServer-Host-Package |

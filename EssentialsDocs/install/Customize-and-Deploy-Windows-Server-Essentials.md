@@ -12,7 +12,7 @@ manager: mtillman
 
 >Applies To: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
- To customize and deploy Windows Server Essentials, use the information in the [Windows Assessment and Deployment Kit (Windows ADK)](https://www.microsoft.com/download/details.aspx?id=39982) and in [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293241(v=win.10)).
+ To customize and deploy Windows Server Essentials, use the information in the [Windows Assessment and Deployment Kit (Windows ADK)](/windows-hardware/get-started/adk-install) and in [Customize and Deploy Windows Server Essentials in Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293241(v=win.10)).
 
 ## Additional References
 

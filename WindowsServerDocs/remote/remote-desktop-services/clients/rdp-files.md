@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/19/2022
+ms.date: 08/01/2022
 ---
 
 # Supported Remote Desktop RDP file settings
@@ -48,6 +48,9 @@ These tables also highlight which settings are supported as custom properties wi
 
 ## Device redirection
 
+>[!IMPORTANT]
+>You can only enable redirections with binary settings that apply to both to and from the remote machine. The service doesn't currently support one-way blocking of redirections from only one side of the connection.
+
 | RDP setting                        | Description            | Values                 | Default value          | Azure Virtual Desktop support |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
 | audiocapturemode:i:value | Microphone redirection:</br>Indicates whether audio input redirection is enabled. | - 0: Disable audio capture from the local device</br>- 1: Enable audio capture from the local device and redirection to an audio application in the remote session | 0 | Yes |
@@ -60,6 +63,7 @@ These tables also highlight which settings are supported as custom properties wi
 | keyboardhook:i:value | Determines when Windows key combinations (WIN key, ALT+TAB) are applied to the remote session for desktop and RemoteApp connections. | - 0: Windows key combinations are applied on the local computer</br>- 1: (Desktop only) Windows key combinations are applied on the remote computer when in focus</br>- 2: (Desktop only) Windows key combinations are applied on the remote computer in full screen mode only</br>- 3: (RemoteApp only) Windows key combinations are applied on the RemoteApp when in focus. Recommended to use this value only when publishing the Remote Desktop Connection app (mstsc.exe) from the host pool on Azure Virtual Desktop. This value is only supported when using the [Windows Desktop client](windowsdesktop.md) (MSRDC). | 2 | Yes |
 | redirectclipboard:i:value | Clipboard redirection:</br>Determines whether clipboard redirection is enabled. | - 0: Clipboard on local computer isn't available in remote session</br>- 1: Clipboard on local computer is available in remote session | 1 | Yes |
 | redirectcomports:i:value | COM ports redirection:</br>Determines whether COM (serial) ports on the local computer will be redirected and available in the remote session. | - 0: COM ports on the local computer are not available in the remote session</br>- 1: COM ports on the local computer are available in the remote session | 0 | Yes |
+| redirectlocation:i:value | Location redirection:</br>Determines whether the location of the local device will be redirected and available in the remote session | - 0: The remote session uses the location of the remote computer or virtual machine</br>- 1: The remote session uses the location of the local device | 0 | Yes |
 | redirectprinters:i:value | Printer redirection:</br>Determines whether printers configured on the local computer will be redirected and available in the remote session | - 0: The printers on the local computer are not available in the remote session</br>- 1: The printers on the local computer are available in the remote session | 1 | Yes |
 | redirectsmartcards:i:value | Smart card redirection:</br>Determines whether smart card devices on the local computer will be redirected and available in the remote session. |- 0: The smart card device on the local computer is not available in the remote session</br>- 1: The smart card device on the local computer is available in the remote session | 1 | Yes |
 | redirectwebauthn:i:value | WebAuthn redirection:</br>Determines whether WebAuthn requests on the remote computer will be redirected to the local computer allowing the use of local authenticators (e.g., Windows Hello for Business, security key, or other). |- 0: WebAuthn requests in the remote session are not sent to the local computer for authentication and must be completed in the remote session</br>- 1: WebAuthn requests in the remote session are sent to the local computer for authentication | 1 | Yes |
@@ -69,7 +73,7 @@ These tables also highlight which settings are supported as custom properties wi
 
 | RDP setting                        | Description            | Values                 | Default value          | Azure Virtual Desktop support |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|
-| use multimon:i:value | Determines whether the remote session will use one or multiple displays from the local computer. | - 0: Don't enable multiple display support</br>- 1: Enable multiple display support | 1 | Yes |
+| use multimon:i:value | Determines whether the remote session will use one or multiple displays from the local computer. | - 0: Don't enable multiple display support</br>- 1: Enable multiple display support | 0 | Yes |
 | selectedmonitors:s:value | Specifies which local displays to use from the remote session. The selected displays must be contiguous. Requires use multimon to be set to 1.</br></br>Only available on the Windows Inbox (MSTSC) and Windows Desktop (MSRDC) clients. | Comma separated list of machine-specific display IDs. IDs can be retrieved by calling mstsc.exe /l. The first ID listed will be set as the primary display in the session. | All displays | Yes |
 | maximizetocurrentdisplays:i:value | Determines which display the remote session goes full screen on when maximizing. Requires use multimon to be set to 1.</br></br>Only available on the Windows Desktop (MSRDC) client. | - 0: Session goes full screen on the displays initially selected when maximizing</br>- 1: Session dynamically goes full screen on the displays touched by the session window when maximizing | 0 | Yes |
 | singlemoninwindowedmode:i:value | Determines whether a multi display remote session automatically switches to single display when exiting full screen. Requires use multimon to be set to 1.</br></br>Only available on the Windows Desktop (MSRDC) client. | - 0: Session retains all displays when exiting full screen</br>- 1: Session switches to single display when exiting full screen | 0 | Yes |

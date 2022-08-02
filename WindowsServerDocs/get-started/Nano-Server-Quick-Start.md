@@ -6,13 +6,14 @@ ms.date: 09/05/2017
 ms.topic: how-to
 author: jaimeo
 ms.author: jaimeo
+ROBOTS: NOINDEX,NOFOLLOW
 ---
 # Nano Server Quick Start
 
 >Applies to: Windows Server 2016
 
 > [!IMPORTANT]
-> Starting in Windows Server, version 1709, Nano Server will be available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.
+> On October 9, 2018, support for the [Nano Server installation option ended](/lifecycle/products/windows-server-2016-nano-server-installation-option). Starting in Windows Server, version 1709, Nano Server is available only as a [container base OS image](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Check out [Changes to Nano Server](nano-in-semi-annual-channel.md) to learn what this means.
 
 Follow the steps in this section to get started quickly with a basic deployment of Nano Server using DHCP to obtain an IP address. You can run a Nano Server VHD either in a virtual machine or boot to it on a physical computer; the steps are slightly different.
 

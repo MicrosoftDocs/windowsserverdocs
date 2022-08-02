@@ -19,7 +19,7 @@ Azure Hybrid Benefit is applicable to both Standard and Datacenter editions of W
 
 All you need to qualify for the benefit is Software Assurance for your Windows Server licenses that is currently active.
 
-To begin, a minimum set of 16-core licenses for Windows Server with active Software Assurance entitles you to use Windows Server on Microsoft Azure with up to 16 virtual cores allocated across two or fewer Azure VMs. After that, a minimum of eight additional core licenses with active Software Assurance entitles use on up to eight virtual cores and one Azure VM, where core licenses are sold in two-core packs and 16-core packs. For more information, see [Windows Server product licensing](https://www.microsoft.com/licensing/product-licensing/windows-server).
+To begin, a minimum set of 16-core licenses for Windows Server with active Software Assurance entitles you to use Windows Server on Microsoft Azure with up to 16 virtual cores allocated across two or fewer Azure VMs. After that, a minimum of eight additional Windows Server core licenses with active Software Assurance entitles use on up to eight virtual cores and one Azure VM, where core licenses are sold in two-core packs and 16-core packs. For more information, see [Windows Server product licensing](https://www.microsoft.com/licensing/product-licensing/windows-server).
 
 You can also run a virtual machine with more than 16 cores by stacking licenses. For example, with two 16-core license packs you may run a virtual machine with up to 32 cores. An Azure VM must be licensed with a minimum of eight cores, regardless of the size, then you can stack additional core licenses on top to the number you need.
 

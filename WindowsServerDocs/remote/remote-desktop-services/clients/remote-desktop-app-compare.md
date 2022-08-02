@@ -21,6 +21,9 @@ The following tables compare support for device and other redirections across th
 
 If you remote into your personal desktop, there are additional redirections that you can configure in the **Additional Settings** for the session. If your remote desktop or apps are managed by your organization, your admin can enable or disable redirections through Group Policy settings or RDP properties.
 
+>[!IMPORTANT]
+>You can only enable redirections with binary settings that apply to both to and from the remote machine. The service doesn't currently support one-way blocking of redirections from only one side of the connection.
+
 ### Input redirection
 
 | Redirection | Windows Inbox</br>(MSTSC) | Windows Desktop</br>(MSRDC) | Microsoft Store client</br>(URDC) | Android | iOS | macOS | Web client    |

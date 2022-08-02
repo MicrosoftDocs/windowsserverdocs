@@ -197,7 +197,7 @@ manager: mtillman
 
 ##### To unregister your server with Azure Backup
 
-1.  Sign in to the [Azure Management Portal](https://manage.windowsazure.com).
+1.  Sign in to the [Azure Management Portal](https://portal.azure.com).
 
 2.  Click **Recovery Services**.
 
@@ -370,7 +370,7 @@ manager: mtillman
 
 ####  <a name="BKMK_Createabackupvaulttostoreonlinebackups"></a> Create a backup vault to store online backups
 
-1.  Sign in to the [Azure Management Portal](https://manage.windowsazure.com)from the web browser on your Windows Server Essentials server.
+1.  Sign in to the [Azure Management Portal](https://portal.azure.com)from the web browser on your Windows Server Essentials server.
 
 2.  In the  Azure Management Portal, click **New**, click **Data Services**, click **Recovery Services**, click **Backup Vault**, and then click **Quick Create**.
 

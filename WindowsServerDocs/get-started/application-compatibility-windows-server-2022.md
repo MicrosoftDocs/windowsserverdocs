@@ -22,7 +22,7 @@ This table lists Microsoft server applications that support installation and fun
 | Exchange Server 2019 CU12 and later | Yes | Yes | Yes | [Exchange Server supportability matrix](/exchange/plan-and-deploy/supportability-matrix?view=exchserver-2019&preserve-view=true) |
 | Host Integration Server 2020 | Yes | Yes | Yes | [HIS 2020 - What's New, Release Notes, System Requirements, and Installation](/host-integration-server/install-and-config-guides/his-2020-what-s-new-release-notes-system-requirements-and-installation) |
 | Office Online Server| No | Yes | Yes | [Plan Office Online Server](/officeonlineserver/plan-office-online-server) |
-| Project Server 2019 | No | Yes | Yes | [Software requirements for Project Server 2019 - Project Server](/project/software-requirements-for-project-server-2019&preserve-view=true)|
+| Project Server 2019 | No | Yes | Yes | [Software requirements for Project Server 2019 - Project Server](/project/software-requirements-for-project-server-2019)|
 | Project Server Subscription Edition | Yes | Yes | Yes | [Software requirements for Project Server Subscription Edition](/project/software-requirements-project-server-subscription-edition) |
 | SharePoint Server 2019 | No | Yes | Yes | [Hardware and software requirements for SharePoint Server 2019](/sharepoint/install/hardware-and-software-requirements-2019) |
 | SharePoint Server Subscription Edition | Yes | Yes | Yes | [System requirements for SharePoint Server Subscription edition](/sharepoint/install/system-requirements-for-sharepoint-subscription-edition) |
