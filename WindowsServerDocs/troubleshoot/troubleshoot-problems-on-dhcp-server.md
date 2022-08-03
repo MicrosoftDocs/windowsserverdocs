@@ -26,7 +26,7 @@ Check the following settings:
 
   - Check whether any devices on the network have static IP addresses that have not been excluded from the DHCP scope.
 
-  - Verify that the IP address to which DHCP server is bound is within the subnet of the scopes from which IP addresses must be leased out. This is in case no relay agent is available. To do this, run the **Get-DhcpServerv4Binding** or **Get-DhcpServerv6Binding** cmdlet.
+  - Verify that the DHCP server is bound to at least one IP address, and that this is within the subnet of the scopes from which IP addresses must be leased out (unless using DHCP relay). To do this, run the **Get-DhcpServerv4Binding** or **Get-DhcpServerv6Binding** cmdlet.  Server connection bindings are configured in the DHCP server management console under IPv4 / IPv6 Advanced Properties.
 
   - Verify that only the DHCP server is listening on UDP port 67 and 68. No other process or other services (such as WDS or PXE) should occupy these ports. To do this, run the `netstat -anb` command.
 
