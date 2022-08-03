@@ -374,7 +374,7 @@ The Device Owners applies to the Windows Server operating system in the [Default
 
 ### DHCP Administrators
 
-Members of the DHCP Administrators group have the ability to create, delete,and manage different areas of the servers scope including the rights to backup and restore the DHCP database. Even though this group has administrative rights, it is not a part of the Administrators group as this role is limited to DHCP services.
+Members of the DHCP Administrators group have the ability to create, delete, and manage different areas of the servers scope including the rights to backup and restore the DHCP database. Even though this group has administrative rights, it is not a part of the Administrators group as this role is limited to DHCP services.
 
 The DHCP Administrators group applies to the Windows Server operating system in the [Default Active Directory Security Groups](#default-active-directory-security-groups) list above.
 
