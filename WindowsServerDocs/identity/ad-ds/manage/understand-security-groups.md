@@ -80,7 +80,7 @@ The following table lists the three group scopes and more information about each
 
 Special identities are referred to as groups. Special identity groups do not have specific memberships that can be modified, but they can represent different users at different times, depending on the circumstances. Some of these groups include Creator Owner, Batch, and Authenticated User.
 
-For information about all the special identity groups, see [Special Identities](understand-special-identities-groups.md).
+For information about the special identity groups, see [Understand Special Identities](understand-special-identities-groups.md).
 
 ## Default security groups
 
