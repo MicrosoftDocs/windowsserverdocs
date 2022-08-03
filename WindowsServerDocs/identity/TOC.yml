@@ -4,37 +4,37 @@
   - name: Solutions and Scenario Guides
     href: solution-guides/Solutions-and-Scenario-Guides.md
     items:
-    - name: Dynamic Access Control: Scenario Overview
+    - name: 'Dynamic Access Control: Scenario Overview'
       href: solution-guides/Dynamic-Access-Control--Scenario-Overview.md
       items:
-      - name: Scenario: Central Access Policy
+      - name: 'Scenario: Central Access Policy'
         href: solution-guides/Scenario--Central-Access-Policy.md
         items:
         - name: Deploy a Central Access Policy (Demonstration Steps)
           href: solution-guides/Deploy-a-Central-Access-Policy--Demonstration-Steps-.md
-      - name: Scenario: File Access Auditing
+      - name: 'Scenario: File Access Auditing'
         href: solution-guides/Scenario--File-Access-Auditing.md
         items:
         - name: Plan for File Access Auditing
           href: solution-guides/Plan-for-File-Access-Auditing.md
         - name: Deploy Security Auditing with Central Audit Policies (Demonstration Steps)
           href: solution-guides/Deploy-Security-Auditing-with-Central-Audit-Policies--Demonstration-Steps-.md
-      - name: Scenario: Access-Denied Assistance
+      - name: 'Scenario: Access-Denied Assistance'
         href: solution-guides/Scenario--Access-Denied-Assistance.md
         items:
         - name: Deploy Access-Denied Assistance (Demonstration Steps)
           href: solution-guides/Deploy-Access-Denied-Assistance--Demonstration-Steps-.md
-      - name: Scenario: Classification-Based Encryption for Office Documents
+      - name: 'Scenario: Classification-Based Encryption for Office Documents'
         href: solution-guides/Scenario--Classification-Based-Encryption-for-Office-Documents.md
         items:
         - name: Deploy Encryption of Office Files (Demonstration Steps)
           href: solution-guides/Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md
-      - name: Scenario: Get Insight into Your Data by Using Classification
+      - name: 'Scenario: Get Insight into Your Data by Using Classification'
         href: solution-guides/Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md
         items:
         - name: Deploy Automatic File Classification (Demonstration Steps)
           href: solution-guides/Deploy-Automatic-File-Classification--Demonstration-Steps-.md
-      - name: Scenario: Implement Retention of Information on File Servers
+      - name: 'Scenario: Implement Retention of Information on File Servers'
         href: solution-guides/Scenario--Implement-Retention-of-Information-on-File-Servers.md
         items:
         - name: Plan for retention of information on file servers
@@ -48,9 +48,9 @@
           href: solution-guides/Deploy-Claims-Across-forests--Demonstration-Steps-.md
         - name: Claims Transformation Rules Language
           href: solution-guides/Claims-Transformation-Rules-Language.md
-      - name: Appendix A: Dynamic Access Control Glossary
+      - name: 'Appendix A: Dynamic Access Control Glossary'
         href: solution-guides/appendix-A--Dynamic-Access-Control-Glossary.md
-      - name: Appendix B: Setting Up the Test Environment
+      - name: 'Appendix B: Setting Up the Test Environment'
         href: solution-guides/appendix-B--Setting-Up-the-Test-Environment.md
     - name: Configuring Certificate Enrollment Web Service for certificate key-based renewal on a custom port
       href: solution-guides/certificate-enrollment-certificate-key-based-renewal.md
@@ -179,7 +179,7 @@
             href: ad-ds/deploy/assigning-the-DNS-for-AD-DS-Owner-Role.md
           - name: Integrating AD DS into an Existing DNS Infrastructure
             href: ad-ds/plan/Integrating-AD-DS-into-an-Existing-DNS-Infrastructure.md
-          - name: Appendix A: DNS Inventory
+          - name: 'Appendix A: DNS Inventory'
             href: ad-ds/plan/appendix-A--DNS-Inventory.md
         - name: Creating an Organizational Unit Design
           href: ad-ds/plan/Creating-an-Organizational-Unit-Design.md
@@ -241,7 +241,7 @@
           href: ad-ds/plan/Creating-a-Site-Link-Bridge-Design.md
         - name: Finding additional Resources for Windows Server 2008 Active Directory Site Topology Design
           href: ad-ds/plan/finding-additional-Resources-for-Windows-Server-2008-active-directory-Site-Topology-Design.md
-        - name: Appendix A: Locations and Subnet Prefixes
+        - name: 'Appendix A: Locations and Subnet Prefixes'
           href: ad-ds/plan/appendix-A--Locations-and-Subnet-Prefixes.md
       - name: Enabling Advanced Features for AD DS
         href: ad-ds/plan/Enabling-Advanced-Features-for-AD-DS.md
@@ -254,7 +254,7 @@
           href: ad-ds/plan/finding-additional-Resources-for-Enabling-Advanced-Features.md
       - name: Evaluating AD DS Deployment Strategy Examples
         href: ad-ds/plan/Evaluating-AD-DS-Deployment-Strategy-Examples.md
-      - name: Appendix A: Reviewing Key AD DS Terms
+      - name: 'Appendix A: Reviewing Key AD DS Terms'
         href: ad-ds/plan/appendix-A--Reviewing-Key-AD-DS-Terms.md
     - name: AD DS Deployment
       href: ad-ds/deploy/AD-DS-Deployment.md
@@ -354,25 +354,25 @@
           href: ad-ds/plan/security-best-practices/Maintaining-a-more-Secure-Environment.md
         - name: Appendices
           href: ad-ds/plan/security-best-practices/appendices.md
-        - name: Appendix B: Privileged Accounts and Groups in Active Directory
+        - name: 'Appendix B: Privileged Accounts and Groups in Active Directory'
           href: ad-ds/plan/security-best-practices/appendix-B--Privileged-Accounts-and-Groups-in-active-directory.md
-        - name: Appendix C: Protected Accounts and Groups in Active Directory
+        - name: 'Appendix C: Protected Accounts and Groups in Active Directory'
           href: ad-ds/plan/security-best-practices/appendix-C--Protected-Accounts-and-Groups-in-active-directory.md
-        - name: Appendix D: Securing Built-In Administrator Accounts in Active Directory
+        - name: 'Appendix D: Securing Built-In Administrator Accounts in Active Directory'
           href: ad-ds/plan/security-best-practices/appendix-D--Securing-Built-In-Administrator-Accounts-in-active-directory.md
-        - name: Appendix E: Securing Enterprise Admins Groups in Active Directory
+        - name: 'Appendix E: Securing Enterprise Admins Groups in Active Directory'
           href: ad-ds/plan/security-best-practices/appendix-E--Securing-Enterprise-Admins-Groups-in-active-directory.md
-        - name: Appendix F: Securing Domain Admins Groups in Active Directory
+        - name: 'Appendix F: Securing Domain Admins Groups in Active Directory'
           href: ad-ds/plan/security-best-practices/appendix-F--Securing-Domain-Admins-Groups-in-active-directory.md
-        - name: Appendix G: Securing Administrators Groups in Active Directory
+        - name: 'Appendix G: Securing Administrators Groups in Active Directory'
           href: ad-ds/plan/security-best-practices/appendix-G--Securing-Administrators-Groups-in-active-directory.md
-        - name: Appendix H: Securing Local Administrator Accounts and Groups
+        - name: 'Appendix H: Securing Local Administrator Accounts and Groups'
           href: ad-ds/plan/security-best-practices/appendix-H--Securing-Local-Administrator-Accounts-and-Groups.md
-        - name: Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory
+        - name: 'Appendix I: Creating Management Accounts for Protected Accounts and Groups in Active Directory'
           href: ad-ds/manage/component-updates/appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-active-directory.md
-        - name: Appendix L: Events to Monitor
+        - name: 'Appendix L: Events to Monitor'
           href: ad-ds/plan/appendix-L--Events-to-Monitor.md
-        - name: Appendix M: Document Links and Recommended Reading
+        - name: 'Appendix M: Document Links and Recommended Reading'
           href: ad-ds/manage/appendix-M--Document-Links-and-Recommended-Reading.md
       - name: Active Directory Replication and Topology Management Using Windows powershell
         href: ad-ds/manage/powershell/active-directory-Replication-and-Topology-Management-Using-Windows-powershell.md
@@ -548,7 +548,7 @@
               href: ad-fs/design/Planning-for-Federation-Server-Capacity.md
             - name: Planning for Federation Server Proxy Capacity
               href: ad-fs/design/Planning-for-Federation-Server-Proxy-Capacity.md
-          - name: Appendix A: Reviewing AD FS Requirements
+          - name: 'Appendix A: Reviewing AD FS Requirements'
             href: ad-fs/design/appendix-A--Reviewing-AD-FS-Requirements.md
     - name: AD FS Deployment
       href: ad-fs/AD-FS-Deployment.md
@@ -608,16 +608,16 @@
           href: ad-fs/deployment/Planning-to-Deploy-AD-FS.md
         - name: Implementing Your AD FS Design Plan
           href: ad-fs/deployment/Implementing-your-AD-FS-Design-Plan.md
-        - name: Checklist: Implementing a Web SSO Design
+        - name: 'Checklist: Implementing a Web SSO Design'
           href: ad-fs/deployment/Checklist--Implementing-a-Web-SSO-Design.md
-        - name: Checklist: Implementing a Federated Web SSO Design
+        - name: 'Checklist: Implementing a Federated Web SSO Design'
           href: ad-fs/deployment/Checklist--Implementing-a-Federated-Web-SSO-Design.md
         - name: Configure Partner Organizations
           href: ad-fs/deployment/Configuring-Partner-Organizations.md
           items:
-          - name: Checklist: Configure the Account Partner Organization
+          - name: 'Checklist: Configure the Account Partner Organization'
             href: ad-fs/deployment/Checklist--Configuring-the-Account-Partner-Organization.md
-          - name: Checklist: Configure the Resource Partner Organization
+          - name: 'Checklist: Configure the Resource Partner Organization'
             href: ad-fs/deployment/Checklist--Configuring-the-Resource-Partner-Organization.md
           - name: Add an attribute Store
             href: ad-fs/operations/add-an-attribute-Store.md
@@ -634,9 +634,9 @@
         - name: Configuring Claim Rules
           href: ad-fs/deployment/Configuring-Claim-Rules.md
           items:
-          - name: Checklist: Creating Claim Rules for a Claims Provider Trust
+          - name: 'Checklist: Creating Claim Rules for a Claims Provider Trust'
             href: ad-fs/deployment/Checklist--Creating-Claim-Rules-for-a-Claims-Provider-Trust.md
-          - name: Checklist: Creating Claim Rules for a Relying Party Trust
+          - name: 'Checklist: Creating Claim Rules for a Relying Party Trust'
             href: ad-fs/deployment/Checklist--Creating-Claim-Rules-for-a-Relying-Party-Trust.md
           - name: Create a Rule to Pass Through or filter an Incoming Claim
             href: ad-fs/operations/create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim.md
@@ -659,7 +659,7 @@
         - name: Deploying Federation Servers
           href: ad-fs/deployment/Deploying-Federation-Servers.md
           items:
-          - name: Checklist: Setting Up a Federation Server
+          - name: 'Checklist: Setting Up a Federation Server'
             href: ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md
           - name: Add a Host (A) Resource Record to Corporate DNS for a Federation Server
             href: ad-fs/deployment/add-a-Host--A--Resource-Record-to-Corporate-DNS-for-a-Federation-Server.md
@@ -684,7 +684,7 @@
         - name: Deploying Federation Server Proxies
           href: ad-fs/deployment/Deploying-Federation-Server-Proxies.md
           items:
-          - name: Checklist: Setting Up a Federation Server Proxy
+          - name: 'Checklist: Setting Up a Federation Server Proxy'
             href: ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server-Proxy.md
           - name: Join a computer to a Domain
             href: ad-fs/deployment/Join-a-computer-to-a-Domain.md
@@ -707,11 +707,11 @@
         - name: Interoperating with AD FS 1.x
           href: ad-fs/deployment/Interoperating-with-AD-FS-1.x.md
           items:
-          - name: Checklist: Configuring AD FS to Consume Claims from AD FS 1.x
+          - name: 'Checklist: Configuring AD FS to Consume Claims from AD FS 1.x'
             href: ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md
-          - name: Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Federation Service
+          - name: 'Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Federation Service'
             href: ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Federation-Service.md
-          - name: Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Claims-Aware Web Agent
+          - name: 'Checklist: Configuring AD FS to Send Claims to an AD FS 1.x Claims-Aware Web Agent'
             href: ad-fs/deployment/Checklist--Configuring-AD-FS-to-Send-Claims-to-an-AD-FS-1.x-Claims-Aware-Web-Agent.md
           - name: Create a Relying Party Trust Manually
             href: ad-fs/operations/create-a-Relying-Party-Trust.md
@@ -883,15 +883,15 @@
         href: ad-fs/operations/Set-up-an-AD-FS-lab-environment.md
       - name: SQL fine tuning and addressing latency
         href: ad-fs/operations/adfs-sql-latency.md
-      - name: Walkthrough Guide: Manage Risk with additional Multi-Factor Authentication for Sensitive Applications
+      - name: 'Walkthrough Guide: Manage Risk with additional Multi-Factor Authentication for Sensitive Applications'
         href: ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md
-      - name: Walkthrough Guide: Manage Risk with Conditional Access Control
+      - name: 'Walkthrough Guide: Manage Risk with Conditional Access Control'
         href: ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md
-      - name: Walkthrough: Workplace Join with a Windows Device
+      - name: 'Walkthrough: Workplace Join with a Windows Device'
         href: ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md
-      - name: Walkthrough: Workplace Join with an iOS Device
+      - name: 'Walkthrough: Workplace Join with an iOS Device'
         href: ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md
-      - name: Walkthrough: Workplace Join with an Android Device
+      - name: 'Walkthrough: Workplace Join with an Android Device'
         href: ad-fs/operations/Walkthrough--Workplace-Join-to-an-Android-device.md
     - name: AD FS Troubleshooting
       href: ad-fs/troubleshooting/ad-fs-tshoot-overview.md

@@ -96,7 +96,7 @@
         items:
         - name: Plan user accounts for your MultiPoint Services environment
           href: multipoint-services/Plan-user-accounts-for-your-MultiPoint-services-environment.md
-        - name: Example scenarios: MultiPoint Services user accounts
+        - name: 'Example scenarios: MultiPoint Services user accounts'
           href: multipoint-services/multipoint-users-scenario.md
         - name: Create local user accounts
           href: multipoint-services/create-local-user-accounts.md
@@ -296,22 +296,22 @@
           - name: Plan a Remote Access Cluster Deployment
             href: remote-access/ras/cluster/plan/Plan-a-remote-Access-Cluster-Deployment.md
             items:
-            - name: Step 1: Plan an Advanced Single-Server Deployment
+            - name: 'Step 1: Plan an Advanced Single-Server Deployment'
               href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
-            - name: Step 2: Plan Cluster Servers
+            - name: 'Step 2: Plan Cluster Servers'
               href: remote-access/ras/cluster/plan/Step-2-Plan-Cluster-Servers.md
-            - name: Step 3: Plan a Load-Balanced Cluster Deployment
+            - name: 'Step 3: Plan a Load-Balanced Cluster Deployment'
               href: remote-access/ras/cluster/plan/Step-3-Plan-a-Load-Balanced-Cluster-Deployment.md
           - name: Configure a Remote Access Cluster
             href: remote-access/ras/cluster/configure/Configure-a-remote-Access-Cluster.md
             items:
-            - name: Step 1: Implement a Single-Server Remote Access Deployment
+            - name: 'Step 1: Implement a Single-Server Remote Access Deployment'
               href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
-            - name: Step 2: Prepare Cluster Servers
+            - name: 'Step 2: Prepare Cluster Servers'
               href: remote-access/ras/cluster/configure/Step-2-Prepare-Cluster-Servers.md
-            - name: Step 3: Configure a Load-Balanced Cluster
+            - name: 'Step 3: Configure a Load-Balanced Cluster'
               href: remote-access/ras/cluster/configure/Step-3-Configure-a-Load-Balanced-Cluster.md
-            - name: Step 4: Verify the Cluster
+            - name: 'Step 4: Verify the Cluster'
               href: remote-access/ras/cluster/configure/Step-4-verify-the-Cluster.md
         - name: Deploy Multiple Remote Access Servers in a Multisite Deployment
           href: remote-access/ras/multisite/Deploy-Multiple-remote-Access-Servers-in-a-Multisite-Deployment.md
@@ -319,22 +319,22 @@
           - name: Plan a Multisite Deployment
             href: remote-access/ras/multisite/plan/Plan-a-Multisite-Deployment.md
             items:
-            - name: Step 1: Plan an Advanced Single Server Deployment
+            - name: 'Step 1: Plan an Advanced Single Server Deployment'
               href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
-            - name: Step 2: Plan the Multisite Infrastructure
+            - name: 'Step 2: Plan the Multisite Infrastructure'
               href: remote-access/ras/multisite/plan/Step-2-Plan-the-Multisite-Infrastructure.md
-            - name: Step 3: Plan the Multisite Deployment
+            - name: 'Step 3: Plan the Multisite Deployment'
               href: remote-access/ras/multisite/plan/Step-3-Plan-the-Multisite-Deployment.md
           - name: Configure a Multisite Deployment
             href: remote-access/ras/multisite/configure/Configure-a-Multisite-Deployment.md
             items:
-            - name: Step 1: Implement a Single Server Remote Access Deployment
+            - name: 'Step 1: Implement a Single Server Remote Access Deployment'
               href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
-            - name: Step 2: Configure the Multisite Infrastructure
+            - name: 'Step 2: Configure the Multisite Infrastructure'
               href: remote-access/ras/multisite/configure/Step-2-Configure-the-Multisite-Infrastructure.md
-            - name: Step 3: Configure the Multisite Deployment
+            - name: 'Step 3: Configure the Multisite Deployment'
               href: remote-access/ras/multisite/configure/Step-3-Configure-the-Multisite-Deployment.md
-            - name: Step 4: Verify the Multisite Deployment
+            - name: 'Step 4: Verify the Multisite Deployment'
               href: remote-access/ras/multisite/configure/Step-4-verify-the-Multisite-Deployment.md
           - name: Troubleshoot a Multisite Deployment
             href: remote-access/ras/multisite/troubleshoot/Troubleshoot-a-Multisite-Deployment.md
@@ -353,24 +353,24 @@
           - name: Plan Remote Access with OTP Authentication
             href: remote-access/ras/otp/plan/Plan-remote-Access-with-OTP-Authentication.md
             items:
-            - name: Step 1: Plan an Advanced Single Server Deployment
+            - name: 'Step 1: Plan an Advanced Single Server Deployment'
               href: remote-access/ras/otp/plan/Step-1-Plan-an-Advanced-Single-Server-Deployment.md
-            - name: Step 2: Plan the RADIUS Server Deployment
+            - name: 'Step 2: Plan the RADIUS Server Deployment'
               href: remote-access/ras/otp/plan/Step-2-Plan-the-RADIUS-Server-Deployment.md
-            - name: Step 3: Plan OTP Certificate Deployment
+            - name: 'Step 3: Plan OTP Certificate Deployment'
               href: remote-access/ras/otp/plan/Step-3-Plan-OTP-Certificate-Deployment.md
-            - name: Step 4: Plan for OTP on the Remote Access Server
+            - name: 'Step 4: Plan for OTP on the Remote Access Server'
               href: remote-access/ras/otp/plan/Step-4-Plan-for-OTP-on-the-remote-Access-Server.md
           - name: Configure Remote Access with OTP Authentication
             href: remote-access/ras/otp/configure/Configure-RA-with-OTP-Authentication.md
             items:
-            - name: Step 1: Implement a Single Server Remote Access Deployment
+            - name: 'Step 1: Implement a Single Server Remote Access Deployment'
               href: remote-access/ras/multisite/configure/Step-1-Implement-a-Single-Server-remote-Access-Deployment.md
-            - name: Step 2: Configure the RADIUS Server
+            - name: 'Step 2: Configure the RADIUS Server'
               href: remote-access/ras/otp/configure/Step-2-Configure-the-RADIUS-Server.md
-            - name: Step 3: Configure the Remote Access Server for OTP
+            - name: 'Step 3: Configure the Remote Access Server for OTP'
               href: remote-access/ras/otp/configure/Step-3-Configure-the-remote-Access-Server-for-OTP.md
-            - name: Step 4: Verify DirectAccess with OTP
+            - name: 'Step 4: Verify DirectAccess with OTP'
               href: remote-access/ras/otp/configure/Step-4-verify-directAccess-with-OTP.md
           - name: Troubleshoot an OTP Deployment
             href: remote-access/ras/otp/troubleshoot/Troubleshoot-an-OTP-Deployment.md
@@ -410,18 +410,18 @@
           - name: Plan Deployment for Remote Management of DirectAccess Clients
             href: remote-access/ras/manage-remote-clients/plan/Plan-Deployment-for-remote-Management-of-directAccess-Clients.md
             items:
-            - name: Step 1: Plan the Remote Access Infrastructure
+            - name: 'Step 1: Plan the Remote Access Infrastructure'
               href: remote-access/ras/manage-remote-clients/plan/Step-1-Plan-the-remote-Access-Infrastructure.md
-            - name: Step 2: Plan the Remote Access Deployment
+            - name: 'Step 2: Plan the Remote Access Deployment'
               href: remote-access/ras/manage-remote-clients/plan/Step-2-Plan-the-remote-Access-Deployment.md
           - name: Install and Configure Deployment for remote Management of DirectAccess Clients
             href: remote-access/ras/manage-remote-clients/install/Install-and-Configure-Deployment-for-remote-Management-of-directAccess-Clients.md
             items:
-            - name: Step 1: Configure the Remote Access Infrastructure
+            - name: 'Step 1: Configure the Remote Access Infrastructure'
               href: remote-access/ras/manage-remote-clients/install/Step-1-Configure-the-remote-Access-Infrastructure.md
-            - name: Step 2: Configure the Remote Access Server
+            - name: 'Step 2: Configure the Remote Access Server'
               href: remote-access/ras/manage-remote-clients/install/Step-2-Configure-the-remote-Access-Server.md
-            - name: Step 3: Verify the Deployment
+            - name: 'Step 3: Verify the Deployment'
               href: ./remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md
     - name: Virtual Private Networking (VPN)
       href: remote-access/vpn/vpn-top.md
@@ -446,7 +446,7 @@
         - name: DirectAccess Test Lab Guides
           href: remote-access/directaccess/directAccess-Test-Lab-Guides.md
           items:
-          - name: Test Lab Guide: Demonstrate DirectAccess in a Cluster with Windows NLB
+          - name: 'Test Lab Guide: Demonstrate DirectAccess in a Cluster with Windows NLB'
             href: remote-access/directaccess/tlg-cluster-nlb/Test-Lab-Guide-Demonstrate-directAccess-in-a-Cluster-with-Windows-NLB.md
             items:
             - name: Overview of the DirectAccess Cluster-NLB Test Lab Scenario
@@ -456,23 +456,23 @@
             - name: Steps for Configuring the DirectAccess Cluster-NLB Test Lab
               href: remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-steps.md
               items:
-              - name: STEP 1: Complete the DirectAccess Configuration
+              - name: 'STEP 1: Complete the DirectAccess Configuration'
                 href: remote-access/directaccess/tlg-cluster-nlb/STEP-1-complete-the-directAccess-Configuration.md
-              - name: STEP 2: Configure EDGE1
+              - name: 'STEP 2: Configure EDGE1'
                 href: remote-access/directaccess/tlg-cluster-nlb/STEP-2-Configure-EDGE1.md
-              - name: STEP 3: Install and Configure EDGE2
+              - name: 'STEP 3: Install and Configure EDGE2'
                 href: remote-access/directaccess/tlg-cluster-nlb/STEP-3-Install-and-Configure-EDGE2.md
-              - name: STEP 4: Create the Network Load Balanced remote Access Cluster
+              - name: 'STEP 4: Create the Network Load Balanced remote Access Cluster'
                 href: remote-access/directaccess/tlg-cluster-nlb/STEP-4-create-the-Network-Load-Balanced-remote-Access-Cluster.md
-              - name: STEP 5: Test DirectAccess Connectivity from the Internet and Through the Cluster
+              - name: 'STEP 5: Test DirectAccess Connectivity from the Internet and Through the Cluster'
                 href: remote-access/directaccess/tlg-cluster-nlb/STEP-5-Test-directAccess-Connectivity-from-the-Internet-and-Through-the-Cluster.md
-              - name: STEP 6: Test DirectAccess Client Connectivity from Behind a Nat Device
+              - name: 'STEP 6: Test DirectAccess Client Connectivity from Behind a Nat Device'
                 href: remote-access/directaccess/tlg-cluster-nlb/STEP-6-Test-directAccess-Client-Connectivity-from-Behind-a-Nat-Device.md
-              - name: STEP 7: Test Connectivity When Returning to the Corpnet
+              - name: 'STEP 7: Test Connectivity When Returning to the Corpnet'
                 href: remote-access/directaccess/tlg-cluster-nlb/STEP-7-Test-Connectivity-When-Returning-to-the-Corpnet.md
-              - name: STEP 8: Snapshot the DirectAccess Cluster-NLB Configuration
+              - name: 'STEP 8: Snapshot the DirectAccess Cluster-NLB Configuration'
                 href: remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-s8-snapshot.md
-          - name: Test Lab Guide: Demonstrate a DirectAccess Multisite Deployment
+          - name: 'Test Lab Guide: Demonstrate a DirectAccess Multisite Deployment'
             href: remote-access/directaccess/tlg-multisite/Test-Lab-Guide-Demonstrate-a-directAccess-Multisite-Deployment.md
             items:
             - name: Overview of the Test Lab Scenario
@@ -482,35 +482,35 @@
             - name: Steps for Configuring the Test Lab
               href: remote-access/directaccess/tlg-multisite/Steps-for-Configuring-the-Test-Lab-4.md
               items:
-              - name: STEP 1: Complete the DirectAccess Configuration
+              - name: 'STEP 1: Complete the DirectAccess Configuration'
                 href: remote-access/directaccess/tlg-multisite/STEP-1-Complete-DirectAccess-Configuration.md
-              - name: STEP 2: Install and Configure ROUTER1
+              - name: 'STEP 2: Install and Configure ROUTER1'
                 href: remote-access/directaccess/tlg-multisite/STEP-2-Install-and-Configure-ROUTER1.md
-              - name: STEP 3: Install and Configure CLIENT2
+              - name: 'STEP 3: Install and Configure CLIENT2'
                 href: remote-access/directaccess/tlg-multisite/STEP-3-Install-and-Configure-CLIENT2.md
-              - name: STEP 4: Configure APP1
+              - name: 'STEP 4: Configure APP1'
                 href: remote-access/directaccess/tlg-multisite/STEP-4-Configure-APP1.md
-              - name: STEP 5: Configure DC1
+              - name: 'STEP 5: Configure DC1'
                 href: remote-access/directaccess/tlg-multisite/STEP-5-Configure-DC1.md
-              - name: STEP 6: Install and Configure 2-DC1
+              - name: 'STEP 6: Install and Configure 2-DC1'
                 href: remote-access/directaccess/tlg-multisite/STEP-6-Install-and-Configure-2-DC1.md
-              - name: STEP 7: Install and Configure 2-APP1
+              - name: 'STEP 7: Install and Configure 2-APP1'
                 href: remote-access/directaccess/tlg-multisite/STEP-7-Install-and-Configure-2-APP1.md
-              - name: STEP 8: Configure INET1
+              - name: 'STEP 8: Configure INET1'
                 href: remote-access/directaccess/tlg-multisite/STEP-8-Configure-INET1.md
-              - name: STEP 9: Configure EDGE1
+              - name: 'STEP 9: Configure EDGE1'
                 href: remote-access/directaccess/tlg-multisite/STEP-9-Configure-EDGE1.md
-              - name: STEP 10: Install and Configure 2-EDGE1
+              - name: 'STEP 10: Install and Configure 2-EDGE1'
                 href: remote-access/directaccess/tlg-multisite/STEP-10-Install-and-Configure-2-EDGE1.md
-              - name: STEP 11: Configure the Multisite Deployment
+              - name: 'STEP 11: Configure the Multisite Deployment'
                 href: remote-access/directaccess/tlg-multisite/STEP-11-Configure-the-Multisite-Deployment.md
-              - name: STEP 12: Test DirectAccess Connectivity
+              - name: 'STEP 12: Test DirectAccess Connectivity'
                 href: remote-access/directaccess/tlg-multisite/STEP-12-Test-directAccess-Connectivity.md
-              - name: STEP 13: Test DirectAccess Connectivity from Behind a Nat Device
+              - name: 'STEP 13: Test DirectAccess Connectivity from Behind a Nat Device'
                 href: remote-access/directaccess/tlg-multisite/STEP-13-Test-directAccess-Connectivity-from-Behind-a-Nat-Device.md
-              - name: STEP 14: Snapshot the Configuration
+              - name: 'STEP 14: Snapshot the Configuration'
                 href: remote-access/directaccess/tlg-multisite/STEP-14-Snapshot-the-Configuration.md
-          - name: Test Lab Guide: Demonstrate DirectAccess with OTP Authentication and RSA SecurID
+          - name: 'Test Lab Guide: Demonstrate DirectAccess with OTP Authentication and RSA SecurID'
             href: remote-access/directaccess/tlg-otp-securid/Test-Lab-Guide-Demonstrate-directAccess-with-OTP-Authentication-and-RSA-SecurID.md
             items:
             - name: Overview of the Test Lab Scenario
@@ -520,21 +520,21 @@
             - name: Steps for Configuring the Test Lab
               href: ./remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-steps.md
               items:
-              - name: STEP 1: complete the DirectAccess Configuration
+              - name: 'STEP 1: complete the DirectAccess Configuration'
                 href: remote-access/directaccess/tlg-cluster-nlb/STEP-1-complete-the-directAccess-Configuration.md
-              - name: STEP 2: Configure APP1
+              - name: 'STEP 2: Configure APP1'
                 href: remote-access/directaccess/tlg-otp-securid/STEP-2-Configure-APP1.md
-              - name: STEP 3: Configure DC1
+              - name: 'STEP 3: Configure DC1'
                 href: remote-access/directaccess/tlg-otp-securid/STEP-3-Configure-DC1.md
-              - name: STEP 4: Install and Configure RSA and EDGE1
+              - name: 'STEP 4: Install and Configure RSA and EDGE1'
                 href: remote-access/directaccess/tlg-otp-securid/STEP-4-Install-and-Configure-RSA-and-EDGE1.md
-              - name: STEP 5: Verify OTP Health on EDGE1
+              - name: 'STEP 5: Verify OTP Health on EDGE1'
                 href: remote-access/directaccess/tlg-otp-securid/STEP-5-verify-OTP-Health-on-EDGE1.md
-              - name: STEP 6: Test DirectAccess Connectivity from the Homenet Subnet
+              - name: 'STEP 6: Test DirectAccess Connectivity from the Homenet Subnet'
                 href: remote-access/directaccess/tlg-otp-securid/STEP-6-Test-directAccess-Connectivity-from-the-Homenet-Subnet.md
-              - name: STEP 7: Test DirectAccess Connectivity from the Internet
+              - name: 'STEP 7: Test DirectAccess Connectivity from the Internet'
                 href: remote-access/directaccess/tlg-otp-securid/STEP-7-Test-directAccess-Connectivity-from-the-Internet.md
-              - name: STEP 8: Snapshot the Configuration
+              - name: 'STEP 8: Snapshot the Configuration'
                 href: ./remote-access/directaccess/tlg-cluster-nlb/da-cluster-nlb-s8-snapshot.md
         - name: DirectAccess Known Issues
           href: remote-access/directaccess/directAccess-Known-Issues.md
@@ -550,18 +550,18 @@
           - name: Plan a Basic DirectAccess Deployment
             href: remote-access/directaccess/single-server-wizard/Plan-a-Basic-directAccess-Deployment.md
             items:
-            - name: Step 1: Plan the Basic DirectAccess Infrastructure
+            - name: 'Step 1: Plan the Basic DirectAccess Infrastructure'
               href: remote-access/directaccess/single-server-wizard/da-basic-plan-s1-infrastructure.md
-            - name: Step 2: Plan the Basic DirectAccess Deployment
+            - name: 'Step 2: Plan the Basic DirectAccess Deployment'
               href: remote-access/directaccess/single-server-wizard/da-basic-plan-s2-deployment.md
           - name: Install and Configure Basic DirectAccess
             href: remote-access/directaccess/single-server-wizard/Install-and-Configure-Basic-directAccess.md
             items:
-            - name: Step 1: Configure the Basic DirectAccess Infrastructure
+            - name: 'Step 1: Configure the Basic DirectAccess Infrastructure'
               href: remote-access/directaccess/single-server-wizard/da-basic-configure-s1-infrastructure.md
-            - name: Step 2: Configure the Basic DirectAccess Server
+            - name: 'Step 2: Configure the Basic DirectAccess Server'
               href: remote-access/directaccess/single-server-wizard/da-basic-configure-s2-server.md
-            - name: Step 3: verify Basic DirectAccess Deployments
+            - name: 'Step 3: verify Basic DirectAccess Deployments'
               href: remote-access/directaccess/single-server-wizard/da-basic-configure-s3-verify.md
         - name: Deploy a Single DirectAccess Server with Advanced Settings
           href: remote-access/directaccess/single-server-advanced/Deploy-a-Single-directAccess-Server-with-Advanced-Settings.md
@@ -569,18 +569,18 @@
           - name: Plan an Advanced DirectAccess Deployment
             href: remote-access/directaccess/single-server-advanced/Plan-an-Advanced-directAccess-Deployment.md
             items:
-            - name: Step 1: Plan the Advanced DirectAccess Infrastructure
+            - name: 'Step 1: Plan the Advanced DirectAccess Infrastructure'
               href: remote-access/directaccess/single-server-advanced/da-adv-plan-s1-infrastructure.md
-            - name: Step 2: Plan Advanced DirectAccess Deployments
+            - name: 'Step 2: Plan Advanced DirectAccess Deployments'
               href: remote-access/directaccess/single-server-advanced/da-adv-plan-s2-deployments.md
           - name: Install and Configure Advanced DirectAccess
             href: remote-access/directaccess/single-server-advanced/Install-and-Configure-Advanced-directAccess.md
             items:
-            - name: Step 1: Configure Advanced DirectAccess Infrastructure
+            - name: 'Step 1: Configure Advanced DirectAccess Infrastructure'
               href: remote-access/directaccess/single-server-advanced/da-adv-configure-s1-infrastructure.md
-            - name: Step 2: Configure Advanced DirectAccess Servers
+            - name: 'Step 2: Configure Advanced DirectAccess Servers'
               href: remote-access/directaccess/single-server-advanced/da-adv-configure-s2-servers.md
-            - name: Step 3: verify the Advanced DirectAccess Deployment
+            - name: 'Step 3: verify the Advanced DirectAccess Deployment'
               href: remote-access/directaccess/single-server-advanced/da-adv-configure-s3-verify.md
         - name: Add DirectAccess to an Existing Remote Access (VPN) Deployment
           href: remote-access/directaccess/add-to-existing-vpn/add-directAccess-to-an-Existing-remote-Access-VPN-Deployment.md
@@ -588,18 +588,18 @@
           - name: Plan to Enable DirectAccess
             href: remote-access/directaccess/add-to-existing-vpn/Plan-to-Enable-directAccess.md
             items:
-            - name: Step 1: Plan DirectAccess Infrastructure
+            - name: 'Step 1: Plan DirectAccess Infrastructure'
               href: remote-access/directaccess/add-to-existing-vpn/step-1-plan-da-inf-davpn.md
-            - name: Step 2: Plan the DirectAccess Deployment
+            - name: 'Step 2: Plan the DirectAccess Deployment'
               href: remote-access/directaccess/add-to-existing-vpn/step-2-plan-da-davpn.md
           - name: Enable DirectAccess
             href: remote-access/directaccess/add-to-existing-vpn/Enable-directAccess.md
             items:
-            - name: Step 1: Configure the DirectAccess Infrastructure
+            - name: 'Step 1: Configure the DirectAccess Infrastructure'
               href: remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn.md
-            - name: Step 2: Configure the DirectAccess-VPN Server
+            - name: 'Step 2: Configure the DirectAccess-VPN Server'
               href: remote-access/directaccess/add-to-existing-vpn/step-2-configure-server-davpn.md
-            - name: Step 3: Verify the Deployment
+            - name: 'Step 3: Verify the Deployment'
               href: remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn.md
   - name: Web Application Proxy in Windows Server
     href: remote-access//web-application-proxy/web-application-proxy-windows-server.md
