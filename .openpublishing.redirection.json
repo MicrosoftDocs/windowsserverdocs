@@ -3,62 +3,62 @@
     {
       "source_path": "WindowsServerDocs/get-started/Deploy-Nano-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2016/get-started/Deploy-Nano-Server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/get-started/Developing-PowerShell-Cmdlets-for-Nano-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2016/get-started/Developing-PowerShell-Cmdlets-for-Nano-Server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/get-started/Developing-on-Nano-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2016/get-started/Developing-on-Nano-Server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/get-started/Getting-Started-with-Nano-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2016/get-started/Getting-Started-with-Nano-Server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/get-started/IIS-on-Nano-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2016/get-started/IIS-on-Nano-Server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/get-started/MPIO-on-Nano-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2016/get-started/MPIO-on-Nano-Server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/get-started/Manage-Nano-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2016/get-started/Manage-Nano-Server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/get-started/Nano-Server-Quick-Start.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2016/get-started/Nano-Server-Quick-Start",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/get-started/PowerShell-on-Nano-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2016/get-started/PowerShell-on-Nano-Server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/get-started/Update-Nano-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2016/get-started/Update-Nano-Server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/get-started/Troubleshooting-Nano-Server.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2016/get-started/Troubleshooting-Nano-Server",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/get-started/nano-in-semi-annual-channel.md",
       "redirect_url": "/previous-versions/windows/it-pro/windows-server-2016/get-started/nano-in-semi-annual-channel",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "WindowsServerDocs/administration/performance-tuning/powershell/index.md",

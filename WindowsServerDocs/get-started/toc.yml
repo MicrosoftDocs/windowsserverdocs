@@ -87,11 +87,6 @@ items:
       href: extended-security-updates-deploy.md
     - name: Perform an in-place upgrade
       href: perform-in-place-upgrade.md
-  - name: Nano Server
-    items:
-    - name: Deploy Nano Server
-    - name: Manage Nano Server
-    - name: Developing on Nano Server
   - name: Troubleshooting
     items:
     - name: Activation
