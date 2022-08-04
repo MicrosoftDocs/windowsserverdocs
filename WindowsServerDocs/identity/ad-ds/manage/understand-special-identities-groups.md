@@ -1,5 +1,5 @@
 ---
-title: Special Identities (Windows Server)
+title: Special Identities
 description: Windows Server special identities groups usage in Windows access control 
 author: dansimp
 ms.author: dansimp
@@ -7,7 +7,7 @@ ms.topic: article
 ms.date: 08/02/2022
 ---
 
-# Special Identities
+# Special identities
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
@@ -19,7 +19,7 @@ Special identity groups are similar to Active Directory security groups as liste
 
 - Assign permissions to security groups for the purpose of accessing resources.
 
-Servers that are running the supported Windows Server operating systems designated in the **Applies To** list at the beginning of this article include several special identity groups. These special identity groups do not have specific memberships that can be modified, but they can represent different users at different times, depending on the circumstances.
+Servers that are running the supported Windows Server operating systems designated in the **Applies to** list at the beginning of this article include several special identity groups. These special identity groups do not have specific memberships that can be modified, but they can represent different users at different times, depending on the circumstances.
 
 Although the special identity groups can be assigned rights and permissions to resources, the memberships cannot be modified or viewed. Group scopes do not apply to special identity groups. Users are automatically assigned to these special identity groups whenever they sign in or access a particular resource.
 
@@ -90,7 +90,7 @@ Any user who accesses the system through an anonymous logon has the Anonymous Lo
 |Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
 |Default User Rights|None|
 
-## Attested Key Property
+## Attested key property
 
 A SID that means the key trust object had the attestation property.
 
@@ -112,7 +112,7 @@ Any user who accesses the system through a sign-in process has the Authenticated
 |Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
 |Default User Rights| [Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight<p>[Add workstations to domain](/windows/device-security/security-policy-settings/add-workstations-to-domain): SeMachineAccountPrivilege<p>[Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege|
 
-## Authentication Authority Asserted Identity
+## Authentication authority asserted identity
 
 A SID that means the client's identity is asserted by an authentication authority based on proof of possession of client credentials.
 
@@ -134,7 +134,7 @@ Any user or process that accesses the system as a batch job (or through the batc
 |Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
 |Default User Rights| none|
 
-## Console Logon
+## Console logon
 
 A group that includes users who are logged on to the physical console. This SID can be used to implement security policies that grant different rights based on whether a user has been granted physical access to the console.
 
@@ -180,7 +180,7 @@ Any user who accesses the system through a dial-up connection has the Dial-Up id
 |Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
 |Default User Rights| none|
 
-## Digest Authentication
+## Digest authentication
 
 | Attribute | Value |
 |  :--: | :--: |
@@ -226,7 +226,7 @@ Membership is controlled by the operating system.
 |Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
 |Default User Rights| [Access this computer from the network](/windows/device-security/security-policy-settings/access-this-computer-from-the-network): SeNetworkLogonRight</br> [Act as part of the operating system](/windows/device-security/security-policy-settings/act-as-part-of-the-operating-system): SeTcbPrivilege</br> [Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege|
 
-## Fresh Public Key Identity
+## Fresh Public Key identity
 
 A SID that means the client's identity is asserted by an authentication authority based on proof of current possession of client public key credentials.
 
@@ -259,7 +259,7 @@ Internet Information Services (IIS) uses this account by default whenever anonym
 |Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
 |Default User Rights|None|
 
-## Key Trust
+## Key trust
 
 A SID that means the client's identity is based on proof of possession of public key credentials using the key trust object.
 
@@ -292,7 +292,7 @@ This is a service account that is used by the operating system. The LocalSystem 
 |Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
 |Default User Rights|None|
 
-## MFA Key Property
+## MFA key property
 
 A SID that means the key trust object had the multifactor authentication (MFA) property.
 
@@ -325,7 +325,7 @@ The Network Service account is similar to an Authenticated User account. The Net
 |Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
 |Default User Rights| [Adjust memory quotas for a process](/windows/device-security/security-policy-settings/adjust-memory-quotas-for-a-process): SeIncreaseQuotaPrivilege<p> [Bypass traverse checking](/windows/device-security/security-policy-settings/bypass-traverse-checking): SeChangeNotifyPrivilege<p>[Create global objects](/windows/device-security/security-policy-settings/create-global-objects): SeCreateGlobalPrivilege<p>[Generate security audits](/windows/device-security/security-policy-settings/generate-security-audits): SeAuditPrivilege<p>[Impersonate a client after authentication](/windows/device-security/security-policy-settings/impersonate-a-client-after-authentication): SeImpersonatePrivilege<p>[Replace a process level token](/windows/device-security/security-policy-settings/replace-a-process-level-token): SeAssignPrimaryTokenPrivilege<p>|
 
-## NTLM Authentication
+## NTLM authentication
 
 | Attribute | Value |
 |  :--: | :--: |
@@ -414,7 +414,7 @@ Users and computers with restricted capabilities have the Restricted identity. T
 |Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
 |Default User Rights| None |
 
-## SChannel Authentication
+## SChannel authentication
 
 | Attribute | Value |
 |  :--: | :--: |
@@ -434,7 +434,7 @@ Any service that accesses the system has the Service identity. This identity gro
 |Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
 |Default User Rights| [Create global objects](/windows/device-security/security-policy-settings/create-global-objects): SeCreateGlobalPrivilege<p>[Impersonate a client after authentication](/windows/device-security/security-policy-settings/impersonate-a-client-after-authentication): SeImpersonatePrivilege<p>|
 
-## Service Asserted Identity
+## Service asserted identity
 
 A SID that means the client's identity is asserted by a service.
 
@@ -478,6 +478,6 @@ Any user accessing the system through Terminal Services has the Terminal Server 
 
 - [Active Directory Security Groups](understand-security-groups.md)
 
-- [Security Principals](/windows/security/identity-protection/access-control/security-principals)
+- [Security Principals](understand-security-principals.md)
 
-- [Access Control Overview](/windows/security/identity-protection/access-control/)
+- [Access Control Overview](/windows/security/identity-protection/access-control/access-control)

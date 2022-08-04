@@ -1,5 +1,5 @@
 ---
-title: Active Directory Accounts (Windows Server)
+title: Active Directory Accounts
 description: Creating default local Windows Server Active Directory accounts on a domain controller
 author: dansimp
 ms.author: dansimp
@@ -7,7 +7,7 @@ ms.topic: article
 ms.date: 07/20/2022
 ---
 
-# Active Directory Accounts
+# Active Directory accounts
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
@@ -255,8 +255,13 @@ Each default local account in Active Directory has several account settings that
 |Smart card is required for interactive logon|Requires that a user has a smart card to sign on to the network interactively. The user must also have a smart card reader attached to their computer and a valid personal identification number (PIN) for the smart card.<p>When this attribute is applied on the account, the effect is as follows:<p><li>The attribute only restricts initial authentication for interactive logon and Remote Desktop logon. When interactive or Remote Desktop logon requires a subsequent network logon, such as with a domain credential, an NT Hash provided by the domain controller is used to complete the smartcard authentication process.<li>Each time the attribute is enabled on an account, the account’s current password hash value is replaced with a 128-bit random number. This invalidates the use of any previously configured passwords for the account. The value does not change after that unless a new password is set or the attribute is disabled and re-enabled.<li>Accounts with this attribute cannot be used to start services or run scheduled tasks.|
 |Account is trusted for delegation|Lets a service running under this account to perform operations on behalf of other user accounts on the network. A service running under a user account (also known as a service account) that is trusted for delegation can impersonate a client to gain access to resources, either on the computer where the service is running or on other computers. For example, in a forest that is set to the Windows Server 2003 functional level, this setting is found on the Delegation tab. It is available only for accounts that have been assigned service principal names (SPNs), which are set by using the setspn command from Windows Support Tools. This setting is security-sensitive and should be assigned cautiously.|
 |Account is sensitive and cannot be delegated|Gives control over a user account, such as for a Guest account or a temporary account. This option can be used if this account cannot be assigned for delegation by another account.|
-|Use DES encryption types for this account|Provides support for the Data Encryption Standard (DES). DES supports multiple levels of encryption, including Microsoft Point-to-Point Encryption (MPPE) Standard (40-bit and 56-bit), MPPE standard (56-bit), MPPE Strong (128-bit), Internet Protocol security (IPSec) DES (40-bit), IPSec 56-bit DES, and IPSec Triple DES (3DES).<div class="alert"> **Note:** DES is not enabled by default in Windows Server operating systems starting with Windows Server 2008 R2, nor in Windows client operating systems starting with Windows 7. For these operating systems, computers will not use DES-CBC-MD5 or DES-CBC-CRC cipher suites by default. If your environment requires DES, then this setting might affect compatibility with client computers or services and applications in your environment. For more information, see [Hunting down DES in order to securely deploy Kerberos](/archive/blogs/askds/hunting-down-des-in-order-to-securely-deploy-kerberos)</div>|
+|Use DES encryption types for this account|Provides support for the Data Encryption Standard (DES). DES supports multiple levels of encryption, including Microsoft Point-to-Point Encryption (MPPE) Standard (40-bit and 56-bit), MPPE standard (56-bit), MPPE Strong (128-bit), Internet Protocol security (IPSec) DES (40-bit), IPSec 56-bit DES, and IPSec Triple DES (3DES).</div>|
 |Do not require Kerberos preauthentication|Provides support for alternate implementations of the Kerberos protocol. Because preauthentication provides additional security, use caution when enabling this option. Domain controllers running Windows 2000 or Windows Server 2003 can use other mechanisms to synchronize time.|
+
+> [!NOTE]
+> DES is not enabled by default in Windows Server operating systems starting with Windows Server 2008 R2, nor in Windows client operating systems starting with Windows 7. For these operating systems, computers will not use DES-CBC-MD5 or DES-CBC-CRC cipher suites by default. If your environment requires DES, then this setting might affect compatibility with client computers or services and applications in your environment.
+
+For more information, see [Hunting down DES in order to securely deploy Kerberos](/archive/blogs/askds/hunting-down-des-in-order-to-securely-deploy-kerberos).
 
 ## Manage default local accounts in Active Directory
 
@@ -341,11 +346,11 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
 3. Right-click **Group Policy Objects**, and &gt; **New**.
 
-    ![Object being added into Group Policy Management Console (GPMC) window](media/default-user-account-restrict1.png)
+    ![Screenshot of Group Policy Management Console window. Right-click on Group Policy Objects item and select New.](media/default-user-account-restrict1.png)
 
 4. In the **New GPO** dialog box, name the GPO that restricts administrators from signing in to workstations, and &gt; **OK**.
 
-    ![A Group Policy Object (GPO) window where a new object is created](media/default-user-account-restrict2.png)
+    ![Screenshot of Group Policy Object window. The first field is for the group name. The second field is for the source starter GPO.](media/default-user-account-restrict2.png)
 
 5. Right-click **New GPO**, and &gt; **Edit**.
 
@@ -359,7 +364,7 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
    3. Click **Add User or Group**, click **Browse**, type **Domain Admins**, and &gt; **OK**.
 
-        ![User Rights Management window showing domain account policy](media/default-user-account-restrict3.png)
+        ![Screenshot of User Rights Management window. Define these policy settings check box is ticked. Two domain accounts shown being denied local logon.](media/default-user-account-restrict3.png)
 
         > [!TIP]
         > You can optionally add any groups that contain server administrators who you want to restrict from signing in to workstations.
@@ -375,11 +380,11 @@ Restrict logon access to lower-trust servers and workstations by using the follo
 
     1. Right-click the workstation OU, and then &gt; **Link an Existing GPO**.
 
-        ![A Group Policy Object (GPO) being linked to an organizational unit](media/default-user-account-restrict4.png)
+        ![Screenshot of Group Policy Management Console window. Right-click on Workstations item and select Link an Existing GPO.](media/default-user-account-restrict4.png)
 
     2. Select the GPO that you just created, and &gt; **OK**.
 
-        ![Group Policy Object (GPO) window linking a restricted admin account](media/default-user-account-restrict5.png)
+        ![Group Policy Object window. Field one is for domain selection. Field two shows linked Group Policy objects.](media/default-user-account-restrict5.png)
 
 9. Test the functionality of enterprise applications on workstations in the first OU and resolve any issues caused by the new policy.
 
@@ -400,7 +405,7 @@ It is a best practice to configure the user objects for all sensitive accounts i
 
 As with any configuration change, test this enabled setting fully to ensure that it performs correctly before you implement it.
 
-![Active Directory properties window setting local account(s) to not be delegated](media/active-directory-account-properties.png)
+![Screenshot of Active Directory account properties window. Account is sensitive and cannot be delegated checkbox is ticked.](media/active-directory-account-properties.png)
 
 ## Secure and manage domain controllers
 
@@ -420,6 +425,6 @@ In addition, installed applications and management agents on domain controllers 
 
 ## See also
 
-- [Security Principals](/windows/security/identity-protection/access-control/security-principals)
+- [Security Principals](understand-security-principals.md)
 
 - [Access Control Overview](/windows/security/identity-protection/access-control/access-control)

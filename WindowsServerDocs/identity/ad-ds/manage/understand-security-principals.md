@@ -1,5 +1,5 @@
 ---
-title: Security Principals for Windows Server
+title: Security Principals
 description: Security Principals for Windows Server accounts and security groups and how they work in Active Directory
 author: dansimp
 ms.author: dansimp
@@ -7,7 +7,7 @@ ms.topic: article
 ms.date: 07/21/2022
 ---
 
-# Security Principals
+# Security principals
 
 >Applies to: Windows Server 2022, Windows Server 2019, Windows Server 2016
 
@@ -135,4 +135,4 @@ For descriptions and settings information about the Special Identities group, se
 
 ## See also
 
-- [Access Control Overview](/windows/security/identity-protection/access-control/)
+- [Access Control Overview](/windows/security/identity-protection/access-control/access-control)
