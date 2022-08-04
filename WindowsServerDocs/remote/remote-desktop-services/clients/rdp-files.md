@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 06/14/2022
+ms.date: 08/01/2022
 ---
 
 # Supported Remote Desktop RDP file settings
@@ -62,6 +62,7 @@ These tables also highlight which settings are supported as custom properties wi
 | keyboardhook:i:value | Determines when Windows key combinations (WIN key, ALT+TAB) are applied to the remote session for desktop and RemoteApp connections. | - 0: Windows key combinations are applied on the local computer</br>- 1: (Desktop only) Windows key combinations are applied on the remote computer when in focus</br>- 2: (Desktop only) Windows key combinations are applied on the remote computer in full screen mode only</br>- 3: (RemoteApp only) Windows key combinations are applied on the RemoteApp when in focus. Recommended to use this value only when publishing the Remote Desktop Connection app (mstsc.exe) from the host pool on Azure Virtual Desktop. This value is only supported when using the [Windows Desktop client](windowsdesktop.md) (MSRDC). | 2 | Yes |
 | redirectclipboard:i:value | Clipboard redirection:</br>Determines whether clipboard redirection is enabled. | - 0: Clipboard on local computer isn't available in remote session</br>- 1: Clipboard on local computer is available in remote session | 1 | Yes |
 | redirectcomports:i:value | COM ports redirection:</br>Determines whether COM (serial) ports on the local computer will be redirected and available in the remote session. | - 0: COM ports on the local computer are not available in the remote session</br>- 1: COM ports on the local computer are available in the remote session | 0 | Yes |
+| redirectlocation:i:value | Location redirection:</br>Determines whether the location of the local device will be redirected and available in the remote session | - 0: The remote session uses the location of the remote computer or virtual machine</br>- 1: The remote session uses the location of the local device | 0 | Yes |
 | redirectprinters:i:value | Printer redirection:</br>Determines whether printers configured on the local computer will be redirected and available in the remote session | - 0: The printers on the local computer are not available in the remote session</br>- 1: The printers on the local computer are available in the remote session | 1 | Yes |
 | redirectsmartcards:i:value | Smart card redirection:</br>Determines whether smart card devices on the local computer will be redirected and available in the remote session. |- 0: The smart card device on the local computer is not available in the remote session</br>- 1: The smart card device on the local computer is available in the remote session | 1 | Yes |
 | usbdevicestoredirect:s:value | USB redirection | - *: Redirect all USB devices that are not already redirected by another high-level redirection</br> - {Device Setup Class GUID}: Redirect all devices that are members of the specified [device setup class](/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors/)</br> - USBInstanceID: Redirect a specific USB device identified by the instance ID| Don't redirect any USB devices | Yes |

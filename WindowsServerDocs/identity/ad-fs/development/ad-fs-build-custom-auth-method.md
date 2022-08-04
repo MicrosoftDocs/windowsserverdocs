@@ -667,5 +667,6 @@ You should see a successful sign-in when entering _adfabric_ at the MFA authenti
 
 #### Other Resources
 
-[Additional Authentication Methods](/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs)
-[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](/identity/ad-fs/operations/manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications)
+[Additional Authentication Methods](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs)
+
+[Manage Risk with Additional Multi-Factor Authentication for Sensitive Applications](/windows-server/identity/ad-fs/operations/manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications)
