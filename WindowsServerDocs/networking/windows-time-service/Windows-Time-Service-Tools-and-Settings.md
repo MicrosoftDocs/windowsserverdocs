@@ -351,6 +351,9 @@ In order to enable W32Time logging, add the following registry entries:
 
 Group Policy settings are contained in the **Global Configuration Settings** and the **Windows NTP Client Settings** GPOs.
 
+> [!NOTE]
+> If you configure a GPO for set the NTP server to your DC the value of NTPServer in Registry key will not be overwritten. The default Value Type is set to NT5DS. This means the NTP server performs synchronization according to the domain hierarchy (used by default on domain-joined computers). To view your NTP configuration run on CMD "w32tm /query /configuration"
+
 ### Global Configuration Settings
 
 These are the global Group Policy settings and default values for the Windows Time service. These settings are contained in the **Global Configuration Settings** GPO in Local Policy Editor.
