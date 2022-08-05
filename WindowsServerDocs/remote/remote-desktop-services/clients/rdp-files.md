@@ -15,7 +15,7 @@ The following table includes the list of supported RDP file settings that you ca
 These tables also highlight which settings are supported as custom properties with Azure Virtual Desktop. You can refer to [this documentation](/azure/virtual-desktop/customize-rdp-properties/) detailing how to use PowerShell to customize RDP properties for Azure Virtual Desktop host pools.
 
 >[!IMPORTANT]
->These tables list the Remote Desktop client app's default settings when not configured in Windows Virtual Desktop.
+>These tables list the Remote Desktop client app's default settings when not configured in Azure Virtual Desktop.
 
 ## Connection information
 
