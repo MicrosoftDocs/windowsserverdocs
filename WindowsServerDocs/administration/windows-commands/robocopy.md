@@ -73,6 +73,9 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /nooffload | Copies files without using the Windows Copy Offload mechanism. |
 | /compress | Requests network compression during file transfer, if applicable. |
 
+> [!NOTE]
+> The **/mt** parameter was introduced in Windows Server 2008 R2 and its functionality applies to current versions of Windows Server.
+
 > [!IMPORTANT]
 > When using the **/secfix** copy option, specify the type of security information you want to copy, using one of these additional copy options:
 >
