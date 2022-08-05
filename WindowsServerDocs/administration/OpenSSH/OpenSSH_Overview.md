@@ -7,7 +7,7 @@ author: maertendmsft
 ms.topic: overview
 ---
 
-# OpenSSH in Windows overview
+# OpenSSH for Windows overview
 
 >Applies to Windows Server 2022, Windows Server 2019, Windows 10 (build 1809 and later)
 
