@@ -203,16 +203,16 @@ conceptualContent:
     - title: Reference
       links:
         - url: /powershell/windows/get-started
-          itemType: overview
+          itemType: reference
           text: Windows and Windows Server PowerShell modules
         - url: ./administration/windows-commands/windows-commands.md
-          itemType: overview
+          itemType: reference
           text: Windows built-in commands
         - url: /windows/win32/server-and-system-technologies
-          itemType: overview
+          itemType: reference
           text: Develop with server technologies using the Win32 API
         - url: /openspecs/windows_protocols/ms-winprotlp
-          itemType: overview
+          itemType: reference
           text: Windows protocols
 
 additionalContent:
