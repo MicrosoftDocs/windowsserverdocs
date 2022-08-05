@@ -1,6 +1,66 @@
 {
   "redirections": [
     {
+      "source_path": "WindowsServerDocs/get-started/Deploy-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Developing-PowerShell-Cmdlets-for-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Developing-on-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Getting-Started-with-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/IIS-on-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/MPIO-on-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Manage-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Nano-Server-Quick-Start.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/PowerShell-on-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Update-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/Troubleshooting-Nano-Server.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/get-started/nano-in-semi-annual-channel.md",
+      "redirect_url": "/virtualization/windowscontainers/manage-containers/container-base-images",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "WindowsServerDocs/administration/performance-tuning/powershell/index.md",
       "redirect_url": "/powershell/scripting/dev-cross-plat/performance/script-authoring-considerations",
       "redirect_document_id": false
