@@ -161,7 +161,8 @@ Impact: SMB not in a default configuration, which could lead to less than optima
 Resolution: Use Registry Editor to enable the SMB 1.0 protocol.
 ```
 
-You should ignore this specific BPA rule's guidance, it's deprecated. The false error was first corrected in Windows Server 2022 and Windows Server 2019 in the 2022 April Cumulative Update. We repeat: don't enable SMB 1.0.
+> [!IMPORTANT]
+> You should ignore this specific BPA rule's guidance, it's deprecated. The false error was first corrected in Windows Server 2022 and Windows Server 2019 in the 2022 April Cumulative Update. We repeat: don't enable SMB 1.0.
 
 ## Additional references
 
