@@ -26,6 +26,7 @@ SMBv1 has the following behavior in Windows 10 and Windows Server 2019 and late
 - The SMB version 2.02, 2.1, 3.0, 3.02, and 3.1.1 features are still fully supported and included by default as part of the SMBv2 binaries.
 - Because the Computer Browser service relies on SMBv1, the service is uninstalled if the SMBv1 client or server is uninstalled. This means that Explorer Network can no longer display Windows computers through the legacy NetBIOS datagram browsing method.
 - SMBv1 can still be reinstalled in all editions of Windows 10 and Windows Server 2016.
+- Windows Server virtual machines created by Microsoft for the Azure Marketplace do not contain the SMB1 binaries & you cannot enable SMB1. 3rd party Azure Marketplace VMs may contain SMB1, contact their vendor for information.
 
 Starting in Windows 10, version 1809 (RS5), Windows 10 Pro no longer contains the SMBv1 client by default after a clean installation. All other behaviors from version 1709 still apply.
 
@@ -160,7 +161,7 @@ Impact: SMB not in a default configuration, which could lead to less than optima
 Resolution: Use Registry Editor to enable the SMB 1.0 protocol.
 ```
 
-You should ignore this specific BPA rule's guidance, it's deprecated. We repeat: don't enable SMB 1.0.
+You should ignore this specific BPA rule's guidance, it's deprecated. The false error was first corrected in Windows Server 2022 and Windows Server 2019 in the 2022 April Cumulative Update. We repeat: don't enable SMB 1.0.
 
 ## Additional references
 
