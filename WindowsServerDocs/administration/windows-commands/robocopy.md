@@ -68,6 +68,7 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /rh:hhmm-hhmm | Specifies run times when new copies may be started. |
 | /pf | Checks run times on a per-file (not per-pass) basis. |
 | /ipg:n | Specifies the inter-packet gap to free bandwidth on slow lines. |
+| /sj | Copies junctions (soft-links) to the destination path instead of link targets. |
 | /sl | Don't follow symbolic links and instead create a copy of the link. |
 | /nodcopy | Copies no directory info (the default **/dcopy:DA** is done). |
 | /nooffload | Copies files without using the Windows Copy Offload mechanism. |
@@ -96,8 +97,8 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 | /xf `<filename>[ ...]` | Excludes files that match the specified names or paths. Wildcard characters (**&#42;** and **?**) are supported. |
 | /xd `<directory>[ ...]` | Excludes directories that match the specified names and paths. |
 | /xc | Excludes existing files with the same timestamp, but different file sizes. |
-| /xn | Excludes existing files newer than the copy in the source directory. |
-| /xo | Excludes existing files older than the copy in the source directory. |
+| /xn | Source directory files newer than the destination are excluded from the copy. |
+| /xo | Source directory files older than the destination are excluded from the copy. |
 | /xx | Excludes extra files and directories present in the destination but not the source. Excluding extra files will not delete files from the destination. |
 | /xl | Excludes "lonely" files and directories present in the source but not the destination. Excluding lonely files prevents any new files from being added to the destination. |
 | /im | Include modified files (differing change times). |
@@ -154,8 +155,8 @@ robocopy c:\reports '\\marketing\videos' yearly-report.mov /mt /z
 
 | Option | Description |
 |--|--|
-| /job:`<jobname>` | Specifies that parameters are to be derived from the named job file. |
-| /save:`<jobname>` | Specifies that parameters are to be saved to the named job file. |
+| /job:`<jobname>` | Specifies that parameters are to be derived from the named job file. To run `/job:jobname`, you must first run the `/save:jobname` parameter to create the job file. |
+| /save:`<jobname>` | Specifies that parameters are to be saved to the named job file. This must be ran before running `/job:jobname`. All copy, retry, and logging options must be specified before this parameter. |
 | /quit | Quits after processing command line (to view parameters). |
 | /nosd | Indicates that no source directory is specified. |
 | /nodd | Indicates that no destination directory is specified. |
