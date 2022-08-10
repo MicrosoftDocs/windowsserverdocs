@@ -16,7 +16,7 @@ Windows Server is the platform for building an infrastructure of connected appli
 This collection of articles contains detailed information to help you understand and get the most from Windows Server, and help determine if you're ready to move to the latest version. Once you've checked the system requirements, upgrade options, and other information about Windows Server, you're ready to start down the path of installing the best edition and installation option for your needs.
 
 > [!TIP]
-> To download Windows Server, see [Windows Server evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server) in the Evaluation Center.
+> To download Windows Server, see [Windows Server evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022) in the Evaluation Center.
 
 > [!NOTE]
 > If you're looking for information about earlier versions that are no longer supported, see the [Windows previous versions documentation](/previous-versions/windows/).
