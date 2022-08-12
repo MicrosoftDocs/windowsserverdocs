@@ -60,6 +60,8 @@ The best strategy when using ETL tracing is to first capture the smallest log po
 
 Here's how to create and decode a trace for the User Profile Service:
 
+Important: The ETL provider for User Profile Service was redesigned in Windows 10 1903/19H1 and newer, and Windows Server 2022 and newer. To trouble-shoot newer operating systems using ETL logging, please contact Microsoft Support Services.
+
 1. Sign on to the computer where the user is experiencing problems, using an account that is a member of the local Administrators group.
 2. From an elevated command prompt enter the following commands, where *\<Path\>* is the path to a local folder that you have previously created, for example C:\\logs:
 
