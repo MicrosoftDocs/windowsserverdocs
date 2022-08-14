@@ -63,7 +63,7 @@ The special identity groups are described in the following tables:
 
 - [Principal Self](#principal-self)
 
-- [Read-only Domain Controller](#read-only-domain-controller)
+- [Read-only Domain Controllers](#read-only-domain-controllers)
 
 - [Remote Interactive Logon](#remote-interactive-logon)
 
@@ -202,13 +202,13 @@ This group includes all domain controllers in an Active Directory forest. Domain
 
 ## Enterprise Read-only Domain Controllers
 
-This group includes all domain controllers in an Active Directory forest. Domain controllers with enterprise-wide roles and responsibilities have the Enterprise Domain Controllers identity. Except for account passwords, a Read-only domain controller holds all the Active Directory objects and attributes that a writable domain controller holds. Membership is controlled by the operating system.
+This group includes all Read-only Domain Controllers in an Active Directory forest. Membership is controlled by the operating system.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-21-\<RootDomain>|
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-Known SID/RID | S-1-5-21-\<RootDomain>-498|
+|Object Class|  Group|
+|Default Location in Active Directory |cn=Users, dc=\<forestRootDomain\>|
 |Default User Rights|None|
 
 ## Everyone
@@ -378,15 +378,15 @@ Identifies a SECURITY_NT_AUTHORITY Proxy.
 |Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
 |Default User Rights|None|
 
-## Read-only Domain Controller
+## Read-only Domain Controllers
 
-This group includes all read-only domain controllers in the forest with read-only rights within the Active Directory database. It allows for domain controller deployment in situations where physical security is scare or not guaranteed. Membership is controlled by the operating system.
+This group includes all read-only domain controllers in the domain with read-only rights within the Active Directory database. Except for account passwords, a Read-only domain controller holds all the Active Directory objects and attributes that a writable domain controller holds. It allows for domain controller deployment in situations where physical security is scare or not guaranteed. RODCs are explicit members of this group.
 
 | Attribute | Value |
 |  :--: | :--: |
-| Well-Known SID/RID | S-1-5-21-\<domain>|
-|Object Class|  Foreign Security Principal|
-|Default Location in Active Directory |cn=WellKnown Security Principals, cn=Configuration, dc=\<forestRootDomain\>|
+| Well-Known SID/RID | S-1-5-21-\<domain>-521|
+|Object Class|  Group|
+|Default Location in Active Directory |cn=Users, dc=\<rootDomain\>|
 |Default User Rights|None|
 
 > [!NOTE]
