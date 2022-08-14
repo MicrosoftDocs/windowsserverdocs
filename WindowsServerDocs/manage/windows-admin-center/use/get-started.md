@@ -28,15 +28,15 @@ In Microsoft Edge, when you are prompted with this dialog:
 
 1. Click **More choices**
 
-    ![Select a Certificate box with More Choices highlighted](../media/launch-cert-1.png)
+    ![Select a Certificate box with More Choices highlighted](../media/launch-cert-1.PNG)
 
 2. Select the certificate labeled **Windows Admin Center Client** and click **OK**
 
-    ![Select a Certificate box showing available certificates](../media/launch-cert-2.png)
+    ![Select a Certificate box showing available certificates](../media/launch-cert-2.PNG)
 
 3. Make sure **Always Allow Access** is selected and click **Allow**
 
-    ![Credential required dialog box](../media/launch-cert-3.png)
+    ![Credential required dialog box](../media/launch-cert-3.PNG)
 
 ## Connecting to managed nodes and clusters
 
