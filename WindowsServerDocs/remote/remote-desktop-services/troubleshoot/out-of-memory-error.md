@@ -14,6 +14,10 @@ When you're trying to connect to Azure Virtual Desktop from the web client and a
 
 To resolve this issue, you'll need to either reduce the size of the browser window or disconnect all existing connections and try connecting again. If you still encounter this issue after doing these things, ask your local admin or tech support for help.
 
+## Authentication issues while using an N SKU
+
 This issue may also be happening because you're using an N SKU without a media features pack. To resolve this issue, [install the media features pack](https://support.microsoft.com/topic/media-feature-pack-list-for-windows-n-editions-c1c6fffa-d052-8338-7a79-a4bb980a700a).
 
-You can also encounter this issue when your client either doesn't support TLS 1.2 or doesn't have it enabled. To learn how to enable TLS 1.2 on a compatible client, see [Enable TLS 1.2 on client or server operating systems](/troubleshoot/azure/active-directory/enable-support-tls-environment?tabs=azure-monitor#enable-tls-12-on-client-or-server-operating-systems).
+## Authentication issues when TLS 1.2 support not enabled
+
+Authentication issues can also happen when your client either doesn't support TLS 1.2 or doesn't have it enabled. To learn how to enable TLS 1.2 on a compatible client, see [Enable TLS 1.2 on client or server operating systems](/troubleshoot/azure/active-directory/enable-support-tls-environment?tabs=azure-monitor#enable-tls-12-on-client-or-server-operating-systems).
