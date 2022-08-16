@@ -6,7 +6,7 @@ ms.topic: troubleshooting
 author: Heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/11/2022
+ms.date: 08/17/2022
 ---
 # "Out of memory" error when connecting to Azure Virtual Desktop
 
