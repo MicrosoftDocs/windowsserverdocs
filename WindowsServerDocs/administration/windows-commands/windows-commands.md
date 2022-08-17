@@ -6,7 +6,7 @@ ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: jasongerend
 ms.author: jgerend
 manager: dongill
-ms.date: 01/04/2022
+ms.date: 08/16/2022
 ---
 
 # Windows Commands
@@ -23,7 +23,7 @@ PowerShell was designed to extend the capabilities of the Command shell to run P
 
 For the most robust, up-to-date Windows automation, we recommend using PowerShell instead of Windows Commands or Windows Script Host for Windows automation.
 
-A reference of exit and error codes for Windows Commands can be found in the [Debug system error codes](/windows/win32/debug/system-error-codes) articles that may be helpful to understanding errors produced.
+A reference of exit and error codes for Windows Commands can be found in the [Debug system error codes](/windows/win32/debug/system-error-codes) articles that may be helpful to understanding errors produced. Windows Commands also include command redirection operators. To learn more of their use, see [Using command redirection operators](/previous-versions/windows/it-pro/windows-xp/bb490982(v=technet.10)).
 
 > [!NOTE]
 > You can also download and install [PowerShell Core](/powershell/scripting/install/installing-powershell), the open source version of PowerShell.
@@ -542,6 +542,7 @@ To find information about a specific command, in the following A-Z menu, select 
 
 - [nbtstat](nbtstat.md)
 - [netcfg](netcfg.md)
+- [netdom](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc772217(v=ws.11))
 - [net print](net-print.md)
 - [netsh](netsh.md)
 - [netstat](netstat.md)
@@ -549,6 +550,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [nfsshare](nfsshare.md)
 - [nfsstat](nfsstat.md)
 - [nlbmgr](nlbmgr.md)
+- [nltest](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731935(v=ws.11))
 - [nslookup](nslookup.md)
   - [nslookup exit Command](nslookup-exit-command.md)
   - [nslookup finger Command](nslookup-finger-command.md)
@@ -656,6 +658,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [remove](remove.md)
 - [ren](ren.md)
 - [rename](rename.md)
+- [repadmin](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc770963(v=ws.11))
 - [repair](repair.md)
   - [repair bde](repair-bde.md)
 - [replace](replace.md)
