@@ -6,7 +6,7 @@ ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
 author: jasongerend
 ms.author: jgerend
 manager: dongill
-ms.date: 01/04/2022
+ms.date: 08/16/2022
 ---
 
 # Windows Commands
@@ -542,6 +542,7 @@ To find information about a specific command, in the following A-Z menu, select 
 
 - [nbtstat](nbtstat.md)
 - [netcfg](netcfg.md)
+- [netdom](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc772217(v=ws.11))
 - [net print](net-print.md)
 - [netsh](netsh.md)
 - [netstat](netstat.md)
