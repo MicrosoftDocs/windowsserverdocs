@@ -23,7 +23,7 @@ PowerShell was designed to extend the capabilities of the Command shell to run P
 
 For the most robust, up-to-date Windows automation, we recommend using PowerShell instead of Windows Commands or Windows Script Host for Windows automation.
 
-A reference of exit and error codes for Windows Commands can be found in the [Debug system error codes](/windows/win32/debug/system-error-codes) articles that may be helpful to understanding errors produced.
+A reference of exit and error codes for Windows Commands can be found in the [Debug system error codes](/windows/win32/debug/system-error-codes) articles that may be helpful to understanding errors produced. Windows Commands also include command redirection operators. To learn more of their use, see [Using command redirection operators](/previous-versions/windows/it-pro/windows-xp/bb490982(v=technet.10)).
 
 > [!NOTE]
 > You can also download and install [PowerShell Core](/powershell/scripting/install/installing-powershell), the open source version of PowerShell.
