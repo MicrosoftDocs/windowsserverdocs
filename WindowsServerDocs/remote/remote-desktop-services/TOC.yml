@@ -19,8 +19,6 @@
     items:
     - name: Build anywhere
       href: rds-plan-build-anywhere.md
-    - name: Remote Desktop workloads
-      href: remote-desktop-workloads.md
     - name: Network guidelines
       href: network-guidance.md
     - name: Virtual machine sizing guidelines

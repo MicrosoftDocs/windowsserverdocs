@@ -10689,6 +10689,11 @@
       "source_path": "WindowsServerDocs/get-started/upgrade-2016-to-2019.md",
       "redirect_url": "/windows-server/get-started/perform-in-place-upgrade",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "WindowsServerDocs/remote/remote-desktop-services/remote-desktop-workloads.md",
+      "redirect_url": "/windows-server/remote/remote-desktop-services/virtual-machine-recs",
+      "redirect_document_id": false
     }
   ]
 }
