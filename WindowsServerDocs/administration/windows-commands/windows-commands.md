@@ -618,7 +618,7 @@ To find information about a specific command, in the following A-Z menu, select 
 - [pushd](pushd.md)
 - [pushprinterconnections](pushprinterconnections.md)
 - [pwlauncher](pwlauncher.md)
-- [pwsh](/powershell/module/microsoft.powershell.core/about/about_pwsh?view=powershell-7.2)
+- [pwsh](/powershell/module/microsoft.powershell.core/about/about_pwsh)
 
 ### Q
 
