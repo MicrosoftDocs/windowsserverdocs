@@ -5,17 +5,31 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/07/2022
+ms.date: 08/18/2022
 ---
 # What's new in the macOS client
 
 We regularly update the [Remote Desktop client for macOS](remote-desktop-mac.md), adding new features and fixing issues. Here's where you'll find the latest updates.
 
-If you encounter any issues, you can contact us by selecting **Help > Submit Feedback** in the client.
+If you encounter any issues, you can contact us by opening the macOS client and going to **Help** > **Submit Feedback**.
 
 ## The macOS beta client
 
 If you're feeling adventurous, you can help us test out new features by running the beta version of the macOS client. To join the beta, just go to <https://aka.ms/rdmacbeta>.
+
+## Updates for version 10.7.8
+
+*Date Published: July 25, 2022*
+
+It's time for a small update. We'd like to thank everyone who gave feedback, reported bugs, and worked with us to diagnose and fix issues.
+
+Here's what's new in this release:
+
+- Added thumbnail snapshots for published PC resources to the Workspaces tab of the Connection Center.
+- Integrated logging support that you could previously only access with user defaults to the UI. To access the logs, go to **Help** > **Troubleshooting** > **Logging**.
+- You can now reset all subscribed Azure Virtual Desktop workspaces.
+- Fixed a deadlock in the client logging infrastructure.
+- Improved diagnostic error reporting for Azure Active Directory authentication failures in Azure Virtual Desktop scenarios.
 
 ## Updates for version 10.7.7 (2001)
 
