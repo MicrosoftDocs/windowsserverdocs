@@ -26,7 +26,7 @@ Depending on your use case, you'll need to allowlist one or more certificates as
 
 **Case [1]**: Only your managed nodes have WDAC enforced. 
 
-**Case [2]**: Both your managed node and the machine on which your deploy Windows Admin Center is installed have WDAC enforced.
+**Case [2]**: Both your managed node and the machine on which you deploy Windows Admin Center have WDAC enforced.
 
 For case **[1]**, only the following signer rule is required to be allowlisted in the WDAC policy on your managed node:
 ```xml
@@ -38,7 +38,7 @@ For case **[1]**, only the following signer rule is required to be allowlisted i
 
 For case **[2]**:
 1. The signer rule above is required to be allowlisted on **both** your managed node and the machine on which you deploy Windows Admin Center.
-2. Additionally, the following signer and file rules are required to be allowlist **only** on the machine on which you deploy Windows Admin Center: 
+2. Additionally, the following signer and file/hash rules are required to be allowlist **only** on the machine on which you deploy Windows Admin Center: 
 >Signer rule:
 ```xml
 <Signer ID="ID_SIGNER_S_XXXXX" Name="Microsoft Code Signing PCA 2011"> 
@@ -46,29 +46,32 @@ For case **[2]**:
   <CertPublisher Value="Microsoft 3rd Party Application Component" /> 
 </Signer> 
 ```
->File rule:
+>File/Hash rule:
 ```xml
 <FileRules>
     <!--Requirement from WAC to allow files from WiX-->
-    <Allow ID="ID_ALLOW_E_0_SHA1_0" FriendlyName="WiX wixca.dll" Hash="9DE61721326D8E88636F9633AA37FCB885A4BABE" />
-    <Allow ID="ID_ALLOW_E_1_SHA1_PAGE_0" FriendlyName="WiX wixca.dll" Hash="B216DFA814FC856FA7078381291C78036CEF0A05" />
-    <Allow ID="ID_ALLOW_E_2_SHA2_0" FriendlyName="WiX wixca.dll" Hash="233F5E43325615710CA1AA580250530E06339DEF861811073912E8A16B058C69" />
-    <Allow ID="ID_ALLOW_E_3_SHA2_PAGE_0" FriendlyName="WiX wixca.dll" Hash="B216DFA814FC856FA7078381291C78036CEF0A05" />
-    <Allow ID="ID_ALLOW_E_4_SHA1_0" FriendlyName="WiX wixca.dll 2" Hash="EB4CB5FF520717038ADADCC5E1EF8F7C24B27A90" />
-    <Allow ID="ID_ALLOW_E_5_SHA1_PAGE_0" FriendlyName="WiX wixca.dll 2" Hash="6C65DD86130241850B2D808C24EC740A4C509D9C" />
-    <Allow ID="ID_ALLOW_E_6_SHA2_0" FriendlyName="WiX wixca.dll 2" Hash="C8D190D5BE1EFD2D52F72A72AE9DFA3940AB3FACEB626405959349654FE18B74" />
-    <Allow ID="ID_ALLOW_E_7_SHA2_PAGE_0" FriendlyName="WiX wixca.dll 2" Hash="6C65DD86130241850B2D808C24EC740A4C509D9C" />
-    <Allow ID="ID_ALLOW_E_8_SHA1_0" FriendlyName="WiX firewall.dll" Hash="2F0903D4B21A0231ADD1B4CD02E25C7C4974DA84" />
-    <Allow ID="ID_ALLOW_E_9_SHA1_PAGE_0" FriendlyName="WiX firewall.dll" Hash="868635E434C14B65AD7D7A9AE1F4047965740786" />
-    <Allow ID="ID_ALLOW_E_10_SHA2_0" FriendlyName="WiX firewall.dll" Hash="5C29B8255ACE0CD94C066C528C8AD04F0F45EBA12FCF94DA7B9CA1B64AD4288B" />
-    <Allow ID="ID_ALLOW_E_11_SHA2_PAGE_0" FriendlyName="WiX firewall.dll" Hash="868635E434C14B65AD7D7A9AE1F4047965740786" />
+    <Allow ID="ID_ALLOW_E_X_XXXX_X" FriendlyName="WiX wixca.dll" Hash="9DE61721326D8E88636F9633AA37FCB885A4BABE" />
+    <Allow ID="ID_ALLOW_E_X_XXXX_XXXX_X" FriendlyName="WiX wixca.dll" Hash="B216DFA814FC856FA7078381291C78036CEF0A05" />
+    <Allow ID="ID_ALLOW_E_X_XXXX_X" FriendlyName="WiX wixca.dll" Hash="233F5E43325615710CA1AA580250530E06339DEF861811073912E8A16B058C69" />
+    <Allow ID="ID_ALLOW_E_X_XXXX_XXXX_X" FriendlyName="WiX wixca.dll" Hash="B216DFA814FC856FA7078381291C78036CEF0A05" />
+    <Allow ID="ID_ALLOW_E_X_XXXX_X" FriendlyName="WiX wixca.dll 2" Hash="EB4CB5FF520717038ADADCC5E1EF8F7C24B27A90" />
+    <Allow ID="ID_ALLOW_E_X_XXXX_XXXX_X" FriendlyName="WiX wixca.dll 2" Hash="6C65DD86130241850B2D808C24EC740A4C509D9C" />
+    <Allow ID="ID_ALLOW_E_X_XXXX_X" FriendlyName="WiX wixca.dll 2" Hash="C8D190D5BE1EFD2D52F72A72AE9DFA3940AB3FACEB626405959349654FE18B74" />
+    <Allow ID="ID_ALLOW_E_X_XXXX_XXXX_X" FriendlyName="WiX wixca.dll 2" Hash="6C65DD86130241850B2D808C24EC740A4C509D9C" />
+    <Allow ID="ID_ALLOW_E_X_XXXX_X" FriendlyName="WiX firewall.dll" Hash="2F0903D4B21A0231ADD1B4CD02E25C7C4974DA84" />
+    <Allow ID="ID_ALLOW_E_X_XXXX_XXXX_X" FriendlyName="WiX firewall.dll" Hash="868635E434C14B65AD7D7A9AE1F4047965740786" />
+    <Allow ID="ID_ALLOW_E_X_XXXX_X" FriendlyName="WiX firewall.dll" Hash="5C29B8255ACE0CD94C066C528C8AD04F0F45EBA12FCF94DA7B9CA1B64AD4288B" />
+    <Allow ID="ID_ALLOW_E_X_XXXX_XXXX_X" FriendlyName="WiX firewall.dll" Hash="868635E434C14B65AD7D7A9AE1F4047965740786" />
   </FileRules>
   ```
 >[!NOTE]
-> Signer ID (i.e., Signer ID="ID_SIGNER_S_XXXXX") should be generated automatically by the policy creation tool/script. For more info, refer to the [WDAC documentation](/windows/security/threat-protection/windows-defender-application-control/types-of-devices)
+> Signer and Allow ID (i.e., Signer ID="ID_SIGNER_S_XXXXX") should be generated automatically by the policy creation tool/script. For more info, refer to the [WDAC documentation](/windows/security/threat-protection/windows-defender-application-control/types-of-devices)
+
+>[!TIP]
+> The [WDAC Wizard tool](/windows/security/threat-protection/windows-defender-application-control/wdac-wizard) can be very helpful for creating/editing WDAC Policies. Remember that when creating a new policy, whether by the Wizard or the PowerShell commands, use the “Publisher” rule on binaries to generate rules. For example, when using the wizard, you can generate the WDAC policy for case **[1]** based of the Windows Admin Center .msi. For case **[2]**, you can still use the wizard, but you will need to manually edit your WDAC policy to include the listed signer and hash rule.
 
 ### Networking requirements
-By default, Windows Admin Center communicates with your servers over WinRM over HTTP (port 5985) or HTTPS (port 5986). For WDAC enforced infrastructure, Windows Admin Center additionally needs SMB access to your machines (TCP port 445).
+By default, Windows Admin Center communicates with your servers over WinRM over HTTP (port 5985) or HTTPS (port 5986). For WDAC enforced infrastructure, Windows Admin Center additionally needs SMB access to the nodes that are being managed (TCP port 445).
 
 ### Permissions
 File transfer based on UNC paths over SMB port 445 is critical for Windows Admin Center to manage these environments. Make sure you're an administrator on the managed server or cluster and file transfers aren't blocked by any security policies.
@@ -82,6 +85,9 @@ Connect to your WDAC enforced server, client, or cluster machines like you norma
 
 When you connect to a WDAC enforced cluster for the first time, it may take a few minutes for Windows Admin Center to set up connection to your cluster. Subsequent connections won't have a delay.
 
+>[!NOTE]
+> If you change the WDAC enforcement status of your managed nodes, do not use Windows Admin Center for at least 30 seconds for this change to be reflected.
+
 ## Known issues
 1. Sometimes, you may see a "File already exists" error when you click on a tool in Windows Admin Center. If this error occurs, reload the extension by navigating away from the extension and returning back.
 
@@ -93,7 +99,7 @@ When you connect to a WDAC enforced cluster for the first time, it may take a fe
 
 ## Troubleshooting
 1. "Module not found" or "failed to connect" error
-    1. In order to confirm whether or not Windows Admin Center successfully transferred files to your managed node, navigate to the `\\nodeName\%windowsDirectory%$\Program Files\WindowsPowerShell\Modules` folder on your managed node, and verify that modules with the name `Microsoft.SME.*` exist in that folder
+    1. In order to confirm whether or not Windows Admin Center successfully transferred files to your managed node, navigate to the `%PROGRAMFILES%\WindowsPowerShell\Modules` folder on your managed node, and verify that modules with the name `Microsoft.SME.*` exist in that folder
     1. In the event they don't exist, reconnect to your server or cluster from Windows Admin Center
     1. Ensure that the machine that has Windows Admin Center installed has access to TCP port 445 on the managed node
 
