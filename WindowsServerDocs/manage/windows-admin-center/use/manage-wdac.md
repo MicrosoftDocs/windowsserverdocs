@@ -68,7 +68,7 @@ For case **[2]**:
 > Signer and Allow ID (i.e., Signer ID="ID_SIGNER_S_XXXXX") should be generated automatically by the policy creation tool/script. For more info, refer to the [WDAC documentation](/windows/security/threat-protection/windows-defender-application-control/types-of-devices)
 
 >[!TIP]
-> The [WDAC Wizard tool](/windows/security/threat-protection/windows-defender-application-control/wdac-wizard) can be very helpful for creating/editing WDAC Policies. Remember that when creating a new policy, whether by the Wizard or the PowerShell commands, use the “Publisher” rule on binaries to generate rules. For example, when using the wizard, you can generate the WDAC policy for case **[1]** based of the Windows Admin Center .msi. For case **[2]**, you can still use the wizard, but you will need to manually edit your WDAC policy to include the listed signer and hash rule.
+> The [WDAC Wizard tool](/windows/security/threat-protection/windows-defender-application-control/wdac-wizard) can be very helpful for creating/editing WDAC Policies. Remember that when creating a new policy, whether by the Wizard or the PowerShell commands, use the “Publisher” rule on binaries to generate rules. For example, when using the wizard, you can generate the WDAC policy for case **[1]** based off the Windows Admin Center .msi. For case **[2]**, you can still use the wizard, but you will need to manually edit your WDAC policy to include the listed signer and hash rule.
 
 ### Networking requirements
 By default, Windows Admin Center communicates with your servers over WinRM over HTTP (port 5985) or HTTPS (port 5986). For WDAC enforced infrastructure, Windows Admin Center additionally needs SMB access to the nodes that are being managed (TCP port 445).
