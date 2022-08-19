@@ -6,20 +6,20 @@ ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 07/19/2022
+ms.date: 08/24/2022
 ---
 
 # Compare the clients: redirections
 
 >Applies to: Windows Server 2022, Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-We're often asked how the different Remote Desktop clients compare to each other. Do they all do the same thing? Here are the answers to those questions.
+We're often asked how the different Remote Desktop clients compare to each other. Do they all support the same redirection? Here's the answer to that questions.
 
 ## Redirection support
 
 The following tables compare support for device and other redirections across the different clients. These tables cover the redirections that you can access once in a remote session.
 
-If you remote into your personal desktop, there are additional redirections that you can configure in the **Additional Settings** for the session. If your remote desktop or apps are managed by your organization, your admin can enable or disable redirections through Group Policy settings or RDP properties.
+If you remote into your personal desktop, there are other redirections that you can configure in the **Additional Settings** for the session. If your remote desktop or apps are managed by your organization, your admin can enable or disable redirections through Group Policy settings or RDP properties.
 
 >[!IMPORTANT]
 >You can only enable redirections with binary settings that apply to both to and from the remote machine. The service doesn't currently support one-way blocking of redirections from only one side of the connection.
@@ -55,12 +55,12 @@ When you enable USB port redirection, all USB devices attached to USB ports are 
 | Microphones         | X                         | X                           | X             | X       |  X           | X                               | X             |
 | Printers            | X                         | X                           |               |         |              | X (CUPS only)                   | PDF print     |
 | Scanners            | X                         | X                           |               |         |              |                                 |               |
-| Smart Cards         | X                         | X                           |               |         |              | X (Windows logon not supported) |               |
+| Smart Cards         | X                         | X                           |               |         |              | X (Windows sign in not supported) |               |
 | Speakers            | X                         | X                           | X             | X       | X            | X                               | X (except IE) |
 | Third-party virtual channel plugins | X         | X                           |               |         |              |                                 |               |
 | WebAuthn            | X                         | X                           |               |         |              |                                 |               |
 
-*For printer redirection - the macOS app supports the Publisher Imagesetter printer driver by default. They do not support redirecting native printer drivers.
+*For printer redirection - the macOS app supports the Publisher Imagesetter printer driver by default. The app doesn't support the native printer drivers.
 
 ## Other resources
 
