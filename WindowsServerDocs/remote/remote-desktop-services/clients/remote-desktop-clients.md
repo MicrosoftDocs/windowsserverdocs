@@ -6,7 +6,7 @@ ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
 author: HeidiLohr
 manager: femila
 ms.author: helohr
-ms.date: 08/02/2022
+ms.date: 08/18/2022
 ---
 # Remote Desktop clients
 
@@ -26,7 +26,7 @@ You can also use a Remote Desktop client to access your remote PC from almost an
 | Microsoft Store   | [Windows 10 client in the Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=616709) | [Get started](windows.md), [What's new](windows-whatsnew.md)  | 1.2.1810  |
 | Android         | [Android client in Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.androidx)     | [Get started](remote-desktop-android.md), [What's new](android-whatsnew.md) | 10.0.14.1182 |
 | iOS             | [iOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id714464092)     | [Get started](remote-desktop-ios.md), [What's new](ios-whatsnew.md)         | 10.4.2 |
-| macOS | [macOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Get started](remote-desktop-mac.md), [What's new](mac-whatsnew.md)       | 10.7.7 |
+| macOS | [macOS client in the App Store](https://apps.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Get started](remote-desktop-mac.md), [What's new](mac-whatsnew.md)       | 10.7.8 |
 | Web | [Web client](remote-desktop-web-client.md#what-youll-need-to-use-the-web-client) | [Get started](remote-desktop-web-client.md), [What's new](web-client-whatsnew.md) | N/A |
 
 Before you start using the client of your choice, there are a few things you'll need to do first.
