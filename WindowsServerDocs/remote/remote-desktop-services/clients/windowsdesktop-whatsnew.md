@@ -26,7 +26,7 @@ Date published: 8/23/2022
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
-- Accessibility improvements through improved color contrast in the virtual desktop connection blue bar.
+- Accessibility improvements through increased color contrast in the virtual desktop connection blue bar.
 - Updated connection information dialog to distinguish between RDP Shortpath for managed and public networks.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to Teams for Azure Virtual Desktop, including the following:
