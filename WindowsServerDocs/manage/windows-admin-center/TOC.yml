@@ -48,7 +48,7 @@
     - name: Manage servers
       href: use/manage-servers.md
     - name: Manage Application Control enforced infrastructure
-      href: use/manage-wdac.md
+      href: use/manage-application-control-servers.md
     - name: Deploy hyperconverged infrastructure
       href: use/deploy-hyperconverged-infrastructure.md
     - name: Manage hyper-converged infrastructure

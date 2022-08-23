@@ -37,8 +37,8 @@ For case **[1]**, only the following signer rule is required to be allowlisted i
 ```
 
 For case **[2]**:
-1. The signer rule above is required to be allowlisted on **both** your managed node and the machine on which you deploy Windows Admin Center.
-2. Additionally, the following signer and file/hash rules are required to be allowlist **only** on the machine on which you deploy Windows Admin Center: 
+- The signer rule above is required to be allowlisted on **both** your managed node and the machine on which you deploy Windows Admin Center.
+- Additionally, the following signer and file/hash rules are required to be allowlist **only** on the machine on which you deploy Windows Admin Center: 
 >Signer rule:
 ```xml
 <Signer ID="ID_SIGNER_S_XXXXX" Name="Microsoft Code Signing PCA 2011"> 
@@ -89,16 +89,16 @@ When you connect to a WDAC enforced cluster for the first time, it may take a fe
 > If you change the WDAC enforcement status of your managed nodes, do not use Windows Admin Center for at least 30 seconds for this change to be reflected.
 
 ## Known issues
-1. Sometimes, you may see a "File already exists" error when you click on a tool in Windows Admin Center. If this error occurs, reload the extension by navigating away from the extension and returning back.
+- Sometimes, you may see a "File already exists" error when you click on a tool in Windows Admin Center. If this error occurs, reload the extension by navigating away from the extension and returning back.
 
-1. Sometimes, you may see a "module not found" error when managing a WDAC enforced connection for the first time. If you see this, retry the connection.
+- Sometimes, you may see a "module not found" error when managing a WDAC enforced connection for the first time. If you see this, retry the connection.
 
-1. Currently, deploying Azure Kubernetes Service on Azure Stack HCI and Resource Bridge through Windows Admin Center isn't supported on a WDAC enforced environment. Additionally, using the Remote Support and GPU extension on Azure Stack HCI isn't currently supported.
+- Currently, deploying Azure Kubernetes Service on Azure Stack HCI and Resource Bridge through Windows Admin Center isn't supported on a WDAC enforced environment. Additionally, using the Remote Support and GPU extension on Azure Stack HCI isn't currently supported.
 
-1. Using RBAC on a single server is currently not supported.
+1- Using RBAC on a single server is currently not supported.
 
 ## Troubleshooting
-1. "Module not found" or "failed to connect" error
+- "Module not found" or "failed to connect" error
     1. In order to confirm whether or not Windows Admin Center successfully transferred files to your managed node, navigate to the `%PROGRAMFILES%\WindowsPowerShell\Modules` folder on your managed node, and verify that modules with the name `Microsoft.SME.*` exist in that folder
     1. In the event they don't exist, reconnect to your server or cluster from Windows Admin Center
     1. Ensure that the machine that has Windows Admin Center installed has access to TCP port 445 on the managed node
