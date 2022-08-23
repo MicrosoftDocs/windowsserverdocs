@@ -91,11 +91,11 @@ When you connect to a WDAC enforced cluster for the first time, it may take a fe
 ## Known issues
 1. Sometimes, you may see a "File already exists" error when you click on a tool in Windows Admin Center. If this error occurs, reload the extension by navigating away from the extension and returning back.
 
-2. Sometimes, you may see a "module not found" error when managing a WDAC enforced connection for the first time. If you see this, retry the connection.
+1. Sometimes, you may see a "module not found" error when managing a WDAC enforced connection for the first time. If you see this, retry the connection.
 
-3. Currently, deploying Azure Kubernetes Service on Azure Stack HCI and Resource Bridge through Windows Admin Center isn't supported on a WDAC enforced environment. Additionally, using the Remote Support and GPU extension on Azure Stack HCI isn't currently supported.
+1. Currently, deploying Azure Kubernetes Service on Azure Stack HCI and Resource Bridge through Windows Admin Center isn't supported on a WDAC enforced environment. Additionally, using the Remote Support and GPU extension on Azure Stack HCI isn't currently supported.
 
-4. Using RBAC on a single server is currently not supported
+1. Using RBAC on a single server is currently not supported.
 
 ## Troubleshooting
 1. "Module not found" or "failed to connect" error
