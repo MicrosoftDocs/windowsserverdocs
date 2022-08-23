@@ -55,12 +55,12 @@ When you enable USB port redirection, all USB devices attached to USB ports are 
 | Microphones         | X                         | X                           | X             | X       |  X           | X                               | X             |
 | Printers            | X                         | X                           |               |         |              | X (CUPS only)                   | PDF print     |
 | Scanners            | X                         | X                           |               |         |              |                                 |               |
-| Smart Cards         | X                         | X                           |               |         |              | X (Windows sign in not supported) |               |
+| Smart cards         | X                         | X                           |               |         |              | X (Windows sign in not supported) |               |
 | Speakers            | X                         | X                           | X             | X       | X            | X                               | X (except IE) |
 | Third-party virtual channel plugins | X         | X                           |               |         |              |                                 |               |
 | WebAuthn            | X                         | X                           |               |         |              |                                 |               |
 
-*For printer redirection - the macOS app supports the Publisher Imagesetter printer driver by default. The app doesn't support the native printer drivers.
+*For printer redirection, the macOS app supports the Publisher Imagesetter printer driver by default. The app doesn't support the native printer drivers.
 
 ## Other resources
 
