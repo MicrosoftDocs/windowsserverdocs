@@ -55,7 +55,7 @@ When you enable USB port redirection, all USB devices attached to USB ports are 
 | Microphones         | X                         | X                           | X             | X       |  X           | X                               | X             |
 | Printers            | X                         | X                           |               |         |              | X (CUPS only)                   | PDF print     |
 | Scanners            | X                         | X                           |               |         |              |                                 |               |
-| Smart cards         | X                         | X                           |               |         |              | X (Windows sign in not supported) |               |
+| Smart cards         | X                         | X                           |               |         |              | X (Windows sign-in not supported) |               |
 | Speakers            | X                         | X                           | X             | X       | X            | X                               | X (except IE) |
 | Third-party virtual channel plugins | X         | X                           |               |         |              |                                 |               |
 | WebAuthn            | X                         | X                           |               |         |              |                                 |               |
