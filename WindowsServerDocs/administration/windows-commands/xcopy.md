@@ -33,7 +33,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/v|Verifies each file as it is written to the destination file to make sure that the destination files are identical to the source files.|
 |/q|Suppresses the display of **xcopy** messages.|
 |/f|Displays source and destination file names while copying.|
-|/l|Displays a list of files that are to be copied.|
+|/l|Generates a list of files that are to be copied, but does not actively copy the files.|
 |/g|Creates decrypted *Destination* files when the destination does not support encryption.|
 |/d [:MM-DD-YYYY]|Copies source files changed on or after the specified date only. If you do not include a *MM-DD-YYYY* value, **xcopy** copies all *Source* files that are newer than existing *Destination* files. This command-line option allows you to update files that have changed.|
 |/u|Copies files from *Source* that exist on *Destination* only.|
@@ -49,12 +49,13 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 |/n|Creates copies by using the NTFS short file or directory names. **/n** is required when you copy files or directories from an NTFS volume to a FAT volume or when the FAT file system naming convention (that is, 8.3 characters) is required on the *Destination* file system. The *Destination* file system can be FAT or NTFS.|
 |/o|Copies file ownership and discretionary access control list (DACL) information.|
 |/x|Copies file audit settings and system access control list (SACL) information (implies **/o**).|
-|/exclude:FileName1[+[FileName2]][+[FileName3]( \)]|Specifies a list of files. At least one file must be specified. Each file will contain search strings with each string on a separate line in the file.</br>When any of the strings match any part of the absolute path of the file to be copied, that file will be excluded from being copied. For example, specifying the string **obj** will exclude all files underneath the directory **obj** or all files with the **.obj** extension.|
+|/exclude:FileName1[+[FileName2]][+[FileName3]( \)]|Specifies a list of files. At least one file must be specified. Each file will contain search strings with each string on a separate line in the file. When any of the strings match any part of the absolute path of the file to be copied, that file will be excluded from being copied. For example, specifying the string **obj** will exclude all files underneath the directory **obj** or all files with the **.obj** extension.|
 |/y|Suppresses prompting to confirm that you want to overwrite an existing destination file.|
 |/-y|Prompts to confirm that you want to overwrite an existing destination file.|
 |/z|Copies over a network in restartable mode.|
 |/b|Copies the symbolic link instead of the files. This parameter was introduced in Windows Vista®.|
 |/j|Copies files without buffering. Recommended for very large files. This parameter was added in Windows Server 2008 R2.|
+|/compress|Request network compression during file transfer where applicable.|
 |/?|Displays help at the command prompt.|
 
 ## Remarks
@@ -90,6 +91,7 @@ Xcopy <Source> [<Destination>] [/w] [/p] [/c] [/v] [/q] [/f] [/l] [/g] [/d [:MM-
 Press F if you want the file or files to be copied to a file. Press D if you want the file or files to be copied to a directory.
 
   You can suppress this message by using the **/i** command-line option, which causes **xcopy** to assume that the destination is a directory if the source is more than one file or a directory.
+
 - Using the **xcopy** command to set archive attribute for *Destination* files
 
   The **xcopy** command creates files with the archive attribute set, whether or not this attribute was set in the source file. For more information about file attributes and **attrib**, see [Additional References](#additional-references).
@@ -118,7 +120,7 @@ Press F if you want the file or files to be copied to a file. Press D if you wan
 xcopy a: b: /s /e
 ```
 
-**2.** To include any system or hidden files in the previous example, add the<strong>/h</strong> command-line option as follows:
+**2.** To include any system or hidden files in the previous example, add the **/h** command-line option as follows:
 
 ```
 xcopy a: b: /s /e /h
@@ -185,7 +187,7 @@ copyit c:\prgmcode b:
 
 The command interpreter substitutes **C:\Prgmcode** for *%1* and **B:** for *%2*, then uses **xcopy** with the **/e** and **/s** command-line options. If **xcopy** encounters an error, the batch program reads the exit code and goes to the label indicated in the appropriate **IF ERRORLEVEL** statement, then displays the appropriate message and exits from the batch program.
 
-**9.** This example copies all the non-empty directories, plus files whose name match the pattern given with the asterisk symbol.
+**9.** This example copies all the non-empty directories, plus files with the associated file extension after the asterisk symbol.
 
 ```
 xcopy .\toc*.yml ..\..\Copy-To\ /S /Y
