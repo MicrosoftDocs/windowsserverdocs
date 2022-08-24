@@ -30,7 +30,8 @@ You can achieve down to one-millisecond time accuracy in your domain. For more i
 The Windows Time service follows the Network Time Protocol (NTP) specification, which requires the use of UDP port 123 for all time synchronization. Whenever the computer synchronizes its clock or provides time to another computer, it happens over UDP port 123. This port is exclusively reserved by the Windows Time service.
 
 > [!NOTE]
-> If you have a computer with multiple network adapters (is multi-homed), you cannot enable the Windows Time service based on a network adapter.
+> - If you have a computer with multiple network adapters (is multi-homed), you cannot enable the Windows Time service based on a network adapter.
+> - The Windows Time NTP client uses UDP port 123 for both source and destination sync requests. When using network filtering, be aware of the source port being used.
 
 ## <a id="windows-time-service-tools"></a> Using W32tm.exe
 
@@ -300,7 +301,7 @@ The `Parameters` subkey entries are located at `HKLM\SYSTEM\CurrentControlSet\Se
 | Registry entry | Versions | Description |
 | --- | --- | --- |
 |**AllowNonstandardModeCombinations** |All versions |Indicates that non-standard mode combinations are allowed in synchronization between peers. The default value for domain members is **1**. The default value for stand-alone clients and servers is **1**. |
-|**NtpServer** |All versions |Specifies a space-delimited list of peers from which a computer obtains time stamps, consisting of one or more DNS names or IP addresses per line. Each DNS name or IP address listed must be unique. Computers connected to a domain must synchronize with a more reliable time source, such as the official U.S. time clock.  <ul><li>0x01 SpecialInterval </li><li>0x02 UseAsFallbackOnly</li><li>0x04 SymmetricActive: For more information about this mode, see [Windows Time Server](https://go.microsoft.com/fwlink/?LinkId=208012).</li><li>0x08 Client</li></ul><br />There is no default value for this registry entry on domain members. The default value on stand-alone clients and servers is `time.windows.com,0x1`. |
+|**NtpServer** |All versions |Specifies a space-delimited list of peers from which a computer obtains time stamps, consisting of one or more DNS names or IP addresses per line. Each DNS name or IP address listed must be unique. Computers connected to a domain must synchronize with a more reliable time source, such as the official U.S. time clock.  <ul><li>0x1 SpecialInterval </li><li>0x2 UseAsFallbackOnly</li><li>0x4 SymmetricActive: For more information about this mode, see [Windows Time Server](https://go.microsoft.com/fwlink/?LinkId=208012).</li><li>0x8 Client</li></ul><br />There is no default value for this registry entry on domain members. The default value on stand-alone clients and servers is `time.windows.com,0x1`. |
 |**ServiceDll** |All versions |Maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default location for this DLL on both domain members and stand-alone clients and servers is %windir%\System32\W32Time.dll. |
 |**ServiceMain** |All versions |Maintained by W32Time. It contains reserved data that is used by the Windows operating system, and any changes to this setting can cause unpredictable results. The default value on domain members is **SvchostEntry_W32Time**. The default value on stand-alone clients and servers is **SvchostEntry_W32Time**. |
 |**Type** |All versions |Indicates which peers to accept synchronization from:  <ul><li>**NoSync**. The time service does not synchronize with other sources.</li><li>**NTP**. The time service synchronizes from the servers specified in the **NtpServer**. registry entry.</li><li>**NT5DS**. The time service synchronizes from the domain hierarchy.  </li><li>**AllSync**. The time service uses all the available synchronization mechanisms.  </li></ul>The default value on domain members is **NT5DS**. The default value on stand-alone clients and servers is **NTP**. |
@@ -326,14 +327,14 @@ The `NtpClient` subkey entries are located at `HKLM\SYSTEM\CurrentControlSet\Ser
 
 ### <a id="ntpserver"></a>NtpServer entries
 
-The `NtpClient` subkey entries are located at `HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer`.
+The `NtpServer` subkey entries are located at `HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer`.
 
 |Registry Entry |Versions |Description |
 | --- | --- | --- |
 |AllowNonstandardModeCombinations |All versions |Indicates that non-standard mode combinations are allowed in synchronization between clients and servers. The default value for domain members is **1**. The default value for stand-alone clients and servers is **1**. |
 |DllName |All versions |Specifies the location of the DLL for the time provider. The default location for this DLL on both domain members and stand-alone clients and servers is `%windir%\System32\W32Time.dll`.  |
-|Enabled |All versions |Indicates if the NtpServer provider is enabled in the current Time Service. <ul><li>**1** - Yes</li><li>**0** - No</li></ul>The default value on domain members is **1**. The default value on stand-alone clients and servers is **1**. |
-|InputProvider |All versions |Indicates whether to enable the NtpClient as an InputProvider, which obtains time information from the NtpServer. The NtpServer is a time server that responds to client time requests on the network by returning time samples that are useful for synchronizing the local clock. <ul><li>**1** - Yes</li><li>**0** - No = 0 </li></ul>Default value for both domain members and stand-alone clients: 1 |
+|Enabled |All versions |Indicates if the NtpServer provider is enabled in the current Time Service. <ul><li>**1** - Yes</li><li>**0** - No</li></ul>The default value on domain members is **0**. The default value on stand-alone clients and servers is **0**. |
+|InputProvider |All versions |Indicates whether to enable the NtpClient as an InputProvider, which obtains time information from the NtpServer. The NtpServer is a time server that responds to client time requests on the network by returning time samples that are useful for synchronizing the local clock. <ul><li>**1** - Yes</li><li>**0** - No = 0 </li></ul>Default value for both domain members and stand-alone clients: 0 |
 
 ### Enhanced logging
 
