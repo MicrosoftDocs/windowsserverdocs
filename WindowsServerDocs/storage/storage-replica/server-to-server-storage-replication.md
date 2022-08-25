@@ -389,7 +389,7 @@ Now you will manage and operate your server-to-server replicated infrastructure.
 
     Check the event logs to see the direction of replication change and recovery mode occur, and then reconcile. Write IOs can then write to the storage owned by the new source server. Changing the replication direction will block write IOs on the previous source computer.
 
-4.  To remove replication, use `Get-SRGroup`, `Get-SRPartnership`, `Remove-SRGroup`, and `Remove-SRPartnership` on each node. Ensure you run the `Remove-SRPartnership` cmdlet on the current source of replication only, not on the destination server. Run `Remove-Group` on both servers. For example, to remove all replication from two servers:
+4.  To remove replication, use `Get-SRGroup`, `Get-SRPartnership`, `Remove-SRGroup`, and `Remove-SRPartnership` on each node. Ensure you run the `Remove-SRPartnership` cmdlet on the current source of replication only, not on the destination server. Run `Remove-SRGroup` on both servers. For example, to remove all replication from two servers:
 
     ```powershell
     Get-SRPartnership
