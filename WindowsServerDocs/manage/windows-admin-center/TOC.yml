@@ -47,6 +47,8 @@
       href: use/get-started.md
     - name: Manage servers
       href: use/manage-servers.md
+    - name: Manage Application Control enforced infrastructure
+      href: use/manage-application-control-infrastructure.md
     - name: Deploy hyperconverged infrastructure
       href: use/deploy-hyperconverged-infrastructure.md
     - name: Manage hyper-converged infrastructure
