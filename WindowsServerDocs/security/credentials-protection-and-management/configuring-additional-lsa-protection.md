@@ -208,7 +208,7 @@ Automatic enablement of additional LSA protection on Windows 11, 22H2 doesn't se
 
 2. Set "RunAsPPL"=dword:00000000 or delete the DWORD.
 
-3. If PPL was enabled with a UEFI variable, use the [Local Security Authority Protected Process Opt-out tool](#how-to-remove-the-LSA-protection-uefi-variable) to remove the UEFI variable.
+3. If PPL was enabled with a UEFI variable, use the [Local Security Authority Protected Process Opt-out tool](#how-to-remove-the-lsa-protection-uefi-variable) to remove the UEFI variable.
 
 4. Restart the computer.
 
@@ -226,7 +226,7 @@ Open Local Group Policy Editor (gpedit.msc)
 
 1. Restart the computer.
 
-If you set this policy to **Not Configured** and the policy was previously enabled, the previous setting does not get cleaned up and will continue to be enforced. You must set the policy to **Disabled** under the **Configure LSA to run as a protected process** drop down to disable the feature.
+If you set this policy to **Not Configured** and the policy was previously enabled, the previous setting doesn't get cleaned up and will continue to be enforced. You must set the policy to **Disabled** under the **Configure LSA to run as a protected process** drop-down to disable the feature.
 
 #### How to remove the LSA protection UEFI variable
 
