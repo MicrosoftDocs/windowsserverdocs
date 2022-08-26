@@ -19,7 +19,7 @@ The following core best practices are common to all AD FS installations where yo
 
 -   **Secure AD FS as a "Tier 0" system**
 
-    AD FS is, fundamentally, an authentication system.  Thus, it should be treated as a "Tier 0" system like other identity system on your network.  [Microsoft Docs](/security/compass/privileged-access-access-model) has more information on the Active Directory administrative tier model.
+    Because AD FS is fundamentally an authentication system, it should be treated as a "Tier 0" system like other identity systems on your network. For more information, see [Active Directory administrative tier model](/security/compass/privileged-access-access-model).
 
 
 -   **Use the Security Configuration Wizard to apply AD FS-specific security best practices to federation servers and federation server proxy computers**
