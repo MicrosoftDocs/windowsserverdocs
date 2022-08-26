@@ -343,19 +343,34 @@ You can use ATA to help detect attackers attempting to compromise privileged ide
 
 ## Related content for associated Windows Server 2016 solutions
 
-- **Windows Defender Antivirus:** https://www.youtube.com/watch?v=P1aNEy09NaI and [https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10](/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10)
+- **Windows Defender Antivirus:**
 
-- **Windows Defender Advanced Threat Protection:** https://www.youtube.com/watch?v=qxeGa3pxIwg and [https://docs.microsoft.com/windows/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection](/windows/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection)
+  - [Windows Defender Antivirus (YouTube video)](https://www.youtube.com/watch?v=P1aNEy09NaI)
+  - [Microsoft Defender Antivirus in Windows](/windows/threat-protection/windows-defender-antivirus/windows-defender-antivirus-in-windows-10)
 
-- **Windows Defender Device Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and [https://docs.microsoft.com/windows/device-security/device-guard/device-guard-deployment-guide](/windows/device-security/device-guard/device-guard-deployment-guide)
+- **Windows Defender Advanced Threat Protection:**
 
-- **Windows Defender Credential Guard:** https://www.youtube.com/watch?v=F-pTkesjkhI and [https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard](/windows/access-protection/credential-guard/credential-guard)
+- [An overview of Windows Defender Advanced Threat Protection for Windows 10 Creators Update (YouTube video)](https://www.youtube.com/watch?v=qxeGa3pxIwg)
+- [Onboard Windows servers to the Microsoft Defender for Endpoint service](/windows/threat-protection/windows-defender-atp/configure-server-endpoints-windows-defender-advanced-threat-protection)
 
-- **Control Flow Guard:** https://msdn.microsoft.com/library/windows/desktop/mt637065(v=vs.85).aspx
+- **Windows Defender Device Guard:**
 
-- **Security and Assurance:** [https://docs.microsoft.com/windows-server/security/security-and-assurance](/windows-server/security/security-and-assurance)
+- [Windows Defender Device Guard (YouTube video)](https://www.youtube.com/watch?v=F-pTkesjkhI)
+- [Deploying Windows Defender Application Control (WDAC) policies](/windows/device-security/device-guard/device-guard-deployment-guide)
+
+- **Windows Defender Credential Guard:** [Windows Defender Credential Guard (YouTube video)](https://www.youtube.com/watch?v=F-pTkesjkhI)
+- [Protect derived domain credentials with Windows Defender Credential Guard](/windows/access-protection/credential-guard/credential-guard)
+
+- **Control Flow Guard:**
+
+  - [Control Flow Guard for platform security](/windows/win32/secbp/control-flow-guard)
+
+- **Security and Assurance:**
+
+- [Windows Server Security documentation](/windows-server/security/security-and-assurance)
 
 ## Disclaimer
+
 This article is a commentary on the GDPR, as Microsoft interprets it, as of the date of publication. We've spent a lot of time with GDPR and like to think we've been thoughtful about its intent and meaning. But the application of GDPR is highly fact-specific, and not all aspects and interpretations of GDPR are well-settled.
 
 As a result, this article is provided for informational purposes only and should not be relied upon as legal advice or to determine how GDPR might apply to you and your organization. We encourage you to work with a legally-qualified professional to discuss GDPR, how it applies specifically to your organization, and how best to ensure compliance.
