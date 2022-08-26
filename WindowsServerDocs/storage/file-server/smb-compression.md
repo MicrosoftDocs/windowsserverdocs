@@ -1,6 +1,6 @@
 ---
 title: SMB Compression
-description: Describes the SMB compression feature in Windows Server 2022, WWindows 11
+description: Describes the SMB compression feature in Windows Server 2022, Windows 11
 ms.product: windows-server
 ms.topic: article
 author: NedPyle
@@ -155,37 +155,20 @@ You can configure an SMB client to always request compression and to always reje
 
 ## Understanding and controlling compression behaviors
 
-SMB compression in Windows Server 2022 and Windows 11 uses a default algorithm where it attempts to compress the first 524,288,000 bytes (500 MiB) of a file during transfer and tracks that at least 104,857,600 bytes (100 MiB) compressed within that 500-MiB range. If fewer than 100 MiB is compressible, SMB compression stops trying to compress the rest of the file. If at least 100 MiB compresses, SMB compression attempts to compress the rest of the file. This means that very large files with compressible data - for instance, a multi-gigabyte virtual machine disk - are likely to compress but a relatively small file - even a very compressible one - will not compress.
+Starting in Windows Server 2022 with update [KB5016693](https://support.microsoft.com/help/5016693)
+(OS Build 20348.946) and Windows 11 with update
+[KB5016691](https://support.microsoft.com/help/5016691) (OS Build 22000.918), SMB always attempts to
+compress a file when a client or server requests it, regardless of that file’s size.
 
 > [!NOTE]
-> This behavior will not remain the default in Windows Server 2022 and Windows 11. It was first changed in Windows 11 Insider Preview build 22449, where SMB will no longer use this decision algorithm by default. For more information review [Announcing Windows 11 Insider Preview Build 22449](https://blogs.windows.com/windows-insider/2021/09/02/announcing-windows-11-insider-preview-build-22449/).
-
-If you want SMB compression to aggressively compress no matter what the file size is, you can override the defaults:
-
-1. On SMB client computer, start Regedit.exe.
-1. Navigate to the following registry subkey:
-
-    `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LanmanWorkstation\Parameters`
-
-1. Create a new REG_DWORD value name:
-
-    `CompressibilitySamplingSize`
-
-1. Set to a decimal value of:
-
-    `4294967295`
-
-1. Create a new REG_DWORD value name:
-
-    `CompressibleThreshold`
-
-1. Set to a value of:
-
-    `0`
-
-1. Close regedit. This setting takes effect immediately, no reboot is required.
-
-These settings mean that SMB compression will try to compress the first 4 GiB of a file and if it compresses at least 1 byte, it will attempt to compress the rest of the file.
+> In the original release of Windows Server 2022 and Windows 11, SMB compression uses a
+> default algorithm where it attempts to compress the first 524,288,000 bytes (500 MiB) of a file
+> during transfer and tracks that at least 104,857,600 bytes (100 MiB) compressed within that
+> 500-MiB range. If fewer than 100 MiB is compressible, SMB compression stops trying to compress the
+> rest of the file. If at least 100 MiB compresses, SMB compression attempts to compress the rest of
+> the file. This means that very large files with compressible data - for instance, a multi-gigabyte
+> virtual machine disk - are likely to compress but a relatively small file - even a very
+> compressible one - will not compress.
 
 ## Testing SMB compression
 
