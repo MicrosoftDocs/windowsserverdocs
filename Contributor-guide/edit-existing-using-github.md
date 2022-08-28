@@ -134,6 +134,6 @@ For more information about GitHub and the markdown language, see:
 
 ### Markdown
 
-- [Our internal markdown guidance](/help/contribute/markdown-reference?branch=master)
+- [Our internal markdown guidance](/contribute/markdown-reference)
 
 - [External, GitHub tutorial](https://www.markdowntutorial.com/)
