@@ -46,7 +46,7 @@ Use the following steps to create a domain controller (we called ours "my-dc" be
    - Replication option: LRS
 4. Set up an Active Directory forest by either using a quickstart template or deploying the forest manually.
    - Deploy using an Azure quickstart template:
-      - [Create an Azure VM with a new AD forest](/azure/templates/active-directory-new-domain/)
+      - [Create an Azure VM with a new AD forest](https://azure.microsoft.com/resources/templates/active-directory-new-domain/)
       - [Create a new AD domain with 2 domain controllers](/azure/templates/active-directory-new-domain-ha-2-dc/) (for high availability)
    - Manually [deploy the forest](../../identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100.md) with the following configurations:
       - Create the virtual network in the same resource group as the storage account.
