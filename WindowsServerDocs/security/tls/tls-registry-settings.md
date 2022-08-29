@@ -4,8 +4,7 @@ description: Learn about supported registry setting information for the Windows 
 ms.topic: article
 author: PatAltimore
 ms.author: patricka
-manager: brianlic
-ms.date: 11/01/2021
+ms.date: 08/29/2022
 ---
 
 # Transport Layer Security (TLS) registry settings
