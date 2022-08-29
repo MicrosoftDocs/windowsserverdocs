@@ -12,7 +12,7 @@ ms.topic: article
 # Best Practices for Secure Planning and Deployment of AD FS
 
 
-This topic provides best-practice information to help you plan and evaluate security when you design your Active Directory Federation Services (AD FS) deployment. This topic is a starting point for reviewing and assessing considerations that affect the overall security of your use of AD FS. The information in this topic is meant to compliment and extend your existing security planning and other design best practices.
+This topic provides best-practice information to help you plan and evaluate security when you design your Active Directory Federation Services (AD FS) deployment. This topic is a starting point for reviewing and assessing considerations that affect the overall security of your use of AD FS. The information in this topic is meant to complement and extend your existing security planning and other design best practices.
 
 ## Core security best practices for AD FS
 The following core best practices are common to all AD FS installations where you want to improve or extend the security of your design or deployment:
@@ -88,7 +88,7 @@ The following core best practices are common to all AD FS installations where yo
 
     AD FS does not, by default, expose or track personally identifiable information (PII) directly as part of the Federation Service or normal operations. When event logging and debug trace logging are enabled in AD FS, however, depending on the claims policy that you configure some claims types and their associated values might contain PII that might be logged in the AD FS event or tracing logs.
 
-    Therefore, enforcing access control on the AD FS configuration and its log files is strongly advised. If you do not want this kind of information to be visible, you should disable loggin, or filter out any PII or sensitive data in your logs before you share them with others.
+    Therefore, enforcing access control on the AD FS configuration and its log files is strongly advised. If you do not want this kind of information to be visible, you should disable login, or filter out any PII or sensitive data in your logs before you share them with others.
 
     The following tips can help you prevent the content of a log file from being exposed unintentionally:
 
