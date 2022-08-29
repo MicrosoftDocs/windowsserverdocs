@@ -109,7 +109,7 @@ The default is 0.
 
 Applicable versions: All versions beginning with Windows Server 2012 and Windows 8.
 
-Registry path: HKLM SYSTEM\CurrentControlSet\Control\LSA
+Registry path: **HKLM SYSTEM\CurrentControlSet\Control\LSA**
 
 Windows Server FIPS cipher suites: See [Supported Cipher Suites and Protocols in the Schannel SSP](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn786419(v=ws.11)).
 
@@ -250,7 +250,7 @@ This entry does not exist in the registry by default.
 
 Applicable versions: All versions beginning with Windows Server 2008 and Windows Vista.
 
-Registry path: HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
+Registry path: **HKLM SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL**
 
 ## ServerCacheTime
 
