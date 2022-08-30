@@ -23,4 +23,4 @@ Membership in **Administrators**, or equivalent, is the minimum required to comp
 
 1. On the computer where [Network Policy Server (NPS)](/windows-server/networking/technologies/nps/nps-top) is installed, open PowerShell by using the icon on the taskbar.
 
-2. At the PowerShell prompt, type `gpupdate`, and then press <kbd>Enter</kbd>.
+2. At the PowerShell prompt, type `gpupdate`, and then press `Enter`.
