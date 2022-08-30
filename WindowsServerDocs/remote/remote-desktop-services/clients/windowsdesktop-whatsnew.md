@@ -5,7 +5,7 @@ ms.topic: article
 author: heidilohr
 manager: femila
 ms.author: helohr
-ms.date: 08/23/2022
+ms.date: 08/30/2022
 ---
 # What's new in the Windows Desktop client
 
@@ -18,16 +18,17 @@ The client can be configured for different [user groups](windowsdesktop-admin.md
 |User group |Latest version  |Minimum supported version |
 |-----------|----------------|--------------------------|
 |Public     |1.2.3401        |1.2.1672                  |
-|Insider    |1.2.3491        |1.2.1672                  |
+|Insider    |1.2.3495        |1.2.1672                  |
 
-## Updates for version 1.2.3491 (Insider)
+## Updates for version 1.2.3495 (Insider)
 
-Date published: 8/23/2022
+Date published: 8/30/2022
 
 Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Windows 32-bit](https://go.microsoft.com/fwlink/?linkid=2139144), [Windows ARM64](https://go.microsoft.com/fwlink/?linkid=2139368)
 
 - Accessibility improvements through increased color contrast in the virtual desktop connection blue bar.
 - Updated connection information dialog to distinguish between RDP Shortpath for managed and public networks.
+- Made bug fixes.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to Teams for Azure Virtual Desktop, including the following:
   - Fixed an issue that caused calls to disconnect when using a microphone with a high sample rate (192 kbps).
