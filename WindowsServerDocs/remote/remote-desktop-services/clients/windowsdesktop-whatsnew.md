@@ -28,7 +28,7 @@ Download: [Windows 64-bit](https://go.microsoft.com/fwlink/?linkid=2139233), [Wi
 
 - Accessibility improvements through increased color contrast in the virtual desktop connection blue bar.
 - Updated connection information dialog to distinguish between RDP Shortpath for managed and public networks.
-- Bug fixes for newly added features.
+- Made bug fixes.
 - Improved client logging, diagnostics, and error classification to help admins troubleshoot connection and feed issues.
 - Updates to Teams for Azure Virtual Desktop, including the following:
   - Fixed an issue that caused calls to disconnect when using a microphone with a high sample rate (192 kbps).
