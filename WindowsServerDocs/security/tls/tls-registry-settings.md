@@ -295,17 +295,17 @@ In order to override a system default and set a supported (D)TLS or SSL protocol
 
 The following example shows TLS 1.0 client set to the **Enabled** state:
 
-![Set TLS 1.0 client-side to enabled in Windows Server registry setting.](images/tls-10-client-enabled.png)
+![Screenshot of Set TLS 1.0 client-side to enabled in Windows Server registry setting.](images/tls-10-client-enabled.png)
 
 In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled by default** state, create DWORD registry values named "Enabled" and "DisabledByDefault" with a non-zero value under the corresponding version-specific subkey. The following example shows TLS 1.0 server set to the **Disabled by default** state:
 
-![Override disabled by default state in Windows Server registry setting for TLS 1.0 server-side.](images/tls-10-server-disabled.png)
+![Screenshot of Override disabled by default state in Windows Server registry setting for TLS 1.0 server-side.](images/tls-10-server-disabled.png)
 
 In order to override a system default and set a supported (D)TLS or SSL protocol version to the **Disabled** state, create a DWORD registry value named "Enabled", with a value of zero, under the corresponding version-specific subkey.
 
 The following example shows DTLS 1.2 disabled in the registry:
 
-![Windows Server registry setting for DTLS 1.2 set to disabled by default.](images/tls-12-server-disabledbydefault.png)
+![Screenshot of Windows Server registry setting for DTLS 1.2 set to disabled by default.](images/tls-12-server-disabledbydefault.png)
 
 Switching a (D)TLS or SSL protocol version to **Disabled by default** or **Disabled** state may cause
 [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) calls to fail due to the lack of protocol versions enabled system-wide and at the same time allowed by particular SSPI callers. In addition, reducing the set of **Enabled** (D)TLS and SSL versions may break interoperability with remote peers.
