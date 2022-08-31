@@ -218,7 +218,7 @@ Here are some tips to try in case something isn't working. For general  Windows 
 ### Failed to connect error
 
 1. Check that your Extension version is 0.0.0.169 or higher
-    1. Navigate to the Azure Portal
+    1. Navigate to the Azure portal
     1. Navigate to "Extensions"
     1. Check that the "AdminCenter" extension version is 0.0.0.169 or higher
     1. If not, uninstall the extension and reinstall it
