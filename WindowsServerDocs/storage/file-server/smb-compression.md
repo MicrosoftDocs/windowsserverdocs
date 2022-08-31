@@ -85,7 +85,8 @@ You can request that all data copied over a mapped drive to be compressed. This 
 1. Open a CMD prompt.
 1. Map a drive using `NET USE` with the `/REQUESTCOMPRESSION:YES` parameter and argument. For example:
 
-   ```NET USE * \\fs1.corp.contoso.com\sales /REQUESTCOMPRESSION:YES
+   ```
+   NET USE * \\fs1.corp.contoso.com\sales /REQUESTCOMPRESSION:YES
    ```
 ---
 
@@ -128,7 +129,7 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
 1. Enable policy **Use SMB Compression by Default**.
 1. Close the policy editor.
 
-# [PowerShell](#tab/powershell)
+# [PowerShell](#tab/powershell-2)
 
 1. Open an elevated PowerShell command prompt as an administrator.
 1. To have the SMB client always attempt to compress a file:
@@ -147,7 +148,7 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
 1. Enable policy **Disable SMB Compression**.
 1. Close the policy editor.
 
-# [PowerShell](#tab/powershell)
+# [PowerShell](#tab/powershell-2)
 
 1. Open an elevated PowerShell command prompt as an administrator.
 1. To never allow an SMB client to compress a file despite any other requests:
@@ -166,7 +167,7 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
 1. Enable policy **Request traffic compression for all shares**.
 1. Close the policy editor.
 
-# [PowerShell](#tab/powershell)
+# [PowerShell](#tab/powershell-2)
 
 1. Open an elevated PowerShell command prompt as an administrator.
 1. To have the SMB server always attempt to compress a file:
@@ -185,7 +186,7 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
 1. Enable policy **Disable SMB Compression**.
 1. Close the policy editor.
 
-# [PowerShell](#tab/powershell)
+# [PowerShell](#tab/powershell-2)
 
 1. Open an elevated PowerShell command prompt as an administrator.
 1. To never allow an SMB client to compress a file despite any other requests:
