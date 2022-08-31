@@ -85,9 +85,10 @@ You can request that all data copied over a mapped drive to be compressed. This 
 1. Open a CMD prompt.
 1. Map a drive using `NET USE` with the `/REQUESTCOMPRESSION:YES` parameter and argument. For example:
 
-   ```
+   ```cmd
    NET USE * \\fs1.corp.contoso.com\sales /REQUESTCOMPRESSION:YES
    ```
+
 ---
 
 ### Requesting SMB compression with copy tools
@@ -114,11 +115,12 @@ You can request that SMB compression is attempted for particular files using rob
    ```
    XCOPY c:\hypervdisks\*.vhdx \\hypervcluster21.corp.contoso.com\disks$\* /COMPRESS
    ```
---- 
+
+---
 
 ### Always require or always reject compression requests
 
-Starting in Windows Server 2022 with update [KB5016693](https://support.microsoft.com/help/5016693) (OS Build 20348.946) and Windows 11 with update [KB5016691](https://support.microsoft.com/help/5016691) (OS Build 22000.918) you can configure an SMB client or SMB server to always request compression and to always reject requests for compression. You can now use Group Policy or PowerShell; in the initial release of Windows 11 and Windows Server 2022, you could only use registry settings to control most of these behaviors and you could not configure an SMB server to always request compression despite its share settings. An SMB client and SMB server refers to the SMB services, not to a Windows edition or SKU. All of these SMB changes made with PowerShell take effect immediately without a reboot. Group Policy SMB settings changes currently require a reboot.
+Starting in Windows Server 2022 with update [KB5016693](https://support.microsoft.com/help/5016693) (OS Build 20348.946) and Windows 11 with update [KB5016691](https://support.microsoft.com/help/5016691) (OS Build 22000.918) you can configure an SMB client or SMB server to always request compression and to always reject requests for compression. You can now use Group Policy or PowerShell; in the initial release of Windows 11 and Windows Server 2022, you could only use registry settings to control most of these behaviors and you could not configure an SMB server to always request compression despite its share settings. An SMB client and SMB server refers to the SMB services, not to a Windows edition or SKU. All of these SMB changes take effect immediately without a reboot.
 
 #### Always attempt compression (SMB client)
 
@@ -137,6 +139,7 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
    ```powershell
    Set-SmbClientConfiguration -RequestCompression $true
    ```
+
 ---
 
 #### Never compress (SMB client)
@@ -156,6 +159,7 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
    ```powershell
    Set-SmbClientConfiguration -DisableCompression $true
    ```
+
 ---
 
 #### Always attempt compression (SMB server)
@@ -175,6 +179,7 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
    ```powershell
    Set-SmbServerConfiguration -RequestCompression $true
    ```
+
 ---
 
 #### Never compress (SMB server)
@@ -194,6 +199,7 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
    ```powershell
    Set-SmbServerConfiguration -DisableCompression $true
    ```
+
 ---
 
 ## Understanding and controlling compression behaviors
