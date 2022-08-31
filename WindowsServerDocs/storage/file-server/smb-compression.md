@@ -50,36 +50,44 @@ You can configure shares to always request compression when connected to by clie
 1. Edit an existing share or create a new share.
 1. Select **Compress data** and then click **Add** or **Edit**.
 
-:::image type="content" source="./media/smb-compression/fileservercompress.png" alt-text="file server compression":::
+![Screenshot of Windows Admin Center in Window Server 2022 file server.](media/smb-compression/fileservercompress.png)
 
 #### Using PowerShell
 
 1. Open an elevated PowerShell command prompt as an administrator.
 1. Create a new share with compression using `New-SMBShare` with the `-CompressData $true` parameter and argument. For example:
 
-    `New-SmbShare -Name "Sales" -Path "C:\sales" -CompressData $true`
+   ```powershell
+   New-SmbShare -Name "Sales" -Path "C:\sales" -CompressData $true
+   ```
 
 1. Edit an existing share with compression using `Set-SMBShare` with the `-CompressData $true` parameter and argument. For example:
 
-   `Set-SmbShare -Name "Sales" -CompressData $true`
+   ```powershell
+   Set-SmbShare -Name "Sales" -CompressData $true
+   ```
 
 ### Requesting SMB compression on mapped drives
 
 You can request that all data copied over a mapped drive to be compressed. This can be done as part of a logon script or when run manually.
 
-#### Using PowerShell
+# [PowerShell](#tab/powershell_1)
 
 1. Open a PowerShell command prompt.
 1. Map a drive using `New-SMBMapping` with the `-CompressNetworkTraffic $true` parameter and argument. For example:
 
-    `New-SmbMapping -LocalPath "Z:" -RemotePath "\\fs1.corp.contoso.com\sales" -CompressNetworkTraffic $true`
+   ```powershell
+   New-SmbMapping -LocalPath "Z:" -RemotePath "\\fs1.corp.contoso.com\sales" -CompressNetworkTraffic $true
+   ```
 
-#### Using NET USE
+# [Net Use](#tab/net-use)
 
 1. Open a CMD prompt.
 1. Map a drive using `NET USE` with the `/REQUESTCOMPRESSION:YES` parameter and argument. For example:
 
-    `NET USE * \\fs1.corp.contoso.com\sales /REQUESTCOMPRESSION:YES`
+   ```NET USE * \\fs1.corp.contoso.com\sales /REQUESTCOMPRESSION:YES
+   ```
+---
 
 ### Requesting SMB compression with copy tools
 
@@ -88,19 +96,24 @@ You can request that SMB compression is attempted for particular files using rob
 > [!NOTE]
 > If you want File Explorer, third party copy tools, or applications to use compression, map drives with compression, enable compression on shares, or set SMB clients to always compress.
 
-#### Using Robocopy.exe
+# [Robocopy](#tab/robocopy)
 
 1. Open a CMD prompt or PowerShell command prompt.
 1. Copy with the /COMPRESS flag. For example:
 
-    `ROBOCOPY c:\hypervdisks \\hypervcluster21.corp.contoso.com\disks$ *.vhdx /COMPRESS`  
+   ```   
+   ROBOCOPY c:\hypervdisks \\hypervcluster21.corp.contoso.com\disks$ *.vhdx /COMPRESS
+   ```  
 
-#### Using Xcopy.exe
+# [Xcopy](#tab/xcopy)
 
 1. Open a CMD prompt or PowerShell command prompt.
 1. Copy with the /COMPRESS flag. For example:
 
-    `XCOPY c:\hypervdisks\*.vhdx \\hypervcluster21.corp.contoso.com\disks$\* /COMPRESS`  
+   ```
+   XCOPY c:\hypervdisks\*.vhdx \\hypervcluster21.corp.contoso.com\disks$\* /COMPRESS
+   ```
+--- 
 
 ### Always require or always reject compression requests
 
@@ -115,7 +128,7 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
 1. Enable policy **Use SMB Compression by Default**.
 1. Close the policy editor.
 
-# [PowerShell](#tab/powershell)
+# [PowerShell](#tab/powershell_2)
 
 1. Open an elevated PowerShell command prompt as an administrator.
 1. To have the SMB client always attempt to compress a file:
@@ -134,7 +147,7 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
 1. Enable policy **Disable SMB Compression**.
 1. Close the policy editor.
 
-# [PowerShell](#tab/powershell)
+# [PowerShell](#tab/powershell_2)
 
 1. Open an elevated PowerShell command prompt as an administrator.
 1. To never allow an SMB client to compress a file despite any other requests:
@@ -153,7 +166,7 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
 1. Enable policy **Request traffic compression for all shares**.
 1. Close the policy editor.
 
-# [PowerShell](#tab/powershell)
+# [PowerShell](#tab/powershell_2)
 
 1. Open an elevated PowerShell command prompt as an administrator.
 1. To have the SMB server always attempt to compress a file:
@@ -172,7 +185,7 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
 1. Enable policy **Disable SMB Compression**.
 1. Close the policy editor.
 
-# [PowerShell](#tab/powershell)
+# [PowerShell](#tab/powershell_2)
 
 1. Open an elevated PowerShell command prompt as an administrator.
 1. To never allow an SMB client to compress a file despite any other requests:
@@ -203,7 +216,7 @@ A simple way to test your compression configuration is using VHDX files. You can
 1. In Diskmgmt, right-click your VHDX now shown as "Not initialized" and click **Initialize disk** and click **OK**. Right-click on the disks **Unallocated** section and click **New Simple Volume**, then **Next** for all menu prompts, then click **Finish**.
 1. Specify a file path, set the size to "25 GB", select **VHDX** and **Fixed size**, then click **OK**.
 
-   ![Screenshot of create and attach virtual hard disk for Windows Hyper-V](media/smb-compression/diskmgmt.png)
+   ![Screenshot of create and attach virtual hard disk for Windows Hyper-V.](media/smb-compression/diskmgmt.png)
 
 1. Right-click on the disk and click **Detach VHD**, then click **OK**.
 1. In File Explorer, double-click that VHDX file to mount it. Copy a few MB of uncompressible files, such as JPG format, then right-click the mounted disk and click **Eject**.
