@@ -110,10 +110,10 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
 
 # [Group Policy](#tab/group-policy)
 
-1. Run the Group Policy Management Console for your Active Directory domain and create or navigate to a group policy
-1. Expand policy “\Computer Configuration\Policies\Administrative Templates\Network\Lanman Workstation”
-1. Enable policy “Use SMB Compression by Default”
-1. Close the policy editor
+1. Run the Group Policy Management Console for your Active Directory domain and create or navigate to a group policy.
+1. Expand policy **Computer Configuration\Policies\Administrative Templates\Network\Lanman Workstation**.
+1. Enable policy **Use SMB Compression by Default**.
+1. Close the policy editor.
 
 # [PowerShell](#tab/powershell)
 
@@ -129,10 +129,10 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
 
 # [Group Policy](#tab/group-policy)
 
-1. Run the Group Policy Management Console for your Active Directory domain and create or navigate to a group policy
-1. Expand policy “\Computer Configuration\Policies\Administrative Templates\Network\Lanman Workstation”
-1. Enable policy “Disable SMB Compression”
-1. Close the policy editor
+1. Run the Group Policy Management Console for your Active Directory domain and create or navigate to a group policy.
+1. Expand policy **Computer Configuration\Policies\Administrative Templates\Network\Lanman Workstation**.
+1. Enable policy **Disable SMB Compression**.
+1. Close the policy editor.
 
 # [PowerShell](#tab/powershell)
 
@@ -148,10 +148,10 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
 
 # [Group Policy](#tab/group-policy)
 
-1. Run the Group Policy Management Console for your Active Directory domain and create or navigate to a group policy
-1. Expand policy “\Computer Configuration\Policies\Administrative Templates\Network\Lanman Server”
-1. Enable policy “Request traffic compression for all shares”
-1. Close the policy editor
+1. Run the Group Policy Management Console for your Active Directory domain and create or navigate to a group policy.
+1. Expand policy **Computer Configuration\Policies\Administrative Templates\Network\Lanman Server**.
+1. Enable policy **Request traffic compression for all shares**.
+1. Close the policy editor.
 
 # [PowerShell](#tab/powershell)
 
@@ -167,10 +167,10 @@ Starting in Windows Server 2022 with update [KB5016693](https://support.microsof
 
 # [Group Policy](#tab/group-policy)
 
-1. Run the Group Policy Management Console for your Active Directory domain and create or navigate to a group policy
-1. Expand policy “\Computer Configuration\Policies\Administrative Templates\Network\Lanman Server”
-1. Enable policy “Disable SMB Compression”
-1. Close the policy editor
+1. Run the Group Policy Management Console for your Active Directory domain and create or navigate to a group policy.
+1. Expand policy **Computer Configuration\Policies\Administrative Templates\Network\Lanman Server**.
+1. Enable policy **Disable SMB Compression**.
+1. Close the policy editor.
 
 # [PowerShell](#tab/powershell)
 
